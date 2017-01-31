@@ -78,12 +78,6 @@ switch($mode_page):
 				case 'rows.disable':
 					$page_action = 'disable';
 					break;
-/*
-				case 'cancel':
-					$mode_page = PAGE_MODE_VIEW;
-					$page_action = 'view';
-					break;
- */
 				default:
 					$mode_page = PAGE_MODE_VIEW;
 					$page_action = 'view';
@@ -94,17 +88,7 @@ switch($mode_page):
 			$page_action = 'view';
 		endif;
 		break;
-/*
 	case PAGE_MODE_VIEW:
-		$page_action = 'view';
-		break;
-	case PAGE_MODE_EDIT:
-		$mode_page = PAGE_MODE_VIEW;
-		$page_action = 'view';
-		break;
- */
-	default:
-		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
 		break;
 endswitch;
@@ -136,7 +120,7 @@ switch($page_action):
 	case 'enable':
 		if($sphere->record['enable']):
 			$mode_page = PAGE_MODE_VIEW;
-			$page_action = 'view'; 
+			$page_action = 'view';
 		else: // enable and run a full validation
 			$sphere->record['enable'] = true;
 			$page_action = 'save'; // continue with save procedure
@@ -192,9 +176,6 @@ endswitch;
 switch($mode_page):
 	case PAGE_MODE_EDIT:
 		break;
-/*
-	case PAGE_MODE_VIEW:
- */
 	default:
 		if(isset($config['system']['skipviewmode'])):
 			$mode_page = PAGE_MODE_EDIT;
@@ -205,12 +186,17 @@ switch($mode_page):
 		endif;
 		break;
 endswitch;
+//  prepare lookups
+switch($mode_page):
+	case PAGE_MODE_EDIT:
+		$l_user = [];
+		foreach(system_get_user_list() as $key => $val):
+			$l_user[$key] = htmlspecialchars($key);
+		endforeach;
+		break;
+endswitch;
 $pgtitle = [gtext('Services'),gtext('TFTP')];
-?>
-<?php
 include 'fbegin.inc';
-?>
-<?php
 switch($mode_page):
 	case PAGE_MODE_VIEW:
 ?>
@@ -292,11 +278,7 @@ endswitch;
 					html_separator2();
 					html_titleline2(gtext('Advanced Settings'));
 					html_inputbox2('port',gtext('Port'),htmlspecialchars($sphere->record['port']),gtext('Enter a custom port number if you want to override the default port (default is 69).'),false,5);
-					$a_user = [];
-					foreach(system_get_user_list() as $userk => $userv):
-						$a_user[$userk] = htmlspecialchars($userk);
-					endforeach;
-					html_combobox2('username',gtext('Username'),htmlspecialchars($sphere->record['username']),$a_user,gtext('Specifies the username which the service will run as.'),false);
+					html_combobox2('username',gtext('Username'),htmlspecialchars($sphere->record['username']),$l_user,gtext('Specifies the username which the service will run as.'),false);
 					html_inputbox2('umask',gtext('Umask'),htmlspecialchars($sphere->record['umask']),gtext('Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write).'),false,4);
 					html_inputbox2('timeout',gtext('Timeout'),htmlspecialchars($sphere->record['timeout']),gtext('Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second).'),false,10);
 					html_inputbox2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->record['maxblocksize']),gtext('Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464.'),false,5);
