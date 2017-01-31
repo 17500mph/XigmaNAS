@@ -34,7 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Network'), gtext('Proxy')];
+$pgtitle = [gtext('Network'),gtext('Proxy')];
 
 array_make_branch($config,'system','proxy','http');
 array_make_branch($config,'system','proxy','ftp');
@@ -57,31 +57,31 @@ if ($_POST) {
 	unset($input_errors);
 	$pconfig = $_POST;
 
-	$reqdfields = array();
-	$reqdfieldsn = array();
-	$reqdfieldst = array();
+	$reqdfields = [];
+	$reqdfieldsn = [];
+	$reqdfieldst = [];
 
 	if (isset($_POST['http_enable'])) {
 		$reqdfields = array_merge($reqdfields, explode(" ", "http_address http_port"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Address"),gtext("Port")));
-		$reqdfieldst = array_merge($reqdfieldst,array("string","numeric"));
+		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Address'),gtext('Port')]);
+		$reqdfieldst = array_merge($reqdfieldst,['string',"numeric']);
 
 		if (isset($_POST['http_auth'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "http_username http_password"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("User"),gtext("Password")));
-			$reqdfieldst = array_merge($reqdfieldst,array("string","password"));
+			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('User'),gtext('Password')]);
+			$reqdfieldst = array_merge($reqdfieldst,['string','password']);
 		}
 	}
 
 	if (isset($_POST['ftp_enable'])) {
 		$reqdfields = array_merge($reqdfields, explode(" ", "ftp_address ftp_port"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Address"),gtext("Port")));
-		$reqdfieldst = array_merge($reqdfieldst,array("string","numeric"));
+		$reqdfieldsn = array_merge($reqdfieldsn,['gtext('Address'),gtext('Port')]);
+		$reqdfieldst = array_merge($reqdfieldst,['string','numeric']);
 
 		if (isset($_POST['ftp_auth'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "ftp_username ftp_password"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("User"),gtext("Password")));
-			$reqdfieldst = array_merge($reqdfieldst,array("string","password"));
+			$reqdfieldsn = array_merge($reqdfieldsn,['gtext('User'),gtext('Password')]);
+			$reqdfieldst = array_merge($reqdfieldst,['string','password'));
 		}
 	}
 

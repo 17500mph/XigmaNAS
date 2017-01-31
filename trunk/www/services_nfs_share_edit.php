@@ -96,7 +96,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "path network mask");
-	$reqdfieldsn = array(gtext("Share"), gtext("Authorised network"), gtext("Network mask"));
+	$reqdfieldsn = [gtext('Share'),gtext('Authorised network'),gtext('Network mask')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// remove last slash and check alldirs option
@@ -113,7 +113,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$share = array();
+		$share = [];
 		$share['uuid'] = $_POST['uuid'];
 		$share['path'] = $path;
 		$share['mapall'] = $_POST['mapall'];
@@ -169,7 +169,7 @@ $pgtitle = [gtext('Services'),gtext('NFS'),isset($uuid) ? gtext('Edit') : gtext(
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Map to Root"); ?></td>
 						<td width="78%" class="vtable">
 							<select name="mapall" class="formfld" id="mapall">
-								<?php $types = array(gtext("Yes"),gtext("No"));?>
+								<?php $types = [gtext('Yes'),gtext('No')];?>
 								<?php $vals = explode(" ", "yes no");?>
 								<?php $j = 0; for ($j = 0; $j < count($vals); $j++): ?>
 								<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['mapall']) echo "selected=\"selected\"";?>>

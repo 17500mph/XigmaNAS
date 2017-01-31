@@ -78,12 +78,12 @@ if ($_POST) {
 	}
 	
 	if (($_POST['network'] && is_ipv4addr($_POST['network'])) && $_POST['network_subnet'])  {
-		if (filter_var($_POST['network_subnet'], FILTER_VALIDATE_INT, array('options' => array('min_range' => 1, 'max_range' => 32))) == false)
+		if (filter_var($_POST['network_subnet'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 1, 'max_range' => 32]]) == false)
 			$input_errors[] = gtext("A valid IPv4 network bit count must be specified.");
 	}
 
 	if (($_POST['network'] && is_ipv6addr($_POST['network'])) && $_POST['network_subnet'])  {
-		if (filter_var($_POST['network_subnet'], FILTER_VALIDATE_INT, array('options' => array('min_range' => 1, 'max_range' => 128))) == false)
+		if (filter_var($_POST['network_subnet'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 1, 'max_range' => 128]]) == false)
 			$input_errors[] = gtext("A valid IPv6 prefix must be specified.");
 	}
 
@@ -115,7 +115,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$route = array();
+		$route = [];
 		$route['uuid'] = $_POST['uuid'];
 		$route['interface'] = $_POST['interface'];
 		$route['network'] = $osn;
@@ -146,7 +146,7 @@ if ($_POST) {
 	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
 	<?php html_titleline2(gtext('Static Routes Settings'), 2);?>
-	<?php $interfaces = array('lan' => 'LAN'); for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) { $interfaces['opt' . $i] = $config['interfaces']['opt' . $i]['descr']; }?>
+	<?php $interfaces = ['lan' => 'LAN']; for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) { $interfaces['opt' . $i] = $config['interfaces']['opt' . $i]['descr']; }?>
 	<?php html_combobox("interface", gtext("Interface"), !empty($pconfig['interface']) ? $pconfig['interface'] : "", $interfaces, gtext("Choose which interface this route applies to."), true);?>
 	<tr>
 	<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination Network");?></td>

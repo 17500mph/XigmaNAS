@@ -35,7 +35,7 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 function nut_get_driverlist() {
-	$a_driverinfo = array();
+	$a_driverinfo = [];
 
 	// Read file
 	$a_driver = file("/usr/local/etc/nut/driver.list");
@@ -46,7 +46,7 @@ function nut_get_driverlist() {
 	foreach ($a_driver as $driver) {
 		// Syntax should look like: '"<manufacturer>" "<device type>" "<support level>" "<model name>" "<model extra>" "<driver>"'.
 		if (preg_match("/^\"(.*)\".*\"(.*)\".*\"(.*)\".*\"(.*)\".*\"(.*)\".*\"(.*)\".*/", $driver, $matches)) {
-			$driverinfo = array();
+			$driverinfo = [];
 			$driverinfo['manufacturer'] = $matches[1];
 			$driverinfo['modelname'] = $matches[4];
 			$driverinfo['modelextra'] = $matches[5];

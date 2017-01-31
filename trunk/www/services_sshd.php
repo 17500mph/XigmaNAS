@@ -54,7 +54,7 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	/* input validation */
-	$reqdfields = array();
+	$reqdfields = [];
 	$reqdfieldsn = [];
 
 	if (isset($_POST['enable']) && $_POST['enable']) {

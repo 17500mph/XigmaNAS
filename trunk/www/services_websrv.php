@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -34,17 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("services.inc");
-
-$pgtitle = array(gtext("Services"),gtext("Webserver"));
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'services.inc';
 
 if (!isset($config['websrv']) || !is_array($config['websrv']))
-	$config['websrv'] = array();
+	$config['websrv'] = [];
 
 if (!isset($config['websrv']['authentication']['url']) || !is_array($config['websrv']['authentication']['url']))
-	$config['websrv']['authentication']['url'] = array();
+	$config['websrv']['authentication']['url'] = [];
 
 $default_uploaddir = "/var/tmp/ftmp";
 $default_runas = "server.username = \"www\"";
@@ -157,8 +152,9 @@ function websrvauth_process_updatenotification($mode, $data) {
 
 	return $retval;
 }
+$pgtitle = [gtext('Services'),gtext('Webserver')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -216,14 +212,14 @@ function authentication_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline_checkbox("enable", gtext("Webserver"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
-					html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'], array("http" => "HTTP", "https" => "HTTPS"), "", true, false, "protocol_change()");
+					html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'],['http' => 'HTTP','https' => 'HTTPS'], "", true, false, "protocol_change()");
 					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("TCP port to bind the server to."), true, 5);
 					$helpinghand = gtext('Select the permission for running this service. (www by default).')
 						. '<br><b>'
 						. '<font color="red">' . gtext('NOTE') . '</font>: '
 						. gtext('Running this service as root is not recommended for security reasons, use at your own risk!')
 						. '</b></br>';
-					html_combobox("runasuser", gtext("Permission"), $pconfig['runasuser'], array("server.username = \"www\"" => "www", "" => "root"), $helpinghand, true);
+					html_combobox("runasuser", gtext("Permission"), $pconfig['runasuser'], ["server.username = \"www\"" => "www", "" => "root"], $helpinghand, true);
 					html_textarea("certificate", gtext("Certificate"), $pconfig['certificate'], gtext("Paste a signed certificate in X.509 PEM format here."), true, 76, 7, false, false);
 					html_textarea("privatekey", gtext("Private key"), $pconfig['privatekey'], gtext("Paste an private key in PEM format here."), true, 76, 7, false, false);
 					html_filechooser("documentroot", gtext("Document Root"), $pconfig['documentroot'], gtext("Document root of the webserver. Home of the web page files."), $g['media_path'], true, 76);
@@ -281,7 +277,7 @@ function authentication_change() {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -293,4 +289,4 @@ protocol_change();
 authentication_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

@@ -136,7 +136,7 @@ if ($_POST) {
 	// Input validation.
 /*
 	$reqdfields = explode(" ", "role");
-	$reqdfieldsn = array(gtext("HAST role"));
+	$reqdfieldsn = [gtext('HAST role')];
 	$reqdfieldst = explode(" ", "string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -260,7 +260,7 @@ $(document).ready(function(){
 					<?php echo html_text("nodeid", gtext("Node ID"), htmlspecialchars($nodeid)); ?>
 					<?php echo html_text("nodename", gtext("Node Name"), htmlspecialchars($nodename)); ?>
 					<?php
-					$a_vipaddrs = array();
+					$a_vipaddrs = [];
 					foreach ($a_carp as $carp) {
 						$ifinfo = get_carp_info($carp['if']);
 						//$a_vipaddrs[] = $carp['vipaddr']." ({$ifinfo['state']},{$ifinfo['advskew']})";
@@ -268,7 +268,7 @@ $(document).ready(function(){
 					}
 					?>
 					<?php echo html_text("vipaddr", gtext("Virtual IP Address"), (!empty($a_vipaddrs) ? htmlspecialchars(join(', ', $a_vipaddrs)) : sprintf("<span class='red'>%s</span>", gtext("No configured CARP interfaces.")))); ?>
-					<?php //html_combobox("role", gtext("HAST role"), $pconfig['role'], array("primary" => gtext("Primary"), "secondary" => gtext("Secondary")), "", true);?>
+					<?php //html_combobox("role", gtext("HAST role"), $pconfig['role'], ['primary' => gtext('Primary'),'secondary' => gtext('Secondary')], "", true);?>
 					<tr id="control_btn">
 						<td colspan="2">
 							<input id="switch_backup" name="switch_backup" type="submit" class="formbtn" value="<?php echo gtext("Switch VIP to BACKUP"); ?>" />

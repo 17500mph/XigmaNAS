@@ -225,7 +225,7 @@ class PEAR
     * @param  mixed $args  The arguments to pass to the function
     * @return void
     */
-    function registerShutdownFunc($func, $args = array())
+    function registerShutdownFunc($func, $args = [])
     {
         $GLOBALS['_PEAR_shutdown_funcs'][] = [$func, $args];
     }

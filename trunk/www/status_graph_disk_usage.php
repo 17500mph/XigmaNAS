@@ -37,7 +37,7 @@ require 'guiconfig.inc';
 array_make_branch($config,'rrdgraphs');
 
 $rrd_disk_usage = true;
-$temp_array = array();
+$temp_array = [];
 $test_arrays = 0;
 if(!empty($config["rrdgraphs"]["mounts"])):
 	$test_arrays = $test_arrays + 1;

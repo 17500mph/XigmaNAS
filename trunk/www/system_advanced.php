@@ -41,6 +41,7 @@ $pconfig['disablefm'] = isset($config['system']['disablefm']);
 $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck']);
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
 $pconfig['enabletogglemode'] = isset($config['system']['enabletogglemode']);
+$pconfig['skipviewmode'] = isset($config['system']['skipviewmode']);
 $pconfig['tune_enable'] = isset($config['system']['tune']);
 $pconfig['zeroconf'] = isset($config['system']['zeroconf']);
 $pconfig['powerd'] = isset($config['system']['powerd']);
@@ -64,7 +65,7 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['sysconsaver'])) {
 		$reqdfields = explode(" ", "sysconsaverblanktime");
-		$reqdfieldsn = array(gtext("Blank time"));
+		$reqdfieldsn = [gtext('Blank Time')];
 		$reqdfieldst = explode(" ", "numeric");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -72,7 +73,7 @@ if ($_POST) {
 	}
 	if (isset($_POST['powerd'])) {
 		$reqdfields = explode(" ", "pwmax pwmin");
-		$reqdfieldsn = array(gtext("Maximum frequency"), gtext("Minimum frequency"));
+		$reqdfieldsn = [gtext('CPU Maximum Frequency'),gtext('CPU Minimum Frequency')];
 		$reqdfieldst = explode(" ", "numeric numeric");
 
 		//do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -136,6 +137,7 @@ if ($_POST) {
 		$config['system']['disablefm'] = isset($_POST['disablefm']) ? true : false;
 		$config['system']['disablefirmwarecheck'] = isset($_POST['disablefirmwarecheck']) ? true : false;
 		$config['system']['enabletogglemode'] = isset($_POST['enabletogglemode']) ? true : false;
+		$config['system']['skipviewmode'] = isset($_POST['skipviewmode']);
 		$config['system']['webgui']['noantilockout'] = isset($_POST['noantilockout']) ? true : false;
 		$config['system']['disablebeep'] = isset($_POST['disablebeep']) ? true : false;
 		$config['system']['tune'] = isset($_POST['tune_enable']) ? true : false;
@@ -162,12 +164,12 @@ if ($_POST) {
 		if ($index !== false) {
 			$config['system']['rcconf']['param'][$index]['value'] = $pwopt;
 		} else {
-			$config['system']['rcconf']['param'][] = array(
+			$config['system']['rcconf']['param'][] = [
 				"uuid" => uuid(),
 				"name" => "powerd_flags",
 				"value" => $pwopt,
 				"comment" => "System power control options",
-				"enable" => true );
+				"enable" => true ];
 		}
 
 		write_config();
@@ -258,7 +260,7 @@ function sysctl_tune($mode) {
 				if (false !== $id)
 					continue;
 
-				$param = array();
+				$param = [];
 				$param['uuid'] = uuid();
 				$param['name'] = $name;
 				$param['value'] = $value;
@@ -336,6 +338,7 @@ function powerd_change() {
 					}
 					html_checkbox("disablebeep", gtext("Internal Speaker"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdowns."));
 					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
+					html_checkbox('skipviewmode',gtext('Skip View Mode'),!empty($pconfig['skipviewmode']) ? true : false,gtext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'));
 					html_separator();
 					?>
 					<tr>
@@ -343,10 +346,10 @@ function powerd_change() {
 					</tr>
 					<?php html_checkbox("tune_enable", gtext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gtext("Enable tuning of some kernel variables."));?>
 					<?php html_checkbox("powerd", gtext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gtext("Enable the server power control utility."), gtext("The powerd utility monitors the server state and sets various power control options accordingly."), false, "powerd_change()");?>
-					<?php $a_pwmode = array("maximum" => gtext("Maximum (Highest Performance)"), "hiadaptive" => gtext("Hiadaptive (High Performance)"), "adaptive" => gtext("Adaptive (Low Power Consumption)"), "minimum" => gtext("Minimum (Lowest Performance)")); ?>
+					<?php $a_pwmode = ['maximum' => gtext('Maximum (Highest Performance)'), 'hiadaptive' => gtext('Hiadaptive (High Performance)'), 'adaptive' => gtext('Adaptive (Low Power Consumption)'), 'minimum' => gtext('Minimum (Lowest Performance)')]; ?>
 					<?php html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls the power consumption mode."), false);?>
 					<?php $clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
-						$a_freq = array();
+						$a_freq = [];
 						if (!empty($clocks)) {
 							$a_tmp = preg_split("/\s/", $clocks);
 						foreach ($a_tmp as $val) {

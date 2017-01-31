@@ -95,7 +95,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$rule = array();
+		$rule = [];
 		$rule['uuid'] = $_POST['uuid'];
 		$rule['enable'] = isset($_POST['enable']) ? true : false;
 		$rule['ruleno'] = $_POST['ruleno'];
@@ -155,7 +155,7 @@ $pgtitle = [gtext('Network'),gtext('Firewall'),gtext('Rule'),isset($uuid) ? gtex
 					<?php
 					html_titleline_checkbox("enable", gtext("Firewall Rule Settings"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));
 					html_inputbox("ruleno", gtext("Rule number"), $pconfig['ruleno'], gtext("The rule number determines the order of the rule."), true, 10);
-					html_combobox("action", gtext("Action"), $pconfig['action'], array("allow" => gtext("Allow"), "deny" => gtext("Deny"), "unreach host" => gtext("Reject")), gtext("The action which will be executed when the packet match the criteria specified below."), true);
+					html_combobox("action", gtext("Action"), $pconfig['action'],['allow' => gtext('Allow'),'deny' => gtext('Deny'),'unreach host' => gtext('Reject')], gtext("The action which will be executed when the packet match the criteria specified below."), true);
 					$a_interface = array("" => gtext("All"), get_ifname($config['interfaces']['lan']['if']) => "LAN"); for ($i = 1; isset($config['interfaces']['opt' . $i]); ++$i) { $a_interface[$config['interfaces']['opt' . $i]['if']] = $config['interfaces']['opt' . $i]['descr']; }
 					html_combobox("if", gtext("Interface"), $pconfig['if'], $a_interface, gtext("Choose on which interface packets must come in to match this rule."), true);
 					html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'], array("udp" => "UDP", "tcp" => "TCP", "icmp" => "ICMP", "all" => gtext("All")), gtext("Choose which IP protocol this rule should match."), true);
