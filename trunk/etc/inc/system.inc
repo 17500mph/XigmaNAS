@@ -31,9 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once("functions.inc");
-require_once("util.inc");
-require_once("rc.inc");
+require_once 'functions.inc';
+require_once 'util.inc';
+require_once 'rc.inc';
 
 function system_reboot() {
 	// Initiate halt. Everything will be done automatically
@@ -108,9 +108,9 @@ function system_get_language_code() {
 //	)
 function system_get_group_list() {
 	// List of groups to filter from result list.
-	$filterlist = array("_dhcp", "_pflogd");
+	$filterlist = ['_dhcp','_pflogd'];
 
-	$grouplist = array();
+	$grouplist = [];
 
 	preg_match_all("/(\S+):\*:(\d+):.*\n/", @file_get_contents("/etc/group"), $matches, PREG_SET_ORDER);
 
@@ -146,7 +146,7 @@ function system_get_group_list() {
 //    ...
 //  )
 function system_get_user_list() {
-	$userlist = array();
+	$userlist = [];
 
 	foreach (explode("\n", @file_get_contents("/etc/master.passwd")) as $userinfov) {
 		if (empty($userinfov))
@@ -154,7 +154,7 @@ function system_get_user_list() {
 
 		// Extract user information
 		$userinfo = explode(":", $userinfov);
-		$user = array();
+		$user = [];
 		$user['name'] = $userinfo[0];
 		$user['password'] = $userinfo[1];
 		$user['uid'] = $userinfo[2];
@@ -172,7 +172,7 @@ function system_get_user_list() {
 
 // SMBIOS get various info
 function get_smbios_info() {
-	$smbios = array();
+	$smbios = [];
 	$cmd = "/bin/kenv -q";
 	unset($rawdata, $rc);
 	mwexec2($cmd, $rawdata, $rc);
@@ -307,7 +307,7 @@ function system_get_cpu_usage() {
 	sleep(1);
 	$cpuTicks2 = explode(" ", `/sbin/sysctl -n kern.cp_time`);
 
-	$diff = array();
+	$diff = [];
 	$diff['user'] = ($cpuTicks2[0] - $cpuTicks1[0]);
 	$diff['nice'] = ($cpuTicks2[1] - $cpuTicks1[1]);
 	$diff['sys'] = ($cpuTicks2[2] - $cpuTicks1[2]);
@@ -326,7 +326,7 @@ function system_get_cpu_usage() {
 // Get CPUID
 function system_get_cpuid($cpuidx, $level) {
 	$r = explode(" ", @exec("/usr/sbin/cpucontrol -i $level /dev/cpuctl${cpuidx} | awk '{ print $4, $5, $6, $7 }'"));
-	$a = array();
+	$a = [];
 	$a['eax'] = $r[0];
 	$a['ebx'] = $r[1];
 	$a['ecx'] = $r[2];
@@ -345,7 +345,7 @@ function system_get_cpuid($cpuidx, $level) {
 //    [freqlevels] => 1990/67000 1791/64700 995/28600
 //  )
 function system_get_cpu_info() {
-	$cpuinfo = array();
+	$cpuinfo = [];
 	$cpuinfo['number'] = chop(`/sbin/sysctl -n hw.ncpu`);
 	$cpuinfo['model'] = chop(`/sbin/sysctl -n hw.model`);
 	if (empty($cpuinfo['model'])) {
@@ -365,7 +365,7 @@ function system_get_cpu_info() {
 	if (chop(`/sbin/sysctl -n hw.platform`) == 'a20') $cpuinfo['temperature'] = chop(`/sbin/sysctl -n dev.axp209_pmu.0.temp`);
 	else $cpuinfo['temperature'] = chop(`/sbin/sysctl -n hw.acpi.thermal.tz0.temperature`);
 	$cpus = system_get_cpus();
-	$cpuinfo['temperature2'] = array();
+	$cpuinfo['temperature2'] = [];
 	$temp = @exec("/sbin/sysctl -q -n dev.cpu.0.temperature");
 	if ($temp != '' && $temp != '-1') {
 		$adj = 0;
@@ -473,7 +473,7 @@ function system_get_ram_info() {
 	exec("/sbin/sysctl -n vm.stats.vm.v_active_count vm.stats.vm.v_inactive_count vm.stats.vm.v_wire_count vm.stats.vm.v_cache_count vm.stats.vm.v_free_count hw.physmem", $memory);
 	exec("/sbin/sysctl -n hw.realmem", $hwmemory);
 
-	$raminfo = array();
+	$raminfo = [];
 	$raminfo['real'] = $hwmemory[0];
 	$raminfo['physical'] = $memory[5];
 	$raminfo['total'] = $memory[0] + $memory[1] + $memory[2] + $memory[3] + $memory[4];
@@ -504,11 +504,11 @@ function system_get_swap_info() {
 		}
 	}
 	array_shift($swap);
-	$swapinfo = array();
+	$swapinfo = [];
 
 	foreach ($swap as $swapv) {
 		if (preg_match("/(\/dev\/.*)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s)(.+)/", $swapv, $matches)) {
-			$devswap = array();
+			$devswap = [];
 			$devswap['device'] = trim($matches[1]);
 			$devswap['total'] = decode_size(trim($matches[2])*$val);
 			$devswap['used'] = decode_size(trim($matches[3])*$val);
@@ -547,7 +547,7 @@ function system_get_device_iostat($device) {
 
 	mwexec2("iostat -d {$device}", $rawdata);
 	if (preg_match("/^\s*(\S+)\s*(\S+)\s*(\S+)/", $rawdata[2], $matches)) {
-		$result = array();
+		$result = [];
 		$result['kpt'] = $matches[1];
 		$result['tps'] = $matches[2];
 		$result['mps'] = $matches[3];
@@ -616,7 +616,7 @@ function system_get_device_temp($devicespecialfile) {
  * @return The disk device serial number.
  */
 function system_get_controller($devicespecialfile) {
-	$devlist = array();
+	$devlist = [];
 	$device = '';
 	$controller = '';
 	$controller_id = ''; 
@@ -734,20 +734,20 @@ function system_get_volume_model($devicespecialfile) {
  * Get mount point usage information.
  * @return An array containg the requested informations:
  * @code
- * [mountpoint] => array(
+ * [mountpoint] => [
  *   [mountpoint] => /mnt/xyz
  *   [name] => xyz
  *   [filesystem] => /dev/ad0a
  *   [capacity] => 48%
  *   [used] => 2.4G
  *   [avail] => 2.6G
- *   [size] => 5.4G)
+ *   [size] => 5.4G]
  * @endcode
  */
 function system_get_mount_usage() {
 	global $config, $g;
 
-	$result = array();
+	$result = [];
 
 	exec("/bin/df -h", $rawdata);
 	foreach ($rawdata as $line) {
@@ -764,7 +764,7 @@ function system_get_mount_usage() {
 		if (is_array($config['mounts']) && is_array($config['mounts']['mount'])) {
 			foreach ($config['mounts']['mount'] as $mountcfg) {
 				if (0 == strcmp($mountpoint, "{$g['media_path']}/{$mountcfg['sharename']}")) {
-					$result[$mountpoint] = array();
+					$result[$mountpoint] = [];
 					$result[$mountpoint]['mountpoint'] = $mountpoint;
 					$result[$mountpoint]['name'] = $mountcfg['sharename'];
 					$result[$mountpoint]['filesystem'] = $filesystem;
@@ -900,7 +900,7 @@ function system_get_sysinfo() {
 		$value['cpuusage'] = floor(array_sum($value['cpuusage2']) / $cpus);
 	} else {
 		$value['cpuusage'] = system_get_cpu_usage();
-		$value['cpuusage2'] = array($value['cpuusage']);
+		$value['cpuusage2'] = [$value['cpuusage']];
 	}
 	$value['diskusage'] = get_disk_usage(); // Get disk usage.
 	$value['poolusage'] = get_pool_usage(); // Get pool info.

@@ -31,13 +31,13 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once("globals.inc");
-require_once("util.inc");
-require_once("xmlparse.inc");
-require_once("system.inc");
-require_once("array.inc");
-require_once("rc.inc");
-require_once("tui.inc");
+require_once 'globals.inc';
+require_once 'util.inc';
+require_once 'xmlparse.inc';
+require_once 'system.inc';
+require_once 'array.inc';
+require_once 'rc.inc';
+require_once 'tui.inc';
 
 /* Get product information */
 $productname = get_product_name();
@@ -678,7 +678,7 @@ function config_upgrade() {
 
 	/* Convert 1.1 -> 1.2 */
 	if ($config['version'] === "1.1") {
-		$params = array(
+		$params = [
 			"# USB connected HD44780 based LCD",
 			"ConnectionType=lcd2usb",
 			"Contrast=825",
@@ -690,7 +690,7 @@ function config_upgrade() {
 			"KeyDirect_1=Enter",
 			"KeyDirect_2=Down",
 			"KeyDirect_3=Escape",
-		);
+		];
 		unset($config['lcdproc']['param']);
 		foreach ($params as $param) {
 			$config['lcdproc']['param'][] = $param;
@@ -734,7 +734,7 @@ function config_upgrade() {
 		unset($a);
 		// remove empty entry
 		if (isset($config['system']['hosts'])) {
-			$r = array();
+			$r = [];
 			foreach ($config['system']['hosts'] as &$a) {
 				if (empty($a) || !isset($a['uuid'])) continue;
 				$r[] = $a;
@@ -832,12 +832,12 @@ function config_upgrade() {
 		if ($index !== false) {
 			$config['system']['rcconf']['param'][$index]['value'] = $pwopt;
 		} else {
-			$config['system']['rcconf']['param'][] = array(
+			$config['system']['rcconf']['param'][] = [
 				"uuid" => uuid(),
 				"name" => "powerd_flags",
 				"value" => $pwopt,
 				"comment" => "System power control options",
-				"enable" => true );
+				"enable" => true ];
 		}
 		$config['version'] = "1.6";
 	}
@@ -861,7 +861,7 @@ function config_upgrade() {
 	/* Convert 1.7 -> 1.8 */
 	if ($config['version'] === "1.7") {
 		if (!empty($config['system']['sysctl']) && !empty($config['system']['sysctl']['param'])) {
-			$a_mib = array(
+			$a_mib = [
 				"net.inet.tcp.sendspace" => 131072,
 				"net.inet.tcp.recvspace" => 131072,
 				"net.inet.tcp.sendbuf_inc" => 131072,
@@ -871,7 +871,7 @@ function config_upgrade() {
 				"kern.ipc.nmbjumbo9" => 32768,
 				"kern.ipc.nmbjumbo16" => 16384,
 				"kern.maxfilesperproc" => 60000,
-			);
+			];
 			foreach ($a_mib as $key => $val) {
 				$index = array_search_ex($key, $config['system']['sysctl']['param'], "name");
 				if ($index !== false) {
@@ -881,23 +881,23 @@ function config_upgrade() {
 		}
 		$index = array_search_ex("varsize", $config['system']['rcconf']['param'], "name");
 		if ($index === false) {
-			$config['system']['rcconf']['param'][] = array(
+			$config['system']['rcconf']['param'][] = [
 				"uuid" => uuid(),
 				"name" => "varsize",
 				"value" => "128m",
 				"comment" => "Default /var size",
-				"enable" => true );
+				"enable" => true ];
 		} else {
 			$config['system']['rcconf']['param'][$index]['value'] = "128m";
 		}
 		$index = array_search_ex("vartmpsize", $config['system']['rcconf']['param'], "name");
 		if ($index === false) {
-			$config['system']['rcconf']['param'][] = array(
+			$config['system']['rcconf']['param'][] = [
 				"uuid" => uuid(),
 				"name" => "vartmpsize",
 				"value" => "64m",
 				"comment" => "Default /var/tmp size",
-				"enable" => true );
+				"enable" => true ];
 		} else {
 			$config['system']['rcconf']['param'][$index]['value'] = "64m";
 		}
@@ -924,23 +924,23 @@ function config_upgrade() {
 			$config['samba']['aiowsize'] = 1024;
 		$index = array_search_ex("varsize", $config['system']['rcconf']['param'], "name");
 		if ($index === false) {
-			$config['system']['rcconf']['param'][] = array(
+			$config['system']['rcconf']['param'][] = [
 				"uuid" => uuid(),
 				"name" => "varsize",
 				"value" => "256m",
 				"comment" => "Default /var size",
-				"enable" => true );
+				"enable" => true ];
 		} else {
 			$config['system']['rcconf']['param'][$index]['value'] = "256m";
 		}
 		$index = array_search_ex("vartmpsize", $config['system']['rcconf']['param'], "name");
 		if ($index === false) {
-			$config['system']['rcconf']['param'][] = array(
+			$config['system']['rcconf']['param'][] = [
 				"uuid" => uuid(),
 				"name" => "vartmpsize",
 				"value" => "128m",
 				"comment" => "Default /var/tmp size",
-				"enable" => true );
+				"enable" => true ];
 		} else {
 			$config['system']['rcconf']['param'][$index]['value'] = "128m";
 		}
@@ -991,48 +991,48 @@ function config_upgrade() {
 
 	/* Convert 2.0 -> 2.1 */
 	if ($config['version'] === "2.0") {
-		$config['system']['usermanagement']['user'][] = array(
+		$config['system']['usermanagement']['user'][] = [
 			"uuid" => uuid(),
 			"name" => "dlna",
 			"id" => "933",
 			"primarygroup" => "933",
-			"extraoptions" => '-c "DLNA Daemon" -d /nonexistent -s /usr/sbin/nologin' );
-		$config['system']['usermanagement']['group'][] = array(
+			"extraoptions" => '-c "DLNA Daemon" -d /nonexistent -s /usr/sbin/nologin' ];
+		$config['system']['usermanagement']['group'][] = [
 			"uuid" => uuid(),
 			"name" => "dlna",
-			"id" => "933" );
+			"id" => "933" ];
 		unset($config['samba']['usesendfile']);
 		$config['version'] = "2.1";
 	}
 
 	/* Convert 2.1 -> 2.2 */
 	if ($config['version'] === "2.1") {
-		$config['system']['usermanagement']['user'][] = array(
+		$config['system']['usermanagement']['user'][] = [
 			"uuid" => uuid(),
 			"name" => "vboxusers",
 			"id" => "920",
 			"primarygroup" => "920",
-			"extraoptions" => '-c "Virtualbox user" -d /nonexistent -s /usr/sbin/nologin' );
-		$config['system']['usermanagement']['group'][] = array(
+			"extraoptions" => '-c "Virtualbox user" -d /nonexistent -s /usr/sbin/nologin' ];
+		$config['system']['usermanagement']['group'][] = [
 			"uuid" => uuid(),
 			"name" => "vboxusers",
-			"id" => "920" );
+			"id" => "920" ];
 		$config['vbox']['homedir'] = "";
 		$config['version'] = "2.2";
 	}
 
 	/* Convert 2.2 -> 2.3 */
 	if ($config['version'] === "2.2") {
-		$config['system']['usermanagement']['user'][] = array(
+		$config['system']['usermanagement']['user'][] = [
 			"uuid" => uuid(),
 			"name" => "syncthing",
 			"id" => "983",
 			"primarygroup" => "983",
-			"extraoptions" => '-c "Syncthing Daemon" -d /var/tmp/syncthing -s /usr/sbin/nologin' );
-		$config['system']['usermanagement']['group'][] = array(
+			"extraoptions" => '-c "Syncthing Daemon" -d /var/tmp/syncthing -s /usr/sbin/nologin' ];
+		$config['system']['usermanagement']['group'][] = [
 			"uuid" => uuid(),
 			"name" => "syncthing",
-			"id" => "983" );
+			"id" => "983" ];
 		$config['minidlna']['port'] = "8200";
 		$config['minidlna']['notify_int'] = "300";
 		$config['minidlna']['container'] = "B";
@@ -1051,7 +1051,7 @@ function config_upgrade() {
 
 	/* Convert 2.3 -> 2.4 */
 	if ($config['version'] === "2.3") {
-		$tmp = array();
+		$tmp = [];
 		$found = 0;
 		foreach ($config['system']['usermanagement']['user'] as $v) {
 			if ($v['name'] == "syncthing") {
@@ -1063,7 +1063,7 @@ function config_upgrade() {
 		}
 		$config['system']['usermanagement']['user'] = $tmp;
 
-		$tmp = array();
+		$tmp = [];
 		$found = 0;
 		foreach ($config['system']['usermanagement']['group'] as $v) {
 			if ($v['name'] == "syncthing") {
@@ -1088,21 +1088,21 @@ function config_upgrade() {
 			}
 		}
 
-		$config['system']['loaderconf']['param'][] = array(
+		$config['system']['loaderconf']['param'][] = [
 			"uuid" => uuid(),
 			"name" => "vfs.zfs.arc_max",
 			"value" => "2G",
-			"comment" => "ZFS maximum ARC size");
-		$config['system']['loaderconf']['param'][] = array(
+			"comment" => "ZFS maximum ARC size"];
+		$config['system']['loaderconf']['param'][] = [
 			"uuid" => uuid(),
 			"name" => "vfs.zfs.arc_min",
 			"value" => "1G",
-			"comment" => "ZFS minimum ARC size");
-		$config['system']['loaderconf']['param'][] = array(
+			"comment" => "ZFS minimum ARC size"];
+		$config['system']['loaderconf']['param'][] = [
 			"uuid" => uuid(),
 			"name" => "vfs.zfs.prefetch_disable",
 			"value" => "1",
-			"comment" => "ZFS prefech disable");
+			"comment" => "ZFS prefech disable"];
 		$config['version'] = "2.4";
 	}
 
@@ -1113,16 +1113,16 @@ function config_upgrade() {
 
 		$config['system']['email']['tls_certcheck'] = "tls_certcheck off";
 
-		$config['system']['loaderconf']['param'][] = array(
+		$config['system']['loaderconf']['param'][] = [
 			"uuid" => uuid(),
 			"name" => "arcsas_load",
 			"value" => "YES",
-			"comment" => "Areca non-RAID HBAs ARC-1300/ARC-1320 series Driver");
-		$config['system']['loaderconf']['param'][] = array(
+			"comment" => "Areca non-RAID HBAs ARC-1300/ARC-1320 series Driver"];
+		$config['system']['loaderconf']['param'][] = [
 			"uuid" => uuid(),
 			"name" => "ipmi_load",
 			"value" => "YES",
-			"comment" => "IPMItool Server Management Utility");
+			"comment" => "IPMItool Server Management Utility"];
 		$config['version'] = "2.5";
 	}
 

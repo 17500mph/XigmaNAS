@@ -31,11 +31,11 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once("config.inc");
-require_once("util.inc");
-require_once("disks.inc");
-require_once("email.inc");
-require_once("rc.inc");
+require_once 'config.inc';
+require_once 'util.inc';
+require_once 'disks.inc';
+require_once 'email.inc';
+require_once 'rc.inc';
 
 class StatusReportArticle
 {
@@ -110,7 +110,7 @@ class StatusReportRendererText extends StatusReportRenderer
 class StatusReportRendererHTML extends StatusReportRenderer
 {
 	function _RenderReport(&$report,$articles) {
-		$dateOutput = array();
+		$dateOutput = [];
 		$dateStatus = null;
 		mwexec2("/bin/date", $dateOutput, $dateStatus);
 		$currentDate = $dateOutput[0];
@@ -220,7 +220,7 @@ class StatusReport
 	* Contains commands using to generate report.
 	* @var array
 	*/
-	var $articles = array();
+	var $articles = [];
 
 	/**
 	* Sets the Content-type of the message.

@@ -103,10 +103,10 @@ function array_sort_key(array &$array, $key) {
 // array - The array to be processed
 // key - The key used as filter criteria
 function array_remove_duplicate($array, $key) {
-	$result = array();
+	$result = [];
 	if (!is_array($array))
 		return false;
-	$subarray = array();
+	$subarray = [];
 	foreach ($array as $value) {
 		$subarray[] = $value[$key];
 	}
