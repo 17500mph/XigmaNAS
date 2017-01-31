@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-29 16:55+0000\n"
+"PO-Revision-Date: 2017-01-30 03:23+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
+"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -603,7 +603,7 @@ msgid "Advanced settings"
 msgstr "Расширенные настройки"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Задержка обьявления"
 
 msgid "Afrikaans"
 msgstr "Африканский"
@@ -635,7 +635,7 @@ msgid "Age"
 msgstr "Возраст"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Агрегационный протокол"
 
 msgid "Aggressive"
 msgstr "Интенсивный"
@@ -3395,6 +3395,8 @@ msgid ""
 "Enter a custom port number if you want to override the default port (default "
 "is 69)."
 msgstr ""
+"Введите номер порта, если вы хотите переопределить порт по умолчанию (по "
+"умолчанию 69)."
 
 #, php-format
 msgid ""
@@ -3958,7 +3960,7 @@ msgstr "График показывает последние 120 секунд"
 
 #, php-format
 msgid "Graph updates every %d seconds."
-msgstr ""
+msgstr "График обновляется каждые %d секунд."
 
 msgid "Graphs Height"
 msgstr "Высота графиков"
@@ -4607,6 +4609,7 @@ msgstr "Неверный формат файла."
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
+"Неверный максимальный размер блока! Должно быть в диапазоне от %d to %d."
 
 msgid "Invalid username or password."
 msgstr "Неправильное имя пользователя или пароль."
@@ -4871,10 +4874,10 @@ msgstr ""
 "такие как 'k' или 'KB' (килобайт), 'M' (мегабайт), 'Gb' (гигабайт)."
 
 msgid "Link Down Action"
-msgstr ""
+msgstr "Действие при отключении соединения"
 
 msgid "Link Up Action"
-msgstr ""
+msgstr "Действие при установке соединения"
 
 msgid "List"
 msgstr "Список"
@@ -7720,7 +7723,7 @@ msgid "Subject"
 msgstr "Тема"
 
 msgid "Subnet Bit Count"
-msgstr ""
+msgstr "Количество бит подсети"
 
 msgid "Subnet Mask"
 msgstr "Маска подсети"
@@ -7883,7 +7886,7 @@ msgid "TFTP"
 msgstr "TFTP"
 
 msgid "TFTP has been disabled."
-msgstr ""
+msgstr "TFTP отключен."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -7921,7 +7924,7 @@ msgid "Take a device offline"
 msgstr "Перевести устройства в offline (Take a device offline)"
 
 msgid "Tap Device"
-msgstr ""
+msgstr "Tap устройство"
 
 msgid "Tape"
 msgstr "Магнитная лента"
@@ -10682,41 +10685,3 @@ msgstr "размонтировать"
 
 msgid "week days"
 msgstr "дней недели"
-
-#~ msgid "Aggregation protocol"
-#~ msgstr "Агрегационный протокол"
-
-#, php-format
-#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
-#~ msgstr ""
-#~ "Некорректный максимальный размер блока. Он должен быть в диапазоне от %d до "
-#~ "%d."
-
-#~ msgid "Physical interface"
-#~ msgstr "Физический интерфейс"
-
-#~ msgid "VLAN tag"
-#~ msgstr "Метка VLAN"
-
-#~ msgid "Link down action"
-#~ msgstr "Действие по окончании соединения"
-
-#~ msgid "Link up action"
-#~ msgstr "Действие при начале соединения"
-
-#~ msgid "Advertisement skew"
-#~ msgstr "Задержка обьявления"
-
-#~ msgid "Tap device"
-#~ msgstr "Tap устройства"
-
-#, php-format
-#~ msgid "Graph updates every %d seconds"
-#~ msgstr "График обновляется каждые %d секунд"
-
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. "
-#~ "(Default is 69). "
-#~ msgstr ""
-#~ "Введите номер порта, если вы хотите переопределить порт по умолчанию. (По "
-#~ "умолчанию 69). "

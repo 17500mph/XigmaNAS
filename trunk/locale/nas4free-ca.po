@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-29 17:05+0000\n"
+"PO-Revision-Date: 2017-01-30 07:31+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
+"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ca_ES\n"
 
@@ -609,7 +609,7 @@ msgid "Advanced settings"
 msgstr "Paràmetres avançats"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Inclinació publicitat"
 
 msgid "Afrikaans"
 msgstr "Africà"
@@ -640,7 +640,7 @@ msgid "Age"
 msgstr "Edat"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Protocol d'agregació"
 
 msgid "Aggressive"
 msgstr "Agressiu"
@@ -3416,6 +3416,8 @@ msgid ""
 "Enter a custom port number if you want to override the default port (default "
 "is 69)."
 msgstr ""
+"Entra nombre de port personalitzat si vols canviar el port per defecte (69 "
+"per defecte)."
 
 #, php-format
 msgid ""
@@ -3984,7 +3986,7 @@ msgstr "El gràfic mostra els últims 120 segons"
 
 #, php-format
 msgid "Graph updates every %d seconds."
-msgstr ""
+msgstr "Actualització de gràfics cada %d secons."
 
 msgid "Graphs Height"
 msgstr "Alçada dels gràfics"
@@ -4639,7 +4641,7 @@ msgstr "Format de fitxer no vàlid."
 
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
-msgstr ""
+msgstr "Mida màxima de bloc invàlid! ha de ésser en el rang de %d a %d."
 
 msgid "Invalid username or password."
 msgstr "Nom d'usuari o contrasenya incorrectes."
@@ -4904,10 +4906,10 @@ msgstr ""
 "\",\" M \",\" Gb \", etc.)."
 
 msgid "Link Down Action"
-msgstr ""
+msgstr "Acció de enllaç desconectat"
 
 msgid "Link Up Action"
-msgstr ""
+msgstr "Acció de enllaç connectat"
 
 msgid "List"
 msgstr "Llista"
@@ -7772,7 +7774,7 @@ msgid "Subject"
 msgstr "Assumpte"
 
 msgid "Subnet Bit Count"
-msgstr ""
+msgstr "Compta bit de la sub-xarxa"
 
 msgid "Subnet Mask"
 msgstr "Màscara de subxarxa"
@@ -7936,7 +7938,7 @@ msgid "TFTP"
 msgstr "TFTP"
 
 msgid "TFTP has been disabled."
-msgstr ""
+msgstr "TFTP està des-habilitat."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -7974,7 +7976,7 @@ msgid "Take a device offline"
 msgstr "Desconnectar un dispositiu"
 
 msgid "Tap Device"
-msgstr ""
+msgstr "Dispositiu tampó"
 
 msgid "Tape"
 msgstr "Cinta"
@@ -10755,39 +10757,3 @@ msgstr "desmontar"
 
 msgid "week days"
 msgstr "dias de la setmana"
-
-#~ msgid "Aggregation protocol"
-#~ msgstr "Protocol d'agregació"
-
-#~ msgid "Advertisement skew"
-#~ msgstr "Deslliçament de anunci"
-
-#, php-format
-#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
-#~ msgstr "Tamany màxim de bloc no valid! Ha d'estar en l'interval de%d a %d."
-
-#~ msgid "Link down action"
-#~ msgstr "Acció d'enllaç caigut"
-
-#~ msgid "Link up action"
-#~ msgstr "Acció d'enllaç actiu"
-
-#~ msgid "Physical interface"
-#~ msgstr "Interfície física"
-
-#, php-format
-#~ msgid "Graph updates every %d seconds"
-#~ msgstr "Gràfic s'actualitza cada %d segons"
-
-#~ msgid "Tap device"
-#~ msgstr "Dispositiu clau"
-
-#~ msgid "VLAN tag"
-#~ msgstr "Etiqueta VLAN"
-
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. "
-#~ "(Default is 69). "
-#~ msgstr ""
-#~ "Introduïu un número de port personalitzat si voleu canviar el port per "
-#~ "defecte. (Per defecte és 69). "

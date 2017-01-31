@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-29 08:10+0000\n"
+"PO-Revision-Date: 2017-01-30 19:25+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
+"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -216,6 +216,8 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Amikor nincs egy indexfájl (index.php, index.html, index.htm or default.htm) "
+"sem , akkor egy mappalista jön létre."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -484,7 +486,7 @@ msgid "Add any supplemental parameters."
 msgstr "Adj hozzá tetszőleges kiegészítő paramétert."
 
 msgid "Add auth group"
-msgstr "Hitelesítő csoport létrehozása"
+msgstr "Hitelesített csoport létrehozása"
 
 msgid "Add auto snapshot"
 msgstr "Automatikus pillanatkép hozzáadása"
@@ -547,7 +549,7 @@ msgid "Additional Network"
 msgstr "Kiegészítő hálózat"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "További paraméterek"
 
 msgid "Additional Storage"
 msgstr "Kiegészítő tároló"
@@ -565,13 +567,13 @@ msgid "Admin Password"
 msgstr "Rendszergazda jelszava"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Rendszergazda jelszava"
 
 msgid "Administrative WebGUI"
 msgstr "Webes rendszergazdai felület (WebGUI)"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Rendszergazda neve"
 
 msgid "Advanced"
 msgstr "Haladó"
@@ -624,7 +626,7 @@ msgid "Age"
 msgstr "Életkor"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Összesítő protokoll"
 
 msgid "Aggressive"
 msgstr "Agresszív"
@@ -764,7 +766,7 @@ msgid "Always On"
 msgstr "Mindig bekapcsolva"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Mindig keressen"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "A külső érzékelőkből érkező környezeti jellemzők"
@@ -788,9 +790,9 @@ msgid ""
 "does not use CHAP authentication it defines authorised users and secrets for "
 "additional security."
 msgstr ""
-"Az Hitelesítő csoportot címke száma határozza meg, és választható. Ha a Cél "
-"nem használ CHAP hitelesítést, meghatározza a hitelesített felhasználókat és "
-"titkokat egyéb biztonsághoz."
+"Az Hitelesített csoportot címke száma határozza meg, és választható. Ha a "
+"Cél nem használ CHAP hitelesítést, meghatározza a hitelesített "
+"felhasználókat és titkokat egyéb biztonsághoz."
 
 msgid "An Extent defines the storage area of the Target."
 msgstr "Egy Extent a Cél tároló területét határozza meg."
@@ -930,17 +932,19 @@ msgid "August"
 msgstr "Augusztus"
 
 msgid "Auth Group"
-msgstr "Hitelesítő csoport"
+msgstr "Hitelesített csoport"
 
 msgid "Auth Group Settings"
-msgstr "Hitelesítő csoport beállításai"
+msgstr "Hitelesített csoport beállításai"
 
 msgid "Auth Groups"
-msgstr "Hitelesítő csoportok"
+msgstr "Hitelesített csoportok"
 
 msgid ""
 "Auth Groups contains authorised users and secrets for additional security."
 msgstr ""
+"Hitelesített csoport tartalmazza hitelesített felhasználókat  és a további "
+"biztonsághoz a titkokat."
 
 msgid "Auth Method"
 msgstr "Auth eljárás"
@@ -1260,7 +1264,7 @@ msgid "CIFS/SMB Information"
 msgstr "CIFS/SMB informaáció"
 
 msgid "CIFS/SMB is disabled."
-msgstr ""
+msgstr "CIFS/SMB ki van kapcsolva."
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB engedélyezve van."
@@ -1628,7 +1632,7 @@ msgid "Controller"
 msgstr "Vezérlő"
 
 msgid "Controller Auth Group"
-msgstr "Kontroller Hitelesítő csoport"
+msgstr "Kontroller Hitelesített csoport"
 
 msgid "Controller Auth Method"
 msgstr "Kontroller Auth eljárás"
@@ -2024,7 +2028,7 @@ msgid "Danish"
 msgstr "Dán"
 
 msgid "Data Integrity"
-msgstr ""
+msgstr "Adatintegritás"
 
 msgid "Data digest"
 msgstr "Adat kivonat"
@@ -2214,7 +2218,7 @@ msgid "Delete all self-tests"
 msgstr "Összes önteszt törlése"
 
 msgid "Delete auth group"
-msgstr "Hitelesítő csoport törlése"
+msgstr "Hitelesített csoport törlése"
 
 msgid "Delete auto snapshot"
 msgstr "Automatikus pillanatkép törlése"
@@ -2456,7 +2460,7 @@ msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Befejezetlen fájlok könyvtára. Az üres mező tiltást jelent."
 
 msgid "Directory listing"
-msgstr "Könyvtár listázása"
+msgstr "Mappa listázása"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Cserélhető médiát tartalmazó könyvtár. (pl.: /mnt/iscsi/)"
@@ -2511,7 +2515,7 @@ msgid "Discovered iSCSI target for %s"
 msgstr "Felfedezett iSCSI-cél a következőnek: %s"
 
 msgid "Discovery Auth Group"
-msgstr "Felfeldező Hitelesítő Csoport"
+msgstr "Felfeldező Hitelesített Csoport"
 
 msgid "Discovery Auth Method"
 msgstr "Discovery Auth Eljárás"
@@ -2601,7 +2605,7 @@ msgid "Do you really want to delete this VM?"
 msgstr "Biztos, hogy törlöd ezt a VM-et?"
 
 msgid "Do you really want to delete this auth group?"
-msgstr "Biztos, hogy törli ezt a Hitelesítő csoportot?"
+msgstr "Biztos, hogy törli ezt a Hitelesített csoportot?"
 
 msgid "Do you really want to delete this auto snapshot?"
 msgstr "Valóban törölni kívánja ezt az automatikus pillanatképet?"
@@ -2806,7 +2810,7 @@ msgid "Do you want to toggle selected options?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott beállításokat?"
 
 msgid "Document Root"
-msgstr ""
+msgstr "Dokumentum gyökérkönyvtára"
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
@@ -2819,16 +2823,16 @@ msgid "Domain"
 msgstr "Tartomány"
 
 msgid "Domain Controller Name"
-msgstr ""
+msgstr "Tartományvezérlő neve"
 
 msgid "Domain Name"
-msgstr ""
+msgstr "Tartománynév"
 
 msgid "Domain Name (DNS/Realm-Name)"
-msgstr ""
+msgstr "Domain név (DNS/Területnév)"
 
 msgid "Domain Name (NetBIOS-Name)"
-msgstr ""
+msgstr "Domain név (NetBIOS név)"
 
 msgid "Domain is missing 2nd level name."
 msgstr "Domainhoz hiányzik a másodlagos név."
@@ -2964,7 +2968,7 @@ msgid "Edit Volume"
 msgstr "Kötet módosítása"
 
 msgid "Edit auth group"
-msgstr "Hitelesítő csoport módosítása"
+msgstr "Hitelesített csoport módosítása"
 
 msgid "Edit auto snapshot"
 msgstr "Automatikus pillanatkép beállításai"
@@ -3168,7 +3172,7 @@ msgid "Enable device polling"
 msgstr "Eszköz szavaztatás (device polling) engedélyezése"
 
 msgid "Enable directory listing."
-msgstr "Mappa listázás engedélyezése"
+msgstr "Mappalistázás engedélyezése"
 
 msgid "Enable distributed hash table."
 msgstr "Elosztott hash tábla engedélyezése"
@@ -3254,7 +3258,7 @@ msgid "Enable serial console."
 msgstr "Speciális konzol engedélyezése."
 
 msgid "Enable service SSH when disabled"
-msgstr ""
+msgstr "SSH bekapcsolása, ha ki van kapcsolva"
 
 msgid "Enable shadow copy."
 msgstr "Árnyékmásolat engedélyezése."
@@ -3316,13 +3320,13 @@ msgid "Encryption"
 msgstr "Titkosítás (encryption)"
 
 msgid "Encryption Algorithm"
-msgstr ""
+msgstr "Titkosítási algoritmus"
 
 msgid "Encryption Management"
-msgstr ""
+msgstr "Titkosításkezelő"
 
 msgid "Encryption Settings"
-msgstr ""
+msgstr "Titkosítási beállítások"
 
 msgid "Encryption Tools"
 msgstr "Titkosító eszközök"
@@ -3783,7 +3787,7 @@ msgid "Force use"
 msgstr "Mindenképpen használ"
 
 msgid "Forced Update Period"
-msgstr ""
+msgstr "Kierőszakolt frissítés időköze."
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3911,7 +3915,7 @@ msgstr "Grafikon az utolsó 120 mp-et mutatja"
 
 #, php-format
 msgid "Graph updates every %d seconds."
-msgstr ""
+msgstr "Grafikon frissítése %d másodpercenként."
 
 msgid "Graphs Height"
 msgstr "Diagramok magassága"
@@ -4092,7 +4096,7 @@ msgid "Hostname"
 msgstr "Állomásnév"
 
 msgid "Hostname Database"
-msgstr ""
+msgstr "Kiszolgálónév-adatbázis"
 
 msgid "Hosts"
 msgstr "Állomásnevek (Hosts)"
@@ -4658,7 +4662,7 @@ msgid "Key"
 msgstr "Kulcs"
 
 msgid "Key Length"
-msgstr ""
+msgstr "Kulcshossz"
 
 msgid "Key Management Protocol"
 msgstr "Kulcskezelő protokoll"
@@ -4925,7 +4929,7 @@ msgid "Logarithmic Scaling"
 msgstr "Logaritmikus skálázás"
 
 msgid "Logical Block"
-msgstr ""
+msgstr "Logikai blokk"
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -5095,7 +5099,7 @@ msgid "Max. Passive Port"
 msgstr "Legnagyobb passzív port"
 
 msgid "Max. Sessions"
-msgstr ""
+msgstr "Munkamenetek maximális száma"
 
 msgid "Max. TTL"
 msgstr "Maximális TTL"
@@ -5338,7 +5342,7 @@ msgid "Mount Point Fsck"
 msgstr "Csatolási pont Fsck"
 
 msgid "Mount Point Management"
-msgstr ""
+msgstr "Csatolási pont kezelő"
 
 msgid "Mount Point Tools"
 msgstr "Csatolási pont eszközei"
@@ -5552,7 +5556,7 @@ msgid "No RSYNC Client configured"
 msgstr "Nincs RSYNC kliens beállítva"
 
 msgid "No configured Auth Group."
-msgstr "Hitelesítő csoport nincs konfigurálva."
+msgstr "Hitelesített csoport nincs konfigurálva."
 
 msgid "No configured CARP interfaces."
 msgstr "Nincs konfigurált CARP interfész."
@@ -6087,7 +6091,7 @@ msgid "Permanent samba data path (e.g. %s)."
 msgstr "Állandó Samba-adatútvonal (pl. %s)."
 
 msgid "Permission"
-msgstr ""
+msgstr "Jogosultság"
 
 msgid "Permit Root Login"
 msgstr "Root bejelentkezés engedélyezése"
@@ -6126,7 +6130,7 @@ msgid "Please add a bridge interface first."
 msgstr "Először egy híd interfészt hozz létre."
 
 msgid "Please add a new Auth Group first"
-msgstr "Először Hitelesítő csoportot hozz létre."
+msgstr "Először egy új Hitelesített csoportot hozz létre"
 
 msgid "Please add a new CARP interface first"
 msgstr "Először egy új CARP interfészt adj hozzá"
@@ -6724,7 +6728,7 @@ msgid "Rescan Disks"
 msgstr "Lemezek újrakeresése"
 
 msgid "Rescan Interval"
-msgstr ""
+msgstr "Újrakeresési időköz"
 
 msgid "Rescan interval"
 msgstr "Újrakeresési időköz"
@@ -6970,7 +6974,7 @@ msgid "Saved file to"
 msgstr "Fájl mentése ide"
 
 msgid "Scan Mode"
-msgstr ""
+msgstr "Keresés módja"
 
 msgid "Scan Targets"
 msgstr "Célpontok keresése"
@@ -7425,7 +7429,7 @@ msgid "Skew"
 msgstr "Skew"
 
 msgid "Skip First Scan"
-msgstr ""
+msgstr "Első keresés figyelmen kívül hagyása"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
@@ -7673,7 +7677,7 @@ msgid "Subject"
 msgstr "Tárgy"
 
 msgid "Subnet Bit Count"
-msgstr ""
+msgstr "Alhálózati bitszám"
 
 msgid "Subnet Mask"
 msgstr "Alhálózati maszk"
@@ -7836,7 +7840,7 @@ msgid "TFTP"
 msgstr "TFTP"
 
 msgid "TFTP has been disabled."
-msgstr ""
+msgstr "TFTP-t sikeresen kikapcsoltad."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -7874,7 +7878,7 @@ msgid "Take a device offline"
 msgstr "Eszköz offline állapotba helyezése"
 
 msgid "Tap Device"
-msgstr ""
+msgstr "Szalageszköz"
 
 msgid "Tape"
 msgstr "Szalag"
@@ -8428,7 +8432,7 @@ msgid ""
 "specific Auth Group."
 msgstr ""
 "A kezdeményező elérheti a célt a jelenlegi névvel és titkosítással, ahogy az "
-"a speciális Hitelesítő csoportban meg lett adva."
+"a speciális Hitelesített csoportban meg lett adva."
 
 msgid "The initiator can connect to the portals in specific Portal Group."
 msgstr ""
@@ -8440,7 +8444,7 @@ msgid ""
 "specific Auth Group."
 msgstr ""
 "A kezdeményező felfedezheti a célokat a megfelelő felhasználóval és titokkal "
-"a Hitelesítő csoportban megadottak szerint."
+"a Hitelesített csoportban megadottak szerint."
 
 msgid "The interface is unknown."
 msgstr "Az interfész ismeretlen."
@@ -8450,7 +8454,7 @@ msgid ""
 "specific Auth Group."
 msgstr ""
 "A istgtcontrol elérheti a célokat a jelenlegi felhasználóval és titokkal a "
-"Hitelesítő csoportban megadottak szerint."
+"Hitelesített csoportban megadottak szerint."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "Az \"adatbáziskönyvtár helyen\" nem valós hely."
@@ -9770,7 +9774,7 @@ msgid "Up"
 msgstr "Felfelé"
 
 msgid "Update Period"
-msgstr ""
+msgstr "Frissítési időköz"
 
 msgid "Update period"
 msgstr "Frissítési időköz"
@@ -10588,39 +10592,3 @@ msgstr "leválasztás"
 
 msgid "week days"
 msgstr "hétköznap"
-
-#, php-format
-#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
-#~ msgstr "Érvénytelen max. blokk méret! A blokk méret %d-tól %d-ig terjedhet."
-
-#~ msgid "Physical interface"
-#~ msgstr "Fizikai interfész"
-
-#~ msgid "VLAN tag"
-#~ msgstr "VLAN címke"
-
-#~ msgid "Aggregation protocol"
-#~ msgstr "Összesítés protokoll"
-
-#~ msgid "Advertisement skew"
-#~ msgstr "Advertisement skew"
-
-#~ msgid "Link down action"
-#~ msgstr "Kikapcsolás (link down) művelet"
-
-#~ msgid "Link up action"
-#~ msgstr "Bekapcsolás (link up) művelet"
-
-#~ msgid "Tap device"
-#~ msgstr "Érintőeszköz"
-
-#, php-format
-#~ msgid "Graph updates every %d seconds"
-#~ msgstr "A grafikon minden %d másodpercben frissül."
-
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. "
-#~ "(Default is 69). "
-#~ msgstr ""
-#~ "Az alapértelmezettet port felülírásához adj meg egy számot (alapértelmezett "
-#~ "= 69). "
