@@ -307,20 +307,20 @@ function show_header($title, $additional_header_content = null)
 			echo "\n";
 		}
 	}
-	echo "</head>\n";
+	echo '</head>',"\n";
 	// NAS4Free Header
-	echo "<body id='main'>", "\n";
-	echo "<header id='g4h'>", "\n";
-	echo "<div id=\"header\">\n";
-	echo "<div id=\"headerlogo\">\n";
-	echo "<a title=\"www.".get_product_url()."\" href=\"http://".get_product_url()."\" target='_blank'><img src='../images/header_logo.png' alt='logo' /></a>\n";
-	echo "</div>\n";
-	echo "<div id=\"headerrlogo\">\n";
-	echo "<div class=\"hostname\">\n";
-	echo "<span>".system_get_hostname()."&nbsp;</span>\n";
-	echo "</div>\n";
-	echo "</div>\n";
-	echo "</div>\n";
+	echo '<body id="main">',"\n";
+	echo '<header id="g4h">',"\n";
+	echo '<div id="header">',"\n";
+	echo '<div id="headerlogo">',"\n";
+	echo '<a title="www.',get_product_url(),'" href="http://',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";
+	echo '</div>',"\n";
+	echo '<div id="headerrlogo">',"\n";
+	echo '<div class="hostname">',"\n";
+	echo '<span>',system_get_hostname(),'&nbsp;</span>',"\n";
+	echo '</div>',"\n";
+	echo '</div>',"\n";
+	echo '</div>',"\n";
 	echo "<div id=\"headernavbar\">\n";
 	echo "<ul id=\"navbarmenu\">\n";
 	echo display_menu("system");
