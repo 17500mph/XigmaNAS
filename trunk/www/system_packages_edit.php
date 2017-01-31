@@ -75,6 +75,7 @@ $pgtitle = [gtext('System'),gtext('Packages'),gtext('Install')];
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<?php html_titleline(gtext("Packages Installer"));?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Package file");?></td>
 						<td width="78%" class="vtable">
@@ -104,9 +105,9 @@ $pgtitle = [gtext('System'),gtext('Packages'),gtext('Install')];
 				?>
 				<div id="remarks">
 					<?php
-					$helpinghand = gtext('You can also install a package via SSH or console using the the pkg add command.')
+					$helpinghand = gtext('You can also install a package via SSH or console using the the pkg install command.')
 						. '<br />'
-						. gtext('Example: pkg add packagename.');
+						. gtext('Example: pkg install packagename.');
 					html_remark("note", gtext('Note'), $helpinghand);
 					?>
 				</div>
