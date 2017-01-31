@@ -929,7 +929,7 @@ function zfs_snapshot_destroy($snapshot) {
 
 function zfs_snapshot_rollback($snapshot) {
 	global $config;
-	$result = ['output" => ['error'],'retval' => -1];
+	$result = ['output' => ['error'],'retval' => -1];
 
 	if (empty($snapshot) || empty($snapshot['snapshot'])) {
 		return $result;
