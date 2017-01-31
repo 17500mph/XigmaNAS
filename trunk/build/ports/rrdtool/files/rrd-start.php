@@ -31,7 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
  */
-require_once("config.inc");
+require_once 'config.inc';
 $runtime_dir = "/usr/local/share/rrdgraphs";
 
 if (isset($config['rrdgraphs']['enable'])) {
@@ -86,9 +86,9 @@ $rrdconfig = fopen("{$config['rrdgraphs']['storage_path']}/rrd_config", "w");
 
 	if (isset($config['rrdgraphs']['disk_usage'])) {
 		unset($config["rrdgraphs"]["mounts"]);
-		$config["rrdgraphs"]["mounts"] = array();
+		$config["rrdgraphs"]["mounts"] = [];
 		unset($config["rrdgraphs"]["pools"]);
-		$config["rrdgraphs"]["pools"] = array();
+		$config["rrdgraphs"]["pools"] = [];
 
 	if (is_array($config['mounts']) && is_array($config['mounts']['mount'])) {
 		for ($i = 0; $i < count($config['mounts']['mount']); ++$i) {
