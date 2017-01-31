@@ -31,7 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once("config.inc");
+require_once 'config.inc';
 
 // Check if the given port is already used by another service.
 // @param port		The port to be checked.

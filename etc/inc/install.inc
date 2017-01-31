@@ -31,9 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once("functions.inc");
-require_once("util.inc");
-require_once("xmlparse.inc");
+require_once 'functions.inc';
+require_once 'util.inc';
+require_once 'xmlparse.inc';
 
 // Check image file
 function check_install_image($dev, $pt, $img)
@@ -61,7 +61,7 @@ function get_install_source_drive()
 
 	$cdlist = get_cdrom_list();
 	$dalist = get_scsi_disks_list();
-	$ptlist = array("a", "s1a", "s4a", "p1", "p2");
+	$ptlist = ["a", "s1a", "s4a", "p1", "p2"];
 
 	$disklist = $cdlist;
 	foreach ($dalist as $disk) {
@@ -69,7 +69,7 @@ function get_install_source_drive()
 		foreach ($ptlist as $pt) {
 			if (0 == check_install_image($dev, $pt, $imgfile)) {
 				$diskname = $disk['name'];
-				$disklist[$diskname] = array();
+				$disklist[$diskname] = [];
 				$disklist[$diskname]['name'] = $diskname;
 				$disklist[$diskname]['devicespecialfile'] = "{$dev}{$pt}";
 				$disklist[$diskname]['type'] = "UFS";
@@ -538,7 +538,7 @@ function install_backup_config($disk)
 		write_console("Error: Failed to backup the configuration file!\n");
 		return 1;
 	}
-	$files = glob("{$mnt_cf_disk}/conf/ssh_host_*") or array();
+	$files = glob("{$mnt_cf_disk}/conf/ssh_host_*") or [];
 	foreach ($files as $file) {
 		if (1 == mwexec("/bin/cp -p {$file} {$tmp_cf_bak}")) {
 			write_console("Error: Failed to backup the configuration file!\n");
@@ -585,7 +585,7 @@ function install_restore_config($disk)
 		write_console("Error: Failed to restore the configuration file! (config.xml)\n");
 		return 1;
 	}
-	$files = glob("{$tmp_cf_bak}/ssh_host_*") or array();
+	$files = glob("{$tmp_cf_bak}/ssh_host_*") or [];
 	foreach ($files as $file) {
 		if (1 == mwexec("/bin/cp -p {$file} {$mnt_cf_disk}/conf")) {
 			write_console("Error: Failed to restore the configuration file!({$file})\n");
@@ -629,10 +629,10 @@ function install_restore_config($disk)
 // $disk - Disk name (e.g. ad0)
 // $partlayout - The layout description of the disk, e.g.
 // array(
-//   array("slice" => 1, "fstype" => "4.2BSD", "size" => 64, "volname" => "root"),
-//   array("slice" => 2, "fstype" => "4.2BSD", "size" => "*", "volname" => "data"),
-//   array("slice" => 3, "fstype" => "swap", "size" => 200, "volname" => "")
-//   array("slice" => 4, "fstype" => "unused", "size" => 0, "volname" => "")
+//   ["slice" => 1, "fstype" => "4.2BSD", "size" => 64, "volname" => "root"],
+//   ["slice" => 2, "fstype" => "4.2BSD", "size" => "*", "volname" => "data"],
+//   [("slice" => 3, "fstype" => "swap", "size" => 200, "volname" => ""]
+//   ["slice" => 4, "fstype" => "unused", "size" => 0, "volname" => ""]
 // )
 // Return 0 if successful, otherwise 1
 function install_init_disk($disk, $partlayout)
@@ -642,7 +642,7 @@ function install_init_disk($disk, $partlayout)
 	mwexec("/sbin/gpart destroy -F {$disk}");
 	// Initialize the destination using fdisk.
 	write_console("Create slice/partition table on device {$disk}.\n");
-	$slicesize = array(0, 0, 0, 0);
+	$slicesize = [0, 0, 0, 0];
 	foreach ($partlayout as $partlayoutv) {
 		// add 4MiB alignment
 		if ($partlayoutv['size'] !== "*")
@@ -733,10 +733,10 @@ function install_init_disk($disk, $partlayout)
 // $disk - Disk name (e.g. ad0)
 // $partlayout - The layout description of the disk, e.g.
 // array(
-//   array("partition" => 1, "fstype" => "boot", "size" => "512k", "volname" => "boot"),
-//   array("partition" => 2, "fstype" => "ufs",  "size" => 800, "volname" => "root"),
-//   array("partition" => 3, "fstype" => "swap", "size" => 1024, "volname" => "swap"),
-//   array("partition" => 4, "fstype" => "ufs",  "size" => "*", "volname" => "data")
+//   ["partition" => 1, "fstype" => "boot", "size" => "512k", "volname" => "boot"],
+//   ["partition" => 2, "fstype" => "ufs",  "size" => 800, "volname" => "root"],
+//   ["partition" => 3, "fstype" => "swap", "size" => 1024, "volname" => "swap"],
+//   ["partition" => 4, "fstype" => "ufs",  "size" => "*", "volname" => "data"]
 // )
 // Return 0 if successful, otherwise 1
 function install_init_gptdisk($disk, $partlayout)
@@ -826,18 +826,18 @@ function install_init_gptdisk($disk, $partlayout)
 
 // Initialize harddrive. It creates the root (p1), data (p2) and swap (p3) partitions.
 // $disk - Disk name (e.g. ad0)
-// $slicesize - Array containing the size of each slice in MB, e.g. array(64, 100, *, 0)
+// $slicesize - Array containing the size of each slice in MB, e.g. [64, 100, *, 0]
 // Return 0 if successful, otherwise 1
 function install_fdisk($disk, $slicesize)
 {
 	global $g;
 
-	$slicetable = array(
-		array("slice" => 1, "type" => 0, "start" => 0, "length" => 0),
-		array("slice" => 2, "type" => 0, "start" => 0, "length" => 0),
-		array("slice" => 3, "type" => 0, "start" => 0, "length" => 0),
-		array("slice" => 4, "type" => 0, "start" => 0, "length" => 0)
-	);
+	$slicetable = [
+		["slice" => 1, "type" => 0, "start" => 0, "length" => 0],
+		["slice" => 2, "type" => 0, "start" => 0, "length" => 0],
+		["slice" => 3, "type" => 0, "start" => 0, "length" => 0],
+		["slice" => 4, "type" => 0, "start" => 0, "length" => 0]
+	];
 	$activeslice = 0;
 
 	// Get disk informations
@@ -1056,7 +1056,7 @@ function install_detect_installation($mode, &$devinfo) {
 
 	$imgfile = get_product_name(). "-{$g['arch']}-embedded.xz";
 	$result = 1;
-	$devinfo = array();
+	$devinfo = [];
 
 	echo "Try to detect installation...\n";
 
