@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Network'),gtext('Proxy')];
-
 array_make_branch($config,'system','proxy','http');
 array_make_branch($config,'system','proxy','ftp');
 
@@ -60,30 +58,26 @@ if ($_POST) {
 	$reqdfields = [];
 	$reqdfieldsn = [];
 	$reqdfieldst = [];
-
-	if (isset($_POST['http_enable'])) {
-		$reqdfields = array_merge($reqdfields, explode(" ", "http_address http_port"));
+	if(isset($_POST['http_enable'])):
+		$reqdfields = array_merge($reqdfields,['http_address','http_port']);
 		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Address'),gtext('Port')]);
-		$reqdfieldst = array_merge($reqdfieldst,['string',"numeric']);
-
-		if (isset($_POST['http_auth'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "http_username http_password"));
+		$reqdfieldst = array_merge($reqdfieldst,['string','numeric']);
+		if(isset($_POST['http_auth'])):
+			$reqdfields = array_merge($reqdfields,['http_username','http_password']);
 			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('User'),gtext('Password')]);
 			$reqdfieldst = array_merge($reqdfieldst,['string','password']);
-		}
-	}
-
-	if (isset($_POST['ftp_enable'])) {
-		$reqdfields = array_merge($reqdfields, explode(" ", "ftp_address ftp_port"));
-		$reqdfieldsn = array_merge($reqdfieldsn,['gtext('Address'),gtext('Port')]);
+		endif;
+	endif;
+	if(isset($_POST['ftp_enable'])):
+		$reqdfields = array_merge($reqdfields,['ftp_address','ftp_port']);
+		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Address'),gtext('Port')]);
 		$reqdfieldst = array_merge($reqdfieldst,['string','numeric']);
-
-		if (isset($_POST['ftp_auth'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "ftp_username ftp_password"));
-			$reqdfieldsn = array_merge($reqdfieldsn,['gtext('User'),gtext('Password')]);
-			$reqdfieldst = array_merge($reqdfieldst,['string','password'));
-		}
-	}
+		if(isset($_POST['ftp_auth'])):
+			$reqdfields = array_merge($reqdfields,['ftp_username','ftp_password']);
+			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('User'),gtext('Password')]);
+			$reqdfieldst = array_merge($reqdfieldst,['string','password']);
+		endif;
+	endif;
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -113,6 +107,7 @@ if ($_POST) {
 		touch($d_sysrebootreqd_path);
 	}
 }
+$pgtitle = [gtext('Network'),gtext('Proxy')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">

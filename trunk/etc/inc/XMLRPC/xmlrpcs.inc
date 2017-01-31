@@ -66,7 +66,7 @@
 			$outAr['nil'] = new xmlrpcval([
 				'specUrl' => new xmlrpcval('http://www.ontosys.com/xml-rpc/extensions.php', 'string'),
 				'specVersion' => new xmlrpcval(1, 'int')
-			), 'struct'];
+			], 'struct');
 		}
 		return new xmlrpcresp(new xmlrpcval($outAr, 'struct'));
 	}

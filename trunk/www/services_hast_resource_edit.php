@@ -79,12 +79,17 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "name aname bname apath bpath aremoteaddr bremoteaddr");
-	$reqdfieldsn = [gtext('Resource Name'],
-				gtext("Node Name"), gtext("Node Name"),
-				gtext("Path"), gtext("Path"),
-				gtext("Node B IP address"), gtext("Node A IP address"));
-	$reqdfieldst = explode(" ", "alias string string string string string string");
+	$reqdfields = ['name','aname','bname','apath','bpath','aremoteaddr','bremoteaddr'];
+	$reqdfieldsn = [
+		gtext('Resource Name'),
+		gtext('Node Name'),
+		gtext('Node Name'),
+		gtext('Path'),
+		gtext('Path'),
+		gtext('Node B IP address'),
+		gtext('Node A IP address')
+	];
+	$reqdfieldst = ['alias','string','string','string','string','string','string'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
