@@ -225,11 +225,11 @@ function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfie
 
 function do_input_validate_synctime($postdata, &$input_errors) {
 	$data = [];
-	$data[] = ['field' => 'minute' ,'all' => 'all_mins'    , 'text' => gtext('minutes')];
-	$data[] = ['field' => 'hour'   ,'all' => 'all_hours'   , 'text' => gtext('hours')];
-	$data[] = ['field' => 'day'    ,'all' => 'all_days'    , 'text' => gtext('days')];
-	$data[] = ['field' => 'month'  ,'all' => 'all_months'  , 'text' => gtext('months')];
-	$data[] = ['field' => 'weekday','all' => 'all_weekdays', 'text' => gtext('week days')];
+	$data[] = ['field' => 'minute' ,'all' => 'all_mins'    , 'text' => gtext('Minutes')];
+	$data[] = ['field' => 'hour'   ,'all' => 'all_hours'   , 'text' => gtext('Hours')];
+	$data[] = ['field' => 'day'    ,'all' => 'all_days'    , 'text' => gtext('Days')];
+	$data[] = ['field' => 'month'  ,'all' => 'all_months'  , 'text' => gtext('Months')];
+	$data[] = ['field' => 'weekday','all' => 'all_weekdays', 'text' => gtext('Week Days')];
 
 	foreach($data as $datak => $datav):
 		if(!$postdata[$datav['all']]):
