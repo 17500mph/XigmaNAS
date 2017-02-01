@@ -88,7 +88,7 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "vipaddr vsubnet");
+	$reqdfields = ['vipaddr','vsubnet'];
 	$reqdfieldsn = [gtext('Virtual IP Address'),gtext('Subnet Bit Count')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -97,9 +97,9 @@ if ($_POST) {
 	if (!empty($_POST['vsubnet']) && !filter_var($_POST['vsubnet'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 1, 'max_range' => 32]]))
 		$input_errors[] = gtext("A valid network bit count (1-32) must be specified.");
 
-	$reqdfields = explode(" ", "vhid advskew password");
+	$reqdfields = ['vhid','advskew','password'];
 	$reqdfieldsn = [gtext('Virtual Host ID'),gtext('Advertisement Skew'),gtext('Password')];
-	$reqdfieldst = explode(" ", "numericint numericint string");
+	$reqdfieldst = ['numericint','numericint','string'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

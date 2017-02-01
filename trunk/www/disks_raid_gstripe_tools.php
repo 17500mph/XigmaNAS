@@ -45,10 +45,9 @@ if ($_POST) {
 	unset($do_action);
 
 	/* input validation */
-	$reqdfields = explode(" ", "action raid disk");
-	$reqdfieldsn = array(gtext("Command"), gtext("Volume Name"), gtext("Disk"));
+	$reqdfields = ['action','raid','disk'];
+	$reqdfieldsn = [gtext('Command'),gtext('Volume Name'),gtext('Disk')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
 	if (empty($input_errors)) {
 		$do_action = true;
 		$action = $_POST['action'];

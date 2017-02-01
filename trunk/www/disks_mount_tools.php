@@ -55,8 +55,8 @@ if ($_POST) {
 	unset($do_action);
 
 	// Input validation.
-	$reqdfields = explode(" ", "mountpoint action");
-	$reqdfieldsn = array(gtext("Mount point"), gtext("Command"));
+	$reqdfields = ['mountpoint','action'];
+	$reqdfieldsn = [gtext('Mount Point'),gtext('Command')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// Check if mount point is used to store a swap file.
@@ -98,11 +98,14 @@ if (!isset($do_action)) {
 			<form action="disks_mount_tools.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline(gtext("Mount Point Tools"));?>
-					<?php html_mountcombobox("mountpoint", gtext("Mount point"), !empty($uuid) ? $uuid : "", "", true);?>
-					<?php html_combobox("action", gtext("Command"), !empty($action) ? $action : "", array("mount" => gtext("mount"), "umount" => gtext("umount")), "", true);?>
+					<?php html_mountcombobox("mountpoint", gtext("Mount Point"), !empty($uuid) ? $uuid : "", "", true);?>
+					<?php html_combobox("action", gtext("Command"), !empty($action) ? $action : "", ['mount' => gtext('mount'), 'umount' => gtext('umount')], "", true);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
+				</div>
+				<div id="remarks">
+					<?php html_remark("note", gtext("Note"), gtext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
 				</div>
 				<?php if(($do_action) && (empty($errormsg))) {
 					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
@@ -129,9 +132,6 @@ if (!isset($do_action)) {
 					}
 					echo('</pre>');
 				}?>
-				<div id="remarks">
-					<?php html_remark("note", gtext("Note"), gtext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
-				</div>
 				<?php include 'formend.inc';?>
 			</form>
 		</td>

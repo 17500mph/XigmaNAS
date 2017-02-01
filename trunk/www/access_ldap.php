@@ -64,14 +64,13 @@ if ($_POST) {
 
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "hostname base rootbinddn rootbindpw user_suffix group_suffix password_suffix machine_suffix");
+		$reqdfields = ['hostname','base','rootbinddn','rootbindpw','user_suffix','group_suffix','password_suffix machine_suffix'];
 		$reqdfieldsn = [gtext('URI'),gtext('Base DN'),gtext('Root Bind DN'),gtext('Root Bind Password'),gtext('User Suffix'),gtext('Group Suffix'),gtext('Password Suffix'),gtext('Machine Suffix')];
-		$reqdfieldst = explode(" ", "string string string password string string string string");
-
+		$reqdfieldst = ['string','string','string','password','string','string','string','string'];
 		if (empty($_POST['anonymousbind'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "binddn bindpw"));
+			$reqdfields = array_merge($reqdfields, ['binddn','bindpw']);
 			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Bind DN'),gtext('Bind Password')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string password"));
+			$reqdfieldst = array_merge($reqdfieldst, ['string','password']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -181,7 +180,7 @@ function anonymousbind_change() {
 					html_passwordconfbox("bindpw", "bindpw2", gtext("Bind Password"), $pconfig['bindpw'], $pconfig['bindpw2'], gtext("The cleartext credentials with which to bind."), true);
 					html_inputbox("rootbinddn", gtext("Root Bind DN"), $pconfig['rootbinddn'], sprintf(gtext("The distinguished name with which to bind to the directory server, e.g. %s"), "cn=admin,dc=test,dc=org"), true, 40);
 					html_passwordconfbox("rootbindpw", "rootbindpw2", gtext("Root Bind Password"), $pconfig['rootbindpw'], $pconfig['rootbindpw2'], gtext("The credentials with which to bind."), true);
-					html_combobox("pam_password", gtext("Password Encryption"), $pconfig['pam_password'], array("clear" => "clear", "crypt" => "crypt", "md5" => "md5", "nds" => "nds", "racf" => "racf", "ad" => "ad", "exop" => "exop"), gtext("The password encryption protocol to use."), true);
+					html_combobox("pam_password", gtext("Password Encryption"), $pconfig['pam_password'], ['clear' => 'clear','crypt' => 'crypt','md5' => 'md5','nds' => 'nds','racf' => 'racf','ad' => 'ad','exop' => 'exop'], gtext("The password encryption protocol to use."), true);
 					html_inputbox("user_suffix", gtext("User Suffix"), $pconfig['user_suffix'], sprintf(gtext("This parameter specifies the suffix that is used for users when these are added to the LDAP directory, e.g. %s"), "ou=Users"), true, 20);
 					html_inputbox("group_suffix", gtext("Group Suffix"), $pconfig['group_suffix'], sprintf(gtext("This parameter specifies the suffix that is used for groups when these are added to the LDAP directory, e.g. %s"), "ou=Groups"), true, 20);
 					html_inputbox("password_suffix", gtext("Password Suffix"), $pconfig['password_suffix'], sprintf(gtext("This parameter specifies the suffix that is used for passwords when these are added to the LDAP directory, e.g. %s"), "ou=Users"), true, 20);

@@ -52,8 +52,8 @@ if ($_POST) {
 	unset($do_action);
 
 	// Input validation
-	$reqdfields = explode(" ", "disk");
-	$reqdfieldsn = array(gtext("Disk"));
+	$reqdfields = ['disk]';
+	$reqdfieldsn = [gtext('Disk')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (empty($input_errors)) {
