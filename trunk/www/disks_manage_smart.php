@@ -53,14 +53,14 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "interval powermode temp_diff temp_info temp_crit");
-		$reqdfieldsn = array(gtext("Check interval"), gtext("Power mode"), gtext("Difference"), gtext("Informal"), gtext("Critical"));
-		$reqdfieldst = explode(" ", "numericint string numericint numericint numericint");
+		$reqdfields = ['interval','powermode','temp_diff','temp_info','temp_crit'];
+		$reqdfieldsn = [gtext('Check interval'),gtext('Power mode'),gtext('Difference'),gtext('Informal'),gtext('Critical')];
+		$reqdfieldst = ['numericint','string','numericint','numericint','numericint'];
 
 		if (isset($_POST['email_enable']) && $_POST['email_enable']) {
-			$reqdfields = array_merge($reqdfields, array("email_to"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To Email Address")));
-			$reqdfieldst = array_merge($reqdfieldst, array("string"));
+			$reqdfields = array_merge($reqdfields, ['email_to']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('To Email Address')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['string']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
