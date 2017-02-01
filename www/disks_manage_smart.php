@@ -54,7 +54,7 @@ if ($_POST) {
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = ['interval','powermode','temp_diff','temp_info','temp_crit'];
-		$reqdfieldsn = [gtext('Check interval'),gtext('Power mode'),gtext('Difference'),gtext('Informal'),gtext('Critical')];
+		$reqdfieldsn = [gtext('Interval'),gtext('Power Mode'),gtext('Difference'),gtext('Informal'),gtext('Critical')];
 		$reqdfieldst = ['numericint','string','numericint','numericint','numericint'];
 
 		if (isset($_POST['email_enable']) && $_POST['email_enable']) {
@@ -100,7 +100,7 @@ if ($_POST) {
 }
 array_make_branch($config,'disks','disk');
 $a_selftest = &array_make_branch($config,'smartd','selftest');
-$a_type = array( "S" => "Short Self-Test", "L" => "Long Self-Test", "C" => "Conveyance Self-Test", "O" => "Offline Immediate Test");
+$a_type = ['S' => gtext('Short Self-Test'),'L' => gtext('Long Self-Test'),'C' => gtext('Conveyance Self-Test'),'O' => gtext('Offline Immediate Test')];
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	if ($_GET['uuid'] === "all") {
@@ -212,10 +212,10 @@ function enable_change(enable_change) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline_checkbox("enable", gtext("Self-Monitoring, Analysis & Reporting Technology"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(this)");
-					html_inputbox("interval", gtext("Check interval"), $pconfig['interval'], gtext("Sets the interval between disk checks to N seconds. The minimum allowed value is 10."), true, 5);
+					html_inputbox("interval", gtext("Interval"), $pconfig['interval'], gtext("Set interval between disk checks to N seconds. The minimum allowed value is 10."), true, 5);
 					?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Power mode");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Power Mode");?></td>
 						<td width="78%" class="vtable">
 							<select name="powermode" class="formfld" id="powermode">
 								<?php $types = explode(" ", "Never Sleep Standby Idle"); $vals = explode(" ", "never sleep standby idle");?>
@@ -264,7 +264,7 @@ function enable_change(enable_change) {
 					<?php html_separator();?>
 					<?php html_titleline(gtext("Self-tests Management"));?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Scheduled tests");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Scheduled Tests");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="0" cellspacing="0">
 								<tr>
@@ -308,7 +308,7 @@ function enable_change(enable_change) {
 					html_separator();
 					html_titleline_checkbox("email_enable", gtext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
 					html_inputbox("email_to", gtext("To Email Address"), !empty($pconfig['email_to']) ? $pconfig['email_to'] : "", sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
-					html_checkbox("email_testemail", gtext("Test email"), !empty($pconfig['email_testemail']) ? true : false, gtext("Send a TEST warning email on startup."));
+					html_checkbox("email_testemail", gtext("Test Email"), !empty($pconfig['email_testemail']) ? true : false, gtext("Send a TEST warning email on startup."));
 					?>
 				</table>
 				<div id="submit">

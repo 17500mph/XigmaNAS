@@ -62,12 +62,13 @@ $a_weekdays = [
 	gtext('Saturday'),
 	gtext('Sunday')
 ];
+
 $a_selftest = &array_make_branch($config,'smartd','selftest');
 
 // Get list of all configured physical disks.
 $a_disk = get_conf_physical_disks_list();
 
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_selftest, [uuid])))) {
+if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_selftest, 'uuid')))) {
 	$pconfig['uuid'] = $a_selftest[$cnid]['uuid'];
 	$pconfig['devicespecialfile'] = $a_selftest[$cnid]['devicespecialfile'];
 	$pconfig['type'] = $a_selftest[$cnid]['type'];
@@ -196,7 +197,7 @@ function enable_change(enable_change) {
 			<td width="22%" valign="top" class="vncellreq"><?=gtext("Type");?></td>
 			<td width="78%" class="vtable">
 			<select name="type" class="formfld" id="type">
-			<?php $types = explode(",", "Short Self-Test,Long Self-Test,Conveyance Self-Test,Offline Immediate Test"); $vals = explode(" ", "S L C O");?>
+			<?php $types = [gtext('Short Self-Test'),gtext('Long Self-Test'),gtext('Conveyance Self-Test'),gtext('Offline Immediate Test')]; $vals = ['S','L','C','O'];?>
 				<?php $j = 0; for ($j = 0; $j < count($vals); $j++):?>
 				<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['type']) echo "selected=\"selected\"";?>>
 				<?=htmlspecialchars($types[$j]);?>
