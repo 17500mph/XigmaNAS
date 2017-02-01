@@ -39,16 +39,35 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('Scheduled Self-Test'), isset($uuid) ? gtext('Edit') : gtext('Add')];
-
-$a_months = explode(" ",gtext("January February March April May June July August September October November December"));
-$a_weekdays = explode(" ",gtext("Monday Tuesday Wednesday Thursday Friday Saturday Sunday"));
+$a_months = [
+	gtext('January'),
+	gtext('February'),
+	gtext('March'),
+	gtext('April'),
+	gtext('May'),
+	gtext('June'),
+	gtext('July'),
+	gtext('August'),
+	gtext('September'),
+	gtext('October'),
+	gtext('November'),
+	gtext('December')
+];
+$a_weekdays = [
+	gtext('Monday'),
+	gtext('Tuesday'),
+	gtext('Wednesday'),
+	gtext('Thursday'),
+	gtext('Friday'),
+	gtext('Saturday'),
+	gtext('Sunday')
+];
 $a_selftest = &array_make_branch($config,'smartd','selftest');
 
 // Get list of all configured physical disks.
 $a_disk = get_conf_physical_disks_list();
 
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_selftest, "uuid")))) {
+if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_selftest, [uuid])))) {
 	$pconfig['uuid'] = $a_selftest[$cnid]['uuid'];
 	$pconfig['devicespecialfile'] = $a_selftest[$cnid]['devicespecialfile'];
 	$pconfig['type'] = $a_selftest[$cnid]['type'];
@@ -89,7 +108,7 @@ if ($_POST) {
 	// insert dummy minutes
 	$pconfig['all_mins'] = $_POST['all_mins'] = 1;
 
-	$reqdfields = explode(" ", "disk type");
+	$reqdfields = ['disk','type'];
 	$reqdfieldsn = [gtext('Disk'),gtext('Type')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validate_synctime($_POST, $input_errors);
@@ -124,6 +143,8 @@ if ($_POST) {
 		exit;
 	}
 }
+
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('Scheduled Self-Test'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">

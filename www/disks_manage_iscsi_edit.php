@@ -96,10 +96,9 @@ if ($_POST) {
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "name targetname targetaddress initiatorname");
-	$reqdfieldsn = [gtext('Name'),gtext('Target name'),gtext('Target address'),gtext('Initiator name')];
-	$reqdfieldst = explode(" ", "alias string string string");
-
+	$reqdfields = ['name','targetname','targetaddress','initiatorname'];
+	$reqdfieldsn = [gtext('Name'),gtext('Target Name'),gtext('Target Address'),gtext('Initiator Name')];
+	$reqdfieldst = ['alias','string','string','string'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
@@ -145,10 +144,10 @@ if ($_POST) {
 		<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 		<table width="100%" border="0" cellpadding="6" cellspacing="0">
 		<?php html_titleline(gtext("iSCSI Initiator Settings"));?>
-		<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("This is for information only (not using during iSCSI negotiation)."), true, 20);?>
-		<?php html_inputbox("initiatorname", gtext("Initiator name"), $pconfig['initiatorname'], gtext("This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."), true, 60);?>			
-		<?php html_inputbox("targetname", gtext("Target name"), $pconfig['targetname'], sprintf(gtext("This name is for example: %s."), $ex_iscsitarget), true, 60);?>
-		<?php html_inputbox("targetaddress", gtext("Target address"), $pconfig['targetaddress'], gtext("This the IP address or DNS name of the iSCSI target."), true, 20);?>
+		<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("This is for information only. (not used during iSCSI negotiation)."), true, 20);?>
+		<?php html_inputbox("initiatorname", gtext("Initiator Name"), $pconfig['initiatorname'], gtext("This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."), true, 60);?>			
+		<?php html_inputbox("targetname", gtext("Target Name"), $pconfig['targetname'], sprintf(gtext("This name is for example: %s."), $ex_iscsitarget), true, 60);?>
+		<?php html_inputbox("targetaddress", gtext("Target Address"), $pconfig['targetaddress'], gtext("Enter the IP address or DNS name of the iSCSI target."), true, 20);?>
 		</table>
 		<div id="submit">
 		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />

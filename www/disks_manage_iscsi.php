@@ -108,8 +108,8 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
 		<?php html_titleline2(gtext('iSCSI Initiator'), 4);?>
 	<tr>
 		<td width="25%" class="listhdrlr"><?=gtext("Name"); ?></td>
-		<td width="25%" class="listhdrr"><?=gtext("Target name"); ?></td>
-		<td width="25%" class="listhdrr"><?=gtext("Target address"); ?></td>
+		<td width="25%" class="listhdrr"><?=gtext("Target Name"); ?></td>
+		<td width="25%" class="listhdrr"><?=gtext("Target Address"); ?></td>
 		<td width="10%" class="list"></td>
 	</tr>
 	<?php foreach($a_iscsiinit as $iscsiinit):?>
