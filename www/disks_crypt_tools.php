@@ -58,12 +58,12 @@ if ($_POST) {
 	unset($input_errors);
 
 	// Input validation.
-	$reqdfields = explode(" ", "disk action");
-	$reqdfieldsn = array(gtext("Disk"), gtext("Command"));
+	$reqdfields = ['disk','action'];
+	$reqdfieldsn = [gtext('Disk'),gtext('Command')];
 
 	if (isset($_POST['action']) && $_POST['action'] === "attach") {
-		$reqdfields = array_merge($reqdfields, explode(" ", "passphrase"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Passphrase")));
+		$reqdfields = array_merge($reqdfields, ['passphrase']);
+		$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Passphrase')]);
 	}
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -192,10 +192,10 @@ function action_change() {
               </select>
             </td>
       		</tr>
-					<?php $options = array("attach" => "attach", "detach" => "detach", "setkey" => "setkey", "list" => "list", "status" => "status", "backup" => "backup", "restore" => "restore");?>
+					<?php $options = ['attach' => gtext('Attach'),'detach' => gtext('Detach'),'setkey' => gtext('Setkey'),'list' => gtext('List'),'status' => gtext('Status'),'backup' => gtext('Backup'),'restore' => gtext('Restore')];?>
 					<?php html_combobox("action", gtext("Command"), $pconfig['action'], $options, "", true, false, "action_change()");?>
           <tr id="oldpassphrase_tr" style="display: none">
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Old passphrase");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Old Passphrase");?></td>
 						<td width="78%" class="vtable">
 							<input name="oldpassphrase" type="password" class="formfld" id="oldpassphrase" size="20" />
 						</td>
@@ -207,7 +207,7 @@ function action_change() {
 						</td>
 					</tr>
 					<tr id="backupfile_tr" style="display: none">
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Backup file");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Backup File");?></td>
 						<td width="78%" class="vtable">
 							<input name="backupfile" type="file" class="formfld" size="40" /><br />
 							<span class="vexpl"><?=gtext("Restore metadata from the given file to the given provider.");?></span>
@@ -218,7 +218,7 @@ function action_change() {
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
 				</div>
 				<?php if ($pconfig['do_action']) {
-					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
+					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command Output:")));
 					echo('<pre class="cmdoutput">');
 					//ob_end_flush();
 

@@ -39,11 +39,10 @@ if ($_POST) {
 	unset($do_action);
 
 	/* input validation */
-	$reqdfields = explode(" ", "action object");
-	$reqdfieldsn = array(gtext("Command"),gtext("Object name"));
+	$reqdfields = ['action','object'];
+	$reqdfieldsn = [gtext('Command'),gtext('Object name')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
-if (empty($input_errors)) {
+	if (empty($input_errors)) {
 	$do_action = true;
 	$action = $_POST['action'];
 	$object = $_POST['object'];

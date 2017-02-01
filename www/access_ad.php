@@ -51,13 +51,11 @@ if ($_POST) {
 
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "domaincontrollername domainname_dns domainname_netbios username password");
+		$reqdfields = ['domaincontrollername','domainname_dns','domainname_netbios','username','password'];
 		$reqdfieldsn = [gtext('Domain Controller Name'),gtext('Domain Name (DNS/Realm-Name)'),gtext('Domain Name (NetBIOS-Name)'),gtext('Administrator Name'),gtext('Administration Password')];
-		$reqdfieldst = explode(" ", "string domain netbios string string");
-
+		$reqdfieldst = ['string','domain','netbios','string','string'];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
 		if (($_POST['password'] !== $_POST['password2'])) {
 			$input_errors[] = gtext("The confirmed password does not match. Please ensure the passwords match exactly.");
 		}
@@ -70,7 +68,6 @@ if ($_POST) {
 		$config['ad']['username'] = $_POST['username'];
 		$config['ad']['password'] = $_POST['password'];
 		$config['ad']['enable'] = isset($_POST['enable']) ? true : false;
-
 		if ($config['ad']['enable']) {
 			$config['samba']['enable'] = true;
 			$config['samba']['security'] = "ads";

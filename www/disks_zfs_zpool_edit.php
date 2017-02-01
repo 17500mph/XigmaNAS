@@ -147,8 +147,8 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	}
 
 	// Input validation
-	$reqdfields = explode(' ', 'name vdevice');
-	$reqdfieldsn = [gtext('Name'), gtext('Virtual devices')];
+	$reqdfields = ['name','vdevice'];
+	$reqdfieldsn = [gtext('Name'),gtext('Virtual Devices')];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -307,8 +307,8 @@ $(window).on("load", function() {
 			<?php
 				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', false, 20, $isrecordmodify);
 				html_inputbox2('root', gtext('Root'), $sphere_record['root'], gtext('Creates the pool with an alternate root.'), false, 40, $isrecordmodify);
-				html_inputbox2('mountpoint', gtext('Mount point'), $sphere_record['mountpoint'], gtext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
-				html_checkbox2('force', gtext('Force use'), $sphere_record['force'], gtext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
+				html_inputbox2('mountpoint', gtext('Mount Point'), $sphere_record['mountpoint'], gtext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
+				html_checkbox2('force', gtext('Force Use'), $sphere_record['force'], gtext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
 				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);
 				html_separator2();
 			?>

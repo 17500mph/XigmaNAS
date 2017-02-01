@@ -66,8 +66,8 @@ if ($_POST) {
 	}
 
 	// Input validation.
-  $reqdfields = explode(" ", "disk ealgo passphrase passphraseconf");
-  $reqdfieldsn = [gtext('Disk'),gtext('Encryption algorithm'),gtext('Passphrase'),gtext('Passphrase')];
+  $reqdfields = ['disk','ealgo','passphrase','passphraseconf'];
+  $reqdfieldsn = [gtext('Disk'),gtext('Encryption algorithm'),gtext('Passphrase'),gtext('Passphrase Confirmation')];
   do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// Check for duplicate disks.
