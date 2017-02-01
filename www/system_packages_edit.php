@@ -105,7 +105,7 @@ $pgtitle = [gtext('System'),gtext('Packages'),gtext('Install')];
 				?>
 				<div id="remarks">
 					<?php
-					$helpinghand = gtext('You can also install a package via SSH or console using the the pkg install command.')
+					$helpinghand = gtext('You can also install a package via SSH or console using the pkg install command.')
 						. '<br />'
 						. gtext('Example: pkg install packagename.');
 					html_remark("note", gtext('Note'), $helpinghand);
