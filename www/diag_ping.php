@@ -38,15 +38,18 @@ if ($_POST) {
 	unset($input_errors);
 	unset($do_ping);
 
-	// Input validation.
-	$reqdfields = explode(" ", "host count");
-	$reqdfieldsn = [gtext('Host'),gtext('Count')];
-
+	// Input validation
+	$reqdfields = ['target','count'];
+	$reqdfieldsn = [
+		gtext('Target'),
+		gtext('Count')
+	];
+	$reqdfieldst = ['string','numeric'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (empty($input_errors)) {
 		$do_ping = true;
-		$host = $_POST['host'];
+		$target = $_POST['target'];
 		$interface = $_POST['interface'];
 		$count = $_POST['count'];
 	}
@@ -54,8 +57,8 @@ if ($_POST) {
 
 if (!isset($do_ping)) {
 	$do_ping = false;
-	$host = "";
-	$count = 3;
+	$target = "";
+	$count = 5;
 }
 
 function get_interface_addr($ifdescr) {
@@ -84,30 +87,38 @@ $pgtitle = [gtext('Diagnostics'),gtext('Ping')];
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
-					html_titleline(gtext("Ping Test"));
-					html_inputbox("host", gtext("Host"), $host, gtext("Destination host name or IP number."), true, 20);
-					html_interfacecombobox("interface", gtext("Interface"), !empty($interface) ? $interface : "", gtext("Use the following IP address as the source address in outgoing packets."), true);
-					$a_count = []; for ($i = 1; $i <= 10; $i++) { $a_count[$i] = $i; }
-					html_combobox("count", gtext("Count"), $count, $a_count, gtext("Stop after sending (and receiving) N packets."), true);
+					html_titleline(gtext("Ping Host"));
+					html_inputbox("target", gtext("Target"), $target, gtext("Enter hostname or IP address."), true, 32);
+					html_interfacecombobox("interface", gtext("Interface"), !empty($interface) ? $interface : "", gtext("Select which interface to use."), true);
+					$a_count = []; for ($i = 1; $i <= 15; $i++) { $a_count[$i] = $i; }
+					html_combobox("count", gtext("Count"), $count, $a_count, gtext("Select number of ICMP ECHO REQUEST packets."), true);
 					?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Ping");?>" />
 				</div>
+				<div id="remarks">
+					<?php html_remark("note", gtext("Note"), gtext("Ping may take a while, please be patient."));?>
+				</div>
 				<?php
-				if($do_ping):
-					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
-					echo('<pre class="cmdoutput">');
-					//ob_end_flush();
+				if($do_ping):?>
+				<table class="area_data_settings">
+					<thead>
+						<?php html_separator2();?>
+						<?php html_titleline2(gtext('Ping Output'));?>
+					</thead>
+				</table>
+				<?php
+					echo '<br>','<pre class="cmdoutput">';
 					$ifaddr = get_interface_addr($interface);
 					if($ifaddr):
-						exec("/sbin/ping -S {$ifaddr} -c {$count} " . escapeshellarg($host), $rawdata);
+						exec("/sbin/ping -S {$ifaddr} -c {$count} " . escapeshellarg($target), $rawdata);
 					else:
-						exec("/sbin/ping -c {$count} " . escapeshellarg($host), $rawdata);
+						exec("/sbin/ping -c {$count} " . escapeshellarg($target), $rawdata);
 					endif;
 					echo htmlspecialchars(implode("\n", $rawdata));
 					unset($rawdata);
-					echo('</pre>');
+					echo '</pre>','</br>';
 				endif;
 				?>
 				<?php include 'formend.inc';?>
