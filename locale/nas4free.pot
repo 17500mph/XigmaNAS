@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-31 09:48+0000\n"
+"POT-Creation-Date: 2017-02-01 22:23+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -741,6 +741,9 @@ msgstr ""
 msgid "At the highest level, a target is what is presented to the initiator, and is made up of one or more extents."
 msgstr ""
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -862,10 +865,13 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr ""
 
-msgid "Backup file"
+msgid "Backup File"
 msgstr ""
 
 msgid "Backup/Restore"
@@ -1202,9 +1208,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check interval"
-msgstr ""
-
 msgid "Check shared secret:"
 msgstr ""
 
@@ -1278,6 +1281,9 @@ msgid "Command"
 msgstr ""
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1442,6 +1448,9 @@ msgid "Controls whether this dataset can be modified."
 msgstr ""
 
 msgid "Convert DOS attributes to UNIX execution bits when Store DOS attributes is disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -1937,9 +1946,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr ""
-
 msgid "Destination network bit count"
 msgstr ""
 
@@ -1956,6 +1962,9 @@ msgid "Destroy any snapshots and bookmarks more recent than the one specified."
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2776,6 +2785,9 @@ msgstr ""
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr ""
 
+msgid "Enable proxy authentication."
+msgstr ""
+
 msgid "Enable recycle bin."
 msgstr ""
 
@@ -2907,6 +2919,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -2923,6 +2941,18 @@ msgid "Enter a valid sysctl MIB name."
 msgstr ""
 
 msgid "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to select it."
+msgstr ""
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr ""
 
 msgid "Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)"
@@ -2947,6 +2977,9 @@ msgid "Enter the path to the home directory. This directory will store the stati
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
+msgstr ""
+
+msgid "Enter the user password."
 msgstr ""
 
 msgid "Enter trap host name."
@@ -2976,7 +3009,7 @@ msgstr ""
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3079,6 +3112,9 @@ msgid "FTP - Ban Module"
 msgstr ""
 
 msgid "FTP - File Transfer"
+msgstr ""
+
+msgid "FTP Proxy"
 msgstr ""
 
 msgid "FTP events"
@@ -3249,10 +3285,10 @@ msgstr ""
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
+msgid "Force delete"
 msgstr ""
 
 msgid "Forced Update Period"
@@ -3415,9 +3451,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr ""
-
 msgid "Group numeric id."
 msgstr ""
 
@@ -3467,6 +3500,9 @@ msgid "HDD standby time"
 msgstr ""
 
 msgid "HOT SPARE"
+msgstr ""
+
+msgid "HTTP Proxy"
 msgstr ""
 
 msgid "HVM Guest"
@@ -3804,10 +3840,10 @@ msgstr ""
 msgid "Initiator Groups contains authorised initiator names and networks to access the target."
 msgstr ""
 
-msgid "Initiator authorised to access to the iSCSI target.  It takes a name or 'ALL' for any initiators."
+msgid "Initiator Name"
 msgstr ""
 
-msgid "Initiator name"
+msgid "Initiator authorised to access to the iSCSI target.  It takes a name or 'ALL' for any initiators."
 msgstr ""
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
@@ -3895,6 +3931,9 @@ msgid "Internal UPS clock date"
 msgstr ""
 
 msgid "Internal UPS clock time"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Interval between self tests"
@@ -4247,10 +4286,10 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-msgid "Login name of user."
+msgid "Logout"
 msgstr ""
 
-msgid "Logout"
+msgid "Long Self-Test"
 msgstr ""
 
 msgid "Low voltage boosting transfer point"
@@ -4385,13 +4424,7 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr ""
-
 msgid "Max. pre-send R2T"
-msgstr ""
-
-msgid "Max. time-to-live (max. number of hops) used in outgoing probe packets."
 msgstr ""
 
 msgid "MaxBurstLength"
@@ -4581,9 +4614,6 @@ msgid "Mon"
 msgstr ""
 
 msgid "Monday"
-msgstr ""
-
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr ""
 
 msgid "Monitoring"
@@ -5016,7 +5046,10 @@ msgstr ""
 msgid "Off"
 msgstr ""
 
-msgid "Old passphrase"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
 msgstr ""
 
 msgid "On"
@@ -5136,6 +5169,9 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5173,6 +5209,9 @@ msgid "Passive ports restricts the range of ports from which the server will sel
 msgstr ""
 
 msgid "Passphrase"
+msgstr ""
+
+msgid "Passphrase Confirmation"
 msgstr ""
 
 msgid "Passphrase don't match."
@@ -5285,7 +5324,13 @@ msgstr ""
 msgid "Ping"
 msgstr ""
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5467,9 +5512,6 @@ msgid "Power Mode"
 msgstr ""
 
 msgid "Power management"
-msgstr ""
-
-msgid "Power mode"
 msgstr ""
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
@@ -5870,13 +5912,7 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr ""
-
 msgid "Resolve IP"
-msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
 msgstr ""
 
 msgid "Resolve IP addresses to hostnames."
@@ -5889,6 +5925,9 @@ msgid "Resource Name"
 msgstr ""
 
 msgid "Resources"
+msgstr ""
+
+msgid "Restore"
 msgstr ""
 
 msgid "Restore Configuration"
@@ -6112,7 +6151,7 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr ""
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr ""
 
 msgid "Scrub a pool"
@@ -6205,7 +6244,13 @@ msgstr ""
 msgid "Select item to remove from the list"
 msgstr ""
 
+msgid "Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
+msgstr ""
+
+msgid "Select number of ICMP ECHO REQUEST packets."
 msgstr ""
 
 msgid "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6230,6 +6275,9 @@ msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 
 msgid "Select the server configuration encrypted GZIP file or XML file and click the button below to restore the configuration."
+msgstr ""
+
+msgid "Select which interface to use."
 msgstr ""
 
 msgid "Select which interface to use. (Only selectable if your server has more than one interface)"
@@ -6343,6 +6391,9 @@ msgstr ""
 msgid "Set browseable."
 msgstr ""
 
+msgid "Set interval between disk checks to N seconds. The minimum allowed value is 10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6368,10 +6419,13 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
+msgid "Set user login shell."
 msgstr ""
 
-msgid "Sets the interval between disk checks to N seconds. The minimum allowed value is 10."
+msgid "Setkey"
+msgstr ""
+
+msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
 msgid "Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write)."
@@ -6411,6 +6465,9 @@ msgid "Shell"
 msgstr ""
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Short Self-Test"
 msgstr ""
 
 msgid "Show Default Groups"
@@ -6872,13 +6929,13 @@ msgstr ""
 msgid "Target"
 msgstr ""
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr ""
 
 msgid "Target Name"
-msgstr ""
-
-msgid "Target address"
 msgstr ""
 
 msgid "Target directory."
@@ -6932,10 +6989,10 @@ msgstr ""
 msgid "Temporary directory to store transcoded files."
 msgstr ""
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
+msgid "Test Mode"
 msgstr ""
 
 #, php-format
@@ -7378,6 +7435,9 @@ msgstr ""
 msgid "The old password is not correct."
 msgstr ""
 
+msgid "The password contains the illegal character ':'."
+msgstr ""
+
 msgid "The password encryption protocol to use."
 msgstr ""
 
@@ -7500,9 +7560,6 @@ msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
 msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
-msgstr ""
-
-msgid "The user's login shell."
 msgstr ""
 
 msgid "The value of the variable."
@@ -7679,7 +7736,7 @@ msgstr ""
 msgid "This is both the name of the server as advertised via Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 
 msgid "This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises."
@@ -7806,9 +7863,6 @@ msgid "This tag already exists."
 msgstr ""
 
 msgid "This tag is used."
-msgstr ""
-
-msgid "This the IP address or DNS name of the iSCSI target."
 msgstr ""
 
 msgid "This user already exists in the user list."
@@ -7988,10 +8042,13 @@ msgstr ""
 msgid "Traceroute"
 msgstr ""
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid "Traceroute may take a while to complete. You may hit the Stop button on your browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
+msgstr ""
+
+msgid "Traceroute may take a while, please be patient."
 msgstr ""
 
 msgid "Tracks whose path contains one or more of these comma separated strings will be treated as a compilation."
@@ -8283,9 +8340,6 @@ msgstr ""
 msgid "Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)"
 msgstr ""
 
-msgid "Use the following IP address as the source address in outgoing packets."
-msgstr ""
-
 msgid "Use the new 64k streaming read and write variant SMB requests introduced with Windows 2000."
 msgstr ""
 
@@ -8350,16 +8404,10 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr ""
-
 msgid "User mask"
 msgstr ""
 
 msgid "User numeric id."
-msgstr ""
-
-msgid "User password."
 msgstr ""
 
 msgid "Username"
@@ -8667,7 +8715,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-msgid "You can also install a package via SSH or console using the the pkg add command."
+msgid "You can also install a package via SSH or console using the the pkg install command."
 msgstr ""
 
 #, php-format
