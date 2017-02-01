@@ -70,10 +70,13 @@ if ($_POST) {
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "name desc groupid");
-	$reqdfieldsn = array(gtext("Name"),gtext("Description"),gtext("Group ID"));
-	$reqdfieldst = explode(" ", "string string numeric");
-
+	$reqdfields = ['name','groupid','desc'];
+	$reqdfieldsn = [
+		gtext('Name'),
+		gtext('Group ID'),
+		gtext('Description')
+	];
+	$reqdfieldst = ['string','numeric','string'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
@@ -160,9 +163,9 @@ function get_nextgroup_id() {
 		<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline(gtext("Group Settings"));?>
-			<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("Group name."), true, 20, isset($uuid) && (FALSE !== $cnid));?>
-			<?php html_inputbox("groupid", gtext("Group ID"), $pconfig['groupid'], gtext("Group numeric id."), true, 20, isset($uuid) && (FALSE !== $cnid));?>
-			<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), true, 48);?>
+			<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("Enter a group name."), true, 28, isset($uuid) && (FALSE !== $cnid));?>
+			<?php html_inputbox("groupid", gtext("Group ID"), $pconfig['groupid'], gtext("Group numeric id."), true, 12, isset($uuid) && (FALSE !== $cnid));?>
+			<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("Enter a group description."), true, 28);?>
 		</table>
 		<div id="submit">
 			<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />

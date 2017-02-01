@@ -85,10 +85,17 @@ if ($_POST) {
 		exit;
 	}
 
-	$reqdfields = explode(" ", "login fullname primarygroup userid shell");
-	$reqdfieldsn = array(gtext("Name"), gtext("Full Name"), gtext("Primary Group"), gtext("User ID"), gtext("Shell"));
-	$reqdfieldst = explode(" ", "string string numeric numeric string");
-
+	// Input validation
+	$reqdfields = ['login','fullname','password','primarygroup','userid','shell'];
+	$reqdfieldsn = [
+		gtext('Name'),
+		gtext('Full Name'),
+		gtext('Password'),
+		gtext('Primary Group'),
+		gtext('User ID'),
+		gtext('Shell')
+	];
+	$reqdfieldst = ['string','string','string','numeric','numeric','string'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
@@ -214,11 +221,11 @@ function get_nextuser_id() {
 				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline(gtext("User Settings"));
-					html_inputbox("login", gtext("Name"), $pconfig['login'], gtext("Login name of user."), true, 20, isset($uuid) && (FALSE !== $cnid));
-					html_inputbox("fullname", gtext("Full Name"), $pconfig['fullname'], gtext("User full name."), true, 20);
-					html_passwordconfbox("password", "passwordconf", gtext("Password"), $pconfig['password'], $pconfig['passwordconf'], gtext("User password."), true);
-					html_inputbox("userid", gtext("User ID"), $pconfig['userid'], gtext("User numeric id."), true, 20, isset($uuid) && (FALSE !== $cnid));
-					html_combobox("shell", gtext("Shell"), $pconfig['shell'], array("nologin" => "nologin", "scponly" => "scponly", "sh" => "sh",  "csh" => "csh", "tcsh" => "tcsh", "bash" => "bash"), gtext("The user's login shell."), true);
+					html_inputbox("login", gtext("Name"), $pconfig['login'], gtext("Enter login name of the user."), true, 28, isset($uuid) && (FALSE !== $cnid));
+					html_inputbox("fullname", gtext("Full Name"), $pconfig['fullname'], gtext("Enter full name of the user."), true, 28);
+					html_passwordconfbox("password", "passwordconf", gtext("Password"), $pconfig['password'], $pconfig['passwordconf'], gtext("Enter the user password."), true);
+					html_inputbox("userid", gtext("User ID"), $pconfig['userid'], gtext("User numeric id."), true, 12, isset($uuid) && (FALSE !== $cnid));
+					html_combobox("shell", gtext("Shell"), $pconfig['shell'], ['nologin' => 'nologin','scponly' => 'scponly','sh' => 'sh', 'csh' => 'csh','tcsh' => 'tcsh','bash' => 'bash'], gtext("Set user login shell."), true);
 					$grouplist = [];
 					foreach($a_group as $groupk => $groupv):
 						$grouplist[$groupv] = $groupk;
