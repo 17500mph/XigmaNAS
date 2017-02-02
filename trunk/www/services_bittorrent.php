@@ -110,7 +110,7 @@ if ($_POST) {
 			// !!! Note !!! It seems TransmissionBT does not support special characters,
 			// so use 'alias' instead of 'password' check.
 			$reqdfields = array_merge($reqdfields, ['username','password']);
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Username"),gtext("Password")));
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Username'),gtext('Password')]);
 			$reqdfieldst = array_merge($reqdfieldst, ['alias','alias']);
 		}
 
@@ -235,7 +235,7 @@ function authrequired_change() {
 					html_checkbox("portforwarding",gtext("Port Forwarding"),!empty($pconfig['portforwarding']) ? true : false,gtext("Enable port forwarding via NAT-PMP or UPnP."),"",false);
 					html_checkbox("pex",gtext("Peer Exchange"),!empty($pconfig['pex']) ? true : false,gtext("Enable peer exchange (PEX)."),"",false);
 					html_checkbox("dht",gtext("Distributed Hash Table"),!empty($pconfig['dht']) ? true : false,gtext("Enable distributed hash table."),"",false);
-					html_combobox("encryption",gtext("Encryption"),$pconfig['encryption'],array("0" => gtext("Tolerated"),"1" => gtext("Preferred"),"2" => gtext("Required")),gtext("The peer connection encryption mode."),false);
+					html_combobox("encryption",gtext("Encryption"),$pconfig['encryption'],['0' => gtext('Tolerated'),'1' => gtext('Preferred'),'2' => gtext('Required')],gtext("The peer connection encryption mode."),false);
 					html_inputbox("uplimit",gtext("Upload Bandwidth"),$pconfig['uplimit'],gtext("The maximum upload bandwith in KB/s. An empty field means infinity."),false,5);
 					html_inputbox("downlimit",gtext("Download Bandwidth"),$pconfig['downlimit'],gtext("The maximum download bandwith in KiB/s. An empty field means infinity."),false,5);
 					html_filechooser("watchdir",gtext("Watch Directory"),$pconfig['watchdir'],gtext("Directory to watch for new .torrent files."),$g['media_path'],false,60);
