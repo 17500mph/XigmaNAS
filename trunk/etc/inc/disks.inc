@@ -1518,12 +1518,11 @@ function disks_verify_all_disks($a_phy_disks) {
 
 	$result = [];
 
-	if (empty($config['disks']['disk']))
-		$config['disks']['disk'] = [];
-
+	array_make_branch($config,'disks','disk');
 	$conf_disks = $config['disks']['disk'];
-	if (empty($conf_disks))
+	if(empty($conf_disks)):
 		return $result;
+	endif;
 
 	foreach ($conf_disks as $conf_disk) {
         $disk_exists =0;
@@ -1586,12 +1585,8 @@ function disks_update_mounts() {
 	global $config;
 
 	$need_write_config = false;
-
-	if (empty($config['disks']['disk']))
-		$config['disks']['disk'] = [];
-	if (empty($config['mounts']['mount']))
-		$config['mounts']['mount'] = [];
-
+	array_make_branch($config,'disks','disk');
+	array_make_branch($config,'mounts','mount');
 	$disks = $config['disks']['disk'];
 	foreach ($disks as $diskv) {
 
@@ -1860,11 +1855,10 @@ function disks_import_all_disks($clean_import) {
 	if (empty($disks))
 		return $num;
 
-	if (empty($config['disks']['disk']))
-		$config['disks']['disk'] = [];
-	if (!empty($clean_import)) {
-		$config['disks']['disk'] = [];
-	}
+	array_make_branch($config,'disks','disk');
+	if(!empty($clean_import)):
+		$config['disks']['disk'] = []; // OK
+	endif;
 	foreach ($disks as $diskv) {
 		$type = $diskv['type'];
 		$dev = $diskv['devicespecialfile'];
@@ -2043,36 +2037,28 @@ function disks_import_all_swraid_disks($clean_import) {
 
 	$need_write_config = false;
 	$num = $error = 0;
-
-	exec("/sbin/gconcat load");
-	exec("/sbin/gstripe load");
-	exec("/sbin/gmirror load");
-	exec("/sbin/graid5 load");
-	exec("/sbin/gvinum load");
-
+	exec('/sbin/gconcat load');
+	exec('/sbin/gstripe load');
+	exec('/sbin/gmirror load');
+	exec('/sbin/graid5 load');
+	exec('/sbin/gvinum load');
 	$disks = get_all_disks_list();
-	if (empty($disks))
+	if (empty($disks)):
 		return $num;
-
-	if (empty($config['disks']['disk']))
-		$config['disks']['disk'] = [];
-	if (empty($config['gconcat']['vdisk']))
-		$config['gconcat']['vdisk'] = [];
-	if (empty($config['gstripe']['vdisk']))
-		$config['gstripe']['vdisk'] = [];
-	if (empty($config['gmirror']['vdisk']))
-		$config['gmirror']['vdisk'] = [];
-	if (empty($config['graid5']['vdisk']))
-		$config['graid5']['vdisk'] = [];
-	if (empty($config['gvinum']['vdisk']))
-		$config['gvinum']['vdisk'] = [];
-	if (!empty($clean_import)) {
-		$config['gconcat']['vdisk'] = [];
-		$config['gstripe']['vdisk'] = [];
-		$config['gmirror']['vdisk'] = [];
-		$config['graid5']['vdisk'] = [];
-		$config['gvinum']['vdisk'] = [];
-	}
+	endif;
+	array_make_branch($config,'disks','disk');
+	array_make_branch($config,'gconcat','vdisk');
+	array_make_branch($config,'gstripe','vdisk');
+	array_make_branch($config,'gmirror','vdisk');
+	array_make_branch($config,'graid5','vdisk');
+	array_make_branch($config,'gvinum','vdisk');
+	if(!empty($clean_import)):
+		$config['gconcat']['vdisk'] = []; // OK
+		$config['gstripe']['vdisk'] = []; // OK
+		$config['gmirror']['vdisk'] = []; // OK
+		$config['graid5']['vdisk'] = []; // OK
+		$config['gvinum']['vdisk'] = []; // OK
+	endif;
 
 	foreach ($disks as $diskv) {
 		$name = $diskv['name'];
@@ -2190,16 +2176,14 @@ function disks_import_all_encrypted_disks($clean_import) {
 	exec("/sbin/gvinum load");
 
 	$disks = get_all_disks_list();
-	if (empty($disks))
+	if(empty($disks)):
 		return $num;
-
-	if (empty($config['disks']['disk']))
-		$config['disks']['disk'] = [];
-	if (empty($config['geli']['vdisk']))
-		$config['geli']['vdisk'] = [];
-	if (!empty($clean_import))
-		$config['geli']['vdisk'] = [];
-
+	endif;
+	array_make_branch($config,'disks','disk');
+	array_make_branch($config,'geli','vdisk');
+	if(!empty($clean_import)):
+		$config['geli']['vdisk'] = []; // OK
+	endif;
 	foreach ($disks as $diskv) {
 		$dev = $diskv['devicespecialfile'];
 		unset($rawdata);
