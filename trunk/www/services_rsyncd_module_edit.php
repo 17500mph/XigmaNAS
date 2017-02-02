@@ -83,10 +83,9 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "name comment");
+	$reqdfields = ['name','comment'];
 	$reqdfieldsn = [gtext('Name'),gtext('Comment')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
 	$reqdfieldst = explode(" ", "string string");
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 

@@ -66,7 +66,7 @@ function wireless_config_post() {
 
 	// Input validation
 	if ($_POST['enable']) {
-		$reqdfields = explode(" ", "standard ssid channel");
+		$reqdfields = ['standard','ssid','channel'];
 		$reqdfieldsn = [gtext('Standard'),gtext('SSID'),gtext('Channel')];
 
 		switch ($_POST['encryption']) {

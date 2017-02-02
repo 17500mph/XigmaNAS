@@ -64,13 +64,11 @@ if ($_POST) {
 	}
 
 	if ($encryption) {
-		$reqdfields = explode(" ", "encrypt_password encrypt_password_confirm");
-		$reqdfieldsn = array(gtext("Encrypt password"), gtext("Encrypt password (confirmed)"));
-		$reqdfieldst = explode(" ", "password password");
-
+		$reqdfields = ['encrypt_password','encrypt_password_confirm'];
+		$reqdfieldsn = [gtext('Encrypt password'),gtext('Encrypt password (confirmed)')];
+		$reqdfieldst = ['password','password'];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
 		if ($_POST['encrypt_password'] !== $_POST['encrypt_password_confirm']) {
 			$input_errors[] = gtext("The confirmed password does not match. Please ensure the passwords match exactly.");
 		}

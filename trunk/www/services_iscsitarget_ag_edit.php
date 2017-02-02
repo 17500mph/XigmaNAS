@@ -96,9 +96,9 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "tag");
-	$reqdfieldsn = array(gtext("Tag number"));
-	$reqdfieldst = explode(" ", "numericint");
+	$reqdfields = ['tag'];
+	$reqdfieldsn = [gtext('Tag number')];
+	$reqdfieldst = ['numericint'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

@@ -95,7 +95,7 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "path network mask");
+	$reqdfields = ['path','network','mask'];
 	$reqdfieldsn = [gtext('Share'),gtext('Authorised network'),gtext('Network mask')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 

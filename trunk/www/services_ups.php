@@ -70,18 +70,18 @@ if ($_POST) {
 	$pconfig = $_POST;
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "upsname driver port shutdownmode monitoruser monitorpassword");
-		$reqdfieldsn = [gtext("Identifier"), gtext("Driver"), gtext("Port"), gtext("Shutdown mode"), gtext("Username"), gtext("Password")];
-		$reqdfieldst = explode(" ", "alias string string string string string");
+		$reqdfields = ['upsname','driver','port','shutdownmode','monitoruser','monitorpassword'];
+		$reqdfieldsn = [gtext("Identifier"), gtext("Driver"), gtext("Port"), gtext("Shutdown Mode"), gtext("Username"), gtext("Password")];
+		$reqdfieldst = ['alias','string','string','string','string','string'];
 		if ("onbatt" === $_POST['shutdownmode']) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "shutdowntimer"));
-			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Shutdown timer')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numericint"));
+			$reqdfields = array_merge($reqdfields, ['shutdowntimer']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Shutdown Timer')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['numericint']);
 		}
 		if (!empty($_POST['email_enable'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "email_to email_subject"));
-			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('To Email Address'), gtext('Subject')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string string"));
+			$reqdfields = array_merge($reqdfields, ['email_to','email_subject']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('To Email Address'),gtext('Subject')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['string','string']);
 		}
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -314,9 +314,9 @@ function ups2_change() {
 					html_textarea("ups2_auxparam", gtext("Additional Parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gtext("These parameters are added to the hardware-specific part of the driver for the second UPS."), false, 65, 5, false, false);
 					html_inputbox("ups2_desc", gtext("Description"), $pconfig['ups2_desc'], gtext("You may enter a description here for your reference."), false, 40);
 					html_inputbox("ip", gtext("IP address"), $pconfig['ip'], gtext("The IP address of the UPS master."), true, 30);
-					html_combobox("shutdownmode", gtext("Shutdown mode"), $pconfig['shutdownmode'], ['fsd' => gtext('UPS reaches low battery'),'onbatt' => gtext('UPS goes on battery')], gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");
-					html_inputbox("shutdowntimer", gtext("Shutdown timer"), $pconfig['shutdowntimer'], gtext("The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."), true, 3);
-					html_checkbox("remotemonitor", gtext("Remote monitoring"), !empty($pconfig['remotemonitor']) ? true : false, gtext("Enable remote monitoring of the local connected UPS."), "", false, "monitoring_change()");
+					html_combobox("shutdownmode", gtext("Shutdown Mode"), $pconfig['shutdownmode'], ['fsd' => gtext('UPS reaches low battery'),'onbatt' => gtext('UPS goes on battery')], gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");
+					html_inputbox("shutdowntimer", gtext("Shutdown Timer"), $pconfig['shutdowntimer'], gtext("The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."), true, 3);
+					html_checkbox("remotemonitor", gtext("Remote Monitoring"), !empty($pconfig['remotemonitor']) ? true : false, gtext("Enable remote monitoring of the local connected UPS."), "", false, "monitoring_change()");
 					html_inputbox("monitoruser", gtext("Username"), $pconfig['monitoruser'], gtext("Remote monitoring username. Must be equal on both master and slave system."), true, 20);
 					html_passwordbox("monitorpassword", gtext("Password"), $pconfig['monitorpassword'], gtext("Remote monitoring password. Must be equal on both master and slave system."), true, 20);
 					html_separator();

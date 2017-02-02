@@ -65,7 +65,7 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "path realm");
+	$reqdfields = ['path','realm'];
 	$reqdfieldsn = [gtext('URL'),gtext('Realm')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 

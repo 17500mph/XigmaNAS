@@ -82,7 +82,7 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "desc who command");
+	$reqdfields = ['desc','who','command'];
 	$reqdfieldsn = [gtext('Description'),gtext('Who'),gtext('Command')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 

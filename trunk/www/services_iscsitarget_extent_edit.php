@@ -202,36 +202,36 @@ if ($_POST) {
 		$_POST['sizeunit'] = "auto";
 		$pconfig['size'] = "";
 		$_POST['size'] = "";
-		$reqdfields = explode(" ", "name device");
+		$reqdfields = ['name','device'];
 		$reqdfieldsn = [gtext('Extent name'),gtext('Device')];
-		$reqdfieldst = explode(" ", "string string");
+		$reqdfieldst = ['string','string'];
 	} else if ($_POST['type'] == 'zvol') {
 		$pconfig['sizeunit'] = "auto";
 		$_POST['sizeunit'] = "auto";
 		$pconfig['size'] = "";
 		$_POST['size'] = "";
-		$reqdfields = explode(" ", "name zvol");
+		$reqdfields = ['name','zvol'];
 		$reqdfieldsn = [gtext('Extent name'),gtext('ZFS volume')];
-		$reqdfieldst = explode(" ", "string string");
+		$reqdfieldst = ['string','string'];
 	} else if ($_POST['type'] == 'hast') {
 		$pconfig['sizeunit'] = "auto";
 		$_POST['sizeunit'] = "auto";
 		$pconfig['size'] = "";
 		$_POST['size'] = "";
-		$reqdfields = explode(" ", "name hast");
+		$reqdfields = ['name','hast'];
 		$reqdfieldsn = [gtext('Extent name'),gtext('HAST volume')];
-		$reqdfieldst = explode(" ", "string string");
+		$reqdfieldst = ['string','string'];
 	} else {
 		if ($pconfig['sizeunit'] == 'auto'){
 			$pconfig['size'] = "";
 			$_POST['size'] = "";
-			$reqdfields = explode(" ", "name path sizeunit");
-			$reqdfieldsn = [gtext('Extent name'),gtext('Path'),gtext('Auto size')];
-			$reqdfieldst = explode(" ", "string string string");
+			$reqdfields = ['name','path','sizeunit'];
+			$reqdfieldsn = [gtext('Extent Name'),gtext('Path'),gtext('Auto size')];
+			$reqdfieldst = ['string','string','string'];
 		}else{
-			$reqdfields = explode(" ", "name path size sizeunit");
+			$reqdfields = ['name','path','size','sizeunit'];
 			$reqdfieldsn = [gtext('Extent name'),gtext('Path'),gtext('Size'),gtext('File sizeunit')];
-			$reqdfieldst = explode(" ", "string string numericint string");
+			$reqdfieldst = ['string','string','numericint','string'];
 		}
 	}
 
@@ -367,7 +367,7 @@ function sizeunit_change() {
 		<table width="100%" border="0" cellpadding="6" cellspacing="0">
 		<?php html_titleline(gtext("Extent Settings"));?>
 			<?php html_inputbox("name", gtext("Extent Name"), $pconfig['name'], gtext("String identifier of the extent."), true, 30, (isset($uuid) && (FALSE !== $cnid)));?>
-			<?php html_combobox("type", gtext("Type"), $pconfig['type'], array("file" => gtext("File"), "device" => gtext("Device"), "zvol" => gtext("ZFS volume"), "hast" => gtext("HAST volume")), gtext("Type used as extent."), true, false, "type_change()");?>
+			<?php html_combobox("type", gtext("Type"), $pconfig['type'], ['file' => gtext('File'), 'device' => gtext('Device'), 'zvol' => gtext('ZFS volume'), 'hast' => gtext('HAST volume')], gtext("Type used as extent."), true, false, "type_change()");?>
 			<?php html_filechooser("path", gtext("Path"), $pconfig['path'], sprintf(gtext("File path (e.g. /mnt/sharename/extent/%s) used as extent."), $pconfig['name']), $g['media_path'], true);?>
 			<?php html_combobox("device", gtext("Device"), $pconfig['path'], $a_device, "", true);?>
 			<?php html_combobox("zvol", gtext("ZFS volume"), $pconfig['path'], $a_zvol, "", true);?>

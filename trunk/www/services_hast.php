@@ -135,10 +135,9 @@ if ($_POST) {
 
 	// Input validation.
 /*
-	$reqdfields = explode(" ", "role");
+	$reqdfields = ['role'];
 	$reqdfieldsn = [gtext('HAST role')];
-	$reqdfieldst = explode(" ", "string");
-
+	$reqdfieldst = ['string'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 */

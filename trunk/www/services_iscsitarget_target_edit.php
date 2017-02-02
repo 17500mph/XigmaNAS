@@ -330,9 +330,9 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "name");
-	$reqdfieldsn = array(gtext("Target name"));
-	$reqdfieldst = explode(" ", "string");
+	$reqdfields = ['name'];
+	$reqdfieldsn = [gtext('Target Name')];
+	$reqdfieldst = ['string'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -615,8 +615,8 @@ function enable_change(enable_change) {
 					html_titleline_checkbox("enable", gtext("iSCSI Target"), $pconfig['enable'] ? true : false, gtext("Enable"), "enable_change(false)");
 					html_inputbox("name", gtext("Target Name"), $pconfig['name'], gtext("Base Name will be appended automatically when starting without 'iqn.'."), true, 70, false);
 					html_inputbox("alias", gtext("Target Alias"), $pconfig['alias'], gtext("Optional user-friendly string of the target."), false, 70, false);
-					html_combobox("type", gtext("Type"), $pconfig['type'], array("Disk" => gtext("Disk"),"DVD" => gtext("DVD"),"Tape" => gtext("Tape"),"Pass" => gtext("Device Pass-through")), gtext("Logical Unit Type mapped to LUN."), true, false, "type_change()");
-					html_combobox("flags", gtext("Flags"), $pconfig['flags'], array("rw" => gtext("Read/Write (rw)"),"rw,dynamic" => gtext("Read/Write (rw,dynamic) for removable types file size grow and shrink automatically by EOF (ignore specified size)"),"rw,extend" => gtext("Read/Write (rw,extend) for removable types extend file size if EOM reached"), "ro" => gtext("Read Only (ro)")), "", true);
+					html_combobox("type", gtext("Type"), $pconfig['type'], ['Disk' => gtext('Disk'),'DVD' => gtext('DVD'),'Tape' => gtext('Tape'),'Pass' => gtext('Device Pass-through')], gtext("Logical Unit Type mapped to LUN."), true, false, "type_change()");
+					html_combobox("flags", gtext("Flags"), $pconfig['flags'], ['rw' => gtext('Read/Write (rw)'),'rw,dynamic' => gtext('Read/Write (rw,dynamic) for removable types file size grow and shrink automatically by EOF (ignore specified size)'),'rw,extend' => gtext('Read/Write (rw,extend) for removable types extend file size if EOM reached'), 'ro' => gtext('Read Only (ro)')], "", true);
 					$pg_list = [];
 					//$pg_list['0'] = gtext("None");
 					foreach($config['iscsitarget']['portalgroup'] as $pg):

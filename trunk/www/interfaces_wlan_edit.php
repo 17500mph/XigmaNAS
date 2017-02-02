@@ -94,20 +94,17 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "wlandev");
+	$reqdfields = ['wlandev'];
 	$reqdfieldsn = [gtext('Physical Interface')];
-	$reqdfieldst = explode(" ", "string numeric");
-
+	$reqdfieldst = ['string','numeric'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	if (isset($_POST['apmode'])) {
-		$reqdfields = explode(" ", "ap_ssid ap_channel ap_psk");
+		$reqdfields = ['ap_ssid','ap_channel','ap_psk'];
 		$reqdfieldsn = [gtext('SSID'),gtext('Channel'),gtext('PSK')];
-		$reqdfieldst = explode(" ", "string string string");
-
+		$reqdfieldst = ['string','string','string'];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
 		if (preg_match("/\ |,|\'|\"/", $_POST['ap_ssid']))
 			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext("SSID"));
 		if (preg_match("/\ |,|\'|\"/", $_POST['ap_channel']))
@@ -223,8 +220,8 @@ $(document).ready(function(){
 				html_inputbox("ap_ssid", gtext("SSID"), $pconfig['ap_ssid'], gtext("Set the desired Service Set Identifier (aka network name)."), true, 20);
 				html_inputbox("ap_channel", gtext("Channel"), $pconfig['ap_channel'], "", true, 10);
 				html_combobox("ap_encryption", gtext("Encryption"), $pconfig['ap_encryption'], ['wpa' => sprintf('%s / %s', gtext('WPA'), gtext('WPA2'))], "", true, false, "encryption_change()");
-				html_combobox("ap_keymgmt", gtext("Key Management Protocol"), $pconfig['ap_keymgmt'], array("WPA-PSK" => gtext("WPA-PSK (Pre Shared Key)")), "", true);
-				html_combobox("ap_pairwise", gtext("Pairwise"), $pconfig['ap_pairwise'], array("CCMP" => gtext("CCMP"), "CCMP TKIP" => gtext("CCMP TKIP")), "", true);
+				html_combobox("ap_keymgmt", gtext("Key Management Protocol"), $pconfig['ap_keymgmt'], ['WPA-PSK' => gtext('WPA-PSK (Pre Shared Key)')], "", true);
+				html_combobox("ap_pairwise", gtext("Pairwise"), $pconfig['ap_pairwise'], ['CCMP' => gtext('CCMP'), 'CCMP TKIP' => gtext('CCMP TKIP')], "", true);
 				html_passwordbox("ap_psk", gtext("PSK"), $pconfig['ap_psk'], gtext("Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."), true, 40);
 				html_inputbox("ap_extraoptions", gtext("Extra Options"), $pconfig['ap_extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 60);
 				$helpinghand = '<a href="'

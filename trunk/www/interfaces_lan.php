@@ -85,11 +85,9 @@ if ($_POST) {
 	$reqdfieldst = [];
 
 	if ($_POST['type'] === "Static") {
-		$reqdfields = explode(" ", "ipaddr subnet");
+		$reqdfields = ['ipaddr','subnet'];
 		$reqdfieldsn = [gtext('IP Address'),gtext('Subnet bit count')];
-
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
 		if (($_POST['ipaddr'] && !is_ipv4addr($_POST['ipaddr'])))
 			$input_errors[] = gtext("A valid IPv4 address must be specified.");
 		if ($_POST['subnet'] && !filter_var($_POST['subnet'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 1,'max_range' => 32]]))
@@ -97,11 +95,9 @@ if ($_POST) {
 	}
 
 	if (isset($_POST['ipv6_enable']) && $_POST['ipv6_enable'] && ($_POST['ipv6type'] === "Static")) {
-		$reqdfields = explode(" ", "ipv6addr ipv6subnet");
+		$reqdfields = ['ipv6addr','ipv6subnet'];
 		$reqdfieldsn = [gtext('IPv6 Address'),gtext('Prefix')];
-
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
 		if (($_POST['ipv6addr'] && !is_ipv6addr($_POST['ipv6addr'])))
 			$input_errors[] = gtext("A valid IPv6 address must be specified.");
 		if ($_POST['ipv6subnet'] && !filter_var($_POST['ipv6subnet'], FILTER_VALIDATE_INT, ['options' => ['min_range' => 1,'max_range' => 128]]))

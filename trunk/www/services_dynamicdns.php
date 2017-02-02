@@ -54,13 +54,13 @@ if ($_POST) {
 
 	/* input validation */
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "provider domainname username password");
+		$reqdfields = ['provider','domainname','username','password'];
 		$reqdfieldsn = [gtext('Provider'),gtext('Domain Name'),gtext('Username'),gtext('Password')];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
-		$reqdfields = array_merge($reqdfields, explode(" ", "updateperiod forcedupdateperiod"));
+		$reqdfields = array_merge($reqdfields, ['updateperiod','forcedupdateperiod']);
 		$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Update period'),gtext('Forced Update Period')]);
-		$reqdfieldst = explode(" ", "string string string string numeric numeric");
+		$reqdfieldst = ['string','string','string','string','numeric','numeric'];
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	}
 

@@ -55,18 +55,18 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['enable'])) {
-		$reqdfields = explode(" ", "type");
-		$reqdfieldsn = array(gtext("Type"));
-		$reqdfieldst = explode(" ", "string");
+		$reqdfields = ['type'];
+		$reqdfieldsn = [gtext('Type')];
+		$reqdfieldst = ['string'];
 
 		if ("device" === $_POST['type']) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "devicespecialfile"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Device")));
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string"));
+			$reqdfields = array_merge($reqdfields, ['devicespecialfile']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Device')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['string']);
 		} else {
-			$reqdfields = array_merge($reqdfields, explode(" ", "mountpoint size"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Mount point"), gtext("Size")));
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string numeric"));
+			$reqdfields = array_merge($reqdfields, ['mountpoint','size']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Mount Point'),gtext('Size')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['string numeric']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -189,7 +189,7 @@ function type_change() {
 				<?php endif;?>
 				<tr>
 					<?php html_combobox("type", gtext("Type"), $pconfig['type'], array("file" => gtext("File"), "device" => gtext("Device")), "", true, false, "type_change()");?>
-					<?php html_mountcombobox("mountpoint", gtext("Mount point"), $pconfig['mountpoint'], gtext("Select mount point where to create the swap file."), true);?>
+					<?php html_mountcombobox("mountpoint", gtext("Mount Point"), $pconfig['mountpoint'], gtext("Select mount point where to create the swap file."), true);?>
 					<?php html_inputbox("size", gtext("Size"), $pconfig['size'], gtext("The size of the swap file in MB."), true, 10);?>
 					<?php html_inputbox("devicespecialfile", gtext("Device"), $pconfig['devicespecialfile'], sprintf(gtext("Name of the device to use as swap device, e.g. %s."), "/dev/da0s2b"), true, 20);?>
 				</table>

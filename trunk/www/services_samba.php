@@ -82,17 +82,17 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "security netbiosname workgroup");
+		$reqdfields = ['security','netbiosname','workgroup'];
 		$reqdfieldsn = [gtext('Authentication'),gtext('NetBIOS Name'),gtext('Workgroup')];
-		$reqdfieldst = explode(" ", "string domain workgroup");
+		$reqdfieldst = ['string','domain','workgroup'];
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 		// Do additional input type validation.
-		$reqdfields = explode(" ", "sndbuf rcvbuf");
+		$reqdfields = ['sndbuf','rcvbuf'];
 		$reqdfieldsn = [gtext('Send Buffer'),gtext('Receive Buffer')];
-		$reqdfieldst = explode(" ", "numericint numericint");
+		$reqdfieldst = ['numericint','numericint'];
 
 		// samba 4+ does not have "share". you can delete this in future.
 		if ($_POST['security'] == 'share') {
@@ -101,24 +101,24 @@ if ($_POST) {
 			}
 		}
 		if (!empty($_POST['createmask']) || !empty($_POST['directorymask'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "createmask directorymask"));
+			$reqdfields = array_merge($reqdfields, ['createmask','directorymask']);
 			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Create Mask'),gtext('Directory Mask')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "filemode filemode"));
+			$reqdfieldst = array_merge($reqdfieldst, ['filemode','filemode']);
 		}
 		if (!empty($_POST['pwdsrv'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "pwdsrv"));
+			$reqdfields = array_merge($reqdfields, ['pwdsrv']);
 			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Password Server')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string"));
+			$reqdfieldst = array_merge($reqdfieldst, ['string']);
 		}
 		if (!empty($_POST['winssrv'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "winssrv"));
+			$reqdfields = array_merge($reqdfields, ['winssrv']);
 			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('WINS Server')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "ipaddr"));
+			$reqdfieldst = array_merge($reqdfieldst, ['ipaddr']);
 		}
 		if (isset($_POST['aio']) && $_POST['aio']) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "aiorsize aiowsize"));
+			$reqdfields = array_merge($reqdfields, ['aiorsize','aiowsize']);
 			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('AIO Read Size'),gtext('AIO Write Size')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numericint numericint"));
+			$reqdfieldst = array_merge($reqdfieldst, ['numericint','numericint']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -312,7 +312,7 @@ function aio_change() {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Common Internet File System"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_combobox("security", gtext("Authentication"), $pconfig['security'], array("user" => gtext("Local User"), "ads" => gtext("Active Directory")), "", true, false, "authentication_change()");?>
+					<?php html_combobox("security", gtext("Authentication"), $pconfig['security'], ['user' => gtext('Local User'),'ads' => gtext('Active Directory')], "", true, false, "authentication_change()");?>
 					<?php 
 					html_combobox("maxprotocol", gtext('Server Max. Protocol'), $pconfig['maxprotocol'], $l_protocol, sprintf('%s %s',$desc_srvmaxprot,$desc_anyanyprot),false,false,'');
 					html_combobox("minprotocol", gtext('Server Min. Protocol'), $pconfig['minprotocol'], $l_protocol, sprintf("%s %s",$desc_srvminprot,$desc_anyanyprot),false,false,'');
@@ -340,14 +340,14 @@ function aio_change() {
 							<br /><?=gtext("Server description. This can usually be left blank.") ;?>
 						</td>
 					</tr>
-					<?php html_combobox("doscharset", gtext("Dos Charset"), $pconfig['doscharset'], array("CP437" => gtext("CP437 (Latin US)"), "CP850" => gtext("CP850 (Latin 1)"), "CP852" => gtext("CP852 (Latin 2)"), "CP866" => gtext("CP866 (Cyrillic CIS 1)"), "CP932" => gtext("CP932 (Japanese Shift-JIS)"), "CP936" => gtext("CP936 (Simplified Chinese GBK)"), "CP949" => gtext("CP949 (Korean)"), "CP950" => gtext("CP950 (Traditional Chinese Big5)"), "CP1251" => gtext("CP1251 (Cyrillic)"), "CP1252" => gtext("CP1252 (Latin 1)"), "ASCII" => "ASCII"), "", false);?>
-					<?php html_combobox("unixcharset", gtext("Unix Charset"), $pconfig['unixcharset'], array("UTF-8" => "UTF-8", "iso-8859-1" => "ISO-8859-1", "iso-8859-15" => "ISO-8859-15", "gb2312" => "GB2312", "EUC-JP" => "EUC-JP", "ASCII" => "ASCII"), "", false);?>
-					<?php html_combobox("loglevel", gtext("Log Level"), $pconfig['loglevel'], array("0" => gtext("Disabled"), "1" => gtext("Minimum"), "2" => gtext("Normal"), "3" => gtext("Full"), "10" => gtext("Debug")), "", false);?>
+					<?php html_combobox("doscharset", gtext("Dos Charset"), $pconfig['doscharset'], ['CP437' => gtext('CP437 (Latin US)'), 'CP850' => gtext('CP850 (Latin 1)'), 'CP852' => gtext('CP852 (Latin 2)'), 'CP866' => gtext('CP866 (Cyrillic CIS 1)'), 'CP932' => gtext('CP932 (Japanese Shift-JIS)'), 'CP936' => gtext('CP936 (Simplified Chinese GBK)'), 'CP949' => gtext('CP949 (Korean)'), 'CP950' => gtext('CP950 (Traditional Chinese Big5)'), 'CP1251' => gtext('CP1251 (Cyrillic)'), 'CP1252' => gtext('CP1252 (Latin 1)'), 'ASCII' => 'ASCII'], "", false);?>
+					<?php html_combobox("unixcharset", gtext("Unix Charset"), $pconfig['unixcharset'], ['UTF-8' => 'UTF-8', 'iso-8859-1' => 'ISO-8859-1', 'iso-8859-15' => 'ISO-8859-15', 'gb2312' => 'GB2312', 'EUC-JP' => 'EUC-JP', 'ASCII' => 'ASCII'], "", false);?>
+					<?php html_combobox("loglevel", gtext("Log Level"), $pconfig['loglevel'], ['0' => gtext('Disabled'), '1' => gtext('Minimum'), '2' => gtext('Normal'), '3' => gtext('Full'), '10' => gtext('Debug')], "", false);?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Local Master Browser"); ?></td>
 						<td width="78%" class="vtable">
 							<select name="localmaster" class="formfld" id="localmaster">
-								<?php $types = array(gtext("Yes"),gtext("No")); $vals = explode(" ", "yes no");?>
+								<?php $types = [gtext('Yes'),gtext('No')]; $vals = explode(" ", "yes no");?>
 								<?php $j = 0; for ($j = 0; $j < count($vals); $j++): ?>
 									<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['localmaster']) echo "selected=\"selected\"";?>>
 									<?=htmlspecialchars($types[$j]);?>
@@ -361,7 +361,7 @@ function aio_change() {
 						<td width="22%" valign="top" class="vncell"><?=gtext("Time Server"); ?></td>
 						<td width="78%" class="vtable">
 							<select name="timesrv" class="formfld" id="timesrv">
-								<?php $types = array(gtext("Yes"),gtext("No")); $vals = explode(" ", "yes no");?>
+								<?php $types = [gtext('Yes'),gtext('No')]; $vals = explode(" ", "yes no");?>
 								<?php $j = 0; for ($j = 0; $j < count($vals); $j++): ?>
 									<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['timesrv']) echo "selected=\"selected\"";?>>
 										<?=htmlspecialchars($types[$j]);?>
@@ -399,7 +399,7 @@ function aio_change() {
 							<br /><?=gtext("Use this option to override the username ('ftp' by default) which will be used for access to services which are specified as guest. Whatever privileges this user has will be available to any client connecting to the guest service. This user must exist in the password file, but does not require a valid login.");?>
 						</td>
 					</tr>
-					<?php html_combobox("maptoguest", gtext("Map to Guest"), $pconfig['maptoguest'], array("Never" => gtext("Never - (Default)"), "Bad User" => gtext("Bad User - (Non Existing Users)")), "", false, false, "");?>
+					<?php html_combobox("maptoguest", gtext("Map to Guest"), $pconfig['maptoguest'], ['Never' => gtext('Never - (Default)'), 'Bad User' => gtext('Bad User - (Non Existing Users)')], "", false, false, "");?>
 					<tr id="createmask_tr">
 						<td width="22%" valign="top" class="vncell"><?=gtext("Create Mask"); ?></td>
 						<td width="78%" class="vtable">
