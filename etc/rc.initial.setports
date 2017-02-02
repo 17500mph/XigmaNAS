@@ -135,12 +135,11 @@ $result = tui_display_yesno($text, 47, 16);
 
 if (0 == $result) {
 	$config['interfaces']['lan']['if'] = $lanif;
-	if (preg_match($g['wireless_regex'], $lanif)) {
-		if (!is_array($config['interfaces']['lan']['wireless']))
-			$config['interfaces']['lan']['wireless'] = [];
-	} else {
+	if(preg_match($g['wireless_regex'],$lanif)):
+		array_make_branch($config,'interfaces','lan','wireless');
+	else:
 		unset($config['interfaces']['lan']['wireless']);
-	}
+	endif;
 
 	$if_isboot = @exec("/sbin/sysctl -q -n net.isboot.nic");
 	$ip_isboot = @exec("/sbin/sysctl -q -n hw.ibft.initiator_address");
