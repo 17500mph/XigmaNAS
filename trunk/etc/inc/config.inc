@@ -1153,12 +1153,7 @@ function config_upgrade() {
 	/* Convert 2.7 -> 2.8 */
 	if ($config['version'] === "2.7") {
 		// convert command scripts
-		if(!(isset($config['rc']) && is_array($config['rc']))) {
-			$config['rc'] = [];
-		}
-		if(!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
-			$config['rc']['param'] = [];
-		}
+		array_make_branch($config,'rc','param');
 		if(isset($config['rc']['preinit'])) {
 			if(isset($config['rc']['preinit']['cmd'])) {
 				foreach($config['rc']['preinit']['cmd'] as $cmd) {
