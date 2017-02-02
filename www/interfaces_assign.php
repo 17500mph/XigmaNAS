@@ -98,33 +98,30 @@ if ($_POST) {
 		}
 	}
 
-	if (empty($input_errors)) {
+	if(empty($input_errors)):
 		/* No errors detected, so update the config */
-		foreach ($_POST as $ifname => $ifport) {
-			if (($ifname == 'lan') || (substr($ifname, 0, 3) == 'opt')) {
-				if (!is_array($ifport)) {
+		foreach ($_POST as $ifname => $ifport):
+			if(($ifname == 'lan') || (substr($ifname,0,3) == 'opt')):
+				if(!is_array($ifport)):
 					$config['interfaces'][$ifname]['if'] = $ifport;
-
 					/* check for wireless interfaces, set or clear ['wireless'] */
-					if (preg_match($g['wireless_regex'], $ifport)) {
-						if (!is_array($config['interfaces'][$ifname]['wireless']))
-							$config['interfaces'][$ifname]['wireless'] = [];
-					} else {
+					if(preg_match($g['wireless_regex'],$ifport)):
+						array_make_branch($config,'interfaces',$ifname,'wireless');
+					else:
 						unset($config['interfaces'][$ifname]['wireless']);
-					}
-
+					endif;
 					/* make sure there is a name for OPTn */
-					if (substr($ifname, 0, 3) == 'opt') {
-						if (!isset($config['interfaces'][$ifname]['descr']))
+					if(substr($ifname, 0, 3) == 'opt'):
+						if(!isset($config['interfaces'][$ifname]['descr'])):
 							$config['interfaces'][$ifname]['descr'] = strtoupper($ifname);
-					}
-				}
-			}
-		}
-
+						endif;
+					endif;
+				endif;
+			endif;
+		endforeach;
 		write_config();
 		touch($d_sysrebootreqd_path);
-	}
+	endif;
 }
 
 if (isset($_GET['act']) && $_GET['act'] == "del") {
@@ -168,29 +165,31 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 		$i++;
 
 	$newifname = 'opt' . $i;
+	array_make_branch($config,'interfaces',$newifname);
 	$config['interfaces'][$newifname] = [];
-	$config['interfaces'][$newifname]['descr'] = "OPT" . $i;
+	$config['interfaces'][$newifname]['descr'] = 'OPT' . $i;
 
 	// Set IPv4 to 'DHCP' and IPv6 to 'Auto' per default.
-	$config['interfaces'][$newifname]['ipaddr'] = "dhcp";
-	$config['interfaces'][$newifname]['ipv6addr'] = "auto";
+	$config['interfaces'][$newifname]['ipaddr'] = 'dhcp';
+	$config['interfaces'][$newifname]['ipv6addr'] = 'auto';
 
 	/* Find an unused port for this interface */
-	foreach ($portlist as $portname => $portinfo) {
+	foreach($portlist as $portname => $portinfo):
 		$portused = false;
-		foreach ($config['interfaces'] as $ifname => $ifdata) {
-			if (isset($ifdata['if']) && $ifdata['if'] == $portname) {
+		foreach($config['interfaces'] as $ifname => $ifdata):
+			if(isset($ifdata['if']) && $ifdata['if'] == $portname):
 				$portused = true;
 				break;
-			}
-		}
-		if (!$portused) {
+			endif;
+		endforeach;
+		if(!$portused):
 			$config['interfaces'][$newifname]['if'] = $portname;
-			if (preg_match($g['wireless_regex'], $portname))
-				$config['interfaces'][$newifname]['wireless'] = [];
+			if(preg_match($g['wireless_regex'], $portname)):
+				$config['interfaces'][$newifname]['wireless'] = []; // OK, see array_make_branch above
+			endif;
 			break;
-		}
-	}
+		endif;
+	endforeach;
 
 	write_config();
 	touch($d_sysrebootreqd_path);
