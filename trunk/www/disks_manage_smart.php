@@ -218,7 +218,7 @@ function enable_change(enable_change) {
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Power Mode");?></td>
 						<td width="78%" class="vtable">
 							<select name="powermode" class="formfld" id="powermode">
-								<?php $types = explode(" ", "Never Sleep Standby Idle"); $vals = explode(" ", "never sleep standby idle");?>
+								<?php $types = ['Never','Sleep','Standby','Idle']; $vals = ['never','sleep','standby','idle'];?>
 								<?php $j = 0; for ($j = 0; $j < count($vals); $j++):?>
 								<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['powermode']) echo "selected=\"selected\"";?>><?=htmlspecialchars($types[$j]);?></option>
 								<?php endfor;?>

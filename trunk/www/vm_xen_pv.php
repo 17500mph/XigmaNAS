@@ -166,30 +166,30 @@ if ($_POST) {
 	}
 
 	// input validation
-	$reqdfields = explode(" ", "name mem vcpus");
+	$reqdfields = ['name','mem','vcpus'];
 	$reqdfieldsn = [gtext('Name'),gtext('Memory (MiB)'),gtext('VCPUs')];
-	$reqdfieldst = explode(" ", "string numericint numericint");
+	$reqdfieldst = ['string','numericint','numericint'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	// VNC display
 	if (trim($_POST['vncdisplay']) != "") {
 		/*
-		$reqdfields = explode(" ", "vncdisplay vncpassword");
+		$reqdfields = ['vncdisplay','vncpassword'];
 		$reqdfieldsn = [gtext('VNC Display'),gtext('VNC Password')];
-		$reqdfieldst = explode(" ", "numericint string");
+		$reqdfieldst = ['numericint','string'];
 		*/
-		$reqdfields = explode(" ", "vncdisplay");
+		$reqdfields = ['vncdisplay'];
 		$reqdfieldsn = [gtext('VNC Display')];
-		$reqdfieldst = explode(" ", "numericint");
+		$reqdfieldst = ['numericint'];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	}
 
 	// mac address
-	$reqdfields = explode(" ", "mac1 mac2 mac3 mac4");
-	$reqdfieldsn = [gtext("MAC Address")." 1", gtext("MAC Address")." 2", gtext("MAC Address")." 3", gtext("MAC Address")." 4"];
-	$reqdfieldst = explode(" ", "macaddr macaddr macaddr macaddr");
+	$reqdfields = ['mac1','mac2','mac3','mac4'];
+	$reqdfieldsn = [gtext('MAC Address').' 1', gtext('MAC Address').' 2', gtext('MAC Address').' 3', gtext('MAC Address').' 4'];
+	$reqdfieldst = ['macaddr','macaddr','macaddr','macaddr'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
