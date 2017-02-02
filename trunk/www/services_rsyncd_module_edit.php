@@ -86,7 +86,7 @@ if ($_POST) {
 	$reqdfields = ['name','comment'];
 	$reqdfieldsn = [gtext('Name'),gtext('Comment')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-	$reqdfieldst = explode(" ", "string string");
+	$reqdfieldst = ['string','string'];
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if(empty($input_errors)) {
@@ -105,11 +105,12 @@ if ($_POST) {
 
 		# Write additional parameters.
 		unset($module['auxparam']);
-		foreach (explode("\n", $_POST['auxparam']) as $auxparam) {
+		$a_auxparam = explode("\n", $_POST['auxparam']);
+		foreach($a_auxparam as $auxparam) {
 			$auxparam = trim($auxparam, "\t\n\r");
 			if (!empty($auxparam))
 				$module['auxparam'][] = $auxparam;
-		}
+	}
 		if (isset($uuid) && (FALSE !== $cnid)) {
 			$a_module[$cnid] = $module;
 			$mode = UPDATENOTIFY_MODE_MODIFIED;

@@ -87,14 +87,14 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	// Input validation.
-	$reqdfields = explode(" ", "nodebase discoveryauthmethod discoveryauthgroup");
+	$reqdfields = ['nodebase','discoveryauthmethod','discoveryauthgroup'];
 	$reqdfieldsn = [gtext('Node Base'),gtext('Discovery Auth Method'),gtext('Discovery Auth Group')];
-	$reqdfieldst = explode(" ", "string string numericint");
+	$reqdfieldst = ['string','string','numericint'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
-	$reqdfields = explode(" ", "timeout nopininterval maxr2t maxsessions maxconnections firstburstlength maxburstlength maxrecvdatasegmentlength maxoutstandingr2t defaulttime2wait defaulttime2retain");
+	$reqdfields = ['timeout','nopininterval','maxr2t','maxsessions','maxconnections','firstburstlength','maxburstlength','maxrecvdatasegmentlength','maxoutstandingr2t','defaulttime2wait','defaulttime2retain'];
 	$reqdfieldsn = [gtext('I/O Timeout'),gtext('NOPIN Interval'),gtext('Max. Sessions'),gtext('Max. Connections'),gtext('Max. pre-send R2T'),gtext('FirstBurstLength'),gtext('MaxBurstLength'),
 	gtext('MaxRecvDataSegmentLength'),gtext('MaxOutstandingR2T'),gtext('DefaultTime2Wait'),gtext('DefaultTime2Retain')];
 	$reqdfieldst = explode(" ", "numericint numericint numericint numericint numericint numericint numericint numericint numericint numericint numericint");
@@ -108,9 +108,9 @@ if ($_POST) {
 		$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext("Discovery Auth Group"));
 	}
 
-	$reqdfields = explode(" ", "uctladdress uctlport uctlnetmask uctlauthmethod uctlauthgroup mediadirectory");
-	$reqdfieldsn = [gtext('Controller IP address'),gtext('Controller TCP Port'),gtext('Controller Authorised network'),gtext('Controller Auth Method'),gtext('Controller Auth Group'),gtext('Media Directory')];
-	$reqdfieldst = explode(" ", "string numericint string string numericint string");
+	$reqdfields = ['uctladdress','uctlport','uctlnetmask','uctlauthmethod','uctlauthgroup','mediadirectory'];
+	$reqdfieldsn = [gtext('Controller IP address'),gtext('Controller TCP Port'),gtext('Controller Authorised Network'),gtext('Controller Auth Method'),gtext('Controller Auth Group'),gtext('Media Directory')];
+	$reqdfieldst = ['string','numericint','string','string','numericint','string'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

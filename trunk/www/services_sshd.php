@@ -58,9 +58,9 @@ if ($_POST) {
 	$reqdfieldsn = [];
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = array_merge($reqdfields, explode(" ", "port"));
+		$reqdfields = array_merge($reqdfields,['port']);
 		$reqdfieldsn = [gtext('TCP Port')];
-		$reqdfieldst = explode(" ", "port");
+		$reqdfieldst = ['port'];
 		
 		if (!empty($_POST['key'])) {
 			$reqdfields = array_merge($reqdfields, ['key']);

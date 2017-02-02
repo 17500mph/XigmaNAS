@@ -64,7 +64,7 @@ if ($_POST) {
 	$reqdfields = [];
 	$reqdfieldsn = [];
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = array_merge($reqdfields, explode(" ", "workdir"));
+		$reqdfields = array_merge($reqdfields, ['workdir']);
 		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Work Directory')]);
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		// Check if working directory exists
