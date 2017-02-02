@@ -120,7 +120,7 @@ if ($_POST) {
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "localshare rsyncserverip remoteshare who");
+	$reqdfields = ['localshare','rsyncserverip','remoteshare','who'];
 	$reqdfieldsn = [gtext('Local Share (Destination)'),gtext('Remote Rsync Server'),gtext('Remote Module (Source)'),gtext('Who')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 

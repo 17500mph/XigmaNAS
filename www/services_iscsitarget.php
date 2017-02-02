@@ -241,7 +241,7 @@ function uctlenable_change(enable_change) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("iSCSI Target"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<?php html_inputbox("nodebase", gtext("Base Name"), $pconfig['nodebase'], gtext("The base name (e.g. iqn.2007-09.jp.ne.peach.istgt) will append the target name that is not starting with 'iqn.'."), true, 60, false);?>
-					<?php html_combobox("discoveryauthmethod", gtext("Discovery Auth Method"), $pconfig['discoveryauthmethod'], array("Auto" => gtext("Auto"), "CHAP" => gtext("CHAP"), "CHAP Mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in discovery session. Auto means both none and authentication."), true);?>
+					<?php html_combobox("discoveryauthmethod", gtext("Discovery Auth Method"), $pconfig['discoveryauthmethod'], ['Auto' => gtext('Auto'), 'CHAP' => gtext('CHAP'), 'CHAP Mutual' => gtext('Mutual CHAP'), 'None' => gtext('None')], gtext("The method can be accepted in discovery session. Auto means both none and authentication."), true);?>
 					<?php
 					$ag_list = [];
 					$ag_list['0'] = gtext("None");
@@ -272,7 +272,7 @@ function uctlenable_change(enable_change) {
 					html_inputbox("uctladdress", gtext("Controller IP address"), $pconfig['uctladdress'], sprintf(gtext("Logical Unit Controller IP address (%s by default)"), "127.0.0.1(localhost)"), true, 30, false);
 					html_inputbox("uctlport", gtext("Controller TCP Port"), $pconfig['uctlport'], sprintf(gtext("Logical Unit Controller TCP port (%d by default)"), 3261), true, 15, false);
 					html_inputbox("uctlnetmask", gtext("Controller Authorised network"), $pconfig['uctlnetmask'], sprintf(gtext("Logical Unit Controller Authorised network (%s by default)"), "127.0.0.1/8"), true, 30, false);
-					html_combobox("uctlauthmethod", gtext("Controller Auth Method"), $pconfig['uctlauthmethod'], array("CHAP" => gtext("CHAP"), "CHAP mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in the controller."), true);
+					html_combobox("uctlauthmethod", gtext("Controller Auth Method"), $pconfig['uctlauthmethod'], ['CHAP' => gtext('CHAP'), 'CHAP mutual' => gtext('Mutual CHAP'), 'None' => gtext('None')], gtext("The method can be accepted in the controller."), true);
 					$ag_list = [];
 					$ag_list['0'] = gtext("Must choose one");
 					foreach($config['iscsitarget']['authgroup'] as $ag) {

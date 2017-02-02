@@ -67,9 +67,9 @@ if ($_POST) {
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "event occurrence timeinterval expire");
-	$reqdfieldsn = [gtext('Event'),gtext('Occurrence'),gtext('Time interval'),gtext('Expire')];
-	$reqdfieldst = explode(" ", "string numeric time time");
+	$reqdfields = ['event','occurrence','timeinterval','expire'];
+	$reqdfieldsn = [gtext('Event'),gtext('Occurrence'),gtext('Time Interval'),gtext('Expire')];
+	$reqdfieldst = ['string','numeric','time','time'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

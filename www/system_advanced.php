@@ -64,17 +64,17 @@ if ($_POST) {
 
 	// Input validation.
 	if (isset($_POST['sysconsaver'])) {
-		$reqdfields = explode(" ", "sysconsaverblanktime");
+		$reqdfields = ['sysconsaverblanktime'];
 		$reqdfieldsn = [gtext('Blank Time')];
-		$reqdfieldst = explode(" ", "numeric");
+		$reqdfieldst = ['numeric'];
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	}
 	if (isset($_POST['powerd'])) {
-		$reqdfields = explode(" ", "pwmax pwmin");
+		$reqdfields = ['pwmax','pwmin'];
 		$reqdfieldsn = [gtext('CPU Maximum Frequency'),gtext('CPU Minimum Frequency')];
-		$reqdfieldst = explode(" ", "numeric numeric");
+		$reqdfieldst = ['numeric','numeric'];
 
 		//do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

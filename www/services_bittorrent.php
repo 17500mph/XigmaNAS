@@ -102,25 +102,25 @@ if ($_POST) {
 
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "port downloaddir peerport");
-		$reqdfieldsn = array(gtext("Port"), gtext("Download directory"), gtext("Peer port"));
-		$reqdfieldst = explode(" ", "port string port");
+		$reqdfields = ['port','downloaddir','peerport'];
+		$reqdfieldsn = [gtext('Port'),gtext('Download Directory'),gtext('Peer Port')];
+		$reqdfieldst = ['port','string','port'];
 
 		if (!empty($_POST['authrequired'])) {
 			// !!! Note !!! It seems TransmissionBT does not support special characters,
 			// so use 'alias' instead of 'password' check.
-			$reqdfields = array_merge($reqdfields, explode(" ", "username password"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Username"), gtext("Password")));
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "alias alias"));
+			$reqdfields = array_merge($reqdfields, ['username','password']);
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Username"),gtext("Password")));
+			$reqdfieldst = array_merge($reqdfieldst, ['alias','alias']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 		// Add additional type checks
 		if (isset($_POST['umask'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "umask"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("User mask")));
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "filemode"));
+			$reqdfields = array_merge($reqdfields, ['umask']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('User Mask')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['filemode']);
 		}
 
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

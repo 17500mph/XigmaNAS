@@ -53,9 +53,9 @@ if ($_POST) {
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		// Input validation.
-		$reqdfields = explode(" ", "rsyncd_user port");
-		$reqdfieldsn = array(gtext("Map to User"), gtext("TCP Port"));
-		$reqdfieldst = explode(" ", "string port");
+		$reqdfields = ['rsyncd_user','port'];
+		$reqdfieldsn = [gtext('Map to User'),gtext('TCP Port')];
+		$reqdfieldst = ['string','port'];
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

@@ -94,14 +94,14 @@ if ($_POST) {
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		// Input validation.
-		$reqdfields = explode(" ", "port numberclients maxconperip maxloginattempts timeout");
+		$reqdfields = ['port','numberclients','maxconperip','maxloginattempts','timeout'];
 		$reqdfieldsn = [gtext('TCP Port'),gtext('Max. Clients'),gtext('Max. Connections Per Host'),gtext('Max. Login Attempts'),gtext('Timeout')];
-		$reqdfieldst = explode(" ", "numeric numeric numeric numeric numeric");
+		$reqdfieldst = ['numeric','numeric','numeric','numeric','numeric'];
 
 		if (!empty($_POST['tls'])) {
-			$reqdfields = array_merge($reqdfields, explode(" ", "certificate privatekey"));
-			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Certificate'), gtext('Private key')]);
-			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "certificate privatekey"));
+			$reqdfields = array_merge($reqdfields, ['certificate','privatekey']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Certificate'),gtext('Private key')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['certificate','privatekey']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);

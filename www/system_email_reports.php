@@ -64,9 +64,9 @@ if ($_POST) {
 
 	// Input validation.
 	if(isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "to");
-		$reqdfieldsn = array(gtext("To e-mail"));
-		$reqdfieldst = explode(" ", "string");
+		$reqdfields = ['to'];
+		$reqdfieldsn = [gtext('To e-mail')];
+		$reqdfieldst = ['string'];
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

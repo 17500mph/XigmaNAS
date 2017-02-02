@@ -114,7 +114,7 @@ if ($_POST) {
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "source destination who");
+	$reqdfields = ['source','destination','who'];
 	$reqdfieldsn = [gtext('Source Share'),gtext('Destination Share'),gtext('Who')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 

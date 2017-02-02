@@ -55,9 +55,9 @@ if (FALSE === ($cnid = array_search_ex(Session::getUserId(), $a_user, "id"))) {
 if ($_POST) {
 	unset($input_errors);
 
-	$reqdfields = explode(" ", "password_old password_new password_confirm");
+	$reqdfields = ['password_old','password_new','password_confirm'];
 	$reqdfieldsn = [gtext('Current password'),gtext('New password'),gtext('Password (confirmed)')];
-	$reqdfieldst = explode(" ", "password password password");
+	$reqdfieldst = ['password','password','password'];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

@@ -281,28 +281,28 @@ if ($_POST) {
 		exit;
 	}
 	if (isset($_POST['Scan']) && $_POST['Scan']) {
-		$reqdfields = explode(" ", "media_uctladdress media_uctlport media_uctlauthmethod");
-		$reqdfieldsn = array(gtext("Controller IP address"),
-			     gtext("Controller TCP Port"),
-			     gtext("Controller Auth Method"));
-		$reqdfieldst = explode(" ", "string numericint string");
+		$reqdfields = ['media_uctladdress','media_uctlport','media_uctlauthmethod'];
+		$reqdfieldsn = [gtext('Controller IP address'),
+			     gtext('Controller TCP Port'),
+			     gtext('Controller Auth Method')];
+		$reqdfieldst = ['string','numericint','string'];
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 		if ($_POST['media_uctlauthmethod'] == 'CHAP'
 		    || $_POST['media_uctlauthmethod'] == 'CHAP mutual') {
-			$reqdfields = explode(" ", "media_uctluser media_uctlsecret");
+			$reqdfields = ['media_uctluser','media_uctlsecret'];
 			$reqdfieldsn = [gtext('User'),gtext('Secret')];
-			$reqdfieldst = explode(" ", "string string");
+			$reqdfieldst = ['string','string'];
 
 			do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 			do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 		}
 		if ($_POST['media_uctlauthmethod'] == 'CHAP mutual') {
-			$reqdfields = explode(" ", "media_uctlmuser media_uctlmsecret");
+			$reqdfields = ['media_uctlmuser','media_uctlmsecret'];
 			$reqdfieldsn = [gtext('Peer User'),gtext('Peer Secret')];
-			$reqdfieldst = explode(" ", "string string");
+			$reqdfieldst = ['string','string'];
 
 			do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 			do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -401,15 +401,15 @@ if ($_POST) {
 		}
 		if ($pconfig['sizeunit'] == 'auto'){
 			$pconfig['size'] = "";
-			$reqdfields = explode(" ", "path sizeunit flags");
-			$reqdfieldsn = array(gtext("Path"),
-				     gtext("Auto size"),
-				     gtext("Flags"));
-			$reqdfieldst = explode(" ", "string string string");
+			$reqdfields = ['path','sizeunit','flags'];
+			$reqdfieldsn = [gtext('Path'),
+				     gtext('Auto size'),
+				     gtext('Flags')];
+			$reqdfieldst = ['string','string','string'];
 		}else{
-			$reqdfields = explode(" ", "path size sizeunit flags");
+			$reqdfields = ['path','size','sizeunit','flags'];
 			$reqdfieldsn = [gtext('Path'),gtext('File size'),gtext('File sizeunit'),gtext('Flags')];
-			$reqdfieldst = explode(" ", "string numericint string");
+			$reqdfieldst = ['string','numericint','string'];
 		}
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -580,7 +580,7 @@ function sizeunit_change() {
 					<?php html_titleline(gtext("Logical Unit Controller Login Information"));?>
 					<?php html_inputbox("media_uctladdress", gtext("Controller IP Address"), $pconfig['media_uctladdress'], "", true, 30);?>
 					<?php html_inputbox("media_uctlport", gtext("Controller TCP Port"), $pconfig['media_uctlport'], "", true, 15);?>
-					<?php html_combobox("media_uctlauthmethod", gtext("Controller Auth Method"), $pconfig['media_uctlauthmethod'], array("CHAP" => gtext("CHAP"), "CHAP mutual" => gtext("Mutual CHAP")), "", true, false, "authmethod_change()");?>
+					<?php html_combobox("media_uctlauthmethod", gtext("Controller Auth Method"), $pconfig['media_uctlauthmethod'], ['CHAP' => gtext('CHAP'), 'CHAP mutual' => gtext('Mutual CHAP')], "", true, false, "authmethod_change()");?>
 					<?php html_inputbox("media_uctluser", gtext("User"), $pconfig['media_uctluser'], "", true, 60);?>
 					<?php html_passwordbox("media_uctlsecret", gtext("Secret"), $pconfig['media_uctlsecret'], "", true, 30);?>
 					<?php html_inputbox("media_uctlmuser", gtext("Peer User"), $pconfig['media_uctlmuser'], "", true, 60);?>

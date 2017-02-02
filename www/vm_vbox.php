@@ -47,9 +47,9 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['enable'])) {
-		$reqdfields = explode(" ", "homedir");
-		$reqdfieldsn = array(gtext("Home directory"));
-		$reqdfieldst = explode(" ", "string");
+		$reqdfields = ['homedir'];
+		$reqdfieldsn = [gtext('Home Directory')];
+		$reqdfieldst = ['string'];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	} else {

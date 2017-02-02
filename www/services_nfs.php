@@ -50,10 +50,9 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "numproc");
-		$reqdfieldsn = array(gtext("Servers"));
-		$reqdfieldst = explode(" ", "numeric");
-
+		$reqdfields = ['numproc'];
+		$reqdfieldsn = [gtext('Servers')];
+		$reqdfieldst = ['numeric'];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	}

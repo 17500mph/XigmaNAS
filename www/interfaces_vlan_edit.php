@@ -73,10 +73,9 @@ if ($_POST) {
 	}
 
 	// Input validation.
-	$reqdfields = explode(" ", "vlandev tag");
-	$reqdfieldsn = [gtext('Physical Interface'), gtext('VLAN Tag')];
-	$reqdfieldst = explode(" ", "string numeric");
-
+	$reqdfields = ['vlandev','tag'];
+	$reqdfieldsn = [gtext('Physical Interface'),gtext('VLAN Tag')];
+	$reqdfieldst = ['string','numeric'];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
