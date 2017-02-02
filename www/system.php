@@ -184,10 +184,9 @@ if($_POST) {
 		$config['system']['ntp']['updateinterval'] = $_POST['ntp_updateinterval'];
 		$config['system']['webgui']['certificate'] = base64_encode($_POST['certificate']);
 		$config['system']['webgui']['privatekey'] =  base64_encode($_POST['privatekey']);
-
 		// Only store IPv4 DNS servers when using static IPv4.
 		array_make_branch($config,'system','dnsserver');
-		$config['system']['dnsserver'] = []; // clear configuration
+		$config['system']['dnsserver'] = []; // OK clear configuration
 		if('dhcp' !== $config['interfaces']['lan']['ipaddr']):
 			if($_POST['dns1']):
 				$config['system']['dnsserver'][] = $_POST['dns1'];
@@ -201,7 +200,7 @@ if($_POST) {
 		endif;
 		// Only store IPv6 DNS servers when using static IPv6.
 		array_make_branch($config,'system','ipv6dnsserver');
-		$config['system']['ipv6dnsserver'] = [];
+		$config['system']['ipv6dnsserver'] = []; // OK
 		if('auto' !== $config['interfaces']['lan']['ipv6addr']):
 			if($_POST['ipv6dns1']):
 				$config['system']['ipv6dnsserver'][] = $_POST['ipv6dns1'];
