@@ -86,9 +86,9 @@ $rrdconfig = fopen("{$config['rrdgraphs']['storage_path']}/rrd_config", "w");
 
 	if (isset($config['rrdgraphs']['disk_usage'])) {
 		unset($config["rrdgraphs"]["mounts"]);
-		$config["rrdgraphs"]["mounts"] = [];
+		array_make_branch($config,'rrdgraphs','mounts');
 		unset($config["rrdgraphs"]["pools"]);
-		$config["rrdgraphs"]["pools"] = [];
+		array_make_branch($config,'rrdgraphs','pools');
 
 	if (is_array($config['mounts']) && is_array($config['mounts']['mount'])) {
 		for ($i = 0; $i < count($config['mounts']['mount']); ++$i) {
