@@ -110,8 +110,8 @@ if ($_POST) {
 		}
 
 		if (isset($_POST['ipv6_enable']) && $_POST['ipv6_enable'] && ($_POST['ipv6type'] === "Static")) {
-			$reqdfields = explode(" ", "ipv6addr ipv6subnet");
-			$reqdfieldsn = array(gtext("IPv6 address"),gtext("Prefix"));
+			$reqdfields = ['ipv6addr','ipv6subnet');
+			$reqdfieldsn = [gtext('IPv6 address'),gtext('Prefix')];
 
 			do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
