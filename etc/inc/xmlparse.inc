@@ -123,7 +123,7 @@ function cData($parser, $data) {
 function parse_xml_config_raw($cffile, $rootobj) {
 	global $depth, $curpath, $config, $havedata, $listtags;
 
-	$config = [];
+	$config = []; // OK
 	$curpath = [];
 	$depth = 0;
 	$havedata = 0;
