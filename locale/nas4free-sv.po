@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-30 04:46+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"PO-Revision-Date: 2017-02-02 06:48+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -892,6 +892,9 @@ msgstr ""
 "På den högsta nivån är ett mål det som presenteras för initiator, och består "
 "av en eller flera utökningar."
 
+msgid "Attach"
+msgstr "Anslut"
+
 msgid "Attach a data device"
 msgstr "Lägge till en dataenhet"
 
@@ -1032,11 +1035,14 @@ msgstr "Åter"
 msgid "Background"
 msgstr "Bakgrund"
 
+msgid "Backup"
+msgstr "Säkerhetskopiera"
+
 msgid "Backup Configuration"
 msgstr "Backupkonfigurering"
 
-msgid "Backup file"
-msgstr "Säkerhetskopia"
+msgid "Backup File"
+msgstr "Säkerhetskopiera fil"
 
 msgid "Backup/Restore"
 msgstr "Säkerhetskopiera/Återskapa"
@@ -1147,9 +1153,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr "Rensa tid"
-
-msgid "Blank time"
-msgstr "Blank tid"
 
 msgid "Block Size"
 msgstr "Blockstorlek"
@@ -1399,9 +1402,6 @@ msgstr "Kontrollera System|Grundinställningar innan du initierar"
 msgid "Check and replace cable"
 msgstr "Kontrollera och byt kabel"
 
-msgid "Check interval"
-msgstr "Kontrollintervall"
-
 msgid "Check shared secret:"
 msgstr "Kontrollera delad hemlighet:"
 
@@ -1485,6 +1485,9 @@ msgid "Command"
 msgstr "Kommando"
 
 msgid "Command Output"
+msgstr "Kommandoutmatning"
+
+msgid "Command Output:"
 msgstr "Kommandoutmatning"
 
 msgid "Command Scripts"
@@ -1694,6 +1697,9 @@ msgid ""
 msgstr ""
 "Konvertera DOS-attribut till UNIX rättigheter när lagring av DOS-attribut är "
 "frånslaget."
+
+msgid "Conveyance Self-Test"
+msgstr "Överföringssjälvtest"
 
 msgid "Core"
 msgstr "Kärna"
@@ -2304,9 +2310,6 @@ msgstr "Måle-postadresser, separera adresser med semikolon."
 msgid "Destination host name or IP address."
 msgstr "Destinationens värdnamn eller IP adress."
 
-msgid "Destination host name or IP number."
-msgstr "Destinationsvärd eller IP-adress"
-
 msgid "Destination network bit count"
 msgstr "Biträknare för destinationsnätverk"
 
@@ -2327,6 +2330,9 @@ msgstr ""
 
 msgid "Destroyed"
 msgstr "Förstört"
+
+msgid "Detach"
+msgstr "Koppla ifrån"
 
 msgid "Detach a data device from a mirror"
 msgstr "Koppla från en dataenhet från en spegling"
@@ -2843,9 +2849,6 @@ msgstr "Ladda ner konfiguration"
 msgid "Download Directory"
 msgstr "Nedladdningskatalog"
 
-msgid "Download directory"
-msgstr "Nedladdningsmapp"
-
 msgid "Drive Temperature."
 msgstr "Disktemperatur"
 
@@ -3251,6 +3254,13 @@ msgstr "Aktivera identifieringsprotokoll (RFC1413)."
 msgid "Enable the server power control utility."
 msgstr "Aktivera serverns effektkontrollfunktion."
 
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
+"Aktivera detta alternativ om du vill ändra på konfigurationssidorna direkt "
+"utan att växla till ändringsläge."
+
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Aktivera för att strikt följa DLNA standarden."
 
@@ -3359,6 +3369,12 @@ msgstr "Ange en beskrivning"
 msgid "Enter a description for your reference."
 msgstr "Mata in en beskrivning för din referens."
 
+msgid "Enter a group description."
+msgstr "Mata in en beskrivning av gruppen"
+
+msgid "Enter a group name."
+msgstr "Mata in ett gruppnamn"
+
 msgid "Enter a name"
 msgstr "Mata in namn"
 
@@ -3384,6 +3400,18 @@ msgid ""
 msgstr ""
 "Mata in önskad systemtid direkt (format mm/dd/åååå hh:mm) eller använd "
 "ikonen för att välja."
+
+msgid "Enter full name of the user."
+msgstr "Mata in användarens hela namn"
+
+msgid "Enter hostname or IP address."
+msgstr "Mata in ett värdnamn eller en IP-adress"
+
+msgid "Enter login name of the user."
+msgstr "Mata in inloggningsnamnet för användaren"
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr "Mata in IP-sdressen eller DNS-namnet för iSCSI målet."
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3433,6 +3461,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Ange port att sända fällor (traps) (standard 162)."
 
+msgid "Enter the user password."
+msgstr "Mata in användarens lösenord."
+
 msgid "Enter trap host name."
 msgstr "Skriv in \"fällans\" värdnamn."
 
@@ -3464,8 +3495,8 @@ msgstr "Händelse"
 msgid "Event Selection"
 msgstr "Val av händelse"
 
-msgid "Example: pkg add packagename."
-msgstr "Exempel: pkg add paketnamn."
+msgid "Example: pkg install packagename."
+msgstr "Exempelvis: pkg install packagename."
 
 msgid "Execute"
 msgstr "Kör"
@@ -3760,11 +3791,11 @@ msgstr "Följ"
 msgid "Force Operation"
 msgstr "Tvinga operationen"
 
+msgid "Force Use"
+msgstr "Kräv användning"
+
 msgid "Force delete"
 msgstr "Tvinga borttagning"
-
-msgid "Force use"
-msgstr "Tvinga"
 
 msgid "Forced Update Period"
 msgstr "Tvingande uppdateringsperiod"
@@ -3930,9 +3961,6 @@ msgstr "Gruppen är låst"
 msgid "Group is marked for deletion"
 msgstr "Gruppen är markerad för borttagning"
 
-msgid "Group name."
-msgstr "Gruppnamn."
-
 msgid "Group numeric id."
 msgstr "Numeriskt ID för gruppen."
 
@@ -4055,9 +4083,6 @@ msgid "Hint"
 msgstr "Tips"
 
 msgid "Home Directory"
-msgstr "Hemkatalog"
-
-msgid "Home directory"
 msgstr "Hemkatalog"
 
 msgid "Host"
@@ -4402,15 +4427,15 @@ msgstr ""
 "Initierargrupper innehåller auktoriserade initiatornamn och nätverk för att "
 "nå målet."
 
+msgid "Initiator Name"
+msgstr "Initiatornamn"
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "Initieraren är auktoriserad för att få tillgång till iSCSI målet. Det krävs "
 "ett namn eller 'ALL' för alla Initierare."
-
-msgid "Initiator name"
-msgstr "Initiatornamn"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "Initierarsidans hemlighet. (för ömsesidig CHAP autentisering)"
@@ -4508,6 +4533,9 @@ msgstr "UPS Datum"
 
 msgid "Internal UPS clock time"
 msgstr "UPS tid"
+
+msgid "Interval"
+msgstr "Intervall"
 
 msgid "Interval between self tests"
 msgstr "Intervall mellan självtest"
@@ -4914,11 +4942,11 @@ msgstr "Logisk enhetstyp mappad till LUN"
 msgid "Login"
 msgstr "Logga in"
 
-msgid "Login name of user."
-msgstr "Inloggningsnamn för användare."
-
 msgid "Logout"
 msgstr "Logga ut"
+
+msgid "Long Self-Test"
+msgstr "Lång självtest"
 
 msgid "Low voltage boosting transfer point"
 msgstr "Låg spänning ökar överförings punkten"
@@ -5061,17 +5089,8 @@ msgstr "Max. passiva portar"
 msgid "Max. Sessions"
 msgstr "Max. Sessioner"
 
-msgid "Max. TTL"
-msgstr "Max. TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "Maximal försänd R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Max 'time-to-live' (max antal hopp) används i utgående probe-paket "
-"(sondpaket)"
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -5087,9 +5106,6 @@ msgstr "Maximal (Högsta prestanda)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Max prestanda, högsta ljudnivå"
-
-msgid "Maximum frequency"
-msgstr "Maxfrekvens"
 
 msgid "Maximum idle time in seconds."
 msgstr "Maximal vilotid i sekunder"
@@ -5204,9 +5220,6 @@ msgstr "Lägsta prestanda, lägsta ljudnivå"
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Lägsta batterinivå för återstart av UPS efter nedstängning"
 
-msgid "Minimum frequency"
-msgstr "Minfrekvens"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Lägsta uppmätta inkommande spänning"
 
@@ -5273,9 +5286,6 @@ msgstr "mån"
 msgid "Monday"
 msgstr "måndag"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Måndag Tisdag Onsdag Torsdag Fredag Lördag Söndag"
-
 msgid "Monitoring"
 msgstr "Övervakning"
 
@@ -5305,9 +5315,6 @@ msgstr "Monteringspunktsverktyg"
 
 msgid "Mount Points"
 msgstr "Monteringspunkter"
-
-msgid "Mount point"
-msgstr "Monteringspunkt"
 
 msgid "Mount point name"
 msgstr "Namn på monteringspunkt"
@@ -5754,8 +5761,11 @@ msgstr "oktober"
 msgid "Off"
 msgstr "Av"
 
-msgid "Old passphrase"
-msgstr "Gammal lösenordsfras"
+msgid "Offline Immediate Test"
+msgstr "Omedelbar offlinetest"
+
+msgid "Old Passphrase"
+msgstr "Gamla lösenordet"
 
 msgid "On"
 msgstr "På"
@@ -5889,6 +5899,9 @@ msgstr "Uppladdning av paket misslyckades (minnet slut?)"
 msgid "Packages"
 msgstr "Paket"
 
+msgid "Packages Installer"
+msgstr "Paketinstallerare"
+
 msgid "Page Refresh"
 msgstr "Uppdatera sida"
 
@@ -5941,6 +5954,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Lösenordsfras"
+
+msgid "Passphrase Confirmation"
+msgstr "Lösenordsbekräftelse"
 
 msgid "Passphrase don't match."
 msgstr "Lösenordsfrasen stämmer ej överens."
@@ -6029,9 +6045,6 @@ msgstr "Peer-hemlighet"
 msgid "Peer User"
 msgstr "Klient/Part Användare"
 
-msgid "Peer port"
-msgstr "Klient/Part port"
-
 msgid "Performance Settings"
 msgstr "Prestandainställningar"
 
@@ -6057,8 +6070,14 @@ msgstr "Bilder"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
-msgstr "Ping Test"
+msgid "Ping Host"
+msgstr "Pinga värd"
+
+msgid "Ping Output"
+msgstr "Pingsvar"
+
+msgid "Ping may take a while, please be patient."
+msgstr "Pink kan ta ett tag, vänligen ha tålamod."
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Pinga 'winbindd' (winbind-demonen) för att se om den lever:"
@@ -6249,9 +6268,6 @@ msgstr "Effektläge"
 
 msgid "Power management"
 msgstr "Strömhantering"
-
-msgid "Power mode"
-msgstr "Effektläge"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr "Pre-Fail attribut som används åtminstonne i HP enheter."
@@ -6583,6 +6599,9 @@ msgstr "Fjärradress"
 msgid "Remote Module (Source)"
 msgstr "Fjärrmodul (Källa)"
 
+msgid "Remote Monitoring"
+msgstr "Fjärrövervakning"
+
 msgid "Remote Rsync Daemon"
 msgstr "Fjärr Rsync Demon"
 
@@ -6594,12 +6613,6 @@ msgstr "Fjärrsysloggmedelanden"
 
 msgid "Remote Syslog Server"
 msgstr "Extern syslogserver"
-
-msgid "Remote module name"
-msgstr "Namn för fjärrmodul"
-
-msgid "Remote monitoring"
-msgstr "Fjärrövervakning"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6686,14 +6699,8 @@ msgstr "Återställ Grafer"
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr "Motstånd orsakat av friktion i mekaniska delar vid drift."
 
-msgid "Resolve"
-msgstr "Åtgärda"
-
 msgid "Resolve IP"
 msgstr "Lös upp IP"
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Slå upp IP-adresser till värdnamn"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr "Lös upp IP-adresser till värdnamn"
@@ -6704,11 +6711,11 @@ msgstr "Resurs"
 msgid "Resource Name"
 msgstr "Resursnamn"
 
-msgid "Resource name"
-msgstr "Resursnamn"
-
 msgid "Resources"
 msgstr "Resurser"
+
+msgid "Restore"
+msgstr "Återskapa"
 
 msgid "Restore Configuration"
 msgstr "Återställ konfiguration"
@@ -6952,7 +6959,7 @@ msgstr "Inställningar schemalagda självtester"
 msgid "Scheduled Shutdown"
 msgstr "Schemalagd avstängning"
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr "Schemalagda tester"
 
 msgid "Scrub a pool"
@@ -7059,8 +7066,16 @@ msgstr "Välj mjukvara:"
 msgid "Select item to remove from the list"
 msgstr "Välj poster att ta bort från listan"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+"Välj maximal livstid (max antal hopp) för utgående undersökningspaket."
+
 msgid "Select mount point where to create the swap file."
 msgstr "Välj monteringspunkt där växlingsfilen ska skapas."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr "Välj antal ICMP ECHO REQUEST paket."
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7095,6 +7110,9 @@ msgid ""
 msgstr ""
 "Välj krypterad server konfigurations fil, GZIP eller XML, och klicka på "
 "knappen nedan för att återställa konfigurationen."
+
+msgid "Select which interface to use."
+msgstr "Välj vilket gränssnitt som skall användas"
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7211,6 +7229,13 @@ msgstr "Välj kompletterande gruppmedlemskap för detta konto."
 msgid "Set browseable."
 msgstr "Sätt bläddringsbar."
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+"Sätt intervall mellan diskkontroller till N sekunder. Minsta tillåtna värde "
+"är 10."
+
 msgid "Set read only."
 msgstr "Sätt skrivskyddad."
 
@@ -7248,16 +7273,15 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Ställ in rullhastiget mellan 0-10 (förval är 10)."
 
+msgid "Set user login shell."
+msgstr "Sätt skal för användarinloggning."
+
+msgid "Setkey"
+msgstr "Inställningsnyckel"
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Välj en alternativ monteringspunkt för root dataset. Standard är /mnt."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Ställ in intervallet mellan diskkontroller till N sekunder. Minsta tillåtna "
-"värde är 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7302,6 +7326,9 @@ msgstr "Skal"
 msgid "Shock During Write."
 msgstr "Slag under skrivning."
 
+msgid "Short Self-Test"
+msgstr "Kort självtest"
+
 msgid "Show Default Groups"
 msgstr "Visa standardgrupper"
 
@@ -7328,11 +7355,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Stäng av"
 
-msgid "Shutdown mode"
-msgstr "Avstängningsläge"
+msgid "Shutdown Mode"
+msgstr "Nedstängningsläge"
 
-msgid "Shutdown timer"
-msgstr "Avstängningstimer"
+msgid "Shutdown Timer"
+msgstr "Nedstängningstimer"
 
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
@@ -7363,6 +7390,9 @@ msgstr "Fördröjning"
 
 msgid "Skip First Scan"
 msgstr "Hoppa över första skanningen"
+
+msgid "Skip View Mode"
+msgstr "Skippa läsläge"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
@@ -7820,14 +7850,14 @@ msgstr "Band"
 msgid "Target"
 msgstr "Mål"
 
+msgid "Target Address"
+msgstr "Måladress"
+
 msgid "Target Alias"
 msgstr "Målalias"
 
 msgid "Target Name"
 msgstr "Målnamn"
-
-msgid "Target address"
-msgstr "Måladress"
 
 msgid "Target directory."
 msgstr "Målkatalog"
@@ -7840,9 +7870,6 @@ msgstr "Målet är inte valt."
 
 msgid "Target list"
 msgstr "Mållista"
-
-msgid "Target name"
-msgstr "Målnamn"
 
 msgid "Target side secret."
 msgstr "Målsidans hemlighet."
@@ -7881,11 +7908,11 @@ msgstr "Temporär katalog"
 msgid "Temporary directory to store transcoded files."
 msgstr "Temporär katalog för lagring av omkodade filer."
 
+msgid "Test Email"
+msgstr "Testa E-post"
+
 msgid "Test Mode"
 msgstr "Testläge"
-
-msgid "Test email"
-msgstr "Testa E-post (Testbrev)"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8672,9 +8699,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Den uppladdade filen blev inte fullständigt överförd."
 
-msgid "The user's login shell."
-msgstr "Användarens inloggningsskal"
-
 msgid "The value of the variable."
 msgstr "Värdet på variabeln."
 
@@ -8943,8 +8967,9 @@ msgstr ""
 "Detta är både namnet på den server som annonseras via Zeroconf / Bonjour / "
 "Rendezvous, och namnet på databasen som exporteras via DAAP."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
-msgstr "Detta är enbart för information (används ej under iSCSI-förhandling)"
+msgid "This is for information only. (not used during iSCSI negotiation)."
+msgstr ""
+"Detta är endast för information. (används ej under iSCSI förhandling)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9210,9 +9235,6 @@ msgstr "Etiketten finns redan."
 msgid "This tag is used."
 msgstr "Etiketten används redan."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "Detta är IP-adressen eller DNS-namnet för iSCSI-målet."
-
 msgid "This user already exists in the user list."
 msgstr "Den här användaren finns redan i användarlistan."
 
@@ -9293,9 +9315,6 @@ msgstr "Tid innan lasten kommer att stängas av"
 
 msgid "Time before the load will be started"
 msgstr "Tid innan lasten kommer att startas"
-
-msgid "Time interval"
-msgstr "Tidsintervall"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Tid som använts för positionering av magnethuvudena."
@@ -9443,15 +9462,14 @@ msgstr "Totalt: %s | Använt: %s | Ledigt: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
-msgid "Traceroute Test"
-msgstr "Traceroute Test"
+msgid "Traceroute Host"
+msgstr "Traceroute värd"
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
-msgstr ""
-"Traceroute kan ta en stund att slutföra. Du kan trycka på Stopp-knappen i "
-"din webbläsare när som helst för att se misslyckade traceroutes."
+msgid "Traceroute Output"
+msgstr "Traceroute svar"
+
+msgid "Traceroute may take a while, please be patient."
+msgstr "Traceroute kan ta en tid, vänligen ha tålamod."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9472,14 +9490,14 @@ msgstr "Överföringshastighet"
 msgid "Transfer mode"
 msgstr "Överföringsläge"
 
-msgid "Trap host"
-msgstr "Värdfälla (Trap host)"
+msgid "Trap Host"
+msgstr "Trap värd"
 
-msgid "Trap port"
-msgstr "Portfälla (Trap port)"
+msgid "Trap Port"
+msgstr "Trap port"
 
-msgid "Trap string"
-msgstr "Strängfälla (Trap string)"
+msgid "Trap String"
+msgstr "Trap sträng"
 
 msgid "Trap string."
 msgstr "Strängfälla (Trap string)"
@@ -9767,10 +9785,6 @@ msgstr ""
 "tillsammans med positiva/negativa y-axelskalning)"
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "Använd följande IP-adress som källadress i utgående paket."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9842,6 +9856,9 @@ msgstr "Användar-ID"
 msgid "User Mask"
 msgstr "Användar Mask"
 
+msgid "User Password Settings"
+msgstr "Inställningar användarlösenord"
+
 msgid "User Portal"
 msgstr "Portalanvändare"
 
@@ -9860,17 +9877,8 @@ msgstr "Användarkontot är låst"
 msgid "User account is marked for deletion"
 msgstr "Användarkontot är markerat för borttagning"
 
-msgid "User full name."
-msgstr "Användarens fullständiga namn."
-
-msgid "User mask"
-msgstr "Användarmask"
-
 msgid "User numeric id."
 msgstr "Numeriskt användare-ID (User ID)."
-
-msgid "User password."
-msgstr "Användarens lösenord."
 
 msgid "Username"
 msgstr "Användarnamn"
@@ -10215,11 +10223,11 @@ msgid "Yes"
 msgstr "Ja"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"Du kan också installera ett paket via SSH eller konsolen genom att använda "
-"\"pkg add\" kommandot."
+"Du kan också installera ett paket via SSH eller konsol genom att använda "
+"\"pkg install\" kommandot."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10393,9 +10401,6 @@ msgstr "Ändringen misslyckades."
 msgid "chroot() everyone, but root."
 msgstr "chroot() för alla, förutom root."
 
-msgid "days"
-msgstr "dagar"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10421,9 +10426,6 @@ msgstr "Högsta inställningen till hög spänning till överförings punkten."
 
 msgid "greatest settable low voltage transfer point"
 msgstr "Högsta inställningen för låg spänning till överförings punkten."
-
-msgid "hours"
-msgstr "timmar"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initierare"
@@ -10458,12 +10460,6 @@ msgstr "load/unload misslyckades."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr "minuter"
-
-msgid "months"
-msgstr "månader"
 
 msgid "mount"
 msgstr "montera"
@@ -10531,6 +10527,3 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
-
-msgid "week days"
-msgstr "veckodagar"

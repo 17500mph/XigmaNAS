@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2017-01-30 19:25+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -900,6 +900,9 @@ msgstr ""
 "A legmagasabb szinten a cél az, ami a kezdeményezőhöz vezet, és egy vagy "
 "több extent alkotja."
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr "Adateszköz csatolása"
 
@@ -1043,11 +1046,14 @@ msgstr "Vissza"
 msgid "Background"
 msgstr "Háttér"
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr "Beállítások biztonsági mentése"
 
-msgid "Backup file"
-msgstr "Biztonsági mentés"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "Mentés/Visszaállítás"
@@ -1158,9 +1164,6 @@ msgstr ""
 "csatolási pont %s könyvtárán."
 
 msgid "Blank Time"
-msgstr "Üres idő"
-
-msgid "Blank time"
 msgstr "Üres idő"
 
 msgid "Block Size"
@@ -1412,9 +1415,6 @@ msgstr "Rendszerellenőrzés|Általános beállítások inicializálás előtt"
 msgid "Check and replace cable"
 msgstr "Ellenőrizd, illetve cseréld a kábelt."
 
-msgid "Check interval"
-msgstr "Ellenőrzési időköz"
-
 msgid "Check shared secret:"
 msgstr "Megosztott titok ellenőrzése:"
 
@@ -1501,6 +1501,9 @@ msgstr "Parancs"
 
 msgid "Command Output"
 msgstr "Parancskimenet"
+
+msgid "Command Output:"
+msgstr ""
 
 msgid "Command Scripts"
 msgstr "Parancsszkript"
@@ -1709,6 +1712,9 @@ msgid ""
 msgstr ""
 "DOS attribútumok konvertálása UNIX futtatható bitekké, ha a DOS attribútumok "
 "tárolása nincs engedélyezve."
+
+msgid "Conveyance Self-Test"
+msgstr ""
 
 msgid "Core"
 msgstr "Rendszermag"
@@ -2315,9 +2321,6 @@ msgstr "Cél e-mail cím.  Több címet pontosvesszővel válassz el."
 msgid "Destination host name or IP address."
 msgstr "Cél kiszolgálóneve vagy IP címe."
 
-msgid "Destination host name or IP number."
-msgstr "Cél gépnév vagy IP cím."
-
 msgid "Destination network bit count"
 msgstr "Célhálózat bit száma"
 
@@ -2337,6 +2340,9 @@ msgstr ""
 
 msgid "Destroyed"
 msgstr "Megsemmisítve"
+
+msgid "Detach"
+msgstr ""
 
 msgid "Detach a data device from a mirror"
 msgstr "Adateszköz kicsatolása a tükörből"
@@ -2867,9 +2873,6 @@ msgstr "Konfiguráció letöltése"
 msgid "Download Directory"
 msgstr "Letöltések könyvtára"
 
-msgid "Download directory"
-msgstr "Letöltési mappa"
-
 msgid "Drive Temperature."
 msgstr "Meghajtó hőmérséklete."
 
@@ -3232,7 +3235,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Port továbbítás engedélyezése NAT-PMP vagy UPnP alatt."
 
 msgid "Enable proxy authentication."
-msgstr "Proxy hitelesítés engedélyezése"
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr "Lomtár engedélyezése."
@@ -3271,6 +3274,11 @@ msgstr "Ident protocol (RFC1413) engedélyezése"
 
 msgid "Enable the server power control utility."
 msgstr "Szerver áramellátó segédprogram bekapcsolása."
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "DLNA-szabványok szigorú betartásának engedélyezése."
@@ -3382,6 +3390,12 @@ msgstr "Adj meg egy leírást"
 msgid "Enter a description for your reference."
 msgstr "Add meg a hivatkozás leírását."
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr "Adj meg egy nevet"
 
@@ -3407,6 +3421,18 @@ msgid ""
 msgstr ""
 "Írd be a beállítandó rendszeridőt (hh/nn/éé óó:pp formátumban) vagy az "
 "ikonra kattintva válaszd ki."
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3454,6 +3480,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Adja meg a csapdák portját (alapértelmezett 162)."
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "Add meg a csapda állomás nevét."
 
@@ -3485,8 +3514,8 @@ msgstr "Esemény"
 msgid "Event Selection"
 msgstr "Esemény kiválasztása"
 
-msgid "Example: pkg add packagename."
-msgstr "például: pkg add csomagnév"
+msgid "Example: pkg install packagename."
+msgstr ""
 
 msgid "Execute"
 msgstr "Futtatás"
@@ -3606,7 +3635,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - Fájltranszfer"
 
 msgid "FTP Proxy"
-msgstr "Ftp proxy"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP események"
@@ -3780,11 +3809,11 @@ msgstr "Követés"
 msgid "Force Operation"
 msgstr "Művelet kikényszerrítése"
 
+msgid "Force Use"
+msgstr ""
+
 msgid "Force delete"
 msgstr "Törlés kikényszerítése"
-
-msgid "Force use"
-msgstr "Mindenképpen használ"
 
 msgid "Forced Update Period"
 msgstr "Kierőszakolt frissítés időköze."
@@ -3950,9 +3979,6 @@ msgstr "Csoport zárolva"
 msgid "Group is marked for deletion"
 msgstr "Csoport törlésre megjelölve"
 
-msgid "Group name."
-msgstr "Csoportnév."
-
 msgid "Group numeric id."
 msgstr "Csoport számazonosító"
 
@@ -4020,7 +4046,7 @@ msgid "HOT SPARE"
 msgstr "GYORS TARTALÉK"
 
 msgid "HTTP Proxy"
-msgstr "HTTP proxy"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM vendég"
@@ -4079,9 +4105,6 @@ msgstr "Tipp"
 
 msgid "Home Directory"
 msgstr "Saját mappa"
-
-msgid "Home directory"
-msgstr "Saját könyvtár"
 
 msgid "Host"
 msgstr "Állomás"
@@ -4425,15 +4448,15 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "A kezdeményező jogosult elérni a iSCSI-célt. Nevet vagy az 'ÖSSZES'-t add "
 "bármely kezdeményezőnek."
-
-msgid "Initiator name"
-msgstr "Kezdeményező neve"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "Kezdeményező oldal titka (kölcsönös CHAP hitelesítés)"
@@ -4531,6 +4554,9 @@ msgstr "Szünetmentes belső órája"
 
 msgid "Internal UPS clock time"
 msgstr "Szünetmentes belső ideje"
+
+msgid "Interval"
+msgstr ""
 
 msgid "Interval between self tests"
 msgstr "Önellenőrző tesztek közötti idő"
@@ -4952,11 +4978,11 @@ msgstr "Logikai Egység Típus LUN-en."
 msgid "Login"
 msgstr "Bejelentkezés"
 
-msgid "Login name of user."
-msgstr "Bejelentkezési név"
-
 msgid "Logout"
 msgstr "Kijelentkezés"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr "Kisfeszültségű fellendítő átviteli pont"
@@ -5101,16 +5127,8 @@ msgstr "Legnagyobb passzív port"
 msgid "Max. Sessions"
 msgstr "Munkamenetek maximális száma"
 
-msgid "Max. TTL"
-msgstr "Maximális TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "Max. előküldött R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Max. életbenmaradási idő (ugrások max. száma) kimenő probe csomagok esetén."
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -5126,9 +5144,6 @@ msgstr "Maximum (Legjobb teljesítmény)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Maximális teljesítmény, maximális zajszint kimenet"
-
-msgid "Maximum frequency"
-msgstr "Maximum frekvencia"
 
 msgid "Maximum idle time in seconds."
 msgstr "Maximális várakozási idő mp-ben."
@@ -5247,9 +5262,6 @@ msgstr ""
 "Leállítás után a szünetmentes újraindításához szükséges minimum "
 "akkumulátorszint."
 
-msgid "Minimum frequency"
-msgstr "Minimum frekvencia"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Valaha legkisebb bejövő feszültség"
 
@@ -5316,9 +5328,6 @@ msgstr "H"
 msgid "Monday"
 msgstr "Hétfő"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Hétfő Kedd Szerda Csütörtök Péntek Szombat Vasárnap"
-
 msgid "Monitoring"
 msgstr "Figyelés"
 
@@ -5349,9 +5358,6 @@ msgstr "Csatolási pont eszközei"
 
 msgid "Mount Points"
 msgstr "Csatolási pontok"
-
-msgid "Mount point"
-msgstr "Csatolási pont"
 
 msgid "Mount point name"
 msgstr "Csatolási pont neve"
@@ -5802,8 +5808,11 @@ msgstr "Október"
 msgid "Off"
 msgstr "Ki"
 
-msgid "Old passphrase"
-msgstr "Régi jelszó"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "Be"
@@ -5938,6 +5947,9 @@ msgstr "Csomag feltöltés sikertelen (elfogyott a memória?)"
 msgid "Packages"
 msgstr "Csomagok"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr "Oldalfrissítés"
 
@@ -5991,6 +6003,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Jelszó"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "A jelszó nem megfelelő."
@@ -6080,9 +6095,6 @@ msgstr "Peer titok"
 msgid "Peer User"
 msgstr "Peed felhasználó"
 
-msgid "Peer port"
-msgstr "Peer port"
-
 msgid "Performance Settings"
 msgstr "Teljesítmény beállítások"
 
@@ -6108,8 +6120,14 @@ msgstr "Képek"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
-msgstr "Ping teszt"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "winbindd pingelése, hogy elérhető-e"
@@ -6299,9 +6317,6 @@ msgstr "Energia üzemmód"
 
 msgid "Power management"
 msgstr "Energiagazdálkodás"
-
-msgid "Power mode"
-msgstr "Energia üzemmód"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr "Hiba-előrejelző tulajdonság, legalábbis HP eszközökben."
@@ -6637,6 +6652,9 @@ msgstr "Távoli cím"
 msgid "Remote Module (Source)"
 msgstr "Távoli modul (forrás)"
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6648,12 +6666,6 @@ msgstr "Távoli rendszernapló-üzenetek"
 
 msgid "Remote Syslog Server"
 msgstr "Távoli rendszernapló-szerver"
-
-msgid "Remote module name"
-msgstr "Távoli modul neve"
-
-msgid "Remote monitoring"
-msgstr "Távoli felügyelet"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6744,14 +6756,8 @@ msgstr ""
 "Működés közben a mechanikus alkatrészekben fellépő ellenállás okozta "
 "súrlódás."
 
-msgid "Resolve"
-msgstr "Felold"
-
 msgid "Resolve IP"
 msgstr "IP feloldása"
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "IP címek feloldása állomásnevekre"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr "IP címek feloldása kiszolgálónévvé."
@@ -6762,11 +6768,11 @@ msgstr "Erőforrás"
 msgid "Resource Name"
 msgstr "Erőforrás neve"
 
-msgid "Resource name"
-msgstr "Erőforrás neve"
-
 msgid "Resources"
 msgstr "Erőforrások"
+
+msgid "Restore"
+msgstr ""
 
 msgid "Restore Configuration"
 msgstr "Beállítások visszaállítása"
@@ -7011,8 +7017,8 @@ msgstr "Időzített önellenőrző beállításai"
 msgid "Scheduled Shutdown"
 msgstr "Ütemezett leállítása"
 
-msgid "Scheduled tests"
-msgstr "Ütemezett tesztek"
+msgid "Scheduled Tests"
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr "Tároló ellenőrzése"
@@ -7120,8 +7126,15 @@ msgstr "Válassz Firmware-t:"
 msgid "Select item to remove from the list"
 msgstr "Válaszd ki a listáról eltávolítandó elemet."
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7158,6 +7171,9 @@ msgstr ""
 "Add meg a szerver beállításait tartalmazó titkosított GZIP vagy XML "
 "formátumú fájlt, majd kattints a gombra a szerver beállításainak "
 "visszatöltéséhez."
+
+msgid "Select which interface to use."
+msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7274,6 +7290,11 @@ msgstr "Állítsa be további csoportot a fiókhoz."
 msgid "Set browseable."
 msgstr "Tallózhatónak beállítás."
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Csak olvashatónak beállítás."
 
@@ -7313,17 +7334,16 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Állítsd be a görgető sebességét 0-10 között (alapértelmezetten 10)."
 
+msgid "Set user login shell."
+msgstr ""
+
+msgid "Setkey"
+msgstr ""
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "A gyökér adattárnak egy másik csatolási pont beállítása. Az alapértelmezett "
 "a /mnt"
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Beállítja a lemezek ellenőrzése közötti időközöket N másodpercre. A "
-"legkisebb megengedett érték 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7368,6 +7388,9 @@ msgstr "Parancsértelmező"
 msgid "Shock During Write."
 msgstr "Írás közbeni ütés."
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr "Alapértelmezett csoportok megjelenítése"
 
@@ -7395,11 +7418,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Leállítás"
 
-msgid "Shutdown mode"
-msgstr "Leállítás módja"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "Leállítási időzítő"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protokoll"
@@ -7430,6 +7453,9 @@ msgstr "Skew"
 
 msgid "Skip First Scan"
 msgstr "Első keresés figyelmen kívül hagyása"
+
+msgid "Skip View Mode"
+msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
@@ -7886,14 +7912,14 @@ msgstr "Szalag"
 msgid "Target"
 msgstr "Cél"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr "Cél álnév"
 
 msgid "Target Name"
 msgstr "Célnév"
-
-msgid "Target address"
-msgstr "Célcím"
 
 msgid "Target directory."
 msgstr "Cél könyvtár"
@@ -7906,9 +7932,6 @@ msgstr "Cél nincs kiválasztva."
 
 msgid "Target list"
 msgstr "Cél lista"
-
-msgid "Target name"
-msgstr "Célnév"
 
 msgid "Target side secret."
 msgstr "Cél oldali titok."
@@ -7946,11 +7969,11 @@ msgstr "Átmeneti könyvtár"
 msgid "Temporary directory to store transcoded files."
 msgstr "Átmeneti könyvtár az átkódolt fájlok tárolására."
 
+msgid "Test Email"
+msgstr ""
+
 msgid "Test Mode"
 msgstr "Tesztmód"
-
-msgid "Test email"
-msgstr "Teszt e-mail"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8578,7 +8601,7 @@ msgid "The old password is not correct."
 msgstr "A régi jelszó nem megfelelő."
 
 msgid "The password contains the illegal character ':'."
-msgstr "A jelszó nem használható karaktert tartalmaz ':'."
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr "A használandó jelszótitkosítási protokoll."
@@ -8744,9 +8767,6 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "A feltöltött fájl csak részlegesen került feltöltésre."
-
-msgid "The user's login shell."
-msgstr "A felhasználó bejelentkezési környezete."
 
 msgid "The value of the variable."
 msgstr "A változó értéke."
@@ -9012,8 +9032,8 @@ msgstr ""
 "Ez a Zeroconf/Bonjour/Rendezvous-n keresztül meghirdetésre keresztül "
 "szervernév, és a DAAP-n keresztül exportált adatbázis neve is egyben."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
-msgstr "Ez csak leíró információ (nem kerül használatra iSCSI esetén)"
+msgid "This is for information only. (not used during iSCSI negotiation)."
+msgstr ""
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9275,9 +9295,6 @@ msgstr "Ez az elem már létezik."
 msgid "This tag is used."
 msgstr "Ez címke használatban van."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "Az iSCSI-cél neve vagy IP címe."
-
 msgid "This user already exists in the user list."
 msgstr "Ez a felhasználó már szerepel a listán."
 
@@ -9361,9 +9378,6 @@ msgstr "Idő mielőtt a töltés leáll"
 
 msgid "Time before the load will be started"
 msgstr "Idő mielőtt a töltés elkezdődik"
-
-msgid "Time interval"
-msgstr "Időintervallum"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "A meghajtó fejeinek pozicionálásával töltött idő."
@@ -9510,15 +9524,14 @@ msgstr "Kapacitás: %s | Foglalt: %s | Szabad: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
-msgid "Traceroute Test"
-msgstr "Útvonalkövetési teszt"
-
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Host"
 msgstr ""
-"Traceroute eltarthat egy ideig. Bármikor lenyomhatod a böngésződ stop "
-"gombját, hogy megnézd a hibás Traceroute folyamatát."
+
+msgid "Traceroute Output"
+msgstr ""
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9539,14 +9552,14 @@ msgstr "Átviteli sebesség"
 msgid "Transfer mode"
 msgstr "Átviteli mód"
 
-msgid "Trap host"
-msgstr "Csapdák port"
+msgid "Trap Host"
+msgstr ""
 
-msgid "Trap port"
-msgstr "Csapda port"
+msgid "Trap Port"
+msgstr ""
 
-msgid "Trap string"
-msgstr "Csapdák string"
+msgid "Trap String"
+msgstr ""
 
 msgid "Trap string."
 msgstr "Csapda sting."
@@ -9835,10 +9848,6 @@ msgstr ""
 "tengely tartománnyal együtt nem használható)."
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "A következő IP cím használata mint forráscím a kimenő csomagoknál."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9905,6 +9914,9 @@ msgstr "Felhasználó-azonosító (ID)"
 msgid "User Mask"
 msgstr "Felhasználói maszk"
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr "Felhasználói portál"
 
@@ -9923,17 +9935,8 @@ msgstr "Felhasználói fiók zárolva"
 msgid "User account is marked for deletion"
 msgstr "Felhasználói fiók törlésre megjelölve"
 
-msgid "User full name."
-msgstr "A felhasználó teljes neve."
-
-msgid "User mask"
-msgstr "Felhasználó maszk"
-
 msgid "User numeric id."
 msgstr "A felhasználó azonosítószáma."
-
-msgid "User password."
-msgstr "A felhasználó jelszava."
 
 msgid "Username"
 msgstr "Felhasználónév"
@@ -10281,11 +10284,9 @@ msgid "Yes"
 msgstr "Igen"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"A pkg add paranccsal SSH-n vagy konzolon keresztül is telepíthetsz "
-"csomagokat."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10451,9 +10452,6 @@ msgstr "változtatás sikertelen"
 msgid "chroot() everyone, but root."
 msgstr "chroot() mindenki, kivéve root."
 
-msgid "days"
-msgstr "nap"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10479,9 +10477,6 @@ msgstr "legnagyobb beállítható magas feszültségű átviteli pont"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "legnagyobb beállítható alacsony feszültségű átviteli pont"
-
-msgid "hours"
-msgstr "óra"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Kezdeményező"
@@ -10516,12 +10511,6 @@ msgstr "töltési hiba"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr "perc"
-
-msgid "months"
-msgstr "hónap"
 
 msgid "mount"
 msgstr "csatolás"
@@ -10589,6 +10578,3 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
-
-msgid "week days"
-msgstr "hétköznap"

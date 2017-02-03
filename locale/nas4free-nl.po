@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-31 02:29+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"PO-Revision-Date: 2017-02-02 02:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:28+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -233,8 +233,8 @@ msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
 "that has the same IP. Use a space to separate multiple alias names."
 msgstr ""
-"Een host aliasnaam. Deze optie kan veelvoudig verschijnen, voor elk domein "
-"dat het zelfde IP-adres gebruikt. Gebruik een spatie om meerdere aliasnamen "
+"Een hostnaam alias. Deze optie kan veelvoudig verschijnen, voor elk domein "
+"dat het zelfde IP-adres gebruikt. Gebruik een spatie om meerdere alias namen "
 "te scheiden."
 
 msgid ""
@@ -926,6 +926,9 @@ msgstr ""
 "Op het hoogste niveau, een doel is wat is gepresenteerd aan de initiator, en "
 "bestaat uit één of meer extents."
 
+msgid "Attach"
+msgstr "Aankoppelen"
+
 msgid "Attach a data device"
 msgstr "Koppel een data schijf"
 
@@ -1068,11 +1071,14 @@ msgstr "Terug"
 msgid "Background"
 msgstr "Achtergrond"
 
+msgid "Backup"
+msgstr "Backup"
+
 msgid "Backup Configuration"
 msgstr "Backup Configuratie"
 
-msgid "Backup file"
-msgstr "Backup bestand"
+msgid "Backup File"
+msgstr "Backup Bestand"
 
 msgid "Backup/Restore"
 msgstr "Backup/Herstellen"
@@ -1190,9 +1196,6 @@ msgstr ""
 "koppelpunt voor de map %s!"
 
 msgid "Blank Time"
-msgstr "Wachttijd Schermbeveiliging"
-
-msgid "Blank time"
 msgstr "Wachttijd Schermbeveiliging"
 
 msgid "Block Size"
@@ -1448,9 +1451,6 @@ msgstr "Controleer Systeem|Algemene Instellingen alvorens te initialiseren"
 msgid "Check and replace cable"
 msgstr "Controleer en vervang de kabel"
 
-msgid "Check interval"
-msgstr "Controle interval"
-
 msgid "Check shared secret:"
 msgstr "Controleer gedeelde sleutel:"
 
@@ -1538,6 +1538,9 @@ msgstr "Opdracht Uitvoeren"
 
 msgid "Command Output"
 msgstr "Commando Uitvoerings Resultaat"
+
+msgid "Command Output:"
+msgstr "Resultaat Opdracht:"
 
 msgid "Command Scripts"
 msgstr "Opdrachtscripts"
@@ -1751,6 +1754,9 @@ msgid ""
 msgstr ""
 "Omzetten DOS attributen naar UNIX execution bitten indien Store DOS "
 "attributen is uitgeschakeld."
+
+msgid "Conveyance Self-Test"
+msgstr "Na-transport Zelf-Test"
 
 msgid "Core"
 msgstr "Core"
@@ -2383,9 +2389,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr "Bestemming hostnaam of het IP-adres."
 
-msgid "Destination host name or IP number."
-msgstr "Bestemmings hostnaam of IP-nummer."
-
 msgid "Destination network bit count"
 msgstr "Bestemmingsnetwerk bit aantal"
 
@@ -2405,6 +2408,9 @@ msgstr ""
 
 msgid "Destroyed"
 msgstr "Vernietigd"
+
+msgid "Detach"
+msgstr "Loskoppelen"
 
 msgid "Detach a data device from a mirror"
 msgstr "Ontkoppel een data schijf van een mirror"
@@ -2934,9 +2940,6 @@ msgstr "Configuratie Opslaan"
 msgid "Download Directory"
 msgstr "Downloadmap"
 
-msgid "Download directory"
-msgstr "Downloadmap"
-
 msgid "Drive Temperature."
 msgstr "Schijf temperatuur."
 
@@ -3350,6 +3353,13 @@ msgstr "Inschakelen van de ident protocol (RFC1413)."
 msgid "Enable the server power control utility."
 msgstr "Inschakelen server energiebeheer modus."
 
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
+"Schakel deze optie in als u de configuratiepagina's rechtstreeks wilt "
+"bedienen, zonder de noodzaak om over te schakelen naar de bewerkingsmodus."
+
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Inschakelen om zich strikt aan de DLNA-normen te houden."
 
@@ -3461,6 +3471,12 @@ msgstr "Geef een beschrijving op"
 msgid "Enter a description for your reference."
 msgstr "Geef een beschrijving op voor uw referentie."
 
+msgid "Enter a group description."
+msgstr "Geef een groepsnaam op."
+
+msgid "Enter a group name."
+msgstr "Geef een groepsbeschrijving op."
+
 msgid "Enter a name"
 msgstr "Geef een naam op"
 
@@ -3486,6 +3502,18 @@ msgid ""
 msgstr ""
 "Vul een gewenste systeemtijd in (formaat mm/dd/jjjj uu:mm) of gebruik het "
 "icoon om te selecteren."
+
+msgid "Enter full name of the user."
+msgstr "Geef de volledige naam op van deze gebruiker."
+
+msgid "Enter hostname or IP address."
+msgstr "Geef de hostnaam of het IP-adres op."
+
+msgid "Enter login name of the user."
+msgstr "Geef de login naam op van deze gebruiker."
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr "Geef het IP-adres of de DNS-naam op van de iSCSI-doel."
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3536,8 +3564,11 @@ msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 "Vul de poort in waar de traps naar toe word verstruurd (standaard 162)."
 
+msgid "Enter the user password."
+msgstr "Geef het gebruikerswachtwoord op."
+
 msgid "Enter trap host name."
-msgstr "Vul de trap host naam in."
+msgstr "Geef de trap hostnaam op."
 
 msgid "Entire Device"
 msgstr "Volledige Schijf"
@@ -3567,8 +3598,8 @@ msgstr "Gebeurtenis"
 msgid "Event Selection"
 msgstr "Gebeurtenis Selecteren"
 
-msgid "Example: pkg add packagename."
-msgstr "Voorbeeld: pkg add pakketnaam."
+msgid "Example: pkg install packagename."
+msgstr "Voorbeeld: pkg install packagename."
 
 msgid "Execute"
 msgstr "Uitvoeren"
@@ -3864,11 +3895,11 @@ msgstr "Volgen"
 msgid "Force Operation"
 msgstr "Forceer Opdracht"
 
+msgid "Force Use"
+msgstr "Gebruik Geforceerd"
+
 msgid "Force delete"
 msgstr "Geforceerd verwijderen"
-
-msgid "Force use"
-msgstr "Geforceerd gebruiken"
 
 msgid "Forced Update Period"
 msgstr "Geforceerde Update Periode"
@@ -3992,7 +4023,7 @@ msgid "Give your media library a friendly name."
 msgstr "Geef uw mediabibliotheek een naam."
 
 msgid "Grant access to the user portal."
-msgstr "Toegang toestaan tot de gebruikers portaal."
+msgstr "Verleen toegang tot de gebruikers portaal."
 
 msgid "Graph shows last 120 seconds"
 msgstr "Grafiek van de laatste 120 seconden"
@@ -4035,9 +4066,6 @@ msgstr "Groep is vergrendeld"
 
 msgid "Group is marked for deletion"
 msgstr "Groep is gemarkeerd voor verwijdering"
-
-msgid "Group name."
-msgstr "Geef hier de groepsnaam op."
 
 msgid "Group numeric id."
 msgstr "Numerieke groep id."
@@ -4164,9 +4192,6 @@ msgid "Hint"
 msgstr "Tip"
 
 msgid "Home Directory"
-msgstr "Gegevensmap"
-
-msgid "Home directory"
 msgstr "Gegevensmap"
 
 msgid "Host"
@@ -4516,15 +4541,15 @@ msgstr ""
 "Initiator Groepen bevatten geautoriseerde initiator-namen en netwerken voor "
 "toegang tot de doel."
 
+msgid "Initiator Name"
+msgstr "Initiator Naam"
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "Geautoriseerde initiator met toegang tot de iSCSI doel. Het gebruikt een "
 "naam of 'ALLE' voor elke initiator."
-
-msgid "Initiator name"
-msgstr "Initiator naam"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "Initiator zijde wachtwoord. (voor wederzijdse CHAP authenticatie)"
@@ -4622,6 +4647,9 @@ msgstr "Interne UPS klok datum"
 
 msgid "Internal UPS clock time"
 msgstr "Interne UPS klok tijd"
+
+msgid "Interval"
+msgstr "Interval"
 
 msgid "Interval between self tests"
 msgstr "Interval tussen zelftests"
@@ -5051,11 +5079,11 @@ msgstr "Logical Unit Type in kaart gebracht aan LUN."
 msgid "Login"
 msgstr "Aanmelden"
 
-msgid "Login name of user."
-msgstr "Aanmeldnaam van de gebruiker."
-
 msgid "Logout"
 msgstr "Uitloggen"
+
+msgid "Long Self-Test"
+msgstr "Lange Zelf-Test"
 
 msgid "Low voltage boosting transfer point"
 msgstr "Laag voltage boosting overschakelpunt"
@@ -5200,17 +5228,8 @@ msgstr "Max. Passieve Poort"
 msgid "Max. Sessions"
 msgstr "Max. Sessies"
 
-msgid "Max. TTL"
-msgstr "Max. TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "Max. pre-send R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Maximale Tijd-Tot-Leven (maximum nummer van hops) gebruikt in de uitgaande "
-"sonde pakketten."
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -5226,9 +5245,6 @@ msgstr "Maximaal (Hoogste Prestaties)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Maximale Prestaties, Maximale Geluidsproductie"
-
-msgid "Maximum frequency"
-msgstr "Maximale frequentie"
 
 msgid "Maximum idle time in seconds."
 msgstr "De maximale rusttijd in seconden."
@@ -5347,9 +5363,6 @@ msgstr "Minimale Prestaties, Minimale Geluidsproductie"
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Minimum batterijniveau voor de UPS herstart na power-off"
 
-msgid "Minimum frequency"
-msgstr "Minimale frequentie"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Minimum ingangsvoltage gezien"
 
@@ -5416,9 +5429,6 @@ msgstr "Ma"
 msgid "Monday"
 msgstr "Maandag"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Maandag Dinsdag Woensdag Donderdag Vrijdag Zaterdag Zondag"
-
 msgid "Monitoring"
 msgstr "Monitoren"
 
@@ -5449,9 +5459,6 @@ msgstr "Koppelpunt Hulpmiddelen"
 
 msgid "Mount Points"
 msgstr "Koppelpunten"
-
-msgid "Mount point"
-msgstr "Koppelpunt"
 
 msgid "Mount point name"
 msgstr "Koppelpunt naam"
@@ -5904,7 +5911,10 @@ msgstr "Oktober"
 msgid "Off"
 msgstr "Uit"
 
-msgid "Old passphrase"
+msgid "Offline Immediate Test"
+msgstr "Offline Onmiddellijke Test"
+
+msgid "Old Passphrase"
 msgstr "Oud wachtwoordzin"
 
 msgid "On"
@@ -6041,6 +6051,9 @@ msgstr "Pakket uploaden is mislukt (niet genoeg geheugen?)"
 msgid "Packages"
 msgstr "Pakketten"
 
+msgid "Packages Installer"
+msgstr "Pakket Installatie"
+
 msgid "Page Refresh"
 msgstr "Pagina Verversen"
 
@@ -6094,6 +6107,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Wachtwoordzin"
+
+msgid "Passphrase Confirmation"
+msgstr "Wachtwoordzin Bevestiging"
 
 msgid "Passphrase don't match."
 msgstr "Het wachtwoordzin komt niet overeen."
@@ -6186,9 +6202,6 @@ msgstr "Peer Wachtwoord"
 msgid "Peer User"
 msgstr "Peer gebruiker"
 
-msgid "Peer port"
-msgstr "Peer poort"
-
 msgid "Performance Settings"
 msgstr "Prestatie Instellingen"
 
@@ -6214,8 +6227,14 @@ msgstr "Afbeeldingen"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
-msgstr "Ping Test"
+msgid "Ping Host"
+msgstr "Ping Host"
+
+msgid "Ping Output"
+msgstr "Ping Resultaat"
+
+msgid "Ping may take a while, please be patient."
+msgstr "Ping kan even duren, wees geduldig a.u.b."
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd om te kijken of deze leeft:"
@@ -6406,9 +6425,6 @@ msgstr "Energie Mode"
 
 msgid "Power management"
 msgstr "Energiebeheer"
-
-msgid "Power mode"
-msgstr "Energie mode"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr "Pre-Fail' attribuut ten minste gebruikt in HP schijven."
@@ -6742,6 +6758,9 @@ msgstr "Remote Adres"
 msgid "Remote Module (Source)"
 msgstr "Remote Module (Bron)"
 
+msgid "Remote Monitoring"
+msgstr "Remote Monitoring"
+
 msgid "Remote Rsync Daemon"
 msgstr "Remote Rsync Daemon"
 
@@ -6753,12 +6772,6 @@ msgstr "Externe Syslog Berichten"
 
 msgid "Remote Syslog Server"
 msgstr "Externe Syslog Server"
-
-msgid "Remote module name"
-msgstr "Remote module naam"
-
-msgid "Remote monitoring"
-msgstr "Remote monitoring"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6848,14 +6861,8 @@ msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 "Weerstand veroorzaakt door wrijving in mechanische delen terwijl in werking."
 
-msgid "Resolve"
-msgstr "Omzetten"
-
 msgid "Resolve IP"
 msgstr "Omzetten IP"
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Omzetten van IP-adressen naar hostnamen"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr "IP-adressen omzetten naar hostnamen."
@@ -6866,11 +6873,11 @@ msgstr "Bron"
 msgid "Resource Name"
 msgstr "Bronnaam"
 
-msgid "Resource name"
-msgstr "Bron naam"
-
 msgid "Resources"
 msgstr "Bronnen"
+
+msgid "Restore"
+msgstr "Herstellen"
 
 msgid "Restore Configuration"
 msgstr "Configuratie Herstellen"
@@ -7117,7 +7124,7 @@ msgstr "Geplande Zelf-Test Instellingen"
 msgid "Scheduled Shutdown"
 msgstr "Gepland Uitschakelen"
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr "Gepland testen"
 
 msgid "Scrub a pool"
@@ -7226,9 +7233,18 @@ msgstr "Selecteer firmware:"
 msgid "Select item to remove from the list"
 msgstr "Selecteer het item om van de lijst te verwijderen"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+"Selecteer Max Tijd-Tot-Leven (max aantal hops) gebruikt in de uitgaande "
+"sonde pakketten."
+
 msgid "Select mount point where to create the swap file."
 msgstr ""
 "Selecteer het koppelpunt waar het wisselbestand op aangemaakt gaat worden."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr "Selecteer het aantal ICMP ECHO REQUEST pakketten."
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7265,6 +7281,9 @@ msgid ""
 msgstr ""
 "Selecteer het server configuratiebestand (GZIP of XML-formaat) en druk op de "
 "knop 'Configuratie Herstellen' om de server in oude staat te herstellen."
+
+msgid "Select which interface to use."
+msgstr "Selecteer het netwerk voor gebruik."
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7383,6 +7402,13 @@ msgstr "Plaats hier extra groep lidmaatschappen voor dit account"
 msgid "Set browseable."
 msgstr "Verkenbaar activeren."
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+"Geef de tijdsinterval op tussen de hardeschijf controle's in X seconden. De "
+"minimum toegestane waarde is 10."
+
 msgid "Set read only."
 msgstr "Alleen-lezen activeren."
 
@@ -7422,16 +7448,15 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Stel de regel scroll snelheid in tussen 0 en 10 (standaard 10)."
 
+msgid "Set user login shell."
+msgstr "Instellen login-shell gebruiker."
+
+msgid "Setkey"
+msgstr "Setkey"
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Plaatst een alternatief koppelpunt voor de root dataset. Standaard is /mnt."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Geef hier het tijdsinterval op tussen de hardeschijf controle's in X "
-"seconden. De minimum toegestane waarde is 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7476,6 +7501,9 @@ msgstr "Shell"
 msgid "Shock During Write."
 msgstr "Schokken tijdens schrijven."
 
+msgid "Short Self-Test"
+msgstr "Korte Zelf-Test"
+
 msgid "Show Default Groups"
 msgstr "Show Standaard Groepen"
 
@@ -7503,11 +7531,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Uitschakelen"
 
-msgid "Shutdown mode"
-msgstr "Systeem afsluitmodus"
+msgid "Shutdown Mode"
+msgstr "Afsluitmode"
 
-msgid "Shutdown timer"
-msgstr "Afsluit timer"
+msgid "Shutdown Timer"
+msgstr "Afsluit Timer"
 
 msgid "Simple Network Management Protocol"
 msgstr "Simpel Netwerk Beheer Protocol"
@@ -7538,6 +7566,9 @@ msgstr "Skew"
 
 msgid "Skip First Scan"
 msgstr "Eerste Scan Overslaan"
+
+msgid "Skip View Mode"
+msgstr "Skip Weergavemodus"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
@@ -7995,14 +8026,14 @@ msgstr "Tape"
 msgid "Target"
 msgstr "Doel"
 
+msgid "Target Address"
+msgstr "Doel Adres"
+
 msgid "Target Alias"
 msgstr "Doel Alias"
 
 msgid "Target Name"
 msgstr "Doelnaam"
-
-msgid "Target address"
-msgstr "Doeladres"
 
 msgid "Target directory."
 msgstr "Doelmap."
@@ -8015,9 +8046,6 @@ msgstr "Het doel is niet geselecteerd."
 
 msgid "Target list"
 msgstr "Doel lijst"
-
-msgid "Target name"
-msgstr "Doelnaam"
 
 msgid "Target side secret."
 msgstr "Doel zijde wachtwoord."
@@ -8057,11 +8085,11 @@ msgid "Temporary directory to store transcoded files."
 msgstr ""
 "Locatie waar de tijdelijk gecodeerde bestanden kunnen worden opgeslagen."
 
+msgid "Test Email"
+msgstr "Test Email"
+
 msgid "Test Mode"
 msgstr "Testmodus"
-
-msgid "Test email"
-msgstr "Test e-mail"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8874,9 +8902,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Het geuploade bestand werd slechts gedeeltelijk geupload."
 
-msgid "The user's login shell."
-msgstr "De gebruikers inlog shell."
-
 msgid "The value of the variable."
 msgstr "De waarde van de variabele."
 
@@ -9163,10 +9188,9 @@ msgstr ""
 "Deze servernaam wordt bekendgemaakt voor Zeroconf/Bonjour/Rendezvous, als "
 "ook de naam van de database die voor DAAP wordt geëxporteerd."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
-"Dit is alleen ter informatie (wordt niet gebruikt tijdens iSCSI "
-"onderhandelingen)."
+"Dit is alleen ter informatie. (niet gebruikt tijdens iSCSI onderhandelingen)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9440,9 +9464,6 @@ msgstr "Deze markering bestaat reeds."
 msgid "This tag is used."
 msgstr "Deze markering is gebruikt."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "Dit is het IP-adres of DNS-naam van de iSCSI doel."
-
 msgid "This user already exists in the user list."
 msgstr "Deze gebruiker bestaat reeds in de gebruikerslijst."
 
@@ -9526,9 +9547,6 @@ msgstr "Tijd voor de belasting afgesloten zal worden."
 
 msgid "Time before the load will be started"
 msgstr "Tijd voordat de belasting zal worden gestart"
-
-msgid "Time interval"
-msgstr "Tijdsinterval"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Tijd besteed tijdens de positionering van de schijf koppen."
@@ -9679,16 +9697,14 @@ msgstr "Totaal: %s | Gebruikt: %s | Vrij: %s"
 msgid "Traceroute"
 msgstr "Traceer route"
 
-msgid "Traceroute Test"
-msgstr "Traceroute Test"
+msgid "Traceroute Host"
+msgstr "Traceroute Host"
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
-msgstr ""
-"Het kan even duren voor de traceer route klaar is. U mag ten alle tijden op "
-"de stop knop van uw browser klikken om de voortgang te zien van de gefaalde "
-"traceer route."
+msgid "Traceroute Output"
+msgstr "Traceroute Resultaat"
+
+msgid "Traceroute may take a while, please be patient."
+msgstr "Traceroute kan even duren, wees geduldig a.u.b."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9709,14 +9725,14 @@ msgstr "Overdrachtssnelheid"
 msgid "Transfer mode"
 msgstr "Overdracht mode"
 
-msgid "Trap host"
-msgstr "Trap host"
+msgid "Trap Host"
+msgstr "Trap Host"
 
-msgid "Trap port"
-msgstr "Trap poort"
+msgid "Trap Port"
+msgstr "Trap Poort"
 
-msgid "Trap string"
-msgstr "Trap string"
+msgid "Trap String"
+msgstr "Trap String"
 
 msgid "Trap string."
 msgstr "Trap string."
@@ -10008,11 +10024,6 @@ msgstr ""
 "gebruikt worden met positieve/negatieve y-as schaal)."
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr ""
-"Gebruik het volgende IP-adres als bronadres in de uitgaande pakketten."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -10082,6 +10093,9 @@ msgstr "Gebruiker ID"
 msgid "User Mask"
 msgstr "Gebruikersmachtiging"
 
+msgid "User Password Settings"
+msgstr "Gebruiker Wachtwoord Instellingen"
+
 msgid "User Portal"
 msgstr "Gebruikers Portaal"
 
@@ -10100,17 +10114,8 @@ msgstr "Gebruikersaccount is vergrendeld"
 msgid "User account is marked for deletion"
 msgstr "Gebruikersaccount is gemarkeerd voor verwijdering"
 
-msgid "User full name."
-msgstr "De volledige naam van deze gebruiker."
-
-msgid "User mask"
-msgstr "Gebruikersmachtiging"
-
 msgid "User numeric id."
 msgstr "Numerieke gebruikers id."
-
-msgid "User password."
-msgstr "Wachtwoord gebruiker."
 
 msgid "Username"
 msgstr "Gebruikersnaam"
@@ -10459,11 +10464,11 @@ msgid "Yes"
 msgstr "Ja"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"U kunt een pakket installeren via SSH of de console door gebruik te maken "
-"van de pkg add opdracht."
+"U kunt ook een pakket installeren via SSH of de console door gebruik te "
+"maken van de pkg install opdracht."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10642,9 +10647,6 @@ msgstr "wijziging mislukt."
 msgid "chroot() everyone, but root."
 msgstr "chroot() iedereen, maar niet de root."
 
-msgid "days"
-msgstr "dagen"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10670,9 +10672,6 @@ msgstr "grootste instelbare hoogspanning overschakelpunt"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "grootste instelbare laagspanning overschakelpunt"
-
-msgid "hours"
-msgstr "uren"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -10707,12 +10706,6 @@ msgstr "load/unload mislukt."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr "minuten"
-
-msgid "months"
-msgstr "maanden"
 
 msgid "mount"
 msgstr "aankoppelen"
@@ -10780,6 +10773,3 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
-
-msgid "week days"
-msgstr "weekdagen"

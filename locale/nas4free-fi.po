@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -860,6 +860,9 @@ msgid ""
 "made up of one or more extents."
 msgstr ""
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -990,11 +993,14 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr "Varmuuskopioasetukset"
 
-msgid "Backup file"
-msgstr "Varmuuskopiotiedosto"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "Varmuuskopioi/Palauta"
@@ -1102,9 +1108,6 @@ msgid ""
 msgstr ""
 
 msgid "Blank Time"
-msgstr ""
-
-msgid "Blank time"
 msgstr ""
 
 msgid "Block Size"
@@ -1348,9 +1351,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "Tarkista ja vaihda kaapeli"
 
-msgid "Check interval"
-msgstr ""
-
 msgid "Check shared secret:"
 msgstr ""
 
@@ -1429,6 +1429,9 @@ msgid "Command"
 msgstr "Komento"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1617,6 +1620,9 @@ msgstr ""
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -2172,9 +2178,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "Kohde palvelimen nimi tai IP-osoite"
-
 msgid "Destination network bit count"
 msgstr ""
 
@@ -2192,6 +2195,9 @@ msgid ""
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2686,9 +2692,6 @@ msgstr ""
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "Lataus hakemisto"
-
 msgid "Drive Temperature."
 msgstr ""
 
@@ -3046,7 +3049,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr ""
 
 msgid "Enable proxy authentication."
-msgstr "Ota välipalvelimen todennus käyttöön."
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3082,6 +3085,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ota yksityisyys protokolla käyttöön (RFC1413)."
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3187,6 +3195,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3210,6 +3224,18 @@ msgid ""
 msgstr ""
 "Anna suoraan haluttu järjestelmän kellonaika (muodossa pp/kk/vvvvv hh:mm) "
 "tai käytä kuvaketta valintaan."
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3247,6 +3273,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "Muokkaa trap palvelimen nimeä."
 
@@ -3276,7 +3305,7 @@ msgstr "Tapahtuma"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3389,7 +3418,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP välipalvelin"
+msgstr ""
 
 msgid "FTP events"
 msgstr ""
@@ -3561,10 +3590,10 @@ msgstr "Seuraa"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
+msgid "Force delete"
 msgstr ""
 
 msgid "Forced Update Period"
@@ -3729,9 +3758,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "Ryhmän nimi."
-
 msgid "Group numeric id."
 msgstr "Ryhmän numeerinen id."
 
@@ -3791,7 +3817,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP välipalvelin"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr ""
@@ -3847,9 +3873,6 @@ msgstr "Vihje"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "Kotihakemisto"
 
 msgid "Host"
 msgstr "Palvelin"
@@ -4160,12 +4183,12 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
-msgstr ""
-
-msgid "Initiator name"
 msgstr ""
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
@@ -4258,6 +4281,9 @@ msgid "Internal UPS clock date"
 msgstr ""
 
 msgid "Internal UPS clock time"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Interval between self tests"
@@ -4646,11 +4672,11 @@ msgstr ""
 msgid "Login"
 msgstr "Kirjaudu sisään"
 
-msgid "Login name of user."
-msgstr "Käyttäjän sisäänkirjautumis nimi"
-
 msgid "Logout"
 msgstr "Kirjaudu ulos"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -4789,14 +4815,7 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr ""
-
 msgid "Max. pre-send R2T"
-msgstr ""
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
 msgstr ""
 
 msgid "MaxBurstLength"
@@ -4812,9 +4831,6 @@ msgid "Maximum (Highest Performance)"
 msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
-
-msgid "Maximum frequency"
 msgstr ""
 
 msgid "Maximum idle time in seconds."
@@ -4929,9 +4945,6 @@ msgstr ""
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Alin akun varaus UPS:N käynnistykseen sähkökatkon jälkeen"
 
-msgid "Minimum frequency"
-msgstr ""
-
 msgid "Minimum incoming voltage seen"
 msgstr ""
 
@@ -4998,9 +5011,6 @@ msgstr "Ma"
 msgid "Monday"
 msgstr "Maanantai"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Maanantai Tiistai Keskiviikko Torstai Perjantai Lauantai Sunnuntai"
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5029,9 +5039,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "Liitoskohta"
 
 msgid "Mount point name"
 msgstr ""
@@ -5453,8 +5460,11 @@ msgstr "Lokakuu"
 msgid "Off"
 msgstr "Ei käytössä"
 
-msgid "Old passphrase"
-msgstr "Salasana lause"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "Käytössä"
@@ -5582,6 +5592,9 @@ msgstr "Paketin lähetys epäonnistui (muisti loppui?)"
 msgid "Packages"
 msgstr "Paketit"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5627,6 +5640,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Salasana lause"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "Salasanan lause ei ole sopiva"
@@ -5713,9 +5729,6 @@ msgstr ""
 msgid "Peer User"
 msgstr ""
 
-msgid "Peer port"
-msgstr ""
-
 msgid "Performance Settings"
 msgstr "Suorituskyvyn asetukset"
 
@@ -5741,7 +5754,13 @@ msgstr "Kuvat"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5928,9 +5947,6 @@ msgstr "Virransäästötila"
 
 msgid "Power management"
 msgstr "Virransäästön hallinta"
-
-msgid "Power mode"
-msgstr "Tehonkäyttötila"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6252,6 +6268,9 @@ msgstr "Etäosoite"
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6262,12 +6281,6 @@ msgid "Remote Syslog Messages"
 msgstr ""
 
 msgid "Remote Syslog Server"
-msgstr ""
-
-msgid "Remote module name"
-msgstr ""
-
-msgid "Remote monitoring"
 msgstr ""
 
 msgid ""
@@ -6349,14 +6362,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr "Selvitä"
-
 msgid "Resolve IP"
 msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Tulkitse IP osoitteet palvelin nimistä"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr ""
@@ -6367,11 +6374,11 @@ msgstr "Resurssi"
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
-msgstr "Resurssin nimi"
-
 msgid "Resources"
 msgstr "Resurssit"
+
+msgid "Restore"
+msgstr ""
 
 msgid "Restore Configuration"
 msgstr ""
@@ -6604,7 +6611,7 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr "Ajoitettu sammutus"
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr ""
 
 msgid "Scrub a pool"
@@ -6703,8 +6710,15 @@ msgstr ""
 msgid "Select item to remove from the list"
 msgstr ""
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "Valitse liitoskohta jonne luodaan swap-tiedosto."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6733,6 +6747,9 @@ msgstr ""
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
+msgstr ""
+
+msgid "Select which interface to use."
 msgstr ""
 
 msgid ""
@@ -6848,6 +6865,11 @@ msgstr "Aseta tälle tilille lisäryhmän jäsenyys."
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6879,12 +6901,13 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
+msgid "Set user login shell."
 msgstr ""
 
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
+msgid "Setkey"
+msgstr ""
+
+msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
 msgid ""
@@ -6928,6 +6951,9 @@ msgstr "Komentotulkki"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -6952,11 +6978,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Sammuta"
 
-msgid "Shutdown mode"
-msgstr "Sammutus muoto"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "Sammutus ajastin"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr ""
@@ -6984,6 +7010,9 @@ msgid "Skew"
 msgstr ""
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7411,14 +7440,14 @@ msgstr "Nauha-asema"
 msgid "Target"
 msgstr "Kohde"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr ""
 
 msgid "Target Name"
 msgstr "Kohteen nimi"
-
-msgid "Target address"
-msgstr "Kohde osoite"
 
 msgid "Target directory."
 msgstr "Kohde hakemisto"
@@ -7431,9 +7460,6 @@ msgstr ""
 
 msgid "Target list"
 msgstr ""
-
-msgid "Target name"
-msgstr "Kohteen nimi"
 
 msgid "Target side secret."
 msgstr ""
@@ -7471,11 +7497,11 @@ msgstr "Väliaikainen hakemisto"
 msgid "Temporary directory to store transcoded files."
 msgstr ""
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "Testi sähköposti"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8011,7 +8037,7 @@ msgid "The old password is not correct."
 msgstr "Vanha salasana ei ole oikein."
 
 msgid "The password contains the illegal character ':'."
-msgstr "Salasana sisältää sopimattoman merkin':'."
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr ""
@@ -8153,9 +8179,6 @@ msgid ""
 msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
-msgstr ""
-
-msgid "The user's login shell."
 msgstr ""
 
 msgid "The value of the variable."
@@ -8378,7 +8401,7 @@ msgid ""
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
@@ -8574,9 +8597,6 @@ msgstr ""
 msgid "This tag is used."
 msgstr ""
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr ""
-
 msgid "This user already exists in the user list."
 msgstr "Käyttäjä on jo olemassa käyttäjäluettelossa."
 
@@ -8649,9 +8669,6 @@ msgid "Time before the load will be shutdown"
 msgstr ""
 
 msgid "Time before the load will be started"
-msgstr ""
-
-msgid "Time interval"
 msgstr ""
 
 msgid "Time spent during the positioning of the drive heads."
@@ -8780,12 +8797,13 @@ msgstr ""
 msgid "Traceroute"
 msgstr "Reitinjäljitys"
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
+msgstr ""
+
+msgid "Traceroute may take a while, please be patient."
 msgstr ""
 
 msgid ""
@@ -8805,14 +8823,14 @@ msgstr ""
 msgid "Transfer mode"
 msgstr "Siirtomuoto"
 
-msgid "Trap host"
-msgstr "Palvelin loukku"
+msgid "Trap Host"
+msgstr ""
 
-msgid "Trap port"
-msgstr "Porttin loukku"
+msgid "Trap Port"
+msgstr ""
 
-msgid "Trap string"
-msgstr "Merkkijonon loukku"
+msgid "Trap String"
+msgstr ""
 
 msgid "Trap string."
 msgstr "Merkkijonon loukku."
@@ -9089,10 +9107,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr ""
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9146,6 +9160,9 @@ msgstr "Käyttäjän ID"
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9164,17 +9181,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "Käyttäjän kokonimi."
-
-msgid "User mask"
-msgstr ""
-
 msgid "User numeric id."
 msgstr "Käyttäjän numeerinen id."
-
-msgid "User password."
-msgstr "Käyttäjän salasana."
 
 msgid "Username"
 msgstr "Käyttäjänimi"
@@ -9500,7 +9508,7 @@ msgid "Yes"
 msgstr "Kyllä"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9660,9 +9668,6 @@ msgstr ""
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9685,9 +9690,6 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
-msgstr ""
-
-msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9722,12 +9724,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9795,7 +9791,4 @@ msgid "to"
 msgstr "kohteelle"
 
 msgid "umount"
-msgstr ""
-
-msgid "week days"
 msgstr ""

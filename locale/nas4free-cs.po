@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:28+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -912,6 +912,9 @@ msgstr ""
 "Na nejvyšší úrovni abstrakce, je cíl to, co je představováno iniciátoru a je "
 "tvořeno jednou nebo více úložnými jednotkami."
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr "Připojit datové zařízení"
 
@@ -1049,11 +1052,14 @@ msgstr "Zpět"
 msgid "Background"
 msgstr "Pozadí"
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr "Záloha nastavení"
 
-msgid "Backup file"
-msgstr "Soubor se zálohou"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "Zálohovat/obnovit"
@@ -1167,9 +1173,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "Prodleva potemnění obrazovky"
 
 msgid "Block Size"
 msgstr "Velikost bloku"
@@ -1425,9 +1428,6 @@ msgstr "Před inicializací zkontrolujte Systém | Obecná nastavení"
 msgid "Check and replace cable"
 msgstr "Zkontrolujte a nahraďte kabel"
 
-msgid "Check interval"
-msgstr "Interval kontroly"
-
 msgid "Check shared secret:"
 msgstr "Kontrola sdíleného hesla:"
 
@@ -1510,6 +1510,9 @@ msgid "Command"
 msgstr "Příkaz"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1708,6 +1711,9 @@ msgid ""
 msgstr ""
 "V případě, že není zapnuto uchovávání atributů ze systému DOS, převádět je "
 "na unixové právo spouštění."
+
+msgid "Conveyance Self-Test"
+msgstr ""
 
 msgid "Core"
 msgstr ""
@@ -2330,9 +2336,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr "Název nebo IP adresa cílového stroje."
 
-msgid "Destination host name or IP number."
-msgstr "Cílový stroj (název nebo IP adresa)."
-
 msgid "Destination network bit count"
 msgstr "Počet bitů masky cílové sítě"
 
@@ -2351,6 +2354,9 @@ msgstr "Zrušit veškeré zachycené stavy a záložky novější než tento."
 
 msgid "Destroyed"
 msgstr "Zlikvidováno"
+
+msgid "Detach"
+msgstr ""
 
 msgid "Detach a data device from a mirror"
 msgstr "Odebrat zařízení ze zrcadlení"
@@ -2874,9 +2880,6 @@ msgstr "Stáhnout si nastavení"
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "Složka pro stahování"
-
 msgid "Drive Temperature."
 msgstr "Teplota jednotky (disk/SSD)"
 
@@ -3242,7 +3245,7 @@ msgstr ""
 "Zapnout přesměrování portů prostřednictvím protokolů NAT-PMP nebo UPnP."
 
 msgid "Enable proxy authentication."
-msgstr "Pro proxy vyžadovat ověření."
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3283,6 +3286,11 @@ msgstr "Používat protokol ident (norma RFC1413)"
 
 msgid "Enable the server power control utility."
 msgstr "Zapnout nástroj pro řízení napájení serveru."
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Zapnutím budou striktně dodržovány standardy pro DLNA."
@@ -3389,6 +3397,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3414,6 +3428,18 @@ msgid ""
 msgstr ""
 "Požadovaný čas na serveru buď vypište (ve formátu mm/dd/rrrr hh:mm), nebo "
 "klikněte na ikonu a vyberte ho z nabídky."
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3458,6 +3484,9 @@ msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 "Zadejte číslo portu, na který budou upozornění zasílána (výchozí je 162)."
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "Zadejte název stroje, na který budou SNMP upozornění zasílána."
 
@@ -3489,8 +3518,8 @@ msgstr "Událost"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
-msgstr "Příklad: pkg add nazevbalicku."
+msgid "Example: pkg install packagename."
+msgstr ""
 
 msgid "Execute"
 msgstr "Spustit"
@@ -3610,7 +3639,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP Proxy"
+msgstr ""
 
 msgid "FTP events"
 msgstr "Události FTP"
@@ -3788,11 +3817,11 @@ msgstr "Následovat"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force Use"
+msgstr ""
+
 msgid "Force delete"
 msgstr "Vynucené smazání"
-
-msgid "Force use"
-msgstr "Vynutit použití"
 
 msgid "Forced Update Period"
 msgstr ""
@@ -3960,9 +3989,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "Název skupiny"
-
 msgid "Group numeric id."
 msgstr "Číselný identifikátor skupiny"
 
@@ -4029,7 +4055,7 @@ msgid "HOT SPARE"
 msgstr "PHTVST. NÁHR."
 
 msgid "HTTP Proxy"
-msgstr "HTTP Proxy"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM virt. stroj"
@@ -4092,9 +4118,6 @@ msgstr "Tip"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "Domovská složka"
 
 msgid "Host"
 msgstr "Stroj"
@@ -4437,15 +4460,15 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "Iniciátor, kterému je umožněn přístup k iSCSI cíli.  Je možné uvést název "
 "nebo klíčové slovo ALL (vše) a umožnit tak přístup jakémukoli iniciátoru."
-
-msgid "Initiator name"
-msgstr "Název inicializátoru"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "Heslo na straně iniciátoru. (pro vzájemné CHAP ověřování)"
@@ -4545,6 +4568,9 @@ msgstr "Datum v UPS"
 
 msgid "Internal UPS clock time"
 msgstr "Čas v UPS"
+
+msgid "Interval"
+msgstr ""
 
 msgid "Interval between self tests"
 msgstr "Interval samotestů"
@@ -4971,11 +4997,11 @@ msgstr "Typ logické jednotky mapované na LUN."
 msgid "Login"
 msgstr "Přihlásit"
 
-msgid "Login name of user."
-msgstr "Přihlašovací jméno uživatele."
-
 msgid "Logout"
 msgstr "Odhlásit se"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -5120,17 +5146,8 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "Nejvyšší umožněný počet skoků (TTL)"
-
 msgid "Max. pre-send R2T"
 msgstr "Nejvýše předem poslaných signálů „připraveno k přenosu“"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Nejvyšší přijatelný počet skoků, který bude použit v odeslaných zkušebních "
-"paketech."
 
 msgid "MaxBurstLength"
 msgstr "MaxDelkaDavky"
@@ -5146,9 +5163,6 @@ msgstr "Nejvíce (nejvyšší výkon)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Nejvyšší výkon, nevyšší hlučnost"
-
-msgid "Maximum frequency"
-msgstr "Nejvyšší přijatelná četnost"
 
 msgid "Maximum idle time in seconds."
 msgstr "Nejdelší přijatelná doba nečinnosti v sekundách."
@@ -5271,9 +5285,6 @@ msgstr ""
 "Nakolik musejí být akumulátory UPS zdroje nabité, aby bylo zapnuto napájení "
 "připojených spotřebičů"
 
-msgid "Minimum frequency"
-msgstr "Minimální frekvence"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Nejnižší zaznamenané vstupní napětí"
 
@@ -5340,9 +5351,6 @@ msgstr "po"
 msgid "Monday"
 msgstr "pondělí"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "pondělí úterý středa čtvrtek pátek sobota neděle"
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5371,9 +5379,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "Přípojný bod"
 
 msgid "Mount point name"
 msgstr "Název přípojného bodu"
@@ -5822,8 +5827,11 @@ msgstr "říjen"
 msgid "Off"
 msgstr "Vypnuto"
 
-msgid "Old passphrase"
-msgstr "Původní heslová fráze"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "Zapnuto"
@@ -5958,6 +5966,9 @@ msgstr "Nahrání balíčku se nezdařilo (nedostatek paměti?)"
 msgid "Packages"
 msgstr "Balíčky"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -6008,6 +6019,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Heslová fráze"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "Heslová fráze nesouhlasí."
@@ -6096,9 +6110,6 @@ msgstr "Heslo na protějšku"
 msgid "Peer User"
 msgstr "Uživatelský účet na protějšku"
 
-msgid "Peer port"
-msgstr "Port na protějšku"
-
 msgid "Performance Settings"
 msgstr "Nastavení výkonu"
 
@@ -6124,8 +6135,14 @@ msgstr "Obrázky"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
-msgstr "Test nástrojem ping"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ověřit dostupnost procesu služby winbind:"
@@ -6317,9 +6334,6 @@ msgstr "Režim napájení"
 
 msgid "Power management"
 msgstr "Správa napájení"
-
-msgid "Power mode"
-msgstr "Režim napájení"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6652,6 +6666,9 @@ msgstr "Adresa protějšku"
 msgid "Remote Module (Source)"
 msgstr "Modul na protějšku (zdroj)"
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6663,12 +6680,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr "Vzdálený syslog server"
-
-msgid "Remote module name"
-msgstr "Název modulu na protějšku"
-
-msgid "Remote monitoring"
-msgstr "Dohledování na protějšku"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6757,14 +6768,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr "Zvýšený třecí odpor mezi mechanickými částmi během provozu."
 
-msgid "Resolve"
-msgstr "Překládat"
-
 msgid "Resolve IP"
 msgstr "Zjistit název k IP adrese"
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Překládat IP adresy na názvy strojů"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr "(zpětně) přeložit IP adresy na DNS názvy strojů"
@@ -6775,11 +6780,11 @@ msgstr "Prostředek"
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
-msgstr "Název prostředku"
-
 msgid "Resources"
 msgstr "Prostředky"
+
+msgid "Restore"
+msgstr ""
 
 msgid "Restore Configuration"
 msgstr "Obnovit nastavení"
@@ -7019,8 +7024,8 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr "Naplánované vypnutí"
 
-msgid "Scheduled tests"
-msgstr "Naplánované testy"
+msgid "Scheduled Tests"
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr ""
@@ -7123,8 +7128,15 @@ msgstr "Vyberte firmware:"
 msgid "Select item to remove from the list"
 msgstr "Vyberte položku, kterou chcete ze seznamu odstranit"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "Vyberte přípojný bod, ve kterém má být vytvořen odkládací soubor."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7159,6 +7171,9 @@ msgstr ""
 "Vyberte soubor s nastaveními pro server (šifrovaný GZIP archiv či XML "
 "soubor) a kliknutím na tlačítko níže je obnovte do stavu, zachyceného v této "
 "záloze."
+
+msgid "Select which interface to use."
+msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7273,6 +7288,11 @@ msgstr "Nastavit tomuto účtu členství ještě v dalších skupinách."
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -7308,17 +7328,16 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Nastavte rychlost posouvání titulku v rozmezí 0-10 (výchozí je 10)."
 
+msgid "Set user login shell."
+msgstr ""
+
+msgid "Setkey"
+msgstr ""
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Nastavuje alternativní přípojný bod pro kořenovou datovou sadu. Výchozí je "
 "/mnt."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Nastavuje interval mezi kontrolami disku na N sekund. Nejnižší možná hodnota "
-"je 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7363,6 +7382,9 @@ msgstr "Terminál"
 msgid "Shock During Write."
 msgstr "Otřes v průběhu zápisu"
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -7388,11 +7410,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Vypnout"
 
-msgid "Shutdown mode"
-msgstr "Způsob vypnutí"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "Časovač vypnutí"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "Jednoduchý protokol správy sítě"
@@ -7422,6 +7444,9 @@ msgid "Skew"
 msgstr "Posun"
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7870,14 +7895,14 @@ msgstr "Páska"
 msgid "Target"
 msgstr "Cíl"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr "Alternativní název cíle"
 
 msgid "Target Name"
 msgstr "Název cíle"
-
-msgid "Target address"
-msgstr "Cílová adresa"
 
 msgid "Target directory."
 msgstr "Cílová složka"
@@ -7890,9 +7915,6 @@ msgstr "Není vybrán cíl."
 
 msgid "Target list"
 msgstr "Seznam cílů"
-
-msgid "Target name"
-msgstr "Název cíle"
 
 msgid "Target side secret."
 msgstr "Heslo na straně cíle."
@@ -7932,11 +7954,11 @@ msgstr "Dočasná složka"
 msgid "Temporary directory to store transcoded files."
 msgstr "Dočasná složka pro překódovávané soubory."
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "Zkušební e-mail"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8572,7 +8594,7 @@ msgid "The old password is not correct."
 msgstr "Původní heslo nebylo zadáno správně."
 
 msgid "The password contains the illegal character ':'."
-msgstr "Heslo %s obsahuje neplatný znak „:“ (dvojtečka)."
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr "Protokol, který použít pro šifrování hesla."
@@ -8743,10 +8765,6 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Na server dorazila pouze část souboru."
-
-msgid "The user's login shell."
-msgstr ""
-"Textové uživatelské rozhraní (shell), do kterého se uživatel přihlásí."
 
 msgid "The value of the variable."
 msgstr "Hodnota proměnné"
@@ -8999,9 +9017,8 @@ msgstr ""
 "Zeroconf/Bonjour/Rendezvous a také jako název databáze, exportované "
 "prostřednictvím protokolu DAAP."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
-"Toto je pouze informativní (nepoužívá se během navazování iSCSI spojení)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9266,9 +9283,6 @@ msgstr "Tento štítek už existuje."
 msgid "This tag is used."
 msgstr "Tento štítek je už používán."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "Toto je IP adresa nebo DNS název iSCSI cíle."
-
 msgid "This user already exists in the user list."
 msgstr "Toto uživatelské jméno už existuje v seznamu uživatelů."
 
@@ -9345,9 +9359,6 @@ msgstr "Prodleva ukončení napájení připojených zařízení"
 
 msgid "Time before the load will be started"
 msgstr "Prodleva zahájení napájení připojených zařízení"
-
-msgid "Time interval"
-msgstr "Časový interval"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Doba strávená ustavováním hlaviček disku."
@@ -9499,16 +9510,14 @@ msgstr "Celkem: %s | Použito: %s | Volno: %s"
 msgid "Traceroute"
 msgstr "Sledování směrování na síti (traceroute)"
 
-msgid "Traceroute Test"
-msgstr "Test nástrojem traceroute"
-
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Host"
 msgstr ""
-"Vysledování směrování na síti může chvíli trvat. Postup nezdařených operací "
-"traceroute můžete kdykoli zobrazit kliknutím na tlačítko pro zastavení "
-"načítání stránky u svého webového prohlížeče."
+
+msgid "Traceroute Output"
+msgstr ""
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9529,14 +9538,14 @@ msgstr "Přenosová rychlost"
 msgid "Transfer mode"
 msgstr "Přenosový režim"
 
-msgid "Trap host"
-msgstr "Stroj, na který upozornění posílat"
+msgid "Trap Host"
+msgstr ""
 
-msgid "Trap port"
-msgstr "Port, na který upozornění posílat"
+msgid "Trap Port"
+msgstr ""
 
-msgid "Trap string"
-msgstr "Obsah upozornění"
+msgid "Trap String"
+msgstr ""
 
 msgid "Trap string."
 msgstr "Obsah upozornění"
@@ -9824,10 +9833,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "Použít následující IP adresu v odesílaných paketech jako zdrojovou."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9898,6 +9903,9 @@ msgstr "Identifikátor uživatele"
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9916,17 +9924,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "Celé jméno uživatele"
-
-msgid "User mask"
-msgstr "Uživatelská maska"
-
 msgid "User numeric id."
 msgstr "Číselný identifikátor uživatele"
-
-msgid "User password."
-msgstr "Heslo uživatele"
 
 msgid "Username"
 msgstr "Uživatelské jméno"
@@ -10273,11 +10272,9 @@ msgid "Yes"
 msgstr "Ano"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"Balíčky se software je možné instalovat také přes SSH či konzolový přístup "
-"pomocí příkazu pkg add."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10443,9 +10440,6 @@ msgstr "změna se nezdařila."
 msgid "chroot() everyone, but root."
 msgstr "použít funkci chroot() pro každého s výjimkou správce systému."
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10475,9 +10469,6 @@ msgid "greatest settable low voltage transfer point"
 msgstr ""
 "až jak „vysoko“ lze nastavit hranici podpětí, při poklesu pod kterou "
 "přepnout na akumulátory"
-
-msgid "hours"
-msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI iniciátor"
@@ -10512,12 +10503,6 @@ msgstr "načtení/uvolnění se nezdařilo."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
-msgstr ""
 
 msgid "mount"
 msgstr "připojit (mount)"
@@ -10589,6 +10574,3 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
-
-msgid "week days"
-msgstr ""

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-30 03:23+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"PO-Revision-Date: 2017-02-02 12:55+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -377,7 +377,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "ИМЯ АТРИБУТА"
 
 msgid "Accept remote syslog messages."
-msgstr "Принять удаленные syslog сообщения."
+msgstr "Принимать удаленные syslog сообщения."
 
 msgid "Access"
 msgstr "Доступ"
@@ -908,6 +908,9 @@ msgstr ""
 "На самом верхнем уровне целью является ресурс, предоставляемый инициатору "
 "(может состоять из одного или нескольких экстентов)."
 
+msgid "Attach"
+msgstr "Прикрепить"
+
 msgid "Attach a data device"
 msgstr "Подключение устройства данных"
 
@@ -1050,11 +1053,14 @@ msgstr "Назад"
 msgid "Background"
 msgstr "Фон"
 
+msgid "Backup"
+msgstr "Резервирование"
+
 msgid "Backup Configuration"
 msgstr "Сохранение конфигурации"
 
-msgid "Backup file"
-msgstr "Файл резервной копии"
+msgid "Backup File"
+msgstr "Резервная копия файла"
 
 msgid "Backup/Restore"
 msgstr "Сохранение/восстановление"
@@ -1171,9 +1177,6 @@ msgstr ""
 "монтирования для каталога %s!"
 
 msgid "Blank Time"
-msgstr "Время простоя"
-
-msgid "Blank time"
 msgstr "Время простоя"
 
 msgid "Block Size"
@@ -1426,9 +1429,6 @@ msgstr "Проверьте Система|Общие параметры пере
 msgid "Check and replace cable"
 msgstr "Проверьте и замените кабель"
 
-msgid "Check interval"
-msgstr "Интервал проверки"
-
 msgid "Check shared secret:"
 msgstr "Проверьте разделяемый ключ безопасности:"
 
@@ -1516,6 +1516,9 @@ msgstr "Команда"
 
 msgid "Command Output"
 msgstr "Вывод Команды"
+
+msgid "Command Output:"
+msgstr "Вывод команды:"
 
 msgid "Command Scripts"
 msgstr "Командные скрипты"
@@ -1724,6 +1727,9 @@ msgid ""
 msgstr ""
 "Конвертирование DOS атрибутов в исполнительные биты UNIX когда хранение DOS "
 "атрибутов отключено."
+
+msgid "Conveyance Self-Test"
+msgstr "Conveyance Self-Test"
 
 msgid "Core"
 msgstr "Ядро"
@@ -2348,9 +2354,6 @@ msgstr "Адрес email почты назначения. Отдельные ema
 msgid "Destination host name or IP address."
 msgstr "Имя или IP адрес целевого хоста"
 
-msgid "Destination host name or IP number."
-msgstr "Имя или IP-адрес хоста назначения."
-
 msgid "Destination network bit count"
 msgstr "Маска сети назначения"
 
@@ -2369,6 +2372,9 @@ msgstr "Уничтожить любые снимки и закладки бол�
 
 msgid "Destroyed"
 msgstr "Разрушен"
+
+msgid "Detach"
+msgstr "Отсоединить"
 
 msgid "Detach a data device from a mirror"
 msgstr "Отсоединить устройство данных с зеркала"
@@ -2896,9 +2902,6 @@ msgstr "Сохранить конфигурацию"
 msgid "Download Directory"
 msgstr "Каталог для скачивания"
 
-msgid "Download directory"
-msgstr "Каталог скачиваемых файлов"
-
 msgid "Drive Temperature."
 msgstr "Температура диска."
 
@@ -3138,7 +3141,7 @@ msgid "Enable Selected Options"
 msgstr "Включить выбранные опции"
 
 msgid "Enable TLS connections."
-msgstr "Включить TLS соединения."
+msgstr "Разрешить TLS соединения."
 
 msgid "Enable TiVo support."
 msgstr "Включить поддержку TiVo."
@@ -3218,7 +3221,7 @@ msgid "Enable encryption."
 msgstr "Включить шифрование."
 
 msgid "Enable extended attribute support."
-msgstr "Включить расширенную поддержку атрибутов."
+msgstr "Включить поддержку расширенных атрибутов."
 
 msgid "Enable extended attributes for this file system."
 msgstr ""
@@ -3307,6 +3310,13 @@ msgstr "Разрешить протокол идентификации (RFC1413)
 
 msgid "Enable the server power control utility."
 msgstr "Включение утилиты управления питанием сервера."
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
+"Включите эту опцию, если вы хотите редактировать страницы конфигурации "
+"напрямую, без необходимости переключения в режим редактирования."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Включить строгое придерживание стандартов DLNA."
@@ -3419,6 +3429,12 @@ msgstr "Введите описание"
 msgid "Enter a description for your reference."
 msgstr "Введите описание для справки."
 
+msgid "Enter a group description."
+msgstr "Введите описание группы."
+
+msgid "Enter a group name."
+msgstr "Введите имя группы."
+
 msgid "Enter a name"
 msgstr "Введите имя"
 
@@ -3444,6 +3460,18 @@ msgid ""
 msgstr ""
 "Введите системное время вручную (в формате mm/dd/yyyy hh:mm) или используйте "
 "значок."
+
+msgid "Enter full name of the user."
+msgstr "Введите полное имя пользователя."
+
+msgid "Enter hostname or IP address."
+msgstr "Введите имя хоста или IP-адрес."
+
+msgid "Enter login name of the user."
+msgstr "Введите имя пользователя для входа."
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr "Введите IP-адрес или DNS-имя целевого устройства."
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3493,6 +3521,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Порт, на который будут отправляться сообщения (по умолчанию 162-й)."
 
+msgid "Enter the user password."
+msgstr "Введите пароль пользователя."
+
 msgid "Enter trap host name."
 msgstr "Имя сервера, ведущего мониторинг и прием сообщений."
 
@@ -3524,8 +3555,8 @@ msgstr "Событие"
 msgid "Event Selection"
 msgstr "Выбор события"
 
-msgid "Example: pkg add packagename."
-msgstr "Пример: pkg add имя_пакета"
+msgid "Example: pkg install packagename."
+msgstr "Пример: pkg install packagename."
 
 msgid "Execute"
 msgstr "Выполнение"
@@ -3646,7 +3677,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - передача файлов"
 
 msgid "FTP Proxy"
-msgstr "FTP Proxy"
+msgstr "FTP-прокси"
 
 msgid "FTP events"
 msgstr "События FTP"
@@ -3823,11 +3854,11 @@ msgstr "Следовать"
 msgid "Force Operation"
 msgstr "Принудительная операция"
 
+msgid "Force Use"
+msgstr "Использовать принудительно"
+
 msgid "Force delete"
 msgstr "Удалить принудительно"
-
-msgid "Force use"
-msgstr "Приндуительное использование"
 
 msgid "Forced Update Period"
 msgstr "Принудительный период обновления"
@@ -3996,9 +4027,6 @@ msgstr "Группа заблокирована"
 msgid "Group is marked for deletion"
 msgstr "Группа помечана для удаления"
 
-msgid "Group name."
-msgstr "Имя группы."
-
 msgid "Group numeric id."
 msgstr "Цифровой индентификатор группы."
 
@@ -4066,7 +4094,7 @@ msgid "HOT SPARE"
 msgstr "ГОРЯЧАЯ ЗАМЕНА"
 
 msgid "HTTP Proxy"
-msgstr "HTTP Proxy"
+msgstr "HTTP-прокси"
 
 msgid "HVM Guest"
 msgstr "Гостевая система HVM"
@@ -4126,9 +4154,6 @@ msgstr "Подсказка"
 msgid "Home Directory"
 msgstr "Домашний каталог"
 
-msgid "Home directory"
-msgstr "Домашний каталог"
-
 msgid "Host"
 msgstr "Хост"
 
@@ -4142,7 +4167,7 @@ msgid "Hostname"
 msgstr "Имя компьютера"
 
 msgid "Hostname Database"
-msgstr "Имя хоста базы данных"
+msgstr "База данных имен хостов"
 
 msgid "Hosts"
 msgstr "Хосты"
@@ -4177,7 +4202,7 @@ msgid "Hungarian"
 msgstr "Венгерский"
 
 msgid "I/O Statistics"
-msgstr "Статистика I/O"
+msgstr "Статистика ввода/вывода"
 
 msgid "I/O Timeout"
 msgstr "Таймаут ввода/вывода"
@@ -4366,7 +4391,7 @@ msgid "Import disks used in configuration."
 msgstr "Импортировать диски, используемые в конфигурации"
 
 msgid "Import firewall rules."
-msgstr "Импортировать правила брандмауэра"
+msgstr "Импорт правил брандмауэра."
 
 msgid "Import on-disk ZFS config"
 msgstr "Импортировать конфигурацию с дисков ZFS"
@@ -4472,15 +4497,15 @@ msgstr ""
 "Группы инициаторов содержат разрешенные имена инициаторов и сетей для "
 "доступа к цели."
 
+msgid "Initiator Name"
+msgstr "Имя инициатора"
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "Задайте здесь имена инициаторов, авторизованных для доступа к iSCSI-цели. "
 "Чтобы позволить подключение любого инициатора, введите 'ALL'."
-
-msgid "Initiator name"
-msgstr "Имя инициатора"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -4581,6 +4606,9 @@ msgstr "Дата по данным внутренних часов ИБП"
 
 msgid "Internal UPS clock time"
 msgstr "Время по данным внутренних часов ИБП"
+
+msgid "Interval"
+msgstr "Интервал"
 
 msgid "Interval between self tests"
 msgstr "Интервал между тестами самодиагностики"
@@ -4923,7 +4951,7 @@ msgid "Local Master Browser"
 msgstr "Локальный основной обозреватель сети"
 
 msgid "Local Share (Destination)"
-msgstr "Локальные общие ресурсы (место)"
+msgstr "Локальный общий ресурс (получатель)"
 
 msgid "Local User"
 msgstr "Локальный пользователь"
@@ -5004,11 +5032,11 @@ msgstr "Тип логического устройства, сопоставле
 msgid "Login"
 msgstr "Вход"
 
-msgid "Login name of user."
-msgstr "Имя пользователя (логин)."
-
 msgid "Logout"
 msgstr "Выход"
+
+msgid "Long Self-Test"
+msgstr "Долгое самотестирование"
 
 msgid "Low voltage boosting transfer point"
 msgstr "Нижняя граница напряжения для режима подпитки (boosting)"
@@ -5108,7 +5136,7 @@ msgid "Map to Root"
 msgstr "Преобразовывать в Root"
 
 msgid "Map to User"
-msgstr "Преобразовывать в User"
+msgstr "Преобразовывать в пользователя"
 
 msgid "Mapping DOS Attributes"
 msgstr "Преобразование DOS атрибутов"
@@ -5152,15 +5180,8 @@ msgstr "Максимальное количество пассивных пор�
 msgid "Max. Sessions"
 msgstr "Макс. сессий"
 
-msgid "Max. TTL"
-msgstr "Максимальный TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "предпосылка R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr "Использовать максимальный TTL в исходящих пакетах."
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -5176,9 +5197,6 @@ msgstr "Maximum (высочайшая производительность)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Максимальная производительность, максимальный уровень шума"
-
-msgid "Maximum frequency"
-msgstr "Максимальная частота"
 
 msgid "Maximum idle time in seconds."
 msgstr "Максимальное время бездействия (в секундах)."
@@ -5300,9 +5318,6 @@ msgstr "Минимальная производительность, миним�
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Минимальный заряд батареи для перезапуска ИБП после отключения"
 
-msgid "Minimum frequency"
-msgstr "Минимальная частота"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Минимальное зафиксированное значение напряжения"
 
@@ -5370,9 +5385,6 @@ msgstr "пн."
 msgid "Monday"
 msgstr "понедельник"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье"
-
 msgid "Monitoring"
 msgstr "Мониторинг"
 
@@ -5390,22 +5402,19 @@ msgstr ""
 "проблемы."
 
 msgid "Mount Point"
-msgstr "Точки монтирования"
+msgstr "Точка монтирования"
 
 msgid "Mount Point Fsck"
 msgstr "Проверка точек монтирования"
 
 msgid "Mount Point Management"
-msgstr "Управление точкой монтирования"
+msgstr "Управление точками монтирования"
 
 msgid "Mount Point Tools"
 msgstr "Инструменты точек монтирования"
 
 msgid "Mount Points"
 msgstr "Точки монтирования"
-
-msgid "Mount point"
-msgstr "Точка монтирования"
 
 msgid "Mount point name"
 msgstr "Имя точки монтирования"
@@ -5854,8 +5863,11 @@ msgstr "октября"
 msgid "Off"
 msgstr "Выкл."
 
-msgid "Old passphrase"
-msgstr "Старая парольная фраза"
+msgid "Offline Immediate Test"
+msgstr "Непосредственный тест офлайн"
+
+msgid "Old Passphrase"
+msgstr "Утстаревшая парольная фраза"
 
 msgid "On"
 msgstr "Вкл."
@@ -5991,6 +6003,9 @@ msgstr "Загрузка пакета не удалась (возможно, н�
 msgid "Packages"
 msgstr "Пакеты"
 
+msgid "Packages Installer"
+msgstr "Установщик пакетов"
+
 msgid "Page Refresh"
 msgstr "Обновление страниц"
 
@@ -6043,6 +6058,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Парольная фраза"
+
+msgid "Passphrase Confirmation"
+msgstr "Подтверждение парольной фразы"
 
 msgid "Passphrase don't match."
 msgstr "Парольные фразы не совпадают."
@@ -6133,9 +6151,6 @@ msgstr "Ключ безопасности инициатора"
 msgid "Peer User"
 msgstr "Имя инициатора"
 
-msgid "Peer port"
-msgstr "Порт входящих соединений"
-
 msgid "Performance Settings"
 msgstr "Настройки производительности"
 
@@ -6161,8 +6176,14 @@ msgstr "Изображения"
 msgid "Ping"
 msgstr "Команда ping"
 
-msgid "Ping Test"
-msgstr "Ping тест"
+msgid "Ping Host"
+msgstr "Ping хоста"
+
+msgid "Ping Output"
+msgstr "Вывод Ping"
+
+msgid "Ping may take a while, please be patient."
+msgstr "Ping может занять некоторое время, пожалуйста, будьте терпеливы."
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Убедитесь, что winbindd функционирует:"
@@ -6323,7 +6344,7 @@ msgid ""
 "Portal Groups contains IP addresses and listening on TCP ports to connect "
 "the target from the initiator."
 msgstr ""
-"Группы портала содержат IP-адреса и прослушивают TCP порты для подключения "
+"Группы портала содержат IP-адреса и прослушивают TCP-порты для подключения "
 "цели от инициатора."
 
 msgid "Portals"
@@ -6353,9 +6374,6 @@ msgstr "Режим энергопотребления"
 msgid "Power management"
 msgstr "Управление питанием"
 
-msgid "Power mode"
-msgstr "Режим электропитания"
-
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr "Pre-Fail атрибут используется в основном на устройствах HP."
 
@@ -6375,13 +6393,13 @@ msgid "Preformatted file system"
 msgstr "Уже имеющаяся файловая система"
 
 msgid "Preserve Extended Attributes"
-msgstr "Сохранение дополнительных атрибутов"
+msgstr "Сохранять расширенные атрибуты"
 
 msgid "Preserve Extended attributes"
 msgstr "Сохранение расширенных атрибутов"
 
 msgid "Preserve Permissions"
-msgstr "Сохранение прав доступа"
+msgstr "Сохранять права доступа"
 
 msgid "Preserve modification times."
 msgstr "Сохранять время изменения"
@@ -6429,7 +6447,7 @@ msgid "Protocol"
 msgstr "Протокол"
 
 msgid "Provider"
-msgstr "Участники"
+msgstr "Провайдер"
 
 msgid "Proxy"
 msgstr "Настройки прокси"
@@ -6691,6 +6709,9 @@ msgstr "Удалённый адрес"
 msgid "Remote Module (Source)"
 msgstr "Удаленный модуль (источник)"
 
+msgid "Remote Monitoring"
+msgstr "Удаленный мониторинг"
+
 msgid "Remote Rsync Daemon"
 msgstr "Удаленный Rsync демон"
 
@@ -6703,16 +6724,10 @@ msgstr "Удаленные Syslog сообщения"
 msgid "Remote Syslog Server"
 msgstr "Удаленный syslog сервер"
 
-msgid "Remote module name"
-msgstr "Имя удаленного модуля"
-
-msgid "Remote monitoring"
-msgstr "Удаленный мониторинг"
-
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
 msgstr ""
-"Пароль удаленный мониторинг. Должны быть одинаковы как для основного и "
+"Пароль удаленного мониторинга. Должны быть одинаковы как для основного и "
 "дополнительного."
 
 msgid ""
@@ -6796,17 +6811,11 @@ msgstr "Сброс графиков"
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr "Сопротивление вызвано трением в механических частях во время работы."
 
-msgid "Resolve"
-msgstr "Преобразование"
-
 msgid "Resolve IP"
 msgstr "Преобразование IP-адресов"
 
-msgid "Resolve IP addresses to hostnames"
-msgstr "Преобразовывать IP-адреса в имена хостов"
-
 msgid "Resolve IP addresses to hostnames."
-msgstr "Преобразование IP-адреса в имена хостов."
+msgstr "Преобразование IP-адресов в имена хостов."
 
 msgid "Resource"
 msgstr "Ресурс"
@@ -6814,11 +6823,11 @@ msgstr "Ресурс"
 msgid "Resource Name"
 msgstr "Имя ресурса"
 
-msgid "Resource name"
-msgstr "Имя ресурса"
-
 msgid "Resources"
 msgstr "Ресурсы"
+
+msgid "Restore"
+msgstr "Восстановить"
 
 msgid "Restore Configuration"
 msgstr "Восстановление конфигурации"
@@ -7061,8 +7070,8 @@ msgstr "Настройки планирования самотестирован
 msgid "Scheduled Shutdown"
 msgstr "Выключение по расписанию"
 
-msgid "Scheduled tests"
-msgstr "Тест по расписанию"
+msgid "Scheduled Tests"
+msgstr "Запланированные тесты"
 
 msgid "Scrub a pool"
 msgstr "Проверка пула (Scrub a pool)"
@@ -7167,8 +7176,17 @@ msgstr "Выберите прошивку:"
 msgid "Select item to remove from the list"
 msgstr "Выберите пункт для удаления из списка"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+"Выберите максимальное время жизни (максимальное число транзитных участков), "
+"используемых в исходящих пакетах."
+
 msgid "Select mount point where to create the swap file."
 msgstr "Точка монтирования для создания файла подкачки."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr "Выберите количество пакетов запроса ICMP ECHO."
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7205,6 +7223,9 @@ msgid ""
 msgstr ""
 "Выберите файл с конфигурацией сервера, зашифрованный GZIP файл или XML файл "
 "и нажмите на кнопку ниже, чтобы восстановить конфигурацию."
+
+msgid "Select which interface to use."
+msgstr "Выберите, какой интерфейс использовать."
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7321,6 +7342,13 @@ msgstr "Установить принадлежность этой учетно�
 msgid "Set browseable."
 msgstr "Установить как просматриваемый"
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+"Установить интервал между проверками дисков в N секунд. Минимальное "
+"допустимое значение 10."
+
 msgid "Set read only."
 msgstr "Установить только для чтения"
 
@@ -7364,17 +7392,16 @@ msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 "Выберите скорость прокручивания заголовка от 0 до 10 (по умолчанию: 10)"
 
+msgid "Set user login shell."
+msgstr "Установите командную оболочку пользователя."
+
+msgid "Setkey"
+msgstr "Setkey"
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Устанавливает альтернативную точку монтирования для корневого dataset'а (по "
 "умолчанию /mnt)."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Устанавливает интервал между проверками диска (в секундах), минимальное "
-"значение - 10 секунд."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7419,6 +7446,9 @@ msgstr "Командная оболочка (shell)"
 msgid "Shock During Write."
 msgstr "Шок во время записи."
 
+msgid "Short Self-Test"
+msgstr "Короткое самотестирование"
+
 msgid "Show Default Groups"
 msgstr "Показать группы по умолчанию"
 
@@ -7445,10 +7475,10 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Выключение"
 
-msgid "Shutdown mode"
+msgid "Shutdown Mode"
 msgstr "Режим выключения"
 
-msgid "Shutdown timer"
+msgid "Shutdown Timer"
 msgstr "Таймер выключения"
 
 msgid "Simple Network Management Protocol"
@@ -7480,6 +7510,9 @@ msgstr "Задержка"
 
 msgid "Skip First Scan"
 msgstr "Пропустить первое сканирование"
+
+msgid "Skip View Mode"
+msgstr "Пропустить режим просмотра"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - проверять устройство, пока оно не в режиме сна (SLEEP)."
@@ -7868,7 +7901,7 @@ msgid "TCP Forwarding"
 msgstr "TCP Forwarding"
 
 msgid "TCP Port"
-msgstr "TCP порт"
+msgstr "TCP-порт"
 
 msgid "TCP Wrapper"
 msgstr "TCP Wrapper"
@@ -7907,7 +7940,7 @@ msgid "Tag"
 msgstr "Метка"
 
 msgid "Tag Number"
-msgstr "Количество тегов"
+msgstr "Номер метки"
 
 msgid "Tag number"
 msgstr "Номер метки"
@@ -7932,14 +7965,14 @@ msgstr "Магнитная лента"
 msgid "Target"
 msgstr "Цель"
 
+msgid "Target Address"
+msgstr "Целевой адрес"
+
 msgid "Target Alias"
 msgstr "Псевдоним цели"
 
 msgid "Target Name"
 msgstr "Имя цели"
-
-msgid "Target address"
-msgstr "Адрес цели"
 
 msgid "Target directory."
 msgstr "Целевой каталог."
@@ -7952,9 +7985,6 @@ msgstr "Цель не выбрана."
 
 msgid "Target list"
 msgstr "Список целей"
-
-msgid "Target name"
-msgstr "Имя цели"
 
 msgid "Target side secret."
 msgstr "Ключ безопасности на стороне цели."
@@ -7993,11 +8023,11 @@ msgstr "Временный каталог"
 msgid "Temporary directory to store transcoded files."
 msgstr "Временный каталог для хранения транскодированных файлов."
 
+msgid "Test Email"
+msgstr "Тестовое сообщение"
+
 msgid "Test Mode"
 msgstr "Тестовый режим"
-
-msgid "Test email"
-msgstr "Тестовый e-mail"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8798,9 +8828,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Загружаемый файл был загружен лишь частично."
 
-msgid "The user's login shell."
-msgstr "Тип интерпретатора команд (shell), доступный пользователю."
-
 msgid "The value of the variable."
 msgstr "Значение переменной."
 
@@ -9065,8 +9092,9 @@ msgid ""
 msgstr ""
 "Это одновременно и имя сервера Zeroconf/Bonjour/Rendezvous, и имя в DAAP."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
-msgstr "Только для информации (не используется при согласовании iSCSI)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
+msgstr ""
+"Это только для информации. (Не используется во время ISCSI переговоров)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9334,9 +9362,6 @@ msgstr "Такая метка уже существует."
 msgid "This tag is used."
 msgstr "Эта метка уже используется."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "IP-адрес или DNS-имя цели iSCSI."
-
 msgid "This user already exists in the user list."
 msgstr "Этот пользователь уже есть в списке пользователей."
 
@@ -9421,9 +9446,6 @@ msgstr "Время до отключения нагрузки"
 msgid "Time before the load will be started"
 msgstr "Время до подключения нагрузки"
 
-msgid "Time interval"
-msgstr "Временной интервал"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Время, проведенное во время позиционирования головок диска."
 
@@ -9448,7 +9470,7 @@ msgid "TitleSpeed"
 msgstr "TitleSpeed (скорость длинных заголовков)"
 
 msgid "To Email Address"
-msgstr "Email назначения"
+msgstr "Email адрес"
 
 msgid "To e-mail"
 msgstr "Адрес e-mail"
@@ -9573,16 +9595,15 @@ msgstr "Всего: %s | Занято: %s | Свободно: %s"
 msgid "Traceroute"
 msgstr "Команда traceroute"
 
-msgid "Traceroute Test"
-msgstr "Traceroute тест"
+msgid "Traceroute Host"
+msgstr "Трассировка хоста"
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
+msgstr "Вывод трассировки"
+
+msgid "Traceroute may take a while, please be patient."
 msgstr ""
-"Выполнение команды traceroute может занять некоторое время. Вы можете в "
-"любой момент нажать кнопку 'Стоп' в браузере, чтобы увидеть результат "
-"неудачных трассировок."
+"Трассировка может занять некоторое время, пожалуйста, будьте терпеливы."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9603,14 +9624,14 @@ msgstr "Скорость передачи"
 msgid "Transfer mode"
 msgstr "Режим передачи"
 
-msgid "Trap host"
-msgstr "Сервер сообщений"
+msgid "Trap Host"
+msgstr "Хост Trap"
 
-msgid "Trap port"
-msgstr "Порт сообщений"
+msgid "Trap Port"
+msgstr "Порт Trap"
 
-msgid "Trap string"
-msgstr "Текст сообщений"
+msgid "Trap String"
+msgstr "Строка Trap"
 
 msgid "Trap string."
 msgstr "Строка, содержащая текст сообщений."
@@ -9909,10 +9930,6 @@ msgstr ""
 "у)"
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "Использовать следующий IP-адрес как источник в исходящих пакетах."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9983,6 +10000,9 @@ msgstr "Идентификатор пользователя"
 msgid "User Mask"
 msgstr "Маска пользователя"
 
+msgid "User Password Settings"
+msgstr "Настройки пароля пользователя"
+
 msgid "User Portal"
 msgstr "Портал пользователя"
 
@@ -10001,17 +10021,8 @@ msgstr "Учетная запись пользователя заблокиро�
 msgid "User account is marked for deletion"
 msgstr "Учетная запись пользователя помечена для удаления"
 
-msgid "User full name."
-msgstr "Полное имя пользователя."
-
-msgid "User mask"
-msgstr "Права доступа"
-
 msgid "User numeric id."
 msgstr "Числовой индентификатор пользователя."
-
-msgid "User password."
-msgstr "Пароль пользователя."
 
 msgid "Username"
 msgstr "Имя пользователя"
@@ -10317,7 +10328,7 @@ msgid "Whether to skip initial boot-up scan."
 msgstr "Пропустить сканирование при начальной загрузке."
 
 msgid "Who"
-msgstr "Пользователь"
+msgstr "Кто"
 
 msgid "Wildcard"
 msgstr "Подстановочные символы"
@@ -10360,11 +10371,11 @@ msgid "Yes"
 msgstr "Да"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"Кроме того, можно установить пакет через SSH или консоль с помощью команды "
-"pkg add."
+"Кроме того, можно установить пакет с помощью SSH или консоли с помощью "
+"команды pkg install."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10540,9 +10551,6 @@ msgstr "неудачное изменение."
 msgid "chroot() everyone, but root."
 msgstr "Использовать chroot() для всех, кроме root"
 
-msgid "days"
-msgstr "дней"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10570,9 +10578,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 "наибольшее устанавливаемое значение низкого напряжения для переключения"
-
-msgid "hours"
-msgstr "час."
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI-инициатор"
@@ -10607,12 +10612,6 @@ msgstr "неудачная загрузка/выгрузка."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr "мин."
-
-msgid "months"
-msgstr "месяцев"
 
 msgid "mount"
 msgstr "монтировать"
@@ -10682,6 +10681,3 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
-
-msgid "week days"
-msgstr "дней недели"
