@@ -504,7 +504,7 @@ $(document).ready(function(){
 			html_textinfo2('system_uptime',gtext('System Uptime'),htmlspecialchars(system_get_uptime()));
 			if (Session::isAdmin()):
 				if ($config['lastchange']):
-					html_textinfo2('last_config_change',gtext('Last Configuration Change'),htmlspecialchars(get_datetime_locale($config['lastchange'])));
+					html_textinfo2('last_config_change',gtext('System Config Change'),htmlspecialchars(get_datetime_locale($config['lastchange'])));
 				endif;
 				if(empty($cpuinfo['temperature2'])):
 					if (!empty($cpuinfo['temperature'])):
@@ -535,7 +535,7 @@ $(document).ready(function(){
 				if($cpus > 1):
 				?>
 					<tr>
-						<td class="celltag"><?=gtext('Core Usage');?></td>
+						<td class="celltag"><?=gtext('CPU Core Usage');?></td>
 						<td class="celldata">
 							<table width="100%" border="0" cellspacing="0" cellpadding="0">
 								<?php
