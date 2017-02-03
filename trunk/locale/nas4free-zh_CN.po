@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2017-01-17 15:29+0000\n"
 "Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -820,6 +820,9 @@ msgid ""
 "made up of one or more extents."
 msgstr "目标器是由一个或多个extent 组成，然后呈现给启动器。"
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr "附加数据设备"
 
@@ -950,11 +953,14 @@ msgstr "后退"
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr "备份设定"
 
-msgid "Backup file"
-msgstr "备份文件"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "备份/还原"
@@ -1063,9 +1069,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "空闲时间"
 
 msgid "Block Size"
 msgstr "块大小"
@@ -1308,9 +1311,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "检查并更换电缆"
 
-msgid "Check interval"
-msgstr "检查间隔"
-
 msgid "Check shared secret:"
 msgstr "检查分享密文："
 
@@ -1389,6 +1389,9 @@ msgid "Command"
 msgstr "指令"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1575,6 +1578,9 @@ msgstr "控制此数据集能否被修改。"
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -2130,9 +2136,6 @@ msgstr "目的地邮件地址。多个邮件地址用分号分开。"
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "目的端主机名称或 IP 位址。"
-
 msgid "Destination network bit count"
 msgstr "目的端网络位数"
 
@@ -2150,6 +2153,9 @@ msgid ""
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2644,9 +2650,6 @@ msgstr "下载配置"
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "下载目录"
-
 msgid "Drive Temperature."
 msgstr "硬盘温度。"
 
@@ -3004,7 +3007,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "启用通过NAT-PMP或UPnP的的端口转发。"
 
 msgid "Enable proxy authentication."
-msgstr "启用 Proxy 认证。"
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3040,6 +3043,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "启用 ident 协议（RFC1413）。"
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3145,6 +3153,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3166,6 +3180,18 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr "请输入系统时间（格式为 MM/DD/YYYY hh:mm），或点选图标来选择时间。"
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3203,6 +3229,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "请输入 Traps 传输端口（默认为 162）"
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "请输入 Trap 主机名。"
 
@@ -3232,7 +3261,7 @@ msgstr "事件"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3345,7 +3374,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP 代理伺服器"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP 事件"
@@ -3517,11 +3546,11 @@ msgstr "跟随"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
-msgstr "强制使用"
+msgid "Force delete"
+msgstr ""
 
 msgid "Forced Update Period"
 msgstr ""
@@ -3685,9 +3714,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "群组名称。"
-
 msgid "Group numeric id."
 msgstr "群组的数字 id。"
 
@@ -3747,7 +3773,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP 代理伺服器"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr ""
@@ -3803,9 +3829,6 @@ msgstr "提示"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "个人目录（Home）"
 
 msgid "Host"
 msgstr "主机"
@@ -4120,13 +4143,13 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr "启动器群组授权访问 iSCSI 目标。任何启动器可以使用一个名称或者'ALL'。"
-
-msgid "Initiator name"
-msgstr "启动器名称"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "启动器端秘密。 （CHAP 相互认证）"
@@ -4219,6 +4242,9 @@ msgstr "UPS 内部时钟的日期"
 
 msgid "Internal UPS clock time"
 msgstr "UPS 内部时钟的时间"
+
+msgid "Interval"
+msgstr ""
 
 msgid "Interval between self tests"
 msgstr "自检的时间间隔"
@@ -4606,11 +4632,11 @@ msgstr "映射到 LUN 的逻辑单元类型。"
 msgid "Login"
 msgstr "登录"
 
-msgid "Login name of user."
-msgstr "登录用户名。"
-
 msgid "Logout"
 msgstr "登出"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr "低电压升压转换点"
@@ -4748,15 +4774,8 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "最大 TTL 值"
-
 msgid "Max. pre-send R2T"
 msgstr "最大 pre=send R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr "最大TTL 值（最大跳数），用于发送探测数据包。"
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -4772,9 +4791,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum frequency"
-msgstr "最大频率"
 
 msgid "Maximum idle time in seconds."
 msgstr "最大闲置时间（秒）"
@@ -4887,9 +4903,6 @@ msgstr ""
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "断电后UPS重启的最小电池电量"
 
-msgid "Minimum frequency"
-msgstr "最小频率"
-
 msgid "Minimum incoming voltage seen"
 msgstr "可见的最小输入电压"
 
@@ -4956,9 +4969,6 @@ msgstr ""
 msgid "Monday"
 msgstr ""
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "星期一 星期二 星期三 星期四 星期五 星期六 星期日"
-
 msgid "Monitoring"
 msgstr ""
 
@@ -4987,9 +4997,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "挂载点"
 
 msgid "Mount point name"
 msgstr "挂载点名称"
@@ -5413,8 +5420,11 @@ msgstr ""
 msgid "Off"
 msgstr "关闭"
 
-msgid "Old passphrase"
-msgstr "旧密码短语"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "开"
@@ -5540,6 +5550,9 @@ msgstr "套件上传失败（记忆体不足？）"
 msgid "Packages"
 msgstr "套件"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5587,6 +5600,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "密码短语"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "密码短语不匹配。"
@@ -5673,9 +5689,6 @@ msgstr "对等秘密"
 msgid "Peer User"
 msgstr "对等用户"
 
-msgid "Peer port"
-msgstr "对等端口（Peer port）"
-
 msgid "Performance Settings"
 msgstr ""
 
@@ -5701,7 +5714,13 @@ msgstr "图片"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5888,9 +5907,6 @@ msgstr "电源模式"
 
 msgid "Power management"
 msgstr "电源管理"
-
-msgid "Power mode"
-msgstr "电源模式"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6212,6 +6228,9 @@ msgstr "远程地址"
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6223,12 +6242,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module name"
-msgstr "远端模组名称"
-
-msgid "Remote monitoring"
-msgstr "远端监控"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6309,14 +6322,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr "解决"
-
 msgid "Resolve IP"
 msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "将 IP 解析成主机名称"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr ""
@@ -6327,11 +6334,11 @@ msgstr "资源"
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
-msgstr "资源名称"
-
 msgid "Resources"
 msgstr "资源"
+
+msgid "Restore"
+msgstr ""
 
 msgid "Restore Configuration"
 msgstr "还原配置"
@@ -6565,8 +6572,8 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr "定时关机"
 
-msgid "Scheduled tests"
-msgstr "定时测试"
+msgid "Scheduled Tests"
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr ""
@@ -6664,8 +6671,15 @@ msgstr "选择固件："
 msgid "Select item to remove from the list"
 msgstr "请从列表中选择要删除的项目"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "请选择欲创建 Swap 档的挂载点。"
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6695,6 +6709,9 @@ msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
 msgstr "选择已加密的伺服器配置 GZIP文件或XML文件，并点击下面的按钮来恢复配置。"
+
+msgid "Select which interface to use."
+msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -6809,6 +6826,11 @@ msgstr "设置此帐户的其他群组资格。"
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6841,13 +6863,14 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "设置标题滚动速度 0-10（默认为10）。"
 
+msgid "Set user login shell."
+msgstr ""
+
+msgid "Setkey"
+msgstr ""
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "设置根数据集的备用挂载点。默认为 /mnt。"
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr "设置硬盘检查间隔时间，单位是秒，最少是 10。"
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -6890,6 +6913,9 @@ msgstr "命令壳 (shell)"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -6914,11 +6940,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "关机"
 
-msgid "Shutdown mode"
-msgstr "关机模式"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "关机倒数"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "简单网络管理协议"
@@ -6946,6 +6972,9 @@ msgid "Skew"
 msgstr "级值"
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7376,14 +7405,14 @@ msgstr "磁带"
 msgid "Target"
 msgstr "目标"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr "目標別名"
 
 msgid "Target Name"
 msgstr "目标名称"
-
-msgid "Target address"
-msgstr "目标位置"
 
 msgid "Target directory."
 msgstr "目标目录。"
@@ -7396,9 +7425,6 @@ msgstr "尚未选定目标。"
 
 msgid "Target list"
 msgstr "目标列表"
-
-msgid "Target name"
-msgstr "目标名称"
 
 msgid "Target side secret."
 msgstr "目标端的秘密。"
@@ -7436,11 +7462,11 @@ msgstr "临时目录。"
 msgid "Temporary directory to store transcoded files."
 msgstr "用来存储转换文件的临时目录。"
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "邮件测试"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -7980,7 +8006,7 @@ msgid "The old password is not correct."
 msgstr "旧的密码不正确。"
 
 msgid "The password contains the illegal character ':'."
-msgstr "密码包含了无效的字元 ':'。"
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr "此参数指定密码加密协议。"
@@ -8128,9 +8154,6 @@ msgstr "上传的文件大小超过在php.ini 里指定的upload_max_filesize �
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "只上传了部分的文件。"
-
-msgid "The user's login shell."
-msgstr "用户的登入 shell。"
 
 msgid "The value of the variable."
 msgstr "变数的数值。"
@@ -8352,8 +8375,8 @@ msgid ""
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr "此伺服器名称被用于Zeroconf/Bonjour/Rendezvous，也是通过DAAP 导出的数据库名称。"
 
-msgid "This is for information only (not using during iSCSI negotiation)."
-msgstr "仅供参考（不在iSCSI 的交涉中使用）。"
+msgid "This is for information only. (not used during iSCSI negotiation)."
+msgstr ""
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -8555,9 +8578,6 @@ msgstr "此标签已经存在。"
 msgid "This tag is used."
 msgstr "此标签在使用中。"
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "这是 iSCSI 目标器（iSCSI target）的 IP 地址或 DNS 名称。"
-
 msgid "This user already exists in the user list."
 msgstr "用户列表中已经有此用户存在。"
 
@@ -8631,9 +8651,6 @@ msgstr "负载将被关闭之前的时间"
 
 msgid "Time before the load will be started"
 msgstr "负载将启动之前的时间"
-
-msgid "Time interval"
-msgstr "统计间隔"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
@@ -8761,13 +8778,14 @@ msgstr "总共： %s | 已使用： %s | 空闲： %s"
 msgid "Traceroute"
 msgstr "路由追踪（Traceroute）"
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
-msgstr "路由追踪需要一段时间才能完成。您可以随时按下浏览器的停止按键并观看结果。"
+msgid "Traceroute Output"
+msgstr ""
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -8786,14 +8804,14 @@ msgstr "传输速率"
 msgid "Transfer mode"
 msgstr "传输模式"
 
-msgid "Trap host"
-msgstr "Trap 主机"
+msgid "Trap Host"
+msgstr ""
 
-msgid "Trap port"
-msgstr "Trap 端口"
+msgid "Trap Port"
+msgstr ""
 
-msgid "Trap string"
-msgstr "Trap 字符串"
+msgid "Trap String"
+msgstr ""
 
 msgid "Trap string."
 msgstr "Trap 字符串。"
@@ -9070,10 +9088,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "使用以下的IP位址作为传出数据包的来源位址。"
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr "启用自从Windows 2000 新增的64k 读写串流的SMB 询问。"
@@ -9129,6 +9143,9 @@ msgstr "用户 ID"
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9147,17 +9164,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "用户全名"
-
-msgid "User mask"
-msgstr "用户掩码"
-
 msgid "User numeric id."
 msgstr "用户的数字 ID"
-
-msgid "User password."
-msgstr "用户密码"
 
 msgid "Username"
 msgstr "用户名"
@@ -9483,7 +9491,7 @@ msgid "Yes"
 msgstr "是"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9640,9 +9648,6 @@ msgstr "更改失败。"
 msgid "chroot() everyone, but root."
 msgstr "chroot() 所有用户，除了 root。"
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9666,9 +9671,6 @@ msgstr "最大可设定高电压转换点"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "最大可设置的低电压转换点"
-
-msgid "hours"
-msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI 启动器（iSCSI Initiator）"
@@ -9703,12 +9705,6 @@ msgstr "加载/卸载失败。"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
-msgstr ""
 
 msgid "mount"
 msgstr "挂载"
@@ -9776,6 +9772,3 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
-
-msgid "week days"
-msgstr ""

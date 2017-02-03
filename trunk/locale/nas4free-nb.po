@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-11-06 09:31+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -842,6 +842,9 @@ msgstr ""
 "På det høyeste nivået, et mål er hva som presenteres til initiativtageren og "
 "består av en eller flere størrelser."
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -972,11 +975,14 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr ""
 
-msgid "Backup file"
-msgstr "Sikkerhetskopi"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "Sikkerhetskopi/Gjennoppretting"
@@ -1085,9 +1091,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "Blank tid"
 
 msgid "Block Size"
 msgstr ""
@@ -1334,9 +1337,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check interval"
-msgstr "Intervallsjekk"
-
 msgid "Check shared secret:"
 msgstr "Sjekk delt hemmelighet:"
 
@@ -1416,6 +1416,9 @@ msgid "Command"
 msgstr "Kommando"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1607,6 +1610,9 @@ msgstr "Kontrollerer om dette datasettet kan bli modifisert"
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -2163,9 +2169,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "Målets vertsnavn eller IP adresse."
-
 msgid "Destination network bit count"
 msgstr "Destinasjons nettverkets bitantall"
 
@@ -2183,6 +2186,9 @@ msgid ""
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2691,9 +2697,6 @@ msgstr ""
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "Nedlastingsmappe"
-
 msgid "Drive Temperature."
 msgstr ""
 
@@ -3053,7 +3056,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Slå på port-videresending via NAT-PMP eller UPnP."
 
 msgid "Enable proxy authentication."
-msgstr "Slå på proxy autentisering."
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3092,6 +3095,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Slå på ident protokollen (RFC1413)"
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3197,6 +3205,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3220,6 +3234,18 @@ msgid ""
 msgstr ""
 "Skriv inn ønsket system tid direkte (format mm/dd/åååå tt:mm) eller bruk "
 "ikonet for å velge det."
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3261,6 +3287,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Angi portnummeret som fellene skal sende til (standard 162)."
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "Angi vertsnavnet på fellen."
 
@@ -3290,7 +3319,7 @@ msgstr "Hendelse"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3408,7 +3437,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP Proxy"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP hendelser"
@@ -3582,10 +3611,10 @@ msgstr "Følg"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
+msgid "Force delete"
 msgstr ""
 
 msgid "Forced Update Period"
@@ -3750,9 +3779,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "Gruppe navn."
-
 msgid "Group numeric id."
 msgstr "Gruppe numerisk id."
 
@@ -3812,7 +3838,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP Proxy"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr ""
@@ -3868,9 +3894,6 @@ msgstr "Hint"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "Hjemme mappe"
 
 msgid "Host"
 msgstr "Vert"
@@ -4191,13 +4214,13 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
-
-msgid "Initiator name"
-msgstr "Initierings navn"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -4289,6 +4312,9 @@ msgid "Internal UPS clock date"
 msgstr ""
 
 msgid "Internal UPS clock time"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Interval between self tests"
@@ -4676,11 +4702,11 @@ msgstr ""
 msgid "Login"
 msgstr "Innlogging"
 
-msgid "Login name of user."
-msgstr "Brukers innloggingsnavn"
-
 msgid "Logout"
 msgstr "Logg ut"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -4818,15 +4844,8 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "Maks. TTL"
-
 msgid "Max. pre-send R2T"
 msgstr ""
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr "Maks. time-to-live (maks. antall hopp) brukt i utgående søke-pakker."
 
 msgid "MaxBurstLength"
 msgstr ""
@@ -4841,9 +4860,6 @@ msgid "Maximum (Highest Performance)"
 msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
-
-msgid "Maximum frequency"
 msgstr ""
 
 msgid "Maximum idle time in seconds."
@@ -4957,9 +4973,6 @@ msgstr ""
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
-msgid "Minimum frequency"
-msgstr ""
-
 msgid "Minimum incoming voltage seen"
 msgstr ""
 
@@ -5026,9 +5039,6 @@ msgstr ""
 msgid "Monday"
 msgstr ""
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr ""
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5057,9 +5067,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "Monteringspunkt"
 
 msgid "Mount point name"
 msgstr "Monteringspunkt navn"
@@ -5492,8 +5499,11 @@ msgstr ""
 msgid "Off"
 msgstr "Av"
 
-msgid "Old passphrase"
-msgstr "Gammelt passord"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "På"
@@ -5621,6 +5631,9 @@ msgstr "Pakke opplasting feilet (tomt for minne?)"
 msgid "Packages"
 msgstr "Pakker"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5672,6 +5685,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Passord"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "Passordene er ikke like."
@@ -5758,9 +5774,6 @@ msgstr ""
 msgid "Peer User"
 msgstr ""
 
-msgid "Peer port"
-msgstr ""
-
 msgid "Performance Settings"
 msgstr ""
 
@@ -5786,7 +5799,13 @@ msgstr ""
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5976,9 +5995,6 @@ msgstr ""
 
 msgid "Power management"
 msgstr ""
-
-msgid "Power mode"
-msgstr "Strømmodus"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6300,6 +6316,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6311,12 +6330,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module name"
-msgstr "Fjern modulnavn"
-
-msgid "Remote monitoring"
-msgstr "Fjernovervåking"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6401,14 +6414,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr "Løs"
-
 msgid "Resolve IP"
 msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Løs IP adresser til vertsnavn"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr ""
@@ -6419,10 +6426,10 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
+msgid "Resources"
 msgstr ""
 
-msgid "Resources"
+msgid "Restore"
 msgstr ""
 
 msgid "Restore Configuration"
@@ -6656,7 +6663,7 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr ""
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr ""
 
 msgid "Scrub a pool"
@@ -6755,8 +6762,15 @@ msgstr ""
 msgid "Select item to remove from the list"
 msgstr ""
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "Velg et monteringspunkt for swap fil skal lages."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6785,6 +6799,9 @@ msgstr ""
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
+msgstr ""
+
+msgid "Select which interface to use."
 msgstr ""
 
 msgid ""
@@ -6900,6 +6917,11 @@ msgstr "Sett tilleggs gruppe-medlemskap for denne kontoen."
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6931,15 +6953,14 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
+msgid "Set user login shell."
 msgstr ""
 
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
+msgid "Setkey"
 msgstr ""
-"Setter intervallet mellom disk-sjekker til N sekunder. Den minste tillatte "
-"verdien er 10."
+
+msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
+msgstr ""
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -6982,6 +7003,9 @@ msgstr "Skall"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -7006,10 +7030,10 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Slå av"
 
-msgid "Shutdown mode"
+msgid "Shutdown Mode"
 msgstr ""
 
-msgid "Shutdown timer"
+msgid "Shutdown Timer"
 msgstr ""
 
 msgid "Simple Network Management Protocol"
@@ -7038,6 +7062,9 @@ msgid "Skew"
 msgstr ""
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7469,14 +7496,14 @@ msgstr ""
 msgid "Target"
 msgstr "Mål"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr ""
 
 msgid "Target Name"
 msgstr "Mål navn"
-
-msgid "Target address"
-msgstr "Mål adresse"
 
 msgid "Target directory."
 msgstr "Målkatalog"
@@ -7489,9 +7516,6 @@ msgstr ""
 
 msgid "Target list"
 msgstr ""
-
-msgid "Target name"
-msgstr "Mål navn"
 
 msgid "Target side secret."
 msgstr ""
@@ -7529,11 +7553,11 @@ msgstr "Midlertidig katalog"
 msgid "Temporary directory to store transcoded files."
 msgstr ""
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "Test e-øost"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8068,7 +8092,7 @@ msgid "The old password is not correct."
 msgstr "Den gamle passordet er ikke riktig."
 
 msgid "The password contains the illegal character ':'."
-msgstr "Passordet inneholder tegnet ':', dette er ikke mulig."
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr ""
@@ -8210,9 +8234,6 @@ msgid ""
 msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
-msgstr ""
-
-msgid "The user's login shell."
 msgstr ""
 
 msgid "The value of the variable."
@@ -8443,7 +8464,7 @@ msgid ""
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
@@ -8641,9 +8662,6 @@ msgstr ""
 msgid "This tag is used."
 msgstr ""
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "IP adressen eller DNS navnet til iSCSI målet."
-
 msgid "This user already exists in the user list."
 msgstr "Brukeren eksisterer allerede i bruker listen."
 
@@ -8716,9 +8734,6 @@ msgid "Time before the load will be shutdown"
 msgstr ""
 
 msgid "Time before the load will be started"
-msgstr ""
-
-msgid "Time interval"
 msgstr ""
 
 msgid "Time spent during the positioning of the drive heads."
@@ -8847,15 +8862,14 @@ msgstr ""
 msgid "Traceroute"
 msgstr "Traceroute"
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
 msgstr ""
-"Traceroute kan ta litt tid å fullføre. Du kan trykke på Stop knappen i din "
-"nettleser når som helst for å se fremgangen til feilede traceroutes."
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -8874,13 +8888,13 @@ msgstr ""
 msgid "Transfer mode"
 msgstr "Overføringsmodus"
 
-msgid "Trap host"
+msgid "Trap Host"
 msgstr ""
 
-msgid "Trap port"
+msgid "Trap Port"
 msgstr ""
 
-msgid "Trap string"
+msgid "Trap String"
 msgstr ""
 
 msgid "Trap string."
@@ -9160,10 +9174,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "Bruk følgende IP adresse som kildeadresse i utgående pakker."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9217,6 +9227,9 @@ msgstr "Bruker ID"
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9235,17 +9248,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "Brukers hele navn."
-
-msgid "User mask"
-msgstr ""
-
 msgid "User numeric id."
 msgstr "Brukers numeriske ID"
-
-msgid "User password."
-msgstr "Brukers passord"
 
 msgid "Username"
 msgstr "Brukernavn"
@@ -9575,7 +9579,7 @@ msgid "Yes"
 msgstr "Ja"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9734,9 +9738,6 @@ msgstr ""
 msgid "chroot() everyone, but root."
 msgstr "chroot()  alle bortsett fra root."
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9759,9 +9760,6 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
-msgstr ""
-
-msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9796,12 +9794,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9870,6 +9862,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "avmontér"
-
-msgid "week days"
-msgstr ""

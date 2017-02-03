@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-30 18:12+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"PO-Revision-Date: 2017-02-03 05:43+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -30,11 +30,11 @@ msgstr "%d zile"
 
 #, php-format
 msgid "%d week"
-msgstr "%d săptămînă"
+msgstr "%d săptămână"
 
 #, php-format
 msgid "%d weeks"
-msgstr "%d săptămîni"
+msgstr "%d săptămâni"
 
 #, php-format
 msgid "%d year"
@@ -50,7 +50,7 @@ msgstr "%d%% din %dMiB"
 
 #, php-format
 msgid "%dB / block"
-msgstr "%dB / block"
+msgstr "%dB / bloc"
 
 #, php-format
 msgid "%s Interface"
@@ -154,7 +154,7 @@ msgid ""
 "meaningful as a decimal number."
 msgstr ""
 "(Valoare brută specifică producătorului) Memorează date referitoare la rata "
-"erorilor hardware care apar la citirea datelor de pe suprafata discului "
+"erorilor hardware care apar la citirea datelor de pe suprafața discului "
 "magnetic. Datele brute furnizate au structuri diferite funcție de producător "
 "și nu oferă informații directe citite ca număr zecimal."
 
@@ -206,8 +206,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
-"Un Grup Portal este identificat printr-un tag și definește adresele IP și "
-"porturile TCP active."
+"Un Grup Portal este identificat printr-o etichetă număr și definește "
+"adresele IP și porturile TCP active."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -219,7 +219,7 @@ msgid ""
 "index.htm or default.htm) are found in a directory."
 msgstr ""
 "Când fișierele index implicite (index.php, index.html, index.htm sau "
-"default.htm) nu sunt găsite sistemul va genera o listă cu fișierele găsite "
+"default.htm) nu sunt găsite sistemul va genera o listă cu fișierele aflate "
 "în folder."
 
 msgid ""
@@ -227,7 +227,7 @@ msgid ""
 "that has the same IP. Use a space to separate multiple alias names."
 msgstr ""
 "Un alias pentru numele sistemului. Această opțiune poate să apară de mai "
-"multe ori, pentru fiecare domeniu care are aceeași adresă IP. Utilizați cîte "
+"multe ori, pentru fiecare domeniu care are aceeași adresă IP. Utilizați câte "
 "un caracter ' ' (spațiu) pentru separarea mai multor nume alias."
 
 msgid ""
@@ -255,7 +255,7 @@ msgid "A reload request has been sent to the daemon."
 msgstr "O cerere de reâncărcare a fost trimisă la daemon."
 
 msgid "A rescan has been issued."
-msgstr "A fost pornită o rescanare."
+msgstr "S-a pornit o rescanare"
 
 msgid "A route to this destination network already exists."
 msgstr "Exista deja o rută către această destinație."
@@ -276,7 +276,9 @@ msgstr "Trebuie să introduceți o adresă IP validă."
 
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
-msgstr "O adresa IP sau o nota CIDR este necesara pentru fisierul host allow"
+msgstr ""
+"O adresă IP sau o notă CIDR este necesară pentru fișierul cu gazde acceptate "
+"(host allow)"
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
@@ -313,7 +315,7 @@ msgid "A valid destination network must be specified."
 msgstr "Trebuie specificată o rețea destinație validă."
 
 msgid "A valid gateway IP address must be specified."
-msgstr "Trebuie specificată o adresă IP pentru gateway validă."
+msgstr "Trebuie specificată o adresă IP validă pentru gateway."
 
 msgid "A valid mtu size must be specified."
 msgstr "Trebuie introdusă o valoare MTU validă."
@@ -334,7 +336,7 @@ msgid "ACL Mode"
 msgstr "Mod ACL"
 
 msgid "ACL inherit"
-msgstr "permis ACL mostenit"
+msgstr "ACL mostenit"
 
 msgid "ACL mode"
 msgstr "mod ACL"
@@ -343,7 +345,7 @@ msgid "AD authentication disabled"
 msgstr "Autentificare AD dezactivată"
 
 msgid "AD or PDC name."
-msgstr "Nume server AD sau PDC."
+msgstr "Nume AD sau PDC."
 
 msgid "AFP"
 msgstr "AFP"
@@ -367,7 +369,7 @@ msgid "ALL Interfaces"
 msgstr "TOATE interfețele"
 
 msgid "AP mode"
-msgstr "Mod punct de acces"
+msgstr "Mod AP"
 
 msgid "ARP Tables"
 msgstr "Tabele ARP"
@@ -908,6 +910,9 @@ msgstr ""
 "La cel mai înalt nivel, o destinație este ceea ce este prezentat "
 "inițiatorului, și este alcătuită din una sau mai multe extensii."
 
+msgid "Attach"
+msgstr "Atașare"
+
 msgid "Attach a data device"
 msgstr "Adăugare dispozitiv stocare"
 
@@ -1051,10 +1056,13 @@ msgstr "Înapoi"
 msgid "Background"
 msgstr "Fundal"
 
+msgid "Backup"
+msgstr "Backup"
+
 msgid "Backup Configuration"
 msgstr "Configurație backup"
 
-msgid "Backup file"
+msgid "Backup File"
 msgstr "Fișier backup"
 
 msgid "Backup/Restore"
@@ -1170,9 +1178,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr "Blank Time"
-
-msgid "Blank time"
-msgstr "Timp nul"
 
 msgid "Block Size"
 msgstr "Dimensiune bloc"
@@ -1426,9 +1431,6 @@ msgstr "Verifică Sistem|Setări Generale înainte de inițializare"
 msgid "Check and replace cable"
 msgstr "Verificați și înlocuiți cablul"
 
-msgid "Check interval"
-msgstr "Interval de verificare"
-
 msgid "Check shared secret:"
 msgstr "Verificare secret partajat:"
 
@@ -1517,6 +1519,9 @@ msgstr "Comandă"
 
 msgid "Command Output"
 msgstr "Rezultat comandă"
+
+msgid "Command Output:"
+msgstr "Rezultat comandă:"
 
 msgid "Command Scripts"
 msgstr "Scripturi comenzi"
@@ -1727,6 +1732,9 @@ msgid ""
 msgstr ""
 "Conversie atribute DOS la permisiuni UNIX de execuție fișier pentru opțiunea "
 "Store DOS dezactivată."
+
+msgid "Conveyance Self-Test"
+msgstr "Auto-test detaliat"
 
 msgid "Core"
 msgstr "Nucleu"
@@ -2362,9 +2370,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr "Nume destinație sau adresă IP."
 
-msgid "Destination host name or IP number."
-msgstr "Nume sau IP destinație."
-
 msgid "Destination network bit count"
 msgstr "Mască rețea destinație"
 
@@ -2384,6 +2389,9 @@ msgstr ""
 
 msgid "Destroyed"
 msgstr "Distrus"
+
+msgid "Detach"
+msgstr "Detașare"
 
 msgid "Detach a data device from a mirror"
 msgstr "Detașare dispozitiv stocare de la un dispozitiv tip oglindă"
@@ -2901,9 +2909,6 @@ msgstr "Descărcare configurație"
 msgid "Download Directory"
 msgstr "Director pentru download"
 
-msgid "Download directory"
-msgstr "Folder de descărcare"
-
 msgid "Drive Temperature."
 msgstr "Temperatura discului."
 
@@ -3310,6 +3315,13 @@ msgstr "Activare protocol identificare (RFC1413)."
 msgid "Enable the server power control utility."
 msgstr "Activare utilitar pentru controlul puterii serverului."
 
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
+"Activați această opțiune dacă doriți să editați direct paginile de "
+"configurare fără a mai trece în modul editare."
+
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Activare suport strict pentru standardul DLNA."
 
@@ -3421,6 +3433,12 @@ msgstr "Introducere descriere"
 msgid "Enter a description for your reference."
 msgstr "Introduceți o scurtă descriere"
 
+msgid "Enter a group description."
+msgstr "Introducere descriere grup."
+
+msgid "Enter a group name."
+msgstr "Introducere nume grup."
+
 msgid "Enter a name"
 msgstr "Introduceți un nume"
 
@@ -3447,6 +3465,18 @@ msgid ""
 msgstr ""
 "Introduceți direct valoarea pentru dată/oră (în formatul ll/zz/aaaa hh:mm) "
 "sau utilizați butonul de selecție pentru calendar."
+
+msgid "Enter full name of the user."
+msgstr "Introducere nume complet utilizator."
+
+msgid "Enter hostname or IP address."
+msgstr "Introducere nume sistem sau adresă IP."
+
+msgid "Enter login name of the user."
+msgstr "Introducere nume de autentidicare utilizator."
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr "Introducere adresă IP sau nume DNS pentru destinația iSCSI."
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3496,6 +3526,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Introduceți portul pentru capcane software (implicit 162)."
 
+msgid "Enter the user password."
+msgstr "Introducere parolă utilizator."
+
 msgid "Enter trap host name."
 msgstr "Introduceți numele sistemului pentru capcane software"
 
@@ -3527,8 +3560,8 @@ msgstr "Eveniment"
 msgid "Event Selection"
 msgstr "Selecție eveniment"
 
-msgid "Example: pkg add packagename."
-msgstr "Examplu: pkg adaugă packagename."
+msgid "Example: pkg install packagename."
+msgstr "Exemplu: nume pachet pentru instalare."
 
 msgid "Execute"
 msgstr "Executare"
@@ -3823,11 +3856,11 @@ msgstr "Urmărire"
 msgid "Force Operation"
 msgstr "Forțare operațiune"
 
+msgid "Force Use"
+msgstr "Forțare utilizare"
+
 msgid "Force delete"
 msgstr "Forțare ștergere"
-
-msgid "Force use"
-msgstr "Forțare utilizare"
 
 msgid "Forced Update Period"
 msgstr "Perioadă actualizare forțată"
@@ -3994,9 +4027,6 @@ msgstr "Grupul este blocat"
 msgid "Group is marked for deletion"
 msgstr "Grupul este marcat pentru ștergere"
 
-msgid "Group name."
-msgstr "Nume grup."
-
 msgid "Group numeric id."
 msgstr "Id numeric grup."
 
@@ -4125,9 +4155,6 @@ msgstr "Indiciu"
 
 msgid "Home Directory"
 msgstr "Directorul Home"
-
-msgid "Home directory"
-msgstr "Folder utilizator"
 
 msgid "Host"
 msgstr "Sistem"
@@ -4479,15 +4506,15 @@ msgstr ""
 "Grupurile Inițiator conșine numele utilizatorilor autorizați și rețelele "
 "permise pentru accesarea țintei."
 
+msgid "Initiator Name"
+msgstr "Nume inițiator"
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "Inițiatorul autorizat să acceseze destinația iSCSI. Trebuie introdus fie un "
 "nume fie textul 'ALL' pentru permisiune globală."
-
-msgid "Initiator name"
-msgstr "Nume inițiator"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -4588,6 +4615,9 @@ msgstr "Dată ceas intern UPS"
 
 msgid "Internal UPS clock time"
 msgstr "Timp ceas intern UPS"
+
+msgid "Interval"
+msgstr "Interval"
 
 msgid "Interval between self tests"
 msgstr "Interval de timp între două autoteste"
@@ -5009,11 +5039,11 @@ msgstr "Tip Unitate Logică mapat în LUN."
 msgid "Login"
 msgstr "Autentificare"
 
-msgid "Login name of user."
-msgstr "Numele de autentificare al utilizatorului."
-
 msgid "Logout"
 msgstr "Deautentificare"
+
+msgid "Long Self-Test"
+msgstr "Test detaliat"
 
 msgid "Low voltage boosting transfer point"
 msgstr "Punct de transfer pentru cădere de tensiune"
@@ -5158,17 +5188,8 @@ msgstr "Nr. max. porturi pasive"
 msgid "Max. Sessions"
 msgstr "Nr. max. sesiuni"
 
-msgid "Max. TTL"
-msgstr "TTL max."
-
 msgid "Max. pre-send R2T"
 msgstr "Pre-send R2T maxim"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Timp maxim time-to-live (număr maxim de noduri) utilizat pentru pachetele de "
-"probă."
 
 msgid "MaxBurstLength"
 msgstr "LungimeMaximăBurst"
@@ -5184,9 +5205,6 @@ msgstr "Maxim (Performanță Maximă)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Performanță maximă, nivel acustic maxim"
-
-msgid "Maximum frequency"
-msgstr "Frecvență maximă"
 
 msgid "Maximum idle time in seconds."
 msgstr "Timp maxim mod idle în secunde."
@@ -5304,9 +5322,6 @@ msgstr ""
 "Nivel minim acumulator pentru repornire UPS după căderea tensiunii de "
 "alimentare"
 
-msgid "Minimum frequency"
-msgstr "Frecvență minimă"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Valoare minimă tensiune rețea"
 
@@ -5373,9 +5388,6 @@ msgstr "Lun"
 msgid "Monday"
 msgstr "Luni"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Luni Marţi Miercuri Joi Vineri Sîmbătă Duminică"
-
 msgid "Monitoring"
 msgstr "Monitorizare"
 
@@ -5406,9 +5418,6 @@ msgstr "Unelte punct montare"
 
 msgid "Mount Points"
 msgstr "Puncte de montare"
-
-msgid "Mount point"
-msgstr "Punct Montare"
 
 msgid "Mount point name"
 msgstr "Nume punct de montare"
@@ -5855,8 +5864,11 @@ msgstr "Octombrie"
 msgid "Off"
 msgstr "Oprit"
 
-msgid "Old passphrase"
-msgstr "Expresie parolă veche"
+msgid "Offline Immediate Test"
+msgstr "Test offline imediat"
+
+msgid "Old Passphrase"
+msgstr "Frază-parolă veche"
 
 msgid "On"
 msgstr "Pornit"
@@ -5992,6 +6004,9 @@ msgstr "Încărcarea pachetului a eșuat! (memorie insuficientă?)"
 msgid "Packages"
 msgstr "Pachete"
 
+msgid "Packages Installer"
+msgstr "Program instalare pachete"
+
 msgid "Page Refresh"
 msgstr "Reactualizare pagină"
 
@@ -6044,6 +6059,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Frază Parolă"
+
+msgid "Passphrase Confirmation"
+msgstr "Confirmare frază-parolă"
 
 msgid "Passphrase don't match."
 msgstr "Frazele parolă nu coincid."
@@ -6134,9 +6152,6 @@ msgstr "Secret grup"
 msgid "Peer User"
 msgstr "Utilizator grup"
 
-msgid "Peer port"
-msgstr "Port grup"
-
 msgid "Performance Settings"
 msgstr "Setări de performanță"
 
@@ -6162,8 +6177,14 @@ msgstr "Imagini"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
-msgstr "Test ping"
+msgid "Ping Host"
+msgstr "Ping sistem"
+
+msgid "Ping Output"
+msgstr "Ieșire comandă ping"
+
+msgid "Ping may take a while, please be patient."
+msgstr "Comanda ping poate dura un timp."
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Verificare (Ping) winbindd:"
@@ -6356,9 +6377,6 @@ msgstr "Mod Energetic"
 
 msgid "Power management"
 msgstr "Gestionare consum"
-
-msgid "Power mode"
-msgstr "Mod energetic"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6695,6 +6713,9 @@ msgstr "Adresă sistem remote"
 msgid "Remote Module (Source)"
 msgstr "Modul remote (sursă)"
 
+msgid "Remote Monitoring"
+msgstr "Monitorizare remote"
+
 msgid "Remote Rsync Daemon"
 msgstr "Daemon Rsync remote"
 
@@ -6706,12 +6727,6 @@ msgstr "Mesaje syslor remote"
 
 msgid "Remote Syslog Server"
 msgstr "Server syslog remote"
-
-msgid "Remote module name"
-msgstr "Nume destinație"
-
-msgid "Remote monitoring"
-msgstr "Monitorizare destinație"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6801,14 +6816,8 @@ msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 "Rezistența cauzată de frecarea între părțile mecanice în timpul funcționării."
 
-msgid "Resolve"
-msgstr "Rezolvare"
-
 msgid "Resolve IP"
 msgstr "Rezolvare IP"
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Conversie adresă IP în nume de sistem"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr "Afișare nume sistem pe baza adresei IP"
@@ -6819,11 +6828,11 @@ msgstr "Resursă"
 msgid "Resource Name"
 msgstr "Nume resursă"
 
-msgid "Resource name"
-msgstr "Nume resursă"
-
 msgid "Resources"
 msgstr "Resurse"
+
+msgid "Restore"
+msgstr "Restaurare"
 
 msgid "Restore Configuration"
 msgstr "Restaurare configurație"
@@ -7068,7 +7077,7 @@ msgstr "Setări programate Auto-Test"
 msgid "Scheduled Shutdown"
 msgstr "Oprire programată"
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr "Teste programate"
 
 msgid "Scrub a pool"
@@ -7178,8 +7187,17 @@ msgstr "Selectare firmware:"
 msgid "Select item to remove from the list"
 msgstr "Selectați un element din listă pentru eliminare"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+"Selectare timp-to-live maxim (numărul maxim de noduri) folosit pentru "
+"trimiterea de pachete."
+
 msgid "Select mount point where to create the swap file."
 msgstr "Selectați un punct de montare unde va fi creat fișierul 'swap'."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr "Selectare număr pachete ICMP ECHO REQUEST."
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7215,6 +7233,9 @@ msgid ""
 msgstr ""
 "Selectați configurația dorită a sistemului în format GZIP sau XML și "
 "confirmați cu butonul de mai jos restaurarea efectivă a configurației."
+
+msgid "Select which interface to use."
+msgstr "Selectare interfață de utilizat."
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7330,6 +7351,13 @@ msgstr "Definiți grupuri adiționale pentru acest cont."
 msgid "Set browseable."
 msgstr "Permite navigarea"
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+"Setare interval între două verificări a discurilor la N secunde. Valoarea "
+"minimă acceptată: 10."
+
 msgid "Set read only."
 msgstr "Setare doar citire."
 
@@ -7370,17 +7398,16 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Valoarea vitezei de scroll (între 0 și 10). Implicit este 10."
 
+msgid "Set user login shell."
+msgstr "Setare shell autentificare utilizator."
+
+msgid "Setkey"
+msgstr "Setkey"
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Definire punct alternativ de montare pentru rădăcina bazei de date. Implicit "
 "este /mnt."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Stabilire interval în secunde pentru verificare discuri. Valoarea minimă "
-"permisă este 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7425,6 +7452,9 @@ msgstr "Shell"
 msgid "Shock During Write."
 msgstr "Șoc în timpul operației de scriere."
 
+msgid "Short Self-Test"
+msgstr "Auto-test rapid"
+
 msgid "Show Default Groups"
 msgstr "Afișare grupuri implicite"
 
@@ -7452,11 +7482,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Oprire"
 
-msgid "Shutdown mode"
-msgstr "Mod Oprire"
+msgid "Shutdown Mode"
+msgstr "Nod oprire"
 
-msgid "Shutdown timer"
-msgstr "Cronometru oprire"
+msgid "Shutdown Timer"
+msgstr "Timer oprire"
 
 msgid "Simple Network Management Protocol"
 msgstr "Protocol Elementar de Management Rețea"
@@ -7487,6 +7517,9 @@ msgstr "Skew"
 
 msgid "Skip First Scan"
 msgstr "Evită prima scanare"
+
+msgid "Skip View Mode"
+msgstr "Anulare mod vizualizare"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - Verificare dispozitiv doar dacă nu este deja în modul Sleep."
@@ -7941,14 +7974,14 @@ msgstr "Casetă"
 msgid "Target"
 msgstr "Destinație"
 
+msgid "Target Address"
+msgstr "Adresă țintă"
+
 msgid "Target Alias"
 msgstr "Alias Destinație"
 
 msgid "Target Name"
 msgstr "Nume Destinație"
-
-msgid "Target address"
-msgstr "Adresă Destinație"
 
 msgid "Target directory."
 msgstr "Folderul destinație."
@@ -7961,9 +7994,6 @@ msgstr "Destinația nu este selectată."
 
 msgid "Target list"
 msgstr "Lista Destinații"
-
-msgid "Target name"
-msgstr "Nume Destinație"
 
 msgid "Target side secret."
 msgstr "Secretul la destinație."
@@ -8003,11 +8033,11 @@ msgstr "Folder temporar"
 msgid "Temporary directory to store transcoded files."
 msgstr "Folder temporar pentru stocarea fișierelor convertite."
 
+msgid "Test Email"
+msgstr "Email de test"
+
 msgid "Test Mode"
 msgstr "Mod testare"
-
-msgid "Test email"
-msgstr "Email de test"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8634,7 +8664,7 @@ msgid "The old password is not correct."
 msgstr "Parola veche este incorectă."
 
 msgid "The password contains the illegal character ':'."
-msgstr "Parola nu poate conține caracterul ':'."
+msgstr "Parola conține caracterul ilegal ':'."
 
 msgid "The password encryption protocol to use."
 msgstr "Protocolul de criptare a parolei de utilizat."
@@ -8799,9 +8829,6 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Fișierul a fost parțial încărcat."
-
-msgid "The user's login shell."
-msgstr "Consola de autentificare utilizator."
 
 msgid "The value of the variable."
 msgstr "Valoarea variabilei."
@@ -9074,9 +9101,10 @@ msgstr ""
 "Acesta reprezintă atît numele serverului anunțat prin serviciul "
 "Zeroconf/Bonjour/Rendezvous cît și numele bazei exportate prin DAAP."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
-"Doar pentru informare (nu va fi utilizat în timpul negocierii iSCSI)."
+"Acest mesaj este doar pentru informare (nu este utilizat la negocierea "
+"iSCSI)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9343,9 +9371,6 @@ msgstr "Această etichetă există deja."
 msgid "This tag is used."
 msgstr "Această etichetă este utilizată."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "Adresa IP sau numele unei destinații iSCSI"
-
 msgid "This user already exists in the user list."
 msgstr "Acest nume de utilizator există deja în lista utilizatorilor."
 
@@ -9427,9 +9452,6 @@ msgstr "Timpul pînă la oprirea sarcinii"
 
 msgid "Time before the load will be started"
 msgstr "Timpul pînă la pornirea sarcinii"
-
-msgid "Time interval"
-msgstr "Interval de Timp"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Timpul necesar pentru poziționarea capetelor magnetice."
@@ -9579,16 +9601,14 @@ msgstr "Total: %s | Utilizat: %s | Liber: %s"
 msgid "Traceroute"
 msgstr "Trasare Ruta"
 
-msgid "Traceroute Test"
-msgstr "Test traceroute"
+msgid "Traceroute Host"
+msgstr "Traceroute către sistem"
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
-msgstr ""
-"Trasarea rutei poate dura cîteva momente. Puteți renunța în orice moment "
-"apăsînd butonul Stop, în browser fiind afișate rutele descoperite pînă în "
-"acel moment."
+msgid "Traceroute Output"
+msgstr "Răaspuns comandă treceroute"
+
+msgid "Traceroute may take a while, please be patient."
+msgstr "Traceroute poate dura un timp, va trebui să aveți răbdare."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9609,14 +9629,14 @@ msgstr "Rata de transfer"
 msgid "Transfer mode"
 msgstr "Mod transfer"
 
-msgid "Trap host"
-msgstr "Captură sistem"
+msgid "Trap Host"
+msgstr "Sistem captură"
 
-msgid "Trap port"
-msgstr "Captură port"
+msgid "Trap Port"
+msgstr "Port captură"
 
-msgid "Trap string"
-msgstr "Captură text"
+msgid "Trap String"
+msgstr "Text captură"
 
 msgid "Trap string."
 msgstr "Captură text."
@@ -9908,11 +9928,6 @@ msgstr ""
 "pentru valori pozitive/negative pe axa y)."
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr ""
-"Interfața utilizată pentru trimiterea pachetelor de date pentru diagnostic."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9985,6 +10000,9 @@ msgstr "ID Utilizator"
 msgid "User Mask"
 msgstr "Mască utilizator"
 
+msgid "User Password Settings"
+msgstr "Setări parolă utilizator"
+
 msgid "User Portal"
 msgstr "Portal utilizator"
 
@@ -10003,17 +10021,8 @@ msgstr "Contul de utilizator este blocat"
 msgid "User account is marked for deletion"
 msgstr "Contul de utilizator este marcat pentru ștergere"
 
-msgid "User full name."
-msgstr "Nume complet utilizator."
-
-msgid "User mask"
-msgstr "Mască utilizator"
-
 msgid "User numeric id."
 msgstr "ID numeric utilizator."
-
-msgid "User password."
-msgstr "Parola Utilizator."
 
 msgid "Username"
 msgstr "Nume Utilizator"
@@ -10360,11 +10369,11 @@ msgid "Yes"
 msgstr "Da"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"Puteți instala pachete și prin SSH sau de la consolă folosind comanda pkg "
-"add."
+"Puteți instala de asemenea pachete și via SSH sau de la consolă folosind "
+"comanda pkg install."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10545,9 +10554,6 @@ msgstr "schimbare eșuată."
 msgid "chroot() everyone, but root."
 msgstr "chroot() pentru toți utilizatorii, fără root."
 
-msgid "days"
-msgstr "zile"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10573,9 +10579,6 @@ msgstr "valoarea maximă punct de transfer tensiune înaltă"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "valoarea maximă punct de transfer tensiune joasă"
-
-msgid "hours"
-msgstr "ore"
 
 msgid "iSCSI Initiator"
 msgstr "Inițiator iSCSI"
@@ -10610,12 +10613,6 @@ msgstr "eroare încărcare/descărcare."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr "minute"
-
-msgid "months"
-msgstr "luni"
 
 msgid "mount"
 msgstr "montare"
@@ -10683,6 +10680,3 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
-
-msgid "week days"
-msgstr "zilele saptaminii"

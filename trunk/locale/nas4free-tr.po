@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -831,6 +831,9 @@ msgid ""
 "made up of one or more extents."
 msgstr ""
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -961,11 +964,14 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr ""
 
-msgid "Backup file"
-msgstr "Yedek dosyası"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "Yedekle/Geri al"
@@ -1074,9 +1080,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "Belirsiz zaman"
 
 msgid "Block Size"
 msgstr ""
@@ -1319,9 +1322,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check interval"
-msgstr "Kontrol aralığı"
-
 msgid "Check shared secret:"
 msgstr "Gizli Paylaşımları Kontrol Et"
 
@@ -1400,6 +1400,9 @@ msgid "Command"
 msgstr "Komut"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1588,6 +1591,9 @@ msgstr ""
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -2143,9 +2149,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "Hedef IP adresi yada ismi."
-
 msgid "Destination network bit count"
 msgstr "Hedef Ağ Bit sayısı"
 
@@ -2163,6 +2166,9 @@ msgid ""
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2664,9 +2670,6 @@ msgstr ""
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "İndirme dizini"
-
 msgid "Drive Temperature."
 msgstr ""
 
@@ -3026,7 +3029,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "NAT-PMP veya UPnP üzerinden port yanıtlamayı etkinleştir."
 
 msgid "Enable proxy authentication."
-msgstr "Proxy üzerinden kimlik doğrulamasını etkinleştir"
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3062,6 +3065,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3167,6 +3175,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3187,6 +3201,18 @@ msgstr "Geçerli bir sysctl MIB ismi girin."
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
+msgstr ""
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr ""
 
 msgid ""
@@ -3225,6 +3251,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Tuzakları (varsayılan 162) göndermek için port numarasını girin"
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "Uzak bilgşsayar adını gir."
 
@@ -3254,7 +3283,7 @@ msgstr "Olay"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3367,7 +3396,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP Proxy"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP olayları"
@@ -3541,10 +3570,10 @@ msgstr "Takip et"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
+msgid "Force delete"
 msgstr ""
 
 msgid "Forced Update Period"
@@ -3709,9 +3738,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "Grup ismi"
-
 msgid "Group numeric id."
 msgstr "Grup sayı kimliği"
 
@@ -3771,7 +3797,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP Proxy"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr ""
@@ -3827,9 +3853,6 @@ msgstr "İpucu"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "Başlangıç dizini"
 
 msgid "Host"
 msgstr "Bilgisayar"
@@ -4143,13 +4166,13 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
-
-msgid "Initiator name"
-msgstr "Başlatanın ismi"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -4241,6 +4264,9 @@ msgid "Internal UPS clock date"
 msgstr ""
 
 msgid "Internal UPS clock time"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Interval between self tests"
@@ -4628,11 +4654,11 @@ msgstr ""
 msgid "Login"
 msgstr "Oturum Açma"
 
-msgid "Login name of user."
-msgstr "Kullanıcının oturum açma adı"
-
 msgid "Logout"
 msgstr "Oturumu kapat"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -4770,14 +4796,7 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "Max. TTL"
-
 msgid "Max. pre-send R2T"
-msgstr ""
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
 msgstr ""
 
 msgid "MaxBurstLength"
@@ -4793,9 +4812,6 @@ msgid "Maximum (Highest Performance)"
 msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
-
-msgid "Maximum frequency"
 msgstr ""
 
 msgid "Maximum idle time in seconds."
@@ -4909,9 +4925,6 @@ msgstr ""
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
-msgid "Minimum frequency"
-msgstr ""
-
 msgid "Minimum incoming voltage seen"
 msgstr ""
 
@@ -4978,9 +4991,6 @@ msgstr ""
 msgid "Monday"
 msgstr ""
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr ""
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5009,9 +5019,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "Bağlanma noktası"
 
 msgid "Mount point name"
 msgstr ""
@@ -5433,7 +5440,10 @@ msgstr ""
 msgid "Off"
 msgstr "Açık"
 
-msgid "Old passphrase"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
 msgstr ""
 
 msgid "On"
@@ -5560,6 +5570,9 @@ msgstr "Paket gönderimi başarısız (yetersiz bellek?)"
 msgid "Packages"
 msgstr "Paketler"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5604,6 +5617,9 @@ msgid ""
 msgstr ""
 
 msgid "Passphrase"
+msgstr ""
+
+msgid "Passphrase Confirmation"
 msgstr ""
 
 msgid "Passphrase don't match."
@@ -5691,9 +5707,6 @@ msgstr ""
 msgid "Peer User"
 msgstr ""
 
-msgid "Peer port"
-msgstr "Kaynak portu"
-
 msgid "Performance Settings"
 msgstr ""
 
@@ -5719,7 +5732,13 @@ msgstr ""
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5906,9 +5925,6 @@ msgstr ""
 
 msgid "Power management"
 msgstr ""
-
-msgid "Power mode"
-msgstr "Güç modu"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6230,6 +6246,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6240,12 +6259,6 @@ msgid "Remote Syslog Messages"
 msgstr ""
 
 msgid "Remote Syslog Server"
-msgstr ""
-
-msgid "Remote module name"
-msgstr ""
-
-msgid "Remote monitoring"
 msgstr ""
 
 msgid ""
@@ -6327,13 +6340,7 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr ""
-
 msgid "Resolve IP"
-msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
 msgstr ""
 
 msgid "Resolve IP addresses to hostnames."
@@ -6345,10 +6352,10 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
+msgid "Resources"
 msgstr ""
 
-msgid "Resources"
+msgid "Restore"
 msgstr ""
 
 msgid "Restore Configuration"
@@ -6582,7 +6589,7 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr ""
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr ""
 
 msgid "Scrub a pool"
@@ -6681,7 +6688,14 @@ msgstr ""
 msgid "Select item to remove from the list"
 msgstr ""
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
+msgstr ""
+
+msgid "Select number of ICMP ECHO REQUEST packets."
 msgstr ""
 
 msgid ""
@@ -6711,6 +6725,9 @@ msgstr ""
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
+msgstr ""
+
+msgid "Select which interface to use."
 msgstr ""
 
 msgid ""
@@ -6826,6 +6843,11 @@ msgstr "Bu grup için ek olarak grup üyeliği ayarla"
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6857,12 +6879,13 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
+msgid "Set user login shell."
 msgstr ""
 
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
+msgid "Setkey"
+msgstr ""
+
+msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
 msgid ""
@@ -6906,6 +6929,9 @@ msgstr ""
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -6930,11 +6956,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "KApat"
 
-msgid "Shutdown mode"
-msgstr "Kapatma modu"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "Kapanma zamanlayıcısı"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
@@ -6962,6 +6988,9 @@ msgid "Skew"
 msgstr ""
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7389,13 +7418,13 @@ msgstr ""
 msgid "Target"
 msgstr "Hedef"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr ""
 
 msgid "Target Name"
-msgstr ""
-
-msgid "Target address"
 msgstr ""
 
 msgid "Target directory."
@@ -7408,9 +7437,6 @@ msgid "Target is not selected."
 msgstr ""
 
 msgid "Target list"
-msgstr ""
-
-msgid "Target name"
 msgstr ""
 
 msgid "Target side secret."
@@ -7449,11 +7475,11 @@ msgstr ""
 msgid "Temporary directory to store transcoded files."
 msgstr ""
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "Test email"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8135,9 +8161,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr ""
 
-msgid "The user's login shell."
-msgstr ""
-
 msgid "The value of the variable."
 msgstr "Değişkenin değeri"
 
@@ -8358,7 +8381,7 @@ msgid ""
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
@@ -8554,9 +8577,6 @@ msgstr "Etiket kullanılıyor."
 msgid "This tag is used."
 msgstr "Etiket kullanıldı."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr ""
-
 msgid "This user already exists in the user list."
 msgstr "Bu kullanıcı zaten kayıtlı"
 
@@ -8630,9 +8650,6 @@ msgstr ""
 
 msgid "Time before the load will be started"
 msgstr ""
-
-msgid "Time interval"
-msgstr "Zaman aralığı"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
@@ -8760,12 +8777,13 @@ msgstr "Toolam: %s | Kullanılan: %s | Boş: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
+msgstr ""
+
+msgid "Traceroute may take a while, please be patient."
 msgstr ""
 
 msgid ""
@@ -8785,13 +8803,13 @@ msgstr ""
 msgid "Transfer mode"
 msgstr ""
 
-msgid "Trap host"
+msgid "Trap Host"
 msgstr ""
 
-msgid "Trap port"
+msgid "Trap Port"
 msgstr ""
 
-msgid "Trap string"
+msgid "Trap String"
 msgstr ""
 
 msgid "Trap string."
@@ -9069,10 +9087,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr ""
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9126,6 +9140,9 @@ msgstr ""
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9144,17 +9161,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr ""
-
-msgid "User mask"
-msgstr ""
-
 msgid "User numeric id."
 msgstr ""
-
-msgid "User password."
-msgstr "Kullanıcı parolası."
 
 msgid "Username"
 msgstr "Kullanıcı Adı"
@@ -9480,7 +9488,7 @@ msgid "Yes"
 msgstr "Evet"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9637,9 +9645,6 @@ msgstr "değişiklik yapılamadı."
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9662,9 +9667,6 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
-msgstr ""
-
-msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9699,12 +9701,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9773,6 +9769,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "umount"
-
-msgid "week days"
-msgstr ""

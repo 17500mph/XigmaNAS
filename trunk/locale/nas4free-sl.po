@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -841,6 +841,9 @@ msgstr ""
 "Na navišjem mestu je cilj, ki ga vidi sprožitelj. Sestavljen je iz enega, "
 "ali več stopenj oz. obsegov."
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -971,11 +974,14 @@ msgstr "Nazaj"
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr ""
 
-msgid "Backup file"
-msgstr "Varnostna kopija"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "Shrani/Naloži"
@@ -1084,9 +1090,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "Brez časa"
 
 msgid "Block Size"
 msgstr "Velikost bloka"
@@ -1333,9 +1336,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "Preverite in zamenjajte kabel"
 
-msgid "Check interval"
-msgstr "Interval preverjanja"
-
 msgid "Check shared secret:"
 msgstr "Preveri geslo:"
 
@@ -1415,6 +1415,9 @@ msgid "Command"
 msgstr "Ukaz"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1605,6 +1608,9 @@ msgstr "Nastavlja, če se dataset lahko spreminja."
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -2160,9 +2166,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "Ime ali IP naslov cilja"
-
 msgid "Destination network bit count"
 msgstr "Omrežna maska clija"
 
@@ -2181,6 +2184,9 @@ msgstr ""
 
 msgid "Destroyed"
 msgstr "Uničeno"
+
+msgid "Detach"
+msgstr ""
 
 msgid "Detach a data device from a mirror"
 msgstr ""
@@ -2688,9 +2694,6 @@ msgstr ""
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "Mapa prenosov"
-
 msgid "Drive Temperature."
 msgstr ""
 
@@ -3048,7 +3051,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Omogoči posredovanje portov z NAT-PMP ali UPnP."
 
 msgid "Enable proxy authentication."
-msgstr "Omogoči proxy prijavo."
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3086,6 +3089,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Omogoči ident protokol (RFC1413)."
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3191,6 +3199,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3214,6 +3228,18 @@ msgid ""
 msgstr ""
 "Vpišite sistemski čas (format mm/dd/yyyy hh:mm), ali uporabite ikono, za "
 "izbor."
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3255,6 +3281,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Vpišite vrata za pošiljanje pasti (privzeto 162)."
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "Vpišite ime pasi"
 
@@ -3284,8 +3313,8 @@ msgstr "Dogodek"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
-msgstr "Primer: pkg add imepaketa."
+msgid "Example: pkg install packagename."
+msgstr ""
 
 msgid "Execute"
 msgstr "Izvedi"
@@ -3403,7 +3432,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP posrednik"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP dogodki"
@@ -3578,10 +3607,10 @@ msgstr "Sledi"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
+msgid "Force delete"
 msgstr ""
 
 msgid "Forced Update Period"
@@ -3746,9 +3775,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "Ime skupine."
-
 msgid "Group numeric id."
 msgstr "Numerični identifikator skupine"
 
@@ -3808,7 +3834,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP Posrednik"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr ""
@@ -3864,9 +3890,6 @@ msgstr "Namig"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "Domača mapa"
 
 msgid "Host"
 msgstr "Gostitelj"
@@ -4193,15 +4216,15 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "Initiator, ki ima dovoljenje za dostop do iSCSI cilja. 'ALL' je uporabljen "
 "za vse."
-
-msgid "Initiator name"
-msgstr "Ime pobudnika"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -4293,6 +4316,9 @@ msgid "Internal UPS clock date"
 msgstr ""
 
 msgid "Internal UPS clock time"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Interval between self tests"
@@ -4687,11 +4713,11 @@ msgstr "Tip logične enote, priklopljene na LUN."
 msgid "Login"
 msgstr "Prijava"
 
-msgid "Login name of user."
-msgstr "Uporabniško ime."
-
 msgid "Logout"
 msgstr "Odjava"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -4829,16 +4855,8 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "Največji TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "Največ predposlanih R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Najvišji time-to-live (največ preskokov) uporabljen v izhodnih paketih."
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -4854,9 +4872,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum frequency"
-msgstr "Najvišja frekvenca"
 
 msgid "Maximum idle time in seconds."
 msgstr "Najdaljši čas nekativnosti v sekundah."
@@ -4971,9 +4986,6 @@ msgstr ""
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
-msgid "Minimum frequency"
-msgstr "Najnižja frekvenca"
-
 msgid "Minimum incoming voltage seen"
 msgstr ""
 
@@ -5040,9 +5052,6 @@ msgstr "Pon"
 msgid "Monday"
 msgstr "ponedeljek"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "ponedeljek torek sreda četrtek petek sobota nedelja"
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5071,9 +5080,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "Priklopna točka"
 
 msgid "Mount point name"
 msgstr "Ime priklopne točke"
@@ -5508,8 +5514,11 @@ msgstr "oktober"
 msgid "Off"
 msgstr "Izključeno"
 
-msgid "Old passphrase"
-msgstr "Trenutno geslo"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "Vključeno"
@@ -5637,6 +5646,9 @@ msgstr "Nalaganje paketa ni uspelo (ni dovolj pomnilnika?)"
 msgid "Packages"
 msgstr "Paketi"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5687,6 +5699,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Geslo"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "Gesli se ne ujemata."
@@ -5773,9 +5788,6 @@ msgstr "Peer geslo"
 msgid "Peer User"
 msgstr "Peer uporabnik"
 
-msgid "Peer port"
-msgstr "Peer port"
-
 msgid "Performance Settings"
 msgstr "Nastavitve delovanja"
 
@@ -5801,7 +5813,13 @@ msgstr "Slike"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5990,9 +6008,6 @@ msgstr ""
 
 msgid "Power management"
 msgstr "Upravljanje z energijo"
-
-msgid "Power mode"
-msgstr "Način napajanja"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6318,6 +6333,9 @@ msgstr "Oddaljeni naslov"
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6329,12 +6347,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module name"
-msgstr "Ime oddaljenega modula"
-
-msgid "Remote monitoring"
-msgstr "Oddaljen nadzor"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6419,14 +6431,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr "Razreši"
-
 msgid "Resolve IP"
 msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Zamenjaj IP naslove v imena gostiteljev"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr ""
@@ -6437,10 +6443,10 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
+msgid "Resources"
 msgstr ""
 
-msgid "Resources"
+msgid "Restore"
 msgstr ""
 
 msgid "Restore Configuration"
@@ -6678,7 +6684,7 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr ""
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr ""
 
 msgid "Scrub a pool"
@@ -6777,9 +6783,16 @@ msgstr "Izberite strojno programsko opremo:"
 msgid "Select item to remove from the list"
 msgstr "Izberite predmet, ki ga želite odstraniti s seznama."
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr ""
 "Izberite priklopno točko, kjer ustvarim datoteko za izmenljiv prostor."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6808,6 +6821,9 @@ msgstr ""
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
+msgstr ""
+
+msgid "Select which interface to use."
 msgstr ""
 
 msgid ""
@@ -6923,6 +6939,11 @@ msgstr "Nastavi dodatne skupine temu uporabniku."
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6958,15 +6979,14 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
+msgid "Set user login shell."
+msgstr ""
+
+msgid "Setkey"
+msgstr ""
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "Nastavi drugo priklopno mesto za dataset. Privzeto je /mnt."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Nastavi interval preverjanja trdega diska na N sekund. Najmanjša dovoljena "
-"vrednost je 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7011,6 +7031,9 @@ msgstr "Lupina"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -7035,11 +7058,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Izklop"
 
-msgid "Shutdown mode"
-msgstr "Možnost izklopa"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "Čas do izklopa"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
@@ -7069,6 +7092,9 @@ msgid "Skew"
 msgstr ""
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7504,14 +7530,14 @@ msgstr "Tračna enota"
 msgid "Target"
 msgstr "Cilj"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr "Oznaka cilja"
 
 msgid "Target Name"
 msgstr "Ime cilja"
-
-msgid "Target address"
-msgstr "Naslov cilja"
 
 msgid "Target directory."
 msgstr "Direktorij cilja."
@@ -7524,9 +7550,6 @@ msgstr "Cilj ni izbran"
 
 msgid "Target list"
 msgstr "Seznam ciljev"
-
-msgid "Target name"
-msgstr "Ime cilja"
 
 msgid "Target side secret."
 msgstr "Geslo na ciljni strani."
@@ -7564,11 +7587,11 @@ msgstr "Začasni imenik"
 msgid "Temporary directory to store transcoded files."
 msgstr "Začasni imenik, v katerega se shranijo prekodirane datoteke."
 
+msgid "Test Email"
+msgstr ""
+
 msgid "Test Mode"
 msgstr "Testni način"
-
-msgid "Test email"
-msgstr "Testna e-pošta"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8116,7 +8139,7 @@ msgid "The old password is not correct."
 msgstr "Staro geslo ni pravilno."
 
 msgid "The password contains the illegal character ':'."
-msgstr "Geslo vsebuje nedovoljeni znak ':'."
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr ""
@@ -8262,9 +8285,6 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Datoteka je bila prenešena le delno."
-
-msgid "The user's login shell."
-msgstr ""
 
 msgid "The value of the variable."
 msgstr ""
@@ -8487,7 +8507,7 @@ msgid ""
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
@@ -8683,9 +8703,6 @@ msgstr ""
 msgid "This tag is used."
 msgstr ""
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "IP naslov ali DNS ime iSCSI cilja."
-
 msgid "This user already exists in the user list."
 msgstr "Ta uporabnik že obstaja."
 
@@ -8758,9 +8775,6 @@ msgid "Time before the load will be shutdown"
 msgstr ""
 
 msgid "Time before the load will be started"
-msgstr ""
-
-msgid "Time interval"
 msgstr ""
 
 msgid "Time spent during the positioning of the drive heads."
@@ -8889,15 +8903,14 @@ msgstr "Skupaj: %s | Uporabljeno: %s | Prosto: %s"
 msgid "Traceroute"
 msgstr ""
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
 msgstr ""
-"Traceroute lahko traja nekaj časa. Za pregled napredka neuspelih traceroute, "
-"lahko kadarkoli kliknete Stop na vašem brskalniku."
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -8916,13 +8929,13 @@ msgstr ""
 msgid "Transfer mode"
 msgstr ""
 
-msgid "Trap host"
+msgid "Trap Host"
 msgstr ""
 
-msgid "Trap port"
+msgid "Trap Port"
 msgstr ""
 
-msgid "Trap string"
+msgid "Trap String"
 msgstr ""
 
 msgid "Trap string."
@@ -9202,10 +9215,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr ""
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9259,6 +9268,9 @@ msgstr ""
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9277,17 +9289,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "Uporabnikovo polno ime."
-
-msgid "User mask"
-msgstr ""
-
 msgid "User numeric id."
 msgstr ""
-
-msgid "User password."
-msgstr "Uporabnikovo geslo."
 
 msgid "Username"
 msgstr "Uporabniško ime"
@@ -9613,7 +9616,7 @@ msgid "Yes"
 msgstr "Da"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9771,9 +9774,6 @@ msgstr ""
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9796,9 +9796,6 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
-msgstr ""
-
-msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9833,12 +9830,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9907,6 +9898,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "izvrzi"
-
-msgid "week days"
-msgstr ""

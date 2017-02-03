@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -829,6 +829,9 @@ msgid ""
 "made up of one or more extents."
 msgstr "가장 고 수준에서 타젯은 개시자에게 제공되는 것이며 하나 이상의 범위로 구성됩니다."
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -959,11 +962,14 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr ""
 
-msgid "Backup file"
-msgstr "백업 파일"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "백업/복원"
@@ -1072,9 +1078,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "빈 시간"
 
 msgid "Block Size"
 msgstr ""
@@ -1319,9 +1322,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check interval"
-msgstr "체크 시간 간격"
-
 msgid "Check shared secret:"
 msgstr "공유된 비밀 check:"
 
@@ -1400,6 +1400,9 @@ msgid "Command"
 msgstr "명령"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1587,6 +1590,9 @@ msgstr "이 데이터 셋을 변경할 수 있는 지를 제어합니다."
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
+msgstr ""
+
+msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Core"
@@ -2142,9 +2148,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "목적지 호스트 명 또는 IP 주소."
-
 msgid "Destination network bit count"
 msgstr "목적지 네트워크 비트 카운트"
 
@@ -2162,6 +2165,9 @@ msgid ""
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2658,9 +2664,6 @@ msgstr ""
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "다운로드 디렉터리"
-
 msgid "Drive Temperature."
 msgstr ""
 
@@ -3018,7 +3021,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "NAT-PMP나 UPnp를 경유한 포트 포워딩 활성화."
 
 msgid "Enable proxy authentication."
-msgstr "프록시 인증 활성화."
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3055,6 +3058,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "ident 프로토콜(RFC1413) 활성화."
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3160,6 +3168,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3181,6 +3195,18 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr "요망되는 시스템 시간을 직접 입력(mm/dd/yyyy hh:mm 포맷)하거나 아이콘을 이용해서 선택하십시오."
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3218,6 +3244,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "트랩을 전송할 포트를 입력하십시오9기본 값은 162)."
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "트랩 호스트 명을 입력하십시오."
 
@@ -3247,7 +3276,7 @@ msgstr "이벤트"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3362,7 +3391,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP 프록시"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP 이벤트"
@@ -3536,10 +3565,10 @@ msgstr "Follow"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
+msgid "Force delete"
 msgstr ""
 
 msgid "Forced Update Period"
@@ -3704,9 +3733,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "그룹 명."
-
 msgid "Group numeric id."
 msgstr "그룹 숫자 id."
 
@@ -3766,7 +3792,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP 프록시"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr ""
@@ -3822,9 +3848,6 @@ msgstr "힌트"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "홈 디렉터리"
 
 msgid "Host"
 msgstr "호스트"
@@ -4142,13 +4165,13 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr "iSCSI 타젯에 대한 접근 권한을 부여 받은 개시자. 이름이나 모든 개시자일 경우 'ALL'을 입력합니다."
-
-msgid "Initiator name"
-msgstr "개시자 이름"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -4240,6 +4263,9 @@ msgid "Internal UPS clock date"
 msgstr ""
 
 msgid "Internal UPS clock time"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Interval between self tests"
@@ -4630,11 +4656,11 @@ msgstr "LUN에 mapping 된 로지컬 유닛 타입"
 msgid "Login"
 msgstr "로그인"
 
-msgid "Login name of user."
-msgstr "사용자의 로그인 명."
-
 msgid "Logout"
 msgstr "로그아웃"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -4772,15 +4798,8 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "최대 TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "최대 pre-send R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr "나가는 probe 패킷에 이용되는 최대 time-to-live(최대 hop 수)."
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -4795,9 +4814,6 @@ msgid "Maximum (Highest Performance)"
 msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
-
-msgid "Maximum frequency"
 msgstr ""
 
 msgid "Maximum idle time in seconds."
@@ -4911,9 +4927,6 @@ msgstr ""
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
-msgid "Minimum frequency"
-msgstr ""
-
 msgid "Minimum incoming voltage seen"
 msgstr ""
 
@@ -4980,9 +4993,6 @@ msgstr ""
 msgid "Monday"
 msgstr ""
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr ""
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5011,9 +5021,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "마운트 지점"
 
 msgid "Mount point name"
 msgstr "마운트 지점 명"
@@ -5439,8 +5446,11 @@ msgstr ""
 msgid "Off"
 msgstr "오프"
 
-msgid "Old passphrase"
-msgstr "기존 암호"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "온"
@@ -5566,6 +5576,9 @@ msgstr "패키지 업로드가 실패했습니다(메모리 부족?)"
 msgid "Packages"
 msgstr "패키지"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5615,6 +5628,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "암호"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "암호가 맞지 않습니다."
@@ -5701,9 +5717,6 @@ msgstr "피어 비밀"
 msgid "Peer User"
 msgstr "피어 사용자"
 
-msgid "Peer port"
-msgstr "피어 포트"
-
 msgid "Performance Settings"
 msgstr ""
 
@@ -5729,7 +5742,13 @@ msgstr ""
 msgid "Ping"
 msgstr "ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5916,9 +5935,6 @@ msgstr ""
 
 msgid "Power management"
 msgstr ""
-
-msgid "Power mode"
-msgstr "파워 모드"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -6240,6 +6256,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6251,12 +6270,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module name"
-msgstr "원격 모듈 명"
-
-msgid "Remote monitoring"
-msgstr "원격 모니터링"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6337,14 +6350,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
-msgid "Resolve"
-msgstr "resolve"
-
 msgid "Resolve IP"
 msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "IP 주소를 호스트 명으로 resolve"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr ""
@@ -6355,10 +6362,10 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
+msgid "Resources"
 msgstr ""
 
-msgid "Resources"
+msgid "Restore"
 msgstr ""
 
 msgid "Restore Configuration"
@@ -6594,7 +6601,7 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr ""
 
-msgid "Scheduled tests"
+msgid "Scheduled Tests"
 msgstr ""
 
 msgid "Scrub a pool"
@@ -6693,8 +6700,15 @@ msgstr ""
 msgid "Select item to remove from the list"
 msgstr "리스트에서 지울 항목을 선택하십시오"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "스왑 파일을 생성할 마운트 지점을 선택하십시오."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6723,6 +6737,9 @@ msgstr ""
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
+msgstr ""
+
+msgid "Select which interface to use."
 msgstr ""
 
 msgid ""
@@ -6838,6 +6855,11 @@ msgstr "이 계정에 추가적인 그룹 멤버십을 설정합니다."
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6871,13 +6893,14 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
+msgid "Set user login shell."
+msgstr ""
+
+msgid "Setkey"
+msgstr ""
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "root 데이터 셋을 위한 다른 마운트 지점을 설정합니다. 기본 값은 /mnt입니다."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr "디스크 check 시간 간격을 N 초로 설정합니다. 허용된 최소 값은 10입니다."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -6920,6 +6943,9 @@ msgstr "셸"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -6944,11 +6970,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "끄기"
 
-msgid "Shutdown mode"
-msgstr "끄기 모드"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "끄기 타이머"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "Simple 네트워크 관리 프로토콜"
@@ -6976,6 +7002,9 @@ msgid "Skew"
 msgstr ""
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7405,14 +7434,14 @@ msgstr "테이프"
 msgid "Target"
 msgstr "타젯"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr "타젯 별칭"
 
 msgid "Target Name"
 msgstr "타젯 명"
-
-msgid "Target address"
-msgstr "타젯 주소"
 
 msgid "Target directory."
 msgstr "타젯 디렉터리."
@@ -7425,9 +7454,6 @@ msgstr "타젯이 선택되지 않았습니다."
 
 msgid "Target list"
 msgstr "타젯 리스트"
-
-msgid "Target name"
-msgstr "타젯 명"
 
 msgid "Target side secret."
 msgstr "타젯 쪽의 비밀."
@@ -7465,11 +7491,11 @@ msgstr "임시 디렉터리"
 msgid "Temporary directory to store transcoded files."
 msgstr "트랜스코드 된 파일들을 저장하는 임시 디렉터리."
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "테스트 전자우편"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8011,7 +8037,7 @@ msgid "The old password is not correct."
 msgstr "기존 비밀번호가 올바르지 않습니다."
 
 msgid "The password contains the illegal character ':'."
-msgstr "비밀번호가 부적절한 문자 ':'를 포함하고 있습니다."
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr ""
@@ -8159,9 +8185,6 @@ msgstr "업로드 된 파일은 php.ini의 upload_max_filesize 지시자의 크�
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "업로드 된 파일은 일부만 업로드 되었습니다."
-
-msgid "The user's login shell."
-msgstr "사용자 로그인 셸."
 
 msgid "The value of the variable."
 msgstr "변수의 값."
@@ -8387,7 +8410,7 @@ msgstr ""
 "이것은 Zeroconf/B‫onjour/Rendezvous를 경유 해서 공지되는 서버의 이름이기도 하며 DAAP를 경유 해서 export "
 "되는 데이터베이스의 이름이기도 합니다."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
@@ -8601,9 +8624,6 @@ msgstr "이 태그는 이미 존재합니다."
 msgid "This tag is used."
 msgstr "이 태그는 이용되고 있습니다."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "이것은 iSCSI 타젯의 IP 주소나 DNS 이름입니다."
-
 msgid "This user already exists in the user list."
 msgstr "이 사용자는 이미 사용자 목록에 존재합니다."
 
@@ -8677,9 +8697,6 @@ msgstr ""
 
 msgid "Time before the load will be started"
 msgstr ""
-
-msgid "Time interval"
-msgstr "시간 간격"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
@@ -8807,15 +8824,14 @@ msgstr "전체: %s | 사용: %s | 여유: %s"
 msgid "Traceroute"
 msgstr "traceroute"
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
 msgstr ""
-"traceroute는 완료할 때까지 시간이 걸릴 수도 있습니다. 브라우저의 정지 버튼을 누르면 언제라도 실패 된 traceroute의 "
-"진행을 볼 수 있습니다."
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -8834,14 +8850,14 @@ msgstr ""
 msgid "Transfer mode"
 msgstr "전송 모드"
 
-msgid "Trap host"
-msgstr "트랩 호스트"
+msgid "Trap Host"
+msgstr ""
 
-msgid "Trap port"
-msgstr "트랩 포트"
+msgid "Trap Port"
+msgstr ""
 
-msgid "Trap string"
-msgstr "트랩 문자열"
+msgid "Trap String"
+msgstr ""
 
 msgid "Trap string."
 msgstr "트랩 문자열."
@@ -9120,10 +9136,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "아래의 IP 주소를 나가는 패킷의 소스 주소로 이용합니다."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -9180,6 +9192,9 @@ msgstr "사용자 ID"
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9198,17 +9213,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "사용자 전체 이름."
-
-msgid "User mask"
-msgstr "사용자 마스크"
-
 msgid "User numeric id."
 msgstr "사용자 숫자 id."
-
-msgid "User password."
-msgstr "사용자 암호."
 
 msgid "Username"
 msgstr "사용자 명"
@@ -9535,7 +9541,7 @@ msgid "Yes"
 msgstr "예"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9692,9 +9698,6 @@ msgstr "변경이 실패되었습니다."
 msgid "chroot() everyone, but root."
 msgstr "root를 제외한 모두에게 chroot()."
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9717,9 +9720,6 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
-msgstr ""
-
-msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9754,12 +9754,6 @@ msgid "load/unload failed."
 msgstr "로드/언로드가 실패했습니다."
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9828,6 +9822,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "마운트 해제"
-
-msgid "week days"
-msgstr ""

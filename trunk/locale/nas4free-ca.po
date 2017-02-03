@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-30 07:31+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"PO-Revision-Date: 2017-02-02 19:35+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ca_ES\n"
 
@@ -919,6 +919,9 @@ msgstr ""
 "En el nivell més alt, un objectiu és el que es presenta a l'iniciador, i es "
 "compon d'una o més extensions."
 
+msgid "Attach"
+msgstr "Adjunta"
+
 msgid "Attach a data device"
 msgstr "Adjuntar un dispositiu de dades"
 
@@ -1060,10 +1063,13 @@ msgstr "Enrera"
 msgid "Background"
 msgstr "Segon pla"
 
+msgid "Backup"
+msgstr "Còpia de seguretat"
+
 msgid "Backup Configuration"
 msgstr "Configuració de còpia de seguretat"
 
-msgid "Backup file"
+msgid "Backup File"
 msgstr "Fitxer de còpia de seguretat"
 
 msgid "Backup/Restore"
@@ -1180,9 +1186,6 @@ msgstr ""
 "muntatge per al directori %s!"
 
 msgid "Blank Time"
-msgstr "Temps en blanc"
-
-msgid "Blank time"
 msgstr "Temps en blanc"
 
 msgid "Block Size"
@@ -1435,9 +1438,6 @@ msgstr "Comprovar el sistema | Configuració general abans de inicialitzar"
 msgid "Check and replace cable"
 msgstr "Verificar i canviar cable"
 
-msgid "Check interval"
-msgstr "Interval de comprovació"
-
 msgid "Check shared secret:"
 msgstr "Verifica secret compartit:"
 
@@ -1524,6 +1524,9 @@ msgstr "Comandament"
 
 msgid "Command Output"
 msgstr "Sortida del comandament"
+
+msgid "Command Output:"
+msgstr "Sortida de comanda:"
 
 msgid "Command Scripts"
 msgstr "Lots d'ordres"
@@ -1735,6 +1738,9 @@ msgid ""
 msgstr ""
 "Converteix els atributs DOS a bits d'execució UNIX quan l'emmagatzemament "
 "dels atributs DOS està desactivat."
+
+msgid "Conveyance Self-Test"
+msgstr "Autocomprovació de trasnferencia"
 
 msgid "Core"
 msgstr "Nucli"
@@ -2369,9 +2375,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr "Nom d'amfitrió o l'adreça IP de destinació."
 
-msgid "Destination host name or IP number."
-msgstr "Destinació nom del host o adreça IP."
-
 msgid "Destination network bit count"
 msgstr "Destinació nombre de bits de xarxa"
 
@@ -2392,6 +2395,9 @@ msgstr ""
 
 msgid "Destroyed"
 msgstr "Destruït"
+
+msgid "Detach"
+msgstr "Separa"
 
 msgid "Detach a data device from a mirror"
 msgstr "Separar un dispositiu de dades d'un mirall"
@@ -2916,9 +2922,6 @@ msgstr "Descàrrega de la configuració"
 msgid "Download Directory"
 msgstr "Directori de descàrrega"
 
-msgid "Download directory"
-msgstr "Directori de descarregar"
-
 msgid "Drive Temperature."
 msgstr "Temperatura del disc/driver."
 
@@ -3329,6 +3332,13 @@ msgstr "Activar el protocol d'identificació (RFC1413)."
 msgid "Enable the server power control utility."
 msgstr "Activa la utilitat de control d'alimentació del servidor."
 
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
+msgstr ""
+"Activa aquesta opció si voleu editar les pàgines de configuració directament "
+"sense la necessitat de canviar al mode d'edició."
+
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Habilitar a adherir-se estrictament a les normes DLNA."
 
@@ -3440,6 +3450,12 @@ msgstr "Introduïu una descripció"
 msgid "Enter a description for your reference."
 msgstr "Introduïu una descripció per la teva referència."
 
+msgid "Enter a group description."
+msgstr "Introduïu una descripció del grup."
+
+msgid "Enter a group name."
+msgstr "Introduïu un nom del grup."
+
 msgid "Enter a name"
 msgstr "Introduïu un nom"
 
@@ -3465,6 +3481,18 @@ msgid ""
 msgstr ""
 "Introduïu el temps desitjat del sistema directament (format dd / mm / aaaa "
 "hh: mm) o l'ús icona per seleccionar-lo."
+
+msgid "Enter full name of the user."
+msgstr "Introdueix el nom i cognoms de l'usuari."
+
+msgid "Enter hostname or IP address."
+msgstr "Introduïu el nom d'amfitrió o l'adreça IP."
+
+msgid "Enter login name of the user."
+msgstr "Introdueix el nom d'inici de sessió de l'usuari."
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr "Introduïu l'adreça IP o el nom DNS del destí iSCSI."
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3515,6 +3543,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Introduïu el port per enviar les trampes (per defecte 162)."
 
+msgid "Enter the user password."
+msgstr "Introduïu la contrasenya d'usuari."
+
 msgid "Enter trap host name."
 msgstr "Introduïu trampa nom d'amfitrió."
 
@@ -3546,8 +3577,8 @@ msgstr "Esdeveniment"
 msgid "Event Selection"
 msgstr "Selecció del event"
 
-msgid "Example: pkg add packagename."
-msgstr "Exemple: pkg add packagename."
+msgid "Example: pkg install packagename."
+msgstr "Exemple: pkg install packagename."
 
 msgid "Execute"
 msgstr "Executar"
@@ -3670,7 +3701,7 @@ msgid "FTP - File Transfer"
 msgstr "Transfeencia d'arxius - FTP"
 
 msgid "FTP Proxy"
-msgstr "FTP Proxy"
+msgstr "Proxy FTP"
 
 msgid "FTP events"
 msgstr "Esdeveniments de FTP"
@@ -3849,11 +3880,11 @@ msgstr "Seguir"
 msgid "Force Operation"
 msgstr "Força operació"
 
+msgid "Force Use"
+msgstr "forçar l'ús"
+
 msgid "Force delete"
 msgstr "Força eliminar"
-
-msgid "Force use"
-msgstr "Força ús"
 
 msgid "Forced Update Period"
 msgstr "Període d'actualització forçada"
@@ -4023,9 +4054,6 @@ msgstr "Grup està bloquejat"
 msgid "Group is marked for deletion"
 msgstr "Grup està marcat per ser esborrat"
 
-msgid "Group name."
-msgstr "Nom de grup"
-
 msgid "Group numeric id."
 msgstr "Identificació númerica del grup"
 
@@ -4094,7 +4122,7 @@ msgid "HOT SPARE"
 msgstr "Recanvi en calent"
 
 msgid "HTTP Proxy"
-msgstr "Servidor intermediari HTTP"
+msgstr "Proxy HTTP"
 
 msgid "HVM Guest"
 msgstr "Hostes HVM"
@@ -4154,9 +4182,6 @@ msgstr "Consell"
 
 msgid "Home Directory"
 msgstr "Carpeta inici"
-
-msgid "Home directory"
-msgstr "Directori d'inici"
 
 msgid "Host"
 msgstr "Amfitrió"
@@ -4508,15 +4533,15 @@ msgstr ""
 "Grups iniciador conté noms iniciador autoritzats i xarxes per accedir a la "
 "destinació."
 
+msgid "Initiator Name"
+msgstr "Nom d'iniciador"
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
 "L'iniciador autoritzat per accedir a la destinació iSCSI. Es necessita un "
 "nom o \"TOTS\" per a qualsevol iniciadors."
-
-msgid "Initiator name"
-msgstr "Nom del iniciador"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "Costat secret del Iniciador. (Per a l'autenticació CHAP mútua)"
@@ -4614,6 +4639,9 @@ msgstr "Data interna de la SAI"
 
 msgid "Internal UPS clock time"
 msgstr "Hora interna de la SAI"
+
+msgid "Interval"
+msgstr "Interval"
 
 msgid "Interval between self tests"
 msgstr "Interval entre comprovacions automàtiques"
@@ -5037,11 +5065,11 @@ msgstr "Tipus d'unitat lògica mapejada a LUN"
 msgid "Login"
 msgstr "Entra"
 
-msgid "Login name of user."
-msgstr "Nom d'usuari d'inici."
-
 msgid "Logout"
 msgstr "Surt"
+
+msgid "Long Self-Test"
+msgstr "Autocomprovació llarga"
 
 msgid "Low voltage boosting transfer point"
 msgstr "Punt de transferència d'impuls de baixa tensió"
@@ -5185,17 +5213,8 @@ msgstr "Màxims ports passius"
 msgid "Max. Sessions"
 msgstr "Sessions màximes"
 
-msgid "Max. TTL"
-msgstr "Máx. TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "Màxims pre-enviament R2T"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
-"Max. temps de vida (màx. nombre de salts) utilitzat en els paquets de "
-"sondeig sortints."
 
 msgid "MaxBurstLength"
 msgstr "Longitud màxima de salva"
@@ -5211,9 +5230,6 @@ msgstr "Màxim (rendiment més alt)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Màxim rendiment, màxim nivell acústic"
-
-msgid "Maximum frequency"
-msgstr "Freqüència màxima"
 
 msgid "Maximum idle time in seconds."
 msgstr "Temps màxim de espera en segonds"
@@ -5333,9 +5349,6 @@ msgstr "Rendiment mínim, soroll acústic mínim"
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Nivell de la bateria mínima per reinici de la SAI després d'apagada"
 
-msgid "Minimum frequency"
-msgstr "freqüència mínima"
-
 msgid "Minimum incoming voltage seen"
 msgstr "Voltatge d'entrada mínim observat"
 
@@ -5402,9 +5415,6 @@ msgstr "Dll"
 msgid "Monday"
 msgstr "Dilluns"
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "Dilluns Dimarts Dimecres Dijous Divendres Dissabte Diumenge"
-
 msgid "Monitoring"
 msgstr "Monitorització"
 
@@ -5435,9 +5445,6 @@ msgstr "Eines de punt de muntatge"
 
 msgid "Mount Points"
 msgstr "Punts de muntatge"
-
-msgid "Mount point"
-msgstr "Punt de muntatge"
 
 msgid "Mount point name"
 msgstr "Nom del punt de muntatge"
@@ -5888,8 +5895,11 @@ msgstr "Octubre"
 msgid "Off"
 msgstr "OFF"
 
-msgid "Old passphrase"
-msgstr "Contarsenya antiga"
+msgid "Offline Immediate Test"
+msgstr "Prova immediata de desconexió"
+
+msgid "Old Passphrase"
+msgstr "Contrasenya antiga"
 
 msgid "On"
 msgstr "ON"
@@ -6026,6 +6036,9 @@ msgstr "Càrrega del paquet va fallar (sense memòria?)"
 msgid "Packages"
 msgstr "Paquets"
 
+msgid "Packages Installer"
+msgstr "Paquets d'instal·lació"
+
 msgid "Page Refresh"
 msgstr "Actualitza pàgina"
 
@@ -6079,6 +6092,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "Contrasenya"
+
+msgid "Passphrase Confirmation"
+msgstr "Confirmació de contrasenya"
 
 msgid "Passphrase don't match."
 msgstr "Frases de contrasenya no coincideixen."
@@ -6169,9 +6185,6 @@ msgstr "Col-lega Secret"
 msgid "Peer User"
 msgstr "Usuari Col-lega"
 
-msgid "Peer port"
-msgstr "Port Col-lega"
-
 msgid "Performance Settings"
 msgstr "Preferències de rendiment"
 
@@ -6197,8 +6210,14 @@ msgstr "Fotografies"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
-msgstr "Prova Ping"
+msgid "Ping Host"
+msgstr "Ping al amfitrió"
+
+msgid "Ping Output"
+msgstr "Resultat del Ping"
+
+msgid "Ping may take a while, please be patient."
+msgstr "El Ping tardarà una mica, si us plau, sigui pacient."
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd per veure si es troba viu:"
@@ -6392,9 +6411,6 @@ msgstr "Mode d'energia"
 
 msgid "Power management"
 msgstr "Gestió d'energia"
-
-msgid "Power mode"
-msgstr "Mode d'energia"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr "L'atribut pre-fall' s'utilitza com a mínim en els dispositius HP."
@@ -6730,6 +6746,9 @@ msgstr "Adreça remota"
 msgid "Remote Module (Source)"
 msgstr "Mòdul remot (Font)"
 
+msgid "Remote Monitoring"
+msgstr "Monitorització remota"
+
 msgid "Remote Rsync Daemon"
 msgstr "Dimoni Rsync remot"
 
@@ -6741,12 +6760,6 @@ msgstr "Missatges de registre remot"
 
 msgid "Remote Syslog Server"
 msgstr "Servidor de registre del sistema remot"
-
-msgid "Remote module name"
-msgstr "Nom de mòdul remot"
-
-msgid "Remote monitoring"
-msgstr "Monitoratge remota"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6837,14 +6850,8 @@ msgstr ""
 "La resistència causada per la fricció en les parts mecàniques durant el "
 "funcionament."
 
-msgid "Resolve"
-msgstr "Resol"
-
 msgid "Resolve IP"
 msgstr "Resoldre IP"
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "Resoldre adreces IP a noms de host"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr "Resoldre adreces IP a noms de host"
@@ -6855,11 +6862,11 @@ msgstr "Recurs"
 msgid "Resource Name"
 msgstr "Nom del recurs"
 
-msgid "Resource name"
-msgstr "Nom del recurs"
-
 msgid "Resources"
 msgstr "Recursos"
+
+msgid "Restore"
+msgstr "Restablir"
 
 msgid "Restore Configuration"
 msgstr "Restaurar la configuració"
@@ -7105,8 +7112,8 @@ msgstr "Ajustos de verificació automàtica programats"
 msgid "Scheduled Shutdown"
 msgstr "Apagat programat"
 
-msgid "Scheduled tests"
-msgstr "Proves programades"
+msgid "Scheduled Tests"
+msgstr "Proves prgramades"
 
 msgid "Scrub a pool"
 msgstr "Fregui piscina"
@@ -7212,8 +7219,17 @@ msgstr "Seleccioneu al microprogramari:"
 msgid "Select item to remove from the list"
 msgstr "Seleccionar element per eliminar-lo de la llista"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+"Seleccioneu el temps máxim de vida (màxim nombre de salts) utilitzat en els "
+"paquets de sondeig sortints."
+
 msgid "Select mount point where to create the swap file."
 msgstr "Seleccionar punt de muntatge on crear el fitxer d'intercanvi."
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr "Seleccioneu el nombre de paquets ICMP ECHO REQUEST"
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -7251,6 +7267,9 @@ msgid ""
 msgstr ""
 "Seleccioneu el fitxer d'arxiu GZIP o XML xifrat configuració del servidor i "
 "feu clic al botó de sota per restaurar la configuració."
+
+msgid "Select which interface to use."
+msgstr "Seleccioneu quina interfície fareu servir."
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7367,6 +7386,13 @@ msgstr "Establir grup addicional afiliacions d'aquest compte."
 msgid "Set browseable."
 msgstr "Fes-ho navegable."
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+"Establir l'interval entre comprovacions de disc de N segons. El valor mínim "
+"permès és de 10."
+
 msgid "Set read only."
 msgstr "Fes-ho només lectura."
 
@@ -7410,17 +7436,16 @@ msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 "Ajustar la velocitat de desplaçament del títol entre 0-10 (per defecte 10)."
 
+msgid "Set user login shell."
+msgstr "Configurar el usuari d'inici de consola."
+
+msgid "Setkey"
+msgstr "Fixar la clau"
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Estableix un punt de muntatge alternatiu per al conjunt de dades arrel. El "
 "valor per omissió és / mnt."
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr ""
-"Estableix l'interval entre els controls de disc de N segons. El valor mínim "
-"permès és de 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7465,6 +7490,9 @@ msgstr "Intèrpret de comandaments"
 msgid "Shock During Write."
 msgstr "Xoc durant escriptura."
 
+msgid "Short Self-Test"
+msgstr "Auto-comprovació curta"
+
 msgid "Show Default Groups"
 msgstr "Mostrar grups per defecte"
 
@@ -7493,11 +7521,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Apagada"
 
-msgid "Shutdown mode"
-msgstr "Mode d'apagada"
+msgid "Shutdown Mode"
+msgstr "Mode de apagada"
 
-msgid "Shutdown timer"
-msgstr "Rellotge d'apagada"
+msgid "Shutdown Timer"
+msgstr "Comptador d'apagada"
 
 msgid "Simple Network Management Protocol"
 msgstr "Protocol de gestió simple de xarxa (SNMP)"
@@ -7528,6 +7556,9 @@ msgstr "Esbiaixa"
 
 msgid "Skip First Scan"
 msgstr "Saltar el primer escanejat"
+
+msgid "Skip View Mode"
+msgstr "Saltar mode de visualització"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Somni - Comproveu el dispositiu llevat que sigui en el mode SLEEP."
@@ -7984,14 +8015,14 @@ msgstr "Cinta"
 msgid "Target"
 msgstr "Destí"
 
+msgid "Target Address"
+msgstr "Adreça destí"
+
 msgid "Target Alias"
 msgstr "Àlies TCP"
 
 msgid "Target Name"
 msgstr "Nom de destinació"
-
-msgid "Target address"
-msgstr "Adreça de destí"
 
 msgid "Target directory."
 msgstr "Directori de destí"
@@ -8004,9 +8035,6 @@ msgstr "El destí no s'ha seleccionat"
 
 msgid "Target list"
 msgstr "Llista de destins"
-
-msgid "Target name"
-msgstr "Nom del destí"
 
 msgid "Target side secret."
 msgstr "Cara secreta del destí"
@@ -8045,11 +8073,11 @@ msgstr "Directori temporal"
 msgid "Temporary directory to store transcoded files."
 msgstr "Directori temporal per emmagatzemar arxius transcodificats."
 
+msgid "Test Email"
+msgstr "Email de prova"
+
 msgid "Test Mode"
 msgstr "Mode de prova"
-
-msgid "Test email"
-msgstr "Correu electrònic de prova"
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8687,7 +8715,7 @@ msgid "The old password is not correct."
 msgstr "L'antiga contrasenya no és correcta."
 
 msgid "The password contains the illegal character ':'."
-msgstr "La contrasenya conté el caràcter il·legal ':'."
+msgstr "La contrasenya inclou el caràcter i legal ':'."
 
 msgid "The password encryption protocol to use."
 msgstr "El protocol de xifrat de la contrasenya a fer servir."
@@ -8854,9 +8882,6 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "El fitxer només s'ha pogut desar parcialment al servidor."
-
-msgid "The user's login shell."
-msgstr "Capa d'entrada de l'usuari."
 
 msgid "The value of the variable."
 msgstr "El valor de la variable."
@@ -9138,9 +9163,9 @@ msgstr ""
 "Zeroconf/Bonjour/Rendezvous, i el nom de la base de dades exportada a través "
 "de DAAP."
 
-msgid "This is for information only (not using during iSCSI negotiation)."
+msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
-"Això és només per informació (no s'utilitza durant la negociació iSCSI)."
+"Això és només per informació. (No s'utilitza durant la negociació iSCSI)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -9416,9 +9441,6 @@ msgstr "Aquesta etiqueta ja existeix."
 msgid "This tag is used."
 msgstr "Aquesta etiqueta ja s'utilitza."
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "Aquesta adreça IP o el nom DNS del destí iSCSI."
-
 msgid "This user already exists in the user list."
 msgstr "Aquest usuari ja existeix a la llista d'usuaris."
 
@@ -9501,9 +9523,6 @@ msgstr "Hora a la càrrega serà apagat"
 
 msgid "Time before the load will be started"
 msgstr "Hora a la que es posarà en marxa la càrrega"
-
-msgid "Time interval"
-msgstr "Interval de temps"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "El temps dedicat durant el posicionament dels caps de la unitat."
@@ -9657,16 +9676,14 @@ msgstr "Total: %s | Usats: %s | Lliure: %s"
 msgid "Traceroute"
 msgstr "Traça una ruta"
 
-msgid "Traceroute Test"
-msgstr "Prova de traçat de ruta"
+msgid "Traceroute Host"
+msgstr "Traceroute a amfitrió"
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
-msgstr ""
-"El traçat de ruta pot trigar un temps a completar-se. Vostè pot clicar el "
-"botó de detenció en el seu navegador en qualsevol moment per veure el "
-"progrés de les traces de ruta fallits."
+msgid "Traceroute Output"
+msgstr "Sortida de Traceroute"
+
+msgid "Traceroute may take a while, please be patient."
+msgstr "Traceroute por trigar, si us plau sigui pacient."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -9687,14 +9704,14 @@ msgstr "Ràtio de transferència"
 msgid "Transfer mode"
 msgstr "Mode de Transferència"
 
-msgid "Trap host"
-msgstr "Amfitrió de captura"
+msgid "Trap Host"
+msgstr "Trampa d'amfitrió"
 
-msgid "Trap port"
-msgstr "Port de captura"
+msgid "Trap Port"
+msgstr "Port de trampa"
 
-msgid "Trap string"
-msgstr "Cadena de captura"
+msgid "Trap String"
+msgstr "Cadena de trampa"
 
 msgid "Trap string."
 msgstr "Cadena de captura"
@@ -9986,11 +10003,6 @@ msgstr ""
 "utilitzar juntament amb la gamma d'eix i positiu/negatiu)"
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr ""
-"Utilitza la següent adreça IP com la direcció d'origen dels paquets sortints."
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
@@ -10062,6 +10074,9 @@ msgstr "ID d'usuari"
 msgid "User Mask"
 msgstr "Màscara d'usuari"
 
+msgid "User Password Settings"
+msgstr "Configuració contrasenya d'usuari"
+
 msgid "User Portal"
 msgstr "Portal d'usuari"
 
@@ -10080,17 +10095,8 @@ msgstr "El compte del usuari està bloquejat"
 msgid "User account is marked for deletion"
 msgstr "El compte del usuari està marcat per ser esborrat"
 
-msgid "User full name."
-msgstr "Nom complet de l'usuari."
-
-msgid "User mask"
-msgstr "Màscara d'usuari"
-
 msgid "User numeric id."
 msgstr "Identificació nombre del usuari"
-
-msgid "User password."
-msgstr "Contrasenya d'usuari."
 
 msgid "Username"
 msgstr "Nom d'usuari"
@@ -10440,11 +10446,11 @@ msgid "Yes"
 msgstr "Si"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
-"També pot instal·lar un paquet a través de SSH o consola utilitzant la "
-"comanda 'add pkg'."
+"També pot instal·lar un paquet a través de SSH o consola utilitzant el "
+"comando pkg install."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10616,9 +10622,6 @@ msgstr "canvi"
 msgid "chroot() everyone, but root."
 msgstr "chroot() per tothom excepte root."
 
-msgid "days"
-msgstr "dies"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10644,9 +10647,6 @@ msgstr "major punt de transferència d'alta tensió ajustable"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "Major punt de transferència de baixa tensió ajustable"
-
-msgid "hours"
-msgstr "hores"
 
 msgid "iSCSI Initiator"
 msgstr "Iniciador iSCSI"
@@ -10681,12 +10681,6 @@ msgstr "carga/descarga fallida"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr "minuts"
-
-msgid "months"
-msgstr "mesos"
 
 msgid "mount"
 msgstr "muntar"
@@ -10754,6 +10748,3 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
-
-msgid "week days"
-msgstr "dias de la setmana"

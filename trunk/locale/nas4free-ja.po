@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"POT-Creation-Date: 2017-02-02 03:26+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -839,6 +839,9 @@ msgid ""
 "made up of one or more extents."
 msgstr "最も上のレベルで、ターゲットはイニシエータに提示され、ひとつ以上のエクステントから構成されます。"
 
+msgid "Attach"
+msgstr ""
+
 msgid "Attach a data device"
 msgstr ""
 
@@ -969,11 +972,14 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+msgid "Backup"
+msgstr ""
+
 msgid "Backup Configuration"
 msgstr "設定のバックアップ"
 
-msgid "Backup file"
-msgstr "バックアップファイル"
+msgid "Backup File"
+msgstr ""
 
 msgid "Backup/Restore"
 msgstr "バックアップ/リストア"
@@ -1082,9 +1088,6 @@ msgstr ""
 
 msgid "Blank Time"
 msgstr ""
-
-msgid "Blank time"
-msgstr "待機時間"
 
 msgid "Block Size"
 msgstr ""
@@ -1331,9 +1334,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "ケーブルを確認および交換してください"
 
-msgid "Check interval"
-msgstr "チェック間隔"
-
 msgid "Check shared secret:"
 msgstr "共有シークレットのチェック:"
 
@@ -1412,6 +1412,9 @@ msgid "Command"
 msgstr "コマンド"
 
 msgid "Command Output"
+msgstr ""
+
+msgid "Command Output:"
 msgstr ""
 
 msgid "Command Scripts"
@@ -1600,6 +1603,9 @@ msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
 msgstr "DOS属性の保存が無効な場合にDOS属性をUNIX実行ビットに割り当てます。"
+
+msgid "Conveyance Self-Test"
+msgstr ""
 
 msgid "Core"
 msgstr ""
@@ -2162,9 +2168,6 @@ msgstr ""
 msgid "Destination host name or IP address."
 msgstr ""
 
-msgid "Destination host name or IP number."
-msgstr "宛て先のホスト名もしくは IP アドレス"
-
 msgid "Destination network bit count"
 msgstr "宛て先ネットワークのビット数"
 
@@ -2182,6 +2185,9 @@ msgid ""
 msgstr ""
 
 msgid "Destroyed"
+msgstr ""
+
+msgid "Detach"
 msgstr ""
 
 msgid "Detach a data device from a mirror"
@@ -2679,9 +2685,6 @@ msgstr "設定のダウンロード"
 msgid "Download Directory"
 msgstr ""
 
-msgid "Download directory"
-msgstr "ダウンロードディレクトリ"
-
 msgid "Drive Temperature."
 msgstr "ドライブ温度。"
 
@@ -3039,7 +3042,7 @@ msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "NAT-PMP もしくは UPnP によるポートフォワーディングを有効にする。"
 
 msgid "Enable proxy authentication."
-msgstr "Proxy認証の有効化"
+msgstr ""
 
 msgid "Enable recycle bin."
 msgstr ""
@@ -3076,6 +3079,11 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ident プロトコル (RFC1413) を有効にします。"
 
 msgid "Enable the server power control utility."
+msgstr ""
+
+msgid ""
+"Enable this option if you want to edit configuration pages directly without "
+"the need to switch to edit mode."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3181,6 +3189,12 @@ msgstr ""
 msgid "Enter a description for your reference."
 msgstr ""
 
+msgid "Enter a group description."
+msgstr ""
+
+msgid "Enter a group name."
+msgstr ""
+
 msgid "Enter a name"
 msgstr ""
 
@@ -3202,6 +3216,18 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr "直接、設定したい時間を (フォーマット mm/dd/yyyy hh:mm) のとおり入力するか、アイコンを使用して選択して下さい。"
+
+msgid "Enter full name of the user."
+msgstr ""
+
+msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name of the user."
+msgstr ""
+
+msgid "Enter the IP address or DNS name of the iSCSI target."
+msgstr ""
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3239,6 +3265,9 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "SNMPトラップの送信に利用するポート番号を入力してください。(初期値: 162)"
 
+msgid "Enter the user password."
+msgstr ""
+
 msgid "Enter trap host name."
 msgstr "トラップホストを入力して下さい。"
 
@@ -3268,7 +3297,7 @@ msgstr "イベント"
 msgid "Event Selection"
 msgstr ""
 
-msgid "Example: pkg add packagename."
+msgid "Example: pkg install packagename."
 msgstr ""
 
 msgid "Execute"
@@ -3382,7 +3411,7 @@ msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
-msgstr "FTP プロキシ"
+msgstr ""
 
 msgid "FTP events"
 msgstr "FTP イベント"
@@ -3556,11 +3585,11 @@ msgstr "フロー"
 msgid "Force Operation"
 msgstr ""
 
-msgid "Force delete"
+msgid "Force Use"
 msgstr ""
 
-msgid "Force use"
-msgstr "強制使用"
+msgid "Force delete"
+msgstr ""
 
 msgid "Forced Update Period"
 msgstr ""
@@ -3724,9 +3753,6 @@ msgstr ""
 msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group name."
-msgstr "グループ名"
-
 msgid "Group numeric id."
 msgstr "グループ ID"
 
@@ -3789,7 +3815,7 @@ msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
-msgstr "HTTP プロキシ"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM ゲスト"
@@ -3845,9 +3871,6 @@ msgstr "ヒント"
 
 msgid "Home Directory"
 msgstr ""
-
-msgid "Home directory"
-msgstr "ホームディレクトリ"
 
 msgid "Host"
 msgstr "ホスト"
@@ -4166,13 +4189,13 @@ msgid ""
 "the target."
 msgstr ""
 
+msgid "Initiator Name"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr "iSCSIターゲットへのアクセスを許可するイニシエータ名。名前を指定するか 'ALL' で全てを許可します。"
-
-msgid "Initiator name"
-msgstr "イニシエーター名"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr "イニシエータ側シークレット。(双方向 CHAP 認証)"
@@ -4267,6 +4290,9 @@ msgstr "内部UPS日時"
 
 msgid "Internal UPS clock time"
 msgstr "内部UPS時間"
+
+msgid "Interval"
+msgstr ""
 
 msgid "Interval between self tests"
 msgstr "セルフテスト間隔"
@@ -4662,11 +4688,11 @@ msgstr "LUN に割り当てる装置のタイプ。"
 msgid "Login"
 msgstr "ログイン"
 
-msgid "Login name of user."
-msgstr "ユーザのログイン名"
-
 msgid "Logout"
 msgstr "ログアウト"
+
+msgid "Long Self-Test"
+msgstr ""
 
 msgid "Low voltage boosting transfer point"
 msgstr "電圧上昇補正のしきい値"
@@ -4806,15 +4832,8 @@ msgstr ""
 msgid "Max. Sessions"
 msgstr ""
 
-msgid "Max. TTL"
-msgstr "最大 TTL"
-
 msgid "Max. pre-send R2T"
 msgstr "最大R2T事前送信数"
-
-msgid ""
-"Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr "発信するプローブパケットの time-to-live (ホップカウント) の最大値"
 
 msgid "MaxBurstLength"
 msgstr "MaxBurstLength"
@@ -4830,9 +4849,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "最大のパフォーマンス、最大の音響出力"
-
-msgid "Maximum frequency"
-msgstr "最大周波数"
 
 msgid "Maximum idle time in seconds."
 msgstr "最大のアイドル時間を秒単位で指定します。"
@@ -4945,9 +4961,6 @@ msgstr "最小のパフォーマンス、最小の音響出力"
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "電源OFF後のUPS再起動の最少バッテリー残量"
 
-msgid "Minimum frequency"
-msgstr "最少周波数"
-
 msgid "Minimum incoming voltage seen"
 msgstr "最少入力電圧"
 
@@ -5014,9 +5027,6 @@ msgstr ""
 msgid "Monday"
 msgstr ""
 
-msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
-msgstr "月曜日 火曜日 水曜日 木曜日 金曜日 土曜日 日曜日"
-
 msgid "Monitoring"
 msgstr ""
 
@@ -5045,9 +5055,6 @@ msgstr ""
 
 msgid "Mount Points"
 msgstr ""
-
-msgid "Mount point"
-msgstr "マウントポイント"
 
 msgid "Mount point name"
 msgstr "マウントポイント名"
@@ -5473,8 +5480,11 @@ msgstr ""
 msgid "Off"
 msgstr "Off"
 
-msgid "Old passphrase"
-msgstr "古いパスフレーズ"
+msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Old Passphrase"
+msgstr ""
 
 msgid "On"
 msgstr "On"
@@ -5600,6 +5610,9 @@ msgstr "パッケージのアップロードに失敗しました。(メモリ�
 msgid "Packages"
 msgstr "パッケージ"
 
+msgid "Packages Installer"
+msgstr ""
+
 msgid "Page Refresh"
 msgstr ""
 
@@ -5649,6 +5662,9 @@ msgstr ""
 
 msgid "Passphrase"
 msgstr "パスフレーズ"
+
+msgid "Passphrase Confirmation"
+msgstr ""
 
 msgid "Passphrase don't match."
 msgstr "パスフレーズが一致しません。"
@@ -5735,9 +5751,6 @@ msgstr "ピアシークレット"
 msgid "Peer User"
 msgstr "ピアユーザ"
 
-msgid "Peer port"
-msgstr "ピアポート"
-
 msgid "Performance Settings"
 msgstr ""
 
@@ -5763,7 +5776,13 @@ msgstr "画像"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Ping Test"
+msgid "Ping Host"
+msgstr ""
+
+msgid "Ping Output"
+msgstr ""
+
+msgid "Ping may take a while, please be patient."
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -5950,9 +5969,6 @@ msgstr "電源モード"
 
 msgid "Power management"
 msgstr "電源管理"
-
-msgid "Power mode"
-msgstr "電源モード"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr "少なくともHPのデバイスで使用されている属性。"
@@ -6274,6 +6290,9 @@ msgstr "リモートアドレス"
 msgid "Remote Module (Source)"
 msgstr "リモートモジュール (ソース)"
 
+msgid "Remote Monitoring"
+msgstr ""
+
 msgid "Remote Rsync Daemon"
 msgstr ""
 
@@ -6285,12 +6304,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module name"
-msgstr "リモートモジュール名"
-
-msgid "Remote monitoring"
-msgstr "リモートモニタリング"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6371,14 +6384,8 @@ msgstr ""
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr "操作中の機械的な部分で摩擦によって生じた抵抗。"
 
-msgid "Resolve"
-msgstr "逆引き"
-
 msgid "Resolve IP"
 msgstr ""
-
-msgid "Resolve IP addresses to hostnames"
-msgstr "IP アドレスからホスト名を解決する"
 
 msgid "Resolve IP addresses to hostnames."
 msgstr ""
@@ -6389,11 +6396,11 @@ msgstr "リソース"
 msgid "Resource Name"
 msgstr ""
 
-msgid "Resource name"
-msgstr "リソース名"
-
 msgid "Resources"
 msgstr "リソース"
+
+msgid "Restore"
+msgstr ""
 
 msgid "Restore Configuration"
 msgstr "設定のリストア"
@@ -6629,8 +6636,8 @@ msgstr ""
 msgid "Scheduled Shutdown"
 msgstr "シャットダウンスケジュール"
 
-msgid "Scheduled tests"
-msgstr "テストスケジュール"
+msgid "Scheduled Tests"
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr ""
@@ -6730,8 +6737,15 @@ msgstr "ファームウェア選択:"
 msgid "Select item to remove from the list"
 msgstr "リストから削除するアイテムを選択"
 
+msgid ""
+"Select max time-to-live (max number of hops) used in outgoing probe packets."
+msgstr ""
+
 msgid "Select mount point where to create the swap file."
 msgstr "スワップファイルを作成するディレクトリを選択してください。"
+
+msgid "Select number of ICMP ECHO REQUEST packets."
+msgstr ""
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6761,6 +6775,9 @@ msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
 msgstr "暗号化された GZIP ファイルまたは XML ファイルのサーバー設定ファイルを選択後、下のボタンをクリックすると設定が復元されます。"
+
+msgid "Select which interface to use."
+msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -6875,6 +6892,11 @@ msgstr "このアカウントを他のグループのメンバーにします。
 msgid "Set browseable."
 msgstr ""
 
+msgid ""
+"Set interval between disk checks to N seconds. The minimum allowed value is "
+"10."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -6909,13 +6931,14 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "タイトルのスクロールスピード 0～10 (初期値 10)"
 
+msgid "Set user login shell."
+msgstr ""
+
+msgid "Setkey"
+msgstr ""
+
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "ルートデータセット用に別のマウントポイントを設定します。デフォルトは /mnt です。"
-
-msgid ""
-"Sets the interval between disk checks to N seconds. The minimum allowed "
-"value is 10."
-msgstr "ディスクのチェック間隔を秒単位で設定してください。最小の値は 10 (秒)です。"
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -6958,6 +6981,9 @@ msgstr "シェル"
 msgid "Shock During Write."
 msgstr "書き込み中の衝撃。"
 
+msgid "Short Self-Test"
+msgstr ""
+
 msgid "Show Default Groups"
 msgstr ""
 
@@ -6982,11 +7008,11 @@ msgstr ""
 msgid "Shutdown"
 msgstr "シャットダウン"
 
-msgid "Shutdown mode"
-msgstr "シャットダウンモード"
+msgid "Shutdown Mode"
+msgstr ""
 
-msgid "Shutdown timer"
-msgstr "シャットダウンタイマ"
+msgid "Shutdown Timer"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "簡易ネットワーク管理プロトコル (SNMP)"
@@ -7014,6 +7040,9 @@ msgid "Skew"
 msgstr "スキュー"
 
 msgid "Skip First Scan"
+msgstr ""
+
+msgid "Skip View Mode"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7448,14 +7477,14 @@ msgstr "テープ"
 msgid "Target"
 msgstr "ターゲット"
 
+msgid "Target Address"
+msgstr ""
+
 msgid "Target Alias"
 msgstr "ターゲットエイリアス名"
 
 msgid "Target Name"
 msgstr "ターゲット名"
-
-msgid "Target address"
-msgstr "ターゲットアドレス"
 
 msgid "Target directory."
 msgstr "ターゲットディレクトリ"
@@ -7468,9 +7497,6 @@ msgstr "ターゲットが選択されていません。"
 
 msgid "Target list"
 msgstr "ターゲットリスト"
-
-msgid "Target name"
-msgstr "ターゲット名"
 
 msgid "Target side secret."
 msgstr "ターゲット側シークレット。"
@@ -7508,11 +7534,11 @@ msgstr "テンポラリディレクトリ"
 msgid "Temporary directory to store transcoded files."
 msgstr "トランスコードファイルを保存するテンポラリディレクトリ。"
 
-msgid "Test Mode"
+msgid "Test Email"
 msgstr ""
 
-msgid "Test email"
-msgstr "テストメール送信"
+msgid "Test Mode"
+msgstr ""
 
 #, php-format
 msgid "Test email from host: %s"
@@ -8064,7 +8090,7 @@ msgid "The old password is not correct."
 msgstr "古いパスワードは正しくありません。"
 
 msgid "The password contains the illegal character ':'."
-msgstr "入力したパスワードに不正ない文字が使用されています。"
+msgstr ""
 
 msgid "The password encryption protocol to use."
 msgstr "パスワード暗号化で利用される形式。"
@@ -8215,9 +8241,6 @@ msgstr "アップロードされたファイルは、php.ini の upload_max_file
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "アップロードされたファイルは部分的にだけアップロードされています。"
-
-msgid "The user's login shell."
-msgstr "ユーザログインシェル"
 
 msgid "The value of the variable."
 msgstr "変数の値"
@@ -8447,8 +8470,8 @@ msgid ""
 msgstr ""
 "Zeroconf/Bonjour/Rendezvous 経由で広告されるサーバ名と、DAAP 経由でエクスポートされるデータベース名の両方で使用されます。"
 
-msgid "This is for information only (not using during iSCSI negotiation)."
-msgstr "この内容は iSCSI ネゴシエーションには使用されません。"
+msgid "This is for information only. (not used during iSCSI negotiation)."
+msgstr ""
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
@@ -8661,9 +8684,6 @@ msgstr "このタグはすでに存在しています。"
 msgid "This tag is used."
 msgstr "このタグは使用されています。"
 
-msgid "This the IP address or DNS name of the iSCSI target."
-msgstr "iSCSIターゲットのIPアドレスもしくはFQDN"
-
 msgid "This user already exists in the user list."
 msgstr "ユーザは既にユーザリストに存在します。"
 
@@ -8737,9 +8757,6 @@ msgstr "シャットダウン前の時間"
 
 msgid "Time before the load will be started"
 msgstr "起動前の時間"
-
-msgid "Time interval"
-msgstr "インターバル"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr "ドライブヘッドの位置決めに費やした時間。"
@@ -8867,15 +8884,14 @@ msgstr "合計: %s | 使用中: %s | 未使用: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
-msgid "Traceroute Test"
+msgid "Traceroute Host"
 msgstr ""
 
-msgid ""
-"Traceroute may take a while to complete. You may hit the Stop button on your "
-"browser at any time to see the progress of failed traceroutes."
+msgid "Traceroute Output"
 msgstr ""
-"Traceroute が完了するまで時間がかかるかもしれません。失敗した traceroute "
-"の経過を見るためにブラウザのストップボタンをクリックしても構いません。"
+
+msgid "Traceroute may take a while, please be patient."
+msgstr ""
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -8894,14 +8910,14 @@ msgstr "転送速度"
 msgid "Transfer mode"
 msgstr "転送モード"
 
-msgid "Trap host"
-msgstr "トラップホスト"
+msgid "Trap Host"
+msgstr ""
 
-msgid "Trap port"
-msgstr "トラップポート"
+msgid "Trap Port"
+msgstr ""
 
-msgid "Trap string"
-msgstr "トラップ文字列"
+msgid "Trap String"
+msgstr ""
 
 msgid "Trap string."
 msgstr "トラップ文字列。"
@@ -9181,10 +9197,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use the following IP address as the source address in outgoing packets."
-msgstr "送信パケットのソースアドレスとしてこのIPアドレスを使用します。"
-
-msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr "Windows 2000 より導入された 64k ストリーミングによる読み書きをサポートした SMB リクエストを使用します。"
@@ -9241,6 +9253,9 @@ msgstr "ユーザ ID"
 msgid "User Mask"
 msgstr ""
 
+msgid "User Password Settings"
+msgstr ""
+
 msgid "User Portal"
 msgstr ""
 
@@ -9259,17 +9274,8 @@ msgstr ""
 msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User full name."
-msgstr "ユーザのフルネーム。"
-
-msgid "User mask"
-msgstr "User mask"
-
 msgid "User numeric id."
 msgstr "ユーザ ID の整数値"
-
-msgid "User password."
-msgstr "ユーザのパスワード。"
 
 msgid "Username"
 msgstr "ユーザ名"
@@ -9597,7 +9603,7 @@ msgid "Yes"
 msgstr "Yes"
 
 msgid ""
-"You can also install a package via SSH or console using the the pkg add "
+"You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
 
@@ -9754,9 +9760,6 @@ msgstr "変更に失敗しました。"
 msgid "chroot() everyone, but root."
 msgstr "root 以外のユーザに chroot() を有効にします。"
 
-msgid "days"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9780,9 +9783,6 @@ msgstr "設定可能な最大切り替え電圧上限値"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "設定可能な最大切り替え電圧下限値"
-
-msgid "hours"
-msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI イニシエータ"
@@ -9817,12 +9817,6 @@ msgstr "ロード/アンロードに失敗しました。"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "minutes"
-msgstr ""
-
-msgid "months"
-msgstr ""
 
 msgid "mount"
 msgstr "マウント"
@@ -9890,6 +9884,3 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
-
-msgid "week days"
-msgstr ""
