@@ -65,7 +65,7 @@ $img_path = [
 	'inf' => 'images/info.png'
 ];
 // sunrise: verify if setting exists, otherwise run init tasks
-$sphere_array = &array_make_branch($config,'zfs','pools');
+$sphere_array = &array_make_branch($config,'zfs','pools','pool');
 if(empty($sphere_array)):
 else:
 	array_sort_key($sphere_array,'name');
