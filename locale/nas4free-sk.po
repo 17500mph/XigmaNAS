@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-04 10:56+0000\n"
-"PO-Revision-Date: 2016-12-29 18:46+0000\n"
+"PO-Revision-Date: 2017-02-04 20:56+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-04 17:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-04 21:05+0000\n"
 "X-Generator: Launchpad (build 18322)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -171,7 +171,8 @@ msgstr "*** Importovaný duplikát ***"
 
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr ""
-"0=vypnuté, 1-255=zapnuté radenie príkazov do frontu s určenou dĺžkou."
+"0=zakázané, 1-255=Povolené radenie príkazov do frontu s takouto určenou "
+"dĺžkou."
 
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "1 alebo viac diskov je potrebných na vytvorenie JBOD oddielu."
@@ -192,12 +193,13 @@ msgid "4KB wrapper"
 msgstr "4KB wrapper (zarovnávač/oddeľovač)"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr "značka VLAN 802.1Q (medzi 1 a 4094)."
+msgstr "802.1Q VLAN tag (medzi 1 a 4094)."
 
 msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
-"Názov časového servera NTP môže obsahovať iba znaky a-z, 0-9, „-“ a „.“."
+"Meno časového servera NTP môže obsahovať iba znaky a-z, 0-9, „-“ (spojovník) "
+"a „.“ (bodka)."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -214,6 +216,8 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Výpis obsahu adresára je vygenerovaný ak sa v adresári nenachádza žiaden "
+"INDEX-súbor (index.php, index.html, index.htm or default.htm)."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -243,13 +247,13 @@ msgstr ""
 "požadovanú akciu."
 
 msgid "A reload request has been sent to the daemon."
-msgstr "Žiadosť o znovunačítanie bola zaslaná."
+msgstr "Žiadosť o znovunačítanie bola zaslaná procesu služby.."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Prehľadávanie bolo spustené"
 
 msgid "A route to this destination network already exists."
-msgstr "Cesta k tejto cieľovej sietu už existuje."
+msgstr "Cesta k tejto sieti už existuje."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -257,6 +261,9 @@ msgid ""
 "been turned entirely off (disconnected from power source) and when the hard "
 "disk returns from having previously been put to sleep mode."
 msgstr ""
+"Počítadlo štart/stop cyklov Platní disku. Toto číslo za zvyšuje zakaždým, "
+"keď sa pevný disk zapne, či už  z vypnutého stavu (odpojený od zdroja el. "
+"energie) alebo pri návrate z režimu spánku (režim úspory energie)."
 
 msgid "A valid IP address must be specified."
 msgstr "Je potrebné zadať platnú IP adresu."
@@ -264,28 +271,30 @@ msgstr "Je potrebné zadať platnú IP adresu."
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
-"Musí byť zadaná správna IP adresa alebo CIDR notácia pre povolenie hosťa."
+"Musí byť zadaná správna IP adresa alebo CIDR notácia pre povolenie prístupu "
+"z týchto adries.."
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "Je potrebné zadať platnú IPv4 adresu pre primárny server DNS."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "Je potrebné zadať platnú IPv4 adresu pre sekundárny server DNS."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Musí byť uvedená platná IPv4 adresa."
 
 msgid "A valid IPv4 network bit count must be specified."
-msgstr "Musí byť uvedená platná IPv4 sieť."
+msgstr ""
+"Musí byť uvedená platná IPv4 sieťová maska (bity sieťovej časti IPv4 adresy)."
 
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Musí byť uvedená platná IPv6 brána."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "Je potrebné zadať platnú IPvž adresu pre primárny server DNS."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "Je potrebné zadať platnú IPvž adresu pre sekundárny server DNS."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Musí byť uvedená platná IPv6 adresa."
@@ -294,7 +303,7 @@ msgid "A valid IPv6 prefix must be specified."
 msgstr "Musí byť uvedený platný IPv6 prefix."
 
 msgid "A valid destination network must be specified."
-msgstr "Musí byť uvedený platná cieľová sieť."
+msgstr "Musí byť uvedená platná cieľová sieť."
 
 msgid "A valid gateway IP address must be specified."
 msgstr "Musí byť uvedená platná IP adresa brány."
@@ -312,7 +321,7 @@ msgid "A valid systctl MIB value."
 msgstr "Platná hodnota sysctl MIB."
 
 msgid "ACL Inherit"
-msgstr "Dedenie ACL"
+msgstr "Dedenie ACL oprávnení"
 
 msgid "ACL Mode"
 msgstr "Mód ACL"
@@ -333,19 +342,19 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "Kompatibilita s AFP"
 
 msgid "AG"
-msgstr "AS"
+msgstr "AG"
 
 msgid "AIO Module"
-msgstr ""
+msgstr "Modul AIO"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "Veľkosť prečítaných dát z AIO"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "Veľkosť Zapísaných dát k AIO"
 
 msgid "ALL Interfaces"
 msgstr "Všetky rozhrania"
@@ -357,7 +366,7 @@ msgid "ARP Tables"
 msgstr "ARP tabuľky"
 
 msgid "ARP Tables List"
-msgstr "Tabuľka ARP"
+msgstr "Výpis ARP tabuliek"
 
 msgid "ATTRIBUTE NAME"
 msgstr "MENO ATRIBÚTU"
@@ -378,13 +387,13 @@ msgid "Access Time (atime)"
 msgstr "Čas prístupu (atime)"
 
 msgid "Access the webGUI with the new IP address"
-msgstr "Prístup do webGUI s novou IP adresov"
+msgstr "Pristúpte do webGUI s novou IP adresov"
 
 msgid "Acoustic level"
-msgstr "Úroveň hlasitosti"
+msgstr "Nastavenie Akustickej úrovne"
 
 msgid "Action"
-msgstr "Operácia"
+msgstr "Akcia"
 
 msgid "Activate"
 msgstr "Aktivovať"
@@ -427,7 +436,7 @@ msgid "Add Dataset"
 msgstr "Pridať Dataset"
 
 msgid "Add Group"
-msgstr ""
+msgstr "Pridať skupinu"
 
 msgid "Add Host"
 msgstr "Pridať hostiteľa"
@@ -445,19 +454,19 @@ msgid "Add Rsync job"
 msgstr "Pridať úlohu rsync"
 
 msgid "Add Snapshot"
-msgstr "Pridať Snapshot(obraz)"
+msgstr "Pridať Snapshot"
 
 msgid "Add URL"
-msgstr "Pridať odkaz"
+msgstr "Pridať URL"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Pridať používateľský účet"
 
 msgid "Add Virtual Device"
 msgstr "Pridať virtuálne zariadenie"
 
 msgid "Add Volume"
-msgstr "Pridať oddiel"
+msgstr "Pridať diskový oddiel"
 
 msgid "Add a cache device to a pool"
 msgstr "Pridať cache zariadenie do poolu"
@@ -514,7 +523,7 @@ msgid "Add option"
 msgstr "Pridať možnosť"
 
 msgid "Add pool"
-msgstr "Pridať množinu"
+msgstr "Pridať množinu (pool)"
 
 msgid "Add portal group"
 msgstr "Pridať skupinu portálov"
@@ -535,13 +544,13 @@ msgid "Add target"
 msgstr "Pridať cieľ"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Ďaľšia skupina"
 
 msgid "Additional Network"
 msgstr "Ďalšia sieť"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Ďaľšie parametre"
 
 msgid "Additional Storage"
 msgstr "Ďalší úložný priestor"
@@ -556,62 +565,66 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adresa vzdialeného hastd démona. Musí to byť statická IP adresa."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Heslo Admina"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Heslo do administrácie"
 
 msgid "Administrative WebGUI"
 msgstr "Webové rozhranie na správu"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Meno Administrátora"
 
 msgid "Advanced"
 msgstr "Pokročilé"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Pokročilé formátovanie"
 
 msgid "Advanced Options"
 msgstr "Pokročilé voľby"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Pokročilé nastavenia"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Proces Nastavenia pre pokročilých"
 
 msgid "Advanced settings"
-msgstr "Rozšírené nastavenia"
+msgstr "Pokročilé nastavenia"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Advertisement Skew (omyl, odchýlka)"
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "Africký"
 
 msgid "After"
 msgstr "Po"
 
 msgid "After - File-deletions will be done after the transfer has completed."
-msgstr ""
+msgstr "Transfer bude ukončený akonáhle sa skončí mazanie súborov"
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Po kliknutí na \"Uložiť\" mali by ste urobiť ešte tieto kroky, predtým ako "
+"budete môcť pristúpiť na tento server znovu:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Po kliknutí na \"Uložiť\" musíte ešte server reštartovať, aby sa prejavily "
+"uložené zmeny."
 
 msgid "Age"
-msgstr ""
+msgstr "Vek"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Protokol agregácie"
 
 msgid "Aggressive"
 msgstr "Agresívne"
@@ -620,33 +633,38 @@ msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
 msgstr ""
+"Airflow temperature on Western Digital HDs (Same as temp. , but current "
+"value is 50 less for some models. Marked as obsolete.)"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "úroveň poplachu"
 
 msgid "All"
-msgstr "Všetko:"
+msgstr "Všetko"
 
 msgid "All Dirs"
-msgstr ""
+msgstr "Všetky priečinky"
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "Všetky dáta z nasledujúcich štatistík boli zmazané:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"Všetky dáta v cieľovom adresári budú prepísané. aby ste zamedzili chybám "
+"dát/povolení, odporúčame použiť prázdny priečinok UFS."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Ak aktivujete túto možnosť, všetky dáta budú stratené!"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
 msgstr ""
+"Všetky priečinky potrebujú pripojenú cestu, cesta %s všsak nieje pripojená."
 
 msgid "All disks are imported."
-msgstr ""
+msgstr "Všetky disky sú importované."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -656,22 +674,23 @@ msgstr ""
 "súborov .Parent a čokoľvek začínajúce na .Apple neplatné."
 
 msgid "All software raid disks are imported."
-msgstr ""
+msgstr "Všetky disky softvérového RAIDu sú importované."
 
 msgid "Alloc"
-msgstr ""
+msgstr "Alloc (Alokácia)"
 
 msgid "Allow"
 msgstr "Povoliť"
 
 msgid "Allow New Files"
-msgstr ""
+msgstr "Povoliť nové súbory"
 
 msgid "Allow TLS connections only."
-msgstr ""
+msgstr "Povolit iba spojenia TLS."
 
 msgid "Allow client access to accounts that have null passwords."
-msgstr "Umožniť klientom prístup k účtom, ktoré majú nevyplnené heslo."
+msgstr ""
+"Umožniť klientom prístup k účtom, ktoré majú nevyplnené/žiadne heslo."
 
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
@@ -686,10 +705,10 @@ msgid "Allow new files to be created."
 msgstr "Povoliť tvorbu nových súborov."
 
 msgid "Allow to start UPS from battery"
-msgstr ""
+msgstr "Povoliť štart záložného zdroja v režime na batériu"
 
 msgid "Allow trusted domains."
-msgstr ""
+msgstr "POvoliť dôveryhodné domény."
 
 msgid ""
 "Allows  certain  users and groups to have read/write access to a share. This "
@@ -706,10 +725,10 @@ msgstr ""
 "na čítanie. Formát voľby je rovnaký ako pri Povoliť."
 
 msgid "Allows the server to try and become a local master browser."
-msgstr ""
+msgstr "Povoliť tomuto servru aby sa stal lokálnym \"master browser\"."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Umožniť prístup k skrytej sieti"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -718,64 +737,75 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
+"Also known as 'Power-off Retract Count' per conventional HDD terminology. "
+"Raw value reports the number of unclean shutdowns, cumulative over the life "
+"of an SSD, where an 'unclean shutdown' is the removal of power without "
+"STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
+"capacitor power). Normalized value is always 100."
 
 msgid "AltRoot"
-msgstr "AltKoreň"
+msgstr "Alternatívny koreňový priečinok (AltRoot)"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Alternate Data Streams"
 
 msgid "Alternate TCP port. (Default is 873)."
-msgstr ""
+msgstr "Zameniť TCP port (Východzí je 873)."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatívny konfiguračný priečinok (zvyčajne prázdne)."
 
 msgid "Always"
-msgstr ""
+msgstr "Vždy"
 
 msgid "Always On"
-msgstr ""
+msgstr "Vždy zapnuté"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Vždy prehľadať"
 
 msgid "Ambient Conditions From External Probe Equipment"
-msgstr ""
+msgstr "Stav vonkajšieho prostredia na základe pripojenej Externej sondy"
 
 msgid "Ambient relative humidity (percent)"
-msgstr ""
+msgstr "Relatívna vlhkosť prostredia (v percentách)"
 
 msgid "Ambient temperature (degrees C)"
-msgstr ""
+msgstr "Teplota prostredia (v stupňoch Celzia)"
 
 msgid "Amount of surge current used to spin up the drive."
-msgstr ""
+msgstr "Hodnota nárzového prúdu potrebná na roztočenie disku."
 
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr ""
+"Amplitúda hádzania (dĺžka opakujúcich sa tam/späť pohybov hlavičky disku)."
 
 msgid ""
 "An Auth Group is identified by a tag number and is optional. If the Target "
 "does not use CHAP authentication it defines authorised users and secrets for "
 "additional security."
 msgstr ""
+"Autentifikačná skupina je identivikovaná číslom jej tagu a je volitelná. Ak "
+"cieľ nepodporuje CHAP autentizáciu, táto definuje autorizovaných "
+"používateľov a tajomstvá pre ďalšie zabezpečenie."
 
 msgid "An Extent defines the storage area of the Target."
-msgstr ""
+msgstr "An Extent defines the storage area of the Target."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
 "initiator names and networks."
 msgstr ""
+"Skupina Iniciátorov je označená číslomtagu a definuje oprávnené mená "
+"iniciátorov a sietí."
 
 msgid "An empty field is default."
-msgstr ""
+msgstr "Vo východzom stave je táto hodnota prázdna"
 
 msgid "An error occured."
-msgstr ""
+msgstr "Vyskytla sa chyba."
 
 msgid "An host with this name already exists."
 msgstr "Hostiteľ s týmto názvom už existuje."
@@ -784,10 +814,10 @@ msgid "An interface with the specified description already exists."
 msgstr "Rozhranie s uvedeným popisom už existuje."
 
 msgid "Anonymous Bind"
-msgstr ""
+msgstr "Anonymné spojenie"
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Anonymní používatelia"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr ""
@@ -808,14 +838,18 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"Iný DLNA/UPnP servis je už spustený. Povolenie Fuppes preto môže spôsobiť "
+"problémy."
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Iný DLNA/UPnP servis je už spustený. Povolenie MiniDLNA preto môže spôsobiť "
+"problémy."
 
 msgid "Any"
-msgstr "Ľubovoľné"
+msgstr "Akékoľvek"
 
 msgid "Append user defined shares"
 msgstr ""
