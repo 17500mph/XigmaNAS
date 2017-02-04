@@ -86,7 +86,7 @@ if ($_POST) {
 
 	if ($_POST['type'] === "Static") {
 		$reqdfields = ['ipaddr','subnet'];
-		$reqdfieldsn = [gtext('IP Address'),gtext('Subnet bit count')];
+		$reqdfieldsn = [gtext('IP Address'),gtext('Subnet Bit Count')];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		if (($_POST['ipaddr'] && !is_ipv4addr($_POST['ipaddr'])))
 			$input_errors[] = gtext("A valid IPv4 address must be specified.");
@@ -261,21 +261,21 @@ function encryption_change() {
 				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
-					html_titleline(gtext("IPv4 Configuration"));
+					html_titleline(gtext("IPv4 Settings"));
 					html_combobox("type", gtext("Type"), $pconfig['type'], ['Static' => gtext('Static'),'DHCP' => 'DHCP'], "", true, false, "type_change()");
-					html_ipv4addrbox("ipaddr", "subnet", gtext("IP address"), $pconfig['ipaddr'], $pconfig['subnet'], "", true);
+					html_ipv4addrbox("ipaddr", "subnet", gtext("IP Address"), $pconfig['ipaddr'], $pconfig['subnet'], "", true);
 					html_inputbox("gateway", gtext("Gateway"), $pconfig['gateway'], "", true, 20);
 					html_separator();
-					html_titleline_checkbox("ipv6_enable", gtext("IPv6 Configuration"), !empty($pconfig['ipv6_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
+					html_titleline_checkbox("ipv6_enable", gtext("IPv6 Settings"), !empty($pconfig['ipv6_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
 					html_combobox("ipv6type", gtext("Type"), $pconfig['ipv6type'], ['Static' => gtext('Static'),'Auto' => gtext('Auto')], "", true, false, "ipv6_type_change()");
-					html_ipv6addrbox("ipv6addr", "ipv6subnet", gtext("IP address"), !empty($pconfig['ipv6addr']) ? $pconfig['ipv6addr'] : "", !empty($pconfig['ipv6subnet']) ? $pconfig['ipv6subnet'] : "", "", true);
+					html_ipv6addrbox("ipv6addr", "ipv6subnet", gtext("IP Address"), !empty($pconfig['ipv6addr']) ? $pconfig['ipv6addr'] : "", !empty($pconfig['ipv6subnet']) ? $pconfig['ipv6subnet'] : "", "", true);
 					html_inputbox("ipv6gateway", gtext("Gateway"), !empty($pconfig['ipv6gateway']) ? $pconfig['ipv6gateway'] : "", "", true, 20);
 					html_separator();
-					html_titleline(gtext("Advanced Configuration"));
+					html_titleline(gtext("Advanced Settings"));
 					html_inputbox("mtu", gtext("MTU"), $pconfig['mtu'], gtext("Set the maximum transmission unit of the interface to n, default is interface specific. The MTU is used to limit the size of packets that are transmitted on an interface. Not all interfaces support setting the MTU, and some interfaces have range restrictions."), false, 5);
 					?>
 <!--
-					<?php html_checkbox("polling", gtext("Device polling"), $pconfig['polling'] ? true : false, gtext("Enable device polling"), gtext("Device polling is a technique that lets the system periodically poll network devices for new data instead of relying on interrupts. This can reduce CPU load and therefore increase throughput, at the expense of a slightly higher forwarding delay (the devices are polled 1000 times per second). Not all NICs support polling."), false);?>
+					<?php html_checkbox("polling", gtext("Device Polling"), $pconfig['polling'] ? true : false, gtext("Enable device polling"), gtext("Device polling is a technique that lets the system periodically poll network devices for new data instead of relying on interrupts. This can reduce CPU load and therefore increase throughput, at the expense of a slightly higher forwarding delay (the devices are polled 1000 times per second). Not all NICs support polling."), false);?>
 -->
 					<?php
 					html_combobox("media", gtext("Media"), $pconfig['media'], ['autoselect' => gtext('Autoselect'),'10baseT/UTP' => '10baseT/UTP','100baseTX' => '100baseTX','1000baseTX' => '1000baseTX','1000baseSX' => '1000baseSX',], "", false, false, "media_change()");
@@ -284,7 +284,7 @@ function encryption_change() {
 						$wakeonoptions = ['off' => gtext('Off'), 'wol' => gtext('On')]; foreach ($ifinfo['wolevents'] as $woleventv) { $wakeonoptions[$woleventv] = $woleventv; };
 						html_combobox("wakeon", gtext("Wake On LAN"), $pconfig['wakeon'], $wakeonoptions, "", false);
 					}
-					html_inputbox("extraoptions", gtext("Extra options"), $pconfig['extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 40);
+					html_inputbox("extraoptions", gtext("Extra Options"), $pconfig['extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 40);
 					if (isset($lancfg['wireless'])) {
 						wireless_config_print();
 					}
