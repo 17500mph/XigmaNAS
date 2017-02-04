@@ -1873,8 +1873,9 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['name'] = $diskv['name'];
 				$pdisk['id'] = $diskv['id'];
 				$pdisk['devicespecialfile'] = $dev;
-				$pdisk['model'] = !empty($diskv['model']) ? $diskv['model'] : "";
-				$pdisk['desc'] = !empty($diskv['desc']) ? $diskv['desc'] : "";
+				$pdisk['passthroughdevice'] = $diskv['passthroughdevice'] ?? '';
+				$pdisk['model'] = $diskv['model'] ?? '';
+				$pdisk['desc'] = $diskv['desc'] ?? '';
 				$pdisk['type'] = $diskv['type'];
 				$serial = "";
 				if (!empty($diskv['serial'])) {
