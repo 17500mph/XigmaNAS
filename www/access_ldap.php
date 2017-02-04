@@ -64,7 +64,7 @@ if ($_POST) {
 
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = ['hostname','base','rootbinddn','rootbindpw','user_suffix','group_suffix','password_suffix machine_suffix'];
+		$reqdfields = ['hostname','base','rootbinddn','rootbindpw','user_suffix','group_suffix','password_suffix','machine_suffix'];
 		$reqdfieldsn = [gtext('URI'),gtext('Base DN'),gtext('Root Bind DN'),gtext('Root Bind Password'),gtext('User Suffix'),gtext('Group Suffix'),gtext('Password Suffix'),gtext('Machine Suffix')];
 		$reqdfieldst = ['string','string','string','password','string','string','string','string'];
 		if (empty($_POST['anonymousbind'])) {
