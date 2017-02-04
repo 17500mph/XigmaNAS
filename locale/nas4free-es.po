@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
 "PO-Revision-Date: 2017-02-02 06:42+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:08+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -584,9 +584,6 @@ msgstr "Nombre del Administrador"
 
 msgid "Advanced"
 msgstr "Avanzado"
-
-msgid "Advanced Configuration"
-msgstr "Configuración avanzada"
 
 msgid "Advanced Format"
 msgstr "Formateo Avanzado (4k)"
@@ -1319,6 +1316,9 @@ msgstr "CP949 (Coreano)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Chino Tradicional Big5)"
 
+msgid "CPU Core Usage"
+msgstr ""
+
 msgid "CPU Frequency"
 msgstr "Frecuencia de la CPU"
 
@@ -1660,6 +1660,9 @@ msgstr "Grupo de autorizacion de controlador"
 msgid "Controller Auth Method"
 msgstr "Metodo de autorizacion de controlador"
 
+msgid "Controller Authorised Network"
+msgstr ""
+
 msgid "Controller Authorised network"
 msgstr "Controlador de red autorizado"
 
@@ -1738,9 +1741,6 @@ msgstr "Auto-Test de transporte."
 
 msgid "Core"
 msgstr "Núcleo"
-
-msgid "Core Usage"
-msgstr "Uso del núcleo"
 
 msgid "Count"
 msgstr "Recuento"
@@ -2450,6 +2450,9 @@ msgstr "Dispositivo por medio de paso"
 
 msgid "Device Path"
 msgstr "Ruta del dispositivo"
+
+msgid "Device Polling"
+msgstr ""
 
 msgid "Device Serial"
 msgstr "nº de serie"
@@ -3643,9 +3646,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Opciones Extra"
 
-msgid "Extra options"
-msgstr "Opciones extras"
-
 msgid "Extra options (usually empty)."
 msgstr "Opciones extra (normalmente vacias)."
 
@@ -4256,20 +4256,17 @@ msgstr "La IP no coincide con la red y la puerta de enlace"
 msgid "IPMI Stats"
 msgstr "Estado del IPMI"
 
-msgid "IPv4 Configuration"
-msgstr "Configuración de IPv4"
-
 msgid "IPv4 DNS Servers"
 msgstr "Servidores IPv4 DNS"
+
+msgid "IPv4 Settings"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Dirección IPv4"
 
 msgid "IPv6 Address"
 msgstr "Dirección IPv6"
-
-msgid "IPv6 Configuration"
-msgstr "Configuración de IPv6"
 
 msgid "IPv6 DNS Servers"
 msgstr "Servidores IPv6 DNS"
@@ -4279,6 +4276,9 @@ msgstr "Puerta de enlace de IPv6"
 
 msgid "IPv6 Prefix"
 msgstr "Prefijo IPv6"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "Dirección IPv6"
@@ -4824,9 +4824,6 @@ msgstr "Idioma a usar en el Panel Frontal"
 
 msgid "Large Read/Write"
 msgstr "Lectura Escritura Grande"
-
-msgid "Last Configuration Change"
-msgstr "Ultimo cambio de configuración"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -7784,9 +7781,6 @@ msgstr "Cuenta de Bit de subred"
 msgid "Subnet Mask"
 msgstr "Máscara de subred"
 
-msgid "Subnet bit count"
-msgstr "Bit de subnet"
-
 msgid "Subsystem"
 msgstr "Subsistema"
 
@@ -7873,6 +7867,9 @@ msgstr "Sistema"
 
 msgid "System BIOS"
 msgstr "BIOS"
+
+msgid "System Config Change"
+msgstr ""
 
 msgid "System Email Report Settings"
 msgstr "Opciones de e-mail del sistema"
@@ -10694,3 +10691,18 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Configuración avanzada"
+
+#~ msgid "Extra options"
+#~ msgstr "Opciones extras"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "Configuración de IPv4"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "Configuración de IPv6"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Bit de subnet"

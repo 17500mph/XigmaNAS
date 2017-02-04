@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
 "PO-Revision-Date: 2017-01-30 19:25+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:09+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -577,9 +577,6 @@ msgstr "Rendszergazda neve"
 
 msgid "Advanced"
 msgstr "Haladó"
-
-msgid "Advanced Configuration"
-msgstr "Részletes beállítás"
 
 msgid "Advanced Format"
 msgstr "Fejlett formázás"
@@ -1302,6 +1299,9 @@ msgstr "CP949 (koreai)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditional Chinese Big5)"
 
+msgid "CPU Core Usage"
+msgstr ""
+
 msgid "CPU Frequency"
 msgstr "CPU frekvencia"
 
@@ -1640,6 +1640,9 @@ msgstr "Kontroller Hitelesített csoport"
 msgid "Controller Auth Method"
 msgstr "Kontroller Auth eljárás"
 
+msgid "Controller Authorised Network"
+msgstr ""
+
 msgid "Controller Authorised network"
 msgstr "Kontroller engedélyezett hálózat"
 
@@ -1718,9 +1721,6 @@ msgstr ""
 
 msgid "Core"
 msgstr "Rendszermag"
-
-msgid "Core Usage"
-msgstr "Rendszermag-használat"
 
 msgid "Count"
 msgstr "Számláló"
@@ -2403,6 +2403,9 @@ msgstr "Átmenő Eszköz"
 
 msgid "Device Path"
 msgstr "Eszköz útvonala"
+
+msgid "Device Polling"
+msgstr ""
 
 msgid "Device Serial"
 msgstr "Soros eszköz"
@@ -3591,9 +3594,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "További lehetőségek"
 
-msgid "Extra options"
-msgstr "Extra beállítások"
-
 msgid "Extra options (usually empty)."
 msgstr "Extra beállítások (általában üres)."
 
@@ -4198,20 +4198,17 @@ msgstr "IP típusú eltérés a hálózathoz és az átjáróhoz."
 msgid "IPMI Stats"
 msgstr "IPMI statisztikák"
 
-msgid "IPv4 Configuration"
-msgstr "IPv4 beállítás"
-
 msgid "IPv4 DNS Servers"
 msgstr "IPv4 DNS szerverek"
+
+msgid "IPv4 Settings"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 címek"
 
 msgid "IPv6 Address"
 msgstr "IPv6 cím"
-
-msgid "IPv6 Configuration"
-msgstr "IPv6 beállítás"
 
 msgid "IPv6 DNS Servers"
 msgstr "IPv6 DNS szerverek"
@@ -4221,6 +4218,9 @@ msgstr "IPv6 átjáró"
 
 msgid "IPv6 Prefix"
 msgstr "IPv6 előtag"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "IPv6 címek"
@@ -4755,9 +4755,6 @@ msgstr "Első panelen használt nyelv"
 
 msgid "Large Read/Write"
 msgstr "Óriás olvasás/írás"
-
-msgid "Last Configuration Change"
-msgstr "Beállítások utolsó módosítása"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -7708,9 +7705,6 @@ msgstr "Alhálózati bitszám"
 msgid "Subnet Mask"
 msgstr "Alhálózati maszk"
 
-msgid "Subnet bit count"
-msgstr "Alhálózati bitszámláló"
-
 msgid "Subsystem"
 msgstr "Alrendszer"
 
@@ -7798,6 +7792,9 @@ msgstr "Rendszer"
 
 msgid "System BIOS"
 msgstr "Rendszer BIOS"
+
+msgid "System Config Change"
+msgstr ""
 
 msgid "System Email Report Settings"
 msgstr "Rendszer e-mail jelentések beállításai"
@@ -10578,3 +10575,18 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Részletes beállítás"
+
+#~ msgid "Extra options"
+#~ msgstr "Extra beállítások"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "IPv4 beállítás"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "IPv6 beállítás"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Alhálózati bitszámláló"

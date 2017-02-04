@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
-"PO-Revision-Date: 2017-02-02 06:48+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
+"PO-Revision-Date: 2017-02-03 16:28+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:09+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -572,9 +572,6 @@ msgstr "Anministratörsnamn"
 
 msgid "Advanced"
 msgstr "Avancerat"
-
-msgid "Advanced Configuration"
-msgstr "Avancerad konfiguration"
 
 msgid "Advanced Format"
 msgstr "Avancerat format"
@@ -1290,6 +1287,9 @@ msgstr "CP949 (koreanskt)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditionell kinesiska Big5)"
 
+msgid "CPU Core Usage"
+msgstr "CPU kärnanvändning"
+
 msgid "CPU Frequency"
 msgstr "CPU Frekvens"
 
@@ -1625,6 +1625,9 @@ msgstr "Kontrollant för Auktorisationsgruppen"
 msgid "Controller Auth Method"
 msgstr "Typ av auktorisering för hanterare"
 
+msgid "Controller Authorised Network"
+msgstr "Kontroller för autoriserat närverk"
+
 msgid "Controller Authorised network"
 msgstr "Auktoriserat nätverk för kontrollant"
 
@@ -1703,9 +1706,6 @@ msgstr "Överföringssjälvtest"
 
 msgid "Core"
 msgstr "Kärna"
-
-msgid "Core Usage"
-msgstr "Kärnanvändning"
 
 msgid "Count"
 msgstr "Antal"
@@ -2392,6 +2392,9 @@ msgstr "Komponent genomströmning"
 
 msgid "Device Path"
 msgstr "Enhetssökväg"
+
+msgid "Device Polling"
+msgstr ""
 
 msgid "Device Serial"
 msgstr "Serieport"
@@ -3572,9 +3575,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Extra alternativ"
 
-msgid "Extra options"
-msgstr "Extra alternativ"
-
 msgid "Extra options (usually empty)."
 msgstr "Tilläggsfunktioner (vanligtvis tomt)."
 
@@ -4175,20 +4175,17 @@ msgstr "IP adressen stämmer inte överens mellan nätverket och \"gateway\""
 msgid "IPMI Stats"
 msgstr "IPMI Stats"
 
-msgid "IPv4 Configuration"
-msgstr "IPv4-konfiguration"
-
 msgid "IPv4 DNS Servers"
 msgstr "IPv4 DNS Servrar"
+
+msgid "IPv4 Settings"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4-adresser"
 
 msgid "IPv6 Address"
 msgstr "IPv6-adress"
-
-msgid "IPv6 Configuration"
-msgstr "IPv6-konfiguration"
 
 msgid "IPv6 DNS Servers"
 msgstr "IPv6 DNS Servrar"
@@ -4198,6 +4195,9 @@ msgstr "IPv6 Gateway"
 
 msgid "IPv6 Prefix"
 msgstr "IPv6-prefix"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "IPv6-adress"
@@ -4736,9 +4736,6 @@ msgstr "Språk för frontpanel"
 
 msgid "Large Read/Write"
 msgstr "Stor Läs/skriv"
-
-msgid "Last Configuration Change"
-msgstr "Senaste konfigurationsändring"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -7646,9 +7643,6 @@ msgstr "Biträknare för undernät"
 msgid "Subnet Mask"
 msgstr "Delnätsmask"
 
-msgid "Subnet bit count"
-msgstr "Undernätets biträkning"
-
 msgid "Subsystem"
 msgstr "Delsystem"
 
@@ -7736,6 +7730,9 @@ msgstr "System"
 
 msgid "System BIOS"
 msgstr "System BIOS"
+
+msgid "System Config Change"
+msgstr "Systemkonfigurationsändring"
 
 msgid "System Email Report Settings"
 msgstr "System e-postrapportinställningar"
@@ -10527,3 +10524,18 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Avancerad konfiguration"
+
+#~ msgid "Extra options"
+#~ msgstr "Extra alternativ"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "IPv4-konfiguration"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "IPv6-konfiguration"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Undernätets biträkning"
