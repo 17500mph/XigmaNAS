@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
 "PO-Revision-Date: 2017-02-02 09:13+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:08+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -604,9 +604,6 @@ msgstr "Όνομα Διαχειριστή"
 
 msgid "Advanced"
 msgstr "Για προχωρημένους"
-
-msgid "Advanced Configuration"
-msgstr "Προχωρημένες Ρυθμίσεις"
 
 msgid "Advanced Format"
 msgstr "Προχωρημένη διαμόρφωση"
@@ -1349,6 +1346,9 @@ msgstr "CP949 (Κορεατικά)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Παραδοσιακά Κινεζικά Big5)"
 
+msgid "CPU Core Usage"
+msgstr ""
+
 msgid "CPU Frequency"
 msgstr "Συχνότητα της CPU"
 
@@ -1692,6 +1692,9 @@ msgstr "Ομάδα πιστοποίησης του Ελεγκτή"
 msgid "Controller Auth Method"
 msgstr "Μέθοδος πιστοποίησης του Ελεγκτή"
 
+msgid "Controller Authorised Network"
+msgstr ""
+
 msgid "Controller Authorised network"
 msgstr "Εγκεκριμένο δίκτυο του Ελεγκτή"
 
@@ -1773,9 +1776,6 @@ msgstr "Conveyance Self-Test"
 
 msgid "Core"
 msgstr "Πυρήνας"
-
-msgid "Core Usage"
-msgstr "Χρήση Πυρήνων"
 
 msgid "Count"
 msgstr "Αριθμός πακέτων"
@@ -2495,6 +2495,9 @@ msgstr "Pass-through συσκευής"
 
 msgid "Device Path"
 msgstr "Διαδρομή Συσκευής"
+
+msgid "Device Polling"
+msgstr ""
 
 msgid "Device Serial"
 msgstr "Σειριακός αριθμός συσκευής"
@@ -3710,9 +3713,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Πρόσθετες Επιλογές"
 
-msgid "Extra options"
-msgstr "Επιπλέον επιλογές"
-
 msgid "Extra options (usually empty)."
 msgstr "Επιπλέον επιλογές (συνήθως κενό)."
 
@@ -4329,20 +4329,17 @@ msgstr ""
 msgid "IPMI Stats"
 msgstr "Στατιστικά IPMI"
 
-msgid "IPv4 Configuration"
-msgstr "Ρύθμιση IPv4"
-
 msgid "IPv4 DNS Servers"
 msgstr "Διακομιστές IPv4 DNS"
+
+msgid "IPv4 Settings"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Διευθύνσεις IPv4"
 
 msgid "IPv6 Address"
 msgstr "Διεύθυνση IPv6"
-
-msgid "IPv6 Configuration"
-msgstr "Ρύθμιση IPv6"
 
 msgid "IPv6 DNS Servers"
 msgstr "Διακομιστές IPv6 DNS"
@@ -4352,6 +4349,9 @@ msgstr "Πύλη IPv6"
 
 msgid "IPv6 Prefix"
 msgstr "Πρόθεμα IPv6"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "Διεύθυνση IPv6"
@@ -4906,9 +4906,6 @@ msgstr "Γλώσσα για χρήση στην μπροστινή οθόνη"
 
 msgid "Large Read/Write"
 msgstr "Μεγάλη Ανάγνωση/Εγγραφή"
-
-msgid "Last Configuration Change"
-msgstr "Τελευταία Αλλαγή Ρυθμίσεων"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -7898,9 +7895,6 @@ msgstr "Αριθμός Bit Υποδικτύου"
 msgid "Subnet Mask"
 msgstr "Μάσκα Υποδικτύου"
 
-msgid "Subnet bit count"
-msgstr "Αριθμός bit υποδικτύου"
-
 msgid "Subsystem"
 msgstr "Υποσύστημα"
 
@@ -7988,6 +7982,9 @@ msgstr "Σύστημα"
 
 msgid "System BIOS"
 msgstr "BIOS Συστήματος"
+
+msgid "System Config Change"
+msgstr ""
 
 msgid "System Email Report Settings"
 msgstr "Ρυθμίσεις Αναφορών Ηλ. Ταχυδρομείου Συστήματος"
@@ -10916,3 +10913,18 @@ msgstr "σε"
 
 msgid "umount"
 msgstr "αποπροσάρτηση"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Προχωρημένες Ρυθμίσεις"
+
+#~ msgid "Extra options"
+#~ msgstr "Επιπλέον επιλογές"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "Ρύθμιση IPv4"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "Ρύθμιση IPv6"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Αριθμός bit υποδικτύου"

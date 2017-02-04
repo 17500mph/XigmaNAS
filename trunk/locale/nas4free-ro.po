@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
-"PO-Revision-Date: 2017-02-03 05:43+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
+"PO-Revision-Date: 2017-02-03 20:04+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:09+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -587,9 +587,6 @@ msgstr "Nume administrator"
 
 msgid "Advanced"
 msgstr "Setări Avansate"
-
-msgid "Advanced Configuration"
-msgstr "Configurare Avansată"
 
 msgid "Advanced Format"
 msgstr "Format avansat"
@@ -1316,6 +1313,9 @@ msgstr "CP949 (Coreană)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Tradițional Chinez Big5)"
 
+msgid "CPU Core Usage"
+msgstr "Utilizare CPU"
+
 msgid "CPU Frequency"
 msgstr "Frecvență CPU"
 
@@ -1658,6 +1658,9 @@ msgstr "Controler Grup Autorizat"
 msgid "Controller Auth Method"
 msgstr "Controler Metodă Autorizată"
 
+msgid "Controller Authorised Network"
+msgstr "Controler autorizat rețea"
+
 msgid "Controller Authorised network"
 msgstr "Controler de Reţea Autorizat"
 
@@ -1738,9 +1741,6 @@ msgstr "Auto-test detaliat"
 
 msgid "Core"
 msgstr "Nucleu"
-
-msgid "Core Usage"
-msgstr "Utilizare nucleu"
 
 msgid "Count"
 msgstr "Numărul de pachete"
@@ -2451,6 +2451,9 @@ msgstr "Dispozitiv Pass-through"
 
 msgid "Device Path"
 msgstr "Calea dispozitivului"
+
+msgid "Device Polling"
+msgstr ""
 
 msgid "Device Serial"
 msgstr "Serial dispozitiv"
@@ -3637,9 +3640,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Opțiuni suplimentare"
 
-msgid "Extra options"
-msgstr "Opțiuni suplimentare"
-
 msgid "Extra options (usually empty)."
 msgstr "Opțiuni suplimentare (nu sînt absolut necesare)"
 
@@ -4249,20 +4249,17 @@ msgstr "Tipul de adresă IP diferă pentru rețea și pentru gateway."
 msgid "IPMI Stats"
 msgstr "Stare IPMI"
 
-msgid "IPv4 Configuration"
-msgstr "Configurație IPv4"
-
 msgid "IPv4 DNS Servers"
 msgstr "Server DNS IPv4"
+
+msgid "IPv4 Settings"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Adrese IPv4"
 
 msgid "IPv6 Address"
 msgstr "Adresă IPv6"
-
-msgid "IPv6 Configuration"
-msgstr "Configurație IPv6"
 
 msgid "IPv6 DNS Servers"
 msgstr "Server DNS IPv6"
@@ -4272,6 +4269,9 @@ msgstr "Gateway IPv6"
 
 msgid "IPv6 Prefix"
 msgstr "Prefix IPv6"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "Adresă IPv6"
@@ -4819,9 +4819,6 @@ msgstr "Limba utilizată pentru interfață"
 
 msgid "Large Read/Write"
 msgstr "Citire/Scriere în blocuri mari"
-
-msgid "Last Configuration Change"
-msgstr "Ultima modificare configurație"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -7770,9 +7767,6 @@ msgstr "Contorizare subnet"
 msgid "Subnet Mask"
 msgstr "Mască subrețea"
 
-msgid "Subnet bit count"
-msgstr "Bit Mască Subrețea"
-
 msgid "Subsystem"
 msgstr "Subsistem"
 
@@ -7860,6 +7854,9 @@ msgstr "Sistem"
 
 msgid "System BIOS"
 msgstr "BIOS sistem"
+
+msgid "System Config Change"
+msgstr "Modificare configurație sistem"
 
 msgid "System Email Report Settings"
 msgstr "Setări rapoarte email sistem"
@@ -10680,3 +10677,18 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Configurare Avansată"
+
+#~ msgid "Extra options"
+#~ msgstr "Opțiuni suplimentare"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "Configurație IPv4"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "Configurație IPv6"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Bit Mască Subrețea"

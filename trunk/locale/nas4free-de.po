@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
 "PO-Revision-Date: 2017-02-02 18:38+0000\n"
 "Last-Translator: diri <diri@gmx.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:08+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -602,9 +602,6 @@ msgstr ""
 
 msgid "Advanced"
 msgstr "Erweitert"
-
-msgid "Advanced Configuration"
-msgstr "Erweiterte Einstellungen"
 
 msgid "Advanced Format"
 msgstr "Advanced Format (4K-Sektorgröße)"
@@ -1337,6 +1334,9 @@ msgstr "CP949 (Koreanisch)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditionelles Chinesisch Big5)"
 
+msgid "CPU Core Usage"
+msgstr ""
+
 msgid "CPU Frequency"
 msgstr "CPU Frequenz"
 
@@ -1677,6 +1677,9 @@ msgstr "Authentifizierungsgruppe des Controllers"
 msgid "Controller Auth Method"
 msgstr "Authentifizierungsmethode des Controllers"
 
+msgid "Controller Authorised Network"
+msgstr ""
+
 msgid "Controller Authorised network"
 msgstr "Controller authorisiertes Netzwerk"
 
@@ -1751,9 +1754,6 @@ msgstr ""
 
 msgid "Core"
 msgstr "Core"
-
-msgid "Core Usage"
-msgstr "Core Auslastung"
 
 msgid "Count"
 msgstr "Zähler"
@@ -2419,6 +2419,9 @@ msgstr "Gerät durchreichen"
 
 msgid "Device Path"
 msgstr "Gerätepfad"
+
+msgid "Device Polling"
+msgstr ""
 
 msgid "Device Serial"
 msgstr "Seriennummer"
@@ -3609,9 +3612,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Weitere Optionen"
 
-msgid "Extra options"
-msgstr "Zusätzliche Optionen"
-
 msgid "Extra options (usually empty)."
 msgstr "Extra Einstellungen (meist leer)."
 
@@ -4217,10 +4217,10 @@ msgstr "IP-Protokolle vom Netzwerk und Gateway passen nicht zusammen."
 msgid "IPMI Stats"
 msgstr "IPMI Statistiken"
 
-msgid "IPv4 Configuration"
-msgstr "IPv4 Konfiguration"
-
 msgid "IPv4 DNS Servers"
+msgstr ""
+
+msgid "IPv4 Settings"
 msgstr ""
 
 msgid "IPv4 addresses"
@@ -4228,9 +4228,6 @@ msgstr "IPv4 Adressen"
 
 msgid "IPv6 Address"
 msgstr "IPv6-Adresse"
-
-msgid "IPv6 Configuration"
-msgstr "IPv6 Konfiguration"
 
 msgid "IPv6 DNS Servers"
 msgstr ""
@@ -4240,6 +4237,9 @@ msgstr "IPv6 Gateway"
 
 msgid "IPv6 Prefix"
 msgstr "IPv6 Präfix"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "IPv6 Adresse"
@@ -4778,9 +4778,6 @@ msgstr "Sprache der Displayanzeige"
 
 msgid "Large Read/Write"
 msgstr ""
-
-msgid "Last Configuration Change"
-msgstr "Letzte Konfigurationsänderung"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -7716,9 +7713,6 @@ msgstr "Anzahl Subnet-Bits"
 msgid "Subnet Mask"
 msgstr "Subnetz-Maske"
 
-msgid "Subnet bit count"
-msgstr "Subnet bit count"
-
 msgid "Subsystem"
 msgstr "Subsystem"
 
@@ -7806,6 +7800,9 @@ msgstr "System"
 
 msgid "System BIOS"
 msgstr "System BIOS"
+
+msgid "System Config Change"
+msgstr ""
 
 msgid "System Email Report Settings"
 msgstr "Systembericht-Email Einstellung"
@@ -10664,3 +10661,18 @@ msgstr "an"
 
 msgid "umount"
 msgstr "Aushängen"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Erweiterte Einstellungen"
+
+#~ msgid "Extra options"
+#~ msgstr "Zusätzliche Optionen"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "IPv4 Konfiguration"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "IPv6 Konfiguration"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Subnet bit count"

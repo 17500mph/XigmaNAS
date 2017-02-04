@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-03 13:19+0000\n"
-"PO-Revision-Date: 2017-02-03 13:01+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
+"PO-Revision-Date: 2017-02-04 10:04+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 13:09+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:08+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -598,9 +598,6 @@ msgstr "Administrator Naam"
 
 msgid "Advanced"
 msgstr "Geavanceerd"
-
-msgid "Advanced Configuration"
-msgstr "Geavanceerde Configuratie"
 
 msgid "Advanced Format"
 msgstr "Geavanceerd Formatteren"
@@ -1691,7 +1688,7 @@ msgid "Controller IP Address"
 msgstr "IP-adres Controller"
 
 msgid "Controller IP address"
-msgstr "IP-adres Controller"
+msgstr "Controller IP-adres"
 
 msgid "Controller Model"
 msgstr "Controller Model"
@@ -2474,6 +2471,9 @@ msgstr "Apparaat Pass-through"
 msgid "Device Path"
 msgstr "Apparaatpad"
 
+msgid "Device Polling"
+msgstr "Netwerk Polling"
+
 msgid "Device Serial"
 msgstr "Serienummer"
 
@@ -2568,7 +2568,9 @@ msgid "Disable console menu."
 msgstr "Uitschakelen console menu."
 
 msgid "Disable file manager completely."
-msgstr "Uitschakelen bestandsmanager."
+msgstr ""
+"Uitschakelen Bestands Manager, gebruik is dan niet meer mogelijk vanaf deze "
+"server."
 
 msgid "Disable firmware version check."
 msgstr "Uitschakelen firmware versie controle."
@@ -3678,9 +3680,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Extra Opties"
 
-msgid "Extra options"
-msgstr "Extra opties"
-
 msgid "Extra options (usually empty)."
 msgstr "Extra opties (normaal leeg)."
 
@@ -4266,7 +4265,7 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Address"
-msgstr "IP-adres"
+msgstr "IP Adres"
 
 msgid "IP address"
 msgstr "IP-adres"
@@ -4289,20 +4288,17 @@ msgstr "Het IP-adres komt niet overeen met het netwerk of de gateway."
 msgid "IPMI Stats"
 msgstr "IPMI Stats"
 
-msgid "IPv4 Configuration"
-msgstr "IPv4 Configuratie"
-
 msgid "IPv4 DNS Servers"
 msgstr "IPv4 DNS Servers"
+
+msgid "IPv4 Settings"
+msgstr "IPv4 Instellingen"
 
 msgid "IPv4 addresses"
 msgstr "IPv4-adressen"
 
 msgid "IPv6 Address"
 msgstr "IPv6 Adres"
-
-msgid "IPv6 Configuration"
-msgstr "IPv6 Configuratie"
 
 msgid "IPv6 DNS Servers"
 msgstr "IPv6 DNS Servers"
@@ -4312,6 +4308,9 @@ msgstr "IPv6 Gateway"
 
 msgid "IPv6 Prefix"
 msgstr "IPv6 Voorvoegsel"
+
+msgid "IPv6 Settings"
+msgstr "Ipv6 Instellingen"
 
 msgid "IPv6 address"
 msgstr "IPv6-adres"
@@ -5064,7 +5063,7 @@ msgstr "Logical Unit Controller Geautoriseerd netwerk (standaard %s)"
 
 #, php-format
 msgid "Logical Unit Controller IP address (%s by default)"
-msgstr "IP-adres Logical Unit Controller (standaard %s)"
+msgstr "Logical Unit Controller IP-adres (standaard %s)"
 
 msgid "Logical Unit Controller Login Information"
 msgstr "Inloginformatie Logical Unit Controller"
@@ -5141,7 +5140,7 @@ msgid "MS Domain"
 msgstr "MS Domein"
 
 msgid "MTU"
-msgstr "MTU grootte"
+msgstr "MTU"
 
 msgid "Machine Suffix"
 msgstr "Machine Suffix"
@@ -5322,7 +5321,7 @@ msgid "Memory (MiB)"
 msgstr "Geheugen (MiB)"
 
 msgid "Memory Usage"
-msgstr "Geheugengebruik"
+msgstr "Geheugen Gebruik"
 
 msgid "Message Board"
 msgstr "Berichten"
@@ -5779,7 +5778,7 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Nominale waarde van werkelijk vermogen (Watt)"
 
 msgid "Non-Critical"
-msgstr "Niet-kritieke"
+msgstr "Niet-kritiek"
 
 msgid "Non-Recoverable"
 msgstr "Niet-Herstelbaar"
@@ -7821,9 +7820,6 @@ msgstr "Subnet Bit Count"
 
 msgid "Subnet Mask"
 msgstr "Subnetmasker"
-
-msgid "Subnet bit count"
-msgstr "Subnet bit telling"
 
 msgid "Subsystem"
 msgstr "Subsysteem"
@@ -10777,8 +10773,17 @@ msgstr "naar"
 msgid "umount"
 msgstr "loskoppelen"
 
-#~ msgid "Last Configuration Change"
-#~ msgstr "Systeem configuratiewijziging"
+#~ msgid "Advanced Configuration"
+#~ msgstr "Geavanceerde Configuratie"
 
-#~ msgid "Core Usage"
-#~ msgstr "CPU Core Gebruik"
+#~ msgid "Extra options"
+#~ msgstr "Extra opties"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "IPv6 Configuratie"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Subnet bit telling"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "IPv4 Instellingen"

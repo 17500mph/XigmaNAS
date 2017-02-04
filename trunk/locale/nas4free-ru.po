@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-02 03:26+0000\n"
-"PO-Revision-Date: 2017-02-02 12:55+0000\n"
+"POT-Creation-Date: 2017-02-04 10:56+0000\n"
+"PO-Revision-Date: 2017-02-04 07:38+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-03 11:29+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
+"X-Launchpad-Export-Date: 2017-02-04 10:09+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -583,9 +583,6 @@ msgstr "Имя администратора"
 
 msgid "Advanced"
 msgstr "Дополнительно"
-
-msgid "Advanced Configuration"
-msgstr "Дополнительные настройки"
 
 msgid "Advanced Format"
 msgstr "Расширенное форматирование"
@@ -1316,6 +1313,9 @@ msgstr "CP949 (Корейская)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Традиционный китайский Big5)"
 
+msgid "CPU Core Usage"
+msgstr "Использование ядра процессора"
+
 msgid "CPU Frequency"
 msgstr "Частота процессора"
 
@@ -1655,6 +1655,9 @@ msgstr "Группа аутентификации контроллера"
 msgid "Controller Auth Method"
 msgstr "Способ аутентификации контроллера"
 
+msgid "Controller Authorised Network"
+msgstr "Авторизованные сети контроллера"
+
 msgid "Controller Authorised network"
 msgstr "Авторизованные сети контроллера"
 
@@ -1733,9 +1736,6 @@ msgstr "Conveyance Self-Test"
 
 msgid "Core"
 msgstr "Ядро"
-
-msgid "Core Usage"
-msgstr "Использование ядра"
 
 msgid "Count"
 msgstr "Счетчик"
@@ -2435,6 +2435,9 @@ msgstr "Сквозное (pass-through) устройство"
 msgid "Device Path"
 msgstr "Путь к устройству"
 
+msgid "Device Polling"
+msgstr ""
+
 msgid "Device Serial"
 msgstr "Серийный номер устройства"
 
@@ -2844,7 +2847,7 @@ msgid "Do you want to toggle selected options?"
 msgstr "Вы действительно желаете изменить состояние выбранных опций?"
 
 msgid "Document Root"
-msgstr "Корневая папка документа"
+msgstr "Корневая папка документов"
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
@@ -3632,9 +3635,6 @@ msgstr ""
 msgid "Extra Options"
 msgstr "Дополнительные параметры"
 
-msgid "Extra options"
-msgstr "Дополнительные настройки"
-
 msgid "Extra options (usually empty)."
 msgstr "Дополнительные настройки (обычно пусто)."
 
@@ -4244,20 +4244,17 @@ msgstr "Несовпадение IP для подсети и шлюза"
 msgid "IPMI Stats"
 msgstr "IPMI"
 
-msgid "IPv4 Configuration"
-msgstr "Конфигурация IPv4"
-
 msgid "IPv4 DNS Servers"
 msgstr "IPv4 DNS-серверы"
+
+msgid "IPv4 Settings"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Адреса IPv4."
 
 msgid "IPv6 Address"
 msgstr "IPv6-адрес"
-
-msgid "IPv6 Configuration"
-msgstr "Конфигурация IPv6"
 
 msgid "IPv6 DNS Servers"
 msgstr "IPv6 DNS-серверы"
@@ -4267,6 +4264,9 @@ msgstr "IPv6-шлюз"
 
 msgid "IPv6 Prefix"
 msgstr "Префикс IPv6"
+
+msgid "IPv6 Settings"
+msgstr ""
 
 msgid "IPv6 address"
 msgstr "IPv6-адрес"
@@ -4809,9 +4809,6 @@ msgstr "Язык, используемый на лицевой панели"
 
 msgid "Large Read/Write"
 msgstr "Чтение/запись большими блоками"
-
-msgid "Last Configuration Change"
-msgstr "Последнее изменение конфигурации"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -6127,7 +6124,7 @@ msgid "Path"
 msgstr "Путь"
 
 msgid "Path of the URL relative to document root."
-msgstr "Путь URL относительно корня документа"
+msgstr "Путь URL относительно корневой папки документов."
 
 msgid "Path to be shared to be synchronized."
 msgstr "Путь, который будет общим для синхронизации."
@@ -6159,7 +6156,7 @@ msgid "Permanent samba data path (e.g. %s)."
 msgstr "Постоянный путь данных Samba (например %s)."
 
 msgid "Permission"
-msgstr "Разрешение"
+msgstr "Права доступа"
 
 msgid "Permit Root Login"
 msgstr "Разрешен вход от имени root"
@@ -7215,7 +7212,7 @@ msgid "Select the location closest to you."
 msgstr "Выберите часовой пояс."
 
 msgid "Select the permission for running this service. (www by default)."
-msgstr "Выберите разрешения для запуска этой службы. (www по умолчанию)."
+msgstr "Выберите права доступа для запуска этой службы. (www по умолчанию)."
 
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
@@ -7761,9 +7758,6 @@ msgstr "Количество бит подсети"
 msgid "Subnet Mask"
 msgstr "Маска подсети"
 
-msgid "Subnet bit count"
-msgstr "Количество битов подсети"
-
 msgid "Subsystem"
 msgstr "Подсистема"
 
@@ -7851,6 +7845,9 @@ msgstr "Система"
 
 msgid "System BIOS"
 msgstr "BIOS системы"
+
+msgid "System Config Change"
+msgstr "Системная конфигурация изменена"
 
 msgid "System Email Report Settings"
 msgstr "Системные настройки отчетов по электронной почте"
@@ -10681,3 +10678,18 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
+
+#~ msgid "Advanced Configuration"
+#~ msgstr "Дополнительные настройки"
+
+#~ msgid "Extra options"
+#~ msgstr "Дополнительные настройки"
+
+#~ msgid "IPv4 Configuration"
+#~ msgstr "Конфигурация IPv4"
+
+#~ msgid "IPv6 Configuration"
+#~ msgstr "Конфигурация IPv6"
+
+#~ msgid "Subnet bit count"
+#~ msgstr "Количество битов подсети"
