@@ -37,23 +37,22 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Tools'),gtext('Execute Command')];
-?>
-<?php include 'fbegin.inc';?>
-<?php
 // Function: is Blank
 // Returns true or false depending on blankness of argument.
 function isBlank($arg) {
 	return preg_match("/^\s*$/",$arg);
 }
-
+function hasContent(string $test = '') {
+	return (false != preg_match('/\S/',$test));
+}
+$pgtitle = [gtext('Tools'),gtext('Execute Command')];
 ?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
 	// Init onsubmit()
 	$("#iform").submit(function() {
-		onsubmit_content();
 		spinner();
 	});
 	$("#txtCommand").click(function () { txtCommand_onKey(event) });
@@ -65,11 +64,11 @@ $(window).on("load", function() {
 		echo "   var arrRecallBuffer = new Array;\n";
 	else:
 		echo "   var arrRecallBuffer = new Array(\n";
-		$arrBuffer = explode( "&", $_POST['txtRecallBuffer'] );
+		$arrBuffer = explode('&',$_POST['txtRecallBuffer']);
 		for ($i=0;$i < (count($arrBuffer)-1);$i++):
 			echo "      '",$arrBuffer[$i],"',\n";
 		endfor;
-		echo "      '",$arrBuffer[count( $arrBuffer ) - 1],"'\n";
+		echo "      '",$arrBuffer[count($arrBuffer) - 1],"'\n";
 		echo "   );\n";
 	endif;
 	?>
@@ -154,7 +153,7 @@ $(window).on("load", function() {
 <form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" enctype="multipart/form-data" name="frmExecPlus" id="frmExecPlus" onsubmit="return frmExecPlus_onSubmit(this);">
 	<table id="area_data"><tbody><tr><td id="area_data_frame">
 		<?php
-		print_info_box(gtext('This is a very powerful tool. Use it on your own risk!'));
+		print_info_box(gtext('This is a very powerful tool. Use at your own risk!'));
 		?>
 		<table class="area_data_settings">
 			<colgroup>
@@ -168,16 +167,16 @@ $(window).on("load", function() {
 			</tfoot>
 			<tbody>
 				<?php
-				html_inputbox2('txtCommand',gtext('Command'),'','',false,80,false,false,1024,gtext('Enter Command'))
+				html_inputbox2('txtCommand',gtext('Command'),'','',false,80,false,false,1024,gtext('Enter Command'));
 				?>
 				<tr>
 					<td class="celltag"><?=gtext('Control');?></td>
 					<td class="celldata">
-						<input type="hidden" name="txtRecallBuffer" value="<?=!empty($_POST['txtRecallBuffer']) ? $_POST['txtRecallBuffer'] : "" ?>" />
+						<input type="hidden" name="txtRecallBuffer" value="<?=!empty($_POST['txtRecallBuffer']) ? $_POST['txtRecallBuffer'] : '';?>"/>
 						<input type="button" class="formbtn" name="btnRecallPrev" value="&lt;" onclick="btnRecall_onClick( this.form, -1 );"/>
-						<input type="submit" class="formbtn" value="<?=gtext('Execute');?>" />
+						<input type="submit" class="formbtn" value="<?=gtext('Execute');?>"/>
 						<input type="button" class="formbtn" name="btnRecallNext" value="&gt;" onclick="btnRecall_onClick( this.form,  1 );"/>
-						<input type="button" class="formbtn" value="<?=gtext("Clear");?>" onclick="return Reset_onClick( this.form );"/>
+						<input type="button" class="formbtn" value="<?=gtext('Clear');?>" onclick="return Reset_onClick( this.form );"/>
 					</td>
 				</tr>
 			</tbody>
@@ -223,16 +222,16 @@ $(window).on("load", function() {
 				</table>
 				<?php
 				echo '<div>','<pre class="celldata">';
-						echo "\$ ",htmlspecialchars($_POST['txtCommand']);
-						putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
-						putenv('COLUMNS=1024');
-						putenv("SCRIPT_FILENAME=" .strtok($_POST['txtCommand'],' ')); /* PHP scripts */
-						$ph = popen($_POST['txtCommand'],'r');
-						while($line = fgets($ph)):
-							echo htmlspecialchars($line);
-						endwhile;
-						pclose($ph);
-					echo '</pre>','</div>';
+					echo "\$ ",htmlspecialchars($_POST['txtCommand']),"\n";
+					putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
+					putenv('COLUMNS=1024');
+					putenv("SCRIPT_FILENAME=" .strtok($_POST['txtCommand'],' ')); /* PHP scripts */
+					$ph = popen($_POST['txtCommand'],'r');
+					while($line = fgets($ph)):
+						echo htmlspecialchars($line);
+					endwhile;
+					pclose($ph);
+				echo '</pre>','</div>';
 			endif;
 		endif;
 		?>
