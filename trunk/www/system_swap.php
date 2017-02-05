@@ -66,7 +66,7 @@ if ($_POST) {
 		} else {
 			$reqdfields = array_merge($reqdfields, ['mountpoint','size']);
 			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Mount Point'),gtext('Size')]);
-			$reqdfieldst = array_merge($reqdfieldst, ['string numeric']);
+			$reqdfieldst = array_merge($reqdfieldst, ['string','numeric']);
 		}
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
