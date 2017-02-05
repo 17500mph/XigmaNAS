@@ -39,26 +39,36 @@ require_once 'system.inc';
 // Set PATH, otherwise some commands will not be found during exec.
 putenv("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin");
 
-/* kill a process by pid file */
+/*
+ *	kill a process by pid file
+ */
 function killbypid($pidfile) {
 	sigkillbypid($pidfile,'TERM');
 	unlink_if_exists($pidfile);
 }
-/* sigkill a process by pid file */
+/*
+ *	sigkill a process by pid file
+ */
 function sigkillbypid($pidfile,$sig) {
 	if(file_exists($pidfile)):
 		mwexec("/bin/kill -s $sig `/bin/cat " . $pidfile . "`");
 	endif;
 }
-/* kill a process by name */
+/*
+ *	kill a process by name
+ */
 function killbyname($procname) {
 	return mwexec("/usr/bin/killall " . escapeshellarg($procname));
 }
-/* Force kill a process by name */
+/*
+ *	Force kill a process by name
+ */
 function forcekillbyname($procname) {
 	return mwexec("/usr/bin/killall -9 " . escapeshellarg($procname));
 }
-/* return the subnet address given a host address and a subnet bit count */
+/*
+ *	return the subnet address given a host address and a subnet bit count
+ */
 function gen_subnet($ipaddr,$bits) {
 	if(!is_ipaddr($ipaddr) || !is_numeric($bits)):
 		return '';
@@ -70,6 +80,9 @@ function gen_subnet($ipaddr,$bits) {
 		return long2ip6(ip2long6($ipaddr) & gen_subnet_mask_long6($bits));
 	endif;
 }
+/*
+ *
+ */
 function ip2long6($ip) {
 	if(substr_count($ip,'::')):
 		$ip = str_replace('::',str_repeat(':0000',8 - substr_count($ip,':')) . ':',$ip);
@@ -81,9 +94,11 @@ function ip2long6($ip) {
 	endforeach;
 	return base_convert($r_ip,2,10);
 }
-/* Convert a long to an IPv6 */
-/* NEED TO FINISH THIS FUNCTION */
-/* This function bug for IPv6 bigger than ::1f:ffff:ffff:ffff */
+/*
+ *	Convert a long to an IPv6
+ *	NEED TO FINISH THIS FUNCTION
+ *	This function bug for IPv6 bigger than ::1f:ffff:ffff:ffff
+ */
 function long2ip6($long) {
 	// Valid range: ::0000 -> ffff:ffff:ffff:ffff:ffff:fffff:fffff:fffff
 	if($long < 0 || $long > 340282366920938463463374607431768211456):
@@ -99,7 +114,9 @@ function long2ip6($long) {
 	endfor;
 	return $ipv6;
 }
-/* return the highest (broadcast) address in the subnet given a host address and a subnet bit count */
+/*
+ *	return the highest (broadcast) address in the subnet given a host address and a subnet bit count
+ */
 function gen_subnet_max($ipaddr,$bits) {
 	if(!is_ipaddr($ipaddr) || !is_numeric($bits)):
 		return '';
@@ -111,10 +128,12 @@ function gen_subnet_max($ipaddr,$bits) {
 		return long2ip6(ip2long6($ipaddr) | ~gen_subnet_mask_long6($bits));
 	endif;
 }
-/* returns a IPv4 subnet mask (long given a bit count) */
-/* Warning: Bitwise operator depend of the OS architecture */
-/* No problem using IPv4 32 bit on 32bit OS... but with 64bit OS, there might be a bug here */
-/* see: http://www.php.net/manual/en/language.operators.bitwise.php */
+/*
+ * 	returns a IPv4 subnet mask (long given a bit count)
+ *	Warning: Bitwise operator depend of the OS architecture
+ *	No problem using IPv4 32 bit on 32bit OS... but with 64bit OS, there might be a bug here
+ *	see: http://www.php.net/manual/en/language.operators.bitwise.php
+ */
 function gen_subnet_mask_long($bits) {
 	$sm = 0;
 	for($i = 0;$i < $bits;$i++):
@@ -123,12 +142,14 @@ function gen_subnet_mask_long($bits) {
 	endfor;
 	return $sm;
 }
-/* returns a IPv6 subnet mask (long given a bit count) */
-/* NEED TO BE ADAPTED FOR IPv6 !!!!! */
-/* WARNING: Bitwise operator depend of the OS architecture */
-/* It's not possile to use bitwise on number greater than 32 bit on 32bit OS*/
-/* Must found a solution for working with 128bits..... */
-/* see: http://www.php.net/manual/en/language.operators.bitwise.php */
+/*
+ *	returns a IPv6 subnet mask (long given a bit count)
+ *	NEED TO BE ADAPTED FOR IPv6 !!!!!
+ *	WARNING: Bitwise operator depend of the OS architecture
+ *	It's not possile to use bitwise on number greater than 32 bit on 32bit OS
+ *	Must found a solution for working with 128bits.....
+ *	see: http://www.php.net/manual/en/language.operators.bitwise.php
+ */
 function gen_subnet_mask_long6($bits) {
 	$sm = 0;
 	for($i = 0;$i < $bits;$i++):
@@ -227,7 +248,7 @@ function is_hostname($hostname) {
 	endif;
 	return false;
 }
-/* 
+/*
  *	returns true if $desc is a valid description (alphanum and space,_ ,- ,.)
  */
 function is_validdesc($desc) {
@@ -283,7 +304,9 @@ function is_domain($domain) {
 	endif;
 	return false;
 }
-/* Returns true if $string is a valid NetBIOS name */
+/*
+ *	Returns true if $string is a valid NetBIOS name
+ */
 function is_netbios($string) {
 	if(15 < strlen($string)):
 		return false;
@@ -296,10 +319,12 @@ function is_netbios($string) {
 	endif;
 	return false;
 }
-/* Returns true if $workgroup is a valid workgroup name */
-/* A workgroup name can contain up to 15 characters, including letters, numbers, */
-/* and the following characters: ! @ # $ % ^ & ( ) _ - ; : ' " , . */
-/* It cannot contain any spaces, and must begin with a letter or number. */
+/*
+ *	Returns true if $workgroup is a valid workgroup name
+ *	A workgroup name can contain up to 15 characters, including letters, numbers,
+ *	and the following characters: ! @ # $ % ^ & ( ) _ - ; : ' " , .
+ *	It cannot contain any spaces, and must begin with a letter or number.
+ */
 function is_workgroup($workgroup) {
 	if(!is_string($workgroup)):
 		return false;
@@ -309,17 +334,19 @@ function is_workgroup($workgroup) {
 	endif;
 	return false;
 }
-/* returns true if $macaddr is a valid MAC address */
+/*
+ *	returns true if $macaddr is a valid MAC address
+ */
 function is_macaddr($macaddr) {
 	if(!is_string($macaddr)):
 		return false;
 	endif;
-	$maca = explode(":",$macaddr);
+	$maca = explode(':',$macaddr);
 	if(count($maca) != 6):
 		return false;
 	endif;
 	foreach($maca as $macel):
-		if(($macel === "") || (strlen($macel) > 2)):
+		if(($macel === '') || (strlen($macel) > 2)):
 			return false;
 		endif;
 		if(preg_match("/[^0-9a-f]/i",$macel)):
@@ -328,7 +355,9 @@ function is_macaddr($macaddr) {
 	endforeach;
 	return true;
 }
-/* returns true if $name is a valid name for an alias */
+/*
+ *	returns true if $name is a valid name for an alias
+ */
 function is_validaliasname($name) {
 	if(!is_string($name)):
 		return false;
@@ -338,7 +367,9 @@ function is_validaliasname($name) {
 	endif;
 	return true;
 }
-/* returns true if $port is a valid TCP/UDP port */
+/*
+ *	returns true if $port is a valid TCP/UDP port
+ */
 function is_port($port) {
 	if(!is_numericint($port)):
 		return false;
@@ -348,7 +379,9 @@ function is_port($port) {
 	endif;
 	return true;
 }
-/* returns true if $mtu is a valid MTU size */
+/*
+ *	returns true if $mtu is a valid MTU size
+ */
 function is_mtu($mtu) {
 	if(!is_numericint($mtu)):
 		return false;
@@ -358,7 +391,7 @@ function is_mtu($mtu) {
 	endif;
 	return true;
 }
-/**
+/*
  * Validate the given file mode mask. Valid masks are in the
  * range from [0]000 to [0]777.
  * @param mode The file mode mask as octal value to validate
@@ -373,30 +406,43 @@ function is_filemode($mode) {
 	endif;
 	return true;
 }
-// Returns true if $certificate is a valid certificate.
+/*
+ *	Returns true if $certificate is a valid certificate.
+ */
 function is_valid_certificate($certificate) {
-	if(preg_match('/^(-----BEGIN CERTIFICATE-----).*(-----END CERTIFICATE-----)(\r|\n|\r\n)?\z/s',$certificate))
+	if(preg_match('/^(-----BEGIN CERTIFICATE-----).*(-----END CERTIFICATE-----)(\r|\n|\r\n)?\z/s',$certificate)):
 		return true;
+	endif;
 	return false;
 }
-// Returns true if $privatekey is a valid private key.
-function is_valid_privatekey($privatekey,$type = "RSA") {
+/*
+ *	Returns true if $privatekey is a valid private key.
+ */
+function is_valid_privatekey($privatekey,$type = 'RSA') {
 	switch($type):
 		default:
 		case 'RSA':
-			if(preg_match('/^(-----BEGIN RSA PRIVATE KEY-----).*(-----END RSA PRIVATE KEY-----)(\r|\n|\r\n)?\z/s',$privatekey))
+			if(preg_match('/^(-----BEGIN RSA PRIVATE KEY-----).*(-----END RSA PRIVATE KEY-----)(\r|\n|\r\n)?\z/s',$privatekey)):
 				return true;
+			endif;
 			break;
 		case 'DSA':
-			if(preg_match('/^(-----BEGIN DSA PRIVATE KEY-----).*(-----END DSA PRIVATE KEY-----)(\r|\n|\r\n)?\z/s',$privatekey))
+			if(preg_match('/^(-----BEGIN DSA PRIVATE KEY-----).*(-----END DSA PRIVATE KEY-----)(\r|\n|\r\n)?\z/s',$privatekey)):
 				return true;
+			endif;
 			break;
 	endswitch;
 	return false;
 }
+/*
+ *	Returns true if $uuid is a valid UUID.
+ */
 function is_uuid_v4($uuid) {
 	return (false !== preg_match('/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i',$uuid));
 }
+/*
+ *
+ */
 function get_interface_list() {
 	global $g;
 
@@ -407,7 +453,7 @@ function get_interface_list() {
 	foreach($linkinfo as $link):
 		$alink = preg_split("/\s+/",ltrim($link));
 		$ifname = chop($alink[0]);
-		if(substr($ifname,-1) === "*"):
+		if(substr($ifname,-1) === '*'):
 			$ifname = substr($ifname,0,strlen($ifname) - 1);
 		endif;
 		/* skip wireless */
@@ -424,8 +470,9 @@ function get_interface_list() {
 			exec("/sbin/ifconfig {$ifname}",$ifinfo);
 			foreach($ifinfo as $ifil):
 				if(preg_match("/status: (.*)$/",$ifil,$matches)):
-					if($matches[1] === "active")
+					if($matches[1] === 'active'):
 						$iflist[$ifname]['up'] = true;
+					endif;
 					break;
 				endif;
 			endforeach;
@@ -433,6 +480,9 @@ function get_interface_list() {
 	endforeach;
 	return $iflist;
 }
+/*
+ *
+ */
 function get_interface_wlist() {
 	global $g;
 
@@ -440,10 +490,10 @@ function get_interface_wlist() {
 	$osver = @exec("/usr/bin/uname -U");
 	if($osver >= 1100000):
 		$devs = @exec("/sbin/sysctl -n net.wlan.devices");
-		$ifs = explode(" ",$devs);
+		$ifs = explode(' ',$devs);
 		foreach($ifs as $ifname):
 			$iflist[$ifname] = [];
-			$iflist[$ifname]['mac'] = "00:00:00:00:00:00";
+			$iflist[$ifname]['mac'] = '00:00:00:00:00:00';
 			$iflist[$ifname]['up'] = false;
 		endforeach;
 		return $iflist;
@@ -454,11 +504,13 @@ function get_interface_wlist() {
 	foreach($linkinfo as $link):
 		$alink = preg_split("/\s+/",ltrim($link));
 		$ifname = chop($alink[0]);
-		if(substr($ifname,-1) === "*")
+		if(substr($ifname,-1) === '*'):
 			$ifname = substr($ifname,0,strlen($ifname) - 1);
+		endif;
 		/* skip lo, wlan */
-		if(preg_match("/^(lo|wlan)/",$ifname))
+		if(preg_match("/^(lo|wlan)/",$ifname)):
 			continue;
+		endif;
 		if(preg_match($g['wireless_regex'],$ifname)):
 			$iflist[$ifname] = [];
 			$iflist[$ifname]['mac'] = chop($alink[3]);
@@ -468,8 +520,9 @@ function get_interface_wlist() {
 			exec("/sbin/ifconfig {$ifname}",$ifinfo);
 			foreach($ifinfo as $ifil):
 				if(preg_match("/status: (.*)$/",$ifil,$matches)):
-					if($matches[1] === "active")
+					if($matches[1] === 'active'):
 						$iflist[$ifname]['up'] = true;
+					endif;
 					break;
 				endif;
 			endforeach;
@@ -477,6 +530,9 @@ function get_interface_wlist() {
 	endforeach;
 	return $iflist;
 }
+/*
+ *
+ */
 function get_wlan_interface_list() {
 	global $g;
 	/* build interface list with netstat */
@@ -486,8 +542,9 @@ function get_wlan_interface_list() {
 	foreach($linkinfo as $link):
 		$alink = preg_split("/\s+/",ltrim($link));
 		$ifname = chop($alink[0]);
-		if(substr($ifname,-1) === "*")
+		if(substr($ifname,-1) === '*'):
 			$ifname = substr($ifname,0,strlen($ifname) - 1);
+		endif;
 		if(preg_match("/^(wlan)/",$ifname)):
 			$iflist[$ifname] = [];
 			$iflist[$ifname]['mac'] = chop($alink[3]);
@@ -497,8 +554,9 @@ function get_wlan_interface_list() {
 			exec("/sbin/ifconfig {$ifname}",$ifinfo);
 			foreach($ifinfo as $ifil):
 				if(preg_match("/status: (.*)$/",$ifil,$matches)):
-					if($matches[1] === "active")
+					if($matches[1] === 'active'):
 						$iflist[$ifname]['up'] = true;
+					endif;
 					break;
 				endif;
 			endforeach;
@@ -506,15 +564,17 @@ function get_wlan_interface_list() {
 	endforeach;
 	return $iflist;
 }
-// Get list of mounted disk
-// example: Array
-//	[0] => Array [
-//		[mp] => /mnt/sharename
-//		[mdisk] => ad0s1
-//		[devicespecialfile] => /dev/ad0s1
-//		[sharename] => sharename
-//		[fsid] => 090db747f2d532ed
-//	]
+/*
+ *	Get list of mounted disk
+ *	example: Array
+ *	[0] => Array [
+ *		[mp] => /mnt/sharename
+ *		[mdisk] => ad0s1
+ *		[devicespecialfile] => /dev/ad0s1
+ *		[sharename] => sharename
+ *		[fsid] => 090db747f2d532ed
+ *	]
+ */
 function get_mounts_list() {
 	global $g;
 
@@ -532,12 +592,12 @@ function get_mounts_list() {
 		// Get the mount path
 		$mountpath = chop($aline[2]);
 		// Ignore various mountpoints
-		if(("/" === $mountpath) || ("devfs" === $devicespecialfile) || ("procfs" === $devicespecialfile) || ("tmpfs" === $devicespecialfile) || 
-			("/var" === $mountpath) || ("/dev/fd0" === $devicespecialfile) || ($g['cf_path'] === $mountpath)):
+		if(('/' === $mountpath) || ('devfs' === $devicespecialfile) || ('procfs' === $devicespecialfile) || ('tmpfs' === $devicespecialfile) ||
+			('/var' === $mountpath) || ('/dev/fd0' === $devicespecialfile) || ($g['cf_path'] === $mountpath)):
 			continue;
 		endif;
 		// Get the complete name /dev/devicename
-		$adevicespecialfile = explode("/",$devicespecialfile);
+		$adevicespecialfile = explode('/',$devicespecialfile);
 		if(empty($adevicespecialfile[2])):
 			$devicename = $adevicespecialfile[1];
 			#continue;
@@ -545,13 +605,13 @@ function get_mounts_list() {
 			$devicename = $adevicespecialfile[2];
 		endif;
 		// Test if it's a gvinum, gmirror, gconcat or gstripe device
-		if((strcmp($devicename,"gvinum") == 0) ||
-				(strcmp($devicename,"mirror") == 0) || (strcmp($devicename,"concat") == 0) ||
-				(strcmp($devicename,"stripe") == 0) || (strcmp($devicename,"raid5") == 0)):
+		if((strcmp($devicename,'gvinum') == 0) ||
+				(strcmp($devicename,'mirror') == 0) || (strcmp($devicename,'concat') == 0) ||
+				(strcmp($devicename,'stripe') == 0) || (strcmp($devicename,'raid5') == 0)):
 			$devicename = $adevicespecialfile[3];
 		endif;
 		// Get the sharename
-		$amountpath = explode("/",$mountpath);
+		$amountpath = explode('/',$mountpath);
 		$amountlist[$i]['mp'] = $mountpath;
 		$amountlist[$i]['mdisk'] = $devicename;
 		$amountlist[$i]['devicespecialfile'] = $devicespecialfile;
@@ -561,10 +621,12 @@ function get_mounts_list() {
 	endforeach;
 	return $amountlist;
 }
-// Retrieve the fsid from mount point.
-// $devicespecialfile - The device special name, e.g. /dev/ad6p1
-// $mp - Name of the mount point, e.g. /mnt/1
-// Return fsid or empty string.
+/*
+ *	Retrieve the fsid from mount point.
+ *	$devicespecialfile - The device special name, e.g. /dev/ad6p1
+ *	$mp - Name of the mount point, e.g. /mnt/1
+ *	Return fsid or empty string.
+ */
 function get_mount_fsid($devicespecialfile,$mp) {
 	exec("/sbin/mount -v",$rawdata);
 	if(empty($rawdata)):
@@ -581,20 +643,24 @@ function get_mount_fsid($devicespecialfile,$mp) {
 	endforeach;
 	return NULL;
 }
-/* Return list of ALL software volume: gvinum, gmirror */
+/*
+ *	Return list of ALL software volume: gvinum, gmirror
+ */
 function get_sraid_disks_list() {
 	$disklist = array_merge((array)get_gvinum_disks_list(),(array)get_gmirror_disks_list(),(array)get_gconcat_disks_list(),(array)get_gstripe_disks_list(),(array)get_graid5_disks_list());
 	return $disklist;
 }
-// Get list of software gvinum RAID disks.
-//	[volumename] => [
-//		[type] => gvinum
-//		[state] => UP
-//		[size] => 6149 MB
-//		[name] => VolumeName
-//		[devicespecialfile] => /dev/gvinum/VolumeName
-//		[desc] => Software RAID
-//	]
+/*
+ *	Get list of software gvinum RAID disks.
+ *	[volumename] => [
+ *		[type] => gvinum
+ *		[state] => UP
+ *		[size] => 6149 MB
+ *		[name] => VolumeName
+ *		[devicespecialfile] => /dev/gvinum/VolumeName
+ *		[desc] => Software RAID
+ *	]
+ */
 function get_gvinum_disks_list() {
 	$disklist = [];
 	/* Send the shell cmd and get the result */
@@ -603,31 +669,33 @@ function get_gvinum_disks_list() {
 		/* Split the line using the space as separator */
 		$aline = preg_split("/\s+/",$line);
 		/* Get the line that begin with the letter 'V' */
-		if($aline[0] != "V"):
+		if($aline[0] != 'V'):
 			continue;
 		endif;
 		$diskname = chop($aline[1]);
 		$disklist[$diskname] = [];
 		$disklist[$diskname]['name'] = $diskname;
-		$disklist[$diskname]['devicespecialfile'] = "/dev/gvinum/" . $diskname;
-		$disklist[$diskname]['type'] = "gvinum";
-		$disklist[$diskname]['desc'] = "Software RAID";
+		$disklist[$diskname]['devicespecialfile'] = '/dev/gvinum/' . $diskname;
+		$disklist[$diskname]['type'] = 'gvinum';
+		$disklist[$diskname]['desc'] = 'Software RAID';
 		$disklist[$diskname]['state'] = $aline[3];
 		/* Get diskinfo to get disk size */
 		$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-		$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+		$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 	endforeach;
 	return $disklist;
 }
-// Get list of software gmirror RAID disks.
-//	[volumename] => [
-//		[type] => gmirror
-//		[name] => volumename
-//		[state] => COMPLETE
-//		[size] => 6149M
-//		[devicespecialfile] => /dev/mirror/volumename
-//		[desc] => Software RAID
-//	]
+/*
+ *	Get list of software gmirror RAID disks.
+ *	[volumename] => [
+ *		[type] => gmirror
+ *		[name] => volumename
+ *		[state] => COMPLETE
+ *		[size] => 6149M
+ *		[devicespecialfile] => /dev/mirror/volumename
+ *		[desc] => Software RAID
+ *	]
+ */
 function get_gmirror_disks_list() {
 	$disklist = [];
 	/* Display all configured gmirror volume */
@@ -639,24 +707,24 @@ function get_gmirror_disks_list() {
 		// First Step: Getting the array name
 		// look for this output:
 		// Geom name: xxx
-		if((strcmp($aline[0],"Geom") == 0) && (strcmp($aline[1],"name:") == 0)):
+		if((strcmp($aline[0],'Geom') == 0) && (strcmp($aline[1],'name:') == 0)):
 			$diskname = $aline[2];
 			$disklist[$diskname] = [];
 			$disklist[$diskname]['name'] = $diskname;
-			$disklist[$diskname]['devicespecialfile'] = "/dev/mirror/" . $diskname;
-			$disklist[$diskname]['type'] = "gmirror";
-			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gtext("Unknown");
+			$disklist[$diskname]['devicespecialfile'] = '/dev/mirror/' . $diskname;
+			$disklist[$diskname]['type'] = 'gmirror';
+			$disklist[$diskname]['desc'] = 'Software RAID';
+			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			$foundname = 1 ;
 			continue ;
 		endif;
 		// Second Step: Getting the array status
 		// look for this output:
 		// State: COMPLETE
-		if((strcmp($aline[0],"State:") == 0) && $foundname):
+		if((strcmp($aline[0],'State:') == 0) && $foundname):
 			$disklist[$diskname]['state'] = $aline[1];
 			// check next
 			$foundname = 0 ;
@@ -665,7 +733,7 @@ function get_gmirror_disks_list() {
 		endif;
 		// look for this output:
 		// Balance: round-robin
-		if((strcmp($aline[0],"Balance:") == 0) && $foundstate):
+		if((strcmp($aline[0],'Balance:') == 0) && $foundstate):
 			$disklist[$diskname]['balance'] = $aline[1];
 			// init the check variable for the next RAID volume
 			$foundstate = 0 ;
@@ -674,15 +742,17 @@ function get_gmirror_disks_list() {
 	endforeach;
 	return $disklist;
 }
-// Get list of software gconcat RAID disks.
-//	[volumename] => [
-//		[type] => gconcat
-//		[state] => COMPLETE
-//		[size] => 6149M
-//		[name] => concat1
-//		[devicespecialfile] => /dev/concat/concat1
-//		[desc] => Software RAID
-//	]
+/*
+ *	Get list of software gconcat RAID disks.
+ *	[volumename] => [
+ *		[type] => gconcat
+ *		[state] => COMPLETE
+ *		[size] => 6149M
+ *		[name] => concat1
+ *		[devicespecialfile] => /dev/concat/concat1
+ *		[desc] => Software RAID
+ *	]
+ */
 function get_gconcat_disks_list() {
 	$disklist = [];
 	/* Display all configured gconcat volume */
@@ -694,24 +764,24 @@ function get_gconcat_disks_list() {
 		// First Step: Getting the array name
 		// look for this output:
 		// Geom name: xxx
-		if((strcmp($aline[0],"Geom") == 0) && (strcmp($aline[1],"name:") == 0)):
+		if((strcmp($aline[0],'Geom') == 0) && (strcmp($aline[1],'name:') == 0)):
 			$diskname = $aline[2];
 			$disklist[$diskname] = [];
 			$disklist[$diskname]['name'] = $diskname;
-			$disklist[$diskname]['devicespecialfile'] = "/dev/concat/" . $diskname;
-			$disklist[$diskname]['type'] = "gconcat";
-			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gtext("Unknown");
+			$disklist[$diskname]['devicespecialfile'] = '/dev/concat/' . $diskname;
+			$disklist[$diskname]['type'] = 'gconcat';
+			$disklist[$diskname]['desc'] = 'Software RAID';
+			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			$foundname = 1 ;
 			continue ;
 		endif;
 		// Second Step: Getting the array status
 		// look for this output:
 		// State: UP
-		if((strcmp($aline[0],"State:") == 0) && $foundname):
+		if((strcmp($aline[0],'State:') == 0) && $foundname):
 			$disklist[$diskname]['state'] = $aline[1];
 			// init the check variable for the next RAID volume
 			$foundname = 0 ;
@@ -720,15 +790,17 @@ function get_gconcat_disks_list() {
 	endforeach;
 	return $disklist;
 }
-// Get list of software gstripe RAID disks.
-//	[volumename] => [
-//		[type] => gstripe
-//		[state] => COMPLETE
-//		[size] => 6149M
-//		[name] => raid0
-//		[devicespecialfile] => /dev/stripe/raid0
-//		[desc] => Software RAID
-//	]
+/*
+ *	Get list of software gstripe RAID disks.
+ *	[volumename] => [
+ *		[type] => gstripe
+ *		[state] => COMPLETE
+ *		[size] => 6149M
+ *		[name] => raid0
+ *		[devicespecialfile] => /dev/stripe/raid0
+ *		[desc] => Software RAID
+ *	]
+ */
 function get_gstripe_disks_list() {
 	$disklist = [];
 	/* Display all configured gstripe volume */
@@ -740,24 +812,24 @@ function get_gstripe_disks_list() {
 		// First Step: Getting the array name
 		// look for this output:
 		// Geom name: xxx
-		if((strcmp($aline[0],"Geom") == 0) && (strcmp($aline[1],"name:") == 0)):
+		if((strcmp($aline[0],'Geom') == 0) && (strcmp($aline[1],'name:') == 0)):
 			$diskname = $aline[2];
 			$disklist[$diskname] = [];
 			$disklist[$diskname]['name'] = $diskname;
-			$disklist[$diskname]['devicespecialfile'] = "/dev/stripe/" . $diskname;
-			$disklist[$diskname]['type'] = "gstripe";
-			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gtext("Unknown");
+			$disklist[$diskname]['devicespecialfile'] = '/dev/stripe/' . $diskname;
+			$disklist[$diskname]['type'] = 'gstripe';
+			$disklist[$diskname]['desc'] = 'Software RAID';
+			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			$foundname = 1 ;
 			continue ;
 		endif;
 		// Second Step: Getting the array status
 		// look for this output:
 		// State: UP
-		if((strcmp($aline[0],"State:") == 0) && $foundname):
+		if((strcmp($aline[0],'State:') == 0) && $foundname):
 			$disklist[$diskname]['state'] = $aline[1];
 			// init the check variable for the next RAID volume
 			$foundname = 0 ;
@@ -766,44 +838,46 @@ function get_gstripe_disks_list() {
 	endforeach;
 	return $disklist;
 }
-// Get list of software graid5 RAID disks.
-//	[volumename] => [
-//		[type] => graid5
-//		[state] => COMPLETE
-//		[size] => 6149M
-//		[name] => BIG1
-//		[devicespecialfile] => /dev/raid5/BIG1
-//		[desc] => Software RAID
-//	]
+/*
+ *	Get list of software graid5 RAID disks.
+ *	[volumename] => [
+ *		[type] => graid5
+ *		[state] => COMPLETE
+ *		[size] => 6149M
+ *		[name] => BIG1
+ *		[devicespecialfile] => /dev/raid5/BIG1
+ *		[desc] => Software RAID
+ *	]
+ */
 function get_graid5_disks_list() {
 	$disklist = [];
 	/* Display all configured graid5 volume */
-	exec("/sbin/graid5 list",$rawdata);
+	exec('/sbin/graid5 list',$rawdata);
 	$foundname = 0 ;
 	foreach($rawdata as $line):
 		/* Use space for break the line */
-		$aline = preg_split("/\s+/",$line);
+		$aline = preg_split('/\s+/',$line);
 		// First Step: Getting the array name
 		// look for this output:
 		// Geom name: xxx
-		if((strcmp($aline[0],"Geom") == 0) && (strcmp($aline[1],"name:") == 0)):
+		if((strcmp($aline[0],'Geom') == 0) && (strcmp($aline[1],'name:') == 0)):
 			$diskname = $aline[2];
 			$disklist[$diskname] = [];
 			$disklist[$diskname]['name'] = $diskname;
-			$disklist[$diskname]['devicespecialfile'] = "/dev/raid5/" . $diskname;
-			$disklist[$diskname]['type'] = "graid5";
-			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gtext("Unknown");
+			$disklist[$diskname]['devicespecialfile'] = '/dev/raid5/' . $diskname;
+			$disklist[$diskname]['type'] = 'graid5';
+			$disklist[$diskname]['desc'] = 'Software RAID';
+			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			$foundname = 1 ;
 			continue ;
 		endif;
 		// Second Step: Getting the array status
 		// look for this output:
 		// State: COMPLETE
-		if((strcmp($aline[0],"State:") == 0) && $foundname):
+		if((strcmp($aline[0],'State:') == 0) && $foundname):
 			$disklist[$diskname]['state'] = $aline[1];
 			// init the check variable for the next RAID volume
 			$foundname = 0 ;
@@ -812,184 +886,277 @@ function get_graid5_disks_list() {
 	endforeach;
 	return $disklist;
 }
-// Get list of HAST disks.
-//	[volumename] => [
-//		[type] => HAST
-//		[name] => volumename
-//		[role] => primary
-//		[status] => complete
-//		[size] => 6149MB
-//		[devicespecialfile] => /dev/hast/volumename
-//		[localpath] => /dev/da1
-//		[desc] => HAST device
-//	]
+/*
+ *	Get list of HAST disks.
+ *	[volumename] => [
+ *		[type] => HAST
+ *		[name] => volumename
+ *		[role] => primary
+ *		[status] => complete
+ *		[size] => 6149MB
+ *		[devicespecialfile] => /dev/hast/volumename
+ *		[localpath] => /dev/da1
+ *		[desc] => HAST device
+ *	]
+ */
 function get_hast_disks_list() {
 	$disklist = [];
-	exec("/sbin/hastctl list 2>/dev/null",$rawdata);
+	exec('/sbin/hastctl list 2>/dev/null',$rawdata);
 	foreach($rawdata as $line):
-		if(preg_match("/^(\S+):$/",$line,$match)):
+		if(preg_match('/^(\S+):$/',$line,$match)):
 			$diskname = trim($match[1]);
 			$disklist[$diskname] = [];
 			$disklist[$diskname]['name'] = $diskname;
-			$disklist[$diskname]['devicespecialfile'] = "/dev/hast/" . $diskname;
-			$disklist[$diskname]['type'] = "HAST";
-			$disklist[$diskname]['model'] = "HAST device";
-			$disklist[$diskname]['desc'] = "HAST device";
-			$disklist[$diskname]['role'] = gtext("Unknown");
-			$disklist[$diskname]['status'] = gtext("Unknown");
+			$disklist[$diskname]['devicespecialfile'] = '/dev/hast/' . $diskname;
+			$disklist[$diskname]['type'] = 'HAST';
+			$disklist[$diskname]['model'] = 'HAST device';
+			$disklist[$diskname]['desc'] = 'HAST device';
+			$disklist[$diskname]['role'] = gtext('Unknown');
+			$disklist[$diskname]['status'] = gtext('Unknown');
 			$disklist[$diskname]['localpath'] = '';
-		elseif(preg_match("/^\s+role:\s+(.+)$/",$line,$match)):
+		elseif(preg_match('/^\s+role:\s+(.+)$/',$line,$match)):
 			$role = trim($match[1]);
 			$disklist[$diskname]['role'] = $role;
 			if($role == 'primary'):
 				$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-				$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+				$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			else:
 				$disklist[$diskname]['size'] = 'N/A';
 			endif;
-		elseif(preg_match("/^\s+localpath:\s+(.+)$/",$line,$match)):
+		elseif(preg_match('/^\s+localpath:\s+(.+)$/',$line,$match)):
 			$localpath = trim($match[1]);
 			$disklist[$diskname]['localpath'] = $localpath;
-		elseif(preg_match("/^\s+status:\s+(.+)$/",$line,$match)):
+		elseif(preg_match('/^\s+status:\s+(.+)$/',$line,$match)):
 			$state = trim($match[1]);
 			$disklist[$diskname]['status'] = $state;
 		endif;
 	endforeach;
 	return $disklist;
 }
-// Parse infos from camcontrol
+/*
+ *	Parse infos from camcontrol
+ */
 function parse_camcontrol_info($devtype) {
 	$devlist = [];
 	$device = '';
-	$passthroughdevice = '';
+	$passthrough_device = '';
 	$controller = '';
-	$controller_id = ''; 
+	$controller_id = '';
 	$target_id = '';
 	$lun_id = '';
-	mwexec2("/sbin/camcontrol devlist -v 2> /dev/null",$rawdata);
+	mwexec2('/sbin/camcontrol devlist -v 2> /dev/null',$rawdata);
 	foreach($rawdata as $line):
-		// Get controller
-		if(preg_match("/(?<= on )[-A-z0-9]*(?= bus )+/",$line,$matches)):
+		//	get controller
+		//	'scbus2 on mpt0 bus 0:' => 'mpt0'
+		if(preg_match('/(?<= on )[-A-z0-9]*(?= bus )+/',$line,$matches)):
+			//	'mpt0' => 'mpt'
 			$controller = preg_split('/([0-9]+\z)/i',$matches[0],-1,PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 			$controller_desc = '';
-			$controller_id = ''; 
+			$controller_id = '';
 			$target_id = '';
 			$lun_id = '';
-			$device = '';
-		elseif(!strncmp($line,'<>' ,2) == 0):
-			// Get target id
-			if(preg_match("/(?<= target )[0-9]*(?= lun )+/",$line,$matches )):
+			$device = ['',''];
+			$passthrough_device = ['',''];
+		//	skip line '<>'
+		elseif(!strncmp($line,'<>',2) == 0):
+			//	get target id
+			//	<VMware Virtual disk 1.0>          at scbus2 target 0 lun 0 (pass2,da0)
+			//	preg_match('/ target ([0-9]+) lun /',$line,$matches) would work as well
+			if(preg_match('/(?<= target )[0-9]*(?= lun )+/',$line,$matches )):
 				$target_id = $matches[0];
 			endif;
-			// Get lun id
-			if(preg_match("/(?<= lun )[0-9]*/",$line,$matches)):
+			//	get lun id
+			if(preg_match('/(?<= lun )[0-9]*/',$line,$matches)):
 				$lun_id = $matches[0];
 			endif;
-			// Get device name
-			// Parse substring between parentheses: (pass0,da0) or (da0,pass0) => pass0,da0
-			preg_match("/.*\(([^>]*)\).*/",$line,$match);
-			$temp = preg_split("/,/",$match[1]);
-			// Check whether device name is at the first (da0,pass0) or the second (pass0,da0) arguement
-			$device = preg_split('/([-A-z]+)/',$temp[1],-1,PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
-			if(strncmp($device[0],'pass',4) == 0):
-				$device = preg_split('/([-A-z]+)/',$temp[0],-1,PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
-				// if there is no other device name, use pass[0-9]
-				// example : devices on 'mfi' will show :- <ATA WDC WD40EFRX-68W 0A80> at scbus6 target 1 lun 0 (pass5)
-			elseif(empty($device) && count($temp) == 1 && strncmp($temp[0],'pass',4) == 0):
-				$device = preg_split('/([-A-z]+)/',$temp[0],-1,PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
-			endif;
-			// legacy compatibility: for scsi option, do not include ata drives, for ata option, do not include scsi drives
-			if((($devtype!="scsi" & $controller[0] == $devtype) | ($devtype=="scsi" & $controller[0]!="ata")) && $controller[0] != "mfi"):
-				// Ignore CD-ROMs and SCSI enclosure devices (ses)
-				if($device[0] != "" & !preg_match("/^(cd|acd|ses)/",$device[0])):
-					// Add device into devlice list array
-					$devlist["$device[0]$device[1]"]['device'] = $device[0];
-					$devlist["$device[0]$device[1]"]['id'] = $device[1];
-					$devlist["$device[0]$device[1]"]['name'] = $device[0].$device[1];
-					$devlist["$device[0]$device[1]"]['devicespecialfile'] = '/dev/'.$device[0].$device[1];
-					init_device_attributes($devlist["$device[0]$device[1]"]);
-					// Get diskinfo to get disk size
-					$diskinfo = disks_get_diskinfo($devlist["$device[0]$device[1]"]['devicespecialfile']);
-					$devlist["$device[0]$device[1]"]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
-					$devlist["$device[0]$device[1]"]['controller'] = $controller[0];
-					$devlist["$device[0]$device[1]"]['controller_id'] = $controller[1];
-					$devlist["$device[0]$device[1]"]['target_id'] = $target_id;
-					$devlist["$device[0]$device[1]"]['lun_id'] = $lun_id;
-					// for backward compatibility
-					switch($controller[0]):
-						case 'ata':
-								$devlist["$device[0]$device[1]"]['type'] = "IDE";
-								break;
-						case 'iscsi':
-								$devlist["$device[0]$device[1]"]['type'] = "iSCSI";
-								break;
-						// scsi-controller list from /etc/devd.conf		
-						case 'aac' || 'adv' || 'adw' || 'aha' || 'ahb' || 'ahc' || 'ahd' || 'aic' || 'amd' || 'amr' || 'asr' || 'bt' || 'ciss' || 'ct' || 'dpt' || 'esp' || 'ida' || 'iir' || 'ips' || 'isp'|| 'mlx' || 'mly' || 'mpt' || 'ncr' ||'ncv' || 'nsp' || 'stg' || 'sym' || 'trm' || 'wds':
-						case "mpt": // LSI Fusion-MPT SCSI/Fibre Channel driver
-								$devlist["$device[0]$device[1]"]['type'] = "SCSI";
-								break;
-					endswitch;
+			//	get device string
+			//	parse substring between parentheses:
+			//	(pass0,da0) or (da0,pass0) => 'pass0,da0' or 'da0,pass0'
+			preg_match('/.*\(([^>]*)\).*/',$line,$match);
+			//	get device names
+			$a_device = preg_split('/,/',$match[1]);
+			$missing_device = true;
+			$missing_passthrough_device = true;
+			foreach($a_device as $r_device):
+				//	spit device name into it's name and number
+				$r_device_details = preg_split('/(-A-z]+)/',$r_device,-1,PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+				//	take only the first passthrough device and the first non-passthrough device
+				if(0 === strncmp($r_device_details[0],'pass',4)):
+					if($missing_passthrough_device):
+						$passthrough_device = $r_device_details;
+						$missing_passthrough_device = false;
+						if($missing_device): // preset $device
+							$device = $r_device_details;
+						endif;
+					endif;
+				else:
+					if($missing_device):
+						$device = $r_device_details;
+						$missing_device = false;
+						if($missing_passthrough_device): // preset $passthroughdevice
+							$passthrough_device = $r_device_details;
+						endif;
+					endif;
 				endif;
-			elseif($devtype == "cdrom"):
-				// display both SCSI and IDE cdroms
-				if($device[0] != "" & preg_match("/^(cd|acd)/",$device[0])):
-					// Add device into devlice list array
-					$devlist["$device[0]$device[1]"]['device'] = $device[0];
-					$devlist["$device[0]$device[1]"]['id'] = $device[1];
-					$devlist["$device[0]$device[1]"]['name'] = $device[0].$device[1];
-					$devlist["$device[0]$device[1]"]['devicespecialfile'] = '/dev/'.$device[0].$device[1];
-					init_device_attributes($devlist["$device[0]$device[1]"]);
-					// Get diskinfo to get disk size
-					$diskinfo = disks_get_diskinfo($devlist["$device[0]$device[1]"]['devicespecialfile']);
-					$devlist["$device[0]$device[1]"]['size'] = isset($diskinfo['mediasize_mbytes']) ? $diskinfo['mediasize_mbytes'] . "MB" : gtext('Unknown');					
-					$devlist["$device[0]$device[1]"]['controller'] = $controller[0];
-					$devlist["$device[0]$device[1]"]['controller_id'] = $controller[1];
-					$devlist["$device[0]$device[1]"]['target_id'] = $target_id;
-					$devlist["$device[0]$device[1]"]['lun_id'] = $lun_id;
-					// for backward compatibility
-					switch($controller[0]):
-						case 'ata':
-								$devlist["$device[0]$device[1]"]['type'] = "IDE";
+			endforeach;
+			if(preg_match('/\S/',$device[0])):
+				$device_name = $device[0] . $device[1];
+				$passthrough_device_name = $passthrough_device[0] . $passthrough_device[1];
+			
+				//	legacy compatibility: for scsi option, do not include ata drives, for ata option, do not include scsi drives
+				if((($devtype != 'scsi' && $controller[0] == $devtype) || ($devtype == 'scsi' & $controller[0] != 'ata')) && $controller[0] != 'mfi'):
+					//	ignore empty, CD-ROM and SCSI enclosure devices (ses)
+					if(!preg_match('/^(cd|acd|ses)/',$device[0])):
+						// Add device into devlice list array
+						$devlist[$device_name]['device'] = $device[0];
+						$devlist[$device_name]['id'] = $device[1];
+						$devlist[$device_name]['name'] = $device_name;
+						$devlist[$device_name]['devicespecialfile'] = '/dev/' . $device_name;
+						$devlist[$device_name]['passthroughdevice'] = '/dev/' . $passthrough_device_name;
+						init_device_attributes($devlist[$device_name]);
+						// Get diskinfo to get disk size
+						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
+						$devlist[$device_name]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+						$devlist[$device_name]['controller'] = $controller[0];
+						$devlist[$device_name]['controller_id'] = $controller[1];
+						$devlist[$device_name]['target_id'] = $target_id;
+						$devlist[$device_name]['lun_id'] = $lun_id;
+						// for backward compatibility
+						switch($controller[0]):
+							case 'ata':
+								$devlist[$device_name]['type'] = 'IDE';
 								break;
-						case 'iscsi':
-								$devlist["$device[0]$device[1]"]['type'] = "iSCSI";
+							case 'iscsi':
+								$devlist[$device_name]['type'] = 'iSCSI';
 								break;
-						// scsi-controller list from /etc/devd.conf
-						case 'aac' || 'adv' || 'adw' || 'aha' || 'ahb' || 'ahc' || 'ahd' || 'aic' || 'amd' || 'amr' || 'asr' || 'bt' || 'ciss' || 'ct' || 'dpt' || 'esp' || 'ida' || 'iir' || 'ips' || 'isp'|| 'mlx' || 'mly' || 'mpt' || 'ncr' ||'ncv' || 'nsp' || 'stg' || 'sym' || 'trm' || 'wds':
-						case "mpt": // LSI Fusion-MPT SCSI/Fibre Channel driver
-						case "twa": // 3ware
-							$devlist["$device[0]$device[1]"]['type'] = "SCSI";
-							break;
-					endswitch;
+							// scsi-controller list from /etc/devd.conf
+							case 'aac':
+							case 'adv':
+							case 'adw':
+							case 'aha':
+							case 'ahb':
+							case 'ahc':
+							case 'ahd':
+							case 'aic':
+							case 'amd':
+							case 'amr':
+							case 'asr':
+							case 'bt':
+							case 'ciss':
+							case 'ct':
+							case 'dpt':
+							case 'esp':
+							case 'ida':
+							case 'iir':
+							case 'ips':
+							case 'isp':
+							case 'mlx':
+							case 'mly':
+							case 'mpt': // LSI Fusion-MPT SCSI/Fibre Channel driver
+							case 'ncr':
+							case 'ncv':
+							case 'nsp':
+							case 'stg':
+							case 'sym':
+							case 'trm':
+							case 'twa': // 3ware
+							case 'wds':
+								$devlist[$device_name]['type'] = 'SCSI';
+								break;
+						endswitch;
+					endif;
+				elseif($devtype == 'cdrom'):
+					// display both SCSI and IDE cdroms
+					if(preg_match('/^(cd|acd)/',$device[0])):
+						// Add device into devlice list array
+						$devlist[$device_name]['device'] = $device[0];
+						$devlist[$device_name]['id'] = $device[1];
+						$devlist[$device_name]['name'] = $device_name;
+						$devlist[$device_name]['devicespecialfile'] = '/dev/' . $device_name;
+						$devlist[$device_name]['passthroughdevice'] = '/dev/' . $passthroughdevice[0] . $passthroughdevice[1];
+						init_device_attributes($devlist[$device_name]);
+						// Get diskinfo to get disk size
+						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
+						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_mbytes']) ? $diskinfo['mediasize_mbytes'] . 'MB' : gtext('Unknown');
+						$devlist[$device_name]['controller'] = $controller[0];
+						$devlist[$device_name]['controller_id'] = $controller[1];
+						$devlist[$device_name]['target_id'] = $target_id;
+						$devlist[$device_name]['lun_id'] = $lun_id;
+						// for backward compatibility
+						switch($controller[0]):
+							case 'ata':
+								$devlist[$device_name]['type'] = 'IDE';
+								break;
+							case 'iscsi':
+								$devlist[$device_name]['type'] = 'iSCSI';
+								break;
+							// scsi-controller list from /etc/devd.conf
+							case 'aac':
+							case 'adv': 
+							case 'adw': 
+							case 'aha': 
+							case 'ahb': 
+							case 'ahc': 
+							case 'ahd':
+							case 'aic': 
+							case 'amd': 
+							case 'amr': 
+							case 'asr': 
+							case 'bt': 
+							case 'ciss': 
+							case 'ct': 
+							case 'dpt': 
+							case 'esp': 
+							case 'ida': 
+							case 'iir':
+							case 'ips':
+							case 'isp':
+							case 'mlx':
+							case 'mly':
+							case 'mpt': // LSI Fusion-MPT SCSI/Fibre Channel driver
+							case 'ncr':
+							case 'ncv':
+							case 'nsp':
+							case 'stg':
+							case 'sym':
+							case 'trm':
+							case 'twa': // 3ware
+							case 'wds':
+								$devlist[$device_name]['type'] = 'SCSI';
+								break;
+						endswitch;
+					endif;
 				endif;
 			endif;
 		endif;
 	endforeach;
 	return $devlist;
 }
-// Parse controller dependent info
+/*
+ *	Parse controller dependent info
+ */
 function parse_controller_config(&$devlist) {
 	global $config_disks;
 
 	foreach($devlist as &$device):
 		$devtype = '';
-		$device['desc'] = isset($config_disks[$device['name']]['desc']) ? $config_disks[$device['name']]['desc'] : '';
+		$device['desc'] = $config_disks[$device['name']]['desc'] ?? '';
 		switch($device['controller']):
 		// Experimental : requires arcmsr to add enclosure support
 		// Areca SATA[/SAS] RAID controller
 		// SMART Device type format : areca,N/E (N = channel (slot), E = enclosure)
 		// smartctl -a -d areca,9/2 /dev/arcmsr0
-			case "arcmsr":
-				$device['controller_desc'] = parse_raid_controller_desc($device['controller'].$device['controller_id']);
-				$device['smart']['devicefilepath'] = "/dev/".$device['controller'].$device['controller_id'];
+			case 'arcmsr':
+				$device['controller_desc'] = parse_raid_controller_desc($device['controller'] . $device['controller_id']);
+				$device['smart']['devicefilepath'] = '/dev/' . $device['controller'] . $device['controller_id'];
 				$device['smart']['devicetype'] = 'areca';
-				$device['smart']['devicetypearg'] = 'areca,'.($device['target_id']+1);
+				$device['smart']['devicetypearg'] = 'areca,' . ($device['target_id']+1);
 				break;
 			case 'ahcich':
 			case 'ata':
 				$device['model'] = parse_device_desc($device['name']);
-				$device['controller_desc'] = parse_ata_ahci_controller_desc($device['controller'].$device['controller_id']);
-				mwexec2("smartctl -d test "."/dev/".$device['name']." | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
+				$device['controller_desc'] = parse_ata_ahci_controller_desc($device['controller'] . $device['controller_id']);
+				mwexec2('smartctl -d test ' . '/dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
 				$device['smart']['devicefilepath'] = '/dev/'.$device['name'];
 				$device['smart']['devicetype'] = $devtype[0];
 				$device['smart']['devicetypearg'] = $devtype[0];
@@ -999,9 +1166,9 @@ function parse_controller_config(&$devlist) {
 			// e.g. smartctl -d cciss,1 -a /dev/ciss0
 			case 'ciss':
 				$device['controller_desc'] = parse_raid_controller_desc($device['controller'].$device['controller_id']);
-				$device['smart']['devicefilepath'] = '/dev/'.$device['controller'].$device['controller_id'];
+				$device['smart']['devicefilepath'] = '/dev/' . $device['controller'] . $device['controller_id'];
 				$device['smart']['devicetype'] = 'cciss';
-				$device['smart']['devicetypearg'] = "cciss,".$device['target_id'];
+				$device['smart']['devicetypearg'] = 'cciss,' . $device['target_id'];
 				break;
 			case 'hptiop': // HighPoint RocketRAID 3xxx/4xxx device driver
 			case 'hptmv': // HighPoint RocketRAID 182x device driver
@@ -1009,18 +1176,18 @@ function parse_controller_config(&$devlist) {
 			case 'hpt27xx': // Highpoint RocketRAID 27xx controller
 				$controller_id = $device['controller_id'] + 1;
 				$disk_id = $device['target_id']+1;
-				$device['controller_desc'] = parse_raid_controller_desc($device['controller'].$device['controller_id']);
-				$device['smart']['devicefilepath'] = '/dev/'.$device['controller'];
+				$device['controller_desc'] = parse_raid_controller_desc($device['controller'] . $device['controller_id']);
+				$device['smart']['devicefilepath'] = '/dev/' . $device['controller'];
 				$device['smart']['devicetype'] = $device['controller'];
-				$device['smart']['devicetypearg'] = "hpt,".$controller_id."/".$disk_id;
+				$device['smart']['devicetypearg'] = 'hpt,' . $controller_id . '/' . $disk_id;
 				break;
 			// LSI MegaRAID SAS
 			case 'mfi':
-				$mfi_device = map_mfi_device_name($device['controller'].$device['controller_id'],$device['name']);
+				$mfi_device = map_mfi_device_name($device['controller'] . $device['controller_id'],$device['name']);
 				$device['target_id'] = $mfi_device['target_id'];
 				$device['model'] = parse_device_desc($mfi_device['device_name']);
-				$device['controller_desc'] = parse_raid_controller_desc($device['controller'].$device['controller_id']);
-				$device['smart']['devicefilepath'] = '/dev/'.$mfi_device['device_name'];
+				$device['controller_desc'] = parse_raid_controller_desc($device['controller'] . $device['controller_id']);
+				$device['smart']['devicefilepath'] = '/dev/' . $mfi_device['device_name'];
 				$device['smart']['devicetype'] = 'sat';
 				$device['smart']['devicetypearg'] = 'sat';
 				break;
@@ -1029,51 +1196,61 @@ function parse_controller_config(&$devlist) {
 			case 'mpt':
 				$device['model'] = parse_device_desc($device['name']);
 				$device['controller_desc'] = parse_device_desc($device['controller'].$device['controller_id']);
-				mwexec2('smartctl -d test /dev/'.$device['name']." | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
-				$device['smart']['devicefilepath'] = '/dev/'.$device['name'];
+				mwexec2('smartctl -d test /dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
+				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
 				$device['smart']['devicetype'] = $devtype[0];
 				$device['smart']['devicetypearg'] = $devtype[0];
 				break;
 			case 'twa': // 3ware 9000/9500/9550/9650 series SATA RAID controller
 			case 'twe': // 3ware 5000/6000/7000/8000 series PATA/SATA RAID adapter
-				$device['controller_desc'] = parse_raid_controller_desc($device['controller'].$device['controller_id']);
-				$device['smart']['devicefilepath'] = '/dev/'.$device['controller'].$device['controller_id'];
+				$device['controller_desc'] = parse_raid_controller_desc($device['controller'] . $device['controller_id']);
+				$device['smart']['devicefilepath'] = '/dev/' . $device['controller'] . $device['controller_id'];
 				$device['smart']['devicetype'] = '3ware';
 				$tw_line = [];
 				$port = 0;
 				$port_num = [];
-				mwexec2('/usr/local/sbin/tw_cli /c'.$device['controller_id'].'/u'.$device['target_id'].' show | grep -E "^u"',$tw_line);
-				if(preg_match("/(?<=p)[\d]+/",$tw_line[0],$port_num)):
+				mwexec2('/usr/local/sbin/tw_cli /c' . $device['controller_id'] . '/u' . $device['target_id'] . ' show | grep -E "^u"',$tw_line);
+				if(preg_match('/(?<=p)[\d]+/',$tw_line[0],$port_num)):
 					$port = $port_num[0];
 				endif;
-				$device['smart']['devicetypearg'] = '3ware,'.$port;
+				$device['smart']['devicetypearg'] = '3ware,' . $port;
 				break;
 			// USB Mass Storage
 			case 'umass-sim':
 				$device['model'] = parse_device_desc($device['name']);
 				$device['controller_desc'] = parse_umass_controller_desc($device['controller_id']);
-				$device['smart']['devicefilepath'] = '/dev/'.$device['name'];
+				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
 				break;
 			// Auto detect devices to cater for SATA disks pass through via HBA (non-RAID) (such as LSI SAS2008 RAID controller (e.g. IBM ServeRAID M1015) flashed to LSI9211-IT firmware)
 			default:
 				$device['model'] = parse_device_desc($device['name']);
-				$device['controller_desc'] = parse_device_desc($device['controller'].$device['controller_id']);
-				mwexec2('smartctl -d test /dev/'.$device['name']." | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
-				$device['smart']['devicefilepath'] = '/dev/'.$device['name'];
+				$device['controller_desc'] = parse_device_desc($device['controller'] . $device['controller_id']);
+				mwexec2('smartctl -d test /dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
+				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
 				$device['smart']['devicetype'] = $devtype[0];
 				$device['smart']['devicetypearg'] = $devtype[0];
 				break;
 		endswitch;
 		// Parse info from S.M.A.R.T.
 		$smartctl_info = get_smartctl_info($device);
-		if(!empty($smartctl_info['desc'])) $device['desc'] = $smartctl_info['desc'];
-		if(!empty($smartctl_info['model'])) $device['model'] = $smartctl_info['model'];
-		if(!empty($smartctl_info['serial'])) $device['serial'] = $smartctl_info['serial'];
-		if(!empty($smartctl_info['rotation_rate'])) $device['rotation_rate'] = $smartctl_info['rotation_rate'];
-		if(!empty($smartctl_info['transfer_rate'])) $device['transfer_rate'] = $smartctl_info['transfer_rate'];
+		if(!empty($smartctl_info['desc'])):
+			$device['desc'] = $smartctl_info['desc'];
+		endif;
+		if(!empty($smartctl_info['model'])):
+			$device['model'] = $smartctl_info['model'];
+		endif;
+		if(!empty($smartctl_info['serial'])):
+			$device['serial'] = $smartctl_info['serial'];
+		endif;
+		if(!empty($smartctl_info['rotation_rate'])):
+			$device['rotation_rate'] = $smartctl_info['rotation_rate'];
+		endif;
+		if(!empty($smartctl_info['transfer_rate'])):
+			$device['transfer_rate'] = $smartctl_info['transfer_rate'];
+		endif;
 		// if S.M.A.R.T. is not available, get transfer speed from dmesg
 		if(empty($smartctl_info['transfer_rate'])):
-			mwexec2("dmesg | grep \"".$device['name'].": \" | grep \"transfers\"",$lines);
+			mwexec2('dmesg | grep "' . $device['name'] . ': " | grep "transfers"',$lines);
 			foreach($lines as $line):
 				$matches = preg_split("/[\s\:]+/",$line);
 				if(strcmp($matches[0],$device['name']) == 0 && strcmp($matches[2],'transfers') == 0):
@@ -1084,14 +1261,24 @@ function parse_controller_config(&$devlist) {
 		if(!empty($smartctl_info['smart_support'])):
 			$device['smart']['smart_support'] = $smartctl_info['smart_support'];
 		else:
-			$device['smart']['smart_support'] = "Unavailable";
+			$device['smart']['smart_support'] = 'Unavailable';
 		endif;
-		if(!empty($smartctl_info['isavailable'])) $device['smart']['isavailable'] = $smartctl_info['isavailable'];
-		if(!empty($smartctl_info['isenabled'])) $device['smart']['isenabled'] = $smartctl_info['isenabled'];
+		if(!empty($smartctl_info['isavailable'])):
+			$device['smart']['isavailable'] = $smartctl_info['isavailable'];
+		endif;
+		if(!empty($smartctl_info['isenabled'])):
+			$device['smart']['isenabled'] = $smartctl_info['isenabled'];
+		endif;
 		// retry empty case
-		if(empty($device['model'])) $device['model'] = system_get_volume_model($device['devicespecialfile']);
-		if(empty($device['desc'])) $device['desc'] = $device['model'];
-		if(empty($device['serial'])) $device['serial'] = system_get_volume_serial($device['devicespecialfile']);
+		if(empty($device['model'])):
+			$device['model'] = system_get_volume_model($device['devicespecialfile']);
+		endif;
+		if(empty($device['desc'])):
+			$device['desc'] = $device['model'];
+		endif;
+		if(empty($device['serial'])):
+			$device['serial'] = system_get_volume_serial($device['devicespecialfile']);
+		endif;
 		// final fixup
 		$device['model'] = str_replace('"','',$device['model']);
 		$device['desc'] = str_replace('"','',$device['desc']);
@@ -1100,12 +1287,15 @@ function parse_controller_config(&$devlist) {
 	unset($device);
 	return $devlist;
 }
+/*
+ *
+ */
 function map_mfi_device_name($controller,$mfisyspd) {
 	$mfi_device = [];
-	mwexec2("dmesg | grep \"".$device['controller']."\"",$lines);
+	mwexec2("dmesg | grep \"" . $device['controller'] . "\"",$lines);
 	// look for deviceid '0' in mfisyspd0: 3815447MB (7814037168 sectors) SYSPD volume (deviceid: 0)
 	foreach($lines as $line):
-		if(preg_match("/^".$mfisyspd.": /",$line,$matches)):
+		if(preg_match("/^" . $mfisyspd . ": /",$line,$matches)):
 			if(preg_match("/(?<= \(deviceid: )[0-9]+/",$line,$matches)):
 				$mfi_device['target_id']=$matches[0];
 			endif;
@@ -1119,7 +1309,9 @@ function map_mfi_device_name($controller,$mfisyspd) {
 	endforeach;
 	return $mfi_device;
 }
-// Parse info from S.M.A.R.T.
+/*
+ *	Parse info from S.M.A.R.T.
+ */
 function get_smartctl_info($device) {
 	$smartctl_info = [];
 	$type_arg = '';
@@ -1127,9 +1319,9 @@ function get_smartctl_info($device) {
 	$product = '';
 	$revision = '';
 	if(!empty($device['smart']['devicetypearg'])):
-		$type_arg = "-d ".$device['smart']['devicetypearg'];
+		$type_arg = '-d ' . $device['smart']['devicetypearg'];
 	endif;
-	mwexec2("smartctl -i ".$type_arg." ".$device['smart']['devicefilepath'],$lines);
+	mwexec2('smartctl -i ' . $type_arg . ' ' . $device['smart']['devicefilepath'],$lines);
 	foreach($lines as $line):
 		// trim and convert token to lowercase
 		$str_startswith = strtolower(trim(substr($line,0,18)));
@@ -1175,13 +1367,13 @@ function get_smartctl_info($device) {
 				if(empty($smartctl_info['smart_support'])):
 					if(preg_match("/(?<=SMART support is:).*(?=\-)+/",$line,$matches)):
 						$smartctl_info['smart_support'] = ltrim($matches[0]);
-						$smartctl_info['isavailable'] = strncasecmp(trim($matches[0]),"available",9) == 0;
+						$smartctl_info['isavailable'] = strncasecmp(trim($matches[0]),'available',9) == 0;
 					endif;
 				else:
 					if(strncasecmp($smartctl_info['smart_support'],"available",9) == 0):
 						if(preg_match("/(?<=SMART support is: ).*/",$line,$matches)):
-							$smartctl_info['smart_support'] = $smartctl_info['smart_support'].', '.$matches[0];
-							$smartctl_info['isenabled'] = strncasecmp(trim($matches[0]),"enabled",7) == 0;
+							$smartctl_info['smart_support'] = $smartctl_info['smart_support'] . ', ' . $matches[0];
+							$smartctl_info['isenabled'] = strncasecmp(trim($matches[0]),'enabled',7) == 0;
 						endif;
 					endif;
 				endif;
@@ -1190,7 +1382,7 @@ function get_smartctl_info($device) {
 	endforeach;
 	// Set model to vendor,product,revision
 	if(empty($smartctl_info['model'])):
-		$smartctl_info['model'] = trim($vendor.' '.$product.' '.$revision);
+		$smartctl_info['model'] = trim($vendor . ' ' . $product . ' ' . $revision);
  	endif;
 	// final fixup
 	$smartctl_info['model'] = str_replace('"','',isset($smartctl_info['model']) ? $smartctl_info['model'] : '');
@@ -1198,6 +1390,9 @@ function get_smartctl_info($device) {
 	$smartctl_info['serial'] = str_replace('"','',isset($smartctl_info['serial']) ? $smartctl_info['serial'] : '');
 	return $smartctl_info;
 }
+/*
+ *
+ */
 function init_device_attributes(&$device) {
 	$device['desc'] = '';
 	$device['model'] = '';
@@ -1218,9 +1413,12 @@ function init_device_attributes(&$device) {
 	$device['smart']['isavailable'] = false;
 	$device['smart']['isenabled'] = false;
 }
+/*
+ *
+ */
 function parse_device_desc($device) {
 	$matches = [];
-	// device order may change, so take latest(last) line 
+	// device order may change, so take latest(last) line
 	mwexec2("dmesg | grep \"^$device: <\" | tail -r",$lines);
 	foreach($lines as $line):
 		// example: da2: <Corsair Voyager 1100> Removable Direct Access SCSI-0 device
@@ -1230,6 +1428,9 @@ function parse_device_desc($device) {
 	endforeach;
 	return '';
 }
+/*
+ *
+ */
 function parse_ata_ahci_controller_desc($controller) {
 	$controller_desc = '';
 	mwexec2("dmesg | grep -w $controller: | sort -u | uniq",$lines);
@@ -1243,7 +1444,7 @@ function parse_ata_ahci_controller_desc($controller) {
 					if(strncmp($controller_desc,'',1)==0):
 						$controller_desc = $matches2[0];
 					else:
-						$controller_desc = $controller_desc.", ".$matches2[0];
+						$controller_desc = $controller_desc . ', ' . $matches2[0];
 					endif;
 				endif;
 			endforeach;
@@ -1251,12 +1452,15 @@ function parse_ata_ahci_controller_desc($controller) {
 	endforeach;
 	return $controller_desc;
 }
+/*
+ *
+ */
 function parse_raid_controller_desc($controller) {
 	$matches = [];
 	if(strncmp($line,$controller ,4)):
 		mwexec2("dmesg | grep $controller",$lines);
 		foreach($lines as $line):
-			if(strncmp($line,$controller.': <' ,strlen($controller)+3) == 0):
+			if(strncmp($line,$controller . ': <' ,strlen($controller)+3) == 0):
 				if(preg_match("/(?<=\<).*(?=\>)|(?<=\<).*(?=$)/",$line,$matches)):
 					return $matches[0];
 				endif;
@@ -1265,6 +1469,9 @@ function parse_raid_controller_desc($controller) {
 	endif;
 	return $matches[0];
 }
+/*
+ *
+ */
 function parse_umass_controller_desc($controller_id) {
 	$matches3 = [];
 	mwexec2("dmesg | grep -w umass$controller_id",$lines);
@@ -1288,31 +1495,40 @@ function parse_umass_controller_desc($controller_id) {
 	endforeach;
 	return $matches3[0];
 }
-// Get list of ATA disks.
+/*
+ *	Get list of ATA disks.
+ */
 function get_ata_disks_list() {
 	$devlist = [];
-	$devlist = parse_camcontrol_info("ata");
+	$devlist = parse_camcontrol_info('ata');
 	$devlist = parse_controller_config($devlist);
 	return $devlist;
 }
-// Get list of IDE AND SCSI CDROM.
+/*
+ *	Get list of IDE AND SCSI CDROM.
+ */
 function get_cdrom_list() {
 	$devlist = [];
-	$devlist = parse_camcontrol_info("cdrom");
+	$devlist = parse_camcontrol_info('cdrom');
 	$devlist = parse_controller_config($devlist);
 	return $devlist;
 }
-// Get list of SCSI disks.
+/*
+ *	Get list of SCSI disks.
+ */
 function get_scsi_disks_list() {
 	$devlist = [];
-	$devlist = parse_camcontrol_info("scsi");
+	$devlist = parse_camcontrol_info('scsi');
 	$devlist = parse_controller_config($devlist);
 	return $devlist;
 }
+/*
+ *
+ */
 function get_iscsi_disks_list() {
 	$disklist = [];
 	/* get all devlist w/bus */
-	exec("/sbin/camcontrol devlist -v",$rawdata);
+	exec('/sbin/camcontrol devlist -v',$rawdata);
 	$iscsi = false;
 	foreach($rawdata as $line):
 		/* iscsi bus? */
@@ -1327,61 +1543,65 @@ function get_iscsi_disks_list() {
 		endif;
 		/* Get information include between parenthese: (pass0,da0) or (da0,pass0)*/
 		preg_match("/.*\(([^>]*)\).*/",$line,$match);
-		if($match[1] == ""):
+		if($match[1] == ''):
 			$iscsi = false;
 			continue;
 		endif;
 		/* Spare le resultat par la virgule */
-		$temp = preg_split("/,/",$match[1]);
+		$temp = preg_split('/,/',$match[1]);
 		// Check if diskname is the first (da0,pass0) or the second (pass0,da0) arguement
 		$diskname = $temp[1];
-		if($diskname[0] === "p")
+		if($diskname[0] === 'p'):
 			$diskname = $temp[0];
+		endif;
 		/* On exlus les lecteurs cd */
-		if(!preg_match("/^(cd)/",$diskname)):
+		if(!preg_match('/^(cd)/',$diskname)):
 			$disklist[$diskname] = [];
 			$disklist[$diskname]['name'] = $diskname;
-			$disklist[$diskname]['devicespecialfile'] = "/dev/" . $diskname;
-			$disklist[$diskname]['type'] = "iSCSI";
-			/* Match the description witch is include between < and > */
-			preg_match("/.*\<([^>]*)>.*/",$line,$match);
+			$disklist[$diskname]['devicespecialfile'] = '/dev/' . $diskname;
+			$disklist[$diskname]['type'] = 'iSCSI';
+			/* Match the description which is include between < and > */
+			preg_match('/.*\<([^>]*)>.*/',$line,$match);
 			$disklist[$diskname]['desc'] = $match[1];
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			/* Get serial number */
-			$serial = system_get_volume_serial("/dev/" . $diskname,$disklist[$diskname]['controller']);
+			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
 		endif;
 	endforeach;
 	return $disklist;
 }
-// Get list of hardware RAID disks.
-//[aacd0] => [
-//		[type] => RAID
-//		[desc] => XYZ
-//		[size] => xxxMB
-//		[name] => aacd0
-//		[devicespecialfile] => /dev/aacd0
-//		[serial] => XX123456
-//	]
+/*
+ *	Get list of hardware RAID disks.
+ *	[aacd0] => [
+ *		[type] => RAID
+ *		[desc] => XYZ
+ *		[size] => xxxMB
+ *		[name] => aacd0
+ *		[devicespecialfile] => /dev/aacd0
+ *		[serial] => XX123456
+ *	]
+ */
 function get_hraid_disks_list() {
 	$disklist = [];
 	/* Recupere la liste des disques RAID */
-	$kerneldisks = explode(" ",trim(preg_replace("/kern.disks: /","",exec("/sbin/sysctl kern.disks"))));
+	$kerneldisks = explode(' ',trim(preg_replace('/kern.disks: /','',exec('/sbin/sysctl kern.disks'))));
 	/* Recupere la liste des disques ATA et SCSI */
 	$diskdetected = array_merge((array)get_ata_disks_list(),(array)get_scsi_disks_list());
 	/* Recupere le dmesg */
-	exec("/sbin/dmesg",$rawdmesg);
+	exec('/sbin/dmesg',$rawdmesg);
 	foreach($kerneldisks as $diskname):
 		$allready = 1;
 		// Check of this entry is IDE or SCSI (allready detected)
 		foreach($diskdetected as $diskfoundk => $diskfoundv):
-			if(strcasecmp($diskfoundk,$diskname) == 0)
+			if(strcasecmp($diskfoundk,$diskname) == 0):
 				$allready = 0;
+			endif;
 		endforeach;
 		// Exclude cdrom device
-		if(preg_match("/^(cd)/",$diskname)):
+		if(preg_match('/^(cd)/',$diskname)):
 			$allready = 0;
 		endif;
 		if($allready):
@@ -1391,17 +1611,17 @@ function get_hraid_disks_list() {
 			$disklist[$diskname]['name'] = $diskname;
 			$disklist[$diskname]['id'] = $device[1];
 			init_device_attributes($disklist[$diskname]);
-			$disklist[$diskname]['devicespecialfile']= "/dev/" . $diskname;
-			$disklist[$diskname]['type'] = "RAID";
-			if($device[0] == "twed" || $device[0] == "mfisyspd"):
-				if($device[0] == "twed"):
+			$disklist[$diskname]['devicespecialfile']= '/dev/' . $diskname;
+			$disklist[$diskname]['type'] = 'RAID';
+			if($device[0] == 'twed' || $device[0] == 'mfisyspd'):
+				if($device[0] == 'twed'):
 					$disklist[$diskname]['target_id'] = $disklist[$diskname]['id'];
 				endif;
 				$matches = [];
 				// look for controller details from dmesg
 				foreach($rawdmesg as $line):
 					// example : twed2 on twe0
-					if(preg_match("/(?<=".$diskname." on )[a-z]+[0-9]+$/",$line,$matches)):
+					if(preg_match('/(?<=' . $diskname . ' on )[a-z]+[0-9]+$/',$line,$matches)):
 						$controller = [];
 						$controller = preg_split('/([-A-z]+)/',$matches[0],-1,PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 						// get controller and controller id
@@ -1413,14 +1633,14 @@ function get_hraid_disks_list() {
 				/* Looking for the disk description in the dmesg */
 				foreach($rawdmesg as $dmesgline):
 					/* Separe la ligne par les espace */
-					$dmesgtab = explode(" ",$dmesgline);
-					$dmesgtab[0] = rtrim($dmesgtab[0],":");
+					$dmesgtab = explode(' ',$dmesgline);
+					$dmesgtab[0] = rtrim($dmesgtab[0],':');
 					// si la ligne commence par le nom du disque: attention il y a 2 lignes
-					if($dmesgtab[0]!="" &&(strcasecmp($dmesgtab[0],$diskname) == 0)):
+					if($dmesgtab[0] != '' && (strcasecmp($dmesgtab[0],$diskname) == 0)):
 						// the first line as this example "aacd0: <RAID 5> on aac0"
-						if(strcasecmp(substr($dmesgtab[1],0,1),"<") == 0):
+						if(strcasecmp(substr($dmesgtab[1],0,1),'<') == 0):
 							/* Match the description witch is include between < and > */
-							preg_match("/.*\<([^>]*)>.*/",$dmesgline,$match);
+							preg_match('/.*\<([^>]*)>.*/',$dmesgline,$match);
 							$disklist[$diskname]['desc'] = $match[1];
 						endif;
 					endif;
@@ -1428,28 +1648,34 @@ function get_hraid_disks_list() {
 			endif;
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . "MB";
+			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
 			/* Get serial number */
-			$serial = system_get_volume_serial("/dev/" . $diskname,$disklist[$diskname]['controller']);
+			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
 		endif;
 	endforeach;
 	$disklist = parse_controller_config($disklist);
 	return $disklist;
 }
-/* Return list of ALL disk: physical, hardware RAID, Software RAID disk and HAST disk */
+/*
+ *	Return list of ALL disk: physical, hardware RAID, Software RAID disk and HAST disk
+ */
 function get_physical_disks_list() {
 	$disklist = array_merge((array)get_ata_disks_list(),(array)get_scsi_disks_list(),(array)get_hraid_disks_list(),(array)get_hast_disks_list());
 	return $disklist;
 }
-/* Return list of ALL disk: physical, hardware RAID and Software RAID disk */
+/*
+ *	Return list of ALL disk: physical, hardware RAID and Software RAID disk
+ */
 function get_all_disks_list() {
 	$disklist = array_merge((array)get_ata_disks_list(),(array)get_scsi_disks_list(),(array)get_hraid_disks_list(),(array)get_sraid_disks_list());
 	return $disklist;
 }
-// Wrapper for exec().
-// $command - Command to be executed.
-// $logerr - Write error messages to log file.
+/*
+ *	Wrapper for exec().
+ *	$command - Command to be executed.
+ *	$logerr - Write error messages to log file.
+ */
 function mwexec($command,$logerr = false) {
 	global $g;
 
@@ -1470,10 +1696,15 @@ function mwexec($command,$logerr = false) {
 	endif;
 	return $retval;
 }
+/*
+ *
+ */
 function mwexec2($command,&$output = NULL,&$return_var = NULL) {
 	return exec($command,$output,$return_var);
 }
-/* wrapper for exec() in background */
+/*
+ *	wrapper for exec() in background
+ */
 function mwexec_bg($command) {
 	global $g;
 
@@ -1484,19 +1715,25 @@ function mwexec_bg($command) {
 	endif;
 	exec("nohup $command > /dev/null 2>&1 &");
 }
-/* unlink a file, if it exists */
+/*
+ *	unlink a file, if it exists
+ */
 function unlink_if_exists($fn) {
 	if(file_exists($fn)):
 		unlink($fn);
 	endif;
 }
-/* check if an alias exists */
+/*
+ *	check if an alias exists
+ */
 function is_alias($name) {
 	global $aliastable;
 
 	return isset($aliastable[$name]);
 }
-/* expand a host or network alias, if necessary */
+/*
+ *	expand a host or network alias, if necessary
+ */
 function alias_expand($name) {
 	global $aliastable;
 
@@ -1508,7 +1745,9 @@ function alias_expand($name) {
 		return null;
 	endif;
 }
-/* expand a host alias, if necessary */
+/*
+ *	expand a host alias, if necessary
+ */
 function alias_expand_host($name) {
 	global $aliastable;
 
@@ -1520,7 +1759,9 @@ function alias_expand_host($name) {
 		return null;
 	endif;
 }
-/* expand a network alias, if necessary */
+/*
+ * expand a network alias, if necessary
+ */
 function alias_expand_net($name) {
 	global $aliastable;
 
@@ -1532,7 +1773,9 @@ function alias_expand_net($name) {
 		return null;
 	endif;
 }
-/* find out whether two subnets overlap */
+/*
+ *	find out whether two subnets overlap
+ */
 function check_subnets_overlap($subnet1,$bits1,$subnet2,$bits2) {
 	if(!is_numeric($bits1)):
 		$bits1 = 32;
@@ -1553,27 +1796,27 @@ function check_subnets_overlap($subnet1,$bits1,$subnet2,$bits2) {
 		return false;
 	endif;
 }
-/* compare two IP addresses */
+/*
+ *	compare two IP addresses
+ */
 function ipcmp($a,$b) {
-	if(ip2long($a) < ip2long($b)):
-		return -1;
-	elseif(ip2long($a) > ip2long($b)):
-		return 1;
-	else:
-		return 0;
-	endif;
+	return (ip2long($a) <=> ip2long($b));
 }
-/* return true if $addr is in $subnet, false if not */
+/*
+ *	return true if $addr is in $subnet, false if not
+ */
 function ip_in_subnet($addr,$subnet) {
 	list($ip,$mask) = explode('/',$subnet);
 	$mask = 0xffffffff << (32 - $mask);
 	return ((ip2long($addr) & $mask) == (ip2long($ip) & $mask));
 }
-// Obtain MAC address given an IP address by looking at the ARP table
+/*
+ *	Obtain MAC address given an IP address by looking at the ARP table
+ */
 function arp_get_mac_by_ip($ip) {
 	exec("/usr/sbin/arp -n {$ip}",$arpoutput);
 	if($arpoutput[0]):
-		$arpi = explode(" ",$arpoutput[0]);
+		$arpi = explode(' ',$arpoutput[0]);
 		$macaddr = $arpi[3];
 		if(is_macaddr($macaddr)):
 			return $macaddr;
@@ -1583,30 +1826,34 @@ function arp_get_mac_by_ip($ip) {
 	endif;
 	return false;
 }
-// Get the interface name
+/*
+ *	Get the interface name
+ */
 function get_ifname($if) {
 	// Check if 'auto' mode is activated
-	if($if === "auto"):
-		$interfaces = explode(" ",exec("/sbin/ifconfig -l"));
+	if($if === 'auto'):
+		$interfaces = explode(' ',exec('/sbin/ifconfig -l'));
 		foreach($interfaces as $ifname):
 			if(!preg_match("/^(ppp|sl|gif|faith|lo|vlan|tun|plip|ipfw|usbus|carp)/",$ifname)):
 				$if = $ifname;
 				break;
 			endif;
 		endforeach;
-		if($if === "auto"):
-			$if = "lo0";
+		if($if === 'auto'):
+			$if = 'lo0';
 		endif;
 	endif;
 	return $if;
 }
-// Get local IPv4 address
+/*
+ *	Get local IPv4 address
+ */
 function get_ipaddr($if) {
 	$if = get_ifname($if);
 	unset($ipaddr);
 	exec("/sbin/ifconfig {$if} inet | /usr/bin/grep inet | /usr/bin/grep -v vhid",$inetinfo);
 	$inet = $inetinfo[0];
-	$ainet = preg_split("/\s+/",ltrim($inet));
+	$ainet = preg_split('/\s+/',ltrim($inet));
 	$ipaddr = chop($ainet[1]);
 	if(!empty($ipaddr)):
 		return $ipaddr;
@@ -1614,7 +1861,7 @@ function get_ipaddr($if) {
 	exec("/usr/bin/netstat -inW -f inet -I {$if}",$inetinfo);
 	array_shift($inetinfo);
 	foreach($inetinfo as $inet):
-		$ainet = preg_split("/\s+/",ltrim($inet));
+		$ainet = preg_split('/\s+/',ltrim($inet));
 		$ifname = chop($ainet[0]);
 		if(strncmp($ifname,$if,strlen($if)) == 0):
 			$ipaddr = chop($ainet[3]);
@@ -1623,12 +1870,14 @@ function get_ipaddr($if) {
 	endforeach;
 	return !empty($ipaddr) ? $ipaddr : null;
 }
-// Get subnet bits.
+/*
+ *	Get subnet bits.
+ */
 function get_subnet_bits($if) {
 	$if = get_ifname($if);
 	exec("/sbin/ifconfig {$if} inet | /usr/bin/grep inet | /usr/bin/grep -v vhid",$inetinfo);
 	$inet = $inetinfo[0];
-	$ainet = preg_split("/\s+/",ltrim($inet));
+	$ainet = preg_split('/\s+/',ltrim($inet));
 	$ipaddr = chop($ainet[1]);
 	$mask = chop($ainet[3]);
 	if(!empty($ipaddr) && !empty($mask)):
@@ -1638,18 +1887,20 @@ function get_subnet_bits($if) {
 		endif;
 	endif;
 	exec("/usr/local/bin/sipcalc --cidr-addr {$if}",$rawdata);
-	if(preg_match("/.+Network mask \(bits\)	- (\d+).+/",implode($rawdata),$matches)):
+	if(preg_match('/.+Network mask \(bits\)	- (\d+).+/',implode($rawdata),$matches)):
 		return $matches[1];
 	endif;
 	return false;
 }
-// Get local IPv6 address
+/*
+ *	Get local IPv6 address
+ */
 function get_ipv6addr($if) {
 	$if = get_ifname($if);
 	unset($ipaddr);
 	exec("/sbin/ifconfig {$if} inet6",$rawdata);
 	foreach($rawdata as $line):
-		if(preg_match("/^\s+inet6\s+(\S+)\s/",$line,$m)):
+		if(preg_match('/^\s+inet6\s+(\S+)\s/',$line,$m)):
 			$ipaddr = $m[1];
 		endif;
 	endforeach;
@@ -1659,7 +1910,7 @@ function get_ipv6addr($if) {
 	exec("/usr/bin/netstat -inW -f inet6 -I {$if}",$inetinfo);
 	array_shift($inetinfo);
 	foreach($inetinfo as $inet):
-		$ainet = preg_split("/\s+/",ltrim($inet));
+		$ainet = preg_split('/\s+/',ltrim($inet));
 		$ifname = chop($ainet[0]);
 		if(strncmp($ifname,$if,strlen($if)) == 0):
 			$ipaddr = chop($ainet[3]);
@@ -1668,14 +1919,16 @@ function get_ipv6addr($if) {
 	endforeach;
 	return !empty($ipaddr) ? $ipaddr : null;
 }
-// Get local MAC address
+/*
+ *	Get local MAC address
+ */
 function get_macaddr($if) {
 	$if = get_ifname($if);
 	unset($macaddr);
 	exec("/usr/bin/netstat -inW -f link -I {$if}",$linkinfo);
 	array_shift($linkinfo);
 	foreach($linkinfo as $link):
-		$alink = preg_split("/\s+/",ltrim($link));
+		$alink = preg_split('/\s+/',ltrim($link));
 		$ifname = chop($alink[0]);
 		if(strncmp($ifname,$if,strlen($if)) == 0):
 			$macaddr = chop($alink[3]);
@@ -1684,21 +1937,23 @@ function get_macaddr($if) {
 	endforeach;
 	return !empty($macaddr) ? $macaddr : null;
 }
-// Get DNS servers.
-// Parse /etc/resolv.conf when using DHCP (will be updated
-// when 'dhclient' is executed), otherwise use configured
-// DNS servers from config.xml for static IP.
-// Returns array of DNS servers.
+/*
+ *	Get DNS servers.
+ *	Parse /etc/resolv.conf when using DHCP (will be updated
+ *	when 'dhclient' is executed), otherwise use configured
+ *	DNS servers from config.xml for static IP.
+ *	Returns array of DNS servers.
+ */
 function get_ipv4dnsserver() {
 	global $config;
 
 	$result = [];
 	switch ($config['interfaces']['lan']['ipaddr']):
 		case 'dhcp':
-			exec("cat /etc/resolv.conf",$rawdata);
+			exec('cat /etc/resolv.conf',$rawdata);
 			foreach($rawdata as $data):
-				$adata = preg_split("/\s+/",$data);
-				if(0 == strcmp(strtolower(trim($adata[0])),"nameserver")):
+				$adata = preg_split('/\s+/',$data);
+				if(0 == strcmp(strtolower(trim($adata[0])),'nameserver')):
 					if(is_ipv4addr(trim($adata[1]))):
 						$result[] = trim($adata[1]);
 					endif;
@@ -1714,16 +1969,19 @@ function get_ipv4dnsserver() {
 	$result = array_merge($result,['','']);
 	return $result;
 }
+/*
+ *
+ */
 function get_ipv6dnsserver() {
 	global $config;
 
 	$result = [];
 	switch ($config['interfaces']['lan']['ipv6addr']):
 		case 'auto':
-			exec("cat /etc/resolv.conf",$rawdata);
+			exec('cat /etc/resolv.conf',$rawdata);
 			foreach($rawdata as $data):
-				$adata = preg_split("/\s+/",$data);
-				if(0 == strcmp(strtolower(trim($adata[0])),"nameserver")):
+				$adata = preg_split('/\s+/',$data);
+				if(0 == strcmp(strtolower(trim($adata[0])),'nameserver')):
 					if(is_ipv6addr(trim($adata[1]))):
 						$result[] = trim($adata[1]);
 					endif;
@@ -1737,18 +1995,20 @@ function get_ipv6dnsserver() {
 	$result = array_merge($result,['','']);
 	return $result;
 }
-// Get the default gateway.
-// Returns default gateway IPv4
+/*
+ *	Get the default gateway.
+ *	Returns default gateway IPv4
+ */
 function get_defaultgateway() {
 	global $config;
 
-	$result = "";
+	$result = '';
 	switch($config['interfaces']['lan']['ipaddr']):
 		case 'dhcp':
-			exec("/sbin/route -n get -inet default",$rawdata);
+			exec('/sbin/route -n get -inet default',$rawdata);
 			foreach($rawdata as $data):
-				$adata = preg_split("/\s+/",trim($data));
-				if(false !== strstr($adata[0],"gateway")):
+				$adata = preg_split('/\s+/',trim($data));
+				if(false !== strstr($adata[0],'gateway')):
 					$result = $adata[1];
 					break;
 				endif;
@@ -1760,17 +2020,19 @@ function get_defaultgateway() {
 	endswitch;
 	return $result;
 }
-// Returns default gateway IPv6
+/*
+ *	Returns default gateway IPv6
+ */
 function get_ipv6defaultgateway() {
 	global $config;
 
-	$result = "";
+	$result = '';
 	switch($config['interfaces']['lan']['ipv6addr']):
 		case 'auto':
-			exec("/sbin/route -n get -inet6 default",$rawdata);
+			exec('/sbin/route -n get -inet6 default',$rawdata);
 			foreach($rawdata as $data):
-				$adata = preg_split("/\s+/",trim($data));
-				if(false !== strstr($adata[0],"gateway")):
+				$adata = preg_split('/\s+/',trim($data));
+				if(false !== strstr($adata[0],'gateway')):
 					$result = $adata[1];
 					break;
 				endif;
@@ -1782,110 +2044,109 @@ function get_ipv6defaultgateway() {
 	endswitch;
 	return $result;
 }
-/* Get list of supported filesystem types */
+/*
+ *	Get list of supported filesystem types
+ */
 function get_fstype_list() {
 	global $g_filesystems;
 	
 	return $g_filesystems;
 }
+/*
+ *
+ */
 function get_fstype_shortdesc($fstype) {
 	$shortdesc = '';
 	switch($fstype):
-		case "":
-			$shortdesc = gtext("Unformated");
+		case '':
+			$shortdesc = gtext('Unformated');
 			break;
-		case "ufs":
-		case "ufs_no_su":
-		case "ufsgpt":
-		case "ufsgpt_no_su":
-			$shortdesc = "UFS";
+		case 'ufs':
+		case 'ufs_no_su':
+		case 'ufsgpt':
+		case 'ufsgpt_no_su':
+			$shortdesc = 'UFS';
 			break;
-		case "msdos":
-			$shortdesc = "FAT32";
+		case 'msdos':
+			$shortdesc = 'FAT32';
 			break;
-		case "cd9660":
-			$shortdesc = "CD/DVD";
+		case 'cd9660':
+			$shortdesc = 'CD/DVD';
 			break;
-		case "ntfs":
-			$shortdesc = "NTFS";
+		case 'ntfs':
+			$shortdesc = 'NTFS';
 			break;
-		case "gmirror":
-			$shortdesc = "gmirror";
+		case 'gmirror':
+		case 'gconcat':
+		case 'gstripe':
+		case 'graid5':
+		case 'gvinum':
+			$shortdesc = $fstype;
 			break;
-		case "gconcat":
-			$shortdesc = "gconcat";
+		case 'softraid':
+			$shortdesc = gtext('SoftRaid');
 			break;
-		case "gstripe":
-			$shortdesc = "gstripe";
+		case 'geli':
+			$shortdesc = gtext('Encrypted');
 			break;
-		case "graid5":
-			$shortdesc = "graid5";
+		case 'ext2':
+			$shortdesc = 'EXT2/3/4';
 			break;
-		case "gvinum":
-			$shortdesc = "gvinum";
+		case 'exfat':
+			$shortdesc = 'exFAT';
 			break;
-		case "softraid":
-			$shortdesc = gtext("SoftRaid");
-			break;
-		case "geli":
-			$shortdesc = gtext("Encrypted");
-			break;
-		case "ext2":
-			$shortdesc = "EXT2/3/4";
-			break;
-		case "exfat":
-			$shortdesc = "exFAT";
-			break;
-		case "zfs":
-			$shortdesc = "ZFS Storage Pool";
+		case 'zfs':
+			$shortdesc = 'ZFS Storage Pool';
 			break;
 	endswitch;
 	return $shortdesc;
 }
-// Get interface information.
-// $if - Interface name (e.g. re0, ...)
-// Result: Array
-//	(
-//		[hwif] => re0
-//		[if] => re0
-//		[status] => up
-//		[mtu] = 1500
-//		[macaddr] => 00:0e:2e:0a:62:75
-//		[inpkts] => 367
-//		[inerrs] => 0
-//		[inbytes] => 54478
-//		[outpkts] => 401
-//		[outerrs] => 0
-//		[outbytes] => 327601
-//		[collisions] => 0
-//		[media] => 100baseTX
-//		[ipaddr] => 192.168.178.150
-//		[subnet] => 255.255.255.0
-//		[wolevents] => [
-//			"unicast",
-//			"multicast",
-//			"broadcast",
-//			"magic",
-//			"link"
-//		]
-// Additional:
-//		[channel] => xxx
-//		[ssid] => xxx
-//	)
+/*
+ *	Get interface information.
+ *	$if - Interface name (e.g. re0, ...)
+ *	Result: Array
+ *	(
+ *		[hwif] => re0
+ *		[if] => re0
+ *		[status] => up
+ *		[mtu] = 1500
+ *		[macaddr] => 00:0e:2e:0a:62:75
+ *		[inpkts] => 367
+ *		[inerrs] => 0
+ *		[inbytes] => 54478
+ *		[outpkts] => 401
+ *		[outerrs] => 0
+ *		[outbytes] => 327601
+ *		[collisions] => 0
+ *		[media] => 100baseTX
+ *		[ipaddr] => 192.168.178.150
+ *		[subnet] => 255.255.255.0
+ *		[wolevents] => [
+ *			"unicast",
+ *			"multicast",
+ *			"broadcast",
+ *			"magic",
+ *			"link"
+ *		]
+ *	Additional:
+ *		[channel] => xxx
+ *		[ssid] => xxx
+ *	)
+ */
 function get_interface_info($if) {
 //	global $config;
 
-	$ifinfo = [];	
+	$ifinfo = [];
 	$ifinfo['hwif'] = get_ifname($if);
 	$ifinfo['if'] = $ifinfo['hwif'];
 	/* run netstat to determine link info */
 	unset($linkinfo);
-	exec("/usr/bin/netstat -I " . $ifinfo['hwif'] . " -nWb -f link",$linkinfo);
-	$linkinfo = preg_split("/\s+/",ltrim($linkinfo[1]));
-	if(preg_match("/\*$/",$linkinfo[0]) || preg_match("/^$/",$linkinfo[0])):
-		$ifinfo['status'] = "down";
+	exec('/usr/bin/netstat -I ' . $ifinfo['hwif'] . ' -nWb -f link',$linkinfo);
+	$linkinfo = preg_split('/\s+/',ltrim($linkinfo[1]));
+	if(preg_match('/\*$/',$linkinfo[0]) || preg_match('/^$/',$linkinfo[0])):
+		$ifinfo['status'] = 'down';
 	else:
-		$ifinfo['status'] = "up";
+		$ifinfo['status'] = 'up';
 	endif;
 	if(!strstr($ifinfo['if'],'tun')):
 		$ifinfo['mtu'] = $linkinfo[1];
@@ -1904,38 +2165,39 @@ function get_interface_info($if) {
 		$ifinfo['outpkts'] = $linkinfo[7];
 		$ifinfo['outbytes'] = $linkinfo[9];
 	endif;
-	if($ifinfo['status'] === "up"):
+	if($ifinfo['status'] === 'up'):
 		/* try to determine media with ifconfig */
 		unset($ifconfiginfo);
-		exec("/sbin/ifconfig -m " . $ifinfo['hwif'],$ifconfiginfo);
+		exec('/sbin/ifconfig -m ' . $ifinfo['hwif'],$ifconfiginfo);
 		foreach($ifconfiginfo as $ici):
-			if(preg_match("/media: .*? \((.*?)\)/",$ici,$matches)):
+			if(preg_match('/media: .*? \((.*?)\)/',$ici,$matches)):
 				$ifinfo['media'] = $matches[1];
-			else: 
-				if(preg_match("/media: Ethernet (.*)/",$ici,$matches)):
+			else:
+				if(preg_match('/media: Ethernet (.*)/',$ici,$matches)):
 					$ifinfo['media'] = $matches[1];
 				endif;
 			endif;
-			if(preg_match("/status: (.*)$/",$ici,$matches)):
-				if($matches[1] != "active")
+			if(preg_match('/status: (.*)$/',$ici,$matches)):
+				if($matches[1] != 'active'):
 					$ifinfo['status'] = $matches[1];
+				endif;
 			endif;
-			if(preg_match("/channel (\S*)/",$ici,$matches)):
+			if(preg_match('/channel (\S*)/',$ici,$matches)):
 				$ifinfo['channel'] = $matches[1];
 			endif;
-			if(preg_match("/ssid (\".*?\"|\S*)/",$ici,$matches)):
+			if(preg_match('/ssid (".*?"|\S*)/',$ici,$matches)):
 				if($matches[1][0] == '"'):
 					$ifinfo['ssid'] = substr($matches[1],1,-1);
 				else:
 					$ifinfo['ssid'] = $matches[1];
 				endif;
 			endif;
-			if(preg_match("/supported wake events: (.*)$/",$ici,$matches)):
+			if(preg_match('/supported wake events: (.*)$/',$ici,$matches)):
 				$ifinfo['wolevents'] = explode(' ',$matches[1]);
 			endif;
-			if(preg_match("/capabilities=.*<(.*)>$/",$ici,$matches)):
-				$info = explode(",",$matches[1]);
-				$ifinfo['wolevents'] = preg_grep("/^WOL/",$info);
+			if(preg_match('/capabilities=.*<(.*)>$/',$ici,$matches)):
+				$info = explode(',',$matches[1]);
+				$ifinfo['wolevents'] = preg_grep('/^WOL/',$info);
 			endif;
 		endforeach;
 		$gather_ipinfo = true;
@@ -1951,20 +2213,20 @@ function get_interface_info($if) {
 		if($gather_ipinfo):
 			/* try to determine IP address and netmask with ifconfig */
 			unset($ifconfiginfo);
-			exec("/sbin/ifconfig " . $ifinfo['if'],$ifconfiginfo);
+			exec('/sbin/ifconfig ' . $ifinfo['if'],$ifconfiginfo);
 			foreach($ifconfiginfo as $ici):
-				if(preg_match("/inet (\S+)/",$ici,$matches)):
+				if(preg_match('/inet (\S+)/',$ici,$matches)):
 					$ifinfo['ipaddr'] = $matches[1];
 				endif;
-				if(preg_match("/netmask (\S+)/",$ici,$matches)):
-					if(preg_match("/^0x/",$matches[1])):
+				if(preg_match('/netmask (\S+)/',$ici,$matches)):
+					if(preg_match('/^0x/',$matches[1])):
 						$ifinfo['subnet'] = long2ip(hexdec($matches[1]));
 					endif;
 				endif;
-				if(preg_match("/inet6 (\S+)%/",$ici,$matches)):
+				if(preg_match('/inet6 (\S+)%/',$ici,$matches)):
 					$ifinfo['ipv6addr'] = $matches[1];
 				endif;
-				if(preg_match("/prefixlen (\S+)/",$ici,$matches)):
+				if(preg_match('/prefixlen (\S+)/',$ici,$matches)):
 					$ifinfo['ipv6subnet'] = $matches[1];
 				endif;
 			endforeach;
@@ -1972,13 +2234,15 @@ function get_interface_info($if) {
 	endif;
 	return $ifinfo;
 }
-//	Get interface information.
-//	$iftype - interface type (e.g. lan, opt[n], ...)
-//	Result: Array
-//		see get_interface_info()
-//	Additional:
-//		[gateway] => 192.168.178.1
-//	)
+/*
+ *	Get interface information.
+ *	$iftype - interface type (e.g. lan, opt[n], ...)
+ *	Result: Array
+ *		see get_interface_info()
+ *	Additional:
+ *		[gateway] => 192.168.178.1
+ *	)
+ */
 function get_interface_info_ex($iftype) {
 	global $config;
 
@@ -1988,37 +2252,41 @@ function get_interface_info_ex($iftype) {
 	if('lan' === $iftype):
 		// Run netstat to determine the default IPv4 gateway
 		unset($netstatrninfo);
-		exec("/usr/bin/netstat -rnf inet",$netstatrninfo);
+		exec('/usr/bin/netstat -rnf inet',$netstatrninfo);
 		foreach($netstatrninfo as $nsr):
-			if(preg_match("/^default\s*(\S+)/",$nsr,$matches)):
+			if(preg_match('/^default\s*(\S+)/',$nsr,$matches)):
 				$ifinfo['gateway'] = $matches[1];
 			endif;
 		endforeach;
 		// Run netstat to determine the default IPv6 gateway
 		unset($netstatrninfo);
-		exec("/usr/bin/netstat -rnf inet6",$netstatrninfo);
+		exec('/usr/bin/netstat -rnf inet6',$netstatrninfo);
 		foreach($netstatrninfo as $nsr):
-			if(preg_match("/^default\s*(\S+)/",$nsr,$matches)):
+			if(preg_match('/^default\s*(\S+)/',$nsr,$matches)):
 				$ifinfo['ipv6gateway'] = $matches[1];
 			endif;
 		endforeach;
 	endif;
 	return $ifinfo;
 }
-// Get carp interface information.
+/*
+ *	Get carp interface information.
+ */
 function get_carp_info($if) {
 	$ifinfo = [];
 	$ifinfo['hwif'] = get_ifname($if);
 	$ifinfo['if'] = $ifinfo['hwif'];
-	exec("/sbin/ifconfig " . $ifinfo['hwif'] . " | grep carp:",$info);
-	$info = preg_split("/\s+/",$info[0]);
+	exec('/sbin/ifconfig ' . $ifinfo['hwif'] . ' | grep carp:',$info);
+	$info = preg_split('/\s+/',$info[0]);
 	$ifinfo['state'] = $info[2];
 	$ifinfo['vhid'] = $info[4];
 	$ifinfo['advbase'] = $info[6];
 	$ifinfo['advskew'] = $info[8];
 	return $ifinfo;
 }
-// Get hast device information.
+/*
+ * Get hast device information.
+ */
 function get_hvol_info($name) {
 	$hvolinfo = [];
 	$hvolinfo['error'] = 0;
@@ -2035,182 +2303,220 @@ function get_hvol_info($name) {
 	endforeach;
 	return $hvolinfo;
 }
-// Get hast role.
+/*
+ *	Get hast role.
+ */
 function get_hast_role() {
-	$role = "unknown";
+	$role = 'unknown';
 	if(0 == mwexec("/bin/pgrep -q -lf 'hastd: .* \\(primary\\)'")):
-		$role = "primary";
+		$role = 'primary';
 	endif;
 	if(0 == mwexec("/bin/pgrep -q -lf 'hastd: .* \\(secondary\\)'")):
-		$role = "secondary";
+		$role = 'secondary';
 	endif;
 	return $role;
 }
-/* Get the product name */
+/*
+ *	Get the product name
+ */
 function get_product_name() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.name"));
 }
-/* Get the platform type */
+/*
+ *	Get the platform type
+ */
 function get_platform_type() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/platform"));
 }
-/* Get the product URL */
+/*
+ *	Get the product URL
+ */
 function get_product_url() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.url"));
 }
-/* Get the firmware check URL */
+/*
+ *	Get the firmware check URL
+ */
 function get_firm_url() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/firm.url"));
 }
-/* Get the product copyright note */
+/*
+ *	Get the product copyright note
+ */
 function get_product_copyright() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.copyright"));
 }
-/* Get the product version */
+/*
+ *	Get the product version
+ */
 function get_product_version() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.version"));
 }
-/* Get the product revision */
+/*
+ *	Get the product revision
+ */
 function get_product_revision() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.revision"));
 }
-/* Get the product build time (formatted) */
+/*
+ *	Get the product build time (formatted)
+ */
 function get_product_buildtime() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.version.buildtime"));
 }
-/* Get the product build timestamp */
+/*
+ *	Get the product build timestamp
+ */
 function get_product_buildtimestamp() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.version.buildtimestamp"));
 }
-/* Get the product version name */
+/*
+ *	Get the product version name
+ */
 function get_product_versionname() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.version.name"));
 }
-// Write message into log file.
-// Return 0 if successful, otherwise 1
+/*
+ *	Write message into log file.
+ *	Return 0 if successful, otherwise 1
+ */
 function write_log($message) {
 	$cmd= sprintf('/usr/bin/logger %s',escapeshellarg($message));
 	return mwexec($cmd);
 }
-// Display message on console.
-// Return 0 if successful, otherwise 1
+/*
+ *	Display message on console.
+ *	Return 0 if successful, otherwise 1
+ */
 function write_console($message) {
 	echo($message);
 	return 0;
 }
-// Check if booting process is performed.
-// Return true if booting, otherwise false
+/*
+ *	Check if booting process is performed.
+ *	Return true if booting, otherwise false
+ */
 function is_booting() {
-	$val = getenv("BOOTING");
+	$val = getenv('BOOTING');
 	return (1 == $val) ? true : false;
 }
-// Get list of configured physical disks.
+/*
+ *	Get list of configured physical disks.
+ */
 function get_conf_physical_disks_list() {
 	global $config;
 
 	$a_physicaldisk = [];
 	if(is_array($config['disks']) && is_array($config['disks']['disk'])):
-		array_sort_key($config['disks']['disk'],"name");
+		array_sort_key($config['disks']['disk'],'name');
 		$a_disks = $config['disks']['disk'];
 		foreach($a_disks as &$disk):
-			$disk['class'] = "physical"; // Set disk type
+			$disk['class'] = 'physical'; // Set disk type
 		endforeach;
 		$a_physicaldisk = array_merge($a_physicaldisk,$a_disks);
 	endif;
 	return $a_physicaldisk;
 }
-// Get list of configured Software RAID disks.
+/*
+ *	Get list of configured Software RAID disks.
+ */
 function get_conf_sraid_disks_list() {
 	global $config;
 
 	$a_vdisk = [];
 	if(is_array($config['gvinum']) && is_array($config['gvinum']['vdisk'])):
-		array_sort_key($config['gvinum']['vdisk'],"name");
+		array_sort_key($config['gvinum']['vdisk'],'name');
 		$a_gvinum = $config['gvinum']['vdisk'];
 		foreach($a_gvinum as &$vdisk):
-			$vdisk['class'] = "gvinum"; // Set disk type
+			$vdisk['class'] = 'gvinum'; // Set disk type
 		endforeach;
 		$a_vdisk = array_merge($a_vdisk,$a_gvinum);
 	endif;
 	if(is_array($config['gmirror']) && is_array($config['gmirror']['vdisk'])):
-		array_sort_key($config['gmirror']['vdisk'],"name");
+		array_sort_key($config['gmirror']['vdisk'],'name');
 		$a_gmirror = $config['gmirror']['vdisk'];
 		foreach($a_gmirror as &$vdisk):
-			$vdisk['class'] = "gmirror"; // Set disk type
+			$vdisk['class'] = 'gmirror'; // Set disk type
 		endforeach;
 		$a_vdisk = array_merge($a_vdisk,$a_gmirror);
 	endif;
 	if(is_array($config['gconcat']) && is_array($config['gconcat']['vdisk'])):
-		array_sort_key($config['gconcat']['vdisk'],"name");
+		array_sort_key($config['gconcat']['vdisk'],'name');
 		$a_gconcat = $config['gconcat']['vdisk'];
 		foreach($a_gconcat as &$vdisk):
-			$vdisk['class'] = "gconcat"; // Set disk type
+			$vdisk['class'] = 'gconcat'; // Set disk type
 		endforeach;
 		$a_vdisk = array_merge($a_vdisk,$a_gconcat);
 	endif;
 	if(is_array($config['gstripe']) && is_array($config['gstripe']['vdisk'])):
-		array_sort_key($config['gstripe']['vdisk'],"name");
+		array_sort_key($config['gstripe']['vdisk'],'name');
 		$a_gstripe = $config['gstripe']['vdisk'];
 		foreach($a_gstripe as &$vdisk):
-			$vdisk['class'] = "gstripe"; // Set disk type
+			$vdisk['class'] = 'gstripe'; // Set disk type
 		endforeach;
 		$a_vdisk = array_merge($a_vdisk,$a_gstripe);
 	endif;
 	if(is_array($config['graid5']) && is_array($config['graid5']['vdisk'])):
-		array_sort_key($config['graid5']['vdisk'],"name");
+		array_sort_key($config['graid5']['vdisk'],'name');
 		$a_graid5 = $config['graid5']['vdisk'];
 		foreach($a_graid5 as &$vdisk):
-			$vdisk['class'] = "graid5"; // Set disk type
+			$vdisk['class'] = 'graid5'; // Set disk type
 		endforeach;
 		$a_vdisk = array_merge($a_vdisk,$a_graid5);
 	endif;
 	return $a_vdisk;
 }
-// Get list of configured encrypted disks
+/*
+ *	Get list of configured encrypted disks
+ */
 function get_conf_encryped_disks_list() {
 	global $config;
 
 	$a_vdisk = [];
 	if(is_array($config['geli']) && is_array($config['geli']['vdisk'])):
-		array_sort_key($config['geli']['vdisk'],"name");
+		array_sort_key($config['geli']['vdisk'],'name');
 		$a_geli = $config['geli']['vdisk'];
 		foreach($a_geli as &$vdisk):
-			$vdisk['class'] = "geli"; // Set disk type
+			$vdisk['class'] = 'geli'; // Set disk type
 		endforeach;
 		$a_vdisk = array_merge($a_vdisk,$a_geli);
 	endif;
 	return $a_vdisk;
 }
-// Get list of configured ZFS virtual devices
+/*
+ *	Get list of configured ZFS virtual devices
+ */
 function get_conf_zfs_vdevice_list() {
 	global $config;
 
 	$result = [];
 	if(is_array($config['zfs']['vdevices']) && is_array($config['zfs']['vdevices']['vdevice'])):
-		array_sort_key($config['zfs']['vdevices']['vdevice'],"name");
+		array_sort_key($config['zfs']['vdevices']['vdevice'],'name');
 		$a_vdevice = $config['zfs']['vdevices']['vdevice'];
 		foreach($a_vdevice as &$vdevice):
-			$vdevice['class'] = "vdevice"; // Set disk type
+			$vdevice['class'] = 'vdevice'; // Set disk type
 		endforeach;
 		$result = array_merge($result,$a_vdevice);
 	endif;
 	return $result;
 }
-// Get a filtered list of all configured disks (real and virtual, e.g. SoftRAID or GEli encrypted).
-// Physical disks used by any virtual disk is filtered out. Also virtual disks itself are
-// filtered if they are used by another virtual disk.
+/*
+ *	Get a filtered list of all configured disks (real and virtual, e.g. SoftRAID or GEli encrypted).
+ *	Physical disks used by any virtual disk is filtered out. Also virtual disks itself are
+ *	filtered if they are used by another virtual disk.
+ */
 function get_conf_all_disks_list_filtered() {
-	global $config;
+//	global $config;
 
 	$a_disk = [];
 	// Get list of physical disks
@@ -2285,19 +2591,22 @@ function get_conf_all_disks_list_filtered() {
 	$a_disk = array_merge($a_disk,$a_encrypteddisk);
 	return $a_disk;
 }
-// Get a filtered list of configured disks (real and virtual, e.g. SoftRAID or GEli encrypted).
-// List is filtered by given key and value.
-// $key - Key used to filter (e.g. fstype, devicespecialfile or name)
-// $pattern - pattern used for filtering (e.g. key=fstype pattern=softraid)
-// Return list containing disks matching filter criterias.
+/*
+ *	Get a filtered list of configured disks (real and virtual, e.g. SoftRAID or GEli encrypted).
+ *	List is filtered by given key and value.
+ *	$key - Key used to filter (e.g. fstype, devicespecialfile or name)
+ *	$pattern - pattern used for filtering (e.g. key=fstype pattern=softraid)
+ *	Return list containing disks matching filter criterias.
+ */
 function get_conf_disks_filtered_ex($key,$pattern) {
 	$result = [];
 	// Get all configured disks
 	$a_disk = array_merge(get_conf_physical_disks_list(),get_conf_sraid_disks_list(),get_conf_encryped_disks_list());
 	if(is_array($a_disk)):
 		foreach($a_disk as $disk):
-			if(!isset($disk[$key]))
+			if(!isset($disk[$key])):
 				continue;
+			endif;
 			if(1 <= preg_match("/{$pattern}/",$disk[$key])):
 				$result[] = $disk;
 			endif;
@@ -2305,8 +2614,10 @@ function get_conf_disks_filtered_ex($key,$pattern) {
 	endif;
 	return $result;
 }
-// Set the given file system type in configuration.
-// Return 0 if successful, otherwise 1.
+/*
+ *	Set the given file system type in configuration.
+ *	Return 0 if successful, otherwise 1.
+ */
 function set_conf_disk_fstype_opt($disk,$fstype,$opt) {
 	global $config;
 
@@ -2321,14 +2632,15 @@ function set_conf_disk_fstype_opt($disk,$fstype,$opt) {
 		'geli' => 'vdisk'
 	];
 	while(list($class,$val) = each($diskconf)) {
-		if(empty($config[$class][$val]) || !is_array($config[$class][$val]))
+		if(empty($config[$class][$val]) || !is_array($config[$class][$val])):
 			continue;
+		endif;
 //	echo "Searching array \$config['$class']['$val'] using key 'devicespecialfile'\n";
-		$id = array_search_ex($disk,$config[$class][$val],"devicespecialfile");
+		$id = array_search_ex($disk,$config[$class][$val],'devicespecialfile');
 		if($id !== false):
 			$config[$class][$val][$id]['fstype'] = $fstype;
 			// add zfsgpt information if filesystem is zfs, remove when not
-			if(!empty($opt) && $fstype == "zfs" && isset($opt['zfsgpt'])):
+			if(!empty($opt) && $fstype == 'zfs' && isset($opt['zfsgpt'])):
 				$config[$class][$val][$id]['zfsgpt'] = $opt['zfsgpt'];
 			elseif(isset($config[$class][$val][$id]['zfsgpt'])):
 				unset($config[$class][$val][$id]['zfsgpt']);
@@ -2340,25 +2652,32 @@ function set_conf_disk_fstype_opt($disk,$fstype,$opt) {
 	}
 	return $result;
 }
+/*
+ *
+ */
 function set_conf_disk_fstype($disk,$fstype) {
 	 return set_conf_disk_fstype_opt($disk,$fstype,null);
 }
-// Convert bytes into best unit.
-// Use FreeBSD unit suffix notation (see 'man df').
+/*
+ *	Convert bytes into best unit.
+ *	Use FreeBSD unit suffix notation (see 'man df').
+ */
 function decode_size($bytes) {
 	$types = ['B','K','M','G','T','P'];
 	for($i = 0;$bytes >= 1024 && $i < (count($types) - 1);$bytes /= 1024,$i++);
 	return (round($bytes,2) . $types[$i]);
 }
-// Get the Internet host name corresponding to a given IP address.
-// Returns the host name or the unmodified ip_address on failure.
+/*
+ *	Get the Internet host name corresponding to a given IP address.
+ *	Returns the host name or the unmodified ip_address on failure.
+ */
 function get_hostbyaddr($ip_address) {
 	$host = gethostbyaddr($ip_address);
 	if($host != false):
 		return $host;
 	endif;
 	exec("/usr/bin/host {$ip_address}",$rawdata);
-	if(preg_match("/^Name: (\S+)/",$rawdata[0],$matches)):
+	if(preg_match('/^Name: (\S+)/',$rawdata[0],$matches)):
 		return $matches[1];
 	endif;
 	return $ip_address;
@@ -2371,16 +2690,17 @@ function uuid() {
 		mt_rand(0,0x3fff) | 0x8000,
 		mt_rand(0,0xffff),mt_rand(0,0xffff),mt_rand(0,0xffff));
 }
-// Get the file size in bytes.
-// Fix PHP file size problem (see http://de.php.net/manual/en/function.filesize.php).
+/*	Get the file size in bytes.
+ *	Fix PHP file size problem (see http://de.php.net/manual/en/function.filesize.php).
+ */
 function get_filesize($file) {
 	if(preg_match('#^/dev/zvol/(.+)$#',"{$file}",$m) && !empty($m[1])):
 		$volname = str_replace('//','/',$m[1]);
-		return @exec("zfs get -Hp -o value volsize " . escapeshellarg($volname));
+		return @exec('zfs get -Hp -o value volsize ' . escapeshellarg($volname));
 	endif;
-	return @exec("stat -f %z " . escapeshellarg($file));
+	return @exec('stat -f %z ' . escapeshellarg($file));
 }
-/**
+/*
  * Check and get the ISO image type.
  * Valid identifiers:
  * @code
@@ -2406,7 +2726,7 @@ function util_is_iso_image($filename) {
 		'NSR03' => 'udf',
 		'BEA01' => 'udf'
 	];
-	$fh = fopen($filename,"r");
+	$fh = fopen($filename,'r');
 	if(false === $fh):
 		return $return;
 	endif;
@@ -2428,7 +2748,7 @@ function util_is_iso_image($filename) {
 	endforeach;
 	return $return;
 }
-/**
+/*
  * Write a string to a file. The data will be written to a temporary file of
  * the same name but ending with the pid of the current process. If successful,
  * the temporary file will be renamed to the original one.
@@ -2438,8 +2758,8 @@ function util_is_iso_image($filename) {
  * @return True if successful, otherwise false.
  */
 function file_put_contents_safe($filename,$data,$binary = false) {
-	$tmpfilename = sprintf("%s.%s",$filename,getmypid());
-	$mode = (true === $binary) ? "wb" : "w";
+	$tmpfilename = sprintf('%s.%s',$filename,getmypid());
+	$mode = (true === $binary) ? 'wb' : 'w';
 	if(!($fd = fopen($tmpfilename,$mode))):
 		return false;
 	endif;
@@ -2454,6 +2774,9 @@ function file_put_contents_safe($filename,$data,$binary = false) {
 	endif;
 	return true;
 }
+/*
+ *
+ */
 function set_php_timezone() {
 	global $g,$config;
 
@@ -2466,7 +2789,7 @@ function set_php_timezone() {
 		return false;
 	endif;
 	// read lines of php.ini except timezone
-	$out = "";
+	$out = '';
 	foreach($lines as $line):
 		if(preg_match('/^\s*date\.timezone\s*=\s*/',$line,$m)):
 			continue;
@@ -2476,28 +2799,38 @@ function set_php_timezone() {
 	// add timezone
 	$out .= "date.timezone = '" . $tz . "'\n";
 	// write php.ini
-	if(!file_put_contents_safe("/usr/local/etc/php.ini",$out)):
+	if(!file_put_contents_safe('/usr/local/etc/php.ini',$out)):
 		return false;
 	endif;
 	return true;
 }
+/*
+ *
+ */
 function crypt_sha512($password) {
 	$method = '$6$'; // SHA512 (salt=16 chars)
 	$salt_len = 12; // 16*(3/4)
 	$salt_raw = openssl_random_pseudo_bytes($salt_len);
-	if($salt_raw === false)
+	if($salt_raw === false):
 		return false;
+	endif;
 	$salt = base64_encode($salt_raw);
-	if($salt === false)
+	if($salt === false):
 		return false;
-	$hash = crypt($password,$method.$salt);
+	endif;
+	$hash = crypt($password,$method . $salt);
 	return $hash;
 }
+/*
+ *
+ */
 function mkpasswd($password) {
 	return crypt_sha512($password);
 }
-// openssl compatible encryption/decryption + base64 encode/decode
-// http://www.openssl.org/docs/crypto/EVP_BytesToKey.html
+/*
+ *	openssl compatible encryption/decryption + base64 encode/decode
+ *	http://www.openssl.org/docs/crypto/EVP_BytesToKey.html
+ */
 function encrypt_aes256cbc($password,$data) {
 	// openssl enc -aes-256-cbc -a -k $password < $data
 	$magic = 'Salted__';
@@ -2511,15 +2844,16 @@ function encrypt_aes256cbc($password,$data) {
 	endif;
 	// key derivation
 	$hash0 = '';
-	$hash1 = md5($hash0.$password.$salt,true);
-	$hash2 = md5($hash1.$password.$salt,true);
-	$hash3 = md5($hash2.$password.$salt,true);
-	$key = $hash1.$hash2;
+	$hash1 = md5($hash0 . $password . $salt,true);
+	$hash2 = md5($hash1 . $password . $salt,true);
+	$hash3 = md5($hash2 . $password . $salt,true);
+	$key = $hash1 . $hash2;
 	$iv = $hash3;
 	// encrypt by $method
 	$enc = openssl_encrypt($data,$method,$key,OPENSSL_RAW_DATA,$iv);
-	if($enc === false)
+	if($enc === false):
 		return false;
+	endif;
 	$b64enc_data = base64_encode($magic . $salt . $enc);
 	if($b64enc_data === false):
 		return false;
@@ -2538,23 +2872,26 @@ function decrypt_aes256cbc($password,$b64enc_data) {
 	$b64enc_data = preg_replace('/\n|\r|\r\n/','',$b64enc_data);
 	// split magic/salt/encrypted data
 	$enc_data = base64_decode($b64enc_data);
-	if($enc_data === false)
+	if($enc_data === false):
 		return false;
-	if(strcmp(substr($enc_data,0,$magic_len),$magic) !== 0)
+	endif;
+	if(strcmp(substr($enc_data,0,$magic_len),$magic) !== 0):
 		return false;
+	endif;
 	$salt = substr($enc_data,$magic_len,$salt_len);
 	$enc = substr($enc_data,$magic_len + $salt_len);
 	// key derivation
 	$hash0 = '';
-	$hash1 = md5($hash0.$password.$salt,true);
-	$hash2 = md5($hash1.$password.$salt,true);
-	$hash3 = md5($hash2.$password.$salt,true);
-	$key = $hash1.$hash2;
+	$hash1 = md5($hash0 . $password . $salt,true);
+	$hash2 = md5($hash1 . $password . $salt,true);
+	$hash3 = md5($hash2 . $password . $salt,true);
+	$key = $hash1 . $hash2;
 	$iv = $hash3;
 	// decrypt by $method
 	$dec = openssl_decrypt($enc,$method,$key,OPENSSL_RAW_DATA,$iv);
-	if($dec === false)
+	if($dec === false):
 		return false;
+	endif;
 	return $dec;
 }
 ?>
