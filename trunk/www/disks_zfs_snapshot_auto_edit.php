@@ -135,7 +135,7 @@ if ($_POST) {
 		$pconfig['path'] = "";
 
 	// Input validation
-	$reqdfields = ['path name'];
+	$reqdfields = ['path','name'];
 	$reqdfieldsn = [gtext('Path'),gtext('Name')];
 	$reqdfieldst = ['string','string'];
 
