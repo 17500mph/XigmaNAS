@@ -1029,38 +1029,7 @@ function parse_camcontrol_info($devtype) {
 							case 'iscsi':
 								$devlist[$device_name]['type'] = 'iSCSI';
 								break;
-							// scsi-controller list from /etc/devd.conf
-							case 'aac':
-							case 'adv':
-							case 'adw':
-							case 'aha':
-							case 'ahb':
-							case 'ahc':
-							case 'ahd':
-							case 'aic':
-							case 'amd':
-							case 'amr':
-							case 'asr':
-							case 'bt':
-							case 'ciss':
-							case 'ct':
-							case 'dpt':
-							case 'esp':
-							case 'ida':
-							case 'iir':
-							case 'ips':
-							case 'isp':
-							case 'mlx':
-							case 'mly':
-							case 'mpt': // LSI Fusion-MPT SCSI/Fibre Channel driver
-							case 'ncr':
-							case 'ncv':
-							case 'nsp':
-							case 'stg':
-							case 'sym':
-							case 'trm':
-							case 'twa': // 3ware
-							case 'wds':
+							default:
 								$devlist[$device_name]['type'] = 'SCSI';
 								break;
 						endswitch;
@@ -1090,38 +1059,7 @@ function parse_camcontrol_info($devtype) {
 							case 'iscsi':
 								$devlist[$device_name]['type'] = 'iSCSI';
 								break;
-							// scsi-controller list from /etc/devd.conf
-							case 'aac':
-							case 'adv': 
-							case 'adw': 
-							case 'aha': 
-							case 'ahb': 
-							case 'ahc': 
-							case 'ahd':
-							case 'aic': 
-							case 'amd': 
-							case 'amr': 
-							case 'asr': 
-							case 'bt': 
-							case 'ciss': 
-							case 'ct': 
-							case 'dpt': 
-							case 'esp': 
-							case 'ida': 
-							case 'iir':
-							case 'ips':
-							case 'isp':
-							case 'mlx':
-							case 'mly':
-							case 'mpt': // LSI Fusion-MPT SCSI/Fibre Channel driver
-							case 'ncr':
-							case 'ncv':
-							case 'nsp':
-							case 'stg':
-							case 'sym':
-							case 'trm':
-							case 'twa': // 3ware
-							case 'wds':
+							default:
 								$devlist[$device_name]['type'] = 'SCSI';
 								break;
 						endswitch;
