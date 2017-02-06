@@ -34,6 +34,8 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+array_make_branch($config,'disks','disk');
+array_make_branch($config,'geli','vdisk');
 array_make_branch($config,'zfs','vdevices','vdevice');
 array_make_branch($config,'zfs','pools','pool');
 array_make_branch($config,'zfs','datasets','dataset');
