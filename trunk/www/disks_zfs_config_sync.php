@@ -34,6 +34,11 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+array_make_branch($config,'zfs','vdevices','vdevice');
+array_make_branch($config,'zfs','pools','pool');
+array_make_branch($config,'zfs','datasets','dataset');
+array_make_branch($config,'zfs','volumes','volume');
+
 $zfs = [
 	'vdevices' => ['vdevice' => []],
 	'pools' => ['pool' => []],
