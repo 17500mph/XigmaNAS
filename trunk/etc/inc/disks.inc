@@ -1706,7 +1706,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 	}
 
 	// GPT?
-	$devs = ["{$dev}p1", "{$dev}p2", "{$dev}p3", "{$dev}p4", "{$dev}p5", "{$dev}p6"];
+	$devs = ['{$dev}p1','{$dev}p2','{$dev}p3','{$dev}p4','{$dev}p5','{$dev}p6'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
@@ -1730,7 +1730,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 	}
 
 	// MBR? with slise only
-	$devs = ["{$dev}s1", "{$dev}s2", "{$dev}s3", "{$dev}s4"];
+	$devs = ['{$dev}s1','{$dev}s2','{$dev}s3','{$dev}s4'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
@@ -1752,7 +1752,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 	}
 
 	// MBR/ZFS/UFS? without slice and with bsdlabel
-	$devs = ["{$dev}a", "{$dev}d", "{$dev}e", "{$dev}f", "{$dev}g", "{$dev}h"];
+	$devs = ['{$dev}a','{$dev}d','{$dev}e','{$dev}f','{$dev}g','{$dev}h'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
@@ -1765,7 +1765,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 	}
 
 	// MBR/ZFS/UFS? with slice and bsdlabel
-	$devs = ["{$dev}s1a", "{$dev}s1d", "{$dev}s1e", "{$dev}s1f", "{$dev}s1g", "{$dev}s1h"];
+	$devs = ['{$dev}s1a','{$dev}s1d','{$dev}s1e','{$dev}s1f','{$dev}s1g','{$dev}s1h'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
@@ -1776,7 +1776,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 				return "zfs";
 		}
 	}
-	$devs = ["{$dev}s2a", "{$dev}s2d", "{$dev}s2e", "{$dev}s2f", "{$dev}s2g", "{$dev}s2h"];
+	$devs = ['{$dev}s2a','{$dev}s2d','{$dev}s2e','{$dev}s2f','{$dev}s2g','{$dev}s2h'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
@@ -1787,7 +1787,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 				return "zfs";
 		}
 	}
-	$devs = ["{$dev}s3a", "{$dev}s3d", "{$dev}s3e", "{$dev}s3f", "{$dev}s3g", "{$dev}s3h"];
+	$devs = ['{$dev}s3a','{$dev}s3d','{$dev}s3e','{$dev}s3f','{$dev}s3g','{$dev}s3h'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
@@ -1798,7 +1798,7 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 				return "zfs";
 		}
 	}
-	$devs = ["{$dev}s4a", "{$dev}s4d", "{$dev}s4e", "{$dev}s4f", "{$dev}s4g", "{$dev}s4h"];
+	$devs = ['{$dev}s4a','{$dev}s4d','{$dev}s4e','{$dev}s4f','{$dev}s4g','{$dev}s4h'];
 	foreach ($devs as $file) {
 		if (file_exists($file)) {
 			$ufsid = disks_get_ufsid($file);
