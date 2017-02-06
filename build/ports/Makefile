@@ -4,6 +4,7 @@
     SUBDIR += ataidle
     SUBDIR += autosnapshot
     SUBDIR += bash
+    SUBDIR += beadm
     SUBDIR += bsnmp-ucd
     SUBDIR += ca_root_nss
     SUBDIR += cdialog
