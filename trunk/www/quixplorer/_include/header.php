@@ -83,10 +83,10 @@ $menu['network']['link'] = '../index.php';
 $menu['network']['menuitem'] = [];
 $menu['network']['menuitem'][] = ['desc' => gtext('Interface Management'),'link' => '../interfaces_assign.php','visible' => TRUE];
 $menu['network']['menuitem'][] = ['desc' => gtext('LAN Management'),'link' => '../interfaces_lan.php','visible' => TRUE];
-for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) {
-	$desc = $config['interfaces']['opt'.$i]['descr'];
-	$menu['network']['menuitem'][] = ['desc' => '{$desc}','link' => '../interfaces_opt.php?index={$i}','visible' => TRUE];
-}
+for($i = 1;isset($config['interfaces']['opt' . $i]);$i++):
+	$desc = $config['interfaces']['opt' . $i]['descr'];
+	$menu['network']['menuitem'][] = ['desc' => $desc,'link' => sprintf('../interfaces_opt.php?index=%d',$i),'visible' => true];
+endfor;
 $menu['network']['menuitem'][] = ['type' => 'separator','visible' => TRUE];
 $menu['network']['menuitem'][] = ['desc' => gtext('Hosts'),'link' => '../system_hosts.php','visible' => TRUE];
 $menu['network']['menuitem'][] = ['desc' => gtext('Static Routes'),'link' => '../system_routes.php', 'visible' => TRUE];
