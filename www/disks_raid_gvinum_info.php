@@ -42,8 +42,6 @@ if(is_ajax()):
 	render_ajax($raidinfo);
 endif;
 $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID 0/1/5'),gtext('Information')];
-?>
-<?php
 include 'fbegin.inc';
 ?>
 <script type="text/javascript">//<![CDATA[
@@ -74,7 +72,7 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('RAID 0/1/5 Information & Status'));?>
+			html_titleline2(gtext('RAID 0/1/5 Information & Status'));
 ?>
 		</thead>
 		<tbody>
