@@ -148,12 +148,12 @@ function system_get_group_list() {
 function system_get_user_list() {
 	$userlist = [];
 
-	foreach (["\n", @file_get_contents("/etc/master.passwd")] as $userinfov) {
+	foreach (explode("\n", @file_get_contents("/etc/master.passwd")) as $userinfov) {
 		if (empty($userinfov))
 			continue;
 
 		// Extract user information
-		$userinfo = [":", $userinfov];
+		$userinfo = explode(":", $userinfov);
 		$user = [];
 		$user['name'] = $userinfo[0];
 		$user['password'] = $userinfo[1];
@@ -173,14 +173,14 @@ function system_get_user_list() {
 // SMBIOS get various info
 function get_smbios_info() {
 	$smbios = [];
-	$cmd = '/bin/kenv -q';
+	$cmd = "/bin/kenv -q";
 	unset($rawdata, $rc);
 	mwexec2($cmd, $rawdata, $rc);
 	if ($rc != 0) {
 		return $smbios;
 	}
 	foreach ($rawdata as $line) {
-		if (preg_match('/^smbios\.([^\.=]+)\.([^\.=]+)=\"(.*)\"/', $line, $match)) {
+		if (preg_match("/^smbios\.([^\.=]+)\.([^\.=]+)=\"(.*)\"/", $line, $match)) {
 			$smbios[$match[1]][$match[2]] = $match[3];
 		}
 	}
@@ -303,9 +303,9 @@ function system_get_smp_cpu_usage() {
 }
 
 function system_get_cpu_usage() {
-	$cpuTicks1 = [" ", `/sbin/sysctl -n kern.cp_time`];
+	$cpuTicks1 = explode(" ", `/sbin/sysctl -n kern.cp_time`);
 	sleep(1);
-	$cpuTicks2 = [" ", `/sbin/sysctl -n kern.cp_time`];
+	$cpuTicks2 = explode(" ", `/sbin/sysctl -n kern.cp_time`);
 
 	$diff = [];
 	$diff['user'] = ($cpuTicks2[0] - $cpuTicks1[0]);
@@ -325,7 +325,7 @@ function system_get_cpu_usage() {
 
 // Get CPUID
 function system_get_cpuid($cpuidx, $level) {
-	$r = [" ", @exec("/usr/sbin/cpucontrol -i $level /dev/cpuctl${cpuidx} | awk '{ print $4, $5, $6, $7 }'")];
+	$r = explode(" ", @exec("/usr/sbin/cpucontrol -i $level /dev/cpuctl${cpuidx} | awk '{ print $4, $5, $6, $7 }'"));
 	$a = [];
 	$a['eax'] = $r[0];
 	$a['ebx'] = $r[1];
@@ -496,7 +496,7 @@ function system_get_swap_info() {
 
 	// blocks
 	$val = 512;
-	if (preg_match('/(?:Device)(?:\s+)(\d+)(?:K-blocks|-blocks)(?:\s+)(?:Used)(?:\s+)(?:Avail)(?:\s)(?:Capacity)/', $swap[0], $matches)) {
+	if (preg_match("/(?:Device)(?:\s+)(\d+)(?:K-blocks|-blocks)(?:\s+)(?:Used)(?:\s+)(?:Avail)(?:\s)(?:Capacity)/", $swap[0], $matches)) {
 		if ($matches[1] == 1) {
 			$val = $matches[1] * 1024;
 		} else {
@@ -507,7 +507,7 @@ function system_get_swap_info() {
 	$swapinfo = [];
 
 	foreach ($swap as $swapv) {
-		if (preg_match('/(\/dev\/.*)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s)(.+)/', $swapv, $matches)) {
+		if (preg_match("/(\/dev\/.*)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s)(.+)/", $swapv, $matches)) {
 			$devswap = [];
 			$devswap['device'] = trim($matches[1]);
 			$devswap['total'] = decode_size(trim($matches[2])*$val);
@@ -546,7 +546,7 @@ function system_get_device_iostat($device) {
 	$result = FALSE;
 
 	mwexec2("iostat -d {$device}", $rawdata);
-	if (preg_match('/^\s*(\S+)\s*(\S+)\s*(\S+)/', $rawdata[2], $matches)) {
+	if (preg_match("/^\s*(\S+)\s*(\S+)\s*(\S+)/", $rawdata[2], $matches)) {
 		$result = [];
 		$result['kpt'] = $matches[1];
 		$result['tps'] = $matches[2];
@@ -590,13 +590,13 @@ function system_get_device_temp($devicespecialfile) {
 		mwexec2("smartctl -A ".$type_arg." ".$config_disks[$devicespecialfile]['smart']['devicefilepath']."| grep -i 'Temperature'" , $rawdata);
 
 		foreach ($rawdata as $rawdatav) {
-			$arawdatav = preg_split('/\s+/', $rawdatav);
+			$arawdatav = preg_split("/\s+/", $rawdatav);
 
 			if (!empty($arawdatav[1]) && ((0 == strncmp(trim($arawdatav[1]), "Temperature_", 12)) || (0 == strncmp(trim($arawdatav[1]), "Airflow_Temperature_", 20))) &&
 				((0 != strcmp(trim($arawdatav[0]), "190")) || (0 != strcmp(trim($arawdatav[0]), "194")) )) {
 				$result = chop($arawdatav[9]);
 				break;
-			} else if (preg_match('/Current Drive Temperature:\s+(\d+) C.*/', $rawdatav, $matches)) {
+			} else if (preg_match("/Current Drive Temperature:\s+(\d+) C.*/", $rawdatav, $matches)) {
 				$result = $matches[1];
 				break;
 			}
