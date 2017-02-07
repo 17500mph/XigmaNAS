@@ -245,7 +245,7 @@ function check_firmware_version_rss($locale) {
 		$resp .= "<br />\n";
 	}
 	if (!empty($beta)) {
-		$resp .= sprintf(gtext("Latest Beta Build: %s"), $beta);
+		$resp .= sprintf(gtext("Latest Beta Release: %s"), $beta);
 		$resp .= "<br />\n";
 	}
 	if (!empty($arm)) {
@@ -253,7 +253,7 @@ function check_firmware_version_rss($locale) {
 		$resp .= "<br />\n";
 	}
 	if (!empty($arm_beta)) {
-		$resp .= sprintf(gtext("Latest Beta Build: %s"), $arm_beta);
+		$resp .= sprintf(gtext("Latest Beta Release: %s"), $arm_beta);
 		$resp .= "<br />\n";
 	}
 	return $resp;
