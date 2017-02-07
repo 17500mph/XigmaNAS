@@ -143,7 +143,7 @@ $(document).ready(function(){
 			</thead>
 			<tbody>
 <?php
-				html_text2('sensor',gtext('System Message'),gtext('No IPMI sensor data available.'));
+				html_text2('sensor',gtext('System Message'),gtext('No IPMI Sensor data available.'));
 ?>			
 			</tbody>
 		</table>
