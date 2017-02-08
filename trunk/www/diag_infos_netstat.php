@@ -37,7 +37,7 @@ require 'guiconfig.inc';
 function diag_infos_netstat_ajax() {
 	$cmd = '/usr/bin/netstat -Aa';
 	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode("\n",$rawdata));
+	return implode("\n",$rawdata);
 }
 if(is_ajax()):
 	$status['area_refresh'] = diag_infos_netstat_ajax();
