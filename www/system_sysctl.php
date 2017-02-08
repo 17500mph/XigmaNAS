@@ -231,7 +231,7 @@ $(window).on("load",function() {
 		togglecheckboxesbyname(this,"<?=$checkbox_member_name;?>[]");
 	});
 <?php // Init member checkboxes.?>
-	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+	$("input[name='<?=$checkbox_member_name;?>[]']").click(function() {
 		controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
 	});
 <?php // Init spinner.?>
