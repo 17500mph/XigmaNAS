@@ -110,7 +110,7 @@ $(document).ready(function(){
 				<?php html_titleline2(gtext('CIFS/SMB Information'),1);?>
 			</thead>
 			<tbody><tr><td>
-				<pre><?=gtext('CIFS/SMB is disabled.');?></pre>;
+				<pre><?=gtext('CIFS/SMB is disabled.');?></pre>
 			</td></tr></tbody>
 		</table>
 <?php else:?>
