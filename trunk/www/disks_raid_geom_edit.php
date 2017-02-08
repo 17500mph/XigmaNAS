@@ -309,7 +309,7 @@ $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('GEOM'),($isrecordnew) ?
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+	$("input[name='<?=$checkbox_member_name;?>[]']").click(function() {
 		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
 	});
 	$("#togglebox").click(function() {

@@ -302,7 +302,7 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Virtual Device'),(
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+	$("input[name='<?=$checkbox_member_name;?>[]']").click(function() {
 		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
 	});
 	$("#togglebox").click(function() {
