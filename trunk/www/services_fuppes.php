@@ -400,7 +400,16 @@ endswitch;
 					html_inputbox2('deviceip',gtext('Device IP'),$sphere_record['deviceip'], gtext('The IP address of the device.'),true,20);
 					html_checkbox2('transcoding',gtext('Transcoding'),$sphere_record['transcoding'],gtext('Enable transcoding.'),'',false,false,'transcoding_change()');
 					html_filechooser2('tempdir',gtext('Transcoding Directory'),$sphere_record['tempdir'],gtext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
-					break;
+					if($dlna_option & 1):
+						html_separator2();
+						html_titleline2(gtext('Fuppes Media Server Administration'));
+						$if = get_ifname($sphere_record['if']);
+						$ipaddr = get_ipaddr($if);
+						$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere_record['port']));
+						$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
+						html_text2('url',gtext('URL'),$text);
+					endif;
+				break;
 			endswitch;
 			?>
 		</tbody>
