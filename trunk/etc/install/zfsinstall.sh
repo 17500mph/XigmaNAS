@@ -106,9 +106,9 @@ cleandisk_init()
 		diskinfo ${DISK1} | while read DISK1 sectorsize size sectors other
 			do
 				# Delete MBR, GPT Primary, ZFS(L0L1)/other partition table.
-				/bin/dd if=/dev/zero of=/dev/${DISK1} bs=${sectorsize} count=4096 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=/dev/${DISK1} bs=${sectorsize} count=8192 > /dev/null 2>&1
 				# Delete GEOM metadata, GPT Secondary(L2L3).
-				/bin/dd if=/dev/zero of=/dev/${DISK1} bs=${sectorsize} oseek=`expr ${sectors} - 4096` count=4096 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=/dev/${DISK1} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
 			done
 	fi
 
@@ -123,9 +123,9 @@ cleandisk_init()
 		diskinfo ${DISK2} | while read DISK2 sectorsize size sectors other
 			do
 				# Delete MBR, GPT Primary, ZFS(L0L1)/other partition table.
-				/bin/dd if=/dev/zero of=/dev/${DISK2} bs=${sectorsize} count=4096 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=/dev/${DISK2} bs=${sectorsize} count=8192 > /dev/null 2>&1
 				# Delete GEOM metadata, GPT Secondary(L2L3).
-				/bin/dd if=/dev/zero of=/dev/${DISK2} bs=${sectorsize} oseek=`expr ${sectors} - 4096` count=4096 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=/dev/${DISK2} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
 			done
 	fi
 }
