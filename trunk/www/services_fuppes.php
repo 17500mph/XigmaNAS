@@ -269,9 +269,7 @@ switch($dlna_count):
 		break;
 endswitch;
 $pgtitle = [gtext('Services'),gtext('DLNA/UPnP Fuppes')];
-?>
-<?php include 'fbegin.inc';?>
-<?php
+include 'fbegin.inc';
 switch($mode_page):
 	case PAGE_MODE_VIEW:
 ?>
@@ -334,21 +332,21 @@ endswitch;
 	</ul>
 </td></tr></tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<?php
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;
 	foreach($a_message as $r_message):
 		print_info_box($r_message);
 	endforeach;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
 					html_titleline2(gtext('Fuppes Media Server'));
@@ -357,10 +355,10 @@ endswitch;
 					html_titleline_checkbox2('enable',gtext('Fuppes Media Server'),$sphere_record['enable'],gtext('Enable'));
 					break;
 			endswitch;
-			?>
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
 					html_text2('enable',gtext('Service Enabled'),$sphere_record['enable'] ? gtext('Yes') : gtext('No'));
@@ -380,15 +378,6 @@ endswitch;
 					if($sphere_record['transcoding']):
 						html_text2('tempdir',gtext('Transcoding Directory'),htmlspecialchars($sphere_record['tempdir']));
 					endif;
-					if($dlna_option & 1):
-						html_separator2();
-						html_titleline2(gtext('Fuppes Media Server Administration'));
-						$if = get_ifname($sphere_record['if']);
-						$ipaddr = get_ipaddr($if);
-						$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere_record['port']));
-						$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
-						html_text2('url',gtext('URL'),$text);
-					endif;
 					break;
 				case PAGE_MODE_EDIT:
 					html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
@@ -400,22 +389,22 @@ endswitch;
 					html_inputbox2('deviceip',gtext('Device IP'),$sphere_record['deviceip'], gtext('The IP address of the device.'),true,20);
 					html_checkbox2('transcoding',gtext('Transcoding'),$sphere_record['transcoding'],gtext('Enable transcoding.'),'',false,false,'transcoding_change()');
 					html_filechooser2('tempdir',gtext('Transcoding Directory'),$sphere_record['tempdir'],gtext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
-					if($dlna_option & 1):
-						html_separator2();
-						html_titleline2(gtext('Fuppes Media Server Administration'));
-						$if = get_ifname($sphere_record['if']);
-						$ipaddr = get_ipaddr($if);
-						$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere_record['port']));
-						$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
-						html_text2('url',gtext('URL'),$text);
-					endif;
 				break;
 			endswitch;
-			?>
+			if($dlna_option & 1):
+				html_separator2();
+				html_titleline2(gtext('Fuppes Media Server Administration'));
+				$if = get_ifname($sphere_record['if']);
+				$ipaddr = get_ipaddr($if);
+				$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere_record['port']));
+				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
+				html_text2('url',gtext('URL'),$text);
+			endif;
+?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php
+<?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW;
 				echo html_button_edit(gtext('Edit'));
@@ -430,10 +419,11 @@ endswitch;
 				echo html_button_cancel(gtext('Cancel'));
 				break;
 		endswitch;
-		?>
+?>
 	</div>
-	<?php
-	include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
 <?php
 switch($mode_page):
@@ -448,5 +438,5 @@ transcoding_change();
 <?php
 		break;
 endswitch;
+include 'fend.inc';
 ?>
-<?php include 'fend.inc';?>

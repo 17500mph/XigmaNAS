@@ -323,9 +323,7 @@ switch($dlna_count):
 		break;
 endswitch;
 $pgtitle = [gtext('Services'),gtext('DLNA/UPnP MiniDLNA')];
-?>
-<?php include 'fbegin.inc';?>
-<?php
+include 'fbegin.inc';
 switch($mode_page):
 	case PAGE_MODE_VIEW:
 ?>
@@ -366,33 +364,33 @@ endswitch;
 	</ul>
 </td></tr></tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php 
+<?php 
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;
 	foreach($a_message as $r_message):
 		print_info_box($r_message);
 	endforeach;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
 					html_titleline2(gtext('MiniDLNA A/V Media Server'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('MiniDLNA A/V Media Server'),$sphere_array['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gtext('MiniDLNA A/V Media Server'),$sphere_record['enable'],gtext('Enable'));
 					break;
 			endswitch;
-			?>
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
 					html_text2('enable',gtext('Service Enabled'),$sphere_record['enable'] ? gtext('Yes') : gtext('No'));
@@ -408,15 +406,6 @@ endswitch;
 					html_checkbox2('strict',gtext('Strict DLNA'),$sphere_record['strict'],'','',false,true);
 					html_checkbox2('tivo',gtext('TiVo Support'),$sphere_record['tivo'],'','',false,true);
 					html_text2('loglevel',gtext('Log Level'),$l_loglevel[$sphere_record['loglevel']] ?? '');
-					if($dlna_option & 1):
-						html_separator2();
-						html_titleline2(gtext('MiniDLNA Media Server WebGUI'));
-						$if = get_ifname($sphere_record['if']);
-						$ipaddr = get_ipaddr($if);
-						$url = htmlspecialchars(sprintf('http://%s:%s/status',$ipaddr,$sphere_record['port']));
-						$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
-						html_text2('url',gtext('URL'),$text);
-					endif;
 					break;
 				case PAGE_MODE_EDIT:
 					html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
@@ -432,11 +421,20 @@ endswitch;
 					html_combobox2('loglevel',gtext('Log Level'),$sphere_record['loglevel'],$l_loglevel,'',false,false,'');
 					break;
 			endswitch;
-			?>
+			if($dlna_option & 1):
+				html_separator2();
+				html_titleline2(gtext('MiniDLNA Media Server WebGUI'));
+				$if = get_ifname($sphere_record['if']);
+				$ipaddr = get_ipaddr($if);
+				$url = htmlspecialchars(sprintf('http://%s:%s/status',$ipaddr,$sphere_record['port']));
+				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
+				html_text2('url',gtext('URL'),$text);
+			endif;
+?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php
+<?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW;
 				echo html_button_edit(gtext('Edit'));
@@ -454,8 +452,12 @@ endswitch;
 				echo html_button_cancel(gtext('Cancel'));
 				break;
 		endswitch;
-		?>
+?>
 	</div>
-<?php include 'formend.inc';?>
+<?php
+include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
