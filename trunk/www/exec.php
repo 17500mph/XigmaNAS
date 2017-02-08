@@ -37,63 +37,97 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-// Function: is Blank
-// Returns true or false depending on blankness of argument.
-function isBlank($arg) {
-	return preg_match("/^\s*$/",$arg);
+function exec_get_sphere() {
+//	global $config;
+	
+//	sphere structure
+	$sphere = new \stdClass;
+//	sphere content
+	$sphere->basename = 'exec';
+	$sphere->extension = '.php';
+	$sphere->scriptname = $sphere->basename . $sphere->extension;
+	$sphere->header = 'Location: ' . $sphere->scriptname;
+	return $sphere;
 }
-function hasContent(string $test = '') {
-	return (false != preg_match('/\S/',$test));
-}
+//	get environment
+$sphere = &exec_get_sphere();
+//	local variables
+$a_message = [];
+$a_message[] = gtext('This is a very powerful tool. Use at your own risk!');
+//
+if($_POST):
+	if(isset($_POST['submit'])):
+		switch($_POST['submit']):
+			case 'upload':
+				$source = $_FILES['ulfile']['tmp_name'];
+				$destination = sprintf('/tmp/%s',$_FILES['ulfile']['name']);
+				if(is_uploaded_file($source)):
+					move_uploaded_file($source,$destination);
+					$a_message[] = gtext('Script has been uploaded.') . sprintf(' [%s]',$destination);
+					unset($_POST['txtCommand']);
+				endif;
+				break;
+		endswitch;
+	endif;
+endif;
 $pgtitle = [gtext('Tools'),gtext('Execute Command')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
 	// Init onsubmit()
-	$("#iform").submit(function() {
-		spinner();
-	});
+	$("#frmExecPlus").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 	$("#txtCommand").click(function () { txtCommand_onKey(event) });
 });
-
-	// Create recall buffer array (of encoded strings).
-	<?php
-	if(!isset($_POST['txtRecallBuffer']) || isBlank( $_POST['txtRecallBuffer'] )):
-		echo "   var arrRecallBuffer = new Array;\n";
-	else:
-		echo "   var arrRecallBuffer = new Array(\n";
-		$arrBuffer = explode('&',$_POST['txtRecallBuffer']);
-		for ($i=0;$i < (count($arrBuffer)-1);$i++):
-			echo "      '",$arrBuffer[$i],"',\n";
-		endfor;
-		echo "      '",$arrBuffer[count($arrBuffer) - 1],"'\n";
-		echo "   );\n";
-	endif;
-	?>
-	// Set pointer to end of recall buffer.
+<?php
+//	Create recall buffer array (of encoded strings).
+if(isset($_POST['txtRecallBuffer']) && preg_match('/\S/',$_POST['txtRecallBuffer'])):
+	echo 'var arrRecallBuffer = new Array(',"\n";
+	$a_in = explode('&',$_POST['txtRecallBuffer']);
+	$a_out = [];
+	foreach($a_in as $r_in):
+		$a_out[] = sprintf("'%s'",$r_in);
+	endforeach;
+	echo "\t",implode(",\n\t",$a_out),"\n";
+	echo ');',"\n";
+else:
+	echo 'var arrRecallBuffer = new Array;',"\n";
+endif;
+?>
+<?php
+	//	Set pointer to end of recall buffer.
+?>
 	var intRecallPtr = arrRecallBuffer.length;
-
-	// Functions to extend String class.
+<?php
+	//	Functions to extend String class.
+?>
 	function str_encode() { return escape( this ) }
 	function str_decode() { return unescape( this ) }
-
-	// Extend string class to include encode() and decode() functions.
+<?php
+	//	Extend string class to include encode() and decode() functions.
+?>
 	String.prototype.encode = str_encode
 	String.prototype.decode = str_decode
-
-	// Function: is Blank
-	// Returns boolean true or false if argument is blank.
+<?php
+	//	Function: is Blank
+	//	Returns boolean true or false if argument is blank.
+?>
 	function isBlank( strArg ) { return strArg.match( /^\s*$/ ) }
-
-	// Function: frmExecPlus onSubmit (event handler)
-	// Builds the recall buffer from the command string on submit.
+<?php
+	//	Function: frmExecPlus onSubmit (event handler)
+	//	Builds the recall buffer from the command string on submit.
+?>
 	function frmExecPlus_onSubmit( form ) {
 		if (!isBlank(form.txtCommand.value)) {
-			// If this command is repeat of last command, then do not store command.
+<?php
+			//	If this command is repeat of last command, then do not store command.
+?>
 			if (form.txtCommand.value.encode() == arrRecallBuffer[arrRecallBuffer.length-1]) { return true }
-			// Stuff encoded command string into the recall buffer.
+<?php
+			//	Stuff encoded command string into the recall buffer.
+?>
 			if (isBlank(form.txtRecallBuffer.value))
 				form.txtRecallBuffer.value = form.txtCommand.value.encode();
 			else
@@ -101,38 +135,55 @@ $(window).on("load", function() {
 		}
 		return true;
 	}
-
-	// Function: btnRecall onClick (event handler)
-	// Recalls command buffer going either up or down.
+<?php
+	//	Function: btnRecall onClick (event handler)
+	//	Recalls command buffer going either up or down.
+?>
 	function btnRecall_onClick( form, n ) {
-		// If nothing in recall buffer, then error.
+<?php
+		//	If nothing in recall buffer, then error.
+?>
 		if (!arrRecallBuffer.length) {
-			alert( 'Nothing to recall!' );
+<?php
+			//	alert( 'Nothing to recall!' );
+?>
 			form.txtCommand.focus();
 			return;
 		}
-		// Increment recall buffer pointer in positive or negative direction
-		// according to <n>.
+<?php
+		//	Increment recall buffer pointer in positive or negative direction
+		//	according to <n>.
+?>
 		intRecallPtr += n;
+<?php
 		// Make sure the buffer stays circular.
+?>
 		if (intRecallPtr < 0) { intRecallPtr = arrRecallBuffer.length - 1 }
 		if (intRecallPtr > (arrRecallBuffer.length - 1)) { intRecallPtr = 0 }
-		// Recall the command.
+<?php
+		//	Recall the command.
+?>
 		form.txtCommand.value = arrRecallBuffer[intRecallPtr].decode();
 	}
-
-	// Function: Reset onClick (event handler)
-	// Resets form on reset button click event.
+<?php
+	//	Function: Reset onClick (event handler)
+	//	Resets form on reset button click event.
+?>
 	function Reset_onClick( form ) {
-		// Reset recall buffer pointer.
+<?php
+		//	Reset recall buffer pointer.
+?>
 		intRecallPtr = arrRecallBuffer.length;
-		// Clear form (could have spaces in it) and return focus ready for cmd.
+<?php
+		//	Clear form (could have spaces in it) and return focus ready for cmd.
+?>
 		form.txtCommand.value = '';
 		form.txtCommand.focus();
 		return true;
 	}
-
-	// hansmi, 2005-01-13
+<?php
+	//	hansmi, 2005-01-13
+?>
 	function txtCommand_onKey(e) {
 		if(!e) var e = window.event; // IE-Fix
 		var code = (e.keyCode?e.keyCode:(e.which?e.which:0));
@@ -150,25 +201,29 @@ $(window).on("load", function() {
 	}
 //]]>
 </script>
-<form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" enctype="multipart/form-data" name="frmExecPlus" id="frmExecPlus" onsubmit="return frmExecPlus_onSubmit(this);">
+<form action="<?=$sphere->scriptname;?>" method="post" enctype="multipart/form-data" name="frmExecPlus" id="frmExecPlus" onsubmit="return frmExecPlus_onSubmit(this);">
 	<table id="area_data"><tbody><tr><td id="area_data_frame">
-		<?php
-		print_info_box(gtext('This is a very powerful tool. Use at your own risk!'));
-		?>
+<?php
+		foreach($a_message as $r_message):
+			print_info_box($r_message);
+		endforeach;
+?>
 		<table class="area_data_settings">
 			<colgroup>
 				<col class="area_data_settings_col_tag">
 				<col class="area_data_settings_col_data">
 			</colgroup>
 			<thead>
-				<?php html_titleline2(gtext('Command'));?>
+<?php
+				html_titleline2(gtext('Command'));
+?>
 			</thead>
 			<tfoot>
 			</tfoot>
 			<tbody>
-				<?php
+<?php
 				html_inputbox2('txtCommand',gtext('Command'),'','',false,80,false,false,1024,gtext('Enter Command'));
-				?>
+?>
 				<tr>
 					<td class="celltag"><?=gtext('Control');?></td>
 					<td class="celldata">
@@ -187,8 +242,40 @@ $(window).on("load", function() {
 				<col class="area_data_settings_col_data">
 			</colgroup>
 			<thead>
-				<?php html_separator2();?>
-				<?php html_titleline2(gtext('PHP Command'));?>
+<?php
+				html_separator2();
+				html_titleline2(gtext('Upload Script'));
+?>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td class="celltag"><?=gtext('Script');?></td>
+					<td class="celldata">
+						<input name="ulfile" type="file" class="formbtn" id="ulfile"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="celltag"><?=gtext('Control');?></td>
+					<td class="celldata">
+<?php
+						echo html_button_upload(gtext('Upload Script'));
+?>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
+<?php
+				html_separator2();
+				html_titleline2(gtext('PHP Command'));
+?>
 			</thead>
 			<tfoot>
 			</tfoot>
@@ -205,73 +292,79 @@ $(window).on("load", function() {
 				</tr>
 			</tbody>
 		</table>
-		<?php
-		if(isset($_POST['txtCommand'])):
-			if(!isBlank($_POST['txtCommand'])):?>
-				<table class="area_data_settings">
-					<colgroup>
-						<col class="area_data_settings_col_tag">
-						<col class="area_data_settings_col_data">
-					</colgroup>
-					<thead>
-						<?php html_separator2();?>
-						<?php html_titleline2(gtext('Command Output'));?>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-				<?php
-				echo '<div>','<pre class="celldata">';
-					echo "\$ ",htmlspecialchars($_POST['txtCommand']),"\n";
-					putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
-					putenv('COLUMNS=1024');
-					putenv("SCRIPT_FILENAME=" .strtok($_POST['txtCommand'],' ')); /* PHP scripts */
-					$ph = popen($_POST['txtCommand'],'r');
-					while($line = fgets($ph)):
-						echo htmlspecialchars($line);
-					endwhile;
-					pclose($ph);
-				echo '</pre>','</div>';
-			endif;
+<?php
+		if(isset($_POST['txtCommand']) && preg_match('/\S/',$_POST['txtCommand'])):
+?>
+			<table class="area_data_settings">
+				<colgroup>
+					<col class="area_data_settings_col_tag">
+					<col class="area_data_settings_col_data">
+				</colgroup>
+				<thead>
+<?php
+					html_separator2();
+					html_titleline2(gtext('Command Output'));
+?>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+<?php
+			echo '<div>','<pre class="celldata">';
+			echo "\$ ",htmlspecialchars($_POST['txtCommand']),"\n";
+			putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
+			putenv('COLUMNS=1024');
+			putenv('SCRIPT_FILENAME=' . strtok($_POST['txtCommand'],' ')); /* PHP scripts */
+			$ph = popen($_POST['txtCommand'],'r');
+			while($line = fgets($ph)):
+				echo htmlspecialchars($line);
+			endwhile;
+			pclose($ph);
+			echo '</pre>','</div>';
 		endif;
-		?>
-		<?php
-		if(isset($_POST['txtPHPCommand'])):
-			if(!isBlank($_POST['txtPHPCommand'])):?>
-				<table class="area_data_settings">
-					<colgroup>
-						<col class="area_data_settings_col_tag">
-						<col class="area_data_settings_col_data">
-					</colgroup>
-					<thead>
-						<?php html_separator2();?>
-						<?php html_titleline2(gtext('PHP Command Output'));?>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-				<?php
-				echo '<div>','<pre class="celldata">';
-					require_once('config.inc');
-					require_once('functions.inc');
-					require_once('util.inc');
-					require_once('rc.inc');
-					require_once('email.inc');
-					require_once('tui.inc');
-					require_once('array.inc');
-					require_once('services.inc');
-					require_once('zfs.inc');
-					echo eval($_POST['txtPHPCommand']);
-				echo '</pre>','</div>';
-			endif;
+?>
+<?php
+		if(isset($_POST['txtPHPCommand']) && preg_match('/\S/',$_POST['txtPHPCommand'])):
+?>
+			<table class="area_data_settings">
+				<colgroup>
+					<col class="area_data_settings_col_tag">
+					<col class="area_data_settings_col_data">
+				</colgroup>
+				<thead>
+<?php
+					html_separator2();
+					html_titleline2(gtext('PHP Command Output'));
+?>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+<?php
+			echo '<div>','<pre class="celldata">';
+			require_once 'config.inc';
+			require_once 'functions.inc';
+			require_once 'util.inc';
+			require_once 'rc.inc';
+			require_once 'email.inc';
+			require_once 'tui.inc';
+			require_once 'array.inc';
+			require_once 'services.inc';
+			require_once 'zfs.inc';
+			echo eval($_POST['txtPHPCommand']);
+			echo '</pre>','</div>';
 		endif;
-		?>
-</td></tr></tbody></table>
-<?php include 'formend.inc';?>
+?>
+	</td></tr></tbody></table>
+<?php
+	include 'formend.inc';
+?>
 </form>
 <script type="text/javascript">
 //<![CDATA[
 document.forms[0].txtCommand.focus();
 //]]>
 </script>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
