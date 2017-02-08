@@ -717,6 +717,20 @@ function html_button_rescan(string $value = NULL) {
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
+function html_button_upload(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit','type' => 'submit','class' => 'formbtn','value' => 'upload','id' => 'button_upload'];
+	$o_button = $root->addElement($element,$attributes,$value);
+	return $root->render();
+}
+function html_button_download(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit','type' => 'submit','class' => 'formbtn','value' => 'download','id' => 'button_download'];
+	$o_button = $root->addElement($element,$attributes,$value);
+	return $root->render();
+}
 function html_button_toggle_rows(string $value = NULL) {
 	$root = new co_DOMDocument();
 	$element = 'button';
