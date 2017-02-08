@@ -34,9 +34,30 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+function diag_infos_sockets_ajax() {
+	$cmd = '/usr/bin/sockstat';
+	mwexec2($cmd,$rawdata);
+	return implode("\n",$rawdata);
+}
+if(is_ajax()):
+	$status['area_refresh'] = diag_infos_sockets_ajax();
+	render_ajax($status);
+endif;
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Sockets')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	var gui = new GUI;
+	gui.recall(5000, 5000, 'diag_infos_sockets.php', null, function(data) {
+		if ($('#area_refresh').length > 0) {
+			$('#area_refresh').text(data.area_refresh);
+		}
+	});
+});
+//]]>
+</script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
@@ -54,45 +75,31 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Sockets')];
 		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext('FTP');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext('RSYNC Client');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_netstat.php"><span><?=gtext('Netstat');?></span></a></li>
 		<li class="tabact"><a href="diag_infos_sockets.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Sockets');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext('UPS');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
 		<colgroup>
-			<col style="width:100%">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Netstat'),1);?>
+<?php
+			html_titleline2(gtext('Sockstat'));
+?>
 		</thead>
-		<tbody><tr><td>
-			<?php
-			echo '<pre>';
-			exec("/usr/bin/netstat -Aa",$rawdata);
-			echo htmlspecialchars(implode("\n",$rawdata));
-			unset($rawdata);
-			echo '</pre>';
-			?>
-		</td></tr></tbody>
-	</table>
-	<table class="area_data_settings">
-		<colgroup>
-			<col style="width:100%">
-		</colgroup>
-		<thead>
-			<?php html_titleline2(gtext('Sockstat'),1);?>
-		</thead>
-		<tbody><tr><td>
-			<?php
-			echo '<pre>';
-			exec("/usr/bin/sockstat",$rawdata);
-			echo htmlspecialchars(implode("\n",$rawdata));
-			unset($rawdata);
-			echo '</pre>';
-			?>
-		</td></tr></tbody>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+				<pre><span id="area_refresh"><?=diag_infos_sockets_ajax();?></span></pre>
+			</td>
+		</tr></tbody>
 	</table>
 </table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>

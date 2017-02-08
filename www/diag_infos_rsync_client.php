@@ -54,6 +54,7 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('RSYNC Client')];
 		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
 		<li class="tabact"><a href="diag_infos_rsync_client.php" title="<?=gtext("Reload page");?>"><span><?=gtext("RSYNC Client");?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext("Swap");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_netstat.php"><span><?=gtext('Netstat');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
