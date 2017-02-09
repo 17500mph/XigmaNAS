@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
-"PO-Revision-Date: 2017-02-07 04:53+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"PO-Revision-Date: 2017-02-08 04:57+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -2352,11 +2352,14 @@ msgstr "Upptäckta diskar"
 msgid "Detected Language:"
 msgstr "Detekterat språk:"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Upptäckte fjärranslutna RSYNC utdelningar"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Ett fel har upptäckts vid importeringen."
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4744,8 +4747,8 @@ msgid ""
 msgstr "Senaste testresultat"
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Senast betaversion: %s"
+msgid "Latest Beta Release: %s"
+msgstr ""
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5498,8 +5501,8 @@ msgstr "Inga utökningar har konfigurerats."
 msgid "No IPMI FRU data available."
 msgstr "Ingen IPMI FRU data tillgänglig"
 
-msgid "No IPMI sensor data available."
-msgstr "Ingen IPMI sensor data tillgänglig"
+msgid "No IPMI Sensor data available."
+msgstr "Ingen IPMI sensordata tillgänglig."
 
 msgid "No Initiator Group has been configured."
 msgstr "Ingen Intierargrupp har konfigurerats."
@@ -5507,8 +5510,8 @@ msgstr "Ingen Intierargrupp har konfigurerats."
 msgid "No Portal Group has been configured."
 msgstr "Ingen Portalgrupp har konfigurerats."
 
-msgid "No RSYNC Client configured"
-msgstr "Ingen RSYNC-klient konfigurerad"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr "Ingen konfigurerad Autentiseringsgrupp."
@@ -6478,6 +6481,9 @@ msgstr "RSYNC Klient"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC Klient Information & Status"
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "RSYNC-händelser"
 
@@ -6614,6 +6620,12 @@ msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
 msgstr ""
 "Användarnamn för fjärrövervakning. Måste vara lika på master och slavsystem."
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
+msgstr ""
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -6952,6 +6964,12 @@ msgstr "Schemalagd avstängning"
 
 msgid "Scheduled Tests"
 msgstr "Schemalagda tester"
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr "Rensa en pool"
@@ -9734,6 +9752,9 @@ msgstr "Uppladdningsbandbredd"
 msgid "Upload Directory"
 msgstr "Uppladdningskatalog"
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Uppladdningskatalog för webservern. Standard är %s."
@@ -10520,23 +10541,8 @@ msgstr "till"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid ""
-#~ "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
-#~ "threshold which corresponds to a maximum temperature."
-#~ msgstr ""
-#~ "Värdet är lika med (100-temp. &deg;C), tillåter tillverkaren att sätta ett "
-#~ "minsta tröskelvärde som motsvarar en maximal temperatur."
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Upptäckte fjärranslutna RSYNC utdelningar"
 
-#~ msgid ""
-#~ "This attribute indicates the count of full hard disk power on/off cycles."
-#~ msgstr "Antal gånger disken spänningssatts."
-
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr ""
-#~ "Detta är ett väldigt kraftfullt verktyg. Använd det på din egen risk!"
-
-#~ msgid "Device Name"
-#~ msgstr "Enhetsnamn"
-
-#~ msgid "Device Path"
-#~ msgstr "Enhetssökväg"
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Ingen RSYNC-klient konfigurerad"

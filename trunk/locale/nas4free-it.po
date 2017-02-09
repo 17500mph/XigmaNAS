@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
 "PO-Revision-Date: 2017-02-05 18:41+0000\n"
 "Last-Translator: Matteo Trentin <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -2337,11 +2337,14 @@ msgstr ""
 msgid "Detected Language:"
 msgstr "Lingua rilevata:"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Condivisioni RSYNC remote trovate"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Si è verificato un errore durante l'import."
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4732,8 +4735,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Ultima Beta Build: %s"
+msgid "Latest Beta Release: %s"
+msgstr ""
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5484,8 +5487,8 @@ msgstr "Nessun Extent configurato."
 msgid "No IPMI FRU data available."
 msgstr "Nessun dato IPMI FRU disponibile"
 
-msgid "No IPMI sensor data available."
-msgstr "Nessun dato del sensore IPMI"
+msgid "No IPMI Sensor data available."
+msgstr ""
 
 msgid "No Initiator Group has been configured."
 msgstr "Nessun Initiatior Group configurato."
@@ -5493,8 +5496,8 @@ msgstr "Nessun Initiatior Group configurato."
 msgid "No Portal Group has been configured."
 msgstr "Nessun Portal Group configurato."
 
-msgid "No RSYNC Client configured"
-msgstr "Nessun client RSYNC configurato"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr "Nessun Auth Group configurato."
@@ -6451,6 +6454,9 @@ msgstr "RSYNC Client"
 msgid "RSYNC Client Information & Status"
 msgstr ""
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "Eventi RSYNC"
 
@@ -6584,6 +6590,12 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
 msgstr ""
 
 msgid "Removable"
@@ -6917,6 +6929,12 @@ msgid "Scheduled Shutdown"
 msgstr "Spegnimento Pianificato"
 
 msgid "Scheduled Tests"
+msgstr ""
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
 msgstr ""
 
 msgid "Scrub a pool"
@@ -9624,6 +9642,9 @@ msgstr ""
 msgid "Upload Directory"
 msgstr ""
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Directory di upload del webserver. Di default è %s."
@@ -10389,20 +10410,8 @@ msgstr "verso"
 msgid "umount"
 msgstr "smonta"
 
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr ""
-#~ "Si tratta di uno strumento molto potente. Usalo sul vostro rischio e "
-#~ "pericolo!"
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Condivisioni RSYNC remote trovate"
 
-#~ msgid ""
-#~ "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
-#~ "threshold which corresponds to a maximum temperature."
-#~ msgstr ""
-#~ "Il valore è uguale a (100-Temp & deg;C), consentendo al produttore di "
-#~ "impostare una soglia minima, che corrisponde a una temperatura massima"
-
-#~ msgid "Device Name"
-#~ msgstr "Nome del Dispositivo"
-
-#~ msgid "Device Path"
-#~ msgstr "Percorso del dispositivo"
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Nessun client RSYNC configurato"

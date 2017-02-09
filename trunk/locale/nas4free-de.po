@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
 "PO-Revision-Date: 2017-02-02 18:38+0000\n"
 "Last-Translator: diri <diri@gmx.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -2379,11 +2379,14 @@ msgstr ""
 msgid "Detected Language:"
 msgstr "ermittelte Sprache"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Erkannte RSYNC-Remote-Freigaben"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Ein Fehler wurde während dem Importier-Vorgang entdeckt."
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4798,8 +4801,8 @@ msgstr ""
 "ansonsten auf 100."
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Neueste Beta Version: %s"
+msgid "Latest Beta Release: %s"
+msgstr ""
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5565,8 +5568,8 @@ msgstr "Es wurde kein Extent definiert."
 msgid "No IPMI FRU data available."
 msgstr "Keine IMPI FRU Daten verfügbar"
 
-msgid "No IPMI sensor data available."
-msgstr "Keine IPMI Sensordaten verfügbar"
+msgid "No IPMI Sensor data available."
+msgstr ""
 
 msgid "No Initiator Group has been configured."
 msgstr "Es wurde keine Initiator Gruppe konfiguriert."
@@ -5574,8 +5577,8 @@ msgstr "Es wurde keine Initiator Gruppe konfiguriert."
 msgid "No Portal Group has been configured."
 msgstr "Es wurde keine Portal Gruppe konfiguriert."
 
-msgid "No RSYNC Client configured"
-msgstr "Kein RSYNC-Programm konfiguriert"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr "Es wurde keine Auth Gruppe definiert."
@@ -6549,6 +6552,9 @@ msgstr "RSYNC-Programm"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC-Programm – Information & Zustand"
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "RSYNC Ereignisse"
 
@@ -6687,6 +6693,12 @@ msgid ""
 msgstr ""
 "Remote Monitoring Nutzername. Muss auf dem Master- und Slave-System gleich "
 "sein."
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
+msgstr ""
 
 msgid "Removable"
 msgstr "Wechselbar"
@@ -7020,6 +7032,12 @@ msgid "Scheduled Shutdown"
 msgstr "geplantes Ausschalten des Systems"
 
 msgid "Scheduled Tests"
+msgstr ""
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
 msgstr ""
 
 msgid "Scrub a pool"
@@ -9864,6 +9882,9 @@ msgstr "Upload-Bandbreite"
 msgid "Upload Directory"
 msgstr ""
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Verzeichnis des Webservers hochladen. Standard ist %s."
@@ -10654,24 +10675,8 @@ msgstr "an"
 msgid "umount"
 msgstr "Aushängen"
 
-#~ msgid ""
-#~ "This attribute indicates the count of full hard disk power on/off cycles."
-#~ msgstr "Gesamtzahl vollständiger An-und Ausschaltzyklen."
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Erkannte RSYNC-Remote-Freigaben"
 
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr ""
-#~ "Dieses Werkzeug hat einen sehr großen Funktionsumfang, benutzen Sie es auf "
-#~ "eigenes Risiko !!"
-
-#~ msgid ""
-#~ "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
-#~ "threshold which corresponds to a maximum temperature."
-#~ msgstr ""
-#~ "Der Wert ist gleich (100-temp. &deg;C) und erlaubt Herstellern einen unteren "
-#~ "Grenzwert zu setzen, der einer Maximaltemperatur entspricht."
-
-#~ msgid "Device Name"
-#~ msgstr "Gerätename"
-
-#~ msgid "Device Path"
-#~ msgstr "Gerätepfad"
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Kein RSYNC-Programm konfiguriert"
