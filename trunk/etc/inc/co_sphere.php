@@ -112,7 +112,7 @@ class co_sphere_grid extends co_sphere_scriptname {
 	}
 	public function toggle() {
 		global $config;
-		return $this->mode_enadis() && isset($config['system']['enabletogglemode']);
+		return $this->enadis() && isset($config['system']['enabletogglemode']);
 	}
 	public function cbm_delete(string $message = NULL) {
 		if(isset($message)):
