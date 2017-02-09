@@ -36,51 +36,94 @@ require 'guiconfig.inc';
 
 $a_disk = &array_make_branch($config,'iscsiinit','vdisk');
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('iSCSI Initiator')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext("Disks");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_disksinfo.php"><span><?=gtext("Disks (Info)");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_disksinfo.php"><span><?=gtext('Disks (Info)');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext('Partitions');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext('Space Used');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext("Software RAID");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext('Mounts');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext('Software RAID');?></span></a></li>
 	</ul></td></tr>
 	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabact"><a href="diag_infos_iscsi.php" title="<?=gtext("Reload page");?>"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext("CIFS/SMB");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
+		<li class="tabact"><a href="diag_infos_iscsi.php" title="<?=gtext('Reload page');?>"><span><?=gtext('iSCSI Initiator');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext('MS Domain');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext('CIFS/SMB');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext('FTP');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext('RSYNC Client');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_netstat.php"><span><?=gtext('Netstat');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext('Sockets');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext('UPS');?></span></a></li>
 	</ul></td></tr>
-	<tr>
-		<td class="tabcont">
-			<table width="100%" border="0">
-			<?php html_titleline(gtext("iSCSI Targets Information & Status"));?>
-			<tr>
-				<td>
-					<?php if (0 >= count($a_disk)):?>
-					<pre><?=gtext("iSCSI initiator disabled");?></pre>
-					<?php else:?>
-					<pre><?php
-					foreach ($a_disk as $disk) {
-					echo htmlspecialchars(sprintf(gtext("Discovered iSCSI target for %s"), $disk['targetaddress']));
-					echo "<br />";
-					unset ($rawdata);
-					exec("/sbin/iscontrol -d targetaddress={$disk['targetaddress']} initiatorname={$disk['initiatorname']}", $rawdata);
-					echo htmlspecialchars(implode("\n", $rawdata));
-					}
-					?></pre>
-					<?php endif;?>
-				</td>
-			</tr>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+if(0 >= count($a_disk)):
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('iSCSI Targets Information & Status'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+<?php
+				echo '<pre>';
+				echo gtext('iSCSI initiator disabled.');
+				echo '</pre>';
+?>
+			</td>
+		</tr></tbody>
 	</table>
-</td></tr></table>
-<?php include 'fend.inc';?>
+<?php
+else:
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('iSCSI Targets Information & Status'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+<?php
+				echo '<pre>';
+				foreach($a_disk as $r_disk):
+					echo htmlspecialchars(sprintf(gtext('Discovered iSCSI target for %s'),$r_disk['targetaddress']));
+					echo '<br />';
+					unset($rawdata);
+					$cmd = '/sbin/iscontrol';
+					$cmd .= ' -d targetaddress=' . $r_disk['targetaddress'];
+					$cmd .= ' initiatorname=' . $r_disk['initiatorname'];
+					exec($cmd,$rawdata);
+					echo htmlspecialchars(implode("\n",$rawdata));
+					unset($rawdata);
+				endforeach;
+				echo '</pre>';
+?>
+			</td>
+		</tr></tbody>
+	</table>
+<?php
+endif;
+?>
+</td></tr></tbody></table>
+<?php
+include 'fend.inc';
+?>
