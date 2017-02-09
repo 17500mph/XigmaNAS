@@ -34,13 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-array_make_branch($config,'iscsitarget','portalgroup');
-array_make_branch($config,'iscsitarget','initiatorgroup');
-array_make_branch($config,'iscsitarget','authgroup');
-array_make_branch($config,'iscsitarget','extent');
-array_make_branch($config,'iscsitarget','device');
-array_make_branch($config,'iscsitarget','target');
-
 $pconfig['enable'] = isset($config['iscsitarget']['enable']);
 
 if ($_POST) {
@@ -75,6 +68,12 @@ if ($_POST) {
 	}
 }
 
+array_make_branch($config,'iscsitarget','portalgroup');
+array_make_branch($config,'iscsitarget','initiatorgroup');
+array_make_branch($config,'iscsitarget','authgroup');
+array_make_branch($config,'iscsitarget','extent');
+array_make_branch($config,'iscsitarget','device');
+array_make_branch($config,'iscsitarget','target');
 
 function cmp_tag($a, $b) {
 	if ($a['tag'] == $b['tag'])
