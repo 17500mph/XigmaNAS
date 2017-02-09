@@ -31,8 +31,6 @@
   of the authors and should not be interpreted as representing official policies,
   either expressed or implied, of the NAS4Free Project.
  */
-require 'guiconfig.inc';
-
 class co_sphere_grid extends co_sphere_scriptname {
 //	parent
 	public $parent = NULL;
