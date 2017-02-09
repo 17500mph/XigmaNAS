@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
 "PO-Revision-Date: 2017-01-26 17:29+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -2379,11 +2379,14 @@ msgstr ""
 msgid "Detected Language:"
 msgstr "Визначена мова:"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Виявлено віддалені каталоги RSYNC"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Виявлено помилку під час імпорту."
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4788,8 +4791,8 @@ msgstr ""
 "випробуваний в надмірному температурному режимі, в іншому випадку 100."
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Остання бета збірка: %s"
+msgid "Latest Beta Release: %s"
+msgstr ""
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5549,8 +5552,8 @@ msgstr "Жоден Extent не налаштований."
 msgid "No IPMI FRU data available."
 msgstr "Немає доступних даних IPMI FRU."
 
-msgid "No IPMI sensor data available."
-msgstr "Немає наявних даних датчика IPMI."
+msgid "No IPMI Sensor data available."
+msgstr ""
 
 msgid "No Initiator Group has been configured."
 msgstr "Жодна група ініціаторів не налаштована."
@@ -5558,8 +5561,8 @@ msgstr "Жодна група ініціаторів не налаштована
 msgid "No Portal Group has been configured."
 msgstr "Жодна група порталів не налаштована."
 
-msgid "No RSYNC Client configured"
-msgstr "RSYNC клієнт не сконфігуровано"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr "Немає сконфігурованої групи аутентифікації"
@@ -6527,6 +6530,9 @@ msgstr "Клієнт RSYNC"
 msgid "RSYNC Client Information & Status"
 msgstr "Інформація та статус RSYNC клієнта"
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "Події RSYNC"
 
@@ -6666,6 +6672,12 @@ msgid ""
 msgstr ""
 "ім'я користувача віддаленого моніторингу. Повинні бути ідентичні як на "
 "ведучої і веденої системах."
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
+msgstr ""
 
 msgid "Removable"
 msgstr "Змінний пристрій"
@@ -7000,6 +7012,12 @@ msgid "Scheduled Shutdown"
 msgstr "Заплановане вимкнення"
 
 msgid "Scheduled Tests"
+msgstr ""
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
 msgstr ""
 
 msgid "Scrub a pool"
@@ -9789,6 +9807,9 @@ msgstr ""
 msgid "Upload Directory"
 msgstr ""
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Директорія для вивантаження для веб сервера. За замовчуванням - %s."
@@ -10575,25 +10596,8 @@ msgstr "до"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Device Name"
-#~ msgstr "Ім’я пристрою"
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Виявлено віддалені каталоги RSYNC"
 
-#~ msgid "Device Path"
-#~ msgstr "Шлях до пристрою"
-
-#~ msgid ""
-#~ "This attribute indicates the count of full hard disk power on/off cycles."
-#~ msgstr ""
-#~ "Цей атрибут вказує кількість повних циклів включення / вимикання живлення "
-#~ "жорсткого диска."
-
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr ""
-#~ "Це дуже потужний інструмент. Використовуйте його на свій страх і ризик!"
-
-#~ msgid ""
-#~ "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
-#~ "threshold which corresponds to a maximum temperature."
-#~ msgstr ""
-#~ "Значення дорівнює (100-<температура> &deg;C), що дозволяє виробнику "
-#~ "встановити мінімальний поріг, який відповідає максимальній температурі."
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "RSYNC клієнт не сконфігуровано"

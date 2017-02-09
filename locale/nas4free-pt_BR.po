@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
 "PO-Revision-Date: 2017-01-25 01:04+0000\n"
 "Last-Translator: Mostrow S. <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:54+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -2251,11 +2251,14 @@ msgstr ""
 msgid "Detected Language:"
 msgstr ""
 
-msgid "Detected RSYNC remote shares"
-msgstr "Compartilhamentos remotos RSYNC identificados"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Erro detectado durante importe."
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4597,8 +4600,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Último Beta Build: %s"
+msgid "Latest Beta Release: %s"
+msgstr ""
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5346,7 +5349,7 @@ msgstr ""
 msgid "No IPMI FRU data available."
 msgstr ""
 
-msgid "No IPMI sensor data available."
+msgid "No IPMI Sensor data available."
 msgstr ""
 
 msgid "No Initiator Group has been configured."
@@ -5355,8 +5358,8 @@ msgstr ""
 msgid "No Portal Group has been configured."
 msgstr ""
 
-msgid "No RSYNC Client configured"
-msgstr "Nenhum cliente RSYNC configurado"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr ""
@@ -6309,6 +6312,9 @@ msgstr "Cliente RSYNC"
 msgid "RSYNC Client Information & Status"
 msgstr ""
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "Eventos do RSYNC"
 
@@ -6442,6 +6448,12 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
 msgstr ""
 
 msgid "Removable"
@@ -6773,6 +6785,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled Tests"
+msgstr ""
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
 msgstr ""
 
 msgid "Scrub a pool"
@@ -9440,6 +9458,9 @@ msgstr ""
 msgid "Upload Directory"
 msgstr ""
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Diretório de Upload do servidor web. O padrão é %s."
@@ -10192,3 +10213,9 @@ msgstr "para"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Nenhum cliente RSYNC configurado"
+
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Compartilhamentos remotos RSYNC identificados"

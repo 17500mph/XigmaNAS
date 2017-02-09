@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:52+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -2206,10 +2206,13 @@ msgstr ""
 msgid "Detected Language:"
 msgstr "Zaznan jezik:"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Najdeni oddaljeni RSYNC deljeni viri"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
+msgstr ""
+
+msgid "Detected shares on this server"
 msgstr ""
 
 msgid ""
@@ -4516,7 +4519,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Latest Beta Build: %s"
+msgid "Latest Beta Release: %s"
 msgstr ""
 
 #, php-format
@@ -5258,7 +5261,7 @@ msgstr ""
 msgid "No IPMI FRU data available."
 msgstr ""
 
-msgid "No IPMI sensor data available."
+msgid "No IPMI Sensor data available."
 msgstr ""
 
 msgid "No Initiator Group has been configured."
@@ -5267,8 +5270,8 @@ msgstr ""
 msgid "No Portal Group has been configured."
 msgstr ""
 
-msgid "No RSYNC Client configured"
-msgstr "Določen ni nobeden RSYNC odjemalec"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr ""
@@ -6212,6 +6215,9 @@ msgstr "RSYNC klient"
 msgid "RSYNC Client Information & Status"
 msgstr ""
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "RSYNC dogodki"
 
@@ -6345,6 +6351,12 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
 msgstr ""
 
 msgid "Removable"
@@ -6676,6 +6688,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled Tests"
+msgstr ""
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
 msgstr ""
 
 msgid "Scrub a pool"
@@ -9169,6 +9187,9 @@ msgstr ""
 msgid "Upload Directory"
 msgstr ""
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
@@ -9892,11 +9913,8 @@ msgstr ""
 msgid "umount"
 msgstr "izvrzi"
 
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr "To je zelo močno orodje. Uporabljate ga na lastno odgovornost!"
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Najdeni oddaljeni RSYNC deljeni viri"
 
-#~ msgid "Device Name"
-#~ msgstr "Ime naprave"
-
-#~ msgid "Device Path"
-#~ msgstr "Pot naprave"
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Določen ni nobeden RSYNC odjemalec"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
-"PO-Revision-Date: 2017-02-07 05:07+0000\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"PO-Revision-Date: 2017-02-08 16:53+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -2394,11 +2394,14 @@ msgstr "Обнаруженные диски"
 msgid "Detected Language:"
 msgstr "Обнаружен язык:"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Обнаружены удаленные каталоги Rsync"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Обнаружена ошибка в процессе импортирования"
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4828,8 +4831,8 @@ msgstr ""
 "испытан в чрезмерном температурном режиме, в противном случае 100."
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Последняя Бета Сборка: %s"
+msgid "Latest Beta Release: %s"
+msgstr "Последний бета-релиз: %s"
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5599,8 +5602,8 @@ msgstr "Ни один Extent не сконфигурирован."
 msgid "No IPMI FRU data available."
 msgstr "Нет доступных данных IPMI FRU"
 
-msgid "No IPMI sensor data available."
-msgstr "Нет данных IPMI сенсора."
+msgid "No IPMI Sensor data available."
+msgstr "Нет доступных данных IPMI датчиков."
 
 msgid "No Initiator Group has been configured."
 msgstr "Ни одна группа инициаторов не сконфигурирована."
@@ -5608,8 +5611,8 @@ msgstr "Ни одна группа инициаторов не сконфигу�
 msgid "No Portal Group has been configured."
 msgstr "Ни одна группа порталов не сконфигурирована."
 
-msgid "No RSYNC Client configured"
-msgstr "Нет настроенных клиентов Rsync"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr "Не сконфигурированы группы аутентификации"
@@ -6588,6 +6591,9 @@ msgstr "Клиент Rsync"
 msgid "RSYNC Client Information & Status"
 msgstr "Информация и статус RSYNC клиента"
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "События Rsync"
 
@@ -6726,6 +6732,12 @@ msgid ""
 msgstr ""
 "Имя пользователя удаленного мониторинга. Должно быть одинаково как для "
 "основного и дополнительного."
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
+msgstr ""
 
 msgid "Removable"
 msgstr "Сменный носитель"
@@ -7063,6 +7075,12 @@ msgstr "Выключение по расписанию"
 
 msgid "Scheduled Tests"
 msgstr "Запланированные тесты"
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr "Проверка пула (Scrub a pool)"
@@ -9877,6 +9895,9 @@ msgstr "Скорость раздачи"
 msgid "Upload Directory"
 msgstr "Каталог для загрузки"
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Папка для загрузок на сервер. Путь по умолчанию %s"
@@ -10676,23 +10697,8 @@ msgstr "к"
 msgid "umount"
 msgstr "размонтировать"
 
-#~ msgid ""
-#~ "This attribute indicates the count of full hard disk power on/off cycles."
-#~ msgstr "Количество полных циклов включения-выключения диска."
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Обнаружены удаленные каталоги Rsync"
 
-#~ msgid ""
-#~ "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
-#~ "threshold which corresponds to a maximum temperature."
-#~ msgstr ""
-#~ "Температура воздуха внутри корпуса жёсткого диска. Для дисков Seagate "
-#~ "рассчитывается по формуле (100-temp. &deg;C). Для дисков Western Digital — "
-#~ "(125- HDA)."
-
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr "Это очень мощный инструмент. Используйте его на свой страх и риск!"
-
-#~ msgid "Device Name"
-#~ msgstr "Имя устройства"
-
-#~ msgid "Device Path"
-#~ msgstr "Путь к устройству"
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Нет настроенных клиентов Rsync"

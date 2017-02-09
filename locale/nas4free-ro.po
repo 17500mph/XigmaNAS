@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-07 00:02+0000\n"
-"PO-Revision-Date: 2017-02-07 08:06+0000\n"
-"Last-Translator: Laurentiu Bubuianu <Unknown>\n"
+"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"PO-Revision-Date: 2017-02-08 14:56+0000\n"
+"Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-07 12:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -2411,11 +2411,14 @@ msgstr "Discuri detectate"
 msgid "Detected Language:"
 msgstr "Detecție limbă:"
 
-msgid "Detected RSYNC remote shares"
-msgstr "Partajări RSYNC la distanță detectate"
+msgid "Detected RSYNC Remote Shares"
+msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Eroare detectata in timpul importarii."
+
+msgid "Detected shares on this server"
+msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4838,8 +4841,8 @@ msgstr ""
 "temperatură excesivă, în rest valoarea normală este 100."
 
 #, php-format
-msgid "Latest Beta Build: %s"
-msgstr "Ultima versiune Beta disponibilă: %s"
+msgid "Latest Beta Release: %s"
+msgstr ""
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5600,8 +5603,8 @@ msgstr "Nicio Extensie nu a fost configurată."
 msgid "No IPMI FRU data available."
 msgstr "Nicio dată IPMI FRU disponibilă."
 
-msgid "No IPMI sensor data available."
-msgstr "Niciun senzor IPMI disponibil."
+msgid "No IPMI Sensor data available."
+msgstr "Niciun Senzor IPMI disponibil."
 
 msgid "No Initiator Group has been configured."
 msgstr "Niciun Grup inițiator nu a fost configurat."
@@ -5609,8 +5612,8 @@ msgstr "Niciun Grup inițiator nu a fost configurat."
 msgid "No Portal Group has been configured."
 msgstr "Niciun Grup portal nu a fost configurat."
 
-msgid "No RSYNC Client configured"
-msgstr "Niciun client RSYNC configurat"
+msgid "No RSYNC Client configured."
+msgstr ""
 
 msgid "No configured Auth Group."
 msgstr "Niciun Grup Auth nu a fost configurat."
@@ -6592,6 +6595,9 @@ msgstr "Client RSYNC"
 msgid "RSYNC Client Information & Status"
 msgstr "Informații client & Stare RSYNC"
 
+msgid "RSYNC client number"
+msgstr ""
+
 msgid "RSYNC events"
 msgstr "Evenimente RSYNC"
 
@@ -6730,6 +6736,12 @@ msgid ""
 msgstr ""
 "Nume utilizator pentru monitorizare remote. Trebuie să introduceți același "
 "nume și pentru sistemul master și pentru cel slave."
+
+msgid "Remote server address"
+msgstr ""
+
+msgid "Remote share name configured"
+msgstr ""
 
 msgid "Removable"
 msgstr "Detașabil"
@@ -7070,6 +7082,12 @@ msgstr "Oprire programată"
 
 msgid "Scheduled Tests"
 msgstr "Teste programate"
+
+msgid "Script"
+msgstr ""
+
+msgid "Script has been uploaded."
+msgstr ""
 
 msgid "Scrub a pool"
 msgstr "Curățare pool"
@@ -9875,6 +9893,9 @@ msgstr "Lățime de bandă pentru încărcare"
 msgid "Upload Directory"
 msgstr "Director de încărcare"
 
+msgid "Upload Script"
+msgstr ""
+
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Folderul de încărcare pentru serverul web. Implicit este %s."
@@ -10673,23 +10694,8 @@ msgstr "către"
 msgid "umount"
 msgstr "demontare"
 
-#~ msgid ""
-#~ "This attribute indicates the count of full hard disk power on/off cycles."
-#~ msgstr "Numărul total de porniri/opriri complete ale hard discului."
+#~ msgid "No RSYNC Client configured"
+#~ msgstr "Niciun client RSYNC configurat"
 
-#~ msgid ""
-#~ "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
-#~ "threshold which corresponds to a maximum temperature."
-#~ msgstr ""
-#~ "Valoarea este egală cu 100-temp. &deg;C permițînd producătorului să seteze "
-#~ "un prag minim care corespunde cu temperatura maximă de funcționare a hard "
-#~ "discului."
-
-#~ msgid "This is a very powerful tool. Use it on your own risk!"
-#~ msgstr "Aceasta este o unealtă foarte puternică. Folosiți-o cu mare atenție!"
-
-#~ msgid "Device Name"
-#~ msgstr "Nume dispozitiv"
-
-#~ msgid "Device Path"
-#~ msgstr "Calea dispozitivului"
+#~ msgid "Detected RSYNC remote shares"
+#~ msgstr "Partajări RSYNC la distanță detectate"
