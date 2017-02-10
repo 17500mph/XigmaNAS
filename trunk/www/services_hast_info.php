@@ -41,51 +41,59 @@ function hast_get_status() {
 	global $config;
 
 	if (!isset($config['hast']['enable'])) {
-		return gtext("HAST disabled");
+		return gtext("HAST is disabled");
 	}
 
-	$cmd = "/sbin/hastctl status";
-	if (isset($_GET['name'])) {
-		$cmd .= " {$_GET['name']}";
-	}
+	$cmd = '/sbin/hastctl status';
 	$cmd .= " 2>&1";
 	mwexec2($cmd, $rawdata);
 	return implode("\n", $rawdata);
 }
 
-if (is_ajax()) {
+if (is_ajax()):
 	$status = hast_get_status();
 	render_ajax($status);
-}
+endif;
 $pgtitle = [gtext('Services'),gtext('HAST'),gtext('Information')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
-<script type="text/javascript">//<![CDATA[
+<script type="text/javascript">
+//<![CDATA[
 $(document).ready(function(){
 	var gui = new GUI;
-	gui.recall(0, 5000, 'services_hast_info.php', null, function(data) {
-		$('#hast_status').text(data.data);
+	gui.recall(5000, 5000, 'services_hast_info.php', null, function(data) {
+		if ($('#area_refresh').length > 0) {
+		$('#area_refresh').text(data.data);
+		}
 	});
 });
 //]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
 		<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
 		<li class="tabact"><a href="services_hast_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Information");?></span></a></li>
 	</ul></td></tr>
-	<tr>
-		<td class="tabcont">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gtext("HAST Information & Status Configured Resources"));?>
-				<tr>
-					<td class="listt">
-						<pre><span id="hast_status"></span></pre>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php 
+			html_titleline2(gtext('HAST Information & Status Configured Resources'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+				<pre><span id="area_refresh"><?=hast_get_status();?></span></pre>
+			</td>
+		</tr>
+	</tbody>
 </table>
+</td></tr></tbody></table>
 <?php include 'fend.inc';?>
