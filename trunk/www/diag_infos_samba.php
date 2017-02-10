@@ -55,10 +55,9 @@ if(is_ajax()):
 	$status['area_refresh_3'] = diag_infos_samba_3_ajax();
 	render_ajax($status);
 endif;
-
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('CIFS/SMB')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -101,50 +100,90 @@ $(document).ready(function(){
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php if (!isset($config['samba']['enable'])):?>
-		<table class="area_data_selection">
-			<colgroup>
-				<col style="width:100%">
-			</colgroup>
-			<thead>
-				<?php html_titleline2(gtext('CIFS/SMB Information'),1);?>
-			</thead>
-			<tbody><tr><td>
-				<pre><?=gtext('CIFS/SMB is disabled.');?></pre>
-			</td></tr></tbody>
-		</table>
-<?php else:?>
-		<table class="area_data_selection">
-			<colgroup>
-				<col style="width:100%">
-			</colgroup>
-			<thead>
-				<?php html_titleline2(gtext('Active Users'),1);?>
-			<tbody><tr><td>
+<?php 
+if (!isset($config['samba']['enable'])):
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>			
+		<thead>
+<?php
+			html_titleline2(gtext('CIFS/SMB Information'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+<?php
+				echo '<pre>';
+				echo gtext('CIFS/SMB is disabled.');
+				echo '</pre>';
+?>
+			</td>
+		</tr></tbody>
+	</table>
+<?php 
+else:
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('Active Users'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
 				<pre><span id="area_refresh_1"><?=diag_infos_samba_1_ajax();?></span></pre>
-			</td></tr></tbody>
-		</table>
-		<table class="area_data_selection">
-			<colgroup>
-				<col style="width:100%">
-			</colgroup>
-			<thead>
-				<?php html_titleline2(gtext('Active Shares'),1);?>
-			</thead>
-			<tbody><tr><td>
+			</td>
+		</tr></tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_separator2();
+			html_titleline2(gtext('Active Shares'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
 				<pre><span id="area_refresh_2"><?=diag_infos_samba_2_ajax();?></span></pre>
-			</td></tr></tbody>
-		</table>
-		<table class="area_data_selection">
-			<colgroup>
-				<col style="width:100%">
-			</colgroup>
-			<thead>
-				<?php html_titleline2(gtext('Locked Files'),1);?>
-			<tbody><tr><td>
+			</td>
+		</tr></tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_separator2();
+			html_titleline2(gtext('Locked Files'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
 				<pre><span id="area_refresh_3"><?=diag_infos_samba_3_ajax();?></span></pre>
-			</td></tr></tbody>
-		</table>
-<?php endif;?>
+			</td>
+		</tr></tbody>
+	</table>
+<?php
+endif;
+?>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
