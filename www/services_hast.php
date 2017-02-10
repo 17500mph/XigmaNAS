@@ -158,22 +158,39 @@ if ($_POST) {
 
 		if ($old_enable == false && $config['hast']['enable'] == true) {
 			// disable services
+			array_make_branch($config,'samba');
 			$config['samba']['enable'] = false;
+			array_make_branch($config,'ftpd');
 			$config['ftpd']['enable'] = false;
+			array_make_branch($config,'tftpd');
 			$config['tftpd']['enable'] = false;
-			//$config['sshd']['enable'] = false;
+			//	array_make_branch($config,'sshd');
+			//	$config['sshd']['enable'] = false;
+			array_make_branch($config,'nfsd');
 			$config['nfsd']['enable'] = false;
+			array_make_branch($config,'afp');
 			$config['afp']['enable'] = false;
+			array_make_branch($config,'rsyncd');
 			$config['rsyncd']['enable'] = false;
+			array_make_branch($config,'unison');
 			$config['unison']['enable'] = false;
+			array_make_branch($config,'iscsitarget');
 			$config['iscsitarget']['enable'] = false;
+			array_make_branch($config,'upnp');
 			$config['upnp']['enable'] = false;
+			array_make_branch($config,'daap');
 			$config['daap']['enable'] = false;
+			array_make_branch($config,'dynamicdns');
 			$config['dynamicdns']['enable'] = false;
+			array_make_branch($config,'snmpd');
 			$config['snmpd']['enable'] = false;
+			array_make_branch($config,'ups');
 			$config['ups']['enable'] = false;
+			array_make_branch($config,'websrv');
 			$config['websrv']['enable'] = false;
+			array_make_branch($config,'bittorrent');
 			$config['bittorrent']['enable'] = false;
+			array_make_branch($config,'lcdproc');
 			$config['lcdproc']['enable'] = false;
 
 			// update config
