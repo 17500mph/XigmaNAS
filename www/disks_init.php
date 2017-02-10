@@ -536,11 +536,6 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			html_titleline2(gtext('Format Options'));
 ?>
 		</thead>
-		<tfoot>
-<?php
-			html_separator2();
-?>
-		</tfoot>
 		<tbody>
 <?php
 			switch($a_control['filesystem']):
@@ -612,6 +607,11 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			endswitch;
 ?>
 		</tbody>
+		<tfoot>
+<?php
+			html_separator2();
+?>
+		</tfoot>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
