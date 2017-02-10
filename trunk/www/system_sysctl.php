@@ -334,8 +334,6 @@ function ab_control(ego, tbn) {
 		<tbody>
 <?php
 			foreach($sphere->grid as $sphere->row):
-?>
-<?php
 				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
