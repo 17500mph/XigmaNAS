@@ -72,7 +72,9 @@ include 'fbegin.inc';
 				<col class="area_data_settings_col_data">
 			</colgroup>
 			<thead>
-				<?php html_titleline2(gtext('Disks (Info) Information'));?>
+<?php
+				html_titleline2(gtext('Disks (Info) Information'));
+?>
 			</thead>
 		</table>
 <?php
