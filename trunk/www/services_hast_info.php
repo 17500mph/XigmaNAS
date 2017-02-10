@@ -34,24 +34,19 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-array_make_branch($config,'hast','auxparam');
-//	array_make_branch($config,'hast','hastresource');
-
-function hast_get_status() {
+function services_hast_info_ajax() {
 	global $config;
-
-	if (!isset($config['hast']['enable'])) {
-		return gtext("HAST is disabled");
-	}
-
+	if(!isset($config['hast']['enable'])):
+		return gtext('HAST is disabled.');
+	endif;
 	$cmd = '/sbin/hastctl status';
 	$cmd .= " 2>&1";
-	mwexec2($cmd, $rawdata);
-	return implode("\n", $rawdata);
+	mwexec2($cmd,$rawdata);
+	return implode("\n",$rawdata);
 }
-
-if (is_ajax()):
-	$status = hast_get_status();
+array_make_branch($config,'hast');
+if(is_ajax()):
+	$status = services_hast_info_ajax();
 	render_ajax($status);
 endif;
 $pgtitle = [gtext('Services'),gtext('HAST'),gtext('Information')];
@@ -63,7 +58,7 @@ $(document).ready(function(){
 	var gui = new GUI;
 	gui.recall(5000, 5000, 'services_hast_info.php', null, function(data) {
 		if ($('#area_refresh').length > 0) {
-		$('#area_refresh').text(data.data);
+			$('#area_refresh').text(data.data);
 		}
 	});
 });
@@ -71,9 +66,9 @@ $(document).ready(function(){
 </script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
-		<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
-		<li class="tabact"><a href="services_hast_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Information");?></span></a></li>
+		<li class="tabinact"><a href="services_hast.php"><span><?=gtext('Settings');?></span></a></li>
+		<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext('Resources');?></span></a></li>
+		<li class="tabact"><a href="services_hast_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Information');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -90,10 +85,11 @@ $(document).ready(function(){
 		<tbody><tr>
 			<td class="celltag"><?=gtext('Information');?></td>
 			<td class="celldata">
-				<pre><span id="area_refresh"><?=hast_get_status();?></span></pre>
+				<pre><span id="area_refresh"><?=services_hast_info_ajax();?></span></pre>
 			</td>
-		</tr>
-	</tbody>
-</table>
+		</tr></tbody>
+	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
