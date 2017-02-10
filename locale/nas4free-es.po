@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-10 02:53+0000\n"
-"PO-Revision-Date: 2017-02-09 06:57+0000\n"
+"PO-Revision-Date: 2017-02-10 11:34+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 16:56+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -337,7 +337,7 @@ msgid "ACL mode"
 msgstr "Modo ACL"
 
 msgid "AD authentication disabled."
-msgstr ""
+msgstr "Autentificación AD deshabilitada"
 
 msgid "AD or PDC name."
 msgstr "Nombre AD o PDC."
@@ -453,7 +453,7 @@ msgid "Add RAID"
 msgstr "Añadir RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Añadir registro"
 
 msgid "Add Route"
 msgstr "Añadir Ruta"
@@ -462,7 +462,7 @@ msgid "Add Rsync job"
 msgstr "Añadir tarea Rsync"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Añadir compartido"
 
 msgid "Add Snapshot"
 msgstr "Añadir Snapshot"
@@ -1442,7 +1442,7 @@ msgid "Check and replace cable"
 msgstr "Revise o remplace el cable"
 
 msgid "Check shared secret"
-msgstr ""
+msgstr "Comprobar secreto compartido"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2247,13 +2247,13 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Borrar los volúmenes RAID seleccionados"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Borrar registros seleccionados"
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Borrar rutas seleccionadas"
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Borrar compartidos seleccionados"
 
 msgid "Delete Selected Snapshots"
 msgstr "Borrar los snapshot seleccionados"
@@ -2549,7 +2549,7 @@ msgid "Disable Selected Options"
 msgstr "Deshabilitar las opciones seleccionadas"
 
 msgid "Disable Selected Records"
-msgstr ""
+msgstr "Deshabilitar registros seleccionados"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deshabilitar TCP wrapper (mod_wrap )."
@@ -2822,13 +2822,13 @@ msgid "Do you want to delete selected pools?"
 msgstr "¿Desea eliminar piscinas seleccionadas?"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "¿Desea borrar los registros seleccionados?"
 
 msgid "Do you want to delete selected routes?"
-msgstr ""
+msgstr "¿Desea Borrar las rutas seleccionadas?"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "¿Desea borrar los compartidos seleccionados?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "¿Quieres borrar las instantaneas seleccionadas?"
@@ -2855,7 +2855,7 @@ msgid "Do you want to disable selected options?"
 msgstr "Desea deshabilitar las opciones marcadas?"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "¿Desea deshabilitar los registros seleccionados?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "¿Desea habilitar estas ordenes?"
@@ -2867,14 +2867,14 @@ msgid "Do you want to enable selected options?"
 msgstr "Desea habilitar las opcionmes marcadas?"
 
 msgid "Do you want to enable selected records?"
-msgstr ""
+msgstr "¿Desea habilitar los registros seleccionados?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "¿Desea instalar este firmware de todos modos ( bajo su propio riesgo )?"
 
 msgid "Do you want to lock selected records?"
-msgstr ""
+msgstr "¿Desea bloquear los registros seleccionados?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "¿Desea intercambiar estas ordenes?"
@@ -2886,10 +2886,10 @@ msgid "Do you want to toggle selected options?"
 msgstr "Desea intercambiar las opciones marcadas?"
 
 msgid "Do you want to toggle selected records?"
-msgstr ""
+msgstr "¿Desea cambiar el estado de los registros seleccionados?"
 
 msgid "Do you want to unlock selected records?"
-msgstr ""
+msgstr "¿Desea desbloquear los registros seleccionados?"
 
 msgid "Document Root"
 msgstr "Raíz de documentos"
@@ -3025,7 +3025,7 @@ msgid "Edit RAID"
 msgstr "Editar RAID"
 
 msgid "Edit Record"
-msgstr ""
+msgstr "Editar registro"
 
 msgid "Edit Route"
 msgstr "Editar Ruta"
@@ -3034,7 +3034,7 @@ msgid "Edit Rsync job"
 msgstr "Editar tarea Rsync"
 
 msgid "Edit Share"
-msgstr ""
+msgstr "Editar compartido"
 
 msgid "Edit Snapshot"
 msgstr "Editar instantánea"
@@ -3195,7 +3195,7 @@ msgid "Enable Selected Options"
 msgstr "Habilitar las opciones marcadas"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Habilitar los registros seleccionados."
 
 msgid "Enable TLS connections."
 msgstr "Habilitar conexiones TSL"
@@ -4128,14 +4128,14 @@ msgid ""
 "attribute indicates the count of these errors detected over the lifetime of "
 "the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
-"Productores the discos duros HDD implementan un monitor de altura de vuelo "
-"que atienta a proveer protecciones adicionales a operaciones de escritura al "
-"detectar cuando una cabeza de grabado esta volando fuera de su rango "
-"operativo normal. Si una condicion de vuelo peligrosa es encontrada, la "
-"operacion de grabado se detiene, y la informacion es regrabada o realocada "
-"en una region sana del disco duro. Este atributo indica la cuenta de estos "
-"errores detectados en la vida completa del disco. Esta caracteristica es "
-"implementada en la mayoria de discos Seagate."
+"Algunos Fabricantes de discos duros HDD implementan un monitor de altura de "
+"vuelo que tiende a proveer protecciones adicionales a operaciones de "
+"escritura al detectar cuando una cabeza de grabación esta volando fuera de "
+"su rango operativo normal. Si una condicion de vuelo peligrosa es "
+"encontrada, la operacion de grabado se detiene, y la informacion es "
+"regrabada o recolocada en una region sana del disco duro. Este atributo "
+"indica la cuenta de estos errores detectados en la vida completa del disco. "
+"Esta caracteristica esta implementada en la mayoria de discos Seagate."
 
 msgid "HDD standby time"
 msgstr "HDD standby time"
@@ -5036,7 +5036,7 @@ msgstr ""
 "Ubicación de los archivos de trabajo de Unison. ej: %s/backup/.unison"
 
 msgid "Lock Selected Records"
-msgstr ""
+msgstr "Bloquear los registros seleccionados"
 
 msgid "Locked Files"
 msgstr "Archivos bloqueados"
@@ -5130,7 +5130,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB está marcado para eliminación"
 
 msgid "MIB is unlocked"
-msgstr ""
+msgstr "MIB esta desbloqeado"
 
 msgid "MIRROR"
 msgstr "Espejo"
@@ -6242,7 +6242,7 @@ msgid "Ping may take a while, please be patient."
 msgstr "El ping puede tardar un poco, sea paciente."
 
 msgid "Ping winbindd to see if it is alive"
-msgstr ""
+msgstr "Hacer un Ping a uno mismo para ver si estoy vivo"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6732,22 +6732,22 @@ msgid "Receive Buffer"
 msgstr "Buffer de recepción"
 
 msgid "Record Information"
-msgstr ""
+msgstr "Información del registro"
 
 msgid "Record Maintenance"
-msgstr ""
+msgstr "Mantenimiento del registro"
 
 msgid "Record is locked"
-msgstr "Grabar está bloqueado"
+msgstr "El registro está bloqueado"
 
 msgid "Record is marked for deletion"
-msgstr ""
+msgstr "El registro ha sido marcado para borrado"
 
 msgid "Record is protected"
-msgstr ""
+msgstr "El registro está protegido"
 
 msgid "Record is unlocked"
-msgstr ""
+msgstr "El registro esta desbloqueado"
 
 msgid "Recurse into directories."
 msgstr "Navegar recursivamente en los directorios."
@@ -6928,7 +6928,7 @@ msgstr ""
 "propietario\""
 
 msgid "Results for net rpc testjoin"
-msgstr ""
+msgstr "Resultado del test"
 
 msgid "Results of last self test"
 msgstr "Resultado del ultimo Auto-Test."
@@ -6976,13 +6976,13 @@ msgid "Roundrobin"
 msgstr "Round-Robin"
 
 msgid "Route is marked for deletion"
-msgstr ""
+msgstr "La ruta ha sido marcada para borrado"
 
 msgid "Route is protected"
-msgstr ""
+msgstr "La ruta está protegida"
 
 msgid "Route is unlocked"
-msgstr ""
+msgstr "La ruta está desbloqueado"
 
 msgid "Routes"
 msgstr "Rutas"
@@ -7540,13 +7540,13 @@ msgid "Share Settings"
 msgstr "Opciones de compartidos"
 
 msgid "Share is marked for deletion"
-msgstr ""
+msgstr "El compartido ha sido marcado para borrado"
 
 msgid "Share is protected"
-msgstr ""
+msgstr "El compartido está protegido"
 
 msgid "Share is unlocked"
-msgstr ""
+msgstr "El compartido está desbloqueado"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr ""
@@ -9649,7 +9649,7 @@ msgid "Toggle Selected Options"
 msgstr "Intercambiar las opciones marcadas"
 
 msgid "Toggle Selected Records"
-msgstr ""
+msgstr "Cambiar el estado de los registros seleccionados."
 
 msgid "Tolerated"
 msgstr "Tolerado"
@@ -9978,7 +9978,7 @@ msgid "Unload"
 msgstr "Descargar"
 
 msgid "Unlock Selected Records"
-msgstr ""
+msgstr "Desbloquear los registros seleccionados"
 
 msgid "Unmount Disk/Partition"
 msgstr "Desmontar Disco/Partición"
@@ -10718,7 +10718,7 @@ msgid "iSCSI initial parameter (%d by default)."
 msgstr "Parámetro inicial iSCSI (%d por defecto)."
 
 msgid "iSCSI initiator disabled."
-msgstr ""
+msgstr "Iniciador iSCSI deshabilitado."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
