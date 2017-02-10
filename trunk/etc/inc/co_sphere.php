@@ -70,6 +70,8 @@ class co_sphere_grid extends co_sphere_scriptname {
 	protected $_sym_unl = NULL;
 	protected $_sym_mai = NULL;
 	protected $_sym_inf = NULL;
+	protected $_sym_mup = NULL;
+	protected $_sym_mdn = NULL;
 //	modes
 	protected $_enadis = NULL;
 	protected $_lock = NULL;
@@ -227,6 +229,18 @@ class co_sphere_grid extends co_sphere_scriptname {
 			$this->_sym_inf = $message;
 		endif;
 		return $this->_sym_inf ?? gtext('Record Information');
+	}
+	public function sym_mup(string $message = NULL) {
+		if(isset($message)):
+			$this->_sym_mup = $message;
+		endif;
+		return $this->_sym_mup ?? gtext('Move up');
+	}
+	public function sym_mdn(string $message = NULL) {
+		if(isset($message)):
+			$this->_sym_mdn = $message;
+		endif;
+		return $this->_sym_mdn ?? gtext('Move down');
 	}
 }
 class co_sphere_scriptname {
