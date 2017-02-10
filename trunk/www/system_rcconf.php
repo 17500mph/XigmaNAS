@@ -336,9 +336,6 @@ function controlactionbuttons(ego, triggerbyname) {
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<?=html_row_add($sphere_scriptname_child, $gt_record_add, 6);?>
-		</tfoot>
 		<tbody>
 			<?php foreach ($sphere_array as $sphere_record):?>
 				<tr>
@@ -378,6 +375,9 @@ function controlactionbuttons(ego, triggerbyname) {
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<?=html_row_add($sphere_scriptname_child, $gt_record_add, 6);?>
+		</tfoot>
 	</table>
 	<div id="submit">
 		<?php

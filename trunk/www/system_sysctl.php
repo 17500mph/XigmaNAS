@@ -326,11 +326,6 @@ function ab_control(ego, tbn) {
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-<?php
-			echo html_row_add($sphere->mod->scriptname(),$sphere->sym_add(),6);
-?>
-		</tfoot>
 		<tbody>
 <?php
 			foreach($sphere->grid as $sphere->row):
@@ -384,6 +379,11 @@ function ab_control(ego, tbn) {
 			endforeach;
 ?>
 		</tbody>
+		<tfoot>
+<?php
+			echo html_row_add($sphere->mod->scriptname(),$sphere->sym_add(),6);
+?>
+		</tfoot>
 	</table>
 	<div id="submit">
 <?php
