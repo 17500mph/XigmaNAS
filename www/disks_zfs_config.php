@@ -388,11 +388,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				<th class="lhebl"><?=gtext('AltRoot');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="10"></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
 				<tr>
@@ -409,6 +404,11 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="10"></td>
+			</tr>
+		</tfoot>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
@@ -426,11 +426,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				<th class="lhebl"><?=gtext('Devices');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="4"></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['vdevices']['vdevice'] as $key => $vdevice):?>
 				<tr>
@@ -441,6 +436,11 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="4"></td>
+			</tr>
+		</tfoot>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
@@ -478,11 +478,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				<th class="lhebl"><?=gtext('Snapshot Visibility');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<th class="lcenl" colspan="11"></th>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['datasets']['dataset'] as $dataset):?>
 				<tr>
@@ -503,6 +498,11 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="11"></th>
+			</tr>
+		</tfoot>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
@@ -528,11 +528,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				<th class="lhebl"><?=gtext('Sync');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="8"></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['volumes']['volume'] as $volume):?>
 				<tr>
@@ -547,6 +542,11 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="8"></td>
+			</tr>
+		</tfoot>
 	</table>
 	<div id="remarks">
 		<?php html_remark2('note', gtext('Note'), gtext('This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line'));?>

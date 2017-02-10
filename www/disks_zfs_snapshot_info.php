@@ -82,9 +82,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')]
 		<thead>
 			<?php html_titleline2(gtext('ZFS Snapshot Information & Status'));?>
 		</thead>
-		<tfoot>
-			<?php html_separator2();?>
-		</tfoot>
 		<tbody>
 			<tr>
 				<td class="celltag"><?=gtext('Information & Status');?></td>
@@ -93,6 +90,9 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')]
 				</td>
 			</tr>
 		</tbody>
+		<tfoot>
+			<?php html_separator2();?>
+		</tfoot>
 	</table>
 	<table class="area_data_settings">
 		<colgroup>
