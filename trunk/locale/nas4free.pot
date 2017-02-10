@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -359,16 +359,28 @@ msgstr ""
 msgid "Add MIB"
 msgstr ""
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr ""
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr ""
 
-msgid "Add Rsync job"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
 msgstr ""
 
 msgid "Add Share"
@@ -434,9 +446,6 @@ msgstr ""
 msgid "Add job"
 msgstr ""
 
-msgid "Add module"
-msgstr ""
-
 msgid "Add mount point"
 msgstr ""
 
@@ -449,16 +458,10 @@ msgstr ""
 msgid "Add portal group"
 msgstr ""
 
-msgid "Add resource"
-msgstr ""
-
 msgid "Add rule"
 msgstr ""
 
 msgid "Add self-test"
-msgstr ""
-
-msgid "Add share"
 msgstr ""
 
 msgid "Add target"
@@ -1805,9 +1808,6 @@ msgstr ""
 msgid "Delete Login Info"
 msgstr ""
 
-msgid "Delete Rsync job"
-msgstr ""
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -1818,6 +1818,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -1832,7 +1835,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -1895,25 +1910,16 @@ msgstr ""
 msgid "Delete interface"
 msgstr ""
 
-msgid "Delete module"
-msgstr ""
-
 msgid "Delete mount point"
 msgstr ""
 
 msgid "Delete portal group"
 msgstr ""
 
-msgid "Delete resource"
-msgstr ""
-
 msgid "Delete rule"
 msgstr ""
 
 msgid "Delete self-test"
-msgstr ""
-
-msgid "Delete share"
 msgstr ""
 
 msgid "Delete target"
@@ -2111,6 +2117,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2209,9 +2221,6 @@ msgstr ""
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr ""
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr ""
-
 msgid "Do you really want to delete this URL?"
 msgstr ""
 
@@ -2245,25 +2254,16 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr ""
 
-msgid "Do you really want to delete this module?"
-msgstr ""
-
 msgid "Do you really want to delete this mount point? All elements that still use it will become invalid (e.g. share)!"
 msgstr ""
 
 msgid "Do you really want to delete this portal group?"
 msgstr ""
 
-msgid "Do you really want to delete this resource?"
-msgstr ""
-
 msgid "Do you really want to delete this rule?"
 msgstr ""
 
 msgid "Do you really want to delete this scheduled self-test?"
-msgstr ""
-
-msgid "Do you really want to delete this share?"
 msgstr ""
 
 msgid "Do you really want to delete this target?"
@@ -2323,7 +2323,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2347,7 +2353,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2380,6 +2395,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2390,6 +2411,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2408,6 +2435,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2539,16 +2572,28 @@ msgstr ""
 msgid "Edit MIB"
 msgstr ""
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr ""
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr ""
 
-msgid "Edit Rsync job"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
 msgstr ""
 
 msgid "Edit Share"
@@ -2599,9 +2644,6 @@ msgstr ""
 msgid "Edit job"
 msgstr ""
 
-msgid "Edit module"
-msgstr ""
-
 msgid "Edit mount point"
 msgstr ""
 
@@ -2614,16 +2656,10 @@ msgstr ""
 msgid "Edit portal group"
 msgstr ""
 
-msgid "Edit resource"
-msgstr ""
-
 msgid "Edit rule"
 msgstr ""
 
 msgid "Edit self-test"
-msgstr ""
-
-msgid "Edit share"
 msgstr ""
 
 msgid "Edit target"
@@ -2702,6 +2738,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -4718,6 +4760,15 @@ msgstr ""
 msgid "NFS"
 msgstr ""
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr ""
 
@@ -5981,6 +6032,15 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr ""
 
@@ -6071,6 +6131,24 @@ msgstr ""
 msgid "Rsync Job"
 msgstr ""
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr ""
 
@@ -6156,6 +6234,15 @@ msgid "Samba AD"
 msgstr ""
 
 msgid "Samba Active Directory Domain Controller"
+msgstr ""
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
 msgstr ""
 
 #, php-format
@@ -8074,6 +8161,12 @@ msgid "Toggle Selected Options"
 msgstr ""
 
 msgid "Toggle Selected Records"
+msgstr ""
+
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
 msgstr ""
 
 msgid "Tolerated"
