@@ -194,7 +194,7 @@ function controlactionbuttons(ego,triggerbyname) {
 		<li class="tabinact"><a href="access_users_groups.php"><span><?=gtext('Groups');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
+<form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 	<?php
 	if(!empty($savemsg)): 
 		print_info_box($savemsg);
@@ -226,9 +226,6 @@ function controlactionbuttons(ego,triggerbyname) {
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<?=html_row_add($sphere_scriptname_child,$gt_record_add,6);?>
-		</tfoot>
 		<tbody>
 			<?php foreach($sphere_array as $sphere_record):?>
 				<tr>
@@ -273,6 +270,11 @@ function controlactionbuttons(ego,triggerbyname) {
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+<?php
+			echo html_row_add($sphere_scriptname_child,$gt_record_add,6);
+?>
+		</tfoot>
 	</table>
 	<div id="submit">
 		<?php
@@ -280,5 +282,5 @@ function controlactionbuttons(ego,triggerbyname) {
 		?>
 	</div>
 	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
+</td></tr></tbody></table></form>
 <?php include 'fend.inc';?>

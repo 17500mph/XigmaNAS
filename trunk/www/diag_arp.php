@@ -218,12 +218,6 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="4"></td>
-				<td class="lceadd"><a href="diag_arp.php?act=del"><img src="images/delete.png" title="<?=gtext('Remove all entries from ARP table');?>" border="0" alt="<?=gtext('Remove all entries from ARP table');?>"/></a></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php $i = 0; foreach ($data as $entry): ?>
 				<tr>
@@ -243,6 +237,12 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 				</tr>
 			<?php $i++; endforeach; ?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="4"></td>
+				<td class="lceadd"><a href="diag_arp.php?act=del"><img src="images/delete.png" title="<?=gtext('Remove all entries from ARP table');?>" border="0" alt="<?=gtext('Remove all entries from ARP table');?>"/></a></td>
+			</tr>
+		</tfoot>
 	</table>
 	<div id="remarks">
 		<?php
