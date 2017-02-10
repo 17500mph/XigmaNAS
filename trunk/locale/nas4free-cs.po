@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -454,17 +454,29 @@ msgstr "Přidat stroj"
 msgid "Add MIB"
 msgstr "Přidat MIB"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Přidat RAID pole"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Přidat trasu"
 
-msgid "Add Rsync job"
-msgstr "Přidat Rsync úlohu"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -529,9 +541,6 @@ msgstr "Přidat rozhraní"
 msgid "Add job"
 msgstr "Přidat úlohu"
 
-msgid "Add module"
-msgstr "Přidat modul"
-
 msgid "Add mount point"
 msgstr "Přidat přípojný (mount) bod"
 
@@ -544,17 +553,11 @@ msgstr "Přidat fond"
 msgid "Add portal group"
 msgstr "Přidat skupinu portálů"
 
-msgid "Add resource"
-msgstr "Přidat prostředek"
-
 msgid "Add rule"
 msgstr "Přidat pravidlo"
 
 msgid "Add self-test"
 msgstr "Přidat samotest"
-
-msgid "Add share"
-msgstr "Přidat sdílení"
 
 msgid "Add target"
 msgstr "Přidat cíl"
@@ -2186,9 +2189,6 @@ msgstr "Smazat záznam pro stroj"
 msgid "Delete Login Info"
 msgstr "Smazat údaje o přihlášení"
 
-msgid "Delete Rsync job"
-msgstr "Smazat Rsync úlohu"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2200,6 +2200,9 @@ msgstr ""
 
 msgid "Delete Selected Jobs"
 msgstr "Smazat označené úlohy"
+
+msgid "Delete Selected NFS Shares"
+msgstr ""
 
 msgid "Delete Selected Options"
 msgstr "Smazat označené předvolby"
@@ -2213,7 +2216,19 @@ msgstr "Smazat označené RAID svazky"
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2278,26 +2293,17 @@ msgstr "Odstranit skupinu iniciátorů"
 msgid "Delete interface"
 msgstr "Odstranit rozhraní"
 
-msgid "Delete module"
-msgstr "Odstranit modul"
-
 msgid "Delete mount point"
 msgstr "Odstranit přípojný bod"
 
 msgid "Delete portal group"
 msgstr "Odstranit skupinu portálů"
 
-msgid "Delete resource"
-msgstr "Odstranit prostředek"
-
 msgid "Delete rule"
 msgstr "Odstranit pravidlo"
 
 msgid "Delete self-test"
 msgstr "Odstranit samotest"
-
-msgid "Delete share"
-msgstr "Odstranit sdílení"
 
 msgid "Delete target"
 msgstr "Odstranit cíl"
@@ -2517,6 +2523,12 @@ msgstr "Vypnout označené předvolby"
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
 
@@ -2632,9 +2644,6 @@ msgstr "Opravdu chcete smazat všechna pravidla?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Opravdu chcete smazat všechny naplánované samotesty?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Opravdu chcete smazat tuto Rsync úlohu?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Opravdu chcete smazat tuto URL adresu?"
 
@@ -2676,9 +2685,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Opravdu chcete odstranit toto rozhraní?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Opravdu chcete smazat tento modul?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2689,17 +2695,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Opravdu chcete smazat tuto skupinu portálů?"
 
-msgid "Do you really want to delete this resource?"
-msgstr "Chcete opravdu odstranit tento prostředek?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Opravdu chcete smazat toto pravidlo?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Opravdu chcete smazat tento naplánovaný samotest?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Opravdu chcete odstranit toto sdílení?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Opravdu chcete odstranit tento cíl?"
@@ -2768,8 +2768,14 @@ msgstr ""
 "Chcete z označených jednotek datového úložiště vytvořit virtuální zařízení "
 "pro střídavý zápis (stripe)?"
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Chcete smazat označené RAID svazky?"
+
+msgid "Do you want to delete selected Samba shares?"
+msgstr ""
 
 msgid "Do you want to delete selected commands?"
 msgstr ""
@@ -2792,7 +2798,16 @@ msgstr "Chcete smazat označené fondy úložišť?"
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2825,6 +2840,12 @@ msgstr "Opravdu vypnout označené předvolby?"
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2835,6 +2856,12 @@ msgid "Do you want to enable selected options?"
 msgstr "Opravdu zapnout označené předvolby?"
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2853,6 +2880,12 @@ msgid "Do you want to toggle selected options?"
 msgstr "Opravdu přepnout označené předvolby?"
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2986,17 +3019,29 @@ msgstr "Upravit záznam o stroji"
 msgid "Edit MIB"
 msgstr "Upravit MIB"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Upravit RAID pole"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Upravit trasu"
 
-msgid "Edit Rsync job"
-msgstr "Upravit synchronizační (Rsync) úlohu"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -3046,9 +3091,6 @@ msgstr "Upravit rozhraní"
 msgid "Edit job"
 msgstr "Upravit úlohu"
 
-msgid "Edit module"
-msgstr "Upravit modul"
-
 msgid "Edit mount point"
 msgstr "Upravit přípojný bod"
 
@@ -3061,17 +3103,11 @@ msgstr "Upravit fond"
 msgid "Edit portal group"
 msgstr "Upravit skupinu portálů"
 
-msgid "Edit resource"
-msgstr "Upravit prostředek"
-
 msgid "Edit rule"
 msgstr "Upravit pravidlo"
 
 msgid "Edit self-test"
 msgstr "Upravit samotest"
-
-msgid "Edit share"
-msgstr "Upravit sdílení"
 
 msgid "Edit target"
 msgstr "Upravit cíl"
@@ -3158,6 +3194,12 @@ msgid "Enable Selected Options"
 msgstr "Zapnout označené předvolby"
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5464,6 +5506,15 @@ msgstr "Uživatelé, ověřovaní vzájemně protokolem CHAP"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6849,6 +6900,15 @@ msgstr "Prostředek"
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr "Prostředky"
 
@@ -6938,6 +6998,24 @@ msgstr "Rsync"
 
 msgid "Rsync Job"
 msgstr "Rsync úloha"
+
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
 
 msgid "Rule"
 msgstr "Pravidlo"
@@ -7029,6 +7107,15 @@ msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Active Directory doménový řadič"
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9530,6 +9617,12 @@ msgstr "Přepnout označené předvolby"
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerováno"
 
@@ -10675,8 +10768,41 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Přidat Rsync úlohu"
+
+#~ msgid "Add module"
+#~ msgstr "Přidat modul"
+
+#~ msgid "Add share"
+#~ msgstr "Přidat sdílení"
+
+#~ msgid "Delete module"
+#~ msgstr "Odstranit modul"
+
+#~ msgid "Delete share"
+#~ msgstr "Odstranit sdílení"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Opravdu chcete smazat tento modul?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Opravdu chcete odstranit toto sdílení?"
+
+#~ msgid "Edit module"
+#~ msgstr "Upravit modul"
+
+#~ msgid "Edit share"
+#~ msgstr "Upravit sdílení"
+
+#~ msgid "Add resource"
+#~ msgstr "Přidat prostředek"
+
 #~ msgid "Delete Route"
 #~ msgstr "Smazat trasu"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Opravdu chcete smazat tuto Rsync úlohu?"
 
 #~ msgid "Results for net rpc testjoin:"
 #~ msgstr "Výsledek operace net rpc testjoin:"
@@ -10687,8 +10813,23 @@ msgstr "odpojit (umount)"
 #~ msgid "Check shared secret:"
 #~ msgstr "Kontrola sdíleného hesla:"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Smazat Rsync úlohu"
+
+#~ msgid "Delete resource"
+#~ msgstr "Odstranit prostředek"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "Chcete opravdu odstranit tento prostředek?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Opravdu chcete odstranit tuto trasu?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Upravit synchronizační (Rsync) úlohu"
+
+#~ msgid "Edit resource"
+#~ msgstr "Upravit prostředek"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Ověřit dostupnost procesu služby winbind:"

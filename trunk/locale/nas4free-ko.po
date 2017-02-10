@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -410,17 +410,29 @@ msgstr "호스트 추가"
 msgid "Add MIB"
 msgstr "MIB 추가"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "RAID 추가"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "라우트 추가"
 
-msgid "Add Rsync job"
-msgstr "Rsync 작업 추가"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -485,9 +497,6 @@ msgstr "인터페이스 추가"
 msgid "Add job"
 msgstr "작업 추가"
 
-msgid "Add module"
-msgstr "모듈 추가"
-
 msgid "Add mount point"
 msgstr "마운트 포인트 추가"
 
@@ -500,17 +509,11 @@ msgstr "pool 추가"
 msgid "Add portal group"
 msgstr "포털 그룹 추가"
 
-msgid "Add resource"
-msgstr ""
-
 msgid "Add rule"
 msgstr "규칙 추가"
 
 msgid "Add self-test"
 msgstr "자체 테스트 추가"
-
-msgid "Add share"
-msgstr "공유 추가"
 
 msgid "Add target"
 msgstr "타겟 추가"
@@ -2005,9 +2008,6 @@ msgstr "Host 삭제"
 msgid "Delete Login Info"
 msgstr "로그인 정보 삭제"
 
-msgid "Delete Rsync job"
-msgstr "Rsync 작업 삭제"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2018,6 +2018,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2032,7 +2035,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2095,26 +2110,17 @@ msgstr "개시자 그룹 삭제"
 msgid "Delete interface"
 msgstr "인터페이스 삭제"
 
-msgid "Delete module"
-msgstr "모듈 삭제"
-
 msgid "Delete mount point"
 msgstr "마운트 지점 삭제"
 
 msgid "Delete portal group"
 msgstr "포털 그룹 삭제"
 
-msgid "Delete resource"
-msgstr ""
-
 msgid "Delete rule"
 msgstr "규칙 삭제"
 
 msgid "Delete self-test"
 msgstr "자체 테스트 삭제"
-
-msgid "Delete share"
-msgstr "공유 삭제"
 
 msgid "Delete target"
 msgstr "타젯 삭제"
@@ -2325,6 +2331,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2430,9 +2442,6 @@ msgstr "정말로 모든 규칙을 지우시겠습니까?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "정말로 모든 예약된 자체 테스트를 삭제하시겠습니까?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "정말로 이 rsync 작업을 지우시겠습니까?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "정말로 이 URL을 지우시겠습니까?"
 
@@ -2470,9 +2479,6 @@ msgstr "정말로 이 개시자를 삭제하시겠습니까? 아직도 이것을
 msgid "Do you really want to delete this interface?"
 msgstr "정말로 이 인터페이스를 삭제하시겠습니까?"
 
-msgid "Do you really want to delete this module?"
-msgstr "정말로 이 모듈을 삭제하시겠습니까?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2481,17 +2487,11 @@ msgstr "정말로 이 마운트 지점을 삭제하시겠습니까? 아직도 �
 msgid "Do you really want to delete this portal group?"
 msgstr "정말로 이 포털 그룹을 삭제하시겠습니까?"
 
-msgid "Do you really want to delete this resource?"
-msgstr ""
-
 msgid "Do you really want to delete this rule?"
 msgstr "정말로 이 규칙을 삭제하시겠습니까?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "정말로 이 예약된 자체 테스트를 삭제하시겠습니까?"
-
-msgid "Do you really want to delete this share?"
-msgstr "정말로 이 공유를 삭제하시겠습니까?"
 
 msgid "Do you really want to delete this target?"
 msgstr "정말로 이 타젯을 삭제하시겠습니까?"
@@ -2553,7 +2553,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2577,7 +2583,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2610,6 +2625,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2620,6 +2641,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2638,6 +2665,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2770,17 +2803,29 @@ msgstr "호스트 편집"
 msgid "Edit MIB"
 msgstr "MIB 편집"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "RAID 편집"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "라우트 편집"
 
-msgid "Edit Rsync job"
-msgstr "Rsync 작업 편집"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -2830,9 +2875,6 @@ msgstr "인터페이스 편집"
 msgid "Edit job"
 msgstr "작업 편집"
 
-msgid "Edit module"
-msgstr "모듈 편집"
-
 msgid "Edit mount point"
 msgstr "마운트 지점 편집"
 
@@ -2845,17 +2887,11 @@ msgstr "풀 편집"
 msgid "Edit portal group"
 msgstr "포털 그룹 편집"
 
-msgid "Edit resource"
-msgstr ""
-
 msgid "Edit rule"
 msgstr "규칙 편집"
 
 msgid "Edit self-test"
 msgstr "자체 테스트 편집"
-
-msgid "Edit share"
-msgstr "공유 편집"
 
 msgid "Edit target"
 msgstr "타젯 편집"
@@ -2938,6 +2974,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5104,6 +5146,15 @@ msgstr "상호 CHAP 사용자"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr ""
 
@@ -6431,6 +6482,15 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr ""
 
@@ -6521,6 +6581,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr ""
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "규칙"
 
@@ -6608,6 +6686,15 @@ msgid "Samba AD"
 msgstr ""
 
 msgid "Samba Active Directory Domain Controller"
+msgstr ""
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
 msgstr ""
 
 #, php-format
@@ -8861,6 +8948,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "용인됨"
 
@@ -9930,14 +10023,50 @@ msgstr "마운트 해제"
 #~ msgid "AD authentication disabled"
 #~ msgstr "AD 인증이 비활성화 됨"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Rsync 작업 추가"
+
+#~ msgid "Add module"
+#~ msgstr "모듈 추가"
+
+#~ msgid "Add share"
+#~ msgstr "공유 추가"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "공유된 비밀 check:"
 
 #~ msgid "Delete Route"
 #~ msgstr "라우트 삭제"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Rsync 작업 삭제"
+
+#~ msgid "Delete module"
+#~ msgstr "모듈 삭제"
+
+#~ msgid "Delete share"
+#~ msgstr "공유 삭제"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "정말로 이 rsync 작업을 지우시겠습니까?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "정말로 이 모듈을 삭제하시겠습니까?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "정말로 이 라우트를 삭제하시겠습니까?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "정말로 이 공유를 삭제하시겠습니까?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Rsync 작업 편집"
+
+#~ msgid "Edit module"
+#~ msgstr "모듈 편집"
+
+#~ msgid "Edit share"
+#~ msgstr "공유 편집"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "살아 있는지 보기 위해 winbindd에 ping:"
