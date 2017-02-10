@@ -77,9 +77,6 @@ include 'fbegin.inc';
 		</table>
 <?php
 	else:
-?>
-
-<?php
 		$do_seperator = false;
 		foreach($a_disk as $diskk => $diskv):
 ?>
