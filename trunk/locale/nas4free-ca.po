@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
-"PO-Revision-Date: 2017-02-08 18:30+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"PO-Revision-Date: 2017-02-09 06:11+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:34+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -341,8 +341,8 @@ msgstr "ACL heretat"
 msgid "ACL mode"
 msgstr "Mode ACL"
 
-msgid "AD authentication disabled"
-msgstr "autenticació d'AD desconnectat"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Nom ADC o PDC"
@@ -457,11 +457,17 @@ msgstr "Afegir MIB"
 msgid "Add RAID"
 msgstr "Afegir RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Afegir ruta"
 
 msgid "Add Rsync job"
 msgstr "Afegir treball Rsync"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Afegir instantània"
@@ -1438,8 +1444,8 @@ msgstr "Comprovar el sistema | Configuració general abans de inicialitzar"
 msgid "Check and replace cable"
 msgstr "Verificar i canviar cable"
 
-msgid "Check shared secret:"
-msgstr "Verifica secret compartit:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2221,9 +2227,6 @@ msgstr "Suprimeix servidor"
 msgid "Delete Login Info"
 msgstr "Suprimeix informació d'inici"
 
-msgid "Delete Route"
-msgstr "Suprimeix la ruta"
-
 msgid "Delete Rsync job"
 msgstr "Suprimeix feina Rsync"
 
@@ -2247,6 +2250,15 @@ msgstr "Eliminar pisicines seleccionats"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Eliminar volums RAID seleccionats"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Eliminar instantànies seleccionats"
@@ -2418,13 +2430,13 @@ msgid "Detected Language:"
 msgstr "Idioma Detectat:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Comparticions remots detectats RSYNC"
 
 msgid "Detected an error while importing."
 msgstr "Detectat un error durant la importació."
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Comparticions detectades en aquest servidor"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2543,6 +2555,9 @@ msgstr "Desactivar les feines seleccionades"
 
 msgid "Disable Selected Options"
 msgstr "Desactivar lles opcions seleccionades"
+
+msgid "Disable Selected Records"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Desactivar embolcall TCP (mòdul mod_wrap)."
@@ -2718,9 +2733,6 @@ msgstr "Realment vol eliminar aquest grup del portal?"
 msgid "Do you really want to delete this resource?"
 msgstr "Realment voleu eliminar aquest recurs?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Realment vol eliminar aquesta ruta?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Realment vol eliminar aquesta regla?"
 
@@ -2819,6 +2831,15 @@ msgstr "Vols esborrar les opcions seleccionadess?"
 msgid "Do you want to delete selected pools?"
 msgstr "Vols eliminar les piscines seleccionades?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Vols esborrar els instantanis seleccionats?"
 
@@ -2843,6 +2864,9 @@ msgstr "Vols desactivar els treballs seleccionats?"
 msgid "Do you want to disable selected options?"
 msgstr "Vols desactivar les opcions seleccionades?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Vols activar les ordres seleccionades?"
 
@@ -2852,8 +2876,14 @@ msgstr "Vols permetre els treballs seleccionats?"
 msgid "Do you want to enable selected options?"
 msgstr "Vols activar les opcions seleccionades?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Vols instal·lar aquest firmware de totes maneres (al teu risc)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Vols canviar les ordres seleccionats?"
@@ -2863,6 +2893,12 @@ msgstr "Vols mostrar els treballs seleccionats?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Vols mostrar les opcions seleccionats?"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr "Document arrel"
@@ -2997,11 +3033,17 @@ msgstr "Editar MIB"
 msgid "Edit RAID"
 msgstr "Editar RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Editar ruta"
 
 msgid "Edit Rsync job"
 msgstr "Editar treball RSYNC"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Editar instantani"
@@ -3160,6 +3202,9 @@ msgstr "Habilitar treballs seleccionats"
 
 msgid "Enable Selected Options"
 msgstr "Habilitar opcions seleccionats"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Habilitar conexions TSL."
@@ -5006,6 +5051,9 @@ msgstr ""
 "Lloc on s'emmagatzemaran els arxius de treball, per exemple, "
 "%s/backup/.unison"
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr "Arxius bloquejats"
 
@@ -5098,6 +5146,9 @@ msgstr "MIB està bloquejat"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB està marcat per ser esborrat"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "MIRALL"
@@ -5643,7 +5694,7 @@ msgid "No Portal Group has been configured."
 msgstr "Grup portal no s'ha configurat."
 
 msgid "No RSYNC Client configured."
-msgstr ""
+msgstr "Sense RSYNC client configurat."
 
 msgid "No configured Auth Group."
 msgstr "No s'ha configurat grup d'autenticació."
@@ -6213,8 +6264,8 @@ msgstr "Resultat del Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "El Ping tardarà una mica, si us plau, sigui pacient."
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Ping winbindd per veure si es troba viu:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6628,7 +6679,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC informació del client i estat"
 
 msgid "RSYNC client number"
-msgstr ""
+msgstr "Número de client RSYNC"
 
 msgid "RSYNC events"
 msgstr "Esdeveniments RSYNC"
@@ -6704,8 +6755,23 @@ msgstr "Rearrenca"
 msgid "Receive Buffer"
 msgstr "Buffer de recepció"
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Registre està bloquejat"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Recursivament en directoris."
@@ -6771,10 +6837,10 @@ msgstr ""
 "mestre i esclau."
 
 msgid "Remote server address"
-msgstr ""
+msgstr "Direcció del servidor remot"
 
 msgid "Remote share name configured"
-msgstr ""
+msgstr "Nom de compartició remot configurat"
 
 msgid "Removable"
 msgstr "Extraïble"
@@ -6884,8 +6950,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restringit - Heretar tots menys \"escriure ACL\" i \"canviar propietari\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Resultats per prova d'unió xarxa RPC:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Els resultats de l'última auto prova"
@@ -6931,6 +6997,15 @@ msgstr "Lectura de tots contra tots"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Rutas"
@@ -7119,10 +7194,10 @@ msgid "Scheduled Tests"
 msgstr "Proves prgramades"
 
 msgid "Script"
-msgstr ""
+msgstr "Script"
 
 msgid "Script has been uploaded."
-msgstr ""
+msgstr "Script ha estat carregat."
 
 msgid "Scrub a pool"
 msgstr "Fregui piscina"
@@ -7486,6 +7561,15 @@ msgstr "Compartir contrasenya"
 
 msgid "Share Settings"
 msgstr "Ajustos d'ús compartit"
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Comparteix contrasenyes no poden tenir més de 8 caràcters."
@@ -9610,6 +9694,9 @@ msgstr "Commuta les feines seleccionades"
 msgid "Toggle Selected Options"
 msgstr "Commuta les opcions seleccionades"
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerat"
 
@@ -9936,6 +10023,9 @@ msgstr "Mida desconeguda"
 msgid "Unload"
 msgstr "Descarregar"
 
+msgid "Unlock Selected Records"
+msgstr ""
+
 msgid "Unmount Disk/Partition"
 msgstr "Desmuntar el disc/partició"
 
@@ -9969,7 +10059,7 @@ msgid "Upload Directory"
 msgstr "Directori de pujada"
 
 msgid "Upload Script"
-msgstr ""
+msgstr "Cárrega Script"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10680,8 +10770,8 @@ msgstr "Informació destinacions iSCSI i estat"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI paràmetre inicial (% d per defecte)."
 
-msgid "iSCSI initiator disabled"
-msgstr "iniciador iSCSI desconectat"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10762,8 +10852,23 @@ msgstr "cap a"
 msgid "umount"
 msgstr "desmontar"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Detectats RSYNC remots compartits"
+#~ msgid "AD authentication disabled"
+#~ msgstr "autenticació d'AD desconnectat"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Client NO RSYNC configurat"
+#~ msgid "Check shared secret:"
+#~ msgstr "Verifica secret compartit:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Suprimeix la ruta"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iniciador iSCSI desconectat"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Ping winbindd per veure si es troba viu:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Resultats per prova d'unió xarxa RPC:"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Realment vol eliminar aquesta ruta?"

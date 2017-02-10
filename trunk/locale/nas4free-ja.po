@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -306,8 +306,8 @@ msgstr "ACL 継承"
 msgid "ACL mode"
 msgstr "ACL モード"
 
-msgid "AD authentication disabled"
-msgstr "AD 認証は無効です"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "AD 又は PDC 名"
@@ -421,11 +421,17 @@ msgstr "MIB を追加"
 msgid "Add RAID"
 msgstr "RAID の追加"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "ルーティングの追加"
 
 msgid "Add Rsync job"
 msgstr "Rsync ジョブの追加"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr ""
@@ -1334,8 +1340,8 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "ケーブルを確認および交換してください"
 
-msgid "Check shared secret:"
-msgstr "共有シークレットのチェック:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2019,9 +2025,6 @@ msgstr "ホストを削除"
 msgid "Delete Login Info"
 msgstr "ログイン情報の削除"
 
-msgid "Delete Route"
-msgstr "ルートの削除"
-
 msgid "Delete Rsync job"
 msgstr "Rsync ジョブを削除"
 
@@ -2044,6 +2047,15 @@ msgid "Delete Selected Pools"
 msgstr ""
 
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
@@ -2329,6 +2341,9 @@ msgstr ""
 msgid "Disable Selected Options"
 msgstr ""
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper (mod_wrapモジュール) を無効にします。"
 
@@ -2488,9 +2503,6 @@ msgstr "このポータルグループを削除してもよろしいですか？
 msgid "Do you really want to delete this resource?"
 msgstr "このリソースを削除してもよろしいですか?"
 
-msgid "Do you really want to delete this route?"
-msgstr "このルーティング情報を削除してもよろしいですか?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "このルールを削除してもよろしいですか?"
 
@@ -2583,6 +2595,15 @@ msgstr ""
 msgid "Do you want to delete selected pools?"
 msgstr ""
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
@@ -2607,6 +2628,9 @@ msgstr ""
 msgid "Do you want to disable selected options?"
 msgstr ""
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2616,7 +2640,13 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to lock selected records?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
@@ -2626,6 +2656,12 @@ msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
 msgstr ""
 
 msgid "Document Root"
@@ -2758,11 +2794,17 @@ msgstr "MIB を編集"
 msgid "Edit RAID"
 msgstr "RAID を編集"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "ルーティングを編集"
 
 msgid "Edit Rsync job"
 msgstr "Rsync ジョブを編集"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr ""
@@ -2914,6 +2956,9 @@ msgid "Enable Selected Jobs"
 msgstr ""
 
 msgid "Enable Selected Options"
+msgstr ""
+
+msgid "Enable Selected Records"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -4631,6 +4676,9 @@ msgstr "コンテンツデータベースファイルが保存される場所を
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -4720,6 +4768,9 @@ msgid "MIB is locked"
 msgstr ""
 
 msgid "MIB is marked for deletion"
+msgstr ""
+
+msgid "MIB is unlocked"
 msgstr ""
 
 msgid "MIRROR"
@@ -5779,8 +5830,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Pingによる winbindd の生存確認:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6248,7 +6299,22 @@ msgstr "リブート"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
+msgstr ""
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
 msgstr ""
 
 msgid "Recurse into directories."
@@ -6417,8 +6483,8 @@ msgstr ""
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin:"
-msgstr "net rpc testjoin の結果:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "最新セルフテスト結果"
@@ -6464,6 +6530,15 @@ msgstr "ラウンドロビンでの読み出し"
 
 msgid "Roundrobin"
 msgstr "ラウンドロビン"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "ルーティング"
@@ -6976,6 +7051,15 @@ msgid "Share Password"
 msgstr "共有パスワード"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -8834,6 +8918,9 @@ msgstr ""
 msgid "Toggle Selected Options"
 msgstr ""
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "許容"
 
@@ -9139,6 +9226,9 @@ msgstr ""
 
 msgid "Unload"
 msgstr "アンロード"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr ""
@@ -9817,8 +9907,8 @@ msgstr "iSCSI ターゲット情報とステータス"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI 初期パラメータ(初期値:%d)"
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI イニシエータは無効です"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -9899,8 +9989,23 @@ msgstr "から"
 msgid "umount"
 msgstr "アンマウント"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "検出された RSYNC リモート共有"
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD 認証は無効です"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "設定された RSYNC クライアントはありません"
+#~ msgid "Check shared secret:"
+#~ msgstr "共有シークレットのチェック:"
+
+#~ msgid "Delete Route"
+#~ msgstr "ルートの削除"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "このルーティング情報を削除してもよろしいですか?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Pingによる winbindd の生存確認:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "net rpc testjoin の結果:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI イニシエータは無効です"

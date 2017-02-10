@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:34+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 msgid " interfaces:"
@@ -338,8 +338,8 @@ msgstr "ACL Oorneem"
 msgid "ACL mode"
 msgstr "ACL modus"
 
-msgid "AD authentication disabled"
-msgstr "AD bevestighing afgeskakel"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "AD of PDC naam"
@@ -453,11 +453,17 @@ msgstr "Voeg MIB by"
 msgid "Add RAID"
 msgstr "Voeg RAID by"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Voeg Roete by"
 
 msgid "Add Rsync job"
 msgstr "Voeg Rsync taak by"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Voeg Momentopname by"
@@ -1436,8 +1442,8 @@ msgstr "Kyk na Sisteem|Algemene Opstelling voor inisialisering"
 msgid "Check and replace cable"
 msgstr "Kyk na, en vervang kabel"
 
-msgid "Check shared secret:"
-msgstr "Kyk na gedeelde geheim:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2203,9 +2209,6 @@ msgstr "Wis Gasheer Uit"
 msgid "Delete Login Info"
 msgstr "Vee Inteken Inligting uit"
 
-msgid "Delete Route"
-msgstr "Vee Roete Uit"
-
 msgid "Delete Rsync job"
 msgstr "Wis Rsync uit"
 
@@ -2229,6 +2232,15 @@ msgstr "Wis Geselekteerde Poels"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Vee Geselekteerde RAID Volumes Uit"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Vee geselekteerde Momentopnames Uit"
@@ -2522,6 +2534,9 @@ msgstr "Versper geselekteerde werkstukke"
 msgid "Disable Selected Options"
 msgstr "Deaktiveer Geselekteerde Opsies"
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktiveer TCP pakker (mod-wrap module)"
 
@@ -2696,9 +2711,6 @@ msgstr "Wil jy regtig hierdie portaal groep verwyder?"
 msgid "Do you really want to delete this resource?"
 msgstr "Wil jy regtig hierdie hulpbron uitvee?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Wil jy regtig hierdie roete uitvee?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Wil jy regtig hierdie reël verwyder?"
 
@@ -2797,6 +2809,15 @@ msgstr "Wil jy die geselekteerde opsies verwyder?"
 msgid "Do you want to delete selected pools?"
 msgstr "Wil jy die geselekteerde poele uitwis?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Wil jy die geselekteerde momentopnames verwyder?"
 
@@ -2821,6 +2842,9 @@ msgstr "Wil jy die geselekteerde werkstukke deaktiveer?"
 msgid "Do you want to disable selected options?"
 msgstr "Wil jy die geselekteerde opsies deaktiveer?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Wil jy die geselekteerde bevelle aktiveer?"
 
@@ -2830,8 +2854,14 @@ msgstr "Wil jy die geselekteerde werkstukke aktiveer?"
 msgid "Do you want to enable selected options?"
 msgstr "Wil jy die geselekteerde opsies aktiveer?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Wil jy nietemin die fermware oplaai (teen eie risiko)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Wil wipkring tussen die geselekteerde bevelle?"
@@ -2841,6 +2871,12 @@ msgstr "Wil wipkring tussen die geselekteerde werkstukke?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Wil wipkring tussen die geselekteerde opsies?"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr ""
@@ -2975,11 +3011,17 @@ msgstr "Redigeer  MIB"
 msgid "Edit RAID"
 msgstr "Redigeer RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Redigeer Roete"
 
 msgid "Edit Rsync job"
 msgstr "Redigeer Rsync werkstuk"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Redigeer Momentopname"
@@ -3138,6 +3180,9 @@ msgstr "Ontsper Geselekteerde Werkstukke"
 
 msgid "Enable Selected Options"
 msgstr "Aktiveer Geselekteerde Opsies"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Aktiveer TSL konneksies."
@@ -4945,6 +4990,9 @@ msgstr "Plek waar die inhoud databasis lêer gestoor sal word."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -5036,6 +5084,9 @@ msgstr "MIB is gesluit"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB is geteiken vir uitwis"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "BEELDSPIEËL"
@@ -6139,8 +6190,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Pieng winbindd om te sien of dit lewendig is"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Pieng/Traceroute"
@@ -6626,8 +6677,23 @@ msgstr "Herlaai"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Rekord is gesluit"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Herhaal weer terug in lêer stelsels."
@@ -6804,8 +6870,8 @@ msgstr "Beperk"
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr "Verbode - Erf alles maar nie \"skryf ACL\" en \"Verander Eienaar\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Resultate vir net rpc toetsaansluit:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Resultate van vorige self toets"
@@ -6851,6 +6917,15 @@ msgstr "Rondomtalie lees"
 
 msgid "Roundrobin"
 msgstr "Rondomtalie"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Roetes"
@@ -7388,6 +7463,15 @@ msgid "Share Password"
 msgstr "Deel wagwoord"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -9432,6 +9516,9 @@ msgstr ""
 msgid "Toggle Selected Options"
 msgstr ""
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -9740,6 +9827,9 @@ msgid "Unknown size"
 msgstr "Onbekende grootte"
 
 msgid "Unload"
+msgstr ""
+
+msgid "Unlock Selected Records"
 msgstr ""
 
 msgid "Unmount Disk/Partition"
@@ -10450,7 +10540,7 @@ msgstr "iSCSI Teikens Inligting en Status"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr ""
 
-msgid "iSCSI initiator disabled"
+msgid "iSCSI initiator disabled."
 msgstr ""
 
 msgid "iTunes/DAAP"
@@ -10532,8 +10622,20 @@ msgstr "na"
 msgid "umount"
 msgstr ""
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Bemerkte RSYNC afgeleë dele"
+#~ msgid "Delete Route"
+#~ msgstr "Vee Roete Uit"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Geen RSYNC Kliënt  gekonfigureer nie"
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Wil jy regtig hierdie roete uitvee?"
+
+#~ msgid "Check shared secret:"
+#~ msgstr "Kyk na gedeelde geheim:"
+
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD bevestighing afgeskakel"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Pieng winbindd om te sien of dit lewendig is"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Resultate vir net rpc toetsaansluit:"

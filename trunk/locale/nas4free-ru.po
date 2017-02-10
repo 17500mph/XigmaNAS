@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
-"PO-Revision-Date: 2017-02-08 16:53+0000\n"
-"Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"PO-Revision-Date: 2017-02-10 07:27+0000\n"
+"Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -337,8 +337,8 @@ msgstr "Наследование ACL"
 msgid "ACL mode"
 msgstr "Режим ACL"
 
-msgid "AD authentication disabled"
-msgstr "Идентификация AD отключена"
+msgid "AD authentication disabled."
+msgstr "Аутентификация AD отключена."
 
 msgid "AD or PDC name."
 msgstr "Имя AD или PDC."
@@ -452,11 +452,17 @@ msgstr "Добавить MIB."
 msgid "Add RAID"
 msgstr "Добавить RAID-массив"
 
+msgid "Add Record"
+msgstr "Добавить запись"
+
 msgid "Add Route"
 msgstr "Добавить маршрут"
 
 msgid "Add Rsync job"
 msgstr "Добавить задание Rsync"
+
+msgid "Add Share"
+msgstr "Добавить общий ресурс"
 
 msgid "Add Snapshot"
 msgstr "Добавить снимок"
@@ -1429,8 +1435,8 @@ msgstr "Проверьте Система|Общие параметры пере
 msgid "Check and replace cable"
 msgstr "Проверьте и замените кабель"
 
-msgid "Check shared secret:"
-msgstr "Проверьте разделяемый ключ безопасности:"
+msgid "Check shared secret"
+msgstr "Проверьте разделяемый ключ безопасности"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2201,9 +2207,6 @@ msgstr "Удалить хост"
 msgid "Delete Login Info"
 msgstr "Удалить сведения входа"
 
-msgid "Delete Route"
-msgstr "Удалить маршрут"
-
 msgid "Delete Rsync job"
 msgstr "Удалить задание Rsync"
 
@@ -2227,6 +2230,15 @@ msgstr "Удалить Выбранные Пулы"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Удалить выбранные RAID тома"
+
+msgid "Delete Selected Records"
+msgstr "Удалить выбранные записи"
+
+msgid "Delete Selected Routes"
+msgstr "Удалить выбранные маршруты"
+
+msgid "Delete Selected Shares"
+msgstr "Удалить выбранные общие ресурсы"
 
 msgid "Delete Selected Snapshots"
 msgstr "Удалить выбранные снимки"
@@ -2395,13 +2407,13 @@ msgid "Detected Language:"
 msgstr "Обнаружен язык:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Обнаруженные удаленные ресурсы RSYNC"
 
 msgid "Detected an error while importing."
 msgstr "Обнаружена ошибка в процессе импортирования"
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Обнаруженные ресурсы на этом сервере"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2521,6 +2533,9 @@ msgstr "Отключить выбранные задания"
 
 msgid "Disable Selected Options"
 msgstr "Отключить выбранные опции"
+
+msgid "Disable Selected Records"
+msgstr "Отключить выбранные записи"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Отключить TCP wrapper (mod_wrap module)."
@@ -2695,9 +2710,6 @@ msgstr "Вы действительно хотите удалить эту гр�
 msgid "Do you really want to delete this resource?"
 msgstr "Вы действительно хотите удалить этот ресурс?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Вы действительно хотите удалить этот маршрут?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Вы действительно хотите удалить это правило?"
 
@@ -2796,6 +2808,15 @@ msgstr "Вы действительно желаете удалить выбра
 msgid "Do you want to delete selected pools?"
 msgstr "Хотите ли вы удалить выбранные пулы?"
 
+msgid "Do you want to delete selected records?"
+msgstr "Вы хотите удалить выбранные записи?"
+
+msgid "Do you want to delete selected routes?"
+msgstr "Вы хотите удалить выбранные маршруты?"
+
+msgid "Do you want to delete selected shares?"
+msgstr "Вы хотите удалить выбранные общие ресурсы?"
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Вы хотите удалить выбранные снимки?"
 
@@ -2821,6 +2842,9 @@ msgstr "Вы действительно желаете отключить выб
 msgid "Do you want to disable selected options?"
 msgstr "Вы действительно желаете отключить выбранные опции?"
 
+msgid "Do you want to disable selected records?"
+msgstr "Вы хотите отключить выбранные записи?"
+
 msgid "Do you want to enable selected commands?"
 msgstr "Вы уверены, что желаете включить выбранные команды?"
 
@@ -2830,9 +2854,15 @@ msgstr "Вы действительно желаете включить выбр
 msgid "Do you want to enable selected options?"
 msgstr "Вы действительно желаете включить выбранные опции?"
 
+msgid "Do you want to enable selected records?"
+msgstr "Вы хотите включить выбранные записи?"
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Вы хотите установить эту прошивку в любом случае (на свой страх и риск)?"
+
+msgid "Do you want to lock selected records?"
+msgstr "Вы хотите заблокировать выбранные записи?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Вы уверены, что желаете переключить выбранные команды?"
@@ -2842,6 +2872,12 @@ msgstr "Вы действительно желаете изменить сост
 
 msgid "Do you want to toggle selected options?"
 msgstr "Вы действительно желаете изменить состояние выбранных опций?"
+
+msgid "Do you want to toggle selected records?"
+msgstr "Вы хотите инвертировать выбранные записи?"
+
+msgid "Do you want to unlock selected records?"
+msgstr "Вы хотите разблокировать выбранные записи?"
 
 msgid "Document Root"
 msgstr "Корневая папка документов"
@@ -2978,11 +3014,17 @@ msgstr "Редактировать MIB"
 msgid "Edit RAID"
 msgstr "Изменить RAID-массив"
 
+msgid "Edit Record"
+msgstr "Редактировать запись"
+
 msgid "Edit Route"
 msgstr "Редактировать маршрут"
 
 msgid "Edit Rsync job"
 msgstr "Редактировать задание Rsync"
+
+msgid "Edit Share"
+msgstr "Редактировать общий ресурс"
 
 msgid "Edit Snapshot"
 msgstr "Редактирование снимка"
@@ -3139,6 +3181,9 @@ msgstr "Включить выбранные задания"
 
 msgid "Enable Selected Options"
 msgstr "Включить выбранные опции"
+
+msgid "Enable Selected Records"
+msgstr "Включить выбранные записи"
 
 msgid "Enable TLS connections."
 msgstr "Разрешить TLS соединения."
@@ -4974,6 +5019,9 @@ msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 "Место, где будут храниться рабочие файлы, например, %s/backup/.unison"
 
+msgid "Lock Selected Records"
+msgstr "Заблокировать выбранные записи"
+
 msgid "Locked Files"
 msgstr "Заблокированные файлы"
 
@@ -5066,6 +5114,9 @@ msgstr "MIB заблокирован"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB помечен для удаления"
+
+msgid "MIB is unlocked"
+msgstr "MIB разблокирован"
 
 msgid "MIRROR"
 msgstr "ЗЕРКАЛО"
@@ -5612,7 +5663,7 @@ msgid "No Portal Group has been configured."
 msgstr "Ни одна группа порталов не сконфигурирована."
 
 msgid "No RSYNC Client configured."
-msgstr ""
+msgstr "RSYNC Клиент не сконфигурирован."
 
 msgid "No configured Auth Group."
 msgstr "Не сконфигурированы группы аутентификации"
@@ -6179,8 +6230,8 @@ msgstr "Вывод Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "Ping может занять некоторое время, пожалуйста, будьте терпеливы."
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Убедитесь, что winbindd функционирует:"
+msgid "Ping winbindd to see if it is alive"
+msgstr "Ping Winbindd, чтобы увидеть, если он жив"
 
 msgid "Ping/Traceroute"
 msgstr "Команды Ping и Traceroute"
@@ -6592,7 +6643,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "Информация и статус RSYNC клиента"
 
 msgid "RSYNC client number"
-msgstr ""
+msgstr "Номер клиента RSYNC"
 
 msgid "RSYNC events"
 msgstr "События Rsync"
@@ -6667,7 +6718,22 @@ msgstr "Перезагрузка"
 msgid "Receive Buffer"
 msgstr "Буфер приема"
 
+msgid "Record Information"
+msgstr "Информация записи"
+
+msgid "Record Maintenance"
+msgstr "Информация технического обслуживания"
+
 msgid "Record is locked"
+msgstr "Запись заблокирована"
+
+msgid "Record is marked for deletion"
+msgstr "Запись помечена для удаления"
+
+msgid "Record is protected"
+msgstr "Запись защищиена"
+
+msgid "Record is unlocked"
 msgstr "Запись заблокирована"
 
 msgid "Recurse into directories."
@@ -6734,10 +6800,10 @@ msgstr ""
 "основного и дополнительного."
 
 msgid "Remote server address"
-msgstr ""
+msgstr "Адрес удаленного сервера"
 
 msgid "Remote share name configured"
-msgstr ""
+msgstr "Имена удаленных ресурсов сконфигурированы"
 
 msgid "Removable"
 msgstr "Сменный носитель"
@@ -6845,8 +6911,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restricted - Наследовать все, кроме \"записать ACL\" и \"изменить владельца\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Результаты команды net rpc testjoin:"
+msgid "Results for net rpc testjoin"
+msgstr "Результаты тестового подключения RPC"
 
 msgid "Results of last self test"
 msgstr "Результаты последнего теста самодиагностики"
@@ -6892,6 +6958,15 @@ msgstr "Последовательное чтение (round-robin)"
 
 msgid "Roundrobin"
 msgstr "Round-robin"
+
+msgid "Route is marked for deletion"
+msgstr "Маршрут помечен для удаления"
+
+msgid "Route is protected"
+msgstr "Маршрут защищен"
+
+msgid "Route is unlocked"
+msgstr "Маршрут разблокирован"
 
 msgid "Routes"
 msgstr "Маршруты"
@@ -7077,10 +7152,10 @@ msgid "Scheduled Tests"
 msgstr "Запланированные тесты"
 
 msgid "Script"
-msgstr ""
+msgstr "Сценарий"
 
 msgid "Script has been uploaded."
-msgstr ""
+msgstr "Сценарий был загружен."
 
 msgid "Scrub a pool"
 msgstr "Проверка пула (Scrub a pool)"
@@ -7442,6 +7517,15 @@ msgstr "Пароль общего ресурса"
 
 msgid "Share Settings"
 msgstr "Настройки общих ресурсов"
+
+msgid "Share is marked for deletion"
+msgstr "Общий ресурс помечен для удаления"
+
+msgid "Share is protected"
+msgstr "Общий ресурс заблокирован"
+
+msgid "Share is unlocked"
+msgstr "Общий ресурс разблокирован"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Пароли общих ресурсов не могут быть больше 8 символов."
@@ -9535,6 +9619,9 @@ msgstr "Вкл./откл. выбранные задания"
 msgid "Toggle Selected Options"
 msgstr "Вкл./откл. выбранные опции"
 
+msgid "Toggle Selected Records"
+msgstr "Переключение выбранных записей"
+
 msgid "Tolerated"
 msgstr "Допускается"
 
@@ -9863,6 +9950,9 @@ msgstr "Неизвестный размер"
 msgid "Unload"
 msgstr "Выгрузка"
 
+msgid "Unlock Selected Records"
+msgstr "Разблокировать выбранные записи"
+
 msgid "Unmount Disk/Partition"
 msgstr "Размонтировать Диск/Раздел"
 
@@ -9896,7 +9986,7 @@ msgid "Upload Directory"
 msgstr "Каталог для загрузки"
 
 msgid "Upload Script"
-msgstr ""
+msgstr "Загрузить сценарий"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10613,8 +10703,8 @@ msgstr "Информация и статус iSCSI Targets"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "Начальный параметр iSCSI (по умолчанию %d)."
 
-msgid "iSCSI initiator disabled"
-msgstr "Инициатор iSCSI запрещен"
+msgid "iSCSI initiator disabled."
+msgstr "iSCSI инициатор отключен"
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10697,8 +10787,23 @@ msgstr "к"
 msgid "umount"
 msgstr "размонтировать"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Обнаружены удаленные каталоги Rsync"
+#~ msgid "AD authentication disabled"
+#~ msgstr "Идентификация AD отключена"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Нет настроенных клиентов Rsync"
+#~ msgid "Check shared secret:"
+#~ msgstr "Проверьте разделяемый ключ безопасности:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Удалить маршрут"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Вы действительно хотите удалить этот маршрут?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Убедитесь, что winbindd функционирует:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Результаты команды net rpc testjoin:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "Инициатор iSCSI запрещен"

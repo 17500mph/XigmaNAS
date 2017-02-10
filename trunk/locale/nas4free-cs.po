@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -341,8 +341,8 @@ msgstr "Přebírání ACL seznamů"
 msgid "ACL mode"
 msgstr "Režim ACL"
 
-msgid "AD authentication disabled"
-msgstr "Ověřování vůči doméně AD vypnuto"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Název řadiče domény AD nebo hlavního řadiče NT domény (PDC)."
@@ -457,11 +457,17 @@ msgstr "Přidat MIB"
 msgid "Add RAID"
 msgstr "Přidat RAID pole"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Přidat trasu"
 
 msgid "Add Rsync job"
 msgstr "Přidat Rsync úlohu"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Přidat zachycený stav"
@@ -1428,8 +1434,8 @@ msgstr "Před inicializací zkontrolujte Systém | Obecná nastavení"
 msgid "Check and replace cable"
 msgstr "Zkontrolujte a nahraďte kabel"
 
-msgid "Check shared secret:"
-msgstr "Kontrola sdíleného hesla:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2180,9 +2186,6 @@ msgstr "Smazat záznam pro stroj"
 msgid "Delete Login Info"
 msgstr "Smazat údaje o přihlášení"
 
-msgid "Delete Route"
-msgstr "Smazat trasu"
-
 msgid "Delete Rsync job"
 msgstr "Smazat Rsync úlohu"
 
@@ -2206,6 +2209,15 @@ msgstr "Smazat označené fondy"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Smazat označené RAID svazky"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Smazat označené zachycené stavy"
@@ -2502,6 +2514,9 @@ msgstr "Smazat označené úlohy"
 msgid "Disable Selected Options"
 msgstr "Vypnout označené předvolby"
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
 
@@ -2677,9 +2692,6 @@ msgstr "Opravdu chcete smazat tuto skupinu portálů?"
 msgid "Do you really want to delete this resource?"
 msgstr "Chcete opravdu odstranit tento prostředek?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Opravdu chcete odstranit tuto trasu?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Opravdu chcete smazat toto pravidlo?"
 
@@ -2777,6 +2789,15 @@ msgstr "Opravdu smazat označené předvolby?"
 msgid "Do you want to delete selected pools?"
 msgstr "Chcete smazat označené fondy úložišť?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Opravdu chcete smazat označené zachycené stavy?"
 
@@ -2801,6 +2822,9 @@ msgstr "Opravdu vypnout označené úlohy?"
 msgid "Do you want to disable selected options?"
 msgstr "Opravdu vypnout označené předvolby?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2810,8 +2834,14 @@ msgstr "Opravdu zapnout označené úlohy?"
 msgid "Do you want to enable selected options?"
 msgstr "Opravdu zapnout označené předvolby?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Chcete tento firmware nainstalovat i tak (na vlastní riziko)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr ""
@@ -2821,6 +2851,12 @@ msgstr "Opravdu přepnout označené úlohy?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Opravdu přepnout označené předvolby?"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr ""
@@ -2953,11 +2989,17 @@ msgstr "Upravit MIB"
 msgid "Edit RAID"
 msgstr "Upravit RAID pole"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Upravit trasu"
 
 msgid "Edit Rsync job"
 msgstr "Upravit synchronizační (Rsync) úlohu"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Upravit zachycený stav"
@@ -3114,6 +3156,9 @@ msgstr "Zapnout označené úlohy"
 
 msgid "Enable Selected Options"
 msgstr "Zapnout označené předvolby"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Zapnout TLS spojení."
@@ -4938,6 +4983,9 @@ msgstr "Umístění databázového souboru s obsahem."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -5035,6 +5083,9 @@ msgstr "MIB soubor je uzamčený"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB soubor je označen ke smazání"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "ZRCADLO"
@@ -6138,8 +6189,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Ověřit dostupnost procesu služby winbind:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6623,8 +6674,23 @@ msgstr "Restartovat"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Záznam je uzamčený"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Včetně podsložek"
@@ -6801,8 +6867,8 @@ msgstr "Omezené"
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr "Omezené – převzít vše krom „zapsat ACL“ a „změnit vlastníka“"
 
-msgid "Results for net rpc testjoin:"
-msgstr "Výsledek operace net rpc testjoin:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Výsledky minulého samotestu"
@@ -6848,6 +6914,15 @@ msgstr "Čtení algoritmem Round-robin"
 
 msgid "Roundrobin"
 msgstr "Round-Robin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Trasy"
@@ -7377,6 +7452,15 @@ msgid "Share Password"
 msgstr "Heslo pro přístup na sdílení"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -9443,6 +9527,9 @@ msgstr "Přepnout označené úlohy"
 msgid "Toggle Selected Options"
 msgstr "Přepnout označené předvolby"
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerováno"
 
@@ -9767,6 +9854,9 @@ msgstr "Neznámá velikost"
 
 msgid "Unload"
 msgstr "Uvolnit"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr "Odpojit (umount) disk/oddíl"
@@ -10499,8 +10589,8 @@ msgstr "iSCSI cíl – informace a stav"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "počáteční parametr iSCSI (výchozí je %d)."
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI iniciátor vypnut"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10585,8 +10675,23 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Není nastaven žádný RSYNC klient"
+#~ msgid "Delete Route"
+#~ msgstr "Smazat trasu"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Zjištěná RSYNC sdílení na protistraně"
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Výsledek operace net rpc testjoin:"
+
+#~ msgid "AD authentication disabled"
+#~ msgstr "Ověřování vůči doméně AD vypnuto"
+
+#~ msgid "Check shared secret:"
+#~ msgstr "Kontrola sdíleného hesla:"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Opravdu chcete odstranit tuto trasu?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Ověřit dostupnost procesu služby winbind:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI iniciátor vypnut"

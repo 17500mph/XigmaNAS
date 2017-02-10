@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -298,8 +298,8 @@ msgstr "ACL 상속"
 msgid "ACL mode"
 msgstr "ACL 모드"
 
-msgid "AD authentication disabled"
-msgstr "AD 인증이 비활성화 됨"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "AD 또는 PDA 명."
@@ -413,11 +413,17 @@ msgstr "MIB 추가"
 msgid "Add RAID"
 msgstr "RAID 추가"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "라우트 추가"
 
 msgid "Add Rsync job"
 msgstr "Rsync 작업 추가"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr ""
@@ -1322,8 +1328,8 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check shared secret:"
-msgstr "공유된 비밀 check:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -1999,9 +2005,6 @@ msgstr "Host 삭제"
 msgid "Delete Login Info"
 msgstr "로그인 정보 삭제"
 
-msgid "Delete Route"
-msgstr "라우트 삭제"
-
 msgid "Delete Rsync job"
 msgstr "Rsync 작업 삭제"
 
@@ -2024,6 +2027,15 @@ msgid "Delete Selected Pools"
 msgstr ""
 
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
@@ -2310,6 +2322,9 @@ msgstr ""
 msgid "Disable Selected Options"
 msgstr ""
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2469,9 +2484,6 @@ msgstr "정말로 이 포털 그룹을 삭제하시겠습니까?"
 msgid "Do you really want to delete this resource?"
 msgstr ""
 
-msgid "Do you really want to delete this route?"
-msgstr "정말로 이 라우트를 삭제하시겠습니까?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "정말로 이 규칙을 삭제하시겠습니까?"
 
@@ -2562,6 +2574,15 @@ msgstr ""
 msgid "Do you want to delete selected pools?"
 msgstr ""
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
@@ -2586,6 +2607,9 @@ msgstr ""
 msgid "Do you want to disable selected options?"
 msgstr ""
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2595,7 +2619,13 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to lock selected records?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
@@ -2605,6 +2635,12 @@ msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
 msgstr ""
 
 msgid "Document Root"
@@ -2737,11 +2773,17 @@ msgstr "MIB 편집"
 msgid "Edit RAID"
 msgstr "RAID 편집"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "라우트 편집"
 
 msgid "Edit Rsync job"
 msgstr "Rsync 작업 편집"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr ""
@@ -2893,6 +2935,9 @@ msgid "Enable Selected Jobs"
 msgstr ""
 
 msgid "Enable Selected Options"
+msgstr ""
+
+msgid "Enable Selected Records"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -4599,6 +4644,9 @@ msgstr "컨텐츠 데이터베이스 파일이 저장될 위치."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -4686,6 +4734,9 @@ msgid "MIB is locked"
 msgstr ""
 
 msgid "MIB is marked for deletion"
+msgstr ""
+
+msgid "MIB is unlocked"
 msgstr ""
 
 msgid "MIRROR"
@@ -5745,8 +5796,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "살아 있는지 보기 위해 winbindd에 ping:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "ping/traceroute"
@@ -6214,7 +6265,22 @@ msgstr "리붓"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
+msgstr ""
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
 msgstr ""
 
 msgid "Recurse into directories."
@@ -6383,8 +6449,8 @@ msgstr ""
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin:"
-msgstr "net rpc testjoin의 결과:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr ""
@@ -6430,6 +6496,15 @@ msgstr "라운드 로빈 읽기"
 
 msgid "Roundrobin"
 msgstr "라운드 로빈"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "라우트"
@@ -6938,6 +7013,15 @@ msgid "Share Password"
 msgstr "공유 암호"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -8774,6 +8858,9 @@ msgstr ""
 msgid "Toggle Selected Options"
 msgstr ""
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "용인됨"
 
@@ -9077,6 +9164,9 @@ msgstr ""
 
 msgid "Unload"
 msgstr "Unload"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr ""
@@ -9755,8 +9845,8 @@ msgstr ""
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI 초기 인자(기본 값은 %d)."
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI 개시자 비활성화 됨"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -9837,8 +9927,23 @@ msgstr ""
 msgid "umount"
 msgstr "마운트 해제"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "RYSNC 원격 공유 탐지됨"
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD 인증이 비활성화 됨"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "RSYNC 클라이언트가 구성되지 않았음"
+#~ msgid "Check shared secret:"
+#~ msgstr "공유된 비밀 check:"
+
+#~ msgid "Delete Route"
+#~ msgstr "라우트 삭제"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "정말로 이 라우트를 삭제하시겠습니까?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "살아 있는지 보기 위해 winbindd에 ping:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "net rpc testjoin의 결과:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI 개시자 비활성화 됨"

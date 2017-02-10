@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
-"PO-Revision-Date: 2017-02-09 03:25+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"PO-Revision-Date: 2017-02-10 07:29+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -349,8 +349,8 @@ msgstr "ACL overnemen"
 msgid "ACL mode"
 msgstr "ACL modus"
 
-msgid "AD authentication disabled"
-msgstr "AD verificatie is uitgeschakeld"
+msgid "AD authentication disabled."
+msgstr "AD verificatie uitgeschakeld."
 
 msgid "AD or PDC name."
 msgstr "AD of PDC naam."
@@ -451,7 +451,7 @@ msgid "Add"
 msgstr "Toevoegen"
 
 msgid "Add Dataset"
-msgstr "Add Dataset"
+msgstr "Dataset Toevoegen"
 
 msgid "Add Group"
 msgstr "Groep Toevoegen"
@@ -465,11 +465,17 @@ msgstr "MIB toevoegen"
 msgid "Add RAID"
 msgstr "RAID toevoegen"
 
+msgid "Add Record"
+msgstr "Item  Toevoegen"
+
 msgid "Add Route"
 msgstr "Route toevoegen"
 
 msgid "Add Rsync job"
 msgstr "Rsync taak toevoegen"
+
+msgid "Add Share"
+msgstr "Deling Toevoegen"
 
 msgid "Add Snapshot"
 msgstr "Snapshot toevoegen"
@@ -556,7 +562,7 @@ msgid "Add self-test"
 msgstr "Zelf-test toevoegen"
 
 msgid "Add share"
-msgstr "Deelmap toevoegen"
+msgstr "Deling toevoegen"
 
 msgid "Add target"
 msgstr "Doel toevoegen"
@@ -693,8 +699,8 @@ msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
 msgstr ""
-"Alle gedeelde mappen moeten de optie 'usedots' gebruiken waarmee "
-"bestandsnamen .Parent en alles beginnend met .Apple onbruikbaar wordt."
+"Alle delingen gebruiken de optie 'usedots' waardoor de bestandsnamen .Parent "
+"en alles beginnend met .Apple ongeoorloofd is."
 
 msgid "All software raid disks are imported."
 msgstr "Alle software raid schijven zijn geïmporteerd."
@@ -717,8 +723,8 @@ msgstr "Sta werkstations toe tot accounts met een leeg wachtwoord."
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr ""
-"Sta cliënten toe om in OS/2-stijl externe attributen op een gedeeld station "
-"op te slaan."
+"Sta cliënten toe om te proberen OS/2-stijl externe attributen op te slaan in "
+"een deling."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
@@ -737,15 +743,15 @@ msgid ""
 "Allows  certain  users and groups to have read/write access to a share. This "
 "follows the allow option format."
 msgstr ""
-"Sta toe dat bepaalde gebruikers en groepen lees en schrijf rechten hebben op "
-"een gedeelde map. Dit werkt volgens de toegangs opties procedure."
+"Sta toe dat bepaalde gebruikers en groepen lees en schrijf rechten krijgen "
+"tot een deling.  Dit volgt de optie toestaan formaat."
 
 msgid ""
 "Allows certain users and groups to have read-only  access  to  a share. This "
 "follows the allow option format."
 msgstr ""
-"Sta toe dat bepaalde gebruikers en groepen alleen lees rechten hebben op een "
-"gedeelde map. Dit werkt volgens het toegangs opties procede."
+"Sta toe dat bepaalde gebruikers en groepen alleen leesrechten krijgen tot "
+"een deling.  Dit volgt de optie toestaan formaat."
 
 msgid "Allows the server to try and become a local master browser."
 msgstr "Sta toe dat de server de lokale hoofd browser wordt."
@@ -877,7 +883,7 @@ msgid "Any"
 msgstr "Alle"
 
 msgid "Append user defined shares"
-msgstr "Toevoegen van gebruiker gedefinieerde mappen"
+msgstr "Toevoegen gebruiker gedefinieerde delingen"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
@@ -1451,8 +1457,8 @@ msgstr "Controleer Systeem|Algemene Instellingen alvorens te initialiseren"
 msgid "Check and replace cable"
 msgstr "Controleer en vervang de kabel"
 
-msgid "Check shared secret:"
-msgstr "Controleer gedeelde sleutel:"
+msgid "Check shared secret"
+msgstr "Controleer gedeelde sleutel"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -1563,7 +1569,7 @@ msgid "Command is marked for removal"
 msgstr "Opdracht is gemarkeerd voor verwijdering"
 
 msgid "Command is protected"
-msgstr "Opdracht wordt beschermd"
+msgstr "Opdracht is beschermd"
 
 msgid "Command is unlocked"
 msgstr "Opdracht is ontgrendeld"
@@ -2117,7 +2123,7 @@ msgid "Dataset is marked for deletion"
 msgstr "Dataset is gemarkeerd voor verwijdering"
 
 msgid "Dataset is protected"
-msgstr "Dataset wordt beschermd"
+msgstr "Dataset is beschermd"
 
 msgid "Dataset is unlocked"
 msgstr "Dataset is ontgrendeld"
@@ -2234,9 +2240,6 @@ msgstr "Host verwijderen"
 msgid "Delete Login Info"
 msgstr "Verwijder Inlog Info"
 
-msgid "Delete Route"
-msgstr "Route verwijderen"
-
 msgid "Delete Rsync job"
 msgstr "Rsync taak verwijderen"
 
@@ -2260,6 +2263,15 @@ msgstr "Verwijder Geselecteerde Pools"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Verwijder geselecteerde RAID Volumes"
+
+msgid "Delete Selected Records"
+msgstr "Verwijder Geselecteerde Items"
+
+msgid "Delete Selected Routes"
+msgstr "Verwijder Geselecteerde Routes"
+
+msgid "Delete Selected Shares"
+msgstr "Verwijder Geselecteerde Delingen"
 
 msgid "Delete Selected Snapshots"
 msgstr "Verwijder Geselecteerde Snapshots"
@@ -2338,7 +2350,7 @@ msgid "Delete self-test"
 msgstr "Zelf-test verwijderen"
 
 msgid "Delete share"
-msgstr "Gedeeld station verwijderen"
+msgstr "Verwijder deling"
 
 msgid "Delete target"
 msgstr "Doel verwijderen"
@@ -2376,7 +2388,7 @@ msgid "Destination Network"
 msgstr "Bestemmingsnetwerk"
 
 msgid "Destination Share"
-msgstr "Gedeelde Bestemmingsmap"
+msgstr "Bestemming Deling"
 
 msgid "Destination email address."
 msgstr "Bestemmings e-mail adres."
@@ -2558,6 +2570,9 @@ msgstr "Geselecteerde Taken Uitschakelen"
 msgid "Disable Selected Options"
 msgstr "Geselecteerde Opties Uitschakelen"
 
+msgid "Disable Selected Records"
+msgstr "Geselecteerde Items Uitschakelen"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Uitschakelen TCP wrapper (mod_wrap module)."
 
@@ -2646,8 +2661,8 @@ msgstr "Activeer deze optie niet als u een bestaande RAID wilt toevoegen."
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
-"De Master Boot Record niet wissen (nuttig voor sommige RAID "
-"controllerkaarten)."
+"De Master Boot Record niet wissen (nuttig voor sommige RAID-controller "
+"kaarten)."
 
 #, php-format
 msgid ""
@@ -2695,8 +2710,8 @@ msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
 msgstr ""
-"Weet u zeker dat u deze schijf wilt verwijderen? Alle elementen die er "
-"gebruik van maken zullen ongeldig worden. (bijv. gedeelde mappen)!"
+"Weet u zeker dat u deze schijf wilt verwijderen? Alle elementen die er nog "
+"steeds gebruik maken zullen ongeldig worden (bijv. delingen)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Weet u zeker dat u deze extent wilt verwijderen?"
@@ -2712,7 +2727,7 @@ msgid ""
 "will become invalid (e.g. share)!"
 msgstr ""
 "Weet u zeker dat u deze initiator wilt verwijderen? Alle elementen die er "
-"gebruik van maken zullen ongeldig worden (bijv. gedeelde stations)!"
+"nog steeds gebruik maken zullen ongeldig worden (bijv. delingen)!"
 
 msgid "Do you really want to delete this interface?"
 msgstr "Weet u zeker dat u dit netwerk wilt verwijderen?"
@@ -2725,16 +2740,13 @@ msgid ""
 "it will become invalid (e.g. share)!"
 msgstr ""
 "Weet u zeker dat u dit koppelpunt wilt verwijderen? Alle elementen die er "
-"gebruik van maken zullen ongeldig worden (bijv. gedeelde mappen)!"
+"nog steeds gebruik maken zullen ongeldig worden (bijv. delingen)!"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Weet u zeker dat u deze portaal groep wilt verwijderen?"
 
 msgid "Do you really want to delete this resource?"
 msgstr "Weet u zeker dat u deze bron wilt verwijderen?"
-
-msgid "Do you really want to delete this route?"
-msgstr "Weet u zeker dat u deze route wilt verwijderen?"
 
 msgid "Do you really want to delete this rule?"
 msgstr "Weet u zeker dat u deze regel wilt verwijderen?"
@@ -2743,7 +2755,7 @@ msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Weet u zeker dat u deze zelf-test wilt verwijderen?"
 
 msgid "Do you really want to delete this share?"
-msgstr "Weet u zeker dat u dit gedeeld station wilt verwijderen?"
+msgstr "Weet u zeker dat u deze deling wilt verwijderen?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Weet  u zeker dat u dit doel wilt verwijderen?"
@@ -2838,6 +2850,15 @@ msgstr "Wilt u de geselecteerde opties verwijderen?"
 msgid "Do you want to delete selected pools?"
 msgstr "Wilt u de geselecteerde pools verwijderen?"
 
+msgid "Do you want to delete selected records?"
+msgstr "Wilt u de geselecteerde items verwijderen?"
+
+msgid "Do you want to delete selected routes?"
+msgstr "Wilt u de geselecteerde routes verwijderen?"
+
+msgid "Do you want to delete selected shares?"
+msgstr "Wilt u de geselecteerde delingen verwijderen?"
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Wilt u de geselecteerde snapshots verwijderen?"
 
@@ -2857,31 +2878,46 @@ msgid "Do you want to disable selected commands?"
 msgstr "Wilt u geselecteerde opdrachten uitschakelen?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr "Wilt u geselecteerde taken uitschakelen?"
+msgstr "Wilt u de geselecteerde taken uitschakelen?"
 
 msgid "Do you want to disable selected options?"
-msgstr "Wilt u geselecteerde opties uitschakelen?"
+msgstr "Wilt u de geselecteerde opties uitschakelen?"
+
+msgid "Do you want to disable selected records?"
+msgstr "Wilt u de geselecteerde items uitschakelen?"
 
 msgid "Do you want to enable selected commands?"
-msgstr "Wilt u geselecteerde opdrachten inschakelen?"
+msgstr "Wilt u de geselecteerde opdrachten inschakelen?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr "Wilt u geselecteerde taken inschakelen?"
+msgstr "Wilt u de geselecteerde taken inschakelen?"
 
 msgid "Do you want to enable selected options?"
-msgstr "Wilt u geselecteerde opties inschakelen?"
+msgstr "Wilt u de geselecteerde opties inschakelen?"
+
+msgid "Do you want to enable selected records?"
+msgstr "Wilt u de geselecteerde items inschakelen?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Wilt u de firmware toch installeren (Dit is op eigen risico)?"
 
+msgid "Do you want to lock selected records?"
+msgstr "Wilt u de geselecteerde items vergrendelen?"
+
 msgid "Do you want to toggle selected commands?"
-msgstr "Wilt u geselecteerde opdrachten omschakelen?"
+msgstr "Wilt u de geselecteerde opdrachten omschakelen?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr "Wilt u geselecteerde taken omschakelen?"
+msgstr "Wilt u de geselecteerde taken omschakelen?"
 
 msgid "Do you want to toggle selected options?"
-msgstr "Wilt u geselecteerde opties omschakelen?"
+msgstr "Wilt u de geselecteerde opties omschakelen?"
+
+msgid "Do you want to toggle selected records?"
+msgstr "Wilt u de geselecteerde items omschakelen?"
+
+msgid "Do you want to unlock selected records?"
+msgstr "Wilt u de geselecteerde items ontgrendelen?"
 
 msgid "Document Root"
 msgstr "Documentenmap"
@@ -3018,11 +3054,17 @@ msgstr "Bewerk MIB"
 msgid "Edit RAID"
 msgstr "Bewerk RAID"
 
+msgid "Edit Record"
+msgstr "Item Bewerken"
+
 msgid "Edit Route"
 msgstr "Bewerk Route"
 
 msgid "Edit Rsync job"
 msgstr "Rsync taak bewerken"
+
+msgid "Edit Share"
+msgstr "Delingen Bewerken"
 
 msgid "Edit Snapshot"
 msgstr "Snapshot Bewerken"
@@ -3094,7 +3136,7 @@ msgid "Edit self-test"
 msgstr "Zelf-test bewerken"
 
 msgid "Edit share"
-msgstr "Gedeelde map bewerken"
+msgstr "Deling bewerken"
 
 msgid "Edit target"
 msgstr "Doel bewerken"
@@ -3180,6 +3222,9 @@ msgstr "Geselecteerde Taken Inschakelen"
 
 msgid "Enable Selected Options"
 msgstr "Geselecteerde Opties Inschakelen"
+
+msgid "Enable Selected Records"
+msgstr "Geselecteerde Items Inschakelen"
 
 msgid "Enable TLS connections."
 msgstr "Inschakelen TLS verbindingen."
@@ -3823,7 +3868,7 @@ msgstr ""
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
-msgstr "Bestands pad (bijv. /mnt/deelnaam/extent/%s) gebruikt als extent."
+msgstr "Bestandslocatie (bijv. /mnt/deelnaam/extent/%s) gebruikt als omvang."
 
 msgid "File size"
 msgstr "bestands grootte"
@@ -4348,8 +4393,8 @@ msgstr ""
 
 msgid "If allowed, a user of the trusted domains can access the share."
 msgstr ""
-"Indien toegestaan, heeft een gebruiker van de vertrouwde domeinen toegang "
-"tot de netwerkdelingen."
+"Indien toegestaan, een gebruiker van de vertrouwde domeinen kan de deling "
+"benaderen."
 
 msgid ""
 "If default root is enabled, a chroot operation is performed immediately "
@@ -4406,8 +4451,8 @@ msgid ""
 "If this parameter is set, then users may not create or modify files in the "
 "share."
 msgstr ""
-"Wanneer deze parameter is ingevuld, kunnen gebruikers geen bestanden maken "
-"of aanpassen in hun gedeelde omgeving."
+"Wanneer deze parameter is geactiveerd, kunnen gebruikers geen bestanden "
+"maken of aanpassen in de deling."
 
 msgid "If this property is disabled, the file system cannot be mounted."
 msgstr ""
@@ -4989,7 +5034,7 @@ msgid "Local Master Browser"
 msgstr "Lokaal Hoofd Browser"
 
 msgid "Local Share (Destination)"
-msgstr "Lokaal Gedeeld (Bestemming)"
+msgstr "Lokale Deling (Bestemming)"
 
 msgid "Local User"
 msgstr "Lokale gebruiker"
@@ -5005,9 +5050,7 @@ msgstr ""
 "gebouw, Kamer xyz.'."
 
 msgid "Location of the files to share."
-msgstr ""
-"U kunt hier de locatie(s) van de bestanden selecteren om deze gedeeld te "
-"laten worden."
+msgstr "Locatie van de bestanden om te delen."
 
 msgid "Location of the media content database."
 msgstr "Locatie van de media database."
@@ -5022,6 +5065,9 @@ msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 "Locatie waar de werkbestanden zullen worden opgeslagen, bijv. "
 "%s/backup/.unison"
+
+msgid "Lock Selected Records"
+msgstr "Vergrendel Geselecteerde Items"
 
 msgid "Locked Files"
 msgstr "Vergrendelde Bestanden"
@@ -5114,6 +5160,9 @@ msgstr "MIB is vergrendeld"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB is gemarkeerd voor verwijdering"
+
+msgid "MIB is unlocked"
+msgstr "MIB is ontgrendeld"
 
 msgid "MIRROR"
 msgstr "SPIEGEL"
@@ -5602,7 +5651,7 @@ msgid "Network port"
 msgstr "Netwerkpoort"
 
 msgid "Network that is authorised to access the NFS share."
-msgstr "Netwerk adres dat is gemachtigd voor toegang tot de gedeelde NFS."
+msgstr "Netwerk dat gemachtigd is om de NFS deling te benaderen."
 
 msgid "Networks"
 msgstr "Netwerken"
@@ -6177,10 +6226,10 @@ msgid "Path of the URL relative to document root."
 msgstr "Locatie van de URL evenredig aan de document root."
 
 msgid "Path to be shared to be synchronized."
-msgstr "Locatie dat moet worden gedeeld om te worden gesynchroniseerd."
+msgstr "Locatie om te delen zodat deze kan worden gesynchroniseerd."
 
 msgid "Path to be shared."
-msgstr "Locatie dat gedeeld dient te worden."
+msgstr "Locatie om te delen."
 
 #, php-format
 msgid "Path to the local device. (e.g. %s)"
@@ -6232,8 +6281,8 @@ msgstr "Ping Resultaat"
 msgid "Ping may take a while, please be patient."
 msgstr "Ping kan even duren, wees geduldig a.u.b."
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Ping winbindd om te kijken of deze leeft:"
+msgid "Ping winbindd to see if it is alive"
+msgstr "Ping winbindd om te kijken of deze in leven is"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceer Routes"
@@ -6718,8 +6767,23 @@ msgstr "Herstarten"
 msgid "Receive Buffer"
 msgstr "Ontvangst Buffer"
 
+msgid "Record Information"
+msgstr "Item Informatie"
+
+msgid "Record Maintenance"
+msgstr "Item Onderhoud"
+
 msgid "Record is locked"
 msgstr "Apparaat is vergrendeld"
+
+msgid "Record is marked for deletion"
+msgstr "Item is gemarkeerd voor verwijdering"
+
+msgid "Record is protected"
+msgstr "Item wordt beschermd"
+
+msgid "Record is unlocked"
+msgstr "Item is ontgrendeld"
 
 msgid "Recurse into directories."
 msgstr "Recursief naar mappen."
@@ -6788,7 +6852,7 @@ msgid "Remote server address"
 msgstr "Externe server adres"
 
 msgid "Remote share name configured"
-msgstr "Externe deelnaam geconfigureerd"
+msgstr "Geconfigureerd externe deelnaam"
 
 msgid "Removable"
 msgstr "Verwijderbaar"
@@ -6898,7 +6962,7 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restricted - Alle overnemen maar \"ACL schrijven\" en \"eigenaar veranderen\""
 
-msgid "Results for net rpc testjoin:"
+msgid "Results for net rpc testjoin"
 msgstr "Resultaten voor net rpc testjoin:"
 
 msgid "Results of last self test"
@@ -6945,6 +7009,15 @@ msgstr "Round-robin lezen"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr "Route is gemarkeerd voor verwijdering"
+
+msgid "Route is protected"
+msgstr "Route wordt beschermd"
+
+msgid "Route is unlocked"
+msgstr "Route is ontgrendeld"
 
 msgid "Routes"
 msgstr "Route Tabellen"
@@ -7424,7 +7497,7 @@ msgid "Set read only."
 msgstr "Alleen-lezen activeren."
 
 msgid "Set share password."
-msgstr "Stel het deel wachtwoord in."
+msgstr "Vul het delings wachtwoord in."
 
 #, php-format
 msgid ""
@@ -7489,22 +7562,31 @@ msgid "Shadow Copy Format"
 msgstr "Schaduw Kopie Formaat"
 
 msgid "Share"
-msgstr "Gedeelde map"
+msgstr "Deling"
 
 msgid "Share Character Set"
-msgstr "Gedeeld Karakter Reeks"
+msgstr "Deling Karakter Set"
 
 msgid "Share Password"
-msgstr "Gedeeld Wachtwoord"
+msgstr "Deling Wachtwoord"
 
 msgid "Share Settings"
 msgstr "Deel Instellingen"
 
+msgid "Share is marked for deletion"
+msgstr "Deling is gemarkeerd voor verwijdering"
+
+msgid "Share is protected"
+msgstr "Deling is beschermd"
+
+msgid "Share is unlocked"
+msgstr "Deling is ontgrendeld"
+
 msgid "Share passwords can not be more than 8 characters."
-msgstr "Gedeelde wachtwoorden mogen niet langer zijn dan 8 karakters."
+msgstr "Deling wachtwoorden mogen niet langer zijn dan 8 karakters."
 
 msgid "Shares"
-msgstr "Gedeelde mappen"
+msgstr "Delingen"
 
 msgid "Shell"
 msgstr "Shell"
@@ -7640,7 +7722,7 @@ msgid "Source"
 msgstr "Bron"
 
 msgid "Source Share"
-msgstr "Gedeelde Bronmap"
+msgstr "Bron Deling"
 
 msgid "Source directory to be synchronized."
 msgstr "Bronmap die gesynchroniseerd dient te worden."
@@ -7711,8 +7793,8 @@ msgid ""
 "Specifies the share character set. For example UTF8, UTF8-MAC, ISO-8859-15, "
 "etc."
 msgstr ""
-"Specificeert de deel karakter reeks. Als voorbeeld UTF8, UTF8-MAC, ISO-8859-"
-"15, enz."
+"Specificeert de karakter reeks op de deling. Als voorbeeld UTF8, UTF8-MAC, "
+"ISO-8859-15, etc."
 
 msgid "Specifies the time in hh:mm:ss after which the ban expires."
 msgstr ""
@@ -8116,9 +8198,9 @@ msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
 "the share. It follows the same  format  as  the  allow option."
 msgstr ""
-"De afwijs optie specificeert gebruikers en groepen aan wie tot het gedeelde "
-"geen toegang zal worden verleend. Het volgt het zelfde formaat als de "
-"toestaan optie."
+"De afwijs optie specificeert gebruikers en groepen wie het niet toegestaan "
+"is de deling te benaderen. Het volgt het zelfde formaat als de toestaan "
+"optie."
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
@@ -8771,11 +8853,11 @@ msgid ""
 "this. This can be particularly useful on systems with many users to allow a "
 "single share to be used flexibly by each user."
 msgstr ""
-"De toestemmingen op nieuwe bestanden en mappen worden normaal geregeerd door "
-"het creëren van een bestands en mappenmasker maar de hoofd toestemming "
-"overtreed dit. Dit kan op systemen bijzonder nuttig zijn met vele gebruikers "
-"om één enkel te delen bestand toe te laten dat flexibel door elke gebruiker "
-"kan worden gebruikt."
+"De machtigingen op nieuwe bestanden en mappen worden normaal bestuurd door "
+"creëer masker en map masker maar de overneem machtigings parameter "
+"overschrijft dit. Dit kan op systemen bijzonder nuttig zijn met vele "
+"gebruikers om één enkel te delen bestand toe te laten dat flexibel door elke "
+"gebruiker kan worden gebruikt."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -8844,7 +8926,7 @@ msgstr ""
 "serverconfiguratie."
 
 msgid "The share name is already used."
-msgstr "De deelnaam is reeds gebruikt."
+msgstr "De deling naam is reeds gebruikt."
 
 msgid "The size of the swap file in MB."
 msgstr "De grootte van het swap bestand in MB."
@@ -9009,7 +9091,7 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
-msgstr "Deze parameters zijn toegevoegd aan [Share] een sectie van %s."
+msgstr "Deze parameters zijn toegevoegd aan [Deling] een sectie van %s."
 
 msgid ""
 "These parameters are added to the hardware-specific part of the driver for "
@@ -9150,19 +9232,18 @@ msgid "This controls the access a remote host has to this module."
 msgstr "Dit beheerd de toegang een remote host heeft naar deze module."
 
 msgid "This controls the access to this share with an access password."
-msgstr ""
-"Dit beheerd de toegang naar dit gedeeld station met een toegangs wachtwoord."
+msgstr "Dit bestuurd de toegang tot deze deling met een toegangswachtwoord."
 
 msgid "This controls whether this share is accessible by guest account."
 msgstr ""
-"Dit beheerd of het gedeeld station toegankelijk is via een gast account."
+"Dit bestuurd of deze deling kan worden benaderd door een gast account."
 
 msgid ""
 "This controls whether this share is seen in the list of available shares in "
 "a net view and in the browse list."
 msgstr ""
-"Dit bepaalt of de gedeelde map zichtbaar is in de lijst van beschikbare "
-"gedeelde mappen in het netwerkoverzicht."
+"Dit bestuurd of de deling zichtbaar is in de lijst van beschikbare delingen "
+"in het netwerkoverzicht en in de blader lijst."
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "De combinatie doelnaam/doeladres bestaat reeds in de schijf lijst."
@@ -9235,9 +9316,9 @@ msgid ""
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
 msgstr ""
-"Deze optie staat de gebruikers en de groepen toe die tot een te specificeren "
-"deling toegang hebben. De gebruikers en de groepen worden gespecificeerd, "
-"afgebakend door komma's. De groepen worden aangewezen door een @ voorvoegsel."
+"Deze optie staat de gebruikers en de groepen toe om de deling te benaderen "
+"en te specificeren. Gebruikers en groepen worden gespecificeerd, afgebakend "
+"door komma's. Groepen worden aangewezen door een @ voorvoegsel."
 
 msgid ""
 "This option allows you to set the file system of already formatted disks "
@@ -9301,12 +9382,12 @@ msgid ""
 "Leave this field empty to use default settings."
 msgstr ""
 "Deze optie is een komma, spatie, of met een tab afgebakende reeks van hosten "
-"die NIET worden toegelaten om toegang tot dit gedeelde te hebben. Waar de "
-"lijst conflicten geeft, zal de toestaan lijst belangrijk zijn. In het geval "
-"dat het noodzakelijk is om allen te weigeren, gebruik het sleutelwoord ALL "
-"(of de netmask 0.0.0.0/0) en specificeer uitdrukkelijk aan de host de "
-"toestaan parameter die aan deze hosten toegang zouden moeten worden "
-"verleend. laat dit gebied leeg om de standaard waarden te gebruiken."
+"die NIET zijn toegestaan om de deling te benaderen. Waar de lijst conflicten "
+"geeft, zal de lijst toestaan belangrijk zijn. In het geval dat noodzakelijk "
+"is om standaard alles te weigeren, gebruik het sleutelwoord ALL (of de "
+"netmask 0.0.0.0/0) en specificeer uitdrukkelijk aan de host de toestaan "
+"parameter die aan deze hosten toegang moeten worden verleend. laat dit "
+"gebied leeg om de standaard waarden te gebruiken."
 
 msgid ""
 "This option is a comma, space, or tab delimited set of hosts which are "
@@ -9324,9 +9405,9 @@ msgid ""
 "number. Leave this field empty to use default settings."
 msgstr ""
 "Deze optie is een komma, een spatie, of met een tab afgebakende reeks hosten "
-"die zijn toegestaan om tot dit gedeelde toegang te hebben. U kunt de "
-"specifieke hosten opgeven met een hostnaam of IP-nummer. Laat dit veld leeg "
-"om de standaard waarde te gebruiken."
+"die zijn toegestaan om de deling te benaderen. U kunt de specifieke hosten "
+"opgeven met een hostnaam of IP-nummer. Laat dit veld leeg om de "
+"standaardwaarde te gebruiken."
 
 msgid ""
 "This option specifies the group name or group ID that file transfers to and "
@@ -9491,7 +9572,7 @@ msgstr ""
 "producten."
 
 msgid "This will create a recycle bin on the share."
-msgstr "Dit creëert een prullenbak op het gedeeld station."
+msgstr "Dit creëert een prullenbak op de deling."
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -9634,6 +9715,9 @@ msgstr "Schakel Geselecteerde Taken"
 
 msgid "Toggle Selected Options"
 msgstr "Schakel Geselecteerde Opties"
+
+msgid "Toggle Selected Records"
+msgstr "Omschakelen Geselecteerde Items"
 
 msgid "Tolerated"
 msgstr "Toelaten"
@@ -9960,6 +10044,9 @@ msgstr "Onbekende grootte"
 msgid "Unload"
 msgstr "Verwijder"
 
+msgid "Unlock Selected Records"
+msgstr "Ontgrendel Geselecteerde Items"
+
 msgid "Unmount Disk/Partition"
 msgstr "Ontkoppel Schijf/Partitie"
 
@@ -10118,7 +10205,7 @@ msgid "User Settings"
 msgstr "Gebruikersinstellingen"
 
 msgid "User Shares"
-msgstr "Gebruiker Gedeelde Mappen"
+msgstr "Gebruiker Delingen"
 
 msgid "User Suffix"
 msgstr "Gebruiker Suffix"
@@ -10326,7 +10413,7 @@ msgid "WPA-EAP (Extensible Authentication Protocol)"
 msgstr "WPA-EAP (Extensible Authentication Protocol)"
 
 msgid "WPA-PSK (Pre Shared Key)"
-msgstr "WPA-PSK (Pre Shared Key)"
+msgstr "WPA-PSK (Pre-Shared Key)"
 
 msgid "WPA-PSK WPA-EAP"
 msgstr "WPA-PSK WPA-EAP"
@@ -10707,7 +10794,7 @@ msgstr "iSCSI Doelen Informatie & Status"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI initiële parameter (standaard %d)."
 
-msgid "iSCSI initiator disabled"
+msgid "iSCSI initiator disabled."
 msgstr "iSCSI initiator is uitgeschakeld"
 
 msgid "iTunes/DAAP"
@@ -10789,8 +10876,23 @@ msgstr "naar"
 msgid "umount"
 msgstr "loskoppelen"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Gedetecteerde RSYNC remote mappen"
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD verificatie is uitgeschakeld"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Er is geen RSYNC cliënt geconfigureerd"
+#~ msgid "Check shared secret:"
+#~ msgstr "Controleer gedeelde sleutel:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Route verwijderen"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Weet u zeker dat u deze route wilt verwijderen?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Ping winbindd om te kijken of deze leeft:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Resultaten voor net rpc testjoin:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI initiator is uitgeschakeld"
