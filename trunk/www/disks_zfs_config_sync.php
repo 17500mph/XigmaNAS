@@ -523,11 +523,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				<th class="lhebl"><?=gtext('AltRoot');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="11"></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
 				<tr>
@@ -545,8 +540,12 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="11"></td>
+			</tr>
+		</tfoot>
 	</table>
-
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
@@ -565,11 +564,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				<th class="lhebl"><?=gtext('Devices');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<th class="lcenl" colspan="5"></th>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['vdevices']['vdevice'] as $key => $vdevice):?>
 				<tr>
@@ -581,8 +575,12 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="5"></th>
+			</tr>
+		</tfoot>
 	</table>
-					
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
@@ -621,11 +619,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				<th class="lhebl"><?=gtext('Snapshot Visibility');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="12"></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['datasets']['dataset'] as $dataset):?>
 				<tr>
@@ -647,6 +640,11 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="12"></td>
+			</tr>
+		</tfoot>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
@@ -674,11 +672,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				<th class="lhebl"><?=gtext('Sync');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="8"></td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($zfs['volumes']['volume'] as $volume):?>
 				<tr>
@@ -694,6 +687,11 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="8"></td>
+			</tr>
+		</tfoot>
 	</table>
 	<table class="area_data_settings">
 		<colgroup>

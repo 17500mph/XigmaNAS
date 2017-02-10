@@ -276,9 +276,6 @@ function controlactionbuttons(ego, triggerbyname) {
 				<td class="lhebl"><?=gtext('Toolbox');?></td>
 			</tr>
 		</thead>
-		<tfoot>
-			<?=html_row_add($sphere_scriptname_child,$gt_record_add,11);?>
-		</tfoot>
 		<tbody>
 			<?php foreach ($sphere_array as $sphere_record):?>
 				<?php
@@ -344,6 +341,9 @@ function controlactionbuttons(ego, triggerbyname) {
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<?=html_row_add($sphere_scriptname_child,$gt_record_add,11);?>
+		</tfoot>
 	</table>
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>

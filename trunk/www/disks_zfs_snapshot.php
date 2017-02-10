@@ -337,14 +337,6 @@ function controlactionbuttons(ego, triggerbyname) {
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="5"></td>
-				<td class="lceadd">
-					<a href="disks_zfs_snapshot_add.php"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add?>" border="0" alt="<?=gt_record_add;?>"/></a>
-				</td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<?php foreach ($sphere_array as $sphere_record):?>
 				<?php
@@ -391,6 +383,14 @@ function controlactionbuttons(ego, triggerbyname) {
 				</tr>
 			<?php endforeach;?>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="5"></td>
+				<td class="lceadd">
+					<a href="disks_zfs_snapshot_add.php"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add?>" border="0" alt="<?=gt_record_add;?>"/></a>
+				</td>
+			</tr>
+		</tfoot>
 	</table>
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
