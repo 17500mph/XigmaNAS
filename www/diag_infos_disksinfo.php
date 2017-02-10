@@ -36,8 +36,8 @@ require 'guiconfig.inc';
 
 $a_disk = &array_make_branch($config,'disks','disk');
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 			<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
@@ -62,10 +62,10 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<?php if(empty($a_disk)):?>
-		<?php
+<?php
+	if(empty($a_disk)):
 		print_info_box(gtext('No disks configured, please add disks to view diagnostic information!'));
-		?>
+?>
 		<table class="area_data_settings">
 			<colgroup>
 				<col class="area_data_settings_col_tag">
@@ -75,20 +75,31 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
 				<?php html_titleline2(gtext('Disks (Info) Information'));?>
 			</thead>
 		</table>
-	<?php else:?>
-		<?php foreach($a_disk as $diskk => $diskv):?>
-			<?php
-			?>
+<?php
+	else:
+?>
+
+<?php
+		$do_seperator = false;
+		foreach($a_disk as $diskk => $diskv):
+?>
 			<table class="area_data_settings">
 				<colgroup>
 					<col class="area_data_settings_col_tag">
 					<col class="area_data_settings_col_data">
 				</colgroup>
 				<thead>
-					<?php html_titleline2(sprintf(gtext("Device /dev/%s - %s"),$diskv['name'],$diskv['desc']));?>
+<?php
+					if($do_seperator):
+						html_separator2();
+					else:
+						$do_seperator = true;
+					endif;
+					html_titleline2(sprintf(gtext("Device /dev/%s - %s"),$diskv['name'],$diskv['desc']));
+?>
 				</thead>
 				<tbody>
-					<?php
+<?php
 					exec(sprintf('diskinfo -v %s', escapeshellarg($diskv['devicespecialfile'])),$rawdata);
 					$rawdata = array_slice($rawdata,1); // remove first line
 					foreach($rawdata as $line):
@@ -101,10 +112,14 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
 						endif;
 					endforeach;
 					unset($rawdata);
-					?>
+?>
 				</tbody>
 			</table>
-		<?php endforeach;?>
-	<?php endif;?>
+<?php
+		endforeach;
+endif;
+?>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
