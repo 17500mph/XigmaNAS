@@ -242,6 +242,69 @@ class co_sphere_grid extends co_sphere_scriptname {
 		endif;
 		return $this->_sym_mdn ?? gtext('Move down');
 	}
+	public function doj() {
+		$output = [];
+		$output[] = '<script type="text/javascript">';
+		$output[] = '//<![CDATA[';
+		$output[] = '$(window).on("load", function() {';
+		//	Init action buttons.
+		if($this->enadis()):
+			if($this->toggle()):
+				$output[] = "\t" . '$("#toggle_selected_rows").click(function () {';
+				$output[] = "\t\t" . 'return confirm("' . $this->cbm_toggle_confirm() . '");';
+				$output[] = "\t" . '});';
+			else:
+				$output[] = "\t" . '$("#enable_selected_rows").click(function () {';
+				$output[] = "\t\t" . 'return confirm("' . $this->cbm_enable_confirm() . '");';
+				$output[] = "\t" . '});';
+				$output[] = "\t" . '$("#disable_selected_rows").click(function () {';
+				$output[] = "\t\t" . 'return confirm("' . $this->cbm_disable_confirm() . '");';
+				$output[] = "\t" . '});';
+			endif;
+		endif;
+		$output[] = "\t" . '$("#delete_selected_rows").click(function () {';
+		$output[] = "\t\t" . 'return confirm("' . $this->cbm_delete_confirm() . '");';
+		$output[] = "\t" . '});';
+		//	Disable action buttons.
+		$output[] = "\t" . 'ab_disable(true);';
+		//	Init toggle checkbox.
+		$output[] = "\t" . '$("#togglemembers").click(function() {';
+		$output[] = "\t\t" . 'cb_tbn(this,"' . $this->cbm_name . '[]");';
+		$output[] = "\t" . '});';
+		//	Init member checkboxes.
+		$output[] = "\t" . '$("input[name=\'' . $this->cbm_name . '[]\']").click(function() {';
+		$output[] = "\t\t" . 'ab_control(this,"' . $this->cbm_name . '[]");';
+		$output[] = "\t" . '});';
+		//	Init spinner.
+		$output[] = "\t" . '$("#iform").submit(function() { spinner(); });';
+		$output[] = "\t" . '$(".spin").click(function() { spinner(); });';
+		$output[] = '});';
+		$output[] = 'function ab_disable(flag) {';
+		if($this->enadis()):
+			if($this->toggle()):
+				$output[] = "\t" . '$("#toggle_selected_rows").prop("disabled",flag);';
+			else:
+				$output[] = "\t" . '$("#enable_selected_rows").prop("disabled",flag);';
+				$output[] = "\t" . '$("#disable_selected_rows").prop("disabled",flag);';
+			endif;
+		endif;
+		$output[] = "\t" . '$("#delete_selected_rows").prop("disabled",flag);';
+		$output[] = '}';
+		$output[] = 'function cb_tbn(ego,tbn) {';
+		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
+		$output[] = "\t" . 'cba.prop("checked", function(_, checked) { return !checked; });';
+		$output[] = "\t" . 'ab_disable(1 > cba.filter(":checked").length);';
+		$output[] = "\t" . 'ego.checked = false;';
+		$output[] = '}';
+		$output[] = 'function ab_control(ego,tbn) {';
+		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
+		$output[] = "\t" . 'ab_disable(1 > cba.filter(":checked").length);';
+		$output[] = '}';
+		$output[] = '//]]>';
+		$output[] = '</script>';
+		$output[] = '';
+		return implode("\n",$output);
+	}
 }
 class co_sphere_scriptname {
 	protected $_basename = NULL;
