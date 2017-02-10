@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
-"PO-Revision-Date: 2017-02-08 14:56+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"PO-Revision-Date: 2017-02-09 11:27+0000\n"
+"Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -341,8 +341,8 @@ msgstr "ACL mostenit"
 msgid "ACL mode"
 msgstr "mod ACL"
 
-msgid "AD authentication disabled"
-msgstr "Autentificare AD dezactivată"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Nume AD sau PDC."
@@ -456,11 +456,17 @@ msgstr "Adăugare MIB"
 msgid "Add RAID"
 msgstr "Adăugare RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Adăugare Rută"
 
 msgid "Add Rsync job"
 msgstr "Adăugare sarcină Rsync"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Adăugare Snapshot"
@@ -1431,8 +1437,8 @@ msgstr "Verifică Sistem|Setări Generale înainte de inițializare"
 msgid "Check and replace cable"
 msgstr "Verificați și înlocuiți cablul"
 
-msgid "Check shared secret:"
-msgstr "Verificare secret partajat:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2217,9 +2223,6 @@ msgstr "Ștergere Sistem"
 msgid "Delete Login Info"
 msgstr "Ștergere date de autentificare"
 
-msgid "Delete Route"
-msgstr "Ștergere Rută"
-
 msgid "Delete Rsync job"
 msgstr "Ștergere activitate Rsync"
 
@@ -2243,6 +2246,15 @@ msgstr "Ștergere Structuri pool selectate"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Ștergere volume RAID selectate"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Ștergere Snapshot-uri selectate"
@@ -2412,13 +2424,13 @@ msgid "Detected Language:"
 msgstr "Detecție limbă:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Partajări RSYNC Remote detectate"
 
 msgid "Detected an error while importing."
 msgstr "Eroare detectata in timpul importarii."
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Partajări detectate în acest server"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2538,6 +2550,9 @@ msgstr "Dezactivare activitîți selectate"
 
 msgid "Disable Selected Options"
 msgstr "Dezactivare opțiuni selectate"
+
+msgid "Disable Selected Records"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Dezactivare wrapper TCP (modul mod_wrap)."
@@ -2709,9 +2724,6 @@ msgstr "Doriți să ștergeți acest grup portal?"
 msgid "Do you really want to delete this resource?"
 msgstr "Doriți să ștergeți această resursă?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Doriți să ștergeți această rută?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Doriți să ștergeți această regulă?"
 
@@ -2807,6 +2819,15 @@ msgstr "Ștergeți opțiunile selectate?"
 msgid "Do you want to delete selected pools?"
 msgstr "Ștergeți structurile pool selectate?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Ștergeți snapshot-urile selectate?"
 
@@ -2831,6 +2852,9 @@ msgstr "Dezactivați activitățile selectate?"
 msgid "Do you want to disable selected options?"
 msgstr "Dezactivați opțiunile selectate?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Activați comenzile selectate?"
 
@@ -2840,8 +2864,14 @@ msgstr "Activați activitățile selectate?"
 msgid "Do you want to enable selected options?"
 msgstr "Activați opțiunile selectate?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Instalați oricum acest firmware (pe riscul dumneavoastră)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Schimbați starea comenzilor selectate?"
@@ -2851,6 +2881,12 @@ msgstr "Inversați activitățile selectate?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Inversați opțiunile selectate?"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr "Root documente"
@@ -2984,11 +3020,17 @@ msgstr "Editare MIB"
 msgid "Edit RAID"
 msgstr "Editare RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Editare Rută"
 
 msgid "Edit Rsync job"
 msgstr "Editare activitate Rsync"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Editare snapshot"
@@ -3145,6 +3187,9 @@ msgstr "Activare activități selectate"
 
 msgid "Enable Selected Options"
 msgstr "Activare opțiuni selectate"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Activare conexiuni TLS."
@@ -4842,7 +4887,7 @@ msgstr ""
 
 #, php-format
 msgid "Latest Beta Release: %s"
-msgstr ""
+msgstr "Ultuma versiune beta: %s"
 
 #, php-format
 msgid "Latest Release: %s"
@@ -4982,6 +5027,9 @@ msgstr "Locația unde va fi stocată baza de date."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr "Locația unde sunt stocate fișierele, ex. %s/backup/.unison"
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr "Fișiere blocate"
 
@@ -5073,6 +5121,9 @@ msgstr "MIB blocat"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB marcat pentru ștergere"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -5613,7 +5664,7 @@ msgid "No Portal Group has been configured."
 msgstr "Niciun Grup portal nu a fost configurat."
 
 msgid "No RSYNC Client configured."
-msgstr ""
+msgstr "Nu există niciun client RSYNC configurat."
 
 msgid "No configured Auth Group."
 msgstr "Niciun Grup Auth nu a fost configurat."
@@ -6180,8 +6231,8 @@ msgstr "Ieșire comandă ping"
 msgid "Ping may take a while, please be patient."
 msgstr "Comanda ping poate dura un timp."
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Verificare (Ping) winbindd:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6596,7 +6647,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "Informații client & Stare RSYNC"
 
 msgid "RSYNC client number"
-msgstr ""
+msgstr "Număr client RSYNC"
 
 msgid "RSYNC events"
 msgstr "Evenimente RSYNC"
@@ -6671,8 +6722,23 @@ msgstr "Repornire"
 msgid "Receive Buffer"
 msgstr "Bufer recepție"
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Înregistrare blocată"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Mod Recursiv foldere."
@@ -6738,10 +6804,10 @@ msgstr ""
 "nume și pentru sistemul master și pentru cel slave."
 
 msgid "Remote server address"
-msgstr ""
+msgstr "Adresă server remote"
 
 msgid "Remote share name configured"
-msgstr ""
+msgstr "Nume configurat partajare remote"
 
 msgid "Removable"
 msgstr "Detașabil"
@@ -6851,8 +6917,8 @@ msgstr ""
 "Resticționat - Moștenire în afară de \"scriere ACL\" și \"modificare "
 "proprietar\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Rezultat testjoin net rpc:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Rezultatul ultimului autotest"
@@ -6898,6 +6964,15 @@ msgstr "Citire Round-robin"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Rute"
@@ -7084,10 +7159,10 @@ msgid "Scheduled Tests"
 msgstr "Teste programate"
 
 msgid "Script"
-msgstr ""
+msgstr "Script"
 
 msgid "Script has been uploaded."
-msgstr ""
+msgstr "Scriptul a fost încărcat."
 
 msgid "Scrub a pool"
 msgstr "Curățare pool"
@@ -7448,6 +7523,15 @@ msgstr "Parolă Partajare"
 
 msgid "Share Settings"
 msgstr "Setări partajare"
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Parola pentru partajare nu poate fi mai mare de 8 caractere."
@@ -9540,6 +9624,9 @@ msgstr "Inversare activități selectate."
 msgid "Toggle Selected Options"
 msgstr "Inversare opțiuni selectate."
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerat"
 
@@ -9862,6 +9949,9 @@ msgstr "Dimensiune necunoscută"
 msgid "Unload"
 msgstr "Descărcare"
 
+msgid "Unlock Selected Records"
+msgstr ""
+
 msgid "Unmount Disk/Partition"
 msgstr "Demontare Disc/Partiție"
 
@@ -9894,7 +9984,7 @@ msgid "Upload Directory"
 msgstr "Director de încărcare"
 
 msgid "Upload Script"
-msgstr ""
+msgstr "Încărcare script"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10612,8 +10702,8 @@ msgstr "Informații & Stare destinații iSCSI"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "Parametru inițial iSCSI (iniţial %d)."
 
-msgid "iSCSI initiator disabled"
-msgstr "Inițiator iSCSI dezactivat"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10694,8 +10784,23 @@ msgstr "către"
 msgid "umount"
 msgstr "demontare"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Niciun client RSYNC configurat"
+#~ msgid "AD authentication disabled"
+#~ msgstr "Autentificare AD dezactivată"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Partajări RSYNC la distanță detectate"
+#~ msgid "Check shared secret:"
+#~ msgstr "Verificare secret partajat:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Ștergere Rută"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Doriți să ștergeți această rută?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Verificare (Ping) winbindd:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Rezultat testjoin net rpc:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "Inițiator iSCSI dezactivat"

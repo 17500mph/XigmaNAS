@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
-"PO-Revision-Date: 2017-02-08 14:57+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"PO-Revision-Date: 2017-02-09 08:47+0000\n"
+"Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -354,8 +354,8 @@ msgstr "Κληρονόμηση ACL"
 msgid "ACL mode"
 msgstr "Λειτουργία ACL"
 
-msgid "AD authentication disabled"
-msgstr "Η πιστοποίηση AD απενεργοποιήθηκε"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "όνομα AD ή PCD."
@@ -470,11 +470,17 @@ msgstr "Προσθήκη MIB"
 msgid "Add RAID"
 msgstr "Προσθήκη RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Προσθήκη Διαδρομής"
 
 msgid "Add Rsync job"
 msgstr "Προσθήκη εργασίας Rsync"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Προσθήκη Στιγμιότυπου"
@@ -1464,8 +1470,8 @@ msgstr "Ελέγξτε το Σύστημα|Γενικές Ρυθμίσεις π�
 msgid "Check and replace cable"
 msgstr "Ελέγξτε και αντικαταστήστε το καλώδιο"
 
-msgid "Check shared secret:"
-msgstr "Επαλήθευση κοινόχρηστου συνθηματικού:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2257,9 +2263,6 @@ msgstr "Διαγραφή υπολογιστή"
 msgid "Delete Login Info"
 msgstr "Διαγραφή πληροφοριών εισόδου"
 
-msgid "Delete Route"
-msgstr "Διαγραφή Διαδρομής"
-
 msgid "Delete Rsync job"
 msgstr "Διαγραφή εργασίας Rsync"
 
@@ -2283,6 +2286,15 @@ msgstr "Διαγραφή Επιλεγμένων Pool"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Διαγραφή Επιλεγμένων τόμων RAID"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Διαγραφή Επιλεγμένων Στιγμιότυπων"
@@ -2456,13 +2468,13 @@ msgid "Detected Language:"
 msgstr "Γλώσσα που ανιχνεύθηκε:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Εντοπισμένα Απομακρυσμένα Κοινόχρηστα RSYNC"
 
 msgid "Detected an error while importing."
 msgstr "Ανιχνεύθηκε ένα σφάλμα κατά τη διαδικασία της εισαγωγής."
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Ανιχνευμένα Κοινόχρηστα σε αυτόν τον διακομιστή"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2581,6 +2593,9 @@ msgstr "Απενεργοποίηση Επιλεγμένων Εργασιών"
 
 msgid "Disable Selected Options"
 msgstr "Απενεργοποίηση Επιλεγμένων Επιλογών"
+
+msgid "Disable Selected Records"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Απενεργοποίηση TCP wrapper (άρθρωμα mod_wrap)."
@@ -2758,9 +2773,6 @@ msgstr "Θέλτε σίγουρα να διαγράψετε αυτή την ομ
 msgid "Do you really want to delete this resource?"
 msgstr "Θέλετε πραγματικά να διαγράψετε αυτό τον πόρο;"
 
-msgid "Do you really want to delete this route?"
-msgstr "Θέλετε πράγματι να διαγράψετε αυτήν τη διαδρομή;"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Θέλετε σίγουρα να διαγράψετε αυτό τον κανόνα;"
 
@@ -2864,6 +2876,15 @@ msgstr "Θέλετε να διαγράψετε τις επιλεγμένες ε�
 msgid "Do you want to delete selected pools?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα pool;"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα στιγμιότυπα;"
 
@@ -2888,6 +2909,9 @@ msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμ
 msgid "Do you want to disable selected options?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες επιλογές;"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εντολές;"
 
@@ -2897,10 +2921,16 @@ msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμέν
 msgid "Do you want to enable selected options?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες επιλογές;"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Θέλετε να εγκαταστήσετε αυτό το υλικολογισμικό ούτως ή άλλως (με δικό σας "
 "ρίσκο);"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Θέλετε να γίνει εναλλαγή των επιλεγμένων εντολών;"
@@ -2910,6 +2940,12 @@ msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες ε�
 
 msgid "Do you want to toggle selected options?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr "Ριζικός Κατάλογος αρχείων"
@@ -3047,11 +3083,17 @@ msgstr "Επεξεργασία MIB"
 msgid "Edit RAID"
 msgstr "Επεξεργασία RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Επεξεργασία Διαδρομής"
 
 msgid "Edit Rsync job"
 msgstr "Επεξεργασία εργασίας Rsync"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Επεξεργασία Στιγμιότυπου"
@@ -3208,6 +3250,9 @@ msgstr "Ενεργοποίηση Επιλεγμένων Εργασιών"
 
 msgid "Enable Selected Options"
 msgstr "Ενεργοποίηση Επιλεγμένων Επιλογών"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Ενεργοποίηση συνδέσεων TLS."
@@ -4930,7 +4975,7 @@ msgstr ""
 
 #, php-format
 msgid "Latest Beta Release: %s"
-msgstr ""
+msgstr "Τελευταία Δομικαστική Έκδοση: %s"
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5076,6 +5121,9 @@ msgstr ""
 "Τοποθεσία στην οποία θα αποθηκεύονται τα αρχεία εργασίας, π.χ. "
 "%s/backup/.unison"
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr "Κλειδωμένα Αρχεία"
 
@@ -5167,6 +5215,9 @@ msgstr "Το ΜΙΒ είναι κλειδωμένο"
 
 msgid "MIB is marked for deletion"
 msgstr "To MIB έχει σημειωθεί προς διαγραφή"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -5714,7 +5765,7 @@ msgid "No Portal Group has been configured."
 msgstr "Δεν έχει ρυθμιστεί κάποια Ομάδα Portal"
 
 msgid "No RSYNC Client configured."
-msgstr ""
+msgstr "Δε ρυθμίστηκε Πελάτης RSYNC."
 
 msgid "No configured Auth Group."
 msgstr "Δεν υπάρχει ρυθμισμένη Ομάδα Πιστοποίησης."
@@ -6290,8 +6341,8 @@ msgstr "Έξοδος Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "Το ping μπορεί να διαρκέσει λίγο, παρακαλώ κάντε υπομονή."
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Εκτελέστε ping winbindd για να δείτε αν είναι σε λειτουργία:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6706,7 +6757,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "Πληροφορίες & Κατάσταση Πελάτη RSYNC"
 
 msgid "RSYNC client number"
-msgstr ""
+msgstr "Αριθμός πελάτη RSYNC"
 
 msgid "RSYNC events"
 msgstr "Συμβάντα RSYNC"
@@ -6782,8 +6833,23 @@ msgstr "Επανεκκίνηση"
 msgid "Receive Buffer"
 msgstr "Buffer Λήψης"
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Η εγγραφή είναι κλειδωμένη"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Συμπερίληψη και των υποκαταλόγων"
@@ -6849,10 +6915,10 @@ msgstr ""
 "master και στο slave σύστημα."
 
 msgid "Remote server address"
-msgstr ""
+msgstr "Διεύθυνση απομακρυσμένου διακομιστή"
 
 msgid "Remote share name configured"
-msgstr ""
+msgstr "Ρυθμισμένο όνομα απομακρυσμένου κοινόχρηστου"
 
 msgid "Removable"
 msgstr "Αφαιρούμενο μέσο"
@@ -6963,8 +7029,8 @@ msgstr ""
 "Restricted -Κληρονόμησε τα πάντα εκτός από τα \"write ACL\" και \"change "
 "owner\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Αποτελέσματα του net rpc testjoin:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Αποτελέσματα του τελευταίου αυτοδιαγνωστικού"
@@ -7010,6 +7076,15 @@ msgstr "Ανάγνωση Round-robin"
 
 msgid "Roundrobin"
 msgstr "Round-robin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Δρομολόγηση δικτύου"
@@ -7199,10 +7274,10 @@ msgid "Scheduled Tests"
 msgstr "Χρονοπρογραμματισμένες Δοκιμές"
 
 msgid "Script"
-msgstr ""
+msgstr "Script"
 
 msgid "Script has been uploaded."
-msgstr ""
+msgstr "Το script έχει μεταφορτωθεί"
 
 msgid "Scrub a pool"
 msgstr "Scrub ενός pool"
@@ -7571,6 +7646,15 @@ msgstr "Κωδικός κοινόχρηστου"
 
 msgid "Share Settings"
 msgstr "Ρυθμίσεις Κοινόχρηστου"
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr ""
@@ -9759,6 +9843,9 @@ msgstr "Εναλλαγή Επιλεγμένων Εργασιών"
 msgid "Toggle Selected Options"
 msgstr "Εναλλαγή Επιλεγμένων Επιλογών"
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Ανεκτή"
 
@@ -10087,6 +10174,9 @@ msgstr "Άγνωστο μέγεθος"
 msgid "Unload"
 msgstr "Ξεφόρτωμα"
 
+msgid "Unlock Selected Records"
+msgstr ""
+
 msgid "Unmount Disk/Partition"
 msgstr "Αποπροσάρτηση Δίσκου/Κατάτμησης"
 
@@ -10120,7 +10210,7 @@ msgid "Upload Directory"
 msgstr "Φάκελος Ανεβάσματος"
 
 msgid "Upload Script"
-msgstr ""
+msgstr "Μεταφόρτωση Script"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10849,8 +10939,8 @@ msgstr "Πληροφορίες και Κατάσταση Προορισμών iS
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "αρχική παράμετρος iSCSI  (% d από προεπιλογή)."
 
-msgid "iSCSI initiator disabled"
-msgstr "O εκκινητής iSCSI απενεργοποιήθηκε"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10931,8 +11021,23 @@ msgstr "σε"
 msgid "umount"
 msgstr "αποπροσάρτηση"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Εντοπισμένα απομακρυσμένα κοινόχρηστα RSYNC"
+#~ msgid "AD authentication disabled"
+#~ msgstr "Η πιστοποίηση AD απενεργοποιήθηκε"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Δε ρυθμίστηκε Πελάτης RSYNC"
+#~ msgid "Check shared secret:"
+#~ msgstr "Επαλήθευση κοινόχρηστου συνθηματικού:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Διαγραφή Διαδρομής"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Θέλετε πράγματι να διαγράψετε αυτήν τη διαδρομή;"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Εκτελέστε ping winbindd για να δείτε αν είναι σε λειτουργία:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Αποτελέσματα του net rpc testjoin:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "O εκκινητής iSCSI απενεργοποιήθηκε"

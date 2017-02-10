@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -303,8 +303,8 @@ msgstr ""
 msgid "ACL mode"
 msgstr ""
 
-msgid "AD authentication disabled"
-msgstr "AD godkendelse deaktiveret"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "AD eller PDC navn."
@@ -418,11 +418,17 @@ msgstr "Tilføj MIB"
 msgid "Add RAID"
 msgstr "Tilføj RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Tilføj rute"
 
 msgid "Add Rsync job"
 msgstr "Tilføj Rsync opgave"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr ""
@@ -1339,8 +1345,8 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check shared secret:"
-msgstr "Kontroller delt hemmelighed:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2024,9 +2030,6 @@ msgstr "Slet vært"
 msgid "Delete Login Info"
 msgstr "Slet login informationer"
 
-msgid "Delete Route"
-msgstr "Slet rute"
-
 msgid "Delete Rsync job"
 msgstr "Slet Rsync opgave"
 
@@ -2049,6 +2052,15 @@ msgid "Delete Selected Pools"
 msgstr ""
 
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
@@ -2339,6 +2351,9 @@ msgstr ""
 msgid "Disable Selected Options"
 msgstr ""
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper anvendes ikke (mod_wrap module)."
 
@@ -2506,9 +2521,6 @@ msgstr "Vil du virkelig slette denne Portal gruppe?"
 msgid "Do you really want to delete this resource?"
 msgstr "Vil du virkelig slette denne ressource?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Vil du virkelig slette denne rute?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Vil du virkelig slette denne regel?"
 
@@ -2602,6 +2614,15 @@ msgstr ""
 msgid "Do you want to delete selected pools?"
 msgstr ""
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
@@ -2626,6 +2647,9 @@ msgstr ""
 msgid "Do you want to disable selected options?"
 msgstr ""
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2635,7 +2659,13 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to lock selected records?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
@@ -2645,6 +2675,12 @@ msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
 msgstr ""
 
 msgid "Document Root"
@@ -2777,11 +2813,17 @@ msgstr "Rediger MIB"
 msgid "Edit RAID"
 msgstr "Rediger RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Rediger rute"
 
 msgid "Edit Rsync job"
 msgstr "Rediger Rsync opgave"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr ""
@@ -2934,6 +2976,9 @@ msgid "Enable Selected Jobs"
 msgstr ""
 
 msgid "Enable Selected Options"
+msgstr ""
+
+msgid "Enable Selected Records"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -4678,6 +4723,9 @@ msgstr "Placering hvor indholds database filen skal gemmes."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -4767,6 +4815,9 @@ msgid "MIB is locked"
 msgstr ""
 
 msgid "MIB is marked for deletion"
+msgstr ""
+
+msgid "MIB is unlocked"
 msgstr ""
 
 msgid "MIRROR"
@@ -5846,8 +5897,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Ping winbindd for at se om den er i live:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6323,7 +6374,22 @@ msgstr "Genstart"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
+msgstr ""
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
 msgstr ""
 
 msgid "Recurse into directories."
@@ -6496,8 +6562,8 @@ msgstr ""
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Resultat fra net rpc testjoin:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Resultat af sidste selv-test"
@@ -6543,6 +6609,15 @@ msgstr "Round-robin læsning"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Ruter"
@@ -7061,6 +7136,15 @@ msgid "Share Password"
 msgstr "Share kodeord"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -9015,6 +9099,9 @@ msgstr ""
 msgid "Toggle Selected Options"
 msgstr ""
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolereret"
 
@@ -9318,6 +9405,9 @@ msgstr ""
 
 msgid "Unload"
 msgstr "Fjern"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr ""
@@ -10017,8 +10107,8 @@ msgstr ""
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI start parameter (%d som standard)."
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI initiator deaktiveret"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10099,8 +10189,23 @@ msgstr "til"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Fundne fjerne RSYNC shares"
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD godkendelse deaktiveret"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Ingen RSYNC klient konfigureret"
+#~ msgid "Check shared secret:"
+#~ msgstr "Kontroller delt hemmelighed:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Slet rute"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Vil du virkelig slette denne rute?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Ping winbindd for at se om den er i live:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Resultat fra net rpc testjoin:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI initiator deaktiveret"

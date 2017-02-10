@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2017-02-07 13:44+0000\n"
 "Last-Translator: Emil <emil46@autograf.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -328,8 +328,8 @@ msgstr "dziedziczenie ACL"
 msgid "ACL mode"
 msgstr "Tryb ACL"
 
-msgid "AD authentication disabled"
-msgstr "Uwierzytelnianie AD wyłączone"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Nazwa AD lub PDC."
@@ -444,11 +444,17 @@ msgstr "Dodaj MIB"
 msgid "Add RAID"
 msgstr "Dodaj RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Dodaj trasę"
 
 msgid "Add Rsync job"
 msgstr "Dodaj zadanie Rsync"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Dodaj Migawkę."
@@ -1389,8 +1395,8 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "Sprawdź i wymień kabel"
 
-msgid "Check shared secret:"
-msgstr "Sprawdź hasło:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2077,9 +2083,6 @@ msgstr "Usuń hosta"
 msgid "Delete Login Info"
 msgstr "Usuń informacje logowania"
 
-msgid "Delete Route"
-msgstr "Usuń trasę"
-
 msgid "Delete Rsync job"
 msgstr "Usuń zadanie Rsync"
 
@@ -2103,6 +2106,15 @@ msgstr "Usuń wybrane pule"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Usuń wybrane woluminy RAID"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Usuń wybrane migawki"
@@ -2393,6 +2405,9 @@ msgstr "Wyłącz wybrane zadania"
 msgid "Disable Selected Options"
 msgstr "Wyłącz wybrane opcje"
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Wyłącz TCP wrapper (moduł mod_wrap)"
 
@@ -2561,9 +2576,6 @@ msgstr "Czy na pewno chcesz usunąć tą grupę portali?"
 msgid "Do you really want to delete this resource?"
 msgstr "Czy na pewno usunąć ten zasób?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Czy na pewno chcesz usunąć tę trasę?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Czy na pewno usunąć tę regułę?"
 
@@ -2657,6 +2669,15 @@ msgstr "Czy chcesz usunąć wybrane opcje?"
 msgid "Do you want to delete selected pools?"
 msgstr "Czy chcesz usunąć wybrane pule ?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Czy chcesz usunąc wybrane migawki ?"
 
@@ -2681,6 +2702,9 @@ msgstr "Czy chcesz wyłączyć wybrane zadania ?"
 msgid "Do you want to disable selected options?"
 msgstr "Czy chcesz wyłączyć wybrane opcje?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Czy chcesz włączyć wybrane polecenia ?"
 
@@ -2690,9 +2714,15 @@ msgstr "Czy chcesz włączyć wybrane zadania ?"
 msgid "Do you want to enable selected options?"
 msgstr "Czy chcesz włączyć wybrane opcje?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Czy chcesz zainstalować wybrany firmware mimo wszystko (na własne ryzyko) ?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr ""
@@ -2701,6 +2731,12 @@ msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
 msgstr ""
 
 msgid "Document Root"
@@ -2834,11 +2870,17 @@ msgstr "Edytuj MIB"
 msgid "Edit RAID"
 msgstr "Edytuj RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Edytuj trasę"
 
 msgid "Edit Rsync job"
 msgstr "Edytuj zadanie Rsync"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Edytuj Migawkę"
@@ -2996,6 +3038,9 @@ msgstr "Włącz wybrane zadania."
 
 msgid "Enable Selected Options"
 msgstr "Włącz wybrane opcje."
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Włącz połączenia TLS"
@@ -4751,6 +4796,9 @@ msgstr "Miejsce przechowywania pliku bazy danych zawartości."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -4841,6 +4889,9 @@ msgstr "MIB jest zablokoway"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB jest zaznaczony do usunięcia"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr ""
@@ -5919,8 +5970,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Odpytaj winbindd aby sprawdzić czy działa:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6394,8 +6445,23 @@ msgstr "Uruchom ponownie"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Rekord jest zablokowany"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Rekursywnie w katalogach"
@@ -6567,8 +6633,8 @@ msgstr "Zastrzeżony"
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Wynik polecenia 'net rpc testjoin':"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Wyniki ostatniego testu"
@@ -6614,6 +6680,15 @@ msgstr "Odczyt round-robin"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Trasy"
@@ -7135,6 +7210,15 @@ msgid "Share Password"
 msgstr "Hasło udziału"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -9061,6 +9145,9 @@ msgstr ""
 msgid "Toggle Selected Options"
 msgstr ""
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Dopuszczane"
 
@@ -9364,6 +9451,9 @@ msgstr "Nieznany rozmiar"
 
 msgid "Unload"
 msgstr "Wyładuj"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr "Niezamontowany Dysk/Partycja"
@@ -10065,8 +10155,8 @@ msgstr ""
 msgid "iSCSI initial parameter (%d by default)."
 msgstr ""
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI initiator wyłączony"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10147,8 +10237,23 @@ msgstr "do"
 msgid "umount"
 msgstr "odmontuj"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Usuń zzdalne udziały RSYNC"
+#~ msgid "AD authentication disabled"
+#~ msgstr "Uwierzytelnianie AD wyłączone"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Brak skonfigurowanego klienta RSYNC"
+#~ msgid "Check shared secret:"
+#~ msgstr "Sprawdź hasło:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Usuń trasę"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Czy na pewno chcesz usunąć tę trasę?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Odpytaj winbindd aby sprawdzić czy działa:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Wynik polecenia 'net rpc testjoin':"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI initiator wyłączony"

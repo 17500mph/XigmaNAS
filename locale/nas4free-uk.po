@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2017-01-26 17:29+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -329,8 +329,8 @@ msgstr "Успадкування ACL"
 msgid "ACL mode"
 msgstr "Режим ACL"
 
-msgid "AD authentication disabled"
-msgstr "AD автентифікація заборонена"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Ім'я AD або PDC."
@@ -444,11 +444,17 @@ msgstr "Додати MIB"
 msgid "Add RAID"
 msgstr "Додати RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Додати маршрут"
 
 msgid "Add Rsync job"
 msgstr "Додати Rsync завдання"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Додати снапшот (знімок)"
@@ -1411,8 +1417,8 @@ msgstr "Перевірте 'Система | Загальні' перед іні
 msgid "Check and replace cable"
 msgstr "Перевірити і замінити кабель"
 
-msgid "Check shared secret:"
-msgstr "Перевірити спільний \"секрет\""
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2184,9 +2190,6 @@ msgstr "Видалити хост"
 msgid "Delete Login Info"
 msgstr "Видалити інформацію про вхід"
 
-msgid "Delete Route"
-msgstr "Вилучити маршрут"
-
 msgid "Delete Rsync job"
 msgstr "Видалити завдання Rsync"
 
@@ -2210,6 +2213,15 @@ msgstr "Видалити вибраний пул"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Видалити вибраний RAID масив"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Видалити вибраний знімок"
@@ -2505,6 +2517,9 @@ msgstr "Заборонити вибрані завдання"
 msgid "Disable Selected Options"
 msgstr "Заборонити вибрані опції"
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Заборонити обгортку TCP (модуль mod_wrap)."
 
@@ -2677,9 +2692,6 @@ msgstr "Ви дійсно хочете видалити цю групу порт
 msgid "Do you really want to delete this resource?"
 msgstr "Ви дійсно хочете видалити цей ресурс?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Ви дійсно хочете видалити цей маршрут?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Ви дійсно хочете видалити це правило?"
 
@@ -2778,6 +2790,15 @@ msgstr "Ви хочете видалити обрані опції?"
 msgid "Do you want to delete selected pools?"
 msgstr "Бажаєте видалити вибрані пули?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Ви дійсно хочете видалити вибрані знімки?"
 
@@ -2802,6 +2823,9 @@ msgstr "Вимкнути вибрані завдання?"
 msgid "Do you want to disable selected options?"
 msgstr "Ви хочете заборонити обрані опції?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Ви хочете дозволити обрані команди?"
 
@@ -2811,10 +2835,16 @@ msgstr "Увімкнути вибрані завдання?"
 msgid "Do you want to enable selected options?"
 msgstr "Ви хочете дозволити обрані опції?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Ви хочете встановити цю прошивку в будь-якому випадку (на свій страх і "
 "ризик)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Ви хочете переключити обрані команди?"
@@ -2824,6 +2854,12 @@ msgstr "Перемкнути вибрані завдання?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Ви хочете перемкнути обрані опції?"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr ""
@@ -2958,11 +2994,17 @@ msgstr "Редагувати MIB"
 msgid "Edit RAID"
 msgstr "Редагувати RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Редагувати маршрут"
 
 msgid "Edit Rsync job"
 msgstr "Редагувати завдання Rsync"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Редагувати знимок"
@@ -3119,6 +3161,9 @@ msgstr "Увімкнути вибрані завдання"
 
 msgid "Enable Selected Options"
 msgstr "Увімкнути вибрані налаштування"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Дозволити TLS з'єднання."
@@ -4934,6 +4979,9 @@ msgstr "Місце, де файл бази даних контенту буде 
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -5025,6 +5073,9 @@ msgstr "MIB заблоковано"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB помічено для видалення"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -6125,8 +6176,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Переконайтесь, що winbindd доступний:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6607,8 +6658,23 @@ msgstr "Перезавантаження"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Запис заблоковано"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Рекурсивно для директорій"
@@ -6786,8 +6852,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restricted - Успадковувати все, крім \"записати ACL\" і \"змінити власника\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Результати команди net rpc testjoin:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Результати останнього самотестування"
@@ -6833,6 +6899,15 @@ msgstr "Почергове читання"
 
 msgid "Roundrobin"
 msgstr "Round-robin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Маршрути"
@@ -7377,6 +7452,15 @@ msgstr "Пароль ресурса"
 
 msgid "Share Settings"
 msgstr "Налаштування загального ресурсу"
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Паролі на ресурс не можуть бути довшими за 8 символів."
@@ -9450,6 +9534,9 @@ msgstr "Переключити обрані завдання"
 msgid "Toggle Selected Options"
 msgstr "Переключити обрані опції"
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Припустимо"
 
@@ -9776,6 +9863,9 @@ msgstr "Розмір невідомий"
 
 msgid "Unload"
 msgstr "Вивантажити"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr "Размонтування диска / розділу"
@@ -10514,8 +10604,8 @@ msgstr "Інформація та статус цілей iSCSI"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "параметр iSCSI ініціатора (%d за замовчуванням)."
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI ініціатор заборонений"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10596,8 +10686,23 @@ msgstr "до"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Виявлено віддалені каталоги RSYNC"
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI ініціатор заборонений"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "RSYNC клієнт не сконфігуровано"
+#~ msgid "Delete Route"
+#~ msgstr "Вилучити маршрут"
+
+#~ msgid "Check shared secret:"
+#~ msgstr "Перевірити спільний \"секрет\""
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Ви дійсно хочете видалити цей маршрут?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Переконайтесь, що winbindd доступний:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Результати команди net rpc testjoin:"
+
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD автентифікація заборонена"

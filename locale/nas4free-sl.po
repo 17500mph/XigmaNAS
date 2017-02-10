@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -302,8 +302,8 @@ msgstr ""
 msgid "ACL mode"
 msgstr "ACL način"
 
-msgid "AD authentication disabled"
-msgstr "AD prijava je onemogočena"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "AD ali PDC ime."
@@ -417,11 +417,17 @@ msgstr "Dodaj MIB"
 msgid "Add RAID"
 msgstr "Dodaj RAID"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Dodaj pot"
 
 msgid "Add Rsync job"
 msgstr "Doday Rsync opravilo"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr ""
@@ -1336,8 +1342,8 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr "Preverite in zamenjajte kabel"
 
-msgid "Check shared secret:"
-msgstr "Preveri geslo:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2017,9 +2023,6 @@ msgstr "Odstrani gostitelja"
 msgid "Delete Login Info"
 msgstr "Pobriši informacije o prijavi"
 
-msgid "Delete Route"
-msgstr "Odstrani pot"
-
 msgid "Delete Rsync job"
 msgstr "Pobriši Rsync delo"
 
@@ -2042,6 +2045,15 @@ msgid "Delete Selected Pools"
 msgstr ""
 
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
@@ -2331,6 +2343,9 @@ msgstr ""
 msgid "Disable Selected Options"
 msgstr ""
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2496,9 +2511,6 @@ msgstr "Res izbrišem portal skupino?"
 msgid "Do you really want to delete this resource?"
 msgstr "Ali resnično želite izbrisati ta vir?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Ali res želite odstraniti to pot?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Res želite izbrisati to pravilo?"
 
@@ -2591,6 +2603,15 @@ msgstr ""
 msgid "Do you want to delete selected pools?"
 msgstr ""
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
@@ -2615,6 +2636,9 @@ msgstr ""
 msgid "Do you want to disable selected options?"
 msgstr ""
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2624,9 +2648,15 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Ali želite vseeno namestiti to programsko opremo (na vašo odgovornost)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr ""
@@ -2635,6 +2665,12 @@ msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
 msgstr ""
 
 msgid "Document Root"
@@ -2767,11 +2803,17 @@ msgstr "Uredi MIB"
 msgid "Edit RAID"
 msgstr "Uredi RAID"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Uredi pot"
 
 msgid "Edit Rsync job"
 msgstr "Uredi Rsync pravilo"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr ""
@@ -2923,6 +2965,9 @@ msgid "Enable Selected Jobs"
 msgstr ""
 
 msgid "Enable Selected Options"
+msgstr ""
+
+msgid "Enable Selected Records"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -4656,6 +4701,9 @@ msgstr "Mesto, kjer bo shranjena podatkovna baza."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr ""
 
@@ -4743,6 +4791,9 @@ msgid "MIB is locked"
 msgstr "MIB je zaklenjen"
 
 msgid "MIB is marked for deletion"
+msgstr ""
+
+msgid "MIB is unlocked"
 msgstr ""
 
 msgid "MIRROR"
@@ -5816,8 +5867,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Ping winbindd, da vidimo, če deluje:"
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6291,7 +6342,22 @@ msgstr "Ponovni zagon"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
+msgstr ""
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
 msgstr ""
 
 msgid "Recurse into directories."
@@ -6464,8 +6530,8 @@ msgstr "Omejeno"
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Rezultati net rpc testnega priklopa:"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr ""
@@ -6511,6 +6577,15 @@ msgstr "Round-robin branje"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Poti"
@@ -7026,6 +7101,15 @@ msgid "Share Password"
 msgstr "Geslo deljene mape"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -8853,6 +8937,9 @@ msgstr ""
 msgid "Toggle Selected Options"
 msgstr ""
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -9155,6 +9242,9 @@ msgid "Unknown size"
 msgstr ""
 
 msgid "Unload"
+msgstr ""
+
+msgid "Unlock Selected Records"
 msgstr ""
 
 msgid "Unmount Disk/Partition"
@@ -9831,8 +9921,8 @@ msgstr ""
 msgid "iSCSI initial parameter (%d by default)."
 msgstr ""
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI pobudnik onemogočen"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr ""
@@ -9913,8 +10003,23 @@ msgstr ""
 msgid "umount"
 msgstr "izvrzi"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Najdeni oddaljeni RSYNC deljeni viri"
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD prijava je onemogočena"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Določen ni nobeden RSYNC odjemalec"
+#~ msgid "Check shared secret:"
+#~ msgstr "Preveri geslo:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Odstrani pot"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Ali res želite odstraniti to pot?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Ping winbindd, da vidimo, če deluje:"
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Rezultati net rpc testnega priklopa:"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI pobudnik onemogočen"

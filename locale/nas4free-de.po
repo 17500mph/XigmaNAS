@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-09 04:05+0000\n"
+"POT-Creation-Date: 2017-02-10 02:53+0000\n"
 "PO-Revision-Date: 2017-02-02 18:38+0000\n"
 "Last-Translator: diri <diri@gmx.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-09 03:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -354,8 +354,8 @@ msgstr "ACL Vererbung"
 msgid "ACL mode"
 msgstr "ACL Modus"
 
-msgid "AD authentication disabled"
-msgstr "AD Authentication deaktiviert"
+msgid "AD authentication disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "AD oder PDC-Name."
@@ -470,11 +470,17 @@ msgstr "MIB hinzufügen"
 msgid "Add RAID"
 msgstr "RAID hinzufügen"
 
+msgid "Add Record"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Füge Route hinzu"
 
 msgid "Add Rsync job"
 msgstr "Rsync-Job hinzufügen"
+
+msgid "Add Share"
+msgstr ""
 
 msgid "Add Snapshot"
 msgstr "Schnappschuß hinzufügen"
@@ -1455,8 +1461,8 @@ msgstr "Überprüfen Sie System|Allgemeines Setup vor der Initialisierung"
 msgid "Check and replace cable"
 msgstr "Prüfe und ersetze das Kabel"
 
-msgid "Check shared secret:"
-msgstr "Überprüfe geteiltes Geheimnis:"
+msgid "Check shared secret"
+msgstr ""
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2185,9 +2191,6 @@ msgstr "Lösche Host"
 msgid "Delete Login Info"
 msgstr "Lösche Login Information"
 
-msgid "Delete Route"
-msgstr "Lösche Route"
-
 msgid "Delete Rsync job"
 msgstr "Lösche Rsync-Job"
 
@@ -2211,6 +2214,15 @@ msgstr "Ausgewählte Pools löschen"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Lösche die ausgewählten RAID Laufwerke"
+
+msgid "Delete Selected Records"
+msgstr ""
+
+msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Shares"
+msgstr ""
 
 msgid "Delete Selected Snapshots"
 msgstr "Ausgewählte Snapshots löschen"
@@ -2506,6 +2518,9 @@ msgstr "Ausgewählte Aufträge deaktivieren"
 msgid "Disable Selected Options"
 msgstr "Ausgewählte Optionen deaktivieren"
 
+msgid "Disable Selected Records"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktivieren des TCP Wrapper (mod_wrap Modul)"
 
@@ -2683,9 +2698,6 @@ msgstr "Möchten Sie wirklich diese Portalgruppe löschen?"
 msgid "Do you really want to delete this resource?"
 msgstr "Möchten Sie diese Ressource wirklich entfernen?"
 
-msgid "Do you really want to delete this route?"
-msgstr "Wollen Sie diese Route wirklich löschen?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Wollen sie diese Regel wirklich löschen?"
 
@@ -2788,6 +2800,15 @@ msgstr "Wollen Sie die ausgewählten Einstellungen löschen?"
 msgid "Do you want to delete selected pools?"
 msgstr "Wollen Sie die ausgewählten ZFS-Pools löschen ?"
 
+msgid "Do you want to delete selected records?"
+msgstr ""
+
+msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected shares?"
+msgstr ""
+
 msgid "Do you want to delete selected snapshots?"
 msgstr "Wollen sie die ausgewählten 'Snapshots' wirklich löschen ?"
 
@@ -2812,6 +2833,9 @@ msgstr "Wollen Sie die ausgewählten Aufträge deaktivieren?"
 msgid "Do you want to disable selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen deaktivieren?"
 
+msgid "Do you want to disable selected records?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Sollen die ausgewählten Kommandos aktiviert werden?"
 
@@ -2821,8 +2845,14 @@ msgstr "Wollen Sie die ausgewählten Aufträge aktivieren?"
 msgid "Do you want to enable selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen aktivieren?"
 
+msgid "Do you want to enable selected records?"
+msgstr ""
+
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Wollen Sie die Firmware trotzdem installieren (auf eigene Gefahr)?"
+
+msgid "Do you want to lock selected records?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Sollen die ausgewählten Kommandos umgeschaltet werden?"
@@ -2832,6 +2862,12 @@ msgstr "Wollen Sie die ausgewählten Aufträge umschalten?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen umschalten?"
+
+msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to unlock selected records?"
+msgstr ""
 
 msgid "Document Root"
 msgstr ""
@@ -2967,11 +3003,17 @@ msgstr "MIB editieren"
 msgid "Edit RAID"
 msgstr "RAID bearbeiten"
 
+msgid "Edit Record"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Route bearbeiten"
 
 msgid "Edit Rsync job"
 msgstr "Rsync-Job bearbeiten"
+
+msgid "Edit Share"
+msgstr ""
 
 msgid "Edit Snapshot"
 msgstr "Snapshot editieren"
@@ -3127,6 +3169,9 @@ msgstr "Ausgewählte Aufträge aktivieren"
 
 msgid "Enable Selected Options"
 msgstr "Ausgewählte Einstellungen aktivieren"
+
+msgid "Enable Selected Records"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "SSL-Verbindungen aktivieren."
@@ -4944,6 +4989,9 @@ msgstr "Standort an welchem die Inhalte-Datenbank gespeichert werden soll."
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
 
+msgid "Lock Selected Records"
+msgstr ""
+
 msgid "Locked Files"
 msgstr "Gesperrte Dateien"
 
@@ -5037,6 +5085,9 @@ msgstr "MIB ist gesperrt"
 
 msgid "MIB is marked for deletion"
 msgstr "MIB ist zum Löschen markiert"
+
+msgid "MIB is unlocked"
+msgstr ""
 
 msgid "MIRROR"
 msgstr "Spiegel (Mirror)"
@@ -6144,8 +6195,8 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive:"
-msgstr "Winbindd anpingen, um zu sehen ob es läuft."
+msgid "Ping winbindd to see if it is alive"
+msgstr ""
 
 msgid "Ping/Traceroute"
 msgstr "Ping / Traceroute"
@@ -6628,8 +6679,23 @@ msgstr "Neustart"
 msgid "Receive Buffer"
 msgstr ""
 
+msgid "Record Information"
+msgstr ""
+
+msgid "Record Maintenance"
+msgstr ""
+
 msgid "Record is locked"
 msgstr "Aufzeichnung gesperrt"
+
+msgid "Record is marked for deletion"
+msgstr ""
+
+msgid "Record is protected"
+msgstr ""
+
+msgid "Record is unlocked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Unterordner einbeziehen."
@@ -6808,8 +6874,8 @@ msgstr "Eingeschränkt"
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr "Restricted - Vererbe alles außer  \"write ACL\" und \"change owner\""
 
-msgid "Results for net rpc testjoin:"
-msgstr "Ergebnisse für"
+msgid "Results for net rpc testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Ergebnisse des letzten durchgeführten Selbsttests"
@@ -6855,6 +6921,15 @@ msgstr "Round-robin read"
 
 msgid "Roundrobin"
 msgstr "Roundrobin"
+
+msgid "Route is marked for deletion"
+msgstr ""
+
+msgid "Route is protected"
+msgstr ""
+
+msgid "Route is unlocked"
+msgstr ""
 
 msgid "Routes"
 msgstr "Routing"
@@ -7397,6 +7472,15 @@ msgid "Share Password"
 msgstr "Passwort für die Freigabe"
 
 msgid "Share Settings"
+msgstr ""
+
+msgid "Share is marked for deletion"
+msgstr ""
+
+msgid "Share is protected"
+msgstr ""
+
+msgid "Share is unlocked"
 msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
@@ -9527,6 +9611,9 @@ msgstr "Ausgewählte Aufträge umschalten"
 msgid "Toggle Selected Options"
 msgstr "Ausgewählte Einstellungen umschalten"
 
+msgid "Toggle Selected Records"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Toleriert"
 
@@ -9850,6 +9937,9 @@ msgstr "Unbekannte Größe"
 
 msgid "Unload"
 msgstr "Auswerfen"
+
+msgid "Unlock Selected Records"
+msgstr ""
 
 msgid "Unmount Disk/Partition"
 msgstr "Aushängen von Festplatte/Partition"
@@ -10593,8 +10683,8 @@ msgstr "iSCSI Zielinformationen und -status"
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI Initialparameter (%d ist standard)."
 
-msgid "iSCSI initiator disabled"
-msgstr "iSCSI initiator deaktiviert"
+msgid "iSCSI initiator disabled."
+msgstr ""
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10675,8 +10765,23 @@ msgstr "an"
 msgid "umount"
 msgstr "Aushängen"
 
-#~ msgid "Detected RSYNC remote shares"
-#~ msgstr "Erkannte RSYNC-Remote-Freigaben"
+#~ msgid "AD authentication disabled"
+#~ msgstr "AD Authentication deaktiviert"
 
-#~ msgid "No RSYNC Client configured"
-#~ msgstr "Kein RSYNC-Programm konfiguriert"
+#~ msgid "Check shared secret:"
+#~ msgstr "Überprüfe geteiltes Geheimnis:"
+
+#~ msgid "Delete Route"
+#~ msgstr "Lösche Route"
+
+#~ msgid "Do you really want to delete this route?"
+#~ msgstr "Wollen Sie diese Route wirklich löschen?"
+
+#~ msgid "Ping winbindd to see if it is alive:"
+#~ msgstr "Winbindd anpingen, um zu sehen ob es läuft."
+
+#~ msgid "Results for net rpc testjoin:"
+#~ msgstr "Ergebnisse für"
+
+#~ msgid "iSCSI initiator disabled"
+#~ msgstr "iSCSI initiator deaktiviert"
