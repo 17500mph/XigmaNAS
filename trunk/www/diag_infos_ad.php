@@ -164,7 +164,7 @@ else:
 <?php
 endif;
 ?>
-</td></tr></table>
+</td></tr></tbody></table>
 <?php
 include 'fend.inc';
 ?>
