@@ -37,7 +37,6 @@ require 'co_sphere.php';
 
 function afpshare_process_updatenotification($mode,$data) {
 	global $config;
-
 	$retval = 0;
 	$sphere = &services_afp_share_get_sphere();
 	switch($mode):
@@ -137,23 +136,23 @@ if($sphere->enadis()):
 	if($sphere->toggle()):
 ?>
 	$("#toggle_selected_rows").click(function () {
-		return confirm('<?=$sphere->cbm_toggle_confirm();?>');
+		return confirm("<?=$sphere->cbm_toggle_confirm();?>");
 	});
 <?php
 	else:
 ?>
 	$("#enable_selected_rows").click(function () {
-		return confirm('<?=$sphere->cbm_enable_confirm();?>');
+		return confirm("<?=$sphere->cbm_enable_confirm();?>");
 	});
 	$("#disable_selected_rows").click(function () {
-		return confirm('<?=$sphere->cbm_disable_confirm();?>');
+		return confirm("<?=$sphere->cbm_disable_confirm();?>");
 	});
 <?php
 	endif;
 endif;
 ?>
 	$("#delete_selected_rows").click(function () {
-		return confirm('<?=$sphere->cbm_delete_confirm();?>');
+		return confirm("<?=$sphere->cbm_delete_confirm();?>");
 	});
 <?php
 //	Disable action buttons.
@@ -163,13 +162,13 @@ endif;
 //	Init toggle checkbox.
 ?>
 	$("#togglemembers").click(function() {
-		cb_tbn(this, "<?=$sphere->cbm_name;?>[]");
+		cb_tbn(this,"<?=$sphere->cbm_name;?>[]");
 	});
 <?php
 //	Init member checkboxes.
 ?>
 	$("input[name='<?=$sphere->cbm_name;?>[]']").click(function() {
-		ab_control(this, '<?=$sphere->cbm_name;?>[]');
+		ab_control(this,"<?=$sphere->cbm_name;?>[]");
 	});
 <?php
 //	Init spinner.
@@ -182,17 +181,17 @@ function ab_disable(flag) {
 if($sphere->enadis()):
 	if($sphere->toggle()):
 ?>
-	$("#toggle_selected_rows").prop("disabled", flag);
+	$("#toggle_selected_rows").prop("disabled",flag);
 <?php
 	else:
 ?>
-	$("#enable_selected_rows").prop("disabled", flag);
-	$("#disable_selected_rows").prop("disabled", flag);
+	$("#enable_selected_rows").prop("disabled",flag);
+	$("#disable_selected_rows").prop("disabled",flag);
 <?php
 	endif;
 endif;
 ?>
-	$("#delete_selected_rows").prop("disabled", flag);
+	$("#delete_selected_rows").prop("disabled",flag);
 }
 function cb_tbn(ego, tbn) {
 	var cba = $("input[name='"+tbn+"']").filter(":enabled");
@@ -214,11 +213,11 @@ function ab_control(ego, tbn) {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform">
 <?php
-	if(!empty($savemsg)):
-		print_info_box($savemsg);
-	endif;
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
 	endif;
 	if(updatenotify_exists($sphere->notifier())):
 		print_config_change_box();
