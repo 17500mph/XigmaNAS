@@ -218,8 +218,6 @@ endif;
 				html_titleline2(gtext('Command'));
 ?>
 			</thead>
-			<tfoot>
-			</tfoot>
 			<tbody>
 <?php
 				html_inputbox2('txtCommand',gtext('Command'),'','',false,80,false,false,1024,gtext('Enter Command'));
@@ -247,8 +245,6 @@ endif;
 				html_titleline2(gtext('Upload Script'));
 ?>
 			</thead>
-			<tfoot>
-			</tfoot>
 			<tbody>
 				<tr>
 					<td class="celltag"><?=gtext('Script');?></td>
@@ -277,8 +273,6 @@ endif;
 				html_titleline2(gtext('PHP Command'));
 ?>
 			</thead>
-			<tfoot>
-			</tfoot>
 			<tbody>
 				<tr>
 					<td class="celltag"><?=gtext('PHP Command');?></td>
