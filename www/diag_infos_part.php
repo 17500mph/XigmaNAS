@@ -72,7 +72,9 @@ include 'fbegin.inc';
 				<col class="area_data_settings_col_data">
 			</colgroup>
 			<thead>
-				<?php html_titleline2(gtext('Disk Partition Information'));?>
+<?php
+				html_titleline2(gtext('Disk Partition Information'));
+?>
 			</thead>
 		</table>
 <?php
