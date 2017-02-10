@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
-"PO-Revision-Date: 2017-02-10 14:24+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"PO-Revision-Date: 2017-02-10 18:50+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 16:56+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -454,17 +454,29 @@ msgstr "Afegeix una màquina"
 msgid "Add MIB"
 msgstr "Afegir MIB"
 
+msgid "Add NFS Share"
+msgstr "Afegir recurs NFS"
+
 msgid "Add RAID"
 msgstr "Afegir RAID"
 
 msgid "Add Record"
 msgstr "Afegeix registre"
 
+msgid "Add Resource"
+msgstr "Afegir recurs"
+
 msgid "Add Route"
 msgstr "Afegir ruta"
 
-msgid "Add Rsync job"
+msgid "Add Rsync Job"
 msgstr "Afegir treball Rsync"
+
+msgid "Add Rsync Module"
+msgstr "Afegir mòdul Rsync"
+
+msgid "Add Samba Share"
+msgstr "Afegir recurs Samba"
 
 msgid "Add Share"
 msgstr "Afegeix compartició"
@@ -529,9 +541,6 @@ msgstr "Afegir interfície"
 msgid "Add job"
 msgstr "Afegir treball"
 
-msgid "Add module"
-msgstr "Afegir mòdul"
-
 msgid "Add mount point"
 msgstr "Afegir punt de muntatge"
 
@@ -544,17 +553,11 @@ msgstr "Afegir piscina"
 msgid "Add portal group"
 msgstr "Afegir grup de portal"
 
-msgid "Add resource"
-msgstr "Afegir recursus"
-
 msgid "Add rule"
 msgstr "Afegir una regla"
 
 msgid "Add self-test"
 msgstr "Afegir auto-prova"
-
-msgid "Add share"
-msgstr "Afegeix compartició"
 
 msgid "Add target"
 msgstr "Afegir objetiu"
@@ -2227,9 +2230,6 @@ msgstr "Suprimeix servidor"
 msgid "Delete Login Info"
 msgstr "Suprimeix informació d'inici"
 
-msgid "Delete Rsync job"
-msgstr "Suprimeix feina Rsync"
-
 msgid "Delete Selected Commands"
 msgstr "Eliminar ordres seleccionats"
 
@@ -2241,6 +2241,9 @@ msgstr "Eliminar grups seleccionats"
 
 msgid "Delete Selected Jobs"
 msgstr "Eliminar feines seleccionats"
+
+msgid "Delete Selected NFS Shares"
+msgstr "Eliminar els recursos compartits NFS seleccionats"
 
 msgid "Delete Selected Options"
 msgstr "Eliminar opcions seleccionades"
@@ -2254,8 +2257,20 @@ msgstr "Eliminar volums RAID seleccionats"
 msgid "Delete Selected Records"
 msgstr "Eliminar registres seleccionats"
 
+msgid "Delete Selected Resources"
+msgstr "Eliminar els recursos seleccionats"
+
 msgid "Delete Selected Routes"
 msgstr "Eliminar rutas seleccionades"
+
+msgid "Delete Selected Rsync Jobs"
+msgstr "Eliminar treballs seleccionats Rsync"
+
+msgid "Delete Selected Rsync Modules"
+msgstr "Eliminar mòduls seleccionats Rsync"
+
+msgid "Delete Selected Samba Shares"
+msgstr "Eliminar recursos seleccionats Samba"
 
 msgid "Delete Selected Shares"
 msgstr "Eliminar compartits seleccionats"
@@ -2317,26 +2332,17 @@ msgstr "Suprimeix grup iniciador"
 msgid "Delete interface"
 msgstr "Suprimeix interfície"
 
-msgid "Delete module"
-msgstr "Sprimeix modul"
-
 msgid "Delete mount point"
 msgstr "Suprimeix punt de muntatge"
 
 msgid "Delete portal group"
 msgstr "Suprimeix grup de portal"
 
-msgid "Delete resource"
-msgstr "Suprimeix el recurs"
-
 msgid "Delete rule"
 msgstr "Suprimeix la regla"
 
 msgid "Delete self-test"
 msgstr "Suprimeix els auto tests"
-
-msgid "Delete share"
-msgstr "Suprimir el recurs compartit"
 
 msgid "Delete target"
 msgstr "Suprimeix l'objectiu"
@@ -2559,6 +2565,12 @@ msgstr "Desactivar lles opcions seleccionades"
 msgid "Disable Selected Records"
 msgstr "Desactivar registres seleccionats"
 
+msgid "Disable Selected Rsync Jobs"
+msgstr "Eliminar treballs seleccionats Rsync"
+
+msgid "Disable Selected Rsync Modules"
+msgstr "Eliminar mòduls seleccionats Rsync"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Desactivar embolcall TCP (mòdul mod_wrap)."
 
@@ -2673,9 +2685,6 @@ msgstr "Realment vol eliminar totes les regles?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Realment vol eliminar totes les proves automàtiques programades?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Realment voleu eliminar aquest treball Rsync?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Realment voleu eliminar aquest URL?"
 
@@ -2717,9 +2726,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Realment vol eliminar aquesta interfície?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Realment vol eliminar aquest mòdul?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2730,17 +2736,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Realment vol eliminar aquest grup del portal?"
 
-msgid "Do you really want to delete this resource?"
-msgstr "Realment voleu eliminar aquest recurs?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Realment vol eliminar aquesta regla?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Realment vol eliminar aquesta auto-prova programada?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Realment vol eliminar aquesta compartició?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Realment voleu eliminar aquest objectiu?"
@@ -2810,8 +2810,14 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 "Vols crear un dispositiu virtual segmentat des de els discs seleccionats?"
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr "Vols eliminar els recursos NFS seleccionats?"
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Vols eliminar els volums RAID seleccionats?"
+
+msgid "Do you want to delete selected Samba shares?"
+msgstr "Vols eliminar els recursos Samba seleccionats?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Vols eliminar les ordres seleccionades?"
@@ -2834,8 +2840,17 @@ msgstr "Vols eliminar les piscines seleccionades?"
 msgid "Do you want to delete selected records?"
 msgstr "Voleu eliminar els registres seleccionats?"
 
+msgid "Do you want to delete selected resources?"
+msgstr "Vols eliminar els recursos seleccionats?"
+
 msgid "Do you want to delete selected routes?"
 msgstr "Voleu eliminar les rutes seleccionats?"
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr "Vols eliminar els treballs Rsync seleccionats?"
+
+msgid "Do you want to delete selected rsync modules?"
+msgstr "Vols eliminar els mòduls Rsync seleccionats?"
 
 msgid "Do you want to delete selected shares?"
 msgstr "Voleu eliminar les comparticions seleccionats?"
@@ -2867,6 +2882,12 @@ msgstr "Vols desactivar les opcions seleccionades?"
 msgid "Do you want to disable selected records?"
 msgstr "Voleu desactivar els registres seleccionats?"
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr "Vols desactivar els treballs Rsync seleccionats?"
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr "Vols desactivar els mòduls Rsync seleccionats?"
+
 msgid "Do you want to enable selected commands?"
 msgstr "Vols activar les ordres seleccionades?"
 
@@ -2878,6 +2899,12 @@ msgstr "Vols activar les opcions seleccionades?"
 
 msgid "Do you want to enable selected records?"
 msgstr "Voleu activar els registres seleccionats?"
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr "Vols activar els treballs Rsync seleccionats"
+
+msgid "Do you want to enable selected rsync modules?"
+msgstr "Vols activar els mòduls Rsync seleccionats?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Vols instal·lar aquest firmware de totes maneres (al teu risc)?"
@@ -2896,6 +2923,12 @@ msgstr "Vols mostrar les opcions seleccionats?"
 
 msgid "Do you want to toggle selected records?"
 msgstr "Voleu conmutar els registres seleccionats?"
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr "Voleu mostrar els treballs seleccionats Rsync?"
+
+msgid "Do you want to toggle selected rsync modules?"
+msgstr "Voleu mostrar els mòduls seleccionats Rsync?"
 
 msgid "Do you want to unlock selected records?"
 msgstr "Voleu desbloquejar els registres seleccionats?"
@@ -3030,17 +3063,29 @@ msgstr "Editar amfitrió"
 msgid "Edit MIB"
 msgstr "Editar MIB"
 
+msgid "Edit NFS Share"
+msgstr "Editar recursos NFS"
+
 msgid "Edit RAID"
 msgstr "Editar RAID"
 
 msgid "Edit Record"
 msgstr "Edita registre"
 
+msgid "Edit Resource"
+msgstr "Editar recurs"
+
 msgid "Edit Route"
 msgstr "Editar ruta"
 
-msgid "Edit Rsync job"
-msgstr "Editar treball RSYNC"
+msgid "Edit Rsync Job"
+msgstr "Editar treball Rsync"
+
+msgid "Edit Rsync Module"
+msgstr "Editar mòdul Rsync"
+
+msgid "Edit Samba Share"
+msgstr "Editar recurs Samba"
 
 msgid "Edit Share"
 msgstr "Edita compartició"
@@ -3090,9 +3135,6 @@ msgstr "Editar interfície"
 msgid "Edit job"
 msgstr "Editar treball"
 
-msgid "Edit module"
-msgstr "Editar mòdul"
-
 msgid "Edit mount point"
 msgstr "Editar punt de muntatge"
 
@@ -3105,17 +3147,11 @@ msgstr "Editar piscina"
 msgid "Edit portal group"
 msgstr "Editar grup de portal"
 
-msgid "Edit resource"
-msgstr "Editar recursus"
-
 msgid "Edit rule"
 msgstr "Editar una regla"
 
 msgid "Edit self-test"
 msgstr "Editar auto-prova"
-
-msgid "Edit share"
-msgstr "Editar compartició"
 
 msgid "Edit target"
 msgstr "Editar objetiu"
@@ -3205,6 +3241,12 @@ msgstr "Habilitar opcions seleccionats"
 
 msgid "Enable Selected Records"
 msgstr "Activa els registres seleccionats"
+
+msgid "Enable Selected Rsync Jobs"
+msgstr "Activar els treballs Rsync seleccionats"
+
+msgid "Enable Selected Rsync Modules"
+msgstr "Activar els mòduls Rsync seleccionats"
 
 msgid "Enable TLS connections."
 msgstr "Habilitar conexions TSL."
@@ -5530,6 +5572,15 @@ msgstr "Usuaris CHAP Mutu"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr "El recurs NFS està marcat per esborrar"
+
+msgid "NFS share is protected"
+msgstr "El recurs NFS està protegit"
+
+msgid "NFS share is unlocked"
+msgstr "El recurs NFS està desbloquejat"
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6931,6 +6982,15 @@ msgstr "Recurs"
 msgid "Resource Name"
 msgstr "Nom del recurs"
 
+msgid "Resource is marked for deletion"
+msgstr "El recurs està marcat per ser esborrat"
+
+msgid "Resource is protected"
+msgstr "El recurs està protegit"
+
+msgid "Resource is unlocked"
+msgstr "El recurs està desbloquejat"
+
 msgid "Resources"
 msgstr "Recursos"
 
@@ -7021,6 +7081,24 @@ msgstr "Rsync"
 
 msgid "Rsync Job"
 msgstr "Tasca Rsync"
+
+msgid "Rsync Module is marked for deletion"
+msgstr "El mòdul Rsync està marcat per esborrar"
+
+msgid "Rsync Module is protected"
+msgstr "El mòdul Rsync està protegit"
+
+msgid "Rsync Module is unlocked"
+msgstr "El mòdul Rsync està desbloquejat"
+
+msgid "Rsync job is marked for deletion"
+msgstr "El treball Rsync està marcat per esborrar"
+
+msgid "Rsync job is protected"
+msgstr "El treball Rsync està protegit"
+
+msgid "Rsync job is unlocked"
+msgstr "El treball Rsync està desbloquejat"
 
 msgid "Rule"
 msgstr "Regla"
@@ -7113,6 +7191,15 @@ msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr "Controlador de domini d'Active Directory Samba"
+
+msgid "Samba Share is marked for deletion"
+msgstr "El recurs Samba està marcat per esborrar"
+
+msgid "Samba Share is protected"
+msgstr "El recurs Samba està protegit"
+
+msgid "Samba Share is unlocked"
+msgstr "El recurs Samba està desbloquejat"
 
 #, php-format
 msgid ""
@@ -9697,6 +9784,12 @@ msgstr "Commuta les opcions seleccionades"
 msgid "Toggle Selected Records"
 msgstr "Activa registres seleccionats"
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr "Alternar treballs Rsync seleccionats"
+
+msgid "Toggle Selected Rsync Modules"
+msgstr "Alternar mòduls Rsync seleccionats"
+
 msgid "Tolerated"
 msgstr "Tolerat"
 
@@ -10855,11 +10948,56 @@ msgstr "desmontar"
 #~ msgid "AD authentication disabled"
 #~ msgstr "autenticació d'AD desconnectat"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Afegir treball Rsync"
+
+#~ msgid "Add module"
+#~ msgstr "Afegir mòdul"
+
+#~ msgid "Add share"
+#~ msgstr "Afegeix compartició"
+
+#~ msgid "Add resource"
+#~ msgstr "Afegir recursus"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "Verifica secret compartit:"
 
 #~ msgid "Delete Route"
 #~ msgstr "Suprimeix la ruta"
+
+#~ msgid "Delete Rsync job"
+#~ msgstr "Suprimeix feina Rsync"
+
+#~ msgid "Delete module"
+#~ msgstr "Sprimeix modul"
+
+#~ msgid "Delete resource"
+#~ msgstr "Suprimeix el recurs"
+
+#~ msgid "Delete share"
+#~ msgstr "Suprimir el recurs compartit"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Realment voleu eliminar aquest treball Rsync?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Realment vol eliminar aquest mòdul?"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "Realment voleu eliminar aquest recurs?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Editar treball RSYNC"
+
+#~ msgid "Edit module"
+#~ msgstr "Editar mòdul"
+
+#~ msgid "Edit resource"
+#~ msgstr "Editar recursus"
+
+#~ msgid "Edit share"
+#~ msgstr "Editar compartició"
 
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "iniciador iSCSI desconectat"
@@ -10872,3 +11010,6 @@ msgstr "desmontar"
 
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Realment vol eliminar aquesta ruta?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Realment vol eliminar aquesta compartició?"

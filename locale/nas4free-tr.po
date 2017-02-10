@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -407,17 +407,29 @@ msgstr "Bilgisayar Ekle"
 msgid "Add MIB"
 msgstr "MIB Ekle"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "RAID Ekle"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Route Ekle"
 
-msgid "Add Rsync job"
-msgstr "Rsync görevi ekle"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -482,9 +494,6 @@ msgstr "Arayüz Ekle"
 msgid "Add job"
 msgstr "Görev Ekle"
 
-msgid "Add module"
-msgstr "Modül Ekle"
-
 msgid "Add mount point"
 msgstr "Bağlama noktası ekle"
 
@@ -497,17 +506,11 @@ msgstr "Havuz ekle"
 msgid "Add portal group"
 msgstr "Portal grubu ekle"
 
-msgid "Add resource"
-msgstr "Kaynak ekle"
-
 msgid "Add rule"
 msgstr "Kural ekle"
 
 msgid "Add self-test"
 msgstr "Self-Test ekle"
-
-msgid "Add share"
-msgstr "Paylaşım Ekle"
 
 msgid "Add target"
 msgstr "Hedef Ekle"
@@ -2006,9 +2009,6 @@ msgstr "Bilgisayarı Sil"
 msgid "Delete Login Info"
 msgstr "Oturum açma bilgisini sil"
 
-msgid "Delete Rsync job"
-msgstr "Rsync Görevini Sil"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2019,6 +2019,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2033,7 +2036,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2096,26 +2111,17 @@ msgstr "Başlatıcı grubunu sil"
 msgid "Delete interface"
 msgstr "Arayüz Sil"
 
-msgid "Delete module"
-msgstr "Modül Sil"
-
 msgid "Delete mount point"
 msgstr "Disk bağlantı noktasını sil"
 
 msgid "Delete portal group"
 msgstr "Portal grubunu sil"
 
-msgid "Delete resource"
-msgstr ""
-
 msgid "Delete rule"
 msgstr "Kuralı sil"
 
 msgid "Delete self-test"
 msgstr "Self-test'i sil"
-
-msgid "Delete share"
-msgstr "Paylaşım Sil"
 
 msgid "Delete target"
 msgstr "Hedef Sil"
@@ -2324,6 +2330,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2429,9 +2441,6 @@ msgstr "Tüm kuralları silmek istediğinden emin misin?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Tüm zamanlanmış self-test'leri silmek istediğinden emin misin?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Bu Rsync görevini silmek istediğinden emin misin?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Bu URL silmek istediğinden emin misin?"
 
@@ -2472,9 +2481,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Bu arayüzü silmek istediğinden emin misin?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Bu modülü gerçekten silmek istediğinize emin misiniz?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2485,17 +2491,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Bu portal grubunu silmek istediğinden emin misin?"
 
-msgid "Do you really want to delete this resource?"
-msgstr ""
-
 msgid "Do you really want to delete this rule?"
 msgstr "Bu kuralı silmek istediğinden emin misin?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Bu zamanlanmış self-test'ini silmek istediğinden emin misin?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Bu paylaşımı gerçekten silmek istediğinize emin misiniz?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Bu hedefi gerçekten silmek istediğinize emin misiniz?"
@@ -2559,7 +2559,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2583,7 +2589,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2616,6 +2631,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2626,6 +2647,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2644,6 +2671,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2776,17 +2809,29 @@ msgstr "Host'u Düzenle"
 msgid "Edit MIB"
 msgstr "MIB Düzenle"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "RAID'i Düzenle"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Route'u Düzenle"
 
-msgid "Edit Rsync job"
-msgstr "Rsync Görevini Düzenle"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -2836,9 +2881,6 @@ msgstr "Arayüzü düzenle"
 msgid "Edit job"
 msgstr "Görev Düzenle"
 
-msgid "Edit module"
-msgstr "Modül Düzenle"
-
 msgid "Edit mount point"
 msgstr "Disk bağlantı noktasını düzenle"
 
@@ -2851,17 +2893,11 @@ msgstr "Havuzu düzenle"
 msgid "Edit portal group"
 msgstr "Portal grubunu düzenle"
 
-msgid "Edit resource"
-msgstr ""
-
 msgid "Edit rule"
 msgstr "Kuralı düzenle"
 
 msgid "Edit self-test"
 msgstr "Self-testi düzenle"
-
-msgid "Edit share"
-msgstr "Paylaşım Düzenle"
 
 msgid "Edit target"
 msgstr "Hedef Düzenle"
@@ -2944,6 +2980,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5102,6 +5144,15 @@ msgstr ""
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr ""
 
@@ -6421,6 +6472,15 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr ""
 
@@ -6511,6 +6571,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr ""
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "Kural"
 
@@ -6598,6 +6676,15 @@ msgid "Samba AD"
 msgstr ""
 
 msgid "Samba Active Directory Domain Controller"
+msgstr ""
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
 msgstr ""
 
 #, php-format
@@ -8814,6 +8901,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -9877,14 +9970,53 @@ msgstr "umount"
 #~ msgid "AD authentication disabled"
 #~ msgstr "AD doğrulaması devredışı"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Rsync görevi ekle"
+
+#~ msgid "Add module"
+#~ msgstr "Modül Ekle"
+
+#~ msgid "Add share"
+#~ msgstr "Paylaşım Ekle"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "Gizli Paylaşımları Kontrol Et"
 
 #~ msgid "Delete Route"
 #~ msgstr "Route Sil"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Rsync Görevini Sil"
+
+#~ msgid "Delete module"
+#~ msgstr "Modül Sil"
+
+#~ msgid "Delete share"
+#~ msgstr "Paylaşım Sil"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Bu Rsync görevini silmek istediğinden emin misin?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Bu modülü gerçekten silmek istediğinize emin misiniz?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Bu Route'u gerçekten silmek istediğinize emin misiniz?"
 
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Bu paylaşımı gerçekten silmek istediğinize emin misiniz?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Rsync Görevini Düzenle"
+
+#~ msgid "Edit module"
+#~ msgstr "Modül Düzenle"
+
+#~ msgid "Edit share"
+#~ msgstr "Paylaşım Düzenle"
+
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "iSCSI başlatıcı devredışı"
+
+#~ msgid "Add resource"
+#~ msgstr "Kaynak ekle"

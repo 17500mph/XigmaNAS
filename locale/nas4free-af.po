@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 msgid " interfaces:"
@@ -450,17 +450,29 @@ msgstr "Voeg Gasheer By"
 msgid "Add MIB"
 msgstr "Voeg MIB by"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Voeg RAID by"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Voeg Roete by"
 
-msgid "Add Rsync job"
-msgstr "Voeg Rsync taak by"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -525,9 +537,6 @@ msgstr "Voeg koppelvlak by"
 msgid "Add job"
 msgstr "Voeg taak by"
 
-msgid "Add module"
-msgstr "Voeg 'n module by"
-
 msgid "Add mount point"
 msgstr "Voeg 'n monteerpunt by"
 
@@ -540,17 +549,11 @@ msgstr "Voeg poel by"
 msgid "Add portal group"
 msgstr "Voeg 'n portaal groep by"
 
-msgid "Add resource"
-msgstr "Voeg hulpbron by"
-
 msgid "Add rule"
 msgstr "Voeg 'n reël by"
 
 msgid "Add self-test"
 msgstr "Voeg 'n self-toets by"
-
-msgid "Add share"
-msgstr "Voeg 'n gedeelde by"
 
 msgid "Add target"
 msgstr "Voeg 'n teiken by"
@@ -2209,9 +2212,6 @@ msgstr "Wis Gasheer Uit"
 msgid "Delete Login Info"
 msgstr "Vee Inteken Inligting uit"
 
-msgid "Delete Rsync job"
-msgstr "Wis Rsync uit"
-
 msgid "Delete Selected Commands"
 msgstr "Vee Geselekteerde Bevelle Uit"
 
@@ -2223,6 +2223,9 @@ msgstr "Skrap Geselekteerde Groepe"
 
 msgid "Delete Selected Jobs"
 msgstr "Wis Geselekteerde Werkstuk Uit"
+
+msgid "Delete Selected NFS Shares"
+msgstr ""
 
 msgid "Delete Selected Options"
 msgstr "Vee Geselekteerde Opsies Uit"
@@ -2236,7 +2239,19 @@ msgstr "Vee Geselekteerde RAID Volumes Uit"
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2299,26 +2314,17 @@ msgstr "Wis inisieerder groep uit"
 msgid "Delete interface"
 msgstr "Verwyder koppelvlak"
 
-msgid "Delete module"
-msgstr "Verwyder module"
-
 msgid "Delete mount point"
 msgstr "Verwyder monteer punt"
 
 msgid "Delete portal group"
 msgstr "Wis poort groep uit"
 
-msgid "Delete resource"
-msgstr "Verwyder hulpbron"
-
 msgid "Delete rule"
 msgstr "Verwyder reël"
 
 msgid "Delete self-test"
 msgstr "Verwyder self-toets"
-
-msgid "Delete share"
-msgstr "Wis deel uit"
 
 msgid "Delete target"
 msgstr "Verwyder teiken"
@@ -2537,6 +2543,12 @@ msgstr "Deaktiveer Geselekteerde Opsies"
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktiveer TCP pakker (mod-wrap module)"
 
@@ -2651,9 +2663,6 @@ msgstr "Wil jy regtig all die reëls uitvee?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Wil jy regtig al die geskeduleerde self-toetse uitvee?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Wil jy regtig hierdie Rsync werkstuk uitwis?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Wil jy regtig hierdie URL uitvee?"
 
@@ -2695,9 +2704,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Wil jy regtig hierdie koppelvlak verwyder?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Wil jy regtig hierdie module verwyder?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2708,17 +2714,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Wil jy regtig hierdie portaal groep verwyder?"
 
-msgid "Do you really want to delete this resource?"
-msgstr "Wil jy regtig hierdie hulpbron uitvee?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Wil jy regtig hierdie reël verwyder?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Wil jy regtig hierdie geskeduleerde self-toets verwyder?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Wil jy regtig hierdie deling uitwis?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Wil jy regtig hierdie teiken uitvee?"
@@ -2788,8 +2788,14 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 "Wil jy 'n gestreepte virtuele toestel skep van die geselekteerde harde skywe?"
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Wil jy die geselekteerde RAID volumes uitvee?"
+
+msgid "Do you want to delete selected Samba shares?"
+msgstr ""
 
 msgid "Do you want to delete selected commands?"
 msgstr "Wil jy die geselekteerde bevelle uitvee?"
@@ -2812,7 +2818,16 @@ msgstr "Wil jy die geselekteerde poele uitwis?"
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2845,6 +2860,12 @@ msgstr "Wil jy die geselekteerde opsies deaktiveer?"
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Wil jy die geselekteerde bevelle aktiveer?"
 
@@ -2855,6 +2876,12 @@ msgid "Do you want to enable selected options?"
 msgstr "Wil jy die geselekteerde opsies aktiveer?"
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2873,6 +2900,12 @@ msgid "Do you want to toggle selected options?"
 msgstr "Wil wipkring tussen die geselekteerde opsies?"
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -3008,17 +3041,29 @@ msgstr "Redigeer Gasheer"
 msgid "Edit MIB"
 msgstr "Redigeer  MIB"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Redigeer RAID"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Redigeer Roete"
 
-msgid "Edit Rsync job"
-msgstr "Redigeer Rsync werkstuk"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -3068,9 +3113,6 @@ msgstr "Reigeer koppelvlak"
 msgid "Edit job"
 msgstr "Redigeer werkstuk"
 
-msgid "Edit module"
-msgstr "Reigeer module"
-
 msgid "Edit mount point"
 msgstr "Redigeer monteer punt"
 
@@ -3083,17 +3125,11 @@ msgstr "Redigeer poel"
 msgid "Edit portal group"
 msgstr "Redigeer portaal groep"
 
-msgid "Edit resource"
-msgstr "Reigeer hulpbron"
-
 msgid "Edit rule"
 msgstr "Reigeer reël"
 
 msgid "Edit self-test"
 msgstr "Redigeer self-toets"
-
-msgid "Edit share"
-msgstr "Redigeer die deel"
 
 msgid "Edit target"
 msgstr "Redigeer teiken"
@@ -3182,6 +3218,12 @@ msgid "Enable Selected Options"
 msgstr "Aktiveer Geselekteerde Opsies"
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5463,6 +5505,15 @@ msgstr "Wedersydse CHAP gebruikers"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6852,6 +6903,15 @@ msgstr "Hulpbron"
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr "Hulpbronne"
 
@@ -6942,6 +7002,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr "Rsync werkstuk"
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "Reël"
 
@@ -7031,6 +7109,15 @@ msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Aktiewe Lêergids Domein Beheerder"
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9519,6 +9606,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -10622,20 +10715,68 @@ msgstr "na"
 msgid "umount"
 msgstr ""
 
+#~ msgid "Add module"
+#~ msgstr "Voeg 'n module by"
+
+#~ msgid "Add resource"
+#~ msgstr "Voeg hulpbron by"
+
 #~ msgid "Delete Route"
 #~ msgstr "Vee Roete Uit"
+
+#~ msgid "Delete resource"
+#~ msgstr "Verwyder hulpbron"
+
+#~ msgid "Delete module"
+#~ msgstr "Verwyder module"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "Wil jy regtig hierdie hulpbron uitvee?"
 
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Wil jy regtig hierdie roete uitvee?"
 
+#~ msgid "Edit resource"
+#~ msgstr "Reigeer hulpbron"
+
+#~ msgid "Edit module"
+#~ msgstr "Reigeer module"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "Kyk na gedeelde geheim:"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Wil jy regtig hierdie module verwyder?"
 
 #~ msgid "AD authentication disabled"
 #~ msgstr "AD bevestighing afgeskakel"
 
+#~ msgid "Add share"
+#~ msgstr "Voeg 'n gedeelde by"
+
+#~ msgid "Add Rsync job"
+#~ msgstr "Voeg Rsync taak by"
+
+#~ msgid "Delete Rsync job"
+#~ msgstr "Wis Rsync uit"
+
+#~ msgid "Delete share"
+#~ msgstr "Wis deel uit"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Wil jy regtig hierdie Rsync werkstuk uitwis?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Wil jy regtig hierdie deling uitwis?"
+
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Pieng winbindd om te sien of dit lewendig is"
+
+#~ msgid "Edit share"
+#~ msgstr "Redigeer die deel"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Redigeer Rsync werkstuk"
 
 #~ msgid "Results for net rpc testjoin:"
 #~ msgstr "Resultate vir net rpc toetsaansluit:"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:34+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -415,17 +415,29 @@ msgstr "Tilføj vært"
 msgid "Add MIB"
 msgstr "Tilføj MIB"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Tilføj RAID"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Tilføj rute"
 
-msgid "Add Rsync job"
-msgstr "Tilføj Rsync opgave"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -490,9 +502,6 @@ msgstr "Tilføj grænseflade"
 msgid "Add job"
 msgstr "Tilføj opgave"
 
-msgid "Add module"
-msgstr "Tilføj modul"
-
 msgid "Add mount point"
 msgstr "Tilføj monterings punkt"
 
@@ -505,17 +514,11 @@ msgstr "Tilføj pulje"
 msgid "Add portal group"
 msgstr "Tilføj Portal gruppe"
 
-msgid "Add resource"
-msgstr "Tilføj resource"
-
 msgid "Add rule"
 msgstr "Tilføj regel"
 
 msgid "Add self-test"
 msgstr "Tilføj selv-diagnose"
-
-msgid "Add share"
-msgstr "Tilføj share"
 
 msgid "Add target"
 msgstr "Tilføj mål"
@@ -2030,9 +2033,6 @@ msgstr "Slet vært"
 msgid "Delete Login Info"
 msgstr "Slet login informationer"
 
-msgid "Delete Rsync job"
-msgstr "Slet Rsync opgave"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2043,6 +2043,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2057,7 +2060,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2121,26 +2136,17 @@ msgstr "Slet Initiator gruppe"
 msgid "Delete interface"
 msgstr "Slet grænseflade"
 
-msgid "Delete module"
-msgstr "Slet modul"
-
 msgid "Delete mount point"
 msgstr "Slet monterings punkt"
 
 msgid "Delete portal group"
 msgstr "Slet Portal gruppe"
 
-msgid "Delete resource"
-msgstr "Slet ressource"
-
 msgid "Delete rule"
 msgstr "Slet regel"
 
 msgid "Delete self-test"
 msgstr "Slet selv-diagnose"
-
-msgid "Delete share"
-msgstr "Slet share"
 
 msgid "Delete target"
 msgstr "Slet mål"
@@ -2354,6 +2360,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper anvendes ikke (mod_wrap module)."
 
@@ -2461,9 +2473,6 @@ msgstr "Vil du virkelig slette alle regler?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Vil du virkelig slette alle planlagte selv-diagnoser?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Vil du virkelig slette denne Rsync opgave?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Vil du virkelig slette denne URL?"
 
@@ -2505,9 +2514,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Vil du virkelig slette denne grænseflade?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Vil du virkelig slette dette modul?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2518,17 +2524,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Vil du virkelig slette denne Portal gruppe?"
 
-msgid "Do you really want to delete this resource?"
-msgstr "Vil du virkelig slette denne ressource?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Vil du virkelig slette denne regel?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Vil du virkelig slette denne planlagte selv-diagnose?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Vil du virkelig slette denne share?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Vil du virkelig slette dette mål?"
@@ -2593,7 +2593,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2617,7 +2623,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2650,6 +2665,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2660,6 +2681,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2678,6 +2705,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2810,17 +2843,29 @@ msgstr "Rediger vært"
 msgid "Edit MIB"
 msgstr "Rediger MIB"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Rediger RAID"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Rediger rute"
 
-msgid "Edit Rsync job"
-msgstr "Rediger Rsync opgave"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -2870,9 +2915,6 @@ msgstr "Rediger grænseflade"
 msgid "Edit job"
 msgstr "Rediger opgave"
 
-msgid "Edit module"
-msgstr "Rediger modul"
-
 msgid "Edit mount point"
 msgstr "Rediger monterings punkt"
 
@@ -2885,17 +2927,11 @@ msgstr "Rediger pulje"
 msgid "Edit portal group"
 msgstr "Reduger Portal gruppe"
 
-msgid "Edit resource"
-msgstr "Rediger resource"
-
 msgid "Edit rule"
 msgstr "Rediger regel"
 
 msgid "Edit self-test"
 msgstr "Rediger selv-diagnose"
-
-msgid "Edit share"
-msgstr "Rediger share"
 
 msgid "Edit target"
 msgstr "Rediger mål"
@@ -2979,6 +3015,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5189,6 +5231,15 @@ msgstr "Mutual CHAP brugere"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6544,6 +6595,15 @@ msgstr "Ressource"
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr "Ressourcer"
 
@@ -6634,6 +6694,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr ""
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "Regel"
 
@@ -6721,6 +6799,15 @@ msgid "Samba AD"
 msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
+msgstr ""
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
 msgstr ""
 
 #, php-format
@@ -9102,6 +9189,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolereret"
 
@@ -10192,14 +10285,50 @@ msgstr "umount"
 #~ msgid "AD authentication disabled"
 #~ msgstr "AD godkendelse deaktiveret"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Tilføj Rsync opgave"
+
+#~ msgid "Add module"
+#~ msgstr "Tilføj modul"
+
+#~ msgid "Add share"
+#~ msgstr "Tilføj share"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "Kontroller delt hemmelighed:"
 
 #~ msgid "Delete Route"
 #~ msgstr "Slet rute"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Slet Rsync opgave"
+
+#~ msgid "Delete module"
+#~ msgstr "Slet modul"
+
+#~ msgid "Delete share"
+#~ msgstr "Slet share"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Vil du virkelig slette denne Rsync opgave?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Vil du virkelig slette dette modul?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Vil du virkelig slette denne rute?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Vil du virkelig slette denne share?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Rediger Rsync opgave"
+
+#~ msgid "Edit module"
+#~ msgstr "Rediger modul"
+
+#~ msgid "Edit share"
+#~ msgstr "Rediger share"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Ping winbindd for at se om den er i live:"
@@ -10209,3 +10338,15 @@ msgstr "umount"
 
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "iSCSI initiator deaktiveret"
+
+#~ msgid "Add resource"
+#~ msgstr "Tilføj resource"
+
+#~ msgid "Delete resource"
+#~ msgstr "Slet ressource"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "Vil du virkelig slette denne ressource?"
+
+#~ msgid "Edit resource"
+#~ msgstr "Rediger resource"

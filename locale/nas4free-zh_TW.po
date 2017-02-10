@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -403,17 +403,29 @@ msgstr "新增主機"
 msgid "Add MIB"
 msgstr "新增 MIB"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "新增 RAID"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "新增路由"
 
-msgid "Add Rsync job"
-msgstr "新增 Rsync 工作"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -478,9 +490,6 @@ msgstr "新增介面"
 msgid "Add job"
 msgstr "新增工作"
 
-msgid "Add module"
-msgstr "新增模組"
-
 msgid "Add mount point"
 msgstr "新增掛載點"
 
@@ -493,17 +502,11 @@ msgstr "新增儲存池"
 msgid "Add portal group"
 msgstr "新增門戶組"
 
-msgid "Add resource"
-msgstr "新增資源"
-
 msgid "Add rule"
 msgstr "新增規則"
 
 msgid "Add self-test"
 msgstr "新增自我檢測"
-
-msgid "Add share"
-msgstr "新增分享區"
 
 msgid "Add target"
 msgstr "新增目標"
@@ -1993,9 +1996,6 @@ msgstr "刪除主機"
 msgid "Delete Login Info"
 msgstr "刪除登入資訊"
 
-msgid "Delete Rsync job"
-msgstr "刪除 Rsync 任務"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2006,6 +2006,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2020,7 +2023,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2083,26 +2098,17 @@ msgstr "刪除啟動器組"
 msgid "Delete interface"
 msgstr "刪除介面"
 
-msgid "Delete module"
-msgstr "刪除模組"
-
 msgid "Delete mount point"
 msgstr "刪除掛載點"
 
 msgid "Delete portal group"
 msgstr "刪除門戶組"
 
-msgid "Delete resource"
-msgstr "刪除資源"
-
 msgid "Delete rule"
 msgstr "刪除規則"
 
 msgid "Delete self-test"
 msgstr "刪除自我檢測"
-
-msgid "Delete share"
-msgstr "刪除分享區"
 
 msgid "Delete target"
 msgstr "刪除目標"
@@ -2311,6 +2317,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "關閉 TCP Wrapper（mod_wrap 模塊）。"
 
@@ -2416,9 +2428,6 @@ msgstr "您確定要刪除所有規則嗎？"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "您確定要刪除所有自我測試任務嗎?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "您確定要刪除這個 Rsync 任務嗎？"
-
 msgid "Do you really want to delete this URL?"
 msgstr "您確定要刪除這個 URL 嗎？"
 
@@ -2456,9 +2465,6 @@ msgstr "您確定要刪除這個啟動器嗎？所有存取這個初始器的元
 msgid "Do you really want to delete this interface?"
 msgstr "您確定要刪除這個介面嗎？"
 
-msgid "Do you really want to delete this module?"
-msgstr "您確定要刪除這個模組嗎？"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2467,17 +2473,11 @@ msgstr "您確定要刪除這個掛載點嗎？所有使用此掛載點的元件
 msgid "Do you really want to delete this portal group?"
 msgstr "您確定要刪除這個門戶組嗎？"
 
-msgid "Do you really want to delete this resource?"
-msgstr "您確定要刪除這個資源嗎？"
-
 msgid "Do you really want to delete this rule?"
 msgstr "您確定要刪除這個規則嗎？"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "您確定要刪除這項自我檢測流程嗎？"
-
-msgid "Do you really want to delete this share?"
-msgstr "您確定要刪除這個分享區嗎？"
 
 msgid "Do you really want to delete this target?"
 msgstr "您確定要刪除這個iSCSI目標嗎？"
@@ -2539,7 +2539,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2563,7 +2569,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2596,6 +2611,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2606,6 +2627,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2624,6 +2651,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2756,17 +2789,29 @@ msgstr "編輯主機資訊"
 msgid "Edit MIB"
 msgstr "編輯 MIB"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "編輯RAID"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "編輯路由"
 
-msgid "Edit Rsync job"
-msgstr "編輯 Rsync 任務"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -2816,9 +2861,6 @@ msgstr "編輯介面"
 msgid "Edit job"
 msgstr "編輯任務"
 
-msgid "Edit module"
-msgstr "編輯模組"
-
 msgid "Edit mount point"
 msgstr "編輯掛載點"
 
@@ -2831,17 +2873,11 @@ msgstr "編輯存儲池"
 msgid "Edit portal group"
 msgstr "編輯門戶組"
 
-msgid "Edit resource"
-msgstr "編輯資源"
-
 msgid "Edit rule"
 msgstr "編輯規則"
 
 msgid "Edit self-test"
 msgstr "編輯自我檢測流程"
-
-msgid "Edit share"
-msgstr "編輯分享區"
 
 msgid "Edit target"
 msgstr "編輯目標"
@@ -2924,6 +2960,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5080,6 +5122,15 @@ msgstr "CHAP 相互驗證用戶"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6403,6 +6454,15 @@ msgstr "資源"
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr "資源"
 
@@ -6493,6 +6553,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr "Rsync 任務"
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "規則"
 
@@ -6581,6 +6659,15 @@ msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Active Directory域控制器"
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8815,6 +8902,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "容許"
 
@@ -9880,20 +9973,68 @@ msgstr "卸載"
 #~ msgid "AD authentication disabled"
 #~ msgstr "關閉 AD 認證"
 
+#~ msgid "Add module"
+#~ msgstr "新增模組"
+
 #~ msgid "Delete Route"
 #~ msgstr "刪除路由"
+
+#~ msgid "Delete module"
+#~ msgstr "刪除模組"
+
+#~ msgid "Delete share"
+#~ msgstr "刪除分享區"
 
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "您確定要刪除這個路由資訊嗎？"
 
+#~ msgid "Edit module"
+#~ msgstr "編輯模組"
+
 #~ msgid "Results for net rpc testjoin:"
 #~ msgstr "Net rpc testjoin 結果："
+
+#~ msgid "Add Rsync job"
+#~ msgstr "新增 Rsync 工作"
+
+#~ msgid "Add resource"
+#~ msgstr "新增資源"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "您確定要刪除這個資源嗎？"
+
+#~ msgid "Edit resource"
+#~ msgstr "編輯資源"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Ping winbindd 看看是否 alive :"
 
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "關閉 iSCSI 啟動器"
+
+#~ msgid "Delete resource"
+#~ msgstr "刪除資源"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "您確定要刪除這個分享區嗎？"
+
+#~ msgid "Add share"
+#~ msgstr "新增分享區"
+
+#~ msgid "Delete Rsync job"
+#~ msgstr "刪除 Rsync 任務"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "您確定要刪除這個 Rsync 任務嗎？"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "您確定要刪除這個模組嗎？"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "編輯 Rsync 任務"
+
+#~ msgid "Edit share"
+#~ msgstr "編輯分享區"
 
 #~ msgid "Check shared secret:"
 #~ msgstr "檢查分享密鑰："

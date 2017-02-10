@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -418,17 +418,29 @@ msgstr "ホストを追加"
 msgid "Add MIB"
 msgstr "MIB を追加"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "RAID の追加"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "ルーティングの追加"
 
-msgid "Add Rsync job"
-msgstr "Rsync ジョブの追加"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -493,9 +505,6 @@ msgstr "インタフェースの追加"
 msgid "Add job"
 msgstr "ジョブの追加"
 
-msgid "Add module"
-msgstr "モジュールの追加"
-
 msgid "Add mount point"
 msgstr "マウントポイントの追加"
 
@@ -508,17 +517,11 @@ msgstr "プールの追加"
 msgid "Add portal group"
 msgstr "ポータルグループの追加"
 
-msgid "Add resource"
-msgstr "リソースの追加"
-
 msgid "Add rule"
 msgstr "ルールの追加"
 
 msgid "Add self-test"
 msgstr "セルフテストの追加"
-
-msgid "Add share"
-msgstr "共有の追加"
 
 msgid "Add target"
 msgstr "ターゲットの追加"
@@ -2025,9 +2028,6 @@ msgstr "ホストを削除"
 msgid "Delete Login Info"
 msgstr "ログイン情報の削除"
 
-msgid "Delete Rsync job"
-msgstr "Rsync ジョブを削除"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2038,6 +2038,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2052,7 +2055,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2115,26 +2130,17 @@ msgstr "イニシエータグループの削除"
 msgid "Delete interface"
 msgstr "インタフェースの削除"
 
-msgid "Delete module"
-msgstr "モジュールを削除"
-
 msgid "Delete mount point"
 msgstr "マウントポイントを削除"
 
 msgid "Delete portal group"
 msgstr "ポータルグループの削除"
 
-msgid "Delete resource"
-msgstr "リソースの削除"
-
 msgid "Delete rule"
 msgstr "ルールを削除"
 
 msgid "Delete self-test"
 msgstr "セルフテストの削除"
-
-msgid "Delete share"
-msgstr "共有を削除"
 
 msgid "Delete target"
 msgstr "ターゲットの削除"
@@ -2344,6 +2350,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper (mod_wrapモジュール) を無効にします。"
 
@@ -2449,9 +2461,6 @@ msgstr "全てのルールを削除してもよろしいですか?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "全てのスケジュールされたセルフテストを削除してもよろしいですか？"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "この Rsync ジョブを削除してもよろしいですか?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "この URL を削除してもよろしいですか?"
 
@@ -2489,9 +2498,6 @@ msgstr "このイニシエータを削除してもよろしいですか? それ�
 msgid "Do you really want to delete this interface?"
 msgstr "このインタフェースを削除してもよろしいですか?"
 
-msgid "Do you really want to delete this module?"
-msgstr "このモジュールを削除してもよろしいですか?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2500,17 +2506,11 @@ msgstr "のマウントポイントを削除しても宜しいですか? これ�
 msgid "Do you really want to delete this portal group?"
 msgstr "このポータルグループを削除してもよろしいですか？"
 
-msgid "Do you really want to delete this resource?"
-msgstr "このリソースを削除してもよろしいですか?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "このルールを削除してもよろしいですか?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "このスケジュールされたセルフテストを削除してもよろしいですか?"
-
-msgid "Do you really want to delete this share?"
-msgstr "この共有を削除してもよろしいですか?"
 
 msgid "Do you really want to delete this target?"
 msgstr "このターゲットを削除してもよろしいですか?"
@@ -2574,7 +2574,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2598,7 +2604,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2631,6 +2646,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2641,6 +2662,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2659,6 +2686,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2791,17 +2824,29 @@ msgstr "ホストを編集"
 msgid "Edit MIB"
 msgstr "MIB を編集"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "RAID を編集"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "ルーティングを編集"
 
-msgid "Edit Rsync job"
-msgstr "Rsync ジョブを編集"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -2851,9 +2896,6 @@ msgstr "インタフェースを編集"
 msgid "Edit job"
 msgstr "ジョブを編集"
 
-msgid "Edit module"
-msgstr "モジュールを編集"
-
 msgid "Edit mount point"
 msgstr "マウントポイントを編集"
 
@@ -2866,17 +2908,11 @@ msgstr "プールの編集"
 msgid "Edit portal group"
 msgstr "ポータルグループの編集"
 
-msgid "Edit resource"
-msgstr "リソースの編集"
-
 msgid "Edit rule"
 msgstr "ルールを編集"
 
 msgid "Edit self-test"
 msgstr "セルフテストを編集"
-
-msgid "Edit share"
-msgstr "共有を編集"
 
 msgid "Edit target"
 msgstr "ターゲットを編集"
@@ -2959,6 +2995,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5138,6 +5180,15 @@ msgstr "双方向 CHAP ユーザ"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6465,6 +6516,15 @@ msgstr "リソース"
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr "リソース"
 
@@ -6555,6 +6615,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr "Rsync ジョブ"
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "ルール"
 
@@ -6643,6 +6721,15 @@ msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Active Directory ドメインコントローラ"
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8921,6 +9008,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "許容"
 
@@ -9992,14 +10085,50 @@ msgstr "アンマウント"
 #~ msgid "AD authentication disabled"
 #~ msgstr "AD 認証は無効です"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Rsync ジョブの追加"
+
+#~ msgid "Add module"
+#~ msgstr "モジュールの追加"
+
+#~ msgid "Add share"
+#~ msgstr "共有の追加"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "共有シークレットのチェック:"
 
 #~ msgid "Delete Route"
 #~ msgstr "ルートの削除"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Rsync ジョブを削除"
+
+#~ msgid "Delete module"
+#~ msgstr "モジュールを削除"
+
+#~ msgid "Delete share"
+#~ msgstr "共有を削除"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "この Rsync ジョブを削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "このモジュールを削除してもよろしいですか?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "このルーティング情報を削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "この共有を削除してもよろしいですか?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Rsync ジョブを編集"
+
+#~ msgid "Edit module"
+#~ msgstr "モジュールを編集"
+
+#~ msgid "Edit share"
+#~ msgstr "共有を編集"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Pingによる winbindd の生存確認:"
@@ -10009,3 +10138,15 @@ msgstr "アンマウント"
 
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "iSCSI イニシエータは無効です"
+
+#~ msgid "Delete resource"
+#~ msgstr "リソースの削除"
+
+#~ msgid "Add resource"
+#~ msgstr "リソースの追加"
+
+#~ msgid "Edit resource"
+#~ msgstr "リソースの編集"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "このリソースを削除してもよろしいですか?"

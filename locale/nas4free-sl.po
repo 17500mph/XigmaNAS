@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 07:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -414,17 +414,29 @@ msgstr "Dodaj gostitelja"
 msgid "Add MIB"
 msgstr "Dodaj MIB"
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Dodaj RAID"
 
 msgid "Add Record"
 msgstr ""
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Dodaj pot"
 
-msgid "Add Rsync job"
-msgstr "Doday Rsync opravilo"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr ""
@@ -489,9 +501,6 @@ msgstr "Dodaj vmesnik"
 msgid "Add job"
 msgstr "Dodaj opravilo"
 
-msgid "Add module"
-msgstr "Dodaj modul"
-
 msgid "Add mount point"
 msgstr "Dodaj priklopno točko"
 
@@ -504,17 +513,11 @@ msgstr "Dodaj bazen"
 msgid "Add portal group"
 msgstr "Dodaj portal skupinoI"
 
-msgid "Add resource"
-msgstr "Dodaj vir"
-
 msgid "Add rule"
 msgstr "Dodaj pravilo"
 
 msgid "Add self-test"
 msgstr "Dodaj self-test"
-
-msgid "Add share"
-msgstr "Dodaj deljeno mapo"
 
 msgid "Add target"
 msgstr "Dodaj cilj"
@@ -2023,9 +2026,6 @@ msgstr "Odstrani gostitelja"
 msgid "Delete Login Info"
 msgstr "Pobriši informacije o prijavi"
 
-msgid "Delete Rsync job"
-msgstr "Pobriši Rsync delo"
-
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2036,6 +2036,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected NFS Shares"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2050,7 +2053,19 @@ msgstr ""
 msgid "Delete Selected Records"
 msgstr ""
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
+msgstr ""
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
@@ -2113,26 +2128,17 @@ msgstr "Pobriši skupino sprožitelja"
 msgid "Delete interface"
 msgstr "Odstrani vmesnik"
 
-msgid "Delete module"
-msgstr "Izbriši modul"
-
 msgid "Delete mount point"
 msgstr "Izbriši priklopno točko"
 
 msgid "Delete portal group"
 msgstr "Izbriši portal skupino"
 
-msgid "Delete resource"
-msgstr "Izbriši vir"
-
 msgid "Delete rule"
 msgstr "Izbriši pravilo"
 
 msgid "Delete self-test"
 msgstr "Izbriši self-test"
-
-msgid "Delete share"
-msgstr "Izbriši deljeno mapo"
 
 msgid "Delete target"
 msgstr "Odstrani cilj"
@@ -2346,6 +2352,12 @@ msgstr ""
 msgid "Disable Selected Records"
 msgstr ""
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2451,9 +2463,6 @@ msgstr "Res želite odstraniti vsa pravila?"
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Res želite odstraniti vse self-teste?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Res želite odstraniti to Rsync pravilo?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Ali res želite izbrisati ta URL?"
 
@@ -2495,9 +2504,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Ali res želite izbrisati ta vmesnik?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Res želite izbrisati ta modul?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2508,17 +2514,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Res izbrišem portal skupino?"
 
-msgid "Do you really want to delete this resource?"
-msgstr "Ali resnično želite izbrisati ta vir?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Res želite izbrisati to pravilo?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Res želite izbrisati ta self-test?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Ali res želite izbrisati to deljeno mapo?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Res želite odstraniti ta cilj?"
@@ -2582,7 +2582,13 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
+msgid "Do you want to delete selected Samba shares?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2606,7 +2612,16 @@ msgstr ""
 msgid "Do you want to delete selected records?"
 msgstr ""
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to delete selected shares?"
@@ -2639,6 +2654,12 @@ msgstr ""
 msgid "Do you want to disable selected records?"
 msgstr ""
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2649,6 +2670,12 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
@@ -2668,6 +2695,12 @@ msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -2800,17 +2833,29 @@ msgstr "Uredi gostitelja"
 msgid "Edit MIB"
 msgstr "Uredi MIB"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Uredi RAID"
 
 msgid "Edit Record"
 msgstr ""
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Uredi pot"
 
-msgid "Edit Rsync job"
-msgstr "Uredi Rsync pravilo"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr ""
@@ -2860,9 +2905,6 @@ msgstr "Uredi vmesnik"
 msgid "Edit job"
 msgstr "Uredi opravilo"
 
-msgid "Edit module"
-msgstr "Uredi modul"
-
 msgid "Edit mount point"
 msgstr "Uredi priklopno točko"
 
@@ -2875,17 +2917,11 @@ msgstr "Uredi bazen"
 msgid "Edit portal group"
 msgstr "Uredi portal skupino"
 
-msgid "Edit resource"
-msgstr ""
-
 msgid "Edit rule"
 msgstr "Uredi pravilo"
 
 msgid "Edit self-test"
 msgstr "Uredi selg-test"
-
-msgid "Edit share"
-msgstr "Uredi deljeno mapo"
 
 msgid "Edit target"
 msgstr "Uredi cilj"
@@ -2968,6 +3004,12 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable Selected Records"
+msgstr ""
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -5165,6 +5207,15 @@ msgstr "Skupni CHAP uporabniki"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6512,6 +6563,15 @@ msgstr ""
 msgid "Resource Name"
 msgstr ""
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr ""
 
@@ -6602,6 +6662,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr ""
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "Pravilo"
 
@@ -6689,6 +6767,15 @@ msgid "Samba AD"
 msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
+msgstr ""
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
 msgstr ""
 
 #, php-format
@@ -8940,6 +9027,12 @@ msgstr ""
 msgid "Toggle Selected Records"
 msgstr ""
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -10006,14 +10099,50 @@ msgstr "izvrzi"
 #~ msgid "AD authentication disabled"
 #~ msgstr "AD prijava je onemogočena"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Doday Rsync opravilo"
+
+#~ msgid "Add module"
+#~ msgstr "Dodaj modul"
+
+#~ msgid "Add share"
+#~ msgstr "Dodaj deljeno mapo"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "Preveri geslo:"
 
 #~ msgid "Delete Route"
 #~ msgstr "Odstrani pot"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Pobriši Rsync delo"
+
+#~ msgid "Delete module"
+#~ msgstr "Izbriši modul"
+
+#~ msgid "Delete share"
+#~ msgstr "Izbriši deljeno mapo"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Res želite odstraniti to Rsync pravilo?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Res želite izbrisati ta modul?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Ali res želite odstraniti to pot?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Ali res želite izbrisati to deljeno mapo?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Uredi Rsync pravilo"
+
+#~ msgid "Edit module"
+#~ msgstr "Uredi modul"
+
+#~ msgid "Edit share"
+#~ msgstr "Uredi deljeno mapo"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Ping winbindd, da vidimo, če deluje:"
@@ -10023,3 +10152,12 @@ msgstr "izvrzi"
 
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "iSCSI pobudnik onemogočen"
+
+#~ msgid "Delete resource"
+#~ msgstr "Izbriši vir"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "Ali resnično želite izbrisati ta vir?"
+
+#~ msgid "Add resource"
+#~ msgstr "Dodaj vir"

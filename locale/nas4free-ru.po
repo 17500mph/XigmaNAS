@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 02:53+0000\n"
+"POT-Creation-Date: 2017-02-10 18:16+0000\n"
 "PO-Revision-Date: 2017-02-10 16:49+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 16:57+0000\n"
+"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -449,17 +449,29 @@ msgstr "Добавить хост"
 msgid "Add MIB"
 msgstr "Добавить MIB."
 
+msgid "Add NFS Share"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Добавить RAID-массив"
 
 msgid "Add Record"
 msgstr "Добавить запись"
 
+msgid "Add Resource"
+msgstr ""
+
 msgid "Add Route"
 msgstr "Добавить маршрут"
 
-msgid "Add Rsync job"
-msgstr "Добавить задание Rsync"
+msgid "Add Rsync Job"
+msgstr ""
+
+msgid "Add Rsync Module"
+msgstr ""
+
+msgid "Add Samba Share"
+msgstr ""
 
 msgid "Add Share"
 msgstr "Добавить общий ресурс"
@@ -524,9 +536,6 @@ msgstr "Добавить интерфейс"
 msgid "Add job"
 msgstr "Добавить задание"
 
-msgid "Add module"
-msgstr "Добавить модуль"
-
 msgid "Add mount point"
 msgstr "Добавить точку монтирования"
 
@@ -539,17 +548,11 @@ msgstr "Добавить пул"
 msgid "Add portal group"
 msgstr "Добавить группу порталов"
 
-msgid "Add resource"
-msgstr "Добавить ресурс"
-
 msgid "Add rule"
 msgstr "Добавить правило"
 
 msgid "Add self-test"
 msgstr "Добавить самотестирование"
-
-msgid "Add share"
-msgstr "Добавить общий ресурс"
 
 msgid "Add target"
 msgstr "Добавить цель"
@@ -2207,9 +2210,6 @@ msgstr "Удалить хост"
 msgid "Delete Login Info"
 msgstr "Удалить сведения входа"
 
-msgid "Delete Rsync job"
-msgstr "Удалить задание Rsync"
-
 msgid "Delete Selected Commands"
 msgstr "Удалить выбранные команды"
 
@@ -2221,6 +2221,9 @@ msgstr "Удалить выбранные группы"
 
 msgid "Delete Selected Jobs"
 msgstr "Удалить выбранные задания"
+
+msgid "Delete Selected NFS Shares"
+msgstr ""
 
 msgid "Delete Selected Options"
 msgstr "Удалить выбранные опции"
@@ -2234,8 +2237,20 @@ msgstr "Удалить выбранные RAID тома"
 msgid "Delete Selected Records"
 msgstr "Удалить выбранные записи"
 
+msgid "Delete Selected Resources"
+msgstr ""
+
 msgid "Delete Selected Routes"
 msgstr "Удалить выбранные маршруты"
+
+msgid "Delete Selected Rsync Jobs"
+msgstr ""
+
+msgid "Delete Selected Rsync Modules"
+msgstr ""
+
+msgid "Delete Selected Samba Shares"
+msgstr ""
 
 msgid "Delete Selected Shares"
 msgstr "Удалить выбранные общие ресурсы"
@@ -2298,26 +2313,17 @@ msgstr "Удалить группу инициаторов"
 msgid "Delete interface"
 msgstr "Удалить интерфейс"
 
-msgid "Delete module"
-msgstr "Удалить модуль"
-
 msgid "Delete mount point"
 msgstr "Удалить точку монтирования"
 
 msgid "Delete portal group"
 msgstr "Удалить группу порталов"
 
-msgid "Delete resource"
-msgstr "Удалить ресурс"
-
 msgid "Delete rule"
 msgstr "Удалить правило"
 
 msgid "Delete self-test"
 msgstr "Удалить самотестирование"
-
-msgid "Delete share"
-msgstr "Удалить общий ресурс"
 
 msgid "Delete target"
 msgstr "Удалить цель"
@@ -2537,6 +2543,12 @@ msgstr "Отключить выбранные опции"
 msgid "Disable Selected Records"
 msgstr "Отключить выбранные записи"
 
+msgid "Disable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Disable Selected Rsync Modules"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Отключить TCP wrapper (mod_wrap module)."
 
@@ -2650,9 +2662,6 @@ msgid "Do you really want to delete all scheduled self-tests?"
 msgstr ""
 "Вы действительно хотите удалить все запланированные самотестирования?"
 
-msgid "Do you really want to delete this Rsync job?"
-msgstr "Вы действительно хотите удалить это задание Rsync?"
-
 msgid "Do you really want to delete this URL?"
 msgstr "Вы действительно хотите удалить этот URL?"
 
@@ -2694,9 +2703,6 @@ msgstr ""
 msgid "Do you really want to delete this interface?"
 msgstr "Вы действительно хотите удалить этот интерфейс?"
 
-msgid "Do you really want to delete this module?"
-msgstr "Вы действительно хотите удалить этот модуль?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2707,17 +2713,11 @@ msgstr ""
 msgid "Do you really want to delete this portal group?"
 msgstr "Вы действительно хотите удалить эту группу порталов?"
 
-msgid "Do you really want to delete this resource?"
-msgstr "Вы действительно хотите удалить этот ресурс?"
-
 msgid "Do you really want to delete this rule?"
 msgstr "Вы действительно хотите удалить это правило?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Вы действительно хотите удалить запланированное самотестирование?"
-
-msgid "Do you really want to delete this share?"
-msgstr "Вы действительно хотите удалить этот общий ресурс?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Вы действительно хотите удалить эту цель?"
@@ -2787,8 +2787,14 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 "Хотите ли вы создать страйп виртуальное устройство из выбранных дисков?"
 
+msgid "Do you want to delete selected NFS shares?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Вы действительно хотите удалить выбранные тома RAID?"
+
+msgid "Do you want to delete selected Samba shares?"
+msgstr ""
 
 msgid "Do you want to delete selected commands?"
 msgstr "Вы уверены, что желаете удалить выбранные команды?"
@@ -2811,8 +2817,17 @@ msgstr "Хотите ли вы удалить выбранные пулы?"
 msgid "Do you want to delete selected records?"
 msgstr "Вы хотите удалить выбранные записи?"
 
+msgid "Do you want to delete selected resources?"
+msgstr ""
+
 msgid "Do you want to delete selected routes?"
 msgstr "Вы хотите удалить выбранные маршруты?"
+
+msgid "Do you want to delete selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected rsync modules?"
+msgstr ""
 
 msgid "Do you want to delete selected shares?"
 msgstr "Вы хотите удалить выбранные общие ресурсы?"
@@ -2845,6 +2860,12 @@ msgstr "Вы действительно желаете отключить выб
 msgid "Do you want to disable selected records?"
 msgstr "Вы хотите отключить выбранные записи?"
 
+msgid "Do you want to disable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected rsync modules?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Вы уверены, что желаете включить выбранные команды?"
 
@@ -2856,6 +2877,12 @@ msgstr "Вы действительно желаете включить выбр
 
 msgid "Do you want to enable selected records?"
 msgstr "Вы хотите включить выбранные записи?"
+
+msgid "Do you want to enable selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected rsync modules?"
+msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
@@ -2875,6 +2902,12 @@ msgstr "Вы действительно желаете изменить сост
 
 msgid "Do you want to toggle selected records?"
 msgstr "Вы хотите инвертировать выбранные записи?"
+
+msgid "Do you want to toggle selected rsync jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected rsync modules?"
+msgstr ""
 
 msgid "Do you want to unlock selected records?"
 msgstr "Вы хотите разблокировать выбранные записи?"
@@ -3011,17 +3044,29 @@ msgstr "Изменить хост"
 msgid "Edit MIB"
 msgstr "Редактировать MIB"
 
+msgid "Edit NFS Share"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Изменить RAID-массив"
 
 msgid "Edit Record"
 msgstr "Редактировать запись"
 
+msgid "Edit Resource"
+msgstr ""
+
 msgid "Edit Route"
 msgstr "Редактировать маршрут"
 
-msgid "Edit Rsync job"
-msgstr "Редактировать задание Rsync"
+msgid "Edit Rsync Job"
+msgstr ""
+
+msgid "Edit Rsync Module"
+msgstr ""
+
+msgid "Edit Samba Share"
+msgstr ""
 
 msgid "Edit Share"
 msgstr "Редактировать общий ресурс"
@@ -3071,9 +3116,6 @@ msgstr "Изменить интерфейс"
 msgid "Edit job"
 msgstr "Редактировать задание"
 
-msgid "Edit module"
-msgstr "Редактировать модуль"
-
 msgid "Edit mount point"
 msgstr "Изменить точку монтирования"
 
@@ -3086,17 +3128,11 @@ msgstr "Изменить пул"
 msgid "Edit portal group"
 msgstr "Изменить группу порталов"
 
-msgid "Edit resource"
-msgstr "Изменить ресурс"
-
 msgid "Edit rule"
 msgstr "Редактировать правило"
 
 msgid "Edit self-test"
 msgstr "Редактировать самотестирование"
-
-msgid "Edit share"
-msgstr "Изменить общий ресурс"
 
 msgid "Edit target"
 msgstr "Изменить цель"
@@ -3184,6 +3220,12 @@ msgstr "Включить выбранные опции"
 
 msgid "Enable Selected Records"
 msgstr "Включить выбранные записи"
+
+msgid "Enable Selected Rsync Jobs"
+msgstr ""
+
+msgid "Enable Selected Rsync Modules"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Разрешить TLS соединения."
@@ -5500,6 +5542,15 @@ msgstr "Пользователи взаимного CHAP"
 msgid "NFS"
 msgstr "NFS"
 
+msgid "NFS share is marked for deletion"
+msgstr ""
+
+msgid "NFS share is protected"
+msgstr ""
+
+msgid "NFS share is unlocked"
+msgstr ""
+
 msgid "NFSv4"
 msgstr "NFSv4"
 
@@ -6892,6 +6943,15 @@ msgstr "Ресурс"
 msgid "Resource Name"
 msgstr "Имя ресурса"
 
+msgid "Resource is marked for deletion"
+msgstr ""
+
+msgid "Resource is protected"
+msgstr ""
+
+msgid "Resource is unlocked"
+msgstr ""
+
 msgid "Resources"
 msgstr "Ресурсы"
 
@@ -6983,6 +7043,24 @@ msgstr "Rsync"
 msgid "Rsync Job"
 msgstr "Rsync-задание"
 
+msgid "Rsync Module is marked for deletion"
+msgstr ""
+
+msgid "Rsync Module is protected"
+msgstr ""
+
+msgid "Rsync Module is unlocked"
+msgstr ""
+
+msgid "Rsync job is marked for deletion"
+msgstr ""
+
+msgid "Rsync job is protected"
+msgstr ""
+
+msgid "Rsync job is unlocked"
+msgstr ""
+
 msgid "Rule"
 msgstr "Правило"
 
@@ -7073,6 +7151,15 @@ msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr "Контроллер домена Samba Active Directory"
+
+msgid "Samba Share is marked for deletion"
+msgstr ""
+
+msgid "Samba Share is protected"
+msgstr ""
+
+msgid "Samba Share is unlocked"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9622,6 +9709,12 @@ msgstr "Вкл./откл. выбранные опции"
 msgid "Toggle Selected Records"
 msgstr "Переключение выбранных записей"
 
+msgid "Toggle Selected Rsync Jobs"
+msgstr ""
+
+msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Допускается"
 
@@ -10790,14 +10883,50 @@ msgstr "размонтировать"
 #~ msgid "AD authentication disabled"
 #~ msgstr "Идентификация AD отключена"
 
+#~ msgid "Add Rsync job"
+#~ msgstr "Добавить задание Rsync"
+
+#~ msgid "Add module"
+#~ msgstr "Добавить модуль"
+
+#~ msgid "Add share"
+#~ msgstr "Добавить общий ресурс"
+
 #~ msgid "Check shared secret:"
 #~ msgstr "Проверьте разделяемый ключ безопасности:"
 
 #~ msgid "Delete Route"
 #~ msgstr "Удалить маршрут"
 
+#~ msgid "Delete Rsync job"
+#~ msgstr "Удалить задание Rsync"
+
+#~ msgid "Delete module"
+#~ msgstr "Удалить модуль"
+
+#~ msgid "Delete share"
+#~ msgstr "Удалить общий ресурс"
+
+#~ msgid "Do you really want to delete this Rsync job?"
+#~ msgstr "Вы действительно хотите удалить это задание Rsync?"
+
+#~ msgid "Do you really want to delete this module?"
+#~ msgstr "Вы действительно хотите удалить этот модуль?"
+
 #~ msgid "Do you really want to delete this route?"
 #~ msgstr "Вы действительно хотите удалить этот маршрут?"
+
+#~ msgid "Do you really want to delete this share?"
+#~ msgstr "Вы действительно хотите удалить этот общий ресурс?"
+
+#~ msgid "Edit Rsync job"
+#~ msgstr "Редактировать задание Rsync"
+
+#~ msgid "Edit module"
+#~ msgstr "Редактировать модуль"
+
+#~ msgid "Edit share"
+#~ msgstr "Изменить общий ресурс"
 
 #~ msgid "Ping winbindd to see if it is alive:"
 #~ msgstr "Убедитесь, что winbindd функционирует:"
@@ -10807,3 +10936,15 @@ msgstr "размонтировать"
 
 #~ msgid "iSCSI initiator disabled"
 #~ msgstr "Инициатор iSCSI запрещен"
+
+#~ msgid "Add resource"
+#~ msgstr "Добавить ресурс"
+
+#~ msgid "Delete resource"
+#~ msgstr "Удалить ресурс"
+
+#~ msgid "Do you really want to delete this resource?"
+#~ msgstr "Вы действительно хотите удалить этот ресурс?"
+
+#~ msgid "Edit resource"
+#~ msgstr "Изменить ресурс"
