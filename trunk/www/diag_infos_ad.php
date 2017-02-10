@@ -80,7 +80,7 @@ if (!isset($config['ad']['enable'])):
 			<td class="celldata">
 <?php
 				echo '<pre>';
-				echo gtext('AD authentication disabled.');
+				echo gtext('AD authentication is disabled.');
 				echo '</pre>';
 ?>
 			</td>
