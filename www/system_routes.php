@@ -43,15 +43,15 @@ function routes_process_updatenotification($mode,$data) {
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
-		case UPDATENOTIFY_MODE_DIRTY:
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
-				rc_exec_service('routing delete conf_' . strtr($sphere->grid[$sphere->row_id][$sphere->row_identifier()],'-','_'));
 				unset($sphere->grid[$sphere->row_id]);
 				write_config();
 			endif;
 			break;
-		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+		case UPDATENOTIFY_MODE_DIRTY:
 			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+				rc_exec_service('routing delete conf_' . strtr($sphere->grid[$sphere->row_id][$sphere->row_identifier()],'-','_'));
 				unset($sphere->grid[$sphere->row_id]);
 				write_config();
 			endif;
@@ -118,11 +118,73 @@ if($_POST):
 //				header($sphere->header());
 //				exit;
 				break;
-			case 'rows.enable':
+			case 'rows.disable':
+				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$updateconfig = false;
+				foreach($sphere->cbm_grid as $sphere->cbm_row):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+						if(isset($sphere->grid[$sphere->row_id]['enable'])):
+							unset($sphere->grid[$sphere->row_id]['enable']);
+							$updateconfig = true;
+							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							endif;
+						endif;
+					endif;
+				endforeach;
+				if($updateconfig):
+					write_config();
+					$updateconfig = false;
+				endif;
+				header($sphere->header());
+				exit;
 				break;
-			case 'rows.diable':
+			case 'rows.enable':
+				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$updateconfig = false;
+				foreach($sphere->cbm_grid as $sphere->cbm_row):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+						if(!(isset($sphere->grid[$sphere->row_id]['enable']))):
+							$sphere->grid[$sphere->row_id]['enable'] = true;
+							$updateconfig = true;
+							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							endif;
+						endif;
+					endif;
+				endforeach;
+				if($updateconfig):
+					write_config();
+					$updateconfig = false;
+				endif;
+				header($sphere->header());
+				exit;
 				break;
 			case 'rows.toggle':
+				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$updateconfig = false;
+				foreach($sphere->cbm_grid as $sphere->cbm_row):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+						if(isset($sphere->grid[$sphere->row_id]['enable'])):
+							unset($sphere->grid[$sphere->row_id]['enable']);
+						else:
+							$sphere->grid[$sphere->row_id]['enable'] = true;					
+						endif;
+						$updateconfig = true;
+						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+						if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+							updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+						endif;
+					endif;
+				endforeach;
+				if($updateconfig):
+					write_config();
+					$updateconfig = false;
+				endif;
+				header($sphere->header());
+				exit;
 				break;
 		endswitch;
 	endif;
@@ -139,86 +201,9 @@ for($j = 1;;$j++):
 endfor;
 $pgtitle = [gtext('Network'),gtext('Static Routes')];
 include 'fbegin.inc';
+echo $sphere->doj();
 ?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-<?php
-//	Init action buttons.
-if($sphere->enadis()):
-	if($sphere->toggle()):
-?>
-	$("#toggle_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_toggle_confirm();?>");
-	});
-<?php
-	else:
-?>
-	$("#enable_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_enable_confirm();?>");
-	});
-	$("#disable_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_disable_confirm();?>");
-	});
-<?php
-	endif;
-endif;
-?>
-	$("#delete_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_delete_confirm();?>");
-	});
-<?php
-//	Disable action buttons.
-?>
-	ab_disable(true);
-<?php
-//	Init toggle checkbox.
-?>
-	$("#togglemembers").click(function() {
-		cb_tbn(this,"<?=$sphere->cbm_name;?>[]");
-	});
-<?php
-//	Init member checkboxes.
-?>
-	$("input[name='<?=$sphere->cbm_name;?>[]']").click(function() {
-		ab_control(this,"<?=$sphere->cbm_name;?>[]");
-	});
-<?php
-//	Init spinner.
-?>
-	$("#iform").submit(function() { spinner(); });
-	$(".spin").click(function() { spinner(); });
-});
-function ab_disable(flag) {
-<?php
-if($sphere->enadis()):
-	if($sphere->toggle()):
-?>
-	$("#toggle_selected_rows").prop("disabled",flag);
-<?php
-	else:
-?>
-	$("#enable_selected_rows").prop("disabled",flag);
-	$("#disable_selected_rows").prop("disabled",flag);
-<?php
-	endif;
-endif;
-?>
-	$("#delete_selected_rows").prop("disabled",flag);
-}
-function cb_tbn(ego, tbn) {
-	var cba = $("input[name='"+tbn+"']").filter(":enabled");
-	cba.prop("checked", function(_, checked) { return !checked; });
-	ab_disable(1 > cba.filter(":checked").length);
-	ego.checked = false;
-}
-function ab_control(ego, tbn) {
-	var cba = $("input[name='"+tbn+"']").filter(":enabled");
-	ab_disable(1 > cba.filter(":checked").length);
-}
-//]]>
-</script>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform">
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
@@ -252,11 +237,6 @@ function ab_control(ego, tbn) {
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-<?php
-			echo html_row_add($sphere->mod->scriptname(),$sphere->sym_add(),6);
-?>
-		</tfoot>
 		<tbody>
 <?php
 			foreach ($sphere->grid as $sphere->row):
@@ -306,6 +286,11 @@ function ab_control(ego, tbn) {
 			endforeach;
 ?>
 		</tbody>
+		<tfoot>
+<?php
+			echo html_row_add($sphere->mod->scriptname(),$sphere->sym_add(),6);
+?>
+		</tfoot>
 	</table>
 	<div id="submit">
 <?php
@@ -323,7 +308,7 @@ function ab_control(ego, tbn) {
 <?php
 	include 'formend.inc';
 ?>
-</form></td></tr></tbody></table>
+</td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
 ?>
