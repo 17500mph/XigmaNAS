@@ -43,8 +43,8 @@ function bridge_inuse($ifn) {
 	if(isset($config['interfaces']['wan']['if']) && ($config['interfaces']['wan']['if'] === $ifn)):
 		return true;
 	endif;
-	for($i = 1;isset($config['interfaces']['opt' . $i]['if']);$i++):
-		if($config['interfaces']['opt' . $i]['if'] === $ifn):
+	for($i = 1;isset($config['interfaces']['opt' . $i]);$i++):
+		if(isset($config['interfaces']['opt' . $i]['if']) && ($config['interfaces']['opt' . $i]['if'] === $ifn)):
 			return true;
 		endif;
 	endfor;
@@ -110,11 +110,11 @@ echo $sphere->doj();
 		<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext('WLAN');?></span></a></li>
 		<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext('VLAN');?></span></a></li>
 		<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext('LAGG');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere->scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Bridge');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Bridge');?></span></a></li>
 		<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext('CARP');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<form action="<?=$sphere->scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
@@ -145,9 +145,9 @@ echo $sphere->doj();
 		</thead>
 		<tbody>
 <?php
+			$notificationmode = false;
+			$notdirty = true;
 			foreach($sphere->grid as $sphere->row):
-				$notificationmode = false;
-				$notdirty = true;
 				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
 ?>
