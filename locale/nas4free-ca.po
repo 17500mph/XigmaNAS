@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
-"PO-Revision-Date: 2017-02-10 22:21+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"PO-Revision-Date: 2017-02-11 13:57+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:22+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -342,7 +342,7 @@ msgid "ACL mode"
 msgstr "Mode ACL"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "Autenticació d'AD està deshabilitat."
 
 msgid "AD or PDC name."
 msgstr "Nom ADC o PDC"
@@ -443,7 +443,10 @@ msgid "Add"
 msgstr "Afegeix"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Afegir pont"
+
+msgid "Add CARP"
+msgstr "Afegir CARP"
 
 msgid "Add Dataset"
 msgstr "Afegir conjunt de dades"
@@ -453,6 +456,9 @@ msgstr "Afegeix grup"
 
 msgid "Add Host"
 msgstr "Afegeix una màquina"
+
+msgid "Add LAGG"
+msgstr "Afegir LAGG"
 
 msgid "Add MIB"
 msgstr "Afegir MIB"
@@ -493,11 +499,17 @@ msgstr "Afegeix URL"
 msgid "Add User Account"
 msgstr "Afegeix un compte d'usuari"
 
+msgid "Add VLAN"
+msgstr "Afegir VLAN"
+
 msgid "Add Virtual Device"
 msgstr "Afegir dispositiu virtual"
 
 msgid "Add Volume"
 msgstr "Afegir volum."
+
+msgid "Add WLAN"
+msgstr "Afegir WLAN"
 
 msgid "Add a cache device to a pool"
 msgstr "Afegir un dispositiu de memòria cau a la piscina"
@@ -1237,15 +1249,17 @@ msgstr "Configuració del pont"
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"El pont no pot ser eliminat, ja que encara està sent utilitzat com una "
+"interfície."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "El pont està marcat per ser esborrat"
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "El pont està protegit"
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "El pont està desbloquejat"
 
 msgid "Bring a device online"
 msgstr "Porta el dispositiu en línia"
@@ -1279,6 +1293,20 @@ msgstr "CACHE"
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+"CARP no es pot eliminar perquè encara està sent utilitzat com una interfície."
+
+msgid "CARP is marked for deletion"
+msgstr "CARP està marcat per esborrar"
+
+msgid "CARP is protected"
+msgstr "CARP estàprotegit"
+
+msgid "CARP is unlocked"
+msgstr "CARP està desbloquejat"
 
 msgid "CARP only"
 msgstr "Nomes CARP"
@@ -2247,7 +2275,10 @@ msgid "Delete Login Info"
 msgstr "Suprimeix informació d'inici"
 
 msgid "Delete Selected Bridges"
-msgstr ""
+msgstr "Eliminar els ponts seleccionats"
+
+msgid "Delete Selected CARPs"
+msgstr "Esborrar CARP's seleccionats"
 
 msgid "Delete Selected Commands"
 msgstr "Eliminar ordres seleccionats"
@@ -2260,6 +2291,9 @@ msgstr "Eliminar grups seleccionats"
 
 msgid "Delete Selected Jobs"
 msgstr "Eliminar feines seleccionats"
+
+msgid "Delete Selected LAGGs"
+msgstr "Esborrar LAGG's seleccionats"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Eliminar els recursos NFS seleccionats"
@@ -2300,11 +2334,17 @@ msgstr "Eliminar instantànies seleccionats"
 msgid "Delete Selected User Accounts"
 msgstr "Eliminar comptes d'usuari seleccionades"
 
+msgid "Delete Selected VLANs"
+msgstr "Esborrar VLAN's seleccionats"
+
 msgid "Delete Selected Virtual Devices"
 msgstr "Eliminar dispositius virtuals seleccionats"
 
 msgid "Delete Selected Volumes"
 msgstr "Esborrar volums seleccionats"
+
+msgid "Delete Selected WLANs"
+msgstr "Esborrar WLAN's seleccionats"
 
 msgid "Delete URL"
 msgstr "Suprimeix URL"
@@ -2631,7 +2671,7 @@ msgid "Disk"
 msgstr "Disc"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Informació de les particions de disc"
 
 msgid "Disk Selection"
 msgstr "Selecció de disc"
@@ -2745,9 +2785,6 @@ msgstr ""
 "Realment vol eliminar aquest iniciador? Tots els elements que encara "
 "l'utilitzen deixaran de ser vàlids (per exemple, recursos)!"
 
-msgid "Do you really want to delete this interface?"
-msgstr "Realment vol eliminar aquesta interfície?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2832,6 +2869,12 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 "Vols crear un dispositiu virtual segmentat des de els discs seleccionats?"
 
+msgid "Do you want to delete selected CARPs?"
+msgstr "Vols eliminar els CARP's seleccionats?"
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr "Voleu eliminar les LAGG's seleccionats?"
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Vols eliminar els recursos NFS seleccionats?"
 
@@ -2841,8 +2884,14 @@ msgstr "Vols eliminar els volums RAID seleccionats?"
 msgid "Do you want to delete selected Samba shares?"
 msgstr "Vols eliminar els recursos Samba seleccionats?"
 
+msgid "Do you want to delete selected VLANs?"
+msgstr "Voleu eliminar les VLAN's seleccionats?"
+
+msgid "Do you want to delete selected WLANs?"
+msgstr "Voleu eliminar les WLAN's seleccionats?"
+
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "Vols eliminar els ponts seleccionats?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Vols eliminar les ordres seleccionades?"
@@ -3077,7 +3126,10 @@ msgid "Edit"
 msgstr "Editar"
 
 msgid "Edit Bridge"
-msgstr ""
+msgstr "Edita pont"
+
+msgid "Edit CARP"
+msgstr "Edita CARP"
 
 msgid "Edit Dataset"
 msgstr "Editar conjunt de dades"
@@ -3087,6 +3139,9 @@ msgstr "Edita grup"
 
 msgid "Edit Host"
 msgstr "Editar amfitrió"
+
+msgid "Edit LAGG"
+msgstr "Edita LAGG"
 
 msgid "Edit MIB"
 msgstr "Editar MIB"
@@ -3127,6 +3182,9 @@ msgstr "Editar URL"
 msgid "Edit User Account"
 msgstr "Edita compte d'usuari"
 
+msgid "Edit VLAN"
+msgstr "Edita VLAN"
+
 msgid "Edit VM"
 msgstr "Editar MV"
 
@@ -3135,6 +3193,9 @@ msgstr "Editar dispositiu virtual"
 
 msgid "Edit Volume"
 msgstr "Editar volum"
+
+msgid "Edit WLAN"
+msgstr "Edita WLAN"
 
 msgid "Edit auth group"
 msgstr "Editar grup d'autenticació"
@@ -3156,9 +3217,6 @@ msgstr "Editar iniciador"
 
 msgid "Edit initiator group"
 msgstr "Editar grup iniciador"
-
-msgid "Edit interface"
-msgstr "Editar interfície"
 
 msgid "Edit job"
 msgstr "Editar treball"
@@ -3882,7 +3940,7 @@ msgid "Fatal"
 msgstr "Fatal"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Informació particions Fdisk"
 
 msgid "Feb"
 msgstr "Feb"
@@ -4074,7 +4132,7 @@ msgid "GEOM"
 msgstr "GEOM"
 
 msgid "GEOM Partition Information"
-msgstr ""
+msgstr "Informació particions GEOM"
 
 msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
@@ -4200,7 +4258,7 @@ msgid "HAST Resource"
 msgstr "Recurs HAST"
 
 msgid "HAST is disabled."
-msgstr ""
+msgstr "HAST està desactivat"
 
 msgid "HAST volume"
 msgstr "Volum HAST"
@@ -4918,6 +4976,20 @@ msgstr "LAGG"
 
 msgid "LAGG Settings"
 msgstr "Ajustos Lagg"
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+"LAGG no es pot eliminar perquè encara està sent utilitzat com una interfície."
+
+msgid "LAGG is marked for deletion"
+msgstr "LAGG està marcat per ser esborrat"
+
+msgid "LAGG is protected"
+msgstr "LAGG està protegit"
+
+msgid "LAGG is unlocked"
+msgstr "LAGG està desbloquejat"
 
 msgid "LAN Management"
 msgstr "Gestió LAN"
@@ -5811,10 +5883,10 @@ msgstr ""
 "informació de diagnòstic!"
 
 msgid "No disks found."
-msgstr ""
+msgstr "No es van trobar discos."
 
 msgid "No fdisk information found."
-msgstr ""
+msgstr "No s'ha trobat informació de Fdisk."
 
 msgid "No file was uploaded."
 msgstr "No s'ha pujat cap fitxer."
@@ -5826,7 +5898,7 @@ msgid "No new software raid disk found."
 msgstr "Sense programari RAID per disc trobat."
 
 msgid "No partition information found."
-msgstr ""
+msgstr "No s'ha trobat informació de particions."
 
 msgid "No pool devices have been selected"
 msgstr "No s'han seleccionat dispositius de la piscina"
@@ -9233,32 +9305,8 @@ msgstr ""
 msgid "These parameters will be added to the ping command."
 msgstr "Aquests paràmetres s'afegiran a la ordre ping."
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Aquest CARP no es pot eliminar perquè encara està sent utilitzat com una "
-"interfície."
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Aquest LAGG no es pot eliminar perquè encara està sent utilitzat com una "
-"interfície."
-
 msgid "This URL is already configured."
 msgstr "Aquesta URL ja està configurada."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Aquesta VLAN no es pot eliminar perquè encara està sent utilitzat com una "
-"interfície."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Aquest WLAN no es pot eliminar perquè encara està sent utilitzat com una "
-"interfície."
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -10370,6 +10418,20 @@ msgstr "Configuració de VLAN"
 msgid "VLAN Tag"
 msgstr "Etiqueta VLAN"
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+"VLAN no es pot eliminar perquè encara està sent utilitzat com una interfície."
+
+msgid "VLAN is marked for deletion"
+msgstr "VLAN està marcat per ser esborrat"
+
+msgid "VLAN is protected"
+msgstr "VLAN està protegit"
+
+msgid "VLAN is unlocked"
+msgstr "VLAN està desbloquejat"
+
 msgid "VM Type"
 msgstr "Tipus MV"
 
@@ -10516,6 +10578,20 @@ msgstr "WLAN"
 
 msgid "WLAN Settings"
 msgstr "Configuració WLAN"
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+"WLAN no es pot eliminar perquè encara està sent utilitzat com una interfície."
+
+msgid "WLAN is marked for deletion"
+msgstr "WLAN està marcat per ser esborrat"
+
+msgid "WLAN is protected"
+msgstr "WLAN està protegit"
+
+msgid "WLAN is unlocked"
+msgstr "WLAN està desbloquejat"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10979,13 +11055,43 @@ msgstr "cap a"
 msgid "umount"
 msgstr "desmontar"
 
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "Realment vol eliminar aquesta interfície?"
+
+#~ msgid "Edit interface"
+#~ msgstr "Editar interfície"
+
 #~ msgid "HAST disabled"
 #~ msgstr "HAST desactivat"
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Aquest LAGG no es pot eliminar perquè encara està sent utilitzat com una "
+#~ "interfície."
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Aquesta VLAN no es pot eliminar perquè encara està sent utilitzat com una "
+#~ "interfície."
+
+#~ msgid ""
+#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Aquest WLAN no es pot eliminar perquè encara està sent utilitzat com una "
+#~ "interfície."
 
 #~ msgid ""
 #~ "This Bridge cannot be deleted because it is still being used as an interface."
 #~ msgstr ""
 #~ "Aquest Pont no es pot eliminar perquè encara està sent utilitzat com una "
+#~ "interfície."
+
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Aquest CARP no es pot eliminar perquè encara està sent utilitzat com una "
 #~ "interfície."
 
 #~ msgid "AD authentication disabled."

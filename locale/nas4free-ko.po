@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -401,6 +401,9 @@ msgstr "추가"
 msgid "Add Bridge"
 msgstr ""
 
+msgid "Add CARP"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr ""
 
@@ -409,6 +412,9 @@ msgstr ""
 
 msgid "Add Host"
 msgstr "호스트 추가"
+
+msgid "Add LAGG"
+msgstr ""
 
 msgid "Add MIB"
 msgstr "MIB 추가"
@@ -449,10 +455,16 @@ msgstr "URL 추가"
 msgid "Add User Account"
 msgstr ""
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
+msgstr ""
+
+msgid "Add WLAN"
 msgstr ""
 
 msgid "Add a cache device to a pool"
@@ -1166,6 +1178,19 @@ msgid "CACHE"
 msgstr ""
 
 msgid "CARP"
+msgstr ""
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
 msgstr ""
 
 msgid "CARP only"
@@ -2027,6 +2052,9 @@ msgstr "로그인 정보 삭제"
 msgid "Delete Selected Bridges"
 msgstr ""
 
+msgid "Delete Selected CARPs"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2037,6 +2065,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected LAGGs"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
@@ -2078,10 +2109,16 @@ msgstr ""
 msgid "Delete Selected User Accounts"
 msgstr ""
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
+msgstr ""
+
+msgid "Delete Selected WLANs"
 msgstr ""
 
 msgid "Delete URL"
@@ -2498,9 +2535,6 @@ msgid ""
 "will become invalid (e.g. share)!"
 msgstr "정말로 이 개시자를 삭제하시겠습니까? 아직도 이것을 이용하는 모든 요소들은 무효화될 것입니다(예. 공유)!"
 
-msgid "Do you really want to delete this interface?"
-msgstr "정말로 이 인터페이스를 삭제하시겠습니까?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2575,6 +2609,12 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected CARPs?"
+msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2582,6 +2622,12 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -2819,6 +2865,9 @@ msgstr "편집"
 msgid "Edit Bridge"
 msgstr ""
 
+msgid "Edit CARP"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr ""
 
@@ -2827,6 +2876,9 @@ msgstr ""
 
 msgid "Edit Host"
 msgstr "호스트 편집"
+
+msgid "Edit LAGG"
+msgstr ""
 
 msgid "Edit MIB"
 msgstr "MIB 편집"
@@ -2867,6 +2919,9 @@ msgstr "URL 편집"
 msgid "Edit User Account"
 msgstr ""
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr ""
 
@@ -2874,6 +2929,9 @@ msgid "Edit Virtual Device"
 msgstr ""
 
 msgid "Edit Volume"
+msgstr ""
+
+msgid "Edit WLAN"
 msgstr ""
 
 msgid "Edit auth group"
@@ -2896,9 +2954,6 @@ msgstr "개시자 편집"
 
 msgid "Edit initiator group"
 msgstr "개시자 그룹 편집"
-
-msgid "Edit interface"
-msgstr "인터페이스 편집"
 
 msgid "Edit job"
 msgstr "작업 편집"
@@ -4528,6 +4583,19 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAGG Settings"
+msgstr ""
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
 msgstr ""
 
 msgid "LAN Management"
@@ -8519,24 +8587,8 @@ msgstr "이들 인자들이 rsyncd.conf의 모듈 설정에 추가될 것입니�
 msgid "These parameters will be added to the ping command."
 msgstr ""
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr ""
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr "이 LAGG는 아직도 인터페이스로 이용되고 있으므로 삭제될 수 없습니다."
-
 msgid "This URL is already configured."
 msgstr "이 URL은 이미 설정되었습니다."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr "이 VLAN은 인터페이스로서 여전히 이용되고 이으므로 삭제될 수 없습니다."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -9491,6 +9543,19 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr ""
 
@@ -9629,6 +9694,19 @@ msgid "WLAN"
 msgstr ""
 
 msgid "WLAN Settings"
+msgstr ""
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
 msgstr ""
 
 msgid "WPA"
@@ -10058,3 +10136,17 @@ msgstr ""
 
 msgid "umount"
 msgstr "마운트 해제"
+
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "정말로 이 인터페이스를 삭제하시겠습니까?"
+
+#~ msgid "Edit interface"
+#~ msgstr "인터페이스 편집"
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr "이 LAGG는 아직도 인터페이스로 이용되고 있으므로 삭제될 수 없습니다."
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr "이 VLAN은 인터페이스로서 여전히 이용되고 이으므로 삭제될 수 없습니다."

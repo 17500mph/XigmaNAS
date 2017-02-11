@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -445,6 +445,9 @@ msgstr "Přidat"
 msgid "Add Bridge"
 msgstr ""
 
+msgid "Add CARP"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
 
@@ -453,6 +456,9 @@ msgstr ""
 
 msgid "Add Host"
 msgstr "Přidat stroj"
+
+msgid "Add LAGG"
+msgstr ""
 
 msgid "Add MIB"
 msgstr "Přidat MIB"
@@ -493,11 +499,17 @@ msgstr "Přidat URL adresu"
 msgid "Add User Account"
 msgstr ""
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr "Přidat virtuální zařízení"
 
 msgid "Add Volume"
 msgstr "Přidat svazek"
+
+msgid "Add WLAN"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Přidat do fondu úložišť zařízení pro mezipaměť"
@@ -1268,6 +1280,19 @@ msgstr "MEZIPAMĚŤ"
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
+msgstr ""
 
 msgid "CARP only"
 msgstr "Jen CARP"
@@ -2208,6 +2233,9 @@ msgstr "Smazat údaje o přihlášení"
 msgid "Delete Selected Bridges"
 msgstr ""
 
+msgid "Delete Selected CARPs"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2219,6 +2247,9 @@ msgstr ""
 
 msgid "Delete Selected Jobs"
 msgstr "Smazat označené úlohy"
+
+msgid "Delete Selected LAGGs"
+msgstr ""
 
 msgid "Delete Selected NFS Shares"
 msgstr ""
@@ -2259,11 +2290,17 @@ msgstr "Smazat označené zachycené stavy"
 msgid "Delete Selected User Accounts"
 msgstr ""
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "Smazat označená virtuální zařízení"
 
 msgid "Delete Selected Volumes"
 msgstr "Smazat označené svazky"
+
+msgid "Delete Selected WLANs"
+msgstr ""
 
 msgid "Delete URL"
 msgstr "Odstranit URL adresu"
@@ -2704,9 +2741,6 @@ msgstr ""
 "Opravdu chcete smazat tento inciátor? Veškeré prvky, které ho využívají, "
 "přestanou fungovat (např. sdílení)!"
 
-msgid "Do you really want to delete this interface?"
-msgstr "Opravdu chcete odstranit toto rozhraní?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2790,6 +2824,12 @@ msgstr ""
 "Chcete z označených jednotek datového úložiště vytvořit virtuální zařízení "
 "pro střídavý zápis (stripe)?"
 
+msgid "Do you want to delete selected CARPs?"
+msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2797,6 +2837,12 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Chcete smazat označené RAID svazky?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -3035,6 +3081,9 @@ msgstr "Upravit"
 msgid "Edit Bridge"
 msgstr ""
 
+msgid "Edit CARP"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Upravit datovou sadu"
 
@@ -3043,6 +3092,9 @@ msgstr ""
 
 msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
+
+msgid "Edit LAGG"
+msgstr ""
 
 msgid "Edit MIB"
 msgstr "Upravit MIB"
@@ -3083,6 +3135,9 @@ msgstr "Upravit URL adresu"
 msgid "Edit User Account"
 msgstr ""
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr "Upravit virt. stroj"
 
@@ -3091,6 +3146,9 @@ msgstr "Upravit virtuální zařízení"
 
 msgid "Edit Volume"
 msgstr "Upravit svazek"
+
+msgid "Edit WLAN"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Upravit skupinu pověřených"
@@ -3112,9 +3170,6 @@ msgstr "Upravit iniciátor"
 
 msgid "Edit initiator group"
 msgstr "Upravit skupinu iniciátorů"
-
-msgid "Edit interface"
-msgstr "Upravit rozhraní"
 
 msgid "Edit job"
 msgstr "Upravit úlohu"
@@ -4843,6 +4898,19 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAGG Settings"
+msgstr ""
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
 msgstr ""
 
 msgid "LAN Management"
@@ -9105,26 +9173,8 @@ msgstr "Tyto parametry budou přidány k nastavení modulu v rsyncd.conf."
 msgid "These parameters will be added to the ping command."
 msgstr ""
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr "Toto CARP nelze smazat, protože je používáno."
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Tuto LAGG není možné smazat, protože je stále používaný jako rozhraní."
-
 msgid "This URL is already configured."
 msgstr "Tato URL adresa je už nastavena."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr "Tuto virtuální síť nelze smazat, protože je používána."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Tuto bezdrátovou síť nelze smazat, protože je pořád používána jako rozhraní."
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -10202,6 +10252,19 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr "Značka virtuální sítě (VLAN)"
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr "Typ virt. stroje"
 
@@ -10340,6 +10403,19 @@ msgid "WLAN"
 msgstr "Bezdrátová síť"
 
 msgid "WLAN Settings"
+msgstr ""
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
 msgstr ""
 
 msgid "WPA"
@@ -10807,9 +10883,33 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "Opravdu chcete odstranit toto rozhraní?"
+
+#~ msgid "Edit interface"
+#~ msgstr "Upravit rozhraní"
+
 #~ msgid ""
 #~ "This Bridge cannot be deleted because it is still being used as an interface."
 #~ msgstr "Tento síťový most není možné smazat, protože je používán."
 
 #~ msgid "HAST disabled"
 #~ msgstr "HAST je vypnuto"
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr "Tuto virtuální síť nelze smazat, protože je používána."
+
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr "Toto CARP nelze smazat, protože je používáno."
+
+#~ msgid ""
+#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Tuto bezdrátovou síť nelze smazat, protože je pořád používána jako rozhraní."
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Tuto LAGG není možné smazat, protože je stále používaný jako rozhraní."
