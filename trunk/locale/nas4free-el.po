@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-09 08:47+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -354,7 +354,7 @@ msgstr "Κληρονόμηση ACL"
 msgid "ACL mode"
 msgstr "Λειτουργία ACL"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -454,6 +454,9 @@ msgstr "Adaptive (Χαμηλή Κατανάλωση Ενέργειας)"
 
 msgid "Add"
 msgstr "Προσθήκη"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Προσθήκη Dataset"
@@ -1254,6 +1257,19 @@ msgstr "Γεφύρωμα δικτύου"
 
 msgid "Bridge Settings"
 msgstr "Ρυθμίσεις bridge"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Κάντε μια συσκευή online"
@@ -2266,6 +2282,9 @@ msgstr "Διαγραφή υπολογιστή"
 msgid "Delete Login Info"
 msgstr "Διαγραφή πληροφοριών εισόδου"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Διαγραφή Επιλεγμένων Εντολών"
 
@@ -2650,6 +2669,9 @@ msgstr "Μέθοδος Πιστοποίησης Εύρεσης"
 msgid "Disk"
 msgstr "Δίσκος"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Επιλογή Δίσκου"
 
@@ -2862,6 +2884,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Θέλετε να διαγράψετε τους επιλεγμένους τόμους RAID;"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3100,6 +3125,9 @@ msgstr "ΣΦΑΛΜΑ:"
 
 msgid "Edit"
 msgstr "Επεξεργασία"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Επεξεργασία dataset"
@@ -3906,6 +3934,9 @@ msgstr "Ανακατεύθυνση"
 msgid "Fatal"
 msgstr "Κρίσιμο"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Φεβ."
 
@@ -4096,6 +4127,9 @@ msgstr "Το Fuppes είναι απενεργοποιημένο."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM RAID μέσω λογισμικού"
 
@@ -4218,8 +4252,8 @@ msgstr "Πληροφορίες και Κατάσταση Ρυθμισμένων 
 msgid "HAST Resource"
 msgstr "Πόρος HAST"
 
-msgid "HAST disabled"
-msgstr "HAST απενεργοποιημένο"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "Τόμος HAST"
@@ -5847,6 +5881,12 @@ msgstr ""
 "Δεν έχουν ρυθμιστεί δίσκοι, παρακαλώ προσθέστε δίσκους για να δείτε "
 "διαγνωστικές πληροφορίες!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Κανένα αρχείο δεν ανέβηκε."
 
@@ -5855,6 +5895,9 @@ msgstr "Δεν βρέθηκαν νέοι δίσκοι."
 
 msgid "No new software raid disk found."
 msgstr "Δεν βρέθηκαν νέοι δίσκοι σε raid μέσω λογισμικού."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Δεν επιλέχθηκαν συσκευές pool"
@@ -9320,12 +9363,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Αυτοί οι παράμετροι θα προστεθούν στην εντολή ping."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Αυτό το γεφύρωμα δικτύου δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη "
-"ως διασύνδεση δικτύου."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Αυτό το CARP δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη ως "
@@ -11114,71 +11151,11 @@ msgstr "σε"
 msgid "umount"
 msgstr "αποπροσάρτηση"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "Η πιστοποίηση AD απενεργοποιήθηκε"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST απενεργοποιημένο"
 
-#~ msgid "Add module"
-#~ msgstr "Προσθήκη αρθρώματος"
-
-#~ msgid "Add share"
-#~ msgstr "Προσθήκη κοινόχρηστου"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Επαλήθευση κοινόχρηστου συνθηματικού:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Διαγραφή Διαδρομής"
-
-#~ msgid "Delete share"
-#~ msgstr "Διαγραφή κοινοχρήστου"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Θέλετε σίγουρα να διαγράψετε αυτό το άρθρωμα;"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Θέλετε πράγματι να διαγράψετε αυτήν τη διαδρομή;"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Θέλετε πράγματι να διαγράψετε αυτό το κοινόχρηστο;"
-
-#~ msgid "Edit module"
-#~ msgstr "Επεξεργασία αρθρώματος"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Διαγραφή εργασίας Rsync"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Θέλετε πραγματικά να διαγραφεί αυτή η Rsync εργασία;"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Εκτελέστε ping winbindd για να δείτε αν είναι σε λειτουργία:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Αποτελέσματα του net rpc testjoin:"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Προσθήκη εργασίας Rsync"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Επεξεργασία εργασίας Rsync"
-
-#~ msgid "Edit share"
-#~ msgstr "Επεξεργασία κοινόχρηστου"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "O εκκινητής iSCSI απενεργοποιήθηκε"
-
-#~ msgid "Delete module"
-#~ msgstr "Διαγραφή αρθρώματος"
-
-#~ msgid "Delete resource"
-#~ msgstr "Διαγραφή πόρου"
-
-#~ msgid "Add resource"
-#~ msgstr "Προσθήκη πόρου"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Θέλετε πραγματικά να διαγράψετε αυτό τον πόρο;"
-
-#~ msgid "Edit resource"
-#~ msgstr "Επεξεργασία πόρου"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Αυτό το γεφύρωμα δικτύου δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη "
+#~ "ως διασύνδεση δικτύου."

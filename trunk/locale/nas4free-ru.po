@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-10 16:49+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -337,8 +337,8 @@ msgstr "Наследование ACL"
 msgid "ACL mode"
 msgstr "Режим ACL"
 
-msgid "AD authentication disabled."
-msgstr "Аутентификация AD отключена."
+msgid "AD authentication is disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Имя AD или PDC."
@@ -436,6 +436,9 @@ msgstr "Adaptive (низкое энергопотребление)"
 
 msgid "Add"
 msgstr "Добавить"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Добавить Dataset"
@@ -1221,6 +1224,19 @@ msgstr "Мост"
 
 msgid "Bridge Settings"
 msgstr "Настройки моста"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Перевести устройство в онлайн (Bring a device online)"
@@ -2210,6 +2226,9 @@ msgstr "Удалить хост"
 msgid "Delete Login Info"
 msgstr "Удалить сведения входа"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Удалить выбранные команды"
 
@@ -2589,6 +2608,9 @@ msgstr "Способ аутентификации при обнаружении"
 msgid "Disk"
 msgstr "Диск"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Выбор диска"
 
@@ -2794,6 +2816,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Вы действительно хотите удалить выбранные тома RAID?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3031,6 +3056,9 @@ msgstr "ОШИБКА:"
 
 msgid "Edit"
 msgstr "Редактировать"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Редактирование Dataset"
@@ -3828,6 +3856,9 @@ msgstr "Резервирование от сбоев"
 msgid "Fatal"
 msgstr "Критическое"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "фев."
 
@@ -4014,6 +4045,9 @@ msgstr "Fuppes был отключен."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
 
@@ -4138,8 +4172,8 @@ msgstr "Информация HAST и статус сконфигурирован
 msgid "HAST Resource"
 msgstr "Ресурсы HAST"
 
-msgid "HAST disabled"
-msgstr "Режим HAST отключен"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "Том HAST"
@@ -5745,6 +5779,12 @@ msgstr ""
 "Диски не сконфигурированы, пожалуйста, добавьте диски для просмотра "
 "диагностической информации!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "&=&Файл не был загружен."
 
@@ -5753,6 +5793,9 @@ msgstr "Не найдено нового диска."
 
 msgid "No new software raid disk found."
 msgstr "Не найдено нового диска программного RAID."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Не выбраны устройства пулов"
@@ -9132,11 +9175,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Эти параметры будут добавлены в команду ping."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Этот мост не может быть удалён, так как используется в качестве интерфейса."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Этот CARP не может быть удален, потому что он всё ещё используется в "
@@ -10880,71 +10918,13 @@ msgstr "к"
 msgid "umount"
 msgstr "размонтировать"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "Идентификация AD отключена"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Этот мост не может быть удалён, так как используется в качестве интерфейса."
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Добавить задание Rsync"
+#~ msgid "HAST disabled"
+#~ msgstr "Режим HAST отключен"
 
-#~ msgid "Add module"
-#~ msgstr "Добавить модуль"
-
-#~ msgid "Add share"
-#~ msgstr "Добавить общий ресурс"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Проверьте разделяемый ключ безопасности:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Удалить маршрут"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Удалить задание Rsync"
-
-#~ msgid "Delete module"
-#~ msgstr "Удалить модуль"
-
-#~ msgid "Delete share"
-#~ msgstr "Удалить общий ресурс"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Вы действительно хотите удалить это задание Rsync?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Вы действительно хотите удалить этот модуль?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Вы действительно хотите удалить этот маршрут?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Вы действительно хотите удалить этот общий ресурс?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Редактировать задание Rsync"
-
-#~ msgid "Edit module"
-#~ msgstr "Редактировать модуль"
-
-#~ msgid "Edit share"
-#~ msgstr "Изменить общий ресурс"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Убедитесь, что winbindd функционирует:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Результаты команды net rpc testjoin:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "Инициатор iSCSI запрещен"
-
-#~ msgid "Add resource"
-#~ msgstr "Добавить ресурс"
-
-#~ msgid "Delete resource"
-#~ msgstr "Удалить ресурс"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Вы действительно хотите удалить этот ресурс?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Изменить ресурс"
+#~ msgid "AD authentication disabled."
+#~ msgstr "Аутентификация AD отключена."

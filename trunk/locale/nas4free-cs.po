@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -341,7 +341,7 @@ msgstr "Přebírání ACL seznamů"
 msgid "ACL mode"
 msgstr "Režim ACL"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -441,6 +441,9 @@ msgstr "Přizpůsobivé (nízká spotřeba energie)"
 
 msgid "Add"
 msgstr "Přidat"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
@@ -1215,6 +1218,19 @@ msgid "Bridge"
 msgstr "Síťový most"
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2189,6 +2205,9 @@ msgstr "Smazat záznam pro stroj"
 msgid "Delete Login Info"
 msgstr "Smazat údaje o přihlášení"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2570,6 +2589,9 @@ msgstr "Ověřovací metoda pro zjišťování"
 msgid "Disk"
 msgstr "Disk"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Výběr disku"
 
@@ -2775,6 +2797,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Chcete smazat označené RAID svazky?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3006,6 +3031,9 @@ msgstr "CHYBA:"
 
 msgid "Edit"
 msgstr "Upravit"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Upravit datovou sadu"
@@ -3790,6 +3818,9 @@ msgstr "Převzetí služby v případě výpadku"
 msgid "Fatal"
 msgstr "Fatální"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "úno"
 
@@ -3977,6 +4008,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -4100,8 +4134,8 @@ msgstr "HAST – stav a informace o nastavených prostředcích"
 msgid "HAST Resource"
 msgstr "HAST prostředek"
 
-msgid "HAST disabled"
-msgstr "HAST je vypnuto"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST svazek"
@@ -5707,6 +5741,12 @@ msgstr "Nejsou k dispozici žádné jednotky datových úložišť."
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Nebyl nahrán žádný soubor."
 
@@ -5715,6 +5755,9 @@ msgstr "Nebyly nalezeny žádné nové disky."
 
 msgid "No new software raid disk found."
 msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr ""
@@ -9063,10 +9106,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr "Tento síťový most není možné smazat, protože je používán."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr "Toto CARP nelze smazat, protože je používáno."
 
@@ -10768,71 +10807,9 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Přidat Rsync úlohu"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr "Tento síťový most není možné smazat, protože je používán."
 
-#~ msgid "Add module"
-#~ msgstr "Přidat modul"
-
-#~ msgid "Add share"
-#~ msgstr "Přidat sdílení"
-
-#~ msgid "Delete module"
-#~ msgstr "Odstranit modul"
-
-#~ msgid "Delete share"
-#~ msgstr "Odstranit sdílení"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Opravdu chcete smazat tento modul?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Opravdu chcete odstranit toto sdílení?"
-
-#~ msgid "Edit module"
-#~ msgstr "Upravit modul"
-
-#~ msgid "Edit share"
-#~ msgstr "Upravit sdílení"
-
-#~ msgid "Add resource"
-#~ msgstr "Přidat prostředek"
-
-#~ msgid "Delete Route"
-#~ msgstr "Smazat trasu"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Opravdu chcete smazat tuto Rsync úlohu?"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Výsledek operace net rpc testjoin:"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "Ověřování vůči doméně AD vypnuto"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Kontrola sdíleného hesla:"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Smazat Rsync úlohu"
-
-#~ msgid "Delete resource"
-#~ msgstr "Odstranit prostředek"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Chcete opravdu odstranit tento prostředek?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Opravdu chcete odstranit tuto trasu?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Upravit synchronizační (Rsync) úlohu"
-
-#~ msgid "Edit resource"
-#~ msgstr "Upravit prostředek"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Ověřit dostupnost procesu služby winbind:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI iniciátor vypnut"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST je vypnuto"

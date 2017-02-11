@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-09 11:27+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -341,7 +341,7 @@ msgstr "ACL mostenit"
 msgid "ACL mode"
 msgstr "mod ACL"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -440,6 +440,9 @@ msgstr "Adaptiv (Consum redus de energie)"
 
 msgid "Add"
 msgstr "Adăugare"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Adăugare set date"
@@ -1221,6 +1224,19 @@ msgstr "Bridge"
 
 msgid "Bridge Settings"
 msgstr "Setări conexiune bridge"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Aducere dispozitiv online"
@@ -2226,6 +2242,9 @@ msgstr "Ștergere Sistem"
 msgid "Delete Login Info"
 msgstr "Ștergere date de autentificare"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Ștergere comenzi selectate"
 
@@ -2606,6 +2625,9 @@ msgstr "Descoperire Metodă Autentificare"
 msgid "Disk"
 msgstr "Disc"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Selecție disc"
 
@@ -2805,6 +2827,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Ștergeți volumele RAID selectate?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3037,6 +3062,9 @@ msgstr "EROARE:"
 
 msgid "Edit"
 msgstr "Editare"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Editare set de date"
@@ -3832,6 +3860,9 @@ msgstr "Protecție la Erori"
 msgid "Fatal"
 msgstr "Eroare fatală"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Feb"
 
@@ -4016,6 +4047,9 @@ msgstr "Fuppes a fost dezactivat."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "RAID software GEOM"
 
@@ -4138,8 +4172,8 @@ msgstr "InformațiiHAST & Status resurse configurate"
 msgid "HAST Resource"
 msgstr "Resurse HAST"
 
-msgid "HAST disabled"
-msgstr "HAST dezactivat"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "Volum HAST"
@@ -5746,6 +5780,12 @@ msgstr ""
 "Nu aveți niciun disc configurat, va trebui să adăugați un disc pentru a "
 "vedea informațiile de diagnosticare!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Niciun fișier nu a fost încărcat."
 
@@ -5754,6 +5794,9 @@ msgstr "Nu exista dispozitive de stocare noi."
 
 msgid "No new software raid disk found."
 msgstr "Nu exista dispozitive RAID-Soft  noi."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Niciun dispozitiv pool nu a fost selectat"
@@ -9136,11 +9179,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Acești parametri vor fi adăugați la comanda ping."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Conexiunea Bridge nu poate fi ștearsă fiind încă utilizată ca interfață."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Conexiunea CARP nu poate fi ștearsă fiind încă utilizată ca interfață."
@@ -10877,71 +10915,10 @@ msgstr "către"
 msgid "umount"
 msgstr "demontare"
 
-#~ msgid "Edit module"
-#~ msgstr "Modul editare"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST dezactivat"
 
-#~ msgid "Edit share"
-#~ msgstr "Editare partajare"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Editare activitate Rsync"
-
-#~ msgid "Add share"
-#~ msgstr "Adăugare partajare"
-
-#~ msgid "Add module"
-#~ msgstr "Adăugare modul"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "Autentificare AD dezactivată"
-
-#~ msgid "Edit resource"
-#~ msgstr "Editare resursă"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Adăugare sarcină Rsync"
-
-#~ msgid "Add resource"
-#~ msgstr "Adăugare resursă"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Verificare secret partajat:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Ștergere Rută"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Ștergere activitate Rsync"
-
-#~ msgid "Delete module"
-#~ msgstr "Ștergere modul"
-
-#~ msgid "Delete resource"
-#~ msgstr "Ștergere resursă"
-
-#~ msgid "Delete share"
-#~ msgstr "Ștergere partajare"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Doriți să ștergeți această acțiune Rsync?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Doriți să ștergeți acest modul ?"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Doriți să ștergeți această resursă?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Doriți să ștergeți această rută?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Doriți să ștergeți această partajare?"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Verificare (Ping) winbindd:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Rezultat testjoin net rpc:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "Inițiator iSCSI dezactivat"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Conexiunea Bridge nu poate fi ștearsă fiind încă utilizată ca interfață."

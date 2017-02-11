@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-09 21:40+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -331,7 +331,7 @@ msgstr "ACL öröklődés"
 msgid "ACL mode"
 msgstr "ACL mód"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -430,6 +430,9 @@ msgstr "Alkalmazkodó (alacsony energiafelhasználás)"
 
 msgid "Add"
 msgstr "Hozzáadás"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
@@ -1208,6 +1211,19 @@ msgstr "Híd (bridge)"
 
 msgid "Bridge Settings"
 msgstr "Hídbeállítások"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Eszköz online-ra állítása"
@@ -2178,6 +2194,9 @@ msgstr "Állomás törlése"
 msgid "Delete Login Info"
 msgstr "Törlés Belépés Információk"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Kijelölt parancsok törlése"
 
@@ -2556,6 +2575,9 @@ msgstr "Discovery Auth Eljárás"
 msgid "Disk"
 msgstr "Lemez"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Lemez kiválasztása"
 
@@ -2768,6 +2790,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Biztos, hogy törli a kiválasztott RAID köteteket?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2999,6 +3024,9 @@ msgstr "HIBA:"
 
 msgid "Edit"
 msgstr "Szerkesztés"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Adattár módosítása"
@@ -3792,6 +3820,9 @@ msgstr "Hibatűrés"
 msgid "Fatal"
 msgstr "Végzetes"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Febr"
 
@@ -3975,6 +4006,9 @@ msgstr "Fuppes szolgáltatást sikeresen kikapcsolta."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM szoftveres RAID"
 
@@ -4096,8 +4130,8 @@ msgstr "HAST információ- és állapotbeállítási erőforrások"
 msgid "HAST Resource"
 msgstr "HAST erőforrás"
 
-msgid "HAST disabled"
-msgstr "HAST tiltva"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST kötet"
@@ -5697,6 +5731,12 @@ msgstr ""
 "Egy lemez sincs konfigurálva, a diagnosztikai információk megtekintéséhez "
 "adj hozzá lemezeket."
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Nem lett fájl feltöltve."
 
@@ -5705,6 +5745,9 @@ msgstr "Nincs új lemez."
 
 msgid "No new software raid disk found."
 msgstr "Nincs új szoftveres raid lemez."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Egy tárolóeszközt sem választott ki"
@@ -9094,11 +9137,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Ezeket a paramétereket a ping parancshoz adjuk."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Ez a híd nem törölhető, mert interfészként még mindig használatban van."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Ez a CARP nem törölhető, mert interfészként még mindig használatban van."
@@ -10803,71 +10841,10 @@ msgstr "eddig:"
 msgid "umount"
 msgstr "leválasztás"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD hitelesítés kikapcsolva"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST tiltva"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Rsync feladat hozzáadása"
-
-#~ msgid "Add module"
-#~ msgstr "Modul hozzáadása"
-
-#~ msgid "Add share"
-#~ msgstr "Megosztás hozzáadása"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Megosztott titok ellenőrzése:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Útvonal törlése"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Rsync feladat törlése"
-
-#~ msgid "Delete module"
-#~ msgstr "Modul törlése"
-
-#~ msgid "Delete share"
-#~ msgstr "Megosztás törlése"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Biztos, hogy törli ezt az Rsync feladatot?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Valóban törölni akarja ezt a modult?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Biztos, hogy törlöd ezt az útvonalat?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Valóban törölni akarja ezt a megosztást?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync feladat szerkesztése"
-
-#~ msgid "Edit module"
-#~ msgstr "Modul szerkesztése"
-
-#~ msgid "Edit share"
-#~ msgstr "Magosztás szerkesztése"
-
-#~ msgid "Add resource"
-#~ msgstr "Forrás hozzáadása"
-
-#~ msgid "Delete resource"
-#~ msgstr "Erőforrás törlése"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Biztos, hogy törlöd ezt az erőforrást?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Erőforrás szerkesztése"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "winbindd pingelése, hogy elérhető-e"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Hálózati net rpc tesztcsatlakozás eredményei:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI Kezdeményező kikapcsolva"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Ez a híd nem törölhető, mert interfészként még mindig használatban van."

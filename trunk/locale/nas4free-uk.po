@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-01-26 17:29+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:22+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -329,7 +329,7 @@ msgstr "Успадкування ACL"
 msgid "ACL mode"
 msgstr "Режим ACL"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -428,6 +428,9 @@ msgstr "Адаптивний (низьке споживання енергії)"
 
 msgid "Add"
 msgstr "Додати"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Додати датасет"
@@ -1203,6 +1206,19 @@ msgstr "Міст"
 
 msgid "Bridge Settings"
 msgstr "Налаштування мосту"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Перевести пристрій в онлайн"
@@ -2193,6 +2209,9 @@ msgstr "Видалити хост"
 msgid "Delete Login Info"
 msgstr "Видалити інформацію про вхід"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Видалити обрані команди"
 
@@ -2572,6 +2591,9 @@ msgstr "Спосіб автентифікації при виявленні"
 msgid "Disk"
 msgstr "Диск"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Вибір диска"
 
@@ -2776,6 +2798,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Бажаєте видалити вибрані RAID диски?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3011,6 +3036,9 @@ msgstr "ПОМИЛКА:"
 
 msgid "Edit"
 msgstr "Редагувати"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Редагувати датасет"
@@ -3795,6 +3823,9 @@ msgstr "Перехоплення"
 msgid "Fatal"
 msgstr "Критична помилка"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Лют"
 
@@ -3982,6 +4013,9 @@ msgstr "Fuppes був вимкнений"
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM програмний RAID"
 
@@ -4103,8 +4137,8 @@ msgstr "Інформація та статус сконфігурованих р
 msgid "HAST Resource"
 msgstr "Ресурси HAST"
 
-msgid "HAST disabled"
-msgstr "HAST вимкнено"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST диск"
@@ -5695,6 +5729,12 @@ msgstr ""
 "Немає налаштованих дисків. Будь ласка, додайте диски для перегляду "
 "діагностичної інформації!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Файл не завантажено."
 
@@ -5703,6 +5743,9 @@ msgstr "Нових дисків не знайдено."
 
 msgid "No new software raid disk found."
 msgstr "Нових дисків для програмного RAID не знайдено."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Немає обраних пристроїв пулів"
@@ -9052,12 +9095,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Ці параметри будуть додані в команду ping."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Цей міст не може бути видалений, тому що він все ще використовується в "
-"якості інтерфейсу."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Цей CARP не може бути видалений, тому що він все ще використовується в "
@@ -10779,71 +10816,11 @@ msgstr "до"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Add module"
-#~ msgstr "Додати модуль"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST вимкнено"
 
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI ініціатор заборонений"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Додати Rsync завдання"
-
-#~ msgid "Add resource"
-#~ msgstr "Додати ресурс"
-
-#~ msgid "Add share"
-#~ msgstr "Додати загальний ресурс"
-
-#~ msgid "Delete Route"
-#~ msgstr "Вилучити маршрут"
-
-#~ msgid "Delete resource"
-#~ msgstr "Видалити ресурс"
-
-#~ msgid "Delete module"
-#~ msgstr "Видалити модуль"
-
-#~ msgid "Delete share"
-#~ msgstr "Видалити директорію спільного доступу"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Перевірити спільний \"секрет\""
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Ви дійсно хочете видалити це завдання Rsync?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Ви дійсно хочете видалити цей модуль?"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Ви дійсно хочете видалити цей ресурс?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Ви дійсно хочете видалити цей маршрут?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Ви дійсно хочете видалити цей ресурс для спільного доступу?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Редагувати завдання Rsync"
-
-#~ msgid "Edit module"
-#~ msgstr "Редагувати модуль"
-
-#~ msgid "Edit resource"
-#~ msgstr "Редагувати ресурс"
-
-#~ msgid "Edit share"
-#~ msgstr "Редагувати ресурс спільного доступу"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Видалити завдання Rsync"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Переконайтесь, що winbindd доступний:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Результати команди net rpc testjoin:"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD автентифікація заборонена"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Цей міст не може бути видалений, тому що він все ще використовується в "
+#~ "якості інтерфейсу."

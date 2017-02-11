@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -302,7 +302,7 @@ msgstr ""
 msgid "ACL mode"
 msgstr "ACL način"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -401,6 +401,9 @@ msgstr ""
 
 msgid "Add"
 msgstr "Dodaj"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr ""
@@ -1130,6 +1133,19 @@ msgid "Bridge"
 msgstr ""
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2026,6 +2042,9 @@ msgstr "Odstrani gostitelja"
 msgid "Delete Login Info"
 msgstr "Pobriši informacije o prijavi"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2398,6 +2417,9 @@ msgstr "Načini prijav za zaznavanje"
 msgid "Disk"
 msgstr "Disk"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Izbira diska"
 
@@ -2589,6 +2611,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2820,6 +2845,9 @@ msgstr "NAPAKA:"
 
 msgid "Edit"
 msgstr "Uredi"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3583,6 +3611,9 @@ msgstr "Failover"
 msgid "Fatal"
 msgstr "Usodno"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "feb"
 
@@ -3765,6 +3796,9 @@ msgstr ""
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3886,7 +3920,7 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
+msgid "HAST is disabled."
 msgstr ""
 
 msgid "HAST volume"
@@ -5402,6 +5436,12 @@ msgstr "Diski niso na voljo."
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Nobena datoteka ni bila naložena."
 
@@ -5409,6 +5449,9 @@ msgid "No new disk found."
 msgstr ""
 
 msgid "No new software raid disk found."
+msgstr ""
+
+msgid "No partition information found."
 msgstr ""
 
 msgid "No pool devices have been selected"
@@ -8575,10 +8618,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 
@@ -10095,69 +10134,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "izvrzi"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD prijava je onemogočena"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Doday Rsync opravilo"
-
-#~ msgid "Add module"
-#~ msgstr "Dodaj modul"
-
-#~ msgid "Add share"
-#~ msgstr "Dodaj deljeno mapo"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Preveri geslo:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Odstrani pot"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Pobriši Rsync delo"
-
-#~ msgid "Delete module"
-#~ msgstr "Izbriši modul"
-
-#~ msgid "Delete share"
-#~ msgstr "Izbriši deljeno mapo"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Res želite odstraniti to Rsync pravilo?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Res želite izbrisati ta modul?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Ali res želite odstraniti to pot?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Ali res želite izbrisati to deljeno mapo?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Uredi Rsync pravilo"
-
-#~ msgid "Edit module"
-#~ msgstr "Uredi modul"
-
-#~ msgid "Edit share"
-#~ msgstr "Uredi deljeno mapo"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Ping winbindd, da vidimo, če deluje:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Rezultati net rpc testnega priklopa:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI pobudnik onemogočen"
-
-#~ msgid "Delete resource"
-#~ msgstr "Izbriši vir"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Ali resnično želite izbrisati ta vir?"
-
-#~ msgid "Add resource"
-#~ msgstr "Dodaj vir"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -306,7 +306,7 @@ msgstr "ACL 継承"
 msgid "ACL mode"
 msgstr "ACL モード"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -405,6 +405,9 @@ msgstr ""
 
 msgid "Add"
 msgstr "追加"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr ""
@@ -1130,6 +1133,19 @@ msgid "Bridge"
 msgstr "ブリッジ"
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2028,6 +2044,9 @@ msgstr "ホストを削除"
 msgid "Delete Login Info"
 msgstr "ログイン情報の削除"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2396,6 +2415,9 @@ msgstr "探索 認証方法"
 msgid "Disk"
 msgstr "ディスク"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr ""
 
@@ -2581,6 +2603,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2811,6 +2836,9 @@ msgstr "エラー:"
 
 msgid "Edit"
 msgstr "編集"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3562,6 +3590,9 @@ msgstr "フェイルオーバ"
 msgid "Fatal"
 msgstr "致命的"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr ""
 
@@ -3743,6 +3774,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3864,8 +3898,8 @@ msgstr "構成済みリソースのHASTステータス"
 msgid "HAST Resource"
 msgstr "HAST リソース"
 
-msgid "HAST disabled"
-msgstr "HASTは無効です"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST ボリューム"
@@ -5373,6 +5407,12 @@ msgstr ""
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "ファイルはアップロードされていませんでした。"
 
@@ -5381,6 +5421,9 @@ msgstr "新しいディスクがありません。"
 
 msgid "No new software raid disk found."
 msgstr "新しいソフトウェアRAIDがありません。"
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr ""
@@ -8534,10 +8577,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr "このブリッジインタフェースは現在も使用されている為、削除する事が出来ませんでした。"
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr "このCARPインタフェースは現在も使用されている為、削除する事が出来ませんでした。"
 
@@ -10082,71 +10121,9 @@ msgstr "から"
 msgid "umount"
 msgstr "アンマウント"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD 認証は無効です"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr "このブリッジインタフェースは現在も使用されている為、削除する事が出来ませんでした。"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Rsync ジョブの追加"
-
-#~ msgid "Add module"
-#~ msgstr "モジュールの追加"
-
-#~ msgid "Add share"
-#~ msgstr "共有の追加"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "共有シークレットのチェック:"
-
-#~ msgid "Delete Route"
-#~ msgstr "ルートの削除"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Rsync ジョブを削除"
-
-#~ msgid "Delete module"
-#~ msgstr "モジュールを削除"
-
-#~ msgid "Delete share"
-#~ msgstr "共有を削除"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "この Rsync ジョブを削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "このモジュールを削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "このルーティング情報を削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "この共有を削除してもよろしいですか?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync ジョブを編集"
-
-#~ msgid "Edit module"
-#~ msgstr "モジュールを編集"
-
-#~ msgid "Edit share"
-#~ msgstr "共有を編集"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Pingによる winbindd の生存確認:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "net rpc testjoin の結果:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI イニシエータは無効です"
-
-#~ msgid "Delete resource"
-#~ msgstr "リソースの削除"
-
-#~ msgid "Add resource"
-#~ msgstr "リソースの追加"
-
-#~ msgid "Edit resource"
-#~ msgstr "リソースの編集"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "このリソースを削除してもよろしいですか?"
+#~ msgid "HAST disabled"
+#~ msgstr "HASTは無効です"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -307,7 +307,7 @@ msgstr "ACL наследство"
 msgid "ACL mode"
 msgstr "ACL режим"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -406,6 +406,9 @@ msgstr "Адаптивно (Ниска консумация на ел.енерг
 
 msgid "Add"
 msgstr "Добави"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Добави Dataset"
@@ -1174,6 +1177,19 @@ msgid "Bridge"
 msgstr "Мост (bridge)"
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2134,6 +2150,9 @@ msgstr "Delete Host"
 msgid "Delete Login Info"
 msgstr ""
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2501,6 +2520,9 @@ msgstr ""
 msgid "Disk"
 msgstr "Диск"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Избор на Диск"
 
@@ -2689,6 +2711,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Искате ли да изтриете избраните RAID томове?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2921,6 +2946,9 @@ msgstr "ГРЕШКА:"
 
 msgid "Edit"
 msgstr "Редакция"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3670,6 +3698,9 @@ msgstr ""
 msgid "Fatal"
 msgstr ""
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr ""
 
@@ -3851,6 +3882,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3972,7 +4006,7 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
+msgid "HAST is disabled."
 msgstr ""
 
 msgid "HAST volume"
@@ -5455,6 +5489,12 @@ msgstr ""
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr ""
 
@@ -5462,6 +5502,9 @@ msgid "No new disk found."
 msgstr ""
 
 msgid "No new software raid disk found."
+msgstr ""
+
+msgid "No partition information found."
 msgstr ""
 
 msgid "No pool devices have been selected"
@@ -8576,10 +8619,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 
@@ -10095,60 +10134,3 @@ msgstr "до"
 
 msgid "umount"
 msgstr ""
-
-#~ msgid "Delete Route"
-#~ msgstr "Изтрий пътя"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Наистина ли искатате да изтриете пътя?"
-
-#~ msgid "Edit share"
-#~ msgstr "промени споделените папки"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI initiator disabled"
-
-#~ msgid "Add module"
-#~ msgstr "Добави модул"
-
-#~ msgid "Add resource"
-#~ msgstr "Добави ресурс"
-
-#~ msgid "Add share"
-#~ msgstr "Добави споделяне"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Добави rsync задача"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Изтрий rsync з адача"
-
-#~ msgid "Delete module"
-#~ msgstr "Изтрий модула"
-
-#~ msgid "Delete resource"
-#~ msgstr "Изтрий ресурса"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD удостоверяване забранено."
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Проверете споделена тайна:"
-
-#~ msgid "Delete share"
-#~ msgstr "Изтрий споделеното"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Наистина ли искате да изтриете Rsync задачата?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Наистина ли искате да изтриете този модул?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Редактирай Rsync задача"
-
-#~ msgid "Edit module"
-#~ msgstr "Редактирай модул"
-
-#~ msgid "Edit resource"
-#~ msgstr "Редактирай ресурс"
