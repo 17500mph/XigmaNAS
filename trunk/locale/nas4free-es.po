@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
-"PO-Revision-Date: 2017-02-10 11:34+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"PO-Revision-Date: 2017-02-11 10:13+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -337,7 +337,7 @@ msgid "ACL mode"
 msgstr "Modo ACL"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "Autentificación AD deshabilitada"
 
 msgid "AD or PDC name."
 msgstr "Nombre AD o PDC."
@@ -438,6 +438,9 @@ msgid "Add"
 msgstr "Añadir"
 
 msgid "Add Bridge"
+msgstr "Añadir Puente (Bridge)"
+
+msgid "Add CARP"
 msgstr ""
 
 msgid "Add Dataset"
@@ -449,11 +452,14 @@ msgstr "Añadir grupo"
 msgid "Add Host"
 msgstr "Añadir equipo"
 
+msgid "Add LAGG"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "Agregar MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Añadir compartido NFS"
 
 msgid "Add RAID"
 msgstr "Añadir RAID"
@@ -462,19 +468,19 @@ msgid "Add Record"
 msgstr "Añadir registro"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Añadir recursos"
 
 msgid "Add Route"
 msgstr "Añadir Ruta"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Añadir trabajo Rsync"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Añadir módulo Rsync"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Añadir compartido Samba"
 
 msgid "Add Share"
 msgstr "Añadir compartido"
@@ -488,11 +494,17 @@ msgstr "Añadir URL"
 msgid "Add User Account"
 msgstr "Añadir cuenta de usuario"
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr "Añadir dispositivo virtual"
 
 msgid "Add Volume"
 msgstr "Añadir Volumen"
+
+msgid "Add WLAN"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Agrega un dispositivo cache al grupo"
@@ -1232,15 +1244,16 @@ msgstr "Ajustes del puente"
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"El puente (Bridge) no puede ser eliminado ya que está en uso como interface."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "El puente (Bridge) se ha marcado para borrado"
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "El puente (Bridge) está protegido"
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "El puente (Bridge) esta desbloqueado"
 
 msgid "Bring a device online"
 msgstr "Ponga un dispositivo en linea"
@@ -1274,6 +1287,19 @@ msgstr "CACHÉ"
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
+msgstr ""
 
 msgid "CARP only"
 msgstr "Solo CARP"
@@ -2242,6 +2268,9 @@ msgid "Delete Login Info"
 msgstr "Borrar informacion de incio de sesion"
 
 msgid "Delete Selected Bridges"
+msgstr "Borrar los puentes (Bridges) seleccionados"
+
+msgid "Delete Selected CARPs"
 msgstr ""
 
 msgid "Delete Selected Commands"
@@ -2256,8 +2285,11 @@ msgstr "Eliminar grupos seleccionados"
 msgid "Delete Selected Jobs"
 msgstr "Borrar los trabajos seleccionados"
 
-msgid "Delete Selected NFS Shares"
+msgid "Delete Selected LAGGs"
 msgstr ""
+
+msgid "Delete Selected NFS Shares"
+msgstr "Borrar los compartidos NFS seleccionados"
 
 msgid "Delete Selected Options"
 msgstr "Borrar las opciones seleccionadas"
@@ -2272,19 +2304,19 @@ msgid "Delete Selected Records"
 msgstr "Borrar registros seleccionados"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Borrar los recursos seleccionados"
 
 msgid "Delete Selected Routes"
 msgstr "Borrar rutas seleccionadas"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr ""
+msgstr "Borrar los trabajos Rsync seleccionados"
 
 msgid "Delete Selected Rsync Modules"
-msgstr ""
+msgstr "Borrar los módulos Rsync seleccionados"
 
 msgid "Delete Selected Samba Shares"
-msgstr ""
+msgstr "Borrar los compartidos Samba seleccionados"
 
 msgid "Delete Selected Shares"
 msgstr "Borrar compartidos seleccionados"
@@ -2295,11 +2327,17 @@ msgstr "Borrar los snapshot seleccionados"
 msgid "Delete Selected User Accounts"
 msgstr "Eliminar cuentas de usuario seleccionadas"
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "Borrar los dispositivos virtuales seleccionados"
 
 msgid "Delete Selected Volumes"
 msgstr "Borrar los volumenes seleccionadas"
+
+msgid "Delete Selected WLANs"
+msgstr ""
 
 msgid "Delete URL"
 msgstr "Borrar URL"
@@ -2577,10 +2615,10 @@ msgid "Disable Selected Records"
 msgstr "Deshabilitar registros seleccionados"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr ""
+msgstr "Deshabilitar los trabajos Rsync seleccionados"
 
 msgid "Disable Selected Rsync Modules"
-msgstr ""
+msgstr "Deshabilitar los módulos Rsync seleccionados"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deshabilitar TCP wrapper (mod_wrap )."
@@ -2623,7 +2661,7 @@ msgid "Disk"
 msgstr "Disco"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Información del particionado del disco"
 
 msgid "Disk Selection"
 msgstr "Selección de discos"
@@ -2735,9 +2773,6 @@ msgstr ""
 "¿Realmente desea eliminar este iniciador? ¡Todos los elementos que aun lo "
 "utilicen seran invalidos (Ej: los recursos compartidos)¡"
 
-msgid "Do you really want to delete this interface?"
-msgstr "¿Realmente quiere borrar esta interfaz?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2822,17 +2857,29 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 "¿Desea crear un dispositivo virtual rayado de los discos seleccionados?"
 
-msgid "Do you want to delete selected NFS shares?"
+msgid "Do you want to delete selected CARPs?"
 msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
+msgid "Do you want to delete selected NFS shares?"
+msgstr "¿Desea borrar los compartidos NFS seleccionados?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Desea borrar los volúmenes RAID seleccionados?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr "¿Desea borrar los compartidos Samba seleccionados?"
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "¿Desea borrar los puentes (Bridges) seleccionados?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "¿Quiere eliminar los comandos seleccionados?"
@@ -2856,16 +2903,16 @@ msgid "Do you want to delete selected records?"
 msgstr "¿Desea borrar los registros seleccionados?"
 
 msgid "Do you want to delete selected resources?"
-msgstr ""
+msgstr "¿Desea borrar los recursos seleccionados?"
 
 msgid "Do you want to delete selected routes?"
 msgstr "¿Desea Borrar las rutas seleccionadas?"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "¿Desea borrar los trabajos Rsync seleccionados?"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "¿Desea borrar los módulos Rsync seleccionados?"
 
 msgid "Do you want to delete selected shares?"
 msgstr "¿Desea borrar los compartidos seleccionados?"
@@ -2898,10 +2945,10 @@ msgid "Do you want to disable selected records?"
 msgstr "¿Desea deshabilitar los registros seleccionados?"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "¿Desea deshabillitar los trabajos Rsync seleccionados?"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "¿Desea deshabillitar los módulos Rsync seleccionados?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "¿Desea habilitar estas ordenes?"
@@ -2916,10 +2963,10 @@ msgid "Do you want to enable selected records?"
 msgstr "¿Desea habilitar los registros seleccionados?"
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr ""
+msgstr "¿Desea habillitar los trabajos Rsync seleccionados?"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr ""
+msgstr "¿Desea habillitar los módulos Rsync seleccionados?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
@@ -2941,10 +2988,10 @@ msgid "Do you want to toggle selected records?"
 msgstr "¿Desea cambiar el estado de los registros seleccionados?"
 
 msgid "Do you want to toggle selected rsync jobs?"
-msgstr ""
+msgstr "¿Desea intercambiar los trabajos Rsync seleccionados?"
 
 msgid "Do you want to toggle selected rsync modules?"
-msgstr ""
+msgstr "¿Desea intercambiar los módulos Rsync seleccionados?"
 
 msgid "Do you want to unlock selected records?"
 msgstr "¿Desea desbloquear los registros seleccionados?"
@@ -3068,6 +3115,9 @@ msgid "Edit"
 msgstr "Editar"
 
 msgid "Edit Bridge"
+msgstr "Editar Puente (Bridge)"
+
+msgid "Edit CARP"
 msgstr ""
 
 msgid "Edit Dataset"
@@ -3079,11 +3129,14 @@ msgstr "Editar grupo"
 msgid "Edit Host"
 msgstr "Editar Host"
 
+msgid "Edit LAGG"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Editar MIB"
 
 msgid "Edit NFS Share"
-msgstr ""
+msgstr "Editar Compartido NFS"
 
 msgid "Edit RAID"
 msgstr "Editar RAID"
@@ -3092,19 +3145,19 @@ msgid "Edit Record"
 msgstr "Editar registro"
 
 msgid "Edit Resource"
-msgstr ""
+msgstr "Editar Recurso"
 
 msgid "Edit Route"
 msgstr "Editar Ruta"
 
 msgid "Edit Rsync Job"
-msgstr ""
+msgstr "Editar trabajo Rsync"
 
 msgid "Edit Rsync Module"
-msgstr ""
+msgstr "Editar módulo Rsync"
 
 msgid "Edit Samba Share"
-msgstr ""
+msgstr "Editar Compartido Samba"
 
 msgid "Edit Share"
 msgstr "Editar compartido"
@@ -3118,6 +3171,9 @@ msgstr "Editar URL"
 msgid "Edit User Account"
 msgstr "Editar cuenta de usuario"
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr "Editar VM"
 
@@ -3126,6 +3182,9 @@ msgstr "Editar Dispositivo Virtual"
 
 msgid "Edit Volume"
 msgstr "Editar Volumen"
+
+msgid "Edit WLAN"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Editar grupo autorizador"
@@ -3147,9 +3206,6 @@ msgstr "Editar iniciador"
 
 msgid "Edit initiator group"
 msgstr "Editar grupo iniciador"
-
-msgid "Edit interface"
-msgstr "Editar interfaz"
 
 msgid "Edit job"
 msgstr "Editar trabajo"
@@ -3262,10 +3318,10 @@ msgid "Enable Selected Records"
 msgstr "Habilitar los registros seleccionados."
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Habilitar los trabajos Rsync seleccionados"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Habilitar los módulos Rsync seleccionados"
 
 msgid "Enable TLS connections."
 msgstr "Habilitar conexiones TSL"
@@ -3868,7 +3924,7 @@ msgid "Fatal"
 msgstr "Fatal"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Información Fdisk"
 
 msgid "Feb"
 msgstr "feb."
@@ -4056,7 +4112,7 @@ msgid "GEOM"
 msgstr "GEOM"
 
 msgid "GEOM Partition Information"
-msgstr ""
+msgstr "Información GEOM"
 
 msgid "GEOM Software RAID"
 msgstr "Software RAID GEOM"
@@ -4181,7 +4237,7 @@ msgid "HAST Resource"
 msgstr "HAST"
 
 msgid "HAST is disabled."
-msgstr ""
+msgstr "HAST está deshabilitado"
 
 msgid "HAST volume"
 msgstr "Volumen HAST"
@@ -4901,6 +4957,19 @@ msgstr "LAGG"
 msgid "LAGG Settings"
 msgstr "Ajustes del LAGG"
 
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "LAN Administracion"
 
@@ -5589,13 +5658,13 @@ msgid "NFS"
 msgstr "NFS"
 
 msgid "NFS share is marked for deletion"
-msgstr ""
+msgstr "El compartido NFS está marcado para borrado"
 
 msgid "NFS share is protected"
-msgstr ""
+msgstr "Compartido NFS protegido"
 
 msgid "NFS share is unlocked"
-msgstr ""
+msgstr "Compartido NFS desprotegido"
 
 msgid "NFSv4"
 msgstr "NFSv4"
@@ -5788,10 +5857,10 @@ msgstr ""
 "diagnóstico!"
 
 msgid "No disks found."
-msgstr ""
+msgstr "No se encuentran discos"
 
 msgid "No fdisk information found."
-msgstr ""
+msgstr "No se encuentra información Fdisk"
 
 msgid "No file was uploaded."
 msgstr "Ningún archivo fue subido."
@@ -5803,7 +5872,7 @@ msgid "No new software raid disk found."
 msgstr "No se han encontrado nuevos Discos RAID"
 
 msgid "No partition information found."
-msgstr ""
+msgstr "No se encuentra información de las particiones"
 
 msgid "No pool devices have been selected"
 msgstr "Ningún dispositivo de pool ha sido seleccionado"
@@ -7002,13 +7071,13 @@ msgid "Resource Name"
 msgstr "Nombre del recurso"
 
 msgid "Resource is marked for deletion"
-msgstr ""
+msgstr "El recurso ha sido marcado para borrado"
 
 msgid "Resource is protected"
-msgstr ""
+msgstr "Recurso protegido"
 
 msgid "Resource is unlocked"
-msgstr ""
+msgstr "Recurso desprotegido"
 
 msgid "Resources"
 msgstr "Recursos"
@@ -7103,22 +7172,22 @@ msgid "Rsync Job"
 msgstr "Trabajo Rsync"
 
 msgid "Rsync Module is marked for deletion"
-msgstr ""
+msgstr "El módulo Rsync ha sido marcado para borrado"
 
 msgid "Rsync Module is protected"
-msgstr ""
+msgstr "Modulo Rsync protegido"
 
 msgid "Rsync Module is unlocked"
-msgstr ""
+msgstr "Módulo Rsync desprotegido"
 
 msgid "Rsync job is marked for deletion"
-msgstr ""
+msgstr "Trabajo Rsync marcado para borrado"
 
 msgid "Rsync job is protected"
-msgstr ""
+msgstr "Trabajo Rsync protegido"
 
 msgid "Rsync job is unlocked"
-msgstr ""
+msgstr "Trabajo Rsync desprotegido"
 
 msgid "Rule"
 msgstr "Regla"
@@ -7214,13 +7283,13 @@ msgid "Samba Active Directory Domain Controller"
 msgstr "Controlador de dominio del AD Samba"
 
 msgid "Samba Share is marked for deletion"
-msgstr ""
+msgstr "Compartido Samba marcado para borrado"
 
 msgid "Samba Share is protected"
-msgstr ""
+msgstr "Compartido Samba protegido"
 
 msgid "Samba Share is unlocked"
-msgstr ""
+msgstr "Compartido Samba desprotegido"
 
 #, php-format
 msgid ""
@@ -9208,27 +9277,8 @@ msgstr ""
 msgid "These parameters will be added to the ping command."
 msgstr "Estos parametros se añadirán al comando ping"
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr "Este CARP no puede ser borrado porque está aún en uso como interfaz."
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Este LAGG no puede ser eliminado porque aun está siendo utilizado como una "
-"interfaz."
-
 msgid "This URL is already configured."
 msgstr "Esta dirección URL ya esta configurada."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Esta VLAN no se puede eliminar porque aún se está usando como interfaz."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr "Esta WLAN no puede ser borrada puesto que está en uso como interfaz."
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -9777,10 +9827,10 @@ msgid "Toggle Selected Records"
 msgstr "Cambiar el estado de los registros seleccionados."
 
 msgid "Toggle Selected Rsync Jobs"
-msgstr ""
+msgstr "Intercambiar estado de trabajos Rsync"
 
 msgid "Toggle Selected Rsync Modules"
-msgstr ""
+msgstr "Intercambiar estado de módulos Rsync"
 
 msgid "Tolerated"
 msgstr "Tolerado"
@@ -10321,6 +10371,19 @@ msgstr "Ajustes de VLAN"
 msgid "VLAN Tag"
 msgstr "VLAN Tag"
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr "Tipo de VM"
 
@@ -10468,6 +10531,19 @@ msgstr "WLAN"
 
 msgid "WLAN Settings"
 msgstr "Ajustes de WLAN"
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -10930,6 +11006,27 @@ msgstr "hasta"
 msgid "umount"
 msgstr "Desmontar"
 
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "¿Realmente quiere borrar esta interfaz?"
+
+#~ msgid "Edit interface"
+#~ msgstr "Editar interfaz"
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Este LAGG no puede ser eliminado porque aun está siendo utilizado como una "
+#~ "interfaz."
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Esta VLAN no se puede eliminar porque aún se está usando como interfaz."
+
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr "Este CARP no puede ser borrado porque está aún en uso como interfaz."
+
 #~ msgid ""
 #~ "This Bridge cannot be deleted because it is still being used as an interface."
 #~ msgstr ""
@@ -10937,6 +11034,10 @@ msgstr "Desmontar"
 
 #~ msgid "HAST disabled"
 #~ msgstr "HAST Deshabilitado"
+
+#~ msgid ""
+#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr "Esta WLAN no puede ser borrada puesto que está en uso como interfaz."
 
 #~ msgid "AD authentication disabled."
 #~ msgstr "Autentificación AD deshabilitada"

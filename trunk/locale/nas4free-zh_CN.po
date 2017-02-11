@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
 "PO-Revision-Date: 2017-01-17 15:29+0000\n"
 "Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -394,6 +394,9 @@ msgstr "添加"
 msgid "Add Bridge"
 msgstr ""
 
+msgid "Add CARP"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "添加数据集"
 
@@ -402,6 +405,9 @@ msgstr "新增群组"
 
 msgid "Add Host"
 msgstr "添加主机"
+
+msgid "Add LAGG"
+msgstr ""
 
 msgid "Add MIB"
 msgstr "添加MIB"
@@ -442,11 +448,17 @@ msgstr "添加 URL"
 msgid "Add User Account"
 msgstr "添加用户账户"
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr "添加虚拟设备"
 
 msgid "Add Volume"
 msgstr "添加卷"
+
+msgid "Add WLAN"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "给库添加一个缓存设备"
@@ -1158,6 +1170,19 @@ msgstr "缓存"
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
+msgstr ""
 
 msgid "CARP only"
 msgstr "只是 CARP"
@@ -2015,6 +2040,9 @@ msgstr "删除登入资讯"
 msgid "Delete Selected Bridges"
 msgstr ""
 
+msgid "Delete Selected CARPs"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2026,6 +2054,9 @@ msgstr ""
 
 msgid "Delete Selected Jobs"
 msgstr "删除选中的任务"
+
+msgid "Delete Selected LAGGs"
+msgstr ""
 
 msgid "Delete Selected NFS Shares"
 msgstr ""
@@ -2066,11 +2097,17 @@ msgstr ""
 msgid "Delete Selected User Accounts"
 msgstr ""
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "删除选中的虚拟设备"
 
 msgid "Delete Selected Volumes"
 msgstr "删除选中的卷"
+
+msgid "Delete Selected WLANs"
+msgstr ""
 
 msgid "Delete URL"
 msgstr "删除 URL"
@@ -2484,9 +2521,6 @@ msgid ""
 "will become invalid (e.g. share)!"
 msgstr "您确定要删除这个启动器吗？所有存取这个初始器的元件都将失效！"
 
-msgid "Do you really want to delete this interface?"
-msgstr "您确定要删除这个介面吗？"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2561,6 +2595,12 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected CARPs?"
+msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2568,6 +2608,12 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -2805,6 +2851,9 @@ msgstr "编辑"
 msgid "Edit Bridge"
 msgstr ""
 
+msgid "Edit CARP"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr ""
 
@@ -2813,6 +2862,9 @@ msgstr ""
 
 msgid "Edit Host"
 msgstr "编辑主机资讯"
+
+msgid "Edit LAGG"
+msgstr ""
 
 msgid "Edit MIB"
 msgstr "编辑MIB"
@@ -2853,6 +2905,9 @@ msgstr "编辑 URL"
 msgid "Edit User Account"
 msgstr ""
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr "编辑 VM"
 
@@ -2860,6 +2915,9 @@ msgid "Edit Virtual Device"
 msgstr ""
 
 msgid "Edit Volume"
+msgstr ""
+
+msgid "Edit WLAN"
 msgstr ""
 
 msgid "Edit auth group"
@@ -2882,9 +2940,6 @@ msgstr "编辑启动器"
 
 msgid "Edit initiator group"
 msgstr "编辑启动器组"
-
-msgid "Edit interface"
-msgstr "编辑介面"
 
 msgid "Edit job"
 msgstr "编辑任务"
@@ -4506,6 +4561,19 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAGG Settings"
+msgstr ""
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
 msgstr ""
 
 msgid "LAN Management"
@@ -8486,24 +8554,8 @@ msgstr "这些参数将被添加到 rsyncd.conf 中的模块配置（module conf
 msgid "These parameters will be added to the ping command."
 msgstr ""
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr "此CARP 不能被删除，因为它仍然被用作为一个介面。"
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr "此LAGG 不能被删除，因为它仍然被用作为一个介面。"
-
 msgid "This URL is already configured."
 msgstr "此 URL 已经配置。"
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr "此VLAN 不能被删除，因为它仍然被用来做为一个介面。"
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr "无法侦测到无线局域网因为另一个界面正在使用中。"
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -9442,6 +9494,19 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr "VLAN 标签"
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr "VM 类型"
 
@@ -9580,6 +9645,19 @@ msgid "WLAN"
 msgstr "无线局域网"
 
 msgid "WLAN Settings"
+msgstr ""
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
 msgstr ""
 
 msgid "WPA"
@@ -10009,9 +10087,31 @@ msgstr "到"
 msgid "umount"
 msgstr "卸载"
 
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "您确定要删除这个介面吗？"
+
+#~ msgid "Edit interface"
+#~ msgstr "编辑介面"
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr "此VLAN 不能被删除，因为它仍然被用来做为一个介面。"
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr "此LAGG 不能被删除，因为它仍然被用作为一个介面。"
+
 #~ msgid ""
 #~ "This Bridge cannot be deleted because it is still being used as an interface."
 #~ msgstr "此Bridge 不能被删除，因为它仍然被用作为一个介面。"
 
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr "此CARP 不能被删除，因为它仍然被用作为一个介面。"
+
 #~ msgid "HAST disabled"
 #~ msgstr "HAST关闭"
+
+#~ msgid ""
+#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr "无法侦测到无线局域网因为另一个界面正在使用中。"

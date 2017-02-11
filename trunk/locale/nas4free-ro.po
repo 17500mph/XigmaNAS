@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
 "PO-Revision-Date: 2017-02-09 11:27+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -444,6 +444,9 @@ msgstr "Adăugare"
 msgid "Add Bridge"
 msgstr ""
 
+msgid "Add CARP"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "Adăugare set date"
 
@@ -452,6 +455,9 @@ msgstr "Adăugare grup"
 
 msgid "Add Host"
 msgstr "Adăugare sistem"
+
+msgid "Add LAGG"
+msgstr ""
 
 msgid "Add MIB"
 msgstr "Adăugare MIB"
@@ -492,11 +498,17 @@ msgstr "Adăugare URL"
 msgid "Add User Account"
 msgstr "Adăugare cont utilizator"
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr "Adăugare Dispozitiv virtual"
 
 msgid "Add Volume"
 msgstr "Adăugare volum"
+
+msgid "Add WLAN"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Adăugare dispozitiv cache la pool"
@@ -1271,6 +1283,19 @@ msgstr "CACHE"
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
+msgstr ""
 
 msgid "CARP only"
 msgstr "Doar CARP"
@@ -2245,6 +2270,9 @@ msgstr "Ștergere date de autentificare"
 msgid "Delete Selected Bridges"
 msgstr ""
 
+msgid "Delete Selected CARPs"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Ștergere comenzi selectate"
 
@@ -2256,6 +2284,9 @@ msgstr "Ștergere grupuri selectate"
 
 msgid "Delete Selected Jobs"
 msgstr "Ștergere activități selectate"
+
+msgid "Delete Selected LAGGs"
+msgstr ""
 
 msgid "Delete Selected NFS Shares"
 msgstr ""
@@ -2296,11 +2327,17 @@ msgstr "Ștergere Snapshot-uri selectate"
 msgid "Delete Selected User Accounts"
 msgstr "Ștergere conturi utilizator selectate"
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "Ștergere Dispozitive virtuale selectate"
 
 msgid "Delete Selected Volumes"
 msgstr "Ștergere volume selectate"
+
+msgid "Delete Selected WLANs"
+msgstr ""
 
 msgid "Delete URL"
 msgstr "Ștergere URL"
@@ -2736,9 +2773,6 @@ msgstr ""
 "Doriți să ștergeți acest inițiator? Toate elementele care îl folosesc vor "
 "deveni invalide (ex. partajările)!"
 
-msgid "Do you really want to delete this interface?"
-msgstr "Doriți să ștergeți această interfață?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2820,6 +2854,12 @@ msgstr "Creați un dispozitiv virtual oglindă folosind discurile selectate?"
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr "Creați un dispozitiv virtual tip strip folosind discurile selectate?"
 
+msgid "Do you want to delete selected CARPs?"
+msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2827,6 +2867,12 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Ștergeți volumele RAID selectate?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -3066,6 +3112,9 @@ msgstr "Editare"
 msgid "Edit Bridge"
 msgstr ""
 
+msgid "Edit CARP"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Editare set de date"
 
@@ -3074,6 +3123,9 @@ msgstr "Editare grup"
 
 msgid "Edit Host"
 msgstr "Editare sistem"
+
+msgid "Edit LAGG"
+msgstr ""
 
 msgid "Edit MIB"
 msgstr "Editare MIB"
@@ -3114,6 +3166,9 @@ msgstr "Editare URL"
 msgid "Edit User Account"
 msgstr "Editare cont utilizator"
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr "Editare VM"
 
@@ -3122,6 +3177,9 @@ msgstr "Editare dispozitiv virtual"
 
 msgid "Edit Volume"
 msgstr "Editare volum"
+
+msgid "Edit WLAN"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Editare Grup Auth"
@@ -3143,9 +3201,6 @@ msgstr "Editare inițiator"
 
 msgid "Edit initiator group"
 msgstr "Editare grup inițiator"
-
-msgid "Edit interface"
-msgstr "Editare interfață"
 
 msgid "Edit job"
 msgstr "Editare acțiune"
@@ -4895,6 +4950,19 @@ msgstr "LAGG"
 
 msgid "LAGG Settings"
 msgstr "Setări LAGG"
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
+msgstr ""
 
 msgid "LAN Management"
 msgstr "Management LAN"
@@ -9178,29 +9246,8 @@ msgstr ""
 msgid "These parameters will be added to the ping command."
 msgstr "Acești parametri vor fi adăugați la comanda ping."
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Conexiunea CARP nu poate fi ștearsă fiind încă utilizată ca interfață."
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Configurația LAGG nu poate fi ștearsă întrucît este încă folosită ca o "
-"interfață."
-
 msgid "This URL is already configured."
 msgstr "URL-ul este deja configurat."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Acest VLAN nu poate fi șters întrucît este încă folosită ca o interfață."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Aceasta WLAN nu se poate elimina pentru ca se utilizeaza ca interfata"
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -10300,6 +10347,19 @@ msgstr "Setări VLAN"
 msgid "VLAN Tag"
 msgstr "Tag VLAN"
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr "Tip VM"
 
@@ -10445,6 +10505,19 @@ msgstr "WLAN-Retea virtuala"
 
 msgid "WLAN Settings"
 msgstr "Setări WLAN"
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -10915,8 +10988,35 @@ msgstr "către"
 msgid "umount"
 msgstr "demontare"
 
+#~ msgid "Edit interface"
+#~ msgstr "Editare interfață"
+
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "Doriți să ștergeți această interfață?"
+
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Conexiunea CARP nu poate fi ștearsă fiind încă utilizată ca interfață."
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Configurația LAGG nu poate fi ștearsă întrucît este încă folosită ca o "
+#~ "interfață."
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Acest VLAN nu poate fi șters întrucît este încă folosită ca o interfață."
+
 #~ msgid "HAST disabled"
 #~ msgstr "HAST dezactivat"
+
+#~ msgid ""
+#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Aceasta WLAN nu se poate elimina pentru ca se utilizeaza ca interfata"
 
 #~ msgid ""
 #~ "This Bridge cannot be deleted because it is still being used as an interface."

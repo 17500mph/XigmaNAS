@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
 "PO-Revision-Date: 2017-02-08 04:57+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -428,6 +428,9 @@ msgstr "Lägg till"
 msgid "Add Bridge"
 msgstr ""
 
+msgid "Add CARP"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "Lägg till Dataset"
 
@@ -436,6 +439,9 @@ msgstr "Lägg till grupp"
 
 msgid "Add Host"
 msgstr "Lägg till värd"
+
+msgid "Add LAGG"
+msgstr ""
 
 msgid "Add MIB"
 msgstr "Lägg till MIB"
@@ -476,11 +482,17 @@ msgstr "Lägg till url"
 msgid "Add User Account"
 msgstr "Lägg till användarkonto"
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr "Lägg till virtuell enhet"
 
 msgid "Add Volume"
 msgstr "Lägg till Volym"
+
+msgid "Add WLAN"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Lägg till en cacheenhet till en pool"
@@ -1245,6 +1257,19 @@ msgstr "CACHE"
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
+msgstr ""
 
 msgid "CARP only"
 msgstr "endast CARP"
@@ -2187,6 +2212,9 @@ msgstr "Radera Inloggnings Information"
 msgid "Delete Selected Bridges"
 msgstr ""
 
+msgid "Delete Selected CARPs"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Ta bort valda kommandon"
 
@@ -2198,6 +2226,9 @@ msgstr "Ta bort valda grupper"
 
 msgid "Delete Selected Jobs"
 msgstr "Ta bort valda jobb"
+
+msgid "Delete Selected LAGGs"
+msgstr ""
 
 msgid "Delete Selected NFS Shares"
 msgstr ""
@@ -2238,11 +2269,17 @@ msgstr "Ta bort vald ögonblicksbild"
 msgid "Delete Selected User Accounts"
 msgstr "Ta bort valda användarkonton"
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "Ta bort valda virtuella enheter"
 
 msgid "Delete Selected Volumes"
 msgstr "Ta bort valda Volymer"
+
+msgid "Delete Selected WLANs"
+msgstr ""
 
 msgid "Delete URL"
 msgstr "Radera URL"
@@ -2678,9 +2715,6 @@ msgstr ""
 "Vill du verkligen radera denna initiator? Alla element som använder det "
 "kommer att ogiltigförklaras (t.ex. utdelade kataloger)!"
 
-msgid "Do you really want to delete this interface?"
-msgstr "Vill du verkligen radera detta gränssnitt?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2760,6 +2794,12 @@ msgstr "Vill du skapa en speglad virtuell enhet från valda diskar?"
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr "Vill du skapa en strimlad virtuell enhet från valda diskar?"
 
+msgid "Do you want to delete selected CARPs?"
+msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2767,6 +2807,12 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Vill du radera valda RAID volymer?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -3005,6 +3051,9 @@ msgstr "Redigera"
 msgid "Edit Bridge"
 msgstr ""
 
+msgid "Edit CARP"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Ändra Dataset"
 
@@ -3013,6 +3062,9 @@ msgstr "Redigera grupp"
 
 msgid "Edit Host"
 msgstr "Redigera värd"
+
+msgid "Edit LAGG"
+msgstr ""
 
 msgid "Edit MIB"
 msgstr "Redigera MIB"
@@ -3053,6 +3105,9 @@ msgstr "Redigera URL"
 msgid "Edit User Account"
 msgstr "Redigera användarkonto"
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr "Editera VM"
 
@@ -3061,6 +3116,9 @@ msgstr "Ändra virtuell enhet"
 
 msgid "Edit Volume"
 msgstr "Ändra Volym"
+
+msgid "Edit WLAN"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Editera auth gruppen"
@@ -3082,9 +3140,6 @@ msgstr "Redigera initiator"
 
 msgid "Edit initiator group"
 msgstr "Redigera initiativtagande grupp"
-
-msgid "Edit interface"
-msgstr "Redigera gränssnitt"
 
 msgid "Edit job"
 msgstr "Redigera jobb"
@@ -4812,6 +4867,19 @@ msgstr "LAGG"
 
 msgid "LAGG Settings"
 msgstr "LAGG-inställningar"
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
+msgstr ""
 
 msgid "LAN Management"
 msgstr "LAN Hantering"
@@ -9049,28 +9117,8 @@ msgstr ""
 msgid "These parameters will be added to the ping command."
 msgstr "Dessa parametrar kommer att läggas till pingkommandot."
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Den här CARP kan inte tas bort eftersom den fortfarande används av ett "
-"gränssnitt."
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Denna LAGG kan inte tas bort eftersom den fortfarande används som gränssnitt."
-
 msgid "This URL is already configured."
 msgstr "Denna URL är redan konfigurerad."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Detta VLAN kan inte tas bort eftersom det fortfarande används som gränssnitt."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr "Detta WLAN kan ej tas bort då gränssnittet fortfarande används."
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -10155,6 +10203,19 @@ msgstr "VLAN inställningar"
 msgid "VLAN Tag"
 msgstr "VLAN etikett"
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr "VM Typ"
 
@@ -10299,6 +10360,19 @@ msgstr "WLAN"
 
 msgid "WLAN Settings"
 msgstr "WLAN inställningar"
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -10762,6 +10836,22 @@ msgstr "till"
 msgid "umount"
 msgstr "umount"
 
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "Vill du verkligen radera detta gränssnitt?"
+
+#~ msgid "Edit interface"
+#~ msgstr "Redigera gränssnitt"
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Denna LAGG kan inte tas bort eftersom den fortfarande används som gränssnitt."
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Detta VLAN kan inte tas bort eftersom det fortfarande används som gränssnitt."
+
 #~ msgid "HAST disabled"
 #~ msgstr "HAST inaktiverat"
 
@@ -10769,3 +10859,13 @@ msgstr "umount"
 #~ "This Bridge cannot be deleted because it is still being used as an interface."
 #~ msgstr ""
 #~ "Bryggan kan inte tas bort eftersom den fortfarande används av ett gränssnitt."
+
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Den här CARP kan inte tas bort eftersom den fortfarande används av ett "
+#~ "gränssnitt."
+
+#~ msgid ""
+#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr "Detta WLAN kan ej tas bort då gränssnittet fortfarande används."

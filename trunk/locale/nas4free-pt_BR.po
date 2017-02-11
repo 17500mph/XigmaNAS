@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"POT-Creation-Date: 2017-02-11 14:25+0000\n"
 "PO-Revision-Date: 2017-01-25 01:04+0000\n"
 "Last-Translator: Mostrow S. <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 14:46+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -431,6 +431,9 @@ msgstr "Adicionar"
 msgid "Add Bridge"
 msgstr ""
 
+msgid "Add CARP"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "Criar Conjunto de Dados"
 
@@ -439,6 +442,9 @@ msgstr ""
 
 msgid "Add Host"
 msgstr "Adicionar máquina"
+
+msgid "Add LAGG"
+msgstr ""
 
 msgid "Add MIB"
 msgstr "Adicionar MIB"
@@ -479,10 +485,16 @@ msgstr "Adicionar URL"
 msgid "Add User Account"
 msgstr ""
 
+msgid "Add VLAN"
+msgstr ""
+
 msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
+msgstr ""
+
+msgid "Add WLAN"
 msgstr ""
 
 msgid "Add a cache device to a pool"
@@ -1218,6 +1230,19 @@ msgstr ""
 
 msgid "CARP"
 msgstr "CARP"
+
+msgid ""
+"CARP cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "CARP is marked for deletion"
+msgstr ""
+
+msgid "CARP is protected"
+msgstr ""
+
+msgid "CARP is unlocked"
+msgstr ""
 
 msgid "CARP only"
 msgstr "Apenas CARP"
@@ -2090,6 +2115,9 @@ msgstr "Excluir informações de login"
 msgid "Delete Selected Bridges"
 msgstr ""
 
+msgid "Delete Selected CARPs"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2100,6 +2128,9 @@ msgid "Delete Selected Groups"
 msgstr ""
 
 msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected LAGGs"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
@@ -2141,10 +2172,16 @@ msgstr ""
 msgid "Delete Selected User Accounts"
 msgstr ""
 
+msgid "Delete Selected VLANs"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
+msgstr ""
+
+msgid "Delete Selected WLANs"
 msgstr ""
 
 msgid "Delete URL"
@@ -2571,9 +2608,6 @@ msgstr ""
 "Deseja realmente excluir este iniciador? Todos os elementos que o utilizam "
 "tornar-se-ão inválidos (ex: compartilhamentos)!"
 
-msgid "Do you really want to delete this interface?"
-msgstr "Deseja realmente excluir esta interface?"
-
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
@@ -2653,6 +2687,12 @@ msgstr ""
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
+msgid "Do you want to delete selected CARPs?"
+msgstr ""
+
+msgid "Do you want to delete selected LAGGs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2660,6 +2700,12 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected VLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -2899,6 +2945,9 @@ msgstr "Editar"
 msgid "Edit Bridge"
 msgstr ""
 
+msgid "Edit CARP"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr ""
 
@@ -2907,6 +2956,9 @@ msgstr ""
 
 msgid "Edit Host"
 msgstr "Editar Host"
+
+msgid "Edit LAGG"
+msgstr ""
 
 msgid "Edit MIB"
 msgstr "Editar MIB"
@@ -2947,6 +2999,9 @@ msgstr "Editar URL"
 msgid "Edit User Account"
 msgstr ""
 
+msgid "Edit VLAN"
+msgstr ""
+
 msgid "Edit VM"
 msgstr ""
 
@@ -2954,6 +3009,9 @@ msgid "Edit Virtual Device"
 msgstr ""
 
 msgid "Edit Volume"
+msgstr ""
+
+msgid "Edit WLAN"
 msgstr ""
 
 msgid "Edit auth group"
@@ -2976,9 +3034,6 @@ msgstr "Editar iniciador"
 
 msgid "Edit initiator group"
 msgstr "Editar grupo iniciador"
-
-msgid "Edit interface"
-msgstr "Editar interface"
 
 msgid "Edit job"
 msgstr "Editar tarefa"
@@ -4664,6 +4719,19 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAGG Settings"
+msgstr ""
+
+msgid ""
+"LAGG cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "LAGG is marked for deletion"
+msgstr ""
+
+msgid "LAGG is protected"
+msgstr ""
+
+msgid "LAGG is unlocked"
 msgstr ""
 
 msgid "LAN Management"
@@ -8813,28 +8881,8 @@ msgstr ""
 msgid "These parameters will be added to the ping command."
 msgstr ""
 
-msgid ""
-"This CARP cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Esse CARP não pode ser excluído porque ele ainda está sendo usado como uma "
-"interface."
-
-msgid ""
-"This LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Este LAGG não pode ser excluída, pois ainda está em uso como interface."
-
 msgid "This URL is already configured."
 msgstr "Esta URL já está configurada."
-
-msgid ""
-"This VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Esta VLAN não pode ser excluída, pois ainda está em uso como interface."
-
-msgid ""
-"This WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
@@ -9853,6 +9901,19 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
+msgid ""
+"VLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "VLAN is marked for deletion"
+msgstr ""
+
+msgid "VLAN is protected"
+msgstr ""
+
+msgid "VLAN is unlocked"
+msgstr ""
+
 msgid "VM Type"
 msgstr ""
 
@@ -9991,6 +10052,19 @@ msgid "WLAN"
 msgstr ""
 
 msgid "WLAN Settings"
+msgstr ""
+
+msgid ""
+"WLAN cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "WLAN is marked for deletion"
+msgstr ""
+
+msgid "WLAN is protected"
+msgstr ""
+
+msgid "WLAN is unlocked"
 msgstr ""
 
 msgid "WPA"
@@ -10434,6 +10508,22 @@ msgstr "para"
 msgid "umount"
 msgstr "desmontar"
 
+#~ msgid "Edit interface"
+#~ msgstr "Editar interface"
+
+#~ msgid ""
+#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Este LAGG não pode ser excluída, pois ainda está em uso como interface."
+
+#~ msgid ""
+#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Esta VLAN não pode ser excluída, pois ainda está em uso como interface."
+
+#~ msgid "Do you really want to delete this interface?"
+#~ msgstr "Deseja realmente excluir esta interface?"
+
 #~ msgid "HAST disabled"
 #~ msgstr "HAST desabilitado"
 
@@ -10441,4 +10531,10 @@ msgstr "desmontar"
 #~ "This Bridge cannot be deleted because it is still being used as an interface."
 #~ msgstr ""
 #~ "Essa ponte não pode ser excluída porque ela ainda está sendo usada como uma "
+#~ "interface."
+
+#~ msgid ""
+#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Esse CARP não pode ser excluído porque ele ainda está sendo usado como uma "
 #~ "interface."
