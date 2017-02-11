@@ -61,7 +61,7 @@ $(document).ready(function(){
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_disksinfo.php"><span><?=gtext('Disks (Info)');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_disks_info.php"><span><?=gtext('Disks (Info)');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext('Partitions');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext('Space Used');?></span></a></li>
