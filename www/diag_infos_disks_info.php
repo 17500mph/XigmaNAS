@@ -1,6 +1,6 @@
 <?php
 /*
-	diag_infos_disksinfo.php
+	diag_infos_disks_info.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
