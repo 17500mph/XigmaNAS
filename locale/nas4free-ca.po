@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
-"PO-Revision-Date: 2017-02-10 18:50+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"PO-Revision-Date: 2017-02-10 22:21+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:22+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -341,8 +341,8 @@ msgstr "ACL heretat"
 msgid "ACL mode"
 msgstr "Mode ACL"
 
-msgid "AD authentication disabled."
-msgstr "Autenticació d'AD deshabilitat."
+msgid "AD authentication is disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Nom ADC o PDC"
@@ -425,7 +425,7 @@ msgid "Active Directory"
 msgstr "Directori actiu"
 
 msgid "Active Shares"
-msgstr "Compartició activa"
+msgstr "Recursos actius"
 
 msgid "Active Users"
 msgstr "Usuaris actius"
@@ -441,6 +441,9 @@ msgstr "Adaptativa (baix consum d'energia)"
 
 msgid "Add"
 msgstr "Afegeix"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Afegir conjunt de dades"
@@ -479,7 +482,7 @@ msgid "Add Samba Share"
 msgstr "Afegir recurs Samba"
 
 msgid "Add Share"
-msgstr "Afegeix compartició"
+msgstr "Afegeix recurs"
 
 msgid "Add Snapshot"
 msgstr "Afegir instantània"
@@ -694,8 +697,8 @@ msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
 msgstr ""
-"Totes les compartides fan servir l'opció 'entre comets' amb la qual cosa es "
-"crea el nom de fitxer. Parents i qualsevol paraula que comenci amb .Apple es "
+"Tots els recursos fan servir l'opció 'entre comets' amb la qual cosa es crea "
+"el nom de fitxer. Parents i qualsevol paraula que comenci amb .Apple es "
 "il.legal."
 
 msgid "All software raid disks are imported."
@@ -720,7 +723,7 @@ msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr ""
 "Permet que els clients intentin emmagatzemar atributs estesos d'estil OS/2 "
-"en un recurs compartit."
+"en un recurs."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
@@ -740,14 +743,14 @@ msgid ""
 "follows the allow option format."
 msgstr ""
 "Permet a determinats usuaris i grups accés de lectura i escriptura a un "
-"recurs compartit. Això segueix l'opció de format permès."
+"recurs. Això segueix l'opció de format permès."
 
 msgid ""
 "Allows certain users and groups to have read-only  access  to  a share. This "
 "follows the allow option format."
 msgstr ""
-"Permet a determinats usuaris i grups accés de lectura nomes a un recurs "
-"compartit. Això segueix l'opció de format permès."
+"Permet a determinats usuaris i grups accés de lectura nomes a un recurs. "
+"Això segueix l'opció de format permès."
 
 msgid "Allows the server to try and become a local master browser."
 msgstr "Permet que el servidor intentar y esser 'local master browser'"
@@ -879,7 +882,7 @@ msgid "Any"
 msgstr "Qualsevol"
 
 msgid "Append user defined shares"
-msgstr "Annexar accions definides per l'usuari"
+msgstr "Annexar recursos definits per l'usuari"
 
 msgid "Apple Filing Protocol"
 msgstr "Protocol de presentació d'Apple."
@@ -1231,6 +1234,19 @@ msgstr "Pont"
 msgid "Bridge Settings"
 msgstr "Configuració del pont"
 
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
+
 msgid "Bring a device online"
 msgstr "Porta el dispositiu en línia"
 
@@ -1448,7 +1464,7 @@ msgid "Check and replace cable"
 msgstr "Verificar i canviar cable"
 
 msgid "Check shared secret"
-msgstr "Comprova secret compartit"
+msgstr "Comprova recurs secret"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2230,6 +2246,9 @@ msgstr "Suprimeix servidor"
 msgid "Delete Login Info"
 msgstr "Suprimeix informació d'inici"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Eliminar ordres seleccionats"
 
@@ -2243,7 +2262,7 @@ msgid "Delete Selected Jobs"
 msgstr "Eliminar feines seleccionats"
 
 msgid "Delete Selected NFS Shares"
-msgstr "Eliminar els recursos compartits NFS seleccionats"
+msgstr "Eliminar els recursos NFS seleccionats"
 
 msgid "Delete Selected Options"
 msgstr "Eliminar opcions seleccionades"
@@ -2273,7 +2292,7 @@ msgid "Delete Selected Samba Shares"
 msgstr "Eliminar recursos seleccionats Samba"
 
 msgid "Delete Selected Shares"
-msgstr "Eliminar compartits seleccionats"
+msgstr "Eliminar recursos seleccionats"
 
 msgid "Delete Selected Snapshots"
 msgstr "Eliminar instantànies seleccionats"
@@ -2380,7 +2399,7 @@ msgid "Destination Network"
 msgstr "Xarxa de destí"
 
 msgid "Destination Share"
-msgstr "Compartició de destinació"
+msgstr "Recurs de destí"
 
 msgid "Destination email address."
 msgstr "Adreça de correu electrònic de destinació."
@@ -2436,13 +2455,13 @@ msgid "Detected Language:"
 msgstr "Idioma Detectat:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr "Comparticions remots detectats RSYNC"
+msgstr "Recursos RSYNC remots detectats"
 
 msgid "Detected an error while importing."
 msgstr "Detectat un error durant la importació."
 
 msgid "Detected shares on this server"
-msgstr "Comparticions detectades en aquest servidor"
+msgstr "Recursos detectats en aquest servidor"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2611,6 +2630,9 @@ msgstr "Descobriment Mètode d'autenticació"
 msgid "Disk"
 msgstr "Disc"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Selecció de disc"
 
@@ -2704,8 +2726,8 @@ msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
 msgstr ""
-"Realment vol eliminar aquest disc? Tots els elements que encara l'utilitzen "
-"deixaran de ser vàlids (per exemple, compartició)!"
+"Realment vols esborrar aquest disc? Tots els elements que encara l'utilitzen "
+"deixaran de ser vàlids (per exemple, recursos)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Realment vol eliminar aquest punt?"
@@ -2721,7 +2743,7 @@ msgid ""
 "will become invalid (e.g. share)!"
 msgstr ""
 "Realment vol eliminar aquest iniciador? Tots els elements que encara "
-"l'utilitzen deixaran de ser vàlids (per exemple, compartició)!"
+"l'utilitzen deixaran de ser vàlids (per exemple, recursos)!"
 
 msgid "Do you really want to delete this interface?"
 msgstr "Realment vol eliminar aquesta interfície?"
@@ -2731,7 +2753,7 @@ msgid ""
 "it will become invalid (e.g. share)!"
 msgstr ""
 "Realment vol eliminar aquest punt de muntatge? Tots els elements que encara "
-"l'utilitzen deixaran de ser vàlids (per exemple, compartició)!"
+"l'utilitzen deixaran de ser vàlids (per exemple, recursos)!"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Realment vol eliminar aquest grup del portal?"
@@ -2819,6 +2841,9 @@ msgstr "Vols eliminar els volums RAID seleccionats?"
 msgid "Do you want to delete selected Samba shares?"
 msgstr "Vols eliminar els recursos Samba seleccionats?"
 
+msgid "Do you want to delete selected bridges?"
+msgstr ""
+
 msgid "Do you want to delete selected commands?"
 msgstr "Vols eliminar les ordres seleccionades?"
 
@@ -2853,7 +2878,7 @@ msgid "Do you want to delete selected rsync modules?"
 msgstr "Vols eliminar els mòduls Rsync seleccionats?"
 
 msgid "Do you want to delete selected shares?"
-msgstr "Voleu eliminar les comparticions seleccionats?"
+msgstr "Voleu eliminar els recursos seleccionats?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Vols esborrar els instantanis seleccionats?"
@@ -3051,6 +3076,9 @@ msgstr "ERROR:"
 msgid "Edit"
 msgstr "Editar"
 
+msgid "Edit Bridge"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Editar conjunt de dades"
 
@@ -3088,7 +3116,7 @@ msgid "Edit Samba Share"
 msgstr "Editar recurs Samba"
 
 msgid "Edit Share"
-msgstr "Edita compartició"
+msgstr "Edita recurs"
 
 msgid "Edit Snapshot"
 msgstr "Editar instantani"
@@ -3853,6 +3881,9 @@ msgstr "Commutació per error"
 msgid "Fatal"
 msgstr "Fatal"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Feb"
 
@@ -4042,6 +4073,9 @@ msgstr "Fuppes s'ha desactivat."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
 
@@ -4165,8 +4199,8 @@ msgstr "Informació HAST i Estat dels recursos configurats"
 msgid "HAST Resource"
 msgstr "Recurs HAST"
 
-msgid "HAST disabled"
-msgstr "HAST desactivat"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "Volum HAST"
@@ -5063,7 +5097,7 @@ msgid "Local Master Browser"
 msgstr "Local Màster Browser"
 
 msgid "Local Share (Destination)"
-msgstr "Compartiment local (Destí)"
+msgstr "Recurs local (Destí)"
 
 msgid "Local User"
 msgstr "Usuari local"
@@ -5776,6 +5810,12 @@ msgstr ""
 "No hi ha discos configurats, si us plau afegir discos per veure la "
 "informació de diagnòstic!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "No s'ha pujat cap fitxer."
 
@@ -5784,6 +5824,9 @@ msgstr "Sense disc nou trobat."
 
 msgid "No new software raid disk found."
 msgstr "Sense programari RAID per disc trobat."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "No s'han seleccionat dispositius de la piscina"
@@ -6891,7 +6934,7 @@ msgid "Remote server address"
 msgstr "Direcció del servidor remot"
 
 msgid "Remote share name configured"
-msgstr "Nom de compartició remot configurat"
+msgstr "Nom de recurs remot configurat"
 
 msgid "Removable"
 msgstr "Extraïble"
@@ -7650,16 +7693,16 @@ msgid "Share Settings"
 msgstr "Ajustos d'ús compartit"
 
 msgid "Share is marked for deletion"
-msgstr "La compartició està marcada per esborrar"
+msgstr "El recurs està marcat per esborrar"
 
 msgid "Share is protected"
-msgstr "La compartició està protegida"
+msgstr "El recurs està protegit"
 
 msgid "Share is unlocked"
-msgstr "La compartició està desbloquejada"
+msgstr "El recurs està desbloquejat"
 
 msgid "Share passwords can not be more than 8 characters."
-msgstr "Comparteix contrasenyes no poden tenir més de 8 caràcters."
+msgstr "Les contrasenyes de recurs no poden tenir més de 8 caràcters."
 
 msgid "Shares"
 msgstr "Comparticions"
@@ -7798,7 +7841,7 @@ msgid "Source"
 msgstr "Font"
 
 msgid "Source Share"
-msgstr "Compartir font"
+msgstr "Recurs font"
 
 msgid "Source directory to be synchronized."
 msgstr "Directori d'origen per ser sincronitzat."
@@ -7870,7 +7913,7 @@ msgid ""
 "Specifies the share character set. For example UTF8, UTF8-MAC, ISO-8859-15, "
 "etc."
 msgstr ""
-"Especifica el conjunt de caràcters acció. Per exemple UTF8, UTF8-MAC, ISO-"
+"Especifica el recurs del joc de caràcters. Per exemple UTF8, UTF8-MAC, ISO-"
 "8859-15, etc."
 
 msgid "Specifies the time in hh:mm:ss after which the ban expires."
@@ -8274,7 +8317,7 @@ msgid ""
 "the share. It follows the same  format  as  the  allow option."
 msgstr ""
 "L'opció de negar especifica els usuaris i grups que no tenen permís d'accés "
-"al recurs compartit. D'això se segueix el mateix format que l'opció permetre."
+"al recurs. D'això se segueix el mateix format que l'opció permet."
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
@@ -8996,7 +9039,7 @@ msgstr ""
 "El servidor es reiniciarà després de la restauració de la configuració."
 
 msgid "The share name is already used."
-msgstr "El nom del recurs compartit ja s'utilitza."
+msgstr "El nom del recurs ja s'utilitza."
 
 msgid "The size of the swap file in MB."
 msgstr "La mida del fitxer d'intercanvi en MB."
@@ -9155,7 +9198,7 @@ msgstr "Aquests paràmetres s'agreguen a la secció [Global] de %s."
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
-msgstr "Aquests paràmetres s'agreguen a la secció [Compartida] de %s."
+msgstr "Aquests paràmetres s'agreguen a la secció [Recurs] de %s."
 
 msgid ""
 "These parameters are added to the hardware-specific part of the driver for "
@@ -9189,12 +9232,6 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Aquests paràmetres s'afegiran a la ordre ping."
-
-msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Aquest Pont no es pot eliminar perquè encara està sent utilitzat com una "
-"interfície."
 
 msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
@@ -9291,19 +9328,17 @@ msgid "This controls the access a remote host has to this module."
 msgstr "Això controla l'accés a un host remot té a aquest mòdul."
 
 msgid "This controls the access to this share with an access password."
-msgstr ""
-"Això controla l'accés a aquest recurs compartit amb una clau d'accés."
+msgstr "Això controla l'accés a aquest recurs amb una clau d'accés."
 
 msgid "This controls whether this share is accessible by guest account."
-msgstr ""
-"Això controla si aquesta proporció és accessible per compte de convidat."
+msgstr "Això controla si aquest recurs és accessible per compte de convidat."
 
 msgid ""
 "This controls whether this share is seen in the list of available shares in "
 "a net view and in the browse list."
 msgstr ""
-"Aquí es controla si aquesta compartició es veu a la llista de comparticions "
-"disponibles de la vista de xarxa i a la llista del navegador."
+"Aquí es controla si aquest recurs es veu a la llista de recursos disponibles "
+"de la vista de xarxa i a la llista del navegador."
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr ""
@@ -9378,9 +9413,9 @@ msgid ""
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
 msgstr ""
-"Aquesta opció permet als usuaris i grups que tenen accés a un recurs "
-"compartit que s'especifiquin. Els usuaris i grups s'especifiquen, delimitat "
-"per comes. Els grups es reconeixen pel prefix @."
+"Aquesta opció permet als usuaris i grups que tenen accés a un recurs que "
+"s'especifiquin. Els usuaris i grups s'especifiquen, delimitat per comes. Els "
+"grups es reconeixen pel prefix @."
 
 msgid ""
 "This option allows you to set the file system of already formatted disks "
@@ -9443,12 +9478,11 @@ msgid ""
 "Leave this field empty to use default settings."
 msgstr ""
 "Aquesta opció és una coma, un espai, pestanya delimitada del amfitrió, que "
-"no estan autoritzats a accedir al recurs compartit. On la llista conflictiva "
-"llavors la llista de permisos té prioritat. En el cas que sigui necessari "
-"negar tot per defecte, utilitzeu el terme clau ALL (o la màscara de xarxa "
-"0.0.0.0/0) i especifiqueu explícitament als amfitrions permesos que poden "
-"accedir. Deixeu aquest camp buit per utilitzar la configuració "
-"predeterminada."
+"no estan autoritzats a accedir al recurs. On la llista conflictiva llavors "
+"la llista de permisos té prioritat. En el cas que sigui necessari negar tot "
+"per defecte, utilitzeu el terme clau ALL (o la màscara de xarxa 0.0.0.0/0) i "
+"especifiqueu explícitament als amfitrions permesos que poden accedir. Deixeu "
+"aquest camp buit per utilitzar la configuració predeterminada."
 
 msgid ""
 "This option is a comma, space, or tab delimited set of hosts which are "
@@ -9466,9 +9500,9 @@ msgid ""
 "number. Leave this field empty to use default settings."
 msgstr ""
 "Aquesta opció és una coma, un espai, delimitat per tabuladors o conjunt de "
-"hosts que estan autoritzats a accedir a aquest recurs compartit. Podeu "
-"especificar els amfitrions per nom o número IP. Deixeu aquest camp buit per "
-"utilitzar la configuració predeterminada."
+"hosts que estan autoritzats a accedir a aquest recurs. Podeu especificar els "
+"amfitrions per nom o número IP. Deixeu aquest camp buit per utilitzar la "
+"configuració predeterminada."
 
 msgid ""
 "This option specifies the group name or group ID that file transfers to and "
@@ -9637,7 +9671,7 @@ msgstr ""
 "DLNA."
 
 msgid "This will create a recycle bin on the share."
-msgstr "Això crearà una paperera de reciclatge en el recurs compartit."
+msgstr "Això crearà una paperera de reciclatge en el recurs."
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -10280,7 +10314,7 @@ msgid "User Settings"
 msgstr "Configuració de l'usuari"
 
 msgid "User Shares"
-msgstr "Compartits d'usuari"
+msgstr "Recursos d'usuari"
 
 msgid "User Suffix"
 msgstr "Sufix d'usuari"
@@ -10945,71 +10979,14 @@ msgstr "cap a"
 msgid "umount"
 msgstr "desmontar"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "autenticació d'AD desconnectat"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST desactivat"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Afegir treball Rsync"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Aquest Pont no es pot eliminar perquè encara està sent utilitzat com una "
+#~ "interfície."
 
-#~ msgid "Add module"
-#~ msgstr "Afegir mòdul"
-
-#~ msgid "Add share"
-#~ msgstr "Afegeix compartició"
-
-#~ msgid "Add resource"
-#~ msgstr "Afegir recursus"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Verifica secret compartit:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Suprimeix la ruta"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Suprimeix feina Rsync"
-
-#~ msgid "Delete module"
-#~ msgstr "Sprimeix modul"
-
-#~ msgid "Delete resource"
-#~ msgstr "Suprimeix el recurs"
-
-#~ msgid "Delete share"
-#~ msgstr "Suprimir el recurs compartit"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Realment voleu eliminar aquest treball Rsync?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Realment vol eliminar aquest mòdul?"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Realment voleu eliminar aquest recurs?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Editar treball RSYNC"
-
-#~ msgid "Edit module"
-#~ msgstr "Editar mòdul"
-
-#~ msgid "Edit resource"
-#~ msgstr "Editar recursus"
-
-#~ msgid "Edit share"
-#~ msgstr "Editar compartició"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iniciador iSCSI desconectat"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Ping winbindd per veure si es troba viu:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Resultats per prova d'unió xarxa RPC:"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Realment vol eliminar aquesta ruta?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Realment vol eliminar aquesta compartició?"
+#~ msgid "AD authentication disabled."
+#~ msgstr "Autenticació d'AD deshabilitat."

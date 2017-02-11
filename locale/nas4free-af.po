@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:22+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 msgid " interfaces:"
@@ -338,7 +338,7 @@ msgstr "ACL Oorneem"
 msgid "ACL mode"
 msgstr "ACL modus"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -437,6 +437,9 @@ msgstr "Aanpasbaar (Lae Kragverbruik)"
 
 msgid "Add"
 msgstr "Voeg by"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Voeg Datastel by"
@@ -1225,6 +1228,19 @@ msgstr "Brug"
 
 msgid "Bridge Settings"
 msgstr "Brug instellings"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Bring 'n toestel aanlyn"
@@ -2212,6 +2228,9 @@ msgstr "Wis Gasheer Uit"
 msgid "Delete Login Info"
 msgstr "Vee Inteken Inligting uit"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Vee Geselekteerde Bevelle Uit"
 
@@ -2589,6 +2608,9 @@ msgstr "Ontdek Auth Metode"
 msgid "Disk"
 msgstr "Skyf"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Skyf Seleksie"
 
@@ -2795,6 +2817,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Wil jy die geselekteerde RAID volumes uitvee?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3028,6 +3053,9 @@ msgstr "FOUT:"
 
 msgid "Edit"
 msgstr "Redigeer"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Redigeer Datastel"
@@ -3816,6 +3844,9 @@ msgstr "Misluk rugsteun"
 msgid "Fatal"
 msgstr "Fataal"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Feb"
 
@@ -4001,6 +4032,9 @@ msgstr "Fuppes is buite werking gestel"
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM Sagteware RAID"
 
@@ -4122,8 +4156,8 @@ msgstr "HAST Inligting en Status Ingestelde Hulpbronne"
 msgid "HAST Resource"
 msgstr "HAST Hulpbronne"
 
-msgid "HAST disabled"
-msgstr "HAST afgeskakel"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST volume"
@@ -5705,6 +5739,12 @@ msgstr ""
 "Geen gekonfigureerde skywe nie, voeg asseblief skywe by om diagnostiek "
 "informasie te bekom"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Geen lêer is opgelaai nie."
 
@@ -5713,6 +5753,9 @@ msgstr "Geen nuwe skyf is opgespoor nie."
 
 msgid "No new software raid disk found."
 msgstr "Geen nuwe sagteware raid skyf is opgespoor nie."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Geen poele geselekteer nie"
@@ -9082,12 +9125,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Hierdie parameters sal by die pieng bevel bygevoeg word."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Hierdie Brug kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
-"gebruik."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Hierdie CARP kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
@@ -10715,68 +10752,11 @@ msgstr "na"
 msgid "umount"
 msgstr ""
 
-#~ msgid "Add module"
-#~ msgstr "Voeg 'n module by"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST afgeskakel"
 
-#~ msgid "Add resource"
-#~ msgstr "Voeg hulpbron by"
-
-#~ msgid "Delete Route"
-#~ msgstr "Vee Roete Uit"
-
-#~ msgid "Delete resource"
-#~ msgstr "Verwyder hulpbron"
-
-#~ msgid "Delete module"
-#~ msgstr "Verwyder module"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Wil jy regtig hierdie hulpbron uitvee?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Wil jy regtig hierdie roete uitvee?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Reigeer hulpbron"
-
-#~ msgid "Edit module"
-#~ msgstr "Reigeer module"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Kyk na gedeelde geheim:"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Wil jy regtig hierdie module verwyder?"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD bevestighing afgeskakel"
-
-#~ msgid "Add share"
-#~ msgstr "Voeg 'n gedeelde by"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Voeg Rsync taak by"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Wis Rsync uit"
-
-#~ msgid "Delete share"
-#~ msgstr "Wis deel uit"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Wil jy regtig hierdie Rsync werkstuk uitwis?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Wil jy regtig hierdie deling uitwis?"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Pieng winbindd om te sien of dit lewendig is"
-
-#~ msgid "Edit share"
-#~ msgstr "Redigeer die deel"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Redigeer Rsync werkstuk"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Resultate vir net rpc toetsaansluit:"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Hierdie Brug kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
+#~ "gebruik."

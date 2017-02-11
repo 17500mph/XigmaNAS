@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -298,7 +298,7 @@ msgstr "ACL 상속"
 msgid "ACL mode"
 msgstr "ACL 모드"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -397,6 +397,9 @@ msgstr ""
 
 msgid "Add"
 msgstr "추가"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr ""
@@ -1118,6 +1121,19 @@ msgid "Bridge"
 msgstr ""
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2008,6 +2024,9 @@ msgstr "Host 삭제"
 msgid "Delete Login Info"
 msgstr "로그인 정보 삭제"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2377,6 +2396,9 @@ msgstr "발견(Discovery) 인증 방법"
 msgid "Disk"
 msgstr "디스크"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr ""
 
@@ -2560,6 +2582,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2790,6 +2815,9 @@ msgstr ""
 
 msgid "Edit"
 msgstr "편집"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3542,6 +3570,9 @@ msgstr "장애 조치"
 msgid "Fatal"
 msgstr ""
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr ""
 
@@ -3723,6 +3754,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3844,7 +3878,7 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
+msgid "HAST is disabled."
 msgstr ""
 
 msgid "HAST volume"
@@ -5339,6 +5373,12 @@ msgstr ""
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "업로드 된 파일이 없습니다."
 
@@ -5346,6 +5386,9 @@ msgid "No new disk found."
 msgstr ""
 
 msgid "No new software raid disk found."
+msgstr ""
+
+msgid "No partition information found."
 msgstr ""
 
 msgid "No pool devices have been selected"
@@ -8477,10 +8520,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 
@@ -10019,60 +10058,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "마운트 해제"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD 인증이 비활성화 됨"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Rsync 작업 추가"
-
-#~ msgid "Add module"
-#~ msgstr "모듈 추가"
-
-#~ msgid "Add share"
-#~ msgstr "공유 추가"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "공유된 비밀 check:"
-
-#~ msgid "Delete Route"
-#~ msgstr "라우트 삭제"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Rsync 작업 삭제"
-
-#~ msgid "Delete module"
-#~ msgstr "모듈 삭제"
-
-#~ msgid "Delete share"
-#~ msgstr "공유 삭제"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "정말로 이 rsync 작업을 지우시겠습니까?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "정말로 이 모듈을 삭제하시겠습니까?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "정말로 이 라우트를 삭제하시겠습니까?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "정말로 이 공유를 삭제하시겠습니까?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync 작업 편집"
-
-#~ msgid "Edit module"
-#~ msgstr "모듈 편집"
-
-#~ msgid "Edit share"
-#~ msgstr "공유 편집"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "살아 있는지 보기 위해 winbindd에 ping:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "net rpc testjoin의 결과:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI 개시자 비활성화 됨"

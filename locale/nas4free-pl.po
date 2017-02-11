@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-07 13:44+0000\n"
 "Last-Translator: Emil <emil46@autograf.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -328,7 +328,7 @@ msgstr "dziedziczenie ACL"
 msgid "ACL mode"
 msgstr "Tryb ACL"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -428,6 +428,9 @@ msgstr "Adaptacyjny (Niskie zużycie energi)"
 
 msgid "Add"
 msgstr "Dodaj"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Dodaj zestaw danych"
@@ -1184,6 +1187,19 @@ msgid "Bridge"
 msgstr "Mostek"
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2086,6 +2102,9 @@ msgstr "Usuń hosta"
 msgid "Delete Login Info"
 msgstr "Usuń informacje logowania"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Usuń wybrane polecenie."
 
@@ -2460,6 +2479,9 @@ msgstr "Wyszukaj metodę autentykacji"
 msgid "Disk"
 msgstr "Dysk"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr ""
 
@@ -2655,6 +2677,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Czy chcesz usunąć wybrane woluminy RAID"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2887,6 +2912,9 @@ msgstr "BŁĄD:"
 
 msgid "Edit"
 msgstr "Edytuj"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3663,6 +3691,9 @@ msgstr "Failover"
 msgid "Fatal"
 msgstr "Krytyczny"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Luty"
 
@@ -3846,6 +3877,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3967,8 +4001,8 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
-msgstr "HAST wyłączone"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "Wolumin HAST"
@@ -5501,6 +5535,12 @@ msgstr "Brak dostępnych dysków"
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "?Nie wysłano pliku."
 
@@ -5509,6 +5549,9 @@ msgstr "Nie znaleziono nowych dysków."
 
 msgid "No new software raid disk found."
 msgstr "Nie znaleziono nowych programowych dysków RAID"
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Nie wybrano żadnej puli urządzeń"
@@ -8738,11 +8781,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Bridge nie może zostać usunięty ponieważ jest wciąż używany jako interfejs"
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "CARP nie może zostać usunięty ponieważ jest wciąż używany jako interfejs."
@@ -10330,71 +10368,10 @@ msgstr "do"
 msgid "umount"
 msgstr "odmontuj"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "Uwierzytelnianie AD wyłączone"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST wyłączone"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Dodaj zadanie Rsync"
-
-#~ msgid "Add module"
-#~ msgstr "Dodaj moduł"
-
-#~ msgid "Add share"
-#~ msgstr "Dodaj udział"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Sprawdź hasło:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Usuń trasę"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Usuń zadanie Rsync"
-
-#~ msgid "Delete module"
-#~ msgstr "Usuń moduł"
-
-#~ msgid "Delete share"
-#~ msgstr "Skasuj udział"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Jesteś pewien, że chcesz usunąć te zadanie Rsync?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Czy na pewno chcesz usunąć ten moduł?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Czy na pewno chcesz usunąć tę trasę?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Czy na pewno chcesz skasować ten udział?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Edytuj zadanie Rsync"
-
-#~ msgid "Edit module"
-#~ msgstr "Edytuj moduł"
-
-#~ msgid "Edit share"
-#~ msgstr "Edytuj udział"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Odpytaj winbindd aby sprawdzić czy działa:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Wynik polecenia 'net rpc testjoin':"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI initiator wyłączony"
-
-#~ msgid "Add resource"
-#~ msgstr "Dodaj zasób"
-
-#~ msgid "Delete resource"
-#~ msgstr "Usuń zasób"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Czy na pewno usunąć ten zasób?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Edytuj zasób"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Bridge nie może zostać usunięty ponieważ jest wciąż używany jako interfejs"

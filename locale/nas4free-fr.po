@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-10 18:30+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -345,8 +345,8 @@ msgstr "ACL hérités"
 msgid "ACL mode"
 msgstr "mode ACL"
 
-msgid "AD authentication disabled."
-msgstr "L'authentification AD est désactivée."
+msgid "AD authentication is disabled."
+msgstr ""
 
 msgid "AD or PDC name."
 msgstr ""
@@ -446,6 +446,9 @@ msgstr "Adaptive (Faible consommation d'énergie)"
 
 msgid "Add"
 msgstr "Ajouter"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Ajouter un dataset"
@@ -1238,6 +1241,19 @@ msgstr "Jonction"
 
 msgid "Bridge Settings"
 msgstr "Paramètres Bridge"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Mettre un périphérique en ligne"
@@ -2237,6 +2253,9 @@ msgstr "Supprimer un hôte"
 msgid "Delete Login Info"
 msgstr "Suppression des info de login"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Supprimer les commandes sélectionnées"
 
@@ -2620,6 +2639,9 @@ msgstr "Méthode Auth pour la découverte"
 msgid "Disk"
 msgstr "Disque"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "sélection du disque"
 
@@ -2835,6 +2857,9 @@ msgstr "Voulez-vous supprimer le(s) volume(s) RAID sélectionné(s)"
 
 msgid "Do you want to delete selected Samba shares?"
 msgstr "Voulez-vous supprimer des partages Samba sélectionnés?"
+
+msgid "Do you want to delete selected bridges?"
+msgstr ""
 
 msgid "Do you want to delete selected commands?"
 msgstr "Voulez-vous supprimer les commandes sélectionnées?"
@@ -3068,6 +3093,9 @@ msgstr "ERREUR:"
 
 msgid "Edit"
 msgstr "Editer"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Modifier le jeu de données"
@@ -3863,6 +3891,9 @@ msgstr "Basculement (failover)"
 msgid "Fatal"
 msgstr "Fatale"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Fév."
 
@@ -4049,6 +4080,9 @@ msgstr "Fuppes a été désactivé."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM RAID Logiciel"
 
@@ -4171,8 +4205,8 @@ msgstr "Information HAST & Status des ressources configurées"
 msgid "HAST Resource"
 msgstr "Ressource HAST"
 
-msgid "HAST disabled"
-msgstr "HAST désactivé"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST volume"
@@ -5780,6 +5814,12 @@ msgstr ""
 "Aucun disque configuré, veuillez ajouter des disques pour afficher les "
 "informations de diagnostic!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Aucun fichier n'a été uploadé."
 
@@ -5788,6 +5828,9 @@ msgstr "Aucun nouveau disque trouvé."
 
 msgid "No new software raid disk found."
 msgstr "Aucun nouveau disque raid logiciel trouvé."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Aucun périphérique de pool n'a été séléctionné"
@@ -9210,12 +9253,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Ces paramètres seront ajoutés à la commande ping"
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"La passerelle ne peut pas être supprimée car elle est encore en cours "
-"d'utilisation dans une interface."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Ce Protocole Commun De Redondance d'Adresse (CARP) ne peut pas être supprimé "
@@ -10967,71 +11004,14 @@ msgstr "à"
 msgid "umount"
 msgstr "démontage"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "Authentification AD désactivée"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST désactivé"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Ajouter une tâche Rsync"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "La passerelle ne peut pas être supprimée car elle est encore en cours "
+#~ "d'utilisation dans une interface."
 
-#~ msgid "Add module"
-#~ msgstr "Ajouter un module"
-
-#~ msgid "Add share"
-#~ msgstr "Ajouter un partage"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Check shared secret:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Suppression de la route"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Supprimer la tâche Rsync"
-
-#~ msgid "Delete module"
-#~ msgstr "Supprimer module"
-
-#~ msgid "Delete share"
-#~ msgstr "Supprimer partage"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Voulez-vous vraiment supprimer cette tâche Rsync?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Voulez-vous vraiment supprimer ce module?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Voulez-vous vraiment supprimer cette route?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Voulez-vous vraiment supprimer ce partage?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Editer la tâche Rsync"
-
-#~ msgid "Edit module"
-#~ msgstr "Editer module"
-
-#~ msgid "Edit share"
-#~ msgstr "Modifier un partage"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Ping winbindd pour vérifier s'il est en ligne:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Résultat de la commande net rpc testjoin:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "Initiateur iSCSI désactivé"
-
-#~ msgid "Add resource"
-#~ msgstr "Ajouter une ressource"
-
-#~ msgid "Delete resource"
-#~ msgstr "Supprimer la ressource"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Voulez-vous vraiment supprimer cette ressource?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Éditer la ressource"
+#~ msgid "AD authentication disabled."
+#~ msgstr "L'authentification AD est désactivée."

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -328,7 +328,7 @@ msgstr ""
 msgid "ACL mode"
 msgstr ""
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -427,6 +427,9 @@ msgstr ""
 
 msgid "Add"
 msgstr "Lisää"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr ""
@@ -1149,6 +1152,19 @@ msgid "Bridge"
 msgstr "Silta"
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2038,6 +2054,9 @@ msgstr "Poista palvelin"
 msgid "Delete Login Info"
 msgstr ""
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2403,6 +2422,9 @@ msgstr ""
 msgid "Disk"
 msgstr "Levy"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr ""
 
@@ -2588,6 +2610,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2818,6 +2843,9 @@ msgstr "VIRHE:"
 
 msgid "Edit"
 msgstr "Muokkaus"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3567,6 +3595,9 @@ msgstr ""
 msgid "Fatal"
 msgstr ""
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Helmi"
 
@@ -3748,6 +3779,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3869,7 +3903,7 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
+msgid "HAST is disabled."
 msgstr ""
 
 msgid "HAST volume"
@@ -5355,6 +5389,12 @@ msgstr ""
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Yhtään tiedostoa ei lähetetty palvelimelle."
 
@@ -5362,6 +5402,9 @@ msgid "No new disk found."
 msgstr ""
 
 msgid "No new software raid disk found."
+msgstr ""
+
+msgid "No partition information found."
 msgstr ""
 
 msgid "No pool devices have been selected"
@@ -8470,10 +8513,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 
@@ -9989,51 +10028,3 @@ msgstr "kohteelle"
 
 msgid "umount"
 msgstr ""
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD todennus pois päältä"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Lisää Rsync työ"
-
-#~ msgid "Add module"
-#~ msgstr "Lisää moduli"
-
-#~ msgid "Add share"
-#~ msgstr "Lisää jako"
-
-#~ msgid "Delete Route"
-#~ msgstr "Poista reitti"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Poista Rsync työ"
-
-#~ msgid "Delete module"
-#~ msgstr "Poista moduli"
-
-#~ msgid "Delete share"
-#~ msgstr "Poista jako"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Oletko varma, että haluat poistaa tämän reitin?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync työn muokkaus"
-
-#~ msgid "Edit module"
-#~ msgstr "Modulin muokkaus"
-
-#~ msgid "Edit share"
-#~ msgstr "Jaon muokkaus"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI määrittäjä pois päältä"
-
-#~ msgid "Delete resource"
-#~ msgstr "Poista resurssi"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Haluatko todellakin poistaa tämän moduulin?"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Haluatko varmasti poistaa tämän resurssin?"

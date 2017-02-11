@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
-"PO-Revision-Date: 2017-02-10 19:00+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
+"PO-Revision-Date: 2017-02-11 00:15+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -349,8 +349,8 @@ msgstr "ACL overnemen"
 msgid "ACL mode"
 msgstr "ACL modus"
 
-msgid "AD authentication disabled."
-msgstr "AD verificatie uitgeschakeld."
+msgid "AD authentication is disabled."
+msgstr "AD verificatie is uitgeschakeld."
 
 msgid "AD or PDC name."
 msgstr "AD of PDC naam."
@@ -449,6 +449,9 @@ msgstr "adaptief (Laag Energieverbruik)"
 
 msgid "Add"
 msgstr "Toevoegen"
+
+msgid "Add Bridge"
+msgstr "Bridge Toevoegen"
 
 msgid "Add Dataset"
 msgstr "Dataset Toevoegen"
@@ -1240,6 +1243,21 @@ msgstr "Bridge"
 
 msgid "Bridge Settings"
 msgstr "Bridge Instellingen"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+"Bridge kan niet worden verwijderd omdat deze nog steeds als netwerk in "
+"gebruikt is."
+
+msgid "Bridge is marked for deletion"
+msgstr "Bridge is gemarkeerd voor verwijdering"
+
+msgid "Bridge is protected"
+msgstr "Bridge is beschermd"
+
+msgid "Bridge is unlocked"
+msgstr "Bridge is ontgrendeld"
 
 msgid "Bring a device online"
 msgstr "Breng een schijf online"
@@ -2243,6 +2261,9 @@ msgstr "Host verwijderen"
 msgid "Delete Login Info"
 msgstr "Verwijder Inlog Info"
 
+msgid "Delete Selected Bridges"
+msgstr "Verwijder Geselecteerde Bridges"
+
 msgid "Delete Selected Commands"
 msgstr "Verwijder Geselecteerde Opdrachten"
 
@@ -2629,6 +2650,9 @@ msgstr "Ontdek Auth Methode"
 msgid "Disk"
 msgstr "Schijf"
 
+msgid "Disk Partition Information"
+msgstr "Schijf Partitie Informatie"
+
 msgid "Disk Selection"
 msgstr "Schijf Selectie"
 
@@ -2839,6 +2863,9 @@ msgstr "Wilt u de geselecteerde RAID volumes verwijderen?"
 
 msgid "Do you want to delete selected Samba shares?"
 msgstr "Wilt u de geselecteerde Samba delingen verwijderen?"
+
+msgid "Do you want to delete selected bridges?"
+msgstr "Wilt u de geselecteerde bridges verwijderen?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Wilt u de geselecteerde opdrachten verwijderen?"
@@ -3073,6 +3100,9 @@ msgstr "FOUT:"
 
 msgid "Edit"
 msgstr "Bewerken"
+
+msgid "Edit Bridge"
+msgstr "Bridge Bewerken"
 
 msgid "Edit Dataset"
 msgstr "Dataset Bewerken"
@@ -3874,6 +3904,9 @@ msgstr "Failover (Overname bij storing)"
 msgid "Fatal"
 msgstr "Fataal"
 
+msgid "Fdisk Partition Information"
+msgstr "Fdisk Partitie Informatie"
+
 msgid "Feb"
 msgstr "Feb"
 
@@ -4059,6 +4092,9 @@ msgstr "Fuppes is uitgeschakeld."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr "GEOM Partitie Informatie"
+
 msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
 
@@ -4182,8 +4218,8 @@ msgstr "HAST Informatie & Status Geconfigureerde Bronnen"
 msgid "HAST Resource"
 msgstr "HAST Bron"
 
-msgid "HAST disabled"
-msgstr "HAST uitgeschakeld"
+msgid "HAST is disabled."
+msgstr "HAST is uitgeschakeld."
 
 msgid "HAST volume"
 msgstr "HAST volume"
@@ -5743,16 +5779,16 @@ msgid "No DNS server have been configured."
 msgstr "Er zijn geen DNS-server geconfigureerd."
 
 msgid "No DNS setting found."
-msgstr "Geen DNS instellingen gevonden."
+msgstr "Er zijn geen DNS instellingen gevonden."
 
 msgid "No Extent has been configured."
 msgstr "Er is geen Extent geconfigureerd."
 
 msgid "No IPMI FRU data available."
-msgstr "Geen IPMI FRU gegevens beschikbaar."
+msgstr "Er is geen IPMI FRU data beschikbaar."
 
 msgid "No IPMI Sensor data available."
-msgstr "Geen IPMI Sensor data beschikbaar."
+msgstr "Er is geen IPMI Sensor data beschikbaar."
 
 msgid "No Initiator Group has been configured."
 msgstr "Er is geen Initiator Groep geconfigureerd."
@@ -5761,7 +5797,7 @@ msgid "No Portal Group has been configured."
 msgstr "Er is geen Portaal Groep geconfigureerd."
 
 msgid "No RSYNC Client configured."
-msgstr "Geen RSYNC Cliënt geconfigureerd."
+msgstr "Er is geen RSYNC Cliënt geconfigureerd."
 
 msgid "No configured Auth Group."
 msgstr "Er is geen geconfigureerde Auth Groep."
@@ -5782,7 +5818,7 @@ msgid "No devices have been selected"
 msgstr "Er zijn geen schijven geselecteerd"
 
 msgid "No disk configured"
-msgstr "Geen schijf geconfigureerd"
+msgstr "Er is geen schijf geconfigureerd"
 
 msgid "No disks available."
 msgstr "Er zijn geen schijven beschikbaar."
@@ -5792,14 +5828,23 @@ msgstr ""
 "Geen schijven geconfigureerd, voeg schijven toe om diagnostische informatie "
 "te bekijken!"
 
+msgid "No disks found."
+msgstr "Er zijn geen schijven gevonden."
+
+msgid "No fdisk information found."
+msgstr "Er is geen fdisk informatie gevonden."
+
 msgid "No file was uploaded."
 msgstr "Er is geen bestand geupload."
 
 msgid "No new disk found."
-msgstr "Geen nieuwe schijven gevonden."
+msgstr "Er zijn geen nieuwe schijven gevonden."
 
 msgid "No new software raid disk found."
-msgstr "Geen nieuwe software raid schijven gevonden."
+msgstr "Er zijn geen nieuwe software raid schijven gevonden."
+
+msgid "No partition information found."
+msgstr "Er is geen partitie informatie gevonden."
 
 msgid "No pool devices have been selected"
 msgstr "Er zijn geen pool schijven geselecteerd"
@@ -5811,7 +5856,7 @@ msgid "No pools have been selected"
 msgstr "Er zijn geen pools geselecteerd"
 
 msgid "No softraid-formatted disks available."
-msgstr "Geen softraid-geformatteerde schijven beschikbaar."
+msgstr "Er zijn geen softraid-geformatteerde schijven beschikbaar."
 
 msgid "No suitable devices found."
 msgstr "Er zijn geen geschikte schijven gevonden."
@@ -5826,7 +5871,7 @@ msgid "No virtual devices have been selected"
 msgstr "Er zijn geen virtuele schijven geselecteerd"
 
 msgid "Noallow - Only inherit deny entries"
-msgstr "Noallow - Alleen overnemen wijger entries"
+msgstr "Noallow - Alleen erven wijger entries"
 
 msgid "Node A IP address"
 msgstr "Node A IP-adres"
@@ -5893,8 +5938,8 @@ msgid ""
 "the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
 "Normaal gesproken hoeft deze optie niet te worden ingesteld omdat de "
-"automatische onderhandelingsfase in het SMB-protocol zorgt voor het kiezen "
-"van de juiste protocol."
+"automatische onderhandelingsfase in het SMB-protocol zorgt voor het "
+"selecteren van het juiste protocol."
 
 msgid "Norwegian (Bokmal)"
 msgstr "Noors (Bokmal)"
@@ -9217,12 +9262,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Deze parameters worden aan het commando ping toegevoegd."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Deze Bridge kan niet worden verwijderd omdat het nog steeds als interface in "
-"gebruikt is."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Deze CARP kan niet worden verwijderd omdat het nog steeds als een interface "
@@ -10970,71 +11009,14 @@ msgstr "naar"
 msgid "umount"
 msgstr "loskoppelen"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD verificatie is uitgeschakeld"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST uitgeschakeld"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Rsync taak toevoegen"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Deze Bridge kan niet worden verwijderd omdat het nog steeds als interface in "
+#~ "gebruikt is."
 
-#~ msgid "Add module"
-#~ msgstr "Module toevoegen"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Controleer gedeelde sleutel:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Route verwijderen"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Rsync taak verwijderen"
-
-#~ msgid "Delete module"
-#~ msgstr "Module verwijderen"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Weet u zeker dat u deze Rsync taak wilt verwijderen?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Weet u zeker dat u deze module wilt verwijderen?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Weet u zeker dat u deze route wilt verwijderen?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync taak bewerken"
-
-#~ msgid "Edit module"
-#~ msgstr "Module bewerken"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Ping winbindd om te kijken of deze leeft:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Resultaten voor net rpc testjoin:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI initiator is uitgeschakeld"
-
-#~ msgid "Delete resource"
-#~ msgstr "Bron verwijderen"
-
-#~ msgid "Add resource"
-#~ msgstr "Bron toevoegen"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Weet u zeker dat u deze bron wilt verwijderen?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Bron bewerken"
-
-#~ msgid "Add share"
-#~ msgstr "Deling toevoegen"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Weet u zeker dat u deze deling wilt verwijderen?"
-
-#~ msgid "Delete share"
-#~ msgstr "Verwijder deling"
-
-#~ msgid "Edit share"
-#~ msgstr "Deling bewerken"
+#~ msgid "AD authentication disabled."
+#~ msgstr "AD verificatie uitgeschakeld."

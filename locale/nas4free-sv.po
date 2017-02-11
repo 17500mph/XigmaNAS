@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-08 04:57+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -324,7 +324,7 @@ msgstr "Ärv ACL"
 msgid "ACL mode"
 msgstr "ACL läge"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -424,6 +424,9 @@ msgstr "Adaptiv (Låg effektförbrukning)"
 
 msgid "Add"
 msgstr "Lägg till"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Lägg till Dataset"
@@ -1196,6 +1199,19 @@ msgstr "Brygga"
 
 msgid "Bridge Settings"
 msgstr "Brygginställningar"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Ta en enhet online"
@@ -2168,6 +2184,9 @@ msgstr "Ta bort värd"
 msgid "Delete Login Info"
 msgstr "Radera Inloggnings Information"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Ta bort valda kommandon"
 
@@ -2546,6 +2565,9 @@ msgstr "Upptäckt auktoriseringsmetod"
 msgid "Disk"
 msgstr "Disk"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Diskval"
 
@@ -2745,6 +2767,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Vill du radera valda RAID volymer?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2976,6 +3001,9 @@ msgstr "FEL:"
 
 msgid "Edit"
 msgstr "Redigera"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Ändra Dataset"
@@ -3767,6 +3795,9 @@ msgstr "Automatisk Omläggning"
 msgid "Fatal"
 msgstr "Ödesdiger"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "feb"
 
@@ -3951,6 +3982,9 @@ msgstr "Fuppes har inaktiverats."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM mjukvaru RAID"
 
@@ -4072,8 +4106,8 @@ msgstr "HAST Information & Status för konfigurerade resurser"
 msgid "HAST Resource"
 msgstr "HAST resurs"
 
-msgid "HAST disabled"
-msgstr "HAST inaktiverat"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST volym"
@@ -5644,6 +5678,12 @@ msgstr ""
 "Inga diskar konfigurerade, lägg till diskar för att se diagnostisk "
 "information!"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Ingen fil laddades upp."
 
@@ -5652,6 +5692,9 @@ msgstr "Inga nya diskar hittades."
 
 msgid "No new software raid disk found."
 msgstr "Inga nya mjukvaroraid hårddiskar hittades."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Inga poolenheter har valts"
@@ -9007,11 +9050,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Dessa parametrar kommer att läggas till pingkommandot."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Bryggan kan inte tas bort eftersom den fortfarande används av ett gränssnitt."
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Den här CARP kan inte tas bort eftersom den fortfarande används av ett "
@@ -10724,71 +10762,10 @@ msgstr "till"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Lägg till Rsync jobb"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST inaktiverat"
 
-#~ msgid "Add module"
-#~ msgstr "Lägg till modul"
-
-#~ msgid "Add share"
-#~ msgstr "Lägg till utdelning"
-
-#~ msgid "Delete Route"
-#~ msgstr "Ta bort väg"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Radera Rsync jobb"
-
-#~ msgid "Delete module"
-#~ msgstr "Radera modul"
-
-#~ msgid "Delete share"
-#~ msgstr "Ta bort utdelning"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Vill du verkligen ta bort detta Rsync jobb?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Är du säker på att du vill radera den här modulen?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Vill du verkligen ta bort den här vägen?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Vill du verkligen ta bort denna utdelning?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Redigera Rsync jobb"
-
-#~ msgid "Edit module"
-#~ msgstr "Redigera modul"
-
-#~ msgid "Edit share"
-#~ msgstr "Redigera utdelning"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Pinga 'winbindd' (winbind-demonen) för att se om den lever:"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Resultat för 'net rpc' testanslutning:"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI-initiator inaktiverad"
-
-#~ msgid "Add resource"
-#~ msgstr "Lägg till resurs"
-
-#~ msgid "Delete resource"
-#~ msgstr "Ta bort resurs"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Vill du verkligen ta bort resursen?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Ändra resurs"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Kontrollera delad hemlighet:"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD autentisering avaktiverad"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Bryggan kan inte tas bort eftersom den fortfarande används av ett gränssnitt."

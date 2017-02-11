@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -295,7 +295,7 @@ msgstr ""
 msgid "ACL mode"
 msgstr ""
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -394,6 +394,9 @@ msgstr ""
 
 msgid "Add"
 msgstr "Ekle"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr ""
@@ -1120,6 +1123,19 @@ msgid "Bridge"
 msgstr ""
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -2009,6 +2025,9 @@ msgstr "Bilgisayarı Sil"
 msgid "Delete Login Info"
 msgstr "Oturum açma bilgisini sil"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2376,6 +2395,9 @@ msgstr "Doğrulama Grubunu Tanımla"
 msgid "Disk"
 msgstr "Disk"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr ""
 
@@ -2566,6 +2588,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2796,6 +2821,9 @@ msgstr ""
 
 msgid "Edit"
 msgstr "Düzenle"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3547,6 +3575,9 @@ msgstr ""
 msgid "Fatal"
 msgstr ""
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr ""
 
@@ -3728,6 +3759,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3849,7 +3883,7 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
+msgid "HAST is disabled."
 msgstr ""
 
 msgid "HAST volume"
@@ -5335,6 +5369,12 @@ msgstr ""
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr ""
 
@@ -5342,6 +5382,9 @@ msgid "No new disk found."
 msgstr ""
 
 msgid "No new software raid disk found."
+msgstr ""
+
+msgid "No partition information found."
 msgstr ""
 
 msgid "No pool devices have been selected"
@@ -8450,10 +8493,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 
@@ -9966,57 +10005,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "umount"
-
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD doğrulaması devredışı"
-
-#~ msgid "Add Rsync job"
-#~ msgstr "Rsync görevi ekle"
-
-#~ msgid "Add module"
-#~ msgstr "Modül Ekle"
-
-#~ msgid "Add share"
-#~ msgstr "Paylaşım Ekle"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Gizli Paylaşımları Kontrol Et"
-
-#~ msgid "Delete Route"
-#~ msgstr "Route Sil"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Rsync Görevini Sil"
-
-#~ msgid "Delete module"
-#~ msgstr "Modül Sil"
-
-#~ msgid "Delete share"
-#~ msgstr "Paylaşım Sil"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Bu Rsync görevini silmek istediğinden emin misin?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Bu modülü gerçekten silmek istediğinize emin misiniz?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Bu Route'u gerçekten silmek istediğinize emin misiniz?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Bu paylaşımı gerçekten silmek istediğinize emin misiniz?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync Görevini Düzenle"
-
-#~ msgid "Edit module"
-#~ msgstr "Modül Düzenle"
-
-#~ msgid "Edit share"
-#~ msgstr "Paylaşım Düzenle"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI başlatıcı devredışı"
-
-#~ msgid "Add resource"
-#~ msgstr "Kaynak ekle"

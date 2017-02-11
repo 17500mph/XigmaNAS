@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2017-02-02 18:38+0000\n"
 "Last-Translator: diri <diri@gmx.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -354,7 +354,7 @@ msgstr "ACL Vererbung"
 msgid "ACL mode"
 msgstr "ACL Modus"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -454,6 +454,9 @@ msgstr "adaptiv (niedriger Energieverbrauch)"
 
 msgid "Add"
 msgstr "Hinzufügen"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Datensatz hinzufügen"
@@ -1242,6 +1245,19 @@ msgstr "Netzwerkbrücke"
 
 msgid "Bridge Settings"
 msgstr "Bridge Einstellung"
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Ein Gerät online schalten"
@@ -2194,6 +2210,9 @@ msgstr "Lösche Host"
 msgid "Delete Login Info"
 msgstr "Lösche Login Information"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Entfernt ausgewählte Kommandos"
 
@@ -2574,6 +2593,9 @@ msgstr "Entdecke Authentifikationsmethode"
 msgid "Disk"
 msgstr "Festplatte"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr "Festpalttenauswahl"
 
@@ -2786,6 +2808,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr "Soll das ausgewählte RAID Laufwerk gelöscht werden?"
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -3020,6 +3045,9 @@ msgstr "FEHLER:"
 
 msgid "Edit"
 msgstr "Ändern"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Datensatz bearbeiten"
@@ -3804,6 +3832,9 @@ msgstr "Failover"
 msgid "Fatal"
 msgstr "Fataler Fehler"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr "Feb."
 
@@ -3989,6 +4020,9 @@ msgstr "Fuppes ia deaktiviert."
 msgid "GEOM"
 msgstr "GEOM"
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
 
@@ -4111,8 +4145,8 @@ msgstr "Information & Status der HAST-Konfiguration"
 msgid "HAST Resource"
 msgstr "HAST Resource"
 
-msgid "HAST disabled"
-msgstr "HAST deaktiviert"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST-Datenträger"
@@ -5711,6 +5745,12 @@ msgstr ""
 "Keine Festplatten eingerichtet, bitte Festplatten hinzufügen um "
 "Diagnoseinformationen zu bekommen"
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "Es wurde keine Datei hochgeladen."
 
@@ -5719,6 +5759,9 @@ msgstr "Keine neuen Festplatten gefunden."
 
 msgid "No new software raid disk found."
 msgstr "Keine neuen Software-RAID Festplatten gefunden."
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr "Es wurden keine Pool Geräte ausgewählt"
@@ -9109,11 +9152,6 @@ msgid "These parameters will be added to the ping command."
 msgstr "Diese Parameter werden dem Ping Kommando hinzugefügt."
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
-"Diese Brücke kann nicht gelöscht werden da sie als Schnittstelle aktiv ist"
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
 "Diese CARP Schnittstelle kann nicht gelöscht werden, da sie aktiv benutzt "
@@ -10858,71 +10896,10 @@ msgstr "an"
 msgid "umount"
 msgstr "Aushängen"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "AD Authentication deaktiviert"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr ""
+#~ "Diese Brücke kann nicht gelöscht werden da sie als Schnittstelle aktiv ist"
 
-#~ msgid "Add Rsync job"
-#~ msgstr "Rsync-Job hinzufügen"
-
-#~ msgid "Add module"
-#~ msgstr "Modul hinzufügen"
-
-#~ msgid "Add share"
-#~ msgstr "Eine Freigabe hinzufügen"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "Überprüfe geteiltes Geheimnis:"
-
-#~ msgid "Delete Route"
-#~ msgstr "Lösche Route"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "Lösche Rsync-Job"
-
-#~ msgid "Delete module"
-#~ msgstr "Modul löschen"
-
-#~ msgid "Delete share"
-#~ msgstr "Freigabe löschen"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "Wollen Sie wirklich diesen Rsync-Job löschen?"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "Wollen Sie wirklich dieses Modul löschen?"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "Wollen Sie diese Route wirklich löschen?"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "Soll diese Freigabe wirklich gelöscht werden?"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "Rsync-Job bearbeiten"
-
-#~ msgid "Edit module"
-#~ msgstr "Modul bearbeiten"
-
-#~ msgid "Edit share"
-#~ msgstr "Bearbeite Freigabe"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Winbindd anpingen, um zu sehen ob es läuft."
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Ergebnisse für"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "iSCSI initiator deaktiviert"
-
-#~ msgid "Add resource"
-#~ msgstr "Ressource hinzufügen"
-
-#~ msgid "Delete resource"
-#~ msgstr "Ressource löschen"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "Möchten Sie diese Ressource wirklich entfernen?"
-
-#~ msgid "Edit resource"
-#~ msgstr "Ressource bearbeiten"
+#~ msgid "HAST disabled"
+#~ msgstr "HAST deaktiviert"

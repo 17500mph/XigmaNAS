@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-10 18:16+0000\n"
+"POT-Creation-Date: 2017-02-11 00:45+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-10 19:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-11 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -293,7 +293,7 @@ msgstr "繼承 ACL"
 msgid "ACL mode"
 msgstr "ACL模式"
 
-msgid "AD authentication disabled."
+msgid "AD authentication is disabled."
 msgstr ""
 
 msgid "AD or PDC name."
@@ -390,6 +390,9 @@ msgstr ""
 
 msgid "Add"
 msgstr "新增"
+
+msgid "Add Bridge"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "添加資料集"
@@ -1109,6 +1112,19 @@ msgid "Bridge"
 msgstr "橋接"
 
 msgid "Bridge Settings"
+msgstr ""
+
+msgid ""
+"Bridge cannot be deleted because it is still being used as an interface."
+msgstr ""
+
+msgid "Bridge is marked for deletion"
+msgstr ""
+
+msgid "Bridge is protected"
+msgstr ""
+
+msgid "Bridge is unlocked"
 msgstr ""
 
 msgid "Bring a device online"
@@ -1996,6 +2012,9 @@ msgstr "刪除主機"
 msgid "Delete Login Info"
 msgstr "刪除登入資訊"
 
+msgid "Delete Selected Bridges"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr ""
 
@@ -2363,6 +2382,9 @@ msgstr "目標搜索認證方法"
 msgid "Disk"
 msgstr "磁碟"
 
+msgid "Disk Partition Information"
+msgstr ""
+
 msgid "Disk Selection"
 msgstr ""
 
@@ -2546,6 +2568,9 @@ msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected Samba shares?"
+msgstr ""
+
+msgid "Do you want to delete selected bridges?"
 msgstr ""
 
 msgid "Do you want to delete selected commands?"
@@ -2776,6 +2801,9 @@ msgstr "錯誤："
 
 msgid "Edit"
 msgstr "編輯"
+
+msgid "Edit Bridge"
+msgstr ""
 
 msgid "Edit Dataset"
 msgstr ""
@@ -3523,6 +3551,9 @@ msgstr "故障轉移"
 msgid "Fatal"
 msgstr "致命"
 
+msgid "Fdisk Partition Information"
+msgstr ""
+
 msgid "Feb"
 msgstr ""
 
@@ -3704,6 +3735,9 @@ msgstr ""
 msgid "GEOM"
 msgstr ""
 
+msgid "GEOM Partition Information"
+msgstr ""
+
 msgid "GEOM Software RAID"
 msgstr ""
 
@@ -3825,8 +3859,8 @@ msgstr ""
 msgid "HAST Resource"
 msgstr ""
 
-msgid "HAST disabled"
-msgstr "HAST 關閉"
+msgid "HAST is disabled."
+msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST卷"
@@ -5313,6 +5347,12 @@ msgstr ""
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
+msgid "No disks found."
+msgstr ""
+
+msgid "No fdisk information found."
+msgstr ""
+
 msgid "No file was uploaded."
 msgstr "沒有檔案被上傳。"
 
@@ -5321,6 +5361,9 @@ msgstr "沒有發現新的硬盤。"
 
 msgid "No new software raid disk found."
 msgstr "沒有發現新的軟體RAID的硬盤。"
+
+msgid "No partition information found."
+msgstr ""
 
 msgid "No pool devices have been selected"
 msgstr ""
@@ -8444,10 +8487,6 @@ msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
-"This Bridge cannot be deleted because it is still being used as an interface."
-msgstr "此 Bridge 不能被刪除，因為它仍然被用作為一個介面。"
-
-msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr "此 CARP 不能被刪除，因為它仍然被用作為一個介面。"
 
@@ -9970,71 +10009,9 @@ msgstr "到"
 msgid "umount"
 msgstr "卸載"
 
-#~ msgid "AD authentication disabled"
-#~ msgstr "關閉 AD 認證"
+#~ msgid ""
+#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ msgstr "此 Bridge 不能被刪除，因為它仍然被用作為一個介面。"
 
-#~ msgid "Add module"
-#~ msgstr "新增模組"
-
-#~ msgid "Delete Route"
-#~ msgstr "刪除路由"
-
-#~ msgid "Delete module"
-#~ msgstr "刪除模組"
-
-#~ msgid "Delete share"
-#~ msgstr "刪除分享區"
-
-#~ msgid "Do you really want to delete this route?"
-#~ msgstr "您確定要刪除這個路由資訊嗎？"
-
-#~ msgid "Edit module"
-#~ msgstr "編輯模組"
-
-#~ msgid "Results for net rpc testjoin:"
-#~ msgstr "Net rpc testjoin 結果："
-
-#~ msgid "Add Rsync job"
-#~ msgstr "新增 Rsync 工作"
-
-#~ msgid "Add resource"
-#~ msgstr "新增資源"
-
-#~ msgid "Do you really want to delete this resource?"
-#~ msgstr "您確定要刪除這個資源嗎？"
-
-#~ msgid "Edit resource"
-#~ msgstr "編輯資源"
-
-#~ msgid "Ping winbindd to see if it is alive:"
-#~ msgstr "Ping winbindd 看看是否 alive :"
-
-#~ msgid "iSCSI initiator disabled"
-#~ msgstr "關閉 iSCSI 啟動器"
-
-#~ msgid "Delete resource"
-#~ msgstr "刪除資源"
-
-#~ msgid "Do you really want to delete this share?"
-#~ msgstr "您確定要刪除這個分享區嗎？"
-
-#~ msgid "Add share"
-#~ msgstr "新增分享區"
-
-#~ msgid "Delete Rsync job"
-#~ msgstr "刪除 Rsync 任務"
-
-#~ msgid "Do you really want to delete this Rsync job?"
-#~ msgstr "您確定要刪除這個 Rsync 任務嗎？"
-
-#~ msgid "Do you really want to delete this module?"
-#~ msgstr "您確定要刪除這個模組嗎？"
-
-#~ msgid "Edit Rsync job"
-#~ msgstr "編輯 Rsync 任務"
-
-#~ msgid "Edit share"
-#~ msgstr "編輯分享區"
-
-#~ msgid "Check shared secret:"
-#~ msgstr "檢查分享密鑰："
+#~ msgid "HAST disabled"
+#~ msgstr "HAST 關閉"
