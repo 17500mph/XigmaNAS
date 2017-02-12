@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-08 04:57+0000\n"
+"PO-Revision-Date: 2017-02-12 18:35+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 18:49+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -215,7 +215,7 @@ msgstr ""
 "default.htm) hittas i en katalog."
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "En uppgradering av systemmjukvaran pågår."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -328,7 +328,7 @@ msgid "ACL mode"
 msgstr "ACL läge"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "AD autentisering är avstängd."
 
 msgid "AD or PDC name."
 msgstr "AD eller PDC-namn."
@@ -429,10 +429,10 @@ msgid "Add"
 msgstr "Lägg till"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Lägg till brygga"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "Lägg till CARP"
 
 msgid "Add Dataset"
 msgstr "Lägg till Dataset"
@@ -444,40 +444,40 @@ msgid "Add Host"
 msgstr "Lägg till värd"
 
 msgid "Add LAGG"
-msgstr ""
+msgstr "Lägg till LAGG"
 
 msgid "Add MIB"
 msgstr "Lägg till MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Lägg till NFS utdelning"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Lägg till pool"
 
 msgid "Add RAID"
 msgstr "Lägg till RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Lägg till post"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Lägg till resurs"
 
 msgid "Add Route"
 msgstr "Lägg till väg"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Lägg till Rsync jobb"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Lägg till Rsync modul"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Lägg till Sambautdelning"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Lägg ttill utdelning"
 
 msgid "Add Snapshot"
 msgstr "Lägg till ögonblicksbild"
@@ -489,7 +489,7 @@ msgid "Add User Account"
 msgstr "Lägg till användarkonto"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "Lägg tlll VLAN"
 
 msgid "Add Virtual Device"
 msgstr "Lägg till virtuell enhet"
@@ -498,7 +498,7 @@ msgid "Add Volume"
 msgstr "Lägg till Volym"
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "Lägg tlll WLAN"
 
 msgid "Add a cache device to a pool"
 msgstr "Lägg till en cacheenhet till en pool"
@@ -1203,6 +1203,8 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Bootpartitionen är för liten. Du behöver ominstallera från LiveCD/LiveUSB "
+"eller ändra storleken på bootpartitionen på %s.\n"
 
 msgid "Bootloader"
 msgstr "Starthanterare"
@@ -1216,15 +1218,17 @@ msgstr "Brygginställningar"
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Bryggan kan inte tas bort eftersom den fortfarande används som ett "
+"gränssnitt."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Bryggan är markerad för borttagning"
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "Bryggan är skyddad"
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "Bryggan är olåst"
 
 msgid "Bring a device online"
 msgstr "Ta en enhet online"
@@ -1262,15 +1266,16 @@ msgstr "CARP"
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"CARP kan inte tas bort eftersom den fortfarande används som ett gränssnitt."
 
 msgid "CARP is marked for deletion"
-msgstr ""
+msgstr "CARP är markerad för borttagning"
 
 msgid "CARP is protected"
-msgstr ""
+msgstr "CARP är skyddad"
 
 msgid "CARP is unlocked"
-msgstr ""
+msgstr "CARP är olåst"
 
 msgid "CARP only"
 msgstr "endast CARP"
@@ -1454,7 +1459,7 @@ msgid "Check and replace cable"
 msgstr "Kontrollera och byt kabel"
 
 msgid "Check shared secret"
-msgstr ""
+msgstr "Kontrollera delad hemlighet"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -1973,7 +1978,7 @@ msgid "Current Password"
 msgstr "Nuvarande lösenord"
 
 msgid "Current Version"
-msgstr ""
+msgstr "Aktuell version"
 
 msgid "Current internal temperature."
 msgstr "Aktuell innertemperatur"
@@ -2201,10 +2206,10 @@ msgid "Delete Login Info"
 msgstr "Radera Inloggnings Information"
 
 msgid "Delete Selected Bridges"
-msgstr ""
+msgstr "Ta bort valda Bryggor"
 
 msgid "Delete Selected CARPs"
-msgstr ""
+msgstr "Ta bort valda CARP:ar"
 
 msgid "Delete Selected Commands"
 msgstr "Ta bort valda kommandon"
@@ -2219,10 +2224,10 @@ msgid "Delete Selected Jobs"
 msgstr "Ta bort valda jobb"
 
 msgid "Delete Selected LAGGs"
-msgstr ""
+msgstr "Ta bort valda LAGG:ar"
 
 msgid "Delete Selected NFS Shares"
-msgstr ""
+msgstr "Ta bort valda NFS utdelningar"
 
 msgid "Delete Selected Options"
 msgstr "Ta bort valda optioner"
@@ -2234,25 +2239,25 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Ta bort valda RAID volymer"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Ta bort valda poster"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Ta bort valda resurser"
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Ta bort valda rutter"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr ""
+msgstr "Ta bort valda Rsync jobb"
 
 msgid "Delete Selected Rsync Modules"
-msgstr ""
+msgstr "Ta bort valda Rsync moduler"
 
 msgid "Delete Selected Samba Shares"
-msgstr ""
+msgstr "Ta bort valda Sambautdelningar"
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Ta bort valda utdelningar"
 
 msgid "Delete Selected Snapshots"
 msgstr "Ta bort vald ögonblicksbild"
@@ -2261,7 +2266,7 @@ msgid "Delete Selected User Accounts"
 msgstr "Ta bort valda användarkonton"
 
 msgid "Delete Selected VLANs"
-msgstr ""
+msgstr "Ta bort valda VLAN"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Ta bort valda virtuella enheter"
@@ -2270,7 +2275,7 @@ msgid "Delete Selected Volumes"
 msgstr "Ta bort valda Volymer"
 
 msgid "Delete Selected WLANs"
-msgstr ""
+msgstr "Ta bort valda WLAN"
 
 msgid "Delete URL"
 msgstr "Radera URL"
@@ -2418,13 +2423,13 @@ msgid "Detected Language:"
 msgstr "Detekterat språk:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Upptäckta RSYNC Fjärrutdelningar"
 
 msgid "Detected an error while importing."
 msgstr "Ett fel har upptäckts vid importeringen."
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Upptäckta utdelningar på denna server"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2533,7 +2538,7 @@ msgid "Disable"
 msgstr "Inaktivera"
 
 msgid "Disable Firmware Upgrade"
-msgstr ""
+msgstr "Inaktivera uppgradering av fakriksmjukvaran"
 
 msgid "Disable Selected Commands"
 msgstr "Inaktivera valda kommandon"
@@ -2545,13 +2550,13 @@ msgid "Disable Selected Options"
 msgstr "Inaktivera valda optioner"
 
 msgid "Disable Selected Records"
-msgstr ""
+msgstr "Inaktivera valda rutter"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr ""
+msgstr "Inaktivera valda Rsync jobb"
 
 msgid "Disable Selected Rsync Modules"
-msgstr ""
+msgstr "Inaktivera valda Rsync moduler"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Inaktivera TCP-wrapper (mod_wrap module)."
@@ -2594,7 +2599,7 @@ msgid "Disk"
 msgstr "Disk"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Disk Partitionsinformation"
 
 msgid "Disk Selection"
 msgstr "Diskval"
@@ -2638,6 +2643,7 @@ msgstr "Distrubierad Hash-tabell"
 
 msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
+"Avbryt inte uppdateringen av syssstemmjukvaran när den väl har startat."
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2789,28 +2795,28 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr "Vill du skapa en strimlad virtuell enhet från valda diskar?"
 
 msgid "Do you want to delete selected CARPs?"
-msgstr ""
+msgstr "Vill du ta bort valda CARP:ar?"
 
 msgid "Do you want to delete selected LAGGs?"
-msgstr ""
+msgstr "Vill du ta bort valda LAGG:ar?"
 
 msgid "Do you want to delete selected NFS shares?"
-msgstr ""
+msgstr "Vill du ta bort valda NFS utdelningar?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Vill du radera valda RAID volymer?"
 
 msgid "Do you want to delete selected Samba shares?"
-msgstr ""
+msgstr "Vill du ta bort valda Sambautdelningar?"
 
 msgid "Do you want to delete selected VLANs?"
-msgstr ""
+msgstr "Vill du ta bort valda VLAN?"
 
 msgid "Do you want to delete selected WLANs?"
-msgstr ""
+msgstr "Vill du ta bort valda WLAN?"
 
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "Vill du ta bort valda Bryggor?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Vill du ta bort valda kommandon?"
@@ -2831,22 +2837,22 @@ msgid "Do you want to delete selected pools?"
 msgstr "Vill du ta bort valda pooler?"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "Vill du ta bort valda poster?"
 
 msgid "Do you want to delete selected resources?"
-msgstr ""
+msgstr "Vill du ta bort valda resurser?"
 
 msgid "Do you want to delete selected routes?"
-msgstr ""
+msgstr "Vill du ta bort valda rutter?"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "Vill du ta bort valda Rsync jobb?"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "Vill du ta bort valda Rsync moduler?"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "Vill du ta bort valda utdelningar?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Vill du ta bort valda ögonblicksbilder"
@@ -2873,13 +2879,13 @@ msgid "Do you want to disable selected options?"
 msgstr "Vill du inaktivera valda optioner?"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "Vill du inaktivera valda poster?"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "Vill du inaktivera valda rsync jobb?"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "Vill du inaktivera valda rsync moduler?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Vill du aktivera valda kommandon?"
@@ -2891,16 +2897,16 @@ msgid "Do you want to enable selected options?"
 msgstr "Vill du aktivera valda optioner?"
 
 msgid "Do you want to enable selected records?"
-msgstr ""
+msgstr "Vill du aktivera valda poster?"
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr ""
+msgstr "Vill du aktivera valda rsync jobb?"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr ""
+msgstr "Vill du aktivera valda rsync moduler?"
 
 msgid "Do you want to lock selected records?"
-msgstr ""
+msgstr "Vill du låsa valda poster?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Vill du växla valda kommandon?"
@@ -2912,16 +2918,16 @@ msgid "Do you want to toggle selected options?"
 msgstr "Vill du ändra status på valda optioner?"
 
 msgid "Do you want to toggle selected records?"
-msgstr ""
+msgstr "Vill du växla valda poster?"
 
 msgid "Do you want to toggle selected rsync jobs?"
-msgstr ""
+msgstr "Vill du växla valda rsync jobb?"
 
 msgid "Do you want to toggle selected rsync modules?"
-msgstr ""
+msgstr "Vill du växla valda rsync moduler?"
 
 msgid "Do you want to unlock selected records?"
-msgstr ""
+msgstr "Vill du låsa upp valda poster?"
 
 msgid "Document Root"
 msgstr "Dokumentrot"
@@ -3040,10 +3046,10 @@ msgid "Edit"
 msgstr "Redigera"
 
 msgid "Edit Bridge"
-msgstr ""
+msgstr "Ändra Brygga"
 
 msgid "Edit CARP"
-msgstr ""
+msgstr "Ändra CARP"
 
 msgid "Edit Dataset"
 msgstr "Ändra Dataset"
@@ -3055,40 +3061,40 @@ msgid "Edit Host"
 msgstr "Redigera värd"
 
 msgid "Edit LAGG"
-msgstr ""
+msgstr "Ändra LAGG"
 
 msgid "Edit MIB"
 msgstr "Redigera MIB"
 
 msgid "Edit NFS Share"
-msgstr ""
+msgstr "Ändra NFS utdelning"
 
 msgid "Edit Pool"
-msgstr ""
+msgstr "Ändra Pool"
 
 msgid "Edit RAID"
 msgstr "Redigera RAID"
 
 msgid "Edit Record"
-msgstr ""
+msgstr "Ändra post"
 
 msgid "Edit Resource"
-msgstr ""
+msgstr "Ändra resurs"
 
 msgid "Edit Route"
 msgstr "Redigera väg"
 
 msgid "Edit Rsync Job"
-msgstr ""
+msgstr "Ändra Rsync jobb"
 
 msgid "Edit Rsync Module"
-msgstr ""
+msgstr "Ändra Rsync modul"
 
 msgid "Edit Samba Share"
-msgstr ""
+msgstr "Ändra Sambautdelning"
 
 msgid "Edit Share"
-msgstr ""
+msgstr "Ändra Utdelning"
 
 msgid "Edit Snapshot"
 msgstr "Ändra ögonblicksbild"
@@ -3100,7 +3106,7 @@ msgid "Edit User Account"
 msgstr "Redigera användarkonto"
 
 msgid "Edit VLAN"
-msgstr ""
+msgstr "Ändra VLAN"
 
 msgid "Edit VM"
 msgstr "Editera VM"
@@ -3112,7 +3118,7 @@ msgid "Edit Volume"
 msgstr "Ändra Volym"
 
 msgid "Edit WLAN"
-msgstr ""
+msgstr "Ändra WLAN"
 
 msgid "Edit auth group"
 msgstr "Editera auth gruppen"
@@ -3203,7 +3209,7 @@ msgid "Enable FXP protocol."
 msgstr "Aktivera FXP-protokoll."
 
 msgid "Enable Firmware Upgrade"
-msgstr ""
+msgstr "Aktivera uppdatering av systemmjukvara"
 
 msgid "Enable NFSv4 server."
 msgstr "Aktivera NFSv4 server."
@@ -3238,13 +3244,13 @@ msgid "Enable Selected Options"
 msgstr "Aktivera valda optioner"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Aktivera valda poster"
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Aktivera valda Rsync jbb"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Aktivera valda Rsynk moduler"
 
 msgid "Enable TLS connections."
 msgstr "Aktivera TLS-anslutningar."
@@ -3802,7 +3808,7 @@ msgid "Failed"
 msgstr "Misslyckades"
 
 msgid "Failed to access in-memory file system."
-msgstr ""
+msgstr "Misslyckades att få åtkomst till minnesfilsystemet."
 
 msgid "Failed to execute command zfs."
 msgstr "Misslyckades köra kommando zfs."
@@ -3842,7 +3848,7 @@ msgid "Fatal"
 msgstr "Ödesdiger"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Fdisk Partitionsinformation"
 
 msgid "Feb"
 msgstr "feb"
@@ -3929,13 +3935,13 @@ msgid "Firmware Update"
 msgstr "Uppdatera Systemmjukvara"
 
 msgid "Firmware upgrade check has been disabled."
-msgstr ""
+msgstr "Kontroll av systemmjukvaruuppgraderingar har inaktiverats."
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Uppladdning av mjukvara misslyckades (slut på minne)"
 
 msgid "Firmware upload failed with error message:"
-msgstr ""
+msgstr "Uppladdning av systemmjukvara har misslyckats med följande fel:"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Uppladdning av systemprogramvara stöds inte på den här plattformen."
@@ -4035,7 +4041,7 @@ msgid "GEOM"
 msgstr "GEOM"
 
 msgid "GEOM Partition Information"
-msgstr ""
+msgstr "GEOM Partitionsinformation"
 
 msgid "GEOM Software RAID"
 msgstr "GEOM mjukvaru RAID"
@@ -4159,7 +4165,7 @@ msgid "HAST Resource"
 msgstr "HAST resurs"
 
 msgid "HAST is disabled."
-msgstr ""
+msgstr "HAST är inaktiverat."
 
 msgid "HAST volume"
 msgstr "HAST volym"
@@ -4868,15 +4874,16 @@ msgstr "LAGG-inställningar"
 msgid ""
 "LAGG cannot be deleted because it is still being used as an interface."
 msgstr ""
+"LAGG kan inte tas bort  eftersom det fortfarande används som ett gränssnitt."
 
 msgid "LAGG is marked for deletion"
-msgstr ""
+msgstr "LAGG är markerad för borttagning"
 
 msgid "LAGG is protected"
-msgstr ""
+msgstr "LAGG är skyddad"
 
 msgid "LAGG is unlocked"
-msgstr ""
+msgstr "LAGG är olåst"
 
 msgid "LAN Management"
 msgstr "LAN Hantering"
@@ -4934,7 +4941,7 @@ msgstr "Senaste testresultat"
 
 #, php-format
 msgid "Latest Beta Release: %s"
-msgstr ""
+msgstr "Senaste Betaversion:%s"
 
 #, php-format
 msgid "Latest Release: %s"
@@ -5072,7 +5079,7 @@ msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr "Plats där arbetsfiler kommer lagras, t.ex.  %s/backup/.unison"
 
 msgid "Lock Selected Records"
-msgstr ""
+msgstr "Lås valda poster"
 
 msgid "Locked Files"
 msgstr "Låsta filer"
@@ -5166,7 +5173,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB är markerad för borttagning"
 
 msgid "MIB is unlocked"
-msgstr ""
+msgstr "MIB är olåst"
 
 msgid "MIRROR"
 msgstr "SPEGLING"
@@ -5542,13 +5549,13 @@ msgid "NFS"
 msgstr "NFS"
 
 msgid "NFS share is marked for deletion"
-msgstr ""
+msgstr "NFS utdelning är markerad för borttagning"
 
 msgid "NFS share is protected"
-msgstr ""
+msgstr "NFS utdelning är skyddad"
 
 msgid "NFS share is unlocked"
-msgstr ""
+msgstr "NFS utdelning är olåst"
 
 msgid "NFSv4"
 msgstr "NFSv4"
@@ -5712,7 +5719,7 @@ msgid "No Portal Group has been configured."
 msgstr "Ingen Portalgrupp har konfigurerats."
 
 msgid "No RSYNC Client configured."
-msgstr ""
+msgstr "Ingen RSYNC klient är konfigurerad."
 
 msgid "No configured Auth Group."
 msgstr "Ingen konfigurerad Autentiseringsgrupp."
@@ -5744,10 +5751,10 @@ msgstr ""
 "information!"
 
 msgid "No disks found."
-msgstr ""
+msgstr "Ninga diskar hittas."
 
 msgid "No fdisk information found."
-msgstr ""
+msgstr "Ingen fdiskinsformation hittas."
 
 msgid "No file was uploaded."
 msgstr "Ingen fil laddades upp."
@@ -5759,7 +5766,7 @@ msgid "No new software raid disk found."
 msgstr "Inga nya mjukvaroraid hårddiskar hittades."
 
 msgid "No partition information found."
-msgstr ""
+msgstr "Ingen partitionsinformation hittas."
 
 msgid "No pool devices have been selected"
 msgstr "Inga poolenheter har valts"
@@ -5975,7 +5982,7 @@ msgid "On"
 msgstr "På"
 
 msgid "Online Information"
-msgstr ""
+msgstr "Onlineinformation"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6277,7 +6284,7 @@ msgid "Ping may take a while, please be patient."
 msgstr "Pink kan ta ett tag, vänligen ha tålamod."
 
 msgid "Ping winbindd to see if it is alive"
-msgstr ""
+msgstr "Pinga winbindd  för att se om den lever"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6685,7 +6692,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC Klient Information & Status"
 
 msgid "RSYNC client number"
-msgstr ""
+msgstr "RSYNC klientnummer"
 
 msgid "RSYNC events"
 msgstr "RSYNC-händelser"
@@ -6761,22 +6768,22 @@ msgid "Receive Buffer"
 msgstr "Mottagningsbuffert"
 
 msgid "Record Information"
-msgstr ""
+msgstr "Postinformation"
 
 msgid "Record Maintenance"
-msgstr ""
+msgstr "Post underhåll"
 
 msgid "Record is locked"
 msgstr "Spåret är låst"
 
 msgid "Record is marked for deletion"
-msgstr ""
+msgstr "Posten är markerad för borttagning"
 
 msgid "Record is protected"
-msgstr ""
+msgstr "Posten är skyddad"
 
 msgid "Record is unlocked"
-msgstr ""
+msgstr "Posten är olåst"
 
 msgid "Recurse into directories."
 msgstr "Upprepa i kataloger."
@@ -6840,10 +6847,10 @@ msgstr ""
 "Användarnamn för fjärrövervakning. Måste vara lika på master och slavsystem."
 
 msgid "Remote server address"
-msgstr ""
+msgstr "Fjärrserveradress"
 
 msgid "Remote share name configured"
-msgstr ""
+msgstr "Fjärrutdelningsnamn som konfigurerats"
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -6933,13 +6940,13 @@ msgid "Resource Name"
 msgstr "Resursnamn"
 
 msgid "Resource is marked for deletion"
-msgstr ""
+msgstr "Resursen är markerad för borttagning"
 
 msgid "Resource is protected"
-msgstr ""
+msgstr "Resursen är skyddad"
 
 msgid "Resource is unlocked"
-msgstr ""
+msgstr "Resursen är olåst"
 
 msgid "Resources"
 msgstr "Resurser"
@@ -6961,7 +6968,7 @@ msgstr ""
 "Restricted - Ärv alla egenskaper utom \"skriv ACL\" och \"byt ägare\""
 
 msgid "Results for net rpc testjoin"
-msgstr ""
+msgstr "Resultatet av net rcp testjoin"
 
 msgid "Results of last self test"
 msgstr "Resultat från senaste självtest"
@@ -7009,13 +7016,13 @@ msgid "Roundrobin"
 msgstr "Roundrobin"
 
 msgid "Route is marked for deletion"
-msgstr ""
+msgstr "Rutten är markerad för borttagning"
 
 msgid "Route is protected"
-msgstr ""
+msgstr "Rutten är skyddad"
 
 msgid "Route is unlocked"
-msgstr ""
+msgstr "Rutten är olåst"
 
 msgid "Routes"
 msgstr "Rutter"
@@ -7033,22 +7040,22 @@ msgid "Rsync Job"
 msgstr "Rsync jobb"
 
 msgid "Rsync Module is marked for deletion"
-msgstr ""
+msgstr "Rsync modulen är markerad för borttagning"
 
 msgid "Rsync Module is protected"
-msgstr ""
+msgstr "Rsync modulen är skyddad"
 
 msgid "Rsync Module is unlocked"
-msgstr ""
+msgstr "Rsync modulen är olåst"
 
 msgid "Rsync job is marked for deletion"
-msgstr ""
+msgstr "Rsync jobb är markerat för borttagning"
 
 msgid "Rsync job is protected"
-msgstr ""
+msgstr "Rsync jobb är skyddat"
 
 msgid "Rsync job is unlocked"
-msgstr ""
+msgstr "Rsync jobb är olåst"
 
 msgid "Rule"
 msgstr "Regel"
@@ -7142,13 +7149,13 @@ msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Active Directory Domänkontrollant"
 
 msgid "Samba Share is marked for deletion"
-msgstr ""
+msgstr "Sambautdelning är markerad för borttagning"
 
 msgid "Samba Share is protected"
-msgstr ""
+msgstr "Sambautdelning är skyddad"
 
 msgid "Samba Share is unlocked"
-msgstr ""
+msgstr "Sambautdelning är olåst"
 
 #, php-format
 msgid ""
@@ -7229,10 +7236,10 @@ msgid "Scheduled Tests"
 msgstr "Schemalagda tester"
 
 msgid "Script"
-msgstr ""
+msgstr "Skript"
 
 msgid "Script has been uploaded."
-msgstr ""
+msgstr "Skript har laddats upp."
 
 msgid "Scrub a pool"
 msgstr "Rensa en pool"
@@ -7587,13 +7594,13 @@ msgid "Share Settings"
 msgstr "Delningsinställningar"
 
 msgid "Share is marked for deletion"
-msgstr ""
+msgstr "Utdelningen är markerad för borttagning"
 
 msgid "Share is protected"
-msgstr ""
+msgstr "Utdelningen är skyddad"
 
 msgid "Share is unlocked"
-msgstr ""
+msgstr "Utdelningen är olåst"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Delade lösenord kan inte innehålla fler än 8 tecken."
@@ -8631,7 +8638,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr "Filen du försöker använda är inte för denna plattform"
 
 msgid "The firmware file is corrupt."
-msgstr ""
+msgstr "Systemmjukvarufilen är felaktig."
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9639,13 +9646,13 @@ msgid "Toggle Selected Options"
 msgstr "Ändra status på valda optioner"
 
 msgid "Toggle Selected Records"
-msgstr ""
+msgstr "Växla valda poster"
 
 msgid "Toggle Selected Rsync Jobs"
-msgstr ""
+msgstr "Växla valda Rsync jobb"
 
 msgid "Toggle Selected Rsync Modules"
-msgstr ""
+msgstr "Växla valda Rsync moduler"
 
 msgid "Tolerated"
 msgstr "Tolererat"
@@ -9971,7 +9978,7 @@ msgid "Unload"
 msgstr "Mata ut"
 
 msgid "Unlock Selected Records"
-msgstr ""
+msgstr "Lås upp valda poster"
 
 msgid "Unmount Disk/Partition"
 msgstr "Avmontera Disk/Partition"
@@ -10004,7 +10011,7 @@ msgid "Upload Directory"
 msgstr "Uppladdningskatalog"
 
 msgid "Upload Script"
-msgstr ""
+msgstr "Ladda upp skript"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10188,15 +10195,16 @@ msgstr "VLAN etikett"
 msgid ""
 "VLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"VLAN kan inte tas bort eftersom den fortfarande används som ett gränssnitt."
 
 msgid "VLAN is marked for deletion"
-msgstr ""
+msgstr "VLAN är markerat för borttagning"
 
 msgid "VLAN is protected"
-msgstr ""
+msgstr "VLAN är skyddat"
 
 msgid "VLAN is unlocked"
-msgstr ""
+msgstr "VLAN är olåst"
 
 msgid "VM Type"
 msgstr "VM Typ"
@@ -10346,15 +10354,16 @@ msgstr "WLAN inställningar"
 msgid ""
 "WLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"WLAN kan inte tas bort eftersom den fortfarande används som ett gränssnitt."
 
 msgid "WLAN is marked for deletion"
-msgstr ""
+msgstr "WLAN är markerat för borttagning"
 
 msgid "WLAN is protected"
-msgstr ""
+msgstr "WLAN är skyddat"
 
 msgid "WLAN is unlocked"
-msgstr ""
+msgstr "WLAN är olåst"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10733,7 +10742,7 @@ msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI initialt värde (%d som standard)"
 
 msgid "iSCSI initiator disabled."
-msgstr ""
+msgstr "iSCSI initierare är inaktiverad."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
