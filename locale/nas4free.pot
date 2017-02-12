@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -162,6 +162,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr ""
 
 msgid "A directory listing is generated when no index-files (index.php, index.html, index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid "A host name alias. This option can appear multiple times, for each domain that has the same IP. Use a space to separate multiple alias names."
@@ -371,6 +374,9 @@ msgstr ""
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr ""
 
@@ -465,9 +471,6 @@ msgid "Add mount point"
 msgstr ""
 
 msgid "Add option"
-msgstr ""
-
-msgid "Add pool"
 msgstr ""
 
 msgid "Add portal group"
@@ -1019,7 +1022,7 @@ msgid "Boot loader (e.g. %s)."
 msgstr ""
 
 #, php-format
-msgid "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or resize boot partition of %s.\n"
+msgid "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or resize boot partition of %s.\n"
 msgstr ""
 
 msgid "Bootloader"
@@ -1636,7 +1639,7 @@ msgstr ""
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
+msgid "Current Version"
 msgstr ""
 
 msgid "Current internal temperature."
@@ -1709,13 +1712,6 @@ msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
-msgstr ""
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-
-#, php-format
-msgid "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
 
 msgid "DVD"
@@ -2156,7 +2152,7 @@ msgstr ""
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
+msgid "Disable Firmware Upgrade"
 msgstr ""
 
 msgid "Disable Selected Commands"
@@ -2254,6 +2250,9 @@ msgid "Distance the disk has shifted relative to the spindle (usually due to sho
 msgstr ""
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2488,9 +2487,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -2653,6 +2649,9 @@ msgstr ""
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr ""
 
@@ -2731,9 +2730,6 @@ msgstr ""
 msgid "Edit option"
 msgstr ""
 
-msgid "Edit pool"
-msgstr ""
-
 msgid "Edit portal group"
 msgstr ""
 
@@ -2791,7 +2787,7 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr ""
 
-msgid "Enable Firmware Update"
+msgid "Enable Firmware Upgrade"
 msgstr ""
 
 msgid "Enable NFSv4 server."
@@ -3300,7 +3296,7 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-msgid "Failed to create in-memory file system."
+msgid "Failed to access in-memory file system."
 msgstr ""
 
 msgid "Failed to execute command zfs."
@@ -3426,7 +3422,13 @@ msgstr ""
 msgid "Firmware Update"
 msgstr ""
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
+msgstr ""
+
+msgid "Firmware upload failed with error message:"
 msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
@@ -5250,16 +5252,13 @@ msgstr ""
 msgid "On"
 msgstr ""
 
-msgid "Online"
+msgid "Online Information"
 msgstr ""
 
 msgid "Only allow anonymous users. Use this on a public FTP site with no remote FTP access to real accounts."
 msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
-msgstr ""
-
-msgid "Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with."
 msgstr ""
 
 msgid "Option"
@@ -7581,7 +7580,7 @@ msgstr ""
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
+msgid "The firmware file is corrupt."
 msgstr ""
 
 msgid "The firmware is now being installed. The server will reboot automatically."
@@ -7995,9 +7994,6 @@ msgid "This is both the name of the server as advertised via Zeroconf/Bonjour/Re
 msgstr ""
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid "This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -9070,9 +9066,6 @@ msgid "You must have a minimum of %dMiB RAM for using iSCSI target."
 msgstr ""
 
 msgid "You must initialize data before enabling."
-msgstr ""
-
-msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
