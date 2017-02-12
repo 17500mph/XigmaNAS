@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -192,6 +192,9 @@ msgstr "태그 %s을(를) 가진 VLAN이 이미 이 인터페이스에 정의되
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -422,6 +425,9 @@ msgstr "MIB 추가"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "RAID 추가"
 
@@ -517,9 +523,6 @@ msgstr "마운트 포인트 추가"
 
 msgid "Add option"
 msgstr "옵션 추가"
-
-msgid "Add pool"
-msgstr "pool 추가"
 
 msgid "Add portal group"
 msgstr "포털 그룹 추가"
@@ -1122,7 +1125,7 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
 
@@ -1826,7 +1829,7 @@ msgstr "현 설정"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
+msgid "Current Version"
 msgstr ""
 
 msgid "Current internal temperature."
@@ -1900,14 +1903,6 @@ msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
-msgstr ""
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
 
 msgid "DVD"
@@ -2372,7 +2367,7 @@ msgstr "새 .torrent 파일들을 감시할 디렉터리"
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
+msgid "Disable Firmware Upgrade"
 msgstr ""
 
 msgid "Disable Selected Commands"
@@ -2472,6 +2467,9 @@ msgid ""
 msgstr ""
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2720,9 +2718,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -2886,6 +2881,9 @@ msgstr "MIB 편집"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "RAID 편집"
 
@@ -2964,9 +2962,6 @@ msgstr "마운트 지점 편집"
 msgid "Edit option"
 msgstr "옵션 편집"
 
-msgid "Edit pool"
-msgstr "풀 편집"
-
 msgid "Edit portal group"
 msgstr "포털 그룹 편집"
 
@@ -3025,7 +3020,7 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "FXP 프로토콜 활성화."
 
-msgid "Enable Firmware Update"
+msgid "Enable Firmware Upgrade"
 msgstr ""
 
 msgid "Enable NFSv4 server."
@@ -3585,8 +3580,8 @@ msgstr ""
 msgid "Failed"
 msgstr "실패함"
 
-msgid "Failed to create in-memory file system."
-msgstr "in-memory 파일 시스템을 생성하는 데에 실패했습니다."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr ""
@@ -3711,7 +3706,13 @@ msgstr ""
 msgid "Firmware Update"
 msgstr ""
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
+msgstr ""
+
+msgid "Firmware upload failed with error message:"
 msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
@@ -5662,7 +5663,7 @@ msgstr ""
 msgid "On"
 msgstr "온"
 
-msgid "Online"
+msgid "Online Information"
 msgstr ""
 
 msgid ""
@@ -5672,11 +5673,6 @@ msgstr "익명 사용자만 허용. 이것은 실제 계정에 대한 원격 FTP
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "인증된 사용자만 허용. 익명 로그인이 금지됩니다."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
 
 msgid "Option"
 msgstr "옵션"
@@ -8167,7 +8163,7 @@ msgstr "범위 명이 이미 존재합니다."
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
+msgid "The firmware file is corrupt."
 msgstr ""
 
 msgid ""
@@ -8681,11 +8677,6 @@ msgstr ""
 "되는 데이터베이스의 이름이기도 합니다."
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -9928,9 +9919,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-
 msgid "You must select at least one authentication method."
 msgstr "최소 한 개 이상의 인증 방법을 선택해야 합니다."
 
@@ -10137,16 +10125,11 @@ msgstr ""
 msgid "umount"
 msgstr "마운트 해제"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "정말로 이 인터페이스를 삭제하시겠습니까?"
+#~ msgid "Add pool"
+#~ msgstr "pool 추가"
 
-#~ msgid "Edit interface"
-#~ msgstr "인터페이스 편집"
+#~ msgid "Edit pool"
+#~ msgstr "풀 편집"
 
-#~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
-#~ msgstr "이 LAGG는 아직도 인터페이스로 이용되고 있으므로 삭제될 수 없습니다."
-
-#~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "이 VLAN은 인터페이스로서 여전히 이용되고 이으므로 삭제될 수 없습니다."
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "in-memory 파일 시스템을 생성하는 데에 실패했습니다."

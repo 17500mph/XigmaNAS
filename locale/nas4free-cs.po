@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -221,6 +221,9 @@ msgstr ""
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -466,6 +469,9 @@ msgstr "Přidat MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Přidat RAID pole"
 
@@ -561,9 +567,6 @@ msgstr "Přidat přípojný (mount) bod"
 
 msgid "Add option"
 msgstr "Přidat předvolbu"
-
-msgid "Add pool"
-msgstr "Přidat fond"
 
 msgid "Add portal group"
 msgstr "Přidat skupinu portálů"
@@ -1217,11 +1220,9 @@ msgstr "Zavaděč systému (např. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"Oddíl, ze kterého se zavádí systém %s, je příliš malý. Buď bude třeba ho "
-"zvětšit, nebo provést novou instalaci z instalačního média (LiveCD/USB).\n"
 
 msgid "Bootloader"
 msgstr "Zavaděč"
@@ -1996,8 +1997,8 @@ msgstr "Stávající"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
-msgstr "Stávající verze:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Vnitřní teplota v tomto okamžiku"
@@ -2078,16 +2079,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "Není vyplněn DNS server."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-"Po jeho spuštění NEPŘERUŠUJTE proces přechodu na novější verzi firmware."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"NEPOKOUŠEJTE se zapsat jiný než platný „%s-%s-embedded.img.xz“ soubor."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2564,8 +2555,8 @@ msgstr "Složka, ve které sledovat výskyt nových .torrent souborů."
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
-msgstr "Vypnout aktualizaci firmware"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr ""
@@ -2667,6 +2658,9 @@ msgstr ""
 "nárazu nebo teploty). Není známo v jakých jednotkách je udáváno."
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2935,9 +2929,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr "Chcete tento firmware nainstalovat i tak (na vlastní riziko)?"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -3102,6 +3093,9 @@ msgstr "Upravit MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Upravit RAID pole"
 
@@ -3180,9 +3174,6 @@ msgstr "Upravit přípojný bod"
 msgid "Edit option"
 msgstr "Upravit předvolbu"
 
-msgid "Edit pool"
-msgstr "Upravit fond"
-
 msgid "Edit portal group"
 msgstr "Upravit skupinu portálů"
 
@@ -3241,8 +3232,8 @@ msgstr "Zapnout ověřování výzva-odpověď"
 msgid "Enable FXP protocol."
 msgstr "Zapnout FXP protokol."
 
-msgid "Enable Firmware Update"
-msgstr "Umožnit aktualizaci firmware"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "Zapnout NFSv4 server."
@@ -3833,8 +3824,8 @@ msgstr "Tovární nastavení"
 msgid "Failed"
 msgstr "Nezdařilo se"
 
-msgid "Failed to create in-memory file system."
-msgstr "Nezdařilo se vytvořit souborový systém v operační paměti."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr "Nezdařilo se vykonat příkaz zfs."
@@ -3963,8 +3954,14 @@ msgstr "Kontrola firmware"
 msgid "Firmware Update"
 msgstr "Aktualizace firmware."
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Nahrání firmware se nezdařilo (nedostatek paměti?)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Nahrávání firmware není na této platformě podporováno."
@@ -6043,8 +6040,8 @@ msgstr ""
 msgid "On"
 msgstr "Zapnuto"
 
-msgid "Online"
-msgstr "Připraveno"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6057,13 +6054,6 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Zpřístupnit pouze ověřeným uživatelům. Anonymní přihlášení nejsou umožněna."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Instalujte pouze firmware, který pochází z důvěryhodného zdroje a ověřte, že "
-"se souborem s firmware nebylo manipulováno (kontrolní součet)."
 
 msgid "Option"
 msgstr "Předvolba"
@@ -8695,8 +8685,8 @@ msgstr "Název úložné jednotky je užpoužíván."
 msgid "The file you try to flash is not for this platform"
 msgstr "Soubor, který se snažíte aplikovat, není určen pro tuto platformu"
 
-msgid "The firmware file is corrupt"
-msgstr "Soubor s firmware je poškozený"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9285,14 +9275,6 @@ msgstr ""
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
-msgstr ""
-"To znamená, že základní systém, který jste nainstalovali, není "
-"oficiální/podporovaný, což může vést k neočekávanému chování či narušení "
-"zabezpečení."
 
 msgid "This name already exists in the disk list."
 msgstr "Tento název už v seznamu disků existuje."
@@ -10661,9 +10643,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Před zapnutím je třeba inicializovat data."
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr "Přejít na novější verzi firmware bude možné až po restartu serveru"
-
 msgid "You must select at least one authentication method."
 msgstr "Je třeba vybrat alespoň jeden ze způsobů ověřování."
 
@@ -10883,33 +10862,65 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Opravdu chcete odstranit toto rozhraní?"
+#~ msgid "Edit pool"
+#~ msgstr "Upravit fond"
 
-#~ msgid "Edit interface"
-#~ msgstr "Upravit rozhraní"
+#~ msgid "Add pool"
+#~ msgstr "Přidat fond"
 
+#~ msgid "Current Version:"
+#~ msgstr "Stávající verze:"
+
+#, php-format
 #~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr "Tento síťový most není možné smazat, protože je používán."
-
-#~ msgid "HAST disabled"
-#~ msgstr "HAST je vypnuto"
-
-#~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "Tuto virtuální síť nelze smazat, protože je používána."
-
-#~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
-#~ msgstr "Toto CARP nelze smazat, protože je používáno."
-
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
 #~ msgstr ""
-#~ "Tuto bezdrátovou síť nelze smazat, protože je pořád používána jako rozhraní."
+#~ "Oddíl, ze kterého se zavádí systém %s, je příliš malý. Buď bude třeba ho "
+#~ "zvětšit, nebo provést novou instalaci z instalačního média (LiveCD/USB).\n"
+
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Nezdařilo se vytvořit souborový systém v operační paměti."
+
+#~ msgid "Online"
+#~ msgstr "Připraveno"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Vypnout aktualizaci firmware"
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "Soubor s firmware je poškozený"
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Umožnit aktualizaci firmware"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr ""
+#~ "Po jeho spuštění NEPŘERUŠUJTE proces přechodu na novější verzi firmware."
+
+#~ msgid "You must reboot the server before you can upgrade the firmware"
+#~ msgstr "Přejít na novější verzi firmware bude možné až po restartu serveru"
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr "Chcete tento firmware nainstalovat i tak (na vlastní riziko)?"
 
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Tuto LAGG není možné smazat, protože je stále používaný jako rozhraní."
+#~ "Instalujte pouze firmware, který pochází z důvěryhodného zdroje a ověřte, že "
+#~ "se souborem s firmware nebylo manipulováno (kontrolní součet)."
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
+#~ msgstr ""
+#~ "NEPOKOUŠEJTE se zapsat jiný než platný „%s-%s-embedded.img.xz“ soubor."
+
+#~ msgid ""
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises."
+#~ msgstr ""
+#~ "To znamená, že základní systém, který jste nainstalovali, není "
+#~ "oficiální/podporovaný, což může vést k neočekávanému chování či narušení "
+#~ "zabezpečení."

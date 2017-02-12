@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2017-02-05 18:41+0000\n"
 "Last-Translator: Matteo Trentin <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -219,6 +219,9 @@ msgstr "Una VLAN con l'etichetta %s è già definita in questa interfaccia."
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -460,6 +463,9 @@ msgstr "Aggiungi MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Aggiungi RAID"
 
@@ -555,9 +561,6 @@ msgstr "Aggiungi punto di mount"
 
 msgid "Add option"
 msgstr "Aggiungi opzione"
-
-msgid "Add pool"
-msgstr "aggiungi un pool"
 
 msgid "Add portal group"
 msgstr "Aggiungi \"Portal group\""
@@ -1202,11 +1205,9 @@ msgstr "Boot loader (e.g. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"La partizione d'avvio è troppo piccola. Si rende necessario reinstallare da "
-"LiveCD o LiveUSB oppure ridimensionare la partizione di %s\n"
 
 msgid "Bootloader"
 msgstr "Bootloader"
@@ -1962,8 +1963,8 @@ msgstr "Corrente"
 msgid "Current Password"
 msgstr "Password corrente"
 
-msgid "Current Version:"
-msgstr "Versione Corrente:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Temperatura interna."
@@ -2040,15 +2041,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "Server DNS vuoto."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr "NON FERMARE l'aggiornamento del firmware una volta iniziato."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"NON PROVARE a flashare file diversi da validi '%s-%s-embedded.img.xz'."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2527,8 +2519,8 @@ msgstr "Directory in cui cercare i nuovi files .torrent"
 msgid "Disable"
 msgstr "Disabilita"
 
-msgid "Disable Firmware Update"
-msgstr "Disabilita l'aggiornamento del Firmware"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Disabilita i comandi selezionati"
@@ -2630,6 +2622,9 @@ msgstr ""
 
 msgid "Distributed Hash Table"
 msgstr "Tabella Hash Distribuita"
+
+msgid "Do not abort the firmware upgrade process once it has started."
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Non attivare questa opzione se vuoi aggiungere un RAID esistente"
@@ -2894,9 +2889,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr "Vuoi installare questo firmware comunque (a tuo rischio)?"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -3062,6 +3054,9 @@ msgstr "Modifica MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Modifica RAID"
 
@@ -3140,9 +3135,6 @@ msgstr "Modifica il mount point"
 msgid "Edit option"
 msgstr "Modifica opzione"
 
-msgid "Edit pool"
-msgstr "Modifica pool"
-
 msgid "Edit portal group"
 msgstr "Modifica portal group"
 
@@ -3202,8 +3194,8 @@ msgstr "Attiva Autenticazione Challenge-Response"
 msgid "Enable FXP protocol."
 msgstr "Abilita il protocollo FXP."
 
-msgid "Enable Firmware Update"
-msgstr "Abilita aggiornamento Frimware"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "Attiva il server NFSv4."
@@ -3804,8 +3796,8 @@ msgstr "Impostazioni di fabbrica"
 msgid "Failed"
 msgstr "Fallito"
 
-msgid "Failed to create in-memory file system."
-msgstr "Creazione del file system in memoria fallita."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr "Impossibile eseguire comando zfs."
@@ -3931,8 +3923,14 @@ msgstr "Controllo Firmware"
 msgid "Firmware Update"
 msgstr "Aggiornamento del firmware"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Upload Firmware fallito (rimasto senza memoria?)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "L'upload del firmware non è supportato su questa piattaforma."
@@ -5957,8 +5955,8 @@ msgstr ""
 msgid "On"
 msgstr "Acceso"
 
-msgid "Online"
-msgstr "Online"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -5969,13 +5967,6 @@ msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "Permette solo utenti autenticati. Le login anonime sono vietate."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Installare solo firmware provenienti da fonti fidate e verificare che il "
-"firmaware non sia stato manomesso."
 
 msgid "Option"
 msgstr "Opzione"
@@ -8583,8 +8574,8 @@ msgstr "Il nome dell'estensione esiste già."
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
-msgstr "Il file del firmware è corrotto"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9159,11 +9150,6 @@ msgstr ""
 "Zeroconf/Bonjour/Rendezvous e il nome del database esportato via DAAP."
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -10494,9 +10480,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Inizializza i dati prima di attivare."
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-
 msgid "You must select at least one authentication method."
 msgstr "è necessario scegliere almeno un metodo di autenticazione."
 
@@ -10705,36 +10688,53 @@ msgstr "verso"
 msgid "umount"
 msgstr "smonta"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Vuoi cancellare davvero questa interfaccia?"
+#~ msgid "Add pool"
+#~ msgstr "aggiungi un pool"
 
-#~ msgid "Edit interface"
-#~ msgstr "Modifica l'interfaccia"
+#~ msgid "Edit pool"
+#~ msgstr "Modifica pool"
 
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Creazione del file system in memoria fallita."
+
+#~ msgid "Current Version:"
+#~ msgstr "Versione Corrente:"
+
+#, php-format
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
 #~ msgstr ""
-#~ "Questa LAGG non può essere cancellata perché è in uso come interfaccia."
+#~ "La partizione d'avvio è troppo piccola. Si rende necessario reinstallare da "
+#~ "LiveCD o LiveUSB oppure ridimensionare la partizione di %s\n"
 
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Disabilita l'aggiornamento del Firmware"
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Abilita aggiornamento Frimware"
+
+#~ msgid "Online"
+#~ msgstr "Online"
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "Il file del firmware è corrotto"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr "NON FERMARE l'aggiornamento del firmware una volta iniziato."
+
+#, php-format
 #~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 #~ msgstr ""
-#~ "Questa VLAN non può essere cancellata perchè è utilizzata come interfaccia."
+#~ "NON PROVARE a flashare file diversi da validi '%s-%s-embedded.img.xz'."
 
 #~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Il Bridge non può essere cancellato perché è ancora in uso come interfaccia."
+#~ "Installare solo firmware provenienti da fonti fidate e verificare che il "
+#~ "firmaware non sia stato manomesso."
 
-#~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Questa interfaccia  CARP non può essere cancellata perché è ancora in uso "
-#~ "come interfaccia."
-
-#~ msgid "HAST disabled"
-#~ msgstr "HAST disabilitato"
-
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "Questa WLAN non può essere cancellata poichè ancora in uso."
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr "Vuoi installare questo firmware comunque (a tuo rischio)?"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -194,6 +194,9 @@ msgstr "VLAN с етикет %s е вече дефинирана с този и�
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -431,6 +434,9 @@ msgstr "Добави MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Добави RAID"
 
@@ -526,9 +532,6 @@ msgstr "Добави mount point"
 
 msgid "Add option"
 msgstr "Добавяне на параметър"
-
-msgid "Add pool"
-msgstr "Добави pool"
 
 msgid "Add portal group"
 msgstr "Добави portal група"
@@ -1176,11 +1179,9 @@ msgstr "Boot loader (e.g. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"Boot partition-а е твърде малък. Трябва да преинсталирате от LiveCD или "
-"LiveUSB, или да промените размера на boot partition-а в %s.\n"
 
 msgid "Bootloader"
 msgstr "Програма за начално зареждане"
@@ -1948,8 +1949,8 @@ msgstr "Текущ"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
-msgstr "Текуща версия:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Текуща вътрешна температура."
@@ -2025,16 +2026,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS сървъра е празен."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr "НЕ ПРЕКЪСВАЙ процеса на обновяване на фирмуеъра ако вече е започнал."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"НЕ СЕ ОПИТВАЙТЕ да флашвате с други файлове освен с валиден  '%s-%s-"
-"embedded.img.xz' файл."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2496,8 +2487,8 @@ msgstr "Директория за за следене на нови .torrent ф�
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
-msgstr "Забрани Firmware обновяването"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Деактивирай Избраните Команди"
@@ -2596,6 +2587,9 @@ msgid ""
 msgstr ""
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2849,11 +2843,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-"Искате ли да инсталирате този  firmware въпреки всичко (на свой собствен "
-"риск)?"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -3017,6 +3006,9 @@ msgstr "Редактирай MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Промени RAID-а"
 
@@ -3095,9 +3087,6 @@ msgstr ""
 msgid "Edit option"
 msgstr "Редактирай опция"
 
-msgid "Edit pool"
-msgstr "Редактирай pool"
-
 msgid "Edit portal group"
 msgstr ""
 
@@ -3156,7 +3145,7 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "позволи FXP протолола"
 
-msgid "Enable Firmware Update"
+msgid "Enable Firmware Upgrade"
 msgstr ""
 
 msgid "Enable NFSv4 server."
@@ -3713,7 +3702,7 @@ msgstr ""
 msgid "Failed"
 msgstr "Неуспех"
 
-msgid "Failed to create in-memory file system."
+msgid "Failed to access in-memory file system."
 msgstr ""
 
 msgid "Failed to execute command zfs."
@@ -3839,7 +3828,13 @@ msgstr ""
 msgid "Firmware Update"
 msgstr ""
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
+msgstr ""
+
+msgid "Firmware upload failed with error message:"
 msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
@@ -5778,7 +5773,7 @@ msgstr ""
 msgid "On"
 msgstr ""
 
-msgid "Online"
+msgid "Online Information"
 msgstr ""
 
 msgid ""
@@ -5787,11 +5782,6 @@ msgid ""
 msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
-msgstr ""
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
 msgstr ""
 
 msgid "Option"
@@ -8269,7 +8259,7 @@ msgstr ""
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
+msgid "The firmware file is corrupt."
 msgstr ""
 
 msgid ""
@@ -8778,11 +8768,6 @@ msgid ""
 msgstr ""
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -10003,9 +9988,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-
 msgid "You must select at least one authentication method."
 msgstr "You must select at least one authentication method."
 
@@ -10213,8 +10195,37 @@ msgstr "до"
 msgid "umount"
 msgstr ""
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Наистина ли искате да изтриете този интерфейс?"
+#~ msgid "Add pool"
+#~ msgstr "Добави pool"
 
-#~ msgid "Edit interface"
-#~ msgstr "Редактирай интерфейс"
+#~ msgid "Current Version:"
+#~ msgstr "Текуща версия:"
+
+#, php-format
+#~ msgid ""
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr ""
+#~ "Boot partition-а е твърде малък. Трябва да преинсталирате от LiveCD или "
+#~ "LiveUSB, или да промените размера на boot partition-а в %s.\n"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr "НЕ ПРЕКЪСВАЙ процеса на обновяване на фирмуеъра ако вече е започнал."
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
+#~ msgstr ""
+#~ "НЕ СЕ ОПИТВАЙТЕ да флашвате с други файлове освен с валиден  '%s-%s-"
+#~ "embedded.img.xz' файл."
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Забрани Firmware обновяването"
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr ""
+#~ "Искате ли да инсталирате този  firmware въпреки всичко (на свой собствен "
+#~ "риск)?"
+
+#~ msgid "Edit pool"
+#~ msgstr "Редактирай pool"

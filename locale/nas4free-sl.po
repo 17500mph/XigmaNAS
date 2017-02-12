@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -195,6 +195,9 @@ msgstr "VLAN z oznako %s je že določen na tem vmesniku."
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -426,6 +429,9 @@ msgstr "Dodaj MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Dodaj RAID"
 
@@ -521,9 +527,6 @@ msgstr "Dodaj priklopno točko"
 
 msgid "Add option"
 msgstr "Dodaj možnost"
-
-msgid "Add pool"
-msgstr "Dodaj bazen"
 
 msgid "Add portal group"
 msgstr "Dodaj portal skupinoI"
@@ -1134,7 +1137,7 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
 
@@ -1844,8 +1847,8 @@ msgstr "Trenutno"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
-msgstr "Trenutna različica:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Trenutna notranja temperatura"
@@ -1919,14 +1922,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS strežnik je prazen."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr "NE PREKINITE procesa nadgradnje medtem ko ta poteka."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
 
 msgid "DVD"
 msgstr "DVD"
@@ -2393,8 +2388,8 @@ msgstr "Direktorij za spremljanje za novimi .torrent datotekami."
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
-msgstr "Onemogoči nadgradnjo strojne programske opreme"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr ""
@@ -2493,6 +2488,9 @@ msgid ""
 msgstr ""
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2749,10 +2747,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-"Ali želite vseeno namestiti to programsko opremo (na vašo odgovornost)?"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -2916,6 +2910,9 @@ msgstr "Uredi MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Uredi RAID"
 
@@ -2994,9 +2991,6 @@ msgstr "Uredi priklopno točko"
 msgid "Edit option"
 msgstr "Uredi možnost"
 
-msgid "Edit pool"
-msgstr "Uredi bazen"
-
 msgid "Edit portal group"
 msgstr "Uredi portal skupino"
 
@@ -3055,8 +3049,8 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "Omogoči FXP protokol."
 
-msgid "Enable Firmware Update"
-msgstr "Omogoči nadgradnjo strojne programske opreme"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr ""
@@ -3626,8 +3620,8 @@ msgstr "Tovarniške nastavitve"
 msgid "Failed"
 msgstr "Spodletelo"
 
-msgid "Failed to create in-memory file system."
-msgstr "Ne morem ustvariti datotečnega sistema v spominu."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr ""
@@ -3753,7 +3747,13 @@ msgstr "Preverjanje strojne programske opreme"
 msgid "Firmware Update"
 msgstr "Posodobitev strojne programske opreme"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
+msgstr ""
+
+msgid "Firmware upload failed with error message:"
 msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
@@ -5730,7 +5730,7 @@ msgstr ""
 msgid "On"
 msgstr "Vključeno"
 
-msgid "Online"
+msgid "Online Information"
 msgstr ""
 
 msgid ""
@@ -5742,11 +5742,6 @@ msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "Dovoli samo prijavljene uporabnike. Anonimne prijave niso omogočene."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
 
 msgid "Option"
 msgstr "Možnost"
@@ -8266,8 +8261,8 @@ msgstr ""
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
-msgstr "Datoteka s programom je pokvarjena"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -8778,11 +8773,6 @@ msgid ""
 msgstr ""
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -10003,10 +9993,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-"Pred posodobitvijo programske opreme morate najprej ponovno zagnati strežnik"
-
 msgid "You must select at least one authentication method."
 msgstr "Izbrati morate vsaj eno metodo preverjanja."
 
@@ -10213,8 +10199,34 @@ msgstr ""
 msgid "umount"
 msgstr "izvrzi"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Ali res želite izbrisati ta vmesnik?"
+#~ msgid "Add pool"
+#~ msgstr "Dodaj bazen"
 
-#~ msgid "Edit interface"
-#~ msgstr "Uredi vmesnik"
+#~ msgid "Edit pool"
+#~ msgstr "Uredi bazen"
+
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Ne morem ustvariti datotečnega sistema v spominu."
+
+#~ msgid "Current Version:"
+#~ msgstr "Trenutna različica:"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Onemogoči nadgradnjo strojne programske opreme"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr "NE PREKINITE procesa nadgradnje medtem ko ta poteka."
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Omogoči nadgradnjo strojne programske opreme"
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr ""
+#~ "Ali želite vseeno namestiti to programsko opremo (na vašo odgovornost)?"
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "Datoteka s programom je pokvarjena"
+
+#~ msgid "You must reboot the server before you can upgrade the firmware"
+#~ msgstr ""
+#~ "Pred posodobitvijo programske opreme morate najprej ponovno zagnati strežnik"

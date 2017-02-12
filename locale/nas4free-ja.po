@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -200,6 +200,9 @@ msgstr "VLAN タグ %s は既にこのインタフェースで使用されてい
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -430,6 +433,9 @@ msgstr "MIB を追加"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "RAID の追加"
 
@@ -525,9 +531,6 @@ msgstr "マウントポイントの追加"
 
 msgid "Add option"
 msgstr "オプションの追加"
-
-msgid "Add pool"
-msgstr "プールの追加"
 
 msgid "Add portal group"
 msgstr "ポータルグループの追加"
@@ -1132,11 +1135,9 @@ msgstr "ブートローダ (例: %s)"
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"ブートパーティションが小さすぎます。LiveCD か LiveUSB から再インストール、または %s "
-"のブートパーティションのサイズを変更する必要があります。\n"
 
 msgid "Bootloader"
 msgstr "ブートローダ"
@@ -1846,8 +1847,8 @@ msgstr "現在"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
-msgstr "現在のバージョン:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "現在の内部温度。"
@@ -1921,14 +1922,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS サーバが空欄です。"
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
 
 msgid "DVD"
 msgstr "DVD"
@@ -2391,8 +2384,8 @@ msgstr "新しい .torrent ファイルを監視するディレクトリ。"
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
-msgstr "ファームウェアアップデートを無効化"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr ""
@@ -2491,6 +2484,9 @@ msgid ""
 msgstr "ディスクが（通常は原因衝撃や温度により）スピンドルに対してシフトした距離。測定単位は不明です。"
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2741,9 +2737,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -2907,6 +2900,9 @@ msgstr "MIB を編集"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "RAID を編集"
 
@@ -2985,9 +2981,6 @@ msgstr "マウントポイントを編集"
 msgid "Edit option"
 msgstr "オプションを編集"
 
-msgid "Edit pool"
-msgstr "プールの編集"
-
 msgid "Edit portal group"
 msgstr "ポータルグループの編集"
 
@@ -3046,8 +3039,8 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "FXP プロトコルを有効にします。"
 
-msgid "Enable Firmware Update"
-msgstr "ファームウェアアップデートを有効化"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "NFSv4 サーバを有効にします。"
@@ -3605,8 +3598,8 @@ msgstr "工場出荷設定"
 msgid "Failed"
 msgstr "失敗"
 
-msgid "Failed to create in-memory file system."
-msgstr "インメモリファイルシステムの作成に失敗しました。"
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr ""
@@ -3731,8 +3724,14 @@ msgstr ""
 msgid "Firmware Update"
 msgstr ""
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "ファームウェアアップロードに失敗しました (メモリ不足？)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "ファームウェアアップロードはこのプラットフォームではサポートされていません。"
@@ -5696,8 +5695,8 @@ msgstr ""
 msgid "On"
 msgstr "On"
 
-msgid "Online"
-msgstr "オンライン"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -5706,11 +5705,6 @@ msgstr "匿名ユーザ専用にします。通常のアカウントからの FT
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "認証ユーザ専用にします。匿名のログインを禁止します。"
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
 
 msgid "Option"
 msgstr "オプション"
@@ -8215,8 +8209,8 @@ msgstr "エクステント名は既に存在しています。"
 msgid "The file you try to flash is not for this platform"
 msgstr "指定したファイルはこのプラットフォーム用ではありません。"
 
-msgid "The firmware file is corrupt"
-msgstr "ファームウェアファイルは破損しています"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -8741,11 +8735,6 @@ msgstr ""
 "Zeroconf/Bonjour/Rendezvous 経由で広告されるサーバ名と、DAAP 経由でエクスポートされるデータベース名の両方で使用されます。"
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -9990,9 +9979,6 @@ msgstr "iSCSI ターゲット機能を有効にするには最低 %dMiB の RAM 
 msgid "You must initialize data before enabling."
 msgstr "有効にする前にデータを初期化する必要があります。"
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-
 msgid "You must select at least one authentication method."
 msgstr "少なくとも 1つの認証方法を選択して下さい。"
 
@@ -10199,31 +10185,34 @@ msgstr "から"
 msgid "umount"
 msgstr "アンマウント"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "このインタフェースを削除してもよろしいですか?"
+#~ msgid "Add pool"
+#~ msgstr "プールの追加"
 
-#~ msgid "Edit interface"
-#~ msgstr "インタフェースを編集"
+#~ msgid "Edit pool"
+#~ msgstr "プールの編集"
 
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "インメモリファイルシステムの作成に失敗しました。"
+
+#~ msgid "Current Version:"
+#~ msgstr "現在のバージョン:"
+
+#, php-format
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
-#~ msgstr "この LAGG インタフェースは現在も使用されている為、削除する事が出来ませんでした。"
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr ""
+#~ "ブートパーティションが小さすぎます。LiveCD か LiveUSB から再インストール、または %s "
+#~ "のブートパーティションのサイズを変更する必要があります。\n"
 
-#~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "この VLAN インタフェースは現在も使用されている為、削除する事が出来ませんでした。"
+#~ msgid "Online"
+#~ msgstr "オンライン"
 
-#~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr "このブリッジインタフェースは現在も使用されている為、削除する事が出来ませんでした。"
+#~ msgid "Disable Firmware Update"
+#~ msgstr "ファームウェアアップデートを無効化"
 
-#~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
-#~ msgstr "このCARPインタフェースは現在も使用されている為、削除する事が出来ませんでした。"
+#~ msgid "Enable Firmware Update"
+#~ msgstr "ファームウェアアップデートを有効化"
 
-#~ msgid "HAST disabled"
-#~ msgstr "HASTは無効です"
-
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "この WLAN はインターフェースとして使用されているため、削除できません。"
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "ファームウェアファイルは破損しています"

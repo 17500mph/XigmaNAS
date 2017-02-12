@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2016-11-06 09:31+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -193,6 +193,9 @@ msgstr "Et VLAN med taggen %s er allerede definert på dette grensesnittet."
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -427,6 +430,9 @@ msgstr "Legg til MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Legg til RAID"
 
@@ -522,9 +528,6 @@ msgstr "Legg til et monteringspunkt"
 
 msgid "Add option"
 msgstr "Legg til valg"
-
-msgid "Add pool"
-msgstr "Legg til mengde"
 
 msgid "Add portal group"
 msgstr "Legg til portalgruppe"
@@ -1135,7 +1138,7 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
 
@@ -1846,7 +1849,7 @@ msgstr "Gjeldende"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
+msgid "Current Version"
 msgstr ""
 
 msgid "Current internal temperature."
@@ -1921,14 +1924,6 @@ msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
-msgstr ""
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
 
 msgid "DVD"
@@ -2397,7 +2392,7 @@ msgstr "Katalog for å oppdage nye .torrent-filer"
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
+msgid "Disable Firmware Upgrade"
 msgstr ""
 
 msgid "Disable Selected Commands"
@@ -2497,6 +2492,9 @@ msgid ""
 msgstr ""
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2753,9 +2751,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -2919,6 +2914,9 @@ msgstr "Endre MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Endre RAID"
 
@@ -2997,9 +2995,6 @@ msgstr "Endre monteringspunkt"
 msgid "Edit option"
 msgstr "Endre alternativ"
 
-msgid "Edit pool"
-msgstr ""
-
 msgid "Edit portal group"
 msgstr "Endre portal-gruppe"
 
@@ -3058,7 +3053,7 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "Slå på FXP protokollen."
 
-msgid "Enable Firmware Update"
+msgid "Enable Firmware Upgrade"
 msgstr ""
 
 msgid "Enable NFSv4 server."
@@ -3631,8 +3626,8 @@ msgstr ""
 msgid "Failed"
 msgstr "Feilet"
 
-msgid "Failed to create in-memory file system."
-msgstr "Feilet med å lage i-minne filsystem."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr ""
@@ -3757,7 +3752,13 @@ msgstr ""
 msgid "Firmware Update"
 msgstr ""
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
+msgstr ""
+
+msgid "Firmware upload failed with error message:"
 msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
@@ -5715,7 +5716,7 @@ msgstr ""
 msgid "On"
 msgstr "På"
 
-msgid "Online"
+msgid "Online Information"
 msgstr ""
 
 msgid ""
@@ -5727,11 +5728,6 @@ msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "Tillat kun autentiserte brukere. Anonyme innlogginger er forbudt."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
 
 msgid "Option"
 msgstr "Alternativ"
@@ -8224,7 +8220,7 @@ msgstr ""
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
+msgid "The firmware file is corrupt."
 msgstr ""
 
 msgid ""
@@ -8734,11 +8730,6 @@ msgid ""
 msgstr ""
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -9967,9 +9958,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-
 msgid "You must select at least one authentication method."
 msgstr "Du må velge minst en autentiserings metode."
 
@@ -10176,13 +10164,8 @@ msgstr ""
 msgid "umount"
 msgstr "avmontér"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Vil du virkelig slette dette grensesnittet?"
+#~ msgid "Add pool"
+#~ msgstr "Legg til mengde"
 
-#~ msgid "Edit interface"
-#~ msgstr "Endre grensesnitt"
-
-#~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "VLAN'et kan ikke slettes fordi det fremdeles blir brukt som et grensesnitt."
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Feilet med å lage i-minne filsystem."
