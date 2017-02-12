@@ -37,12 +37,12 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 
+function check_firmware_version($locale) {
 /*
 	UNUSED FUNCTION
 	checks with /etc/firm.url to see if a newer firmware version online is available;
 	returns any HTML message it gets from the server
  */
-function check_firmware_version($locale) {
 	global $g;
 	$post = "product=".rawurlencode(get_product_name())
 	      . "&platform=".rawurlencode($g['fullplatform'])
@@ -394,31 +394,37 @@ include 'fbegin.inc';
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
+	switch($page_mode):
+		case 'info':
+		case 'default':
+		case 'enable':
 ?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag"
-			<col class="area_data_settings_col_data"
-		</colgroup>
-		<thead>
+			<table class="area_data_settings">
+				<colgroup>
+					<col class="area_data_settings_col_tag"
+					<col class="area_data_settings_col_data"
+				</colgroup>
+				<thead>
 <?php
-			html_titleline2(gtext('Firmware'));
+					html_titleline2(gtext('Firmware'));
 ?>
-		</thead>
-		<tbody>
+				</thead>
+				<tbody>
 <?php
-			html_text2('currentversion',gtext('Current Version'),sprintf('%s %s (%s)',get_product_name(),get_product_version(),get_product_revision()));
-			if(isset($config['system']['disablefirmwarecheck'])):
-				html_text2('onlineversion',gtext('Online Information'),gtext('Firmware upgrade check has been disabled.'));
-			else:
-				if(preg_match('/\S/',$fw_info_current_osver)):
-					html_text2('onlineversion',gtext('Online Information'),$fw_info_current_osver);
-				endif;
-			endif;
+					html_text2('currentversion',gtext('Current Version'),sprintf('%s %s (%s)',get_product_name(),get_product_version(),get_product_revision()));
+					if(isset($config['system']['disablefirmwarecheck'])):
+						html_text2('onlineversion',gtext('Online Information'),gtext('Firmware upgrade check has been disabled.'));
+					else:
+						if(preg_match('/\S/',$fw_info_current_osver)):
+							html_text2('onlineversion',gtext('Online Information'),$fw_info_current_osver);
+						endif;
+					endif;
 ?>
-		</tbody>
-	</table>
-<?php			
+				</tbody>
+			</table>
+<?php
+			break;
+	endswitch;
 	switch($page_mode):
 		case 'default':
 ?>
