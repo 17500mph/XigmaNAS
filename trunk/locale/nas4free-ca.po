@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
-"PO-Revision-Date: 2017-02-11 13:57+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"PO-Revision-Date: 2017-02-11 22:16+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -225,6 +225,9 @@ msgstr ""
 "Un llistat de directori es genera quan no hi ha imatges d'índex (index.php, "
 "index.html, index.htm o default.htm) es troben en un directori."
 
+msgid "A firmware upgrade is in progress."
+msgstr ""
+
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
 "that has the same IP. Use a space to separate multiple alias names."
@@ -244,7 +247,7 @@ msgstr ""
 "simple o com una cadena de dígits hexadecimals precedits per '0x '."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr "Un volum RAID muntada no es pot eliminar."
+msgstr "Un volum RAID muntat no es pot eliminar."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
@@ -466,6 +469,9 @@ msgstr "Afegir MIB"
 msgid "Add NFS Share"
 msgstr "Afegir recurs NFS"
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Afegir RAID"
 
@@ -561,9 +567,6 @@ msgstr "Afegir punt de muntatge"
 
 msgid "Add option"
 msgstr "Afegir opció"
-
-msgid "Add pool"
-msgstr "Afegir piscina"
 
 msgid "Add portal group"
 msgstr "Afegir grup de portal"
@@ -1231,11 +1234,9 @@ msgstr "Gestor d'arrencada (ex. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"Partició d'arrancada massa petita. Cal reinstalar des de el LiveCD o Live "
-"USB, o dimensionar la partició d'arrancada de %s.\n"
 
 msgid "Bootloader"
 msgstr "Gestor d'arrencada"
@@ -2034,8 +2035,8 @@ msgstr "Present"
 msgid "Current Password"
 msgstr "Contrasenya actual"
 
-msgid "Current Version:"
-msgstr "Versió actual:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Temperatura interna actual."
@@ -2112,18 +2113,6 @@ msgstr "Re-enviament DNS"
 
 msgid "DNS server is empty."
 msgstr "Servidor DNS està buida."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-"No cancel·li el procés d'actualització del firmware una vegada que ha "
-"començat."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"No tracti d'actualitzar de fitxers diferents amb l'extensió vàlida '%s-%s-"
-"embedded.img.xz'."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2275,82 +2264,82 @@ msgid "Delete Login Info"
 msgstr "Suprimeix informació d'inici"
 
 msgid "Delete Selected Bridges"
-msgstr "Eliminar els ponts seleccionats"
+msgstr "Suprimeix els ponts seleccionats"
 
 msgid "Delete Selected CARPs"
-msgstr "Esborrar CARP's seleccionats"
+msgstr "Suprimeix CARP's seleccionats"
 
 msgid "Delete Selected Commands"
-msgstr "Eliminar ordres seleccionats"
+msgstr "Suprimeix comandos seleccionats"
 
 msgid "Delete Selected Datasets"
-msgstr "Eliminar conjunts de dades seleccionats"
+msgstr "Suprimeix conjunts de dades seleccionats"
 
 msgid "Delete Selected Groups"
-msgstr "Eliminar grups seleccionats"
+msgstr "Suprimeix grups seleccionats"
 
 msgid "Delete Selected Jobs"
-msgstr "Eliminar feines seleccionats"
+msgstr "Suprimeix feines seleccionats"
 
 msgid "Delete Selected LAGGs"
-msgstr "Esborrar LAGG's seleccionats"
+msgstr "Suprimeix LAGG's seleccionats"
 
 msgid "Delete Selected NFS Shares"
-msgstr "Eliminar els recursos NFS seleccionats"
+msgstr "Suprimeix els recursos NFS seleccionats"
 
 msgid "Delete Selected Options"
-msgstr "Eliminar opcions seleccionades"
+msgstr "Suprimeix opcions seleccionades"
 
 msgid "Delete Selected Pools"
-msgstr "Eliminar pisicines seleccionats"
+msgstr "Suprimeix piscines seleccionats"
 
 msgid "Delete Selected RAID Volumes"
-msgstr "Eliminar volums RAID seleccionats"
+msgstr "Suprimeix volums RAID seleccionats"
 
 msgid "Delete Selected Records"
-msgstr "Eliminar registres seleccionats"
+msgstr "Suprimeix registres seleccionats"
 
 msgid "Delete Selected Resources"
-msgstr "Eliminar els recursos seleccionats"
+msgstr "Suprimeix els recursos seleccionats"
 
 msgid "Delete Selected Routes"
-msgstr "Eliminar rutas seleccionades"
+msgstr "Suprimeix rutas seleccionades"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr "Eliminar treballs seleccionats Rsync"
+msgstr "Suprimeix treballs seleccionats Rsync"
 
 msgid "Delete Selected Rsync Modules"
-msgstr "Eliminar mòduls seleccionats Rsync"
+msgstr "Suprimeix mòduls seleccionats Rsync"
 
 msgid "Delete Selected Samba Shares"
-msgstr "Eliminar recursos seleccionats Samba"
+msgstr "Suprimeix recursos seleccionats Samba"
 
 msgid "Delete Selected Shares"
-msgstr "Eliminar recursos seleccionats"
+msgstr "Suprimeix recursos seleccionats"
 
 msgid "Delete Selected Snapshots"
-msgstr "Eliminar instantànies seleccionats"
+msgstr "Suprimeix instantànies seleccionats"
 
 msgid "Delete Selected User Accounts"
-msgstr "Eliminar comptes d'usuari seleccionades"
+msgstr "Suprimeix comptes d'usuari seleccionades"
 
 msgid "Delete Selected VLANs"
-msgstr "Esborrar VLAN's seleccionats"
+msgstr "Suprimeix VLAN's seleccionats"
 
 msgid "Delete Selected Virtual Devices"
-msgstr "Eliminar dispositius virtuals seleccionats"
+msgstr "Suprimeix dispositius virtuals seleccionats"
 
 msgid "Delete Selected Volumes"
-msgstr "Esborrar volums seleccionats"
+msgstr "Suprimeix volums seleccionats"
 
 msgid "Delete Selected WLANs"
-msgstr "Esborrar WLAN's seleccionats"
+msgstr "Suprimeix WLAN's seleccionats"
 
 msgid "Delete URL"
 msgstr "Suprimeix URL"
 
 msgid "Delete VM"
-msgstr "Esborrar MV"
+msgstr "Suprimeix MV"
 
 msgid "Delete algorithm"
 msgstr "Suprimeix algoritme"
@@ -2371,7 +2360,7 @@ msgid "Delete clone"
 msgstr "Suprimeix el clon"
 
 msgid "Delete command"
-msgstr "Eliminar ordre"
+msgstr "Suprimeix ordre"
 
 msgid "Delete disk"
 msgstr "Suprimeix el disc"
@@ -2609,8 +2598,8 @@ msgstr "Directori per veure els nous fitxers .torrent."
 msgid "Disable"
 msgstr "Deshabilitar"
 
-msgid "Disable Firmware Update"
-msgstr "Desactivar l'actualització de firmware"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Desactivar les ordres seleccionats"
@@ -2713,6 +2702,9 @@ msgstr ""
 msgid "Distributed Hash Table"
 msgstr "Tabla hash distribuida"
 
+msgid "Do not abort the firmware upgrade process once it has started."
+msgstr ""
+
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "No activeu aquesta opció si voleu afegir un RAID existent."
 
@@ -2742,16 +2734,16 @@ msgstr ""
 "De veritat vols eliminar totes les dades de les estadístiques seleccionades?"
 
 msgid "Do you really want to delete all rules?"
-msgstr "Realment vol eliminar totes les regles?"
+msgstr "Realment vols eliminar totes les regles?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
-msgstr "Realment vol eliminar totes les proves automàtiques programades?"
+msgstr "Realment vols eliminar totes les proves automàtiques programades?"
 
 msgid "Do you really want to delete this URL?"
-msgstr "Realment voleu eliminar aquest URL?"
+msgstr "Realment vols eliminar aquest URL?"
 
 msgid "Do you really want to delete this VM?"
-msgstr "Realment vol esborrar aquest MV?"
+msgstr "Realment vols esborrar aquest MV?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Realment voleu eliminar aquest grup d'autenticació?"
@@ -2980,9 +2972,6 @@ msgstr "Vols activar els treballs Rsync seleccionats"
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Vols activar els mòduls Rsync seleccionats?"
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr "Vols instal·lar aquest firmware de totes maneres (al teu risc)?"
-
 msgid "Do you want to lock selected records?"
 msgstr "Voleu bloquejar els registres seleccionats?"
 
@@ -3149,6 +3138,9 @@ msgstr "Editar MIB"
 msgid "Edit NFS Share"
 msgstr "Editar recursos NFS"
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Editar RAID"
 
@@ -3227,9 +3219,6 @@ msgstr "Editar punt de muntatge"
 msgid "Edit option"
 msgstr "Editar opció"
 
-msgid "Edit pool"
-msgstr "Editar piscina"
-
 msgid "Edit portal group"
 msgstr "Editar grup de portal"
 
@@ -3290,8 +3279,8 @@ msgstr "Habilitar l'autenticació de desafiament-resposta"
 msgid "Enable FXP protocol."
 msgstr "Habilitar protocol FXP."
 
-msgid "Enable Firmware Update"
-msgstr "Permetre actualització del firmware"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "Habilitació del servidor NFSv4."
@@ -3899,8 +3888,8 @@ msgstr "Valors de fàbrica"
 msgid "Failed"
 msgstr "Fallid"
 
-msgid "Failed to create in-memory file system."
-msgstr "Fallida en crear el sistema de fitxers en memòria."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr "Error en executar la ordre ZFS."
@@ -4029,8 +4018,14 @@ msgstr "Comprovació de firmware"
 msgid "Firmware Update"
 msgstr "Actualització de microprogamari"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Càrrega de microprogramari va fallar (sense memòria?)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Càrrega de firmware no és compatible amb aquesta plataforma."
@@ -4057,7 +4052,7 @@ msgid "Force Use"
 msgstr "forçar l'ús"
 
 msgid "Force delete"
-msgstr "Força eliminar"
+msgstr "Forçar esborrar"
 
 msgid "Forced Update Period"
 msgstr "Període d'actualització forçada"
@@ -5253,7 +5248,7 @@ msgid "Logical Unit Type mapped to LUN."
 msgstr "Tipus d'unitat lògica mapejada a LUN"
 
 msgid "Login"
-msgstr "Entra"
+msgstr "Login"
 
 msgid "Logout"
 msgstr "Surt"
@@ -6115,8 +6110,8 @@ msgstr "Contrasenya antiga"
 msgid "On"
 msgstr "ON"
 
-msgid "Online"
-msgstr "En línia"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6129,13 +6124,6 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Només permetre als usuaris autenticats. Es prohibeixen els inicis de sessió "
 "anònims."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Només instal·lar microprogramari que provenen de fonts de confiança, i "
-"assegureu-vos que el microprogramari no ha estat manipulat."
 
 msgid "Option"
 msgstr "Opció"
@@ -8818,8 +8806,8 @@ msgstr "El nom estès ja existeix."
 msgid "The file you try to flash is not for this platform"
 msgstr "L'arxiu que intenta flaix-xesar no és per a aquesta plataforma"
 
-msgid "The firmware file is corrupt"
-msgstr "L'arxiu de micro-programari està corrupte"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9427,13 +9415,6 @@ msgstr ""
 msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 "Això és només per informació. (No s'utilitza durant la negociació iSCSI)."
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
-msgstr ""
-"Això vol dir que el microprogramari que has pujat no és oficial/recolzat i "
-"pot conduir a un comportament  inesperat o un compromís de seguretat."
 
 msgid "This name already exists in the disk list."
 msgstr "Aquest nom ja existeix a la llista de discos."
@@ -10627,7 +10608,7 @@ msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
 "and can not be recovered."
 msgstr ""
-"Avís: Va a eliminar un volum xifrat. Totes les dades es perden i no es poden "
+"Avís: Esborraràs un volum xifrat. Totes les dades es perdràn i no es poden "
 "recuperar."
 
 msgid "Watch Directory"
@@ -10837,10 +10818,6 @@ msgstr "Ha de tenir un mínim de %d MiB RAM per a utilitzar destí iSCSI."
 
 msgid "You must initialize data before enabling."
 msgstr "Ha de inicialitzar les dades abans d'activar."
-
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-"Ha de reiniciar el servidor abans de poder actualitzar el microprogramari"
 
 msgid "You must select at least one authentication method."
 msgstr "Heu de seleccionar almenys un mètode d'autenticació."
@@ -11055,44 +11032,67 @@ msgstr "cap a"
 msgid "umount"
 msgstr "desmontar"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Realment vol eliminar aquesta interfície?"
+#~ msgid "Add pool"
+#~ msgstr "Afegir piscina"
 
-#~ msgid "Edit interface"
-#~ msgstr "Editar interfície"
+#, php-format
+#~ msgid ""
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr ""
+#~ "Partició d'arrancada massa petita. Cal reinstalar des de el LiveCD o Live "
+#~ "USB, o dimensionar la partició d'arrancada de %s.\n"
 
-#~ msgid "HAST disabled"
-#~ msgstr "HAST desactivat"
+#~ msgid "Current Version:"
+#~ msgstr "Versió actual:"
+
+#~ msgid "Edit pool"
+#~ msgstr "Editar piscina"
+
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Fallida en crear el sistema de fitxers en memòria."
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Permetre actualització del firmware"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr ""
+#~ "No cancel·li el procés d'actualització del firmware una vegada que ha "
+#~ "començat."
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
+#~ msgstr ""
+#~ "No tracti d'actualitzar de fitxers diferents amb l'extensió vàlida '%s-%s-"
+#~ "embedded.img.xz'."
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr "Vols instal·lar aquest firmware de totes maneres (al teu risc)?"
+
+#~ msgid "Online"
+#~ msgstr "En línia"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Desactivar l'actualització de firmware"
 
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Aquest LAGG no es pot eliminar perquè encara està sent utilitzat com una "
-#~ "interfície."
+#~ "Només instal·lar microprogramari que provenen de fonts de confiança, i "
+#~ "assegureu-vos que el microprogramari no ha estat manipulat."
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "L'arxiu de micro-programari està corrupte"
 
 #~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises."
 #~ msgstr ""
-#~ "Aquesta VLAN no es pot eliminar perquè encara està sent utilitzat com una "
-#~ "interfície."
+#~ "Això vol dir que el microprogramari que has pujat no és oficial/recolzat i "
+#~ "pot conduir a un comportament  inesperat o un compromís de seguretat."
 
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgid "You must reboot the server before you can upgrade the firmware"
 #~ msgstr ""
-#~ "Aquest WLAN no es pot eliminar perquè encara està sent utilitzat com una "
-#~ "interfície."
-
-#~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Aquest Pont no es pot eliminar perquè encara està sent utilitzat com una "
-#~ "interfície."
-
-#~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Aquest CARP no es pot eliminar perquè encara està sent utilitzat com una "
-#~ "interfície."
-
-#~ msgid "AD authentication disabled."
-#~ msgstr "Autenticació d'AD deshabilitat."
+#~ "Ha de reiniciar el servidor abans de poder actualitzar el microprogramari"

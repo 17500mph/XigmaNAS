@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
-"PO-Revision-Date: 2017-02-11 13:51+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"PO-Revision-Date: 2017-02-12 01:21+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -229,6 +229,9 @@ msgstr ""
 "Een mappenlijst wordt gegenereerd als er geen index-bestanden (index.php, "
 "index.html, index.htm of default.htm) wordt gevonden in een map."
 
+msgid "A firmware upgrade is in progress."
+msgstr "Een firmware upgrade wordt nu uitgevoerd."
+
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
 "that has the same IP. Use a space to separate multiple alias names."
@@ -389,7 +392,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUUT NAAM"
 
 msgid "Accept remote syslog messages."
-msgstr "Accepteer remote syslog berichten."
+msgstr "Remote syslog berichten accepteren."
 
 msgid "Access"
 msgstr "Toegang"
@@ -474,6 +477,9 @@ msgstr "MIB toevoegen"
 msgid "Add NFS Share"
 msgstr "NFS Deling Toevoegen"
 
+msgid "Add Pool"
+msgstr "Pool Toevoegen"
+
 msgid "Add RAID"
 msgstr "RAID toevoegen"
 
@@ -499,7 +505,7 @@ msgid "Add Share"
 msgstr "Deling Toevoegen"
 
 msgid "Add Snapshot"
-msgstr "Snapshot toevoegen"
+msgstr "Snapshot Toevoegen"
 
 msgid "Add URL"
 msgstr "URL Toevoegen"
@@ -569,9 +575,6 @@ msgstr "Koppelpunt toevoegen"
 
 msgid "Add option"
 msgstr "Optie toevoegen"
-
-msgid "Add pool"
-msgstr "Pool toevoegen"
 
 msgid "Add portal group"
 msgstr "Portaal groep toevoegen"
@@ -1241,11 +1244,11 @@ msgstr "Opstartlader (bijv. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"De boot partitie is te klein. Een herinstallatie via LiveCD of LiveUSB is "
-"nodig, of herindeel de boot partitie van %s.\n"
+"Boot partitie is te klein. U moet een herinstallatie uitvoeren vanaf "
+"LiveCD/LiveUSB of vergroot de boot partitie van %s.\n"
 
 msgid "Bootloader"
 msgstr "Opstartlader"
@@ -2049,8 +2052,8 @@ msgstr "Huidige"
 msgid "Current Password"
 msgstr "Huidig Wachtwoord"
 
-msgid "Current Version:"
-msgstr "Huidige Versie:"
+msgid "Current Version"
+msgstr "Huidige Versie"
 
 msgid "Current internal temperature."
 msgstr "Huidige interne temperatuur."
@@ -2126,16 +2129,6 @@ msgstr "DNS Forwarder"
 
 msgid "DNS server is empty."
 msgstr "DNS server is leeg."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr "Breek de firmware update procedure niet af nadat deze is gestart."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"Probeer geen andere bestanden te flashen dan alleen een geldig '%s-%s-"
-"embedded.img.xz' bestand."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2624,8 +2617,8 @@ msgstr "Map om in te kijken voor nieuwe .torrent bestanden."
 msgid "Disable"
 msgstr "Uitschakelen"
 
-msgid "Disable Firmware Update"
-msgstr "Uitschakelen Firmware Update"
+msgid "Disable Firmware Upgrade"
+msgstr "Uitschakelen Firmware Upgrade"
 
 msgid "Disable Selected Commands"
 msgstr "Geselecteerde Opdrachten Uitschakelen"
@@ -2731,6 +2724,9 @@ msgstr ""
 
 msgid "Distributed Hash Table"
 msgstr "Gedistribueerde Hashtabel"
+
+msgid "Do not abort the firmware upgrade process once it has started."
+msgstr "Breek de firmware upgrade procedure niet af nadat deze is gestart."
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Activeer deze optie niet als u een bestaande RAID wilt toevoegen."
@@ -3002,9 +2998,6 @@ msgstr "Wilt u de geselecteerde rsync taken inschakelen?"
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Wilt u de geselecteerde rsync modules inschakelen?"
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr "Wilt u de firmware toch installeren (Dit is op eigen risico)?"
-
 msgid "Do you want to lock selected records?"
 msgstr "Wilt u de geselecteerde items vergrendelen?"
 
@@ -3173,6 +3166,9 @@ msgstr "Bewerk MIB"
 msgid "Edit NFS Share"
 msgstr "NFS Deling Bewerken"
 
+msgid "Edit Pool"
+msgstr "Pool Bewerken"
+
 msgid "Edit RAID"
 msgstr "Bewerk RAID"
 
@@ -3251,9 +3247,6 @@ msgstr "Koppelpunt bewerken"
 msgid "Edit option"
 msgstr "Optie bewerken"
 
-msgid "Edit pool"
-msgstr "Pool bewerken"
-
 msgid "Edit portal group"
 msgstr "Portaal groep bewerken"
 
@@ -3313,8 +3306,8 @@ msgstr "Inschakelen Challenge-Response Authenticatie"
 msgid "Enable FXP protocol."
 msgstr "Inschakelen FXP protocol."
 
-msgid "Enable Firmware Update"
-msgstr "Inschakelen Firmware Update"
+msgid "Enable Firmware Upgrade"
+msgstr "Inschakelen Firmware Upgrade"
 
 msgid "Enable NFSv4 server."
 msgstr "Inschakelen NFSv4 server."
@@ -3921,8 +3914,8 @@ msgstr "Fabrieks-instellingen"
 msgid "Failed"
 msgstr "Mislukt"
 
-msgid "Failed to create in-memory file system."
-msgstr "Mislukt om het in-geheugen bestandsysteem te maken."
+msgid "Failed to access in-memory file system."
+msgstr "Gefaald het in-geheugen bestandssysteem te benaderen."
 
 msgid "Failed to execute command zfs."
 msgstr "Commando uitvoeren naar zfs mislukt."
@@ -4049,8 +4042,14 @@ msgstr "Firmware Controle"
 msgid "Firmware Update"
 msgstr "Firmware Update"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr "Firmware upgrade controle is uitgeschakeld."
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Firmware upload mislukt (niet genoeg geheugen?)"
+
+msgid "Firmware upload failed with error message:"
+msgstr "Firmware upload is mislukt met foutbericht:"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Het updaten van de firmware wordt niet ondersteund op dit platform."
@@ -5295,8 +5294,9 @@ msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
 msgstr ""
-"Laagste waarde is hogere prioriteit. Voor de master node, gebruik 0 of 1. "
-"Indien preempt is ingeschakeld, wordt deze aangepast aan 240 bij storing."
+"Laagste waarde is een hogere prioriteit. Gebruik voor de master 0 of 1. "
+"Indien preempt is ingeschakeld, wordt deze bij een storing aangepast naar "
+"240."
 
 msgid "MAC Address"
 msgstr "MAC-adres"
@@ -5946,25 +5946,25 @@ msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Alleen erven wijger entries"
 
 msgid "Node A IP address"
-msgstr "Node A IP-adres"
+msgstr "Knoop A IP-adres"
 
 msgid "Node A Settings"
-msgstr "Node A Instellingen"
+msgstr "Knoop A Instellingen"
 
 msgid "Node B IP address"
-msgstr "Node B IP-adres"
+msgstr "Knoop B IP-adres"
 
 msgid "Node B Settings"
-msgstr "Node B Instellingen"
+msgstr "Knoop B Instellingen"
 
 msgid "Node Base"
-msgstr "Node Base"
+msgstr "Knoop Base"
 
 msgid "Node ID"
-msgstr "Knooppunt ID"
+msgstr "Knoop ID"
 
 msgid "Node Name"
-msgstr "Knooppuntnaam"
+msgstr "Knoopnaam"
 
 msgid "Nominal battery voltage"
 msgstr "Batterij nominale voltage"
@@ -6135,8 +6135,8 @@ msgstr "Oud wachtwoordzin"
 msgid "On"
 msgstr "Aan"
 
-msgid "Online"
-msgstr "Online"
+msgid "Online Information"
+msgstr "Online Informatie"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6149,13 +6149,6 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Alleen geverifieerde gebruikers toestaan. Anonieme aanmeldingen zijn "
 "verboden."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Installeer uitsluitend firmware bestanden die afkomstig zijn uit betrouwbare "
-"bronnen, en zorgt u ervoor dat er niets veranderd is aan/in de firmware."
 
 msgid "Option"
 msgstr "Optie"
@@ -8413,7 +8406,7 @@ msgstr ""
 
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
-"De HAST volumes kunnen niet worden benaderd voordat de HAST node primair is "
+"De HAST volumes kunnen niet worden benaderd voordat de HAST knoop primair is "
 "geworden."
 
 msgid "The IP address of the UPS master."
@@ -8836,8 +8829,8 @@ msgstr "De extent naam bestaat reeds."
 msgid "The file you try to flash is not for this platform"
 msgstr "Het bestand dat u probeert te flashen is niet voor dit platform"
 
-msgid "The firmware file is corrupt"
-msgstr "Het firmware bestand is beschadigd"
+msgid "The firmware file is corrupt."
+msgstr "Het firmware bestand is beschadigd."
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9394,7 +9387,8 @@ msgstr ""
 "via de schijf cache RAM voordoen."
 
 msgid "This can cause a huge delay in loading the log page!"
-msgstr "Dit kan een grote vertraging opleveren om de log pagina te laden!"
+msgstr ""
+"Dit kan een grote vertraging opleveren om de logboek pagina te laden!"
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -9456,14 +9450,6 @@ msgstr ""
 msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 "Dit is alleen ter informatie. (niet gebruikt tijdens iSCSI onderhandelingen)."
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
-msgstr ""
-"Dit betekent dat het firmware bestand dat u wilt gebruiken geen "
-"officieel/ondersteund firmware bestand is en dat dit kan leiden tot een "
-"onverwacht systeemgedrag of beveiligingsrisico's."
 
 msgid "This name already exists in the disk list."
 msgstr "Deze naam bestaat reeds in de schijf lijst."
@@ -10869,10 +10855,6 @@ msgstr "U heeft minimaal  %dMiB RAM nodig om iSCSI doel te kunnen gebruiken."
 msgid "You must initialize data before enabling."
 msgstr "U moet de data eerst initialiseren alvorens in te schakelen."
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-"U moet de server eerst opnieuw opstarten voordat u de firmware kunt upgraden"
-
 msgid "You must select at least one authentication method."
 msgstr "U dient tenminste één authenticatie methode te selecteren."
 
@@ -11087,44 +11069,66 @@ msgstr "naar"
 msgid "umount"
 msgstr "loskoppelen"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Weet u zeker dat u dit netwerk wilt verwijderen?"
+#~ msgid "Add pool"
+#~ msgstr "Pool toevoegen"
 
-#~ msgid "Edit interface"
-#~ msgstr "Netwerk bewerken"
+#~ msgid "Edit pool"
+#~ msgstr "Pool bewerken"
+
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Mislukt om het in-geheugen bestandsysteem te maken."
+
+#~ msgid "Current Version:"
+#~ msgstr "Huidige Versie:"
+
+#, php-format
+#~ msgid ""
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr ""
+#~ "De boot partitie is te klein. Een herinstallatie via LiveCD of LiveUSB is "
+#~ "nodig, of herindeel de boot partitie van %s.\n"
+
+#~ msgid "Online"
+#~ msgstr "Online"
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Inschakelen Firmware Update"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Uitschakelen Firmware Update"
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "Het firmware bestand is beschadigd"
 
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises."
 #~ msgstr ""
-#~ "Deze LAGG kan niet verwijderd worden omdat dit netwerk nog steeds in gebruik "
-#~ "is."
+#~ "Dit betekent dat het firmware bestand dat u wilt gebruiken geen "
+#~ "officieel/ondersteund firmware bestand is en dat dit kan leiden tot een "
+#~ "onverwacht systeemgedrag of beveiligingsrisico's."
 
 #~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Deze VLAN kan niet verwijderd worden omdat deze netwerkkaart nog steeds in "
-#~ "gebruik is."
+#~ "Installeer uitsluitend firmware bestanden die afkomstig zijn uit betrouwbare "
+#~ "bronnen, en zorgt u ervoor dat er niets veranderd is aan/in de firmware."
 
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr "Wilt u de firmware toch installeren (Dit is op eigen risico)?"
+
+#, php-format
 #~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 #~ msgstr ""
-#~ "Deze CARP kan niet worden verwijderd omdat het nog steeds als een interface "
-#~ "wordt gebruikt."
+#~ "Probeer geen andere bestanden te flashen dan alleen een geldig '%s-%s-"
+#~ "embedded.img.xz' bestand."
 
-#~ msgid "HAST disabled"
-#~ msgstr "HAST uitgeschakeld"
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr "Breek de firmware update procedure niet af nadat deze is gestart."
 
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgid "You must reboot the server before you can upgrade the firmware"
 #~ msgstr ""
-#~ "Deze WLAN kan niet gewist worden omdat deze nog steeds als netwerk gebruikt "
-#~ "wordt."
-
-#~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Deze Bridge kan niet worden verwijderd omdat het nog steeds als interface in "
-#~ "gebruikt is."
-
-#~ msgid "AD authentication disabled."
-#~ msgstr "AD verificatie uitgeschakeld."
+#~ "U moet de server eerst opnieuw opstarten voordat u de firmware kunt upgraden"

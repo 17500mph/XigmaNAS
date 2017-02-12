@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2017-02-09 08:47+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -231,6 +231,9 @@ msgid ""
 msgstr ""
 "Μια λίστ αφακέλων δημιουργείται όταν δεν υπάρχουν αρχεία index  (index.php, "
 "index.html, index.htm ή default.htm) σε έναν φάκελο."
+
+msgid "A firmware upgrade is in progress."
+msgstr ""
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -479,6 +482,9 @@ msgstr "Προσθήκη MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Προσθήκη RAID"
 
@@ -574,9 +580,6 @@ msgstr "Προσθήκη σημείου προσάρτησης"
 
 msgid "Add option"
 msgstr "Προσθήκη επιλογής"
-
-msgid "Add pool"
-msgstr "Προσθήκη pool"
 
 msgid "Add portal group"
 msgstr "Προσθήκη ομάδας Portal"
@@ -1254,12 +1257,9 @@ msgstr "Διαχειριστής Εκκίνησης (π.χ. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"Η κατάτμηση boot είναι πολύ μικρή. Χρειάζεται να κάνετε επανεγκατάσταση από "
-"το LiveCD ή το LiveUSB, ή να κάνετε αλλαγή στο μέγεθος της κατάτμησης boot "
-"του %s.\n"
 
 msgid "Bootloader"
 msgstr "Διαχειριστής Εκκίνησης"
@@ -2065,8 +2065,8 @@ msgstr "Τρέχον"
 msgid "Current Password"
 msgstr "Τρέχων Κωδικός"
 
-msgid "Current Version:"
-msgstr "Τρέχουσα έκδοση:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Τρέχουσα εσωτερική θερμοκρασία."
@@ -2143,18 +2143,6 @@ msgstr "Διαβιβαστής DNS"
 
 msgid "DNS server is empty."
 msgstr "Το πεδίο για το διακομιστή DNS είναι άδειο."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-"ΜΗΝ ακυρώσετε τη διαδικασία αναβάθμισης του υλικολογισμικού άπαξ και "
-"ξεκινήσει."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"ΜΗΝ δοκιμάζετε να εγκαταστήσετε άλλα αρχεία πέρα από κάποιο έγκυρο αρχείο "
-"'%s-%s-embedded.img.xz'."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2644,8 +2632,8 @@ msgstr "Κατάλογος που θα παρακολουθείται για ν�
 msgid "Disable"
 msgstr "Απενεργοποίηση"
 
-msgid "Disable Firmware Update"
-msgstr "Απενεργοποίηση αποστολής firmware"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Απενεργοποίηση Επιλεγμένων Εντολών"
@@ -2749,6 +2737,9 @@ msgstr ""
 
 msgid "Distributed Hash Table"
 msgstr "Διανεμημένος Πίνακας Hash"
+
+msgid "Do not abort the firmware upgrade process once it has started."
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -3022,11 +3013,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-"Θέλετε να εγκαταστήσετε αυτό το υλικολογισμικό ούτως ή άλλως (με δικό σας "
-"ρίσκο);"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -3196,6 +3182,9 @@ msgstr "Επεξεργασία MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Επεξεργασία RAID"
 
@@ -3274,9 +3263,6 @@ msgstr "Επεξεργασία σημείου προσάρτησης"
 msgid "Edit option"
 msgstr "Επεξεργασία επιλογής"
 
-msgid "Edit pool"
-msgstr "Επεξεργασία pool"
-
 msgid "Edit portal group"
 msgstr "Επεξεργασία ομάδας Portal"
 
@@ -3335,8 +3321,8 @@ msgstr "Ενεργοποίηση Πιστοποίησης Challenge-Response"
 msgid "Enable FXP protocol."
 msgstr "Ενεργοποίηση πρωτοκόλλου FXP."
 
-msgid "Enable Firmware Update"
-msgstr "Ενεργοποίηση αποστολής firmware"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "Ενεργοποίηση διακομιστή NFSv4."
@@ -3949,8 +3935,8 @@ msgstr "Εργοστασιακές Ρυθμίσεις"
 msgid "Failed"
 msgstr "Αποτυχία"
 
-msgid "Failed to create in-memory file system."
-msgstr "Αποτυχία δημιουργίας συστήματος αρχείων στη μνήμη."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr "Αποτυχία εκτέλεσης εντολής zfs."
@@ -4079,9 +4065,15 @@ msgstr "Έλεγχος για υλικολογισμικό"
 msgid "Firmware Update"
 msgstr "Αναβάθμιση Υλικολογισμικού"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 "Η μεταφόρτωση του αρχείου υλικολογισμικού απέτυχε (δεν επαρκεί η μνήμη;)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Η αποστολή firmware δεν υποστηρίζεται σε αυτή την πλατφόρμα."
@@ -6186,8 +6178,8 @@ msgstr "Παλιό Συνθηματικό"
 msgid "On"
 msgstr "Ενεργό"
 
-msgid "Online"
-msgstr "Σε σύνδεση"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6200,13 +6192,6 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Να επιτρέπονται μόνο πιστοποιημένοι χρήστες. Να απαγορεύονται ανώνυμοι "
 "είσοδοι."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Εγκατάσταση μόνο υλικολογισμικών που προέρχονται από αξιόπιστες πηγές και "
-"εξασφάλιση ότι το υλικολογισμικό δεν έχει πειραχτεί."
 
 msgid "Option"
 msgstr "Επιλογή"
@@ -8928,8 +8913,8 @@ msgid "The file you try to flash is not for this platform"
 msgstr ""
 "Το αρχείο που προσπαθείτε να εγκαταστήσετε δεν είναι για αυτή την πλατφόρμα"
 
-msgid "The firmware file is corrupt"
-msgstr "Το αρχείο υλικολογισμικού είναι κατεστραμμένο"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9568,14 +9553,6 @@ msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 "Αυτό είναι πληροφοριακό μόνο. (δεν χρησιμοποιείται κατά τη διαπραγμάτευση "
 "iSCSI)."
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
-msgstr ""
-"Αυτό σημαίνει ότι το λογισμικό που εγκαταστήσατε δεν είναι "
-"επίσημο/υποστηριζόμενο υλικολογισμικό και μπορεί να οδηγήσει σε απροσδόκητη "
-"συμπεριφορά ή προβλήματα ασφαλείας."
 
 msgid "This name already exists in the disk list."
 msgstr "Αυτό το όνομα υπάρχει ήδη στη λίστα των δίσκων."
@@ -10999,11 +10976,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Πρέπει να αρχικοποιήσετε δεδομένα πριν την ενεργοποίηση."
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-"Πριν να επανεκκινήσετε το διακομιστή πριν μπορέσετε να αναβαθμίσετε το "
-"υλικολογισμικό"
-
 msgid "You must select at least one authentication method."
 msgstr "Πρέπει να επιλέξετε τουλάχιστον μία μεθοδο πιστοποίησης."
 
@@ -11221,41 +11193,72 @@ msgstr "σε"
 msgid "umount"
 msgstr "αποπροσάρτηση"
 
-#~ msgid "HAST disabled"
-#~ msgstr "HAST απενεργοποιημένο"
+#~ msgid "Add pool"
+#~ msgstr "Προσθήκη pool"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Θέλετε σίγουρα να διαγράψετε αυτή την διασύνδεση;"
+#~ msgid "Edit pool"
+#~ msgstr "Επεξεργασία pool"
 
-#~ msgid "Edit interface"
-#~ msgstr "Επεξεργασία διασύνδεσης"
+#~ msgid "Current Version:"
+#~ msgstr "Τρέχουσα έκδοση:"
+
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Αποτυχία δημιουργίας συστήματος αρχείων στη μνήμη."
+
+#, php-format
+#~ msgid ""
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr ""
+#~ "Η κατάτμηση boot είναι πολύ μικρή. Χρειάζεται να κάνετε επανεγκατάσταση από "
+#~ "το LiveCD ή το LiveUSB, ή να κάνετε αλλαγή στο μέγεθος της κατάτμησης boot "
+#~ "του %s.\n"
+
+#~ msgid "Online"
+#~ msgstr "Σε σύνδεση"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Απενεργοποίηση αποστολής firmware"
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Ενεργοποίηση αποστολής firmware"
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "Το αρχείο υλικολογισμικού είναι κατεστραμμένο"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr ""
+#~ "ΜΗΝ ακυρώσετε τη διαδικασία αναβάθμισης του υλικολογισμικού άπαξ και "
+#~ "ξεκινήσει."
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr ""
+#~ "Θέλετε να εγκαταστήσετε αυτό το υλικολογισμικό ούτως ή άλλως (με δικό σας "
+#~ "ρίσκο);"
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
+#~ msgstr ""
+#~ "ΜΗΝ δοκιμάζετε να εγκαταστήσετε άλλα αρχεία πέρα από κάποιο έγκυρο αρχείο "
+#~ "'%s-%s-embedded.img.xz'."
 
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises."
 #~ msgstr ""
-#~ "Αυτό το LAGG δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμα ως "
-#~ "διασύνδεση δικτύου."
+#~ "Αυτό σημαίνει ότι το λογισμικό που εγκαταστήσατε δεν είναι "
+#~ "επίσημο/υποστηριζόμενο υλικολογισμικό και μπορεί να οδηγήσει σε απροσδόκητη "
+#~ "συμπεριφορά ή προβλήματα ασφαλείας."
 
 #~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Αυτό το VLAN δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμα ως "
-#~ "διασύνδεση δικτύου."
+#~ "Εγκατάσταση μόνο υλικολογισμικών που προέρχονται από αξιόπιστες πηγές και "
+#~ "εξασφάλιση ότι το υλικολογισμικό δεν έχει πειραχτεί."
 
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ msgid "You must reboot the server before you can upgrade the firmware"
 #~ msgstr ""
-#~ "Αυτή η ασύρματη σύνδεση δεν μπορεί να διαγραφεί, επειδή χρησιμοποιείται "
-#~ "ακόμη σαν διασύνδεση δικτύου."
-
-#~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Αυτό το CARP δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη ως "
-#~ "διασύνδεση δικτύου."
-
-#~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Αυτό το γεφύρωμα δικτύου δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη "
-#~ "ως διασύνδεση δικτύου."
+#~ "Πριν να επανεκκινήσετε το διακομιστή πριν μπορέσετε να αναβαθμίσετε το "
+#~ "υλικολογισμικό"

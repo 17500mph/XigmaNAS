@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2017-02-09 21:40+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -218,6 +218,9 @@ msgid ""
 msgstr ""
 "Amikor nincs egy indexfájl (index.php, index.html, index.htm or default.htm) "
 "sem , akkor egy mappalista jön létre."
+
+msgid "A firmware upgrade is in progress."
+msgstr ""
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -455,6 +458,9 @@ msgstr "MIB hozzáadása"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "RAID hozzáadása"
 
@@ -550,9 +556,6 @@ msgstr "Csatolási pont hozzáadása"
 
 msgid "Add option"
 msgstr "Opció hozzáadása"
-
-msgid "Add pool"
-msgstr "Tároló hozzáadása"
 
 msgid "Add portal group"
 msgstr "Portal csoport hozzáadása"
@@ -1209,11 +1212,9 @@ msgstr "Rendszerbetöltő (pl. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"A rendszerindító partíció túl kicsi. Újra kell telepíteni LiveCD-ről vagy "
-"LiveUSB-ről, vagy át kell méretezni a rendszerindító partíciót %s méretűre.\n"
 
 msgid "Bootloader"
 msgstr "Rendszerbetöltő"
@@ -1981,8 +1982,8 @@ msgstr "Aktuális"
 msgid "Current Password"
 msgstr "Jelenlegi jelszó"
 
-msgid "Current Version:"
-msgstr "Jelenlegi verzió:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Pillanatnyi belső hőmérséklet."
@@ -2058,15 +2059,6 @@ msgstr "DNS továbbító"
 
 msgid "DNS server is empty."
 msgstr "DNS szerver üres."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr "NE SZAKÍTSD MEG a frissítési folyamatot!"
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"NE próbálj érvényes '%s-%s-embedded.img.xz' fájltól eltérőt telepíteni."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2551,8 +2543,8 @@ msgstr "Könyvtár a .torrent fájlok figyelésére."
 msgid "Disable"
 msgstr "Kikapcsolás"
 
-msgid "Disable Firmware Update"
-msgstr "Firmware frissítés tiltása"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Kijelölt parancsok tiltása"
@@ -2654,6 +2646,9 @@ msgstr ""
 
 msgid "Distributed Hash Table"
 msgstr "Elosztott hash tábla"
+
+msgid "Do not abort the firmware upgrade process once it has started."
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2928,9 +2923,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr "Ennek ellenére saját felelősségedre telepíted ezt a firmware-t?"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -3095,6 +3087,9 @@ msgstr "MIB szerkesztése"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "RAID szerkesztése"
 
@@ -3173,9 +3168,6 @@ msgstr "Csatolási pont szerkesztése"
 msgid "Edit option"
 msgstr "Beállítás módosítása"
 
-msgid "Edit pool"
-msgstr "Tároló szerkesztése"
-
 msgid "Edit portal group"
 msgstr "Portal csoport szerkesztése"
 
@@ -3234,8 +3226,8 @@ msgstr "Challenge-Response hitelesítés engedélyezése"
 msgid "Enable FXP protocol."
 msgstr "FXP protokoll engedélyezése."
 
-msgid "Enable Firmware Update"
-msgstr "Firmware feltöltés engedélyezése"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "NFSv4 szerver engedélyezése."
@@ -3835,8 +3827,8 @@ msgstr "Gyári beállítások"
 msgid "Failed"
 msgstr "Hibás"
 
-msgid "Failed to create in-memory file system."
-msgstr "Memória fájlrendszer létrehozása sikertelen."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr "ZFS-parancs futása sikertelen."
@@ -3961,8 +3953,14 @@ msgstr "Firmware ellenőrzése"
 msgid "Firmware Update"
 msgstr "Firmware frissítése"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Firmware feltöltése meghiúsult (elfogyott a memória?)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware feltöltése nem támogatott ezen a platformon."
@@ -6035,8 +6033,8 @@ msgstr "Régi jelszó"
 msgid "On"
 msgstr "Be"
 
-msgid "Online"
-msgstr "Online"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6049,13 +6047,6 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Csak hitelesített felhasználók engedélyezettek. Névtelen bejelentkezések "
 "tiltva."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Csak biztonságos forrásból származó firmware-t telepíts, és győződj meg "
-"arról, hogy senki sem manipulálta azt."
 
 msgid "Option"
 msgstr "Beállítás"
@@ -8719,8 +8710,8 @@ msgstr "A extent már létezik"
 msgid "The file you try to flash is not for this platform"
 msgstr "A frissítési fájl nem ehhez a platformhoz készült."
 
-msgid "The firmware file is corrupt"
-msgstr "A firmware fájl sérült."
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9323,13 +9314,6 @@ msgstr ""
 msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
 "Csak tájékoztató jellegű (iSCSI egyeztetés alatt nem kerül felhasználásra)."
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
-msgstr ""
-"Nem hivatalos/támogatott firmware-t telepítettél, ami váratlan viselkedést "
-"okozhat, illetve biztonsági kockázatot jelent."
 
 msgid "This name already exists in the disk list."
 msgstr "Ez a név már szerepel a lemezlistában."
@@ -10701,9 +10685,6 @@ msgstr "Legalább %dMiB RAM szükséges az iSCSI-cél használatához."
 msgid "You must initialize data before enabling."
 msgstr "Engedélyezés előtt szükséges az adat inicializálása."
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr "Firmware frissítése előtt a szervert újra kell indítanod."
-
 msgid "You must select at least one authentication method."
 msgstr "Legalább egy hitelesítési eljárást ki kell választanod."
 
@@ -10915,36 +10896,63 @@ msgstr "eddig:"
 msgid "umount"
 msgstr "leválasztás"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Biztos, hogy törli ezt az interfészt?"
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Memória fájlrendszer létrehozása sikertelen."
 
-#~ msgid "Edit interface"
-#~ msgstr "Interfész szerkesztése"
+#~ msgid "Add pool"
+#~ msgstr "Tároló hozzáadása"
 
-#~ msgid "HAST disabled"
-#~ msgstr "HAST tiltva"
+#~ msgid "Current Version:"
+#~ msgstr "Jelenlegi verzió:"
+
+#~ msgid "Edit pool"
+#~ msgstr "Tároló szerkesztése"
+
+#, php-format
+#~ msgid ""
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr ""
+#~ "A rendszerindító partíció túl kicsi. Újra kell telepíteni LiveCD-ről vagy "
+#~ "LiveUSB-ről, vagy át kell méretezni a rendszerindító partíciót %s méretűre.\n"
+
+#~ msgid "Online"
+#~ msgstr "Online"
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "A firmware fájl sérült."
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Firmware feltöltés engedélyezése"
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr "NE SZAKÍTSD MEG a frissítési folyamatot!"
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr "Ennek ellenére saját felelősségedre telepíted ezt a firmware-t?"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Firmware frissítés tiltása"
 
 #~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Ez a híd nem törölhető, mert interfészként még mindig használatban van."
+#~ "Csak biztonságos forrásból származó firmware-t telepíts, és győződj meg "
+#~ "arról, hogy senki sem manipulálta azt."
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
+#~ msgstr ""
+#~ "NE próbálj érvényes '%s-%s-embedded.img.xz' fájltól eltérőt telepíteni."
 
 #~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises."
 #~ msgstr ""
-#~ "Ez a CARP nem törölhető, mert interfészként még mindig használatban van."
+#~ "Nem hivatalos/támogatott firmware-t telepítettél, ami váratlan viselkedést "
+#~ "okozhat, illetve biztonsági kockázatot jelent."
 
-#~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Ez a LAGG nem törölhető, mert interfészként még mindig használatban van."
-
-#~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Ez a VLAN nem törölhető, mert interfészként még mindig használatban van."
-
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Ez a WLAN nem törölhető, mert interfészként még mindig használatban van."
+#~ msgid "You must reboot the server before you can upgrade the firmware"
+#~ msgstr "Firmware frissítése előtt a szervert újra kell indítanod."

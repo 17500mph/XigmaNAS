@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2017-01-26 17:29+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:45+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -213,6 +213,9 @@ msgstr "VLAN із тегом %s вже визначено для цього ін
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -453,6 +456,9 @@ msgstr "Додати MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "Додати RAID"
 
@@ -548,9 +554,6 @@ msgstr "Додати точку монтування"
 
 msgid "Add option"
 msgstr "Додати опцію"
-
-msgid "Add pool"
-msgstr "Додати пул"
 
 msgid "Add portal group"
 msgstr "Додати групу 'portal'"
@@ -1203,12 +1206,9 @@ msgstr "Завантажувач (напр. %s)."
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
-"Завантажувальний розділ замалий. Вам необхідно здійснити повторну інсталяцію "
-"з  LiveCD або  LiveUSB, або змінити розмір завантажувального розділу для "
-"%s.\n"
 
 msgid "Bootloader"
 msgstr "Завантажувач"
@@ -1994,8 +1994,8 @@ msgstr "Поточна"
 msgid "Current Password"
 msgstr "Поточний пароль"
 
-msgid "Current Version:"
-msgstr "Поточна версія:"
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "Поточна внутрішня температура."
@@ -2071,16 +2071,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS сервер не вказано."
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr "Не переривайте процес оновлення прошивки після його початку."
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
-"Не намагайтеся прошити інші файли, ніж справжній файл '%s-%s-"
-"embedded.img.xz'."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2567,8 +2557,8 @@ msgstr "Директорія очікування нових .torrent-файлі
 msgid "Disable"
 msgstr "Заборонити"
 
-msgid "Disable Firmware Update"
-msgstr "Заборонити оновлення прошивки"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Заборонити обрані команди"
@@ -2669,6 +2659,9 @@ msgstr ""
 "температуру). Одиниці виміру - невідомі."
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2936,11 +2929,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-"Ви хочете встановити цю прошивку в будь-якому випадку (на свій страх і "
-"ризик)?"
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -3107,6 +3095,9 @@ msgstr "Редагувати MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "Редагувати RAID"
 
@@ -3185,9 +3176,6 @@ msgstr "Редагувати точку монтування"
 msgid "Edit option"
 msgstr "Редагувати налаштування"
 
-msgid "Edit pool"
-msgstr "Редагувати пул"
-
 msgid "Edit portal group"
 msgstr "Редагувати групу порталів"
 
@@ -3246,8 +3234,8 @@ msgstr "Увімкнути перевірку Challenge-Response"
 msgid "Enable FXP protocol."
 msgstr "Дозволити протокол FXP"
 
-msgid "Enable Firmware Update"
-msgstr "Дозволити оновлення прошивки"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "Увімкнути NFSv4 сервер."
@@ -3838,8 +3826,8 @@ msgstr "Заводські налаштування"
 msgid "Failed"
 msgstr "Помилка"
 
-msgid "Failed to create in-memory file system."
-msgstr "Не вдалося створити файлову систему в пам'яті."
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr "Відмова виконання команди zfs."
@@ -3968,8 +3956,14 @@ msgstr "Перевірка прошивки"
 msgid "Firmware Update"
 msgstr "Оновлення прошивки"
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Не вдалося завантажити прошивку (недостатньо пам'яті?)"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Ця платформа не підтримує завантаження прошивок."
@@ -6029,8 +6023,8 @@ msgstr ""
 msgid "On"
 msgstr "Увімкнено"
 
-msgid "Online"
-msgstr "Онлайн"
+msgid "Online Information"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6042,13 +6036,6 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Дозволяти лише авторизованих користувачів. Анонімний доступ заборонено."
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
-"Встановлюйте тільки прошивки, які надходять з джерел, яким ви довіряєте, і "
-"переконайтеся, що прошивка ні підроблена."
 
 msgid "Option"
 msgstr "Опція"
@@ -8692,8 +8679,8 @@ msgstr "Таке ім'я екстента вже існує."
 msgid "The file you try to flash is not for this platform"
 msgstr "Файл, який Ви намагаєтеся прошити не для цієї платформи"
 
-msgid "The firmware file is corrupt"
-msgstr "Файл прошивки пошкоджений"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9279,13 +9266,6 @@ msgstr ""
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
-msgstr ""
-"Це означає, що записана у вас прошивка не є офіційною / підтримуваною і може "
-"привести до несподіваної поведінки або поставити під загрозу безпеку."
 
 msgid "This name already exists in the disk list."
 msgstr "Це ім'я вже присутнє в списку дисків."
@@ -10671,10 +10651,6 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Ви повинні ініціалізувати дані перед включенням."
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-"Ви повинні перезавантажити сервер, перш ніж можна буде оновити прошивку"
-
 msgid "You must select at least one authentication method."
 msgstr "Треба вибрати принаймні один метод авторизації."
 
@@ -10888,39 +10864,68 @@ msgstr "до"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "Ви дійсно хочете видалити цей інтерфейс?"
+#~ msgid "Add pool"
+#~ msgstr "Додати пул"
 
-#~ msgid "Edit interface"
-#~ msgstr "Редагувати інтерфейс"
+#~ msgid "Current Version:"
+#~ msgstr "Поточна версія:"
 
-#~ msgid "HAST disabled"
-#~ msgstr "HAST вимкнено"
+#~ msgid "Edit pool"
+#~ msgstr "Редагувати пул"
+
+#~ msgid "Disable Firmware Update"
+#~ msgstr "Заборонити оновлення прошивки"
+
+#~ msgid "Enable Firmware Update"
+#~ msgstr "Дозволити оновлення прошивки"
+
+#~ msgid "Online"
+#~ msgstr "Онлайн"
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
+#~ msgstr ""
+#~ "Не намагайтеся прошити інші файли, ніж справжній файл '%s-%s-"
+#~ "embedded.img.xz'."
+
+#~ msgid "DO NOT abort the firmware upgrade process once it has started."
+#~ msgstr "Не переривайте процес оновлення прошивки після його початку."
+
+#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
+#~ msgstr ""
+#~ "Ви хочете встановити цю прошивку в будь-якому випадку (на свій страх і "
+#~ "ризик)?"
 
 #~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
+#~ "Only install firmwares that come from sources that you trust, and make sure "
+#~ "that the firmware has not been tampered with."
 #~ msgstr ""
-#~ "Цей LAGG не може бути видалений, оскільки досі використовується як інтерфейс."
+#~ "Встановлюйте тільки прошивки, які надходять з джерел, яким ви довіряєте, і "
+#~ "переконайтеся, що прошивка ні підроблена."
 
 #~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises."
 #~ msgstr ""
-#~ "Цей WLAN не може бути видалений, оскільки досі використовується як інтерфейс."
+#~ "Це означає, що записана у вас прошивка не є офіційною / підтримуваною і може "
+#~ "привести до несподіваної поведінки або поставити під загрозу безпеку."
 
-#~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
+#~ msgid "You must reboot the server before you can upgrade the firmware"
 #~ msgstr ""
-#~ "Ця VLAN не може бути видалена, тому що вона все ще використовується в якості "
-#~ "інтерфейсу."
+#~ "Ви повинні перезавантажити сервер, перш ніж можна буде оновити прошивку"
 
+#, php-format
 #~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
 #~ msgstr ""
-#~ "Цей CARP не може бути видалений, тому що він все ще використовується в "
-#~ "якості інтерфейсу."
+#~ "Завантажувальний розділ замалий. Вам необхідно здійснити повторну інсталяцію "
+#~ "з  LiveCD або  LiveUSB, або змінити розмір завантажувального розділу для "
+#~ "%s.\n"
 
-#~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr ""
-#~ "Цей міст не може бути видалений, тому що він все ще використовується в "
-#~ "якості інтерфейсу."
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "Не вдалося створити файлову систему в пам'яті."
+
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "Файл прошивки пошкоджений"

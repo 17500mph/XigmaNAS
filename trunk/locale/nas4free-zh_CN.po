@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-11 14:25+0000\n"
+"POT-Creation-Date: 2017-02-12 01:43+0000\n"
 "PO-Revision-Date: 2017-01-17 15:29+0000\n"
 "Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 01:29+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -191,6 +191,9 @@ msgstr "此介面已经定义一个为 %s 的VLAN 标签。"
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
+msgstr ""
+
+msgid "A firmware upgrade is in progress."
 msgstr ""
 
 msgid ""
@@ -415,6 +418,9 @@ msgstr "添加MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Pool"
+msgstr ""
+
 msgid "Add RAID"
 msgstr "添加RAID"
 
@@ -510,9 +516,6 @@ msgstr "添加挂载点"
 
 msgid "Add option"
 msgstr "添加选项"
-
-msgid "Add pool"
-msgstr "添加储存池"
 
 msgid "Add portal group"
 msgstr "添加门户组"
@@ -1113,9 +1116,9 @@ msgstr "启动程序（例如：%s）"
 
 #, php-format
 msgid ""
-"Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+"Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
-msgstr "启动分区是太小了。您需要从LiveCD 或 LiveUSB 重新安装或调整的 %s 启动分区。\n"
+msgstr ""
 
 msgid "Bootloader"
 msgstr "启动程序"
@@ -1814,8 +1817,8 @@ msgstr "目前"
 msgid "Current Password"
 msgstr ""
 
-msgid "Current Version:"
-msgstr "目前版本："
+msgid "Current Version"
+msgstr ""
 
 msgid "Current internal temperature."
 msgstr "当前的内部温度。"
@@ -1889,14 +1892,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS伺服器是空白的。"
-
-msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
-
-#, php-format
-msgid ""
-"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
 
 msgid "DVD"
 msgstr "DVD"
@@ -2358,8 +2353,8 @@ msgstr "监视新 .torrent 文件的目录。"
 msgid "Disable"
 msgstr ""
 
-msgid "Disable Firmware Update"
-msgstr "关闭固件更新"
+msgid "Disable Firmware Upgrade"
+msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr ""
@@ -2458,6 +2453,9 @@ msgid ""
 msgstr ""
 
 msgid "Distributed Hash Table"
+msgstr ""
+
+msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2706,9 +2704,6 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
-msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
-
 msgid "Do you want to lock selected records?"
 msgstr ""
 
@@ -2872,6 +2867,9 @@ msgstr "编辑MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Pool"
+msgstr ""
+
 msgid "Edit RAID"
 msgstr "编辑RAID"
 
@@ -2950,9 +2948,6 @@ msgstr "编辑挂载点"
 msgid "Edit option"
 msgstr "编辑选项"
 
-msgid "Edit pool"
-msgstr "编辑池"
-
 msgid "Edit portal group"
 msgstr "编辑门户组"
 
@@ -3011,8 +3006,8 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "启用 FXP 协议。"
 
-msgid "Enable Firmware Update"
-msgstr "启用固件更新"
+msgid "Enable Firmware Upgrade"
+msgstr ""
 
 msgid "Enable NFSv4 server."
 msgstr "启用NFSv4的伺服器。"
@@ -3566,8 +3561,8 @@ msgstr ""
 msgid "Failed"
 msgstr "失败"
 
-msgid "Failed to create in-memory file system."
-msgstr "无法创建 RAM Disk"
+msgid "Failed to access in-memory file system."
+msgstr ""
 
 msgid "Failed to execute command zfs."
 msgstr ""
@@ -3692,8 +3687,14 @@ msgstr ""
 msgid "Firmware Update"
 msgstr ""
 
+msgid "Firmware upgrade check has been disabled."
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "固件上传失败（内存不足？）"
+
+msgid "Firmware upload failed with error message:"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "此系统并不支持固件上传功能。."
@@ -5636,7 +5637,7 @@ msgstr ""
 msgid "On"
 msgstr "开"
 
-msgid "Online"
+msgid "Online Information"
 msgstr ""
 
 msgid ""
@@ -5646,11 +5647,6 @@ msgstr "只允许匿名用户。使用在公共而且拒绝远端帐号连线的
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "只允许授权用户，匿名用户无法登录。"
-
-msgid ""
-"Only install firmwares that come from sources that you trust, and make sure "
-"that the firmware has not been tampered with."
-msgstr ""
 
 msgid "Option"
 msgstr "选项"
@@ -8136,8 +8132,8 @@ msgstr "Extent 名称已经存在。"
 msgid "The file you try to flash is not for this platform"
 msgstr ""
 
-msgid "The firmware file is corrupt"
-msgstr "固件文件已损坏"
+msgid "The firmware file is corrupt."
+msgstr ""
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -8646,11 +8642,6 @@ msgid ""
 msgstr "此伺服器名称被用于Zeroconf/Bonjour/Rendezvous，也是通过DAAP 导出的数据库名称。"
 
 msgid "This is for information only. (not used during iSCSI negotiation)."
-msgstr ""
-
-msgid ""
-"This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -9878,9 +9869,6 @@ msgstr "要使用iSCSI目标的话，您必须有至少 %d MiB RAM。"
 msgid "You must initialize data before enabling."
 msgstr "启用之前，必须先初始化数据。"
 
-msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
-
 msgid "You must select at least one authentication method."
 msgstr "请至少选择一种认证方式。"
 
@@ -10087,31 +10075,29 @@ msgstr "到"
 msgid "umount"
 msgstr "卸载"
 
-#~ msgid "Do you really want to delete this interface?"
-#~ msgstr "您确定要删除这个介面吗？"
+#~ msgid "Edit pool"
+#~ msgstr "编辑池"
 
-#~ msgid "Edit interface"
-#~ msgstr "编辑介面"
+#~ msgid "Failed to create in-memory file system."
+#~ msgstr "无法创建 RAM Disk"
 
+#~ msgid "Add pool"
+#~ msgstr "添加储存池"
+
+#~ msgid "Current Version:"
+#~ msgstr "目前版本："
+
+#, php-format
 #~ msgid ""
-#~ "This VLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "此VLAN 不能被删除，因为它仍然被用来做为一个介面。"
+#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
+#~ "resize boot partition of %s.\n"
+#~ msgstr "启动分区是太小了。您需要从LiveCD 或 LiveUSB 重新安装或调整的 %s 启动分区。\n"
 
-#~ msgid ""
-#~ "This LAGG cannot be deleted because it is still being used as an interface."
-#~ msgstr "此LAGG 不能被删除，因为它仍然被用作为一个介面。"
+#~ msgid "Disable Firmware Update"
+#~ msgstr "关闭固件更新"
 
-#~ msgid ""
-#~ "This Bridge cannot be deleted because it is still being used as an interface."
-#~ msgstr "此Bridge 不能被删除，因为它仍然被用作为一个介面。"
+#~ msgid "Enable Firmware Update"
+#~ msgstr "启用固件更新"
 
-#~ msgid ""
-#~ "This CARP cannot be deleted because it is still being used as an interface."
-#~ msgstr "此CARP 不能被删除，因为它仍然被用作为一个介面。"
-
-#~ msgid "HAST disabled"
-#~ msgstr "HAST关闭"
-
-#~ msgid ""
-#~ "This WLAN cannot be deleted because it is still being used as an interface."
-#~ msgstr "无法侦测到无线局域网因为另一个界面正在使用中。"
+#~ msgid "The firmware file is corrupt"
+#~ msgstr "固件文件已损坏"
