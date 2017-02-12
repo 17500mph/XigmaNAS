@@ -35,6 +35,7 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 array_make_branch($config,'snmpd','auxparam');
+array_make_branch($config,'snmpd','modules');
 $os_release = exec('uname -r | cut -d - -f1');
 $pconfig['enable'] = isset($config['snmpd']['enable']);
 $pconfig['location'] = $config['snmpd']['location'];
