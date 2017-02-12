@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-09 21:40+0000\n"
+"PO-Revision-Date: 2017-02-12 12:53+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-12 01:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-12 18:48+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -220,7 +220,7 @@ msgstr ""
 "sem , akkor egy mappalista jön létre."
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "Firmware frissítése folyamatban."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -335,7 +335,7 @@ msgid "ACL mode"
 msgstr "ACL mód"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "AD hitelesítés kikapcsolva."
 
 msgid "AD or PDC name."
 msgstr "AD vagy PDC név."
@@ -435,10 +435,10 @@ msgid "Add"
 msgstr "Hozzáadás"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Híd hozzáadása"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "CARP hozzáadása"
 
 msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
@@ -450,40 +450,40 @@ msgid "Add Host"
 msgstr "Állomás hozzáadása"
 
 msgid "Add LAGG"
-msgstr ""
+msgstr "LAGG hozzáadása"
 
 msgid "Add MIB"
 msgstr "MIB hozzáadása"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "NFS megosztás hozzáadása"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Tároló hozzáadása"
 
 msgid "Add RAID"
 msgstr "RAID hozzáadása"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Rekord hozzáadása"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Erőforrás hozzáadása"
 
 msgid "Add Route"
 msgstr "Útvonal hozzáadása"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Rsync feladat hozzáadása"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Rsync modul hozzáadása"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Samba megosztás hozzáadása"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Megosztás hozzáadása"
 
 msgid "Add Snapshot"
 msgstr "Pillanatkép létrehozása"
@@ -495,7 +495,7 @@ msgid "Add User Account"
 msgstr "Felhasználói fiók hozzáadása"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "VLAN hozzáadása"
 
 msgid "Add Virtual Device"
 msgstr "Virtuális eszköz hozzáadása"
@@ -504,7 +504,7 @@ msgid "Add Volume"
 msgstr "Kötet hozzáadása"
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "WLAN hozzáadása"
 
 msgid "Add a cache device to a pool"
 msgstr "Gyorsítótár-eszköz hozzáadása tárolóhoz"
@@ -1215,6 +1215,8 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Rendszerindító partíció túl kicsi. Telepítsd újra LiveCD/LiveUSB "
+"használatával vagy méretezd át a partíciót (%s).\n"
 
 msgid "Bootloader"
 msgstr "Rendszerbetöltő"
@@ -1227,16 +1229,16 @@ msgstr "Hídbeállítások"
 
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "A híd nem törölhető, mert interfészként még használatban van."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Hid törlésre megjelölve"
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "A híd védett"
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "A híd zárolását feloldottad"
 
 msgid "Bring a device online"
 msgstr "Eszköz online-ra állítása"
@@ -1273,16 +1275,16 @@ msgstr "CARP"
 
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "A CARP nem törölhető, mert még használatban van."
 
 msgid "CARP is marked for deletion"
-msgstr ""
+msgstr "CARP törlésre megjelölve"
 
 msgid "CARP is protected"
-msgstr ""
+msgstr "A CARP védett"
 
 msgid "CARP is unlocked"
-msgstr ""
+msgstr "A CARP zárolását feloldottad"
 
 msgid "CARP only"
 msgstr "Csak CARP"
@@ -1467,7 +1469,7 @@ msgid "Check and replace cable"
 msgstr "Ellenőrizd, illetve cseréld a kábelt."
 
 msgid "Check shared secret"
-msgstr ""
+msgstr "Megosztott titok ellenőrzése"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -1580,7 +1582,7 @@ msgid "Command is protected"
 msgstr "A parancs védett"
 
 msgid "Command is unlocked"
-msgstr "Parancs zárolása feloldva"
+msgstr "A parancs zárolását feloldottad"
 
 msgid "Command output"
 msgstr "Parancskimenet"
@@ -1983,7 +1985,7 @@ msgid "Current Password"
 msgstr "Jelenlegi jelszó"
 
 msgid "Current Version"
-msgstr ""
+msgstr "Jelenlegi verzió"
 
 msgid "Current internal temperature."
 msgstr "Pillanatnyi belső hőmérséklet."
@@ -2097,7 +2099,7 @@ msgid "Dataset is protected"
 msgstr "Adattár védett"
 
 msgid "Dataset is unlocked"
-msgstr "Adattár zárolva van"
+msgstr "Az adattár zárolását feloldottad"
 
 msgid "Datasets"
 msgstr "Adattárak (datasets)"
@@ -2212,10 +2214,10 @@ msgid "Delete Login Info"
 msgstr "Törlés Belépés Információk"
 
 msgid "Delete Selected Bridges"
-msgstr ""
+msgstr "Kiválasztott híd törlése"
 
 msgid "Delete Selected CARPs"
-msgstr ""
+msgstr "Kiválasztott CARP-ok törlése"
 
 msgid "Delete Selected Commands"
 msgstr "Kijelölt parancsok törlése"
@@ -2230,10 +2232,10 @@ msgid "Delete Selected Jobs"
 msgstr "Kiválasztott feladatok törlése"
 
 msgid "Delete Selected LAGGs"
-msgstr ""
+msgstr "Kiválasztott LAGG-ok törlése"
 
 msgid "Delete Selected NFS Shares"
-msgstr ""
+msgstr "Kiválasztott NFS megosztások törlése"
 
 msgid "Delete Selected Options"
 msgstr "Kiválasztott beállítások törlése"
@@ -2245,25 +2247,25 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Kiválasztott RAID kötetek törlése"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Kijelölt rekordok törlése"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Kijelölt erőforrások törlése"
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Kijelölt útvonalak törlése"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr ""
+msgstr "Kijelölt RSYNC feladatok törlése"
 
 msgid "Delete Selected Rsync Modules"
-msgstr ""
+msgstr "Kijelölt RSYNC modul törlése"
 
 msgid "Delete Selected Samba Shares"
-msgstr ""
+msgstr "Kijelölt Samba megosztások törlése"
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Kiválasztott megosztások törlése"
 
 msgid "Delete Selected Snapshots"
 msgstr "Kiválasztott pillanatképek törlése"
@@ -2272,7 +2274,7 @@ msgid "Delete Selected User Accounts"
 msgstr "Kiválasztott felhasználói fiókok törlése"
 
 msgid "Delete Selected VLANs"
-msgstr ""
+msgstr "Kijelölt VLAN-ok törlése"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Kiválasztott virtuális eszközök törlése"
@@ -2281,7 +2283,7 @@ msgid "Delete Selected Volumes"
 msgstr "Kiválasztott kötetek törlése"
 
 msgid "Delete Selected WLANs"
-msgstr ""
+msgstr "Kijelölt WLAN-ok törlése"
 
 msgid "Delete URL"
 msgstr "URL törlése"
@@ -2544,7 +2546,7 @@ msgid "Disable"
 msgstr "Kikapcsolás"
 
 msgid "Disable Firmware Upgrade"
-msgstr ""
+msgstr "Firmware-frissítés kikapcsolása"
 
 msgid "Disable Selected Commands"
 msgstr "Kijelölt parancsok tiltása"
@@ -2556,13 +2558,13 @@ msgid "Disable Selected Options"
 msgstr "Kiválasztott beállítások tiltása"
 
 msgid "Disable Selected Records"
-msgstr ""
+msgstr "Kijelölt rekordok törlése"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr ""
+msgstr "Kijelölt Rsync feladatok törlése"
 
 msgid "Disable Selected Rsync Modules"
-msgstr ""
+msgstr "Kijelölt Rsync modulok törlése"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP csomagolás tiltása (mod_wrap module)."
@@ -2574,7 +2576,7 @@ msgid "Disable file manager completely."
 msgstr "Fájlkezelő teljes tiltása."
 
 msgid "Disable firmware version check."
-msgstr "Firmware-verzió ellenőrzésének tiltása."
+msgstr "Firmware-verzió ellenőrzésének kikapcsolása"
 
 msgid "Disable speaker beep on startup and shutdowns."
 msgstr "Indításkori és leállításkori sípolás kikapcsolása."
@@ -2605,7 +2607,7 @@ msgid "Disk"
 msgstr "Lemez"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Lemezpartíció-információk"
 
 msgid "Disk Selection"
 msgstr "Lemez kiválasztása"
@@ -2648,7 +2650,7 @@ msgid "Distributed Hash Table"
 msgstr "Elosztott hash tábla"
 
 msgid "Do not abort the firmware upgrade process once it has started."
-msgstr ""
+msgstr "Miután már elindult a frissítési folyamat NE szakítsd meg."
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2813,28 +2815,28 @@ msgstr ""
 "lemezekből?"
 
 msgid "Do you want to delete selected CARPs?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt CARP-okat?"
 
 msgid "Do you want to delete selected LAGGs?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt LAGG-okat?"
 
 msgid "Do you want to delete selected NFS shares?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt NFS megosztásokat?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Biztos, hogy törli a kiválasztott RAID köteteket?"
 
 msgid "Do you want to delete selected Samba shares?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt Samba megosztásokat?"
 
 msgid "Do you want to delete selected VLANs?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt VLAN-okat?"
 
 msgid "Do you want to delete selected WLANs?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt WLAN-okat?"
 
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt hidakat?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Biztos, hogy törlöd a kijelölt parancsokat?"
@@ -2855,22 +2857,22 @@ msgid "Do you want to delete selected pools?"
 msgstr "Biztos, hogy törlöd a kiválasztott tárolókat?"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt rekordokat?"
 
 msgid "Do you want to delete selected resources?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt erőforrásokat?"
 
 msgid "Do you want to delete selected routes?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt útvonalakat?"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt rsync feladatokat?"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt rsync modulokat?"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kijelölt megosztásokat?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Biztos törlöd a kiválasztott pillanatképeket?"
@@ -2888,22 +2890,22 @@ msgid "Do you want to delete this command?"
 msgstr "Biztos, hogy törlöd ezt a parancsot?"
 
 msgid "Do you want to disable selected commands?"
-msgstr "Biztos, hogy letiltod ezt a parancsot?"
+msgstr "Biztos, hogy kikapcsolod a kijelölt parancsokat?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr "Biztos, hogy tiltod a kiválasztott feladatokat?"
+msgstr "Biztos, hogy kikapcsolod a kiválasztott feladatokat?"
 
 msgid "Do you want to disable selected options?"
-msgstr "Biztos, hogy tiltod a kiválasztott beállításokat?"
+msgstr "Biztos, hogy kikapcsolod a kiválasztott beállításokat?"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "Biztos, hogy kikapcsolod a kijelölt rekordokat?"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "Biztos, hogy kikapcsolod a kijelölt rsync feladatokat?"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "Biztos, hogy kikapcsolod a kijelölt rsync feladatokat?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Biztos, hogy engedélyezed a kijelölt parancsokat?"
@@ -2915,16 +2917,16 @@ msgid "Do you want to enable selected options?"
 msgstr "Biztos, hogy engedélyezed a kiválasztott beállításokat?"
 
 msgid "Do you want to enable selected records?"
-msgstr ""
+msgstr "Biztos, hogy bekapcsolod a kijelölt rekordokat?"
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr ""
+msgstr "Biztos, hogy bekapcsolod a kijelölt rsync feladatokat?"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr ""
+msgstr "Biztos, hogy bekapcsolod a kijelölt rsync modulokat?"
 
 msgid "Do you want to lock selected records?"
-msgstr ""
+msgstr "Biztos, hogy zárolod a kijelölt rekordokat?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Biztos, hogy engedélyezed a kijelölt parancsokat?"
@@ -2936,16 +2938,16 @@ msgid "Do you want to toggle selected options?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott beállításokat?"
 
 msgid "Do you want to toggle selected records?"
-msgstr ""
+msgstr "Biztos, hogy átkapcsolod a kijelölt rekordokat?"
 
 msgid "Do you want to toggle selected rsync jobs?"
-msgstr ""
+msgstr "Biztos, hogy átkapcsolod a kijelölt rsync feladatokat?"
 
 msgid "Do you want to toggle selected rsync modules?"
-msgstr ""
+msgstr "Biztos, hogy átkapcsolod a kiválasztott rsync modulokat?"
 
 msgid "Do you want to unlock selected records?"
-msgstr ""
+msgstr "Biztos, hogy feloldod a kijelölt rekordok zárolását?"
 
 msgid "Document Root"
 msgstr "Dokumentum gyökérkönyvtára"
@@ -3064,10 +3066,10 @@ msgid "Edit"
 msgstr "Szerkesztés"
 
 msgid "Edit Bridge"
-msgstr ""
+msgstr "Híd módosítása"
 
 msgid "Edit CARP"
-msgstr ""
+msgstr "CARP módosítása"
 
 msgid "Edit Dataset"
 msgstr "Adattár módosítása"
@@ -3079,40 +3081,40 @@ msgid "Edit Host"
 msgstr "Állomásnév módosítása"
 
 msgid "Edit LAGG"
-msgstr ""
+msgstr "LAGG módosítása"
 
 msgid "Edit MIB"
 msgstr "MIB szerkesztése"
 
 msgid "Edit NFS Share"
-msgstr ""
+msgstr "NFS megosztás módosítása"
 
 msgid "Edit Pool"
-msgstr ""
+msgstr "Tároló módosítása"
 
 msgid "Edit RAID"
 msgstr "RAID szerkesztése"
 
 msgid "Edit Record"
-msgstr ""
+msgstr "Rekord módosítása"
 
 msgid "Edit Resource"
-msgstr ""
+msgstr "Erőforrás módosítása"
 
 msgid "Edit Route"
 msgstr "Útvonal szerkesztése"
 
 msgid "Edit Rsync Job"
-msgstr ""
+msgstr "Rsync feladat módosítása"
 
 msgid "Edit Rsync Module"
-msgstr ""
+msgstr "Rsync modul módosítása"
 
 msgid "Edit Samba Share"
-msgstr ""
+msgstr "Samba megosztás módosítása"
 
 msgid "Edit Share"
-msgstr ""
+msgstr "Megosztás módosítása"
 
 msgid "Edit Snapshot"
 msgstr "Pillanatkép módosítása"
@@ -3124,7 +3126,7 @@ msgid "Edit User Account"
 msgstr "Felhasználói fiók törlése"
 
 msgid "Edit VLAN"
-msgstr ""
+msgstr "VLAN módosítása"
 
 msgid "Edit VM"
 msgstr "VM módosítása"
@@ -3136,7 +3138,7 @@ msgid "Edit Volume"
 msgstr "Kötet módosítása"
 
 msgid "Edit WLAN"
-msgstr ""
+msgstr "WLAN módosítása"
 
 msgid "Edit auth group"
 msgstr "Hitelesített csoport módosítása"
@@ -3227,7 +3229,7 @@ msgid "Enable FXP protocol."
 msgstr "FXP protokoll engedélyezése."
 
 msgid "Enable Firmware Upgrade"
-msgstr ""
+msgstr "Firmware frissítés bekapcsolása"
 
 msgid "Enable NFSv4 server."
 msgstr "NFSv4 szerver engedélyezése."
@@ -3262,13 +3264,13 @@ msgid "Enable Selected Options"
 msgstr "Kiválasztott beállítások engedélyezése"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Kijelölt rekordok bekapcsolása"
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Kijelölt Rsync feladatok bekapcsolása"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Kijelölt Rsync modulok bekapcsolása"
 
 msgid "Enable TLS connections."
 msgstr "TLS kapcsolat engedélyezése."
@@ -3828,7 +3830,7 @@ msgid "Failed"
 msgstr "Hibás"
 
 msgid "Failed to access in-memory file system."
-msgstr ""
+msgstr "Memóriabeli fájlrendszer-hozzáférési hiba"
 
 msgid "Failed to execute command zfs."
 msgstr "ZFS-parancs futása sikertelen."
@@ -3868,7 +3870,7 @@ msgid "Fatal"
 msgstr "Végzetes"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Fdisk partícióinformációk"
 
 msgid "Feb"
 msgstr "Febr"
@@ -3954,13 +3956,13 @@ msgid "Firmware Update"
 msgstr "Firmware frissítése"
 
 msgid "Firmware upgrade check has been disabled."
-msgstr ""
+msgstr "A firmwarefrissítés-ellenőrzést kikapcsolták."
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Firmware feltöltése meghiúsult (elfogyott a memória?)"
 
 msgid "Firmware upload failed with error message:"
-msgstr ""
+msgstr "Hiba a firmware feltöltésekor:"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware feltöltése nem támogatott ezen a platformon."
@@ -4060,7 +4062,7 @@ msgid "GEOM"
 msgstr "GEOM"
 
 msgid "GEOM Partition Information"
-msgstr ""
+msgstr "GEOM partícióinformáció"
 
 msgid "GEOM Software RAID"
 msgstr "GEOM szoftveres RAID"
@@ -4184,7 +4186,7 @@ msgid "HAST Resource"
 msgstr "HAST erőforrás"
 
 msgid "HAST is disabled."
-msgstr ""
+msgstr "HAST ki van kapcsolva."
 
 msgid "HAST volume"
 msgstr "HAST kötet"
@@ -4898,16 +4900,16 @@ msgstr "LAGG beállítások"
 
 msgid ""
 "LAGG cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "LAGG nem törölhető, mert interfészként még használatban van."
 
 msgid "LAGG is marked for deletion"
-msgstr ""
+msgstr "LAGG törlésre megjelölve"
 
 msgid "LAGG is protected"
-msgstr ""
+msgstr "A LAGG védett"
 
 msgid "LAGG is unlocked"
-msgstr ""
+msgstr "A LAGG zárolását feloldottad"
 
 msgid "LAN Management"
 msgstr "Hálózat kezelése"
@@ -5120,7 +5122,7 @@ msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr "Munkafájlok tárolásának helye, pl. %s/backup/.unison"
 
 msgid "Lock Selected Records"
-msgstr ""
+msgstr "Kiválasztott rekordok törlése"
 
 msgid "Locked Files"
 msgstr "Zárolt fájlok"
@@ -5215,7 +5217,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB törlésre megjelölve"
 
 msgid "MIB is unlocked"
-msgstr ""
+msgstr "Az MIB zárolását feloldottad"
 
 msgid "MIRROR"
 msgstr "TÜKÖR"
@@ -5596,13 +5598,13 @@ msgid "NFS"
 msgstr "NFS"
 
 msgid "NFS share is marked for deletion"
-msgstr ""
+msgstr "NFS megosztás törlése megjelölve"
 
 msgid "NFS share is protected"
-msgstr ""
+msgstr "Az NFS megosztás védett"
 
 msgid "NFS share is unlocked"
-msgstr ""
+msgstr "Az NFS megosztás zárolását feloldottad"
 
 msgid "NFSv4"
 msgstr "NFSv4"
@@ -5798,10 +5800,10 @@ msgstr ""
 "adj hozzá lemezeket."
 
 msgid "No disks found."
-msgstr ""
+msgstr "Egy lemez sem található."
 
 msgid "No fdisk information found."
-msgstr ""
+msgstr "Semmilyen fdisk információ nem található."
 
 msgid "No file was uploaded."
 msgstr "Nem lett fájl feltöltve."
@@ -5813,7 +5815,7 @@ msgid "No new software raid disk found."
 msgstr "Nincs új szoftveres raid lemez."
 
 msgid "No partition information found."
-msgstr ""
+msgstr "Semmilyen partícióinformáció nem található."
 
 msgid "No pool devices have been selected"
 msgstr "Egy tárolóeszközt sem választott ki"
@@ -6034,7 +6036,7 @@ msgid "On"
 msgstr "Be"
 
 msgid "Online Information"
-msgstr ""
+msgstr "Online információ"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6339,7 +6341,7 @@ msgid "Ping may take a while, please be patient."
 msgstr "A ping eltarthat egy ideig, kérem várjon türelemmel."
 
 msgid "Ping winbindd to see if it is alive"
-msgstr ""
+msgstr "Winbindd pingelése annak életben levésének megnézéséhez"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6445,7 +6447,7 @@ msgid "Pool is protected"
 msgstr "Tároló védett"
 
 msgid "Pool is unlocked"
-msgstr "Tároló nincs zárolva"
+msgstr "Atároló zárolását feloldottad"
 
 msgid "Pools"
 msgstr "Tárolók (pools)"
@@ -6664,7 +6666,7 @@ msgid "RAID is protected"
 msgstr "RAID védett"
 
 msgid "RAID is unlocked"
-msgstr "RAID nincs zárolva"
+msgstr "A RAID zárolását feloldottad"
 
 msgid "RAID-0"
 msgstr "RAID-0"
@@ -6828,22 +6830,22 @@ msgid "Receive Buffer"
 msgstr "Fogadó puffer"
 
 msgid "Record Information"
-msgstr ""
+msgstr "Rekordinformáció"
 
 msgid "Record Maintenance"
-msgstr ""
+msgstr "Rekordkarbantartás"
 
 msgid "Record is locked"
 msgstr "Rekord zárolt"
 
 msgid "Record is marked for deletion"
-msgstr ""
+msgstr "Rekord törlésre megjelölve"
 
 msgid "Record is protected"
-msgstr ""
+msgstr "A rekord védett"
 
 msgid "Record is unlocked"
-msgstr ""
+msgstr "A rekord zárolását feloldottad"
 
 msgid "Recurse into directories."
 msgstr "Rekurzívan a könyvtárakba."
@@ -7004,13 +7006,13 @@ msgid "Resource Name"
 msgstr "Erőforrás neve"
 
 msgid "Resource is marked for deletion"
-msgstr ""
+msgstr "Erőforrás törlésre megjelölve"
 
 msgid "Resource is protected"
-msgstr ""
+msgstr "Az erőforrás védett"
 
 msgid "Resource is unlocked"
-msgstr ""
+msgstr "Az erőforrás zárolását feloldottad"
 
 msgid "Resources"
 msgstr "Erőforrások"
@@ -7033,7 +7035,7 @@ msgstr ""
 "Korlátozott - Összes örökítése, kivéve 'ACL írása' és 'tulajdonos módosítása'"
 
 msgid "Results for net rpc testjoin"
-msgstr ""
+msgstr "Net prc tesztcsatlakozás eredménye"
 
 msgid "Results of last self test"
 msgstr "Utolsó önellenőrzés eredményei"
@@ -7081,13 +7083,13 @@ msgid "Roundrobin"
 msgstr "Roundrobin"
 
 msgid "Route is marked for deletion"
-msgstr ""
+msgstr "Útvonal törlésre megjelölve"
 
 msgid "Route is protected"
-msgstr ""
+msgstr "Útvonal védett"
 
 msgid "Route is unlocked"
-msgstr ""
+msgstr "Az útvonal zárolását feloldottad"
 
 msgid "Routes"
 msgstr "Útvonalak"
@@ -7105,22 +7107,22 @@ msgid "Rsync Job"
 msgstr "Rsync Feladat"
 
 msgid "Rsync Module is marked for deletion"
-msgstr ""
+msgstr "Rsync modul törlésre megjelölve"
 
 msgid "Rsync Module is protected"
-msgstr ""
+msgstr "Rsync modul védett"
 
 msgid "Rsync Module is unlocked"
-msgstr ""
+msgstr "Az RSYNC modul zárolását feloldottad"
 
 msgid "Rsync job is marked for deletion"
-msgstr ""
+msgstr "Rsync feladat törlésre megjelölve"
 
 msgid "Rsync job is protected"
-msgstr ""
+msgstr "Rsync feladt védett"
 
 msgid "Rsync job is unlocked"
-msgstr ""
+msgstr "Az RSYNC feladat zárolását feloldottad"
 
 msgid "Rule"
 msgstr "Szabály"
@@ -7216,13 +7218,13 @@ msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Címtárszolgáltató Tartományvezérlő"
 
 msgid "Samba Share is marked for deletion"
-msgstr ""
+msgstr "Samba megosztás törlésre megjelölve"
 
 msgid "Samba Share is protected"
-msgstr ""
+msgstr "Samba megosztás védett"
 
 msgid "Samba Share is unlocked"
-msgstr ""
+msgstr "A Samba megosztás zárolását feloldottad"
 
 #, php-format
 msgid ""
@@ -7671,13 +7673,13 @@ msgid "Share Settings"
 msgstr "Megosztás beállításai"
 
 msgid "Share is marked for deletion"
-msgstr ""
+msgstr "Megosztás törlésre megjelölve"
 
 msgid "Share is protected"
-msgstr ""
+msgstr "Megosztás védett"
 
 msgid "Share is unlocked"
-msgstr ""
+msgstr "A megosztás zárolását feloldottad"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Megosztási jelszó nem lehet több 8 karakternél."
@@ -7792,7 +7794,7 @@ msgid "Snapshot is marked for deletion"
 msgstr "Pillanatkép törlésre megjelölve"
 
 msgid "Snapshot is unlocked"
-msgstr "Pillanatkép nem zárolt"
+msgstr "A pillantkép zárolását feloldottad"
 
 msgid "Snapshots"
 msgstr "Pillanatképek"
@@ -8711,7 +8713,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr "A frissítési fájl nem ehhez a platformhoz készült."
 
 msgid "The firmware file is corrupt."
-msgstr ""
+msgstr "A firmware fájl sérült."
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9729,13 +9731,13 @@ msgid "Toggle Selected Options"
 msgstr "Kiválasztott beállítások átkapcsolása"
 
 msgid "Toggle Selected Records"
-msgstr ""
+msgstr "Kijelölt rekordok átkapcsolása"
 
 msgid "Toggle Selected Rsync Jobs"
-msgstr ""
+msgstr "Kijelölt Rsync feladatok átkapcsolása"
 
 msgid "Toggle Selected Rsync Modules"
-msgstr ""
+msgstr "Kijelölt Rsync modulok átkapcsolása"
 
 msgid "Tolerated"
 msgstr "Hibajavított"
@@ -10060,7 +10062,7 @@ msgid "Unload"
 msgstr "Eltávolítás"
 
 msgid "Unlock Selected Records"
-msgstr ""
+msgstr "Kijelölt rekordok zárolásának feloldása"
 
 msgid "Unmount Disk/Partition"
 msgstr "Lecsatolt lemez/partíció"
@@ -10272,16 +10274,16 @@ msgstr "VLAN címke"
 
 msgid ""
 "VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "VLAN nem törölhető, mert még interfészként használatban van."
 
 msgid "VLAN is marked for deletion"
-msgstr ""
+msgstr "VLAN törlésre megjelölve"
 
 msgid "VLAN is protected"
-msgstr ""
+msgstr "VLAN védett"
 
 msgid "VLAN is unlocked"
-msgstr ""
+msgstr "A VLAN zárolását feloldottad"
 
 msgid "VM Type"
 msgstr "VM típusa"
@@ -10336,7 +10338,7 @@ msgid "Virtual Device is protected"
 msgstr "Virtuális eszköz védett"
 
 msgid "Virtual Device is unlocked"
-msgstr "Virtuális eszköz nincs zárolva."
+msgstr "A virtuális eszköz zárolását feloldottad"
 
 msgid "Virtual Devices"
 msgstr "Virtuális eszközök"
@@ -10393,7 +10395,7 @@ msgid "Volume is protected"
 msgstr "Kötet védett"
 
 msgid "Volume is unlocked"
-msgstr "Kötet nincs zárolva"
+msgstr "A kötet zárolását feloldottad"
 
 msgid ""
 "Volume label of the new file system. Use % for a counter or %n for a counter "
@@ -10429,16 +10431,16 @@ msgstr "WLAN beállítások"
 
 msgid ""
 "WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "WLAN nem törölhető, mert még interfészként használatban van."
 
 msgid "WLAN is marked for deletion"
-msgstr ""
+msgstr "WLAN törlésre megjelölve"
 
 msgid "WLAN is protected"
-msgstr ""
+msgstr "WLAN védett"
 
 msgid "WLAN is unlocked"
-msgstr ""
+msgstr "A WLAN zárolását feloldottad"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10815,7 +10817,7 @@ msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI initial parameter (%d az alapértelmezett)."
 
 msgid "iSCSI initiator disabled."
-msgstr ""
+msgstr "iSCSI kezdeményező ki van kapcsolva."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
