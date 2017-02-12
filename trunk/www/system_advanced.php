@@ -53,38 +53,35 @@ $pconfig['sysconsaver'] = isset($config['system']['sysconsaver']['enable']);
 $pconfig['sysconsaverblanktime'] = $config['system']['sysconsaver']['blanktime'];
 $pconfig['enableserialconsole'] = isset($config['system']['enableserialconsole']);
 
-if ($_POST) {
+if($_POST):
 	unset($input_errors);
 	$pconfig = $_POST;
-
-	if (!isset($pconfig['pwmax']))
-		$pconfig['pwmax'] = "";
-	if (!isset($pconfig['pwmin']))
-		$pconfig['pwmin'] = "";
-
+	if(!isset($pconfig['pwmax'])):
+		$pconfig['pwmax'] = '';
+	endif;
+	if(!isset($pconfig['pwmin'])):
+		$pconfig['pwmin'] = '';
+	endif;
 	// Input validation.
-	if (isset($_POST['sysconsaver'])) {
+	if(isset($_POST['sysconsaver'])):
 		$reqdfields = ['sysconsaverblanktime'];
 		$reqdfieldsn = [gtext('Blank Time')];
 		$reqdfieldst = ['numeric'];
-
-		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-	}
-	if (isset($_POST['powerd'])) {
+		do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
+		do_input_validation_type($_POST,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+	endif;
+	if(isset($_POST['powerd'])):
 		$reqdfields = ['pwmax','pwmin'];
 		$reqdfieldsn = [gtext('CPU Maximum Frequency'),gtext('CPU Minimum Frequency')];
 		$reqdfieldst = ['numeric','numeric'];
-
 		//do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-	}
-
-	if (empty($input_errors)) {
+	endif;
+	if(empty($input_errors)):
 		// Process system tuning.
-		if ($_POST['tune_enable']) {
+		if($_POST['tune_enable']):
 			sysctl_tune(1);
-		} else if (isset($config['system']['tune']) && (!$_POST['tune_enable'])) {
+		elseif(isset($config['system']['tune']) && (!$_POST['tune_enable'])):
 			// Simply force a reboot to reset to default values.
 			// This makes programming easy :-) Also we are sure that
 			// system will use origin values (maybe default values
@@ -92,47 +89,45 @@ if ($_POST) {
 			// reduce maintenance).
 			sysctl_tune(0);
 			touch($d_sysrebootreqd_path);
-		}
+		endif;
 		$bootconfig="boot.config";
-		if (!isset($_POST['enableserialconsole'])) {
-			if (file_exists("/$bootconfig")) {
+		if(!isset($_POST['enableserialconsole'])):
+			if(file_exists("/$bootconfig")):
 				unlink("/$bootconfig");
-			}
-			if (file_exists("{$g['cf_path']}/mfsroot.uzip")
-			    && file_exists("{$g['cf_path']}/$bootconfig")) {
+			endif;
+			if(file_exists("{$g['cf_path']}/mfsroot.uzip") && file_exists("{$g['cf_path']}/$bootconfig")):
 				config_lock();
 				conf_mount_rw();
 				unlink("{$g['cf_path']}/$bootconfig");
 				conf_mount_ro();
 				config_unlock();
-			}
-		} else {
-			if (file_exists("/$bootconfig")) {
+			endif;
+		else:
+			if(file_exists("/$bootconfig")):
 				unlink("/$bootconfig");
-			}
+			endif;
 			file_put_contents("/$bootconfig", "-Dh\n");
-			if (file_exists("{$g['cf_path']}/mfsroot.uzip")) {
+			if(file_exists("{$g['cf_path']}/mfsroot.uzip")):
 				config_lock();
 				conf_mount_rw();
-				if (file_exists("{$g['cf_path']}/$bootconfig")) {
+				if(file_exists("{$g['cf_path']}/$bootconfig")):
 					unlink("{$g['cf_path']}/$bootconfig");
-				}
+				endif;
 				file_put_contents("{$g['cf_path']}/$bootconfig", "-Dh\n");
 				conf_mount_ro();
 				config_unlock();
-			}
-		}
-		if ((isset($config['system']['disablefm']) && (!isset($_POST['disablefm'])))
-		    || (!isset($config['system']['disablefm']) && (isset($_POST['disablefm'])))) {
+			endif;
+		endif;
+		if((isset($config['system']['disablefm']) && (!isset($_POST['disablefm'])))
+		    || (!isset($config['system']['disablefm']) && (isset($_POST['disablefm'])))):
 			// need restarting server to export/clear .htusers.php by fmperm.
 			touch($d_sysrebootreqd_path);
-		}
-		if ((isset($config['system']['disableconsolemenu']) && (!isset($_POST['disableconsolemenu'])))
-		    || (!isset($config['system']['disableconsolemenu']) && (isset($_POST['disableconsolemenu'])))) {
+		endif;
+		if((isset($config['system']['disableconsolemenu']) && (!isset($_POST['disableconsolemenu'])))
+		    || (!isset($config['system']['disableconsolemenu']) && (isset($_POST['disableconsolemenu'])))):
 			// need restarting server to made active.
 			touch($d_sysrebootreqd_path);
-		}
-
+		endif;
 		$config['system']['disableconsolemenu'] = isset($_POST['disableconsolemenu']) ? true : false;
 		$config['system']['disablefm'] = isset($_POST['disablefm']) ? true : false;
 		$config['system']['disablefirmwarecheck'] = isset($_POST['disablefirmwarecheck']) ? true : false;
@@ -156,41 +151,43 @@ if ($_POST) {
 		$pwmax = $config['system']['pwmax'];
 		$pwmin = $config['system']['pwmin'];
 		$pwopt = "-a {$pwmode} -b {$pwmode} -n {$pwmode}";
-		if (!empty($pwmax))
+		if (!empty($pwmax)):
 			$pwopt .= " -M {$pwmax}";
-		if (!empty($pwmin))
+		endif;
+		if(!empty($pwmin)):
 			$pwopt .= " -m {$pwmin}";
-		$index = array_search_ex("powerd_flags", $config['system']['rcconf']['param'], "name");
-		if ($index !== false) {
-			$config['system']['rcconf']['param'][$index]['value'] = $pwopt;
-		} else {
-			$config['system']['rcconf']['param'][] = [
-				"uuid" => uuid(),
-				"name" => "powerd_flags",
-				"value" => $pwopt,
-				"comment" => "System power control options",
-				"enable" => true ];
-		}
-
+		endif;
+		$grid_rcconf = &array_make_branch($config,'system','rcconf','param');
+		$index = array_search_ex('powerd_flags',$grid_rcconf,'name');
+		if($index !== false):
+			$grid_rcconf[$index]['value'] = $pwopt;
+		else:
+			$grid_rcconf[] = [
+				'uuid' => uuid(),
+				'name' => 'powerd_flags',
+				'value' => $pwopt,
+				'comment' => 'System power control options',
+				'enable' => true
+			];
+		endif;
 		write_config();
-
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
+		if(!file_exists($d_sysrebootreqd_path)):
 			config_lock();
 			$retval |= rc_exec_service("rcconf");
 			$retval |= rc_update_service("powerd");
 			$retval |= rc_update_service("mdnsresponder");
 			$retval |= rc_exec_service("motd");
-			if (isset($config['system']['tune']))
+			if (isset($config['system']['tune'])):
 				$retval |= rc_update_service("sysctl");
+			endif;
 			$retval |= rc_update_service("syscons");
 			$retval |= rc_update_service("fmperm");
 			config_unlock();
-		}
-
+		endif;
 		$savemsg = get_std_save_message($retval);
-	}
-}
+	endif;
+endif;
 
 function sysctl_tune($mode) {
 	global $config;
