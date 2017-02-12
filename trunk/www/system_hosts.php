@@ -37,21 +37,22 @@ require 'guiconfig.inc';
 $pgtitle = [gtext('Network'),gtext('Hosts')];
 
 if ($_POST) {
-	if (isset($_POST['Submit']) && $_POST['Submit']) {
+	if(isset($_POST['Submit']) && $_POST['Submit']):
 		unset($input_errors);
 		$pconfig = $_POST;
-
-		if (empty($input_errors)) {
-			unset($config['system']['hostsacl']['rule']);
-			foreach (explode("\n", $_POST['hostsacl']) as $rule) {
-				$rule = trim($rule, "\t\n\r");
-				if (!empty($rule))
-					$config['system']['hostsacl']['rule'][] = $rule;
-			}
-
+		if(empty($input_errors)):
+			if(isset($config['system']['hostsacl']['rule'])):
+				unset($config['system']['hostsacl']['rule']);
+			endif;
+			$grid_hostacl = &array_make_branch($config,'system','hostsacl','rule');
+			foreach(explode("\n",$_POST['hostsacl']) as $rule):
+				$rule = trim($rule,"\t\n\r");
+				if(!empty($rule))
+					$grid_hostacl[] = $rule;
+			endforeach;
 			write_config();
-		}
-	}
+		endif;
+	endif;
 
 	if ((isset($_POST['apply']) && $_POST['apply']) || (isset($_POST['Submit']) && $_POST['Submit'])) {
 		$retval = 0;
