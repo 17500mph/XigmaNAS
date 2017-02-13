@@ -2210,149 +2210,153 @@ function disks_import_all_swraid_disks($clean_import) {
 }
 
 // 0: no found, n > 0: n disks imported, n < 0: error
-function disks_import_all_encrypted_disks($clean_import) {
+function disks_import_all_encrypted_disks(bool $clear_config_before_import = false) {
 	global $config;
-
-	$a_ealgo = ['AES-XTS' => 'AES','AES-CBC' => 'AES','Blowfish-CBC' => 'Blowfish','CAMELLIA-CBC' => 'Camellia','3DES-CBC' => '3DES'];
-	$need_write_config = false;
-	$num = $error = 0;
-
-	exec("/sbin/gconcat load");
-	exec("/sbin/gstripe load");
-	exec("/sbin/gmirror load");
-	exec("/sbin/graid5 load");
-	exec("/sbin/gvinum load");
-
-	$disks = get_all_disks_list();
-	if(empty($disks)):
-		return $num;
+	$grid_cfg_disks = &array_make_branch($config,'disks','disk');
+	$grid_cfg_geli = &array_make_branch($config,'geli','vdisk');
+	$a_ealgo = [
+		'AES-XTS' => 'AES',
+		'AES-CBC' => 'AES',
+		'Blowfish-CBC' => 'Blowfish',
+		'CAMELLIA-CBC' => 'Camellia',
+		'3DES-CBC' => '3DES'
+		];
+	$num = 0;
+	$error = 0;
+	exec('/sbin/gconcat load');
+	exec('/sbin/gstripe load');
+	exec('/sbin/gmirror load');
+	exec('/sbin/graid5 load');
+	exec('/sbin/gvinum load');
+	if($clear_config_before_import):
+		$grid_cfg_geli = []; // OK
+		$need_write_config = true;
+	else:
+		$need_write_config = false;
 	endif;
-	array_make_branch($config,'disks','disk');
-	array_make_branch($config,'geli','vdisk');
-	if(!empty($clean_import)):
-		$config['geli']['vdisk'] = []; // OK
-	endif;
-	foreach ($disks as $diskv) {
-		$dev = $diskv['devicespecialfile'];
+	$grid_os_disk = get_all_disks_list();
+	foreach($grid_os_disk as $row_os_disk):
+		$dev = $row_os_disk['devicespecialfile'];
 		unset($rawdata);
-		mwexec2("geli dump {$dev} 2>/dev/null", $rawdata);
-		if (empty($rawdata))
+		mwexec2("geli dump {$dev} 2>/dev/null",$rawdata);
+		if(empty($rawdata)):
 			continue;
-		$ealgo = $keylen = "";
-		foreach ($rawdata as $line) {
-			if (preg_match("/^\s*ealgo\s*:\s*(.+)$/", $line, $m)) {
+		endif;
+		$ealgo = $keylen = '';
+		foreach($rawdata as $line):
+			if(preg_match('/^\s*ealgo\s*:\s*(.+)$/',$line,$m)):
 				$ealgo = $m[1];
-			} else if (preg_match("/^\s*keylen\s*:\s*(.+)$/", $line, $m)) {
+			elseif(preg_match('/^\s*keylen\s*:\s*(.+)$/',$line,$m)):
 				$keylen = $m[1];
-			}
-		}
-		if (empty($ealgo) || empty($keylen)) {
+			endif;
+		endforeach;
+		if(empty($ealgo) || empty($keylen)):
 			$error++;
 			continue;
-		}
-		if (!array_key_exists($ealgo, $a_ealgo)) {
+		endif;
+		if(!array_key_exists($ealgo,$a_ealgo)):
 			$error++;
 			continue;
-		}
+		endif;
 		$ealgo = $a_ealgo[$ealgo];
-
-		// exist geli?
-		$index = array_search_ex($dev, $config['geli']['vdisk'], "device");
-		if (false === $index) {
+		//	exist geli?
+		$index = array_search_ex($dev,$grid_cfg_geli,'device');
+		if(false === $index):
 			$num++; // detected
-
 			$geli = [];
 			$geli['uuid'] = uuid();
-			$geli['name'] = $diskv['name'];
+			$geli['name'] = $row_os_disk['name'];
 			$geli['device'] = $dev;
 			$geli['devicespecialfile'] = "{$geli['device']}.eli";
-			$geli['desc'] = "Encrypted disk";
-			$geli['size'] = $diskv['size'];
-			$geli['aalgo'] = "none";
+			$geli['desc'] = 'Encrypted disk';
+			$geli['size'] = $row_os_disk['size'];
+			$geli['aalgo'] = 'none';
 			$geli['ealgo'] = $ealgo;
-
-			$config['geli']['vdisk'][] = $geli;
+			$grid_cfg_geli[] = $geli;
 			$need_write_config = true;
-		} else {
-			// already exist in config
-		}
-
-		// exist disks?
-		$index = array_search_ex($dev, $config['disks']['disk'], "devicespecialfile");
-		if ($clean_import && false !== $index) {
-			unset($config['disks']['disk'][$index]);
-			$index = false;
-		}
-		if (false === $index) {
-			if ($diskv['type'] == 'SCSI' || $diskv['type'] == 'RAID' || $diskv['type'] == 'IDE') {
+		else:
+			//	already exist in config
+			//	Do we need to update anything?
+		endif;
+		//	exist disks?
+		$index = array_search_ex($dev,$grid_cfg_disks,'devicespecialfile');
+		if(false !== $index):
+			if($clear_config_before_import):
+				unset($grid_cfg_disks[$index]);
+				$index = false;
+				$need_write_config = true;
+			endif;
+		endif;
+		if(false === $index):
+			if($row_os_disk['type'] == 'SCSI' || $row_os_disk['type'] == 'RAID' || $row_os_disk['type'] == 'IDE'):
 				$pdisk = [];
 				$pdisk['uuid'] = uuid();
-				$pdisk['name'] = $diskv['name'];
-				$pdisk['id'] = $diskv['id'];
+				$pdisk['name'] = $row_os_disk['name'];
+				$pdisk['id'] = $row_os_disk['id'];
 				$pdisk['devicespecialfile'] = $dev;
-				$pdisk['model'] = !empty($diskv['model']) ? $diskv['model'] : "";
-				$pdisk['desc'] = !empty($diskv['desc']) ? $diskv['desc'] : "";
-				$pdisk['type'] = $diskv['type'];
-				$serial = "";
-				if (!empty($diskv['serial'])) {
-					$serial = $diskv['serial'];
-				}
-				if (($serial == "n/a") || ($serial == gtext("n/a"))) {
-					$serial = "";
-				}
+				$pdisk['model'] = !empty($row_os_disk['model']) ? $row_os_disk['model'] : '';
+				$pdisk['desc'] = !empty($row_os_disk['desc']) ? $row_os_disk['desc'] : '';
+				$pdisk['type'] = $row_os_disk['type'];
+				$serial = '';
+				if(!empty($row_os_disk['serial'])):
+					$serial = $row_os_disk['serial'];
+				endif;
+				if(($serial == 'n/a') || ($serial == gtext('n/a'))):
+					$serial = '';
+				endif;
 				$pdisk['serial'] = $serial;
-				$pdisk['size'] = $diskv['size'];
-				$pdisk['harddiskstandby'] = "0";
-				$pdisk['acoustic'] = "0";
-				$pdisk['apm'] = "0";
-				$pdisk['transfermode'] = "auto";
-				$pdisk['fstype'] = "geli";
-				$pdisk['controller'] = $diskv['controller'];
-				$pdisk['controller_id'] =  $diskv['controller_id'];
-				$pdisk['controller_desc'] = $diskv['controller_desc'];
-				$pdisk['smart']['devicefilepath'] = $diskv['smart']['devicefilepath'];
-				$pdisk['smart']['devicetype'] = $diskv['smart']['devicetype'];
-				$pdisk['smart']['devicetypearg'] = $diskv['smart']['devicetypearg'];
+				$pdisk['size'] = $row_os_disk['size'];
+				$pdisk['harddiskstandby'] = '0';
+				$pdisk['acoustic'] = '0';
+				$pdisk['apm'] = '0';
+				$pdisk['transfermode'] = 'auto';
+				$pdisk['fstype'] = 'geli';
+				$pdisk['controller'] = $row_os_disk['controller'];
+				$pdisk['controller_id'] =  $row_os_disk['controller_id'];
+				$pdisk['controller_desc'] = $row_os_disk['controller_desc'];
+				$pdisk['smart']['devicefilepath'] = $row_os_disk['smart']['devicefilepath'];
+				$pdisk['smart']['devicetype'] = $row_os_disk['smart']['devicetype'];
+				$pdisk['smart']['devicetypearg'] = $row_os_disk['smart']['devicetypearg'];
 				// Enable S.M.A.R.T. Monitoring
 				$enablesmartmonondevice = true;
-				if ($enablesmartmonondevice) {
+				if($enablesmartmonondevice):
 					$enablesmartmonondevice = isset($config['smartd']['enablesmartmonondevice']);
-					if ($enablesmartmonondevice && is_bool($config['smartd']['enablesmartmonondevice'])) {
+					if($enablesmartmonondevice && is_bool($config['smartd']['enablesmartmonondevice'])):
 						$enablesmartmonondevice = $config['smartd']['enablesmartmonondevice'];
-					}
-				}
-				if ($enablesmartmonondevice) {
-					$enablesmartmonondevice = isset($diskv['smart']['isavailable']);
-					if ($enablesmartmonondevice && is_bool($diskv['smart']['isavailable'])) {
-						$enablesmartmonondevice = $diskv['smart']['isavailable'];
-					}
-				}
-				if ($enablesmartmonondevice) {
-					$enablesmartmonondevice = isset($diskv['smart']['isenabled']);
-					if ($enablesmartmonondevice && is_bool($diskv['smart']['isenabled'])) {
-						$enablesmartmonondevice = $diskv['smart']['isenabled'];
-					}
-				}	
-				updatenotify_set("device", UPDATENOTIFY_MODE_MODIFIED, $pdisk['uuid']);
+					endif;
+				endif;
+				if($enablesmartmonondevice):
+					$enablesmartmonondevice = isset($row_os_disk['smart']['isavailable']);
+					if($enablesmartmonondevice && is_bool($row_os_disk['smart']['isavailable'])):
+						$enablesmartmonondevice = $row_os_disk['smart']['isavailable'];
+					endif;
+				endif;
+				if($enablesmartmonondevice):
+					$enablesmartmonondevice = isset($row_os_disk['smart']['isenabled']);
+					if($enablesmartmonondevice && is_bool($row_os_disk['smart']['isenabled'])):
+						$enablesmartmonondevice = $row_os_disk['smart']['isenabled'];
+					endif;
+				endif;
+				updatenotify_set('device',UPDATENOTIFY_MODE_MODIFIED,$pdisk['uuid']);
 				$pdisk['smart']['enable'] = $enablesmartmonondevice;					
-				$pdisk['smart']['extraoptions'] = "";
-				
-				$config['disks']['disk'][] = $pdisk;
+				$pdisk['smart']['extraoptions'] = '';
+				$grid_cfg_disks[] = $pdisk;
 				$need_write_config = true;
-			}
-		} else {
-			// already exist in config
-			if ($diskv['type'] == 'SCSI' || $diskv['type'] == 'RAID' || $diskv['type'] == 'IDE') {
-				$config['disks']['disk'][$index]['fstype'] = "geli";
+			endif;
+		else:
+			//	already exist in config
+			if($row_os_disk['type'] == 'SCSI' || $row_os_disk['type'] == 'RAID' || $row_os_disk['type'] == 'IDE'):
+				$grid_cfg_disks[$index]['fstype'] = 'geli';
 				$need_write_config = true;
-			}
-		}
-	}
-	if ($need_write_config) {
+			endif;
+		endif;
+	endforeach;
+	if($need_write_config):
 		write_config();
-	}
-	if ($error != 0)
+	endif;
+	if($error != 0):
 		return -$error;
+	endif;
 	return $num;
 }
 
