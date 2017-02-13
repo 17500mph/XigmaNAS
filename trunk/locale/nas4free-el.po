@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-09 08:47+0000\n"
+"PO-Revision-Date: 2017-02-13 14:51+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-12 18:48+0000\n"
+"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -233,7 +233,7 @@ msgstr ""
 "index.html, index.htm ή default.htm) σε έναν φάκελο."
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "Η ενημέρωση του υλικολογισμικού είναι σε εξέλιξη."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -358,7 +358,7 @@ msgid "ACL mode"
 msgstr "Λειτουργία ACL"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "Η πιστοποίηση AD είναι απενεργοποιημένη."
 
 msgid "AD or PDC name."
 msgstr "όνομα AD ή PCD."
@@ -373,7 +373,7 @@ msgid "AG"
 msgstr "AG"
 
 msgid "AIO Module"
-msgstr "Συμβατότητα AFP"
+msgstr "Άρθρωμα AIO"
 
 msgid "AIO Read Size"
 msgstr "AIO Μέγεθος Ανάγνωσης"
@@ -459,10 +459,10 @@ msgid "Add"
 msgstr "Προσθήκη"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Προσθήκη Bridge"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "Προσθήκη CARP"
 
 msgid "Add Dataset"
 msgstr "Προσθήκη Dataset"
@@ -474,40 +474,40 @@ msgid "Add Host"
 msgstr "Προσθήκη Υπολογιστή"
 
 msgid "Add LAGG"
-msgstr ""
+msgstr "Προσθήκη LAGG"
 
 msgid "Add MIB"
 msgstr "Προσθήκη MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Προσθήκη Κοινόχρηστου NFS"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Προσθήκη Pool"
 
 msgid "Add RAID"
 msgstr "Προσθήκη RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Προσθήκη Eγγραφής"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Εισαγωγή Πόρου"
 
 msgid "Add Route"
 msgstr "Προσθήκη Διαδρομής"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Προσθήκη Εργασίας Rsync"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Προσθήκη Αρθρώματος Rsync"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Προσθήκη Κοινόχρηστου Samba"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Προσθήκη Κοινόχρηστου"
 
 msgid "Add Snapshot"
 msgstr "Προσθήκη Στιγμιότυπου"
@@ -519,7 +519,7 @@ msgid "Add User Account"
 msgstr "Προσθήκη Λογαριασμού Χρήστη"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "Προσθήκη VLAN"
 
 msgid "Add Virtual Device"
 msgstr "Προσθήκη Εικονικής Συσκευής"
@@ -528,7 +528,7 @@ msgid "Add Volume"
 msgstr "Προσθήκη Τόμου"
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "Προσθήκη WLAN"
 
 msgid "Add a cache device to a pool"
 msgstr "Προσθήκη μιας συσκευής cache σε ένα pool"
@@ -1260,6 +1260,9 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Η κατάτμηση εκκίνησης είναι πολύ μικρή. Πρέπει να κάνετε επανεγκατάσταση από "
+"το LiveCD/LiveUSB ή να αλλάξετε το μέγεθος της κατάτμησης εκκίνησης του "
+"κάνετε %s.\n"
 
 msgid "Bootloader"
 msgstr "Διαχειριστής Εκκίνησης"
@@ -1273,15 +1276,17 @@ msgstr "Ρυθμίσεις bridge"
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Αυτό το Bridge δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη σαν "
+"διασύνδεση."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Το bridge έχει σημειωθεί προς διαγραφή."
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "Το bridge είναι προστατευμένο"
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "Το bridge είναι ξεκλείδωτο"
 
 msgid "Bring a device online"
 msgstr "Κάντε μια συσκευή online"
@@ -1320,15 +1325,17 @@ msgstr "CARP"
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Αυτό το CARP δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη σαν "
+"διασύνδεση."
 
 msgid "CARP is marked for deletion"
-msgstr ""
+msgstr "Το CARP έχει σημειωθεί προς διαγραφή."
 
 msgid "CARP is protected"
-msgstr ""
+msgstr "Το CARP είναι προστατευμένο"
 
 msgid "CARP is unlocked"
-msgstr ""
+msgstr "Το CARP είναι ξεκλείδωτο"
 
 msgid "CARP only"
 msgstr "Μόνο CARP"
@@ -1515,7 +1522,7 @@ msgid "Check and replace cable"
 msgstr "Ελέγξτε και αντικαταστήστε το καλώδιο"
 
 msgid "Check shared secret"
-msgstr ""
+msgstr "Έλεγχος κοινόχρηστου μυστικού"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2066,7 +2073,7 @@ msgid "Current Password"
 msgstr "Τρέχων Κωδικός"
 
 msgid "Current Version"
-msgstr ""
+msgstr "Τρέχουσα Έκδοση"
 
 msgid "Current internal temperature."
 msgstr "Τρέχουσα εσωτερική θερμοκρασία."
@@ -2296,10 +2303,10 @@ msgid "Delete Login Info"
 msgstr "Διαγραφή πληροφοριών εισόδου"
 
 msgid "Delete Selected Bridges"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Bridge"
 
 msgid "Delete Selected CARPs"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων CARP"
 
 msgid "Delete Selected Commands"
 msgstr "Διαγραφή Επιλεγμένων Εντολών"
@@ -2314,10 +2321,10 @@ msgid "Delete Selected Jobs"
 msgstr "Διαγραφή Επιλεγμένων Εργασιών"
 
 msgid "Delete Selected LAGGs"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων LAGG"
 
 msgid "Delete Selected NFS Shares"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Κοινόχρηστων NFS"
 
 msgid "Delete Selected Options"
 msgstr "Διαγραφή Επιλεγμένων Επιλογών"
@@ -2329,25 +2336,25 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Διαγραφή Επιλεγμένων τόμων RAID"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Εγγραφών"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Πόρων"
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Δρομολογήσεων"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Εργασιών Rsync"
 
 msgid "Delete Selected Rsync Modules"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Αρθρωμάτων Rsync"
 
 msgid "Delete Selected Samba Shares"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Κοινόχρηστων Samba"
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Κοινόχρηστων"
 
 msgid "Delete Selected Snapshots"
 msgstr "Διαγραφή Επιλεγμένων Στιγμιότυπων"
@@ -2356,7 +2363,7 @@ msgid "Delete Selected User Accounts"
 msgstr "Διαγραφή Επιλεγμένων Λογαριασμών Χρηστών"
 
 msgid "Delete Selected VLANs"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων VLAN"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Διαγραφή Επιλεγμένων Εικονικών Συσκευών"
@@ -2365,7 +2372,7 @@ msgid "Delete Selected Volumes"
 msgstr "Διαγραφή Επιλεγμένων Τόμων"
 
 msgid "Delete Selected WLANs"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων WLAN"
 
 msgid "Delete URL"
 msgstr "Διαγραφή URL"
@@ -2633,7 +2640,7 @@ msgid "Disable"
 msgstr "Απενεργοποίηση"
 
 msgid "Disable Firmware Upgrade"
-msgstr ""
+msgstr "Απενεργοποίηση Ενημέρωσης Υλικολογισμικού"
 
 msgid "Disable Selected Commands"
 msgstr "Απενεργοποίηση Επιλεγμένων Εντολών"
@@ -2645,13 +2652,13 @@ msgid "Disable Selected Options"
 msgstr "Απενεργοποίηση Επιλεγμένων Επιλογών"
 
 msgid "Disable Selected Records"
-msgstr ""
+msgstr "Απενεργοποίηση Επιλεγμένων Εγγραφών"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr ""
+msgstr "Απενεργοποίηση Επιλεγμένων Εργασιών Rsync"
 
 msgid "Disable Selected Rsync Modules"
-msgstr ""
+msgstr "Απενεργοποίηση Επιλεγμένων Αρθρωμάτων Rsync"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Απενεργοποίηση TCP wrapper (άρθρωμα mod_wrap)."
@@ -2695,7 +2702,7 @@ msgid "Disk"
 msgstr "Δίσκος"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Πληροφορίες Κατάτμησης Δίσκου"
 
 msgid "Disk Selection"
 msgstr "Επιλογή Δίσκου"
@@ -2740,6 +2747,7 @@ msgstr "Διανεμημένος Πίνακας Hash"
 
 msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
+"Μην ακυρώσετε τη διαδικασία ενημέρωσης υλικολογισμικού αν αυτή ξεκινήσει."
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2903,28 +2911,28 @@ msgstr ""
 "δίσκους;"
 
 msgid "Do you want to delete selected CARPs?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα CARP;"
 
 msgid "Do you want to delete selected LAGGs?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα LAGG;"
 
 msgid "Do you want to delete selected NFS shares?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα κοινόχρηστα NFS;"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Θέλετε να διαγράψετε τους επιλεγμένους τόμους RAID;"
 
 msgid "Do you want to delete selected Samba shares?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα κοινόχρηστα Samba;"
 
 msgid "Do you want to delete selected VLANs?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα VLAN;"
 
 msgid "Do you want to delete selected WLANs?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα WLAN;"
 
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα bridge;"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εντολές;"
@@ -2945,22 +2953,22 @@ msgid "Do you want to delete selected pools?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα pool;"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εγγραφές;"
 
 msgid "Do you want to delete selected resources?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τους επιλεγμένους πόρους;"
 
 msgid "Do you want to delete selected routes?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τις επιλεγμένες δρομολογήσεις;"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εργασίες rsync;"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα αρθρώματα rsync;"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα κοινόχρηστα;"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα στιγμιότυπα;"
@@ -2987,13 +2995,13 @@ msgid "Do you want to disable selected options?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες επιλογές;"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εγγραφές;"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εργασίες rsync;"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "Θέλετε να απενεργοποιήσετε τα επιλεγμένα αρθρώματα rsync;"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εντολές;"
@@ -3005,16 +3013,16 @@ msgid "Do you want to enable selected options?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες επιλογές;"
 
 msgid "Do you want to enable selected records?"
-msgstr ""
+msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εγγραφές;"
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr ""
+msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εργασίες rsync;"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr ""
+msgstr "Θέλετε να ενεργοποιήσετε τα επιλεγμένα αρθρώματα rsync;"
 
 msgid "Do you want to lock selected records?"
-msgstr ""
+msgstr "Θέλετε να κλειδώσετε τις επιλεγμένες εγγραφές;"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Θέλετε να γίνει εναλλαγή των επιλεγμένων εντολών;"
@@ -3026,16 +3034,16 @@ msgid "Do you want to toggle selected options?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες επιλογές;"
 
 msgid "Do you want to toggle selected records?"
-msgstr ""
+msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες εγγραφές;"
 
 msgid "Do you want to toggle selected rsync jobs?"
-msgstr ""
+msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες εργασίες rsync;"
 
 msgid "Do you want to toggle selected rsync modules?"
-msgstr ""
+msgstr "Θέλετε να εναλλάξετε τα επιλεγμένα αρθρώματα rsync;"
 
 msgid "Do you want to unlock selected records?"
-msgstr ""
+msgstr "Θέλετε να ξεκλειδώσετε τις επιλεγμένες εγγραφές;"
 
 msgid "Document Root"
 msgstr "Ριζικός Κατάλογος αρχείων"
@@ -3159,10 +3167,10 @@ msgid "Edit"
 msgstr "Επεξεργασία"
 
 msgid "Edit Bridge"
-msgstr ""
+msgstr "Επεξεργασία Bridge"
 
 msgid "Edit CARP"
-msgstr ""
+msgstr "Επεξεργασία CARP"
 
 msgid "Edit Dataset"
 msgstr "Επεξεργασία dataset"
@@ -3174,40 +3182,40 @@ msgid "Edit Host"
 msgstr "Επεξεργασία Υπολογιστή"
 
 msgid "Edit LAGG"
-msgstr ""
+msgstr "Επεξεργασία LAGG"
 
 msgid "Edit MIB"
 msgstr "Επεξεργασία MIB"
 
 msgid "Edit NFS Share"
-msgstr ""
+msgstr "Επεξεργασία Κοινόχρηστου NFS"
 
 msgid "Edit Pool"
-msgstr ""
+msgstr "Επεξεργασία Pool"
 
 msgid "Edit RAID"
 msgstr "Επεξεργασία RAID"
 
 msgid "Edit Record"
-msgstr ""
+msgstr "Επεξεργασία Εγγραφής"
 
 msgid "Edit Resource"
-msgstr ""
+msgstr "Επεξεργασία Πόρου"
 
 msgid "Edit Route"
 msgstr "Επεξεργασία Διαδρομής"
 
 msgid "Edit Rsync Job"
-msgstr ""
+msgstr "Επεξεργασία Εργασίας Rsync"
 
 msgid "Edit Rsync Module"
-msgstr ""
+msgstr "Επεξεργασία Αρθρώματος Rsync"
 
 msgid "Edit Samba Share"
-msgstr ""
+msgstr "Επεξεργασία Κοινόχρηστου Samba"
 
 msgid "Edit Share"
-msgstr ""
+msgstr "Επεξεργασία Κοινόχρηστου"
 
 msgid "Edit Snapshot"
 msgstr "Επεξεργασία Στιγμιότυπου"
@@ -3219,7 +3227,7 @@ msgid "Edit User Account"
 msgstr "Επεξεργασία Λογαριασμού Χρήστη"
 
 msgid "Edit VLAN"
-msgstr ""
+msgstr "Επεξεργασία VLAN"
 
 msgid "Edit VM"
 msgstr "Επεξεργασία VM"
@@ -3231,7 +3239,7 @@ msgid "Edit Volume"
 msgstr "Επεξεργασία Τόμου"
 
 msgid "Edit WLAN"
-msgstr ""
+msgstr "Επεξεργασία WLAN"
 
 msgid "Edit auth group"
 msgstr "Επεξεργασία ομάδας πιστοποίησης"
@@ -3322,7 +3330,7 @@ msgid "Enable FXP protocol."
 msgstr "Ενεργοποίηση πρωτοκόλλου FXP."
 
 msgid "Enable Firmware Upgrade"
-msgstr ""
+msgstr "Ενεργοποίηση Αναβάθμισης Υλικολογισμικού"
 
 msgid "Enable NFSv4 server."
 msgstr "Ενεργοποίηση διακομιστή NFSv4."
@@ -3357,13 +3365,13 @@ msgid "Enable Selected Options"
 msgstr "Ενεργοποίηση Επιλεγμένων Επιλογών"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Ενεργοποίηση Επιλεγμένων Εγγραφών"
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Ενεργοποίηση Επιλεγμένων Εργασιών Rsync"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Ενεργοποίηση Επιλεγμένων Αρθρωμάτων Rsync"
 
 msgid "Enable TLS connections."
 msgstr "Ενεργοποίηση συνδέσεων TLS."
@@ -3936,7 +3944,7 @@ msgid "Failed"
 msgstr "Αποτυχία"
 
 msgid "Failed to access in-memory file system."
-msgstr ""
+msgstr "Αποτυχία πρόσβασης στο σύστημα αρχείων που βρίσκεται στη μνήμη."
 
 msgid "Failed to execute command zfs."
 msgstr "Αποτυχία εκτέλεσης εντολής zfs."
@@ -3976,7 +3984,7 @@ msgid "Fatal"
 msgstr "Κρίσιμο"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Πληροφορίες Κατάτμησης fdisk"
 
 msgid "Feb"
 msgstr "Φεβ."
@@ -4066,14 +4074,14 @@ msgid "Firmware Update"
 msgstr "Αναβάθμιση Υλικολογισμικού"
 
 msgid "Firmware upgrade check has been disabled."
-msgstr ""
+msgstr "Ο έλεγχος για ενημερώσεις υλικολογισμικού έχει απενεργοποιηθεί."
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 "Η μεταφόρτωση του αρχείου υλικολογισμικού απέτυχε (δεν επαρκεί η μνήμη;)"
 
 msgid "Firmware upload failed with error message:"
-msgstr ""
+msgstr "Η μεταφόρτωση του υλικολογισμικού απέτυχε με μήνυμα σφάλματος:"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Η αποστολή firmware δεν υποστηρίζεται σε αυτή την πλατφόρμα."
@@ -4175,7 +4183,7 @@ msgid "GEOM"
 msgstr "GEOM"
 
 msgid "GEOM Partition Information"
-msgstr ""
+msgstr "Πληροφορίες Κατάτμησης GEOM"
 
 msgid "GEOM Software RAID"
 msgstr "GEOM RAID μέσω λογισμικού"
@@ -4300,7 +4308,7 @@ msgid "HAST Resource"
 msgstr "Πόρος HAST"
 
 msgid "HAST is disabled."
-msgstr ""
+msgstr "To HAST είναι απενεργοποιημένο."
 
 msgid "HAST volume"
 msgstr "Τόμος HAST"
@@ -5033,15 +5041,17 @@ msgstr "Ρυθμίσεις LAGG"
 msgid ""
 "LAGG cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Αυτό το LAGG δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη σαν "
+"διασύνδεση."
 
 msgid "LAGG is marked for deletion"
-msgstr ""
+msgstr "Το LAGG έχει σημειωθεί προς διαγραφή."
 
 msgid "LAGG is protected"
-msgstr ""
+msgstr "To LAGG είναι προστατευμένο"
 
 msgid "LAGG is unlocked"
-msgstr ""
+msgstr "To LAGG είναι ξεκλέιδωτο"
 
 msgid "LAN Management"
 msgstr "Διαχείριση LAN"
@@ -5258,7 +5268,7 @@ msgstr ""
 "%s/backup/.unison"
 
 msgid "Lock Selected Records"
-msgstr ""
+msgstr "Κλείδωμα Επιλεγμένων Εγγραφών"
 
 msgid "Locked Files"
 msgstr "Κλειδωμένα Αρχεία"
@@ -5353,7 +5363,7 @@ msgid "MIB is marked for deletion"
 msgstr "To MIB έχει σημειωθεί προς διαγραφή"
 
 msgid "MIB is unlocked"
-msgstr ""
+msgstr "Το MIB είναι ξεκλείδωτο"
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -5740,13 +5750,13 @@ msgid "NFS"
 msgstr "NFS"
 
 msgid "NFS share is marked for deletion"
-msgstr ""
+msgstr "Το κοινόχρηστο NFS έχει σημειωθεί προς διαγραφή"
 
 msgid "NFS share is protected"
-msgstr ""
+msgstr "Το κοινόχρηστο NFS είναι προστατευμένο"
 
 msgid "NFS share is unlocked"
-msgstr ""
+msgstr "Το κοινόχρηστο NFS είναι ξεκλείδωτο"
 
 msgid "NFSv4"
 msgstr "NFSv4"
@@ -5942,10 +5952,10 @@ msgstr ""
 "διαγνωστικές πληροφορίες!"
 
 msgid "No disks found."
-msgstr ""
+msgstr "Δεν βρέθηκαν δίσκοι."
 
 msgid "No fdisk information found."
-msgstr ""
+msgstr "Δεν βρέθηκαν πληροφορίες fdisk."
 
 msgid "No file was uploaded."
 msgstr "Κανένα αρχείο δεν ανέβηκε."
@@ -5957,7 +5967,7 @@ msgid "No new software raid disk found."
 msgstr "Δεν βρέθηκαν νέοι δίσκοι σε raid μέσω λογισμικού."
 
 msgid "No partition information found."
-msgstr ""
+msgstr "Δεν βρέθηκαν πληροφορίες κατάτμησης."
 
 msgid "No pool devices have been selected"
 msgstr "Δεν επιλέχθηκαν συσκευές pool"
@@ -6179,7 +6189,7 @@ msgid "On"
 msgstr "Ενεργό"
 
 msgid "Online Information"
-msgstr ""
+msgstr "Πληροφορίες Ενεργής Σύνδεσης"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -6489,7 +6499,7 @@ msgid "Ping may take a while, please be patient."
 msgstr "Το ping μπορεί να διαρκέσει λίγο, παρακαλώ κάντε υπομονή."
 
 msgid "Ping winbindd to see if it is alive"
-msgstr ""
+msgstr "Ping στο winbindd  για να εξακριβωθεί ότι είναι ενεργό"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
@@ -6981,22 +6991,22 @@ msgid "Receive Buffer"
 msgstr "Buffer Λήψης"
 
 msgid "Record Information"
-msgstr ""
+msgstr "Πληροφορίες Εγγραφής"
 
 msgid "Record Maintenance"
-msgstr ""
+msgstr "Συντήρηση Εγγραφής"
 
 msgid "Record is locked"
 msgstr "Η εγγραφή είναι κλειδωμένη"
 
 msgid "Record is marked for deletion"
-msgstr ""
+msgstr "Η εγγραφή  έχει σημειωθεί προς διαγραφή."
 
 msgid "Record is protected"
-msgstr ""
+msgstr "Η εγγραφή είναι προστατευμένη"
 
 msgid "Record is unlocked"
-msgstr ""
+msgstr "Η εγγραφήείναι ξεκλείδωτη"
 
 msgid "Recurse into directories."
 msgstr "Συμπερίληψη και των υποκαταλόγων"
@@ -7157,13 +7167,13 @@ msgid "Resource Name"
 msgstr "Όνομα Πόρου"
 
 msgid "Resource is marked for deletion"
-msgstr ""
+msgstr "Ο πόρος έχει σημειωθεί προς διαγραφή"
 
 msgid "Resource is protected"
-msgstr ""
+msgstr "Ο πόρος είναι προστατευμένος"
 
 msgid "Resource is unlocked"
-msgstr ""
+msgstr "Ο πόρος είναι ξεκλείδωτος"
 
 msgid "Resources"
 msgstr "Πόροι"
@@ -7186,7 +7196,7 @@ msgstr ""
 "owner\""
 
 msgid "Results for net rpc testjoin"
-msgstr ""
+msgstr "Αποτελέσματα του net rpc testjoin"
 
 msgid "Results of last self test"
 msgstr "Αποτελέσματα του τελευταίου αυτοδιαγνωστικού"
@@ -7234,13 +7244,13 @@ msgid "Roundrobin"
 msgstr "Round-robin"
 
 msgid "Route is marked for deletion"
-msgstr ""
+msgstr "Η δρομολόγηση έχει σημειωθεί προς διαγραφή"
 
 msgid "Route is protected"
-msgstr ""
+msgstr "Η δρομολόγηση είναι προστατευμένη"
 
 msgid "Route is unlocked"
-msgstr ""
+msgstr "Η δρομολόγηση είναι ξεκλείδωτη"
 
 msgid "Routes"
 msgstr "Δρομολόγηση δικτύου"
@@ -7258,22 +7268,22 @@ msgid "Rsync Job"
 msgstr "Εργασία Rsync"
 
 msgid "Rsync Module is marked for deletion"
-msgstr ""
+msgstr "Το άρθρωμα rsync έχει σημειωθεί προς διαγραφή"
 
 msgid "Rsync Module is protected"
-msgstr ""
+msgstr "Το άρθρωμα rsync είναι προστατευμένο"
 
 msgid "Rsync Module is unlocked"
-msgstr ""
+msgstr "Το άρθρωμα rsync είναι ξεκλείδωτο"
 
 msgid "Rsync job is marked for deletion"
-msgstr ""
+msgstr "Η εργασία rsync έχει σημειωθεί προς διαγραφή"
 
 msgid "Rsync job is protected"
-msgstr ""
+msgstr "Η εργασία rsync είναι προστατευμένη"
 
 msgid "Rsync job is unlocked"
-msgstr ""
+msgstr "Η εργασία rsync είναι ξεκλείδωτη"
 
 msgid "Rule"
 msgstr "Κανόνας"
@@ -7369,13 +7379,13 @@ msgid "Samba Active Directory Domain Controller"
 msgstr "Ελεγκτής Τομέα Active Directory της Samba"
 
 msgid "Samba Share is marked for deletion"
-msgstr ""
+msgstr "Το Κοινόχρηστο Samba έχει σημειωθεί προς διαγραφή"
 
 msgid "Samba Share is protected"
-msgstr ""
+msgstr "Το Κοινόχρηστο Samba είναι προστατευμένο"
 
 msgid "Samba Share is unlocked"
-msgstr ""
+msgstr "Το Κοινόχρηστο Samba είναι ξεκλείδωτο"
 
 #, php-format
 msgid ""
@@ -7831,13 +7841,13 @@ msgid "Share Settings"
 msgstr "Ρυθμίσεις Κοινόχρηστου"
 
 msgid "Share is marked for deletion"
-msgstr ""
+msgstr "Το Κοινόχρηστο έχει σημειωθεί προς διαγραφή"
 
 msgid "Share is protected"
-msgstr ""
+msgstr "Το Κοινόχρηστο είναι προστατευμένο"
 
 msgid "Share is unlocked"
-msgstr ""
+msgstr "Το Κοινόχρηστο είναι ξεκλείδωτο"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr ""
@@ -8914,7 +8924,7 @@ msgstr ""
 "Το αρχείο που προσπαθείτε να εγκαταστήσετε δεν είναι για αυτή την πλατφόρμα"
 
 msgid "The firmware file is corrupt."
-msgstr ""
+msgstr "Το αρχείο υλικολογισμικού είναι κατεστραμμένο."
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -9989,13 +9999,13 @@ msgid "Toggle Selected Options"
 msgstr "Εναλλαγή Επιλεγμένων Επιλογών"
 
 msgid "Toggle Selected Records"
-msgstr ""
+msgstr "Εναλλαγή Επιλεγμένων Εγγραφών"
 
 msgid "Toggle Selected Rsync Jobs"
-msgstr ""
+msgstr "Εναλλαγή Επιλεγμένων Εργασιών rsync"
 
 msgid "Toggle Selected Rsync Modules"
-msgstr ""
+msgstr "Εναλλαγή Επιλεγμένων Αρθρωμάτων rsync"
 
 msgid "Tolerated"
 msgstr "Ανεκτή"
@@ -10326,7 +10336,7 @@ msgid "Unload"
 msgstr "Ξεφόρτωμα"
 
 msgid "Unlock Selected Records"
-msgstr ""
+msgstr "Ξεκλείδωμα Επιλεγμένων Εγγραφών"
 
 msgid "Unmount Disk/Partition"
 msgstr "Αποπροσάρτηση Δίσκου/Κατάτμησης"
@@ -10550,15 +10560,17 @@ msgstr "Ετικέτα VLAN"
 msgid ""
 "VLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Αυτό το VLAN δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη σαν "
+"διασύνδεση."
 
 msgid "VLAN is marked for deletion"
-msgstr ""
+msgstr "Το VLAN έχει σημειωθεί προς διαγραφή."
 
 msgid "VLAN is protected"
-msgstr ""
+msgstr "Το VLAN είναι προστατευμένο"
 
 msgid "VLAN is unlocked"
-msgstr ""
+msgstr "Το VLAN είναι ξεκλείδωτο"
 
 msgid "VM Type"
 msgstr "Τύπος VM"
@@ -10710,15 +10722,17 @@ msgstr "Ρυθμίσεις WLAN"
 msgid ""
 "WLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Αυτό το WLAN δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται ακόμη σαν "
+"διασύνδεση."
 
 msgid "WLAN is marked for deletion"
-msgstr ""
+msgstr "Το WLAN έχει σημειωθεί προς διαγραφή."
 
 msgid "WLAN is protected"
-msgstr ""
+msgstr "Το WLAN είναι προστατευμένο"
 
 msgid "WLAN is unlocked"
-msgstr ""
+msgstr "Το WLAN είναι ξεκλείδωτο"
 
 msgid "WPA"
 msgstr "WPA"
@@ -11112,7 +11126,7 @@ msgid "iSCSI initial parameter (%d by default)."
 msgstr "αρχική παράμετρος iSCSI  (% d από προεπιλογή)."
 
 msgid "iSCSI initiator disabled."
-msgstr ""
+msgstr "Ο εκκινητής iSCI είναι απενεργοποιημένος."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -11192,73 +11206,3 @@ msgstr "σε"
 
 msgid "umount"
 msgstr "αποπροσάρτηση"
-
-#~ msgid "Add pool"
-#~ msgstr "Προσθήκη pool"
-
-#~ msgid "Edit pool"
-#~ msgstr "Επεξεργασία pool"
-
-#~ msgid "Current Version:"
-#~ msgstr "Τρέχουσα έκδοση:"
-
-#~ msgid "Failed to create in-memory file system."
-#~ msgstr "Αποτυχία δημιουργίας συστήματος αρχείων στη μνήμη."
-
-#, php-format
-#~ msgid ""
-#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
-#~ "resize boot partition of %s.\n"
-#~ msgstr ""
-#~ "Η κατάτμηση boot είναι πολύ μικρή. Χρειάζεται να κάνετε επανεγκατάσταση από "
-#~ "το LiveCD ή το LiveUSB, ή να κάνετε αλλαγή στο μέγεθος της κατάτμησης boot "
-#~ "του %s.\n"
-
-#~ msgid "Online"
-#~ msgstr "Σε σύνδεση"
-
-#~ msgid "Disable Firmware Update"
-#~ msgstr "Απενεργοποίηση αποστολής firmware"
-
-#~ msgid "Enable Firmware Update"
-#~ msgstr "Ενεργοποίηση αποστολής firmware"
-
-#~ msgid "The firmware file is corrupt"
-#~ msgstr "Το αρχείο υλικολογισμικού είναι κατεστραμμένο"
-
-#~ msgid "DO NOT abort the firmware upgrade process once it has started."
-#~ msgstr ""
-#~ "ΜΗΝ ακυρώσετε τη διαδικασία αναβάθμισης του υλικολογισμικού άπαξ και "
-#~ "ξεκινήσει."
-
-#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
-#~ msgstr ""
-#~ "Θέλετε να εγκαταστήσετε αυτό το υλικολογισμικό ούτως ή άλλως (με δικό σας "
-#~ "ρίσκο);"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-#~ msgstr ""
-#~ "ΜΗΝ δοκιμάζετε να εγκαταστήσετε άλλα αρχεία πέρα από κάποιο έγκυρο αρχείο "
-#~ "'%s-%s-embedded.img.xz'."
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises."
-#~ msgstr ""
-#~ "Αυτό σημαίνει ότι το λογισμικό που εγκαταστήσατε δεν είναι "
-#~ "επίσημο/υποστηριζόμενο υλικολογισμικό και μπορεί να οδηγήσει σε απροσδόκητη "
-#~ "συμπεριφορά ή προβλήματα ασφαλείας."
-
-#~ msgid ""
-#~ "Only install firmwares that come from sources that you trust, and make sure "
-#~ "that the firmware has not been tampered with."
-#~ msgstr ""
-#~ "Εγκατάσταση μόνο υλικολογισμικών που προέρχονται από αξιόπιστες πηγές και "
-#~ "εξασφάλιση ότι το υλικολογισμικό δεν έχει πειραχτεί."
-
-#~ msgid "You must reboot the server before you can upgrade the firmware"
-#~ msgstr ""
-#~ "Πριν να επανεκκινήσετε το διακομιστή πριν μπορέσετε να αναβαθμίσετε το "
-#~ "υλικολογισμικό"

@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2016-11-27 15:51+0000\n"
+"PO-Revision-Date: 2017-02-12 20:32+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-12 18:48+0000\n"
+"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -168,7 +168,7 @@ msgstr ""
 
 #, php-format
 msgid "(default %s %s"
-msgstr ""
+msgstr "(výchozí %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importovaný duplikát ***"
@@ -455,7 +455,7 @@ msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
 
 msgid "Add Group"
-msgstr ""
+msgstr "Přidat skupinu"
 
 msgid "Add Host"
 msgstr "Přidat stroj"
@@ -467,19 +467,19 @@ msgid "Add MIB"
 msgstr "Přidat MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Přidat NFS sdílení"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Přidat fond"
 
 msgid "Add RAID"
 msgstr "Přidat RAID pole"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Přidat záznam"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Přidat prostředek (zdroj)"
 
 msgid "Add Route"
 msgstr "Přidat trasu"
@@ -491,10 +491,10 @@ msgid "Add Rsync Module"
 msgstr ""
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Přidat Samba sdílení"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Přidat sdílení"
 
 msgid "Add Snapshot"
 msgstr "Přidat zachycený stav"
@@ -503,7 +503,7 @@ msgid "Add URL"
 msgstr "Přidat URL adresu"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Přidat uživatelský účet"
 
 msgid "Add VLAN"
 msgstr ""
@@ -587,7 +587,7 @@ msgid "Additional Network"
 msgstr "Další síť"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Dodatečné parametry"
 
 msgid "Additional Storage"
 msgstr "Další úložiště"
@@ -606,16 +606,16 @@ msgstr ""
 "statickou adresu."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Heslo správce"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Heslo pro správu"
 
 msgid "Administrative WebGUI"
 msgstr "Webové rozhraní pro správu"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Jméno správce"
 
 msgid "Advanced"
 msgstr "Pokročilé"
@@ -857,7 +857,7 @@ msgid "An interface with the specified description already exists."
 msgstr "Rozhraní s tímto popisem už v systému existuje."
 
 msgid "Anonymous Bind"
-msgstr ""
+msgstr "Připojit anonymně"
 
 msgid "Anonymous Users"
 msgstr ""
@@ -897,7 +897,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apply"
-msgstr ""
+msgstr "Použít"
 
 msgid "Apply Filter"
 msgstr "Použít filtr"
@@ -921,7 +921,7 @@ msgid "Are you sure you want to reboot the server?"
 msgstr "Opravdu chcete tento server restartovat?"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
-msgstr ""
+msgstr "Opravdu chcete vrátit veškerá nastavení serveru do výchozího stavu?"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Opravdu chcete tento server vypnout?"
@@ -937,7 +937,7 @@ msgstr ""
 "tvořeno jednou nebo více úložnými jednotkami."
 
 msgid "Attach"
-msgstr ""
+msgstr "Připojit"
 
 msgid "Attach a data device"
 msgstr "Připojit datové zařízení"
@@ -993,7 +993,7 @@ msgid "Authenticate URL"
 msgstr "Ověřovací URL adresa"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Ověření uživatelé"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
@@ -1010,7 +1010,7 @@ msgid "Authentication Method"
 msgstr ""
 
 msgid "Authorised Network"
-msgstr ""
+msgstr "Síť ze které umožnit přístup"
 
 msgid "Authorised network"
 msgstr "Síť ze které je umožněn přístup"
@@ -1083,7 +1083,7 @@ msgid "Backup Configuration"
 msgstr "Záloha nastavení"
 
 msgid "Backup File"
-msgstr ""
+msgstr "Soubor se zálohou"
 
 msgid "Backup/Restore"
 msgstr "Zálohovat/obnovit"
@@ -10861,66 +10861,3 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
-
-#~ msgid "Edit pool"
-#~ msgstr "Upravit fond"
-
-#~ msgid "Add pool"
-#~ msgstr "Přidat fond"
-
-#~ msgid "Current Version:"
-#~ msgstr "Stávající verze:"
-
-#, php-format
-#~ msgid ""
-#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
-#~ "resize boot partition of %s.\n"
-#~ msgstr ""
-#~ "Oddíl, ze kterého se zavádí systém %s, je příliš malý. Buď bude třeba ho "
-#~ "zvětšit, nebo provést novou instalaci z instalačního média (LiveCD/USB).\n"
-
-#~ msgid "Failed to create in-memory file system."
-#~ msgstr "Nezdařilo se vytvořit souborový systém v operační paměti."
-
-#~ msgid "Online"
-#~ msgstr "Připraveno"
-
-#~ msgid "Disable Firmware Update"
-#~ msgstr "Vypnout aktualizaci firmware"
-
-#~ msgid "The firmware file is corrupt"
-#~ msgstr "Soubor s firmware je poškozený"
-
-#~ msgid "Enable Firmware Update"
-#~ msgstr "Umožnit aktualizaci firmware"
-
-#~ msgid "DO NOT abort the firmware upgrade process once it has started."
-#~ msgstr ""
-#~ "Po jeho spuštění NEPŘERUŠUJTE proces přechodu na novější verzi firmware."
-
-#~ msgid "You must reboot the server before you can upgrade the firmware"
-#~ msgstr "Přejít na novější verzi firmware bude možné až po restartu serveru"
-
-#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
-#~ msgstr "Chcete tento firmware nainstalovat i tak (na vlastní riziko)?"
-
-#~ msgid ""
-#~ "Only install firmwares that come from sources that you trust, and make sure "
-#~ "that the firmware has not been tampered with."
-#~ msgstr ""
-#~ "Instalujte pouze firmware, který pochází z důvěryhodného zdroje a ověřte, že "
-#~ "se souborem s firmware nebylo manipulováno (kontrolní součet)."
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-#~ msgstr ""
-#~ "NEPOKOUŠEJTE se zapsat jiný než platný „%s-%s-embedded.img.xz“ soubor."
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises."
-#~ msgstr ""
-#~ "To znamená, že základní systém, který jste nainstalovali, není "
-#~ "oficiální/podporovaný, což může vést k neočekávanému chování či narušení "
-#~ "zabezpečení."

@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-12 03:49+0000\n"
+"PO-Revision-Date: 2017-02-12 19:23+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-12 18:48+0000\n"
+"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -6310,7 +6310,7 @@ msgstr ""
 "het non-privileged bereik zijn (bijv. hoger dan of gelijk aan poort 1024). "
 "Het is aanbevolen dat het gekozen bereik groot genoeg is om veel "
 "gelijktijdige passieve verbindingen te kunnen verwerken (bijvoorbeeld, 49152-"
-"65534, het IANA-geregistreerde kortstondig poortbereik)."
+"65534, het IANA-geregistreerd kortstondig poortbereik)."
 
 msgid "Passphrase"
 msgstr "Wachtwoordzin"
@@ -11067,67 +11067,3 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
-
-#~ msgid "Add pool"
-#~ msgstr "Pool toevoegen"
-
-#~ msgid "Edit pool"
-#~ msgstr "Pool bewerken"
-
-#~ msgid "Failed to create in-memory file system."
-#~ msgstr "Mislukt om het in-geheugen bestandsysteem te maken."
-
-#~ msgid "Current Version:"
-#~ msgstr "Huidige Versie:"
-
-#, php-format
-#~ msgid ""
-#~ "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
-#~ "resize boot partition of %s.\n"
-#~ msgstr ""
-#~ "De boot partitie is te klein. Een herinstallatie via LiveCD of LiveUSB is "
-#~ "nodig, of herindeel de boot partitie van %s.\n"
-
-#~ msgid "Online"
-#~ msgstr "Online"
-
-#~ msgid "Enable Firmware Update"
-#~ msgstr "Inschakelen Firmware Update"
-
-#~ msgid "Disable Firmware Update"
-#~ msgstr "Uitschakelen Firmware Update"
-
-#~ msgid "The firmware file is corrupt"
-#~ msgstr "Het firmware bestand is beschadigd"
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises."
-#~ msgstr ""
-#~ "Dit betekent dat het firmware bestand dat u wilt gebruiken geen "
-#~ "officieel/ondersteund firmware bestand is en dat dit kan leiden tot een "
-#~ "onverwacht systeemgedrag of beveiligingsrisico's."
-
-#~ msgid ""
-#~ "Only install firmwares that come from sources that you trust, and make sure "
-#~ "that the firmware has not been tampered with."
-#~ msgstr ""
-#~ "Installeer uitsluitend firmware bestanden die afkomstig zijn uit betrouwbare "
-#~ "bronnen, en zorgt u ervoor dat er niets veranderd is aan/in de firmware."
-
-#~ msgid "Do you want to install this firmware anyway (at your own risk)?"
-#~ msgstr "Wilt u de firmware toch installeren (Dit is op eigen risico)?"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-#~ msgstr ""
-#~ "Probeer geen andere bestanden te flashen dan alleen een geldig '%s-%s-"
-#~ "embedded.img.xz' bestand."
-
-#~ msgid "DO NOT abort the firmware upgrade process once it has started."
-#~ msgstr "Breek de firmware update procedure niet af nadat deze is gestart."
-
-#~ msgid "You must reboot the server before you can upgrade the firmware"
-#~ msgstr ""
-#~ "U moet de server eerst opnieuw opstarten voordat u de firmware kunt upgraden"
