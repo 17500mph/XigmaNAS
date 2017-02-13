@@ -101,29 +101,33 @@ if($_POST):
 		switch($_POST['submit']):
 			case 'clearimport':
 			case 'import':
+				$retval = 0;
 				switch($_POST['submit']):
+					case 'clearimport':
+						$retval = disks_import_all_encrypted_disks(true);
+						break;
 					case 'import':
 						$retval = disks_import_all_encrypted_disks(false);
-						break;
-					default:
-						$retval = disks_import_all_encrypted_disks(true);
 						break;
 				endswitch;
 				switch($retval <=> 0):
 					case 0:
-						$savemsg = gtext('no new encrypted disk found.');
+						$savemsg = gtext('No new encrypted disks have been found.');
 						disks_update_mounts();
 						break;
 					case 1:
-						$savemsg = gtext('all encrypted disks are imported.');
+						$savemsg = gtext('All encrypted disks have been imported.');
 						disks_update_mounts();
 						break;
-					default:
-						$input_errors[] = gtext('detected an error while importing.');
+					case -1:
+						$input_errors[] = gtext('Errors have been detected during import.');
 						break;
 				endswitch;
-				header($sphere->header());
-				exit;
+				
+				//	ensure at least an empty array is available
+				$sphere->grid = &array_make_branch($config,'geli','vdisk');
+//				header($sphere->header());
+//				exit;
 			case 'rows.delete':
 				$sphere->cbm_array = $_POST[$sphere->cbm_name] ?? [];
 				foreach($sphere->cbm_array as $sphere->cbm_row):
@@ -225,7 +229,7 @@ if($_POST):
 endif;
 $pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Management')];
 include 'fbegin.inc';
-$sphere->doj();
+echo $sphere->doj();
 ?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
@@ -353,7 +357,7 @@ $sphere->doj();
 		echo html_button_delete_rows($sphere->cbm_delete());
 ?>
 		<button name="submit" type="submit" class="formbtn" value="import" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');"><?=gtext('Import Disks');?></button>
-		<button name="submut" type="submit" class="formbtn" value="clearimport" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');"><?=gtext('Clear Config And Import Disks');?></button>
+		<button name="submit" type="submit" class="formbtn" value="clearimport" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');"><?=gtext('Clear Config And Import Disks');?></button>
 	</div>
 <?php
 	include 'formend.inc';
