@@ -43,11 +43,8 @@
     SUBDIR += openssh-portable
     SUBDIR += pam_ldap
     SUBDIR += pam_mkhomedir
-    SUBDIR += php70
     SUBDIR += php71
-    SUBDIR += php70-APCu
     SUBDIR += php71-APCu
-    SUBDIR += php70-intl
     SUBDIR += php71-intl
     SUBDIR += phpvirtualbox
     SUBDIR += proftpd
