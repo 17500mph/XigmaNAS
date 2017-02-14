@@ -318,7 +318,7 @@ function ab_control(ego, tbn) {
 			html_titleline2(gtext('Overview'),6);
 ?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
 				<th class="lhell"><?=gtext('MIB');?></th>
 				<th class="lhell"><?=gtext('Value');?></th>
 				<th class="lhell"><?=gtext('Status');?></th>
@@ -338,13 +338,9 @@ function ab_control(ego, tbn) {
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 <?php
 						if($notdirty && $notprotected):
-?>
-							<input type="checkbox" name="<?=$sphere->cbm_name;?>[]" value="<?=$sphere->row[$sphere->row_identifier()];?>" id="<?=$sphere->row[$sphere->row_identifier()];?>"/>
-<?php
+							$sphere->html_checkbox_cbm(false);
 						else:
-?>
-							<input type="checkbox" name="<?=$sphere->cbm_name;?>[]" value="<?=$sphere->row[$sphere->row_identifier()];?>" id="<?=$sphere->row[$sphere->row_identifier()];?>" disabled="disabled"/>
-<?php
+							$sphere->html_checkbox_cbm(true);
 						endif;
 ?>
 					</td>
@@ -367,8 +363,7 @@ function ab_control(ego, tbn) {
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 <?php
-							$helpinghand = sprintf('%s?uuid=%s',$sphere->mod->scriptname(),$sphere->row[$sphere->row_identifier()]);
-							echo html_row_toolbox($helpinghand,$sphere->sym_mod(),$sphere->sym_del(),$sphere->sym_loc(),$notprotected,$notdirty);
+							echo $sphere->html_toolbox($notprotected,$notdirty);
 ?>
 							<td></td>
 							<td></td>
@@ -381,7 +376,7 @@ function ab_control(ego, tbn) {
 		</tbody>
 		<tfoot>
 <?php
-			echo html_row_add($sphere->mod->scriptname(),$sphere->sym_add(),6);
+			echo $sphere->html_footer_add(6);
 ?>
 		</tfoot>
 	</table>
@@ -389,13 +384,13 @@ function ab_control(ego, tbn) {
 <?php
 		if($sphere->enadis()):
 			if($sphere->toggle()):
-				echo html_button_toggle_rows($sphere->cbm_toggle());
+				echo $sphere->html_button_toggle_rows();
 			else:
-				echo html_button_enable_rows($sphere->cbm_enable());
-				echo html_button_disable_rows($sphere->cbm_disable());
+				echo $sphere->html_button_enable_rows();
+				echo $sphere->html_button_disable_rows();
 			endif;
 		endif;
-		echo html_button_delete_rows($sphere->cbm_delete());
+		echo $sphere->html_button_delete_rows();
 ?>
 	</div>
 	<div id="remarks">
