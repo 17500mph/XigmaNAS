@@ -79,7 +79,6 @@ function system_routes_get_sphere() {
 }
 $sphere = &system_routes_get_sphere();
 if($_POST):
-	$pconfig = $_POST;
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 		if(!file_exists($d_sysrebootreqd_path)):
