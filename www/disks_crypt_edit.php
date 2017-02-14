@@ -217,9 +217,9 @@ function ealgo_change() {
 					*/
 					?>
 					<?php $options = ['AES' => 'AES-XTS','AES-CBC' => 'AES-CBC','Blowfish' => 'Blowfish','Camellia' => 'Camellia','3DES' => '3DES'];?>
-					<?php html_combobox("ealgo", gtext("Encryption Algorithm"), $pconfig['ealgo'], $options, gtext("Encryption algorithm to use."), true, false, "ealgo_change()");?>
+					<?php html_combobox("ealgo", gtext("Algorithm"), $pconfig['ealgo'], $options, gtext("Select an encryption algorithm to use."), true, false, "ealgo_change()");?>
 					<?php $options = ["" => gtext('Default'),128 => '128',192 => '192',256 => '256',448 => '448'];?>
-					<?php html_combobox("keylen", gtext("Key Length"), $pconfig['keylen'], $options, gtext("Key length to use with the given cryptographic algorithm.") . " " . gtext("The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and 192 for 3DES."), false);?>
+					<?php html_combobox("keylen", gtext("Key Length"), $pconfig['keylen'], $options, gtext("Select which key length to use for given cryptographic algorithm.") . " " . gtext("(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and 192 for 3DES)."), false);?>
 					<?php html_passwordconfbox("passphrase", "passphraseconf", gtext("Passphrase"), "", "", "", true);?>
 					<?php html_checkbox("init", gtext("Initialize"), $pconfig['init'] ? true : false, gtext("Initialize and encrypt disk."), gtext("This will erase ALL data on your disk! Do not use this option if you want to add an existing encrypted disk."));?>
 			  </table>
