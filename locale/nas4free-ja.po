@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -418,6 +418,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr ""
 
@@ -657,6 +660,9 @@ msgstr "\"すべてのディレクトリ\"はマウントされたパスが必�
 
 msgid "All disks are imported."
 msgstr "すべてのディスクがインポートされました。"
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1358,9 +1364,6 @@ msgstr "変更"
 msgid "Change below file"
 msgstr "以下のファイルに変更"
 
-msgid "Change password"
-msgstr "パスワード変更"
-
 msgid "Change the IP address of your computer"
 msgstr ""
 
@@ -1422,8 +1425,8 @@ msgstr "コンフィグ消去とディスクのインポート"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
 
-msgid "Clear config and Import disks"
-msgstr "コンフィグ消去とディスクのインポート"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr ""
@@ -1799,9 +1802,6 @@ msgstr ""
 msgid "Create and initialize RAID."
 msgstr "RAIDの作成と初期化"
 
-msgid "Create encrypted volume"
-msgstr "暗号化ボリュームの作成"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "作業用ディレクトリが存在しない場合は作成する。"
 
@@ -2072,6 +2072,9 @@ msgid "Delete Selected Commands"
 msgstr ""
 
 msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
 msgid "Delete Selected Groups"
@@ -2568,13 +2571,6 @@ msgid "Do you really want to delete this target?"
 msgstr "このターゲットを削除してもよろしいですか?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"このボリュームを削除してもよろしいですか?\n"
-"!!! 注意: 全てのデータは無くなってしまい、復旧する事ができません。"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr "本当にインポートしてもよろしいですか？\\n既存コンフィグは上書きされるかもしれません。"
 
@@ -2654,6 +2650,9 @@ msgid "Do you want to delete selected commands?"
 msgstr ""
 
 msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected groups?"
@@ -2883,6 +2882,9 @@ msgid "Edit CARP"
 msgstr ""
 
 msgid "Edit Dataset"
+msgstr ""
+
+msgid "Edit Encrypted Volume"
 msgstr ""
 
 msgid "Edit Group"
@@ -3288,6 +3290,15 @@ msgstr "暗号化"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "暗号化された設定ファイルは自動的にgzip圧縮されます。"
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "'%s' を暗号化中です... お待ちください。"
@@ -3452,6 +3463,9 @@ msgid "Error Code"
 msgstr ""
 
 msgid "Error Level"
+msgstr ""
+
+msgid "Errors have been detected during import."
 msgstr ""
 
 msgid "Event"
@@ -4592,9 +4606,6 @@ msgstr "鍵管理プロトコル"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "暗号化アルゴリズムで使用する鍵長。"
 
-msgid "Kill encrypted volume"
-msgstr "暗号化ボリュームを停止"
-
 msgid "Korean"
 msgstr "韓国語"
 
@@ -5485,6 +5496,9 @@ msgstr "ファイルはアップロードされていませんでした。"
 
 msgid "No new disk found."
 msgstr "新しいディスクがありません。"
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "新しいソフトウェアRAIDがありません。"
@@ -8530,9 +8544,6 @@ msgstr "アップロードされたファイルは部分的にだけアップロ
 msgid "The value of the variable."
 msgstr "変数の値"
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "ボリュームは削除する前に切り離しを行う必要があります。"
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -9789,11 +9800,6 @@ msgstr "警告"
 msgid "Warning Level"
 msgstr ""
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr "警告: 暗号化されたボリュームを削除しようとしています。このボリュームを削除すると含まれているデータはすべて消え復旧できなくなります。"
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -10048,9 +10054,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "暗号化されたディスクをすべてインポートします。"
-
 msgid "and"
 msgstr ""
 
@@ -10064,9 +10067,6 @@ msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
 msgstr "バイト0-1-2=正常ブロック数(ビッグエンディアン)とバイト3-4=システム(フリー)ブロック数としてデコード。"
-
-msgid "detected an error while importing."
-msgstr "インポート中にエラーを検出しました。"
 
 #, php-format
 msgid "e.g. %s"
@@ -10137,9 +10137,6 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr ""
 
-msgid "no new encrypted disk found."
-msgstr "新しい暗号化ディスクは見つかりません。"
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10184,3 +10181,39 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
+
+#~ msgid "Change password"
+#~ msgstr "パスワード変更"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "暗号化ボリュームの作成"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "このボリュームを削除してもよろしいですか?\n"
+#~ "!!! 注意: 全てのデータは無くなってしまい、復旧する事ができません。"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "暗号化ボリュームを停止"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "ボリュームは削除する前に切り離しを行う必要があります。"
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr "警告: 暗号化されたボリュームを削除しようとしています。このボリュームを削除すると含まれているデータはすべて消え復旧できなくなります。"
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "コンフィグ消去とディスクのインポート"
+
+#~ msgid "detected an error while importing."
+#~ msgstr "インポート中にエラーを検出しました。"
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "新しい暗号化ディスクは見つかりません。"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "暗号化されたディスクをすべてインポートします。"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-12 19:23+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"PO-Revision-Date: 2017-02-14 20:25+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -462,6 +462,9 @@ msgstr "CARP Toevoegen"
 msgid "Add Dataset"
 msgstr "Dataset Toevoegen"
 
+msgid "Add Encrypted Volume"
+msgstr "Versleuteld Volume Toevoegen"
+
 msgid "Add Group"
 msgstr "Groep Toevoegen"
 
@@ -490,7 +493,7 @@ msgid "Add Resource"
 msgstr "Bron Toevoegen"
 
 msgid "Add Route"
-msgstr "Route toevoegen"
+msgstr "Route Toevoegen"
 
 msgid "Add Rsync Job"
 msgstr "Rsync Taak Toevoegen"
@@ -715,6 +718,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Alle schijven zijn geïmporteerd."
+
+msgid "All encrypted disks have been imported."
+msgstr "Alle versleutelde schijven zijn geimporteerd."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1480,9 +1486,6 @@ msgstr "Wijzigen"
 msgid "Change below file"
 msgstr "Verander het bestand hieronder"
 
-msgid "Change password"
-msgstr "Verander Wachtwoord"
-
 msgid "Change the IP address of your computer"
 msgstr "Verander het IP-adres van uw computer"
 
@@ -1549,8 +1552,8 @@ msgstr "Config Leegmaken & Importeer Schijven"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Config Leegmaken & Importeer Software RAID Schijven"
 
-msgid "Clear config and Import disks"
-msgstr "Config leegmaken en importeer schijven"
+msgid "Clear Config And Import Disks"
+msgstr "Config Leegmaken en Importeer Schijven"
 
 msgid "Clear device errors"
 msgstr "Wis schijf fouten"
@@ -2004,9 +2007,6 @@ msgstr "Creëer ZFS op een GPT partitie."
 msgid "Create and initialize RAID."
 msgstr "Creëer en initialiseer de RAID."
 
-msgid "Create encrypted volume"
-msgstr "Creëer versleuteld station"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Werkmap aanmaken als deze nog niet bestaat."
 
@@ -2292,6 +2292,9 @@ msgstr "Verwijder Geselecteerde Opdrachten"
 
 msgid "Delete Selected Datasets"
 msgstr "Verwijder Geselecteerde Datasets"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr "Verwijder Geselecteerde Versleutelde Volumes"
 
 msgid "Delete Selected Groups"
 msgstr "Verwijder Geselecteerde Groepen"
@@ -2819,13 +2822,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Weet  u zeker dat u dit doel wilt verwijderen?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Weet u zeker dat u dit volume wilt verwijderen?\\n!!! Opmerking, alle data "
-"zal verloren gaan en kan niet meer hersteld worden. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Weet u zeker dat u wilt importeren?\\nDe bestaande config kan worden "
@@ -2916,6 +2912,9 @@ msgstr "Wilt u de geselecteerde opdrachten verwijderen?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Wilt u de geselecteerde datasets verwijderen?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr "Wilt u de geselecteerde versleutelde volumes verwijderen?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Wilt u de geselecteerde groepen verwijderen?"
@@ -3150,6 +3149,9 @@ msgstr "CARP Bewerken"
 
 msgid "Edit Dataset"
 msgstr "Dataset Bewerken"
+
+msgid "Edit Encrypted Volume"
+msgstr "Versleutelde Volumes Bewerken"
 
 msgid "Edit Group"
 msgstr "Groep Bewerken"
@@ -3570,6 +3572,15 @@ msgstr "Versleuteld"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Versleutelde configuratie wordt automatisch gzipped."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr "Versleuteld Volume is gemarkeerd voor verwijdering"
+
+msgid "Encrypted volume is protected"
+msgstr "Versleuteld Volume is beschermd"
+
+msgid "Encrypted volume is unlocked"
+msgstr "Versleuteld Volume is ontgrendeld"
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Bezig met het versleutelen '%s'... Een ogenblik geduld"
@@ -3762,6 +3773,9 @@ msgstr "Fout Code"
 
 msgid "Error Level"
 msgstr "Fout niveau"
+
+msgid "Errors have been detected during import."
+msgstr "Er zijn fouten opgetreden tijdens het importeren."
 
 msgid "Event"
 msgstr "Gebeurtenis"
@@ -4972,9 +4986,6 @@ msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
 "Sleutellengte om te gebruiken voor de opgegeven cryptografische algoritme."
 
-msgid "Kill encrypted volume"
-msgstr "Versleuteld station opheffen"
-
 msgid "Korean"
 msgstr "Koreaans"
 
@@ -5910,6 +5921,9 @@ msgstr "Er is geen bestand geupload."
 
 msgid "No new disk found."
 msgstr "Er zijn geen nieuwe schijven gevonden."
+
+msgid "No new encrypted disks have been found."
+msgstr "Er zijn geen nieuwe versleutelde schijven gevonden."
 
 msgid "No new software raid disk found."
 msgstr "Er zijn geen nieuwe software raid schijven gevonden."
@@ -6935,7 +6949,7 @@ msgid "Record Maintenance"
 msgstr "Item Onderhoud"
 
 msgid "Record is locked"
-msgstr "Apparaat is vergrendeld"
+msgstr "Item is vergrendeld"
 
 msgid "Record is marked for deletion"
 msgstr "Item is gemarkeerd voor verwijdering"
@@ -8837,7 +8851,7 @@ msgstr ""
 "De firmware wordt nu geïnstalleerd. De server zal automatisch herstarten."
 
 msgid "The following input errors were detected"
-msgstr "De volgende fouten zijn gedetecteerd"
+msgstr "De volgende invoerfouten zijn gedetecteerd"
 
 msgid "The following services will use AD authentication:"
 msgstr "De onderstaande services gebruiken AD verificatie:"
@@ -9194,10 +9208,6 @@ msgstr "Het geuploade bestand werd slechts gedeeltelijk geupload."
 
 msgid "The value of the variable."
 msgstr "De waarde van de variabele."
-
-msgid "The volume must be detached before it can be deleted."
-msgstr ""
-"Het volume moet eerst losgekoppeld worden voordat het kan worden verwijderd."
 
 msgid "The work directory does not exist."
 msgstr "De werkmap bestaat niet."
@@ -10211,7 +10221,7 @@ msgid "Unload"
 msgstr "Verwijder"
 
 msgid "Unlock Selected Records"
-msgstr "Ontgrendel Geselecteerde Items"
+msgstr "Geselecteerde Items Ontgrendelen"
 
 msgid "Unmount Disk/Partition"
 msgstr "Ontkoppel Schijf/Partitie"
@@ -10632,13 +10642,6 @@ msgstr "Waarschuwing"
 msgid "Warning Level"
 msgstr "Waarschuwingsniveau"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Waarschuwing: U gaat een gecodeerd volume verwijderen. Alle gegevens gaan "
-"verloren en kunnen niet meer hersteld worden."
-
 msgid "Watch Directory"
 msgstr "Kijkmap"
 
@@ -10929,9 +10932,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "alle versleutelde schijven worden geïmporteerd."
-
 msgid "and"
 msgstr "en"
 
@@ -10947,9 +10947,6 @@ msgid ""
 msgstr ""
 "gedecodeerd als: byte 0-1-2 = goede blok telling (big endian) en byte 3-4 = "
 "systeem(vrij) blok telling."
-
-msgid "detected an error while importing."
-msgstr "Fout geconstateerd tijdens het importeren."
 
 #, php-format
 msgid "e.g. %s"
@@ -11020,9 +11017,6 @@ msgstr "n.v.t."
 msgid "network traffic"
 msgstr "Netwerkverkeer"
 
-msgid "no new encrypted disk found."
-msgstr "geen nieuwe versleutelde schijven gevonden."
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -11067,3 +11061,42 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
+
+#~ msgid "Change password"
+#~ msgstr "Verander Wachtwoord"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Creëer versleuteld station"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Weet u zeker dat u dit volume wilt verwijderen?\\n!!! Opmerking, alle data "
+#~ "zal verloren gaan en kan niet meer hersteld worden. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Versleuteld station opheffen"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr ""
+#~ "Het volume moet eerst losgekoppeld worden voordat het kan worden verwijderd."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Waarschuwing: U gaat een gecodeerd volume verwijderen. Alle gegevens gaan "
+#~ "verloren en kunnen niet meer hersteld worden."
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "alle versleutelde schijven worden geïmporteerd."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "geen nieuwe versleutelde schijven gevonden."
+
+#~ msgid "detected an error while importing."
+#~ msgstr "Fout geconstateerd tijdens het importeren."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Config leegmaken en importeer schijven"

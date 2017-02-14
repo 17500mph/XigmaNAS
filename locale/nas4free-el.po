@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-02-13 14:51+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -467,6 +467,9 @@ msgstr "Προσθήκη CARP"
 msgid "Add Dataset"
 msgstr "Προσθήκη Dataset"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Προσθήκη Ομάδας"
 
@@ -722,6 +725,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Όλοι οι δίσκοι εισήχθησαν."
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1494,9 +1500,6 @@ msgstr "Τροποποίηση"
 msgid "Change below file"
 msgstr "Αλλαγή κάτω από το αρχείο"
 
-msgid "Change password"
-msgstr "Αλλαγή κωδικού"
-
 msgid "Change the IP address of your computer"
 msgstr "Αλλαγή της διεύθυνσης IP του υπολογιστή σας"
 
@@ -1564,8 +1567,8 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 "Εκκαθάριση του αρχείου ρυθμίσεων & εισαγωγή δίσκων Raid μέσω λογισμικού"
 
-msgid "Clear config and Import disks"
-msgstr "Εκκαθάριση του αρχείου ρυθμίσεων και εισαγωγή δίσκων"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Εκκαθάριση σφαλμάτων συσκευής"
@@ -2024,9 +2027,6 @@ msgstr "Δημιουργία ZFS σε κατάτμηση GPT."
 msgid "Create and initialize RAID."
 msgstr "Δημιουργία και αρχικοποίηση RAID."
 
-msgid "Create encrypted volume"
-msgstr "Δημιουργία κρυπτογραφημένου τόμου"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Δημιουργία φακέλου εργασίας εάν δεν υπάρχει."
 
@@ -2313,6 +2313,9 @@ msgstr "Διαγραφή Επιλεγμένων Εντολών"
 
 msgid "Delete Selected Datasets"
 msgstr "Διαγραφή Επιλεγμένων Dataset"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Διαγραφή Επιλεγμένων Ομάδων"
@@ -2841,13 +2844,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Θέλετε σίγουρα να διαγράψετε αυτόν τον προορισμό;"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Θέλετε σίγουρα να διαγράψετε αυτόν τον τόμο;\\n!!! Προσοχή, όλα τα δεδομένα "
-"θα χαθούν και δεν μπορούν να ανακτηθούν. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Θέλετε πραγματικά να κάνετε εισαγωγή;\\nΤο υπάρχον αρχείο ρυθμίσεων ίσως να "
@@ -2939,6 +2935,9 @@ msgstr "Θέλετε να διαγράψετε τις επιλεγμένες ε�
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα dataset;"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες ομάδες;"
@@ -3174,6 +3173,9 @@ msgstr "Επεξεργασία CARP"
 
 msgid "Edit Dataset"
 msgstr "Επεξεργασία dataset"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Επεξεργασία Ομάδας"
@@ -3596,6 +3598,15 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr ""
 "Το κρυπτογραφημένο αρχείο ρυθμίσεων συμπιέζεται αυτόματα σε μορφή gzip."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Κρυπτογράφηση του '%s'... Παρακαλώ περιμένετε"
@@ -3790,6 +3801,9 @@ msgstr "Κωδικός Σφάλματος"
 
 msgid "Error Level"
 msgstr "Επίπεδο Σφαλμάτων"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Συμβάν"
@@ -5020,9 +5034,6 @@ msgstr "Πρωτόκολλο διαχείρισης κωδικών"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Μήκος κλειδιού για χρήση με το δεδομένο αλγόριθμο κρυπτογράφησης."
 
-msgid "Kill encrypted volume"
-msgstr "Καταστροφή κρυπτογραφημένου τόμου"
-
 msgid "Korean"
 msgstr "Κορεατικά"
 
@@ -5962,6 +5973,9 @@ msgstr "Κανένα αρχείο δεν ανέβηκε."
 
 msgid "No new disk found."
 msgstr "Δεν βρέθηκαν νέοι δίσκοι."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Δεν βρέθηκαν νέοι δίσκοι σε raid μέσω λογισμικού."
@@ -9297,9 +9311,6 @@ msgstr "Το μεταφορτωμένο αρχείο φορτώθηκε μόνο
 msgid "The value of the variable."
 msgstr "Η τιμή της μεταβλητής."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Ο τόμος πρέπει να αποσυνδεθεί πριν να διαγραφεί."
-
 msgid "The work directory does not exist."
 msgstr "Ο φάκελος εργασίας δεν υπάρχει."
 
@@ -10764,13 +10775,6 @@ msgstr "Προειδοποίηση"
 msgid "Warning Level"
 msgstr "Επίπεδο Προειδοποίησης"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Προσοχή: Πρόκειται να διαγράψετε ένα κρυπτογραφημένο τόμο. Όλα τα δεδομένα "
-"θα χαθούν και δεν θα μπορούν να ανακτηθούν."
-
 msgid "Watch Directory"
 msgstr "Φάκελος Παρακολούθησης"
 
@@ -11068,9 +11072,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "όλοι οι κρυπτογραφημένοι δίσκοι εισήχθησαν."
-
 msgid "and"
 msgstr "και"
 
@@ -11086,9 +11087,6 @@ msgid ""
 msgstr ""
 "αποκωδικοποιείται ως: byte 0-1-2 = αριθμός καλών block (big endian) και byte "
 "3-4 = αριθμός block συστήματος (ελεύθερων)."
-
-msgid "detected an error while importing."
-msgstr "ανιχνεύθηκε ένα σφάλμα κατά τη διαδικασία εισαγωγής"
 
 #, php-format
 msgid "e.g. %s"
@@ -11159,9 +11157,6 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr "κίνηση δικτύου"
 
-msgid "no new encrypted disk found."
-msgstr "δεν βρέθηκε κάποιος νέος κρυπτογραφημένος δίσκος"
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -11206,3 +11201,41 @@ msgstr "σε"
 
 msgid "umount"
 msgstr "αποπροσάρτηση"
+
+#~ msgid "Change password"
+#~ msgstr "Αλλαγή κωδικού"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Δημιουργία κρυπτογραφημένου τόμου"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Θέλετε σίγουρα να διαγράψετε αυτόν τον τόμο;\\n!!! Προσοχή, όλα τα δεδομένα "
+#~ "θα χαθούν και δεν μπορούν να ανακτηθούν. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Καταστροφή κρυπτογραφημένου τόμου"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Ο τόμος πρέπει να αποσυνδεθεί πριν να διαγραφεί."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Προσοχή: Πρόκειται να διαγράψετε ένα κρυπτογραφημένο τόμο. Όλα τα δεδομένα "
+#~ "θα χαθούν και δεν θα μπορούν να ανακτηθούν."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Εκκαθάριση του αρχείου ρυθμίσεων και εισαγωγή δίσκων"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "όλοι οι κρυπτογραφημένοι δίσκοι εισήχθησαν."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "δεν βρέθηκε κάποιος νέος κρυπτογραφημένος δίσκος"
+
+#~ msgid "detected an error while importing."
+#~ msgstr "ανιχνεύθηκε ένα σφάλμα κατά τη διαδικασία εισαγωγής"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-02-07 13:44+0000\n"
 "Last-Translator: Emil <emil46@autograf.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -441,6 +441,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr "Dodaj zestaw danych"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr ""
 
@@ -690,6 +693,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Wszystkie dyski zostały zaimportowane"
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1412,9 +1418,6 @@ msgstr "Zmień"
 msgid "Change below file"
 msgstr "Zmień poniższy plik"
 
-msgid "Change password"
-msgstr "Zmień hasło"
-
 msgid "Change the IP address of your computer"
 msgstr "Zmień adres IP Twojego komputera"
 
@@ -1476,8 +1479,8 @@ msgstr "Wyczyść konfigurację i zaimportuj dyski"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Wyczyść konfigurację i zaimportuj programowe macierze RAID"
 
-msgid "Clear config and Import disks"
-msgstr "Wyczyść konfiguracje i zaimportuj dyski"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr ""
@@ -1855,9 +1858,6 @@ msgstr ""
 msgid "Create and initialize RAID."
 msgstr "Utwórz i zainicjuj macierz RAID"
 
-msgid "Create encrypted volume"
-msgstr "Utwórz zaszyfrowany wolumin"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Stwórz katalog roboczy jeśli nie istnieje."
 
@@ -2129,6 +2129,9 @@ msgstr "Usuń wybrane polecenie."
 
 msgid "Delete Selected Datasets"
 msgstr "Usuń zaznaczone zbiory danych"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr ""
@@ -2639,13 +2642,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Czy na pewno chcesz usunąć ten cel?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Czy na pewno chcesz usunąć ten wolumin?\\n!!! Uwaga, wszystkie dane zostaną "
-"utracone i nie będzie możliwe ich odzyskanie. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Naprawdę chcesz zaimportować?\\nIstniejąca konfiguracja może zostać nadpisana"
@@ -2727,6 +2723,9 @@ msgstr "Czy chcesz usunąć wybrane polecenia ?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Czy chcesz usunąć wybrane zestawy danych ?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr ""
@@ -2956,6 +2955,9 @@ msgid "Edit CARP"
 msgstr ""
 
 msgid "Edit Dataset"
+msgstr ""
+
+msgid "Edit Encrypted Volume"
 msgstr ""
 
 msgid "Edit Group"
@@ -3371,6 +3373,15 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr ""
 "Zaszyfrowana konfiguracja zostanie automatycznie skompresowana gzip'em"
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Szyfrowanie '%s'... Proszę czekać"
@@ -3543,6 +3554,9 @@ msgid "Error Code"
 msgstr "Kod błędu"
 
 msgid "Error Level"
+msgstr ""
+
+msgid "Errors have been detected during import."
 msgstr ""
 
 msgid "Event"
@@ -4716,9 +4730,6 @@ msgstr "Protokół zarządzania kluczami"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Długość klucza użytego dla danego algorytmu szyfrowania."
 
-msgid "Kill encrypted volume"
-msgstr "Zabij zaszyfrowany wolumen"
-
 msgid "Korean"
 msgstr "Koreański"
 
@@ -5610,6 +5621,9 @@ msgstr "?Nie wysłano pliku."
 
 msgid "No new disk found."
 msgstr "Nie znaleziono nowych dysków."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Nie znaleziono nowych programowych dysków RAID"
@@ -8726,9 +8740,6 @@ msgstr "Plik został wysłany tylko częściowo."
 msgid "The value of the variable."
 msgstr "Wartość zmiennej."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Wolumin musi być odłączony przed usunięciem."
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -10016,13 +10027,6 @@ msgstr "Ostrzeżenie"
 msgid "Warning Level"
 msgstr "Poziom ostrzeżenia"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Uwaga! Zamierzasz usunąć zaszyfrowany wolumen. Wszystkie dane zostaną "
-"utracone i nie będą mogły być przywrócone."
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -10286,9 +10290,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "Wszystkie zaszyfrowane dyski zostały zaimportowane"
-
 msgid "and"
 msgstr "i"
 
@@ -10302,9 +10303,6 @@ msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
 msgstr ""
-
-msgid "detected an error while importing."
-msgstr "Wykryto błąd w czasie importowania."
 
 #, php-format
 msgid "e.g. %s"
@@ -10375,9 +10373,6 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr ""
 
-msgid "no new encrypted disk found."
-msgstr "nie znaleziono nowych zaszyfrowanych dysków"
-
 msgid "noVNC"
 msgstr ""
 
@@ -10422,3 +10417,41 @@ msgstr "do"
 
 msgid "umount"
 msgstr "odmontuj"
+
+#~ msgid "Change password"
+#~ msgstr "Zmień hasło"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Czy na pewno chcesz usunąć ten wolumin?\\n!!! Uwaga, wszystkie dane zostaną "
+#~ "utracone i nie będzie możliwe ich odzyskanie. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Zabij zaszyfrowany wolumen"
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Uwaga! Zamierzasz usunąć zaszyfrowany wolumen. Wszystkie dane zostaną "
+#~ "utracone i nie będą mogły być przywrócone."
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Utwórz zaszyfrowany wolumin"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Wolumin musi być odłączony przed usunięciem."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Wyczyść konfiguracje i zaimportuj dyski"
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "nie znaleziono nowych zaszyfrowanych dysków"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "Wszystkie zaszyfrowane dyski zostały zaimportowane"
+
+#~ msgid "detected an error while importing."
+#~ msgstr "Wykryto błąd w czasie importowania."

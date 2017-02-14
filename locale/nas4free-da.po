@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -415,6 +415,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr ""
 
@@ -654,6 +657,9 @@ msgstr "Alle mapper kræver en monteret sti, men stien %s er ikke monteret."
 
 msgid "All disks are imported."
 msgstr "Alle diske er importeret."
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1364,9 +1370,6 @@ msgstr "Skift"
 msgid "Change below file"
 msgstr "Rediger nedenstående fil"
 
-msgid "Change password"
-msgstr "Skift adgangskode"
-
 msgid "Change the IP address of your computer"
 msgstr ""
 
@@ -1430,8 +1433,8 @@ msgstr ""
 msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 
-msgid "Clear config and Import disks"
-msgstr "Slet konfiguration og importer diske"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr ""
@@ -1804,9 +1807,6 @@ msgstr ""
 msgid "Create and initialize RAID."
 msgstr "Opret og initialiser RAID."
 
-msgid "Create encrypted volume"
-msgstr "Opret krypteret volume"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Opret arbejdsmappen, hvis den ikke eksisterer."
 
@@ -2079,6 +2079,9 @@ msgid "Delete Selected Commands"
 msgstr ""
 
 msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
 msgid "Delete Selected Groups"
@@ -2588,13 +2591,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Vil du virkelig slette dette mål?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Vil du virkelig slette dette volume?\\n!!! Bemærk, alt data går tabt og kan "
-"ikke gendannes. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Vil du virkelig importere?\\Eksisterende konfiguration kan blive overskrevet."
@@ -2675,6 +2671,9 @@ msgid "Do you want to delete selected commands?"
 msgstr ""
 
 msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected groups?"
@@ -2904,6 +2903,9 @@ msgid "Edit CARP"
 msgstr ""
 
 msgid "Edit Dataset"
+msgstr ""
+
+msgid "Edit Encrypted Volume"
 msgstr ""
 
 msgid "Edit Group"
@@ -3311,6 +3313,15 @@ msgstr "Krypteret"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Krypteret konfiguration er automatisk gzippet."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Krypterer '%s'... Vent venligst"
@@ -3483,6 +3494,9 @@ msgid "Error Code"
 msgstr ""
 
 msgid "Error Level"
+msgstr ""
+
+msgid "Errors have been detected during import."
 msgstr ""
 
 msgid "Event"
@@ -4643,9 +4657,6 @@ msgstr "Key Management Protokol"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Nøglelængde der skal bruges med den angivne krypterings algoritme"
 
-msgid "Kill encrypted volume"
-msgstr "Dræb krypteret volume"
-
 msgid "Korean"
 msgstr "Koreansk"
 
@@ -5541,6 +5552,9 @@ msgstr "Ingen fil blev oploaded."
 
 msgid "No new disk found."
 msgstr "Ingen ny disk fundet"
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Ingen nye software raid disk fundet."
@@ -8664,9 +8678,6 @@ msgstr "Den uploadede fil blev kun delvist uploaded."
 msgid "The value of the variable."
 msgstr "Variablens værdi."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Volumen skal frakobles inden den kan slettes."
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -9981,13 +9992,6 @@ msgstr "Advarsel"
 msgid "Warning Level"
 msgstr ""
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Advarsel: Du er ved at slette en krypteret volume. Alt data bliver tabt, og "
-"kan ikke gendannes."
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -10248,9 +10252,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "alle krypterede diske er importeret"
-
 msgid "and"
 msgstr ""
 
@@ -10263,9 +10264,6 @@ msgstr "chroot() alle, undtagen root."
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
-msgstr ""
-
-msgid "detected an error while importing."
 msgstr ""
 
 #, php-format
@@ -10337,9 +10335,6 @@ msgstr "Ikke tilgængelig"
 msgid "network traffic"
 msgstr ""
 
-msgid "no new encrypted disk found."
-msgstr "ingen ny krypteret disk fundet"
-
 msgid "noVNC"
 msgstr ""
 
@@ -10384,3 +10379,38 @@ msgstr "til"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Change password"
+#~ msgstr "Skift adgangskode"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Opret krypteret volume"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Vil du virkelig slette dette volume?\\n!!! Bemærk, alt data går tabt og kan "
+#~ "ikke gendannes. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Dræb krypteret volume"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Volumen skal frakobles inden den kan slettes."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Advarsel: Du er ved at slette en krypteret volume. Alt data bliver tabt, og "
+#~ "kan ikke gendannes."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Slet konfiguration og importer diske"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "alle krypterede diske er importeret"
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "ingen ny krypteret disk fundet"

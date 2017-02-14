@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-02-12 18:35+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -437,6 +437,9 @@ msgstr "Lägg till CARP"
 msgid "Add Dataset"
 msgstr "Lägg till Dataset"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Lägg till grupp"
 
@@ -685,6 +688,9 @@ msgstr "Alla kataloger kräver en sökväg, men Sökvägen %s är inte monterad.
 
 msgid "All disks are imported."
 msgstr "Alla diskar är importerade."
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1430,9 +1436,6 @@ msgstr "Ändra"
 msgid "Change below file"
 msgstr "Ändra filen nedan"
 
-msgid "Change password"
-msgstr "Byt lösenord"
-
 msgid "Change the IP address of your computer"
 msgstr "Byt IP-adress på din dator"
 
@@ -1496,8 +1499,8 @@ msgstr "Rensa konfiguration & importera diskar"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Rensa konfiguration & importera mjukvaruraiddiskar"
 
-msgid "Clear config and Import disks"
-msgstr "Rensa inställningar och importera diskar"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Rensa enhetsfel"
@@ -1929,9 +1932,6 @@ msgstr "Skapa ZFS på en GPT partition"
 msgid "Create and initialize RAID."
 msgstr "Skapa och initialisera RAID."
 
-msgid "Create encrypted volume"
-msgstr "Skapa krypterad volym"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Skapa katalogen om den inte finns."
 
@@ -2216,6 +2216,9 @@ msgstr "Ta bort valda kommandon"
 
 msgid "Delete Selected Datasets"
 msgstr "Ta bort valda Dataset"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Ta bort valda grupper"
@@ -2735,13 +2738,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Vill du verkligen ta bort det här målet?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Vill du verkligen radera den här volymen?\\n!!! OBSERVERA: all data kommer "
-"att gå förlorad och kan inte återställas. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Vill du verkligen importera?\\n Aktuella inställningar kan skrivas över."
@@ -2823,6 +2819,9 @@ msgstr "Vill du ta bort valda kommandon?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Vill du ta bort valda dataset?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Vill du ta bort valda grupper?"
@@ -3053,6 +3052,9 @@ msgstr "Ändra CARP"
 
 msgid "Edit Dataset"
 msgstr "Ändra Dataset"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Redigera grupp"
@@ -3467,6 +3469,15 @@ msgstr "Krypterad"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Krypterad konfiguration komprimeras automatisk till gzip"
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Krypterar '%s'... Var god vänta"
@@ -3655,6 +3666,9 @@ msgstr "Felkod"
 
 msgid "Error Level"
 msgstr "Felnivå"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Händelse"
@@ -4853,9 +4867,6 @@ msgstr "Nyckelhanteringsprotokoll"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Nyckellängd att använda för den givna kryptografiska algoritmen."
 
-msgid "Kill encrypted volume"
-msgstr "Döda krypterad volym"
-
 msgid "Korean"
 msgstr "Koreanska"
 
@@ -5761,6 +5772,9 @@ msgstr "Ingen fil laddades upp."
 
 msgid "No new disk found."
 msgstr "Inga nya diskar hittades."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Inga nya mjukvaroraid hårddiskar hittades."
@@ -8990,9 +9004,6 @@ msgstr "Den uppladdade filen blev inte fullständigt överförd."
 msgid "The value of the variable."
 msgstr "Värdet på variabeln."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Volymen måste frånkopplas innan den kan raderas."
-
 msgid "The work directory does not exist."
 msgstr "Arbetskatalogen finns inte."
 
@@ -10395,13 +10406,6 @@ msgstr "Varning"
 msgid "Warning Level"
 msgstr "Varningsnivåer"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Varning: Du är på väg att radera en krypterad-volym. Alla data kommer att "
-"förloras och kommer inte kunna återskapas."
-
 msgid "Watch Directory"
 msgstr "Övervakningskatalog"
 
@@ -10684,9 +10688,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "alla krypterade diskar är importerade"
-
 msgid "and"
 msgstr "och"
 
@@ -10702,9 +10703,6 @@ msgid ""
 msgstr ""
 "kodat som: byte 0-1-2 = antal bra block (big endian) och byte 3-4 = antal "
 "systemblock (lediga)."
-
-msgid "detected an error while importing."
-msgstr "ett fel upptäcktes vid importen"
 
 #, php-format
 msgid "e.g. %s"
@@ -10775,9 +10773,6 @@ msgstr "ej tillgängligt"
 msgid "network traffic"
 msgstr "nätverlstrafik"
 
-msgid "no new encrypted disk found."
-msgstr "inga nya krypterade diskar hittades"
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10822,3 +10817,41 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Change password"
+#~ msgstr "Byt lösenord"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Skapa krypterad volym"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Vill du verkligen radera den här volymen?\\n!!! OBSERVERA: all data kommer "
+#~ "att gå förlorad och kan inte återställas. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Döda krypterad volym"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Volymen måste frånkopplas innan den kan raderas."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Varning: Du är på väg att radera en krypterad-volym. Alla data kommer att "
+#~ "förloras och kommer inte kunna återskapas."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Rensa inställningar och importera diskar"
+
+#~ msgid "detected an error while importing."
+#~ msgstr "ett fel upptäcktes vid importen"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "alla krypterade diskar är importerade"
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "inga nya krypterade diskar hittades"

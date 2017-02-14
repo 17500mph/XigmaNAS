@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-02-12 19:27+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -449,6 +449,9 @@ msgstr "Добавить CARP"
 msgid "Add Dataset"
 msgstr "Добавить Dataset"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Добавить группу"
 
@@ -701,6 +704,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Все диски импортированы"
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1459,9 +1465,6 @@ msgstr "Изменить"
 msgid "Change below file"
 msgstr "Заменить файлом, указанным ниже"
 
-msgid "Change password"
-msgstr "Изменить пароль"
-
 msgid "Change the IP address of your computer"
 msgstr "Изменить IP-адрес вашего компьютера"
 
@@ -1527,8 +1530,8 @@ msgstr "Очистить конфигурацию и импортировать 
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Очистить конфигурацию и импортировать программные рейд диски"
 
-msgid "Clear config and Import disks"
-msgstr "Очистить конфигурацию и импортировать диски"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Очистить ошибки устройства (Clear device errors)"
@@ -1972,9 +1975,6 @@ msgstr "Создание ZFS на раздел GPT."
 msgid "Create and initialize RAID."
 msgstr "Создать и инициализировать RAID"
 
-msgid "Create encrypted volume"
-msgstr "Создать зашифрованный том"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Создать рабочий каталог, если он не существует"
 
@@ -2259,6 +2259,9 @@ msgstr "Удалить выбранные команды"
 
 msgid "Delete Selected Datasets"
 msgstr "Удалить выбранные Dataset'ы"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Удалить выбранные группы"
@@ -2779,13 +2782,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Вы действительно хотите удалить эту цель?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Вы действительно хотите удалить этот раздел?\\n*** Внимание, все данные "
-"будут потеряны и не смогут быть восстановлены! ***"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Вы действительно хотите импортировать?\\nСуществующая конфигурация может "
@@ -2872,6 +2868,9 @@ msgstr "Вы уверены, что желаете удалить выбранн
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Вы действительно желаете удалить выбранные Dataset'ы?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Вы уверены, что хотите удалить выбранные группы?"
@@ -3107,6 +3106,9 @@ msgstr "Редактировать CARP"
 
 msgid "Edit Dataset"
 msgstr "Редактировать Dataset"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Редактировать группу"
@@ -3523,6 +3525,15 @@ msgstr "Зашифровано"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Зашифрованная конфигурация будет автоматически сжата."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Шифруется '%s'... Пожалуйста, подождите..."
@@ -3714,6 +3725,9 @@ msgstr "Код ошибки"
 
 msgid "Error Level"
 msgstr "Уровень ошибки"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Событие"
@@ -4927,9 +4941,6 @@ msgstr "Протокол управления ключом"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Длина ключа, используемого с выбранным алгоритмом шифрования."
 
-msgid "Kill encrypted volume"
-msgstr "Удалить зашифрованный том"
-
 msgid "Korean"
 msgstr "Корейский"
 
@@ -5864,6 +5875,9 @@ msgstr "&=&Файл не был загружен."
 
 msgid "No new disk found."
 msgstr "Не найдено нового диска."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Не найдено нового диска программного RAID."
@@ -9121,9 +9135,6 @@ msgstr "Загружаемый файл был загружен лишь час�
 msgid "The value of the variable."
 msgstr "Значение переменной."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Том должен быть отсоединен перед удалением."
-
 msgid "The work directory does not exist."
 msgstr "Рабочий каталог не существует."
 
@@ -10546,13 +10557,6 @@ msgstr "Внимание"
 msgid "Warning Level"
 msgstr "Уровень предупреждений"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Внимание: Вы собираетесь удалить зашифрованный раздел. Все данные будут "
-"потеряны и не могут быть восстановлены."
-
 msgid "Watch Directory"
 msgstr "Дежурный каталог"
 
@@ -10840,9 +10844,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "все диски использующие шифрование импортированы."
-
 msgid "and"
 msgstr "и"
 
@@ -10858,9 +10859,6 @@ msgid ""
 msgstr ""
 "расшифровывается как: байт=0-1-2 = кол. хороших блоков (Big Endian) и байт=3-"
 "4 = кол. системных (свободных) блоков."
-
-msgid "detected an error while importing."
-msgstr "обнаружена ошибка во время импортирования."
 
 #, php-format
 msgid "e.g. %s"
@@ -10933,9 +10931,6 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr "Сетевой трафик"
 
-msgid "no new encrypted disk found."
-msgstr "новый диск использующий шифрование не найден."
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10982,3 +10977,41 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
+
+#~ msgid "Change password"
+#~ msgstr "Изменить пароль"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Создать зашифрованный том"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Вы действительно хотите удалить этот раздел?\\n*** Внимание, все данные "
+#~ "будут потеряны и не смогут быть восстановлены! ***"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Удалить зашифрованный том"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Том должен быть отсоединен перед удалением."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Внимание: Вы собираетесь удалить зашифрованный раздел. Все данные будут "
+#~ "потеряны и не могут быть восстановлены."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Очистить конфигурацию и импортировать диски"
+
+#~ msgid "detected an error while importing."
+#~ msgstr "обнаружена ошибка во время импортирования."
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "все диски использующие шифрование импортированы."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "новый диск использующий шифрование не найден."
