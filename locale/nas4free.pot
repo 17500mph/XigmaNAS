@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -359,6 +359,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr ""
 
@@ -589,6 +592,9 @@ msgid "All dirs requires mounted path, but Path %s is not mounted."
 msgstr ""
 
 msgid "All disks are imported."
+msgstr ""
+
+msgid "All encrypted disks have been imported."
 msgstr ""
 
 msgid "All shares use the option 'usedots' thus making the filenames .Parent and anything beginning with .Apple illegal."
@@ -1232,9 +1238,6 @@ msgstr ""
 msgid "Change below file"
 msgstr ""
 
-msgid "Change password"
-msgstr ""
-
 msgid "Change the IP address of your computer"
 msgstr ""
 
@@ -1295,7 +1298,7 @@ msgstr ""
 msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 
-msgid "Clear config and Import disks"
+msgid "Clear Config And Import Disks"
 msgstr ""
 
 msgid "Clear device errors"
@@ -1591,9 +1594,6 @@ msgstr ""
 msgid "Create and initialize RAID."
 msgstr ""
 
-msgid "Create encrypted volume"
-msgstr ""
-
 msgid "Create work directory if it doesn't exist."
 msgstr ""
 
@@ -1853,6 +1853,9 @@ msgid "Delete Selected Commands"
 msgstr ""
 
 msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
 msgid "Delete Selected Groups"
@@ -2322,9 +2325,6 @@ msgstr ""
 msgid "Do you really want to delete this target?"
 msgstr ""
 
-msgid "Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!"
-msgstr ""
-
 msgid "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 
@@ -2404,6 +2404,9 @@ msgid "Do you want to delete selected commands?"
 msgstr ""
 
 msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected groups?"
@@ -2632,6 +2635,9 @@ msgid "Edit CARP"
 msgstr ""
 
 msgid "Edit Dataset"
+msgstr ""
+
+msgid "Edit Encrypted Volume"
 msgstr ""
 
 msgid "Edit Group"
@@ -3024,6 +3030,15 @@ msgstr ""
 msgid "Encrypted configuration is automatically gzipped."
 msgstr ""
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr ""
@@ -3162,6 +3177,9 @@ msgid "Error Code"
 msgstr ""
 
 msgid "Error Level"
+msgstr ""
+
+msgid "Errors have been detected during import."
 msgstr ""
 
 msgid "Event"
@@ -4216,9 +4234,6 @@ msgstr ""
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
 
-msgid "Kill encrypted volume"
-msgstr ""
-
 msgid "Korean"
 msgstr ""
 
@@ -5054,6 +5069,9 @@ msgid "No file was uploaded."
 msgstr ""
 
 msgid "No new disk found."
+msgstr ""
+
+msgid "No new encrypted disks have been found."
 msgstr ""
 
 msgid "No new software raid disk found."
@@ -7837,9 +7855,6 @@ msgstr ""
 msgid "The value of the variable."
 msgstr ""
 
-msgid "The volume must be detached before it can be deleted."
-msgstr ""
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -8902,9 +8917,6 @@ msgstr ""
 msgid "Warning Level"
 msgstr ""
 
-msgid "Warning: You are going to delete an encrypted volume. All data will get lost and can not be recovered."
-msgstr ""
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -9134,9 +9146,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr ""
 
-msgid "all encrypted disks are imported."
-msgstr ""
-
 msgid "and"
 msgstr ""
 
@@ -9147,9 +9156,6 @@ msgid "chroot() everyone, but root."
 msgstr ""
 
 msgid "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = system(free) block count."
-msgstr ""
-
-msgid "detected an error while importing."
 msgstr ""
 
 #, php-format
@@ -9219,9 +9225,6 @@ msgid "n/a"
 msgstr ""
 
 msgid "network traffic"
-msgstr ""
-
-msgid "no new encrypted disk found."
 msgstr ""
 
 msgid "noVNC"
