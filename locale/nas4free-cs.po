@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-02-12 20:32+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -108,6 +108,11 @@ msgstr "„%s“ smaže veškeré statistické údaje z grafů!"
 
 msgid "(Change if needed)"
 msgstr "(v případě potřeby změňte)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(vyskytuje se v discích Maxtor 6B200M0 200GB a 2R015H1 15 GB)."
@@ -681,6 +686,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Výstražná úroveň"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Vše"
@@ -3510,9 +3518,6 @@ msgstr "Šifrování %s – čekejte…"
 msgid "Encryption"
 msgstr "Šifrování"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3524,9 +3529,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "Šifrovací algoritmus"
-
-msgid "Encryption algorithm to use."
-msgstr "Jaký šifrovací algoritmus použít."
 
 msgid "English"
 msgstr "angličtina"
@@ -4887,9 +4889,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Protokol správy klíčů"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Délka klíče pro daný šifrovací algoritmus."
 
 msgid "Korean"
 msgstr "korejština"
@@ -7405,6 +7404,9 @@ msgstr "Vyberte formát datumu."
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Vyberte formát souborového systému."
 
@@ -7464,6 +7466,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8628,13 +8633,6 @@ msgstr "Výchozí port SMTP poštovního serveru, např. 25 nebo 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr "Výchozí základní rozlišený název (DN), použit pro hledání, např. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Výchozí délky klíčů jsou: 128 pro AES, 128 pro Blowfish, 128 pro Camellia a "
-"192 pro 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr "Výchozí doba pro zobrazení."
@@ -10866,8 +10864,18 @@ msgstr "odpojit (umount)"
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Zlikvidovat šifrovaný svazek"
 
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Výchozí délky klíčů jsou: 128 pro AES, 128 pro Blowfish, 128 pro Camellia a "
+#~ "192 pro 3DES."
+
 #~ msgid "no new encrypted disk found."
 #~ msgstr "nebyl nalezen žádný nový šifrovaný disk."
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Délka klíče pro daný šifrovací algoritmus."
 
 #~ msgid "Clear config and Import disks"
 #~ msgstr "Vyčistit nastavení a importovat disky"
@@ -10888,6 +10896,9 @@ msgstr "odpojit (umount)"
 #~ msgstr ""
 #~ "Opravdu chcete tento svazek odstranit?\\n!!! Pozor, veškerá data budou "
 #~ "ztracena a nebude možné je obnovit. !!!"
+
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Jaký šifrovací algoritmus použít."
 
 #~ msgid "all encrypted disks are imported."
 #~ msgstr "všechny šifrované disky jsou importovány."

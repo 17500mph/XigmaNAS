@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -107,6 +107,11 @@ msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(Eğer gerekli ise değiştir)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -624,6 +629,9 @@ msgid ""
 msgstr ""
 
 msgid "Alert Level"
+msgstr ""
+
+msgid "Algorithm"
 msgstr ""
 
 msgid "All"
@@ -3294,9 +3302,6 @@ msgstr "'%s' şifreleniyor...Lütfen Bekleyin"
 msgid "Encryption"
 msgstr "Şifreleme"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3308,9 +3313,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "Şifreleme Algoritması"
-
-msgid "Encryption algorithm to use."
-msgstr ""
 
 msgid "English"
 msgstr "İngilizce"
@@ -4580,9 +4582,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Anahtar Yönetim Protokolü"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr ""
 
 msgid "Korean"
 msgstr "Korece"
@@ -6971,6 +6970,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7025,6 +7027,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8097,13 +8102,6 @@ msgstr "Varsayılan SMTP mail sunucu portu,  25 veya 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Varsayılan anahtar uzunlukları: AES için 128, Blowfish için 128, Camellia "
-"için 128 ve 3DES 192."
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
@@ -10081,6 +10079,13 @@ msgstr "umount"
 
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Şifrelenmiş Volümü Sil"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Varsayılan anahtar uzunlukları: AES için 128, Blowfish için 128, Camellia "
+#~ "için 128 ve 3DES 192."
 
 #~ msgid "Change password"
 #~ msgstr "Parolayı değiştir"

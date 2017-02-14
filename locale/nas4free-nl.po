@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
-"PO-Revision-Date: 2017-02-14 20:25+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"PO-Revision-Date: 2017-02-14 22:51+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -108,6 +108,13 @@ msgstr "'%s' verwijdert alle statistische gegevens uit de grafieken!"
 
 msgid "(Change if needed)"
 msgstr "(Wijzig indien nodig)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
+"(Standaard lengtes zijn: 128 voor AES, 128 voor Blowfish, 128 voor Camellia "
+"en 192 voor 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -463,7 +470,7 @@ msgid "Add Dataset"
 msgstr "Dataset Toevoegen"
 
 msgid "Add Encrypted Volume"
-msgstr "Versleuteld Volume Toevoegen"
+msgstr "Gecodeerd Volume Toevoegen"
 
 msgid "Add Group"
 msgstr "Groep Toevoegen"
@@ -691,6 +698,9 @@ msgstr ""
 msgid "Alert Level"
 msgstr "Waarschuwings niveau"
 
+msgid "Algorithm"
+msgstr "Algoritme"
+
 msgid "All"
 msgstr "Alle"
 
@@ -720,7 +730,7 @@ msgid "All disks are imported."
 msgstr "Alle schijven zijn geïmporteerd."
 
 msgid "All encrypted disks have been imported."
-msgstr "Alle versleutelde schijven zijn geimporteerd."
+msgstr "Alle gecodeerde schijven zijn geimporteerd."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1563,7 +1573,7 @@ msgid ""
 "file or XML format."
 msgstr ""
 "Druk op de knop 'Configuratie Opslaan' om de huidige serverconfiguratie op "
-"te slaan als versleutelde GZIP bestand of XML-formaat."
+"te slaan in gecodeerd GZIP bestand of XML-formaat."
 
 msgid "Client"
 msgstr "Werkstation"
@@ -2294,7 +2304,7 @@ msgid "Delete Selected Datasets"
 msgstr "Verwijder Geselecteerde Datasets"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr "Verwijder Geselecteerde Versleutelde Volumes"
+msgstr "Verwijder Geselecteerde Gecodeerde Volumes"
 
 msgid "Delete Selected Groups"
 msgstr "Verwijder Geselecteerde Groepen"
@@ -2914,7 +2924,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Wilt u de geselecteerde datasets verwijderen?"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr "Wilt u de geselecteerde versleutelde volumes verwijderen?"
+msgstr "Wilt u de geselecteerde gecodeerde volumes verwijderen?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Wilt u de geselecteerde groepen verwijderen?"
@@ -3151,7 +3161,7 @@ msgid "Edit Dataset"
 msgstr "Dataset Bewerken"
 
 msgid "Edit Encrypted Volume"
-msgstr "Versleutelde Volumes Bewerken"
+msgstr "Gecodeerde Volumes Bewerken"
 
 msgid "Edit Group"
 msgstr "Groep Bewerken"
@@ -3558,38 +3568,35 @@ msgid "Enabled"
 msgstr "Ingeschakeld"
 
 msgid "Encrypt Password"
-msgstr "Wachtwoord Versleutelen"
+msgstr "Codeer Wachtwoord"
 
 msgid "Encrypt password"
-msgstr "Wachtwoord versleutelen"
+msgstr "Codeer wachtwoord"
 
 msgid "Encrypt password (confirmed)"
-msgstr "Wachtwoord versleutelen (Bevestiging)"
+msgstr "Codeer wachtwoord (Bevestiging)"
 
 msgid "Encrypted"
-msgstr "Versleuteld"
+msgstr "Gecodeerd"
 
 msgid "Encrypted configuration is automatically gzipped."
-msgstr "Versleutelde configuratie wordt automatisch gzipped."
+msgstr "Gecodeerde configuratie wordt automatisch gzipped."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr "Versleuteld Volume is gemarkeerd voor verwijdering"
+msgstr "Gecodeerd Volume is gemarkeerd voor verwijdering"
 
 msgid "Encrypted volume is protected"
-msgstr "Versleuteld Volume is beschermd"
+msgstr "Gecodeerd volume is beschermd"
 
 msgid "Encrypted volume is unlocked"
-msgstr "Versleuteld Volume is ontgrendeld"
+msgstr "Gecodeerd volume is ontgrendeld"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
-msgstr "Bezig met het versleutelen '%s'... Een ogenblik geduld"
+msgstr "Coderen '%s'... Een ogenblik geduld"
 
 msgid "Encryption"
-msgstr "Versleuteling"
-
-msgid "Encryption Algorithm"
-msgstr "Versleutelingsalgoritme"
+msgstr "Encryptie"
 
 msgid "Encryption Management"
 msgstr "Encryptie Management"
@@ -3598,13 +3605,10 @@ msgid "Encryption Settings"
 msgstr "Encryptie Instellingen"
 
 msgid "Encryption Tools"
-msgstr "Versleuteling Hulpmiddelen"
+msgstr "Encryptie Hulpmiddelen"
 
 msgid "Encryption algorithm"
-msgstr "Versleutelings algoritme"
-
-msgid "Encryption algorithm to use."
-msgstr "Selecteer een versleutelingsalgoritme om te gebruiken."
+msgstr "Encryptie algoritme"
 
 msgid "English"
 msgstr "Engels"
@@ -4710,7 +4714,7 @@ msgid "Initialize"
 msgstr "Initialiseer"
 
 msgid "Initialize and encrypt disk."
-msgstr "Initialiseer en versleutel de schijf."
+msgstr "Initialiseer en codeer de schijf."
 
 msgid "Initializing"
 msgstr "Aan het initialiseren"
@@ -4981,10 +4985,6 @@ msgstr "Sleutellengte"
 
 msgid "Key Management Protocol"
 msgstr "Sleutel Beheer Protocol"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr ""
-"Sleutellengte om te gebruiken voor de opgegeven cryptografische algoritme."
 
 msgid "Korean"
 msgstr "Koreaans"
@@ -5923,7 +5923,7 @@ msgid "No new disk found."
 msgstr "Er zijn geen nieuwe schijven gevonden."
 
 msgid "No new encrypted disks have been found."
-msgstr "Er zijn geen nieuwe versleutelde schijven gevonden."
+msgstr "Er zijn geen nieuwe gecodeerde schijven gevonden."
 
 msgid "No new software raid disk found."
 msgstr "Er zijn geen nieuwe software raid schijven gevonden."
@@ -6356,7 +6356,7 @@ msgid "Password Authentication"
 msgstr "Wachtwoord Verificatie"
 
 msgid "Password Encryption"
-msgstr "Wachtwoord Versleuteling"
+msgstr "Encryptie Wachtwoord"
 
 msgid "Password Server"
 msgstr "Wachtwoord Server"
@@ -7450,7 +7450,7 @@ msgid "Secure Shell"
 msgstr "Secure Shell"
 
 msgid "Security"
-msgstr "Versleutelde verbinding"
+msgstr "Beveiliging"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7519,6 +7519,9 @@ msgstr "Selecteer een datumnotatie."
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Selecteer een schijf dat is ingeschakeld voor S.M.A.R.T. controle."
 
+msgid "Select an encryption algorithm to use."
+msgstr "Selecteer een encryptiealgoritme om te gebruiken."
+
 msgid "Select file system format."
 msgstr "Selecteer het bestandssysteem voor het formatteren."
 
@@ -7586,6 +7589,10 @@ msgid ""
 msgstr ""
 "Selecteer het netwerk om te gebruiken. (Alleen te selecteren indien uw "
 "server er meer dan één heeft)"
+
+msgid "Select which key length to use for given cryptographic algorithm."
+msgstr ""
+"Selecteer welke lengte te gebruiken voor opgegeven cryptografisch algoritme."
 
 msgid "Selected"
 msgstr "Geselecteerd"
@@ -8772,13 +8779,6 @@ msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
 "De standaard basis voornaam (DN) om voor het zoeken te gebruiken, bijv. %s"
 
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"De standaard sleutellengte's zijn: 128 AES, 128 Blowfish, 128 Camellia en "
-"192 voor 3DES."
-
 msgid "The default time in seconds to display a screen."
 msgstr "Het standaard aantal seconden dat een melding wordt gegeven."
 
@@ -8831,7 +8831,7 @@ msgid "The driver used to connect with the LCD."
 msgstr "Het stuurprogramma dat gebruikt wordt om te verbinden met de LCD."
 
 msgid "The encrypted device is currently mounted!"
-msgstr "De versleutelde schijf is momenteel aangekoppeld!"
+msgstr "De gecodeerde schijf is momenteel aangekoppeld!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "De volledige systeemconfiguratie wordt overschreven."
@@ -9056,7 +9056,7 @@ msgid "The path '%s' is not a directory."
 msgstr "De locatie '%s' is geen map."
 
 msgid "The peer connection encryption mode."
-msgstr "Versleutelings mode voor peer-to-peer verbindingen."
+msgstr "Encryptie mode voor peer-to-peer verbindingen."
 
 msgid ""
 "The permissions on new files and directories are normally governed by create "
@@ -9749,7 +9749,7 @@ msgid ""
 "add an existing encrypted disk."
 msgstr ""
 "Dit zal ALLE data op de schijf wissen! Gebruik deze optie niet als u een "
-"bestaande reeds versleutelde schijf wil toevoegen."
+"bestaand reeds gecodeerde schijf wil toevoegen."
 
 msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
@@ -11075,8 +11075,19 @@ msgstr "loskoppelen"
 #~ "Weet u zeker dat u dit volume wilt verwijderen?\\n!!! Opmerking, alle data "
 #~ "zal verloren gaan en kan niet meer hersteld worden. !!!"
 
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr ""
+#~ "Sleutellengte om te gebruiken voor de opgegeven cryptografische algoritme."
+
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Versleuteld station opheffen"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "De standaard sleutellengte's zijn: 128 AES, 128 Blowfish, 128 Camellia en "
+#~ "192 voor 3DES."
 
 #~ msgid "The volume must be detached before it can be deleted."
 #~ msgstr ""
@@ -11100,3 +11111,9 @@ msgstr "loskoppelen"
 
 #~ msgid "Clear config and Import disks"
 #~ msgstr "Config leegmaken en importeer schijven"
+
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Selecteer een encryptiealgoritme om te gebruiken."
+
+#~ msgid "Encryption Algorithm"
+#~ msgstr "Encryptiealgoritme"

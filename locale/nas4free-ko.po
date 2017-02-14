@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -108,6 +108,11 @@ msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(필요한 경우 변경)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "Maxtor 6B200M0 200GB 와 Maxtor 2R015H1 15GB 디스크가 발견되었습니다)."
@@ -627,6 +632,9 @@ msgid ""
 msgstr ""
 
 msgid "Alert Level"
+msgstr ""
+
+msgid "Algorithm"
 msgstr ""
 
 msgid "All"
@@ -3289,9 +3297,6 @@ msgstr "'%s' 암호화 중... 잠시 기다리십시오"
 msgid "Encryption"
 msgstr "암호화"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3303,9 +3308,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "암호화 알고리즘"
-
-msgid "Encryption algorithm to use."
-msgstr "이용할 암호화 알고리즘."
 
 msgid "English"
 msgstr "영어"
@@ -4580,9 +4582,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "키 관리 프로토콜"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "주어진 암호화 알고리즘에 이용하기 위한 키 길이."
 
 msgid "Korean"
 msgstr "한국어"
@@ -6985,6 +6984,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. 모니터링이 활성화된 디스크를 선택하십시오."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7039,6 +7041,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8119,11 +8124,6 @@ msgstr "기본 SMTP 메일 서버 포트. 예 25나 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr "검색을 위해 이용되는 기본 고유 이름(DN). 예. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr "기본 키 길이는 다음과 같습니다. AES 128, Blowfish 128, Camellia 128, 3DES 192."
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
@@ -10135,8 +10135,19 @@ msgstr "마운트 해제"
 #~ "and can not be recovered. !!!"
 #~ msgstr "정말로 이 볼륨을 삭제하시겠습니까?\\n!!! 주의. 모든 데이터를 잃게 될 것이며 복구할 수 없습니다. !!!"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "이용할 암호화 알고리즘."
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "주어진 암호화 알고리즘에 이용하기 위한 키 길이."
+
 #~ msgid "Kill encrypted volume"
 #~ msgstr "암호화된 볼륨 죽이기"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr "기본 키 길이는 다음과 같습니다. AES 128, Blowfish 128, Camellia 128, 3DES 192."
 
 #~ msgid "The volume must be detached before it can be deleted."
 #~ msgstr "볼륨이 먼저 분리되어야 삭제될 수 있습니다."

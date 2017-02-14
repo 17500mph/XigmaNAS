@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-02-12 12:53+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -109,6 +109,11 @@ msgstr "'%s' törli az összes statisztikai adatot a diagramokból!"
 
 msgid "(Change if needed)"
 msgstr "(Szükség esetén módosítsd)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Maxtor 6B200M0 200GB és Maxtor 2R015H1 15GB lemezekben van)."
@@ -668,6 +673,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Riasztási szint"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Minden"
@@ -3504,9 +3512,6 @@ msgstr "'%s' titkosítása... Kérem várjon"
 msgid "Encryption"
 msgstr "Titkosítás (encryption)"
 
-msgid "Encryption Algorithm"
-msgstr "Titkosítási algoritmus"
-
 msgid "Encryption Management"
 msgstr "Titkosításkezelő"
 
@@ -3518,9 +3523,6 @@ msgstr "Titkosító eszközök"
 
 msgid "Encryption algorithm"
 msgstr "Titkosítási algoritmus"
-
-msgid "Encryption algorithm to use."
-msgstr "Válassz titkosítási algoritmust"
 
 msgid "English"
 msgstr "Angol"
@@ -4888,9 +4890,6 @@ msgstr "Kulcshossz"
 
 msgid "Key Management Protocol"
 msgstr "Kulcskezelő protokoll"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Az adott kriptográfiai algoritmushoz használt kulcshossz."
 
 msgid "Korean"
 msgstr "Koreai"
@@ -7421,6 +7420,9 @@ msgstr "Válassz dátumformátumot."
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Válassz ki egy a S.M.A.R.T. által figyelendő lemezt."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Válassz fájlrendszer formátumot."
 
@@ -7489,6 +7491,9 @@ msgid ""
 msgstr ""
 "Válaszd ki, melyik interfészt használjuk (csak akkor választható, ha a "
 "szerverednek több interfésze van)."
+
+msgid "Select which key length to use for given cryptographic algorithm."
+msgstr ""
 
 msgid "Selected"
 msgstr "Kiválasztott"
@@ -8657,13 +8662,6 @@ msgstr ""
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
 "Kereséshez használt alapértelmezett alap megkülönböztető név (DN), pl. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Az alapértelmezett kulcshosszok: 128 az AES, 128 a Blowfish, 128 a Camellia "
-"és 192 az 3DES esetén."
 
 msgid "The default time in seconds to display a screen."
 msgstr "A képernyő megjelenésének alapértelmezett ideje másodpercben."
@@ -10918,11 +10916,27 @@ msgstr "leválasztás"
 #~ msgid "no new encrypted disk found."
 #~ msgstr "nincs új encrypted lemez."
 
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Az adott kriptográfiai algoritmushoz használt kulcshossz."
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Az alapértelmezett kulcshosszok: 128 az AES, 128 a Blowfish, 128 a Camellia "
+#~ "és 192 az 3DES esetén."
+
 #~ msgid "Clear config and Import disks"
 #~ msgstr "Beállítások törlése és lemezek importálása"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Válassz titkosítási algoritmust"
+
 #~ msgid "Change password"
 #~ msgstr "Jelszó megváltoztatása"
+
+#~ msgid "Encryption Algorithm"
+#~ msgstr "Titkosítási algoritmus"
 
 #~ msgid ""
 #~ "Warning: You are going to delete an encrypted volume. All data will get lost "

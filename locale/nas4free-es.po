@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
-"PO-Revision-Date: 2017-02-12 19:30+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"PO-Revision-Date: 2017-02-14 21:51+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -106,6 +106,11 @@ msgstr "'%s' Borra los datos de todas las Gráficas!"
 
 msgid "(Change if needed)"
 msgstr "(Cambiar si es necesario)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(En Discos Maxtor 6B200M0 200GB y Maxtor 2R015H1 15GB )."
@@ -450,7 +455,7 @@ msgid "Add Dataset"
 msgstr "Añadir Dataset"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Añadir Volumen encriptado"
 
 msgid "Add Group"
 msgstr "Añadir grupo"
@@ -677,6 +682,9 @@ msgstr ""
 msgid "Alert Level"
 msgstr "Nivel de alerta"
 
+msgid "Algorithm"
+msgstr ""
+
 msgid "All"
 msgstr "Todos"
 
@@ -704,7 +712,7 @@ msgid "All disks are imported."
 msgstr "Todos los discos han sido importados."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Todos los discos encriptados han sido importados."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1534,7 +1542,7 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr "Limpiar la configuración & Importar RAID de  discos UFS"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Actualizar Config. e importar Discos."
 
 msgid "Clear device errors"
 msgstr "Elimina los erores del dispositivo"
@@ -2274,7 +2282,7 @@ msgid "Delete Selected Datasets"
 msgstr "Borrar los Dataset seleccionados"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Borrar los volumenes encriptados seleccionados"
 
 msgid "Delete Selected Groups"
 msgstr "Eliminar grupos seleccionados"
@@ -2881,7 +2889,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Desea borrar los Dataset seleccionados?"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr ""
+msgstr "¿Desea borrar los volumenes encriptados?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Quiere eliminar los grupos seleccionados?"
@@ -3116,7 +3124,7 @@ msgid "Edit Dataset"
 msgstr "Editar Dataset"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Editar volumenes encriptados"
 
 msgid "Edit Group"
 msgstr "Editar grupo"
@@ -3534,13 +3542,13 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr "La configuración encriptada es gzipeada automaticamente."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Volumen encriptado marcado para borrado"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "El volumen encriptado está protegido"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "El volumen encriptado está desbloqueado"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3548,9 +3556,6 @@ msgstr "Cifrando '%s'... Por favor espere"
 
 msgid "Encryption"
 msgstr "Cifrado"
-
-msgid "Encryption Algorithm"
-msgstr "Algoritmo de cifrado"
 
 msgid "Encryption Management"
 msgstr "Opciones de Cifrado"
@@ -3563,9 +3568,6 @@ msgstr "Herramientas Encriptación"
 
 msgid "Encryption algorithm"
 msgstr "Algoritmo de cifrado"
-
-msgid "Encryption algorithm to use."
-msgstr "Algoritmo a usar en el cifrado"
 
 msgid "English"
 msgstr "Inglés"
@@ -3736,7 +3738,7 @@ msgid "Error Level"
 msgstr "Nivel de Error"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Se han detectado errores durante la importación."
 
 msgid "Event"
 msgstr "Evento"
@@ -4949,9 +4951,6 @@ msgstr "Longitud de la clave"
 msgid "Key Management Protocol"
 msgstr "Protocolo de Gestión de Claves"
 
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Longitud de la clave para usar con el algoritmo de cifrado."
-
 msgid "Korean"
 msgstr "Coreano"
 
@@ -5879,7 +5878,7 @@ msgid "No new disk found."
 msgstr "No se han encontrados nuevos discos."
 
 msgid "No new encrypted disks have been found."
-msgstr ""
+msgstr "No se han encontrado nuevos discos encriptados."
 
 msgid "No new software raid disk found."
 msgstr "No se han encontrado nuevos Discos RAID"
@@ -7478,6 +7477,9 @@ msgstr "Seleccione un formato de fecha"
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccionar un disco habilitado para monitoreo S.M.A.R.T."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Seleccionar formato de sistema de archivo"
 
@@ -7544,6 +7546,9 @@ msgid ""
 msgstr ""
 "Seleccione qué interfaz utilizar. (Sólo seleccionable si su servidor tiene "
 "más de un interfaz)"
+
+msgid "Select which key length to use for given cryptographic algorithm."
+msgstr ""
 
 msgid "Selected"
 msgstr "Seleccionado"
@@ -8725,13 +8730,6 @@ msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
 "El nombre distinguido (DN) base predeterminado a usar en las busquedas, por "
 "ejemplo %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Las longitudes predeterminadas de las claves son: 128 para AES, 128 para "
-"Blowfish, 128 para Camelia y 192 para 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr "El tiempo en segundos por defecto para mostrar una pantalla"
@@ -10995,8 +10993,21 @@ msgstr "Desmontar"
 #~ "¿Realmente desea borrar este volumen?\\n!!! Aviso, toda la información se "
 #~ "perdera y no podra ser recuperada !!!"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Algoritmo a usar en el cifrado"
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Longitud de la clave para usar con el algoritmo de cifrado."
+
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Destruir volumen cifrado"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Las longitudes predeterminadas de las claves son: 128 para AES, 128 para "
+#~ "Blowfish, 128 para Camelia y 192 para 3DES."
 
 #~ msgid "The volume must be detached before it can be deleted."
 #~ msgstr "El volumen debe ser desmontado antes de que sea eliminado."
@@ -11019,3 +11030,6 @@ msgstr "Desmontar"
 
 #~ msgid "detected an error while importing."
 #~ msgstr "Se ha detectado un error mientras se realizaba la importación"
+
+#~ msgid "Encryption Algorithm"
+#~ msgstr "Algoritmo de cifrado"
