@@ -76,6 +76,19 @@ class co_sphere_grid extends co_sphere_scriptname {
 	protected $_enadis = NULL;
 	protected $_lock = NULL;
 	protected $_toggle = NULL;
+//	html id tags
+	protected $id_button_del_rows = 'delete_selected_rows';
+	protected $id_button_dis_rows = 'disable_selected_rows';
+	protected $id_button_ena_rows = 'enable_selected_rows';
+	protected $id_button_tog_rows = 'toggle_selected_rows';
+	protected $id_checkbox_tog_rows = 'togglemembers';
+//	html value tags
+	protected $val_button_del_rows = 'rows.delete';
+	protected $val_button_dis_rows = 'rows.disable';
+	protected $val_button_ena_rows = 'rows.enable';
+	protected $val_button_tog_rows = 'rows.toggle';
+//	html class tags
+	protected $class_button = 'formbtn';
 //	methods	
 	public function __construct(string $basename = NULL,string $extension = NULL) {
 		parent::__construct($basename,$extension);
@@ -262,13 +275,13 @@ class co_sphere_grid extends co_sphere_scriptname {
 				$output[] = "\t" . '});';
 			endif;
 		endif;
-		$output[] = "\t" . '$("#delete_selected_rows").click(function () {';
+		$output[] = "\t" . '$("#' . $this->id_button_del_rows . '").click(function () {';
 		$output[] = "\t\t" . 'return confirm("' . $this->cbm_delete_confirm() . '");';
 		$output[] = "\t" . '});';
 		//	Disable action buttons.
 		$output[] = "\t" . 'ab_disable(true);';
 		//	Init toggle checkbox.
-		$output[] = "\t" . '$("#togglemembers").click(function() {';
+		$output[] = "\t" . '$("#' . $this->id_checkbox_tog_rows . '").click(function() {';
 		$output[] = "\t\t" . 'cb_tbn(this,"' . $this->cbm_name . '[]");';
 		$output[] = "\t" . '});';
 		//	Init member checkboxes.
@@ -282,13 +295,13 @@ class co_sphere_grid extends co_sphere_scriptname {
 		$output[] = 'function ab_disable(flag) {';
 		if($this->enadis()):
 			if($this->toggle()):
-				$output[] = "\t" . '$("#toggle_selected_rows").prop("disabled",flag);';
+				$output[] = "\t" . '$("#' . $this->id_button_tog_rows . '").prop("disabled",flag);';
 			else:
-				$output[] = "\t" . '$("#enable_selected_rows").prop("disabled",flag);';
-				$output[] = "\t" . '$("#disable_selected_rows").prop("disabled",flag);';
+				$output[] = "\t" . '$("#' . $this->id_button_ena_rows . '").prop("disabled",flag);';
+				$output[] = "\t" . '$("#' . $this->id_button_dis_rows . '").prop("disabled",flag);';
 			endif;
 		endif;
-		$output[] = "\t" . '$("#delete_selected_rows").prop("disabled",flag);';
+		$output[] = "\t" . '$("#' . $this->id_button_del_rows . '").prop("disabled",flag);';
 		$output[] = '}';
 		$output[] = 'function cb_tbn(ego,tbn) {';
 		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
@@ -304,6 +317,128 @@ class co_sphere_grid extends co_sphere_scriptname {
 		$output[] = '</script>';
 		$output[] = '';
 		return implode("\n",$output);
+	}
+	public function html_button_delete_rows() {
+		$element = 'button';
+		$attributes = [
+			'type' => 'submit',
+			'name' => 'submit',
+			'class' => $this->class_button,
+			'value' => $this->val_button_del_rows,
+			'id' => $this->id_button_del_rows];
+		$root = new co_DOMDocument();
+		$o_button = $root->addElement($element,$attributes,$this->cbm_delete());
+		return $root->render();
+	}
+	public function html_button_disable_rows() {
+		$element = 'button';
+		$attributes = [
+			'type' => 'submit',
+			'name' => 'submit',
+			'class' => $this->class_button,
+			'value' => $this->val_button_dis_rows,
+			'id' => $this->id_button_dis_rows];
+		$root = new co_DOMDocument();
+		$o_button = $root->addElement($element,$attributes,$this->cbm_disable());
+		return $root->render();
+	}
+	public function html_button_enable_rows() {
+		$element = 'button';
+		$attributes = [
+			'type' => 'submit',
+			'name' => 'submit',
+			'class' => $this->class_button,
+			'value' => $this->val_button_ena_rows,
+			'id' => $this->id_button_ena_rows];
+		$root = new co_DOMDocument();
+		$o_button = $root->addElement($element,$attributes,$this->cbm_enable());
+		return $root->render();
+	}
+	public function html_button_toggle_rows() {
+		$element = 'button';
+		$attributes = [
+			'type' => 'submit',
+			'name' => 'submit',
+			'class' => $this->class_button,
+			'value' => $this->val_button_tog_rows,
+			'id' => $this->id_button_tog_rows];
+		$root = new co_DOMDocument();
+		$o_button = $root->addElement($element, $attributes,$this->cbm_toggle());
+		return $root->render();
+	}
+	public function html_checkbox_cbm(bool $disabled = false) {
+		$element = 'input';
+		$identifier = $this->row[$this->row_identifier()];
+		$attributes = [
+			'type' => 'checkbox',
+			'name' => $this->cbm_name . '[]',
+			'value' => $identifier,
+			'id' => $identifier];
+		if($disabled):
+			$attributes['disabled'] = 'disabled';
+		endif;
+		$root = new co_DOMDocument();
+		$o_input = $root->addElement($element,$attributes);
+		return $root->render();
+	}
+	public function html_checkbox_toggle_cbm() {
+		$element = 'input';
+		$attributes = [
+			'type' => 'checkbox',
+			'name' => $this->id_checkbox_tog_rows,
+			'id' => $this->id_checkbox_tog_rows,
+			'title' => gtext('Invert Selection')];
+		$root = new co_DOMDocument();
+		$o_input = $root->addElement($element,$attributes);
+		return $root->render();
+	}
+	public function html_toolbox(bool $notprotected = true,bool $notdirty = true) {
+/*
+ *	<td>
+ *		<a href="scriptname_edit.php?uuid=12345678-1234-1234-1234-1234567890AB"><img="images/edit.png" title="Edit Record" alt="Edit Record" class="spin/></a>
+ *		or
+ *		<img src="images/delete.png" title="Record is marked for deletion" alt="Record is marked for deletion"/>
+ *		or
+ *		<img src="images/locked.png" title="Record is protected" alt="Record is protected"/>
+ *	</td>
+ */
+		global $g_img;
+		$link = sprintf('%s?%s=%s',$this->mod->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+		$root = new co_DOMDocument();
+		$o_td = $root->addElement('td');
+		if($notdirty && $notprotected):
+			//	record is editable
+			$o_a = $o_td->addElement('a', ['href' => $link]);
+			$o_a->addElement('img', ['src' => $g_img['mod'], 'title' => $this->sym_mod(), 'alt' => $this->sym_mod(), 'class' => 'spin']);
+		elseif($notprotected):
+			//	record is dirty
+			$o_td->addElement('img', ['src' => $g_img['del'], 'title' => $this->sym_del(), 'alt' => $this->sym_del()]);
+		else:
+			//	record is protected
+			$o_td->addElement('img', ['src' => $g_img['loc'], 'title' => $this->sym_loc(), 'alt' => $this->sym_loc()]);
+		endif;
+		return $root->render();
+	}
+	public function html_footer_add(int $colspan = 2) {
+/*
+ *	<tr>
+ *		<th class="lcenl" colspan="1">
+ *		</th>
+ *		<th class="lceadd">
+ *			<a href="scriptname_edit.php"><img src="images/add.png" title="Add Record" alt="Add Record" class="spin"/></a>
+ *		</th>
+ *	</tr>
+ */
+		global $g_img;
+		$root = new co_DOMDocument();
+		$o_tr = $root->addElement('tr');
+		if($colspan > 1):
+			$o_th1 = $o_tr->addElement('th', ['class' => 'lcenl', 'colspan' => $colspan-1]);
+		endif;
+		$o_th2 = $o_tr->addElement('th', ['class' => 'lceadd']);
+		$o_a = $o_th2->addElement('a', ['href' => $this->mod->scriptname()]);
+		$o_img = $o_a->addElement('img', ['src' => $g_img['add'], 'title' => $this->sym_add(), 'alt' => $this->sym_add(), 'class' => 'spin']);
+		return $root->render();
 	}
 }
 class co_sphere_scriptname {
