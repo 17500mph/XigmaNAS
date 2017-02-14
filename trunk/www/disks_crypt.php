@@ -269,7 +269,7 @@ echo $sphere->doj();
 			html_titleline2(gtext('Encryption Management'),6);
 ?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
 				<th class="lhell"><?=gtext('Disk');?></th>
 				<th class="lhell"><?=gtext('Data Integrity');?></th>
 				<th class="lhell"><?=gtext('Encryption');?></th>
@@ -289,13 +289,9 @@ echo $sphere->doj();
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 <?php
 						if($notdirty && $notprotected && disks_exists($sphere->row['devicespecialfile'])):
-?>
-							<input type="checkbox" name="<?=$sphere->cbm_name;?>[]" value="<?=$sphere->row[$sphere->row_identifier()];?>" id="<?=$sphere->row[$sphere->row_identifier()];?>"/>
-<?php
+							$sphere->html_checkbox_cbm(false);
 						else:
-?>
-							<input type="checkbox" name="<?=$sphere->cbm_name;?>[]" value="<?=$sphere->row[$sphere->row_identifier()];?>" id="<?=$sphere->row[$sphere->row_identifier()];?>" disabled="disabled"/>
-<?php
+							$sphere->html_checkbox_cbm(true);
 						endif;
 ?>
 					</td>
@@ -316,7 +312,7 @@ echo $sphere->doj();
 						else:
 							$notificationmode = UPDATENOTIFY_MODE_UNKNOWN;
 							if(disks_exists($sphere->row['devicespecialfile'])):
-								echo("<a href=\"disks_crypt_tools.php?disk={$sphere->row['devicespecialfile']}&amp;action=attach\">" . gtext("Not attached") . "</a>");
+								echo("<a href=\"disks_crypt_tools.php?disk={$sphere->row['devicespecialfile']}&amp;action=attach\">" . gtext('Not attached') . '</a>');
 							else:
 								echo(gtext('Attached'));
 							endif;
@@ -326,8 +322,7 @@ echo $sphere->doj();
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 <?php
-							$helpinghand = sprintf('%s?%s=%s',$sphere->mod->scriptname(),$sphere->row_identifier(),$sphere->row[$sphere->row_identifier()]);
-							echo html_row_toolbox($helpinghand,$sphere->sym_mod(),$sphere->sym_del(),$sphere->sym_loc(),$notprotected,$notdirty);
+							echo $sphere->html_toolbox($notprotected,$notdirty);
 ?>
 							<td></td>
 							<td></td>
@@ -340,7 +335,7 @@ echo $sphere->doj();
 		</tbody>
 		<tfoot>
 <?php
-			echo html_row_add($sphere->mod->scriptname(),$sphere->sym_add(),6);
+			echo $sphere->html_footer_add(6);
 ?>
 		</tfoot>
 	</table>
@@ -348,16 +343,16 @@ echo $sphere->doj();
 <?php
 		if($sphere->enadis()):
 			if($sphere->toggle()):
-				echo html_button_toggle_rows($sphere->cbm_toggle());
+				echo $sphere->html_button_toggle_rows();
 			else:
-				echo html_button_enable_rows($sphere->cbm_enable());
-				echo html_button_disable_rows($sphere->cbm_disable());
+				echo $sphere->html_button_enable_rows();
+				echo $sphere->html_button_disable_rows();
 			endif;
 		endif;
-		echo html_button_delete_rows($sphere->cbm_delete());
+		echo $sphere->html_button_delete_rows();
 ?>
-		<button name="submit" type="submit" class="formbtn" value="import" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');"><?=gtext('Import Disks');?></button>
-		<button name="submit" type="submit" class="formbtn" value="clearimport" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');"><?=gtext('Clear Config And Import Disks');?></button>
+		<button name="submit" type="submit" class="formbtn spin" value="import" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');"><?=gtext('Import Disks');?></button>
+		<button name="submit" type="submit" class="formbtn spin" value="clearimport" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');"><?=gtext('Clear Config And Import Disks');?></button>
 	</div>
 <?php
 	include 'formend.inc';
