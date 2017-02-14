@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:34+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 msgid " interfaces:"
@@ -450,6 +450,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr "Voeg Datastel by"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Voeg groep by"
 
@@ -703,6 +706,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Alle skywe is ingevoer."
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1455,9 +1461,6 @@ msgstr "Verander"
 msgid "Change below file"
 msgstr "Verander die  lêer hieronder"
 
-msgid "Change password"
-msgstr "Verander wagwoord"
-
 msgid "Change the IP address of your computer"
 msgstr "Verander jou rekenaar se IP adres"
 
@@ -1523,8 +1526,8 @@ msgstr "Vee Instellings Uit en Voer Skywe In"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Vee Insellings Uit en Voer Sagteware RAID Skywe In"
 
-msgid "Clear config and Import disks"
-msgstr "Vee Instellings Uit en Voer Skywe In"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Vee toestel foute uit"
@@ -1962,9 +1965,6 @@ msgstr "Skep ZFS op a GPT partisie"
 msgid "Create and initialize RAID."
 msgstr "Skep en inisialiseer RAID"
 
-msgid "Create encrypted volume"
-msgstr "Skep 'n gekodeerde volume"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Skep 'n werk lêergids as dit nog nie bestaan nie."
 
@@ -2250,6 +2250,9 @@ msgstr "Vee Geselekteerde Bevelle Uit"
 
 msgid "Delete Selected Datasets"
 msgstr "Vee Geselekteerde Datastelle Uit"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Skrap Geselekteerde Groepe"
@@ -2769,13 +2772,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Wil jy regtig hierdie teiken uitvee?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Wil jy regtig hierdie volume uitvee?\\n!!! Neem kennis dat alle data verlore "
-"sal raak en nie herstel kan word nie.!!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Wil jy regtig invoer?\\nDie bestaande instelling lêer mag dalk oorskryf word."
@@ -2862,6 +2858,9 @@ msgstr "Wil jy die geselekteerde bevelle uitvee?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Wil jy die geselekteerde datastelle uitvee?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Wil jy die geselekteerde groepe skrap?"
@@ -3094,6 +3093,9 @@ msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Redigeer Datastel"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Redigeer Groep"
@@ -3509,6 +3511,15 @@ msgstr "Kodeer"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Gekodeerde instelling word outomaties ge-gzip."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Kodeer tans '%s'... Wag asseblief"
@@ -3693,6 +3704,9 @@ msgstr "Fout Kode"
 
 msgid "Error Level"
 msgstr "Fout Vlak"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Gebeurtenis"
@@ -4900,9 +4914,6 @@ msgstr "Sleutel Bestuur Protokol"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Sleutellengte om vir die gegewe kriptografiese algoritme te gebruik."
 
-msgid "Kill encrypted volume"
-msgstr "Dood die geenkripteerde volume"
-
 msgid "Korean"
 msgstr "Koreaans"
 
@@ -5810,6 +5821,9 @@ msgstr "Geen lêer is opgelaai nie."
 
 msgid "No new disk found."
 msgstr "Geen nuwe skyf is opgespoor nie."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Geen nuwe sagteware raid skyf is opgespoor nie."
@@ -9058,9 +9072,6 @@ msgstr "Die opgelaaide lêer was slegs gedeeltelik gelaai."
 msgid "The value of the variable."
 msgstr "Die waarde van die veranderlike."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Die volume moet losgemaak word voor dit uitgevee kan word."
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -10384,13 +10395,6 @@ msgstr "Waarskuwing"
 msgid "Warning Level"
 msgstr "Waarskuwingvlak"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Waarskuwing: Jy gaan nou 'n gekodeerde volume uitvee. Alle data sal verlore "
-"gaan ek kan nie herstel word nie."
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -10659,9 +10663,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr ""
 
-msgid "all encrypted disks are imported."
-msgstr "alle gekodeerde skywe is ingevoer"
-
 msgid "and"
 msgstr "en"
 
@@ -10675,9 +10676,6 @@ msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
 msgstr ""
-
-msgid "detected an error while importing."
-msgstr "fout opgespoor terwyl ingevoer is."
 
 #, php-format
 msgid "e.g. %s"
@@ -10748,9 +10746,6 @@ msgstr "n.v.t."
 msgid "network traffic"
 msgstr "netwerk verkeer"
 
-msgid "no new encrypted disk found."
-msgstr "geen nuwe gekodeerde skyf is opgespoor nie."
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10795,3 +10790,41 @@ msgstr "na"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid "Change password"
+#~ msgstr "Verander wagwoord"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Skep 'n gekodeerde volume"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Wil jy regtig hierdie volume uitvee?\\n!!! Neem kennis dat alle data verlore "
+#~ "sal raak en nie herstel kan word nie.!!!"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Die volume moet losgemaak word voor dit uitgevee kan word."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Waarskuwing: Jy gaan nou 'n gekodeerde volume uitvee. Alle data sal verlore "
+#~ "gaan ek kan nie herstel word nie."
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "alle gekodeerde skywe is ingevoer"
+
+#~ msgid "detected an error while importing."
+#~ msgstr "fout opgespoor terwyl ingevoer is."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "geen nuwe gekodeerde skyf is opgespoor nie."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Vee Instellings Uit en Voer Skywe In"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Dood die geenkripteerde volume"

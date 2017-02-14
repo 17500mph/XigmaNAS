@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-02-12 12:53+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -443,6 +443,9 @@ msgstr "CARP hozzáadása"
 msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Csoport hozzáadása"
 
@@ -693,6 +696,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Összes lemez importálva."
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1440,9 +1446,6 @@ msgstr "Módosítás"
 msgid "Change below file"
 msgstr "Változás az alábbi fájlt"
 
-msgid "Change password"
-msgstr "Jelszó megváltoztatása"
-
 msgid "Change the IP address of your computer"
 msgstr "Számítógéped IP címének módosítása"
 
@@ -1508,8 +1511,8 @@ msgstr "Beállítások törlése és lemezek importálása"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Beállítások törlése és szoftveres RAID-es lemezek importálása"
 
-msgid "Clear config and Import disks"
-msgstr "Beállítások törlése és lemezek importálása"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Eszközhibák törlése"
@@ -1936,9 +1939,6 @@ msgstr "ZFS létrehozása GPT partíción"
 msgid "Create and initialize RAID."
 msgstr "RAID létrehozása és inicializálása."
 
-msgid "Create encrypted volume"
-msgstr "Titkosított kötet létrehozása"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Munka könyvtár létrehozása, ha nem létezik."
 
@@ -2224,6 +2224,9 @@ msgstr "Kijelölt parancsok törlése"
 
 msgid "Delete Selected Datasets"
 msgstr "Kiválasztott kötetek törlése"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Kiválasztott csoportok törlése"
@@ -2742,13 +2745,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Bizto, hogy törlöd ezt a célt?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Valóban törölni akarja ezt a kötetet?\\n!!! A rajta levő adatok "
-"végérvényesen elvesznek. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr "Biztos, hogy importálsz?\\nA jelenlegi beállítások felülíródnak."
 
@@ -2843,6 +2839,9 @@ msgstr "Biztos, hogy törlöd a kijelölt parancsokat?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Biztos, hogy törli a kiválasztott csoportokat?"
@@ -3073,6 +3072,9 @@ msgstr "CARP módosítása"
 
 msgid "Edit Dataset"
 msgstr "Adattár módosítása"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Csoport módosítása"
@@ -3486,6 +3488,15 @@ msgstr "Titkosított"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Titkosított konfigurációt automatikusan gzip-pel tömörítjük."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "'%s' titkosítása... Kérem várjon"
@@ -3677,6 +3688,9 @@ msgstr "Hibakód"
 
 msgid "Error Level"
 msgstr "Hiba szint"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Esemény"
@@ -4878,9 +4892,6 @@ msgstr "Kulcskezelő protokoll"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Az adott kriptográfiai algoritmushoz használt kulcshossz."
 
-msgid "Kill encrypted volume"
-msgstr "Titkosított kötet kilövése"
-
 msgid "Korean"
 msgstr "Koreai"
 
@@ -5810,6 +5821,9 @@ msgstr "Nem lett fájl feltöltve."
 
 msgid "No new disk found."
 msgstr "Nincs új lemez."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Nincs új szoftveres raid lemez."
@@ -9076,9 +9090,6 @@ msgstr "A feltöltött fájl csak részlegesen került feltöltésre."
 msgid "The value of the variable."
 msgstr "A változó értéke."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "A meghajtót törlés előtt le kell csatolnia."
-
 msgid "The work directory does not exist."
 msgstr "A munkakönyvtár nem létezik."
 
@@ -10472,13 +10483,6 @@ msgstr "Figyelmeztetés"
 msgid "Warning Level"
 msgstr "Figyelmeztetési szint"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Figyelem: Ön egy titkosított kötet törlésére készül, minden adat véglegesen, "
-"vissza nem állítható módon elveszik."
-
 msgid "Watch Directory"
 msgstr "Figyelő könyvtár"
 
@@ -10759,9 +10763,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "összes encrypted raid lemez importálva."
-
 msgid "and"
 msgstr "és"
 
@@ -10777,9 +10778,6 @@ msgid ""
 msgstr ""
 "Visszakódolás: 0-1-2 byte = jó blokkok száma (nagy endian típusú) és a 3-4 = "
 "rendszer (szabad) blokkok száma."
-
-msgid "detected an error while importing."
-msgstr "hiba az importálás közben"
 
 #, php-format
 msgid "e.g. %s"
@@ -10850,9 +10848,6 @@ msgstr "nem elérhető"
 msgid "network traffic"
 msgstr "Hálózati forgalom"
 
-msgid "no new encrypted disk found."
-msgstr "nincs új encrypted lemez."
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10897,3 +10892,41 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Titkosított kötet létrehozása"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Valóban törölni akarja ezt a kötetet?\\n!!! A rajta levő adatok "
+#~ "végérvényesen elvesznek. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Titkosított kötet kilövése"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "A meghajtót törlés előtt le kell csatolnia."
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "összes encrypted raid lemez importálva."
+
+#~ msgid "detected an error while importing."
+#~ msgstr "hiba az importálás közben"
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "nincs új encrypted lemez."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Beállítások törlése és lemezek importálása"
+
+#~ msgid "Change password"
+#~ msgstr "Jelszó megváltoztatása"
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Figyelem: Ön egy titkosított kötet törlésére készül, minden adat véglegesen, "
+#~ "vissza nem állítható módon elveszik."

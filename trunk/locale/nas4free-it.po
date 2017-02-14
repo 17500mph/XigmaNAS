@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-05 18:41+0000\n"
-"Last-Translator: Matteo Trentin <Unknown>\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"PO-Revision-Date: 2017-02-14 15:20+0000\n"
+"Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -220,9 +220,11 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Viene generata una lista dei file nella directory quando non sono trovati "
+"dei file index (tipo index.php, index.html o default.htm)"
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "E' in corso un aggiornamento del firmware"
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -255,7 +257,7 @@ msgid "A reload request has been sent to the daemon."
 msgstr "Una richiesta di nuovo caricamento è stata inviata ai demoni."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "E' stata effettuata una nuova scansione"
 
 msgid "A route to this destination network already exists."
 msgstr "Un percorso per questa rete di destinazione esiste già."
@@ -266,6 +268,10 @@ msgid ""
 "been turned entirely off (disconnected from power source) and when the hard "
 "disk returns from having previously been put to sleep mode."
 msgstr ""
+"Un conteggio dei cicli di avvio/fermata del motore del disco. Il motore è "
+"avviato ed il conteggio viene incrementato sia quando il disco è accesso "
+"dopo essere stato completamente spento (tolta l'alimentazione) sia quando il "
+"disco rigido viene riavviato dalla modalità di sleep"
 
 msgid "A valid IP address must be specified."
 msgstr "Deve essere specificato un indirizzo IP valido."
@@ -340,7 +346,7 @@ msgid "ACL mode"
 msgstr "Modalità ACL"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "L'autenticazione al AD è disattivata"
 
 msgid "AD or PDC name."
 msgstr "Nome AD o PDC."
@@ -440,13 +446,16 @@ msgid "Add"
 msgstr "Aggiungi"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Aggiungi un bridge"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "Aggiungi un CARP"
 
 msgid "Add Dataset"
 msgstr "Aggiungi Dataset"
+
+msgid "Add Encrypted Volume"
+msgstr ""
 
 msgid "Add Group"
 msgstr "Aggiungi un gruppo"
@@ -455,40 +464,40 @@ msgid "Add Host"
 msgstr "Aggiungi host"
 
 msgid "Add LAGG"
-msgstr ""
+msgstr "Aggiungi un LAGG"
 
 msgid "Add MIB"
 msgstr "Aggiungi MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Aggiungi una condivisione NFS"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Aggiungi pool"
 
 msgid "Add RAID"
 msgstr "Aggiungi RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Aggiungi un record"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Aggiungi una risorsa"
 
 msgid "Add Route"
 msgstr "Aggiungi Route"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Aggiungi un'attività Rsync"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Aggiungi un modulo Rsync"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Aggiungi una condivisione Samba"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Aggiungi una condivisione"
 
 msgid "Add Snapshot"
 msgstr "Aggiungi Snapshot"
@@ -500,7 +509,7 @@ msgid "Add User Account"
 msgstr "Aggiungi account utente"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "Aggiungi VLAN"
 
 msgid "Add Virtual Device"
 msgstr "Aggiungi Dispositivo virtuale"
@@ -509,7 +518,7 @@ msgid "Add Volume"
 msgstr "Aggiungi Volume"
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "Aggiungi WLAN"
 
 msgid "Add a cache device to a pool"
 msgstr "Aggiungi un dispositivo cache al pool"
@@ -701,6 +710,9 @@ msgstr ""
 msgid "All disks are imported."
 msgstr "Tutti i dischi sono stati importati."
 
+msgid "All encrypted disks have been imported."
+msgstr ""
+
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
@@ -864,11 +876,15 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"Un altro servizio DLNA/UPnP è attivo. Attivare anche Fuppes potrebbe causare "
+"conflitti"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Un altro servizio DLNA/UPnP è attivo. Attivare anche MiniDLNA potrebbe "
+"causare conflitti"
 
 msgid "Any"
 msgstr "Qualsiasi"
@@ -910,7 +926,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Sei sicuro di voler spegnere il server?"
 
 msgid "Asynchronous I/O"
-msgstr ""
+msgstr "I/O asincrono"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -976,15 +992,19 @@ msgid "Authenticate URL"
 msgstr "Autentica URL"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Utente autenticato"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Banda di download in KB/S per utenti autenticati. Un campo vuoto significa "
+"banda infinita"
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Banda di upload in KB/S per utenti autenticati. Un campo vuoto significa "
+"banda infinita"
 
 msgid "Authentication"
 msgstr "Autenticazione"
@@ -1435,9 +1455,6 @@ msgstr "Cambia"
 msgid "Change below file"
 msgstr "Modifica i file sottostanti"
 
-msgid "Change password"
-msgstr "Cambia Password"
-
 msgid "Change the IP address of your computer"
 msgstr "Cambia l'indirizzo IP del tuo computer"
 
@@ -1504,8 +1521,8 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 "Pulisi la configurazione & Importa i dischi configurati in raid software"
 
-msgid "Clear config and Import disks"
-msgstr "Cancella la configurazione e importa i dischi"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Cancella errori della device"
@@ -1915,9 +1932,6 @@ msgstr "Crea ZFS su una partizione GPT"
 msgid "Create and initialize RAID."
 msgstr "Crea e inizializza un RAID"
 
-msgid "Create encrypted volume"
-msgstr "Generare il volume cifrato"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Crea la directory di lavoro se questa non esiste"
 
@@ -2194,6 +2208,9 @@ msgstr "Cancella i comandi selezionati"
 
 msgid "Delete Selected Datasets"
 msgstr "Elimina set di dati selezionati"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr ""
@@ -2717,13 +2734,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Si vuole realmente cancellare questo target?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Volete veramente eliminare questo volume?\\n!!! Nota, tutti i dati andranno "
-"persi e non potranno essere recuperati!!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Vuoi davvero importare?\\nLa configurazione esistente potrebbe venir "
@@ -2807,6 +2817,9 @@ msgstr "Vuoi eliminare i comandi selezionati?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Vuoi dancellare i dataset selezionati?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Vuoi eliminare i gruppi selezionati?"
@@ -3038,6 +3051,9 @@ msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Modifica il Dataset"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Modifica Gruppo"
@@ -3455,6 +3471,15 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr ""
 "La configurazione codificata viene compressa con gzip automaticamente."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Crifratura '%s' in corso... Attendere"
@@ -3644,6 +3669,9 @@ msgstr ""
 
 msgid "Error Level"
 msgstr "Livello Errore"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Evento"
@@ -4836,9 +4864,6 @@ msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
 "Lunghezza della chiave da utilizzare con l'algoritmo crittografico scelto."
 
-msgid "Kill encrypted volume"
-msgstr "Terminare il volume cifrato"
-
 msgid "Korean"
 msgstr "Coreano"
 
@@ -5739,6 +5764,9 @@ msgstr "Nessun file è stato caricato."
 
 msgid "No new disk found."
 msgstr "Nessun nuovo disco è stato trovato."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Nessun nuovo disco raid software è stato trovato."
@@ -8928,9 +8956,6 @@ msgstr "Il file è stato inviato solo parzialmente."
 msgid "The value of the variable."
 msgstr "Il valore della variabile."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Il volume deve essere sganciato prima di essere cancellato."
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -10271,13 +10296,6 @@ msgstr "Attenzione"
 msgid "Warning Level"
 msgstr "Livello di richiamo"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Attenzione: Sta per essere cancellato un volume criptato. Tutti i dati "
-"saranno persi e non sarà possibile recuperarli."
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -10428,6 +10446,7 @@ msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
+"Affinchè le modifiche abbiano effetto, è necessario riavviare il sistema"
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -10437,6 +10456,8 @@ msgid ""
 "You may also have to do one or more of the following steps before you can "
 "access your server again:"
 msgstr ""
+"Prima di aver nuovamente accesso al server potrebbe essere necessario "
+"compiere una o più di queste operazioni:"
 
 msgid "You may enter a description here for your reference."
 msgstr "Inserire qui una descrizione per riferimento."
@@ -10457,6 +10478,8 @@ msgstr ""
 msgid ""
 "You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
+"E' possibile specificare la dimensione del blocco logico. (il valore di "
+"default è %dB)"
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -10467,7 +10490,7 @@ msgid "You must add disks first."
 msgstr "è necessario prima aggiungere i dischi."
 
 msgid "You must apply the changes in order for them to take effect."
-msgstr ""
+msgstr "E' necessario applicare le modifiche affinchè abbiano effetto"
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Si deve inserire lo stesso tipo di IP per rete e gateway."
@@ -10486,6 +10509,8 @@ msgstr "è necessario scegliere almeno un metodo di autenticazione."
 msgid ""
 "You need to update your browser or use Internet Explorer 10 or higher."
 msgstr ""
+"E' necessario aggiornare il browser oppure usare Internet Explorer 10 o "
+"successivi"
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
@@ -10496,7 +10521,7 @@ msgid "Your ZFS system is not healthy."
 msgstr "C'è un problema con il tuo sistema ZFS."
 
 msgid "Your browser does not support this svg object type."
-msgstr ""
+msgstr "Il browser non supporta gli oggetti di tipo SVG"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10505,10 +10530,10 @@ msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
 msgid "ZFS ARC"
-msgstr ""
+msgstr "ZFS ARC"
 
 msgid "ZFS ARC Usage"
-msgstr ""
+msgstr "Utilizzo del ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Dataset Informazioni e Stato"
@@ -10517,10 +10542,10 @@ msgid "ZFS Dataset Properties"
 msgstr "ZFS Proprietà set di dati"
 
 msgid "ZFS Pool I/O Statistics"
-msgstr ""
+msgstr "Statistiche del ZFS Pool I/O"
 
 msgid "ZFS Pool Tools"
-msgstr ""
+msgstr "Strumenti del ZFS Pool"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS snapshot Informazioni e Stato"
@@ -10532,30 +10557,31 @@ msgid "ZFS Storage Pool"
 msgstr ""
 
 msgid "ZFS Volume Information & Status"
-msgstr ""
+msgstr "Informazioni e stato del volume ZFS"
 
 msgid "ZFS Volume Properties"
-msgstr ""
+msgstr "Proprietà del volume ZFS"
 
 msgid "ZFS volume"
 msgstr "Volume ZFS."
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
+"Dimensione del blocco del volume ZFS. Questo valore non può essere "
+"modificato dopo la sua creazione"
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
 "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
 msgstr ""
+"Dimensione del volume ZFS. Per specificare la dimensione, utilizzare un "
+"suffisso \"informatico\" tipo 'K','KB','M','GB' e così via"
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "tutti i dischi criptati sono stati importati"
-
 msgid "and"
-msgstr ""
+msgstr "e"
 
 msgid "change failed."
 msgstr "modifica falita."
@@ -10567,9 +10593,6 @@ msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
 msgstr ""
-
-msgid "detected an error while importing."
-msgstr "si è verificato un errore durante l'importazione."
 
 #, php-format
 msgid "e.g. %s"
@@ -10591,7 +10614,7 @@ msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
 
 msgid "iSCSI Initiator Settings"
-msgstr ""
+msgstr "Settaggi dell'inizializzatore iSCSI"
 
 msgid "iSCSI Target"
 msgstr "Target iSCSI"
@@ -10600,14 +10623,14 @@ msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI Target Logical Unit Controller"
 
 msgid "iSCSI Targets Information & Status"
-msgstr ""
+msgstr "Informazioni e stato dell'obiettivo iSCSI"
 
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "Parametro iniziale iSCSI (di default %d)"
 
 msgid "iSCSI initiator disabled."
-msgstr ""
+msgstr "Inizializzatore iSCSI disabilitato"
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10625,35 +10648,32 @@ msgid "mount"
 msgstr "mount"
 
 msgid "mount point"
-msgstr ""
+msgstr "Punto di mount"
 
 msgid "must be defined!"
-msgstr ""
+msgstr "deve essere definito!"
 
 #, php-format
 msgid "must be in the format: %s."
-msgstr ""
+msgstr "deve essere nel formato: %s"
 
 msgid "n/a"
 msgstr "n.d."
 
 msgid "network traffic"
-msgstr ""
-
-msgid "no new encrypted disk found."
-msgstr "nessun nuovo disco criptato trovato."
+msgstr "traffico di rete"
 
 msgid "noVNC"
-msgstr ""
+msgstr "noVNC"
 
 msgid "none"
 msgstr "nessuno"
 
 msgid "phpVirtualBox"
-msgstr ""
+msgstr "phpVirtualBox"
 
 msgid "pools"
-msgstr ""
+msgstr "pools"
 
 msgid "rc.conf"
 msgstr "rc.conf"
@@ -10665,7 +10685,7 @@ msgid "scan target failed."
 msgstr "Scansione del target fallita."
 
 msgid "seconds)"
-msgstr ""
+msgstr "secondi)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "valore minimo impostabile del punto di trasferimento alta tensione"
@@ -10680,10 +10700,48 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "sysvol exist in path."
-msgstr ""
+msgstr "sysvol esiste nella directory"
 
 msgid "to"
 msgstr "verso"
 
 msgid "umount"
 msgstr "smonta"
+
+#~ msgid "Change password"
+#~ msgstr "Cambia Password"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Generare il volume cifrato"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Volete veramente eliminare questo volume?\\n!!! Nota, tutti i dati andranno "
+#~ "persi e non potranno essere recuperati!!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Terminare il volume cifrato"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Il volume deve essere sganciato prima di essere cancellato."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Attenzione: Sta per essere cancellato un volume criptato. Tutti i dati "
+#~ "saranno persi e non sarà possibile recuperarli."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Cancella la configurazione e importa i dischi"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "tutti i dischi criptati sono stati importati"
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "nessun nuovo disco criptato trovato."
+
+#~ msgid "detected an error while importing."
+#~ msgstr "si è verificato un errore durante l'importazione."

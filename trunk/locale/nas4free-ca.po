@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2017-02-13 02:07+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -454,6 +454,9 @@ msgstr "Afegir CARP"
 msgid "Add Dataset"
 msgstr "Afegir conjunt de dades"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Afegeix grup"
 
@@ -707,6 +710,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "Tots els discs s'han importat"
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1467,9 +1473,6 @@ msgstr "Canvia-ho"
 msgid "Change below file"
 msgstr "Canvia arxiu a continuació"
 
-msgid "Change password"
-msgstr "Canviar contrasenya"
-
 msgid "Change the IP address of your computer"
 msgstr "Canviar l'adreça IP del ordinador"
 
@@ -1534,8 +1537,8 @@ msgstr "Esborrar configuració i  importa discs"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Esborrar configuració i  importar discs de programari Raid"
 
-msgid "Clear config and Import disks"
-msgstr "Esborrar configuració i importa discs"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Esborra els errors del dispositiu"
@@ -1989,9 +1992,6 @@ msgstr "Crear ZFS en una partició GPT."
 msgid "Create and initialize RAID."
 msgstr "Crea i inicialitza el RAID"
 
-msgid "Create encrypted volume"
-msgstr "Crea un volum encriptat"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Crea directori de treball si no existia."
 
@@ -2276,6 +2276,9 @@ msgstr "Suprimeix comandos seleccionats"
 
 msgid "Delete Selected Datasets"
 msgstr "Suprimeix conjunts de dades seleccionats"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Suprimeix grups seleccionats"
@@ -2801,13 +2804,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Realment voleu eliminar aquest objectiu?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Realment voleu eliminar aquest volum?\\n!!! Tingueu en compte que totes les "
-"dades es perden i no poden ser recuperats. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Realment voleu importar?\\nLa configuració existent es pot sobreescriure."
@@ -2894,6 +2890,9 @@ msgstr "Vols eliminar les ordres seleccionades?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Voleu eliminar els conjunts de dades seleccionats?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Vols eliminar grups seleccionats?"
@@ -3126,6 +3125,9 @@ msgstr "Edita CARP"
 
 msgid "Edit Dataset"
 msgstr "Editar conjunt de dades"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Edita grup"
@@ -3544,6 +3546,15 @@ msgstr "Encriptat"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Configuració de xifrat està comprimit amb gzip automàticament."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Encriptant '%s'... Si us plau esperi"
@@ -3736,6 +3747,9 @@ msgstr "Errada de codi"
 
 msgid "Error Level"
 msgstr "Nivell d'error"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Esdeveniment"
@@ -4958,9 +4972,6 @@ msgstr "Protocol de gestió de claus"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Longitud de la clau a utilitzar amb l'algorisme criptogràfic donat."
 
-msgid "Kill encrypted volume"
-msgstr "Matar volum xifrat"
-
 msgid "Korean"
 msgstr "Coreà"
 
@@ -5892,6 +5903,9 @@ msgstr "No s'ha pujat cap fitxer."
 
 msgid "No new disk found."
 msgstr "Sense disc nou trobat."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Sense programari RAID per disc trobat."
@@ -9173,9 +9187,6 @@ msgstr "El fitxer només s'ha pogut desar parcialment al servidor."
 msgid "The value of the variable."
 msgstr "El valor de la variable."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "El volum ha de ser separat abans que pugui ser eliminat."
-
 msgid "The work directory does not exist."
 msgstr "El directori de treball no existeix encara."
 
@@ -10608,13 +10619,6 @@ msgstr "Avís"
 msgid "Warning Level"
 msgstr "Nivell d'avís"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Avís: Esborraràs un volum xifrat. Totes les dades es perdràn i no es poden "
-"recuperar."
-
 msgid "Watch Directory"
 msgstr "Directori de vigilancia"
 
@@ -10897,9 +10901,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "Tots els discos xifrats són importats."
-
 msgid "and"
 msgstr "i"
 
@@ -10915,9 +10916,6 @@ msgid ""
 msgstr ""
 "Descodificat com: Byte 0-1-2 = recompte bloc bo (big endian) i el byte = 3-4 "
 "sistema(lliure) recompte de blocs."
-
-msgid "detected an error while importing."
-msgstr "detectat un error durant la importació."
 
 #, php-format
 msgid "e.g. %s"
@@ -10988,9 +10986,6 @@ msgstr "n/d"
 msgid "network traffic"
 msgstr "Tràfic de xarxa"
 
-msgid "no new encrypted disk found."
-msgstr "cap nou disk encriptat trobat"
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -11035,3 +11030,41 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Crea un volum encriptat"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Realment voleu eliminar aquest volum?\\n!!! Tingueu en compte que totes les "
+#~ "dades es perden i no poden ser recuperats. !!!"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "Tots els discos xifrats són importats."
+
+#~ msgid "detected an error while importing."
+#~ msgstr "detectat un error durant la importació."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "cap nou disk encriptat trobat"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Matar volum xifrat"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "El volum ha de ser separat abans que pugui ser eliminat."
+
+#~ msgid "Change password"
+#~ msgstr "Canviar contrasenya"
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Esborrar configuració i importa discs"
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Avís: Esborraràs un volum xifrat. Totes les dades es perdràn i no es poden "
+#~ "recuperar."

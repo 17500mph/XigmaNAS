@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-13 04:34+0000\n"
-"Last-Translator: transposed messenger <Unknown>\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"PO-Revision-Date: 2017-02-14 19:00+0000\n"
+"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:16+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -467,6 +467,9 @@ msgstr "CARP hinzufügen"
 msgid "Add Dataset"
 msgstr "Datensatz hinzufügen"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Gruppe hinzufügen"
 
@@ -718,6 +721,9 @@ msgstr ""
 msgid "All disks are imported."
 msgstr "Alle Festplatten sind importiert."
 
+msgid "All encrypted disks have been imported."
+msgstr ""
+
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
@@ -802,7 +808,7 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Alternativer Datenstrom"
 
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Alternativer TCP-Port (Standard 873)"
@@ -817,7 +823,7 @@ msgid "Always On"
 msgstr "Immer an"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Immer Scannen"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "Umgebungsbedingungen von externen Gerätesensoren"
@@ -871,10 +877,10 @@ msgstr ""
 "Eine Schnittstelle mit der angegebenen Beschreibung existiert bereits."
 
 msgid "Anonymous Bind"
-msgstr ""
+msgstr "Anonym verbinden"
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Anonymer Benutzer"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr "Annonymer Zugang ist seit SMB2 veraltet."
@@ -957,7 +963,7 @@ msgstr ""
 "welches aus einem oder mehreren Extents besteht."
 
 msgid "Attach"
-msgstr ""
+msgstr "Anhängen"
 
 msgid "Attach a data device"
 msgstr "Ein Datengerät hinzufügen"
@@ -994,7 +1000,7 @@ msgid "Auth Group"
 msgstr "Authentifizierungsgruppe"
 
 msgid "Auth Group Settings"
-msgstr ""
+msgstr "Gruppe Auth Einstellungen"
 
 msgid "Auth Groups"
 msgstr "Authentifizierungsgruppen"
@@ -1013,7 +1019,7 @@ msgid "Authenticate URL"
 msgstr "URL bestätigen"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "authorisierte Benutzer"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
@@ -1034,7 +1040,7 @@ msgid "Authentication Method"
 msgstr "Authentifizierungsmethode"
 
 msgid "Authorised Network"
-msgstr ""
+msgstr "authorisiertes Netzwerk"
 
 msgid "Authorised network"
 msgstr "Zugelassenes Netzwerk"
@@ -1049,7 +1055,7 @@ msgid "Auto Snapshot"
 msgstr "Automatischer Schnappschuss"
 
 msgid "Auto Snapshot Settings"
-msgstr ""
+msgstr "Einstellungenb für Auto Snapshot"
 
 msgid "Auto page refresh."
 msgstr "Automatische Seiten Aktualisierung."
@@ -1100,13 +1106,13 @@ msgid "Background"
 msgstr "Hintergrund"
 
 msgid "Backup"
-msgstr ""
+msgstr "Sicherung"
 
 msgid "Backup Configuration"
 msgstr "Sicherungskonfiguration"
 
 msgid "Backup File"
-msgstr ""
+msgstr "Sicherungsdatei"
 
 msgid "Backup/Restore"
 msgstr "Sichern/Wiederherstellen"
@@ -1121,10 +1127,10 @@ msgid "Ban List"
 msgstr "Sperrliste"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Regel Ausschlußliste"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Einstellung Regel Ausschlußliste"
 
 msgid "Banner"
 msgstr "Banner"
@@ -1200,6 +1206,7 @@ msgstr ""
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
+"Bevor ein Unison Client arbeiten kann, muß folgendes durchgeführt werden:"
 
 msgid "Best available"
 msgstr "Bester verfügbarer"
@@ -1208,7 +1215,7 @@ msgid "Bind DN"
 msgstr "Bind DN"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "Leeres Passwort"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1249,6 +1256,8 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Die Bootpartition ist zu klein. Es ist eine Neuinstallation von "
+"LiveCD/LiveUSB oder eine Vergrößerung der Bootpartition von %s nötig\n"
 
 msgid "Bootloader"
 msgstr "Bootloader"
@@ -1262,15 +1271,17 @@ msgstr "Bridge Einstellung"
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Die (Netzwerk)brücke kann nicht gelöscht werde, denn sie wird immer noch als "
+"Schnittstelle benutzt."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Die Brücke ist zur Löschung markiert."
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "Die Brücke ist geschützt."
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "Die Brücke ist entsperrt"
 
 msgid "Bring a device online"
 msgstr "Ein Gerät online schalten"
@@ -1309,15 +1320,17 @@ msgstr "CARP"
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"CARP kann nicht gelöscht werdem, denn es wird immer noch als Schnittstelle "
+"benutzt."
 
 msgid "CARP is marked for deletion"
-msgstr ""
+msgstr "CARP ist zum Löschen markiert"
 
 msgid "CARP is protected"
-msgstr ""
+msgstr "CARP ist geschützt"
 
 msgid "CARP is unlocked"
-msgstr ""
+msgstr "CARP ist entsperrt"
 
 msgid "CARP only"
 msgstr "Nur CARP"
@@ -1347,10 +1360,10 @@ msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
 msgid "CIFS/SMB Information"
-msgstr ""
+msgstr "CIFS/SMB Informationen"
 
 msgid "CIFS/SMB is disabled."
-msgstr ""
+msgstr "CIFS/SMB ist deaktiviert."
 
 msgid "CIFS/SMB is enabled."
 msgstr "Samba (CIFS/SMB) ist aktiviert"
@@ -1386,7 +1399,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditionelles Chinesisch Big5)"
 
 msgid "CPU Core Usage"
-msgstr ""
+msgstr "CPU Core  Auslastung"
 
 msgid "CPU Frequency"
 msgstr "CPU Frequenz"
@@ -1478,9 +1491,6 @@ msgstr "Ändern"
 msgid "Change below file"
 msgstr "ändere unterstehende Datei"
 
-msgid "Change password"
-msgstr "Passwort ändern"
-
 msgid "Change the IP address of your computer"
 msgstr "Ändern sie die IP-Adresse ihres Computers"
 
@@ -1545,8 +1555,8 @@ msgstr "Konfiguration löschen und neu von dem ZFS-Pool einlesen"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Konfiguration löschen und neu von dem Software Raidl einlesen"
 
-msgid "Clear config and Import disks"
-msgstr "Konfiguration bereinigen und Platten importieren"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Gerätefehler löschen"
@@ -1562,10 +1572,10 @@ msgid "Client"
 msgstr "Programm"
 
 msgid "Client Max. Protocol"
-msgstr ""
+msgstr "Client Max. Protokoll"
 
 msgid "Client Min. Protocol"
-msgstr ""
+msgstr "Client Min. Protokoll"
 
 msgid "Clone"
 msgstr "Duplizieren"
@@ -1591,7 +1601,7 @@ msgid "Command Output"
 msgstr "Befehlsausgabe"
 
 msgid "Command Output:"
-msgstr ""
+msgstr "Kommando-Ausgabeergebnis"
 
 msgid "Command Scripts"
 msgstr "Befehlsskripte"
@@ -1665,7 +1675,7 @@ msgid "Configuration"
 msgstr "Einstellungen"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Konfigurationsverzeichnis"
 
 msgid "Configuring"
 msgstr "Konfiguriere"
@@ -1711,7 +1721,7 @@ msgid "Content"
 msgstr "Inhalt"
 
 msgid "Content Locations"
-msgstr ""
+msgstr "Speicherort der Nutzdaten"
 
 msgid "Continue"
 msgstr "Fortsetzen"
@@ -1951,9 +1961,6 @@ msgstr "ZFS-Dateisystem auf einer GPT-Partition erstellen"
 msgid "Create and initialize RAID."
 msgstr "RAID erstellen und initialisieren."
 
-msgid "Create encrypted volume"
-msgstr "Verschlüsselten Datenträger erstellen"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Erzeuge Arbeitsverzeichnis, falls es noch nicht existiert."
 
@@ -2000,7 +2007,7 @@ msgid "Current Password"
 msgstr "Aktuelles Passwort"
 
 msgid "Current Version"
-msgstr ""
+msgstr "Aktuelle Version"
 
 msgid "Current internal temperature."
 msgstr "Aktuelle intere Temperatur."
@@ -2069,10 +2076,10 @@ msgid "DNS"
 msgstr "Domain Name System (DNS)"
 
 msgid "DNS Domain"
-msgstr ""
+msgstr "DNS Domäne"
 
 msgid "DNS Forwarder"
-msgstr ""
+msgstr "DNS Weiterleitung"
 
 msgid "DNS server is empty."
 msgstr "Der DNS Server ist leer"
@@ -2154,7 +2161,7 @@ msgstr ""
 "Bytes 3-4-5 = Maximale Löschanzahl (Big Endian)."
 
 msgid "Decrypt Password"
-msgstr ""
+msgstr "Entschlüsselungspasswort"
 
 msgid "Dedup"
 msgstr "Deduplikation"
@@ -2229,10 +2236,10 @@ msgid "Delete Login Info"
 msgstr "Lösche Login Information"
 
 msgid "Delete Selected Bridges"
-msgstr ""
+msgstr "Ausgewählte Bridge Konfigurationen Löschen"
 
 msgid "Delete Selected CARPs"
-msgstr ""
+msgstr "Ausgewählte CARP Konfigurationen Löschen"
 
 msgid "Delete Selected Commands"
 msgstr "Entfernt ausgewählte Kommandos"
@@ -2240,17 +2247,20 @@ msgstr "Entfernt ausgewählte Kommandos"
 msgid "Delete Selected Datasets"
 msgstr "Ausgewählte Datensätze löschen"
 
-msgid "Delete Selected Groups"
+msgid "Delete Selected Encrypted Volumes"
 msgstr ""
+
+msgid "Delete Selected Groups"
+msgstr "Ausgewählte Gruppen Löschen"
 
 msgid "Delete Selected Jobs"
 msgstr "Ausgewählte Aufträge löschen"
 
 msgid "Delete Selected LAGGs"
-msgstr ""
+msgstr "Ausgewählte LAGG Konfigurationen Löschen"
 
 msgid "Delete Selected NFS Shares"
-msgstr ""
+msgstr "Ausgewählte NFS Freigaben Löschen"
 
 msgid "Delete Selected Options"
 msgstr "Ausgewählte Optionen löschen"
@@ -2262,34 +2272,34 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Lösche die ausgewählten RAID Laufwerke"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Ausgewählte Datensätze Löschen"
 
 msgid "Delete Selected Resources"
 msgstr ""
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Ausgewählte Routen Löschen"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr ""
+msgstr "Ausgewählte RSync Aufgaben Läschen"
 
 msgid "Delete Selected Rsync Modules"
-msgstr ""
+msgstr "Ausgewählte Rsync Module Löschen"
 
 msgid "Delete Selected Samba Shares"
-msgstr ""
+msgstr "Ausgewählte Samba Freigaben Löschen"
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Ausgewählte Freigaben Löschen"
 
 msgid "Delete Selected Snapshots"
 msgstr "Ausgewählte Snapshots löschen"
 
 msgid "Delete Selected User Accounts"
-msgstr ""
+msgstr "Ausgewählte Benutzerkonten Löschen"
 
 msgid "Delete Selected VLANs"
-msgstr ""
+msgstr "Gewählte VLANs löschen"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Ausgewählte Virtuelle Geräte löschen"
@@ -2298,7 +2308,7 @@ msgid "Delete Selected Volumes"
 msgstr "Ausgewählte Datenträger löschen"
 
 msgid "Delete Selected WLANs"
-msgstr ""
+msgstr "Gewählte WLANs löschen"
 
 msgid "Delete URL"
 msgstr "URL löschen"
@@ -2426,7 +2436,7 @@ msgid "Destroyed"
 msgstr "Aufgelöst"
 
 msgid "Detach"
-msgstr ""
+msgstr "Trennen"
 
 msgid "Detach a data device from a mirror"
 msgstr "Datenträger von einem gespiegelten Verbund entfernen"
@@ -2441,7 +2451,7 @@ msgid "Detected"
 msgstr "Entdeckt"
 
 msgid "Detected Disks"
-msgstr ""
+msgstr "Gefundene Laufwerke"
 
 msgid "Detected Language:"
 msgstr "ermittelte Sprache"
@@ -2453,7 +2463,7 @@ msgid "Detected an error while importing."
 msgstr "Ein Fehler wurde während dem Importier-Vorgang entdeckt."
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Gefundene Freigaben auf diesem Server"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2562,7 +2572,7 @@ msgid "Disable"
 msgstr "Deaktivieren"
 
 msgid "Disable Firmware Upgrade"
-msgstr ""
+msgstr "Firmware Upgrade deaktivieren"
 
 msgid "Disable Selected Commands"
 msgstr "Deaktiviere ausgewählte Kommandos"
@@ -2574,13 +2584,13 @@ msgid "Disable Selected Options"
 msgstr "Ausgewählte Optionen deaktivieren"
 
 msgid "Disable Selected Records"
-msgstr ""
+msgstr "Ausgewahlte Datensätze Deaktivieren"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr ""
+msgstr "Ausgewählte Rsync Aufgaben Deaktivieren"
 
 msgid "Disable Selected Rsync Modules"
-msgstr ""
+msgstr "Ausgewählte Rsync Module Deaktivieren"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktivieren des TCP Wrapper (mod_wrap Modul)"
@@ -2763,13 +2773,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Wollen Sie wirklich dieses iSCSI-target löschen?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Wollen Sie diesen Datenträger wirklich löschen?\\n!!! Achtung, alle Daten "
-"gehen verloren und können nicht wieder hergestellt werden. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Wollen Sie wirklich importieren?\\nDie bestehende Konfiguration wird unter "
@@ -2832,28 +2835,28 @@ msgstr ""
 "(Stripe) konfigurieren ?"
 
 msgid "Do you want to delete selected CARPs?"
-msgstr ""
+msgstr "Möchten Sie die gewählten CARPs löschen?"
 
 msgid "Do you want to delete selected LAGGs?"
-msgstr ""
+msgstr "Möchten Sie die gewählten LAGGs löschen?"
 
 msgid "Do you want to delete selected NFS shares?"
-msgstr ""
+msgstr "Möchten Sie die gewählten NFS Freigaben löschen?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Soll das ausgewählte RAID Laufwerk gelöscht werden?"
 
 msgid "Do you want to delete selected Samba shares?"
-msgstr ""
+msgstr "Möchten Sie die gewählten Samba Freigaben löschen?"
 
 msgid "Do you want to delete selected VLANs?"
-msgstr ""
+msgstr "Möchten Sie die gewählten VLANs löschen?"
 
 msgid "Do you want to delete selected WLANs?"
-msgstr ""
+msgstr "Möchten Sie die gewählten WLANs löschen?"
 
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "Möchten Sie die gewählten Brücken löschen?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Sollen  alle ausgewählten Kommandos gelöscht werden?"
@@ -2861,8 +2864,11 @@ msgstr "Sollen  alle ausgewählten Kommandos gelöscht werden?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Wollen Sie die ausgewählten Datensätze löschen?"
 
-msgid "Do you want to delete selected groups?"
+msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
+
+msgid "Do you want to delete selected groups?"
+msgstr "Möchten Sie die gewählten Gruppen löschen?"
 
 msgid "Do you want to delete selected jobs?"
 msgstr "Wollen Sie die ausgewählten Aufträge löschen?"
@@ -2886,7 +2892,7 @@ msgid "Do you want to delete selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "Möchten Sie die gewählten rsync Module löschen?"
 
 msgid "Do you want to delete selected shares?"
 msgstr ""
@@ -2983,7 +2989,7 @@ msgid "Domain Controller Name"
 msgstr ""
 
 msgid "Domain Name"
-msgstr ""
+msgstr "Domänenname"
 
 msgid "Domain Name (DNS/Realm-Name)"
 msgstr ""
@@ -3022,7 +3028,7 @@ msgid "Download Configuration"
 msgstr "Sichern der Konfigurationsdatei"
 
 msgid "Download Directory"
-msgstr ""
+msgstr "Download-Verzeichnis"
 
 msgid "Drive Temperature."
 msgstr "Festplattentemperatur"
@@ -3093,6 +3099,9 @@ msgstr ""
 
 msgid "Edit Dataset"
 msgstr "Datensatz bearbeiten"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Gruppe bearbeiten"
@@ -3505,6 +3514,15 @@ msgstr "Verschlüsselt"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Verschlüsselte Konfiguration wird automatisch komprimiert (gzip)"
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "»%s« wird verschlüsselt, bitte warten …"
@@ -3688,6 +3706,9 @@ msgstr "Fehlercode"
 
 msgid "Error Level"
 msgstr "Fehlergrad"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Ereignis"
@@ -4891,9 +4912,6 @@ msgstr "Key Management Protocol"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Schlüssellänge des zu verwendenden kryptographischen Algorithmus."
 
-msgid "Kill encrypted volume"
-msgstr "Verschlüsselten Datenträger entfernen"
-
 msgid "Korean"
 msgstr "Koreanisch"
 
@@ -5823,6 +5841,9 @@ msgstr "Es wurde keine Datei hochgeladen."
 
 msgid "No new disk found."
 msgstr "Keine neuen Festplatten gefunden."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Keine neuen Software-RAID Festplatten gefunden."
@@ -9089,9 +9110,6 @@ msgstr "Die Datei wurde nur teilweise hochgeladen."
 msgid "The value of the variable."
 msgstr "Der Wert der Variable."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Das Volume muss vor dem Löschen ausgeworfen werden."
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -10513,13 +10531,6 @@ msgstr "Warnung"
 msgid "Warning Level"
 msgstr "Detailgrad der Warnungen"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Warnung: Sie sind dabei ein verschlüsseltes Volumen zu löschen. Alle Daten "
-"gehen dabei verloren und können nicht wiederhergestellt werden."
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -10806,9 +10817,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "Alle verschl&uuml;sselten Platten importiert."
-
 msgid "and"
 msgstr "und"
 
@@ -10824,9 +10832,6 @@ msgid ""
 msgstr ""
 "Dekodiert as: Bytes 0-1-2 = Anzahl fehlerfreier Blöcke (Big Endian) und "
 "Bytes 3-4 = Anzahl der Systemblöcke (frei)."
-
-msgid "detected an error while importing."
-msgstr "Fehler beim Importieren festgestellt."
 
 #, php-format
 msgid "e.g. %s"
@@ -10897,9 +10902,6 @@ msgstr "k.A."
 msgid "network traffic"
 msgstr "Netzwerkverkehr"
 
-msgid "no new encrypted disk found."
-msgstr "keine neuen verschl&uuml;sselten Platten gefunden."
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10944,3 +10946,41 @@ msgstr "an"
 
 msgid "umount"
 msgstr "Aushängen"
+
+#~ msgid "Change password"
+#~ msgstr "Passwort ändern"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Verschlüsselten Datenträger erstellen"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Wollen Sie diesen Datenträger wirklich löschen?\\n!!! Achtung, alle Daten "
+#~ "gehen verloren und können nicht wieder hergestellt werden. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Verschlüsselten Datenträger entfernen"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Das Volume muss vor dem Löschen ausgeworfen werden."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Warnung: Sie sind dabei ein verschlüsseltes Volumen zu löschen. Alle Daten "
+#~ "gehen dabei verloren und können nicht wiederhergestellt werden."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Konfiguration bereinigen und Platten importieren"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "Alle verschl&uuml;sselten Platten importiert."
+
+#~ msgid "detected an error while importing."
+#~ msgstr "Fehler beim Importieren festgestellt."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "keine neuen verschl&uuml;sselten Platten gefunden."

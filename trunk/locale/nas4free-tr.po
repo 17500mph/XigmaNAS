@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -407,6 +407,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr ""
 
@@ -646,6 +649,9 @@ msgstr ""
 "%s konumu tanımlanmamış.Tüm dizinler tanımlanmış bir konuma ihtiyaç duyuyor."
 
 msgid "All disks are imported."
+msgstr ""
+
+msgid "All encrypted disks have been imported."
 msgstr ""
 
 msgid ""
@@ -1348,9 +1354,6 @@ msgstr "Değiştir"
 msgid "Change below file"
 msgstr ""
 
-msgid "Change password"
-msgstr "Parolayı değiştir"
-
 msgid "Change the IP address of your computer"
 msgstr ""
 
@@ -1412,7 +1415,7 @@ msgstr ""
 msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 
-msgid "Clear config and Import disks"
+msgid "Clear Config And Import Disks"
 msgstr ""
 
 msgid "Clear device errors"
@@ -1782,9 +1785,6 @@ msgstr ""
 msgid "Create and initialize RAID."
 msgstr "RAID oluştur ve başlat"
 
-msgid "Create encrypted volume"
-msgstr "Şifrelenmiş Volume Oluşturuldu"
-
 msgid "Create work directory if it doesn't exist."
 msgstr "Çalışma dizini yoksa oluştur."
 
@@ -2055,6 +2055,9 @@ msgid "Delete Selected Commands"
 msgstr ""
 
 msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
 msgid "Delete Selected Groups"
@@ -2555,13 +2558,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Bu hedefi gerçekten silmek istediğinize emin misiniz?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Bu disk alanını karldırmak istediğine emin misin?\\n!!! Tüm veri geri "
-"çağrılamayacak şekilde silinicek. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 
@@ -2641,6 +2637,9 @@ msgid "Do you want to delete selected commands?"
 msgstr ""
 
 msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
 msgid "Do you want to delete selected groups?"
@@ -2870,6 +2869,9 @@ msgid "Edit CARP"
 msgstr ""
 
 msgid "Edit Dataset"
+msgstr ""
+
+msgid "Edit Encrypted Volume"
 msgstr ""
 
 msgid "Edit Group"
@@ -3276,6 +3278,15 @@ msgstr "Şifreli"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr ""
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "'%s' şifreleniyor...Lütfen Bekleyin"
@@ -3440,6 +3451,9 @@ msgid "Error Code"
 msgstr ""
 
 msgid "Error Level"
+msgstr ""
+
+msgid "Errors have been detected during import."
 msgstr ""
 
 msgid "Event"
@@ -4570,9 +4584,6 @@ msgstr "Anahtar Yönetim Protokolü"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
 
-msgid "Kill encrypted volume"
-msgstr "Şifrelenmiş Volümü Sil"
-
 msgid "Korean"
 msgstr "Korece"
 
@@ -5448,6 +5459,9 @@ msgid "No file was uploaded."
 msgstr ""
 
 msgid "No new disk found."
+msgstr ""
+
+msgid "No new encrypted disks have been found."
 msgstr ""
 
 msgid "No new software raid disk found."
@@ -8451,9 +8465,6 @@ msgstr ""
 msgid "The value of the variable."
 msgstr "Değişkenin değeri"
 
-msgid "The volume must be detached before it can be deleted."
-msgstr ""
-
 msgid "The work directory does not exist."
 msgstr ""
 
@@ -9678,11 +9689,6 @@ msgstr "Dikkat"
 msgid "Warning Level"
 msgstr ""
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-
 msgid "Watch Directory"
 msgstr ""
 
@@ -9935,9 +9941,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr ""
-
 msgid "and"
 msgstr ""
 
@@ -9950,9 +9953,6 @@ msgstr ""
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
-msgstr ""
-
-msgid "detected an error while importing."
 msgstr ""
 
 #, php-format
@@ -10024,9 +10024,6 @@ msgstr ""
 msgid "network traffic"
 msgstr ""
 
-msgid "no new encrypted disk found."
-msgstr ""
-
 msgid "noVNC"
 msgstr ""
 
@@ -10071,3 +10068,19 @@ msgstr ""
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Şifrelenmiş Volume Oluşturuldu"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Bu disk alanını karldırmak istediğine emin misin?\\n!!! Tüm veri geri "
+#~ "çağrılamayacak şekilde silinicek. !!!"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Şifrelenmiş Volümü Sil"
+
+#~ msgid "Change password"
+#~ msgstr "Parolayı değiştir"

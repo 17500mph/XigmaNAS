@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-12 01:43+0000\n"
-"PO-Revision-Date: 2017-02-12 18:42+0000\n"
+"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"PO-Revision-Date: 2017-02-14 04:56+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-13 23:17+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -453,6 +453,9 @@ msgstr "Adăugare CARP"
 msgid "Add Dataset"
 msgstr "Adăugare set date"
 
+msgid "Add Encrypted Volume"
+msgstr ""
+
 msgid "Add Group"
 msgstr "Adăugare grup"
 
@@ -703,6 +706,9 @@ msgstr ""
 
 msgid "All disks are imported."
 msgstr "toate dispozitivele de stocare atasate"
+
+msgid "All encrypted disks have been imported."
+msgstr ""
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1457,9 +1463,6 @@ msgstr "Modificare"
 msgid "Change below file"
 msgstr "Modificare fișier"
 
-msgid "Change password"
-msgstr "Modificare parolă"
-
 msgid "Change the IP address of your computer"
 msgstr "Modifică adresa IP a calculatorului"
 
@@ -1526,8 +1529,8 @@ msgstr "Ștergere configurație & Import discuri"
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Ștergere configurație & Import discuri Raid software"
 
-msgid "Clear config and Import disks"
-msgstr "Ştergere Configurație și Import discuri"
+msgid "Clear Config And Import Disks"
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Ștergere erori dispozitiv"
@@ -1793,7 +1796,7 @@ msgid "Conveyance Self-Test"
 msgstr "Auto-test detaliat"
 
 msgid "Core"
-msgstr "Nucleu"
+msgstr "Nucleul"
 
 msgid "Count"
 msgstr "Numărul de pachete"
@@ -1982,9 +1985,6 @@ msgstr "Creare partiție ZFS sau GPT."
 
 msgid "Create and initialize RAID."
 msgstr "Creare și inițializare RAID."
-
-msgid "Create encrypted volume"
-msgstr "Creare volum criptat"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Creare folder de lucru (dacă acesta nu există deja)."
@@ -2271,6 +2271,9 @@ msgstr "Ștergere comenzi selectate"
 
 msgid "Delete Selected Datasets"
 msgstr "Ștergere seturi de date selectate"
+
+msgid "Delete Selected Encrypted Volumes"
+msgstr ""
 
 msgid "Delete Selected Groups"
 msgstr "Ștergere grupuri selectate"
@@ -2789,13 +2792,6 @@ msgid "Do you really want to delete this target?"
 msgstr "Doriți să ștergeți această destinație?"
 
 msgid ""
-"Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-"and can not be recovered. !!!"
-msgstr ""
-"Doriți să ștergeți acest volum?\\n!!! Notă: Toate datele vor fi pierdute și "
-"nu vor mai putea fi recuperate. !!!"
-
-msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 "Doriţi să importați această configurație?\\nConfigurația curentă va fi "
@@ -2879,6 +2875,9 @@ msgstr "Ștergeți comenzile selectate?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Ștergeți seturile de date selectate?"
+
+msgid "Do you want to delete selected encrypted volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected groups?"
 msgstr "Ștergeți grupurile selectate?"
@@ -3110,6 +3109,9 @@ msgstr "Editare conexiune CARP"
 
 msgid "Edit Dataset"
 msgstr "Editare set de date"
+
+msgid "Edit Encrypted Volume"
+msgstr ""
 
 msgid "Edit Group"
 msgstr "Editare grup"
@@ -3524,6 +3526,15 @@ msgstr "Criptat"
 msgid "Encrypted configuration is automatically gzipped."
 msgstr "Configurația criptată este automat comprimată (gzip)."
 
+msgid "Encrypted volume is marked for deletion"
+msgstr ""
+
+msgid "Encrypted volume is protected"
+msgstr ""
+
+msgid "Encrypted volume is unlocked"
+msgstr ""
+
 #, php-format
 msgid "Encrypting '%s'... Please wait"
 msgstr "Criptare '%s\"... Vă rugăm așteptați"
@@ -3716,6 +3727,9 @@ msgstr "Cod eroare"
 
 msgid "Error Level"
 msgstr "Nivel eroare"
+
+msgid "Errors have been detected during import."
+msgstr ""
 
 msgid "Event"
 msgstr "Eveniment"
@@ -4932,9 +4946,6 @@ msgstr "Protocol Management Chei"
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Lungimea cheii utilizate pentru algoritmul de criptare dat."
 
-msgid "Kill encrypted volume"
-msgstr "Distrugere volum criptat"
-
 msgid "Korean"
 msgstr "Koreană"
 
@@ -5858,6 +5869,9 @@ msgstr "Niciun fișier nu a fost încărcat."
 
 msgid "No new disk found."
 msgstr "Nu exista dispozitive de stocare noi."
+
+msgid "No new encrypted disks have been found."
+msgstr ""
 
 msgid "No new software raid disk found."
 msgstr "Nu exista dispozitive RAID-Soft  noi."
@@ -9116,9 +9130,6 @@ msgstr "Fișierul a fost parțial încărcat."
 msgid "The value of the variable."
 msgstr "Valoarea variabilei."
 
-msgid "The volume must be detached before it can be deleted."
-msgstr "Volumul trebuie detașat pentru a putea fi șters."
-
 msgid "The work directory does not exist."
 msgstr "Directorul de lucru nu există."
 
@@ -10533,13 +10544,6 @@ msgstr "Atenție"
 msgid "Warning Level"
 msgstr "NIvel avertizare"
 
-msgid ""
-"Warning: You are going to delete an encrypted volume. All data will get lost "
-"and can not be recovered."
-msgstr ""
-"Atenție: Sînteți pe cale să ștergeți un volum criptat. Toate datele vor fi "
-"șterse fără posibilitate de recuperare."
-
 msgid "Watch Directory"
 msgstr "Director Watch"
 
@@ -10830,9 +10834,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "all encrypted disks are imported."
-msgstr "toate discurile criptate sînt importate."
-
 msgid "and"
 msgstr "și"
 
@@ -10848,9 +10849,6 @@ msgid ""
 msgstr ""
 "biții 0-1-2 reprezintă numărul de sectoare valide (big endian) în timp ce "
 "biții 3-4-5 reprezintă numărul de sectoare libere."
-
-msgid "detected an error while importing."
-msgstr "au fost detectate erori la import."
 
 #, php-format
 msgid "e.g. %s"
@@ -10921,9 +10919,6 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr "trafic rețea"
 
-msgid "no new encrypted disk found."
-msgstr "nu a fost găsit niciun disc nou criptat."
-
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -10968,3 +10963,41 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+#~ msgid "Create encrypted volume"
+#~ msgstr "Creare volum criptat"
+
+#~ msgid "Kill encrypted volume"
+#~ msgstr "Distrugere volum criptat"
+
+#~ msgid "Change password"
+#~ msgstr "Modificare parolă"
+
+#~ msgid "all encrypted disks are imported."
+#~ msgstr "toate discurile criptate sînt importate."
+
+#~ msgid "detected an error while importing."
+#~ msgstr "au fost detectate erori la import."
+
+#~ msgid "Clear config and Import disks"
+#~ msgstr "Ştergere Configurație și Import discuri"
+
+#~ msgid ""
+#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
+#~ "and can not be recovered. !!!"
+#~ msgstr ""
+#~ "Doriți să ștergeți acest volum?\\n!!! Notă: Toate datele vor fi pierdute și "
+#~ "nu vor mai putea fi recuperate. !!!"
+
+#~ msgid "The volume must be detached before it can be deleted."
+#~ msgstr "Volumul trebuie detașat pentru a putea fi șters."
+
+#~ msgid ""
+#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
+#~ "and can not be recovered."
+#~ msgstr ""
+#~ "Atenție: Sînteți pe cale să ștergeți un volum criptat. Toate datele vor fi "
+#~ "șterse fără posibilitate de recuperare."
+
+#~ msgid "no new encrypted disk found."
+#~ msgstr "nu a fost găsit niciun disc nou criptat."
