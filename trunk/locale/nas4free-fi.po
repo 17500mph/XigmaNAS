@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -112,6 +112,11 @@ msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(Muuta tarvittaessa)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Maxtor 6B200M0 200GB ja Maxtor 2R015H1 15GB levyissä)"
@@ -657,6 +662,9 @@ msgid ""
 msgstr ""
 
 msgid "Alert Level"
+msgstr ""
+
+msgid "Algorithm"
 msgstr ""
 
 msgid "All"
@@ -3314,9 +3322,6 @@ msgstr "Salataan '%s'... Odota hetki"
 msgid "Encryption"
 msgstr "Salaus"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3328,9 +3333,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "Salaus algoritmi"
-
-msgid "Encryption algorithm to use."
-msgstr ""
 
 msgid "English"
 msgstr "Englanti"
@@ -4598,9 +4600,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Avainten hallinta protokolla"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr ""
 
 msgid "Korean"
 msgstr "Korealainen"
@@ -6993,6 +6992,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7047,6 +7049,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8117,11 +8122,6 @@ msgstr "Oletus SMTP postipalvelimen portti, esim. 25 tai 587."
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
-msgstr ""
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
 msgstr ""
 
 msgid "The default time in seconds to display a screen."

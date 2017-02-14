@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -108,6 +108,11 @@ msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(Промени при необходимост)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Намерено в  Maxtor 6B200M0 200GB и в Maxtor 2R015H1 15GB дискове)."
@@ -644,6 +649,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Ниво на Тревога"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Всички"
@@ -3413,9 +3421,6 @@ msgstr ""
 msgid "Encryption"
 msgstr "Криптиране"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3427,9 +3432,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "алгоритъм за криптиране"
-
-msgid "Encryption algorithm to use."
-msgstr ""
 
 msgid "English"
 msgstr ""
@@ -4696,9 +4698,6 @@ msgid "Key Length"
 msgstr ""
 
 msgid "Key Management Protocol"
-msgstr ""
-
-msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
 
 msgid "Korean"
@@ -7089,6 +7088,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7143,6 +7145,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8214,11 +8219,6 @@ msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
-msgstr ""
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
 msgstr ""
 
 msgid "The default time in seconds to display a screen."

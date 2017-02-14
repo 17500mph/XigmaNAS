@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -108,6 +108,11 @@ msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(Spremeni, če je potrebno)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(V Maxtor 6B200M0 200GB in Maxtor 2R015H1 15GB diskih)."
@@ -634,6 +639,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Stopnja opozorila"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Vse"
@@ -3317,9 +3325,6 @@ msgstr "Kriptiranje '%s'... Prosim počakajte"
 msgid "Encryption"
 msgstr "Šifriranje"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3331,9 +3336,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "Algoritem šifriranja"
-
-msgid "Encryption algorithm to use."
-msgstr "Uporabljen šifrirni algoritem."
 
 msgid "English"
 msgstr "Angleščina"
@@ -4632,9 +4634,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Protokol upravljanja s ključi"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Dolžina ključa za uporabo z izbranim kriptiranjem."
 
 msgid "Korean"
 msgstr "Korejščina"
@@ -7065,6 +7064,9 @@ msgstr "Izberite obliko datuma"
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Izberite disk, ki je omogočen za S.M.A.R.T. nadzor."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Izberi format datotečnega sistema"
 
@@ -7120,6 +7122,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8213,13 +8218,6 @@ msgstr "Privzeta vrata SMTP poštnega strežnika, npr. 25 ali 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Privzete dolžine ključev so: 128 za AES, 128 za Blowfish, 128 za Camellia "
-"in192 za 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
@@ -10209,5 +10207,18 @@ msgstr "izvrzi"
 #~ "Res želite izbrisati to particijo?\\n!!! Vedite, da bodo vsi podatki "
 #~ "izgubljeni. !!!"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Uporabljen šifrirni algoritem."
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Dolžina ključa za uporabo z izbranim kriptiranjem."
+
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Ubij kriptiran nosilec"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Privzete dolžine ključev so: 128 za AES, 128 za Blowfish, 128 za Camellia "
+#~ "in192 za 3DES."

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:34+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:52+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 msgid " interfaces:"
@@ -109,6 +109,11 @@ msgstr "'%s' vee alle statistiese data van die grafieke uit!"
 
 msgid "(Change if needed)"
 msgstr "(Verander as benodig)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Aangetref in Maxtro 6B200M0 200GB en Maxtor 2R015H1 15GB skywe)."
@@ -678,6 +683,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Waarskuwing Vlak"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Alles"
@@ -3527,9 +3535,6 @@ msgstr "Kodeer tans '%s'... Wag asseblief"
 msgid "Encryption"
 msgstr "Kodering"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3541,9 +3546,6 @@ msgstr "Kodering Gereedskap"
 
 msgid "Encryption algorithm"
 msgstr "Kodering algoritme"
-
-msgid "Encryption algorithm to use."
-msgstr "Kodering algoritme om te gebruik."
 
 msgid "English"
 msgstr "Engels"
@@ -4910,9 +4912,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Sleutel Bestuur Protokol"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Sleutellengte om vir die gegewe kriptografiese algoritme te gebruik."
 
 msgid "Korean"
 msgstr "Koreaans"
@@ -7404,6 +7403,9 @@ msgstr "Kies 'n datum formaat."
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Kies 'n skyf wat opgestel is vir S.M.A.R.T. monitering."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Kies 'n lêer sisteem formaat."
 
@@ -7467,6 +7469,9 @@ msgid ""
 msgstr ""
 "Selekteer watter koppelvlakke om te gebruik. (Dit is sleg kiesbaar as jou "
 "bediener meer as een koppelvlak het)"
+
+msgid "Select which key length to use for given cryptographic algorithm."
+msgstr ""
 
 msgid "Selected"
 msgstr "Geselekteerde"
@@ -8640,13 +8645,6 @@ msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
 "Die verstek basis afsonderlike naam (DN) wat moet gebruik word om te soek, "
 "bv. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Die standaard sleutel lengtes is: 128 vir AES, 128 vir Blowfish, 128 vir "
-"Camelia en 193 vir 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr "Die standaard tyd in sekondes om 'n skerm te vertoon."
@@ -10803,6 +10801,19 @@ msgstr ""
 #~ msgstr ""
 #~ "Wil jy regtig hierdie volume uitvee?\\n!!! Neem kennis dat alle data verlore "
 #~ "sal raak en nie herstel kan word nie.!!!"
+
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Kodering algoritme om te gebruik."
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Sleutellengte om vir die gegewe kriptografiese algoritme te gebruik."
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Die standaard sleutel lengtes is: 128 vir AES, 128 vir Blowfish, 128 vir "
+#~ "Camelia en 193 vir 3DES."
 
 #~ msgid "The volume must be detached before it can be deleted."
 #~ msgstr "Die volume moet losgemaak word voor dit uitgevee kan word."

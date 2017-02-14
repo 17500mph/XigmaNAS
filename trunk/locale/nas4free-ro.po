@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-02-14 04:56+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -106,6 +106,11 @@ msgstr "'%s' a șters toate datele statistice ale graficelor!"
 
 msgid "(Change if needed)"
 msgstr "(Modifică dacă este necesar)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -679,6 +684,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Nivel alertă"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Toate"
@@ -3542,9 +3550,6 @@ msgstr "Criptare '%s\"... Vă rugăm așteptați"
 msgid "Encryption"
 msgstr "Criptare"
 
-msgid "Encryption Algorithm"
-msgstr "Algoritm criptare"
-
 msgid "Encryption Management"
 msgstr "Management criptare"
 
@@ -3556,9 +3561,6 @@ msgstr "Unelte criptare"
 
 msgid "Encryption algorithm"
 msgstr "Algoritm criptare"
-
-msgid "Encryption algorithm to use."
-msgstr "Algoritm de criptare de utilizat."
 
 msgid "English"
 msgstr "Engleză"
@@ -4942,9 +4944,6 @@ msgstr "Lungime cheie"
 
 msgid "Key Management Protocol"
 msgstr "Protocol Management Chei"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Lungimea cheii utilizate pentru algoritmul de criptare dat."
 
 msgid "Korean"
 msgstr "Koreană"
@@ -7466,6 +7465,9 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Selectați un disc care are activată opțiunea de monitorizare S.M.A.R.T."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Selectare format sistem fișiere."
 
@@ -7530,6 +7532,9 @@ msgid ""
 "one interface)"
 msgstr ""
 "Selectare interfață (doar dacă serverul are mai multe interfețe disponibile)."
+
+msgid "Select which key length to use for given cryptographic algorithm."
+msgstr ""
 
 msgid "Selected"
 msgstr "Selectat"
@@ -8702,13 +8707,6 @@ msgstr "Portul implicit folosit de serverul SMTP, ex. 25 sau 587."
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
 "Baza implicită pentru identificarea numelui (DN) utilizată în căutări, ex. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Lungimile implicite pentru chei sînt: 128 pentru AES, 128 pentru Blowfish, "
-"128 pentru Camellia și 192 pentru 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr "Timpul implicit în secunde folosit pentru a afișa un ecran."
@@ -10970,8 +10968,14 @@ msgstr "demontare"
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Distrugere volum criptat"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Algoritm de criptare de utilizat."
+
 #~ msgid "Change password"
 #~ msgstr "Modificare parolă"
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Lungimea cheii utilizate pentru algoritmul de criptare dat."
 
 #~ msgid "all encrypted disks are imported."
 #~ msgstr "toate discurile criptate sînt importate."
@@ -10989,6 +10993,13 @@ msgstr "demontare"
 #~ "Doriți să ștergeți acest volum?\\n!!! Notă: Toate datele vor fi pierdute și "
 #~ "nu vor mai putea fi recuperate. !!!"
 
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Lungimile implicite pentru chei sînt: 128 pentru AES, 128 pentru Blowfish, "
+#~ "128 pentru Camellia și 192 pentru 3DES."
+
 #~ msgid "The volume must be detached before it can be deleted."
 #~ msgstr "Volumul trebuie detașat pentru a putea fi șters."
 
@@ -11001,3 +11012,6 @@ msgstr "demontare"
 
 #~ msgid "no new encrypted disk found."
 #~ msgstr "nu a fost găsit niciun disc nou criptat."
+
+#~ msgid "Encryption Algorithm"
+#~ msgstr "Algoritm criptare"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-01-15 00:16+0000\n"
 "Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -108,6 +108,11 @@ msgstr "'%s' apaga todos os dados estatísticos do gráficos!"
 
 msgid "(Change if needed)"
 msgstr "(Altere se necessário)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Como nos discos Maxtor 6B200M0 200GB e Maxtor 2R015H1 15GB)."
@@ -671,6 +676,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Nivel de Alerta"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Todos"
@@ -3383,9 +3391,6 @@ msgstr "A encriptar '%s'... Por favor aguarde"
 msgid "Encryption"
 msgstr "Encriptação"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3397,9 +3402,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "Algoritmo de encriptação"
-
-msgid "Encryption algorithm to use."
-msgstr "Algoritmo de encriptação a usar."
 
 msgid "English"
 msgstr "Inglês"
@@ -4709,10 +4711,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Protocolo de Gestão de Chaves"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr ""
-"Comprimento da chave a ser usado com o algoritmo de encriptação fornecido."
 
 msgid "Korean"
 msgstr "Coreano"
@@ -7156,6 +7154,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccione disco com capacidade de monitorização S.M.A.R.T."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7211,6 +7212,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8331,13 +8335,6 @@ msgstr "Porta usada pelo servidor de envio SMTP, e.g. 25 ou 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr "O padrão para nomes distintos (DN) a utilizar nas pesquisas, e.g. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"O comprimento padrão da chave é: 128 para AES, 128 para Blowfish, 128 para "
-"Camellia e 192 para 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr "O tempo predefinido em segundos para exibir um ecrã."
@@ -10499,8 +10496,22 @@ msgstr "umount"
 #~ "Pretende mesmo apagar este volume?\\n!!! Atenção que todos os dados serão "
 #~ "perdidos e não podem ser recuperados. !!!"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Algoritmo de encriptação a usar."
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr ""
+#~ "Comprimento da chave a ser usado com o algoritmo de encriptação fornecido."
+
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Destrói volume encriptado"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "O comprimento padrão da chave é: 128 para AES, 128 para Blowfish, 128 para "
+#~ "Camellia e 192 para 3DES."
 
 #~ msgid "The volume must be detached before it can be deleted."
 #~ msgstr "O volume deve ser desmontado antes de poder ser removido."

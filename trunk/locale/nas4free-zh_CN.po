@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-01-17 15:29+0000\n"
 "Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:33+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -107,6 +107,11 @@ msgstr "'%s' 清除图表中所有统计数据"
 
 msgid "(Change if needed)"
 msgstr "(如果需要则改变)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "找到一个Maxtor 6B200M0 200GB 和一个Maxtor 2R015H1 15GB 硬盘"
@@ -621,6 +626,9 @@ msgstr "西部数据硬盘气流温度 (等同于温度，但是有些硬盘次�
 
 msgid "Alert Level"
 msgstr "警报等级"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "全部"
@@ -3274,9 +3282,6 @@ msgstr "正在加密 '%s'... 请稍待..."
 msgid "Encryption"
 msgstr "加密方式"
 
-msgid "Encryption Algorithm"
-msgstr ""
-
 msgid "Encryption Management"
 msgstr ""
 
@@ -3288,9 +3293,6 @@ msgstr ""
 
 msgid "Encryption algorithm"
 msgstr "加密演算法"
-
-msgid "Encryption algorithm to use."
-msgstr "使用加密演算法"
 
 msgid "English"
 msgstr "英文"
@@ -4558,9 +4560,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "密钥管理协议"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "加密算法用的密钥长度。"
 
 msgid "Korean"
 msgstr "韩文"
@@ -6956,6 +6955,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "请选择已开启 S.M.A.R.T. 监测的硬盘。"
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7010,6 +7012,9 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
+msgstr ""
+
+msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -8088,11 +8093,6 @@ msgstr "预设的 SMTP 邮件伺服器连接端口，如：25 或 587。"
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr "预设的搜索用基本可分辨名称（base distinguished name）（DN），如： %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr "预设的密钥长度是：AES 为128，Blowfish 为128，Camellia 为128 和3DES 为192。"
 
 msgid "The default time in seconds to display a screen."
 msgstr "显示在屏幕的时间的默认值（秒）。"
@@ -10093,6 +10093,17 @@ msgstr "卸载"
 #~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 #~ "and can not be recovered. !!!"
 #~ msgstr "您确定要删除这个卷吗？\\n！ ！ ！请注意，所有数据都将会消失，无法恢复。！ ！ ！"
+
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "使用加密演算法"
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "加密算法用的密钥长度。"
+
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr "预设的密钥长度是：AES 为128，Blowfish 为128，Camellia 为128 和3DES 为192。"
 
 #~ msgid ""
 #~ "Warning: You are going to delete an encrypted volume. All data will get lost "

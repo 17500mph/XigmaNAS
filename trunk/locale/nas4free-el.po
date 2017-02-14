@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 19:46+0000\n"
+"POT-Creation-Date: 2017-02-14 23:13+0000\n"
 "PO-Revision-Date: 2017-02-13 14:51+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 20:32+0000\n"
+"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -108,6 +108,11 @@ msgstr "Η '%s' διαγράφει όλα τα στατιστικά δεδομέ
 
 msgid "(Change if needed)"
 msgstr "(Αλλάξτε αν χρειάζεται)"
+
+msgid ""
+"(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
+"192 for 3DES)."
+msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Υπάρχουν σε  δίσκους Maxtor 6B200M0 200GB και Maxtor 2R015H1 15GB)."
@@ -697,6 +702,9 @@ msgstr ""
 
 msgid "Alert Level"
 msgstr "Επίπεδο Ειδοποιήσεων"
+
+msgid "Algorithm"
+msgstr ""
 
 msgid "All"
 msgstr "Όλα"
@@ -3614,9 +3622,6 @@ msgstr "Κρυπτογράφηση του '%s'... Παρακαλώ περιμέ�
 msgid "Encryption"
 msgstr "Κρυπτογράφηση"
 
-msgid "Encryption Algorithm"
-msgstr "Αλγόριθμος Κρυπτογράφησης"
-
 msgid "Encryption Management"
 msgstr "Διαχείριση Κρυπτογράφησης"
 
@@ -3628,9 +3633,6 @@ msgstr "Εργαλεία Κρυπτογράφησης"
 
 msgid "Encryption algorithm"
 msgstr "Αλγόριθμος κρυπτογράφησης"
-
-msgid "Encryption algorithm to use."
-msgstr "Αλγόριθμος κρυπτογράφησης που θα χρησιμοποιηθεί."
 
 msgid "English"
 msgstr "Αγγλικά"
@@ -5030,9 +5032,6 @@ msgstr "Μήκος Κλειδιού"
 
 msgid "Key Management Protocol"
 msgstr "Πρωτόκολλο διαχείρισης κωδικών"
-
-msgid "Key length to use with the given cryptographic algorithm."
-msgstr "Μήκος κλειδιού για χρήση με το δεδομένο αλγόριθμο κρυπτογράφησης."
 
 msgid "Korean"
 msgstr "Κορεατικά"
@@ -7585,6 +7584,9 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Επιλέξτε δίσκο ο οποίος είναι ενεργοποιημένος για παρακολούθηση S.M.A.R.T."
 
+msgid "Select an encryption algorithm to use."
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Επιλογή διαμόρφωσης του συστήματος αρχείων."
 
@@ -7652,6 +7654,9 @@ msgid ""
 msgstr ""
 "Επιλέξτε ποια διασύνδεση θα χρησιμοποιηθεί. (Επιλέξιμο μόνο αν ο διακομιστής "
 "σας έχει παραπάνω από μια διασύνδεση)"
+
+msgid "Select which key length to use for given cryptographic algorithm."
+msgstr ""
 
 msgid "Selected"
 msgstr "Επιλεγμένο"
@@ -8857,13 +8862,6 @@ msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
 "Το προεπιλεγμένο όνομα διακεκριμένης βάσης (DN) που θα χρησιμοποιηθεί για "
 "αναζητήσεις, π.χ. %s"
-
-msgid ""
-"The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-"and 192 for 3DES."
-msgstr ""
-"Τα προεπιλεγμένα μήκη κλειδιού είναι: 128 για AES, 128 για Blowfish, 128 για "
-"Camellia και 192 για 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
@@ -11215,6 +11213,12 @@ msgstr "αποπροσάρτηση"
 #~ "Θέλετε σίγουρα να διαγράψετε αυτόν τον τόμο;\\n!!! Προσοχή, όλα τα δεδομένα "
 #~ "θα χαθούν και δεν μπορούν να ανακτηθούν. !!!"
 
+#~ msgid "Encryption algorithm to use."
+#~ msgstr "Αλγόριθμος κρυπτογράφησης που θα χρησιμοποιηθεί."
+
+#~ msgid "Key length to use with the given cryptographic algorithm."
+#~ msgstr "Μήκος κλειδιού για χρήση με το δεδομένο αλγόριθμο κρυπτογράφησης."
+
 #~ msgid "Kill encrypted volume"
 #~ msgstr "Καταστροφή κρυπτογραφημένου τόμου"
 
@@ -11228,6 +11232,13 @@ msgstr "αποπροσάρτηση"
 #~ "Προσοχή: Πρόκειται να διαγράψετε ένα κρυπτογραφημένο τόμο. Όλα τα δεδομένα "
 #~ "θα χαθούν και δεν θα μπορούν να ανακτηθούν."
 
+#~ msgid ""
+#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
+#~ "and 192 for 3DES."
+#~ msgstr ""
+#~ "Τα προεπιλεγμένα μήκη κλειδιού είναι: 128 για AES, 128 για Blowfish, 128 για "
+#~ "Camellia και 192 για 3DES."
+
 #~ msgid "Clear config and Import disks"
 #~ msgstr "Εκκαθάριση του αρχείου ρυθμίσεων και εισαγωγή δίσκων"
 
@@ -11239,3 +11250,6 @@ msgstr "αποπροσάρτηση"
 
 #~ msgid "detected an error while importing."
 #~ msgstr "ανιχνεύθηκε ένα σφάλμα κατά τη διαδικασία εισαγωγής"
+
+#~ msgid "Encryption Algorithm"
+#~ msgstr "Αλγόριθμος Κρυπτογράφησης"
