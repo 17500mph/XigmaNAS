@@ -42,8 +42,8 @@ $sphere->basename = 'services_tftp';
 $sphere->extension = '.php';
 $sphere->scriptname = $sphere->basename . $sphere->extension;
 $sphere->msg->selection->apply = gtext('Do you want to apply these settings?');
-$sphere->array = [];
-$sphere->record = [];
+$sphere->grid = [];
+$sphere->row = [];
 $sphere->default = [
 	'enable' => false,
 	'dir' => $g['media_path'],
@@ -56,7 +56,7 @@ $sphere->default = [
 	'extraoptions' => ''
 ];
 //	sphere external content
-$sphere->array = &array_make_branch($config,'tftpd');
+$sphere->grid = &array_make_branch($config,'tftpd');
 //	local variables
 $input_errors = [];
 $a_message = [];
@@ -98,31 +98,31 @@ switch($page_action):
 		$source = $_POST;
 		break;
 	default:
-		$source = $sphere->array;
+		$source = $sphere->grid;
 		break;
 endswitch;
-$sphere->record['enable'] = isset($source['enable']);
-$sphere->record['dir'] = $source['dir'] ?? $sphere->default['dir'];
-$sphere->record['allowfilecreation'] = isset($source['allowfilecreation']);
-$sphere->record['port'] = $source['port'] ?? $sphere->default['port'];
-$sphere->record['username'] = $source['username'] ?? $sphere->default['username'];
-$sphere->record['umask'] = $source['umask'] ?? $sphere->default['umask'];
-$sphere->record['timeout'] = $source['timeout'] ?? $sphere->default['timeout'];
-$sphere->record['maxblocksize'] = $source['maxblocksize'] ?? $sphere->default['maxblocksize'];
-$sphere->record['extraoptions'] = $source['extraoptions'] ?? $sphere->default['extraoptions'];
+$sphere->row['enable'] = isset($source['enable']);
+$sphere->row['dir'] = $source['dir'] ?? $sphere->default['dir'];
+$sphere->row['allowfilecreation'] = isset($source['allowfilecreation']);
+$sphere->row['port'] = $source['port'] ?? $sphere->default['port'];
+$sphere->row['username'] = $source['username'] ?? $sphere->default['username'];
+$sphere->row['umask'] = $source['umask'] ?? $sphere->default['umask'];
+$sphere->row['timeout'] = $source['timeout'] ?? $sphere->default['timeout'];
+$sphere->row['maxblocksize'] = $source['maxblocksize'] ?? $sphere->default['maxblocksize'];
+$sphere->row['extraoptions'] = $source['extraoptions'] ?? $sphere->default['extraoptions'];
 //	set defaults
-if(preg_match('/\S/',$sphere->record['username'])):
+if(preg_match('/\S/',$sphere->row['username'])):
 else:
-	$sphere->record['username'] = $sphere->default['username'];
+	$sphere->row['username'] = $sphere->default['username'];
 endif;
 //	process enable
 switch($page_action):
 	case 'enable':
-		if($sphere->record['enable']):
+		if($sphere->row['enable']):
 			$mode_page = PAGE_MODE_VIEW;
 			$page_action = 'view';
 		else: // enable and run a full validation
-			$sphere->record['enable'] = true;
+			$sphere->row['enable'] = true;
 			$page_action = 'save'; // continue with save procedure
 		endif;
 		break;
@@ -134,16 +134,16 @@ switch($page_action):
 		$reqdfields = ['dir'];
 		$reqdfieldsn = [gtext('Directory')];
 		$reqdfieldst = ['string'];
-		do_input_validation($sphere->record,$reqdfields,$reqdfieldsn,$input_errors);
+		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
 		$reqdfields = array_merge($reqdfields,['port','umask','timeout','maxblocksize']);
 		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Port'),gtext('Umask'),gtext('Timeout'),gtext('Max. Block Size')]);
 		$reqdfieldst = array_merge($reqdfieldst,['port','numeric','numeric','numeric']);
-		do_input_validation_type($sphere->record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
-		if((512 > $sphere->record['maxblocksize']) || (65464 < $sphere->record['maxblocksize'])):
+		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+		if((512 > $sphere->row['maxblocksize']) || (65464 < $sphere->row['maxblocksize'])):
 			$input_errors[] = sprintf(gtext('Invalid maximum block size! It must be in the range from %d to %d.'),512,65464);
 		endif;
 		if(empty($input_errors)):
-			$sphere->array = $sphere->record;
+			$sphere->grid = $sphere->row;
 			write_config();
 			$retval = 0;
 			config_lock();
@@ -158,9 +158,9 @@ switch($page_action):
 		endif;
 		break;
 	case 'disable':
-		if($sphere->record['enable']): // if enabled, disable it
-			$sphere->record['enable'] = false;
-			$sphere->array = $sphere->record;
+		if($sphere->row['enable']): // if enabled, disable it
+			$sphere->row['enable'] = false;
+			$sphere->grid = $sphere->row;
 			write_config();
 			$retval = 0;
 			config_lock();
@@ -251,7 +251,7 @@ endswitch;
 					html_titleline2(gtext('Trivial File Transfer Protocol'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Trivial File Transfer Protocol'),$sphere->record['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gtext('Trivial File Transfer Protocol'),$sphere->row['enable'],gtext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -260,29 +260,29 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_text2('enable',gtext('Service Enabled'),$sphere->record['enable'] ? gtext('Yes') : gtext('No'));
-					html_text2('dir',gtext('Directory'),htmlspecialchars($sphere->record['dir']));
-					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->record['allowfilecreation'],'','',false,true);
+					html_text2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					html_text2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']));
+					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->row['allowfilecreation'],'','',false,true);
 					html_separator2();
 					html_titleline2(gtext('Advanced Settings'));
-					html_text2('port',gtext('Port'),htmlspecialchars($sphere->record['port']));
-					html_text2('username',gtext('Username'),htmlspecialchars($sphere->record['username']));
-					html_text2('umask',gtext('Umask'),htmlspecialchars($sphere->record['umask']));
-					html_text2('timeout',gtext('Timeout'),htmlspecialchars($sphere->record['timeout']));
-					html_text2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->record['maxblocksize']));
-					html_text2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->record['extraoptions']));
+					html_text2('port',gtext('Port'),htmlspecialchars($sphere->row['port']));
+					html_text2('username',gtext('Username'),htmlspecialchars($sphere->row['username']));
+					html_text2('umask',gtext('Umask'),htmlspecialchars($sphere->row['umask']));
+					html_text2('timeout',gtext('Timeout'),htmlspecialchars($sphere->row['timeout']));
+					html_text2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->row['maxblocksize']));
+					html_text2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->row['extraoptions']));
 					break;
 				case PAGE_MODE_EDIT:
-					html_filechooser2('dir',gtext('Directory'),htmlspecialchars($sphere->record['dir']),gtext('The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer.'),$g['media_path'],true,60);
-					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->record['allowfilecreation'],gtext('Allow new files to be created.'),gtext('By default, only already existing files can be uploaded.'),false);
+					html_filechooser2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']),gtext('The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer.'),$g['media_path'],true,60);
+					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->row['allowfilecreation'],gtext('Allow new files to be created.'),gtext('By default, only already existing files can be uploaded.'),false);
 					html_separator2();
 					html_titleline2(gtext('Advanced Settings'));
-					html_inputbox2('port',gtext('Port'),htmlspecialchars($sphere->record['port']),gtext('Enter a custom port number if you want to override the default port (default is 69).'),false,5);
-					html_combobox2('username',gtext('Username'),htmlspecialchars($sphere->record['username']),$l_user,gtext('Specifies the username which the service will run as.'),false);
-					html_inputbox2('umask',gtext('Umask'),htmlspecialchars($sphere->record['umask']),gtext('Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write).'),false,4);
-					html_inputbox2('timeout',gtext('Timeout'),htmlspecialchars($sphere->record['timeout']),gtext('Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second).'),false,10);
-					html_inputbox2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->record['maxblocksize']),gtext('Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464.'),false,5);
-					html_inputbox2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->record['extraoptions']),gtext('Extra options (usually empty).'),false,40);
+					html_inputbox2('port',gtext('Port'),htmlspecialchars($sphere->row['port']),gtext('Enter a custom port number if you want to override the default port (default is 69).'),false,5);
+					html_combobox2('username',gtext('Username'),htmlspecialchars($sphere->row['username']),$l_user,gtext('Specifies the username which the service will run as.'),false);
+					html_inputbox2('umask',gtext('Umask'),htmlspecialchars($sphere->row['umask']),gtext('Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write).'),false,4);
+					html_inputbox2('timeout',gtext('Timeout'),htmlspecialchars($sphere->row['timeout']),gtext('Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second).'),false,10);
+					html_inputbox2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->row['maxblocksize']),gtext('Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464.'),false,5);
+					html_inputbox2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->row['extraoptions']),gtext('Extra options (usually empty).'),false,40);
 					break;
 			endswitch;
 ?>
@@ -293,7 +293,7 @@ endswitch;
 		switch($mode_page):
 			case PAGE_MODE_VIEW;
 				echo html_button_edit(gtext('Edit'));
-				if($sphere->record['enable']):
+				if($sphere->row['enable']):
 					echo html_button_disable_rows(gtext('Disable'));
 				else:
 					echo html_button_enable_rows(gtext('Enable'));
