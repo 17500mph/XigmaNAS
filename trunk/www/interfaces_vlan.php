@@ -157,9 +157,9 @@ echo $sphere->doj();
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 <?php
 						if($notdirty && $notprotected && !vlan_inuse($sphere->row['if'])):
-							$sphere->html_checkbox_cbm(false);
+							echo $sphere->html_checkbox_cbm(false);
 						else:
-							$sphere->html_checkbox_cbm(true);
+							echo $sphere->html_checkbox_cbm(true);
 						endif;
 ?>
 					</td>

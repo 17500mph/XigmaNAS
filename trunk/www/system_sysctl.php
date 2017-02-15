@@ -84,7 +84,6 @@ if(!empty($sphere->grid)):
 	$key2 = array_column($sphere->grid,'uuid');
 	array_multisort($key1,SORT_ASC,SORT_NATURAL | SORT_FLAG_CASE,$key2,SORT_ASC,SORT_STRING | SORT_FLAG_CASE,$sphere->grid);
 endif;
-
 if($_POST):
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
@@ -199,85 +198,8 @@ if($_POST):
 endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf')];
 include 'fbegin.inc';
+echo $sphere->doj();
 ?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load",function() {
-<?php
-//	Init action buttons.
-if($sphere->enadis()):
-	if($sphere->toggle()):
-?>
-	$("#toggle_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_toggle_confirm();?>");
-	});
-<?php
-	else:
-?>
-	$("#enable_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_enable_confirm();?>");
-	});
-	$("#disable_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_disable_confirm();?>");
-	});
-<?php
-	endif;
-endif;
-?>
-	$("#delete_selected_rows").click(function () {
-		return confirm("<?=$sphere->cbm_delete_confirm();?>");
-	});
-<?php
-//	Disable action buttons.
-?>
-	ab_disable(true);
-<?php
-//	Init toggle checkbox.
-?>
-	$("#togglemembers").click(function() {
-		cb_tbn(this,"<?=$sphere->cbm_name;?>[]");
-	});
-<?php
-//	Init member checkboxes.
-?>
-	$("input[name='<?=$sphere->cbm_name;?>[]']").click(function() {
-		ab_control(this,"<?=$sphere->cbm_name;?>[]");
-	});
-<?php
-//	Init spinner.
-?>
-	$("#iform").submit(function() { spinner(); });
-	$(".spin").click(function() { spinner(); });
-});
-function ab_disable(flag) {
-<?php
-if($sphere->enadis()):
-	if($sphere->toggle()):
-?>
-	$("#toggle_selected_rows").prop("disabled",flag);
-<?php
-	else:
-?>
-	$("#enable_selected_rows").prop("disabled",flag);
-	$("#disable_selected_rows").prop("disabled",flag);
-<?php
-	endif;
-endif;
-?>
-	$("#delete_selected_rows").prop("disabled",flag);
-}
-function cb_tbn(ego, tbn) {
-	var cba = $("input[name='"+tbn+"']").filter(":enabled");
-	cba.prop("checked", function(_, checked) { return !checked; });
-	ab_disable(1 > cba.filter(":checked").length);
-	ego.checked = false;
-}
-function ab_control(ego, tbn) {
-	var cba = $("input[name='"+tbn+"']").filter(":enabled");
-	ab_disable(1 > cba.filter(":checked").length);
-}
-//]]>
-</script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
@@ -292,7 +214,7 @@ function ab_control(ego, tbn) {
 		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('sysctl.conf');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere->scriptname();?>" method="post" id="iform" name="iform">
+<form action="<?=$sphere->scriptname();?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
@@ -338,9 +260,9 @@ function ab_control(ego, tbn) {
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 <?php
 						if($notdirty && $notprotected):
-							$sphere->html_checkbox_cbm(false);
+							echo $sphere->html_checkbox_cbm(false);
 						else:
-							$sphere->html_checkbox_cbm(true);
+							echo $sphere->html_checkbox_cbm(true);
 						endif;
 ?>
 					</td>
@@ -401,7 +323,7 @@ function ab_control(ego, tbn) {
 <?php
 	include 'formend.inc';
 ?>
-</form></td></tr></tbody></table>
+</td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
 ?>
