@@ -283,7 +283,7 @@ echo $sphere->doj();
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['comment']);?></td>
 					<td class="lcebld">
-						<table class="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 <?php
 							echo $sphere->html_toolbox($notprotected,$notdirty);
 ?>
