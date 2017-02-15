@@ -6,8 +6,8 @@
 # Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Script usage:
-# rc.firmware <args> [<file>]
+
+# Script usage: rc.firmware <args> [<file>]
 # Where <args> can take the following values:
 # - enable: Create a 256MB ram drive in ${FTMP}
 # - disable: Erase ram drive
@@ -154,15 +154,6 @@ case $1 in
 			exit 1
 		fi
 
-		# Remove swap on booting device if any
-		#if [ -f /etc/swapdevice ]; then
-		#	SWAPDEVICE=`cat /etc/swapdevice`
-		#	if [ "${ARCH}" != "arm" -a "${SWAPDEVICE}" != "NONE" -a -e "${SWAPDEVICE}" ]; then
-		#		echo "swapoff ${SWAPDEVICE}"
-		#		swapoff -q ${SWAPDEVICE} 2>/dev/null
-		#	fi
-		#fi
-
 		# dd image onto card
 		result=1
 		if [ -r "$2" ]; then
@@ -182,14 +173,6 @@ case $1 in
 
 		# Sync and wait 2 second after dd
 		sync; sleep 2
-
-		#if [ -f /etc/swapdevice ]; then
-		#	SWAPDEVICE=`cat /etc/swapdevice`
-		#	if [ "${SWAPDEVICE}" != "NONE" -a -e "${SWAPDEVICE}" ]; then
-		#		echo "swapon ${SWAPDEVICE}"
-		#		swapon -q ${SWAPDEVICE} 2>/dev/null
-		#	fi
-		#fi
 
 		# Mount /cf read-write
 		/sbin/mount -w -o noatime /cf
@@ -241,7 +224,7 @@ case $1 in
 				exit 1
 			fi
 		else
-			msg="ERROR: System configuration not found."
+			msg="ERROR: Server configuration not found."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			exit 1
 		fi
@@ -327,7 +310,7 @@ case $1 in
 		/usr/bin/tar xzUPf "$2" -C / 2>&1
 		result=$?
 		if [ 0 != ${result} ]; then # successfully?
-			msg="ERROR: Failed to upgrade system firmware!"
+			msg="ERROR: Failed to upgrade firmware!"
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		else
