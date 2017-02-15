@@ -5,15 +5,13 @@
 # All rights reserved.
 #
 
-# System startup script run by init on autoboot
-# or after single-user.
+# System startup script run by init on autoboot or after single-user.
 # Output and error are redirected to console by init,
-# and the console is the controlling terminal.
+# the console is the controlling terminal.
 
-# Note that almost all of the user-configurable behavior is no longer in
-# this file, but rather in /etc/defaults/rc.conf.  Please check that file
-# first before contemplating any changes here.  If you do need to change
-# this file for some reason, we would like to know about it.
+# Note that almost all of the user-configurable behavior is no longer
+# in this file, but rather in /etc/defaults/rc.conf.
+# Please check rc.conf first before contemplating any changes here.
 
 stty status '^T' 2> /dev/null
 
@@ -101,15 +99,6 @@ case ${PLATFORM} in
 					echo "can't determine rootfs"
 					sleep 30; halt
 				fi
-				#swap=`/bin/echo ${root}|/usr/bin/sed -e 's/a$/b/'`
-				#swap2=`/bin/echo ${root}|/usr/bin/sed -e 's/s[13]a$/s2b/'`
-				#if [ "${ARCH}" = "arm" -a -e "/dev/${swap2}" ]; then
-				#	# pre-configured swap
-				#	swap=${swap2}
-				#elif [ ! -e "/dev/${swap}" ]; then
-				#	dev=`/bin/echo ${swap}|/usr/bin/sed -e 's/b$//'`
-				#	/sbin/gpart add -s ${SWAPSIZE} -t freebsd-swap ${dev}
-				#fi
 
 				# use default swap if exists
 				swap=`/bin/echo ${root}|/usr/bin/sed -e 's/s[1234]a$/s2b/'`
@@ -154,16 +143,6 @@ case ${PLATFORM} in
 					echo "can't determine rootfs"
 					sleep 30; halt
 				fi
-				#swap=`/bin/echo ${root}|/usr/bin/sed -e 's/a$/b/'`
-				#swap2=`/bin/echo ${root}|/usr/bin/sed -e 's/s[13]a$/s2b/'`
-				# always create swap partition if not exists
-				#if [ "${ARCH}" = "arm" -a -e "/dev/${swap2}" ]; then
-				#	# pre-configured swap
-				#	swap=${swap2}
-				#elif [ ! -e "/dev/${swap}" ]; then
-				#	dev=`/bin/echo ${swap}|/usr/bin/sed -e 's/b$//'`
-				#	/sbin/gpart add -s ${SWAPSIZE} -t freebsd-swap ${dev}
-				#fi
 
 				# use default swap if exists
 				swap=`/bin/echo ${root}|/usr/bin/sed -e 's/s[1234]a$/s2b/'`
@@ -208,7 +187,6 @@ case ${PLATFORM} in
 					sleep 30; halt
 				fi
 				swap=NONE
-				#echo "NONE" > /etc/swapdevice
 				rm -f /etc/swapdevice
 
 				/sbin/mount -t cd9660 /dev/${root} /mnt
