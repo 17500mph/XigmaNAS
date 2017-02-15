@@ -103,8 +103,8 @@ $(window).on("load", function() {
 		<?php if(!$cmd_system_defaults):;?>
 			<div id="submit">
 			<?php
-			echo html_button_save($gt_yes);
-			echo html_button_cancel($gt_no);
+			echo html_button('save',$gt_yes);
+			echo html_button('cancel',$gt_no);
 			?>
 			</div>
 		<?php endif;?>
