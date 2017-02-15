@@ -256,7 +256,7 @@ endif;
 					<td class="celltag"><?=gtext('Control');?></td>
 					<td class="celldata">
 <?php
-						echo html_button_upload(gtext('Upload Script'));
+						echo html_button('upload',gtext('Upload Script'));
 ?>
 					</td>
 				</tr>

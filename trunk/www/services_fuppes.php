@@ -78,11 +78,9 @@ switch($mode_page):
 					break;
 				case 'save':
 					break;
-				case 'rows.enable':
-					$page_action = 'enable';
+				case 'enable':
 					break;
-				case 'rows.disable':
-					$page_action = 'disable';
+				case 'disable':
 					break;
 				case 'cancel':
 					$mode_page = PAGE_MODE_VIEW;
@@ -407,16 +405,16 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW;
-				echo html_button_edit(gtext('Edit'));
+				echo html_button('edit',gtext('Edit'));
 				if($sphere_record['enable']):
-					echo html_button_disable_rows(gtext('Disable'));
+					echo html_button('disable',gtext('Disable'));
 				else:
-					echo html_button_enable_rows(gtext('Enable'));
+					echo html_button('enable',gtext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo html_button_save(gtext('Apply'));
-				echo html_button_cancel(gtext('Cancel'));
+				echo html_button('save',gtext('Apply'));
+				echo html_button('cancel',gtext('Cancel'));
 				break;
 		endswitch;
 ?>

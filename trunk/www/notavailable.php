@@ -34,33 +34,45 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-if($_POST) {
-	header('Location: index.php');
+$sphere_scriptname = 'notavailable-php';
+$sphere_header = 'Location: ' + $sphere_scriptname;
+if($_POST):
+	header($sphere_header);
 	exit;
-}
+endif;
 $pgtitle = [gtext('NOT YET AVAILABLE')];
 ?>
-<?php include 'fbegin.inc';?>
+<?php
+include 'fbegin.inc';
+?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-<?php	// Init spinner onsubmit()?>
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 //]]>
 </script>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('NOT YET AVAILABLE'), 1);?>
+<?php
+			html_titleline2(gtext('NOT YET AVAILABLE'),1);
+?>
 		</thead>
 	</table>
 	<div id="submit">
-		<?=html_button_cancel(gtext('Continue'));?>
+<?php
+		echo html_button('cancel',gtext('Continue'));
+?>
 	</div>
-	<?php require 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	require 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>

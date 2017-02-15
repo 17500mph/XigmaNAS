@@ -94,8 +94,8 @@ $(window).on("load", function() {
 	if(!$cmd_system_shutdown):
 		echo print_warning_box($gt_shutdown_confirm);
 		echo '<div id="submit">';
-			echo html_button_save($gt_yes);
-			echo html_button_cancel($gt_no);
+			echo html_button('save',$gt_yes);
+			echo html_button('cancel',$gt_no);
 		echo '</div>';
 	endif;
 	include 'formend.inc';

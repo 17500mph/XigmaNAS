@@ -211,8 +211,8 @@ $(window).on("load", function() {
 	</table>
 	<div id="submit">
 		<?php
-		echo html_button_save($isrecordnew ? gtext('Add') : gtext('Save'));
-		echo html_button_cancel(gtext('Cancel'));
+		echo html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
+		echo html_button('cancel',gtext('Cancel'));
 		?>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
