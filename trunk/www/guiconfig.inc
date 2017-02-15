@@ -731,17 +731,10 @@ function html_button_download(string $value = NULL) {
 	$o_button = $root->addElement($element,$attributes,$value);
 	return $root->render();
 }
-function html_button_toggle_rows(string $value = NULL) {
+function html_button_delete_rows(string $value = NULL) {
 	$root = new co_DOMDocument();
 	$element = 'button';
-	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.toggle', 'id' => 'toggle_selected_rows'];
-	$o_button = $root->addElement($element, $attributes, $value);
-	return $root->render();
-}
-function html_button_enable_rows(string $value = NULL) {
-	$root = new co_DOMDocument();
-	$element = 'button';
-	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.enable', 'id' => 'enable_selected_rows'];
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.delete', 'id' => 'delete_selected_rows'];
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
@@ -752,10 +745,31 @@ function html_button_disable_rows(string $value = NULL) {
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
-function html_button_delete_rows(string $value = NULL) {
+function html_button_enable_rows(string $value = NULL) {
 	$root = new co_DOMDocument();
 	$element = 'button';
-	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.delete', 'id' => 'delete_selected_rows'];
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.enable', 'id' => 'enable_selected_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_toggle_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.toggle', 'id' => 'toggle_selected_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_show_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.show', 'id' => 'show_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_hide_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.hide', 'id' => 'hide_rows'];
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
