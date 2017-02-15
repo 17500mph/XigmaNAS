@@ -247,9 +247,9 @@ echo $sphere->doj();
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 <?php
 						if($notdirty && $notprotected):
-							$sphere->html_checkbox_cbm(false);
+							echo $sphere->html_checkbox_cbm(false);
 						else:
-							$sphere->html_checkbox_cbm(true);
+							echo $sphere->html_checkbox_cbm(true);
 						endif;
 ?>
 					</td>
