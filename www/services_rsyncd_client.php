@@ -63,7 +63,7 @@ function rsyncclient_process_updatenotification($mode,$data) {
 function services_rsyncd_client_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_rsyncd_client','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('rsyncclient');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);

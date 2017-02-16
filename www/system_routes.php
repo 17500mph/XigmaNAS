@@ -62,7 +62,7 @@ function routes_process_updatenotification($mode,$data) {
 function system_routes_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('system_routes','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('routes');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);

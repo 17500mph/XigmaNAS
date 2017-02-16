@@ -56,7 +56,7 @@ function rsyncd_process_updatenotification($mode,$data) {
 function services_rsyncd_module_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_rsyncd_module','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('rsyncd');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);

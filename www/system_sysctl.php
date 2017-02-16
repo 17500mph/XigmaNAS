@@ -56,7 +56,7 @@ function sysctl_process_updatenotification($mode,$data) {
 function system_sysctl_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('system_sysctl','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('sysctl');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);

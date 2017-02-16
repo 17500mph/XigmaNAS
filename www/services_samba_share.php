@@ -56,7 +56,7 @@ function smbshare_process_updatenotification($mode,$data) {
 function services_samba_share_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_samba_share','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('smbshare');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);

@@ -63,7 +63,7 @@ function rcconf_process_updatenotification($mode,$data) {
 function system_rcconf_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('system_rcconf','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('rcconf');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);
