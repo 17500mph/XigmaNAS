@@ -480,7 +480,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$o_td = $root->addElement('td');
 		if($notdirty && $notprotected):
 			//	record is editable
-			$link = sprintf('%s?%s=%s',$this->mod->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+			$link = sprintf('%s?%s=%s',$this->modify->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 			$o_a = $o_td->addElement('a',['href' => $link]);
 			$o_a->addElement('img', ['src' => $g_img['mod'],'title' => $this->sym_mod(),'alt' => $this->sym_mod(),'class' => 'spin']);
 		elseif($notprotected):
@@ -492,20 +492,20 @@ class co_sphere_grid extends co_sphere_level2 {
 		endif;
 		return $root->render();
 	}
-	public function html_maintenancebox() {
+	public function html_maintenbox() {
 		global $g_img;
 		$root = new co_DOMDocument();
 		$o_td = $root->addElement('td');
-		$link = sprintf('%s?%s=%s',$this->mai->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+		$link = sprintf('%s?%s=%s',$this->maintain->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 		$o_a = $o_td->addElement('a',['href' => $link]);
 		$o_a->addElement('img', ['src' => $g_img['mai'],'title' => $this->sym_mai(),'alt' => $this->sym_mai(),'class' => 'spin']);
 		return $root->render();
 	}
-	public function html_infobox() {
+	public function html_informbox() {
 		global $g_img;
 		$root = new co_DOMDocument();
 		$o_td = $root->addElement('td');
-		$link = sprintf('%s?%s=%s',$this->inf->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 		$o_a = $o_td->addElement('a',['href' => $link]);
 		$o_a->addElement('img', ['src' => $g_img['inf'],'title' => $this->sym_inf(),'alt' => $this->sym_inf(),'class' => 'spin']);
 		return $root->render();
@@ -527,7 +527,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			$o_th1 = $o_tr->addElement('th',['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
 		$o_th2 = $o_tr->addElement('th',['class' => 'lceadd']);
-		$o_a = $o_th2->addElement('a',['href' => $this->mod->scriptname()]);
+		$o_a = $o_th2->addElement('a',['href' => $this->modify->scriptname()]);
 		$o_img = $o_a->addElement('img',['src' => $g_img['add'],'title' => $this->sym_add(),'alt' => $this->sym_add(),'class' => 'spin']);
 		return $root->render();
 	}
