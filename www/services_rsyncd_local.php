@@ -81,7 +81,7 @@ function services_rsyncd_local_get_sphere() {
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected rsync jobs?'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Rsync Jobs'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected rsync jobs?'));
-	$sphere->grid = &array_make_branch($config,'rsync','rsyncclient');
+	$sphere->grid = &array_make_branch($config,'rsync','rsynclocal');
 	return $sphere;
 }
 $sphere = &services_rsyncd_local_get_sphere();
