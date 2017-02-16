@@ -72,7 +72,7 @@ function zfspool_process_updatenotification($mode,$data) {
 function disks_zfs_zpool_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_zfs_zpool','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('zfspool');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);

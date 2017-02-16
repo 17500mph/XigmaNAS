@@ -56,7 +56,7 @@ function userdbgroup_process_updatenotification($mode,$data) {
 function access_users_groups_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('access_users_groups','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('userdb_group');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false); // internally managed
