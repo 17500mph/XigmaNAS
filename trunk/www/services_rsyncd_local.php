@@ -63,7 +63,7 @@ function rsynclocal_process_updatenotification($mode,$data) {
 function services_rsyncd_local_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_rsyncd_local','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('rsynclocal');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);

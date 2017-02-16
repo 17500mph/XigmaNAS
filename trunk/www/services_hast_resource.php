@@ -56,7 +56,7 @@ function hastresource_process_updatenotification($mode,$data) {
 function services_hast_resource_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_hast_resource','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('hastresource');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
