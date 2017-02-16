@@ -682,15 +682,19 @@ function html_minidlnabox2($ctrlname, $title, $value, $desc, $path, $required = 
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
-function html_button(string $value = NULL,string $content = NULL) {
-	if(is_null($value)):
-		return '';
-	endif;
-	if(preg_match('/\s/',$value)):
-		return '';
-	endif;
+function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 	$element = 'button';
-	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => $value, 'id' => sprintf('button_%s',$value)];
+	$class = 'formbtn';
+	if(is_null($value)):
+		$value = 'cancel';
+	endif;
+	if(is_null($id)):
+		$id = sprintf('%1$s_%2$s',$element,$value);
+	endif;
+	if(is_null($content)):
+		$content = gtext('Cancel');
+	endif;
+	$attributes = ['name' => 'submit','type' => 'submit','class' => $class,'value' => $value,'id' => $id];
 	$root = new co_DOMDocument();
 	$o_button = $root->addElement($element,$attributes,$content);
 	return $root->render();

@@ -31,21 +31,161 @@
   of the authors and should not be interpreted as representing official policies,
   either expressed or implied, of the NAS4Free Project.
  */
-class co_sphere_grid extends co_sphere_scriptname {
+/*
+ *	require 'wui2.php';
+ *	global $config;
+ *	global $g_img;
+ */
+
+class co_sphere_scriptname {
+	protected $_basename = NULL;
+	protected $_extension = NULL;
+//	methods	
+	public function __construct(string $basename = NULL,string $extension = NULL) {
+		if(isset($basename)):
+			$this->basename($basename);
+		endif;
+		if(isset($extension)):
+			$this->extension($extension);
+		endif;
+	}
+	public function basename(string $basename = NULL) {
+		if(isset($basename)):
+			//	allow [0..9A-Za-z_] for filename
+			if(1 === preg_match('/^[\w]+$/',$basename)):
+				$this->_basename = $basename;
+			endif;
+		endif;
+		return $this->_basename ?? false;
+	}
+	public function extension(string $extension = NULL) {
+		if(isset($extension)):
+			//	allow [0..9A-Za-z_] for extension
+			if(1 === preg_match('/^[\w]+$/',$extension)):
+				$this->_extension = $extension;
+			endif;
+		endif;
+		return $this->_extension ?? false;
+	}
+	public function scriptname() {
+		return sprintf('%s.%s',$this->basename(),$this->extension());
+	}
+	public function header() {
+		return sprintf('Location: %s.%s',$this->basename(),$this->extension());
+	}
+}
+class co_sphere_level1 extends co_sphere_scriptname { // for settings, services, row and grid
 //	parent
 	public $parent = NULL;
-//	children
-	public $mod = NULL; // modify
-	public $mai = NULL; // maintenance
-	public $inf = NULL; // information
-//	transaction manager
-	protected $_notifier = NULL;
-	protected $_notifier_processor = NULL;
 //	grid related
 	public $grid = [];
 	public $row = [];
+//	modes
+	protected $_enadis = NULL;
+//	html class tags
+	protected $_class_button = 'formbtn';
+//	constructor
+	public function __construct(string $basename = NULL,string $extension = NULL) {
+		parent::__construct($basename,$extension);
+		$this->parent = new co_sphere_scriptname($basename,$extension);
+	}
+//	methods	
+	public function enadis(bool $flag = NULL) {
+		if(isset($flag)):
+			$this->_enadis = $flag;
+		endif;
+		return $this->_enadis ?? false;
+	}
+	public function doj() {
+		$output = [];
+		$output[] = '';
+		return implode("\n",$output);
+	}
+	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
+		$element = 'button';
+		if(is_null($value)):
+			$value = 'cancel';
+		endif;
+		if(is_null($id)):
+			$id = sprintf('%1$s_%2$s',$element,$value);
+		endif;
+		if(is_null($content)):
+			$content = gtext('Cancel');
+		endif;
+		$attributes = ['name' => 'submit','type' => 'submit','class' => $this->_class_button,'value' => $value,'id' => $id];
+		$root = new co_DOMDocument();
+		$o_button = $root->addElement($element,$attributes,$content);
+		return $root->render();
+	}
+}
+class co_sphere_level2 extends co_sphere_level1 { // for row and grid
+//	transaction manager
+	protected $_notifier = NULL;
+//	grid related
 	public $row_id = NULL;
 	protected $_row_identifier = NULL;
+//	modes
+	protected $_lock = NULL;
+//	methods	
+	public function lock(bool $flag = NULL) {
+		if(isset($flag)):
+			$this->_lock = $flag;
+		endif;
+		return $this->_lock ?? false;
+	}
+	public function notifier(string $notifier = NULL) {
+		if(isset($notifier)):
+			if(1 === preg_match('/^[\w]+$/',$notifier)):
+				$this->_notifier = $notifier;
+				$this->_notifier_processor = $notifier . '_process_updatenotification';
+			endif;
+		endif;
+		return $this->_notifier ?? false;
+	}
+	public function row_identifier(string $row_identifier = NULL) {
+		if(isset($row_identifier)):
+			if(1 === preg_match('/^[a-z]+$/',$row_identifier)):
+				$this->_row_identifier = $row_identifier;
+			endif;
+		endif;
+		return $this->_row_identifier ?? false;
+	}
+}
+class co_sphere_settings extends co_sphere_level1 {
+//	methods	
+}
+class co_sphere_row extends co_sphere_level2 {
+//	modes
+	protected $_protectable;
+//	methods
+	public function protectable(bool $flag = NULL) {
+		if(isset($flag)):
+			$this->_protectable = $flag;
+		endif;
+		return $this->_protectable ?? false;
+	}
+	public function doj() {
+		$output = [];
+		$output[] = '<script type="text/javascript">';
+		$output[] = '//<![CDATA[';
+		$output[] = '$(window).on("load", function() {';
+		//	Init spinner.
+		$output[] = "\t" . '$("#iform").submit(function() { spinner(); });';
+		$output[] = "\t" . '$(".spin").click(function() { spinner(); });';
+		$output[] = '});';
+		$output[] = '//]]>';
+		$output[] = '</script>';
+		$output[] = '';
+		return implode("\n",$output);
+	}
+}
+class co_sphere_grid extends co_sphere_level2 {
+//	children
+	public $modify = NULL; // modify
+	public $maintain = NULL; // maintenance
+	public $inform = NULL; // information
+//	transaction manager
+	protected $_notifier_processor = NULL;
 //	checkbox member array
 	public $cbm_name = 'cbm_grid';
 	public $cbm_grid = [];
@@ -72,10 +212,6 @@ class co_sphere_grid extends co_sphere_scriptname {
 	protected $_sym_inf = NULL;
 	protected $_sym_mup = NULL;
 	protected $_sym_mdn = NULL;
-//	modes
-	protected $_enadis = NULL;
-	protected $_lock = NULL;
-	protected $_toggle = NULL;
 //	html id tags
 	protected $id_button_del_rows = 'delete_selected_rows';
 	protected $id_button_dis_rows = 'disable_selected_rows';
@@ -87,43 +223,16 @@ class co_sphere_grid extends co_sphere_scriptname {
 	protected $val_button_dis_rows = 'rows.disable';
 	protected $val_button_ena_rows = 'rows.enable';
 	protected $val_button_tog_rows = 'rows.toggle';
-//	html class tags
-	protected $class_button = 'formbtn';
-//	methods	
+//	constructor
 	public function __construct(string $basename = NULL,string $extension = NULL) {
 		parent::__construct($basename,$extension);
+		$this->modify = new co_sphere_scriptname($basename,$extension);
+		$this->maintain = new co_sphere_scriptname($basename,$extension);
+		$this->inform = new co_sphere_scriptname($basename,$extension);
 	}
-	public function notifier(string $notifier = NULL) {
-		if(isset($notifier)):
-			if(1 === preg_match('/^[\w]+$/',$notifier)):
-				$this->_notifier = $notifier;
-				$this->_notifier_processor = $notifier . '_process_updatenotification';
-			endif;
-		endif;
-		return $this->_notifier ?? false;
-	}
+//	methods
 	public function notifier_processor() {
 		return $this->_notifier_processor ?? false;
-	}
-	public function row_identifier(string $row_identifier = NULL) {
-		if(isset($row_identifier)):
-			if(1 === preg_match('/^[a-z]+$/',$row_identifier)):
-				$this->_row_identifier = $row_identifier;
-			endif;
-		endif;
-		return $this->_row_identifier ?? false;
-	}
-	public function enadis(bool $flag = NULL) {
-		if(isset($flag)):
-			$this->_enadis = $flag;
-		endif;
-		return $this->_enadis ?? false;
-	}
-	public function lock(bool $flag = NULL) {
-		if(isset($flag)):
-			$this->_lock = $flag;
-		endif;
-		return $this->_lock ?? false;
 	}
 	public function toggle() {
 		global $config;
@@ -319,52 +428,16 @@ class co_sphere_grid extends co_sphere_scriptname {
 		return implode("\n",$output);
 	}
 	public function html_button_delete_rows() {
-		$element = 'button';
-		$attributes = [
-			'type' => 'submit',
-			'name' => 'submit',
-			'class' => $this->class_button,
-			'value' => $this->val_button_del_rows,
-			'id' => $this->id_button_del_rows];
-		$root = new co_DOMDocument();
-		$o_button = $root->addElement($element,$attributes,$this->cbm_delete());
-		return $root->render();
+		return $this->html_button($this->val_button_del_rows,$this->cbm_delete(),$this->id_button_del_rows);
 	}
 	public function html_button_disable_rows() {
-		$element = 'button';
-		$attributes = [
-			'type' => 'submit',
-			'name' => 'submit',
-			'class' => $this->class_button,
-			'value' => $this->val_button_dis_rows,
-			'id' => $this->id_button_dis_rows];
-		$root = new co_DOMDocument();
-		$o_button = $root->addElement($element,$attributes,$this->cbm_disable());
-		return $root->render();
+		return $this->html_button($this->val_button_dis_rows,$this->cbm_disable(),$this->id_button_dis_rows);
 	}
 	public function html_button_enable_rows() {
-		$element = 'button';
-		$attributes = [
-			'type' => 'submit',
-			'name' => 'submit',
-			'class' => $this->class_button,
-			'value' => $this->val_button_ena_rows,
-			'id' => $this->id_button_ena_rows];
-		$root = new co_DOMDocument();
-		$o_button = $root->addElement($element,$attributes,$this->cbm_enable());
-		return $root->render();
+		return $this->html_button($this->val_button_ena_rows,$this->cbm_enable(),$this->id_button_ena_rows);
 	}
 	public function html_button_toggle_rows() {
-		$element = 'button';
-		$attributes = [
-			'type' => 'submit',
-			'name' => 'submit',
-			'class' => $this->class_button,
-			'value' => $this->val_button_tog_rows,
-			'id' => $this->id_button_tog_rows];
-		$root = new co_DOMDocument();
-		$o_button = $root->addElement($element, $attributes,$this->cbm_toggle());
-		return $root->render();
+		return $this->html_button($this->val_button_tog_rows,$this->cbm_toggle(),$this->id_button_tog_rows);
 	}
 	public function html_checkbox_cbm(bool $disabled = false) {
 		$element = 'input';
@@ -403,20 +476,38 @@ class co_sphere_grid extends co_sphere_scriptname {
  *	</td>
  */
 		global $g_img;
-		$link = sprintf('%s?%s=%s',$this->mod->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 		$root = new co_DOMDocument();
 		$o_td = $root->addElement('td');
 		if($notdirty && $notprotected):
 			//	record is editable
-			$o_a = $o_td->addElement('a', ['href' => $link]);
-			$o_a->addElement('img', ['src' => $g_img['mod'], 'title' => $this->sym_mod(), 'alt' => $this->sym_mod(), 'class' => 'spin']);
+			$link = sprintf('%s?%s=%s',$this->mod->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+			$o_a = $o_td->addElement('a',['href' => $link]);
+			$o_a->addElement('img', ['src' => $g_img['mod'],'title' => $this->sym_mod(),'alt' => $this->sym_mod(),'class' => 'spin']);
 		elseif($notprotected):
 			//	record is dirty
-			$o_td->addElement('img', ['src' => $g_img['del'], 'title' => $this->sym_del(), 'alt' => $this->sym_del()]);
+			$o_td->addElement('img',['src' => $g_img['del'],'title' => $this->sym_del(),'alt' => $this->sym_del()]);
 		else:
 			//	record is protected
-			$o_td->addElement('img', ['src' => $g_img['loc'], 'title' => $this->sym_loc(), 'alt' => $this->sym_loc()]);
+			$o_td->addElement('img',['src' => $g_img['loc'],'title' => $this->sym_loc(),'alt' => $this->sym_loc()]);
 		endif;
+		return $root->render();
+	}
+	public function html_maintenancebox() {
+		global $g_img;
+		$root = new co_DOMDocument();
+		$o_td = $root->addElement('td');
+		$link = sprintf('%s?%s=%s',$this->mai->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+		$o_a = $o_td->addElement('a',['href' => $link]);
+		$o_a->addElement('img', ['src' => $g_img['mai'],'title' => $this->sym_mai(),'alt' => $this->sym_mai(),'class' => 'spin']);
+		return $root->render();
+	}
+	public function html_infobox() {
+		global $g_img;
+		$root = new co_DOMDocument();
+		$o_td = $root->addElement('td');
+		$link = sprintf('%s?%s=%s',$this->inf->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+		$o_a = $o_td->addElement('a',['href' => $link]);
+		$o_a->addElement('img', ['src' => $g_img['inf'],'title' => $this->sym_inf(),'alt' => $this->sym_inf(),'class' => 'spin']);
 		return $root->render();
 	}
 	public function html_footer_add(int $colspan = 2) {
@@ -433,48 +524,11 @@ class co_sphere_grid extends co_sphere_scriptname {
 		$root = new co_DOMDocument();
 		$o_tr = $root->addElement('tr');
 		if($colspan > 1):
-			$o_th1 = $o_tr->addElement('th', ['class' => 'lcenl', 'colspan' => $colspan-1]);
+			$o_th1 = $o_tr->addElement('th',['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
-		$o_th2 = $o_tr->addElement('th', ['class' => 'lceadd']);
-		$o_a = $o_th2->addElement('a', ['href' => $this->mod->scriptname()]);
-		$o_img = $o_a->addElement('img', ['src' => $g_img['add'], 'title' => $this->sym_add(), 'alt' => $this->sym_add(), 'class' => 'spin']);
+		$o_th2 = $o_tr->addElement('th',['class' => 'lceadd']);
+		$o_a = $o_th2->addElement('a',['href' => $this->mod->scriptname()]);
+		$o_img = $o_a->addElement('img',['src' => $g_img['add'],'title' => $this->sym_add(),'alt' => $this->sym_add(),'class' => 'spin']);
 		return $root->render();
-	}
-}
-class co_sphere_scriptname {
-	protected $_basename = NULL;
-	protected $_extension = NULL;
-//	methods	
-	public function __construct(string $basename = NULL,string $extension = NULL) {
-		if(isset($basename)):
-			$this->basename($basename);
-		endif;
-		if(isset($extension)):
-			$this->extension($extension);
-		endif;
-	}
-	public function basename(string $basename = NULL) {
-		if(isset($basename)):
-			//	allow [0..9A-Za-z_] for filename
-			if(1 === preg_match('/^[\w]+$/',$basename)):
-				$this->_basename = $basename;
-			endif;
-		endif;
-		return $this->_basename ?? false;
-	}
-	public function extension(string $extension = NULL) {
-		if(isset($extension)):
-			//	allow [0..9A-Za-z_] for extension
-			if(1 === preg_match('/^[\w]+$/',$extension)):
-				$this->_extension = $extension;
-			endif;
-		endif;
-		return $this->_extension ?? false;
-	}
-	public function scriptname() {
-		return sprintf('%s.%s',$this->basename(),$this->extension());
-	}
-	public function header() {
-		return sprintf('Location: %s.%s',$this->basename(),$this->extension());
 	}
 }

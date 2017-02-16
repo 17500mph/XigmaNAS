@@ -53,7 +53,7 @@ function wlan_inuse($ifn) {
 function interfaces_wlan_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('interfaces_wlan','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('ifwlan');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);

@@ -56,7 +56,7 @@ function afpshare_process_updatenotification($mode,$data) {
 function services_afp_share_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_afp_share','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('afpshare');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);

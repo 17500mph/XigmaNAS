@@ -53,7 +53,7 @@ function lagg_inuse($ifn) {
 function interfaces_lagg_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('interfaces_lagg','php');
-	$sphere->mod = new co_sphere_scriptname($sphere->basename() . '_edit','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('iflagg');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
