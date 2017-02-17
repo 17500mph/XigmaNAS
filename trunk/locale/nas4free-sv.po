@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-12 18:35+0000\n"
+"PO-Revision-Date: 2017-02-15 17:43+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -113,6 +113,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Standardlängd är: 128 för AES, 128 för Blowfish, 128 för Camellia och 192 "
+"för 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Hittat i Maxtor 6B200M0 200GB och 2R015H1 15GB diskar)"
@@ -443,7 +445,7 @@ msgid "Add Dataset"
 msgstr "Lägg till Dataset"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Lägg till krypterad volym"
 
 msgid "Add Group"
 msgstr "Lägg till grupp"
@@ -603,7 +605,7 @@ msgid "Administrative WebGUI"
 msgstr "Administrativt webbgränssnitt"
 
 msgid "Administrator Name"
-msgstr "Anministratörsnamn"
+msgstr "Administratörsnamn"
 
 msgid "Advanced"
 msgstr "Avancerat"
@@ -669,7 +671,7 @@ msgid "Alert Level"
 msgstr "Varningsnivå"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritm"
 
 msgid "All"
 msgstr "Alla"
@@ -698,7 +700,7 @@ msgid "All disks are imported."
 msgstr "Alla diskar är importerade."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Alla krypterade diskar har importerats."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1508,7 +1510,7 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr "Rensa konfiguration & importera mjukvaruraiddiskar"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Rensa konfiguration och importerara diskar"
 
 msgid "Clear device errors"
 msgstr "Rensa enhetsfel"
@@ -2226,7 +2228,7 @@ msgid "Delete Selected Datasets"
 msgstr "Ta bort valda Dataset"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Ta bort valda krypterade volymer"
 
 msgid "Delete Selected Groups"
 msgstr "Ta bort valda grupper"
@@ -2576,7 +2578,7 @@ msgid "Disable console menu."
 msgstr "Inaktivera konsolmeny"
 
 msgid "Disable file manager completely."
-msgstr "Inaktivera filanterare helt och hållet."
+msgstr "Inaktivera filhanterare helt och hållet."
 
 msgid "Disable firmware version check."
 msgstr "Inaktivera versionskontroll av systemmjukvara."
@@ -2829,7 +2831,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Vill du ta bort valda dataset?"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr ""
+msgstr "Vill du ta bort valda krypterade volymer?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Vill du ta bort valda grupper?"
@@ -3062,7 +3064,7 @@ msgid "Edit Dataset"
 msgstr "Ändra Dataset"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Ändra krypterade volymer"
 
 msgid "Edit Group"
 msgstr "Redigera grupp"
@@ -3478,13 +3480,13 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr "Krypterad konfiguration komprimeras automatisk till gzip"
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Krypterad volym är markerad för borttagning"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "Krypterad volym är skyddad"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "Krypterad volym är olåst"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3670,7 +3672,7 @@ msgid "Error Level"
 msgstr "Felnivå"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Fel har upptäckts under importen."
 
 msgid "Event"
 msgstr "Händelse"
@@ -5773,7 +5775,7 @@ msgid "No new disk found."
 msgstr "Inga nya diskar hittades."
 
 msgid "No new encrypted disks have been found."
-msgstr ""
+msgstr "Inga nya krypterade diskar har hittats."
 
 msgid "No new software raid disk found."
 msgstr "Inga nya mjukvaroraid hårddiskar hittades."
@@ -7350,7 +7352,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Välj en disk som har S.M.A.R.T.-övervakning aktiverat."
 
 msgid "Select an encryption algorithm to use."
-msgstr ""
+msgstr "Välj en krypteringsalgoritm att använda."
 
 msgid "Select file system format."
 msgstr "Välj filsystemsformat"
@@ -7418,6 +7420,7 @@ msgstr ""
 
 msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
+"Välj vilken nyckellängd som skall användas för en given krypteringsalgoritm."
 
 msgid "Selected"
 msgstr "Markerade"
@@ -8794,7 +8797,7 @@ msgid ""
 "the server, it does not prevent the banned user, host, or class from "
 "connecting to the server."
 msgstr ""
-"Modulen tillhandahåller automatiskt förbud som utlöses baserat på "
+"Modulen tillhandahåller automatiska förbud som utlöses baserat på "
 "konfigurerbara kriterier. Ett förbud förhindrar avstängd användare, värd, "
 "eller klass, från att logga in på servern, men det hindrar inte avstängd "
 "användare, värd, eller klass från att ansluta till servern."
@@ -10815,57 +10818,3 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
-
-#~ msgid "Change password"
-#~ msgstr "Byt lösenord"
-
-#~ msgid "Create encrypted volume"
-#~ msgstr "Skapa krypterad volym"
-
-#~ msgid ""
-#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-#~ "and can not be recovered. !!!"
-#~ msgstr ""
-#~ "Vill du verkligen radera den här volymen?\\n!!! OBSERVERA: all data kommer "
-#~ "att gå förlorad och kan inte återställas. !!!"
-
-#~ msgid "Encryption algorithm to use."
-#~ msgstr "Krypteringsalgrotrim att använda."
-
-#~ msgid "Key length to use with the given cryptographic algorithm."
-#~ msgstr "Nyckellängd att använda för den givna kryptografiska algoritmen."
-
-#~ msgid "Kill encrypted volume"
-#~ msgstr "Döda krypterad volym"
-
-#~ msgid ""
-#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-#~ "and 192 for 3DES."
-#~ msgstr ""
-#~ "Standarden för nyckellängder är: 128 för AES, 128 för Blowfish, 128 för "
-#~ "Camellia och 192 för 3DES."
-
-#~ msgid "The volume must be detached before it can be deleted."
-#~ msgstr "Volymen måste frånkopplas innan den kan raderas."
-
-#~ msgid ""
-#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
-#~ "and can not be recovered."
-#~ msgstr ""
-#~ "Varning: Du är på väg att radera en krypterad-volym. Alla data kommer att "
-#~ "förloras och kommer inte kunna återskapas."
-
-#~ msgid "Clear config and Import disks"
-#~ msgstr "Rensa inställningar och importera diskar"
-
-#~ msgid "detected an error while importing."
-#~ msgstr "ett fel upptäcktes vid importen"
-
-#~ msgid "all encrypted disks are imported."
-#~ msgstr "alla krypterade diskar är importerade"
-
-#~ msgid "no new encrypted disk found."
-#~ msgstr "inga nya krypterade diskar hittades"
-
-#~ msgid "Encryption Algorithm"
-#~ msgstr "Krypteringsalgoritm"

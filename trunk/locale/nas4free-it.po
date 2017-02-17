@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-14 15:20+0000\n"
+"PO-Revision-Date: 2017-02-16 16:42+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -113,6 +113,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Le lunghezze di default sono: 128 per AES, 128 per Blowfish, 128 per "
+"Camellia e 192 per 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Trovato nei dischi Maxtor 6B200M0 da  200GB e 2R015H1 da 15GB)"
@@ -460,7 +462,7 @@ msgid "Add Dataset"
 msgstr "Aggiungi Dataset"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Aggiungi un volume criptato"
 
 msgid "Add Group"
 msgstr "Aggiungi un gruppo"
@@ -688,7 +690,7 @@ msgid "Alert Level"
 msgstr "Livello di allerta"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritmo"
 
 msgid "All"
 msgstr "Tutto"
@@ -719,7 +721,7 @@ msgid "All disks are imported."
 msgstr "Tutti i dischi sono stati importati."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Tutti i dischi criptati sono stati importati"
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1021,7 +1023,7 @@ msgid "Authentication Method"
 msgstr "Metodo di autenticazione"
 
 msgid "Authorised Network"
-msgstr ""
+msgstr "Rete autorizzata"
 
 msgid "Authorised network"
 msgstr "Rete autorizzata"
@@ -1236,6 +1238,8 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"La partizione di avvio è troppo piccola. E' necessario reinstallare da "
+"LiveCD/LiveUSB o ridimensionare la partizione a %s.\n"
 
 msgid "Bootloader"
 msgstr "Bootloader"
@@ -1244,26 +1248,28 @@ msgid "Bridge"
 msgstr "Bridge"
 
 msgid "Bridge Settings"
-msgstr ""
+msgstr "Settaggi del bridge"
 
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Il bridge non può essere cancellato perchè è ancora utilizzato come "
+"un'interfaccia"
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Il bridge è programmato per la cancellazione"
 
 msgid "Bridge is protected"
-msgstr ""
+msgstr "Il bridge è protetto"
 
 msgid "Bridge is unlocked"
-msgstr ""
+msgstr "Il bridge è sbloccato"
 
 msgid "Bring a device online"
 msgstr "Metti online una device"
 
 msgid "Broadcast Interval"
-msgstr ""
+msgstr "Intervallo di rete"
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1298,15 +1304,16 @@ msgstr "CARP"
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Il CARP non può essere cancellato per è ancora utilizzato come interfaccia"
 
 msgid "CARP is marked for deletion"
-msgstr ""
+msgstr "Il CARP è programmato per la cancellazione"
 
 msgid "CARP is protected"
-msgstr ""
+msgstr "Il CARP è protetto"
 
 msgid "CARP is unlocked"
-msgstr ""
+msgstr "Il CARP è sbloccato"
 
 msgid "CARP only"
 msgstr "Solo CARP"
@@ -1336,10 +1343,10 @@ msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
 msgid "CIFS/SMB Information"
-msgstr ""
+msgstr "Informazione su CIFS/SMB"
 
 msgid "CIFS/SMB is disabled."
-msgstr ""
+msgstr "CIFS/SMB è disabilitato"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB è  attivato."
@@ -1375,7 +1382,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Cinese tradizionale Big5)"
 
 msgid "CPU Core Usage"
-msgstr ""
+msgstr "Utilizzo del core CPU"
 
 msgid "CPU Frequency"
 msgstr "Frequenza CPU"
@@ -1436,7 +1443,7 @@ msgid "Capacity"
 msgstr "Capacità"
 
 msgid "Carp Settings"
-msgstr ""
+msgstr "Settaggi CARP"
 
 msgid "Case Sensitivity"
 msgstr "Tiene conto delle maiuscole e/o minuscole"
@@ -1470,7 +1477,7 @@ msgid "Change the IP address of your server"
 msgstr "Cambia l'indirizzo IP del tuo server"
 
 msgid "Changes have been applied."
-msgstr ""
+msgstr "Le modifiche sono state applicate"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "I cambiamenti a questa opzione avranno effetto dopo un riavvio."
@@ -1530,7 +1537,7 @@ msgstr ""
 "Pulisi la configurazione & Importa i dischi configurati in raid software"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Cancellare la configurazione ed importare dischi"
 
 msgid "Clear device errors"
 msgstr "Cancella errori della device"
@@ -1572,10 +1579,10 @@ msgid "Command"
 msgstr "Comando"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Output comandi"
 
 msgid "Command Output:"
-msgstr ""
+msgstr "Output comandi:"
 
 msgid "Command Scripts"
 msgstr "Script di comando"
@@ -1649,7 +1656,7 @@ msgid "Configuration"
 msgstr "Configurazione"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Directory di configurazione"
 
 msgid "Configuring"
 msgstr "Configurando"
@@ -10704,58 +10711,3 @@ msgstr "verso"
 
 msgid "umount"
 msgstr "smonta"
-
-#~ msgid "Change password"
-#~ msgstr "Cambia Password"
-
-#~ msgid "Create encrypted volume"
-#~ msgstr "Generare il volume cifrato"
-
-#~ msgid ""
-#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-#~ "and can not be recovered. !!!"
-#~ msgstr ""
-#~ "Volete veramente eliminare questo volume?\\n!!! Nota, tutti i dati andranno "
-#~ "persi e non potranno essere recuperati!!!"
-
-#~ msgid "Encryption algorithm to use."
-#~ msgstr "Algoritmo di cifratura da usare."
-
-#~ msgid "Key length to use with the given cryptographic algorithm."
-#~ msgstr ""
-#~ "Lunghezza della chiave da utilizzare con l'algoritmo crittografico scelto."
-
-#~ msgid "Kill encrypted volume"
-#~ msgstr "Terminare il volume cifrato"
-
-#~ msgid ""
-#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-#~ "and 192 for 3DES."
-#~ msgstr ""
-#~ "Le lunghezze di default per la chiave sono: 128 per AES, 128 per Blowfish, "
-#~ "128 per Camellia e 192 per 3DES."
-
-#~ msgid "The volume must be detached before it can be deleted."
-#~ msgstr "Il volume deve essere sganciato prima di essere cancellato."
-
-#~ msgid ""
-#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
-#~ "and can not be recovered."
-#~ msgstr ""
-#~ "Attenzione: Sta per essere cancellato un volume criptato. Tutti i dati "
-#~ "saranno persi e non sarà possibile recuperarli."
-
-#~ msgid "Clear config and Import disks"
-#~ msgstr "Cancella la configurazione e importa i dischi"
-
-#~ msgid "all encrypted disks are imported."
-#~ msgstr "tutti i dischi criptati sono stati importati"
-
-#~ msgid "no new encrypted disk found."
-#~ msgstr "nessun nuovo disco criptato trovato."
-
-#~ msgid "detected an error while importing."
-#~ msgstr "si è verificato un errore durante l'importazione."
-
-#~ msgid "Encryption Algorithm"
-#~ msgstr "Algoritmo di Criptazione"

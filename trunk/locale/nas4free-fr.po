@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-12 06:03+0000\n"
+"PO-Revision-Date: 2017-02-15 06:03+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -114,6 +114,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Les longueurs par défaut sont: 128 pour AES, 128 pour Blowfish, 128 pour "
+"Camellia et 192 pour 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -465,7 +467,7 @@ msgid "Add Dataset"
 msgstr "Ajouter un dataset"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Ajouter du Volume Crypté"
 
 msgid "Add Group"
 msgstr "Ajouter un Groupe"
@@ -693,7 +695,7 @@ msgid "Alert Level"
 msgstr "Niveau d'alerte"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algorithme"
 
 msgid "All"
 msgstr "Tous"
@@ -725,7 +727,7 @@ msgid "All disks are imported."
 msgstr "Tous les disques sont importés."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Tous les disques cryptés ont été importés."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1559,7 +1561,7 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr "Effacer la configuration et importer les disques RAID logiciel"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Effacer la Configuration et Importer les Disques"
 
 msgid "Clear device errors"
 msgstr "Effacer les erreurs de périphérique"
@@ -2294,7 +2296,7 @@ msgid "Delete Selected Datasets"
 msgstr "supprimer les Dataset sélectionnés"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Supprimer les volumes cryptés sélectionnés"
 
 msgid "Delete Selected Groups"
 msgstr "Supprimer les groupes sélectionnés"
@@ -2918,7 +2920,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Voulez-vous effacer les datasets sélectionnés"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr ""
+msgstr "Voulez-vous supprimer des volumes cryptés sélectionnés?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Voulez-vous supprimer les comptes d'utilisateurs sélectionnés"
@@ -3153,7 +3155,7 @@ msgid "Edit Dataset"
 msgstr "Modifier le jeu de données"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Modifier le volume crypté"
 
 msgid "Edit Group"
 msgstr "Modifier le groupe"
@@ -3572,13 +3574,13 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr "La configuration cryptée est automatiquement gzippée."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Le volume crypté est marqué pour suppression"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "Le volume crypté est protégé"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "Le volume crypté est déverrouillé"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3765,7 +3767,7 @@ msgid "Error Level"
 msgstr "Niveau d’erreur"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Des erreurs ont été détectées lors de l'importation."
 
 msgid "Event"
 msgstr "Evénement"
@@ -5909,7 +5911,7 @@ msgid "No new disk found."
 msgstr "Aucun nouveau disque trouvé."
 
 msgid "No new encrypted disks have been found."
-msgstr ""
+msgstr "Aucun nouveau disque crypté n'a été trouvé."
 
 msgid "No new software raid disk found."
 msgstr "Aucun nouveau disque raid logiciel trouvé."
@@ -7512,7 +7514,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Sélectionnez un disque configuré pour le pilotage S.M.A.R.T."
 
 msgid "Select an encryption algorithm to use."
-msgstr ""
+msgstr "Sélectionnez un algorithme de cryptage à utiliser."
 
 msgid "Select file system format."
 msgstr "Sélectionnez le format de système de fichiers."
@@ -7584,6 +7586,8 @@ msgstr ""
 
 msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
+"Sélectionnez la longueur de clé à utiliser pour l'algorithme cryptographique "
+"donné."
 
 msgid "Selected"
 msgstr "Sélectionné"
@@ -11056,57 +11060,3 @@ msgstr "à"
 
 msgid "umount"
 msgstr "démontage"
-
-#~ msgid "Change password"
-#~ msgstr "Changer mot de passe"
-
-#~ msgid "Create encrypted volume"
-#~ msgstr "Créer un volume chiffré"
-
-#~ msgid "Encryption algorithm to use."
-#~ msgstr "Algorithme de chiffrement à utiliser."
-
-#~ msgid "Key length to use with the given cryptographic algorithm."
-#~ msgstr "Longueur de clef à utiliser pour l'algorithme de chiffrement."
-
-#~ msgid "Kill encrypted volume"
-#~ msgstr "Détruire le volume chiffré"
-
-#~ msgid ""
-#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-#~ "and 192 for 3DES."
-#~ msgstr ""
-#~ "Les longueurs de clefs par défaut sont: 128 pour AES, 128 pour Blowfish, 128 "
-#~ "pour Camellia et 192 pour 3DES."
-
-#~ msgid "The volume must be detached before it can be deleted."
-#~ msgstr "Le volume doit être détaché avant de pouvoir être supprimé."
-
-#~ msgid ""
-#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
-#~ "and can not be recovered."
-#~ msgstr ""
-#~ "Attention: Vous allez supprimer un volume crypté. Toutes les données seront "
-#~ "perdues et ne pourront pas être récupérées."
-
-#~ msgid "Clear config and Import disks"
-#~ msgstr "Effacer la configuration actuelle et importer les disques"
-
-#~ msgid "no new encrypted disk found."
-#~ msgstr "aucun nouveau disque chiffré n'a été trouvé."
-
-#~ msgid "all encrypted disks are imported."
-#~ msgstr "tous les disques chiffrés ont été importés."
-
-#~ msgid "detected an error while importing."
-#~ msgstr "a détecté une erreur en cours d'importation."
-
-#~ msgid ""
-#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-#~ "and can not be recovered. !!!"
-#~ msgstr ""
-#~ "Voulez-vous vraiment supprimer ce volume ?\\n!!! Nota : toutes les données "
-#~ "seront perdues et ne pourront être récupérées !!!"
-
-#~ msgid "Encryption Algorithm"
-#~ msgstr "Algorithme de Chiffrement"
