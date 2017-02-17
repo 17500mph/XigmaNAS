@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-14 21:51+0000\n"
+"PO-Revision-Date: 2017-02-15 15:13+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -111,6 +111,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Las longitudes habituales son: 128 para AES, 128 para Camella y 192 para "
+"3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(En Discos Maxtor 6B200M0 200GB y Maxtor 2R015H1 15GB )."
@@ -683,7 +685,7 @@ msgid "Alert Level"
 msgstr "Nivel de alerta"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritmo"
 
 msgid "All"
 msgstr "Todos"
@@ -7478,7 +7480,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccionar un disco habilitado para monitoreo S.M.A.R.T."
 
 msgid "Select an encryption algorithm to use."
-msgstr ""
+msgstr "Seleccionar algoritmo de encriptación a usar."
 
 msgid "Select file system format."
 msgstr "Seleccionar formato de sistema de archivo"
@@ -7548,7 +7550,7 @@ msgstr ""
 "más de un interfaz)"
 
 msgid "Select which key length to use for given cryptographic algorithm."
-msgstr ""
+msgstr "Longitud de la clave de encriptación a usar."
 
 msgid "Selected"
 msgstr "Seleccionado"
@@ -10979,57 +10981,3 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
-
-#~ msgid "Change password"
-#~ msgstr "Cambiar contraseña"
-
-#~ msgid "Create encrypted volume"
-#~ msgstr "Crear un volumen encriptado"
-
-#~ msgid ""
-#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-#~ "and can not be recovered. !!!"
-#~ msgstr ""
-#~ "¿Realmente desea borrar este volumen?\\n!!! Aviso, toda la información se "
-#~ "perdera y no podra ser recuperada !!!"
-
-#~ msgid "Encryption algorithm to use."
-#~ msgstr "Algoritmo a usar en el cifrado"
-
-#~ msgid "Key length to use with the given cryptographic algorithm."
-#~ msgstr "Longitud de la clave para usar con el algoritmo de cifrado."
-
-#~ msgid "Kill encrypted volume"
-#~ msgstr "Destruir volumen cifrado"
-
-#~ msgid ""
-#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-#~ "and 192 for 3DES."
-#~ msgstr ""
-#~ "Las longitudes predeterminadas de las claves son: 128 para AES, 128 para "
-#~ "Blowfish, 128 para Camelia y 192 para 3DES."
-
-#~ msgid "The volume must be detached before it can be deleted."
-#~ msgstr "El volumen debe ser desmontado antes de que sea eliminado."
-
-#~ msgid ""
-#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
-#~ "and can not be recovered."
-#~ msgstr ""
-#~ "Advertencia: Usted esta por eliminar un volumen Cifrado. Todos los datos se "
-#~ "perderan y no podran ser recuperados."
-
-#~ msgid "all encrypted disks are imported."
-#~ msgstr "Todos los discos encriptados serán importados"
-
-#~ msgid "Clear config and Import disks"
-#~ msgstr "Desechar configuración actual e importar discos"
-
-#~ msgid "no new encrypted disk found."
-#~ msgstr "No se han encontrado nuevos discos encriptados"
-
-#~ msgid "detected an error while importing."
-#~ msgstr "Se ha detectado un error mientras se realizaba la importación"
-
-#~ msgid "Encryption Algorithm"
-#~ msgstr "Algoritmo de cifrado"

@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-14 04:56+0000\n"
+"PO-Revision-Date: 2017-02-15 08:36+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -111,6 +111,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Lungimile standard sunt: 128 pentru AES, 128 pentru Blowfish, 128 pentru "
+"Camellia și 192 pentru 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -459,7 +461,7 @@ msgid "Add Dataset"
 msgstr "Adăugare set date"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Adăugare volum criptat"
 
 msgid "Add Group"
 msgstr "Adăugare grup"
@@ -686,7 +688,7 @@ msgid "Alert Level"
 msgstr "Nivel alertă"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritm"
 
 msgid "All"
 msgstr "Toate"
@@ -716,7 +718,7 @@ msgid "All disks are imported."
 msgstr "toate dispozitivele de stocare atasate"
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Toate discurile criptate au fost importate."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1538,7 +1540,7 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr "Ștergere configurație & Import discuri Raid software"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Ștergere configurație și import discuri"
 
 msgid "Clear device errors"
 msgstr "Ștergere erori dispozitiv"
@@ -2281,7 +2283,7 @@ msgid "Delete Selected Datasets"
 msgstr "Ștergere seturi de date selectate"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Ștergere volume criptate selectate"
 
 msgid "Delete Selected Groups"
 msgstr "Ștergere grupuri selectate"
@@ -2885,7 +2887,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Ștergeți seturile de date selectate?"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr ""
+msgstr "Ștergeți volumele criptate selectate?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Ștergeți grupurile selectate?"
@@ -3119,7 +3121,7 @@ msgid "Edit Dataset"
 msgstr "Editare set de date"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Modificare volum criptat"
 
 msgid "Edit Group"
 msgstr "Editare grup"
@@ -3535,13 +3537,13 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr "Configurația criptată este automat comprimată (gzip)."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Volumul criptat selectat este marcat pentru ștergere"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "Volumul criptat este protejat"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "Volumul criptate este deblocat"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3731,7 +3733,7 @@ msgid "Error Level"
 msgstr "Nivel eroare"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Eroare la import."
 
 msgid "Event"
 msgstr "Eveniment"
@@ -5870,7 +5872,7 @@ msgid "No new disk found."
 msgstr "Nu exista dispozitive de stocare noi."
 
 msgid "No new encrypted disks have been found."
-msgstr ""
+msgstr "Nu a fost găsit niciun disc nou criptat."
 
 msgid "No new software raid disk found."
 msgstr "Nu exista dispozitive RAID-Soft  noi."
@@ -7466,7 +7468,7 @@ msgstr ""
 "Selectați un disc care are activată opțiunea de monitorizare S.M.A.R.T."
 
 msgid "Select an encryption algorithm to use."
-msgstr ""
+msgstr "Selectați algortimul de criptare de utilizat."
 
 msgid "Select file system format."
 msgstr "Selectare format sistem fișiere."
@@ -7535,6 +7537,7 @@ msgstr ""
 
 msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
+"Selectați lungimea cheii de criptare pentru algortimul de criptare selectat."
 
 msgid "Selected"
 msgstr "Selectat"
@@ -10961,57 +10964,3 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
-
-#~ msgid "Create encrypted volume"
-#~ msgstr "Creare volum criptat"
-
-#~ msgid "Kill encrypted volume"
-#~ msgstr "Distrugere volum criptat"
-
-#~ msgid "Encryption algorithm to use."
-#~ msgstr "Algoritm de criptare de utilizat."
-
-#~ msgid "Change password"
-#~ msgstr "Modificare parolă"
-
-#~ msgid "Key length to use with the given cryptographic algorithm."
-#~ msgstr "Lungimea cheii utilizate pentru algoritmul de criptare dat."
-
-#~ msgid "all encrypted disks are imported."
-#~ msgstr "toate discurile criptate sînt importate."
-
-#~ msgid "detected an error while importing."
-#~ msgstr "au fost detectate erori la import."
-
-#~ msgid "Clear config and Import disks"
-#~ msgstr "Ştergere Configurație și Import discuri"
-
-#~ msgid ""
-#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-#~ "and can not be recovered. !!!"
-#~ msgstr ""
-#~ "Doriți să ștergeți acest volum?\\n!!! Notă: Toate datele vor fi pierdute și "
-#~ "nu vor mai putea fi recuperate. !!!"
-
-#~ msgid ""
-#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-#~ "and 192 for 3DES."
-#~ msgstr ""
-#~ "Lungimile implicite pentru chei sînt: 128 pentru AES, 128 pentru Blowfish, "
-#~ "128 pentru Camellia și 192 pentru 3DES."
-
-#~ msgid "The volume must be detached before it can be deleted."
-#~ msgstr "Volumul trebuie detașat pentru a putea fi șters."
-
-#~ msgid ""
-#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
-#~ "and can not be recovered."
-#~ msgstr ""
-#~ "Atenție: Sînteți pe cale să ștergeți un volum criptat. Toate datele vor fi "
-#~ "șterse fără posibilitate de recuperare."
-
-#~ msgid "no new encrypted disk found."
-#~ msgstr "nu a fost găsit niciun disc nou criptat."
-
-#~ msgid "Encryption Algorithm"
-#~ msgstr "Algoritm criptare"

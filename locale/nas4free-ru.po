@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-12 19:27+0000\n"
+"PO-Revision-Date: 2017-02-15 03:52+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-14 22:53+0000\n"
+"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -113,6 +113,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Длина по умолчанию: 128 для AES, 128 для Blowfish, 128 для Camellia и 192 "
+"для 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Найдено в Maxtor 6B200M0 200GB и Maxtor 2R015H1 15GB дисках)."
@@ -455,7 +457,7 @@ msgid "Add Dataset"
 msgstr "Добавить Dataset"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Добавить зашифрованный том"
 
 msgid "Add Group"
 msgstr "Добавить группу"
@@ -683,7 +685,7 @@ msgid "Alert Level"
 msgstr "Уровень оповещения"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Алгоритм"
 
 msgid "All"
 msgstr "Все"
@@ -714,7 +716,7 @@ msgid "All disks are imported."
 msgstr "Все диски импортированы"
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Все зашифрованные диски были импортированы."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -1539,7 +1541,7 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr "Очистить конфигурацию и импортировать программные рейд диски"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Очистить конфигурацию и импортировать диски"
 
 msgid "Clear device errors"
 msgstr "Очистить ошибки устройства (Clear device errors)"
@@ -2269,7 +2271,7 @@ msgid "Delete Selected Datasets"
 msgstr "Удалить выбранные Dataset'ы"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Удалить выбранные шифрованные тома"
 
 msgid "Delete Selected Groups"
 msgstr "Удалить выбранные группы"
@@ -2878,7 +2880,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Вы действительно желаете удалить выбранные Dataset'ы?"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr ""
+msgstr "Вы хотите удалить выбранные шифрованные тома?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Вы уверены, что хотите удалить выбранные группы?"
@@ -3116,7 +3118,7 @@ msgid "Edit Dataset"
 msgstr "Редактировать Dataset"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Редактировать зашифрованный том"
 
 msgid "Edit Group"
 msgstr "Редактировать группу"
@@ -3534,13 +3536,13 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr "Зашифрованная конфигурация будет автоматически сжата."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Зашифрованный том помечен для удаления"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "Зашифрованный том защищен"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "Зашифрованный том разблокирован"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3729,7 +3731,7 @@ msgid "Error Level"
 msgstr "Уровень ошибки"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Были обнаружены ошибки во время импорта."
 
 msgid "Event"
 msgstr "Событие"
@@ -5876,7 +5878,7 @@ msgid "No new disk found."
 msgstr "Не найдено нового диска."
 
 msgid "No new encrypted disks have been found."
-msgstr ""
+msgstr "Новых зашифрованных дисков не было найдено."
 
 msgid "No new software raid disk found."
 msgstr "Не найдено нового диска программного RAID."
@@ -7462,7 +7464,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Укажите диск с включенным S.M.A.R.T."
 
 msgid "Select an encryption algorithm to use."
-msgstr ""
+msgstr "Выберите используемый алгоритм шифрования."
 
 msgid "Select file system format."
 msgstr "Выберите формат файловой системы."
@@ -7533,6 +7535,8 @@ msgstr ""
 
 msgid "Select which key length to use for given cryptographic algorithm."
 msgstr ""
+"Выберите, какой длины использовать ключ для данного криптографического "
+"алгоритма."
 
 msgid "Selected"
 msgstr "Выбранные"
@@ -10975,57 +10979,3 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
-
-#~ msgid "Change password"
-#~ msgstr "Изменить пароль"
-
-#~ msgid "Create encrypted volume"
-#~ msgstr "Создать зашифрованный том"
-
-#~ msgid ""
-#~ "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
-#~ "and can not be recovered. !!!"
-#~ msgstr ""
-#~ "Вы действительно хотите удалить этот раздел?\\n*** Внимание, все данные "
-#~ "будут потеряны и не смогут быть восстановлены! ***"
-
-#~ msgid "Encryption algorithm to use."
-#~ msgstr "Используемый алгоритм шифрования."
-
-#~ msgid "Key length to use with the given cryptographic algorithm."
-#~ msgstr "Длина ключа, используемого с выбранным алгоритмом шифрования."
-
-#~ msgid "Kill encrypted volume"
-#~ msgstr "Удалить зашифрованный том"
-
-#~ msgid ""
-#~ "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
-#~ "and 192 for 3DES."
-#~ msgstr ""
-#~ "По умолчанию используется 128 бит для AES, 128 бит для Blowfish, 128 бит для "
-#~ "Camellia и 192 бит для 3DES."
-
-#~ msgid "The volume must be detached before it can be deleted."
-#~ msgstr "Том должен быть отсоединен перед удалением."
-
-#~ msgid ""
-#~ "Warning: You are going to delete an encrypted volume. All data will get lost "
-#~ "and can not be recovered."
-#~ msgstr ""
-#~ "Внимание: Вы собираетесь удалить зашифрованный раздел. Все данные будут "
-#~ "потеряны и не могут быть восстановлены."
-
-#~ msgid "Clear config and Import disks"
-#~ msgstr "Очистить конфигурацию и импортировать диски"
-
-#~ msgid "detected an error while importing."
-#~ msgstr "обнаружена ошибка во время импортирования."
-
-#~ msgid "all encrypted disks are imported."
-#~ msgstr "все диски использующие шифрование импортированы."
-
-#~ msgid "no new encrypted disk found."
-#~ msgstr "новый диск использующий шифрование не найден."
-
-#~ msgid "Encryption Algorithm"
-#~ msgstr "Алгоритм шифрования"
