@@ -140,7 +140,7 @@ gptpart_init()
 
 		# Create boot partition.
 		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot ${DISK1} > /dev/null
-		gpart add -a 4k -s 800K -t efi -l efiboot ${DISK1} > /dev/null
+		#gpart add -a 4k -s 800K -t efi -l efiboot ${DISK1} > /dev/null
 
 		#gpart add -s 512K -t freebsd-boot ${DISK1} > /dev/null
 		if [ ! -z "${SWAP}" ]; then
@@ -156,7 +156,7 @@ gptpart_init()
 
 		# Create boot partition.
 		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot ${DISK2} > /dev/null
-		gpart add -a 4k -s 800K -t efi -l efiboot ${DISK2} > /dev/null
+		#gpart add -a 4k -s 800K -t efi -l efiboot ${DISK2} > /dev/null
 
 		#gpart add -s 512K -t freebsd-boot ${DISK2} > /dev/null
 		if [ ! -z "${SWAP}" ]; then
@@ -220,7 +220,7 @@ zdisk_init()
 	# Write bootcode.
 	echo "Writing bootcode..."
 	gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK1}
-	/bin/dd if=/boot/boot1.efifat of=/dev/${DISK1}"p2" > /dev/null 2>&1
+	#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK1}"p2" > /dev/null 2>&1
 
 	sysctl kern.geom.debugflags=0
 	sleep 1
@@ -306,8 +306,8 @@ zmirror_init()
 	echo "Writing bootcode..."
 	gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK1}
 	gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK2}
-	/bin/dd if=/boot/boot1.efifat of=/dev/${DISK1}"p2" > /dev/null 2>&1
-	/bin/dd if=/boot/boot1.efifat of=/dev/${DISK2}"p2" > /dev/null 2>&1
+	#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK1}"p2" > /dev/null 2>&1
+	#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK2}"p2" > /dev/null 2>&1
 
 	sysctl kern.geom.debugflags=0
 	sleep 1
@@ -785,9 +785,13 @@ get_media_desc()
 	VAL=""
 	if [ -n "${media}" ]; then
 		# Try to get model information for each detected device.
-		description=`camcontrol identify ${media} | grep model | awk '{print $3, $4, $5}'`
+		description=`camcontrol identify ${media} | grep 'model' | awk '{print $3, $4, $5}'`
 	if [ -z "${description}" ] ; then
-		description="Disk Drive"
+		# Re-try with "camcontrol inquiry" instead.
+		description=`camcontrol inquiry ${media} | grep -E '<*>' | cut -d '<' -f2 | cut -d '>' -f1`
+		if [ -z "${description}" ] ; then
+			description="Disk Drive"
+		fi
 	fi
 		cap=`diskinfo ${media} | awk '{
 			capacity = $3;
