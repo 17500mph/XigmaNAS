@@ -33,31 +33,33 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
-//	sphere structure
-$sphere = new \stdClass();
-$sphere->msg = new \stdClass();
-$sphere->msg->selection = new \stdClass();
-//	sphere content
-$sphere->basename = 'services_tftp';
-$sphere->extension = '.php';
-$sphere->scriptname = $sphere->basename . $sphere->extension;
-$sphere->msg->selection->apply = gtext('Do you want to apply these settings?');
-$sphere->grid = [];
-$sphere->row = [];
-$sphere->default = [
-	'enable' => false,
-	'dir' => $g['media_path'],
-	'allowfilecreation' => true,
-	'port' => 69,
-	'username' => 'nobody',
-	'umask' => 0,
-	'timeout' => 1000000,
-	'maxblocksize' => 16384,
-	'extraoptions' => ''
-];
-//	sphere external content
-$sphere->grid = &array_make_branch($config,'tftpd');
-//	local variables
+require 'co_sphere.php';
+
+function services_tftp_get_sphere() {
+	global $config;
+	$sphere = new co_sphere_settings('services_tftp','php');
+	$sphere->row_default = [
+		'enable' => false,
+		'dir' => $g['media_path'],
+		'allowfilecreation' => true,
+		'port' => 69,
+		'username' => 'nobody',
+		'umask' => 0,
+		'timeout' => 1000000,
+		'maxblocksize' => 16384,
+		'extraoptions' => ''
+	];
+	$sphere->grid = &array_make_branch($config,'tftpd');
+	if(empty($sphere->grid)):
+		$sphere->grid = $sphere->row_default;
+		write_config();
+		header($sphere->header());
+		exit;
+	endif;
+	return $sphere;
+}
+$sphere = &services_tftp_get_sphere();
+$gt_button_apply_confirm = gtext('Do you want to apply these settings?');
 $input_errors = [];
 $a_message = [];
 //	identify page mode
@@ -100,18 +102,18 @@ switch($page_action):
 		break;
 endswitch;
 $sphere->row['enable'] = isset($source['enable']);
-$sphere->row['dir'] = $source['dir'] ?? $sphere->default['dir'];
+$sphere->row['dir'] = $source['dir'] ?? $sphere->row_default['dir'];
 $sphere->row['allowfilecreation'] = isset($source['allowfilecreation']);
-$sphere->row['port'] = $source['port'] ?? $sphere->default['port'];
-$sphere->row['username'] = $source['username'] ?? $sphere->default['username'];
-$sphere->row['umask'] = $source['umask'] ?? $sphere->default['umask'];
-$sphere->row['timeout'] = $source['timeout'] ?? $sphere->default['timeout'];
-$sphere->row['maxblocksize'] = $source['maxblocksize'] ?? $sphere->default['maxblocksize'];
-$sphere->row['extraoptions'] = $source['extraoptions'] ?? $sphere->default['extraoptions'];
+$sphere->row['port'] = $source['port'] ?? $sphere->row_default['port'];
+$sphere->row['username'] = $source['username'] ?? $sphere->row_default['username'];
+$sphere->row['umask'] = $source['umask'] ?? $sphere->row_default['umask'];
+$sphere->row['timeout'] = $source['timeout'] ?? $sphere->row_default['timeout'];
+$sphere->row['maxblocksize'] = $source['maxblocksize'] ?? $sphere->row_default['maxblocksize'];
+$sphere->row['extraoptions'] = $source['extraoptions'] ?? $sphere->row_default['extraoptions'];
 //	set defaults
 if(preg_match('/\S/',$sphere->row['username'])):
 else:
-	$sphere->row['username'] = $sphere->default['username'];
+	$sphere->row['username'] = $sphere->row_default['username'];
 endif;
 //	process enable
 switch($page_action):
@@ -147,9 +149,8 @@ switch($page_action):
 			config_lock();
 			$retval |= rc_update_service('tftpd');
 			config_unlock();
-			$a_message[] = get_std_save_message($retval);
-			$mode_page = PAGE_MODE_VIEW;
-			$page_action = 'view';
+			header($sphere->header());
+			exit;
 		else:
 			$mode_page = PAGE_MODE_EDIT;
 			$page_action = 'edit';
@@ -164,7 +165,8 @@ switch($page_action):
 			config_lock();
 			$retval |= rc_update_service('tftpd');
 			config_unlock();
-			$a_message[] = gtext('TFTP has been disabled.');
+			header($sphere->header());
+			exit;
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
@@ -216,7 +218,7 @@ $(window).on("load", function() {
 	$("#iform").submit(function() {	spinner(); });
 	$(".spin").click(function() { spinner(); });
 	$("#button_save").click(function () {
-		return confirm("<?=$sphere->msg->selection->apply;?>");
+		return confirm("<?=$gt_button_apply_confirm;?>");
 	});
 });
 //]]>
@@ -225,7 +227,7 @@ $(window).on("load", function() {
 		break;
 endswitch;	
 ?>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere->scriptname;?>" method="post" name="iform" id="iform">
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
@@ -307,7 +309,7 @@ endswitch;
 <?php
 	include 'formend.inc';
 ?>
-</form></td></tr></table>
+</td></tr></table></form>
 <?php
 include 'fend.inc';
 ?>
