@@ -34,31 +34,40 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 require 'services.inc';
+require 'co_sphere.php';
 
-$sphere_scriptname = basename(__FILE__);
-$sphere_header = 'Location: '.$sphere_scriptname;
-$sphere_record = [];
+function services_fuppes_get_sphere() {
+	global $config;
+	$sphere = new co_sphere_settings('services_fuppes','php');
+	$sphere->row_default = [
+		'enable' => false,
+		'name' => '',
+		'if' => '',
+		'port' => '49152',
+		'home' => '',
+		'profile' => 'default',
+		'deviceip' => '',
+		'transcoding' => false,
+		'tempdir' => '',
+		'content' => []
+	];
+	$sphere->grid = &array_make_branch($config,'upnp');
+	if(empty($sphere->grid)):
+		$sphere->grid = $sphere->row_default;
+		write_config();
+		header($sphere->header());
+		exit;
+	endif;
+	array_make_branch($config,'upnp','content');
+	return $sphere;
+}
+$sphere = &services_fuppes_get_sphere();
+$gt_button_apply_confirm = gtext('Do you want to apply these settings?');
 $a_message = [];
-$sphere_default = [
-	'enable' => false,
-	'name' => '',
-	'if' => '',
-	'port' => '49152',
-	'home' => '',
-	'profile' => 'default',
-	'deviceip' => '',
-	'transcoding' => '',
-	'tempdir' => '',
-	'content' => []
-];
-$gt_apply_confirm = gtext('Do you want to apply these settings?');
 $input_errors = [];
-//	sunrise
-array_make_branch($config,'upnp','content');
-$sphere_array = &$config['upnp'];
-sort($sphere_array['content']);
+sort($sphere->grid['content']);
 // we need information about other DLNA services
-array_make_branch($config,'minidlna','content');
+array_make_branch($config,'minidlna');
 /*	calculate initial page mode and page action.
  *	at the end of this section a valid page mode and a valid page action are available.
  *	page_action cancel is switched to view mode.
@@ -114,27 +123,27 @@ switch($page_action):
 		$source = $_POST;
 		break;
 	default:
-		$source = $sphere_array;
+		$source = $sphere->grid;
 		break;
 endswitch;
-$sphere_record['enable'] = isset($source['enable']);
-$sphere_record['name'] = $source['name'] ?? $sphere_default['name'];
-$sphere_record['if'] = $source['if'] ?? $sphere_default['if'];
-$sphere_record['port'] = $source['port'] ?? $sphere_default['port'];
-$sphere_record['home'] = $source['home'] ?? $sphere_default['home'];
-$sphere_record['profile'] = $source['profile'] ?? $sphere_default['profile'];
-$sphere_record['deviceip'] = $source['deviceip'] ?? $sphere_default['deviceip'];
-$sphere_record['transcoding'] = isset($source['transcoding']);
-$sphere_record['tempdir'] = $source['tempdir'] ?? $sphere_default['tempdir'];
-$sphere_record['content'] = $source['content'] ?? $sphere_default['content'];
+$sphere->row['enable'] = isset($source['enable']);
+$sphere->row['name'] = $source['name'] ?? $sphere->row_default['name'];
+$sphere->row['if'] = $source['if'] ?? $sphere->row_default['if'];
+$sphere->row['port'] = $source['port'] ?? $sphere->row_default['port'];
+$sphere->row['home'] = $source['home'] ?? $sphere->row_default['home'];
+$sphere->row['profile'] = $source['profile'] ?? $sphere->row_default['profile'];
+$sphere->row['deviceip'] = $source['deviceip'] ?? $sphere->row_default['deviceip'];
+$sphere->row['transcoding'] = isset($source['transcoding']);
+$sphere->row['tempdir'] = $source['tempdir'] ?? $sphere->row_default['tempdir'];
+$sphere->row['content'] = $source['content'] ?? $sphere->row_default['content'];
 //	process enable
 switch($page_action):
 	case 'enable':
-		if($sphere_record['enable']):
+		if($sphere->row['enable']):
 			$mode_page = PAGE_MODE_VIEW;
 			$page_action = 'view'; 
 		else: // enable and run a full validation
-			$sphere_record['enable'] = true;
+			$sphere->row['enable'] = true;
 			$page_action = 'save'; // continue with save procedure
 		endif;
 		break;
@@ -146,54 +155,54 @@ switch($page_action):
 		$reqdfields = ['name','if','port','content','home'];
 		$reqdfieldsn = [gtext('Name'),gtext('Interface'),gtext('Port'),gtext('Media library'),gtext('Database directory')];
 		$reqdfieldst = ['string','string','port','array','string'];
-		if(0 === strcmp('Terratec_Noxon_iRadio',$sphere_record['profile'])):
+		if(0 === strcmp('Terratec_Noxon_iRadio',$sphere->row['profile'])):
 			$reqdfields[] = 'deviceip';
 			$reqdfieldsn[] = gtext('Device IP');
 			$reqdfieldst[] = 'ipaddr';
 		endif;
-		if($sphere_record['transcoding']):
+		if($sphere->row['transcoding']):
 			$reqdfields[] = 'tempdir';
 			$reqdfieldsn[] = gtext('Temporary directory');
 			$reqdfieldst[] = 'string';
 		endif;
-		do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
-		do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
+		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		//	check if port is already used.
-		if(services_is_port_used($sphere_record['port'],'upnp')):
-			$input_errors[] = sprintf(gtext("The attribute 'Port': port '%ld' is already taken by another service."),$sphere_record['port']);
+		if(services_is_port_used($sphere->row['port'],'upnp')):
+			$input_errors[] = sprintf(gtext("The attribute 'Port': port '%ld' is already taken by another service."),$sphere->row['port']);
 		endif;
 		//	check port range.
-		if($sphere_record['port'] && ((1024 > $sphere_record['port']) || (65535 < $sphere_record['port']))):
+		if($sphere->row['port'] && ((1024 > $sphere->row['port']) || (65535 < $sphere->row['port']))):
 			$input_errors[] = sprintf(gtext("Port number must be in the range between %d and %d."),gtext('Port'),1024,65535);
 		endif;
 		//	all checks passed
 		if(empty($input_errors)):
-			$sphere_array = $sphere_record;
+			$sphere->grid = $sphere->row;
 			write_config();
 			$retval = 0;
 			config_lock();
 			$retval |= rc_update_service('fuppes');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			$a_message[] = gtext('Changes have been applied.');
-			$mode_page = PAGE_MODE_VIEW;
-			$page_action = 'view';
+			header($sphere->header());
+			exit;
 		else:
 			$mode_page = PAGE_MODE_EDIT;
 			$page_action = 'edit';
 		endif;
 		break;
 	case 'disable':
-		if($sphere_record['enable']): // if enabled, disable it
-			$sphere_record['enable'] = false;
-			$sphere_array = $sphere_record;
+		if($sphere->row['enable']): // if enabled, disable it
+			$sphere->row['enable'] = false;
+			$sphere->grid = $sphere->row;
 			write_config();
 			$retval = 0;
 			config_lock();
 			$retval |= rc_update_service('fuppes');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			$a_message[] = gtext('Fuppes has been disabled.');
+			header($sphere->header());
+			exit;
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
@@ -245,8 +254,8 @@ $l_dlna = [
 ];
 //	identifiy enabled DLNA services
 $dlna_count = 0;
-$dlna_count += (isset($config['upnp']['enable'])) ? 1 : 0;
-$dlna_count += (isset($config['minidlna']['enable'])) ? 2 : 0;
+$dlna_count += isset($config['upnp']['enable']) ? 1 : 0;
+$dlna_count += isset($config['minidlna']['enable']) ? 2 : 0;
 //	everything greater than 1 indicates that another DLNA service is running somewhere else
 //	every odd number indicates that this DLNA service is enabled.
 switch($dlna_count):
@@ -294,7 +303,7 @@ $(window).on("load", function() {
 		spinner();
 	});
 	$("#button_save").click(function () {
-		return confirm('<?=$gt_apply_confirm;?>');
+		return confirm('<?=$gt_button_apply_confirm;?>');
 	});
 });
 function profile_change() {
@@ -329,7 +338,7 @@ endswitch;
 		<li class="tabinact"><a href="services_minidlna.php"><span><?=gtext('MiniDLNA');?></span></a></li>
 	</ul>
 </td></tr></tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
@@ -350,7 +359,7 @@ endswitch;
 					html_titleline2(gtext('Fuppes Media Server'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Fuppes Media Server'),$sphere_record['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gtext('Fuppes Media Server'),$sphere->row['enable'],gtext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -359,42 +368,42 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_text2('enable',gtext('Service Enabled'),$sphere_record['enable'] ? gtext('Yes') : gtext('No'));
-					html_text2('name',gtext('Name'), htmlspecialchars($sphere_record['name']));
-					html_text2('if',gtext('Interface Selection'), htmlspecialchars($sphere_record['if']));
-					html_text2('port',gtext('Port'), htmlspecialchars($sphere_record['port']));
-					html_text2('home',gtext('Database Directory'), htmlspecialchars($sphere_record['home']));
-					$helpinghand = implode("\n",$sphere_record['content']);
+					html_text2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					html_text2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
+					html_text2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
+					html_text2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
+					html_text2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
+					$helpinghand = implode("\n",$sphere->row['content']);
 					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
-					html_text2('profile',gtext('Profile'),$l_dlna[$sphere_record['profile']] ?? '');
-					switch($sphere_record['profile']):
+					html_text2('profile',gtext('Profile'),$l_dlna[$sphere->row['profile']] ?? '');
+					switch($sphere->row['profile']):
 						case 'Terratec_Noxon_iRadio':
-							html_text2('deviceip',gtext('Device IP'), htmlspecialchars($sphere_record['deviceip']));
+							html_text2('deviceip',gtext('Device IP'), htmlspecialchars($sphere->row['deviceip']));
 							break;
 					endswitch;
-					html_checkbox2('transcoding',gtext('Transcoding'),$sphere_record['transcoding'],'','',false,true);
-					if($sphere_record['transcoding']):
-						html_text2('tempdir',gtext('Transcoding Directory'),htmlspecialchars($sphere_record['tempdir']));
+					html_checkbox2('transcoding',gtext('Transcoding'),$sphere->row['transcoding'],'','',false,true);
+					if($sphere->row['transcoding']):
+						html_text2('tempdir',gtext('Transcoding Directory'),htmlspecialchars($sphere->row['tempdir']));
 					endif;
 					break;
 				case PAGE_MODE_EDIT:
-					html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
-					html_combobox2('if',gtext('Interface Selection'),$sphere_record['if'],$l_interfaces,gtext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
-					html_inputbox2('port',gtext('Port'),$sphere_record['port'],sprintf(gtext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535,49152),true,5);
-					html_filechooser2('home',gtext('Database Directory'),$sphere_record['home'],gtext('Location of the media content database.'), $g['media_path'],true,67);
-					html_folderbox2('content',gtext('Media Library'),$sphere_record['content'],gtext("Set the content location(s) to or from the media library."),$g['media_path'],true);
-					html_combobox2('profile',gtext('Profile'), $sphere_record['profile'],$l_dlna,gtext('Compliant profile to be used.'),true,false,'profile_change()');
-					html_inputbox2('deviceip',gtext('Device IP'),$sphere_record['deviceip'], gtext('The IP address of the device.'),true,20);
-					html_checkbox2('transcoding',gtext('Transcoding'),$sphere_record['transcoding'],gtext('Enable transcoding.'),'',false,false,'transcoding_change()');
-					html_filechooser2('tempdir',gtext('Transcoding Directory'),$sphere_record['tempdir'],gtext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
+					html_inputbox2('name',gtext('Name'),$sphere->row['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
+					html_combobox2('if',gtext('Interface Selection'),$sphere->row['if'],$l_interfaces,gtext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
+					html_inputbox2('port',gtext('Port'),$sphere->row['port'],sprintf(gtext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535,49152),true,5);
+					html_filechooser2('home',gtext('Database Directory'),$sphere->row['home'],gtext('Location of the media content database.'), $g['media_path'],true,67);
+					html_folderbox2('content',gtext('Media Library'),$sphere->row['content'],gtext("Set the content location(s) to or from the media library."),$g['media_path'],true);
+					html_combobox2('profile',gtext('Profile'), $sphere->row['profile'],$l_dlna,gtext('Compliant profile to be used.'),true,false,'profile_change()');
+					html_inputbox2('deviceip',gtext('Device IP'),$sphere->row['deviceip'], gtext('The IP address of the device.'),true,20);
+					html_checkbox2('transcoding',gtext('Transcoding'),$sphere->row['transcoding'],gtext('Enable transcoding.'),'',false,false,'transcoding_change()');
+					html_filechooser2('tempdir',gtext('Transcoding Directory'),$sphere->row['tempdir'],gtext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
 				break;
 			endswitch;
 			if($dlna_option & 1):
 				html_separator2();
 				html_titleline2(gtext('Fuppes Media Server Administration'));
-				$if = get_ifname($sphere_record['if']);
+				$if = get_ifname($sphere->row['if']);
 				$ipaddr = get_ipaddr($if);
-				$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere_record['port']));
+				$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere->row['port']));
 				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
 				html_text2('url',gtext('URL'),$text);
 			endif;
@@ -406,7 +415,7 @@ endswitch;
 		switch($mode_page):
 			case PAGE_MODE_VIEW;
 				echo html_button('edit',gtext('Edit'));
-				if($sphere_record['enable']):
+				if($sphere->row['enable']):
 					echo html_button('disable',gtext('Disable'));
 				else:
 					echo html_button('enable',gtext('Enable'));
@@ -422,7 +431,7 @@ endswitch;
 <?php
 	include 'formend.inc';
 ?>
-</form></td></tr></tbody></table>
+</td></tr></tbody></table></form>
 <?php
 switch($mode_page):
 	case PAGE_MODE_EDIT:
