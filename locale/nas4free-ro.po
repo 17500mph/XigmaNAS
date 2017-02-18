@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2017-02-15 08:36+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -478,6 +478,9 @@ msgstr "Adăugare MIB"
 msgid "Add NFS Share"
 msgstr "Adăugare partajare NFS"
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Adăugare Pool"
 
@@ -573,9 +576,6 @@ msgstr "Adăugare activitate"
 
 msgid "Add mount point"
 msgstr "Adăugare punct de montare"
-
-msgid "Add option"
-msgstr "Adăugare opțiune"
 
 msgid "Add portal group"
 msgstr "Adăugare grup portal"
@@ -805,9 +805,8 @@ msgstr "Flux de date alternativ"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Port TCP alternativ (Implicit 873)."
 
-msgid "Alternative configuration directory (usually empty)."
+msgid "Alternative configuration directory."
 msgstr ""
-"Folder de configurare alternativ (cîmpul se lasă necompletat de obicei)."
 
 msgid "Always"
 msgstr "Întodeauna"
@@ -1478,9 +1477,6 @@ msgstr "Modifică adresa IP a calculatorului"
 
 msgid "Change the IP address of your server"
 msgstr "Modifică adresa IP a serverului"
-
-msgid "Changes have been applied."
-msgstr "Modificările au fost aplicate."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Modificările efectuate vor deveni active după repornirea sistemului."
@@ -3138,6 +3134,9 @@ msgstr "Editare MIB"
 msgid "Edit NFS Share"
 msgstr "Editare partajare NFS"
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Editare Pool"
 
@@ -3215,9 +3214,6 @@ msgstr "Editare acțiune"
 
 msgid "Edit mount point"
 msgstr "Editare punct de montare"
-
-msgid "Edit option"
-msgstr "Opțiune editare"
 
 msgid "Edit portal group"
 msgstr "Editare grup portal"
@@ -3831,10 +3827,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Opțiuni suplimentare pentru ifconfig (nu sînt absolut necesare)"
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Opțiuni suplimentare de transmis folosind protocolul rpc (pot să lipsească)."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Opțiuni suplimentare pentru rsync (nu sînt absolut necesare)"
@@ -3922,6 +3916,9 @@ msgstr "Eroare."
 
 msgid "Failover"
 msgstr "Protecție la Erori"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Eroare fatală"
@@ -4113,9 +4110,6 @@ msgstr "Server media Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr "Administrare Server Media Fuppes"
 
-msgid "Fuppes has been disabled."
-msgstr "Fuppes a fost dezactivat."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4211,11 +4205,14 @@ msgstr "Setări grup"
 msgid "Group Suffix"
 msgstr "Sufix grup"
 
-msgid "Group is locked"
-msgstr "Grupul este blocat"
-
 msgid "Group is marked for deletion"
 msgstr "Grupul este marcat pentru ștergere"
+
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
+msgstr ""
 
 msgid "Group numeric id."
 msgstr "Id numeric grup."
@@ -5549,9 +5546,6 @@ msgstr "Parametru lipsă"
 msgid "Mixed"
 msgstr "Amestecate"
 
-msgid "MniDLNA has been disabled."
-msgstr "MniDLNA a fost dezactivat."
-
 msgid "Mode"
 msgstr "Mod"
 
@@ -6118,6 +6112,12 @@ msgstr "Opțiune blocată"
 msgid "Option is marked for deletion"
 msgstr "Opțiune marcată pentru ștergere"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Text opțional pentru destinație."
 
@@ -6499,8 +6499,8 @@ msgstr "Versiune pool"
 msgid "Pool cannot be changed."
 msgstr "Structura pool nu poate fi modificată."
 
-msgid "Pool is marked for removal"
-msgstr "Structura pool este marcată pentru ștergere"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Structura pool este protejată"
@@ -6529,10 +6529,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Portul trebuie să fie în intervalul %d - %d."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Portul de utilizat pentru conexiuni de intrare în cadrul grupului. Portul "
-"implicit este %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Portul utilizat de iTunes (implicit 3689)."
@@ -6604,6 +6602,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInițializare"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Preferat"
@@ -7497,6 +7498,9 @@ msgstr ""
 "Selectați opțiunea 'Neformatat' pentru discuri neformatate și formatați-le "
 "folosind"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Selectați algoritmul de balans."
 
@@ -8231,9 +8235,6 @@ msgstr "Port utilizat de server pentru legătură."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr "TFTP a fost dezactivat."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10221,10 +10222,8 @@ msgstr "Folosiți aceste acțiuni speciale doar pentru debuging!"
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Utilizați această opțiune pentru a suprascrie modul de permisiuni implicit "
-"pentru crearea de noi fișiere (implicit %s)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10293,11 +10292,14 @@ msgstr "Partajări utilizator"
 msgid "User Suffix"
 msgstr "Sufix utilizator"
 
-msgid "User account is locked"
-msgstr "Contul de utilizator este blocat"
-
 msgid "User account is marked for deletion"
 msgstr "Contul de utilizator este marcat pentru ștergere"
+
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
+msgstr ""
 
 msgid "User numeric id."
 msgstr "ID numeric utilizator."
@@ -10964,3 +10966,53 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Utilizați această opțiune pentru a suprascrie modul de permisiuni implicit "
+#~ "pentru crearea de noi fișiere (implicit %s)."
+
+#~ msgid "Add option"
+#~ msgstr "Adăugare opțiune"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr ""
+#~ "Folder de configurare alternativ (cîmpul se lasă necompletat de obicei)."
+
+#~ msgid "Edit option"
+#~ msgstr "Opțiune editare"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Portul de utilizat pentru conexiuni de intrare în cadrul grupului. Portul "
+#~ "implicit este %d."
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Opțiuni suplimentare de transmis folosind protocolul rpc (pot să lipsească)."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Structura pool este marcată pentru ștergere"
+
+#~ msgid "Group is locked"
+#~ msgstr "Grupul este blocat"
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Fuppes a fost dezactivat."
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "MniDLNA a fost dezactivat."
+
+#~ msgid "User account is locked"
+#~ msgstr "Contul de utilizator este blocat"
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Modificările au fost aplicate."
+
+#~ msgid "TFTP has been disabled."
+#~ msgstr "TFTP a fost dezactivat."

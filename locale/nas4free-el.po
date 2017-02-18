@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2017-02-15 12:45+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -492,6 +492,9 @@ msgstr "Προσθήκη MIB"
 msgid "Add NFS Share"
 msgstr "Προσθήκη Κοινόχρηστου NFS"
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Προσθήκη Pool"
 
@@ -587,9 +590,6 @@ msgstr "Προσθήκης εργασίας"
 
 msgid "Add mount point"
 msgstr "Προσθήκη σημείου προσάρτησης"
-
-msgid "Add option"
-msgstr "Προσθήκη επιλογής"
 
 msgid "Add portal group"
 msgstr "Προσθήκη ομάδας Portal"
@@ -832,8 +832,8 @@ msgstr "Εναλλακτικές Ροές Δεδομένων"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Εναλλακτική θύρα TCP. (Προεπιλεγμένη είναι η 873)."
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Εναλλακτικός κατάλογος ρυθμίσεων (συνήθως κενό)."
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Πάντα"
@@ -1515,9 +1515,6 @@ msgstr "Αλλαγή της διεύθυνσης IP του υπολογιστή 
 
 msgid "Change the IP address of your server"
 msgstr "Αλλαγή της διεύθυνσης IP του διακομιστή σας"
-
-msgid "Changes have been applied."
-msgstr "Οι αλλαγές έχουν εφαρμοστεί."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Οι αλλαγές σε αυτή την επιλογή θα ισχύσουν μετά από επανεκκίνηση."
@@ -3202,6 +3199,9 @@ msgstr "Επεξεργασία MIB"
 msgid "Edit NFS Share"
 msgstr "Επεξεργασία Κοινόχρηστου NFS"
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Επεξεργασία Pool"
 
@@ -3279,9 +3279,6 @@ msgstr "Επεξεργασία εργασίας"
 
 msgid "Edit mount point"
 msgstr "Επεξεργασία σημείου προσάρτησης"
-
-msgid "Edit option"
-msgstr "Επεξεργασία επιλογής"
 
 msgid "Edit portal group"
 msgstr "Επεξεργασία ομάδας Portal"
@@ -3905,11 +3902,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Επιπλέον επιλογές στο ifconfig (συνήθως κενό)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Επιπλέον επιλογές που θα περάσουν μέσω rpc χρησιμοποιώντας το transmission-"
-"remote (συνήθως κενό)."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Επιπλέον επιλογές στο rsync (συνήθως κενό)."
@@ -3997,6 +3991,9 @@ msgstr "Απέτυχε."
 
 msgid "Failover"
 msgstr "Ανακατεύθυνση"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Κρίσιμο"
@@ -4194,9 +4191,6 @@ msgstr "Διακομιστής Πολυμέσων Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr "Διαχείριση Fuppes Media Server"
 
-msgid "Fuppes has been disabled."
-msgstr "Το Fuppes είναι απενεργοποιημένο."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4292,11 +4286,14 @@ msgstr "Ρυθμίσεις Oμάδας"
 msgid "Group Suffix"
 msgstr "Κατάληξη Ομάδας"
 
-msgid "Group is locked"
-msgstr "Η ομάδα είναι κλειδωμένη"
-
 msgid "Group is marked for deletion"
 msgstr "Η ομάδα έχει σημειωθεί προς διαγραφή"
+
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
+msgstr ""
 
 msgid "Group numeric id."
 msgstr "Αριθμητική ταυτότητα ομάδας."
@@ -5652,9 +5649,6 @@ msgstr "Ελλειπής παράμετρος"
 msgid "Mixed"
 msgstr "Μικτό"
 
-msgid "MniDLNA has been disabled."
-msgstr "Το MiniDLNA έχει απενεργοποιηθεί"
-
 msgid "Mode"
 msgstr "Λειτουργία"
 
@@ -6227,6 +6221,12 @@ msgstr "Η επιλογή είναι κλειδωμένη"
 msgid "Option is marked for deletion"
 msgstr "Η επιλογή έχει σημειωθεί προς διαγραφή"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Προαιρετικό, φιλικό προς το χρήστη, όνομα του προορισμού."
 
@@ -6612,8 +6612,8 @@ msgstr "Έκδοση pool"
 msgid "Pool cannot be changed."
 msgstr "Το Pool δεν μπορεί να αλλαχτεί."
 
-msgid "Pool is marked for removal"
-msgstr "Το Pool έχει μαρκαριστεί προς διαγραφή"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Το Pool είναι προστατευμένο"
@@ -6642,10 +6642,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Το νούμερο της θύρας πρέπει να είναι σε ένα εύρος μεταξύ %d και %d."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Η θύρα ακρόασης των εισερχόμενων συνδέσεων των ομότιμων χρηστών. Η "
-"προεπιλεγμένη θύρα είναι η %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Θύρα ακρόασης. Η προεπιλεγμένη θύρα για το iTunes είναι 3689."
@@ -6716,6 +6714,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "Πριν τη διαδικασία έναρξης"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Προτιμώμενη"
@@ -7617,6 +7618,9 @@ msgstr ""
 "Διαλέξτε την επιλογή 'Αδιαμόρφωτο' για αδιαμόρφωτους δίσκους και διαμορφώστε "
 "τους με"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Επιλογή αλγόριθμου ισορροπίας ανάγνωσης."
 
@@ -8362,9 +8366,6 @@ msgstr "Θύρα TCP που θα δεσμεύσει ο διακομιστής."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr "To TFTP έχει απενεργοποιηθεί."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10446,10 +10447,8 @@ msgstr "Χρησιμοποιήστε αυτές τις ειδικές ενέργ
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Χρησιμοποιήστε αυτή την επιλογή για να παρακάμψετε τις άδειες για τα νέα "
-"αρχεία (%s η προεπιλογή)"
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10519,11 +10518,14 @@ msgstr "Κοινόχρηστα Χρήστη"
 msgid "User Suffix"
 msgstr "Κατάληξη Χρήστη"
 
-msgid "User account is locked"
-msgstr "Ο λογαριασμός χρήστη είναι κλειδωμένος"
-
 msgid "User account is marked for deletion"
 msgstr "Ο λογαριασμός χρήστη έχει σημειωθεί προς διαγραφή"
+
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
+msgstr ""
 
 msgid "User numeric id."
 msgstr "Αριθμητική ταυτότητα χρήστη."
@@ -11202,3 +11204,53 @@ msgstr "σε"
 
 msgid "umount"
 msgstr "αποπροσάρτηση"
+
+#~ msgid "Add option"
+#~ msgstr "Προσθήκη επιλογής"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Εναλλακτικός κατάλογος ρυθμίσεων (συνήθως κενό)."
+
+#~ msgid "Edit option"
+#~ msgstr "Επεξεργασία επιλογής"
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε αυτή την επιλογή για να παρακάμψετε τις άδειες για τα νέα "
+#~ "αρχεία (%s η προεπιλογή)"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Η θύρα ακρόασης των εισερχόμενων συνδέσεων των ομότιμων χρηστών. Η "
+#~ "προεπιλεγμένη θύρα είναι η %d."
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Επιπλέον επιλογές που θα περάσουν μέσω rpc χρησιμοποιώντας το transmission-"
+#~ "remote (συνήθως κενό)."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Το Pool έχει μαρκαριστεί προς διαγραφή"
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Οι αλλαγές έχουν εφαρμοστεί."
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "Το MiniDLNA έχει απενεργοποιηθεί"
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Το Fuppes είναι απενεργοποιημένο."
+
+#~ msgid "Group is locked"
+#~ msgstr "Η ομάδα είναι κλειδωμένη"
+
+#~ msgid "User account is locked"
+#~ msgstr "Ο λογαριασμός χρήστη είναι κλειδωμένος"
+
+#~ msgid "TFTP has been disabled."
+#~ msgstr "To TFTP έχει απενεργοποιηθεί."

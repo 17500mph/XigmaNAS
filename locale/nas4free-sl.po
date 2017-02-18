@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -437,6 +437,9 @@ msgstr "Dodaj MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -532,9 +535,6 @@ msgstr "Dodaj opravilo"
 
 msgid "Add mount point"
 msgstr "Dodaj priklopno točko"
-
-msgid "Add option"
-msgstr "Dodaj možnost"
 
 msgid "Add portal group"
 msgstr "Dodaj portal skupinoI"
@@ -744,8 +744,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Drugačno mesto konfiguracij (po navadi prazno)."
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Vedno"
@@ -1380,9 +1380,6 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
-msgstr ""
-
-msgid "Changes have been applied."
 msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
@@ -2920,6 +2917,9 @@ msgstr "Uredi MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -2997,9 +2997,6 @@ msgstr "Uredi opravilo"
 
 msgid "Edit mount point"
 msgstr "Uredi priklopno točko"
-
-msgid "Edit option"
-msgstr "Uredi možnost"
 
 msgid "Edit portal group"
 msgstr "Uredi portal skupino"
@@ -3583,8 +3580,7 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Dodatne možnosti za ifconfig (ponavadi prazno)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
@@ -3672,6 +3668,9 @@ msgstr "Spodletelo."
 
 msgid "Failover"
 msgstr "Failover"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Usodno"
@@ -3861,9 +3860,6 @@ msgstr "Medijski strežnik Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -3958,10 +3954,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5212,9 +5211,6 @@ msgstr ""
 msgid "Mixed"
 msgstr "Mešano"
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr "Način"
 
@@ -5765,6 +5761,12 @@ msgstr ""
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Uporabnikov opis cilja."
 
@@ -6135,7 +6137,7 @@ msgstr ""
 msgid "Pool cannot be changed."
 msgstr ""
 
-msgid "Pool is marked for removal"
+msgid "Pool is marked for deletion"
 msgstr ""
 
 msgid "Pool is protected"
@@ -6165,8 +6167,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
-msgstr "Vrata, na katerem čakam na povezave pijavk. Privzeta so %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
+msgstr ""
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Vrata na katerih čakam. Privzeta iTunes vrata so 3689."
@@ -6232,6 +6234,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Željen"
@@ -7091,6 +7096,9 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -7787,9 +7795,6 @@ msgstr "TCP vrata, na katerih strežnik posluša."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -9515,7 +9520,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
 
 msgid ""
@@ -9570,10 +9575,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10193,3 +10201,16 @@ msgstr ""
 
 msgid "umount"
 msgstr "izvrzi"
+
+#~ msgid "Add option"
+#~ msgstr "Dodaj možnost"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Drugačno mesto konfiguracij (po navadi prazno)."
+
+#~ msgid "Edit option"
+#~ msgstr "Uredi možnost"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr "Vrata, na katerem čakam na povezave pijavk. Privzeta so %d."

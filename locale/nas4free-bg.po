@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -442,6 +442,9 @@ msgstr "Добави MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -537,9 +540,6 @@ msgstr "Добави задача"
 
 msgid "Add mount point"
 msgstr "Добави mount point"
-
-msgid "Add option"
-msgstr "Добавяне на параметър"
 
 msgid "Add portal group"
 msgstr "Добави portal група"
@@ -768,8 +768,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Алтернативна директория за настройки (обикновено е празно)"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Винаги"
@@ -1427,9 +1427,6 @@ msgstr "Промени IP адреса за твоя компютър"
 
 msgid "Change the IP address of your server"
 msgstr "Промени IP адреса за твоя сървър"
-
-msgid "Changes have been applied."
-msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Промените ще влязат в действие след рестарта."
@@ -3018,6 +3015,9 @@ msgstr "Редактирай MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3095,9 +3095,6 @@ msgstr "Редактирай задача"
 
 msgid "Edit mount point"
 msgstr ""
-
-msgid "Edit option"
-msgstr "Редактирай опция"
 
 msgid "Edit portal group"
 msgstr ""
@@ -3667,8 +3664,7 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr ""
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
@@ -3755,6 +3751,9 @@ msgid "Failed."
 msgstr ""
 
 msgid "Failover"
+msgstr ""
+
+msgid "Fast"
 msgstr ""
 
 msgid "Fatal"
@@ -3944,9 +3943,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -4041,10 +4037,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5268,9 +5267,6 @@ msgstr ""
 msgid "Mixed"
 msgstr ""
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr ""
 
@@ -5808,6 +5804,12 @@ msgstr ""
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr ""
 
@@ -6173,7 +6175,7 @@ msgstr ""
 msgid "Pool cannot be changed."
 msgstr ""
 
-msgid "Pool is marked for removal"
+msgid "Pool is marked for deletion"
 msgstr ""
 
 msgid "Pool is protected"
@@ -6203,7 +6205,7 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
 
 msgid "Port to listen on. Default iTunes port is 3689."
@@ -6267,6 +6269,9 @@ msgid "Pre-Fail' Attribute used at least in Samsung devices."
 msgstr ""
 
 msgid "PreInit"
+msgstr ""
+
+msgid "Preallocation"
 msgstr ""
 
 msgid "Preferred"
@@ -7114,6 +7119,9 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -7794,9 +7802,6 @@ msgid "TCP port to bind the server to."
 msgstr ""
 
 msgid "TFTP"
-msgstr ""
-
-msgid "TFTP has been disabled."
 msgstr ""
 
 msgid "TKIP"
@@ -9514,7 +9519,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
 
 msgid ""
@@ -9569,10 +9574,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10193,3 +10201,12 @@ msgstr "до"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid "Add option"
+#~ msgstr "Добавяне на параметър"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Алтернативна директория за настройки (обикновено е празно)"
+
+#~ msgid "Edit option"
+#~ msgstr "Редактирай опция"

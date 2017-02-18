@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-15 16:22+0000\n"
-"Last-Translator: Robert Wildgruber <robert@wildgruber.com>\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
+"PO-Revision-Date: 2017-02-18 09:53+0000\n"
+"Last-Translator: transposed messenger <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -116,6 +116,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Standardlängen sind: 128 für AES, 128 für Blowfish, 128 für Camellia und "
+"192 für 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -473,7 +475,7 @@ msgid "Add Dataset"
 msgstr "Datensatz hinzufügen"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Verschlüsseltes Volume hinzufügen"
 
 msgid "Add Group"
 msgstr "Gruppe hinzufügen"
@@ -489,6 +491,9 @@ msgstr "MIB hinzufügen"
 
 msgid "Add NFS Share"
 msgstr "NFS Share hinzufügen"
+
+msgid "Add Option"
+msgstr ""
 
 msgid "Add Pool"
 msgstr "Pool hinzufügen"
@@ -585,9 +590,6 @@ msgstr "Einen Auftrag hinzufügen"
 
 msgid "Add mount point"
 msgstr "Einhängepunkt hinzufügen"
-
-msgid "Add option"
-msgstr "Einstellung hinzufügen"
 
 msgid "Add portal group"
 msgstr "Portalgruppe hinzufügen"
@@ -700,7 +702,7 @@ msgid "Alert Level"
 msgstr "Alarmstufe"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algorithmus"
 
 msgid "All"
 msgstr "Alle"
@@ -730,7 +732,7 @@ msgid "All disks are imported."
 msgstr "Alle Festplatten sind importiert."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Alle verschlüsselten Festplatten wurden importiert."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -821,8 +823,8 @@ msgstr "Alternativer Datenstrom"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Alternativer TCP-Port (Standard 873)"
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Alternatives Konfigurationsverzeichnis (gewöhnlich leer)"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "immer"
@@ -1021,7 +1023,7 @@ msgid "Auth Method"
 msgstr "Authentifikationsmethode"
 
 msgid "Authenticate Path & Realm"
-msgstr ""
+msgstr "Authentifizieren Pfad & Realm"
 
 msgid "Authenticate URL"
 msgstr "URL bestätigen"
@@ -1505,9 +1507,6 @@ msgstr "Ändern sie die IP-Adresse ihres Computers"
 msgid "Change the IP address of your server"
 msgstr "Ändern sie die IP-Adresse ihres Servers"
 
-msgid "Changes have been applied."
-msgstr "Änderungen wurden übernommen."
-
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
 "Änderungen in diesen Optionen werden erst nach einem Neustart wirksam."
@@ -1525,7 +1524,7 @@ msgid "Check and replace cable"
 msgstr "Prüfe und ersetze das Kabel"
 
 msgid "Check shared secret"
-msgstr ""
+msgstr "Geheimes Geheimnis überprüfen"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -1564,7 +1563,7 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr "Konfiguration löschen und neu von dem Software Raidl einlesen"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Konfiguration bereinigen und Festplatten importieren"
 
 msgid "Clear device errors"
 msgstr "Gerätefehler löschen"
@@ -1601,6 +1600,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Kommagetrennte Liste der Gruppennamen, welche sich in den FTP Server "
+"einloggen dürfen (leer = ftp group)"
 
 msgid "Command"
 msgstr "Befehl"
@@ -1653,7 +1654,7 @@ msgid "Community"
 msgstr "Gemeinschaft"
 
 msgid "Compilations Directories"
-msgstr ""
+msgstr "Compilations Verzeichnisse"
 
 msgid "Compiled"
 msgstr "Kompiliert"
@@ -1747,7 +1748,7 @@ msgid "Controller Auth Method"
 msgstr "Authentifizierungsmethode des Controllers"
 
 msgid "Controller Authorised Network"
-msgstr ""
+msgstr "Regler zugelassen Netzwerk"
 
 msgid "Controller Authorised network"
 msgstr "Controller authorisiertes Netzwerk"
@@ -1958,7 +1959,7 @@ msgid "Create HVM Guest"
 msgstr "HVM-Gast erstellen"
 
 msgid "Create Mask"
-msgstr ""
+msgstr "Maske erstellen"
 
 msgid "Create PV Guest"
 msgstr "PV-Gast erstellen"
@@ -2030,7 +2031,7 @@ msgstr ""
 "Passwort verwenden."
 
 msgid "Current password is incorrectly entered."
-msgstr ""
+msgstr "Aktuelles Passwort ungültig"
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "aktueller Status basierend auf der Lebensdauererwartung"
@@ -2427,7 +2428,7 @@ msgid "Destination network bit count"
 msgstr "Zielnetzwerk Bit Count"
 
 msgid "Destination network for this static route."
-msgstr ""
+msgstr "Zielnetzwerk für diese statische Route."
 
 msgid "Destination port"
 msgstr "Ziel-Port"
@@ -2642,7 +2643,7 @@ msgid "Disk"
 msgstr "Festplatte"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Festplattenpartitionsinformation"
 
 msgid "Disk Selection"
 msgstr "Festpalttenauswahl"
@@ -2685,7 +2686,7 @@ msgid "Distributed Hash Table"
 msgstr ""
 
 msgid "Do not abort the firmware upgrade process once it has started."
-msgstr ""
+msgstr "Den Firmwareupdate-Prozess nach dem Start nicht mehr abbrechen."
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2903,13 +2904,13 @@ msgid "Do you want to delete selected rsync modules?"
 msgstr "Möchten Sie die gewählten rsync Module löschen?"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "Möchten Sie ausgewählte Freigaben löschen?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Wollen sie die ausgewählten 'Snapshots' wirklich löschen ?"
 
 msgid "Do you want to delete selected user accounts?"
-msgstr ""
+msgstr "Möchten Sie ausgewählte Benutzerkonten löschen?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Wollen Sie die ausgewählten virtuellen Geräte  löschen ?"
@@ -2933,10 +2934,10 @@ msgid "Do you want to disable selected records?"
 msgstr ""
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "Möchten Sie ausgewählte RSYNC-Jobs deaktivieren?"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "Möchten Sie ausgewählte RSYNC-Module deaktivieren?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Sollen die ausgewählten Kommandos aktiviert werden?"
@@ -2951,10 +2952,10 @@ msgid "Do you want to enable selected records?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr ""
+msgstr "Möchten Sie ausgewählte RSYNC-Jobs aktivieren?"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr ""
+msgstr "Möchten Sie ausgewählte RSYNC-Module aktivieren?"
 
 msgid "Do you want to lock selected records?"
 msgstr ""
@@ -2981,7 +2982,7 @@ msgid "Do you want to unlock selected records?"
 msgstr ""
 
 msgid "Document Root"
-msgstr ""
+msgstr "Stammverzeichnis"
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
@@ -3024,7 +3025,7 @@ msgid "Done."
 msgstr "Erledigt."
 
 msgid "Dos Charset"
-msgstr ""
+msgstr "DOS Zeichensatz"
 
 msgid "Download"
 msgstr "Herunterladen"
@@ -3126,6 +3127,9 @@ msgstr "MIB editieren"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3204,9 +3208,6 @@ msgstr "Auftrag bearbeiten"
 msgid "Edit mount point"
 msgstr "Einhängepunkt bearbeiten"
 
-msgid "Edit option"
-msgstr "Einstellung bearbeiten"
-
 msgid "Edit portal group"
 msgstr "Editiere Portalgruppe"
 
@@ -3266,7 +3267,7 @@ msgid "Enable FXP protocol."
 msgstr "Aktiviere FXP-Protokoll."
 
 msgid "Enable Firmware Upgrade"
-msgstr ""
+msgstr "Firmware-Upgrade freigeben"
 
 msgid "Enable NFSv4 server."
 msgstr "Aktiviere NFSv4 Server."
@@ -3303,10 +3304,10 @@ msgid "Enable Selected Records"
 msgstr ""
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Aktiviere ausgewählte RSYNC-Jobs"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Aktiviere ausgewählte RSYNC-Module"
 
 msgid "Enable TLS connections."
 msgstr "SSL-Verbindungen aktivieren."
@@ -3318,7 +3319,7 @@ msgid "Enable Time Machine support"
 msgstr "Time Machine Unterstützung aktivieren"
 
 msgid "Enable ZFS ACL."
-msgstr ""
+msgstr "Aktiviere ZFS ACL"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
@@ -3431,7 +3432,7 @@ msgid "Enable peer exchange (PEX)."
 msgstr "Peer-Austausch (PEX) aktivieren."
 
 msgid "Enable permission inheritance."
-msgstr ""
+msgstr "Aktiviere Rechtevererbung"
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Portweiterleitung via NAT-PMP oder UPnP aktivieren."
@@ -3440,7 +3441,7 @@ msgid "Enable proxy authentication."
 msgstr "Aktiviere Proxy Authentifizierung."
 
 msgid "Enable recycle bin."
-msgstr ""
+msgstr "Aktiviere Papierkorb"
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Schaltet die entfernte Überwachung der lokal verbundenen UPS ein"
@@ -3508,7 +3509,7 @@ msgid "Enabled"
 msgstr "Aktiviert"
 
 msgid "Encrypt Password"
-msgstr ""
+msgstr "Passwort verschlüsseln"
 
 msgid "Encrypt password"
 msgstr "Passwort verschlüsseln"
@@ -3574,17 +3575,23 @@ msgid ""
 "Enter a custom port number if you want to override the default port (default "
 "is 69)."
 msgstr ""
+"Bitte benutzerdefinierten Port eingeben, falls Sie den Standardport "
+"überschreiben wollen (Standard ist 69)"
 
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is %s)."
 msgstr ""
+"Bitte benutzerdefinierten Port eingeben, falls Sie den Standardport "
+"überschreiben wollen (Standard ist %s)"
 
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
 msgstr ""
+"Bitte benutzerdefinierten Port eingeben, falls Sie den Standardport "
+"überschreiben wollen (Standard ist 22)"
 
 msgid "Enter a description"
 msgstr "Geben Sie eine Beschreibung ein"
@@ -3593,10 +3600,10 @@ msgid "Enter a description for your reference."
 msgstr "Eine Beschreibung als Referenz eingeben."
 
 msgid "Enter a group description."
-msgstr ""
+msgstr "Bitte Gruppenbeschreibung eingeben"
 
 msgid "Enter a group name."
-msgstr ""
+msgstr "Bitte Gruppennamen eingeben."
 
 msgid "Enter a name"
 msgstr "Namen eingeben"
@@ -3624,13 +3631,13 @@ msgstr ""
 "oder benutzen Sie das Symbol zur Auswahl."
 
 msgid "Enter full name of the user."
-msgstr ""
+msgstr "Bitte den kompletten Namen des Benutzers eingeben."
 
 msgid "Enter hostname or IP address."
-msgstr ""
+msgstr "Bitte Hostname oder IP-Adresse eingeben."
 
 msgid "Enter login name of the user."
-msgstr ""
+msgstr "Bitte Benutzernamen eingeben."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr ""
@@ -3684,7 +3691,7 @@ msgstr ""
 "162)."
 
 msgid "Enter the user password."
-msgstr ""
+msgstr "Bitte Benutzerpasswort eingeben."
 
 msgid "Enter trap host name."
 msgstr "Geben Sie den Trap Hostnamen an."
@@ -3710,7 +3717,7 @@ msgid "Error Level"
 msgstr "Fehlergrad"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Während des Imports sind Fehler aufgetreten."
 
 msgid "Event"
 msgstr "Ereignis"
@@ -3719,7 +3726,7 @@ msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg install packagename."
-msgstr ""
+msgstr "Beispiel: pkg install Paketname."
 
 msgid "Execute"
 msgstr "Ausführen"
@@ -3808,11 +3815,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Zusätzliche Optionen für ifconfig (normalerweise leer)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Konfigurationsoptiuonen zur Weitergabe über rpc mittels 'Transmission-"
-"remote' (normalerweise leer)"
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Zusätzliche Optionen für rsync (normalerweise leer)."
@@ -3899,6 +3903,9 @@ msgstr "Fehlgeschlagen."
 
 msgid "Failover"
 msgstr "Failover"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Fataler Fehler"
@@ -4091,9 +4098,6 @@ msgstr "Fuppes Media Server"
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Medien Server Verwaltung"
 
-msgid "Fuppes has been disabled."
-msgstr "Fuppes ia deaktiviert."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4189,10 +4193,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5521,9 +5528,6 @@ msgstr "Fehlender Parameter"
 msgid "Mixed"
 msgstr "Gemischt"
 
-msgid "MniDLNA has been disabled."
-msgstr "MiniDLNA wurde deaktiviert."
-
 msgid "Mode"
 msgstr "Modus"
 
@@ -6090,6 +6094,12 @@ msgstr "Einstellung ist gesperrt"
 msgid "Option is marked for deletion"
 msgstr "Einstellung ist zum Löschen markiert"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Optionaler benutzerfreundlicher String für das Ziel."
 
@@ -6467,8 +6477,8 @@ msgstr "Pool Version"
 msgid "Pool cannot be changed."
 msgstr "Pool kann nicht verändert werden."
 
-msgid "Pool is marked for removal"
-msgstr "Pool wurde zum entfernen markiert."
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Pool ist geschützt."
@@ -6497,10 +6507,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Portnummer muss zwischen %d und %d liegen."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Der Port auf welchem nach eingehenden Verbindungen gehorcht wird. Standard-"
-"Port ist %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Alternativer TCP Port (Standard: 3689)."
@@ -6566,6 +6574,9 @@ msgstr "\"Pre-Fail\"-Attribut (zumindest bei Samsung-Geräten genutzt)"
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Bevorzugt"
@@ -7453,6 +7464,9 @@ msgstr ""
 "Wählen Sie 'unformatiert' für unformatierte Festplatten und formatieren Sie "
 "diese mit dem"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Wählen Sie den Read-Balance Algorithmus"
 
@@ -8181,9 +8195,6 @@ msgstr "TCP Port zum Bind Server."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr "TFTP wurde deaktiviert"
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10210,10 +10221,8 @@ msgstr "Benutzen Sie diese speziellen Möglichkeiten nur zur Fehlersuche!"
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Benutze diese Option, um die Standardrechte für neu erstellte Dateien zu "
-"überschreiben (%s ist standard)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10280,10 +10289,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
-msgstr "Benutzerkonto is gesperrt"
-
 msgid "User account is marked for deletion"
+msgstr ""
+
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10944,3 +10956,50 @@ msgstr "bis"
 
 msgid "umount"
 msgstr "aushängen"
+
+#~ msgid "Add option"
+#~ msgstr "Einstellung hinzufügen"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Alternatives Konfigurationsverzeichnis (gewöhnlich leer)"
+
+#~ msgid "Edit option"
+#~ msgstr "Einstellung bearbeiten"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Der Port auf welchem nach eingehenden Verbindungen gehorcht wird. Standard-"
+#~ "Port ist %d."
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Benutze diese Option, um die Standardrechte für neu erstellte Dateien zu "
+#~ "überschreiben (%s ist standard)."
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Konfigurationsoptiuonen zur Weitergabe über rpc mittels 'Transmission-"
+#~ "remote' (normalerweise leer)"
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Pool wurde zum entfernen markiert."
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Änderungen wurden übernommen."
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "MiniDLNA wurde deaktiviert."
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Fuppes ia deaktiviert."
+
+#~ msgid "User account is locked"
+#~ msgstr "Benutzerkonto is gesperrt"
+
+#~ msgid "TFTP has been disabled."
+#~ msgstr "TFTP wurde deaktiviert"

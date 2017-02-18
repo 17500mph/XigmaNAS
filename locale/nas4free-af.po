@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:26+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 msgid " interfaces:"
@@ -473,6 +473,9 @@ msgstr "Voeg MIB by"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -568,9 +571,6 @@ msgstr "Voeg taak by"
 
 msgid "Add mount point"
 msgstr "Voeg 'n monteerpunt by"
-
-msgid "Add option"
-msgstr "Voeg keuse by"
 
 msgid "Add portal group"
 msgstr "Voeg 'n portaal groep by"
@@ -807,8 +807,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Alternatiewe instelling lêergids (gewoontlik leeg)."
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Altyd"
@@ -1474,9 +1474,6 @@ msgstr "Verander jou rekenaar se IP adres"
 
 msgid "Change the IP address of your server"
 msgstr "Verander die bediener se IP adres"
-
-msgid "Changes have been applied."
-msgstr "Veranderinge was toegepas"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -3120,6 +3117,9 @@ msgstr "Redigeer  MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3197,9 +3197,6 @@ msgstr "Redigeer werkstuk"
 
 msgid "Edit mount point"
 msgstr "Redigeer monteer punt"
-
-msgid "Edit option"
-msgstr "Reigeer opsie"
 
 msgid "Edit portal group"
 msgstr "Redigeer portaal groep"
@@ -3806,11 +3803,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Ekstra opsies bestaan vir ifconfig  (gewoonlik is dit leeg)"
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Ekstra opsies bestaan om rpc uit te laat deur transmission-remote  "
-"(gewoonlik is dit leeg) te gebruik"
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Ekstra opsies bestaan vir rsync (gewoonlik is dit leeg)"
@@ -3897,6 +3891,9 @@ msgstr "Gevaal."
 
 msgid "Failover"
 msgstr "Misluk rugsteun"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Fataal"
@@ -4089,9 +4086,6 @@ msgstr "Fuppes Media Bediener"
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Media Bediener Administrasie"
 
-msgid "Fuppes has been disabled."
-msgstr "Fuppes is buite werking gestel"
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4186,11 +4180,14 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
-msgstr "Groep is gesluit"
-
 msgid "Group is marked for deletion"
 msgstr "Groep is gemerk vir skrapping"
+
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
+msgstr ""
 
 msgid "Group numeric id."
 msgstr "Groep numeriese id."
@@ -5500,9 +5497,6 @@ msgstr "Vermiste parameter"
 msgid "Mixed"
 msgstr "Gemeng"
 
-msgid "MniDLNA has been disabled."
-msgstr "MiniDLNA is onaktief gestel"
-
 msgid "Mode"
 msgstr "Modus"
 
@@ -6068,6 +6062,12 @@ msgstr "Opsie is gesluit"
 msgid "Option is marked for deletion"
 msgstr "Opsie is gemerk om verwyder te word"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Opsionele gebruiker-vriendelike string van die teiken."
 
@@ -6449,8 +6449,8 @@ msgstr "Poel Weergawe"
 msgid "Pool cannot be changed."
 msgstr "Poel kan nie verander word ie"
 
-msgid "Pool is marked for removal"
-msgstr "Poel is gemerk om verwyder te word"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Poel is beskerm"
@@ -6479,9 +6479,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Poort nommers moet in die strek tussed %d en %d wees."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Poort om te luister vir inkomende eweknie verbindings. Verstek poor is %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Poort om op te luister. Standaarde iTunes poort is 3689."
@@ -6549,6 +6548,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Verkose"
@@ -7431,6 +7433,9 @@ msgstr ""
 "Kies die opsie 'Ongeformatteerd' vir ongeformatteerde skywe en formateer "
 "hulle met die keuse"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Kies 'n lees ballanseer algoritme."
 
@@ -8163,9 +8168,6 @@ msgstr "TCP poort om die bediener aan te bind."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10078,7 +10080,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
 
 msgid ""
@@ -10146,10 +10148,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10788,3 +10793,38 @@ msgstr "na"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid "Add option"
+#~ msgstr "Voeg keuse by"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Alternatiewe instelling lêergids (gewoontlik leeg)."
+
+#~ msgid "Edit option"
+#~ msgstr "Reigeer opsie"
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Ekstra opsies bestaan om rpc uit te laat deur transmission-remote  "
+#~ "(gewoonlik is dit leeg) te gebruik"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Poort om te luister vir inkomende eweknie verbindings. Verstek poor is %d."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Poel is gemerk om verwyder te word"
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Veranderinge was toegepas"
+
+#~ msgid "Group is locked"
+#~ msgstr "Groep is gesluit"
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Fuppes is buite werking gestel"
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "MiniDLNA is onaktief gestel"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2017-02-15 15:13+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -474,6 +474,9 @@ msgstr "Agregar MIB"
 msgid "Add NFS Share"
 msgstr "Añadir compartido NFS"
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Añadir Pool"
 
@@ -569,9 +572,6 @@ msgstr "Agregar trabajo"
 
 msgid "Add mount point"
 msgstr "Añadir punto de montaje"
-
-msgid "Add option"
-msgstr "Añadir opción"
 
 msgid "Add portal group"
 msgstr "Añadir grupo portal"
@@ -803,8 +803,8 @@ msgstr "Alternate Data Streams"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Puerto TCP alternativo (por defecto 873)."
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Directorio de configuración alternativo (normalmente vacío)."
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Siempre"
@@ -1484,9 +1484,6 @@ msgstr "Cambie la IP de su computadora"
 
 msgid "Change the IP address of your server"
 msgstr "Cambie la IP de su servidor"
-
-msgid "Changes have been applied."
-msgstr "Los cambios han sido aplicados"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Los cambios en esta opción tendrán efecto después de reiniciar."
@@ -3143,6 +3140,9 @@ msgstr "Editar MIB"
 msgid "Edit NFS Share"
 msgstr "Editar Compartido NFS"
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Editar Pool"
 
@@ -3220,9 +3220,6 @@ msgstr "Editar trabajo"
 
 msgid "Edit mount point"
 msgstr "Editar punto de montaje"
-
-msgid "Edit option"
-msgstr "Editar opción"
 
 msgid "Edit portal group"
 msgstr "Editar grupo de portal"
@@ -3838,11 +3835,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Opciones extras para ifconfig (normalmente vacío)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Opciones extras a pasar por RPC usando transmission-remote (normalmente "
-"vacio)"
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Opciones extra para rsync (normalmente vacío)"
@@ -3930,6 +3924,9 @@ msgstr "Fallo."
 
 msgid "Failover"
 msgstr "Failover"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Fatal"
@@ -4122,9 +4119,6 @@ msgstr "Fuppes DLNA"
 msgid "Fuppes Media Server Administration"
 msgstr "Administración del servidor de medios Fuppes"
 
-msgid "Fuppes has been disabled."
-msgstr "Fuppes ha sido deshabilitado."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4220,11 +4214,14 @@ msgstr "Ajustes del Grupo"
 msgid "Group Suffix"
 msgstr "Sufijo de grupo"
 
-msgid "Group is locked"
-msgstr "El grupo està bloqueado."
-
 msgid "Group is marked for deletion"
 msgstr "El grupo está marcado para eliminar."
+
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
+msgstr ""
 
 msgid "Group numeric id."
 msgstr "Id de grupo."
@@ -5559,9 +5556,6 @@ msgstr "Falta un parámetro"
 msgid "Mixed"
 msgstr "Mixto"
 
-msgid "MniDLNA has been disabled."
-msgstr "MniDLNA ha sido deshabilitado."
-
 msgid "Mode"
 msgstr "Modo"
 
@@ -6126,6 +6120,12 @@ msgstr "Opción bloqueada"
 msgid "Option is marked for deletion"
 msgstr "Opción marcada para borrado"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Cadena de el objetivo opcional amistoso al usuario."
 
@@ -6511,8 +6511,8 @@ msgstr "Versión del  Pool"
 msgid "Pool cannot be changed."
 msgstr "El Pool no puede ser cambiado."
 
-msgid "Pool is marked for removal"
-msgstr "El Pool ha sido marcado para eliminación"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "El Pool está protegido"
@@ -6541,10 +6541,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "El número de puerto debe encontrarse en el rango entre %d y %d."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Puerto para escuchar conexiones entrantes de Peers. El puerto predeterminado "
-"es %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Puerto de escucha. Por defecto el puerto de iTunes es 3689"
@@ -6612,6 +6610,9 @@ msgstr "Atributo de pre-fallo usado en discos SAMSUNG"
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Favoritos"
@@ -7509,6 +7510,9 @@ msgstr ""
 "Seleccionar opción 'sin formatear' para discos sin formato y luego "
 "formatearlo con"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Seleccionar algoritmo de lectura balance"
 
@@ -8244,9 +8248,6 @@ msgstr "Puerto TCP que enlazara al servidor"
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr "El servicio TFTP ha sido deshabilitado"
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10246,9 +10247,8 @@ msgstr "Use esto solo para debug!"
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Use esta opcion para anular los permisos por defecto (%s por defecto)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10316,11 +10316,14 @@ msgstr "Compartidos de Usuario"
 msgid "User Suffix"
 msgstr "Sufijo de usuario"
 
-msgid "User account is locked"
-msgstr "La cuenta de usuario está bloqueada"
-
 msgid "User account is marked for deletion"
 msgstr "La cuenta de usuario está marcada para eliminar"
+
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
+msgstr ""
 
 msgid "User numeric id."
 msgstr "Id. numérico de usuario"
@@ -10981,3 +10984,52 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
+
+#~ msgid "Add option"
+#~ msgstr "Añadir opción"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Directorio de configuración alternativo (normalmente vacío)."
+
+#~ msgid "Edit option"
+#~ msgstr "Editar opción"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Puerto para escuchar conexiones entrantes de Peers. El puerto predeterminado "
+#~ "es %d."
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Use esta opcion para anular los permisos por defecto (%s por defecto)."
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Opciones extras a pasar por RPC usando transmission-remote (normalmente "
+#~ "vacio)"
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "El Pool ha sido marcado para eliminación"
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "MniDLNA ha sido deshabilitado."
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Los cambios han sido aplicados"
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Fuppes ha sido deshabilitado."
+
+#~ msgid "Group is locked"
+#~ msgstr "El grupo està bloqueado."
+
+#~ msgid "User account is locked"
+#~ msgstr "La cuenta de usuario está bloqueada"
+
+#~ msgid "TFTP has been disabled."
+#~ msgstr "El servicio TFTP ha sido deshabilitado"

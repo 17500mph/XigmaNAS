@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-17 01:57+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
+"PO-Revision-Date: 2017-02-17 17:31+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:25+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -431,6 +431,9 @@ msgstr "添加MIB"
 msgid "Add NFS Share"
 msgstr "添加NFS共享"
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "添加池"
 
@@ -526,9 +529,6 @@ msgstr "添加任务"
 
 msgid "Add mount point"
 msgstr "添加挂载点"
-
-msgid "Add option"
-msgstr "添加选项"
 
 msgid "Add portal group"
 msgstr "添加门户组"
@@ -737,8 +737,8 @@ msgstr "备用数据流"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "备用TCP端口。 （默认值为873）。"
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "备用配置目录（通常是空的） 。"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "总是"
@@ -1364,9 +1364,6 @@ msgstr "更改你的电脑IP地址"
 
 msgid "Change the IP address of your server"
 msgstr "更改你的服务器IP地址"
-
-msgid "Changes have been applied."
-msgstr "已应用更改。"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "重新启动系统之后，更改的设置才会生效。"
@@ -2669,64 +2666,64 @@ msgid "Do you want to delete selected options?"
 msgstr ""
 
 msgid "Do you want to delete selected pools?"
-msgstr ""
+msgstr "要删除所选池吗？"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "要删除所选记录吗？"
 
 msgid "Do you want to delete selected resources?"
-msgstr ""
+msgstr "您要删除所选资源吗？"
 
 msgid "Do you want to delete selected routes?"
-msgstr ""
+msgstr "要删除所选路线吗？"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "是否要删除所选的rsync任务？"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "要删除所选的rsync模块吗？"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "要删除所选共享吗？"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "要删除所选快照吗？"
 
 msgid "Do you want to delete selected user accounts?"
-msgstr ""
+msgstr "45/5000 要删除所选的用户帐户吗？"
 
 msgid "Do you want to delete selected virtual devices?"
-msgstr ""
+msgstr "您要删除所选的虚拟设备吗？"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "要删除所选卷吗？"
 
 msgid "Do you want to delete this command?"
-msgstr ""
+msgstr "是否要删除此命令？"
 
 msgid "Do you want to disable selected commands?"
-msgstr ""
+msgstr "您要禁用所选命令吗？"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "您要禁用所选任务吗？"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "要禁用所选选项吗？"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "要禁用所选记录吗？"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "是否要禁用所选的rsync任务？"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "是否要禁用所选的rsync模块？"
 
 msgid "Do you want to enable selected commands?"
-msgstr ""
+msgstr "是否要启用所选命令？"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "您要启用所选任务吗？"
 
 msgid "Do you want to enable selected options?"
 msgstr ""
@@ -2906,6 +2903,9 @@ msgstr "编辑MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -2983,9 +2983,6 @@ msgstr "编辑任务"
 
 msgid "Edit mount point"
 msgstr "编辑挂载点"
-
-msgid "Edit option"
-msgstr "编辑选项"
 
 msgid "Edit portal group"
 msgstr "编辑门户组"
@@ -3555,9 +3552,8 @@ msgstr "用于/etc/ssh/sshd_config 中的额外选项（通常为空白）。注
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "ifconfig 的额外选项（通常为空白）。"
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
-msgstr "额外的选项来使用 transmission-remote 传递的RPC（通常为空白）。"
+msgid "Extra options to pass over rpc using transmission-remote."
+msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "rsync 的额外选项（通常为空白）。"
@@ -3642,6 +3638,9 @@ msgstr "失败"
 
 msgid "Failover"
 msgstr "故障转移"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "致命"
@@ -3830,9 +3829,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -3927,10 +3923,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5159,9 +5158,6 @@ msgstr ""
 msgid "Mixed"
 msgstr ""
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr "模式"
 
@@ -5699,6 +5695,12 @@ msgstr ""
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "自选易用的目标字符串。"
 
@@ -6066,7 +6068,7 @@ msgstr ""
 msgid "Pool cannot be changed."
 msgstr ""
 
-msgid "Pool is marked for removal"
+msgid "Pool is marked for deletion"
 msgstr ""
 
 msgid "Pool is protected"
@@ -6096,8 +6098,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
-msgstr "侦听接收对等连接的端口。默认端口是 %d。"
+msgid "Port to listen for incoming peer connections. (Default is %d)."
+msgstr ""
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "监听端口。iTunes的默认端口是3689 。"
@@ -6161,6 +6163,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "前置初始动作（PreInit）"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "首选"
@@ -7008,6 +7013,9 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -7692,9 +7700,6 @@ msgstr "绑定伺服器的TCP端口。"
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -9420,8 +9425,8 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
-msgstr "使用此选项来覆盖新创建的文件的默认权限模式（默认为%s）。"
+"files. (%s by default)."
+msgstr ""
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -9477,10 +9482,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10100,3 +10108,29 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
+
+#~ msgid "Add option"
+#~ msgstr "添加选项"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "备用配置目录（通常是空的） 。"
+
+#~ msgid "Edit option"
+#~ msgstr "编辑选项"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr "侦听接收对等连接的端口。默认端口是 %d。"
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr "使用此选项来覆盖新创建的文件的默认权限模式（默认为%s）。"
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr "额外的选项来使用 transmission-remote 传递的RPC（通常为空白）。"
+
+#~ msgid "Changes have been applied."
+#~ msgstr "已应用更改。"

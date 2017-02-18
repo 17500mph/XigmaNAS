@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-16 16:42+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
+"PO-Revision-Date: 2017-02-17 16:10+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -479,6 +479,9 @@ msgstr "Aggiungi MIB"
 msgid "Add NFS Share"
 msgstr "Aggiungi una condivisione NFS"
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Aggiungi pool"
 
@@ -574,9 +577,6 @@ msgstr "Aggiungere lavoro"
 
 msgid "Add mount point"
 msgstr "Aggiungi punto di mount"
-
-msgid "Add option"
-msgstr "Aggiungi opzione"
 
 msgid "Add portal group"
 msgstr "Aggiungi \"Portal group\""
@@ -794,6 +794,11 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
+"Anche noto come 'Volte in cui le testine vengono spostate dal disco' per gli "
+"HDD tradizionali.  I valori grezzi indicano il numero degli spegnimenti "
+"errati sulla vita di un SSD, dove spegnimenti errati indicano il togliere "
+"l'alimentazione senza dare come ultimo comando il STANDBY IMMEDIATE. Il "
+"valore normalizzato è 100"
 
 msgid "AltRoot"
 msgstr "Root alternativa"
@@ -804,8 +809,8 @@ msgstr "Alterna flussi di dati"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Alterna porta TCP. (Default 873)"
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Directory alternativa per la configurazione (normalmente non usato)"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Sempre"
@@ -1038,7 +1043,7 @@ msgid "Auto Snapshot"
 msgstr "Auto Snapshot"
 
 msgid "Auto Snapshot Settings"
-msgstr ""
+msgstr "Settaggio per l'auto snapshot"
 
 msgid "Auto page refresh."
 msgstr "Ricarica pagina automaticamente."
@@ -1109,10 +1114,10 @@ msgid "Ban List"
 msgstr "Lista utenti bloccati"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Regole per la lista di ban"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Settaggi per le regole delle liste di ban"
 
 msgid "Banner"
 msgstr "Banner"
@@ -1211,7 +1216,7 @@ msgstr ""
 "punto di mount per cartella %s!"
 
 msgid "Blank Time"
-msgstr ""
+msgstr "Tempo di attesa"
 
 msgid "Block Size"
 msgstr "Dimensione dei blocchi"
@@ -1476,9 +1481,6 @@ msgstr "Cambia l'indirizzo IP del tuo computer"
 msgid "Change the IP address of your server"
 msgstr "Cambia l'indirizzo IP del tuo server"
 
-msgid "Changes have been applied."
-msgstr "Le modifiche sono state applicate"
-
 msgid "Changes to this option will take effect after a reboot."
 msgstr "I cambiamenti a questa opzione avranno effetto dopo un riavvio."
 
@@ -1626,7 +1628,7 @@ msgid "Community"
 msgstr "Comunità"
 
 msgid "Compilations Directories"
-msgstr ""
+msgstr "Directory delle compilations"
 
 msgid "Compiled"
 msgstr "Compilato"
@@ -1781,7 +1783,7 @@ msgstr ""
 "è disabilitato."
 
 msgid "Conveyance Self-Test"
-msgstr ""
+msgstr "Autocontrollo 'Conveyance'"
 
 msgid "Core"
 msgstr "Core"
@@ -1993,7 +1995,7 @@ msgid "Current Password"
 msgstr "Password corrente"
 
 msgid "Current Version"
-msgstr ""
+msgstr "Versione Attuale"
 
 msgid "Current internal temperature."
 msgstr "Temperatura interna."
@@ -2008,7 +2010,7 @@ msgstr ""
 "password."
 
 msgid "Current password is incorrectly entered."
-msgstr ""
+msgstr "La password corrente è inserita in maniera errata"
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
@@ -2063,7 +2065,7 @@ msgid "DNS"
 msgstr "DNS"
 
 msgid "DNS Domain"
-msgstr ""
+msgstr "Dominio DNS"
 
 msgid "DNS Forwarder"
 msgstr ""
@@ -2087,13 +2089,13 @@ msgid "Danish"
 msgstr "Danese"
 
 msgid "Data Integrity"
-msgstr ""
+msgstr "Integrità dei dati"
 
 msgid "Data digest"
 msgstr "Digest dei dati"
 
 msgid "Database Directory"
-msgstr ""
+msgstr "Directory del database"
 
 msgid "Database directory"
 msgstr "Cartella Database"
@@ -3085,6 +3087,9 @@ msgstr "Modifica MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3162,9 +3167,6 @@ msgstr "Modifica il lavoro"
 
 msgid "Edit mount point"
 msgstr "Modifica il mount point"
-
-msgid "Edit option"
-msgstr "Modifica opzione"
 
 msgid "Edit portal group"
 msgstr "Modifica portal group"
@@ -3778,11 +3780,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Opzioni extra di ifconfig (normalmente vuoto)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Opzioni aggiuntive da passare tramite rpc utilizzando transmission-remote "
-"(normalmente vuoto)."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Opzioni extra di rsync (normalmente vuoto)."
@@ -3869,6 +3868,9 @@ msgstr "Non riuscito."
 
 msgid "Failover"
 msgstr "Failover"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Irrimediabile"
@@ -4061,9 +4063,6 @@ msgstr "Fuppes Media Server"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4158,10 +4157,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5455,9 +5457,6 @@ msgstr "Parametro mancante"
 msgid "Mixed"
 msgstr "Misto"
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr "Modo"
 
@@ -6010,6 +6009,12 @@ msgstr "L'opzione è bloccata"
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Un nome per identificare con più facilità il target (opzionale)"
 
@@ -6388,8 +6393,8 @@ msgstr "Versione del Pool"
 msgid "Pool cannot be changed."
 msgstr "Il pool non può essere cambiato"
 
-msgid "Pool is marked for removal"
-msgstr "Il Pool è selezionato per la rimozione"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Il Pool è protetto"
@@ -6418,10 +6423,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Porta di ascolto per le connessioni peer in ingresso. La porta predefinita è "
-"%d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Porta di ascolto. La porta predefinita per iTunes è 3689."
@@ -6487,6 +6490,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Preferito"
@@ -7350,6 +7356,9 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -8072,9 +8081,6 @@ msgstr "Porta TCP a cui collegare il server."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -9984,10 +9990,8 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Usa questa opzione per non tener conto dei permessi di default riguardanti i "
-"nuovi file creati (di default %s)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10055,10 +10059,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10711,3 +10718,38 @@ msgstr "verso"
 
 msgid "umount"
 msgstr "smonta"
+
+#~ msgid "Add option"
+#~ msgstr "Aggiungi opzione"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Directory alternativa per la configurazione (normalmente non usato)"
+
+#~ msgid "Edit option"
+#~ msgstr "Modifica opzione"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Porta di ascolto per le connessioni peer in ingresso. La porta predefinita è "
+#~ "%d."
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Usa questa opzione per non tener conto dei permessi di default riguardanti i "
+#~ "nuovi file creati (di default %s)."
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Opzioni aggiuntive da passare tramite rpc utilizzando transmission-remote "
+#~ "(normalmente vuoto)."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Il Pool è selezionato per la rimozione"
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Le modifiche sono state applicate"

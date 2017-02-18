@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
-"PO-Revision-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
+"PO-Revision-Date: 2017-02-18 21:20+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:25+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: ca_ES\n"
 
@@ -479,6 +479,9 @@ msgstr "Afegir MIB"
 msgid "Add NFS Share"
 msgstr "Afegir recurs NFS"
 
+msgid "Add Option"
+msgstr "Afegir Opció"
+
 msgid "Add Pool"
 msgstr "Afegir piscina"
 
@@ -574,9 +577,6 @@ msgstr "Afegir treball"
 
 msgid "Add mount point"
 msgstr "Afegir punt de muntatge"
-
-msgid "Add option"
-msgstr "Afegir opció"
 
 msgid "Add portal group"
 msgstr "Afegir grup de portal"
@@ -812,8 +812,8 @@ msgstr "Canals de dades adicionals"
 msgid "Alternate TCP port. (Default is 873)."
 msgstr "Port TCP alternatiu. (Per defecte és 873)."
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Directori de configuraciò alternatiu (normalment buid)."
+msgid "Alternative configuration directory."
+msgstr "Directori de configuració alternativa."
 
 msgid "Always"
 msgstr "Sempre"
@@ -1488,9 +1488,6 @@ msgstr "Canviar l'adreça IP del ordinador"
 
 msgid "Change the IP address of your server"
 msgstr "Canviar l'adreça IP del servidor"
-
-msgid "Changes have been applied."
-msgstr "Els canvis s'han aplicat."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Canvis d'aquesta opció seran efectius després de un reinicii."
@@ -3154,6 +3151,9 @@ msgstr "Editar MIB"
 msgid "Edit NFS Share"
 msgstr "Editar recursos NFS"
 
+msgid "Edit Option"
+msgstr "Editar opció"
+
 msgid "Edit Pool"
 msgstr "Edita piscina"
 
@@ -3231,9 +3231,6 @@ msgstr "Editar treball"
 
 msgid "Edit mount point"
 msgstr "Editar punt de muntatge"
-
-msgid "Edit option"
-msgstr "Editar opció"
 
 msgid "Edit portal group"
 msgstr "Editar grup de portal"
@@ -3854,11 +3851,10 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Opcions addicionals per ifconfig (generalment buit)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Opcions addicionals per passar a través de RPC mitjançant transmissió remota "
-"(normalment buida)."
+"Opcions addicionals per passar a través de RPC que utilitzen la transmissió "
+"a distància."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Opcions addicionals per rsync (generalment buit)."
@@ -3946,6 +3942,9 @@ msgstr "Ha fallat."
 
 msgid "Failover"
 msgstr "Commutació per error"
+
+msgid "Fast"
+msgstr "Ràpid"
 
 msgid "Fatal"
 msgstr "Fatal"
@@ -4142,9 +4141,6 @@ msgstr "Servidor de mitjans Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr "Administració servidor de mitjans Fuppes"
 
-msgid "Fuppes has been disabled."
-msgstr "Fuppes s'ha desactivat."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4241,11 +4237,14 @@ msgstr "Configuració del grup"
 msgid "Group Suffix"
 msgstr "Sufix de grup"
 
-msgid "Group is locked"
-msgstr "Grup està bloquejat"
-
 msgid "Group is marked for deletion"
 msgstr "Grup està marcat per ser esborrat"
+
+msgid "Group is protected"
+msgstr "Grup està protegit"
+
+msgid "Group is unlocked"
+msgstr "Grup està desbloquejat"
 
 msgid "Group numeric id."
 msgstr "Identificació númerica del grup"
@@ -5580,9 +5579,6 @@ msgstr "Paràmetre que falta"
 msgid "Mixed"
 msgstr "Barrejat"
 
-msgid "MniDLNA has been disabled."
-msgstr "MiniDLNA s'ha deshabilitat."
-
 msgid "Mode"
 msgstr "Mode"
 
@@ -6153,6 +6149,12 @@ msgstr "Opció està bloquejat"
 msgid "Option is marked for deletion"
 msgstr "Opció està marcat per ser esborrat"
 
+msgid "Option is protected"
+msgstr "Opció protegida"
+
+msgid "Option is unlocked"
+msgstr "Opció desbloquejada"
+
 msgid "Optional user-friendly string of the target."
 msgstr "Cadena de fàcil ús opcional de l'objectiu."
 
@@ -6537,8 +6539,8 @@ msgstr "Versió piscina"
 msgid "Pool cannot be changed."
 msgstr "Piscina no es pot canviar."
 
-msgid "Pool is marked for removal"
-msgstr "Piscina està marcat per ser esborrat"
+msgid "Pool is marked for deletion"
+msgstr "Piscina està marcada per ser esborrada"
 
 msgid "Pool is protected"
 msgstr "Piscina està protegida"
@@ -6567,10 +6569,9 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "El número de port ha d'estar en el rang entre %d i %d."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Port d'escolta per a les connexions entre parells entrants. El port per "
-"defecte és%d."
+"Port per escoltar les connexions entrants de parells. (Per defecte és %d)."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Port d'escolta. Per defecte el port iTunes és 3689."
@@ -6639,6 +6640,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr "Preassignació"
 
 msgid "Preferred"
 msgstr "Preferit"
@@ -7533,6 +7537,10 @@ msgstr ""
 "Seleccionar l'opció \"sense format\" per als discos sense format i donar-los "
 "format amb el"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+"Seleccioneu el mode de pre-assignació d'arxius. (Per defecte és ràpid)."
+
 msgid "Select read balance algorithm."
 msgstr "Seleccionar algoritme d'equilibri de lectura."
 
@@ -8276,9 +8284,6 @@ msgstr "Port TCP per enllaçar amb el servidor per."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr "TFTP està des-habilitat."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10293,10 +10298,10 @@ msgstr "Utilitzeu aquests especials mesures per a la depuració només!"
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Utilitzeu aquesta opció per anul·lar les maneres de permís per defecte per "
-"als arxius acabats de crear (%s per defecte)."
+"Utilitzeu aquesta opció per anul·lar els modes de permís per defecte per als "
+"arxius acabats de crear. (%s per defecte)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10364,11 +10369,14 @@ msgstr "Recursos d'usuari"
 msgid "User Suffix"
 msgstr "Sufix d'usuari"
 
-msgid "User account is locked"
-msgstr "El compte del usuari està bloquejat"
-
 msgid "User account is marked for deletion"
 msgstr "El compte del usuari està marcat per ser esborrat"
+
+msgid "User account is protected"
+msgstr "El compte d'usuari està protegit"
+
+msgid "User account is unlocked"
+msgstr "El compte d'usuari està desbloquejat"
 
 msgid "User numeric id."
 msgstr "Identificació nombre del usuari"
@@ -11031,3 +11039,53 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid "Add option"
+#~ msgstr "Afegir opció"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Directori de configuraciò alternatiu (normalment buid)."
+
+#~ msgid "Edit option"
+#~ msgstr "Editar opció"
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Opcions addicionals per passar a través de RPC mitjançant transmissió remota "
+#~ "(normalment buida)."
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Port d'escolta per a les connexions entre parells entrants. El port per "
+#~ "defecte és%d."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Piscina està marcat per ser esborrat"
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Utilitzeu aquesta opció per anul·lar les maneres de permís per defecte per "
+#~ "als arxius acabats de crear (%s per defecte)."
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "MiniDLNA s'ha deshabilitat."
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Els canvis s'han aplicat."
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Fuppes s'ha desactivat."
+
+#~ msgid "Group is locked"
+#~ msgstr "Grup està bloquejat"
+
+#~ msgid "User account is locked"
+#~ msgstr "El compte del usuari està bloquejat"
+
+#~ msgid "TFTP has been disabled."
+#~ msgstr "TFTP està des-habilitat."
