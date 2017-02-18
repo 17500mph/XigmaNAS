@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -438,6 +438,9 @@ msgstr "Tilføj MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -533,9 +536,6 @@ msgstr "Tilføj opgave"
 
 msgid "Add mount point"
 msgstr "Tilføj monterings punkt"
-
-msgid "Add option"
-msgstr "Tilføj indstilling"
 
 msgid "Add portal group"
 msgstr "Tilføj Portal gruppe"
@@ -748,8 +748,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Alternativ konfigurations mappe (som regel tom)."
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr ""
@@ -1382,9 +1382,6 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
-msgstr ""
-
-msgid "Changes have been applied."
 msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
@@ -2931,6 +2928,9 @@ msgstr "Rediger MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3008,9 +3008,6 @@ msgstr "Rediger opgave"
 
 msgid "Edit mount point"
 msgstr "Rediger monterings punkt"
-
-msgid "Edit option"
-msgstr "Rediger indstillinger"
 
 msgid "Edit portal group"
 msgstr "Reduger Portal gruppe"
@@ -3597,8 +3594,7 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Ekstra indstillinger til ifconf (som regel tom)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
@@ -3686,6 +3682,9 @@ msgstr "Fejlede"
 
 msgid "Failover"
 msgstr "Failover"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr ""
@@ -3877,9 +3876,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -3974,10 +3970,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5237,9 +5236,6 @@ msgstr ""
 msgid "Mixed"
 msgstr ""
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr "Tilstand"
 
@@ -5793,6 +5789,12 @@ msgstr ""
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Valgfri brugervenlig streng om målet."
 
@@ -6166,7 +6168,7 @@ msgstr ""
 msgid "Pool cannot be changed."
 msgstr ""
 
-msgid "Pool is marked for removal"
+msgid "Pool is marked for deletion"
 msgstr ""
 
 msgid "Pool is protected"
@@ -6196,10 +6198,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Port der skal lyttes til for indgående peer forbindelser. Standard porten er "
-"%d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Port der skal lyttes til. Standard iTunes porten er 3689."
@@ -6265,6 +6265,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInit"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Foretrukken"
@@ -7126,6 +7129,9 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -7825,9 +7831,6 @@ msgstr "TCP port serveren skal bindes til."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -9676,10 +9679,8 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Brug denne indstillinger til at overskrive standard rettighederne for nye "
-"oprettede filer (%s som standard)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -9746,10 +9747,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10377,3 +10381,26 @@ msgstr "til"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Add option"
+#~ msgstr "Tilføj indstilling"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Alternativ konfigurations mappe (som regel tom)."
+
+#~ msgid "Edit option"
+#~ msgstr "Rediger indstillinger"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Port der skal lyttes til for indgående peer forbindelser. Standard porten er "
+#~ "%d."
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Brug denne indstillinger til at overskrive standard rettighederne for nye "
+#~ "oprettede filer (%s som standard)."

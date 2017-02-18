@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2017-02-12 20:32+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -477,6 +477,9 @@ msgstr "Přidat MIB"
 msgid "Add NFS Share"
 msgstr "Přidat NFS sdílení"
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Přidat fond"
 
@@ -572,9 +575,6 @@ msgstr "Přidat úlohu"
 
 msgid "Add mount point"
 msgstr "Přidat přípojný (mount) bod"
-
-msgid "Add option"
-msgstr "Přidat předvolbu"
 
 msgid "Add portal group"
 msgstr "Přidat skupinu portálů"
@@ -811,8 +811,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Alternativní složka s nastaveními (obvykle nevyplněno)"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Vždy"
@@ -1471,9 +1471,6 @@ msgstr "Změňte IP adresu počítače, ze kterého přistupujete"
 
 msgid "Change the IP address of your server"
 msgstr "Změňte IP adresu tohoto serveru"
-
-msgid "Changes have been applied."
-msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Změny této předvolby se projeví až po restartu."
@@ -3103,6 +3100,9 @@ msgstr "Upravit MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3180,9 +3180,6 @@ msgstr "Upravit úlohu"
 
 msgid "Edit mount point"
 msgstr "Upravit přípojný bod"
-
-msgid "Edit option"
-msgstr "Upravit předvolbu"
 
 msgid "Edit portal group"
 msgstr "Upravit skupinu portálů"
@@ -3785,11 +3782,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Další předvolby pro ifconfig (obvykle se nevyplňuje)."
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Další předvolby pro předání prostřednictvím mechanizmu rpc pomocí funkce "
-"transmission-remote (obvykle se nevyplňuje)."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Další předvolby pro Rsync (obvykle se nevyplňuje)."
@@ -3876,6 +3870,9 @@ msgstr "Nezdařilo se."
 
 msgid "Failover"
 msgstr "Převzetí služby v případě výpadku"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Fatální"
@@ -4070,9 +4067,6 @@ msgstr "Multimediální server Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -4169,10 +4163,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5508,9 +5505,6 @@ msgstr "Chybějící parametr"
 msgid "Mixed"
 msgstr "Smíšené"
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr "Režim"
 
@@ -6077,6 +6071,12 @@ msgstr "Předvolba je uzamčena"
 msgid "Option is marked for deletion"
 msgstr "Předvolba je označena k vymazání"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Nepoviný, uživateli srozumitelný název cíle."
 
@@ -6454,8 +6454,8 @@ msgstr "Verze fondu úložišť"
 msgid "Pool cannot be changed."
 msgstr "Fond úložišť nemůže být změněn."
 
-msgid "Pool is marked for removal"
-msgstr "Fond úložišť je označen k odebrání"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Fond úložišť je chráněn"
@@ -6484,9 +6484,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
-"Port na kterém očekávat příchozí spojení z protějšku. Výchozím portem je %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr ""
@@ -6557,6 +6556,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "Před inicializací"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Upřednostňováno"
@@ -7432,6 +7434,9 @@ msgstr ""
 "V případě předem nepřipravených disků vyberte možnost „nenaformátovaný“ a "
 "připravte je tak pomocí"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Vyberte vyvažovací algoritmus pro čtení."
 
@@ -8147,9 +8152,6 @@ msgstr "TCP port na který server navázat."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10123,10 +10125,8 @@ msgstr "Tyto zvláštní akce slouží pouze pro účely ladění!"
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Touto předvolbou je možné změnit výchozí přístupová práva na nově "
-"vytvářených souborech (výchozí je %s)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10193,10 +10193,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10854,3 +10857,34 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Alternativní složka s nastaveními (obvykle nevyplněno)"
+
+#~ msgid "Edit option"
+#~ msgstr "Upravit předvolbu"
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Další předvolby pro předání prostřednictvím mechanizmu rpc pomocí funkce "
+#~ "transmission-remote (obvykle se nevyplňuje)."
+
+#~ msgid "Add option"
+#~ msgstr "Přidat předvolbu"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr ""
+#~ "Port na kterém očekávat příchozí spojení z protějšku. Výchozím portem je %d."
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Touto předvolbou je možné změnit výchozí přístupová práva na nově "
+#~ "vytvářených souborech (výchozí je %s)."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Fond úložišť je označen k odebrání"

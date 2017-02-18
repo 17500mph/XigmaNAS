@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2017-01-26 17:29+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:02+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:25+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -464,6 +464,9 @@ msgstr "Додати MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -559,9 +562,6 @@ msgstr "Додати завдання"
 
 msgid "Add mount point"
 msgstr "Додати точку монтування"
-
-msgid "Add option"
-msgstr "Додати опцію"
 
 msgid "Add portal group"
 msgstr "Додати групу 'portal'"
@@ -794,8 +794,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "Альтернативна директорія для конфігурації (зазвичай не заповнюють)"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr "Завжди"
@@ -1453,9 +1453,6 @@ msgstr "Змінити IP адресу вашого комп'ютера."
 
 msgid "Change the IP address of your server"
 msgstr "Змінити IP адресу вашого сервера."
-
-msgid "Changes have been applied."
-msgstr "Зміни були застосовані."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Зміна цього налаштування набуде чинності після перезавантаження."
@@ -3105,6 +3102,9 @@ msgstr "Редагувати MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -3182,9 +3182,6 @@ msgstr "Редагувати завдання"
 
 msgid "Edit mount point"
 msgstr "Редагувати точку монтування"
-
-msgid "Edit option"
-msgstr "Редагувати налаштування"
 
 msgid "Edit portal group"
 msgstr "Редагувати групу порталів"
@@ -3787,11 +3784,8 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "Додаткові опції для ifconfig (зазвичай не заповнюють)"
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
-"Додаткові опції для передачі по RPC для transmission-remote (зазвичай не "
-"заповнюють)."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Додаткові опції rsync (зазвичай не заповнюють)."
@@ -3878,6 +3872,9 @@ msgstr "Помилка."
 
 msgid "Failover"
 msgstr "Перехоплення"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "Критична помилка"
@@ -4072,9 +4069,6 @@ msgstr "Медіа сервер Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr "Адміністрування медіасерверу Fuppes"
 
-msgid "Fuppes has been disabled."
-msgstr "Fuppes був вимкнений"
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4169,11 +4163,14 @@ msgstr "Налаштування групи"
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
-msgstr "Група заблокована"
-
 msgid "Group is marked for deletion"
 msgstr "Група маркована для видалення"
+
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
+msgstr ""
 
 msgid "Group numeric id."
 msgstr "Цифровий ідентифікатор групи."
@@ -5489,9 +5486,6 @@ msgstr "Відсутній параметр"
 msgid "Mixed"
 msgstr "Змішаний"
 
-msgid "MniDLNA has been disabled."
-msgstr "MiniDLNA був вимкнений"
-
 msgid "Mode"
 msgstr "Режим"
 
@@ -6059,6 +6053,12 @@ msgstr "Опція заблокована"
 msgid "Option is marked for deletion"
 msgstr "Опція відмічена для видалення"
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Не обв'язковий зручний для сприйняття опис цілі."
 
@@ -6436,8 +6436,8 @@ msgstr "Версія пулу"
 msgid "Pool cannot be changed."
 msgstr "Пул не може бути змінений."
 
-msgid "Pool is marked for removal"
-msgstr "Пул відмічений для видалення"
+msgid "Pool is marked for deletion"
+msgstr ""
 
 msgid "Pool is protected"
 msgstr "Пул захищений"
@@ -6466,8 +6466,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Номер порту повинен бути у діапазоні між %d та %d."
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
-msgstr "Порт для прослуховуввання вхідних з'єднань. За замовчуванням %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
+msgstr ""
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Вхідний порт. За замовчуванням порт для iTunes 3689."
@@ -6533,6 +6533,9 @@ msgstr "Атрибут Pre-Fail' використовується щонайме
 
 msgid "PreInit"
 msgstr "Попередня ініціалізація"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Бажаний"
@@ -7415,6 +7418,9 @@ msgstr ""
 "Виберіть варіант \"Неформатований\" для неформатованих дисків і "
 "відформатуйте їх за допомогою"
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr "Виберіть алгоритм балансування читання."
 
@@ -8146,9 +8152,6 @@ msgstr "TCP порт на якому працюватиме сервер."
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -10125,10 +10128,8 @@ msgstr "Використовуйте ці спеціальні дії тільк
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
+"files. (%s by default)."
 msgstr ""
-"Використовуйте цей параметр, щоб перевизначити режими дозволів за "
-"замовчуванням для новостворюваних файлів (%s за замовчуванням)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10197,11 +10198,14 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
-msgstr "Обліковий запис користувача заблокований"
-
 msgid "User account is marked for deletion"
 msgstr "Облікові записи користувачів марковані для видалення"
+
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
+msgstr ""
 
 msgid "User numeric id."
 msgstr "Ідентифікаційний номер користувача"
@@ -10856,3 +10860,48 @@ msgstr "до"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Add option"
+#~ msgstr "Додати опцію"
+
+#~ msgid "Edit option"
+#~ msgstr "Редагувати налаштування"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr "Порт для прослуховуввання вхідних з'єднань. За замовчуванням %d."
+
+#~ msgid "Pool is marked for removal"
+#~ msgstr "Пул відмічений для видалення"
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr ""
+#~ "Використовуйте цей параметр, щоб перевизначити режими дозволів за "
+#~ "замовчуванням для новостворюваних файлів (%s за замовчуванням)."
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "Альтернативна директорія для конфігурації (зазвичай не заповнюють)"
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr ""
+#~ "Додаткові опції для передачі по RPC для transmission-remote (зазвичай не "
+#~ "заповнюють)."
+
+#~ msgid "Changes have been applied."
+#~ msgstr "Зміни були застосовані."
+
+#~ msgid "MniDLNA has been disabled."
+#~ msgstr "MiniDLNA був вимкнений"
+
+#~ msgid "Group is locked"
+#~ msgstr "Група заблокована"
+
+#~ msgid "Fuppes has been disabled."
+#~ msgstr "Fuppes був вимкнений"
+
+#~ msgid "User account is locked"
+#~ msgstr "Обліковий запис користувача заблокований"

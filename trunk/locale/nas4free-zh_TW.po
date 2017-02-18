@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-17 04:01+0000\n"
+"X-Launchpad-Export-Date: 2017-02-18 21:25+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -426,6 +426,9 @@ msgstr "新增 MIB"
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -521,9 +524,6 @@ msgstr "新增工作"
 
 msgid "Add mount point"
 msgstr "新增掛載點"
-
-msgid "Add option"
-msgstr "新增選項"
 
 msgid "Add portal group"
 msgstr "新增門戶組"
@@ -729,8 +729,8 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
-msgstr "另外的組態目錄(通常為空白)。"
+msgid "Alternative configuration directory."
+msgstr ""
 
 msgid "Always"
 msgstr ""
@@ -1355,9 +1355,6 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
-msgstr ""
-
-msgid "Changes have been applied."
 msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
@@ -2879,6 +2876,9 @@ msgstr "編輯 MIB"
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -2956,9 +2956,6 @@ msgstr "編輯任務"
 
 msgid "Edit mount point"
 msgstr "編輯掛載點"
-
-msgid "Edit option"
-msgstr "編輯選項"
 
 msgid "Edit portal group"
 msgstr "編輯門戶組"
@@ -3528,9 +3525,8 @@ msgstr "用於 /etc/ssh/sshd_config 的額外選項(通常為空白)。注意，
 msgid "Extra options to ifconfig (usually empty)."
 msgstr "ifconfig 的額外選項(通常為空白)。"
 
-msgid ""
-"Extra options to pass over rpc using transmission-remote (usually empty)."
-msgstr "額外的選項來使用transmission-remote 傳遞 RPC（通常為空白）。"
+msgid "Extra options to pass over rpc using transmission-remote."
+msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "rsync 的額外選項(通常為空白)。"
@@ -3615,6 +3611,9 @@ msgstr "失敗"
 
 msgid "Failover"
 msgstr "故障轉移"
+
+msgid "Fast"
+msgstr ""
 
 msgid "Fatal"
 msgstr "致命"
@@ -3803,9 +3802,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -3900,10 +3896,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -5132,9 +5131,6 @@ msgstr ""
 msgid "Mixed"
 msgstr ""
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr "模式"
 
@@ -5672,6 +5668,12 @@ msgstr ""
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "自選易用的目標字符串。"
 
@@ -6039,7 +6041,7 @@ msgstr ""
 msgid "Pool cannot be changed."
 msgstr ""
 
-msgid "Pool is marked for removal"
+msgid "Pool is marked for deletion"
 msgstr ""
 
 msgid "Pool is protected"
@@ -6069,8 +6071,8 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
-msgstr "用來偵聽接收對等連接的端口。默認端口是 %d。"
+msgid "Port to listen for incoming peer connections. (Default is %d)."
+msgstr ""
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "用來偵聽的端口。默認 iTunes 端口是 3689。"
@@ -6134,6 +6136,9 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "前置初始動作（PreInit）"
+
+msgid "Preallocation"
+msgstr ""
 
 msgid "Preferred"
 msgstr "首選"
@@ -6981,6 +6986,9 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -7665,9 +7673,6 @@ msgstr "綁定伺服器的TCP端口。"
 
 msgid "TFTP"
 msgstr "TFTP"
-
-msgid "TFTP has been disabled."
-msgstr ""
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -9393,8 +9398,8 @@ msgstr ""
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
-"files (%s by default)."
-msgstr "使用此選項來覆蓋新創建的檔案的默認權限模式（默認為%s）。"
+"files. (%s by default)."
+msgstr ""
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -9450,10 +9455,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
@@ -10073,3 +10081,26 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸載"
+
+#~ msgid "Edit option"
+#~ msgstr "編輯選項"
+
+#~ msgid "Add option"
+#~ msgstr "新增選項"
+
+#, php-format
+#~ msgid "Port to listen for incoming peer connections. Default port is %d."
+#~ msgstr "用來偵聽接收對等連接的端口。默認端口是 %d。"
+
+#, php-format
+#~ msgid ""
+#~ "Use this option to override the default permission modes for newly created "
+#~ "files (%s by default)."
+#~ msgstr "使用此選項來覆蓋新創建的檔案的默認權限模式（默認為%s）。"
+
+#~ msgid ""
+#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
+#~ msgstr "額外的選項來使用transmission-remote 傳遞 RPC（通常為空白）。"
+
+#~ msgid "Alternative configuration directory (usually empty)."
+#~ msgstr "另外的組態目錄(通常為空白)。"
