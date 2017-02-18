@@ -1205,6 +1205,13 @@ function config_upgrade() {
 		$config['version'] = "2.8";
 	}
 
+	/* Convert 2.8 -> 2.9 */
+	if ($config['version'] === "2.8") {
+		$config['bittorrent']['preallocation'] = "1";
+
+		$config['version'] = "2.9";
+	}
+
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
 
