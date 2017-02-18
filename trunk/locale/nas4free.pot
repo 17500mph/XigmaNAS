@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-02-14 23:13+0000\n"
+"POT-Creation-Date: 2017-02-18 21:02+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -380,6 +380,9 @@ msgstr ""
 msgid "Add NFS Share"
 msgstr ""
 
+msgid "Add Option"
+msgstr ""
+
 msgid "Add Pool"
 msgstr ""
 
@@ -474,9 +477,6 @@ msgid "Add job"
 msgstr ""
 
 msgid "Add mount point"
-msgstr ""
-
-msgid "Add option"
 msgstr ""
 
 msgid "Add portal group"
@@ -663,7 +663,7 @@ msgstr ""
 msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
-msgid "Alternative configuration directory (usually empty)."
+msgid "Alternative configuration directory."
 msgstr ""
 
 msgid "Always"
@@ -1248,9 +1248,6 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
-msgstr ""
-
-msgid "Changes have been applied."
 msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
@@ -2661,6 +2658,9 @@ msgstr ""
 msgid "Edit NFS Share"
 msgstr ""
 
+msgid "Edit Option"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr ""
 
@@ -2737,9 +2737,6 @@ msgid "Edit job"
 msgstr ""
 
 msgid "Edit mount point"
-msgstr ""
-
-msgid "Edit option"
 msgstr ""
 
 msgid "Edit portal group"
@@ -3266,7 +3263,7 @@ msgstr ""
 msgid "Extra options to ifconfig (usually empty)."
 msgstr ""
 
-msgid "Extra options to pass over rpc using transmission-remote (usually empty)."
+msgid "Extra options to pass over rpc using transmission-remote."
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
@@ -3349,6 +3346,9 @@ msgid "Failed."
 msgstr ""
 
 msgid "Failover"
+msgstr ""
+
+msgid "Fast"
 msgstr ""
 
 msgid "Fatal"
@@ -3536,9 +3536,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes has been disabled."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -3633,10 +3630,13 @@ msgstr ""
 msgid "Group Suffix"
 msgstr ""
 
-msgid "Group is locked"
+msgid "Group is marked for deletion"
 msgstr ""
 
-msgid "Group is marked for deletion"
+msgid "Group is protected"
+msgstr ""
+
+msgid "Group is unlocked"
 msgstr ""
 
 msgid "Group numeric id."
@@ -4771,9 +4771,6 @@ msgstr ""
 msgid "Mixed"
 msgstr ""
 
-msgid "MniDLNA has been disabled."
-msgstr ""
-
 msgid "Mode"
 msgstr ""
 
@@ -5285,6 +5282,12 @@ msgstr ""
 msgid "Option is marked for deletion"
 msgstr ""
 
+msgid "Option is protected"
+msgstr ""
+
+msgid "Option is unlocked"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr ""
 
@@ -5637,7 +5640,7 @@ msgstr ""
 msgid "Pool cannot be changed."
 msgstr ""
 
-msgid "Pool is marked for removal"
+msgid "Pool is marked for deletion"
 msgstr ""
 
 msgid "Pool is protected"
@@ -5667,7 +5670,7 @@ msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
 #, php-format
-msgid "Port to listen for incoming peer connections. Default port is %d."
+msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
 
 msgid "Port to listen on. Default iTunes port is 3689."
@@ -5727,6 +5730,9 @@ msgid "Pre-Fail' Attribute used at least in Samsung devices."
 msgstr ""
 
 msgid "PreInit"
+msgstr ""
+
+msgid "Preallocation"
 msgstr ""
 
 msgid "Preferred"
@@ -6540,6 +6546,9 @@ msgstr ""
 msgid "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
+msgid "Select pre-allocation mode for files. (Default is Fast)."
+msgstr ""
+
 msgid "Select read balance algorithm."
 msgstr ""
 
@@ -7176,9 +7185,6 @@ msgid "TCP port to bind the server to."
 msgstr ""
 
 msgid "TFTP"
-msgstr ""
-
-msgid "TFTP has been disabled."
 msgstr ""
 
 msgid "TKIP"
@@ -8634,7 +8640,7 @@ msgid "Use these specials actions for debugging only!"
 msgstr ""
 
 #, php-format
-msgid "Use this option to override the default permission modes for newly created files (%s by default)."
+msgid "Use this option to override the default permission modes for newly created files. (%s by default)."
 msgstr ""
 
 msgid "Use this option to override the directory creation mask (022 by default)."
@@ -8682,10 +8688,13 @@ msgstr ""
 msgid "User Suffix"
 msgstr ""
 
-msgid "User account is locked"
+msgid "User account is marked for deletion"
 msgstr ""
 
-msgid "User account is marked for deletion"
+msgid "User account is protected"
+msgstr ""
+
+msgid "User account is unlocked"
 msgstr ""
 
 msgid "User numeric id."
