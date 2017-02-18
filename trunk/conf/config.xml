@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- NAS4Free default system configuration -->
 <nas4free>
-	<version>2.8</version>
+	<version>2.9</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>nas4free</hostname>
@@ -1218,6 +1218,7 @@
 		<password>nas4free</password>
 		<pex/>
 		<dht/>
+		<preallocation>1</preallocation>
 		<encryption>1</encryption>
 		<watchdir></watchdir>
 		<umask></umask>

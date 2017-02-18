@@ -51,6 +51,7 @@ $pconfig['uplimit'] = !empty($config['bittorrent']['uplimit']) ? $config['bittor
 $pconfig['downlimit'] = !empty($config['bittorrent']['downlimit']) ? $config['bittorrent']['downlimit'] : "";
 $pconfig['pex'] = isset($config['bittorrent']['pex']);
 $pconfig['dht'] = isset($config['bittorrent']['dht']);
+$pconfig['preallocation'] = $config['bittorrent']['preallocation'];
 $pconfig['encryption'] = $config['bittorrent']['encryption'];
 $pconfig['watchdir'] = $config['bittorrent']['watchdir'];
 $pconfig['incompletedir'] = !empty($config['bittorrent']['incompletedir']) ? $config['bittorrent']['incompletedir'] : "";
@@ -156,6 +157,7 @@ if ($_POST) {
 		$config['bittorrent']['downlimit'] = $_POST['downlimit'];
 		$config['bittorrent']['pex'] = isset($_POST['pex']) ? true : false;
 		$config['bittorrent']['dht'] = isset($_POST['dht']) ? true : false;
+		$config['bittorrent']['preallocation'] = $_POST['preallocation'];
 		$config['bittorrent']['encryption'] = $_POST['encryption'];
 		$config['bittorrent']['watchdir'] = strlen($_POST['watchdir']) > 1 ? rtrim($_POST['watchdir'],'/') : $_POST['watchdir'];
 		$config['bittorrent']['incompletedir'] = strlen($_POST['incompletedir']) > 1 ? rtrim($_POST['incompletedir'],'/') : $_POST['incompletedir'];
@@ -196,6 +198,7 @@ function enable_change(enable_change) {
 	document.iform.downlimit.disabled = endis;
 	document.iform.pex.disabled = endis;
 	document.iform.dht.disabled = endis;
+	document.iform.preallocation.disabled = endis;
 	document.iform.encryption.disabled = endis;
 	document.iform.watchdir.disabled = endis;
 	document.iform.watchdirbrowsebtn.disabled = endis;
@@ -229,24 +232,25 @@ function authrequired_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline_checkbox('enable',gtext('BitTorrent'),!empty($pconfig['enable']) ? true : false,gtext('Enable'),'enable_change(false)');
-					html_inputbox('peerport',gtext('Peer Port'),$pconfig['peerport'],sprintf(gtext("Port to listen for incoming peer connections. Default port is %d."),51413),true,5);
+					html_inputbox('peerport',gtext('Peer Port'),$pconfig['peerport'],sprintf(gtext("Port to listen for incoming peer connections. (Default is %d)."),51413),true,5);
 					html_filechooser("downloaddir",gtext("Download Directory"),$pconfig['downloaddir'],gtext("Where to save downloaded data."),$g['media_path'],true,60);
-					html_filechooser("configdir",gtext("Configuration Directory"),$pconfig['configdir'],gtext("Alternative configuration directory (usually empty)."),$g['media_path'],false,60);
+					html_filechooser("configdir",gtext("Configuration Directory"),$pconfig['configdir'],gtext("Alternative configuration directory."),$g['media_path'],false,60);
 					html_checkbox("portforwarding",gtext("Port Forwarding"),!empty($pconfig['portforwarding']) ? true : false,gtext("Enable port forwarding via NAT-PMP or UPnP."),"",false);
 					html_checkbox("pex",gtext("Peer Exchange"),!empty($pconfig['pex']) ? true : false,gtext("Enable peer exchange (PEX)."),"",false);
 					html_checkbox("dht",gtext("Distributed Hash Table"),!empty($pconfig['dht']) ? true : false,gtext("Enable distributed hash table."),"",false);
+					html_combobox("preallocation",gtext("Preallocation"),$pconfig['preallocation'],['0' => gtext('Disabled'),'1' => gtext('Fast'),'2' => gtext('Full')],gtext("Select pre-allocation mode for files. (Default is Fast)."),false);
 					html_combobox("encryption",gtext("Encryption"),$pconfig['encryption'],['0' => gtext('Tolerated'),'1' => gtext('Preferred'),'2' => gtext('Required')],gtext("The peer connection encryption mode."),false);
 					html_inputbox("uplimit",gtext("Upload Bandwidth"),$pconfig['uplimit'],gtext("The maximum upload bandwith in KB/s. An empty field means infinity."),false,5);
 					html_inputbox("downlimit",gtext("Download Bandwidth"),$pconfig['downlimit'],gtext("The maximum download bandwith in KiB/s. An empty field means infinity."),false,5);
 					html_filechooser("watchdir",gtext("Watch Directory"),$pconfig['watchdir'],gtext("Directory to watch for new .torrent files."),$g['media_path'],false,60);
 					html_filechooser("incompletedir",gtext("Incomplete Directory"),$pconfig['incompletedir'],gtext("Directory for incomplete files. An empty field means disable."),$g['media_path'],false,60);
-					html_inputbox("umask",gtext("User Mask"),$pconfig['umask'],sprintf(gtext("Use this option to override the default permission modes for newly created files (%s by default)."),"0002"),false,3);
+					html_inputbox("umask",gtext("User Mask"),$pconfig['umask'],sprintf(gtext("Use this option to override the default permission modes for newly created files. (%s by default)."),"0002"),false,3);
 					$helpinghand = '<a href="'
 						. 'http://www.freebsd.org/cgi/man.cgi?query=transmission-remote&sektion=1&manpath=FreeBSD+Ports+' . $os_release . '-RELEASE&arch=default&format=html'
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_inputbox("extraoptions",gtext("Extra Options"),$pconfig['extraoptions'],gtext("Extra options to pass over rpc using transmission-remote (usually empty).") . " " . $helpinghand,false,40);
+					html_inputbox("extraoptions",gtext("Extra Options"),$pconfig['extraoptions'],gtext("Extra options to pass over rpc using transmission-remote.") . " " . $helpinghand,false,40);
 					html_separator();
 					html_titleline(gtext("Administrative WebGUI"));
 					html_inputbox("port",gtext("Port"),$pconfig['port'],sprintf(gtext("Port to listen on. Default port is %d."),9091),true,5);
