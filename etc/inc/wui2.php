@@ -35,9 +35,9 @@ require_once 'config.inc';
 require_once 'array.inc';
 
 class HTMLBaseControl2 {
-	var $_ctrlname = "";
-	var $_title = "";
-	var $_description = "";
+	var $_ctrlname = '';
+	var $_title = '';
+	var $_description = '';
 	var $_value;
 	var $_required = false;
 	var $_readonly = false;
@@ -46,250 +46,396 @@ class HTMLBaseControl2 {
 	var $_classdata = 'celldata';
 	var $_classaddonrequired = 'req';
 	var $_classaddonpadalt = 'alt';
-	// constructor method
-	public function __construct($ctrlname, $title, $value, $description = "") {
+	//	constructor
+	public function __construct($ctrlname,$title,$value,$description = '') {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
 		$this->SetDescription($description);
 		$this->SetValue($value);
 	}
-	// get methods
-	function GetCtrlName() { return $this->_ctrlname; }
-	function GetTitle() { return $this->_title; }
-	function GetDescription() { return $this->_description; }
-	function GetValue() { return $this->_value; }
-	function IsRequired() { return $this->_required; }
-	function IsReadOnly() { return $this->_readonly; }
-	function IsAltPadding() { return $this->_altpadding; }
-	function GetClassTag() { return $this->_classtag; }
-	function GetClassData() { return $this->_classdata; }
-	function GetClassAddonRequired() { return $this->_classaddonrequired; }
-	function GetClassAddonPadAlt() { return $this->_classaddonpadalt; }
-	// set methods
-	function SetCtrlName($name) { $this->_ctrlname = $name; }
-	function SetTitle($title) { $this->_title = $title; }
-	function SetDescription($description) { $this->_description = $description; }
-	function SetValue($value) { $this->_value = $value; }
-	function SetRequired($bool) { $this->_required = $bool; }
-	function SetReadOnly($bool) { $this->_readonly = $bool; 	}
-	function SetAltPadding($bool) { $this->_altpadding = $bool; }
-	function SetClassTag($cssclass) { $this ->_classtag = $cssclass; }
-	function SetClassData($cssclass) { $this->_classdata = $cssclass; }
-	function SetClassAddonRequired($cssclass) { $this->_classaddonrequired = $cssclass; }
-	function SetClassAddonPadAlt($cssclass) { $this->_classaddonpadalt = $cssclass; }
-	// support methods
+	//	get/set methods
+	function SetAltPadding($bool) {
+		$this->_altpadding = $bool;
+	}
+	function GetAltPadding() {
+		return $this->_altpadding;
+	}
+	function SetClassAddonRequired($cssclass) {
+		$this->_classaddonrequired = $cssclass;
+	}
+	function GetClassAddonRequired() {
+		return $this->_classaddonrequired;
+	}
+	function SetClassAddonPadAlt($cssclass) {
+		$this->_classaddonpadalt = $cssclass;
+	}
+	function GetClassAddonPadAlt() {
+		return $this->_classaddonpadalt;
+	}
+	function SetClassData($cssclass) {
+		$this->_classdata = $cssclass;
+	}
+	function GetClassData() {
+		return $this->_classdata;
+	}
+	function SetClassTag($cssclass) {
+		$this ->_classtag = $cssclass;
+	}
+	function GetClassTag() {
+		return $this->_classtag;
+	}
+	function SetCtrlName($name) {
+		$this->_ctrlname = $name;
+	}
+	function GetCtrlName() {
+		return $this->_ctrlname;
+	}
+	function SetDescription($description) {
+		$this->_description = $description;
+	}
+	function GetDescription() {
+		return $this->_description;
+	}
+	function SetReadOnly($bool) {
+		$this->_readonly = $bool;
+	}
+	function GetReadOnly() {
+		return $this->_readonly;
+	}
+	function SetRequired($bool) {
+		$this->_required = $bool;
+	}
+	function GetRequired() {
+		return $this->_required;
+	}
+	function SetTitle($title) {
+		$this->_title = $title;
+	}
+	function GetTitle() {
+		return $this->_title;
+	}
+	function SetValue($value) {
+		$this->_value = $value;
+	}
+	function GetValue() {
+		return $this->_value;
+	}
+	//	support methods
 	function GetClassOfTag() {
 		$class = $this->GetClassTag();
-		if (true === $this->IsRequired()) { $class .= $this->GetClassAddonRequired(); }
-		if (true === $this->IsAltPadding()) { $class .= $this->GetClassAddonPadAlt(); }
+		if(true === $this->GetRequired()):
+			$class .= $this->GetClassAddonRequired();
+		endif;
+		if(true === $this->GetAltPadding()):
+			$class .= $this->GetClassAddonPadAlt();
+		endif;
 		return $class;
 	}
 	function GetClassOfData() {
 		$class = $this->GetClassData();
-		if (true === $this->IsRequired()) { $class .= $this->GetClassAddonRequired(); }
-		if (true === $this->IsAltPadding()) { $class .= $this->GetClassAddonPadAlt(); }
+		if(true === $this->GetRequired()):
+			$class .= $this->GetClassAddonRequired();
+		endif;
+		if(true === $this->GetAltPadding()):
+			$class .= $this->GetClassAddonPadAlt();
+		endif;
 		return $class;
 	}
 	function GetDescriptionOutput() {
 		$description = $this->GetDescription();
 		$description_output = '';
 		$suppressbr = true;
-		if (!empty($description)) { // string or array
-			if (is_string($description)) {
+		if(!empty($description)): // string or array
+			if(is_string($description)):
 				$description_output = $description;
-			} elseif (is_array($description)) {
-				foreach ($description as $description_row) {
-					if (is_string($description_row)) {
-						if ($suppressbr) {
+			elseif(is_array($description)):
+				foreach($description as $description_row):
+					if(is_string($description_row)):
+						if($suppressbr):
 							$description_output .= $description_row;
 							$suppressbr = false;
-						} else {
+						else:
 							$description_output .= ('<br />' . $description_row);
-						}
-					} elseif (is_array($description_row)) {
-						switch (count($description_row)) {
+						endif;
+					elseif(is_array($description_row)):
+						switch(count($description_row)):
 							case 1:
-								if ($suppressbr) {
+								if($suppressbr):
 									$suppressbr = false;
-								} else {
+								else:
 									$description_output .= '<br />';
-								}
+								endif;
 								$description_output .= $description_row[0];
 								break;
 							case 3: // allow not to break
 								$suppressbr = (is_bool($description_row[2])) ? $description_row[2] : $suppressbr;
 							case 2:
-								if ($suppressbr) {
+								if($suppressbr):
 									$suppressbr = false;
-								} else {
+								else:
 									$description_output .= '<br />';
-								}
-								if (is_null($description_row[1])) {
+								endif;
+								if(is_null($description_row[1])):
 									$description_output .= $description_row[0];
-								} else {
+								else:
 									$description_output .= '<font color="' . $description_row[1] . '">' . $description_row[0] . '</font>';
-								}
+								endif;
 								break;
-						}
-					}
-				}
-			}
-		}
+						endswitch;
+					endif;
+				endforeach;
+			endif;
+		endif;
 		return $description_output;
 	}
 	function Render() {
 		$ctrlname = $this->GetCtrlName();
-		$title = $this->GetTitle();
-		$classtag = $this->GetClassOfTag();
-		$classdata = $this->GetClassOfData();
 		$description = $this->GetDescriptionOutput();
-
-		echo "<tr id='{$ctrlname}_tr'>\n";
-		echo "	<td class='{$classtag}'><label for='$ctrlname'>{$title}</label></td>\n";
-		echo "	<td class='{$classdata}'>\n";
+		echo sprintf('<tr id="%s_tr">',$ctrlname),"\n";
+		echo sprintf('<td class="%1$s"><label for="%2$s">%3$s</label></td>',$this->GetClassOfTag(),$ctrlname,$this->GetTitle()),"\n";
+		echo sprintf('<td class="%s">',$this->GetClassOfData()),"\n";
 		$this->RenderCtrl();
-		if (!empty($description)) {	echo "		<br /><span class='tagabout'>{$description}</span>\n"; }
-		echo "	</td>\n";
-		echo "</tr>\n";
+		if (!empty($description)):
+			echo sprintf('<br /><span class="tagabout">%s</span>',$description),"\n";
+		endif;
+		echo '</td>',"\n";
+		echo '</tr>',"\n";
+/*		
+		//	root DOM
+		$root = new co_DOMDocument();
+		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
+		$tr = $root->addElement('tr',$attributes);
+		$attributes = ['class' => $this->GetClassOfTag()];
+		$tdtag = $tr->addElement('td',$attributes);
+		$attributes = ['for' => $ctrlname];
+		$tdtag->addElement('label',$attributes,$this->GetTitle());
+		$attributes = ['class' => $this->GetClassOfData()];
+		$tddata = $tr->addElement('td',$attributes);
+		$this->RenderInner($tddata);
+		if(!empty($description)):
+			$tr->addElement('br');
+			$attributes = ['class' => 'tagabout'];
+			$tr->addElement('span',$attributes,$description);
+		endif;
+		echo $root->render();
+ */
 	}
 	function RenderCtrl() {
 	}
+	Function RenderInner(&$root) {
+	}
 }
 class HTMLBaseControlJS2 extends HTMLBaseControl2 {
-	var $_onclick = "";
-	// get methods
-	function GetJSonClick() { return $this->_onclick; }
-	// set methods
-	function SetJSonClick($code) { $this->_onclick = $code; }
+	var $_onclick = '';
+	function SetJSonClick($code) {
+		$this->_onclick = $code;
+	}
+	function GetJSonClick() {
+		return $this->_onclick;
+	}
 }
 class HTMLEditBox2 extends HTMLBaseControl2 {
 	var $_size = 40;
-	var $_maxlength = 40;
+	var $_maxlength = 0;
 	var $_placeholder = '';
 	var $_classinputtext = 'formfld';
 	var $_classinputtextro = 'formfldro';
-	
-	// constructor method
-	function __construct($ctrlname, $title, $value, $description, $size) {
-		parent::__construct($ctrlname, $title, $value, $description);
+
+	//	constructor
+	function __construct($ctrlname,$title,$value,$description,$size) {
+		parent::__construct($ctrlname,$title,$value,$description);
 		$this->SetSize($size);
 	}
-	// get methods
-	function GetSize() { return $this->_size; }
-	function GetMaxLength() { return $this->_maxlength; }
-	function GetPlaceholder() { return $this->_placeholder; }
-	function GetClassInputText() { return $this->_classinputtext; }
-	function GetClassInputTextRO() { return $this->_classinputtextro; }	
-	// set methods
-	function SetSize($size) {
-		// maxlength is set to $size when _size == _maxlength 
-		if($this->GetSize() == $this->GetMaxLength()) {
-			$this->SetMaxLength($size);
-		}
-		$this->_size = $size;
+	//	get/set methods
+	function SetClassInputText($param) {
+		$this->_classinputtext = $param;
+	}
+	function GetClassInputText() {
+		return $this->_classinputtext;
+	}
+	function SetClassInputTextRO($param) {
+		$this->_classinputtextro = $param;
+	}
+	function GetClassInputTextRO() {
+		return $this->_classinputtextro;
 	}
 	function SetMaxLength($maxlength) {
 		$this->_maxlength = $maxlength;
 	}
+	function GetMaxLength() {
+		return $this->_maxlength;
+	}
 	function SetPlaceholder(string $placeholder = '') {
 		$this->_placeholder = $placeholder;
 	}
-	function SetClassInputText($param) { $this->_classinputtext = $param; }
-	function SetClassInputTextRO($param) { $this->_classinputtextro = $param; }
-	// support functions
+	function GetPlaceholder() {
+		return $this->_placeholder;
+	}
+	function SetSize($size) {
+		$this->_size = $size;
+	}
+	function GetSize() {
+		return $this->_size;
+	}
+	//	support methods
 	function GetParam() {
-		$param = '';
-		if (true === $this->IsReadOnly()) { 
-			$param .= 'readonly="readonly" ';
-		}
-		if(preg_match('/\S/',$this->GetPlaceholder())) {
-			$param .= sprintf('placeholder="%s" ',$this->GetPlaceholder());
-		}
-		return $param;
+		$param = [];
+		if(true === $this->GetReadOnly()):
+			$param[] = 'readonly="readonly"';
+		endif;
+		if(preg_match('/\S/',$this->GetPlaceholder())):
+			$param[] = sprintf('placeholder="%s"',$this->GetPlaceholder());
+		endif;
+		$tagval = $this->GetMaxLength();
+		if($tagval > 0):
+			$param[] = sprintf('maxlength="%d"',$tagval);
+		endif;
+		return implode(' ',$param);
+	}
+	function GetAttributes(array &$attributes = []) {
+		if(true === $this->GetReadOnly()):
+			$attributes['readonly'] = 'readonly';
+		endif;
+		$tagval = $this->GetPlaceholder();
+		if(preg_match('/\S/',$tagval)):
+			$attributes['placeholder'] = $tagval;
+		endif;
+		$tagval = $this->GetMaxLength();
+		if($tagval > 0):
+			$attributes['maxlength'] = $tagval;
+		endif;
+		return $attributes;
 	}
 	function GetClassOfInputText() {
-		if (true === $this->IsReadOnly()) {
+		if(true === $this->GetReadOnly()):
 			return $this->GetClassInputTextRO();
-		} else {
+		else:
 			return $this->GetClassInputText();
-		}
+		endif;
 	}
 	function RenderCtrl() {
-		echo '<input name="', $this->GetCtrlName(), '" ', 
-			'type="text" ',
-			'class="', $this->GetClassOfInputText(), '" ', 
-			'id="', $this->GetCtrlName(), '" ', 
-			'size="', $this->GetSize(), '" ', 
-			'maxlength="', $this->GetMaxLength(), '" ',
-			'value="', htmlspecialchars($this->GetValue(), ENT_QUOTES), '" ',
-			$this->GetParam(),
-			"/>\n";
+		//	root DOM
+		$root = new co_DOMDocument();
+		$attributes = [
+			'type' => 'text',
+			'id' => $this->GetCtrlName(),
+			'name' => $this->GetCtrlName(),
+			'class' => $this->GetClassOfInputText(),
+			'size' => $this->GetSize(),
+			'value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),
+		];
+		$this->GetAttributes($attributes);
+		$root->addElement('input',$attributes);
+		echo $root->render();
 	}
 }
 class HTMLPasswordBox2 extends HTMLEditBox2 {
 	var $_classinputpassword = 'formfld';
-	// constructor method
-	function __construct($ctrlname, $title, $value, $description, $size) {
-		$this->SetCtrlName($ctrlname);
-		$this->SetTitle($title);
-		$this->SetValue($value);
-		$this->SetDescription($description);
-		$this->SetSize($size);
+	//	get/set methods
+	function SetClassInputPassword($cssclass) {
+		$this->_classinputpassword = $cssclass;
 	}
-	// get methods
-	function GetClassInputPassword() { return $this->_classinputpassword; }
-	// set methods
-	function SetClassInputPassword($cssclass) { $this->_classinputpassword = $cssclass; }
-	// support methods
+	function GetClassInputPassword() {
+		return $this->_classinputpassword;
+	}
+	//	support methods
 	function GetClassOfInputPassword() {
 		return $this->GetClassInputPassword();
 	}
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
-		$size = $this->GetSize();
-		$param = $this->GetParam();
-		$classinputpassword = $this->GetClassOfInputPassword();
-		echo "		<input name='{$ctrlname}' type='password' class='{$classinputpassword}' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} />\n";
+		$attributes = [
+			'type' => 'password',
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => $this->GetClassOfInputPassword(),
+			'size' => $this->GetSize(),
+			'value'=> htmlspecialchars($this->GetValue(),ENT_QUOTES),
+		];
+		$this->GetAttributes($attributes);
+		$root->addElement('input',$attributes);
+		echo $root->render();
 	}
 }
 class HTMLPasswordConfBox2 extends HTMLEditBox2 {
-	var $_ctrlnameconf = "";
-	var $_valueconf = "";
+	var $_ctrlnameconf = '';
+	var $_valueconf = '';
 	var $_classinputpassword = 'formfld';
-	// constructor method
-	function __construct($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $description, $size) {
-		$this->SetCtrlName($ctrlname);
+	var $_placeholderconfirm = '';
+	//	constructor
+	function __construct($ctrlname,$ctrlnameconf,$title,$value,$valueconf,$description,$size) {
+		parent::__construct($ctrlname,$title,$value,$description,$size);
 		$this->SetCtrlNameConf($ctrlnameconf);
-		$this->SetTitle($title);
-		$this->SetValue($value);
 		$this->SetValueConf($valueconf);
-		$this->SetDescription($description);
-		$this->SetSize($size);
 	}
-	// get methods
-	function GetCtrlNameConf() { return $this->_ctrlnameconf; }
-	function GetValueConf() { return $this->_valueconf; }
-	function GetClassInputPassword() { return $this->_classinputpassword; }
-	// set methods
-	function SetCtrlNameConf($name) { $this->_ctrlnameconf = $name; }
-	function SetValueConf($value) { $this->_valueconf = $value; }
-	function SetClassInputPassword($cssclass) { $this->_classinputpassword = $cssclass; }
-	// support methods
+	//	get/set methods
+	function SetClassInputPassword($cssclass) {
+		$this->_classinputpassword = $cssclass;
+	}
+	function GetClassInputPassword() {
+		return $this->_classinputpassword;
+	}
+	function SetCtrlNameConf($name) {
+		$this->_ctrlnameconf = $name;
+	}
+	function GetCtrlNameConf() {
+		return $this->_ctrlnameconf;
+	}
+	function SetPlaceholderConfirm(string $placeholder = '') {
+		$this->_placeholder = $placeholder;
+	}
+	function GetPlaceholderConfirm() {
+		return $this->_placeholder;
+	}
+	function SetValueConf($value) {
+		$this->_valueconf = $value;
+	}
+	function GetValueConf() {
+		return $this->_valueconf;
+	}
+	//	support methods
+	function GetAttributesConfirm(array &$attributes = []) {
+		$attributes = $this->GetAttributes($attributes);
+		$tagval = $this->GetPlaceholderConfirm();
+		if(preg_match('/\S/',$param)):
+			$attributes['placeholder'] = $tagval;
+		endif;
+		return $attribute;
+	}
 	function GetClassOfInputPassword() {
 		return $this->GetClassInputPassword();
 	}
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnameconf = $this->GetCtrlNameConf();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
-		$valueconf = htmlspecialchars($this->GetValueConf(), ENT_QUOTES);
-		$size = $this->GetSize();
-		$param = $this->GetParam();
-		$caption = gtext("Confirmation");
-		$classinputpassword = $this->GetClassOfInputPassword();
-		echo "		<input name='{$ctrlname}' type='password' class='{$classinputpassword}' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} /><br />\n";
-		echo "		<input name='{$ctrlnameconf}' type='password' class='{$classinputpassword}' id='{$ctrlnameconf}' size='{$size}' value='{$valueconf}' {$param} />&nbsp;({$caption})\n";
+		$attributes = [
+			'type' => 'password',
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => $this->GetClassOfInputPassword(),
+			'size' => $this->GetSize(),
+			'value'=> htmlspecialchars($this->GetValue(),ENT_QUOTES),
+		];
+		$this->GetAttributes($attributes);
+		$o_div1 = $root->addElement('div');
+		$o_div1->addElement('input',$attributes);
+
+		$attributes = [
+			'type' => 'password',
+			'id' => $ctrlnameconf,
+			'name' => $ctrlnameconf,
+			'class' => $this->GetClassOfInputPassword(),
+			'size' => $this->GetSize(),
+			'value' => htmlspecialchars($this->GetValueConf(), ENT_QUOTES)
+		];
+		$this->GetAttributesConfirm($attributes);
+		$o_div2 = $root->addElement('div');
+		$o_div2->addElement('input',$attributes);
+		echo $root->render();
 	}
 }
 class HTMLTextArea2 extends HTMLEditBox2 {
@@ -298,8 +444,8 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 	var $_wrap = true;
 	var $_classtextarea = 'formpre';
 	var $_classtextarearo = 'formprero';
-	// constructor method
-	function __construct($ctrlname, $title, $value, $description, $columns, $rows) {
+	//	constructor
+	function __construct($ctrlname,$title,$value,$description,$columns,$rows) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
 		$this->SetValue($value);
@@ -307,72 +453,128 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 		$this->SetColumns($columns);
 		$this->SetRows($rows);
 	}
-	// get methods
-	function GetColumns() { return $this->_columns; }
-	function GetRows() { return $this->_rows; }
-	function IsWrap() { return $this->_wrap; }
-	function GetClassTextarea() { return $this->_classtextarea; }
-	function GetClassTextareaRO() { return $this->_classtextarearo; }
-	// set methods
-	function SetColumns($columns) { $this->_columns = $columns; }
-	function SetRows($rows) { $this->_rows = $rows; }
-	function SetWrap($bool) { $this->_wrap = $bool; }
-	function SetClasstextarea($cssclass) { $this->_classtextarea = $cssclass; }
-	function SetClasstextareaRO($cssclass) { $this->_classtextarearo = $cssclass; }
-	// support methods
+	//	get/set methods
+	function SetClasstextarea($cssclass) {
+		$this->_classtextarea = $cssclass;
+	}
+	function GetClassTextarea() {
+		return $this->_classtextarea;
+	}
+	function SetClasstextareaRO($cssclass) {
+		$this->_classtextarearo = $cssclass;
+	}
+	function GetClassTextareaRO() {
+		return $this->_classtextarearo;
+	}
+	function SetColumns($columns) {
+		$this->_columns = $columns;
+	}
+	function GetColumns() {
+		return $this->_columns;
+	}
+	function SetRows($rows) {
+		$this->_rows = $rows;
+	}
+	function GetRows() {
+		return $this->_rows;
+	}
+	function SetWrap($bool) {
+		$this->_wrap = $bool;
+	}
+	function GetWrap() {
+		return $this->_wrap;
+	}
+	//	support methods
 	function GetParam() {
 		$param = parent::GetParam();
-		if (false === $this->IsWrap())
-			$param .= " wrap='off'";
+		if (false === $this->GetWrap()):
+			$param .= ' wrap="soft"';
+		endif;
 		return $param;
 	}
+	function GetAttributes(array &$attributes = []) {
+		parent::GetAttributes($attributes);
+		if(false === $this->GetWrap()):
+			$attributes['wrap'] = 'soft';
+		endif;
+		return $attributes;
+	}
 	function GetClassOfTextarea() {
-		return ($this->IsReadOnly() ? $this->GetClassTextareaRO() : $this->GetClassTextarea());
+		return ($this->GetReadOnly() ? $this->GetClassTextareaRO() : $this->GetClassTextarea());
 	}
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
-		$columns = $this->GetColumns();
-		$rows = $this->GetRows();
-		$param = $this->GetParam();
-		$classtextarea = $this->GetClassOfTextarea();
-		echo "		<textarea name='{$ctrlname}' cols='{$columns}' rows='{$rows}' id='{$ctrlname}' class='{$classtextarea}' {$param}>{$value}</textarea>\n";
+		$attributes = [
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => $this->GetClassOfTextarea(),
+			'cols' => $this->GetColumns(),
+			'rows' => $this->GetRows()
+		];
+		$this->GetAttributes($attributes);
+		$root->addElement('textarea',$attributes,htmlspecialchars($this->GetValue(),ENT_QUOTES));
+		echo $root->render();
 	}
 }
 class HTMLFileChooser2 extends HTMLEditBox2 {
-	var $_path = "";
-
+	var $_path = '';
 	function __construct($ctrlname, $title, $value, $description, $size = 60) {
-		$this->SetCtrlName($ctrlname);
-		$this->SetTitle($title);
-		$this->SetValue($value);
-		$this->SetDescription($description);
-		$this->SetSize($size);
+		parent::__construct($ctrlname,$title,$value,$description,$size);
 	}
-
-	function GetPath() {
-		return $this->_path;
-	}
-
 	function SetPath($path) {
 		$this->_path = $path;
 	}
-
+	function GetPath() {
+		return $this->_path;
+	}
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
+		//	helper variables
 		$ctrlname = $this->GetCtrlName();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
 		$size = $this->GetSize();
-		$param = $this->GetParam();
-		$path = $this->GetPath();
-
-		echo "		<input name='{$ctrlname}' type='text' class='formfld' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} />\n";
-		echo "		<input name='{$ctrlname}browsebtn' type='button' class='formbtn' id='{$ctrlname}browsebtn' onclick='{$ctrlname}ifield = form.{$ctrlname}; filechooser = window.open(\"filechooser.php?p=\"+encodeURIComponent({$ctrlname}ifield.value)+\"&amp;sd={$path}\", \"filechooser\", \"scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300\"); filechooser.ifield = {$ctrlname}ifield; window.ifield = {$ctrlname}ifield;' value='...' />\n";
+		//	input element
+		$attributes = [
+			'type' => 'text',
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => 'formfld',
+			'value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),
+			'size' => $size
+		];
+		$this->GetAttributes($attributes);
+		$root->addElement('input',$attributes);
+		//	file chooser
+		$js = sprintf('%1$sifield = form.%1$s;',$ctrlname)
+			. 'filechooser = window.open("filechooser.php?p="+'
+			. sprintf('encodeURIComponent(%sifield.value)+',$ctrlname)
+			. sprintf('"&sd=%s",',$this->GetPath())
+			. '"filechooser",'
+			. '"scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300");'
+			. sprintf('filechooser.ifield = %sifield;',$ctrlname)
+			. sprintf('window.ifield = %sifield;',$ctrlname);
+		$attributes = [
+			'type' => 'button',
+			'id' => $ctrlname . 'browsebtn',
+			'name' => $ctrlname . 'browsebtn',
+			'class' => 'formbtn',
+			'value' => $value,
+			'size' => $size,
+			'onclick' => $js,
+			'value' => '...'
+		];
+		$this->GetAttributes($attributes);
+		$root->addElement('input',$attributes);
+		//	showtime
+		echo $root->render();
 	}
 }
 class HTMLIPAddressBox2 extends HTMLEditBox2 {
-	var $_ctrlnamenetmask = "";
-	var $_valuenetmask = "";
-
+	var $_ctrlnamenetmask = '';
+	var $_valuenetmask = '';
+	//	constructor
 	function __construct($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $description) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetCtrlNameNetmask($ctrlnamenetmask);
@@ -381,593 +583,865 @@ class HTMLIPAddressBox2 extends HTMLEditBox2 {
 		$this->SetValueNetmask($valuenetmask);
 		$this->SetDescription($description);
 	}
-
-	function GetCtrlNameNetmask() {
-		return $this->_ctrlnamenetmask;
-	}
-
+	//	get/set Methods
 	function SetCtrlNameNetmask($name) {
 		$this->_ctrlnamenetmask = $name;
 	}
-
-	function GetValueNetmask() {
-		return $this->_valuenetmask;
+	function GetCtrlNameNetmask() {
+		return $this->_ctrlnamenetmask;
 	}
-
 	function SetValueNetmask($value) {
 		$this->_valuenetmask = $value;
 	}
+	function GetValueNetmask() {
+		return $this->_valuenetmask;
+	}
 }
 class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
-	function __construct($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $description) {
-		parent::__construct($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $description);
+	//	constructor
+	function __construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description) {
+		parent::__construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description);
 		$this->SetSize(20);
 	}
-
+	//	support methods
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamenetmask = $this->GetCtrlNameNetmask();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
-		$valuenetmask = htmlspecialchars($this->GetValueNetmask(), ENT_QUOTES);
-		$size = $this->GetSize();
-
-		echo "    <input name='{$ctrlname}' type='text' class='formfld' id='{$ctrlname}' size='{$size}' value='{$value}' />\n";
-		echo "    /\n";
-		echo "    <select name='{$ctrlnamenetmask}' class='formfld' id='{$ctrlnamenetmask}'>\n";
-		foreach (range(1, 32) as $netmask) {
-			$optparam = "";
-			if ($netmask == $valuenetmask)
-				$optparam .= "selected=\"selected\" ";
-			echo "      <option value='{$netmask}' {$optparam}>{$netmask}</option>\n";
-		}
-		echo "    </select>\n";
+		$valuenetmask = htmlspecialchars($this->GetValueNetmask(),ENT_QUOTES);
+		$attributes = ['type' => 'text','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => htmlspecialchars($this->GetValue(), ENT_QUOTES),'size' => $this->GetSize()];
+		$root->addElement('input',$attributes);
+		$o_slash = $root->createTextNode(' / ');
+		$root->appendChild($o_slash);
+		$attributes = ['id' => $ctrlnamenetmask,'name' => $ctrlnamenetmask,'class' => 'formfld'];
+		$o_select = $root->addElement('select',$attributes);
+		foreach(range(1, 32) as $netmask):
+			$attributes = ['value' => $netmask];
+			if($netmask == $valuenetmask):
+				$attributes['selected'] = 'selected';
+			endif;
+			$o_select->addElement('option',$attributes,$netmask);
+		endforeach;
+		echo $root->render();
 	}
 }
 class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
-	function __construct($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $description) {
-		parent::__construct($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $description);
+	//	constructor
+	function __construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description) {
+		parent::__construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description);
 		$this->SetSize(30);
 	}
-
+	//	support methods
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamenetmask = $this->GetCtrlNameNetmask();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
-		$valuenetmask = htmlspecialchars($this->GetValueNetmask(), ENT_QUOTES);
-		$size = $this->GetSize();
-
-		echo "    <input name='{$ctrlname}' type='text' class='formfld' id='{$ctrlname}' size='{$size}' value='{$value}' />\n";
-		echo "    /\n";
-		echo "    <input name='{$ctrlnamenetmask}' type='text' class='formfld' id='{$ctrlnamenetmask}' size='2' value='{$valuenetmask}' />\n";
+		$attributes = [
+			'type' => 'text',
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => 'formfld',
+			'value' => htmlspecialchars($this->GetValue(), ENT_QUOTES),
+			'size' => $this->GetSize()
+		];
+		$root->addElement('input',$attributes);
+		$o_slash = $root->createTextNode(' / ');
+		$root->appendChild($o_slash);
+		$attributes = [
+			'type' => 'text',
+			'id' => $ctrlnamenetmask,
+			'name' => $ctrlnamenetmask,
+			'class' => 'formfld',
+			'value' => htmlspecialchars($this->GetValueNetmask(), ENT_QUOTES),
+			'size' => 2
+		];
+		$root->addElement('input',$attributes);
+		echo $root->render();
 	}
 }
 class HTMLCheckBox2 extends HTMLBaseControlJS2 {
-	var $_caption = "";
+	var $_caption = '';
 	var $_classcheckbox = 'celldatacheckbox';
 	var $_classcheckboxro = 'celldatacheckbox';
-	// constructor method
+	//	constructor
 	function __construct($ctrlname, $title, $value, $caption, $description = "") {
 		parent::__construct($ctrlname, $title, $value, $description);
 		$this->SetCaption($caption);
 	}
-	// get methods
-	function IsChecked() { return $this->GetValue(); }
-	function GetCaption() { return $this->_caption; }
-	function GetClassCheckbox() { return $this->_classcheckbox; }
-	function GetClassCheckboxRO() { return $this->_classcheckboxro; }
-	// set methods
-	function SetChecked($bool) { $this->SetValue($bool); }
-	function SetCaption($caption) { $this->_caption = $caption; }
-	function SetClassCheckbox($cssclass) { $this->_classcheckbox = $cssclass; }
-	function SetClassCheckboxRO($cssclass) { $this->_classcheckboxro = $cssclass; }
-	// support methods
+	//	get/set methods
+	function SetChecked($bool) {
+		$this->SetValue($bool);
+	}
+	function IsChecked() {
+		return $this->GetValue();
+	}
+	function SetCaption($caption) {
+		$this->_caption = $caption;
+	}
+	function GetCaption() {
+		return $this->_caption;
+	}
+	function SetClassCheckbox($cssclass) {
+		$this->_classcheckbox = $cssclass;
+	}
+	function GetClassCheckbox() {
+		return $this->_classcheckbox;
+	}
+	function SetClassCheckboxRO($cssclass) {
+		$this->_classcheckboxro = $cssclass;
+	}
+	function GetClassCheckboxRO() {
+		return $this->_classcheckboxro;
+	}
+	//	support methods
 	function GetParam() {
-		$param = "";
-		if (true === $this->IsChecked()) { $param .= "checked=\"checked\" "; }
-		if (true === $this->IsReadOnly()) { $param .= "disabled=\"disabled\" "; }
+		$a_param = [];
+		if(true === $this->IsChecked()):
+			$a_param[] = 'checked="checked"';
+		endif;
+		if(true === $this->GetReadOnly()):
+			$a_param[] = 'disabled="disabled"';
+		endif;
 		$onclick = $this->GetJSonClick();
-		if (!empty($onclick))
-			$param .= "onclick='{$onclick}' ";
-		return $param;
+		if(!empty($onclick)):
+			$a_param[] = 'onclick="' . $onclick . '"';
+		endif;
+		return implode(' ',$a_param);
+	}
+	function GetAttributes(array &$attributes = []) {
+		if(true === $this->IsChecked()):
+			$attributes['checked'] = 'checked';
+		endif;
+		if(true === $this->GetReadOnly()):
+			$attributes['disabled'] = 'disabled';
+		endif;
+		$onclick = $this->GetJSonClick();
+		if(!empty($onclick)):
+			$attributes['onclick'] = $onclick;
+		endif;
+		return $attributes;
 	}
 	function GetClassOfCheckbox() {
-		return ($this->IsReadOnly() ? $this->GetClassCheckboxRO() : $this->GetClassCheckbox());
+		return ($this->GetReadOnly() ? $this->GetClassCheckboxRO() : $this->GetClassCheckbox());
 	}
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
 		$caption = $this->GetCaption();
-		$param = $this->GetParam();
 		$classcheckbox = $this->GetClassOfCheckbox();
-		echo "<div class='{$classcheckbox}'>";
-		echo "	<input name='{$ctrlname}' type='checkbox' id='{$ctrlname}' value='yes' {$param} />";
-		echo "	<label for='{$ctrlname}'>{$caption}</label>";
-		echo "</div>";
+		$o_div = $root->addElement('div',['class' => $classcheckbox]);
+		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'value' => 'yes'];
+		$this->GetAttributes($attributes);
+		$o_div->addElement('input',$attributes);
+		$o_div->addElement('label',['for' => $ctrlname],$caption);
+		echo $root->render();
 	}
 }
 class HTMLSelectControl2 extends HTMLBaseControlJS2 {
-	var $_ctrlclass = "";
+	var $_ctrlclass = '';
 	var $_options = [];
-
-	function __construct($ctrlclass, $ctrlname, $title, $value, $options, $description) {
-		parent::__construct($ctrlname, $title, $value, $description);
+	//	constructor
+	function __construct($ctrlclass,$ctrlname,$title,$value,$options,$description) {
+		parent::__construct($ctrlname,$title,$value,$description);
 		$this->SetCtrlClass($ctrlclass);
 		$this->SetOptions($options);
 	}
-
-	function GetCtrlClass() {
-		return $this->_ctrlclass;
-	}
-
+	//	get/set methods
 	function SetCtrlClass($ctrlclass) {
 		$this->_ctrlclass = $ctrlclass;
 	}
-
+	function GetCtrlClass() {
+		return $this->_ctrlclass;
+	}
+	function SetOptions(array $options = []) {
+		$this->_options = $options;
+	}
 	function GetOptions() {
 		return $this->_options;
 	}
-
-	function SetOptions($options) {
-		$this->_options = $options;
-		if (empty($this->_options)) {
-			unset($this->_options);
-			$this->_options = [];
-		}
-	}
-
 	function GetParam() {
-		$param = "";
-		if (true === $this->IsReadOnly())
-			$param .= "disabled=\"disabled\" ";
+		$a_param = [];
+		if(true === $this->GetReadOnly()):
+			$a_param[] = 'disabled="disabled"';
+		endif;
 		$onclick = $this->GetJSonClick();
-		if (!empty($onclick))
-			$param .= "onclick='{$onclick}' ";
-		return $param;
+		if(!empty($onclick)):
+			$a_param[] = sprintf('onclick="%s"',$onclick);
+		endif;
+		return implode(' ',$a_param);
 	}
-
+	function GetAttributes(array &$attributes = []) {
+		if(true === $this->GetReadOnly()):
+			$attributes['disabled'] = 'disabled';
+		endif;
+		$onclick = $this->GetJSonClick();
+		if(!empty($onclick)):
+			$attributes['onclick'] = $onclick;
+		endif;
+		return $attributes;
+	}
 	function RenderCtrl() {
-		$ctrlclass = $this->GetCtrlClass();
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
-		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
-		$param = $this->GetParam();
+		$value = htmlspecialchars($this->GetValue(),ENT_QUOTES);
 		$options = $this->GetOptions();
-
-		echo "    <select name='{$ctrlname}' class='{$ctrlclass}' id='{$ctrlname}' {$param}>\n";
-		foreach ($options as $optionk => $optionv) {
-			$optparam = "";
-			if ($value == $optionk)
-				$optparam .= "selected=\"selected\" ";
-			echo "      <option value='{$optionk}' {$optparam}>{$optionv}</option>\n";
-		}
-		echo "    </select>\n";
+		$attributes = [
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => $this->GetCtrlClass()
+		];
+		$this->GetAttributes($attributes);
+		$o_select = $root->addElement('select',$attributes);
+		foreach($options as $option_tag => $option_val):
+			$attributes = ['value' => $option_tag];
+			if($value == $option_tag):
+				$attributes['selected'] = 'selected';
+			endif;
+			$o_select->addElement('option',$attributes,$option_val);
+		endforeach;
+		echo $root->render();
 	}
 }
 class HTMLMultiSelectControl2 extends HTMLSelectControl2 {
 	var $_size = 10;
-
-	function __construct($ctrlclass, $ctrlname, $title, $value, $options, $description) {
-		parent::__construct($ctrlclass, $ctrlname, $title, $value, $options, $description);
+	//	constructor
+	function __construct($ctrlclass,$ctrlname,$title,$value,$options,$description) {
+		parent::__construct($ctrlclass,$ctrlname,$title,$value,$options,$description);
 	}
-
+	//	get/set methods
 	function GetSize() {
 		return $this->_size;
 	}
-
 	function SetSize($size) {
 		$this->_size = $size;
 	}
-
+	//	support methods
 	function RenderCtrl() {
-		$ctrlclass = $this->GetCtrlClass();
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
-		$param = $this->GetParam();
 		$options = $this->GetOptions();
-		$size = $this->GetSize();
-
-		echo "    <select name='{$ctrlname}[]' class='{$ctrlclass}' multiple='multiple' id='{$ctrlname}' size='{$size}' {$param}>\n";
-		foreach ($options as $optionk => $optionv) {
-			$optparam = "";
-			if (is_array($value) && in_array($optionk, $value))
-				$optparam .= "selected=\"selected\" ";
-			echo "      <option value='{$optionk}' {$optparam}>{$optionv}</option>\n";
-		}
-		echo "    </select>\n";
+		$attributes = [
+			'id' => $ctrlname,
+			'name' => sprintf('%s[]',$ctrlname),
+			'class' => $this->GetCtrlClass(),
+			'multiple' => 'multiple',
+			'size' => $this->GetSize()
+		];
+		$this->GetAttributes($attributes);
+		$o_select = $root->addElement('select',$attributes);
+		foreach($options as $option_tag => $option_val):
+			$attributes = ['value' => $option_tag];
+			if(is_array($value) && in_array($option_tag,$value)):
+				$attributes['selected'] = 'selected';
+			endif;
+			$o_select->addElement('option',$attributes,$option_val);
+		endforeach;
+		echo $root->render();
 	}
 }
 class HTMLComboBox2 extends HTMLSelectControl2 {
-	function __construct($ctrlname, $title, $value, $options, $description) {
-		parent::__construct("formfld", $ctrlname, $title, $value, $options, $description);
+	//	constructor
+	function __construct($ctrlname,$title,$value,$options,$description) {
+		parent::__construct('formfld',$ctrlname,$title,$value,$options,$description);
 	}
 }
 class HTMLMountComboBox2 extends HTMLComboBox2 {
-	function __construct($ctrlname, $title, $value, $description) {
+	//	constructor
+	function __construct($ctrlname,$title,$value,$description) {
 		global $config;
-
-		// Generate options.
-		array_make_branch($config,'mounts','mount');
-		array_sort_key($config['mounts']['mount'],'devicespecialfile');
-
+		//	generate options.
+		$a_mounts = &array_make_branch($config,'mounts','mount');
+		array_sort_key($a_mounts,'devicespecialfile');
 		$options = [];
-		$options[""] = gtext("Must choose one");
-		foreach ($config['mounts']['mount'] as $mountv) {
-			$options[$mountv['uuid']] = $mountv['sharename'];
-		}
-
-		parent::__construct($ctrlname, $title, $value, $options, $description);
+		$options[''] = gtext('Must choose one');
+		foreach($a_mounts as $r_mount):
+			$options[$r_mount['uuid']] = $r_mount['sharename'];
+		endforeach;
+		parent::__construct($ctrlname,$title,$value,$options,$description);
 	}
 }
 class HTMLTimeZoneComboBox2 extends HTMLComboBox2 {
-	function __construct($ctrlname, $title, $value, $description) {
-		// Get time zone data.
+	function __construct($ctrlname,$title,$value,$description) {
+		//	get time zone data.
 		function is_timezone($elt) {
-			return !preg_match("/\/$/", $elt);
+			return !preg_match("/\/$/",$elt);
 		}
-
-		exec('/usr/bin/tar -tf /usr/share/zoneinfo.txz', $timezonelist);
-		$timezonelist = array_filter($timezonelist, 'is_timezone');
+		exec('/usr/bin/tar -tf /usr/share/zoneinfo.txz',$timezonelist);
+		$timezonelist = array_filter($timezonelist,'is_timezone');
 		sort($timezonelist);
-
-		// Generate options.
+		//	generate options.
 		$options = [];
-		foreach ($timezonelist as $tzv) {
-			if (!empty($tzv)) {
-				$tzv = substr($tzv, 2); // Remove leading './'
+		foreach($timezonelist as $tzv):
+			if(!empty($tzv)):
+				$tzv = substr($tzv,2); // Remove leading './'
 				$options[$tzv] = $tzv;
-			}
-		}
-
-		parent::__construct($ctrlname, $title, $value, $options, $description);
+			endif;
+		endforeach;
+		parent::__construct($ctrlname,$title,$value,$options,$description);
 	}
 }
 class HTMLLanguageComboBox2 extends HTMLComboBox2 {
-	function __construct($ctrlname, $title, $value, $description) {
+	function __construct($ctrlname,$title,$value,$description) {
 		global $g_languages;
-
-		// Generate options.
+		//	generate options.
 		$options = [];
-		foreach ($g_languages as $languagek => $languagev) {
-			$options[$languagek] = gtext($languagev['desc']);
-		}
-		// Sort options alphabetically
-		asort($options);
-
-		parent::__construct($ctrlname, $title, $value, $options, $description);
+		foreach($g_languages as $languagek => $languagev):
+			$options[$languagek] = $languagev['desc.localized'];
+		endforeach;
+		parent::__construct($ctrlname,$title,$value,$options,$description);
 	}
 }
 class HTMLInterfaceComboBox2 extends HTMLComboBox2 {
-	function __construct($ctrlname, $title, $value, $description) {
+	function __construct($ctrlname,$title,$value,$description) {
 		global $config;
-
-		// Generate options.
-		$options = array('lan' => 'LAN');
-		for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) {
-			if (isset($config['interfaces']['opt' . $i]['enable'])) {
+		//	generate options.
+		$options = ['lan' => 'LAN'];
+		for($i = 1;isset($config['interfaces']['opt' . $i]);$i++):
+			if(isset($config['interfaces']['opt' . $i]['enable'])):
 				$options['opt' . $i] = $config['interfaces']['opt' . $i]['descr'];
-			}
-		}
-
-		parent::__construct($ctrlname, $title, $value, $options, $description);
+			endif;
+		endfor;
+		parent::__construct($ctrlname,$title, $value,$options,$description);
 	}
 }
 class HTMLListBox2 extends HTMLMultiSelectControl2 {
-	function __construct($ctrlname, $title, $value, $options, $description) {
-		parent::__construct("formselect", $ctrlname, $title, $value, $options, $description);
+	function __construct($ctrlname,$title,$value,$options,$description) {
+		parent::__construct('formselect',$ctrlname,$title,$value,$options,$description);
 	}
 }
 class HTMLSeparator2 extends HTMLBaseControl2 {
 	var $_colspan = 2;
 	var $_idname = '';
-	var $_classseparator = 'list';
-	// constructor method
+	var $_classseparator = 'gap';
+	// constructor
 	function __construct() {
 	}
-	// get methods
-	function GetColSpan() { return $this->_colspan; }
-	function GetClassSeparator() { return $this->_classseparator; }
-	// set methods
-	function SetColSpan($colspan) { $this->_colspan = $colspan; }
-	function SetIdName($idname) { $this->_idname = $idname; }
-	function SetClassSeparator($cssclass) { $this->_classseparator = $cssclass; }
-	// support methods
+	//	get/set methods
+	function SetClassSeparator($cssclass) {
+		$this->_classseparator = $cssclass;
+	}
+	function GetClassSeparator() {
+		return $this->_classseparator;
+	}
+	function SetColSpan($colspan) {
+		$this->_colspan = $colspan;
+	}
+	function GetColSpan() {
+		return $this->_colspan;
+	}
+	function SetIdName($idname) {
+		$this->_idname = $idname;
+	}
+	function GetIdName() {
+		return $this->_idname;
+	}
+	//	support methods
 	function GetClassOfSeparator() {
 		return $this->GetClassSeparator();
 	}
 	function Render() {
-		$colspan = $this->GetColSpan();
-		$classseparator = $this->GetClassOfSeparator();
-		echo ($this->_idname != '') ? "<tr id='{$this->_idname}'>\n" : "<tr>\n";
-		echo "	<td colspan='{$colspan}' class='{$classseparator}' height='12'></td>\n";
-		echo "</tr>\n";
+		//	root DOM
+		$root = new co_DOMDocument();
+		$idname = $this->GetIdName();
+		$attributes = [];
+		if(preg_match('/\S/',$idname)):
+			$attributes['id'] = $idname;
+		endif;
+		$o_tr = $root->addElement('tr',$attributes);
+		$attributes = ['class' => $this->GetClassOfSeparator(),'colspan' => $this->GetColSpan()];
+		$o_tr->addElement('td',$attributes);
+		echo $root->render();
 	}
 }
 class HTMLTitleLine2 extends HTMLBaseControl2 {
 	var $_colspan = 2;
 	var $_idname = '';
 	var $_classtopic = 'lhetop';
-	// constructor method
+	//	constructor
 	function __construct($title) {
 		$this->SetTitle($title);
 	}
-	// get methods
-	function GetColSpan() { return $this->_colspan; }
-	function GetClassTopic() { return $this->_classtopic; }
-	// set methods
-	function SetColSpan($colspan) { $this->_colspan = $colspan; }
-	function SetIdName($idname) { $this->_idname = $idname; }
-	function SetClassTopic($cssclass) { $this->_classtopic = $cssclass; }
-	// support functions
-	function GetClassOfTopic() {
-		return $this->GetClassTopic();
+	//	get/set methods
+	function SetClassTopic($cssclass) {
+		$this->_classtopic = $cssclass;
 	}
-	function Render() {
-		$title = $this->GetTitle();
-		$colspan = $this->GetColSpan();
-		$classtopic = $this->GetClassOfTopic();
-		echo ($this->_idname != '') ? "<tr id='{$this->_idname}'>\n" : "<tr>\n";
-		echo "	<th colspan='{$colspan}' class='{$classtopic}'>{$title}</th>\n";
-		echo "</tr>\n";
-	}
-}
-class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
-	var $_colspan = 2;
-
-	function __construct($ctrlname, $title, $value, $caption) {
-		parent::__construct($ctrlname, $title, $value, $caption);
-	}
-	function GetColSpan() {
-		return $this->_colspan;
+	function GetClassTopic() {
+		return $this->_classtopic;
 	}
 	function SetColSpan($colspan) {
 		$this->_colspan = $colspan;
 	}
+	function GetColSpan() {
+		return $this->_colspan;
+	}
+	function SetIdName($idname) {
+		$this->_idname = $idname;
+	}
+	function GetIdName() {
+		return $this->_idname;
+	}
+	//	support methods
+	function GetClassOfTopic() {
+		return $this->GetClassTopic();
+	}
 	function Render() {
+		//	root DOM
+		$root = new co_DOMDocument();
+		$idname = $this->GetIdName();
+		$attributes = [];
+		if(preg_match('/\S/',$idname)):
+			$attributes['id'] = $idname;
+		endif;
+		$o_tr = $root->addElement('tr',$attributes);
+		$attributes = [
+			'class' => $this->GetClassOfTopic(),
+			'colspan' => $this->GetColSpan()
+		];
+		$o_tr->addElement('th',$attributes,$this->GetTitle());
+		echo $root->render();
+	}
+}
+class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
+	var $_colspan = 2;
+	//	constructor
+	function __construct($ctrlname, $title, $value, $caption) {
+		parent::__construct($ctrlname, $title, $value, $caption);
+	}
+	//	get/set methods
+	function SetColSpan($colspan) {
+		$this->_colspan = $colspan;
+	}
+	function GetColSpan() {
+		return $this->_colspan;
+	}
+	//	support methods
+	function Render() {
+		//	root DOM
+		$root = new co_DOMDocument();
 		$ctrlname = $this->GetCtrlName();
-		$caption = $this->GetCaption();
-		$title = $this->GetTitle();
-		$param = $this->GetParam();
-		$colspan = $this->GetColSpan();
-
-		echo "<tr id='{$ctrlname}_tr'>\n";
-		echo "	<td colspan='{$colspan}' valign='top' class='optsect_t'>\n";
-		echo "    <table border='0' cellspacing='0' cellpadding='0' width='100%'>\n";
-		echo "      <tr>\n";
-		echo "        <td class='optsect_s'><strong>{$title}</strong></td>\n";
-		echo "        <td align='right' class='optsect_s'>\n";
-		echo "          <input name='{$ctrlname}' type='checkbox' class='formfld' id='{$ctrlname}' value='yes' {$param} /><strong>{$caption}</strong>\n";
-		echo "        </td>\n";
-		echo "      </tr>\n";
-		echo "    </table>\n";
-		echo "  </td>\n";
-		echo "</tr>\n";
+		$attributes = ['id' => sprintf('%_tr',$ctrlname)];
+		$outer_tr = $root->addElement('tr',$attributes);
+		$attributes = ['colspan' => $this->GetColSpan(),'valign' => 'top','class' => 'optsect_t'];
+		$outer_td = $outer_tr->addElement('td',$attributes);
+		$attributes = ['border' => '0','cellspacing' => '0','cellpadding' => '0','width' => '100%'];
+		$o_table = $outer_td->addElement('table',$attributes);
+		$inner_tr = $o_table->addElement('tr');
+		$attributes = ['class' => 'optsect_s'];
+		$o_td1 = $inner_tr->addElement('td',$attributes);
+		$o_td1->addElement('strong',[],$this->GetTitle());
+		$attributes = ['align' => 'right','class' => 'optsect_s'];
+		$o_td2 = $inner_tr->addElement('td',$attributes);
+		$attributes = ['for' => $ctrlname,'style' => 'margin-right:8px'];
+		$o_label = $o_td2->addElement('label',$attributes);
+		$o_label->addElement('strong',[],$this->GetCaption());
+		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => 'yes'];
+		$this->getAttributes($attributes);
+		$o_td2->addElement('input',$attributes);
+		echo $root->render();
 	}
 }
 class HTMLText2 extends HTMLBaseControl2 {
-	function __construct($ctrlname, $title, $text) {
+	//	constructor
+	function __construct($ctrlname,$title,$text) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
-
+	//	support methods
 	function RenderCtrl() {
-		$text = $this->GetValue();
-
-		echo "{$text}\n";
+		//	root DOM
+		$root = new co_DOMDocument();
+		//	compose
+		$text = $root->createTextNode($this->GetValue());
+		$root->appendChild($text);
+		//	showtime
+		echo $root->render();
 	}
 }
 class HTMLTextInfo2 extends HTMLBaseControl2 {
-	function __construct($ctrlname, $title, $text) {
+	function __construct($ctrlname,$title,$text) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
 	function Render() {
+		//	root DOM
+		$root = new co_DOMDocument();
+		//	helping variables
 		$ctrlname = $this->GetCtrlName();
-		$title = $this->GetTitle();
-		$classtag = $this->GetClassOfTag();
-		$classdata = $this->GetClassOfData();
-		$text = $this->GetValue();
-		echo "<tr id='{$ctrlname}_tr'>\n";
-		echo "	<td class='{$classtag}'>{$title}</td>\n";
-		echo "	<td class='{$classdata}'><span id='{$ctrlname}'>{$text}</span></td>\n";
-		echo "</tr>\n";
+		//	compose
+		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
+		$tr = $root->addElement('tr',$attributes);
+		$attributes = ['class' => $this->GetClassOfTag()];
+		$tdtag = $tr->addElement('td',$attributes,$this->GetTitle());
+		$attributes = ['class' => $this->GetClassOfData()];
+		$tddata = $tr->addElement('td',$attributes);
+		$attributes = ['id' => $ctrlname];
+		$tddata->addElement('span',$attributes,$this->GetValue());
+		//	showtime
+		echo $root->render();
 	}
 }
 class HTMLRemark2 extends HTMLBaseControl2 {
-	function __construct($ctrlname, $title, $text) {
+	function __construct($ctrlname,$title,$text) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
-
 	function Render() {
+		//	root DOM
+		$root = new co_DOMDocument();
+		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		$title = $this->GetTitle();
 		$text = $this->GetValue();
 
-		echo "<div id='remark'>\n";
-		if (!empty($title)) {
-			echo "  <span class='red'>\n";
-			echo "    <strong>{$title}:</strong>\n";
-			echo "  </span><br />\n";
-		}
-		echo "  {$text}\n";
-		echo "</div>\n";
+		//	compose
+		$attributes = ['id' => 'remark'];
+		$div = $root->addElement('div',$attributes);
+		$attributes = ['class' => 'red'];
+		$span = $div->addElement('span',$attributes);
+		$attributes = [];
+		$span->addElement('strong',[],$this->GetTitle() . ': ');
+		$text = $root->createTextNode($this->GetValue());
+		$div->appendChild($text);
+		//	showtime
+		echo $root->render();
 	}
 }
 class HTMLFolderBox2 extends HTMLBaseControl2 {
-	var $_path = "";
+	var $_path = '';
 
-	function __construct($ctrlname, $title, $value, $description = "") {
-		parent::__construct($ctrlname, $title, $value, $description);
+	function __construct($ctrlname,$title,$value,$description = '') {
+		parent::__construct($ctrlname,$title,$value,$description);
 	}
-
 	function GetPath() {
 		return $this->_path;
 	}
-
 	function SetPath($path) {
 		$this->_path = $path;
 	}
-
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
+		//	helping variables
 		$ctrlname = $this->GetCtrlName();
+		$ctrlnamedata = $ctrlname . 'data';
 		$value = $this->GetValue();
-		$path = $this->GetPath();
-
-		echo "    <script type='text/javascript'>\n";
-		echo "    //<![CDATA[\n";
-		echo "    function onchange_{$ctrlname}() {\n";
-		echo "      document.getElementById('{$ctrlname}data').value = document.getElementById('{$ctrlname}').value;\n";
-		echo "    }\n";
-		echo "    function onclick_add_{$ctrlname}() {\n";
-		echo "      var value = document.getElementById('{$ctrlname}data').value;\n";
-		echo "      if (value != '') {\n";
-		echo "        var found = false;\n";
-		echo "        var element = document.getElementById('{$ctrlname}');\n";
-		echo "        for (var i = 0; i < element.length; i++) {\n";
-		echo "          if (element.options[i].text == value) {\n";
-		echo "            found = true;\n";
-		echo "            break;\n";
-		echo "          }\n";
-		echo "        }\n";
-		echo "        if (found != true) {\n";
-		echo "          element.options[element.length] = new Option(value, value, false, true);\n";
-		echo "          document.getElementById('{$ctrlname}data').value = '';\n";
-		echo "        }\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onclick_delete_{$ctrlname}() {\n";
-		echo "      var element = document.getElementById('{$ctrlname}');\n";
-		echo "      if (element.value != '') {\n";
-		echo "        var msg = confirm('".gtext("Do you really want to remove the selected item from the list?")."');\n";
-		echo "        if (msg == true) {\n";
-		echo "          element.options[element.selectedIndex] = null;\n";
-		echo "          document.getElementById('{$ctrlname}data').value = '';\n";
-		echo "        }\n";
-		echo "      } else {\n";
-		echo "        alert('".gtext("Select item to remove from the list")."');\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onclick_change_{$ctrlname}() {\n";
-		echo "      var element = document.getElementById('{$ctrlname}');\n";
-		echo "      if (element.value != '') {\n";
-		echo "        var value = document.getElementById('{$ctrlname}data').value;\n";
-		echo "        element.options[element.selectedIndex].text = value;\n";
-		echo "        element.options[element.selectedIndex].value = value;\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onsubmit_{$ctrlname}() {\n";
-		echo "      var element = document.getElementById('{$ctrlname}');\n";
-		echo "      for (var i = 0; i < element.length; i++) {\n";
-		echo "        if (element.options[i].value != '')\n";
-		echo "          element.options[i].selected = true;\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    //]]>\n";
-		echo "    </script>\n";
-		echo "    <select name='{$ctrlname}[]' class='formfld' id='{$ctrlname}' multiple='multiple' size='4' style='width: 350px' onchange='onchange_{$ctrlname}()'>\n";
-		foreach ($value as $valuek => $valuev) {
-			echo "      <option value='{$valuev}' {$optparam}>{$valuev}</option>\n";
-		}
-		echo "    </select>\n";
-		echo "    <input name='{$ctrlname}deletebtn' type='button' class='formbtn' id='{$ctrlname}deletebtn' value='".gtext("Delete")."' onclick='onclick_delete_{$ctrlname}()' /><br />\n";
-		echo "    <input name='{$ctrlname}data' type='text' class='formfld' id='{$ctrlname}data' size='60' value='' />\n";
-		echo "    <input name='{$ctrlname}browsebtn' type='button' class='formbtn' id='{$ctrlname}browsebtn' onclick='ifield = form.{$ctrlname}data; filechooser = window.open(\"filechooser.php?p=\"+encodeURIComponent(ifield.value)+\"&amp;sd={$path}\", \"filechooser\", \"scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300\"); filechooser.ifield = ifield; window.ifield = ifield;' value='...' />\n";
-		echo "    <input name='{$ctrlname}addbtn' type='button' class='formbtn' id='{$ctrlname}addbtn' value='".gtext("Add")."' onclick='onclick_add_{$ctrlname}()' />\n";
-		echo "    <input name='{$ctrlname}changebtn' type='button' class='formbtn' id='{$ctrlname}changebtn' value='".gtext("Change")."' onclick='onclick_change_{$ctrlname}()' />\n";
+		//	control code for folders
+		$t = [];
+		$t[] = '//<![CDATA[';
+		$t[] = 'function onchange_' . $ctrlname . '() {';
+		$t[] = "\t" . 'document.getElementById("' . $ctrlnamedata . '").value = document.getElementById("' . $ctrlname . '").value;';
+		$t[] = '}';
+		$t[] = 'function onclick_add_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var value = document.getElementById("' . $ctrlnamedata . '").value;';
+		$t[] = "\t" . 'if (value != "") {';
+		$t[] = "\t\t" . 'var found = false;';
+		$t[] = "\t\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t\t" . 'for (var i = 0; i < element.length; i++) {';
+		$t[] = "\t\t\t" . 'if (element.options[i].text == value) {';
+		$t[] = "\t\t\t\t" . 'found = true;';
+		$t[] = "\t\t\t\t" . 'break;';
+		$t[] = "\t\t\t" . '}';
+		$t[] = "\t\t" . '}';
+		$t[] = "\t\t" . 'if (found != true) {';
+		$t[] = "\t\t\t" . 'element.options[element.length] = new Option(value, value, false, true);';
+		$t[] = "\t\t\t" . 'document.getElementById("' . $ctrlnamedata . '").value = "";';
+		$t[] = "\t\t" . '}';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onclick_delete_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'if (element.value != "") {';
+		$t[] = "\t\t" . 'var msg = confirm("' . gtext('Do you really want to remove the selected item from the list?') . '");';
+		$t[] = "\t\t" . 'if (msg == true) {';
+		$t[] = "\t\t\t" . 'element.options[element.selectedIndex] = null;';
+		$t[] = "\t\t\t" . 'document.getElementById("' . $ctrlnamedata . '").value = "";';
+		$t[] = "\t\t" . '}';
+		$t[] = "\t" . '} else {';
+		$t[] = "\t\t" . 'alert("' . gtext('Select item to remove from the list') . '");';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onclick_change_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'if (element.value != "") {';
+		$t[] = "\t\t" . 'var value = document.getElementById("' . $ctrlnamedata . '").value;';
+		$t[] = "\t\t" . 'element.options[element.selectedIndex].text = value;';
+		$t[] = "\t\t" . 'element.options[element.selectedIndex].value = value;';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onsubmit_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'for (var i = 0; i < element.length; i++) {';
+		$t[] = "\t\t" . 'if (element.options[i].value != "")';
+		$t[] = "\t\t\t" . 'element.options[i].selected = true;';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = '//]]>';
+		$attributes = [
+			'type' => 'text/javascript'
+		];
+		$root->addElement('script',$attributes,implode("\n",$t));
+		//	selected folder
+		$attributes = [
+			'id' => $ctrlname,
+			'name' => sprintf('%s[]',$ctrlname),
+			'class' => 'formfld',
+			'multiple' => 'multiple',
+			'size' => '4',
+			'style' => 'width:350px',
+			'onchange' => sprintf('onchange_%s()',$ctrlname)
+		];
+		$select = $root->addElement('select',$attributes);
+		foreach ($value as $value_key => $value_val):
+			$attributes = [
+				'value' => $value_val,
+			];
+			$select->addElement('option',$attributes,$value_val);
+		endforeach;
+		//	delete button
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%sdeletebtn',$ctrlname),
+			'name' => sprintf('%sdeletebtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => gtext('Delete'),
+			'onclick' => sprintf('onclick_delete_%s()',$ctrlname)
+//			<br />			
+		];
+		$root->addElement('input',$attributes);
+		//	path input field
+		$attributes = [
+			'type' => 'text',
+			'id' => sprintf('%sdata',$ctrlname),
+			'name' => sprintf('%sdata',$ctrlname),
+			'class' => 'formfld',
+			'value' => '',
+			'size' => 60
+		];			
+		$root->addElement('input',$attributes);
+		//	choose button
+		$js = sprintf('ifield = form.%s;',$ctrlnamedata)
+			. ' filechooser = window.open("filechooser.php'
+			. '?p="+encodeURIComponent(ifield.value)+"'
+			. sprintf('&sd=%s",',$this->GetPath())
+			. ' "filechooser",'
+			. ' "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300");'
+			. ' filechooser.ifield = ifield;'
+			. ' window.ifield = ifield;';
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%sbrowsebtn',$ctrlname),
+			'name' => sprintf('%sbrowsebtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => '...',
+			'onclick' => $js
+		];
+		$root->addElement('input',$attributes);
+		//	add button
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%saddbtn',$ctrlname),
+			'name' => sprintf('%saddbtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => gtext('Add'),
+			'onclick' => sprintf('onclick_add_%s()',$ctrlname) 
+		];
+		$root->addElement('input',$attributes);
+		//	change button
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%schangebtn',$ctrlname),
+			'name' => sprintf('%schangebtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => gtext('Change'),
+			'onclick' => sprintf('onclick_change_%s()',$ctrlname) 
+		];
+		$root->addElement('input',$attributes);
+		//	showtime
+		echo $root->render();
 	}
 }
 class HTMLFolderBox12 extends HTMLFolderBox2 {
 	function RenderCtrl() {
+		//	root DOM
+		$root = new co_DOMDocument();
+		//	helping variables
 		$ctrlname = $this->GetCtrlName();
+		$ctrlnamedata = $ctrlname . 'data';
+		$ctrlnamefiletype = $ctrlname . 'filetype';
 		$value = $this->GetValue();
-		$path = $this->GetPath();
-
-		echo "    <script type='text/javascript'>\n";
-		echo "    //<![CDATA[\n";
-		echo "    function onchange_{$ctrlname}() {\n";
-		echo "      var value1 = document.getElementById('{$ctrlname}');\n";
-		echo "      if (value1.value.charAt(0) != '/') {\n";
-		echo "      document.getElementById('{$ctrlname}data').value = value1.value.substring(2,(value1.value.length));\n";
-		echo "      document.getElementById('{$ctrlname}filetype').value = value1.value.charAt(0);\n";
-		echo "        }else{\n";
-		echo "      document.getElementById('{$ctrlname}data').value = document.getElementById('{$ctrlname}').value;\n";
-		echo "      document.getElementById('{$ctrlname}filetype').value = '';\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onclick_add_{$ctrlname}() {\n";
-		echo "      var value1 = document.getElementById('{$ctrlname}data').value;\n";
-		echo "      var valuetype = document.getElementById('{$ctrlname}filetype').value;\n";
-		echo "      if (valuetype != '') {\n";
-		echo "      var valuetype = valuetype + ',';\n";
-		echo "          }\n";
-		echo "      var value = valuetype +  value1;\n";
-		echo "      if (value != '') {\n";
-		echo "        var found = false;\n";
-		echo "        var element = document.getElementById('{$ctrlname}');\n";
-		echo "        for (var i = 0; i < element.length; i++) {\n";
-		echo "          if (element.options[i].text == value) {\n";
-		echo "            found = true;\n";
-		echo "            break;\n";
-		echo "          }\n";
-		echo "        }\n";
-		echo "        if (found != true) {\n";
-		echo "          element.options[element.length] = new Option(value, value, false, true);\n";
-		echo "          document.getElementById('{$ctrlname}data').value = '';\n";
-		echo "        }\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onclick_delete_{$ctrlname}() {\n";
-		echo "      var element = document.getElementById('{$ctrlname}');\n";
-		echo "      if (element.value != '') {\n";
-		echo "        var msg = confirm('".gtext("Do you really want to remove the selected item from the list?")."');\n";
-		echo "        if (msg == true) {\n";
-		echo "          element.options[element.selectedIndex] = null;\n";
-		echo "          document.getElementById('{$ctrlname}data').value = '';\n";
-		echo "        }\n";
-		echo "      } else {\n";
-		echo "        alert('".gtext("Select item to remove from the list")."');\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onclick_change_{$ctrlname}() {\n";
-		echo "      var element = document.getElementById('{$ctrlname}');\n";
-		echo "      if (element.value != '') {\n";
-		echo "        var value1 = document.getElementById('{$ctrlname}data').value;\n";
-		echo "      var valuetype = document.getElementById('{$ctrlname}filetype').value;\n";
-		echo "      if (valuetype != '') {\n";
-		echo "      var valuetype = valuetype + ',';\n";
-		echo "          }\n";
-		echo "      var value = valuetype +  value1;\n";
-		echo "        element.options[element.selectedIndex].text = value;\n";
-		echo "        element.options[element.selectedIndex].value = value;\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    function onsubmit_{$ctrlname}() {\n";
-		echo "      var element = document.getElementById('{$ctrlname}');\n";
-		echo "      for (var i = 0; i < element.length; i++) {\n";
-		echo "        if (element.options[i].value != '')\n";
-		echo "          element.options[i].selected = true;\n";
-		echo "      }\n";
-		echo "    }\n";
-		echo "    //]]>\n";
-		echo "    </script>\n";
-		echo "    <select name='{$ctrlname}[]' class='formfld' id='{$ctrlname}' multiple='multiple'  style='width: 350px' onchange='onchange_{$ctrlname}()'>\n";
-		foreach ($value as $valuek => $valuev) {
-			echo "      <option value='{$valuev}' {$optparam}>{$valuev}</option>\n";
-		}
-		echo "    </select>\n";
-		echo "    <input name='{$ctrlname}deletebtn' type='button' class='formbtn' id='{$ctrlname}deletebtn' value='".gtext("Delete")."' onclick='onclick_delete_{$ctrlname}()' /><br />\n";
-		echo "    <select name='{$ctrlname}filetype' class='formfld' id='{$ctrlname}filetype' > ";
-		echo "			<option value=''>".gtext("All")."</option>";
-		echo "			<option value='A'>".gtext("Audio")."</option>";
-		echo "			<option value='V'>".gtext("Video")."</option>";
-		echo "  		<option value='P'>".gtext("Pictures")."</option>";
-		echo "    </select>";
-
-		echo "    <input name='{$ctrlname}data' type='text' class='formfld' id='{$ctrlname}data' size='60' value='' />\n";
-		echo "    <input name='{$ctrlname}browsebtn' type='button' class='formbtn' id='{$ctrlname}browsebtn' onclick='ifield = form.{$ctrlname}data; filechooser = window.open(\"filechooser.php?p=\"+encodeURIComponent(ifield.value)+\"&amp;sd={$path}\", \"filechooser\", \"scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300\"); filechooser.ifield = ifield; window.ifield = ifield;' value='...' />\n";
-		echo "    <input name='{$ctrlname}addbtn' type='button' class='formbtn' id='{$ctrlname}addbtn' value='".gtext("Add")."' onclick='onclick_add_{$ctrlname}()' />\n";
-		echo "    <input name='{$ctrlname}changebtn' type='button' class='formbtn' id='{$ctrlname}changebtn' value='".gtext("Change")."' onclick='onclick_change_{$ctrlname}()' />\n";
+		//	control code for folders
+		$t = [];
+		$t[] = '//<![CDATA[';
+		$t[] = 'function onchange_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var value1 = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'if (value1.value.charAt(0) != "/") {';
+		$t[] = "\t" . 'document.getElementById("' . $ctrlnamedata . '").value = value1.value.substring(2,(value1.value.length));';
+		$t[] = "\t" . 'document.getElementById("' . $ctrlnamefiletype . '").value = value1.value.charAt(0);';
+		$t[] = "\t\t" . '}else{';
+		$t[] = "\t" . 'document.getElementById("' . $ctrlnamedata . '").value = document.getElementById("' . $ctrlname . '").value;';
+		$t[] = "\t" . 'document.getElementById("' . $ctrlnamefiletype . '").value = "";';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onclick_add_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var value1 = document.getElementById("' . $ctrlnamedata . '").value;';
+		$t[] = "\t" . 'var valuetype = document.getElementById("' . $ctrlnamefiletype . '").value;';
+		$t[] = "\t" . 'if (valuetype != "") {';
+		$t[] = "\t\t" . 'var valuetype = valuetype + ",";';
+		$t[] = "\t" . '}';
+		$t[] = "\t" . 'var value = valuetype +  value1;';
+		$t[] = "\t" . 'if (value != "") {';
+		$t[] = "\t\t" . 'var found = false;';
+		$t[] = "\t\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t\t" . 'for (var i = 0; i < element.length; i++) {';
+		$t[] = "\t\t\t" . 'if (element.options[i].text == value) {';
+		$t[] = "\t\t\t\t" . 'found = true;';
+		$t[] = "\t\t\t\t" . 'break;';
+		$t[] = "\t\t\t" . '}';
+		$t[] = "\t\t" . '}';
+		$t[] = "\t\t" . 'if (found != true) {';
+		$t[] = "\t\t\t" . 'element.options[element.length] = new Option(value, value, false, true);';
+		$t[] = "\t\t\t" . 'document.getElementById("' . $ctrlnamedata . '").value = "";';
+		$t[] = "\t\t" . '}';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onclick_delete_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'if (element.value != "") {';
+		$t[] = "\t\t" . 'var msg = confirm("' . gtext('Do you really want to remove the selected item from the list?') . '");';
+		$t[] = "\t\t" . 'if (msg == true) {';
+		$t[] = "\t\t\t" . 'element.options[element.selectedIndex] = null;';
+		$t[] = "\t\t\t" . 'document.getElementById("' . $ctrlnamedata . '").value = "";';
+		$t[] = "\t\t" . '  }';
+		$t[] = "\t" . '} else {';
+		$t[] = "\t\t" . 'alert("' . gtext('Select item to remove from the list') . '");';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onclick_change_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'if (element.value != "") {';
+		$t[] = "\t\t" . 'var value1 = document.getElementById("' . $ctrlnamedata . '").value;';
+		$t[] = "\t" . 'var valuetype = document.getElementById("' . $ctrlnamefiletype . '").value;';
+		$t[] = "\t" . 'if (valuetype != "") {';
+		$t[] = "\t\t" . 'var valuetype = valuetype + ",";';
+		$t[] = "\t" . '}';
+		$t[] = "\t" . 'var value = valuetype +  value1;';
+		$t[] = "\t\t" . 'element.options[element.selectedIndex].text = value;';
+		$t[] = "\t\t" . 'element.options[element.selectedIndex].value = value;';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = 'function onsubmit_' . $ctrlname . '() {';
+		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t" . 'for (var i = 0; i < element.length; i++) {';
+		$t[] = "\t\t" . 'if (element.options[i].value != "")';
+		$t[] = "\t\t\t" . 'element.options[i].selected = true;';
+		$t[] = "\t" . '}';
+		$t[] = '}';
+		$t[] = '//]]>';
+		$attributes = [
+			'type' => 'text/javascript'
+		];
+		$root->addElement('script',$attributes,implode("\n",$t));
+		//	selected folder
+		$attributes = [
+			'id' => $ctrlname,
+			'name' => sprintf('%s[]',$ctrlname),
+			'class' => 'formfld',
+			'multiple' => 'multiple',
+			'style' => 'width:350px',
+			'onchange' => sprintf('onchange_%s()',$ctrlname)
+		];
+		$select = $root->addElement('select',$attributes);
+		foreach ($value as $value_key => $value_val):
+			$attributes = [
+				'value' => $value_val,
+			];
+			$select->addElement('option',$attributes,$value_val);
+		endforeach;
+		//	delete button
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%sdeletebtn',$ctrlname),
+			'name' => sprintf('%sdeletebtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => gtext('Delete'),
+			'onclick' => sprintf('onclick_delete_%s()',$ctrlname)
+//			<br />			
+		];
+		$root->addElement('input',$attributes);
+		//	media type
+		$attributes = [
+			'id' => sprintf('%sfiletype',$ctrlname),
+			'name' => sprintf('%sfiletype',$ctrlname),
+			'class' => 'formfld'
+		];
+		$select = $root->addElement('select',$attributes);
+		$attribute = ['value' => ''];
+		$select->addElement('option',$attributes,gtext('All'));
+		$attribute = ['value' => 'A'];
+		$select->addElement('option',$attributes,gtext('Audio'));
+		$attribute = ['value' => 'V'];
+		$select->addElement('option',$attributes,gtext('Video'));
+		$attribute = ['value' => 'P'];
+		$select->addElement('option',$attributes,gtext('Pictures'));
+		//	path input field
+		$attributes = [
+			'type' => 'text',
+			'id' => sprintf('%sdata',$ctrlname),
+			'name' => sprintf('%sdata',$ctrlname),
+			'class' => 'formfld',
+			'value' => '',
+			'size' => 60
+		];			
+		$root->addElement('input',$attributes);
+		//	choose button
+		$js = sprintf('ifield = form.%s;',$ctrlnamedata)
+			. ' filechooser = window.open("filechooser.php'
+			. '?p="+encodeURIComponent(ifield.value)+"'
+			. sprintf('&sd=%s",',$this->GetPath())
+			. ' "filechooser",'
+			. ' "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300");'
+			. ' filechooser.ifield = ifield;'
+			. ' window.ifield = ifield;';
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%sbrowsebtn',$ctrlname),
+			'name' => sprintf('%sbrowsebtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => '...',
+			'onclick' => $js
+		];
+		$root->addElement('input',$attributes);
+		//	add button
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%saddbtn',$ctrlname),
+			'name' => sprintf('%saddbtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => gtext('Add'),
+			'onclick' => sprintf('onclick_add_%s()',$ctrlname) 
+		];
+		$root->addElement('input',$attributes);
+		//	change button
+		$attributes = [
+			'type' => 'button',
+			'id' => sprintf('%schangebtn',$ctrlname),
+			'name' => sprintf('%schangebtn',$ctrlname),
+			'class' => 'formbtn',
+			'value' => gtext('Change'),
+			'onclick' => sprintf('onclick_change_%s()',$ctrlname) 
+		];
+		$root->addElement('input',$attributes);
+		//	showtime
+		echo $root->render();
 	}
 }
 class co_DOMElement extends DOMElement {
@@ -977,8 +1451,8 @@ class co_DOMElement extends DOMElement {
 		}
 		return $this;
 	}
-	public function addElement(string $name, array $attributes = [], string $value = NULL, string $namespaceURI = NULL) {
-		$node = $this->appendChild(new co_DOMElement($name, $value, $namespaceURI));
+	public function addElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
+		$node = $this->appendChild(new co_DOMElement($name,$value,$namespaceURI));
 		$node->addAttributes($attributes);
 		return $node;
 	}

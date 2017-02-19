@@ -337,9 +337,8 @@ switch($mode_page):
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	$("#iform").submit(function() {
-		spinner();
-	});
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 //]]>
 </script>
@@ -354,6 +353,7 @@ $(window).on("load", function() {
 		onsubmit_content();
 		spinner();
 	});
+	$(".spin").click(function() { spinner(); });
 	$("#button_save").click(function () {
 		return confirm("<?=$gt_button_apply_confirm;?>");
 	});
@@ -400,19 +400,19 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_text2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_text2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
-					html_text2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
-					html_text2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
-					html_text2('notify_int',gtext('Broadcast Interval'), htmlspecialchars($sphere->row['notify_int']));
-					html_text2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
+					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					html_textinfo2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
+					html_textinfo2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
+					html_textinfo2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
+					html_textinfo2('notify_int',gtext('Broadcast Interval'), htmlspecialchars($sphere->row['notify_int']));
+					html_textinfo2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
 					$helpinghand = implode("\n",$sphere->row['content']);
 					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
 					html_checkbox2('inotify',gtext('Inotify'),$sphere->row['inotify'],'','',false,true);
-					html_text2('container',gtext('Container'),$l_container[$sphere->row['container']] ?? '');
+					html_textinfo2('container',gtext('Container'),$l_container[$sphere->row['container']] ?? '');
 					html_checkbox2('strict',gtext('Strict DLNA'),$sphere->row['strict'],'','',false,true);
 					html_checkbox2('tivo',gtext('TiVo Support'),$sphere->row['tivo'],'','',false,true);
-					html_text2('loglevel',gtext('Log Level'),$l_loglevel[$sphere->row['loglevel']] ?? '');
+					html_textinfo2('loglevel',gtext('Log Level'),$l_loglevel[$sphere->row['loglevel']] ?? '');
 					break;
 				case PAGE_MODE_EDIT:
 					html_inputbox2('name',gtext('Name'),$sphere->row['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));

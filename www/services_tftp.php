@@ -260,17 +260,17 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_text2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_text2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']));
+					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					html_textinfo2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']));
 					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->row['allowfilecreation'],'','',false,true);
 					html_separator2();
 					html_titleline2(gtext('Advanced Settings'));
-					html_text2('port',gtext('Port'),htmlspecialchars($sphere->row['port']));
-					html_text2('username',gtext('Username'),htmlspecialchars($sphere->row['username']));
-					html_text2('umask',gtext('Umask'),htmlspecialchars($sphere->row['umask']));
-					html_text2('timeout',gtext('Timeout'),htmlspecialchars($sphere->row['timeout']));
-					html_text2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->row['maxblocksize']));
-					html_text2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->row['extraoptions']));
+					html_textinfo2('port',gtext('Port'),htmlspecialchars($sphere->row['port']));
+					html_textinfo2('username',gtext('Username'),htmlspecialchars($sphere->row['username']));
+					html_textinfo2('umask',gtext('Umask'),htmlspecialchars($sphere->row['umask']));
+					html_textinfo2('timeout',gtext('Timeout'),htmlspecialchars($sphere->row['timeout']));
+					html_textinfo2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->row['maxblocksize']));
+					html_textinfo2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->row['extraoptions']));
 					break;
 				case PAGE_MODE_EDIT:
 					html_filechooser2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']),gtext('The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer.'),$g['media_path'],true,60);
