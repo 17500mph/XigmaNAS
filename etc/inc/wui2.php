@@ -278,20 +278,6 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 		return $this->_size;
 	}
 	//	support methods
-	function GetParam() {
-		$param = [];
-		if(true === $this->GetReadOnly()):
-			$param[] = 'readonly="readonly"';
-		endif;
-		if(preg_match('/\S/',$this->GetPlaceholder())):
-			$param[] = sprintf('placeholder="%s"',$this->GetPlaceholder());
-		endif;
-		$tagval = $this->GetMaxLength();
-		if($tagval > 0):
-			$param[] = sprintf('maxlength="%d"',$tagval);
-		endif;
-		return implode(' ',$param);
-	}
 	function GetAttributes(array &$attributes = []) {
 		if(true === $this->GetReadOnly()):
 			$attributes['readonly'] = 'readonly';
@@ -430,7 +416,7 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'name' => $ctrlnameconf,
 			'class' => $this->GetClassOfInputPassword(),
 			'size' => $this->GetSize(),
-			'value' => htmlspecialchars($this->GetValueConf(), ENT_QUOTES)
+			'value' => htmlspecialchars($this->GetValueConf(),ENT_QUOTES)
 		];
 		$this->GetAttributesConfirm($attributes);
 		$o_div2 = $root->addElement('div');
@@ -485,17 +471,12 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 		return $this->_wrap;
 	}
 	//	support methods
-	function GetParam() {
-		$param = parent::GetParam();
-		if (false === $this->GetWrap()):
-			$param .= ' wrap="soft"';
-		endif;
-		return $param;
-	}
 	function GetAttributes(array &$attributes = []) {
 		parent::GetAttributes($attributes);
 		if(false === $this->GetWrap()):
 			$attributes['wrap'] = 'soft';
+		else:
+			$attributes['wrap'] = 'hard';
 		endif;
 		return $attributes;
 	}
@@ -520,7 +501,7 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 }
 class HTMLFileChooser2 extends HTMLEditBox2 {
 	var $_path = '';
-	function __construct($ctrlname, $title, $value, $description, $size = 60) {
+	function __construct($ctrlname,$title,$value,$description,$size = 60) {
 		parent::__construct($ctrlname,$title,$value,$description,$size);
 	}
 	function SetPath($path) {
@@ -575,7 +556,7 @@ class HTMLIPAddressBox2 extends HTMLEditBox2 {
 	var $_ctrlnamenetmask = '';
 	var $_valuenetmask = '';
 	//	constructor
-	function __construct($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $description) {
+	function __construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetCtrlNameNetmask($ctrlnamenetmask);
 		$this->SetTitle($title);
@@ -610,13 +591,13 @@ class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamenetmask = $this->GetCtrlNameNetmask();
 		$valuenetmask = htmlspecialchars($this->GetValueNetmask(),ENT_QUOTES);
-		$attributes = ['type' => 'text','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => htmlspecialchars($this->GetValue(), ENT_QUOTES),'size' => $this->GetSize()];
+		$attributes = ['type' => 'text','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),'size' => $this->GetSize()];
 		$root->addElement('input',$attributes);
 		$o_slash = $root->createTextNode(' / ');
 		$root->appendChild($o_slash);
 		$attributes = ['id' => $ctrlnamenetmask,'name' => $ctrlnamenetmask,'class' => 'formfld'];
 		$o_select = $root->addElement('select',$attributes);
-		foreach(range(1, 32) as $netmask):
+		foreach(range(1,32) as $netmask):
 			$attributes = ['value' => $netmask];
 			if($netmask == $valuenetmask):
 				$attributes['selected'] = 'selected';
@@ -643,7 +624,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'id' => $ctrlname,
 			'name' => $ctrlname,
 			'class' => 'formfld',
-			'value' => htmlspecialchars($this->GetValue(), ENT_QUOTES),
+			'value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),
 			'size' => $this->GetSize()
 		];
 		$root->addElement('input',$attributes);
@@ -654,7 +635,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'id' => $ctrlnamenetmask,
 			'name' => $ctrlnamenetmask,
 			'class' => 'formfld',
-			'value' => htmlspecialchars($this->GetValueNetmask(), ENT_QUOTES),
+			'value' => htmlspecialchars($this->GetValueNetmask(),ENT_QUOTES),
 			'size' => 2
 		];
 		$root->addElement('input',$attributes);
@@ -666,8 +647,8 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 	var $_classcheckbox = 'celldatacheckbox';
 	var $_classcheckboxro = 'celldatacheckbox';
 	//	constructor
-	function __construct($ctrlname, $title, $value, $caption, $description = "") {
-		parent::__construct($ctrlname, $title, $value, $description);
+	function __construct($ctrlname,$title,$value,$caption,$description = '') {
+		parent::__construct($ctrlname,$title,$value,$description);
 		$this->SetCaption($caption);
 	}
 	//	get/set methods
@@ -696,20 +677,6 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 		return $this->_classcheckboxro;
 	}
 	//	support methods
-	function GetParam() {
-		$a_param = [];
-		if(true === $this->IsChecked()):
-			$a_param[] = 'checked="checked"';
-		endif;
-		if(true === $this->GetReadOnly()):
-			$a_param[] = 'disabled="disabled"';
-		endif;
-		$onclick = $this->GetJSonClick();
-		if(!empty($onclick)):
-			$a_param[] = 'onclick="' . $onclick . '"';
-		endif;
-		return implode(' ',$a_param);
-	}
 	function GetAttributes(array &$attributes = []) {
 		if(true === $this->IsChecked()):
 			$attributes['checked'] = 'checked';
@@ -761,17 +728,6 @@ class HTMLSelectControl2 extends HTMLBaseControlJS2 {
 	}
 	function GetOptions() {
 		return $this->_options;
-	}
-	function GetParam() {
-		$a_param = [];
-		if(true === $this->GetReadOnly()):
-			$a_param[] = 'disabled="disabled"';
-		endif;
-		$onclick = $this->GetJSonClick();
-		if(!empty($onclick)):
-			$a_param[] = sprintf('onclick="%s"',$onclick);
-		endif;
-		return implode(' ',$a_param);
 	}
 	function GetAttributes(array &$attributes = []) {
 		if(true === $this->GetReadOnly()):
@@ -907,7 +863,7 @@ class HTMLInterfaceComboBox2 extends HTMLComboBox2 {
 				$options['opt' . $i] = $config['interfaces']['opt' . $i]['descr'];
 			endif;
 		endfor;
-		parent::__construct($ctrlname,$title, $value,$options,$description);
+		parent::__construct($ctrlname,$title,$value,$options,$description);
 	}
 }
 class HTMLListBox2 extends HTMLMultiSelectControl2 {
@@ -1010,8 +966,8 @@ class HTMLTitleLine2 extends HTMLBaseControl2 {
 class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 	var $_colspan = 2;
 	//	constructor
-	function __construct($ctrlname, $title, $value, $caption) {
-		parent::__construct($ctrlname, $title, $value, $caption);
+	function __construct($ctrlname,$title,$value,$caption) {
+		parent::__construct($ctrlname,$title,$value,$caption);
 	}
 	//	get/set methods
 	function SetColSpan($colspan) {
@@ -1447,7 +1403,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 class co_DOMElement extends DOMElement {
 	public function addAttributes($attributes = []) {
 		foreach($attributes as $key => $value) {
-			$this->setAttribute($key, $value);
+			$this->setAttribute($key,$value);
 		}
 		return $this;
 	}
@@ -1458,13 +1414,13 @@ class co_DOMElement extends DOMElement {
 	}
 }
 class co_DOMDocument extends DOMDocument {
-	public function __construct(string $version = '1.0', string $encoding = 'UTF-8') {
-		parent::__construct($version, $encoding);
+	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
+		parent::__construct($version,$encoding);
 		$this->formatOutput = true;
-		$this->registerNodeClass('DOMElement', 'co_DOMElement');
+		$this->registerNodeClass('DOMElement','co_DOMElement');
 	}
-	public function addElement(string $name, array $attributes = [], string $value = NULL, string $namespaceURI = NULL) {
-		$node = $this->appendChild(new co_DOMElement($name, $value, $namespaceURI));
+	public function addElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
+		$node = $this->appendChild(new co_DOMElement($name,$value,$namespaceURI));
 		$node->addAttributes($attributes);
 		return $node;
 	}
