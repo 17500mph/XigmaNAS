@@ -284,9 +284,8 @@ switch($mode_page):
 //<![CDATA[
 $(window).on("load", function() {
 	// Init onsubmit()
-	$("#iform").submit(function() {
-		spinner();
-	});
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 //]]>
 </script>
@@ -302,6 +301,7 @@ $(window).on("load", function() {
 		onsubmit_content();
 		spinner();
 	});
+	$(".spin").click(function() { spinner(); });
 	$("#button_save").click(function () {
 		return confirm('<?=$gt_button_apply_confirm;?>');
 	});
@@ -368,22 +368,22 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_text2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_text2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
-					html_text2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
-					html_text2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
-					html_text2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
+					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					html_textinfo2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
+					html_textinfo2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
+					html_textinfo2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
+					html_textinfo2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
 					$helpinghand = implode("\n",$sphere->row['content']);
 					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
-					html_text2('profile',gtext('Profile'),$l_dlna[$sphere->row['profile']] ?? '');
+					html_textinfo2('profile',gtext('Profile'),$l_dlna[$sphere->row['profile']] ?? '');
 					switch($sphere->row['profile']):
 						case 'Terratec_Noxon_iRadio':
-							html_text2('deviceip',gtext('Device IP'), htmlspecialchars($sphere->row['deviceip']));
+							html_textinfo2('deviceip',gtext('Device IP'), htmlspecialchars($sphere->row['deviceip']));
 							break;
 					endswitch;
 					html_checkbox2('transcoding',gtext('Transcoding'),$sphere->row['transcoding'],'','',false,true);
 					if($sphere->row['transcoding']):
-						html_text2('tempdir',gtext('Transcoding Directory'),htmlspecialchars($sphere->row['tempdir']));
+						html_textinfo2('tempdir',gtext('Transcoding Directory'),htmlspecialchars($sphere->row['tempdir']));
 					endif;
 					break;
 				case PAGE_MODE_EDIT:

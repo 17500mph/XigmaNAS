@@ -41,7 +41,7 @@ if (isset($omit_nocacheheaders) && $omit_nocacheheaders) {
 	header("Expires: 0");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	header("Cache-Control: no-store, no-cache, must-revalidate");
-	header("Cache-Control: post-check=0, pre-check=0", false);
+	header("Cache-Control: post-check=0, pre-check=0",false);
 	header("Pragma: no-cache");
 }
 
@@ -89,20 +89,20 @@ $savemsg = "";
 /* AJAX misc */
 function is_ajax() {
 	if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-		if (strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'], 'XMLHttpRequest') == 0) {
+		if (strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'],'XMLHttpRequest') == 0) {
 			return true;
 		}
 	}
 	return false;
 }
 
-function render_ajax($data, $result = 0) {
+function render_ajax($data,$result = 0) {
 	$a = ['result' => $result];
 	if (isset($data)) {
 		if (is_array($data)) {
-			$a = array_merge($a, $data);
+			$a = array_merge($a,$data);
 		} else {
-			$a = array_merge($a, ['data' => $data]);
+			$a = array_merge($a,['data' => $data]);
 		}
 	}
 	header("Content-Type: application/json; UTF-8\n");
@@ -111,23 +111,23 @@ function render_ajax($data, $result = 0) {
 }
 
 
-function do_input_validation($postdata, $reqdfields, $reqdfieldsn, &$input_errors) {
+function do_input_validation($postdata,$reqdfields,$reqdfieldsn,&$input_errors) {
 	/* check for bad control characters */
 	foreach ($postdata as $pn => $pd) {
-		if (is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/", $pd)) {
-			$input_errors[] = sprintf( gtext("The attribute '%s' contains invalid characters."), $pn);
+		if (is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/",$pd)) {
+			$input_errors[] = sprintf( gtext("The attribute '%s' contains invalid characters."),$pn);
 		}
 	}
 
 	for ($i = 0; $i < count($reqdfields); $i++) {
 		if (!isset($postdata[$reqdfields[$i]]) || ($postdata[$reqdfields[$i]] === "")) {
-			$input_errors[] = sprintf( gtext("The attribute '%s' is required."), $reqdfieldsn[$i]);
+			$input_errors[] = sprintf( gtext("The attribute '%s' is required."),$reqdfieldsn[$i]);
 		}
 	}
 }
 
 /* Validate attribute type. */
-function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfieldst, &$input_errors) {
+function do_input_validation_type($postdata,$reqdfields,$reqdfieldsn,$reqdfieldst,&$input_errors) {
 	/* Validate type. */
 	for ($i = 0; $i < count($reqdfields); $i++) {
 		if (isset($postdata[$reqdfields[$i]]) && ($postdata[$reqdfields[$i]] !== "")) {
@@ -137,83 +137,83 @@ function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfie
 			switch($reqdfieldst[$i]) {
 				case 'string':
 					$valid = is_string($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' must be a string."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' must be a string."),$reqdfieldsn[$i]);
 					break;
 				case 'numeric':
 					$valid = is_numeric($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' must be a number."),$reqdfieldsn[$i]);
 					break;
 				case 'numericint':
 					$valid = is_numericint($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' must be a number."),$reqdfieldsn[$i]);
 					break;
 				case 'ipaddr':
 					$valid = is_ipaddr($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' is not a valid IP address."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid IP address."),$reqdfieldsn[$i]);
 					break;
 				case 'macaddr':
 					$valid = is_macaddr($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' is not a valid MAC address."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid MAC address."),$reqdfieldsn[$i]);
 					break;
 				case 'subnet':
 					$valid = is_subnet($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' is not a valid subnet mask."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid subnet mask."),$reqdfieldsn[$i]);
 					break;
 				case 'domain':
 					$valid = is_domain($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid domain name."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid domain name."),$reqdfieldsn[$i]);
 					break;
 				case 'netbios':
 					$valid = is_netbios($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid NetBIOS name."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid NetBIOS name."),$reqdfieldsn[$i]);
 					break;
 				case 'hostname':
 					$valid = is_hostname($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid host name."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid host name."),$reqdfieldsn[$i]);
 					break;
 				case 'workgroup':
 					$valid = is_workgroup($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid workgroup name."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid workgroup name."),$reqdfieldsn[$i]);
 					break;
 				case 'filemode':
 					$valid = is_filemode($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' is not a valid file mode mask."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid file mode mask."),$reqdfieldsn[$i]);
 					break;
 				case 'mtu':
 					$valid = is_mtu($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' is invalid."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' is invalid."),$reqdfieldsn[$i]);
 					break;
 				case 'port':
 					$valid = is_port($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' is an invalid port number."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' is an invalid port number."),$reqdfieldsn[$i]);
 					break;
 				case 'password':
 					$valid = is_validpassword($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' contains the illegal character ':' and is not a valid password."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' contains the illegal character ':' and is not a valid password."),$reqdfieldsn[$i]);
 					break;
 				case 'certificate':
 					$valid = is_valid_certificate($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid certificate."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid certificate."),$reqdfieldsn[$i]);
 					break;
 				case 'privatekey':
-					$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "RSA");
-					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private key."), $reqdfieldsn[$i]);
+					$valid = is_valid_privatekey($postdata[$reqdfields[$i]],"RSA");
+					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private key."),$reqdfieldsn[$i]);
 					break;
 				case 'privatedsakey':
-					$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "DSA");
-					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private %s key."), $reqdfieldsn[$i], "DSA");
+					$valid = is_valid_privatekey($postdata[$reqdfields[$i]],"DSA");
+					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private %s key."),$reqdfieldsn[$i],"DSA");
 					break;
 				case 'alias':
 					$valid = is_validaliasname($postdata[$reqdfields[$i]]);
-					$message = sprintf( gtext("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."),$reqdfieldsn[$i]);
 					break;
 				case 'time':
-					$valid = (FALSE !== strptime($postdata[$reqdfields[$i]], "%H:%M:%S"));
-					$message = sprintf( gtext("The attribute '%s' is not a valid time value."), $reqdfieldsn[$i]);
+					$valid = (FALSE !== strptime($postdata[$reqdfields[$i]],"%H:%M:%S"));
+					$message = sprintf( gtext("The attribute '%s' is not a valid time value."),$reqdfieldsn[$i]);
 					break;
 				case 'array':
 					$valid = (is_array($postdata[$reqdfields[$i]]) && !empty($postdata[$reqdfields[$i]]));
-					$message = sprintf( gtext("The attribute '%s' must contain at least one entry."), $reqdfieldsn[$i]);
+					$message = sprintf( gtext("The attribute '%s' must contain at least one entry."),$reqdfieldsn[$i]);
 					break;
 			}
 			if (!$valid) {
@@ -223,18 +223,18 @@ function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfie
 	}
 }
 
-function do_input_validate_synctime($postdata, &$input_errors) {
+function do_input_validate_synctime($postdata,&$input_errors) {
 	$data = [];
-	$data[] = ['field' => 'minute' ,'all' => 'all_mins'    , 'text' => gtext('Minutes')];
-	$data[] = ['field' => 'hour'   ,'all' => 'all_hours'   , 'text' => gtext('Hours')];
-	$data[] = ['field' => 'day'    ,'all' => 'all_days'    , 'text' => gtext('Days')];
-	$data[] = ['field' => 'month'  ,'all' => 'all_months'  , 'text' => gtext('Months')];
-	$data[] = ['field' => 'weekday','all' => 'all_weekdays', 'text' => gtext('Week Days')];
+	$data[] = ['field' => 'minute','all' => 'all_mins','text' => gtext('Minutes')];
+	$data[] = ['field' => 'hour','all' => 'all_hours','text' => gtext('Hours')];
+	$data[] = ['field' => 'day','all' => 'all_days','text' => gtext('Days')];
+	$data[] = ['field' => 'month','all' => 'all_months','text' => gtext('Months')];
+	$data[] = ['field' => 'weekday','all' => 'all_weekdays','text' => gtext('Week Days')];
 
 	foreach($data as $datak => $datav):
 		if(!$postdata[$datav['all']]):
 			if(!isset($postdata[$datav['field']]) || empty($postdata[$datav['field']])):
-				$input_errors[] = sprintf(gtext("You have to select at least one item for '%s'."), $datav['text']);
+				$input_errors[] = sprintf(gtext("You have to select at least one item for '%s'."),$datav['text']);
 			endif;
 		endif;
 	endforeach;
@@ -260,7 +260,7 @@ function print_input_errors($input_errors) {
 }
 
 function verify_xz_file($fname) {
-	$returnvar = mwexec("/usr/bin/xz -t " . escapeshellarg($fname), true);
+	$returnvar = mwexec("/usr/bin/xz -t " . escapeshellarg($fname),true);
 	if ($returnvar != 0)
 		return 0;
 	else
@@ -268,14 +268,14 @@ function verify_xz_file($fname) {
 }
 
 function verify_gzip_file($fname) {
-	$returnvar = mwexec("/usr/bin/gzip -t " . escapeshellarg($fname), true);
+	$returnvar = mwexec("/usr/bin/gzip -t " . escapeshellarg($fname),true);
 	if ($returnvar != 0)
 		return 0;
 	else
 		return 1;
 }
 
-function print_core_box($type, $msg) {
+function print_core_box($type,$msg) {
 	switch ($type) {
 		case "info":
 			$id = "infobox";
@@ -302,15 +302,15 @@ function print_core_box($type, $msg) {
 }
 
 function print_info_box($msg) {
-	print_core_box("info", $msg);
+	print_core_box("info",$msg);
 }
 
 function print_error_box($msg) {
-	print_core_box("error", $msg);
+	print_core_box("error",$msg);
 }
 
 function print_warning_box($msg) {
-	print_core_box("warning", $msg);
+	print_core_box("warning",$msg);
 }
 
 function print_config_change_box() {
@@ -331,17 +331,19 @@ function print_config_change_box() {
 }
 
 function format_bytes($bytes) {
-	if ($bytes >= 1099511627776) {
-		return sprintf("%.2f TB", $bytes/1099511627776);
-	} else if ($bytes >= 1073741824) {
-		return sprintf("%.2f GB", $bytes/1073741824);
-	} else if ($bytes >= 1048576) {
-		return sprintf("%.2f MB", $bytes/1048576);
-	} else if ($bytes >= 1024) {
-		return sprintf("%.0f KB", $bytes/1024);
-	} else {
-		return sprintf("%d bytes", $bytes);
-	}
+	if($bytes >= 1125899906842624):
+		return sprintf("%.2f PB",$bytes/1125899906842624);
+	elseif($bytes >= 1099511627776):
+		return sprintf("%.2f TB",$bytes/1099511627776);
+	elseif($bytes >= 1073741824):
+		return sprintf("%.2f GB",$bytes/1073741824);
+	elseif($bytes >= 1048576):
+		return sprintf("%.2f MB",$bytes/1048576);
+	elseif($bytes >= 1024):
+		return sprintf("%.0f KB",$bytes/1024);
+	else:
+		return sprintf("%d bytes",$bytes);
+	endif;
 }
 
 function get_std_save_message($ok) {
@@ -370,162 +372,162 @@ function get_std_save_message($ok) {
 	return $gt_ret;
 }
 
-function html_inputbox($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false) {
-	$ctrl = new HTMLEditBox($ctrlname, $title, $value, $desc, $size);
+function html_inputbox($ctrlname,$title,$value,$desc,$required = false,$size = 40,$readonly = false) {
+	$ctrl = new HTMLEditBox($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_passwordbox($ctrlname, $title, $value, $desc, $required = false, $size = 25, $readonly = false) {
-	$ctrl = new HTMLPasswordBox($ctrlname, $title, $value, $desc, $size);
+function html_passwordbox($ctrlname,$title,$value,$desc,$required = false,$size = 25,$readonly = false) {
+	$ctrl = new HTMLPasswordBox($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_passwordconfbox($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $desc, $required = false, $size = 25, $readonly = false) {
-	$ctrl = new HTMLPasswordConfBox($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $desc, $size);
+function html_passwordconfbox($ctrlname,$ctrlnameconf,$title,$value,$valueconf,$desc,$required = false,$size = 25,$readonly = false) {
+	$ctrl = new HTMLPasswordConfBox($ctrlname,$ctrlnameconf,$title,$value,$valueconf,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_textarea($ctrlname, $title, $value, $desc, $required = false, $columns = 40, $rows = 5, $readonly = false, $wrap = true) {
-	$ctrl = new HTMLTextArea($ctrlname, $title, $value, $desc, $columns, $rows);
+function html_textarea($ctrlname,$title,$value,$desc,$required = false,$columns = 40,$rows = 5,$readonly = false,$wrap = true) {
+	$ctrl = new HTMLTextArea($ctrlname,$title,$value,$desc,$columns,$rows);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetWrap($wrap);
 	$ctrl->Render();
 }
 
-function html_filechooser($ctrlname, $title, $value, $desc, $path, $required = false, $size = 67, $readonly = false) {
-	$ctrl = new HTMLFileChooser($ctrlname, $title, $value, $desc, $size);
+function html_filechooser($ctrlname,$title,$value,$desc,$path,$required = false,$size = 67,$readonly = false) {
+	$ctrl = new HTMLFileChooser($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
 
-function html_combobox($ctrlname, $title, $value, $options, $desc, $required = false, $readonly = false, $onclick = "") {
-	$ctrl = new HTMLComboBox($ctrlname, $title, $value, $options, $desc);
+function html_combobox($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
+	$ctrl = new HTMLComboBox($ctrlname,$title,$value,$options,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_mountcombobox($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLMountComboBox($ctrlname, $title, $value, $desc);
+function html_mountcombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLMountComboBox($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_timezonecombobox($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLTimeZoneComboBox($ctrlname, $title, $value, $desc);
+function html_timezonecombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLTimeZoneComboBox($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_languagecombobox($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLLanguageComboBox($ctrlname, $title, $value, $desc);
+function html_languagecombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLLanguageComboBox($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_interfacecombobox($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLInterfaceComboBox($ctrlname, $title, $value, $desc);
+function html_interfacecombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLInterfaceComboBox($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_checkbox($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $onclick = "") {
-	$ctrl = new HTMLCheckBox($ctrlname, $title, $checked, $caption, $desc);
+function html_checkbox($ctrlname,$title,$checked,$caption = "",$desc = "",$required = false,$onclick = "") {
+	$ctrl = new HTMLCheckBox($ctrlname,$title,$checked,$caption,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_separator($colspan = 2, $idname = '') {
+function html_separator($colspan = 2,$idname = '') {
 	$ctrl = new HTMLSeparator();
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetIdName($idname);
 	$ctrl->Render();
 }
 
-function html_titleline($title, $colspan = 2, $idname = '') {
+function html_titleline($title,$colspan = 2,$idname = '') {
 	$ctrl = new HTMLTitleLine($title);
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetIdName($idname);
 	$ctrl->Render();
 }
 
-function html_titleline_checkbox($ctrlname, $title, $value, $caption, $onclick = "", $colspan = 2) {
-	$ctrl = new HTMLTitleLineCheckBox($ctrlname, $title, $value, $caption);
+function html_titleline_checkbox($ctrlname,$title,$value,$caption,$onclick = "",$colspan = 2) {
+	$ctrl = new HTMLTitleLineCheckBox($ctrlname,$title,$value,$caption);
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_text($ctrlname, $title, $text) {
-	$ctrl = new HTMLText($ctrlname, $title, $text);
+function html_text($ctrlname,$title,$text) {
+	$ctrl = new HTMLText($ctrlname,$title,$text);
 	$ctrl->Render();
 }
 
-function html_textinfo($ctrlname, $title, $text) {
-	$ctrl = new HTMLTextInfo($ctrlname, $title, $text);
+function html_textinfo($ctrlname,$title,$text) {
+	$ctrl = new HTMLTextInfo($ctrlname,$title,$text);
 	$ctrl->Render();
 }
 
-function html_remark($ctrlname, $title, $text) {
-	$ctrl = new HTMLRemark($ctrlname, $title, $text);
+function html_remark($ctrlname,$title,$text) {
+	$ctrl = new HTMLRemark($ctrlname,$title,$text);
 	$ctrl->Render();
 }
 
-function html_listbox($ctrlname, $title, $value, $options, $desc, $required = false, $readonly = false, $onclick = "") {
-	$ctrl = new HTMLListBox($ctrlname, $title, $value, $options, $desc);
+function html_listbox($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
+	$ctrl = new HTMLListBox($ctrlname,$title,$value,$options,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_ipv4addrbox($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLIPv4AddressBox($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc);
+function html_ipv4addrbox($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLIPv4AddressBox($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_ipv6addrbox($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLIPv6AddressBox($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc);
+function html_ipv6addrbox($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLIPv6AddressBox($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_folderbox($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
-	$ctrl = new HTMLFolderBox($ctrlname, $title, $value, $desc);
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->SetPath($path);
-	$ctrl->Render();
-}
-
-function html_minidlnabox($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
-	$ctrl = new HTMLFolderBox1($ctrlname, $title, $value, $desc);
+function html_folderbox($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
+	$ctrl = new HTMLFolderBox($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
 
-function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false, $altpadding = false, $maxlength = 40,string $placeholder = '') {
-	$ctrl = new HTMLEditBox2($ctrlname, $title, $value, $desc, $size);
+function html_minidlnabox($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
+	$ctrl = new HTMLFolderBox1($ctrlname,$title,$value,$desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPath($path);
+	$ctrl->Render();
+}
+
+function html_inputbox2($ctrlname,$title,$value,$desc,$required = false,$size = 40,$readonly = false,$altpadding = false,$maxlength = 40,string $placeholder = '') {
+	$ctrl = new HTMLEditBox2($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetAltPadding($altpadding);
@@ -534,74 +536,77 @@ function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $si
 	$ctrl->Render();
 }
 
-function html_passwordbox2($ctrlname, $title, $value, $desc, $required = false, $size = 25, $readonly = false) {
-	$ctrl = new HTMLPasswordBox2($ctrlname, $title, $value, $desc, $size);
+function html_passwordbox2($ctrlname,$title,$value,$desc,$required = false,$size = 25,$readonly = false,string $placeholder = '') {
+	$ctrl = new HTMLPasswordBox2($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPlaceholder($placeholder);
 	$ctrl->Render();
 }
 
-function html_passwordconfbox2($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $desc, $required = false, $size = 25, $readonly = false) {
-	$ctrl = new HTMLPasswordConfBox2($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $desc, $size);
+function html_passwordconfbox2($ctrlname,$ctrlnameconf,$title,$value,$valueconf,$desc,$required = false,$size = 25,$readonly = false,string $placeholder = '',string $placeholderconf = '') {
+	$ctrl = new HTMLPasswordConfBox2($ctrlname,$ctrlnameconf,$title,$value,$valueconf,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPlaceholder($placeholder);
+	$ctrl->SetPlaceholderConfirm($placeholderconf);
 	$ctrl->Render();
 }
 
-function html_textarea2($ctrlname, $title, $value, $desc, $required = false, $columns = 40, $rows = 5, $readonly = false, $wrap = true) {
-	$ctrl = new HTMLTextArea2($ctrlname, $title, $value, $desc, $columns, $rows);
+function html_textarea2($ctrlname,$title,$value,$desc,$required = false,$columns = 40,$rows = 5,$readonly = false,$wrap = true) {
+	$ctrl = new HTMLTextArea2($ctrlname,$title,$value,$desc,$columns,$rows);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetWrap($wrap);
 	$ctrl->Render();
 }
 
-function html_filechooser2($ctrlname, $title, $value, $desc, $path, $required = false, $size = 67, $readonly = false) {
-	$ctrl = new HTMLFileChooser2($ctrlname, $title, $value, $desc, $size);
+function html_filechooser2($ctrlname,$title,$value,$desc,$path,$required = false,$size = 67,$readonly = false) {
+	$ctrl = new HTMLFileChooser2($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
 
-function html_combobox2($ctrlname, $title, $value, $options, $desc, $required = false, $readonly = false, $onclick = "") {
-	$ctrl = new HTMLComboBox2($ctrlname, $title, $value, $options, $desc);
+function html_combobox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
+	$ctrl = new HTMLComboBox2($ctrlname,$title,$value,$options,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_mountcombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLMountComboBox2($ctrlname, $title, $value, $desc);
+function html_mountcombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLMountComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_timezonecombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLTimeZoneComboBox2($ctrlname, $title, $value, $desc);
+function html_timezonecombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLTimeZoneComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_languagecombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLLanguageComboBox2($ctrlname, $title, $value, $desc);
+function html_languagecombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLLanguageComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_interfacecombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLInterfaceComboBox2($ctrlname, $title, $value, $desc);
+function html_interfacecombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLInterfaceComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $readonly = false, $onclick = "", $altpadding = false) {
-	$ctrl = new HTMLCheckBox2($ctrlname, $title, $checked, $caption, $desc);
+function html_checkbox2($ctrlname,$title,$checked,$caption = "",$desc = "",$required = false,$readonly = false,$onclick = "",$altpadding = false) {
+	$ctrl = new HTMLCheckBox2($ctrlname,$title,$checked,$caption,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetAltPadding($altpadding);
@@ -609,74 +614,74 @@ function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", 
 	$ctrl->Render();
 }
 
-function html_separator2($colspan = 2, $idname = '') {
+function html_separator2($colspan = 2,$idname = '') {
 	$ctrl = new HTMLSeparator2();
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetIdName($idname);
 	$ctrl->Render();
 }
 
-function html_titleline2($title, $colspan = 2, $idname = '') {
+function html_titleline2($title,$colspan = 2,$idname = '') {
 	$ctrl = new HTMLTitleLine2($title);
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetIdName($idname);
 	$ctrl->Render();
 }
 
-function html_titleline_checkbox2($ctrlname, $title, $value, $caption, $onclick = "", $colspan = 2) {
-	$ctrl = new HTMLTitleLineCheckBox2($ctrlname, $title, $value, $caption);
+function html_titleline_checkbox2($ctrlname,$title,$value,$caption,$onclick = "",$colspan = 2) {
+	$ctrl = new HTMLTitleLineCheckBox2($ctrlname,$title,$value,$caption);
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_text2($ctrlname, $title, $text) {
-	$ctrl = new HTMLText2($ctrlname, $title, $text);
+function html_text2($ctrlname,$title,$text) {
+	$ctrl = new HTMLText2($ctrlname,$title,$text);
 	$ctrl->Render();
 }
 
-function html_textinfo2($ctrlname, $title, $text) {
-	$ctrl = new HTMLTextInfo2($ctrlname, $title, $text);
+function html_textinfo2($ctrlname,$title,$text) {
+	$ctrl = new HTMLTextInfo2($ctrlname,$title,$text);
 	$ctrl->Render();
 }
 
-function html_remark2($ctrlname, $title, $text) {
-	$ctrl = new HTMLRemark2($ctrlname, $title, $text);
+function html_remark2($ctrlname,$title,$text) {
+	$ctrl = new HTMLRemark2($ctrlname,$title,$text);
 	$ctrl->Render();
 }
 
-function html_listbox2($ctrlname, $title, $value, $options, $desc, $required = false, $readonly = false, $onclick = "") {
-	$ctrl = new HTMLListBox2($ctrlname, $title, $value, $options, $desc);
+function html_listbox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
+	$ctrl = new HTMLListBox2($ctrlname,$title,$value,$options,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
 
-function html_ipv4addrbox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLIPv4AddressBox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc);
+function html_ipv4addrbox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLIPv4AddressBox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_ipv6addrbox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc, $required = false, $readonly = false) {
-	$ctrl = new HTMLIPv6AddressBox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc);
+function html_ipv6addrbox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc,$required = false,$readonly = false) {
+	$ctrl = new HTMLIPv6AddressBox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->Render();
 }
 
-function html_folderbox2($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
-	$ctrl = new HTMLFolderBox2($ctrlname, $title, $value, $desc);
+function html_folderbox2($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
+	$ctrl = new HTMLFolderBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
 
-function html_minidlnabox2($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
-	$ctrl = new HTMLFolderBox12($ctrlname, $title, $value, $desc);
+function html_minidlnabox2($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
+	$ctrl = new HTMLFolderBox12($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
@@ -699,27 +704,27 @@ function html_button(string $value = NULL,string $content = NULL,string $id = NU
 	$o_button = $root->addElement($element,$attributes,$content);
 	return $root->render();
 }
-function html_row_toolbox(string $link = '', string $gt_record_mod = '', string $gt_record_del = '', string $gt_record_loc = '', bool $notprotected = true, bool $notdirty = true) {
+function html_row_toolbox(string $link = '',string $gt_record_mod = '',string $gt_record_del = '',string $gt_record_loc = '',bool $notprotected = true,bool $notdirty = true) {
 	global $g_img;
 	$root = new co_DOMDocument();
 	$o = $root->addElement('td');
 	if($notdirty && $notprotected) { // editable
-		$o_a = $o->addElement('a', ['href' => $link]);
-		$o_a->addElement('img', ['src' => $g_img['mod'], 'title' => $gt_record_mod, 'alt' => $gt_record_mod, 'class' => 'spin']);
+		$o_a = $o->addElement('a',['href' => $link]);
+		$o_a->addElement('img',['src' => $g_img['mod'],'title' => $gt_record_mod,'alt' => $gt_record_mod,'class' => 'spin']);
 	} else {
 		if($notprotected) { // dirty
-			$o->addElement('img', ['src' => $g_img['del'], 'title' => $gt_record_del, 'alt' => $gt_record_del]);
+			$o->addElement('img',['src' => $g_img['del'],'title' => $gt_record_del,'alt' => $gt_record_del]);
 		} else { // protected
-			$o->addElement('img', ['src' => $g_img['loc'], 'title' => $gt_record_loc, 'alt' => $gt_record_loc]);
+			$o->addElement('img',['src' => $g_img['loc'],'title' => $gt_record_loc,'alt' => $gt_record_loc]);
 		}
 	}
 	return $root->render();
 }
-function get_weekday_names($long = NULL, $english = NULL) {
+function get_weekday_names($long = NULL,$english = NULL) {
 	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
 	switch ($actioncode) {
 		case 0: // short, locale 
-			$retval = [gtext('Mon'), gtext('Tue'), gtext('Wed'), gtext('Thu'), gtext('Fri'), gtext('Sat'), gtext('Sun')];
+			$retval = [gtext('Mon'),gtext('Tue'),gtext('Wed'),gtext('Thu'),gtext('Fri'),gtext('Sat'),gtext('Sun')];
 			break;
 		case 1: // long, locale
 			$retval = [gtext('Monday'),gtext('Tuesday'),gtext('Wednesday'),gtext('Thursday'),gtext('Friday'),gtext('Saturday'),gtext('Sunday')];
@@ -734,11 +739,11 @@ function get_weekday_names($long = NULL, $english = NULL) {
 	return $retval;
 }
 
-function get_month_names($long = NULL, $english = NULL) {
+function get_month_names($long = NULL,$english = NULL) {
 	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
 	switch ($actioncode) {
 		case 0: // short, locale 
-			$retval = [gtext('Jan'), gtext('Feb'), gtext('Mar'), gtext('Apr'), gtext('May'), gtext('Jun'), gtext('Jul'), gtext('Aug'), gtext('Sep'), gtext('Oct'), gtext('Nov'), gtext('Dec')];
+			$retval = [gtext('Jan'),gtext('Feb'),gtext('Mar'),gtext('Apr'),gtext('May'),gtext('Jun'),gtext('Jul'),gtext('Aug'),gtext('Sep'),gtext('Oct'),gtext('Nov'),gtext('Dec')];
 			break;
 		case 1: // long, locale
 			$retval = [gtext('January'),gtext('February'),gtext('March'),gtext('April'),gtext('May'),gtext('June'),gtext('July'),gtext('August'),gtext('September'),gtext('October'),gtext('November'),gtext('December')];
