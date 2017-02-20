@@ -103,7 +103,7 @@ if ($_POST) {
 		$config['ups']['shutdowntimer'] = $_POST['shutdowntimer'];
 		$config['ups']['remotemonitor'] = isset($_POST['remotemonitor']) ? true : false;
 		$config['ups']['monitoruser'] = $_POST['monitoruser'];
-		$config['ups']['monitorpassword'] = $_POST['monitorpassword'];
+		$config['ups']['monitorpassword'] = mkpasswd($_POST['monitorpassword']);
 		$config['ups']['user'] = "root"; // local master user, always root
 		$config['ups']['password'] = $config['system']['password']; // local master password, always system password
 		$config['ups']['email']['enable'] = isset($_POST['email_enable']) ? true : false;
