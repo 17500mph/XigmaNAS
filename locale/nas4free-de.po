@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-18 21:02+0000\n"
-"PO-Revision-Date: 2017-02-18 09:53+0000\n"
-"Last-Translator: transposed messenger <Unknown>\n"
+"PO-Revision-Date: 2017-02-20 12:19+0000\n"
+"Last-Translator: StefanSch <spam@stefanschawaller.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-18 21:24+0000\n"
+"X-Launchpad-Export-Date: 2017-02-20 17:37+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -493,7 +493,7 @@ msgid "Add NFS Share"
 msgstr "NFS Share hinzufügen"
 
 msgid "Add Option"
-msgstr ""
+msgstr "Option hinzufügen"
 
 msgid "Add Pool"
 msgstr "Pool hinzufügen"
@@ -824,7 +824,7 @@ msgid "Alternate TCP port. (Default is 873)."
 msgstr "Alternativer TCP-Port (Standard 873)"
 
 msgid "Alternative configuration directory."
-msgstr ""
+msgstr "Alternatives Konfigurationsverzeichnis"
 
 msgid "Always"
 msgstr "immer"
@@ -2284,7 +2284,7 @@ msgid "Delete Selected Records"
 msgstr "Ausgewählte Datensätze Löschen"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Lösche ausgewählte Ressource"
 
 msgid "Delete Selected Routes"
 msgstr "Ausgewählte Routen Löschen"
@@ -2562,7 +2562,7 @@ msgid "Directory %s doesn't exist!"
 msgstr "Verzeichnis %s existiert nicht!"
 
 msgid "Directory Mask"
-msgstr ""
+msgstr "Verzeichnismaske"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
@@ -2898,7 +2898,7 @@ msgid "Do you want to delete selected routes?"
 msgstr ""
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "Möchen Sie die ausgewählten RSYNC-Jobs löschen?"
 
 msgid "Do you want to delete selected rsync modules?"
 msgstr "Möchten Sie die gewählten rsync Module löschen?"
@@ -3049,10 +3049,10 @@ msgid "Driver"
 msgstr "Treiber"
 
 msgid "Driver List"
-msgstr ""
+msgstr "Treiberliste"
 
 msgid "Driver Parameter"
-msgstr ""
+msgstr "Laufwerksparameter"
 
 msgid "Driver used"
 msgstr "Verwendeter Treiber"
@@ -3131,31 +3131,31 @@ msgid "Edit Option"
 msgstr ""
 
 msgid "Edit Pool"
-msgstr ""
+msgstr "Pool ändern"
 
 msgid "Edit RAID"
 msgstr "RAID bearbeiten"
 
 msgid "Edit Record"
-msgstr ""
+msgstr "Eintrag bearbeiten"
 
 msgid "Edit Resource"
-msgstr ""
+msgstr "Ressource ändern"
 
 msgid "Edit Route"
 msgstr "Route bearbeiten"
 
 msgid "Edit Rsync Job"
-msgstr ""
+msgstr "RSYNC-Job bearbeiten"
 
 msgid "Edit Rsync Module"
-msgstr ""
+msgstr "RSYNC-Modul bearbeiten"
 
 msgid "Edit Samba Share"
-msgstr ""
+msgstr "Samba Freigabe bearbeiten"
 
 msgid "Edit Share"
-msgstr ""
+msgstr "Freigabe bearbeiten"
 
 msgid "Edit Snapshot"
 msgstr "Snapshot editieren"
@@ -3167,7 +3167,7 @@ msgid "Edit User Account"
 msgstr "Benutzerkonto bearbeiten"
 
 msgid "Edit VLAN"
-msgstr ""
+msgstr "VLAN bearbeiten"
 
 msgid "Edit VM"
 msgstr "VM bearbeiten"
@@ -3179,7 +3179,7 @@ msgid "Edit Volume"
 msgstr "Datenträger bearbeiten"
 
 msgid "Edit WLAN"
-msgstr ""
+msgstr "WLAN bearbeiten"
 
 msgid "Edit auth group"
 msgstr "Editiere Authentifikationsgruppe"
@@ -3468,7 +3468,7 @@ msgid "Enable service SSH when disabled"
 msgstr "Aktiviere Service SSH falls deaktiviert"
 
 msgid "Enable shadow copy."
-msgstr ""
+msgstr "Schattenkopie aktivieren"
 
 msgid "Enable store DOS attributes."
 msgstr ""
@@ -3640,7 +3640,7 @@ msgid "Enter login name of the user."
 msgstr "Bitte Benutzernamen eingeben."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
-msgstr ""
+msgstr "Bitte IP-Adresse oder DNS-Name des iSCSI Ziels eingeben."
 
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
@@ -3663,6 +3663,8 @@ msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
+"Bitte den Pfrad zum Datenbankverzeichnis eingeben. Die Konfigurationsdateien "
+"werden in einem spezifischen Unterordner angelegt."
 
 msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
@@ -3760,7 +3762,7 @@ msgid "Export all the directories in the specified path."
 msgstr "Alle Ordner im angegebenen Pfad exportieren."
 
 msgid "Export firewall rules."
-msgstr ""
+msgstr "Firewallregeln exportieren"
 
 msgid "Exported"
 msgstr "Exportiert"
@@ -3905,13 +3907,13 @@ msgid "Failover"
 msgstr "Failover"
 
 msgid "Fast"
-msgstr ""
+msgstr "Schnell"
 
 msgid "Fatal"
 msgstr "Fataler Fehler"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Fdisk Partitionsinformation"
 
 msgid "Feb"
 msgstr "Feb."
@@ -3929,7 +3931,7 @@ msgid "File Manager"
 msgstr "Dateiverwaltung"
 
 msgid "File Mask"
-msgstr ""
+msgstr "Dateimaske"
 
 msgid "File Path"
 msgstr "Dateipfad"
@@ -3997,7 +3999,7 @@ msgid "Firmware Update"
 msgstr "Firmware Update"
 
 msgid "Firmware upgrade check has been disabled."
-msgstr ""
+msgstr "Das Suchen nach neuer Firmware wurde deaktiviert"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
@@ -4005,7 +4007,7 @@ msgstr ""
 "Speicher verfügbar ?"
 
 msgid "Firmware upload failed with error message:"
-msgstr ""
+msgstr "Firmware upload mit folgender Fehlermeldung fehlgeschlagen:"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware-Upload wird auf dieser Plattform nicht unterstützt."
@@ -4188,7 +4190,7 @@ msgid "Group ID"
 msgstr "Gruppenkennung"
 
 msgid "Group Settings"
-msgstr ""
+msgstr "Gruppeneinstellungen"
 
 msgid "Group Suffix"
 msgstr ""
@@ -4197,7 +4199,7 @@ msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group is protected"
-msgstr ""
+msgstr "Gruppe ist geschützt"
 
 msgid "Group is unlocked"
 msgstr ""
@@ -4304,7 +4306,7 @@ msgid "Hiadaptive (High Performance)"
 msgstr "hoch adaptiv (optimiert auf Leistung)"
 
 msgid "Hide Default Groups"
-msgstr ""
+msgstr "Verstecke Systemgruppen"
 
 msgid "Hide Dot Files"
 msgstr ""
@@ -4346,10 +4348,10 @@ msgid "Hosts"
 msgstr "Hosts"
 
 msgid "Hosts Allow"
-msgstr ""
+msgstr "Erlaubte Hosts"
 
 msgid "Hosts Deny"
-msgstr ""
+msgstr "Verbotene Hosts"
 
 msgid "Hosts Setup"
 msgstr "Hosts Einstellungen"
@@ -4423,7 +4425,7 @@ msgid "IPv4 DNS Servers"
 msgstr ""
 
 msgid "IPv4 Settings"
-msgstr ""
+msgstr "IPv4 Einstellungen"
 
 msgid "IPv4 addresses"
 msgstr "IPv4 Adressen"
@@ -4441,7 +4443,7 @@ msgid "IPv6 Prefix"
 msgstr "IPv6 Präfix"
 
 msgid "IPv6 Settings"
-msgstr ""
+msgstr "IPv6 Einstellungen"
 
 msgid "IPv6 address"
 msgstr "IPv6 Adresse"
@@ -4953,7 +4955,7 @@ msgid "LAN Only"
 msgstr "Nur kabellgebundenes Netzwerk"
 
 msgid "LAN interface is not configured."
-msgstr ""
+msgstr "LAN-Schnittstelle ist nicht konfiguriert"
 
 msgid "LAN net"
 msgstr "LAN net"
@@ -5082,10 +5084,10 @@ msgstr ""
 "folgenden Suffixe benutzen: »k«, »KB«, »M«, »Gb«, usw."
 
 msgid "Link Down Action"
-msgstr ""
+msgstr "Aktion bei Verbindungsabbruch"
 
 msgid "Link Up Action"
-msgstr ""
+msgstr "Aktion bei Verbindungsherstellung"
 
 msgid "List"
 msgstr "Liste"
@@ -5216,7 +5218,7 @@ msgid "Logout"
 msgstr "Abmelden"
 
 msgid "Long Self-Test"
-msgstr ""
+msgstr "Vollständiger Selbsttest"
 
 msgid "Low voltage boosting transfer point"
 msgstr "Eingangspannungsverringerung Schwellwert"
@@ -10956,50 +10958,3 @@ msgstr "bis"
 
 msgid "umount"
 msgstr "aushängen"
-
-#~ msgid "Add option"
-#~ msgstr "Einstellung hinzufügen"
-
-#~ msgid "Alternative configuration directory (usually empty)."
-#~ msgstr "Alternatives Konfigurationsverzeichnis (gewöhnlich leer)"
-
-#~ msgid "Edit option"
-#~ msgstr "Einstellung bearbeiten"
-
-#, php-format
-#~ msgid "Port to listen for incoming peer connections. Default port is %d."
-#~ msgstr ""
-#~ "Der Port auf welchem nach eingehenden Verbindungen gehorcht wird. Standard-"
-#~ "Port ist %d."
-
-#, php-format
-#~ msgid ""
-#~ "Use this option to override the default permission modes for newly created "
-#~ "files (%s by default)."
-#~ msgstr ""
-#~ "Benutze diese Option, um die Standardrechte für neu erstellte Dateien zu "
-#~ "überschreiben (%s ist standard)."
-
-#~ msgid ""
-#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
-#~ msgstr ""
-#~ "Konfigurationsoptiuonen zur Weitergabe über rpc mittels 'Transmission-"
-#~ "remote' (normalerweise leer)"
-
-#~ msgid "Pool is marked for removal"
-#~ msgstr "Pool wurde zum entfernen markiert."
-
-#~ msgid "Changes have been applied."
-#~ msgstr "Änderungen wurden übernommen."
-
-#~ msgid "MniDLNA has been disabled."
-#~ msgstr "MiniDLNA wurde deaktiviert."
-
-#~ msgid "Fuppes has been disabled."
-#~ msgstr "Fuppes ia deaktiviert."
-
-#~ msgid "User account is locked"
-#~ msgstr "Benutzerkonto is gesperrt"
-
-#~ msgid "TFTP has been disabled."
-#~ msgstr "TFTP wurde deaktiviert"
