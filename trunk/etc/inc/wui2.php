@@ -1282,7 +1282,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		//	media type
 		$attributes = ['id' => sprintf('%sfiletype',$ctrlname),'name' => sprintf('%sfiletype',$ctrlname),'class' => 'formfld'];
 		$select = $div2->addElement('select',$attributes);
-		$attributes = ['value' => ''];
+		$attributes = ['value' => '','selected' => 'selected'];
 		$select->addElement('option',$attributes,gtext('All'));
 		$attributes = ['value' => 'A'];
 		$select->addElement('option',$attributes,gtext('Audio'));
