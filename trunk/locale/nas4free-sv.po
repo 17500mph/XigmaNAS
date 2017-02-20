@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-18 21:02+0000\n"
-"PO-Revision-Date: 2017-02-15 17:43+0000\n"
+"PO-Revision-Date: 2017-02-19 05:42+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-18 21:25+0000\n"
+"X-Launchpad-Export-Date: 2017-02-20 17:37+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -463,7 +463,7 @@ msgid "Add NFS Share"
 msgstr "Lägg till NFS utdelning"
 
 msgid "Add Option"
-msgstr ""
+msgstr "Lägg till Alternativ"
 
 msgid "Add Pool"
 msgstr "Lägg till pool"
@@ -787,7 +787,7 @@ msgid "Alternate TCP port. (Default is 873)."
 msgstr "Alternativ TCP-port. (standard är 873)"
 
 msgid "Alternative configuration directory."
-msgstr ""
+msgstr "Alternativt konfigurationskatalog"
 
 msgid "Always"
 msgstr "Alltid"
@@ -3079,7 +3079,7 @@ msgid "Edit NFS Share"
 msgstr "Ändra NFS utdelning"
 
 msgid "Edit Option"
-msgstr ""
+msgstr "Redigera Alternativ"
 
 msgid "Edit Pool"
 msgstr "Ändra Pool"
@@ -3768,7 +3768,7 @@ msgid "Extra options to ifconfig (usually empty)."
 msgstr "Extra val till ifconfig (vanligtvis tom)."
 
 msgid "Extra options to pass over rpc using transmission-remote."
-msgstr ""
+msgstr "Extra alternativ att skicka över rpc genom \"transmission-remote\"."
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Extra val till rsync (vantligtvis tom)."
@@ -3857,7 +3857,7 @@ msgid "Failover"
 msgstr "Automatisk Omläggning"
 
 msgid "Fast"
-msgstr ""
+msgstr "Snabb"
 
 msgid "Fatal"
 msgstr "Ödesdiger"
@@ -4147,10 +4147,10 @@ msgid "Group is marked for deletion"
 msgstr "Gruppen är markerad för borttagning"
 
 msgid "Group is protected"
-msgstr ""
+msgstr "Gruppen är skyddad"
 
 msgid "Group is unlocked"
-msgstr ""
+msgstr "Gruppen är olåst"
 
 msgid "Group numeric id."
 msgstr "Numeriskt ID för gruppen."
@@ -6014,10 +6014,10 @@ msgid "Option is marked for deletion"
 msgstr "Optionen är markerad för borttagning"
 
 msgid "Option is protected"
-msgstr ""
+msgstr "Alternativet är skyddat"
 
 msgid "Option is unlocked"
-msgstr ""
+msgstr "Alternativet är olåst"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Valfri användarvänlig sträng för målet."
@@ -6397,7 +6397,7 @@ msgid "Pool cannot be changed."
 msgstr "Poolen kan inte ändras."
 
 msgid "Pool is marked for deletion"
-msgstr ""
+msgstr "Poolen är markerad för borttagning"
 
 msgid "Pool is protected"
 msgstr "Poolen är skyddad"
@@ -6428,6 +6428,7 @@ msgstr "Portnummer måste vara mellan %d och %d."
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
 msgstr ""
+"Port att lyssna på efter inkommande peer anslutningar. ( Standard är %d)."
 
 msgid "Port to listen on. Default iTunes port is 3689."
 msgstr "Port att lyssna på. Standard iTunes port är 3689."
@@ -6497,7 +6498,7 @@ msgid "PreInit"
 msgstr "Förinitiering"
 
 msgid "Preallocation"
-msgstr ""
+msgstr "Förallokering"
 
 msgid "Preferred"
 msgstr "Föredragen"
@@ -7382,7 +7383,7 @@ msgstr ""
 "Välj alternativet 'Oformaterad' för oformaterade diskar och formatera dem med"
 
 msgid "Select pre-allocation mode for files. (Default is Fast)."
-msgstr ""
+msgstr "Välj förallokeringsläge för filer. (Standard är Snabb)."
 
 msgid "Select read balance algorithm."
 msgstr "Välj läsbalanseringsalgoritm"
@@ -10087,6 +10088,8 @@ msgid ""
 "Use this option to override the default permission modes for newly created "
 "files. (%s by default)."
 msgstr ""
+"Använd detta alternativ för att ersätta standardrättigheterna för nyskapade "
+"filer. (%s som standard)."
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -10158,10 +10161,10 @@ msgid "User account is marked for deletion"
 msgstr "Användarkontot är markerat för borttagning"
 
 msgid "User account is protected"
-msgstr ""
+msgstr "Användarkontot är skyddat"
 
 msgid "User account is unlocked"
-msgstr ""
+msgstr "Användarkontot är olåst"
 
 msgid "User numeric id."
 msgstr "Numeriskt användare-ID (User ID)."
@@ -10821,52 +10824,3 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
-
-#~ msgid "Add option"
-#~ msgstr "Lägg till alternativ"
-
-#~ msgid "Alternative configuration directory (usually empty)."
-#~ msgstr "Alternativ konfigurationskatalog (vanligtvis tom)."
-
-#~ msgid "Edit option"
-#~ msgstr "Redigera alternativ"
-
-#, php-format
-#~ msgid "Port to listen for incoming peer connections. Default port is %d."
-#~ msgstr ""
-#~ "Port som lyssnar efter inkommande klient-anslutningar. Standard porten är %d."
-
-#, php-format
-#~ msgid ""
-#~ "Use this option to override the default permission modes for newly created "
-#~ "files (%s by default)."
-#~ msgstr ""
-#~ "Använd detta alternativ för att åsidosätta standardtillstånd för nyligen "
-#~ "skapade filer (%s som standard)."
-
-#~ msgid ""
-#~ "Extra options to pass over rpc using transmission-remote (usually empty)."
-#~ msgstr ""
-#~ "Extra optioner att skicka över rpc när \"transmission-remote\" används "
-#~ "(vanligtvis tom)."
-
-#~ msgid "Pool is marked for removal"
-#~ msgstr "Poolen är markerad för borttagning"
-
-#~ msgid "MniDLNA has been disabled."
-#~ msgstr "MiniDLNA har inaktiverats."
-
-#~ msgid "Changes have been applied."
-#~ msgstr "Ändringar har utförts."
-
-#~ msgid "Group is locked"
-#~ msgstr "Gruppen är låst"
-
-#~ msgid "Fuppes has been disabled."
-#~ msgstr "Fuppes har inaktiverats."
-
-#~ msgid "User account is locked"
-#~ msgstr "Användarkontot är låst"
-
-#~ msgid "TFTP has been disabled."
-#~ msgstr "TFTP har inaktiverats"
