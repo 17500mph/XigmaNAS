@@ -28,7 +28,6 @@ setenv	EDITOR nano
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
-	echo ""
 	set prompt="%{\033[1;32m%}%m: %{\033[1;32m%}%.%{\033[0m%}%# "
 	set promptchars = "%#"
 	set filec
