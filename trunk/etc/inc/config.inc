@@ -1208,8 +1208,15 @@ function config_upgrade() {
 	/* Convert 2.8 -> 2.9 */
 	if ($config['version'] === "2.8") {
 		$config['bittorrent']['preallocation'] = "1";
-
 		$config['version'] = "2.9";
+	}
+
+	/* Convert 2.9 -> 3.0 */
+	if ($config['version'] === "2.9") {
+		if (!preg_match('/^\$6\$/', $config['ups']['monitorpassword'])) {
+			$config['ups']['monitorpassword'] = mkpasswd($config['up']['monitorpassword']);
+		}
+		$config['version'] = "3.0";
 	}
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
