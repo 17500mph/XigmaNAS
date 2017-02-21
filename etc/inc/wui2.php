@@ -960,15 +960,17 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		$attributes = ['id' => sprintf('%_tr',$ctrlname)];
 		$tr = $root->addElement('tr',$attributes);	
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
-		$th = $tr->addElement('th',$attributes,$this->GetTitle());
+		$th = $tr->addElement('th',$attributes);
+		$attributes = ['style' => 'float:left'];
+		$spanleft = $th->addElement('span',$attributes,$this->GetTitle());
 		$attributes = ['style' => 'float:right'];
-		$span = $th->addElement('span',$attributes);
+		$spanright = $th->addElement('span',$attributes);
 		$attributes = ['for' => $ctrlname,'style' => 'margin-right:8px;'];
-		$label = $span->addElement('label',$attributes);
+		$label = $spanright->addElement('label',$attributes);
 		$label->addElement('strong',[],$this->GetCaption());
 		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => 'yes','style' => 'vertical-align:middle;margin:0;'];
 		$this->getAttributes($attributes);
-		$checkbox = $span->addElement('input',$attributes);
+		$checkbox = $spanright->addElement('input',$attributes);
 		//	showtime
 		return $root;
 	}
@@ -1051,7 +1053,6 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 		$value = $this->GetValue();
 		//	control code for folders
 		$t = [];
-		$t[] = '//<![CDATA[';
 		$t[] = 'function onchange_' . $ctrlname . '() {';
 		$t[] = "\t" . 'document.getElementById("' . $ctrlnamedata . '").value = document.getElementById("' . $ctrlname . '").value;';
 		$t[] = '}';
@@ -1099,9 +1100,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 		$t[] = "\t\t\t" . 'element.options[i].selected = true;';
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$t[] = '//]]>';
-		$attributes = ['type' => 'text/javascript'];
-		$root->addElement('script',$attributes,implode("\n",$t));
+		$root->addJavaScript(implode("\n",$t));
 		//	section 1: select + delete
 		$div1 = $root->addElement('div');
 		//	selected folder
@@ -1190,7 +1189,6 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		$value = $this->GetValue();
 		//	control code for folders
 		$t = [];
-		$t[] = '//<![CDATA[';
 		$t[] = 'function onchange_' . $ctrlname . '() {';
 		$t[] = "\t" . 'var value1 = document.getElementById("' . $ctrlname . '");';
 		$t[] = "\t" . 'if (value1.value.charAt(0) != "/") {';
@@ -1255,9 +1253,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		$t[] = "\t\t\t" . 'element.options[i].selected = true;';
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$t[] = '//]]>';
-		$attributes = ['type' => 'text/javascript'];
-		$root->addElement('script',$attributes,implode("\n",$t));
+		$root->addJavaScript(implode("\n",$t));
 		//	section 1: select + delete
 		$div1 = $root->addElement('div');
 		//	selected folder
@@ -1352,8 +1348,48 @@ trait co_DOMTools {
 		endif;
 		return $node;
 	}
+	public function addJavaScript(string $text) {
+		$node = $this->addElement('script');
+		$newline = $node->ownerDocument->createTextNode("\n//");
+		$node->appendChild($newline);
+		$cdata = $node->ownerDocument->createCDATASection("\n" . $text . "\n//");
+		$node->appendChild($cdata);
+		return $node;
+	}
 }
-class co_DOMElement extends DOMElement {
+class co_DOMImplementation extends \DOMImplementation {
+	private $document;
+	public function __construct() {
+		return $this->createDocument();
+	}
+	public function __get($name) {
+		return $this->doc->{$name};
+	}
+	public function __set($name,$value) {
+		$this->doc->{$name}=$value;
+	}
+	public function __isset($name) {
+		return isset($this->doc->{$name});
+	}
+	public function __unset($name) {
+		return $this->doc->__unset($name);
+	}
+	public function __call($name,$args) {
+		return call_user_func_array(array($this->doc,$name),$args);
+	}
+	public function createDocument($namespaceURI = NULL,$qualifiedName = NULL,DOMDocumentType $docType = NULL) {
+		$this->document = parent::createDocument($namespaceURI,$qualifiedName,$docType);
+		$this->document->xmlVersion='1.0';
+		$this->document->xmlEncoding='UTF-8';
+		$this->document->registerNodeClass('DOMDocument','co_DOMDocument');
+//		$this->document->registerNodeClass('DOMDocumentFragment','co_DOMDocumentFragment');
+		$this->document->registerNodeClass('DOMElement','co_DOMElement');
+//		$this->document->registerNodeClass('DOMComment','co_DOMComment');
+//		$this->document->registerNodeClass('DOMNode','co_DOMNode');
+		return $this->document;
+	}	
+}
+class co_DOMElement extends \DOMElement {
 	use co_DOMTools;
 	
 	public function addAttributes($attributes = []) {
@@ -1363,13 +1399,12 @@ class co_DOMElement extends DOMElement {
 		return $this;
 	}
 }
-class co_DOMDocument extends DOMDocument {
+class co_DOMDocument extends \DOMDocument {
 	use co_DOMTools;
 	
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
 		$this->formatOutput = true;
-		$this->registerNodeClass('DOMElement','co_DOMElement');
 	}
 	public function flush() {
 		echo $this->saveHTML();
