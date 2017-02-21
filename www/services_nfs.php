@@ -153,6 +153,9 @@ switch($page_action):
 			config_unlock();
 			header($sphere->header());
 			exit;
+		else:
+			$mode_page = PAGE_MODE_EDIT;
+			$page_action = 'edit';
 		endif;
 		break;
 	case 'disable':
@@ -164,7 +167,7 @@ switch($page_action):
  */
 		if($sphere->row['enable']): // if enabled, disable it
 			$sphere->row['enable'] = false;
-			$sphere->grid = $sphere->row;
+			$sphere->grid['enable'] = $sphere->row['enable'];
 			write_config();
 			$retval = 0;
 			config_lock();
@@ -249,7 +252,6 @@ endswitch;
 		print_info_box($r_message);
 	endforeach;
 ?>
-	
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">

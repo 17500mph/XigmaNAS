@@ -33,138 +33,283 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
+require 'co_sphere.php';
 
+function services_rsyncd_get_sphere() {
+	global $config;
+	$sphere = new co_sphere_settings('services_rsyncd','php');
+	$sphere->row_default = [
+		'enable' => false,
+		'port' => 873,
+		'motd' => '',
+		'rsyncd_user' => 'ftp',
+		'auxparam' => []
+	];
+	$sphere->grid = &array_make_branch($config,'rsyncd');
+	array_make_branch($sphere->grid,'auxparam');
+	return $sphere;
+}
+$sphere = &services_rsyncd_get_sphere();
+$gt_button_apply_confirm = gtext('Do you want to apply these settings?');
 array_make_branch($config,'access','user');
 array_sort_key($config['access']['user'],'login');
 $a_user = &$config['access']['user'];
-array_make_branch($config,'rsyncd');
-
-$pconfig['enable'] = isset($config['rsyncd']['enable']);
-$pconfig['port'] = $config['rsyncd']['port'];
-$pconfig['motd'] = base64_decode($config['rsyncd']['motd']);
-$pconfig['rsyncd_user'] = $config['rsyncd']['rsyncd_user'];
-if(isset($config['rsyncd']['auxparam']) && is_array($config['rsyncd']['auxparam'])):
-	$pconfig['auxparam'] = implode("\n",$config['rsyncd']['auxparam']);
-endif;
-
-if ($_POST) {
-	unset($input_errors);
-	$pconfig = $_POST;
-
-	if (isset($_POST['enable']) && $_POST['enable']) {
-		// Input validation.
+$input_errors = [];
+$a_message = [];
+//	identify page mode
+$mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_VIEW;
+switch($mode_page):
+	case PAGE_MODE_POST:
+		if(isset($_POST['submit'])):
+			$page_action = $_POST['submit'];
+			switch($page_action):
+				case 'edit':
+					$mode_page = PAGE_MODE_EDIT;
+					break;
+				case 'save':
+					break;
+				case 'enable':
+					break;
+				case 'disable':
+					break;
+				default:
+					$mode_page = PAGE_MODE_VIEW;
+					$page_action = 'view';
+					break;
+			endswitch;
+		else:
+			$mode_page = PAGE_MODE_VIEW;
+			$page_action = 'view';
+		endif;
+		break;
+	case PAGE_MODE_VIEW:
+		$page_action = 'view';
+		break;
+endswitch;
+//	get configuration data, depending on the source
+switch($page_action):
+	case 'save':
+		$source = $_POST;
+		$sphere->row['motd'] = $source['motd'] ?? $sphere->row_default['motd'];
+		$sphere->row['auxparam'] = $source['auxparam'] ?? $sphere->row_default['auxparam'];
+		break;
+	default:
+		$source = $sphere->grid;
+		$sphere->row['motd'] = isset($source['motd']) ? base64_decode($source['motd']) : $sphere->row_default['motd'];
+		if(isset($source['auxparam']) && is_array($source['auxparam'])):
+			$sphere->row['auxparam'] = implode("\n",$source['auxparam']);
+		endif;
+		break;
+endswitch;
+$sphere->row['enable'] = isset($source['enable']);
+$sphere->row['port'] = $source['port'] ?? $sphere->row_default['port'];
+$sphere->row['rsyncd_user'] = $source['rsyncd_user'] ?? $sphere->row_default['rsyncd_user'];
+//	process enable
+switch($page_action):
+	case 'enable':
+		if($sphere->row['enable']):
+			$mode_page = PAGE_MODE_VIEW;
+			$page_action = 'view';
+		else: // enable and run a full validation
+			$sphere->row['enable'] = true;
+			$page_action = 'save'; // continue with save procedure
+		endif;
+		break;
+endswitch;
+//	process save and disable
+switch($page_action):
+	case 'save':
+		//	Input validation.
 		$reqdfields = ['rsyncd_user','port'];
 		$reqdfieldsn = [gtext('Map to User'),gtext('TCP Port')];
 		$reqdfieldst = ['string','port'];
-
-		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-		}	
-
-	if (empty($input_errors)) {
-		$config['rsyncd']['enable'] = isset($_POST['enable']) ? true : false;
-		$config['rsyncd']['port'] = $_POST['port'];
-		$config['rsyncd']['motd'] = base64_encode($_POST['motd']); // Encode string, otherwise line breaks will get lost
-		$config['rsyncd']['rsyncd_user'] = $_POST['rsyncd_user'];
-
-		# Write additional parameters.
-		unset($config['rsyncd']['auxparam']);
-		foreach (explode("\n", $_POST['auxparam']) as $auxparam) {
-			$auxparam = trim($auxparam, "\t\n\r");
-			if (!empty($auxparam))
-				$config['rsyncd']['auxparam'][] = $auxparam;
-		}
-
-		write_config();
-
-		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
+		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
+		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+		if(empty($input_errors)):
+			//	conversion
+			$sphere->row['motd'] = base64_encode($sphere->row['motd']);
+			$helpinghand = [];
+			foreach(explode("\n",$sphere->row['auxparam']) as $auxparam):
+				$auxparam = trim($auxparam, "\t\n\r");
+				if(preg_match('/\S/',$auxparam)):
+					$helpinghand[] = $auxparam;
+				endif;
+			endforeach;
+			$sphere->row['auxparam'] = $helpinghand;
+			$sphere->grid = $sphere->row;
+			write_config();
+			$retval = 0;
 			config_lock();
-			$retval |= rc_update_service("rsyncd");
-			$retval |= rc_update_service("mdnsresponder");
+			$retval |= rc_update_service('rsyncd');
+			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-		}
-		$savemsg = get_std_save_message($retval);
-	}
-}
+			header($sphere->header());
+			exit;
+		else:
+			$mode_page = PAGE_MODE_EDIT;
+			$page_action = 'edit';
+		endif;
+		break;
+	case 'disable':
+		if($sphere->row['enable']): // if enabled, disable it
+			$sphere->row['enable'] = false;
+			$sphere->grid['enable'] = $sphere->row['enable'];
+			write_config();
+			$retval = 0;
+			config_lock();
+			$retval |= rc_update_service('rsyncd');
+			$retval |= rc_update_service('mdnsresponder');
+			config_unlock();
+			header($sphere->header());
+			exit;
+		endif;
+		$mode_page = PAGE_MODE_VIEW;
+		$page_action = 'view';
+		break;
+endswitch;
+//	determine final page mode
+switch($mode_page):
+	case PAGE_MODE_EDIT:
+		break;
+	default:
+		if(isset($config['system']['skipviewmode'])):
+			$mode_page = PAGE_MODE_EDIT;
+			$page_action = 'edit';
+		else:
+			$mode_page = PAGE_MODE_VIEW;
+			$page_action = 'view';
+		endif;
+		break;
+endswitch;
+//  prepare lookups
+$l_user = ['ftp' => gtext('Guest')];
+foreach ($a_user as $r_user):
+	$l_user[$r_user['login']] = htmlspecialchars($r_user['login']);
+endforeach;
+$gt_auxparam = sprintf(gtext('These parameters will be added to [global] settings in %s.'),'rsyncd.conf')
+	. ' '
+	. '<a href="http://rsync.samba.org/ftp/rsync/rsyncd.conf.html" target="_blank">'
+	. gtext('Please check the documentation')
+	. '</a>.';
 $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Settings')];
+include 'fbegin.inc';
+switch($mode_page):
+	case PAGE_MODE_VIEW:
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
-function enable_change(enable_change) {
-	var endis = !(document.iform.enable.checked || enable_change);
-	document.iform.port.disabled = endis;
-	document.iform.auxparam.disabled = endis;
-	document.iform.motd.disabled = endis;
-	document.iform.rsyncd_user.disabled = endis;
-}
-//-->
+//<![CDATA[
+$(window).on("load", function() {
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+});
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="services_rsyncd.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Server");?></span></a></li>
-				<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext("Client");?></span></a></li>
-				<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="services_rsyncd.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabinact"><a href="services_rsyncd_module.php"><span><?=gtext("Modules");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="services_rsyncd.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Rsync"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<tr>
-						<td valign="top" class="vncellreq"><?=gtext("Map to User");?></td>
-						<td class="vtable">
-							<select name="rsyncd_user" class="formfld" id="rsyncd_user">
-								<option value="ftp" <?php if ("ftp" === $pconfig['rsyncd_user']) echo "selected=\"selected\"";?>><?=gtext("Guest");?></option>
-								<?php foreach ($a_user as $user):?>
-								<option value="<?=$user['login'];?>" <?php if ($user['login'] === $pconfig['rsyncd_user']) echo "selected=\"selected\"";?>><?php echo htmlspecialchars($user['login']);?></option>
-								<?php endforeach;?>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("TCP Port");?></td>
-						<td width="78%" class="vtable">
-							<input name="port" type="text" class="formfld" id="port" size="20" value="<?=htmlspecialchars($pconfig['port']);?>" />
-							<br /><?=gtext("Alternate TCP port. (Default is 873).");?>
-						</td>
-					</tr>
-					<?php
-					html_textarea("motd", gtext("MOTD"), $pconfig['motd'], gtext("Message of the day."), false, 65, 7, false, false);
-					$helpinghand = '<a href="'
-						. 'http://rsync.samba.org/ftp/rsync/rsyncd.conf.html'
-						. '" target="_blank">'
-						. gtext('Please check the documentation')
-						. '</a>.';
-					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to [global] settings in %s."), "rsyncd.conf") . " " . $helpinghand, false, 65, 5, false, false);
-					?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
+<?php
+		break;
+	case PAGE_MODE_EDIT:
+?>
 <script type="text/javascript">
-<!--
-enable_change(false);
-//-->
+//<![CDATA[
+$(window).on("load", function() {
+	$("#iform").submit(function() {	spinner(); });
+	$(".spin").click(function() { spinner(); });
+	$("#button_save").click(function () {
+		return confirm("<?=$gt_button_apply_confirm;?>");
+	});
+});
+//]]>
 </script>
-<?php include 'fend.inc';?>
+<?php
+		break;
+endswitch;	
+?>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="services_rsyncd.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Server');?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext('Client');?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext('Local');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="services_rsyncd.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Settings');?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_module.php"><span><?=gtext('Modules');?></span></a></li>
+	</ul></td></tr>
+</tbody></table>
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	foreach($a_message as $r_message):
+		print_info_box($r_message);
+	endforeach;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			switch($mode_page):
+				case PAGE_MODE_VIEW:
+					html_titleline2(gtext('Network File System'));
+					break;
+				case PAGE_MODE_EDIT:
+					html_titleline_checkbox2('enable',gtext('Rsync'),$sphere->row['enable'],gtext('Enable'));
+					break;
+			endswitch;
+?>
+		</thead>
+		<tbody>
+<?php
+			switch($mode_page):
+				case PAGE_MODE_VIEW:
+					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					if(isset($l_user[$sphere->row['rsyncd_user']])):
+						$helpinghand = htmlspecialchars($l_user[$sphere->row['rsyncd_user']]);
+					else:
+						$helpinghand = '';
+					endif;
+					html_textinfo2('rsyncd_user',gtext('Map to User'),$helpinghand);
+					html_textinfo2('port',gtext('TCP Port'),htmlspecialchars($sphere->row['port']));
+					html_textarea2('motd',gtext('MOTD'),$sphere->row['motd'],gtext('Message of the day.'),false,65,7,true,false);
+					html_textarea2('auxparam',gtext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,true,false);
+					break;
+				case PAGE_MODE_EDIT:
+					html_combobox2('rsyncd_user',gtext('Map to User'),$sphere->row['rsyncd_user'],$l_user,'',true);
+					html_inputbox2('port',gtext('TCP Port'),htmlspecialchars($sphere->row['port']),gtext('Alternate TCP port. (Default is 873).'),true,20);
+					html_textarea2('motd',gtext('MOTD'),$sphere->row['motd'],gtext('Message of the day.'),false,65,7,false,false);
+					html_textarea2('auxparam',gtext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,false,false);
+					break;
+			endswitch;
+?>
+		</tbody>
+	</table>
+	<div id="submit">
+<?php
+		switch($mode_page):
+			case PAGE_MODE_VIEW;
+				echo html_button('edit',gtext('Edit'));
+				if($sphere->row['enable']):
+					echo html_button('disable',gtext('Disable'));
+				else:
+					echo html_button('enable',gtext('Enable'));
+				endif;
+				break;
+			case PAGE_MODE_EDIT:
+				echo html_button('save',gtext('Apply'));
+				echo html_button('cancel',gtext('Cancel'));
+				break;
+		endswitch;
+?>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
