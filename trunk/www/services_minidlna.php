@@ -433,9 +433,9 @@ endswitch;
 				html_titleline2(gtext('MiniDLNA Media Server WebGUI'));
 				$if = get_ifname($sphere->row['if']);
 				$ipaddr = get_ipaddr($if);
-				$url = htmlspecialchars(sprintf('http://%s:%s/status',$ipaddr,$sphere->row['port']));
+				$url = sprintf('http://%s:%s/status',htmlspecialchars($ipaddr),htmlspecialchars($sphere->row['port']));
 				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
-				html_text2('url',gtext('URL'),$text);
+				html_textinfo2('url',gtext('URL'),$text);
 			endif;
 ?>
 		</tbody>
