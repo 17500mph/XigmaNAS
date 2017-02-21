@@ -1,5 +1,5 @@
 --- dmidecode.c.orig	2015-09-03 08:03:19.000000000 +0200
-+++ dmidecode.c	2016-11-24 13:08:47.000000000 +0100
++++ dmidecode.c	2017-02-21 19:17:11.000000000 +0100
 @@ -2274,10 +2274,13 @@
  {
  	code &= 0x7FFFFFFFUL;
@@ -206,3 +206,48 @@
  	goto done;
  
  memory_scan:
+@@ -4878,28 +4924,38 @@
+ 		goto exit_free;
+ 	}
+ 
+-	for (fp = 0; fp <= 0xFFF0; fp += 16)
++	/* Look for a 64-bit entry point first */
++	for (fp = 0; fp <= 0xFFE0; fp += 16)
+ 	{
+-		if (memcmp(buf + fp, "_SM3_", 5) == 0 && fp <= 0xFFE0)
++		if (memcmp(buf + fp, "_SM3_", 5) == 0)
+ 		{
+ 			if (smbios3_decode(buf + fp, opt.devmem, 0))
+ 			{
+ 				found++;
+-				fp += 16;
++				goto done;
+ 			}
+ 		}
+-		else if (memcmp(buf + fp, "_SM_", 4) == 0 && fp <= 0xFFE0)
++	}
++
++	/* If none found, look for a 32-bit entry point */
++	for (fp = 0; fp <= 0xFFF0; fp += 16)
++	{
++		if (memcmp(buf + fp, "_SM_", 4) == 0 && fp <= 0xFFE0)
+ 		{
+ 			if (smbios_decode(buf + fp, opt.devmem, 0))
+ 			{
+ 				found++;
+-				fp += 16;
++				goto done;
+ 			}
+ 		}
+ 		else if (memcmp(buf + fp, "_DMI_", 5) == 0)
+ 		{
+ 			if (legacy_decode(buf + fp, opt.devmem, 0))
+-				found++;
++			{
++ 				found++;
++				goto done;
++			}
++
+ 		}
+ 	}
+ 
