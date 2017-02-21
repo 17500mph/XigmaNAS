@@ -78,9 +78,6 @@ $reservedlogin = ['root','toor','daemon','operator','bin','tty','kmem','www','no
 /* TCP flags */
 $tcpflags = ["fin",'syn','rst','psh','ack','urg'];
 
-/* platforms that support firmware updating */
-$fwupplatforms = ['embedded','full'];
-
 /* default setting */
 $input_errors = [];
 $errormsg = "";

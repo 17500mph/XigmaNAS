@@ -36,7 +36,6 @@ $d_isfwfile = 1; //	for guiconfig.inc, set means do not execute header('system_f
 require 'auth.inc';
 require 'guiconfig.inc';
 
-
 function check_firmware_version($locale) {
 /*
 	UNUSED FUNCTION
@@ -171,13 +170,13 @@ function get_latest_file($rss) {
 		//	convert to local time
 		$date = preg_replace('/UT$/','GMT',$pubdate);
 		$time = strtotime($date);
-		if($time === FALSE):
+		if($time === false):
 			//	convert error
 			$date = $pubdate;
 		else:
-			$date = date("D, d M Y H:i:s T",$time);
+			$date = get_datetime_locale($time);
 		endif;
-		if (empty($parts['extension'])):
+		if(empty($parts['extension'])):
 			continue;
 		endif;
 		if(strcasecmp($parts['extension'],$ext) != 0 && strcasecmp($parts['extension'],$ext2) != 0):
@@ -189,9 +188,9 @@ function get_latest_file($rss) {
 			$filever = $m[1];
 			$filerev = $m[2];
 			if($version < $filever || ($version == $filever && $revision < $filerev)):
-				$resp .= sprintf("<a href=\"%s\" title=\"%s\" target=\"_blank\">%s</a> (%s)",htmlspecialchars($link),htmlspecialchars($title),htmlspecialchars($fullname),htmlspecialchars($date));
+				$resp .= sprintf('<a href="%s" title="%s" target="_blank">%s</a> (%s)',htmlspecialchars($link),htmlspecialchars($title),htmlspecialchars($fullname),htmlspecialchars($date));
 			else:
-				$resp .= sprintf("%s (%s)",htmlspecialchars($fullname),htmlspecialchars($date));
+				$resp .= sprintf('%s (%s)',htmlspecialchars($fullname),htmlspecialchars($date));
 			endif;
 			break;
 		endif;
@@ -237,7 +236,7 @@ function check_firmware_version_rss($locale) {
 	endif;
 	return $resp;
 }
-
+$fwupplatforms = ['embedded','full']; // platforms that support firmware updating
 $page_mode = 'default';
 $input_errors = [];
 $errormsg = '';
