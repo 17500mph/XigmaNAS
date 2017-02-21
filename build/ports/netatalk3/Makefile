@@ -3,7 +3,7 @@ PORTVERSION=	 3.1.10
 PORTREVISION=	 0
 CATEGORIES=	 net
 MASTER_SITES=	 SF
-PKGNAMESUFFIX=   3
+PKGNAMESUFFIX=   4
 
 MAINTAINER=	zoon1@nas4free.org
 COMMENT=	File server for Mac OS X
@@ -11,7 +11,7 @@ COMMENT=	File server for Mac OS X
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
-		libevent.so:devel/libevent2
+		libevent.so:devel/libevent
 
 USES=           iconv gmake pkgconfig perl5 libtool tar:bzip2 bdb:5+ ssl
 
