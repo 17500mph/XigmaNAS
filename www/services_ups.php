@@ -300,7 +300,7 @@ function ups2_change() {
 					html_inputbox("driver", gtext("Driver"), $pconfig['driver'], $helpinghand , true, 30);
 					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The serial or USB port where your UPS is connected."), true, 30);
 					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("These parameters are added to the hardware-specific part of the driver."), false, 65, 5, false, false);
-					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
+					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 65);
 					html_checkbox("ups2", gtext("UPS")." 2", !empty($pconfig['ups2']) ? true : false, gtext("Enable second local connected UPS."), "", false, "ups2_change()");
 					html_inputbox("ups2_upsname", gtext("Identifier"), $pconfig['ups2_upsname'], gtext("This name is used to uniquely identify your second UPS on this system.")." ".gtext("In slave mode it is the UPS name (Identifier) at the UPS master."), true, 30);
 
@@ -312,17 +312,17 @@ function ups2_change() {
 					html_inputbox("ups2_driver", gtext("Driver"), $pconfig['ups2_driver'], $helpinghand, true, 30);
 					html_inputbox("ups2_port", gtext("Port"), $pconfig['ups2_port'], gtext("The serial or USB port where your second UPS is connected."), true, 30);
 					html_textarea("ups2_auxparam", gtext("Additional Parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gtext("These parameters are added to the hardware-specific part of the driver for the second UPS."), false, 65, 5, false, false);
-					html_inputbox("ups2_desc", gtext("Description"), $pconfig['ups2_desc'], gtext("You may enter a description here for your reference."), false, 40);
+					html_inputbox("ups2_desc", gtext("Description"), $pconfig['ups2_desc'], gtext("You may enter a description here for your reference."), false, 65);
 					html_inputbox("ip", gtext("IP address"), $pconfig['ip'], gtext("The IP address of the UPS master."), true, 30);
 					html_combobox("shutdownmode", gtext("Shutdown Mode"), $pconfig['shutdownmode'], ['fsd' => gtext('UPS reaches low battery'),'onbatt' => gtext('UPS goes on battery')], gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");
 					html_inputbox("shutdowntimer", gtext("Shutdown Timer"), $pconfig['shutdowntimer'], gtext("The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."), true, 3);
 					html_checkbox("remotemonitor", gtext("Remote Monitoring"), !empty($pconfig['remotemonitor']) ? true : false, gtext("Enable remote monitoring of the local connected UPS."), "", false, "monitoring_change()");
-					html_inputbox("monitoruser", gtext("Username"), $pconfig['monitoruser'], gtext("Remote monitoring username. Must be equal on both master and slave system."), true, 20);
-					html_passwordbox("monitorpassword", gtext("Password"), $pconfig['monitorpassword'], gtext("Remote monitoring password. Must be equal on both master and slave system."), true, 20);
+					html_inputbox("monitoruser", gtext("Username"), $pconfig['monitoruser'], gtext("Remote monitoring username. Must be equal on both master and slave system."), true, 25);
+					html_passwordbox("monitorpassword", gtext("Password"), $pconfig['monitorpassword'], gtext("Remote monitoring password. Must be equal on both master and slave system."), true, 25);
 					html_separator();
 					html_titleline_checkbox("email_enable", gtext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
-					html_inputbox("email_to", gtext("To Email Address"), $pconfig['email_to'], sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
-					html_inputbox("email_subject", gtext("Subject"), $pconfig['email_subject'], gtext("The subject of the email.") . " " . gtext("You can use the following parameters for substitution:") . '</span><div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div><span>', true, 60);
+					html_inputbox("email_to", gtext("To Email Address"), $pconfig['email_to'], sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 65);
+					html_inputbox("email_subject", gtext("Subject"), $pconfig['email_subject'], gtext("The subject of the email.") . " " . gtext("You can use the following parameters for substitution:") . '</span><div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div><span>', true, 65);
 					?>
 				</table>
 				<div id="submit">
