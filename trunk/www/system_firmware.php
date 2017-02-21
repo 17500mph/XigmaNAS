@@ -277,7 +277,7 @@ endswitch;
 switch($page_mode):
 	case 'default':
 		if(file_exists($d_firmwarelock_path)):
-			$input_errors[] = gtext('A firmware upgrade is in progress.');
+			$errormsg = gtext('A firmware upgrade is in progress.');
 			$page_mode = 'info';
 		endif;
 		break;
