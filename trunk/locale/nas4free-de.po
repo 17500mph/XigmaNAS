@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-18 21:02+0000\n"
-"PO-Revision-Date: 2017-02-21 19:51+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"PO-Revision-Date: 2017-02-22 08:54+0000\n"
+"Last-Translator: StefanSch <spam@stefanschawaller.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-21 19:56+0000\n"
+"X-Launchpad-Export-Date: 2017-02-22 22:37+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -31,23 +31,23 @@ msgstr "%1$s wird benutzt, um %2$s Volumes zu erstellen."
 
 #, php-format
 msgid "%d days"
-msgstr "%d tage"
+msgstr "%d Tage"
 
 #, php-format
 msgid "%d week"
-msgstr "%d woche"
+msgstr "%d Woche"
 
 #, php-format
 msgid "%d weeks"
-msgstr "%d wochen"
+msgstr "%d Wochen"
 
 #, php-format
 msgid "%d year"
-msgstr "%d jahr"
+msgstr "%d Jahr"
 
 #, php-format
 msgid "%d years"
-msgstr "%d jahre"
+msgstr "%d Jahre"
 
 #, php-format
 msgid "%d%% of %dMiB"
@@ -75,7 +75,7 @@ msgstr "%s ist bereits als Dateisystem konfiguriert."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr "%s ist bereits als Datenträger konfiguriert."
+msgstr "%s ist bereits als Volume konfiguriert."
 
 #, php-format
 msgid "%s is too long."
@@ -192,16 +192,20 @@ msgstr ""
 "benötigt."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr "Mindestens zwei Festplatten werden für ein RAID-1 Volume benötigt."
+msgstr ""
+"Mindestens zwei Festplatten werden für eine RAID-1 Konfiguration benötigt."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr "Mindestens zwei Festplatten werden für ein RAID-0 Volume benötigt."
+msgstr ""
+"Mindestens zwei Festplatten werden für eine RAID-0 Konfiguration benötigt."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr "Mindestens zwei Festplatten werden für ein RAID-1 Volume benötigt."
+msgstr ""
+"Mindestens zwei Festplatten werden für eine RAID-1 Konfiguration benötigt."
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr "Mindestens dre Festplatten werden für ein RAID-5 Volume benötigt."
+msgstr ""
+"Mindestens drei Festplatten werden für eine RAID-5 Konfiguration benötigt."
 
 msgid "4KB wrapper"
 msgstr "4k Anpassung"
@@ -258,9 +262,7 @@ msgstr ""
 "von hexadezimalen Zeichen eingegeben werden."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
-"Eine 'eingehängte' (mounted) Festplatte oder Partition kann nicht gelöscht "
-"werden."
+msgstr "Eine gemountete RAID-Konfiguration kann man nicht löschen."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
@@ -472,7 +474,7 @@ msgid "Add CARP"
 msgstr "CARP Hinzufügen"
 
 msgid "Add Dataset"
-msgstr "Datensatz Hinzufügen"
+msgstr "Datasets Hinzufügen"
 
 msgid "Add Encrypted Volume"
 msgstr "Verschlüsseltes Volume Hinzufügen"
@@ -502,7 +504,7 @@ msgid "Add RAID"
 msgstr "RAID Hinzufügen"
 
 msgid "Add Record"
-msgstr "Datensatz Hinzufügen"
+msgstr "Dataset hinzufügen"
 
 msgid "Add Resource"
 msgstr "Ressource Hinzufügen"
@@ -523,7 +525,7 @@ msgid "Add Share"
 msgstr "Share Hinzufügen"
 
 msgid "Add Snapshot"
-msgstr "Schnappschuß Hinzufügen"
+msgstr "Snapshot hinzufügen"
 
 msgid "Add URL"
 msgstr "URL Hinzufügen"
@@ -538,7 +540,7 @@ msgid "Add Virtual Device"
 msgstr "Virtual Device Hinzufügen"
 
 msgid "Add Volume"
-msgstr "Datenträger Hinzufügen"
+msgstr "Volume hinzufügen"
 
 msgid "Add WLAN"
 msgstr "WLAN Hinzufügen"
@@ -565,7 +567,7 @@ msgid "Add auth group"
 msgstr "Authentifizierungsgruppe hinzufügen"
 
 msgid "Add auto snapshot"
-msgstr "Automatischen schnappschuss hinzufügen"
+msgstr "Automatischen Snapshot hinzufügen"
 
 msgid "Add command"
 msgstr "Befehl hinzufügen"
@@ -1031,7 +1033,7 @@ msgid "Authenticate URL"
 msgstr "Authentifizieren URL"
 
 msgid "Authenticated Users"
-msgstr "authorisierte Benutzer"
+msgstr "autorisierte Benutzer"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
@@ -1064,10 +1066,10 @@ msgid "Auto"
 msgstr "Auto"
 
 msgid "Auto Snapshot"
-msgstr "Automatischer Schnappschuss"
+msgstr "Automatischer Snapshot"
 
 msgid "Auto Snapshot Settings"
-msgstr "Einstellungenb für Auto Snapshot"
+msgstr "Einstellungen für Auto Snapshot"
 
 msgid "Auto page refresh."
 msgstr "Automatische Seiten Aktualisierung."
@@ -1130,7 +1132,7 @@ msgid "Backup/Restore"
 msgstr "Sichern/Wiederherstellen"
 
 msgid "Bad User - (Non Existing Users)"
-msgstr "Benutzer existiert nicht"
+msgstr "wenn der Benutzer nicht existiert"
 
 msgid "Balance Algorithm"
 msgstr "Ausgleichsalgoritmus"
@@ -1778,7 +1780,7 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
-"Steuert den Kompressionsalgorithmus für diesen Datensatz. Der momentan "
+"Steuert den Kompressionsalgorithmus für dieses Dataset. Der momentan "
 "empfohlene Kompressionsalgorithmus ist 'LZ4'. Bei Einstellung der "
 "Kompression auf 'An' wird der  LZ4 Kompressionsalgorithmus verwendet, falls "
 "das  Statusbit lz4_compress aktiv ist. Andrenfalls wird LZJB verwendet. Sie "
@@ -1812,7 +1814,7 @@ msgstr ""
 "wird."
 
 msgid "Controls whether this dataset can be modified."
-msgstr "Steuert, ob dieser Datensatz geändert werden kann"
+msgstr "Steuert, ob dieses Dataset geändert werden kann"
 
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
@@ -1982,7 +1984,7 @@ msgid "Creates the pool with an alternate root."
 msgstr "Erstellt den Pool mit alternativem Root-Verzeichis."
 
 msgid "Creates the recursive snapshot."
-msgstr "Erstellt einen rekursiven Schnappschuss."
+msgstr "Erstellt einen rekursiven Snapshot"
 
 msgid "Creating filesystem"
 msgstr "Dateisystem wird erstellt"
@@ -2123,10 +2125,10 @@ msgid "Database directory"
 msgstr "Datenbank Verzeichnis"
 
 msgid "Dataset"
-msgstr "Datensatz"
+msgstr "Dataset"
 
 msgid "Dataset is marked for deletion"
-msgstr "Datensatz ist zum Löschen markiert"
+msgstr "Dataset ist zum Löschen markiert"
 
 msgid "Dataset is protected"
 msgstr "Das Dataset ist geschützt."
@@ -2259,7 +2261,7 @@ msgid "Delete Selected Datasets"
 msgstr "Ausgewählte Datensätze löschen"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr "Ausgewählte verschlüsselte Volumes löschen"
+msgstr "Ausgewählte verschlüsselte Datenträger löschen"
 
 msgid "Delete Selected Groups"
 msgstr "Ausgewählte Gruppen Löschen"
@@ -2280,7 +2282,7 @@ msgid "Delete Selected Pools"
 msgstr "Ausgewählte Pools löschen"
 
 msgid "Delete Selected RAID Volumes"
-msgstr "Lösche die ausgewählten RAID Laufwerke"
+msgstr "Lösche die ausgewählten RAID Konfigurationen"
 
 msgid "Delete Selected Records"
 msgstr "Ausgewählte Datensätze Löschen"
@@ -2316,7 +2318,7 @@ msgid "Delete Selected Virtual Devices"
 msgstr "Ausgewählte Virtuelle Geräte löschen"
 
 msgid "Delete Selected Volumes"
-msgstr "Ausgewählte Datenträger löschen"
+msgstr "Ausgewählte Volumes löschen"
 
 msgid "Delete Selected WLANs"
 msgstr "Gewählte WLANs löschen"
@@ -2340,7 +2342,7 @@ msgid "Delete auth group"
 msgstr "Authetifikationsgruppe löschen"
 
 msgid "Delete auto snapshot"
-msgstr "Automatischen Schnappschuss löschen"
+msgstr "Automatischen Snapshot löschen"
 
 msgid "Delete clone"
 msgstr "Clone löschen"
@@ -2383,7 +2385,7 @@ msgid "Delete target"
 msgstr "Lösche Target"
 
 msgid "Deletes the recursive snapshot."
-msgstr "Rekursiven Schnappschuss löschen"
+msgstr "Rekursiven Snapshot löschen"
 
 msgid "Deleting"
 msgstr "Lösche"
@@ -2468,7 +2470,7 @@ msgid "Detected Language:"
 msgstr "ermittelte Sprache"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Erkannte RSYNC-Freigaben"
 
 msgid "Detected an error while importing."
 msgstr "Ein Fehler wurde während dem Importier-Vorgang entdeckt."
@@ -2736,7 +2738,7 @@ msgid "Do you really want to delete this auth group?"
 msgstr "Möchten sie diese Authentifikationsgruppe wirklich löschen?"
 
 msgid "Do you really want to delete this auto snapshot?"
-msgstr "Wollen sie diesen automatischen Schnappschuss wirklich löschen?"
+msgstr "Wollen sie diesen automatischen Snapshot wirklich löschen?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Möchten Sie diesen Clone wirklich löschen"
@@ -2855,7 +2857,7 @@ msgid "Do you want to delete selected NFS shares?"
 msgstr "Möchten Sie die gewählten NFS Freigaben löschen?"
 
 msgid "Do you want to delete selected RAID volumes?"
-msgstr "Soll das ausgewählte RAID Laufwerk gelöscht werden?"
+msgstr "Soll die ausgewählte RAID Konfiguration gelöscht werden?"
 
 msgid "Do you want to delete selected Samba shares?"
 msgstr "Möchten Sie die gewählten Samba Freigaben löschen?"
@@ -2876,7 +2878,8 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Wollen Sie die ausgewählten Datensätze löschen?"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr "Wollen Sie die ausgewählten veschlüsselten Volumes wirklich löschen?"
+msgstr ""
+"Wollen Sie die ausgewählten verschlüsselten Datenträger wirklich löschen?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Möchten Sie die gewählten Gruppen löschen?"
@@ -2891,7 +2894,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Wollen Sie die ausgewählten ZFS-Pools löschen ?"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "Möchtest du die gewählten Einträge löschen?"
 
 msgid "Do you want to delete selected resources?"
 msgstr ""
@@ -2918,7 +2921,7 @@ msgid "Do you want to delete selected virtual devices?"
 msgstr "Wollen Sie die ausgewählten virtuellen Geräte  löschen ?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr "Wollen Sie die ausgewählten Datenträger löschen?"
+msgstr "Wollen Sie die ausgewählten Volumes löschen?"
 
 msgid "Do you want to delete this command?"
 msgstr "Soll dieses Kommando gelöscht werden?"
@@ -2933,7 +2936,7 @@ msgid "Do you want to disable selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen deaktivieren?"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "Möchtest du die gewählten Eintrage deaktivieren?"
 
 msgid "Do you want to disable selected rsync jobs?"
 msgstr "Möchten Sie ausgewählte RSYNC-Jobs deaktivieren?"
@@ -2951,7 +2954,7 @@ msgid "Do you want to enable selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen aktivieren?"
 
 msgid "Do you want to enable selected records?"
-msgstr ""
+msgstr "Möchtest du die gewählten Eintrage aktivieren?"
 
 msgid "Do you want to enable selected rsync jobs?"
 msgstr "Möchten Sie ausgewählte RSYNC-Jobs aktivieren?"
@@ -2960,7 +2963,7 @@ msgid "Do you want to enable selected rsync modules?"
 msgstr "Möchten Sie ausgewählte RSYNC-Module aktivieren?"
 
 msgid "Do you want to lock selected records?"
-msgstr ""
+msgstr "Möchtest du die gewählten Einträge sperren?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Sollen die ausgewählten Kommandos umgeschaltet werden?"
@@ -2972,16 +2975,16 @@ msgid "Do you want to toggle selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen umschalten?"
 
 msgid "Do you want to toggle selected records?"
-msgstr ""
+msgstr "Möchtest du die gewählten Einträge umschalten?"
 
 msgid "Do you want to toggle selected rsync jobs?"
-msgstr ""
+msgstr "Ausgewählte rsync Jobs umschalten?"
 
 msgid "Do you want to toggle selected rsync modules?"
-msgstr ""
+msgstr "Ausgewählte rsync Module umschalten?"
 
 msgid "Do you want to unlock selected records?"
-msgstr ""
+msgstr "Möchtest du die gewählten Einträge entsperren?"
 
 msgid "Document Root"
 msgstr "Stammverzeichnis"
@@ -3006,7 +3009,7 @@ msgid "Domain Name (DNS/Realm-Name)"
 msgstr ""
 
 msgid "Domain Name (NetBIOS-Name)"
-msgstr ""
+msgstr "Domain Name (NetBIOS-Name)"
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
@@ -3106,13 +3109,13 @@ msgid "Edit Bridge"
 msgstr ""
 
 msgid "Edit CARP"
-msgstr ""
+msgstr "CARP Konfiguration editieren"
 
 msgid "Edit Dataset"
-msgstr "Datensatz bearbeiten"
+msgstr "Dataset bearbeiten"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Konfiguration von verschlüsseltem Laufwerk editieren"
 
 msgid "Edit Group"
 msgstr "Gruppe bearbeiten"
@@ -3121,16 +3124,16 @@ msgid "Edit Host"
 msgstr "Host bearbeiten"
 
 msgid "Edit LAGG"
-msgstr ""
+msgstr "LAGG Konfiguration editieren"
 
 msgid "Edit MIB"
 msgstr "MIB editieren"
 
 msgid "Edit NFS Share"
-msgstr ""
+msgstr "NFS Share konfigurieren"
 
 msgid "Edit Option"
-msgstr ""
+msgstr "Optionen konfigurieren"
 
 msgid "Edit Pool"
 msgstr "Pool ändern"
@@ -3178,7 +3181,7 @@ msgid "Edit Virtual Device"
 msgstr "virtuelles Gerät editieren"
 
 msgid "Edit Volume"
-msgstr "Datenträger bearbeiten"
+msgstr "Volume bearbeiten"
 
 msgid "Edit WLAN"
 msgstr "WLAN bearbeiten"
@@ -3187,7 +3190,7 @@ msgid "Edit auth group"
 msgstr "Editiere Authentifikationsgruppe"
 
 msgid "Edit auto snapshot"
-msgstr "Automatischen Schnappschuss bearbeiten"
+msgstr "Auto-Snapshot bearbeiten"
 
 msgid "Edit command"
 msgstr "Befehl bearbeiten"
@@ -3248,7 +3251,7 @@ msgid "Enable"
 msgstr "Freigeben"
 
 msgid "Enable 'Asynchronous I/O (AIO).' switch."
-msgstr ""
+msgstr "Aktiviere  'Asynchronous I/O (AIO).'"
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Aktivieren Sie den 'Large read/write' Schalter."
@@ -3260,7 +3263,7 @@ msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Advanced Format aktivierem (4KB Sektoren)."
 
 msgid "Enable Asynchronous I/O. (AIO)."
-msgstr ""
+msgstr "Aktiviere  'Asynchronous I/O (AIO).'"
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Erlaube Challenge-Response Authentifizierung"
@@ -3303,7 +3306,7 @@ msgid "Enable Selected Options"
 msgstr "Ausgewählte Einstellungen aktivieren"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Möchtest du die gewählten Eintrage aktivieren?"
 
 msgid "Enable Selected Rsync Jobs"
 msgstr "Aktiviere ausgewählte RSYNC-Jobs"
@@ -3413,7 +3416,7 @@ msgid "Enable keyboard-interactive authentication."
 msgstr "Keyboard-interactive authentication aktivieren."
 
 msgid "Enable large read/write."
-msgstr ""
+msgstr "Aktiviere 'large read/write'"
 
 msgid "Enable local user authentication."
 msgstr "Aktiviere Zugriff für lokale Benutzer."
@@ -3473,7 +3476,7 @@ msgid "Enable shadow copy."
 msgstr "Schattenkopie aktivieren"
 
 msgid "Enable store DOS attributes."
-msgstr ""
+msgstr "DOS Attribute aktivieren"
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktiviere das Ident Protokoll (RFC1413)."
@@ -3485,6 +3488,8 @@ msgid ""
 "Enable this option if you want to edit configuration pages directly without "
 "the need to switch to edit mode."
 msgstr ""
+"Aktiviere diese Option, wenn du ohne Zwischenschritt direkt auf die "
+"Konfigurationseinstellungen zugreifen möchtest."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "strikte Einhaltung von DLNA Standards erzwingen"
@@ -3526,13 +3531,13 @@ msgid "Encrypted configuration is automatically gzipped."
 msgstr "Verschlüsselte Konfiguration wird automatisch komprimiert (gzip)"
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Das verschlüsselte Laufwerk ist zur Löschung ausgewählt"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "Das verschlüsselte Laufwerk ist geschützt"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "Das verschlüsselte Laufwerk ist entsperrt"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3542,7 +3547,7 @@ msgid "Encryption"
 msgstr "Verschlüsselung"
 
 msgid "Encryption Management"
-msgstr ""
+msgstr "Konfiguration der Verschlüsselungsparameter"
 
 msgid "Encryption Settings"
 msgstr "Verschlüsselungseinstellungen"
@@ -3557,7 +3562,7 @@ msgid "English"
 msgstr "Englisch"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr ""
+msgstr "erhöhte Kompatibilitätsmodus für Netatalk AFP"
 
 msgid "Enter Command"
 msgstr "Befehl eingeben"
@@ -3841,7 +3846,7 @@ msgid "FTP - Ban Module"
 msgstr ""
 
 msgid "FTP - File Transfer"
-msgstr ""
+msgstr "FTP - Dateitransfer"
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -3872,7 +3877,7 @@ msgid "Failed"
 msgstr "Fehlgeschlagen"
 
 msgid "Failed to access in-memory file system."
-msgstr ""
+msgstr "Fehler beim Zugriff auf das in-memory Dateisystem."
 
 msgid "Failed to execute command zfs."
 msgstr "Ausführung des Kommandos zfs fehlgeschlagen."
@@ -3949,7 +3954,7 @@ msgstr "Datei nicht gefunden"
 
 #, php-format
 msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
-msgstr "Dateipfad (z.B. %s) oder ZFS volume (z.B. %s) des Festplattenimage."
+msgstr "Dateipfad (z.B. %s) oder ZFS Volume (z.B. %s) des Festplattenimage."
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -4033,7 +4038,7 @@ msgid "Force Operation"
 msgstr "Befehlsausführung erzwingen"
 
 msgid "Force Use"
-msgstr ""
+msgstr "Erzwinge Einstellung"
 
 msgid "Force delete"
 msgstr "Lösung erzwingen"
@@ -4106,7 +4111,7 @@ msgid "GEOM"
 msgstr "GEOM"
 
 msgid "GEOM Partition Information"
-msgstr ""
+msgstr "GEOM Partitionsinformationen"
 
 msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
@@ -4168,7 +4173,7 @@ msgstr "Graph zeigt die letzten 120 Sekunden"
 
 #, php-format
 msgid "Graph updates every %d seconds."
-msgstr ""
+msgstr "Graph aktualisiert sich alle %d Sekunden."
 
 msgid "Graphs Height"
 msgstr "Diagramm Höhe"
@@ -4178,6 +4183,7 @@ msgstr "Griechisch"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
+"Begrüßung, welche dem Client beim ersten Verbindungsaufbau angezeigt wird."
 
 msgid "Group"
 msgstr "Gruppe"
@@ -4198,7 +4204,7 @@ msgid "Group Suffix"
 msgstr ""
 
 msgid "Group is marked for deletion"
-msgstr ""
+msgstr "Gruppe ist zum Löschen markiert"
 
 msgid "Group is protected"
 msgstr "Gruppe ist geschützt"
@@ -4234,7 +4240,7 @@ msgid "HAST Resource"
 msgstr "HAST Resource"
 
 msgid "HAST is disabled."
-msgstr ""
+msgstr "HAST ist deaktiviert."
 
 msgid "HAST volume"
 msgstr "HAST-Datenträger"
@@ -4311,7 +4317,7 @@ msgid "Hide Default Groups"
 msgstr "Verstecke Systemgruppen"
 
 msgid "Hide Dot Files"
-msgstr ""
+msgstr "Verstecke Dateien/Verzeichnisse mit einem Punkt am Anfang"
 
 msgid "High voltage boosting transfer point"
 msgstr "Eingangspannungserhöhung Schwellwert"
@@ -4424,7 +4430,7 @@ msgid "IPMI Stats"
 msgstr "IPMI Statistiken"
 
 msgid "IPv4 DNS Servers"
-msgstr ""
+msgstr "IPv4 DNS Server"
 
 msgid "IPv4 Settings"
 msgstr "IPv4 Einstellungen"
@@ -4436,7 +4442,7 @@ msgid "IPv6 Address"
 msgstr "IPv6-Adresse"
 
 msgid "IPv6 DNS Servers"
-msgstr ""
+msgstr "IPv6 DNS Server"
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 Gateway"
@@ -4467,7 +4473,7 @@ msgid "ISO file to be mounted."
 msgstr "ISO-Datei die eingehängt werden soll."
 
 msgid "ISP DNS Servers"
-msgstr ""
+msgstr "ISP DNS Server"
 
 msgid "IdentLookups"
 msgstr ""
@@ -4557,7 +4563,7 @@ msgstr ""
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
-"Wenn diese Einstellung aktiviert ist, werden die Schnappschüsse im .zfs-"
+"Wenn diese Einstellung aktiviert ist, werden die Snapshots im .zfs-"
 "Verzeichnis angezeigt."
 
 msgid "Import"
@@ -4597,16 +4603,16 @@ msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "Im Slave Mode ist es der USV Bezeichner (Name) des USV Masters."
 
 msgid "In/Out Errors"
-msgstr ""
+msgstr "Eingabe/Ausgabe Fehler"
 
 msgid "In/Out Packets"
-msgstr ""
+msgstr "Eingabe/Ausgabe Pakete"
 
 msgid "Incoming Line/Power Information"
 msgstr "Zuleitungs/ Netz Informationen"
 
 msgid "Incomplete Directory"
-msgstr ""
+msgstr "Unvollständiges Verzeichnis"
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4814,6 +4820,7 @@ msgstr "Ungültiges Dateiformat."
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
+"Ungültige maximale Blockgröße! Der gültige Bereich geht von %d bis %d."
 
 msgid "Invalid username or password."
 msgstr "Benutzername oder Passwort ungültig."
@@ -4832,6 +4839,8 @@ msgid ""
 "It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
 "at the same time."
 msgstr ""
+"'Anonymer Benutzer' und 'autorisierte Benutzer' dürfen nicht gleichzeitig "
+"aktiviert sein."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4940,15 +4949,16 @@ msgstr "LAGG Einstellungen"
 msgid ""
 "LAGG cannot be deleted because it is still being used as an interface."
 msgstr ""
+"LAGG kann nicht gelöscht werden, weil es aktuell als Interface genutzt wird."
 
 msgid "LAGG is marked for deletion"
-msgstr ""
+msgstr "LAGG ist zum Löschen markiert"
 
 msgid "LAGG is protected"
-msgstr ""
+msgstr "LAGG ist geschützt"
 
 msgid "LAGG is unlocked"
-msgstr ""
+msgstr "LAGG ist entsperrt"
 
 msgid "LAN Management"
 msgstr "LAN Management"
@@ -4990,7 +5000,7 @@ msgid "Language to use on front panel"
 msgstr "Sprache der Displayanzeige"
 
 msgid "Large Read/Write"
-msgstr ""
+msgstr "'Large Read/Write'"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5018,17 +5028,17 @@ msgstr ""
 
 #, php-format
 msgid "Latest Beta Release: %s"
-msgstr ""
+msgstr "Letzte Beta-Version: %s"
 
 #, php-format
 msgid "Latest Release: %s"
 msgstr "Neuestes Release: %s"
 
 msgid "Leave already configured auto snapshots."
-msgstr "Bereits konfigurierte Schnappschüsse verlassen."
+msgstr "Bereits konfigurierte Auto-Snapshots nicht ändern."
 
 msgid "Leave auto snapshot configuration"
-msgstr "Konfiguration der automatischen Schnappschüsse verlassen."
+msgstr "Auto-Snapshots nicht ändern."
 
 msgid "Leave this field empty to use default settings."
 msgstr "Dieses Feld leer lassen, um die Standardeinstellungen zu nutzen."
@@ -5078,12 +5088,12 @@ msgid ""
 "specify the size use the following human-readable suffixes (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
-"Beschränkt die Höhe des Speicherplatzes eines Datensatzes und seiner "
-"Nachkommen die genutzt werden können. Diese Eigenschaft setzt eine harte "
+"Beschränkt die Höhe des Speicherplatzes eines Datasets und seiner Unter-"
+"Datasets die genutzt werden können. Diese Eigenschaft setzt eine feste "
 "Grenze bei der Höhe des genutzten Speicherplatzes durch. Das beinhaltet "
-"sämtlichen Speicher die von den Nachkommen genutzt werden, inklusive "
-"Dateisystem und Schnappschüsse. Um die Größe einzustellen bitte die "
-"folgenden Suffixe benutzen: »k«, »KB«, »M«, »Gb«, usw."
+"sämtlichen Speicher die von den Unter-Datasets genutzt werden, inklusive "
+"Dateisystem und Snapshots. Um die Größe einzustellen bitte die folgenden "
+"Suffixe benutzen: »k«, »KB«, »M«, »Gb«, usw."
 
 msgid "Link Down Action"
 msgstr "Aktion bei Verbindungsabbruch"
@@ -5158,10 +5168,10 @@ msgstr "Standort an welchem die Inhalte-Datenbank gespeichert werden soll."
 
 #, php-format
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
-msgstr ""
+msgstr "Arbeitsverzeichnis, z.B. %s/backup/.unison"
 
 msgid "Lock Selected Records"
-msgstr ""
+msgstr "Sperre ausgewählte Einträge"
 
 msgid "Locked Files"
 msgstr "Gesperrte Dateien"
@@ -5170,13 +5180,13 @@ msgid "Log"
 msgstr "Log"
 
 msgid "Log Filter"
-msgstr ""
+msgstr "Log Filter"
 
 msgid "Log Level"
 msgstr "Log Level"
 
 msgid "Log Order"
-msgstr ""
+msgstr "Log Sortierung"
 
 msgid "Log Settings"
 msgstr "Protokoll-Einstellungen"
@@ -5193,7 +5203,7 @@ msgid "Logarithmic Scaling"
 msgstr "Logarithmische Skalierung"
 
 msgid "Logical Block"
-msgstr ""
+msgstr "Logischer Block"
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -5315,13 +5325,13 @@ msgid "Manufacturing date"
 msgstr "Herstellungsdatum"
 
 msgid "Map all users to root, all users will have root privileges."
-msgstr ""
+msgstr "Alle Nutzer greifen mit 'root'-Rechten auf das Verzeichnis zu."
 
 msgid "Map to Guest"
-msgstr ""
+msgstr "Zugriff als Gast"
 
 msgid "Map to Root"
-msgstr ""
+msgstr "Zugriff als 'root'"
 
 msgid "Map to User"
 msgstr ""
@@ -5349,7 +5359,7 @@ msgid "Max Entries"
 msgstr "Maximale Anzahl von Einträgen"
 
 msgid "Max. Block Size"
-msgstr ""
+msgstr "Max. Blockgröße"
 
 msgid "Max. Clients"
 msgstr ""
@@ -5367,7 +5377,7 @@ msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. Sessions"
-msgstr ""
+msgstr "Max. Sitzungen"
 
 msgid "Max. pre-send R2T"
 msgstr "Maximale Anzahl der im Voraus gesendeten Ready2Transfer-Pakete"
@@ -5399,7 +5409,7 @@ msgstr ""
 
 msgid ""
 "Maximum number of connections allowed per IP address. (0 = unlimited)."
-msgstr ""
+msgstr "Maximale Anzahl der Verbindungen pro IP-Adresse (0 = unbegrenzt)."
 
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
@@ -5425,7 +5435,7 @@ msgstr ""
 "Max. Anzahl gleichzeitiger Verbindungen. Standardwert ist 0 (unbegrenzt)."
 
 msgid "Maximum number of users that can connect to the server."
-msgstr ""
+msgstr "Maximale gleichzeitige Nutzeranzahl für diesen Server."
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "maximal gemessene Luftfeuchte"
@@ -5591,7 +5601,7 @@ msgid "Mount Point Fsck"
 msgstr "Einhängepunkt Fsck"
 
 msgid "Mount Point Management"
-msgstr ""
+msgstr "Einhängepunkt Verwaltung"
 
 msgid "Mount Point Tools"
 msgstr "Einhängepunkt Werkzeuge"
@@ -5639,13 +5649,13 @@ msgid "NFS"
 msgstr "NFS"
 
 msgid "NFS share is marked for deletion"
-msgstr ""
+msgstr "NFS Freigabe ist zum Löschen markiert"
 
 msgid "NFS share is protected"
-msgstr ""
+msgstr "NFS Freigabe ist geschützt"
 
 msgid "NFS share is unlocked"
-msgstr ""
+msgstr "NFS Freigabe ist entsperrt"
 
 msgid "NFSv4"
 msgstr "NFSv4"
@@ -5673,7 +5683,7 @@ msgid "NTFS ACLs"
 msgstr ""
 
 msgid "NTP Time Server"
-msgstr ""
+msgstr "NTP Zeitserver"
 
 msgid "NTP is not enabled."
 msgstr "NTP ist deaktiviert"
@@ -5774,6 +5784,8 @@ msgid ""
 "New Password does not match the confirmation password. Please ensure both "
 "passwords are the same."
 msgstr ""
+"Das neue Password stimmt nicht mit der Bestätigung überein. Achte darauf, "
+"dass beide Passwörter gleich sind!"
 
 msgid "New password"
 msgstr "Neues Passwort"
@@ -5785,7 +5797,7 @@ msgid "No"
 msgstr "Nein"
 
 msgid "No DNS server have been configured."
-msgstr ""
+msgstr "Es wurde kein DNS Server eingetragen."
 
 msgid "No DNS setting found."
 msgstr "Keine DNS-Einstellung gefunden."
@@ -5797,7 +5809,7 @@ msgid "No IPMI FRU data available."
 msgstr "Keine IMPI FRU Daten verfügbar"
 
 msgid "No IPMI Sensor data available."
-msgstr ""
+msgstr "Es sind keine IPMI Daten verfügbar."
 
 msgid "No Initiator Group has been configured."
 msgstr "Es wurde keine Initiator Gruppe konfiguriert."
@@ -5806,7 +5818,7 @@ msgid "No Portal Group has been configured."
 msgstr "Es wurde keine Portal Gruppe konfiguriert."
 
 msgid "No RSYNC Client configured."
-msgstr ""
+msgstr "Es wurde kein RSYNC Client konfiguriert."
 
 msgid "No configured Auth Group."
 msgstr "Es wurde keine Auth Gruppe definiert."
@@ -5838,10 +5850,10 @@ msgstr ""
 "Diagnoseinformationen zu bekommen"
 
 msgid "No disks found."
-msgstr ""
+msgstr "Es wurden keine Datenträger gefunden."
 
 msgid "No fdisk information found."
-msgstr ""
+msgstr "Es wurden keine fdisk Informationen gefunden."
 
 msgid "No file was uploaded."
 msgstr "Es wurde keine Datei hochgeladen."
@@ -5850,13 +5862,13 @@ msgid "No new disk found."
 msgstr "Keine neuen Festplatten gefunden."
 
 msgid "No new encrypted disks have been found."
-msgstr ""
+msgstr "Es wurden keine neuen verschlüsselten Datenträger gefunden."
 
 msgid "No new software raid disk found."
 msgstr "Keine neuen Software-RAID Festplatten gefunden."
 
 msgid "No partition information found."
-msgstr ""
+msgstr "Es wurden keine Partitionen gefunden."
 
 msgid "No pool devices have been selected"
 msgstr "Es wurden keine Pool Geräte ausgewählt"
@@ -6013,7 +6025,7 @@ msgid "Now"
 msgstr "Jetzt"
 
 msgid "Null Passwords"
-msgstr ""
+msgstr "Leere Passwörter"
 
 msgid "Number of bad battery packs"
 msgstr "Anzahl defekter Akkuzellen"
@@ -6102,7 +6114,7 @@ msgid "Option is protected"
 msgstr ""
 
 msgid "Option is unlocked"
-msgstr ""
+msgstr "Option ist freigeschaltet"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Optionaler benutzerfreundlicher String für das Ziel."
@@ -6202,7 +6214,7 @@ msgid "Packages"
 msgstr "Pakete"
 
 msgid "Packages Installer"
-msgstr ""
+msgstr "Paketverwaltung"
 
 msgid "Page Refresh"
 msgstr "Seiten Aktualisierung"
@@ -6281,10 +6293,10 @@ msgid "Password (confirmed)"
 msgstr "Passwort (bestätigt)"
 
 msgid "Password Authentication"
-msgstr ""
+msgstr "Passwort Authentifizierung"
 
 msgid "Password Encryption"
-msgstr ""
+msgstr "Passwortverschlüsselung"
 
 msgid "Password Server"
 msgstr ""
@@ -6296,6 +6308,8 @@ msgid ""
 "Password does not match the confirmation password. Please ensure both "
 "passwords are the same."
 msgstr ""
+"Das neue Password stimmt nicht mit der Bestätigung überein. Achte darauf, "
+"dass beide Passwörter gleich sind!"
 
 msgid "Password don't match."
 msgstr "Passwort FALSCH."
@@ -6328,7 +6342,7 @@ msgid "Path of the URL relative to document root."
 msgstr "Pfad der URL relativ zum Wurzelverzeichnis."
 
 msgid "Path to be shared to be synchronized."
-msgstr ""
+msgstr "Freigabepfad welcher synchronisiert wird"
 
 msgid "Path to be shared."
 msgstr "Freizugebender Pfad."
@@ -6482,7 +6496,7 @@ msgid "Pool cannot be changed."
 msgstr "Pool kann nicht verändert werden."
 
 msgid "Pool is marked for deletion"
-msgstr ""
+msgstr "Pool ist zum Löschen markiert"
 
 msgid "Pool is protected"
 msgstr "Pool ist geschützt."
@@ -6580,7 +6594,7 @@ msgid "PreInit"
 msgstr "PreInit"
 
 msgid "Preallocation"
-msgstr ""
+msgstr "Vorbelegung"
 
 msgid "Preferred"
 msgstr "Bevorzugt"
@@ -6592,13 +6606,13 @@ msgid "Preformatted file system"
 msgstr "Vorformatiertes Dateisystem"
 
 msgid "Preserve Extended Attributes"
-msgstr ""
+msgstr "Behalte erweiterte Attribute"
 
 msgid "Preserve Extended attributes"
-msgstr ""
+msgstr "Behalte erweiterte Attribute"
 
 msgid "Preserve Permissions"
-msgstr ""
+msgstr "Behalte Rechte"
 
 msgid "Preserve modification times."
 msgstr "Zeit der letzten Änderung beibehalten"
@@ -6866,10 +6880,10 @@ msgid "Reboot"
 msgstr "Neustart"
 
 msgid "Receive Buffer"
-msgstr ""
+msgstr "Empfangspuffer"
 
 msgid "Record Information"
-msgstr ""
+msgstr "Imformationen zum Eintrag"
 
 msgid "Record Maintenance"
 msgstr ""
@@ -6878,13 +6892,13 @@ msgid "Record is locked"
 msgstr "Aufzeichnung gesperrt"
 
 msgid "Record is marked for deletion"
-msgstr ""
+msgstr "Eintrag ist zum Löschen markiert"
 
 msgid "Record is protected"
-msgstr ""
+msgstr "Eintrag ist geschützt"
 
 msgid "Record is unlocked"
-msgstr ""
+msgstr "Eintrag ist entsperrt"
 
 msgid "Recurse into directories."
 msgstr "Unterordner einbeziehen."
@@ -6893,7 +6907,7 @@ msgid "Recursive"
 msgstr "Rekursiv"
 
 msgid "Recycle Bin"
-msgstr ""
+msgstr "Papierkorb"
 
 msgid "Refresh"
 msgstr "Aktualisieren"
@@ -6923,7 +6937,7 @@ msgid "Remote Module (Source)"
 msgstr "Remote-Modul (Quelle)"
 
 msgid "Remote Monitoring"
-msgstr ""
+msgstr "Fernüberwachung"
 
 msgid "Remote Rsync Daemon"
 msgstr ""
@@ -7091,7 +7105,7 @@ msgid "Reverse DNS lookup"
 msgstr "Umgekehrte DNS Auflösung"
 
 msgid "Reverse Direction"
-msgstr ""
+msgstr "umgekehrte Richtung"
 
 msgid "Role"
 msgstr "Rolle"
@@ -7145,22 +7159,22 @@ msgid "Rsync Job"
 msgstr "Rsync Job"
 
 msgid "Rsync Module is marked for deletion"
-msgstr ""
+msgstr "Rsync Modul ist zum Löschen markiert"
 
 msgid "Rsync Module is protected"
-msgstr ""
+msgstr "Rsync Modul ist geschützt"
 
 msgid "Rsync Module is unlocked"
-msgstr ""
+msgstr "Rsync Modul ist entsperrt"
 
 msgid "Rsync job is marked for deletion"
-msgstr ""
+msgstr "Rsync Job ist zum Löschen markiert"
 
 msgid "Rsync job is protected"
-msgstr ""
+msgstr "Rsync Job ist geschützt"
 
 msgid "Rsync job is unlocked"
-msgstr ""
+msgstr "Rsync Job ist entsperrt"
 
 msgid "Rule"
 msgstr "Regel"
@@ -7184,6 +7198,8 @@ msgid ""
 "Running this service as root is not recommended for security reasons, use at "
 "your own risk!"
 msgstr ""
+"Aus Sicherheitsgründen wird nicht empfohlen diesen Dienst als 'root' laufen "
+"zu lassen. Nutzung auf eigene Gefahr!"
 
 msgid "Russian"
 msgstr "Russisch"
@@ -7252,13 +7268,13 @@ msgid "Samba Active Directory Domain Controller"
 msgstr "Samba Active Directory Domänencontroller"
 
 msgid "Samba Share is marked for deletion"
-msgstr ""
+msgstr "Samba Freigabe ist zum Löschen markiert"
 
 msgid "Samba Share is protected"
-msgstr ""
+msgstr "Samba Freigabe ist geschützt"
 
 msgid "Samba Share is unlocked"
-msgstr ""
+msgstr "Samba Freigabe ist entsperrt"
 
 #, php-format
 msgid ""
@@ -7282,7 +7298,7 @@ msgid "Save"
 msgstr "Speichern"
 
 msgid "Save & Restart"
-msgstr "Speichern & System neu starten"
+msgstr "Speichern & Dienst neu starten"
 
 msgid "Save and Restart"
 msgstr "Speichern und Neustart"
@@ -7338,7 +7354,7 @@ msgid "Script"
 msgstr ""
 
 msgid "Script has been uploaded."
-msgstr ""
+msgstr "Script wurde hochgeladen."
 
 msgid "Scrub a pool"
 msgstr "Scrub (Schrubben) eines Pools"
@@ -7403,10 +7419,10 @@ msgstr ""
 "Betriebssystemen importieren wollen."
 
 msgid "Select Cache Device"
-msgstr ""
+msgstr "Wähle Cache Laufwerk"
 
 msgid "Select Data Device"
-msgstr ""
+msgstr "Wähle Daten Laufwerk"
 
 msgid "Select Device"
 msgstr "Gerät auswählen"
@@ -7419,19 +7435,19 @@ msgstr ""
 "HTTPS)."
 
 msgid "Select Log Device"
-msgstr ""
+msgstr "Wähle Log Laufwerk"
 
 msgid "Select Pool"
 msgstr ""
 
 msgid "Select Pool Device"
-msgstr ""
+msgstr "Wähle Pool Laufwerk"
 
 msgid "Select Pools"
-msgstr ""
+msgstr "Wähle Pools"
 
 msgid "Select Spare Device"
-msgstr ""
+msgstr "Wähle Spare Laufwerk"
 
 msgid "Select a date format."
 msgstr "Datumsformat auswählen"
@@ -7441,7 +7457,7 @@ msgstr ""
 "Wähle ein Gerät welches für die S.M.A.R.T. Überwachung aktiviert wurde."
 
 msgid "Select an encryption algorithm to use."
-msgstr ""
+msgstr "Wähle den Verschlüsselungsalgorithmus"
 
 msgid "Select file system format."
 msgstr "Wählen Sie das Dateisystem Format"
@@ -7493,6 +7509,8 @@ msgstr "Wählen Sie den Standort, der Ihnen am nächsten liegt."
 
 msgid "Select the permission for running this service. (www by default)."
 msgstr ""
+"Wähle den Benutzer aus, mit dem dieser Dienst ausgeführt werden soll. (www "
+"ist Standard)."
 
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
@@ -7502,7 +7520,7 @@ msgstr ""
 "den Knopf unterhalb um die Konfiguration wiederherzustellen."
 
 msgid "Select which interface to use."
-msgstr ""
+msgstr "Wählle die Schnittstelle aus"
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7512,7 +7530,7 @@ msgstr ""
 "werden wenn der Server mehr als eine Schnittstelle hat)"
 
 msgid "Select which key length to use for given cryptographic algorithm."
-msgstr ""
+msgstr "Wähle die Schlüssellänge"
 
 msgid "Selected"
 msgstr "Ausgewählt"
@@ -7620,7 +7638,7 @@ msgid "Set additional group memberships for this account."
 msgstr "Setzt zusätzliche Gruppenzugehörigkeit für dieses Konto."
 
 msgid "Set browseable."
-msgstr ""
+msgstr "Durchsuchbar"
 
 msgid ""
 "Set interval between disk checks to N seconds. The minimum allowed value is "
@@ -7628,7 +7646,7 @@ msgid ""
 msgstr ""
 
 msgid "Set read only."
-msgstr ""
+msgstr "Nur Lesen"
 
 msgid "Set share password."
 msgstr "Setze Passwort für Freigabe."
@@ -7667,15 +7685,14 @@ msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Bildlaufgeschwindigkeit der Titel von 0-10 setzen (Standard: 10)."
 
 msgid "Set user login shell."
-msgstr ""
+msgstr "Wähle Benutzerschnittstelle (login shell)"
 
 msgid "Setkey"
 msgstr ""
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
-"Setzt den alternativen Einhängepunkt für den Wurzeldatensatz. Standard ist "
-"/mnt."
+"Setzt den alternativen Einhängepunkt für den Pool. Standard ist /mnt."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7694,7 +7711,7 @@ msgid "Shadow Copy"
 msgstr "Schattenkopie"
 
 msgid "Shadow Copy Format"
-msgstr ""
+msgstr "Format der Schattenkopien"
 
 msgid "Share"
 msgstr "Freigabe"
@@ -7709,13 +7726,13 @@ msgid "Share Settings"
 msgstr ""
 
 msgid "Share is marked for deletion"
-msgstr ""
+msgstr "Freigabe ist zum Löschen markiert"
 
 msgid "Share is protected"
-msgstr ""
+msgstr "Freigabe ist geschützt"
 
 msgid "Share is unlocked"
-msgstr ""
+msgstr "Freigabe ist freigegeben"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Passwort für die Freigabe kann nicht länger als 8 Zeichen sein."
@@ -7817,10 +7834,10 @@ msgid "SmartTrim"
 msgstr "SmartTrim"
 
 msgid "Snapshot"
-msgstr "Schnappschuss"
+msgstr "Snapshot"
 
 msgid "Snapshot Visibility"
-msgstr "Schnappschusssichtbarkeit"
+msgstr "Snapshot Sichtbarkeit"
 
 msgid "Snapshot is locked"
 msgstr "Snapshot ist gesperrt"
@@ -7832,7 +7849,7 @@ msgid "Snapshot is unlocked"
 msgstr "Der Snapshot ist entsperrt"
 
 msgid "Snapshots"
-msgstr "Schnappschüsse"
+msgstr "Snapshots"
 
 msgid "Sockets"
 msgstr "Sockets"
@@ -7888,7 +7905,7 @@ msgid "Sparse"
 msgstr "Karg"
 
 msgid "Sparse Volume"
-msgstr "Karger Datentr&auml;ger"
+msgstr "Sparse Volume"
 
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
@@ -8015,13 +8032,13 @@ msgid "Storage"
 msgstr "Datenträger"
 
 msgid "Store DOS Attributes"
-msgstr ""
+msgstr "Speichere DOS Attribute"
 
 msgid "Store NTFS ACLs in Extended Attributes."
-msgstr ""
+msgstr "Speichere NTFS ACLs in erweiterten Attributen."
 
 msgid "Store alternate data streams in Extended Attributes."
-msgstr ""
+msgstr "Speichere alternative Datenströme in erweiterten Attributen."
 
 msgid "Strict DLNA"
 msgstr "strenge DLNA Spezifikation"
@@ -8080,7 +8097,7 @@ msgid "Swap Usage"
 msgstr "Swap Auslastung"
 
 msgid "Swap is disabled."
-msgstr ""
+msgstr "Swap ist abgeschaltet."
 
 msgid "Swedish"
 msgstr "Schwedisch"
@@ -8132,7 +8149,7 @@ msgid "System BIOS"
 msgstr "System BIOS"
 
 msgid "System Config Change"
-msgstr ""
+msgstr "Letzte Konfigurationsänderung"
 
 msgid "System Email Report Settings"
 msgstr "Systembericht-Email Einstellung"
@@ -8210,7 +8227,7 @@ msgid "TLS Mode"
 msgstr "TLS Mode"
 
 msgid "TLS Only"
-msgstr ""
+msgstr "Nur TLS"
 
 msgid "TLS Server Certificate Check"
 msgstr "TLS Server Zertifikats Prüfung"
@@ -8333,7 +8350,7 @@ msgstr ""
 
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
-"Auf das HAST Volumen kann erst zugegriffen werden wenn der HAST Knoten der "
+"Auf das HAST Volume kann erst zugegriffen werden wenn der HAST Knoten der "
 "primäre Knoten ist."
 
 msgid "The IP address of the UPS master."
@@ -8367,7 +8384,7 @@ msgid ""
 msgstr "Bad Flash Block Attribut (Anzahl seit Inbetriebnahme)"
 
 msgid "The TCP Port must be a valid port number."
-msgstr ""
+msgstr "Der TCP Port muß eine gültige Portnummer sein."
 
 msgid "The UPS identifier and IP address"
 msgstr "Die USV-Kennung und IP-Adresse"
@@ -8383,7 +8400,7 @@ msgstr ""
 "Kriterium übereinstimmt."
 
 msgid "The actual size is depend on your disks."
-msgstr ""
+msgstr "Die aktuelle Größe hängt von deinen Laufwerken ab."
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "Der Administrator wurde benachrichtigt die Änderungen zu bestätigen."
@@ -8674,8 +8691,8 @@ msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
-"Das  Format für das Abbild der Schattenkopie kann individuelle konfiguriert "
-"werden. Das vorgegebene Format für ZFS-atomatischer-Schnappschuss ist %s."
+"Das  Format für das Abbild der Schattenkopie kann individuell konfiguriert "
+"werden. Voreinstellung ist %s ZFS Auto Snapshot."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Der Standardport für den SMTP-Mailserver, z.B. 25 oder 587."
@@ -8755,7 +8772,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr "Die Datei ist nicht geeignet für dieses System !"
 
 msgid "The firmware file is corrupt."
-msgstr ""
+msgstr "Die Firmware Datei ist beschädigt."
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -8888,9 +8905,9 @@ msgid ""
 "specify the size use the following human-readable suffixes (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
-"Minimaler Platz-Anteil der einem Datensatz garantiert wird (normalerweise "
-"leer). Um die Größe anzugeben k&ouml;nnen die folgenden Anh&auml;nge "
-"verwendet werden (z.B. \"k\", \"KB\", \"M\", \"GB\", usw.)."
+"Minimaler Platz-Anteil der einem Dataset garantiert wird (normalerweise "
+"leer). Um die Größe anzugeben kö;nnen die folgenden Anhänge verwendet werden "
+"(z.B. \"k\", \"KB\", \"M\", \"GB\", usw.)."
 
 msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
@@ -9124,7 +9141,7 @@ msgid "The value of the variable."
 msgstr "Der Wert der Variable."
 
 msgid "The work directory does not exist."
-msgstr ""
+msgstr "Das Arbeitsverzeichnis existiert nicht."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -9141,7 +9158,7 @@ msgstr ""
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
-"Es ist nicht notwendig das RAID Volumen von hier zu starten (es startet "
+"Es ist nicht notwendig das RAID Volume von hier zu starten (es startet "
 "automatisch)"
 
 msgid "There must be at least 1 disks selected."
@@ -9352,7 +9369,7 @@ msgid "This group already exists in the group list."
 msgstr "Diese Gruppe gibt es bereits."
 
 msgid "This is a very powerful tool. Use at your own risk!"
-msgstr ""
+msgstr "Das ist ein sehr mächtiges Werkzeug. Nutzung auf eigene Gefahr!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -9594,9 +9611,11 @@ msgstr ""
 
 msgid "This password is required to access the admin web interface."
 msgstr ""
+"Dieses Passwort ermöglicht den administrativen Zugriff auf die Web-"
+"Oberfläche."
 
 msgid "This password is the root password of the system."
-msgstr ""
+msgstr "Das ist das root Passwort für das System."
 
 msgid "This pool name already exists."
 msgstr "Der Poolname existiert bereits."
@@ -9671,7 +9690,7 @@ msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr ""
 
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
-msgstr ""
+msgstr "Ermöglicht Schattenkopien durch Auto-Snapshots (nur ZFS)."
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -9701,7 +9720,7 @@ msgid "Time Machine"
 msgstr "Time Machine"
 
 msgid "Time Server"
-msgstr ""
+msgstr "Zeitserver"
 
 msgid "Time Synchronization"
 msgstr "Zeit-Abgleich"
@@ -9796,13 +9815,13 @@ msgid "Toggle Selected Options"
 msgstr "Ausgewählte Einstellungen umschalten"
 
 msgid "Toggle Selected Records"
-msgstr ""
+msgstr "Schalte gewählte Einträge um"
 
 msgid "Toggle Selected Rsync Jobs"
-msgstr ""
+msgstr "Schalte gewählte Rsync Jobs um"
 
 msgid "Toggle Selected Rsync Modules"
-msgstr ""
+msgstr "Schalte gewählte Rsync Jobs um"
 
 msgid "Tolerated"
 msgstr "Toleriert"
@@ -9920,7 +9939,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
 msgid "Trusted Domains"
-msgstr ""
+msgstr "Vertrauenswürdige Domains"
 
 msgid "Try to force import."
 msgstr "Versuche die Importierung zu erzwingen."
@@ -10105,7 +10124,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison Datei Synchronisation"
 
 msgid "Unix Charset"
-msgstr ""
+msgstr "Unix Zeichensatz"
 
 msgid "Unix Command"
 msgstr "Unix Kommando"
@@ -10117,7 +10136,7 @@ msgid "Unknown Activity"
 msgstr "Unbekannte Aktivität"
 
 msgid "Unknown or Unformatted"
-msgstr ""
+msgstr "Unbekannt oder nicht formatiert"
 
 msgid "Unknown or unformatted"
 msgstr "Unbekannt oder nicht formatiert"
@@ -10129,7 +10148,7 @@ msgid "Unload"
 msgstr "Auswerfen"
 
 msgid "Unlock Selected Records"
-msgstr ""
+msgstr "Entsperre gewählte Einträge"
 
 msgid "Unmount Disk/Partition"
 msgstr "Aushängen von Festplatte/Partition"
@@ -10144,7 +10163,7 @@ msgid "Up"
 msgstr "Auf"
 
 msgid "Update Period"
-msgstr ""
+msgstr "Update-Intervall"
 
 msgid "Update period"
 msgstr "Aktualisierungszeitraum"
@@ -10191,7 +10210,7 @@ msgstr ""
 "einen Hostnamen eintragen!"
 
 msgid "Use as sparse volume. (thin provisioning)"
-msgstr "Verwende karge Datenträger. (magere Bereitstellung)"
+msgstr "Verwendung als Sparse-Volume (thin provisioning)"
 
 msgid "Use different container as root of the tree."
 msgstr "Verwenden Sie einen anderen Container als Wurzel des Baums."
@@ -10282,25 +10301,25 @@ msgid "User Password Settings"
 msgstr "Einstellungen Benutzerpasswort"
 
 msgid "User Portal"
-msgstr ""
+msgstr "Nutzerportal"
 
 msgid "User Settings"
-msgstr ""
+msgstr "Nutzereinstellungen"
 
 msgid "User Shares"
-msgstr ""
+msgstr "Benutzerfreigaben"
 
 msgid "User Suffix"
 msgstr ""
 
 msgid "User account is marked for deletion"
-msgstr ""
+msgstr "Benutzerkonto ist zur Löschung markiert"
 
 msgid "User account is protected"
-msgstr ""
+msgstr "Benutzerkonto ist geschützt"
 
 msgid "User account is unlocked"
-msgstr ""
+msgstr "Benutzerkonto ist entsperrt"
 
 msgid "User numeric id."
 msgstr "Numerische Benutzer-ID."
@@ -10351,13 +10370,13 @@ msgid ""
 msgstr ""
 
 msgid "VLAN is marked for deletion"
-msgstr ""
+msgstr "VLAN ist zur Löschung markiert"
 
 msgid "VLAN is protected"
-msgstr ""
+msgstr "VLAN ist geschützt"
 
 msgid "VLAN is unlocked"
-msgstr ""
+msgstr "VLAN ist entsperrt"
 
 msgid "VM Type"
 msgstr "VM-Typ"
@@ -10389,7 +10408,7 @@ msgid "Version"
 msgstr "Version"
 
 msgid "Version:"
-msgstr ""
+msgstr "Version:"
 
 msgid "Vibration During Write."
 msgstr "Vibrationen während Schreiboperationen."
@@ -10446,7 +10465,7 @@ msgid "Virtualization"
 msgstr "Virtualisierung"
 
 msgid "Volume"
-msgstr "Datenträger"
+msgstr "Volume"
 
 msgid "Volume Label"
 msgstr "Datenträgerbezeichnung"
@@ -10455,19 +10474,19 @@ msgid "Volume Mode"
 msgstr ""
 
 msgid "Volume Name"
-msgstr "Datenträgername"
+msgstr "Volume Name"
 
 msgid "Volume Size Limit"
-msgstr "Datenträger Größenbegrenzung"
+msgstr "Volume Größenbegrenzung"
 
 msgid "Volume is marked for deletion"
-msgstr "Datenträger ist zum Löschen markiert"
+msgstr "Volume ist zum Löschen markiert"
 
 msgid "Volume is protected"
-msgstr "Das Volumen ist geschützt"
+msgstr "Das Volume ist geschützt"
 
 msgid "Volume is unlocked"
-msgstr "Volumen ist freigegeben"
+msgstr "Volume ist freigegeben"
 
 msgid ""
 "Volume label of the new file system. Use % for a counter or %n for a counter "
@@ -10479,7 +10498,7 @@ msgstr ""
 "Zeichen der Seriennummer des Geräts."
 
 msgid "Volumes"
-msgstr "Datenträger"
+msgstr "Volumes"
 
 msgid "WAN address"
 msgstr "WAN Adresse"
@@ -10505,12 +10524,13 @@ msgstr "WLAN Einstellungen"
 msgid ""
 "WLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"WLAN kann nicht gelöscht werden, weil es als Schnittstelle verwendet wird."
 
 msgid "WLAN is marked for deletion"
-msgstr ""
+msgstr "WLAN ist zum Löschen markiert"
 
 msgid "WLAN is protected"
-msgstr ""
+msgstr "WLAN ist geschützt"
 
 msgid "WLAN is unlocked"
 msgstr ""
@@ -10531,7 +10551,7 @@ msgid "WPA2"
 msgstr "WPA2"
 
 msgid "Wait Time"
-msgstr ""
+msgstr "Wartezeit"
 
 msgid "Wait time"
 msgstr "Wartezeit"
@@ -10567,7 +10587,7 @@ msgid "Wednesday"
 msgstr "Mittwoch"
 
 msgid "Week Days"
-msgstr ""
+msgstr "Wochentage"
 
 msgid "Week days"
 msgstr "Wochentage"
@@ -10635,7 +10655,7 @@ msgid "Wireless configuration"
 msgstr "WLAN Einstellungen"
 
 msgid "Work Directory"
-msgstr ""
+msgstr "Arbeitsverzeichnis"
 
 msgid "Workgroup"
 msgstr "Arbeitsgruppe"
@@ -10672,6 +10692,8 @@ msgid ""
 "You can also install a package via SSH or console using the pkg install "
 "command."
 msgstr ""
+"Du kannst ein Softwarepaket per SSH, oder über die Konsole mit dem pkg "
+"install Kommando installieren."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10764,6 +10786,8 @@ msgstr "Sie müssen mind. eine Authentifizierungsmethode auswählen."
 msgid ""
 "You need to update your browser or use Internet Explorer 10 or higher."
 msgstr ""
+"Du musst deinen Browser aktualisieren, oder mindestens den Internet Explorer "
+"10 verwenden."
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
@@ -10789,10 +10813,10 @@ msgid "ZFS ARC Usage"
 msgstr "ZFS ARC Benutzung"
 
 msgid "ZFS Dataset Information & Status"
-msgstr "ZFS Datensatzinformation und -status"
+msgstr "ZFS Dataset Informationen & Status"
 
 msgid "ZFS Dataset Properties"
-msgstr "ZFS Datensatz Eigenschaften"
+msgstr "ZFS Dataset Eigenschaften"
 
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS Pool I/O Statistik"
@@ -10801,32 +10825,34 @@ msgid "ZFS Pool Tools"
 msgstr "ZFS Pool Werkzeuge"
 
 msgid "ZFS Snapshot Information & Status"
-msgstr "ZFS-Schnappschussinformationen & -status"
+msgstr "ZFS-Snapshots Informationen & -status"
 
 msgid "ZFS Snapshot Properties"
-msgstr "ZFS-Schnappschusseigenschaften"
+msgstr "ZFS-Snapshot Eigenschaften"
 
 msgid "ZFS Storage Pool"
 msgstr "ZFS Speicher Pool"
 
 msgid "ZFS Volume Information & Status"
-msgstr "ZFS Datenträgerinformationen und -status"
+msgstr "ZFS Volume Informationen und -status"
 
 msgid "ZFS Volume Properties"
-msgstr "ZFS Datenträgereigenschaften"
+msgstr "ZFS Volume Eigenschaften"
 
 msgid "ZFS volume"
 msgstr "ZFS Volume"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
-"ZFS Datenträgerblockgröße. Dieser Wert kann nach der Erstellung nicht mehr "
+"ZFS Volume Blockgröße. Dieser Wert kann nach der Erstellung nicht mehr "
 "geändert werden."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
 "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
 msgstr ""
+"ZFS Volume Größe. An den Wert kann eine Größeneinheit angehängt werden (z.B. "
+"'K', 'KB', 'M', 'GB', etc.)."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
