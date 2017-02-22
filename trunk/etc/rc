@@ -142,6 +142,9 @@ case ${PLATFORM} in
 				if [ -z "${root}" ]; then
 					echo "can't determine rootfs"
 					sleep 30; halt
+				else
+					BOOTDEVICE="${root}"
+					export BOOTDEVICE
 				fi
 
 				# use default swap if exists

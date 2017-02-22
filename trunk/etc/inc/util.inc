@@ -2348,6 +2348,12 @@ function is_booting() {
 	$val = getenv('BOOTING');
 	return (1 == $val) ? true : false;
 }
+function get_bootdevice() {
+	if(false === ($val = getenv('BOOTDEVICE'))):
+		$val = '';
+	endif;
+	return $val;
+}
 /*
  *	Get list of configured physical disks.
  */
