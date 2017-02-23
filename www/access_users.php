@@ -35,7 +35,7 @@ require 'auth.inc';
 require 'guiconfig.inc';
 require 'co_sphere.php';
 
-function userdbuser_process_updatenotification($mode,$data) {
+function userdb_user_process_updatenotification($mode,$data) {
 	global $config;
 	$retval = 0;
 	$sphere = &access_users_get_sphere();
@@ -46,7 +46,7 @@ function userdbuser_process_updatenotification($mode,$data) {
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 		case UPDATENOTIFY_MODE_DIRTY:
 			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
-				unset($sphere->grid[$sphere->row_identifier()]);
+				unset($sphere->grid[$sphere->row_id]);
 				write_config();
 			endif;
 			break;
@@ -92,8 +92,8 @@ if($_POST):
 		if($retval == 0):
 			updatenotify_delete($sphere->notifier());
 		endif;
-//		header($sphere->header());
-//		exit;
+		header($sphere->header());
+		exit;
 	endif;
 	if(isset($_POST['submit'])):
 		switch($_POST['submit']):
