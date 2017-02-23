@@ -109,6 +109,20 @@ if (is_booting()) {
 			echo "\n";
 			echo "Using device=/dev/{$cfgpartition} fstype={$cfgfstype} to store configuration.\n";
 		} else {
+			$bootdevice = get_bootdevice();
+			if(!empty($bootdevice)):
+				if(preg_match('/^([a-z]+[\d]+)/i',$bootdevice,$matches)):
+					$bootdisk = $matches[1];
+					$new_disks = [];
+					$new_disks[] = $bootdisk;
+					foreach($disks as $disk):
+						if($disk != $bootdisk):
+							$new_disks[] = $disk;
+						endif;
+					endforeach;
+					$disks = $new_disks;
+				endif;
+			endif;
 			// Probe kernel known disks until we find one with config.xml
 			foreach ($disks as $disk) {
 				// Skip mfs-mounted filesystems
