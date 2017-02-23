@@ -212,7 +212,7 @@ echo $sphere->doj();
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				// $enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 				$enabled = $sphere->row['enable']; 
-				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+				$notprotected = $sphere->lock() ? !$sphere->row['protected'] : true;
 ?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
