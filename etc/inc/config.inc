@@ -1233,6 +1233,15 @@ function config_upgrade() {
 		$config['version'] = "3.0";
 	}
 
+	/* Convert 3.0 -> 3.1 */
+	/* Remove attribute monitorpassword. */
+	if ($config['version'] === "3.0") {
+		if (isset($config['ups']['monitorpassword']))
+			unset($config['ups']['monitorpassword']);
+
+		$config['version'] = "3.1";
+	}
+
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
 
