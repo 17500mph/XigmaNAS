@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-18 21:02+0000\n"
-"PO-Revision-Date: 2017-02-12 20:32+0000\n"
+"PO-Revision-Date: 2017-02-23 22:29+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-22 22:37+0000\n"
+"X-Launchpad-Export-Date: 2017-02-24 00:21+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -350,7 +350,7 @@ msgid "ACL mode"
 msgstr "Režim ACL"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "Ověřování vůči Active Directory je vypnuté."
 
 msgid "AD or PDC name."
 msgstr "Název řadiče domény AD nebo hlavního řadiče NT domény (PDC)."
@@ -427,7 +427,7 @@ msgstr ""
 "mailem."
 
 msgid "Active"
-msgstr ""
+msgstr "Aktivní"
 
 msgid "Active Directory"
 msgstr "Active Directory"
@@ -451,7 +451,7 @@ msgid "Add"
 msgstr "Přidat"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Přidat síťový most"
 
 msgid "Add CARP"
 msgstr ""
@@ -460,7 +460,7 @@ msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Přidat šifrovaný svazek"
 
 msgid "Add Group"
 msgstr "Přidat skupinu"
@@ -478,7 +478,7 @@ msgid "Add NFS Share"
 msgstr "Přidat NFS sdílení"
 
 msgid "Add Option"
-msgstr ""
+msgstr "Přidat předvolbu"
 
 msgid "Add Pool"
 msgstr "Přidat fond"
@@ -589,7 +589,7 @@ msgid "Add target"
 msgstr "Přidat cíl"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Další skupina"
 
 msgid "Additional Network"
 msgstr "Další síť"
@@ -688,13 +688,13 @@ msgid "Alert Level"
 msgstr "Výstražná úroveň"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritmus"
 
 msgid "All"
 msgstr "Vše"
 
 msgid "All Dirs"
-msgstr ""
+msgstr "Všechny složky"
 
 msgid "All data from the following statistics have been deleted:"
 msgstr "Budou smazány veškeré údaje z následujících statistik:"
@@ -719,7 +719,7 @@ msgid "All disks are imported."
 msgstr "Všechny disky jsou importovány."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Veškerá šifrovaná datová úložiště byla naimportována."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -738,7 +738,7 @@ msgid "Allow"
 msgstr "Umožnit"
 
 msgid "Allow New Files"
-msgstr ""
+msgstr "Umožnit vytváření nových souborů."
 
 msgid "Allow TLS connections only."
 msgstr "Umožnit pouze šifrovaná spojení (TLS)."
@@ -809,10 +809,10 @@ msgid "Alternate Data Streams"
 msgstr ""
 
 msgid "Alternate TCP port. (Default is 873)."
-msgstr ""
+msgstr "Alternativní TCP port (výchozí je 873)."
 
 msgid "Alternative configuration directory."
-msgstr ""
+msgstr "Alternativní složka s nastaveními."
 
 msgid "Always"
 msgstr "Vždy"
@@ -821,7 +821,7 @@ msgid "Always On"
 msgstr "Vždy zapnuto"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Vždy skenovat"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "Podmínky v okolním prostředí, zjištěné vnějšími čidly."
@@ -1021,7 +1021,7 @@ msgid "Authentication"
 msgstr "Ověření"
 
 msgid "Authentication Method"
-msgstr ""
+msgstr "Metoda ověření"
 
 msgid "Authorised Network"
 msgstr "Síť ze které umožnit přístup"
@@ -1091,7 +1091,7 @@ msgid "Background"
 msgstr "Pozadí"
 
 msgid "Backup"
-msgstr ""
+msgstr "Zálohovat"
 
 msgid "Backup Configuration"
 msgstr "Záloha nastavení"
@@ -1245,14 +1245,14 @@ msgid "Bridge"
 msgstr "Síťový most"
 
 msgid "Bridge Settings"
-msgstr ""
+msgstr "Nastavení síťového mostu"
 
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Síťový most je označen ke smazání"
 
 msgid "Bridge is protected"
 msgstr ""
@@ -1385,10 +1385,10 @@ msgid "CPU Load"
 msgstr "Vytížení procesoru"
 
 msgid "CPU Maximum Frequency"
-msgstr ""
+msgstr "Nejvyšší frekvence procesoru"
 
 msgid "CPU Minimum Frequency"
-msgstr ""
+msgstr "Nejnižší frekvence procesoru"
 
 msgid "CPU Temperature"
 msgstr "Teplota procesoru"
@@ -1397,7 +1397,7 @@ msgid "CPU Usage"
 msgstr "Využití procesoru"
 
 msgid "CPU frequencies:"
-msgstr ""
+msgstr "Frekvence procesoru:"
 
 msgid "CPU load"
 msgstr "Vytížení procesoru"
@@ -1569,10 +1569,10 @@ msgid "Command"
 msgstr "Příkaz"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Výstup z příkazu"
 
 msgid "Command Output:"
-msgstr ""
+msgstr "Výstup z příkazu:"
 
 msgid "Command Scripts"
 msgstr "Skripty příkazu"
@@ -1650,13 +1650,13 @@ msgid "Configuration"
 msgstr "Nastavení"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Složka s nastaveními"
 
 msgid "Configuring"
 msgstr "Nastavování"
 
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Potvrzení zadání hesla"
 
 msgid "Confirmation"
 msgstr "Potvrzení"
@@ -1756,7 +1756,7 @@ msgid "Controls the dedup method."
 msgstr "Ovládá metodu deduplikace."
 
 msgid "Controls the power consumption mode."
-msgstr ""
+msgstr "Řídí režim řízení spotřeby energie."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -1775,7 +1775,7 @@ msgstr ""
 "na unixové právo spouštění."
 
 msgid "Conveyance Self-Test"
-msgstr ""
+msgstr "Test případného poškození při přepravě"
 
 msgid "Core"
 msgstr ""
@@ -2000,7 +2000,7 @@ msgid "Current"
 msgstr "Stávající"
 
 msgid "Current Password"
-msgstr ""
+msgstr "Stávající heslo"
 
 msgid "Current Version"
 msgstr ""
@@ -2134,10 +2134,10 @@ msgid "Date & Time"
 msgstr "Datum a čas"
 
 msgid "Date Format"
-msgstr ""
+msgstr "Formát datumu"
 
 msgid "Day"
-msgstr ""
+msgstr "Den"
 
 msgid "Days"
 msgstr "Dny"
@@ -2239,7 +2239,7 @@ msgid "Delete Selected Datasets"
 msgstr "Smazat označené datové sady"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Smazat označené šifrované svazky"
 
 msgid "Delete Selected Groups"
 msgstr ""
@@ -2251,7 +2251,7 @@ msgid "Delete Selected LAGGs"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
-msgstr ""
+msgstr "Smazat označená NFS sdílení"
 
 msgid "Delete Selected Options"
 msgstr "Smazat označené předvolby"
@@ -2263,13 +2263,13 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Smazat označené RAID svazky"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Smazat označené záznamy"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Smazat označené prostředky"
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Smazat označené trasy"
 
 msgid "Delete Selected Rsync Jobs"
 msgstr ""
@@ -2281,7 +2281,7 @@ msgid "Delete Selected Samba Shares"
 msgstr ""
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Smazat označená sdílení"
 
 msgid "Delete Selected Snapshots"
 msgstr "Smazat označené zachycené stavy"
@@ -2393,7 +2393,7 @@ msgid "Destination"
 msgstr "Cíl"
 
 msgid "Destination Network"
-msgstr ""
+msgstr "Cílová síť"
 
 msgid "Destination Share"
 msgstr "Cílové sdílení"
@@ -2429,7 +2429,7 @@ msgid "Destroyed"
 msgstr "Zlikvidováno"
 
 msgid "Detach"
-msgstr ""
+msgstr "Odpojit"
 
 msgid "Detach a data device from a mirror"
 msgstr "Odebrat zařízení ze zrcadlení"
