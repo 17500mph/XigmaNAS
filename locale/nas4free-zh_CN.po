@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-02-18 21:02+0000\n"
-"PO-Revision-Date: 2017-02-22 15:28+0000\n"
+"PO-Revision-Date: 2017-02-24 16:20+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-24 00:21+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-02-25 10:49+0000\n"
+"X-Generator: Launchpad (build 18328)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -79,7 +79,7 @@ msgstr "%s 太长了。"
 
 #, php-format
 msgid "%s of %sB"
-msgstr "%s 与 %sB"
+msgstr "%s 于 %sB"
 
 #, php-format
 msgid "%s on %s"
@@ -243,11 +243,11 @@ msgstr ""
 "主轴启动/停止循环的计数。 在硬盘在完全关闭（与电源断开）之前以及当硬盘从之前已经被置于睡眠模式返回时，硬盘被接通时，主轴打开，因此计数增加。"
 
 msgid "A valid IP address must be specified."
-msgstr "请输入一个有效的IP位址。"
+msgstr "必须指定有效的IP地址。"
 
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
-msgstr "请记为允许主机(host allow) 输入一个有效的IP 位址或CIDR 标记。"
+msgstr "必须为允许主机(host allow)指定有效的IP地址或CIDR标记。"
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr "必须为主DNS服务器指定有效的IPv4地址。"
@@ -256,10 +256,10 @@ msgid "A valid IPv4 address must be specified for the secondary DNS server."
 msgstr "必须为辅助DNS服务器指定有效的IPv4地址。"
 
 msgid "A valid IPv4 address must be specified."
-msgstr "请输入一个有效的 IPv4 位址。"
+msgstr "必须指定有效的IPv4地址。"
 
 msgid "A valid IPv4 network bit count must be specified."
-msgstr "必须指定有效的IPv4网络位计数。"
+msgstr "必须指定有效的IPv4网络位数。"
 
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "请输入一个有效的 IPv6 网关地址。"
@@ -384,7 +384,7 @@ msgid "Active"
 msgstr "活动"
 
 msgid "Active Directory"
-msgstr "活动目录"
+msgstr "Active Directory"
 
 msgid "Active Shares"
 msgstr "活跃分享区"
@@ -558,10 +558,10 @@ msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "驱动程序中与硬件相关到附加参数。"
 
 msgid "Address"
-msgstr "位址"
+msgstr "地址"
 
 msgid "Address of the remote hastd daemon. It must be a static IP address."
-msgstr "hastd 远程守护进程的位址。它必须是一个静态IP位址。"
+msgstr "远程hastd守护进程的地址。 它必须是静态IP地址。"
 
 msgid "Admin Password"
 msgstr "管理密码"
@@ -576,7 +576,7 @@ msgid "Administrator Name"
 msgstr "管理员名称"
 
 msgid "Advanced"
-msgstr "高级设定"
+msgstr "高级"
 
 msgid "Advanced Format"
 msgstr "高级格式化"
@@ -668,7 +668,7 @@ msgid ""
 msgstr "所有共享使用选项'usedots'，从而使文件名.Parent和以.Apple开头的任何内容都是非法的。"
 
 msgid "All software raid disks are imported."
-msgstr "已经导入所有软体RAID的硬盘。"
+msgstr "已经导入所有软RAID的硬盘。"
 
 msgid "Alloc"
 msgstr "分派"
@@ -835,7 +835,7 @@ msgid "Apply Filter"
 msgstr "应用过滤器"
 
 msgid "Apply changes"
-msgstr "套用变更"
+msgstr "应用改动"
 
 msgid "Apr"
 msgstr "四月"
@@ -1003,7 +1003,7 @@ msgid "Backup"
 msgstr "备份"
 
 msgid "Backup Configuration"
-msgstr "备份设定"
+msgstr "备份设置"
 
 msgid "Backup File"
 msgstr "备份文件"
@@ -1415,7 +1415,7 @@ msgid "Clear Config & Import Disks"
 msgstr "清除和导入磁盘设置"
 
 msgid "Clear Config & Import Software Raid Disks"
-msgstr "清除和导入软体RAID设置"
+msgstr "清除和导入软RAID设置"
 
 msgid "Clear Config And Import Disks"
 msgstr "清除配置并导入磁盘"
@@ -1511,7 +1511,7 @@ msgid "Compiled"
 msgstr "已编译"
 
 msgid "Compliant profile to be used."
-msgstr "使用符合的设定档。"
+msgstr "使用符合的配置文件。"
 
 msgid "Compress"
 msgstr "压缩"
@@ -1600,10 +1600,10 @@ msgid "Controller Authorised network"
 msgstr "控制器授权网络"
 
 msgid "Controller IP Address"
-msgstr "控制器的 IP 位址"
+msgstr "控制器的IP地址"
 
 msgid "Controller IP address"
-msgstr "控制器的 IP 位址"
+msgstr "控制器的IP地址"
 
 msgid "Controller Model"
 msgstr "控制器型号"
@@ -2062,7 +2062,7 @@ msgid "Delete Host"
 msgstr "删除主机"
 
 msgid "Delete Login Info"
-msgstr "删除登入资讯"
+msgstr "删除登录信息"
 
 msgid "Delete Selected Bridges"
 msgstr "删除所选网桥"
@@ -3019,7 +3019,7 @@ msgid "Emergency Level"
 msgstr "紧急级别"
 
 msgid "Enable"
-msgstr "启动"
+msgstr "启用"
 
 msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr "启用“异步I/O（AIO）”开关"
@@ -3172,7 +3172,7 @@ msgid ""
 msgstr "开启开机阶段的前台/后台文件系统完整性检查。"
 
 msgid "Enable guest access."
-msgstr "允许访客（游客）登入。"
+msgstr "启用访客访问。"
 
 msgid "Enable inotify."
 msgstr "启用inotify。"
@@ -3220,7 +3220,7 @@ msgid ""
 "Enable reverse DNS lookup performed on the remote host's IP address for "
 "incoming active mode data connections and outgoing passive mode data "
 "connections."
-msgstr "启用反向DNS来查找传入远程主机IP位址的主动模式数据连接和传出远程主机的IP位址的被动模式数据连接。"
+msgstr "启用反向DNS来查找传入远程主机IP地址的主动模式数据连接和传出远程主机的IP地址的被动模式数据连接。"
 
 msgid "Enable reverse DNS lookup."
 msgstr "啟用反向DNS查找。"
@@ -3857,10 +3857,10 @@ msgid "Gateway to be used to reach the destination network."
 msgstr "用网关到达目的端网络。"
 
 msgid "General"
-msgstr "一般设定"
+msgstr "常规"
 
 msgid "General Setup"
-msgstr "一般设定"
+msgstr "常规设置"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr "为池生成新的唯一标识符"
@@ -4266,7 +4266,7 @@ msgid "Import firewall rules."
 msgstr "导入防火墙规则。"
 
 msgid "Import on-disk ZFS config"
-msgstr "从硬碟上导入 ZFS 设定"
+msgstr "从硬盘上导入ZFS设置"
 
 msgid "Import using GPT ID"
 msgstr "使用GPT ID导入"
@@ -4372,7 +4372,7 @@ msgid ""
 msgstr "启动器群组授权访问 iSCSI 目标。任何启动器可以使用一个名称或者'ALL'。"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
-msgstr "启动器端秘密。 （CHAP 相互认证）"
+msgstr "启动器端密钥。（用于双向CHAP验证）"
 
 msgid "Initiator side user name. (for mutual CHAP authentication)"
 msgstr "启动器端用户名（CHAP 相互认证）"
@@ -4651,7 +4651,7 @@ msgid "LUNs"
 msgstr "LUNs"
 
 msgid "Language"
-msgstr "语言"
+msgstr "语言设置"
 
 msgid "Language to use on front panel"
 msgstr "前置面板的语言"
@@ -4848,7 +4848,7 @@ msgstr "逻辑单元控制器授权网络（默认为 %s）"
 
 #, php-format
 msgid "Logical Unit Controller IP address (%s by default)"
-msgstr "逻辑单元控制器 IP 位址（默认为 %s）"
+msgstr "逻辑单元控制器IP地址（默认为 %s）"
 
 msgid "Logical Unit Controller Login Information"
 msgstr "逻辑单元控制器登录信息"
@@ -4917,10 +4917,10 @@ msgid "MOVED TO"
 msgstr "移动到"
 
 msgid "MS Active Directory"
-msgstr "MS Active Directory"
+msgstr "微软Active Directory"
 
 msgid "MS Active Directory Information & Status"
-msgstr "MS Active Directory 信息和状态"
+msgstr "微软Active Directory信息和状态"
 
 msgid "MS Domain"
 msgstr "MS域"
@@ -5047,7 +5047,7 @@ msgstr "每个会话（session）的最多连线数（默认为 %d）。"
 msgid ""
 "Maximum number of pre-send R2T in each connection (%d by default). The "
 "actual number is limited to QueueDepth of the target."
-msgstr "每个连接的前发送R2T最大数量（默认值为 %d）。实际数量是有限于目标的 QueueDepth。"
+msgstr "每个连接中最大预发送R2T数（默认为%d）。 实际数量限制为目标的QueueDepth。"
 
 #, php-format
 msgid "Maximum number of sessions holding at same time (%d by default)."
@@ -5367,7 +5367,7 @@ msgstr "网络流量"
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
-msgstr "网络授权可访问 iSCSI 目标。它需要IP 位址或CIDR 位址或 “ALL” （任何IP 位址）。"
+msgstr "网络授权可访问 iSCSI 目标。它需要IP 地址或CIDR 地址或 “ALL” （任何IP地址）。"
 
 msgid "Network mask"
 msgstr "网络掩码"
@@ -5473,7 +5473,7 @@ msgid "No new encrypted disks have been found."
 msgstr "未找到新的加密磁盘。"
 
 msgid "No new software raid disk found."
-msgstr "没有发现新的软体RAID的硬盘。"
+msgstr "没有发现新的软RAID的硬盘。"
 
 msgid "No partition information found."
 msgstr "未找到分区信息。"
@@ -5506,13 +5506,13 @@ msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - 仅继承拒绝条目"
 
 msgid "Node A IP address"
-msgstr "A 节点的 IP 位址"
+msgstr "A节点的IP地址"
 
 msgid "Node A Settings"
 msgstr "A 节点的设置"
 
 msgid "Node B IP address"
-msgstr "B 节点的 IP 位址"
+msgstr "B节点的IP地址"
 
 msgid "Node B Settings"
 msgstr "B 节点的设置"
@@ -5903,7 +5903,7 @@ msgstr "域管理员账号的密码。"
 
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
-msgstr "密码服务器的名称或IP 地址（例如 Active Directory 域控制器）。"
+msgstr "密码服务器的名称或IP 地址（例如Active Directory域控制器）。"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "在此处以PEM格式粘贴RSA PRIVATE KEY。"
@@ -5937,7 +5937,7 @@ msgid "Peer Port"
 msgstr "对等端口"
 
 msgid "Peer Secret"
-msgstr "对等秘密"
+msgstr "对等密钥"
 
 msgid "Peer User"
 msgstr "对等用户"
@@ -6024,16 +6024,16 @@ msgstr "请先添加新的池。"
 
 #, php-format
 msgid "Please check the %s documentation%s."
-msgstr "请检查%s文档%s。"
+msgstr "请查看%s文档%s。"
 
 msgid "Please check the documentation"
-msgstr "请检查文件。"
+msgstr "请查看文档"
 
 msgid "Please check the documentation."
-msgstr "请检查文件。"
+msgstr "请查看文档。"
 
 msgid "Please check the log files"
-msgstr "请检查日志文件"
+msgstr "请查看日志文件"
 
 msgid "Please define one or more content locations."
 msgstr "请定义一个或多个内容位置。"
@@ -6225,7 +6225,7 @@ msgid "Product ID"
 msgstr "产品编号"
 
 msgid "Profile"
-msgstr "设定档"
+msgstr "配置文件"
 
 msgid "Properties"
 msgstr "属性"
@@ -6821,7 +6821,7 @@ msgid "Samba AD"
 msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
-msgstr "Samba 活动目录域控制器"
+msgstr "Samba Active Directory域控制器"
 
 msgid "Samba Share is marked for deletion"
 msgstr "Samba共享标记为删除"
@@ -6860,7 +6860,7 @@ msgid "Save and Restart"
 msgstr "保存并重启服务"
 
 msgid "Save login information in configuration file."
-msgstr "将登录信息保存在设定文件内。"
+msgstr "将登录信息保存在设置文件内。"
 
 msgid "Saved file to"
 msgstr "将文件保存到"
@@ -6931,7 +6931,7 @@ msgid "Seconds"
 msgstr "秒"
 
 msgid "Secret"
-msgstr "秘密"
+msgstr "密钥"
 
 msgid "Secure Shell"
 msgstr "安全系统壳(Secure Shell)"
@@ -7116,7 +7116,7 @@ msgid "Sep"
 msgstr "9月"
 
 msgid "Separate email addresses by semi-colon."
-msgstr "以 \";\" 分号隔开电邮位址。"
+msgstr "以 \";\" 分号隔开Email地址。"
 
 msgid "September"
 msgstr "9月"
@@ -7372,10 +7372,10 @@ msgid "Sockstat"
 msgstr "Sockstat"
 
 msgid "SoftRaid"
-msgstr "软体RAID"
+msgstr "软RAID"
 
 msgid "Software RAID"
-msgstr "软体RAID"
+msgstr "软RAID"
 
 msgid "Software Used"
 msgstr "使用的软件"
@@ -7404,7 +7404,7 @@ msgstr "使用空间"
 msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
 "WebGUI. (empty is the same network of LAN interface)"
-msgstr "允许访问WebGUI 的一组以空间分隔的IP 位址或CIDR 标记。 （留空为 LAN 接口的同一网络）"
+msgstr "允许访问WebGUI的一组以空格分隔的IP地址或CIDR标记。 （留空为 LAN 接口的同一网络）"
 
 msgid "Spanish"
 msgstr "西班牙文"
@@ -7468,7 +7468,7 @@ msgstr "指定执行服务的用户。"
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
-msgstr "指定超级用户(root)是否可以透过SSH直接登录。"
+msgstr "指定是否允许直接以超级用户（root）身份登录。"
 
 msgid ""
 "Specifiy the percentage of disk space to be held back from normal usage. "
@@ -7778,7 +7778,7 @@ msgid "Target list"
 msgstr "目标列表"
 
 msgid "Target side secret."
-msgstr "目标端的秘密。"
+msgstr "目标端密钥"
 
 msgid "Target side user name. It is usually the initiator name by default."
 msgstr "目标端的用户名。它通常是默认的启动器名称。"
@@ -7847,7 +7847,7 @@ msgid "The IP address of the device."
 msgstr "设备的IP地址"
 
 msgid "The IP address that this hostname represents."
-msgstr "主机名称所代表的 IP 位址。"
+msgstr "主机名称所代表的IP地址。"
 
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP地址将被重置为"
@@ -7885,7 +7885,7 @@ msgid "The actual size is depend on your disks."
 msgstr "实际大小取决于您的磁盘。"
 
 msgid "The administrator has been notified to apply your changes."
-msgstr "已通知来管理员套用您的更改。"
+msgstr "已通知管理员应用您的更改。"
 
 msgid "The administrator password will be reset to"
 msgstr "管理员密码将重置为"
@@ -7953,7 +7953,7 @@ msgstr "'%s' 是无效的。"
 
 #, php-format
 msgid "The attribute '%s' is not a valid IP address."
-msgstr "'%s' 是无效的 IP 位址。"
+msgstr "'%s' 是无效的IP地址。"
 
 #, php-format
 msgid "The attribute '%s' is not a valid MAC address."
@@ -8044,13 +8044,13 @@ msgid ""
 msgstr ""
 "基本配置的形式通常是“daemon：address：action”。 daemon 是一个守护进程启动该服务的名称。这个地址可以是一个有效的主机名，IP "
 "地址或括在括号中的IPv6 地址。 action "
-"可以是允许或拒绝访问的权限。请记住，进行扫描时会沿着配置文件内的规则顺序地匹配规则。当搜索过程找到一个匹配的规则就会套用规则，然后停止匹配。"
+"可以是允许或拒绝访问的权限。请记住，进行扫描时会沿着配置文件内的规则顺序地匹配规则。当搜索过程找到一个匹配的规则就会应用规则，然后停止匹配。"
 
 msgid "The changes could not be applied"
 msgstr "无法应用更改"
 
 msgid "The changes have been applied successfully."
-msgstr "变更套用成功。"
+msgstr "改动已成功应用。"
 
 msgid "The changes have been saved."
 msgstr "更改已被保存。"
@@ -8232,7 +8232,7 @@ msgstr "启动器可以以授权的启动器名称和网络在特定的启动器
 msgid ""
 "The initiator can access to the target with correct user and secret in "
 "specific Auth Group."
-msgstr "启动器可以以正确的用户和特定认证组的秘密访问目标器。"
+msgstr "启动器可以在特定的认证组中使用正确的用户和密钥访问目标。"
 
 msgid "The initiator can connect to the portals in specific Portal Group."
 msgstr "启动器可以连接到特定的门户组的门户网站。"
@@ -8240,7 +8240,7 @@ msgstr "启动器可以连接到特定的门户组的门户网站。"
 msgid ""
 "The initiator can discover the targets with correct user and secret in "
 "specific Auth Group."
-msgstr "启动器可以以正确的用户和特定认证组的秘密发现目标器。"
+msgstr "启动器可以在特定的认证组中使用正确的用户和密钥发现目标。"
 
 msgid "The interface is unknown."
 msgstr "接口未知"
@@ -8248,19 +8248,19 @@ msgstr "接口未知"
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
-msgstr "istgtcontrol 可以以正确的用户和特定认证组的秘密访问目标器。"
+msgstr "istgtcontrol可以使用特定认证组中的正确用户和密钥访问目标。"
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "“数据库目录”的位置不是有效的位置。"
 
 msgid "The login name contains invalid characters."
-msgstr "登入帐号含有无效的字元。"
+msgstr "登录名包含无效字符。"
 
 msgid "The login name is a reserved login name."
-msgstr "登入帐号是一个保留帐号。"
+msgstr "登录帐号是一个保留帐号。"
 
 msgid "The login name is limited to 16 characters."
-msgstr "登入帐号名称最多只能有 16 个字符。"
+msgstr "登录名最多只能有 16 个字符。"
 
 msgid ""
 "The max. connections per IP address must be either 0 (unlimited) or greater."
@@ -8597,7 +8597,7 @@ msgstr "这些参数将被添加到 %s 的 [global] 设置。"
 
 #, php-format
 msgid "These parameters will be added to global settings in %s."
-msgstr "这些参数将被添加到 %s 的全域设置。"
+msgstr "这些参数将被添加到 %s 的全局设置。"
 
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
@@ -9012,7 +9012,7 @@ msgstr "要获得更多如何配置LCDproc的信息，请查看LCDproc文档"
 msgid ""
 "To get more information how to configure your UPS please check the NUT "
 "(Network UPS Tools) documentation"
-msgstr "要获得有关如何配置UPS的更多信息，请检查NUT（网络UPS工具）文档"
+msgstr "要获得有关如何配置UPS的更多信息，请查看NUT（网络UPS工具）文档"
 
 msgid "To increase CIFS performance try the following:"
 msgstr "要增加CIFS性能，请尝试以下操作："
@@ -9157,7 +9157,7 @@ msgid "Try to force import."
 msgstr "尝试强制导入。"
 
 msgid "Try to import from on-disk ZFS config."
-msgstr "尝试从硬碟导入 ZFS 配置。"
+msgstr "尝试从硬盘导入ZFS配置。"
 
 msgid "Tue"
 msgstr "周二"
@@ -9271,7 +9271,7 @@ msgid "UPS reaches low battery"
 msgstr "UPS 电池电量不足"
 
 msgid "UPS starts when mains is (re)applied"
-msgstr "有电源时，启动 UPS"
+msgstr "当电源（重新）接通时，UPS启动"
 
 msgid "UPS status"
 msgstr "UPS 状态"
@@ -9464,8 +9464,7 @@ msgid ""
 "guest service. This user must exist in the password file, but does not "
 "require a valid login."
 msgstr ""
-"使用此选项覆盖此用户名（预设为'ftp'），预设权限为guest。此用户所拥有的权限也会套用在使用客户端服务的任何客户端。此用户必须存在于密码档中，但并不"
-"需要一个有效的登入帐户。"
+"设置用户名称（默认为'ftp'），默认权限为guest。这个用户所拥有的权限也会应用在其他的服务上。您可以取消这个用户的登录权限，但是千万不能将他删除。"
 
 msgid "Use toggle button instead of enable/disable buttons."
 msgstr "使用切换按钮而不是启用/禁用按钮。"
@@ -9693,7 +9692,7 @@ msgid "WINS Server"
 msgstr "WINS服务器"
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
-msgstr "WINS 服务器位置 (AD Server)"
+msgstr "WINS服务器IP地址 (例：微软Active Directory服务器)"
 
 msgid "WLAN"
 msgstr "无线局域网"
