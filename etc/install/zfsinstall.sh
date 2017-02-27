@@ -139,10 +139,9 @@ gptpart_init()
 		gpart create -s gpt ${DISK1} > /dev/null
 
 		# Create boot partition.
-		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot ${DISK1} > /dev/null
-		#gpart add -a 4k -s 800K -t efi -l efiboot ${DISK1} > /dev/null
+		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot0 ${DISK1} > /dev/null
+		#gpart add -a 4k -s 800K -t efi -l efiboot0 ${DISK1} > /dev/null
 
-		#gpart add -s 512K -t freebsd-boot ${DISK1} > /dev/null
 		if [ ! -z "${SWAP}" ]; then
 			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap0 ${DISK1} > /dev/null
 		fi
@@ -155,10 +154,9 @@ gptpart_init()
 		gpart create -s gpt ${DISK2} > /dev/null
 
 		# Create boot partition.
-		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot ${DISK2} > /dev/null
-		#gpart add -a 4k -s 800K -t efi -l efiboot ${DISK2} > /dev/null
+		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot1 ${DISK2} > /dev/null
+		#gpart add -a 4k -s 800K -t efi -l efiboot1 ${DISK2} > /dev/null
 
-		#gpart add -s 512K -t freebsd-boot ${DISK2} > /dev/null
 		if [ ! -z "${SWAP}" ]; then
 			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap1 ${DISK2} > /dev/null
 		fi
