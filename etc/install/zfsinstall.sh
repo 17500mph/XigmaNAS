@@ -285,7 +285,7 @@ zmirror_init()
 	export DATASET="/ROOT"
 	export BOOTENV="/default-install"
 
-	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} /dev/gpt/sysdisk0 /dev/gpt/sysdisk1
+	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} mirror /dev/gpt/sysdisk0 /dev/gpt/sysdisk1
 	zfs set canmount=off ${ZROOT}
 	zfs create -o canmount=off ${ZROOT}${DATASET}
 	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
