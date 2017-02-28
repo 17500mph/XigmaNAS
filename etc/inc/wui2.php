@@ -957,7 +957,7 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
-		$attributes = ['id' => sprintf('%_tr',$ctrlname)];
+		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
 		$tr = $root->addElement('tr',$attributes);	
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
 		$th = $tr->addElement('th',$attributes);
