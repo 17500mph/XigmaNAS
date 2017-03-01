@@ -313,7 +313,7 @@ function show_header($title, $additional_header_content = null)
 	echo '<header id="g4h">',"\n";
 	echo '<div id="header">',"\n";
 	echo '<div id="headerlogo">',"\n";
-	echo '<a title="www.',get_product_url(),'" href="http://',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";
+	echo '<a title="www.',get_product_url(),'" href="https://www.',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";
 	echo '</div>',"\n";
 	echo '<div id="headerrlogo">',"\n";
 	echo '<div class="hostname">',"\n";
