@@ -107,6 +107,9 @@ $pgtitle = [gtext('Help'), gtext('License & Credits')];
 
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free documentation and/or webgui translations:</p>
+	    <div>Vicente Soriano Navarro (<a href="mailto:victek@gmail.com">victek@gmail.com</a>)<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Catalan translator of the WebGUI</font></em></div><br />
+
 	    <div>Alex Lin (<a href="mailto:linuxant@gmail.com">linuxant@gmail.com</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Chinese translator of the WebGUI</font></em></div><br />
 
