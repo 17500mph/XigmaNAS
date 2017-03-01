@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-02-18 21:02+0000\n"
-"PO-Revision-Date: 2017-02-21 22:14+0000\n"
+"PO-Revision-Date: 2017-03-01 22:27+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-25 10:49+0000\n"
-"X-Generator: Launchpad (build 18328)\n"
+"X-Launchpad-Export-Date: 2017-03-01 22:29+0000\n"
+"X-Generator: Launchpad (build 18329)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -117,18 +117,25 @@ msgstr ""
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
+"(Maxtor 6B200M0 200GB ve Maxtor 2R015H1 15GB diskerde bulunanlardan)."
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
+"(Kingston) flash formatlama silme hatalarını sayar. Bu özellik, ürünün ilk "
+"kullanımından itibaren toplam silme hatalarını döndürür. Bu özellik 182 "
+"özelliği ile aynıdır."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
 "returns the total number of Flash program operation failures since the drive "
 "was deployed. This attribute is identical to attribute 181."
 msgstr ""
+"(Kingston) flash program hatalarını sayar. Bu özellik, ürünün ilk "
+"kullanımından itibaren toplam flash programı hatalarını döndürür. Bu özellik "
+"181 özelliği ile aynıdır."
 
 msgid ""
 "(Vendor specific raw value.) Rate of seek errors of the magnetic heads. If "
@@ -162,10 +169,10 @@ msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=devre dışı, 1-255=komutu belirtilen derinliği ile kuyruk etkin"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "Bir JBOD alanı oluşturmak için 1 veya daha fazla disk gereklidir."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "Bir RAID-1 alanı oluşturmak için 1 veya daha fazla disk gereklidir."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "RAID-0 oluşturmak için 2 veya daha fazla disk gereklidir."
@@ -177,7 +184,7 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "RAID-5 oluşturmak için 3 veya daha fazla disk gereklidir."
 
 msgid "4KB wrapper"
-msgstr ""
+msgstr "4KB yaması"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiketi (1 ve 4094 arası)."
@@ -192,6 +199,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
+"Portal Gurubu, Etiket numarası ile belirlenir ve IP adreslerini, dinleyen "
+"TCP portlarını içerir."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -224,12 +233,14 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Seçilen işlemi yapabilmek için bağlı bir disk veya bölüm geçici olarak "
+"çıkartılacaktır."
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Yürütücüye yenileme isteği gönderildi."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Yeniden tarama istenildi."
 
 msgid "A route to this destination network already exists."
 msgstr "Hedef ağ'a bir yönlendirme bulunuyor."
@@ -249,10 +260,10 @@ msgid ""
 msgstr ""
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "Varsayılan DNS server'ının IPv4 adresi tanımlanmak zorundadır."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "İkincil DNS server'ının IPv4 adresi tanımlanmak zorundadır."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Geçerli bir IPv4 adresinin belirtilmiş olması gerekir."
@@ -264,10 +275,10 @@ msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Geçerli bir IPv6 Ağ Geçidi adresi belirtilmiş olması gerekir."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "Varsayılan DNS server'ının IPv6 adresi tanımlanmak zorundadır."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "İkincil DNS server'ının IPv6 adresi tanımlanmak zorundadır."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Geçerli bir IPv6 adresi belirtilmelidir."
@@ -294,19 +305,19 @@ msgid "A valid systctl MIB value."
 msgstr "Geçerli bir Systctl MIB değeri."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "ACL Edinme"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL Modu"
 
 msgid "ACL inherit"
-msgstr ""
+msgstr "ACL Edinilme"
 
 msgid "ACL mode"
-msgstr ""
+msgstr "ACL Modu"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "AD Kimlik doğrulama devredışı."
 
 msgid "AD or PDC name."
 msgstr "AD veya PDC ismi"
@@ -315,43 +326,43 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "AFP Uyumluluğu"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO Module"
-msgstr ""
+msgstr "AIO Modülü"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "AIO Okuma Boyutu"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "AIO Yazma Boyutu"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "Tüm Arayüzler"
 
 msgid "AP mode"
-msgstr ""
+msgstr "AP Modu"
 
 msgid "ARP Tables"
 msgstr "ARP Tabloları"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "ARP tablo listesi"
 
 msgid "ATTRIBUTE NAME"
-msgstr ""
+msgstr "ÖZELLİK ADI"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Uzaktan syslog mesajlarına izin ver"
 
 msgid "Access"
 msgstr "Erişim"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Erişim Modu"
 
 msgid "Access Restrictions"
 msgstr "Erişim Kısıtlamaları"
@@ -360,7 +371,7 @@ msgid "Access Time (atime)"
 msgstr "Erişim Zamanı"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "Web Arayüzüne yeni IP Adresi ile eriş"
 
 msgid "Acoustic level"
 msgstr "Gürültü Seviyesi"
@@ -382,130 +393,130 @@ msgstr ""
 "gönderilmesini etkinleştir."
 
 msgid "Active"
-msgstr ""
+msgstr "Aktif"
 
 msgid "Active Directory"
 msgstr "Active Directory"
 
 msgid "Active Shares"
-msgstr ""
+msgstr "Aktif Paylaşımlar"
 
 msgid "Active Users"
 msgstr "Aktif Kullanıcılar"
 
 msgid "Activities"
-msgstr ""
+msgstr "Etkinlikler"
 
 msgid "Activity"
-msgstr ""
+msgstr "Etkinllik"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Uyumlu (Düşük Güç Kullanımı)"
 
 msgid "Add"
 msgstr "Ekle"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Köprü Ekle"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "CARP Ekle"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Veri kümesi Ekle"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Şifrelenmiş Alan ekle"
 
 msgid "Add Group"
-msgstr ""
+msgstr "Grup Ekle"
 
 msgid "Add Host"
 msgstr "Bilgisayar Ekle"
 
 msgid "Add LAGG"
-msgstr ""
+msgstr "LAGG ekle"
 
 msgid "Add MIB"
 msgstr "MIB Ekle"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "NFS Paylaşımı ekle"
 
 msgid "Add Option"
-msgstr ""
+msgstr "Seçenek ekle"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Havuz Ekle"
 
 msgid "Add RAID"
 msgstr "RAID Ekle"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Kayıt Ekle"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Kaynak Ekle"
 
 msgid "Add Route"
 msgstr "Route Ekle"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Rsync Görevi ekle"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Rsync Modülü ekle"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Samba paylaşımı ekle"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Paylaşım ekle"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Ani görüntü ekle"
 
 msgid "Add URL"
 msgstr "URL ekle"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Kullanıcı Hesabı Ekle"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "VLAN ekle"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Sanal aygıt ekle"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Alan ekle"
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "WLAN ekle"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Bir Havuza önbellek aygıtı ekle"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "Bir havuza log aygıtı ekle"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Bir havuza yedek aygıt ekle"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Bir havuza sanal aygıt ekle"
 
 msgid "Add additional scheduled self-test."
 msgstr "Rutin olarak self-test ekle"
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Herhangi bir ek parametre ekle."
 
 msgid "Add auth group"
 msgstr "Doğrulama grubu ekle"
 
 msgid "Add auto snapshot"
-msgstr ""
+msgstr "Otomatik Ani Kayıt ekle"
 
 msgid "Add command"
 msgstr "Komut Ekle"
@@ -544,16 +555,16 @@ msgid "Add target"
 msgstr "Hedef Ekle"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Ek Grup"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Ek Ağ"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Ek Parametre"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Ek Depolama"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
@@ -598,29 +609,33 @@ msgid "Advertisement Skew"
 msgstr ""
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrika Dili"
 
 msgid "After"
-msgstr ""
+msgstr "Sonra"
 
 msgid "After - File-deletions will be done after the transfer has completed."
-msgstr ""
+msgstr "Sonra - Dosya silme, transfer tamamlandıktan sonra tamamlanacaktır."
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"\"Kaydet\" 'e bastıktan sonra bu server'a tekrar erişebilmek için şu "
+"adımları uygulamanız gereklidir:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"\"Kaydet\" 'e bastıktan sonra değişikliklerin uygulanması için server'ı "
+"yeniden başlatmalısınız."
 
 msgid "Age"
-msgstr ""
+msgstr "Yaş"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Toplama Protokolü"
 
 msgid "Aggressive"
 msgstr "Agresif"
@@ -629,21 +644,23 @@ msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
 msgstr ""
+"Western Digital HD'lerde hava akımı sıcaklığı (Sıcaklık ile aynı, ancak bazı "
+"modellerde mevcut değer 50 puan daha düşük. Geçersiz olarak işaretlendi.)"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "Uyarı seviyesi"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritma"
 
 msgid "All"
 msgstr "Tümü"
 
 msgid "All Dirs"
-msgstr ""
+msgstr "Tüm yerler"
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "Şu istatistikteki tüm veriler silindi:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
@@ -651,7 +668,7 @@ msgid ""
 msgstr ""
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Bu seçeneği seçtiğinizde tüm veriler yokolacaktır!"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -659,10 +676,10 @@ msgstr ""
 "%s konumu tanımlanmamış.Tüm dizinler tanımlanmış bir konuma ihtiyaç duyuyor."
 
 msgid "All disks are imported."
-msgstr ""
+msgstr "Tüm diskler eklendi."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Tüm şifrelenmiş diskler eklendi."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -670,7 +687,7 @@ msgid ""
 msgstr ""
 
 msgid "All software raid disks are imported."
-msgstr ""
+msgstr "Tüm Yazılımsal raid diskleri eklendi."
 
 msgid "Alloc"
 msgstr ""
@@ -679,7 +696,7 @@ msgid "Allow"
 msgstr "İzin ver"
 
 msgid "Allow New Files"
-msgstr ""
+msgstr "Yeni dosyalara izin ver"
 
 msgid "Allow TLS connections only."
 msgstr ""
@@ -721,7 +738,7 @@ msgid "Allows the server to try and become a local master browser."
 msgstr ""
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Gizli ağa bağlanmaya izin verir"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -735,22 +752,22 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Alternatif Veri Akışları"
 
 msgid "Alternate TCP port. (Default is 873)."
-msgstr ""
+msgstr "Alternatif TCP portu. (Varsayılan 873)."
 
 msgid "Alternative configuration directory."
 msgstr ""
 
 msgid "Always"
-msgstr ""
+msgstr "Her zaman"
 
 msgid "Always On"
-msgstr ""
+msgstr "Her Zaman Açık"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Herzaman tara"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -759,7 +776,7 @@ msgid "Ambient relative humidity (percent)"
 msgstr ""
 
 msgid "Ambient temperature (degrees C)"
-msgstr ""
+msgstr "Çevre sıcaklığı (C derece)"
 
 msgid "Amount of surge current used to spin up the drive."
 msgstr ""
@@ -784,10 +801,10 @@ msgid ""
 msgstr ""
 
 msgid "An empty field is default."
-msgstr ""
+msgstr "Varsayılan olarak boştur."
 
 msgid "An error occured."
-msgstr ""
+msgstr "Bir hata oluştu"
 
 msgid "An host with this name already exists."
 msgstr "Bu isim ile zaten bir bilgisayar mevcut"
