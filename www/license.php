@@ -110,6 +110,9 @@ $pgtitle = [gtext('Help'), gtext('License & Credits')];
 	    <div>Alex Lin (<a href="mailto:linuxant@gmail.com">linuxant@gmail.com</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Chinese translator of the WebGUI</font></em></div><br />
 
+	    <div>Zhu Yan (<a href="mailto:tianmotrue@163.com">tianmotrue@163.com</a>)<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Chinese translator of the WebGUI</font></em></div><br />
+
 	    <div>Pavel Borecki (<a href="mailto:pavel.borecki@gmail.com">pavel.borecki@gmail.com</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Czech translator of the WebGUI</font></em></div><br />
 
