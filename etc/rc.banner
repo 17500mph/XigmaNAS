@@ -87,7 +87,7 @@
     {$productname}: {$version} (revision {$revision})
     Compiled: {$buildtime} Platform: {$g['fullplatform']}
     Copyright (c) 2012-2017 The NAS4Free Project. All Rights Reserved.
-    {$esc("\33[1;34m")}Visit: http://www.{$producturl} for system updates!{$esc("\33[0;39m")}\n
+    {$esc("\33[1;34m")}Visit: https://www.{$producturl} for system updates!{$esc("\33[0;39m")}\n
 	WebGUI Address: {$esc("\33[1;31m")}${webgui_url}{$esc("\33[1;31m")}\n
 	{$esc("\33[0;37m")}LAN Network IPv4 Address:{$esc("\33[0;37m")} {$esc("\33[1;33m")}{$ipaddr}{$esc("\33[0;39m")}\n
 EOD;
