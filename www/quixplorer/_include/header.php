@@ -215,41 +215,46 @@ $menu['help']['menuitem'][] = ['desc' => gtext('Donate'),'link' => 'https://www.
 function display_menu($menuid) {
 	global $menu;
 
-	// Is menu visible?
-	if (!$menu[$menuid]['visible'])
-		return;
-
-	$link = $menu[$menuid]['link'];
-	if ($link == '') $link = 'index.php';
-	echo "<li>\n";
-	    $agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-       if ((preg_match("/iPhone/i", $agent)) || (preg_match("/android/i", $agent))) {
-          echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
-       }
-       else {
-          echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
-       }
-	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
-
-	# Display menu items.
-	foreach ($menu[$menuid]['menuitem'] as $menuk => $menuv) {
-		# Is menu item visible?
-		if (!$menuv['visible']) {
-			continue;
-		}
-		if (!isset($menuv['type']) || "separator" !== $menuv['type']) {
-			# Display menuitem.
-			$link = $menuv['link'];
-			if ($link == '') $link = 'index.php';
-			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".$menuv['desc']."\">".$menuv['desc']."</a>\n";
-		} else {
-			# Display separator.
-			echo "<span class=\"tabseparator\">&nbsp;</span>";
-		}
-	}
-
-	echo "	</div>\n";
-	echo "</li>\n";
+	if($menu[$menuid]['visible']): // render menu when visible
+		$link = $menu[$menuid]['link'];
+		if($link == ''):
+			$link = 'index.php';
+		endif;
+		echo "<li>\n";
+		$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
+		if (preg_match('/(iphone|android)/i',$agent)):
+			echo '<a href="javascript:mopen(\'',$menuid,'\');" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
+		elseif(preg_match('~^http[s]?://~',$link)): // hard link = no spinner
+			echo '<a href="',$link,'" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
+		else: // local link = spinner
+			echo '<a href="',$link,'" onclick="spinner()" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
+		endif;
+		echo '<div id="',$menuid,'" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">',"\n";
+		// Display menu items.
+		foreach($menu[$menuid]['menuitem'] as $menuk => $menuv):
+			if($menuv['visible']): // render menuitem when visible
+				if(!isset($menuv['type']) || 'separator' !== $menuv['type']): // Display menuitem.
+					$link = $menuv['link'];
+					if($link == ''):
+						$link = 'index.php';
+					endif;
+					$target = $menuv['target'];
+					if(empty($target)):
+						$target = '_self';
+					endif; 
+					if(preg_match('~^http[s]?://~',$link)): // hard link = no spinner
+						echo '<a href="',$link,'" target="',$target,'" title="',$menuv['desc'],'">',$menuv['desc'],'</a>',"\n";
+					else: // local link = spinner
+						echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menuv['desc'],'">',$menuv['desc'],'</a>',"\n";
+					endif;
+				else: // Display separator.
+					echo '<span class="tabseparator">&nbsp;</span>';
+				endif;
+			endif;
+		endforeach;
+		echo "</div>\n";
+		echo "</li>\n";
+	endif;
 }
 function include_ext_menu() {
 	global $g;
@@ -296,6 +301,8 @@ function show_header($title, $additional_header_content = null)
 	echo "<link href=\"../css/tabs.css\" rel=\"stylesheet\" type=\"text/css\">\n";	
 	echo "<script type=\"text/javascript\" src=\"../js/jquery.min.js\"></script>\n";
 	echo "<script type=\"text/javascript\" src=\"../js/gui.js\"></script>\n";
+	echo '<script type="text/javascript" src="../js/spinner.js"></script>',"\n";
+	echo '<script type="text/javascript" src="../js/spin.min.js"></script>',"\n";
 	if (isset($pglocalheader) && !empty($pglocalheader)) {
 		if (is_array($pglocalheader)) {
 			foreach ($pglocalheader as $pglocalheaderv) {
@@ -310,17 +317,21 @@ function show_header($title, $additional_header_content = null)
 	echo '</head>',"\n";
 	// NAS4Free Header
 	echo '<body id="main">',"\n";
+	echo '<div id="spinner_main"></div>',"\n";
+	echo '<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>',"\n";
 	echo '<header id="g4h">',"\n";
-	echo '<div id="header">',"\n";
-	echo '<div id="headerlogo">',"\n";
-	echo '<a title="www.',get_product_url(),'" href="https://www.',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";
-	echo '</div>',"\n";
-	echo '<div id="headerrlogo">',"\n";
-	echo '<div class="hostname">',"\n";
-	echo '<span>',system_get_hostname(),'&nbsp;</span>',"\n";
-	echo '</div>',"\n";
-	echo '</div>',"\n";
-	echo '</div>',"\n";
+	if(!(isset($config['system']) && is_array($config['system']) && isset($config['system']['shrinkpageheader']))):
+		echo '<div id="header">',"\n";
+		echo '<div id="headerlogo">',"\n";
+		echo '<a title="www.',get_product_url(),'" href="https://www.',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";
+		echo '</div>',"\n";
+		echo '<div id="headerrlogo">',"\n";
+		echo '<div class="hostname">',"\n";
+		echo '<span>',system_get_hostname(),'&nbsp;</span>',"\n";
+		echo '</div>',"\n";
+		echo '</div>',"\n";
+		echo '</div>',"\n";
+	endif;
 	echo "<div id=\"headernavbar\">\n";
 	echo "<ul id=\"navbarmenu\">\n";
 	echo display_menu("system");

@@ -42,6 +42,7 @@ $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
 $pconfig['enabletogglemode'] = isset($config['system']['enabletogglemode']);
 $pconfig['skipviewmode'] = isset($config['system']['skipviewmode']);
+$pconfig['shrinkpageheader'] = isset($config['system']['shrinkpageheader']);
 $pconfig['tune_enable'] = isset($config['system']['tune']);
 $pconfig['zeroconf'] = isset($config['system']['zeroconf']);
 $pconfig['powerd'] = isset($config['system']['powerd']);
@@ -133,6 +134,7 @@ if($_POST):
 		$config['system']['disablefirmwarecheck'] = isset($_POST['disablefirmwarecheck']) ? true : false;
 		$config['system']['enabletogglemode'] = isset($_POST['enabletogglemode']) ? true : false;
 		$config['system']['skipviewmode'] = isset($_POST['skipviewmode']);
+		$config['system']['shrinkpageheader'] = isset($_POST['shrinkpageheader']);
 		$config['system']['webgui']['noantilockout'] = isset($_POST['noantilockout']) ? true : false;
 		$config['system']['disablebeep'] = isset($_POST['disablebeep']) ? true : false;
 		$config['system']['tune'] = isset($_POST['tune_enable']) ? true : false;
@@ -336,6 +338,7 @@ function powerd_change() {
 					html_checkbox("disablebeep", gtext("Internal Speaker"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdowns."));
 					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
 					html_checkbox('skipviewmode',gtext('Skip View Mode'),!empty($pconfig['skipviewmode']) ? true : false,gtext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'));
+					html_checkbox('shrinkpageheader',gtext('Shrink Page Header'),!empty($pconfig['shrinkpageheader']) ? true : false,gtext('Enable this option to reduce the height of the page header to a minimum.'));
 					html_separator();
 					?>
 					<tr>
