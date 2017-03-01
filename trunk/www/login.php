@@ -80,17 +80,17 @@ function genhtmltitle(array $title = []) {
 // Info and Manual
 $menu['info']['desc'] = gtext('Information & Manuals');
 $menu['info']['visible'] = true;
-$menu['info']['link'] = "http://wiki.nas4free.org/";
+$menu['info']['link'] = "https://www.nas4free.org/wiki/doku.php";
 $menu['info']['menuitem']['visible'] = FALSE;
 // Forum
 $menu['forum']['desc'] = gtext("Forum");
-$menu['forum']['link'] = "http://forums.nas4free.org";
+$menu['forum']['link'] = "https://www.nas4free.org/forums/";
 $menu['forum']['visible'] = TRUE;
 $menu['forum']['menuitem']['visible'] = FALSE;
 // IRC
 $menu['irc']['desc'] = gtext("IRC NAS4Free");
 $menu['irc']['visible'] = TRUE;
-$menu['irc']['link'] = "http://webchat.freenode.net/?channels=#nas4free";
+$menu['irc']['link'] = "https://webchat.freenode.net/?channels=#nas4free";
 $menu['irc']['menuitem']['visible'] = FALSE;
 // Donate
 $menu['donate']['desc'] = gtext("Donate");

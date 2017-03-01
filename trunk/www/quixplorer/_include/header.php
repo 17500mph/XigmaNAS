@@ -2,7 +2,7 @@
 /*
 	header.php
 
-	Part of NAS4Free (http://www.nas4free.org).
+	Part of NAS4Free (https://www.nas4free.org).
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
@@ -205,9 +205,9 @@ $menu['help']['visible'] = TRUE;
 $menu['help']['link'] = '../index.php';
 $menu['help']['menuitem'] = [];
 $menu['help']['menuitem'][] = ['type' => 'separator','visible' => TRUE];
-$menu['help']['menuitem'][] = ['desc' => gtext('Forum'),'link' => 'http://forums.nas4free.org', 'visible' => TRUE,'target' => '_blank'];
-$menu['help']['menuitem'][] = ['desc' => gtext('Information & Manual'),'link' => 'http://wiki.nas4free.org','visible' => TRUE,'target' => '_blank'];
-$menu['help']['menuitem'][] = ['desc' => gtext('IRC Live Support'),'link' => 'http://webchat.freenode.net/?channels=#nas4free','visible' => TRUE,'target' => '_blank'];
+$menu['help']['menuitem'][] = ['desc' => gtext('Forum'),'link' => 'https://www.nas4free.org/forums/', 'visible' => TRUE,'target' => '_blank'];
+$menu['help']['menuitem'][] = ['desc' => gtext('Information & Manual'),'link' => 'https://www.nas4free.org/wiki/doku.php','visible' => TRUE,'target' => '_blank'];
+$menu['help']['menuitem'][] = ['desc' => gtext('IRC Live Support'),'link' => 'https://webchat.freenode.net/?channels=#nas4free','visible' => TRUE,'target' => '_blank'];
 $menu['help']['menuitem'][] = ['type' => 'separator','visible' => TRUE];
 $menu['help']['menuitem'][] = ['desc' => gtext('Release Notes'),'link' => '../changes.php','visible' => TRUE];
 $menu['help']['menuitem'][] = ['desc' => gtext('License & Credits'),'link' => '../license.php','visible' => TRUE];
