@@ -176,7 +176,7 @@ window.onload=function() {
 		<div class="loginwrapper">
 			<div class="tabcont" style="border-radius:4px;">
 				<div class="loginwrap">
-					<h1 class="logintitle"><span class="iconfa-lock"><img src="images/lock.png" alt=""></span><a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
+					<h1 class="logintitle"><span class="iconfa-lock"><img src="images/lock.png" alt=""></span><a title="www.<?=get_product_url();?>" href="https://www.<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
 						<span class="subtitle"><?=system_get_hostname();?>&nbsp;</span>
 					</h1>
 					<div class="loginwrapperinner">
