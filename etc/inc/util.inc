@@ -434,8 +434,10 @@ function is_valid_privatekey($privatekey,$type = 'RSA') {
 	endswitch;
 	return false;
 }
-/*
+/**
  *	Returns true if $uuid is a valid UUID.
+ *	@param string $uuid Universal Unique Identifier
+ *	@return bool returns true if the given string is a valid uuid.
  */
 function is_uuid_v4($uuid) {
 	return (false !== preg_match('/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i',$uuid));
@@ -2354,110 +2356,108 @@ function get_bootdevice() {
 	endif;
 	return $val;
 }
-/*
+/**
  *	Get list of configured physical disks.
+ *	@param
+ *	@return array list of configured physical disks or [].
  */
 function get_conf_physical_disks_list() {
 	global $config;
-
-	$a_physicaldisk = [];
-	if(is_array($config['disks']) && is_array($config['disks']['disk'])):
-		array_sort_key($config['disks']['disk'],'name');
-		$a_disks = $config['disks']['disk'];
-		foreach($a_disks as &$disk):
-			$disk['class'] = 'physical'; // Set disk type
-		endforeach;
-		$a_physicaldisk = array_merge($a_physicaldisk,$a_disks);
-	endif;
-	return $a_physicaldisk;
+	
+	$fallback = [];
+	array_make_branch($config,'disks','disk');
+	array_sort_key($config['disks']['disk'],'name');
+	$a_disks = $config['disks']['disk'];
+	foreach($a_disks as &$disk):
+		$disk['class'] = 'physical'; // Set disk type
+	endforeach;
+	return array_merge($fallback,$a_disks);
 }
-/*
- *	Get list of configured Software RAID disks.
+/**
+ *	Get list of configured software RAID disks.
+ *	@param
+ *	@return array list of configured software RAID disks or [].
  */
 function get_conf_sraid_disks_list() {
 	global $config;
 
-	$a_vdisk = [];
-	if(is_array($config['gvinum']) && is_array($config['gvinum']['vdisk'])):
-		array_sort_key($config['gvinum']['vdisk'],'name');
-		$a_gvinum = $config['gvinum']['vdisk'];
-		foreach($a_gvinum as &$vdisk):
-			$vdisk['class'] = 'gvinum'; // Set disk type
-		endforeach;
-		$a_vdisk = array_merge($a_vdisk,$a_gvinum);
-	endif;
-	if(is_array($config['gmirror']) && is_array($config['gmirror']['vdisk'])):
-		array_sort_key($config['gmirror']['vdisk'],'name');
-		$a_gmirror = $config['gmirror']['vdisk'];
-		foreach($a_gmirror as &$vdisk):
-			$vdisk['class'] = 'gmirror'; // Set disk type
-		endforeach;
-		$a_vdisk = array_merge($a_vdisk,$a_gmirror);
-	endif;
-	if(is_array($config['gconcat']) && is_array($config['gconcat']['vdisk'])):
-		array_sort_key($config['gconcat']['vdisk'],'name');
-		$a_gconcat = $config['gconcat']['vdisk'];
-		foreach($a_gconcat as &$vdisk):
-			$vdisk['class'] = 'gconcat'; // Set disk type
-		endforeach;
-		$a_vdisk = array_merge($a_vdisk,$a_gconcat);
-	endif;
-	if(is_array($config['gstripe']) && is_array($config['gstripe']['vdisk'])):
-		array_sort_key($config['gstripe']['vdisk'],'name');
-		$a_gstripe = $config['gstripe']['vdisk'];
-		foreach($a_gstripe as &$vdisk):
-			$vdisk['class'] = 'gstripe'; // Set disk type
-		endforeach;
-		$a_vdisk = array_merge($a_vdisk,$a_gstripe);
-	endif;
-	if(is_array($config['graid5']) && is_array($config['graid5']['vdisk'])):
-		array_sort_key($config['graid5']['vdisk'],'name');
-		$a_graid5 = $config['graid5']['vdisk'];
-		foreach($a_graid5 as &$vdisk):
-			$vdisk['class'] = 'graid5'; // Set disk type
-		endforeach;
-		$a_vdisk = array_merge($a_vdisk,$a_graid5);
-	endif;
-	return $a_vdisk;
+	$fallback = [];
+	//	prepare environment
+	array_make_branch($config,'gvinum','vdisk');
+	array_sort_key($config['gvinum']['vdisk'],'name');
+	$a_gvinum = $config['gvinum']['vdisk'];
+	foreach($a_gvinum as &$vdisk):
+		$vdisk['class'] = 'gvinum';
+	endforeach;
+	array_make_branch($config,'gmirror','vdisk');
+	array_sort_key($config['gmirror']['vdisk'],'name');
+	$a_gmirror = $config['gmirror']['vdisk'];
+	foreach($a_gmirror as &$vdisk):
+		$vdisk['class'] = 'gmirror';
+	endforeach;
+	array_make_branch($config,'gconcat','vdisk');
+	array_sort_key($config['gconcat']['vdisk'],'name');
+	$a_gconcat = $config['gconcat']['vdisk'];
+	foreach($a_gconcat as &$vdisk):
+		$vdisk['class'] = 'gconcat';
+	endforeach;
+	array_make_branch($config,'gstripe','vdisk');
+	array_sort_key($config['gstripe']['vdisk'],'name');
+	$a_gstripe = $config['gstripe']['vdisk'];
+	foreach($a_gstripe as &$vdisk):
+		$vdisk['class'] = 'gstripe';
+	endforeach;
+	array_make_branch($config,'graid5','vdisk');
+	array_sort_key($config['graid5']['vdisk'],'name');
+	$a_graid5 = $config['graid5']['vdisk'];
+	foreach($a_graid5 as &$vdisk):
+		$vdisk['class'] = 'graid5';
+	endforeach;
+	//	merge information
+	return array_merge($fallback,$a_gvinum,$a_gmirror,$a_gconcat,$a_gstripe,$a_graid5);
 }
-/*
- *	Get list of configured encrypted disks
+/**
+ *	Get list of configured encrypted disks.
+ *	@param
+ *	@return array list of configured encrypted disks or [].
  */
 function get_conf_encryped_disks_list() {
 	global $config;
 
-	$a_vdisk = [];
-	if(is_array($config['geli']) && is_array($config['geli']['vdisk'])):
-		array_sort_key($config['geli']['vdisk'],'name');
-		$a_geli = $config['geli']['vdisk'];
-		foreach($a_geli as &$vdisk):
-			$vdisk['class'] = 'geli'; // Set disk type
-		endforeach;
-		$a_vdisk = array_merge($a_vdisk,$a_geli);
-	endif;
-	return $a_vdisk;
+	$fallback = [];
+	//	prepare environment
+	array_make_branch($config,'geli','vdisk');
+	array_sort_key($config['geli']['vdisk'],'name');
+	$a_geli = $config['geli']['vdisk'];
+	foreach($a_geli as &$vdisk): // set disk type
+		$vdisk['class'] = 'geli';
+	endforeach;
+	return array_merge($fallback,$a_geli);
 }
-/*
- *	Get list of configured ZFS virtual devices
+/**
+ *	Get list of configured ZFS virtual devices.
+ *	@param
+ *	@return array list of configured ZFS virtual devices or [].
  */
 function get_conf_zfs_vdevice_list() {
 	global $config;
 
-	$result = [];
-	if(is_array($config['zfs']['vdevices']) && is_array($config['zfs']['vdevices']['vdevice'])):
-		array_sort_key($config['zfs']['vdevices']['vdevice'],'name');
-		$a_vdevice = $config['zfs']['vdevices']['vdevice'];
-		foreach($a_vdevice as &$vdevice):
-			$vdevice['class'] = 'vdevice'; // Set disk type
-		endforeach;
-		$result = array_merge($result,$a_vdevice);
-	endif;
-	return $result;
+	$fallback = [];
+	//	prepare environment
+	array_make_branch($config,'zfs','vdevices','vdevice');
+	array_sort_key($config['zfs']['vdevices']['vdevice'],'name');
+	$a_vdevice = $config['zfs']['vdevices']['vdevice'];
+	foreach($a_vdevice as &$vdevice): // set disk type
+		$vdevice['class'] = 'vdevice';
+	endforeach;
+	return array_merge($fallback,$a_vdevice);
 }
-/*
+/**
  *	Get a filtered list of all configured disks (real and virtual, e.g. SoftRAID or GEli encrypted).
  *	Physical disks used by any virtual disk is filtered out. Also virtual disks itself are
  *	filtered if they are used by another virtual disk.
+ *	@param
+ *	@return array list of all configured disks or [].
  */
 function get_conf_all_disks_list_filtered() {
 //	global $config;

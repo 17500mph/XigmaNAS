@@ -34,6 +34,13 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+array_make_branch($config,'samba');
+array_make_branch($config,'sambaad','auxparam');
+array_make_branch($config,'interfaces','lan');
+array_make_branch($config,'system','dnsserver');
+array_make_branch($config,'system','ipv6dnsserver');
+array_make_branch($config,'system','ntp');
+
 $errormsg="";
 $do_init = false;
 
@@ -64,8 +71,6 @@ else:
 	$errormsg .= gtext('LAN interface is not configured.');
 	$errormsg .= "<br/>";
 endif;
-array_make_branch($config,'system','dnsserver');
-array_make_branch($config,'system','ipv6dnsserver');
 $dns_configured = false;
 foreach($config['system']['dnsserver'] as $dnsserver):
 	if(is_string($dnsserver) && preg_match('/\S/',$dnsserver)):
