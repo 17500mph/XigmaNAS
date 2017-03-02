@@ -36,69 +36,63 @@ require_once 'util.inc';
 
 // For convenience
 function set_kern_geom_debugflags($val) {
-	if (empty($val))
+	if (empty($val)):
 		$val = 0;
+	endif;
 	system("/sbin/sysctl kern.geom.debugflags=$val 2>&1");
 }
 
 // Mount all configured disks.
 // Return 0 if successful, 1 if error
-function disks_mount_all()
-{
+function disks_mount_all() {
 	global $config, $g;
 
 	// For each device configured:
-	if (is_array($config['mounts']) && is_array($config['mounts']['mount'])) {
-		// Mount real disks first
-		foreach ($config['mounts']['mount'] as $mount) {
-			if ("disk" !== $mount['type'])
-				continue;
-			if (is_booting() && disks_ismounted($mount))
-				continue;
-
-			// Advanced unmount filesystem if not in booting mode (mount edition).
-			// Background: 'disks_umount' can't be used in the case the mount point
-			// has been renamed by the user because it uses the 'sharename' (which is
-			// now the new name of the share, but we need the old name) for unmounting.
-			if (!is_booting())
-				disks_umount_ex($mount);
-
-			disks_mount($mount);
-		}
-
-		// Then mount ISOs
-		foreach ($config['mounts']['mount'] as $mount) {
-			if ("iso" !== $mount['type'])
-				continue;
-			if (is_booting() && disks_ismounted($mount))
-				continue;
-
-			// Advanced unmount filesystem if not in booting mode (mount edition)
-			if (!is_booting())
-				disks_umount($mount);
-
-			disks_mount($mount);
-		}
-	}
-
+	array_make_branch($config,'mounts','mount');
+	// Mount real disks first
+	foreach($config['mounts']['mount'] as $mount):
+		if('disk' !== $mount['type']):
+			continue;
+		endif;
+		if(is_booting() && disks_ismounted($mount)):
+			continue;
+		endif;
+		// Advanced unmount filesystem if not in booting mode (mount edition).
+		// Background: 'disks_umount' can't be used in the case the mount point
+		// has been renamed by the user because it uses the 'sharename' (which is
+		// now the new name of the share, but we need the old name) for unmounting.
+		if(!is_booting()):
+			disks_umount_ex($mount);
+		endif;
+		disks_mount($mount);
+	endforeach;
+	// Then mount ISOs
+	foreach($config['mounts']['mount'] as $mount):
+		if('iso' !== $mount['type']):
+			continue;
+		endif;
+		if(is_booting() && disks_ismounted($mount)):
+			continue;
+		endif;
+		// Advanced unmount filesystem if not in booting mode (mount edition)
+		if(!is_booting()):
+			disks_umount($mount);
+		endif;
+		disks_mount($mount);
+	endforeach;
 	return 0;
 }
-
 // This function unmounts all configured mountpoints
 // Return 0 if successful, otherwise 1
-function disks_umount_all()
-{
+function disks_umount_all() {
 	global $config;
 
 	// Sync disks first
-	mwexec("/bin/sync");
-
-	if (is_array($config['mounts']) && is_array($config['mounts']['mount'])) {
-		foreach ($config['mounts']['mount'] as $mountent) {
-			disks_umount($mountent);
-		}
-	}
-
+	mwexec('/bin/sync');
+	array_make_branch($config,'mounts','mount');
+	foreach ($config['mounts']['mount'] as $mountent):
+		disks_umount($mountent);
+	endforeach;
 	return 0;
 }
 
@@ -110,73 +104,65 @@ function disks_mount($mount)
 
 	// Set mount name
 	$mountname = sprintf('%s/%s',$g['media_path'],$mount['sharename']);
-
 	// Create one directory for each device under /mnt
-	if (!@mkdir($mountname)) {
+	if(!@mkdir($mountname)):
 		write_log("Error: Failed to create directory {$mountname}");
-	}
-
+	endif;
 	// msdosfs does not support some operation
-	if ($mount['fstype'] == 'msdosfs') {
+	if($mount['fstype'] == 'msdosfs'):
 		$mode = "777";
 		$owner = "root";
 		$group = "wheel";
-		if (is_array($mount['accessrestrictions'])) {
+		if(is_array($mount['accessrestrictions'])):
 			$mode = $mount['accessrestrictions']['mode'];
 			$owner = $mount['accessrestrictions']['owner'];
 			$group = $mount['accessrestrictions']['group'][0];
-		}
-		if (!@chmod($mountname, octdec($mode)) || !@chown($mountname, $owner) || !@chgrp($mountname, $group)) {
+		endif;
+		if(!@chmod($mountname, octdec($mode)) || !@chown($mountname, $owner) || !@chgrp($mountname, $group)):
 			write_log("Error: Failed to set access restrictions on directory '{$mountname}'");
-		}
-	}
-
+		endif;
+	endif;
 	/* Mount the filesystem */
 	/* In booting mode, skip encrypted disk (need to enter the passphrase on the webgui) */
-	if (is_booting()) {
-		if (is_array($config['geli']) && is_array($config['geli']['vdisk'])) {
-			if (array_search_ex($mount['mdisk'], $config['geli']['vdisk'], "devicespecialfile")) {
-				write_log("Skip mounting '{$mount['sharename']}': Passphrase needed for '{$mountname}'.");
-				return 0;
-			}
-		}
-	}
-
-	switch($mount['type']) {
-		case "disk":
+	if(is_booting()):
+		array_make_branch($config,'geli','vdisk');
+		if(array_search_ex($mount['mdisk'],$config['geli']['vdisk'],'devicespecialfile')):
+			write_log("Skip mounting '{$mount['sharename']}': Passphrase needed for '{$mountname}'.");
+			return 0;
+		endif;
+	endif;
+	switch($mount['type']):
+		case 'disk':
 			$devicespecialfile = $mount['devicespecialfile'];
 			break;
-
-		case "hvol":
+		case 'hvol':
 			$devicespecialfile = $mount['devicespecialfile'];
-			if (0 != mwexec("/sbin/fsck -p -y -t {$mount['fstype']} {$mount['devicespecialfile']}")) {
+			if(0 != mwexec("/sbin/fsck -p -y -t {$mount['fstype']} {$mount['devicespecialfile']}")):
 				write_log("Error: Failed to run fsck for '{$mount['devicespecialfile']}'");
 				return 1;
-			}
+			endif;
 			break;
-
-		case "iso":
-			if (!file_exists($mount['filename']))
+		case 'iso':
+			if(!file_exists($mount['filename'])):
 				return 0;
+			endif;
 			// Create memory disk. 'mdconfig' returns the ID of this disk
 			exec("/sbin/mdconfig -a -t vnode -f '{$mount['filename']}'", $mdid, $result);
-			if (0 !== $result) {
+			if(0 !== $result):
 				write_log("Error: Failed to create memory disk for '{$mount['filename']}'");
 				return 1;
-			}
+			endif;
 			$devicespecialfile = "/dev/{$mdid[0]}";
 			break;
-
-		case "custom":
+		case 'custom':
 			$devicespecialfile = $mount['devicespecialfile'];
-			if (!file_exists($devicespecialfile))
+			if(!file_exists($devicespecialfile)):
 				return 0;
+			endif;
 			break;
-	}
-
+	endswitch;
 	/* Check if filesystem should be mounted read-only */
 	$readonly = (isset($mount['readonly'])) ? "-r" : "";
-
 	/* Check the fileystem only if there is a problem. */
 	/* This part is too stupid: I must read the FreeBSD start script for use the same intelligent method for checking hard drive */
 	switch ($mount['fstype']) {
@@ -607,278 +593,250 @@ EOD;
 function disks_raid_gmirror_configure($uuid) {
 	global $config;
 	$sphere = 'gmirror';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk)) {
-				// Create volume
-				$cmd = sprintf('/sbin/gmirror label -b %1$s %2$s ', $vdisk['balance'], escapeshellarg($vdisk['name'])); 
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					$cmd .= sprintf('%1$s ', $devicev);
-				}
-				return mwexec($cmd, true);
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk)):
+			// Create volume
+			$cmd = sprintf('/sbin/gmirror label -b %1$s %2$s ', $vdisk['balance'], escapeshellarg($vdisk['name'])); 
+			foreach($vdisk['device'] as $devicek => $devicev):
+				$cmd .= sprintf('%1$s ', $devicev);
+			endforeach;
+			return mwexec($cmd, true);
+		endif;
+	endif;
 	return 1;
 }
-
 // Configure, create and start gconcat volume.
 // $uuid - UUID of the RAID to be configured.
 // Return 0 if successful, 1 if error
 function disks_raid_gconcat_configure($uuid) {
 	global $config;
 	$sphere = 'gconcat';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk)) {
-				// Create volume
-				$cmd = sprintf('/sbin/gconcat label %1$s ', escapeshellarg($vdisk['name']));
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					$cmd .= sprintf('%1$s ', $devicev);
-				}
-				return mwexec($cmd, true);
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk)):
+			// Create volume
+			$cmd = sprintf('/sbin/gconcat label %1$s ', escapeshellarg($vdisk['name']));
+			foreach($vdisk['device'] as $devicek => $devicev):
+				$cmd .= sprintf('%1$s ', $devicev);
+			endforeach;
+			return mwexec($cmd, true);
+		endif;
+	endif;
 	return 1;
 }
-
 // Configure, create and start gstripe volume.
 // $uuid - UUID of the RAID to be configured.
 // Return 0 if successful, 1 if error
 function disks_raid_gstripe_configure($uuid) {
 	global $config;
 	$sphere = 'gstripe';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk)) {
-				// Create volume
-				$cmd = sprintf('/sbin/gstripe label %1$s ', escapeshellarg($vdisk['name']));
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					$cmd .= sprintf('%1$s ', $devicev);
-				}
-				return mwexec($cmd, true);
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk)):
+			// Create volume
+			$cmd = sprintf('/sbin/gstripe label %1$s ', escapeshellarg($vdisk['name']));
+			foreach($vdisk['device'] as $devicek => $devicev):
+				$cmd .= sprintf('%1$s ', $devicev);
+			endforeach;
+			return mwexec($cmd, true);
+		endif;
+	endif;
 	return 1;
 }
-
 // Configure, create and start graid5 volume.
 // $uuid - UUID of the RAID to be configured.
 // Return 0 if successful, 1 if error
 function disks_raid_graid5_configure($uuid) {
 	global $config;
 	$sphere = 'graid5';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk)) {
-				// Create volume
-				$cmd = sprintf('/sbin/graid5 label -s 131072 %1$s ', escapeshellarg($vdisk['name']));
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					$cmd .= sprintf('%1$s ', $devicev);
-				}
-				return mwexec($cmd, true);
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk)):
+			// Create volume
+			$cmd = sprintf('/sbin/graid5 label -s 131072 %1$s ', escapeshellarg($vdisk['name']));
+			foreach($vdisk['device'] as $devicek => $devicev):
+				$cmd .= sprintf('%1$s ', $devicev);
+			endforeach;
+			return mwexec($cmd, true);
+		endif;
+	endif;
 	return 1;
 }
-
 // Delete geom gvinum volume given in parameter.
 // $uuid - UUID of the RAID to be deleted.
 // Return 0 if successful, 1 if error
 function disks_raid_gvinum_delete($uuid) {
 	global $config;
 
-	if (!is_array($config['gvinum']['vdisk']))
+	$sphere = 'gvinum';
+	array_make_branch($config,$sphere,'vdisk');
+	$index = array_search_ex($uuid, $config[$sphere]['vdisk'],'uuid');
+	if(false === $index):
 		return 1;
-
-	$index = array_search_ex($uuid, $config['gvinum']['vdisk'], "uuid");
-	if (false === $index)
+	endif;
+	$vdisk = $config[$sphere]['vdisk'][$index];
+	if(!is_array($vdisk)):
 		return 1;
-
-	$vdisk = $config['gvinum']['vdisk'][$index];
-	if (!is_array($vdisk))
-		 return 1;
-
+	endif;
 	exec("/sbin/gvinum lv {$vdisk['name']}", $rawdata);
-	if (empty($rawdata[0]))
+	if(empty($rawdata[0])):
 		return 1;
-	if (strpos($rawdata[0],"State: up") === false) {
+	endif;
+	if(strpos($rawdata[0],'State: up') === false):
 		return 0;
-	}
-
+	endif;
 	mwexec("/sbin/gvinum rm -r {$vdisk['name']}");
-
-	foreach ($vdisk['device'] as $device){
+	foreach ($vdisk['device'] as $device):
 		mwexec("/sbin/gvinum rm -r disk_{$device}");
-	}
-
+	endforeach;
 	return 0;
 }
-
 // Delete geom mirror volume given in parameter.
 // $uuid - UUID of the RAID to be deleted.
 // Return 0 if successful, 1 if error
 function disks_raid_gmirror_delete($uuid) {
 	global $config;
+	
 	$sphere = 'gmirror';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])) {
-				$helpinghand = escapeshellarg($vdisk['name']);
-				// Stop the volume
-				mwexec(sprintf('/sbin/gmirror stop %1$s', $helpinghand));
-				// Clear the gmirror information on the hard drive
-				foreach ($vdisk['device'] as $device) {
-					mwexec(sprintf('/sbin/gmirror clear %1$s', $device));
-				}
-				return 0;
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])):
+			$helpinghand = escapeshellarg($vdisk['name']);
+			// Stop the volume
+			mwexec(sprintf('/sbin/gmirror stop %1$s', $helpinghand));
+			// Clear the gmirror information on the hard drive
+			foreach($vdisk['device'] as $device):
+				mwexec(sprintf('/sbin/gmirror clear %1$s', $device));
+			endforeach;
+			return 0;
+		endif;
+	endif;
 	return 1;
 }
-
 // Delete geom concat volume given in parameter.
 // $uuid - UUID of the RAID to be deleted.
 // Return 0 if successful, 1 if error
 function disks_raid_gconcat_delete($uuid) {
 	global $config;
+	
 	$sphere = 'gconcat';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])) {
-				$helpinghand = escapeshellarg($vdisk['name']);
-				// Stop the volume
-				mwexec(sprintf('/sbin/gconcat stop %1$s', $helpinghand));
-				// Clear the gconcat information on the hard drive
-				foreach ($vdisk['device'] as $device) {
-					mwexec(sprintf('/sbin/gconcat clear %1$s', $device));
-				}
-				mwexec(sprintf('/sbin/gconcat destroy %1$s', $helpinghand));
-				return 0;
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])):
+			$helpinghand = escapeshellarg($vdisk['name']);
+			// Stop the volume
+			mwexec(sprintf('/sbin/gconcat stop %1$s', $helpinghand));
+			// Clear the gconcat information on the hard drive
+			foreach($vdisk['device'] as $device):
+				mwexec(sprintf('/sbin/gconcat clear %1$s', $device));
+			endforeach;
+			mwexec(sprintf('/sbin/gconcat destroy %1$s', $helpinghand));
+			return 0;
+		endif;
+	endif;
 	return 1;
 }
-
 // Delete geom stripe volume given in parameter.
 // $uuid - UUID of the RAID to be deleted.
 // Return 0 if successful, 1 if error
 function disks_raid_gstripe_delete($uuid) {
 	global $config;
+
 	$sphere = 'gstripe';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) { 
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])) {
-				$helpinghand = escapeshellarg($vdisk['name']);
-				// Stop the volume
-				mwexec(sprintf('/sbin/gstripe stop %1$s', $helpinghand));
-				// Clear the gconcat information on the hard drive
-				foreach ($vdisk['device'] as $device) {
-					mwexec(sprintf('/sbin/gstripe clear %1$s', $device));
-				}
-				mwexec(sprintf('/sbin/gstripe destroy %1$s', $helpinghand));
-				return 0;
-			}
-		}
-	}
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])):
+			$helpinghand = escapeshellarg($vdisk['name']);
+			// Stop the volume
+			mwexec(sprintf('/sbin/gstripe stop %1$s', $helpinghand));
+			// Clear the gconcat information on the hard drive
+			foreach($vdisk['device'] as $device):
+				mwexec(sprintf('/sbin/gstripe clear %1$s', $device));
+			endforeach;
+			mwexec(sprintf('/sbin/gstripe destroy %1$s', $helpinghand));
+			return 0;
+		endif;
+	endif;
 	return 1;
 }
-
 // Delete geom raid5 volume given in parameter.
 // $uuid - UUID of the RAID to be deleted.
 // Return 0 if successful, 1 if error
 function disks_raid_graid5_delete($uuid) {
 	global $config;
-	$sphere = 'graid5';
-	if (isset($config[$sphere]) && isset($config[$sphere]['vdisk']) && is_array($config[$sphere]['vdisk'])) {
-		if (false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))) {
-			$vdisk = $config[$sphere]['vdisk'][$index];
-			if (is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])) {
-				$helpinghand = escapeshellarg($vdisk['name']);
-				// Stop the volume
-				// Arne Woerner advice: Don't stop the volume before deleting it.
-				// mwexec("/sbin/graid5 stop {$vdisk['name']}");
-				// Clear the graid5 information on the hard drive
-				foreach ($vdisk['device'] as $device){
-					// Get the name of the provider
-					$id = array_search_ex($device, $config['disks']['disk'], "devicespecialfile");
-					$provider = $config['disks']['disk'][$id]['name'];
-					// Remove provider
-					mwexec(sprintf('/sbin/graid5 remove %1$s %2$s', $helpinghand, $provider));
-				}
-				mwexec(sprintf('/sbin/graid5 destroy %1$s', $helpinghand));
-				return 0;
-			}
-		}
-	}
-	return 1;
- }
 
+	$sphere = 'graid5';
+	array_make_branch($config,$sphere,'vdisk');
+	if(false !== ($index = array_search_ex($uuid, $config[$sphere]['vdisk'], 'uuid'))):
+		$vdisk = $config[$sphere]['vdisk'][$index];
+		if(is_array($vdisk) && isset($vdisk['name']) && preg_match('/\S/', $vdisk['name'])):
+			$helpinghand = escapeshellarg($vdisk['name']);
+			// Stop the volume
+			// Arne Woerner advice: Don't stop the volume before deleting it.
+			// mwexec("/sbin/graid5 stop {$vdisk['name']}");
+			// Clear the graid5 information on the hard drive
+			foreach($vdisk['device'] as $device):
+				// Get the name of the provider
+				$id = array_search_ex($device, $config['disks']['disk'], "devicespecialfile");
+				$provider = $config['disks']['disk'][$id]['name'];
+				// Remove provider
+				mwexec(sprintf('/sbin/graid5 remove %1$s %2$s', $helpinghand, $provider));
+			endforeach;
+			mwexec(sprintf('/sbin/graid5 destroy %1$s', $helpinghand));
+			return 0;
+		endif;
+	endif;
+	return 1;
+}
 // Initialize provider which needs to be encrypted.
 // Return 0 if successful, 1 if error
-function disks_geli_init($provider, $aalgo, $ealgo, $keylen, $passphrase, $verbose = false)
-{
+function disks_geli_init($provider, $aalgo, $ealgo, $keylen, $passphrase, $verbose = false) {
 	$param = "-J -";
 	$result = 1;
-
 	// Add additional parameters
 	if (true == $verbose) $param .= " -v";
 	if (0 !== strcmp($aalgo, "none")) $param .= " -a {$aalgo}";
 	if (!empty($ealgo)) $param .= " -e {$ealgo}";
 	if (!empty($keylen)) $param .= " -l {$keylen}";
-
 	// Init disk
 	$passphrase = escapeshellarg($passphrase);
 	system("/bin/echo {$passphrase} | /sbin/geli init {$param} {$provider} 2>&1", $result);
-
 	return $result;
 }
-
 // Attach the given provider. The master key will be decrypted
 // using the given passphrase/keyfile and a new GEOM provider
 // will be created using the given provider's name with an ".eli"
 // suffix.
 // Return 0 if successful, 1 if error
-function disks_geli_attach($provider, $passphrase, $verbose = false)
-{
+function disks_geli_attach($provider, $passphrase, $verbose = false) {
 	$param = "-j -";
 	$result = 1;
-
 	// Add additional parameters
 	if (true == $verbose) $param .= " -v";
-
 	// Attach disk
 	$passphrase = escapeshellarg($passphrase);
 	system("/bin/echo {$passphrase} | /sbin/geli attach {$param} {$provider} 2>&1", $result);
-
 	return $result;
 }
-
 // Detach the given providers, which means remove the devfs entry
 // and clear the keys from memory.
 // Return 0 if successful, 1 if error
-function disks_geli_detach($provider, $verbose = false)
-{
-	if (true == $verbose)
+function disks_geli_detach($provider, $verbose = false) {
+	if (true == $verbose):
 		$result = system("/sbin/geli detach {$provider} 2>&1", $result);
-	else
+	else:
 		$result = mwexec("/sbin/geli detach {$provider}");
-
+	endif;
 	return $result;
 }
-
 // Kill (destroy) a geli encrypted volume.
 // Return 0 if successful, 1 if error
 function disks_geli_kill($provider)
@@ -886,24 +844,18 @@ function disks_geli_kill($provider)
 	$result = mwexec("/sbin/geli kill {$provider}");
 	return $result;
 }
-
 // Detach all geli encrypted disks.
 // Return 0 if successful, 1 if error
-function disks_geli_detach_all()
-{
+function disks_geli_detach_all() {
 	global $config;
 
 	$result = 0;
-
-	if (is_array($config['geli']['vdisk'])) {
-		foreach($config['geli']['vdisk'] as $geli) {
-			$result |= disks_geli_detach($geli['devicespecialfile']) ;
-		}
-	}
-
+	array_make_branch($config,'geli','vdisk');
+	foreach($config['geli']['vdisk'] as $geli):
+		$result |= disks_geli_detach($geli['devicespecialfile']) ;
+	endforeach;
 	return $result;
 }
-
 // Change or setup (if not yet initialized) selected key.
 // The passphrase can always be changed: for an attached provider and
 // a detached provider. When a provider is attached, the user does not
@@ -914,17 +866,14 @@ function disks_geli_detach_all()
 // $passphrase: New passphrase
 // $verbose: Display additional information
 // Return 0 if successful, 1 if error
-function disks_geli_setkey($devicespecialfile, $oldpassphrase, $passphrase, $verbose = false)
-{
+function disks_geli_setkey($devicespecialfile, $oldpassphrase, $passphrase, $verbose = false) {
 	$param = "-J -";
 	$result = 1;
 
 	// Extract provider data.
 	$provider = preg_replace('/(\S+)(\.eli)/', '${1}', $devicespecialfile);
-
 	// Add additional parameters
 	if (true == $verbose) $param .= " -v";
-
 	if (0 == disks_exists($devicespecialfile)) {
 		// Provider is already attached
 		$passphrase = escapeshellarg($passphrase);
@@ -942,7 +891,6 @@ function disks_geli_setkey($devicespecialfile, $oldpassphrase, $passphrase, $ver
 
 	return $result;
 }
-
 // Format disk. Error and warning messages are redirected to stdout.
 // Return none
 function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k, $zfsgpt)
@@ -2084,14 +2032,15 @@ function disks_import_all_swraid_disks($clean_import) {
 	global $config;
 
 	$need_write_config = false;
-	$num = $error = 0;
+	$num = 0;
+	$error = 0;
 	exec('/sbin/gconcat load');
 	exec('/sbin/gstripe load');
 	exec('/sbin/gmirror load');
 	exec('/sbin/graid5 load');
 	exec('/sbin/gvinum load');
 	$disks = get_all_disks_list();
-	if (empty($disks)):
+	if(empty($disks)):
 		return $num;
 	endif;
 	array_make_branch($config,'disks','disk');
@@ -2107,105 +2056,86 @@ function disks_import_all_swraid_disks($clean_import) {
 		$config['graid5']['vdisk'] = []; // OK
 		$config['gvinum']['vdisk'] = []; // OK
 	endif;
-
-	foreach ($disks as $diskv) {
+	foreach($disks as $diskv):
 		$name = $diskv['name'];
 		$type = $diskv['type'];
 		$dev = $diskv['devicespecialfile'];
-		if ($type == "gmirror") {
-			// swraid exist in config?
-			$index = array_search_ex($dev, $config['gmirror']['vdisk'], "devicespecialfile");
-			if (false === $index) {
-				$num++; // detected
-
-				$consumers = disks_import_consumers($name, $type, $dev, $disks, $clean_import);
-				$swraid = [];
-				$swraid['uuid'] = uuid();
-				$swraid['name'] = $name;
-				$swraid['balance'] = $diskv['balance'];
-				$swraid['type'] = 1;
-				$swraid['size'] = $diskv['size'];
-				$swraid['device'] = $consumers;
-				$swraid['desc'] = "Software gmirror RAID 1";
-				$swraid['devicespecialfile'] = $dev;
-
-				$config['gmirror']['vdisk'][] = $swraid;
-				$need_write_config = true;
-			} else {
-				// already exist in config
-			}
-		} else if ($type == "gstripe") {
-			// swraid exist in config?
-			$index = array_search_ex($dev, $config['gstripe']['vdisk'], "devicespecialfile");
-			if (false === $index) {
-				$num++; // detected
-
-				$consumers = disks_import_consumers($name, $type, $dev, $disks, $clean_import);
-				$swraid = [];
-				$swraid['uuid'] = uuid();
-				$swraid['name'] = $name;
-				$swraid['type'] = 0;
-				$swraid['size'] = $diskv['size'];
-				$swraid['device'] = $consumers;
-				$swraid['desc'] = "Software gstripe RAID 0";
-				$swraid['devicespecialfile'] = $dev;
-
-				$config['gstripe']['vdisk'][] = $swraid;
-				$need_write_config = true;
-			} else {
-				// already exist in config
-			}
-		} else if ($type == "gconcat") {
-			// swraid exist in config?
-			$index = array_search_ex($dev, $config['gconcat']['vdisk'], "devicespecialfile");
-			if (false === $index) {
-				$num++; // detected
-
-				$consumers = disks_import_consumers($name, $type, $dev, $disks, $clean_import);
-				$swraid = [];
-				$swraid['uuid'] = uuid();
-				$swraid['name'] = $name;
-				$swraid['type'] = "JBOD";
-				$swraid['size'] = $diskv['size'];
-				$swraid['device'] = $consumers;
-				$swraid['desc'] = "Software gconcat JBOD";
-				$swraid['devicespecialfile'] = $dev;
-
-				$config['gconcat']['vdisk'][] = $swraid;
-				$need_write_config = true;
-			} else {
-				// already exist in config
-			}
-		} else if ($type == "graid5") {
-			// swraid exist in config?
-			$index = array_search_ex($dev, $config['graid5']['vdisk'], "devicespecialfile");
-			if (false === $index) {
-				$num++; // detected
-
-				$consumers = disks_import_consumers($name, $type, $dev, $disks, $clean_import);
-				$swraid = [];
-				$swraid['uuid'] = uuid();
-				$swraid['name'] = $name;
-				$swraid['type'] = 5;
-				$swraid['device'] = $consumers;
-				$swraid['size'] = $diskv['size'];
-				$swraid['desc'] = "Software graid5 RAID 5";
-				$swraid['devicespecialfile'] = $dev;
-
-				$config['graid5']['vdisk'][] = $swraid;
-				$need_write_config = true;
-			} else {
-				// already exist in config
-			}
-		} else if ($type == "gvinum") {
-			// not supported
-		}
-	}
-	if ($need_write_config) {
+		switch($type):
+			case 'gmirror':
+				if(false === ($index = array_search_ex($dev,$config['gmirror']['vdisk'],'devicespecialfile'))): // new software raid?
+					$num++; // detected
+					$consumers = disks_import_consumers($name,$type,$dev,$disks,$clean_import);
+					$swraid = [];
+					$swraid['uuid'] = uuid();
+					$swraid['name'] = $name;
+					$swraid['balance'] = $diskv['balance'];
+					$swraid['type'] = 1;
+					$swraid['size'] = $diskv['size'];
+					$swraid['device'] = $consumers;
+					$swraid['desc'] = 'Software gmirror RAID 1';
+					$swraid['devicespecialfile'] = $dev;
+					$config['gmirror']['vdisk'][] = $swraid;
+					$need_write_config = true;
+				endif;
+				break;
+			case 'gstripe':
+				if(false === ($index = array_search_ex($dev,$config['gstripe']['vdisk'],'devicespecialfile'))): // new software raid?
+					$num++; // detected
+					$consumers = disks_import_consumers($name,$type,$dev,$disks,$clean_import);
+					$swraid = [];
+					$swraid['uuid'] = uuid();
+					$swraid['name'] = $name;
+					$swraid['type'] = 0;
+					$swraid['size'] = $diskv['size'];
+					$swraid['device'] = $consumers;
+					$swraid['desc'] = 'Software gstripe RAID 0';
+					$swraid['devicespecialfile'] = $dev;
+					$config['gstripe']['vdisk'][] = $swraid;
+					$need_write_config = true;
+				endif;
+				break;
+			case 'gconcat':
+				if(false === ($index = array_search_ex($dev,$config['gconcat']['vdisk'],'devicespecialfile'))): // new software raid?
+					$num++; // detected
+					$consumers = disks_import_consumers($name,$type,$dev,$disks,$clean_import);
+					$swraid = [];
+					$swraid['uuid'] = uuid();
+					$swraid['name'] = $name;
+					$swraid['type'] = 'JBOD';
+					$swraid['size'] = $diskv['size'];
+					$swraid['device'] = $consumers;
+					$swraid['desc'] = 'Software gconcat JBOD';
+					$swraid['devicespecialfile'] = $dev;
+					$config['gconcat']['vdisk'][] = $swraid;
+					$need_write_config = true;
+				endif;
+				break;
+			case 'graid5':
+				if(false === ($index = array_search_ex($dev,$config['graid5']['vdisk'],'devicespecialfile'))): // new software raid?
+					$num++; // detected
+					$consumers = disks_import_consumers($name,$type,$dev,$disks,$clean_import);
+					$swraid = [];
+					$swraid['uuid'] = uuid();
+					$swraid['name'] = $name;
+					$swraid['type'] = 5;
+					$swraid['device'] = $consumers;
+					$swraid['size'] = $diskv['size'];
+					$swraid['desc'] = 'Software graid5 RAID 5';
+					$swraid['devicespecialfile'] = $dev;
+					$config['graid5']['vdisk'][] = $swraid;
+					$need_write_config = true;
+				endif;
+				break;
+			case 'gvinum':
+				break; // not supported
+		endswitch;
+	endforeach;
+	if($need_write_config):
 		write_config();
-	}
-	if ($error != 0)
+	endif;
+	if($error != 0):
 		return -$error;
+	endif;
 	return $num;
 }
 

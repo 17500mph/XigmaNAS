@@ -34,7 +34,13 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+array_make_branch($config,'samba');
 array_make_branch($config,'sambaad','auxparam');
+array_make_branch($config,'interfaces','lan');
+array_make_branch($config,'system','dnsserver');
+array_make_branch($config,'system','ipv6dnsserver');
+array_make_branch($config,'system','ntp');
+
 $errormsg='';
 
 if($config['interfaces']['lan']['ipaddr'] == 'dhcp'):

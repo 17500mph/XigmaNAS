@@ -211,7 +211,7 @@ function display_menu($menuid) {
 		endif;
 		echo "<li>\n";
 		$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-		if (preg_match('/(iphone|android)/i',$agent)):
+		if(preg_match('/(iphone|android)/i',$agent)):
 			echo '<a href="javascript:mopen(\'',$menuid,'\');" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
 		elseif(preg_match('~^http[s]?://~',$link)): // hard link = no spinner
 			echo '<a href="',$link,'" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
