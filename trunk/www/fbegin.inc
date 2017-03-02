@@ -209,11 +209,12 @@ function display_menu($menuid) {
 		if($link == ''):
 			$link = 'index.php';
 		endif;
+		$hard_link_regex = '~^https?://~';
 		echo "<li>\n";
 		$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
 		if(preg_match('/(iphone|android)/i',$agent)):
 			echo '<a href="javascript:mopen(\'',$menuid,'\');" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
-		elseif(preg_match('~^http[s]?://~',$link)): // hard link = no spinner
+		elseif(preg_match($hard_link_regex,$link)): // hard link = no spinner
 			echo '<a href="',$link,'" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
 		else: // local link = spinner
 			echo '<a href="',$link,'" onclick="spinner()" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
@@ -231,7 +232,7 @@ function display_menu($menuid) {
 					if(empty($target)):
 						$target = '_self';
 					endif; 
-					if(preg_match('~^http[s]?://~',$link)): // hard link = no spinner
+					if(preg_match($hard_link_regex,$link)): // hard link = no spinner
 						echo '<a href="',$link,'" target="',$target,'" title="',$menuv['desc'],'">',$menuv['desc'],'</a>',"\n";
 					else: // local link = spinner
 						echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menuv['desc'],'">',$menuv['desc'],'</a>',"\n";
