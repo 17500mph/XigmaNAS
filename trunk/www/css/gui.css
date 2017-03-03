@@ -45,6 +45,7 @@ body {
 	display: -webkit-flex; /* 4 */
 	display: -ms-flex;     /* 5 */
 	display: flex;         /* 6 */
+	display: grid;         /* 8 */
 	-webkit-box-orient: vertical;   /* 1 */
 	-moz-box-orient: vertical;      /* 2 */
 	-ms-box-orient: vertical;       /* 3 */
@@ -52,6 +53,9 @@ body {
 	-ms-flex-direction: column;     /* 5 */
 	flex-direction: column;         /* 6 */
 	width: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header" "content" "footer";
 }
 body, div#gapheader, div#gapfooter {
 	background: #D9DCE1;
@@ -513,6 +517,7 @@ div#headerrlogo .hostname {
 header#g4h {
 	min-width: inherit;
 	width: 100%;
+	grid-area: header;
 	background-color: transparent;
 }
 main#g4m {
@@ -524,11 +529,13 @@ main#g4m {
 	-ms-flex: 1;         /* 5 */
 	flex: 1;             /* 6 */
 	min-height: 1px;
+	grid-area: content;
 	background-color: transparent;
 }
 footer#g4f {
 	min-width: inherit;
 	width: 100%;
+	grid-area: footer;
 	background-color: transparent;
 }
 div#gapheader {
