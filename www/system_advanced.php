@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('System'),gtext('Advanced Setup')];
-
 $pconfig['disableconsolemenu'] = isset($config['system']['disableconsolemenu']);
 $pconfig['disablefm'] = isset($config['system']['disablefm']);
 $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck']);
@@ -43,6 +41,7 @@ $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
 $pconfig['enabletogglemode'] = isset($config['system']['enabletogglemode']);
 $pconfig['skipviewmode'] = isset($config['system']['skipviewmode']);
 $pconfig['shrinkpageheader'] = isset($config['system']['shrinkpageheader']);
+$pconfig['disableextensionmenu'] = isset($config['system']['disableextensionmenu']);
 $pconfig['tune_enable'] = isset($config['system']['tune']);
 $pconfig['zeroconf'] = isset($config['system']['zeroconf']);
 $pconfig['powerd'] = isset($config['system']['powerd']);
@@ -135,6 +134,7 @@ if($_POST):
 		$config['system']['enabletogglemode'] = isset($_POST['enabletogglemode']) ? true : false;
 		$config['system']['skipviewmode'] = isset($_POST['skipviewmode']);
 		$config['system']['shrinkpageheader'] = isset($_POST['shrinkpageheader']);
+		$config['system']['disableextensionmenu'] = isset($_POST['disableextensionmenu']);
 		$config['system']['webgui']['noantilockout'] = isset($_POST['noantilockout']) ? true : false;
 		$config['system']['disablebeep'] = isset($_POST['disablebeep']) ? true : false;
 		$config['system']['tune'] = isset($_POST['tune_enable']) ? true : false;
@@ -241,38 +241,36 @@ function sysctl_tune($mode) {
 		'hw.intr_storm_threshold' => 9000,
 	];
 
-	switch ($mode) {
-		case 0:
-			// Remove system tune MIB's.
-			while (list($name, $value) = each($a_mib)) {
+	switch($mode):
+		case 0: // Remove system tune MIB's.
+			while(list($name, $value) = each($a_mib)):
 				$id = array_search_ex($name, $a_sysctlvar, "name");
-				if (false === $id)
+				if(false === $id):
 					continue;
+				endif;
 				unset($a_sysctlvar[$id]);
-			}
+			endwhile;
 			break;
-
-		case 1:
-			// Add system tune MIB's.
-			while (list($name, $value) = each($a_mib)) {
+		case 1: // Add system tune MIB's.
+			while(list($name, $value) = each($a_mib)):
 				$id = array_search_ex($name, $a_sysctlvar, "name");
-				if (false !== $id)
+				if(false !== $id):
 					continue;
-
+				endif;
 				$param = [];
 				$param['uuid'] = uuid();
 				$param['name'] = $name;
 				$param['value'] = $value;
 				$param['comment'] = gtext("System tuning");
 				$param['enable'] = true;
-
 				$a_sysctlvar[] = $param;
-			}
+			endwhile;
 			break;
-	}
+	endswitch;
 }
+$pgtitle = [gtext('System'),gtext('Advanced Setup')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function sysconsaver_change() {
@@ -304,29 +302,31 @@ function powerd_change() {
 //-->
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="system_advanced.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Advanced");?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
-				<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-				<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
-				<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
-				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="system_advanced.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Advanced");?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
+	</ul></td></tr>
 	<tr>
 		<td class="tabcont">
 			<form action="system_advanced.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+<?php
+				if(!empty($input_errors)):
+					print_input_errors($input_errors);
+				endif;
+				if(!empty($savemsg)):
+					print_info_box($savemsg);
+				endif;
+?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php
+<?php
 					html_titleline(gtext("System Settings"));
 					html_checkbox("zeroconf", gtext("Zeroconf/Bonjour"), !empty($pconfig['zeroconf']) ? true : false, gtext("Enable Zeroconf/Bonjour to advertise services of this device."));
 					html_checkbox("disablefm", gtext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gtext("Disable file manager completely."));
@@ -339,41 +339,45 @@ function powerd_change() {
 					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
 					html_checkbox('skipviewmode',gtext('Skip View Mode'),!empty($pconfig['skipviewmode']) ? true : false,gtext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'));
 					html_checkbox('shrinkpageheader',gtext('Shrink Page Header'),!empty($pconfig['shrinkpageheader']) ? true : false,gtext('Enable this option to reduce the height of the page header to a minimum.'));
+					html_checkbox('disableextensionmenu',gtext('Disable Extension Menu'),!empty($pconfig['disableextensionmenu']) ? true : false,gtext('Disable scanning of folders for existing extension menus.'));
 					html_separator();
-					?>
+?>
 					<tr>
 						<td colspan="2" valign="top" class="listtopic"><?=gtext("Performance Settings");?></td>
 					</tr>
-					<?php html_checkbox("tune_enable", gtext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gtext("Enable tuning of some kernel variables."));?>
-					<?php html_checkbox("powerd", gtext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gtext("Enable the server power control utility."), gtext("The powerd utility monitors the server state and sets various power control options accordingly."), false, "powerd_change()");?>
-					<?php $a_pwmode = ['maximum' => gtext('Maximum (Highest Performance)'), 'hiadaptive' => gtext('Hiadaptive (High Performance)'), 'adaptive' => gtext('Adaptive (Low Power Consumption)'), 'minimum' => gtext('Minimum (Lowest Performance)')]; ?>
-					<?php html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls the power consumption mode."), false);?>
-					<?php $clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
-						$a_freq = [];
-						if (!empty($clocks)) {
-							$a_tmp = preg_split("/\s/", $clocks);
-						foreach ($a_tmp as $val) {
+<?php
+					html_checkbox("tune_enable", gtext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gtext("Enable tuning of some kernel variables."));
+					html_checkbox("powerd", gtext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gtext("Enable the server power control utility."), gtext("The powerd utility monitors the server state and sets various power control options accordingly."), false, "powerd_change()");
+					$a_pwmode = ['maximum' => gtext('Maximum (Highest Performance)'), 'hiadaptive' => gtext('Hiadaptive (High Performance)'), 'adaptive' => gtext('Adaptive (Low Power Consumption)'), 'minimum' => gtext('Minimum (Lowest Performance)')];
+					html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls the power consumption mode."), false);
+					$clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
+					$a_freq = [];
+					if(!empty($clocks)):
+						$a_tmp = preg_split("/\s/", $clocks);
+						foreach ($a_tmp as $val):
 							list($freq,$tmp) = preg_split("/\//", $val);
-							if (!empty($freq))
+							if(!empty($freq)):
 								$a_freq[] = $freq;
-						}
-						}
-					?>
-					<?php html_inputbox("pwmax", gtext("CPU Maximum Frequency"), $pconfig['pwmax'], sprintf("%s %s", gtext("CPU frequencies:"), join(", ", $a_freq)).".<br />".gtext("An empty field is default."), false, 5);?>
-					<?php html_inputbox("pwmin", gtext("CPU Minimum Frequency"), $pconfig['pwmin'], gtext("An empty field is default."), false, 5);?>
-					<?php html_separator();?>
-			    		<?php html_titleline(gtext("Console Settings"));?>
-					<?php html_checkbox("disableconsolemenu", gtext("Console Menu"), !empty($pconfig['disableconsolemenu']) ? true : false, gtext("Disable console menu."), gtext("Changes to this option will take effect after a reboot."));?>
-					<?php html_checkbox("enableserialconsole", gtext("Serial Console"), !empty($pconfig['enableserialconsole']) ? true : false, gtext("Enable serial console."), sprintf("<span class='red'><strong>%s</strong></span><br />%s", gtext("The COM port in BIOS has to be enabled before enabling this option."), gtext("Changes to this option will take effect after a reboot.")));?>
-					<?php html_checkbox("sysconsaver", gtext("Console Screensaver"), !empty($pconfig['sysconsaver']) ? true : false, gtext("Enable console screensaver."), "", false, "sysconsaver_change()");?>
-					<?php html_inputbox("sysconsaverblanktime", gtext("Blank Time"), $pconfig['sysconsaverblanktime'], gtext("Turn the monitor to standby after N seconds."), true, 5);?>
-					<?php html_textarea("motd", gtext("MOTD"), $pconfig['motd'], gtext("Message of the day."), false, 65, 7, false, false);?>
-
+							endif;
+						endforeach;
+					endif;
+					html_inputbox("pwmax", gtext("CPU Maximum Frequency"), $pconfig['pwmax'], sprintf("%s %s", gtext("CPU frequencies:"), join(", ", $a_freq)).".<br />".gtext("An empty field is default."), false, 5);
+					html_inputbox("pwmin", gtext("CPU Minimum Frequency"), $pconfig['pwmin'], gtext("An empty field is default."), false, 5);
+					html_separator();
+					html_titleline(gtext("Console Settings"));
+					html_checkbox("disableconsolemenu", gtext("Console Menu"), !empty($pconfig['disableconsolemenu']) ? true : false, gtext("Disable console menu."), gtext("Changes to this option will take effect after a reboot."));
+					html_checkbox("enableserialconsole", gtext("Serial Console"), !empty($pconfig['enableserialconsole']) ? true : false, gtext("Enable serial console."), sprintf("<span class='red'><strong>%s</strong></span><br />%s", gtext("The COM port in BIOS has to be enabled before enabling this option."), gtext("Changes to this option will take effect after a reboot.")));
+					html_checkbox("sysconsaver", gtext("Console Screensaver"), !empty($pconfig['sysconsaver']) ? true : false, gtext("Enable console screensaver."), "", false, "sysconsaver_change()");
+					html_inputbox("sysconsaverblanktime", gtext("Blank Time"), $pconfig['sysconsaverblanktime'], gtext("Turn the monitor to standby after N seconds."), true, 5);
+					html_textarea("motd", gtext("MOTD"), $pconfig['motd'], gtext("Message of the day."), false, 65, 7, false, false);
+?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include 'formend.inc';?>
+<?php
+				include 'formend.inc';
+?>
 			</form>
 		</td>
 	</tr>
@@ -384,4 +388,6 @@ sysconsaver_change();
 powerd_change();
 //-->
 </script>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>

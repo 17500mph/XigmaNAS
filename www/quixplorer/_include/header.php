@@ -212,6 +212,59 @@ $menu['help']['menuitem'][] = ['type' => 'separator','visible' => TRUE];
 $menu['help']['menuitem'][] = ['desc' => gtext('Release Notes'),'link' => '../changes.php','visible' => TRUE];
 $menu['help']['menuitem'][] = ['desc' => gtext('License & Credits'),'link' => '../license.php','visible' => TRUE];
 $menu['help']['menuitem'][] = ['desc' => gtext('Donate'),'link' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SAW6UG4WBJVGG&lc=US&item_name=NAS4Free&item_number=Donation%20to%20NAS4Free&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted','visible' => TRUE,'target' => '_blank'];
+function make_menu_extensions() {
+	global $g;
+	global $config;
+	global $menu;
+	
+	$isAdminSession = Session::isAdmin();
+	$mi = &array_make_branch($menu,'extensions','menuitem');
+	$m = &$menu['extensions'];
+	$m['desc'] = gtext('Extensions');
+	$m['visible'] = false;
+	$m['link'] = '../index.php';
+	if(!(isset($config['system']) && is_array($config['system']) && isset($config['system']['disableextensionmenu']))): // continue when view extension menu is allowed
+		// Begin extension section.
+		if($isAdminSession): // only admins
+			$dir_path = $g['www_path'] . '/ext/'; // calculate the path to the extension folder
+			if(is_dir($dir_path)): // does it exist?
+				if(false !== ($dir_handle = @opendir($dir_path))): // folder exists, open it
+					while(false !== ($file_found_name = readdir($dir_handle))): // scan through each name
+						$file_found_full_name = $dir_path . $file_found_name; // calculate full path of the name
+						if(($file_found_name === '.') || ($file_found_name === '..') || ('dir' !== filetype($file_found_full_name))): // ignore files and special folder
+							continue;
+						endif;
+						$menu_file_full_name = $file_found_full_name . '/menu.inc'; // calculate the expected menu name
+						$previous_setting = libxml_use_internal_errors(true); // suppress exeptions
+						libxml_clear_errors();
+						$dom = new DOMDocument(); // import menu into DOM object, let it do it's job
+						if(false !== ($dom->loadHTMLFile($menu_file_full_name,LIBXML_NOERROR || LIBXML_NOWARNING || LIBXML_HTML_NOIMPLIED || LIBXML_HTML_NODEFDTD))):
+							$node_list = $dom->getElementsByTagName('a'); // get <a> elements
+							foreach($node_list as $node_item):
+								$link = trim($node_item->getAttribute('href')); // extract attribute href
+								$description = $node_item->nodeValue; // get display value
+								if(!empty($link)): // add target attribute when link looks like a hard link
+									if(preg_match('~^[a-z]+://~',$link)): // hard link?
+										$mi[] = ['desc' => htmlspecialchars($description),'link' => $link,'visible' => true,'target' => '_blank'];
+									else:
+										$mi[] = ['desc' => htmlspecialchars($description),'link' => '../' . $link,'visible' => true];
+									endif;
+									$m['visible'] = true; // extension menu found, make menu head visible 
+								endif;
+							endforeach;
+						endif;
+						libxml_clear_errors();
+						libxml_use_internal_errors($previous_setting);
+					endwhile;
+					closedir($dir_handle);
+				endif;
+			endif;
+		endif;
+		// End extension section.
+	endif;
+	unset($m);
+	unset($mi);
+}
 function display_menu($menuid) {
 	global $menu;
 
@@ -221,7 +274,7 @@ function display_menu($menuid) {
 			$link = 'index.php';
 		endif;
 		echo "<li>\n";
-		$hard_link_regex = '~^https?://~';
+		$hard_link_regex = '~^[a-z]+://~';
 		$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
 		if (preg_match('/(iphone|android)/i',$agent)):
 			echo '<a href="javascript:mopen(\'',$menuid,'\');" onmouseout="mclosetime()">',$menu[$menuid]['desc'],"</a>\n";
@@ -257,28 +310,13 @@ function display_menu($menuid) {
 		echo "</li>\n";
 	endif;
 }
-function include_ext_menu() {
-	global $g;
-	$dh = @opendir("{$g['www_path']}/ext");
-	if ($dh) {
-		while (($extd = readdir($dh)) !== false) {
-			if (($extd === ".") || ($extd === ".."))
-				continue;
-			ob_start();
-			@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
-			$tmp = trim(ob_get_contents());
-			ob_end_clean();
-			$tmp = preg_replace('/href=\"([^\/\.])/', 'href="../\1', $tmp);
-			echo "$tmp\n";
-		}
-		closedir($dh);
-	}
-}
 /* QUIXPLORER CODE */
 // header for html-page
-function show_header($title, $additional_header_content = null)
-{
-    global $site_name, $g, $config;
+function show_header($title, $additional_header_content = null) {
+	global $g;
+	global $config;
+    global $site_name;
+	
 	$pgtitle = [gtext('Tools'), gtext('File Manager')];
 
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
@@ -335,31 +373,18 @@ function show_header($title, $additional_header_content = null)
 	endif;
 	echo "<div id=\"headernavbar\">\n";
 	echo "<ul id=\"navbarmenu\">\n";
-	echo display_menu("system");
-	echo display_menu("network");
-	echo display_menu("disks");
-	echo display_menu("access");
-	echo display_menu("services");
-	echo display_menu("vm");
-	echo display_menu("status");
-	echo display_menu("diagnostics");
-	echo display_menu("tools");
-	//-- Begin extension section --//
-	if (Session::isAdmin() && isset($g) && isset($g['www_path']) && is_dir("{$g['www_path']}/ext")):
-		echo "<li>\n";
-			$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-			if ((preg_match("/iPhone/i", $agent)) || (preg_match("/android/i", $agent))) {
-				echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext("Extensions")."</a>\n";
-			} else {
-				echo "<a href=\"../index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext("Extensions")."</a>\n";
-			}
-			echo "<div id=\"extensions\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
-			include_ext_menu();
-			echo "</div>\n";
-		echo "</li>\n";
-	endif;
-	//-- End extension section --//
-	echo display_menu("help");
+	display_menu('system');
+	display_menu('network');
+	display_menu('disks');
+	display_menu('access');
+	display_menu('services');
+	display_menu('vm');
+	display_menu('status');
+	display_menu('diagnostics');
+	display_menu('tools');
+	make_menu_extensions();
+	display_menu('extensions');
+	display_menu('help');
 	echo "</ul>\n";
 	echo "<div style=\"clear:both\"></div>\n";
 	echo "</div>\n";
