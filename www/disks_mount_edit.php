@@ -57,7 +57,7 @@ function get_all_hast() {
 		$file = "/dev/hast/$name";
 		if (file_exists($file)) {
 			$diskinfo = disks_get_diskinfo($file);
-			$size = format_bytes($diskinfo['mediasize_bytes']);
+			$size = format_bytes($diskinfo['mediasize_bytes'],true);
 		} else {
 			$size = "(secondary)";
 		}
