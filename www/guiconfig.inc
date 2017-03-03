@@ -327,19 +327,35 @@ function print_config_change_box() {
 	echo "</div>";
 }
 
-function format_bytes($bytes) {
-	if($bytes >= 1125899906842624):
-		return sprintf("%.2f PB",$bytes/1125899906842624);
-	elseif($bytes >= 1099511627776):
-		return sprintf("%.2f TB",$bytes/1099511627776);
-	elseif($bytes >= 1073741824):
-		return sprintf("%.2f GB",$bytes/1073741824);
-	elseif($bytes >= 1048576):
-		return sprintf("%.2f MB",$bytes/1048576);
-	elseif($bytes >= 1024):
-		return sprintf("%.0f KB",$bytes/1024);
-	else:
-		return sprintf("%d bytes",$bytes);
+function format_bytes($bytes,bool $b1k = false) {
+	if($b1k): // si, 1000
+		if($bytes >= 1000000000000000):
+			return sprintf("%.2fPB",$bytes/1000000000000000);
+		elseif($bytes >= 1000000000000):
+			return sprintf("%.2fTB",$bytes/1000000000000);
+		elseif($bytes >= 1000000000):
+			return sprintf("%.2fGB",$bytes/1000000000);
+		elseif($bytes >= 1000000):
+			return sprintf("%.2fMB",$bytes/1000000);
+		elseif($bytes >= 1000):
+			return sprintf("%.2fkB",$bytes / 1000);
+		else:
+			return sprintf("%dB",$bytes);
+		endif;
+	else: // non-si, 1024
+		if($bytes >= 1125899906842624):
+			return sprintf("%.2fPiB",$bytes / 1125899906842624);
+		elseif($bytes >= 1099511627776):
+			return sprintf("%.2fTiB",$bytes / 1099511627776);
+		elseif($bytes >= 1073741824):
+			return sprintf("%.2fGiB",$bytes / 1073741824);
+		elseif($bytes >= 1048576):
+			return sprintf("%.2fMiB",$bytes / 1048576);
+		elseif($bytes >= 1024):
+			return sprintf("%.2fKiB",$bytes / 1024);
+		else:
+			return sprintf("%dB",$bytes);
+		endif;
 	endif;
 }
 

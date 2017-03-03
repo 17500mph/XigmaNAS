@@ -132,13 +132,7 @@ function get_all_hast($a_extent,$uuid) {
 		$file = "/dev/hast/$name";
 		if (file_exists($file)) {
 			$diskinfo = disks_get_diskinfo($file);
-			$size = $diskinfo[mediasize_mbytes];
-			if ($size > 1024) {
-				$size = (int) ($size / 1024);
-				$size .= "GB";
-			} else {
-				$size .= "MB";
-			}
+			$size = format_bytes($diskinfo['mediasize_bytes'],true);
 		} else {
 			$size = "(secondary)";
 		}

@@ -112,7 +112,7 @@ if ($_POST) {
 			$geli['device'] = $pconfig['devicespecialfile'];
 			$geli['devicespecialfile'] = "{$geli['device']}.eli";
 			$geli['desc'] = "Encrypted disk";
-			$geli['size'] = "{$diskinfo['mediasize_mbytes']}MB";
+			$geli['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			$geli['aalgo'] = $pconfig['aalgo'];
 			$geli['ealgo'] = $pconfig['ealgo'];
 
@@ -192,7 +192,11 @@ function ealgo_change() {
 								<?php if (0 == strcmp($diskv['size'], "NA")) continue;?>
 								<?php if (1 == disks_exists($diskv['devicespecialfile'])) continue;?>
 								<option value="<?=$i;?>" <?php if ($pconfig['disk'] == $i) echo "selected=\"selected\"";?>>
-								<?php $diskinfo = disks_get_diskinfo($diskv['devicespecialfile']); echo htmlspecialchars("{$diskv['name']}: {$diskinfo['mediasize_mbytes']}MB ({$diskv['desc']})");?>
+<?php
+								$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
+								$helpinghand = format_bytes($diskinfo['mediasize_bytes'],true);
+								echo htmlspecialchars("{$diskv['name']}: {$helpinghand} ({$diskv['desc']})");
+?>
 								</option>
 								<?php endforeach;?>
 			    		</select>

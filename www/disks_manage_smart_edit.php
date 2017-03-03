@@ -186,7 +186,11 @@ function enable_change(enable_change) {
 				<?php if (1 == disks_exists($diskv['devicespecialfile'])) continue;?>
 				<?php if (!isset($diskv['smart'])) continue;?>
 				<option value="<?=$diskv['devicespecialfile'];?>" <?php if ($diskv['devicespecialfile'] === $pconfig['devicespecialfile']) echo "selected=\"selected\"";?>>
-				<?php $diskinfo = disks_get_diskinfo($diskv['devicespecialfile']); echo htmlspecialchars("{$diskv['name']}: {$diskinfo['mediasize_mbytes']}MB ({$diskv['desc']})");?>
+<?php
+				$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
+				$helpinghand = format_bytes($diskinfo['mediasize_bytes'],true);
+				echo htmlspecialchars("{$diskv['name']}: {$helpinghand} ({$diskv['desc']})");
+?>
 				</option>
 				<?php endforeach;?>
 			</select><br />
