@@ -683,7 +683,7 @@ function get_gvinum_disks_list() {
 		$disklist[$diskname]['state'] = $aline[3];
 		/* Get diskinfo to get disk size */
 		$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-		$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+		$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 	endforeach;
 	return $disklist;
 }
@@ -719,7 +719,7 @@ function get_gmirror_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -776,7 +776,7 @@ function get_gconcat_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -824,7 +824,7 @@ function get_gstripe_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -872,7 +872,7 @@ function get_graid5_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -921,7 +921,7 @@ function get_hast_disks_list() {
 			$disklist[$diskname]['role'] = $role;
 			if($role == 'primary'):
 				$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-				$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+				$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			else:
 				$disklist[$diskname]['size'] = 'N/A';
 			endif;
@@ -1018,7 +1018,7 @@ function parse_camcontrol_info($devtype) {
 						init_device_attributes($devlist[$device_name]);
 						// Get diskinfo to get disk size
 						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
-						$devlist[$device_name]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+						$devlist[$device_name]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 						$devlist[$device_name]['controller'] = $controller[0];
 						$devlist[$device_name]['controller_id'] = $controller[1];
 						$devlist[$device_name]['target_id'] = $target_id;
@@ -1048,7 +1048,7 @@ function parse_camcontrol_info($devtype) {
 						init_device_attributes($devlist[$device_name]);
 						// Get diskinfo to get disk size
 						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
-						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_mbytes']) ? $diskinfo['mediasize_mbytes'] . 'MB' : gtext('Unknown');
+						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_bytes']) ? format_bytes($diskinfo['mediasize_bytes'],true) : gtext('Unknown');
 						$devlist[$device_name]['controller'] = $controller[0];
 						$devlist[$device_name]['controller_id'] = $controller[1];
 						$devlist[$device_name]['target_id'] = $target_id;
@@ -1505,7 +1505,7 @@ function get_iscsi_disks_list() {
 			$disklist[$diskname]['desc'] = $match[1];
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			/* Get serial number */
 			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
@@ -1588,7 +1588,7 @@ function get_hraid_disks_list() {
 			endif;
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = $diskinfo['mediasize_mbytes'] . 'MB';
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
 			/* Get serial number */
 			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
