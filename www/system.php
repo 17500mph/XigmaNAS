@@ -269,6 +269,7 @@ if($_POST) {
 		// Reload page if language has been changed, otherwise page is displayed
 		// in previous selected language.
 		if($oldlanguage !== $config['system']['language']):
+			$_SESSION['g']['headermenu'] = [];
 			header("Location: system.php");
 			exit;
 		endif;
