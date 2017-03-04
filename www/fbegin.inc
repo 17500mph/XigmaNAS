@@ -341,7 +341,7 @@ echo '<!DOCTYPE html>',"\n"
 <div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
 <header id="g4h">
 <?php
-	if(!(isset($config['system']) && is_array($config['system']) && isset($config['system']['shrinkpageheader']))):
+	if(!$_SESSION['g']['shrinkpageheader']):
 ?>
 	<div id="header">
 		<div id="headerrlogo">

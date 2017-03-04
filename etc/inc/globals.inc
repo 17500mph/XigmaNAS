@@ -110,7 +110,7 @@ $g_languages = [
 ];
 //	supported filesystems
 $g_filesystems = [
-	'' => 'Unformated',
+	'' => gtext('Unformatted'),
 	'ufs' => gtext('UFS with Soft Updates'),
 	'ufs_no_su' => 'UFS',
 	'ufsgpt' => gtext('UFS (GPT and Soft Updates)'),
