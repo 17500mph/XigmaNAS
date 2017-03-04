@@ -239,7 +239,8 @@ function make_menu_extensions() {
 	endif;
 	if(false !== ($dir_handle = @opendir($dir_path))): // folder exists, open it
 		$hard_link_regex = '~^[a-z]+://~';
-		$menu_items = &array_make_branch($menu,'extensions','menuitem');
+		$menu_name = 'extensions';
+		$menu_items = &array_make_branch($menu,$menu_name,'menuitem');
 		while(false !== ($file_found_name = readdir($dir_handle))): // scan through each name
 			$file_found_full_name = $dir_path . $file_found_name; // calculate full path of the name
 			if(($file_found_name === '.') || ($file_found_name === '..') || ('dir' !== filetype($file_found_full_name))): // ignore files and special folder
@@ -255,12 +256,13 @@ function make_menu_extensions() {
 					$link = trim($node_item->getAttribute('href')); // extract attribute href
 					$description = $node_item->nodeValue; // get display value
 					if(!empty($link)): // add target attribute when link looks like a hard link
+						write_log('Menu found for: ' . $link);
 						if(preg_match($hard_link_regex,$link)): // hard link?
 							$menu_items[] = ['desc' => htmlspecialchars($description),'link' => $link,'visible' => true,'target' => '_blank'];
 						else:
 							$menu_items[] = ['desc' => htmlspecialchars($description),'link' => $link,'visible' => true];
 						endif;
-						$m['visible'] = true; // extension menu found, make menu head visible 
+						$menu[$menu_name]['visible'] = true; // extension menu found, make menu head visible 
 					endif;
 				endforeach;
 			endif;
