@@ -39,9 +39,9 @@ function genhtmltitle(array $title = []) {
 	return htmlspecialchars(system_get_hostname()) . (empty($title) ? '' : ' - ' . gentitle($title));
 }
 $isAdminSession = Session::isAdmin();
-//	headermenu should be reset / reread when
-//	- language changes
-//	- isAdmin() changes
+//	headermenu is reset / reread when
+//	- language is changed (system.php)
+//	- session is initiated via Session::_init()
 if(empty($_SESSION['g']['headermenu'])):
 	$menu = [];
 	//	system
@@ -142,11 +142,7 @@ if(empty($_SESSION['g']['headermenu'])):
 		$menu[$menu_name]['desc'] = gtext('Virtualization');
 		$menu[$menu_name]['visible'] = $isAdminSession;
 		$menu[$menu_name]['link'] = '';
-//		if('dom0' !== $g['arch']):
-			$menu_items[] = ['desc' => gtext('VirtualBox'),'link' => 'vm_vbox.php','visible' => $isAdminSession];
-//		else:
-//			$menu_items[] = ['desc' => gtext('Virtual Machine'),'link' => 'vm_xen.php','visible' => true];
-//		endif;
+		$menu_items[] = ['desc' => gtext('VirtualBox'),'link' => 'vm_vbox.php','visible' => $isAdminSession];
 	endif;
 	unset($menu_items);
 	//	access
