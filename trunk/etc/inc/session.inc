@@ -41,7 +41,8 @@ class Session {
 		$_SESSION['authtoken'] = password_hash(session_id(),PASSWORD_DEFAULT);
 		$_SESSION['ts'] = time();
 		$_SESSION['g'] = [
-			'shrinkpageheader' => false
+			'shrinkpageheader' => false,
+			'headermenu' => []
 		];
 	}
 	/**
