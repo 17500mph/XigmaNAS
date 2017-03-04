@@ -37,11 +37,13 @@ class Session {
 	 */
 	private static function _init() {
 		session_regenerate_id(true);
-		$_SESSION['login'] = TRUE;
-		$_SESSION['authtoken'] = password_hash(session_id(), PASSWORD_DEFAULT);
+		$_SESSION['login'] = true;
+		$_SESSION['authtoken'] = password_hash(session_id(),PASSWORD_DEFAULT);
 		$_SESSION['ts'] = time();
+		$_SESSION['g'] = [
+			'shrinkpageheader' => false
+		];
 	}
-
 	/**
 	 * Start session.
 	 */
@@ -49,7 +51,6 @@ class Session {
 		session_start();
 		$_SESSION['at'] = time();
 	}
-
 	/**
 	 * Destroy session.
 	 */
@@ -57,58 +58,55 @@ class Session {
 		session_start();
 		session_destroy();
 	}
-
 	/**
 	 * Initialize administrator.
 	 */
 	public static function initAdmin() {
 		Session::_init();
-		$_SESSION['admin'] = TRUE;
+		$_SESSION['admin'] = true;
 	}
-
 	/**
 	 * Initialize user.
 	 * @param uid The user ID.
 	 * @param uname The user name.
 	 */
-	public static function initUser($uid, $uname, $admin = FALSE) {
+	public static function initUser($uid, $uname, $admin = false) {
 		Session::_init();
 		$_SESSION['uid'] = $uid;
 		$_SESSION['uname'] = $uname;
 		$_SESSION['admin'] = $admin;
 	}
-
 	/**
 	 * Has the current user administration permissions?
 	 * @return TRUE if the current user has administration permissions,
 	 * otherwise false.
 	 */
 	public static function isAdmin() {
-		if (!isset($_SESSION['admin']) || !$_SESSION['admin'])
-			return FALSE;
-		return TRUE;
+		if(!isset($_SESSION['admin']) || !$_SESSION['admin']):
+			return false;
+		endif;
+		return true;
 	}
-
 	/**
 	 * Is the login flag set?
 	 */
 	public static function isLogin() {
-		if (!isset($_SESSION['login']) || !$_SESSION['login'])
-			return FALSE;
+		if(!isset($_SESSION['login']) || !$_SESSION['login']):
+			return false;
+		endif;
 	 	return $_SESSION['login'];
 	}
-
 	/**
 	 * Validate the given token.
 	 * @param authtoken The token to be validated.
 	 * @return TRUE if the token is valid, otherwise FALSE.
 	 */
 	public static function isValidAuthToken($authtoken) {
-		if (!isset($_SESSION['authtoken']) || !$_SESSION['authtoken'])
-			return FALSE;
+		if(!isset($_SESSION['authtoken']) || !$_SESSION['authtoken']):
+			return false;
+		endif;
 		return ($authtoken === $_SESSION['authtoken']);
 	}
-
 	/**
 	 * Get the current authentication token.
 	 * @return The current authentication token.
@@ -116,24 +114,24 @@ class Session {
 	public static function getAuthToken() {
 		return $_SESSION['authtoken'];
 	}
-
 	/**
 	 * Get the current user name.
 	 * @return Returns the current user name, otherwise FALSE.
 	 */
 	public static function getUserName() {
-		if (!isset($_SESSION['uname']) || !$_SESSION['uname'])
-			return FALSE;
+		if(!isset($_SESSION['uname']) || !$_SESSION['uname']):
+			return false;
+		endif;
 	 	return $_SESSION['uname'];
 	}
-
 	/**
 	 * Get the current user ID.
 	 * @return Returns the current user ID, otherwise FALSE.
 	 */
 	public static function getUserId() {
-		if (!isset($_SESSION['uid']) || !$_SESSION['uid'])
-			return FALSE;
+		if(!isset($_SESSION['uid']) || !$_SESSION['uid']):
+			return false;
+		endif;
 	 	return $_SESSION['uid'];
 	}
 }

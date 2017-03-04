@@ -359,7 +359,7 @@ function show_header($title, $additional_header_content = null) {
 	echo '<div id="spinner_main"></div>',"\n";
 	echo '<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>',"\n";
 	echo '<header id="g4h">',"\n";
-	if(!(isset($config['system']) && is_array($config['system']) && isset($config['system']['shrinkpageheader']))):
+	if(!$_SESSION['g']['shrinkpageheader']):
 		echo '<div id="header">',"\n";
 		echo '<div id="headerlogo">',"\n";
 		echo '<a title="www.',get_product_url(),'" href="https://www.',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";

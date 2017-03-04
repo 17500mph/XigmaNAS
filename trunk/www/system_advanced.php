@@ -40,7 +40,6 @@ $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
 $pconfig['enabletogglemode'] = isset($config['system']['enabletogglemode']);
 $pconfig['skipviewmode'] = isset($config['system']['skipviewmode']);
-$pconfig['shrinkpageheader'] = isset($config['system']['shrinkpageheader']);
 $pconfig['disableextensionmenu'] = isset($config['system']['disableextensionmenu']);
 $pconfig['tune_enable'] = isset($config['system']['tune']);
 $pconfig['zeroconf'] = isset($config['system']['zeroconf']);
@@ -133,7 +132,7 @@ if($_POST):
 		$config['system']['disablefirmwarecheck'] = isset($_POST['disablefirmwarecheck']) ? true : false;
 		$config['system']['enabletogglemode'] = isset($_POST['enabletogglemode']) ? true : false;
 		$config['system']['skipviewmode'] = isset($_POST['skipviewmode']);
-		$config['system']['shrinkpageheader'] = isset($_POST['shrinkpageheader']);
+		$_SESSION['g']['shrinkpageheader'] = !empty(isset($_POST['shrinkpageheader']));
 		$config['system']['disableextensionmenu'] = isset($_POST['disableextensionmenu']);
 		$config['system']['webgui']['noantilockout'] = isset($_POST['noantilockout']) ? true : false;
 		$config['system']['disablebeep'] = isset($_POST['disablebeep']) ? true : false;
@@ -176,15 +175,15 @@ if($_POST):
 		$retval = 0;
 		if(!file_exists($d_sysrebootreqd_path)):
 			config_lock();
-			$retval |= rc_exec_service("rcconf");
-			$retval |= rc_update_service("powerd");
-			$retval |= rc_update_service("mdnsresponder");
-			$retval |= rc_exec_service("motd");
+			$retval |= rc_exec_service('rcconf');
+			$retval |= rc_update_service('powerd');
+			$retval |= rc_update_service('mdnsresponder');
+			$retval |= rc_exec_service('motd');
 			if (isset($config['system']['tune'])):
-				$retval |= rc_update_service("sysctl");
+				$retval |= rc_update_service('sysctl');
 			endif;
-			$retval |= rc_update_service("syscons");
-			$retval |= rc_update_service("fmperm");
+			$retval |= rc_update_service('syscons');
+			$retval |= rc_update_service('fmperm');
 			config_unlock();
 		endif;
 		$savemsg = get_std_save_message($retval);
@@ -244,7 +243,7 @@ function sysctl_tune($mode) {
 	switch($mode):
 		case 0: // Remove system tune MIB's.
 			while(list($name, $value) = each($a_mib)):
-				$id = array_search_ex($name, $a_sysctlvar, "name");
+				$id = array_search_ex($name,$a_sysctlvar,'name');
 				if(false === $id):
 					continue;
 				endif;
@@ -253,7 +252,7 @@ function sysctl_tune($mode) {
 			break;
 		case 1: // Add system tune MIB's.
 			while(list($name, $value) = each($a_mib)):
-				$id = array_search_ex($name, $a_sysctlvar, "name");
+				$id = array_search_ex($name,$a_sysctlvar,'name');
 				if(false !== $id):
 					continue;
 				endif;
@@ -261,7 +260,7 @@ function sysctl_tune($mode) {
 				$param['uuid'] = uuid();
 				$param['name'] = $name;
 				$param['value'] = $value;
-				$param['comment'] = gtext("System tuning");
+				$param['comment'] = gtext('System tuning');
 				$param['enable'] = true;
 				$a_sysctlvar[] = $param;
 			endwhile;
@@ -338,7 +337,7 @@ function powerd_change() {
 					html_checkbox("disablebeep", gtext("Internal Speaker"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdowns."));
 					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
 					html_checkbox('skipviewmode',gtext('Skip View Mode'),!empty($pconfig['skipviewmode']) ? true : false,gtext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'));
-					html_checkbox('shrinkpageheader',gtext('Shrink Page Header'),!empty($pconfig['shrinkpageheader']) ? true : false,gtext('Enable this option to reduce the height of the page header to a minimum.'));
+					html_checkbox('shrinkpageheader',gtext('Shrink Page Header'),$_SESSION['g']['shrinkpageheader'],gtext('Enable this option to reduce the height of the page header to a minimum.'));
 					html_checkbox('disableextensionmenu',gtext('Disable Extension Menu'),!empty($pconfig['disableextensionmenu']) ? true : false,gtext('Disable scanning of folders for existing extension menus.'));
 					html_separator();
 ?>
