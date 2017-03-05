@@ -34,19 +34,31 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-array_make_branch($config,'ftpd');
-if(isset($config['ftpd']['enable'])):
-	unset($rawdata);
-	exec('/usr/local/bin/ftpwho -v',$rawdata);
+function diag_infos_ftpd_ajax() {
+	$cmd = '/usr/local/bin/ftpwho -v';
+	mwexec2($cmd,$rawdata);
 	$rawdata = array_slice($rawdata,1);
-	$output = htmlspecialchars(implode("\n",$rawdata));
-else:
-	$output = gtext('FTP service is disabled.');
+	return implode("\n",$rawdata);
+}
+if(is_ajax()):
+	$status['area_refresh'] = diag_infos_ftpd_ajax();
+	render_ajax($status);
 endif;
-
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('FTP')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	var gui = new GUI;
+	gui.recall(5000, 5000, 'diag_infos_ftpd.php', null, function(data) {
+		if ($('#area_refresh').length > 0) {
+			$('#area_refresh').text(data.area_refresh);
+		}
+	});
+});
+//]]>
+</script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
@@ -71,20 +83,54 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('FTP')];
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php 
+if (!isset($config['ftpd']['enable'])):
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Connected FTP Users & Status'));?>
+<?php 
+			html_titleline2(gtext('FTP User Information & Status'));
+?>
 		</thead>
-		<tbody>
-			<tr>
-				<td class="celltag"><?=gtext('Information');?></td>
-				<td class="celldata"><pre><?=$output;?></pre></td>
-			</tr>
-		</tbody>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+<?php
+			echo '<pre>';
+			echo gtext('FTP service is disabled.');
+			echo '</pre>';
+?>
+			</td>
+		</tr></tbody>
 	</table>
+<?php 
+else:
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('FTP User Information & Status'));
+?>
+		</thead>
+		<tbody><tr>
+			<td class="celltag"><?=gtext('Information');?></td>
+			<td class="celldata">
+				<pre><span id="area_refresh"><?=diag_infos_ftpd_ajax();?></span></pre>
+			</td>
+		</tr></tbody>
+	</table>
+<?php
+endif;
+?>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
