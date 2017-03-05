@@ -955,9 +955,9 @@ function make_headermenu_extensions(array &$menu) {
 					$description = $node_item->nodeValue; // get display value
 					if(!empty($link)): // add target attribute when link looks like a hard link
 						if(preg_match($hard_link_regex,$link)): // hard link?
-							$menu_items[] = ['description' => htmlspecialchars($description),'link' => $link,'visible' => true,'target' => '_blank'];
+							$menu_items[] = ['type' => 'external','visible' => true,'description' => htmlspecialchars($description),'link' => $link];
 						else:
-							$menu_items[] = ['description' => htmlspecialchars($description),'link' => $link,'visible' => true];
+							$menu_items[] = ['type' => 'internal','visible' => true,'description' => htmlspecialchars($description),'link' => $link];
 						endif;
 						$menu[$menu_name]['visible'] = true; // extension menu found, make menu head visible 
 					endif;
