@@ -778,7 +778,7 @@ function get_headermenu(): array {
 		endif;
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Backup/Restore'),'link' => '/system_backup.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Factory Defaults'),'link' => '/system_defaults.php'];
-		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession];
+		$menu_items[] = ['type' => 'separator','visible' => $isAdminSession,'description' => '','link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Reboot'),'link' => '/reboot.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Shutdown'),'link' => '/shutdown.php'];
 		$menu_items[] = ['type' => 'separator','visible' => true,'description' => '','link' => '/index.php'];
@@ -798,7 +798,7 @@ function get_headermenu(): array {
 		$menu_items[] = ['type' => 'separator','visible' => $isAdminSession,'description' => '','link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Hosts'),'link' => '/system_hosts.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Static Routes'),'link' => '/system_routes.php'];
-		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => '','link' => '/index.php'];
+		$menu_items[] = ['type' => 'separator','visible' => $isAdminSession,'description' => '','link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Proxy'),'link' => '/system_proxy.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Firewall'),'link' => '/system_firewall.php'];
 		unset($menu_items);
@@ -925,7 +925,8 @@ function make_headermenu_extensions(array &$menu) {
 	global $g;
 	global $config;
 	
-	if(!Session::isAdmin()): // only admins allowed
+	$isAdminSession = Session::isAdmin();
+	if(!$isAdminSession): // only admins allowed
 		return;
 	endif;
 	if(isset($config['system']) && is_array($config['system']) && isset($config['system']['disableextensionmenu'])): // do nothing when view extension is disabled
@@ -939,6 +940,7 @@ function make_headermenu_extensions(array &$menu) {
 		$hard_link_regex = '~^[a-z]+://~';
 		$menu_name = 'extensions';
 		$menu_items = &$menu[$menu_name]['menuitem'];
+		$menu_items = []; // wipe menuitems, just to be safe
 		while(false !== ($file_found_name = readdir($dir_handle))): // scan through each name
 			$file_found_full_name = $dir_path . $file_found_name; // calculate full path of the name
 			if(($file_found_name === '.') || ($file_found_name === '..') || ('dir' !== filetype($file_found_full_name))): // ignore files and special folder
@@ -955,11 +957,11 @@ function make_headermenu_extensions(array &$menu) {
 					$description = $node_item->nodeValue; // get display value
 					if(!empty($link)): // add target attribute when link looks like a hard link
 						if(preg_match($hard_link_regex,$link)): // hard link?
-							$menu_items[] = ['type' => 'external','visible' => true,'description' => htmlspecialchars($description),'link' => $link];
+							$menu_items[] = ['type' => 'external','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
 						else:
-							$menu_items[] = ['type' => 'internal','visible' => true,'description' => htmlspecialchars($description),'link' => $link];
+							$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
 						endif;
-						$menu[$menu_name]['visible'] = true; // extension menu found, make menu head visible 
+						$menu[$menu_name]['visible'] = $isAdminSession; // extension menu found, make menu head visible 
 					endif;
 				endforeach;
 			endif;
@@ -971,7 +973,7 @@ function make_headermenu_extensions(array &$menu) {
 	endif;
 }
 function display_headermenu() {
-	$menu = get_headermenu();
+	$menu = &get_headermenu();
 	make_headermenu_extensions($menu); // function cares about access rights itself
 	$menu_list = ['system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];
 	foreach($menu_list as $menuid):
