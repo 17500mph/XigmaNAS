@@ -890,8 +890,6 @@ function get_headermenu(): array {
 		//	extensions
 		$menu_name = 'extensions';
 		$menu[$menu_name] = ['type' => 'internal','visible' => false,'description' => gtext('Extensions'),'link' => '/index.php','menuitem' => []];
-//		$menu_items = &$menu[$menu_name]['menuitem'];
-//		unset($menu_items);
 		//	diagnostics
 		$menu_name = 'diagnostics';
 		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Diagnostics'),'link' => '/index.php','menuitem' => []];
@@ -973,16 +971,20 @@ function make_headermenu_extensions(array &$menu) {
 	endif;
 }
 function display_headermenu() {
-	$menu = &get_headermenu();
+	$menu = get_headermenu();
 	make_headermenu_extensions($menu); // function cares about access rights itself
-	$menu_list = ['system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];
+	$menu_list = ['system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
+	if(preg_match('/(iphone|android)/i',$_SERVER['HTTP_USER_AGENT'])): // desktop/mobile detection
+		$notadesktop = true;
+	else:
+		$notadesktop = false;
+	endif;
 	foreach($menu_list as $menuid):
 		if($menu[$menuid]['visible']): // render menu when visible
 			$link = $menu[$menuid]['link'];
 			$hard_link_regex = '~^[a-z]+://~';
 			echo "<li>\n";
-			$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-			if(preg_match('/(iphone|android)/i',$agent)):
+			if($notadesktop):
 				echo '<a href="javascript:mopen(\'',$menuid,'\');" onmouseout="mclosetime()">',$menu[$menuid]['description'],"</a>\n";
 			elseif(preg_match($hard_link_regex,$link)): // hard link = no spinner
 				echo '<a href="',$link,'" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['description'],"</a>\n";
