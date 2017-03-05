@@ -69,13 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <?php header("Content-Type: text/html; charset=" . system_get_language_codeset());?>
 <?php
-function gentitle(array $title = []) {
-	$navlevelsep = htmlspecialchars(' > '); // Navigation level separator string.
-	return implode($navlevelsep, $title);
-}
-function genhtmltitle(array $title = []) {
-	return htmlspecialchars(system_get_hostname()) . (empty($title) ? '' : ' - ' . gentitle($title));
-}
 // Menu items.
 // Info and Manual
 $menu['info']['desc'] = gtext('Information & Manuals');

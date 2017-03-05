@@ -121,11 +121,16 @@ if($_POST):
 		    || (!isset($config['system']['disablefm']) && (isset($_POST['disablefm'])))):
 			// need restarting server to export/clear .htusers.php by fmperm.
 			touch($d_sysrebootreqd_path);
+			$_SESSION['g']['headermenu'] = []; // reset header menu
 		endif;
 		if((isset($config['system']['disableconsolemenu']) && (!isset($_POST['disableconsolemenu'])))
 		    || (!isset($config['system']['disableconsolemenu']) && (isset($_POST['disableconsolemenu'])))):
 			// need restarting server to made active.
 			touch($d_sysrebootreqd_path);
+		endif;
+		if((isset($config['system']['disableextensionmenu']) && (!isset($_POST['disableextensionmenu'])))
+			|| (!isset($config['system']['disableextensionmenu']) && (isset($_POST['disableextensionmenu'])))):
+			$_SESSION['g']['headermenu'] = []; // reset header menu
 		endif;
 		$config['system']['disableconsolemenu'] = isset($_POST['disableconsolemenu']) ? true : false;
 		$config['system']['disablefm'] = isset($_POST['disablefm']) ? true : false;
