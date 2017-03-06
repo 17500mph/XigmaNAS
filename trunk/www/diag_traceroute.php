@@ -33,84 +33,114 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
+require 'co_sphere.php';
 
-if ($_POST) {
+function diag_traceroute_get_sphere() {
+	$sphere = new co_sphere_settings('diag_traceroute','php');
+	return $sphere;
+}
+$sphere = diag_traceroute_get_sphere();
+$do_traceroute = false;
+if($_POST):
 	unset($input_errors);
-	unset($do_traceroute);
-
 	// Input validation
 	$reqdfields = ['target','max_ttl'];
-	$reqdfieldsn = [
-		gtext('Target'),
-		gtext('Count')
-	];
+	$reqdfieldsn = [gtext('Target'),gtext('Count')];
 	$reqdfieldst = ['string','numeric'];
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
-	if (empty($input_errors)) {
+	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
+	if(empty($input_errors)):
 		$do_traceroute = true;
 		$target = $_POST['target'];
-		$resolve = isset($_POST['resolve']) ? true : false;
+		$resolve = isset($_POST['resolve']);
 		$max_ttl = $_POST['max_ttl'];
-	}
-}
-
-if (!isset($do_traceroute)) {
-	$do_traceroute = false;
+		if($resolve):
+			$cmd = sprintf('/usr/sbin/traceroute -w 2 -m %1$s %2$s',escapeshellarg($max_ttl),escapeshellarg($target));
+		else:
+			$cmd = sprintf('/usr/sbin/traceroute -n -w 2 -m %1$s %2$s',escapeshellarg($max_ttl),escapeshellarg($target));
+		endif;
+	endif;
+endif;
+if(!$do_traceroute):
 	$target = '';
 	$max_ttl = 10;
 	$resolve = false;
-}
+endif;
 $pgtitle = [gtext('Diagnostics'),gtext('Traceroute')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_ping.php"><span><?=gtext("Ping");?></span></a></li>
-				<li class="tabact"><a href="diag_traceroute.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Traceroute");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="diag_traceroute.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php
-					html_titleline(gtext('Traceroute Host'));
-					html_inputbox("target", gtext("Target"), $target, gtext("Enter hostname or IP address."), true, 32);
-					html_checkbox("resolve", gtext("Resolve IP"), $resolve ? true : false, gtext("Resolve IP addresses to hostnames."), "", false);
-					$a_max_ttl = []; for ($i = 1; $i <= 64; $i++) { $a_max_ttl[$i] = $i; }
-					html_combobox("max_ttl", gtext("Count"), $max_ttl, $a_max_ttl, gtext("Select max time-to-live (max number of hops) used in outgoing probe packets."), true);
-					?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Traceroute");?>" />
-				</div>
-				<div id="remarks">
-					<?php html_remark("note", gtext("Note"), gtext("Traceroute may take a while, please be patient."));?>
-				</div>
-				<?php
-				if ($do_traceroute):?>
-				<table class="area_data_settings">
-					<thead>
-						<?php html_separator2();?>
-						<?php html_titleline2(gtext('Traceroute Output'));?>
-					</thead>
-				</table>
-				<?php
-					echo '<br>','<pre class="cmdoutput">';
-						exec('/usr/sbin/traceroute ' . ($resolve ? '' : '-n ') . '-w 2 -m ' . escapeshellarg($max_ttl) . ' ' . escapeshellarg($target), $rawdata);
-					echo htmlspecialchars(implode("\n", $rawdata));
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="diag_ping.php"><span><?=gtext('Ping');?></span></a></li>
+		<li class="tabact"><a href="diag_traceroute.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Traceroute');?></span></a></li>
+	</ul></td></tr>
+</tbody></table>
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('Traceroute Host'));
+?>
+		</thead>
+		<tbody>
+<?php
+			html_inputbox2('target',gtext('Target'),$target,gtext('Enter hostname or IP address.'),true,32);
+			html_checkbox2('resolve',gtext('Resolve IP'),$resolve ? true : false,gtext('Resolve IP addresses to hostnames.'),'',false);
+			$a_max_ttl = [];
+			for($i = 1;$i <= 64;$i++):
+				$a_max_ttl[$i] = $i;
+			endfor;
+			html_combobox2('max_ttl',gtext('Count'),$max_ttl,$a_max_ttl,gtext('Select max time-to-live (max number of hops) used in outgoing probe packets.'),true);
+?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Traceroute');?>"/>
+	</div>
+	<div id="remarks">
+<?php
+		html_remark2('note',gtext('Note'),gtext('Traceroute may take a while, please be patient.'));
+?>
+	</div>
+<?php
+	if($do_traceroute):?>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
+<?php
+				html_separator2();
+				html_titleline2(gtext('Traceroute Output'));
+?>
+			</thead>
+			<tbody><tr>
+				<td class="celltag"><?=gtext('Output');?></td>
+				<td class="celldata">
+<?php
+					echo '<pre class="cmdoutput">';
+					mwexec2($cmd,$rawdata);
+					echo htmlspecialchars(implode("\n",$rawdata));
 					unset($rawdata);
-					echo '</pre>','</br>';
-				endif;
-				?>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
+					echo '</pre>';
+?>
+				</td>
+			</tr></tbody>
+		</table>
+<?php
+	endif;
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
