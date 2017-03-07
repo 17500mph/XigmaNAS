@@ -33,283 +33,357 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
+require 'co_sphere.php';
 
-$pgtitle = [gtext('Disks'),gtext('Management'),gtext('HDD Management')];
-
-if ($_POST) {
-	$pconfig = $_POST;
-	$clean_import = false;
-	if (!empty($_POST['clear_import']) || !empty($_POST['clear_import_swraid'])) {
-		$clean_import = true;
-	}
-	if (!empty($_POST['import']) || !empty($_POST['clear_import'])) {
-		$retval = disks_import_all_disks($clean_import);
-		if ($retval == 0) {
-			$savemsg = gtext("No new disk found.");
-		} else if ($retval > 0) {
-			$savemsg = gtext("All disks are imported.");
-		} else {
-			$input_errors[] = gtext("Detected an error while importing.");
-		}
-		if ($retval >= 0) {
-			disks_update_mounts();
-		}
-		//skip redirect
-		//header("Location: disks_manage.php");
-		//exit;
-	}
-	if (!empty($_POST['import_swraid']) || !empty($_POST['clear_import_swraid'])) {
-		$retval = disks_import_all_swraid_disks($clean_import);
-		if ($retval == 0) {
-			$savemsg = gtext("No new software raid disk found.");
-		} else if ($retval > 0) {
-			$savemsg = gtext("All software raid disks are imported.");
-		} else {
-			$input_errors[] = gtext("Detected an error while importing.");
-		}
-		if ($retval >= 0) {
-			disks_update_mounts();
-		}
-		//skip redirect
-		//header("Location: disks_manage.php");
-		//exit;
-	}
-	if (isset($_POST['apply']) && $_POST['apply']) {
-		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
-			$retval |= updatenotify_process("device", "diskmanagement_process_updatenotification");
-			config_lock();
-			$retval |= rc_update_service("ataidle");
-			$retval |= rc_update_service("smartd");
-			config_unlock();
-		}
-		$savemsg = get_std_save_message($retval);
-		if ($retval == 0) {
-			updatenotify_delete("device");
-		}
-		header("Location: disks_manage.php");
-		exit;
-	}
-	if (isset($_POST['disks_rescan']) && $_POST['disks_rescan']) {
-		$do_action = true;
-		$disks_rescan = true;
-	}
-}
-
-if (!isset($do_action)) {
-	$do_action = false;
-}
-
-// Get all physical disks including CDROM.
-$a_phy_disk = array_merge((array)get_physical_disks_list(), (array)get_cdrom_list());
-
-$a_disk_conf = &array_make_branch($config,'disks','disk');
-if(empty($a_disk_conf)):
-else:
-	array_sort_key($a_disk_conf,'name');
-endif;
-
-if (isset($_GET['act']) && $_GET['act'] === "del") {
-	updatenotify_set("device", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
-	header("Location: disks_manage.php");
-	exit;
-}
-
-function diskmanagement_process_updatenotification($mode, $data) {
+function device_process_updatenotification($mode, $data) {
 	global $config;
 
 	$retval = 0;
-
-	switch ($mode) {
+	$sphere = &disks_manage_get_sphere();
+	switch ($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 		case UPDATENOTIFY_MODE_DIRTY:
-			if (is_array($config['disks']['disk'])) {
-				$index = array_search_ex($data, $config['disks']['disk'], "uuid");
-				if (false !== $index) {
-					unset($config['disks']['disk'][$index]);
-					write_config();
-				}
-			}
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+				unset($sphere->grid[$sphere->row_id]);
+				write_config();
+			endif;
 			break;
-	}
-
+	endswitch;
 	return $retval;
 }
+function disks_manage_get_sphere() {
+	global $config;
+	$sphere = new co_sphere_grid('disks_manage','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->notifier('device');
+	$sphere->row_identifier('uuid');
+	$sphere->enadis(false);
+	$sphere->lock(false);
+	$sphere->sym_add(gtext('Add Disk'));
+	$sphere->sym_mod(gtext('Edit Disk'));
+	$sphere->sym_del(gtext('Disk is marked for deletion'));
+	$sphere->sym_loc(gtext('Disk is locked'));
+	$sphere->sym_unl(gtext('Disk is unlocked'));
+	$sphere->cbm_delete(gtext('Delete Selected Disks'));
+	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected disks?') . '\\n' . gtext('Any service using these disks might become invalid or inaccessible!'));
+	$sphere->grid = &array_make_branch($config,'disks','disk');
+	return $sphere;
+}
+$sphere = &disks_manage_get_sphere();
+array_sort_key($sphere->grid,'name');
+$gt_import_confirm = gtext('Do you want to import disks?') . '\\n' . gtext('The existing configuration may be overwritten.');
+$gt_clearimport_confirm = gtext('Do you want to clear configuration information and import disks?') . '\\n' . gtext('The existing configuration will be rewritten.');
+$gt_importswraid_confirm = gtext('Do you want to import software RAID disks?') . '\\n' . gtext('The existing configuration may be overwritten.');
+$gt_clearimportswraid_confirm = gtext('Do you want to clear configuration information and import software RAID disks?') . '\\n' . gtext('The existing configuration will be rewritten.');
+if($_POST) {
+	if(isset($_POST['apply']) && $_POST['apply']):
+		$retval = 0;
+		if(!file_exists($d_sysrebootreqd_path)):
+			$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+			config_lock();
+			$retval |= rc_update_service('ataidle');
+			$retval |= rc_update_service('smartd');
+			config_unlock();
+		endif;
+		$savemsg = get_std_save_message($retval);
+		if($retval == 0):
+			updatenotify_delete($sphere->notifier());
+		endif;
+		header($sphere->header());
+		exit;
+	endif;
+	
+	$clean_import = false;
+	if(isset($_POST['submit'])):
+		switch($_POST['submit']):
+			case 'clearimport': // must be before import to set clean_import flag
+				$clean_import = true;
+			case 'import':
+				$retval = disks_import_all_disks($clean_import);
+				if($retval == 0):
+					$savemsg = gtext('No new disk found.');
+				elseif($retval > 0):
+					$savemsg = gtext('All disks are imported.');
+				else:
+					$input_errors[] = gtext('Detected an error while importing.');
+				endif;
+				if($retval >= 0):
+					disks_update_mounts();
+				endif;
+//				header("Location: disks_manage.php");
+//				exit;
+				break;
+			case 'clearimportswraid':  // must be before importswraid to set clean_import flag
+				$clean_import = true;
+			case 'importswraid':
+				$retval = disks_import_all_swraid_disks($clean_import);
+				if($retval == 0):
+					$savemsg = gtext('No new software raid disk found.');
+				elseif($retval > 0):
+					$savemsg = gtext('All software raid disks are imported.');
+				else:
+					$input_errors[] = gtext('Detected an error while importing.');
+				endif;
+				if($retval >= 0):
+					disks_update_mounts();
+				endif;
+				//header("Location: disks_manage.php");
+				//exit;
+				break;
+			case 'rescanbusses':
+				//	XXX parameter 'all' causes an error XXX
+				$cmd = 'camcontrol rescan al';
+				mwexec2($cmd,$rawdata);
+				header($sphere->header());
+				exit;
+				break;
+			case 'rows.delete':
+				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				foreach($sphere->cbm_grid as $sphere->cbm_row):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+						switch ($mode_updatenotify):
+							case UPDATENOTIFY_MODE_NEW:  
+								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								break;
+							case UPDATENOTIFY_MODE_MODIFIED:
+								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								break;
+							case UPDATENOTIFY_MODE_UNKNOWN:
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								break;
+						endswitch;
+					endif;
+				endforeach;
+				header($sphere->header());
+				exit;
+				break;
+		endswitch;
+	endif;
+}
+//	get all physical disks including CDROM.
+$a_phy_disk = array_merge((array)get_physical_disks_list(), (array)get_cdrom_list());
+//	make sure detected disks have same ID in config.
+$verify_errors = disks_verify_all_disks($a_phy_disk);
+if(!empty($verify_errors)):
+	$errormsg .= gtext("The device(s) in config are different to actual device(s). Please remove the device(s) and re-add it or use 'Clear config and Import disks'.");
+	$errormsg .= "<br />\n";
+endif;
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('HDD Management')];
+include 'fbegin.inc';
+echo $sphere->doj();
 ?>
-<?php include 'fbegin.inc';?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+	$("#button_import").click(function () {
+		return confirm("<?=$gt_import_confirm?>");
+	});
+	$("#button_clearimport").click(function () {
+		return confirm("<?=$gt_clearimport_confirm?>");
+	});
+	$("#button_importswraid").click(function () {
+		return confirm("<?=$gt_importswraid_confirm?>");
+	});
+	$("#button_clearimportswraid").click(function () {
+		return confirm("<?=$gt_clearimportswraid_confirm?>");
+	});
+});
+//]]>
+</script>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="disks_manage.php" title="<?=gtext('Reload page');?>"><span><?=gtext('HDD Management');?></span></a></li>
+		<li class="tabinact"><a href="disks_init.php"><span><?=gtext('HDD Format');?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext('iSCSI Initiator');?></span></a></li>
+  	</ul></td></tr>
+</tbody></table>
+<form action="<?=$sphere->scriptname();?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
-	// make sure detected disks have same ID in config.
-	$verify_errors = disks_verify_all_disks($a_phy_disk);
-	if (!empty($verify_errors)) {
-		$errormsg .= gtext("The device(s) in config are different to actual device(s). Please remove the device(s) and re-add it or use 'Clear config and Import disks'.");
-		$errormsg .= "<br />\n";
-	}
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(updatenotify_exists('device')):
+		print_config_change_box();
+	endif;
 ?>
-
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-		<td class="tabnavtbl">
-  		<ul id="tabnav">
-				<li class="tabact"><a href="disks_manage.php" title="<?=gtext('Reload page');?>"><span><?=gtext("HDD Management");?></span></a></li>
-				<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
-				<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-  		</ul>
-  	</td>
-	</tr>
-  <tr>
-    <td class="tabcont">
-			<form action="disks_manage.php" method="post" onsubmit="spinner()">
-				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
-				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (updatenotify_exists("device")) print_config_change_box();?>
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<?php html_titleline2(gtext('HDD Management'), 10);?>
-					<tr>
-						<td width="5%" class="listhdrlr"><?=gtext("Device"); ?></td>
-						<td width="15%" class="listhdrr"><?=gtext("Device Model"); ?></td>
-						<td width="7%" class="listhdrr"><?=gtext("Size"); ?></td>
-						<td width="15%" class="listhdrr"><?=gtext("Serial Number"); ?></td>
-						<td width="5%" class="listhdrr"><?=gtext("Controller"); ?></td>
-						<td width="18%" class="listhdrr"><?=gtext("Controller Model"); ?></td>
-						<td width="9%" class="listhdrr"><?=gtext("Standby"); ?></td>
-						<td width="10%" class="listhdrr"><?=gtext("Filesystem"); ?></td>
-						<td width="8%" class="listhdrr"><?=gtext("Status"); ?></td>
-						<td width="8%" class="list"></td>
-					</tr>
-				<?php foreach ($a_disk_conf as $disk):?>
-				<?php
-				$notificationmode = updatenotify_get_mode("device", $disk['uuid']);
-				switch ($notificationmode) {
+	<table class="area_data_selection">
+		<colgroup>
+			<col style="width:5%">
+			<col style="width:5%">
+			<col style="width:13%">
+			<col style="width:7%">
+			<col style="width:13%">
+			<col style="width:5%">
+			<col style="width:16">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:8%">
+			<col style="width:10%">
+			
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('HDD Management'),11);
+?>
+			<tr>
+				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
+				<th class="lhell"><?=gtext('Device'); ?></th>
+				<th class="lhell"><?=gtext('Device Model'); ?></th>
+				<th class="lhell"><?=gtext('Size'); ?></th>
+				<th class="lhell"><?=gtext('Serial Number'); ?></th>
+				<th class="lhell"><?=gtext('Controller'); ?></th>
+				<th class="lhell"><?=gtext('Controller Model'); ?></th>
+				<th class="lhell"><?=gtext('Standby'); ?></th>
+				<th class="lhell"><?=gtext('Filesystem'); ?></th>
+				<th class="lhell"><?=gtext('Status'); ?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
+			</tr>
+		</thead>
+		<tbody>
+<?php
+			foreach ($sphere->grid as $sphere->row):
+				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
+				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+				switch ($notificationmode):
 					case UPDATENOTIFY_MODE_NEW:
-						$status = gtext("Initializing");
+						$status = gtext('Initializing');
 						break;
 					case UPDATENOTIFY_MODE_MODIFIED:
-						$status = gtext("Modifying");
+						$status = gtext('Modifying');
 						break;
+					case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 					case UPDATENOTIFY_MODE_DIRTY:
-						$status = gtext("Deleting");
+						$status = gtext('Deleting');
 						break;
 					default:
-						if ($disk['type'] == 'HAST') {
-							$role = $a_phy_disk[$disk['name']]['role'];
-							$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gtext("ONLINE") : gtext("MISSING"), $role);
-							$disk['size'] = $a_phy_disk[$disk['name']]['size'];
-						} else {
-							if (isset($verify_errors[$disk['name']]) && is_array($verify_errors[$disk['name']])) {
-							switch ( $verify_errors[$disk['name']]['error'] ){
-								case 1:
-									$status = sprintf("%s : %s", gtext('MOVED TO') , $verify_errors[$disk['name']]['new_devicespecialfile']);
-									break;
-								case 2:
-									if(empty($verify_errors[$disk['name']]['old_serial']) === FALSE){
-									$old_serial = htmlspecialchars($verify_errors[$disk['name']]['old_serial']);
-						} else {
-							$old_serial = gtext("n/a");
-						};
-
-						if(empty($verify_errors[$disk['name']]['new_serial']) === FALSE){
-						$new_serial = htmlspecialchars($verify_errors[$disk['name']]['new_serial']);
-						} else {
-							$new_serial = gtext("n/a");
-						};
-									$status = sprintf("%s (%s : '%s' %s '%s')", gtext('CHANGED'), gtext('Device Serial'), $old_serial, gtext('to'), $new_serial);
-									break;
-								case 4:
-									$status = sprintf("%s (%s : '%s' %s '%s')", gtext('CHANGED'), gtext('Controller'), htmlspecialchars($verify_errors[$disk['name']]['config_controller']), gtext('to'), htmlspecialchars($verify_errors[$disk['name']]['new_controller']) );
-									break;
-								case 8:
-									$status = sprintf("%s (%s)", gtext("MISSING"), $disk['devicespecialfile']);
-									break;
-								default:
-									$status = gtext("ONLINE");
-									}
-							} else {
-								$status = gtext("ONLINE");
-							}
-						}
-					break;
-				}
-				?>
+						if($sphere->row['type'] == 'HAST'):
+							$role = $a_phy_disk[$sphere->row['name']]['role'];
+							$status = sprintf("%s (%s)", (0 == disks_exists($sphere->row['devicespecialfile'])) ? gtext('ONLINE') : gtext('MISSING'),$role);
+							$sphere->row['size'] = $a_phy_disk[$sphere->row['name']]['size'];
+						else:
+							if(isset($verify_errors[$sphere->row['name']]) && is_array($verify_errors[$sphere->row['name']])):
+								switch($verify_errors[$sphere->row['name']]['error']):
+									case 1:
+										$status = sprintf("%s : %s",gtext('MOVED TO') ,$verify_errors[$sphere->row['name']]['new_devicespecialfile']);
+										break;
+									case 2:
+										if(empty($verify_errors[$sphere->row['name']]['old_serial']) === false):
+											$old_serial = htmlspecialchars($verify_errors[$sphere->row['name']]['old_serial']);
+										else:
+											$old_serial = gtext('n/a');
+										endif;
+										if(empty($verify_errors[$sphere->row['name']]['new_serial']) === false):
+											$new_serial = htmlspecialchars($verify_errors[$sphere->row['name']]['new_serial']);
+										else:
+											$new_serial = gtext('n/a');
+										endif;
+										$status = sprintf("%s (%s : '%s' %s '%s')",gtext('CHANGED'),gtext('Device Serial'),$old_serial,gtext('to'),$new_serial);
+										break;
+									case 4:
+										$status = sprintf("%s (%s : '%s' %s '%s')",gtext('CHANGED'),gtext('Controller'),htmlspecialchars($verify_errors[$sphere->row['name']]['config_controller']),gtext('to'),htmlspecialchars($verify_errors[$sphere->row['name']]['new_controller']));
+										break;
+									case 8:
+										$status = sprintf("%s (%s)",gtext('MISSING'),$sphere->row['devicespecialfile']);
+										break;
+									default:
+										$status = gtext('ONLINE');
+								endswitch;
+							else:
+								$status = gtext('ONLINE');
+							endif;
+						endif;
+						break;
+				endswitch;
+?>
 				<tr>
-				<?php
-					$start_tag = '<td class="listr">';
-					$end_tag = "</td>\n";
-					$status_start_tag = '<td class="listbg">';
-					$status_end_tag = $end_tag;
-
-					if (isset($verify_errors[$disk['name']]) && is_array($verify_errors[$disk['name']])) {
-						if ($verify_errors[$disk['name']]['error'] > 0){
-							$start_tag = $start_tag . '<span style="color: #ff0000;font-weight:bold;">';
-							$end_tag = '</span>&nbsp;' . $end_tag;
-							$status_start_tag = $status_start_tag . '<span style="color: #ff0000;font-weight:bold;">';
-							$status_end_tag = '</span>&nbsp;'. $end_tag;
-						}
-					}
-
-					if (isset($verify_errors[$disk['name']]) && is_array($verify_errors[$disk['name']])) {
-						if($verify_errors[$disk['name']]['error'] == 8){
-							$start_tag = $start_tag . '<del>';
-							$end_tag = '</del>'. $end_tag;
-						}
-					}
-
-					print $start_tag . htmlspecialchars($disk['name']) . $end_tag;
-					print $start_tag . htmlspecialchars($disk['model']) . $end_tag;
-					print $start_tag . htmlspecialchars($disk['size']) . $end_tag;
-					print $start_tag . ((empty($disk['serial']) ) === FALSE ? htmlspecialchars($disk['serial']) : gtext("n/a")) . $end_tag;
-					print $start_tag . htmlspecialchars($disk['controller'].$disk['controller_id']) . $end_tag;
-					print $start_tag . htmlspecialchars($disk['controller_desc']) . $end_tag;
-					print $start_tag . ($disk['harddiskstandby'] ? htmlspecialchars($disk['harddiskstandby']) : gtext("Always On")) . $end_tag;
-					print $start_tag . ((!empty($disk['fstype'])) ? htmlspecialchars(get_fstype_shortdesc($disk['fstype'])) : gtext("Unknown or unformatted")) . $end_tag;
-					print $status_start_tag . htmlspecialchars($status) . $status_end_tag;
-				?>
-
-					<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-					<td valign="middle" nowrap="nowrap" class="list">
-						<a href="disks_manage_edit.php?uuid=<?=$disk['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit disk");?>" border="0" alt="<?=gtext("Edit disk");?>" /></a>&nbsp;
-						<a href="disks_manage.php?act=del&amp;uuid=<?=$disk['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this disk? All elements that still use it will become invalid (e.g. share)!"); ?>')"><img src="images/delete.png" title="<?=gtext("Delete disk"); ?>" border="0" alt="<?=gtext("Delete disk"); ?>" /></a>
+					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
+<?php
+						if($notdirty && $notprotected):
+							echo $sphere->html_checkbox_cbm(false);
+						else:
+							echo $sphere->html_checkbox_cbm(true);
+						endif;
+?>
 					</td>
-					<?php else:?>
-					<td valign="middle" nowrap="nowrap" class="list">
-						<img src="images/delete.png" border="0" alt="" />
+<?php
+					$serial = empty($sphere->row['serial']) ?  gtext('n/a') : htmlspecialchars($sphere->row['serial']);
+					$harddiskstandby = $sphere->row['harddiskstandby'] ? htmlspecialchars($sphere->row['harddiskstandby']) : gtext('Always On');
+					$fstype =  empty($sphere->row['fstype']) ? gtext('Unknown or unformatted') : htmlspecialchars(get_fstype_shortdesc($sphere->row['fstype']));
+?>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['name']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['model']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['size']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$serial;?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['controller'] . $sphere->row['controller_id']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['controller_desc']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$harddiskstandby;?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$fstype;?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($status);?></td>
+					<td class="lcebld">
+						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
+<?php
+							echo $sphere->html_toolbox($notprotected,$notdirty);
+?>
+							<td></td>
+							<td></td>
+						</tr></tbody></table>
 					</td>
-					<?php endif;?>
 				</tr>
-				<?php endforeach;?>
-				<tr>
-					<td class="list" colspan="9"></td>
-					<td class="list"> <a href="disks_manage_edit.php"><img src="images/add.png" title="<?=gtext("Add disk"); ?>" border="0" alt="<?=gtext("Add disk"); ?>" /></a></td>
-				</tr>
-				</table>
-				<div id="submit">
-					<input name="import" type="submit" class="formbtn" value="<?=gtext("Import Disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-					<input name="clear_import" type="submit" class="formbtn" value="<?=gtext("Clear Config & Import Disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
-					<input name="disks_rescan" type="submit" class="formbtn" value="<?=gtext("Rescan Disks");?>" />
-					<br />
-					<br />
-					<input name="import_swraid" type="submit" class="formbtn" value="<?=gtext("Import Software Raid Disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-					<input name="clear_import_swraid" type="submit" class="formbtn" value="<?=gtext("Clear Config & Import Software Raid Disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
-				</div>
-				<?php
-				if ($do_action) {
-					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
-					echo('<pre class="cmdoutput">');
-					//ob_end_flush();
-					if (true == $disks_rescan) {
-						disks_rescan();
-					}
-					echo('</pre>');
-					echo('<script type="text/javascript">');
-					echo('window.location.href="disks_manage.php"');
-					echo('</script>');
-				}?>
-				<?php include 'formend.inc';?>
-		</form>
-	</td>
-</tr>
-</table>
-<?php include 'fend.inc';?>
+<?php
+			endforeach;
+?>
+		</tbody>
+		<tfoot>
+<?php
+			echo $sphere->html_footer_add(11);
+?>
+		</tfoot>
+	</table>
+	<div id="submit">
+		<?=$sphere->html_button_delete_rows();?>
+		<?=html_button('rescanbusses',gtext('Rescan Busses'));?>
+	</div>
+	<table class="area_data_selection"><thead>
+<?php
+		html_separator2(1);
+		html_titleline2(gtext('Import Disks'),1);
+		html_separator2(1);
+?>
+	</thead></table>
+	<div id=""submit>
+		<?=html_button('import',gtext('Import Disks'));?>
+		<?=html_button('clearimport',gtext('Clear Configuration & Import Disks'));?>	
+	</div>
+	<table class="area_data_selection"><thead>
+<?php
+		html_separator2(1);
+		html_titleline2(gtext('Import Software RAID Disks'),1);
+		html_separator2(1);
+?>
+	</thead></table>
+	<div id=""submit>
+		<?=html_button('importswraid',gtext('Import Software RAID Disks'));?>
+		<?=html_button('clearimportswraid',gtext('Clear Configuration & Import Software RAID Disks'));?>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
