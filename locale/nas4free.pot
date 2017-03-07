@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 01:34+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -362,6 +362,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr ""
 
@@ -456,9 +459,6 @@ msgid "Add auto snapshot"
 msgstr ""
 
 msgid "Add command"
-msgstr ""
-
-msgid "Add disk"
 msgstr ""
 
 msgid "Add extent"
@@ -733,6 +733,9 @@ msgid "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cau
 msgstr ""
 
 msgid "Any"
+msgstr ""
+
+msgid "Any service using these disks might become invalid or inaccessible!"
 msgstr ""
 
 msgid "Append user defined shares"
@@ -1295,13 +1298,13 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-msgid "Clear Config & Import Disks"
-msgstr ""
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration & Import Disks"
+msgstr ""
+
+msgid "Clear Configuration & Import Software RAID Disks"
 msgstr ""
 
 msgid "Clear device errors"
@@ -1855,6 +1858,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -1943,9 +1949,6 @@ msgid "Delete clone"
 msgstr ""
 
 msgid "Delete command"
-msgstr ""
-
-msgid "Delete disk"
 msgstr ""
 
 msgid "Delete extent"
@@ -2237,6 +2240,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr ""
 
@@ -2301,9 +2313,6 @@ msgstr ""
 msgid "Do you really want to delete this clone?"
 msgstr ""
 
-msgid "Do you really want to delete this disk? All elements that still use it will become invalid (e.g. share)!"
-msgstr ""
-
 msgid "Do you really want to delete this extent?"
 msgstr ""
 
@@ -2341,6 +2350,12 @@ msgid "Do you really want to uninstall this package?"
 msgstr ""
 
 msgid "Do you want to apply these settings?"
+msgstr ""
+
+msgid "Do you want to clear configuration information and import disks?"
+msgstr ""
+
+msgid "Do you want to clear configuration information and import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to create a JBOD from selected disks?"
@@ -2410,6 +2425,9 @@ msgid "Do you want to delete selected commands?"
 msgstr ""
 
 msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected disks?"
 msgstr ""
 
 msgid "Do you want to delete selected encrypted volumes?"
@@ -2494,6 +2512,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -2643,6 +2667,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -2722,9 +2749,6 @@ msgid "Edit auto snapshot"
 msgstr ""
 
 msgid "Edit command"
-msgstr ""
-
-msgid "Edit disk"
 msgstr ""
 
 msgid "Edit extent"
@@ -3928,7 +3952,7 @@ msgstr ""
 msgid "Import Disks"
 msgstr ""
 
-msgid "Import Software Raid Disks"
+msgid "Import Software RAID Disks"
 msgstr ""
 
 msgid "Import disks"
@@ -5783,9 +5807,6 @@ msgstr ""
 msgid "Private key"
 msgstr ""
 
-msgid "Process"
-msgstr ""
-
 msgid "Process Status"
 msgstr ""
 
@@ -6139,7 +6160,7 @@ msgstr ""
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
+msgid "Rescan Busses"
 msgstr ""
 
 msgid "Rescan Interval"
@@ -7608,6 +7629,12 @@ msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
+msgstr ""
+
+msgid "The existing configuration will be rewritten."
 msgstr ""
 
 msgid "The extent name already exists."
