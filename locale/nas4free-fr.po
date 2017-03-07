@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
-"PO-Revision-Date: 2017-03-06 12:45+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"PO-Revision-Date: 2017-03-07 05:44+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 16:04+0000\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
 "X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -466,6 +466,9 @@ msgstr "Ajouter CARP"
 msgid "Add Dataset"
 msgstr "Ajouter un dataset"
 
+msgid "Add Disk"
+msgstr "Ajouter un Disque"
+
 msgid "Add Encrypted Volume"
 msgstr "Ajouter du Volume Crypté"
 
@@ -561,9 +564,6 @@ msgstr "Ajouter un instantané automatique"
 
 msgid "Add command"
 msgstr "Ajouter une commande"
-
-msgid "Add disk"
-msgstr "Ajouter un disque"
 
 msgid "Add extent"
 msgstr "Ajouter une extension"
@@ -736,8 +736,8 @@ msgstr ""
 "Tout les partages utilisent l'option « usedots » ; par suite, les noms de "
 "fichiers .Parent et tout ce qui commence par .Apple est invalide."
 
-msgid "All software raid disks are imported."
-msgstr "Tous les disques raid logiciels sont importés."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Alloc"
@@ -914,6 +914,10 @@ msgstr ""
 
 msgid "Any"
 msgstr "Tous"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
+"Tout service utilisant ces disques peut devenir invalide ou inaccessible!"
 
 msgid "Append user defined shares"
 msgstr "Ajout d'actions définies par l'utilisateur"
@@ -1551,14 +1555,17 @@ msgstr "Sélectionnez à quelle interface cette route s'applique."
 msgid "Clear"
 msgstr "Effacer"
 
-msgid "Clear Config & Import Disks"
-msgstr "Effacer la configuration et importer les disques"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Effacer la configuration et importer les disques RAID logiciel"
-
 msgid "Clear Config And Import Disks"
 msgstr "Effacer la Configuration et Importer les Disques"
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Effacer les erreurs de périphérique"
@@ -1680,6 +1687,12 @@ msgstr "Configuration"
 
 msgid "Configuration Directory"
 msgstr "Répertoire de configuration"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
 
 msgid "Configuring"
 msgstr "Configuration"
@@ -2289,6 +2302,9 @@ msgstr "Supprimer les commandes sélectionnées"
 msgid "Delete Selected Datasets"
 msgstr "supprimer les Dataset sélectionnés"
 
+msgid "Delete Selected Disks"
+msgstr "Supprimer les disques sélectionnés"
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Supprimer les volumes cryptés sélectionnés"
 
@@ -2378,9 +2394,6 @@ msgstr "supprimer clone"
 
 msgid "Delete command"
 msgstr "Supprimer la commande"
-
-msgid "Delete disk"
-msgstr "Supprimer le  disque"
 
 msgid "Delete extent"
 msgstr "Supprimer l'extension"
@@ -2700,6 +2713,15 @@ msgstr "Utilisation de l'espace disque"
 msgid "Disk Usage"
 msgstr "Utilisation du disque"
 
+msgid "Disk is locked"
+msgstr "Le disque est verrouillé"
+
+msgid "Disk is marked for deletion"
+msgstr "Le disque est marqué pour suppression"
+
+msgid "Disk is unlocked"
+msgstr "Le disque est déverrouillé"
+
 msgid "Disks"
 msgstr "Disques"
 
@@ -2783,13 +2805,6 @@ msgstr "Voulez-vous vraiment supprimer cet instantané automatique ?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Voulez-vous vraiment supprimer ce clone?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Voulez-vous vraiment supprimer ce disque ? Tous les éléments l'utilisant "
-"seront invalidés !"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Voulez-vous vraiment effacer cette extension (extent)?"
@@ -2920,6 +2935,9 @@ msgstr "Voulez-vous supprimer les commandes sélectionnées?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Voulez-vous effacer les datasets sélectionnés"
 
+msgid "Do you want to delete selected disks?"
+msgstr "Voulez-vous supprimer les disques sélectionnés?"
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "Voulez-vous supprimer des volumes cryptés sélectionnés?"
 
@@ -3004,6 +3022,12 @@ msgstr "Voulez-vous activer les tâches rsync sélectionnées?"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Voulez-vous activer les modules rsync sélectionnés?"
+
+msgid "Do you want to import disks?"
+msgstr "Voulez-vous importer des disques?"
+
+msgid "Do you want to import software RAID disks?"
+msgstr "Voulez-vous importer des disques RAID logiciels?"
 
 msgid "Do you want to lock selected records?"
 msgstr "Voulez-vous activer les enregistrements sélectionnés?"
@@ -3155,6 +3179,9 @@ msgstr "Modifier CARP"
 msgid "Edit Dataset"
 msgstr "Modifier le jeu de données"
 
+msgid "Edit Disk"
+msgstr "Modifier le disque"
+
 msgid "Edit Encrypted Volume"
 msgstr "Modifier le volume crypté"
 
@@ -3235,9 +3262,6 @@ msgstr "Modifier un instantané automatique"
 
 msgid "Edit command"
 msgstr "Modifier la commande"
-
-msgid "Edit disk"
-msgstr "Modifier le disque"
 
 msgid "Edit extent"
 msgstr "Editer l'extension"
@@ -4622,8 +4646,8 @@ msgstr "Importer"
 msgid "Import Disks"
 msgstr "Importer les disques"
 
-msgid "Import Software Raid Disks"
-msgstr "Impoter des disques Raid logiciel"
+msgid "Import Software RAID Disks"
+msgstr "Importer des Disques RAID Logiciels"
 
 msgid "Import disks"
 msgstr "Importer des disques"
@@ -5922,8 +5946,8 @@ msgstr "Aucun nouveau disque trouvé."
 msgid "No new encrypted disks have been found."
 msgstr "Aucun nouveau disque crypté n'a été trouvé."
 
-msgid "No new software raid disk found."
-msgstr "Aucun nouveau disque raid logiciel trouvé."
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr "Aucune information de partition n'a été trouvée."
@@ -6704,9 +6728,6 @@ msgstr "Clef privée"
 msgid "Private key"
 msgstr "Clé privée"
 
-msgid "Process"
-msgstr "Processus"
-
 msgid "Process Status"
 msgstr "Statut des  processus"
 
@@ -7097,8 +7118,8 @@ msgstr "Requis"
 msgid "Rescan"
 msgstr "Rescanner"
 
-msgid "Rescan Disks"
-msgstr "Re-balayer les disques"
+msgid "Rescan Busses"
+msgstr "Rescan Bus"
 
 msgid "Rescan Interval"
 msgstr "Intervalle de rescan"
@@ -8802,15 +8823,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Temps en secondes par défaut pour afficher l'écran."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"Le ou les disque(s) dans la configuration sont différent(s) du ou des "
-"disque(s) actuel(s). S'il vous plait enlevez puis ré-installez le ou les "
-"disque(s)  ou utilisez 'Effacer la configuration actuelle et importez les "
-"disques'."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8853,6 +8865,9 @@ msgstr "Le périphérique crypté est actellement monté!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "La configuration complète du système sera écrasée."
+
+msgid "The existing configuration may be overwritten."
+msgstr "La configuration existante peut être écrasée."
 
 msgid "The extent name already exists."
 msgstr "Le nom d'extension existe déjà."
@@ -11088,3 +11103,70 @@ msgstr "à"
 
 msgid "umount"
 msgstr "démontage"
+
+#~ msgid "Add disk"
+#~ msgstr "Ajouter un disque"
+
+#~ msgid "Delete disk"
+#~ msgstr "Supprimer le  disque"
+
+#~ msgid "Edit disk"
+#~ msgstr "Modifier le disque"
+
+#~ msgid "Process"
+#~ msgstr "Processus"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Voulez-vous vraiment supprimer ce disque ? Tous les éléments l'utilisant "
+#~ "seront invalidés !"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "Le ou les disque(s) dans la configuration sont différent(s) du ou des "
+#~ "disque(s) actuel(s). S'il vous plait enlevez puis ré-installez le ou les "
+#~ "disque(s)  ou utilisez 'Effacer la configuration actuelle et importez les "
+#~ "disques'."
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Tous les disques raid logiciels sont importés."
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Aucun nouveau disque raid logiciel trouvé."
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Effacer la configuration et importer les disques"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Effacer la configuration et importer les disques RAID logiciel"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Impoter des disques Raid logiciel"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Re-balayer les disques"
+
+#~ msgid ""
+#~ "Do you want to clear configuration information and import software RAID "
+#~ "disks?"
+#~ msgstr ""
+#~ "Voulez-vous effacer les informations de configuration et importer des "
+#~ "disques RAID logiciels?"
+
+#~ msgid "Do you want to clear configuration information and import disks?"
+#~ msgstr ""
+#~ "Voulez-vous effacer les informations de configuration et importer des "
+#~ "disques?"
+
+#~ msgid "Clear Configuration & Import Software RAID Disks"
+#~ msgstr "Effacer la Configuration & importer des Disques RAID  Logiciels"
+
+#~ msgid "Clear Configuration & Import Disks"
+#~ msgstr "Effacer la Configuration & Importer les Disques"
+
+#~ msgid "The existing configuration will be rewritten."
+#~ msgstr "La configuration existante sera réécrite."

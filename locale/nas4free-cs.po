@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-02-23 22:29+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:48+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -459,6 +459,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Přidat šifrovaný svazek"
 
@@ -554,9 +557,6 @@ msgstr "Přidat automatické zachycování stavu"
 
 msgid "Add command"
 msgstr "Přidat příkaz"
-
-msgid "Add disk"
-msgstr "Přidat disk"
 
 msgid "Add extent"
 msgstr "Přidat úložnou jednotku"
@@ -728,8 +728,8 @@ msgstr ""
 "Použít pro všechna sdílení předvolbu „usedots“ (použít tečky), následkem "
 "čehož budou názvy .Parent a cokoli začínající na .Apple neplatné."
 
-msgid "All software raid disks are imported."
-msgstr "Všechny disky softwarového RAID pole jsou importovány."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Přiřaz."
@@ -903,6 +903,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Libovolné"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "Připojit (přidat) uživatelsky definovaná sdílení"
@@ -1520,13 +1523,16 @@ msgstr "Zvolte rozhraní, pro které bude tato trasa platit."
 msgid "Clear"
 msgstr "Vyčistit"
 
-msgid "Clear Config & Import Disks"
-msgstr "Vyčistit nastavení a importovat disky"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Vyčistit nastavení a importovat disky softwarového RAID pole"
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1651,6 +1657,12 @@ msgstr "Nastavení"
 
 msgid "Configuration Directory"
 msgstr "Složka s nastaveními"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
 
 msgid "Configuring"
 msgstr "Nastavování"
@@ -2235,6 +2247,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr "Smazat označené datové sady"
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Smazat označené šifrované svazky"
 
@@ -2324,9 +2339,6 @@ msgstr "Smazat klon"
 
 msgid "Delete command"
 msgstr "Odstranit příkaz"
-
-msgid "Delete disk"
-msgstr "Odstranit disk"
 
 msgid "Delete extent"
 msgstr "Odstranit úložnou jednotku"
@@ -2643,6 +2655,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr "Využití disku"
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Disky"
 
@@ -2722,13 +2743,6 @@ msgstr "Opravdu chcete smazat toto automatické zachycování stavu?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Opravdu chcete smazat tento klon?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Opravdu chcete smazat tento disk? Veškeré prvky, které ho využívají, "
-"přestanou fungovat (např. sdílení)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Opravdu chcete odstranit tuto úložnou jednotku?"
@@ -2852,6 +2866,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr "Opravdu smazat označené datové sady?"
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2934,6 +2951,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -3085,6 +3108,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr "Upravit datovou sadu"
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -3165,9 +3191,6 @@ msgstr "Upravit automatické zachycování stavu"
 
 msgid "Edit command"
 msgstr "Upravit příkaz"
-
-msgid "Edit disk"
-msgstr "Upravit disk"
 
 msgid "Edit extent"
 msgstr "Upravit úložnou jednotku"
@@ -4539,8 +4562,8 @@ msgstr "Importovat"
 msgid "Import Disks"
 msgstr "Importovat disky"
 
-msgid "Import Software Raid Disks"
-msgstr "Importovat disky softwarového RAID pole"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "Importovat disky"
@@ -5835,8 +5858,8 @@ msgstr "Nebyly nalezeny žádné nové disky."
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
-msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr ""
@@ -6609,9 +6632,6 @@ msgstr "Soukromá část klíče"
 msgid "Private key"
 msgstr "Soukromá část klíče"
 
-msgid "Process"
-msgstr "Proces"
-
 msgid "Process Status"
 msgstr ""
 
@@ -6996,8 +7016,8 @@ msgstr "Vyžadováno"
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
-msgstr "Znovu naskenovat disky"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr ""
@@ -8653,14 +8673,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Výchozí doba pro zobrazení."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"Zařízení v nastavení se liší od těch, které jsou ve skutečnosti přítomné. "
-"Odeberte zařízení a přidejte je znovu nebo použijte funkci „Vyčistit "
-"nastavení a importovat disky“."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8704,6 +8716,9 @@ msgid "The encrypted device is currently mounted!"
 msgstr "Toto šifrované zařízení je nyní připojené (mount)!"
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
 msgstr ""
 
 msgid "The extent name already exists."
@@ -10873,3 +10888,48 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
+
+#~ msgid "Add disk"
+#~ msgstr "Přidat disk"
+
+#~ msgid "Delete disk"
+#~ msgstr "Odstranit disk"
+
+#~ msgid "Edit disk"
+#~ msgstr "Upravit disk"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Všechny disky softwarového RAID pole jsou importovány."
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
+
+#~ msgid "Process"
+#~ msgstr "Proces"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "Zařízení v nastavení se liší od těch, které jsou ve skutečnosti přítomné. "
+#~ "Odeberte zařízení a přidejte je znovu nebo použijte funkci „Vyčistit "
+#~ "nastavení a importovat disky“."
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Opravdu chcete smazat tento disk? Veškeré prvky, které ho využívají, "
+#~ "přestanou fungovat (např. sdílení)!"
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Vyčistit nastavení a importovat disky"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Vyčistit nastavení a importovat disky softwarového RAID pole"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Importovat disky softwarového RAID pole"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Znovu naskenovat disky"

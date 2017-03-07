@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
-"PO-Revision-Date: 2017-03-05 11:28+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"PO-Revision-Date: 2017-03-07 15:55+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -456,6 +456,9 @@ msgstr "Добавить CARP"
 msgid "Add Dataset"
 msgstr "Добавить Dataset"
 
+msgid "Add Disk"
+msgstr "Добавить диск"
+
 msgid "Add Encrypted Volume"
 msgstr "Добавить зашифрованный том"
 
@@ -551,9 +554,6 @@ msgstr "Добавить автоматический снимок"
 
 msgid "Add command"
 msgstr "Добавить команду"
-
-msgid "Add disk"
-msgstr "Добавить диск"
 
 msgid "Add extent"
 msgstr "Добавить экстент"
@@ -725,8 +725,8 @@ msgstr ""
 "Общие ресурсы используют опцию 'usedots', поэтому имена файлов .Parent и все "
 "начинающиеся с .Apple недопустимы."
 
-msgid "All software raid disks are imported."
-msgstr "Все диски программных RAID импортированы"
+msgid "All software RAID disks are imported."
+msgstr "Все программные RAID-диски импортированы."
 
 msgid "Alloc"
 msgstr "Распределено"
@@ -901,6 +901,11 @@ msgstr ""
 
 msgid "Any"
 msgstr "Любой"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
+"Любая служба, использующая эти диски, может стать недействительной или "
+"недоступной!"
 
 msgid "Append user defined shares"
 msgstr "Добавить пользовательские общие ресурсы"
@@ -1531,14 +1536,18 @@ msgstr "Выберите, к каким интерфейсам применим 
 msgid "Clear"
 msgstr "Очистить"
 
-msgid "Clear Config & Import Disks"
-msgstr "Очистить конфигурацию и импортировать диски"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Очистить конфигурацию и импортировать программные рейд диски"
-
 msgid "Clear Config And Import Disks"
 msgstr "Очистить конфигурацию и импортировать диски"
+
+msgid "Clear Configuration"
+msgstr "Очистить конфигурацию"
+
+msgid "Clear configuration information before importing disks."
+msgstr "Очистить конфигурационную информацию перед импортом дисков."
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
+"Очистить конфигурационную информацию перед импортом программных RAID-дисков."
 
 msgid "Clear device errors"
 msgstr "Очистить ошибки устройства (Clear device errors)"
@@ -1660,6 +1669,15 @@ msgstr "Конфигурация"
 
 msgid "Configuration Directory"
 msgstr "Каталог конфигурации"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
+"Конфигурационная информация об устройствах отличается от физической. Удалите "
+"эти устройства и повторно добавьте их или запустите импорт дисков с "
+"включенной опцией очистки."
 
 msgid "Configuring"
 msgstr "Настраивается"
@@ -2264,6 +2282,9 @@ msgstr "Удалить выбранные команды"
 msgid "Delete Selected Datasets"
 msgstr "Удалить выбранные Dataset'ы"
 
+msgid "Delete Selected Disks"
+msgstr "Удалить выбранные диски"
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Удалить выбранные шифрованные тома"
 
@@ -2353,9 +2374,6 @@ msgstr "Удалить копию"
 
 msgid "Delete command"
 msgstr "Удалить команду"
-
-msgid "Delete disk"
-msgstr "Удалить диск"
 
 msgid "Delete extent"
 msgstr "Удалить экстент"
@@ -2670,6 +2688,15 @@ msgstr "Использование дискового пространства"
 msgid "Disk Usage"
 msgstr "Использование дисков"
 
+msgid "Disk is locked"
+msgstr "Диск заблокирован"
+
+msgid "Disk is marked for deletion"
+msgstr "Диск отмечен для удаления"
+
+msgid "Disk is unlocked"
+msgstr "Диск разблокирован"
+
 msgid "Disks"
 msgstr "Диски"
 
@@ -2748,13 +2775,6 @@ msgstr "Вы уверены, что вы хотите удалить этот а
 
 msgid "Do you really want to delete this clone?"
 msgstr "Вы действительно хотите удалить эту копию?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Вы действительно хотите удалить этот диск? Все объекты, использующие его, "
-"станут недоступны (например, общие ресурсы)."
 
 msgid "Do you really want to delete this extent?"
 msgstr "Вы действительно хотите удалить этот экстент?"
@@ -2879,6 +2899,9 @@ msgstr "Вы уверены, что желаете удалить выбранн
 msgid "Do you want to delete selected datasets?"
 msgstr "Вы действительно желаете удалить выбранные Dataset'ы?"
 
+msgid "Do you want to delete selected disks?"
+msgstr "Вы хотите удалить выбранные диски?"
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "Вы хотите удалить выбранные шифрованные тома?"
 
@@ -2963,6 +2986,12 @@ msgstr "Вы хотите включить выбранные задания rsy
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Вы хотите включить выбранные модули rsync?"
+
+msgid "Do you want to import disks?"
+msgstr "Вы хотите импортировать диски?"
+
+msgid "Do you want to import software RAID disks?"
+msgstr "Вы хотите импортировать программные RAID-диски?"
 
 msgid "Do you want to lock selected records?"
 msgstr "Вы хотите заблокировать выбранные записи?"
@@ -3117,6 +3146,9 @@ msgstr "Редактировать CARP"
 msgid "Edit Dataset"
 msgstr "Редактировать Dataset"
 
+msgid "Edit Disk"
+msgstr "Вы хотите импортировать программные RAID-диски?"
+
 msgid "Edit Encrypted Volume"
 msgstr "Редактировать зашифрованный том"
 
@@ -3197,9 +3229,6 @@ msgstr "Редактировать автоматический снимок"
 
 msgid "Edit command"
 msgstr "Редактировать команду"
-
-msgid "Edit disk"
-msgstr "Изменить диск"
 
 msgid "Edit extent"
 msgstr "Изменить экстент"
@@ -4585,8 +4614,8 @@ msgstr "Импортировать"
 msgid "Import Disks"
 msgstr "Импорт дисков"
 
-msgid "Import Software Raid Disks"
-msgstr "Импорт программных рэйд дисков"
+msgid "Import Software RAID Disks"
+msgstr "Импортировать программные RAID-диски"
 
 msgid "Import disks"
 msgstr "Импорт дисков"
@@ -5886,8 +5915,8 @@ msgstr "Не найдено нового диска."
 msgid "No new encrypted disks have been found."
 msgstr "Новых зашифрованных дисков не было найдено."
 
-msgid "No new software raid disk found."
-msgstr "Не найдено нового диска программного RAID."
+msgid "No new software RAID disk found."
+msgstr "Новые программные RAID-диски не найдены."
 
 msgid "No partition information found."
 msgstr "Информация о разделе не найдена."
@@ -6658,9 +6687,6 @@ msgstr "Секретный ключ"
 msgid "Private key"
 msgstr "Секретный ключ"
 
-msgid "Process"
-msgstr "Процесс"
-
 msgid "Process Status"
 msgstr "Статус процессов"
 
@@ -7053,8 +7079,8 @@ msgstr "Требуется"
 msgid "Rescan"
 msgstr "Повторно сканировать"
 
-msgid "Rescan Disks"
-msgstr "Повторное сканирование дисков"
+msgid "Rescan Busses"
+msgstr "Пересканировать шины"
 
 msgid "Rescan Interval"
 msgstr "Интервал пересканирования"
@@ -8739,14 +8765,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Время показа экрана по-умолчанию."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"Устройство (-а) в конфигурации не соответсвует (-ют) реальному устройству. "
-"Пожалуйста, удалите устройтво (-а) и добавьте их заново или используйте "
-"'Очистить конфигурацию и Импортировать диски'."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8790,6 +8808,9 @@ msgstr "Защищённое устройство в настоящее врем
 
 msgid "The entire system configuration will be overwritten."
 msgstr "Вся конфигурация системы будет перезаписана."
+
+msgid "The existing configuration may be overwritten."
+msgstr "Существующая конфигурация может быть перезаписана."
 
 msgid "The extent name already exists."
 msgstr "Такое имя экстента уже существует."
@@ -11005,3 +11026,68 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
+
+#~ msgid "Add disk"
+#~ msgstr "Добавить диск"
+
+#~ msgid "Delete disk"
+#~ msgstr "Удалить диск"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Вы действительно хотите удалить этот диск? Все объекты, использующие его, "
+#~ "станут недоступны (например, общие ресурсы)."
+
+#~ msgid "Edit disk"
+#~ msgstr "Изменить диск"
+
+#~ msgid "Process"
+#~ msgstr "Процесс"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Все диски программных RAID импортированы"
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Не найдено нового диска программного RAID."
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "Устройство (-а) в конфигурации не соответсвует (-ют) реальному устройству. "
+#~ "Пожалуйста, удалите устройтво (-а) и добавьте их заново или используйте "
+#~ "'Очистить конфигурацию и Импортировать диски'."
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Очистить конфигурацию и импортировать диски"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Очистить конфигурацию и импортировать программные рейд диски"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Импорт программных рэйд дисков"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Повторное сканирование дисков"
+
+#~ msgid "Clear Configuration & Import Software RAID Disks"
+#~ msgstr "Очистить конфигурацию и импортировать программные RAID-диски"
+
+#~ msgid "Clear Configuration & Import Disks"
+#~ msgstr "Очистить конфигурацию и импортировать диски"
+
+#~ msgid ""
+#~ "Do you want to clear configuration information and import software RAID "
+#~ "disks?"
+#~ msgstr ""
+#~ "Вы хотите очистить конфигурационную информацию и импортировать программные "
+#~ "RAID-диски?"
+
+#~ msgid "Do you want to clear configuration information and import disks?"
+#~ msgstr ""
+#~ "Вы хотите очистить конфигурационную информацию и импортировать диски?"
+
+#~ msgid "The existing configuration will be rewritten."
+#~ msgstr "Существующая конфигурация будет перезаписана."

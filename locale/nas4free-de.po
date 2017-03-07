@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-03-06 22:12+0000\n"
 "Last-Translator: apollo567 <apollo567@hotmail.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 23:28+0000\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
 "X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -476,6 +476,9 @@ msgstr "CARP Hinzufügen"
 msgid "Add Dataset"
 msgstr "Dataset hinzufügen"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Verschlüsseltes Volume Hinzufügen"
 
@@ -571,9 +574,6 @@ msgstr "Automatischen Snapshot hinzufügen"
 
 msgid "Add command"
 msgstr "Befehl hinzufügen"
-
-msgid "Add disk"
-msgstr "Festplatte hinzufügen"
 
 msgid "Add extent"
 msgstr "Extent hinzufügen"
@@ -746,8 +746,8 @@ msgstr ""
 "Alle Freigaben benutzen die Option 'usedots', welche die Dateinamen .Parent "
 "und alles andere das mit .Apple anfängt unzulässig macht."
 
-msgid "All software raid disks are imported."
-msgstr "Alle Software RAID-Festplatten sind importiert."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Zugeordnet"
@@ -928,6 +928,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Alle"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "Benutzerdefinierte freigaben hinzufügen"
@@ -1563,14 +1566,17 @@ msgstr "Wählen Sie eine Netzwerkschnittstelle zu dieser Route."
 msgid "Clear"
 msgstr "Zurücksetzen"
 
-msgid "Clear Config & Import Disks"
-msgstr "Konfiguration löschen und neu von dem ZFS-Pool einlesen"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Konfiguration löschen und neu von dem Software Raidl einlesen"
-
 msgid "Clear Config And Import Disks"
 msgstr "Konfiguration bereinigen und Festplatten importieren"
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Gerätefehler löschen"
@@ -1692,6 +1698,12 @@ msgstr "Einstellungen"
 
 msgid "Configuration Directory"
 msgstr "Konfigurationsverzeichnis"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
 
 msgid "Configuring"
 msgstr "Konfiguriere"
@@ -2267,6 +2279,9 @@ msgstr "Entfernt ausgewählte Kommandos"
 msgid "Delete Selected Datasets"
 msgstr "Ausgewählte Datasets löschen"
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Ausgewählte verschlüsselte Datenträger löschen"
 
@@ -2356,9 +2371,6 @@ msgstr "Clone löschen"
 
 msgid "Delete command"
 msgstr "Lösche Kommando"
-
-msgid "Delete disk"
-msgstr "Lösche Festplatte"
 
 msgid "Delete extent"
 msgstr "Lösche Extent"
@@ -2674,6 +2686,15 @@ msgstr "Verwendeter Speicherplatz"
 msgid "Disk Usage"
 msgstr "Festplattenauslastung"
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Festplatten"
 
@@ -2755,13 +2776,6 @@ msgstr "Wollen sie diesen automatischen Snapshot wirklich löschen?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Möchten Sie diesen Clone wirklich löschen"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Wollen Sie diese Festplatte wirklich löschen? Alle Elemente, die derzeit "
-"verwendet werden, werden ungültig (z.B. Freigaben)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Wollen Sie diesen Extent wirklich löschen?"
@@ -2890,6 +2904,9 @@ msgstr "Sollen  alle ausgewählten Kommandos gelöscht werden?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Willst du die ausgewählten Datasets löschen?"
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 "Wollen Sie die ausgewählten verschlüsselten Datenträger wirklich löschen?"
@@ -2974,6 +2991,12 @@ msgstr "Möchten Sie ausgewählte RSYNC-Jobs aktivieren?"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Möchten Sie ausgewählte RSYNC-Module aktivieren?"
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
+msgstr ""
 
 msgid "Do you want to lock selected records?"
 msgstr "Möchtest du die gewählten Einträge sperren?"
@@ -3127,6 +3150,9 @@ msgstr "CARP Konfiguration editieren"
 msgid "Edit Dataset"
 msgstr "Dataset bearbeiten"
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr "Konfiguration von verschlüsseltem Laufwerk editieren"
 
@@ -3207,9 +3233,6 @@ msgstr "Auto-Snapshot bearbeiten"
 
 msgid "Edit command"
 msgstr "Befehl bearbeiten"
-
-msgid "Edit disk"
-msgstr "Bearbeite Festplatte"
 
 msgid "Edit extent"
 msgstr "Extent bearbeiten"
@@ -4594,8 +4617,8 @@ msgstr "Importieren"
 msgid "Import Disks"
 msgstr "Festplatten importieren"
 
-msgid "Import Software Raid Disks"
-msgstr "Festplatten des Sotware-Raids importieren"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "Importiere Festplatten"
@@ -5888,8 +5911,8 @@ msgstr "Keine neuen Festplatten gefunden."
 msgid "No new encrypted disks have been found."
 msgstr "Es wurden keine neuen verschlüsselten Datenträger gefunden."
 
-msgid "No new software raid disk found."
-msgstr "Keine neuen Software-RAID Festplatten gefunden."
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr "Es wurden keine Partitionen gefunden."
@@ -6661,9 +6684,6 @@ msgstr "Privater Schlüssel"
 msgid "Private key"
 msgstr "Privater Schlüssel"
 
-msgid "Process"
-msgstr "Prozess"
-
 msgid "Process Status"
 msgstr "Prozessstatus"
 
@@ -7053,8 +7073,8 @@ msgstr "Erforderlich"
 msgid "Rescan"
 msgstr "Erneut Scannen"
 
-msgid "Rescan Disks"
-msgstr "Festplatten wiedereinlesen"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr "Zeitintervall neuscannen"
@@ -8743,15 +8763,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Die Wartezeit in Sekunden, um ein Bild darzustellen."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"Die Festplattenliste ('devices') in der Systemkonfigurationdatei entsprechen "
-"nicht der gefundenen Festplattenkonfiguration. Entfernen sie die Festplatten "
-"und fügen sie die Festplatten wieder neu in die Konfiguration ein. "
-"Alternativ können den Befehl 'Clear config and Import disks' benutzen."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8800,6 +8811,9 @@ msgstr "Das verschlüsselte Gerät ist momentan eingehängt."
 
 msgid "The entire system configuration will be overwritten."
 msgstr "Die gesamten System-Einstellungen werden überschrieben."
+
+msgid "The existing configuration may be overwritten."
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "Dieser Name existiert bereits"
@@ -11043,3 +11057,49 @@ msgstr "bis"
 
 msgid "umount"
 msgstr "aushängen"
+
+#~ msgid "Add disk"
+#~ msgstr "Festplatte hinzufügen"
+
+#~ msgid "Delete disk"
+#~ msgstr "Lösche Festplatte"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Wollen Sie diese Festplatte wirklich löschen? Alle Elemente, die derzeit "
+#~ "verwendet werden, werden ungültig (z.B. Freigaben)!"
+
+#~ msgid "Edit disk"
+#~ msgstr "Bearbeite Festplatte"
+
+#~ msgid "Process"
+#~ msgstr "Prozess"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "Die Festplattenliste ('devices') in der Systemkonfigurationdatei entsprechen "
+#~ "nicht der gefundenen Festplattenkonfiguration. Entfernen sie die Festplatten "
+#~ "und fügen sie die Festplatten wieder neu in die Konfiguration ein. "
+#~ "Alternativ können den Befehl 'Clear config and Import disks' benutzen."
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Alle Software RAID-Festplatten sind importiert."
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Keine neuen Software-RAID Festplatten gefunden."
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Konfiguration löschen und neu von dem ZFS-Pool einlesen"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Konfiguration löschen und neu von dem Software Raidl einlesen"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Festplatten des Sotware-Raids importieren"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Festplatten wiedereinlesen"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
-"PO-Revision-Date: 2017-03-06 08:21+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"PO-Revision-Date: 2017-03-07 13:23+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:22+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -413,6 +413,9 @@ msgstr "添加CARP"
 msgid "Add Dataset"
 msgstr "添加数据集"
 
+msgid "Add Disk"
+msgstr "添加磁盘"
+
 msgid "Add Encrypted Volume"
 msgstr "添加加密卷"
 
@@ -508,9 +511,6 @@ msgstr "添加自动快照"
 
 msgid "Add command"
 msgstr "添加命令"
-
-msgid "Add disk"
-msgstr "添加磁盘"
 
 msgid "Add extent"
 msgstr "添加 extent"
@@ -667,8 +667,8 @@ msgid ""
 "anything beginning with .Apple illegal."
 msgstr "所有共享使用选项'usedots'，从而使文件名.Parent和以.Apple开头的任何内容都是非法的。"
 
-msgid "All software raid disks are imported."
-msgstr "已经导入所有软RAID的硬盘。"
+msgid "All software RAID disks are imported."
+msgstr "所有软RAID磁盘已导入。"
 
 msgid "Alloc"
 msgstr "分派"
@@ -821,6 +821,9 @@ msgstr "另一个 DLNA/UPnP 服务已在运行。开启 MiniDLNA 可能导致问
 
 msgid "Any"
 msgstr "任何"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr "使用这些磁盘的任何服务可能会变得无效或无法访问！"
 
 msgid "Append user defined shares"
 msgstr "追加用户自定义的用户共享"
@@ -1411,14 +1414,17 @@ msgstr "选择此路由应用于哪个接口。"
 msgid "Clear"
 msgstr "清除"
 
-msgid "Clear Config & Import Disks"
-msgstr "清除和导入磁盘设置"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "清除和导入软RAID设置"
-
 msgid "Clear Config And Import Disks"
 msgstr "清除配置并导入磁盘"
+
+msgid "Clear Configuration"
+msgstr "清除配置"
+
+msgid "Clear configuration information before importing disks."
+msgstr "在导入磁盘之前清除配置信息。"
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr "在导入软RAID磁盘之前清除配置信息。"
 
 msgid "Clear device errors"
 msgstr "清除设备错误"
@@ -1533,6 +1539,12 @@ msgstr "配置"
 
 msgid "Configuration Directory"
 msgstr "配置目录"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr "设备的配置信息与物理设备不同。 请移除这些设备并重新添加它们或运行导入磁盘，并启用清除配置选项。"
 
 msgid "Configuring"
 msgstr "设置中"
@@ -1818,7 +1830,7 @@ msgid "Creating filesystem with 'Soft Updates'"
 msgstr "建立可 'Soft Updates' 的文件系统"
 
 msgid "Creating partition"
-msgstr "创建磁碟分区中"
+msgstr "正在创建分区"
 
 msgid "Creation"
 msgstr "创建"
@@ -2073,6 +2085,9 @@ msgstr "删除所选命令"
 msgid "Delete Selected Datasets"
 msgstr "删除选中的数据集"
 
+msgid "Delete Selected Disks"
+msgstr "删除选中的磁盘"
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "删除所选的加密卷"
 
@@ -2162,9 +2177,6 @@ msgstr "删除克隆"
 
 msgid "Delete command"
 msgstr "删除命令"
-
-msgid "Delete disk"
-msgstr "删除硬盘"
 
 msgid "Delete extent"
 msgstr "删除 extent"
@@ -2467,6 +2479,15 @@ msgstr "磁盘空间使用率"
 msgid "Disk Usage"
 msgstr "磁盘使用情况"
 
+msgid "Disk is locked"
+msgstr "磁盘被锁定"
+
+msgid "Disk is marked for deletion"
+msgstr "磁盘被标记为要删除"
+
+msgid "Disk is unlocked"
+msgstr "磁盘被解锁"
+
 msgid "Disks"
 msgstr "硬盘"
 
@@ -2537,11 +2558,6 @@ msgstr "您确定要删除这个自动快照吗？"
 
 msgid "Do you really want to delete this clone?"
 msgstr "您确认要删除这个克隆吗？"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr "您确定要删除这个硬盘吗？所有使用此硬盘的元件都会失效！ (例如：分享区)"
 
 msgid "Do you really want to delete this extent?"
 msgstr "您确定要删除这个 extent 吗？"
@@ -2656,6 +2672,9 @@ msgstr "要删除所选的命令吗？"
 msgid "Do you want to delete selected datasets?"
 msgstr "要删除选定的数据集吗？"
 
+msgid "Do you want to delete selected disks?"
+msgstr "您要删除所选磁盘吗？"
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "是否要删除所选的加密卷？"
 
@@ -2739,6 +2758,12 @@ msgstr "是否要启用所选的rsync任务？"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "是否要启用所选的rsync模块？"
+
+msgid "Do you want to import disks?"
+msgstr "您要导入磁盘吗？"
+
+msgid "Do you want to import software RAID disks?"
+msgstr "您要导入软RAID磁盘吗？"
 
 msgid "Do you want to lock selected records?"
 msgstr "您要锁定所选记录吗？"
@@ -2888,6 +2913,9 @@ msgstr "编辑CARP"
 msgid "Edit Dataset"
 msgstr "编辑数据集"
 
+msgid "Edit Disk"
+msgstr "编辑磁盘"
+
 msgid "Edit Encrypted Volume"
 msgstr "编辑加密卷"
 
@@ -2968,9 +2996,6 @@ msgstr "编辑自动快照"
 
 msgid "Edit command"
 msgstr "编辑命令"
-
-msgid "Edit disk"
-msgstr "编辑硬盘"
 
 msgid "Edit extent"
 msgstr "编辑 extent"
@@ -3955,7 +3980,7 @@ msgid "Guest"
 msgstr "访客（Guest）"
 
 msgid "Guest Account"
-msgstr "来宾账户"
+msgstr "访客账户"
 
 msgid "HAST"
 msgstr "HAST"
@@ -4263,8 +4288,8 @@ msgstr "导入"
 msgid "Import Disks"
 msgstr "导入磁盘"
 
-msgid "Import Software Raid Disks"
-msgstr "导入软件RAID磁盘"
+msgid "Import Software RAID Disks"
+msgstr "导入软RAID磁盘"
 
 msgid "Import disks"
 msgstr "导入磁盘"
@@ -4351,7 +4376,7 @@ msgid "Initialize"
 msgstr "初始化"
 
 msgid "Initialize and encrypt disk."
-msgstr "初始化及加密磁碟"
+msgstr "初始化并加密磁盘。"
 
 msgid "Initializing"
 msgstr "初始化"
@@ -5482,8 +5507,8 @@ msgstr "没有发现新的硬盘。"
 msgid "No new encrypted disks have been found."
 msgstr "未找到新的加密磁盘。"
 
-msgid "No new software raid disk found."
-msgstr "没有发现新的软RAID的硬盘。"
+msgid "No new software RAID disk found."
+msgstr "没找到新的软RAID磁盘"
 
 msgid "No partition information found."
 msgstr "未找到分区信息。"
@@ -6222,9 +6247,6 @@ msgstr "私钥"
 msgid "Private key"
 msgstr "私钥"
 
-msgid "Process"
-msgstr "进程"
-
 msgid "Process Status"
 msgstr "进程状态"
 
@@ -6597,8 +6619,8 @@ msgstr "必填"
 msgid "Rescan"
 msgstr "重新扫描"
 
-msgid "Rescan Disks"
-msgstr "重新扫描磁盘"
+msgid "Rescan Busses"
+msgstr "重新扫描总线"
 
 msgid "Rescan Interval"
 msgstr "重新扫描间隔"
@@ -8154,11 +8176,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "显示在屏幕的时间的默认值（秒）。"
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr "在配置中的设备和实际设备并不相同。请移除设备，然后重新添加它，或使用“清除和导入磁盘设置\"。"
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr "您想要发布文件的目录。远程主机传递时不需要转移目录。"
@@ -8172,7 +8189,7 @@ msgid ""
 msgstr "磁盘正在挂载中！执行所选择的命令时，挂载点将暂时被删除。"
 
 msgid "The disk/partition is already configured."
-msgstr "磁碟/磁碟分区 已经配置。"
+msgstr "磁盘/分区 已配置"
 
 #, php-format
 msgid "The distinguished name to bind to the directory server, e.g. %s"
@@ -8197,6 +8214,9 @@ msgstr "加密的设备当前已挂载！"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "整个系统配置将被覆盖。"
+
+msgid "The existing configuration may be overwritten."
+msgstr "现有配置可被覆盖。"
 
 msgid "The extent name already exists."
 msgstr "Extent 名称已经存在。"
@@ -10138,3 +10158,43 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
+
+#~ msgid "Add disk"
+#~ msgstr "添加磁盘"
+
+#~ msgid "Delete disk"
+#~ msgstr "删除硬盘"
+
+#~ msgid "Edit disk"
+#~ msgstr "编辑硬盘"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr "您确定要删除这个硬盘吗？所有使用此硬盘的元件都会失效！ (例如：分享区)"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr "在配置中的设备和实际设备并不相同。请移除设备，然后重新添加它，或使用“清除和导入磁盘设置\"。"
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "清除和导入磁盘设置"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "导入软件RAID磁盘"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "重新扫描磁盘"
+
+#~ msgid "Process"
+#~ msgstr "进程"
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "没有发现新的软RAID的硬盘。"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "已经导入所有软RAID的硬盘。"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "清除和导入软RAID设置"

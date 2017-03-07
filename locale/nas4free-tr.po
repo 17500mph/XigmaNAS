@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-03-01 22:27+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:22+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -425,6 +425,9 @@ msgstr "CARP Ekle"
 msgid "Add Dataset"
 msgstr "Veri kümesi Ekle"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Şifrelenmiş Alan ekle"
 
@@ -520,9 +523,6 @@ msgstr "Otomatik Ani Kayıt ekle"
 
 msgid "Add command"
 msgstr "Komut Ekle"
-
-msgid "Add disk"
-msgstr "Disk Ekle"
 
 msgid "Add extent"
 msgstr "Uzantı Ekle"
@@ -686,8 +686,8 @@ msgid ""
 "anything beginning with .Apple illegal."
 msgstr ""
 
-msgid "All software raid disks are imported."
-msgstr "Tüm Yazılımsal raid diskleri eklendi."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr ""
@@ -843,6 +843,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Herhangi"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr ""
@@ -1433,13 +1436,16 @@ msgstr "bu yola uygulanacak arayüzü seçin"
 msgid "Clear"
 msgstr "Temizle"
 
-msgid "Clear Config & Import Disks"
-msgstr ""
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1554,6 +1560,12 @@ msgid "Configuration"
 msgstr "Yapılandırma"
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2078,6 +2090,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -2167,9 +2182,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr ""
-
-msgid "Delete disk"
-msgstr "Disk Sil"
 
 msgid "Delete extent"
 msgstr "Uzantı Sil"
@@ -2472,6 +2484,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Diskler"
 
@@ -2542,13 +2563,6 @@ msgstr ""
 
 msgid "Do you really want to delete this clone?"
 msgstr ""
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Bu diski gerçekten silmek istediğinize emin misiniz? Kullanılan tüm öğeler "
-"geçersiz kılınacak (Paylaşım gibi)"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Bu uzantıyı gerçekten silmek istediğinize emin misiniz?"
@@ -2666,6 +2680,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2748,6 +2765,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -2898,6 +2921,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -2978,9 +3004,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Komutu düzenle"
-
-msgid "Edit disk"
-msgstr "Disk Düzenle"
 
 msgid "Edit extent"
 msgstr "Uzantı Düzenle"
@@ -4272,7 +4295,7 @@ msgstr "İçe aktart"
 msgid "Import Disks"
 msgstr ""
 
-msgid "Import Software Raid Disks"
+msgid "Import Software RAID Disks"
 msgstr ""
 
 msgid "Import disks"
@@ -5488,7 +5511,7 @@ msgstr ""
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
+msgid "No new software RAID disk found."
 msgstr ""
 
 msgid "No partition information found."
@@ -6224,9 +6247,6 @@ msgstr ""
 msgid "Private key"
 msgstr ""
 
-msgid "Process"
-msgstr "İşlem"
-
 msgid "Process Status"
 msgstr ""
 
@@ -6596,7 +6616,7 @@ msgstr "Gerekli"
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
+msgid "Rescan Busses"
 msgstr ""
 
 msgid "Rescan Interval"
@@ -8144,11 +8164,6 @@ msgid "The default time in seconds to display a screen."
 msgstr ""
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8186,6 +8201,9 @@ msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
 msgstr ""
 
 msgid "The extent name already exists."
@@ -10109,3 +10127,25 @@ msgstr "->"
 
 msgid "umount"
 msgstr "ayır"
+
+#~ msgid "Add disk"
+#~ msgstr "Disk Ekle"
+
+#~ msgid "Delete disk"
+#~ msgstr "Disk Sil"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Bu diski gerçekten silmek istediğinize emin misiniz? Kullanılan tüm öğeler "
+#~ "geçersiz kılınacak (Paylaşım gibi)"
+
+#~ msgid "Edit disk"
+#~ msgstr "Disk Düzenle"
+
+#~ msgid "Process"
+#~ msgstr "İşlem"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Tüm Yazılımsal raid diskleri eklendi."

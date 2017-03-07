@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-03-05 08:47+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:22+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -461,6 +461,9 @@ msgstr "Afegir CARP"
 msgid "Add Dataset"
 msgstr "Afegir conjunt de dades"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Afegir volum xifrat"
 
@@ -556,9 +559,6 @@ msgstr "Afegeix vista miniatura automàtica"
 
 msgid "Add command"
 msgstr "Afegeix comanda"
-
-msgid "Add disk"
-msgstr "Afegir disc"
 
 msgid "Add extent"
 msgstr "Afegeix extensió"
@@ -732,8 +732,8 @@ msgstr ""
 "el nom de fitxer. Parents i qualsevol paraula que comenci amb .Apple es "
 "il.legal."
 
-msgid "All software raid disks are imported."
-msgstr "Tots els discs RAID de Software son importats"
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Usat"
@@ -911,6 +911,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Qualsevol"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "Annexar recursos definits per l'usuari"
@@ -1538,14 +1541,17 @@ msgstr "Trieu a quin interfície s'aplica aquesta regla"
 msgid "Clear"
 msgstr "Esborrar"
 
-msgid "Clear Config & Import Disks"
-msgstr "Esborrar configuració i  importa discs"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Esborrar configuració i  importar discs de programari Raid"
-
 msgid "Clear Config And Import Disks"
 msgstr "Esborrar configuració i importar discs"
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Esborra els errors del dispositiu"
@@ -1667,6 +1673,12 @@ msgstr "Configuració"
 
 msgid "Configuration Directory"
 msgstr "Directori de configuració"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
 
 msgid "Configuring"
 msgstr "Configuració"
@@ -2281,6 +2293,9 @@ msgstr "Suprimeix comandos seleccionats"
 msgid "Delete Selected Datasets"
 msgstr "Suprimeix conjunts de dades seleccionats"
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Eliminar volums xifrats seleccionats"
 
@@ -2370,9 +2385,6 @@ msgstr "Suprimeix el clon"
 
 msgid "Delete command"
 msgstr "Suprimeix ordre"
-
-msgid "Delete disk"
-msgstr "Suprimeix el disc"
 
 msgid "Delete extent"
 msgstr "Suprimeix l'extensió"
@@ -2690,6 +2702,15 @@ msgstr "Ús d'espai del disc"
 msgid "Disk Usage"
 msgstr "Ús de disc"
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Discs"
 
@@ -2771,13 +2792,6 @@ msgstr "Realment vol eliminar aquesta instantània automàtica?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Realment voleu eliminar aquest clon?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Realment vols esborrar aquest disc? Tots els elements que encara l'utilitzen "
-"deixaran de ser vàlids (per exemple, recursos)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Realment vol eliminar aquest punt?"
@@ -2902,6 +2916,9 @@ msgstr "Vols eliminar les ordres seleccionades?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Voleu eliminar els conjunts de dades seleccionats?"
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "Voleu eliminar els volums xifrats seleccionats?"
 
@@ -2985,6 +3002,12 @@ msgstr "Vols activar els treballs Rsync seleccionats"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Vols activar els mòduls Rsync seleccionats?"
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
+msgstr ""
 
 msgid "Do you want to lock selected records?"
 msgstr "Voleu bloquejar els registres seleccionats?"
@@ -3137,6 +3160,9 @@ msgstr "Edita CARP"
 msgid "Edit Dataset"
 msgstr "Editar conjunt de dades"
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr "Edita volum xifrat"
 
@@ -3217,9 +3243,6 @@ msgstr "Editar instantanea automatica"
 
 msgid "Edit command"
 msgstr "Editar ordre"
-
-msgid "Edit disk"
-msgstr "Editar Disc"
 
 msgid "Edit extent"
 msgstr "Editar extensió"
@@ -4622,8 +4645,8 @@ msgstr "Importar"
 msgid "Import Disks"
 msgstr "Importa discs"
 
-msgid "Import Software Raid Disks"
-msgstr "Importa els discs de programari RAID"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "Importar discs"
@@ -5917,8 +5940,8 @@ msgstr "Sense disc nou trobat."
 msgid "No new encrypted disks have been found."
 msgstr "No s'han trobat nous discos xifrats."
 
-msgid "No new software raid disk found."
-msgstr "Sense programari RAID per disc trobat."
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr "No s'ha trobat informació de particions."
@@ -6696,9 +6719,6 @@ msgstr "Clau privada"
 msgid "Private key"
 msgstr "Clau privada"
 
-msgid "Process"
-msgstr "Procés"
-
 msgid "Process Status"
 msgstr "Estat de procés"
 
@@ -7089,8 +7109,8 @@ msgstr "Necessari"
 msgid "Rescan"
 msgstr "Reescaneja"
 
-msgid "Rescan Disks"
-msgstr "Torna a examinar els discs"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr "Interval de re-escanejat"
@@ -8787,14 +8807,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "El temps predeterminat en segons per a visualitzar una pantalla."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"El dispositiu (s) en la configuració són diferents al dispositiu (s) real. "
-"Si us plau, retiri el dispositiu (s) i tornar a afegir o utilitzar 'Esborrar "
-"configuració i importar discos'."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8839,6 +8851,9 @@ msgstr "El dispositiu de xifrat està muntat!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "Tota la configuració del sistema es sobreescriurà."
+
+msgid "The existing configuration may be overwritten."
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "El nom estès ja existeix."
@@ -11058,3 +11073,48 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid "Add disk"
+#~ msgstr "Afegir disc"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Tots els discs RAID de Software son importats"
+
+#~ msgid "Delete disk"
+#~ msgstr "Suprimeix el disc"
+
+#~ msgid "Edit disk"
+#~ msgstr "Editar Disc"
+
+#~ msgid "Process"
+#~ msgstr "Procés"
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Sense programari RAID per disc trobat."
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Esborrar configuració i  importar discs de programari Raid"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Importa els discs de programari RAID"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Torna a examinar els discs"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "El dispositiu (s) en la configuració són diferents al dispositiu (s) real. "
+#~ "Si us plau, retiri el dispositiu (s) i tornar a afegir o utilitzar 'Esborrar "
+#~ "configuració i importar discos'."
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Esborrar configuració i  importa discs"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Realment vols esborrar aquest disc? Tots els elements que encara l'utilitzen "
+#~ "deixaran de ser vàlids (per exemple, recursos)!"

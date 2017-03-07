@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-03-04 15:26+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -450,6 +450,9 @@ msgstr "CARP hozzáadása"
 msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Titkosított kötet hozzáadása"
 
@@ -545,9 +548,6 @@ msgstr "Automatikus pillanatkép hozzáadása"
 
 msgid "Add command"
 msgstr "Parancs hozzáadása"
-
-msgid "Add disk"
-msgstr "Lemez hozzáadása"
 
 msgid "Add extent"
 msgstr "extent hozzáadása"
@@ -717,8 +717,8 @@ msgstr ""
 "Az összes megosztás használja a 'használjpontokat' opciót, de a .Parent és "
 "bármi .Apple kezdettel nem használható."
 
-msgid "All software raid disks are imported."
-msgstr "Összes szoftveres raid lemez importálva."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Foglalt"
@@ -893,6 +893,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Bármely"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "Felhasználó által létrehozott megosztás hozzáfűzése"
@@ -1512,14 +1515,17 @@ msgstr "Válaszd ki, melyik interfészhez tartozik ez az útvonal."
 msgid "Clear"
 msgstr "Törlés"
 
-msgid "Clear Config & Import Disks"
-msgstr "Beállítások törlése és lemezek importálása"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Beállítások törlése és szoftveres RAID-es lemezek importálása"
-
 msgid "Clear Config And Import Disks"
 msgstr "Konfiguráció törlése és lemezek importálása"
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Eszközhibák törlése"
@@ -1641,6 +1647,12 @@ msgstr "Beállítások"
 
 msgid "Configuration Directory"
 msgstr "Beállítások könyvtára"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
 
 msgid "Configuring"
 msgstr "Beállítás"
@@ -2229,6 +2241,9 @@ msgstr "Kijelölt parancsok törlése"
 msgid "Delete Selected Datasets"
 msgstr "Kiválasztott kötetek törlése"
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Kijelölt titkosított kötetek törlése"
 
@@ -2318,9 +2333,6 @@ msgstr "Clone törlése"
 
 msgid "Delete command"
 msgstr "Parancs törlése"
-
-msgid "Delete disk"
-msgstr "Lemez eltávolítása"
 
 msgid "Delete extent"
 msgstr "Extent törlése"
@@ -2634,6 +2646,15 @@ msgstr "Lemezhasználat"
 msgid "Disk Usage"
 msgstr "Lemezhasználat"
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Lemezek"
 
@@ -2711,13 +2732,6 @@ msgstr "Valóban törölni kívánja ezt az automatikus pillanatképet?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Valóban törölni kívánja ezt a clone-t?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Biztos, hogy eltávolítod ezt a lemezt? Az össze ezt használó elem "
-"érvénytelenné válik (pl.: megosztás)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Valóban törölni akarja ezt az extent?-et"
@@ -2850,6 +2864,9 @@ msgstr "Biztos, hogy törlöd a kijelölt parancsokat?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "Biztos, hogy törlöd a kiválasztott titkosított köteteket?"
 
@@ -2933,6 +2950,12 @@ msgstr "Biztos, hogy bekapcsolod a kijelölt rsync feladatokat?"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Biztos, hogy bekapcsolod a kijelölt rsync modulokat?"
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
+msgstr ""
 
 msgid "Do you want to lock selected records?"
 msgstr "Biztos, hogy zárolod a kijelölt rekordokat?"
@@ -3083,6 +3106,9 @@ msgstr "CARP módosítása"
 msgid "Edit Dataset"
 msgstr "Adattár módosítása"
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr "Titkosított kötet módosítása"
 
@@ -3163,9 +3189,6 @@ msgstr "Automatikus pillanatkép beállításai"
 
 msgid "Edit command"
 msgstr "Parancs szerkesztése"
-
-msgid "Edit disk"
-msgstr "Lemez módosítása"
 
 msgid "Edit extent"
 msgstr "Extent szerkesztése"
@@ -4542,8 +4565,8 @@ msgstr "Importálás"
 msgid "Import Disks"
 msgstr "Lemezek importálása"
 
-msgid "Import Software Raid Disks"
-msgstr "Szoftveres RAID-es lemezek importálása"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "Lemezek importálása"
@@ -5831,8 +5854,8 @@ msgstr "Nincs új lemez."
 msgid "No new encrypted disks have been found."
 msgstr "Egy titkosított lemezt sem találtunk."
 
-msgid "No new software raid disk found."
-msgstr "Nincs új szoftveres raid lemez."
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr "Semmilyen partícióinformáció nem található."
@@ -6609,9 +6632,6 @@ msgstr "Privát kulcs"
 msgid "Private key"
 msgstr "Privát kulcs"
 
-msgid "Process"
-msgstr "Folyamat"
-
 msgid "Process Status"
 msgstr "Folyamatállapot"
 
@@ -7002,8 +7022,8 @@ msgstr "Kötelező"
 msgid "Rescan"
 msgstr "Újrakeresés"
 
-msgid "Rescan Disks"
-msgstr "Lemezek újrakeresése"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr "Újrakeresési időköz"
@@ -8687,14 +8707,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "A képernyő megjelenésének alapértelmezett ideje másodpercben."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"A beállításokban lévő eszköz(ök) eltérnek a jelenlegi(ek)től. Távolítsd le "
-"majd újra hozzá az eszköz(öke)t, vagy használd a 'Beállítások törlése és "
-"lemezek importálása' lehetőséget."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8737,6 +8749,9 @@ msgstr "Az titkosított eszköz jelenleg be van csatolva!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "A teljes rendszerbeállítást felülírjuk."
+
+msgid "The existing configuration may be overwritten."
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "A extent már létezik"
@@ -10916,3 +10931,48 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "Add disk"
+#~ msgstr "Lemez hozzáadása"
+
+#~ msgid "Delete disk"
+#~ msgstr "Lemez eltávolítása"
+
+#~ msgid "Edit disk"
+#~ msgstr "Lemez módosítása"
+
+#~ msgid "Process"
+#~ msgstr "Folyamat"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "A beállításokban lévő eszköz(ök) eltérnek a jelenlegi(ek)től. Távolítsd le "
+#~ "majd újra hozzá az eszköz(öke)t, vagy használd a 'Beállítások törlése és "
+#~ "lemezek importálása' lehetőséget."
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Nincs új szoftveres raid lemez."
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Összes szoftveres raid lemez importálva."
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Biztos, hogy eltávolítod ezt a lemezt? Az össze ezt használó elem "
+#~ "érvénytelenné válik (pl.: megosztás)!"
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Beállítások törlése és lemezek importálása"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Beállítások törlése és szoftveres RAID-es lemezek importálása"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Szoftveres RAID-es lemezek importálása"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Lemezek újrakeresése"
