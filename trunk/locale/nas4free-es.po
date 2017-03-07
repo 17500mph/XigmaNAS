@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-03-07 12:31+0000\n"
-"PO-Revision-Date: 2017-03-05 14:39+0000\n"
+"PO-Revision-Date: 2017-03-07 19:40+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Launchpad-Export-Date: 2017-03-07 20:21+0000\n"
 "X-Generator: Launchpad (build 18330)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -457,7 +457,7 @@ msgid "Add Dataset"
 msgstr "Añadir Dataset"
 
 msgid "Add Disk"
-msgstr ""
+msgstr "Añadir Disco"
 
 msgid "Add Encrypted Volume"
 msgstr "Añadir Volumen encriptado"
@@ -724,7 +724,7 @@ msgstr ""
 "los archivos .Parent y cualquiera que empiece con .Apple."
 
 msgid "All software RAID disks are imported."
-msgstr ""
+msgstr "Todos los discos Soft RAID han sido importados."
 
 msgid "Alloc"
 msgstr "Asignación"
@@ -905,6 +905,8 @@ msgstr "Cualquiera"
 
 msgid "Any service using these disks might become invalid or inaccessible!"
 msgstr ""
+"Cualquier servicio que utilice estos discos se vera afectado o será "
+"inaccesible."
 
 msgid "Append user defined shares"
 msgstr "Añadir compartidos definidos por el usuario"
@@ -1541,13 +1543,14 @@ msgid "Clear Config And Import Disks"
 msgstr "Actualizar Config. e importar Discos."
 
 msgid "Clear Configuration"
-msgstr ""
+msgstr "Borrar configuración"
 
 msgid "Clear configuration information before importing disks."
-msgstr ""
+msgstr "Borrar información de configuración antes de importar los discos"
 
 msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
+"Borrar información de configuración antes de importar los discos soft RAID"
 
 msgid "Clear device errors"
 msgstr "Elimina los erores del dispositivo"
@@ -1675,6 +1678,9 @@ msgid ""
 "Please remove those devices and re-add them or run import disks with clear "
 "configuration option enabled."
 msgstr ""
+"La configuración actual difiere de la salvada. Por favor reordene o "
+"reinserte los discos o seleccione borrar la configuración actual e importar "
+"de nuevo los discos."
 
 msgid "Configuring"
 msgstr "Configurando"
@@ -2290,7 +2296,7 @@ msgid "Delete Selected Datasets"
 msgstr "Borrar los Dataset seleccionados"
 
 msgid "Delete Selected Disks"
-msgstr ""
+msgstr "Borrar los discos seleccionados"
 
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Borrar los volumenes encriptados seleccionados"
@@ -2695,13 +2701,13 @@ msgid "Disk Usage"
 msgstr "Uso de Disco"
 
 msgid "Disk is locked"
-msgstr ""
+msgstr "Disco Bloqueado"
 
 msgid "Disk is marked for deletion"
-msgstr ""
+msgstr "Disco marcado para borrado"
 
 msgid "Disk is unlocked"
-msgstr ""
+msgstr "Disco desbloqueado"
 
 msgid "Disks"
 msgstr "Discos"
@@ -2905,7 +2911,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Desea borrar los Dataset seleccionados?"
 
 msgid "Do you want to delete selected disks?"
-msgstr ""
+msgstr "¿Desea borrar los discos seleccionados?"
 
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "¿Desea borrar los volumenes encriptados?"
@@ -2992,10 +2998,10 @@ msgid "Do you want to enable selected rsync modules?"
 msgstr "¿Desea habillitar los módulos Rsync seleccionados?"
 
 msgid "Do you want to import disks?"
-msgstr ""
+msgstr "¿Desea importar los discos seleccionados?"
 
 msgid "Do you want to import software RAID disks?"
-msgstr ""
+msgstr "¿Desea importar discos soft RAID ?"
 
 msgid "Do you want to lock selected records?"
 msgstr "¿Desea bloquear los registros seleccionados?"
@@ -3149,7 +3155,7 @@ msgid "Edit Dataset"
 msgstr "Editar Dataset"
 
 msgid "Edit Disk"
-msgstr ""
+msgstr "Editar Disco"
 
 msgid "Edit Encrypted Volume"
 msgstr "Editar volumenes encriptados"
@@ -4623,7 +4629,7 @@ msgid "Import Disks"
 msgstr "Importar Discos"
 
 msgid "Import Software RAID Disks"
-msgstr ""
+msgstr "Importar discos soft RAID"
 
 msgid "Import disks"
 msgstr "Importar discos"
@@ -5912,7 +5918,7 @@ msgid "No new encrypted disks have been found."
 msgstr "No se han encontrado nuevos discos encriptados."
 
 msgid "No new software RAID disk found."
-msgstr ""
+msgstr "No se han encontrado discos Soft RAID nuevos"
 
 msgid "No partition information found."
 msgstr "No se encuentra información de las particiones"
@@ -7079,7 +7085,7 @@ msgid "Rescan"
 msgstr "Reescanear"
 
 msgid "Rescan Busses"
-msgstr ""
+msgstr "Volver a buscar"
 
 msgid "Rescan Interval"
 msgstr "Intervalo de rescaneo"
@@ -8820,7 +8826,7 @@ msgid "The entire system configuration will be overwritten."
 msgstr "La configuración del ssitema será sobrescrita."
 
 msgid "The existing configuration may be overwritten."
-msgstr ""
+msgstr "La actual configuración será sobrescrita"
 
 msgid "The extent name already exists."
 msgstr "El nombre del extent ya existe."
