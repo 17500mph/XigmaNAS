@@ -326,9 +326,6 @@ function webguiproto_change() {
 		<td class="tabcont">
 			<form action="system.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php
-				if(file_exists($d_sysrebootreqd_path)):
-					print_info_box(get_std_save_message(0));
-				endif;
 				if(!empty($input_errors)):
 					print_input_errors($input_errors);
 				endif;
