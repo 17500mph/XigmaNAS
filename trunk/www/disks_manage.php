@@ -75,9 +75,7 @@ function disks_manage_get_sphere() {
 $sphere = &disks_manage_get_sphere();
 array_sort_key($sphere->grid,'name');
 $gt_import_confirm = gtext('Do you want to import disks?') . '\\n' . gtext('The existing configuration may be overwritten.');
-$gt_clearimport_confirm = gtext('Do you want to clear configuration information and import disks?') . '\\n' . gtext('The existing configuration will be rewritten.');
 $gt_importswraid_confirm = gtext('Do you want to import software RAID disks?') . '\\n' . gtext('The existing configuration may be overwritten.');
-$gt_clearimportswraid_confirm = gtext('Do you want to clear configuration information and import software RAID disks?') . '\\n' . gtext('The existing configuration will be rewritten.');
 if($_POST) {
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
@@ -99,9 +97,8 @@ if($_POST) {
 	$clean_import = false;
 	if(isset($_POST['submit'])):
 		switch($_POST['submit']):
-			case 'clearimport': // must be before import to set clean_import flag
-				$clean_import = true;
 			case 'import':
+				$clean_import = isset($_POST['clearimport']);
 				$retval = disks_import_all_disks($clean_import);
 				if($retval == 0):
 					$savemsg = gtext('No new disk found.');
@@ -116,14 +113,13 @@ if($_POST) {
 //				header("Location: disks_manage.php");
 //				exit;
 				break;
-			case 'clearimportswraid':  // must be before importswraid to set clean_import flag
-				$clean_import = true;
 			case 'importswraid':
+				$clean_import = isset($_POST['clearimportswraid']);
 				$retval = disks_import_all_swraid_disks($clean_import);
 				if($retval == 0):
-					$savemsg = gtext('No new software raid disk found.');
+					$savemsg = gtext('No new software RAID disk found.');
 				elseif($retval > 0):
-					$savemsg = gtext('All software raid disks are imported.');
+					$savemsg = gtext('All software RAID disks are imported.');
 				else:
 					$input_errors[] = gtext('Detected an error while importing.');
 				endif;
@@ -134,7 +130,7 @@ if($_POST) {
 				//exit;
 				break;
 			case 'rescanbusses':
-				//	XXX parameter 'all' causes an error XXX
+				//	XXX using parameter 'all' causes an error in FreeBSD 11.0 XXX
 				$cmd = 'camcontrol rescan al';
 				mwexec2($cmd,$rawdata);
 				header($sphere->header());
@@ -167,11 +163,11 @@ if($_POST) {
 	endif;
 }
 //	get all physical disks including CDROM.
-$a_phy_disk = array_merge((array)get_physical_disks_list(), (array)get_cdrom_list());
-//	make sure detected disks have same ID in config.
+$a_phy_disk = array_merge((array)get_physical_disks_list(),(array)get_cdrom_list());
+//	make sure detected disks have the same ID in configuration.
 $verify_errors = disks_verify_all_disks($a_phy_disk);
 if(!empty($verify_errors)):
-	$errormsg .= gtext("The device(s) in config are different to actual device(s). Please remove the device(s) and re-add it or use 'Clear config and Import disks'.");
+	$errormsg .= gtext('Configuration information about devices is different from physical devices. Please remove those devices and re-add them or run import disks with clear configuration option enabled.');
 	$errormsg .= "<br />\n";
 endif;
 $pgtitle = [gtext('Disks'),gtext('Management'),gtext('HDD Management')];
@@ -184,14 +180,8 @@ $(window).on("load", function() {
 	$("#button_import").click(function () {
 		return confirm("<?=$gt_import_confirm?>");
 	});
-	$("#button_clearimport").click(function () {
-		return confirm("<?=$gt_clearimport_confirm?>");
-	});
 	$("#button_importswraid").click(function () {
 		return confirm("<?=$gt_importswraid_confirm?>");
-	});
-	$("#button_clearimportswraid").click(function () {
-		return confirm("<?=$gt_clearimportswraid_confirm?>");
 	});
 });
 //]]>
@@ -358,27 +348,46 @@ $(window).on("load", function() {
 		<?=$sphere->html_button_delete_rows();?>
 		<?=html_button('rescanbusses',gtext('Rescan Busses'));?>
 	</div>
-	<table class="area_data_selection"><thead>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
 <?php
-		html_separator2(1);
-		html_titleline2(gtext('Import Disks'),1);
-		html_separator2(1);
+			html_separator2();
+			html_titleline2(gtext('Import Disks'));
 ?>
-	</thead></table>
+		</thead>
+		<tbody>
+<?php
+			html_checkbox2('clearimport',gtext('Clear Configuration'),false,gtext('Clear configuration information before importing disks.'));
+?>		
+		</tbody>
+		<tfoot><tr><td colspan="2" class="lcenl">&nbsp;</td></tr></tfoot>
+	</table>
 	<div id=""submit>
-		<?=html_button('import',gtext('Import Disks'));?>
-		<?=html_button('clearimport',gtext('Clear Configuration & Import Disks'));?>	
+		<?=html_button('import',gtext('Import'));?>
 	</div>
-	<table class="area_data_selection"><thead>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
 <?php
-		html_separator2(1);
-		html_titleline2(gtext('Import Software RAID Disks'),1);
-		html_separator2(1);
-?>
-	</thead></table>
+			html_separator2();
+			html_titleline2(gtext('Import Software RAID Disks'));
+?>		
+		<tbody>
+<?php
+			html_checkbox2('clearimportswraid',gtext('Clear Configuration'),false,gtext('Clear configuration information before importing software RAID disks.'));
+?>		
+		</tbody>
+		<tfoot><tr><td colspan="2" class="lcenl">&nbsp;</td></tr></tfoot>
+	</table>
 	<div id=""submit>
-		<?=html_button('importswraid',gtext('Import Software RAID Disks'));?>
-		<?=html_button('clearimportswraid',gtext('Clear Configuration & Import Software RAID Disks'));?>
+		<?=html_button('importswraid',gtext('Import'));?>
 	</div>
 <?php
 	include 'formend.inc';
