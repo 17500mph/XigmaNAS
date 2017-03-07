@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-03-07 01:34+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -606,7 +606,7 @@ msgstr ""
 msgid "All shares use the option 'usedots' thus making the filenames .Parent and anything beginning with .Apple illegal."
 msgstr ""
 
-msgid "All software raid disks are imported."
+msgid "All software RAID disks are imported."
 msgstr ""
 
 msgid "Alloc"
@@ -1301,10 +1301,13 @@ msgstr ""
 msgid "Clear Config And Import Disks"
 msgstr ""
 
-msgid "Clear Configuration & Import Disks"
+msgid "Clear Configuration"
 msgstr ""
 
-msgid "Clear Configuration & Import Software RAID Disks"
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1412,6 +1415,9 @@ msgid "Configuration"
 msgstr ""
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid "Configuration information about devices is different from physical devices. Please remove those devices and re-add them or run import disks with clear configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2350,12 +2356,6 @@ msgid "Do you really want to uninstall this package?"
 msgstr ""
 
 msgid "Do you want to apply these settings?"
-msgstr ""
-
-msgid "Do you want to clear configuration information and import disks?"
-msgstr ""
-
-msgid "Do you want to clear configuration information and import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to create a JBOD from selected disks?"
@@ -5101,7 +5101,7 @@ msgstr ""
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
+msgid "No new software RAID disk found."
 msgstr ""
 
 msgid "No partition information found."
@@ -7593,9 +7593,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr ""
 
-msgid "The device(s) in config are different to actual device(s). Please remove the device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-
 msgid "The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer."
 msgstr ""
 
@@ -7632,9 +7629,6 @@ msgid "The entire system configuration will be overwritten."
 msgstr ""
 
 msgid "The existing configuration may be overwritten."
-msgstr ""
-
-msgid "The existing configuration will be rewritten."
 msgstr ""
 
 msgid "The extent name already exists."
