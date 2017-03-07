@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-02-21 17:42+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
 "X-Poedit-Language: Norwegian Bokmal\n"
@@ -420,6 +420,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr "Legg til Datasett"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Legg til ett Kryptert Volum"
 
@@ -515,9 +518,6 @@ msgstr "Legg til automatisk øyeblikksbilde"
 
 msgid "Add command"
 msgstr "Legg til kommando"
-
-msgid "Add disk"
-msgstr "Legg til disk"
 
 msgid "Add extent"
 msgstr "Legg til omfang"
@@ -676,7 +676,7 @@ msgstr ""
 "Alle delte enheter benytter 'usedots'. Dette gjør filnavn som .Parent og alt "
 "annet som starter med .Apple ugyldig."
 
-msgid "All software raid disks are imported."
+msgid "All software RAID disks are imported."
 msgstr ""
 
 msgid "Alloc"
@@ -833,6 +833,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Hvilken som helst"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr ""
@@ -1430,13 +1433,16 @@ msgstr "Velg grensesnittet denne ruten gjelder for."
 msgid "Clear"
 msgstr "Tøm"
 
-msgid "Clear Config & Import Disks"
-msgstr ""
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1554,6 +1560,12 @@ msgid "Configuration"
 msgstr "Konfigurasjon"
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2079,6 +2091,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -2168,9 +2183,6 @@ msgstr "Slett klone"
 
 msgid "Delete command"
 msgstr ""
-
-msgid "Delete disk"
-msgstr "Slett disk"
 
 msgid "Delete extent"
 msgstr "Slett omfang"
@@ -2479,6 +2491,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Disker"
 
@@ -2549,13 +2570,6 @@ msgstr ""
 
 msgid "Do you really want to delete this clone?"
 msgstr "Vil du virkelig slette denne klonen?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Vil du virkelig slette denne disken? Alle elementene som bruker den vil bli "
-"feil (f.eks. delinger)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Vil du virkelig slette dette omfanget?"
@@ -2674,6 +2688,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2756,6 +2773,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -2906,6 +2929,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -2986,9 +3012,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Rediger kommando"
-
-msgid "Edit disk"
-msgstr "Endre disk"
 
 msgid "Edit extent"
 msgstr "Endre omfang"
@@ -4303,7 +4326,7 @@ msgstr "Importér"
 msgid "Import Disks"
 msgstr ""
 
-msgid "Import Software Raid Disks"
+msgid "Import Software RAID Disks"
 msgstr ""
 
 msgid "Import disks"
@@ -5521,7 +5544,7 @@ msgstr ""
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
+msgid "No new software RAID disk found."
 msgstr ""
 
 msgid "No partition information found."
@@ -6274,9 +6297,6 @@ msgstr "Privat nøkkel"
 msgid "Private key"
 msgstr "Privat nøkkel"
 
-msgid "Process"
-msgstr "Prosess"
-
 msgid "Process Status"
 msgstr ""
 
@@ -6650,7 +6670,7 @@ msgstr "Obligatorisk"
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
+msgid "Rescan Busses"
 msgstr ""
 
 msgid "Rescan Interval"
@@ -8201,11 +8221,6 @@ msgid "The default time in seconds to display a screen."
 msgstr ""
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8243,6 +8258,9 @@ msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
 msgstr ""
 
 msgid "The extent name already exists."
@@ -10181,3 +10199,22 @@ msgstr ""
 
 msgid "umount"
 msgstr "avmontér"
+
+#~ msgid "Add disk"
+#~ msgstr "Legg til disk"
+
+#~ msgid "Delete disk"
+#~ msgstr "Slett disk"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Vil du virkelig slette denne disken? Alle elementene som bruker den vil bli "
+#~ "feil (f.eks. delinger)!"
+
+#~ msgid "Edit disk"
+#~ msgstr "Endre disk"
+
+#~ msgid "Process"
+#~ msgstr "Prosess"

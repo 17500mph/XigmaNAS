@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
-"PO-Revision-Date: 2017-03-05 14:26+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"PO-Revision-Date: 2017-03-07 16:44+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -444,6 +444,9 @@ msgstr "Lägg till CARP"
 msgid "Add Dataset"
 msgstr "Lägg till Dataset"
 
+msgid "Add Disk"
+msgstr "Lägg till disk"
+
 msgid "Add Encrypted Volume"
 msgstr "Lägg till krypterad volym"
 
@@ -539,9 +542,6 @@ msgstr "Lägg till automatisk avbildning"
 
 msgid "Add command"
 msgstr "Lägg till kommando"
-
-msgid "Add disk"
-msgstr "Lägg till disk"
 
 msgid "Add extent"
 msgstr "Lägg till enhet"
@@ -709,8 +709,8 @@ msgstr ""
 "Alla utdelningar använder inställningen 'usedots' vilket gör att filnamnen "
 ".Parent och allting som börjar med .Apple är otillåtet."
 
-msgid "All software raid disks are imported."
-msgstr "Alla hårddiskarna i mjukvaruraiden är importerade."
+msgid "All software RAID disks are imported."
+msgstr "Alla mjukvaru RAID diskar är importerade."
 
 msgid "Alloc"
 msgstr "Allokerat"
@@ -884,6 +884,11 @@ msgstr ""
 
 msgid "Any"
 msgstr "Vilken som helst"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
+"Eventuella tjänster som använder dessa diskar kan bli felaktiga eller inte "
+"tillgängliga!"
 
 msgid "Append user defined shares"
 msgstr "Lägg till användardefinierade delningar"
@@ -1500,14 +1505,18 @@ msgstr "Välj det gränssnitt som denna väg gäller."
 msgid "Clear"
 msgstr "Rensa"
 
-msgid "Clear Config & Import Disks"
-msgstr "Rensa konfiguration & importera diskar"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Rensa konfiguration & importera mjukvaruraiddiskar"
-
 msgid "Clear Config And Import Disks"
 msgstr "Rensa konfiguration och importerara diskar"
+
+msgid "Clear Configuration"
+msgstr "Rensa konfiguration"
+
+msgid "Clear configuration information before importing disks."
+msgstr "Rensa konfigurationsinformation innan diskar importeras."
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
+"Rensa konfigurationsinformation innan mjukvaru RAID diskar importeras."
 
 msgid "Clear device errors"
 msgstr "Rensa enhetsfel"
@@ -1629,6 +1638,15 @@ msgstr "Konfiguration"
 
 msgid "Configuration Directory"
 msgstr "Konfigurationskatalog"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
+"Informationen i konfigurationen angående enheter skiljer sig från fysiska "
+"enheter. Ta bort dessa enheter och lägg till dem på nytt eller kör en import "
+"av diskarna med alternativet att rensa konfiguration."
 
 msgid "Configuring"
 msgstr "Konfigurering"
@@ -2221,6 +2239,9 @@ msgstr "Ta bort valda kommandon"
 msgid "Delete Selected Datasets"
 msgstr "Ta bort valda Dataset"
 
+msgid "Delete Selected Disks"
+msgstr "Ta bort valda diskar"
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Ta bort valda krypterade volymer"
 
@@ -2310,9 +2331,6 @@ msgstr "Ta bort klon"
 
 msgid "Delete command"
 msgstr "Ta bort kommando"
-
-msgid "Delete disk"
-msgstr "Ta bort disk"
 
 msgid "Delete extent"
 msgstr "Radera extent"
@@ -2627,6 +2645,15 @@ msgstr "Diskutrymmesanvändning"
 msgid "Disk Usage"
 msgstr "Använt diskutrymme"
 
+msgid "Disk is locked"
+msgstr "Disken är låst"
+
+msgid "Disk is marked for deletion"
+msgstr "Disken är markerad för borttagning"
+
+msgid "Disk is unlocked"
+msgstr "Disken är olåst"
+
 msgid "Disks"
 msgstr "Diskar"
 
@@ -2705,13 +2732,6 @@ msgstr "Vill Du verkligen ta bort den här automatiska avbilden?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Vill Du verkligen ta bort den här klonen?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Vill du verkligen radera denna disk? Alla element som använder den kommer "
-"att ogiltigförklaras (t.ex. utdelningar)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Vill du verkligen radera detta extent?"
@@ -2831,6 +2851,9 @@ msgstr "Vill du ta bort valda kommandon?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Vill du ta bort valda dataset?"
 
+msgid "Do you want to delete selected disks?"
+msgstr "Vill du ta bort valda diskar?"
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "Vill du ta bort valda krypterade volymer?"
 
@@ -2914,6 +2937,12 @@ msgstr "Vill du aktivera valda rsync jobb?"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Vill du aktivera valda rsync moduler?"
+
+msgid "Do you want to import disks?"
+msgstr "Vill du importera diskar?"
+
+msgid "Do you want to import software RAID disks?"
+msgstr "Vill du importera mjukvaru RAID diskar?"
 
 msgid "Do you want to lock selected records?"
 msgstr "Vill du låsa valda poster?"
@@ -3064,6 +3093,9 @@ msgstr "Ändra CARP"
 msgid "Edit Dataset"
 msgstr "Ändra Dataset"
 
+msgid "Edit Disk"
+msgstr "Ändra disk"
+
 msgid "Edit Encrypted Volume"
 msgstr "Ändra krypterade volymer"
 
@@ -3144,9 +3176,6 @@ msgstr "Redigera automatisk avbildning"
 
 msgid "Edit command"
 msgstr "Redigera kommando"
-
-msgid "Edit disk"
-msgstr "Redigera disk"
 
 msgid "Edit extent"
 msgstr "Redigera utsträckning"
@@ -4514,8 +4543,8 @@ msgstr "Importera"
 msgid "Import Disks"
 msgstr "Importera diskar"
 
-msgid "Import Software Raid Disks"
-msgstr "Importera mjukvaruraiddiskar"
+msgid "Import Software RAID Disks"
+msgstr "Importera mjukvaru RAID diskar"
 
 msgid "Import disks"
 msgstr "Importera diskar"
@@ -5784,8 +5813,8 @@ msgstr "Inga nya diskar hittades."
 msgid "No new encrypted disks have been found."
 msgstr "Inga nya krypterade diskar har hittats."
 
-msgid "No new software raid disk found."
-msgstr "Inga nya mjukvaroraid hårddiskar hittades."
+msgid "No new software RAID disk found."
+msgstr "Inga nya mjukvaru RAID diskar hittades."
 
 msgid "No partition information found."
 msgstr "Ingen partitionsinformation hittas."
@@ -6552,9 +6581,6 @@ msgstr "Privat nyckel"
 msgid "Private key"
 msgstr "Privat nyckel"
 
-msgid "Process"
-msgstr "Process"
-
 msgid "Process Status"
 msgstr "Processstatus"
 
@@ -6940,8 +6966,8 @@ msgstr "Obligatorisk"
 msgid "Rescan"
 msgstr "Sök igen"
 
-msgid "Rescan Disks"
-msgstr "Skanna om diskar"
+msgid "Rescan Busses"
+msgstr "Skanna om bussar"
 
 msgid "Rescan Interval"
 msgstr "Omskanningsintervall"
@@ -8610,14 +8636,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Grundinställning för tid i sekunder att visa skärmbild."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"Enheten (enheterna) i konfigurationen stämmer ej med faktiska enheter. Ta "
-"bort enheterna och lägg till dem på nytt eller använd 'Rensa konfiguration "
-"och importera diskar'."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8664,6 +8682,9 @@ msgstr "Den krypterade enheten är för närvarande monterad!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "Hela systemkonfigurationen kommer att skrivas över."
+
+msgid "The existing configuration may be overwritten."
+msgstr "Existerande konfiguration kan bli överskriven."
 
 msgid "The extent name already exists."
 msgstr "Namnet på utökningen finns redan"
@@ -10843,3 +10864,65 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Add disk"
+#~ msgstr "Lägg till disk"
+
+#~ msgid "Delete disk"
+#~ msgstr "Ta bort disk"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Vill du verkligen radera denna disk? Alla element som använder den kommer "
+#~ "att ogiltigförklaras (t.ex. utdelningar)!"
+
+#~ msgid "Edit disk"
+#~ msgstr "Redigera disk"
+
+#~ msgid "Process"
+#~ msgstr "Process"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "Enheten (enheterna) i konfigurationen stämmer ej med faktiska enheter. Ta "
+#~ "bort enheterna och lägg till dem på nytt eller använd 'Rensa konfiguration "
+#~ "och importera diskar'."
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Inga nya mjukvaroraid hårddiskar hittades."
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Alla hårddiskarna i mjukvaruraiden är importerade."
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Importera mjukvaruraiddiskar"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Skanna om diskar"
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Rensa konfiguration & importera diskar"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Rensa konfiguration & importera mjukvaruraiddiskar"
+
+#~ msgid "Clear Configuration & Import Software RAID Disks"
+#~ msgstr "Rensa konfiguration & importera mjukvaru RAID diskar"
+
+#~ msgid "Clear Configuration & Import Disks"
+#~ msgstr "Rensa konfiguration & importera diskar"
+
+#~ msgid ""
+#~ "Do you want to clear configuration information and import software RAID "
+#~ "disks?"
+#~ msgstr "Vill du rensa konfigurationen & importera mjukvaru RAID diskar?"
+
+#~ msgid "Do you want to clear configuration information and import disks?"
+#~ msgstr "Vill du rensa konfigurationen & importera diskar?"
+
+#~ msgid "The existing configuration will be rewritten."
+#~ msgstr "Existerande konfiguration kommer att bli överskriven."

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -423,6 +423,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr ""
 
@@ -518,9 +521,6 @@ msgstr "自動スナップショットの追加"
 
 msgid "Add command"
 msgstr "コマンドを追加"
-
-msgid "Add disk"
-msgstr "ディスクの追加"
 
 msgid "Add extent"
 msgstr "エクステントの追加"
@@ -678,8 +678,8 @@ msgid ""
 msgstr ""
 "全ての共有で 'usedots' を使用します。従って、ファイル名 .Parent と .Appleから始まる全てのファイルは使えません。"
 
-msgid "All software raid disks are imported."
-msgstr "すべてのソフトウェアRAIDがインポートされました。"
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "割当"
@@ -832,6 +832,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "すべて"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "ユーザー定義の共有を追加します"
@@ -1424,13 +1427,16 @@ msgstr "このルートに対応するインタフェースを指定します。
 msgid "Clear"
 msgstr "消去"
 
-msgid "Clear Config & Import Disks"
-msgstr "コンフィグ消去とディスクのインポート"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1546,6 +1552,12 @@ msgid "Configuration"
 msgstr "設定"
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2076,6 +2088,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -2165,9 +2180,6 @@ msgstr "クローンを削除"
 
 msgid "Delete command"
 msgstr ""
-
-msgid "Delete disk"
-msgstr "ディスクの削除"
 
 msgid "Delete extent"
 msgstr "エクステントの削除"
@@ -2471,6 +2483,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "ディスク"
 
@@ -2541,11 +2562,6 @@ msgstr "この自動スナップショットを削除してもよろしいです
 
 msgid "Do you really want to delete this clone?"
 msgstr "このクローンを削除してもよろしいですか?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr "このディスクを削除しても宜しいですか? それを使用している全ての要素が無効になります (例: share)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "このエクステントを削除してもよろしいですか?"
@@ -2660,6 +2676,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2742,6 +2761,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -2892,6 +2917,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -2972,9 +3000,6 @@ msgstr "自動スナップショットを編集"
 
 msgid "Edit command"
 msgstr "コマンドを編集"
-
-msgid "Edit disk"
-msgstr "ディスクを編集"
 
 msgid "Edit extent"
 msgstr "エクステントを編集"
@@ -4276,8 +4301,8 @@ msgstr "インポート"
 msgid "Import Disks"
 msgstr "ディスクのインポート"
 
-msgid "Import Software Raid Disks"
-msgstr "ソフトウェアRAIDのインポート"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "ディスクのインポート"
@@ -5505,8 +5530,8 @@ msgstr "新しいディスクがありません。"
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
-msgstr "新しいソフトウェアRAIDがありません。"
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr ""
@@ -6247,9 +6272,6 @@ msgstr "秘密鍵"
 msgid "Private key"
 msgstr "秘密鍵"
 
-msgid "Process"
-msgstr "プロセス"
-
 msgid "Process Status"
 msgstr ""
 
@@ -6619,8 +6641,8 @@ msgstr "必須"
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
-msgstr "ディスクの再スキャン"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr ""
@@ -8189,13 +8211,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "スクリーンを表示するデフォルトの秒数。"
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"設定のデバイスと実際のデバイスに違いがあります。デバイスを削除して、再度追加してください。または「コンフィグ消去とディスクのインポート」を利用してください"
-"。"
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr "発信したいファイルがおかれているディレクトリを指定します。リモートホストは転送の一部分としてディレクトリに沿っている必要はありません。"
@@ -8233,6 +8248,9 @@ msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
 msgstr ""
 
 msgid "The extent name already exists."
@@ -10205,3 +10223,45 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
+
+#~ msgid "Add disk"
+#~ msgstr "ディスクの追加"
+
+#~ msgid "Delete disk"
+#~ msgstr "ディスクの削除"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr "このディスクを削除しても宜しいですか? それを使用している全ての要素が無効になります (例: share)!"
+
+#~ msgid "Edit disk"
+#~ msgstr "ディスクを編集"
+
+#~ msgid "Process"
+#~ msgstr "プロセス"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "設定のデバイスと実際のデバイスに違いがあります。デバイスを削除して、再度追加してください。または「コンフィグ消去とディスクのインポート」を利用してください"
+#~ "。"
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "新しいソフトウェアRAIDがありません。"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "すべてのソフトウェアRAIDがインポートされました。"
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "コンフィグ消去とディスクのインポート"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "ソフトウェアRAIDのインポート"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "ディスクの再スキャン"

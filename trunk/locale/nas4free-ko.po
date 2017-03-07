@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -415,6 +415,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr ""
 
@@ -510,9 +513,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "명령어 추가"
-
-msgid "Add disk"
-msgstr "디스크 추가"
 
 msgid "Add extent"
 msgstr "범위 추가"
@@ -671,7 +671,7 @@ msgstr ""
 "모든 공유는 'usedots' 옵션을 이용하므로 파일 명을 .Parent로 하거나 .Apple로 시작하는 이름으로 하는 것은 합법적이지 "
 "않습니다."
 
-msgid "All software raid disks are imported."
+msgid "All software RAID disks are imported."
 msgstr ""
 
 msgid "Alloc"
@@ -822,6 +822,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "모두"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr ""
@@ -1414,13 +1417,16 @@ msgstr "이 라우트가 적용되어야 할 인터페이스를 선택하십시�
 msgid "Clear"
 msgstr "제거"
 
-msgid "Clear Config & Import Disks"
-msgstr ""
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1536,6 +1542,12 @@ msgid "Configuration"
 msgstr "설정"
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2058,6 +2070,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -2147,9 +2162,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr ""
-
-msgid "Delete disk"
-msgstr "디스크 삭제"
 
 msgid "Delete extent"
 msgstr "범위 삭제"
@@ -2454,6 +2466,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "디스크"
 
@@ -2524,11 +2545,6 @@ msgstr ""
 
 msgid "Do you really want to delete this clone?"
 msgstr ""
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr "정말로 이 디스크를 삭제하시겠습니까? 아직도 이것을 이용하는 모든 요소들은 무효화될 것입니다(예. 공유)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "정말로 이 범위를 삭제하시겠습니까?"
@@ -2643,6 +2659,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2725,6 +2744,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -2875,6 +2900,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -2955,9 +2983,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "명령 편집"
-
-msgid "Edit disk"
-msgstr "디스크 편집"
 
 msgid "Edit extent"
 msgstr "범위 편집"
@@ -4256,7 +4281,7 @@ msgstr "가져오기"
 msgid "Import Disks"
 msgstr ""
 
-msgid "Import Software Raid Disks"
+msgid "Import Software RAID Disks"
 msgstr ""
 
 msgid "Import disks"
@@ -5475,7 +5500,7 @@ msgstr ""
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
+msgid "No new software RAID disk found."
 msgstr ""
 
 msgid "No partition information found."
@@ -6217,9 +6242,6 @@ msgstr "개인 키"
 msgid "Private key"
 msgstr "개인 키"
 
-msgid "Process"
-msgstr "프로세스"
-
 msgid "Process Status"
 msgstr ""
 
@@ -6589,7 +6611,7 @@ msgstr "필요함"
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
+msgid "Rescan Busses"
 msgstr ""
 
 msgid "Rescan Interval"
@@ -8147,11 +8169,6 @@ msgid "The default time in seconds to display a screen."
 msgstr ""
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr "당신이 공개하려고 하는 파일들을 포함하는 디렉터리. 원격 호스트는 전송의 일부로서 디렉터리를 넘길 필요가 없습니다."
@@ -8189,6 +8206,9 @@ msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
 msgstr ""
 
 msgid "The extent name already exists."
@@ -10147,3 +10167,20 @@ msgstr ""
 
 msgid "umount"
 msgstr "마운트 해제"
+
+#~ msgid "Add disk"
+#~ msgstr "디스크 추가"
+
+#~ msgid "Delete disk"
+#~ msgstr "디스크 삭제"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr "정말로 이 디스크를 삭제하시겠습니까? 아직도 이것을 이용하는 모든 요소들은 무효화될 것입니다(예. 공유)!"
+
+#~ msgid "Edit disk"
+#~ msgstr "디스크 편집"
+
+#~ msgid "Process"
+#~ msgstr "프로세스"

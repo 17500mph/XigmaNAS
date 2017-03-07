@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-03-05 14:39+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -456,6 +456,9 @@ msgstr "Añadir CARP"
 msgid "Add Dataset"
 msgstr "Añadir Dataset"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr "Añadir Volumen encriptado"
 
@@ -551,9 +554,6 @@ msgstr "Añadir snapshot automatico"
 
 msgid "Add command"
 msgstr "Añadir comando"
-
-msgid "Add disk"
-msgstr "Añadir disco"
 
 msgid "Add extent"
 msgstr "Añadir extent"
@@ -723,8 +723,8 @@ msgstr ""
 "Todos los compartidos usan la opción 'usedots' haciendo, además, ilegales "
 "los archivos .Parent y cualquiera que empiece con .Apple."
 
-msgid "All software raid disks are imported."
-msgstr "Todos los RAID por software han sido importados."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Asignación"
@@ -902,6 +902,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Cualquiera"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "Añadir compartidos definidos por el usuario"
@@ -1534,14 +1537,17 @@ msgstr "Elija el interfaz al que aplicar esta ruta."
 msgid "Clear"
 msgstr "Limpiar"
 
-msgid "Clear Config & Import Disks"
-msgstr "Limpiar la configuración & Importar discos"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Limpiar la configuración & Importar RAID de  discos UFS"
-
 msgid "Clear Config And Import Disks"
 msgstr "Actualizar Config. e importar Discos."
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
 
 msgid "Clear device errors"
 msgstr "Elimina los erores del dispositivo"
@@ -1663,6 +1669,12 @@ msgstr "Configuración"
 
 msgid "Configuration Directory"
 msgstr "Directorio configuración."
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
 
 msgid "Configuring"
 msgstr "Configurando"
@@ -2277,6 +2289,9 @@ msgstr "Borrar los Comandos Seleccionados"
 msgid "Delete Selected Datasets"
 msgstr "Borrar los Dataset seleccionados"
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Borrar los volumenes encriptados seleccionados"
 
@@ -2366,9 +2381,6 @@ msgstr "Borrar clon"
 
 msgid "Delete command"
 msgstr "Borrar orden"
-
-msgid "Delete disk"
-msgstr "Eliminar disco"
 
 msgid "Delete extent"
 msgstr "Eliminar extent"
@@ -2682,6 +2694,15 @@ msgstr "Espacio usado en Disco"
 msgid "Disk Usage"
 msgstr "Uso de Disco"
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Discos"
 
@@ -2759,13 +2780,6 @@ msgstr "¿Quiere realmente borrar este snapshot automatico?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "¿Quiere realmente borrar este clon?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"¿Realmente quiere eliminar este disco? Todos los elementos que todavía lo "
-"usen dejarán de ser válidos (Ej: los elementos compartidos)"
 
 msgid "Do you really want to delete this extent?"
 msgstr "¿Realmente desea eliminar este extent?"
@@ -2890,6 +2904,9 @@ msgstr "¿Quiere eliminar los comandos seleccionados?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Desea borrar los Dataset seleccionados?"
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "¿Desea borrar los volumenes encriptados?"
 
@@ -2973,6 +2990,12 @@ msgstr "¿Desea habillitar los trabajos Rsync seleccionados?"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "¿Desea habillitar los módulos Rsync seleccionados?"
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
+msgstr ""
 
 msgid "Do you want to lock selected records?"
 msgstr "¿Desea bloquear los registros seleccionados?"
@@ -3125,6 +3148,9 @@ msgstr "Editar CARP"
 msgid "Edit Dataset"
 msgstr "Editar Dataset"
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr "Editar volumenes encriptados"
 
@@ -3205,9 +3231,6 @@ msgstr "Editar snapshot automatico"
 
 msgid "Edit command"
 msgstr "Editar comando"
-
-msgid "Edit disk"
-msgstr "Editar disco"
 
 msgid "Edit extent"
 msgstr "Editar extent"
@@ -4599,8 +4622,8 @@ msgstr "Importar"
 msgid "Import Disks"
 msgstr "Importar Discos"
 
-msgid "Import Software Raid Disks"
-msgstr "Importar Discos RAID UFS"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "Importar discos"
@@ -5888,8 +5911,8 @@ msgstr "No se han encontrados nuevos discos."
 msgid "No new encrypted disks have been found."
 msgstr "No se han encontrado nuevos discos encriptados."
 
-msgid "No new software raid disk found."
-msgstr "No se han encontrado nuevos Discos RAID"
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr "No se encuentra información de las particiones"
@@ -6665,9 +6688,6 @@ msgstr "Clave privada"
 msgid "Private key"
 msgstr "Clave privada"
 
-msgid "Process"
-msgstr "Procesos"
-
 msgid "Process Status"
 msgstr "Estado de procesos"
 
@@ -7058,8 +7078,8 @@ msgstr "Requerido"
 msgid "Rescan"
 msgstr "Reescanear"
 
-msgid "Rescan Disks"
-msgstr "Buscar Discos"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr "Intervalo de rescaneo"
@@ -8753,14 +8773,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "El tiempo en segundos por defecto para mostrar una pantalla"
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"El Disco configurado , es distinto al Disco detectado. Por favor desconecte "
-"el Disco y vuelva a conectarlo, o use  'Limpiar configuración e importar "
-"Discos'."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8806,6 +8818,9 @@ msgstr "El dispositivo encriptado se encuentra montado!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "La configuración del ssitema será sobrescrita."
+
+msgid "The existing configuration may be overwritten."
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "El nombre del extent ya existe."
@@ -11004,3 +11019,48 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
+
+#~ msgid "Add disk"
+#~ msgstr "Añadir disco"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "¿Realmente quiere eliminar este disco? Todos los elementos que todavía lo "
+#~ "usen dejarán de ser válidos (Ej: los elementos compartidos)"
+
+#~ msgid "Edit disk"
+#~ msgstr "Editar disco"
+
+#~ msgid "Process"
+#~ msgstr "Procesos"
+
+#~ msgid "Delete disk"
+#~ msgstr "Eliminar disco"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "El Disco configurado , es distinto al Disco detectado. Por favor desconecte "
+#~ "el Disco y vuelva a conectarlo, o use  'Limpiar configuración e importar "
+#~ "Discos'."
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "No se han encontrado nuevos Discos RAID"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Todos los RAID por software han sido importados."
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Limpiar la configuración & Importar discos"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Limpiar la configuración & Importar RAID de  discos UFS"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Importar Discos RAID UFS"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Buscar Discos"

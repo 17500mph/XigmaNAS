@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:22+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 
 msgid " interfaces:"
 msgstr " koppelvlakke:"
@@ -455,6 +455,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr "Voeg Datastel by"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr ""
 
@@ -550,9 +553,6 @@ msgstr "Voeg 'n outomatiese momentopname by"
 
 msgid "Add command"
 msgstr "Voeg bevel by"
-
-msgid "Add disk"
-msgstr "Voeg skyf by"
 
 msgid "Add extent"
 msgstr "Voeg omvang by"
@@ -725,8 +725,8 @@ msgstr ""
 "Alle gedeeldes gebruik die opsie 'usedots' wat dus lêername .Parent maak en "
 "enigeiets wat met .Apple begin, onwettig."
 
-msgid "All software raid disks are imported."
-msgstr "Alle sagteware raid skywe is ingevoer."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Allokeer"
@@ -905,6 +905,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Enige"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr "Voeg gebruiker gediefinieerde gedeeldes"
@@ -1525,13 +1528,16 @@ msgstr "Kies vir watter koppelvlak hierdie roete geld."
 msgid "Clear"
 msgstr "Vee uit"
 
-msgid "Clear Config & Import Disks"
-msgstr "Vee Instellings Uit en Voer Skywe In"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Vee Insellings Uit en Voer Sagteware RAID Skywe In"
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1651,6 +1657,12 @@ msgid "Configuration"
 msgstr "Instelling"
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2253,6 +2265,9 @@ msgstr "Vee Geselekteerde Bevelle Uit"
 msgid "Delete Selected Datasets"
 msgstr "Vee Geselekteerde Datastelle Uit"
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -2342,9 +2357,6 @@ msgstr "Vee kloon uit"
 
 msgid "Delete command"
 msgstr "Vee bevel uit"
-
-msgid "Delete disk"
-msgstr "Vee skyf uit"
 
 msgid "Delete extent"
 msgstr "Wis omvang uit"
@@ -2657,6 +2669,15 @@ msgstr "Skyf ruimte verbruik"
 msgid "Disk Usage"
 msgstr "Skyf Gebruik"
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Skywe"
 
@@ -2736,13 +2757,6 @@ msgstr "Wil jy regtig hierdie outomatiese momentopname verwyder?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Wil jy regtig hierdie kloon verwyder?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Wil jy regtig hierdie skyf uitwis?  Al die elemente wat dit steeds gebruik "
-"sal verval (bv. deling)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Wil jy regtig hierdie omvang uitwis?"
@@ -2867,6 +2881,9 @@ msgstr "Wil jy die geselekteerde bevelle uitvee?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Wil jy die geselekteerde datastelle uitvee?"
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2949,6 +2966,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -3102,6 +3125,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr "Redigeer Datastel"
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -3182,9 +3208,6 @@ msgstr "Redigeer outomatiese momentopname"
 
 msgid "Edit command"
 msgstr "Redigeer opdrag"
-
-msgid "Edit disk"
-msgstr "Redigeer skyf"
 
 msgid "Edit extent"
 msgstr "Redigeer  omvang"
@@ -4561,8 +4584,8 @@ msgstr "Voer In"
 msgid "Import Disks"
 msgstr "Voer Skywe In"
 
-msgid "Import Software Raid Disks"
-msgstr "Voer Sagteware RAID Skywe in"
+msgid "Import Software RAID Disks"
+msgstr ""
 
 msgid "Import disks"
 msgstr "Voer skywe in"
@@ -5828,8 +5851,8 @@ msgstr "Geen nuwe skyf is opgespoor nie."
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
-msgstr "Geen nuwe sagteware raid skyf is opgespoor nie."
+msgid "No new software RAID disk found."
+msgstr ""
 
 msgid "No partition information found."
 msgstr ""
@@ -6601,9 +6624,6 @@ msgstr "Privaatsleutel"
 msgid "Private key"
 msgstr "Privaatsleutel"
 
-msgid "Process"
-msgstr "Proses"
-
 msgid "Process Status"
 msgstr "Proses Status"
 
@@ -6993,8 +7013,8 @@ msgstr "Benodig"
 msgid "Rescan"
 msgstr "Her-tasting"
 
-msgid "Rescan Disks"
-msgstr "Herskandeer Skywe"
+msgid "Rescan Busses"
+msgstr ""
 
 msgid "Rescan Interval"
 msgstr ""
@@ -8665,14 +8685,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Die standaard tyd in sekondes om 'n skerm te vertoon."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"Die toestel(le) in konfigurasie is verskillend van die werklike toestel(le). "
-"Verwyder asseblief die toestel(le) en voeg dit weer by of gerbuik 'Wis "
-"konfigurasie en voer skywe weer in'"
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8717,6 +8729,9 @@ msgstr "Die gekodeerde toestel is huidiglik gemonteer!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "Die volledige stelsel konfigurasie kan oorskryf word."
+
+msgid "The existing configuration may be overwritten."
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "Die omgang naam bestaan alreeds"
@@ -10809,3 +10824,48 @@ msgstr "na"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid "Add disk"
+#~ msgstr "Voeg skyf by"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Alle sagteware raid skywe is ingevoer."
+
+#~ msgid "Delete disk"
+#~ msgstr "Vee skyf uit"
+
+#~ msgid "Edit disk"
+#~ msgstr "Redigeer skyf"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Voer Sagteware RAID Skywe in"
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Geen nuwe sagteware raid skyf is opgespoor nie."
+
+#~ msgid "Process"
+#~ msgstr "Proses"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Herskandeer Skywe"
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Vee Instellings Uit en Voer Skywe In"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Vee Insellings Uit en Voer Sagteware RAID Skywe In"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Wil jy regtig hierdie skyf uitwis?  Al die elemente wat dit steeds gebruik "
+#~ "sal verval (bv. deling)!"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "Die toestel(le) in konfigurasie is verskillend van die werklike toestel(le). "
+#~ "Verwyder asseblief die toestel(le) en voeg dit weer by of gerbuik 'Wis "
+#~ "konfigurasie en voer skywe weer in'"

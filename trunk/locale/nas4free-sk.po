@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
 "PO-Revision-Date: 2017-02-04 20:56+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovak\n"
@@ -449,6 +449,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr "Pridať Dataset"
 
+msgid "Add Disk"
+msgstr ""
+
 msgid "Add Encrypted Volume"
 msgstr ""
 
@@ -544,9 +547,6 @@ msgstr "Pridať auto snapshot(automatické vytváranie obrazu)"
 
 msgid "Add command"
 msgstr "Pridať príkaz"
-
-msgid "Add disk"
-msgstr "Pridať disk"
 
 msgid "Add extent"
 msgstr "Pridať rozsah"
@@ -714,8 +714,8 @@ msgstr ""
 "Všetky zdieľané prostriedky používajú voľbu „usedots“, preto sú názvy "
 "súborov .Parent a čokoľvek začínajúce na .Apple neplatné."
 
-msgid "All software raid disks are imported."
-msgstr "Všetky disky softvérového RAIDu sú importované."
+msgid "All software RAID disks are imported."
+msgstr ""
 
 msgid "Alloc"
 msgstr "Alloc (Alokácia)"
@@ -891,6 +891,9 @@ msgstr ""
 
 msgid "Any"
 msgstr "Akékoľvek"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
 
 msgid "Append user defined shares"
 msgstr ""
@@ -1488,13 +1491,16 @@ msgstr "Zvoľte, ktorého rozhrania sa táto cesta týka."
 msgid "Clear"
 msgstr "Vyčistiť"
 
-msgid "Clear Config & Import Disks"
-msgstr ""
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
-
 msgid "Clear Config And Import Disks"
+msgstr ""
+
+msgid "Clear Configuration"
+msgstr ""
+
+msgid "Clear configuration information before importing disks."
+msgstr ""
+
+msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
@@ -1612,6 +1618,12 @@ msgid "Configuration"
 msgstr "Konfigurácia"
 
 msgid "Configuration Directory"
+msgstr ""
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
 msgstr ""
 
 msgid "Configuring"
@@ -2136,6 +2148,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Disks"
+msgstr ""
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr ""
 
@@ -2225,9 +2240,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr ""
-
-msgid "Delete disk"
-msgstr "Zmazať disk"
 
 msgid "Delete extent"
 msgstr "Zmazať rozsah"
@@ -2536,6 +2548,15 @@ msgstr ""
 msgid "Disk Usage"
 msgstr ""
 
+msgid "Disk is locked"
+msgstr ""
+
+msgid "Disk is marked for deletion"
+msgstr ""
+
+msgid "Disk is unlocked"
+msgstr ""
+
 msgid "Disks"
 msgstr "Disky"
 
@@ -2606,13 +2627,6 @@ msgstr ""
 
 msgid "Do you really want to delete this clone?"
 msgstr ""
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Skutočne chcete zmazať tento disk? Všetky prvky, ktoré ho ešte používajú "
-"budú zneplatnené (napr. zdieľané priečinky)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Naozaj chcete zmazať tento rozsah?"
@@ -2731,6 +2745,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
 
@@ -2813,6 +2830,12 @@ msgid "Do you want to enable selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to import disks?"
+msgstr ""
+
+msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
@@ -2964,6 +2987,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Disk"
+msgstr ""
+
 msgid "Edit Encrypted Volume"
 msgstr ""
 
@@ -3044,9 +3070,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Upraviť príkaz"
-
-msgid "Edit disk"
-msgstr "Upraviť disk"
 
 msgid "Edit extent"
 msgstr "Upraviť rozsah"
@@ -4367,7 +4390,7 @@ msgstr "Importovať"
 msgid "Import Disks"
 msgstr ""
 
-msgid "Import Software Raid Disks"
+msgid "Import Software RAID Disks"
 msgstr ""
 
 msgid "Import disks"
@@ -5593,7 +5616,7 @@ msgstr ""
 msgid "No new encrypted disks have been found."
 msgstr ""
 
-msgid "No new software raid disk found."
+msgid "No new software RAID disk found."
 msgstr ""
 
 msgid "No partition information found."
@@ -6350,9 +6373,6 @@ msgstr "Súkromný kľúč"
 msgid "Private key"
 msgstr "Privátny kľúč"
 
-msgid "Process"
-msgstr "Spracovať"
-
 msgid "Process Status"
 msgstr ""
 
@@ -6726,7 +6746,7 @@ msgstr "Požadované"
 msgid "Rescan"
 msgstr ""
 
-msgid "Rescan Disks"
+msgid "Rescan Busses"
 msgstr ""
 
 msgid "Rescan Interval"
@@ -8304,11 +8324,6 @@ msgid "The default time in seconds to display a screen."
 msgstr ""
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8348,6 +8363,9 @@ msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The entire system configuration will be overwritten."
+msgstr ""
+
+msgid "The existing configuration may be overwritten."
 msgstr ""
 
 msgid "The extent name already exists."
@@ -10372,3 +10390,25 @@ msgstr "do"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Add disk"
+#~ msgstr "Pridať disk"
+
+#~ msgid "Delete disk"
+#~ msgstr "Zmazať disk"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Skutočne chcete zmazať tento disk? Všetky prvky, ktoré ho ešte používajú "
+#~ "budú zneplatnené (napr. zdieľané priečinky)!"
+
+#~ msgid "Edit disk"
+#~ msgstr "Upraviť disk"
+
+#~ msgid "Process"
+#~ msgstr "Spracovať"
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Všetky disky softvérového RAIDu sú importované."

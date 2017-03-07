@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-05 07:22+0000\n"
-"PO-Revision-Date: 2017-03-05 06:40+0000\n"
+"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"PO-Revision-Date: 2017-03-07 13:57+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-06 08:48+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
+"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
+"X-Generator: Launchpad (build 18330)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -469,6 +469,9 @@ msgstr "CARP Toevoegen"
 msgid "Add Dataset"
 msgstr "Dataset Toevoegen"
 
+msgid "Add Disk"
+msgstr "Schijf Toevoegen"
+
 msgid "Add Encrypted Volume"
 msgstr "Gecodeerd Volume Toevoegen"
 
@@ -564,9 +567,6 @@ msgstr "Auto snaphot toevoegen"
 
 msgid "Add command"
 msgstr "Opdracht toevoegen"
-
-msgid "Add disk"
-msgstr "Schijf toevoegen"
 
 msgid "Add extent"
 msgstr "Extent toevoegen"
@@ -739,8 +739,8 @@ msgstr ""
 "Alle delingen gebruiken de optie 'usedots' waardoor de bestandsnamen .Parent "
 "en alles beginnend met .Apple ongeoorloofd is."
 
-msgid "All software raid disks are imported."
-msgstr "Alle software raid schijven zijn geïmporteerd."
+msgid "All software RAID disks are imported."
+msgstr "Alle software RAID schijven zijn geïmporteerd."
 
 msgid "Alloc"
 msgstr "Allocatie"
@@ -918,6 +918,10 @@ msgstr ""
 
 msgid "Any"
 msgstr "Alle"
+
+msgid "Any service using these disks might become invalid or inaccessible!"
+msgstr ""
+"Elke service die deze schijven gebruiken kan ongeldig of onbereikbaar worden!"
 
 msgid "Append user defined shares"
 msgstr "Toevoegen gebruiker gedefinieerde delingen"
@@ -1553,14 +1557,19 @@ msgstr "Selecteer het netwerk waarop deze route van toepassing is."
 msgid "Clear"
 msgstr "Wissen"
 
-msgid "Clear Config & Import Disks"
-msgstr "Config Leegmaken & Importeer Schijven"
-
-msgid "Clear Config & Import Software Raid Disks"
-msgstr "Config Leegmaken & Importeer Software RAID Schijven"
-
 msgid "Clear Config And Import Disks"
-msgstr "Config Leegmaken en Importeer Schijven"
+msgstr "Config wissen en Importeer Schijven"
+
+msgid "Clear Configuration"
+msgstr "Configuratie Wissen"
+
+msgid "Clear configuration information before importing disks."
+msgstr "Wissen configuratie informatie alvorens het importeren van schijven."
+
+msgid "Clear configuration information before importing software RAID disks."
+msgstr ""
+"Wissen configuratie informatie alvorens het importeren van software RAID "
+"schijven."
 
 msgid "Clear device errors"
 msgstr "Wis schijf fouten"
@@ -1683,6 +1692,15 @@ msgstr "Configuratie"
 
 msgid "Configuration Directory"
 msgstr "Configuratiemap"
+
+msgid ""
+"Configuration information about devices is different from physical devices. "
+"Please remove those devices and re-add them or run import disks with clear "
+"configuration option enabled."
+msgstr ""
+"Configuratie informatie van de schijven verschilt van de fysieke schijven. "
+"Verwijder deze schijven en voeg deze opnieuw toe of importeer schijven met "
+"de configuratie wissen optie ingeschakeld."
 
 msgid "Configuring"
 msgstr "Configureren"
@@ -2297,6 +2315,9 @@ msgstr "Verwijder Geselecteerde Opdrachten"
 msgid "Delete Selected Datasets"
 msgstr "Verwijder Geselecteerde Datasets"
 
+msgid "Delete Selected Disks"
+msgstr "Verwijder Geselecteerde Schijven"
+
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Verwijder Geselecteerde Gecodeerde Volumes"
 
@@ -2386,9 +2407,6 @@ msgstr "Verwijder kloon"
 
 msgid "Delete command"
 msgstr "Opdracht verwijderen"
-
-msgid "Delete disk"
-msgstr "Schijf verwijderen"
 
 msgid "Delete extent"
 msgstr "Verwijder extent"
@@ -2710,6 +2728,15 @@ msgstr "Schijfruimte Gebruik"
 msgid "Disk Usage"
 msgstr "Schijfgebruik"
 
+msgid "Disk is locked"
+msgstr "Schijf is vergrendeld"
+
+msgid "Disk is marked for deletion"
+msgstr "Schijf is gemarkeerd voor verwijdering"
+
+msgid "Disk is unlocked"
+msgstr "Schijf  is ontgrendeld"
+
 msgid "Disks"
 msgstr "Schijven"
 
@@ -2761,8 +2788,8 @@ msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
-"Weet u zeker dat u wilt leegmaken en importeren?\\nDe huidige config zal "
-"worden leeggemaakt en overschreven."
+"Weet u zeker dat u wilt wissen en importeren?\\nDe huidige config zal worden "
+"gewist en herschreven."
 
 msgid "Do you really want to delete all data from the selected statistics?"
 msgstr ""
@@ -2788,13 +2815,6 @@ msgstr "Weet u zeker dat u dit automatische snapshot wilt verwijderen?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Weet u zeker dat u deze kloon wilt verwijderen?"
-
-msgid ""
-"Do you really want to delete this disk? All elements that still use it will "
-"become invalid (e.g. share)!"
-msgstr ""
-"Weet u zeker dat u deze schijf wilt verwijderen? Alle elementen die er nog "
-"steeds gebruik maken zullen ongeldig worden (bijv. delingen)!"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Weet u zeker dat u deze extent wilt verwijderen?"
@@ -2923,6 +2943,9 @@ msgstr "Wilt u de geselecteerde opdrachten verwijderen?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Wilt u de geselecteerde datasets verwijderen?"
 
+msgid "Do you want to delete selected disks?"
+msgstr "Do you want to delete selected disks?"
+
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr "Wilt u de geselecteerde gecodeerde volumes verwijderen?"
 
@@ -3006,6 +3029,12 @@ msgstr "Wilt u de geselecteerde rsync taken inschakelen?"
 
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Wilt u de geselecteerde rsync modules inschakelen?"
+
+msgid "Do you want to import disks?"
+msgstr "Wilt u de geselecteerde schijven verwijderen?"
+
+msgid "Do you want to import software RAID disks?"
+msgstr "Wilt u software RAID schijven importeren?"
 
 msgid "Do you want to lock selected records?"
 msgstr "Wilt u de geselecteerde items vergrendelen?"
@@ -3160,6 +3189,9 @@ msgstr "CARP Bewerken"
 msgid "Edit Dataset"
 msgstr "Dataset Bewerken"
 
+msgid "Edit Disk"
+msgstr "Schijf Bewerken"
+
 msgid "Edit Encrypted Volume"
 msgstr "Gecodeerde Volumes Bewerken"
 
@@ -3240,9 +3272,6 @@ msgstr "Bewerk automatisch snapshot"
 
 msgid "Edit command"
 msgstr "Bewerk Opdracht"
-
-msgid "Edit disk"
-msgstr "Schijf bewerken"
 
 msgid "Edit extent"
 msgstr "Extent bewerken"
@@ -4634,8 +4663,8 @@ msgstr "Importeren"
 msgid "Import Disks"
 msgstr "Importeer Schijven"
 
-msgid "Import Software Raid Disks"
-msgstr "Importeer Software RAID Schijven"
+msgid "Import Software RAID Disks"
+msgstr "Importeer  Software RAID Schijven"
 
 msgid "Import disks"
 msgstr "Importeer schijven"
@@ -5932,7 +5961,7 @@ msgstr "Er zijn geen nieuwe schijven gevonden."
 msgid "No new encrypted disks have been found."
 msgstr "Er zijn geen nieuwe gecodeerde schijven gevonden."
 
-msgid "No new software raid disk found."
+msgid "No new software RAID disk found."
 msgstr "Er zijn geen nieuwe software raid schijven gevonden."
 
 msgid "No partition information found."
@@ -6710,9 +6739,6 @@ msgstr "Privé Sleutel"
 msgid "Private key"
 msgstr "Privé sleutel"
 
-msgid "Process"
-msgstr "Processen"
-
 msgid "Process Status"
 msgstr "Proces Status"
 
@@ -7102,8 +7128,8 @@ msgstr "Vereist"
 msgid "Rescan"
 msgstr "Herscannen"
 
-msgid "Rescan Disks"
-msgstr "Herscan Schijven"
+msgid "Rescan Busses"
+msgstr "Herscan Bussen"
 
 msgid "Rescan Interval"
 msgstr "Herscan Interval"
@@ -8802,14 +8828,6 @@ msgid "The default time in seconds to display a screen."
 msgstr "Het standaard aantal seconden dat een melding wordt gegeven."
 
 msgid ""
-"The device(s) in config are different to actual device(s). Please remove the "
-"device(s) and re-add it or use 'Clear config and Import disks'."
-msgstr ""
-"De schijven in de config verschillen van de werkelijke schijven. Verwijder "
-"de schijven en voeg deze opnieuw toe of gebruik 'Config leegmaken en  "
-"Importeer schijven'."
-
-msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
@@ -8854,6 +8872,9 @@ msgstr "De gecodeerde schijf is momenteel aangekoppeld!"
 
 msgid "The entire system configuration will be overwritten."
 msgstr "De volledige systeemconfiguratie wordt overschreven."
+
+msgid "The existing configuration may be overwritten."
+msgstr "De huidige configuratie kan worden overschreven."
 
 msgid "The extent name already exists."
 msgstr "De extent naam bestaat reeds."
@@ -11086,3 +11107,48 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
+
+#~ msgid "Add disk"
+#~ msgstr "Schijf toevoegen"
+
+#~ msgid "Delete disk"
+#~ msgstr "Schijf verwijderen"
+
+#~ msgid "Edit disk"
+#~ msgstr "Schijf bewerken"
+
+#~ msgid "Process"
+#~ msgstr "Processen"
+
+#~ msgid ""
+#~ "The device(s) in config are different to actual device(s). Please remove the "
+#~ "device(s) and re-add it or use 'Clear config and Import disks'."
+#~ msgstr ""
+#~ "De schijven in de config verschillen van de werkelijke schijven. Verwijder "
+#~ "de schijven en voeg deze opnieuw toe of gebruik 'Config leegmaken en  "
+#~ "Importeer schijven'."
+
+#~ msgid "All software raid disks are imported."
+#~ msgstr "Alle software raid schijven zijn geïmporteerd."
+
+#~ msgid "Clear Config & Import Disks"
+#~ msgstr "Config Leegmaken & Importeer Schijven"
+
+#~ msgid "Clear Config & Import Software Raid Disks"
+#~ msgstr "Config Leegmaken & Importeer Software RAID Schijven"
+
+#~ msgid "Import Software Raid Disks"
+#~ msgstr "Importeer Software RAID Schijven"
+
+#~ msgid "Rescan Disks"
+#~ msgstr "Herscan Schijven"
+
+#~ msgid ""
+#~ "Do you really want to delete this disk? All elements that still use it will "
+#~ "become invalid (e.g. share)!"
+#~ msgstr ""
+#~ "Weet u zeker dat u deze schijf wilt verwijderen? Alle elementen die er nog "
+#~ "steeds gebruik maken zullen ongeldig worden (bijv. delingen)!"
+
+#~ msgid "No new software raid disk found."
+#~ msgstr "Er zijn geen nieuwe software raid schijven gevonden."
