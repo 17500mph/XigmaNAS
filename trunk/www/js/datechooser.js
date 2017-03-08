@@ -485,17 +485,6 @@ function dateChooserDateChange(theForm, prefix) {
     input.DateChooser.show();
 }
 
-// Gets the absolute position on the page of the element passed in
-function getAbsolutePosition(obj) {
-    var result = [0, 0];
-    while (obj != null) {
-        result[0] += obj.offsetTop;
-        result[1] += obj.offsetLeft;
-        obj = obj.offsetParent;
-    }
-    return result;
-}
-
 // DateChooser constructor
 function DateChooser(input, div, start, end, format, isTimeChooser) {
     this._input = input;
@@ -543,13 +532,14 @@ DateChooser.prototype.hide = function() {
 // Shows the chooser on the page
 DateChooser.prototype.show = function() {
     // calculate the position before making it visible
-    var inputPos = getAbsolutePosition(this._input);
-    this._div.style.top = (inputPos[0] + this._input.offsetHeight) + "px";
-    this._div.style.left = (inputPos[1] + this._input.offsetWidth) + "px";
+    var inputPos = this._input.getBoundingClientRect();
+    this._div.style.top = inputPos.bottom + "px";
+    this._div.style.left = inputPos.left + "px";
     this._div.innerHTML = this.createChooserHtml();
     this._div.style.display = "block";
     this._div.style.visibility = "visible";
-    this._div.style.position = "absolute";
+//  this._div.style.position = "absolute";
+    this._div.style.position = "fixed";
     this._isVisible = true;
 }
 
