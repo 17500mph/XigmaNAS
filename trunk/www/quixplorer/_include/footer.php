@@ -38,15 +38,42 @@
 // NAS4Free Code
 // footer for html-page
 function show_footer() {
-	echo '</td></tr></tbody></table>';
-	echo '</div>';
-	echo '</div>';
-	echo '</main>';
-	echo '<footer id="g4f">';
-	echo '<div id="gapfooter"></div>';
-	echo '<div id="pagefooter"><span>', htmlspecialchars(get_product_copyright()), '</span></div>', "\n";
-	echo '</footer>';
-	echo '</body>';
-	echo '</html>';
+	global $d_sysrebootreqd_path;
+	$output = [];
+	$output[] = '</td></tr></tbody></table>';
+	$output[] = '</div>';
+	$output[] = '</div>';
+	$output[] = '</main>';
+	$output[] = '<footer id="g4f">';
+	$output[] = '<div id="gapfooter"></div>';
+	$output[] = '<div id="pagefooter">';
+
+	$output[] = '<table class="area_data_settings">';
+	$output[] = '<colgroup>';
+	$output[] = '<col style="width:10%">';
+	$output[] = '<col style="width:80%">';
+	$output[] = '<col style="width:10%">';
+	$output[] = '</colgroup>';
+	$output[] = '<tbody>';
+	$output[] = '<tr>';
+	$output[] = '<td class="g4fl">';
+	if(Session::isAdmin()):
+		if(file_exists($d_sysrebootreqd_path)):
+			$output[] = '<a href="/reboot.php" class="g4fi">';
+			$output[] = '<img src="/images/notify_reboot.png" title="' . gtext('A reboot is required') . '" alt="' . gtext('Reboot Required') . '>">';
+			$output[] = '</a>';
+		endif;
+	endif;
+	$output[] = '</td>';
+	$output[] = '<td class="g4fc">' . htmlspecialchars(get_product_copyright()) . '</td>';
+	$output[] = '<td class="g4fr"></td>';
+	$output[] = '</tr>';
+	$output[] = '</tbody>';
+	$output[] = '</table>';
+	$output[] = '</div>';
+	$output[] = '</footer>';
+	$output[] = '</body>';
+	$output[] = '</html>';
+	echo implode("\n",$output);
 }
 ?>
