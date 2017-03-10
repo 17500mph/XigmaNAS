@@ -19,7 +19,6 @@ Changes:
 - Upgrade lighttpd to 1.4.45.
 - Upgrade sudo to 1.8.19p2.
 - Upgrade proftpd to 1.3.5d.
-- Upgrade virtualbox-ose to 5.1.14.
 - Upgrade ipmitool to 1.8.18.
 - Upgrade bash to 4.4 patch 12.
 - Upgrade dialog to 1.3-20170131.
@@ -29,6 +28,7 @@ Changes:
 - Upgrade tzdata to 2017a.
 - Upgrade iperf3 to 3.1.7.
 - Upgrade syncthing to 0.14.24.
+- Upgrade virtualbox-ose to 5.1.16.
 
 Fixes:
 - Fix escaped characters in output.
@@ -43,6 +43,7 @@ Fixes:
 - Fix system screensaver.
 - Fix large file downloads in file manager.
 - Fix don't add domain parameter to msmtp configuration when domain is empty.
+- Fix suppress message being displayed twice.
 
 Permanent restrictions:
 - No more x86 versions of NAS4Free 11 series will be made, 32-bits users need 10.3 than.
