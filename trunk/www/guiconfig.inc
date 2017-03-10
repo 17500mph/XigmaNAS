@@ -956,11 +956,14 @@ function make_headermenu_extensions(array &$menu) {
 						$description = $node_item->nodeValue; // get display value
 						if(!empty($link)): // add target attribute when link looks like a hard link
 							if(preg_match($hard_link_regex,$link)): // hard link?
-								$menu_items[] = ['type' => 'external','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
+								$ext_menu_item = ['visible' => $isAdminSession,'description' => htmlspecialchars($description),'type' => 'external','link' => $link];
+							elseif(preg_match('~^[\./]~',$link)):
+								$ext_menu_item = ['visible' => $isAdminSession,'description' => htmlspecialchars($description),'type' => 'internal','link' => $link];
 							else:
-								$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
+								$ext_menu_item = ['visible' => $isAdminSession,'description' => htmlspecialchars($description),'type' => 'internal','link' => sprintf('/%s',$link)];
 							endif;
-							$menu[$menu_name]['visible'] = $isAdminSession; // extension menu found, make menu head visible 
+							$menu_items[] = $ext_menu_item;
+							$menu[$menu_name]['visible'] = $isAdminSession; // extension menu found, make extension menu header visible 
 						endif;
 					endforeach;
 				endif;
