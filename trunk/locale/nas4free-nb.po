@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
-"PO-Revision-Date: 2017-02-21 17:42+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
+"PO-Revision-Date: 2017-03-09 19:22+0000\n"
+"Last-Translator: vmwarewolf <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
 "X-Poedit-Language: Norwegian Bokmal\n"
@@ -113,15 +113,19 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Standard lengder er: 128 for AES, 128 for Blowfish, 128 for Camelia og 192 "
+"for 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr ""
+msgstr "(Finnes i Maxtor 6B200M0 200GB og Maxtor 2R015H1 15GB disker)."
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
+"(Kingston) Regner antall flash feil. Dette verdien viser totalt antall flash "
+"slettefeil siden disken var tatt i bruk. Denne verdien er lik verdien 182."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
@@ -222,11 +226,14 @@ msgstr ""
 "'0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "et RAID volum som er tatt i bruk kan ikke slettes."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
+msgstr ""
+
+msgid "A reboot is required"
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -345,19 +352,19 @@ msgid "ARP Tables"
 msgstr "ARP tabeller"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "ARP tabell-liste"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ATRIBUTT NAVN"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Tillat eksterne syslog meldinger"
 
 msgid "Access"
 msgstr "Tilgang"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Tilgangsmodus"
 
 msgid "Access Restrictions"
 msgstr "Tilgangsrestriksjoner"
@@ -366,7 +373,7 @@ msgid "Access Time (atime)"
 msgstr "Tilgangstid"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "Koble til webgrensesnittet med den nye IP adressen."
 
 msgid "Acoustic level"
 msgstr "Akustisk nivå"
@@ -406,22 +413,22 @@ msgid "Activity"
 msgstr "Aktivitet"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Adaptiv (Lavt strømforbruk)"
 
 msgid "Add"
 msgstr "Tilføy"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Legg til Bridge"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "Legg til CARP"
 
 msgid "Add Dataset"
 msgstr "Legg til Datasett"
 
 msgid "Add Disk"
-msgstr ""
+msgstr "Legg til disk"
 
 msgid "Add Encrypted Volume"
 msgstr "Legg til ett Kryptert Volum"
@@ -439,22 +446,22 @@ msgid "Add MIB"
 msgstr "Legg til MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Legg til NFS Share"
 
 msgid "Add Option"
-msgstr ""
+msgstr "Legg til opsjon"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Legg til pool"
 
 msgid "Add RAID"
 msgstr "Legg til RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Legg til record"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Legg til Ressurs"
 
 msgid "Add Route"
 msgstr "Legg til rute"
@@ -481,7 +488,7 @@ msgid "Add User Account"
 msgstr "Legg til Brukerkonto"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "Legg til VLAN"
 
 msgid "Add Virtual Device"
 msgstr "Legg til Virtuell Enhet"
@@ -499,10 +506,10 @@ msgid "Add a log device to a pool"
 msgstr ""
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Legg til ledig enhet i et pool"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Legg til virtuell enhet i et pool"
 
 msgid "Add additional scheduled self-test."
 msgstr "Legg til en planlagt selv-test."
@@ -550,10 +557,10 @@ msgid "Add target"
 msgstr "Legg til mål"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Ny gruppe"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Nytt nettverk"
 
 msgid "Additional Parameters"
 msgstr ""
@@ -6527,6 +6534,9 @@ msgstr ""
 msgid "Reboot"
 msgstr "Omstart"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr ""
 
@@ -10199,22 +10209,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "avmontér"
-
-#~ msgid "Add disk"
-#~ msgstr "Legg til disk"
-
-#~ msgid "Delete disk"
-#~ msgstr "Slett disk"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Vil du virkelig slette denne disken? Alle elementene som bruker den vil bli "
-#~ "feil (f.eks. delinger)!"
-
-#~ msgid "Edit disk"
-#~ msgstr "Endre disk"
-
-#~ msgid "Process"
-#~ msgstr "Prosess"

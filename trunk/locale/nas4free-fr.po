@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
 "PO-Revision-Date: 2017-03-07 17:56+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 20:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -265,6 +265,9 @@ msgid ""
 msgstr ""
 "Un disque ou une partition monté doit être démonté temporairement pour "
 "réaliser l'action demandée."
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Une demande de rechargement a été envoyée au démon"
@@ -6978,6 +6981,9 @@ msgstr "Raison du dernier passage sur batterie (* opaque)"
 msgid "Reboot"
 msgstr "Redémarrage"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr "Tampon de Réception"
 
@@ -11110,70 +11116,3 @@ msgstr "à"
 
 msgid "umount"
 msgstr "démontage"
-
-#~ msgid "Add disk"
-#~ msgstr "Ajouter un disque"
-
-#~ msgid "Delete disk"
-#~ msgstr "Supprimer le  disque"
-
-#~ msgid "Edit disk"
-#~ msgstr "Modifier le disque"
-
-#~ msgid "Process"
-#~ msgstr "Processus"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Voulez-vous vraiment supprimer ce disque ? Tous les éléments l'utilisant "
-#~ "seront invalidés !"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "Le ou les disque(s) dans la configuration sont différent(s) du ou des "
-#~ "disque(s) actuel(s). S'il vous plait enlevez puis ré-installez le ou les "
-#~ "disque(s)  ou utilisez 'Effacer la configuration actuelle et importez les "
-#~ "disques'."
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Tous les disques raid logiciels sont importés."
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "Aucun nouveau disque raid logiciel trouvé."
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Effacer la configuration et importer les disques"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "Effacer la configuration et importer les disques RAID logiciel"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Impoter des disques Raid logiciel"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Re-balayer les disques"
-
-#~ msgid ""
-#~ "Do you want to clear configuration information and import software RAID "
-#~ "disks?"
-#~ msgstr ""
-#~ "Voulez-vous effacer les informations de configuration et importer des "
-#~ "disques RAID logiciels?"
-
-#~ msgid "Do you want to clear configuration information and import disks?"
-#~ msgstr ""
-#~ "Voulez-vous effacer les informations de configuration et importer des "
-#~ "disques?"
-
-#~ msgid "Clear Configuration & Import Software RAID Disks"
-#~ msgstr "Effacer la Configuration & importer des Disques RAID  Logiciels"
-
-#~ msgid "Clear Configuration & Import Disks"
-#~ msgstr "Effacer la Configuration & Importer les Disques"
-
-#~ msgid "The existing configuration will be rewritten."
-#~ msgstr "La configuration existante sera réécrite."

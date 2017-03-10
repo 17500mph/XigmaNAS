@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
 "PO-Revision-Date: 2017-02-22 16:23+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -259,6 +259,9 @@ msgid ""
 msgstr ""
 "Un disco attualmente montato verrà temporaneamente smontato per eseguire "
 "l'operazione richiesta."
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Una richiesta di nuovo caricamento è stata inviata ai demoni."
@@ -6801,6 +6804,9 @@ msgstr "Motivo ultimo passaggio a batteria (* opaque)"
 msgid "Reboot"
 msgstr "Riavvia"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr ""
 
@@ -10750,49 +10756,3 @@ msgstr "verso"
 
 msgid "umount"
 msgstr "smonta"
-
-#~ msgid "Add disk"
-#~ msgstr "Aggiungi disco"
-
-#~ msgid "Delete disk"
-#~ msgstr "Cancella disco"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Si vuole realmente cancellare questo disco? Tutti gli elementi che ancora lo "
-#~ "utilizzano non saranno piu' validi (es. condivisoni)!"
-
-#~ msgid "Edit disk"
-#~ msgstr "Edita disco"
-
-#~ msgid "Process"
-#~ msgstr "Processi"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "Le periferiche nella configurazione sono diverse da quelle attualmente "
-#~ "rilevate. Per favore rimuovi e riaggiungi le periferiche oppure utilizza "
-#~ "'Cancella la configurazione e importa i dischi'."
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Tutti i dischi raid software sono stati importati."
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "Nessun nuovo disco raid software è stato trovato."
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Pulisi la configurazione & Importa i dischi"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr ""
-#~ "Pulisi la configurazione & Importa i dischi configurati in raid software"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Importa Software Raid Dischi"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Riscansiona Dischi"

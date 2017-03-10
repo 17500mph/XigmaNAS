@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
-"PO-Revision-Date: 2017-03-08 08:27+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
+"PO-Revision-Date: 2017-03-10 06:52+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-08 13:20+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -59,19 +59,19 @@ msgstr "%s接口"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr "%s 类似存在 %s。"
+msgstr "%s已作为%s存在。"
 
 #, php-format
 msgid "%s already exists."
-msgstr "%s 已经存在。"
+msgstr "%s 已存在。"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr "%s 文件系统配置文件已存在。"
+msgstr "%s 已配置为文件系统。"
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr "%s 卷已存在。"
+msgstr "%s 已配置为卷。"
 
 #, php-format
 msgid "%s is too long."
@@ -170,13 +170,13 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "一个或更多磁盘需要建立为RAID-1卷"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr "创建一个Raid-0 分区需要2个或更多的磁盘"
+msgstr "创建一个Raid-0 卷需要2个或更多的磁盘。"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr "创建一个Raid-1 分区需要2个或更多的磁盘"
+msgstr "创建一个Raid-1 卷需要2个或更多的磁盘。"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr "创建一个Raid-5 分区需要2个或更多的磁盘"
+msgstr "创建一个Raid-5 卷需要3个或更多的磁盘。"
 
 msgid "4KB wrapper"
 msgstr "4KB封套"
@@ -224,6 +224,9 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr "为执行需求的动作，已挂载的磁盘或分区将临时取消挂载。"
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "已重新发送需求至守护进程。"
@@ -349,13 +352,13 @@ msgid "Accept remote syslog messages."
 msgstr "接受远程syslog消息。"
 
 msgid "Access"
-msgstr "权限"
+msgstr "访问"
 
 msgid "Access Mode"
 msgstr "访问方式"
 
 msgid "Access Restrictions"
-msgstr "存取权限"
+msgstr "访问限制"
 
 msgid "Access Time (atime)"
 msgstr "访问时间(atime)"
@@ -364,7 +367,7 @@ msgid "Access the webGUI with the new IP address"
 msgstr "用新IP地址访问webGUI"
 
 msgid "Acoustic level"
-msgstr "噪音控制"
+msgstr "噪音级别"
 
 msgid "Action"
 msgstr "动作"
@@ -387,7 +390,7 @@ msgid "Active Directory"
 msgstr "Active Directory"
 
 msgid "Active Shares"
-msgstr "活跃分享区"
+msgstr "活跃共享区"
 
 msgid "Active Users"
 msgstr "活跃用户"
@@ -486,16 +489,16 @@ msgid "Add WLAN"
 msgstr "添加WLAN"
 
 msgid "Add a cache device to a pool"
-msgstr "给库添加一个缓存设备"
+msgstr "给池添加一个缓存设备"
 
 msgid "Add a log device to a pool"
-msgstr "给库添加一个日志设备"
+msgstr "给池添加一个日志设备"
 
 msgid "Add a spare device to a pool"
-msgstr "给库添加一个热备设备"
+msgstr "给池添加一个热备设备"
 
 msgid "Add a virtual device to a pool"
-msgstr "给库添加一个虚拟设备"
+msgstr "给池添加一个虚拟设备"
 
 msgid "Add additional scheduled self-test."
 msgstr "添加额外计划的自检。"
@@ -537,7 +540,7 @@ msgid "Add rule"
 msgstr "添加规则"
 
 msgid "Add self-test"
-msgstr "添加自我检测"
+msgstr "添加自检"
 
 msgid "Add target"
 msgstr "添加目标"
@@ -546,7 +549,7 @@ msgid "Additional Group"
 msgstr "附加组"
 
 msgid "Additional Network"
-msgstr "其他网络"
+msgstr "附加网络"
 
 msgid "Additional Parameters"
 msgstr "附加参数"
@@ -608,7 +611,7 @@ msgstr "在传输完成后将 -File-deletions"
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
-msgstr "点击“保存”后你或许需要做以下步骤来再次连通服务器："
+msgstr "点击“保存”后你或许需要做以下步骤以再次访问服务器："
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
@@ -627,7 +630,7 @@ msgstr "积极模式"
 msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
-msgstr "西部数据硬盘气流温度 (等同于温度，但是有些硬盘次项温度读数偏低50度。标记为过期参数。 )"
+msgstr "西部数据硬盘气流温度 (等同于温度，但是某些硬盘此项温度读数偏低50度。标记为过期参数。 )"
 
 msgid "Alert Level"
 msgstr "警报等级"
@@ -650,7 +653,7 @@ msgid ""
 msgstr "路径中的全部数据都将被覆盖，推荐使用空的UFS目录以避免无效的数据或权限。"
 
 msgid "All data will be lost when you activate this option!"
-msgstr "当你激活此选项所有的数据将会丢失"
+msgstr "当你激活此选项所有的数据将会丢失！"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -683,17 +686,17 @@ msgid "Allow TLS connections only."
 msgstr "只允许TLS连接。"
 
 msgid "Allow client access to accounts that have null passwords."
-msgstr "允许没有设置密码的帐号连接。"
+msgstr "允许没有设置密码的帐号访问。"
 
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr "允许客户端尝试在共享上存储OS/2风格的扩展属性。"
 
 msgid "Allow clients to resume interrupted uploads and downloads."
-msgstr "允许客户端在上传和下载时断点续传"
+msgstr "允许客户端在上传和下载时断点续传。"
 
 msgid "Allow new files to be created."
-msgstr "允许创建新文件."
+msgstr "允许创建新文件。"
 
 msgid "Allow to start UPS from battery"
 msgstr "允许 UPS 从电池启动"
@@ -704,12 +707,12 @@ msgstr "允许受信任的域。"
 msgid ""
 "Allows  certain  users and groups to have read/write access to a share. This "
 "follows the allow option format."
-msgstr "允许特定用户与群组可以读写某个共享区。这将使用允许选项的格式。"
+msgstr "允许特定用户和群组对共享具有读/写访问权限。 这遵循允许选项格式。"
 
 msgid ""
 "Allows certain users and groups to have read-only  access  to  a share. This "
 "follows the allow option format."
-msgstr "允许特定用户与群组可唯读某个分享区。此选项和允许选项格式相同。"
+msgstr "允许特定用户和群组对共享具有只读访问权限。 这遵循允许选项格式。"
 
 msgid "Allows the server to try and become a local master browser."
 msgstr "允许服务器尝试成为本局域网主浏览器（local master browser）。"
@@ -1165,7 +1168,7 @@ msgid "Bridge is protected"
 msgstr "网桥被保护"
 
 msgid "Bridge is unlocked"
-msgstr "网桥被解锁"
+msgstr "网桥已解锁"
 
 msgid "Bring a device online"
 msgstr "使设备联机"
@@ -1210,7 +1213,7 @@ msgid "CARP is protected"
 msgstr "CARP被保护"
 
 msgid "CARP is unlocked"
-msgstr "CARP被解锁"
+msgstr "CARP已解锁"
 
 msgid "CARP only"
 msgstr "只是 CARP"
@@ -1300,7 +1303,7 @@ msgid "CPU Usage"
 msgstr "CPU使用情况"
 
 msgid "CPU frequencies:"
-msgstr "CPU频率"
+msgstr "CPU频率："
 
 msgid "CPU load"
 msgstr "CPU 负载"
@@ -1314,10 +1317,10 @@ msgid "Calibration Battery"
 msgstr "电池校正"
 
 msgid "Can't get UFS ID."
-msgstr "无法获取UFS ID."
+msgstr "无法获取UFS ID。"
 
 msgid "Can't mount the system partition 1, the DATA partition is the 2."
-msgstr "不能挂载系统分区(第1区)，资料分区为第2区。"
+msgstr "不能挂载系统分区(第1分区)，数据分区为第2分区。"
 
 msgid "Cancel"
 msgstr "取消"
@@ -1493,7 +1496,7 @@ msgid "Command is protected"
 msgstr "命令被保护"
 
 msgid "Command is unlocked"
-msgstr "命令解锁"
+msgstr "命令已解锁"
 
 msgid "Command output"
 msgstr "命令输出"
@@ -1809,7 +1812,7 @@ msgid "Create ZFS on a GPT partition."
 msgstr "在GPT分区上创建ZFS。"
 
 msgid "Create and initialize RAID."
-msgstr "建立并初始 RAID。"
+msgstr "创建并初始化RAID。"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "如果工作目录不存在，则创建目录"
@@ -1824,7 +1827,7 @@ msgid "Creates the recursive snapshot."
 msgstr "建立递归快照。"
 
 msgid "Creating filesystem"
-msgstr "建立文件系统"
+msgstr "创建文件系统"
 
 msgid "Creating filesystem with 'Soft Updates'"
 msgstr "建立可 'Soft Updates' 的文件系统"
@@ -1969,7 +1972,7 @@ msgid "Dataset is protected"
 msgstr "数据集已保护"
 
 msgid "Dataset is unlocked"
-msgstr "数据集未锁定"
+msgstr "数据集已解锁"
 
 msgid "Datasets"
 msgstr "数据集（Datasets）"
@@ -2367,7 +2370,7 @@ msgid "Difference"
 msgstr "差异"
 
 msgid "Digital Audio Access Protocol"
-msgstr "数位音频信号存取协议（Digital Audio Access Protocol）"
+msgstr "数字音频访问协议（Digital Audio Access Protocol）"
 
 msgid "Direction"
 msgstr "方向"
@@ -2486,7 +2489,7 @@ msgid "Disk is marked for deletion"
 msgstr "磁盘被标记为要删除"
 
 msgid "Disk is unlocked"
-msgstr "磁盘被解锁"
+msgstr "磁盘已解锁"
 
 msgid "Disks"
 msgstr "硬盘"
@@ -3551,7 +3554,7 @@ msgid "Extended input voltage range"
 msgstr "扩展的输入电压范围"
 
 msgid "Extensions"
-msgstr "扩充"
+msgstr "扩展"
 
 msgid "Extent"
 msgstr "Extent"
@@ -4937,7 +4940,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB被标记为删除"
 
 msgid "MIB is unlocked"
-msgstr "MIB被解锁"
+msgstr "MIB已解锁"
 
 msgid "MIRROR"
 msgstr "镜像"
@@ -5269,7 +5272,7 @@ msgstr "挂载点名称"
 
 msgid ""
 "Mount the file system read-only (even the super-user may not write it)."
-msgstr "以唯读模式挂载（连超级用户也无法写入）。"
+msgstr "以只读模式挂载（即使超级用户也无法写入）。"
 
 msgid "Mounting device."
 msgstr "设备挂载中。"
@@ -5308,7 +5311,7 @@ msgid "NFS share is protected"
 msgstr "NFS共享被保护"
 
 msgid "NFS share is unlocked"
-msgstr "NFS共享被解锁"
+msgstr "NFS共享已解锁"
 
 msgid "NFSv4"
 msgstr "NFSv4"
@@ -5722,7 +5725,7 @@ msgstr "在线信息"
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
 "access to real accounts."
-msgstr "只允许匿名用户。使用在公共而且拒绝远端帐号连线的 FTP 站。"
+msgstr "只允许匿名用户。用作公共FTP站，并拒绝真实帐号远程FTP访问。"
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "只允许授权用户，匿名用户无法登录。"
@@ -5740,7 +5743,7 @@ msgid "Option is protected"
 msgstr "选项被保护"
 
 msgid "Option is unlocked"
-msgstr "选项被解锁"
+msgstr "选项已解锁"
 
 msgid "Optional user-friendly string of the target."
 msgstr "自选易用的目标字符串。"
@@ -6116,7 +6119,7 @@ msgid "Pool is protected"
 msgstr "池被保护"
 
 msgid "Pool is unlocked"
-msgstr "池被解锁"
+msgstr "池已解锁"
 
 msgid "Pools"
 msgstr "存储池（Pool）"
@@ -6328,7 +6331,7 @@ msgid "RAID is protected"
 msgstr "RAID被保护"
 
 msgid "RAID is unlocked"
-msgstr "RAID被解锁"
+msgstr "RAID已解锁"
 
 msgid "RAID-0"
 msgstr "RAID-0"
@@ -6430,10 +6433,10 @@ msgid "Read Only"
 msgstr "只读"
 
 msgid "Read Only (ro)"
-msgstr "唯读 (ro)"
+msgstr "只读 (ro)"
 
 msgid "Read Only Access"
-msgstr "唯读权限"
+msgstr "只读访问"
 
 msgid "Read from biggest priority"
 msgstr "从最优先起开始读取"
@@ -6442,7 +6445,7 @@ msgid "Read from lowest load"
 msgstr "从最低负荷起开始读取"
 
 msgid "Read only"
-msgstr "唯读"
+msgstr "只读"
 
 msgid "Read/Write"
 msgstr "读/写"
@@ -6480,6 +6483,9 @@ msgstr "上次转移到电池的原因（*不透明）"
 msgid "Reboot"
 msgstr "重启"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr "接收缓冲区"
 
@@ -6499,7 +6505,7 @@ msgid "Record is protected"
 msgstr "记录被保护"
 
 msgid "Record is unlocked"
-msgstr "记录被解锁"
+msgstr "记录已解锁"
 
 msgid "Recurse into directories."
 msgstr "递归入目录。"
@@ -6656,7 +6662,7 @@ msgid "Resource is protected"
 msgstr "资源被保护"
 
 msgid "Resource is unlocked"
-msgstr "资源被解锁"
+msgstr "资源已解锁"
 
 msgid "Resources"
 msgstr "资源"
@@ -6731,7 +6737,7 @@ msgid "Route is protected"
 msgstr "路由被保护"
 
 msgid "Route is unlocked"
-msgstr "路由被解锁"
+msgstr "路由已解锁"
 
 msgid "Routes"
 msgstr "路由"
@@ -6755,7 +6761,7 @@ msgid "Rsync Module is protected"
 msgstr "Rsync模块被保护"
 
 msgid "Rsync Module is unlocked"
-msgstr "Rsync模块被解锁"
+msgstr "Rsync模块已解锁"
 
 msgid "Rsync job is marked for deletion"
 msgstr "Rsync任务被标记为删除"
@@ -6764,7 +6770,7 @@ msgid "Rsync job is protected"
 msgstr "Rsync任务被保护"
 
 msgid "Rsync job is unlocked"
-msgstr "Rsync任务被解锁"
+msgstr "Rsync任务已解锁"
 
 msgid "Rule"
 msgstr "规则"
@@ -6862,7 +6868,7 @@ msgid "Samba Share is protected"
 msgstr "Samba共享被保护"
 
 msgid "Samba Share is unlocked"
-msgstr "Samba共享被解锁"
+msgstr "Samba共享已解锁"
 
 #, php-format
 msgid ""
@@ -7283,7 +7289,7 @@ msgid "Share is protected"
 msgstr "共享被保护"
 
 msgid "Share is unlocked"
-msgstr "共享被解锁"
+msgstr "共享已解锁"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "共享文件夹密码不能够超过 8 个字符。"
@@ -7395,7 +7401,7 @@ msgid "Snapshot is marked for deletion"
 msgstr "快照被标记为删除"
 
 msgid "Snapshot is unlocked"
-msgstr "快照被解锁"
+msgstr "快照已解锁"
 
 msgid "Snapshots"
 msgstr "快照（Snapshots）"
@@ -7472,7 +7478,7 @@ msgid "Specifies how the volume should be exposed to the OS."
 msgstr "指定卷应如何向操作系统公开。"
 
 msgid "Specifies that the file system should be exported read-only."
-msgstr "指定文件系统导出为唯读。"
+msgstr "指定文件系统以只读方式导出。"
 
 msgid "Specifies the command to be run."
 msgstr "运行指定命令。"
@@ -9539,7 +9545,7 @@ msgid "User account is protected"
 msgstr "用户账户被保护"
 
 msgid "User account is unlocked"
-msgstr "用户账号被解锁"
+msgstr "用户账号已解锁"
 
 msgid "User numeric id."
 msgstr "用户的数字 ID"
@@ -9594,7 +9600,7 @@ msgid "VLAN is protected"
 msgstr "VLAN被保护"
 
 msgid "VLAN is unlocked"
-msgstr "VLAN被解锁"
+msgstr "VLAN已解锁"
 
 msgid "VM Type"
 msgstr "VM 类型"
@@ -9647,7 +9653,7 @@ msgid "Virtual Device is protected"
 msgstr "虚拟设备被保护"
 
 msgid "Virtual Device is unlocked"
-msgstr "虚拟设备被解锁"
+msgstr "虚拟设备已解锁"
 
 msgid "Virtual Devices"
 msgstr "虚拟设备"
@@ -9704,7 +9710,7 @@ msgid "Volume is protected"
 msgstr "卷被保护"
 
 msgid "Volume is unlocked"
-msgstr "卷被解锁"
+msgstr "卷已解锁"
 
 msgid ""
 "Volume label of the new file system. Use % for a counter or %n for a counter "
@@ -9747,7 +9753,7 @@ msgid "WLAN is protected"
 msgstr "WALN被保护"
 
 msgid "WLAN is unlocked"
-msgstr "WLAN被解锁"
+msgstr "WLAN已解锁"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10158,43 +10164,3 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
-
-#~ msgid "Add disk"
-#~ msgstr "添加磁盘"
-
-#~ msgid "Delete disk"
-#~ msgstr "删除硬盘"
-
-#~ msgid "Edit disk"
-#~ msgstr "编辑硬盘"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr "您确定要删除这个硬盘吗？所有使用此硬盘的元件都会失效！ (例如：分享区)"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr "在配置中的设备和实际设备并不相同。请移除设备，然后重新添加它，或使用“清除和导入磁盘设置\"。"
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "清除和导入磁盘设置"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "导入软件RAID磁盘"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "重新扫描磁盘"
-
-#~ msgid "Process"
-#~ msgstr "进程"
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "没有发现新的软RAID的硬盘。"
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "已经导入所有软RAID的硬盘。"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "清除和导入软RAID设置"
