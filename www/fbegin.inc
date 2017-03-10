@@ -85,15 +85,8 @@ echo '<!DOCTYPE html>',"\n"
 	</div>
 <?php
 	endif; 
+	display_headermenu();
 ?>
-	<div id="headernavbar">
-		<ul id="navbarmenu">
-<?php
-			display_headermenu();
-?>
-		</ul>
-		<div style="clear:both"></div>
-	</div>
 	<div id="gapheader"></div>
 </header>
 <script type="text/javascript">

@@ -941,7 +941,7 @@ function make_headermenu_extensions(array &$menu) {
 		$menu_items = []; // wipe menuitems, just to be safe
 		while(false !== ($file_found_name = readdir($dir_handle))): // scan through each name
 			$file_found_full_name = $dir_path . $file_found_name; // calculate full path of the name
-			if(($file_found_name === '.') || ($file_found_name === '..') || ('dir' !== filetype($file_found_full_name))): // ignore files and special folder
+			if(($file_found_name === '.') || ($file_found_name === '..')):
 				continue;
 			endif;
 			$menu_file_full_name = $file_found_full_name . '/menu.inc'; // calculate the expected menu name
@@ -974,53 +974,42 @@ function display_headermenu() {
 	$menu = get_headermenu();
 	make_headermenu_extensions($menu); // function cares about access rights itself
 	$menu_list = ['system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
-	if(preg_match('/(iphone|android)/i',$_SERVER['HTTP_USER_AGENT'])): // desktop/mobile detection
-		$notadesktop = true;
-	else:
-		$notadesktop = false;
-	endif;
+	echo '<nav id="navhdr"><ul>';
 	foreach($menu_list as $menuid):
 		if($menu[$menuid]['visible']): // render menu when visible
 			$link = $menu[$menuid]['link'];
 			$hard_link_regex = '~^[a-z]+://~';
 			echo "<li>\n";
-			if($notadesktop):
-				echo '<a href="javascript:mopen(\'',$menuid,'\');" onmouseout="mclosetime()">',$menu[$menuid]['description'],"</a>\n";
-			elseif(preg_match($hard_link_regex,$link)): // hard link = no spinner
-				echo '<a href="',$link,'" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['description'],"</a>\n";
+			$target = ('internal' === $menu[$menuid]['type']) ? '_self' : '_blank';
+			if(preg_match($hard_link_regex,$link)): // hard link = no spinner
+				echo '<a href="',$link,'" target="',$target,'" title="',$menu[$menuid]['description'],'">',$menu[$menuid]['description'],"</a>\n";
 			else: // local link = spinner
-				echo '<a href="',$link,'" onclick="spinner()" onmouseover="mopen(\'',$menuid,'\')" onmouseout="mclosetime()">',$menu[$menuid]['description'],"</a>\n";
+				echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menu[$menuid]['description'],'">',$menu[$menuid]['description'],"</a>\n";
 			endif;
-			echo '<div id="',$menuid,'" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">',"\n";
+			echo '<ul>',"\n";
 			// Display menu items.
 			foreach($menu[$menuid]['menuitem'] as $menu_item):
 				if($menu_item['visible']): // render menuitem when visible
-					switch($menu_item['type']):
-						case 'external':
-							$target = '_blank';
-							break;
-						case 'internal':
-							$target = '_self';
-							break;
-					endswitch;
-					switch($menu_item['type']):
-						case 'separator':
-							echo '<span class="tabseparator">&nbsp;</span>';
-							break;
-						default:
-							$link = $menu_item['link'];
-							if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-								echo '<a href="',$link,'" target="',$target,'" title="',$menu_item['description'],'">',$menu_item['description'],'</a>',"\n";
-							else: // local link = spinner
-								echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menu_item['description'],'">',$menu_item['description'],'</a>',"\n";
-							endif;
-							break;
-					endswitch;
+					echo '<li>';
+					$target = ('internal' === $menu_item['type']) ? '_self' : '_blank';
+					if('separator' === $menu_item['type']):
+						echo '<span class="tabseparator">&nbsp;</span>';
+					else:
+						$link = $menu_item['link'];
+						if(preg_match($hard_link_regex,$link)): // hard link = no spinner
+							echo '<a href="',$link,'" target="',$target,'" title="',$menu_item['description'],'">',$menu_item['description'],'</a>',"\n";
+						else: // local link = spinner
+							echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menu_item['description'],'">',$menu_item['description'],'</a>',"\n";
+						endif;
+						break;
+					endif;
+					echo '</li>';
 				endif;
 			endforeach;
-			echo '</div>',"\n";
+			echo '</ul>',"\n";
 			echo "</li>\n";
 		endif;
 	endforeach;
+	echo '</ul></nav>';
 }
 ?>

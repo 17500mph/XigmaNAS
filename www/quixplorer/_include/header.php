@@ -106,12 +106,7 @@ function show_header($title, $additional_header_content = null) {
 		echo '</div>',"\n";
 		echo '</div>',"\n";
 	endif;
-	echo "<div id=\"headernavbar\">\n";
-	echo "<ul id=\"navbarmenu\">\n";
 	display_headermenu();
-	echo "</ul>\n";
-	echo "<div style=\"clear:both\"></div>\n";
-	echo "</div>\n";
 	echo '<div id="gapheader"></div>', "\n";
 	echo "</header>\n";
 	echo '<main id="g4m">', "\n";
