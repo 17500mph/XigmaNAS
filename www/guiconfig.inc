@@ -945,71 +945,77 @@ function make_headermenu_extensions(array &$menu) {
 				continue;
 			endif;
 			$menu_file_full_name = $file_found_full_name . '/menu.inc'; // calculate the expected menu name
-			$previous_setting = libxml_use_internal_errors(true); // suppress exeptions
-			libxml_clear_errors();
-			$dom = new DOMDocument(); // import menu into DOM object, let it do it's job
-			if(false !== ($dom->loadHTMLFile($menu_file_full_name,LIBXML_NOERROR || LIBXML_NOWARNING || LIBXML_HTML_NOIMPLIED || LIBXML_HTML_NODEFDTD))):
-				$node_list = $dom->getElementsByTagName('a'); // get <a> elements
-				foreach($node_list as $node_item):
-					$link = trim($node_item->getAttribute('href')); // extract attribute href
-					$description = $node_item->nodeValue; // get display value
-					if(!empty($link)): // add target attribute when link looks like a hard link
-						if(preg_match($hard_link_regex,$link)): // hard link?
-							$menu_items[] = ['type' => 'external','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
-						else:
-							$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
+			if(file_exists($menu_file_full_name)):
+				$previous_setting = libxml_use_internal_errors(true); // suppress exeptions
+				libxml_clear_errors();
+				$dom = new DOMDocument(); // import menu into DOM object, let it do it's job
+				if(false !== ($dom->loadHTMLFile($menu_file_full_name,LIBXML_NOERROR || LIBXML_NOWARNING || LIBXML_HTML_NOIMPLIED || LIBXML_HTML_NODEFDTD))):
+					$node_list = $dom->getElementsByTagName('a'); // get <a> elements
+					foreach($node_list as $node_item):
+						$link = trim($node_item->getAttribute('href')); // extract attribute href
+						$description = $node_item->nodeValue; // get display value
+						if(!empty($link)): // add target attribute when link looks like a hard link
+							if(preg_match($hard_link_regex,$link)): // hard link?
+								$menu_items[] = ['type' => 'external','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
+							else:
+								$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => htmlspecialchars($description),'link' => $link];
+							endif;
+							$menu[$menu_name]['visible'] = $isAdminSession; // extension menu found, make menu head visible 
 						endif;
-						$menu[$menu_name]['visible'] = $isAdminSession; // extension menu found, make menu head visible 
-					endif;
-				endforeach;
+					endforeach;
+				endif;
+				libxml_clear_errors();
+				libxml_use_internal_errors($previous_setting);
 			endif;
-			libxml_clear_errors();
-			libxml_use_internal_errors($previous_setting);
 		endwhile;
 		unset($menu_items);
 		closedir($dir_handle);
 	endif;
 }
 function display_headermenu() {
+	$output = [];
 	$menu = get_headermenu();
 	make_headermenu_extensions($menu); // function cares about access rights itself
 	$menu_list = ['system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
-	echo '<nav id="navhdr"><ul>';
+	$output[] = '<nav id="navhdr">';
+	$output[] = '<ul>';
+	$hard_link_regex = '~^[a-z]+://~';
 	foreach($menu_list as $menuid):
 		if($menu[$menuid]['visible']): // render menu when visible
 			$link = $menu[$menuid]['link'];
-			$hard_link_regex = '~^[a-z]+://~';
-			echo "<li>\n";
+			$output[] = '<li>';
 			$target = ('internal' === $menu[$menuid]['type']) ? '_self' : '_blank';
 			if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-				echo '<a href="',$link,'" target="',$target,'" title="',$menu[$menuid]['description'],'">',$menu[$menuid]['description'],"</a>\n";
+				$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s">%3$s</a>',$link,$target,$menu[$menuid]['description']);
 			else: // local link = spinner
-				echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menu[$menuid]['description'],'">',$menu[$menuid]['description'],"</a>\n";
+				$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s" onclick="spinner()">%3$s</a>',$link,$target,$menu[$menuid]['description']);
 			endif;
-			echo '<ul>',"\n";
+			$output[] = '<ul>';
 			// Display menu items.
 			foreach($menu[$menuid]['menuitem'] as $menu_item):
 				if($menu_item['visible']): // render menuitem when visible
-					echo '<li>';
+					$output[] = '<li>';
 					$target = ('internal' === $menu_item['type']) ? '_self' : '_blank';
 					if('separator' === $menu_item['type']):
-						echo '<span class="tabseparator">&nbsp;</span>';
+						$output[] = '<span class="tabseparator">&nbsp;</span>';
 					else:
 						$link = $menu_item['link'];
 						if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-							echo '<a href="',$link,'" target="',$target,'" title="',$menu_item['description'],'">',$menu_item['description'],'</a>',"\n";
+							$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s">%3$s</a>',$link,$target,$menu_item['description']);
 						else: // local link = spinner
-							echo '<a href="',$link,'" onclick="spinner()" target="',$target,'" title="',$menu_item['description'],'">',$menu_item['description'],'</a>',"\n";
+							$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s" onclick="spinner()">%3$s</a>',$link,$target,$menu_item['description']);
 						endif;
-						break;
 					endif;
-					echo '</li>';
+					$output[] = '</li>';
 				endif;
 			endforeach;
-			echo '</ul>',"\n";
-			echo "</li>\n";
+			$output[] = '</ul>';
+			$output[] = '</li>';
 		endif;
 	endforeach;
-	echo '</ul></nav>';
+	$output[] = '</ul>';
+	$output[] = '</nav>';
+	$return = implode("\n",$output);
+	echo $return;
 }
 ?>
