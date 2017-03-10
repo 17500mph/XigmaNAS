@@ -986,9 +986,9 @@ function display_headermenu() {
 			$output[] = '<li>';
 			$target = ('internal' === $menu[$menuid]['type']) ? '_self' : '_blank';
 			if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-				$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s">%3$s</a>',$link,$target,$menu[$menuid]['description']);
+				$output[] = sprintf('<a href="%1$s" target="%2$s">%3$s</a>',$link,$target,$menu[$menuid]['description']);
 			else: // local link = spinner
-				$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s" onclick="spinner()">%3$s</a>',$link,$target,$menu[$menuid]['description']);
+				$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',$link,$target,$menu[$menuid]['description']);
 			endif;
 			$output[] = '<ul>';
 			// Display menu items.
@@ -1001,9 +1001,9 @@ function display_headermenu() {
 					else:
 						$link = $menu_item['link'];
 						if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-							$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s">%3$s</a>',$link,$target,$menu_item['description']);
+							$output[] = sprintf('<a href="%1$s" target="%2$s">%3$s</a>',$link,$target,$menu_item['description']);
 						else: // local link = spinner
-							$output[] = sprintf('<a href="%1$s" target="%2$s" title="%3$s" onclick="spinner()">%3$s</a>',$link,$target,$menu_item['description']);
+							$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',$link,$target,$menu_item['description']);
 						endif;
 					endif;
 					$output[] = '</li>';
