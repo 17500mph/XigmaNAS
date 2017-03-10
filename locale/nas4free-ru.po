@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
-"PO-Revision-Date: 2017-03-07 15:55+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
+"PO-Revision-Date: 2017-03-08 18:16+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -257,6 +257,9 @@ msgid ""
 msgstr ""
 "Смонтированный диск или раздел будут временно размонтирован для выполнения "
 "требуемого действия."
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Запрос перезагрузки отправлен демону."
@@ -4615,7 +4618,7 @@ msgid "Import Disks"
 msgstr "Импорт дисков"
 
 msgid "Import Software RAID Disks"
-msgstr "Импортировать программные RAID-диски"
+msgstr "Импорт программных RAID-дисков"
 
 msgid "Import disks"
 msgstr "Импорт дисков"
@@ -6932,6 +6935,9 @@ msgstr "Причина последнего перехода на батарею
 msgid "Reboot"
 msgstr "Перезагрузка"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr "Буфер приема"
 
@@ -7531,8 +7537,8 @@ msgstr "Выберите количество пакетов запроса ICMP
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
-"Выберите вариант “Не форматированный” для не форматированных дисков и "
-"форматируйте их с помощью"
+"Выберите вариант “Unformatted” для не форматированных дисков и "
+"отформатируйте их с помощью"
 
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr ""
@@ -11026,68 +11032,3 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
-
-#~ msgid "Add disk"
-#~ msgstr "Добавить диск"
-
-#~ msgid "Delete disk"
-#~ msgstr "Удалить диск"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Вы действительно хотите удалить этот диск? Все объекты, использующие его, "
-#~ "станут недоступны (например, общие ресурсы)."
-
-#~ msgid "Edit disk"
-#~ msgstr "Изменить диск"
-
-#~ msgid "Process"
-#~ msgstr "Процесс"
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Все диски программных RAID импортированы"
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "Не найдено нового диска программного RAID."
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "Устройство (-а) в конфигурации не соответсвует (-ют) реальному устройству. "
-#~ "Пожалуйста, удалите устройтво (-а) и добавьте их заново или используйте "
-#~ "'Очистить конфигурацию и Импортировать диски'."
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Очистить конфигурацию и импортировать диски"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "Очистить конфигурацию и импортировать программные рейд диски"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Импорт программных рэйд дисков"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Повторное сканирование дисков"
-
-#~ msgid "Clear Configuration & Import Software RAID Disks"
-#~ msgstr "Очистить конфигурацию и импортировать программные RAID-диски"
-
-#~ msgid "Clear Configuration & Import Disks"
-#~ msgstr "Очистить конфигурацию и импортировать диски"
-
-#~ msgid ""
-#~ "Do you want to clear configuration information and import software RAID "
-#~ "disks?"
-#~ msgstr ""
-#~ "Вы хотите очистить конфигурационную информацию и импортировать программные "
-#~ "RAID-диски?"
-
-#~ msgid "Do you want to clear configuration information and import disks?"
-#~ msgstr ""
-#~ "Вы хотите очистить конфигурационную информацию и импортировать диски?"
-
-#~ msgid "The existing configuration will be rewritten."
-#~ msgstr "Существующая конфигурация будет перезаписана."

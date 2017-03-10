@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
 "PO-Revision-Date: 2017-02-23 22:29+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:36+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -260,6 +260,9 @@ msgid ""
 msgstr ""
 "Pro provedení požadované akce bude připojený disk / diskový oddíl dočasně "
 "odpojen (umount)."
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Požadavek na znovunačtení byl odeslán procesu služby."
@@ -6868,6 +6871,9 @@ msgstr "Důvod předchozího přechodu na provoz z akumulátorů (* nejednotné)
 msgid "Reboot"
 msgstr "Restartovat"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr ""
 
@@ -10888,48 +10894,3 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
-
-#~ msgid "Add disk"
-#~ msgstr "Přidat disk"
-
-#~ msgid "Delete disk"
-#~ msgstr "Odstranit disk"
-
-#~ msgid "Edit disk"
-#~ msgstr "Upravit disk"
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Všechny disky softwarového RAID pole jsou importovány."
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
-
-#~ msgid "Process"
-#~ msgstr "Proces"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "Zařízení v nastavení se liší od těch, které jsou ve skutečnosti přítomné. "
-#~ "Odeberte zařízení a přidejte je znovu nebo použijte funkci „Vyčistit "
-#~ "nastavení a importovat disky“."
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Opravdu chcete smazat tento disk? Veškeré prvky, které ho využívají, "
-#~ "přestanou fungovat (např. sdílení)!"
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Vyčistit nastavení a importovat disky"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "Vyčistit nastavení a importovat disky softwarového RAID pole"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Importovat disky softwarového RAID pole"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Znovu naskenovat disky"

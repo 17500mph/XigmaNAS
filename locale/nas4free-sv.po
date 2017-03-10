@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
 "PO-Revision-Date: 2017-03-07 16:44+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 17:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -251,6 +251,9 @@ msgid ""
 msgstr ""
 "En monterad disk eller partition kommer att avmonteras tillfälligt för att "
 "utföra åtgärden."
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "En omladdningbegäran har sänts till demonen."
@@ -6821,6 +6824,9 @@ msgstr "Anledning till senaste övergången till batteridrift (* opaque)"
 msgid "Reboot"
 msgstr "Starta om"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr "Mottagningsbuffert"
 
@@ -10864,65 +10870,3 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
-
-#~ msgid "Add disk"
-#~ msgstr "Lägg till disk"
-
-#~ msgid "Delete disk"
-#~ msgstr "Ta bort disk"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Vill du verkligen radera denna disk? Alla element som använder den kommer "
-#~ "att ogiltigförklaras (t.ex. utdelningar)!"
-
-#~ msgid "Edit disk"
-#~ msgstr "Redigera disk"
-
-#~ msgid "Process"
-#~ msgstr "Process"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "Enheten (enheterna) i konfigurationen stämmer ej med faktiska enheter. Ta "
-#~ "bort enheterna och lägg till dem på nytt eller använd 'Rensa konfiguration "
-#~ "och importera diskar'."
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "Inga nya mjukvaroraid hårddiskar hittades."
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Alla hårddiskarna i mjukvaruraiden är importerade."
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Importera mjukvaruraiddiskar"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Skanna om diskar"
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Rensa konfiguration & importera diskar"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "Rensa konfiguration & importera mjukvaruraiddiskar"
-
-#~ msgid "Clear Configuration & Import Software RAID Disks"
-#~ msgstr "Rensa konfiguration & importera mjukvaru RAID diskar"
-
-#~ msgid "Clear Configuration & Import Disks"
-#~ msgstr "Rensa konfiguration & importera diskar"
-
-#~ msgid ""
-#~ "Do you want to clear configuration information and import software RAID "
-#~ "disks?"
-#~ msgstr "Vill du rensa konfigurationen & importera mjukvaru RAID diskar?"
-
-#~ msgid "Do you want to clear configuration information and import disks?"
-#~ msgstr "Vill du rensa konfigurationen & importera diskar?"
-
-#~ msgid "The existing configuration will be rewritten."
-#~ msgstr "Existerande konfiguration kommer att bli överskriven."

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
 "PO-Revision-Date: 2017-03-07 19:41+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 20:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -255,6 +255,9 @@ msgid ""
 msgstr ""
 "A becsatolt lemezt vagy partíciót ideiglenesen lecsatoljuk a kért művelet "
 "végrehajtásához."
+
+msgid "A reboot is required"
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Betöltési kérést elküldtük a démonnak."
@@ -6880,6 +6883,9 @@ msgstr "Utolsó átutalás oka az akkumulátorról (* átlátszó)"
 msgid "Reboot"
 msgstr "Újraindítás"
 
+msgid "Reboot Required"
+msgstr ""
+
 msgid "Receive Buffer"
 msgstr "Fogadó puffer"
 
@@ -10936,48 +10942,3 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
-
-#~ msgid "Add disk"
-#~ msgstr "Lemez hozzáadása"
-
-#~ msgid "Delete disk"
-#~ msgstr "Lemez eltávolítása"
-
-#~ msgid "Edit disk"
-#~ msgstr "Lemez módosítása"
-
-#~ msgid "Process"
-#~ msgstr "Folyamat"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "A beállításokban lévő eszköz(ök) eltérnek a jelenlegi(ek)től. Távolítsd le "
-#~ "majd újra hozzá az eszköz(öke)t, vagy használd a 'Beállítások törlése és "
-#~ "lemezek importálása' lehetőséget."
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "Nincs új szoftveres raid lemez."
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Összes szoftveres raid lemez importálva."
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "Biztos, hogy eltávolítod ezt a lemezt? Az össze ezt használó elem "
-#~ "érvénytelenné válik (pl.: megosztás)!"
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Beállítások törlése és lemezek importálása"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "Beállítások törlése és szoftveres RAID-es lemezek importálása"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Szoftveres RAID-es lemezek importálása"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Lemezek újrakeresése"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-07 12:31+0000\n"
-"PO-Revision-Date: 2017-03-07 19:40+0000\n"
+"POT-Creation-Date: 2017-03-10 22:00+0000\n"
+"PO-Revision-Date: 2017-03-10 22:55+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-07 20:21+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-03-10 23:37+0000\n"
+"X-Generator: Launchpad (build 18331)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -256,6 +256,9 @@ msgid ""
 msgstr ""
 "El disco o la partición deben ser desmontadas temporalmente para ejecutar la "
 "acción solicitada."
+
+msgid "A reboot is required"
+msgstr "Es necesario un reinicio"
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Una petición de recarga ha sido enviada al demonio."
@@ -6937,6 +6940,9 @@ msgstr "Razón para la ultma conmutación a batería (* opaque)"
 msgid "Reboot"
 msgstr "Reiniciar Equipo"
 
+msgid "Reboot Required"
+msgstr "Reinicio necesario"
+
 msgid "Receive Buffer"
 msgstr "Buffer de recepción"
 
@@ -11025,48 +11031,3 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
-
-#~ msgid "Add disk"
-#~ msgstr "Añadir disco"
-
-#~ msgid ""
-#~ "Do you really want to delete this disk? All elements that still use it will "
-#~ "become invalid (e.g. share)!"
-#~ msgstr ""
-#~ "¿Realmente quiere eliminar este disco? Todos los elementos que todavía lo "
-#~ "usen dejarán de ser válidos (Ej: los elementos compartidos)"
-
-#~ msgid "Edit disk"
-#~ msgstr "Editar disco"
-
-#~ msgid "Process"
-#~ msgstr "Procesos"
-
-#~ msgid "Delete disk"
-#~ msgstr "Eliminar disco"
-
-#~ msgid ""
-#~ "The device(s) in config are different to actual device(s). Please remove the "
-#~ "device(s) and re-add it or use 'Clear config and Import disks'."
-#~ msgstr ""
-#~ "El Disco configurado , es distinto al Disco detectado. Por favor desconecte "
-#~ "el Disco y vuelva a conectarlo, o use  'Limpiar configuración e importar "
-#~ "Discos'."
-
-#~ msgid "No new software raid disk found."
-#~ msgstr "No se han encontrado nuevos Discos RAID"
-
-#~ msgid "All software raid disks are imported."
-#~ msgstr "Todos los RAID por software han sido importados."
-
-#~ msgid "Clear Config & Import Disks"
-#~ msgstr "Limpiar la configuración & Importar discos"
-
-#~ msgid "Clear Config & Import Software Raid Disks"
-#~ msgstr "Limpiar la configuración & Importar RAID de  discos UFS"
-
-#~ msgid "Import Software Raid Disks"
-#~ msgstr "Importar Discos RAID UFS"
-
-#~ msgid "Rescan Disks"
-#~ msgstr "Buscar Discos"
