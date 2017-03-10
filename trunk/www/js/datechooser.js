@@ -538,8 +538,7 @@ DateChooser.prototype.show = function() {
     this._div.innerHTML = this.createChooserHtml();
     this._div.style.display = "block";
     this._div.style.visibility = "visible";
-//  this._div.style.position = "absolute";
-    this._div.style.position = "fixed";
+    this._div.style.position = "absolute";
     this._isVisible = true;
 }
 
