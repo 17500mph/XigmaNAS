@@ -1,5 +1,5 @@
---- sys/net/rtsock.c.orig	2016-11-29 12:51:19.541256000 +0100
-+++ sys/net/rtsock.c	2016-12-02 22:25:47.000000000 +0100
+--- rtsock.c.orig	2017-03-10 12:58:17.206424000 +0100
++++ rtsock.c	2017-03-11 21:23:14.000000000 +0100
 @@ -1566,8 +1566,8 @@
  }
  
@@ -71,3 +71,57 @@
  			if (error)
  				goto done;
  		}
+@@ -1768,13 +1773,15 @@
+ static int
+ sysctl_ifmalist(int af, struct walkarg *w)
+ {
+-	struct ifnet *ifp;
+-	struct ifmultiaddr *ifma;
+-	struct	rt_addrinfo info;
+-	int	len, error = 0;
++	struct rt_addrinfo info;
+ 	struct ifaddr *ifa;
++	struct ifmultiaddr *ifma;
++	struct ifnet *ifp;
++	int error, len;
+ 
++	error = 0;
+ 	bzero((caddr_t)&info, sizeof(info));
++
+ 	IFNET_RLOCK_NOSLEEP();
+ 	TAILQ_FOREACH(ifp, &V_ifnet, if_link) {
+ 		if (w->w_arg && w->w_arg != ifp->if_index)
+@@ -1794,7 +1801,7 @@
+ 			    ifma->ifma_lladdr : NULL;
+ 			error = rtsock_msg_buffer(RTM_NEWMADDR, &info, w, &len);
+ 			if (error != 0)
+-				goto done;
++				break;
+ 			if (w->w_req && w->w_tmem) {
+ 				struct ifma_msghdr *ifmam;
+ 
+@@ -1803,15 +1810,14 @@
+ 				ifmam->ifmam_flags = 0;
+ 				ifmam->ifmam_addrs = info.rti_addrs;
+ 				error = SYSCTL_OUT(w->w_req, w->w_tmem, len);
+-				if (error) {
+-					IF_ADDR_RUNLOCK(ifp);
+-					goto done;
+-				}
++				if (error != 0)
++					break;
+ 			}
+ 		}
+ 		IF_ADDR_RUNLOCK(ifp);
++		if (error != 0)
++			break;
+ 	}
+-done:
+ 	IFNET_RUNLOCK_NOSLEEP();
+ 	return (error);
+ }
+@@ -1941,3 +1947,4 @@
+ };
+ 
+ VNET_DOMAIN_SET(route);
++
