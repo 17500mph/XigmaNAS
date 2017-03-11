@@ -83,18 +83,18 @@ fi
 
 # Setup dependent variables
 if [ -n "${rcvar}" ] && checkyesno "${rcvar}"; then
-    nmbd_enable="${nmbd_enable=YES}"
-    smbd_enable="${smbd_enable=YES}"
-    # Check that winbindd is actually configured
-    if [ 0 -eq ${samba_idmap} ]; then
-			winbindd_enable="${winbindd_enable=YES}"
-    fi
+	nmbd_enable="${nmbd_enable=YES}"
+	smbd_enable="${smbd_enable=YES}"
+	# Check that winbindd is actually configured
+	if [ 0 -eq ${samba_idmap} ]; then
+		winbindd_enable="${winbindd_enable=YES}"
+	fi
 fi
 
 # Hack to work around name change of pid file with non-default config
 pid_extra=
 if [ -n "${samba_config}" -a "${samba_config}" != "${samba_config_default}" ]; then
-    pid_extra="-$(basename "${samba_config}")"
+	pid_extra="-$(basename "${samba_config}")"
 fi
 
 # Hack to enable check of dependent variables
@@ -253,18 +253,18 @@ samba_mkconf_cmd()
 		-b \
 		-i "//samba/if[. = 'lan']" \
 			-o "bind interfaces only = yes" -n \
-	    		-v "concat('interfaces = ', //interfaces/lan/if)" -n \
+				-v "concat('interfaces = ', //interfaces/lan/if)" -n \
 		-b \
 		-i "//samba/if[. = 'opt']" \
 			-o "bind interfaces only = yes" -n \
-	    		-o "interfaces = " \
+				-o "interfaces = " \
 			-m "//interfaces/*[contains(name(),'opt')]/if" \
 				-v "concat(.,' ')" \
 			-b -n \
 		-b \
 		-i "//samba/if[. = 'carp']" \
 			-o "bind interfaces only = yes" -n \
-	    		-o "interfaces = " \
+				-o "interfaces = " \
 			-m "//vinterfaces/carp/if" \
 				-v "concat(.,' ')" \
 			-b -n \
@@ -674,8 +674,8 @@ samba_cmd() {
 		pidfile="${samba_piddir}/${name}${pid_extra}.pid"
 		# Daemon should be enabled and running
 		if [ -n "${rcvar}" ] && checkyesno "${rcvar}"; then
-		    run_rc_command "${_rc_prefix}${rc_arg}" ${rc_extra_args}
-		    all_status=1
+			run_rc_command "${_rc_prefix}${rc_arg}" ${rc_extra_args}
+			all_status=1
 		fi
 	done
 	if [ "${rc_arg}" = "status" ]; then
@@ -688,12 +688,12 @@ samba_cmd() {
 
 # Create required config file
 if [ 0 -eq ${sambaad} ]; then
-    sambaad_mkconf_cmd
-    if [ "${BOOTING}" = "1" ]; then
+	sambaad_mkconf_cmd
+	if [ "${BOOTING}" = "1" ]; then
 	sambaad_resolv
-    fi
+	fi
 else
-    samba_mkconf_cmd
+	samba_mkconf_cmd
 fi
 
 run_rc_command "$1"
