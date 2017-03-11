@@ -1225,12 +1225,9 @@ function config_upgrade() {
 		$config['version'] = "2.9";
 	}
 
-	/* Convert 2.9 -> 3.0 */
+	/* Convert 2.9 -> 3.1 */
 	if ($config['version'] === "2.9") {
-		if (!preg_match('/^\$6\$/', $config['ups']['monitorpassword'])) {
-			$config['ups']['monitorpassword'] = mkpasswd($config['up']['monitorpassword']);
-		}
-		$config['version'] = "3.0";
+		$config['version'] = "3.1"; // skip 3.0
 	}
 
 	/* Convert 3.0 -> 3.1 */
