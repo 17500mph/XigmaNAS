@@ -46,6 +46,9 @@ if($_POST):
 	if($_POST['submit']):
 		switch($_POST['submit']):
 			case 'save':
+				if(file_exists($d_sysrebootreqd_path)):
+					unlink($d_sysrebootreqd_path);
+				endif;
 				$cmd_system_reboot = true;
 				break;
 			case 'cancel':
