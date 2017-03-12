@@ -35,7 +35,7 @@ require 'auth.inc';
 require 'guiconfig.inc';
 require 'co_sphere.php';
 
-function userdbgroup_process_updatenotification($mode,$data) {
+function userdb_group_process_updatenotification($mode,$data) {
 	global $config;
 	$retval = 0;
 	$sphere = &access_users_groups_get_sphere();
@@ -79,7 +79,7 @@ if($_POST):
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 		if(!file_exists($d_sysrebootreqd_path)):
-			$retval |= updatenotify_process($sphere->no,'userdbgroup_process_updatenotification');
+			$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
 			config_lock();
 			$retval |= rc_exec_service('userdb');
 			config_unlock();
