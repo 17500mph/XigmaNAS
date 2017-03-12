@@ -935,6 +935,7 @@ function make_headermenu_extensions(array &$menu) {
 		return;
 	endif;
 	if(false !== ($dir_handle = @opendir($dir_path))): // folder exists, open it
+		$language = $config['system']['language'] ?? 'en_US';
 		$hard_link_regex = '~^[a-z]+://~';
 		$menu_name = 'extensions';
 		$menu_items = &$menu[$menu_name]['menuitem'];
@@ -950,7 +951,31 @@ function make_headermenu_extensions(array &$menu) {
 				libxml_clear_errors();
 				$dom = new DOMDocument(); // import menu into DOM object, let it do it's job
 				if(false !== ($dom->loadHTMLFile($menu_file_full_name,LIBXML_NOERROR || LIBXML_NOWARNING || LIBXML_HTML_NOIMPLIED || LIBXML_HTML_NODEFDTD))):
-					$node_list = $dom->getElementsByTagName('a'); // get <a> elements
+					$file_node_list = $dom->getElementsByTagName('a'); // get <a> elements
+					$node_list_nolang = [];
+					$node_list_lang = [];
+					$node_list_en_US = [];
+					foreach($file_node_list as $file_node_item):
+						$lang = trim($file_node_item->getAttribute('lang')); // extract attribute lang
+						if(empty($lang)): // no lang attribute found
+							$node_list_nolang[] = $file_node_item;
+						elseif($lang === $language): // localised menu item found
+							$node_list_lang[] = $file_node_item;
+						elseif($lang === 'en_US'): // fallback for missing localisation
+							$node_list_en_US[] = $file_node_item;
+						else:
+							continue;
+						endif;
+					endforeach;
+					if(!empty($node_list_nolang)): // highest priority to ensure compatibility to existing menus
+						$node_list = $node_list_nolang;
+					elseif(!empty($node_list_lang)): // localised menus
+						$node_list = $node_list_lang;
+					elseif(!isempty($node_list_en_US)): // fallback when new languages are added but menu.inc doesn't have it.
+						$node_list = $node_list_en_US;
+					else:
+						$node_list = [];
+					endif;
 					foreach($node_list as $node_item):
 						$link = trim($node_item->getAttribute('href')); // extract attribute href
 						$description = $node_item->nodeValue; // get display value
