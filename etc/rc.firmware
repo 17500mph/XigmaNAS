@@ -23,6 +23,11 @@ CFDEVICE=`cat /etc/cfdevice`
 SKIP=`expr \( 1 \* 1024 \* 1024 \) / \( 32 \* 1024 \)`
 FTMP="/var/tmp/ftmp"
 ARG="$2"
+# Define some color codes for messages
+fmterror="\33[31m%s\33[0m\n"
+fmtsuccess="\33[37m%s\33[0m\n"
+fmtskipped="\33[33m%s\33[0m\n"
+fmtexec="\33[37m%s\33[0m\n"
 
 backup_chflags() {
 	TOPROCESS="bin lib libexec sbin usr"
@@ -95,62 +100,87 @@ embedded_upgrade() {
 	fi
 
 	# Test firmware file
+	topic="Testing firmware file."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	/usr/bin/xz -t "${ARG}" 2>&1
 	if [ 0 != $? ]; then
 		msg="ERROR: Firmware file is corrupted."
 		printf "\n\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
 		exit 1
+	else
+		printf "${fmtsuccess}" "SUCCESS: ${topic}"
 	fi
 
 	# Backup config
 	mkdir /tmp/configbak
-
 	# Get current config.xml file checksum info
 	CONFSUM=`sha256 /conf/config.xml | cut -d= -f2`
 
 	cp -p /conf/* /tmp/configbak
+
+	# Backup boot.config
+	topic="Backing up boot.config."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	if [ -f /cf/boot.config ]; then
 		cp -p /cf/boot.config /tmp/configbak
 		if [ $? -eq 1 ]; then
 			msg="ERROR: Backup configuration failed."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			exit 1
+		else
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
+	else
+		printf "${fmtskipped}" "SKIPPED: ${topic}"
 	fi
+
 	# Backup loader.conf.local
+	topic="Backing up loader.conf.local."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	if [ -f /cf/boot/loader.conf.local ]; then
 		cp -p /cf/boot/loader.conf.local /tmp/configbak
 		if [ $? -eq 1 ]; then
 			msg="ERROR: Backup configuration failed."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			exit 1
+		else
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
+	else
+		printf "${fmtskipped}" "SKIPPED: ${topic}"
 	fi
 
 	# Check config.xml file backup integrity
+	topic="Verifying checksum of config.xml."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	CONFSUM_BK=`sha256 /tmp/configbak/config.xml | cut -d= -f2`
-
 	if [ ! ${CONFSUM_BK} == ${CONFSUM} ]; then
 		msg="ERROR: Backup configuration corrupted."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		exit 1
+	else
+		printf "${fmtsuccess}" "SUCCESS: ${topic}"
 	fi
 
 	# Unmount /cf
+	topic="Unmounting /cf."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	/sbin/umount -f /cf
 	if [ 0 != $? ]; then # successfully?
 		msg="ERROR: Failed to umount '/cf'!"
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
 		exit 1
+	else
+		printf "${fmtsuccess}" "SUCCESS: ${topic}"
 	fi
 
 	# dd image onto card
 	result=1
 	if [ -r "${ARG}" ]; then
-		msg="EXECUTING: Unpacking firmware and writing to destination."
-		printf "\33[37m%s\33[0m\n" "${msg}"
+		topic="Unpacking firmware and writing to destination."
+		printf "${fmtexecute}" "EXECUTING: ${topic}"
 		/usr/bin/xz -cdv "${ARG}" | /bin/dd of=/dev/${CFDEVICE} ibs=32k obs=32k skip=${SKIP} > /dev/null 2>&1
 		result=$?
 		if [ 0 != ${result} ]; then # successfully?
@@ -158,11 +188,10 @@ embedded_upgrade() {
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		else
-			msg="SUCCESS: Unpacking firmware and writing to destination."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 			# resize boot partition
-			msg="EXECUTING: Resizing boot partition."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+			topic="Resizing boot partition."
+			printf "${fmtexecute}" "EXECUTING: ${topic}"
 			/sbin/growfs -y /dev/${CFDEVICE} > /dev/null 2>&1
 			if [ 0 != $? ]; then
 				msg="ERROR: Failed partition resize!"
@@ -170,98 +199,104 @@ embedded_upgrade() {
 				/usr/bin/logger "UPGRADE ${msg}"
 				exit 1
 			else
-			msg="SUCCESS: Resizing boot partition."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+				printf "${fmtsuccess}" "SUCCESS: ${topic}"
 			fi
 		fi
 	fi
 
 	# Sync and wait 2 second after dd
-	msg="EXECUTING: Syncing buffers."
-	printf "\33[37m%s\33[0m\n" "${msg}"
+	topic="Syncing buffers."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	sync; sleep 2
+	printf "${fmtsuccess}" "SUCCESS: ${topic}"
 
 	# Mount /cf read-write
-	msg="EXECUTING: Mounting /cf in read-write mode."
-	printf "\33[37m%s\33[0m\n" "${msg}"
+	topic="Mounting /cf in read-write mode."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	/sbin/mount -w -o noatime /cf
 	if [ 0 != $? ]; then
-		msg="ERROR: Mounting /cf in read-write mode."
-		printf "\33[31m%s\33[0m\n" "${msg}"
+		printf "${fmterror}" "ERROR: ${topic}"
 		# Try force mount /cf read-write instead.
-		msg="EXECUTE: Mounting /cf in forced read-write mode."
-		printf "\33[37m%s\33[0m\n" "${msg}"
+		topic="Mounting /cf in forced read-write mode."
+		printf "${fmtexecute}" "EXECUTING: ${topic}"
 		/sbin/mount -f -w -o noatime /cf
 		if [ 0 != $? ]; then
-			msg="ERROR: Failed to mount '/cf' in read-write mode!"
-			printf "\33[31m%s\33[0m\n" "${msg}"
+			printf "${fmterror}" "ERROR: ${topic}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
 		else
-			msg="SUCCESS: Mounting /cf in forced read-write mode."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
 	else
-		msg="SUCCESS: Mounting /cf in read-write mode."
-		printf "\33[37m%s\33[0m\n" "${msg}"
+		printf "${fmtsuccess}" "SUCCESS: ${topic}"
 	fi
 
 	# Restore config
-	msg="EXECUTING: Restoring configuration."
-	printf "\33[37m%s\33[0m\n" "${msg}"
 	cp -p /tmp/configbak/* /conf
+
+	# Restoring boot.config
+	topic="Restoring boot.config."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	if [ -f /conf/boot.config ]; then
 		mv /conf/boot.config /cf
 		if [ $? -eq 1 ]; then
-			msg="ERROR: Restore configuration failed."
-			printf "\33[31m%s\33[0m\n" "${msg}"
+			printf "${fmterror}" "ERROR: ${topic}"
 			exit 1
 		else
-			msg="SUCCESS: Restoring configuration."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
 	else
-		msg="SKIPPED: Restoring configuration."
-		printf "\33[33m%s\33[0m\n" "${msg}"
+		printf "${fmtskipped}" "${topic}"
 	fi
+
 	# Restore loader.conf.local
-	msg="EXECUTING: Restoring loader.conf.local."
-	printf "\33[37m%s\33[0m\n" "${msg}"
+	topic="Restoring loader.conf.local."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	if [ -f /conf/loader.conf.local ]; then
 		mv /conf/loader.conf.local /cf/boot
 		if [ $? -eq 1 ]; then
-			msg="ERROR: Restore configuration failed."
-			printf "\33[31m%s\33[0m\n" "${msg}"
+			printf "${fmterror}" "ERROR: ${topic}"
 			exit 1
 		else
-			msg="SUCCESS: Restoring loader.conf.local."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
 	else
-		msg="SKIPPED: Restoring loader.conf.local."
-		printf "\33[33m%s\33[0m\n" "${msg}"
+		printf "${fmtskipped}" "${topic}"
 	fi
+
 	rm -r /tmp/configbak
 
 	# Remount /cf read-only
+	topic="Unmounting /cf."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	/sbin/umount -f /cf
+	printf "${fmtsuccess}" "SUCCESS: ${topic}"
+
+	topic="Mounting /cf in read-only mode."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	/sbin/mount -r /cf
 	if [ 0 != $? ]; then
 		msg="ERROR: Failed to remount '/cf' in read-only!"
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
 		exit 1
+	else
+		printf "${fmtsuccess}" "SUCCESS: ${topic}"
 	fi
 
 	# Get restored config.xml file checksum info
 	CONFSUM_NEW=`sha256 /conf/config.xml | cut -d= -f2`
 
 	# Check restored config.xml file integrity
+	topic="Verifying checksum of config.xml."
+	printf "${fmtexecute}" "EXECUTING: ${topic}"
 	if [ -f /conf/config.xml ]; then
 		if [ ! ${CONFSUM_NEW} == ${CONFSUM} ]; then
 			msg="ERROR: Restored configuration corrupted."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			exit 1
+		else
+			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
 	else
 		msg="ERROR: Configuration file not found."
