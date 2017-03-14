@@ -246,7 +246,7 @@ embedded_upgrade() {
 			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
 	else
-		printf "${fmtskipped}" "${topic}"
+		printf "${fmtskipped}" "SKIPPED: ${topic}"
 	fi
 
 	# Restore loader.conf.local
@@ -261,7 +261,7 @@ embedded_upgrade() {
 			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 		fi
 	else
-		printf "${fmtskipped}" "${topic}"
+		printf "${fmtskipped}" "SKIPPED ${topic}"
 	fi
 
 	rm -r /tmp/configbak
