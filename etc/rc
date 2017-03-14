@@ -8,7 +8,7 @@
 # System startup script run by init on autoboot or after single-user.
 # Output and error are redirected to console by init,
 # the console is the controlling terminal.
-
+#
 # Note that almost all of the user-configurable behavior is no longer
 # in this file, but rather in /etc/defaults/rc.conf.
 # Please check rc.conf first before contemplating any changes here.
@@ -17,7 +17,6 @@ stty status '^T' 2> /dev/null
 
 # Set shell to ignore SIGINT (2), but not children;
 # shell catches SIGQUIT (3) and returns to single user.
-#
 trap : 2
 trap "echo 'Boot interrupted'; exit 1" 3
 
@@ -56,7 +55,7 @@ if [ "${PLATFORM}" = "bpi-embedded" ]; then
 		/usr/bin/xz -dcv /mnt/mfsroot.tar.xz | /bin/dd of=/dev/${mdr} bs=1m status=none
 		/sbin/umount /mnt
 		/sbin/fsck -yf /dev/${mdr}s1a
-		#prepare reroot variables
+		# Prepare reroot variables
 		/bin/kenv mfsroot_type="mfs_root"
 		/bin/kenv vfs.root.mountfrom="ufs:/dev/${mdr}s1a";
 		/bin/kenv vfs.root.mountfrom.options="rw";
@@ -177,9 +176,7 @@ case ${PLATFORM} in
 					echo "can't find mdlocal"
 					sleep 30; halt
 				fi
-				#if [ -e /mnt/boot/zfs/zpool.cache ]; then
-				#	/bin/cp -p /mnt/boot/zfs/zpool.cache /boot/zfs/
-				#fi
+
 				/sbin/umount /mnt
 				;;
 			*-liveCD)
@@ -260,7 +257,6 @@ fi
 # Run these after determining whether we are booting diskless in order
 # to minimize the number of files that are needed on a diskless system,
 # and to make the configuration file variables available to rc itself.
-#
 . /etc/rc.subr
 echo "Loading configuration files."
 load_rc_config 'XXX'
@@ -275,7 +271,6 @@ fi
 
 # Do a first pass to get everything up to $early_late_divider so that
 # we can do a second pass that includes $local_startup directories
-#
 files=`rcorder ${skip} /etc/rc.d/* 2>/dev/null`
 
 for _rc_elem in ${files}; do
@@ -296,7 +291,6 @@ unset files local_rc
 
 # Now that disks are mounted, for each dir in $local_startup
 # search for init scripts that use the new rc.d semantics.
-#
 case ${local_startup} in
 [Nn][Oo] | '') ;;
 *)	find_local_scripts_new ;;
