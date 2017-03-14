@@ -132,9 +132,9 @@ embedded_upgrade() {
 	CONFSUM_BK=`sha256 /tmp/configbak/config.xml | cut -d= -f2`
 
 	if [ ! ${CONFSUM_BK} == ${CONFSUM} ]; then
-			msg="ERROR: Backup configuration corrupted."
-			printf "\33[31m%s\33[0m\n" "${msg}"
-			exit 1
+		msg="ERROR: Backup configuration corrupted."
+		printf "\33[31m%s\33[0m\n" "${msg}"
+		exit 1
 	fi
 
 	# Unmount /cf
@@ -149,6 +149,8 @@ embedded_upgrade() {
 	# dd image onto card
 	result=1
 	if [ -r "${ARG}" ]; then
+		msg="EXECUTING: Unpacking firmware and writing to destination."
+		printf "\33[37m%s\33[0m\n" "${msg}"
 		/usr/bin/xz -cdv "${ARG}" | /bin/dd of=/dev/${CFDEVICE} ibs=32k obs=32k skip=${SKIP} > /dev/null 2>&1
 		result=$?
 		if [ 0 != ${result} ]; then # successfully?
@@ -156,34 +158,57 @@ embedded_upgrade() {
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		else
+			msg="SUCCESS: Unpacking firmware and writing to destination."
+			printf "\33[37m%s\33[0m\n" "${msg}"
 			# resize boot partition
+			msg="EXECUTING: Resizing boot partition."
+			printf "\33[37m%s\33[0m\n" "${msg}"
 			/sbin/growfs -y /dev/${CFDEVICE} > /dev/null 2>&1
 			if [ 0 != $? ]; then
 				msg="ERROR: Failed partition resize!"
 				printf "\33[31m%s\33[0m\n" "${msg}"
 				/usr/bin/logger "UPGRADE ${msg}"
 				exit 1
+			else
+			msg="SUCCESS: Resizing boot partition."
+			printf "\33[37m%s\33[0m\n" "${msg}"
 			fi
 		fi
 	fi
 
 	# Sync and wait 2 second after dd
+	msg="EXECUTING: Syncing buffers."
+	printf "\33[37m%s\33[0m\n" "${msg}"
 	sync; sleep 2
 
 	# Mount /cf read-write
+	msg="EXECUTING: Mounting /cf in read-write mode."
+	printf "\33[37m%s\33[0m\n" "${msg}"
 	/sbin/mount -w -o noatime /cf
 	if [ 0 != $? ]; then
+		msg="ERROR: Mounting /cf in read-write mode."
+		printf "\33[31m%s\33[0m\n" "${msg}"
 		# Try force mount /cf read-write instead.
+		msg="EXECUTE: Mounting /cf in forced read-write mode."
+		printf "\33[37m%s\33[0m\n" "${msg}"
 		/sbin/mount -f -w -o noatime /cf
 		if [ 0 != $? ]; then
-			msg="ERROR: Failed to mount '/cf' in read-write!"
+			msg="ERROR: Failed to mount '/cf' in read-write mode!"
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
+		else
+			msg="SUCCESS: Mounting /cf in forced read-write mode."
+			printf "\33[37m%s\33[0m\n" "${msg}"
 		fi
+	else
+		msg="SUCCESS: Mounting /cf in read-write mode."
+		printf "\33[37m%s\33[0m\n" "${msg}"
 	fi
 
 	# Restore config
+	msg="EXECUTING: Restoring configuration."
+	printf "\33[37m%s\33[0m\n" "${msg}"
 	cp -p /tmp/configbak/* /conf
 	if [ -f /conf/boot.config ]; then
 		mv /conf/boot.config /cf
@@ -191,16 +216,30 @@ embedded_upgrade() {
 			msg="ERROR: Restore configuration failed."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			exit 1
+		else
+			msg="SUCCESS: Restoring configuration."
+			printf "\33[37m%s\33[0m\n" "${msg}"
 		fi
+	else
+		msg="SKIPPED: Restoring configuration."
+		printf "\33[33m%s\33[0m\n" "${msg}"
 	fi
 	# Restore loader.conf.local
+	msg="EXECUTING: Restoring loader.conf.local."
+	printf "\33[37m%s\33[0m\n" "${msg}"
 	if [ -f /conf/loader.conf.local ]; then
 		mv /conf/loader.conf.local /cf/boot
 		if [ $? -eq 1 ]; then
 			msg="ERROR: Restore configuration failed."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			exit 1
+		else
+			msg="SUCCESS: Restoring loader.conf.local."
+			printf "\33[37m%s\33[0m\n" "${msg}"
 		fi
+	else
+		msg="SKIPPED: Restoring loader.conf.local."
+		printf "\33[33m%s\33[0m\n" "${msg}"
 	fi
 	rm -r /tmp/configbak
 
