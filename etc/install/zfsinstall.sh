@@ -95,84 +95,56 @@ cleandisk_init()
 	# Destroy any existing swap gmirror.
 	gmirror destroy -f gswap > /dev/null 2>&1
 
-	# Check if disk has been specified.
-	if [ ! -z "${DISK1}" ]; then
-		echo "Cleaning disk ${DISK1}"
-		gmirror clear ${DISK1} > /dev/null 2>&1
+	DISKS="${DISK1} ${DISK2}"
+	for DISK in ${DISKS}
+	do
+		echo "Cleaning disk ${DISK}"
+		gmirror clear ${DISK} > /dev/null 2>&1
 		zpool labelclear -f /dev/gpt/sysdisk0 > /dev/null 2>&1
-		zpool labelclear -f /dev/${DISK1} > /dev/null 2>&1
-		gpart destroy -F ${DISK1} > /dev/null 2>&1
+		zpool labelclear -f /dev/${DISK} > /dev/null 2>&1
+		gpart destroy -F ${DISK} > /dev/null 2>&1
 
-		diskinfo ${DISK1} | while read DISK1 sectorsize size sectors other
+		diskinfo ${DISK} | while read DISK sectorsize size sectors other
 			do
 				# Delete MBR, GPT Primary, ZFS(L0L1)/other partition table.
-				/bin/dd if=/dev/zero of=/dev/${DISK1} bs=${sectorsize} count=8192 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=/dev/${DISK} bs=${sectorsize} count=8192 > /dev/null 2>&1
 				# Delete GEOM metadata, GPT Secondary(L2L3).
-				/bin/dd if=/dev/zero of=/dev/${DISK1} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=/dev/${DISK} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
 			done
-	fi
-
-	# Check if disk has been specified.
-	if [ ! -z "${DISK2}" ]; then
-		echo "Cleaning disk ${DISK2}"
-		gmirror clear ${DISK2} > /dev/null 2>&1
-		zpool labelclear -f /dev/gpt/sysdisk1 > /dev/null 2>&1
-		zpool labelclear -f /dev/${DISK2} > /dev/null 2>&1
-		gpart destroy -F ${DISK2} > /dev/null 2>&1
-
-		diskinfo ${DISK2} | while read DISK2 sectorsize size sectors other
-			do
-				# Delete MBR, GPT Primary, ZFS(L0L1)/other partition table.
-				/bin/dd if=/dev/zero of=/dev/${DISK2} bs=${sectorsize} count=8192 > /dev/null 2>&1
-				# Delete GEOM metadata, GPT Secondary(L2L3).
-				/bin/dd if=/dev/zero of=/dev/${DISK2} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
-			done
-	fi
+	done
 }
 
 # Create GPT/Partition on disks.
 gptpart_init()
 {
-	# Check if disk has been specified.
-	if [ ! -z "${DISK1}" ]; then
-		echo "Creating GPT/Partition on ${DISK1}"
-		gpart create -s gpt ${DISK1} > /dev/null
+	DISKS="${DISK1} ${DISK2}"
+	NUM="0"
+	for DISK in ${DISKS}
+	do
+		echo "Creating GPT/Partition on ${DISK}"
+		gpart create -s gpt ${DISK} > /dev/null
 
 		# Create boot partition.
-		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot0 ${DISK1} > /dev/null
-		#gpart add -a 4k -s 800K -t efi -l efiboot0 ${DISK1} > /dev/null
+		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot${NUM} ${DISK} > /dev/null
+		#gpart add -a 4k -s 800K -t efi -l efiboot0 ${DISK} > /dev/null
 
 		if [ ! -z "${SWAP}" ]; then
-			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap0 ${DISK1} > /dev/null
+			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap${NUM} ${DISK} > /dev/null
 		fi
-		gpart add -a 4m ${ZROOTSIZE} -t freebsd-zfs -l sysdisk0 ${DISK1} > /dev/null
-	fi
-
-	# Check if disk has been specified.
-	if [ ! -z "${DISK2}" ]; then
-		echo "Creating GPT/Partition on ${DISK2}"
-		gpart create -s gpt ${DISK2} > /dev/null
-
-		# Create boot partition.
-		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot1 ${DISK2} > /dev/null
-		#gpart add -a 4k -s 800K -t efi -l efiboot1 ${DISK2} > /dev/null
-
-		if [ ! -z "${SWAP}" ]; then
-			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap1 ${DISK2} > /dev/null
-		fi
-		gpart add -a 4m ${ZROOTSIZE} -t freebsd-zfs -l sysdisk1 ${DISK2} > /dev/null
-	fi
+		gpart add -a 4m ${ZROOTSIZE} -t freebsd-zfs -l sysdisk${NUM} ${DISK} > /dev/null
+		NUM=`expr $NUM + 1`
+	done
 }
 
 # Install NAS4Free on single zfs disk.
 zdisk_init()
 {
-	# If more than one drive is specified then exit.
+	# Halt if more than one drive has been specified.
 	if [ ! -z "${DISK2}" ]; then
 		cdialog --msgbox "You should select a maximum of one drive for ZFS Disk Install!" 6 50 && exit 1
 	fi
 
-	# Check if variables has been specified.
+	# Check if disk has been specified.
 	if [ -z "${DISK1}" ]; then
 		cdialog --msgbox "You should select at least one drive for ZFS Disk Install!" 6 50 && exit 1
 	fi
@@ -206,7 +178,6 @@ zdisk_init()
 	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
 	zfs set freebsd:boot-environment=1 ${ZROOT}${DATASET}${BOOTENV}
 	zpool set bootfs=${ZROOT}${DATASET}${BOOTENV} ${ZROOT}
-
 	if [ $? -eq 1 ]; then
 		echo "An error has occurred while creating ${ZROOT} pool."
 		exit 1
@@ -252,12 +223,12 @@ zdisk_init()
 # Install NAS4Free RootOnZFS on zfs mirror.
 zmirror_init()
 {
-	# If more than two drives are specified then exit.
+	# Halt if more than one drive has been specified.
 	if [ ! -z "${DISKX}" ]; then
 		cdialog --msgbox "You should select a maximum of two drive for ZFS Mirror Install!" 6 50 && exit 1
 	fi
 
-	# Check if variables has been specified.
+	# Check if disk has been specified.
 	if [ -z "${DISK2}" ]; then
 		cdialog --msgbox "You should select a minimum of two drives for ZFS Mirror Install!" 6 50 && exit 1
 	fi
@@ -291,7 +262,6 @@ zmirror_init()
 	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
 	zfs set freebsd:boot-environment=1 ${ZROOT}${DATASET}${BOOTENV}
 	zpool set bootfs=${ZROOT}${DATASET}${BOOTENV} ${ZROOT}
-
 	if [ $? -eq 1 ]; then
 		echo "An error has occurred while creating ${ZROOT} pool."
 		exit 1
