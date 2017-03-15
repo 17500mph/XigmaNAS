@@ -27,7 +27,7 @@ ARG="$2"
 fmterror="\33[31m%s\33[0m\n"
 fmtsuccess="\33[37m%s\33[0m\n"
 fmtskipped="\33[33m%s\33[0m\n"
-fmtexec="\33[37m%s\33[0m\n"
+fmtexecute="\33[37m%s\33[0m\n"
 
 backup_chflags() {
 	TOPROCESS="bin lib libexec sbin usr"
