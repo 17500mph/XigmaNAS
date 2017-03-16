@@ -10,13 +10,17 @@ MASTER_SITES=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 LIB_DEPENDS+=	libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		libsqlite3.so:${PORTSDIR}/databases/sqlite3
+LIB_DEPENDS+=	libmemcached.so:${PORTSDIR}/databases/libmemcached
 LIB_DEPENDS+=	libev.so:${PORTSDIR}/devel/libev
 
 GNU_CONFIGURE=	yes
 USES=		autoreconf gmake libtool pkgconfig tar:xz
 #USE_CSTD=	gnu99
 USE_BZIP2=	yes
-USE_OPENSSL=	yes
+
+OPENSSL_USES=	ssl
+OPENSSL_CONFIGURE_WITH=	openssl
+OPENSSL_CONFIGURE_ON=	--with-openssl-includes=${OPENSSLINC} --with-openssl-libs=${OPENSSLLIB
 
 # Only used for webdav
 USE_GNOME+=	libxml2
@@ -31,13 +35,11 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/lighttpd --enable-static \
 			--sysconfdir=/var/etc/ \
 			--enable-lfs \
+			--enable-ipv6 \
 			--with-libev \
 			--without-geoip \
 			--without-mysql \
 			--without-ldap \
-			--with-openssl \
-			--with-openssl-includes=${OPENSSLINC} \
-			--with-openssl-libs=${OPENSSLLIB} \
 			--without-lua \
 			--with-bzip2 \
 			--with-webdav-props \
