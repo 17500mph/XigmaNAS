@@ -160,8 +160,8 @@ function type_change() {
 			if (!empty($swapinfo)):
 ?>
 				<tr>
-					<td class="area_data_settings_col_tag"><?=gtext('This server uses default swap!');?></td>
-					<td class="area_data_settings_col_data" style="background-color:#EEEEEE;">
+					<td class="celltag"><?=gtext('This server uses default swap!');?></td>
+					<td class="celldata">
 						<table width="100%" border="0" cellspacing="10" cellpadding="1">
 <?php
 							array_sort_key($swapinfo,'device');
