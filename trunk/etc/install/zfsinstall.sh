@@ -96,11 +96,12 @@ cleandisk_init()
 	gmirror destroy -f gswap > /dev/null 2>&1
 
 	DISKS="${DISK1} ${DISK2}"
+	NUM="0"
 	for DISK in ${DISKS}
 	do
 		echo "Cleaning disk ${DISK}"
 		gmirror clear ${DISK} > /dev/null 2>&1
-		zpool labelclear -f /dev/gpt/sysdisk0 > /dev/null 2>&1
+		zpool labelclear -f /dev/gpt/sysdisk${NUM} > /dev/null 2>&1
 		zpool labelclear -f /dev/${DISK} > /dev/null 2>&1
 		gpart destroy -F ${DISK} > /dev/null 2>&1
 
@@ -111,6 +112,7 @@ cleandisk_init()
 				# Delete GEOM metadata, GPT Secondary(L2L3).
 				/bin/dd if=/dev/zero of=/dev/${DISK} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
 			done
+			NUM=`expr $NUM + 1`
 	done
 }
 
@@ -126,7 +128,7 @@ gptpart_init()
 
 		# Create boot partition.
 		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot${NUM} ${DISK} > /dev/null
-		#gpart add -a 4k -s 800K -t efi -l efiboot0 ${DISK} > /dev/null
+		#gpart add -a 4k -s 800K -t efi -l efiboot${NUM} ${DISK} > /dev/null
 
 		if [ ! -z "${SWAP}" ]; then
 			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap${NUM} ${DISK} > /dev/null
