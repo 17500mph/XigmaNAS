@@ -287,6 +287,9 @@ include 'fbegin.inc';
 $(window).on("load", function() {
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$("#ntp_enable_tr").click(function () {
+		ntp_change();
+	});
 }); 
 function ntp_change() {
 	switch(document.iform.ntp_enable.checked) {
@@ -383,7 +386,7 @@ function webguiproto_change() {
 				</td>
 			</tr>
 <?php
-			html_checkbox2('ntp_enable',gtext('Enable NTP'),!empty($pconfig['ntp_enable']) ? true : false,gtext('Use the specified NTP server.'),'',false,'ntp_change()');
+			html_checkbox2('ntp_enable',gtext('Enable NTP'),!empty($pconfig['ntp_enable']) ? true : false,gtext('Use the specified NTP server.'),'',false);
 			html_inputbox2('ntp_timeservers',gtext('NTP Time Server'),$pconfig['ntp_timeservers'],gtext('Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!'),true,40);
 			html_inputbox2('ntp_updateinterval',gtext('Time Synchronization'),$pconfig['ntp_updateinterval'],gtext('Minutes between the next network time synchronization.'),true,20);
 ?>
