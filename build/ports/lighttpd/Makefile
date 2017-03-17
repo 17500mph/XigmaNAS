@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 
 OPENSSL_USES=	ssl
 OPENSSL_CONFIGURE_WITH=	openssl
-OPENSSL_CONFIGURE_ON=	--with-openssl-includes=${OPENSSLINC} --with-openssl-libs=${OPENSSLLIB
+OPENSSL_CONFIGURE_ON=	--with-openssl-includes=${OPENSSLINC} --with-openssl-libs=${OPENSSLLIB}
 
 # Only used for webdav
 USE_GNOME+=	libxml2
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/lighttpd --enable-static \
 			--without-geoip \
 			--without-mysql \
 			--without-ldap \
+			--with-openssl \
 			--without-lua \
 			--with-bzip2 \
 			--with-webdav-props \
