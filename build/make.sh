@@ -1270,6 +1270,9 @@ create_full() {
 
 	# Cleanup.
 	echo "Cleaning temp .o file(s)"
+	if [ -f $NAS4FREE_TMPDIR/usr/lib/librt.so.1 ]; then
+		chflags -R noschg $NAS4FREE_TMPDIR/usr/lib/*
+	fi
 	[ -d $NAS4FREE_TMPDIR ] && rm -rf $NAS4FREE_TMPDIR
 
 	echo "Generating SHA512 CHECKSUM File"
