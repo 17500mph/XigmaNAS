@@ -143,7 +143,6 @@ do
 		${configxml_file} | /usr/local/bin/xml unesc`
 
 	_userpasswd=`configxml_get "//access/user[${_index}]/password"`
-	_userpasswd=`echo ${_userpasswd} | sed -e "s/'/\\\\\'/g" -e 's/"/\\\\\"/g' -e 's/|/\\\\\|/g'`
-	eval "(/bin/echo ${_userpasswd}) | /usr/sbin/pw user add -q ${_cmdarg} > /dev/null"
+	eval "(/bin/echo "'${_userpasswd}'") | /usr/sbin/pw user add -q ${_cmdarg} > /dev/null"	
 	_index=$(( ${_index} - 1 ))
 done
