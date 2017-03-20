@@ -1239,7 +1239,7 @@ function config_upgrade() {
 		$config['version'] = "3.1";
 	}
 	if($config['version'] === "3.1"):
-		array_make_branch($config['access']['user']);
+		array_make_branch($config,'access','user');
 		foreach($config['access']['user'] as $k_user => $r_user):
 			$config['access']['user'][$k_user]['passwordmd4'] = mkpasswdmd4($config['access']['user'][$k_user]['password']);
 			$config['access']['user'][$k_user]['passwordsha'] = mkpasswd($config['access']['user'][$k_user]['password']);
