@@ -44,13 +44,12 @@ _usernum=`configxml_get_count "//access/user"`
 while [ ${_usernum} -gt 0 ]
 do
 	_username=`configxml_get "//access/user[position()=${_usernum}]/login"`
-	_password=`configxml_get "//access/user[position()=${_usernum}]/password"`
+	_password=`configxml_get "//access/user[position()=${_usernum}]/passwordmd4"`
 	_uid=`configxml_get "//access/user[position()=${_usernum}]/id"`
-
 	if [ ${_uid} -ge ${passdb_minuid} ]; then
-		(/bin/echo "${_password}"; /bin/echo "${_password}") | ${command} -t -a -u "${_username}" > /dev/null
+		(/bin/echo "${_password}"; /bin/echo "${_password}") | ${command} -d 0 -t -a -u "${_username}" > /dev/null
+		${command} -d 0 -u "${_username}" --set-nt-hash "${_password}" > /dev/null
 	fi
-
 	_usernum=$(( ${_usernum} - 1 ))
 done
 
@@ -67,10 +66,8 @@ while [ ${_groupnum} -gt 0 ]
 do
 	_groupname=`configxml_get "//access/group[position()=${_groupnum}]/name"`
 	_gid=`configxml_get "//access/group[position()=${_groupnum}]/id"`
-
 	if [ ${_gid} -ge ${passdb_mingid} ]; then
 		LOGNAME="${_logname}" net groupmap add ntgroup="${_groupname}" unixgroup="${_groupname}" type=l > /dev\null
 	fi
-
 	_groupnum=$(( ${_groupnum} - 1 ))
 done

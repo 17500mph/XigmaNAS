@@ -139,10 +139,9 @@ do
 		-i "string-length(homedir) > 0" \
 			-i "homedir[.!='/mnt']" -o " -m " -b \
 			-v "concat(' -d ',homedir)" -b \
-		-i "string-length(password) > 0" -o " -h 0" -b \
+		-i "string-length(passwordsha) > 0" -o " -H 0" -b \
 		${configxml_file} | /usr/local/bin/xml unesc`
-
-	_userpasswd=`configxml_get "//access/user[${_index}]/password"`
-	eval "(/bin/echo "'${_userpasswd}'") | /usr/sbin/pw user add -q ${_cmdarg} > /dev/null"	
+	_password=`configxml_get "//access/user[${_index}]/passwordsha"`
+	eval "(/bin/echo "'${_password}'") | /usr/sbin/pw user add -q ${_cmdarg} > /dev/null"	
 	_index=$(( ${_index} - 1 ))
 done
