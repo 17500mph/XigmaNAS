@@ -32,82 +32,71 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 // Configure page permission
-$pgperm['allowuser'] = TRUE;
+$pgperm['allowuser'] = true;
 
 require 'auth.inc';
 require 'guiconfig.inc';
 require 'email.inc';
 
-$pgtitle = [gtext('System'),gtext('Password')];
-
-if (!isset($config['access']['user']) || !is_array($config['access']['user']))
-	$config['access']['user'] = [];
-
-$a_user = &$config['access']['user'];
-
-// Get user configuration. Ensure current logged in user is available,
-// otherwise exit immediatelly.
-if (FALSE === ($cnid = array_search_ex(Session::getUserId(), $a_user, "id"))) {
+$a_user = &array_make_branch($config,'access','user');
+//	Get user configuration. Ensure current logged in user is available,
+//	otherwise exit immediatelly.
+if(false === ($index_id = array_search_ex(Session::getUserId(),$a_user,'id'))):
 	header('Location: logout.php');
 	exit;
-}
-
-if ($_POST) {
+endif;
+if($_POST):
 	unset($input_errors);
-
 	$reqdfields = ['password_old','password_new','password_confirm'];
 	$reqdfieldsn = [gtext('Current password'),gtext('New password'),gtext('Password (confirmed)')];
 	$reqdfieldst = ['password','password','password'];
-
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
-	// Validate old password.
-	if ($_POST['password_old'] !== $a_user[$cnid]['password']) {
-		$input_errors[] = gtext("The old password is not correct.");
-	}
-
-	// Validate new password.
-	if ($_POST['password_new'] !== $_POST['password_confirm']) {
-		$input_errors[] = gtext("The confirmation password does not match. Please ensure the passwords match exactly.");
-	}
-
-	if (empty($input_errors)) {
-		$a_user[$cnid]['password'] = $_POST['password_new'];
-
+	//	Validate old password.
+	if(!password_verify($_POST['password_old'],$a_user[$index_id]['passwordsha'])):
+		$input_errors[] = gtext('The old password is not correct.');
+	endif;
+	//	Validate new password.
+	if($_POST['password_new'] !== $_POST['password_confirm']):
+		$input_errors[] = gtext('The confirmation password does not match. Please ensure the passwords match exactly.');
+	endif;
+	if(empty($input_errors)):
+		$a_user[$index_id]['passwordsha'] = mkpasswd($_POST['password_new']);
+		$a_user[$index_id]['passwordmd4'] = mkpasswdmd4($_POST['password_new']);
 		write_config();
-		updatenotify_set("userdb_user", UPDATENOTIFY_MODE_MODIFIED, $a_user[$cnid]['uuid']);
-
-		// Write syslog entry and send an email to the administrator
-		$message = sprintf("The user %s has changed his password via user portal.", Session::getUserName());
+		updatenotify_set('userdb_user',UPDATENOTIFY_MODE_MODIFIED,$a_user[$index_id]['uuid']);
+		//	Write syslog entry and send an email to the administrator
+		$message = sprintf("The user %s has changed his password via user portal.",Session::getUserName());
 		write_log($message);
-		if (0 == @email_validate_settings()) {
+		if(0 == @email_validate_settings()):
 			$subject = sprintf(gtext("Notification email from host: %s"), system_get_hostname());
-			@email_send($config['system']['email']['from'], $subject, $message, $error);
-		}
-
-		$savemsg = gtext("The administrator has been notified to apply your changes.");
-	}
-}
+			@email_send($config['system']['email']['from'],$subject,$message,$error);
+		endif;
+		$savemsg = gtext('The administrator has been notified to apply your changes.');
+	endif;
+endif;
+$pgtitle = [gtext('System'),gtext('Password')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabcont">
-			<form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" name="iform" id="iform">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline2(gtext('User Password Settings'));?>
-					<?php html_passwordbox("password_old", gtext("Current password"), "", "", true);?>
-					<?php html_passwordconfbox("password_new", "password_confirm", gtext("New password"), "", "", "", true);?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
+<form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" name="iform" id="iform"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="tabcont">
+<?php
+	if (!empty($input_errors)) print_input_errors($input_errors);
+	if (!empty($savemsg)) print_info_box($savemsg);
+?>
+	<table width="100%" border="0" cellpadding="6" cellspacing="0">
+<?php
+		html_titleline2(gtext('User Password Settings'));
+		html_passwordbox2('password_old',gtext('Current password'),'','',true);
+		html_passwordconfbox2('password_new','password_confirm',gtext('New password'),'','','',true);
+?>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>"/>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>

@@ -32,64 +32,74 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 require 'guiconfig.inc';
-unset($input_errors);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if(is_validlogin($_POST['username'])){
+unset($input_errors);
+if($_SERVER['REQUEST_METHOD'] === 'POST'):
+	if(is_validlogin($_POST['username'])):
 		Session::start();
-		if ($_POST['username'] === $config['system']['username'] &&
-			password_verify($_POST['password'], $config['system']['password'])) {
-			Session::initAdmin();
-			header('Location: index.php');
-			exit;
-		} else {
+		array_make_branch($config,'system');
+		if($_POST['username'] === $config['system']['username']):
+			if(password_verify($_POST['password'],$config['system']['password'])):
+				Session::initAdmin();
+				header('Location: index.php');
+				exit;
+			else:
+				write_log(sprintf('AUTH: Illegal password entererd by user: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+			endif;
+		else:
 			$users = system_get_user_list();
-			foreach ($users as $userk => $userv) {
-				$password = crypt($_POST['password'], $userv['password']);
-				if (($_POST['username'] === $userv['name']) && ($password === $userv['password'])) {
-					// Check if it is a local user
-					if (empty($config['access']['user']) || FALSE === ($cnid = array_search_ex($userv['uid'], $config['access']['user'], "id")))
-						break;
-					// Is user allowed to access the user portal?
-					if (!isset($config['access']['user'][$cnid]['userportal']))
-						break;
-					Session::initUser($userv['uid'], $userv['name']);
-					header('Location: index.php');
-					exit;
-				}
-			}
-		}
-		write_log(sprintf('Authentication error for illegal user: %s from %s', $_POST['username'], $_SERVER['REMOTE_ADDR']));
-		$input_errors = gtext('Invalid username or password.') . '</br>' . gtext('Please try again.');
-	} else {
-		write_log(sprintf('Username contains invalid character(s): %s from %s', $_POST['username'], $_SERVER['REMOTE_ADDR']));
-		$input_errors = gtext('Username field : '.htmlspecialchars($_POST['username']).' contains illegal characters.');
-	}
-}
-?>
-<?php header("Content-Type: text/html; charset=" . system_get_language_codeset());?>
-<?php
-// Menu items.
-// Info and Manual
+			if(false !== ($cnid = array_search_ex($_POST['username'],$users,'name'))):
+				$userv = $users[$cnid];
+				if(password_verify($_POST['password'],$userv['password'])):
+					array_make_branch($config,'access','user');
+					//	Check if it is a local user
+					if(false !== ($cnid = array_search_ex($userv['uid'],$config['access']['user'],'id'))):
+						//	Is user allowed to access the user portal?
+						if(isset($config['access']['user'][$cnid]['userportal'])):
+							Session::initUser($userv['uid'],$userv['name']);
+							header('Location: index.php');
+							exit;
+						else:
+							write_log(sprintf('AUTH: No access to user portal for user: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+						endif;
+					else:
+						write_log(sprintf('AUTH: Username not found in configuration: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+					endif;
+				else:
+					write_log(sprintf('AUTH: Illegal password entererd by user: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+				endif;
+			else:
+				write_log(sprintf('AUTH: Username not found: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+			endif;
+		endif;
+		$input_errors = gtext('Invalid username or password.');
+	else:
+		write_log(sprintf('AUTH: Username contains invalid character(s): %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+		$input_errors = gtext('Invalid username or password.');
+	endif;
+endif;
+header("Content-Type: text/html; charset=" . system_get_language_codeset());
+//	Menu items.
+//	Info and Manual
 $menu['info']['desc'] = gtext('Information & Manuals');
 $menu['info']['visible'] = true;
-$menu['info']['link'] = "https://www.nas4free.org/wiki/doku.php";
-$menu['info']['menuitem']['visible'] = FALSE;
+$menu['info']['link'] = 'https://www.nas4free.org/wiki/doku.php';
+$menu['info']['menuitem']['visible'] = false;
 // Forum
-$menu['forum']['desc'] = gtext("Forum");
-$menu['forum']['link'] = "https://www.nas4free.org/forums/";
-$menu['forum']['visible'] = TRUE;
-$menu['forum']['menuitem']['visible'] = FALSE;
+$menu['forum']['desc'] = gtext('Forum');
+$menu['forum']['link'] = 'https://www.nas4free.org/forums/';
+$menu['forum']['visible'] = true;
+$menu['forum']['menuitem']['visible'] = false;
 // IRC
-$menu['irc']['desc'] = gtext("IRC NAS4Free");
-$menu['irc']['visible'] = TRUE;
-$menu['irc']['link'] = "https://webchat.freenode.net/?channels=#nas4free";
-$menu['irc']['menuitem']['visible'] = FALSE;
+$menu['irc']['desc'] = gtext('IRC NAS4Free');
+$menu['irc']['visible'] = true;
+$menu['irc']['link'] = 'https://webchat.freenode.net/?channels=#nas4free';
+$menu['irc']['menuitem']['visible'] = false;
 // Donate
-$menu['donate']['desc'] = gtext("Donate");
-$menu['donate']['visible'] = TRUE;
-$menu['donate']['link'] = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest";
-$menu['donate']['menuitem']['visible'] = FALSE;
+$menu['donate']['desc'] = gtext('Donate');
+$menu['donate']['visible'] = true;
+$menu['donate']['link'] = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest';
+$menu['donate']['menuitem']['visible'] = false;
 
 function display_menu($menuid) {
 	global $menu;
@@ -124,18 +134,20 @@ function display_menu($menuid) {
 	echo "	</div>\n";
 	echo "</li>\n";
 }
-?>
-<?php header("Content-Type: text/html; charset=" . system_get_language_codeset());?>
-<?php
-echo '<!DOCTYPE html>', "\n";
+header("Content-Type: text/html; charset=" . system_get_language_codeset());
+echo '<!DOCTYPE html>',"\n";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
 	<meta charset="<?=system_get_language_codeset();?>"/>
 	<title><?=genhtmltitle($pgtitle ?? []);?></title>
-	<?php if (isset($pgrefresh) && $pgrefresh):?>
+<?php
+	if (isset($pgrefresh) && $pgrefresh):
+?>
 	<meta http-equiv="refresh" content="<?=$pgrefresh;?>"/>
-	<?php endif;?>
+<?php
+	endif;
+?>
 	<link href="css/gui.css" rel="stylesheet" type="text/css"/>
 	<link href="css/navbar.css" rel="stylesheet" type="text/css"/>
 	<link href="css/tabs.css" rel="stylesheet" type="text/css"/>
@@ -189,9 +201,13 @@ window.onload=function() {
 ?>
 						</ul>
 					</div>
-<?php if(!empty($input_errors)):?>
-					<div id="loginerror"><?=$input_errors;?></div>
-<?php endif;?>
+<?php
+					if(!empty($input_errors)):
+?>
+						<div id="loginerror"><?=$input_errors;?></div>
+<?php
+					endif;
+?>
 				</div>
 			</div>
 		</div>

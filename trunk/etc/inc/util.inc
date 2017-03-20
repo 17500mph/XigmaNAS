@@ -2802,6 +2802,9 @@ function crypt_sha512($password) {
 function mkpasswd($password) {
 	return crypt_sha512($password);
 }
+function mkpasswdmd4(string $password) {
+	return strtoupper(hash('md4',iconv('UTF-8','UTF-16LE',$password),false));
+}
 /*
  *	openssl compatible encryption/decryption + base64 encode/decode
  *	http://www.openssl.org/docs/crypto/EVP_BytesToKey.html

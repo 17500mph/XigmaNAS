@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- NAS4Free default system configuration -->
 <nas4free>
-	<version>3.1</version>
+	<version>3.2</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>nas4free</hostname>
@@ -1308,7 +1308,8 @@
 			<group>xxx</group> // Additional group memberships. Can be defined multiple times.
 			<login>xxx</login>
 			<fullname>xxx</fullname>
-			<password>xxx</password>
+			<passwordmd4>xxx</passwordmd4>
+			<passwordsha>xxx</passwordsha>
 			<shell>bash|csh|nologin|scponly|sh|tcsh</shell>
 			<userportal/>
 		</user>
