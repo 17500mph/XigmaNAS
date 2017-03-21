@@ -1010,14 +1010,9 @@ function display_headermenu() {
 	$hard_link_regex = '~^[a-z]+://~';
 	foreach($menu_list as $menuid):
 		if($menu[$menuid]['visible']): // render menu when visible
-			$link = $menu[$menuid]['link'];
 			$output[] = '<li>';
-			$target = ('internal' === $menu[$menuid]['type']) ? '_self' : '_blank';
-			if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-				$output[] = sprintf('<a href="%1$s" target="%2$s">%3$s</a>',$link,$target,$menu[$menuid]['description']);
-			else: // local link = spinner
-				$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',$link,$target,$menu[$menuid]['description']);
-			endif;
+			$output[] = sprintf('<a href="#">%s</a>',$menu[$menuid]['description']);
+			$output[] = '<nav>';
 			$output[] = '<ul>';
 			// Display menu items.
 			foreach($menu[$menuid]['menuitem'] as $menu_item):
@@ -1038,6 +1033,7 @@ function display_headermenu() {
 				endif;
 			endforeach;
 			$output[] = '</ul>';
+			$output[] = '</nav>';
 			$output[] = '</li>';
 		endif;
 	endforeach;
