@@ -37,7 +37,9 @@
 #navhdr ul ul {
 	display: none;
 }
-#navhdr > ul > li:hover > ul {
+#navhdr > ul > li:hover > nav > ul,
+#navhdr > ul > li:focus > nav > ul {
+/*	unfold submenu on event */
 	display: block;
 }
 #navhdr > ul {
@@ -58,12 +60,6 @@
 	font-weight: bold;
 	font-size: 13px;
 }
-/*
-.navhdr > ul > li:hover {
-	background: transparent url(/images/navbar_active.png) center center repeat-x;
-	color: black;
-}
-*/
 #navhdr > ul > li:hover > a {
 /*	color and background of top menu when hovered */
 	background: transparent url(/images/navbar_active.png) center center repeat-x;
