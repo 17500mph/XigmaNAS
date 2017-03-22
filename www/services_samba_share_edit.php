@@ -195,7 +195,6 @@ if ($_POST) {
 		$share['storealternatedatastreams'] = isset($_POST['storealternatedatastreams']) ? true : false;
 		$share['storentfsacls'] = isset($_POST['storentfsacls']) ? true : false;
 		$share['afpcompat'] = isset($_POST['afpcompat']) ? true : false;
-		$share['aiomodule'] = $_POST['aiomodule'];
 		$share['hostsallow'] = $_POST['hostsallow'];
 		$share['hostsdeny'] = $_POST['hostsdeny'];
 
@@ -336,7 +335,6 @@ $pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'),isset($uuid) ? gt
 					<?php html_checkbox("storealternatedatastreams", gtext("Alternate Data Streams"), !empty($pconfig['storealternatedatastreams']) ? true : false, gtext("Store alternate data streams in Extended Attributes."), "", false);?>
 					<?php html_checkbox("storentfsacls", gtext("NTFS ACLs"), !empty($pconfig['storentfsacls']) ? true : false, gtext("Store NTFS ACLs in Extended Attributes."), gtext("This will provide NTFS ACLs without ZFS ACL support such as UFS."), false);?>
 					<?php html_checkbox("afpcompat", gtext("AFP Compatibility"), !empty($pconfig['afpcompat']) ? true : false, gtext("Enhanced compatibility with Netatalk AFP server."), "", false);?>
-					<?php html_combobox("aiomodule", gtext("AIO Module"), $pconfig['aiomodule'], ['aio_pthread' => 'aio_pthread','aio_posix' => 'aio_posix'], "", false, false, "");?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Hosts Allow");?></td>
 						<td width="78%" class="vtable">
