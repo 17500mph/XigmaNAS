@@ -38,18 +38,22 @@ header('Content-Type: text/html; charset=' . system_get_language_codeset());
   echo '<?xml version="1.0" encoding="'.system_get_language_codeset().'"?>';
   echo "\n";
 */
-echo '<!DOCTYPE html>',"\n"
+echo '<!DOCTYPE html>',"\n";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
 	<meta charset="<?=system_get_language_codeset();?>"/>
 	<title><?=genhtmltitle($pgtitle ?? []);?></title>
-	<?php if (isset($pgrefresh) && $pgrefresh):?>
-	<meta http-equiv="refresh" content="<?=$pgrefresh;?>" />
-	<?php endif;?>
-	<link href="/css/gui.css" rel="stylesheet" type="text/css" />
-	<link href="/css/navbar.css" rel="stylesheet" type="text/css" />
-	<link href="/css/tabs.css" rel="stylesheet" type="text/css" />	
+<?php
+	if (isset($pgrefresh) && $pgrefresh):
+?>
+	<meta http-equiv="refresh" content="<?=$pgrefresh;?>"/>
+<?php
+	endif;
+?>
+	<link href="/css/gui.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/navbar.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/tabs.css" rel="stylesheet" type="text/css"/>	
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/gui.js"></script>
 	<script type="text/javascript" src="/js/spinner.js"></script>
