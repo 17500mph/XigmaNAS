@@ -1031,7 +1031,7 @@ function display_headermenu() {
 			if(empty($menu[$menuid]['img'])):
 				$value = $menu[$menuid]['description'];
 			else:
-				$value = sprintf('<img src="%1$s" title="%2$s" alt="%2$s" style="vertical-align:text-bottom;">',$menu[$menuid]['img'],$menu[$menuid]['description']);
+				$value = sprintf('<img src="%1$s" title="%2$s" alt="%2$s">',$menu[$menuid]['img'],$menu[$menuid]['description']);
 			endif;
 			if(empty($tags)):
 				$output[] = sprintf('<a>%s</a>',$value);
