@@ -1,0 +1,32 @@
+--- source3/wscript_build.orig	2017-03-01 05:04:57 UTC
++++ source3/wscript_build	2017-03-17 12:42:43 UTC
+@@ -741,6 +741,7 @@
+                         smbd_conn
+                         param_service
+                         AVAHI
++                        dns_sd
+                         PRINTBASE
+                         PROFILE
+                         LOCKING
+@@ -1123,6 +1124,7 @@
+                       msrpc3
+                       RPC_NDR_SRVSVC
+                       cli_smb_common
++                      dns_sd
+                       archive
+                       ''')
+ 
+@@ -1323,7 +1325,7 @@
+ 
+ bld.SAMBA3_PYTHON('pylibsmb',
+                   source='libsmb/pylibsmb.c',
+-                  deps='smbclient samba-credentials pycredentials',
++                  deps='smbclient samba-credentials pycredentials libsmb errors3',
+                   realname='samba/samba3/libsmb_samba_internal.so'
+                   )
+ 
+@@ -1365,4 +1367,3 @@
+ 
+ bld.ENFORCE_GROUP_ORDERING()
+ bld.CHECK_PROJECT_RULES()
+-
