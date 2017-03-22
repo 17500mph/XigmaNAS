@@ -1015,7 +1015,7 @@ function display_headermenu() {
 		if($menu[$menuid]['visible']): // render menu when visible
 			$output[] = '<li>';
 			$a_tag = [];
-			switch($memu[$menuid]['type']):
+			switch($menu[$menuid]['type']):
 				case 'external':
 					$a_tag['href'] = sprintf('href="%s"',$menu[$menuid]['link']);
 					$a_tag['target'] = sprintf('target="%s"','_blank');
@@ -1033,28 +1033,30 @@ function display_headermenu() {
 			else:
 				$output[] = sprintf('<a %s>%s</a>',$tags,$menu[$menuid]['description']);
 			endif;
-			$output[] = '<nav>';
-			$output[] = '<ul>';
-			// Display menu items.
-			foreach($menu[$menuid]['menuitem'] as $menu_item):
-				if($menu_item['visible']): // render menuitem when visible
-					$output[] = '<li>';
-					$target = ('internal' === $menu_item['type']) ? '_self' : '_blank';
-					if('separator' === $menu_item['type']):
-						$output[] = '<span class="tabseparator">&nbsp;</span>';
-					else:
-						$link = $menu_item['link'];
-						if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-							$output[] = sprintf('<a href="%1$s" target="%2$s">%3$s</a>',$link,$target,$menu_item['description']);
-						else: // local link = spinner
-							$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',$link,$target,$menu_item['description']);
+			if(!empty($menu[$menuid]['menuitem'])):
+				$output[] = '<nav>';
+				$output[] = '<ul>';
+				// Display menu items.
+				foreach($menu[$menuid]['menuitem'] as $menu_item):
+					if($menu_item['visible']): // render menuitem when visible
+						$output[] = '<li>';
+						$target = ('internal' === $menu_item['type']) ? '_self' : '_blank';
+						if('separator' === $menu_item['type']):
+							$output[] = '<span class="tabseparator">&nbsp;</span>';
+						else:
+							$link = $menu_item['link'];
+							if(preg_match($hard_link_regex,$link)): // hard link = no spinner
+								$output[] = sprintf('<a href="%1$s" target="%2$s">%3$s</a>',$link,$target,$menu_item['description']);
+							else: // local link = spinner
+								$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',$link,$target,$menu_item['description']);
+							endif;
 						endif;
+						$output[] = '</li>';
 					endif;
-					$output[] = '</li>';
-				endif;
-			endforeach;
-			$output[] = '</ul>';
-			$output[] = '</nav>';
+				endforeach;
+				$output[] = '</ul>';
+				$output[] = '</nav>';
+			endif;
 			$output[] = '</li>';
 		endif;
 	endforeach;
