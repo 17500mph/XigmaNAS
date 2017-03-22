@@ -763,9 +763,12 @@ function get_headermenu(): array {
 		//	create new menu
 		$menu = [];
 		$isAdminSession = Session::isAdmin();
+		//	home
+		$menu_name = 'home';
+		$menu[$menu_name] = ['type' => 'internal','visible' => true,'description' => gtext('Home'),'link' => '/index.php','menuitem' => []];
 		//	system
 		$menu_name = 'system';
-		$menu[$menu_name] = ['type' => 'internal','visible' => true,'description' => gtext('System'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['nolink' => 'internal','visible' => true,'description' => gtext('System'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('General'),'link' => '/system.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Advanced'),'link' => '/system_advanced.php'];
@@ -786,7 +789,7 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	network
 		$menu_name = 'network';
-		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Network'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Network'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Interface Management'),'link' => '/interfaces_assign.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('LAN Management'),'link' => '/interfaces_lan.php'];
@@ -804,7 +807,7 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	disks
 		$menu_name = 'disks';
-		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Disks'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Disks'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Management'),'link' => '/disks_manage.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Software RAID'),'link' => '/disks_raid_geom.php'];
@@ -815,7 +818,7 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	services
 		$menu_name = 'services';
-		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Services'),'link' => '/status_services.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Services'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		if('dom0' !== $g['arch']):
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('HAST'),'link' => '/services_hast.php'];
@@ -849,14 +852,14 @@ function get_headermenu(): array {
 		//	virtualization
 		if('x64' == $g['arch']):
 			$menu_name = 'vm';
-			$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Virtualization'),'link' => '/index.php','menuitem' => []];
+			$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Virtualization'),'link' => '#','menuitem' => []];
 			$menu_items = &$menu[$menu_name]['menuitem'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('VirtualBox'),'link' => '/vm_vbox.php'];
 			unset($menu_items);
 		endif;
 		//	access
 		$menu_name = 'access';
-		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Access'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Access'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Users & Groups'),'link' => '/access_users.php'];
 		if('dom0' !== $g['arch']):
@@ -867,7 +870,7 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	status
 		$menu_name = 'status';
-		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Status'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Status'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('System'),'link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Processes'),'link' => '/status_process.php'];
@@ -878,7 +881,7 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	tools
 		$menu_name = 'tools';
-		$menu[$menu_name] = ['type' => 'internal','visible' => true,'description' => gtext('Tools'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => true,'description' => gtext('Tools'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('File Editor'),'link' => '/system_edit.php'];
 		if(!isset($config['system']['disablefm'])):
@@ -889,10 +892,10 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	extensions
 		$menu_name = 'extensions';
-		$menu[$menu_name] = ['type' => 'internal','visible' => false,'description' => gtext('Extensions'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => false,'description' => gtext('Extensions'),'link' => '#','menuitem' => []];
 		//	diagnostics
 		$menu_name = 'diagnostics';
-		$menu[$menu_name] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Diagnostics'),'link' => '/index.php','menuitem' => []];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => $isAdminSession,'description' => gtext('Diagnostics'),'link' => '#','menuitem' => []];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Log'),'link' => '/diag_log.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Information'),'link' => '/diag_infos_disks.php'];
@@ -903,7 +906,7 @@ function get_headermenu(): array {
 		unset($menu_items);
 		//	help
 		$menu_name = 'help';
-		$menu[$menu_name] = ['type' => 'internal','visible' => true,'description' => gtext('Help'),'link' => '/index.php'];
+		$menu[$menu_name] = ['type' => 'nolink','visible' => true,'description' => gtext('Help'),'link' => '#'];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Forum'),'link' => 'https://www.nas4free.org/forums/'];
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Information & Manual'),'link' => 'https://www.nas4free.org/wiki/doku.php'];
@@ -1004,14 +1007,32 @@ function display_headermenu() {
 	$output = [];
 	$menu = get_headermenu();
 	make_headermenu_extensions($menu); // function cares about access rights itself
-	$menu_list = ['system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
+	$menu_list = ['home','system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
 	$output[] = '<nav id="navhdr">';
 	$output[] = '<ul>';
 	$hard_link_regex = '~^[a-z]+://~';
 	foreach($menu_list as $menuid):
 		if($menu[$menuid]['visible']): // render menu when visible
 			$output[] = '<li>';
-			$output[] = sprintf('<a href="#">%s</a>',$menu[$menuid]['description']);
+			$a_tag = [];
+			switch($memu[$menuid]['type']):
+				case 'external':
+					$a_tag['href'] = sprintf('href="%s"',$menu[$menuid]['link']);
+					$a_tag['target'] = sprintf('target="%s"','_blank');
+					break;
+				case 'internal':
+					$a_tag['href'] = sprintf('href="%s"',$menu[$menuid]['link']);
+					$a_tag['onclick'] = sprintf('onclick="%s"','spinner()');
+					break;
+				case 'nolink':
+					break;
+			endswitch;
+			$tags = implode(' ',$a_tag);
+			if(empty($tags)):
+				$output[] = sprintf('<a>%s</a>',$menu[$menuid]['description']);
+			else:
+				$output[] = sprintf('<a %s>%s</a>',$tags,$menu[$menuid]['description']);
+			endif;
 			$output[] = '<nav>';
 			$output[] = '<ul>';
 			// Display menu items.
