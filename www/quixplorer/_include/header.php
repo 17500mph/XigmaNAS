@@ -61,33 +61,31 @@ function show_header($title, $additional_header_content = null) {
 	header("Content-Type: text/html; charset=".$GLOBALS["charset"]);
 /* NAS4FREE & QUIXPLORER CODE*/
 	// Html & Page Headers
-	echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n";
-	echo "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"".system_get_language_code()."\" lang=\"".system_get_language_code()."\" dir=\"".$GLOBALS["text_dir"]."\">\n";
-	echo "<head>\n";
+	echo '<!DOCTYPE html>',"\n";
+	echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="',system_get_language_code(),'" lang="',system_get_language_code(),'" dir="',$GLOBALS['text_dir'],'">',"\n";
+	echo '<head>',"\n";
 	echo "<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"".$GLOBALS["charset"]."\">\n";
 	echo "<title>", genhtmltitle($pgtitle ?? []), "</title>\n";
-	if (isset($pgrefresh) && $pgrefresh):
-		echo "<meta http-equiv='refresh' content=\"".$pgrefresh."\"/>\n";
+	if(isset($pgrefresh) && $pgrefresh):
+		echo '<meta http-equiv="refresh" content="',$pgrefresh,'"/>',"\n";
 	endif;
-	echo "<link href=\"./_style/style.css\" rel=\"stylesheet\"	type=\"text/css\">\n";
-	echo "<link href=\"../css/gui.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-	echo "<link href=\"../css/navbar.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-	echo "<link href=\"../css/tabs.css\" rel=\"stylesheet\" type=\"text/css\">\n";	
-	echo "<script type=\"text/javascript\" src=\"../js/jquery.min.js\"></script>\n";
-	echo "<script type=\"text/javascript\" src=\"../js/gui.js\"></script>\n";
+	echo '<link href="./_style/style.css" rel="stylesheet" type="text/css">',"\n";
+	echo '<link href="../css/gui.css" rel="stylesheet" type="text/css">',"\n";
+	echo '<link href="../css/navbar.css" rel="stylesheet" type="text/css">',"\n";
+	echo '<link href="../css/tabs.css" rel="stylesheet" type="text/css">',"\n";	
+	echo '<script type="text/javascript" src="../js/jquery.min.js"></script>',"\n";
+	echo '<script type="text/javascript" src="../js/gui.js"></script>',"\n";
 	echo '<script type="text/javascript" src="../js/spinner.js"></script>',"\n";
 	echo '<script type="text/javascript" src="../js/spin.min.js"></script>',"\n";
-	if (isset($pglocalheader) && !empty($pglocalheader)) {
-		if (is_array($pglocalheader)) {
-			foreach ($pglocalheader as $pglocalheaderv) {
-		 		echo $pglocalheaderv;
-				echo "\n";
-			}
-		} else {
-			echo $pglocalheader;
-			echo "\n";
-		}
-	}
+	if(isset($pglocalheader) && !empty($pglocalheader)):
+		if(is_array($pglocalheader)):
+			foreach($pglocalheader as $pglocalheaderv):
+		 		echo $pglocalheaderv,"\n";
+			endforeach;
+		else:
+			echo $pglocalheader,"\n";
+		endif;
+	endif;
 	echo '</head>',"\n";
 	// NAS4Free Header
 	echo '<body id="main">',"\n";
