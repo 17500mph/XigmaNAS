@@ -318,7 +318,9 @@ samba_mkconf_cmd()
 			-i "count(recyclebin) > 0" \
 				-o "recycle " \
 			-b \
-			-v "concat(aiomodule, ' ')" \
+			-i "count(//samba/aio) > 0" \
+				-o "aio_pthread " \
+			-b \
 			-i "count(afpcompat) > 0" \
 				-o "catia fruit " \
 			-b \
@@ -471,7 +473,9 @@ sambaad_mkconf_cmd()
 				-i "count(recyclebin) > 0" \
 					-o "recycle " \
 				-b \
-				-v "concat(aiomodule, ' ')" \
+				-i "count(//samba/aio) > 0" \
+					-o "aio_pthread " \
+				-b \
 				-i "count(afpcompat) > 0" \
 					-o "catia fruit " \
 				-b \
