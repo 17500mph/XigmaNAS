@@ -1238,6 +1238,8 @@ function config_upgrade() {
 
 		$config['version'] = "3.1";
 	}
+	/*	Convert 3.1 -> 3.2 */
+	/*	Encrypt user passwords */
 	if($config['version'] === "3.1"):
 		array_make_branch($config,'access','user');
 		foreach($config['access']['user'] as $k_user => $r_user):
@@ -1247,7 +1249,22 @@ function config_upgrade() {
 		endforeach;
 		$config['version'] = '3.2';
 	endif;
-
+	/*	Convert 3.2 -> 3.3 */
+	/*	Add min_auto_ashift for zfs because of code changes */
+	if($config['version'] === '3.2'):
+		array_make_branch($config,'system','sysctl','param');
+		$param_name = 'vfs.zfs.min_auto_ashift';
+		if(false === ($index = array_search_ex($param_name,$config,'name'))):
+			$config['system']['sysctl']['param'][] = [
+				'uuid' => uuid(),
+				'enable' => true,
+				'name' => $param_name,
+				'value' => '12',
+				'comment' => getxt('System tuning')
+			];
+		endif;
+		$config['version'] = '3.3';
+	endif;
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
 

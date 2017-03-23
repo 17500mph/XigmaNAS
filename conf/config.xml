@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- NAS4Free default system configuration -->
 <nas4free>
-	<version>3.2</version>
+	<version>3.3</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>nas4free</hostname>
@@ -384,6 +384,13 @@
 				<name>vfs.zfs.l2arc_noprefetch</name>
 				<value>0</value>
 				<comment>Allow streaming/sequential reads to be cached</comment>
+			</param>
+			<param>
+				<uuid>69c24ba3-ba86-4c76-854d-b0c5e027941e</uuid>
+				<name>vfs.zfs.min_auto_ashift</name>
+				<value>12</value>
+				<comment>System tuning</comment>
+				<enable/>
 			</param>
 			<!--
 			<param>
