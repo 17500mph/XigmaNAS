@@ -67,7 +67,6 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_share, "uuid")
 	$pconfig['storealternatedatastreams'] = isset($a_share[$cnid]['storealternatedatastreams']);
 	$pconfig['storentfsacls'] = isset($a_share[$cnid]['storentfsacls']);
 	$pconfig['afpcompat'] = isset($a_share[$cnid]['afpcompat']);
-	$pconfig['aiomodule'] = $a_share[$cnid]['aiomodule'];
 	$pconfig['hostsallow'] = $a_share[$cnid]['hostsallow'];
 	$pconfig['hostsdeny'] = $a_share[$cnid]['hostsdeny'];
 	$pconfig['auxparam'] = "";
@@ -91,7 +90,6 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_share, "uuid")
 	$pconfig['storealternatedatastreams'] = false;
 	$pconfig['storentfsacls'] = false;
 	$pconfig['afpcompat'] = false;
-	$pconfig['aiomodule'] = "aio_pthread";
 	$pconfig['hostsallow'] = "";
 	$pconfig['hostsdeny'] = "";
 	$pconfig['auxparam'] = "";
