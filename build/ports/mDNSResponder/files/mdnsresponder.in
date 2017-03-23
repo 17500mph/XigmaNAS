@@ -112,7 +112,7 @@ mdnsresponder_mkconf()
 			-n \
 		-b \
 		-i "count(//samba/enable) > 0" \
-			-v "//system/hostname" -n \
+			-v "//system/netbiosname" -n \
 			-o "_smb._tcp. ${_domain}" -n \
 			-o "445" -n \
 			-n \
