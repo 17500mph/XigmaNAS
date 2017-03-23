@@ -1260,7 +1260,7 @@ function config_upgrade() {
 				'enable' => true,
 				'name' => $param_name,
 				'value' => '12',
-				'comment' => getxt('System tuning')
+				'comment' => gtext('System tuning')
 			];
 		endif;
 		$config['version'] = '3.3';
