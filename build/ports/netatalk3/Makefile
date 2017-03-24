@@ -88,6 +88,6 @@ post-install:
 
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/netatalk.in ${NAS4FREE_ROOTFS}/etc/rc.d/netatalk
 
-	@cd ${NAS4FREE_ROOTFS}/etc/uams && ${LN} -fsv uams_passwd.so uams_clrtxt.so && ${LN} -fsv uams_dhx_passwd.so uams_dhx.so && ${LN} -fsv uams_dhx2_passwd.so uams_dhx2.so
+	@cd ${NAS4FREE_ROOTFS}/etc/uams && ${LN} -fsv uams_pam.so uams_clrtxt.so && ${LN} -fsv uams_dhx_pam.so uams_dhx.so && ${LN} -fsv uams_dhx2_pam.so uams_dhx2.so
 
 .include <bsd.port.mk>
