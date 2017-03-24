@@ -140,6 +140,7 @@ echo '<!DOCTYPE html>',"\n";
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
 	<meta charset="<?=system_get_language_codeset();?>"/>
+	<meta name="format-detection" content="telephone=no"/>
 	<title><?=genhtmltitle($pgtitle ?? []);?></title>
 <?php
 	if (isset($pgrefresh) && $pgrefresh):

@@ -64,8 +64,9 @@ function show_header($title, $additional_header_content = null) {
 	echo '<!DOCTYPE html>',"\n";
 	echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="',system_get_language_code(),'" lang="',system_get_language_code(),'" dir="',$GLOBALS['text_dir'],'">',"\n";
 	echo '<head>',"\n";
-	echo "<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"".$GLOBALS["charset"]."\">\n";
-	echo "<title>", genhtmltitle($pgtitle ?? []), "</title>\n";
+	echo '<meta http-equiv="Content-Type" content="text/html" charset="',$GLOBALS["charset"],'">',"\n";
+	echo '<meta name="format-detection" content="telephone=no"/>',"\n";
+	echo '<title>',genhtmltitle($pgtitle ?? []),'</title>',"\n";
 	if(isset($pgrefresh) && $pgrefresh):
 		echo '<meta http-equiv="refresh" content="',$pgrefresh,'"/>',"\n";
 	endif;
