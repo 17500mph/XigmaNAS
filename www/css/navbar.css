@@ -37,8 +37,8 @@
 #navhdr ul ul {
 	display: none;
 }
-#navhdr > ul > li:hover > nav > ul,
-#navhdr > ul > li:focus > nav > ul {
+#navhdr > ul > li:hover > ul,
+#navhdr > ul > li:focus > ul {
 /*	unfold submenu on event */
 	display: block;
 }

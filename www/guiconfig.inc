@@ -1039,7 +1039,6 @@ function display_headermenu() {
 				$output[] = sprintf('<a %s>%s</a>',$tags,$value);
 			endif;
 			if(!empty($menu[$menuid]['menuitem'])):
-				$output[] = '<nav>';
 				$output[] = '<ul>';
 				// Display menu items.
 				foreach($menu[$menuid]['menuitem'] as $menu_item):
@@ -1060,7 +1059,6 @@ function display_headermenu() {
 					endif;
 				endforeach;
 				$output[] = '</ul>';
-				$output[] = '</nav>';
 			endif;
 			$output[] = '</li>';
 		endif;
