@@ -506,7 +506,7 @@ function html_minidlnabox($ctrlname,$title,$value,$desc,$path,$required = false,
 	$ctrl->Render();
 }
 
-function html_inputbox2($ctrlname,$title,$value,$desc,$required = false,$size = 40,$readonly = false,$altpadding = false,$maxlength = 40,string $placeholder = '') {
+function html_inputbox2($ctrlname,$title,$value,$desc,$required = false,$size = 40,$readonly = false,$altpadding = false,$maxlength = 0,string $placeholder = '') {
 	$ctrl = new HTMLEditBox2($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
@@ -1004,13 +1004,13 @@ function make_headermenu_extensions(array &$menu) {
 	endif;
 }
 function display_headermenu() {
+	$hard_link_regex = '~^[a-z]+://~';
 	$output = [];
 	$menu = get_headermenu();
 	make_headermenu_extensions($menu); // function cares about access rights itself
 	$menu_list = ['home','system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
 	$output[] = '<nav id="navhdr">';
 	$output[] = '<ul>';
-	$hard_link_regex = '~^[a-z]+://~';
 	foreach($menu_list as $menuid):
 		if($menu[$menuid]['visible']): // render menu when visible
 			$output[] = '<li>';
