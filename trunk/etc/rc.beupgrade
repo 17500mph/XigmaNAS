@@ -1,0 +1,237 @@
+#!/bin/sh
+#
+# /etc/rc.beupgrade
+#
+# Part of NAS4Free (http://www.nas4free.org).
+# Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
+# All rights reserved.
+#
+
+# Script usage: rc.beupgrade <args> [<file>]
+# Where <args> can take the following values:
+# - enable: Create a 320MB ram drive in ${FTMP}
+# - disable: Erase ram drive
+# - upgrade <file> : Do a Full release (TGZ file) upgrade to a new boot environment using the file <file>
+#
+
+SIZE="320M"
+FTMP="/var/tmp/ftmp"
+ROOTFS=`mount | awk '/ \/ / {print $1}'`
+SYSBACKUP="/tmp/sysbackup"
+ZROOT="zroot"
+BENAME="upgrade"
+BEPATH="/var/tmp/be_upgrade"
+ARG="$2"
+
+enable_upgrade()
+{
+	# Redirect I/O to console.
+	exec </dev/console >/dev/console 2>/dev/console
+
+	# Create efficient memory file system.
+	if ! df | grep -qE "/var/tmp/ftmp"; then
+		/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
+		if [ 0 != $? ]; then
+			msg="ERROR: Failed to create in-memory file system."
+			printf "\n\33[31m%s\33[0m\n" "${msg}"
+			/usr/bin/logger "UPGRADE ${msg}"
+			exit 1
+		fi
+	fi
+}
+
+disable_upgrade()
+{
+	# Redirect I/O to console.
+	exec </dev/console >/dev/console 2>/dev/console
+
+	# Umount in-memory file system.
+	if df | grep -qE "/var/tmp/ftmp"; then
+		/sbin/umount -f ${FTMP} > /dev/null 2>&1
+		if [ 0 != $? ]; then
+			msg="ERROR: Failed to umount in-memory file system."
+			printf "\n\33[31m%s\33[0m\n" "${msg}"
+			/usr/bin/logger "UPGRADE ${msg}"
+			exit 1
+		fi
+	fi
+}
+
+backup_sys_files()
+{
+	# Backup common system configuration files.
+	echo "Backup system configuration..."
+	cp -p ${BEPATH}/boot/loader.conf ${SYSBACKUP}
+
+	if [ -f "/${ZROOT}/boot.config" ]; then
+		cp -p ${BEPATH}/boot.config ${SYSBACKUP}
+	fi
+	if [ -f "/${ZROOT}/boot/loader.conf.local" ]; then
+		cp -p ${BEPATH}/boot/loader.conf.local ${SYSBACKUP}
+	fi
+	if [ -f "/${ZROOT}/boot/zfs/zpool.cache" ]; then
+		cp -p ${BEPATH}/boot/zfs/zpool.cache ${SYSBACKUP}
+	fi
+
+	cp -p ${BEPATH}/etc/fstab ${SYSBACKUP}
+	cp -p ${BEPATH}/etc/cfdevice ${SYSBACKUP}
+	cp -p ${BEPATH}/etc/rc.conf ${SYSBACKUP}
+}
+
+restore_sys_files()
+{
+	# Restore previous backup files on the boot environment.
+	echo "Restore system configuration..."
+	cp -pf ${SYSBACKUP}/loader.conf ${BEPATH}/boot
+
+	if [ -f "${SYSBACKUP}/boot.config" ]; then
+		cp -pf ${SYSBACKUP}/boot.config ${BEPATH}
+	else
+		rm -f ${BEPATH}/boot.config
+	fi
+	if [ -f "${SYSBACKUP}/loader.conf.local" ]; then
+		cp -pf ${SYSBACKUP}/loader.conf.local ${BEPATH}/boot
+	fi
+	if [ -f "${SYSBACKUP}/zpool.cache" ]; then
+		cp -pf ${SYSBACKUP}/zpool.cache ${BEPATH}/boot/zfs
+	fi
+
+	cp -pf ${SYSBACKUP}/fstab ${BEPATH}/etc
+	cp -pf ${SYSBACKUP}/cfdevice ${BEPATH}/etc
+	cp -pf ${SYSBACKUP}/rc.conf ${BEPATH}/etc
+}
+
+be_upgrade()
+{
+	# Wait 2 seconds before proceed.
+	sleep 2
+
+	# Redirect I/O to console.
+	exec </dev/console >/dev/console 2>/dev/console
+
+	printf "\n\n\33[37m%s\33[0m\n" "System upgrade in progress. Please wait..."
+
+	# Check if Full TGZ file exists.
+	if [ ! -r "${ARG}" ]; then
+		msg="ERROR: Full TGZ file does not exist."
+		printf "\33[31m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "UPGRADE ${msg}"
+		exit 1
+	fi
+
+	# Test Full TGZ file.
+	echo "Testing Full TGZ file integrity..."
+	/usr/bin/gunzip -t "${ARG}"
+	if [ 0 != $? ]; then
+		msg="ERROR: Full TGZ file is corrupted."
+		printf "\33[31m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "UPGRADE ${msg}"
+		exit 1
+	fi
+
+	# Create and mount the new upgrade boot environment.
+	echo "Creating and mounting new boot environment..."
+	DATE=`date +%Y-%m-%d-%H%M%S`
+	beadm create ${BENAME}-${DATE}
+	beadm mount ${BENAME}-${DATE} ${BEPATH}
+	if [ 0 != $? ]; then
+		msg="ERROR: Unable to create/mount new boot environment."
+		printf "\33[31m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "UPGRADE ${msg}"
+		exit 1
+	fi
+
+	# Create config backup directory.
+	mkdir -p ${SYSBACKUP}
+
+	# Backup system configuration.
+	backup_sys_files
+	if [ 0 != $? ]; then
+		msg="ERROR: Failed to backup configuration."
+		printf "\33[31m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "UPGRADE ${msg}"
+		beadm destroy -F ${BENAME}-${DATE}
+		disable_upgrade
+		exit 1
+	fi
+
+	# Remove chflags for protected files before upgrade process.
+	if [ -f ${BEPATH}/usr/lib/librt.so.1 ]; then
+		chflags -R noschg ${BEPATH}/usr/lib/librt.so.1
+	fi
+
+	# Start upgrade script to remove obsolete files. This should be done
+	# before system is updated because it may happen that some files
+	# may be reintroduced in the system.
+	echo "Remove obsolete files..."
+	/etc/install/upgrade.sh clean ${BEPATH}
+
+	# Install system files and discard unwanted folders/files.
+	echo "Upgrading system on the new boot environment..."
+	EXCLUDED="--exclude=cf --exclude=conf --exclude=tmp --exclude=var --exclude=version"
+	/usr/bin/tar ${EXCLUDED} --keep-newer-files -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
+	result=$?
+	if [ 0 != ${result} ]; then
+		msg="ERROR: Failed to upgrade system."
+		printf "\33[31m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "UPGRADE ${msg}"
+	else
+		# Restore system configuration.
+		restore_sys_files
+		if [ 0 != $? ]; then
+			msg="ERROR: Failed restoring configuration."
+			printf "\33[31m%s\33[0m\n" "${msg}"
+			/usr/bin/logger "UPGRADE ${msg}"
+			beadm destroy -F ${BENAME}-${DATE}
+			disable_upgrade
+			exit 1
+		fi
+		# Unmoun and activate the new boot environment.
+		echo "Unmount and activate the new boot environment..."
+		beadm unmount -f ${BENAME}-${DATE}
+		beadm activate ${BENAME}-${DATE}
+		if [ 0 != $? ]; then
+			msg="ERROR: Failed to unmount/activate boot environment."
+			printf "\33[31m%s\33[0m\n" "${msg}"
+			/usr/bin/logger "UPGRADE ${msg}"
+			beadm destroy -F ${BENAME}-${DATE}
+			disable_upgrade
+			exit 1
+		fi
+		msg="System upgraded successfully."
+		printf "\33[37;41m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "UPGRADE: ${msg}"
+	fi
+
+	# Cleanup and sync.
+	rm -Rf ${BEPATH}
+	rm -Rf /tmp/BE-${BENAME}-${DATE}.*
+	rm -Rf ${SYSBACKUP}
+	sync; sleep 2
+
+	# Reboot system if upgrade was successfully.
+	if [ 0 -eq ${result} ]; then
+		msg="Rebooting server..."
+		printf "\33[37m%s\33[0m\n" "${msg}"
+		/usr/bin/logger "${msg}"
+		/sbin/shutdown -r now > /dev/null 2>&1
+	else
+		exit 1
+	fi
+}
+
+# Ensure the system is configured for boot environments.
+if ! mount | grep -qE "${ZROOT}/ROOT"; then
+	echo "ERROR: This system does not boot from ZFS pool."
+	exit 1
+elif ! zpool list -H -o bootfs | grep -qE "${ZROOT}"; then
+	echo "ERROR: This system is not configured for boot environments."
+	exit 1
+fi
+case $1 in
+	enable) enable_upgrade ;;
+	disable) disable_upgrade ;;
+	upgrade) be_upgrade ;;
+	*) exit 1 ;;
+esac
+exit 0
