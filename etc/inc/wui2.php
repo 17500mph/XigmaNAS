@@ -370,10 +370,10 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 		return $this->_ctrlnameconf;
 	}
 	function SetPlaceholderConfirm(string $placeholder = '') {
-		$this->_placeholder = $placeholder;
+		$this->_placeholderconfirm = $placeholder;
 	}
 	function GetPlaceholderConfirm() {
-		return $this->_placeholder;
+		return $this->_placeholderconfirm;
 	}
 	function SetValueConf($value) {
 		$this->_valueconf = $value;
@@ -385,10 +385,10 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 	function GetAttributesConfirm(array &$attributes = []) {
 		$attributes = $this->GetAttributes($attributes);
 		$tagval = $this->GetPlaceholderConfirm();
-		if(preg_match('/\S/',$param)):
+		if(preg_match('/\S/',$tagval)):
 			$attributes['placeholder'] = $tagval;
 		endif;
-		return $attribute;
+		return $attributes;
 	}
 	function GetClassOfInputPassword() {
 		return $this->GetClassInputPassword();
@@ -402,12 +402,11 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'name' => $ctrlname,
 			'class' => $this->GetClassOfInputPassword(),
 			'size' => $this->GetSize(),
-			'value'=> htmlspecialchars($this->GetValue(),ENT_QUOTES),
+			'value'=> htmlspecialchars($this->GetValue(),ENT_QUOTES)
 		];
 		$this->GetAttributes($attributes);
 		$o_div1 = $root->addElement('div');
 		$o_div1->addElement('input',$attributes);
-
 		$attributes = [
 			'type' => 'password',
 			'id' => $ctrlnameconf,
