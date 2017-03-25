@@ -125,7 +125,7 @@ include 'fbegin.inc';
 		</thead>
 		<tbody>
 <?php
-			html_passwordbox2('decrypt_password',gtext('Decryption Password'),'','',false,25);
+			html_passwordbox2('decrypt_password',gtext('Decryption Password'),'','',false,25,false,gtext('Enter Password'));
 ?>
 		</tbody>
 	</table>
