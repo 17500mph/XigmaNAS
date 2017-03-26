@@ -1275,11 +1275,11 @@ function config_upgrade() {
 		endif;
 		if(isset($config['afp']['local'])):
 			$config['afp']['uams_dhx_passwd'] = true;
-			$config['afp']['uams_dhx3_passwd'] = true;
+			$config['afp']['uams_dhx2_passwd'] = true;
 			unset($config['afp']['local']);
 		else:
 			$config['afp']['uams_dhx_pam'] = true;
-			$config['afp']['uams_dhx3_pam'] = true;
+			$config['afp']['uams_dhx2_pam'] = true;
 		endif;
 		$config['version'] = '3.4';
 	endif;
