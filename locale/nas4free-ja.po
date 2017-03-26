@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:26+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:46+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -331,9 +331,6 @@ msgstr ""
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr ""
 
 msgid "AIO Read Size"
 msgstr ""
@@ -953,6 +950,9 @@ msgstr "認証"
 msgid "Authentication Method"
 msgstr ""
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr ""
 
@@ -1436,6 +1436,9 @@ msgstr ""
 msgid "Clear Configuration"
 msgstr ""
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr ""
 
@@ -1444,11 +1447,6 @@ msgstr ""
 
 msgid "Clear device errors"
 msgstr ""
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
-msgstr "暗号化された GZIP ファイルまたは XML 形式でサーバー設定ファイルをダウンロードするには、このボタンをクリックしてください。"
 
 msgid "Client"
 msgstr "クライアント"
@@ -1567,6 +1565,9 @@ msgid "Configuring"
 msgstr "設定"
 
 msgid "Confirm New Password"
+msgstr ""
+
+msgid "Confirm Password"
 msgstr ""
 
 msgid "Confirmation"
@@ -1873,15 +1874,16 @@ msgstr "現在の内部温度。"
 msgid "Current password"
 msgstr "現在のパスワード"
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr "現在のパスワードはデフォルトのパスワードです。自分のパスワードを使用する必要があります。"
-
 msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "ライフ曲線に基づいたドライブ運用の現在の状態。"
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
+msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "現在の皮相電力(VA)"
@@ -1918,6 +1920,12 @@ msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
 msgstr "DHCPはLANインタフェースに使用することはできません。"
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
+msgstr ""
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2014,7 +2022,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr "バイト0-1-2=平均消去回数(ビッグエンディアン)とバイト3-4-5=最大消去回数(ビッグエンディアン)としてデコード。"
 
-msgid "Decrypt Password"
+msgid "Decryption Password"
 msgstr ""
 
 msgid "Dedup"
@@ -3218,9 +3226,6 @@ msgstr "キーボードインタラクティブでの認証を有効にします
 msgid "Enable large read/write."
 msgstr ""
 
-msgid "Enable local user authentication."
-msgstr "ローカルユーザ認証を許可。"
-
 msgid "Enable mapping DOS attributes."
 msgstr ""
 
@@ -3315,9 +3320,6 @@ msgstr "書き込みキャッシュモードを有効にします。"
 msgid "Enabled"
 msgstr "有効"
 
-msgid "Encrypt Password"
-msgstr ""
-
 msgid "Encrypt password"
 msgstr "暗号化パスワード"
 
@@ -3349,6 +3351,9 @@ msgstr "暗号化"
 msgid "Encryption Management"
 msgstr ""
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr ""
 
@@ -3365,6 +3370,9 @@ msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
+msgstr ""
+
+msgid "Enter Password"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3993,6 +4001,9 @@ msgstr "ゲスト"
 msgid "Guest Account"
 msgstr ""
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr "HAST"
 
@@ -4576,7 +4587,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
 
@@ -4847,6 +4858,9 @@ msgstr "ローカル共有 (接続先)"
 
 msgid "Local User"
 msgstr "ローカルユーザ"
+
+msgid "Local user authentication is selected."
+msgstr ""
 
 msgid "Location"
 msgstr "場所"
@@ -5827,6 +5841,9 @@ msgstr "ディスクの設定を上書き"
 
 msgid "Owner"
 msgstr "オーナ"
+
+msgid "PAM authentication is selected."
+msgstr ""
 
 msgid "PG"
 msgstr "PG"
@@ -7066,6 +7083,9 @@ msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
 msgid "Select an encryption algorithm to use."
 msgstr ""
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7112,11 +7132,6 @@ msgstr "もっとも近いロケーションを選択して下さい。"
 msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr "暗号化された GZIP ファイルまたは XML ファイルのサーバー設定ファイルを選択後、下のボタンをクリックすると設定が復元されます。"
-
 msgid "Select which interface to use."
 msgstr ""
 
@@ -7144,6 +7159,9 @@ msgid "Selected graph:"
 msgstr ""
 
 msgid "Selected interface:"
+msgstr ""
+
+msgid "Selection"
 msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
@@ -8140,10 +8158,6 @@ msgstr "実行するコマンドを入力します。"
 msgid "The configuration could not be restored."
 msgstr "設定情報をリストアする事が出来ませんでした。"
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr "設定情報をリストアする事が出来ませんでした。%s"
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "設定情報をリストアする事が出来ませんでした。アップロードファイルが見つかりません。"
 
@@ -8442,6 +8456,9 @@ msgstr "パスワード暗号化で利用される形式。"
 msgid "The passwords do not match."
 msgstr "パスワードが一致しません。"
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr "指定されたパス '%s' は存在しません。"
@@ -8522,8 +8539,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
-msgid "The server will reboot after restoring the configuration."
-msgstr "サーバーは設定をリストア後、リブートします。"
+msgid ""
+"The server will reboot after the configuration was successfully restored."
+msgstr ""
 
 msgid "The share name is already used."
 msgstr "この共有名は既に使用されています。"
@@ -9511,6 +9529,12 @@ msgstr ""
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9525,6 +9549,9 @@ msgstr "ツリーのルートとして別のコンテナを使用します。"
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr "自動的に新しいファイルを発見するためにinotify監視を使用します。"
+
+msgid "Use local user authentication."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -10229,3 +10256,27 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "ローカルユーザ認証を許可。"
+
+#, php-format
+#~ msgid "The configuration could not be restored. %s"
+#~ msgstr "設定情報をリストアする事が出来ませんでした。%s"
+
+#~ msgid "The server will reboot after restoring the configuration."
+#~ msgstr "サーバーは設定をリストア後、リブートします。"
+
+#~ msgid ""
+#~ "Select the server configuration encrypted GZIP file or XML file and click "
+#~ "the button below to restore the configuration."
+#~ msgstr "暗号化された GZIP ファイルまたは XML ファイルのサーバー設定ファイルを選択後、下のボタンをクリックすると設定が復元されます。"
+
+#~ msgid ""
+#~ "Click this button to download the server configuration in encrypted GZIP "
+#~ "file or XML format."
+#~ msgstr "暗号化された GZIP ファイルまたは XML 形式でサーバー設定ファイルをダウンロードするには、このボタンをクリックしてください。"
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr "現在のパスワードはデフォルトのパスワードです。自分のパスワードを使用する必要があります。"

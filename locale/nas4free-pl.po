@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: 2017-02-24 14:37+0000\n"
 "Last-Translator: Piotr Łobuz <ericsson@go2.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:26+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:46+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -353,9 +353,6 @@ msgstr ""
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr ""
 
 msgid "AIO Read Size"
 msgstr ""
@@ -999,6 +996,9 @@ msgstr "Uwierzytelnianie"
 msgid "Authentication Method"
 msgstr "Metoda uwierzytelnienia"
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr ""
 
@@ -1489,6 +1489,9 @@ msgstr ""
 msgid "Clear Configuration"
 msgstr ""
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr ""
 
@@ -1497,13 +1500,6 @@ msgstr ""
 
 msgid "Clear device errors"
 msgstr ""
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
-msgstr ""
-"Kliknij by pobrać konfigurację serwera w zaszyfrowanym pliku GZIP lub "
-"formacie XML"
 
 msgid "Client"
 msgstr "Klient"
@@ -1624,6 +1620,9 @@ msgid "Configuring"
 msgstr "Konfigurowanie"
 
 msgid "Confirm New Password"
+msgstr ""
+
+msgid "Confirm Password"
 msgstr ""
 
 msgid "Confirmation"
@@ -1928,14 +1927,15 @@ msgstr "Aktualna temperatura wewnątrz"
 msgid "Current password"
 msgstr "Aktualne hasło"
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr "Aktualne hasło to hasło domyślne. Powinieneś użyć własnego hasła"
-
 msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
+msgstr ""
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
 msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
@@ -1973,6 +1973,12 @@ msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
 msgstr "DHCP nie może zostać użyte dla interfejsu LAN"
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
+msgstr ""
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2069,7 +2075,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt Password"
+msgid "Decryption Password"
 msgstr ""
 
 msgid "Dedup"
@@ -3295,9 +3301,6 @@ msgstr "Włącz interaktywną autoryzację poprzez klawiaturę ekranową"
 msgid "Enable large read/write."
 msgstr ""
 
-msgid "Enable local user authentication."
-msgstr "Włącz autoryzację lokalnego użytkownika."
-
 msgid "Enable mapping DOS attributes."
 msgstr ""
 
@@ -3394,9 +3397,6 @@ msgstr "Włącz tryb zapisywania cache."
 msgid "Enabled"
 msgstr "Włączone"
 
-msgid "Encrypt Password"
-msgstr ""
-
 msgid "Encrypt password"
 msgstr "Zaszyfruj hasło"
 
@@ -3429,6 +3429,9 @@ msgstr "Szyfrowanie"
 msgid "Encryption Management"
 msgstr ""
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr ""
 
@@ -3445,6 +3448,9 @@ msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
+msgstr ""
+
+msgid "Enter Password"
 msgstr ""
 
 msgid "Enter a comment"
@@ -4088,6 +4094,9 @@ msgstr "Gość"
 msgid "Guest Account"
 msgstr ""
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr "HAST"
 
@@ -4691,7 +4700,7 @@ msgstr ""
 "aktualizacji."
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
 
@@ -4957,6 +4966,9 @@ msgstr ""
 
 msgid "Local User"
 msgstr "Użytkownik lokalny"
+
+msgid "Local user authentication is selected."
+msgstr ""
 
 msgid "Location"
 msgstr "Położenie"
@@ -5956,6 +5968,9 @@ msgstr "Nadpisz konfigurację dysków"
 
 msgid "Owner"
 msgstr "Właściciel"
+
+msgid "PAM authentication is selected."
+msgstr ""
 
 msgid "PG"
 msgstr "PG"
@@ -7209,6 +7224,9 @@ msgstr "Wybierz dysk, który ma włączone monitorowanie S.M.A.R.T."
 msgid "Select an encryption algorithm to use."
 msgstr ""
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Wybierz format systemu plików"
 
@@ -7255,13 +7273,6 @@ msgstr "Wybierz lokalizację najbliższą do twojej."
 msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr ""
-"Wybierz konfigurację zaszyfrowaną w GZIP lub w pliku XML i kliknij przycisk "
-"poniżej by przywrócić konfigurację."
-
 msgid "Select which interface to use."
 msgstr ""
 
@@ -7290,6 +7301,9 @@ msgstr "Wybrany wykres"
 
 msgid "Selected interface:"
 msgstr "Wybrany interfejs"
+
+msgid "Selection"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr ""
@@ -8309,10 +8323,6 @@ msgstr "Komenda do wykonania."
 msgid "The configuration could not be restored."
 msgstr "Konfiguracja nie może być przywrócona."
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr "Konfiguracja nie została przywrócona. %s"
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "Konfiguracja nie może zostać przywrócona. Nie załadowano pliku."
 
@@ -8624,6 +8634,9 @@ msgstr "Używaj protokołu szyfrowania haseł."
 msgid "The passwords do not match."
 msgstr "Hasła nie pasują."
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr "Ścieżka '%s' nie istnieje."
@@ -8705,8 +8718,9 @@ msgstr ""
 "Serwer zostanie zrestartowany do ustawień fabrycznych i zostanie uruchomiony "
 "ponownie."
 
-msgid "The server will reboot after restoring the configuration."
-msgstr "Po przywróceniu konfiguracji serwer zostanie uruchomiony ponownie."
+msgid ""
+"The server will reboot after the configuration was successfully restored."
+msgstr ""
 
 msgid "The share name is already used."
 msgstr "Nazwa udziału została już użyta."
@@ -9718,6 +9732,12 @@ msgstr "Statystyki czasu działania"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9732,6 +9752,9 @@ msgid "Use different container as root of the tree."
 msgstr ""
 
 msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
+
+msgid "Use local user authentication."
 msgstr ""
 
 #, php-format
@@ -10454,3 +10477,31 @@ msgstr "do"
 
 msgid "umount"
 msgstr "odmontuj"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "Włącz autoryzację lokalnego użytkownika."
+
+#, php-format
+#~ msgid "The configuration could not be restored. %s"
+#~ msgstr "Konfiguracja nie została przywrócona. %s"
+
+#~ msgid ""
+#~ "Click this button to download the server configuration in encrypted GZIP "
+#~ "file or XML format."
+#~ msgstr ""
+#~ "Kliknij by pobrać konfigurację serwera w zaszyfrowanym pliku GZIP lub "
+#~ "formacie XML"
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr "Aktualne hasło to hasło domyślne. Powinieneś użyć własnego hasła"
+
+#~ msgid ""
+#~ "Select the server configuration encrypted GZIP file or XML file and click "
+#~ "the button below to restore the configuration."
+#~ msgstr ""
+#~ "Wybierz konfigurację zaszyfrowaną w GZIP lub w pliku XML i kliknij przycisk "
+#~ "poniżej by przywrócić konfigurację."
+
+#~ msgid "The server will reboot after restoring the configuration."
+#~ msgstr "Po przywróceniu konfiguracji serwer zostanie uruchomiony ponownie."

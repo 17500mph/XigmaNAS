@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: 2017-03-22 13:58+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:27+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:46+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -363,9 +363,6 @@ msgstr "Compatibilidad AFP"
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr "Modulo AIO"
 
 msgid "AIO Read Size"
 msgstr "Tamaño de lectura AIO"
@@ -1038,6 +1035,9 @@ msgstr "Autentificación"
 msgid "Authentication Method"
 msgstr "Método de Autenticación"
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr "Redes autorizadas"
 
@@ -1548,6 +1548,9 @@ msgstr "Actualizar Config. e importar Discos."
 msgid "Clear Configuration"
 msgstr "Borrar configuración"
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr "Borrar información de configuración antes de importar los discos"
 
@@ -1557,13 +1560,6 @@ msgstr ""
 
 msgid "Clear device errors"
 msgstr "Elimina los erores del dispositivo"
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
-msgstr ""
-"Pulsar para descargar la configuración del servidor en formato encriptado "
-"GZIP o XML."
 
 msgid "Client"
 msgstr "Cliente"
@@ -1690,6 +1686,9 @@ msgstr "Configurando"
 
 msgid "Confirm New Password"
 msgstr "Confirmar Nueva Contraseña"
+
+msgid "Confirm Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Confirmar"
@@ -2065,17 +2064,16 @@ msgstr "Temperatura interna actual"
 msgid "Current password"
 msgstr "Contraseña actual"
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr ""
-"La contraseña actual es la contraseña por defecto. Debería usar su propia "
-"contraseña."
-
 msgid "Current password is incorrectly entered."
 msgstr "Contraseña incorrecta"
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Estado actual de operacion de disco basado en la curva de vida util"
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
+msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Potencia actual en (VA)"
@@ -2112,6 +2110,12 @@ msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
 msgstr "No se puede usar DHCP para la interfaz LAN."
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
+msgstr ""
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2211,8 +2215,8 @@ msgstr ""
 "Decodificado como: byte 0-1-2 = recuento promedio de borrado (big endian) y "
 "byte 3-4-5 = recuento maximo de borrado (big endian)"
 
-msgid "Decrypt Password"
-msgstr "Desencriptar Contraseña"
+msgid "Decryption Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Deduplicado"
@@ -3463,9 +3467,6 @@ msgstr "Habilitar autentificación interactiva usando el teclado."
 msgid "Enable large read/write."
 msgstr "Habilitar lectura/escritura grande"
 
-msgid "Enable local user authentication."
-msgstr "Habilitar autentificación de usuarios locales."
-
 msgid "Enable mapping DOS attributes."
 msgstr "Habilitar el mapeado de atributos DOS"
 
@@ -3565,9 +3566,6 @@ msgstr "Habilitar Write Cache"
 msgid "Enabled"
 msgstr "Habilitado"
 
-msgid "Encrypt Password"
-msgstr "Encriptar Contraseña"
-
 msgid "Encrypt password"
 msgstr "Contraseña de encriptación"
 
@@ -3599,6 +3597,9 @@ msgstr "Cifrado"
 msgid "Encryption Management"
 msgstr "Opciones de Cifrado"
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr "Opciones de Cifrado"
 
@@ -3616,6 +3617,9 @@ msgstr "Compatibilidad mejorada con servidores AFP - Netatalk"
 
 msgid "Enter Command"
 msgstr "Introduzca Comando"
+
+msgid "Enter Password"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Introduzca un comentario"
@@ -4282,6 +4286,9 @@ msgstr "Invitado"
 msgid "Guest Account"
 msgstr "Cuenta de invitado"
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr "HAST"
 
@@ -4923,10 +4930,9 @@ msgstr ""
 "Es recomendable respaldar la configuración del sistema antes de actualizar"
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
-"Es recomendable encriptar antes de guardar el resaldo en un lugar saguro"
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -5210,6 +5216,9 @@ msgstr "Compartido local (Destino)"
 
 msgid "Local User"
 msgstr "Usuario Local"
+
+msgid "Local user authentication is selected."
+msgstr ""
 
 msgid "Location"
 msgstr "Ubicacion"
@@ -6234,6 +6243,9 @@ msgstr "Sobreescribir la configuracion de discos"
 
 msgid "Owner"
 msgstr "Propietario"
+
+msgid "PAM authentication is selected."
+msgstr ""
 
 msgid "PG"
 msgstr "PG"
@@ -7530,6 +7542,9 @@ msgstr "Seleccionar un disco habilitado para monitoreo S.M.A.R.T."
 msgid "Select an encryption algorithm to use."
 msgstr "Seleccionar algoritmo de encriptación a usar."
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Seleccionar formato de sistema de archivo"
 
@@ -7583,13 +7598,6 @@ msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 "Seleccionar los permisos para ejecutar este servicio. (www por defecto)."
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr ""
-"Seleccione la configuración del servidor en formato GZIP (Encriptado) o XML, "
-"y pulse el botón para restaurarla."
-
 msgid "Select which interface to use."
 msgstr "Seleccionar el interfaz a usar."
 
@@ -7620,6 +7628,9 @@ msgstr "Gráfica seleccionada"
 
 msgid "Selected interface:"
 msgstr "Interfaz seleccionada:"
+
+msgid "Selection"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "SMART"
@@ -8689,10 +8700,6 @@ msgstr "El comando a ser ejecutado."
 msgid "The configuration could not be restored."
 msgstr "No se ha podido restaurar la configuracion."
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr "La configuración no podra ser restaurada. %s"
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 "La configuración no puede ser restaurada. No se ha podido subir el archivo."
@@ -9044,6 +9051,9 @@ msgstr "El protocolo de encriptación de contraseñas a usar."
 msgid "The passwords do not match."
 msgstr "Las contraseñas no coinciden."
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr "La ruta '%s' no existe."
@@ -9130,8 +9140,9 @@ msgstr "El servidor está reiniciandose."
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "El servidor se revertirá a valores de fábrica y se reiniciará."
 
-msgid "The server will reboot after restoring the configuration."
-msgstr "El servidor se reiniciará después de restaurar la configuración."
+msgid ""
+"The server will reboot after the configuration was successfully restored."
+msgstr ""
 
 msgid "The share name is already used."
 msgstr "El nombre compartido ya esta en uso"
@@ -10254,6 +10265,12 @@ msgstr "Estadísticas de tiempo de actividad"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "Usar Bytes/sec en lugar de Bits/sec en la gráfica de Red."
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -10270,6 +10287,9 @@ msgstr "Use un contenedor distinto como raíz del arbol"
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Usar inotify para descubrir actualizaciones automáticas de archivos nuevos."
+
+msgid "Use local user authentication."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -11031,3 +11051,48 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "Habilitar autentificación de usuarios locales."
+
+#, php-format
+#~ msgid "The configuration could not be restored. %s"
+#~ msgstr "La configuración no podra ser restaurada. %s"
+
+#~ msgid "The server will reboot after restoring the configuration."
+#~ msgstr "El servidor se reiniciará después de restaurar la configuración."
+
+#~ msgid ""
+#~ "Select the server configuration encrypted GZIP file or XML file and click "
+#~ "the button below to restore the configuration."
+#~ msgstr ""
+#~ "Seleccione la configuración del servidor en formato GZIP (Encriptado) o XML, "
+#~ "y pulse el botón para restaurarla."
+
+#~ msgid ""
+#~ "Click this button to download the server configuration in encrypted GZIP "
+#~ "file or XML format."
+#~ msgstr ""
+#~ "Pulsar para descargar la configuración del servidor en formato encriptado "
+#~ "GZIP o XML."
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr ""
+#~ "La contraseña actual es la contraseña por defecto. Debería usar su propia "
+#~ "contraseña."
+
+#~ msgid ""
+#~ "It is recommended to use encryption before you store the backup in a safe "
+#~ "location."
+#~ msgstr ""
+#~ "Es recomendable encriptar antes de guardar el resaldo en un lugar saguro"
+
+#~ msgid "Decrypt Password"
+#~ msgstr "Desencriptar Contraseña"
+
+#~ msgid "Encrypt Password"
+#~ msgstr "Encriptar Contraseña"
+
+#~ msgid "AIO Module"
+#~ msgstr "Modulo AIO"
