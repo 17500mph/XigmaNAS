@@ -43,9 +43,14 @@ netatalk_mkconf()
 	/usr/local/bin/xml sel -t -m "//afp" \
 		-o "[Global]" -n \
 		-i "string-length(afpname) > 0" -v "concat('	hostname = ',afpname)" -n -b \
-		-o "	uam list = " \
-		-i "count(guest) > 0" -o "uams_guest.so " -b \
-		-i "count(local) > 0" -o "uams_dhx.so uams_dhx2.so" -b \
+		-o "	uam list =" \
+		-i "count(uams_guest) > 0" -o " uams_guest.so" -b \
+		-i "count(uams_pam) > 0" -o " uams_pam.so" -b \
+		-i "count(uams_passwd) > 0" -o " uams_passwd.so" -b \
+		-i "count(uams_dhx_pam) > 0" -o " uams_dhx_pam.so" -b \
+		-i "count(uams_dhx_passwd) > 0" -o " uams_dhx_passwd.so" -b \
+		-i "count(uams_dhx2_pam) > 0" -o " uams_dhx2_pam.so" -b \
+		-i "count(uams_dhx2_passwd) > 0" -o " uams_dhx2_passwd.so" -b \
 		-n \
 		-o "	guest account = ftp" -n \
 		-o "	vol dbnest = yes" -n \
