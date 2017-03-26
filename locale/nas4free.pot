@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -273,9 +273,6 @@ msgid "AFP Compatibility"
 msgstr ""
 
 msgid "AG"
-msgstr ""
-
-msgid "AIO Module"
 msgstr ""
 
 msgid "AIO Read Size"
@@ -847,6 +844,9 @@ msgstr ""
 msgid "Authentication Method"
 msgstr ""
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr ""
 
@@ -1307,6 +1307,9 @@ msgstr ""
 msgid "Clear Configuration"
 msgstr ""
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr ""
 
@@ -1314,9 +1317,6 @@ msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
-msgstr ""
-
-msgid "Click this button to download the server configuration in encrypted GZIP file or XML format."
 msgstr ""
 
 msgid "Client"
@@ -1427,6 +1427,9 @@ msgid "Configuring"
 msgstr ""
 
 msgid "Confirm New Password"
+msgstr ""
+
+msgid "Confirm Password"
 msgstr ""
 
 msgid "Confirmation"
@@ -1660,13 +1663,13 @@ msgstr ""
 msgid "Current password"
 msgstr ""
 
-msgid "Current password is default password. You should use your own password."
-msgstr ""
-
 msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
+msgstr ""
+
+msgid "Current system password is using the default password. You should choose a different password."
 msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
@@ -1703,6 +1706,12 @@ msgid "DHCP"
 msgstr ""
 
 msgid "DHCP cannot be used for LAN interface."
+msgstr ""
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
 msgstr ""
 
 msgid "DLNA/UPnP"
@@ -1798,7 +1807,7 @@ msgstr ""
 msgid "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt Password"
+msgid "Decryption Password"
 msgstr ""
 
 msgid "Dedup"
@@ -2961,9 +2970,6 @@ msgstr ""
 msgid "Enable large read/write."
 msgstr ""
 
-msgid "Enable local user authentication."
-msgstr ""
-
 msgid "Enable mapping DOS attributes."
 msgstr ""
 
@@ -3051,9 +3057,6 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
-msgid "Encrypt Password"
-msgstr ""
-
 msgid "Encrypt password"
 msgstr ""
 
@@ -3085,6 +3088,9 @@ msgstr ""
 msgid "Encryption Management"
 msgstr ""
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr ""
 
@@ -3101,6 +3107,9 @@ msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
+msgstr ""
+
+msgid "Enter Password"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3690,6 +3699,9 @@ msgstr ""
 msgid "Guest Account"
 msgstr ""
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr ""
 
@@ -4206,7 +4218,7 @@ msgstr ""
 msgid "It is recommended that you backup the server configuration before you upgrade"
 msgstr ""
 
-msgid "It is recommended to use encryption before you store the backup in a safe location."
+msgid "It is recommended to encrypt your configuration and store it in a safe location."
 msgstr ""
 
 msgid "It's recommended to change the default username and password for accessing the WebGUI, enter the username here."
@@ -4441,6 +4453,9 @@ msgid "Local Share (Destination)"
 msgstr ""
 
 msgid "Local User"
+msgstr ""
+
+msgid "Local user authentication is selected."
 msgstr ""
 
 msgid "Location"
@@ -5379,6 +5394,9 @@ msgid "Overwrite disks configuration"
 msgstr ""
 
 msgid "Owner"
+msgstr ""
+
+msgid "PAM authentication is selected."
 msgstr ""
 
 msgid "PG"
@@ -6564,6 +6582,9 @@ msgstr ""
 msgid "Select an encryption algorithm to use."
 msgstr ""
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -6606,9 +6627,6 @@ msgstr ""
 msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 
-msgid "Select the server configuration encrypted GZIP file or XML file and click the button below to restore the configuration."
-msgstr ""
-
 msgid "Select which interface to use."
 msgstr ""
 
@@ -6634,6 +6652,9 @@ msgid "Selected graph:"
 msgstr ""
 
 msgid "Selected interface:"
+msgstr ""
+
+msgid "Selection"
 msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
@@ -7545,10 +7566,6 @@ msgstr ""
 msgid "The configuration could not be restored."
 msgstr ""
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr ""
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
@@ -7782,6 +7799,9 @@ msgstr ""
 msgid "The passwords do not match."
 msgstr ""
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr ""
@@ -7845,7 +7865,7 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
-msgid "The server will reboot after restoring the configuration."
+msgid "The server will reboot after the configuration was successfully restored."
 msgstr ""
 
 msgid "The share name is already used."
@@ -8659,6 +8679,12 @@ msgstr ""
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid "Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"
 msgstr ""
 
@@ -8669,6 +8695,9 @@ msgid "Use different container as root of the tree."
 msgstr ""
 
 msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
+
+msgid "Use local user authentication."
 msgstr ""
 
 #, php-format
