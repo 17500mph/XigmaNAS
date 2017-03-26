@@ -1,6 +1,6 @@
---- third_party/waf/wafadmin/Logs.py.orig	2015-07-21 09:47:50 UTC
-+++ third_party/waf/wafadmin/Logs.py	2015-10-05 18:46:33 UTC
-@@ -23,6 +23,9 @@
+--- third_party/waf/wafadmin/Logs.py.orig	2016-01-26 11:45:47 UTC
++++ third_party/waf/wafadmin/Logs.py
+@@ -23,6 +23,9 @@ colors_lst = {
  'cursor_off' :'\x1b[?25l',
  }
  
@@ -10,7 +10,7 @@
  got_tty = False
  term = os.environ.get('TERM', 'dumb')
  if not term in ['dumb', 'emacs']:
-@@ -84,7 +87,7 @@
+@@ -84,7 +87,7 @@ class log_filter(logging.Filter):
  
  class formatter(logging.Formatter):
  	def __init__(self):

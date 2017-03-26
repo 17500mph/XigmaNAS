@@ -1,6 +1,6 @@
---- ./source3/utils/net_time.c.orig	2010-04-01 15:26:22 UTC
-+++ ./source3/utils/net_time.c	2010-04-23 01:08:35 UTC
-@@ -87,10 +87,15 @@
+--- source3/utils/net_time.c.orig	2016-01-26 11:45:46 UTC
++++ source3/utils/net_time.c
+@@ -75,10 +75,15 @@ static const char *systime(time_t t)
  	if (!tm) {
  		return "unknown";
  	}
