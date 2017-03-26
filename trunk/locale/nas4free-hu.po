@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: 2017-03-24 14:14+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:27+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:46+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -358,9 +358,6 @@ msgstr "AFP kompatibilitás"
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr "AIO modul"
 
 msgid "AIO Read Size"
 msgstr "AIO olvasási méret"
@@ -1027,6 +1024,9 @@ msgstr "Hitelesítés"
 msgid "Authentication Method"
 msgstr "Hitelesítési eljárás"
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr "Hitelesített hálózat"
 
@@ -1526,6 +1526,9 @@ msgstr "Konfiguráció törlése és lemezek importálása"
 msgid "Clear Configuration"
 msgstr "Konfiguráció törlése"
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr "Konfiguráció törlése a lemezek importálása előtt."
 
@@ -1534,13 +1537,6 @@ msgstr "Konfiguráció törlése a szoftveres RAID lemezek importálása előtt.
 
 msgid "Clear device errors"
 msgstr "Eszközhibák törlése"
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
-msgstr ""
-"Kattints a gombra a szerver beállításainak titkosított GZIP vagy XML "
-"fájlformátumban történő letöltéséhez."
 
 msgid "Client"
 msgstr "Kliens"
@@ -1667,6 +1663,9 @@ msgstr "Beállítás"
 
 msgid "Confirm New Password"
 msgstr "Új jelszó megerõsítése"
+
+msgid "Confirm Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Megerősítés"
@@ -2017,17 +2016,16 @@ msgstr "Pillanatnyi belső hőmérséklet."
 msgid "Current password"
 msgstr "Jelenlegi jelszó"
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr ""
-"A jelenlegi jelszó az alapértelmezett jelszó. Inkább a saját jelszavadat "
-"használd."
-
 msgid "Current password is incorrectly entered."
 msgstr "A jelenlegi jelszót hibásan adtad meg."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Az életgörbén alapuló meghajtóművelet pillanatnyi állapota."
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
+msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "A látszólagos teljesítmény aktuális értéke (Volt-Amper)"
@@ -2064,6 +2062,12 @@ msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
 msgstr "LAN interfészhez nem használható DHCP."
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
+msgstr ""
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2162,8 +2166,8 @@ msgstr ""
 "Visszakódolás: 0-1-2 byte = átlagos törlésszám (nagy endian típusú) és a 3-4-"
 "5 = maximális törlésszám (nagy endian típusú)"
 
-msgid "Decrypt Password"
-msgstr "Visszafejtő jelszó"
+msgid "Decryption Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Egyszeresítés"
@@ -3417,9 +3421,6 @@ msgstr "Billentyű-interaktív authentikáció hitelesítés"
 msgid "Enable large read/write."
 msgstr "Óriás írás/olvasás bekapcsolása."
 
-msgid "Enable local user authentication."
-msgstr "Helyi felhasználó hitelesítés engedélyezése."
-
 msgid "Enable mapping DOS attributes."
 msgstr "DOS attribútum leképezésének bekapcsolása."
 
@@ -3518,9 +3519,6 @@ msgstr "Írás cache engedélyezése."
 msgid "Enabled"
 msgstr "Engedélyezve"
 
-msgid "Encrypt Password"
-msgstr "Titkosító jelszó"
-
 msgid "Encrypt password"
 msgstr "Titkosító jelszó"
 
@@ -3552,6 +3550,9 @@ msgstr "Titkosítás (encryption)"
 msgid "Encryption Management"
 msgstr "Titkosításkezelő"
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr "Titkosítási beállítások"
 
@@ -3569,6 +3570,9 @@ msgstr "Megnövelt kompatibilitás Netatalk AFP szerverrel."
 
 msgid "Enter Command"
 msgstr "Parancs megadása"
+
+msgid "Enter Password"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Írj egy hozzászólást"
@@ -4230,6 +4234,9 @@ msgstr "Vendég"
 msgid "Guest Account"
 msgstr "Vendég felhasználói fiók"
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr "HAST"
 
@@ -4860,11 +4867,9 @@ msgid ""
 msgstr "Frissítés előtt ajánlott a szerverbeállítások mentése"
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
-"Ajánlott a titkosítása használata, mielőtt biztonságos helyre mented a "
-"biztonsági másolatot."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -5151,6 +5156,9 @@ msgstr "Helyi megosztás (cél)"
 
 msgid "Local User"
 msgstr "Helyi felhasználó"
+
+msgid "Local user authentication is selected."
+msgstr ""
 
 msgid "Location"
 msgstr "Hely"
@@ -6178,6 +6186,9 @@ msgstr "Lemez beállítások felülírása"
 
 msgid "Owner"
 msgstr "Tulajdonos"
+
+msgid "PAM authentication is selected."
+msgstr ""
 
 msgid "PG"
 msgstr "PG"
@@ -7473,6 +7484,9 @@ msgstr "Válassz ki egy a S.M.A.R.T. által figyelendő lemezt."
 msgid "Select an encryption algorithm to use."
 msgstr "Válassz titkosítási algoritmust."
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Válassz fájlrendszer formátumot."
 
@@ -7527,14 +7541,6 @@ msgstr ""
 "Válaszd ki ezen szolgáltatás futtatásához a jogosultságot (alapértelmezetten "
 "www)."
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr ""
-"Add meg a szerver beállításait tartalmazó titkosított GZIP vagy XML "
-"formátumú fájlt, majd kattints a gombra a szerver beállításainak "
-"visszatöltéséhez."
-
 msgid "Select which interface to use."
 msgstr "Válaszd ki a használandó interfészt."
 
@@ -7566,6 +7572,9 @@ msgstr "Kiválasztott grafikonok:"
 
 msgid "Selected interface:"
 msgstr "Kiválasztott interfész:"
+
+msgid "Selection"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Önellenőrző, Analizáló és Nyilvántartó Technológia"
@@ -8628,10 +8637,6 @@ msgstr "A végrehajtandó parancs."
 msgid "The configuration could not be restored."
 msgstr "A beállítást nem lehetett helyreállítani."
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr "A beállításokat nem lehet visszaállítani. %s"
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "A beállításokat nem lehet visszaállítani. Nincs feltöltött fájl!"
 
@@ -8975,6 +8980,9 @@ msgstr "A használandó jelszótitkosítási protokoll."
 msgid "The passwords do not match."
 msgstr "A jelszó nem egyezik."
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr "A(z) '%s' útvonal nem létezik."
@@ -9063,8 +9071,9 @@ msgstr ""
 "A szerver gyári alapértékeit visszaállítjuk és a rendszer hamarosan "
 "újraindul."
 
-msgid "The server will reboot after restoring the configuration."
-msgstr "A szerver a beállítások visszaállítása után újraindul."
+msgid ""
+"The server will reboot after the configuration was successfully restored."
+msgstr ""
 
 msgid "The share name is already used."
 msgstr "A megosztási név már használatban van."
@@ -10177,6 +10186,12 @@ msgstr ""
 "Byte/másodperc használata bit/másodperc helyett az átviteli sebességet "
 "megjelenítéséhez."
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -10192,6 +10207,9 @@ msgstr "Másik tárolót válassz a fa gyökerének."
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr "Inotify figyelés használata új fájlok automatikus felderítésére."
+
+msgid "Use local user authentication."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -10942,3 +10960,50 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "Helyi felhasználó hitelesítés engedélyezése."
+
+#, php-format
+#~ msgid "The configuration could not be restored. %s"
+#~ msgstr "A beállításokat nem lehet visszaállítani. %s"
+
+#~ msgid "The server will reboot after restoring the configuration."
+#~ msgstr "A szerver a beállítások visszaállítása után újraindul."
+
+#~ msgid ""
+#~ "Click this button to download the server configuration in encrypted GZIP "
+#~ "file or XML format."
+#~ msgstr ""
+#~ "Kattints a gombra a szerver beállításainak titkosított GZIP vagy XML "
+#~ "fájlformátumban történő letöltéséhez."
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr ""
+#~ "A jelenlegi jelszó az alapértelmezett jelszó. Inkább a saját jelszavadat "
+#~ "használd."
+
+#~ msgid ""
+#~ "Select the server configuration encrypted GZIP file or XML file and click "
+#~ "the button below to restore the configuration."
+#~ msgstr ""
+#~ "Add meg a szerver beállításait tartalmazó titkosított GZIP vagy XML "
+#~ "formátumú fájlt, majd kattints a gombra a szerver beállításainak "
+#~ "visszatöltéséhez."
+
+#~ msgid "AIO Module"
+#~ msgstr "AIO modul"
+
+#~ msgid "Decrypt Password"
+#~ msgstr "Visszafejtő jelszó"
+
+#~ msgid "Encrypt Password"
+#~ msgstr "Titkosító jelszó"
+
+#~ msgid ""
+#~ "It is recommended to use encryption before you store the backup in a safe "
+#~ "location."
+#~ msgstr ""
+#~ "Ajánlott a titkosítása használata, mielőtt biztonságos helyre mented a "
+#~ "biztonsági másolatot."

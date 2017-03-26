@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: 2017-03-09 19:22+0000\n"
 "Last-Translator: vmwarewolf <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:26+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:46+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -332,9 +332,6 @@ msgstr ""
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr ""
 
 msgid "AIO Read Size"
 msgstr ""
@@ -960,6 +957,9 @@ msgstr "Autentisering"
 msgid "Authentication Method"
 msgstr ""
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr ""
 
@@ -1446,6 +1446,9 @@ msgstr ""
 msgid "Clear Configuration"
 msgstr ""
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr ""
 
@@ -1453,11 +1456,6 @@ msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
 
 msgid "Clear device errors"
-msgstr ""
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
 msgstr ""
 
 msgid "Client"
@@ -1579,6 +1577,9 @@ msgid "Configuring"
 msgstr "Konfigruering"
 
 msgid "Confirm New Password"
+msgstr ""
+
+msgid "Confirm Password"
 msgstr ""
 
 msgid "Confirmation"
@@ -1879,15 +1880,15 @@ msgstr ""
 msgid "Current password"
 msgstr ""
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr ""
-"Gjeldende passord er standard passordet. Du bør bruke ditt eget passord."
-
 msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
+msgstr ""
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
 msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
@@ -1924,6 +1925,12 @@ msgid "DHCP"
 msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
+msgstr ""
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
 msgstr ""
 
 msgid "DLNA/UPnP"
@@ -2021,7 +2028,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt Password"
+msgid "Decryption Password"
 msgstr ""
 
 msgid "Dedup"
@@ -3236,9 +3243,6 @@ msgstr "Slå på tastatur-interaktiv autentisering."
 msgid "Enable large read/write."
 msgstr ""
 
-msgid "Enable local user authentication."
-msgstr "Slå på lokal bruker autentisering."
-
 msgid "Enable mapping DOS attributes."
 msgstr ""
 
@@ -3335,9 +3339,6 @@ msgstr ""
 msgid "Enabled"
 msgstr "Slått på"
 
-msgid "Encrypt Password"
-msgstr ""
-
 msgid "Encrypt password"
 msgstr ""
 
@@ -3369,6 +3370,9 @@ msgstr "Kryptering"
 msgid "Encryption Management"
 msgstr ""
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr ""
 
@@ -3385,6 +3389,9 @@ msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
+msgstr ""
+
+msgid "Enter Password"
 msgstr ""
 
 msgid "Enter a comment"
@@ -4023,6 +4030,9 @@ msgstr "Gjest"
 msgid "Guest Account"
 msgstr ""
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr ""
 
@@ -4603,7 +4613,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
 
@@ -4864,6 +4874,9 @@ msgstr ""
 
 msgid "Local User"
 msgstr "Lokal bruker"
+
+msgid "Local user authentication is selected."
+msgstr ""
 
 msgid "Location"
 msgstr "Plassering"
@@ -5852,6 +5865,9 @@ msgstr "Overskriv diskkonfigurasjon"
 
 msgid "Owner"
 msgstr "Eier"
+
+msgid "PAM authentication is selected."
+msgstr ""
 
 msgid "PG"
 msgstr "PG"
@@ -7094,6 +7110,9 @@ msgstr "Velg en disk som er klar for S.M.A.R.T. overvåking."
 msgid "Select an encryption algorithm to use."
 msgstr ""
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr ""
 
@@ -7140,11 +7159,6 @@ msgstr "Velg stedet nærmest deg"
 msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr ""
-
 msgid "Select which interface to use."
 msgstr ""
 
@@ -7172,6 +7186,9 @@ msgid "Selected graph:"
 msgstr ""
 
 msgid "Selected interface:"
+msgstr ""
+
+msgid "Selection"
 msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
@@ -8157,10 +8174,6 @@ msgstr "Kommando som skal kjøres."
 msgid "The configuration could not be restored."
 msgstr "Konfigurasjon kunne ikke gjennopprettes."
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr ""
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
@@ -8449,6 +8462,9 @@ msgstr ""
 msgid "The passwords do not match."
 msgstr "Passordene er ikke like."
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr ""
@@ -8522,7 +8538,8 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
-msgid "The server will reboot after restoring the configuration."
+msgid ""
+"The server will reboot after the configuration was successfully restored."
 msgstr ""
 
 msgid "The share name is already used."
@@ -9491,6 +9508,12 @@ msgstr ""
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9505,6 +9528,9 @@ msgid "Use different container as root of the tree."
 msgstr ""
 
 msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
+
+msgid "Use local user authentication."
 msgstr ""
 
 #, php-format
@@ -10209,3 +10235,11 @@ msgstr ""
 
 msgid "umount"
 msgstr "avmontér"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "Slå på lokal bruker autentisering."
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr ""
+#~ "Gjeldende passord er standard passordet. Du bør bruke ditt eget passord."

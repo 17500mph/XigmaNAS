@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
-"PO-Revision-Date: 2017-03-22 12:09+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
+"PO-Revision-Date: 2017-03-26 22:39+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:27+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:46+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -376,9 +376,6 @@ msgstr "AFP Compatibiliteit"
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr "AIO Module"
 
 msgid "AIO Read Size"
 msgstr "AIO Read Size"
@@ -1052,6 +1049,9 @@ msgstr "Verificatie"
 msgid "Authentication Method"
 msgstr "Authenticatiemethode"
 
+msgid "Authentification method is disabled."
+msgstr "Authenticatie methode is uitgeschakeld."
+
 msgid "Authorised Network"
 msgstr "Geautoriseerd Netwerk"
 
@@ -1566,6 +1566,9 @@ msgstr "Config wissen en Importeer Schijven"
 msgid "Clear Configuration"
 msgstr "Configuratie Wissen"
 
+msgid "Clear Text Authentication"
+msgstr "Clear Text Authenticatie"
+
 msgid "Clear configuration information before importing disks."
 msgstr "Wissen configuratie informatie alvorens het importeren van schijven."
 
@@ -1576,13 +1579,6 @@ msgstr ""
 
 msgid "Clear device errors"
 msgstr "Wis schijf fouten"
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
-msgstr ""
-"Druk op de knop 'Configuratie Opslaan' om de huidige serverconfiguratie op "
-"te slaan in gecodeerd GZIP bestand of XML-formaat."
 
 msgid "Client"
 msgstr "Werkstation"
@@ -1710,6 +1706,9 @@ msgstr "Configureren"
 
 msgid "Confirm New Password"
 msgstr "Bevestig Nieuw Wachtwoord"
+
+msgid "Confirm Password"
+msgstr "Bevestig Wachtwoord"
 
 msgid "Confirmation"
 msgstr "Bevestiging"
@@ -2086,17 +2085,18 @@ msgstr "Huidige interne temperatuur."
 msgid "Current password"
 msgstr "Huidig wachtwoord"
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr ""
-"Het huidige wachtwoord is het standaard wachtwoord. U dient uw eigen "
-"wachtwoord te gebruiken."
-
 msgid "Current password is incorrectly entered."
 msgstr "Huidig wachtwoord is onjuist ingevoerd."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Huidige staat werking van de schijf op basis van de Levens Curve."
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
+msgstr ""
+"Huidige systeemwachtwoord gebruikt het standaard wachtwoord. U zou een ander "
+"wachtwoord moeten opgeven."
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Huidige waarde van schijnbaar vermogen (Volt-Amps)"
@@ -2133,6 +2133,12 @@ msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
 msgstr "DHCP kan niet worden gebruikt voor het LAN-netwerk."
+
+msgid "DHX Authentication"
+msgstr "DHX Authenticatie"
+
+msgid "DHX2 Authentication"
+msgstr "DHX2 Authenticatie"
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2231,8 +2237,8 @@ msgstr ""
 "Gedecodeerd als: byte 0-1-2 = gemiddelde wis telling (big endian) en byte 3-"
 "4-5 = max wis telling (big endian)."
 
-msgid "Decrypt Password"
-msgstr "Decodeer Wachtwoord"
+msgid "Decryption Password"
+msgstr "Decoderen Wachtwoord"
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -3500,9 +3506,6 @@ msgstr "Inschakelen interactieve-toetsenbord verificatie."
 msgid "Enable large read/write."
 msgstr "Inschakelen groot lezen/schrijven."
 
-msgid "Enable local user authentication."
-msgstr "Inschakelen lokale gebruikers verificatie."
-
 msgid "Enable mapping DOS attributes."
 msgstr "Inschakelen mapping DOS attributen."
 
@@ -3605,9 +3608,6 @@ msgstr "Inschakelen schrijf cache mode."
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
-msgid "Encrypt Password"
-msgstr "Codeer Wachtwoord"
-
 msgid "Encrypt password"
 msgstr "Codeer wachtwoord"
 
@@ -3639,6 +3639,9 @@ msgstr "Encryptie"
 msgid "Encryption Management"
 msgstr "Encryptie Management"
 
+msgid "Encryption Password"
+msgstr "Encryptie Wachtwoord"
+
 msgid "Encryption Settings"
 msgstr "Encryptie Instellingen"
 
@@ -3656,6 +3659,9 @@ msgstr "Verbeterde compatibiliteit met Netatalk AFP server."
 
 msgid "Enter Command"
 msgstr "Geef Commando"
+
+msgid "Enter Password"
+msgstr "Enter Wachtwoord"
 
 msgid "Enter a comment"
 msgstr "Geef een beschrijving op"
@@ -4322,6 +4328,9 @@ msgstr "Gast"
 msgid "Guest Account"
 msgstr "Gast Account"
 
+msgid "Guest Authentication"
+msgstr "Gast Authenticatie"
+
 msgid "HAST"
 msgstr "HAST"
 
@@ -4956,10 +4965,10 @@ msgstr ""
 "u de firmware update gaat uitvoeren."
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
-"Het wordt aanbevolen encryptie te gebruiken voordat u de back-up opslaat op "
+"Het wordt aanbevolen encryptie te gebruiken en dat u de back-up bewaart op "
 "een veilige plaats."
 
 msgid ""
@@ -5244,6 +5253,9 @@ msgstr "Lokale Deling (Bestemming)"
 
 msgid "Local User"
 msgstr "Lokale gebruiker"
+
+msgid "Local user authentication is selected."
+msgstr "lokaal gebruikersauthenticatie is geselecteerd."
 
 msgid "Location"
 msgstr "Locatie"
@@ -6280,6 +6292,9 @@ msgstr "Overschrijf de schijf configuratie"
 
 msgid "Owner"
 msgstr "Eigenaar"
+
+msgid "PAM authentication is selected."
+msgstr "PAM authenticatie is geselecteerd."
 
 msgid "PG"
 msgstr "PG"
@@ -7573,6 +7588,9 @@ msgstr "Selecteer een schijf dat is ingeschakeld voor S.M.A.R.T. controle."
 msgid "Select an encryption algorithm to use."
 msgstr "Selecteer een encryptiealgoritme om te gebruiken."
 
+msgid "Select configuration file:"
+msgstr "Selecteer configuratiebestand:"
+
 msgid "Select file system format."
 msgstr "Selecteer het bestandssysteem voor het formatteren."
 
@@ -7627,13 +7645,6 @@ msgid "Select the permission for running this service. (www by default)."
 msgstr ""
 "Selecteer de permissie voor het uitvoeren van deze service. (standaard www)."
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr ""
-"Selecteer het server configuratiebestand (GZIP of XML-formaat) en druk op de "
-"knop 'Configuratie Herstellen' om de server in oude staat te herstellen."
-
 msgid "Select which interface to use."
 msgstr "Selecteer het netwerk voor gebruik."
 
@@ -7665,6 +7676,9 @@ msgstr "Geselecteerde grafiek:"
 
 msgid "Selected interface:"
 msgstr "Geselecteerd netwerk:"
+
+msgid "Selection"
+msgstr "Selectie"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Zelf-Controle, Analyseren & Rapportage Techniek"
@@ -8739,10 +8753,6 @@ msgstr "De opdracht die uitgevoerd moet worden."
 msgid "The configuration could not be restored."
 msgstr "De configuratie kon niet worden hersteld."
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr "De configuratie kan niet worden hersteld. %s"
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 "De configuratie kan niet worden hersteld. Er is geen bestand geupload!"
@@ -9092,6 +9102,9 @@ msgstr "Het te gebruiken encryptie protocol voor wachtwoorden."
 msgid "The passwords do not match."
 msgstr "De wachtwoorden komen niet overeen."
 
+msgid "The passwords do not match. Please try again."
+msgstr "De wachtwoorden komen niet overeen. Probeer het opnieuw."
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr "De locatie '%s' bestaat niet."
@@ -9180,10 +9193,10 @@ msgstr ""
 "De server wordt teruggezet naar de fabrieksinstellingen en zal opnieuw "
 "worden opgestart."
 
-msgid "The server will reboot after restoring the configuration."
+msgid ""
+"The server will reboot after the configuration was successfully restored."
 msgstr ""
-"De server zal automatisch herstarten na het herstellen van de "
-"serverconfiguratie."
+"De server zal herstarten na het herstellen van de serverconfiguratie."
 
 msgid "The share name is already used."
 msgstr "De deling naam is reeds gebruikt."
@@ -10327,6 +10340,12 @@ msgstr ""
 "Gebruik Bytes/seconde in plaats van Bits/seconde voor netwerk doorvoer "
 "weergave."
 
+msgid "Use Encryption"
+msgstr "Encryptie Gebruiken"
+
+msgid "Use PAM for user authentication."
+msgstr "Gebruik PAM voor gebruiker authenticatie."
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -10344,6 +10363,9 @@ msgstr "Gebruik een andere container als root van de lijst."
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Gebruik inotify monitoring om nieuwe bestanden automatisch te ontdekken."
+
+msgid "Use local user authentication."
+msgstr "Gebruik lokaal gebruiker authenticatie."
 
 #, php-format
 msgid ""
@@ -11113,3 +11135,51 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "Inschakelen lokale gebruikers verificatie."
+
+#, php-format
+#~ msgid "The configuration could not be restored. %s"
+#~ msgstr "De configuratie kan niet worden hersteld. %s"
+
+#~ msgid "The server will reboot after restoring the configuration."
+#~ msgstr ""
+#~ "De server zal automatisch herstarten na het herstellen van de "
+#~ "serverconfiguratie."
+
+#~ msgid ""
+#~ "Select the server configuration encrypted GZIP file or XML file and click "
+#~ "the button below to restore the configuration."
+#~ msgstr ""
+#~ "Selecteer het server configuratiebestand (GZIP of XML-formaat) en druk op de "
+#~ "knop 'Configuratie Herstellen' om de server in oude staat te herstellen."
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr ""
+#~ "Het huidige wachtwoord is het standaard wachtwoord. U dient uw eigen "
+#~ "wachtwoord te gebruiken."
+
+#~ msgid ""
+#~ "It is recommended to use encryption before you store the backup in a safe "
+#~ "location."
+#~ msgstr ""
+#~ "Het wordt aanbevolen encryptie te gebruiken voordat u de back-up opslaat op "
+#~ "een veilige plaats."
+
+#~ msgid "AIO Module"
+#~ msgstr "AIO Module"
+
+#~ msgid "Encrypt Password"
+#~ msgstr "Codeer Wachtwoord"
+
+#~ msgid ""
+#~ "Click this button to download the server configuration in encrypted GZIP "
+#~ "file or XML format."
+#~ msgstr ""
+#~ "Druk op de knop 'Configuratie Opslaan' om de huidige serverconfiguratie op "
+#~ "te slaan in gecodeerd GZIP bestand of XML-formaat."
+
+#~ msgid "Decrypt Password"
+#~ msgstr "Decodeer Wachtwoord"

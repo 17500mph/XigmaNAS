@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-22 12:19+0000\n"
+"POT-Creation-Date: 2017-03-27 00:00+0000\n"
 "PO-Revision-Date: 2017-03-22 14:21+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-25 17:25+0000\n"
+"X-Launchpad-Export-Date: 2017-03-26 22:45+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -351,9 +351,6 @@ msgstr "AFP kompabilitiet"
 
 msgid "AG"
 msgstr "AG"
-
-msgid "AIO Module"
-msgstr "AIO Modul"
 
 msgid "AIO Read Size"
 msgstr "AIO Lässtorlek"
@@ -1018,6 +1015,9 @@ msgstr "Autentisering"
 msgid "Authentication Method"
 msgstr "Autentiseringsmetod"
 
+msgid "Authentification method is disabled."
+msgstr ""
+
 msgid "Authorised Network"
 msgstr "Godkännt nätverk"
 
@@ -1514,6 +1514,9 @@ msgstr "Rensa konfiguration och importerara diskar"
 msgid "Clear Configuration"
 msgstr "Rensa konfiguration"
 
+msgid "Clear Text Authentication"
+msgstr ""
+
 msgid "Clear configuration information before importing disks."
 msgstr "Rensa konfigurationsinformation innan diskar importeras."
 
@@ -1523,13 +1526,6 @@ msgstr ""
 
 msgid "Clear device errors"
 msgstr "Rensa enhetsfel"
-
-msgid ""
-"Click this button to download the server configuration in encrypted GZIP "
-"file or XML format."
-msgstr ""
-"Klicka på knappen för att ladda ner en serverkonfigurations fil i GZIP "
-"(krypterad ) eller XML format."
 
 msgid "Client"
 msgstr "Klient"
@@ -1656,6 +1652,9 @@ msgstr "Konfigurering"
 
 msgid "Confirm New Password"
 msgstr "Bekräfta nytt lösenord"
+
+msgid "Confirm Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Bekräftelse"
@@ -2011,16 +2010,16 @@ msgstr "Aktuell innertemperatur"
 msgid "Current password"
 msgstr "Aktuellt lösenord"
 
-msgid ""
-"Current password is default password. You should use your own password."
-msgstr ""
-"Nuvarande lösenord är standard lösenord. Du bör använda ditt eget lösenord."
-
 msgid "Current password is incorrectly entered."
 msgstr "Lösenordet är felaktigt inmatat."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Aktuell status på diskfunktion baserat på livskurvan."
+
+msgid ""
+"Current system password is using the default password. You should choose a "
+"different password."
+msgstr ""
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Aktuell skenbar effekt (VA)"
@@ -2057,6 +2056,12 @@ msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
 msgstr "DHCP kan inte användas för LAN gränssnittet."
+
+msgid "DHX Authentication"
+msgstr ""
+
+msgid "DHX2 Authentication"
+msgstr ""
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2155,8 +2160,8 @@ msgstr ""
 "Kodat som: byte 0-1-2 = medel antal raderingar (big endian) och byte 3-4-5 = "
 "max antal raderingar (big endian)."
 
-msgid "Decrypt Password"
-msgstr "Avkryptera lösenord"
+msgid "Decryption Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Deduplicering"
@@ -3401,9 +3406,6 @@ msgstr "Aktivera tangentbordsinteraktiv autentisering."
 msgid "Enable large read/write."
 msgstr "Aktivera stor läs/skriv."
 
-msgid "Enable local user authentication."
-msgstr "Aktivera lokal användarautentisering."
-
 msgid "Enable mapping DOS attributes."
 msgstr "Aktivera översättning av DOS attribut."
 
@@ -3503,9 +3505,6 @@ msgstr "Aktivera skrivcache"
 msgid "Enabled"
 msgstr "Aktiverad"
 
-msgid "Encrypt Password"
-msgstr "Kryptera lösenord"
-
 msgid "Encrypt password"
 msgstr "Krypteringslösenord"
 
@@ -3537,6 +3536,9 @@ msgstr "Kryptering"
 msgid "Encryption Management"
 msgstr "Krypteringshantering"
 
+msgid "Encryption Password"
+msgstr ""
+
 msgid "Encryption Settings"
 msgstr "Krypteringsinställningar"
 
@@ -3554,6 +3556,9 @@ msgstr "Utökad kompatibilitet med Netata´lk AFP server."
 
 msgid "Enter Command"
 msgstr "Mata in kommando"
+
+msgid "Enter Password"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Skriv en kommentar"
@@ -4212,6 +4217,9 @@ msgstr "Gäst"
 msgid "Guest Account"
 msgstr "Gästkonto"
 
+msgid "Guest Authentication"
+msgstr ""
+
 msgid "HAST"
 msgstr "HAST"
 
@@ -4838,11 +4846,9 @@ msgstr ""
 "uppgraderar"
 
 msgid ""
-"It is recommended to use encryption before you store the backup in a safe "
+"It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
-"Det är rekommenderat att använda kryptering innan du lagrar backupen på en "
-"säker plats."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -5112,6 +5118,9 @@ msgstr "Lokal utdelning (Destination)"
 
 msgid "Local User"
 msgstr "Lokal användare"
+
+msgid "Local user authentication is selected."
+msgstr ""
 
 msgid "Location"
 msgstr "Placering"
@@ -6126,6 +6135,9 @@ msgstr "Skriv över diskkonfigurationen"
 
 msgid "Owner"
 msgstr "Ägare"
+
+msgid "PAM authentication is selected."
+msgstr ""
 
 msgid "PG"
 msgstr "PG"
@@ -7405,6 +7417,9 @@ msgstr "Välj en disk som har S.M.A.R.T.-övervakning aktiverat."
 msgid "Select an encryption algorithm to use."
 msgstr "Välj en krypteringsalgoritm att använda."
 
+msgid "Select configuration file:"
+msgstr ""
+
 msgid "Select file system format."
 msgstr "Välj filsystemsformat"
 
@@ -7455,13 +7470,6 @@ msgstr "Välj den plats som är närmast dig."
 msgid "Select the permission for running this service. (www by default)."
 msgstr "Välj villkoret för att köra denna tjänst. (www som standard)"
 
-msgid ""
-"Select the server configuration encrypted GZIP file or XML file and click "
-"the button below to restore the configuration."
-msgstr ""
-"Välj krypterad server konfigurations fil, GZIP eller XML, och klicka på "
-"knappen nedan för att återställa konfigurationen."
-
 msgid "Select which interface to use."
 msgstr "Välj vilket gränssnitt som skall användas"
 
@@ -7493,6 +7501,9 @@ msgstr "Vald graf"
 
 msgid "Selected interface:"
 msgstr "Valt gränssnitt"
+
+msgid "Selection"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Egenövervakning, analys & raporterings teknik (SMART)"
@@ -8552,10 +8563,6 @@ msgstr "Kommandot som ska utföras."
 msgid "The configuration could not be restored."
 msgstr "Konfigurationen kunde inte återskapas."
 
-#, php-format
-msgid "The configuration could not be restored. %s"
-msgstr "Konfigurationen kunde inte återställas. %s"
-
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "Konfigurationen kunde inte återställas. Ingen fil laddades upp!"
 
@@ -8894,6 +8901,9 @@ msgstr "Det lösenordskrypteringsprotokoll som skall användas"
 msgid "The passwords do not match."
 msgstr "Lösenorden stämmer inte överens."
 
+msgid "The passwords do not match. Please try again."
+msgstr ""
+
 #, php-format
 msgid "The path '%s' does not exist."
 msgstr "Sökvägen '%s' finns ej."
@@ -8980,8 +8990,9 @@ msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 "Servern kommer återställas till fabriksinställningarna och startas om."
 
-msgid "The server will reboot after restoring the configuration."
-msgstr "Servern återstartar efter återställning av konfigurationen."
+msgid ""
+"The server will reboot after the configuration was successfully restored."
+msgstr ""
 
 msgid "The share name is already used."
 msgstr "Namnet på delningen är redan använt."
@@ -10094,6 +10105,12 @@ msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 "Använd Bytes/sec i stället för Bits/sec för nätverksöverföringsvisningen."
 
+msgid "Use Encryption"
+msgstr ""
+
+msgid "Use PAM for user authentication."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -10110,6 +10127,9 @@ msgstr "Använd en annan plats som rot fär trädet."
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Använd \"inotiy\" övervakning för att automatiskt upptäcka nya filer."
+
+msgid "Use local user authentication."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -10870,3 +10890,48 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Enable local user authentication."
+#~ msgstr "Aktivera lokal användarautentisering."
+
+#, php-format
+#~ msgid "The configuration could not be restored. %s"
+#~ msgstr "Konfigurationen kunde inte återställas. %s"
+
+#~ msgid "The server will reboot after restoring the configuration."
+#~ msgstr "Servern återstartar efter återställning av konfigurationen."
+
+#~ msgid ""
+#~ "Current password is default password. You should use your own password."
+#~ msgstr ""
+#~ "Nuvarande lösenord är standard lösenord. Du bör använda ditt eget lösenord."
+
+#~ msgid ""
+#~ "Click this button to download the server configuration in encrypted GZIP "
+#~ "file or XML format."
+#~ msgstr ""
+#~ "Klicka på knappen för att ladda ner en serverkonfigurations fil i GZIP "
+#~ "(krypterad ) eller XML format."
+
+#~ msgid ""
+#~ "It is recommended to use encryption before you store the backup in a safe "
+#~ "location."
+#~ msgstr ""
+#~ "Det är rekommenderat att använda kryptering innan du lagrar backupen på en "
+#~ "säker plats."
+
+#~ msgid ""
+#~ "Select the server configuration encrypted GZIP file or XML file and click "
+#~ "the button below to restore the configuration."
+#~ msgstr ""
+#~ "Välj krypterad server konfigurations fil, GZIP eller XML, och klicka på "
+#~ "knappen nedan för att återställa konfigurationen."
+
+#~ msgid "Encrypt Password"
+#~ msgstr "Kryptera lösenord"
+
+#~ msgid "Decrypt Password"
+#~ msgstr "Avkryptera lösenord"
+
+#~ msgid "AIO Module"
+#~ msgstr "AIO Modul"
