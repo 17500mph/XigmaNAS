@@ -1,6 +1,6 @@
---- source4/lib/http/http.c.orig	2015-07-14 10:41:44 UTC
-+++ source4/lib/http/http.c	2015-08-09 23:25:46 UTC
-@@ -112,7 +112,19 @@
+--- source4/lib/http/http.c.orig	2016-03-08 11:07:45 UTC
++++ source4/lib/http/http.c
+@@ -112,7 +112,19 @@ static enum http_read_status http_parse_
  		return HTTP_ALL_DATA_READ;
  	}
  
@@ -20,7 +20,7 @@
  	if (n != 2) {
  		DEBUG(0, ("%s: Error parsing header '%s'\n", __func__, line));
  		status = HTTP_DATA_CORRUPTED;
-@@ -138,7 +150,7 @@
+@@ -138,7 +150,7 @@ error:
  static bool http_parse_response_line(struct http_read_response_state *state)
  {
  	bool	status = true;
@@ -29,7 +29,7 @@
  	char	*msg = NULL;
  	char	major;
  	char	minor;
-@@ -158,12 +170,22 @@
+@@ -158,12 +170,22 @@ static bool http_parse_response_line(str
  		return false;
  	}
  
@@ -56,7 +56,7 @@
  
  	if (n != 5) {
  		DEBUG(0, ("%s: Error parsing header\n",	__func__));
-@@ -171,6 +193,10 @@
+@@ -171,6 +193,10 @@ static bool http_parse_response_line(str
  		goto error;
  	}
  

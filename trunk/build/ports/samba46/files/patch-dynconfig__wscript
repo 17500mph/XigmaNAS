@@ -1,15 +1,15 @@
---- ./dynconfig/wscript.orig	2012-11-13 08:03:38 UTC
-+++ ./dynconfig/wscript	2013-01-29 19:43:57 UTC
-@@ -127,6 +127,8 @@
+--- dynconfig/wscript.orig	2016-01-26 11:45:46 UTC
++++ dynconfig/wscript
+@@ -137,6 +137,8 @@ dynconfig = {
      'PKGCONFIGDIR' : {
           'STD-PATH':  '${LIBDIR}/pkgconfig',
           'FHS-PATH':  '${LIBDIR}/pkgconfig',
 +         'OPTION':    '--with-pkgconfigdir',
 +         'HELPTEXT':  'Where to put .pc files',
      },
-     'SWATDIR' : {
-          'STD-PATH':  '${DATADIR}/swat',
-@@ -236,8 +238,8 @@
+     'CODEPAGEDIR' : {
+          'STD-PATH':  '${DATADIR}/codepages',
+@@ -242,8 +244,8 @@ dynconfig = {
           'DELAY':     True,
      },
      'CONFIGFILE' : {
@@ -20,7 +20,7 @@
           'DELAY':     True,
      },
      'LMHOSTSFILE' : {
-@@ -294,9 +296,6 @@
+@@ -300,9 +302,6 @@ def configure(conf):
          flavor = 'FHS-PATH'
      else:
          flavor = 'STD-PATH'

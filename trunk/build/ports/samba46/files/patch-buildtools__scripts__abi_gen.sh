@@ -1,6 +1,6 @@
---- buildtools/scripts/abi_gen.sh.orig	2013-02-10 00:47:43 UTC
-+++ buildtools/scripts/abi_gen.sh	2013-02-10 00:47:55 UTC
-@@ -9,6 +9,7 @@
+--- buildtools/scripts/abi_gen.sh.orig	2016-01-26 11:45:46 UTC
++++ buildtools/scripts/abi_gen.sh
+@@ -9,6 +9,7 @@ GDBSCRIPT="gdb_syms.$$"
  cat <<EOF
  set height 0
  set width 0
@@ -8,7 +8,7 @@
  EOF
  nm "$SHAREDLIB" | cut -d' ' -f2- | egrep '^[BDGTRVWS]' | grep -v @ | egrep -v ' (__bss_start|_edata|_init|_fini|_end)' | cut -c3- | sort | while read s; do
      echo "echo $s: "
-@@ -17,5 +18,5 @@
+@@ -17,5 +18,5 @@ done
  ) > $GDBSCRIPT
  
  # forcing the terminal avoids a problem on Fedora12
