@@ -169,15 +169,15 @@ endswitch;
 switch($page_action):
 	case 'save':
 		$authmethods = 0;
-		$authmethods += isset($sphere->row['uams_guest']) ? 1 : 0;
-//		$authmethods += isset($sphere->row['uams_randum']) ? 1 : 0;
-//		$authmethods += isset($sphere->row['uam_gss']) ? 1 : 0;
-		$authmethods += isset($sphere->row['uams_pam']) ? 1 : 0;
-		$authmethods += isset($sphere->row['uams_passwd']) ? 1 : 0;
-		$authmethods += isset($sphere->row['uams_dhx_pam']) ? 1 : 0;
-		$authmethods += isset($sphere->row['uams_dhx_passwd']) ? 1 : 0;
-		$authmethods += isset($sphere->row['uams_dhx2_pam']) ? 1 : 0;
-		$authmethods += isset($sphere->row['uams_dhx2_passwd']) ? 1 : 0;
+		$authmethods += $sphere->row['uams_guest'] ? 1 : 0;
+//		$authmethods += $sphere->row['uams_randum'] ? 1 : 0;
+//		$authmethods += $sphere->row['uam_gss'] ? 1 : 0;
+		$authmethods += $sphere->row['uams_pam'] ? 1 : 0;
+		$authmethods += $sphere->row['uams_passwd'] ? 1 : 0;
+		$authmethods += $sphere->row['uams_dhx_pam'] ? 1 : 0;
+		$authmethods += $sphere->row['uams_dhx_passwd'] ? 1 : 0;
+		$authmethods += $sphere->row['uams_dhx2_pam'] ? 1 : 0;
+		$authmethods += $sphere->row['uams_dhx2_passwd'] ? 1 : 0;
 		if($authmethods == 0):
 			$input_errors[] = gtext('You must select at least one authentication method.');
 		endif;
