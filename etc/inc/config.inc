@@ -1265,6 +1265,25 @@ function config_upgrade() {
 		endif;
 		$config['version'] = '3.3';
 	endif;
+	/*	Convert 3.3 -> 3.4 */
+	/*	netatalk authentication methods */
+	if($config['version'] === '3.3'):
+		array_make_branch($config,'afp','auxparam');
+		if(isset($config['afp']['guest'])):
+			$config['afp']['uams_guest'] = true;
+			unset($config['afp']['guest']);
+		endif;
+		if(isset($config['afp']['local'])):
+			$config['afp']['uams_dhx_passwd'] = true;
+			$config['afp']['uams_dhx3_passwd'] = true;
+			unset($config['afp']['local']);
+		else:
+			$config['afp']['uams_dhx_pam'] = true;
+			$config['afp']['uams_dhx3_pam'] = true;
+		endif;
+		$config['version'] = '3.4';
+	endif;
+	
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
 

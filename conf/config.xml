@@ -1044,8 +1044,13 @@
 	<afp>
 		<!--
 		<enable/>
-		<guest/>
-		<local/>
+		<uams_guest/>
+		<uams_pam/>
+		<uams_passwd/>
+		<uams_dhx_pam/>
+		<uams_dhx_passwd/>
+		<uams_dhx2_pam/>
+		<uams_dhx2_passwd/>
 		<noddp/>
 		<afpname>xxx</afpname>
 		<share>
