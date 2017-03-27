@@ -154,7 +154,13 @@ class co_sphere_level2 extends co_sphere_level1 { // for row and grid
 	}
 }
 class co_sphere_settings extends co_sphere_level1 {
-//	methods	
+//	methods
+	public function copyrowtogrid() {
+		//	settings uses one record, therefore row can be soft-copied to grid
+		foreach($this->row as $row_key => $row_val):
+			$this->grid[$row_key] = $row_val;
+		endforeach;
+	}
 }
 class co_sphere_row extends co_sphere_level2 {
 //	modes
