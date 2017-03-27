@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-03-23 07:46+0000\n"
+"PO-Revision-Date: 2017-03-27 20:19+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-27 11:48+0000\n"
+"X-Launchpad-Export-Date: 2017-03-27 21:45+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -1066,7 +1066,7 @@ msgid "Authentication Method"
 msgstr "Μέθοδος Πιστοποίησης"
 
 msgid "Authentification method is disabled."
-msgstr ""
+msgstr "Η μέθοδος πιστοποίησης είναι απενεργοποιημένη."
 
 msgid "Authorised Network"
 msgstr "Πιστοποιημένο Δίκτυο"
@@ -1582,7 +1582,7 @@ msgid "Clear Configuration"
 msgstr "Εκκαθάριση Ρυθμίσεων"
 
 msgid "Clear Text Authentication"
-msgstr ""
+msgstr "Πιστοποίηση Απλού Κειμένου"
 
 msgid "Clear configuration information before importing disks."
 msgstr "Eκκαθάριση πληροφοριών ρυθμίσεων πριν την εισαγωγή δίσκων."
@@ -1723,7 +1723,7 @@ msgid "Confirm New Password"
 msgstr "Επιβεβαίωση Νέου Κωδικού"
 
 msgid "Confirm Password"
-msgstr ""
+msgstr "Επιβεβαίωση Κωδικού"
 
 msgid "Confirmation"
 msgstr "Επιβεβαίωση"
@@ -2117,6 +2117,8 @@ msgid ""
 "Current system password is using the default password. You should choose a "
 "different password."
 msgstr ""
+"Ο τρέχων κωδικός του συστήματος είναι ο προεπιλεγμένος. Θα πρέπει να "
+"επιλέξετε έναν άλλο κωδικό."
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Τρέχουσα τιμή φαινόμενης ισχύος (Volt-Amps)"
@@ -2155,10 +2157,10 @@ msgid "DHCP cannot be used for LAN interface."
 msgstr "Δεν μπορεί να χρησιμοποιηθεί DHCP για τη διασύνδεση δικτύου LAN."
 
 msgid "DHX Authentication"
-msgstr ""
+msgstr "Πιστοποίηση DHX"
 
 msgid "DHX2 Authentication"
-msgstr ""
+msgstr "Πιστοποίηση DHX2"
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2258,7 +2260,7 @@ msgstr ""
 "byte 3-4-5 = μέγιστος αριθμός διαγραφών (big endian)."
 
 msgid "Decryption Password"
-msgstr ""
+msgstr "Κωδικός Αποκρυπτογράφησης"
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -3666,7 +3668,7 @@ msgid "Encryption Management"
 msgstr "Διαχείριση Κρυπτογράφησης"
 
 msgid "Encryption Password"
-msgstr ""
+msgstr "Κωδικός Κρυπτογράφησης"
 
 msgid "Encryption Settings"
 msgstr "Ρυθμίσεις Κρυπτογράφησης"
@@ -3687,7 +3689,7 @@ msgid "Enter Command"
 msgstr "Εισαγωγή Εντολής"
 
 msgid "Enter Password"
-msgstr ""
+msgstr "Εισαγωγή Κωδικού"
 
 msgid "Enter a comment"
 msgstr "Εισαγωγή ενός σχολίου"
@@ -4363,7 +4365,7 @@ msgid "Guest Account"
 msgstr "Λογαριασμός Guest"
 
 msgid "Guest Authentication"
-msgstr ""
+msgstr "Πιστοποίηση Επισκέπτη"
 
 msgid "HAST"
 msgstr "HAST"
@@ -5017,6 +5019,8 @@ msgid ""
 "It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
+"Συνιστάται να κρυπτογραφήσετε το αρχείο ρυθμίσεων και να το αποθηκεύσετε σε "
+"ασφαλή τοποθεσία."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -5307,7 +5311,7 @@ msgid "Local User"
 msgstr "Τοπικός Χρήστης"
 
 msgid "Local user authentication is selected."
-msgstr ""
+msgstr "Έχει επιλεχθεί πιστοποίηση τοπικών χρηστών."
 
 msgid "Location"
 msgstr "Τοποθεσία"
@@ -6349,7 +6353,7 @@ msgid "Owner"
 msgstr "Κάτοχος"
 
 msgid "PAM authentication is selected."
-msgstr ""
+msgstr "Έχει επιλεχθεί πιστοποίηση PAM."
 
 msgid "PG"
 msgstr "PG"
@@ -7655,7 +7659,7 @@ msgid "Select an encryption algorithm to use."
 msgstr "Επιλέξτε έναν αλγόριθμο κρυπτογράφησης που θα χρησιμοποιήσετε."
 
 msgid "Select configuration file:"
-msgstr ""
+msgstr "Επιλογή αρχείου ρυθμίσεων:"
 
 msgid "Select file system format."
 msgstr "Επιλογή διαμόρφωσης του συστήματος αρχείων."
@@ -7745,7 +7749,7 @@ msgid "Selected interface:"
 msgstr "Επιλεγμένη διεπαφή:"
 
 msgid "Selection"
-msgstr ""
+msgstr "Επιλογή"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Τεχνολογία Αυτο-παρακολούθησης, Ανάλυσης και Πληροφόρησης"
@@ -9203,7 +9207,7 @@ msgid "The passwords do not match."
 msgstr "Οι κωδικοί δεν ταιριάζουν."
 
 msgid "The passwords do not match. Please try again."
-msgstr ""
+msgstr "Οι κωδικοί δεν ταιριάζουν. Παρακαλώ προσπαθήστε ξανά."
 
 #, php-format
 msgid "The path '%s' does not exist."
@@ -9299,6 +9303,7 @@ msgstr ""
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
+"Ο διακομιστής θα κάνει επανεκκίνηση μετά την επιτυχή επαναφορά των ρυθμίσεων."
 
 msgid "The share name is already used."
 msgstr "Το όνομα του κοινόχρηστου χρησιμοποιείται ήδη."
@@ -10470,10 +10475,10 @@ msgstr ""
 "δικτύου."
 
 msgid "Use Encryption"
-msgstr ""
+msgstr "Χρήση Κρυπτογράφησης"
 
 msgid "Use PAM for user authentication."
-msgstr ""
+msgstr "Χρήση PAM για πιστοποίηση χρηστών."
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -10493,7 +10498,7 @@ msgid "Use inotify monitoring to automatically discover new files."
 msgstr "Χρήση παρακολούθησης inotify για αυτόματη ανακάλυψη νέων αρχείων."
 
 msgid "Use local user authentication."
-msgstr ""
+msgstr "Χρήση πιστοποίησης τοπικών χρηστών."
 
 #, php-format
 msgid ""

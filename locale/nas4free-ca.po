@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-03-25 07:48+0000\n"
+"PO-Revision-Date: 2017-03-27 21:35+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-27 11:49+0000\n"
+"X-Launchpad-Export-Date: 2017-03-27 21:44+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
 "Language: ca_ES\n"
 
@@ -1044,7 +1044,7 @@ msgid "Authentication Method"
 msgstr "Mètode d'autenticació"
 
 msgid "Authentification method is disabled."
-msgstr ""
+msgstr "Mètode d'autenticació està desactivada."
 
 msgid "Authorised Network"
 msgstr "Xarxa autoritzat"
@@ -1553,7 +1553,7 @@ msgid "Clear Configuration"
 msgstr "Esborrar configuració"
 
 msgid "Clear Text Authentication"
-msgstr ""
+msgstr "Autenticació de text sense xifrar"
 
 msgid "Clear configuration information before importing disks."
 msgstr "Esborrar informació de configuració abans d'importar els discs."
@@ -1693,7 +1693,7 @@ msgid "Confirm New Password"
 msgstr "Confirma la nova contrasenya"
 
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirmeu la contrassenya"
 
 msgid "Confirmation"
 msgstr "Confirmació"
@@ -2082,6 +2082,8 @@ msgid ""
 "Current system password is using the default password. You should choose a "
 "different password."
 msgstr ""
+"El sistema està utilitzant la contrasenya per defecte. Heu de triar una "
+"contrasenya diferent."
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Valor actual de potencia aparent (Volt-Amps)"
@@ -2120,10 +2122,10 @@ msgid "DHCP cannot be used for LAN interface."
 msgstr "No es pot utilitzar DHCP per a la interfície LAN."
 
 msgid "DHX Authentication"
-msgstr ""
+msgstr "Autenticació DHX"
 
 msgid "DHX2 Authentication"
-msgstr ""
+msgstr "desxifrat contrasenya DHX2"
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2223,7 +2225,7 @@ msgstr ""
 "byte 3-4-5 = recompte d'esborrat max (big endian)."
 
 msgid "Decryption Password"
-msgstr ""
+msgstr "Desxifrar contrasenya"
 
 msgid "Dedup"
 msgstr "Deduplicar"
@@ -3614,7 +3616,7 @@ msgid "Encryption Management"
 msgstr "Gestió del xifrat"
 
 msgid "Encryption Password"
-msgstr ""
+msgstr "Xifrar contrasenya"
 
 msgid "Encryption Settings"
 msgstr "Ajustos del Xifrat"
@@ -3635,7 +3637,7 @@ msgid "Enter Command"
 msgstr "Introduïu l'ordre"
 
 msgid "Enter Password"
-msgstr ""
+msgstr "Introduïu la contrasenya"
 
 msgid "Enter a comment"
 msgstr "Introduïu un comentari"
@@ -4312,7 +4314,7 @@ msgid "Guest Account"
 msgstr "Compte de convidat"
 
 msgid "Guest Authentication"
-msgstr ""
+msgstr "Autenticació de convidat"
 
 msgid "HAST"
 msgstr "HAST"
@@ -4956,6 +4958,7 @@ msgid ""
 "It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
+"Es recomana xifrar la seva configuració i guardar-la en un lloc segur."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -5239,7 +5242,7 @@ msgid "Local User"
 msgstr "Usuari local"
 
 msgid "Local user authentication is selected."
-msgstr ""
+msgstr "Es selecciona l'autenticació d'usuari local."
 
 msgid "Location"
 msgstr "Ubicació"
@@ -6275,7 +6278,7 @@ msgid "Owner"
 msgstr "Propietari"
 
 msgid "PAM authentication is selected."
-msgstr ""
+msgstr "Es selecciona l'autenticació PAM"
 
 msgid "PG"
 msgstr "PG"
@@ -7571,7 +7574,7 @@ msgid "Select an encryption algorithm to use."
 msgstr "Seleccionar el algoritme de xifrat a utilitzar."
 
 msgid "Select configuration file:"
-msgstr ""
+msgstr "Selecciona arxiu de configuració:"
 
 msgid "Select file system format."
 msgstr "Seleccionar el format de sistema de fitxers."
@@ -7661,7 +7664,7 @@ msgid "Selected interface:"
 msgstr "Interfície seleccionada:"
 
 msgid "Selection"
-msgstr ""
+msgstr "Selecció"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Auto-Monitorització, Anàlisis i Tecnologia d'Informes"
@@ -9084,7 +9087,7 @@ msgid "The passwords do not match."
 msgstr "Les contrasenyes no coincideixen"
 
 msgid "The passwords do not match. Please try again."
-msgstr ""
+msgstr "Les contrasenyes no coincideixen. Siusplau torna-ho a provar."
 
 #, php-format
 msgid "The path '%s' does not exist."
@@ -9177,6 +9180,8 @@ msgstr "El servidor es restablirà als valors de fàbrica i es reiniciarà."
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
+"El servidor es reiniciarà després que la configuració s'ha restaurat "
+"correctament."
 
 msgid "The share name is already used."
 msgstr "El nom del recurs ja s'utilitza."
@@ -10316,10 +10321,10 @@ msgstr ""
 "de la xarxa."
 
 msgid "Use Encryption"
-msgstr ""
+msgstr "Utilitza xifrat"
 
 msgid "Use PAM for user authentication."
-msgstr ""
+msgstr "Utilitza PAM per a l'autenticació d'usuari."
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -10340,7 +10345,7 @@ msgstr ""
 "Fes servir el monitori inotify per descobrir automàticament nous arxius."
 
 msgid "Use local user authentication."
-msgstr ""
+msgstr "Utilitzar l'autenticació d'usuari local."
 
 #, php-format
 msgid ""
