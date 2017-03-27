@@ -161,7 +161,7 @@ switch($page_action):
 	case 'disable':
 		if($sphere->row['enable']): // if enabled, disable it
 			$sphere->row['enable'] = false;
-			$sphere->grid = $sphere->row['enable'];
+			$sphere->grid['enable'] = $sphere->row['enable'];
 			write_config();
 			$retval = 0;
 			config_lock();
