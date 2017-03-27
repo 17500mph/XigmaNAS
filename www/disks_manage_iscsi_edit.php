@@ -44,7 +44,7 @@ $pgtitle = [gtext('Disks'),gtext('Management'),gtext('iSCSI Initiator'), isset($
 $a_iscsiinit = &array_make_branch($config,'iscsiinit','vdisk');
 if(empty($a_iscsiinit)):
 else:
-	array_sort_key($$a_iscsiinit,'name');
+	array_sort_key($a_iscsiinit,'name');
 endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsiinit, "uuid")))) {
