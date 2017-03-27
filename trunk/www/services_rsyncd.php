@@ -136,7 +136,9 @@ switch($page_action):
 				endif;
 			endforeach;
 			$sphere->row['auxparam'] = $helpinghand;
-			$sphere->grid = $sphere->row;
+			foreach($sphere->row as $row_key => $row_val):
+				$sphere->grid[$row_key] = $row_val;
+			endforeach;
 			write_config();
 			$retval = 0;
 			config_lock();
