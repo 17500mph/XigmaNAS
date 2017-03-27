@@ -177,9 +177,7 @@ switch($page_action):
 		endif;
 		//	all checks passed
 		if(empty($input_errors)):
-			foreach($sphere->row as $row_key => $row_val):
-				$sphere->grid[$row_key] = $row_val;
-			endforeach;
+			$sphere->copyrowtogrid();
 			write_config();
 			$retval = 0;
 			config_lock();

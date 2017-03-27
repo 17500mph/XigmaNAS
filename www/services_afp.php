@@ -190,10 +190,7 @@ switch($page_action):
 				endif;
 			endforeach;
 			$sphere->row['auxparam'] = $auxparam_grid;
-			//	don't destroy possible ['afp']['shares']
-			foreach($sphere->row as $row_key => $row_val):
-				$sphere->grid[$row_key] = $row_val;
-			endforeach;
+			$sphere->copyrowtogrid();
 			write_config();
 			$retval = 0;
 			config_lock();
