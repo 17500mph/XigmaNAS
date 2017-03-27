@@ -65,7 +65,6 @@ function services_afp_get_sphere() {
 $sphere = &services_afp_get_sphere();
 $gt_button_apply_confirm = gtext('Do you want to apply these settings?');
 $input_errors = [];
-$a_message = [];
 //	identify page mode
 $mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_VIEW;
 switch($mode_page):
@@ -341,7 +340,7 @@ endswitch;
 //					html_checkbox2('uams_randum',gtext('Random Authentication'),$sphere->row['uams_randum'],gtext('Allow random number and two-way random number exchange for authentication.'));
 //					html_checkbox2('uam_gss',gtext('Kerberos Authentication'),$sphere->row['uam_gss'],gtext('Allow Kerberos V for authentication.'));
 ?>
-					<tr>
+					<tr id="clrtxt_tr">
 						<td class="celltag"><?=gtext('Clear Text Authentication');?></td>
 						<td class="celldata">
 							<table class="area_data_selection">
@@ -356,23 +355,23 @@ endswitch;
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td class="lcell"><input name="clrtxt" id="uams_dhx_none" type="radio" value=""<?=($sphere->row['uams_passwd'] || $sphere->row['uams_pam']) ? '' : ' checked="checked"';?>/></td>
+									<tr id="uams_none_tr">
+										<td class="lcelc"><input name="clrtxt" id="uams_none" type="radio" value="off"<?=($sphere->row['uams_passwd'] || $sphere->row['uams_pam']) ? '' : ' checked="checked"';?>/></td>
 										<td class="lcebl"><label for="uams_none"><?=gtext('Authentification method is disabled.');?></label></td>
 									</tr>
-									<tr>
-										<td class="lcell"><input name="clrtxt" id="uams_passwd" type="radio" value="uams_passwd"<?=($sphere->row['uams_passwd']) ? ' checked="checked"' : '';?>/></td>
+									<tr id="uams_passwd_tr">
+										<td class="lcelc"><input name="clrtxt" id="uams_passwd" type="radio" value="uams_passwd"<?=($sphere->row['uams_passwd']) ? ' checked="checked"' : '';?>/></td>
 										<td class="lcebl"><label for="uams_passwd"><?=gtext('Use local user authentication.');?></label></td>
 									</tr>
-									<tr>
-										<td class="lcell"><input name="clrtxt" id="uams_pam" type="radio" value="uams_pam"<?=($sphere->row['uams_pam']) ? ' checked="checked"' : '';?>/></td>
+									<tr id="uams_pam_tr">
+										<td class="lcelc"><input name="clrtxt" id="uams_pam" type="radio" value="uams_pam"<?=($sphere->row['uams_pam']) ? ' checked="checked"' : '';?>/></td>
 										<td class="lcebl"><label for="uams_pam"><?=gtext('Use PAM for user authentication.');?></label></td>
 									</tr>
 								</tbody>
 							</table>
 						</td>
 					</tr>
-					<tr>
+					<tr id="dhx_tr">
 						<td class="celltag"><?=gtext('DHX Authentication');?></td>
 						<td class="celldata">
 							<table class="area_data_selection">
@@ -387,23 +386,23 @@ endswitch;
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td class="lcell"><input name="dhx" id="uams_dhx_none" type="radio" value=""<?=($sphere->row['uams_dhx_passwd'] || $sphere->row['uams_dhx_pam']) ? '' : ' checked="checked"';?>/></td>
+									<tr id="uams_dhx_none_tr">
+										<td class="lcelc"><input name="dhx" id="uams_dhx_none" type="radio" value="off"<?=($sphere->row['uams_dhx_passwd'] || $sphere->row['uams_dhx_pam']) ? '' : ' checked="checked"';?>/></td>
 										<td class="lcebl"><label for="uams_dhx_none"><?=gtext('Authentification method is disabled.');?></label></td>
 									</tr>
-									<tr>
-										<td class="lcell"><input name="dhx" id="uams_dhx_passwd" type="radio" value="uams_dhx_passwd"<?=($sphere->row['uams_dhx_passwd']) ? ' checked="checked"' : '';?>/></td>
+									<tr id="uams_dhx_passwd_tr">
+										<td class="lcelc"><input name="dhx" id="uams_dhx_passwd" type="radio" value="uams_dhx_passwd"<?=($sphere->row['uams_dhx_passwd']) ? ' checked="checked"' : '';?>/></td>
 										<td class="lcebl"><label for="uams_dhx_passwd"><?=gtext('Use local user authentication.');?></label></td>
 									</tr>
-									<tr>
-										<td class="lcell"><input name="dhx" id="uams_dhx_pam" type="radio" value="uams_dhx_pam"<?=($sphere->row['uams_dhx_pam']) ? ' checked="checked"' : '';?>/></td>
+									<tr id="uams_dhx_pam_tr">
+										<td class="lcelc"><input name="dhx" id="uams_dhx_pam" type="radio" value="uams_dhx_pam"<?=($sphere->row['uams_dhx_pam']) ? ' checked="checked"' : '';?>/></td>
 										<td class="lcebl"><label for="uams_dhx_pam"><?=gtext('Use PAM for user authentication.');?></label></td>
 									</tr>
 								</tbody>
 							</table>
 						</td>
 					</tr>
-					<tr>
+					<tr id="dhx2_tr">
 						<td class="celltag"><?=gtext('DHX2 Authentication');?></td>
 						<td class="celldata">
 							<table class="area_data_selection">
@@ -418,16 +417,16 @@ endswitch;
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td class="lcell"><input name="dhx2" id="uams_dhx_none" type="radio" value=""<?=($sphere->row['uams_dhx2_passwd'] || $sphere->row['uams_dhx2_pam']) ? '' : ' checked="checked"';?>/></td>
+									<tr id="uams_dhx2_none_tr">
+										<td class="lcelc"><input name="dhx2" id="uams_dhx2_none" type="radio" value="off"<?=($sphere->row['uams_dhx2_passwd'] || $sphere->row['uams_dhx2_pam']) ? '' : ' checked="checked"';?>/></td>
 										<td class="lcebl"><label for="uams_dhx2_none"><?=gtext('Authentification method is disabled.');?></label></td>
 									</tr>
-									<tr>
-										<td class="lcell"><input name="dhx2" id="uams_dhx_passwd" type="radio" value="uams_dhx2_passwd"<?=($sphere->row['uams_dhx2_passwd']) ? ' checked="checked"' : '';?>/></td>
+									<tr id="uams_dhx2_passwd_tr">
+										<td class="lcelc"><input name="dhx2" id="uams_dhx2_passwd" type="radio" value="uams_dhx2_passwd"<?=($sphere->row['uams_dhx2_passwd']) ? ' checked="checked"' : '';?>/></td>
 										<td class="lcebl"><label for="uams_dhx2_passwd"><?=gtext('Use local user authentication.');?></label></td>
 									</tr>
-									<tr>
-										<td class="lcell"><input name="dhx2" id="uams_dhx_pam" type="radio" value="uams_dhx2_pam"<?=($sphere->row['uams_dhx2_pam']) ? ' checked="checked"' : '';?>/></td>
+									<tr id="uams_dhx2_pam_tr">
+										<td class="lcelc"><input name="dhx2" id="uams_dhx2_pam" type="radio" value="uams_dhx2_pam"<?=($sphere->row['uams_dhx2_pam']) ? ' checked="checked"' : '';?>/></td>
 										<td class="lcebl"><label for="uams_dhx2_pam"><?=gtext('Use PAM for user authentication.');?></label></td>
 									</tr>
 								</tbody>
