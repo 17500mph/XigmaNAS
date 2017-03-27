@@ -49,7 +49,7 @@ if($_POST):
 			case 'download':
 				break;
 			default:
-				header('Header: system_backup.php');
+				header('Location: system_backup.php');
 				exit;
 				break;
 		endswitch;
@@ -93,7 +93,6 @@ if($_POST):
 		header('Pragma: hack');
 		echo $data;
 		config_unlock();
-		header('Header: system_backup.php');
 		exit;
 	endif;
 else:
