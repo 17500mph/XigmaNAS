@@ -129,7 +129,10 @@ switch($page_action):
 		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		if(empty($input_errors)):
-			$sphere->grid = $sphere->row;
+			//	don't destroy possible ['nfsd']['shares']
+			foreach($sphere->row as $row_key => $row_val):
+				$sphere->grid[$row_key] = $row_val;
+			endforeach;
 			write_config();
 			$retval = 0;
 			config_lock();
