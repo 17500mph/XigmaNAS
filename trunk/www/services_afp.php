@@ -210,16 +210,7 @@ switch($page_action):
 	case 'disable':
 		if($sphere->row['enable']): // if enabled, disable it
 			$sphere->row['enable'] = false;
-			//	convert parameters
-			$auxparam_grid = [];
-			foreach(explode("\n",$sphere->row['auxparam']) as $auxparam_row):
-				$auxparam_row = trim($auxparam_row,"\t\n\r");
-				if(!empty($auxparam_row)):
-					$auxparam_grid[] = $auxparam_row;
-				endif;
-			endforeach;
-			$sphere->row['auxparam'] = $auxparam_grid;
-			$sphere->grid = $sphere->row;
+			$shpere->grid['enable'] = $sphere->row['enable'];
 			write_config();
 			$retval = 0;
 			config_lock();
