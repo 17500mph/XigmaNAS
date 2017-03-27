@@ -143,7 +143,9 @@ switch($page_action):
 			$input_errors[] = sprintf(gtext('Invalid maximum block size! It must be in the range from %d to %d.'),512,65464);
 		endif;
 		if(empty($input_errors)):
-			$sphere->grid = $sphere->row;
+			foreach($sphere->row as $row_key => $row_val):
+				$sphere->grid[$row_key] = $row_val;
+			endforeach;
 			write_config();
 			$retval = 0;
 			config_lock();
@@ -159,7 +161,7 @@ switch($page_action):
 	case 'disable':
 		if($sphere->row['enable']): // if enabled, disable it
 			$sphere->row['enable'] = false;
-			$sphere->grid = $sphere->row;
+			$sphere->grid = $sphere->row['enable'];
 			write_config();
 			$retval = 0;
 			config_lock();
