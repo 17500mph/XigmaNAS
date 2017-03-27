@@ -43,7 +43,7 @@ if($_POST):
 			case 'restore':
 				break;
 			default:
-				header('Header: system_restore.php');
+				header('Location: system_restore.php');
 				exit;
 				break;
 		endswitch;
