@@ -38,6 +38,7 @@ lighttpd_certpem=${lighttpd_certpem:-"/var/etc/cert.pem"}
 lighttpd_docroot=${lighttpd_docroot:-"/usr/local/www"}
 lighttpd_server_maxwriteidle=${lighttpd_server_maxwriteidle:-"360"}
 lighttpd_pidfile=${lighttpd_pidfile:-"/var/run/${name}.pid"}
+lighttpd_forcehttpfile=${lighttpd_forcehttpfile:-"/var/run/${name}.forcehttp"}
 lighttpd_authrequire=${lighttpd_authrequire:-"NO"}
 lighttpd_uploaddir=${lighttpd_uploaddir:-"/var/tmp"}
 lighttpd_maxrequestsize=${lighttpd_maxrequestsize:-"524288"}
@@ -95,13 +96,18 @@ lighttpd_mkconf()
 	fi
 
 	# TCP port
-	_protocol=`configxml_get "//system/webgui/protocol"`
-	_port=`configxml_get "//system/webgui/port"`
-	if [ -z "$_port" ]; then
-		if [ "${_protocol}" = "https" ]; then
-			_port="443"
-		else
-			_port="80"
+	if [ -f "${lighttpd_forcehttpfile}" ]; then
+		_protocol="http"
+		_port="80"
+	else
+		_protocol=`configxml_get "//system/webgui/protocol"`
+		_port=`configxml_get "//system/webgui/port"`
+		if [ -z "$_port" ]; then
+			if [ "${_protocol}" = "https" ]; then
+				_port="443"
+			else
+				_port="80"
+			fi
 		fi
 	fi
 	# hosts allow
@@ -288,13 +294,15 @@ EOF
 			${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
 	fi
 
-	/usr/local/bin/xml sel -t \
-		-i "//system/webgui/protocol[. = 'https']" \
-			-o "ssl.engine = \"enable\"" -n \
-			-o "ssl.pemfile = \"${lighttpd_certpem}\"" -n \
-			-o "ssl.use-sslv3 = \"disable\"" -n \
-		-b \
-		${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
+	if [ ! -f "${lighttpd_forcehttpfile}" ]; then
+		/usr/local/bin/xml sel -t \
+			-i "//system/webgui/protocol[. = 'https']" \
+				-o "ssl.engine = \"enable\"" -n \
+				-o "ssl.pemfile = \"${lighttpd_certpem}\"" -n \
+				-o "ssl.use-sslv3 = \"disable\"" -n \
+			-b \
+			${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
+	fi
 
 	# Add auxparam
 	/usr/local/bin/xml sel -t -m "//webgui" \
@@ -303,11 +311,10 @@ EOF
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
 
-	_protocol=`configxml_get "//system/webgui/protocol"`
-	_certificate=`configxml_get "//system/webgui/certificate"`
-	_privatekey=`configxml_get "//system/webgui/privatekey"`
 
 	if [ "${_protocol}" = "https" ]; then
+		_certificate=`configxml_get "//system/webgui/certificate"`
+		_privatekey=`configxml_get "//system/webgui/privatekey"`
 		# Create /var/etc/cert.pem file
 		if [ -n "${_certificate}" -a -n "${_privatekey}" ]; then
 			_tmpfile=/tmp/lighttpd$$.tmp
