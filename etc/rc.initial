@@ -59,9 +59,10 @@ else
 			echo -n "2) Configure Network IP Address"
 			echo "    11) Restart WebGUI"
 			echo -n "3) Reset WebGUI Password       "
+			echo "    12) Restart WebGUI, force HTTP on port 80"
+			echo -n "4) Reset to Factory Defaults   "
 			echo "    20) Console Keyboard Map"
-			echo "4) Reset to Factory Defaults"
-			echo "5) Ping Host"
+			echo    "5) Ping Host                   "
 		else
 			echo "1-5) Disabled (LiveCD requires 2GB memory)"
 			echo "20) Console Keyboard Map"
@@ -138,6 +139,17 @@ else
 					rm -f /var/run/config.lock
 					/sbin/umount /cf > /dev/null 2>&1
 					/sbin/mount /cf > /dev/null 2>&1
+					/etc/rc.d/lighttpd forcestart > /dev/null
+					/etc/rc.banner
+				fi
+				;;
+			12)
+				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
+					/etc/rc.d/lighttpd forcestop > /dev/null 2>&1
+					rm -f /var/run/config.lock
+					/sbin/umount /cf > /dev/null 2>&1
+					/sbin/mount /cf > /dev/null 2>&1
+					/bin/touch /var/run/lighttpd.forcehttp
 					/etc/rc.d/lighttpd forcestart > /dev/null
 					/etc/rc.banner
 				fi
