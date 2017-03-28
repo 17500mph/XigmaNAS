@@ -149,7 +149,7 @@ else
 					rm -f /var/run/config.lock
 					/sbin/umount /cf > /dev/null 2>&1
 					/sbin/mount /cf > /dev/null 2>&1
-					/bin/touch /var/run/lighttpd.forcehttp
+					/usr/bin/touch /var/run/lighttpd.forcehttp
 					/etc/rc.d/lighttpd forcestart > /dev/null
 					/etc/rc.banner
 				fi
