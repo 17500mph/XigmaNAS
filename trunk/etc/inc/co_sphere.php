@@ -476,7 +476,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_toolbox(bool $notprotected = true,bool $notdirty = true) {
 /*
  *	<td>
- *		<a href="scriptname_edit.php?uuid=12345678-1234-1234-1234-1234567890AB"><img="images/edit.png" title="Edit Record" alt="Edit Record" class="spin/></a>
+ *		<a href="scriptname_edit.php?uuid=12345678-1234-1234-1234-1234567890AB"><img="images/edit.png" title="Edit Record" alt="Edit Record" class="spin"/></a>
  *		or
  *		<img src="images/delete.png" title="Record is marked for deletion" alt="Record is marked for deletion"/>
  *		or

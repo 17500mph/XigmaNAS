@@ -288,17 +288,17 @@ endswitch;
 	<div id="submit">
 <?php
 		switch($mode_page):
-			case PAGE_MODE_VIEW;
-				echo html_button('edit',gtext('Edit'));
+			case PAGE_MODE_VIEW:
+				echo $sphere->html_button('edit',gtext('Edit'));
 				if($sphere->row['enable']):
-					echo html_button('disable',gtext('Disable'));
+					echo $sphere->html_button('disable',gtext('Disable'));
 				else:
-					echo html_button('enable',gtext('Enable'));
+					echo $sphere->html_button('enable',gtext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo html_button('save',gtext('Apply'));
-				echo html_button('cancel',gtext('Cancel'));
+				echo $sphere->html_button('save',gtext('Apply'));
+				echo $sphere->html_button('cancel',gtext('Cancel'));
 				break;
 		endswitch;
 ?>
