@@ -41,6 +41,7 @@ require_once 'tui.inc';
 
 /* Get product information */
 $productname = get_product_name();
+$zroot = "zroot";
 
 /* read platform */
 if (file_exists("{$g['etc_path']}/platform")) {
@@ -52,6 +53,11 @@ if (file_exists("{$g['etc_path']}/platform")) {
 	$g['arch'] = "unknown";
 	$g['platform'] = "unknown";
 	$g['fullplatform'] = "unknown";
+}
+
+/* RootOnZFS */
+if ($retval = (mwexec("/sbin/mount | grep -q {$zroot}") == false )) {
+	$g['zroot'] = "true";
 }
 
 if (is_booting()) {
