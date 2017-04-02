@@ -17,6 +17,7 @@ PLATFORM=`uname -m`
 CDPATH="/mnt/cdrom"
 SYSBACKUP="/tmp/sysbackup"
 PRDNAME=`cat /etc/prd.name`
+DATE=`date +%Y-%m-%d-%H%M%S`
 APPNAME="RootOnZFS"
 ZROOT="zroot"
 
@@ -442,7 +443,7 @@ create_default_snapshot()
 create_upgrade_snapshot()
 {
 	echo "Creating system upgrade snapshot..."
-	zfs snapshot ${ZROOT}${DATASET}${BOOTENV}@upgrade-`date +%Y-%m-%d-%H%M%S`
+	zfs snapshot ${ZROOT}${DATASET}${BOOTENV}@upgrade-${DATE}
 	echo "Done!"
 	sleep 1
 }
@@ -624,7 +625,7 @@ zpool_check()
 	# Check if a zroot pool already exist and/or mounted.
 	echo "Check for existing ${ZROOT} pool..."
 	if zpool import | grep -q ${ZROOT} || zpool status | grep -q ${ZROOT}; then
-		printf '\033[1;30;43m WARNING \033[0m\033[1;37m A pool called '${ZROOT}' already exist.\033[0m\n'
+		printf '\033[1;37;43m WARNING \033[0m\033[1;37m A pool called '${ZROOT}' already exist.\033[0m\n'
 		while true
 			do
 				read -p "Do you wish to proceed with the install anyway? [y/N]:" yn
