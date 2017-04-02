@@ -775,7 +775,10 @@ function get_headermenu(): array {
 		$menu_items[] = ['type' => 'internal','visible' => !$isAdminSession,'description' => gtext('Password'),'link' => '/userportal_system_password.php'];
 		$menu_items[] = ['type' => 'separator','visible' => $isAdminSession,'description' => '','link' => '/index.php'];
 		if('full' == $g['platform']):
-			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Packages'),'link' => '/system_packages.php'];
+			if('true' == $g['zroot']):
+				$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Firmware Update'),'link' => '/system_firmware.php'];
+			endif;
+				$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Packages'),'link' => '/system_packages.php'];
 		else:
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Firmware Update'),'link' => '/system_firmware.php'];
 		endif;

@@ -334,10 +334,16 @@ function powerd_change() {
 					html_titleline(gtext("System Settings"));
 					html_checkbox("zeroconf", gtext("Zeroconf/Bonjour"), !empty($pconfig['zeroconf']) ? true : false, gtext("Enable Zeroconf/Bonjour to advertise services of this device."));
 					html_checkbox("disablefm", gtext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gtext("Disable file manager completely."));
-					if ("full" !== $g['platform']) {
+					if('true' == $g['zroot']) {
 						$link = '<a href="' . 'system_firmware.php' . '">' . gtext('System') . ': ' . gtext('Firmware Update') . '</a>';
 						$helpinghand = sprintf(gtext('Do not let the server check for newer firmware versions when the %s page gets loaded.'), $link);
 						html_checkbox("disablefirmwarecheck", gtext("Firmware Check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gtext("Disable firmware version check."), $helpinghand);
+					} else {
+						if ("full" !== $g['platform']) {
+							$link = '<a href="' . 'system_firmware.php' . '">' . gtext('System') . ': ' . gtext('Firmware Update') . '</a>';
+							$helpinghand = sprintf(gtext('Do not let the server check for newer firmware versions when the %s page gets loaded.'), $link);
+							html_checkbox("disablefirmwarecheck", gtext("Firmware Check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gtext("Disable firmware version check."), $helpinghand);
+						}
 					}
 					html_checkbox("disablebeep", gtext("Internal Speaker"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdowns."));
 					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
