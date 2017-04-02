@@ -17,7 +17,6 @@ PLATFORM=`uname -m`
 CDPATH="/mnt/cdrom"
 SYSBACKUP="/tmp/sysbackup"
 PRDNAME=`cat /etc/prd.name`
-DATE=`date +%Y-%m-%d-%H%M%S`
 APPNAME="RootOnZFS"
 ZROOT="zroot"
 
@@ -443,6 +442,7 @@ create_default_snapshot()
 create_upgrade_snapshot()
 {
 	echo "Creating system upgrade snapshot..."
+	DATE=`date +%Y-%m-%d-%H%M%S`
 	zfs snapshot ${ZROOT}${DATASET}${BOOTENV}@upgrade-${DATE}
 	echo "Done!"
 	sleep 1
