@@ -154,6 +154,7 @@ function get_latest_file($rss) {
 	endif;
 	$ext = 'img';
 	$ext2 = 'xz';
+	$ext3 = 'tgz';
 	$resp = '';
 	$xml = simplexml_load_file_from_url($rss); // @simplexml_load_file($rss);
 	if(empty($xml)):
@@ -179,7 +180,7 @@ function get_latest_file($rss) {
 		if(empty($parts['extension'])):
 			continue;
 		endif;
-		if(strcasecmp($parts['extension'],$ext) != 0 && strcasecmp($parts['extension'],$ext2) != 0):
+		if(strcasecmp($parts['extension'],$ext) != 0 && strcasecmp($parts['extension'],$ext2) != 0 && strcasecmp($parts['extension'],$ext3) != 0):
 			continue;
 		endif;
 		$filename = $parts['filename'];
