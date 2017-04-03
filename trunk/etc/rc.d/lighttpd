@@ -70,12 +70,11 @@ lighttpd_mkconf()
 	local _ifn _ipaddr _ipv6addr _port
 	local _subnet _network _ipv6subnet _ipv6network _hostsallow
 
-	# LAN IF/ADDR
+	# get LAN interface
 	_ifn=`configxml_get "//interfaces/lan/if"`
 	_ifn=`get_if ${_ifn}`
+	# get IPv4 LAN address and network
 	_ipaddr=`configxml_get "//interfaces/lan/ipaddr"`
-	_subnet=`configxml_get "//interfaces/lan/subnet"`
-	_network="$_ipaddr/$_subnet"
 	if [ "${_ipaddr}" = "dhcp" ]; then
 		_ipaddr=`get_ipaddr inet ${_ifn}`
 		_network=`get_network inet ${_ifn}`
@@ -83,15 +82,21 @@ lighttpd_mkconf()
 			echo "can't get DHCP address"
 			_network="0.0.0.0/0"
 		fi
+	else
+		_subnet=`configxml_get "//interfaces/lan/subnet"`
+		_network="${_ipaddr}/${_subnet}"
 	fi
+	# get IPv6 LAN address and network
 	_ipv6addr=""
+	_ipv6network=""
 	if configxml_isset "//interfaces/*[enable]/ipv6_enable"; then
 		_ipv6addr=`configxml_get "//interfaces/lan/ipv6addr"`
-		_ipv6subnet=`configxml_get "//interfaces/lan/ipv6subnet"`
-		_ipv6network="$_ipv6addr/$_ipv6subnet"
 		if [ "${_ipv6addr}" = "auto" ]; then
 			_ipv6addr=`get_ipaddr inet6 ${_ifn}`
 			_ipv6network=`get_network inet6 ${_ifn}`
+		else
+			_ipv6subnet=`configxml_get "//interfaces/lan/ipv6subnet"`
+			_ipv6network="${_ipv6addr}/${_ipv6subnet}"
 		fi
 	fi
 
@@ -113,10 +118,41 @@ lighttpd_mkconf()
 	# hosts allow
 	_hostsallow=`configxml_get "//system/webgui/hostsallow"`
 	_hostsallow_disable=0
-	if [ -z "$_hostsallow" ]; then
-		_hostsallow="$_network"
+	# fallback if hostsallow is not configured
+	if [ -z "${_hostsallow}" ]; then
+		# add IPv4 network
+		if [ -n "${_network}" ]; then
+			if [ -z "${_hostallow}" ]; then
+				_hostsallow="${_network}"
+			else
+				_hostsallow="${_hostsallow} ${_network}"
+			fi
+		fi
+		# add IPv6 network
+		if [ -n "${_ipv6network}" ]; then
+			if [ -z "${_hostallow}" ]; then
+				_hostsallow="${_ipv6network}"
+			else
+				_hostsallow="${_hostsallow} ${_ipv6network}"
+			fi
+		fi
 	fi
-	_hostsallow="${_hostsallow} 127.0.0.1"
+	# add IPv4 localhost
+	if [ -n "${_network}" ]; then
+		if [ -z "${_hostsallow}" ]; then
+			_hostsallow="127.0.0.1"
+		else
+			_hostsallow="${_hostsallow} 127.0.0.1"
+		fi
+	fi
+	# add IPv6 localhost
+	if [ -n "${_ipv6network}" ]; then
+		if [ -z "${_hostsallow}" ]; then
+			_hostsallow="::1"
+		else
+			_hostsallow="${_hostsallow} ::1"
+		fi
+	fi
 	if configxml_isset "//system/webgui/hostsallow_disable"; then
 		_hostsallow_disable=1
 	fi
