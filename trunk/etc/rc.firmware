@@ -167,16 +167,17 @@ embedded_upgrade() {
 	fi
 
 	# dd image onto card
-	result=1
+	RESULT=1
 	if [ -r "${ARG}" ]; then
 		topic="Unpacking firmware and writing to destination."
 		printf "${fmtexecute}" "EXECUTING: ${topic}"
 		/usr/bin/xz -cdv "${ARG}" | /bin/dd of=/dev/${CFDEVICE} ibs=32k obs=32k skip=${SKIP} > /dev/null 2>&1
-		result=$?
-		if [ 0 != ${result} ]; then # successfully?
+		RESULT=$?
+		if [ 0 != ${RESULT} ]; then # successfully?
 			msg="ERROR: Failed to install firmware image on '/dev/${CFDEVICE}'!"
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
+			exit 1
 		else
 			printf "${fmtsuccess}" "SUCCESS: ${topic}"
 			# resize boot partition
@@ -298,7 +299,7 @@ embedded_upgrade() {
 	/sbin/umount -f ${FTMP} > /dev/null 2>&1
 
 	# Reboot system if upgrade was successfully.
-	if [ 0 -eq ${result} ]; then
+	if [ 0 -eq ${RESULT} ]; then
 		msg="Firmware installed successfully."
 		printf "\33[37;41m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE: ${msg}"
@@ -412,6 +413,7 @@ full_upgrade() {
 		msg="ERROR: Failed to backup configuration."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 		/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 		disable_upgrade
 		exit 1
@@ -430,12 +432,18 @@ full_upgrade() {
 
 	# Install system files and discard unwanted folders/files.
 	echo "Upgrading system on new boot environment..."
+	RESULT=1
 	EXCLUDED="--exclude=cf --exclude=conf --exclude=tmp --exclude=var --exclude=version"
 	/usr/bin/tar ${EXCLUDED} --keep-newer-files -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
-	if [ 0 != $? ]; then
+	RESULT=$?
+	if [ 0 != ${RESULT} ]; then
 		msg="ERROR: Failed to upgrade system."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
+		/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
+		disable_upgrade
+		exit 1
 	else
 		# Restore system configuration.
 		restore_sys_files
@@ -443,6 +451,7 @@ full_upgrade() {
 			msg="ERROR: Failed restoring configuration."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
+			/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 			/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 			disable_upgrade
 			exit 1
@@ -455,6 +464,7 @@ full_upgrade() {
 			msg="ERROR: Failed to unmount/activate boot environment."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
+			/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 			/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 			disable_upgrade
 			exit 1
@@ -462,7 +472,6 @@ full_upgrade() {
 		msg="System upgraded successfully."
 		printf "\33[37;41m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE: ${msg}"
-		RESULT=$?
 	fi
 
 	# Cleanup and sync.
