@@ -373,19 +373,19 @@ full_upgrade() {
 
 	printf "\n\n\33[37m%s\33[0m\n" "System upgrade in progress. Please wait..."
 
-	# Check if Full TGZ file exists.
+	# Check if firmware file exists.
 	if [ ! -r "${ARG}" ]; then
-		msg="ERROR: Full TGZ file does not exist."
+		msg="ERROR: Firmware file does not exist."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
 		exit 1
 	fi
 
-	# Test Full TGZ file.
-	echo "Testing Full TGZ file integrity..."
+	# Test firmware file.
+	echo "Testing firmware file integrity..."
 	/usr/bin/gunzip -t "${ARG}"
 	if [ 0 != $? ]; then
-		msg="ERROR: Full TGZ file is corrupted."
+		msg="ERROR: Firmware file is corrupted."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
 		exit 1
@@ -394,8 +394,8 @@ full_upgrade() {
 	# Create and mount the new upgrade boot environment.
 	echo "Creating and mounting new boot environment..."
 	DATE=`date +%Y-%m-%d-%H%M%S`
-	beadm create ${BENAME}-${DATE}
-	beadm mount ${BENAME}-${DATE} ${BEPATH}
+	/usr/local/sbin/beadm create ${BENAME}-${DATE}
+	/usr/local/sbin/beadm mount ${BENAME}-${DATE} ${BEPATH}
 	if [ 0 != $? ]; then
 		msg="ERROR: Unable to create/mount new boot environment."
 		printf "\33[31m%s\33[0m\n" "${msg}"
@@ -412,7 +412,7 @@ full_upgrade() {
 		msg="ERROR: Failed to backup configuration."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
-		beadm destroy -F ${BENAME}-${DATE}
+		/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 		disable_upgrade
 		exit 1
 	fi
@@ -429,11 +429,10 @@ full_upgrade() {
 	/etc/install/upgrade.sh clean ${BEPATH}
 
 	# Install system files and discard unwanted folders/files.
-	echo "Upgrading system on the new boot environment..."
+	echo "Upgrading system on new boot environment..."
 	EXCLUDED="--exclude=cf --exclude=conf --exclude=tmp --exclude=var --exclude=version"
 	/usr/bin/tar ${EXCLUDED} --keep-newer-files -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
-	result=$?
-	if [ 0 != ${result} ]; then
+	if [ 0 != $? ]; then
 		msg="ERROR: Failed to upgrade system."
 		printf "\33[31m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE ${msg}"
@@ -444,25 +443,26 @@ full_upgrade() {
 			msg="ERROR: Failed restoring configuration."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
-			beadm destroy -F ${BENAME}-${DATE}
+			/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 			disable_upgrade
 			exit 1
 		fi
 		# Unmoun and activate the new boot environment.
-		echo "Unmount and activate the new boot environment..."
-		beadm unmount -f ${BENAME}-${DATE}
-		beadm activate ${BENAME}-${DATE}
+		echo "Unmount and activate new boot environment..."
+		/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
+		/usr/local/sbin/beadm activate ${BENAME}-${DATE}
 		if [ 0 != $? ]; then
 			msg="ERROR: Failed to unmount/activate boot environment."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
-			beadm destroy -F ${BENAME}-${DATE}
+			/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 			disable_upgrade
 			exit 1
 		fi
 		msg="System upgraded successfully."
 		printf "\33[37;41m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "UPGRADE: ${msg}"
+		RESULT=$?
 	fi
 
 	# Cleanup and sync.
@@ -472,7 +472,7 @@ full_upgrade() {
 	sync; sleep 2
 
 	# Reboot system if upgrade was successfully.
-	if [ 0 -eq ${result} ]; then
+	if [ 0 -eq ${RESULT} ]; then
 		msg="Rebooting server..."
 		printf "\33[37m%s\33[0m\n" "${msg}"
 		/usr/bin/logger "${msg}"
