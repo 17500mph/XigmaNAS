@@ -89,11 +89,11 @@ lighttpd_mkconf()
 	# get IPv6 LAN address and network
 	_ipv6addr=""
 	_ipv6network=""
-	if configxml_isset "//interfaces/*[enable]/ipv6_enable"; then
+	if configxml_isset "//interfaces/lan/ipv6_enable"; then
 		_ipv6addr=`configxml_get "//interfaces/lan/ipv6addr"`
 		if [ "${_ipv6addr}" = "auto" ]; then
-			_ipv6addr=`get_ipaddr inet6 ${_ifn}`
-			_ipv6network=`get_network inet6 ${_ifn}`
+			_ipv6addr=`get_ipv6addr_nll ${_ifn}`
+			_ipv6network=`get_ipv6network_nll ${_ifn}`
 		else
 			_ipv6subnet=`configxml_get "//interfaces/lan/ipv6subnet"`
 			_ipv6network="${_ipv6addr}/${_ipv6subnet}"
