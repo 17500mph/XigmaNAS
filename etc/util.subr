@@ -77,6 +77,33 @@ get_network()
 	echo ""
 }
 
+# get_ipv6addr_nll [interface]
+# nll = non link local
+get_ipv6addr_nll()
+{
+	local _interface _ipaddr
+	_interface=`get_if $1`
+	_ipaddr=`/sbin/ifconfig ${_interface} inet6 | grep inet6 | grep -v scopeid | head -n 1 | /usr/bin/awk '{print $2}'`
+	if [ -n "${_ipaddr}" ]; then
+		echo "${_ipaddr}"; return
+	fi
+	echo ""
+}
+
+# get_ipv6network_nll [interface]
+# nll = non link local
+# link local interfaces have a scope id which is amended to the IPv6 address, i.e. fe80::affe%em0. Global addresses don't have a scope id
+get_ipv6network_nll()
+{
+	local _interface _network
+	_interface=`get_if $1`
+	_network=`/sbin/ifconfig -f inet6:cidr ${_interface} inet6 | grep inet6 | grep -v scopeid | head -n 1 | /usr/bin/awk '{print $2}'`
+	if [ -n "${_network}" ]; then
+		echo "$_network"; return
+	fi
+	echo ""
+}
+
 # get_macaddr [interface]
 # Get MAC address for the given interface.
 # Example:
