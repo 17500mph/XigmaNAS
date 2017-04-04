@@ -394,22 +394,27 @@ EOF
 	# LAN interface:
 	_ifn=`configxml_get "//interfaces/lan/if"`
 	_ifn=`get_if ${_ifn}`
-	_ifconfig_args=`/usr/local/bin/xml sel -t -m "//interfaces/lan" \
-		-i "count(ipv6addr) > 0 and ipv6addr[. != 'auto']" \
-			-v "concat(ipv6addr,'/',ipv6subnet)" \
-		-b \
-		${configxml_file} | /usr/local/bin/xml unesc`
+	if configxml_isset "//interfaces/lan/ipv6_enable"; then
+		_ifconfig_args=`/usr/local/bin/xml sel -t -m "//interfaces/lan" \
+			-i "count(ipv6addr) > 0 and ipv6addr[. != 'auto']" \
+				-v "concat(ipv6addr,'/',ipv6subnet)" \
+			-b \
+			-i "count(ipv6addr) > 0 and ipv6addr[. == 'auto']" \
+				-o "inet6 accept_rtadv" \
+			-b \
+			${configxml_file} | /usr/local/bin/xml unesc`
 
-	# Create ipv6_ifconfig_xxx variable only if interface is not defined as 'auto'.
-	if [ -n "${_ifconfig_args}" ]; then
-		eval /usr/local/sbin/rconf attribute set "ipv6_ifconfig_${_ifn}" "${_ifconfig_args}"
-	fi
+		# Create ifconfig_xxx_ipv6 variable only if interface is not defined as 'auto'.
+		if [ -n "${_ifconfig_args}" ]; then
+			eval /usr/local/sbin/rconf attribute set "ifconfig_${_ifn}_ipv6" "${_ifconfig_args}"
+		fi
 
-	# Set gateway.
-	_ipaddr=`configxml_get "//interfaces/lan/ipv6addr"`
-	_gateway=`configxml_get "//interfaces/lan/ipv6gateway"`
-	if [ "${_ipaddr}" != "auto" -a -n "${_gateway}" ]; then
-		eval /usr/local/sbin/rconf attribute set "ipv6_defaultrouter" "${_gateway}"
+		# Set gateway.
+		_ipaddr=`configxml_get "//interfaces/lan/ipv6addr"`
+		_gateway=`configxml_get "//interfaces/lan/ipv6gateway"`
+		if [ "${_ipaddr}" != "auto" -a -n "${_gateway}" ]; then
+			eval /usr/local/sbin/rconf attribute set "ipv6_defaultrouter" "${_gateway}"
+		fi
 	fi
 
 	# OPT interfaces:
@@ -417,19 +422,22 @@ EOF
 	while [ ${_id} -gt 0 ]
 	do
 		_ifn=`configxml_get "//interfaces/*[name() = 'opt${_id}']/if"`
-		if configxml_isset "//interfaces/*[name() = 'opt${_id}']/enable"; then
+		if configxml_isset "//interfaces/*[name() = 'opt${_id}']/ipv6_enable"; then
 			_ifconfig_args=`/usr/local/bin/xml sel -t -m "//interfaces/*[name() = 'opt${_id}']" \
 				-i "count(ipv6addr) > 0 and ipv6addr[. != 'auto']" \
 					-v "concat(ipv6addr,'/',ipv6subnet)" \
 				-b \
+				-i "count(ipv6addr) > 0 and ipv6addr[. == 'auto']" \
+					-o "inet6 accept_rtadv" \
+				-b \
 				${configxml_file} | /usr/local/bin/xml unesc`
 
-			# Create ipv6_ifconfig_xxx variable only if interface is not defined as 'auto'.
+			# Create ifconfig_xxx_ipv6 variable only if interface is not defined as 'auto'.
 			if [ -n "${_ifconfig_args}" ]; then
-				eval /usr/local/sbin/rconf attribute set "ipv6_ifconfig_${_ifn}" "${_ifconfig_args}"
+				eval /usr/local/sbin/rconf attribute set "ifconfig_${_ifn}_ipv6" "${_ifconfig_args}"
 			fi
 		else
-			eval /usr/local/sbin/rconf attribute remove "ipv6_ifconfig_${_ifn}"
+			eval /usr/local/sbin/rconf attribute remove "ifconfig_${_ifn}_ipv6"
 		fi
 
 		_id=$(( ${_id} - 1 ))
