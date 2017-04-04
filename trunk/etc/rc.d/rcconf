@@ -388,6 +388,10 @@ EOF
 	if configxml_isset "//interfaces/*[enable]/ipv6_enable"; then
 		_value="YES"
 	fi
+	if configxml_isset "//interfaces/lan/ipv6_enable"; then
+		_value="YES"
+	fi
+
 	#eval /usr/local/sbin/rconf attribute set "ipv6_enable" "${_value}"
 	eval /usr/local/sbin/rconf attribute set "ipv6_activate_all_interfaces" "${_value}"
 
