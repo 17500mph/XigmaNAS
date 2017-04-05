@@ -122,37 +122,24 @@ lighttpd_mkconf()
 	if [ -z "${_hostsallow}" ]; then
 		# add IPv4 network
 		if [ -n "${_network}" ]; then
-			if [ -z "${_hostsallow}" ]; then
-				_hostsallow="${_network}"
-			else
-				_hostsallow="${_hostsallow} ${_network}"
-			fi
+			_hostsallow="${_hostsallow} ${_network}"
 		fi
 		# add IPv6 network
 		if [ -n "${_ipv6network}" ]; then
-			if [ -z "${_hostsallow}" ]; then
-				_hostsallow="${_ipv6network}"
-			else
-				_hostsallow="${_hostsallow} ${_ipv6network}"
-			fi
+			_hostsallow="${_hostsallow} ${_ipv6network}"
 		fi
 	fi
 	# add IPv4 localhost
 	if [ -n "${_network}" ]; then
-		if [ -z "${_hostsallow}" ]; then
-			_hostsallow="127.0.0.1"
-		else
-			_hostsallow="${_hostsallow} 127.0.0.1"
-		fi
+		_hostsallow="${_hostsallow} 127.0.0.1"
 	fi
 	# add IPv6 localhost
 	if [ -n "${_ipv6network}" ]; then
-		if [ -z "${_hostsallow}" ]; then
-			_hostsallow="::1"
-		else
-			_hostsallow="${_hostsallow} ::1"
-		fi
+		_hostsallow="${_hostsallow} ::1"
 	fi
+	# trim _hostsallow
+	_hostsallow="${_hostsallow#"${_hostsallow%%[![:space:]]*}"}"
+
 	if configxml_isset "//system/webgui/hostsallow_disable"; then
 		_hostsallow_disable=1
 	fi
