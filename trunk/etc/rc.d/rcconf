@@ -404,7 +404,7 @@ EOF
 				-v "concat(ipv6addr,'/',ipv6subnet)" \
 			-b \
 			-i "count(ipv6addr) > 0 and ipv6addr[. = 'auto']" \
-				-o "inet6 accept_rtadv" \
+				-o "inet6 accept_rtadv no_dad" \
 			-b \
 			${configxml_file} | /usr/local/bin/xml unesc`
 
@@ -431,7 +431,7 @@ EOF
 					-v "concat(ipv6addr,'/',ipv6subnet)" \
 				-b \
 				-i "count(ipv6addr) > 0 and ipv6addr[. = 'auto']" \
-					-o "inet6 accept_rtadv" \
+					-o "inet6 accept_rtadv no_dad" \
 				-b \
 				${configxml_file} | /usr/local/bin/xml unesc`
 
