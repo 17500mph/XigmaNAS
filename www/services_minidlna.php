@@ -444,7 +444,7 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gedit('edit'));
+				echo $sphere->html_button('edit',gtext('edit'));
 				if($dlna_option & 1):
 					echo $sphere->html_button('rescan',gtext('Rescan'));
 				endif;
