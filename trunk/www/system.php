@@ -351,7 +351,7 @@ function webguiproto_change() {
 			html_inputbox2('webguiport',gtext('Port'),$pconfig['webguiport'],gtext('Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS).'),true,6);
 			html_inputbox2('webguihostsallow',gtext('Hosts Allow'),$pconfig['webguihostsallow'],gtext('Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)'),false,60);
 			html_textarea2('certificate',gtext('Certificate'),$pconfig['certificate'],gtext('Paste a signed certificate in X.509 PEM format here.'),true,65,7,false,false);
-			html_textarea2('privatekey',gtext('Private Key'),$pconfig['privatekey'],gtext('Paste an private key in PEM format here.'),true,65,7,false,false);
+			html_textarea2('privatekey',gtext('Private Key'),$pconfig['privatekey'],gtext('Paste a private key in PEM format here.'),true,65,7,false,false);
 			html_languagecombobox2('language',gtext('Language'),$pconfig['language'],gtext('Select the language of the WebGUI.'),'',false);
 			$helpinghand = '<a href="http://redmine.lighttpd.net/projects/lighttpd/wiki" target="_blank">'
 				. gtext('Please check the documentation')
