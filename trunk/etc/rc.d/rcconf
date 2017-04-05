@@ -408,7 +408,6 @@ EOF
 			-b \
 			${configxml_file} | /usr/local/bin/xml unesc`
 
-		# Create ifconfig_xxx_ipv6 variable only if interface is not defined as 'auto'.
 		if [ -n "${_ifconfig_args}" ]; then
 			eval /usr/local/sbin/rconf attribute set "ifconfig_${_ifn}_ipv6" "${_ifconfig_args}"
 		fi
@@ -436,7 +435,6 @@ EOF
 				-b \
 				${configxml_file} | /usr/local/bin/xml unesc`
 
-			# Create ifconfig_xxx_ipv6 variable only if interface is not defined as 'auto'.
 			if [ -n "${_ifconfig_args}" ]; then
 				eval /usr/local/sbin/rconf attribute set "ifconfig_${_ifn}_ipv6" "${_ifconfig_args}"
 			fi
