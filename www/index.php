@@ -481,10 +481,12 @@ $(document).ready(function(){
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('System Information'));?>
+<?php
+			html_titleline2(gtext('System Information'));
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			if(!empty($config['vinterfaces']['carp'])):
 				html_textinfo2('vipstatus',gtext('Virtual IP address'),htmlspecialchars(get_vip_status()));
 			endif;
@@ -499,7 +501,7 @@ $(document).ready(function(){
 			else:
 				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['system']['maker']),htmlspecialchars($smbios['system']['product'])));
 			endif;
-			html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',htmlspecialchars($smbios['bios']['vendor']),gtext('Version:'),htmlspecialchars($smbios['bios']['version']),htmlspecialchars($smbios['bios']['reldate'])));
+			html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',xmlspecialchars($smbios['bios']['vendor']),gtext('Version:'),xmlspecialchars($smbios['bios']['version']),xmlspecialchars($smbios['bios']['reldate'])));
 			html_textinfo2('system_datetime',gtext('System Time'),htmlspecialchars(get_datetime_locale()));
 			html_textinfo2('system_uptime',gtext('System Uptime'),htmlspecialchars(system_get_uptime()));
 			if (Session::isAdmin()):
@@ -514,31 +516,31 @@ $(document).ready(function(){
 				if (!empty($cpuinfo['freq'])):
 					html_textinfo2('cpufreq',gtext('CPU Frequency'),sprintf('%sMHz',htmlspecialchars($cpuinfo['freq'])));
 				endif;
-				?>
+?>
 				<tr>
 					<td class="celltag"><?=gtext('CPU Usage');?></td>
 					<td class="celldata">
 						<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
-							<?php
+<?php
 							$percentage = 0;
 							echo '<img src="images/bar_left.gif" class="progbarl" alt=""/>';
 							echo '<img src="images/bar_blue.gif" name="cpuusageu" id="cpuusageu" width="',$percentage,'" class="progbarcf" alt="" />';
 							echo '<img src="images/bar_gray.gif" name="cpuusagef" id="cpuusagef" width="',(100 - $percentage),'" class="progbarc" alt=""/>';
 							echo '<img src="images/bar_right.gif" class="progbarr" alt="" style="padding-right:8px"/>';
 							echo '<span id="cpuusagep"></span>';
-							?>
+?>
 						</td></tr></table>
 					</td>
 				</tr>
-				<?php
+<?php
 				$cpus = min(system_get_cpus(),16); // limit the number of CPU usage to 16 cpus
 				if($cpus > 1):
-				?>
+?>
 					<tr>
 						<td class="celltag"><?=gtext('CPU Core Usage');?></td>
 						<td class="celldata">
 							<table width="100%" border="0" cellspacing="0" cellpadding="0">
-								<?php
+<?php
 								$row_is_open = false; // ensure any open <tr> tag gets closed at the end of this section
 								$col_actual = 0; // start value to force initial <tr>
 								if($cpus > 4):
@@ -591,15 +593,17 @@ $(document).ready(function(){
 										echo '</tr>';
 									endif;
 								echo '</tbody>';
-								?>
+?>
 							</table>
 						</td>
 					</tr>
-				<?php endif;?>
+<?php
+				endif;
+?>
 				<tr>
 					<td class="celltag"><?=gtext('Memory Usage');?></td>
 					<td class="celldata">
-						<?php
+<?php
 						$raminfo = system_get_ram_info();
 						$percentage = round(($raminfo['used'] * 100) / $raminfo['total'], 0);
 						echo '<img src="images/bar_left.gif" class="progbarl" alt=""/>';
@@ -607,17 +611,18 @@ $(document).ready(function(){
 						echo '<img src="images/bar_gray.gif" name="memusagef" id="memusagef" width="',(100 - $percentage),'" class="progbarc" alt="" />';
 						echo '<img src="images/bar_right.gif" class="progbarr" alt="" style="padding-right:8px"/>';
 						echo '<span id="memusage">',sprintf(gtext("%d%% of %dMiB"),0,round($raminfo['physical'] / 1024 / 1024)),'</span>';
-						?>
+?>
 					</td>
 				</tr>
-				<?php
+<?php
 				$a_swapusage = get_swap_usage();
-				if (!empty($a_swapusage)):?>
+				if (!empty($a_swapusage)):
+?>
 					<tr>
 						<td class="celltag"><?=gtext('Swap Usage');?></td>
 						<td class="celldata">
 							<table width="100%" border="0" cellspacing="0" cellpadding="1">
-								<?php
+<?php
 								$index = 0;
 								foreach ($a_swapusage as $r_swapusage):
 									$ctrlid = $r_swapusage['id'];
@@ -641,18 +646,20 @@ $(document).ready(function(){
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
-								?>
+?>
 							</table>
 						</td>
 					</tr>
-				<?php endif;?>
+<?php
+				endif;
+?>
 				<tr>
 					<td class="celltag"><?=gtext('Load Averages');?></td>
 					<td class="celldata">
-						<?php
+<?php
 						exec('uptime', $result);
 						$loadaverage = substr(strrchr($result[0], "load averages:"), 15);
-						?>
+?>
 						<input style="padding:0;border:0;background-color:transparent" readonly="readonly" name="loadaverage" id="loadaverage" value="<?=$loadaverage;?>" />
 						<?="<small>[<a href='status_process.php'>".gtext("Show Process Information")."</a></small>]";?>
 					</td>
@@ -661,7 +668,7 @@ $(document).ready(function(){
 					<td class="celltag"><?=gtext("Disk Space Usage");?></td>
 					<td class="celldata">
 						<table width="100%" border="0" cellspacing="0" cellpadding="1">
-							<?php
+<?php
 							$a_diskusage = get_disk_usage();
 							if (!empty($a_diskusage)):
 								$index = 0;
@@ -723,7 +730,7 @@ $(document).ready(function(){
 								echo gtext("No disk configured");
 								echo "</td></tr>";
 							endif;
-							?>
+?>
 						</table>
 					</td>
 				</tr>
@@ -731,14 +738,16 @@ $(document).ready(function(){
 					<td class="celltag"><?=gtext("UPS Status")." ".$config["ups"]["upsname"];?></td>
 					<td class="celldata">
 						<table width="100%" border="0" cellspacing="0" cellpadding="2">
-							<?php if (!isset($config['ups']['enable'])):?>
+<?php
+							if (!isset($config['ups']['enable'])):
+?>
 								<tr>
 									<td>
 										<input style="padding:0;border:0;background-color:transparent" readonly="readonly" name="upsstatus" id="upsstatus" value="<?=gtext("UPS disabled");?>" />
 									</td>
 								</tr>
-							<?php else:?>
-								<?php
+<?php
+							else:
 								$cmd = "/usr/local/bin/upsc {$config['ups']['upsname']}@{$config['ups']['ip']}";
 								$handle = popen($cmd, 'r');
 								if ($handle):
@@ -765,17 +774,19 @@ $(document).ready(function(){
 								unset($disp_status);
 								unset($ups);
 								unset($cmd);
-								?>
-							<?php endif;?>
+							endif;
+?>
 						</table>
 					</td>
 				</tr>
-				<?php if (isset($config['ups']['enable']) && isset($config['ups']['ups2'])):?>
+<?php
+				if (isset($config['ups']['enable']) && isset($config['ups']['ups2'])):
+?>
 					<tr>
 						<td class="celltag"><?=gtext("UPS Status")." ".$config["ups"]["ups2_upsname"];?></td>
 						<td class="celldata">
 							<table width="100%" border="0" cellspacing="0" cellpadding="2">
-								<?php
+<?php
 								$cmd = "/usr/local/bin/upsc {$config['ups']['ups2_upsname']}@{$config['ups']['ip']}";
 								$handle = popen($cmd, 'r');
 								if ($handle):
@@ -802,12 +813,12 @@ $(document).ready(function(){
 								unset($disp_status);
 								unset($ups);
 								unset($cmd);
-								?>
+?>
 							</table>
 						</td>
 					</tr>
-				<?php endif;?>
-				<?php
+<?php
+				endif;
 				unset($vmlist);
 				mwexec2("/usr/bin/find /dev/vmm -type c", $vmlist);
 				unset($vmlist2);
@@ -828,13 +839,13 @@ $(document).ready(function(){
 				else:
 					$vmlist3 = [];
 				endif;
-				?>
-				<?php if(!empty($vmlist) || !empty($vmlist2) || !empty($vmlist3)):?>
+				if(!empty($vmlist) || !empty($vmlist2) || !empty($vmlist3)):
+?>
 					<tr>
 						<td class="celltag"><?=gtext("Virtual Machine");?></td>
 						<td class="celldata">
 							<table width="100%" border="0" cellspacing="0" cellpadding="1">
-								<?php
+<?php
 								$vmtype = "BHyVe";
 								$index = 0;
 								foreach ($vmlist as $vmpath):
@@ -946,13 +957,17 @@ $(document).ready(function(){
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
-								?>
+?>
 							</table>
 						</td>
 					</tr>
-				<?php endif;?>
-			<?php endif;?>
+<?php
+				endif;
+			endif;
+?>
 		</tbody>
 	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
