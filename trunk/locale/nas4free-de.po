@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-03-25 07:44+0000\n"
-"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
+"PO-Revision-Date: 2017-04-08 10:48+0000\n"
+"Last-Translator: David <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-28 16:02+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
+"X-Launchpad-Export-Date: 2017-04-14 05:13+0000\n"
+"X-Generator: Launchpad (build 18352)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -1062,7 +1062,7 @@ msgid "Authentication Method"
 msgstr "Authentifizierungsmethode"
 
 msgid "Authentification method is disabled."
-msgstr ""
+msgstr "Authentifizierungsmethode ist deaktiviert"
 
 msgid "Authorised Network"
 msgstr "Authorisiertes Netzwerk"
@@ -1578,7 +1578,7 @@ msgid "Clear Configuration"
 msgstr "Lösche Konfiguration"
 
 msgid "Clear Text Authentication"
-msgstr ""
+msgstr "Klartext Authentifizierung"
 
 msgid "Clear configuration information before importing disks."
 msgstr "Lösche Konfigurationen vor dem Importieren von Platten."
@@ -1717,7 +1717,7 @@ msgid "Confirm New Password"
 msgstr "Neues Passwort bestätigen"
 
 msgid "Confirm Password"
-msgstr ""
+msgstr "Kennwort bestätigen"
 
 msgid "Confirmation"
 msgstr "Bestätigung"
@@ -2065,6 +2065,8 @@ msgid ""
 "Current system password is using the default password. You should choose a "
 "different password."
 msgstr ""
+"Das aktuelle Kennwort ist das Standart-Kennwort. Sie sollten ein neues "
+"Kennwort wählen."
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Aktuelle Scheinleistung (VA)"
@@ -2103,10 +2105,10 @@ msgid "DHCP cannot be used for LAN interface."
 msgstr "Für die LAN Schnittstelle kann DHCP nicht verwendet werden"
 
 msgid "DHX Authentication"
-msgstr ""
+msgstr "DHX Authentifizierung"
 
 msgid "DHX2 Authentication"
-msgstr ""
+msgstr "DHX2 Authentifizierung"
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2206,7 +2208,7 @@ msgstr ""
 "Bytes 3-4-5 = Maximale Löschanzahl (Big Endian)."
 
 msgid "Decryption Password"
-msgstr ""
+msgstr "Kennwortentschlüsselung"
 
 msgid "Dedup"
 msgstr "Deduplikation"
@@ -3599,7 +3601,7 @@ msgid "Encryption Management"
 msgstr "Konfiguration der Verschlüsselungsparameter"
 
 msgid "Encryption Password"
-msgstr ""
+msgstr "Kennwortverschlüsselung"
 
 msgid "Encryption Settings"
 msgstr "Verschlüsselungseinstellungen"
@@ -3620,7 +3622,7 @@ msgid "Enter Command"
 msgstr "Befehl eingeben"
 
 msgid "Enter Password"
-msgstr ""
+msgstr "Passwort eingeben"
 
 msgid "Enter a comment"
 msgstr "Kommentar eingeben"
@@ -4286,7 +4288,7 @@ msgid "Guest Account"
 msgstr "Gastzugang"
 
 msgid "Guest Authentication"
-msgstr ""
+msgstr "Gastanmeldung"
 
 msgid "HAST"
 msgstr "HAST"
@@ -4925,6 +4927,8 @@ msgid ""
 "It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
+"Es wird vorgeschlagen die Konfiguration zu verschlüsseln und diese an einem "
+"sicheren Ort zu speichern."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -5212,7 +5216,7 @@ msgid "Local User"
 msgstr "Lokaler Benutzer"
 
 msgid "Local user authentication is selected."
-msgstr ""
+msgstr "Es wurde die \"Lokaler-Benutzer\" Anmeldung ausgewählt."
 
 msgid "Location"
 msgstr "Standort"
@@ -6242,7 +6246,7 @@ msgid "Owner"
 msgstr "Eigentümer"
 
 msgid "PAM authentication is selected."
-msgstr ""
+msgstr "PAM Authentifizierung ist ausgewählt"
 
 msgid "PG"
 msgstr "PG"
@@ -7536,7 +7540,7 @@ msgid "Select an encryption algorithm to use."
 msgstr "Wähle den Verschlüsselungsalgorithmus"
 
 msgid "Select configuration file:"
-msgstr ""
+msgstr "Wählen sie die Konfigurationsdatei aus."
 
 msgid "Select file system format."
 msgstr "Wählen Sie das Dateisystem Format"
@@ -7624,7 +7628,7 @@ msgid "Selected interface:"
 msgstr "Ausgewählte Schnittstelle:"
 
 msgid "Selection"
-msgstr ""
+msgstr "Auswahl"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "SMART"
@@ -9047,7 +9051,7 @@ msgid "The passwords do not match."
 msgstr "Die Passwörter stimmen nicht überein."
 
 msgid "The passwords do not match. Please try again."
-msgstr ""
+msgstr "Die Kennwörter stimmen nicht überein. Bitte versuchen sie es erneut."
 
 #, php-format
 msgid "The path '%s' does not exist."
@@ -9140,6 +9144,8 @@ msgstr ""
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
+"Der Server wird neu starten, nachdem die Konfiguration erfolgreich wieder "
+"hergestellt wurde."
 
 msgid "The share name is already used."
 msgstr "Der Freigabenamen ist bereits vergeben."
@@ -10290,10 +10296,10 @@ msgstr ""
 "Verwende Bytes/sec statt Bits/sec für die Anzeige des Netzwerk-Durchsatzes"
 
 msgid "Use Encryption"
-msgstr ""
+msgstr "Verschlüsselung verwenden"
 
 msgid "Use PAM for user authentication."
-msgstr ""
+msgstr "Benutze PAM für Benutzerauthentifizierung"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -10315,7 +10321,7 @@ msgstr ""
 "entdecken."
 
 msgid "Use local user authentication."
-msgstr ""
+msgstr "Verwende \"Lokaler-Benutzer\" Anmeldung"
 
 #, php-format
 msgid ""
