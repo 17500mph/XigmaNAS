@@ -16,6 +16,7 @@ BUILD_WRKSRC=		${WRKSRC}/mDNSPosix
 # lib/libdns_sd.so.1 sbin/mdnsd
 CONFLICTS_INSTALL=      avahi-libdns- openmdns-
 
+OPTIONS_DEFINE=	IPV6
 USES=		cpe gmake
 
 CPE_VENDOR=	apple
