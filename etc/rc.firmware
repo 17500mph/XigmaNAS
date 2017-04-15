@@ -42,7 +42,7 @@ enable_upgrade() {
 	exec </dev/console >/dev/console 2>/dev/console
 
 	# Create efficient memory file system.
-	if ! df | grep -qE ${FTMP}; then
+	if ! df | grep -qw ${FTMP}; then
 		/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
 		if [ 0 != $? ]; then
 			msg="ERROR: Failed to create in-memory file system."
@@ -61,7 +61,7 @@ disable_upgrade() {
 	mdid=`/sbin/mount -p | /usr/bin/grep ${FTMP} | /usr/bin/awk '{print $1}'`
 
 	# Umount in-memory file system.
-	if df | grep -qE ${FTMP}; then
+	if df | grep -qw ${FTMP}; then
 		/sbin/umount -f ${FTMP} > /dev/null 2>&1
 		if [ 0 != $? ]; then
 			msg="ERROR: Failed to umount in-memory file system."
