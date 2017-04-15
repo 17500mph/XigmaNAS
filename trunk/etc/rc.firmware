@@ -358,10 +358,10 @@ restore_sys_files() {
 
 full_upgrade() {
 	# Ensure the system is configured for boot environments.
-	if ! echo ${ROOTFS} | grep -qE "${ZROOT}/ROOT/"; then
+	if ! echo ${ROOTFS} | grep -qw "${ZROOT}/ROOT"; then
 		echo "ERROR: This system does not boot from ZFS pool."
 		exit 1
-	elif ! zpool list -H -o bootfs | grep -qE "${ZROOT}/ROOT/"; then
+	elif ! zpool list -H -o bootfs | grep -qw "${ZROOT}/ROOT"; then
 		echo "ERROR: This system is not configured for boot environments."
 		exit 1
 	fi
