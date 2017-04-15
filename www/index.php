@@ -496,12 +496,14 @@ $(document).ready(function(){
 			exec('/sbin/sysctl -n kern.version',$osversion);
 			html_textinfo2('platform_os',gtext('Platform OS'),sprintf('%s', $osversion[0]));
 			html_textinfo2('platform',gtext('Platform'),sprintf(gtext('%s on %s'),$g['fullplatform'],$cpuinfo['model']));
-			if(!empty($smbios['planar'])):
-				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['planar']['maker']),htmlspecialchars($smbios['planar']['product'])));
-			else:
-				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['system']['maker']),htmlspecialchars($smbios['system']['product'])));
+			if(isset($smbios['planar']) && is_array($smbios['planar'])):
+				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['planar']['maker'] ?? ''),htmlspecialchars($smbios['planar']['product'] ?? '')));
+			elseif(isset($smbios['system']) && is_array($smbios['system'])):
+				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['system']['maker'] ?? ''),htmlspecialchars($smbios['system']['product'] ?? '')));
 			endif;
-			html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',xmlspecialchars($smbios['bios']['vendor']),gtext('Version:'),xmlspecialchars($smbios['bios']['version']),xmlspecialchars($smbios['bios']['reldate'])));
+			if(isset($smbios['bios']) && is_array($smbios['bios'])):
+				html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',xmlspecialchars($smbios['bios']['vendor'] ?? ''),gtext('Version:'),xmlspecialchars($smbios['bios']['version'] ?? ''),xmlspecialchars($smbios['bios']['reldate'] ?? '')));
+			endif;
 			html_textinfo2('system_datetime',gtext('System Time'),htmlspecialchars(get_datetime_locale()));
 			html_textinfo2('system_uptime',gtext('System Uptime'),htmlspecialchars(system_get_uptime()));
 			if (Session::isAdmin()):
