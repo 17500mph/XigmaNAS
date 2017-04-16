@@ -35,11 +35,8 @@ require 'auth.inc';
 require 'guiconfig.inc';
 require 'services.inc';
 
-if (!isset($config['websrv']) || !is_array($config['websrv']))
-	$config['websrv'] = [];
-
-if (!isset($config['websrv']['authentication']['url']) || !is_array($config['websrv']['authentication']['url']))
-	$config['websrv']['authentication']['url'] = [];
+array_make_branch($config,'websrv','authentication','url');
+array_make_branch($config,'websrv','auxparam');
 
 $default_uploaddir = "/var/tmp/ftmp";
 $default_runas = "server.username = \"www\"";
