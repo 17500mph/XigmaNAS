@@ -227,8 +227,8 @@ if [ ! -d /var/tmp ]; then
 fi
 
 # Make writable tmp for www
-chown 0:0 /tmp
-chmod 1777 /tmp
+chown -h 0:0 /tmp
+chmod -h 1777 /tmp
 chown 0:0 /var/tmp
 chmod 1777 /var/tmp
 
