@@ -39,7 +39,10 @@ fmtexecute="\33[37m%s\33[0m\n"
 
 enable_upgrade() {
 	# Redirect I/O to console.
-	exec </dev/console >/dev/console 2>/dev/console
+	# Prevent console redirect if no physical video adapter found.
+	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
+		exec </dev/console >/dev/console 2>/dev/console
+	fi
 
 	# Create efficient memory file system.
 	if ! df | grep -qw ${FTMP}; then
@@ -55,7 +58,10 @@ enable_upgrade() {
 
 disable_upgrade() {
 	# Redirect I/O to console.
-	exec </dev/console >/dev/console 2>/dev/console
+	# Prevent console redirect if no physical video adapter found.
+	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
+		exec </dev/console >/dev/console 2>/dev/console
+	fi
 
 	# Get the md device.
 	mdid=`/sbin/mount -p | /usr/bin/grep ${FTMP} | /usr/bin/awk '{print $1}'`
@@ -77,7 +83,10 @@ embedded_upgrade() {
 	sleep 5
 
 	# Redirect I/O to console.
-	exec </dev/console >/dev/console 2>/dev/console
+	# Prevent console redirect if no physical video adapter found.
+	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
+		exec </dev/console >/dev/console 2>/dev/console
+	fi
 
 	printf "\n\n\33[37m%s\33[0m\n" "Firmware upgrade in progress. Please wait..."
 
@@ -370,7 +379,10 @@ full_upgrade() {
 	sleep 2
 
 	# Redirect I/O to console.
-	exec </dev/console >/dev/console 2>/dev/console
+	# Prevent console redirect if no physical video adapter found.
+	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
+		exec </dev/console >/dev/console 2>/dev/console
+	fi
 
 	printf "\n\n\33[37m%s\33[0m\n" "System upgrade in progress. Please wait..."
 
