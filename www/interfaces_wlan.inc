@@ -93,6 +93,8 @@ function wireless_config_post() {
 	}
 
 	if (!$input_errors) {
+		array_make_branch($optcfg,'wireless','wep');
+		array_make_branch($optcfg,'wireless','wpa');
 		$optcfg['wireless']['standard'] = $_POST['standard'];
 		$optcfg['wireless']['ssid'] = $_POST['ssid'];
 		$optcfg['wireless']['scan_ssid'] = isset($_POST['scan_ssid']);
