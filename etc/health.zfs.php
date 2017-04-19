@@ -72,16 +72,16 @@ foreach($pool_names as $pool_name):
 			continue;
 		endif;
 		if($fun_starts_now):
-			$parameters = explode(' ',$row);
-			if(5 === count($parameters)):
-				if(0 != $parameters[2]):
-					$body_rows[] = sprintf('Pool "%s" encountered read errors',$pool_name); 
+			$parameters = preg_split('/[\s]+/',$row,-1,PREG_SPLIT_NO_EMPTY);
+			if(4 < count($parameters)):
+				if(is_numeric($parameters[2]) && (0 != $parameters[2])):
+					$body_rows[] = sprintf('Pool "%s" encountered %d read errors',$pool_name,$parameters[2]); 
 				endif;
-				if(0 != $parameters[3]):
-					$body_rows[] = sprintf('Pool "%s" encountered write errors',$pool_name); 
+				if(is_numeric($parameters[3]) && (0 != $parameters[3])):
+					$body_rows[] = sprintf('Pool "%s" encountered %d write errors',$pool_name,$parameters[3]); 
 				endif;
-				if(0 != $parameters[4]):
-					$body_rows[] = sprintf('Pool "%s" encountered checksum errors',$pool_name); 
+				if(is_numeric($parameters[4]) && (0 != $parameters[4])):
+					$body_rows[] = sprintf('Pool "%s" encountered %d checksum errors',$pool_name,$parameters[4]); 
 				endif;
 			endif;
 		endif;
