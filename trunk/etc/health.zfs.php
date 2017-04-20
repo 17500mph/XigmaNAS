@@ -46,6 +46,7 @@ $return_value = 0;
 mwexec2($cmd,$pool_names,$return_value);
 // scan each pool
 foreach($pool_names as $pool_name):
+	$issue_found = false;
 	//	check for pool status 'ONLINE'. Any other status will cause an alert email.
 	$cmd = sprintf('/sbin/zpool list -H -o health %s',escapeshellarg($pool_name));
 	$output = [];
@@ -56,7 +57,8 @@ foreach($pool_names as $pool_name):
 			case 'ONLINE':
 				break;
 			default:
-				$body_rows[] = sprintf('Status of pool "%s" is %s.',$pool_name,$row);
+				$body_rows[] = sprintf('The status of pool "%s" is %s.',$pool_name,$row);
+				$issue_found = true;
 				break;
 			endswitch;
 	endforeach;
@@ -66,6 +68,9 @@ foreach($pool_names as $pool_name):
 	$return_value = 0;
 	mwexec2($cmd,$output,$return_value);
 	$fun_starts_now = false;
+	$errors_read = false;
+	$errors_write = false;
+	$errors_checksum = false;
 	foreach($output as $row):
 		if(preg_match('/.*NAME.+STATE.+READ.+WRITE.+CKSUM/',$row)):
 			$fun_starts_now = true;
@@ -75,18 +80,38 @@ foreach($pool_names as $pool_name):
 			$parameters = preg_split('/[\s]+/',$row,-1,PREG_SPLIT_NO_EMPTY);
 			if((4 < count($parameters)) && ('ONLINE' == $parameters[1])):
 				if("0" != $parameters[2]):
-					$body_rows[] = sprintf('Pool "%s" encountered %s read errors',$pool_name,$parameters[2]);
+					$errors_read = true;
+					$issue_found = true;
 				endif;
 				if("0" != $parameters[3]):
-					$body_rows[] = sprintf('Pool "%s" encountered %s write errors',$pool_name,$parameters[3]); 
+					$errors_write = true;
+					$issue_found = true;
 				endif;
 				if("0" != $parameters[4]):
-					$body_rows[] = sprintf('Pool "%s" encountered %s checksum errors',$pool_name,$parameters[4]); 
+					$errors_checksum = true;
+					$issue_found = true;
 				endif;
 			endif;
 		endif;
 	endforeach;
+	if($errors_read):
+		$body_rows[] = sprintf('Pool "%s" encountered read errors.',$pool_name);
+	endif;
+	if($errors_write):
+		$body_rows[] = sprintf('Pool "%s" encountered write errors.',$pool_name); 
+	endif;
+	if($errors_checksum):
+		$body_rows[] = sprintf('Pool "%s" encountered checksum errors.',$pool_name); 
+	endif;
+	//	append pool status if an issue was found
+	if($issue_found):
+		$body_rows[] = '';
+		foreach($output as $row):
+			$body_rows[] = $row;
+		endforeach;
+	endif;
 endforeach;
+//	compile and send email if an issue was found
 if(!empty($body_rows)):
 	$subject = '%h: ZFS pool status check failure report.';
 	$body = implode("\n",$body_rows);
