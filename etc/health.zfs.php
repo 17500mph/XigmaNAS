@@ -1,4 +1,4 @@
-#!/usr/local/bin/php-cgi -f
+#!/usr/local/bin/php -f
 <?php
 /*
 	/etc/health.zfs.php
@@ -38,6 +38,7 @@ require_once 'email.inc';
 /*
 	check zfs pool status if any pool is having issues
 */
+$exit_code = 0;
 $body_rows = [];
 // collect pool names
 $cmd = '/sbin/zpool list -H -o name';
@@ -117,5 +118,7 @@ if(!empty($body_rows)):
 	$body = implode("\n",$body_rows);
 	$error = 0;
 	@email_send($config['system']['email']['sendto'],$subject,$body,$error);
+	$exit_code = 1;
 endif;
+exit($exit_code);
 ?>
