@@ -1125,19 +1125,22 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 					break;
 				case 'online':
 					$subcommand = 'online';
+					$o_flags = new co_zpool_flags(['expand'],$sphere_array['flag']);
 					switch($sphere_array['pageindex']):
 						case 2: // online data: select pool
 							render_set_start();
 							render_activity_view($c_activity);
+							$o_flags->render_available_keys();
 							html_separator2(2);
 							html_titleline2(gtext('Select Pool'),2);
 							render_pool_edit($a_pool_for_online_data,'1',$sphere_array['pool']);
 							render_set_end();
-							render_submit(3,$sphere_array['activity'],$sphere_array['option'],[],$sphere_array['flags']);
+							render_submit(3,$sphere_array['activity'],$sphere_array['option'],[],[]);
 							break;
 						case 3: // online data: select data device
 							render_set_start();
 							render_activity_view($c_activity);
+							$o_flags->render_selected_keys();
 							html_separator2(2);
 							html_titleline2(gtext('Select Pool Device'),2);
 							render_pool_view($sphere_array['pool']);
@@ -1152,6 +1155,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 						case 4: // online data: process
 							render_set_start();
 							render_activity_view($c_activity);
+							$o_flags->render_selected_keys();
 							html_separator2(2);
 							html_titleline2(gtext('Target'),2);
 							$prerequisites_ok = render_pool_view($sphere_array['pool']);
@@ -1161,6 +1165,13 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok):
 								$a_param = [];
+								foreach($sphere_array['flag'] as $tmp_flag):
+									switch($tmp_flag):
+										case 'expand':
+											$a_param[] = '-e';
+											break;
+									endswitch;
+								endforeach;
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
 								$result |= render_command_and_execute($subcommand,$a_param,$b_exec);
