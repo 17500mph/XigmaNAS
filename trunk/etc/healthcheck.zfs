@@ -1,7 +1,7 @@
-#!/usr/local/bin/php -f
+#!/usr/local/bin/php
 <?php
 /*
-	/etc/health.zfs.php
+	health.zfs
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
@@ -35,19 +35,34 @@
 require_once 'config.inc';
 require_once 'functions.inc';
 require_once 'email.inc';
-/*
-	check zfs pool status if any pool is having issues
-*/
-$exit_code = 0;
+
+$argv_options = getopt('hsm:');
+if(isset($argv_options['h'])):
+	$helptext = ''
+	. 'Name:' . PHP_EOL
+	. '  ' . basename(__FILE__) . PHP_EOL
+	. 'Description:' . PHP_EOL
+	. '  Checks the status of all ZFS pools.' . PHP_EOL
+	. '  Checks all ZFS pools for read, write and checksum errors.' . PHP_EOL
+	. '  Sends an email report.' . PHP_EOL
+	. 'Options:' . PHP_EOL
+	. '  -h : print this help text and exit.' . PHP_EOL
+	. '  -s : send success email as well.' . PHP_EOL
+	. '  -m address : use alternative mail address(es) instead of email address(es) defined in the WebGUI' . PHP_EOL;
+	fwrite(STDOUT,$helptext);
+	exit(0);
+endif;
+//	showtime
 $body_rows = [];
-// collect pool names
+$issue_zfs = false;
+//	collect pool names
 $cmd = '/sbin/zpool list -H -o name';
 $pool_names = [];
 $return_value = 0;
 mwexec2($cmd,$pool_names,$return_value);
-// scan each pool
+//	scan each pool
 foreach($pool_names as $pool_name):
-	$issue_found = false;
+	$issue_pool = false;
 	//	check for pool status 'ONLINE'. Any other status will cause an alert email.
 	$cmd = sprintf('/sbin/zpool list -H -o health %s',escapeshellarg($pool_name));
 	$output = [];
@@ -58,8 +73,8 @@ foreach($pool_names as $pool_name):
 			case 'ONLINE':
 				break;
 			default:
-				$body_rows[] = sprintf('The status of pool "%s" is %s.',$pool_name,$row);
-				$issue_found = true;
+				$body_rows[] = sprintf('The status of ZFS pool "%s" is %s.',$pool_name,$row);
+				$issue_pool = true;
 				break;
 			endswitch;
 	endforeach;
@@ -79,46 +94,67 @@ foreach($pool_names as $pool_name):
 		endif;
 		if($fun_starts_now):
 			$parameters = preg_split('/[\s]+/',$row,-1,PREG_SPLIT_NO_EMPTY);
-			if((4 < count($parameters)) && ('ONLINE' == $parameters[1])):
-				if("0" != $parameters[2]):
+			if(4 < count($parameters)):
+				if(0 != (int)$parameters[2]):
 					$errors_read = true;
-					$issue_found = true;
+					$issue_pool = true;
 				endif;
-				if("0" != $parameters[3]):
+				if(0 != (int)$parameters[3]):
 					$errors_write = true;
-					$issue_found = true;
+					$issue_pool = true;
 				endif;
-				if("0" != $parameters[4]):
+				if(0 != (int)$parameters[4]):
 					$errors_checksum = true;
-					$issue_found = true;
+					$issue_pool = true;
 				endif;
 			endif;
 		endif;
 	endforeach;
+	//	check pool read, write and checksum results
+	$error_types = [];
 	if($errors_read):
-		$body_rows[] = sprintf('Pool "%s" encountered read errors.',$pool_name);
+		$error_types[] = 'read';
 	endif;
 	if($errors_write):
-		$body_rows[] = sprintf('Pool "%s" encountered write errors.',$pool_name); 
+		$error_types[] = 'write';
 	endif;
 	if($errors_checksum):
-		$body_rows[] = sprintf('Pool "%s" encountered checksum errors.',$pool_name); 
+		$error_types[] = 'checksum';
+	endif;
+	if(!empty($error_types)):
+		//	compile natural language string 
+		$last_element = array_pop($error_types);
+		if(empty($error_types)):
+			$error_string = sprintf('%s',$last_element);
+		else:
+			$error_string = sprintf('%s and %s',implode(', ',$error_types),$last_element); 
+		endif;
+		$body_rows[] = sprintf('ZFS Pool "%s" encountered %s errors.',$pool_name,$error_string); 
 	endif;
 	//	append pool status if an issue was found
-	if($issue_found):
+	if($issue_pool):
 		$body_rows[] = '';
 		foreach($output as $row):
 			$body_rows[] = $row;
 		endforeach;
+		$issue_zfs = true;
 	endif;
 endforeach;
-//	compile and send email if an issue was found
-if(!empty($body_rows)):
-	$subject = '%h: ZFS pool status check failure report.';
+//	compile and send email if an issue was found or the force report option was set
+if($issue_zfs): // send alert email
+	$subject = '[ALERT] %h: ZFS pool status check detected one or more issues.';
+	$exit_code = 1;
+elseif(isset($argv_options['s'])): // send success email
+	$subject = '[SUCCESS] %h: ZFS pool status check completed successfully.';
+	$exit_code = 0;
+else:
+	$subject = '';
+	$exit_code = 0;
+endif;
+if(!empty($subject)):
 	$body = implode("\n",$body_rows);
 	$error = 0;
-	@email_send($config['system']['email']['sendto'],$subject,$body,$error);
-	$exit_code = 1;
+	@email_send($argv_options['m'] ?? $config['system']['email']['sendto'] ?? '',$subject,$body,$error);
 endif;
 exit($exit_code);
 ?>
