@@ -661,6 +661,7 @@ class co_zpool_flag_base {
 		$this->load_pool_keys();
 	}
 	public function load_pool_keys() {
+		$this->a_pool_keys['expand'] = ['name' => 'flag','value' => 'expand','show' => true,'default' => false,'longname' => gtext('Expand device to use all available space.')];
 		$this->a_pool_keys['force'] = ['name' => 'flag','value' => 'force','show' => true,'default' => false,'longname' => gtext('Force Operation')];
 		$this->a_pool_keys['gptlabel'] = ['name' => 'flag','value' => 'gptlabel','show' => true,'default' => false,'longname' => gtext('Import using GPT labels')];
 		$this->a_pool_keys['gptid'] = ['name' => 'flag','value' => 'gptid','show' => true,'default' => false,'longname' => gtext('Import using GPT ID')];
