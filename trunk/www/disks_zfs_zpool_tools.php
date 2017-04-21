@@ -126,7 +126,7 @@ $b_online_data = $b_test || ($b_pool && (0 < count($a_pool_for_online_data)));
 $b_remove_cache = $b_test || ($b_pool && (0 < count($a_pool_for_remove_cache)));
 $b_remove_log = $b_test || ($b_pool && (0 < count($a_pool_for_remove_log)));
 $b_remove_spare = $b_test || ($b_pool && (0 < count($a_pool_for_remove_spare)));
-$b_replace_data = $b_test || ($b_pool && (0 < count($a_newdev)) && (0 < count($a_pool_for_replace_data)));
+$b_replace_data = $b_test || ($b_pool && (0 < count($a_pool_for_replace_data))); // (0 < count($a_newdev)) && 
 
 $l_command = [
 	'add.data' => ['name' => 'activity','value' => 'add.data','show' => $b_add_data,'default' => false,'longname' => gtext('Add a virtual device to a pool')],
@@ -1353,7 +1353,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 						break;
 					endswitch;
 					break;
-				case 'replace': // parameter: force flag, pool, redundant device, new device
+				case 'replace': // parameter: force flag, pool, redundant device, new device (optional)
 					$subcommand = 'replace';
 					$o_flags = new co_zpool_flags(['force'],$sphere_array['flag']);
 					switch($sphere_array['pageindex']):
@@ -1379,9 +1379,11 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$a_device_for_replace_data = $o_zpool->get_pool_devices_for_replace_data();
 							$o_zpool->set_poolname_filter();
 							render_pooldev_edit($a_device_for_replace_data,'1');
-							html_separator2(2);
-							html_titleline2(gtext('Select Data Device'),2);
-							render_newdev_edit($a_newdev,'1'); // we make it mandatory
+							if(!empty($a_newdev)): // new device is an optional parameter
+								html_separator2(2);
+								html_titleline2(gtext('Select Data Device'),2);
+								render_newdev_edit($a_newdev,'0'); // not mandatory
+							endif;
 							render_set_end();
 							render_submit(4,$sphere_array['activity'],$sphere_array['option'],$sphere_array['pool'],[]);
 							break;
@@ -1393,9 +1395,11 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_titleline2(gtext('Target'),2);
 							$prerequisites_ok = render_pool_view($sphere_array['pool']);
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
-							html_separator2(2);
-							html_titleline2(gtext('Source'),2);
-							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
+							if(!empty($sphere_array['newdev'][0])): // display only if a new device has been selected
+								html_separator2(2);
+								html_titleline2(gtext('Source'),2);
+								$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
+							endif;
 							html_separator2(2);
 							html_titleline2(gtext('Output'),2);
 							$result = $prerequisites_ok ? 0 : 15;
@@ -1410,7 +1414,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								endforeach;
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
+								if(!empty($sphere_array['newdev'][0])): // new device is optional
+									$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
+								endif;
 								$result |= render_command_and_execute($subcommand,$a_param,$b_exec);
 							endif;
 							render_command_result($result);
