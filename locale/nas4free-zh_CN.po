@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-04-06 16:38+0000\n"
+"PO-Revision-Date: 2017-04-19 03:30+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-14 05:13+0000\n"
-"X-Generator: Launchpad (build 18352)\n"
+"X-Launchpad-Export-Date: 2017-04-25 09:25+0000\n"
+"X-Generator: Launchpad (build 18361)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -378,7 +378,7 @@ msgstr "开启这个设备的 S.M.A.R.T. 监测"
 msgid ""
 "Activate email report if you want to be notified if a failure or a new error "
 "has been detected, or if a S.M.A.R.T. command to a disk fails."
-msgstr "如果您想在检测到新的错误或SMART命令失败时获得通知，请开启电邮报告功能。"
+msgstr "如果你想在检测到新的错误或SMART命令失败时获得通知，请开启Email报告功能。"
 
 msgid "Active"
 msgstr "活动"
@@ -513,7 +513,7 @@ msgid "Add command"
 msgstr "添加命令"
 
 msgid "Add extent"
-msgstr "添加 extent"
+msgstr "添加extent"
 
 msgid "Add initiator"
 msgstr "添加启动器"
@@ -773,7 +773,7 @@ msgid ""
 msgstr "认证组由标签号标识，并且是可选的。 如果目标不使用CHAP身份验证，它定义授权的用户和秘密以获得额外的安全性。"
 
 msgid "An Extent defines the storage area of the Target."
-msgstr "范围定义目标的存储区域。"
+msgstr "Extent定义目标的存储区域。"
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -856,7 +856,7 @@ msgid "Are you sure you want to reboot the server?"
 msgstr "是否确定重启系统？"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
-msgstr "请确认重置服务器到出厂设置？"
+msgstr "你确定要重置服务器到出厂设置？"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "是否确定关闭系统？"
@@ -867,7 +867,7 @@ msgstr "异步I/O"
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
 "made up of one or more extents."
-msgstr "目标器是由一个或多个extent 组成，然后呈现给启动器。"
+msgstr "在最高级别，目标器是由一个或多个extent组成，然后呈现给启动器。"
 
 msgid "Attach"
 msgstr "挂接"
@@ -1099,7 +1099,7 @@ msgstr "之前 - 文件删除将在传输开始之前执行。"
 
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
-msgstr "在Unison客户端可以开始工作之前，您需要执行以下操作："
+msgstr "在Unison客户端可以开始工作之前，你需要执行以下操作："
 
 msgid "Best available"
 msgstr "现有最佳"
@@ -1146,7 +1146,7 @@ msgstr "启动程序（例如：%s）"
 msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
-msgstr "引导分区太小。 您需要从LiveCD / LiveUSB重新安装或调整%s的引导分区。\n"
+msgstr "引导分区太小。 你需要从LiveCD / LiveUSB重新安装或调整%s的引导分区。\n"
 
 msgid "Bootloader"
 msgstr "启动程序"
@@ -1636,7 +1636,7 @@ msgid ""
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
 "控制用于此数据集的压缩算法。 'LZ4'现在是推荐的压缩算法。 "
-"如果特征标志lz4_compress处于活动状态，则将压缩设置为“On”使用LZ4压缩算法，否则使用LZJB。 您可以使用值“GZIP-"
+"如果特征标志lz4_compress处于活动状态，则将压缩设置为“On”使用LZ4压缩算法，否则使用LZJB。你可以使用值“GZIP-"
 "N”指定“GZIP”级别，其中N是从1（最快）到9（最佳压缩比）的整数。 目前，“GZIP”相当于“GZIP-6”。"
 
 msgid ""
@@ -1648,7 +1648,7 @@ msgid ""
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
 "控制用于此卷的压缩算法。 'LZ4'现在是推荐的压缩算法。 "
-"如果特征标志lz4_compress处于活动状态，则将压缩设置为“On”使用LZ4压缩算法，否则使用LZJB。 您可以使用值“GZIP-"
+"如果特征标志lz4_compress处于活动状态，则将压缩设置为“On”使用LZ4压缩算法，否则使用LZJB。 你可以使用值“GZIP-"
 "N”指定“GZIP”级别，其中N是从1（最快）到9（最佳压缩比）的整数。 目前，“GZIP”相当于“GZIP-6”。"
 
 msgid "Controls the dedup method."
@@ -2085,13 +2085,13 @@ msgid "Delete Login Info"
 msgstr "删除登录信息"
 
 msgid "Delete Selected Bridges"
-msgstr "删除所选网桥"
+msgstr "删除选中的网桥"
 
 msgid "Delete Selected CARPs"
-msgstr "删除所选CARPs"
+msgstr "删除选中的CARPs"
 
 msgid "Delete Selected Commands"
-msgstr "删除所选命令"
+msgstr "删除选中的命令"
 
 msgid "Delete Selected Datasets"
 msgstr "删除选中的数据集"
@@ -2100,19 +2100,19 @@ msgid "Delete Selected Disks"
 msgstr "删除选中的磁盘"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr "删除所选的加密卷"
+msgstr "删除选中的加密卷"
 
 msgid "Delete Selected Groups"
-msgstr "删除所选的组"
+msgstr "删除选中的组"
 
 msgid "Delete Selected Jobs"
 msgstr "删除选中的任务"
 
 msgid "Delete Selected LAGGs"
-msgstr "删除所选的LAGGs"
+msgstr "删除选中的LAGGs"
 
 msgid "Delete Selected NFS Shares"
-msgstr "删除所选的NFS共享"
+msgstr "删除选中的NFS共享"
 
 msgid "Delete Selected Options"
 msgstr "删除选中的选项"
@@ -2124,34 +2124,34 @@ msgid "Delete Selected RAID Volumes"
 msgstr "删除选中的RAID卷"
 
 msgid "Delete Selected Records"
-msgstr "删除所选的记录"
+msgstr "删除选中的记录"
 
 msgid "Delete Selected Resources"
-msgstr "删除所选的源"
+msgstr "删除选中的源"
 
 msgid "Delete Selected Routes"
-msgstr "删除所选的路由"
+msgstr "删除选中的路由"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr "删除所选的同步任务"
+msgstr "删除选中的同步任务"
 
 msgid "Delete Selected Rsync Modules"
-msgstr "删除所选的Rsync模块"
+msgstr "删除选中的Rsync模块"
 
 msgid "Delete Selected Samba Shares"
-msgstr "删除所选的Samba共享"
+msgstr "删除选中的Samba共享"
 
 msgid "Delete Selected Shares"
-msgstr "删除所选的共享"
+msgstr "删除选中的共享"
 
 msgid "Delete Selected Snapshots"
-msgstr "删除所选的快照"
+msgstr "删除选中的快照"
 
 msgid "Delete Selected User Accounts"
-msgstr "删除所选的用户账号"
+msgstr "删除选中的用户账号"
 
 msgid "Delete Selected VLANs"
-msgstr "删除所选的VLANs"
+msgstr "删除选中的VLANs"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "删除选中的虚拟设备"
@@ -2160,7 +2160,7 @@ msgid "Delete Selected Volumes"
 msgstr "删除选中的卷"
 
 msgid "Delete Selected WLANs"
-msgstr "删除所选的WLANs"
+msgstr "删除选中的WLANs"
 
 msgid "Delete URL"
 msgstr "删除 URL"
@@ -2190,7 +2190,7 @@ msgid "Delete command"
 msgstr "删除命令"
 
 msgid "Delete extent"
-msgstr "删除 extent"
+msgstr "删除extent"
 
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "删除存在接收端但不存在发送端的文件。"
@@ -2252,7 +2252,7 @@ msgid "Destination Share"
 msgstr "共享目的端"
 
 msgid "Destination email address."
-msgstr "电邮目的端。"
+msgstr "Email目的地址。"
 
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "目的地邮件地址。多个邮件地址用分号分开。"
@@ -2415,7 +2415,7 @@ msgid "Disable Firmware Upgrade"
 msgstr "禁止固件升级"
 
 msgid "Disable Selected Commands"
-msgstr "禁用所选的命令"
+msgstr "禁用选中的命令"
 
 msgid "Disable Selected Jobs"
 msgstr "禁止选中的任务"
@@ -2424,13 +2424,13 @@ msgid "Disable Selected Options"
 msgstr "禁止选中的选项"
 
 msgid "Disable Selected Records"
-msgstr "禁用所选记录"
+msgstr "禁用选中的记录"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr "禁止所选的Rsync任务"
+msgstr "禁用选中的Rsync任务"
 
 msgid "Disable Selected Rsync Modules"
-msgstr "禁止所选的Rsync模块"
+msgstr "禁用选中的Rsync模块"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "关闭 TCP Wrapper（mod_wrap 模块）。"
@@ -2544,261 +2544,261 @@ msgstr "在加载 %s 页面时，不要让服务器检查较新的固件版本�
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
-msgstr "您确定要清除并导入吗？\\n现有的配置将被清除和覆盖。"
+msgstr "你确定要清除并导入吗？\\n现有的配置将被清除和覆盖。"
 
 msgid "Do you really want to delete all data from the selected statistics?"
-msgstr "您确定要从所选统计信息中删除所有数据吗？"
+msgstr "你确定要从选中的统计信息中删除所有数据吗？"
 
 msgid "Do you really want to delete all rules?"
-msgstr "您确定要删除所有规则吗？"
+msgstr "你确定要删除所有规则吗？"
 
 msgid "Do you really want to delete all scheduled self-tests?"
-msgstr "您确定要删除所有自我测试任务吗?"
+msgstr "你确定要删除所有自我测试任务吗?"
 
 msgid "Do you really want to delete this URL?"
-msgstr "您确定要删除这个 URL 吗？"
+msgstr "你确定要删除这个 URL 吗？"
 
 msgid "Do you really want to delete this VM?"
-msgstr "您确定要删除这个 VM 吗？"
+msgstr "你确定要删除这个 VM 吗？"
 
 msgid "Do you really want to delete this auth group?"
-msgstr "您确定要删除这个认证组吗？"
+msgstr "你确定要删除这个认证组吗？"
 
 msgid "Do you really want to delete this auto snapshot?"
-msgstr "您确定要删除这个自动快照吗？"
+msgstr "你确定要删除这个自动快照吗？"
 
 msgid "Do you really want to delete this clone?"
-msgstr "您确认要删除这个克隆吗？"
+msgstr "你确定要删除这个克隆吗？"
 
 msgid "Do you really want to delete this extent?"
-msgstr "您确定要删除这个 extent 吗？"
+msgstr "你确定要删除这个extent吗？"
 
 msgid "Do you really want to delete this host?"
-msgstr "您确定要删除这个主机吗？"
+msgstr "你确定要删除这个主机吗？"
 
 msgid "Do you really want to delete this initiator group?"
-msgstr "您确定要删除这个启动器组吗？"
+msgstr "你确定要删除这个启动器组吗？"
 
 msgid ""
 "Do you really want to delete this initiator? All elements that still use it "
 "will become invalid (e.g. share)!"
-msgstr "您确定要删除这个启动器吗？所有存取这个初始器的元件都将失效！"
+msgstr "你确定要删除这个启动器吗？所有存取这个初始器的元件都将失效！"
 
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
-msgstr "您确定要删除这个挂载点吗？所有使用此挂载点的元件都会失效！ (例如：分享区)"
+msgstr "你确定要删除这个挂载点吗？所有使用此挂载点的元件都会失效！ (例如：分享区)"
 
 msgid "Do you really want to delete this portal group?"
-msgstr "您确定要删除这个门户组吗？"
+msgstr "你确定要删除这个门户组吗？"
 
 msgid "Do you really want to delete this rule?"
-msgstr "您确定要删除这个规则吗？"
+msgstr "你确定要删除这个规则吗？"
 
 msgid "Do you really want to delete this scheduled self-test?"
-msgstr "您确定要删除这项自我检测流程吗？"
+msgstr "你确定要删除这项自我检测流程吗？"
 
 msgid "Do you really want to delete this target?"
-msgstr "您确定要删除这个iSCSI目标吗？"
+msgstr "你确定要删除这个iSCSI目标吗？"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
-msgstr "您确定要导入吗？ \\n现有的配置可能会被覆盖。"
+msgstr "你确定要导入吗？ \\n现有的配置可能会被覆盖。"
 
 msgid "Do you really want to remove the selected item from the list?"
-msgstr "您确定从列表中删除所选项目吗？"
+msgstr "你确定从列表中删除选中的项目吗？"
 
 msgid "Do you really want to uninstall this package?"
-msgstr "您确定要卸载这个套件吗？"
+msgstr "你确定要卸载这个套件吗？"
 
 msgid "Do you want to apply these settings?"
-msgstr "您要应用这些设置吗？"
+msgstr "要应用这些设置吗？"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr "是否从选中的磁盘创建JBOD？"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
-msgstr "是否要从所选的磁盘创建RAID-0？"
+msgstr "是否要从选中的磁盘创建RAID-0？"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
-msgstr "是否要从所选的磁盘创建RAID-1？"
+msgstr "是否要从选中的磁盘创建RAID-1？"
 
 msgid "Do you want to create a RAID-5 from selected disks?"
-msgstr "是否要从所选的磁盘创建RAID-5？"
+msgstr "是否要从选中的磁盘创建RAID-5？"
 
 msgid "Do you want to create a RAID-Z1 from selected disks?"
-msgstr "是否要从所选的磁盘创建RAID-Z1？"
+msgstr "是否要从选中的磁盘创建RAID-Z1？"
 
 msgid "Do you want to create a RAID-Z2 from selected disks?"
-msgstr "是否要从所选的磁盘创建RAID-Z2？"
+msgstr "是否要从选中的磁盘创建RAID-Z2？"
 
 msgid "Do you want to create a RAID-Z3 from selected disks?"
-msgstr "是否要从所选的磁盘创建RAID-Z3？"
+msgstr "您是否要从选中的磁盘创建RAID-Z3？"
 
 msgid "Do you want to create a cache device from selected disks?"
-msgstr "是否要从所选磁盘创建缓存设备？"
+msgstr "是否要从选中的磁盘创建缓存设备？"
 
 msgid "Do you want to create a hot spare device from selected disk?"
-msgstr "您要从所选磁盘创建热备份设备吗？"
+msgstr "您要从选中的磁盘创建热备份设备吗？"
 
 msgid "Do you want to create a log device from selected disk?"
-msgstr "您要从所选磁盘创建日志设备吗？"
+msgstr "要从选中的磁盘创建日志设备吗？"
 
 msgid "Do you want to create a mirrored log device from selected disks?"
-msgstr "是否要从所选磁盘创建镜像日志设备？"
+msgstr "是否要从选中的磁盘创建镜像日志设备？"
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
-msgstr "是否要从所选磁盘创建镜像虚拟设备？"
+msgstr "是否要从选中的磁盘创建镜像虚拟设备？"
 
 msgid "Do you want to create a striped virtual device from selected disks?"
-msgstr "是否要从所选磁盘创建条带化虚拟设备？"
+msgstr "是否要从选中的磁盘创建条带化虚拟设备？"
 
 msgid "Do you want to delete selected CARPs?"
-msgstr "您要删除所选的CARP吗？"
+msgstr "要删除选中的CARP吗？"
 
 msgid "Do you want to delete selected LAGGs?"
-msgstr "要删除所选的LAGGs吗？"
+msgstr "要删除选中的LAGGs吗？"
 
 msgid "Do you want to delete selected NFS shares?"
-msgstr "您要删除所选的NFS共享吗？"
+msgstr "要删除选中的NFS共享吗？"
 
 msgid "Do you want to delete selected RAID volumes?"
-msgstr "是否要删除所选的RAID卷？"
+msgstr "您是否要删除选中的RAID卷？"
 
 msgid "Do you want to delete selected Samba shares?"
-msgstr "是否要删除所选的Samba共享？"
+msgstr "您是否要删除选中的Samba共享？"
 
 msgid "Do you want to delete selected VLANs?"
 msgstr "是否要删除选定的VLAN？"
 
 msgid "Do you want to delete selected WLANs?"
-msgstr "要删除所选的WLAN吗？"
+msgstr "要删除选中的WLAN吗？"
 
 msgid "Do you want to delete selected bridges?"
-msgstr "您要删除所选的网桥吗？"
+msgstr "要删除选中的网桥吗？"
 
 msgid "Do you want to delete selected commands?"
-msgstr "要删除所选的命令吗？"
+msgstr "要删除选中的命令吗？"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "要删除选定的数据集吗？"
 
 msgid "Do you want to delete selected disks?"
-msgstr "您要删除所选磁盘吗？"
+msgstr "要删除选中的磁盘吗？"
 
 msgid "Do you want to delete selected encrypted volumes?"
-msgstr "是否要删除所选的加密卷？"
+msgstr "您是否要删除选中的加密卷？"
 
 msgid "Do you want to delete selected groups?"
-msgstr "您要删除所选的群组吗？"
+msgstr "要删除选中的群组吗？"
 
 msgid "Do you want to delete selected jobs?"
-msgstr "您要删除所选的任务吗？"
+msgstr "要删除选中的任务吗？"
 
 msgid "Do you want to delete selected options?"
-msgstr "要删除所选选项吗？"
+msgstr "要删除选中的选项吗？"
 
 msgid "Do you want to delete selected pools?"
-msgstr "要删除所选池吗？"
+msgstr "要删除选中的池吗？"
 
 msgid "Do you want to delete selected records?"
-msgstr "要删除所选记录吗？"
+msgstr "要删除选中的记录吗？"
 
 msgid "Do you want to delete selected resources?"
-msgstr "您要删除所选资源吗？"
+msgstr "要删除选中的资源吗？"
 
 msgid "Do you want to delete selected routes?"
-msgstr "要删除所选路线吗？"
+msgstr "要删除选中的路线吗？"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr "是否要删除所选的rsync任务？"
+msgstr "您是否要删除选中的rsync任务？"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr "要删除所选的rsync模块吗？"
+msgstr "要删除选中的rsync模块吗？"
 
 msgid "Do you want to delete selected shares?"
-msgstr "要删除所选共享吗？"
+msgstr "要删除选中的共享吗？"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr "要删除所选快照吗？"
+msgstr "要删除选中的快照吗？"
 
 msgid "Do you want to delete selected user accounts?"
-msgstr "45/5000 要删除所选的用户帐户吗？"
+msgstr "要删除选中的用户帐户吗？"
 
 msgid "Do you want to delete selected virtual devices?"
-msgstr "您要删除所选的虚拟设备吗？"
+msgstr "要删除选中的虚拟设备吗？"
 
 msgid "Do you want to delete selected volumes?"
-msgstr "要删除所选卷吗？"
+msgstr "要删除选中的卷吗？"
 
 msgid "Do you want to delete this command?"
 msgstr "是否要删除此命令？"
 
 msgid "Do you want to disable selected commands?"
-msgstr "您要禁用所选命令吗？"
+msgstr "要禁用选中的命令吗？"
 
 msgid "Do you want to disable selected jobs?"
-msgstr "您要禁用所选任务吗？"
+msgstr "要禁用选中的任务吗？"
 
 msgid "Do you want to disable selected options?"
-msgstr "要禁用所选选项吗？"
+msgstr "要禁用选中的选项吗？"
 
 msgid "Do you want to disable selected records?"
-msgstr "要禁用所选记录吗？"
+msgstr "要禁用选中的记录吗？"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr "是否要禁用所选的rsync任务？"
+msgstr "是否要禁用选中的rsync任务？"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr "是否要禁用所选的rsync模块？"
+msgstr "是否要禁用选中的rsync模块？"
 
 msgid "Do you want to enable selected commands?"
-msgstr "是否要启用所选命令？"
+msgstr "是否要启用选中的命令？"
 
 msgid "Do you want to enable selected jobs?"
-msgstr "您要启用所选任务吗？"
+msgstr "要启用选中的任务吗？"
 
 msgid "Do you want to enable selected options?"
-msgstr "您要启用所选选项吗？"
+msgstr "要启用选中的选项吗？"
 
 msgid "Do you want to enable selected records?"
-msgstr "您要启用所选记录吗？"
+msgstr "要启用选中的记录吗？"
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr "是否要启用所选的rsync任务？"
+msgstr "是否要启用选中的rsync任务？"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr "是否要启用所选的rsync模块？"
+msgstr "是否要启用选中的rsync模块？"
 
 msgid "Do you want to import disks?"
-msgstr "您要导入磁盘吗？"
+msgstr "要导入磁盘吗？"
 
 msgid "Do you want to import software RAID disks?"
-msgstr "您要导入软RAID磁盘吗？"
+msgstr "要导入软RAID磁盘吗？"
 
 msgid "Do you want to lock selected records?"
-msgstr "您要锁定所选记录吗？"
+msgstr "要锁定选中的记录吗？"
 
 msgid "Do you want to toggle selected commands?"
-msgstr "是否要切换所选命令？"
+msgstr "是否要切换选中的命令？"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr "要切换所选任务吗？"
+msgstr "要切换选中的任务吗？"
 
 msgid "Do you want to toggle selected options?"
-msgstr "要切换所选选项吗？"
+msgstr "要切换选中的选项吗？"
 
 msgid "Do you want to toggle selected records?"
-msgstr "你要切换所选的记录吗？"
+msgstr "要切换选中的记录吗？"
 
 msgid "Do you want to toggle selected rsync jobs?"
-msgstr "你要切换所选的rsync任务吗？"
+msgstr "要切换选中的rsync任务吗？"
 
 msgid "Do you want to toggle selected rsync modules?"
-msgstr "你要切换所选的rsync模块吗？"
+msgstr "要切换选中的rsync模块吗？"
 
 msgid "Do you want to unlock selected records?"
-msgstr "你要解锁所选的记录吗？"
+msgstr "要解锁选中的记录吗？"
 
 msgid "Document Root"
 msgstr "文档根目录"
@@ -3009,7 +3009,7 @@ msgid "Edit command"
 msgstr "编辑命令"
 
 msgid "Edit extent"
-msgstr "编辑 extent"
+msgstr "编辑extent"
 
 msgid "Edit initiator"
 msgstr "编辑启动器"
@@ -3043,7 +3043,7 @@ msgid "Email"
 msgstr "电子邮件"
 
 msgid "Email Report"
-msgstr "电邮报告"
+msgstr "Email报告"
 
 msgid "Email Reports"
 msgstr "Email报告"
@@ -3568,18 +3568,18 @@ msgid "Extent"
 msgstr "Extent"
 
 msgid "Extent Name"
-msgstr "Extent 名称"
+msgstr "Extent名称"
 
 msgid "Extent Settings"
-msgstr "范围设置"
+msgstr "Extent设置"
 
 msgid "Extent name"
-msgstr "Extent 名称"
+msgstr "Extent名称"
 
 msgid ""
 "Extents must be defined before they can be used, and extents cannot be used "
 "more than once."
-msgstr "使用 Extent 之前必须先定义，而 extents 不能够被使用超过一次。"
+msgstr "使用Extent之前必须先定义，而extents不能够被使用超过一次。"
 
 msgid "Extra Options"
 msgstr "额外选项"
@@ -4829,7 +4829,7 @@ msgid "Loadbalance"
 msgstr "负载平衡"
 
 msgid "Local"
-msgstr "区域"
+msgstr "本地"
 
 msgid "Local Master Browser"
 msgstr "局域网主浏览器（Local Master Browser）。"
@@ -4993,7 +4993,7 @@ msgid "Make sure to select the optimal number of devices"
 msgstr "确保选择最佳设备数量"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
-msgstr "请确定您已经启用装置的 S.M.A.R.T.。"
+msgstr "请确定你已经启用装置的 S.M.A.R.T.。"
 
 msgid "Make sure you have already configured your email settings"
 msgstr "确保您已配置电子邮件设置"
@@ -5468,7 +5468,7 @@ msgid "No DNS setting found."
 msgstr "找不到 DNS 配置。"
 
 msgid "No Extent has been configured."
-msgstr "未配置范围。"
+msgstr "未配置Extent。"
 
 msgid "No IPMI FRU data available."
 msgstr "没有IPMI FRU数据可用。"
@@ -5666,7 +5666,7 @@ msgstr "通知级别"
 
 #, php-format
 msgid "Notification email from host: %s"
-msgstr "主机的电邮通知：%s"
+msgstr "主机的Email通知：%s"
 
 msgid "Nov"
 msgstr "11月"
@@ -5906,7 +5906,7 @@ msgid ""
 "enough to handle many simultaneous passive connections (for example, 49152-"
 "65534, the IANA-registered ephemeral port range)."
 msgstr ""
-"被动端口限制由客户端发送PASV命令给服务器时的端口范围。该服务器将在指定端口范围内随机选择一个端口编号，直到找到一个开放的端口。所选的端口范围必须是在非"
+"被动端口限制由客户端发送PASV命令给服务器时的端口范围。该服务器将在指定端口范围内随机选择一个端口编号，直到找到一个开放的端口。选中的端口范围必须是在非"
 "特权的范围内（例如，大于或等于1024）。强烈建议选择足以处理同时连接的被动端口范围（例如49152 - 65534，IANA 注册的短暂端口范围）。"
 
 msgid "Passphrase"
@@ -6062,7 +6062,7 @@ msgid "Please add a new CARP interface first"
 msgstr "请先添加新的CARP接口"
 
 msgid "Please add a new Extent first."
-msgstr "请先添加新范围。"
+msgstr "请先添加新Extent。"
 
 msgid "Please add a new Initiator Group first."
 msgstr "请首先添加新的Initiator组。"
@@ -7127,7 +7127,7 @@ msgid "Selected device or label does not exist."
 msgstr "选定的设备或标签不存在。"
 
 msgid "Selected file isn't an valid ISO file."
-msgstr "所选择的文件不是一个有效的 ISO 文件。"
+msgstr "选中的文件不是一个有效的 ISO 文件。"
 
 msgid "Selected graph:"
 msgstr "选中的图表："
@@ -7157,7 +7157,7 @@ msgid "Send Test Email"
 msgstr "发送测试电子邮件"
 
 msgid "Send a TEST warning email on startup."
-msgstr "启动时传送测试警示电邮。"
+msgstr "启动时发送测试警告Email。"
 
 msgid "Sensitive"
 msgstr "敏感"
@@ -7607,7 +7607,7 @@ msgid ""
 msgstr "当用户访问该URL时，在对话框中显示的字符串。"
 
 msgid "String identifier of the extent."
-msgstr "Extent 的字符串标识符。"
+msgstr "Extent的字符串标识符。"
 
 msgid "Subject"
 msgstr "主题"
@@ -7883,7 +7883,7 @@ msgstr "测试模式"
 
 #, php-format
 msgid "Test email from host: %s"
-msgstr "来自主机的测试电邮：%s"
+msgstr "来自主机的测试Email：%s"
 
 msgid "Test email successfully sent."
 msgstr "测试邮件发送成功。"
@@ -8201,7 +8201,7 @@ msgstr "显示在屏幕的时间的默认值（秒）。"
 msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
-msgstr "您想要发布文件的目录。远程主机传递时不需要转移目录。"
+msgstr "你想要发布文件的目录。远程主机传递时不需要转移目录。"
 
 msgid "The disk is currently mounted!"
 msgstr "磁盘当前已挂载！"
@@ -8209,7 +8209,7 @@ msgstr "磁盘当前已挂载！"
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
 "to perform selected command."
-msgstr "磁盘正在挂载中！执行所选择的命令时，挂载点将暂时被删除。"
+msgstr "磁盘正在挂载中！执行选中的命令时，挂载点将暂时被删除。"
 
 msgid "The disk/partition is already configured."
 msgstr "磁盘/分区 已配置"
@@ -8242,7 +8242,7 @@ msgid "The existing configuration may be overwritten."
 msgstr "现有配置可被覆盖。"
 
 msgid "The extent name already exists."
-msgstr "Extent 名称已经存在。"
+msgstr "Extent名称已经存在。"
 
 msgid "The file you try to flash is not for this platform"
 msgstr "您尝试Flash的文件不适用于此平台"
@@ -8738,10 +8738,10 @@ msgid "This disk already exists in the disk list."
 msgstr "此硬盘已存在硬盘列表中。"
 
 msgid "This email has been sent to validate your email configuration."
-msgstr "已经发送验证电邮配置的电子邮件。"
+msgstr "已经发送验证Email配置的电子邮件。"
 
 msgid "This extent is used."
-msgstr "此 extent 正在使用中。"
+msgstr "此extent正在使用中。"
 
 msgid "This group already exists in the group list."
 msgstr "此群组已存在群组列表中。"
@@ -8977,7 +8977,7 @@ msgstr "在分享区创建回收站。"
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
 "add an existing encrypted disk."
-msgstr "这将删除所选磁盘上的所有数据！如果您想再次添加已存在的加密磁盘，请不要使用这个选项。"
+msgstr "这将删除选中的磁盘上的所有数据！如果你想再次添加已存在的加密磁盘，请不要使用这个选项。"
 
 msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr "这将提供没有ZFS ACL支持的NTFS ACL，例如UFS。"
@@ -9091,22 +9091,22 @@ msgid "Toggle Mode"
 msgstr "切换模式"
 
 msgid "Toggle Selected Commands"
-msgstr "切换所选命令"
+msgstr "切换选中的命令"
 
 msgid "Toggle Selected Jobs"
-msgstr "切换所选任务"
+msgstr "切换选中的任务"
 
 msgid "Toggle Selected Options"
-msgstr "切换所选选项"
+msgstr "切换选中的选项"
 
 msgid "Toggle Selected Records"
-msgstr "切换所选记录"
+msgstr "切换选中的记录"
 
 msgid "Toggle Selected Rsync Jobs"
-msgstr "切换所选Rsync任务"
+msgstr "切换选中的Rsync任务"
 
 msgid "Toggle Selected Rsync Modules"
-msgstr "切换所选Rsync模块"
+msgstr "切换选中的Rsync模块"
 
 msgid "Tolerated"
 msgstr "容许"
@@ -9238,7 +9238,7 @@ msgid "Type"
 msgstr "类型"
 
 msgid "Type used as extent."
-msgstr "Extent 的类型。"
+msgstr "Extent的类型。"
 
 msgid "UCD-SNMP-MIB"
 msgstr "UCD-SNMP-MIB"
@@ -9418,7 +9418,7 @@ msgid "Unload"
 msgstr "卸载"
 
 msgid "Unlock Selected Records"
-msgstr "解锁所选记录"
+msgstr "解锁选中的记录"
 
 msgid "Unmount Disk/Partition"
 msgstr "卸载磁盘/分区"
@@ -9977,7 +9977,7 @@ msgstr "您可以指定逻辑块大小。 （为了兼容，默认值为%dB）�
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
 "before you can configure a Target."
-msgstr "您必须至少添加一个Portal组，Initiator组和范围，然后才能配置目标。"
+msgstr "你必须至少添加一个Portal组，Initiator组和Extent，然后才能配置目标。"
 
 msgid "You must add disks first."
 msgstr "请先加入硬盘。"
