@@ -1,6 +1,6 @@
 PORTNAME=	minidlna
 PORTVERSION=	1.1.5
-PORTREVISION=	0
+PORTREVISION=	1
 PORTEPOCH=	0
 CATEGORIES=	net multimedia www
 MASTER_SITES=	SF
@@ -43,7 +43,7 @@ NLS_USES=	gettext-runtime
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKQUEUE}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue-n4f
 .endif
 
 # NAS4Free
