@@ -1,5 +1,5 @@
 PORTNAME=		tmux
-PORTVERSION=	2.3
+PORTVERSION=	2.4
 PORTREVISION=	0
 CATEGORIES=		sysutils
 COMMENT=		Terminal Multiplexer
@@ -23,9 +23,9 @@ LIBEVENT_STATIC_DESC=	 Build with static libevent
 BACKSPACE_DESC=		 Build with tty/keys patch
 BACKSPACE_EXTRA_PATCHES= ${PATCHDIR}/extra-patch-tty-keys.c
 
-LIBEVENT_STATIC_LIB_DEPENDS_OFF= libevent.so:devel/libevent2
-LIBEVENT_STATIC_BUILD_DEPENDS=	 ${LOCALBASE}/lib/libevent.a:devel/libevent2
-LIBEVENT_STATIC_VARS=		 LESTATIC=${LOCALBASE}/lib/libevent.a
+LIBEVENT_STATIC_LIB_DEPENDS_OFF=        libevent.so:devel/libevent
+LIBEVENT_STATIC_BUILD_DEPENDS=  ${LOCALBASE}/lib/libevent.a:devel/libevent
+LIBEVENT_STATIC_VARS=   LESTATIC=${LOCALBASE}/lib/libevent.a
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/tmux.conf|${PREFIX}/etc/tmux.conf|g' \
