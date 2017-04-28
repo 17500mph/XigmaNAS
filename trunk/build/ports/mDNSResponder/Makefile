@@ -1,6 +1,6 @@
 PORTNAME=		mDNSResponder
 PORTVERSION=	765.50.9
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=		net dns
 COMMENT=		Apple's mDNSResponder
 MAINTAINER=		zoon1@nas4free.org
@@ -28,6 +28,7 @@ pre-build:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' \
 		-e 's|mDNSResponder.8|mDNSResponderPosix.8|g' \
 		${WRKSRC}/mDNSPosix/Makefile
+	@${REINPLACE_CMD} -e '/^CFLAGS_DEBUG/ s|-Os|${CFLAGS}|' ${WRKSRC}/mDNSPosix/Makefile
 	@${REINPLACE_CMD} -e 's|\(#define IPV6_2292_PKTINFO \).*|\1IPV6_PKTINFO|; s|\(#define IPV6_2292_HOPLIMIT \).*|\1IPV6_HOPLIMIT|' \
 		${WRKSRC}/mDNSPosix/mDNSUNP.h
 
