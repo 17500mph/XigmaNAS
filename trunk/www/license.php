@@ -158,7 +158,7 @@ $pgtitle = [gtext('Help'), gtext('License & Credits')];
 	    <hr size="1" />
 	      <p>The following persons have contributed to NAS4Free in the past:</p>
 	    <div>Volker Theile (<a href="mailto:votdev@gmx.de">votdev@gmx.de</a>)<br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer</font></em></div><br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer 2006-2009</font></em></div><br />
 	      	      
 	    <div>Samuel Tunis (<a href="mailto:killermist@gmail.com">killermist@gmail.com</a>) irc alias killermist<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc</font></em></div><br />
