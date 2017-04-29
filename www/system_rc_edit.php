@@ -90,6 +90,10 @@ if(RECORD_ERROR == $mode_record): // oops, someone tries to cheat, over and out
 	header($sphere_header_parent);
 	exit;
 endif;
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 if(PAGE_MODE_POST == $mode_page): // We know POST is "Submit", already checked
 	unset($input_errors);
 	$sphere_record['enable'] = isset($_POST['enable']) ? true : false;
