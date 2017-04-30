@@ -54,7 +54,6 @@ function interfaces_lagg_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('interfaces_lagg','php');
 	$sphere->modify->basename($sphere->basename() . '_edit');
-	$sphere->notifier('iflagg');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
@@ -100,6 +99,13 @@ if($_POST):
 		endswitch;
 	endif;
 endif;
+$l_lagg_protocol = [
+	'failover' => gtext('Failover'),
+	'lacp' => gtext('LACP (Link Aggregation Control Protocol)'),
+	'loadbalance' => gtext('Loadbalance'),
+	'roundrobin' => gtext('Roundrobin'),
+	'none' => gtext('None')
+];
 $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('LAGG')];
 include 'fbegin.inc';
 echo $sphere->doj();
@@ -126,18 +132,20 @@ echo $sphere->doj();
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
+			<col style="width:15%">
+			<col style="width:25%">
+			<col style="width:25%">
 			<col style="width:20%">
-			<col style="width:35%">
-			<col style="width:30%">
 			<col style="width:10%">
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),5);
+			html_titleline2(gtext('Overview'),6);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
 				<th class="lhell"><?=gtext('Virtual Interface');?></th>
+				<th class="lhell"><?=gtext('Protocol');?></th>
 				<th class="lhell"><?=gtext('Ports');?></th>
 				<th class="lhell"><?=gtext('Description');?></th>
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
@@ -150,6 +158,11 @@ echo $sphere->doj();
 			foreach($sphere->grid as $sphere->row):
 				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+				if(isset($sphere->row['laggproto']) && is_string($sphere->row['laggproto']) && array_key_exists($sphere->row['laggproto'],$l_lagg_protocol)):
+					$lagg_protocol = $l_lagg_protocol[$sphere->row['laggproto']];
+				else:
+					$lagg_protocol = gtext('Unknown Aggregation Protocol');
+				endif;
 ?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
@@ -162,12 +175,13 @@ echo $sphere->doj();
 ?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['if']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($lagg_protocol);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars(implode(' ', $sphere->row['laggport']));?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['desc']);?></td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 <?php
-							echo $sphere->html_toolbox($notprotected,$notdirty);
+							echo $sphere->html_toolbox_post($notprotected,$notdirty);
 ?>
 							<td></td>
 							<td></td>
@@ -180,7 +194,7 @@ echo $sphere->doj();
 		</tbody>
 		<tfoot>
 <?php
-			echo $sphere->html_footer_add(5);
+			echo $sphere->html_footer_add_post(6);
 ?>
 		</tfoot>
 	</table>
