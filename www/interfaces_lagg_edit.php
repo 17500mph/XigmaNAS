@@ -33,130 +33,186 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
-
-if (isset($_GET['uuid']))
-	$uuid = $_GET['uuid'];
-if (isset($_POST['uuid']))
-	$uuid = $_POST['uuid'];
-
-$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('LAGG'), isset($uuid) ? gtext('Edit') : gtext('Add')];
-
-$a_lagg = &array_make_branch($config,'vinterfaces','lagg');
-if(empty($a_lagg)):
-else:
-	array_sort_key($a_lagg,'if');
-endif;
-
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_lagg, "uuid")))) {
-	$pconfig['enable'] = isset($a_lagg[$cnid]['enable']);
-	$pconfig['uuid'] = $a_lagg[$cnid]['uuid'];
-	$pconfig['if'] = $a_lagg[$cnid]['if'];
-	$pconfig['laggproto'] = $a_lagg[$cnid]['laggproto'];
-	$pconfig['laggport'] = $a_lagg[$cnid]['laggport'];
-	$pconfig['desc'] = $a_lagg[$cnid]['desc'];
-} else {
-	$pconfig['enable'] = true;
-	$pconfig['uuid'] = uuid();
-	$pconfig['if'] = "lagg" . get_nextlagg_id();
-	$pconfig['laggproto'] = "failover";
-	$pconfig['laggport'] = [];
-	$pconfig['desc'] = "";
-}
-
-if ($_POST) {
-	unset($input_errors);
-	$pconfig = $_POST;
-
-	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
-		header("Location: interfaces_lagg.php");
-		exit;
-	}
-
-	// Input validation.
-	$reqdfields = ['laggproto'];
-	$reqdfieldsn = [gtext('Aggregation Protocol')];
-	$reqdfieldst = ['string'];
-
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
-	if (count($_POST['laggport']) < 1)
-		$input_errors[] = gtext("There must be selected a minimum of 1 interface.");
-
-	if (empty($input_errors)) {
-		$lagg = [];
-		$lagg['enable'] = $_POST['enable'] ? true : false;
-		$lagg['uuid'] = $_POST['uuid'];
-		$lagg['if'] = $_POST['if'];
-		$lagg['laggproto'] = $_POST['laggproto'];
-		$lagg['laggport'] = $_POST['laggport'];
-		$lagg['desc'] = $_POST['desc'];
-
-		if (isset($uuid) && (FALSE !== $cnid)) {
-			$a_lagg[$cnid] = $lagg;
-		} else {
-			$a_lagg[] = $lagg;
-		}
-
-		write_config();
-		touch($d_sysrebootreqd_path);
-
-		header("Location: interfaces_lagg.php");
-		exit;
-	}
-}
+require 'co_sphere.php';
 
 function get_nextlagg_id() {
 	global $config;
 
 	$id = 0;
 	$a_lagg = $config['vinterfaces']['lagg'];
-
-	if (false !== array_search_ex("lagg" . strval($id), $a_lagg, "if")) {
+	if(false !== array_search_ex('lagg' . strval($id),$a_lagg,'if')):
 		do {
 			$id++; // Increase ID until a unused one is found.
-		} while (false !== array_search_ex("lagg" . strval($id), $a_lagg, "if"));
-	}
-
+		} while (false !== array_search_ex('lagg' . strval($id),$a_lagg,'if'));
+	endif;
 	return $id;
 }
+function interfaces_lagg_edit_get_sphere() {
+	global $config;
+	$sphere = new co_sphere_row('interfaces_lagg_edit','php');
+	$sphere->row_identifier('uuid');
+	$sphere->parent->basename('interfaces_lagg','php');
+	$sphere->row_default = [
+		'enable' => true,
+		'protected' => false,
+		'laggproto' => 'failover',
+		'laggport' => [],
+		'desc' => ''
+	];
+	$sphere->grid = &array_make_branch($config,'vinterfaces','lagg');
+	if(!empty($sphere->grid)):
+		array_sort_key($sphere->grid,'if');
+	endif;
+	return $sphere;
+}
+$sphere = &interfaces_lagg_edit_get_sphere();
+$input_errors = [];
+$prerequisites_ok = true;
+$mode_page = PAGE_MODE_ADD;
+if($_POST && isset($_POST['submit']) && is_string($_POST['submit'])):
+	switch($_POST['submit']):
+		case 'add':
+			break;
+		case 'save':
+			if(isset($_POST[$sphere->row_identifier()]) && is_string($_POST[$sphere->row_identifier()]) && is_uuid_v4($_POST[$sphere->row_identifier()])):
+				$mode_page = PAGE_MODE_POST;
+			endif;
+			break;
+		default:
+			if(is_uuid_v4($_POST['submit'])):
+				$mode_page = PAGE_MODE_EDIT;
+			else:
+				header($sphere->parent->header());
+				exit;
+			endif;
+			break;
+	endswitch;
+endif;
+switch($mode_page):
+	case PAGE_MODE_ADD:
+		$sphere->row[$sphere->row_identifier()] = uuid();
+		break;
+	case PAGE_MODE_EDIT:
+		$sphere->row[$sphere->row_identifier()] = $_POST['submit'];
+		break;
+	case PAGE_MODE_POST:
+		$sphere->row[$sphere->row_identifier()] = $_POST[$sphere->row_identifier()];
+		break;
+endswitch;
+$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+$isrecordnew = (false === $sphere->row_id);
+switch($mode_page):
+	case PAGE_MODE_ADD:
+		$sphere->row['enable'] = $sphere->row_default['enable'];
+		$sphere->row['protected'] = $sphere->row_default['protected'];
+		$sphere->row['if'] = 'lagg' . get_nextlagg_id();
+		$sphere->row['laggproto'] = $sphere->row_default['laggproto'];
+		$sphere->row['laggport'] = $sphere->row_default['laggport'];
+		$sphere->row['desc'] = $sphere->row_default['desc'];
+		break;
+	case PAGE_MODE_EDIT:
+		$sphere->row['enable'] = $sphere->grid[$sphere->row_id]['enable'] ?? $sphere->row_default['enable'];
+		$sphere->row['protected'] = $sphere->grid[$sphere->row_id]['protected'] ?? $sphere->row_default['protected'];
+		$sphere->row['if'] = $sphere->grid[$sphere->row_id]['if'] ?? 'lagg' . get_nextlagg_id();
+		$sphere->row['laggproto'] = $sphere->grid[$sphere->row_id]['laggproto'] ?? $sphere->row_default['laggproto'];
+		$sphere->row['laggport'] = $sphere->grid[$sphere->row_id]['laggport'] ?? $sphere->row_default['laggport'];
+		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'] ?? $sphere->row_default['desc'];
+		break;
+	case PAGE_MODE_POST:
+		$sphere->row['enable'] = isset($_POST['enable']);
+		$sphere->row['protected'] = isset($_POST['protected']);
+		$sphere->row['if'] = $_POST['if'] ?? 'lagg' . get_nextlagg_id();
+		$sphere->row['laggproto'] = $_POST['laggproto'] ?? $sphere->row_default['laggproto'];
+		$sphere->row['laggport'] = $_POST['laggport'] ?? $sphere->row_default['laggport'];
+		$sphere->row['desc'] = $_POST['desc'] ?? $sphere->row_default['desc'];
+		$reqdfields = ['laggproto'];
+		$reqdfieldsn = [gtext('Aggregation Protocol')];
+		$reqdfieldst = ['string'];
+		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
+		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+		if(count($sphere->row['laggport']) < 1):
+			$input_errors[] = gtext('At least one interface must be selected.');
+		endif;
+		if ($prerequisites_ok && empty($input_errors)):
+			$sphere->upsert();
+			write_config();
+			touch($d_sysrebootreqd_path);
+			header($sphere->parent->header());
+			exit;
+		endif;
+		break;
+endswitch;
+$l_lagg_protocol = [
+	'failover' => gtext('Failover'),
+	'lacp' => gtext('LACP (Link Aggregation Control Protocol)'),
+	'loadbalance' => gtext('Loadbalance'),
+	'roundrobin' => gtext('Roundrobin'),
+	'none' => gtext('None')
+];
+$l_port = [];
+foreach(get_interface_list() as $interface_name => $interface_detail):
+	if(preg_match('/lagg/i',$interface_name)): // skip lagg interfaces
+		continue;
+	endif;
+	foreach($sphere->grid as $row): // test all lagg
+		if(($row['if'] !== $sphere->row['if']) && in_array($interface_name,$row['laggport'])): // exclude interfaces in laggs other than self
+			continue 2;
+		endif;
+	endforeach;
+	$l_port[$interface_name] = htmlspecialchars(sprintf('%s (%s)',$interface_name,$interface_detail['mac']));
+endforeach;
+$pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('LAGG'),$isrecordnew ? gtext('Add') : gtext('Modify')];
+include 'fbegin.inc';
+$sphere->doj();
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-		  <ul id="tabnav">
-				<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext("Management");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext("VLAN");?></span></a></li>
-				<li class="tabact"><a href="interfaces_lagg.php" title="<?=gtext('Reload page');?>"><span><?=gtext("LAGG");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext("CARP");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="interfaces_lagg_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			<?php html_titleline(gtext("LAGG Settings"));?>
-					<?php html_inputbox("if", gtext("Interface"), $pconfig['if'], "", true, 5, true);?>
-					<?php html_combobox("laggproto", gtext("Aggregation Protocol"), $pconfig['laggproto'],['failover' => gtext('Failover'),'fec' => gtext('FEC (Fast EtherChannel)'),'lacp' => gtext('LACP (Link Aggregation Control Protocol)'),'loadbalance' => gtext('Loadbalance'),'roundrobin' => gtext('Roundrobin'),'none' => gtext('None')], "", true);?>
-					<?php $a_port = []; foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/lagg/i', $ifk)) { continue; } if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_lagg, "laggport")) { continue; } $a_port[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); } ?>
-					<?php html_listbox("laggport", gtext("Ports"), $pconfig['laggport'], $a_port, gtext("Note: Ctrl-click (or command-click on the Mac) to select multiple entries."), true);?>
-					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<input name="enable" type="hidden" value="<?=$pconfig['enable'];?>" />
-					<input name="if" type="hidden" value="<?=$pconfig['if'];?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
+<table id="area_navigator">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext('Management');?></span></a></li>
+		<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext('WLAN');?></span></a></li>
+		<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext('VLAN');?></span></a></li>
+		<li class="tabact"><a href="interfaces_lagg.php" title="<?=gtext('Reload page');?>"><span><?=gtext('LAGG');?></span></a></li>
+		<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext('Bridge');?></span></a></li>
+		<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext('CARP');?></span></a></li>
+	</ul></td></tr>
 </table>
-<?php include 'fend.inc';?>
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('LAGG Settings'));
+?>
+		</thead>
+		<tbody>
+<?php
+			html_inputbox2('if',gtext('Interface'),$sphere->row['if'],'',true,5,true);
+			html_combobox2('laggproto',gtext('Aggregation Protocol'),$sphere->row['laggproto'],$l_lagg_protocol,'',true);
+			html_listbox2('laggport',gtext('Ports'),$sphere->row['laggport'],$l_port,gtext('Note: Ctrl-click (or command-click on the Mac) to select multiple entries.'),true);
+			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40);
+?>
+		</tbody>
+	</table>
+	<div id="submit">
+<?php
+		echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
+		echo $sphere->html_button('cancel',gtext('Cancel'));
+?>
+		<input name="enable" type="hidden" value="<?=$sphere->row['enable'];?>"/>
+		<input name="if" type="hidden" value="<?=$sphere->row['if'];?>"/>
+		<input name="uuid" type="hidden" value="<?=$sphere->row['uuid'];?>"/>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
