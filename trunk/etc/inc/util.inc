@@ -439,8 +439,8 @@ function is_valid_privatekey($privatekey,$type = 'RSA') {
  *	@param string $uuid Universal Unique Identifier
  *	@return bool returns true if the given string is a valid uuid.
  */
-function is_uuid_v4($uuid) {
-	return (1 == preg_match('/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i',$uuid));
+function is_uuid_v4($uuid): bool {
+	return (bool)preg_match('/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i',$uuid);
 }
 /*
  *
