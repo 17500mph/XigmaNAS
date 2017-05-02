@@ -103,7 +103,7 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 		$output[] = '';
 		return implode("\n",$output);
 	}
-	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
+	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL,bool $disabled = false) {
 		$element = 'button';
 		if(is_null($value)):
 			$value = 'cancel';
@@ -115,6 +115,9 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 			$content = gtext('Cancel');
 		endif;
 		$attributes = ['name' => 'submit','type' => 'submit','class' => $this->_class_button,'value' => $value,'id' => $id];
+		if($disabled):
+			$attributes['disabled'] = 'disabled';
+		endif;
 		$root = new co_DOMDocument();
 		$o_button = $root->addElement($element,$attributes,$content);
 		return $root->render();
