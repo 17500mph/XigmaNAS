@@ -35,18 +35,6 @@ require 'auth.inc';
 require 'guiconfig.inc';
 require 'co_sphere.php';
 
-function get_nextlagg_id() {
-	global $config;
-
-	$id = 0;
-	$a_lagg = $config['vinterfaces']['lagg'];
-	if(false !== array_search_ex('lagg' . strval($id),$a_lagg,'if')):
-		do {
-			$id++; // Increase ID until a unused one is found.
-		} while (false !== array_search_ex('lagg' . strval($id),$a_lagg,'if'));
-	endif;
-	return $id;
-}
 function interfaces_lagg_edit_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_row('interfaces_lagg_edit','php');
@@ -68,10 +56,15 @@ function interfaces_lagg_edit_get_sphere() {
 $sphere = &interfaces_lagg_edit_get_sphere();
 $input_errors = [];
 $prerequisites_ok = true;
+$disable_button_save = false;
 $mode_page = PAGE_MODE_ADD;
 if($_POST && isset($_POST['submit']) && is_string($_POST['submit'])):
 	switch($_POST['submit']):
 		case 'add':
+			break;
+		case 'cancel':
+			header($sphere->parent->header());
+			exit;
 			break;
 		case 'save':
 			if(isset($_POST[$sphere->row_identifier()]) && is_string($_POST[$sphere->row_identifier()]) && is_uuid_v4($_POST[$sphere->row_identifier()])):
@@ -105,33 +98,49 @@ switch($mode_page):
 	case PAGE_MODE_ADD:
 		$sphere->row['enable'] = $sphere->row_default['enable'];
 		$sphere->row['protected'] = $sphere->row_default['protected'];
-		$sphere->row['if'] = 'lagg' . get_nextlagg_id();
+		$interface_id = 0;
+		$interface_format = 'lagg%d';
+		do {
+			$interface_name = sprintf($interface_format,$interface_id);
+			$interface_id++;
+		} while(false !== array_search_ex($interface_name,$sphere->grid,'if'));
+		$sphere->row['if'] = $interface_name;
 		$sphere->row['laggproto'] = $sphere->row_default['laggproto'];
 		$sphere->row['laggport'] = $sphere->row_default['laggport'];
 		$sphere->row['desc'] = $sphere->row_default['desc'];
 		break;
 	case PAGE_MODE_EDIT:
-		$sphere->row['enable'] = $sphere->grid[$sphere->row_id]['enable'] ?? $sphere->row_default['enable'];
-		$sphere->row['protected'] = $sphere->grid[$sphere->row_id]['protected'] ?? $sphere->row_default['protected'];
-		$sphere->row['if'] = $sphere->grid[$sphere->row_id]['if'] ?? 'lagg' . get_nextlagg_id();
-		$sphere->row['laggproto'] = $sphere->grid[$sphere->row_id]['laggproto'] ?? $sphere->row_default['laggproto'];
-		$sphere->row['laggport'] = $sphere->grid[$sphere->row_id]['laggport'] ?? $sphere->row_default['laggport'];
-		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'] ?? $sphere->row_default['desc'];
+		$sphere->row['enable'] = !empty($sphere->grid[$sphere->row_id]['enable']);
+		$sphere->row['protected'] = !empty($sphere->grid[$sphere->row_id]['protected']);
+		$sphere->row['if'] = $sphere->grid[$sphere->row_id]['if'];
+		$sphere->row['laggproto'] = $sphere->grid[$sphere->row_id]['laggproto'];
+		$sphere->row['laggport'] = $sphere->grid[$sphere->row_id]['laggport'];
+		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'];
 		break;
 	case PAGE_MODE_POST:
-		$sphere->row['enable'] = isset($_POST['enable']);
-		$sphere->row['protected'] = isset($_POST['protected']);
-		$sphere->row['if'] = $_POST['if'] ?? 'lagg' . get_nextlagg_id();
-		$sphere->row['laggproto'] = $_POST['laggproto'] ?? $sphere->row_default['laggproto'];
-		$sphere->row['laggport'] = $_POST['laggport'] ?? $sphere->row_default['laggport'];
-		$sphere->row['desc'] = $_POST['desc'] ?? $sphere->row_default['desc'];
+		$sphere->row['enable'] = !empty($_POST['enable']);
+		$sphere->row['protected'] = !empty($_POST['protected']);
+		$sphere->row['if'] = $_POST['if'];
+		$sphere->row['laggproto'] = $_POST['laggproto'];
+		$sphere->row['laggport'] = $_POST['laggport'];
+		$sphere->row['desc'] = $_POST['desc'];
 		$reqdfields = ['laggproto'];
 		$reqdfieldsn = [gtext('Aggregation Protocol')];
 		$reqdfieldst = ['string'];
 		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
-		if(count($sphere->row['laggport']) < 1):
-			$input_errors[] = gtext('At least one interface must be selected.');
+		if(empty($input_errors)):
+			if(count($sphere->row['laggport']) < 1):
+				$input_errors[] = gtext('At least one interface must be selected.');
+			endif;
+		endif;
+		if(empty($input_errors)):
+			if($isrecordnew):
+				if(false !== array_search_ex($sphere->row['if'],$sphere->grid,'if')):
+					$input_errors[] = gtext('The LAGG interface cannot be added because the interface name already exists.');
+					$disable_button_save = true;
+				endif;
+			endif;
 		endif;
 		if ($prerequisites_ok && empty($input_errors)):
 			$sphere->upsert();
@@ -202,7 +211,7 @@ $sphere->doj();
 	</table>
 	<div id="submit">
 <?php
-		echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
+		echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'),NULL,$disable_button_save);
 		echo $sphere->html_button('cancel',gtext('Cancel'));
 ?>
 		<input name="enable" type="hidden" value="<?=$sphere->row['enable'];?>"/>
