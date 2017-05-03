@@ -59,6 +59,7 @@ define("PAGE_MODE_VIEW", 0);
 define("PAGE_MODE_ADD", 1);
 define("PAGE_MODE_EDIT", 2);
 define("PAGE_MODE_POST", 3);
+define('PAGE_MODE_CLONE', 4);
 
 // Create database object and create tables if necessary.
 try {
