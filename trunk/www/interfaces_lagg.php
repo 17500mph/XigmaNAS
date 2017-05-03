@@ -163,9 +163,11 @@ echo $sphere->doj();
 				else:
 					$lagg_protocol = gtext('Unknown Aggregation Protocol');
 				endif;
+				$class_lcelc = $enabled ? 'lcelc' : 'lcelcd';
+				$class_lcell = $enabled ? 'lcell' : 'lcelld';
 ?>
 				<tr>
-					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
+					<td class="<?=$class_lcelc;?>">
 <?php
 						if($notdirty && $notprotected && !lagg_inuse($sphere->row['if'])):
 							echo $sphere->html_checkbox_cbm(false);
@@ -174,10 +176,10 @@ echo $sphere->doj();
 						endif;
 ?>
 					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['if']);?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($lagg_protocol);?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars(implode(' ', $sphere->row['laggport']));?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['desc']);?></td>
+					<td class="<?=$class_lcell;?>"><?=htmlspecialchars($sphere->row['if']);?></td>
+					<td class="<?=$class_lcell;?>"><?=htmlspecialchars($lagg_protocol);?></td>
+					<td class="<?=$class_lcell;?>"><?=htmlspecialchars(implode(' ', $sphere->row['laggport']));?></td>
+					<td class="<?=$class_lcell;?>"><?=htmlspecialchars($sphere->row['desc']);?></td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 <?php

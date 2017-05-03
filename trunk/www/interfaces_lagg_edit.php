@@ -64,7 +64,7 @@ $l_lagg_protocol = [
 $input_errors = [];
 $disable_button_save = false;
 $mode_page = PAGE_MODE_ADD;
-if($_POST && isset($_POST['submit']) && is_string($_POST['submit'])):
+if(filter_has_var(INPUT_POST,'submit') && is_string($_POST['submit'])):
 	switch($_POST['submit']):
 		case 'add':
 			break;
@@ -133,8 +133,8 @@ switch($mode_page):
 			header($sphere->parent->header());
 			exit;
 		endif;
-		$sphere->row['enable'] = filter_has_var(INPUT_POST,'enable') ? filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN) : $sphere->row_default['enable'];
-		$sphere->row['protected'] = filter_has_var(INPUT_POST,'protected') ? filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN) : $sphere->row_default['protected'];
+		$sphere->row['enable'] = filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
+		$sphere->row['protected'] = filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
 		$interface_id = 0;
 		$interface_format = 'lagg%d';
 		do {
@@ -153,16 +153,16 @@ switch($mode_page):
 			header($sphere->parent->header());
 			exit;
 		endif;
-		$sphere->row['enable'] = !empty($sphere->grid[$sphere->row_id]['enable']);
-		$sphere->row['protected'] = !empty($sphere->grid[$sphere->row_id]['protected']);
+		$sphere->row['enable'] = isset($sphere->grid[$sphere->row_id]['enable']);
+		$sphere->row['protected'] = isset($sphere->grid[$sphere->row_id]['protected']);
 		$sphere->row['if'] = $sphere->grid[$sphere->row_id]['if'];
 		$sphere->row['laggproto'] = $sphere->grid[$sphere->row_id]['laggproto'];
 		$sphere->row['laggport'] = $sphere->grid[$sphere->row_id]['laggport'];
 		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'];
 		break;
 	case PAGE_MODE_POST:
-		$sphere->row['enable'] = filter_has_var(INPUT_POST,'enable') ? filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN) : $sphere->row_default['enable'];
-		$sphere->row['protected'] = filter_has_var(INPUT_POST,'protected') ? filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN) : $sphere->row_default['protected'];
+		$sphere->row['enable'] = filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
+		$sphere->row['protected'] = filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
 		$sphere->row['if'] = filter_has_var(INPUT_POST,'if') ? filter_input(INPUT_POST,'if') : '';
 		$sphere->row['laggproto'] = filter_has_var(INPUT_POST,'laggproto') ? filter_input(INPUT_POST,'laggproto') : $sphere->row_default['laggproto'];
 		$sphere->row['laggport'] = filter_has_var(INPUT_POST,'laggport') ? filter_input(INPUT_POST,'laggport',FILTER_DEFAULT,FILTER_FORCE_ARRAY) : $sphere->row_default['laggport'];
