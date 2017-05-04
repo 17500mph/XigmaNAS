@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
 "PO-Revision-Date: 2017-03-27 14:51+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:25+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:16+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -948,6 +948,9 @@ msgstr "¿Está seguro de que desea apagar el servidor?"
 
 msgid "Asynchronous I/O"
 msgstr "I/O Asincrono"
+
+msgid "At least one interface must be selected."
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3809,6 +3812,9 @@ msgstr ""
 msgid "Execute now"
 msgstr "Ejecutar ahora"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr "Expandsz"
 
@@ -3888,9 +3894,6 @@ msgstr "Opciones extra para rsync (normalmente vacío)"
 
 msgid "FAT32"
 msgstr "FAT32"
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Canal Fast Ethernet)"
 
 msgid "FRU Information"
 msgstr "Información FRU"
@@ -5627,6 +5630,9 @@ msgstr "Nombre del modelo"
 msgid "Modified"
 msgstr "Modificado:"
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr "Modificar Servicio"
 
@@ -6404,6 +6410,9 @@ msgstr "Las contraseñas no coinciden."
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Pega aquí una clave privada RSA en formto PEM."
+
+msgid "Paste a private key in PEM format here."
+msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Pegue aquí un certificado firmado en formato X.509 PEM."
@@ -8457,6 +8466,13 @@ msgstr "La dirección IP del dispositivo."
 msgid "The IP address that this hostname represents."
 msgstr "La dirección IP que representa esta máquina."
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr "La dirección IP será revertida a"
 
@@ -9016,6 +9032,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "El nombre del RAID debe consistir sólo en caracteres a-z, A-Z, 0-9"
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr "El nombre del servidor de medios no puede estar en blanco."
 
@@ -9253,9 +9272,6 @@ msgstr "Debe haber al menos 3 discos en un raidz2."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "Debe haber almenos 4 discos en un raidz3"
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Se debe seleccionar como minimo una interfaz."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -10202,6 +10218,9 @@ msgstr "Desconocido"
 msgid "Unknown Activity"
 msgstr "Actividad desconocida"
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr "Desconocido o sin Formato"
 
@@ -11052,3 +11071,9 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Canal Fast Ethernet)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Se debe seleccionar como minimo una interfaz."

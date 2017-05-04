@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
 "PO-Revision-Date: 2017-03-30 05:25+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:25+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -946,6 +946,9 @@ msgstr "Opriți serverul?"
 
 msgid "Asynchronous I/O"
 msgstr "I/O asincrone"
+
+msgid "At least one interface must be selected."
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3802,6 +3805,9 @@ msgstr ""
 msgid "Execute now"
 msgstr "Execută acum"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr "Expandsz"
 
@@ -3881,9 +3887,6 @@ msgstr "Opțiuni suplimentare pentru rsync (nu sînt absolut necesare)"
 
 msgid "FAT32"
 msgstr "FAT32"
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr "Informații FRU"
@@ -5619,6 +5622,9 @@ msgstr "Nume model"
 msgid "Modified"
 msgstr "Modificat"
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr "Modificare serviciu"
 
@@ -6395,6 +6401,9 @@ msgstr "Parolele nu coincid"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Copiați  aici o cheie privata RSA PRIVATE KEY în formatul PEM."
+
+msgid "Paste a private key in PEM format here."
+msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Introduceți aici un certificat semnat tip X.509 PEM."
@@ -8441,6 +8450,13 @@ msgstr "Adresa IP a dispozitivului."
 msgid "The IP address that this hostname represents."
 msgstr "Adresa IP corespunzătoare sistemului."
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr "Adresa LAN va fi resetată la"
 
@@ -8990,6 +9006,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Numele pentru RAID poate conține doar caracterele a-z, A-Z, 0-9."
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr "Numele serverului media nu poate fi blank (nul)."
 
@@ -9225,9 +9244,6 @@ msgstr "Trebuie să aveți cel puțin 3 discuri pentru un raidz2."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "Trebuie să aveți cel puțin 4 discuri pentru un raidz3."
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Trebuie să selectați cel puțin o interfață."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -10173,6 +10189,9 @@ msgstr "Necunoscut"
 msgid "Unknown Activity"
 msgstr "Activitate necunoscută"
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr "Necunoscut sau neformatat"
 
@@ -11035,3 +11054,9 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Trebuie să selectați cel puțin o interfață."

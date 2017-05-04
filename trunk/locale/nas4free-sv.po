@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
 "PO-Revision-Date: 2017-04-15 14:27+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:25+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -929,6 +929,9 @@ msgstr "Är du säker att du vill stänga av servern?"
 
 msgid "Asynchronous I/O"
 msgstr "Asynkron I/O"
+
+msgid "At least one interface must be selected."
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3745,6 +3748,9 @@ msgstr ""
 msgid "Execute now"
 msgstr "Kör nu"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr "Expandsz"
 
@@ -3824,9 +3830,6 @@ msgstr "Extra val till rsync (vantligtvis tom)."
 
 msgid "FAT32"
 msgstr "FAT32"
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr "FRU Information"
@@ -5525,6 +5528,9 @@ msgstr "Modellnamn"
 msgid "Modified"
 msgstr "Ändrad"
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr "Ändra tjänst"
 
@@ -6296,6 +6302,9 @@ msgstr "Lösenordet stämmer inte."
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Mata in en privat RSA nyckel i PEM format här."
+
+msgid "Paste a private key in PEM format here."
+msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Klistra in ett signerat certifikat i X.509 PEM-format här."
@@ -8325,6 +8334,13 @@ msgstr "Enhetens IP-adress."
 msgid "The IP address that this hostname represents."
 msgstr "IP-adressen som det här värdnamnet representerar."
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr "Nätverkets IP-adress kommer också återställas"
 
@@ -8872,6 +8888,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Namnet på RAID enheten kan bestå av tecknen a-z, A-Z, 0-9."
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr "Namnet på mediaservern kan inte vara tomt."
 
@@ -9104,9 +9123,6 @@ msgstr "Åtminstone 3 diskar krävs för 'raidz2'."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "raidz3 kräver minst 4 diskar."
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Minst ett gränssnitt måste väljas."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -10044,6 +10060,9 @@ msgstr "Okänt"
 msgid "Unknown Activity"
 msgstr "Okänd aktivitet"
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr "Okänd eller ofaormaterad"
 
@@ -10894,3 +10913,9 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Minst ett gränssnitt måste väljas."
