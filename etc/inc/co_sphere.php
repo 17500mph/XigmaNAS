@@ -103,7 +103,7 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 		$output[] = '';
 		return implode("\n",$output);
 	}
-	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL,bool $disabled = false) {
+	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 		$element = 'button';
 		if(is_null($value)):
 			$value = 'cancel';
@@ -115,9 +115,6 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 			$content = gtext('Cancel');
 		endif;
 		$attributes = ['name' => 'submit','type' => 'submit','class' => $this->_class_button,'value' => $value,'id' => $id];
-		if($disabled):
-			$attributes['disabled'] = 'disabled';
-		endif;
 		$root = new co_DOMDocument();
 		$o_button = $root->addElement($element,$attributes,$content);
 		return $root->render();
@@ -489,7 +486,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_toolbox(bool $notprotected = true,bool $notdirty = true) {
 /*
  *	<td>
- *		<a href="scriptname_edit.php?uuid=12345678-1234-1234-1234-1234567890AB"><img="images/edit.png" title="Edit Record" alt="Edit Record" class="spin"/></a>
+ *		<a href="scriptname_edit.php?submit=edit&uuid=12345678-1234-1234-1234-1234567890AB"><img="images/edit.png" title="Edit Record" alt="Edit Record" class="spin"/></a>
  *		or
  *		<img src="images/delete.png" title="Record is marked for deletion" alt="Record is marked for deletion"/>
  *		or
@@ -501,45 +498,9 @@ class co_sphere_grid extends co_sphere_level2 {
 		$o_td = $root->addElement('td');
 		if($notdirty && $notprotected):
 			//	record is editable
-			$link = sprintf('%s?%s=%s',$this->modify->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
+			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 			$o_a = $o_td->addElement('a',['href' => $link]);
 			$o_a->addElement('img', ['src' => $g_img['mod'],'title' => $this->sym_mod(),'alt' => $this->sym_mod(),'class' => 'spin']);
-		elseif($notprotected):
-			//	record is dirty
-			$o_td->addElement('img',['src' => $g_img['del'],'title' => $this->sym_del(),'alt' => $this->sym_del()]);
-		else:
-			//	record is protected
-			$o_td->addElement('img',['src' => $g_img['loc'],'title' => $this->sym_loc(),'alt' => $this->sym_loc()]);
-		endif;
-		return $root->render();
-	}
-	public function html_toolbox_post(bool $notprotected = true,bool $notdirty = true) {
-/*
- *	<td>
- *		<input id="button_edit" type="image" src="{$g_img['mod']}" name="submit" value="..." formaction="..." formmethod="post" title="{$this->sym_mod()}" alt="{$this->sym_mod()}"/>
- *		or
- *		<img src="images/delete.png" title="Record is marked for deletion" alt="Record is marked for deletion"/>
- *		or
- *		<img src="images/locked.png" title="Record is protected" alt="Record is protected"/>
- *	</td>
- */
-		global $g_img;
-		$root = new co_DOMDocument();
-		$o_td = $root->addElement('td');
-		if($notdirty && $notprotected):
-			//	record is editable
-			$attributes = [
-				'id' => 'button_edit',
-				'type' => 'image',
-				'src' => $g_img['mod'],
-				'name' => 'submit',
-				'value' => $this->row[$this->row_identifier()],
-				'formaction' => $this->modify->scriptname(),
-				'formmethod' => 'post',
-				'title' => $this->sym_mod(),
-				'alt' => $this->sym_mod()
-			];
-			$o_td->addElement('input',$attributes);
 		elseif($notprotected):
 			//	record is dirty
 			$o_td->addElement('img',['src' => $g_img['del'],'title' => $this->sym_del(),'alt' => $this->sym_del()]);
@@ -573,7 +534,7 @@ class co_sphere_grid extends co_sphere_level2 {
  *		<th class="lcenl" colspan="1">
  *		</th>
  *		<th class="lceadd">
- *			<a href="scriptname_edit.php"><img src="images/add.png" title="Add Record" alt="Add Record" class="spin"/></a>
+ *			<a href="scriptname_edit.php?submit=add"><img src="images/add.png" title="Add Record" alt="Add Record" class="spin"/></a>
  *		</th>
  *	</tr>
  */
@@ -584,39 +545,9 @@ class co_sphere_grid extends co_sphere_level2 {
 			$o_th1 = $o_tr->addElement('th',['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
 		$o_th2 = $o_tr->addElement('th',['class' => 'lceadd']);
-		$o_a = $o_th2->addElement('a',['href' => $this->modify->scriptname()]);
+		$link = sprintf('%s?submit=add',$this->modify->scriptname());
+		$o_a = $o_th2->addElement('a',['href' => $link]);
 		$o_img = $o_a->addElement('img',['src' => $g_img['add'],'title' => $this->sym_add(),'alt' => $this->sym_add(),'class' => 'spin']);
-		return $root->render();
-	}
-	public function html_footer_add_post(int $colspan = 2) {
-/*
- *	<tr>
- *		<th class="lcenl" colspan="1">
- *		</th>
- *		<th class="lceadd">
- *			<input id="button_add" type="image" src="{$g_img['add']}" name="submit" value="..." formaction="..." formmethod="post" title="{$this->sym_add()}" alt="{$this->sym_add()}"/>
- *		</th>
- *	</tr>
- */
-		global $g_img;
-		$root = new co_DOMDocument();
-		$o_tr = $root->addElement('tr');
-		if($colspan > 1):
-			$o_th1 = $o_tr->addElement('th',['class' => 'lcenl','colspan' => $colspan - 1]);
-		endif;
-		$o_th2 = $o_tr->addElement('th',['class' => 'lceadd']);
-		$attributes = [
-			'id' => 'button_add',
-			'type' => 'image',
-			'src' => $g_img['add'],
-			'name' => 'submit',
-			'value' => 'add',
-			'formaction' => $this->modify->scriptname(),
-			'formmethod' => 'post',
-			'title' => $this->sym_add(),
-			'alt' => $this->sym_add()
-		];
-		$o_th2->addElement('input',$attributes);
 		return $root->render();
 	}
 }
