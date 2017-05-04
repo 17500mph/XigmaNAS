@@ -183,7 +183,7 @@ echo $sphere->doj();
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 <?php
-							echo $sphere->html_toolbox_post($notprotected,$notdirty);
+							echo $sphere->html_toolbox($notprotected,$notdirty);
 ?>
 							<td></td>
 							<td></td>
@@ -196,7 +196,7 @@ echo $sphere->doj();
 		</tbody>
 		<tfoot>
 <?php
-			echo $sphere->html_footer_add_post(6);
+			echo $sphere->html_footer_add(6);
 ?>
 		</tfoot>
 	</table>
