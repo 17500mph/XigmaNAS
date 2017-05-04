@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-03-27 21:35+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
+"PO-Revision-Date: 2017-05-01 19:28+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:26+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -956,6 +956,9 @@ msgstr "Esteu segur que voleu apagar el servidor?"
 
 msgid "Asynchronous I/O"
 msgstr "E/S asíncrona"
+
+msgid "At least one interface must be selected."
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3826,6 +3829,9 @@ msgstr ""
 msgid "Execute now"
 msgstr "Executar ara"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr "Expandsz"
 
@@ -3910,9 +3916,6 @@ msgstr "Opcions addicionals per rsync (generalment buit)."
 
 msgid "FAT32"
 msgstr "FAT32"
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr "Informació FRU"
@@ -4416,10 +4419,10 @@ msgid "High voltage boosting transfer point"
 msgstr "Punt de transferència d'impuls d'alta tensió"
 
 msgid "High voltage transfer point"
-msgstr "Punt de transferència d'alt voltatge"
+msgstr "Punt de transferència de sobretensió"
 
 msgid "High voltage trimming transfer point"
-msgstr "Punt de retallada d'alt voltatge"
+msgstr "Punt de retallada de sobretensió"
 
 msgid "Highlighting"
 msgstr "Ressaltat"
@@ -5654,6 +5657,9 @@ msgstr "Nom model"
 msgid "Modified"
 msgstr "Modificat"
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr "Modifica Servei"
 
@@ -6437,6 +6443,9 @@ msgstr "Les contrasenyes no coincideixen"
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Enganxar una clau privada RSA en format PEM aquí."
 
+msgid "Paste a private key in PEM format here."
+msgstr ""
+
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Enganxeu un certificat signat  en format X.509 PEM aquí."
 
@@ -7041,7 +7050,7 @@ msgid "Reload page"
 msgstr "Recarregar pàgina"
 
 msgid "Remaining battery runtime"
-msgstr "Temps pendent de bateria"
+msgstr "Temps de funcionament amb bateria"
 
 msgid "Remote Address"
 msgstr "Adreça remota"
@@ -8493,6 +8502,13 @@ msgstr "L'adreça IP del dispositiu."
 msgid "The IP address that this hostname represents."
 msgstr "L'adreça IP que representa aquest nom d'amfitrió."
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr "L'adreça IP de la LAN es restablirà a"
 
@@ -9051,6 +9067,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "El nom del RAID només pot constar dels caràcters a-z, A-Z, 0-9."
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr "El nom del servidor de mitjans no pot estar buit."
 
@@ -9289,9 +9308,6 @@ msgstr "Hi ha d'haver almenys 3 discs en un raidz2."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "Hi ha d'haver almenys 4 discos en un raidz3."
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Hi ha d'haver una interfície com a mínim seleccionat."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -10252,6 +10268,9 @@ msgstr "Desconegut"
 msgid "Unknown Activity"
 msgstr "Activitat desconeguda"
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr "Desconegut o no formatat."
 
@@ -11109,3 +11128,9 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Hi ha d'haver una interfície com a mínim seleccionat."

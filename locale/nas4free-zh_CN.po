@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-04-26 03:11+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
+"PO-Revision-Date: 2017-04-29 15:30+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-26 09:41+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -863,6 +863,9 @@ msgstr "是否确定关闭系统？"
 
 msgid "Asynchronous I/O"
 msgstr "异步I/O"
+
+msgid "At least one interface must be selected."
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3528,6 +3531,9 @@ msgstr "系统启动/关机之前或之后的命令。"
 msgid "Execute now"
 msgstr "立刻执行"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr "扩展"
 
@@ -3603,9 +3609,6 @@ msgstr "rsync 的额外选项（通常为空白）。"
 
 msgid "FAT32"
 msgstr "FAT32"
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr "FRU信息"
@@ -5020,7 +5023,7 @@ msgid "Map to Root"
 msgstr "映射到Root"
 
 msgid "Map to User"
-msgstr "映射到User"
+msgstr "映射到用户"
 
 msgid "Mapping DOS Attributes"
 msgstr "映射DOS属性"
@@ -5233,6 +5236,9 @@ msgstr "型号名"
 
 msgid "Modified"
 msgstr "已修改"
+
+msgid "Modify"
+msgstr ""
 
 msgid "Modify Service"
 msgstr "修改服务"
@@ -5969,6 +5975,9 @@ msgstr "密码不匹配。"
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "在此处以PEM格式粘贴RSA私钥。"
 
+msgid "Paste a private key in PEM format here."
+msgstr ""
+
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "请在此贴上 X.509 PEM 格式的签署凭证。"
 
@@ -6306,7 +6315,7 @@ msgid "Queue Depth"
 msgstr "伫列深度"
 
 msgid "Quiet"
-msgstr "静音"
+msgstr "安静"
 
 msgid "Quota"
 msgstr "配额"
@@ -7911,6 +7920,13 @@ msgstr "设备的IP地址"
 msgid "The IP address that this hostname represents."
 msgstr "主机名称所代表的IP地址。"
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP地址将被重置为"
 
@@ -8383,6 +8399,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "RAID的名称只能由字符a-z，A-Z，0-9组成。"
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr "媒体服务器的名称不能为空。"
 
@@ -8596,9 +8615,6 @@ msgstr "raidz2 模式最少要有 3 个磁盘。"
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "raidz3 必须有至少 4 个磁盘。"
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "必须选择至少1个接口。"
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -9405,6 +9421,9 @@ msgstr "不详"
 msgid "Unknown Activity"
 msgstr "未知活动"
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr "未知或未格式化"
 
@@ -10191,3 +10210,9 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "必须选择至少1个接口。"

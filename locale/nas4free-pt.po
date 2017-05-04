@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
-"PO-Revision-Date: 2017-01-15 00:16+0000\n"
-"Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
+"PO-Revision-Date: 2017-05-03 15:33+0000\n"
+"Last-Translator: GusGraf <gusgraf@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:25+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
 "X-Poedit-Language: Portuguese\n"
@@ -113,6 +113,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Comprimento padrão é:  128 para AES, 128 para Blowfish, 128 para Camellia e "
+"192 para 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Como nos discos Maxtor 6B200M0 200GB e Maxtor 2R015H1 15GB)."
@@ -171,7 +173,7 @@ msgstr ""
 
 #, php-format
 msgid "(default %s %s"
-msgstr ""
+msgstr "(padrão %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Duplicado importado ***"
@@ -222,9 +224,12 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Uma listagem de diretório é gerada quando nenhum arquivo de índice "
+"(index.php, index.html, index.htm ou default.htm) é encontrado em um "
+"diretório."
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "Uma atualização de firmware está em progresso."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -255,13 +260,13 @@ msgstr ""
 "acção solicitada."
 
 msgid "A reboot is required"
-msgstr ""
+msgstr "Um reinício é necessário"
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Um pedido de recarga foi enviado para o daemon."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Um reexame foi emitido."
 
 msgid "A route to this destination network already exists."
 msgstr "Já existe uma rota para esta rede de destino."
@@ -288,9 +293,11 @@ msgstr ""
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
+"Um endereço IPv4 válido deve ser especificado para o servidor DNS primário."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
 msgstr ""
+"Um endereço IPv4 válido precisa ser especificado no servidor DNS secundário."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Um endereço IPv4 válido tem de ser especificado."
@@ -299,13 +306,15 @@ msgid "A valid IPv4 network bit count must be specified."
 msgstr "Um número válido de bits para a rede IPv4 tem de ser especificado."
 
 msgid "A valid IPv6 Gateway address must be specified."
-msgstr "Uma endereço válido de gateway do tipo IPv6 deve ser especificado."
+msgstr "Um endereço IPv6 válido de gateway deve ser especificado."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
+"Um endereço IPv6 válido deve ser especificado para o servidor DNS primário."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
 msgstr ""
+"Um endereço IPv6 válido deve ser especificado para o servidor DNS secundário."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Um endereço IPv6 válido deve ser especificado."
@@ -317,9 +326,7 @@ msgid "A valid destination network must be specified."
 msgstr "Uma rede de destino válida tem que ser especificada."
 
 msgid "A valid gateway IP address must be specified."
-msgstr ""
-"Tem que ser especificado um endereço IP válido para a porta de ligação "
-"(gateway)."
+msgstr "O IP de gateway deve ser especificado."
 
 msgid "A valid mtu size must be specified."
 msgstr "É obrigatório especificar um valor válido para o MTU."
@@ -346,7 +353,7 @@ msgid "ACL mode"
 msgstr "Modo ACL"
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "A autenticação AD está desativada."
 
 msgid "AD or PDC name."
 msgstr "Nome de AD ou PDC."
@@ -355,16 +362,16 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "Compatibilidade AFP"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "Tamanho de leitura do AIO"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "Tamanho de gravação AIO"
 
 msgid "ALL Interfaces"
 msgstr "Todas as Interfaces"
@@ -403,13 +410,13 @@ msgid "Acoustic level"
 msgstr "Nível acustico"
 
 msgid "Action"
-msgstr "Acção"
+msgstr "Ação"
 
 msgid "Activate"
-msgstr "Activar"
+msgstr "Ativar"
 
 msgid "Activate S.M.A.R.T. monitoring for this device."
-msgstr "Activar a monitorização S.M.A.R.T. para este dispositivo"
+msgstr "Ativar a monitorização S.M.A.R.T. para este dispositivo."
 
 msgid ""
 "Activate email report if you want to be notified if a failure or a new error "
@@ -425,10 +432,10 @@ msgid "Active Directory"
 msgstr "Active Directory"
 
 msgid "Active Shares"
-msgstr "Shares activos"
+msgstr "Compartilhamentos Ativos"
 
 msgid "Active Users"
-msgstr "Utilizadores Activos"
+msgstr "Utilizadores Ativos"
 
 msgid "Activities"
 msgstr "Atividades"
@@ -437,70 +444,70 @@ msgid "Activity"
 msgstr "Atividade"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr "Adaptável (baixo consumo de energia)"
+msgstr "Adaptável (Baixo Consumo de Energia)"
 
 msgid "Add"
 msgstr "Adicionar"
 
 msgid "Add Bridge"
-msgstr ""
+msgstr "Adicionar Bridge"
 
 msgid "Add CARP"
-msgstr ""
+msgstr "Adicionar CARP"
 
 msgid "Add Dataset"
 msgstr "Adicionar Dataset"
 
 msgid "Add Disk"
-msgstr ""
+msgstr "Adicionar Disco"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Adicionar Volume Criptografado"
 
 msgid "Add Group"
-msgstr ""
+msgstr "Adicionar Grupo"
 
 msgid "Add Host"
-msgstr "Adicionar anfitrião"
+msgstr "Adicionar host"
 
 msgid "Add LAGG"
-msgstr ""
+msgstr "Adicionar LAGG"
 
 msgid "Add MIB"
 msgstr "Adicionar MIB"
 
 msgid "Add NFS Share"
-msgstr ""
+msgstr "Adicionar Compartilhamento NFS"
 
 msgid "Add Option"
-msgstr ""
+msgstr "Adicionar Opções"
 
 msgid "Add Pool"
-msgstr ""
+msgstr "Adicionar Pool"
 
 msgid "Add RAID"
 msgstr "Adicionar RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Adicionar um Registro"
 
 msgid "Add Resource"
-msgstr ""
+msgstr "Adicionar Recurso"
 
 msgid "Add Route"
 msgstr "Adicionar rota"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Adicionar Rsync Job"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Adicionar Modulo Rsync"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Adicionar Compatilhamento Samba"
 
 msgid "Add Share"
-msgstr ""
+msgstr "Adicionar Compartilhamento"
 
 msgid "Add Snapshot"
 msgstr "Adicionar Snapshot"
@@ -509,10 +516,10 @@ msgid "Add URL"
 msgstr "Adicionar URL"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Adicionar Conta de Usuário"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "Adicionar VLAN"
 
 msgid "Add Virtual Device"
 msgstr "Adicionar Dispositivo Virtual"
@@ -521,13 +528,13 @@ msgid "Add Volume"
 msgstr "Adicionar Volume"
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "Adicionar WLAN"
 
 msgid "Add a cache device to a pool"
-msgstr "Adicionar um dispositivo de cache à pool"
+msgstr "Adicionar um dispositivo ao cache pool"
 
 msgid "Add a log device to a pool"
-msgstr "Adicionar um dispositivo de log à pool"
+msgstr "Adicionar um dispositivo de log a um pool"
 
 msgid "Add a spare device to a pool"
 msgstr "Adicionar um dispositivo suplente à pool"
@@ -536,7 +543,7 @@ msgid "Add a virtual device to a pool"
 msgstr "Adicionar um dispositivo virtual à pool"
 
 msgid "Add additional scheduled self-test."
-msgstr "Adicionar um novo auto-teste calendarizado."
+msgstr "Adicionar um novo auto-teste agendado."
 
 msgid "Add any supplemental parameters."
 msgstr "Adicione qualquer parâmetro suplementar."
@@ -554,16 +561,16 @@ msgid "Add extent"
 msgstr "Adicionar medida"
 
 msgid "Add initiator"
-msgstr "Adicionar activador"
+msgstr "Adicionar iniciador"
 
 msgid "Add initiator group"
-msgstr "Adiciona grupo 'initiator'."
+msgstr "Adicionar um grupo iniciador"
 
 msgid "Add interface"
 msgstr "Adicionar interface"
 
 msgid "Add job"
-msgstr "Adicionar trabalho"
+msgstr "Adicionar tarefa"
 
 msgid "Add mount point"
 msgstr "Adicionar ponto de montagem"
@@ -578,16 +585,16 @@ msgid "Add self-test"
 msgstr "Adicionar auto-teste"
 
 msgid "Add target"
-msgstr "adicionar destino"
+msgstr "Adicionar destino."
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Grupo Adicional"
 
 msgid "Additional Network"
 msgstr "Rede Adicional"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Parâmetros Adicionais"
 
 msgid "Additional Storage"
 msgstr "Armazenamento Adicional"
@@ -603,16 +610,16 @@ msgstr ""
 "Endereço do hastd daemon remoto. Obrigatoriamente um endereço IP estático."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Senha do Admin"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Senha de Administração"
 
 msgid "Administrative WebGUI"
-msgstr "Painel de administração"
+msgstr "Administração WebGUI"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Nome do Administrador"
 
 msgid "Advanced"
 msgstr "Avançado"
@@ -633,23 +640,25 @@ msgid "Advanced settings"
 msgstr "Configurações avançadas"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Anúncio Skew (advskew)"
 
 msgid "Afrikaans"
-msgstr "Afrikaans"
+msgstr "Africanos"
 
 msgid "After"
 msgstr "Depois"
 
 msgid "After - File-deletions will be done after the transfer has completed."
-msgstr "English"
+msgstr ""
+"Após - as exclusões de arquivo serão feitas após a conclusão da "
+"transferência."
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
-"Depois de clicar em \"Salvar\" também poderá ser necessário proceder a um ou "
-"mais dos seguinte passos, antes de poder aceder novamente ao servidor:"
+"Depois de clicar em \"Salvar\", pode ser necessário mais alguns passos, "
+"antes de poder acessar o servidor novamente."
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
@@ -662,7 +671,7 @@ msgid "Age"
 msgstr "Idade"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Protocolo de Incorporação"
 
 msgid "Aggressive"
 msgstr "Agressivo"
@@ -678,13 +687,13 @@ msgid "Alert Level"
 msgstr "Nivel de Alerta"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritmo"
 
 msgid "All"
 msgstr "Todos"
 
 msgid "All Dirs"
-msgstr ""
+msgstr "Todos os Diretórios"
 
 msgid "All data from the following statistics have been deleted:"
 msgstr "Foram apagados todos os dados relativos às seguintes estatisticas:"
@@ -693,33 +702,33 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
-"Todos os dados na \"path\" foram re-escritos. PAra evitar dados/permissões "
-"inválidos, é recomendado utilizar um directório UFS vazio."
+"Todos os dados na \"path\" foram re-escritos. Para evitar dados/permissões "
+"inválidos, é recomendado utilizar um diretório UFS vazio."
 
 msgid "All data will be lost when you activate this option!"
-msgstr "Todos os dados serão perdidos quando activar esta opção!"
+msgstr "Todos os dados serão perdidos quando ativar esta opção!"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
 msgstr ""
-"Todas as directorias requerem que o caminho esteja montado, mas a Directoria "
-"%s não está montada."
+"Todos os diretórios precisam de um path montado, mas o Path %s não está "
+"montado."
 
 msgid "All disks are imported."
 msgstr "Todos os discos foram importados"
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Todos os discos criptografados foram importados."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
 msgstr ""
-"Todas as partilhas usam a opção 'usedots' logo compondo os nomes de "
-"ficheiro. Directoria pai e qualquer coisa começando com .Apple é ilegal."
+"Todas os compartilhamentos que usam a opção 'usedots' para formar os nomes "
+"de arquivos. Pastas ou qualquer outro. É incompatível com Apple."
 
 msgid "All software RAID disks are imported."
-msgstr ""
+msgstr "Todos Discos software RAID foram importados."
 
 msgid "Alloc"
 msgstr "(Allocate Storage) Designar espaço de arquivo"
@@ -728,24 +737,25 @@ msgid "Allow"
 msgstr "Permitir"
 
 msgid "Allow New Files"
-msgstr ""
+msgstr "Permitir Arquivos Novos"
 
 msgid "Allow TLS connections only."
 msgstr "Permitir apenas ligações TLS."
 
 msgid "Allow client access to accounts that have null passwords."
-msgstr "Permitir o acesso a clientes com palavras-passe em branco."
+msgstr "Permitir o acesso à clientes com senhas em branco."
 
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr ""
-"Permitir aos clientes tentar guardar uma directoria com atibutos OS/2."
+"Permitir que os clientes tentem armazenar atributos OS/2 estendidos no "
+"compartilhamento."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Permitir aos clientes continuar uploads e downloads interrompidos."
 
 msgid "Allow new files to be created."
-msgstr "Permitir novos ficheiros serem criados."
+msgstr "Permitir que novos arquivos sejam criados."
 
 msgid "Allow to start UPS from battery"
 msgstr "Permitir iniciar UPS a partir da bateria"
@@ -791,13 +801,13 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Fluxos de Dados Alternativo"
 
 msgid "Alternate TCP port. (Default is 873)."
-msgstr ""
+msgstr "Porta Alternativa TCP. (O padrão é 873)."
 
 msgid "Alternative configuration directory."
-msgstr ""
+msgstr "Configuração Alternativa de Diretório."
 
 msgid "Always"
 msgstr "Sempre"
@@ -806,7 +816,7 @@ msgid "Always On"
 msgstr "Sempre Activos"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Sempre Scaneie"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "Condições Ambientais a partir de Equipamentos de Medição Externos"
@@ -926,6 +936,9 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
 msgid "Asynchronous I/O"
+msgstr ""
+
+msgid "At least one interface must be selected."
 msgstr ""
 
 msgid ""
@@ -3616,6 +3629,9 @@ msgstr ""
 msgid "Execute now"
 msgstr "Executar agora"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr ""
 
@@ -3695,9 +3711,6 @@ msgstr "Opções adicionais para o rsync (valor por defeito: vazio)"
 
 msgid "FAT32"
 msgstr ""
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr ""
@@ -5358,6 +5371,9 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr ""
 
@@ -6116,6 +6132,9 @@ msgid "Passwords don't match."
 msgstr ""
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
+msgstr ""
+
+msgid "Paste a private key in PEM format here."
 msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
@@ -8099,6 +8118,13 @@ msgstr ""
 msgid "The IP address that this hostname represents."
 msgstr "O endereço IP que este nome de anfitrião representa."
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr ""
 
@@ -8614,6 +8640,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr ""
 
@@ -8837,9 +8866,6 @@ msgstr "Deve haver pelo menos 3 discos num raidz2."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "Tem que haver pelo menos 4 discos em um raidz3."
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Tem de escolher pelo menos uma interface."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -9716,6 +9742,9 @@ msgstr "Desconhecido"
 msgid "Unknown Activity"
 msgstr ""
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr ""
 
@@ -10555,3 +10584,9 @@ msgstr "para"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Tem de escolher pelo menos uma interface."

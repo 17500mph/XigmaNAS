@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
 "PO-Revision-Date: 2017-04-06 18:11+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:26+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -884,6 +884,9 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Sunucuyu kapatmak istediğinizden emin misiniz?"
 
 msgid "Asynchronous I/O"
+msgstr ""
+
+msgid "At least one interface must be selected."
 msgstr ""
 
 msgid ""
@@ -3538,6 +3541,9 @@ msgstr ""
 msgid "Execute now"
 msgstr ""
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr ""
 
@@ -3613,9 +3619,6 @@ msgstr "Rsync için extra ayarlar(genellikle boştur)."
 
 msgid "FAT32"
 msgstr ""
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr ""
@@ -5238,6 +5241,9 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr ""
 
@@ -5967,6 +5973,9 @@ msgid "Passwords don't match."
 msgstr ""
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
+msgstr ""
+
+msgid "Paste a private key in PEM format here."
 msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
@@ -7901,6 +7910,13 @@ msgstr ""
 msgid "The IP address that this hostname represents."
 msgstr ""
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr ""
 
@@ -8369,6 +8385,9 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr ""
 
@@ -8577,9 +8596,6 @@ msgstr "Raidz2 için 3 disk seçmelisin."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr ""
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Bir arayüz seçmelisin."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -9375,6 +9391,9 @@ msgstr ""
 msgid "Unknown Activity"
 msgstr ""
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr ""
 
@@ -10160,3 +10179,9 @@ msgstr "->"
 
 msgid "umount"
 msgstr "ayır"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Bir arayüz seçmelisin."

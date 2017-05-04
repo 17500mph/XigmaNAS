@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-03-27 00:11+0000\n"
+"POT-Creation-Date: 2017-05-04 16:00+0000\n"
 "PO-Revision-Date: 2017-03-28 18:22+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-25 09:25+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-04 16:16+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -937,6 +937,9 @@ msgstr "Biztos, hogy kikapcsolod a szervert?"
 
 msgid "Asynchronous I/O"
 msgstr "Aszinkron I/O"
+
+msgid "At least one interface must be selected."
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3761,6 +3764,9 @@ msgstr ""
 msgid "Execute now"
 msgstr "Futtatás most"
 
+msgid "Expand device to use all available space."
+msgstr ""
+
 msgid "Expandsz"
 msgstr "Kiterjeszthetőségi méret"
 
@@ -3841,9 +3847,6 @@ msgstr "Extra beállítások az rsynchez (általában üres)"
 
 msgid "FAT32"
 msgstr "FAT32"
-
-msgid "FEC (Fast EtherChannel)"
-msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
 msgstr "FRU információ"
@@ -5567,6 +5570,9 @@ msgstr "Modell neve"
 msgid "Modified"
 msgstr "Módosítva"
 
+msgid "Modify"
+msgstr ""
+
 msgid "Modify Service"
 msgstr "Szolgáltatás módosítása"
 
@@ -6346,6 +6352,9 @@ msgstr "A jelszavak nem egyeznek."
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Illessz be ide egy PEM-formátumú RSA PRIVÁT KULCS-ot."
+
+msgid "Paste a private key in PEM format here."
+msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Másold ide az aláírt tanúsítványt X.509 PEM formátumban."
@@ -8398,6 +8407,13 @@ msgstr "Az eszköz IP címe."
 msgid "The IP address that this hostname represents."
 msgstr "Erre az állomásnévre mutató IP cím."
 
+msgid ""
+"The LAGG interface cannot be added because the interface name already exists."
+msgstr ""
+
+msgid "The LAGG protocol is invalid."
+msgstr ""
+
 msgid "The LAN IP address will be reset to"
 msgstr "A LAN IP címét visszaállítjuk erre:"
 
@@ -8946,6 +8962,9 @@ msgid ""
 msgstr ""
 "RAID neve csak a következő karaktereket tartalmazhatja:  a-z, A-Z, 0-9."
 
+msgid "The name of the interface is wrong."
+msgstr ""
+
 msgid "The name of the media server cannot be empty."
 msgstr "A médiaszerver neve nem lehet üres."
 
@@ -9182,9 +9201,6 @@ msgstr "A raidz2-ben legalább 2 lemeznek kell lennie."
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr "A raidz3-ben legalább 4 lemeznek kell lennie."
-
-msgid "There must be selected a minimum of 1 interface."
-msgstr "Legalább egy interfészt kell választania."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -10120,6 +10136,9 @@ msgstr "Ismeretlen"
 msgid "Unknown Activity"
 msgstr "Ismeretlen aktivitás"
 
+msgid "Unknown Aggregation Protocol"
+msgstr ""
+
 msgid "Unknown or Unformatted"
 msgstr "Ismeretlen vagy formázatlan"
 
@@ -10961,3 +10980,9 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "FEC (Fast EtherChannel)"
+#~ msgstr "FEC (Fast EtherChannel)"
+
+#~ msgid "There must be selected a minimum of 1 interface."
+#~ msgstr "Legalább egy interfészt kell választania."
