@@ -106,6 +106,23 @@ $l_lagg_protocol = [
 	'roundrobin' => gtext('Roundrobin'),
 	'none' => gtext('None')
 ];
+$ports_available = false;
+$a_available_interfaces = get_interface_list(); // get all known interfaces from system
+foreach($sphere->grid as $row): // test all lagg
+	if(empty($a_available_interfaces)): // don't continue if list of remaining interfaces is empty
+		break; // break foreach
+	endif;
+	if(!empty($row['laggport'])):
+		$a_available_interfaces = array_diff_key($a_available_interfaces,array_flip($row['laggport']));
+	endif;
+endforeach;
+foreach($a_available_interfaces as $interface_name => $interface_detail):
+	if(preg_match('/^lagg[\d]+$/i',$interface_name)): // skip lagg interfaces
+		continue;
+	endif;
+	$ports_available = true;
+	break;
+endforeach;
 $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('LAGG')];
 include 'fbegin.inc';
 echo $sphere->doj();
@@ -196,7 +213,9 @@ echo $sphere->doj();
 		</tbody>
 		<tfoot>
 <?php
-			echo $sphere->html_footer_add(6);
+			if($ports_available):
+				echo $sphere->html_footer_add(6);
+			endif;
 ?>
 		</tfoot>
 	</table>
