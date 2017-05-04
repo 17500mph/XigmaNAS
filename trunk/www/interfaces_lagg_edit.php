@@ -62,51 +62,61 @@ $l_lagg_protocol = [
 	'none' => gtext('None')
 ];
 $input_errors = [];
-$disable_button_save = false;
-$mode_page = PAGE_MODE_ADD;
-if(filter_has_var(INPUT_POST,'submit') && is_string($_POST['submit'])):
-	switch($_POST['submit']):
-		case 'add':
-			break;
+$hide_button_save = false;
+if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
+	switch($action):
 		case 'cancel':
 			header($sphere->parent->header());
 			exit;
 			break;
 		case 'clone':
+			$sphere->row[$sphere->row_identifier()] = uuid();
 			$mode_page = PAGE_MODE_CLONE;
 			break;
 		case 'save':
-			if(isset($_POST[$sphere->row_identifier()]) && is_string($_POST[$sphere->row_identifier()]) && is_uuid_v4($_POST[$sphere->row_identifier()])):
-				$mode_page = PAGE_MODE_POST;
-			else:
+			if(false === ($id = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
 				header($sphere->parent->header());
 				exit;
 			endif;
+			if(!is_uuid_v4($id)):
+				header($sphere->parent->header());
+				exit;
+			endif;
+			$sphere->row[$sphere->row_identifier()] = $id;
+			$mode_page = PAGE_MODE_POST;
 			break;
 		default:
-			if(is_uuid_v4($_POST['submit'])):
-				$mode_page = PAGE_MODE_EDIT;
-			else:
+			header($sphere->parent->header());
+			exit;
+			break;
+	endswitch;
+elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
+	switch($action):
+		case 'add':
+			$sphere->row[$sphere->row_identifier()] = uuid();
+			$mode_page = PAGE_MODE_ADD;
+			break;
+		case 'edit':
+			if(false === ($id = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
 				header($sphere->parent->header());
 				exit;
 			endif;
+			if(!is_uuid_v4($id)):
+				header($sphere->parent->header());
+				exit;
+			endif;
+			$sphere->row[$sphere->row_identifier()] = $id;
+			$mode_page = PAGE_MODE_EDIT;
+			break;
+		default:
+			header($sphere->parent->header());
+			exit;
 			break;
 	endswitch;
+else:
+	header($sphere->parent->header());
+	exit;
 endif;
-switch($mode_page):
-	case PAGE_MODE_ADD:
-		$sphere->row[$sphere->row_identifier()] = uuid();
-		break;
-	case PAGE_MODE_CLONE:
-		$sphere->row[$sphere->row_identifier()] = uuid();
-		break;
-	case PAGE_MODE_EDIT:
-		$sphere->row[$sphere->row_identifier()] = $_POST['submit'];
-		break;
-	case PAGE_MODE_POST:
-		$sphere->row[$sphere->row_identifier()] = $_POST[$sphere->row_identifier()];
-		break;
-endswitch;
 $sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
 $isrecordnew = (false === $sphere->row_id);
 switch($mode_page):
@@ -133,8 +143,8 @@ switch($mode_page):
 			header($sphere->parent->header());
 			exit;
 		endif;
-		$sphere->row['enable'] = filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
-		$sphere->row['protected'] = filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
+		$sphere->row['enable'] = filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+		$sphere->row['protected'] = filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 		$interface_id = 0;
 		$interface_format = 'lagg%d';
 		do {
@@ -142,9 +152,9 @@ switch($mode_page):
 			$interface_id++;
 		} while(false !== array_search_ex($interface_name,$sphere->grid,'if'));
 		$sphere->row['if'] = $interface_name;
-		$sphere->row['laggproto'] = filter_has_var(INPUT_POST,'laggproto') ? filter_input(INPUT_POST,'laggproto') : $sphere->row_default['laggproto'];
-		$sphere->row['laggport'] = filter_has_var(INPUT_POST,'laggport') ? filter_input(INPUT_POST,'laggport',FILTER_DEFAULT,FILTER_FORCE_ARRAY) : $sphere->row_default['laggport'];
-		$sphere->row['desc'] = filter_has_var(INPUT_POST,'desc') ? filter_input(INPUT_POST,'desc') : $sphere->row_default['desc'];
+		$sphere->row['laggproto'] = filter_input(INPUT_POST,'laggproto',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => $sphere->row_default['laggproto']]]);
+		$sphere->row['laggport'] = filter_input(INPUT_POST,'laggport',FILTER_UNSAFE_RAW,['flags' => FILTER_FORCE_ARRAY,'options' => ['default' => $sphere->row_default['laggport']]]);
+		$sphere->row['desc'] = filter_input(INPUT_POST,'desc',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => $sphere->row_default['desc']]]);
 		// adjust page mode information
 		$mode_page = PAGE_MODE_ADD;
 		break;
@@ -153,29 +163,30 @@ switch($mode_page):
 			header($sphere->parent->header());
 			exit;
 		endif;
-		$sphere->row['enable'] = isset($sphere->grid[$sphere->row_id]['enable']);
-		$sphere->row['protected'] = isset($sphere->grid[$sphere->row_id]['protected']);
-		$sphere->row['if'] = $sphere->grid[$sphere->row_id]['if'];
-		$sphere->row['laggproto'] = $sphere->grid[$sphere->row_id]['laggproto'];
-		$sphere->row['laggport'] = $sphere->grid[$sphere->row_id]['laggport'];
-		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'];
+		$sphere->row['enable'] = isset($sphere->grid[$sphere->row_id]['enable']) && (is_bool($sphere->grid[$sphere->row_id]['enable']) ? $sphere->grid[$sphere->row_id]['enable'] : true);
+		$sphere->row['protected'] = isset($sphere->grid[$sphere->row_id]['protected']) && (is_bool($sphere->grid[$sphere->row_id]['protected']) ? $sphere->grid[$sphere->row_id]['protected'] : true);
+		$sphere->row['if'] = filter_var($sphere->grid[$sphere->row_id]['if'],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		
+		$sphere->row['laggproto'] = filter_var($sphere->grid[$sphere->row_id]['laggproto'],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['laggport'] = filter_var($sphere->grid[$sphere->row_id]['laggport'],FILTER_UNSAFE_RAW,['flags' => FILTER_FORCE_ARRAY,'options' => ['default' => []]]);
+		$sphere->row['desc'] = filter_var($sphere->grid[$sphere->row_id]['desc'],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
 		break;
 	case PAGE_MODE_POST:
-		$sphere->row['enable'] = filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
-		$sphere->row['protected'] = filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
-		$sphere->row['if'] = filter_has_var(INPUT_POST,'if') ? filter_input(INPUT_POST,'if') : '';
-		$sphere->row['laggproto'] = filter_has_var(INPUT_POST,'laggproto') ? filter_input(INPUT_POST,'laggproto') : $sphere->row_default['laggproto'];
-		$sphere->row['laggport'] = filter_has_var(INPUT_POST,'laggport') ? filter_input(INPUT_POST,'laggport',FILTER_DEFAULT,FILTER_FORCE_ARRAY) : $sphere->row_default['laggport'];
-		$sphere->row['desc'] = filter_has_var(INPUT_POST,'desc') ? filter_input(INPUT_POST,'desc') : $sphere->row_default['desc'];
+		$sphere->row['enable'] = filter_input(INPUT_POST,'enable',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+		$sphere->row['protected'] = filter_input(INPUT_POST,'protected',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+		$sphere->row['if'] = filter_input(INPUT_POST,'if',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['laggproto'] = filter_input(INPUT_POST,'laggproto',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['laggport'] = filter_input(INPUT_POST,'laggport',FILTER_UNSAFE_RAW,['flags' => FILTER_FORCE_ARRAY,'options' => ['default' => []]]);
+		$sphere->row['desc'] = filter_input(INPUT_POST,'desc',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
 		$reqdfields = ['laggproto'];
 		$reqdfieldsn = [gtext('Aggregation Protocol')];
 		$reqdfieldst = ['string'];
 		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		if(empty($input_errors)):
-			if(!preg_match('/^lagg[\d]+$/',$sphere->row['if'])):
+			if(!preg_match('/^lagg[\d]+$/i',$sphere->row['if'])):
 				$input_errors[] = gtext('The name of the interface is wrong.');
-				$disable_button_save = true;
+				$hide_button_save = true;
 			endif;
 		endif;
 		if(empty($input_errors)):
@@ -192,7 +203,7 @@ switch($mode_page):
 			if($isrecordnew):
 				if(false !== array_search_ex($sphere->row['if'],$sphere->grid,'if')):
 					$input_errors[] = gtext('The LAGG interface cannot be added because the interface name already exists.');
-					$disable_button_save = true;
+					$hide_button_save = true;
 				endif;
 			endif;
 		endif;
@@ -205,17 +216,34 @@ switch($mode_page):
 		endif;
 		break;
 endswitch;
-$l_port = [];
-foreach(get_interface_list() as $interface_name => $interface_detail):
-	if(preg_match('/lagg/i',$interface_name)): // skip lagg interfaces
+$l_selectable_ports = [];
+$l_available_ports = [];
+$a_remaining_interfaces = get_interface_list(); // get all known interfaces from system
+$a_available_interfaces = $a_remaining_interfaces;
+foreach($sphere->grid as $row): // test all lagg
+	if(empty($a_remaining_interfaces)): // don't continue if list of remaining interfaces is empty
+		break; // break foreach
+	endif;
+	if(!empty($row['laggport'])):
+		if($row['if'] !== $sphere->row['if']): // remove interfaces used by foreign lagg interfaces
+			$a_remaining_interfaces = array_diff_key($a_remaining_interfaces,array_flip($row['laggport']));
+		endif;
+		if(!empty($a_available_interfaces)): // remove from available interfaces
+			$a_available_interfaces = array_diff_key($a_available_interfaces,array_flip($row['laggport']));
+		endif;
+	endif;
+endforeach;
+foreach($a_remaining_interfaces as $interface_name => $interface_detail):
+	if(preg_match('/^lagg[\d]+$/i',$interface_name)): // skip lagg interfaces
 		continue;
 	endif;
-	foreach($sphere->grid as $row): // test all lagg
-		if(($row['if'] !== $sphere->row['if']) && in_array($interface_name,$row['laggport'])): // exclude interfaces in laggs other than self
-			continue 2;
-		endif;
-	endforeach;
-	$l_port[$interface_name] = htmlspecialchars(sprintf('%s (%s)',$interface_name,$interface_detail['mac']));
+	$l_selectable_ports[$interface_name] = htmlspecialchars(sprintf('%s (%s)',$interface_name,$interface_detail['mac']));
+endforeach;
+foreach($a_available_interfaces as $interface_name => $interface_detail):
+	if(preg_match('/^lagg[\d]+$/i',$interface_name)): // skip lagg interfaces
+		continue;
+	endif;
+	$l_available_ports[$interface_name] = htmlspecialchars(sprintf('%s (%s)',$interface_name,$interface_detail['mac']));
 endforeach;
 $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('LAGG'),$isrecordnew ? gtext('Add') : gtext('Modify')];
 include 'fbegin.inc';
@@ -251,15 +279,18 @@ $sphere->doj();
 <?php
 			html_inputbox2('if',gtext('Interface'),$sphere->row['if'],'',true,5,true);
 			html_combobox2('laggproto',gtext('Aggregation Protocol'),$sphere->row['laggproto'],$l_lagg_protocol,'',true);
-			html_listbox2('laggport',gtext('Ports'),$sphere->row['laggport'],$l_port,gtext('Note: Ctrl-click (or command-click on the Mac) to select multiple entries.'),true);
+			html_listbox2('laggport',gtext('Ports'),$sphere->row['laggport'],$l_selectable_ports,gtext('Note: Ctrl-click (or command-click on the Mac) to select multiple entries.'),true);
 			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40);
 ?>
 		</tbody>
 	</table>
 	<div id="submit">
 <?php
-		echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'),NULL,$disable_button_save);
-		if(empty($input_errors) && !$isrecordnew):
+		if(!$hide_button_save):
+			echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
+		endif;
+		
+		if(empty($input_errors) && !$isrecordnew && !empty($l_available_ports)):
 			echo $sphere->html_button('clone',gtext('Clone'));
 		endif;
 		echo $sphere->html_button('cancel',gtext('Cancel'));
