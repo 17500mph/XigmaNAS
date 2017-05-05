@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-05-04 16:00+0000\n"
-"PO-Revision-Date: 2017-05-01 19:28+0000\n"
+"PO-Revision-Date: 2017-05-04 23:43+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-04 16:17+0000\n"
+"X-Launchpad-Export-Date: 2017-05-05 16:21+0000\n"
 "X-Generator: Launchpad (build 18366)\n"
 "Language: ca_ES\n"
 
@@ -958,7 +958,7 @@ msgid "Asynchronous I/O"
 msgstr "E/S asíncrona"
 
 msgid "At least one interface must be selected."
-msgstr ""
+msgstr "Com a mínim una interfície ha de ser seleccionat."
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -3830,7 +3830,7 @@ msgid "Execute now"
 msgstr "Executar ara"
 
 msgid "Expand device to use all available space."
-msgstr ""
+msgstr "Ampliar dispositiu per fer servir tot l'espai disponible."
 
 msgid "Expandsz"
 msgstr "Expandsz"
@@ -5658,7 +5658,7 @@ msgid "Modified"
 msgstr "Modificat"
 
 msgid "Modify"
-msgstr ""
+msgstr "Modifica"
 
 msgid "Modify Service"
 msgstr "Modifica Servei"
@@ -6444,7 +6444,7 @@ msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Enganxar una clau privada RSA en format PEM aquí."
 
 msgid "Paste a private key in PEM format here."
-msgstr ""
+msgstr "Enganxar una clau privada en format PEM aquí."
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Enganxeu un certificat signat  en format X.509 PEM aquí."
@@ -8505,9 +8505,11 @@ msgstr "L'adreça IP que representa aquest nom d'amfitrió."
 msgid ""
 "The LAGG interface cannot be added because the interface name already exists."
 msgstr ""
+"La interfície Lagg no es pot afegir per que el nom de la interfície ja "
+"existeix."
 
 msgid "The LAGG protocol is invalid."
-msgstr ""
+msgstr "El protocol Lagg no és vàlid."
 
 msgid "The LAN IP address will be reset to"
 msgstr "L'adreça IP de la LAN es restablirà a"
@@ -9068,7 +9070,7 @@ msgid ""
 msgstr "El nom del RAID només pot constar dels caràcters a-z, A-Z, 0-9."
 
 msgid "The name of the interface is wrong."
-msgstr ""
+msgstr "El nom de la interfície es erroni."
 
 msgid "The name of the media server cannot be empty."
 msgstr "El nom del servidor de mitjans no pot estar buit."
@@ -10269,7 +10271,7 @@ msgid "Unknown Activity"
 msgstr "Activitat desconeguda"
 
 msgid "Unknown Aggregation Protocol"
-msgstr ""
+msgstr "Protocol d'agregació desconegut"
 
 msgid "Unknown or Unformatted"
 msgstr "Desconegut o no formatat."
@@ -11128,9 +11130,3 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
-
-#~ msgid "FEC (Fast EtherChannel)"
-#~ msgstr "FEC (Fast EtherChannel)"
-
-#~ msgid "There must be selected a minimum of 1 interface."
-#~ msgstr "Hi ha d'haver una interfície com a mínim seleccionat."
