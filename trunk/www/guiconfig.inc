@@ -977,7 +977,7 @@ function make_headermenu_extensions(array &$menu) {
 						$node_list = $node_list_nolang;
 					elseif(!empty($node_list_lang)): // localised menus
 						$node_list = $node_list_lang;
-					elseif(!isempty($node_list_en_US)): // fallback when new languages have been added but menu.inc doesn't have it.
+					elseif(!empty($node_list_en_US)): // fallback when new languages have been added but menu.inc doesn't have it.
 						$node_list = $node_list_en_US;
 					else:
 						$node_list = [];
