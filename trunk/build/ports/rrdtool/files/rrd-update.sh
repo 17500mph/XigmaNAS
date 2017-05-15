@@ -246,7 +246,7 @@ if [ $RUN_TMP -eq 1 ]; then
 			'RRA:AVERAGE:0.5:1:576' 'RRA:AVERAGE:0.5:6:672' 'RRA:AVERAGE:0.5:24:732' 'RRA:AVERAGE:0.5:144:1460'
 	fi
 	if [ -f "$FILE" ]; then
-		/usr/local/bin/rrdtool update "$FILE" N:$T1:$T2 2>> /tmp/rrdgraphs-error.log 2>> /tmp/rrdgraphs-error.log
+		/usr/local/bin/rrdtool update "$FILE" N:$T1:$T2 2>> /tmp/rrdgraphs-error.log
 	fi
 fi
 # CPU frequency
