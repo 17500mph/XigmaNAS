@@ -149,8 +149,8 @@ $l_type = [
 	'3' => gtext('Shutdown')
 ];
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'),(RECORD_NEW !== $mode_record) ? gtext('Edit') : gtext('Add')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -175,26 +175,34 @@ $(window).on("load", function() {
 	</ul></td></tr>
 </table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
-	if (!empty($errormsg)) { print_error_box($errormsg); }
-	if (!empty($input_errors)) { print_input_errors($input_errors); }
-	if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
-	?>
+<?php
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable', gtext('Settings'), $sphere_record['enable'], gtext('Enable'));?>
+<?php
+			html_titleline_checkbox2('enable', gtext('Settings'), $sphere_record['enable'], gtext('Enable'));
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a name for the command.'),false, 40,false,false,40,gtext('Enter a name'));
-			html_inputbox2('value',gtext('Command'),$sphere_record['value'],gtext('The command to be executed.'),true,60,false,false,256,gtext('Enter the command'));
+			html_inputbox2('value',gtext('Command'),$sphere_record['value'],gtext('The command to be executed.'),true,60,false,false,1024,gtext('Enter the command'));
 			html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('Enter a description for your reference.'),false,60,false,false,60,gtext('Enter a comment'));
-			html_combobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Execute command pre or post system initialization (booting) or before system shutdown.'),true,isset($pconfig['type']));
-			?>
+			html_combobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Execute command pre or post system initialization (booting) or before system shutdown.'),true,false);
+?>
 		</tbody>
 	</table>
 	<div id="submit">
@@ -202,6 +210,10 @@ $(window).on("load", function() {
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
-<?php include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
