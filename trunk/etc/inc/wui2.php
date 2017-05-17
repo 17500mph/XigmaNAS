@@ -312,7 +312,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 			'name' => $this->GetCtrlName(),
 			'class' => $this->GetClassOfInputText(),
 			'size' => $this->GetSize(),
-			'value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),
+			'value' => $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
 		$root->addElement('input',$attributes);
@@ -339,7 +339,7 @@ class HTMLPasswordBox2 extends HTMLEditBox2 {
 			'name' => $ctrlname,
 			'class' => $this->GetClassOfInputPassword(),
 			'size' => $this->GetSize(),
-			'value'=> htmlspecialchars($this->GetValue(),ENT_QUOTES),
+			'value'=> $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
 		$root->addElement('input',$attributes);
@@ -402,7 +402,7 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'name' => $ctrlname,
 			'class' => $this->GetClassOfInputPassword(),
 			'size' => $this->GetSize(),
-			'value'=> htmlspecialchars($this->GetValue(),ENT_QUOTES)
+			'value'=> $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
 		$o_div1 = $root->addElement('div');
@@ -413,7 +413,7 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'name' => $ctrlnameconf,
 			'class' => $this->GetClassOfInputPassword(),
 			'size' => $this->GetSize(),
-			'value' => htmlspecialchars($this->GetValueConf(),ENT_QUOTES)
+			'value' => $this->GetValueConf()
 		];
 		$this->GetAttributesConfirm($attributes);
 		$o_div2 = $root->addElement('div');
@@ -513,7 +513,7 @@ class HTMLFileChooser2 extends HTMLEditBox2 {
 			'id' => $ctrlname,
 			'name' => $ctrlname,
 			'class' => 'formfld',
-			'value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),
+			'value' => $this->GetValue(),
 			'size' => $size
 		];
 		$this->GetAttributes($attributes);
@@ -577,8 +577,15 @@ class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
 	function ComposeInner(&$root) {
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamenetmask = $this->GetCtrlNameNetmask();
-		$valuenetmask = htmlspecialchars($this->GetValueNetmask(),ENT_QUOTES);
-		$attributes = ['type' => 'text','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),'size' => $this->GetSize()];
+		$valuenetmask = $this->GetValueNetmask();
+		$attributes = [
+			'type' => 'text',
+			'id' => $ctrlname,
+			'name' => $ctrlname,
+			'class' => 'formfld',
+			'value' => $this->GetValue(),
+			'size' => $this->GetSize()
+		];
 		$root->addElement('input',$attributes);
 		$slash = $root->createTextNode(' / ');
 		$root->appendChild($slash);
@@ -608,7 +615,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'id' => $ctrlname,
 			'name' => $ctrlname,
 			'class' => 'formfld',
-			'value' => htmlspecialchars($this->GetValue(),ENT_QUOTES),
+			'value' => $this->GetValue(),
 			'size' => $this->GetSize()
 		];
 		$root->addElement('input',$attributes);
@@ -619,7 +626,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'id' => $ctrlnamenetmask,
 			'name' => $ctrlnamenetmask,
 			'class' => 'formfld',
-			'value' => htmlspecialchars($this->GetValueNetmask(),ENT_QUOTES),
+			'value' => $this->GetValueNetmask(),
 			'size' => 2
 		];
 		$root->addElement('input',$attributes);
@@ -721,7 +728,7 @@ class HTMLSelectControl2 extends HTMLBaseControlJS2 {
 	}
 	function ComposeInner(&$root) {
 		$ctrlname = $this->GetCtrlName();
-		$value = htmlspecialchars($this->GetValue(),ENT_QUOTES);
+		$value = $this->GetValue();
 		$options = $this->GetOptions();
 		$attributes = [
 			'id' => $ctrlname,
