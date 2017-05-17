@@ -131,7 +131,7 @@ proftpd_mkconf()
 		-o "DefaultServer on" -n \
 		-v "concat('DefaultAddress ',//system/hostname)" -n \
 		-o "UseIPv6 on" -n \
-		-m "//ftpd" \
+		-m "(//ftpd[enable])[1]" \
 		-v "concat('Port ',port)" -n \
 		-o "User nobody" -n \
 		-o "Group nogroup" -n \
