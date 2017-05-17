@@ -41,14 +41,14 @@ sshd_mkconf()
 
 	# Create sshd_config file
 	/usr/local/bin/xml sel -t \
-		-o "HostKeyAlgorithms ssh-ed25519,ssh-rsa,ssh-dss" -n \
-		-o "HostKey /var/etc/ssh/ssh_host_rsa_key" -n \
-		-o "SyslogFacility LOCAL3" -n \
-		-o "Protocol 2" -n \
-		-o "UseDNS no" -n \
-		-i "string-length(//sshd/subsystem) > 0" -v "concat('Subsystem ', //sshd/subsystem)" -n -b \
-		-i "string-length(//sshd/subsystem) = 0" -v "concat('Subsystem ', 'sftp /usr/libexec/sftp-server')" -n -b \
-		-m "//sshd" \
+		-m "(//sshd[enable])[1]" \
+			-o "HostKeyAlgorithms ssh-ed25519,ssh-rsa,ssh-dss" -n \
+			-o "HostKey /var/etc/ssh/ssh_host_rsa_key" -n \
+			-o "SyslogFacility LOCAL3" -n \
+			-o "Protocol 2" -n \
+			-o "UseDNS no" -n \
+			-i "string-length(subsystem) > 0" -v "concat('Subsystem ',subsystem)" -n -b \
+			-i "string-length(subsystem) = 0" -v "concat('Subsystem ','sftp /usr/libexec/sftp-server')" -n -b \
 			-i "count(challengeresponseauthentication) = 0" -o "ChallengeResponseAuthentication no" -n -b \
 			-i "count(challengeresponseauthentication) > 0" -o "ChallengeResponseAuthentication yes" -n -b \
 			-i "count(port) > 0" -v "concat('Port ',port)" -n -b \
