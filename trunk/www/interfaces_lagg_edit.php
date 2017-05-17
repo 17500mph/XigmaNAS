@@ -74,7 +74,8 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 			$mode_page = PAGE_MODE_CLONE;
 			break;
 		case 'save':
-			if(false === ($id = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
+			$id = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+			if(false === $id):
 				header($sphere->parent->header());
 				exit;
 			endif;
@@ -97,7 +98,8 @@ elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['
 			$mode_page = PAGE_MODE_ADD;
 			break;
 		case 'edit':
-			if(false === ($id = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
+			$id = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+			if(false === $id):
 				header($sphere->parent->header());
 				exit;
 			endif;
