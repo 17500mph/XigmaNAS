@@ -80,8 +80,7 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 //	grid related
 	public $grid = [];
 	public $row = [];
-	public $grid_default =[];
-	public $row_default =[];
+	public $row_default = [];
 //	modes
 	protected $_enadis = NULL;
 //	html class tags
