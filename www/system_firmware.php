@@ -37,11 +37,6 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 function check_firmware_version($locale) {
-/*
-	UNUSED FUNCTION
-	checks with /etc/firm.url to see if a newer firmware version online is available;
-	returns any HTML message it gets from the server
- */
 	global $g;
 	$post = "product=".rawurlencode(get_product_name())
 	      . "&platform=".rawurlencode($g['fullplatform'])
@@ -53,9 +48,10 @@ function check_firmware_version($locale) {
 		$path = $m[2];
 	else:
 		$host = $url;
-		$path = "";
+		$path = '';
 	endif;
-	$rfd = @fsockopen($host,80,$errno,$errstr,3);
+//	$rfd = @fsockopen($host,80,$errno,$errstr,3);
+	$rfd = @fsockopen(sprintf('ssl://%s',$host),443,$errno,$errstr,3);
 	if($rfd):
 		$hdr = "POST $path/checkversion.php?locale=$locale HTTP/1.0\r\n";
 		$hdr .= "Content-Type: application/x-www-form-urlencoded\r\n";
