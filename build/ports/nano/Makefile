@@ -35,11 +35,11 @@ post-build:
 	cd ${WRKSRC}/doc; ${REINPLACE_CMD} \
 		-e 's:SYSCONFDIR:${PREFIX}/etc:g' \
 		-e 's:EXAMPLESDIR:${EXAMPLESDIR}:g' \
-		nano.1 rnano.1 nanorc.5 ${WRKSRC}/doc/${INFO:=.info}
-	${REINPLACE_CMD} -e 's/\\</[[:<:]]/g' -e 's/\\>/[[:>:]]/g' \
-		${WRKSRC}/doc/*.nanorc
+		nano.1 rnano.1 ${WRKSRC}/doc/${INFO:=.info}
 
 post-install:
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/sample.nanorc ${STAGEDIR}${EXAMPLESDIR}
 # NAS4Free install
 	${INSTALL_PROGRAM} -v ${WRKSRC}/src/nano ${NAS4FREE_ROOTFS}/usr/local/bin;
 
