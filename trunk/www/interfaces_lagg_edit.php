@@ -280,8 +280,8 @@ $sphere->doj();
 		<tbody>
 <?php
 			html_inputbox2('if',gtext('Interface'),$sphere->row['if'],'',true,5,true);
-			html_combobox2('laggproto',gtext('Aggregation Protocol'),$sphere->row['laggproto'],$l_lagg_protocol,'',true);
-			html_listbox2('laggport',gtext('Ports'),$sphere->row['laggport'],$l_selectable_ports,gtext('Note: Ctrl-click (or command-click on the Mac) to select multiple entries.'),true);
+			html_radiobox2('laggproto',gtext('Aggregation Protocol'),$sphere->row['laggproto'],$l_lagg_protocol,'',true);
+			html_checkboxbox2('laggport',gtext('Ports'),$sphere->row['laggport'],$l_selectable_ports,'',true);
 			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40);
 ?>
 		</tbody>
