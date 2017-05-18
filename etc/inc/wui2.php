@@ -788,6 +788,39 @@ class HTMLComboBox2 extends HTMLSelectControl2 {
 		parent::__construct('formfld',$ctrlname,$title,$value,$options,$description);
 	}
 }
+class HTMLRadioBox2 extends HTMLComboBox2 {
+	function ComposeInner(&$root) {
+		$ctrlname = $this->GetCtrlName();
+		$value = $this->GetValue();
+		$options = $this->GetOptions();
+		$table = $root->addElement('table',['class' => 'area_data_selection']);
+		$colgroup = $table->addElement('colgroup');
+		$colgroup->addElement('col',['style' => 'width:5%']);
+		$colgroup->addElement('col',['style' => 'width:95%']);
+		$thead = $table->addElement('thead');
+		$tr = $thead->addElement('tr');
+		$tr->addElement('th',['class' => 'lhelc']);
+		$tr->addElement('th',['class' => 'lhebl'],$this->GetTitle());
+		$tbody = $table->addElement('tbody');
+		foreach($options as $option_tag => $option_val):
+			$uuid = sprintf('radio_%s',uuid());
+			$tr = $tbody->addElement('tr');
+			$tdl = $tr->addElement('td',['class' => 'lcelc']);
+			$attributes = [
+				'name' => $ctrlname,
+				'value' => $option_tag,
+				'type' => 'radio',
+				'id' => $uuid
+			];
+			if($value === $option_tag):
+				$attributes['checked'] = 'checked';
+			endif;
+			$tdl->addElement('input',$attributes);
+			$tdr = $tr->addElement('td',['class' => 'lcebl']);
+			$tdr->addElement('label',['for' => $uuid],$option_val);
+		endforeach;
+	}
+}
 class HTMLMountComboBox2 extends HTMLComboBox2 {
 	//	constructor
 	function __construct($ctrlname,$title,$value,$description) {
@@ -850,6 +883,39 @@ class HTMLInterfaceComboBox2 extends HTMLComboBox2 {
 class HTMLListBox2 extends HTMLMultiSelectControl2 {
 	function __construct($ctrlname,$title,$value,$options,$description) {
 		parent::__construct('formselect',$ctrlname,$title,$value,$options,$description);
+	}
+}
+class HTMLCheckboxBox2 extends HTMLListBox2 {
+	function ComposeInner(&$root) {
+		$ctrlname = $this->GetCtrlName();
+		$value = $this->GetValue();
+		$options = $this->GetOptions();
+		$table = $root->addElement('table',['class' => 'area_data_selection']);
+		$colgroup = $table->addElement('colgroup');
+		$colgroup->addElement('col',['style' => 'width:5%']);
+		$colgroup->addElement('col',['style' => 'width:95%']);
+		$thead = $table->addElement('thead');
+		$tr = $thead->addElement('tr');
+		$tr->addElement('th',['class' => 'lhelc']);
+		$tr->addElement('th',['class' => 'lhebl'],$this->GetTitle());
+		$tbody = $table->addElement('tbody');
+		foreach($options as $option_tag => $option_val):
+			$uuid = sprintf('checkbox_%s',uuid());
+			$tr = $tbody->addElement('tr');
+			$tdl = $tr->addElement('td',['class' => 'lcelc']);
+			$attributes = [
+				'name' => sprintf('%s[]',$ctrlname),
+				'value' => $option_tag,
+				'type' => 'checkbox',
+				'id' => $uuid
+			];
+			if(is_array($value) && in_array($option_tag,$value)):
+				$attributes['checked'] = 'checked';
+			endif;
+			$tdl->addElement('input',$attributes);
+			$tdr = $tr->addElement('td',['class' => 'lcebl']);
+			$tdr->addElement('label',['for' => $uuid],$option_val);
+		endforeach;
 	}
 }
 class HTMLSeparator2 extends HTMLBaseControl2 {

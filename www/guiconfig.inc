@@ -557,6 +557,14 @@ function html_combobox2($ctrlname,$title,$value,$options,$desc,$required = false
 	$ctrl->Compose()->flush();
 }
 
+function html_radiobox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = '') {
+	$ctrl = new HTMLRadioBox2($ctrlname,$title,$value,$options,$desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Compose()->flush();
+}
+
 function html_mountcombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLMountComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
@@ -632,6 +640,13 @@ function html_remark2($ctrlname,$title,$text) {
 
 function html_listbox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
 	$ctrl = new HTMLListBox2($ctrlname,$title,$value,$options,$desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Compose()->flush();
+}
+function html_checkboxbox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = '') {
+	$ctrl = new HTMLCheckboxBox2($ctrlname,$title,$value,$options,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
