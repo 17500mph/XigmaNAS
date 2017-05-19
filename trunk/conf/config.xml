@@ -1415,6 +1415,22 @@
 			<command>xxx</command>
 		</job>
 		-->
+		<job>
+			<uuid>26c4bf2b-bfb0-4d03-b2ad-d79da252af8d</uuid>
+			<desc>Monitor ZFS Health</desc>
+			<minute>30</minute>
+			<hour></hour>
+			<day></day>
+			<month></month>
+			<weekday></weekday>
+			<all_mins>0</all_mins>
+			<all_hours>1</all_hours>
+			<all_days>1</all_days>
+			<all_months>1</all_months>
+			<all_weekdays>1</all_weekdays>
+			<who>root</who>
+			<command>/etc/healthcheck.zfs</command>
+		</job>		
 	</cron>
 	<rc>
 		<!--
