@@ -803,6 +803,8 @@ class HTMLRadioBox2 extends HTMLComboBox2 {
 		$tr->addElement('th',['class' => 'lhebl'],$this->GetTitle());
 		$tbody = $table->addElement('tbody');
 		foreach($options as $option_tag => $option_val):
+			//	create a unique identifier for each row.
+			//	use label tag for text column to allow enabling the radio button by clicking on the text
 			$uuid = sprintf('radio_%s',uuid());
 			$tr = $tbody->addElement('tr');
 			$tdl = $tr->addElement('td',['class' => 'lcelc']);
@@ -900,6 +902,8 @@ class HTMLCheckboxBox2 extends HTMLListBox2 {
 		$tr->addElement('th',['class' => 'lhebl'],$this->GetTitle());
 		$tbody = $table->addElement('tbody');
 		foreach($options as $option_tag => $option_val):
+			//	create a unique identifier for each row.
+			//	use label tag for text column to allow toggling the checkbox button by clicking on the text
 			$uuid = sprintf('checkbox_%s',uuid());
 			$tr = $tbody->addElement('tr');
 			$tdl = $tr->addElement('td',['class' => 'lcelc']);
@@ -1413,10 +1417,13 @@ trait co_DOMTools {
 		$node = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
 		$node->addAttributes($attributes);
 		if(preg_match('/\S/',$value)):
+			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
 			$innerhtml = $node->ownerDocument->createDocumentFragment(); // create fragment from $value
 			if($innerhtml->appendXML($value)):
 				$node->appendChild($innerhtml);
 			endif;
+			libxml_clear_errors();
+			libxml_use_internal_errors($saved_setting);
 		endif;
 		return $node;
 	}
