@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-05-04 16:00+0000\n"
-"PO-Revision-Date: 2017-05-05 10:52+0000\n"
-"Last-Translator: Riccardo Capra <caprariccardo@gmail.com>\n"
+"PO-Revision-Date: 2017-05-12 16:24+0000\n"
+"Last-Translator: misterredman <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-10 21:29+0000\n"
-"X-Generator: Launchpad (build 18366)\n"
+"X-Launchpad-Export-Date: 2017-05-19 15:58+0000\n"
+"X-Generator: Launchpad (build 18386)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -462,7 +462,7 @@ msgid "Add Dataset"
 msgstr "Aggiungi Dataset"
 
 msgid "Add Disk"
-msgstr ""
+msgstr "Aggiungi Disco"
 
 msgid "Add Encrypted Volume"
 msgstr "Aggiungi un volume criptato"
@@ -731,7 +731,7 @@ msgstr ""
 ".Parent a qualsiasi cosa che inizi con .Apple illegale."
 
 msgid "All software RAID disks are imported."
-msgstr ""
+msgstr "Tutti i dischi del RAID software vengono importati."
 
 msgid "Alloc"
 msgstr "Imputazione"
@@ -906,6 +906,8 @@ msgstr "Qualsiasi"
 
 msgid "Any service using these disks might become invalid or inaccessible!"
 msgstr ""
+"I servizi che utilizzano questi dischi potrebbero essere invalidati o "
+"diventare inaccessibili!"
 
 msgid "Append user defined shares"
 msgstr "Aggiungi le condivisioni definite dall'utente."
@@ -947,7 +949,7 @@ msgid "Asynchronous I/O"
 msgstr "I/O asincrono"
 
 msgid "At least one interface must be selected."
-msgstr ""
+msgstr "Almeno un'interfaccia deve essere selezionata"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -1034,7 +1036,7 @@ msgid "Authentication Method"
 msgstr "Metodo di autenticazione"
 
 msgid "Authentification method is disabled."
-msgstr ""
+msgstr "Metodo di autenticazione disattivato."
 
 msgid "Authorised Network"
 msgstr "Rete autorizzata"
@@ -1199,6 +1201,7 @@ msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
+"Prima - La cancellazione sarà effettuata prima dell'inizio del trasferimento."
 
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
@@ -1213,7 +1216,7 @@ msgid "Bind DN"
 msgstr "Bind DN"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "Password nascosta"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1508,7 +1511,7 @@ msgid "Check and replace cable"
 msgstr "Controllare e sostituire il cavo"
 
 msgid "Check shared secret"
-msgstr ""
+msgstr "Verifica il shared secret"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -1546,16 +1549,19 @@ msgid "Clear Config And Import Disks"
 msgstr "Cancellare la configurazione ed importare dischi"
 
 msgid "Clear Configuration"
-msgstr ""
+msgstr "Cancella la Configurazione"
 
 msgid "Clear Text Authentication"
-msgstr ""
+msgstr "Autenticazione con testo in chiaro"
 
 msgid "Clear configuration information before importing disks."
 msgstr ""
+"Cancella le informazioni di configurazione prima di importare i dischi."
 
 msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
+"Cancella le informazioni di configurazione prima di importare i dischi del "
+"RAID software."
 
 msgid "Clear device errors"
 msgstr "Cancella errori della device"
@@ -1564,10 +1570,10 @@ msgid "Client"
 msgstr "Client"
 
 msgid "Client Max. Protocol"
-msgstr ""
+msgstr "Protocollo massimo del client"
 
 msgid "Client Min. Protocol"
-msgstr ""
+msgstr "Protocollo minimo del client"
 
 msgid "Clone"
 msgstr "Clona"
@@ -1585,6 +1591,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Lista con elementi separati da una virgola dei gruppi che hanno il permesso "
+"di fare il login sul server FTP. (vuoto = gruppo ftp)."
 
 msgid "Command"
 msgstr "Comando"
@@ -1674,6 +1682,10 @@ msgid ""
 "Please remove those devices and re-add them or run import disks with clear "
 "configuration option enabled."
 msgstr ""
+"Le informazioni di configurazione delle periferiche sono diverse da quelle "
+"delle periferiche fisiche. Per favore rimuovi queste periferiche e "
+"riaggiungile oppure esegui un'importazione dei dischi con l'opzione cancella "
+"la configurazione attivata."
 
 msgid "Configuring"
 msgstr "Configurando"
@@ -1682,7 +1694,7 @@ msgid "Confirm New Password"
 msgstr "Conferma Nuova Password"
 
 msgid "Confirm Password"
-msgstr ""
+msgstr "Conferma la password"
 
 msgid "Confirmation"
 msgstr "Conferma"
@@ -1719,7 +1731,7 @@ msgid "Content"
 msgstr "Contenuto"
 
 msgid "Content Locations"
-msgstr ""
+msgstr "Ubicazione dei contenuti"
 
 msgid "Continue"
 msgstr "Avanti"
@@ -2029,6 +2041,8 @@ msgid ""
 "Current system password is using the default password. You should choose a "
 "different password."
 msgstr ""
+"La password corrente è la password di default.  Si consiglia di scegliere "
+"una password diversa."
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Valore corrente di potenza apparente (Volt-Amps)"
@@ -2067,10 +2081,10 @@ msgid "DHCP cannot be used for LAN interface."
 msgstr "DHCP non può essere utilizzato per l'interfaccia LAN."
 
 msgid "DHX Authentication"
-msgstr ""
+msgstr "Autenticazione DHX"
 
 msgid "DHX2 Authentication"
-msgstr ""
+msgstr "Autenticazione DHX2"
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2170,7 +2184,7 @@ msgstr ""
 "e byte 3-4-5 = Max numero di cancellazione (big endian)."
 
 msgid "Decryption Password"
-msgstr ""
+msgstr "Password di decrittazione"
 
 msgid "Dedup"
 msgstr "Deduplicazione"
@@ -2182,11 +2196,17 @@ msgid ""
 "Default - Rsync will choose the 'during' algorithm when talking to rsync "
 "3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
 msgstr ""
+"Default .  Rsync sceglie l'algoritmo 'durante' quando comunicherà con rsync "
+"3.0.0 o più recente e l'algoritmo 'prima' quando comunciherà con un rsync "
+"più datato."
 
 msgid ""
 "Default - Rsync will choose the 'during' algorithm when talking to rsync "
 "3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
 msgstr ""
+"Default .  Rsync sceglie l'algoritmo 'durante' quando comunicherà con rsync "
+"3.0.0 o più recente e l'algoritmo 'prima' quando comunciherà con un rsync "
+"più datato."
 
 msgid "Default Device Settings"
 msgstr "mpostazioni predefinite del dispositivo."
@@ -2235,10 +2255,10 @@ msgid "Delete Login Info"
 msgstr "Elimina le informazioni di login"
 
 msgid "Delete Selected Bridges"
-msgstr ""
+msgstr "Cancella Bridges selezionati"
 
 msgid "Delete Selected CARPs"
-msgstr ""
+msgstr "Cancella CARP selezionati"
 
 msgid "Delete Selected Commands"
 msgstr "Cancella i comandi selezionati"
@@ -2247,22 +2267,22 @@ msgid "Delete Selected Datasets"
 msgstr "Elimina set di dati selezionati"
 
 msgid "Delete Selected Disks"
-msgstr ""
+msgstr "Cancella i dischi selezionati"
 
 msgid "Delete Selected Encrypted Volumes"
-msgstr ""
+msgstr "Cancella i volumi criptati selezionati"
 
 msgid "Delete Selected Groups"
-msgstr ""
+msgstr "Cancella i Gruppi selezionati"
 
 msgid "Delete Selected Jobs"
 msgstr "Cancella l'attività selezionata"
 
 msgid "Delete Selected LAGGs"
-msgstr ""
+msgstr "Cancella LAGG selezionati"
 
 msgid "Delete Selected NFS Shares"
-msgstr ""
+msgstr "Cancella le condivisioni NFS selezionate"
 
 msgid "Delete Selected Options"
 msgstr "Cancella le opzioni selezionate"
@@ -2274,34 +2294,34 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Cancella i Volumi RAID selezionati"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Cancella i record selezionati"
 
 msgid "Delete Selected Resources"
-msgstr ""
+msgstr "Cancella le risorse selezionate"
 
 msgid "Delete Selected Routes"
-msgstr ""
+msgstr "Cancella Routes selezionate"
 
 msgid "Delete Selected Rsync Jobs"
-msgstr ""
+msgstr "Cancella lavori rsync selezionati"
 
 msgid "Delete Selected Rsync Modules"
-msgstr ""
+msgstr "Cancella i moduli rsync selezionati"
 
 msgid "Delete Selected Samba Shares"
-msgstr ""
+msgstr "Cancella le condivisioni Samba selezionate"
 
 msgid "Delete Selected Shares"
-msgstr ""
+msgstr "Cancella le condivisioni selezionate"
 
 msgid "Delete Selected Snapshots"
 msgstr "Cancella gli Snapshot selezionati"
 
 msgid "Delete Selected User Accounts"
-msgstr ""
+msgstr "Cancella gli account utente selezionati"
 
 msgid "Delete Selected VLANs"
-msgstr ""
+msgstr "Cancella le VLAN selezionate"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Cancella i Virtual Devices selezionati"
@@ -2310,7 +2330,7 @@ msgid "Delete Selected Volumes"
 msgstr "Cancella i Volumi Selezionati"
 
 msgid "Delete Selected WLANs"
-msgstr ""
+msgstr "Cancella le WLAN selezionate"
 
 msgid "Delete URL"
 msgstr "Elimina URL"
@@ -2401,7 +2421,7 @@ msgid "Destination"
 msgstr "Destinazione"
 
 msgid "Destination Network"
-msgstr ""
+msgstr "Rete di destinazione"
 
 msgid "Destination Share"
 msgstr "Cancella Condivisione"
@@ -2420,7 +2440,7 @@ msgid "Destination network bit count"
 msgstr "Bit Count della rete di destinazione"
 
 msgid "Destination network for this static route."
-msgstr ""
+msgstr "Rete di destinazione per questo percorso statico."
 
 msgid "Destination port"
 msgstr "Porta destinazione"
@@ -2452,19 +2472,19 @@ msgid "Detected"
 msgstr "Rilevato"
 
 msgid "Detected Disks"
-msgstr ""
+msgstr "DIschi rilevati"
 
 msgid "Detected Language:"
 msgstr "Lingua rilevata:"
 
 msgid "Detected RSYNC Remote Shares"
-msgstr ""
+msgstr "Condivisione remote di Rsync rilevate"
 
 msgid "Detected an error while importing."
 msgstr "Si è verificato un errore durante l'import."
 
 msgid "Detected shares on this server"
-msgstr ""
+msgstr "Condivisioni rilevate sul server"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -2497,7 +2517,7 @@ msgid "Device Pass-through"
 msgstr "Dispositivo Pass-through"
 
 msgid "Device Polling"
-msgstr ""
+msgstr "Polling periferica"
 
 msgid "Device Serial"
 msgstr "Numero di serie della periferica"
@@ -2556,7 +2576,7 @@ msgid "Directory %s doesn't exist!"
 msgstr "La directory %s non esiste!"
 
 msgid "Directory Mask"
-msgstr ""
+msgstr "Maschera della directory"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Cartella per file incompleti. Il campo vuoto significa disattiva."
@@ -2574,10 +2594,10 @@ msgid "Disable"
 msgstr "Disabilita"
 
 msgid "Disable Extension Menu"
-msgstr ""
+msgstr "Disattiva il menu delle estensioni"
 
 msgid "Disable Firmware Upgrade"
-msgstr ""
+msgstr "DIsattiva l'aggiornamento del Firmware"
 
 msgid "Disable Selected Commands"
 msgstr "Disabilita i comandi selezionati"
@@ -2589,13 +2609,13 @@ msgid "Disable Selected Options"
 msgstr "Disabilita le opzioni selezionate"
 
 msgid "Disable Selected Records"
-msgstr ""
+msgstr "Disattiva i record selezionati"
 
 msgid "Disable Selected Rsync Jobs"
-msgstr ""
+msgstr "Disattiva i lavori Rsync selezionati"
 
 msgid "Disable Selected Rsync Modules"
-msgstr ""
+msgstr "Disattiva i moduli Rsync selezionati"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "DIsabilita il wrapper TCP (modulo mod_wrap)."
@@ -2611,6 +2631,8 @@ msgstr "Disabilita il controllo della versione del firmware."
 
 msgid "Disable scanning of folders for existing extension menus."
 msgstr ""
+"Disattiva la scansione delle cartelle per trovare estensioni del menu "
+"esistenti."
 
 msgid "Disable speaker beep on startup and shutdowns."
 msgstr "Disattiva il bip all'avvio e allo spegnimento."
@@ -2641,7 +2663,7 @@ msgid "Disk"
 msgstr "Disco"
 
 msgid "Disk Partition Information"
-msgstr ""
+msgstr "Informazioni di partizionamento del disco"
 
 msgid "Disk Selection"
 msgstr "Selezione Disco"
@@ -2656,13 +2678,13 @@ msgid "Disk Usage"
 msgstr "Utilizzo Disco"
 
 msgid "Disk is locked"
-msgstr ""
+msgstr "Il disco è bloccato"
 
 msgid "Disk is marked for deletion"
-msgstr ""
+msgstr "Il disco è segnato per la cancellazione"
 
 msgid "Disk is unlocked"
-msgstr ""
+msgstr "Il disco è sbloccato"
 
 msgid "Disks"
 msgstr "Dischi"
@@ -2694,6 +2716,8 @@ msgstr "Tabella Hash Distribuita"
 
 msgid "Do not abort the firmware upgrade process once it has started."
 msgstr ""
+"Non interrompere l'aggiornamento del firmware una volta che questo è "
+"iniziato."
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Non attivare questa opzione se vuoi aggiungere un RAID esistente"
@@ -2834,28 +2858,28 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr "Vuoi creare un dispositivo 'striped virtual' dai dischi selezionati?"
 
 msgid "Do you want to delete selected CARPs?"
-msgstr ""
+msgstr "Desideri cancellare i CARP selezionati?"
 
 msgid "Do you want to delete selected LAGGs?"
-msgstr ""
+msgstr "Desideri cancella i LAGG selezionati?"
 
 msgid "Do you want to delete selected NFS shares?"
-msgstr ""
+msgstr "Desideri cancellare le condivisioni NFS selezionate?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Vuoi cancellare i volumi RAID selezionati?"
 
 msgid "Do you want to delete selected Samba shares?"
-msgstr ""
+msgstr "Desideri cancella le condivisioni Samba selezionate?"
 
 msgid "Do you want to delete selected VLANs?"
-msgstr ""
+msgstr "Desideri cancellare le VLAN selezionate?"
 
 msgid "Do you want to delete selected WLANs?"
-msgstr ""
+msgstr "Desideri cancellare le WLAN selezionate?"
 
 msgid "Do you want to delete selected bridges?"
-msgstr ""
+msgstr "Desideri cancellare i bridges selezionati?"
 
 msgid "Do you want to delete selected commands?"
 msgstr "Vuoi eliminare i comandi selezionati?"
@@ -2864,10 +2888,11 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Vuoi dancellare i dataset selezionati?"
 
 msgid "Do you want to delete selected disks?"
-msgstr ""
+msgstr "Desideri cancellare i dischi selezionati?"
 
 msgid "Do you want to delete selected encrypted volumes?"
 msgstr ""
+"Desideri cancellare Desideri cancellare i volumi criptati selezionati?"
 
 msgid "Do you want to delete selected groups?"
 msgstr "Vuoi eliminare i gruppi selezionati?"
@@ -2882,22 +2907,22 @@ msgid "Do you want to delete selected pools?"
 msgstr "Vuoi cancellare i Pools selezionati?"
 
 msgid "Do you want to delete selected records?"
-msgstr ""
+msgstr "Desideri cancellare i record selezionati?"
 
 msgid "Do you want to delete selected resources?"
-msgstr ""
+msgstr "Desideri cancellare le risorse selezionate?"
 
 msgid "Do you want to delete selected routes?"
-msgstr ""
+msgstr "Desideri cancellare le routes selezionate?"
 
 msgid "Do you want to delete selected rsync jobs?"
-msgstr ""
+msgstr "Desideri cancellare i lavori rsync selezionati?"
 
 msgid "Do you want to delete selected rsync modules?"
-msgstr ""
+msgstr "Desideri cancellare i moduli rsync selezionati?"
 
 msgid "Do you want to delete selected shares?"
-msgstr ""
+msgstr "Desideri cancellare le condivisioni selezionate?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Vuoi cancellare gli Snapshots selezionati?"
@@ -2924,13 +2949,13 @@ msgid "Do you want to disable selected options?"
 msgstr "Vuoi disabilitare le opzioni selezionate?"
 
 msgid "Do you want to disable selected records?"
-msgstr ""
+msgstr "Vuoi disattivare i record selezionati?"
 
 msgid "Do you want to disable selected rsync jobs?"
-msgstr ""
+msgstr "Vuoi disattivare i lavori rsync selezionati?"
 
 msgid "Do you want to disable selected rsync modules?"
-msgstr ""
+msgstr "Vuoi disattivarei moduli rsync selezionati?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Vuoi attivare i comandi selezionati?"
@@ -2942,22 +2967,22 @@ msgid "Do you want to enable selected options?"
 msgstr "Vuoi abilitare le opzioni selezionate?"
 
 msgid "Do you want to enable selected records?"
-msgstr ""
+msgstr "Vuoi attivare i record selezionati?"
 
 msgid "Do you want to enable selected rsync jobs?"
-msgstr ""
+msgstr "Vuoi disattivare i lavori rsync selezionati?"
 
 msgid "Do you want to enable selected rsync modules?"
-msgstr ""
+msgstr "Vuoi disattivare i moduli rsync selezionati?"
 
 msgid "Do you want to import disks?"
-msgstr ""
+msgstr "Vuoi importare i dischi?"
 
 msgid "Do you want to import software RAID disks?"
-msgstr ""
+msgstr "Vuoi importare i dischi del software RAID?"
 
 msgid "Do you want to lock selected records?"
-msgstr ""
+msgstr "Vuoi bloccare i record selezionati?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Vuoi deselezionare i comandi selezionati?"
@@ -2978,7 +3003,7 @@ msgid "Do you want to toggle selected rsync modules?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
-msgstr ""
+msgstr "Vuoi sbloccare i record selezionati?"
 
 msgid "Document Root"
 msgstr "Root Documenti"
@@ -3075,6 +3100,8 @@ msgstr "Durante"
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
+"Durante -  La cancellazione dei file verrà effettuata in modo incrementale "
+"durante il trasferimento."
 
 msgid "Dutch"
 msgstr "Olandese"
@@ -3098,19 +3125,19 @@ msgid "Edit"
 msgstr "Modifica"
 
 msgid "Edit Bridge"
-msgstr ""
+msgstr "Modifica Bridges"
 
 msgid "Edit CARP"
-msgstr ""
+msgstr "Modifica CARP"
 
 msgid "Edit Dataset"
 msgstr "Modifica il Dataset"
 
 msgid "Edit Disk"
-msgstr ""
+msgstr "Modifica disco"
 
 msgid "Edit Encrypted Volume"
-msgstr ""
+msgstr "Modifica volume criptato"
 
 msgid "Edit Group"
 msgstr "Modifica Gruppo"
@@ -3119,43 +3146,43 @@ msgid "Edit Host"
 msgstr "Modifica host"
 
 msgid "Edit LAGG"
-msgstr ""
+msgstr "Modifica LAGG"
 
 msgid "Edit MIB"
 msgstr "Modifica MIB"
 
 msgid "Edit NFS Share"
-msgstr ""
+msgstr "Modifica condivisione NFS"
 
 msgid "Edit Option"
-msgstr ""
+msgstr "Modifica opzione"
 
 msgid "Edit Pool"
-msgstr ""
+msgstr "Modifica Pool"
 
 msgid "Edit RAID"
 msgstr "Modifica RAID"
 
 msgid "Edit Record"
-msgstr ""
+msgstr "Modifica record"
 
 msgid "Edit Resource"
-msgstr ""
+msgstr "Modifica sorgente"
 
 msgid "Edit Route"
 msgstr "Modifica Route"
 
 msgid "Edit Rsync Job"
-msgstr ""
+msgstr "Modifica lavoro Rsync"
 
 msgid "Edit Rsync Module"
-msgstr ""
+msgstr "Modifica modulo rsync"
 
 msgid "Edit Samba Share"
-msgstr ""
+msgstr "Modifica condivisione Samba"
 
 msgid "Edit Share"
-msgstr ""
+msgstr "Modifica condivision"
 
 msgid "Edit Snapshot"
 msgstr "Modifica lo Snapshot"
@@ -3167,7 +3194,7 @@ msgid "Edit User Account"
 msgstr "Edita Account Utente"
 
 msgid "Edit VLAN"
-msgstr ""
+msgstr "Modifica VLAN"
 
 msgid "Edit VM"
 msgstr "Edita VM"
@@ -3179,7 +3206,7 @@ msgid "Edit Volume"
 msgstr "Edita Volume"
 
 msgid "Edit WLAN"
-msgstr ""
+msgstr "Modifica WLAN"
 
 msgid "Edit auth group"
 msgstr "Modifica auth group"
@@ -3265,7 +3292,7 @@ msgid "Enable FXP protocol."
 msgstr "Abilita il protocollo FXP."
 
 msgid "Enable Firmware Upgrade"
-msgstr ""
+msgstr "Attiva aggiornamento firmware"
 
 msgid "Enable NFSv4 server."
 msgstr "Attiva il server NFSv4."
@@ -3300,13 +3327,13 @@ msgid "Enable Selected Options"
 msgstr "Abilita opzioni selezionate"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Attiva record selezionati"
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Attiva lavori rsync selezionati"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Attiva moduli rsync selezionati"
 
 msgid "Enable TLS connections."
 msgstr "Abilita le connessioni TLS."
@@ -3524,13 +3551,13 @@ msgstr ""
 "La configurazione codificata viene compressa con gzip automaticamente."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr ""
+msgstr "Il volume criptato è segnato per la cancellazione"
 
 msgid "Encrypted volume is protected"
-msgstr ""
+msgstr "Il volume criptato è protetto"
 
 msgid "Encrypted volume is unlocked"
-msgstr ""
+msgstr "Il volume criptato è bloccato"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
@@ -3543,7 +3570,7 @@ msgid "Encryption Management"
 msgstr "Gestione Criptazione"
 
 msgid "Encryption Password"
-msgstr ""
+msgstr "Password di criptaggio"
 
 msgid "Encryption Settings"
 msgstr "Impostazioni di Criptazione"
@@ -3564,7 +3591,7 @@ msgid "Enter Command"
 msgstr "Inserisci comando"
 
 msgid "Enter Password"
-msgstr ""
+msgstr "Inserisci password"
 
 msgid "Enter a comment"
 msgstr "Inserisci un commento"
@@ -3711,19 +3738,19 @@ msgid ""
 msgstr ""
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "Cancella MBR"
 
 msgid "Error"
 msgstr "Errore"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Codice di errore"
 
 msgid "Error Level"
 msgstr "Livello Errore"
 
 msgid "Errors have been detected during import."
-msgstr ""
+msgstr "Errori rilevati durante l'importazione"
 
 msgid "Event"
 msgstr "Evento"
@@ -3738,7 +3765,7 @@ msgid "Execute"
 msgstr "Esegui"
 
 msgid "Execute Command"
-msgstr ""
+msgstr "Esegui comando"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
@@ -3809,7 +3836,7 @@ msgstr ""
 "usati piu' di una volta."
 
 msgid "Extra Options"
-msgstr ""
+msgstr "Opzioni aggiuntive"
 
 msgid "Extra options (usually empty)."
 msgstr "Opzioni aggiuntive (normalmente vuoto)"
@@ -3920,7 +3947,7 @@ msgid "Fatal"
 msgstr "Irrimediabile"
 
 msgid "Fdisk Partition Information"
-msgstr ""
+msgstr "Informazioni di partizione Fdisk"
 
 msgid "Feb"
 msgstr "Feb"
@@ -3938,7 +3965,7 @@ msgid "File Manager"
 msgstr "Gestore file"
 
 msgid "File Mask"
-msgstr ""
+msgstr "Maschera file"
 
 msgid "File Path"
 msgstr "Percorso File"
@@ -4007,13 +4034,13 @@ msgid "Firmware Update"
 msgstr "Aggiornamento del firmware"
 
 msgid "Firmware upgrade check has been disabled."
-msgstr ""
+msgstr "Il controllo dell'aggiornamento del firmware è stato disattivato."
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Upload Firmware fallito (rimasto senza memoria?)"
 
 msgid "Firmware upload failed with error message:"
-msgstr ""
+msgstr "Upload del firmware fallito con messaggio di errore:"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "L'upload del firmware non è supportato su questa piattaforma."
