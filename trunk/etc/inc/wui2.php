@@ -197,26 +197,19 @@ class HTMLBaseControl2 {
 	function Compose() {
 		$ctrlname = $this->GetCtrlName();
 		$description = $this->GetDescriptionOutput();
-/*
-		echo sprintf('<tr id="%s_tr">',$ctrlname),"\n";
-		echo sprintf('<td class="%1$s"><label for="%2$s">%3$s</label></td>',$this->GetClassOfTag(),$ctrlname,$this->GetTitle()),"\n";
-		echo sprintf('<td class="%s">',$this->GetClassOfData()),"\n";
-		$this->ComposeInner();
-		if (!empty($description)):
-			echo sprintf('<br /><span class="tagabout">%s</span>',$description),"\n";
-		endif;
-		echo '</td>',"\n";
-		echo '</tr>',"\n";
- */		
 		//	root DOM
 		$root = new co_DOMDocument();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
 		$tr = $root->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfTag()];
-		$tdtag = $tr->addElement('td',$attributes);
-		$attributes = ['for' => $ctrlname];
-		$tdtag->addElement('label',$attributes,$this->GetTitle());
+		if($this->GetReadOnly()):
+			$tr->addElement('td',$attributes,$this->GetTitle());
+		else:
+			$tdtag = $tr->addElement('td',$attributes);
+			$attributes = ['for' => $ctrlname];
+			$tdtag->addElement('label',$attributes,$this->GetTitle());
+		endif;
 		$attributes = ['class' => $this->GetClassOfData()];
 		$tddata = $tr->addElement('td',$attributes);
 		$this->ComposeInner($tddata);
@@ -1055,6 +1048,8 @@ class HTMLText2 extends HTMLBaseControl2 {
 	//	constructor
 	function __construct($ctrlname,$title,$text) {
 		$this->SetCtrlName($ctrlname);
+		$this->SetReadOnly(true);
+		$this->SetRequired(false);
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
