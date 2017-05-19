@@ -37,6 +37,10 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 function check_firmware_version($locale) {
+/*
+	checks with /etc/firm.url to see if a newer firmware version online is available;
+	returns any HTML message it gets from the server
+ */
 	global $g;
 	$post = "product=".rawurlencode(get_product_name())
 	      . "&platform=".rawurlencode($g['fullplatform'])
@@ -198,9 +202,6 @@ function check_firmware_version_rss($locale) {
 	$rss_path = 'https://sourceforge.net/projects/nas4free/rss?limit=40';
 	$rss_release = 'https://sourceforge.net/projects/nas4free/rss?path=/NAS4Free-@@VERSION@@&limit=20';
 	$rss_beta = 'https://sourceforge.net/projects/nas4free/rss?path=/NAS4Free-Beta&limit=20';
-	$rss_arm = 'https://sourceforge.net/projects/nas4free/rss?path=/NAS4Free-ARM&limit=20';
-	$rss_arm_beta = 'https://sourceforge.net/projects/nas4free/rss?path=/NAS4Free-ARM/Beta&limit=20';
-
 	//	replace with existing version
 	$path_version = get_path_version($rss_path);
 	if(empty($path_version)):
@@ -209,11 +210,6 @@ function check_firmware_version_rss($locale) {
 	$rss_release = str_replace('@@VERSION@@',$path_version,$rss_release);
 	$release = get_latest_file($rss_release);
 	$beta = get_latest_file($rss_beta);
-	$hw = @exec('/usr/bin/uname -m');
-	if($hw == 'arm'):
-		$arm = get_latest_file($rss_arm);
-		$arm_beta = get_latest_file($rss_arm_beta);
-	endif;
 	$resp = '';
 	if(!empty($release)):
 		$resp .= sprintf(gtext('Latest Release: %s'),$release);
@@ -221,14 +217,6 @@ function check_firmware_version_rss($locale) {
 	endif;
 	if(!empty($beta)):
 		$resp .= sprintf(gtext('Latest Beta Release: %s'),$beta);
-		$resp .= "<br />\n";
-	endif;
-	if(!empty($arm)):
-		$resp .= sprintf(gtext('Latest Release: %s'),$arm);
-		$resp .= "<br />\n";
-	endif;
-	if(!empty($arm_beta)):
-		$resp .= sprintf(gtext('Latest Beta Release: %s'),$arm_beta);
 		$resp .= "<br />\n";
 	endif;
 	return $resp;
@@ -379,7 +367,11 @@ switch($page_mode):
 	case 'default':
 	case 'enable':
 		if(!isset($config['system']['disablefirmwarecheck'])):
-			$fw_info_current_osver = check_firmware_version_rss($locale);
+			if(file_exists(sprintf('%s/firm.url',$g['etc_path']))):
+				$fw_info_current_osver = check_firmware_version($locale);
+			else:
+				$fw_info_current_osver = check_firmware_version_rss($locale);
+			endif;
 		endif;
 		break;
 endswitch;
