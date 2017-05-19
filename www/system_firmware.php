@@ -399,8 +399,8 @@ include 'fbegin.inc';
 ?>
 			<table class="area_data_settings">
 				<colgroup>
-					<col class="area_data_settings_col_tag"
-					<col class="area_data_settings_col_data"
+					<col class="area_data_settings_col_tag">
+					<col class="area_data_settings_col_data">
 				</colgroup>
 				<thead>
 <?php
