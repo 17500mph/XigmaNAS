@@ -324,8 +324,8 @@ $l_volblocksize = [
 ];
 
 $pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Volumes'), gtext('Volume'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -356,7 +356,7 @@ $(window).on("load", function() {
 	</tr>
 </table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<?php
 	if(!empty($errormsg)):
 		print_error_box($errormsg);
 	endif;
@@ -366,31 +366,31 @@ $(window).on("load", function() {
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
 	endif;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Settings'));?>
+<?php
+			html_titleline2(gtext('Settings'));
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
 			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
 			html_inputbox2('volsize',gtext('Size'),$sphere_record['volsize'],gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."),true,10);
 			html_combobox2('volmode',gtext('Volume Mode'),$sphere_record['volmode'],$l_volmode, gtext('Specifies how the volume should be exposed to the OS.'),true);
 			html_combobox2('compression',gtext('Compression'),$sphere_record['compression'],$l_compressionmode,gtext("Controls the compression algorithm used for this volume. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."),true);
-			$helpinghand = gtext('Controls the dedup method.')
-				. ' '
-				. '<br><b>'
-				. '<font color="red">' . gtext('WARNING') . '</font>'
-				. ': '
-				. '<a href="http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks-zfs-volumes-volume" target="_blank">'
-				. gtext('See ZFS volumes & deduplication wiki article BEFORE using this feature.')
+			$helpinghand = '<div>' . gtext('Controls the dedup method.') . '</div>'
+				. '<div><b>'
+				. '<font color="red">' . gtext('WARNING') . '</font>' . ': '
+				. '<a href="https://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
+				. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
 				. '</a>'
-				. '</b></br>';
+				. '</b></div>';
 			html_combobox2('dedup',gtext('Dedup'),$sphere_record['dedup'],$l_dedup,$helpinghand,true);
 			html_combobox2('sync',gtext('Sync'),$sphere_record['sync'],$l_sync,gtext('Controls the behavior of synchronous requests.'),true);
 			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
@@ -404,6 +404,10 @@ $(window).on("load", function() {
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
-	<?php include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
