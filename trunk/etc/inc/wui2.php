@@ -214,9 +214,8 @@ class HTMLBaseControl2 {
 		$tddata = $tr->addElement('td',$attributes);
 		$this->ComposeInner($tddata);
 		if(!empty($description)):
-			$tddata->addElement('br');
-			$attributes = ['class' => 'tagabout'];
-			$tddata->addElement('span',$attributes,$description);
+			$attributes = ['class' => 'formfldadditionalinfo'];
+			$tddata->addElement('div',$attributes,$description);
 		endif;
 		//	showtime
 		return $root;
@@ -1424,9 +1423,18 @@ trait co_DOMTools {
 	}
 	public function addJavaScript(string $text) {
 		$node = $this->addElement('script');
+		if(false === $node):
+			return false;
+		endif;
 		$newline = $node->ownerDocument->createTextNode("\n//");
+		if(false === $newline):
+			return false;
+		endif;
 		$node->appendChild($newline);
 		$cdata = $node->ownerDocument->createCDATASection("\n" . $text . "\n//");
+		if(false === $cdata):
+			return false;
+		endif;
 		$node->appendChild($cdata);
 		return $node;
 	}
