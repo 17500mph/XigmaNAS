@@ -84,8 +84,8 @@ else:
 	array_sort_key($a_pool,'name');
 endif;
 
-$index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // get index from config for dataset by looking up uuid
-$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
+$index = array_search_ex($sphere_record['uuid'],$sphere_array,'uuid'); // get index from config for dataset by looking up uuid
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier,$sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
 if (false !== $index): // uuid found
 	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))): // POST or EDIT
@@ -141,7 +141,7 @@ if (PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 			$helpinghand |= (257 > $r_mode_access) ? $r_mode_access : 0;
 		endforeach;
 	endif;
-	$sphere_record['accessrestrictions']['mode'] = sprintf( "%04o", $helpinghand);
+	$sphere_record['accessrestrictions']['mode'] = sprintf( "%04o",$helpinghand);
 	switch ($mode_record):
 		case RECORD_NEW:
 		case RECORD_NEW_MODIFY:
@@ -160,12 +160,12 @@ if (PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	$reqdfieldsn = [gtext('Pool'),gtext('Name')];
 	$reqdfieldst = ['string','string'];
 
-	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
+	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
 	if ($prerequisites_ok && empty($input_errors)): // check for a valid name with format name[/name], blanks are excluded.
 		if (false === zfs_is_valid_dataset_name($sphere_record['name'])):
-			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext('Name'));
+			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."),gtext('Name'));
 		endif;
 	endif;
 	
@@ -176,22 +176,22 @@ if (PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	// 
 	// 1.
 	if ($prerequisites_ok && empty($input_errors)):
-		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))):
+		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0],$sphere_record['pool']))):
 			$input_errors[] = gtext('Pool cannot be changed.');
 		endif;
 	endif;
 	// 2., 3., 4.
 	if ($prerequisites_ok && empty($input_errors)):
 		$poolslashname = escapeshellarg($sphere_record['pool']."/".$sphere_record['name']); // create quoted full dataset name
-		if ($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']), $poolslashname)))):
+		if ($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']),$poolslashname)))):
 			// throw error when pool/name already exists in live
 			if (empty($input_errors)):
-				mwexec2(sprintf("zfs get -H -o value type %s 2>&1", $poolslashname), $retdat, $retval);
+				mwexec2(sprintf("zfs get -H -o value type %s 2>&1",$poolslashname),$retdat,$retval);
 				switch ($retval):
 					case 1: // An error occured. => zfs dataset doesn't exist
 						break;
 					case 0: // Successful completion. => zfs dataset found
-						$input_errors[] = sprintf(gtext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
+						$input_errors[] = sprintf(gtext('%s already exists as a %s.'),$poolslashname,$retdat[0]);
 						break;
  					case 2: // Invalid command line options were specified.
 						$input_errors[] = gtext('Failed to execute command zfs.');
@@ -201,8 +201,8 @@ if (PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 			// throw error when pool/name exists in configuration file, zfs->volumes->volume[]
 			if (empty($input_errors)):
 				foreach ($a_volume as $r_volume):
-					if (0 === strcmp(escapeshellarg($r_volume['pool'][0]."/".$r_volume['name']), $poolslashname)):
-						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'), $poolslashname);
+					if (0 === strcmp(escapeshellarg($r_volume['pool'][0]."/".$r_volume['name']),$poolslashname)):
+						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'),$poolslashname);
 						break;
 					endif;
 				endforeach;
@@ -210,8 +210,8 @@ if (PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 			// throw error when  pool/name exists in configuration file, zfs->datasets->dataset[] 
 			if (empty($input_errors)):
 				foreach ($sphere_array as $r_dataset):
-					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0]."/".$r_dataset['name']), $poolslashname)):
-						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'), $poolslashname);
+					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0]."/".$r_dataset['name']),$poolslashname)):
+						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'),$poolslashname);
 						break;
 					endif;
 				endforeach;
@@ -227,12 +227,12 @@ if (PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 		$sphere_record['accessrestrictions']['group'] = [$helpinghand];
 		if ($isrecordnew):
 			$sphere_array[] = $sphere_record;
-			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
+			updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_NEW,$sphere_record['uuid']);
 		else:
 			$sphere_array[$index] = $sphere_record;
 			// avoid unnecessary notifications, avoid mode modify if mode new already exists
 			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
+				updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_MODIFIED,$sphere_record['uuid']);
 			endif;
 		endif;
 		write_config();
@@ -363,7 +363,7 @@ for ($i = 0; $i < 9; $i++):
 	$mode_access[$i] = $helpinghand & (1 << $i);
 endfor;
 
-$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Datasets'), gtext('Dataset'), $isrecordnew ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Datasets'),gtext('Dataset'),$isrecordnew ? gtext('Add') : gtext('Edit')];
 include 'fbegin.inc';
 ?>
 <script type="text/javascript">
@@ -419,9 +419,9 @@ $(window).on("load", function() {
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 60, $isrecordmodify, false, 60);
-			html_combobox2('pool', gtext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
-			html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this dataset. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."), true);
+			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this dataset'));
+			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
+			html_combobox2('compression',gtext('Compression'),$sphere_record['compression'],$l_compressionmode,gtext("Controls the compression algorithm used for this dataset. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."),true);
 			$helpinghand = '<div>' . gtext('Controls the dedup method.') . '</div>'
 				. '<div><b>'
 				. '<font color="red">' . gtext('WARNING') . '</font>' . ': '
@@ -429,25 +429,25 @@ $(window).on("load", function() {
 				. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
 				. '</a>'
 				. '</b></div>';
-			html_combobox2('dedup', gtext('Dedup'), $sphere_record['dedup'], $l_dedup, $helpinghand, true);
-			html_radiobox2('sync', gtext('Sync'), $sphere_record['sync'], $l_sync, gtext('Controls the behavior of synchronous requests.'), true);
-			html_combobox2('atime', gtext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gtext('Controls whether the access time for files is updated when they are read. Turning this Off avoids producing write traffic when reading files and can result in significant performance gains.'), true);
-			html_radiobox2('aclinherit', gtext('ACL inherit'), $sphere_record['aclinherit'], $l_aclinherit, gtext('This attribute determines the behavior of Access Control List inheritance.'), true);
-			html_radiobox2('aclmode', gtext('ACL mode'), $sphere_record['aclmode'], $l_aclmode, gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
+			html_combobox2('dedup',gtext('Dedup'),$sphere_record['dedup'],$l_dedup,$helpinghand,true);
+			html_radiobox2('sync',gtext('Sync'),$sphere_record['sync'],$l_sync,gtext('Controls the behavior of synchronous requests.'),true);
+			html_combobox2('atime',gtext('Access Time (atime)'),$sphere_record['atime'],$l_atime,gtext('Controls whether the access time for files is updated when they are read. Turning this Off avoids producing write traffic when reading files and can result in significant performance gains.'),true);
+			html_radiobox2('aclinherit',gtext('ACL inherit'),$sphere_record['aclinherit'],$l_aclinherit,gtext('This attribute determines the behavior of Access Control List inheritance.'),true);
+			html_radiobox2('aclmode',gtext('ACL mode'),$sphere_record['aclmode'],$l_aclmode,gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'),true);
 			if ($isrecordnewornewmodify) {
-				html_radiobox2('casesensitivity', gtext('Case Sensitivity'), $sphere_record['casesensitivity'], $l_casesensitivity, gtext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);
+				html_radiobox2('casesensitivity',gtext('Case Sensitivity'),$sphere_record['casesensitivity'],$l_casesensitivity,gtext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'),false);
 			}
-			html_checkbox2('canmount', gtext('Canmount'), !empty($sphere_record['canmount']) ? true : false, gtext('If this property is disabled, the file system cannot be mounted.'), '', false);
-			html_checkbox2('readonly', gtext('Readonly'), !empty($sphere_record['readonly']) ? true : false, gtext('Controls whether this dataset can be modified.'), '', false);
-			html_checkbox2('xattr', gtext('Extended attributes'), !empty($sphere_record['xattr']) ? true : false, gtext('Enable extended attributes for this file system.'), '', false);
-			html_checkbox2('snapdir', gtext('Snapshot Visibility'), !empty($sphere_record['snapdir']) ? true : false, gtext('If this property is enabled, the snapshots are displayed into .zfs directory.'), '', false);
-			html_inputbox2('reservation', gtext('Reservation'), $sphere_record['reservation'], gtext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
-			html_inputbox2('quota', gtext('Quota'), $sphere_record['quota'], gtext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
-			html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);
+			html_checkbox2('canmount',gtext('Canmount'),!empty($sphere_record['canmount']) ? true : false,gtext('If this property is disabled, the file system cannot be mounted.'),'',false);
+			html_checkbox2('readonly',gtext('Readonly'),!empty($sphere_record['readonly']) ? true : false,gtext('Controls whether this dataset can be modified.'),'',false);
+			html_checkbox2('xattr',gtext('Extended attributes'),!empty($sphere_record['xattr']) ? true : false,gtext('Enable extended attributes for this file system.'),'',false);
+			html_checkbox2('snapdir',gtext('Snapshot Visibility'),!empty($sphere_record['snapdir']) ? true : false,gtext('If this property is enabled, the snapshots are displayed into .zfs directory.'),'',false);
+			html_inputbox2('reservation',gtext('Reservation'),$sphere_record['reservation'],gtext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),false,10);
+			html_inputbox2('quota',gtext('Quota'),$sphere_record['quota'],gtext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),false,10);
+			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
 			html_separator2();
 			html_titleline2(gtext('Access Restrictions'));
-			html_combobox2('owner', gtext('Owner'), $sphere_record['accessrestrictions']['owner'], $l_users, '', false);
-			html_combobox2('group', gtext('Group'), $sphere_record['accessrestrictions']['group'], $l_groups, '', false);
+			html_combobox2('owner',gtext('Owner'),$sphere_record['accessrestrictions']['owner'],$l_users,'',false);
+			html_combobox2('group',gtext('Group'),$sphere_record['accessrestrictions']['group'],$l_groups,'',false);
 ?>
 			<tr>
 				<td class="celltag"><?=gtext('Mode');?></td>
