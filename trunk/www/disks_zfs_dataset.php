@@ -140,8 +140,8 @@ function zfsdataset_process_updatenotification($mode, $data) {
 	return $retval;
 }
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Datasets'),gtext('Dataset')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -221,8 +221,8 @@ function controlactionbuttons(ego, triggerbyname) {
 		</td>
 	</tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
 	if (!empty($savemsg)):
 		print_info_box($savemsg);
 	else:
@@ -233,7 +233,7 @@ function controlactionbuttons(ego, triggerbyname) {
 	if (updatenotify_exists($sphere_notifier)):
 		print_config_change_box();
 	endif;
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
@@ -244,7 +244,9 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'),6);?>
+<?php
+			html_titleline2(gtext('Overview'),6);
+?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=gtext('Pool');?></th>
@@ -255,19 +257,25 @@ function controlactionbuttons(ego, triggerbyname) {
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach ($sphere_array as $sphere_record):?>
-				<?php
+<?php
+			foreach ($sphere_array as $sphere_record):
 				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$notprotected = !isset($sphere_record['protected']);
-				?>
+?>
 				<tr>
 					<td class="lcelc">
-						<?php if ($notdirty && $notprotected):?>
+<?php
+						if ($notdirty && $notprotected):
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
+<?php
+						else:
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['pool'][0]);?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
@@ -276,33 +284,47 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
-								<?php if ($notdirty && $notprotected):?>
-									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$g_img['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>"/></a>
-								<?php else:?>
-									<?php if ($notprotected):?>
+<?php
+								if ($notdirty && $notprotected):
+?>
+									<a href="<?=$sphere_scriptname_child;?>?submit=edit&uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$g_img['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>"/></a>
+								<?php
+								else:
+									if ($notprotected):
+?>
 										<img src="<?=$g_img['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
+<?php
+									else:
+?>
 										<img src="<?=$g_img['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+<?php
+									endif;
+								endif;
+?>
 							</td>
 							<td></td>
 							<td><a href="disks_zfs_dataset_info.php"><img src="<?=$g_img['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>"/></a></td>
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
 				<th class="lcenl" colspan="5"></th>
-				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$g_img['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
+				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>?submit=add"><img src="<?=$g_img['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
 			</tr>
 		</tfoot>
 	</table>
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
