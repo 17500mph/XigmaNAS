@@ -1,5 +1,5 @@
 PORTNAME=		nano
-PORTVERSION=	2.8.3
+PORTVERSION=	2.8.4
 PORTREVISION?=  0
 CATEGORIES=		editors
 COMMENT=		Nano's ANOther editor, an enhanced free Pico clone
@@ -35,7 +35,7 @@ post-build:
 	cd ${WRKSRC}/doc; ${REINPLACE_CMD} \
 		-e 's:SYSCONFDIR:${PREFIX}/etc:g' \
 		-e 's:EXAMPLESDIR:${EXAMPLESDIR}:g' \
-		nano.1 rnano.1 ${WRKSRC}/doc/${INFO:=.info}
+		nano.1 rnano.1 nanorc.5 ${WRKSRC}/doc/${INFO:=.info}
 
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
