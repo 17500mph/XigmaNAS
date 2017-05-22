@@ -349,7 +349,7 @@ include 'fbegin.inc';
 				<th class="lhell"><?=gtext('Sparse');?></th>
 				<th class="lhell"><?=gtext('Compression');?></th>
 				<th class="lhell"><?=gtext('Dedup');?></th>
-				<th class="lhell"><?=gtext('Sync');?></th>
+				<th class="lhebl"><?=gtext('Sync');?></th>
 			</tr>
 		</thead>
 		<tbody>
