@@ -63,6 +63,13 @@ chmod 1777 "${lighttpd_uploaddir}/ftmp"
 mkdir -p /var/tmp/fastcgi
 chmod 755 /var/tmp/fastcgi
 
+sslconfig() {
+	cat <<-SSLCONFIG
+		ssl.engine = "enable"
+		ssl.pemfile = "${lighttpd_certpem}"
+		ssl.use-sslv3 = "disable"
+	SSLCONFIG
+}
 
 lighttpd_mkconf()
 {
@@ -99,25 +106,40 @@ lighttpd_mkconf()
 			_ipv6network="${_ipv6addr}/${_ipv6subnet}"
 		fi
 	fi
-
-	# TCP port
+	# get protocol
+	_protocol=`configxml_get "//system/webgui/protocol"`
+	# default protocol to http when protocol has not been configured
+	if [ -z "${_protocol}" ]; then
+		_protocol="http"
+	fi
+	# set protocol to port 80 when configuration is wrong
+	if [ "${_protocol}" != "http" ] && [ "${_protocol}" != "https" ]; then
+		_protocol="http"
+	fi
+	# reset protocol to http when forcehttpfile exists
 	if [ -f "${lighttpd_forcehttpfile}" ]; then
 		_protocol="http"
-		_port="80"
-	else
-		_protocol=`configxml_get "//system/webgui/protocol"`
-		_port=`configxml_get "//system/webgui/port"`
-		if [ -z "$_port" ]; then
-			if [ "${_protocol}" = "https" ]; then
-				_port="443"
-			else
-				_port="80"
-			fi
+	fi
+	# get port
+	_port=`configxml_get "//system/webgui/port"`
+	# default port to standard ports if it's not defined
+	if [ -z "${_port}" ]; then
+		if [ "${_protocol}" = "https" ]; then
+			_port="443"
+		else
+			_port="80"
 		fi
 	fi
-	# hosts allow
+	# force port 80 when forcehttpfile exists
+	if [ -f "${lighttpd_forcehttpfile}" ]; then
+		_port="80"
+	fi
+	# get hosts allow
 	_hostsallow=`configxml_get "//system/webgui/hostsallow"`
-	_hostsallow_disable=0
+	# blank hostsallow when forcehttpfile exists
+	if [ -f "${lighttpd_forcehttpfile}" ]; then
+		_hostsallow=""
+	fi
 	# fallback if hostsallow is not configured
 	if [ -z "${_hostsallow}" ]; then
 		# add IPv4 network
@@ -139,12 +161,16 @@ lighttpd_mkconf()
 	fi
 	# trim _hostsallow
 	_hostsallow="${_hostsallow#"${_hostsallow%%[![:space:]]*}"}"
-
+	# get hosts allow disable
+	_hostsallow_disable=0
 	if configxml_isset "//system/webgui/hostsallow_disable"; then
 		_hostsallow_disable=1
 	fi
-
-	# Create lighttpd.conf file
+	# force enable webgui when forcehttpfile exists
+	if [ -f "${lighttpd_forcehttpfile}" ]; then
+		_hostsallow_disable=0
+	fi
+	# create lighttpd.conf file
 	cat <<EOF > ${lighttpd_conf}
 server.modules = (
   "mod_access",
@@ -254,55 +280,91 @@ fastcgi.server = ( ".php" =>
   )
 )
 EOF
-
-	# Set IP address and TCP port
-	if [ -n "${_ipaddr}" ]; then
-		cat <<EOF >> ${lighttpd_conf}
-server.bind = "${_ipaddr}"
-server.port = "${_port}"
-EOF
-		if [ -n "${_ipv6addr}" ]; then
-			cat <<EOF >> ${lighttpd_conf}
-\$SERVER["socket"] == "[${_ipv6addr}]:${_port}" { }
-EOF
+	# configure webgui for HTTP
+	if [ "${_protocol}" = "http" ]; then
+		# add IPv4 as bind
+		if [ -n "${_ipaddr}" ]; then
+			cat <<-EOF >> ${lighttpd_conf}
+				server.bind = "${_ipaddr}"
+				server.port = "${_port}"
+			EOF
+			# add IPv6 as socket if available
+			if [ -n "${_ipv6addr}" ]; then
+				cat <<-EOF >> ${lighttpd_conf}
+					\$SERVER["socket"] == "[${_ipv6addr}]:${_port}" { }
+				EOF
+			fi
+		# add IPv6 as bind
+		elif [ -n "${_ipv6addr}" ]; then
+			cat <<-EOF >> ${lighttpd_conf}
+				server.bind = "[${_ipv6addr}]"
+				server.port = "${_port}"
+			EOF
 		fi
-	else
-		if [ -n "${_ipv6addr}" ]; then
-			cat <<EOF >> ${lighttpd_conf}
-server.bind = "${_ipv6addr}"
-server.port = "${_port}"
-EOF
+	fi
+	# configure webgui for HTTPS
+	if [ "${_protocol}" = "https" ]; then
+		_certificate=`configxml_get "//system/webgui/certificate"`
+		_privatekey=`configxml_get "//system/webgui/privatekey"`
+		# create /var/etc/cert.pem file
+		if [ -n "${_certificate}" -a -n "${_privatekey}" ]; then
+			_tmpfile=/tmp/lighttpd$$.tmp
+			echo "${_certificate}" > ${_tmpfile}
+			/usr/bin/uudecode -m -p -r ${_tmpfile} > ${lighttpd_certpem}
+			echo "" >> ${lighttpd_certpem}
+			echo "${_privatekey}" > ${_tmpfile}
+			/usr/bin/uudecode -m -p -r ${_tmpfile} >> ${lighttpd_certpem}
+			/bin/rm -f ${_tmpfile}
+		fi
+		[ -e ${lighttpd_certpem} ] && /bin/chmod 0600 ${lighttpd_certpem}
+		# add IPv4 as bind
+		if [ -n "${_ipaddr}" ]; then
+			cat <<-EOF >> ${lighttpd_conf}
+				server.bind = "${_ipaddr}"
+				server.port = "${_port}"
+				$(sslconfig)
+			EOF
+			# add IPv6 as socket if available
+			if [ -n "${_ipv6addr}" ]; then
+				cat <<-EOF >> ${lighttpd_conf}
+					\$SERVER["socket"] == "[${_ipv6addr}]:${_port}" {
+					$(sslconfig)
+					}
+				EOF
+			fi
+		# add IPv6 as bind
+		elif [ -n "${_ipv6addr}" ]; then
+			cat <<-EOF >> ${lighttpd_conf}
+				server.bind = "[${_ipv6addr}]"
+				server.port = "${_port}"
+				$(sslconfig)
+			EOF
 		fi
 	fi
 	# hosts allow
 	if [ $_hostsallow_disable -eq 0 ]; then
-		cat <<EOF >> ${lighttpd_conf}
-url.access-deny = ( "" )
-EOF
+		cat <<-EOF >> ${lighttpd_conf}
+			url.access-deny = ( "" )
+		EOF
 		for h in $_hostsallow; do
-			cat <<EOF >> ${lighttpd_conf}
-\$HTTP["remoteip"] == "$h" {
-	url.access-deny = ( "~", ".inc", ".htpasswd" )
-}
-EOF
+			cat <<-EOF >> ${lighttpd_conf}
+				\$HTTP["remoteip"] == "$h" { url.access-deny = ( "~", ".inc", ".htpasswd" ) }
+			EOF
 		done
 	fi
-
-	# Set temporary directory
-	cat <<EOF >> ${lighttpd_conf}
-server.upload-dirs = ( "${lighttpd_uploaddir}/ftmp", "${lighttpd_uploaddir}" )
-server.max-request-size = ${lighttpd_maxrequestsize}
-EOF
-
-	# Disable File Manager
+	# set temporary directory
+	cat <<-EOF >> ${lighttpd_conf}
+		server.upload-dirs = ( "${lighttpd_uploaddir}/ftmp", "${lighttpd_uploaddir}" )
+		server.max-request-size = ${lighttpd_maxrequestsize}
+	EOF
+	# disable File Manager
 	if [ `configxml_get_count "//system/disablefm"` -gt 0 ]; then
-		cat <<EOF >> ${lighttpd_conf}
-\$HTTP["url"] =~ "^/quixplorer/" {
-  url.access-deny = ( "" )
-}
-EOF
+		cat <<-EOF >> ${lighttpd_conf}
+			\$HTTP["url"] =~ "^/quixplorer/" {
+				url.access-deny = ( "" )
+			}
+		EOF
 	fi
-
 	# Is authentication (RFC 2617) required?
 	if checkyesno lighttpd_authrequire; then
 		/usr/local/bin/xml sel -t \
@@ -316,43 +378,12 @@ EOF
 			-o ")" -n \
 			${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
 	fi
-
-	if [ ! -f "${lighttpd_forcehttpfile}" ]; then
-		/usr/local/bin/xml sel -t \
-			-i "//system/webgui/protocol[. = 'https']" \
-				-o "ssl.engine = \"enable\"" -n \
-				-o "ssl.pemfile = \"${lighttpd_certpem}\"" -n \
-				-o "ssl.use-sslv3 = \"disable\"" -n \
-			-b \
-			${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
-	fi
-
-	# Add auxparam
-	/usr/local/bin/xml sel -t -m "//webgui" \
+	# add auxparam
+	/usr/local/bin/xml sel -t -m "//system/webgui" \
 		-m "auxparam" \
 			-v "." -n \
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc >> ${lighttpd_conf}
-
-
-	if [ "${_protocol}" = "https" ]; then
-		_certificate=`configxml_get "//system/webgui/certificate"`
-		_privatekey=`configxml_get "//system/webgui/privatekey"`
-		# Create /var/etc/cert.pem file
-		if [ -n "${_certificate}" -a -n "${_privatekey}" ]; then
-			_tmpfile=/tmp/lighttpd$$.tmp
-
-			echo "${_certificate}" > ${_tmpfile}
-			/usr/bin/uudecode -m -p -r ${_tmpfile} > ${lighttpd_certpem}
-			echo "" >> ${lighttpd_certpem}
-			echo "${_privatekey}" > ${_tmpfile}
-			/usr/bin/uudecode -m -p -r ${_tmpfile} >> ${lighttpd_certpem}
-
-			/bin/rm -f ${_tmpfile}
-		fi
-
-		[ -e ${lighttpd_certpem} ] && /bin/chmod 0600 ${lighttpd_certpem}
-	fi
 }
 
 lighttpd_check()
