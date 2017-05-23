@@ -35,53 +35,75 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 $sphere_array = ['concat','mirror','raid5','stripe','vinum'];
-
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Software RAID')];
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<?php
+include 'fbegin.inc';
+?>
+<table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext("Disks");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_disks_info.php"><span><?=gtext("Disks (Info)");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_disks_info.php"><span><?=gtext('Disks (Info)');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext('Partitions');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext('Space Used');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
-		<li class="tabact"><a href="diag_infos_raid.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Software RAID");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext('Mounts');?></span></a></li>
+		<li class="tabact"><a href="diag_infos_raid.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Software RAID');?></span></a></li>
 	</ul></td></tr>
 	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext("CIFS/SMB");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext('iSCSI Initiator');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext('MS Domain');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext('CIFS/SMB');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext('FTP');?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext('RSYNC Client');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_netstat.php"><span><?=gtext('Netstat');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext('Sockets');?></span></a></li>
 		<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
+		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext('UPS');?></span></a></li>
 	</ul></td></tr>
-	<tr>
-		<td class="tabcont">
-			<table width="100%" border="0">
-				<?php foreach($sphere_array as $sphere_record):?>
-					<?php html_titleline(sprintf('GEOM %s',$sphere_record));?>
-					<tr>
-						<td>
-							<pre><?php
-								if(0 >= count(get_conf_disks_filtered_ex('class',sprintf('g%s',$sphere_record)))):
-									echo gtext('n/a');
-								else:
-									unset ($rawdata);
-									disks_geom_cmd($sphere_record,'list','',true,false,$rawdata);
-									echo htmlspecialchars(implode("\n",$rawdata));
-								endif;
-							?></pre>
-						</td>
-					</tr>
-				<?php endforeach;?>
-			</table>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	$do_seperator = false;
+	foreach($sphere_array as $sphere_record):
+?>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
+<?php
+				if($do_seperator):
+					html_separator2();
+				else:
+					$do_seperator = true;
+				endif;
+				html_titleline2(sprintf('GEOM %s',$sphere_record));
+?>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="celltag"><?=gtext('Information');?></td>
+					<td class="celldata">
+						<pre><?php
+							if(0 >= count(get_conf_disks_filtered_ex('class',sprintf('g%s',$sphere_record)))):
+								echo gtext('n/a');
+							else:
+								unset ($rawdata);
+								disks_geom_cmd($sphere_record,'list','',true,false,$rawdata);
+								echo htmlspecialchars(implode("\n",$rawdata));
+							endif;
+						?></pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+<?php
+	endforeach;
+?>
+</td></tr></tbody></table>
+<?php
+include 'fend.inc';
+?>
