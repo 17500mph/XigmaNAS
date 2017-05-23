@@ -112,7 +112,7 @@ lighttpd_mkconf()
 	if [ -z "${_protocol}" ]; then
 		_protocol="http"
 	fi
-	# set protocol to port 80 when configuration is wrong
+	# set protocol to http when configuration is wrong
 	if [ "${_protocol}" != "http" ] && [ "${_protocol}" != "https" ]; then
 		_protocol="http"
 	fi
