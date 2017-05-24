@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
-"PO-Revision-Date: 2017-05-19 15:39+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"PO-Revision-Date: 2017-05-23 22:04+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:05+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -349,9 +349,6 @@ msgstr "ARP テーブル"
 
 msgid "ARP Tables List"
 msgstr ""
-
-msgid "ATTRIBUTE NAME"
-msgstr "属性名"
 
 msgid "Accept remote syslog messages."
 msgstr "リモートの SysLog メッセージを受け付ける"
@@ -908,6 +905,9 @@ msgstr ""
 "FAT, FAT32, EXT2, EXT3, "
 "EXT4またはNTFSなどの他のファイルシステムを使用しようとすると、ファイルの破損やデータの消失などの予期せぬ問題が発生する可能性があります。"
 
+msgid "Attribute Name"
+msgstr ""
+
 msgid "Audio"
 msgstr "音楽"
 
@@ -1169,6 +1169,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "ブートローダ"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr "ブリッジ"
@@ -1676,6 +1682,12 @@ msgstr ""
 msgid "Controls the power consumption mode."
 msgstr ""
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -1922,9 +1934,6 @@ msgstr "チェコ語"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "詳細説明"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -4575,6 +4584,9 @@ msgstr "無効なファイル形式です。"
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr ""
 
@@ -5427,6 +5439,12 @@ msgstr "サーバ名。フィールドが空の場合はデフォルトのサー
 msgid "Name of the variable."
 msgstr "変数の名前"
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "ネストしたHVM"
 
@@ -5506,6 +5524,9 @@ msgstr ""
 
 msgid "No DNS setting found."
 msgstr "DNS 設定が見つかりません。"
+
+msgid "No Data"
+msgstr ""
 
 msgid "No Extent has been configured."
 msgstr ""
@@ -5786,6 +5807,12 @@ msgstr "匿名ユーザ専用にします。通常のアカウントからの FT
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "認証ユーザ専用にします。匿名のログインを禁止します。"
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "オプション"
@@ -6309,6 +6336,9 @@ msgstr "バッテリー過充電保護"
 msgid "Primary"
 msgstr "プライマリ"
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "プライマリグループ"
 
@@ -6449,9 +6479,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr "生の値"
-
 msgid "RAW info"
 msgstr "RAW情報"
 
@@ -6493,6 +6520,9 @@ msgstr "RSYNC のログ"
 
 msgid "Ramdisk"
 msgstr "RAMディスク"
+
+msgid "Raw Value"
+msgstr ""
 
 msgid "Read"
 msgstr "読込み"
@@ -7034,6 +7064,9 @@ msgstr ""
 
 msgid "Secondary"
 msgstr "セカンダリ"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr ""
@@ -7989,7 +8022,7 @@ msgid ""
 msgstr "新しく追加された不良フラッシュブロック属性は、製造時の初期化以降にドライブが検出した不良フラッシュブロックの合計数を示します。"
 
 msgid "The TCP Port must be a valid port number."
-msgstr ""
+msgstr "TCP ポートは有効なポート番号を指定する必要があります。"
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -8003,7 +8036,7 @@ msgid ""
 msgstr "パケットが指定されたルールに当てはまる場合に実行されるアクションを指定します。"
 
 msgid "The actual size is depend on your disks."
-msgstr ""
+msgstr "実際のサイズは使用するディスクに依存します。"
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "貴方の変更が適用された事を管理者に通知しました。"
@@ -8176,7 +8209,7 @@ msgid "The changes have been applied successfully."
 msgstr "変更は問題なく成功しました。"
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "変更内容が保存されました。"
 
 msgid "The cleartext credentials with which to bind."
 msgstr "クリアテキスト証明書をを使用してバインドします。"
@@ -8191,7 +8224,7 @@ msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "設定情報をリストアする事が出来ませんでした。アップロードファイルが見つかりません。"
 
 msgid "The configuration has been changed."
-msgstr ""
+msgstr "設定が変更されました。"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "設定情報はリストアされました。サーバーをリブートしています。"
@@ -8303,7 +8336,7 @@ msgid "The entire system configuration will be overwritten."
 msgstr ""
 
 msgid "The existing configuration may be overwritten."
-msgstr ""
+msgstr "既存の設定は上書きされます。"
 
 msgid "The extent name already exists."
 msgstr "エクステント名は既に存在しています。"
@@ -8312,7 +8345,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr "指定したファイルはこのプラットフォーム用ではありません。"
 
 msgid "The firmware file is corrupt."
-msgstr ""
+msgstr "ファームウェアファイルが壊れています。"
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -8322,7 +8355,7 @@ msgid "The following input errors were detected"
 msgstr "以下の入力エラーが検出されました"
 
 msgid "The following services will use AD authentication:"
-msgstr ""
+msgstr "以下のサービスは Active Directory の認証に使われます:"
 
 msgid "The full name contains invalid characters."
 msgstr "フルネームに不正な文字が使用されています。"
@@ -8365,7 +8398,7 @@ msgid ""
 msgstr "イニシエータは、指定した認証グループの正しいユーザ名及びシークレットでターゲットを見つける事が出来ます。"
 
 msgid "The interface is unknown."
-msgstr ""
+msgstr "インタフェースが不明です。"
 
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
@@ -8387,17 +8420,17 @@ msgstr "ログイン名は16文字に制限されています。"
 
 msgid ""
 "The max. connections per IP address must be either 0 (unlimited) or greater."
-msgstr ""
+msgstr "IP アドレス毎の最大接続数は 0 (無制限)かそれ以上を指定する必要があります。"
 
 msgid "The max. number of clients must be in the range from 1 to 50."
-msgstr ""
+msgstr "クライアントの最大数は 1 から 50 の間である必要があります。"
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr "ダウンロード時の最大帯域を KiB/s で指定してください。空の場合は制限無しとなります。"
 
 msgid "The maximum idle time must be a number."
-msgstr ""
+msgstr "最大アイドルタイムは数値の必要があります。"
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8443,29 +8476,29 @@ msgstr ""
 "は、禁止されたユーザ、ホスト、クラスがサーバにログインする事を防ぎますが、禁止されたユーザ、ホスト、クラスがサーバへ接続する事を防ぐわけではありません。"
 
 msgid "The name of the RAID cannot be changed."
-msgstr ""
+msgstr "RAIDの名前は変更できません。"
 
 msgid "The name of the RAID is already in use."
-msgstr ""
+msgstr "指定したRAIDの名前は既に使われています。"
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
-msgstr ""
+msgstr "RAIDの名前は英字(大文字/小文字)と数字のみで指定してください。"
 
 msgid "The name of the interface is wrong."
-msgstr ""
+msgstr "インタフェースの名前が間違っています。"
 
 msgid "The name of the media server cannot be empty."
-msgstr ""
+msgstr "メディアサーバの名前を指定する必要があります。"
 
 msgid "The name of the media server is missing."
-msgstr ""
+msgstr "メディアサーバ名がありません。"
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "プールの名前は変更できません。"
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "仮想デバイスの名前は変更できません。"
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -8480,7 +8513,7 @@ msgid "The old password is not correct."
 msgstr "古いパスワードは正しくありません。"
 
 msgid "The password contains the illegal character ':'."
-msgstr ""
+msgstr "パスワードに利用できない文字が含まれています。 ':'"
 
 msgid "The password encryption protocol to use."
 msgstr "パスワード暗号化で利用される形式。"
@@ -8489,7 +8522,7 @@ msgid "The passwords do not match."
 msgstr "パスワードが一致しません。"
 
 msgid "The passwords do not match. Please try again."
-msgstr ""
+msgstr "パスワードが一致しません。再度入力してください。"
 
 #, php-format
 msgid "The path '%s' does not exist."
@@ -8554,26 +8587,26 @@ msgid "The serial or USB port where your UPS is connected."
 msgstr "UPS が接続されているシリアルまたは USB ポートを指定して下さい。"
 
 msgid "The serial or USB port where your second UPS is connected."
-msgstr ""
+msgstr "シリアルポートまたはUSBポートに2番目のUPSが接続されています。"
 
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "このサーバを Windows クライアントにタイムサーバとして公告します。"
 
 msgid "The server is halting now."
-msgstr ""
+msgstr "サーバを停止中です。"
 
 msgid "The server is now reset to factory defaults and will reboot."
-msgstr ""
+msgstr "サーバは初期状態にリセットし再起動します。"
 
 msgid "The server is rebooting now."
-msgstr ""
+msgstr "サーバを再起動中です。"
 
 msgid "The server will be reset to factory defaults and will reboot."
-msgstr ""
+msgstr "サーバは初期状態にリセットされ再起動されます。"
 
 msgid ""
 "The server will reboot after the configuration was successfully restored."
-msgstr ""
+msgstr "設定が正常に復元された後、サーバを再起動します。"
 
 msgid "The share name is already used."
 msgstr "この共有名は既に使用されています。"
@@ -8640,7 +8673,7 @@ msgid "The value of the variable."
 msgstr "変数の値"
 
 msgid "The work directory does not exist."
-msgstr ""
+msgstr "作業ディレクトリが存在しません。"
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -8720,7 +8753,7 @@ msgstr ""
 
 msgid ""
 "These parameters are added to the hardware-specific part of the driver."
-msgstr ""
+msgstr "これらのパラメータはドライバのハードウェア固有の部分に追加されます。"
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -8739,7 +8772,7 @@ msgid ""
 msgstr "ここで指定したパラメータは rsyncd.conf のモジュール設定に追加されます。"
 
 msgid "These parameters will be added to the ping command."
-msgstr ""
+msgstr "これらのパラメータは ping コマンドに追加されます。"
 
 msgid "This URL is already configured."
 msgstr "この URL は既に設定されています。"
@@ -9082,10 +9115,10 @@ msgid ""
 msgstr "TiVoサポートHMOでストリーミング .jpg と .mp3 ファイルをサポートします。"
 
 msgid "Thu"
-msgstr ""
+msgstr "木曜"
 
 msgid "Thursday"
-msgstr ""
+msgstr "木曜日"
 
 msgid "TiB"
 msgstr "TiB"
@@ -9109,7 +9142,7 @@ msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time Zone"
-msgstr ""
+msgstr "タイムゾーン"
 
 msgid "Time before the load will be rebooted"
 msgstr "リブートする前の時間"
@@ -9300,7 +9333,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
 msgid "Trusted Domains"
-msgstr ""
+msgstr "信頼するドメイン"
 
 msgid "Try to force import."
 msgstr "強制インポートを試す。"
@@ -9309,10 +9342,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "ディスク上にある ZFS 設定のインポートを試す。"
 
 msgid "Tue"
-msgstr ""
+msgstr "火曜"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "火曜日"
 
 msgid "Tuning"
 msgstr "チューニング"
@@ -9363,10 +9396,10 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Identifier"
-msgstr ""
+msgstr "UPS 識別子"
 
 msgid "UPS Identifier and IP address"
-msgstr ""
+msgstr "UPS 識別子および IP アドレス"
 
 msgid "UPS Information & Status"
 msgstr "UPS情報とステータス"
@@ -9381,7 +9414,7 @@ msgid "UPS On Line"
 msgstr "UPSオンライン"
 
 msgid "UPS Statistics"
-msgstr ""
+msgstr "UPS の統計"
 
 msgid "UPS Status"
 msgstr "UPSステータス"
@@ -9465,10 +9498,10 @@ msgid "Unformated"
 msgstr "フォーマットしない"
 
 msgid "Unformatted"
-msgstr ""
+msgstr "未フォーマット"
 
 msgid "Uninitialized"
-msgstr ""
+msgstr "未初期化"
 
 msgid "Uninstall package"
 msgstr "パッケージのアンインストール"
@@ -9483,7 +9516,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison ファイル同期"
 
 msgid "Unix Charset"
-msgstr ""
+msgstr "UNIX 文字コード"
 
 msgid "Unix Command"
 msgstr "Unix コマンド"
@@ -9492,10 +9525,10 @@ msgid "Unknown"
 msgstr "不明"
 
 msgid "Unknown Activity"
-msgstr ""
+msgstr "不明なアクティビティ"
 
 msgid "Unknown Aggregation Protocol"
-msgstr ""
+msgstr "不明なアグリゲーションプロトコル"
 
 msgid "Unknown or Unformatted"
 msgstr ""
@@ -9513,7 +9546,7 @@ msgid "Unlock Selected Records"
 msgstr ""
 
 msgid "Unmount Disk/Partition"
-msgstr ""
+msgstr "ディスク/パーティションのアンマウント"
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -9553,19 +9586,19 @@ msgid "Upper"
 msgstr ""
 
 msgid "Uptime"
-msgstr ""
+msgstr "稼働時間"
 
 msgid "Uptime Statistics"
-msgstr ""
+msgstr "稼働時間の統計"
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
-msgstr ""
+msgstr "ネットワークスループットの表示に bits/秒 の代わりに bytes/秒 を使う"
 
 msgid "Use Encryption"
-msgstr ""
+msgstr "暗号化する"
 
 msgid "Use PAM for user authentication."
-msgstr ""
+msgstr "ユーザの認証にPAM (Pluggable Authentication Module) を使う"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9583,7 +9616,7 @@ msgid "Use inotify monitoring to automatically discover new files."
 msgstr "自動的に新しいファイルを発見するためにinotify監視を使用します。"
 
 msgid "Use local user authentication."
-msgstr ""
+msgstr "ローカルのユーザ認証を使う"
 
 #, php-format
 msgid ""
@@ -9600,13 +9633,13 @@ msgid "Use the specified NTP server."
 msgstr "特定の NTP サーバを使用します。"
 
 msgid "Use these specials actions for debugging only!"
-msgstr ""
+msgstr "これらの特定の操作はデバッグ用途のみで利用してください。通常は利用する必要はありません。"
 
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
 "files. (%s by default)."
-msgstr ""
+msgstr "新しく作成するファイルの既定のアクセス権を上書きするにはこのオプションを使用してください。(初期値 %s)"
 
 msgid ""
 "Use this option to override the directory creation mask (022 by default)."
@@ -9634,7 +9667,7 @@ msgstr ""
 "はパスワードファイル内に存在している必要がありますが、ログイン可能である必要はありません。"
 
 msgid "Use toggle button instead of enable/disable buttons."
-msgstr ""
+msgstr "有効/無効ボタンの代わりにトグルボタンを使用してください。"
 
 msgid "Used"
 msgstr "使用量"
@@ -9646,22 +9679,22 @@ msgid "User ID"
 msgstr "ユーザ ID"
 
 msgid "User Mask"
-msgstr ""
+msgstr "ユーザマスク"
 
 msgid "User Password Settings"
-msgstr ""
+msgstr "ユーザパスワード設定"
 
 msgid "User Portal"
-msgstr ""
+msgstr "ユーザポータル"
 
 msgid "User Settings"
-msgstr ""
+msgstr "ユーザ設定"
 
 msgid "User Shares"
-msgstr ""
+msgstr "ユーザ共有"
 
 msgid "User Suffix"
-msgstr ""
+msgstr "ユーザサフィックス"
 
 msgid "User account is marked for deletion"
 msgstr ""
@@ -9706,14 +9739,14 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN Settings"
-msgstr ""
+msgstr "VLAN 設定"
 
 msgid "VLAN Tag"
 msgstr "VLAN タグ"
 
 msgid ""
 "VLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "VLAN インタフェースは使用中のため削除できません。"
 
 msgid "VLAN is marked for deletion"
 msgstr ""
@@ -9796,10 +9829,10 @@ msgid "Virtual Machine"
 msgstr "仮想マシン"
 
 msgid "Virtual device can be removed."
-msgstr ""
+msgstr "仮想デバイスを削除できます。"
 
 msgid "Virtual device is already in use."
-msgstr ""
+msgstr "仮想デバイスは既に使われています。"
 
 msgid "Virtual devices"
 msgstr "仮想デバイス"
@@ -9808,16 +9841,16 @@ msgid "VirtualBox"
 msgstr "VirtualBox"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "仮想化"
 
 msgid "Volume"
 msgstr "ボリューム"
 
 msgid "Volume Label"
-msgstr ""
+msgstr "ボリューム ラベル"
 
 msgid "Volume Mode"
-msgstr ""
+msgstr "ボリュームモード"
 
 msgid "Volume Name"
 msgstr "ボリューム名"
@@ -9847,13 +9880,13 @@ msgid "WAN address"
 msgstr "WAN アドレス"
 
 msgid "WARNING"
-msgstr ""
+msgstr "注意"
 
 msgid "WEP"
 msgstr "WEP"
 
 msgid "WINS Server"
-msgstr ""
+msgstr "WINS サーバ"
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS サーバのIPアドレス (例: ActiveDirectory サーバ等)"
@@ -9862,11 +9895,11 @@ msgid "WLAN"
 msgstr "WLAN"
 
 msgid "WLAN Settings"
-msgstr ""
+msgstr "無線LAN設定"
 
 msgid ""
 "WLAN cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "無線LANインタフェースは使用中のため削除できません。"
 
 msgid "WLAN is marked for deletion"
 msgstr ""
@@ -9893,7 +9926,7 @@ msgid "WPA2"
 msgstr "WPA2"
 
 msgid "Wait Time"
-msgstr ""
+msgstr "待ち時間"
 
 msgid "Wait time"
 msgstr "待ち時間"
@@ -9905,16 +9938,16 @@ msgid "Warning"
 msgstr "警告"
 
 msgid "Warning Level"
-msgstr ""
+msgstr "警告レベル"
 
 msgid "Watch Directory"
-msgstr ""
+msgstr "監視ディレクトリ"
 
 msgid "WebGUI"
 msgstr "WebGUI"
 
 msgid "WebGUI and Root Password"
-msgstr ""
+msgstr "Web UI及びルートパスワード"
 
 msgid "Webserver"
 msgstr "ウェブサーバ"
@@ -10013,7 +10046,7 @@ msgid "Xen Virtual Machine"
 msgstr "Xen 仮想マシン"
 
 msgid "Y-axis Range"
-msgstr ""
+msgstr "Y 軸の範囲"
 
 msgid "Yes"
 msgstr "Yes"
@@ -10021,7 +10054,7 @@ msgstr "Yes"
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
 "command."
-msgstr ""
+msgstr "SSH経由でインストールするか、もしくはコンソールから pkg install コマンドを利用できます。"
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -10080,7 +10113,7 @@ msgid "You must add disks first."
 msgstr "始めにディスクを追加して下さい。"
 
 msgid "You must apply the changes in order for them to take effect."
-msgstr ""
+msgstr "変更を反映するには適用する必要があります。適用するまで変更は有効になりません。"
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "ネットワークとゲートウェイには同じ IP 形式を入力して下さい。"
@@ -10097,7 +10130,7 @@ msgstr "少なくとも 1つの認証方法を選択して下さい。"
 
 msgid ""
 "You need to update your browser or use Internet Explorer 10 or higher."
-msgstr ""
+msgstr "お使いのブラウザを Internet Explorer 10 かそれ以降のバージョンに更新する必要があります。"
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "パスフレーズの送信には WebGUI プロトコルに HTTPS を使用すべきです。"
@@ -10106,7 +10139,7 @@ msgid "Your ZFS system is not healthy."
 msgstr "ZFS システムが良好な状態ではありません。"
 
 msgid "Your browser does not support this svg object type."
-msgstr ""
+msgstr "お使いのブラウザはSVGファイルのobject要素をサポートしていません。"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10115,10 +10148,10 @@ msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
 msgid "ZFS ARC"
-msgstr ""
+msgstr "ZFS ARC"
 
 msgid "ZFS ARC Usage"
-msgstr ""
+msgstr "ZFS ARC 使用量"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS データセット情報と状態"
@@ -10127,10 +10160,10 @@ msgid "ZFS Dataset Properties"
 msgstr "ZFS データセットプロパティ"
 
 msgid "ZFS Pool I/O Statistics"
-msgstr ""
+msgstr "ZFS プール I/O 統計"
 
 msgid "ZFS Pool Tools"
-msgstr ""
+msgstr "ZFS プールツール"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS スナップショット情報と状態"
@@ -10139,7 +10172,7 @@ msgid "ZFS Snapshot Properties"
 msgstr "ZFS スナップショットプロパティ"
 
 msgid "ZFS Storage Pool"
-msgstr ""
+msgstr "ZFS ストレージプール"
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS ボリューム情報と状態"
@@ -10151,12 +10184,12 @@ msgid "ZFS volume"
 msgstr "ZFS ボリューム"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
-msgstr ""
+msgstr "ZFS  ボリュームブロックサイズ。この値はボリュームの作成後に変更することはできません。"
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
 "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
-msgstr ""
+msgstr "ZFS ボリュームサイズ。値を設定するには以下の単位を指定します ('K', 'KB', 'M', 'GB', など)"
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -10195,7 +10228,7 @@ msgid "iSCSI Initiator"
 msgstr "iSCSI イニシエータ"
 
 msgid "iSCSI Initiator Settings"
-msgstr ""
+msgstr "iSCSI イニシエータ設定"
 
 msgid "iSCSI Target"
 msgstr "iSCSI ターゲット"
@@ -10211,7 +10244,7 @@ msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI 初期パラメータ(初期値:%d)"
 
 msgid "iSCSI initiator disabled."
-msgstr ""
+msgstr "iSCSIイニシエータが無効になりました。"
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -10242,7 +10275,7 @@ msgid "n/a"
 msgstr "n/a"
 
 msgid "network traffic"
-msgstr ""
+msgstr "ネットワークトラフィック"
 
 msgid "noVNC"
 msgstr "noVNC"
@@ -10266,7 +10299,7 @@ msgid "scan target failed."
 msgstr "ターゲットスキャンに失敗しました。"
 
 msgid "seconds)"
-msgstr ""
+msgstr "秒)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "設定可能な最少切り替え電圧上限値"
@@ -10288,3 +10321,12 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
+
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "属性名"
+
+#~ msgid "RAW VALUE"
+#~ msgstr "生の値"
+
+#~ msgid "DESCRIPTION"
+#~ msgstr "詳細説明"

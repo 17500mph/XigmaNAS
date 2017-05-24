@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:06+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -341,9 +341,6 @@ msgstr "ARP 테이블"
 
 msgid "ARP Tables List"
 msgstr "ARP 테이블 리스트"
-
-msgid "ATTRIBUTE NAME"
-msgstr ""
 
 msgid "Accept remote syslog messages."
 msgstr ""
@@ -895,6 +892,9 @@ msgid ""
 "data!"
 msgstr ""
 
+msgid "Attribute Name"
+msgstr ""
+
 msgid "Audio"
 msgstr ""
 
@@ -1153,6 +1153,12 @@ msgid ""
 msgstr ""
 
 msgid "Bootloader"
+msgstr ""
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
 msgstr ""
 
 msgid "Bridge"
@@ -1661,6 +1667,12 @@ msgstr ""
 msgid "Controls the power consumption mode."
 msgstr ""
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -1899,9 +1911,6 @@ msgstr "체코어"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr ""
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -4548,6 +4557,9 @@ msgstr "무효한 파일 포맷."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr ""
 
@@ -5392,6 +5404,12 @@ msgstr "서버의 이름. 이 난이 비어 있으면 기본 서버가 명세 �
 msgid "Name of the variable."
 msgstr "변수의 이름."
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr ""
 
@@ -5470,6 +5488,9 @@ msgid "No DNS server have been configured."
 msgstr ""
 
 msgid "No DNS setting found."
+msgstr ""
+
+msgid "No Data"
 msgstr ""
 
 msgid "No Extent has been configured."
@@ -5751,6 +5772,12 @@ msgstr "익명 사용자만 허용. 이것은 실제 계정에 대한 원격 FTP
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "인증된 사용자만 허용. 익명 로그인이 금지됩니다."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "옵션"
@@ -6274,6 +6301,9 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "기본 그룹"
 
@@ -6414,9 +6444,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr ""
-
 msgid "RAW info"
 msgstr ""
 
@@ -6457,6 +6484,9 @@ msgid "RSYNC log"
 msgstr "RSYNC 로그"
 
 msgid "Ramdisk"
+msgstr ""
+
+msgid "Raw Value"
 msgstr ""
 
 msgid "Read"
@@ -6997,6 +7027,9 @@ msgid "Second"
 msgstr ""
 
 msgid "Secondary"
+msgstr ""
+
+msgid "Secondary Cache"
 msgstr ""
 
 msgid "Seconds"

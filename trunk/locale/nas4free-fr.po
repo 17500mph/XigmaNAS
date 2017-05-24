@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
-"PO-Revision-Date: 2017-05-22 06:41+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"PO-Revision-Date: 2017-05-24 05:10+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:05+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:48+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -391,9 +391,6 @@ msgstr "Tables ARP"
 
 msgid "ARP Tables List"
 msgstr "Liste des tables ARP"
-
-msgid "ATTRIBUTE NAME"
-msgstr "NOM ATTRIBUT"
 
 msgid "Accept remote syslog messages."
 msgstr "Accepter les messages syslog distants."
@@ -994,6 +991,9 @@ msgstr ""
 "EXT3, EXT4 ou NTFS peut produire des résultats imprévisibles, corruption de "
 "fichiers et pertes de données!"
 
+msgid "Attribute Name"
+msgstr "Nom d'attribut"
+
 msgid "Audio"
 msgstr "Audio"
 
@@ -1276,6 +1276,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "chargeur d'amorçage"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr "Jonction"
@@ -1826,6 +1832,12 @@ msgstr "Contrôle la méthode dedup."
 msgid "Controls the power consumption mode."
 msgstr "Contrôle le mode de consommation d'énergie."
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -2124,9 +2136,6 @@ msgstr "Tchèque"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "DESCRIPTION"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -4941,6 +4950,9 @@ msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 "Taille de bloc maximum non valide! elle doit être dans la plage de %d à %d."
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr "nom d'utilisateur ou mot de passe invalide"
 
@@ -5839,6 +5851,12 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Nom de la variable."
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "Nested HVM"
 
@@ -5922,6 +5940,9 @@ msgstr "Aucun serveur DNS n'a été configuré."
 
 msgid "No DNS setting found."
 msgstr "Pas de configuration DNS trouvée."
+
+msgid "No Data"
+msgstr "Pas de données"
 
 msgid "No Extent has been configured."
 msgstr "Aucune extension n'a été configurée"
@@ -6221,6 +6242,12 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Autoriser les utilisateurs authentifiés seulement. Accès anonymes interdit."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "Option"
@@ -6766,6 +6793,9 @@ msgstr "Évitez les grosses décharge de la batterie"
 msgid "Primary"
 msgstr "Primaire"
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "Groupe primaire"
 
@@ -6909,9 +6939,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr "Valeur brute"
-
 msgid "RAW info"
 msgstr "Informations RAW"
 
@@ -6959,6 +6986,9 @@ msgstr "Log RSYNC"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
+
+msgid "Raw Value"
+msgstr "Valeur Raw"
 
 msgid "Read"
 msgstr "Lecture"
@@ -7526,6 +7556,9 @@ msgstr "Seconde"
 
 msgid "Secondary"
 msgstr "Secondaire"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr "Secondes"
@@ -11169,8 +11202,11 @@ msgstr "à"
 msgid "umount"
 msgstr "démontage"
 
-#~ msgid ""
-#~ "See ZFS volumes & deduplication wiki article BEFORE using this feature."
-#~ msgstr ""
-#~ "Voir les articles wiki sur les volumes ZFS et la déduplication  AVANT "
-#~ "d'utiliser cette fonctionnalité."
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "NOM ATTRIBUT"
+
+#~ msgid "DESCRIPTION"
+#~ msgstr "DESCRIPTION"
+
+#~ msgid "RAW VALUE"
+#~ msgstr "Valeur brute"
