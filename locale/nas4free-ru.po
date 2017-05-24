@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
 "PO-Revision-Date: 2017-05-21 17:04+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:06+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -382,9 +382,6 @@ msgstr "Таблицы ARP"
 
 msgid "ARP Tables List"
 msgstr "Список таблиц ARP"
-
-msgid "ATTRIBUTE NAME"
-msgstr "ИМЯ АТРИБУТА"
 
 msgid "Accept remote syslog messages."
 msgstr "Принимать удаленные syslog сообщения."
@@ -981,6 +978,9 @@ msgstr ""
 "EXT3, EXT4 или NTFS может привести к непредсказуемым результатам, "
 "повреждению файлов и потере данных!"
 
+msgid "Attribute Name"
+msgstr ""
+
 msgid "Audio"
 msgstr "Аудио"
 
@@ -1260,6 +1260,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "Загрузчик"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr "Мост"
@@ -1802,6 +1808,12 @@ msgstr "Управление методом дедупликации."
 msgid "Controls the power consumption mode."
 msgstr "Управление режимом энергопотребления."
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -2098,9 +2110,6 @@ msgstr "Чешский"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "ОПИСАНИЕ"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -4897,6 +4906,9 @@ msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 "Неверный максимальный размер блока! Должно быть в диапазоне от %d to %d."
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr "Неправильное имя пользователя или пароль."
 
@@ -5798,6 +5810,12 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Имя переменной."
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "Встроенная HVM"
 
@@ -5882,6 +5900,9 @@ msgstr "DNS-серверы не сконфигурированы."
 
 msgid "No DNS setting found."
 msgstr "Настройка DNS не найдена."
+
+msgid "No Data"
+msgstr ""
 
 msgid "No Extent has been configured."
 msgstr "Ни один Extent не сконфигурирован."
@@ -6179,6 +6200,12 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Разрешить только авторизованных пользователей. Анонимные логины запрещены."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "Параметр"
@@ -6718,6 +6745,9 @@ msgstr "Предотвращать глубокий разряд батареи"
 msgid "Primary"
 msgstr "Первичный (Primary)"
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "Основная группа"
 
@@ -6863,9 +6893,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr "ЗНАЧЕНИЕ"
-
 msgid "RAW info"
 msgstr "RAW информация"
 
@@ -6913,6 +6940,9 @@ msgstr "Журнал RSYNC"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
+
+msgid "Raw Value"
+msgstr ""
 
 msgid "Read"
 msgstr "Чтение"
@@ -7473,6 +7503,9 @@ msgstr "сек."
 
 msgid "Secondary"
 msgstr "Вторичный (Secondary)"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr "сек."
@@ -11084,8 +11117,11 @@ msgstr "к"
 msgid "umount"
 msgstr "размонтировать"
 
-#~ msgid ""
-#~ "See ZFS volumes & deduplication wiki article BEFORE using this feature."
-#~ msgstr ""
-#~ "Ознакомьтесь с ZFS volumes & deduplication wiki статьёй ПЕРЕД использованием "
-#~ "этой функции."
+#~ msgid "DESCRIPTION"
+#~ msgstr "ОПИСАНИЕ"
+
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "ИМЯ АТРИБУТА"
+
+#~ msgid "RAW VALUE"
+#~ msgstr "ЗНАЧЕНИЕ"

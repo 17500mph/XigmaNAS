@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:06+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -345,9 +345,6 @@ msgstr "ARP tabele"
 
 msgid "ARP Tables List"
 msgstr "ARP tabela"
-
-msgid "ATTRIBUTE NAME"
-msgstr "IME ATRIBUTA"
 
 msgid "Accept remote syslog messages."
 msgstr ""
@@ -907,6 +904,9 @@ msgid ""
 "data!"
 msgstr ""
 
+msgid "Attribute Name"
+msgstr ""
+
 msgid "Audio"
 msgstr ""
 
@@ -1166,6 +1166,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "Zagonski nalagalnik"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr ""
@@ -1679,6 +1685,12 @@ msgstr ""
 msgid "Controls the power consumption mode."
 msgstr ""
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -1917,9 +1929,6 @@ msgstr "Češčina"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "OPIS"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -4596,6 +4605,9 @@ msgstr "Napačen format datoteke."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr "Napačno uporabniško ime ali geslo"
 
@@ -5448,6 +5460,12 @@ msgstr "Ime strežnika. Če je polje prazno, bo izbran privzet strežnik."
 msgid "Name of the variable."
 msgstr "Ime spremenljivke"
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "Vgnezden HVM"
 
@@ -5528,6 +5546,9 @@ msgid "No DNS server have been configured."
 msgstr ""
 
 msgid "No DNS setting found."
+msgstr ""
+
+msgid "No Data"
 msgstr ""
 
 msgid "No Extent has been configured."
@@ -5816,6 +5837,12 @@ msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "Dovoli samo prijavljene uporabnike. Anonimne prijave niso omogočene."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "Možnost"
@@ -6342,6 +6369,9 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "Primarna skupina"
 
@@ -6482,9 +6512,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr ""
-
 msgid "RAW info"
 msgstr ""
 
@@ -6526,6 +6553,9 @@ msgstr "RSYNC dnevnik"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
+
+msgid "Raw Value"
+msgstr ""
 
 msgid "Read"
 msgstr "Preberi"
@@ -7076,6 +7106,9 @@ msgstr ""
 
 msgid "Secondary"
 msgstr "Drugi"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr ""
@@ -10295,3 +10328,9 @@ msgstr ""
 
 msgid "umount"
 msgstr "izvrzi"
+
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "IME ATRIBUTA"
+
+#~ msgid "DESCRIPTION"
+#~ msgstr "OPIS"

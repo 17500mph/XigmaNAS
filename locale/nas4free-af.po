@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:07+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:50+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 
 msgid " interfaces:"
 msgstr " koppelvlakke:"
@@ -381,9 +381,6 @@ msgstr "ARP Tabelle"
 
 msgid "ARP Tables List"
 msgstr "ARP Tabelle Lys"
-
-msgid "ATTRIBUTE NAME"
-msgstr "EIENSKAP NAAM"
 
 msgid "Accept remote syslog messages."
 msgstr "Aanvaar remote syslog boodskappe."
@@ -983,6 +980,9 @@ msgstr ""
 "Om ander lêerformate soos FAT, FAT32, EXT2, EXT3, EXT4 of NTFS te probeer "
 "gebruik, kan lei tot onvoorspelbare gevolge, lêer korrupse en data verlies!"
 
+msgid "Attribute Name"
+msgstr ""
+
 msgid "Audio"
 msgstr "Klank"
 
@@ -1254,6 +1254,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "Selflaaier"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr "Brug"
@@ -1783,6 +1789,12 @@ msgstr "Kontroleer die dedup metode."
 msgid "Controls the power consumption mode."
 msgstr "Konroleer die krag verbruik modus."
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -2078,9 +2090,6 @@ msgstr "Tsjeggies"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "BESKRYWING"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -4858,6 +4867,9 @@ msgstr "Ongeldige lêer formaat."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr "Ongeldige gebruikernaam of wagwoord."
 
@@ -5732,6 +5744,12 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Naam van die veranderlike."
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "Geneste latensie"
 
@@ -5814,6 +5832,9 @@ msgstr ""
 
 msgid "No DNS setting found."
 msgstr "Geen DNS verstelling gevind."
+
+msgid "No Data"
+msgstr ""
 
 msgid "No Extent has been configured."
 msgstr "Geen Omvang is gekonfigureer nie"
@@ -6111,6 +6132,12 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Laat slegs geverifeerde gebruikers toe. Anonieme inskakelings word verbied."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "Opsie"
@@ -6650,6 +6677,9 @@ msgstr "Verhoed diep aflaai van battery"
 msgid "Primary"
 msgstr "Primêre"
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "Primêre Groep"
 
@@ -6792,9 +6822,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr "ROU WAARDE"
-
 msgid "RAW info"
 msgstr "ROU informasie"
 
@@ -6842,6 +6869,9 @@ msgstr "RSYNC register"
 
 msgid "Ramdisk"
 msgstr "Geheue skyf"
+
+msgid "Raw Value"
+msgstr ""
 
 msgid "Read"
 msgstr "Lees"
@@ -7398,6 +7428,9 @@ msgstr "Tweede"
 
 msgid "Secondary"
 msgstr "Sekondêre"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr "Sekondes"
@@ -10875,8 +10908,11 @@ msgstr "na"
 msgid "umount"
 msgstr ""
 
-#~ msgid ""
-#~ "See ZFS volumes & deduplication wiki article BEFORE using this feature."
-#~ msgstr ""
-#~ "Kyk na die ZFS volumes en deduplikasie wiki artikel VOORDAT jy hierdie "
-#~ "funksie gebruik."
+#~ msgid "DESCRIPTION"
+#~ msgstr "BESKRYWING"
+
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "EIENSKAP NAAM"
+
+#~ msgid "RAW VALUE"
+#~ msgstr "ROU WAARDE"

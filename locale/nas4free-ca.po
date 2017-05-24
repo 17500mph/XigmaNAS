@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
-"PO-Revision-Date: 2017-05-04 23:43+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"PO-Revision-Date: 2017-05-24 17:41+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:07+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -386,9 +386,6 @@ msgstr "Taules ARP"
 
 msgid "ARP Tables List"
 msgstr "Index de taules ARP"
-
-msgid "ATTRIBUTE NAME"
-msgstr "NOM DE L'ATRIBUT"
 
 msgid "Accept remote syslog messages."
 msgstr "Acceptar missatges de registre del sistema remot."
@@ -992,6 +989,9 @@ msgstr ""
 "o NTFS pot donar lloc a resultats impredictibles, corrupció d'arxius i la "
 "pèrdua de dades!"
 
+msgid "Attribute Name"
+msgstr "Nom de l'atribut"
+
 msgid "Audio"
 msgstr "Àudio"
 
@@ -1269,6 +1269,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "Gestor d'arrencada"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr "Pont"
@@ -1582,7 +1588,7 @@ msgid "Clone"
 msgstr "Clonar"
 
 msgid "Clone Configuration"
-msgstr ""
+msgstr "Configuració clon"
 
 msgid "Collecting initial data, please wait..."
 msgstr "Recullin dades d'inici, si us plau esperi..."
@@ -1811,6 +1817,12 @@ msgstr "Controla el mètode dedup"
 
 msgid "Controls the power consumption mode."
 msgstr "Controla el mode de consum d'energia."
+
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -2117,9 +2129,6 @@ msgstr "Txec"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "DESCRIPCIÓ"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -3696,7 +3705,7 @@ msgid "Enter a name for the command."
 msgstr "Introduïu un nom per la ordre"
 
 msgid "Enter a name for this dataset"
-msgstr ""
+msgstr "Introduïu un nom per a aquest conjunt de dades"
 
 msgid "Enter a name for this volume"
 msgstr "Introduïu un nom per a aquest volum"
@@ -4930,6 +4939,9 @@ msgstr "Format de fitxer no vàlid."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "Mida màxima de bloc invàlid! ha de ésser en el rang de %d a %d."
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr "Nom d'usuari o contrasenya incorrectes."
 
@@ -5829,6 +5841,12 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Nom de la variable."
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "HVM anidad"
 
@@ -5913,6 +5931,9 @@ msgstr "No s'ha configurat servidor DNS."
 
 msgid "No DNS setting found."
 msgstr "Ajustos DNS no trobats"
+
+msgid "No Data"
+msgstr "Sense dades"
 
 msgid "No Extent has been configured."
 msgstr "No s'ha configurat extensió."
@@ -6211,6 +6232,12 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Només permetre als usuaris autenticats. Es prohibeixen els inicis de sessió "
 "anònims."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "Opció"
@@ -6557,7 +6584,7 @@ msgid "Please add a new disk first."
 msgstr "Si us plau, afegir un nou disc en primer lloc."
 
 msgid "Please add a pool first."
-msgstr ""
+msgstr "Afegir una piscina abans."
 
 msgid "Please add a virtual device first."
 msgstr "Si us plau, afegiu un dispositiu virtual en primer lloc."
@@ -6630,7 +6657,7 @@ msgid "Pool is unlocked"
 msgstr "La piscina està desbloquejada"
 
 msgid "Pool name cannot be modified."
-msgstr ""
+msgstr "El nom de la piscina no es pot modificar."
 
 msgid "Pools"
 msgstr "Piscines"
@@ -6754,6 +6781,9 @@ msgstr "Evitar descàrrega profunda de la bateria"
 
 msgid "Primary"
 msgstr "Primari"
+
+msgid "Primary Cache"
+msgstr ""
 
 msgid "Primary Group"
 msgstr "Grup primari"
@@ -6897,9 +6927,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr "VALOR PLA"
-
 msgid "RAW info"
 msgstr "Informació RAW"
 
@@ -6947,6 +6974,9 @@ msgstr "Registre RSYNC"
 
 msgid "Ramdisk"
 msgstr "Disc RAM"
+
+msgid "Raw Value"
+msgstr "Valor en brut"
 
 msgid "Read"
 msgstr "Llegir"
@@ -7513,6 +7543,9 @@ msgstr "Segon"
 
 msgid "Secondary"
 msgstr "Secundari"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr "Segons"
@@ -11137,8 +11170,11 @@ msgstr "cap a"
 msgid "umount"
 msgstr "desmontar"
 
-#~ msgid ""
-#~ "See ZFS volumes & deduplication wiki article BEFORE using this feature."
-#~ msgstr ""
-#~ "Veure conjunts de dades ZFS i l'article a la wiki de de-duplicació abans "
-#~ "d'utilitzar aquesta funció."
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "NOM DE L'ATRIBUT"
+
+#~ msgid "DESCRIPTION"
+#~ msgstr "DESCRIPCIÓ"
+
+#~ msgid "RAW VALUE"
+#~ msgstr "VALOR PLA"

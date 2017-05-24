@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-21 18:12+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
 "PO-Revision-Date: 2017-05-08 19:17+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-22 22:05+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-05-24 21:48+0000\n"
+"X-Generator: Launchpad (build 18391)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -390,9 +390,6 @@ msgstr "ARP tabulky"
 
 msgid "ARP Tables List"
 msgstr "Seznam ARP tabulek"
-
-msgid "ATTRIBUTE NAME"
-msgstr "NÁZEV ATRIBUTU"
 
 msgid "Accept remote syslog messages."
 msgstr "Přijímat syslog zprávy z ostatních systémů."
@@ -995,6 +992,9 @@ msgstr ""
 "EXT2, EXT3, EXT4 nebo NTFS může vést k nepředvídatelným výsledkům, poškození "
 "a ztrátě dat!"
 
+msgid "Attribute Name"
+msgstr ""
+
 msgid "Audio"
 msgstr "Zvuk"
 
@@ -1271,6 +1271,12 @@ msgstr ""
 
 msgid "Bootloader"
 msgstr "Zavaděč"
+
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Bridge"
 msgstr "Síťový most"
@@ -1821,6 +1827,12 @@ msgstr "Ovládá metodu deduplikace."
 msgid "Controls the power consumption mode."
 msgstr "Řídí režim řízení spotřeby energie."
 
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -2118,9 +2130,6 @@ msgstr "čeština"
 
 msgid "DAAP"
 msgstr "DAAP"
-
-msgid "DESCRIPTION"
-msgstr "POPIS"
 
 msgid "DHCP"
 msgstr "Automaticky (DHCP)"
@@ -4918,6 +4927,9 @@ msgstr ""
 "Neplatné zadání nejvyšší umožněné velikosti bloku! Je třeba, aby bylo z "
 "rozsahu %d až %d."
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr "Neplatné uživatelské jméno nebo heslo."
 
@@ -5833,6 +5845,12 @@ msgstr "Název serveru. Pokud není vyplněno, je použit výchozí „server“
 msgid "Name of the variable."
 msgstr "Název proměnné"
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr "Vnořený HVM virt. stroj"
 
@@ -5916,6 +5934,9 @@ msgstr "Není nastavený žádný DNS server."
 
 msgid "No DNS setting found."
 msgstr "Nebyla nalezena žádná nastavení DNS."
+
+msgid "No Data"
+msgstr ""
 
 msgid "No Extent has been configured."
 msgstr "Není nastavená žádná úložná jednotka."
@@ -6219,6 +6240,12 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Zpřístupnit pouze ověřeným uživatelům. Anonymní přihlášení nejsou umožněna."
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
+msgstr ""
 
 msgid "Option"
 msgstr "Předvolba"
@@ -6760,6 +6787,9 @@ msgstr "Zabraňovat hlubokému vybití akumulátoru"
 msgid "Primary"
 msgstr "Hlavní"
 
+msgid "Primary Cache"
+msgstr ""
+
 msgid "Primary Group"
 msgstr "Hlavní skupina"
 
@@ -6907,9 +6937,6 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
-msgid "RAW VALUE"
-msgstr "HODNOTA V NEZPRACOVANÉM STAVU"
-
 msgid "RAW info"
 msgstr "Informace v nezpracovaném stavu"
 
@@ -6957,6 +6984,9 @@ msgstr "RSYNC – záznam událostí"
 
 msgid "Ramdisk"
 msgstr "Disk v operační paměti"
+
+msgid "Raw Value"
+msgstr ""
 
 msgid "Read"
 msgstr "Čtení"
@@ -7521,6 +7551,9 @@ msgstr "Sekunda"
 
 msgid "Secondary"
 msgstr "Vedlejší"
+
+msgid "Secondary Cache"
+msgstr ""
 
 msgid "Seconds"
 msgstr "Sekund"
@@ -11161,8 +11194,11 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
-#~ msgid ""
-#~ "See ZFS volumes & deduplication wiki article BEFORE using this feature."
-#~ msgstr ""
-#~ "PŘED použitím této funkce si na wiki prostudujte článek „ZFS volumes & "
-#~ "deduplication“ (ZFS svazky a deduplikace)."
+#~ msgid "ATTRIBUTE NAME"
+#~ msgstr "NÁZEV ATRIBUTU"
+
+#~ msgid "DESCRIPTION"
+#~ msgstr "POPIS"
+
+#~ msgid "RAW VALUE"
+#~ msgstr "HODNOTA V NEZPRACOVANÉM STAVU"
