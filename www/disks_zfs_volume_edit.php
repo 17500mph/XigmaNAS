@@ -35,6 +35,16 @@ require 'auth.inc';
 require 'guiconfig.inc';
 require 'zfs.inc';
 
+function get_volblocksize($pool,$name) {
+	$cmd = sprintf('zfs get -H -o value volblocksize %s 2>&1',escapeshellarg(sprintf('%s/%s',$pool,$name)));
+	mwexec2($cmd,$rawdata,$retval);
+	if(0 == $retval):
+		return $rawdata[0];
+	else:
+		return '-';
+	endif;
+}
+
 $sphere_scriptname = basename(__FILE__);
 $sphere_header = 'Location: '.$sphere_scriptname;
 $sphere_header_parent = 'Location: disks_zfs_volume.php';
@@ -42,7 +52,6 @@ $sphere_notifier = 'zfsvolume';
 $sphere_array = [];
 $sphere_record = [];
 $prerequisites_ok = true;
-
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if(PAGE_MODE_POST == $mode_page): // POST is Cancel or not Submit => cleanup
 	if((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])):
@@ -50,12 +59,6 @@ if(PAGE_MODE_POST == $mode_page): // POST is Cancel or not Submit => cleanup
 		exit;
 	endif;
 endif;
-
-function get_volblocksize($pool, $name) {
-	mwexec2('zfs get -H -o value volblocksize '.escapeshellarg($pool.'/'.$name).' 2>&1', $rawdata);
-	return $rawdata[0];
-}
-
 if((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])):
 	$sphere_record['uuid'] = $_POST['uuid'];
 else:
@@ -66,7 +69,6 @@ else:
 		$sphere_record['uuid'] = uuid();
 	endif;
 endif;
-
 $a_dataset = &array_make_branch($config,'zfs','datasets','dataset');
 if(empty($a_dataset)):
 else:	
@@ -128,6 +130,31 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	$sphere_record['sync'] = isset($_POST['sync']) ? $_POST['sync'] : '';
 	$sphere_record['sparse'] = isset($_POST['sparse']);
 	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
+
+	$sphere_record['primarycache'] = filter_input(
+		INPUT_POST,
+		'primarycache',
+		FILTER_VALIDATE_REGEXP,
+		[
+			'flags' => FILTER_REQUIRE_SCALAR,
+			'options' => [
+				'default' => '',
+				'regexp' => '/^(all|metadata|none)$/'
+			]
+		]
+	);
+	$sphere_record['secondarycache'] = filter_input(
+		INPUT_POST,
+		'secondarycache',
+		FILTER_VALIDATE_REGEXP,
+		[
+			'flags' => FILTER_REQUIRE_SCALAR,
+			'options' => [
+				'default' => '',
+				'regexp' => '/^(all|metadata|none)$/'
+			]
+		]
+	);
 	switch($mode_record):
 		case RECORD_NEW:
 		case RECORD_NEW_MODIFY:
@@ -143,13 +170,23 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	endswitch;
 
 	// Input validation
-	$reqdfields = ['pool', 'name', 'volsize'];
-	$reqdfieldsn = [gtext('Pool'), gtext('Name'), gtext('Size')];
-	$reqdfieldst = ['string', 'string', 'string'];
+	$reqdfields = ['pool','name','volsize'];
+	$reqdfieldsn = [gtext('Pool'),gtext('Name'),gtext('Size')];
+	$reqdfieldst = ['string','string','string'];
 
-	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
+	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
+	if(empty($input_errors)):
+		if(empty($sphere_record['primarycache'])):
+			$input_errors[] = sprintf('%s: %s',gtext('Primary Cache'),gtext('Invalid option.'));
+		endif;
+	endif;
+	if(empty($input_errors)):
+		if(empty($sphere_record['secondarycache'])):
+			$input_errors[] = sprintf('%s: %s',gtext('Secondary Cache'),gtext('Invalid option.'));
+		endif;
+	endif;
 	if(empty($input_errors)):
 		// check for a valid name with the format name[/name], blanks are not supported.
 		$helpinghand = preg_quote('.:-_', '/');
@@ -238,6 +275,8 @@ else:
 			$sphere_record['sync'] = 'standard';
 			$sphere_record['sparse'] = false;
 			$sphere_record['desc'] = '';
+			$sphere_record['primarycache'] = 'all';
+			$sphere_record['secondarycache'] = 'all';
 			break;
 		case RECORD_NEW_MODIFY: // get from config only
 			$sphere_record['name'] = $sphere_array[$index]['name'];
@@ -250,18 +289,62 @@ else:
 			$sphere_record['sync'] = $sphere_array[$index]['sync'];
 			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
 			$sphere_record['desc'] = $sphere_array[$index]['desc'];
+			$sphere_record['primarycache'] = filter_var(
+				$sphere_array[$index]['primarycache'],
+				FILTER_VALIDATE_REGEXP,
+				[
+					'flags' => FILTER_REQUIRE_SCALAR,
+					'options' => [
+						'default' => 'all',
+						'regexp' => '/^(all|metadata|none)$/'
+					]
+				]
+			);
+			$sphere_record['secondarycache'] = filter_var(
+				$sphere_array[$index]['secondarycache'],
+				FILTER_VALIDATE_REGEXP,
+				[
+					'flags' => FILTER_REQUIRE_SCALAR,
+					'options' => [
+						'default' => 'all',
+						'regexp' => '/^(all|metadata|none)$/'
+					]
+				]
+			);
 			break;
 		case RECORD_MODIFY: // get from config or system
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
 			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
 			$sphere_record['volmode'] = $sphere_array[$index]['volmode'];
-			$sphere_record['volblocksize'] = get_volblocksize($sphere_record['pool'], $sphere_record['name']);
+			$sphere_record['volblocksize'] = get_volblocksize($sphere_record['pool'],$sphere_record['name']);
 			$sphere_record['compression'] = $sphere_array[$index]['compression'];
 			$sphere_record['dedup'] = $sphere_array[$index]['dedup'];
 			$sphere_record['sync'] = $sphere_array[$index]['sync'];
 			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
 			$sphere_record['desc'] = $sphere_array[$index]['desc'];
+			$sphere_record['primarycache'] = filter_var(
+				$sphere_array[$index]['primarycache'],
+				FILTER_VALIDATE_REGEXP,
+				[
+					'flags' => FILTER_REQUIRE_SCALAR,
+					'options' => [
+						'default' => 'all',
+						'regexp' => '/^(all|metadata|none)$/'
+					]
+				]
+			);
+			$sphere_record['secondarycache'] = filter_var(
+				$sphere_array[$index]['secondarycache'],
+				FILTER_VALIDATE_REGEXP,
+				[
+					'flags' => FILTER_REQUIRE_SCALAR,
+					'options' => [
+						'default' => 'all',
+						'regexp' => '/^(all|metadata|none)$/'
+					]
+				]
+			);
 			break;
 	endswitch;
 endif;
@@ -322,7 +405,16 @@ $l_volblocksize = [
 	'64K' => '64K',
 	'128K' => '128K'
 ];
-
+$l_primarycache = [
+	'all' => sprintf('%s - %s',gtext('Default'),gtext('Both user data and metadata will be cached in ARC.')),
+	'metadata' => gtext('Only metadata will be cached in ARC.'),
+	'none' => gtext('Neither user data nor metadata will be cached in ARC.')
+];
+$l_secondarycache = [
+	'all' => sprintf('%s - %s',gtext('Default'),gtext('Both user data and metadata will be cached in L2ARC.')),
+	'metadata' => gtext('Only metadata will be cached in L2ARC.'),
+	'none' => gtext('Neither user data nor metadata will be cached in L2ARC.')
+];
 $pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Volumes'), gtext('Volume'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
 include 'fbegin.inc';
 ?>
@@ -395,6 +487,10 @@ $(window).on("load", function() {
 			html_radiobox2('sync',gtext('Sync'),$sphere_record['sync'],$l_sync,gtext('Controls the behavior of synchronous requests.'),true);
 			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
 			html_combobox2('volblocksize',gtext('Block Size'),$sphere_record['volblocksize'],$l_volblocksize,gtext('ZFS volume block size. This value can not be changed after creation.'),false,$isrecordmodify);
+			$description = gtext('Controls what is cached in the primary cache (ARC).');
+			html_radiobox2('primarycache',gtext('Primary Cache'),$sphere_record['primarycache'],$l_primarycache,$description);
+			$description = gtext('Controls what is cached in the secondary cache (L2ARC).');
+			html_radiobox2('secondarycache',gtext('Secondary Cache'),$sphere_record['secondarycache'],$l_secondarycache,$description);
 			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
 ?>
 		</tbody>

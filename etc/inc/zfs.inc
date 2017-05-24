@@ -691,44 +691,81 @@ function zfs_dataset_properties($uuid) {
 function zfs_volume_configure($uuid) {
 	global $config;
 	// get volume
-	if (!(isset($config['zfs']) && isset($config['zfs']['volumes']) && isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) { return 1; }
-	if (false === ($index = array_search_ex($uuid, $config['zfs']['volumes']['volume'], 'uuid'))) { return 1; }
+	array_make_branch($config,'zfs','volumes','volume');
+	if(false === ($index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid'))):
+		return 1;
+	endif;
 	$volume = $config['zfs']['volumes']['volume'][$index];
-	if (!is_array($volume)) { return 1; }
+	if(!is_array($volume)):
+		return 1;
+	endif;
 	// get pool name
-	if (!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))) { return 1; }
+	if(!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))):
+		return 1;
+	endif;
 	$poolname = ltrim($volume['pool'][0]);
 	// get volume name
-	if (!(isset($volume['name']) && preg_match('/\S/', $volume['name']))) { return 1; }
+	if(!(isset($volume['name']) && preg_match('/\S/', $volume['name']))):
+		return 1;
+	endif;
 	$volumename = ltrim($volume['name']);
-	$relpath = sprintf('%1$s/%2$s', $poolname, $volumename);
+	$relpath = sprintf('%1$s/%2$s',$poolname,$volumename);
 	// Additional parameter
-	$param = '';
-	if (isset($volume['sparse'])) {
-		$param .= '-s ';
-	}
-	if (isset($volume['compression']) && preg_match('/\S/', $volume['compression'])) {
-		$param .= sprintf('-o compression=%1$s ', trim($volume['compression']));
-	}
-	if (isset($volume['dedup']) && preg_match('/\S/', $volume['dedup'])) {
-		$param .= sprintf('-o dedup=%1$s ', trim($volume['dedup']));
-	}
-	if (isset($volume['sync']) && preg_match('/\S/', $volume['sync'])) {
-		$param .= sprintf('-o sync=%1$s ', trim($volume['sync']));
-	}
-	if (isset($volume['atime']) && preg_match('/\S/', $volume['atime'])) {
-		$param .= sprintf('-o atime=%1$s ', trim($volume['atime']));
-	}
-	if (isset($volume['volmode']) && preg_match('/\S/', $volume['volmode']) && ($volume['volmode'] != 'default')) {
-		$param .= sprintf('-o volmode=%1$s ', trim($volume['volmode']));
-	}
-	if (isset($volume['volblocksize']) && !empty($volume['volblocksize'])) {
-		$param .= sprintf('-o volblocksize=%1$s ', trim($volume['volblocksize']));
-	}
+	$a_param = [];
+	if(isset($volume['sparse'])):
+		$a_param[] = '-s';
+	endif;
+	if(isset($volume['compression']) && preg_match('/\S/',$volume['compression'])):
+		$a_param[] = sprintf('-o compression=%s',trim($volume['compression']));
+	endif;
+	if(isset($volume['dedup']) && preg_match('/\S/',$volume['dedup'])):
+		$a_param[] = sprintf('-o dedup=%s',trim($volume['dedup']));
+	endif;
+	if(isset($volume['sync']) && preg_match('/\S/',$volume['sync'])):
+		$a_param[] = sprintf('-o sync=%s',trim($volume['sync']));
+	endif;
+	if(isset($volume['atime']) && preg_match('/\S/',$volume['atime'])):
+		$a_param[] = sprintf('-o atime=%s',trim($volume['atime']));
+	endif;
+	if(isset($volume['volmode']) && preg_match('/\S/',$volume['volmode']) && ($volume['volmode'] != 'default')):
+		$a_param[] = sprintf('-o volmode=%s',trim($volume['volmode']));
+	endif;
+	if(isset($volume['volblocksize']) && !empty($volume['volblocksize'])):
+		$a_param[] = sprintf('-o volblocksize=%s',trim($volume['volblocksize']));
+	endif;
+	$helpinghand = filter_var(
+		$volume['primarycache'],
+		FILTER_VALIDATE_REGEXP,
+		[
+			'flags' => FILTER_REQUIRE_SCALAR,
+			'options' => [
+				'default' => false,
+				'regexp' => '/^(all|metadata|none)$/'
+			]
+		]
+	);
+	if(false !== $helpinghand):
+		$a_param[] = sprintf('-o primarycache=%s',$helpinghand);
+	endif;
+	$helpinghand = filter_var(
+		$volume['secondarycache'],
+		FILTER_VALIDATE_REGEXP,
+		[
+			'flags' => FILTER_REQUIRE_SCALAR,
+			'options' => [
+				'default' => false,
+				'regexp' => '/^(all|metadata|none)$/'
+			]
+		]
+	);
+	if(false !== $helpinghand):
+		$a_param[] = sprintf('-o secondarycache=%s',$helpinghand);
+	endif;
+	$param = implode(' ',$a_param);
 	// create volume
-	$cmd = sprintf('zfs create -V %1$s %2$s %3$s', $volume['volsize'], $param, escapeshellarg($relpath));
+	$cmd = sprintf('zfs create -V %1$s %2$s %3$s',$volume['volsize'],$param,escapeshellarg($relpath));
 	write_log($cmd);
-	return mwexec($cmd, true);
+	return mwexec($cmd,true);
 }
 
 /**
@@ -782,68 +819,112 @@ function zfs_get_volume_reservation($volsize) {
 function zfs_volume_properties($uuid) {
 	global $config;
 	// get volume
-	if (!(isset($config['zfs']) && isset($config['zfs']['volumes']) && isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) { return 1; }
-	if (false === ($index = array_search_ex($uuid, $config['zfs']['volumes']['volume'], 'uuid'))) { return 1; }
+	array_make_branch($config,'zfs','volumes','volume');
+	if(false === ($index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid'))):
+		return 1;
+	endif;
 	$volume = $config['zfs']['volumes']['volume'][$index];
-	if (!is_array($volume)) { return 1; }
+	if(!is_array($volume)):
+		return 1;
+	endif;
 	// get pool name
-	if (!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))) { return 1; }
+	if(!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))):
+		return 1;
+	endif;
 	$poolname = ltrim($volume['pool'][0]);
 	// get volume name
-	if (!(isset($volume['name']) && preg_match('/\S/', $volume['name']))) { return 1; }
+	if(!(isset($volume['name']) && preg_match('/\S/', $volume['name']))):
+		return 1;
+	endif;
 	$volumename = ltrim($volume['name']);
-	$relpath = sprintf('%1$s/%2$s', $poolname, $volumename);
-	if (isset($volume['volsize']) && !empty($volume['volsize'])) {
-		if (false === ($reservation = zfs_get_volume_reservation($volume['volsize']))) { return 1; }
-	}
+	$relpath = sprintf('%1$s/%2$s',$poolname,$volumename);
+	if(isset($volume['volsize']) && !empty($volume['volsize'])):
+		if(false === ($reservation = zfs_get_volume_reservation($volume['volsize']))):
+			return 1;
+		endif;
+	endif;
 	$result = 0;
-	foreach (explode(' ', 'volsize sparse compression dedup sync atime volmode') as $attr) {
+	$a_property = ['volsize','sparse','compression','dedup','sync','atime','volmode','primarycache','secondarycache'];
+	foreach($a_property as $property):
 		$param = '';
-		switch ($attr) {
+		switch($property):
 			case 'volsize':
-				if (isset($volume['volsize']) && !empty($volume['volsize']))
-					$param = sprintf('volsize=%1$s', trim($volume['volsize']));
+				if(isset($volume['volsize']) && !empty($volume['volsize'])):
+					$param = sprintf('volsize=%s',trim($volume['volsize']));
+				endif;
 				break;
 			case 'sparse':
-				if (isset($volume['sparse'])) {
+				if(isset($volume['sparse'])):
 					$param = 'refreservation=none';
-				} elseif (isset($volume['volsize']) && !empty($volume['volsize'])) {
-					$param = sprintf('refreservation=%1$s', trim($volume['volsize']));
-				}
+				elseif(isset($volume['volsize']) && !empty($volume['volsize'])):
+					$param = sprintf('refreservation=%s',trim($volume['volsize']));
+				endif;
 				break;
 			case 'compression':
-				if (isset($volume['compression']) && preg_match('/\S/', $volume['compression'])) {
-					$param = sprintf('compression=%1$s', trim($volume['compression']));
-				}
+				if(isset($volume['compression']) && preg_match('/\S/', $volume['compression'])):
+					$param = sprintf('compression=%s',trim($volume['compression']));
+				endif;
 				break;
 			case 'dedup':
-				if (isset($volume['dedup']) && preg_match('/\S/', $volume['dedup'])) {
-					$param = sprintf('dedup=%1$s', trim($volume['dedup']));
-				}
+				if(isset($volume['dedup']) && preg_match('/\S/', $volume['dedup'])):
+					$param = sprintf('dedup=%s',trim($volume['dedup']));
+				endif;
 				break;
 			case 'sync':
-				if (isset($volume['sync']) && preg_match('/\S/', $volume['sync'])) {
-					$param = sprintf('sync=%1$s', trim($volume['sync']));
-				}
+				if(isset($volume['sync']) && preg_match('/\S/', $volume['sync'])):
+					$param = sprintf('sync=%s',trim($volume['sync']));
+				endif;
 				break;
 			case 'atime':
-				if (isset($volume['atime']) && preg_match('/\S/', $volume['atime'])) {
-					$param = sprintf('atime=%1$s', trim($volume['atime']));
-				}
+				if(isset($volume['atime']) && preg_match('/\S/', $volume['atime'])):
+					$param = sprintf('atime=%s',trim($volume['atime']));
+				endif;
 				break;
 			case 'volmode':
-				if (isset($volume['volmode']) && preg_match('/\S/', $volume['volmode'])) {
-					$param = sprintf('volmode=%1$s', trim($volume['volmode']));
-				}
+				if(isset($volume['volmode']) && preg_match('/\S/',$volume['volmode'])):
+					$param = sprintf('volmode=%s',trim($volume['volmode']));
+				endif;
 				break;
-		}		
+			case 'primarycache':
+				$helpinghand = filter_var(
+					$volume['primarycache'],
+					FILTER_VALIDATE_REGEXP,
+					[
+						'flags' => FILTER_REQUIRE_SCALAR,
+						'options' => [
+							'default' => false,
+							'regexp' => '/^(all|metadata|none)$/'
+						]
+					]
+				);
+				if(false !== $helpinghand):
+					$param = sprintf('primarycache=%s',$helpinghand);
+				endif;
+				break;
+			case 'secondarycache':
+				$helpinghand = filter_var(
+					$volume['secondarycache'],
+					FILTER_VALIDATE_REGEXP,
+					[
+						'flags' => FILTER_REQUIRE_SCALAR,
+						'options' => [
+							'default' => false,
+							'regexp' => '/^(all|metadata|none)$/'
+						]
+					]
+				);
+				if(false !== $helpinghand):
+					$param = sprintf('secondarycache=%s',$helpinghand);
+				endif;
+				break;
+		endswitch;	
 		// Update volume properties
-		if (!empty($param)) {
-			$cmd = sprintf('zfs set %1$s %2$s', $param, escapeshellarg($relpath));
+		if(!empty($param)):
+			$cmd = sprintf('zfs set %1$s %2$s',$param,escapeshellarg($relpath));
 			write_log($cmd);
-			$result |= mwexec($cmd, true);
-		}
-	}
+			$result |= mwexec($cmd,true);
+		endif;
+	endforeach;
 	return $result;
 }
 
