@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-05-24 02:09+0000\n"
+"POT-Creation-Date: 2017-05-24 23:01+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1052,6 +1052,12 @@ msgstr ""
 msgid "Bootloader"
 msgstr ""
 
+msgid "Both user data and metadata will be cached in ARC."
+msgstr ""
+
+msgid "Both user data and metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Bridge"
 msgstr ""
 
@@ -1520,6 +1526,12 @@ msgid "Controls the dedup method."
 msgstr ""
 
 msgid "Controls the power consumption mode."
+msgstr ""
+
+msgid "Controls what is cached in the primary cache (ARC)."
+msgstr ""
+
+msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
 msgid "Controls whether the access time for files is updated when they are read. Turning this Off avoids producing write traffic when reading files and can result in significant performance gains."
@@ -4209,6 +4221,9 @@ msgstr ""
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
+msgid "Invalid option."
+msgstr ""
+
 msgid "Invalid username or password."
 msgstr ""
 
@@ -5002,6 +5017,12 @@ msgstr ""
 msgid "Name of the variable."
 msgstr ""
 
+msgid "Neither user data nor metadata will be cached in ARC."
+msgstr ""
+
+msgid "Neither user data nor metadata will be cached in L2ARC."
+msgstr ""
+
 msgid "Nested HVM"
 msgstr ""
 
@@ -5340,6 +5361,12 @@ msgid "Only allow anonymous users. Use this on a public FTP site with no remote 
 msgstr ""
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
+msgstr ""
+
+msgid "Only metadata will be cached in ARC."
+msgstr ""
+
+msgid "Only metadata will be cached in L2ARC."
 msgstr ""
 
 msgid "Option"
@@ -5841,6 +5868,9 @@ msgid "Prevent deep discharge of battery"
 msgstr ""
 
 msgid "Primary"
+msgstr ""
+
+msgid "Primary Cache"
 msgstr ""
 
 msgid "Primary Group"
@@ -6538,6 +6568,9 @@ msgid "Second"
 msgstr ""
 
 msgid "Secondary"
+msgstr ""
+
+msgid "Secondary Cache"
 msgstr ""
 
 msgid "Seconds"
