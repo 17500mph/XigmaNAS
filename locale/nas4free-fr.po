@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-05-24 05:10+0000\n"
+"PO-Revision-Date: 2017-05-25 05:34+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-24 21:48+0000\n"
+"X-Launchpad-Export-Date: 2017-05-25 20:16+0000\n"
 "X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -1279,9 +1279,11 @@ msgstr "chargeur d'amorçage"
 
 msgid "Both user data and metadata will be cached in ARC."
 msgstr ""
+"Les données utilisateur et les métadonnées seront mises en cache dans ARC."
 
 msgid "Both user data and metadata will be cached in L2ARC."
 msgstr ""
+"Les données utilisateur et les métadonnées seront mises en cache dans L2ARC."
 
 msgid "Bridge"
 msgstr "Jonction"
@@ -1833,10 +1835,10 @@ msgid "Controls the power consumption mode."
 msgstr "Contrôle le mode de consommation d'énergie."
 
 msgid "Controls what is cached in the primary cache (ARC)."
-msgstr ""
+msgstr "Contrôle ce qui est mis en cache dans le cache principal (ARC)."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
-msgstr ""
+msgstr "Contrôle ce qui est mis en cache dans le cache secondaire (L2ARC)."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -4951,7 +4953,7 @@ msgstr ""
 "Taille de bloc maximum non valide! elle doit être dans la plage de %d à %d."
 
 msgid "Invalid option."
-msgstr ""
+msgstr "Option non valide."
 
 msgid "Invalid username or password."
 msgstr "nom d'utilisateur ou mot de passe invalide"
@@ -5853,9 +5855,13 @@ msgstr "Nom de la variable."
 
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr ""
+"Ni les données utilisateur ni les métadonnées ne seront mises en cache dans "
+"ARC."
 
 msgid "Neither user data nor metadata will be cached in L2ARC."
 msgstr ""
+"Ni les données utilisateur ni les métadonnées ne seront mises en cache dans "
+"L2ARC."
 
 msgid "Nested HVM"
 msgstr "Nested HVM"
@@ -6244,10 +6250,10 @@ msgstr ""
 "Autoriser les utilisateurs authentifiés seulement. Accès anonymes interdit."
 
 msgid "Only metadata will be cached in ARC."
-msgstr ""
+msgstr "Seules les métadonnées seront mises en cache dans ARC."
 
 msgid "Only metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Seules les métadonnées seront mises en cache dans L2ARC."
 
 msgid "Option"
 msgstr "Option"
@@ -6794,7 +6800,7 @@ msgid "Primary"
 msgstr "Primaire"
 
 msgid "Primary Cache"
-msgstr ""
+msgstr "Cache primaire"
 
 msgid "Primary Group"
 msgstr "Groupe primaire"
@@ -7558,7 +7564,7 @@ msgid "Secondary"
 msgstr "Secondaire"
 
 msgid "Secondary Cache"
-msgstr ""
+msgstr "Cache secondaire"
 
 msgid "Seconds"
 msgstr "Secondes"
@@ -11201,12 +11207,3 @@ msgstr "à"
 
 msgid "umount"
 msgstr "démontage"
-
-#~ msgid "ATTRIBUTE NAME"
-#~ msgstr "NOM ATTRIBUT"
-
-#~ msgid "DESCRIPTION"
-#~ msgstr "DESCRIPTION"
-
-#~ msgid "RAW VALUE"
-#~ msgstr "Valeur brute"
