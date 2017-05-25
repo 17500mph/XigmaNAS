@@ -34,6 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 require 'zfs.inc';
+require 'properties_zfs_dataset.php';
 
 function get_volblocksize($pool,$name) {
 	$cmd = sprintf('zfs get -H -o value volblocksize %s 2>&1',escapeshellarg(sprintf('%s/%s',$pool,$name)));
@@ -52,6 +53,8 @@ $sphere_notifier = 'zfsvolume';
 $sphere_array = [];
 $sphere_record = [];
 $prerequisites_ok = true;
+$prop = new zfs_dataset_properties();
+
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if(PAGE_MODE_POST == $mode_page): // POST is Cancel or not Submit => cleanup
 	if((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])):
@@ -124,48 +127,33 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	unset($input_errors);
 	// apply post values that are applicable for all record modes
 	$sphere_record['volsize'] = isset($_POST['volsize']) ? $_POST['volsize'] : '';
-	$sphere_record['volmode'] = isset($_POST['volmode']) ? $_POST['volmode'] : '';
-	$sphere_record['compression'] = isset($_POST['compression']) ? $_POST['compression'] : '';
-	$sphere_record['dedup'] = isset($_POST['dedup']) ? $_POST['dedup'] : '';
-	$sphere_record['sync'] = isset($_POST['sync']) ? $_POST['sync'] : '';
+	$ref = 'volmode';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+	$ref = 'compression';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+	$ref = 'dedup';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+	$ref = 'sync';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
 	$sphere_record['sparse'] = isset($_POST['sparse']);
 	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
-
-	$sphere_record['primarycache'] = filter_input(
-		INPUT_POST,
-		'primarycache',
-		FILTER_VALIDATE_REGEXP,
-		[
-			'flags' => FILTER_REQUIRE_SCALAR,
-			'options' => [
-				'default' => '',
-				'regexp' => '/^(all|metadata|none)$/'
-			]
-		]
-	);
-	$sphere_record['secondarycache'] = filter_input(
-		INPUT_POST,
-		'secondarycache',
-		FILTER_VALIDATE_REGEXP,
-		[
-			'flags' => FILTER_REQUIRE_SCALAR,
-			'options' => [
-				'default' => '',
-				'regexp' => '/^(all|metadata|none)$/'
-			]
-		]
-	);
+	$ref = 'primarycache';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+	$ref = 'secondarycache';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
 	switch($mode_record):
 		case RECORD_NEW:
 		case RECORD_NEW_MODIFY:
 			$sphere_record['name'] = isset($_POST['name']) ? $_POST['name'] : '';
 			$sphere_record['pool'] = isset($_POST['pool']) ? $_POST['pool'] : '';
-			$sphere_record['volblocksize'] = isset($_POST['volblocksize']) ? $_POST['volblocksize'] : '';
+			$ref = 'volblocksize';
+			$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
 			break;
 		case RECORD_MODIFY:
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$sphere_record['volblocksize'] = $sphere_array[$index]['volblocksize'];
+			$ref = 'volblocksize';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
 			break;
 	endswitch;
 
@@ -177,15 +165,13 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
 	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
-	if(empty($input_errors)):
-		if(empty($sphere_record['primarycache'])):
-			$input_errors[] = sprintf('%s: %s',gtext('Primary Cache'),gtext('Invalid option.'));
-		endif;
-	endif;
-	if(empty($input_errors)):
-		if(empty($sphere_record['secondarycache'])):
-			$input_errors[] = sprintf('%s: %s',gtext('Secondary Cache'),gtext('Invalid option.'));
-		endif;
+	if(empty($input_errors)): // validate list elements
+		foreach(['compression','dedup','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
+			if(is_null($sphere_record[$ref])):
+				$sphere_record[$ref] = '';
+				$input_errors[] = sprintf('%s: %s',$prop->$ref->title(),gtext('Invalid option.'));
+			endif;
+		endforeach;
 	endif;
 	if(empty($input_errors)):
 		// check for a valid name with the format name[/name], blanks are not supported.
@@ -268,83 +254,64 @@ else:
 			$sphere_record['name'] = '';
 			$sphere_record['pool'] = '';
 			$sphere_record['volsize'] = '';
-			$sphere_record['volmode'] = 'default';
-			$sphere_record['volblocksize'] = '';
-			$sphere_record['compression'] = 'off';
-			$sphere_record['dedup'] = 'off';
-			$sphere_record['sync'] = 'standard';
+			$ref = 'volmode';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			$ref = 'volblocksize';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			$ref = 'compression';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			$ref = 'dedup';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			$ref = 'sync';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
 			$sphere_record['sparse'] = false;
 			$sphere_record['desc'] = '';
-			$sphere_record['primarycache'] = 'all';
-			$sphere_record['secondarycache'] = 'all';
+			$ref = 'primarycache';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			$ref = 'secondarycache';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
 			break;
 		case RECORD_NEW_MODIFY: // get from config only
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
 			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
-			$sphere_record['volmode'] = $sphere_array[$index]['volmode'];
-			$sphere_record['volblocksize'] = $sphere_array[$index]['volblocksize'];
-			$sphere_record['compression'] = $sphere_array[$index]['compression'];
-			$sphere_record['dedup'] = $sphere_array[$index]['dedup'];
-			$sphere_record['sync'] = $sphere_array[$index]['sync'];
+			$ref = 'volmode';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'volblocksize';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'compression';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'dedup';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'sync';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
 			$sphere_record['desc'] = $sphere_array[$index]['desc'];
-			$sphere_record['primarycache'] = filter_var(
-				$sphere_array[$index]['primarycache'],
-				FILTER_VALIDATE_REGEXP,
-				[
-					'flags' => FILTER_REQUIRE_SCALAR,
-					'options' => [
-						'default' => 'all',
-						'regexp' => '/^(all|metadata|none)$/'
-					]
-				]
-			);
-			$sphere_record['secondarycache'] = filter_var(
-				$sphere_array[$index]['secondarycache'],
-				FILTER_VALIDATE_REGEXP,
-				[
-					'flags' => FILTER_REQUIRE_SCALAR,
-					'options' => [
-						'default' => 'all',
-						'regexp' => '/^(all|metadata|none)$/'
-					]
-				]
-			);
+			$ref = 'primarycache';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'secondarycache';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			break;
 		case RECORD_MODIFY: // get from config or system
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
 			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
-			$sphere_record['volmode'] = $sphere_array[$index]['volmode'];
-			$sphere_record['volblocksize'] = get_volblocksize($sphere_record['pool'],$sphere_record['name']);
-			$sphere_record['compression'] = $sphere_array[$index]['compression'];
-			$sphere_record['dedup'] = $sphere_array[$index]['dedup'];
-			$sphere_record['sync'] = $sphere_array[$index]['sync'];
+			$ref = 'volmode';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'volblocksize';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'compression';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'dedup';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'sync';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
 			$sphere_record['desc'] = $sphere_array[$index]['desc'];
-			$sphere_record['primarycache'] = filter_var(
-				$sphere_array[$index]['primarycache'],
-				FILTER_VALIDATE_REGEXP,
-				[
-					'flags' => FILTER_REQUIRE_SCALAR,
-					'options' => [
-						'default' => 'all',
-						'regexp' => '/^(all|metadata|none)$/'
-					]
-				]
-			);
-			$sphere_record['secondarycache'] = filter_var(
-				$sphere_array[$index]['secondarycache'],
-				FILTER_VALIDATE_REGEXP,
-				[
-					'flags' => FILTER_REQUIRE_SCALAR,
-					'options' => [
-						'default' => 'all',
-						'regexp' => '/^(all|metadata|none)$/'
-					]
-				]
-			);
+			$ref = 'primarycache';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			$ref = 'secondarycache';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			break;
 	endswitch;
 endif;
@@ -358,63 +325,6 @@ foreach ($a_pool as $r_pool):
 	endif;
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 endforeach;
-$l_volmode = [
-	'default' => gtext('Default'),
-	'geom' => 'geom',
-	'dev' => 'dev',
-	'none' => 'none'
-];
-$l_compressionmode = [
-	'on' => gtext('On'),
-	'off' => gtext('Off'),
-	'lz4' => 'lz4',
-	'lzjb' => 'lzjb',
-	'gzip' => 'gzip',
-	'gzip-1' => 'gzip-1',
-	'gzip-2' => 'gzip-2',
-	'gzip-3' => 'gzip-3',
-	'gzip-4' => 'gzip-4',
-	'gzip-5' => 'gzip-5',
-	'gzip-6' => 'gzip-6',
-	'gzip-7' => 'gzip-7',
-	'gzip-8' => 'gzip-8',
-	'gzip-9' => 'gzip-9',
-	'zle' => 'zle'
-];
-$l_dedup = [
-	'on' => gtext('On'),
-	'off' => gtext('Off'),
-	'verify' => gtext('Verify'),
-	'sha256' => 'SHA256',
-	'sha256,verify' => gtext('SHA256, Verify')
-];
-$l_sync = [
-	'standard' => gtext('Standard'),
-	'always' => gtext('Always'),
-	'disabled' => gtext('Disabled')
-];
-$l_volblocksize = [
-	'' => gtext('Default'),
-	'512B' => '512B',
-	'1K' => '1K',
-	'2K' => '2K',
-	'4K' => '4K',
-	'8K' => '8K',
-	'16K' => '16K',
-	'32K' => '32K',
-	'64K' => '64K',
-	'128K' => '128K'
-];
-$l_primarycache = [
-	'all' => sprintf('%s - %s',gtext('Default'),gtext('Both user data and metadata will be cached in ARC.')),
-	'metadata' => gtext('Only metadata will be cached in ARC.'),
-	'none' => gtext('Neither user data nor metadata will be cached in ARC.')
-];
-$l_secondarycache = [
-	'all' => sprintf('%s - %s',gtext('Default'),gtext('Both user data and metadata will be cached in L2ARC.')),
-	'metadata' => gtext('Only metadata will be cached in L2ARC.'),
-	'none' => gtext('Neither user data nor metadata will be cached in L2ARC.')
-];
 $pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Volumes'), gtext('Volume'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
 include 'fbegin.inc';
 ?>
@@ -473,24 +383,22 @@ $(window).on("load", function() {
 <?php
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
 			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
-			html_inputbox2('volsize',gtext('Size'),$sphere_record['volsize'],gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."),true,10);
-			html_radiobox2('volmode',gtext('Volume Mode'),$sphere_record['volmode'],$l_volmode,gtext('Specifies how the volume should be exposed to the OS.'),true);
-			html_combobox2('compression',gtext('Compression'),$sphere_record['compression'],$l_compressionmode,gtext("Controls the compression algorithm used for this volume. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."),true);
-			$helpinghand = '<div>' . gtext('Controls the dedup method.') . '</div>'
-				. '<div><b>'
-				. '<font color="red">' . gtext('WARNING') . '</font>' . ': '
-				. '<a href="https://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
-				. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
-				. '</a>'
-				. '</b></div>';
-			html_combobox2('dedup',gtext('Dedup'),$sphere_record['dedup'],$l_dedup,$helpinghand,true);
-			html_radiobox2('sync',gtext('Sync'),$sphere_record['sync'],$l_sync,gtext('Controls the behavior of synchronous requests.'),true);
+			html_inputbox2('volsize',gtext('Size'),$sphere_record['volsize'],gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."),true,20);
+			$ref = 'volmode';
+			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			$ref = 'compression';
+			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			$ref = 'dedup';
+			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			$ref = 'sync';
+			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
 			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
-			html_combobox2('volblocksize',gtext('Block Size'),$sphere_record['volblocksize'],$l_volblocksize,gtext('ZFS volume block size. This value can not be changed after creation.'),false,$isrecordmodify);
-			$description = gtext('Controls what is cached in the primary cache (ARC).');
-			html_radiobox2('primarycache',gtext('Primary Cache'),$sphere_record['primarycache'],$l_primarycache,$description);
-			$description = gtext('Controls what is cached in the secondary cache (L2ARC).');
-			html_radiobox2('secondarycache',gtext('Secondary Cache'),$sphere_record['secondarycache'],$l_secondarycache,$description);
+			$ref = 'volblocksize';
+			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),false,$isrecordmodify);
+			$ref = 'primarycache';
+			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
+			$ref = 'secondarycache';
+			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
 			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
 ?>
 		</tbody>
