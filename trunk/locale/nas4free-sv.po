@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-05-24 03:21+0000\n"
+"PO-Revision-Date: 2017-05-25 02:25+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-05-25 20:17+0000\n"
 "X-Generator: Launchpad (build 18391)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -1237,10 +1237,10 @@ msgid "Bootloader"
 msgstr "Starthanterare"
 
 msgid "Both user data and metadata will be cached in ARC."
-msgstr ""
+msgstr "Både användardata och metadata kommer att mellanlagras i ARC."
 
 msgid "Both user data and metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Både användardata och metadata kommer att mellanlagras i L2ARC."
 
 msgid "Bridge"
 msgstr "Brygga"
@@ -1779,9 +1779,11 @@ msgstr "Kontrollerar effektförbrukningsläget."
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr ""
+"Kontrollerar vad som mellanlagras i den primära mellanlagringen (ARC)."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
+"Kontrollerar vad som mellanlagras i den sekondära mellanlagringen (L2ARC)."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -4833,7 +4835,7 @@ msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "Felaktig maximal blockstorlek! Måste vara mellan %d och %d."
 
 msgid "Invalid option."
-msgstr ""
+msgstr "Felaktigt alternativ."
 
 msgid "Invalid username or password."
 msgstr "Ogiltigt användarnamn eller lösenord."
@@ -5710,10 +5712,10 @@ msgid "Name of the variable."
 msgstr "Namn på variabeln."
 
 msgid "Neither user data nor metadata will be cached in ARC."
-msgstr ""
+msgstr "Varken användardata eller metadata kommer att mellanlagras i ARC."
 
 msgid "Neither user data nor metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Varken användardata eller metadata kommer att mellanlagras i L2ARC."
 
 msgid "Nested HVM"
 msgstr "Nested HVM"
@@ -6099,10 +6101,10 @@ msgstr ""
 "Tillåt endast autentiserade användare. Anonyma inloggningar förhindras."
 
 msgid "Only metadata will be cached in ARC."
-msgstr ""
+msgstr "Endast metadata kommer att mellanlagras i ARC."
 
 msgid "Only metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Endast metadata kommer att mellanlagras i L2ARC."
 
 msgid "Option"
 msgstr "Alternativ"
@@ -6640,7 +6642,7 @@ msgid "Primary"
 msgstr "Primär"
 
 msgid "Primary Cache"
-msgstr ""
+msgstr "Primär mellanlagring"
 
 msgid "Primary Group"
 msgstr "Huvudgrupp"
@@ -7393,7 +7395,7 @@ msgid "Secondary"
 msgstr "Sekundär"
 
 msgid "Secondary Cache"
-msgstr ""
+msgstr "Sekundär mellanlagring"
 
 msgid "Seconds"
 msgstr "Sekunder"
@@ -10954,12 +10956,3 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
-
-#~ msgid "ATTRIBUTE NAME"
-#~ msgstr "ATTRIBUTNAMN"
-
-#~ msgid "DESCRIPTION"
-#~ msgstr "BESKRIVNING"
-
-#~ msgid "RAW VALUE"
-#~ msgstr "RÅVÄRDE"

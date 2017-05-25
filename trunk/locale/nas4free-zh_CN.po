@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-05-24 01:22+0000\n"
+"PO-Revision-Date: 2017-05-25 00:57+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-24 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-05-25 20:17+0000\n"
 "X-Generator: Launchpad (build 18391)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -1155,10 +1155,10 @@ msgid "Bootloader"
 msgstr "启动程序"
 
 msgid "Both user data and metadata will be cached in ARC."
-msgstr ""
+msgstr "用户数据和元数据都将被缓存在ARC中。"
 
 msgid "Both user data and metadata will be cached in L2ARC."
-msgstr ""
+msgstr "用户数据和元数据都将被缓存在L2ARC中。"
 
 msgid "Bridge"
 msgstr "Bridge"
@@ -1670,10 +1670,10 @@ msgid "Controls the power consumption mode."
 msgstr "控制功耗模式。"
 
 msgid "Controls what is cached in the primary cache (ARC)."
-msgstr ""
+msgstr "控制缓存在主缓存（ARC）中的内容。"
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
-msgstr ""
+msgstr "控制缓存在二级缓存（L2ARC）中的内容。"
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -4565,7 +4565,7 @@ msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "最大块大小无效！ 它必须在%d到%d的范围内。"
 
 msgid "Invalid option."
-msgstr ""
+msgstr "选项无效。"
 
 msgid "Invalid username or password."
 msgstr "无效的用户名或密码。"
@@ -5414,10 +5414,10 @@ msgid "Name of the variable."
 msgstr "改名名称。"
 
 msgid "Neither user data nor metadata will be cached in ARC."
-msgstr ""
+msgstr "用户数据和元数据都不会缓存在ARC中。"
 
 msgid "Neither user data nor metadata will be cached in L2ARC."
-msgstr ""
+msgstr "用户数据和元数据都不会缓存在L2ARC中。"
 
 msgid "Nested HVM"
 msgstr "嵌套HVM"
@@ -5781,10 +5781,10 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "只允许授权用户，匿名用户无法登录。"
 
 msgid "Only metadata will be cached in ARC."
-msgstr ""
+msgstr "只有元数据将被缓存在ARC中。"
 
 msgid "Only metadata will be cached in L2ARC."
-msgstr ""
+msgstr "只有元数据将被缓存在L2ARC中。"
 
 msgid "Option"
 msgstr "选项"
@@ -6307,7 +6307,7 @@ msgid "Primary"
 msgstr "主要"
 
 msgid "Primary Cache"
-msgstr ""
+msgstr "主缓存"
 
 msgid "Primary Group"
 msgstr "主要群组"
@@ -7037,7 +7037,7 @@ msgid "Secondary"
 msgstr "次要"
 
 msgid "Secondary Cache"
-msgstr ""
+msgstr "二级缓存"
 
 msgid "Seconds"
 msgstr "秒"
@@ -10251,12 +10251,3 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
-
-#~ msgid "ATTRIBUTE NAME"
-#~ msgstr "属性名"
-
-#~ msgid "DESCRIPTION"
-#~ msgstr "描述"
-
-#~ msgid "RAW VALUE"
-#~ msgstr "原始值"
