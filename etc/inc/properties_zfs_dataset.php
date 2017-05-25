@@ -4,7 +4,7 @@
   properties_zfs_dataset.php
 
   Part of NAS4Free (http://www.nas4free.org).
-  Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
+  Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
   All rights reserved.
 
   Redistribution and use in source and binary forms, with or without
@@ -33,47 +33,7 @@
   either expressed or implied, of the NAS4Free Project.
  */
 require 'properties.php';
-/*
-class co_zfs {
-	private $a_properties = [
-	PROPERTY       EDIT  INHERIT   VALUES
 
-	'name' => 'atime'               , 'edit' =>  true, 'inherit' =>  true, 'format' => ['on', 'off'],
-	'name' => 'canmount'            , 'edit' =>  true, 'inherit' => false, 'format' => ['on', 'off', 'noauto'],
-	'name' => 'casesensitivity'     , 'edit' =>  true, 'inherit' =>  true, 'format' => ['sensitive', 'insensitive', 'mixed'],
-	'name' => 'checksum'            , 'edit' =>  true, 'inherit' =>  true, 'format' => ['on', 'off', 'fletcher2', 'fletcher4', 'sha256', 'sha512', 'skein', 'edonr'],
-	'name' => 'copies'              , 'edit' =>  true, 'inherit' =>  true, 'format' => ['1', '2', '3'],
-	'name' => 'devices'             , 'edit' =>  true, 'inherit' =>  true, 'format' => ['on', 'off'],
-	'name' => 'exec'                , 'edit' =>  true, 'inherit' =>  true, 'format' => ['on', 'off'],
-	'name' => 'filesystem_count'    , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <count>
-	'name' => 'filesystem_limit'    , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <count> | none
-	'name' => 'jailed'              , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off
-	'name' => 'logbias'             , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   latency | throughput
-	'name' => 'mlslabel'            , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   <sensitivity label>
-	'name' => 'mountpoint'          , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   <path> | legacy | none
-	'name' => 'nbmand'              , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off
-	'name' => 'normalization'       , 'edit' => false, 'inherit' =>  true, 'format' => '  NO      YES   none | formC | formD | formKC | formKD
-	'name' => 'quota '              , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <size> | none
-	'name' => 'readonly'            , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off
-	'name' => 'recordsize'          , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   512 to 1M, power of 2
-	'name' => 'redundant_metadata'  , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   all | most
-	'name' => 'refquota'            , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <size> | none
-	'name' => 'refreservation'      , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <size> | none
-	'name' => 'reservation'         , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <size> | none
-	'name' => 'setuid'              , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off
-	'name' => 'sharenfs'            , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off | share(1M) options
-	'name' => 'sharesmb'            , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off | sharemgr(1M) options
-	'name' => 'snapdir'             , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   hidden | visible
-	'name' => 'snapshot_count'      , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <count>
-	'name' => 'snapshot_limit'      , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <count> | none
-	'name' => 'utf8only'            , 'edit' => false, 'inherit' =>  true, 'format' => '  NO      YES   on | off
-	'name' => 'version'             , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   1 | 2 | 3 | 4 | 5 | current
-	'name' => 'volsize'             , 'edit' =>  true, 'inherit' => false, 'format' => YES       NO   <size>
-	'name' => 'vscan'               , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off
-	'name' => 'xattr'               , 'edit' =>  true, 'inherit' =>  true, 'format' => 'YES      YES   on | off
-];
-}
- */
 class zfs_dataset_properties {
 	public $aclinherit;
 	public $aclmode;
