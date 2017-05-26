@@ -61,18 +61,18 @@ umount_cdrom()
 manual_cdmount()
 {
 	DRIVES=`camcontrol devlist`
-
+	mkdir -p ${CDPATH}
 	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "Select the Install Media Source" \
 	--form "${DRIVES}" 0 0 0 \
 	"Select CD/USB Drive e.g: cd0:" 1 1 "" 1 30 30 30 \
-	2>/tmp/_zmcd
+	2>${tmpfile}
 	if [ 0 -ne $? ]; then
 		exit 0
 	fi
 
 	# Try to mount from specified device.
 	echo "Mounting CD/USB Drive"
-	DEVICE=`awk '{ print $1; }' /tmp/_zmcd | tr -d '"'`
+	DEVICE=`cat ${tmpfile}`
 	mount /dev/${DEVICE}s1a ${CDPATH} > /dev/null 2>&1 || mount_cd9660 /dev/${DEVICE} ${CDPATH} > /dev/null 2>&1
 	# Check if mounted cd/usb is accessible.
 	if [ ! -f "${CDPATH}/version" ]; then
