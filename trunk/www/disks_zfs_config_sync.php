@@ -141,7 +141,7 @@ foreach($rawdata as $line):
 	endif;
 endforeach;
 
-$cmd = 'zfs list -H -t volume -o name,volsize,volblocksize,compression,origin,dedup,sync,refreservation,primarycache,secondarycache';
+$cmd = 'zfs list -H -t volume -o name,volsize,volmode,volblocksize,compression,origin,dedup,sync,refreservation,primarycache,secondarycache';
 unset($rawdata);
 unset($retval);
 mwexec2($cmd,$rawdata,$retval);
@@ -149,7 +149,7 @@ foreach($rawdata as $line):
 	if($line == 'no datasets available'):
 		continue;
 	endif;
-	list($fname,$volsize,$volblocksize,$compress,$origin,$dedup,$sync,$refreservation,$primarycache,$secondarycache) = explode("\t",$line);
+	list($fname,$volsize,$volmode,$volblocksize,$compress,$origin,$dedup,$sync,$refreservation,$primarycache,$secondarycache) = explode("\t",$line);
 	if(strpos($fname,'/') !== false): // volume
 		if(empty($origin) || $origin != '-'):
 			continue;
@@ -161,6 +161,7 @@ foreach($rawdata as $line):
 			'name' => $name,
 			'pool' => $pool,
 			'volsize' => $volsize,
+			'volmode' => $volmode,
 			'volblocksize' => $volblocksize,
 			'compression' => $compress,
 			'dedup' => $dedup,
