@@ -33,7 +33,7 @@
 */
 require_once 'config.inc';
 require_once 'util.inc';
-
+require_once 'properties_zfs_dataset.php';
 /*
  * Get list of available zpools
  * @return An array containg the requested informations:
@@ -690,9 +690,84 @@ function zfs_dataset_properties($uuid) {
  */
 function zfs_volume_configure($uuid) {
 	global $config;
-	// get volume
 	array_make_branch($config,'zfs','volumes','volume');
-	if(false === ($index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid'))):
+	$prop = new properties_zfs_dataset();
+	$supported_properties = [
+		'sparse','volsize','compression','dedup','primarycache','secondarycache','sync','volblocksize','volmode'
+	];
+	// get volume
+	$index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid');
+	if(false === $index):
+		return 1;
+	endif;
+	$volume = $config['zfs']['volumes']['volume'][$index];
+	if(!is_array($volume)):
+		return 1;
+	endif;
+	// get pool name
+	if(!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))):
+		return 1;
+	endif;
+	$poolname = ltrim($volume['pool'][0]);
+	// get volume name
+	if(!(isset($volume['name']) && preg_match('/\S/',$volume['name']))):
+		return 1;
+	endif;
+	$volumename = ltrim($volume['name']);
+	$relpath = sprintf('%1$s/%2$s',$poolname,$volumename);
+	// Additional parameter
+	$a_param = [];
+	$required_properties = 1;
+	foreach($supported_properties as $ref):
+		switch($ref):
+			case 'sparse':
+				if(isset($volume[$ref])):
+					$a_param[] = '-s';
+				endif;
+				break;
+			case 'volsize':
+				$val = filter_var($volume[$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
+				if(isset($val)):
+					$a_param[] = sprintf('-V %s',$val);
+					$required_properties--;
+				endif;
+				break;
+			case 'compression':
+			case 'dedup':
+			case 'primarycache':
+			case 'secondarycache':
+			case 'sync':
+			case 'volblocksize':
+			case 'volmode':
+				$val = filter_var($volume[$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
+				if(isset($val)):
+					$a_param[] = sprintf('-o %s=%s',$ref,$val);
+				endif;
+				break;
+		endswitch;
+	endforeach;
+	if(0 < $required_properties):
+		return 1;
+	endif;
+	$param = implode(' ',$a_param);
+	// create volume
+	$cmd = sprintf('zfs create %1$s %2$s',$param,escapeshellarg($relpath));
+	write_log($cmd);
+	return mwexec($cmd,true);
+}
+
+/**
+ * Delete a ZFS volume.
+ * @param[in] uuid	The UUID of the volume to be deleted.
+ * @return Return 0 if successful, otherwise 1.
+ */
+function zfs_volume_destroy($uuid) {
+	global $config;
+	array_make_branch($config,'zfs','volumes','volume');
+	$result = 0;
+	// get volume
+	$index = array_search_ex($uuid, $config['zfs']['volumes']['volume'], 'uuid');
+	if(false === $index):
 		return 1;
 	endif;
 	$volume = $config['zfs']['volumes']['volume'][$index];
@@ -710,104 +785,28 @@ function zfs_volume_configure($uuid) {
 	endif;
 	$volumename = ltrim($volume['name']);
 	$relpath = sprintf('%1$s/%2$s',$poolname,$volumename);
-	// Additional parameter
-	$a_param = [];
-	if(isset($volume['sparse'])):
-		$a_param[] = '-s';
-	endif;
-	if(isset($volume['compression']) && preg_match('/\S/',$volume['compression'])):
-		$a_param[] = sprintf('-o compression=%s',trim($volume['compression']));
-	endif;
-	if(isset($volume['dedup']) && preg_match('/\S/',$volume['dedup'])):
-		$a_param[] = sprintf('-o dedup=%s',trim($volume['dedup']));
-	endif;
-	if(isset($volume['sync']) && preg_match('/\S/',$volume['sync'])):
-		$a_param[] = sprintf('-o sync=%s',trim($volume['sync']));
-	endif;
-	if(isset($volume['atime']) && preg_match('/\S/',$volume['atime'])):
-		$a_param[] = sprintf('-o atime=%s',trim($volume['atime']));
-	endif;
-	if(isset($volume['volmode']) && preg_match('/\S/',$volume['volmode']) && ($volume['volmode'] != 'default')):
-		$a_param[] = sprintf('-o volmode=%s',trim($volume['volmode']));
-	endif;
-	if(isset($volume['volblocksize']) && !empty($volume['volblocksize'])):
-		$a_param[] = sprintf('-o volblocksize=%s',trim($volume['volblocksize']));
-	endif;
-	$helpinghand = filter_var(
-		$volume['primarycache'],
-		FILTER_VALIDATE_REGEXP,
-		[
-			'flags' => FILTER_REQUIRE_SCALAR,
-			'options' => [
-				'default' => false,
-				'regexp' => '/^(all|metadata|none)$/'
-			]
-		]
-	);
-	if(false !== $helpinghand):
-		$a_param[] = sprintf('-o primarycache=%s',$helpinghand);
-	endif;
-	$helpinghand = filter_var(
-		$volume['secondarycache'],
-		FILTER_VALIDATE_REGEXP,
-		[
-			'flags' => FILTER_REQUIRE_SCALAR,
-			'options' => [
-				'default' => false,
-				'regexp' => '/^(all|metadata|none)$/'
-			]
-		]
-	);
-	if(false !== $helpinghand):
-		$a_param[] = sprintf('-o secondarycache=%s',$helpinghand);
-	endif;
-	$param = implode(' ',$a_param);
-	// create volume
-	$cmd = sprintf('zfs create -V %1$s %2$s %3$s',$volume['volsize'],$param,escapeshellarg($relpath));
-	write_log($cmd);
-	return mwexec($cmd,true);
-}
-
-/**
- * Delete a ZFS volume.
- * @param[in] uuid	The UUID of the volume to be deleted.
- * @return Return 0 if successful, otherwise 1.
- */
-function zfs_volume_destroy($uuid) {
-	global $config;
-	$result = 0;
-	// get volume
-	if (!(isset($config['zfs']) && isset($config['zfs']['volumes']) && isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) { return 1; }
-	if (false === ($index = array_search_ex($uuid, $config['zfs']['volumes']['volume'], 'uuid'))) { return 1; }
-	$volume = $config['zfs']['volumes']['volume'][$index];
-	if (!is_array($volume)) { return 1; }
-	// get pool name
-	if (!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))) { return 1; }
-	$poolname = ltrim($volume['pool'][0]);
-	// get volume name
-	if (!(isset($volume['name']) && preg_match('/\S/', $volume['name']))) { return 1; }
-	$volumename = ltrim($volume['name']);
-	$relpath = sprintf('%1$s/%2$s', $poolname, $volumename);
 	// Destroy the volume
-	$cmd = sprintf('zfs destroy %1$s', escapeshellarg($relpath));
+	$cmd = sprintf('zfs destroy %1$s',escapeshellarg($relpath));
 	write_log($cmd);
-	$result |= mwexec($cmd, true);
-	if ($result != 0) {
-		write_log(sprintf('Error: Failed to destroy volume %1$s', $relpath));
-	}
+	$result |= mwexec($cmd,true);
+	if($result != 0):
+		write_log(sprintf('Error: Failed to destroy volume %1$s',$relpath));
+	endif;
 	return $result;
 }
 
 function zfs_get_volume_reservation($volsize) {
-	if (empty($volsize)) { return ''; }
-	if (preg_match("/^(\d+(\.\d+)?)(.*)$/", $volsize, $m)) {
+	if(empty($volsize)):
+		return '';
+	endif;
+	if(preg_match("/^(\d+(\.\d+)?)(.*)$/",$volsize,$m)):
 		$size = (float)$m[1] * 1.03;
 		$suffix = $m[3];
-		if (preg_match("/(m|k|^$)/", $suffix, $m)) {
+		if(preg_match("/(m|k|^$)/", $suffix, $m)):
 			$size = ceil($size);
-		}
+		endif;
 		return "{$size}{$suffix}";
-	}
+	endif;
 	return false;
 }
 
@@ -818,9 +817,11 @@ function zfs_get_volume_reservation($volsize) {
  */
 function zfs_volume_properties($uuid) {
 	global $config;
-	// get volume
 	array_make_branch($config,'zfs','volumes','volume');
-	if(false === ($index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid'))):
+	$prop = new properties_zfs_dataset();
+	// get volume
+	$index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid');
+	if(false === $index):
 		return 1;
 	endif;
 	$volume = $config['zfs']['volumes']['volume'][$index];
@@ -843,89 +844,46 @@ function zfs_volume_properties($uuid) {
 			return 1;
 		endif;
 	endif;
-	$result = 0;
-	$a_property = ['volsize','sparse','compression','dedup','sync','atime','volmode','primarycache','secondarycache'];
-	foreach($a_property as $property):
+	$supported_properties = [
+		'sparse','compression','dedup','primarycache','secondarycache','sync','volmode','volsize'
+	];
+	$a_param = [];
+	$required_properties = 0;
+	foreach($supported_properties as $ref):
 		$param = '';
-		switch($property):
-			case 'volsize':
-				if(isset($volume['volsize']) && !empty($volume['volsize'])):
-					$param = sprintf('volsize=%s',trim($volume['volsize']));
-				endif;
-				break;
+		switch($ref):
 			case 'sparse':
 				if(isset($volume['sparse'])):
-					$param = 'refreservation=none';
+					$a_param[] = 'refreservation=none';
 				elseif(isset($volume['volsize']) && !empty($volume['volsize'])):
-					$param = sprintf('refreservation=%s',trim($volume['volsize']));
+					$a_param[] = sprintf('refreservation=%s',trim($volume['volsize']));
 				endif;
 				break;
+			case 'volsize':
 			case 'compression':
-				if(isset($volume['compression']) && preg_match('/\S/', $volume['compression'])):
-					$param = sprintf('compression=%s',trim($volume['compression']));
-				endif;
-				break;
 			case 'dedup':
-				if(isset($volume['dedup']) && preg_match('/\S/', $volume['dedup'])):
-					$param = sprintf('dedup=%s',trim($volume['dedup']));
-				endif;
-				break;
-			case 'sync':
-				if(isset($volume['sync']) && preg_match('/\S/', $volume['sync'])):
-					$param = sprintf('sync=%s',trim($volume['sync']));
-				endif;
-				break;
-			case 'atime':
-				if(isset($volume['atime']) && preg_match('/\S/', $volume['atime'])):
-					$param = sprintf('atime=%s',trim($volume['atime']));
-				endif;
-				break;
-			case 'volmode':
-				if(isset($volume['volmode']) && preg_match('/\S/',$volume['volmode'])):
-					$param = sprintf('volmode=%s',trim($volume['volmode']));
-				endif;
-				break;
 			case 'primarycache':
-				$helpinghand = filter_var(
-					$volume['primarycache'],
-					FILTER_VALIDATE_REGEXP,
-					[
-						'flags' => FILTER_REQUIRE_SCALAR,
-						'options' => [
-							'default' => false,
-							'regexp' => '/^(all|metadata|none)$/'
-						]
-					]
-				);
-				if(false !== $helpinghand):
-					$param = sprintf('primarycache=%s',$helpinghand);
-				endif;
-				break;
 			case 'secondarycache':
-				$helpinghand = filter_var(
-					$volume['secondarycache'],
-					FILTER_VALIDATE_REGEXP,
-					[
-						'flags' => FILTER_REQUIRE_SCALAR,
-						'options' => [
-							'default' => false,
-							'regexp' => '/^(all|metadata|none)$/'
-						]
-					]
-				);
-				if(false !== $helpinghand):
-					$param = sprintf('secondarycache=%s',$helpinghand);
+			case 'sync':
+			case 'volmode':
+				$val = filter_var($volume[$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
+				if(isset($val)):
+					$a_param[] = sprintf('%s=%s',$ref,$val);
 				endif;
 				break;
 		endswitch;	
-		// Update volume properties
-		if(!empty($param)):
-			$cmd = sprintf('zfs set %1$s %2$s',$param,escapeshellarg($relpath));
-			write_log($cmd);
-			$result |= mwexec($cmd,true);
-		endif;
 	endforeach;
-	return $result;
+	if(0 < $required_properties):
+		return 1;
+	endif;
+	$param = implode(' ',$a_param);
+	// Update volume properties
+	if(empty($param)):
+		return 1;
+	endif;
+	$cmd = sprintf('zfs set %1$s %2$s',$param,escapeshellarg($relpath));
+	write_log($cmd);
+	return mwexec($cmd,true);
 }
 
 /**

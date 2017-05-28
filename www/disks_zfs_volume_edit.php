@@ -34,7 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 require 'zfs.inc';
-require 'properties_zfs_dataset.php';
+require_once 'properties_zfs_dataset.php';
 
 function get_volblocksize($pool,$name) {
 	$cmd = sprintf('zfs get -H -o value volblocksize %s 2>&1',escapeshellarg(sprintf('%s/%s',$pool,$name)));
@@ -53,7 +53,7 @@ $sphere_notifier = 'zfsvolume';
 $sphere_array = [];
 $sphere_record = [];
 $prerequisites_ok = true;
-$prop = new zfs_dataset_properties();
+$prop = new properties_zfs_dataset();
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if(PAGE_MODE_POST == $mode_page): // POST is Cancel or not Submit => cleanup
@@ -126,7 +126,8 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	unset($input_errors);
 	// apply post values that are applicable for all record modes
-	$sphere_record['volsize'] = isset($_POST['volsize']) ? $_POST['volsize'] : '';
+	$ref = 'volsize';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
 	$ref = 'volmode';
 	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
 	$ref = 'compression';
@@ -158,21 +159,27 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	endswitch;
 
 	// Input validation
-	$reqdfields = ['pool','name','volsize'];
-	$reqdfieldsn = [gtext('Pool'),gtext('Name'),gtext('Size')];
-	$reqdfieldst = ['string','string','string'];
+	$reqdfields = ['pool','name'];
+	$reqdfieldsn = [gtext('Pool'),gtext('Name')];
+	$reqdfieldst = ['string','string'];
 
 	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
 	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
-	if(empty($input_errors)): // validate list elements
-		foreach(['compression','dedup','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
-			if(is_null($sphere_record[$ref])):
-				$sphere_record[$ref] = '';
-				$input_errors[] = sprintf('%s: %s',$prop->$ref->title(),gtext('Invalid option.'));
-			endif;
-		endforeach;
-	endif;
+	// validate special value elements
+	foreach(['volsize'] as $ref):
+		if(!isset($sphere_record[$ref])):
+			$sphere_record[$ref] = $_POST[$ref] ?? $prop->$ref->defaultvalue(); // restore $_POST or populate default
+			$input_errors[] = $prop->$ref->errormessage();
+		endif;
+	endforeach;
+	// validate list elements
+	foreach(['compression','dedup','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
+		if(!isset($sphere_record[$ref])):
+			$sphere_record[$ref] = '';
+			$input_errors[] = $prop->$ref->errormessage();
+		endif;
+	endforeach;
 	if(empty($input_errors)):
 		// check for a valid name with the format name[/name], blanks are not supported.
 		$helpinghand = preg_quote('.:-_', '/');
@@ -253,7 +260,8 @@ else:
 		case RECORD_NEW:
 			$sphere_record['name'] = '';
 			$sphere_record['pool'] = '';
-			$sphere_record['volsize'] = '';
+			$ref = 'volsize';
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();;
 			$ref = 'volmode';
 			$sphere_record[$ref] = $prop->$ref->defaultvalue();
 			$ref = 'volblocksize';
@@ -274,7 +282,8 @@ else:
 		case RECORD_NEW_MODIFY: // get from config only
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
+			$ref = 'volsize';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$ref = 'volmode';
 			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$ref = 'volblocksize';
@@ -295,7 +304,8 @@ else:
 		case RECORD_MODIFY: // get from config or system
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
+			$ref = 'volsize';
+			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$ref = 'volmode';
 			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$ref = 'volblocksize';
@@ -383,7 +393,8 @@ $(window).on("load", function() {
 <?php
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
 			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
-			html_inputbox2('volsize',gtext('Size'),$sphere_record['volsize'],gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."),true,20);
+			$ref = 'volsize';
+			html_inputbox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->description(),true,20);
 			$ref = 'volmode';
 			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
 			$ref = 'compression';
