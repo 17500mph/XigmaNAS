@@ -90,8 +90,8 @@ else:
 	array_sort_key($a_pool,'name');
 endif;
 
-$index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // get index from config for volume by looking up uuid
-$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
+$index = array_search_ex($sphere_record['uuid'],$sphere_array,'uuid'); // get index from config for volume by looking up uuid
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier,$sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
 if(false !== $index): // uuid found
 	if((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))): // POST or EDIT
@@ -136,7 +136,8 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
 	$ref = 'sync';
 	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
-	$sphere_record['sparse'] = isset($_POST['sparse']);
+	$ref = 'sparse';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
 	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
 	$ref = 'primarycache';
 	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
@@ -182,9 +183,9 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	endforeach;
 	if(empty($input_errors)):
 		// check for a valid name with the format name[/name], blanks are not supported.
-		$helpinghand = preg_quote('.:-_', '/');
-		if(!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i', $sphere_record['name']))):
-			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext('Name'));
+		$helpinghand = preg_quote('.:-_','/');
+		if(!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i',$sphere_record['name']))):
+			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."),gtext('Name'));
 		endif;
 	endif;
 	
@@ -195,22 +196,22 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	// 
 	// 1.
 	if(empty($input_errors)):
-		if($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))):
+		if($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0],$sphere_record['pool']))):
 			$input_errors[] = gtext('Pool cannot be changed.');
 		endif;
 	endif;
 	// 2., 3., 4.
 	if(empty($input_errors)):
 		$poolslashname = escapeshellarg($sphere_record['pool']."/".$sphere_record['name']); // create quoted full dataset name
-		if($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']), $poolslashname)))):
+		if($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']),$poolslashname)))):
 			// throw error when pool/name already exists in live
 			if(empty($input_errors)):
-				mwexec2(sprintf("zfs get -H -o value type %s 2>&1", $poolslashname), $retdat, $retval);
+				mwexec2(sprintf("zfs get -H -o value type %s 2>&1",$poolslashname),$retdat,$retval);
 				switch($retval):
 					case 1: // An error occured. => zfs dataset doesn't exist
 						break;
 					case 0: // Successful completion. => zfs dataset found
-						$input_errors[] = sprintf(gtext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
+						$input_errors[] = sprintf(gtext('%s already exists as a %s.'),$poolslashname,$retdat[0]);
 						break;
  					case 2: // Invalid command line options were specified.
 						$input_errors[] = gtext('Failed to execute command zfs.');
@@ -219,9 +220,9 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 			endif;
 			// throw error when pool/name exists in configuration file, zfs->volumes->volume[]
 			if(empty($input_errors)):
-				foreach ($sphere_array as $r_volume):
-					if(0 === strcmp(escapeshellarg($r_volume['pool'][0].'/'.$r_volume['name']), $poolslashname)):
-						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'), $poolslashname);
+				foreach($sphere_array as $r_volume):
+					if(0 === strcmp(escapeshellarg($r_volume['pool'][0].'/'.$r_volume['name']),$poolslashname)):
+						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'),$poolslashname);
 						break;
 					endif;
 				endforeach;
@@ -229,8 +230,8 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 			// throw error when pool/name exists in configuration file, zfs->datasets->dataset[] 
 			if(empty($input_errors)):
 				foreach($a_dataset as $r_dataset):
-					if(0 === strcmp(escapeshellarg($r_dataset['pool'][0].'/'.$r_dataset['name']), $poolslashname)):
-						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'), $poolslashname);
+					if(0 === strcmp(escapeshellarg($r_dataset['pool'][0].'/'.$r_dataset['name']),$poolslashname)):
+						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'),$poolslashname);
 						break;
 					endif;
 				endforeach;
@@ -244,11 +245,11 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 		$sphere_record['pool'] = [$helpinghand];
 		if($isrecordnew):
 			$sphere_array[] = $sphere_record;
-			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
+			updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_NEW,$sphere_record['uuid']);
 		else:
 			$sphere_array[$index] = $sphere_record;
 			if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
+				updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_MODIFIED,$sphere_record['uuid']);
 			endif;
 		endif;
 		write_config();
@@ -261,7 +262,7 @@ else:
 			$sphere_record['name'] = '';
 			$sphere_record['pool'] = '';
 			$ref = 'volsize';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();;
+			$sphere_record[$ref] = $prop->$ref->defaultvalue();
 			$ref = 'volmode';
 			$sphere_record[$ref] = $prop->$ref->defaultvalue();
 			$ref = 'volblocksize';
@@ -272,7 +273,8 @@ else:
 			$sphere_record[$ref] = $prop->$ref->defaultvalue();
 			$ref = 'sync';
 			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$sphere_record['sparse'] = false;
+			$ref = 'sparse';
+			$sphere_record[$ref] = false;
 			$sphere_record['desc'] = '';
 			$ref = 'primarycache';
 			$sphere_record[$ref] = $prop->$ref->defaultvalue();
@@ -327,15 +329,15 @@ else:
 endif;
 $a_poollist = zfs_get_pool_list();
 $l_poollist = [];
-foreach ($a_pool as $r_pool):
+foreach($a_pool as $r_pool):
 	$r_poollist = $a_poollist[$r_pool['name']];
 	$helpinghand = $r_pool['name'].': '.$r_poollist['size']; 
 	if(!empty($r_pool['desc'])):
-		$helpinghand .= ' '.$r_pool['desc'];
+		$helpinghand .= ' ' . $r_pool['desc'];
 	endif;
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 endforeach;
-$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Volumes'), gtext('Volume'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Volumes'),gtext('Volume'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 include 'fbegin.inc';
 ?>
 <script type="text/javascript">
@@ -367,7 +369,7 @@ $(window).on("load", function() {
 		</td>
 	</tr>
 </table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
 		print_error_box($errormsg);
@@ -422,7 +424,7 @@ $(window).on("load", function() {
 <?php
 	include 'formend.inc';
 ?>
-</form></td></tr></tbody></table>
+</td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
 ?>
