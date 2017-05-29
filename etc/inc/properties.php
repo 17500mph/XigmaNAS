@@ -38,7 +38,7 @@ class properties {
 	}
 	public function type(string $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
@@ -60,63 +60,63 @@ class properties_base extends properties {
 	}
 	public function name(string $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function title(string $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function description(string $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function defaultvalue(string $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function editableonadd(bool $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function editableonmodify(bool $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function filter($value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function filteroptions(array $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
 	public function errormessage(string $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
@@ -131,7 +131,7 @@ class properties_list extends properties_base {
 	}
 	public function options(array $value = NULL) {
 		$ref = '_' . __FUNCTION__;
-		if(!is_null($value)):
+		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
