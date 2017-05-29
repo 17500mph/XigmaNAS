@@ -67,7 +67,7 @@ class properties_zfs_dataset {
 	public $volsize;
 //	public $vscan;
 //	public $xattr;
-	
+
 	public function __construct() {
 		$this->load();
 	}
@@ -214,8 +214,8 @@ function prop_checksum(): properties_list {
 	$options = [
 		'on' => gtext('On'),
 		'off' => gtext('Off'),
-		'fletcher2' => 'Fletcher2',
-		'fletcher4' => 'Fletcher4',
+		'fletcher2' => 'Fletcher 2',
+		'fletcher4' => 'Fletcher 4',
 		'sha256' => 'SHA-256',
 		'noparity' => gtext('No Parity'),
 		'sha512' => 'SHA-512',
@@ -290,32 +290,6 @@ function prop_devices(): properties_list {
 	return prop_onoff('devices',gtext('Devices'),gtext('The devices property is currently not supported on FreeBSD.'));
 }
  */
-/*
-function prop_exec(): properties_list {
-	return prop_onoff('exec',gtext('Exec'),gtext('Controls whether processes can be executed from within this file system.'));
-}
- */
-/*
-function prop_logbias(): properties_list {
-	$o = new properties_list();
-	$o->name('logbias');
-	$o->title(gtext('Logbias'));
-	$o->description(gtext('throughoutput'));
-	$o->type('list');
-	$o->defaultvalue('1');
-	$options = [
-		'latency' => gtext('Latency'),
-		'throughoutput' => gtext('Throughoutput')
-	];
-	$o->options($options);
-	$o->editableonadd(true);
-	$o->editableonmodify(true);
-	$o->filter(FILTER_VALIDATE_REGEXP);
-	$o->filteroptions(['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => sprintf('/^(%s)$/',implode('|',array_keys($options)))]]);
-	$o->errormessage(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
-	return $o;
-}
- */
 function prop_dedup(): properties_list {
 	$o = new properties_list();
 	$o->name('dedup');
@@ -351,8 +325,34 @@ function prop_dedup(): properties_list {
 	return $o;
 }
 /*
+function prop_exec(): properties_list {
+	return prop_onoff('exec',gtext('Exec'),gtext('Controls whether processes can be executed from within this file system.'));
+}
+ */
+/*
 function prop_jailed(): properties_list {
 	return prop_offon('jailed',gtext('Jailed'),gtext('Controls whether the dataset is managed from a jail.'));
+}
+ */
+/*
+function prop_logbias(): properties_list {
+	$o = new properties_list();
+	$o->name('logbias');
+	$o->title(gtext('Logbias'));
+	$o->description(gtext('throughoutput'));
+	$o->type('list');
+	$o->defaultvalue('1');
+	$options = [
+		'latency' => gtext('Latency'),
+		'throughoutput' => gtext('Throughoutput')
+	];
+	$o->options($options);
+	$o->editableonadd(true);
+	$o->editableonmodify(true);
+	$o->filter(FILTER_VALIDATE_REGEXP);
+	$o->filteroptions(['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => sprintf('/^(%s)$/',implode('|',array_keys($options)))]]);
+	$o->errormessage(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+	return $o;
 }
  */
 /*
@@ -632,12 +632,12 @@ function prop_volsize(): properties_base {
 	return $o;
 }
 /*
-function prop_xattr(): properties_list {
-	return prop_offon('xattr',gtext('Xattr'),gtext('The xattr property is currently not supported on FreeBSD.'));
+function prop_vscan(): properties_list {
+	return prop_offon('vscan',gtext('Vscan'),gtext('The vscan property is currently not supported on FreeBSD.'));
 }
  */
 /*
-function prop_vscan(): properties_list {
-	return prop_offon('vscan',gtext('Vscan'),gtext('The vscan property is currently not supported on FreeBSD.'));
+function prop_xattr(): properties_list {
+	return prop_offon('xattr',gtext('Xattr'),gtext('The xattr property is currently not supported on FreeBSD.'));
 }
  */
