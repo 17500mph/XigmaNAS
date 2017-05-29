@@ -268,7 +268,7 @@ function prop_copies(): properties_list {
 	$o = new properties_list();
 	$o->name('copies');
 	$o->title(gtext('Copies'));
-	$o->description(gtext(''));
+	$o->description(gtext('Controls the number of copies of data stored for this dataset.'));
 	$o->type('list');
 	$o->defaultvalue('1');
 	$options = [
@@ -365,8 +365,7 @@ function prop_normalization(): properties_list {
 	$o = new properties_list();
 	$o->name('normalization');
 	$o->title(gtext('Normalization'));
-	$description = gtext('Indicates whether the file system should perform a unicode normalization of file names whenever two file names are compared, and which normalization algorithm should	be used.');
-	$o->description($description);
+	$o->description(gtext('Indicates whether the file system should perform a unicode normalization of file names whenever two file names are compared, and which normalization algorithm should be used.'));
 	$o->type('list');
 	$o->defaultvalue('none');
 	$options = [
@@ -513,7 +512,7 @@ function prop_snapdir(): properties_list {
 	];
 	$o->name('snapdir');
 	$o->title(gtext('Snapdir'));
-	$o->description(gtext(''));
+	$o->description(gtext('Controls whether the .zfs directory is hidden or visible in the root of the file system.'));
 	$o->type('list');
 	$o->defaultvalue('hidden');
 	$o->options($options);
@@ -549,7 +548,7 @@ function prop_type(): properties_list {
 	$o = new properties_list();
 	$o->name('type');
 	$o->title(gtext('Dataset Type'));
-	$o->description(gtext(''));
+	$o->description(gtext('Controls the type of the ZFS dataset.'));
 	$o->type('list');
 	$o->defaultvalue('filesystem');
 	$options = [
@@ -628,7 +627,7 @@ function prop_volsize(): properties_base {
 	$o->editableonadd(true);
 	$o->editableonmodify(true);
 	$o->filter(FILTER_VALIDATE_REGEXP);
-	$o->filteroptions(['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/^[1-9][\d]*[kmgtpezy]?[b]?$/i']]);
+	$o->filteroptions(['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/^[1-9][\d]*(\.\d*)?[kmgtpezy]?[b]?$/i']]);
 	$o->errormessage(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
 	return $o;
 }
@@ -639,6 +638,6 @@ function prop_xattr(): properties_list {
  */
 /*
 function prop_vscan(): properties_list {
-	return prop_offon('vscan',gtext('Vscan'),gtext('The xattr property is currently not supported on FreeBSD.'));
+	return prop_offon('vscan',gtext('Vscan'),gtext('The vscan property is currently not supported on FreeBSD.'));
 }
  */
