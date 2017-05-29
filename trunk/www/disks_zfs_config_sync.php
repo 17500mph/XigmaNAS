@@ -34,18 +34,29 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+function get_geli_info($device) {
+	$result = [];
+	exec("/sbin/geli dump {$device}",$rawdata);
+	array_shift($rawdata);
+	foreach($rawdata as $line):
+		$a = preg_split("/:\s+/",$line);
+		$key = trim($a[0]);
+		$val = trim($a[1]);
+		$result[$key] = $val;
+	endforeach;
+	return $result;
+}
 array_make_branch($config,'disks','disk');
 array_make_branch($config,'geli','vdisk');
 array_make_branch($config,'zfs','vdevices','vdevice');
 array_make_branch($config,'zfs','pools','pool');
 array_make_branch($config,'zfs','datasets','dataset');
 array_make_branch($config,'zfs','volumes','volume');
-$zfs = [
-	'vdevices' => ['vdevice' => []],
-	'pools' => ['pool' => []],
-	'datasets' => ['dataset' => []],
-	'volumes' => ['volume' => []]
-];
+$zfs = [];
+array_make_branch($zfs,'vdevices','vdevice');
+array_make_branch($zfs,'pools','pool');
+array_make_branch($zfs,'datasets','dataset');
+array_make_branch($zfs,'volumes','volume');
 $key_properties = [
 	'name',
 	'mountpoint',
@@ -140,7 +151,6 @@ foreach($rawdata as $line):
 		];
 	endif;
 endforeach;
-
 $cmd = 'zfs list -H -t volume -o name,volsize,volmode,volblocksize,compression,origin,dedup,sync,refreservation,primarycache,secondarycache';
 unset($rawdata);
 unset($retval);
@@ -182,7 +192,7 @@ foreach($rawdata as $line):
 		continue;
 	endif;
 	list($pool,$root,$size,$alloc,$free,$cap,$expandsz,$frag,$health,$dedup) = explode("\t",$line);
-	if ($root != '-'):
+	if($root != '-'):
 		$zfs['pools']['pool'][$pool]['root'] = $root;
 	endif;
 	$zfs['extra']['pools']['pool'][$pool]['size'] = $size;
@@ -203,7 +213,7 @@ $cmd = 'zpool status';
 unset($rawdata);
 unset($retval);
 mwexec2($cmd,$rawdata,$retval);
-foreach ($rawdata as $line) {
+foreach($rawdata as $line) {
 	if(empty($line[0]) || $line[0] != "\t"):
 		continue;
 	endif;
@@ -279,7 +289,7 @@ foreach ($rawdata as $line) {
 		elseif($m[1] == 'cache'):
 			$type = 'cache';
 			$vdev = sprintf("%s_%s_%d",$pool,$type,$i++);
-		elseif ($m[1] == 'logs'):
+		elseif($m[1] == 'logs'):
 			$type = 'log';
 			$vdev = sprintf("%s_%s_%d",$pool,$type,$i++);
 		else:
@@ -287,64 +297,42 @@ foreach ($rawdata as $line) {
 		endif;
 	endif;
 }
-
-function get_geli_info($device) {
-	$result = [];
-	exec("/sbin/geli dump {$device}",$rawdata);
-	array_shift($rawdata);
-	foreach($rawdata as $line):
-		$a = preg_split("/:\s+/",$line);
-		$key = trim($a[0]);
-		$val = trim($a[1]);
-		$result[$key] = $val;
-	endforeach;
-	return $result;
-}
 if(isset($_POST['import_config'])):
 	$import = false;
-	$cfg['zfs'] = [
-		'vdevices' => [],
-		'pools' => [],
-		'datasets' => [],
-		'volumes' => [],
-		'autosnapshots' => [],
-	];
-	if(!isset($_POST['vol'])):
-		$_POST['vol'] = [];
-	endif;
-	if(!isset($_POST['dset'])):
-		$_POST['dset'] = [];
-	endif;
-	if(!isset($_POST['vdev'])):
-		$_POST['vdev'] = [];
-	endif;
-	if(!isset($_POST['pool'])):
-		$_POST['pool'] = [];
-	endif;
-	foreach($_POST['vol'] as $vol):
+	$cfg = [];
+	array_make_branch($cfg,'zfs','vdevices','vdevice');
+	array_make_branch($cfg,'zfs','pools'.'pool');
+	array_make_branch($cfg,'zfs','datasets','dataset');
+	array_make_branch($cfg,'zfs','volumes','volume');
+	array_make_branch($cfg,'zfs','autosnapshots');
+	$a_posted = [];
+	foreach(['vdev','pool','dset','vol'] as $ref):
+		$a_posted[$ref] = filter_input(INPUT_POST,$ref,FILTER_UNSAFE_RAW,['flags' => FILTER_FORCE_ARRAY,'options' => ['default' => []]]);
+	endforeach;
+	foreach($a_posted['vol'] as $vol):
 		$import |= true;
 		$tmp = $zfs['volumes']['volume'][$vol];
 		unset($tmp['identifier']); // no longer required
 		$cfg['zfs']['volumes']['volume'][] = $tmp;
-		if(!in_array($zfs['volumes']['volume'][$vol]['pool'],$_POST['pool'])):
-			$_POST['pool'][] = $zfs['volumes']['volume'][$vol]['pool'];
+		if(!in_array($zfs['volumes']['volume'][$vol]['pool'],$a_posted['pool'])):
+			$a_posted['pool'][] = $zfs['volumes']['volume'][$vol]['pool'];
 		endif;
 	endforeach;
-	foreach($_POST['dset'] as $dset):
+	foreach($a_posted['dset'] as $dset):
 		$import |= true;
 		$tmp = $zfs['datasets']['dataset'][$dset];
 		unset($tmp['identifier']); // no longer required
 		$cfg['zfs']['datasets']['dataset'][] = $tmp;
-		if(!in_array($zfs['datasets']['dataset'][$dset]['pool'],$_POST['pool'])):
-			$_POST['pool'][] = $zfs['datasets']['dataset'][$dset]['pool'];
+		if(!in_array($zfs['datasets']['dataset'][$dset]['pool'],$a_posted['pool'])):
+			$a_posted['pool'][] = $zfs['datasets']['dataset'][$dset]['pool'];
 		endif;
 	endforeach;
-	foreach($_POST['pool'] as $pool):
+	foreach($a_posted['pool'] as $pool):
 		$import |= true;
 		$hastpool = false;
 		foreach($zfs['pools']['pool'][$pool]['vdevice'] as $vdev):
-			if(!in_array($vdev,$_POST['vdev'])):
-				$_POST['vdev'][] = $vdev;
+			if(!in_array($vdev,$a_posted['vdev'])):
+				$a_posted['vdev'][] = $vdev;
 			endif;
 			foreach($zfs['vdevices']['vdevice'][$vdev]['device'] as $device):
 				if(preg_match('/^\/dev\/hast\//',$device)):
@@ -355,7 +343,7 @@ if(isset($_POST['import_config'])):
 		$zfs['pools']['pool'][$pool]['hastpool'] = $hastpool;
 		$cfg['zfs']['pools']['pool'][] = $zfs['pools']['pool'][$pool];
 	endforeach;
-	foreach($_POST['vdev'] as $vdev):
+	foreach($a_posted['vdev'] as $vdev):
 		$import |= true;
 		$cfg['zfs']['vdevices']['vdevice'][] = $zfs['vdevices']['vdevice'][$vdev];
 	endforeach;
@@ -534,13 +522,13 @@ include 'fbegin.inc';
 		</thead>
 		<tbody>
 <?php
-			foreach ($zfs['pools']['pool'] as $key => $pool):
+			foreach($zfs['pools']['pool'] as $key => $pool):
 ?>
 				<tr>
-					<td class="lcelc"><input type="checkbox" checked="checked" name="pool[]" value="<?=$pool['name'];?>" id="pool_<?=$pool['uuid'];?>" /></td>
+					<td class="lcelc"><input type="checkbox" checked="checked" name="pool[]" value="<?=$pool['name'];?>" id="pool_<?=$pool['uuid'];?>"/></td>
 					<td class="lcell"><label for="pool_<?=$pool['uuid'];?>"><?=$pool['name'];?></label></td>
 					<td class="lcell"><?=$zfs['extra']['pools']['pool'][$key]['size'];?></td>
-					<td class="lcell"><?=$zfs['extra']['pools']['pool'][$key]['alloc'];?> (<?=$zfs['extra']['pools']['pool'][$key]['cap'];?>)</td>
+					<td class="lcell"><?=$zfs['extra']['pools']['pool'][$key]['alloc'];?>(<?=$zfs['extra']['pools']['pool'][$key]['cap'];?>)</td>
 					<td class="lcell"><?=$zfs['extra']['pools']['pool'][$key]['free'];?></td>
 					<td class="lcell"><?=$zfs['extra']['pools']['pool'][$key]['expandsz'];?></td>
 					<td class="lcell"><?=$zfs['extra']['pools']['pool'][$key]['frag'];?></td>
@@ -581,10 +569,10 @@ include 'fbegin.inc';
 		</thead>
 		<tbody>
 <?php
-			foreach ($zfs['vdevices']['vdevice'] as $key => $vdevice):
+			foreach($zfs['vdevices']['vdevice'] as $key => $vdevice):
 ?>
 				<tr>
-					<td class="lcelc"><input type="checkbox" checked="checked" name="vdev[]" value="<?=$vdevice['name'];?>" id="vdev_<?=$vdevice['uuid'];?>" /></td>
+					<td class="lcelc"><input type="checkbox" checked="checked" name="vdev[]" value="<?=$vdevice['name'];?>" id="vdev_<?=$vdevice['uuid'];?>"/></td>
 					<td class="lcell"><?=$vdevice['name'];?></td>
 					<td class="lcell"><?=$vdevice['type'];?></td>
 					<td class="lcell"><?=$zfs['extra']['vdevices']['vdevice'][$key]['pool'];?></td>
@@ -642,7 +630,7 @@ include 'fbegin.inc';
 		</thead>
 		<tbody>
 <?php
-			foreach ($zfs['datasets']['dataset'] as $dataset):
+			foreach($zfs['datasets']['dataset'] as $dataset):
 ?>
 				<tr>
 					<td class="lcelc"><input type="checkbox" checked="checked" name="dset[]" value="<?=$dataset['identifier'];?>" id="ds_<?=$dataset['uuid'];?>"/></td>
@@ -701,7 +689,7 @@ include 'fbegin.inc';
 		</thead>
 		<tbody>
 <?php
-			foreach ($zfs['volumes']['volume'] as $volume):
+			foreach($zfs['volumes']['volume'] as $volume):
 ?>
 				<tr>
 					<td class="lcelc"><input type="checkbox" checked="checked" name="vol[]" value="<?=$volume['identifier'];?>" id="vol_<?=$volume['uuid'];?>"/></td>
