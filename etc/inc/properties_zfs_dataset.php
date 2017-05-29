@@ -214,12 +214,12 @@ function prop_checksum(): properties_list {
 	$options = [
 		'on' => gtext('On'),
 		'off' => gtext('Off'),
-		'fletcher2' => 'fletcher2',
-		'fletcher4' => 'fletcher4',
-		'sha256' => 'sha256',
-		'noparity' => 'noparity',
-		'sha512' => 'sha512',
-		'skein' => 'skein',
+		'fletcher2' => 'Fletcher2',
+		'fletcher4' => 'Fletcher4',
+		'sha256' => 'SHA-256',
+		'noparity' => gtext('No Parity'),
+		'sha512' => 'SHA-512',
+		'skein' => 'Skein',
 //		'edonr' => 'Edon-R',
 	];
 	$o->options($options);
