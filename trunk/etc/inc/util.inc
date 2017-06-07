@@ -2646,34 +2646,16 @@ function get_filesize($file) {
 }
 function format_bytes($bytes,bool $b1k = false) {
 	if($b1k): // si, 1000
-		if($bytes >= 1000000000000000):
-			return sprintf("%.2fPB",$bytes/1000000000000000);
-		elseif($bytes >= 1000000000000):
-			return sprintf("%.2fTB",$bytes/1000000000000);
-		elseif($bytes >= 1000000000):
-			return sprintf("%.2fGB",$bytes/1000000000);
-		elseif($bytes >= 1000000):
-			return sprintf("%.2fMB",$bytes/1000000);
-		elseif($bytes >= 1000):
-			return sprintf("%.2fkB",$bytes / 1000);
-		else:
-			return sprintf("%dB",$bytes);
-		endif;
+		$a_unit = ['B','kB','MB','GB','TB','PB','EB','ZB','YB'];
+		$divisor = 1000;
 	else: // non-si, 1024
-		if($bytes >= 1125899906842624):
-			return sprintf("%.2fPiB",$bytes / 1125899906842624);
-		elseif($bytes >= 1099511627776):
-			return sprintf("%.2fTiB",$bytes / 1099511627776);
-		elseif($bytes >= 1073741824):
-			return sprintf("%.2fGiB",$bytes / 1073741824);
-		elseif($bytes >= 1048576):
-			return sprintf("%.2fMiB",$bytes / 1048576);
-		elseif($bytes >= 1024):
-			return sprintf("%.2fKiB",$bytes / 1024);
-		else:
-			return sprintf("%dB",$bytes);
-		endif;
+		$a_unit = ['B','KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB'];
+		$divisor = 1024;
 	endif;
+	for($laps = 0;$bytes >= $divisor;$laps++):
+		$bytes /= $divisor;
+	endfor;
+	return sprintf('%s%s',round($bytes,2,PHP_ROUND_HALF_UP),$a_unit[$laps] ?? '?iB');
 }
 /*
  * Check and get the ISO image type.
