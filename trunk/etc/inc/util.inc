@@ -683,7 +683,7 @@ function get_gvinum_disks_list() {
 		$disklist[$diskname]['state'] = $aline[3];
 		/* Get diskinfo to get disk size */
 		$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-		$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+		$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 	endforeach;
 	return $disklist;
 }
@@ -719,7 +719,7 @@ function get_gmirror_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -776,7 +776,7 @@ function get_gconcat_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -824,7 +824,7 @@ function get_gstripe_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -872,7 +872,7 @@ function get_graid5_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -921,7 +921,7 @@ function get_hast_disks_list() {
 			$disklist[$diskname]['role'] = $role;
 			if($role == 'primary'):
 				$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-				$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+				$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			else:
 				$disklist[$diskname]['size'] = 'N/A';
 			endif;
@@ -1018,7 +1018,7 @@ function parse_camcontrol_info($devtype) {
 						init_device_attributes($devlist[$device_name]);
 						// Get diskinfo to get disk size
 						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
-						$devlist[$device_name]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+						$devlist[$device_name]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 						$devlist[$device_name]['controller'] = $controller[0];
 						$devlist[$device_name]['controller_id'] = $controller[1];
 						$devlist[$device_name]['target_id'] = $target_id;
@@ -1048,7 +1048,7 @@ function parse_camcontrol_info($devtype) {
 						init_device_attributes($devlist[$device_name]);
 						// Get diskinfo to get disk size
 						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
-						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_bytes']) ? format_bytes($diskinfo['mediasize_bytes'],true) : gtext('Unknown');
+						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_bytes']) ? format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues'])) : gtext('Unknown');
 						$devlist[$device_name]['controller'] = $controller[0];
 						$devlist[$device_name]['controller_id'] = $controller[1];
 						$devlist[$device_name]['target_id'] = $target_id;
@@ -1505,7 +1505,7 @@ function get_iscsi_disks_list() {
 			$disklist[$diskname]['desc'] = $match[1];
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			/* Get serial number */
 			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
@@ -1588,7 +1588,7 @@ function get_hraid_disks_list() {
 			endif;
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],true);
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 			/* Get serial number */
 			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
@@ -2644,18 +2644,59 @@ function get_filesize($file) {
 	endif;
 	return @exec('stat -f %z ' . escapeshellarg($file));
 }
-function format_bytes($bytes,bool $b1k = false) {
-	if($b1k): // si, 1000
-		$a_unit = ['B','kB','MB','GB','TB','PB','EB','ZB','YB'];
+/**
+ * Converts an integer or an integer string into a human readable format for unit byte.
+ * @param int/string $value Value to be converted into a human readable format.
+ * @param int $precision The number of decimal digits. Default is 2.
+ * @param bool $fixedformat Flag to format the returned string with the number of decimals given by $precision. Default is true.
+ * @param bool $use_si Use SI divisor (1000) or binary divisor (1024). Default is true.
+ * @return string Human readable version of bytes.
+ */
+function format_bytes($number,int $precision = 2,bool $fixedformat = true,bool $use_si = true) {
+	if((0 > $number)):
+		$number = 0;
+	endif;
+	$decimals = filter_var($precision,FILTER_VALIDATE_INT,['options' => ['default' => 2,'min_range' => 0]]);
+	if($use_si): // si, 1000
+		$unit_grid = ['B','kB','MB','GB','TB','PB','EB','ZB','YB'];
+		$unit_overflow = '#B';
 		$divisor = 1000;
 	else: // non-si, 1024
-		$a_unit = ['B','KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB'];
+		$unit_grid = ['B','KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB'];
+		$unit_overflow = '#iB';
 		$divisor = 1024;
 	endif;
-	for($laps = 0;$bytes >= $divisor;$laps++):
-		$bytes /= $divisor;
+	for($laps = 0;bccomp($number,$divisor) >= 0;$laps++):
+		$number = bcdiv($number,$divisor,$decimals);
 	endfor;
-	return sprintf('%s%s',round($bytes,2,PHP_ROUND_HALF_UP),$a_unit[$laps] ?? '?iB');
+	return sprintf($fixedformat ? '%.' . $decimals . 'f%s' : '%s%s',(float)$number,$unit_grid[$laps] ?? $unit_overflow);
+}
+/**
+ * Converts an integer or an integer string into a human readable format for unit bit.
+ * @param int/string $value Value to be converted into a human readable format.
+ * @param int $precision The number of decimal digits. Default is 2.
+ * @param bool $fixedformat Flag to format the return string with the number of decimals given by $precision. Default is true.
+ * @param bool $use_si Use SI divisor (1000) or binary divisor (1024). Default is true.
+ * @return string Human readable version of bits.
+ */
+function format_bits($number,int $precision = 2,bool $fixedformat = true,bool $use_si = true) {
+	if((0 > $number)):
+		$number = 0;
+	endif;
+	$decimals = filter_var($precision,FILTER_VALIDATE_INT,['options' => ['default' => 2,'min_range' => 0]]);
+	if($use_si): // si, 1000
+		$unit_grid = ['bit','kbit','Mbit','Gbit','Tbit','Pbit','Ebit','Zbit','Ybit'];
+		$unit_overflow = '#bit';
+		$divisor = 1000;
+	else: // non-si, 1024
+		$unit_grid = ['bit','Kibit','Mibit','Gibit','Tibit','Pibit','Eibit','Zibit','Yibit'];
+		$unit_overflow = '#ibit';
+		$divisor = 1024;
+	endif;
+	for($laps = 0;bccomp($number,$divisor) >= 0;$laps++):
+		$number = bcdiv($number,$divisor,$decimals);
+	endfor;
+	return sprintf($fixedformat ? '%.' . $decimals . 'f%s' : '%s%s',(float)$number,$unit_grid[$laps] ?? $unit_overflow);
 }
 /*
  * Check and get the ISO image type.
