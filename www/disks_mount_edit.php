@@ -57,7 +57,7 @@ function get_all_hast() {
 		$file = "/dev/hast/$name";
 		if (file_exists($file)) {
 			$diskinfo = disks_get_diskinfo($file);
-			$size = format_bytes($diskinfo['mediasize_bytes'],true);
+			$size = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
 		} else {
 			$size = "(secondary)";
 		}
@@ -570,9 +570,9 @@ function enable_change(enable_change) {
 								<?php if ($diskv['type'] == 'HAST') continue; ?>
 								<option value="<?=$diskv['devicespecialfile'];?>" <?php if ($pconfig['mdisk'] === $diskv['devicespecialfile']) echo "selected=\"selected\"";?>>
 <?php
-								$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
-								$helpinghand = format_bytes($diskinfo['mediasize_bytes'],true);
-								echo htmlspecialchars("{$diskv['name']}: {$helpinghand} ({$diskv['desc']})");
+									$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
+									$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+									echo htmlspecialchars(sprintf('%s: %s (%s)',$diskv['name'],$helpinghand,$diskv['desc']));
 ?>
 								</option>
 								<?php endforeach;?>

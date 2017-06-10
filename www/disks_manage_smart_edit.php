@@ -34,87 +34,53 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-if (isset($_GET['uuid']))
+$sphere_scriptname = basename(__FILE__);
+if(isset($_GET['uuid'])):
 	$uuid = $_GET['uuid'];
-if (isset($_POST['uuid']))
+endif;
+if(isset($_POST['uuid'])):
 	$uuid = $_POST['uuid'];
-
-$a_months = [
-	gtext('January'),
-	gtext('February'),
-	gtext('March'),
-	gtext('April'),
-	gtext('May'),
-	gtext('June'),
-	gtext('July'),
-	gtext('August'),
-	gtext('September'),
-	gtext('October'),
-	gtext('November'),
-	gtext('December')
-];
-$a_weekdays = [
-	gtext('Monday'),
-	gtext('Tuesday'),
-	gtext('Wednesday'),
-	gtext('Thursday'),
-	gtext('Friday'),
-	gtext('Saturday'),
-	gtext('Sunday')
-];
-
+endif;
 $a_selftest = &array_make_branch($config,'smartd','selftest');
-
 // Get list of all configured physical disks.
 $a_disk = get_conf_physical_disks_list();
-
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_selftest, 'uuid')))) {
+if(isset($uuid) && (false !== ($cnid = array_search_ex($uuid,$a_selftest,'uuid')))):
 	$pconfig['uuid'] = $a_selftest[$cnid]['uuid'];
 	$pconfig['devicespecialfile'] = $a_selftest[$cnid]['devicespecialfile'];
 	$pconfig['type'] = $a_selftest[$cnid]['type'];
-	//$pconfig['minute'] = $a_selftest[$cnid]['minute'];
-	$pconfig['minute'] = [];
 	$pconfig['hour'] = $a_selftest[$cnid]['hour'];
 	$pconfig['day'] = $a_selftest[$cnid]['day'];
 	$pconfig['month'] = $a_selftest[$cnid]['month'];
 	$pconfig['weekday'] = $a_selftest[$cnid]['weekday'];
-	//$pconfig['all_mins'] = $a_selftest[$cnid]['all_mins'];
-	$pconfig['all_mins'] = 1;
 	$pconfig['all_hours'] = $a_selftest[$cnid]['all_hours'];
 	$pconfig['all_days'] = $a_selftest[$cnid]['all_days'];
 	$pconfig['all_months'] = $a_selftest[$cnid]['all_months'];
 	$pconfig['all_weekdays'] = $a_selftest[$cnid]['all_weekdays'];
 	$pconfig['desc'] = $a_selftest[$cnid]['desc'];
-} else {
+else:
 	$pconfig['uuid'] = uuid();
-	$pconfig['type'] = "S";
-	$pconfig['desc'] = "";
-	$pconfig['all_mins'] = 1;
+	$pconfig['type'] = 'S';
+	$pconfig['desc'] = '';
 	$pconfig['all_hours'] = 1;
 	$pconfig['all_days'] = 1;
 	$pconfig['all_months'] = 1;
 	$pconfig['all_weekdays'] = 1;
-}
-
-if ($_POST) {
+endif;
+if($_POST):
 	unset($input_errors);
 	unset($errormsg);
 	$pconfig = $_POST;
-
-	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
+	if(isset($_POST['Cancel']) && $_POST['Cancel']):
 		header("Location: disks_manage_smart.php");
 		exit;
-	}
-
-	// insert dummy minutes
-	$pconfig['all_mins'] = $_POST['all_mins'] = 1;
-
+	endif;
 	$reqdfields = ['disk','type'];
 	$reqdfieldsn = [gtext('Disk'),gtext('Type')];
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validate_synctime($_POST, $input_errors);
-
-	if (empty($input_errors)) {
+	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
+	$_POST['all_mins'] = true; // cheat on minutes
+	do_input_validate_synctime($_POST,$input_errors);
+	$_POST['all_mins'] = false;
+	if(empty($input_errors)):
 		$selftest = [];
 		$selftest['uuid'] = $_POST['uuid'];
 		$selftest['devicespecialfile'] = $_POST['disk'];
@@ -128,214 +94,265 @@ if ($_POST) {
 		$selftest['all_months'] = $_POST['all_months'];
 		$selftest['all_weekdays'] = $_POST['all_weekdays'];
 		$selftest['desc'] = $_POST['desc'];
-
-		if (isset($uuid) && (FALSE !== $cnid)) {
+		if(isset($uuid) && (false !== $cnid)):
 			$a_selftest[$cnid] = $selftest;
 			$mode = UPDATENOTIFY_MODE_MODIFIED;
-		} else {
+		else:
 			$a_selftest[] = $selftest;
 			$mode = UPDATENOTIFY_MODE_NEW;
-		}
-
-		updatenotify_set("smartssd", $mode, $selftest['uuid']);
+		endif;
+		updatenotify_set('smartssd',$mode,$selftest['uuid']);
 		write_config();
-
-		header("Location: disks_manage_smart.php");
+		header('Location: disks_manage_smart.php');
 		exit;
-	}
-}
-
-$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('Scheduled Self-Test'), isset($uuid) ? gtext('Edit') : gtext('Add')];
+	endif;
+endif;
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('Scheduled Self-Test'),isset($uuid) ? gtext('Edit') : gtext('Add')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+$(window).on("load", function() {
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
+}); 
 function set_selected(name) {
 	document.getElementsByName(name)[1].checked = true;
 }
-
 function enable_change(enable_change) {
 	document.iform.disk.disabled = !enable_change;
 }
-// -->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-	<td class="tabnavtbl">
-	<ul id="tabnav">
-		<li class="tabinact"><a href="disks_manage.php"><span><?=gtext("HDD Management");?></span></a></li>
-		<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
-		<li class="tabact"><a href="disks_manage_smart.php" title="<?=gtext('Reload page');?>"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-	</ul>
-	</td>
-	</tr>
-	<tr>
-	<td class="tabcont">
-		<form action="disks_manage_smart_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-		<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-		<table width="100%" border="0" cellpadding="6" cellspacing="0">
-		<?php html_titleline(gtext("Scheduled Self-Test Settings"));?>
-		<tr>
-			<td valign="top" class="vncellreq"><?=gtext("Disk"); ?></td>
-			<td class="vtable">
-			<select name="disk" class="formfld" id="disk">
-			<option value=""><?=gtext("Must choose one");?></option>
-			<?php foreach ($a_disk as $diskv):?>
-				<?php if (0 == strcmp($diskv['size'], "NA")) continue;?>
-				<?php if (1 == disks_exists($diskv['devicespecialfile'])) continue;?>
-				<?php if (!isset($diskv['smart'])) continue;?>
-				<option value="<?=$diskv['devicespecialfile'];?>" <?php if ($diskv['devicespecialfile'] === $pconfig['devicespecialfile']) echo "selected=\"selected\"";?>>
+<table id="area_navigator">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_manage.php"><span><?=gtext('HDD Management');?></span></a></li>
+		<li class="tabinact"><a href="disks_init.php"><span><?=gtext('HDD Format');?></span></a></li>
+		<li class="tabact"><a href="disks_manage_smart.php" title="<?=gtext('Reload page');?>"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext('iSCSI Initiator');?></span></a></li>
+	</ul></td></tr>
+</table>
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
-				$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
-				$helpinghand = format_bytes($diskinfo['mediasize_bytes'],true);
-				echo htmlspecialchars("{$diskv['name']}: {$helpinghand} ({$diskv['desc']})");
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
 ?>
-				</option>
-				<?php endforeach;?>
-			</select><br />
-			<span class="vexpl"><?=gtext("Select a disk that is enabled for S.M.A.R.T. monitoring.");?></span>
-			</td>
-			</tr>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('Scheduled Self-Test Settings'));
+?>
+		</thead>
+		<tbody>
 			<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gtext("Type");?></td>
-			<td width="78%" class="vtable">
-			<select name="type" class="formfld" id="type">
-			<?php $types = [gtext('Short Self-Test'),gtext('Long Self-Test'),gtext('Conveyance Self-Test'),gtext('Offline Immediate Test')]; $vals = ['S','L','C','O'];?>
-				<?php $j = 0; for ($j = 0; $j < count($vals); $j++):?>
-				<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['type']) echo "selected=\"selected\"";?>>
-				<?=htmlspecialchars($types[$j]);?>
-			</option>
-				<?php endfor;?>
-			</select>
-			</td>
-			</tr>
-			<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gtext("Time");?></td>
-			<td width="78%" class="vtable">
-				<table width="100%" border="0" cellpadding="4" cellspacing="0">
-				<tr>
-				<td class="listhdrlr"><?=gtext("Hours");?></td>
-				<td class="listhdrr"><?=gtext("Days");?></td>
-				<td class="listhdrr"><?=gtext("Months");?></td>
-				<td class="listhdrr"><?=gtext("Week days");?></td>
-				</tr>
-				<tr>
-				<td class="listlr" valign="top">
-				<input type="radio" name="all_hours" id="all_hours1" value="1" <?php if (1 == $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-				<?=gtext("All");?><br />
-				<input type="radio" name="all_hours" id="all_hours2" value="0" <?php if (1 != $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-				<?=gtext("Selected");?> ..<br />
-				<table>
-				<tr>
-				<td valign="top">
-				<select multiple="multiple" size="12" name="hour[]" id="hours1" onchange="set_selected('all_hours')">
-				<?php for ($i = 0; $i <= 11; $i++):?>
-				<option value="<?=$i;?>" <?php if (is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-				<?php endfor;?>
-				</select>
+				<td class="celltagreq"><?=gtext('Disk');?></td>
+				<td class="celldatareq">
+					<select name="disk" class="formfld" id="disk">
+						<option value=""><?=gtext('Must choose one');?></option>
+<?php
+						foreach ($a_disk as $diskv):
+							if(0 == strcmp($diskv['size'],'NA')):
+								continue;
+							endif;
+							if(1 == disks_exists($diskv['devicespecialfile'])):
+								continue;
+							endif;
+							if(!isset($diskv['smart'])):
+								continue;
+							endif;
+?>
+							<option value="<?=$diskv['devicespecialfile'];?>" <?php if($diskv['devicespecialfile'] === $pconfig['devicespecialfile']) echo "selected=\"selected\"";?>>
+<?php
+								$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
+								$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+								echo htmlspecialchars(sprintf('%s: %s (%s)',$diskv['name'],$helpinghand,$diskv['desc']));
+?>
+							</option>
+<?php
+						endforeach;
+?>
+					</select><br />
+					<span class="vexpl"><?=gtext('Select a disk that is enabled for S.M.A.R.T. monitoring.');?></span>
 				</td>
-				<td valign="top">
-				<select multiple="multiple" size="12" name="hour[]" id="hours2" onchange="set_selected('all_hours')">
-					<?php for ($i = 12; $i <= 23; $i++):?>
-					<option value="<?=$i;?>" <?php if (is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-					<?php endfor;?>
+			</tr>
+			<tr>
+				<td class="celltagreq"><?=gtext('Type');?></td>
+				<td class="celldatareq">
+					<select name="type" class="formfld" id="type">
+<?php
+						$types = [gtext('Short Self-Test'),gtext('Long Self-Test'),gtext('Conveyance Self-Test'),gtext('Offline Immediate Test')];
+						$vals = ['S','L','C','O'];
+?>
+<?php
+						$j = 0;
+						for ($j = 0; $j < count($vals); $j++):
+?>
+							<option value="<?=$vals[$j];?>" <?php if($vals[$j] == $pconfig['type']) echo "selected=\"selected\"";?>><?=htmlspecialchars($types[$j]);?></option>
+<?php
+						endfor;
+?>
 					</select>
 				</td>
-				</tr>
-				</table>
-			</td>
-				<td class="listr" valign="top">
-				<input type="radio" name="all_days" id="all_days1" value="1" <?php if (1 == $pconfig['all_days']) echo "checked=\"checked\"";?> />
-				<?=gtext("All");?><br />
-				<input type="radio" name="all_days" id="all_days2" value="0" <?php if (1 != $pconfig['all_days']) echo "checked=\"checked\"";?> />
-				<?=gtext("Selected");?> ..<br />
-				<table>
+			</tr>
 			<tr>
-				<td valign="top">
-				<select multiple="multiple" size="12" name="day[]" id="days1" onchange="set_selected('all_days')">
-				<?php for ($i = 1; $i <= 12; $i++):?>
-				<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-				<?php endfor;?>
-				</select>
-			</td>
-				<td valign="top">
-				<select multiple="multiple" size="12" name="day[]" id="days2" onchange="set_selected('all_days')">
-				<?php for ($i = 13; $i <= 24; $i++):?>
-				<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-				<?php endfor;?>
-				</select>
-			</td>
-				<td valign="top">
-				<select multiple="multiple" size="7" name="day[]" id="days3" onchange="set_selected('all_days')">
-				<?php for ($i = 25; $i <= 31; $i++):?>
-				<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-				<?php endfor;?>
-				</select>
-			</td>
-		</tr>
-		</table>
-			</td>
-				<td class="listr" valign="top">
-				<input type="radio" name="all_months" id="all_months1" value="1" <?php if (1 == $pconfig['all_months']) echo "checked=\"checked\"";?> />
-				<?=gtext("All");?><br />
-				<input type="radio" name="all_months" id="all_months2" value="0" <?php if (1 != $pconfig['all_months']) echo "checked=\"checked\"";?> />
-				<?=gtext("Selected");?> ..<br />
-				<table>
-			<tr>
-				<td valign="top">
-				<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
-				<?php $i = 1; foreach ($a_months as $month):?>
-				<option value="<?=$i;?>" <?php if (isset($pconfig['month']) && in_array("$i", $pconfig['month'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($month);?></option>
-				<?php $i++; endforeach;?>
-				</select>
+				<td class="celltagreq"><?=gtext('Time');?></td>
+				<td class="celldatareq">
+					<table class="area_data_selection">
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:35%">
+							<col style="width:20%">
+							<col style="width:20%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="lhell"><?=gtext('Hours');?></th>
+								<th class="lhell"><?=gtext('Days');?></th>
+								<th class="lhell"><?=gtext('Months');?></th>
+								<th class="lhebl"><?=gtext('Week days');?></th>
+							</tr>
+						</thead>
+						<tbody class="donothighlight"><tr>
+							<td class="lcell">
+								<div><input type="radio" name="all_hours" id="all_hours1" value="1" <?php if(1 == $pconfig['all_hours']) echo 'checked="checked"';?>/><?=gtext('All');?></div>
+								<div><input type="radio" name="all_hours" id="all_hours2" value="0" <?php if(1 != $pconfig['all_hours']) echo 'checked="checked"';?>/><?=gtext('Selected');?> ..</div>
+								<div><table><tbody><tr>
+<?php
+									$val_min = $i = 0;
+									$val_count = 24;
+									$val_max = $val_min + $val_count - 1;
+									$val_break = 6;
+									$i_outer_max = ceil($val_count / $val_break) - 1;
+									$i_inner_max = $val_min + $val_break - 1;
+									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+										echo '<td valign="top">',"\n";
+										echo '<select multiple="multiple" size="',$val_break,'" name="hour[]" id="hours1" onchange="set_selected(\'all_hours\')">',"\n";
+										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+											if($i <= $val_max):
+												echo '<option value="',$i,'"';
+												if(is_array($pconfig['hour']) && in_array("$i",$pconfig['hour'])):
+													echo ' selected';
+												endif;
+												echo '>',$i,'</option>',"\n";
+											else:
+												break;
+											endif;
+											$i++;
+										endfor;
+										echo '</select>',"\n";
+										echo '</td>',"\n";
+									endfor;
+?>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcell">
+								<div><input type="radio" name="all_days" id="all_days1" value="1" <?php if(1 == $pconfig['all_days']) echo 'checked="checked"';?>/><?=gtext('All');?></div>
+								<div><input type="radio" name="all_days" id="all_days2" value="0" <?php if(1 != $pconfig['all_days']) echo 'checked="checked"';?>/><?=gtext('Selected');?> ..</div>
+								<div><table><tbody><tr>
+<?php
+									$val_min = $i = 1;
+									$val_count = 31;
+									$val_max = $val_min + $val_count - 1;
+									$val_break = 7;
+									$i_outer_max = ceil($val_count / $val_break) - 1;
+									$i_inner_max = $val_min + $val_break - 1;
+									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+										echo '<td valign="top">',"\n";
+										echo '<select multiple="multiple" size="',$val_break,'" name="day[]" id="days1" onchange="set_selected(\'all_days\')">',"\n";
+										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+											if($i <= $val_max):
+												echo '<option value="',$i,'"';
+												if(is_array($pconfig['day']) && in_array("$i",$pconfig['day'])):
+													echo ' selected';
+												endif;
+												echo '>',$i,'</option>',"\n";
+											else:
+												break;
+											endif;
+											$i++;
+										endfor;
+										echo '</select>',"\n";
+										echo '</td>',"\n";
+									endfor;
+?>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcell">
+								<div><input type="radio" name="all_months" id="all_months1" value="1" <?php if(1 == $pconfig['all_months']) echo 'checked="checked"';?>/><?=gtext('All');?></div>
+								<div><input type="radio" name="all_months" id="all_months2" value="0" <?php if(1 != $pconfig['all_months']) echo 'checked="checked"';?>/><?=gtext('Selected');?> ..</div>
+								<div><table><tbody><tr>
+									<td valign="top">
+										<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
+<?php
+											$i = 1;
+											foreach ($g_months as $month):
+?>
+												<option value="<?=$i;?>" <?php if(isset($pconfig['month']) && in_array("$i", $pconfig['month'])) echo "selected";?>><?=$month;?></option>
+<?php
+												$i++;
+											endforeach;
+?>
+										</select>
+									</td>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcebl">
+								<div><input type="radio" name="all_weekdays" id="all_weekdays1" value="1" <?php if(1 == $pconfig['all_weekdays']) echo 'checked="checked"';?>/><?=gtext('All');?></div>
+								<div><input type="radio" name="all_weekdays" id="all_weekdays2" value="0" <?php if(1 != $pconfig['all_weekdays']) echo 'checked="checked"';?>/><?=gtext('Selected');?> ..</div>
+								<div><table><tbody><tr>
+									<td valign="top">
+										<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
+<?php
+											$i = 0;
+											foreach($g_weekdays as $day):
+?>
+												<option value="<?=$i;?>" <?php if(isset($pconfig['weekday']) && in_array("$i", $pconfig['weekday'])) echo "selected";?>><?=$day;?></option>
+<?php
+												$i++;
+											endforeach;
+?>
+										</select>
+									</td>
+								</tr></tbody></table></div>
+							</td>
+
+						</tr></tbody>
+					</table>
+					<span class="vexpl"><?=gtext('Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months.');?></span>
 				</td>
 			</tr>
-		</table>
-			</td>
-				<td class="listr" valign="top">
-				<input type="radio" name="all_weekdays" id="all_weekdays1" value="1" <?php if (1 == $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-				<?=gtext("All");?><br />
-				<input type="radio" name="all_weekdays" id="all_weekdays2" value="0" <?php if (1 != $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-				<?=gtext("Selected");?> ..<br />
-				<table>
 			<tr>
-				<td valign="top">
-				<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
-				<?php $i = 1; foreach ($a_weekdays as $day):?>
-				<option value="<?=$i;?>" <?php if (isset($pconfig['weekday']) && in_array("$i", $pconfig['weekday'])) echo "selected=\"selected\"";?>><?=$day;?></option>
-				<?php $i++; endforeach;?>
-				</select>
+				<td class="celltag"><?=gtext('Description');?></td>
+				<td class="celldata">
+					<input name="desc" type="text" class="formfld" id="desc" size="40" value="<?=htmlspecialchars($pconfig['desc']);?>" />
 				</td>
 			</tr>
-		</table>
-			</td>
-			</tr>
-			</table>
-			<span class="vexpl"><?=gtext("Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months.");?></span>
-			</td>
-			</tr>
-			<tr>
-				<td width="22%" valign="top" class="vncell"><?=gtext("Description");?></td>
-				<td width="78%" class="vtable">
-				<input name="desc" type="text" class="formfld" id="desc" size="40" value="<?=htmlspecialchars($pconfig['desc']);?>" />
-				</td>
-			</tr>
-			</table>
-				<div id="submit">
-				<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" onclick="enable_change(true)" />
-				<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-				<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-	</td>
-</tr>
-</table>
-<?php if (isset($uuid) && (FALSE !== $cnid)):?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext('Save') : gtext('Add')?>" onclick="enable_change(true)" />
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
+		<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+if(isset($uuid) && (FALSE !== $cnid)):
+?>
 <script type="text/javascript">
 <!-- Disable controls that should not be modified anymore in edit mode. -->
 enable_change(false);
 </script>
-<?php endif;?>
-<?php include 'fend.inc';?>
+<?php
+endif;
+?>
+<?php
+include 'fend.inc';
+?>
