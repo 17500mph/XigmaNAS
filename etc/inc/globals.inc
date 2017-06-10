@@ -108,6 +108,29 @@ $g_languages = [
 	'tr'    => ['codeset' => 'UTF-8', 'desc' => gtext('Turkish'), 'desc.localized' => 'Türkçe'],
 	'uk'    => ['codeset' => 'UTF-8', 'desc' => gtext('Ukrainian'), 'desc.localized' => 'Українська']
 ];
+$g_months = [
+	1 => gtext('January'),
+	2 => gtext('February'),
+	3 => gtext('March'),
+	4 => gtext('April'),
+	5 => gtext('May'),
+	6 => gtext('June'),
+	7 => gtext('July'),
+	8 => gtext('August'),
+	9 => gtext('September'),
+	10 => gtext('October'),
+	11 => gtext('November'),
+	12 => gtext('December')
+];
+$g_weekdays = [
+	0 => gtext('Monday'),
+	1 => gtext('Tuesday'),
+	2 => gtext('Wednesday'),
+	3 => gtext('Thursday'),
+	4 => gtext('Friday'),
+	5 => gtext('Saturday'),
+	6 => gtext('Sunday')
+];
 //	supported filesystems
 $g_filesystems = [
 	'' => gtext('Unformatted'),
