@@ -57,7 +57,7 @@ array_make_branch($zfs,'vdevices','vdevice');
 array_make_branch($zfs,'pools','pool');
 array_make_branch($zfs,'datasets','dataset');
 array_make_branch($zfs,'volumes','volume');
-$key_properties = [
+$properties_filesystem = [
 	'name',
 	'mountpoint',
 	'compression',
@@ -78,7 +78,7 @@ $key_properties = [
 	'primarycache',
 	'secondarycache'
 ];
-$cmd = sprintf('zfs list -H -t filesystem -o %s',implode(',',$key_properties));
+$cmd = sprintf('zfs list -H -t filesystem -o %s',implode(',',$properties_filesystem));
 unset($rawdata);
 unset($retdat);
 mwexec2($cmd,$rawdata,$retval);
@@ -151,7 +151,22 @@ foreach($rawdata as $line):
 		];
 	endif;
 endforeach;
-$cmd = 'zfs list -H -t volume -o name,volsize,volmode,volblocksize,compression,origin,dedup,sync,refreservation,primarycache,secondarycache';
+$properties_volume = [
+	'name',
+	'checksum',
+	'compression',
+	'dedup',
+	'logbias',
+	'origin',
+	'primarycache',
+	'refreservation',
+	'secondarycache',
+	'sync',
+	'volblocksize',
+	'volmode',
+	'volsize',
+];
+$cmd = sprintf('zfs list -H -t volume -o %s',implode(',',$properties_volume));
 unset($rawdata);
 unset($retval);
 mwexec2($cmd,$rawdata,$retval);
@@ -159,7 +174,21 @@ foreach($rawdata as $line):
 	if($line == 'no datasets available'):
 		continue;
 	endif;
-	list($fname,$volsize,$volmode,$volblocksize,$compress,$origin,$dedup,$sync,$refreservation,$primarycache,$secondarycache) = explode("\t",$line);
+	list(
+		$fname,
+		$checksum,
+		$compression,
+		$dedup,
+		$logbias,
+		$origin,
+		$primarycache,
+		$refreservation,
+		$secondarycache,
+		$sync,
+		$volblocksize,
+		$volmode,
+		$volsize
+	) = explode("\t",$line);
 	if(strpos($fname,'/') !== false): // volume
 		if(empty($origin) || $origin != '-'):
 			continue;
@@ -173,13 +202,15 @@ foreach($rawdata as $line):
 			'volsize' => $volsize,
 			'volmode' => $volmode,
 			'volblocksize' => $volblocksize,
-			'compression' => $compress,
+			'compression' => $compression,
 			'dedup' => $dedup,
 			'sync' => $sync,
 			'sparse' => ($refreservation == 'none') ? true : false,
 			'primarycache' => $primarycache,
 			'secondarycache' => $secondarycache,
 			'desc' => '',
+			'checksum' => $checksum,
+			'logbias' => $logbias,
 		];
 	endif;
 endforeach;
