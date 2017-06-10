@@ -116,7 +116,7 @@ pre {
 	width: 100%;
 	table-layout: fixed;
 }
-.area_data_selection tbody tr:hover td {
+.area_data_selection tbody:not(.donothighlight) tr:hover td {
 	background-color:#CCCCCC;
 }
 .area_data_selection_toolbox {
@@ -449,7 +449,7 @@ table#area_data_selection_toolbox {
 	margin: 0px;
 	width: 100%;
 }
-table#area_data_selection tbody tr:hover td {
+table#area_data_selection tbody:not(.donothighlight) tr:hover td {
 	background-color:#CCCCCC;
 }
 table#area_data_settings_submit {
