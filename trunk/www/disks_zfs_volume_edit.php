@@ -126,48 +126,36 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	unset($input_errors);
 	// apply post values that are applicable for all record modes
-	$ref = 'volsize';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
-	$ref = 'volmode';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
-	$ref = 'compression';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
-	$ref = 'dedup';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
-	$ref = 'sync';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+	$ref = 'desc';
+	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
 	$ref = 'sparse';
 	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
-	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
-	$ref = 'primarycache';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
-	$ref = 'secondarycache';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+	foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volmode','volsize'] as $ref):
+		$sphere_record[$ref] = $prop->$ref->validate_input();
+	endforeach;
 	switch($mode_record):
 		case RECORD_NEW:
 		case RECORD_NEW_MODIFY:
 			$sphere_record['name'] = isset($_POST['name']) ? $_POST['name'] : '';
 			$sphere_record['pool'] = isset($_POST['pool']) ? $_POST['pool'] : '';
 			$ref = 'volblocksize';
-			$sphere_record[$ref] = filter_input(INPUT_POST,$ref,$prop->$ref->filter(),$prop->$ref->filteroptions());
+			$sphere_record[$ref] = $prop->$ref->validate_input();
 			break;
 		case RECORD_MODIFY:
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
 			$ref = 'volblocksize';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
+			$sphere_record[$ref] = $prop->$ref->validate_value($sphere_array[$index][$ref]);
 			break;
 	endswitch;
-
 	// Input validation
 	$reqdfields = ['pool','name'];
 	$reqdfieldsn = [gtext('Pool'),gtext('Name')];
 	$reqdfieldst = ['string','string'];
-
 	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
 	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
-	// validate special value elements
+	// validate text input elements
 	foreach(['volsize'] as $ref):
 		if(!isset($sphere_record[$ref])):
 			$sphere_record[$ref] = $_POST[$ref] ?? $prop->$ref->defaultvalue(); // restore $_POST or populate default
@@ -175,7 +163,7 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 		endif;
 	endforeach;
 	// validate list elements
-	foreach(['compression','dedup','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
+	foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
 		if(!isset($sphere_record[$ref])):
 			$sphere_record[$ref] = '';
 			$input_errors[] = $prop->$ref->errormessage();
@@ -257,73 +245,34 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 		exit;
 	endif;
 else:
+	$a_ref = ['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode','volsize'];
 	switch($mode_record):
 		case RECORD_NEW:
+			$sphere_record['desc'] = '';
 			$sphere_record['name'] = '';
 			$sphere_record['pool'] = '';
-			$ref = 'volsize';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'volmode';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'volblocksize';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'compression';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'dedup';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'sync';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'sparse';
-			$sphere_record[$ref] = false;
-			$sphere_record['desc'] = '';
-			$ref = 'primarycache';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
-			$ref = 'secondarycache';
-			$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			$sphere_record['sparse'] = false;
+			foreach($a_ref as $ref):
+				$sphere_record[$ref] = $prop->$ref->defaultvalue();
+			endforeach;
 			break;
 		case RECORD_NEW_MODIFY: // get from config only
+			$sphere_record['desc'] = $sphere_array[$index]['desc'];
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$ref = 'volsize';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'volmode';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'volblocksize';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'compression';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'dedup';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'sync';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
-			$sphere_record['desc'] = $sphere_array[$index]['desc'];
-			$ref = 'primarycache';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'secondarycache';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			foreach($a_ref as $ref):
+				$sphere_record[$ref] = $prop->$ref->validate_value($sphere_array[$index][$ref]) ?? '';
+			endforeach;
 			break;
 		case RECORD_MODIFY: // get from config or system
+			$sphere_record['desc'] = $sphere_array[$index]['desc'];
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$ref = 'volsize';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'volmode';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'volblocksize';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'compression';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'dedup';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'sync';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
 			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
-			$sphere_record['desc'] = $sphere_array[$index]['desc'];
-			$ref = 'primarycache';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
-			$ref = 'secondarycache';
-			$sphere_record[$ref] = filter_var($sphere_array[$index][$ref],$prop->$ref->filter(),$prop->$ref->filteroptions()) ?? '';
+			foreach($a_ref as $ref):
+				$sphere_record[$ref] = $prop->$ref->validate_value($sphere_array[$index][$ref]) ?? '';
+			endforeach;
 			break;
 	endswitch;
 endif;
@@ -349,25 +298,17 @@ $(window).on("load", function() {
 //]]>
 </script>
 <table id="area_navigator">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext('Information');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+		<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext('Information');?></span></a></li>
+	</ul></td></tr>
 </table>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
@@ -395,8 +336,10 @@ $(window).on("load", function() {
 <?php
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
 			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
+			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
 			$ref = 'volsize';
-			html_inputbox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->description(),true,20);
+			html_inputbox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->description(),true,20,false,false,20);
+			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
 			$ref = 'volmode';
 			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
 			$ref = 'compression';
@@ -405,14 +348,16 @@ $(window).on("load", function() {
 			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
 			$ref = 'sync';
 			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
-			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
 			$ref = 'volblocksize';
 			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),false,$isrecordmodify);
 			$ref = 'primarycache';
 			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
 			$ref = 'secondarycache';
 			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
-			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
+			$ref = 'checksum';
+			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
+			$ref = 'logbias';
+			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
 ?>
 		</tbody>
 	</table>
