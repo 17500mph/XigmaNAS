@@ -100,14 +100,14 @@ class properties_base extends properties {
 		endif;
 		return $this->$ref;
 	}
-	public function filter($value = NULL) {
+	public function filter_ui($value = NULL) {
 		$ref = '_' . __FUNCTION__;
 		if(isset($value)):
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
 	}
-	public function filteroptions(array $value = NULL) {
+	public function filter_ui_opt(array $value = NULL) {
 		$ref = '_' . __FUNCTION__;
 		if(isset($value)):
 			$this->$ref = $value;
@@ -120,6 +120,12 @@ class properties_base extends properties {
 			$this->$ref = $value;
 		endif;
 		return $this->$ref;
+	}
+	public function validate_input(int $input_type = INPUT_POST) {
+		return filter_input($input_type,$this->name(),$this->filter_ui(),$this->filter_ui_opt());
+	}
+	public function validate_value($value) {
+		return filter_var($value,$this->filter_ui(),$this->filter_ui_opt());
 	}
 }
 class properties_list extends properties_base {
