@@ -693,7 +693,17 @@ function zfs_volume_configure($uuid) {
 	array_make_branch($config,'zfs','volumes','volume');
 	$prop = new properties_zfs_dataset();
 	$supported_properties = [
-		'sparse','volsize','compression','dedup','primarycache','secondarycache','sync','volblocksize','volmode'
+		'sparse',
+		'checksum',
+		'compression',
+		'dedup',
+		'logbias',
+		'primarycache',
+		'secondarycache',
+		'sync',
+		'volblocksize',
+		'volmode',
+		'volsize'
 	];
 	// get volume
 	$index = array_search_ex($uuid,$config['zfs']['volumes']['volume'],'uuid');
@@ -726,21 +736,23 @@ function zfs_volume_configure($uuid) {
 				endif;
 				break;
 			case 'volsize':
-				$val = filter_var($volume[$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
-				if(isset($val)):
+				$val = $prop->$ref->validate_value($volume[$ref]);
+				if(isset($val) && preg_match('/\S/',$val)):
 					$a_param[] = sprintf('-V %s',$val);
 					$required_properties--;
 				endif;
 				break;
+			case 'checksum':
 			case 'compression':
 			case 'dedup':
+			case 'logbias':
 			case 'primarycache':
 			case 'secondarycache':
 			case 'sync':
 			case 'volblocksize':
 			case 'volmode':
-				$val = filter_var($volume[$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
-				if(isset($val)):
+				$val = $prop->$ref->validate_value($volume[$ref]);
+				if(isset($val) && preg_match('/\S/',$val)):
 					$a_param[] = sprintf('-o %s=%s',$ref,$val);
 				endif;
 				break;
@@ -794,7 +806,6 @@ function zfs_volume_destroy($uuid) {
 	endif;
 	return $result;
 }
-
 function zfs_get_volume_reservation($volsize) {
 	if(empty($volsize)):
 		return '';
@@ -809,7 +820,6 @@ function zfs_get_volume_reservation($volsize) {
 	endif;
 	return false;
 }
-
 /**
  * Update properties of a ZFS volume.
  * @param[in] uuid	The UUID of the volume to be updated.
@@ -834,41 +844,58 @@ function zfs_volume_properties($uuid) {
 	endif;
 	$poolname = ltrim($volume['pool'][0]);
 	// get volume name
-	if(!(isset($volume['name']) && preg_match('/\S/', $volume['name']))):
+	if(!(isset($volume['name']) && preg_match('/\S/',$volume['name']))):
 		return 1;
 	endif;
 	$volumename = ltrim($volume['name']);
 	$relpath = sprintf('%1$s/%2$s',$poolname,$volumename);
-	if(isset($volume['volsize']) && !empty($volume['volsize'])):
-		if(false === ($reservation = zfs_get_volume_reservation($volume['volsize']))):
+	$ref = 'volsize';
+	$volsize = $prop->$ref->validate_value($volume[$ref]);
+	if(isset($volsize)):
+		if(false === ($reservation = zfs_get_volume_reservation($volsize))):
 			return 1;
 		endif;
 	endif;
 	$supported_properties = [
-		'sparse','compression','dedup','primarycache','secondarycache','sync','volmode','volsize'
+		'sparse',
+		'checksum',
+		'compression',
+		'dedup',
+		'logbias',
+		'primarycache',
+		'secondarycache',
+		'sync',
+		'volmode',
+		'volsize'
 	];
 	$a_param = [];
 	$required_properties = 0;
 	foreach($supported_properties as $ref):
-		$param = '';
 		switch($ref):
 			case 'sparse':
 				if(isset($volume['sparse'])):
-					$a_param[] = 'refreservation=none';
-				elseif(isset($volume['volsize']) && !empty($volume['volsize'])):
-					$a_param[] = sprintf('refreservation=%s',trim($volume['volsize']));
+					$a_param[] = sprintf('%s=%s','refreservation','none');
+				elseif(isset($volsize)):
+					// this might fail
+					$a_param[] = sprintf('%s=%s','refreservation',$volsize);
 				endif;
 				break;
-			case 'volsize':
+			case 'checksum':
 			case 'compression':
 			case 'dedup':
+			case 'logbias':
 			case 'primarycache':
 			case 'secondarycache':
 			case 'sync':
 			case 'volmode':
-				$val = filter_var($volume[$ref],$prop->$ref->filter(),$prop->$ref->filteroptions());
-				if(isset($val)):
+				$val = $prop->$ref->validate_value($volume[$ref]);
+				if(isset($val) && preg_match('/\S/',$val)):
 					$a_param[] = sprintf('%s=%s',$ref,$val);
+				endif;
+				break;
+			case 'volsize':
+				if(isset($volsize)):
+					$a_param[] = sprintf('%s=%s',$ref,$volsize);
 				endif;
 				break;
 		endswitch;	
@@ -1116,22 +1143,27 @@ function zfs_updatenotify_process($key, $function) {
 
 // Returns true if $name is valid.
 function zfs_is_valid_poolname($name) {
-	// Only strings allowed
-	if (!is_string($name)) { return false; }
-	// Empty pool names are not allowed.
-	if (empty($name)) { return false; } 
-	// Pool names beginning with "mirror", "raidz" and "spare" are not allowed, as are names beginning with the pattern "c[0-9]".
-	if (preg_match('/^(mirror|raidz|spare|c[0-9])/', $name)) { return false; }
-	// log is a reserved word
-	if (0 == strcmp('log', $name)) { return false; } 
-
+	// Pool name must be of type string
+	// An empty pool name is not allowed.
 	// The pool name must begin with a letter, and can only contain
-	// alphanumeric characters as well as underscore ("_"), dash ("-"), blank (" ") and
-	// period (".").
-	$helpinghand = preg_quote('.-_ ', '/');
-	if (false !== preg_match('/^[a-z][a-z\d'.$helpinghand.']*$/i', $name)) {
+	// alphanumeric characters as well as underscore, dash, blank and period.
+	// Length of the pool name must be less than 256 characters.
+	$regexp = '^[a-z][a-z\d\.\-_: ]*$/i';
+	$result = filter_var($name,FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'REGEXP' => $regexp]]);
+	if(isset($result)):
+		// Pool names beginning with "mirror", "raidz" and "spare" are not allowed, as are names beginning with the pattern "c[0-9]".
+		if(preg_match('/^(mirror|raidz|spare|c[0-9])/',$name)):
+			return false;
+		endif;
+		// log is a reserved word
+		if(0 == strcmp('log',$name)):
+			return false;
+		endif;
+		if(strlen($name) > 255):
+			return false;
+		endif;
 		return true;
-	}
+	endif;
 	return false;
 }
 /*
