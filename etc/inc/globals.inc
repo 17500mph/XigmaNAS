@@ -123,13 +123,13 @@ $g_months = [
 	12 => gtext('December')
 ];
 $g_weekdays = [
-	0 => gtext('Monday'),
-	1 => gtext('Tuesday'),
-	2 => gtext('Wednesday'),
-	3 => gtext('Thursday'),
-	4 => gtext('Friday'),
-	5 => gtext('Saturday'),
-	6 => gtext('Sunday')
+	1 => gtext('Monday'),
+	2 => gtext('Tuesday'),
+	3 => gtext('Wednesday'),
+	4 => gtext('Thursday'),
+	5 => gtext('Friday'),
+	6 => gtext('Saturday'),
+	7 => gtext('Sunday')
 ];
 //	supported filesystems
 $g_filesystems = [
