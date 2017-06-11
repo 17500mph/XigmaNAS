@@ -39,12 +39,7 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-/* Global arrays. */
-$a_months = explode(" ",gtext("January February March April May June July August September October November December"));
-$a_weekdays = explode(" ",gtext("Sunday Monday Tuesday Wednesday Thursday Friday Saturday"));
-
 $a_rsynclocal = &array_make_branch($config,'rsync','rsynclocal');
-
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsynclocal, "uuid")))) {
 	$pconfig['enable'] = isset($a_rsynclocal[$cnid]['enable']);
 	$pconfig['uuid'] = $a_rsynclocal[$cnid]['uuid'];
@@ -363,9 +358,15 @@ function delete_change() {
 											<tr>
 												<td valign="top">
 													<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
-														<?php $i = 1; foreach ($a_months as $month):?>
-														<option value="<?=$i;?>" <?php if (isset($pconfig['month']) && in_array("$i", $pconfig['month'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($month);?></option>
-														<?php $i++; endforeach;?>
+<?php
+														foreach ($g_months as $key => $val):
+															echo '<option value="',$key,'"';
+															if(isset($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
+																echo ' selected="selected"';
+															endif;
+															echo '>',$val,'</option>',"\n";
+														endforeach;
+?>
 													</select>
 												</td>
 											</tr>
@@ -380,9 +381,22 @@ function delete_change() {
 											<tr>
 												<td valign="top">
 													<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
-														<?php $i = 0; foreach ($a_weekdays as $day):?>
-														<option value="<?=$i;?>" <?php if (isset($pconfig['weekday']) && in_array("$i", $pconfig['weekday'])) echo "selected=\"selected\"";?>><?=$day;?></option>
-														<?php $i++; endforeach;?>
+<?php
+														foreach($g_weekdays as $key => $val):
+															echo '<option value="',$key,'"';
+															if(isset($pconfig['weekday'])):
+																if(in_array((string)$key,$pconfig['weekday'])):
+																	echo ' selected="selected"';
+																endif;
+																if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
+																	if(in_array('0',$pconfig['weekday'])):
+																		echo ' selected="selected"';
+																	endif;
+																endif;
+															endif;
+															echo '>',$val,'</option>',"\n";
+														endforeach;
+?>
 													</select>
 												</td>
 											</tr>
