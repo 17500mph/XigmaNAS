@@ -310,8 +310,15 @@ function enable_change(enable_change) {
 <?php
 											foreach($g_weekdays as $key => $val):
 												echo '<option value="',$key,'"';
-												if(isset($pconfig['weekday']) && in_array((string)$key,$pconfig['weekday'])):
-													echo ' selected="selected"';
+												if(isset($pconfig['weekday'])):
+													if(in_array((string)$key,$pconfig['weekday'])):
+														echo ' selected="selected"';
+													endif;
+													if(7 == $key):  // Compatibility for non-ISO day of week 0 for Sunday
+														if(in_array('0',$pconfig['weekday'])):
+															echo ' selected="selected"';
+														endif;
+													endif;
 												endif;
 												echo '>',$val,'</option>',"\n";
 											endforeach;
