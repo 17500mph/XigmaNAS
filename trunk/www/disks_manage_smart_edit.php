@@ -289,12 +289,12 @@ function enable_change(enable_change) {
 									<td valign="top">
 										<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
 <?php
-											$i = 1;
-											foreach ($g_months as $month):
-?>
-												<option value="<?=$i;?>" <?php if(isset($pconfig['month']) && in_array("$i", $pconfig['month'])) echo "selected";?>><?=$month;?></option>
-<?php
-												$i++;
+											foreach ($g_months as $key => $val):
+												echo '<option value="',$key,'"';
+												if(isset($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
+													echo ' selected="selected"';
+												endif;
+												echo '>',$val,'</option>',"\n";
 											endforeach;
 ?>
 										</select>
@@ -308,12 +308,12 @@ function enable_change(enable_change) {
 									<td valign="top">
 										<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
 <?php
-											$i = 0;
-											foreach($g_weekdays as $day):
-?>
-												<option value="<?=$i;?>" <?php if(isset($pconfig['weekday']) && in_array("$i", $pconfig['weekday'])) echo "selected";?>><?=$day;?></option>
-<?php
-												$i++;
+											foreach($g_weekdays as $key => $val):
+												echo '<option value="',$key,'"';
+												if(isset($pconfig['weekday']) && in_array((string)$key,$pconfig['weekday'])):
+													echo ' selected="selected"';
+												endif;
+												echo '>',$val,'</option>',"\n";
 											endforeach;
 ?>
 										</select>
