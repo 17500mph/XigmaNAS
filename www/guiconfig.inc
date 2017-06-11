@@ -715,41 +715,39 @@ function html_row_toolbox(string $link = '',string $gt_record_mod = '',string $g
 	}
 	return $root->render();
 }
-function get_weekday_names($long = NULL,$english = NULL) {
-	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
-	switch ($actioncode) {
-		case 0: // short, locale 
-			$retval = [gtext('Mon'),gtext('Tue'),gtext('Wed'),gtext('Thu'),gtext('Fri'),gtext('Sat'),gtext('Sun')];
-			break;
-		case 1: // long, locale
-			$retval = [gtext('Monday'),gtext('Tuesday'),gtext('Wednesday'),gtext('Thursday'),gtext('Friday'),gtext('Saturday'),gtext('Sunday')];
-			break;
-		case 2: // short, english
-			$retval = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-			break;
-		case 3: // long, english
+function get_weekday_names(bool $longnames = true,bool $localized = true) {
+	global $g_weekdays;
+	if($longnames):
+		if($localized):
+			$retval = $g_weekdays;
+		else:
 			$retval = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-			break;
-	}
+		endif;
+	else:
+		if($localized):
+			$retval = [gtext('Mon'),gtext('Tue'),gtext('Wed'),gtext('Thu'),gtext('Fri'),gtext('Sat'),gtext('Sun')];
+		else:
+			$retval = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+		endif;
+	endif;
 	return $retval;
 }
 
-function get_month_names($long = NULL,$english = NULL) {
-	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
-	switch ($actioncode) {
-		case 0: // short, locale 
-			$retval = [gtext('Jan'),gtext('Feb'),gtext('Mar'),gtext('Apr'),gtext('May'),gtext('Jun'),gtext('Jul'),gtext('Aug'),gtext('Sep'),gtext('Oct'),gtext('Nov'),gtext('Dec')];
-			break;
-		case 1: // long, locale
-			$retval = [gtext('January'),gtext('February'),gtext('March'),gtext('April'),gtext('May'),gtext('June'),gtext('July'),gtext('August'),gtext('September'),gtext('October'),gtext('November'),gtext('December')];
-			break;
-		case 2: // short, english
-			$retval = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-			break;
-		case 3: // long, english
+function get_month_names(bool $longnames = true,bool $localized = true) {
+	global $g_months;
+	if($longnames):
+		if($localized):
+			$retval = $g_months;
+		else:
 			$retval = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-			break;
-	}
+		endif;
+	else:
+		if($localized):
+			$retval = [gtext('Jan'),gtext('Feb'),gtext('Mar'),gtext('Apr'),gtext('May'),gtext('Jun'),gtext('Jul'),gtext('Aug'),gtext('Sep'),gtext('Oct'),gtext('Nov'),gtext('Dec')];
+		else:
+			$retval = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+		endif;
+	endif;
 	return $retval;
 }
 function gentitle(array $title = []) {
