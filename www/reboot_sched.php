@@ -35,9 +35,7 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 $pgtitle = [gtext('System'),gtext('Reboot'),gtext('Scheduled')];
-
 array_make_branch($config,'reboot');
-
 $pconfig['enable'] = isset($config['reboot']['enable']);
 $pconfig['minute'] = $config['reboot']['minute'];
 $pconfig['hour'] = $config['reboot']['hour'];
@@ -49,9 +47,6 @@ $pconfig['all_hours'] = $config['reboot']['all_hours'];
 $pconfig['all_days'] = $config['reboot']['all_days'];
 $pconfig['all_months'] = $config['reboot']['all_months'];
 $pconfig['all_weekdays'] = $config['reboot']['all_weekdays'];
-
-$a_months = explode(" ",gtext("January February March April May June July August September October November December"));
-$a_weekdays = explode(" ",gtext("Sunday Monday Tuesday Wednesday Thursday Friday Saturday"));
 
 if ($_POST){
 	unset($input_errors);
@@ -260,9 +255,15 @@ function enable_change(enable_change) {
 		<tr>
 		<td valign="top">
 		<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
-		<?php $i = 1; foreach ($a_months as $month):?>
-		<option value="<?=$i;?>" <?php if (isset($pconfig['month']) && in_array("$i", $pconfig['month'])) echo "selected";?>><?=htmlspecialchars($month);?></option>
-		<?php $i++; endforeach;?>
+<?php
+			foreach ($g_months as $key => $val):
+				echo '<option value="',$key,'"';
+				if(isset($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
+					echo ' selected="selected"';
+				endif;
+				echo '>',$val,'</option>',"\n";
+			endforeach;
+?>
 		</select>
 		</td>
 		</tr>
@@ -277,9 +278,22 @@ function enable_change(enable_change) {
 		<tr>
 		<td valign="top">
 		<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
-		<?php $i = 0; foreach ($a_weekdays as $day):?>
-		<option value="<?=$i;?>" <?php if (isset($pconfig['weekday']) && in_array("$i", $pconfig['weekday'])) echo "selected";?>><?=$day;?></option>
-		<?php $i++; endforeach;?>
+<?php
+			foreach($g_weekdays as $key => $val):
+				echo '<option value="',$key,'"';
+				if(isset($pconfig['weekday'])):
+					if(in_array((string)$key,$pconfig['weekday'])):
+						echo ' selected="selected"';
+					endif;
+					if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
+						if(in_array('0',$pconfig['weekday'])):
+							echo ' selected="selected"';
+						endif;
+					endif;
+				endif;
+				echo '>',$val,'</option>',"\n";
+			endforeach;
+?>
 		</select>
 		</td>
 		</tr>
