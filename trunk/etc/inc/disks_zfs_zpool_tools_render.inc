@@ -182,7 +182,7 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 	echo '<tr>';
 		echo '<td class="celltag">',gtext('Pools'),'</td>'; // left column
 		echo '<td class="celldata">'; // right column start
-			echo '<table id="area_data_selection">',"\n";
+			echo '<table class="area_data_selection">',"\n";
 				echo '<colgroup>',"\n";
 					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
 					echo '<col style="width:35%">',"\n"; // Name
@@ -292,7 +292,7 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 		echo gtext('Pool Devices');
 		echo '</td>'; // left hand column end
 		echo '<td class="celldata">'; // right hand column start
-			echo '<table id="area_data_selection">',"\n";
+			echo '<table class="area_data_selection">',"\n";
 				echo '<colgroup>',"\n";
 					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
 					echo '<col style="width:45%">',"\n"; // // Device Name
@@ -413,7 +413,7 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 		echo gtext('Virtual Devices');
 		echo '</td>'; // left hand column end
 		echo '<td class="celldata">'; // right hand column start
-			echo '<table id="area_data_selection">',"\n";
+			echo '<table class="area_data_selection">',"\n";
 				echo '<colgroup>',"\n";
 					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
 					echo '<col style="width:95%">',"\n"; // Name
@@ -515,7 +515,7 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 		echo gtext('Devices');
 		echo '</td>'; // left hand column end
 		echo '<td class="celldata">'; // right hand column start
-			echo '<table id="area_data_selection">',"\n";
+			echo '<table class="area_data_selection">',"\n";
 				echo '<colgroup>',"\n";
 					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
 					echo '<col style="width:95%">',"\n"; // Device Name
@@ -604,7 +604,7 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 				echo $gt_title;
 			echo '</td>'; // left hand column end
 			echo '<td class="celldata">'; // right hand column start
-				echo '<table id="area_data_selection">',"\n";
+				echo '<table class="area_data_selection">',"\n";
 					echo '<colgroup>',"\n";
 						echo '<col style="width:5%">',"\n"; // Radio
 						echo '<col style="width:95%">',"\n"; // // Name
@@ -768,7 +768,7 @@ class co_zpool_flags extends co_zpool_flag_base {
 				echo $this->c_tag_header;
 			echo '</td>',"\n"; // left hand column end
 			echo '<td class="celldata">',"\n"; // right hand column start
-				echo '<table id="area_data_selection">',"\n";
+				echo '<table class="area_data_selection">',"\n";
 					echo '<colgroup>',"\n";
 						echo '<col style="width:5%">',"\n"; // Checkbox
 						echo '<col style="width:95%">',"\n"; // // Name
