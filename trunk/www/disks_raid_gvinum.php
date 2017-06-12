@@ -173,30 +173,28 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext('Information'); ?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext('Information'); ?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
-		if (!empty($errormsg)) { print_error_box($errormsg); }
-		if (!empty($savemsg)) { print_info_box($savemsg); }
-		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
-	?>
+<?php
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
@@ -208,53 +206,61 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'), 7);?>
+<?php
+			html_titleline2(gtext('Overview'), 7);
+?>
 			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
-				<td class="lhell"><?=gtext('Volume Name');?></td>
-				<td class="lhell"><?=gtext('Type');?></td>
-				<td class="lhell"><?=gtext('Size');?></td>
-				<td class="lhell"><?=gtext('Description');?></td>
-				<td class="lhell"><?=gtext('Status');?></td>
-				<td class="lhebl"><?=gtext('Toolbox');?></td>
+				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhell"><?=gtext('Volume Name');?></th>
+				<th class="lhell"><?=gtext('Type');?></th>
+				<th class="lhell"><?=gtext('Size');?></th>
+				<th class="lhell"><?=gtext('Description');?></th>
+				<th class="lhell"><?=gtext('Status');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tbody>
-			<?php $raidstatus = get_gvinum_disks_list(); ?>
-			<?php foreach ($sphere_array as $sphere_record): ?>
-				<?php
-					$size = gtext('Unknown');
-					$status = gtext('Stopped');
-					if (is_array($raidstatus) && array_key_exists($sphere_record['name'], $raidstatus)) {
-						$size = $raidstatus[$sphere_record['name']]['size'];
-						$status = $raidstatus[$sphere_record['name']]['state'];
-					}
-					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
-					switch ($notificationmode) {
-						case UPDATENOTIFY_MODE_NEW:
-							$status = $size = gtext('Initializing');
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							$status = $size = gtext('Modifying');
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-						case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-							$status = gtext('Deleting');
-							break;
-					}
-					$status = strtoupper($status);
-					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-					$notprotected = !isset($sphere_record['protected']);
-					$notmounted = !is_gvinum_mounted($sphere_record['devicespecialfile'], $a_config_mount);
-					$normaloperation = $notprotected && $notmounted;
-				?>
+<?php
+			$raidstatus = get_gvinum_disks_list();
+			foreach ($sphere_array as $sphere_record):
+				$size = gtext('Unknown');
+				$status = gtext('Stopped');
+				if(is_array($raidstatus) && array_key_exists($sphere_record['name'], $raidstatus)):
+					$size = $raidstatus[$sphere_record['name']]['size'];
+					$status = $raidstatus[$sphere_record['name']]['state'];
+				endif;
+				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
+				switch($notificationmode):
+					case UPDATENOTIFY_MODE_NEW:
+						$status = $size = gtext('Initializing');
+						break;
+					case UPDATENOTIFY_MODE_MODIFIED:
+						$status = $size = gtext('Modifying');
+						break;
+					case UPDATENOTIFY_MODE_DIRTY:
+					case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+						$status = gtext('Deleting');
+						break;
+				endswitch;
+				$status = strtoupper($status);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$notprotected = !isset($sphere_record['protected']);
+				$notmounted = !is_gvinum_mounted($sphere_record['devicespecialfile'], $a_config_mount);
+				$normaloperation = $notprotected && $notmounted;
+?>
 				<tr>
 					<td class="<?=$normaloperation ? "lcelc" : "lcelcd";?>">
-						<?php if ($notdirty && $notprotected && $notmounted):?>
+<?php
+						if($notdirty && $notprotected && $notmounted):
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
+<?php
+						else:
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($a_process[$sphere_record['type']]['gt-type']);?></td>
@@ -264,22 +270,32 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
-								<?php if ($notdirty && $notprotected):?>
+<?php
+								if($notdirty && $notprotected):
+?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected && $notmounted):?>
+<?php
+								else:
+									if ($notprotected && $notmounted):
+?>
 										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
+<?php
+									else:
+?>
 										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+<?php
+									endif;
+								endif;
+?>
 							</td>
 							<td><a href="<?=$a_process[$sphere_record['type']]['x-page-maintenance'];?>"><img src="<?=$img_path['mai'];?>" title="<?=$gt_record_mai;?>" alt="<?=$gt_record_mai;?>" /></a></td>
 							<td><a href="<?=$a_process[$sphere_record['type']]['x-page-information'];?>"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a></td>
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach; ?>
+<?php
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -291,27 +307,31 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<table id="area_data_messages">
+	<table class="area_data_messages">
 		<colgroup>
-			<col id="area_data_messages_col_tag">
-			<col id="area_data_messages_col_data">
+			<col class="area_data_messages_col_tag">
+			<col class="area_data_messages_col_data">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 				html_separator2();
 				html_titleline2(gtext('Message Board'));
-			?>
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 				html_textinfo2("info", gtext('Info'), sprintf(gtext('%1$s is used to create %2$s volumes.'), 'GEOM Vinum', 'RAID'));
 				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gtext('mount point'));
 				$helpinghand = gtext('A mounted RAID volume cannot be deleted.') . ' ' . gtext('Remove the %s first before proceeding.');
 				$helpinghand = sprintf($helpinghand, $link);
 				html_textinfo2("warning", gtext('Warning'), $helpinghand);
-			?>
+?>
 		</tbody>
 	</table>
-	<?php include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
