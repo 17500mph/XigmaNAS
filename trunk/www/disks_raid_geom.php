@@ -306,10 +306,10 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<table id="area_data_messages">
+	<table class="area_data_messages">
 		<colgroup>
-			<col id="area_data_messages_col_tag">
-			<col id="area_data_messages_col_data">
+			<col class="area_data_messages_col_tag">
+			<col class="area_data_messages_col_data">
 		</colgroup>
 		<thead>
 			<?php
