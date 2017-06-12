@@ -34,13 +34,23 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-if (isset($_GET['uuid']))
+$sphere_scriptname = basename(__FILE__);
+$sphere_header = 'Location: '.$sphere_scriptname;
+$sphere_header_parent = 'Location: system_cron.php';
+$sphere_notifier = 'cronjob';
+$sphere_array = [];
+$sphere_record = [];
+$prerequisites_ok = true;
+
+if (isset($_GET['uuid'])):
 	$uuid = $_GET['uuid'];
-if (isset($_POST['uuid']))
+endif;
+if(isset($_POST['uuid'])):
 	$uuid = $_POST['uuid'];
+endif;
 
 $a_cronjob = &array_make_branch($config,'cron','job');
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
+if(isset($uuid) && (false !== ($cnid = array_search_ex($uuid,$a_cronjob,'uuid')))):
 	$pconfig['enable'] = isset($a_cronjob[$cnid]['enable']);
 	$pconfig['uuid'] = $a_cronjob[$cnid]['uuid'];
 	$pconfig['desc'] = $a_cronjob[$cnid]['desc'];
@@ -56,42 +66,34 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid
 	$pconfig['all_weekdays'] = $a_cronjob[$cnid]['all_weekdays'];
 	$pconfig['who'] = $a_cronjob[$cnid]['who'];
 	$pconfig['command'] = $a_cronjob[$cnid]['command'];
-} else {
+else:
 	$pconfig['enable'] = true;
 	$pconfig['uuid'] = uuid();
-	$pconfig['desc'] = "";
+	$pconfig['desc'] = '';
 	$pconfig['all_mins'] = 1;
 	$pconfig['all_hours'] = 1;
 	$pconfig['all_days'] = 1;
 	$pconfig['all_months'] = 1;
 	$pconfig['all_weekdays'] = 1;
-	$pconfig['who'] = "root";
-	$pconfig['command'] = "";
-}
-
-$a_months = explode(" ",gtext("January February March April May June July August September October November December"));
-$a_weekdays = explode(" ",gtext("Sunday Monday Tuesday Wednesday Thursday Friday Saturday"));
-
-if ($_POST) {
+	$pconfig['who'] = 'root';
+	$pconfig['command'] = '';
+endif;
+if($_POST):
 	unset($input_errors);
 	$pconfig = $_POST;
-
-	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
-		header("Location: system_cron.php");
+	if(isset($_POST['Cancel']) && $_POST['Cancel']):
+		header($sphere_header_parent);
 		exit;
-	}
-
+	endif;
 	// Input validation.
 	$reqdfields = ['desc','who','command'];
 	$reqdfieldsn = [gtext('Description'),gtext('Who'),gtext('Command')];
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
-	if (gtext("Run now") !== $_POST['Submit']) {
+	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
+	if(gtext('Run Now') !== $_POST['Submit']):
 		// Validate synchronization time
-		do_input_validate_synctime($_POST, $input_errors);
-	}
-
-	if (empty($input_errors)) {
+		do_input_validate_synctime($_POST,$input_errors);
+	endif;
+	if(empty($input_errors)):
 		$cronjob = [];
 		$cronjob['enable'] = isset($_POST['enable']) ? true : false;
 		$cronjob['uuid'] = $_POST['uuid'];
@@ -108,238 +110,323 @@ if ($_POST) {
 		$cronjob['all_weekdays'] = $_POST['all_weekdays'];
 		$cronjob['who'] = $_POST['who'];
 		$cronjob['command'] = $_POST['command'];
-
-		if (stristr($_POST['Submit'], gtext("Run now"))) {
-			if ($_POST['who'] != "root") {
-				mwexec2(escapeshellcmd("sudo -u {$_POST['who']} {$_POST['command']}"), $output, $retval);
-			} else {
-				mwexec2(escapeshellcmd($_POST['command']), $output, $retval);
-			}
-			if (0 == $retval) {
-				$execmsg = gtext("The cron job has been executed successfully.");
+		if(stristr($_POST['Submit'],gtext('Run Now'))):
+			if($_POST['who'] != 'root'):
+				mwexec2(escapeshellcmd("sudo -u {$_POST['who']} {$_POST['command']}"),$output,$retval);
+			else:
+				mwexec2(escapeshellcmd($_POST['command']),$output,$retval);
+			endif;
+			if(0 == $retval):
+				$execmsg = gtext('The cron job has been executed successfully.');
 				write_log("The cron job '{$_POST['command']}' has been executed successfully.");
-			} else {
-				$execfailmsg = gtext("Failed to execute cron job.");
+			else:
+				$execfailmsg = gtext('Failed to execute cron job.');
 				write_log("Failed to execute cron job '{$_POST['command']}'.");
-			}
-		} else {
-			if (isset($uuid) && (FALSE !== $cnid)) {
+			endif;
+		else:
+			if(isset($uuid) && (false !== $cnid)):
 				$a_cronjob[$cnid] = $cronjob;
 				$mode = UPDATENOTIFY_MODE_MODIFIED;
-			} else {
+			else:
 				$a_cronjob[] = $cronjob;
 				$mode = UPDATENOTIFY_MODE_NEW;
-			}
-
-			updatenotify_set("cronjob", $mode, $cronjob['uuid']);
+			endif;
+			updatenotify_set($sphere_notifier,$mode,$cronjob['uuid']);
 			write_config();
-
-			header("Location: system_cron.php");
+			header($sphere_header_parent);
 			exit;
-		}
-	}
-}
+		endif;
+	endif;
+endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Cron'),isset($uuid) ? gtext('Edit') : gtext('Add')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+$(window).on("load", function() {
+<?php // Init spinner.?>
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+});
 function set_selected(name) {
 	document.getElementsByName(name)[1].checked = true;
 }
-//-->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
-			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
-			<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
-			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-			<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
-			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
-			<li class="tabact"><a href="system_cron.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Cron");?></span></a></li>
-			<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
-			<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
-			<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="system_cron_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-			<?php if (!empty($execmsg)) print_info_box($execmsg);?>
-			<?php if (!empty($execfailmsg)) print_error_box($execfailmsg);?>
-			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			<?php html_titleline_checkbox("enable", gtext("Cron job"), $pconfig['enable'] ? true : false, gtext("Enable"));?>
-			<?php html_inputbox("command", gtext("Command"), $pconfig['command'], gtext("Specifies the command to be run."), true, 60);?>
-			<?php $a_user = []; foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
-			<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
-			<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), true, 40);?>
-		<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gtext("Schedule time");?></td>
-			<td width="78%" class="vtable">
-				<table width="100%" border="0" cellpadding="5" cellspacing="0">
-		<tr>
-			<td class="listhdrlr"><?=gtext("Minutes");?></td>
-			<td class="listhdrr"><?=gtext("Hours");?></td>
-			<td class="listhdrr"><?=gtext("Days");?></td>
-			<td class="listhdrr"><?=gtext("Months");?></td>
-			<td class="listhdrr"><?=gtext("Week days");?></td>
-		</tr>
-		<tr>
-			<td class="listlr">
-			<input type="radio" name="all_mins" id="all_mins1" value="1" <?php if (1 == $pconfig['all_mins']) echo "checked=\"checked\"";?> />
-			<?=gtext("All");?><br />
-			<input type="radio" name="all_mins" id="all_mins2" value="0" <?php if (1 != $pconfig['all_mins']) echo "checked=\"checked\"";?> />
-			<?=gtext("Selected");?> ..<br />
-			<table>
-		<tr>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="minute[]" id="minutes1" onchange="set_selected('all_mins')">
-			<?php for ($i = 0; $i <= 11; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="minute[]" id="minutes2" onchange="set_selected('all_mins')">
-			<?php for ($i = 12; $i <= 23; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="minute[]" id="minutes3" onchange="set_selected('all_mins')">
-			<?php for ($i = 24; $i <= 35; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="minute[]" id="minutes4" onchange="set_selected('all_mins')">
-			<?php for ($i = 36; $i <= 47; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="minute[]" id="minutes5" onchange="set_selected('all_mins')">
-			<?php for ($i = 48; $i <= 59; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-			</td>
-		</tr>
-	</table>
-	<br />
-		</td>
-			<td class="listr" valign="top">
-			<input type="radio" name="all_hours" id="all_hours1" value="1" <?php if (1 == $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-			<?=gtext("All");?><br />
-			<input type="radio" name="all_hours" id="all_hours2" value="0" <?php if (1 != $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-			<?=gtext("Selected");?> ..<br />
-			<table>
-		<tr>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="hour[]" id="hours1" onchange="set_selected('all_hours')">
-			<?php for ($i = 0; $i <= 11; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="hour[]" id="hours2" onchange="set_selected('all_hours')">
-			<?php for ($i = 12; $i <= 23; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-			</td>
-		</tr>
-		</table>
-			</td>
-			<td class="listr" valign="top">
-			<input type="radio" name="all_days" id="all_days1" value="1" <?php if (1 == $pconfig['all_days']) echo "checked=\"checked\"";?> />
-			<?=gtext("All");?><br />
-			<input type="radio" name="all_days" id="all_days2" value="0" <?php if (1 != $pconfig['all_days']) echo "checked=\"checked\"";?> />
-			<?=gtext("Selected");?> ..<br />
-			<table>
-		<tr>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="day[]" id="days1" onchange="set_selected('all_days')">
-			<?php for ($i = 1; $i <= 12; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="day[]" id="days2" onchange="set_selected('all_days')">
-			<?php for ($i = 13; $i <= 24; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-		</td>
-			<td valign="top">
-			<select multiple="multiple" size="7" name="day[]" id="days3" onchange="set_selected('all_days')">
-			<?php for ($i = 25; $i <= 31; $i++):?>
-			<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-			<?php endfor;?>
-			</select>
-			</td>
-		</tr>
-		</table>
-			</td>
-			<td class="listr" valign="top">
-			<input type="radio" name="all_months" id="all_months1" value="1" <?php if (1 == $pconfig['all_months']) echo "checked=\"checked\"";?> />
-			<?=gtext("All");?><br />
-			<input type="radio" name="all_months" id="all_months2" value="0" <?php if (1 != $pconfig['all_months']) echo "checked=\"checked\"";?> />
-			<?=gtext("Selected");?> ..<br />
-			<table>
-		<tr>
-			<td valign="top">
-			<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
-			<?php $i = 1; foreach ($a_months as $month):?>
-			<option value="<?=$i;?>" <?php if (isset($pconfig['month']) && in_array("$i", $pconfig['month'])) echo "selected";?>><?=htmlspecialchars($month);?></option>
-			<?php $i++; endforeach;?>
-			</select>
-			</td>
-			</tr>
-			</table>
-		</td>
-			<td class="listr" valign="top">
-			<input type="radio" name="all_weekdays" id="all_weekdays1" value="1" <?php if (1 == $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-			<?=gtext("All");?><br />
-			<input type="radio" name="all_weekdays" id="all_weekdays2" value="0" <?php if (1 != $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-			<?=gtext("Selected");?> ..<br />
-			<table>
-		<tr>
-			<td valign="top">
-			<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
-			<?php $i = 0; foreach ($a_weekdays as $day):?>
-			<option value="<?=$i;?>" <?php if (isset($pconfig['weekday']) && in_array("$i", $pconfig['weekday'])) echo "selected";?>><?=$day;?></option>
-			<?php $i++; endforeach;?>
-			</select>
-			</td>
-		</tr>
-	</table>
-		</td>
-			</tr>
-			</table>
-			<span class="vexpl"><?=gtext("Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months.");?></span>
-			</td>
-		</tr>
-			</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="Submit" id="runnow" type="submit" class="formbtn" value="<?=gtext("Run now");?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-<?php include 'formend.inc';?>
-</form>
-</td>
-</tr>
+<table id="area_navigator">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+		<li class="tabact"><a href="system_cron.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Cron");?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
+	</ul></td></tr>
 </table>
-<?php include 'fend.inc';?>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+<?php
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(!empty($execmsg)):
+		print_info_box($execmsg);
+	endif;
+	if(!empty($execfailmsg)):
+		print_error_box($execfailmsg);
+	endif;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline_checkbox2('enable',gtext('Cron job'),$pconfig['enable'] ? true : false,gtext('Enable'));
+?>
+		</thead>
+		<tbody>
+<?php
+			html_inputbox2('command',gtext('Command'),$pconfig['command'],gtext('Specifies the command to be run.'),true,60);
+			$a_user = [];
+			foreach(system_get_user_list() as $userk => $userv):
+				$a_user[$userk] = htmlspecialchars($userk);
+			endforeach;
+			html_combobox2('who',gtext('Who'),$pconfig['who'],$a_user,'',true);
+			html_inputbox2('desc',gtext('Description'),$pconfig['desc'],gtext('You may enter a description here for your reference.'),true,40);
+?>
+			<tr>
+				<td class="celltagreq"><?=gtext('Schedule Time');?></td>
+				<td class="celldatareq">
+					<table class="area_data_selection">
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:20%">
+							<col style="width:24%">
+							<col style="width:18%">
+							<col style="width:18%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="lhell"><?=gtext('Minutes');?></th>
+								<th class="lhell"><?=gtext('Hours');?></th>
+								<th class="lhell"><?=gtext('Days');?></th>
+								<th class="lhell"><?=gtext('Months');?></th>
+								<th class="lhebl"><?=gtext('Weekdays');?></th>
+							</tr>
+						</thead>
+						<tbody class="donothighlight"><tr>
+							<td class="lcell" style="vertical-align:top">
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_mins" id="all_mins1" value="1" <?php if(1 == $pconfig['all_mins']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('All');?></span>
+									</label>
+								</div>
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_mins" id="all_mins2" value="0" <?php if(1 != $pconfig['all_mins']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('Selected');?> ..</span>
+									</label>
+								</div>
+								<div><table><tbody class="donothighlight"><tr>
+<?php
+									$val_min = $key = 0;
+									$val_count = 60;
+									$val_max = $val_min + $val_count - 1;
+									$val_break = 15;
+									$i_outer_max = ceil($val_count / $val_break) - 1;
+									$i_inner_max = $val_min + $val_break - 1;
+									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+										echo '<td class="lcefl">',"\n";
+										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+											if($key <= $val_max):
+												echo '<div class="cblo"><label>';
+												echo '<input type="checkbox" class="cblo" name="minute[]" onchange="set_selected(\'all_mins\')" value="',$key,'"';
+												if(isset($pconfig['minute']) && is_array($pconfig['minute']) && in_array((string)$key,$pconfig['minute'])):
+													echo ' checked="checked"';
+												endif;
+												echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
+												echo '</label></div>',"\n";
+											else:
+												break;
+											endif;
+											$key++;
+										endfor;
+										echo '</td>',"\n";
+									endfor;
+?>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcell" style="vertical-align:top">
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_hours" id="all_hours1" value="1" <?php if(1 == $pconfig['all_hours']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('All');?></span>
+									</label>
+								</div>
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_hours" id="all_hours2" value="0" <?php if(1 != $pconfig['all_hours']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('Selected');?> ..</span>
+									</label>
+								</div>
+								<div><table><tbody class="donothighlight"><tr>
+<?php
+									$val_min = $key = 0;
+									$val_count = 24;
+									$val_max = $val_min + $val_count - 1;
+									$val_break = 6;
+									$i_outer_max = ceil($val_count / $val_break) - 1;
+									$i_inner_max = $val_min + $val_break - 1;
+									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+										echo '<td class="lcefl">',"\n";
+										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+											if($key <= $val_max):
+												echo '<div class="cblo"><label>';
+												echo '<input type="checkbox" class="cblo" name="hour[]" onchange="set_selected(\'all_hours\')" value="',$key,'"';
+												if(isset($pconfig['hour']) && is_array($pconfig['hour']) && in_array((string)$key,$pconfig['hour'])):
+													echo ' checked="checked"';
+												endif;
+												echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
+												echo '</label></div>',"\n";
+											else:
+												break;
+											endif;
+											$key++;
+										endfor;
+										echo '</td>',"\n";
+									endfor;
+?>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcell" style="vertical-align:top">
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_days" id="all_days1" value="1" <?php if(1 == $pconfig['all_days']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('All');?></span>
+									</label>
+								</div>
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_days" id="all_days2" value="0" <?php if(1 != $pconfig['all_days']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('Selected');?> ..</span>
+									</label>
+								</div>
+								<div><table><tbody class="donothighlight"><tr>
+<?php
+									$val_min = $key = 1;
+									$val_count = 31;
+									$val_max = $val_min + $val_count - 1;
+									$val_break = 7;
+									$i_outer_max = ceil($val_count / $val_break) - 1;
+									$i_inner_max = $val_min + $val_break - 1;
+									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+										echo '<td class="lcefl">',"\n";
+										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+											if($key <= $val_max):
+												echo '<div class="cblo"><label>';
+												echo '<input type="checkbox" class="cblo" name="day[]" onchange="set_selected(\'all_days\')" value="',$key,'"';
+												if(isset($pconfig['day']) && is_array($pconfig['day']) && in_array((string)$key,$pconfig['day'])):
+													echo ' checked="checked"';
+												endif;
+												echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
+												echo '</label></div>',"\n";
+											else:
+												break;
+											endif;
+											$key++;
+										endfor;
+										echo '</td>',"\n";
+									endfor;
+?>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcell" style="vertical-align:top">
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_months" id="all_months1" value="1" <?php if(1 == $pconfig['all_months']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('All');?></span>
+									</label>
+								</div>
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_months" id="all_months2" value="0" <?php if(1 != $pconfig['all_months']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('Selected');?> ..</span>
+									</label>
+								</div>
+								<div><table><tbody class="donothighlight"><tr>
+<?php
+									echo '<td class="lcefl">',"\n";
+									foreach ($g_months as $key => $val):
+										echo '<div class="cblo"><label>';
+										echo '<input type="checkbox" class="cblo" name="month[]" onchange="set_selected(\'all_months\')" value="',$key,'"';
+										if(is_array($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
+											echo ' checked="checked"';
+										endif;
+										echo '/><span class="cblo">',$val,'</span>';
+										echo '</label></div>',"\n";
+									endforeach;
+									echo '</td>',"\n";
+?>
+								</tr></tbody></table></div>
+							</td>
+							<td class="lcebl" style="vertical-align:top">
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_weekdays" id="all_weekdays1" value="1" <?php if(1 == $pconfig['all_weekdays']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('All');?></span>
+									</label>
+								</div>
+								<div class="rblo">
+									<label>
+										<input type="radio" class="rblo" name="all_weekdays" id="all_weekdays2" value="0" <?php if(1 != $pconfig['all_weekdays']) echo 'checked="checked"';?>/>
+										<span class="rblo"><?=gtext('Selected');?> ..</span>
+									</label>
+								</div>
+								<div><table><tbody class="donothighlight"><tr>
+<?php
+									echo '<td class="lcefl">',"\n";
+									foreach($g_weekdays as $key => $val):
+										echo '<div class="cblo"><label>';
+										echo '<input type="checkbox" class="cblo" name="weekday[]" onchange="set_selected(\'all_weekdays\')" value="',$key,'"';
+										if(isset($pconfig['weekday']) && is_array($pconfig['weekday'])):
+											if(in_array((string)$key,$pconfig['weekday'])):
+												echo ' checked="checked"';
+											endif;
+											if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
+												if(in_array('0',$pconfig['weekday'])):
+													echo ' checked="checked"';
+												endif;
+											endif;
+										endif;
+										echo '/><span class="cblo">',$val,'</span>';
+										echo '</label></div>',"\n";
+									endforeach;
+									echo '</td>',"\n";
+?>
+								</tr></tbody></table></div>
+							</td>
+						</tr></tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (false !== $cnid)) ? gtext('Save') : gtext('Add')?>"/>
+		<input name="Submit" id="runnow" type="submit" class="formbtn" value="<?=gtext('Run Now');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
+		<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>"/>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</form></td></tr></tbody></table>
+<?php
+include 'fend.inc';
+?>
