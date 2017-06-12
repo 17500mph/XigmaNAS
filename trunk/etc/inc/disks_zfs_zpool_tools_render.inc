@@ -36,10 +36,10 @@ require_once 'util.inc';
 
 function render_set_start() {
 	$gt_title = gtext('ZFS Pool Tools');
-	echo '<table id="area_data_settings">',"\n";
+	echo '<table class="area_data_settings">',"\n";
 		echo '<colgroup>',"\n";
-			echo '<col id="area_data_settings_col_tag">',"\n";
-			echo '<col id="area_data_settings_col_data">',"\n";
+			echo '<col class="area_data_settings_col_tag">',"\n";
+			echo '<col class="area_data_settings_col_data">',"\n";
 		echo '</colgroup>',"\n";
 		echo '<thead>',html_titleline2($gt_title),'</thead>',"\n";
 		echo '<tbody>',"\n";
