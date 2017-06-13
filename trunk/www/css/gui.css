@@ -789,8 +789,8 @@ input[type="checkbox"].cblo {
 	display: none;
 }
 input[type="checkbox"].cblo:checked + span {
-	background-color:mediumseagreen;
-	color:white;
+	background-color: mediumseagreen;
+	color: white;
 }
 div.cblo {
 	padding: 0px 0px 1px;
@@ -807,7 +807,7 @@ input[type="radio"].rblo {
 }
 input[type="radio"].rblo:checked + span {
 	background-color: lightcoral;
-	color:white;
+	color: white;
 }
 div.rblo {
 	padding: 0px 0px 1px;
@@ -818,4 +818,15 @@ div.rblo:last-child {
 span.rblo {
 	padding: 1px 5px;
 	display: block;
+}
+input[type="checkbox"].cblot {
+	vertical-align: middle;
+	margin:0;
+}
+input[type="checkbox"].cblot:checked + span {
+	color: palegreen;
+}
+span.cblot {
+	float: left;
+	margin-right: 8px;
 }
