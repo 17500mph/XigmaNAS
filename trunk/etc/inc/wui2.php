@@ -1038,8 +1038,7 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		$this->getAttributes($attributes);
 		$label->addElement('input',$attributes);
 		$attributes = ['class' => 'cblot'];
-		$span = $label->addElement('span',$attributes);
-		$span->addElement('strong',[],$this->GetCaption());
+		$label->addElement('span',$attributes,$this->GetCaption());
 		//	showtime
 		return $root;
 	}
