@@ -1033,12 +1033,13 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		$spanleft = $th->addElement('span',$attributes,$this->GetTitle());
 		$attributes = ['style' => 'float:right'];
 		$spanright = $th->addElement('span',$attributes);
-		$attributes = ['for' => $ctrlname,'style' => 'margin-right:8px;'];
-		$label = $spanright->addElement('label',$attributes);
-		$label->addElement('strong',[],$this->GetCaption());
-		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld','value' => 'yes','style' => 'vertical-align:middle;margin:0;'];
+		$label = $spanright->addElement('label');
+		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld cblot','value' => 'yes'];
 		$this->getAttributes($attributes);
-		$checkbox = $spanright->addElement('input',$attributes);
+		$label->addElement('input',$attributes);
+		$attributes = ['class' => 'cblot'];
+		$span = $label->addElement('span',$attributes);
+		$span->addElement('strong',[],$this->GetCaption());
 		//	showtime
 		return $root;
 	}
