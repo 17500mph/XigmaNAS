@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-05-25 18:44+0000\n"
-"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
+"PO-Revision-Date: 2017-06-14 13:58+0000\n"
+"Last-Translator: Mathias Bachmann <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-25 20:16+0000\n"
-"X-Generator: Launchpad (build 18391)\n"
+"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
+"X-Generator: Launchpad (build 18404)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -63,7 +63,7 @@ msgstr "%s Schnittstelle"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr "%s ist bereits als ein %s vorhanden."
+msgstr "%s ist bereits vorhanden als ein %s."
 
 #, php-format
 msgid "%s already exists."
@@ -95,7 +95,7 @@ msgstr "%s%% verfügbar"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
-msgstr "%s%d %s wird bereits von %s%d verwendet."
+msgstr "%s%d %s wird bereits verwendet von %s%d ."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -719,8 +719,9 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
-"All dAten in diesem Pfad werden überschrieben, deshalb wird die Nutzung "
-"eines Leeren UFS Verzeichnisses empfohlen."
+"Alle Daten in diesem Pfad werden überschrieben. Die Nutzung eines Leeren UFS "
+"Verzeichnisses wird empfohlen, um ungültige Daten/Zugriffsrechte zu "
+"vermeiden."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Alle Daten werden gelöscht wenn diese OPtion aktiviert wird!"
@@ -1104,7 +1105,7 @@ msgid "Autoselect"
 msgstr "Autom. Auswahl"
 
 msgid "Auxiliary device firmware"
-msgstr "Firmwarerevision der Hilfseinheit"
+msgstr "Firmwarerevision des Zusatzgerätes"
 
 msgid "Avail"
 msgstr "Verfügbar"
@@ -1291,10 +1292,10 @@ msgid "Bootloader"
 msgstr "Bootloader"
 
 msgid "Both user data and metadata will be cached in ARC."
-msgstr ""
+msgstr "Es werden Benutzerdaten sowie Metadaten gecached in ARC"
 
 msgid "Both user data and metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Es werden Benutzerdaten sowie Metadaten gecached in L2ARC"
 
 msgid "Bridge"
 msgstr "Netzwerkbrücke"
@@ -1843,10 +1844,10 @@ msgid "Controls the power consumption mode."
 msgstr "Kontrolliert den Strom Verbrauchsmodus."
 
 msgid "Controls what is cached in the primary cache (ARC)."
-msgstr ""
+msgstr "Steuert, was im primären Cache (ARC) gecached wird."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
-msgstr ""
+msgstr "Steuert, was im sekundären Cache (L2ARC) gecached wird"
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -3829,7 +3830,7 @@ msgid "Execute now"
 msgstr "Jetzt ausführen"
 
 msgid "Expand device to use all available space."
-msgstr ""
+msgstr "Vergrößere das Gerät, um allen verfügbaren Speicher zu nutzen"
 
 msgid "Expandsz"
 msgstr "Dekomprimiere SZ"
@@ -5250,13 +5251,14 @@ msgstr ""
 "Raum xyz'."
 
 msgid "Location of the files to share."
-msgstr "Standort der Dateien die freigegeben werden sollen."
+msgstr "Verzeichnispfad der freizugebenden Dateien"
 
 msgid "Location of the media content database."
 msgstr "Speicherort der Medieninhaltsdatenbank"
 
 msgid "Location where the content database file will be stored."
-msgstr "Standort an welchem die Inhalte-Datenbank gespeichert werden soll."
+msgstr ""
+"Verzeichnispfad an welchem die Inhalte-Datenbank gespeichert werden soll."
 
 #, php-format
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
@@ -5814,10 +5816,10 @@ msgid "Name of the variable."
 msgstr "Name der Variablen."
 
 msgid "Neither user data nor metadata will be cached in ARC."
-msgstr ""
+msgstr "Weder Benutzerdaten noch Metadaten werden gecached im ARC ."
 
 msgid "Neither user data nor metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Weder Benutzerdaten noch Metadaten werden gecached im L2ARC ."
 
 msgid "Nested HVM"
 msgstr "verschachteltes HVM"
@@ -6206,10 +6208,10 @@ msgstr ""
 "Nur authentifizierte Benutzer zulassen. Anonymer Zugang ist verboten."
 
 msgid "Only metadata will be cached in ARC."
-msgstr ""
+msgstr "Nur Metadaten werden gecached im ARC."
 
 msgid "Only metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Nur Metadaten werden gecached im L2ARC."
 
 msgid "Option"
 msgstr "Einstellung"
@@ -6446,7 +6448,7 @@ msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Einen  RSA PRIVATE KEY in PEM format hier eingeben"
 
 msgid "Paste a private key in PEM format here."
-msgstr ""
+msgstr "Fügen Sie hier einen private key in PEM-Format ein"
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Fügen Sie hier ein Zertifikat im X.509 PEM Format ein."
@@ -6553,7 +6555,7 @@ msgid "Please add a new disk first."
 msgstr "Bitte erst eine neue Festplatte auswählen."
 
 msgid "Please add a pool first."
-msgstr ""
+msgstr "Bitte fügen SIe zuerst einen Pool hinzu"
 
 msgid "Please add a virtual device first."
 msgstr "Bitte erst ein virtuelles Gerät auswählen."
@@ -6624,7 +6626,7 @@ msgid "Pool is unlocked"
 msgstr "Pool ist freigegeben."
 
 msgid "Pool name cannot be modified."
-msgstr ""
+msgstr "Poolname kann nicht geändert werden"
 
 msgid "Pools"
 msgstr "Pools"
@@ -6748,7 +6750,7 @@ msgid "Primary"
 msgstr "Primärer"
 
 msgid "Primary Cache"
-msgstr ""
+msgstr "Primärer Cache"
 
 msgid "Primary Group"
 msgstr "Primäre Gruppe"
@@ -7506,7 +7508,7 @@ msgid "Secondary"
 msgstr "Sekundärer"
 
 msgid "Secondary Cache"
-msgstr ""
+msgstr "Sekundärer Cache"
 
 msgid "Seconds"
 msgstr "Sekunden"
@@ -8024,9 +8026,9 @@ msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
 "WebGUI. (empty is the same network of LAN interface)"
 msgstr ""
-"Ein mit Leerzeichen gertrennter Satz von IP Adressen oder CIDR Notationen "
-"denen der Zugriff auf die Weboberfläche erlaubt wird (leer bedeutet dasselbe "
-"Netzwerk wie die LAN Schnittstelle)."
+"Durch Leerzeichen getrennter Satz von IP Adressen oder CIDR Notationen, "
+"denen der Zugriff auf die Weboberfläche erlaubt wird (leer bedeutet das "
+"Netzwerk der LAN Schnittstelle)."
 
 msgid "Spanish"
 msgstr "Spanisch"
@@ -8498,9 +8500,11 @@ msgstr "Die IP Adresse, welche diesen Hostnamen repräsentiert."
 msgid ""
 "The LAGG interface cannot be added because the interface name already exists."
 msgstr ""
+"Die LAGG Schnittstelle kann nicht hinzugefügt werden. Eine Schnittstelle mit "
+"diesem Namen existiert bereits"
 
 msgid "The LAGG protocol is invalid."
-msgstr ""
+msgstr "Das LAGG Protokoll ist ungültig"
 
 msgid "The LAN IP address will be reset to"
 msgstr "Die Netzwerk-Adresse wird zurückgesetzt zu"
@@ -9072,7 +9076,7 @@ msgstr ""
 "Der Name des RAIDs darf nur aus den Zeichen a-z, A-Z und 0-9 bestehen."
 
 msgid "The name of the interface is wrong."
-msgstr ""
+msgstr "Der Name der Schnittstelle ist falsch"
 
 msgid "The name of the media server cannot be empty."
 msgstr "Die Bezeichnung des Medien Servers kann nicht leer sein."
@@ -10285,7 +10289,7 @@ msgid "Unknown Activity"
 msgstr "Unbekannte Aktivität"
 
 msgid "Unknown Aggregation Protocol"
-msgstr ""
+msgstr "Aggregation Protocol unbekannt"
 
 msgid "Unknown or Unformatted"
 msgstr "Unbekannt oder nicht formatiert"
