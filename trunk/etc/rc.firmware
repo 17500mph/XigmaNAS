@@ -433,7 +433,7 @@ full_upgrade() {
 
 	# Remove chflags for protected files before upgrade process.
 	if [ -f ${BEPATH}/usr/lib/librt.so.1 ]; then
-		chflags -R noschg ${BEPATH}/usr/lib/librt.so.1
+		/bin/chflags 0 ${BEPATH}/usr/lib/librt.so.1
 	fi
 
 	# Start upgrade script to remove obsolete files. This should be done

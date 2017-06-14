@@ -61,7 +61,6 @@ umount_cdrom()
 manual_cdmount()
 {
 	DRIVES=`camcontrol devlist`
-	mkdir -p ${CDPATH}
 	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "Select the Install Media Source" \
 	--form "${DRIVES}" 0 0 0 \
 	"Select CD/USB Drive e.g: cd0:" 1 1 "" 1 30 30 30 \
@@ -71,6 +70,7 @@ manual_cdmount()
 	fi
 
 	# Try to mount from specified device.
+	mkdir -p ${CDPATH}
 	echo "Mounting CD/USB Drive"
 	DEVICE=`cat ${tmpfile}`
 	mount /dev/${DEVICE}s1a ${CDPATH} > /dev/null 2>&1 || mount_cd9660 /dev/${DEVICE} ${CDPATH} > /dev/null 2>&1
@@ -455,7 +455,7 @@ upgrade_sys_files()
 	# Remove chflags for protected files before upgrade to prevent errors
 	# chflags will be restored after upgrade completion by default.
 	if [ -f ${ALTROOT}/${ZROOT}/usr/lib/librt.so.1 ]; then
-		chflags -R noschg ${ALTROOT}/${ZROOT}/usr/lib/librt.so.1
+		chflags 0 ${ALTROOT}/${ZROOT}/usr/lib/librt.so.1
 	fi
 
 	# Install system files and discard unwanted folders.
