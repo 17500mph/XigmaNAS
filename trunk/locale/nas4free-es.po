@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-05-22 18:23+0000\n"
+"PO-Revision-Date: 2017-05-26 09:40+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-05-25 20:16+0000\n"
-"X-Generator: Launchpad (build 18391)\n"
+"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
+"X-Generator: Launchpad (build 18404)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -982,7 +982,7 @@ msgstr ""
 "archivos y la pérdida de datos!"
 
 msgid "Attribute Name"
-msgstr ""
+msgstr "Nombre del atributo"
 
 msgid "Audio"
 msgstr "Audio"
@@ -1267,10 +1267,11 @@ msgid "Bootloader"
 msgstr "Cargador de arranque"
 
 msgid "Both user data and metadata will be cached in ARC."
-msgstr ""
+msgstr "Tanto el dato de usuario como el metadato serán cacheados en la ARC"
 
 msgid "Both user data and metadata will be cached in L2ARC."
 msgstr ""
+"Tanto el dato de usuario como el metadato serán cacheados en la L2ARC"
 
 msgid "Bridge"
 msgstr "Puente"
@@ -1812,10 +1813,10 @@ msgid "Controls the power consumption mode."
 msgstr "Controlar el modo de consumo"
 
 msgid "Controls what is cached in the primary cache (ARC)."
-msgstr ""
+msgstr "Controla que será cacheado en la caché primaria (ARC)"
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
-msgstr ""
+msgstr "Controla que será cacheado en la caché secundaria(L2ARC)"
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -4916,7 +4917,7 @@ msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "Tamaño de bloque invalido. Debe estar en el rango de %d a %d."
 
 msgid "Invalid option."
-msgstr ""
+msgstr "Opción No válida"
 
 msgid "Invalid username or password."
 msgstr "Nombre de usuario o contraseña incorrectos."
@@ -5813,10 +5814,10 @@ msgid "Name of the variable."
 msgstr "Nombre de la variable"
 
 msgid "Neither user data nor metadata will be cached in ARC."
-msgstr ""
+msgstr "Ni el dato de usuario ni los metadatos serán cacheados en la ARC"
 
 msgid "Neither user data nor metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Ni el dato de usuario ni los metadatos serán cacheados en la L2ARC"
 
 msgid "Nested HVM"
 msgstr "HVM anidada"
@@ -5901,7 +5902,7 @@ msgid "No DNS setting found."
 msgstr "No se ha encontrado DNS"
 
 msgid "No Data"
-msgstr ""
+msgstr "Sin Datos"
 
 msgid "No Extent has been configured."
 msgstr "No hay Extent configurado"
@@ -6201,10 +6202,10 @@ msgstr ""
 "Solo permitir usuarios autenticados. Ingresos anonimos están prohibidos."
 
 msgid "Only metadata will be cached in ARC."
-msgstr ""
+msgstr "Solo los metadatos serán cacheados en la ARC"
 
 msgid "Only metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Solo los metadatos serán cacheados en la L2ARC"
 
 msgid "Option"
 msgstr "Opcion"
@@ -6749,7 +6750,7 @@ msgid "Primary"
 msgstr "Primario"
 
 msgid "Primary Cache"
-msgstr ""
+msgstr "Cache primaria (ARC)"
 
 msgid "Primary Group"
 msgstr "Grupo primario"
@@ -6942,7 +6943,7 @@ msgid "Ramdisk"
 msgstr "RamDisk"
 
 msgid "Raw Value"
-msgstr ""
+msgstr "Valor crudo"
 
 msgid "Read"
 msgstr "Lectura"
@@ -7514,7 +7515,7 @@ msgid "Secondary"
 msgstr "Secundario"
 
 msgid "Secondary Cache"
-msgstr ""
+msgstr "Cache secundaria (L2ARC)"
 
 msgid "Seconds"
 msgstr "Segundos"
