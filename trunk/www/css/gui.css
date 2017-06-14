@@ -39,18 +39,18 @@ body {
 	padding: 0pt;
 	min-width: inherit;
 	height: 100%;
-	display: -webkit-box;  /* 1 */
-	display: -moz-box;     /* 2 */
-	display: -ms-flexbox;  /* 3 */
-	display: -webkit-flex; /* 4 */
-	display: -ms-flex;     /* 5 */
-	display: flex;         /* 6 */
-	-webkit-box-orient: vertical;   /* 1 */
-	-moz-box-orient: vertical;      /* 2 */
-	-ms-box-orient: vertical;       /* 3 */
-	-webkit-flex-direction: column; /* 4 */
-	-ms-flex-direction: column;     /* 5 */
-	flex-direction: column;         /* 6 */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	display: -ms-flex;
+	-ms-flex-direction: column;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	display: flex;         
+	flex-direction: column;
 	width: 100%;
 }
 body, div#gapheader, div#gapfooter {
@@ -501,23 +501,32 @@ div#headerrlogo .hostname {
 header#g4h {
 	min-width: inherit;
 	width: 100%;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	width: 100%;
+	-webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 	background-color: transparent;
 }
 main#g4m {
 	min-width: inherit;
-	-webkit-box-flex: 1; /* 1 */
-	-moz-box-flex: 1;    /* 2 */
-	width: 100%;         /* 3 */
-	-webkit-flex: 1;     /* 4 */
-	-ms-flex: 1;         /* 5 */
-	flex: 1 1 0%;        /* 6 */
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	width: 100%;
+	-webkit-flex: 1 1 0%;
+	-ms-flex: 1 1 0%;
+	flex: 1 1 0%;
 	overflow-y: auto;
 	background-color: transparent;
 }
 footer#g4f {
 	min-width: inherit;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
 	width: 100%;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 	background-color: transparent;
 }
