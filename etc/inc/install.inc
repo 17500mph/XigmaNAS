@@ -345,6 +345,13 @@ function install_upgrade_full($harddrive)
 		return 1;
 	}
 
+	// Remove chflags for protected files before upgrade to prevent errors
+	// chflags will be restored after upgrade completion by default.
+	if (1 == mwexec("/bin/chflags 0 {$mntpath}/usr/lib/librt.so.1")) {
+		write_console("Error: Failed to remove chflags!\n");
+		return 1;
+	}
+
 	// Backup system files
 	write_console("Backup system configuration.\n");
 	mwexec("/bin/mkdir -p {$sysbackup}");
