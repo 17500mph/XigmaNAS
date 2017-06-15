@@ -34,6 +34,8 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+$sphere_scriptname = basename(__FILE__);
+
 array_make_branch($config,'shutdown');
 $pconfig['enable'] = isset($config['shutdown']['enable']);
 $pconfig['minute'] = $config['shutdown']['minute'];
@@ -46,17 +48,14 @@ $pconfig['all_hours'] = $config['shutdown']['all_hours'];
 $pconfig['all_days'] = $config['shutdown']['all_days'];
 $pconfig['all_months'] = $config['shutdown']['all_months'];
 $pconfig['all_weekdays'] = $config['shutdown']['all_weekdays'];
-if ($_POST){
+if($_POST):
 	unset($input_errors);
-
 	$pconfig = $_POST;
-
 	// Validate synchronization time
-	if(isset($_POST['enable'])) {
-		do_input_validate_synctime($_POST, $input_errors);
-	}
-
-	if (empty($input_errors)) {
+	if(isset($_POST['enable'])):
+		do_input_validate_synctime($_POST,$input_errors);
+	endif;
+	if(empty($input_errors)):
 		$config['shutdown']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['shutdown']['minute'] = !empty($_POST['minute']) ? $_POST['minute'] : null;
 		$config['shutdown']['hour'] = !empty($_POST['hour']) ? $_POST['hour'] : null;
@@ -68,249 +67,71 @@ if ($_POST){
 		$config['shutdown']['all_days'] = $_POST['all_days'];
 		$config['shutdown']['all_months'] = $_POST['all_months'];
 		$config['shutdown']['all_weekdays'] = $_POST['all_weekdays'];
-
 		write_config();
-
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
+		if(!file_exists($d_sysrebootreqd_path)):
 			config_lock();
-			$retval |= rc_update_service("cron");
+			$retval |= rc_update_service('cron');
 			config_unlock();
-		}
-
+		endif;
 		$savemsg = get_std_save_message($retval);
-	}
-}
+	endif;
+endif;
 $pgtitle = [gtext('System'),gtext('Shutdown'),gtext('Scheduled')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+$(window).on("load", function() {
+<?php // Init spinner.?>
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+});
 function set_selected(name) {
 	document.getElementsByName(name)[1].checked = true;
 }
-
-function enable_change(enable_change) {
-	var endis = !(document.iform.enable.checked || enable_change);
-	document.iform.minutes1.disabled = endis;
-	document.iform.minutes2.disabled = endis;
-	document.iform.minutes3.disabled = endis;
-	document.iform.minutes4.disabled = endis;
-	document.iform.minutes5.disabled = endis;
-	document.iform.hours1.disabled = endis;
-	document.iform.hours2.disabled = endis;
-	document.iform.days1.disabled = endis;
-	document.iform.days2.disabled = endis;
-	document.iform.days3.disabled = endis;
-	document.iform.months.disabled = endis;
-	document.iform.weekdays.disabled = endis;
-	document.iform.all_mins1.disabled = endis;
-	document.iform.all_mins2.disabled = endis;
-	document.iform.all_hours1.disabled = endis;
-	document.iform.all_hours2.disabled = endis;
-	document.iform.all_days1.disabled = endis;
-	document.iform.all_days2.disabled = endis;
-	document.iform.all_months1.disabled = endis;
-	document.iform.all_months2.disabled = endis;
-	document.iform.all_weekdays1.disabled = endis;
-	document.iform.all_weekdays2.disabled = endis;
-}
-//-->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator">
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="shutdown.php"><span><?=gtext("Now");?></span></a></li>
-		<li class="tabact"><a href="shutdown_sched.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Scheduled");?></span></a></li>
+		<li class="tabinact"><a href="shutdown.php"><span><?=gtext('Now');?></span></a></li>
+		<li class="tabact"><a href="shutdown_sched.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Scheduled');?></span></a></li>
 	</ul></td></tr>
-	<tr>
-		<td class="tabcont">
-			<form action="shutdown_sched.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Scheduled Shutdown"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Time");?></td>
-						<td width="78%" class="vtable">
-							<table width="100%" border="0" cellpadding="5" cellspacing="0">
-								<tr>
-									<td class="listhdrlr"><?=gtext("Minutes");?></td>
-									<td class="listhdrr"><?=gtext("Hours");?></td>
-									<td class="listhdrr"><?=gtext("Days");?></td>
-									<td class="listhdrr"><?=gtext("Months");?></td>
-									<td class="listhdrr"><?=gtext("Week Days");?></td>
-								</tr>
-								<tr>
-									<td class="listlr">
-										<input type="radio" name="all_mins" id="all_mins1" value="1" <?php if (1 == $pconfig['all_mins']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_mins" id="all_mins2" value="0" <?php if (1 != $pconfig['all_mins']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes1" onchange="set_selected('all_mins')">
-														<?php for ($i = 0; $i <= 11; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes2" onchange="set_selected('all_mins')">
-														<?php for ($i = 12; $i <= 23; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes3" onchange="set_selected('all_mins')">
-														<?php for ($i = 24; $i <= 35; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes4" onchange="set_selected('all_mins')">
-														<?php for ($i = 36; $i <= 47; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes5" onchange="set_selected('all_mins')">
-														<?php for ($i = 48; $i <= 59; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-											</tr>
-										</table>
-										<br />
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_hours" id="all_hours1" value="1" <?php if (1 == $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_hours" id="all_hours2" value="0" <?php if (1 != $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="hour[]" id="hours1" onchange="set_selected('all_hours')">
-														<?php for ($i = 0; $i <= 11; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="hour[]" id="hours2" onchange="set_selected('all_hours')">
-														<?php for ($i = 12; $i <= 23; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_days" id="all_days1" value="1" <?php if (1 == $pconfig['all_days']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_days" id="all_days2" value="0" <?php if (1 != $pconfig['all_days']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="day[]" id="days1" onchange="set_selected('all_days')">
-														<?php for ($i = 1; $i <= 12; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="day[]" id="days2" onchange="set_selected('all_days')">
-														<?php for ($i = 13; $i <= 24; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="7" name="day[]" id="days3" onchange="set_selected('all_days')">
-														<?php for ($i = 25; $i <= 31; $i++):?>
-														<option value="<?=$i;?>" <?php if (is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_months" id="all_months1" value="1" <?php if (1 == $pconfig['all_months']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_months" id="all_months2" value="0" <?php if (1 != $pconfig['all_months']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
-<?php
-														foreach ($g_months as $key => $val):
-															echo '<option value="',$key,'"';
-															if(isset($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
-																echo ' selected="selected"';
-															endif;
-															echo '>',$val,'</option>',"\n";
-														endforeach;
-?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_weekdays" id="all_weekdays1" value="1" <?php if (1 == $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_weekdays" id="all_weekdays2" value="0" <?php if (1 != $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
-<?php
-														foreach($g_weekdays as $key => $val):
-															echo '<option value="',$key,'"';
-															if(isset($pconfig['weekday'])):
-																if(in_array((string)$key,$pconfig['weekday'])):
-																	echo ' selected="selected"';
-																endif;
-																if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
-																	if(in_array('0',$pconfig['weekday'])):
-																		echo ' selected="selected"';
-																	endif;
-																endif;
-															endif;
-															echo '>',$val,'</option>',"\n";
-														endforeach;
-?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-							<span class="vexpl"><?=gtext("Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months.");?></span>
-						</td>
-					</tr>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
 </table>
-<script type="text/javascript">
-<!--
-enable_change(false);
-//-->
-</script>
-<?php include 'fend.inc';?>
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline_checkbox2('enable',gtext('Scheduled Shutdown'),!empty($pconfig['enable']) ? true : false,gtext('Enable'));
+?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltagreq"><?=gtext('Schedule Time');?></td>
+				<td class="celldatareq">
+<?php
+					include 'cs_scheduletime.php';
+?>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>"/>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
