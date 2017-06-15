@@ -43,7 +43,7 @@ if(isset($_POST['uuid'])):
 	$uuid = $_POST['uuid'];
 endif;
 $a_rsyncclient = &array_make_branch($config,'rsync','rsyncclient');
-if(isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsyncclient, "uuid")))):
+if(isset($uuid) && (false !== ($cnid = array_search_ex($uuid, $a_rsyncclient,'uuid')))):
 	$pconfig['enable'] = isset($a_rsyncclient[$cnid]['enable']);
 	$pconfig['uuid'] = $a_rsyncclient[$cnid]['uuid'];
 	$pconfig['rsyncserverip'] = $a_rsyncclient[$cnid]['rsyncserverip'];
@@ -182,8 +182,6 @@ if($_POST):
 	endif;
 endif;
 $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Client'),isset($uuid) ? gtext('Edit') : gtext('Add')];
-?>
-<?php
 include 'fbegin.inc';
 ?>
 <script type="text/javascript">
@@ -286,7 +284,7 @@ function set_selected(name) {
 				'delay' => gtext('Delay - File-deletions will be computed during the transfer, and then removed after the transfer completes.'),
 				'after' => gtext('After - File-deletions will be done after the transfer has completed.')
 			];
-			html_radiobox2('delete_algorithm',gtext('Delete algorithm'),$pconfig['delete_algorithm'],$l_delalgo,'',false);
+			html_radiobox2('delete_algorithm',gtext('Delete Algorithm'),$pconfig['delete_algorithm'],$l_delalgo,'',false);
 			html_checkbox2('quiet',gtext('Quiet'),!empty($pconfig['quiet']),gtext('Suppress non-error messages.'),'',false);
 			html_checkbox2('perms', gtext('Preserve Permissions'),!empty($pconfig['perms']) ? true : false, gtext('This option causes the receiving rsync to set the destination permissions to be the same as the source permissions.'),'',false);
 			html_checkbox2('xattrs',gtext('Preserve Extended Attributes'),!empty($pconfig['xattrs']) ? true : false, gtext('This option causes rsync to update the remote extended attributes to be the same as the local ones.'),'',false);
