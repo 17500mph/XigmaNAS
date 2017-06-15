@@ -34,13 +34,16 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-if (isset($_GET['uuid']))
-	$uuid = $_GET['uuid'];
-if (isset($_POST['uuid']))
-	$uuid = $_POST['uuid'];
+$sphere_scriptname = basename(__FILE__);
 
+if(isset($_GET['uuid'])):
+	$uuid = $_GET['uuid'];
+endif;
+if(isset($_POST['uuid'])):
+	$uuid = $_POST['uuid'];
+endif;
 $a_rsynclocal = &array_make_branch($config,'rsync','rsynclocal');
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsynclocal, "uuid")))) {
+if(isset($uuid) && (false !== ($cnid = array_search_ex($uuid, $a_rsynclocal,'uuid')))):
 	$pconfig['enable'] = isset($a_rsynclocal[$cnid]['enable']);
 	$pconfig['uuid'] = $a_rsynclocal[$cnid]['uuid'];
 	$pconfig['source'] = $a_rsynclocal[$cnid]['source'];
@@ -68,57 +71,52 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsynclocal, "u
 	$pconfig['perms'] = isset($a_rsynclocal[$cnid]['options']['perms']);
 	$pconfig['xattrs'] = isset($a_rsynclocal[$cnid]['options']['xattrs']);
 	$pconfig['extraoptions'] = $a_rsynclocal[$cnid]['options']['extraoptions'];
-} else {
+else:
 	$pconfig['enable'] = true;
 	$pconfig['uuid'] = uuid();
-	$pconfig['source'] = "";
-	$pconfig['destination'] = "";
+	$pconfig['source'] = '';
+	$pconfig['destination'] = '';
 	$pconfig['minute'] = [];
 	$pconfig['hour'] = [];
 	$pconfig['day'] = [];
 	$pconfig['month'] = [];
 	$pconfig['weekday'] = [];
-	//$pconfig['sharetosync'] = "";
+	//$pconfig['sharetosync'] = '';
 	$pconfig['all_mins'] = 0;
 	$pconfig['all_hours'] = 0;
 	$pconfig['all_days'] = 0;
 	$pconfig['all_months'] = 0;
 	$pconfig['all_weekdays'] = 0;
-	$pconfig['description'] = "";
-	$pconfig['who'] = "root";
+	$pconfig['description'] = '';
+	$pconfig['who'] = 'root';
 	$pconfig['recursive'] = false;
 	$pconfig['times'] = false;
 	$pconfig['compress'] = false;
 	$pconfig['archive'] = true;
 	$pconfig['delete'] = false;
-	$pconfig['delete_algorithm'] = "default";
+	$pconfig['delete_algorithm'] = 'default';
 	$pconfig['quiet'] = false;
 	$pconfig['perms'] = false;
 	$pconfig['xattrs'] = false;
-	$pconfig['extraoptions'] = "";
-}
-
-if ($_POST) {
+	$pconfig['extraoptions'] = '';
+endif;
+if($_POST):
 	unset($input_errors);
 	unset($errormsg);
 	$pconfig = $_POST;
-
-	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
-		header("Location: services_rsyncd_local.php");
+	if(isset($_POST['Cancel']) && $_POST['Cancel']):
+		header('Location: services_rsyncd_local.php');
 		exit;
-	}
-
+	endif;
 	// Input validation
 	$reqdfields = ['source','destination','who'];
 	$reqdfieldsn = [gtext('Source Share'),gtext('Destination Share'),gtext('Who')];
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
-	if (!empty($_POST['Submit']) && gtext("Execute now") !== $_POST['Submit']) {
+	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
+	if(!empty($_POST['Submit']) && gtext('Execute now') !== $_POST['Submit']):
 		// Validate synchronization time
-		do_input_validate_synctime($_POST, $input_errors);
-	}
-
-	if (empty($input_errors)) {
+		do_input_validate_synctime($_POST,$input_errors);
+	endif;
+	if(empty($input_errors)):
 		$rsynclocal = [];
 		$rsynclocal['enable'] = isset($_POST['enable']) ? true : false;
 		$rsynclocal['uuid'] = $_POST['uuid'];
@@ -146,332 +144,166 @@ if ($_POST) {
 		$rsynclocal['options']['perms'] = isset($_POST['perms']) ? true : false;
 		$rsynclocal['options']['xattrs'] = isset($_POST['xattrs']) ? true : false;
 		$rsynclocal['options']['extraoptions'] = $_POST['extraoptions'];
-
-		if (isset($uuid) && (FALSE !== $cnid)) {
+		if(isset($uuid) && (FALSE !== $cnid)):
 			$a_rsynclocal[$cnid] = $rsynclocal;
 			$mode = UPDATENOTIFY_MODE_MODIFIED;
-		} else {
+		else:
 			$a_rsynclocal[] = $rsynclocal;
 			$mode = UPDATENOTIFY_MODE_NEW;
-		}
-
-		updatenotify_set("rsynclocal", $mode, $rsynclocal['uuid']);
+		endif;
+		updatenotify_set('rsynclocal',$mode,$rsynclocal['uuid']);
 		write_config();
-
-		if (!empty($_POST['Submit']) && stristr($_POST['Submit'], gtext("Execute now"))) {
+		if(!empty($_POST['Submit']) && stristr($_POST['Submit'],gtext('Execute now'))):
 			$retval = 0;
-
 			// Update scripts and execute it.
 			config_lock();
-			$retval |= rc_exec_service("rsync_local");
-			$retval |= rc_update_service("cron");
+			$retval |= rc_exec_service('rsync_local');
+			$retval |= rc_update_service('cron');
 			config_unlock();
-			if ($retval == 0) {
-				updatenotify_clear("rsynclocal", $rsynclocal['uuid']);
-			}
-
+			if($retval == 0):
+				updatenotify_clear('rsynclocal',$rsynclocal['uuid']);
+			endif;
 			$retval |= rc_exec_script_async("su -m {$rsynclocal['who']} -c '/bin/sh /var/run/rsync_local_{$rsynclocal['uuid']}.sh'");
-
 			$savemsg = get_std_save_message($retval);
-		} else {
-			header("Location: services_rsyncd_local.php");
+		else:
+			header('Location: services_rsyncd_local.php');
 			exit;
-		}
-	}
-}
+		endif;
+	endif;
+endif;
 $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Local'),isset($uuid) ? gtext('Edit') : gtext('Add')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+$(window).on("load", function() {
+<?php // Init spinner.?>
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+<?php // Control delete_algorithm_tr.?>
+	$("#delete_algorithm_tr").toggle($("#delete").checked);
+	$("#delete").change(function() {
+		$("#delete_algorithm_tr").toggle(this.checked);
+	});
+});
 function set_selected(name) {
 	document.getElementsByName(name)[1].checked = true;
 }
-
-function delete_change() {
-	switch(document.getElementById('delete').checked) {
-		case false:
-			showElementById('delete_algorithm_tr','hide');
-			break;
-
-		case true:
-			showElementById('delete_algorithm_tr','show');
-			break;
-	}
-}
-// -->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server");?></span></a></li>
-				<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext("Client");?></span></a></li>
-				<li class="tabact"><a href="services_rsyncd_local.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Local");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="services_rsyncd_local_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Rsync Job"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Source Share");?></td>
-						<td width="78%" class="vtable">
-							<input name="source" type="text" class="formfld" id="source" size="60" value="<?=htmlspecialchars($pconfig['source']);?>" />
-							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.source; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield; window.slash_source = 1;' value="..." /><br />
-							<span class="vexpl"><?=gtext("Source directory to be synchronized.");?></span>
-					  </td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination Share");?></td>
-						<td width="78%" class="vtable">
-							<input name="destination" type="text" class="formfld" id="destination" size="60" value="<?=htmlspecialchars($pconfig['destination']);?>" />
-							<input name="browse2" type="button" class="formbtn" id="Browse2" onclick='ifield2 = form.destination; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield2.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield2; window.ifield = ifield2; window.slash_destination = 1;' value="..." /><br />
-							<span class="vexpl"><?=gtext("Target directory.");?></span>
-					  </td>
-					</tr>
-					<?php $a_user = []; foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
-					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization Time");?></td>
-						<td width="78%" class="vtable">
-							<table width="100%" border="0" cellpadding="5" cellspacing="0">
-								<tr>
-									<td class="listhdrlr"><?=gtext("Minutes");?></td>
-									<td class="listhdrr"><?=gtext("Hours");?></td>
-									<td class="listhdrr"><?=gtext("Days");?></td>
-									<td class="listhdrr"><?=gtext("Months");?></td>
-									<td class="listhdrr"><?=gtext("Week days");?></td>
-								</tr>
-								<tr>
-									<td class="listlr">
-										<input type="radio" name="all_mins" id="all_mins1" value="1" <?php if (1 == $pconfig['all_mins']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_mins" id="all_mins2" value="0" <?php if (1 != $pconfig['all_mins']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes1" onchange="set_selected('all_mins')">
-														<?php for ($i = 0; $i <= 11; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['minute']) && is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes2" onchange="set_selected('all_mins')">
-														<?php for ($i = 12; $i <= 23; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['minute']) && is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes3" onchange="set_selected('all_mins')">
-														<?php for ($i = 24; $i <= 35; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['minute']) && is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes4" onchange="set_selected('all_mins')">
-														<?php for ($i = 36; $i <= 47; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['minute']) && is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="minute[]" id="minutes5" onchange="set_selected('all_mins')">
-														<?php for ($i = 48; $i <= 59; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['minute']) && is_array($pconfig['minute']) && in_array("$i", $pconfig['minute'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-											</tr>
-										</table>
-										<br />
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_hours" id="all_hours1" value="1" <?php if (1 == $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_hours" id="all_hours2" value="0" <?php if (1 != $pconfig['all_hours']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="hour[]" id="hours1" onchange="set_selected('all_hours')">
-														<?php for ($i = 0; $i <= 11; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['hour']) && is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="hour[]" id="hours2" onchange="set_selected('all_hours')">
-														<?php for ($i = 12; $i <= 23; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['hour']) && is_array($pconfig['hour']) && in_array("$i", $pconfig['hour'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_days" id="all_days1" value="1" <?php if (1 == $pconfig['all_days']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_days" id="all_days2" value="0" <?php if (1 != $pconfig['all_days']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="day[]" id="days1" onchange="set_selected('all_days')">
-														<?php for ($i = 1; $i <= 12; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['day']) && is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="day[]" id="days2" onchange="set_selected('all_days')">
-														<?php for ($i = 13; $i <= 24; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['day']) && is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-												<td valign="top">
-													<select multiple="multiple" size="7" name="day[]" id="days3" onchange="set_selected('all_days')">
-														<?php for ($i = 25; $i <= 31; $i++):?>
-														<option value="<?=$i;?>" <?php if (!empty($pconfig['day']) && is_array($pconfig['day']) && in_array("$i", $pconfig['day'])) echo "selected=\"selected\"";?>><?=htmlspecialchars($i);?></option>
-														<?php endfor;?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_months" id="all_months1" value="1" <?php if (1 == $pconfig['all_months']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_months" id="all_months2" value="0" <?php if (1 != $pconfig['all_months']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="12" name="month[]" id="months" onchange="set_selected('all_months')">
-<?php
-														foreach ($g_months as $key => $val):
-															echo '<option value="',$key,'"';
-															if(isset($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
-																echo ' selected="selected"';
-															endif;
-															echo '>',$val,'</option>',"\n";
-														endforeach;
-?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td class="listr" valign="top">
-										<input type="radio" name="all_weekdays" id="all_weekdays1" value="1" <?php if (1 == $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-										<?=gtext("All");?><br />
-										<input type="radio" name="all_weekdays" id="all_weekdays2" value="0" <?php if (1 != $pconfig['all_weekdays']) echo "checked=\"checked\"";?> />
-										<?=gtext("Selected");?> ..<br />
-										<table>
-											<tr>
-												<td valign="top">
-													<select multiple="multiple" size="7" name="weekday[]" id="weekdays" onchange="set_selected('all_weekdays')">
-<?php
-														foreach($g_weekdays as $key => $val):
-															echo '<option value="',$key,'"';
-															if(isset($pconfig['weekday'])):
-																if(in_array((string)$key,$pconfig['weekday'])):
-																	echo ' selected="selected"';
-																endif;
-																if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
-																	if(in_array('0',$pconfig['weekday'])):
-																		echo ' selected="selected"';
-																	endif;
-																endif;
-															endif;
-															echo '>',$val,'</option>',"\n";
-														endforeach;
-?>
-													</select>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-							<span class="vexpl"><?=gtext("Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Description");?></td>
-						<td width="78%" class="vtable">
-							<input name="description" type="text" class="formfld" id="description" size="40" value="<?=htmlspecialchars($pconfig['description']);?>" />
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" class="list" height="12"></td>
-					</tr>
-					<tr>
-						<td colspan="2" valign="top" class="listtopic"><?=gtext("Advanced Options");?></td>
-					</tr>
-					<?php
-					html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Recurse into directories."), "", false);
-					html_checkbox("times", gtext("Times"), !empty($pconfig['times']) ? true : false, gtext("Preserve modification times."), "", false);
-					html_checkbox("compress", gtext("Compress"), !empty($pconfig['compress']) ? true : false, gtext("Compress file data during the transfer."), "", false);
-					html_checkbox("archive", gtext("Archive"), !empty($pconfig['archive']) ? true : false, gtext("Archive mode."), "", false);
-					html_checkbox("delete", gtext("Delete"), !empty($pconfig['delete']) ? true : false, gtext("Delete files on the receiving side that don't exist on sender."), "", false, "delete_change()");
-					$helpinghand = '</span><div id="enumeration"><ul>'
-						. '<li>' . gtext("Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer and the 'before' algorithm when talking to an older rsync.") . '</li>'
-						. '<li>' . gtext('Before - File-deletions will be performed before the transfer starts.') . '</li>'
-						. '<li>' . gtext('During - File-deletions will be done incrementally as the transfer happens.') . '</li>'
-						. '<li>' . gtext('Delay - File-deletions will be computed during the transfer and will be done after the transfer.') . ' </li>'
-						. '<li>' . gtext('After - File-deletions will be done after the transfer has completed.') . '</li>'
-						. '</ul></div><span>';
-					$l_delalgol = [
-						'default' => gtext('Default'),
-						'before' => gtext('Before'),
-						'during' => gtext('During'),
-						'delay' => gtext('Delay'),
-						'after' => gtext('After')
-					];
-					html_combobox("delete_algorithm", gtext("Delete algorithm"), $pconfig['delete_algorithm'], $l_delalgol, $helpinghand, false);
-					?>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Quiet");?></td>
-						<td width="78%" class="vtable">
-							<input name="quiet" id="quiet" type="checkbox" value="yes" <?php if (!empty($pconfig['quiet'])) echo "checked=\"checked\""; ?> /> <?=gtext("Suppress non-error messages."); ?><br />
-						</td>
-					</tr>
-					<?php
-					html_checkbox("perms", gtext("Preserve Permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);
-					html_checkbox("xattrs", gtext("Preserve Extended attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);
-					$helpinghand = '<a href="' . 'http://rsync.samba.org/ftp/rsync/rsync.html' . '" target="_blank">'
-						. gtext('Please check the documentation')
-						. '</a>.';
-					html_inputbox("extraoptions", gtext("Extra Options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . $helpinghand, false, 40);
-					?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-					<?php if (isset($uuid) && (FALSE !== $cnid)):?>
-					<input name="Submit" id="execnow" type="submit" class="formbtn" value="<?=gtext("Execute now");?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<?php endif;?>
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
+<table id="area_navigator">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext('Server');?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext('Client');?></span></a></li>
+		<li class="tabact"><a href="services_rsyncd_local.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Local');?></span></a></li>
+	</ul></td></tr>
 </table>
-<script type="text/javascript">
-<!--
-delete_change();
-//-->
-</script>
-<?php include 'fend.inc';?>
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline_checkbox2('enable',gtext('Rsync Job'),!empty($pconfig['enable']) ? true : false,gtext('Enable'));
+?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltagreq"><?=gtext('Source Share');?></td>
+				<td class="celldatareq">
+					<input name="source" type="text" class="formfld" id="source" size="60" value="<?=htmlspecialchars($pconfig['source']);?>"/>
+					<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.source; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield; window.slash_source = 1;' value="..." /><br />
+					<span class="vexpl"><?=gtext('Source directory to be synchronized.');?></span>
+			  </td>
+			</tr>
+			<tr>
+				<td class="celltagreq"><?=gtext('Destination Share');?></td>
+				<td class="celldatareq">
+					<input name="destination" type="text" class="formfld" id="destination" size="60" value="<?=htmlspecialchars($pconfig['destination']);?>" />
+					<input name="browse2" type="button" class="formbtn" id="Browse2" onclick='ifield2 = form.destination; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield2.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield2; window.ifield = ifield2; window.slash_destination = 1;' value="..." /><br />
+					<span class="vexpl"><?=gtext('Target directory.');?></span>
+				</td>
+			</tr>
+<?php
+			$a_user = [];
+			foreach(system_get_user_list() as $userk => $userv):
+				 $a_user[$userk] = htmlspecialchars($userk);
+			endforeach;
+			html_combobox2('who',gtext('Who'),$pconfig['who'],$a_user,'',true);
+?>
+			<tr>
+				<td class="celltagreq"><?=gtext('Synchronization Time');?></td>
+				<td class="celldatareq">
+<?php
+					include 'cs_scheduletime.php';
+?>
+				</td>
+			</tr>
+<?php
+			html_inputbox2('description',gtext('Description'),htmlspecialchars($pconfig['description']),'',false,40);
+?>
+		</tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_separator(2);
+			html_titleline2(gtext('Advanced Options'));
+?>
+		</thead>
+		<tbody>
+<?php
+			html_checkbox2('recursive',gtext('Recursive'),!empty($pconfig['recursive']) ? true : false,gtext('Recurse into directories.'),'',false);
+			html_checkbox2('times',gtext('Times'),!empty($pconfig['times']) ? true : false,gtext('Preserve modification times.'),'',false);
+			html_checkbox2('compress',gtext('Compress'),!empty($pconfig['compress']) ? true : false,gtext('Compress file data during the transfer.'),'',false);
+			html_checkbox2('archive',gtext('Archive'),!empty($pconfig['archive']) ? true : false,gtext('Archive mode.'),'',false);
+			html_checkbox2('delete',gtext('Delete'),!empty($pconfig['delete']) ? true : false,gtext("Delete files on the receiving side that don't exist on sender."),'',false);
+			$l_delalgo = [
+				'default' => gtext("Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer and the 'before' algorithm when talking to an older rsync."),
+				'before' => gtext('Before - File-deletions will be performed before the transfer starts.'),
+				'during' => gtext('During - File-deletions will be done incrementally as the transfer happens.'),
+				'delay' => gtext('Delay - File-deletions will be computed during the transfer and will be done after the transfer.'),
+				'after' => gtext('After - File-deletions will be done after the transfer has completed.')
+			];
+			html_radiobox2('delete_algorithm',gtext('Delete Algorithm'),$pconfig['delete_algorithm'],$l_delalgo,'',false);
+			html_checkbox2('quiet',gtext('Quiet'),!empty($pconfig['quiet']),gtext('Suppress non-error messages.'),'',false);
+			html_checkbox2('perms',gtext('Preserve Permissions'),!empty($pconfig['perms']) ? true : false,gtext('This option causes the receiving rsync to set the destination permissions to be the same as the source permissions.'),'',false);
+			html_checkbox2('xattrs',gtext('Preserve Extended attributes'),!empty($pconfig['xattrs']) ? true : false,gtext('This option causes rsync to update the remote extended attributes to be the same as the local ones.'),'',false);
+			$helpinghand = '<a href="http://rsync.samba.org/ftp/rsync/rsync.html" target="_blank">' . gtext('Please check the documentation') . '.</a>';
+			html_inputbox2('extraoptions',gtext('Extra Options'),!empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : '',gtext('Extra options to rsync (usually empty).') . ' ' . $helpinghand,false,40);
+?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext('Save') : gtext('Add')?>"/>
+		<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+<?php
+		if(isset($uuid) && (false !== $cnid)):
+?>
+		<input name="Submit" id="execnow" type="submit" class="formbtn" value="<?=gtext('Execute now');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
+<?php
+		endif;
+?>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
