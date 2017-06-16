@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2017-05-09 18:42+0000\n"
 "Last-Translator: Lintruder <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:10+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -180,17 +180,26 @@ msgstr "*** Імпортований дублікат ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=вимкнено, 1-255=увімкнено чергу команд із зазначеною глибиною."
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "Для побудови JBOD потрібно 1 чи більше дисків."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Для побудови RAID-1 потрібно 1 чи більше дисків."
 
+msgid "2"
+msgstr ""
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Для побудови RAID-0 потрібно 2 чи більше дисків."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Для побудови RAID-1 потрібно 2 чи більше дисків."
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Для побудови RAID-5 потрібно 3 чи більше дисків."
@@ -388,6 +397,9 @@ msgstr "Режим доступу"
 
 msgid "Access Restrictions"
 msgstr "Обмеження доступу"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "Час доступу (atime)"
@@ -632,9 +644,6 @@ msgstr "Затримка об'явлення (advskew)"
 
 msgid "Afrikaans"
 msgstr "Африкаанс"
-
-msgid "After"
-msgstr "Після"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -1183,9 +1192,6 @@ msgstr "Температура батареї"
 msgid "Battery voltage"
 msgstr "Напруга батареї"
 
-msgid "Before"
-msgstr "До"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - Видалення файлів буде завершено до початку передачі."
 
@@ -1431,6 +1437,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr "Калібрування батареї"
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr "Неможливо отримати ID UFS."
 
@@ -1515,6 +1524,9 @@ msgstr ""
 
 msgid "Check the list of available drivers"
 msgstr "Перевірте список доступних драйверів"
+
+msgid "Checksum"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "Кітайский (спрощенний)"
@@ -1779,31 +1791,46 @@ msgstr ""
 "еквівалентний 'GZIP-6'."
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
-"Управляє обранням алгоритму стиснення, що використовується для цього тому. "
-"Зараз 'LZ4' є рекомендованим алгоритмом стиснення. Встановлення стиснення в "
-"'Да' використовує алгоритм стиснення LZ4, якщо встановлено прапорець "
-"lz4_compress, в іншому випадку використовується LZJB. Ви можете вказати "
-"рівень 'GZIP', використовуючи значення 'GZIP-N', де N є цілим числом від 1 "
-"(найшвидше стиснення) до 9 (найбільше стиснення). В даний час 'GZIP' "
-"еквівалентний 'GZIP-6'."
 
 msgid "Controls the dedup method."
 msgstr "Керування методом dedup"
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
 msgstr "Управління режимом енергоспоживання."
+
+msgid "Controls the type of the ZFS dataset."
+msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr ""
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
+msgstr ""
+
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
 msgstr ""
 
 msgid ""
@@ -1814,6 +1841,12 @@ msgstr ""
 "Керує часом доступу до оновлення файлів, коли вони зчитуються. Вимикання "
 "цього знижує трафік запису при читанні файлів і може привести до значного "
 "підвищення продуктивності."
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Керує можливістю змінювати цей набір даних."
@@ -1827,6 +1860,9 @@ msgstr ""
 
 msgid "Conveyance Self-Test"
 msgstr "Самотестування передавання"
+
+msgid "Copies"
+msgstr ""
 
 msgid "Core"
 msgstr "Ядро"
@@ -2085,17 +2121,20 @@ msgstr "Поточне значення діючої потужності (Вт)
 msgid "Custom"
 msgstr "Користувацький"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr "Спеціальний пристрій"
 
 msgid "Custom script"
 msgstr "Користувацький скрипт"
 
-msgid "Custom script is not found."
-msgstr "Користувацький скрипт не знайдено"
-
 msgid "Custom script is required."
 msgstr "Потрібен довільний сценарій."
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "Чеський"
@@ -2166,6 +2205,9 @@ msgstr "Каталог бази даних"
 msgid "Dataset"
 msgstr "Набір даних"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr "Датасет позначений для видалення"
 
@@ -2219,6 +2261,9 @@ msgstr "Пароль розшифрування"
 msgid "Dedup"
 msgstr "Дедуплікація"
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "За замовчуванням"
 
@@ -2256,11 +2301,11 @@ msgstr "Час очікування за замовчуванням"
 msgid "Define directories/URL's that require authentication."
 msgstr "Вкажіть каталоги та адреси URL, що потребують авторизації."
 
+msgid "Defines the checksum algorithm."
+msgstr ""
+
 msgid "Defines when the shutdown is initiated."
 msgstr "Визначає, коли починається відключення."
-
-msgid "Delay"
-msgstr "Затримка"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2281,6 +2326,9 @@ msgstr "Видалити"
 
 msgid "Delete ARP entry"
 msgstr "Видалити запис ARP"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "Видалити хост"
@@ -2371,9 +2419,6 @@ msgstr "Видалити URL"
 
 msgid "Delete VM"
 msgstr "Видалити VM (віртуальну машину)"
-
-msgid "Delete algorithm"
-msgstr "Видалити алгоритм"
 
 msgid "Delete all rules"
 msgstr "Видалити всі правила"
@@ -3121,9 +3166,6 @@ msgstr "Дуплекс"
 msgid "Duplicate mount point name."
 msgstr "Точка монтування з такою назвою вже існує."
 
-msgid "During"
-msgstr "В процесі"
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3616,8 +3658,14 @@ msgstr "Розширена сумісність з сервером Netatalk AFP
 msgid "Enter Command"
 msgstr "Уведіть команду"
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
 msgstr "Введіть пароль"
+
+msgid "Enter Subject"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Введіть коментар"
@@ -3790,6 +3838,9 @@ msgstr "Обрання події"
 
 msgid "Example: pkg install packagename."
 msgstr "Приклад: pkg install ім'я_пакету."
+
+msgid "Exec"
+msgstr ""
 
 msgid "Execute"
 msgstr "Виконати"
@@ -4003,6 +4054,11 @@ msgstr "Шлях до файла"
 
 msgid "File System"
 msgstr "Файлова система"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr ""
 
 msgid "File Transfer Protocol"
 msgstr "Протокол передачі файлів"
@@ -4376,6 +4432,9 @@ msgstr "Допомога"
 msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive (висока ефективність)"
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr "Приховати групи за замовчуванням"
 
@@ -4626,6 +4685,9 @@ msgstr ""
 "Якщо цей параметр дозволений, знімки стану будуть відображені в каталозі "
 ".zfs."
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr "Імпортувати"
 
@@ -4680,6 +4742,23 @@ msgid ""
 msgstr ""
 "Вказує на приблизну тривалість життя SSD, що залишилася базуючись на "
 "кількості доступних циклів стирання або доступних блоків флеш пам'яті."
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
+msgstr ""
 
 msgid "Info"
 msgstr "Інформація"
@@ -4889,9 +4968,6 @@ msgstr ""
 "Неправильний максимальний розмір блоку! Він повинен бути у діапазоні від  %d "
 "до %d."
 
-msgid "Invalid option."
-msgstr ""
-
 msgid "Invalid username or password."
 msgstr "Неправильне ім'я користувача або пароль."
 
@@ -4948,18 +5024,14 @@ msgstr "Статус та інформація про JBOD"
 msgid "JBOD Maintenance"
 msgstr "Обслуговування JBOD"
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr "Січ."
 
 msgid "January"
 msgstr "Січень"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Січень Лютий Березень Квітень Травень Червень Липень Серпень Вересень "
-"Жовтень Листопад Грудень"
 
 msgid "Japanese"
 msgstr "Японська"
@@ -5092,6 +5164,9 @@ msgstr ""
 "встановлюється в 1 при провалі випробувань або 11 якщо конденсатор був "
 "випробуваний в надмірному температурному режимі, в іншому випадку 100."
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr "Останній бета реліз: %s"
@@ -5158,6 +5233,12 @@ msgstr ""
 "простору. Це включає в себе весь простір, займаний нащадками, включаючи "
 "файлові системи і знімки. Щоб вказати розмір, використовуйте легкі для "
 "читання суфікси (наприклад, 'k', 'KB', 'M', 'Gb', і т.д.)."
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr ""
 
 msgid "Link Down Action"
 msgstr "Дія при Зникненні З'єднання"
@@ -5268,6 +5349,9 @@ msgstr "Записувати пакети, оброблені цим прави�
 
 msgid "Logarithmic Scaling"
 msgstr "Логарифмічний масштаб"
+
+msgid "Logbias"
+msgstr ""
 
 msgid "Logical Block"
 msgstr "Логічні Блоки"
@@ -5658,6 +5742,9 @@ msgstr ""
 "Більше одного сервісу DLNA/UPnP активно. Така конфігурація може викликати "
 "проблеми."
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "Точка монтування"
 
@@ -5891,6 +5978,9 @@ msgstr "Немає доступних даних IPMI сенсору."
 msgid "No Initiator Group has been configured."
 msgstr "Жодна група ініціаторів не налаштована."
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr "Жодна група порталів не налаштована."
 
@@ -5974,6 +6064,9 @@ msgstr "Немає обраних віртуальних пристроїв"
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Успадковувати тільки заборону запису"
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr "IP адреса вузла А"
 
@@ -6034,6 +6127,9 @@ msgstr "Немає"
 msgid "Normal"
 msgstr "Нормальний"
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -6061,13 +6157,6 @@ msgstr "Шлях не знайдено."
 
 msgid "Note"
 msgstr "Примітка"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Нотатка: Ctrl-клік (або Command-click на Maку) щоб вибрати хвилини, години, "
-"дні і місяці."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6754,6 +6843,10 @@ msgstr "Протокол"
 msgid "Protocol"
 msgstr "Протокол"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr "Провайдер"
 
@@ -7007,6 +7100,15 @@ msgstr "Рекурсивно"
 msgid "Recycle Bin"
 msgstr "Смітник"
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr "Оновити"
 
@@ -7112,9 +7214,6 @@ msgid ""
 msgstr ""
 "Повідомити, якщо температура більше ніж або дорівнює N градусів за Цельсієм. "
 "Встановіть \"0\", щоб відключити ці повідомлення."
-
-msgid "Reports"
-msgstr "Звіти"
 
 msgid "Require authentication."
 msgstr "Вимагати автентифікацію."
@@ -7282,8 +7381,8 @@ msgstr "Номер правила"
 msgid "Rules"
 msgstr "Правила"
 
-msgid "Run now"
-msgstr "Запустити зараз"
+msgid "Run Now"
+msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
@@ -7317,6 +7416,12 @@ msgstr "Додаткові налаштування S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Журнал S.M.A.R.T."
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
+msgstr ""
 
 msgid "SHA256, Verify"
 msgstr "SHA256, перевірка"
@@ -7733,6 +7838,9 @@ msgstr "Сервіс дозволений"
 msgid "Services"
 msgstr "Служби"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr "Встановити приналежність цього облікового запису до інших груп."
 
@@ -7913,6 +8021,9 @@ msgstr ""
 "Розмір, пропонований ініціатору (до 8 ексабайт, 8EiB = 8388608TiB). Дійсний "
 "розмір залежить від ваших дисків."
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr "Затримка"
 
@@ -7939,6 +8050,9 @@ msgstr "SmartBoost"
 
 msgid "SmartTrim"
 msgstr "SmartTrim"
+
+msgid "Snapdir"
+msgstr ""
 
 msgid "Snapshot"
 msgstr "Знімок"
@@ -8087,6 +8201,9 @@ msgstr "Розділений запит"
 msgid "Standard"
 msgstr "Стандартний"
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr "Режим очікування"
 
@@ -8182,9 +8299,6 @@ msgstr "Нд"
 
 msgid "Sunday"
 msgstr "Неділя"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "Неділя Понеділок Вівторок Середа Четвер П'ятниця Субота"
 
 msgid "Suppress non-error messages."
 msgstr "Приховати повідомлення не про помилку."
@@ -8998,6 +9112,15 @@ msgstr ""
 "загальноприйняті суфікси (наприклад, 'k', 'KB', 'M', 'Gb', і т.д.)."
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
@@ -9220,6 +9343,9 @@ msgstr "Завантажений файл перевищує директиву 
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Файл був лише частково вивантежний."
+
+msgid "The value is invalid."
+msgstr ""
 
 msgid "The value of the variable."
 msgstr "Значення змінної."
@@ -9760,6 +9886,9 @@ msgstr ""
 "Це забезпечить підтримку потокового .jpeg і MP3 файлів до TiVo з підтримкою "
 "HMO."
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr "Чт"
 
@@ -9823,11 +9952,11 @@ msgstr "Швидкість заголовків (Title Speed)"
 msgid "TitleSpeed"
 msgstr "TitleSpeed"
 
+msgid "To Email"
+msgstr ""
+
 msgid "To Email Address"
 msgstr "До електронної адреси"
-
-msgid "To e-mail"
-msgstr "На е-мейл"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -10156,6 +10285,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr "Українська"
@@ -10552,8 +10684,14 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr "Віртуалізація"
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
 msgstr "Том"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr ""
 
 msgid "Volume Label"
 msgstr "Мітка тому"
@@ -10563,6 +10701,9 @@ msgstr "Режим тому"
 
 msgid "Volume Name"
 msgstr "Ім'я тому"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr "Граничний розмір тома"
@@ -10678,8 +10819,8 @@ msgstr "Середа"
 msgid "Week Days"
 msgstr "Дні тижня"
 
-msgid "Week days"
-msgstr "Днів тижня"
+msgid "Weekdays"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr "Атрибут Western Digital."
@@ -10931,11 +11072,8 @@ msgstr ""
 "Розмір блоку ZFS тому. Це значення не може бути змінено після створення."
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
-"Розмір тому ZFS. Для визначення розміру використовуйте легкі для читання "
-"суфікси  (наприклад, \"К\", \"КБ\", \"М\", \"ГБ\")"
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -11069,3 +11207,73 @@ msgstr "до"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "Січень Лютий Березень Квітень Травень Червень Липень Серпень Вересень "
+#~ "Жовтень Листопад Грудень"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Користувацький скрипт не знайдено"
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Видалити алгоритм"
+
+#~ msgid "Reports"
+#~ msgstr "Звіти"
+
+#~ msgid "Run now"
+#~ msgstr "Запустити зараз"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "Неділя Понеділок Вівторок Середа Четвер П'ятниця Субота"
+
+#~ msgid "To e-mail"
+#~ msgstr "На е-мейл"
+
+#~ msgid "Week days"
+#~ msgstr "Днів тижня"
+
+#~ msgid "Before"
+#~ msgstr "До"
+
+#~ msgid "Delay"
+#~ msgstr "Затримка"
+
+#~ msgid "After"
+#~ msgstr "Після"
+
+#~ msgid "During"
+#~ msgstr "В процесі"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Нотатка: Ctrl-клік (або Command-click на Maку) щоб вибрати хвилини, години, "
+#~ "дні і місяці."
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+#~ msgstr ""
+#~ "Розмір тому ZFS. Для визначення розміру використовуйте легкі для читання "
+#~ "суфікси  (наприклад, \"К\", \"КБ\", \"М\", \"ГБ\")"
+
+#~ msgid ""
+#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
+#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
+#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
+#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
+#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
+#~ msgstr ""
+#~ "Управляє обранням алгоритму стиснення, що використовується для цього тому. "
+#~ "Зараз 'LZ4' є рекомендованим алгоритмом стиснення. Встановлення стиснення в "
+#~ "'Да' використовує алгоритм стиснення LZ4, якщо встановлено прапорець "
+#~ "lz4_compress, в іншому випадку використовується LZJB. Ви можете вказати "
+#~ "рівень 'GZIP', використовуючи значення 'GZIP-N', де N є цілим числом від 1 "
+#~ "(найшвидше стиснення) до 9 (найбільше стиснення). В даний час 'GZIP' "
+#~ "еквівалентний 'GZIP-6'."

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-06-03 08:27+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"PO-Revision-Date: 2017-06-16 09:01+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:14+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:10+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -187,17 +187,26 @@ msgstr ""
 "0 = desactivat, 1-255 = comanda permèssa de cua amb la profunditat "
 "especificada."
 
+msgid "1"
+msgstr "1"
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "Es requereix 1 o més discos per crear un volum JBOD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Es requereix 1 o més discos per crear un volum RAID-1."
 
+msgid "2"
+msgstr "2"
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Es requereix 2 o més discos per crear un volum RAID-0."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Es requereix 2 o més discos per crear un volum RAID-1."
+
+msgid "3"
+msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Es requereix 3 o més discos per crear un volum RAID-5."
@@ -398,6 +407,9 @@ msgstr "Mode d'accés"
 
 msgid "Access Restrictions"
 msgstr "Restriccions d'accés"
+
+msgid "Access Time"
+msgstr "Temps d'accés"
 
 msgid "Access Time (atime)"
 msgstr "Temps d'accés"
@@ -644,9 +656,6 @@ msgstr "Inclinació publicitat"
 
 msgid "Afrikaans"
 msgstr "Africà"
-
-msgid "After"
-msgstr "Després"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -1199,9 +1208,6 @@ msgstr "Temperatura de la bateria"
 msgid "Battery voltage"
 msgstr "Voltatge de la bateria"
 
-msgid "Before"
-msgstr "Abans"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 "Abans - L'esborrat d'arxius es faran abans que comenci la transferència."
@@ -1451,6 +1457,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr "Calibra-cio bateria"
 
+msgid "Can Mount"
+msgstr "No es pot montar"
+
 msgid "Can't get UFS ID."
 msgstr "No es pot obtenir ID del UFS"
 
@@ -1536,6 +1545,9 @@ msgstr ""
 
 msgid "Check the list of available drivers"
 msgstr "Comproveu la llista de controladors disponibles"
+
+msgid "Checksum"
+msgstr "Suma de verificació"
 
 msgid "Chinese (Simplified)"
 msgstr "xinès (Simplificat)"
@@ -1801,32 +1813,60 @@ msgstr ""
 "equivalent a 'GZIP-6'."
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
-"Controla l'algoritme de compressió usat per a aquest volum. 'LZ4' és ara "
-"l'algoritme de compressió recomanada. L'ajust de compressió a 'On' fa ús de "
-"l'algoritme de compressió LZ4 si l'indicador lz4_compress de la funció està "
-"actiu, si no s'utilitza LZJB. Es pot especificar el nivell de 'GZIP' "
-"utilitzant el valor 'GZIP-N', on N és un nombre enter d'1 (la més ràpida) a "
-"9 (millor relació de compressió). En l'actualitat, 'GZIP' és equivalent a "
-"'GZIP-6'."
+"Controla l'algoritme de compressió. 'LZ4' és ara l'algoritme de compressió "
+"recomanada. Ajust de la compressió a 'On' utilitza l'algoritme de compressió "
+"LZ4 si el lz4_compress indicador de la funció està activa, en cas contrari "
+"s'utilitza lzjb. Es pot especificar el nivell 'GZIP' utilitzant el valor "
+"'GZIP-N', on N és un nombre enter d'1 (la més ràpida) a 9 (millor relació de "
+"compressió). En l'actualitat, 'GZIP' és equivalent a 'GZIP-6'."
 
 msgid "Controls the dedup method."
 msgstr "Controla el mètode dedup"
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+"Controla el nombre de còpies de les dades emmagatzemades per a aquest "
+"conjunt de dades."
+
 msgid "Controls the power consumption mode."
 msgstr "Controla el mode de consum d'energia."
+
+msgid "Controls the type of the ZFS dataset."
+msgstr "Defineix el tipus del conjunt de dades ZFS."
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr "Controla el que s'emmagatzema a la memòria cau primària (ARC)."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr "Controla el que s'emmagatzema a la memòria cau secundària (L2ARC)."
+
+msgid "Controls what types of metadata are stored redundantly."
+msgstr "Controla quins tipus de metadades s'emmagatzemen de forma redundant."
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+"Controla si els processos es poden executar des de dins d'aquest sistema "
+"d'arxius."
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+"Controla si el directori .zfs s'oculta o visible en l'arrel del sistema de "
+"fitxers."
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
+"Controla si el temps d'accés als arxius s'actualitza quan es llegeixen."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -1837,6 +1877,12 @@ msgstr ""
 "llegeixen. Si desactiveu aquesta opció evita la producció de trànsit "
 "d'escriptura en llegir arxius i pot resultar en guanys significatius en el "
 "rendiment."
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr "Controla si el conjunt de dades es gestiona des de un 'jail'"
+
+msgid "Controls whether the set-UID bit is respected for the file system."
+msgstr "Controla si el bit set-UID és respectat pel sistema d'arxius."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controla si el conjunt de dades pot ser modificat"
@@ -1850,6 +1896,9 @@ msgstr ""
 
 msgid "Conveyance Self-Test"
 msgstr "Autocomprovació de trasnferencia"
+
+msgid "Copies"
+msgstr "Còpies"
 
 msgid "Core"
 msgstr "Nucli"
@@ -2116,17 +2165,20 @@ msgstr "Valor actual de la potencia real (Watts)"
 msgid "Custom"
 msgstr "Personalitzat"
 
+msgid "Custom Script"
+msgstr "Script de personalització"
+
 msgid "Custom device"
 msgstr "Dispositiu personalitzat"
 
 msgid "Custom script"
 msgstr "Script personalitzat"
 
-msgid "Custom script is not found."
-msgstr "Script personalitzat no es troba."
-
 msgid "Custom script is required."
 msgstr "Es requereix script personalitzat."
+
+msgid "Custom script not found."
+msgstr "Script personalitzat no trobat."
 
 msgid "Czech"
 msgstr "Txec"
@@ -2197,6 +2249,9 @@ msgstr "Directori de la base de dades"
 msgid "Dataset"
 msgstr "Conjunt de dades"
 
+msgid "Dataset Type"
+msgstr "Tipus de conjunt de dades"
+
 msgid "Dataset is marked for deletion"
 msgstr "Conjunt de dades està marcat per ser esborrat"
 
@@ -2249,6 +2304,9 @@ msgstr "Desxifrar contrasenya"
 msgid "Dedup"
 msgstr "Deduplicar"
 
+msgid "Dedup Method"
+msgstr "Mètode dedup"
+
 msgid "Default"
 msgstr "Per defecte"
 
@@ -2284,11 +2342,11 @@ msgstr "Temps per defecte d'espera"
 msgid "Define directories/URL's that require authentication."
 msgstr "Definir directoris/URL que requereixen autenticació"
 
+msgid "Defines the checksum algorithm."
+msgstr "Defineix l'algoritme de control."
+
 msgid "Defines when the shutdown is initiated."
 msgstr "Defineix quand el tancament s'inicia"
-
-msgid "Delay"
-msgstr "Retard"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2309,6 +2367,9 @@ msgstr "Elimina"
 
 msgid "Delete ARP entry"
 msgstr "Suprimeix entrada ARP"
+
+msgid "Delete Algorithm"
+msgstr "Eliminar algoritme"
 
 msgid "Delete Host"
 msgstr "Suprimeix servidor"
@@ -2399,9 +2460,6 @@ msgstr "Suprimeix URL"
 
 msgid "Delete VM"
 msgstr "Suprimeix MV"
-
-msgid "Delete algorithm"
-msgstr "Suprimeix algoritme"
 
 msgid "Delete all rules"
 msgstr "Suprimeix totes les regles"
@@ -3156,9 +3214,6 @@ msgstr "Dúplex"
 msgid "Duplicate mount point name."
 msgstr "Dúplicar punt de muntatge"
 
-msgid "During"
-msgstr "Durant"
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3655,8 +3710,14 @@ msgstr "Compatibilitat millorada amb el servidor netatalk AFP."
 msgid "Enter Command"
 msgstr "Introduïu l'ordre"
 
+msgid "Enter Email Address(es)"
+msgstr "Introduir adreça (és) de correu electrònic"
+
 msgid "Enter Password"
 msgstr "Introduïu la contrasenya"
+
+msgid "Enter Subject"
+msgstr "Escriviu l'assumpte"
 
 msgid "Enter a comment"
 msgstr "Introduïu un comentari"
@@ -3831,6 +3892,9 @@ msgstr "Selecció del event"
 
 msgid "Example: pkg install packagename."
 msgstr "Exemple: pkg install packagename."
+
+msgid "Exec"
+msgstr "Executa"
 
 msgid "Execute"
 msgstr "Executar"
@@ -4049,6 +4113,13 @@ msgstr "Ruta del fitxer"
 
 msgid "File System"
 msgstr "Sistema de Fitxers"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr ""
+"Sistema d'arxius - es pot muntar dins de l'espai de noms de sistema "
+"estàndard i es comporta com altres sistemes d'arxius."
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
@@ -4428,6 +4499,9 @@ msgstr "Ajuda"
 msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive (alt rendiment)"
 
+msgid "Hidden"
+msgstr "Ocult"
+
 msgid "Hide Default Groups"
 msgstr "Amaga grups predeterminats"
 
@@ -4683,6 +4757,11 @@ msgstr ""
 "Si aquesta propietat està activada, les instantànies es mostren en el "
 "directori .zfs."
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+"Si aquesta propietat està desactivada, el sistema de fitxers no es pot "
+"muntar."
+
 msgid "Import"
 msgstr "Importar"
 
@@ -4737,6 +4816,31 @@ msgid ""
 msgstr ""
 "Indica la vida aproximada que li resta al SSD, en termes de programa/cicles "
 "d'esborrat o blocs Flash actualment disponibles per al seu ús."
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+"Indica si l'algoritme de coincidència de nom d'arxiu utilitzat pel sistema "
+"d'arxius ha de ser majúscules i minúscules, majúscules i minúscules, o "
+"permetre una combinació de tots dos estils de joc."
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+"Indica si el sistema de fitxers ha de realitzar una normalització de noms de "
+"fitxer Unicode quan es comparen dos noms d'arxiu, i l'algoritme de "
+"normalització ha de ser utilitzat."
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
+msgstr ""
+"Indica si el sistema de fitxers ha de rebutjar noms d'arxiu que inclouen "
+"caràcters que no estan presents al joc de caràcters UTF-8."
 
 msgid "Info"
 msgstr "Informació"
@@ -4943,9 +5047,6 @@ msgstr "Format de fitxer no vàlid."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "Mida màxima de bloc invàlid! ha de ésser en el rang de %d a %d."
 
-msgid "Invalid option."
-msgstr "Opció no vàlida."
-
 msgid "Invalid username or password."
 msgstr "Nom d'usuari o contrasenya incorrectes."
 
@@ -5004,18 +5105,14 @@ msgstr "Informació i estat del JBOD"
 msgid "JBOD Maintenance"
 msgstr "Manteniment JBOD"
 
+msgid "Jailed"
+msgstr "Engabiat"
+
 msgid "Jan"
 msgstr "Gen"
 
 msgid "January"
 msgstr "Gener"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Gener Febrer Març Abril Maig Juny Juliol Agost Setembre Octubre Novembre "
-"Decembre"
 
 msgid "Japanese"
 msgstr "Japonès"
@@ -5148,6 +5245,9 @@ msgstr ""
 "en cas de fallada de prova o 11 si el condensador ha estat provat en una "
 "condició d'excés de temperatura, en cas contrari  dona valor 100."
 
+msgid "Latency"
+msgstr "Latència"
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr "Darrera versió Beta: %s"
@@ -5211,6 +5311,14 @@ msgstr ""
 "incloent els sistemes d'arxius i les instantànies. Per especificar el "
 "tamany, utilitzeu els següents sufixos llegibles (per exemple, 'k', 'KB "
 "\",\" M \",\" Gb \", etc.)."
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+"Limita la quantitat d'espai que un conjunt de dades i els seus descendents "
+"poden consumir."
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr "Limita la quantitat d'espai que un conjunt de dades poden consumir."
 
 msgid "Link Down Action"
 msgstr "Acció de enllaç desconectat"
@@ -5325,6 +5433,9 @@ msgstr ""
 
 msgid "Logarithmic Scaling"
 msgstr "Escalat logarítmic"
+
+msgid "Logbias"
+msgstr "Logbias"
 
 msgid "Logical Block"
 msgstr "Bloc lògic"
@@ -5719,6 +5830,9 @@ msgstr ""
 "Més d'un servei DLNA / UPnP està actiu. Aquesta configuració podria causar "
 "problemes."
 
+msgid "Most"
+msgstr "La majoria"
+
 msgid "Mount Point"
 msgstr "Punt de muntatge"
 
@@ -5955,6 +6069,9 @@ msgstr "Dades del sensor IPMI no disponible."
 msgid "No Initiator Group has been configured."
 msgstr "Grup iniciador no s'ha configurat."
 
+msgid "No Parity"
+msgstr "Sense paritat"
+
 msgid "No Portal Group has been configured."
 msgstr "Grup portal no s'ha configurat."
 
@@ -6038,6 +6155,9 @@ msgstr "No s'han seleccionat dispositius virtuals"
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Només heretar entrades negades"
 
+msgid "Noauto"
+msgstr "No auto"
+
 msgid "Node A IP address"
 msgstr "Adreça IP de Node A"
 
@@ -6098,6 +6218,9 @@ msgstr "Cap"
 msgid "Normal"
 msgstr "Normal"
 
+msgid "Normalization"
+msgstr "Normalització"
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -6125,13 +6248,6 @@ msgstr "No trobat camí."
 
 msgid "Note"
 msgstr "Nota"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Nota: Feu Ctrl-clic (o command-clic al Mac) per triar i rebutjar minuts, "
-"hores, dies i mesos."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6826,6 +6942,12 @@ msgstr "Proto"
 msgid "Protocol"
 msgstr "Protocol"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+"Proporcionar un suggeriment a ZFS sobre el maneig de sol·licituds "
+"sincròniques en aquest conjunt de dades."
+
 msgid "Provider"
 msgstr "Proveïdor"
 
@@ -7081,6 +7203,15 @@ msgstr "Recursiu"
 msgid "Recycle Bin"
 msgstr "Paperera de reciclatge"
 
+msgid "Redundant Metadata"
+msgstr "Metadades redundants"
+
+msgid "Refquota"
+msgstr "Refquota"
+
+msgid "Refreservation"
+msgstr "Refreservation"
+
 msgid "Refresh"
 msgstr "Actualitza"
 
@@ -7185,9 +7316,6 @@ msgid ""
 msgstr ""
 "Informe si la temperatura és major o igual que N graus centígrads. "
 "S'estableix en 0 per desactivar aquest informe."
-
-msgid "Reports"
-msgstr "Informes"
 
 msgid "Require authentication."
 msgstr "Requereix autenticació."
@@ -7357,7 +7485,7 @@ msgstr "Regla número"
 msgid "Rules"
 msgstr "Regles"
 
-msgid "Run now"
+msgid "Run Now"
 msgstr "Executar ara"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
@@ -7391,6 +7519,12 @@ msgstr "S.M.A.R.T. opcions adicionals"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. registre"
+
+msgid "SHA-256, Verify"
+msgstr "SHA-256, Verifica"
+
+msgid "SHA-512, Verify"
+msgstr "SHA-512, Verifica"
 
 msgid "SHA256, Verify"
 msgstr "SHA256, Verificar"
@@ -7806,6 +7940,9 @@ msgstr "Servei habilitat"
 msgid "Services"
 msgstr "Serveis"
 
+msgid "Set UID"
+msgstr "Estableix UID"
+
 msgid "Set additional group memberships for this account."
 msgstr "Establir grup addicional afiliacions d'aquest compte."
 
@@ -7989,6 +8126,9 @@ msgstr ""
 "Mida ofert a l'iniciador. (Fins 8EiB = 8388608TiB. Mida real depèn dels seus "
 "discos.)"
 
+msgid "Skein, Verify"
+msgstr "Troca, Verificar"
+
 msgid "Skew"
 msgstr "Esbiaixa"
 
@@ -8015,6 +8155,9 @@ msgstr "Increment intel·ligent"
 
 msgid "SmartTrim"
 msgstr "Retallada intel·ligent"
+
+msgid "Snapdir"
+msgstr "Snapdir"
 
 msgid "Snapshot"
 msgstr "Instantània"
@@ -8170,6 +8313,9 @@ msgstr "Sol·licitud de divisiò"
 msgid "Standard"
 msgstr "Estàndard"
 
+msgid "Standard Reports"
+msgstr "Informes estàndard"
+
 msgid "Standby"
 msgstr "En espera"
 
@@ -8265,9 +8411,6 @@ msgstr "Dg"
 
 msgid "Sunday"
 msgstr "Diumenge"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "Diumenge Dilluns Dimarts Dimecres Dijous Divendres Dissabte"
 
 msgid "Suppress non-error messages."
 msgstr "Suprimir els missatges no relacionats amb errors."
@@ -9089,6 +9232,19 @@ msgstr ""
 "exemple, \"k\", \"KB\", \"M\", \"Gb\", etc.)."
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+"La quantitat mínima d'espai garantit per a un conjunt de dades i els seus "
+"descendents."
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+"La quantitat mínima d'espai garantit per a un conjunt de dades, sense "
+"incloure els seus descendents."
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
@@ -9318,6 +9474,9 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "El fitxer només s'ha pogut desar parcialment al servidor."
+
+msgid "The value is invalid."
+msgstr "El valor no és vàlid."
 
 msgid "The value of the variable."
 msgstr "El valor de la variable."
@@ -9873,6 +10032,9 @@ msgstr ""
 "Això donarà suport .jpg transmissió i arxius .mp3 a una receptor suportant "
 "TiVo."
 
+msgid "Throughput"
+msgstr "Rendiment"
+
 msgid "Thu"
 msgstr "Dj"
 
@@ -9936,11 +10098,11 @@ msgstr "Velocitat del títol"
 msgid "TitleSpeed"
 msgstr "TitleSpeed"
 
+msgid "To Email"
+msgstr "A correu electrònic"
+
 msgid "To Email Address"
 msgstr "Per a l'adreça de correu electrónic"
-
-msgid "To e-mail"
-msgstr "Per al correu electrónic"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -10271,6 +10433,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr "UTF-8 només"
 
 msgid "Ukrainian"
 msgstr "Ucraïnès"
@@ -10663,8 +10828,15 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr "Virtualització"
 
+msgid "Visible"
+msgstr "Visible"
+
 msgid "Volume"
 msgstr "Volum"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr ""
+"Volum - Un volum lògic. Pot ser exportat com un dispositiu en brut o bloc."
 
 msgid "Volume Label"
 msgstr "Etiqueta de volum"
@@ -10674,6 +10846,9 @@ msgstr "Mode de volum"
 
 msgid "Volume Name"
 msgstr "Nom del volum"
+
+msgid "Volume Size"
+msgstr "Mida de volum"
 
 msgid "Volume Size Limit"
 msgstr "Tamany limit del volum"
@@ -10790,8 +10965,8 @@ msgstr "Dimecres"
 msgid "Week Days"
 msgstr "Dies de la setmana"
 
-msgid "Week days"
-msgstr "Dias de la setmana"
+msgid "Weekdays"
+msgstr "Setmanal"
 
 msgid "Western Digital attribute."
 msgstr "Atribut de Western Digital."
@@ -11039,11 +11214,9 @@ msgstr ""
 "Espai del volum ZFS. Aquest valor es pot canviar desprès de la creació."
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
-"Mida del volum ZFS. Per especificar la mida utilitzi els següents sufixos "
-"llegibles (per exemple, \"K\", \"KB\", \"M\", \"I\", etc.)."
+"ZFS mida del volum. Podeu utilitzar sufixos llegible com K, KB, M, GB."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -11177,3 +11350,76 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Script personalitzat no es troba."
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Suprimeix algoritme"
+
+#~ msgid "Run now"
+#~ msgstr "Executar ara"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "Gener Febrer Març Abril Maig Juny Juliol Agost Setembre Octubre Novembre "
+#~ "Decembre"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Nota: Feu Ctrl-clic (o command-clic al Mac) per triar i rebutjar minuts, "
+#~ "hores, dies i mesos."
+
+#~ msgid "Reports"
+#~ msgstr "Informes"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "Diumenge Dilluns Dimarts Dimecres Dijous Divendres Dissabte"
+
+#~ msgid "After"
+#~ msgstr "Després"
+
+#~ msgid "Before"
+#~ msgstr "Abans"
+
+#~ msgid "Delay"
+#~ msgstr "Retard"
+
+#~ msgid "During"
+#~ msgstr "Durant"
+
+#~ msgid "To e-mail"
+#~ msgstr "Per al correu electrónic"
+
+#~ msgid "Week days"
+#~ msgstr "Dias de la setmana"
+
+#~ msgid ""
+#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
+#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
+#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
+#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
+#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
+#~ msgstr ""
+#~ "Controla l'algoritme de compressió usat per a aquest volum. 'LZ4' és ara "
+#~ "l'algoritme de compressió recomanada. L'ajust de compressió a 'On' fa ús de "
+#~ "l'algoritme de compressió LZ4 si l'indicador lz4_compress de la funció està "
+#~ "actiu, si no s'utilitza LZJB. Es pot especificar el nivell de 'GZIP' "
+#~ "utilitzant el valor 'GZIP-N', on N és un nombre enter d'1 (la més ràpida) a "
+#~ "9 (millor relació de compressió). En l'actualitat, 'GZIP' és equivalent a "
+#~ "'GZIP-6'."
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+#~ msgstr ""
+#~ "Mida del volum ZFS. Per especificar la mida utilitzi els següents sufixos "
+#~ "llegibles (per exemple, \"K\", \"KB\", \"M\", \"I\", etc.)."
+
+#~ msgid "Invalid option."
+#~ msgstr "Opció no vàlida."

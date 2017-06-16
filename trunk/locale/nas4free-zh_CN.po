@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
-"PO-Revision-Date: 2017-05-25 00:57+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"PO-Revision-Date: 2017-06-16 06:24+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -163,17 +163,26 @@ msgstr "*** 重复导入 ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=禁用, 1-255=指令排序的深度。"
 
+msgid "1"
+msgstr "1"
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "一个或更多磁盘需要建立为JBOD卷"
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "一个或更多磁盘需要建立为RAID-1卷"
 
+msgid "2"
+msgstr "2"
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "创建一个Raid-0 卷需要2个或更多的磁盘。"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "创建一个Raid-1 卷需要2个或更多的磁盘。"
+
+msgid "3"
+msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "创建一个Raid-5 卷需要3个或更多的磁盘。"
@@ -353,6 +362,9 @@ msgstr "访问方式"
 
 msgid "Access Restrictions"
 msgstr "访问限制"
+
+msgid "Access Time"
+msgstr "访问时间"
 
 msgid "Access Time (atime)"
 msgstr "访问时间(atime)"
@@ -596,9 +608,6 @@ msgstr "广播偏斜"
 msgid "Afrikaans"
 msgstr "南非荷兰语(Afrikaans)"
 
-msgid "After"
-msgstr "在此之后"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr "在传输完成后将 -File-deletions"
 
@@ -756,7 +765,7 @@ msgid "Ambient temperature (degrees C)"
 msgstr "环境温度（摄氏度）"
 
 msgid "Amount of surge current used to spin up the drive."
-msgstr "用于上拉驱动器的浪涌电流量。"
+msgstr "用于旋转驱动器的浪涌电流量。"
 
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
@@ -1091,9 +1100,6 @@ msgstr "电池温度"
 msgid "Battery voltage"
 msgstr "电池电压"
 
-msgid "Before"
-msgstr "之前"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "之前 - 文件删除将在传输开始之前完成。"
 
@@ -1325,6 +1331,9 @@ msgstr "CRC错误计数。统计CRC错误数量（读写FIS数据CRC错误）。
 msgid "Calibration Battery"
 msgstr "电池校正"
 
+msgid "Can Mount"
+msgstr "可以挂载"
+
 msgid "Can't get UFS ID."
 msgstr "无法获取UFS ID。"
 
@@ -1404,6 +1413,9 @@ msgstr "有关TCP Wrappers的详细信息，请参阅FreeBSD文档"
 
 msgid "Check the list of available drivers"
 msgstr "检查可用驱动程序列表"
+
+msgid "Checksum"
+msgstr "校验"
 
 msgid "Chinese (Simplified)"
 msgstr "简体中文"
@@ -1652,22 +1664,28 @@ msgstr ""
 "N”来指定“GZIP”级别，其中N是从1（最快）到9（最佳压缩比）的整数。 目前，“GZIP”相当于“GZIP-6”。"
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
-"控制用于此卷的压缩算法。 “LZ4”是现在推荐的压缩算法。 "
+"控制压缩算法。 “LZ4”是现在推荐的压缩算法。 "
 "如果功能标志lz4_compress处于活动状态，则将压缩设置为“开”，使用LZ4压缩算法，否则使用LZJB。 你可以使用值“GZIP-"
 "N”来指定“GZIP”级别，其中N是从1（最快）到9（最佳压缩比）的整数。 目前，“GZIP”相当于“GZIP-6”。"
 
 msgid "Controls the dedup method."
 msgstr "控制重复数据删除方法。"
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr "控制为此数据集存储的数据的副本数。"
+
 msgid "Controls the power consumption mode."
 msgstr "控制功耗模式。"
+
+msgid "Controls the type of the ZFS dataset."
+msgstr "控制ZFS数据集的类型。"
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr "控制缓存在主缓存（ARC）中的内容。"
@@ -1675,11 +1693,33 @@ msgstr "控制缓存在主缓存（ARC）中的内容。"
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr "控制缓存在二级缓存（L2ARC）中的内容。"
 
+msgid "Controls what types of metadata are stored redundantly."
+msgstr "控制冗余存储哪些类型的元数据。"
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr "控制是否可以在该文件系统内执行进程。"
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr "控制.zfs目录是否在文件系统的根目录中隐藏或可见。"
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr "控制当文件被读取时是否更新访问时间。"
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
 msgstr "控制文件的访问时间是否在读取时更新。 关闭此功能可以避免在读取文件时产生写入通信，并且可以显著提高性能。"
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr "控制数据集是否从jail管理。"
+
+msgid "Controls whether the set-UID bit is respected for the file system."
+msgstr "控制文件系统是否符合set-UID位。"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "控制此数据集能否被修改。"
@@ -1691,6 +1731,9 @@ msgstr "禁用存储DOS属性时将DOS属性转换为UNIX执行位。"
 
 msgid "Conveyance Self-Test"
 msgstr "输送自检"
+
+msgid "Copies"
+msgstr "副本"
 
 msgid "Core"
 msgstr "核心"
@@ -1907,17 +1950,20 @@ msgstr "当前的实际功率（瓦特）"
 msgid "Custom"
 msgstr "自定"
 
+msgid "Custom Script"
+msgstr "自定义脚本"
+
 msgid "Custom device"
 msgstr "自定义设备"
 
 msgid "Custom script"
 msgstr "自定义脚本"
 
-msgid "Custom script is not found."
-msgstr "未找到自定义脚本"
-
 msgid "Custom script is required."
 msgstr "必需有自定义脚本。"
+
+msgid "Custom script not found."
+msgstr "自定义脚本未找到。"
 
 msgid "Czech"
 msgstr "捷克文"
@@ -1988,6 +2034,9 @@ msgstr "数据库目录"
 msgid "Dataset"
 msgstr "数据集"
 
+msgid "Dataset Type"
+msgstr "数据集类型"
+
 msgid "Dataset is marked for deletion"
 msgstr "数据集已标记为删除"
 
@@ -2038,6 +2087,9 @@ msgstr "解密密码"
 msgid "Dedup"
 msgstr "重复数据删除（Dedup）"
 
+msgid "Dedup Method"
+msgstr "重新排序方法"
+
 msgid "Default"
 msgstr "默认值"
 
@@ -2071,11 +2123,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "指定需要认证的目录/URL"
 
+msgid "Defines the checksum algorithm."
+msgstr "定义校验算法。"
+
 msgid "Defines when the shutdown is initiated."
 msgstr "设定何时关机。"
-
-msgid "Delay"
-msgstr "延迟"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2092,6 +2144,9 @@ msgstr "删除"
 
 msgid "Delete ARP entry"
 msgstr "删除ARP项目"
+
+msgid "Delete Algorithm"
+msgstr "删除算法"
 
 msgid "Delete Host"
 msgstr "删除主机"
@@ -2182,9 +2237,6 @@ msgstr "删除 URL"
 
 msgid "Delete VM"
 msgstr "删除 VM"
-
-msgid "Delete algorithm"
-msgstr "删除演算法"
 
 msgid "Delete all rules"
 msgstr "删除所有规则"
@@ -2902,9 +2954,6 @@ msgstr "双工模式"
 msgid "Duplicate mount point name."
 msgstr "重复的挂载点名称"
 
-msgid "During"
-msgstr "期间"
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr "期间-文件-删除将随着传输发生逐步完成。"
@@ -3382,8 +3431,14 @@ msgstr "增强与Netatalk AFP服务器的兼容性。"
 msgid "Enter Command"
 msgstr "输入命令"
 
+msgid "Enter Email Address(es)"
+msgstr "输入Email地址"
+
 msgid "Enter Password"
 msgstr "输入密码"
+
+msgid "Enter Subject"
+msgstr "输入主题"
 
 msgid "Enter a comment"
 msgstr "输入注释"
@@ -3531,6 +3586,9 @@ msgstr "事件选择"
 
 msgid "Example: pkg install packagename."
 msgstr "示例：pkg install packagename。"
+
+msgid "Exec"
+msgstr "执行"
 
 msgid "Execute"
 msgstr "执行"
@@ -3735,6 +3793,11 @@ msgstr "文件路径"
 
 msgid "File System"
 msgstr "文件系统"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr "文件系统 - 可以挂载在标准系统命名空间中，并且像其他文件系统一样运行。"
 
 msgid "File Transfer Protocol"
 msgstr "文件传输协议（File Transfer Protocol）"
@@ -4094,6 +4157,9 @@ msgstr "说明"
 msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive（高性能）"
 
+msgid "Hidden"
+msgstr "隐藏的"
+
 msgid "Hide Default Groups"
 msgstr "隐藏默认群组"
 
@@ -4317,6 +4383,9 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "如果启用此属性，.zfs 目录里会显示快照。"
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr "如果此属性设置为关闭，则无法挂载文件系统。"
+
 msgid "Import"
 msgstr "导入"
 
@@ -4369,6 +4438,23 @@ msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
 msgstr "表示在编程/擦除周期或当前可用的闪存块方面剩余的近似SSD寿命。"
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr "指示文件系统使用的文件名匹配算法是否应区分大小写，不区分大小写，或允许两种样式的匹配。"
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr "指示当比较两个文件名时，文件系统是否应执行文件名的Unicode标准化，以及应使用哪种归一化算法。"
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
+msgstr "指示文件系统是否应拒绝包含UTF-8字符代码集中不存在的字符的文件名。"
 
 msgid "Info"
 msgstr "消息"
@@ -4564,9 +4650,6 @@ msgstr "文件格式无效。"
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "最大块大小无效！ 它必须在%d到%d的范围内。"
 
-msgid "Invalid option."
-msgstr "选项无效。"
-
 msgid "Invalid username or password."
 msgstr "无效的用户名或密码。"
 
@@ -4614,16 +4697,14 @@ msgstr "JBOD 信息和状态"
 msgid "JBOD Maintenance"
 msgstr "JBOD维护"
 
+msgid "Jailed"
+msgstr "Jailed"
+
 msgid "Jan"
 msgstr "1月"
 
 msgid "January"
 msgstr "1 月"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 十一月 十二月"
 
 msgid "Japanese"
 msgstr "日文"
@@ -4748,6 +4829,9 @@ msgstr ""
 "3：自上次测试以来的分钟数，饱和在最大值。 字节4-5：测试的生命周期数，在电源周期不增加，饱和在最大值。 "
 "标准化值在测试失败时设置为1，如果电容器在过高的温度条件下测试，则设置为11，否则设置为100。"
 
+msgid "Latency"
+msgstr "延时"
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr "最新测试版：%s"
@@ -4807,6 +4891,12 @@ msgid ""
 msgstr ""
 "限制数据集与其所有后代的可用空间。此属性强硬限制可用空间量。这包括其所有后代，文件系统和快照占用的空间。请使用以下的后缀来指定大小（例如'k'，'KB'，"
 "'M'，'Gb' 等）。"
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr "限制数据集及其后代可以消耗的空间量。"
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr "限制数据集可以消耗的空间量。"
 
 msgid "Link Down Action"
 msgstr "链接关闭操作"
@@ -4914,6 +5004,9 @@ msgstr "将此规则处理的数据包记录到syslog。"
 
 msgid "Logarithmic Scaling"
 msgstr "对数缩放"
+
+msgid "Logbias"
+msgstr "Logbias"
 
 msgid "Logical Block"
 msgstr "逻辑块"
@@ -5293,6 +5386,9 @@ msgid ""
 "issues."
 msgstr "多个DLNA / UPnP服务处于活动状态。 此配置可能会导致问题。"
 
+msgid "Most"
+msgstr "大多数"
+
 msgid "Mount Point"
 msgstr "挂载点"
 
@@ -5512,6 +5608,9 @@ msgstr "无IPMI传感器数据可用。"
 msgid "No Initiator Group has been configured."
 msgstr "未配置启动器组。"
 
+msgid "No Parity"
+msgstr "不相等"
+
 msgid "No Portal Group has been configured."
 msgstr "未配置任何门户组。"
 
@@ -5593,6 +5692,9 @@ msgstr "未选择任何虚拟设备"
 msgid "Noallow - Only inherit deny entries"
 msgstr "不允许 - 仅继承拒绝条目"
 
+msgid "Noauto"
+msgstr "Noauto"
+
 msgid "Node A IP address"
 msgstr "A节点的IP地址"
 
@@ -5653,6 +5755,9 @@ msgstr "无"
 msgid "Normal"
 msgstr "正常"
 
+msgid "Normalization"
+msgstr "正常化"
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -5677,11 +5782,6 @@ msgstr "找不到路径。"
 
 msgid "Note"
 msgstr "提示"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr "注意：按住Ctrl键（或在Mac上按住command键）可以选择和取消选择几分钟，几小时，几天或几个月。"
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6342,6 +6442,10 @@ msgstr "协议"
 msgid "Protocol"
 msgstr "协议"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr "向ZFS提供有关在此数据集中处理同步请求的提示。"
+
 msgid "Provider"
 msgstr "提供者"
 
@@ -6587,6 +6691,15 @@ msgstr "递归"
 msgid "Recycle Bin"
 msgstr "回收站"
 
+msgid "Redundant Metadata"
+msgstr "冗余元数据"
+
+msgid "Refquota"
+msgstr "Refquota"
+
+msgid "Refreservation"
+msgstr "Refreservation"
+
 msgid "Refresh"
 msgstr "刷新"
 
@@ -6683,9 +6796,6 @@ msgid ""
 "Report if the temperature is greater or equal than N degrees Celsius. Set to "
 "0 to disable this report."
 msgstr "如果温度差异大于或等于N 的指定温度（摄氏）便报告。如果设置为 0 则关闭这项功能。"
-
-msgid "Reports"
-msgstr "报告"
 
 msgid "Require authentication."
 msgstr "需要认证。"
@@ -6852,8 +6962,8 @@ msgstr "规则编号"
 msgid "Rules"
 msgstr "规则"
 
-msgid "Run now"
-msgstr "立刻执行"
+msgid "Run Now"
+msgstr "立刻运行"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "运行而不需要远程rsync进程。 （默认禁用）"
@@ -6883,6 +6993,12 @@ msgstr "S.M.A.R.T. 额外选项"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. 记录"
+
+msgid "SHA-256, Verify"
+msgstr "SHA-256，验证"
+
+msgid "SHA-512, Verify"
+msgstr "SHA-512，验证"
 
 msgid "SHA256, Verify"
 msgstr "SHA256，验证"
@@ -7067,7 +7183,7 @@ msgstr "如果要安装GPT格式化的驱动器，请选择“GPT分区”"
 msgid ""
 "Select 'MBR partition' default partition if you want to mount a UFS "
 "formatted drive or if you want to import disks from other OS."
-msgstr "如果要安装UFS格式化的驱动器，或者要从其他操作系统导入磁盘，请选择“MBR partition”默认分区。"
+msgstr "如果要挂载UFS格式化的驱动器，或者要从其他操作系统导入磁盘，请选择“MBR partition”默认分区。"
 
 msgid "Select Cache Device"
 msgstr "选择缓存设备"
@@ -7272,6 +7388,9 @@ msgstr "服务被启用"
 msgid "Services"
 msgstr "服务"
 
+msgid "Set UID"
+msgstr "设置 UID"
+
 msgid "Set additional group memberships for this account."
 msgstr "设置此帐户的其他群组资格。"
 
@@ -7432,6 +7551,9 @@ msgid ""
 "on your disks.)"
 msgstr "设定启动器的硬盘容量。 （最多到8EiB=8388608TiB。实际大小取决于您的磁盘容量）。"
 
+msgid "Skein, Verify"
+msgstr "Skein，验证"
+
 msgid "Skew"
 msgstr "级值"
 
@@ -7458,6 +7580,9 @@ msgstr "SmartBoost"
 
 msgid "SmartTrim"
 msgstr "SmartTrim"
+
+msgid "Snapdir"
+msgstr "Snapdir"
 
 msgid "Snapshot"
 msgstr "快照"
@@ -7594,6 +7719,9 @@ msgstr "拆分请求"
 msgid "Standard"
 msgstr "标准"
 
+msgid "Standard Reports"
+msgstr "标准报告"
+
 msgid "Standby"
 msgstr "待用"
 
@@ -7685,9 +7813,6 @@ msgstr "周日"
 
 msgid "Sunday"
 msgstr "周日"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "星期日 星期一 星期二 星期三 星期四 星期五 星期六"
 
 msgid "Suppress non-error messages."
 msgstr "只显示错误讯息。"
@@ -8417,6 +8542,15 @@ msgid ""
 msgstr "数据集保证的最小空间。 ，请使用以下的后缀来指定容量大小（如：'k'，'KB'，'M'，'Gb' 等）"
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr "数据集及其后代保证的最小空间量。"
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr "对数据集保证的最小空间量，不包括其后代。"
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr "设定PASV 式数据连接的最小端口（0 =使用任何端口）。"
@@ -8620,6 +8754,9 @@ msgstr "上传的文件大小超过在php.ini 里指定的upload_max_filesize �
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "只上传了部分的文件。"
+
+msgid "The value is invalid."
+msgstr "该值无效。"
 
 msgid "The value of the variable."
 msgstr "变量的值。"
@@ -9049,6 +9186,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr "这将支持流.jpg和.mp3文件到支持HMO的TiVo。"
 
+msgid "Throughput"
+msgstr "吞吐量"
+
 msgid "Thu"
 msgstr "周四"
 
@@ -9110,11 +9250,11 @@ msgstr "标题速度"
 msgid "TitleSpeed"
 msgstr "标题滚动速度"
 
+msgid "To Email"
+msgstr "To Email"
+
 msgid "To Email Address"
 msgstr "到Email地址"
-
-msgid "To e-mail"
-msgstr "发送电​​邮"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -9416,6 +9556,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr "仅限UTF-8"
 
 msgid "Ukrainian"
 msgstr "乌克兰语"
@@ -9775,8 +9918,14 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr "虚拟化"
 
+msgid "Visible"
+msgstr "可见的"
+
 msgid "Volume"
 msgstr "卷（Volume）"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr "卷 - 逻辑卷。 可以导出为原始或块设备。"
 
 msgid "Volume Label"
 msgstr "卷标"
@@ -9786,6 +9935,9 @@ msgstr "卷模式"
 
 msgid "Volume Name"
 msgstr "卷名"
+
+msgid "Volume Size"
+msgstr "卷大小"
 
 msgid "Volume Size Limit"
 msgstr "卷大小限制"
@@ -9896,8 +10048,8 @@ msgstr "周三"
 msgid "Week Days"
 msgstr "平日"
 
-msgid "Week days"
-msgstr "平日"
+msgid "Weekdays"
+msgstr "工作日"
 
 msgid "Western Digital attribute."
 msgstr "西部数据属性。"
@@ -10117,9 +10269,8 @@ msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr "ZFS卷块大小。 此值无法在创建后更改。"
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
-msgstr "ZFS卷大小。 要指定大小，请使用以下可读的后缀（例如，'K'，'KB'，'M'，'GB'等）。"
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
+msgstr "ZFS卷大小。 你可以使用可读的后缀，如K，KB，M，GB。"
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -10251,3 +10402,66 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 十一月 十二月"
+
+#~ msgid "Reports"
+#~ msgstr "报告"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "星期日 星期一 星期二 星期三 星期四 星期五 星期六"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "未找到自定义脚本"
+
+#~ msgid "Delete algorithm"
+#~ msgstr "删除演算法"
+
+#~ msgid "Run now"
+#~ msgstr "立刻执行"
+
+#~ msgid "To e-mail"
+#~ msgstr "发送电​​邮"
+
+#~ msgid "Week days"
+#~ msgstr "平日"
+
+#~ msgid "After"
+#~ msgstr "在此之后"
+
+#~ msgid "Before"
+#~ msgstr "之前"
+
+#~ msgid "Delay"
+#~ msgstr "延迟"
+
+#~ msgid "During"
+#~ msgstr "期间"
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+#~ msgstr "ZFS卷大小。 要指定大小，请使用以下可读的后缀（例如，'K'，'KB'，'M'，'GB'等）。"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr "注意：按住Ctrl键（或在Mac上按住command键）可以选择和取消选择几分钟，几小时，几天或几个月。"
+
+#~ msgid ""
+#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
+#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
+#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
+#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
+#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
+#~ msgstr ""
+#~ "控制用于此卷的压缩算法。 “LZ4”是现在推荐的压缩算法。 "
+#~ "如果功能标志lz4_compress处于活动状态，则将压缩设置为“开”，使用LZ4压缩算法，否则使用LZJB。 你可以使用值“GZIP-"
+#~ "N”来指定“GZIP”级别，其中N是从1（最快）到9（最佳压缩比）的整数。 目前，“GZIP”相当于“GZIP-6”。"
+
+#~ msgid "Invalid option."
+#~ msgstr "选项无效。"

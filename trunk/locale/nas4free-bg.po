@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:12+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:08+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
 "X-Poedit-Language: Bulgarian\n"
@@ -160,17 +160,26 @@ msgstr "*** Внесен дубликат ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "[0] - отключена, [1;255] - включена с определена дълбочина."
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "1 или повече диска се изискват, за да се създаде JBOD том."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 или повече диска са необходими, за да се създаде RAID-1 том."
 
+msgid "2"
+msgstr ""
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 или повече диска са необходими, за да се създаде RAID-0 том."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 или повече диска са необходими, за да се създаде RAID-1 том."
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 или повече диска са необходими, за да се създаде RAID-5 том."
@@ -362,6 +371,9 @@ msgstr "Режим на достъп"
 
 msgid "Access Restrictions"
 msgstr "Ограничения за достъп"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "Време за достъп (atime)"
@@ -606,9 +618,6 @@ msgstr ""
 
 msgid "Afrikaans"
 msgstr ""
-
-msgid "After"
-msgstr "След"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -1141,9 +1150,6 @@ msgstr "Температура на батерията"
 msgid "Battery voltage"
 msgstr "Напрежение на батерията"
 
-msgid "Before"
-msgstr "Преди"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 "Преди - Файл-премахване ще бъде направено преди да започне трансфера."
@@ -1385,6 +1391,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr "Калибровка на батерията"
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr "Не може да се намери UFS ID"
 
@@ -1469,6 +1478,9 @@ msgstr ""
 
 msgid "Check the list of available drivers"
 msgstr "Проверете списъка с налични драйвери"
+
+msgid "Checksum"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "Китайски (Опростен)"
@@ -1721,18 +1733,24 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
 
 msgid "Controls the dedup method."
 msgstr "Controls the dedup method."
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
+msgstr ""
+
+msgid "Controls the type of the ZFS dataset."
 msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
@@ -1741,10 +1759,32 @@ msgstr ""
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
+msgstr ""
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1758,6 +1798,9 @@ msgstr ""
 "disabled."
 
 msgid "Conveyance Self-Test"
+msgstr ""
+
+msgid "Copies"
 msgstr ""
 
 msgid "Core"
@@ -2012,17 +2055,20 @@ msgstr "Текуща стойност на истинската мощност(�
 msgid "Custom"
 msgstr "Потребителски"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr "Перснализирано устройство"
 
 msgid "Custom script"
 msgstr "Потребителски скрипт"
 
-msgid "Custom script is not found."
-msgstr "Не е намерен потребителски скрипт."
-
 msgid "Custom script is required."
 msgstr "Изисква се потребителски скрипт."
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "Чешки"
@@ -2093,6 +2139,9 @@ msgstr "Директория с база данни"
 msgid "Dataset"
 msgstr "Масив от данни"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr ""
 
@@ -2143,6 +2192,9 @@ msgstr ""
 msgid "Dedup"
 msgstr "Премахни дупликатите"
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "По подразбиране"
 
@@ -2174,11 +2226,11 @@ msgstr ""
 msgid "Define directories/URL's that require authentication."
 msgstr ""
 
-msgid "Defines when the shutdown is initiated."
+msgid "Defines the checksum algorithm."
 msgstr ""
 
-msgid "Delay"
-msgstr "Забавяне"
+msgid "Defines when the shutdown is initiated."
+msgstr ""
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2195,6 +2247,9 @@ msgstr "Премахни"
 
 msgid "Delete ARP entry"
 msgstr "изтрий ARP позицията"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "Delete Host"
@@ -2285,9 +2340,6 @@ msgstr "Изтрий URL"
 
 msgid "Delete VM"
 msgstr "Изтрий VM"
-
-msgid "Delete algorithm"
-msgstr "Изтрий алгоритъм"
 
 msgid "Delete all rules"
 msgstr "Изтрий всички правила"
@@ -3008,9 +3060,6 @@ msgstr "Дуплекс"
 msgid "Duplicate mount point name."
 msgstr ""
 
-msgid "During"
-msgstr "По време на"
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3488,7 +3537,13 @@ msgstr ""
 msgid "Enter Command"
 msgstr ""
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
+msgstr ""
+
+msgid "Enter Subject"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3636,6 +3691,9 @@ msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg install packagename."
+msgstr ""
+
+msgid "Exec"
 msgstr ""
 
 msgid "Execute"
@@ -3842,6 +3900,11 @@ msgid "File Path"
 msgstr ""
 
 msgid "File System"
+msgstr ""
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
 msgstr ""
 
 msgid "File Transfer Protocol"
@@ -4199,6 +4262,9 @@ msgstr "Помощ"
 msgid "Hiadaptive (High Performance)"
 msgstr ""
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr ""
 
@@ -4419,6 +4485,9 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr ""
 
@@ -4470,6 +4539,23 @@ msgstr ""
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
+msgstr ""
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
 msgstr ""
 
 msgid "Info"
@@ -4666,9 +4752,6 @@ msgstr ""
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
-msgid "Invalid option."
-msgstr ""
-
 msgid "Invalid username or password."
 msgstr ""
 
@@ -4716,18 +4799,14 @@ msgstr ""
 msgid "JBOD Maintenance"
 msgstr ""
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr ""
 
 msgid "January"
 msgstr ""
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Януари Февруари Март Април Май Юни Юли Август Септември Октомври Ноември "
-"Декември"
 
 msgid "Japanese"
 msgstr ""
@@ -4848,6 +4927,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr ""
@@ -4904,6 +4986,12 @@ msgid ""
 "all space consumed by descendants, including file systems and snapshots. To "
 "specify the size use the following human-readable suffixes (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
+msgstr ""
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
 msgstr ""
 
 msgid "Link Down Action"
@@ -5009,6 +5097,9 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 
 msgid "Logarithmic Scaling"
+msgstr ""
+
+msgid "Logbias"
 msgstr ""
 
 msgid "Logical Block"
@@ -5390,6 +5481,9 @@ msgid ""
 "issues."
 msgstr ""
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "Място за монтиране"
 
@@ -5609,6 +5703,9 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr ""
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr ""
 
@@ -5690,6 +5787,9 @@ msgstr ""
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr ""
 
@@ -5750,6 +5850,9 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -5772,13 +5875,6 @@ msgstr ""
 
 msgid "Note"
 msgstr "Забележка"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6437,6 +6533,10 @@ msgstr ""
 msgid "Protocol"
 msgstr ""
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr ""
 
@@ -6679,6 +6779,15 @@ msgstr ""
 msgid "Recycle Bin"
 msgstr ""
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr ""
 
@@ -6774,9 +6883,6 @@ msgstr ""
 msgid ""
 "Report if the temperature is greater or equal than N degrees Celsius. Set to "
 "0 to disable this report."
-msgstr ""
-
-msgid "Reports"
 msgstr ""
 
 msgid "Require authentication."
@@ -6944,7 +7050,7 @@ msgstr ""
 msgid "Rules"
 msgstr ""
 
-msgid "Run now"
+msgid "Run Now"
 msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
@@ -6974,6 +7080,12 @@ msgid "S.M.A.R.T. extra options"
 msgstr ""
 
 msgid "S.M.A.R.T. log"
+msgstr ""
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
 msgstr ""
 
 msgid "SHA256, Verify"
@@ -7363,6 +7475,9 @@ msgstr ""
 msgid "Services"
 msgstr "Услуги"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr ""
 
@@ -7522,6 +7637,9 @@ msgid ""
 "on your disks.)"
 msgstr ""
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr ""
 
@@ -7547,6 +7665,9 @@ msgid "SmartBoost"
 msgstr ""
 
 msgid "SmartTrim"
+msgstr ""
+
+msgid "Snapdir"
 msgstr ""
 
 msgid "Snapshot"
@@ -7683,6 +7804,9 @@ msgstr ""
 msgid "Standard"
 msgstr ""
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr ""
 
@@ -7773,9 +7897,6 @@ msgstr ""
 
 msgid "Sunday"
 msgstr ""
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "Неделя Понеделник Вторник Сряда Четвъртък Петък Събота"
 
 msgid "Suppress non-error messages."
 msgstr ""
@@ -8504,6 +8625,15 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
@@ -8701,6 +8831,9 @@ msgid ""
 msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
+msgstr ""
+
+msgid "The value is invalid."
 msgstr ""
 
 msgid "The value of the variable."
@@ -9122,6 +9255,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr ""
 
@@ -9183,10 +9319,10 @@ msgstr ""
 msgid "TitleSpeed"
 msgstr ""
 
-msgid "To Email Address"
+msgid "To Email"
 msgstr ""
 
-msgid "To e-mail"
+msgid "To Email Address"
 msgstr ""
 
 msgid ""
@@ -9487,6 +9623,9 @@ msgstr ""
 
 msgid "URL"
 msgstr "Уеб адрес"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr ""
@@ -9847,7 +9986,13 @@ msgstr ""
 msgid "Virtualization"
 msgstr ""
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
+msgstr ""
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
 msgstr ""
 
 msgid "Volume Label"
@@ -9858,6 +10003,9 @@ msgstr ""
 
 msgid "Volume Name"
 msgstr "Име на диск"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr ""
@@ -9968,7 +10116,7 @@ msgstr ""
 msgid "Week Days"
 msgstr ""
 
-msgid "Week days"
+msgid "Weekdays"
 msgstr ""
 
 msgid "Western Digital attribute."
@@ -10190,8 +10338,7 @@ msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
 
 msgid "Zeroconf/Bonjour"
@@ -10324,3 +10471,38 @@ msgstr "до"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "Януари Февруари Март Април Май Юни Юли Август Септември Октомври Ноември "
+#~ "Декември"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "Неделя Понеделник Вторник Сряда Четвъртък Петък Събота"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Не е намерен потребителски скрипт."
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Изтрий алгоритъм"
+
+#~ msgid "After"
+#~ msgstr "След"
+
+#~ msgid "Before"
+#~ msgstr "Преди"
+
+#~ msgid "Delay"
+#~ msgstr "Забавяне"
+
+#~ msgid "During"
+#~ msgstr "По време на"
