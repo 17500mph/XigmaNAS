@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2017-05-25 10:14+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -183,17 +183,26 @@ msgstr "*** Duplicat importat ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=dezactivat, 1-255=listă activă de comenzi cu lungimea specificată."
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "Este nevoie de cel puțin un disc pentru a crea un volum JBOD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Este nevoie de cel puțin un disc pentru a crea un volum RAID-1."
 
+msgid "2"
+msgstr ""
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Este nevoie de cel puțin două discuri pentru a crea un volum RAID-0."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Este nevoie de cel puțin două discuri pentru a crea un volum RAID-1."
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Este nevoie de cel puțin trei discuri pentru a crea un volum RAID-5."
@@ -398,6 +407,9 @@ msgstr "Mod acces"
 
 msgid "Access Restrictions"
 msgstr "Restricții Acces"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "Timp Acces (atime)"
@@ -642,9 +654,6 @@ msgstr "Schimbare anunț"
 
 msgid "Afrikaans"
 msgstr "Africană"
-
-msgid "After"
-msgstr "După"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -1192,9 +1201,6 @@ msgstr "Temperatură acumulator"
 msgid "Battery voltage"
 msgstr "Tensiune acumulator"
 
-msgid "Before"
-msgstr "Înainte"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Înainte - Fișierele vor fi șterse înainte de începerea transferului."
 
@@ -1435,6 +1441,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr "Calibrare acumulator"
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr "ID UFS inaccesibil."
 
@@ -1521,6 +1530,9 @@ msgstr ""
 
 msgid "Check the list of available drivers"
 msgstr "Verifică lista actualizată a driverelor"
+
+msgid "Checksum"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "Chineză (Simplificată)"
@@ -1786,32 +1798,47 @@ msgstr ""
 "Valoarea implicită este 'GZIP-6'."
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
-"Controlează algoritmul de compresie folosit pentru acest volum, 'LZ4' fiind "
-"algoritmul recomandat. Setarea opțiunii pe 'On' va determina utilizarea "
-"algoritmului LZ4 dacă și opțiunea flag lz4_compress este activă, altfel va "
-"fi utilizat algoritmul LZJB. Puteți defini și nivelul de compresie 'GZIP' "
-"folosind valoarea 'GZIP-N', unde N este un întreg care poate lua valori "
-"între 1 (cel mai rapid) până la 9 (cea mai bună compresie). Nivelul implicit "
-"de compresie este 'GZIP-6'."
 
 msgid "Controls the dedup method."
 msgstr "Controlează metoda dedup"
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
 msgstr "Controlează consumul energetic."
+
+msgid "Controls the type of the ZFS dataset."
+msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr "Controlează ce va fi stocat în cache-ul primar (ARC)."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr "Controlează ce va fi stocat în cache-ul secundar (L2ARC)."
+
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -1821,6 +1848,12 @@ msgstr ""
 "Controlează dacă timpul de acces este actualizat la citirea fișierului. "
 "Dezactivarea acestei opțiuni reduce traficul de date putând duce la creșteri "
 "importante de viteză."
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controlează dacă acest set de date poate fi modificat."
@@ -1834,6 +1867,9 @@ msgstr ""
 
 msgid "Conveyance Self-Test"
 msgstr "Auto-test detaliat"
+
+msgid "Copies"
+msgstr ""
 
 msgid "Core"
 msgstr "Nucleul"
@@ -2102,17 +2138,20 @@ msgstr "Valoarea curentă pentru puterea reală (Wați)"
 msgid "Custom"
 msgstr "Personalizat"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr "Dispozitiv utilizator"
 
 msgid "Custom script"
 msgstr "Script personalizat"
 
-msgid "Custom script is not found."
-msgstr "Scriptul personalizat nu poate fi găsit."
-
 msgid "Custom script is required."
 msgstr "Scriptul personalizat este necesar."
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "Cehă"
@@ -2183,6 +2222,9 @@ msgstr "Folderul bazei de date"
 msgid "Dataset"
 msgstr "Set de date"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr "Setul de date este marcat pentru ștergere"
 
@@ -2235,6 +2277,9 @@ msgstr "Parolă decriptare"
 msgid "Dedup"
 msgstr "Dedup"
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "Implicit"
 
@@ -2272,11 +2317,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "Definiți directoarele/URL-urile care necesită autentificare"
 
+msgid "Defines the checksum algorithm."
+msgstr ""
+
 msgid "Defines when the shutdown is initiated."
 msgstr "Configurează momentul când se inițiază oprirea sistemului."
-
-msgid "Delay"
-msgstr "Întârziere"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2297,6 +2342,9 @@ msgstr "Ștergere"
 
 msgid "Delete ARP entry"
 msgstr "Ștergere intrare ARP"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "Ștergere Sistem"
@@ -2387,9 +2435,6 @@ msgstr "Ștergere URL"
 
 msgid "Delete VM"
 msgstr "Ștergere VM"
-
-msgid "Delete algorithm"
-msgstr "Ștergere algoritm"
 
 msgid "Delete all rules"
 msgstr "Șterge toate regulile"
@@ -3132,9 +3177,6 @@ msgstr "Duplex"
 msgid "Duplicate mount point name."
 msgstr "Duplicat nume punct montare."
 
-msgid "During"
-msgstr "În timpul"
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3627,8 +3669,14 @@ msgstr "Compatibilitate extinsă cu serverul Netatalk AFP."
 msgid "Enter Command"
 msgstr "Introducere comandă"
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
 msgstr "Introduceți parola"
+
+msgid "Enter Subject"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Introduceți un comentariu"
@@ -3803,6 +3851,9 @@ msgstr "Selecție eveniment"
 
 msgid "Example: pkg install packagename."
 msgstr "Exemplu: nume pachet pentru instalare."
+
+msgid "Exec"
+msgstr ""
 
 msgid "Execute"
 msgstr "Executare"
@@ -4016,6 +4067,11 @@ msgstr "Cale fișier"
 
 msgid "File System"
 msgstr "Sistem de fișiere"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr ""
 
 msgid "File Transfer Protocol"
 msgstr "Protocol Transfer Fișiere"
@@ -4389,6 +4445,9 @@ msgstr "Asistență"
 msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive (Înaltă performanță)"
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr "Ascudere grupuri implicite"
 
@@ -4644,6 +4703,9 @@ msgstr ""
 "Dacă această opțiune este activată imaginile de siguranță ale sistemului vor "
 "fi afişate in folderul .zfs."
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr "Import"
 
@@ -4700,6 +4762,23 @@ msgstr ""
 "Indică viața aproximativă rămasă a discului SSD bazată pe ciclurile de "
 "programare/ștergere sau blocurile de memorie flash disponibile pentru "
 "utilizare."
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
+msgstr ""
 
 msgid "Info"
 msgstr "Info"
@@ -4909,9 +4988,6 @@ msgstr ""
 "Dimensiune maximă bloc invalidă. Valorile permise se încadrează între %d și "
 "%d."
 
-msgid "Invalid option."
-msgstr "Opțiune invalidă."
-
 msgid "Invalid username or password."
 msgstr "Nume utilizator sau parolă invalide."
 
@@ -4970,18 +5046,14 @@ msgstr "Informații & Stare JBOD"
 msgid "JBOD Maintenance"
 msgstr "Mentenanță JBOD"
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr "Ian"
 
 msgid "January"
 msgstr "Ianuarie"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Ianuarie Februarie Martie Aprilie Mai Iunie Iulie August Septembrie "
-"Octombrie Noiembrie Decembrie"
 
 msgid "Japanese"
 msgstr "Japoneză"
@@ -5113,6 +5185,9 @@ msgstr ""
 "erori la test sau 11 dacă capacitorul a fost testat în condiții de "
 "temperatură excesivă, în rest valoarea normală este 100."
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr "Ultuma versiune beta: %s"
@@ -5176,6 +5251,12 @@ msgstr ""
 "tot spațiul consumat de descendenți - sistemul de fișiere sistem și imagini "
 "sistem (snapshot). Pentru a specifica dimensiunea spațiului maxim utilizabil "
 "puteți folosi și sufixe gen 'k', 'KB', 'M', 'Gb', etc.."
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr ""
 
 msgid "Link Down Action"
 msgstr "Dezactivare conexiune"
@@ -5287,6 +5368,9 @@ msgstr "Memorare pachete gestionate de această regulă în syslog."
 
 msgid "Logarithmic Scaling"
 msgstr "Scală logaritmică"
+
+msgid "Logbias"
+msgstr ""
 
 msgid "Logical Block"
 msgstr "Bloc logic"
@@ -5680,6 +5764,9 @@ msgstr ""
 "Sunt active mai multe servicii DLNA/IPnP. Această configurație poate crea "
 "probleme."
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "Punct Montare"
 
@@ -5910,6 +5997,9 @@ msgstr "Niciun Senzor IPMI disponibil."
 msgid "No Initiator Group has been configured."
 msgstr "Niciun Grup inițiator nu a fost configurat."
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr "Niciun Grup portal nu a fost configurat."
 
@@ -5993,6 +6083,9 @@ msgstr "Nu a fost selectat niciun dispozitiv virtual"
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Doar intrări de refuz moștenite"
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr "Adresă IP nod A"
 
@@ -6053,6 +6146,9 @@ msgstr "Niciunul (niciuna)"
 msgid "Normal"
 msgstr "Normal"
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -6081,13 +6177,6 @@ msgstr "Calea nu a fost găsită."
 
 msgid "Note"
 msgstr "Obs."
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Atenție: Folosiți Ctrl-click (sau command-click pe Mac) pentru "
-"selectare/deselectare minute, ore, zile și luni."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6779,6 +6868,10 @@ msgstr "Protocol"
 msgid "Protocol"
 msgstr "Protocol"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr "Furnizor"
 
@@ -7032,6 +7125,15 @@ msgstr "Recursiv"
 msgid "Recycle Bin"
 msgstr "Recycle Bin"
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr "Reactualizare"
 
@@ -7136,9 +7238,6 @@ msgid ""
 msgstr ""
 "Raportează dacă temperatura este mai mare sau cel puțin egală cu temperatura "
 "de N grade Celsius. Introduceți valoarea 0 pentru a dezactiva raportul."
-
-msgid "Reports"
-msgstr "Rapoarte"
 
 msgid "Require authentication."
 msgstr "Necesită autentificare."
@@ -7308,8 +7407,8 @@ msgstr "Numărul regulei"
 msgid "Rules"
 msgstr "Reguli"
 
-msgid "Run now"
-msgstr "Execută acum"
+msgid "Run Now"
+msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "Rulare fără activare daemon remote sync. (Implicit dezactivat)"
@@ -7341,6 +7440,12 @@ msgstr "Extra opțiuni S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Jurnal S.M.A.R.T."
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
+msgstr ""
 
 msgid "SHA256, Verify"
 msgstr "SHA256, Verificare"
@@ -7754,6 +7859,9 @@ msgstr "Serviciu activ"
 msgid "Services"
 msgstr "Servicii"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr "Definiți grupuri adiționale pentru acest cont."
 
@@ -7933,6 +8041,9 @@ msgstr ""
 "Dimensiune oferită inițiatorului. (maxim 8EiB=8388608TiB, dimensiunea reală "
 "depinzînd de mărimea discurilor dumneavoastră)."
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr "Skew"
 
@@ -7959,6 +8070,9 @@ msgstr "SmartBoost"
 
 msgid "SmartTrim"
 msgstr "SmartTrim"
+
+msgid "Snapdir"
+msgstr ""
 
 msgid "Snapshot"
 msgstr "Imagine sistem"
@@ -8114,6 +8228,9 @@ msgstr "Cerere splitare"
 msgid "Standard"
 msgstr "Standard"
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr "În așteptare"
 
@@ -8208,9 +8325,6 @@ msgstr "Dum"
 
 msgid "Sunday"
 msgstr "Duminică"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "Duminică Luni Marți Miercuri Joi Vineri Sîmbătă"
 
 msgid "Suppress non-error messages."
 msgstr "Afișare doar mesaje de eroare."
@@ -9022,6 +9136,15 @@ msgstr ""
 "sufixe (ex. 'k', 'KB', 'M', 'Gb', etc.)."
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr "Portul minim alocat pentru modul de conectare PASV (0 = orice port)."
@@ -9246,6 +9369,9 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Fișierul a fost parțial încărcat."
+
+msgid "The value is invalid."
+msgstr ""
 
 msgid "The value of the variable."
 msgstr "Valoarea variabilei."
@@ -9790,6 +9916,9 @@ msgstr ""
 "Activează suportul pentru streaming-ul fișierelor .jpg și .mp3 către sisteme "
 "TiVo care au suport HMO."
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr "Joi"
 
@@ -9853,11 +9982,11 @@ msgstr "Viteză titlu"
 msgid "TitleSpeed"
 msgstr "Viteză Text"
 
+msgid "To Email"
+msgstr ""
+
 msgid "To Email Address"
 msgstr "Adresă de email destinație"
-
-msgid "To e-mail"
-msgstr "Către email"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -10184,6 +10313,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr "Ucraineană"
@@ -10575,8 +10707,14 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr "Virtualizare"
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
 msgstr "Volum"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr ""
 
 msgid "Volume Label"
 msgstr "Etichetă volum"
@@ -10586,6 +10724,9 @@ msgstr "Mod volum"
 
 msgid "Volume Name"
 msgstr "Nume Volum"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr "Capacitate limita a volumului"
@@ -10700,8 +10841,8 @@ msgstr "Miercuri"
 msgid "Week Days"
 msgstr "Zilele săptămânii"
 
-msgid "Week days"
-msgstr "Zilele săptămînii"
+msgid "Weekdays"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr "Contor Western Digital"
@@ -10957,11 +11098,8 @@ msgstr ""
 "crearea volumului."
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
-"Dimensiune volum ZFS. Pentru definirea dimensiuni puteți folosi și "
-"prescurtări gen 'K', 'KB', 'M', 'GB', etc."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -11095,3 +11233,76 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "Ianuarie Februarie Martie Aprilie Mai Iunie Iulie August Septembrie "
+#~ "Octombrie Noiembrie Decembrie"
+
+#~ msgid "Reports"
+#~ msgstr "Rapoarte"
+
+#~ msgid "Week days"
+#~ msgstr "Zilele săptămînii"
+
+#~ msgid "Run now"
+#~ msgstr "Execută acum"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Scriptul personalizat nu poate fi găsit."
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Ștergere algoritm"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Atenție: Folosiți Ctrl-click (sau command-click pe Mac) pentru "
+#~ "selectare/deselectare minute, ore, zile și luni."
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "Duminică Luni Marți Miercuri Joi Vineri Sîmbătă"
+
+#~ msgid "To e-mail"
+#~ msgstr "Către email"
+
+#~ msgid "After"
+#~ msgstr "După"
+
+#~ msgid "Before"
+#~ msgstr "Înainte"
+
+#~ msgid "Delay"
+#~ msgstr "Întârziere"
+
+#~ msgid "During"
+#~ msgstr "În timpul"
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+#~ msgstr ""
+#~ "Dimensiune volum ZFS. Pentru definirea dimensiuni puteți folosi și "
+#~ "prescurtări gen 'K', 'KB', 'M', 'GB', etc."
+
+#~ msgid ""
+#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
+#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
+#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
+#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
+#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
+#~ msgstr ""
+#~ "Controlează algoritmul de compresie folosit pentru acest volum, 'LZ4' fiind "
+#~ "algoritmul recomandat. Setarea opțiunii pe 'On' va determina utilizarea "
+#~ "algoritmului LZ4 dacă și opțiunea flag lz4_compress este activă, altfel va "
+#~ "fi utilizat algoritmul LZJB. Puteți defini și nivelul de compresie 'GZIP' "
+#~ "folosind valoarea 'GZIP-N', unde N este un întreg care poate lua valori "
+#~ "între 1 (cel mai rapid) până la 9 (cea mai bună compresie). Nivelul implicit "
+#~ "de compresie este 'GZIP-6'."
+
+#~ msgid "Invalid option."
+#~ msgstr "Opțiune invalidă."

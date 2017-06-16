@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -163,17 +163,26 @@ msgstr "*** uvožen duplikat ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=onemogočeno, 1-255=omogočeno pošiljanje ukazov z določeno globino."
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "Za izdelavo JBOD nosilca je potreben 1 ali več diskov."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Za izdelavo RAID-1 nosilca je potreben 1 ali več diskov."
 
+msgid "2"
+msgstr ""
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Za izdelavo RAID-0 nosilca sta potrebna 2 ali več diskov."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Za izdelavo RAID-1 nosilca sta potrebna 2 ali več diskov."
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Za izdelavo RAID-5 nosilca so potrebni 3 ali več diskov."
@@ -357,6 +366,9 @@ msgstr "Način dostopa"
 
 msgid "Access Restrictions"
 msgstr "Omejitve dostopa"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "Časovni dostop"
@@ -600,9 +612,6 @@ msgid "Advertisement Skew"
 msgstr ""
 
 msgid "Afrikaans"
-msgstr ""
-
-msgid "After"
 msgstr ""
 
 msgid "After - File-deletions will be done after the transfer has completed."
@@ -1104,9 +1113,6 @@ msgstr "Temperatura baterije"
 msgid "Battery voltage"
 msgstr "Napetost baterije"
 
-msgid "Before"
-msgstr "Pred"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
@@ -1338,6 +1344,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr ""
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr ""
 
@@ -1420,6 +1429,9 @@ msgid ""
 msgstr ""
 
 msgid "Check the list of available drivers"
+msgstr ""
+
+msgid "Checksum"
 msgstr ""
 
 msgid "Chinese (Simplified)"
@@ -1671,18 +1683,24 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
 
 msgid "Controls the dedup method."
 msgstr ""
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
+msgstr ""
+
+msgid "Controls the type of the ZFS dataset."
 msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
@@ -1691,10 +1709,32 @@ msgstr ""
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
+msgstr ""
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1706,6 +1746,9 @@ msgid ""
 msgstr ""
 
 msgid "Conveyance Self-Test"
+msgstr ""
+
+msgid "Copies"
 msgstr ""
 
 msgid "Core"
@@ -1912,17 +1955,20 @@ msgstr "Trenutna vrednost delovne moči (Watt)"
 msgid "Custom"
 msgstr "Po meri"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr ""
 
 msgid "Custom script"
 msgstr "Skripte po meri"
 
-msgid "Custom script is not found."
-msgstr "Ne najdem skripte po meri."
-
 msgid "Custom script is required."
 msgstr "Skripta po meri je zahtevana."
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "Češčina"
@@ -1993,6 +2039,9 @@ msgstr "Direktorij baze podatkov"
 msgid "Dataset"
 msgstr "Dataset"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr ""
 
@@ -2043,6 +2092,9 @@ msgstr ""
 msgid "Dedup"
 msgstr ""
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "Privzeto"
 
@@ -2074,11 +2126,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "Določite mape in povezave, ki zahtevajo prijavo."
 
+msgid "Defines the checksum algorithm."
+msgstr ""
+
 msgid "Defines when the shutdown is initiated."
 msgstr "Določite, kdaj je sprožen ponovni zagon."
-
-msgid "Delay"
-msgstr ""
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2095,6 +2147,9 @@ msgstr "Izbriši"
 
 msgid "Delete ARP entry"
 msgstr "Odstrani ARP vnos"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "Odstrani gostitelja"
@@ -2185,9 +2240,6 @@ msgstr "Izbriši URL"
 
 msgid "Delete VM"
 msgstr "Izbriši VM"
-
-msgid "Delete algorithm"
-msgstr "Pobriši algoritem"
 
 msgid "Delete all rules"
 msgstr "Pobriši vsa pravila"
@@ -2914,9 +2966,6 @@ msgstr "Duplex"
 msgid "Duplicate mount point name."
 msgstr "Podvojeno ime priklopa."
 
-msgid "During"
-msgstr ""
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3396,7 +3445,13 @@ msgstr ""
 msgid "Enter Command"
 msgstr ""
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
+msgstr ""
+
+msgid "Enter Subject"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3550,6 +3605,9 @@ msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg install packagename."
+msgstr ""
+
+msgid "Exec"
 msgstr ""
 
 msgid "Execute"
@@ -3763,6 +3821,11 @@ msgstr "Pot do datoteke"
 
 msgid "File System"
 msgstr "Datotečni sistem"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr ""
 
 msgid "File Transfer Protocol"
 msgstr "Protokol prenosa datotek"
@@ -4120,6 +4183,9 @@ msgstr "Pomoč"
 msgid "Hiadaptive (High Performance)"
 msgstr ""
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr ""
 
@@ -4356,6 +4422,9 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr "Uvoz"
 
@@ -4407,6 +4476,23 @@ msgstr ""
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
+msgstr ""
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
 msgstr ""
 
 msgid "Info"
@@ -4605,9 +4691,6 @@ msgstr "Napačen format datoteke."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
-msgid "Invalid option."
-msgstr ""
-
 msgid "Invalid username or password."
 msgstr "Napačno uporabniško ime ali geslo"
 
@@ -4655,18 +4738,14 @@ msgstr ""
 msgid "JBOD Maintenance"
 msgstr ""
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr "jan"
 
 msgid "January"
 msgstr "januar"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"januar februar marec april maj junij julij avgust september oktober november "
-"december"
 
 msgid "Japanese"
 msgstr "Japonščina"
@@ -4787,6 +4866,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr ""
@@ -4847,6 +4929,12 @@ msgstr ""
 "Omeji porabo prostora za dataset. Ta nastavitev nastavi trdo omejitev "
 "prostora. Uporabite naslednje pripone, pri omejevanju prostora (npr. 'k', "
 "'KB', 'M', 'Gb', itd.)."
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr ""
 
 msgid "Link Down Action"
 msgstr ""
@@ -4956,6 +5044,9 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "Shranjuj pakete v syslog, ki se ujemajo s tem pravilom."
 
 msgid "Logarithmic Scaling"
+msgstr ""
+
+msgid "Logbias"
 msgstr ""
 
 msgid "Logical Block"
@@ -5338,6 +5429,9 @@ msgid ""
 "issues."
 msgstr ""
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "Točka priklopa"
 
@@ -5563,6 +5657,9 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr ""
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr ""
 
@@ -5644,6 +5741,9 @@ msgstr ""
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr ""
 
@@ -5704,6 +5804,9 @@ msgstr "Nič"
 msgid "Normal"
 msgstr "Običajno"
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -5729,13 +5832,6 @@ msgstr ""
 
 msgid "Note"
 msgstr "Opombe"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Opomba: Za izbor minut, ur, dnevov in mesecev uporabite Ctrl-klik (command-"
-"klik na MAC-u)."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6405,6 +6501,10 @@ msgstr "Protokol"
 msgid "Protocol"
 msgstr "Protokol"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr "Ponudnik"
 
@@ -6651,6 +6751,15 @@ msgstr "Rekurziven"
 msgid "Recycle Bin"
 msgstr ""
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr "Osveži"
 
@@ -6751,9 +6860,6 @@ msgid ""
 msgstr ""
 "Obvesti, če je temperatura višja, ali enaka N stopinj Celzija. Nastavite na "
 "0, da onemogočite to poročilo."
-
-msgid "Reports"
-msgstr "Poročila"
 
 msgid "Require authentication."
 msgstr "Zahteva prijavo."
@@ -6920,8 +7026,8 @@ msgstr "Številka pravila"
 msgid "Rules"
 msgstr "Pravila"
 
-msgid "Run now"
-msgstr "Zaženi sedaj"
+msgid "Run Now"
+msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
@@ -6951,6 +7057,12 @@ msgstr "S.M.A.R.T. dodatne možnosti"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. dnevnik"
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
+msgstr ""
 
 msgid "SHA256, Verify"
 msgstr ""
@@ -7344,6 +7456,9 @@ msgstr ""
 msgid "Services"
 msgstr "Storitve"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr "Nastavi dodatne skupine temu uporabniku."
 
@@ -7511,6 +7626,9 @@ msgstr ""
 "Velikost ponujena sprožitelju. (Največ 8EiB=8388608TiB. Dejanska velikost je "
 "odvisna od vaših diskov.)"
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr ""
 
@@ -7536,6 +7654,9 @@ msgid "SmartBoost"
 msgstr ""
 
 msgid "SmartTrim"
+msgstr ""
+
+msgid "Snapdir"
 msgstr ""
 
 msgid "Snapshot"
@@ -7676,6 +7797,9 @@ msgstr "Razdeli zahtevke"
 msgid "Standard"
 msgstr "Običajno"
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr "V pripravljenost"
 
@@ -7769,9 +7893,6 @@ msgstr "ned"
 
 msgid "Sunday"
 msgstr "nedelja"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "Nedelja Ponedeljek Torek Sreda Četrtek Petek Sobota"
 
 msgid "Suppress non-error messages."
 msgstr "Skrij sporočila, ki niso napake."
@@ -8506,6 +8627,15 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
@@ -8706,6 +8836,9 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Datoteka je bila prenešena le delno."
+
+msgid "The value is invalid."
+msgstr ""
 
 msgid "The value of the variable."
 msgstr ""
@@ -9127,6 +9260,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr ""
 
@@ -9188,11 +9324,11 @@ msgstr ""
 msgid "TitleSpeed"
 msgstr ""
 
+msgid "To Email"
+msgstr ""
+
 msgid "To Email Address"
 msgstr "Na elektronski naslov"
-
-msgid "To e-mail"
-msgstr ""
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -9492,6 +9628,9 @@ msgstr ""
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr ""
@@ -9852,7 +9991,13 @@ msgstr ""
 msgid "Virtualization"
 msgstr ""
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
+msgstr ""
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
 msgstr ""
 
 msgid "Volume Label"
@@ -9863,6 +10008,9 @@ msgstr ""
 
 msgid "Volume Name"
 msgstr "Ime polja"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr ""
@@ -9973,8 +10121,8 @@ msgstr ""
 msgid "Week Days"
 msgstr ""
 
-msgid "Week days"
-msgstr "Dnevi v tednu"
+msgid "Weekdays"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr ""
@@ -10194,8 +10342,7 @@ msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
 
 msgid "Zeroconf/Bonjour"
@@ -10328,3 +10475,38 @@ msgstr ""
 
 msgid "umount"
 msgstr "izvrzi"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Ne najdem skripte po meri."
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Pobriši algoritem"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Opomba: Za izbor minut, ur, dnevov in mesecev uporabite Ctrl-klik (command-"
+#~ "klik na MAC-u)."
+
+#~ msgid "Reports"
+#~ msgstr "Poročila"
+
+#~ msgid "Run now"
+#~ msgstr "Zaženi sedaj"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "Nedelja Ponedeljek Torek Sreda Četrtek Petek Sobota"
+
+#~ msgid "Week days"
+#~ msgstr "Dnevi v tednu"
+
+#~ msgid "Before"
+#~ msgstr "Pred"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "januar februar marec april maj junij julij avgust september oktober november "
+#~ "december"

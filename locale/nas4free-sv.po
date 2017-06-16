@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2017-05-25 02:25+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -178,17 +178,26 @@ msgstr "*** Importerad dubblett ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=Avstängd, 1-255= Kommandokö med angivet djup"
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "1 eller fler diskar behövs för att skapa en JBOD volym."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 eller fler diskar behövs för att skapa en RAID-1 volym."
 
+msgid "2"
+msgstr ""
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 eller fler diskar behövs för att skapa en RAID-0 volym."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 eller fler diskar behövs för att bygga en RAID-1 volym."
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 eller fler diskar behövs för att skapa en RAID-5 volym."
@@ -381,6 +390,9 @@ msgstr "Åtkomstläge"
 
 msgid "Access Restrictions"
 msgstr "Åtkomstbegränsningar"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "Åtkomsttid (atime)"
@@ -627,9 +639,6 @@ msgstr "Annonserings förskjutning"
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
-
-msgid "After"
-msgstr "Efter"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr "Efter - Filborttagning kommer att ske när överföringen genomförts."
@@ -1169,9 +1178,6 @@ msgstr "Batteritemperatur"
 msgid "Battery voltage"
 msgstr "Batterispänning"
 
-msgid "Before"
-msgstr "Före"
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Före - Filborttagning kommer att ske innan överföringen startar."
 
@@ -1411,6 +1417,9 @@ msgstr "CRC felräknare. Räknar antal CRC fel (läs/skriv data FIS CRC fel)."
 msgid "Calibration Battery"
 msgstr "Batterikallibrering"
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr "Kan inte erhålla UFS ID"
 
@@ -1494,6 +1503,9 @@ msgstr "Kontrollera FreeBSD dokumentationen för detaljer kring TCP Wrappers."
 
 msgid "Check the list of available drivers"
 msgstr "Kontrollera listan över tillgängliga drivrutiner"
+
+msgid "Checksum"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "Kinesiska (förenklad)"
@@ -1757,25 +1769,25 @@ msgstr ""
 "är 'GZIP' lika med 'GZIP-6*."
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
-"Styr vilken kompressionsalgoritm som används för denna volym. 'LZ4' är den "
-"nu rekommenderade kompressionsalgoritmen. Om kompression sätts till 'på' "
-"används LZ4 kompression om flaggan lz4_compress är aktiv, annars används "
-"LZJB. Du kan välja 'GZIP' nivå genom att använda värdet 'GZIP-N', där N är "
-"ett heltal från 1 (snabbast) till 9 (bästa kompressionsgrad). För närvarande "
-"är 'GZIP' lika med 'GZIP-6*."
 
 msgid "Controls the dedup method."
 msgstr "Kontrollerar \"dedup\" metoden."
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
 msgstr "Kontrollerar effektförbrukningsläget."
+
+msgid "Controls the type of the ZFS dataset."
+msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr ""
@@ -1785,6 +1797,22 @@ msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 "Kontrollerar vad som mellanlagras i den sekondära mellanlagringen (L2ARC)."
 
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
@@ -1793,6 +1821,12 @@ msgstr ""
 "Styr om åtkomsttid för filer uppdateras när de läses. Att stänga av detta "
 "gör att man undviker skrivtrafik när filer läses och kan resultera i "
 "betydande prestandavinster."
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Kontrollerar huruvida detta Dataset kan modifieras"
@@ -1806,6 +1840,9 @@ msgstr ""
 
 msgid "Conveyance Self-Test"
 msgstr "Överföringssjälvtest"
+
+msgid "Copies"
+msgstr ""
 
 msgid "Core"
 msgstr "Kärna"
@@ -2052,17 +2089,20 @@ msgstr "Aktuell effekt (W)"
 msgid "Custom"
 msgstr "Anpassad"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr "Anpassad enhet"
 
 msgid "Custom script"
 msgstr "Specialskript"
 
-msgid "Custom script is not found."
-msgstr "Specialskript hittades inte."
-
 msgid "Custom script is required."
 msgstr "Specialskript krävs."
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "Tjeckiska"
@@ -2133,6 +2173,9 @@ msgstr "Databaskatalog"
 msgid "Dataset"
 msgstr "Dataset"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr "Datasetet är markerat för borttagning"
 
@@ -2185,6 +2228,9 @@ msgstr "Avkrypteringslösnord"
 msgid "Dedup"
 msgstr "Deduplicering"
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "Standard"
 
@@ -2222,11 +2268,11 @@ msgstr "Tid kvar att vänta"
 msgid "Define directories/URL's that require authentication."
 msgstr "Specificera kataloger/URL:er som kräver autentiering."
 
+msgid "Defines the checksum algorithm."
+msgstr ""
+
 msgid "Defines when the shutdown is initiated."
 msgstr "Definera när avstängning initieras"
-
-msgid "Delay"
-msgstr "Fördröjning"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2247,6 +2293,9 @@ msgstr "Ta bort"
 
 msgid "Delete ARP entry"
 msgstr "Ta bort ARP-post"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "Ta bort värd"
@@ -2337,9 +2386,6 @@ msgstr "Radera URL"
 
 msgid "Delete VM"
 msgstr "Ta bort VM"
-
-msgid "Delete algorithm"
-msgstr "Radera algoritm"
 
 msgid "Delete all rules"
 msgstr "Raderar alla regler"
@@ -3082,9 +3128,6 @@ msgstr "Duplex"
 msgid "Duplicate mount point name."
 msgstr "Duplicera monteringspunktnamnet."
 
-msgid "During"
-msgstr "Under"
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3576,8 +3619,14 @@ msgstr "Utökad kompatibilitet med Netata´lk AFP server."
 msgid "Enter Command"
 msgstr "Mata in kommando"
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
 msgstr "Ange lösenord"
+
+msgid "Enter Subject"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Skriv en kommentar"
@@ -3748,6 +3797,9 @@ msgstr "Val av händelse"
 
 msgid "Example: pkg install packagename."
 msgstr "Exempelvis: pkg install packagename."
+
+msgid "Exec"
+msgstr ""
 
 msgid "Execute"
 msgstr "Kör"
@@ -3960,6 +4012,11 @@ msgstr "Filsökväg"
 
 msgid "File System"
 msgstr "Filsystem"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr ""
 
 msgid "File Transfer Protocol"
 msgstr "Fil Överförings Protokoll (FTP)"
@@ -4327,6 +4384,9 @@ msgstr "Hjälp"
 msgid "Hiadaptive (High Performance)"
 msgstr "Högadaptiv (Hög prestanda)"
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr "Göm standardgrupper"
 
@@ -4573,6 +4633,9 @@ msgid ""
 msgstr ""
 "Om denna egenskap är aktiverad så visar avbildningar i .zfs katalogen."
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr "Importera"
 
@@ -4628,6 +4691,23 @@ msgstr ""
 "Visar uppskattad kvarvarande SSD livslängd, i form av "
 "programmerings/raderingscykler eller Flashblock tillgängliga för användning "
 "för tillfället."
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
+msgstr ""
 
 msgid "Info"
 msgstr "Info"
@@ -4834,9 +4914,6 @@ msgstr "Ogiltigt filformat."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "Felaktig maximal blockstorlek! Måste vara mellan %d och %d."
 
-msgid "Invalid option."
-msgstr "Felaktigt alternativ."
-
 msgid "Invalid username or password."
 msgstr "Ogiltigt användarnamn eller lösenord."
 
@@ -4896,18 +4973,14 @@ msgstr "JBOD Information & Status"
 msgid "JBOD Maintenance"
 msgstr "JBOD Underhåll"
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr "jan"
 
 msgid "January"
 msgstr "januari"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Januari Februari Mars April Maj Juni Juli Augusti September Oktober November "
-"December"
 
 msgid "Japanese"
 msgstr "Japanska"
@@ -5029,6 +5102,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr "Senaste testresultat"
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr "Senaste Betaversion:%s"
@@ -5091,6 +5167,12 @@ msgstr ""
 "som används. Detta inkluderar allt utrymme som förbrukas av 'ättlingar', "
 "inklusive filsystem och ögonblicksbilder. För att ange storleken använd "
 "följande läsbara suffix (till exempel \"k\", \"KB\", \"M\", \"GB \", etc.)."
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr ""
 
 msgid "Link Down Action"
 msgstr "Åtgärd när länken går ner"
@@ -5200,6 +5282,9 @@ msgstr "Logga paket som hanteras av denna regel till syslog."
 
 msgid "Logarithmic Scaling"
 msgstr "Logaritmisk skala"
+
+msgid "Logbias"
+msgstr ""
 
 msgid "Logical Block"
 msgstr "Logiska block"
@@ -5587,6 +5672,9 @@ msgid ""
 msgstr ""
 "Mer än en DLNA/UPnP tjänst är aktiv. Denna konfiguration kan orsaka problem."
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "Monteringspunkt"
 
@@ -5817,6 +5905,9 @@ msgstr "Ingen IPMI sensordata tillgänglig."
 msgid "No Initiator Group has been configured."
 msgstr "Ingen Intierargrupp har konfigurerats."
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr "Ingen Portalgrupp har konfigurerats."
 
@@ -5900,6 +5991,9 @@ msgstr "Inga virtuella enheter har valts"
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Ärv bara nekande egenskaper"
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr "Nod A IP-adress"
 
@@ -5960,6 +6054,9 @@ msgstr "Inget"
 msgid "Normal"
 msgstr "Normal"
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -5987,13 +6084,6 @@ msgstr "Ej funnen sökväg."
 
 msgid "Note"
 msgstr "Observera"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Observera: Ctrl+klick (eller Command+klick på Mac) för att markera och "
-"avmarkera minuter, timmar, dagar och månader."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6677,6 +6767,10 @@ msgstr "Proto"
 msgid "Protocol"
 msgstr "Protokoll"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr "Leverantör"
 
@@ -6929,6 +7023,15 @@ msgstr "Rekursiv"
 msgid "Recycle Bin"
 msgstr "Papperskorg"
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr "Uppdatera"
 
@@ -7031,9 +7134,6 @@ msgid ""
 msgstr ""
 "Rapportera om temperaturen är större än eller lika med N grader Celsius. "
 "Välj 0 för att utesluta denna rapport."
-
-msgid "Reports"
-msgstr "Rapporter"
 
 msgid "Require authentication."
 msgstr "Kräv autentisering."
@@ -7201,8 +7301,8 @@ msgstr "Regelnummer"
 msgid "Rules"
 msgstr "Regler"
 
-msgid "Run now"
-msgstr "Kör nu"
+msgid "Run Now"
+msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "Kör utan att kräva fjärr rsync demon. (Normalt inaktiverat)"
@@ -7234,6 +7334,12 @@ msgstr "S.M.A.R.T. extraval"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T.-logg"
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
+msgstr ""
 
 msgid "SHA256, Verify"
 msgstr "SHA256, verifiera"
@@ -7643,6 +7749,9 @@ msgstr "Tjänsten aktiverad"
 msgid "Services"
 msgstr "Tjänster"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr "Välj kompletterande gruppmedlemskap för detta konto."
 
@@ -7817,6 +7926,9 @@ msgstr ""
 "Storlek erbjuden till Initiator. (upp till 8EiB=8388608TiB. verklig storlek "
 "är beroende av dina diskar.)"
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr "Fördröjning"
 
@@ -7844,6 +7956,9 @@ msgstr "SmartBoost"
 
 msgid "SmartTrim"
 msgstr "SmartTrim"
+
+msgid "Snapdir"
+msgstr ""
 
 msgid "Snapshot"
 msgstr "Avbild"
@@ -7999,6 +8114,9 @@ msgstr "Split begäran"
 msgid "Standard"
 msgstr "Standard"
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr "Viloläge"
 
@@ -8095,9 +8213,6 @@ msgstr "sön"
 
 msgid "Sunday"
 msgstr "söndag"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "Söndag Måndag Tisdag Onsdag Torsdag Fredag Lördag"
 
 msgid "Suppress non-error messages."
 msgstr "Uteslut korrekta meddelanden"
@@ -8904,6 +9019,15 @@ msgstr ""
 "etc.)."
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
@@ -9127,6 +9251,9 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Den uppladdade filen blev inte fullständigt överförd."
+
+msgid "The value is invalid."
+msgstr ""
 
 msgid "The value of the variable."
 msgstr "Värdet på variabeln."
@@ -9665,6 +9792,9 @@ msgid ""
 msgstr ""
 "Detta stödjer strömning av .jpg och .mp3 filer en TiVo som stödjer HMO."
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr "tor"
 
@@ -9727,11 +9857,11 @@ msgstr "Titelhastighet"
 msgid "TitleSpeed"
 msgstr "Rullhastighet"
 
+msgid "To Email"
+msgstr ""
+
 msgid "To Email Address"
 msgstr "Till e-postadress"
-
-msgid "To e-mail"
-msgstr "Till e-post"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -10057,6 +10187,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr "Ukrainska"
@@ -10444,8 +10577,14 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr "Virtualisering"
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
 msgstr "Volym"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr ""
 
 msgid "Volume Label"
 msgstr "Volymetikett"
@@ -10455,6 +10594,9 @@ msgstr "Volym Mod"
 
 msgid "Volume Name"
 msgstr "Volymnamn"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr "Storleksgräns för volym"
@@ -10569,8 +10711,8 @@ msgstr "onsdag"
 msgid "Week Days"
 msgstr "Veckodagar"
 
-msgid "Week days"
-msgstr "Veckodagar"
+msgid "Weekdays"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr "Western Digital attribut."
@@ -10818,11 +10960,8 @@ msgstr ""
 "skapats."
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
-"ZFS volymstorlek. För att specificera storleken används följande "
-"förkortningar (t..ex. 'K', 'KB', 'M', 'GB', etc.)."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -10956,3 +11095,75 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Specialskript hittades inte."
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Radera algoritm"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "Januari Februari Mars April Maj Juni Juli Augusti September Oktober November "
+#~ "December"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Observera: Ctrl+klick (eller Command+klick på Mac) för att markera och "
+#~ "avmarkera minuter, timmar, dagar och månader."
+
+#~ msgid "Reports"
+#~ msgstr "Rapporter"
+
+#~ msgid "Run now"
+#~ msgstr "Kör nu"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "Söndag Måndag Tisdag Onsdag Torsdag Fredag Lördag"
+
+#~ msgid "To e-mail"
+#~ msgstr "Till e-post"
+
+#~ msgid "Week days"
+#~ msgstr "Veckodagar"
+
+#~ msgid "After"
+#~ msgstr "Efter"
+
+#~ msgid "Before"
+#~ msgstr "Före"
+
+#~ msgid "Delay"
+#~ msgstr "Fördröjning"
+
+#~ msgid "During"
+#~ msgstr "Under"
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+#~ msgstr ""
+#~ "ZFS volymstorlek. För att specificera storleken används följande "
+#~ "förkortningar (t..ex. 'K', 'KB', 'M', 'GB', etc.)."
+
+#~ msgid ""
+#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
+#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
+#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
+#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
+#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
+#~ msgstr ""
+#~ "Styr vilken kompressionsalgoritm som används för denna volym. 'LZ4' är den "
+#~ "nu rekommenderade kompressionsalgoritmen. Om kompression sätts till 'på' "
+#~ "används LZ4 kompression om flaggan lz4_compress är aktiv, annars används "
+#~ "LZJB. Du kan välja 'GZIP' nivå genom att använda värdet 'GZIP-N', där N är "
+#~ "ett heltal från 1 (snabbast) till 9 (bästa kompressionsgrad). För närvarande "
+#~ "är 'GZIP' lika med 'GZIP-6*."
+
+#~ msgid "Invalid option."
+#~ msgstr "Felaktigt alternativ."

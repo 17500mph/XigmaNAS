@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2017-05-03 15:33+0000\n"
 "Last-Translator: GusGraf <gusgraf@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
 "X-Poedit-Language: Portuguese\n"
@@ -183,17 +183,26 @@ msgstr ""
 "0=desactivado, 1-255=activado command queueing com a profundidade "
 "especificada"
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "São necessários um ou mais discos para fazer um Volume JBOD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 ou mais discos necessários para montar um volume RAID-1."
 
+msgid "2"
+msgstr ""
+
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 ou mais discos necessários para montar um volume RAID-0."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 ou mais discos necessários para montar um volume RAID-1"
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 ou mais discos necessários para montar um volume RAID-5."
@@ -396,6 +405,9 @@ msgstr "Modo de acesso"
 
 msgid "Access Restrictions"
 msgstr "Restrições de Acesso"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "Tempo de Acesso (atime)"
@@ -641,9 +653,6 @@ msgstr "Anúncio Skew (advskew)"
 
 msgid "Afrikaans"
 msgstr "Africanos"
-
-msgid "After"
-msgstr "Depois"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -1168,9 +1177,6 @@ msgstr ""
 msgid "Battery voltage"
 msgstr ""
 
-msgid "Before"
-msgstr ""
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
@@ -1402,6 +1408,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr ""
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr "Não é possivel obter ID do UFS."
 
@@ -1485,6 +1494,9 @@ msgid ""
 msgstr ""
 
 msgid "Check the list of available drivers"
+msgstr ""
+
+msgid "Checksum"
 msgstr ""
 
 msgid "Chinese (Simplified)"
@@ -1738,18 +1750,24 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
 
 msgid "Controls the dedup method."
 msgstr ""
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
+msgstr ""
+
+msgid "Controls the type of the ZFS dataset."
 msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
@@ -1758,10 +1776,32 @@ msgstr ""
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
+msgstr ""
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1773,6 +1813,9 @@ msgid ""
 msgstr ""
 
 msgid "Conveyance Self-Test"
+msgstr ""
+
+msgid "Copies"
 msgstr ""
 
 msgid "Core"
@@ -1979,17 +2022,20 @@ msgstr ""
 msgid "Custom"
 msgstr "Personalizado"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr ""
 
 msgid "Custom script"
 msgstr "Custom script"
 
-msgid "Custom script is not found."
-msgstr "Custom script não foi encontrado."
-
 msgid "Custom script is required."
 msgstr "Custom script é necessário."
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "Checo"
@@ -2060,6 +2106,9 @@ msgstr "Directoria da base de dados"
 msgid "Dataset"
 msgstr "Conjunto de dados"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr ""
 
@@ -2110,6 +2159,9 @@ msgstr ""
 msgid "Dedup"
 msgstr "Dedup"
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "Predefinição"
 
@@ -2141,11 +2193,11 @@ msgstr "TempoDeEsperaPorDefeito"
 msgid "Define directories/URL's that require authentication."
 msgstr "Escolha as pastas/urls que necessitam de autenticação"
 
+msgid "Defines the checksum algorithm."
+msgstr ""
+
 msgid "Defines when the shutdown is initiated."
 msgstr "Define quando o 'Shutdown' é iniciado."
-
-msgid "Delay"
-msgstr ""
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2162,6 +2214,9 @@ msgstr "Apagar"
 
 msgid "Delete ARP entry"
 msgstr "Eliminar entrada ARP"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "Eliminar anfitrião"
@@ -2252,9 +2307,6 @@ msgstr "Apagar URL"
 
 msgid "Delete VM"
 msgstr ""
-
-msgid "Delete algorithm"
-msgstr "Apagar Algoritmo"
 
 msgid "Delete all rules"
 msgstr "Apaga todas as regras"
@@ -2987,9 +3039,6 @@ msgstr "Duplex"
 msgid "Duplicate mount point name."
 msgstr "Duplicar nome do ponto de montagem."
 
-msgid "During"
-msgstr ""
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3472,7 +3521,13 @@ msgstr ""
 msgid "Enter Command"
 msgstr ""
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
+msgstr ""
+
+msgid "Enter Subject"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3626,6 +3681,9 @@ msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg install packagename."
+msgstr ""
+
+msgid "Exec"
 msgstr ""
 
 msgid "Execute"
@@ -3839,6 +3897,11 @@ msgid "File Path"
 msgstr ""
 
 msgid "File System"
+msgstr ""
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
 msgstr ""
 
 msgid "File Transfer Protocol"
@@ -4197,6 +4260,9 @@ msgstr "Ajuda"
 msgid "Hiadaptive (High Performance)"
 msgstr ""
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr ""
 
@@ -4440,6 +4506,9 @@ msgstr ""
 "Se esta propriedade estiver activa, os snapshots são exibidos na directoria "
 ".zfs."
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr "Importar"
 
@@ -4491,6 +4560,23 @@ msgstr ""
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
+msgstr ""
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
 msgstr ""
 
 msgid "Info"
@@ -4692,9 +4778,6 @@ msgstr "Formato de ficheiro inválido."
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
-msgid "Invalid option."
-msgstr ""
-
 msgid "Invalid username or password."
 msgstr ""
 
@@ -4742,18 +4825,14 @@ msgstr ""
 msgid "JBOD Maintenance"
 msgstr ""
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr ""
 
 msgid "January"
 msgstr ""
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro "
-"Novembro Dezembro"
 
 msgid "Japanese"
 msgstr "Japonês"
@@ -4874,6 +4953,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr ""
@@ -4937,6 +5019,12 @@ msgstr ""
 "descendentes, incluindo sistemas de ficheiros e imagens. Para especificar o "
 "tamanho utilize os sufixos comuns para unidades (por exemplo, 'k', 'KB', "
 "'M', 'Gb', etc.)."
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr ""
 
 msgid "Link Down Action"
 msgstr ""
@@ -5046,6 +5134,9 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "Pacotes de registos que são utilizados por esta regra para o syslog."
 
 msgid "Logarithmic Scaling"
+msgstr ""
+
+msgid "Logbias"
 msgstr ""
 
 msgid "Logical Block"
@@ -5427,6 +5518,9 @@ msgid ""
 "issues."
 msgstr ""
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "Ponto de Montagem"
 
@@ -5652,6 +5746,9 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr ""
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr ""
 
@@ -5733,6 +5830,9 @@ msgstr ""
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr ""
 
@@ -5793,6 +5893,9 @@ msgstr "Nenhum"
 msgid "Normal"
 msgstr "Normal"
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -5818,13 +5921,6 @@ msgstr ""
 
 msgid "Note"
 msgstr "Nota"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr ""
-"Nota: Ctrl-click (ou command-click em Mac) para selecionar ou des-selecionar "
-"minutos, horas, dias e meses."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6505,6 +6601,10 @@ msgstr "Proto"
 msgid "Protocol"
 msgstr "Protocolo"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr "Fornecedor"
 
@@ -6751,6 +6851,15 @@ msgstr "Recursivo"
 msgid "Recycle Bin"
 msgstr ""
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr "Actualizar"
 
@@ -6851,9 +6960,6 @@ msgid ""
 msgstr ""
 "Relata se a temperatura é maior ou igual a N graus Celsius. Alterar para 0 "
 "caso pretenda desactivar este relatório."
-
-msgid "Reports"
-msgstr "Relatórios"
 
 msgid "Require authentication."
 msgstr "Requer autenticação"
@@ -7020,8 +7126,8 @@ msgstr "Regra número"
 msgid "Rules"
 msgstr "Regras"
 
-msgid "Run now"
-msgstr "Executar agora"
+msgid "Run Now"
+msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
@@ -7051,6 +7157,12 @@ msgstr "Opções extra de S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Registo S.M.A.R.T."
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
+msgstr ""
 
 msgid "SHA256, Verify"
 msgstr ""
@@ -7445,6 +7557,9 @@ msgstr ""
 msgid "Services"
 msgstr "Serviços"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr "Torna o utilizador membro de grupos adicionais."
 
@@ -7616,6 +7731,9 @@ msgstr ""
 "Tamanho oferecido ao iniciador. (até 8EiB=8388608TiB. o tamanho actual "
 "depende dos seus discos)."
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr ""
 
@@ -7642,6 +7760,9 @@ msgid "SmartBoost"
 msgstr ""
 
 msgid "SmartTrim"
+msgstr ""
+
+msgid "Snapdir"
 msgstr ""
 
 msgid "Snapshot"
@@ -7786,6 +7907,9 @@ msgstr "Pedido de divisão"
 msgid "Standard"
 msgstr "Padrão"
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr ""
 
@@ -7880,11 +8004,6 @@ msgstr ""
 
 msgid "Sunday"
 msgstr ""
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr ""
-"Domingo Segunda-Feira Terça-Feira Quarta-Feira Quinta-Feira Sexta-Feira "
-"Sábado"
 
 msgid "Suppress non-error messages."
 msgstr "Suprimir mensagens que não são de erro."
@@ -8655,6 +8774,15 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
@@ -8871,6 +8999,9 @@ msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Apenas foi feito upload de parte do ficheiro."
+
+msgid "The value is invalid."
+msgstr ""
 
 msgid "The value of the variable."
 msgstr "O valor da variável."
@@ -9360,6 +9491,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr ""
 
@@ -9421,11 +9555,11 @@ msgstr ""
 msgid "TitleSpeed"
 msgstr ""
 
-msgid "To Email Address"
+msgid "To Email"
 msgstr ""
 
-msgid "To e-mail"
-msgstr "Endereço do destinatário"
+msgid "To Email Address"
+msgstr ""
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -9737,6 +9871,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr "Ucraniano"
@@ -10119,8 +10256,14 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr ""
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
 msgstr "Volume"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr ""
 
 msgid "Volume Label"
 msgstr "Etiqueta do Volume"
@@ -10130,6 +10273,9 @@ msgstr ""
 
 msgid "Volume Name"
 msgstr "Nome do Volume"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr "Limite de Tamanho do Volume"
@@ -10245,8 +10391,8 @@ msgstr "quarta-feira"
 msgid "Week Days"
 msgstr ""
 
-msgid "Week days"
-msgstr "Dias da semana"
+msgid "Weekdays"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr "Atributo do Western Digital."
@@ -10489,8 +10635,7 @@ msgstr ""
 "Tamanho do bloco do ZFS. Este valor não pode ser mudado depois da criação."
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
 
 msgid "Zeroconf/Bonjour"
@@ -10625,3 +10770,43 @@ msgstr "para"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "Custom script não foi encontrado."
+
+#~ msgid "Delete algorithm"
+#~ msgstr "Apagar Algoritmo"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr ""
+#~ "Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro "
+#~ "Novembro Dezembro"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr ""
+#~ "Nota: Ctrl-click (ou command-click em Mac) para selecionar ou des-selecionar "
+#~ "minutos, horas, dias e meses."
+
+#~ msgid "Reports"
+#~ msgstr "Relatórios"
+
+#~ msgid "Run now"
+#~ msgstr "Executar agora"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr ""
+#~ "Domingo Segunda-Feira Terça-Feira Quarta-Feira Quinta-Feira Sexta-Feira "
+#~ "Sábado"
+
+#~ msgid "To e-mail"
+#~ msgstr "Endereço do destinatário"
+
+#~ msgid "Week days"
+#~ msgstr "Dias da semana"
+
+#~ msgid "After"
+#~ msgstr "Depois"

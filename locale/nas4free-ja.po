@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-05-24 23:01+0000\n"
+"POT-Creation-Date: 2017-06-16 01:08+0000\n"
 "PO-Revision-Date: 2017-05-31 20:35+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-14 14:13+0000\n"
-"X-Generator: Launchpad (build 18404)\n"
+"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -168,10 +168,16 @@ msgstr "*** 重複インポート ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=無効、1-255=指定サイズでキューイングを有効。"
 
+msgid "1"
+msgstr ""
+
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr ""
 
 msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
+msgid "2"
 msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
@@ -179,6 +185,9 @@ msgstr "RAID-0のボリュームを構成するには、2台かそれ以上の�
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1のボリュームを構成するには、2台かそれ以上の台数のハードディスクが必要です。"
+
+msgid "3"
+msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "RAID-5のボリュームを構成するには、3台かそれ以上の台数のハードディスクが必要です。"
@@ -361,6 +370,9 @@ msgstr "アクセスモード"
 
 msgid "Access Restrictions"
 msgstr "アクセス制限"
+
+msgid "Access Time"
+msgstr ""
 
 msgid "Access Time (atime)"
 msgstr "アクセスタイム (atime)"
@@ -605,9 +617,6 @@ msgstr ""
 
 msgid "Afrikaans"
 msgstr "アフリカーンス語"
-
-msgid "After"
-msgstr ""
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -1105,9 +1114,6 @@ msgstr "バッテリー温度"
 msgid "Battery voltage"
 msgstr "バッテリー電圧"
 
-msgid "Before"
-msgstr ""
-
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
@@ -1341,6 +1347,9 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr "バッテリーキャリブレーション"
 
+msgid "Can Mount"
+msgstr ""
+
 msgid "Can't get UFS ID."
 msgstr "UFS ID が取得できません。"
 
@@ -1421,6 +1430,9 @@ msgid ""
 msgstr ""
 
 msgid "Check the list of available drivers"
+msgstr ""
+
+msgid "Checksum"
 msgstr ""
 
 msgid "Chinese (Simplified)"
@@ -1668,18 +1680,24 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Controls the compression algorithm used for this volume. 'LZ4' is now the "
-"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-"compression algorithm if the feature flag lz4_compress is active, otherwise "
-"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-"where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'GZIP' is equivalent to 'GZIP-6'."
+"Controls the compression algorithm. 'LZ4' is now the recommended compression "
+"algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if "
+"the feature flag lz4_compress is active, otherwise LZJB is used. You can "
+"specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer "
+"from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
+"equivalent to 'GZIP-6'."
 msgstr ""
 
 msgid "Controls the dedup method."
 msgstr ""
 
+msgid "Controls the number of copies of data stored for this dataset."
+msgstr ""
+
 msgid "Controls the power consumption mode."
+msgstr ""
+
+msgid "Controls the type of the ZFS dataset."
 msgstr ""
 
 msgid "Controls what is cached in the primary cache (ARC)."
@@ -1688,10 +1706,32 @@ msgstr ""
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
+msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid ""
+"Controls whether processes can be executed from within this file system."
+msgstr ""
+
+msgid ""
+"Controls whether the .zfs directory is hidden or visible in the root of the "
+"file system."
+msgstr ""
+
+msgid ""
+"Controls whether the access time for files is updated when they are read."
+msgstr ""
+
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
+msgstr ""
+
+msgid "Controls whether the dataset is managed from a jail."
+msgstr ""
+
+msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1703,6 +1743,9 @@ msgid ""
 msgstr "DOS属性の保存が無効な場合にDOS属性をUNIX実行ビットに割り当てます。"
 
 msgid "Conveyance Self-Test"
+msgstr ""
+
+msgid "Copies"
 msgstr ""
 
 msgid "Core"
@@ -1917,17 +1960,20 @@ msgstr "現在の有効電力(W)"
 msgid "Custom"
 msgstr "カスタム"
 
+msgid "Custom Script"
+msgstr ""
+
 msgid "Custom device"
 msgstr "カスタムデバイス"
 
 msgid "Custom script"
 msgstr "カスタムスクリプト"
 
-msgid "Custom script is not found."
-msgstr "カスタムスクリプトが見つかりません。"
-
 msgid "Custom script is required."
 msgstr "カスタムスクリプトが必要です。"
+
+msgid "Custom script not found."
+msgstr ""
 
 msgid "Czech"
 msgstr "チェコ語"
@@ -1998,6 +2044,9 @@ msgstr "データベース ディレクトリ"
 msgid "Dataset"
 msgstr "データセット"
 
+msgid "Dataset Type"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr ""
 
@@ -2048,6 +2097,9 @@ msgstr ""
 msgid "Dedup"
 msgstr "重複排除"
 
+msgid "Dedup Method"
+msgstr ""
+
 msgid "Default"
 msgstr "デフォルト"
 
@@ -2079,11 +2131,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "認証が必要なディレクトリ/URLを指定して下さい。"
 
+msgid "Defines the checksum algorithm."
+msgstr ""
+
 msgid "Defines when the shutdown is initiated."
 msgstr "いつシャットダウン処理が開始されるかを定義して下さい。"
-
-msgid "Delay"
-msgstr ""
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2100,6 +2152,9 @@ msgstr "削除"
 
 msgid "Delete ARP entry"
 msgstr "ARP エントリの削除"
+
+msgid "Delete Algorithm"
+msgstr ""
 
 msgid "Delete Host"
 msgstr "ホストを削除"
@@ -2190,9 +2245,6 @@ msgstr "URL を削除"
 
 msgid "Delete VM"
 msgstr "VM 削除"
-
-msgid "Delete algorithm"
-msgstr "アルゴリズムを削除"
 
 msgid "Delete all rules"
 msgstr "全てのルールを削除"
@@ -2911,9 +2963,6 @@ msgstr "デュプレックス"
 msgid "Duplicate mount point name."
 msgstr "マウントポイント名が重複しています。"
 
-msgid "During"
-msgstr ""
-
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
@@ -3392,7 +3441,13 @@ msgstr ""
 msgid "Enter Command"
 msgstr ""
 
+msgid "Enter Email Address(es)"
+msgstr ""
+
 msgid "Enter Password"
+msgstr ""
+
+msgid "Enter Subject"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3540,6 +3595,9 @@ msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg install packagename."
+msgstr ""
+
+msgid "Exec"
 msgstr ""
 
 msgid "Execute"
@@ -3748,6 +3806,11 @@ msgstr "ファイルパス"
 
 msgid "File System"
 msgstr "ファイルシステム"
+
+msgid ""
+"File System - can be mounted within the standard system namespace and "
+"behaves like other file systems."
+msgstr ""
 
 msgid "File Transfer Protocol"
 msgstr "ファイル転送プロトコル"
@@ -4107,6 +4170,9 @@ msgstr "ヘルプ"
 msgid "Hiadaptive (High Performance)"
 msgstr ""
 
+msgid "Hidden"
+msgstr ""
+
 msgid "Hide Default Groups"
 msgstr ""
 
@@ -4335,6 +4401,9 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "このプロパティを有効にすると、スナップショットが .zfs ディレクトリ内に表示されます。"
 
+msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
 msgid "Import"
 msgstr "インポート"
 
@@ -4387,6 +4456,23 @@ msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
 msgstr "書き込み・消去サイクルまたは現在使用可能なフラッシュブロックを単位とした、おおよそのSSDの寿命を示します。"
+
+msgid ""
+"Indicates whether the file name matching algorithm used by the filesystem "
+"should be case-sensitive, case-insensitive, or allow a combination of both "
+"styles of matching."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should perform a unicode normalization of "
+"file names whenever two file names are compared, and which normalization "
+"algorithm should be used."
+msgstr ""
+
+msgid ""
+"Indicates whether the file system should reject file names that include "
+"characters that are not present in the UTF-8 character code set."
+msgstr ""
 
 msgid "Info"
 msgstr "情報"
@@ -4584,9 +4670,6 @@ msgstr "無効なファイル形式です。"
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
-msgid "Invalid option."
-msgstr ""
-
 msgid "Invalid username or password."
 msgstr ""
 
@@ -4634,16 +4717,14 @@ msgstr "JBOD 情報とステータス"
 msgid "JBOD Maintenance"
 msgstr ""
 
+msgid "Jailed"
+msgstr ""
+
 msgid "Jan"
 msgstr ""
 
 msgid "January"
 msgstr "1月"
-
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr "1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月"
 
 msgid "Japanese"
 msgstr "日本語"
@@ -4770,6 +4851,9 @@ msgstr ""
 "5：パワーサイクルにより増加しないテストのライフタイム番号、最大値の飽和。正規化された値は、テストの失敗で1、コンデンサが過度の温度条件でテストされている"
 "場合は11、それ以外の場合は100に設定されています。"
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Release: %s"
 msgstr ""
@@ -4830,6 +4914,12 @@ msgstr ""
 "データセットとその子孫が利用できる容量の合計を制限します。このプロパティは利用できる容量のハードリミットを設定します。これには、ファイルシステムとスナップ"
 "ショットを含む子孫によるすべての容量を含みます。サイズを指定するには、以下の人間が読める接尾語を使用してください。(例えば、'k', 'KB', "
 "'M', 'Gb', など)"
+
+msgid "Limits the amount of space a dataset and its descendents can consume."
+msgstr ""
+
+msgid "Limits the amount of space a dataset can consume."
+msgstr ""
 
 msgid "Link Down Action"
 msgstr ""
@@ -4937,6 +5027,9 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "このルールによって処理されたパケットを syslog に記録します。"
 
 msgid "Logarithmic Scaling"
+msgstr ""
+
+msgid "Logbias"
 msgstr ""
 
 msgid "Logical Block"
@@ -5319,6 +5412,9 @@ msgid ""
 "issues."
 msgstr ""
 
+msgid "Most"
+msgstr ""
+
 msgid "Mount Point"
 msgstr "マウントポイント"
 
@@ -5540,6 +5636,9 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr ""
 
+msgid "No Parity"
+msgstr ""
+
 msgid "No Portal Group has been configured."
 msgstr ""
 
@@ -5621,6 +5720,9 @@ msgstr ""
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
 
+msgid "Noauto"
+msgstr ""
+
 msgid "Node A IP address"
 msgstr "ノード A IPアドレス"
 
@@ -5681,6 +5783,9 @@ msgstr "無し"
 msgid "Normal"
 msgstr "ノーマル"
 
+msgid "Normalization"
+msgstr ""
+
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
@@ -5705,11 +5810,6 @@ msgstr "パスが見つかりません。"
 
 msgid "Note"
 msgstr "注意"
-
-msgid ""
-"Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-"minutes, hours, days and months."
-msgstr "注意: Ctrl (Mac は command) を押しながらクリックすれば、分、時、日、月を複数選択または選択解除できます。"
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
@@ -6372,6 +6472,10 @@ msgstr "プロトコル"
 msgid "Protocol"
 msgstr "プロトコル"
 
+msgid ""
+"Provide a hint to ZFS about handling of synchronous requests in this dataset."
+msgstr ""
+
 msgid "Provider"
 msgstr "プロバイダ"
 
@@ -6614,6 +6718,15 @@ msgstr "再帰"
 msgid "Recycle Bin"
 msgstr ""
 
+msgid "Redundant Metadata"
+msgstr ""
+
+msgid "Refquota"
+msgstr ""
+
+msgid "Refreservation"
+msgstr ""
+
 msgid "Refresh"
 msgstr "更新"
 
@@ -6710,9 +6823,6 @@ msgid ""
 "Report if the temperature is greater or equal than N degrees Celsius. Set to "
 "0 to disable this report."
 msgstr "温度が N ℃以上の場合に通知します。0 に設定する事でこの通知を無効に出来ます。"
-
-msgid "Reports"
-msgstr "レポート"
 
 msgid "Require authentication."
 msgstr "認証を要求します。"
@@ -6879,8 +6989,8 @@ msgstr "ルール番号"
 msgid "Rules"
 msgstr "ルール"
 
-msgid "Run now"
-msgstr "今すぐ実行"
+msgid "Run Now"
+msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "リモート rsync デーモンを必要とせずに実行します。(デフォルトは無効)"
@@ -6910,6 +7020,12 @@ msgstr "S.M.A.R.T. 拡張オプション"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. ログ"
+
+msgid "SHA-256, Verify"
+msgstr ""
+
+msgid "SHA-512, Verify"
+msgstr ""
 
 msgid "SHA256, Verify"
 msgstr ""
@@ -7303,6 +7419,9 @@ msgstr ""
 msgid "Services"
 msgstr "サービス"
 
+msgid "Set UID"
+msgstr ""
+
 msgid "Set additional group memberships for this account."
 msgstr "このアカウントを他のグループのメンバーにします。"
 
@@ -7465,6 +7584,9 @@ msgid ""
 "on your disks.)"
 msgstr "イニシエータに提供するサイズ。(最大8EiB=8388608TiB。実際の最大値はディスク容量に依存します。)"
 
+msgid "Skein, Verify"
+msgstr ""
+
 msgid "Skew"
 msgstr "スキュー"
 
@@ -7491,6 +7613,9 @@ msgstr "低電圧調整"
 
 msgid "SmartTrim"
 msgstr "過電圧調整"
+
+msgid "Snapdir"
+msgstr ""
 
 msgid "Snapshot"
 msgstr "スナップショット"
@@ -7627,6 +7752,9 @@ msgstr "分割リクエスト"
 msgid "Standard"
 msgstr "標準"
 
+msgid "Standard Reports"
+msgstr ""
+
 msgid "Standby"
 msgstr "スタンバイ"
 
@@ -7720,9 +7848,6 @@ msgstr "日曜"
 
 msgid "Sunday"
 msgstr "日曜日"
-
-msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr "日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日"
 
 msgid "Suppress non-error messages."
 msgstr "エラーでは無いメッセージの出力を抑制します。"
@@ -8462,6 +8587,15 @@ msgstr ""
 "'M', 'Gb', など)"
 
 msgid ""
+"The minimum amount of space guaranteed to a dataset and its descendents."
+msgstr ""
+
+msgid ""
+"The minimum amount of space guaranteed to a dataset, not including its "
+"descendents."
+msgstr ""
+
+msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr "PASV スタイルのデータ接続に割り当てる最小のポート (0 = いずれかのポート)。"
@@ -8668,6 +8802,9 @@ msgstr "アップロードされたファイルは、php.ini の upload_max_file
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "アップロードされたファイルは部分的にだけアップロードされています。"
+
+msgid "The value is invalid."
+msgstr ""
 
 msgid "The value of the variable."
 msgstr "変数の値"
@@ -9114,6 +9251,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr "TiVoサポートHMOでストリーミング .jpg と .mp3 ファイルをサポートします。"
 
+msgid "Throughput"
+msgstr ""
+
 msgid "Thu"
 msgstr "木曜"
 
@@ -9175,11 +9315,11 @@ msgstr ""
 msgid "TitleSpeed"
 msgstr "タイトル時間"
 
-msgid "To Email Address"
+msgid "To Email"
 msgstr ""
 
-msgid "To e-mail"
-msgstr "メールの宛て先"
+msgid "To Email Address"
+msgstr ""
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -9481,6 +9621,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "UTF-8 Only"
+msgstr ""
 
 msgid "Ukrainian"
 msgstr "ウクライナ語"
@@ -9843,8 +9986,14 @@ msgstr "VirtualBox"
 msgid "Virtualization"
 msgstr "仮想化"
 
+msgid "Visible"
+msgstr ""
+
 msgid "Volume"
 msgstr "ボリューム"
+
+msgid "Volume - A logical volume. Can be exported as a raw or block device."
+msgstr ""
 
 msgid "Volume Label"
 msgstr "ボリューム ラベル"
@@ -9854,6 +10003,9 @@ msgstr "ボリュームモード"
 
 msgid "Volume Name"
 msgstr "ボリューム名"
+
+msgid "Volume Size"
+msgstr ""
 
 msgid "Volume Size Limit"
 msgstr "ボリュームサイズ制限"
@@ -9964,8 +10116,8 @@ msgstr "水曜"
 msgid "Week Days"
 msgstr ""
 
-msgid "Week days"
-msgstr "曜日"
+msgid "Weekdays"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr "ウエスタンデジタルの属性。"
@@ -10187,9 +10339,8 @@ msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr "ZFS  ボリュームブロックサイズ。この値はボリュームの作成後に変更することはできません。"
 
 msgid ""
-"ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
-msgstr "ZFS ボリュームサイズ。値を設定するには以下の単位を指定します ('K', 'KB', 'M', 'GB', など)"
+"ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
+msgstr ""
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -10321,3 +10472,39 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
+
+#~ msgid "Custom script is not found."
+#~ msgstr "カスタムスクリプトが見つかりません。"
+
+#~ msgid "Delete algorithm"
+#~ msgstr "アルゴリズムを削除"
+
+#~ msgid ""
+#~ "January February March April May June July August September October November "
+#~ "December"
+#~ msgstr "1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月"
+
+#~ msgid ""
+#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
+#~ "minutes, hours, days and months."
+#~ msgstr "注意: Ctrl (Mac は command) を押しながらクリックすれば、分、時、日、月を複数選択または選択解除できます。"
+
+#~ msgid "Reports"
+#~ msgstr "レポート"
+
+#~ msgid "Run now"
+#~ msgstr "今すぐ実行"
+
+#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
+#~ msgstr "日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日"
+
+#~ msgid "To e-mail"
+#~ msgstr "メールの宛て先"
+
+#~ msgid "Week days"
+#~ msgstr "曜日"
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
+#~ msgstr "ZFS ボリュームサイズ。値を設定するには以下の単位を指定します ('K', 'KB', 'M', 'GB', など)"
