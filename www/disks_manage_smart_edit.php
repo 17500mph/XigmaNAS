@@ -74,7 +74,7 @@ if($_POST):
 		header("Location: disks_manage_smart.php");
 		exit;
 	endif;
-	$reqdfields = ['disk','type'];
+	$reqdfields = ['devicespecialfile','type'];
 	$reqdfieldsn = [gtext('Disk'),gtext('Type')];
 	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
 	$_POST['all_mins'] = true; // cheat on minutes
@@ -83,7 +83,7 @@ if($_POST):
 	if(empty($input_errors)):
 		$selftest = [];
 		$selftest['uuid'] = $_POST['uuid'];
-		$selftest['devicespecialfile'] = $_POST['disk'];
+		$selftest['devicespecialfile'] = $_POST['devicespecialfile'];
 		$selftest['type'] = $_POST['type'];
 		$selftest['hour'] = !empty($_POST['hour']) ? $_POST['hour'] : null;
 		$selftest['day'] = !empty($_POST['day']) ? $_POST['day'] : null;
@@ -107,6 +107,22 @@ if($_POST):
 		exit;
 	endif;
 endif;
+$l_devicespecialfiles = [];
+$l_devicespecialfiles[''] = gtext('Must choose one');
+foreach($a_disk as $r_disk):
+	if(0 == strcmp($r_disk['size'],'NA')):
+		continue;
+	endif;
+	if(1 == disks_exists($r_disk['devicespecialfile'])):
+		continue;
+	endif;
+	if(!isset($r_disk['smart'])):
+		continue;
+	endif;
+	$diskinfo = disks_get_diskinfo($r_disk['devicespecialfile']);
+	$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+	$l_devicespecialfiles[$r_disk['devicespecialfile']] = htmlspecialchars(sprintf('%s: %s (%s)',$r_disk['name'],$helpinghand,$r_disk['desc']));
+endforeach;
 $l_types = [
 	'S' => gtext('Short Self-Test'),
 	'L' => gtext('Long Self-Test'),
@@ -119,14 +135,12 @@ include 'fbegin.inc';
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init spinner onsubmit()
+<?php // Init spinner.?>
 	$("#iform").submit(function() { spinner(); });
-}); 
+	$(".spin").click(function() { spinner(); });
+});
 function set_selected(name) {
 	document.getElementsByName(name)[1].checked = true;
-}
-function enable_change(enable_change) {
-	document.iform.disk.disabled = !enable_change;
 }
 //]]>
 </script>
@@ -155,38 +169,8 @@ function enable_change(enable_change) {
 ?>
 		</thead>
 		<tbody>
-			<tr>
-				<td class="celltagreq"><?=gtext('Disk');?></td>
-				<td class="celldatareq">
-					<select name="disk" class="formfld" id="disk">
-						<option value=""><?=gtext('Must choose one');?></option>
 <?php
-						foreach ($a_disk as $diskv):
-							if(0 == strcmp($diskv['size'],'NA')):
-								continue;
-							endif;
-							if(1 == disks_exists($diskv['devicespecialfile'])):
-								continue;
-							endif;
-							if(!isset($diskv['smart'])):
-								continue;
-							endif;
-?>
-							<option value="<?=$diskv['devicespecialfile'];?>" <?php if($diskv['devicespecialfile'] === $pconfig['devicespecialfile']) echo "selected=\"selected\"";?>>
-<?php
-								$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
-								$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
-								echo htmlspecialchars(sprintf('%s: %s (%s)',$diskv['name'],$helpinghand,$diskv['desc']));
-?>
-							</option>
-<?php
-						endforeach;
-?>
-					</select><br />
-					<span class="vexpl"><?=gtext('Select a disk that is enabled for S.M.A.R.T. monitoring.');?></span>
-				</td>
-			</tr>
-<?php
+			html_combobox2('devicespecialfile',gtext('Disk'),$pconfig['devicespecialfile'],$l_devicespecialfiles,gtext('Select a disk that is enabled for S.M.A.R.T. monitoring.'),true);
 			html_radiobox2('type',gtext('Type'),$pconfig['type'],$l_types,'',true);
 ?>
 			<tr>
@@ -218,38 +202,38 @@ function enable_change(enable_change) {
 								</div>
 								<div class="rblo">
 									<label>
-										<input type="radio" class="rblo" name="all_hours" id="all_hours2" value="0" <?php if(1 != $pconfig['all_hours']) echo 'checked="checked"';?>/>
+										<input type="radio" class="rblo dimassoctable" name="all_hours" id="all_hours2" value="0" <?php if(1 != $pconfig['all_hours']) echo 'checked="checked"';?>/>
 										<span class="rblo"><?=gtext('Selected');?> ..</span>
+										<table><tbody class="donothighlight"><tr>
+<?php
+											$val_min = $key = 0;
+											$val_count = 24;
+											$val_max = $val_min + $val_count - 1;
+											$val_break = 6;
+											$i_outer_max = ceil($val_count / $val_break) - 1;
+											$i_inner_max = $val_min + $val_break - 1;
+											for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+												echo '<td class="lcefl">',"\n";
+												for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+													if($key <= $val_max):
+														echo '<div class="cblo"><label>';
+														echo '<input type="checkbox" class="cblo" name="hour[]" onchange="set_selected(\'all_hours\')" value="',$key,'"';
+														if(isset($pconfig['hour']) && is_array($pconfig['hour']) && in_array((string)$key,$pconfig['hour'])):
+															echo ' checked="checked"';
+														endif;
+														echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
+														echo '</label></div>',"\n";
+													else:
+														break;
+													endif;
+													$key++;
+												endfor;
+												echo '</td>',"\n";
+											endfor;
+?>
+										</tr></tbody></table>
 									</label>
 								</div>
-								<div><table><tbody class="donothighlight"><tr>
-<?php
-									$val_min = $key = 0;
-									$val_count = 24;
-									$val_max = $val_min + $val_count - 1;
-									$val_break = 6;
-									$i_outer_max = ceil($val_count / $val_break) - 1;
-									$i_inner_max = $val_min + $val_break - 1;
-									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
-										echo '<td class="lcefl">',"\n";
-										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
-											if($key <= $val_max):
-												echo '<div class="cblo"><label>';
-												echo '<input type="checkbox" class="cblo" name="hour[]" onchange="set_selected(\'all_hours\')" value="',$key,'"';
-												if(isset($pconfig['hour']) && is_array($pconfig['hour']) && in_array((string)$key,$pconfig['hour'])):
-													echo ' checked="checked"';
-												endif;
-												echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
-												echo '</label></div>',"\n";
-											else:
-												break;
-											endif;
-											$key++;
-										endfor;
-										echo '</td>',"\n";
-									endfor;
-?>
-								</tr></tbody></table></div>
 							</td>
 							<td class="lcell" style="vertical-align:top">
 								<div class="rblo">
@@ -260,38 +244,38 @@ function enable_change(enable_change) {
 								</div>
 								<div class="rblo">
 									<label>
-										<input type="radio" class="rblo" name="all_days" id="all_days2" value="0" <?php if(1 != $pconfig['all_days']) echo 'checked="checked"';?>/>
+										<input type="radio" class="rblo dimassoctable" name="all_days" id="all_days2" value="0" <?php if(1 != $pconfig['all_days']) echo 'checked="checked"';?>/>
 										<span class="rblo"><?=gtext('Selected');?> ..</span>
+										<table><tbody class="donothighlight"><tr>
+<?php
+											$val_min = $key = 1;
+											$val_count = 31;
+											$val_max = $val_min + $val_count - 1;
+											$val_break = 7;
+											$i_outer_max = ceil($val_count / $val_break) - 1;
+											$i_inner_max = $val_min + $val_break - 1;
+											for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
+												echo '<td class="lcefl">',"\n";
+												for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
+													if($key <= $val_max):
+														echo '<div class="cblo"><label>';
+														echo '<input type="checkbox" class="cblo" name="day[]" onchange="set_selected(\'all_days\')" value="',$key,'"';
+														if(isset($pconfig['day']) && is_array($pconfig['day']) && in_array((string)$key,$pconfig['day'])):
+															echo ' checked="checked"';
+														endif;
+														echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
+														echo '</label></div>',"\n";
+													else:
+														break;
+													endif;
+													$key++;
+												endfor;
+												echo '</td>',"\n";
+											endfor;
+?>
+										</tr></tbody></table>
 									</label>
 								</div>
-								<div><table><tbody class="donothighlight"><tr>
-<?php
-									$val_min = $key = 1;
-									$val_count = 31;
-									$val_max = $val_min + $val_count - 1;
-									$val_break = 7;
-									$i_outer_max = ceil($val_count / $val_break) - 1;
-									$i_inner_max = $val_min + $val_break - 1;
-									for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
-										echo '<td class="lcefl">',"\n";
-										for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
-											if($key <= $val_max):
-												echo '<div class="cblo"><label>';
-												echo '<input type="checkbox" class="cblo" name="day[]" onchange="set_selected(\'all_days\')" value="',$key,'"';
-												if(isset($pconfig['day']) && is_array($pconfig['day']) && in_array((string)$key,$pconfig['day'])):
-													echo ' checked="checked"';
-												endif;
-												echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
-												echo '</label></div>',"\n";
-											else:
-												break;
-											endif;
-											$key++;
-										endfor;
-										echo '</td>',"\n";
-									endfor;
-?>
-								</tr></tbody></table></div>
 							</td>
 							<td class="lcell" style="vertical-align:top">
 								<div class="rblo">
@@ -302,25 +286,25 @@ function enable_change(enable_change) {
 								</div>
 								<div class="rblo">
 									<label>
-										<input type="radio" class="rblo" name="all_months" id="all_months2" value="0" <?php if(1 != $pconfig['all_months']) echo 'checked="checked"';?>/>
+										<input type="radio" class="rblo dimassoctable" name="all_months" id="all_months2" value="0" <?php if(1 != $pconfig['all_months']) echo 'checked="checked"';?>/>
 										<span class="rblo"><?=gtext('Selected');?> ..</span>
+										<table><tbody class="donothighlight"><tr>
+<?php
+											echo '<td class="lcefl">',"\n";
+											foreach($g_months as $key => $val):
+												echo '<div class="cblo"><label>';
+												echo '<input type="checkbox" class="cblo" name="month[]" onchange="set_selected(\'all_months\')" value="',$key,'"';
+												if(is_array($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
+													echo ' checked="checked"';
+												endif;
+												echo '/><span class="cblo">',$val,'</span>';
+												echo '</label></div>',"\n";
+											endforeach;
+											echo '</td>',"\n";
+?>
+										</tr></tbody></table>
 									</label>
 								</div>
-								<div><table><tbody class="donothighlight"><tr>
-<?php
-									echo '<td class="lcefl">',"\n";
-									foreach ($g_months as $key => $val):
-										echo '<div class="cblo"><label>';
-										echo '<input type="checkbox" class="cblo" name="month[]" onchange="set_selected(\'all_months\')" value="',$key,'"';
-										if(is_array($pconfig['month']) && in_array((string)$key,$pconfig['month'])):
-											echo ' checked="checked"';
-										endif;
-										echo '/><span class="cblo">',$val,'</span>';
-										echo '</label></div>',"\n";
-									endforeach;
-									echo '</td>',"\n";
-?>
-								</tr></tbody></table></div>
 							</td>
 							<td class="lcebl" style="vertical-align:top">
 								<div class="rblo">
@@ -331,32 +315,32 @@ function enable_change(enable_change) {
 								</div>
 								<div class="rblo">
 									<label>
-										<input type="radio" class="rblo" name="all_weekdays" id="all_weekdays2" value="0" <?php if(1 != $pconfig['all_weekdays']) echo 'checked="checked"';?>/>
+										<input type="radio" class="rblo dimassoctable" name="all_weekdays" id="all_weekdays2" value="0" <?php if(1 != $pconfig['all_weekdays']) echo 'checked="checked"';?>/>
 										<span class="rblo"><?=gtext('Selected');?> ..</span>
+										<table><tbody class="donothighlight"><tr>
+<?php
+											echo '<td class="lcefl">',"\n";
+											foreach($g_weekdays as $key => $val):
+												echo '<div class="cblo"><label>';
+												echo '<input type="checkbox" class="cblo" name="weekday[]" onchange="set_selected(\'all_weekdays\')" value="',$key,'"';
+												if(isset($pconfig['weekday']) && is_array($pconfig['weekday'])):
+													if(in_array((string)$key,$pconfig['weekday'])):
+														echo ' checked="checked"';
+													endif;
+													if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
+														if(in_array('0',$pconfig['weekday'])):
+															echo ' checked="checked"';
+														endif;
+													endif;
+												endif;
+												echo '/><span class="cblo">',$val,'</span>';
+												echo '</label></div>',"\n";
+											endforeach;
+											echo '</td>',"\n";
+?>
+										</tr></tbody></table>
 									</label>
 								</div>
-								<div><table><tbody class="donothighlight"><tr>
-<?php
-									echo '<td class="lcefl">',"\n";
-									foreach($g_weekdays as $key => $val):
-										echo '<div class="cblo"><label>';
-										echo '<input type="checkbox" class="cblo" name="weekday[]" onchange="set_selected(\'all_weekdays\')" value="',$key,'"';
-										if(isset($pconfig['weekday']) && is_array($pconfig['weekday'])):
-											if(in_array((string)$key,$pconfig['weekday'])):
-												echo ' checked="checked"';
-											endif;
-											if(7 == $key): // Compatibility for non-ISO day of week 0 for Sunday
-												if(in_array('0',$pconfig['weekday'])):
-													echo ' checked="checked"';
-												endif;
-											endif;
-										endif;
-										echo '/><span class="cblo">',$val,'</span>';
-										echo '</label></div>',"\n";
-									endforeach;
-									echo '</td>',"\n";
-?>
-								</tr></tbody></table></div>
 							</td>
 						</tr></tbody>
 					</table>
@@ -368,7 +352,7 @@ function enable_change(enable_change) {
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (false !== $cnid)) ? gtext('Save') : gtext('Add')?>" onclick="enable_change(true)" />
+		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (false !== $cnid)) ? gtext('Save') : gtext('Add')?>"/>
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 	</div>
@@ -377,13 +361,5 @@ function enable_change(enable_change) {
 ?>
 </td></tr></tbody></table></form>
 <?php
-if(isset($uuid) && (FALSE !== $cnid)):
-?>
-<script type="text/javascript">
-<!-- Disable controls that should not be modified anymore in edit mode. -->
-enable_change(false);
-</script>
-<?php
-endif;
 include 'fend.inc';
 ?>
