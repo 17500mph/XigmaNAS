@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-06-16 01:08+0000\n"
-"PO-Revision-Date: 2017-06-16 06:24+0000\n"
+"PO-Revision-Date: 2017-06-17 00:48+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-16 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-06-19 12:54+0000\n"
 "X-Generator: Launchpad (build 18416)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -2088,7 +2088,7 @@ msgid "Dedup"
 msgstr "重复数据删除（Dedup）"
 
 msgid "Dedup Method"
-msgstr "重新排序方法"
+msgstr "重复数据删除方法"
 
 msgid "Default"
 msgstr "默认值"
@@ -10402,66 +10402,3 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
-
-#~ msgid ""
-#~ "January February March April May June July August September October November "
-#~ "December"
-#~ msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 十一月 十二月"
-
-#~ msgid "Reports"
-#~ msgstr "报告"
-
-#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-#~ msgstr "星期日 星期一 星期二 星期三 星期四 星期五 星期六"
-
-#~ msgid "Custom script is not found."
-#~ msgstr "未找到自定义脚本"
-
-#~ msgid "Delete algorithm"
-#~ msgstr "删除演算法"
-
-#~ msgid "Run now"
-#~ msgstr "立刻执行"
-
-#~ msgid "To e-mail"
-#~ msgstr "发送电​​邮"
-
-#~ msgid "Week days"
-#~ msgstr "平日"
-
-#~ msgid "After"
-#~ msgstr "在此之后"
-
-#~ msgid "Before"
-#~ msgstr "之前"
-
-#~ msgid "Delay"
-#~ msgstr "延迟"
-
-#~ msgid "During"
-#~ msgstr "期间"
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
-#~ msgstr "ZFS卷大小。 要指定大小，请使用以下可读的后缀（例如，'K'，'KB'，'M'，'GB'等）。"
-
-#~ msgid ""
-#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-#~ "minutes, hours, days and months."
-#~ msgstr "注意：按住Ctrl键（或在Mac上按住command键）可以选择和取消选择几分钟，几小时，几天或几个月。"
-
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
-#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
-#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
-#~ msgstr ""
-#~ "控制用于此卷的压缩算法。 “LZ4”是现在推荐的压缩算法。 "
-#~ "如果功能标志lz4_compress处于活动状态，则将压缩设置为“开”，使用LZ4压缩算法，否则使用LZJB。 你可以使用值“GZIP-"
-#~ "N”来指定“GZIP”级别，其中N是从1（最快）到9（最佳压缩比）的整数。 目前，“GZIP”相当于“GZIP-6”。"
-
-#~ msgid "Invalid option."
-#~ msgstr "选项无效。"

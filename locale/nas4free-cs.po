@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-06-16 01:08+0000\n"
-"PO-Revision-Date: 2017-05-28 19:08+0000\n"
+"PO-Revision-Date: 2017-06-19 11:25+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-16 21:08+0000\n"
+"X-Launchpad-Export-Date: 2017-06-19 12:53+0000\n"
 "X-Generator: Launchpad (build 18416)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -184,7 +184,7 @@ msgstr ""
 "o zadané kapacitě."
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr ""
@@ -195,7 +195,7 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Pro vytvoření svazku typu RAID-1 je zapotřebí jednoho a více disků."
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Pro vytvoření svazku typu RAID-0 je zapotřebí dvou a více disků."
@@ -204,7 +204,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Pro vytvoření svazku typu RAID-1 je zapotřebí dvou a více disků."
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Pro vytvoření svazku typu RAID-5 je zapotřebí třech a více disků."
@@ -413,7 +413,7 @@ msgid "Access Restrictions"
 msgstr "Omezení přístupu"
 
 msgid "Access Time"
-msgstr ""
+msgstr "Okamžik přístupu"
 
 msgid "Access Time (atime)"
 msgstr "Okamžik přístupu (atime)"
@@ -1457,7 +1457,7 @@ msgid "Calibration Battery"
 msgstr "Kalibrace akumulátorů"
 
 msgid "Can Mount"
-msgstr ""
+msgstr "Je možné připojit"
 
 msgid "Can't get UFS ID."
 msgstr "Nedaří se získat UFS identifikátor."
@@ -1549,7 +1549,7 @@ msgid "Check the list of available drivers"
 msgstr "Zkontrolovat seznam ovladačů, které jsou k dispozici"
 
 msgid "Checksum"
-msgstr ""
+msgstr "Kontrolní součet"
 
 msgid "Chinese (Simplified)"
 msgstr "čínština (zjednodušená)"
@@ -1831,13 +1831,13 @@ msgid "Controls the dedup method."
 msgstr "Ovládá metodu deduplikace."
 
 msgid "Controls the number of copies of data stored for this dataset."
-msgstr ""
+msgstr "Řídí počet kopií dat ukládaných pro tuto datovou sadu."
 
 msgid "Controls the power consumption mode."
 msgstr "Řídí režim řízení spotřeby energie."
 
 msgid "Controls the type of the ZFS dataset."
-msgstr ""
+msgstr "Řídí typ ZFS datové sady."
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr "Řídí co bude uchováváno v hlavní mezipaměti (ARC)."
@@ -1846,20 +1846,24 @@ msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr "Řídí co bude uchováváno v pomocné mezipaměti (L2ARC)."
 
 msgid "Controls what types of metadata are stored redundantly."
-msgstr ""
+msgstr "Řídí které typy metadat jsou ukládány dvojitě."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
-msgstr ""
+msgstr "Řídí zda z tohoto souborového systému mohou být spouštěny procesy."
 
 msgid ""
 "Controls whether the .zfs directory is hidden or visible in the root of the "
 "file system."
 msgstr ""
+"Řídí zda složka .zfs, nacházející se v kořeni souborového systému, skrytá "
+"nebo viditelná."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read."
 msgstr ""
+"Řídí zda aktualizovat údaj o okamžiku přístupu u souborů, když jsou "
+"otevírány."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -1871,10 +1875,12 @@ msgstr ""
 "navýšení výkonu."
 
 msgid "Controls whether the dataset is managed from a jail."
-msgstr ""
+msgstr "Řídí zda je datová sada spravována z odděleného prostředí."
 
 msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr ""
+"Řídí zda je u souborového systému respektován příznak spouštění jak uživatel "
+"(set-UID)."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Určuje zda bude možné tuto datovou sadu upravovat."
@@ -1890,7 +1896,7 @@ msgid "Conveyance Self-Test"
 msgstr "Test případného poškození při přepravě"
 
 msgid "Copies"
-msgstr ""
+msgstr "Kopie"
 
 msgid "Core"
 msgstr "Jádro"
@@ -2151,7 +2157,7 @@ msgid "Custom"
 msgstr "Vlastní"
 
 msgid "Custom Script"
-msgstr ""
+msgstr "Vlastní skript"
 
 msgid "Custom device"
 msgstr "Vlasní zařízení"
@@ -2163,7 +2169,7 @@ msgid "Custom script is required."
 msgstr "Vlastní skript je vyžadován."
 
 msgid "Custom script not found."
-msgstr ""
+msgstr "Vlastní skript nebyl nalezen."
 
 msgid "Czech"
 msgstr "čeština"
@@ -2238,7 +2244,7 @@ msgid "Dataset"
 msgstr "Datové sada"
 
 msgid "Dataset Type"
-msgstr ""
+msgstr "Typ datové sady"
 
 msgid "Dataset is marked for deletion"
 msgstr "Datová sada je označena ke smazání"
@@ -2293,7 +2299,7 @@ msgid "Dedup"
 msgstr "Deduplikace"
 
 msgid "Dedup Method"
-msgstr ""
+msgstr "Metoda deduplikace"
 
 msgid "Default"
 msgstr "Výchozí"
@@ -2331,7 +2337,7 @@ msgid "Define directories/URL's that require authentication."
 msgstr "Určuje složky / URL adresy, které vyžadují ověření."
 
 msgid "Defines the checksum algorithm."
-msgstr ""
+msgstr "Určuje algoritmus vytváření kontrolních součtů."
 
 msgid "Defines when the shutdown is initiated."
 msgstr "Určuje kdy je zahájeno vypínání."
@@ -2357,7 +2363,7 @@ msgid "Delete ARP entry"
 msgstr "Smazat jednotlivý ARP záznam"
 
 msgid "Delete Algorithm"
-msgstr ""
+msgstr "Smazat algoritmus"
 
 msgid "Delete Host"
 msgstr "Smazat záznam pro stroj"
@@ -3693,13 +3699,13 @@ msgid "Enter Command"
 msgstr "Zadejte příkaz"
 
 msgid "Enter Email Address(es)"
-msgstr ""
+msgstr "Zadejte e-mailové adresy"
 
 msgid "Enter Password"
 msgstr "Zadejte heslo"
 
 msgid "Enter Subject"
-msgstr ""
+msgstr "Zadejte předmět"
 
 msgid "Enter a comment"
 msgstr "Zadejte komentář"
@@ -3872,7 +3878,7 @@ msgid "Example: pkg install packagename."
 msgstr "Příklad: pkg install nazevbalicku."
 
 msgid "Exec"
-msgstr ""
+msgstr "Spustit"
 
 msgid "Execute"
 msgstr "Spustit"
@@ -4090,6 +4096,8 @@ msgid ""
 "File System - can be mounted within the standard system namespace and "
 "behaves like other file systems."
 msgstr ""
+"Souborový systém – je možné ho připojit v rámci standardního systémového "
+"jmenného prostoru a chová se stejně, jako ostatní souborové systémy."
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol (protokol pro přenos souborů)"
@@ -4465,7 +4473,7 @@ msgid "Hiadaptive (High Performance)"
 msgstr "Vysoce přizpůsobivé (vysoký výkon)"
 
 msgid "Hidden"
-msgstr ""
+msgstr "Skryté"
 
 msgid "Hide Default Groups"
 msgstr "Skrýt výchozí skupiny"
@@ -4725,6 +4733,8 @@ msgstr ""
 
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
+"Pokud je tato vlastnost vypnutá, souborový systém není možné připojit "
+"(mount)."
 
 msgid "Import"
 msgstr "Importovat"
@@ -4787,18 +4797,23 @@ msgid ""
 "Indicates whether the file name matching algorithm used by the filesystem "
 "should be case-sensitive, case-insensitive, or allow a combination of both "
 "styles of matching."
-msgstr ""
+msgstr "Značí zda souborový systém rozlišuje velká a malá písmena."
 
 msgid ""
 "Indicates whether the file system should perform a unicode normalization of "
 "file names whenever two file names are compared, and which normalization "
 "algorithm should be used."
 msgstr ""
+"Značí zda souborový systém při porovnávání názvů souborů provádí normalizaci "
+"jejich názvů do univerzálního kódování a případně jaký algoritmus k tomu je "
+"používán."
 
 msgid ""
 "Indicates whether the file system should reject file names that include "
 "characters that are not present in the UTF-8 character code set."
 msgstr ""
+"Značí zda souborový systém má odmítat soubory jejichž názvy obsahují znaky "
+"které se nenacházejí v znakové sadě UTF-8."
 
 msgid "Info"
 msgstr "Info"
@@ -5066,7 +5081,7 @@ msgid "JBOD Maintenance"
 msgstr "JBOD Údržba"
 
 msgid "Jailed"
-msgstr ""
+msgstr "V odděleném prostředí"
 
 msgid "Jan"
 msgstr "led"
@@ -5209,7 +5224,7 @@ msgstr ""
 "ostatních případech 100."
 
 msgid "Latency"
-msgstr ""
+msgstr "Prodleva"
 
 #, php-format
 msgid "Latest Beta Release: %s"
@@ -5282,9 +5297,11 @@ msgstr ""
 
 msgid "Limits the amount of space a dataset and its descendents can consume."
 msgstr ""
+"Omezuje množství prostoru které datová sada a její podřízené objekty mohou "
+"zabrat."
 
 msgid "Limits the amount of space a dataset can consume."
-msgstr ""
+msgstr "Omezuje množství prostoru které datová sada může zabírat."
 
 msgid "Link Down Action"
 msgstr "Akce při výpadku spojení"
@@ -5805,7 +5822,7 @@ msgstr ""
 "problémy."
 
 msgid "Most"
-msgstr ""
+msgstr "Většina"
 
 msgid "Mount Point"
 msgstr "Přípojný bod"
@@ -6040,7 +6057,7 @@ msgid "No Initiator Group has been configured."
 msgstr "Není nastavená žádná skupina iniciátoru."
 
 msgid "No Parity"
-msgstr ""
+msgstr "Bez parity"
 
 msgid "No Portal Group has been configured."
 msgstr "Není nastavená žádná skupina portálu."
@@ -6127,7 +6144,7 @@ msgid "Noallow - Only inherit deny entries"
 msgstr "Neumožňovat – přebírat pouze položky odepření"
 
 msgid "Noauto"
-msgstr ""
+msgstr "Noauto"
 
 msgid "Node A IP address"
 msgstr "IP adresa uzlu A"
@@ -6190,7 +6207,7 @@ msgid "Normal"
 msgstr "Nejrychleji, ale nepříliš podrobně"
 
 msgid "Normalization"
-msgstr ""
+msgstr "Normalizace"
 
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
@@ -6916,6 +6933,8 @@ msgstr "Protokol"
 msgid ""
 "Provide a hint to ZFS about handling of synchronous requests in this dataset."
 msgstr ""
+"Poskytuje ZFS pokyn ohledně obsluhování synchronních požadavků v rámci této "
+"datové sady"
 
 msgid "Provider"
 msgstr "Poskytovatel"
@@ -7177,13 +7196,13 @@ msgid "Recycle Bin"
 msgstr "Koš"
 
 msgid "Redundant Metadata"
-msgstr ""
+msgstr "Záložní kopie metadat"
 
 msgid "Refquota"
-msgstr ""
+msgstr "Vztažná kvóta"
 
 msgid "Refreservation"
-msgstr ""
+msgstr "Vztažné vyhrazení"
 
 msgid "Refresh"
 msgstr "Načíst znovu"
@@ -7457,7 +7476,7 @@ msgid "Rules"
 msgstr "Pravidla"
 
 msgid "Run Now"
-msgstr ""
+msgstr "Spusit nyní"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
@@ -7493,10 +7512,10 @@ msgid "S.M.A.R.T. log"
 msgstr "Záznam událostí SMART diagnostiky"
 
 msgid "SHA-256, Verify"
-msgstr ""
+msgstr "SHA-256, ověřit"
 
 msgid "SHA-512, Verify"
-msgstr ""
+msgstr "SHA-512, ověřit"
 
 msgid "SHA256, Verify"
 msgstr "SHA256, ověřit"
@@ -7913,7 +7932,7 @@ msgid "Services"
 msgstr "Služby"
 
 msgid "Set UID"
-msgstr ""
+msgstr "Nastavit spouštění jako uživatel (set-UID)"
 
 msgid "Set additional group memberships for this account."
 msgstr "Nastavit tomuto účtu členství ještě v dalších skupinách."
@@ -8091,7 +8110,7 @@ msgstr ""
 "závisí na použitých discích.)"
 
 msgid "Skein, Verify"
-msgstr ""
+msgstr "Skein, ověřit"
 
 msgid "Skew"
 msgstr "Posun"
@@ -8121,7 +8140,7 @@ msgid "SmartTrim"
 msgstr "SmartTrim (vyrovnání přepětí)"
 
 msgid "Snapdir"
-msgstr ""
+msgstr "Složka se zachycenými stavy"
 
 msgid "Snapshot"
 msgstr "Zachycený stav"
@@ -8273,7 +8292,7 @@ msgid "Standard"
 msgstr "Standardní"
 
 msgid "Standard Reports"
-msgstr ""
+msgstr "Standardní hlášení"
 
 msgid "Standby"
 msgstr "Pohotovostní režim"
@@ -9213,11 +9232,14 @@ msgstr ""
 msgid ""
 "The minimum amount of space guaranteed to a dataset and its descendents."
 msgstr ""
+"Kolik prostoru je garantováno této datové sadě a jí podřízeným objektům."
 
 msgid ""
 "The minimum amount of space guaranteed to a dataset, not including its "
 "descendents."
 msgstr ""
+"Kolik prostoru je garantováno této datové sadě, ale už ne jí podřízeným "
+"objektům."
 
 msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
@@ -9455,7 +9477,7 @@ msgid "The uploaded file was only partially uploaded."
 msgstr "Na server dorazila pouze část souboru."
 
 msgid "The value is invalid."
-msgstr ""
+msgstr "Zadaná hodnota není platná."
 
 msgid "The value of the variable."
 msgstr "Hodnota proměnné."
@@ -10000,7 +10022,7 @@ msgstr ""
 "Umožní vysílání .jpg a .mp3 souborů na TiVo zařízení, podporující HMO."
 
 msgid "Throughput"
-msgstr ""
+msgstr "Propustnost"
 
 msgid "Thu"
 msgstr "čt"
@@ -10064,7 +10086,7 @@ msgid "TitleSpeed"
 msgstr "RychlostTitulku"
 
 msgid "To Email"
-msgstr ""
+msgstr "Na e-mail"
 
 msgid "To Email Address"
 msgstr "Na e-mailovou adresu"
@@ -10309,7 +10331,7 @@ msgid "UFS with Soft Updates"
 msgstr "UFS se soft aktualizacemi metadat"
 
 msgid "UID"
-msgstr "Jedinečný identifikátor"
+msgstr "Identifikátor uživatele (UID)"
 
 msgid "UPS"
 msgstr "Zdroj nepřeruš. napájení (UPS)"
@@ -10402,7 +10424,7 @@ msgid "URL"
 msgstr "URL adresa"
 
 msgid "UTF-8 Only"
-msgstr ""
+msgstr "Pouze UTF-8"
 
 msgid "Ukrainian"
 msgstr "ukrajinština"
@@ -10798,13 +10820,15 @@ msgid "Virtualization"
 msgstr "Virtualizace"
 
 msgid "Visible"
-msgstr ""
+msgstr "Viditelné"
 
 msgid "Volume"
 msgstr "Svazek"
 
 msgid "Volume - A logical volume. Can be exported as a raw or block device."
 msgstr ""
+"Svazek – logický svazek. Je možné ho exportovat jako holé (raw) nebo blokové "
+"zařízení."
 
 msgid "Volume Label"
 msgstr "Štítek svazku"
@@ -10816,7 +10840,7 @@ msgid "Volume Name"
 msgstr "Název svazku"
 
 msgid "Volume Size"
-msgstr ""
+msgstr "Velikost svazku"
 
 msgid "Volume Size Limit"
 msgstr "Omezení velikosti svazku"
@@ -10932,7 +10956,7 @@ msgid "Week Days"
 msgstr "Dny v týdnu"
 
 msgid "Weekdays"
-msgstr ""
+msgstr "Všední dny"
 
 msgid "Western Digital attribute."
 msgstr "Atribut specifický jednotkám od Western Digital."
@@ -11190,6 +11214,8 @@ msgstr ""
 msgid ""
 "ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
+"Velikost ZFS svazku. Je možné použít člověku srozumitelné přípony jako K, "
+"KB, M a GB."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -11332,75 +11358,3 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
-
-#~ msgid "Delete algorithm"
-#~ msgstr "Odstranit algoritmus"
-
-#~ msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-#~ msgstr "neděle pondělí úterý středa čtvrtek pátek sobota"
-
-#~ msgid "To e-mail"
-#~ msgstr "Na e-mail"
-
-#~ msgid "Week days"
-#~ msgstr "Dny v týdnu"
-
-#~ msgid "Custom script is not found."
-#~ msgstr "Vlastní skript nebyl nalezen."
-
-#~ msgid "Run now"
-#~ msgstr "Spustit nyní"
-
-#~ msgid "Reports"
-#~ msgstr "Hlášení"
-
-#~ msgid ""
-#~ "January February March April May June July August September October November "
-#~ "December"
-#~ msgstr ""
-#~ "leden únor březen duben květen červen červenec srpen září říjen listopad "
-#~ "prosinec"
-
-#~ msgid ""
-#~ "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
-#~ "minutes, hours, days and months."
-#~ msgstr ""
-#~ "Poznámka: Klikáním s přidržením klávesy Ctrl (command u Apple) lze minuty, "
-#~ "hodiny, dny a měsíce do výběru zahrnovat (a případně vypouštět) i vícekrát."
-
-#~ msgid "Delay"
-#~ msgstr "Prodleva"
-
-#~ msgid "After"
-#~ msgstr "Poté"
-
-#~ msgid "Before"
-#~ msgstr "Před"
-
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. 'LZ4' is now the "
-#~ "recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
-#~ "compression algorithm if the feature flag lz4_compress is active, otherwise "
-#~ "LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'GZIP' is equivalent to 'GZIP-6'."
-#~ msgstr ""
-#~ "Řídí kompresní algoritmus používaný v tomto svazku. „LZ4“ je v současnosti "
-#~ "doporučeným kompresním algoritmem. Nastavení komprese na „Zapnuto“ používá "
-#~ "LZ4 kompresní algoritmus v případě, že je aktivní příznak funkce "
-#~ "lz4_compress. V opačném případě je použito LZJB. Úroveň „GZIP“ komprese je "
-#~ "možné určit hodnout „GZIP-N“, kde N je celé kladné číslo od 1 (nejrychlejší) "
-#~ "až 9 (nejúčinnější). V současnosti je „GZIP“ ekvivalent pro „GZIP-6“."
-
-#~ msgid "During"
-#~ msgstr "Během"
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
-#~ msgstr ""
-#~ "Velikost ZFS svazku. Zadává se s člověku srozumitelnou příponou (např. „K“, "
-#~ "„KB“, „M“, „GB“, atd.)."
-
-#~ msgid "Invalid option."
-#~ msgstr "Neplatná předvolba."
