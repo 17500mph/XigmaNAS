@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-16 01:08+0000\n"
-"PO-Revision-Date: 2017-05-25 10:14+0000\n"
+"PO-Revision-Date: 2017-06-19 18:18+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-19 12:54+0000\n"
+"X-Launchpad-Export-Date: 2017-06-20 02:56+0000\n"
 "X-Generator: Launchpad (build 18416)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -409,7 +409,7 @@ msgid "Access Restrictions"
 msgstr "Restricții Acces"
 
 msgid "Access Time"
-msgstr ""
+msgstr "Timp acces"
 
 msgid "Access Time (atime)"
 msgstr "Timp Acces (atime)"
@@ -1442,7 +1442,7 @@ msgid "Calibration Battery"
 msgstr "Calibrare acumulator"
 
 msgid "Can Mount"
-msgstr ""
+msgstr "Se poate monta"
 
 msgid "Can't get UFS ID."
 msgstr "ID UFS inaccesibil."
@@ -1532,7 +1532,7 @@ msgid "Check the list of available drivers"
 msgstr "Verifică lista actualizată a driverelor"
 
 msgid "Checksum"
-msgstr ""
+msgstr "Sumă de control"
 
 msgid "Chinese (Simplified)"
 msgstr "Chineză (Simplificată)"
@@ -1811,12 +1811,13 @@ msgstr "Controlează metoda dedup"
 
 msgid "Controls the number of copies of data stored for this dataset."
 msgstr ""
+"Controlează numărul de copii al datelor stocate pentru acest set de date."
 
 msgid "Controls the power consumption mode."
 msgstr "Controlează consumul energetic."
 
 msgid "Controls the type of the ZFS dataset."
-msgstr ""
+msgstr "Controlează tipul setului de date ZFS."
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr "Controlează ce va fi stocat în cache-ul primar (ARC)."
@@ -1825,7 +1826,7 @@ msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr "Controlează ce va fi stocat în cache-ul secundar (L2ARC)."
 
 msgid "Controls what types of metadata are stored redundantly."
-msgstr ""
+msgstr "Controlează tipul de date stocate în mod redundant."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -1869,7 +1870,7 @@ msgid "Conveyance Self-Test"
 msgstr "Auto-test detaliat"
 
 msgid "Copies"
-msgstr ""
+msgstr "Copii"
 
 msgid "Core"
 msgstr "Nucleul"
@@ -2139,7 +2140,7 @@ msgid "Custom"
 msgstr "Personalizat"
 
 msgid "Custom Script"
-msgstr ""
+msgstr "Script utilizator"
 
 msgid "Custom device"
 msgstr "Dispozitiv utilizator"
@@ -2151,7 +2152,7 @@ msgid "Custom script is required."
 msgstr "Scriptul personalizat este necesar."
 
 msgid "Custom script not found."
-msgstr ""
+msgstr "Scriptul utilizator nu a fost găsit."
 
 msgid "Czech"
 msgstr "Cehă"
@@ -2223,7 +2224,7 @@ msgid "Dataset"
 msgstr "Set de date"
 
 msgid "Dataset Type"
-msgstr ""
+msgstr "Tip set de date"
 
 msgid "Dataset is marked for deletion"
 msgstr "Setul de date este marcat pentru ștergere"
@@ -2278,7 +2279,7 @@ msgid "Dedup"
 msgstr "Dedup"
 
 msgid "Dedup Method"
-msgstr ""
+msgstr "Metodă dedup"
 
 msgid "Default"
 msgstr "Implicit"
@@ -2318,7 +2319,7 @@ msgid "Define directories/URL's that require authentication."
 msgstr "Definiți directoarele/URL-urile care necesită autentificare"
 
 msgid "Defines the checksum algorithm."
-msgstr ""
+msgstr "Definește algoritmul sumei de control."
 
 msgid "Defines when the shutdown is initiated."
 msgstr "Configurează momentul când se inițiază oprirea sistemului."
@@ -2344,7 +2345,7 @@ msgid "Delete ARP entry"
 msgstr "Ștergere intrare ARP"
 
 msgid "Delete Algorithm"
-msgstr ""
+msgstr "Algoritm ștergere"
 
 msgid "Delete Host"
 msgstr "Ștergere Sistem"
@@ -3670,13 +3671,13 @@ msgid "Enter Command"
 msgstr "Introducere comandă"
 
 msgid "Enter Email Address(es)"
-msgstr ""
+msgstr "Introduceți adresa(adresele) de email"
 
 msgid "Enter Password"
 msgstr "Introduceți parola"
 
 msgid "Enter Subject"
-msgstr ""
+msgstr "Introduceți subiectul"
 
 msgid "Enter a comment"
 msgstr "Introduceți un comentariu"
@@ -3853,7 +3854,7 @@ msgid "Example: pkg install packagename."
 msgstr "Exemplu: nume pachet pentru instalare."
 
 msgid "Exec"
-msgstr ""
+msgstr "Execută"
 
 msgid "Execute"
 msgstr "Executare"
@@ -4446,7 +4447,7 @@ msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive (Înaltă performanță)"
 
 msgid "Hidden"
-msgstr ""
+msgstr "Ascuns"
 
 msgid "Hide Default Groups"
 msgstr "Ascudere grupuri implicite"
@@ -4705,6 +4706,8 @@ msgstr ""
 
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
+"Dacă această opțiune este dezactivată, sistemul de fișiere nu poate fi "
+"montat."
 
 msgid "Import"
 msgstr "Import"
@@ -5186,7 +5189,7 @@ msgstr ""
 "temperatură excesivă, în rest valoarea normală este 100."
 
 msgid "Latency"
-msgstr ""
+msgstr "Latență"
 
 #, php-format
 msgid "Latest Beta Release: %s"
@@ -5256,7 +5259,7 @@ msgid "Limits the amount of space a dataset and its descendents can consume."
 msgstr ""
 
 msgid "Limits the amount of space a dataset can consume."
-msgstr ""
+msgstr "Limitează volumul de date care poate fi utilizat de setul de date."
 
 msgid "Link Down Action"
 msgstr "Dezactivare conexiune"
@@ -5370,7 +5373,7 @@ msgid "Logarithmic Scaling"
 msgstr "Scală logaritmică"
 
 msgid "Logbias"
-msgstr ""
+msgstr "Logbias"
 
 msgid "Logical Block"
 msgstr "Bloc logic"
@@ -5765,7 +5768,7 @@ msgstr ""
 "probleme."
 
 msgid "Most"
-msgstr ""
+msgstr "Majoritatea"
 
 msgid "Mount Point"
 msgstr "Punct Montare"
@@ -5998,7 +6001,7 @@ msgid "No Initiator Group has been configured."
 msgstr "Niciun Grup inițiator nu a fost configurat."
 
 msgid "No Parity"
-msgstr ""
+msgstr "Fără paritate"
 
 msgid "No Portal Group has been configured."
 msgstr "Niciun Grup portal nu a fost configurat."
@@ -6084,7 +6087,7 @@ msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Doar intrări de refuz moștenite"
 
 msgid "Noauto"
-msgstr ""
+msgstr "Noauto"
 
 msgid "Node A IP address"
 msgstr "Adresă IP nod A"
@@ -6147,7 +6150,7 @@ msgid "Normal"
 msgstr "Normal"
 
 msgid "Normalization"
-msgstr ""
+msgstr "Normalizare"
 
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
@@ -7126,13 +7129,13 @@ msgid "Recycle Bin"
 msgstr "Recycle Bin"
 
 msgid "Redundant Metadata"
-msgstr ""
+msgstr "Metadate redundante"
 
 msgid "Refquota"
-msgstr ""
+msgstr "Refquota"
 
 msgid "Refreservation"
-msgstr ""
+msgstr "Refreservation"
 
 msgid "Refresh"
 msgstr "Reactualizare"
@@ -7408,7 +7411,7 @@ msgid "Rules"
 msgstr "Reguli"
 
 msgid "Run Now"
-msgstr ""
+msgstr "Rulează acum"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "Rulare fără activare daemon remote sync. (Implicit dezactivat)"
@@ -7442,10 +7445,10 @@ msgid "S.M.A.R.T. log"
 msgstr "Jurnal S.M.A.R.T."
 
 msgid "SHA-256, Verify"
-msgstr ""
+msgstr "SHA-256, Verificare"
 
 msgid "SHA-512, Verify"
-msgstr ""
+msgstr "SHA-512, Verificare"
 
 msgid "SHA256, Verify"
 msgstr "SHA256, Verificare"
@@ -7860,7 +7863,7 @@ msgid "Services"
 msgstr "Servicii"
 
 msgid "Set UID"
-msgstr ""
+msgstr "Setare UID"
 
 msgid "Set additional group memberships for this account."
 msgstr "Definiți grupuri adiționale pentru acest cont."
@@ -8042,7 +8045,7 @@ msgstr ""
 "depinzînd de mărimea discurilor dumneavoastră)."
 
 msgid "Skein, Verify"
-msgstr ""
+msgstr "Skein, Verificare"
 
 msgid "Skew"
 msgstr "Skew"
@@ -8072,7 +8075,7 @@ msgid "SmartTrim"
 msgstr "SmartTrim"
 
 msgid "Snapdir"
-msgstr ""
+msgstr "Snapdir"
 
 msgid "Snapshot"
 msgstr "Imagine sistem"
@@ -8229,7 +8232,7 @@ msgid "Standard"
 msgstr "Standard"
 
 msgid "Standard Reports"
-msgstr ""
+msgstr "Rapoarte standard"
 
 msgid "Standby"
 msgstr "În așteptare"
@@ -9371,7 +9374,7 @@ msgid "The uploaded file was only partially uploaded."
 msgstr "Fișierul a fost parțial încărcat."
 
 msgid "The value is invalid."
-msgstr ""
+msgstr "Valoare invalidă."
 
 msgid "The value of the variable."
 msgstr "Valoarea variabilei."
@@ -9917,7 +9920,7 @@ msgstr ""
 "TiVo care au suport HMO."
 
 msgid "Throughput"
-msgstr ""
+msgstr "Rată transfer"
 
 msgid "Thu"
 msgstr "Joi"
@@ -9983,7 +9986,7 @@ msgid "TitleSpeed"
 msgstr "Viteză Text"
 
 msgid "To Email"
-msgstr ""
+msgstr "Către email"
 
 msgid "To Email Address"
 msgstr "Adresă de email destinație"
@@ -10315,7 +10318,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "UTF-8 Only"
-msgstr ""
+msgstr "Doar UTF-8"
 
 msgid "Ukrainian"
 msgstr "Ucraineană"
@@ -10708,7 +10711,7 @@ msgid "Virtualization"
 msgstr "Virtualizare"
 
 msgid "Visible"
-msgstr ""
+msgstr "Vizibil"
 
 msgid "Volume"
 msgstr "Volum"
@@ -10726,7 +10729,7 @@ msgid "Volume Name"
 msgstr "Nume Volum"
 
 msgid "Volume Size"
-msgstr ""
+msgstr "Dimensiune volum"
 
 msgid "Volume Size Limit"
 msgstr "Capacitate limita a volumului"
@@ -10842,7 +10845,7 @@ msgid "Week Days"
 msgstr "Zilele săptămânii"
 
 msgid "Weekdays"
-msgstr ""
+msgstr "Zilele săptămânii"
 
 msgid "Western Digital attribute."
 msgstr "Contor Western Digital"
@@ -11100,6 +11103,7 @@ msgstr ""
 msgid ""
 "ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
+"Dimensiunea volumului ZFS. Pot fi utilizate și sufixe gen K, KB, M, GB."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
