@@ -810,7 +810,7 @@ function get_headermenu(): array {
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Interface Management'),'link' => '/interfaces_assign.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('LAN Management'),'link' => '/interfaces_lan.php'];
 		for($i = 1;isset($config['interfaces']['opt' . $i]);$i++):
-			$desc = $config['interfaces']['opt'.$i]['descr'];
+			$desc = filter_var($config['interfaces']['opt' . $i]['descr'],FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => sprintf('OPT%d',$i),'regexp' => '/\S/']]);
 			$link = '/interfaces_opt.php?index=' . $i;
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => $desc,'link' => $link];
 		endfor;
