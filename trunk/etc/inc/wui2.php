@@ -579,7 +579,7 @@ class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
 			'size' => $this->GetSize()
 		];
 		$root->addElement('input',$attributes);
-		$slash = $root->createTextNode(' / ');
+		$slash = $root->ownerDocument->createTextNode(' / ');
 		$root->appendChild($slash);
 		$attributes = ['id' => $ctrlnamenetmask,'name' => $ctrlnamenetmask,'class' => 'formfld'];
 		$o_select = $root->addElement('select',$attributes);
@@ -611,7 +611,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'size' => $this->GetSize()
 		];
 		$root->addElement('input',$attributes);
-		$slash = $root->createTextNode(' / ');
+		$slash = $root->ownerDocument->createTextNode(' / ');
 		$root->appendChild($slash);
 		$attributes = [
 			'type' => 'text',
