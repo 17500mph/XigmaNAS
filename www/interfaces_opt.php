@@ -166,8 +166,8 @@ if ($_POST) {
 		touch($d_sysrebootreqd_path);
 	}
 }
-
-$pgtitle = [gtext('Network'), 'Optional (' . htmlspecialchars($optcfg['descr']) . ')'];
+$desc = filter_var($optcfg['descr'],FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => sprintf('OPT%d',$index),'regexp' => '/\S/']]);
+$pgtitle = [gtext('Network'),sprintf('%s (%s)',gtext('Optional'),htmlspecialchars($desc))];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
