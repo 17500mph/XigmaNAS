@@ -78,17 +78,31 @@ endif;
 $pgtitle = [gtext('System'),gtext('Password')];
 include 'fbegin.inc';
 ?>
-<form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" name="iform" id="iform"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="tabcont">
+<form action="userportal_system_password.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
-	if (!empty($input_errors)) print_input_errors($input_errors);
-	if (!empty($savemsg)) print_info_box($savemsg);
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
 ?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
 <?php
-		html_titleline2(gtext('User Password Settings'));
-		html_passwordbox2('password_old',gtext('Current password'),'','',true);
-		html_passwordconfbox2('password_new','password_confirm',gtext('New password'),'','','',true);
+			html_titleline2(gtext('User Password Settings'));
 ?>
+		</thead>
+		<tbody>
+<?php
+			html_passwordbox2('password_old',gtext('Current password'),'','',true);
+			html_passwordconfbox2('password_new','password_confirm',gtext('New password'),'','','',true);
+?>
+		</tbody>
 	</table>
 	<div id="submit">
 		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>"/>
