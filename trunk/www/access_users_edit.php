@@ -34,6 +34,24 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+//	Return next available user id.
+function get_nextuser_id() {
+	global $config;
+
+	//	Get next free user id.
+	exec('/usr/sbin/pw nextuser',$output);
+	$output = explode(':',$output[0]);
+	$id = intval($output[0]);
+	//	Check if id is already in use. If the user does not press the 'Apply'
+	//	button 'pw' does not recognize that there are already several new users
+	//	configured because the user db is not updated until 'Apply' is pressed.
+	$a_user = array_make_branch($config,'access','user');
+	while(false !== array_search_ex(strval($id),$a_user,'id')):
+		$id++;
+	endwhile;
+	return $id;
+}
+
 if (isset($_GET['uuid'])):
 	$uuid = $_GET['uuid'];
 endif;
@@ -50,7 +68,8 @@ endif;
 $a_user_system = system_get_user_list();
 $a_group = system_get_group_list();
 
-if(isset($uuid) && (false !== ($cnid = array_search_ex($uuid, $a_user,'uuid')))):
+$cnid = array_search_ex($uuid, $a_user,'uuid');
+if(isset($uuid) && (false !== $cnid)):
 	$mode_page = PAGE_MODE_EDIT;
 	$pconfig['uuid'] = $a_user[$cnid]['uuid'];
 	$pconfig['login'] = $a_user[$cnid]['login'];
@@ -86,9 +105,18 @@ if($_POST):
 		exit;
 	endif;
 	// Input validation
-	$reqdfields = ['login','fullname','password','primarygroup','userid','shell'];
-	$reqdfieldsn = [gtext('Name'),gtext('Full Name'),gtext('Password'),gtext('Primary Group'),gtext('User ID'),gtext('Shell')];
-	$reqdfieldst = ['string','string','string','numeric','numeric','string'];
+	switch($mode_page):
+		case PAGE_MODE_ADD:
+			$reqdfields = ['login','fullname','password','primarygroup','userid','shell'];
+			$reqdfieldsn = [gtext('Name'),gtext('Full Name'),gtext('Password'),gtext('Primary Group'),gtext('User ID'),gtext('Shell')];
+			$reqdfieldst = ['string','string','string','numeric','numeric','string'];
+			break;
+		case PAGE_MODE_EDIT:
+			$reqdfields = ['login','fullname','primarygroup','userid','shell'];
+			$reqdfieldsn = [gtext('Name'),gtext('Full Name'),gtext('Primary Group'),gtext('User ID'),gtext('Shell')];
+			$reqdfieldst = ['string','string','numeric','numeric','string'];
+			break;
+	endswitch;
 	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
 	do_input_validation_type($_POST,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 	//	Check for valid login name.
@@ -110,7 +138,7 @@ if($_POST):
 		$input_errors[] = gtext('This user already exists in the user list.');
 	endif;
 	//	Check for a password mismatch.
-	if($_POST['password'] != $_POST['passwordconf']):
+	if($_POST['password'] !== $_POST['passwordconf']):
 		$input_errors[] = gtext("Passwords don't match.");
 	endif;
 	//	Check if primary group is also selected in additional group.
@@ -134,9 +162,12 @@ if($_POST):
 		$user['uuid'] = $_POST['uuid'];
 		$user['login'] = $_POST['login'];
 		$user['fullname'] = $_POST['fullname'];
-		if((PAGE_MODE_ADD === $mode_page) || (preg_match('/\S/',$_POST['password']))):
+		if($_POST['password'] !== ''):
 			$user['passwordsha'] = mkpasswd($_POST['password']);
 			$user['passwordmd4'] = mkpasswdmd4($_POST['password']);
+		elseif(PAGE_MODE_EDIT === $mode_page):
+			$user['passwordsha'] = $a_user[$cnid]['passwordsha'] ?? mkpasswd($a_user[$cnid]['password'] ?? '');
+			$user['passwordmd4'] = $a_user[$cnid]['passwordmd4'] ?? mkpasswdmd4($a_user[$cnid]['password'] ?? '');
 		endif;
 		$user['shell'] = $_POST['shell'];
 		$user['primarygroup'] = $_POST['primarygroup'];
@@ -158,26 +189,6 @@ if($_POST):
 		exit;
 	endif;
 endif;
-//	Get next user id.
-	// Return next free user id.
-function get_nextuser_id() {
-	global $config;
-
-	//	Get next free user id.
-	exec('/usr/sbin/pw nextuser',$output);
-	$output = explode(':',$output[0]);
-	$id = intval($output[0]);
-	//	Check if id is already in usage. If the user did not press the 'Apply'
-	//	button 'pw' did not recognize that there are already several new users
-	//	configured because the user db is not updated until 'Apply' is pressed.
-	$a_user = $config['access']['user'];
-	if(false !== array_search_ex(strval($id),$a_user,'id')):
-		do {
-			$id++; // Increase id until a unused one is found.
-		} while(false !== array_search_ex(strval($id),$a_user,'id'));
-	endif;
-	return $id;
-}
 $pgtitle = [gtext('Access'),gtext('Users'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 include 'fbegin.inc';
 ?>
@@ -218,9 +229,9 @@ $(window).on("load",function() {
 		<tbody>
 <?php
 
-			html_inputbox2('login',gtext('Name'),$pconfig['login'],gtext('Enter login name of the user.'),true,28,isset($uuid) && (false !== $cnid));
-			html_inputbox2('fullname',gtext('Full Name'),$pconfig['fullname'],gtext('Enter full name of the user.'),true,28);
-			html_passwordconfbox2('password','passwordconf',gtext('Password'),'','',gtext('Enter the user password.'),true);
+			html_inputbox2('login',gtext('Name'),$pconfig['login'],gtext('Enter login name of the user.'),true,28,isset($uuid) && (false !== $cnid),false,0,gtext('Enter login name'));
+			html_inputbox2('fullname',gtext('Full Name'),$pconfig['fullname'],gtext('Enter full name of the user.'),true,28,false,false,0,gtext('Enter full user name'));
+			html_passwordconfbox2('password','passwordconf',gtext('Password'),'','',gtext('Set or reset user password.'),($mode_page === PAGE_MODE_ADD));
 			html_inputbox2('userid',gtext('User ID'),$pconfig['userid'],gtext('User numeric id.'),true,12,isset($uuid) && (false !== $cnid));
 			$l_shell = [
 				'nologin' => 'nologin',
@@ -230,7 +241,7 @@ $(window).on("load",function() {
 				'csh' => 'csh',
 				'tcsh' => 'tcsh'
 			];
-			html_combobox2('shell',gtext('Shell'),$pconfig['shell'],$l_shell,gtext('Set user login shell.'),true);
+			html_radiobox2('shell',gtext('Shell'),$pconfig['shell'],$l_shell,gtext('Set user login shell.'),true);
 			$l_grouplist = [];
 			foreach($a_group as $groupk => $groupv):
 				$l_grouplist[$groupv] = $groupk;
