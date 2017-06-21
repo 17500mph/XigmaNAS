@@ -1148,8 +1148,8 @@ function zfs_is_valid_poolname($name) {
 	// The pool name must begin with a letter, and can only contain
 	// alphanumeric characters as well as underscore, dash, blank and period.
 	// Length of the pool name must be less than 256 characters.
-	$regexp = '^[a-z][a-z\d\.\-_: ]*$/i';
-	$result = filter_var($name,FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'REGEXP' => $regexp]]);
+	$regexp = '/^[a-z][a-z\d\.\-_: ]*$/i';
+	$result = filter_var($name,FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $regexp]]);
 	if(isset($result)):
 		// Pool names beginning with "mirror", "raidz" and "spare" are not allowed, as are names beginning with the pattern "c[0-9]".
 		if(preg_match('/^(mirror|raidz|spare|c[0-9])/',$name)):
