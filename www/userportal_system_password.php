@@ -66,11 +66,14 @@ if($_POST):
 		write_config();
 		updatenotify_set('userdb_user',UPDATENOTIFY_MODE_MODIFIED,$a_user[$index_id]['uuid']);
 		//	Write syslog entry and send an email to the administrator
-		$message = sprintf("The user %s has changed his password via user portal.",Session::getUserName());
+		$message = sprintf("The user [%s] has changed his password via user portal.\nPlease go to the user administration page and apply the changes.",Session::getUserName());
 		write_log($message);
 		if(0 == @email_validate_settings()):
-			$subject = sprintf(gtext("Notification email from host: %s"), system_get_hostname());
-			@email_send($config['system']['email']['from'],$subject,$message,$error);
+			$subject = sprintf(gtext("Notification email from host: %s"),system_get_hostname());
+			$sendto = $config['system']['email']['sendto'] ?? $config['system']['email']['from'] ?? '';
+			if(preg_match('/\S/',$sendto)):
+				@email_send($sendto,$subject,$message,$error);
+			endif;
 		endif;
 		$savemsg = gtext('The administrator has been notified to apply your changes.');
 	endif;
@@ -99,8 +102,8 @@ include 'fbegin.inc';
 		</thead>
 		<tbody>
 <?php
-			html_passwordbox2('password_old',gtext('Current password'),'','',true);
-			html_passwordconfbox2('password_new','password_confirm',gtext('New password'),'','','',true);
+			html_passwordbox2('password_old',gtext('Current Password'),'','',true);
+			html_passwordconfbox2('password_new','password_confirm',gtext('New Password'),'','','',true);
 ?>
 		</tbody>
 	</table>
