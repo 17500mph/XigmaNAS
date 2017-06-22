@@ -34,17 +34,17 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-function disks_zfs_zpool_get_io_ajax() {
+function disks_zfs_zpool_io_ajax() {
 	if(isset($_GET['pool']) && is_string($_GET['pool'])):
-		$cmd = sprintf('zpool iostat -v "%s"', $_GET['pool']);
+		$cmd = sprintf('zpool iostat -v %s 2>&1',escapeshellarg($_GET['pool']));
 	else:
-		$cmd = 'zpool iostat -v';
+		$cmd = 'zpool iostat -v 2>&1';
 	endif;
 	mwexec2($cmd,$rawdata);
 	return htmlspecialchars(implode("\n",$rawdata));
 }
 if(is_ajax()):
-	$status = disks_zfs_zpool_get_io_ajax();
+	$status = disks_zfs_zpool_io_ajax();
 	render_ajax($status);
 endif;
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('I/O Statistics')];
@@ -55,7 +55,7 @@ include 'fbegin.inc';
 $(document).ready(function(){
 	var gui = new GUI;
 	gui.recall(5000, 5000, 'disks_zfs_zpool_io.php', null, function(data) {
-		$('#ajax_refresh').text(data.data);
+		$('#area_refresh').text(data.data);
 	});
 });
 //]]>
@@ -91,7 +91,7 @@ $(document).ready(function(){
 			<tr>
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
-					<pre><span id="ajax_refresh"><?=disks_zfs_zpool_get_io_ajax();?></span></pre>
+					<pre><span id="area_refresh"><?=disks_zfs_zpool_io_ajax();?></span></pre>
 				</td>
 			</tr>
 		</tbody>
