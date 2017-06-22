@@ -6,7 +6,7 @@
 #
 # Firewall, traffic shaper, packet scheduler, in-kernel NAT
 #
-# $FreeBSD: /etc/rc.d/ipfw		Revision 298514
+# $FreeBSD: /etc/rc.d/ipfw		Revision 318965
 # Changes:	- Modify prereqs
 # 		- Add status command
 # 		- Add mkconf command to create firewall rules file
@@ -119,19 +119,19 @@ ipfw_start()
 	#
 	if checkyesno firewall_logging; then
 		echo 'Firewall logging enabled.'
-		sysctl net.inet.ip.fw.verbose=1 >/dev/null
+		${SYSCTL} net.inet.ip.fw.verbose=1 >/dev/null
 	fi
 
 	# Enable the firewall
 	#
-	${SYSCTL_W} net.inet.ip.fw.enable=1
+	${SYSCTL_W} net.inet.ip.fw.enable=1 >/dev/null
 }
 
 ipfw_stop()
 {
 	# Disable the firewall
 	#
-	${SYSCTL_W} net.inet.ip.fw.enable=0
+	${SYSCTL} net.inet.ip.fw.enable=0 >/dev/null
 	if [ -f /etc/rc.d/natd ] ; then
 		/etc/rc.d/natd stop
 	fi
