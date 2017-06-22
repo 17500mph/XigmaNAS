@@ -6,7 +6,7 @@
 #
 # Set the date and time via NTP
 #
-# $FreeBSD: /etc/rc.d/ntpdate	Revision 298514
+# $FreeBSD: /etc/rc.d/ntpdate	Revision 314531
 # Changes:	- Remove requirement 'named'
 # 		- Add mkconf command
 #
@@ -42,13 +42,13 @@ sambaad=$?
 
 ntpdate_start()
 {
-	if [ -z "$ntpdate_hosts" -a -f ${ntpdate_config} ]; then
+	if [ -z "$ntpdate_hosts" -a -f "$ntpdate_config" ]; then
 		ntpdate_hosts=`awk '
 			/^server[ \t]*127.127/      {next}
-			/^(server|peer)/            {
+			/^(server|peer|pool)/       {
 			    if ($2 ~/^-/)           {print $3}
 			    else                    {print $2}}
-		' < ${ntpdate_config}`
+		' < "$ntpdate_config"`
 	fi
 	if [ -n "$ntpdate_hosts" -o -n "$rc_flags" ]; then
 		echo "Setting date via ntp."
