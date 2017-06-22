@@ -38,7 +38,7 @@ require_once './_include/permissions.php';
 require_once './_include/login.php';
 require_once './_include/qxpath.php';
 
-function make_list($_list1, $_list2) {		// make list of files
+function make_list($_list1,$_list2) { // make list of files
 	$list = [];
 
 	if($GLOBALS['srt'] == 'yes'):
@@ -48,17 +48,15 @@ function make_list($_list1, $_list2) {		// make list of files
 		$list1 = $_list2;
 		$list2 = $_list1;
 	endif;
-
 	if(is_array($list1)):
-		while(list($key,$val) = each($list1)):
+		foreach($list1 as $key => $val):
 			$list[$key] = $val;
-		endwhile;
+		endforeach;
 	endif;
-
 	if(is_array($list2)):
-		while(list($key,$val) = each($list2)):
+		foreach($list2 as $key => $val):
 			$list[$key] = $val;
-		endwhile;
+		endforeach;
 	endif;
 	return $list;
 }
@@ -76,86 +74,85 @@ function make_tables($dir, &$dir_list, &$file_list, &$tot_file_size, &$num_items
 		show_error($dir . ": " . $GLOBALS["error_msg"]["opendir"]);
 	endif;
 	// Read directory
-	while (($new_item = readdir($handle)) !== false) {
+	while(($new_item = readdir($handle)) !== false):
 		$abs_new_item = get_abs_item($dir, $new_item);
-
-		if (!get_show_item($dir, $new_item)):
+		if(!get_show_item($dir,$new_item)):
 			continue;
 		endif;
-
 		$new_file_size = is_link($abs_new_item) ? 0 : @filesize($abs_new_item);
 		$tot_file_size += $new_file_size;
 		$num_items++;
-
-		if (is_dir($dir.DIRECTORY_SEPARATOR.$new_item)) {
-			if ($GLOBALS["order"] == "mod") {
+		if(is_dir($dir.DIRECTORY_SEPARATOR.$new_item)):
+			if($GLOBALS['order'] == 'mod'):
 				$dir_list[$new_item] = @filemtime($abs_new_item);
-			} else {
+			else:
 				// order == "size", "type" or "name"
 				$dir_list[$new_item] = $new_item;
-			}
-		} else {
-			if ($GLOBALS["order"] == "size") {
+			endif;
+		else:
+			if($GLOBALS['order'] == 'size'):
 				$file_list[$new_item] = $new_file_size;
-			} elseif ($GLOBALS["order"] == "mod") {
+			elseif ($GLOBALS['order'] == 'mod'):
 				$file_list[$new_item] = @filemtime($abs_new_item);
-			} elseif ($GLOBALS["order"] == "type") {
-				$file_list[$new_item] = get_mime_type($dir, $new_item, "type");
-			} else {
+			elseif ($GLOBALS['order'] == 'type'):
+				$file_list[$new_item] = get_mime_type($dir,$new_item,'type');
+			else:
 				// order == "name"
 				$file_list[$new_item] = $new_item;
-			}
-		}
-	}
+			endif;
+		endif;
+	endwhile;
 	closedir($handle);
-
-	// sort
-	if (is_array($dir_list)) {
-		if ($GLOBALS["order"]=="mod") {
-			if ($GLOBALS["srt"] == "yes")
+	//	sort directories
+	if(is_array($dir_list)):
+		if($GLOBALS['order'] == 'mod'):
+			if ($GLOBALS['srt'] == 'yes'):
 				arsort($dir_list);
-			else
+			else:
 				asort($dir_list);
-		} else {
+			endif;
+		else:
 			// order == "size", "type" or "name"
-			if ($GLOBALS["srt"] == "yes")
+			if ($GLOBALS['srt'] == 'yes'):
 				ksort($dir_list);
-			else
+			else:
 				krsort($dir_list);
-		}
-	}
-
-	// sort
-	if (is_array($file_list)) {
-		if ($GLOBALS["order"] == "mod") {
-			if ($GLOBALS["srt"] == "yes")
+			endif;
+		endif;
+	endif;
+	//	sort files
+	if(is_array($file_list)):
+		if($GLOBALS['order'] == 'mod'):
+			if($GLOBALS["srt"] == 'yes'):
 				arsort($file_list);
-			else
+			else:
 				asort($file_list);
-		} elseif ($GLOBALS["order"] == "size" || $GLOBALS["order"]=="type") {
-			if ($GLOBALS["srt"] == "yes")
+			endif;
+		elseif($GLOBALS['order'] == 'size' || $GLOBALS['order'] == 'type'):
+			if($GLOBALS['srt'] == 'yes'):
 				asort($file_list);
-			else
+			else:
 				arsort($file_list);
-		} else {
+			endif;
+		else:
 			// order == "name"
-			if ($GLOBALS["srt"] == "yes")
+			if($GLOBALS['srt'] == 'yes'):
 				ksort($file_list);
-			else
+			else:
 				krsort($file_list);
-		}
-	}
+			endif;
+		endif;
+	endif;
 }
 
 /**
   print table of files
  */
-function print_table ($dir,$list) {
-	if (!is_array($list)):
+function print_table($dir,$list) {
+	if(!is_array($list)):
 		return;
 	endif;
-
-	while (list($item) = each($list)):
+	foreach($list as $item => $value):
 		// link to dir / file
 		$abs_item = get_abs_item($dir,$item);
 		$target='';
@@ -170,7 +167,7 @@ function print_table ($dir,$list) {
 		// Icon + Link
 		echo '<td class="lcell" nowrap>';
 		if(permissions_grant($dir,$item,'read')):
-			echo '<a href="',$link,'>';
+			echo '<a href="',$link,'">';
 		endif;
 		echo '<img border="0" width="16" height="16" ';
 		echo 'align="ABSMIDDLE" src="_img/',get_mime_type($dir,$item,'img'),'" alt="">&nbsp;';
@@ -222,7 +219,7 @@ function print_table ($dir,$list) {
 		echo '</table>';
 		echo '</td>';
 		echo '</tr>',"\n";
-	endwhile;
+	endforeach;
 }
 /**
  MAIN FUNCTION
@@ -269,14 +266,14 @@ function list_dir($dir) {
 	echo '<img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS["baricons"]["home"],'" ';
 	echo 'alt="',$GLOBALS['messages']['homelink'],'" title="',$GLOBALS['messages']['homelink'],'"></a></td>',"\n";
 	// RELOAD
-	echo "<TD><A HREF=\"javascript:location.reload();\"><IMG border=\"0\" width=\"16\" height=\"16\" ";
+	echo "<td><a href=\"javascript:location.reload();\"><img border=\"0\" width=\"16\" height=\"16\" ";
 	echo "align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["reload"]."\" ALT=\"".$GLOBALS["messages"]["reloadlink"];
-	echo "\" TITLE=\"".$GLOBALS["messages"]["reloadlink"]."\"></A></TD>\n";
+	echo "\" TITLE=\"".$GLOBALS["messages"]["reloadlink"]."\"></A></td>\n";
 	// SEARCH
-	echo "<TD><A HREF=\"",make_link("search",$dir,NULL),"\">";
-	echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["search"]."\" ";
+	echo "<td><A HREF=\"",make_link("search",$dir,NULL),"\">";
+	echo "<img border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["search"]."\" ";
 	echo "ALT=\"".$GLOBALS["messages"]["searchlink"]."\" TITLE=\"".$GLOBALS["messages"]["searchlink"];
-	echo "\"></A></TD>\n";
+	echo "\"></A></td>\n";
 
 	echo '<td></td>';
 
@@ -301,14 +298,15 @@ function list_dir($dir) {
 
 	// Create File / Dir
 	if(permissions_grant($dir,NULL,'create')):
-		echo "<TD align=\"right\"><TABLE><FORM action=\"".make_link("mkitem",$dir,NULL)."\" method=\"post\">\n<TR><TD>";
-		echo "<IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["add"]."\" />";
-		echo "<SELECT name=\"mktype\">";
-		echo "<option value=\"file\">".$GLOBALS["mimes"]["file"]."</option>";
-		echo "<option value=\"dir\">".$GLOBALS["mimes"]["dir"]."</option></SELECT>\n";
-		echo "<INPUT name=\"mkname\" type=\"text\" size=\"15\">";
-		echo "<INPUT type=\"submit\" value=\"".$GLOBALS["messages"]["btncreate"];
-		echo "\"></TD></TR></FORM></TABLE></TD>\n";
+		echo '<td align="right"><table><form action="',make_link('mkitem',$dir,NULL),'" method="post">',"\n";
+		echo '<tr><td>';
+		echo '<img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS['baricons']['add'],'"/>';
+		echo '<select name="mktype">',"\n";
+		echo '<option value="file">',$GLOBALS['mimes']['file'],'</option>',"\n";
+		echo '<option value="dir">',$GLOBALS['mimes']['dir'],'</option>',"\n";
+		echo '</select>',"\n";
+		echo '<input name="mkname" type="text" size="15">';
+		echo '<input type="submit" value="',$GLOBALS['messages']['btncreate'],'"></td></tr></form></table></td>',"\n";
 	endif;
 	echo "</tr></table>\n";
 	// End Toolbar
@@ -329,7 +327,7 @@ function list_dir($dir) {
 	echo '<input type="hidden" name="first" value="y">',"\n";
 
 	// Table Header
-//	echo '<TR><TD colspan="7"><HR></TD></TR>';
+//	echo '<tr><td colspan="7"><HR></td></tr>';
 	echo '<thead>';
 	echo '<tr>';
 	echo '<th class="lhelc">',"\n";
@@ -505,9 +503,9 @@ function _print_link ($function, $allow, $dir, $item) {
 
 	// make an active link if the access is allowed
 	if ($allow) {
-		echo "<TD><A HREF=\"" . $values["jfunction"] . "\"><IMG border=\"0\" width=\"16\" height=\"16\" ";
+		echo "<td><A HREF=\"" . $values["jfunction"] . "\"><img border=\"0\" width=\"16\" height=\"16\" ";
 		echo "align=\"ABSMIDDLE\" src=\"" . $values["image"] . "\" ALT=\"" . $values["message"];
-		echo "\" TITLE=\"" . $values["message"] . "\"></A></TD>\n";
+		echo "\" TITLE=\"" . $values["message"] . "\"></A></td>\n";
 		return;
 	}
 	if (!isset($values["imagedisabled"])) {
@@ -515,9 +513,9 @@ function _print_link ($function, $allow, $dir, $item) {
 	}
 
 	// make an inactive link if the access is forbidden
-	echo "<TD><IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" ";
+	echo "<td><img border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" ";
 	echo "src=\"" . $values["imagedisabled"] . "\" ALT=\"" . $values["message"] . "\" TITLE=\"";
-	echo $values["message"] . "\"></TD>\n";
+	echo $values["message"] . "\"></td>\n";
 
 }
 
