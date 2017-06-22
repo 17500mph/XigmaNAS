@@ -36,12 +36,12 @@ require 'guiconfig.inc';
 
 function disks_zfs_zpool_info_ajax() {
 	if(isset($_GET['pool']) && is_string($_GET['pool'])):
-		$cmd = sprintf('zpool status -v "%s"', $_GET['pool']);
+		$cmd = sprintf('zpool status -v %s 2>&1',escapeshellarg($_GET['pool']));
 	else:
-		$cmd = 'zpool status -v';
+		$cmd = 'zpool status -v 2>&1';
 	endif;
 	mwexec2($cmd,$rawdata);
-	return implode("\n",$rawdata);
+	return htmlspecialchars(implode("\n",$rawdata));
 }
 if(is_ajax()):
 	$status = disks_zfs_zpool_info_ajax();
