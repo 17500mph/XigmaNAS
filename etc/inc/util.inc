@@ -2575,11 +2575,10 @@ function set_conf_disk_fstype_opt($disk,$fstype,$opt) {
 		'gvinum' => 'vdisk',
 		'geli' => 'vdisk'
 	];
-	while(list($class,$val) = each($diskconf)) {
-		if(empty($config[$class][$val]) || !is_array($config[$class][$val])):
+	foreach($diskconf as $class => $val):
+		if(false === filter_var($config[$class][$val],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => false]])):
 			continue;
 		endif;
-//	echo "Searching array \$config['$class']['$val'] using key 'devicespecialfile'\n";
 		$id = array_search_ex($disk,$config[$class][$val],'devicespecialfile');
 		if($id !== false):
 			$config[$class][$val][$id]['fstype'] = $fstype;
@@ -2590,10 +2589,9 @@ function set_conf_disk_fstype_opt($disk,$fstype,$opt) {
 				unset($config[$class][$val][$id]['zfsgpt']);
 			endif;
 			$result = 0;
-//		echo "Set \$config['$class']['$val'][$id]['fstype'] = $fstype\n";
 			break;
 		endif;
-	}
+	endforeach;
 	return $result;
 }
 /*
