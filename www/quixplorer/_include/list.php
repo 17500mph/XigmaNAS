@@ -238,10 +238,8 @@ function list_dir($dir) {
 		$s_dir = '...' . substr($s_dir,-47);
 	endif;
 	show_header($GLOBALS['messages']['actdir'] . ': ' . _breadcrumbs($dir));
-
 	// Javascript functions:
 	include './_include/javascript.php';
-
 	// Sorting of items
 	$_img = '&nbsp;<img style="vertical-align:middle" width="10" height="10" src="_img/';
 	if($GLOBALS['srt'] == 'yes'):
@@ -251,111 +249,60 @@ function list_dir($dir) {
 		$_srt = 'yes';
 		$_img .= '_arrowdown.gif" alt="v">';
 	endif;
-
 	// Toolbar
-	echo '<table style="width: 100%"><tr><td>',"\n";
-	echo '<table><tr>',"\n";
-
+	echo '<table class="area_data_settings"><tbody><tr>';
+	echo '<td><table><tbody><tr>',"\n";
 	// PARENT DIR
-	echo '<td>',
-			'<a href="',make_link('list',path_up($dir),NULL),'">',
-				'<img',
-					' style="vertical-align:middle"',
-					' width="16"',
-					' height="16"',
-					' src="',$GLOBALS['baricons']['up'],'"',
-					' alt="',$GLOBALS['messages']['uplink'],'"',
-					' title="',$GLOBALS['messages']['uplink'],'"',
-				'>',
-			'</a>',
-		'</td>',"\n";
+	echo '<td><a href="',make_link('list',path_up($dir),NULL),'">',
+			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['up'],'" alt="',$GLOBALS['messages']['uplink'],'" title="',$GLOBALS['messages']['uplink'],'">',
+		'</a></td>',"\n";
 	// HOME DIR
-	echo '<td>',
-			'<a href="',make_link('list',NULL,NULL),'">',
-				'<img',
-					' style="vertical-align:middle"',
-					' width="16"',
-					' height="16"',
-					' src="',$GLOBALS['baricons']['home'],'"',
-					' alt="',$GLOBALS['messages']['homelink'],'"',
-					' title="',$GLOBALS['messages']['homelink'],'"',
-				'>',
-			'</a>',
-		'</td>',"\n";
+	echo '<td><a href="',make_link('list',NULL,NULL),'">',
+			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['home'],'" alt="',$GLOBALS['messages']['homelink'],'" title="',$GLOBALS['messages']['homelink'],'">',
+		'</a></td>',"\n";
 	// RELOAD
-	echo '<td>',
-			'<a href="javascript:location.reload();">',
-				'<img',
-					' style="vertical-align:middle"',
-					' width="16"',
-					' height="16" ',
-					' src="',$GLOBALS['baricons']['reload'],'"',
-					' alt="',$GLOBALS['messages']['reloadlink'],'"',
-					' title="',$GLOBALS['messages']['reloadlink'],'"',
-				'>',
-			'</a>',
-		'</td>',"\n";
+	echo '<td><a href="javascript:location.reload();">',
+			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['reload'],'" alt="',$GLOBALS['messages']['reloadlink'],'" title="',$GLOBALS['messages']['reloadlink'],'">',
+		'</a></td>',"\n";
 	// SEARCH
-	echo '<td>',
-			'<a href="',make_link('search',$dir,NULL),'">',
-				'<img',
-					' style="vertical-align:middle"',
-					' width="16"',
-					' height="16"',
-					' src="',$GLOBALS['baricons']['search'],'"',
-					' alt="',$GLOBALS['messages']['searchlink'],'"',
-					' title="',$GLOBALS['messages']['searchlink'],'"',
-				'>',
-			'</a>',
-		'</td>',"\n";
-
+	echo '<td><a href="',make_link('search',$dir,NULL),'">',
+			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['search'],'" alt="',$GLOBALS['messages']['searchlink'],'" title="',$GLOBALS['messages']['searchlink'],'">',
+		'</a></td>',"\n";
 	echo '<td></td>';
-
 	// print the download button
 	_print_link('download_selected',permissions_grant($dir, NULL,'read'),$dir,NULL);
-
 	// print the edit buttons
 	_print_edit_buttons($dir);
-
 	// ADMIN & LOGOUT
 	if(login_is_user_logged_in()):
-		echo "<td></td>";
+		echo '<td></td>';
 		// ADMIN
 		_print_link('admin',permissions_grant(NULL,NULL,'admin') || permissions_grant(NULL,NULL,'password'),$dir,NULL);
 		// LOGOUT
 		_print_link('logout',true,$dir,NULL);
 	endif;
-
-	echo "<td></td>";
-
-	echo '</tr></table></td>',"\n";
-
+	echo '<td></td>';
+	echo '</tr></tbody></table></td>',"\n";
 	// Create File / Dir
 	if(permissions_grant($dir,NULL,'create')):
 		echo '<td style="text-align:right">',"\n";
 		echo '<form action="',make_link('mkitem',$dir,NULL),'" method="post">',"\n";
-		echo '<table style="width:100%"><tr><td>',"\n";
-		echo '<img',
-				' style="vertical-align:middle"',
-				' width="16"',
-				' height="16"',
-				' src="',$GLOBALS['baricons']['add'],'"',
-				' alt=""',
-			'>',"\n";
+		echo '<table style="width:100%"><tbody><tr><td>',"\n";
+		echo '<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['add'],'" alt="">',"\n";
 		echo '<select name="mktype">',"\n";
 		echo '<option value="file">',$GLOBALS['mimes']['file'],'</option>',"\n";
 		echo '<option value="dir">',$GLOBALS['mimes']['dir'],'</option>',"\n";
 		echo '</select>',"\n";
 		echo '<input name="mkname" type="text" size="15">',"\n";
 		echo '<input type="submit" value="',$GLOBALS['messages']['btncreate'],'">',"\n";
-		echo '</td></tr></table>',"\n";
+		echo '</td></tr></tbody></table>',"\n";
 		echo '</form>',"\n";
 		echo '</td>',"\n";
 	endif;
-	echo "</tr></table>\n";
+	echo "</tr></tbody></table>\n";
 	// End Toolbar
 	// Begin Table + Form for checkboxes
-	echo '<form name="selform" method="POST" action="',make_link('post',$dir,NULL),'">',"\n";
+	echo '<form name="selform" method="post" action="',make_link('post',$dir,NULL),'">',"\n";
 	echo '<table class="area_data_selection">';
 	echo '<colgroup>';
 	echo '<col style="width:5%">'; // checkbox
@@ -408,8 +355,7 @@ function list_dir($dir) {
 	print_table($dir, make_list($dir_list, $file_list));
 	echo '</tbody>';
 	// print number of items & total filesize
-	echo '<tfoot>';
-	echo '<tr>';
+	echo '<tfoot><tr>';
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcell">',$num_items,' ',$GLOBALS['messages']['miscitems'],' (';
 	$free = format_bytes(diskfreespace('/'),2,false,false);
@@ -419,8 +365,7 @@ function list_dir($dir) {
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcebl"></th>';
-	echo '</tr>';
-	echo '</tfoot>';
+	echo '</tr></tfoot>';
 	echo '</table>',"\n";
 	echo '<div id="submit">',"\n";
 	echo '<input type="hidden" name="do_action">';
