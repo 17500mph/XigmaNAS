@@ -40,7 +40,6 @@ require_once './_include/qxpath.php';
 
 function make_list($_list1,$_list2) { // make list of files
 	$list = [];
-
 	if($GLOBALS['srt'] == 'yes'):
 		$list1 = $_list1;
 		$list2 = $_list2;
@@ -144,7 +143,6 @@ function make_tables($dir,&$dir_list,&$file_list,&$tot_file_size,&$num_items) {
 		endif;
 	endif;
 }
-
 /**
   print table of files
  */
@@ -224,15 +222,11 @@ function print_table($dir,$list) {
  MAIN FUNCTION
  */
 function list_dir($dir) {
-	_debug("list_dir: displaying directory $dir");
-
 	if(!get_show_item($dir,NULL)):
 		show_error($GLOBALS['error_msg']['accessdir'] . " : '$dir'");
 	endif;
-
 	// make file & dir tables, & get total filesize & number of items
 	make_tables($dir,$dir_list,$file_list,$tot_file_size,$num_items);
-
 	$s_dir = $dir;
 	if (strlen($s_dir) > 50 ):
 		$s_dir = '...' . substr($s_dir,-47);
@@ -253,35 +247,30 @@ function list_dir($dir) {
 	echo '<table class="area_data_settings"><tbody><tr>';
 	echo '<td><table><tbody><tr>',"\n";
 	// PARENT DIR
-	echo '<td><a href="',make_link('list',path_up($dir),NULL),'">',
+	echo '<td style="padding-right:4px"><a href="',make_link('list',path_up($dir),NULL),'">',
 			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['up'],'" alt="',$GLOBALS['messages']['uplink'],'" title="',$GLOBALS['messages']['uplink'],'">',
 		'</a></td>',"\n";
 	// HOME DIR
-	echo '<td><a href="',make_link('list',NULL,NULL),'">',
+	echo '<td style="padding-right:4px"><a href="',make_link('list',NULL,NULL),'">',
 			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['home'],'" alt="',$GLOBALS['messages']['homelink'],'" title="',$GLOBALS['messages']['homelink'],'">',
 		'</a></td>',"\n";
 	// RELOAD
-	echo '<td><a href="javascript:location.reload();">',
+	echo '<td style="padding-right:4px"><a href="javascript:location.reload();">',
 			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['reload'],'" alt="',$GLOBALS['messages']['reloadlink'],'" title="',$GLOBALS['messages']['reloadlink'],'">',
 		'</a></td>',"\n";
 	// SEARCH
-	echo '<td><a href="',make_link('search',$dir,NULL),'">',
+	echo '<td style="padding-right:4px"><a href="',make_link('search',$dir,NULL),'">',
 			'<img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['search'],'" alt="',$GLOBALS['messages']['searchlink'],'" title="',$GLOBALS['messages']['searchlink'],'">',
 		'</a></td>',"\n";
-	echo '<td></td>';
-	// print the download button
-	_print_link('download_selected',permissions_grant($dir, NULL,'read'),$dir,NULL);
-	// print the edit buttons
-	_print_edit_buttons($dir);
+	echo '<td style="padding-right:8px"></td>';
+	_print_link('download_selected',permissions_grant($dir, NULL,'read'),$dir,NULL); // print the download button
+	_print_edit_buttons($dir); // print the edit buttons
 	// ADMIN & LOGOUT
 	if(login_is_user_logged_in()):
-		echo '<td></td>';
-		// ADMIN
-		_print_link('admin',permissions_grant(NULL,NULL,'admin') || permissions_grant(NULL,NULL,'password'),$dir,NULL);
-		// LOGOUT
-		_print_link('logout',true,$dir,NULL);
+		echo '<td style="padding-right:8px"></td>';
+		_print_link('admin',permissions_grant(NULL,NULL,'admin') || permissions_grant(NULL,NULL,'password'),$dir,NULL); // ADMIN
+		_print_link('logout',true,$dir,NULL); // LOGOUT
 	endif;
-	echo '<td></td>';
 	echo '</tr></tbody></table></td>',"\n";
 	// Create File / Dir
 	if(permissions_grant($dir,NULL,'create')):
@@ -392,15 +381,12 @@ function list_dir($dir) {
 
 function _print_edit_buttons ($dir) {
 	// for the copy button the user must have create and read rights
-	_print_link("copy", permissions_grant_all($dir, NULL, array("create", "read")), $dir, NULL);
-	_print_link("move", permissions_grant($dir, NULL, "change"), $dir, NULL);
-	_print_link("delete", permissions_grant($dir, NULL, "delete"), $dir, NULL);
-// NAS4Free info: We disable upload function for security and limited space var/temp
-//	_print_link("upload", permissions_grant($dir, NULL, "create") && get_cfg_var("file_uploads"), $dir, NULL);
-//	_print_link("archive",
-//		permissions_grant_all($dir, NULL, array("create", "read"))
-//			&& ($GLOBALS["zip"] || $GLOBALS["tar"] || $GLOBALS["tgz"]),
-//		$dir, NULL);
+	_print_link('copy',permissions_grant_all($dir,NULL,['create','read']),$dir,NULL);
+	_print_link('move',permissions_grant($dir,NULL,'change'),$dir,NULL);
+	_print_link('delete',permissions_grant($dir,NULL,'delete'),$dir,NULL);
+//	NAS4Free info: We disable upload function for security and limited space var/temp
+//	_print_link('upload',permissions_grant($dir,NULL,'create') && get_cfg_var('file_uploads'),$dir,NULL);
+//	_print_link('archive',permissions_grant_all($dir,NULL,['create','read']) && ($GLOBALS['zip'] || $GLOBALS['tar'] || $GLOBALS['tgz']),$dir,NULL);
 }
 
 /**
@@ -409,108 +395,31 @@ function _print_edit_buttons ($dir) {
   if $allow is set, make this button active and work, otherwise print
   an inactive button.
 */
-function _print_link ($function, $allow, $dir, $item) {
+function _print_link ($function,$allow,$dir,$item) {
 	// the list of all available button and the coresponding data
-	$functions = [
-		'copy' => [
-			'jfunction' => 'javascript:Copy();',
-			'image' => $GLOBALS['baricons']['copy'],
-			'imagedisabled' => $GLOBALS['baricons']['notcopy'],
-			'message' => $GLOBALS['messages']['copylink']
-		],
-		'move' => [
-			'jfunction' => 'javascript:Move();',
-			'image' => $GLOBALS['baricons']['move'],
-			'imagedisabled' => $GLOBALS['baricons']['notmove'],
-			'message' => $GLOBALS['messages']['movelink']
-		],
-		'delete' => [
-			'jfunction' => 'javascript:Delete();',
-			'image' => $GLOBALS['baricons']['delete'],
-			'imagedisabled' => $GLOBALS['baricons']['notdelete'],
-			'message' => $GLOBALS['messages']['dellink']
-		],
-		'upload' => [
-			'jfunction' => make_link('upload',$dir,NULL),		
-			'image' => $GLOBALS['baricons']['upload'],
-			'imagedisabled' => $GLOBALS['baricons']['notupload'],
-			'message' => $GLOBALS['messages']['uploadlink']
-		],
-		'archive' => [
-			'jfunction' => 'javascript:Archive();',
-			'image' => $GLOBALS['baricons']['archive'],
-			'message' => $GLOBALS['messages']['comprlink']
-		],
-		'admin' => [
-			'jfunction' => make_link('admin',$dir,NULL),
-			'image' => $GLOBALS['baricons']['admin'],
-			'message' => $GLOBALS['messages']['adminlink']
-		],
-		'logout' => [
-			'jfunction' => make_link('logout',NULL,NULL),
-			'image' => $GLOBALS['baricons']['logout'],
-			'imagedisabled' => '_img/_logout_.gif',
-			'message' => $GLOBALS['messages']['logoutlink']
-		],
-		'edit' => [
-			'jfunction' => make_link('edit',$dir,$item),
-			'image' => $GLOBALS['baricons']['edit'],
-			'imagedisabled' => $GLOBALS['baricons']['notedit'],
-			'message' => $GLOBALS['messages']['editlink']
-		],
-		'unzip' => [
-			'jfunction' => make_link('unzip',$dir,$item),
-			'image' => $GLOBALS['baricons']['unzip'],
-			'imagedisabled' => $GLOBALS['baricons']['notunzip'],
-			'message' => $GLOBALS['messages']['unziplink']
-		],
-		'download' => [
-			'jfunction' => make_link('download',$dir,$item),
-			'image' => $GLOBALS['baricons']['download'],
-			'imagedisabled' => $GLOBALS['baricons']['notdownload'],
-			'message' => $GLOBALS['messages']['downlink']
-		],
-		'download_selected' => [
-			'jfunction' => 'javascript:DownloadSelected();',
-			'image' => $GLOBALS['baricons']['download'],
-			'imagedisabled' => $GLOBALS['baricons']['notdownload'],
-			'message' => $GLOBALS['messages']['download_selected']
-		],
-	];
-
-	// determine the function of this button and it's data
-	$values = $functions[$function];
-
-	// make an active link if the access is allowed
-	if($allow):
-		echo '<td>',
-				'<a href="',$values['jfunction'],'">',
-					'<img',
-						' style="vertical-align:middle"',
-						' width="16"',
-						' height="16" ',
-						' src="',$values['image'],'"',
-						' alt="',$values['message'],'"',
-						' title="',$values['message'],'"',
-					'>',
-				'</a>',
+	switch($function):
+		case 'copy': $v = ['jf' => 'javascript:Copy();','img' => $GLOBALS['baricons']['copy'],'imgdis' => $GLOBALS['baricons']['notcopy'],'msg' => $GLOBALS['messages']['copylink']];break;
+		case 'move': $v = ['jf' => 'javascript:Move();','img' => $GLOBALS['baricons']['move'],'imgdis' => $GLOBALS['baricons']['notmove'],'msg' => $GLOBALS['messages']['movelink']];break;
+		case 'delete': $v = ['jf' => 'javascript:Delete();','img' => $GLOBALS['baricons']['delete'],'imgdis' => $GLOBALS['baricons']['notdelete'],'msg' => $GLOBALS['messages']['dellink']];break;
+		case 'upload': $v = ['jf' => make_link('upload',$dir,NULL),'img' => $GLOBALS['baricons']['upload'],'imgdis' => $GLOBALS['baricons']['notupload'],'msg' => $GLOBALS['messages']['uploadlink']];break;
+		case 'archive': $v = ['jf' => 'javascript:Archive();','img' => $GLOBALS['baricons']['archive'],'msg' => $GLOBALS['messages']['comprlink']];break;
+		case 'admin': $v = ['jf' => make_link('admin',$dir,NULL),'img' => $GLOBALS['baricons']['admin'],'msg' => $GLOBALS['messages']['adminlink']];break;
+		case 'logout': $v = ['jf' => make_link('logout',NULL,NULL),'img' => $GLOBALS['baricons']['logout'],'imgdis' => '_img/_logout_.gif','msg' => $GLOBALS['messages']['logoutlink']];break;
+		case 'edit': $v = ['jf' => make_link('edit',$dir,$item),'img' => $GLOBALS['baricons']['edit'],'imgdis' => $GLOBALS['baricons']['notedit'],'msg' => $GLOBALS['messages']['editlink']];break;
+		case 'unzip': $v = ['jf' => make_link('unzip',$dir,$item),'img' => $GLOBALS['baricons']['unzip'],'imgdis' => $GLOBALS['baricons']['notunzip'],'msg' => $GLOBALS['messages']['unziplink']];break;
+		case 'download': $v = ['jf' => make_link('download',$dir,$item),'img' => $GLOBALS['baricons']['download'],'imgdis' => $GLOBALS['baricons']['notdownload'],'msg' => $GLOBALS['messages']['downlink']];break;
+		case 'download_selected': $v = ['jf' => 'javascript:DownloadSelected();','img' => $GLOBALS['baricons']['download'],'imgdis' => $GLOBALS['baricons']['notdownload'],'msg' => $GLOBALS['messages']['download_selected']];break;
+	endswitch;
+	if($allow): // make an active link if access is allowed
+		echo '<td style="padding-right:4px"><a href="',$v['jf'],'">',
+				'<img style="vertical-align:middle" width="16" height="16" src="',$v['img'],'" alt="',$v['msg'],'" title="',$v['msg'],'">',
+			'</a></td>',"\n";
+	elseif(isset($v['imgdis'])): // make an inactive link if access is forbidden
+		echo '<td style="padding-right:4px">',
+				'<img style="vertical-align:middle" width="16" height="16" src="',$v['imgdis'],'" alt="',$v['msg'],'" title="',$v['msg'],'">',
 			'</td>',"\n";
-		return;
 	endif;
-	if(!isset($values['imagedisabled'])):
-		return;
-	endif;
-	// make an inactive link if the access is forbidden
-	echo '<td>',
-			'<img',
-				' style="vertical-align:middle"',
-				' width="16"',
-				' height="16"',
-				' src="',$values['imagedisabled'],'"',
-				' alt="',$values['message'],'"',
-				' title="',$values["message"],'"',
-			'>',
-		'</td>',"\n";
+	return;
 }
 
 function _get_link_info($dir, $item) {
@@ -518,8 +427,7 @@ function _get_link_info($dir, $item) {
 	if(is_array($type)):
 		$type = $type[0];
 	endif;
-
-	if(! file_exists(get_abs_item($dir, $item))):
+	if(!file_exists(get_abs_item($dir, $item))):
 		return '<span style="background:red;">'.$type.'</span>';
 	endif;
 	return $type;
@@ -552,7 +460,7 @@ function _breadcrumbs($curdir, $displayseparator = ' &raquo; ') {
 	$last = end($lastx);
 	// Build the rest of the breadcrumbs
 	$crumbdir = "";
-	foreach ($patharray AS $x => $crumb) {
+	foreach($patharray AS $x => $crumb):
 		// Add a new directory to the directory list so the link has the
 		// correct path to the current crumb.
 		$crumbdir = $crumbdir . $crumb;
@@ -566,7 +474,7 @@ function _breadcrumbs($curdir, $displayseparator = ' &raquo; ') {
 			// Don't create a link for the final crumb.  Just display the crumb name.
 			$breadcrumbs[] = htmlspecialchars($crumb);
 		endif;
-	}
+	endforeach;
 	// Build temporary array into one string.
 	return implode($displayseparator, $breadcrumbs);
 }
