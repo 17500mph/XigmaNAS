@@ -10,6 +10,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -34,14 +35,14 @@
 }
 td, input, textarea, select {
         font-family: verdana, arial, helvetica, sans-serif;
-        font-size: 11;
+        font-size: 11px;
         color: #000000;
 }
 .rowdatasel {
 	background-color: #F2F2C6;
 }
 td {
-	vertical-align: center;
+	vertical-align: middle;
 }
 td.header {
 	background-image: url(tablebg.png);
@@ -51,14 +52,14 @@ td.title {
 	background-repeat: repeat-x;
 	background-image: url(tablebg.png);
 	font-weight: bold;
-	font-size: 13;
+	font-size: 13px;
     	color: #FFFFFF;
 	text-align: left;
 }
 td.title_version {
         background-repeat: repeat-x;
         background-image: url(tablebg.png);
-        font-size: 10;
+        font-size: 10px;
         color: #FFFFFF;
 		text-align: right;
 }
