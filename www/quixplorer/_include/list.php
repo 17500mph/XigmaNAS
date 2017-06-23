@@ -65,13 +65,13 @@ function make_list($_list1,$_list2) { // make list of files
  make tables & place results in reference-variables passed to function
  also 'return' total filesize & total number of items
 */
-function make_tables($dir, &$dir_list, &$file_list, &$tot_file_size, &$num_items) {
+function make_tables($dir,&$dir_list,&$file_list,&$tot_file_size,&$num_items) {
 	$tot_file_size = $num_items = 0;
 
 	// Open directory
 	$handle = @opendir(get_abs_dir($dir));
-	if ($handle === false):
-		show_error($dir . ": " . $GLOBALS["error_msg"]["opendir"]);
+	if($handle === false):
+		show_error($dir . ': ' . $GLOBALS['error_msg']['opendir']);
 	endif;
 	// Read directory
 	while(($new_item = readdir($handle)) !== false):
@@ -165,23 +165,22 @@ function print_table($dir,$list) {
 		echo '<tr class="rowdata">';
 		echo '<td class="lcelc"><input type="checkbox" name="selitems[]" value="',htmlspecialchars($item),'" onclick="javascript:Toggle(this);"></td>',"\n";
 		// Icon + Link
-		echo '<td class="lcell" nowrap>';
+		echo '<td class="lcell" style="white-space: nowrap">';
 		if(permissions_grant($dir,$item,'read')):
 			echo '<a href="',$link,'">';
 		endif;
-		echo '<img border="0" width="16" height="16" ';
-		echo 'align="ABSMIDDLE" src="_img/',get_mime_type($dir,$item,'img'),'" alt="">&nbsp;';
+		echo '<img style="vertical-align:middle" width="16" height="16" src="_img/',get_mime_type($dir,$item,'img'),'" alt="">&nbsp;';
 		$s_item = $item;
 		if(strlen($s_item)>50):
 			$s_item = substr($s_item,0,47) . '...';
 		endif;
 		echo htmlspecialchars($s_item);
-		if(permissions_grant($dir, $item, "read")):
+		if(permissions_grant($dir,$item,'read')):
 			echo '</a>';
 		endif;
 		echo '</td>',"\n";
 		// Size
-		echo '<td class="lcell">',parse_file_size(get_file_size($dir,$item)),sprintf('%10s','&nbsp;'),'</td>',"\n";
+		echo '<td class="lcell">',format_bytes(get_file_size($dir,$item),2,false,false),sprintf('%10s','&nbsp;'),'</td>',"\n";
 		// Type
 		echo '<td class="lcell">',_get_link_info($dir,$item,'type'),'</td>',"\n";
 		// Modified
@@ -198,7 +197,7 @@ function print_table($dir,$list) {
 		echo '</td>',"\n";
 		// Actions
 		echo '<td class="lcebl">';
-		echo '<table>';
+		echo '<table><tbody><tr>';
 		// Edit
 		if(get_is_editable($dir, $item)):
 			_print_link('edit',permissions_grant($dir,$item,'change'),$dir,$item);
@@ -207,16 +206,16 @@ function print_table($dir,$list) {
 			if(get_is_unzipable($dir,$item)):
 				_print_link('unzip',permissions_grant($dir,$item,'create'),$dir,$item);
 			else:
-				echo '<td><img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS['baricons']['none'],'" alt=""></td>',"\n";
+				echo '<td><img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['none'],'" alt=""></td>',"\n";
 			endif;
 		endif;
 		// Download
 		if(get_is_file($dir,$item)):
 			_print_link('download',permissions_grant($dir,$item,'read'),$dir,$item);
 		else:
-			echo '<td><img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS['baricons']['none'],'" alt=""></td>',"\n";
+			echo '<td><img style="vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['none'],'" alt=""></td>',"\n";
 		endif;
-		echo '</table>';
+		echo '</tr></tbody></table>';
 		echo '</td>';
 		echo '</tr>',"\n";
 	endforeach;
@@ -227,12 +226,12 @@ function print_table($dir,$list) {
 function list_dir($dir) {
 	_debug("list_dir: displaying directory $dir");
 
-	if (!get_show_item($dir,NULL)):
+	if(!get_show_item($dir,NULL)):
 		show_error($GLOBALS['error_msg']['accessdir'] . " : '$dir'");
 	endif;
 
 	// make file & dir tables, & get total filesize & number of items
-	make_tables($dir, $dir_list, $file_list, $tot_file_size, $num_items);
+	make_tables($dir,$dir_list,$file_list,$tot_file_size,$num_items);
 
 	$s_dir = $dir;
 	if (strlen($s_dir) > 50 ):
@@ -244,7 +243,7 @@ function list_dir($dir) {
 	include './_include/javascript.php';
 
 	// Sorting of items
-	$_img = "&nbsp;<img width=\"10\" height=\"10\" border=\"0\" align=\"ABSMIDDLE\" src=\"_img/";
+	$_img = '&nbsp;<img style="vertical-align:middle" width="10" height="10" src="_img/';
 	if($GLOBALS['srt'] == 'yes'):
 		$_srt = 'no';
 		$_img .= '_arrowup.gif" alt="^">';
@@ -254,26 +253,61 @@ function list_dir($dir) {
 	endif;
 
 	// Toolbar
-	echo '<table width="100%"><tr><td>',"\n";
+	echo '<table style="width: 100%"><tr><td>',"\n";
 	echo '<table><tr>',"\n";
 
 	// PARENT DIR
-	echo '<td><a href="',make_link('list',path_up($dir),NULL),'">';
-	echo '<img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS['baricons']['up'],'" ';
-	echo 'alt="',$GLOBALS['messages']['uplink'],'" title="',$GLOBALS['messages']['uplink'],'"></a></td>',"\n";
+	echo '<td>',
+			'<a href="',make_link('list',path_up($dir),NULL),'">',
+				'<img',
+					' style="vertical-align:middle"',
+					' width="16"',
+					' height="16"',
+					' src="',$GLOBALS['baricons']['up'],'"',
+					' alt="',$GLOBALS['messages']['uplink'],'"',
+					' title="',$GLOBALS['messages']['uplink'],'"',
+				'>',
+			'</a>',
+		'</td>',"\n";
 	// HOME DIR
-	echo '<td><a href="',make_link('list',NULL,NULL),'">';
-	echo '<img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS["baricons"]["home"],'" ';
-	echo 'alt="',$GLOBALS['messages']['homelink'],'" title="',$GLOBALS['messages']['homelink'],'"></a></td>',"\n";
+	echo '<td>',
+			'<a href="',make_link('list',NULL,NULL),'">',
+				'<img',
+					' style="vertical-align:middle"',
+					' width="16"',
+					' height="16"',
+					' src="',$GLOBALS['baricons']['home'],'"',
+					' alt="',$GLOBALS['messages']['homelink'],'"',
+					' title="',$GLOBALS['messages']['homelink'],'"',
+				'>',
+			'</a>',
+		'</td>',"\n";
 	// RELOAD
-	echo "<td><a href=\"javascript:location.reload();\"><img border=\"0\" width=\"16\" height=\"16\" ";
-	echo "align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["reload"]."\" ALT=\"".$GLOBALS["messages"]["reloadlink"];
-	echo "\" TITLE=\"".$GLOBALS["messages"]["reloadlink"]."\"></A></td>\n";
+	echo '<td>',
+			'<a href="javascript:location.reload();">',
+				'<img',
+					' style="vertical-align:middle"',
+					' width="16"',
+					' height="16" ',
+					' src="',$GLOBALS['baricons']['reload'],'"',
+					' alt="',$GLOBALS['messages']['reloadlink'],'"',
+					' title="',$GLOBALS['messages']['reloadlink'],'"',
+				'>',
+			'</a>',
+		'</td>',"\n";
 	// SEARCH
-	echo "<td><A HREF=\"",make_link("search",$dir,NULL),"\">";
-	echo "<img border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["search"]."\" ";
-	echo "ALT=\"".$GLOBALS["messages"]["searchlink"]."\" TITLE=\"".$GLOBALS["messages"]["searchlink"];
-	echo "\"></A></td>\n";
+	echo '<td>',
+			'<a href="',make_link('search',$dir,NULL),'">',
+				'<img',
+					' style="vertical-align:middle"',
+					' width="16"',
+					' height="16"',
+					' src="',$GLOBALS['baricons']['search'],'"',
+					' alt="',$GLOBALS['messages']['searchlink'],'"',
+					' title="',$GLOBALS['messages']['searchlink'],'"',
+				'>',
+			'</a>',
+		'</td>',"\n";
 
 	echo '<td></td>';
 
@@ -298,19 +332,28 @@ function list_dir($dir) {
 
 	// Create File / Dir
 	if(permissions_grant($dir,NULL,'create')):
-		echo '<td align="right"><table><form action="',make_link('mkitem',$dir,NULL),'" method="post">',"\n";
-		echo '<tr><td>';
-		echo '<img border="0" width="16" height="16" align="ABSMIDDLE" src="',$GLOBALS['baricons']['add'],'"/>';
+		echo '<td style="text-align:right">',"\n";
+		echo '<form action="',make_link('mkitem',$dir,NULL),'" method="post">',"\n";
+		echo '<table><tr><td>',"\n";
+		echo '<img',
+				' style="vertical-align=middle"',
+				' width="16"',
+				' height="16"',
+				' src="',$GLOBALS['baricons']['add'],'"',
+				' alt=""',
+			'>',"\n";
 		echo '<select name="mktype">',"\n";
 		echo '<option value="file">',$GLOBALS['mimes']['file'],'</option>',"\n";
 		echo '<option value="dir">',$GLOBALS['mimes']['dir'],'</option>',"\n";
 		echo '</select>',"\n";
-		echo '<input name="mkname" type="text" size="15">';
-		echo '<input type="submit" value="',$GLOBALS['messages']['btncreate'],'"></td></tr></form></table></td>',"\n";
+		echo '<input name="mkname" type="text" size="15">',"\n";
+		echo '<input type="submit" value="',$GLOBALS['messages']['btncreate'],'">',"\n";
+		echo '</td></tr></table>',"\n";
+		echo '</form>',"\n";
+		echo '</td>',"\n";
 	endif;
 	echo "</tr></table>\n";
 	// End Toolbar
-
 	// Begin Table + Form for checkboxes
 	echo '<form name="selform" method="POST" action="',make_link('post',$dir,NULL),'">',"\n";
 	echo '<table class="area_data_selection">';
@@ -322,10 +365,7 @@ function list_dir($dir) {
 	echo '<col style="width:15%">'; // modified
 	echo '<col style="width:10%">'; // permissions
 	echo '<col style="width:10%">'; // toolbox
-	echo '</colgroup>';
-	echo '<input type="hidden" name="do_action">';
-	echo '<input type="hidden" name="first" value="y">',"\n";
-
+	echo '</colgroup>',"\n";
 	// Table Header
 //	echo '<tr><td colspan="7"><HR></td></tr>';
 	echo '<thead>';
@@ -333,7 +373,6 @@ function list_dir($dir) {
 	echo '<th class="lhelc">',"\n";
 	echo '<input type="checkbox" name="toggleAllC" onclick="javascript:ToggleAll(this);">';
 	echo '</th>',"\n";
-
 	$new_srt = ($GLOBALS['order'] == 'name') ? $_srt : 'yes'; 
 	echo '<th class="lhell">';
 	echo '<a href="',make_link('list',$dir,NULL,'name',$new_srt),'">',$GLOBALS['messages']['nameheader'];
@@ -341,7 +380,6 @@ function list_dir($dir) {
 		echo $_img;
 	endif;
 	echo '</a></th>',"\n";
-	
 	$new_srt = ($GLOBALS['order'] == 'size') ? $_srt : 'yes'; 
 	echo '<th class="lhell">';
 	echo '<a href="',make_link('list',$dir,NULL,'size',$new_srt),'">',$GLOBALS['messages']['sizeheader'];
@@ -349,13 +387,11 @@ function list_dir($dir) {
 		echo $_img;
 	endif;
 	echo '</a></th>',"\n";
-	
 	$new_srt = ($GLOBALS['order'] == 'type') ? $_srt : 'yes'; 
 	echo '<th class="lhell">';
 	echo '<a href="',make_link('list',$dir,NULL,'type',$new_srt),'">',$GLOBALS['messages']['typeheader'];
 	if($GLOBALS['order'] == 'type') echo $_img;
 	echo '</a></th>',"\n";
-	
 	$new_srt = ($GLOBALS['order'] == 'mod') ? $_srt : 'yes'; 
 	echo '<th class="lhell">';
 	echo '<a href="',make_link('list',$dir,NULL,'mod',$new_srt),'">',$GLOBALS["messages"]["modifheader"];
@@ -363,37 +399,37 @@ function list_dir($dir) {
 		echo $_img;
 	endif;
 	echo '</a></th>',"\n";
-	
 	echo '<th class="lhell">',$GLOBALS['messages']['permheader'],'</th>',"\n";
 	echo '<th class="lhebl">',$GLOBALS['messages']['actionheader'],'</th>',"\n";
 	echo '</tr>',"\n";
 	echo '</thead>';
-
 	// make & print Table using lists
 	echo '<tbody>';
 	print_table($dir, make_list($dir_list, $file_list));
 	echo '</tbody>';
-
 	// print number of items & total filesize
 	echo '<tfoot>';
 	echo '<tr>';
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcell">',$num_items,' ',$GLOBALS['messages']['miscitems'],' (';
-		$free=parse_file_size(diskfreespace('/'));
-		echo $GLOBALS['messages']['miscfree'],': ',$free,')</th>',"\n";
-	echo '<th class="lcell">',parse_file_size($tot_file_size),'</th>',"\n";
+	$free = format_bytes(diskfreespace('/'),2,false,false);
+	echo $GLOBALS['messages']['miscfree'],': ',$free,')</th>',"\n";
+	echo '<th class="lcell">',format_bytes($tot_file_size,2,false,false),'</th>',"\n";
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcell"></th>';
 	echo '<th class="lcebl"></th>';
 	echo '</tr>';
 	echo '</tfoot>';
-
 	echo '</table>',"\n";
+	echo '<div id="submit">',"\n";
+	echo '<input type="hidden" name="do_action">';
+	echo '<input type="hidden" name="first" value="y">',"\n";
+	echo '</div>',"\n";
 	echo '</form>';
 ?>
-<script language="JavaScript1.2" type="text/javascript">
-<!--
+<script type="text/javascript">
+//<![CDATA[
 	// Uncheck all items (to avoid problems with new items)
 	var ml = document.selform;
 	var len = ml.elements.length;
@@ -403,14 +439,13 @@ function list_dir($dir) {
 			e.checked=false;
 		}
 	}
-// -->
+//]]>
 </script><?php
 }
 
 // *** HELPER FUNCTIONS
 
-function _print_edit_buttons ($dir)
-{
+function _print_edit_buttons ($dir) {
 	// for the copy button the user must have create and read rights
 	_print_link("copy", permissions_grant_all($dir, NULL, array("create", "read")), $dir, NULL);
 	_print_link("move", permissions_grant($dir, NULL, "change"), $dir, NULL);
@@ -502,32 +537,46 @@ function _print_link ($function, $allow, $dir, $item) {
 	$values = $functions[$function];
 
 	// make an active link if the access is allowed
-	if ($allow) {
-		echo "<td><A HREF=\"" . $values["jfunction"] . "\"><img border=\"0\" width=\"16\" height=\"16\" ";
-		echo "align=\"ABSMIDDLE\" src=\"" . $values["image"] . "\" ALT=\"" . $values["message"];
-		echo "\" TITLE=\"" . $values["message"] . "\"></A></td>\n";
+	if($allow):
+		echo '<td>',
+				'<a href="',$values['jfunction'],'">',
+					'<img',
+						' style="vertical-align=middle"',
+						' width="16"',
+						' height="16" ',
+						' src="',$values['image'],'"',
+						' alt="',$values['message'],'"',
+						' title="',$values['message'],'"',
+					'>',
+				'</a>',
+			'</td>',"\n";
 		return;
-	}
-	if (!isset($values["imagedisabled"])) {
+	endif;
+	if(!isset($values['imagedisabled'])):
 		return;
-	}
-
+	endif;
 	// make an inactive link if the access is forbidden
-	echo "<td><img border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" ";
-	echo "src=\"" . $values["imagedisabled"] . "\" ALT=\"" . $values["message"] . "\" TITLE=\"";
-	echo $values["message"] . "\"></td>\n";
-
+	echo '<td>',
+			'<img',
+				' style="vertical-align=middle"',
+				' width="16"',
+				' height="16"',
+				' src="',$values['imagedisabled'],'"',
+				' alt="',$values['message'],'"',
+				' title="',$values["message"],'"',
+			'>',
+		'</td>',"\n";
 }
 
 function _get_link_info($dir, $item) {
 	$type = get_mime_type($dir, $item, "type");
-	if(is_array($type)) {
+	if(is_array($type)):
 		$type = $type[0];
-	}
+	endif;
 
-	if (! file_exists(get_abs_item($dir, $item))) {
+	if(! file_exists(get_abs_item($dir, $item))):
 		return '<span style="background:red;">'.$type.'</span>';
-	}
+	endif;
 	return $type;
 }
 
@@ -576,5 +625,4 @@ function _breadcrumbs($curdir, $displayseparator = ' &raquo; ') {
 	// Build temporary array into one string.
 	return implode($displayseparator, $breadcrumbs);
 }
-
 ?>

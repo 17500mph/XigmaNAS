@@ -35,8 +35,8 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 ?>
-<script language="JavaScript1.2" type="text/javascript">
-<!--
+<script type="text/javascript">
+//<![CDATA[
 	function check_pwd() {
 		if(document.chpwd.newpwd1.value!=document.chpwd.newpwd2.value) {
 			alert("<?php echo $GLOBALS["error_msg"]["miscnopassmatch"]; ?>");
@@ -74,6 +74,5 @@
 			document.userform.submit();
 		}
 	}
-
-// -->
+//]]>
 </script>
