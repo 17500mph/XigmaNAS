@@ -334,7 +334,7 @@ function list_dir($dir) {
 	if(permissions_grant($dir,NULL,'create')):
 		echo '<td style="text-align:right">',"\n";
 		echo '<form action="',make_link('mkitem',$dir,NULL),'" method="post">',"\n";
-		echo '<table><tr><td>',"\n";
+		echo '<table style="width:100%"><tr><td>',"\n";
 		echo '<img',
 				' style="vertical-align:middle"',
 				' width="16"',
