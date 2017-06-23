@@ -112,19 +112,17 @@ function show_header($title, $additional_header_content = null) {
 	echo '<div id="pagecontent">';
 	// QuiXplorer Header
 	if(!isset($pgtitle_omit) || !$pgtitle_omit):
-		echo '<p class="pgtitle">', gentitle($pgtitle), "</p>\n";
+		echo '<p class="pgtitle">',gentitle($pgtitle),'</p>',"\n";
 	endif;
-	echo '<table class="area_data_settings"><tbody><tr>', "\n";
-	echo '<td class="lhetop" style="text-align:left">',"\n";
-	if($GLOBALS['require_login'] && isset($GLOBALS['__SESSION']['s_user'])):
-		echo '[',$GLOBALS['__SESSION']['s_user'],'] ';
-	endif;
-	echo $title;
-	echo "</td>\n";
-	echo '<td class="lhetop" style="text-align:right">',"\n";
-	echo 'Powered by QuiXplorer';
-	echo "</td>\n";
-	echo "</tr></tbody></table>\n";
-	echo '<table id="area_data"><tbody><tr><td id="area_data_frame">';
+	echo '<table id="area_data"><tbody><tr><td id="area_data_frame">',"\n",
+			'<table class="area_data_settings"><tbody><tr>',"\n",
+				'<td class="lhetop" style="text-align:left">';
+					if($GLOBALS['require_login'] && isset($GLOBALS['__SESSION']['s_user'])):
+						echo '[',$GLOBALS['__SESSION']['s_user'],'] ';
+					endif;
+					echo $title;
+	echo		'</td>',"\n",
+				'<td class="lhetop" style="text-align:right">Powered by QuiXplorer</td>',"\n",
+			'</tr></tbody></table>',"\n";
 }
 ?>
