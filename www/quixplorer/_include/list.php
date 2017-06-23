@@ -336,7 +336,7 @@ function list_dir($dir) {
 		echo '<form action="',make_link('mkitem',$dir,NULL),'" method="post">',"\n";
 		echo '<table><tr><td>',"\n";
 		echo '<img',
-				' style="vertical-align=middle"',
+				' style="vertical-align:middle"',
 				' width="16"',
 				' height="16"',
 				' src="',$GLOBALS['baricons']['add'],'"',
@@ -541,7 +541,7 @@ function _print_link ($function, $allow, $dir, $item) {
 		echo '<td>',
 				'<a href="',$values['jfunction'],'">',
 					'<img',
-						' style="vertical-align=middle"',
+						' style="vertical-align:middle"',
 						' width="16"',
 						' height="16" ',
 						' src="',$values['image'],'"',
@@ -558,7 +558,7 @@ function _print_link ($function, $allow, $dir, $item) {
 	// make an inactive link if the access is forbidden
 	echo '<td>',
 			'<img',
-				' style="vertical-align=middle"',
+				' style="vertical-align:middle"',
 				' width="16"',
 				' height="16"',
 				' src="',$values['imagedisabled'],'"',
