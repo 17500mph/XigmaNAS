@@ -35,8 +35,8 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 ?>
-<script language="JavaScript1.2" type="text/javascript">
-<!--
+<script type="text/javascript">
+//<![CDATA[
 	// Checkboxes
 	function Toggle(e) {
 		if(e.checked) {
@@ -46,7 +46,7 @@
 			UnHighlight(e);
 			document.selform.toggleAllC.checked = false;
 		}
-   	}
+	}
 
 	function ToggleAll(e) {
 		if(e.checked) CheckAll();
@@ -78,7 +78,7 @@
 		}
 		ml.toggleAllC.checked = false;
 	}
-   
+
 	function AllChecked() {
 		ml = document.selform;
 		len = ml.elements.length;
@@ -87,7 +87,7 @@
 		}
 		return true;
 	}
-	
+
 	function NumChecked() {
 		ml = document.selform;
 		len = ml.elements.length;
@@ -97,8 +97,7 @@
 		}
 		return num;
 	}
-	
-	
+
 	// Row highlight
 
 	function Highlight(e) {
@@ -124,9 +123,9 @@
 			r.className = "rowdata";
 		}
 	}
-	
+
 	// Copy / Move / Delete
-	
+
 	function Copy() {
 		if(NumChecked()==0) {
 			alert("<?php echo $GLOBALS["error_msg"]["miscselitems"]; ?>");
@@ -135,7 +134,7 @@
 		document.selform.do_action.value = "copy";
 		document.selform.submit();
 	}
-	
+
 	function Move() {
 		if(NumChecked()==0) {
 			alert("<?php echo $GLOBALS["error_msg"]["miscselitems"]; ?>");
@@ -144,7 +143,7 @@
 		document.selform.do_action.value = "move";
 		document.selform.submit();
 	}
-	
+
 	function Delete() {
 		num=NumChecked();
 		if(num==0) {
@@ -156,11 +155,9 @@
 			document.selform.submit();
 		}
 	}
-	
-    function Archive()
-    {
-        if(NumChecked()==0)
-        {
+
+	function Archive() {
+		if(NumChecked()==0) {
 			alert("<?php echo $GLOBALS["error_msg"]["miscselitems"]; ?>");
 			return;
 		}
@@ -168,10 +165,8 @@
 		document.selform.submit();
 	}
 
-    function DownloadSelected()
-    {
-        if(NumChecked()==0)
-        {
+	function DownloadSelected() {
+		if(NumChecked()==0) {
 			alert("<?php echo $GLOBALS["error_msg"]["miscselitems"]; ?>");
 			return;
 		}
@@ -179,17 +174,13 @@
 		document.selform.submit();
 	}
 
-    function Unzip()
-    {
-        if (NumChecked()==0)
-        {
+	function Unzip() {
+		if (NumChecked()==0) {
 			alert("<?php echo $GLOBALS["error_msg"]["miscselitems"]; ?>");
 			return;
 		}
 		document.selform.do_action.value = "unzip";
 		document.selform.submit();
 	}
-	
-
-// -->
+//]]>
 </script>

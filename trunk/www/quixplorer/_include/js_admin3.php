@@ -35,8 +35,8 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 ?>
-<script language="JavaScript1.2" type="text/javascript">
-<!--
+<script type="text/javascript">
+//<![CDATA[
 	function check_pwd() {
 		if(document.edituser.user.value=="" || document.edituser.home_dir.value=="") {
 			alert("<?php echo $GLOBALS["error_msg"]["miscfieldmissed"]; ?>");
@@ -50,5 +50,5 @@
 		}
 		return true;
 	}
-// -->
+//]]>
 </script>

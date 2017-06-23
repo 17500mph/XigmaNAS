@@ -42,7 +42,7 @@ function show_footer() {
 	$output = [];
 	$output[] = '</td></tr></tbody></table>';
 	$output[] = '</div>';
-	$output[] = '</div>';
+//	$output[] = '</div>';
 	$output[] = '</main>';
 	$output[] = '<footer id="g4f">';
 	$output[] = '<div id="gapfooter"></div>';

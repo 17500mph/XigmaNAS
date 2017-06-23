@@ -64,7 +64,7 @@ function show_header($title, $additional_header_content = null) {
 	echo '<!DOCTYPE html>',"\n";
 	echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="',system_get_language_code(),'" lang="',system_get_language_code(),'" dir="',$GLOBALS['text_dir'],'">',"\n";
 	echo '<head>',"\n";
-	echo '<meta http-equiv="Content-Type" content="text/html" charset="',$GLOBALS["charset"],'">',"\n";
+	echo '<meta charset="',$GLOBALS["charset"],'">',"\n";
 	echo '<meta name="format-detection" content="telephone=no"/>',"\n";
 	echo '<title>',genhtmltitle($pgtitle ?? []),'</title>',"\n";
 	if(isset($pgrefresh) && $pgrefresh):
@@ -111,16 +111,18 @@ function show_header($title, $additional_header_content = null) {
 	echo '<main id="g4m">', "\n";
 	echo '<div id="pagecontent">';
 	// QuiXplorer Header
-	if (!isset($pgtitle_omit) || !$pgtitle_omit) {
+	if(!isset($pgtitle_omit) || !$pgtitle_omit):
 		echo '<p class="pgtitle">', gentitle($pgtitle), "</p>\n";
-	}
-	echo '<table border="0" width="100%" cellspacing="0" cellpadding="5"><tbody><tr>', "\n";
-	echo "<td class=\"title\" aligh=\"left\">\n";
-	if($GLOBALS["require_login"] && isset($GLOBALS['__SESSION']["s_user"]))
-	echo "[".$GLOBALS['__SESSION']["s_user"]."] "; echo $title;
+	endif;
+	echo '<table class="area_data_settings"><tbody><tr>', "\n";
+	echo '<td class="lhetop" style="text-align:left">',"\n";
+	if($GLOBALS['require_login'] && isset($GLOBALS['__SESSION']['s_user'])):
+		echo '[',$GLOBALS['__SESSION']['s_user'],'] ';
+	endif;
+	echo $title;
 	echo "</td>\n";
-	echo '<td class="title_version" align="right">', "\n";
-	echo "Powered by QuiXplorer";
+	echo '<td class="lhetop" style="text-align:right">',"\n";
+	echo 'Powered by QuiXplorer';
 	echo "</td>\n";
 	echo "</tr></tbody></table>\n";
 	echo '<table id="area_data"><tbody><tr><td id="area_data_frame">';
