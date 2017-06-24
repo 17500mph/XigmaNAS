@@ -55,25 +55,33 @@ function dir_list($dir) {            // make list of directories
     return $dir_list;
 }
 //------------------------------------------------------------------------------
-function dir_print($dir_list, $new_dir) {    // print list of directories
+function dir_print($dir_list,$new_dir) { // print list of directories
     // this list is used to copy/move items to a specific location
 
     // Link to Parent Directory
     $dir_up = dirname($new_dir);
-    if($dir_up==".") $dir_up = "";
-
-    echo "<TR><TD><A HREF=\"javascript:NewDir('".addslashes($dir_up);
-    echo "');\"><IMG border=\"0\" width=\"16\" height=\"16\"";
-    echo " align=\"ABSMIDDLE\" src=\"".$GLOBALS["baricons"]["up"]."\" ALT=\"\">&nbsp;..</A><BR></BR></TD></TR>\n";
-
+    if($dir_up == '.'):
+		$dir_up = '';
+	endif;
+    echo '<tr><td>',
+			'<a href="javascript:NewDir(\'',addslashes($dir_up),'\');">',
+				'<img style="border:0px;vertical-align:middle" width="16" height="16" src="',$GLOBALS['baricons']['up'],'" alt="">','&nbsp;..',
+			'</a>',
+			'<br></br>',
+		'</td></tr>',"\n";
     // Print List Of Target Directories
-    if(!is_array($dir_list)) return;
-    while(list($new_item,) = each($dir_list)) {
-        $s_item=$new_item;    if(strlen($s_item)>40) $s_item=substr($s_item,0,37)."...";
-        echo "<TR><TD><A HREF=\"javascript:NewDir('".addslashes(get_rel_item($new_dir,$new_item)).
-            "');\"><IMG border=\"0\" width=\"16\" height=\"16\" align=\"ABSMIDDLE\" ".
-            "src=\"_img/dir.gif\" ALT=\"\">&nbsp;".htmlspecialchars($s_item)."</A></TD></TR>\n";
-    }
+    if(!is_array($dir_list)):
+		return;
+	endif;
+	foreach($dir_list as $new_item => $value):
+		$s_item=$new_item;
+		if(strlen($s_item)>40):
+			$s_item=substr($s_item,0,37) . '...';
+		endif;
+        echo '<tr><td><a href="javascript:NewDir(\'',addslashes(get_rel_item($new_dir,$new_item)),'\');">',
+				'<img style="border:0px;vertical-align:middle" width="16" height="16" src="_img/dir.gif" alt="">','&nbsp;',htmlspecialchars($s_item),
+			'</a></td></tr>',"\n";
+	endforeach;
 }
 //------------------------------------------------------------------------------
     // copy/move file/dir
