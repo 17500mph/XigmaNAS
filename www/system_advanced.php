@@ -247,16 +247,16 @@ function sysctl_tune($mode) {
 
 	switch($mode):
 		case 0: // Remove system tune MIB's.
-			while(list($name, $value) = each($a_mib)):
+			foreach($a_mib as $name => $value):
 				$id = array_search_ex($name,$a_sysctlvar,'name');
 				if(false === $id):
 					continue;
 				endif;
 				unset($a_sysctlvar[$id]);
-			endwhile;
+			endforeach;
 			break;
 		case 1: // Add system tune MIB's.
-			while(list($name, $value) = each($a_mib)):
+			foreach($a_mib as $name => $value):
 				$id = array_search_ex($name,$a_sysctlvar,'name');
 				if(false !== $id):
 					continue;
@@ -268,7 +268,7 @@ function sysctl_tune($mode) {
 				$param['comment'] = gtext('System tuning');
 				$param['enable'] = true;
 				$a_sysctlvar[] = $param;
-			endwhile;
+			endforeach;
 			break;
 	endswitch;
 }
