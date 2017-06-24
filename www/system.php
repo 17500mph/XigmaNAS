@@ -42,7 +42,8 @@ list($pconfig['ipv6dns1'],$pconfig['ipv6dns2']) = get_ipv6dnsserver();
 $pconfig['username'] = $config['system']['username'];
 $pconfig['webguiproto'] = $config['system']['webgui']['protocol'];
 $pconfig['webguiport'] = !empty($config['system']['webgui']['port']) ? $config['system']['webgui']['port'] : "";
-$pconfig['webguihostsallow'] = !empty($config['system']['webgui']['hostsallow']) ? $config['system']['webgui']['hostsallow'] : "";
+$pconfig['webguihostsallow'] = !empty($config['system']['webgui']['hostsallow']) ? $config['system']['webgui']['hostsallow'] : '';
+$pconfig['webguihostsallow_disable'] = isset($config['system']['webgui']['hostsallow_disable']);
 $pconfig['language'] = $config['system']['language'];
 if(isset($config['system']['webgui']['auxparam']) && is_array($config['system']['webgui']['auxparam'])):
 	$pconfig['auxparam'] = implode("\n", $config['system']['webgui']['auxparam']);
@@ -117,7 +118,7 @@ if($_POST) {
 		foreach(explode(' ', $_POST['webguihostsallow']) as $a):
 			list($hp,$np) = explode('/', $a);
 			if(!is_ipaddr($hp) || (!empty($np) && !is_subnet($a))):
-				$input_errors[] = gtext("A valid IP address or CIDR notation must be specified for the hosts allow.");
+				$input_errors[] = gtext('A valid IP address or CIDR notation must be specified for the hosts allow.');
 			endif;
 		endforeach;
 	endif;
@@ -136,11 +137,11 @@ if($_POST) {
 	if(isset($_POST['ntp_enable'])):
 		$t = (int)$_POST['ntp_updateinterval'];
 		if(($t < 0) || (($t > 0) && ($t < 6)) || ($t > 1440)):
-			$input_errors[] = gtext("The time update interval must be either between 6 and 1440.");
+			$input_errors[] = gtext("The time update interval must be between 6 and 1440.");
 		endif;
 		foreach(explode(' ',$_POST['ntp_timeservers']) as $ts):
 			if(!is_domain($ts)):
-				$input_errors[] = gtext("A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'.");
+				$input_errors[] = gtext("A NTP time server name may only contain the following characters: a-z, 0-9, '-' and '.'.");
 			endif;
 		endforeach;
 	endif;
@@ -161,6 +162,7 @@ if($_POST) {
 		$oldwebguiproto = $config['system']['webgui']['protocol'];
 		$oldwebguiport = $config['system']['webgui']['port'];
 		$oldwebguihostsallow = $config['system']['webgui']['hostsallow'];
+		$oldwebguihostsallow_disable = $config['system']['webgui']['hostsallow_disable'];
 		$oldlanguage = $config['system']['language'];
 		$config['system']['hostname'] = strtolower($_POST['hostname']);
 		$config['system']['domain'] = strtolower($_POST['domain']);
@@ -168,6 +170,7 @@ if($_POST) {
 		$config['system']['webgui']['protocol'] = $_POST['webguiproto'];
 		$config['system']['webgui']['port'] = $_POST['webguiport'];
 		$config['system']['webgui']['hostsallow'] = $_POST['webguihostsallow'];
+		$config['system']['webgui']['hostsallow_disable'] = filter_input(INPUT_POST,'webguihostsallow_disable',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 		$config['system']['language'] = $_POST['language'];
 		// Write auxiliary parameters.
 		unset($config['system']['webgui']['auxparam']);
@@ -225,6 +228,9 @@ if($_POST) {
 		endif;
 		if(!$reboot_required):
 			$reboot_required = ($oldwebguihostsallow != $config['system']['webgui']['hostsallow']);
+		endif;
+		if(!$reboot_required):
+			$reboot_required = ($oldwebguihostsallow_disable != $config['system']['webgui']['hostsallow_disable']);
 		endif;
 		if(!$reboot_required):
 			$reboot_required = ($config['system']['webgui']['certificate'] != $oldcert);
@@ -350,6 +356,9 @@ function webguiproto_change() {
 			html_combobox2('webguiproto',gtext('Protocol'),$pconfig['webguiproto'],['http' => 'HTTP','https' => 'HTTPS'],gtext('Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI.'),true,false,'webguiproto_change()');
 			html_inputbox2('webguiport',gtext('Port'),$pconfig['webguiport'],gtext('Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS).'),true,6);
 			html_inputbox2('webguihostsallow',gtext('Hosts Allow'),$pconfig['webguihostsallow'],gtext('Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)'),false,60);
+			$caption = gtext('Enable this option to allow any IP address to access the WebGUI.');
+			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Enabling this option might expose your system to risk!') . '</strong>';
+			html_checkbox2('webguihostsallow_disable',gtext('Ignore Hosts Allow'),$pconfig['webguihostsallow_disable'],$caption,$desc);
 			html_textarea2('certificate',gtext('Certificate'),$pconfig['certificate'],gtext('Paste a signed certificate in X.509 PEM format here.'),true,65,7,false,false);
 			html_textarea2('privatekey',gtext('Private Key'),$pconfig['privatekey'],gtext('Paste a private key in PEM format here.'),true,65,7,false,false);
 			html_languagecombobox2('language',gtext('Language'),$pconfig['language'],gtext('Select the language of the WebGUI.'),'',false);
