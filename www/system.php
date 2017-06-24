@@ -357,7 +357,7 @@ function webguiproto_change() {
 			html_inputbox2('webguiport',gtext('Port'),$pconfig['webguiport'],gtext('Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS).'),true,6);
 			html_inputbox2('webguihostsallow',gtext('Hosts Allow'),$pconfig['webguihostsallow'],gtext('Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)'),false,60);
 			$caption = gtext('Enable this option to allow any IP address to access the WebGUI.');
-			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Enabling this option might expose your system to risk!') . '</strong>';
+			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Enabling this option may expose your system to additional security risk!') . '</strong>';
 			html_checkbox2('webguihostsallow_disable',gtext('Ignore Hosts Allow'),$pconfig['webguihostsallow_disable'],$caption,$desc);
 			html_textarea2('certificate',gtext('Certificate'),$pconfig['certificate'],gtext('Paste a signed certificate in X.509 PEM format here.'),true,65,7,false,false);
 			html_textarea2('privatekey',gtext('Private Key'),$pconfig['privatekey'],gtext('Paste a private key in PEM format here.'),true,65,7,false,false);
