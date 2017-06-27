@@ -165,7 +165,7 @@ function print_table($dir,$list) {
 		// Icon + Link
 		echo '<td class="lcell" style="white-space: nowrap">';
 		if(permissions_grant($dir,$item,'read')):
-			echo '<a href="',$link,'">';
+			echo '<a href="',$link,'"><div>';
 		endif;
 		echo '<img style="vertical-align:middle" width="16" height="16" src="_img/',get_mime_type($dir,$item,'img'),'" alt="">&nbsp;';
 		$s_item = $item;
@@ -174,7 +174,7 @@ function print_table($dir,$list) {
 		endif;
 		echo htmlspecialchars($s_item);
 		if(permissions_grant($dir,$item,'read')):
-			echo '</a>';
+			echo '</div></a>';
 		endif;
 		echo '</td>',"\n";
 		// Size
@@ -293,73 +293,81 @@ function list_dir($dir) {
 	// Begin Table + Form for checkboxes
 	echo '<form name="selform" method="post" action="',make_link('post',$dir,NULL),'">',"\n";
 	echo '<table class="area_data_selection">';
-	echo '<colgroup>';
-	echo '<col style="width:5%">'; // checkbox
-	echo '<col style="width:35%">'; // name
-	echo '<col style="width:10%">'; // size
-	echo '<col style="width:15%">'; // type
-	echo '<col style="width:15%">'; // modified
-	echo '<col style="width:10%">'; // permissions
-	echo '<col style="width:10%">'; // toolbox
-	echo '</colgroup>',"\n";
+	echo	'<colgroup>',
+				'<col style="width:5%">',
+				'<col style="width:35%">',
+				'<col style="width:10%">',
+				'<col style="width:15%">',
+				'<col style="width:15%">',
+				'<col style="width:10%">',
+				'<col style="width:10%">',
+			'</colgroup>',"\n";
 	// Table Header
 //	echo '<tr><td colspan="7"><HR></td></tr>';
-	echo '<thead>';
-	echo '<tr>';
-	echo '<th class="lhelc">',"\n";
-	echo '<input type="checkbox" name="toggleAllC" onclick="javascript:ToggleAll(this);">';
-	echo '</th>',"\n";
+	echo	'<thead>',
+				'<tr>',
+		  			'<th class="lhelc">',"\n",
+		  				'<input type="checkbox" name="toggleAllC" onclick="javascript:ToggleAll(this);">',
+					'</th>',"\n";
 	$new_srt = ($GLOBALS['order'] == 'name') ? $_srt : 'yes'; 
-	echo '<th class="lhell">';
-	echo '<a href="',make_link('list',$dir,NULL,'name',$new_srt),'">',$GLOBALS['messages']['nameheader'];
+	echo			'<th class="lhell">',
+						'<a href="',make_link('list',$dir,NULL,'name',$new_srt),'">',$GLOBALS['messages']['nameheader'];
 	if($GLOBALS['order'] == 'name'):
-		echo $_img;
+							echo $_img;
 	endif;
-	echo '</a></th>',"\n";
+	echo				'</a>',
+					'</th>',"\n";
 	$new_srt = ($GLOBALS['order'] == 'size') ? $_srt : 'yes'; 
-	echo '<th class="lhell">';
-	echo '<a href="',make_link('list',$dir,NULL,'size',$new_srt),'">',$GLOBALS['messages']['sizeheader'];
+	echo			'<th class="lhell">',
+						'<a href="',make_link('list',$dir,NULL,'size',$new_srt),'">',$GLOBALS['messages']['sizeheader'];
 	if($GLOBALS['order'] == 'size'):
-		echo $_img;
+							echo $_img;
 	endif;
-	echo '</a></th>',"\n";
+	echo				'</a>',
+					'</th>',"\n";
 	$new_srt = ($GLOBALS['order'] == 'type') ? $_srt : 'yes'; 
-	echo '<th class="lhell">';
-	echo '<a href="',make_link('list',$dir,NULL,'type',$new_srt),'">',$GLOBALS['messages']['typeheader'];
-	if($GLOBALS['order'] == 'type') echo $_img;
-	echo '</a></th>',"\n";
-	$new_srt = ($GLOBALS['order'] == 'mod') ? $_srt : 'yes'; 
-	echo '<th class="lhell">';
-	echo '<a href="',make_link('list',$dir,NULL,'mod',$new_srt),'">',$GLOBALS["messages"]["modifheader"];
-	if($GLOBALS['order'] == 'mod'):
-		echo $_img;
+	echo			'<th class="lhell">',
+						'<a href="',make_link('list',$dir,NULL,'type',$new_srt),'">',$GLOBALS['messages']['typeheader'];
+	if($GLOBALS['order'] == 'type'):
+							echo $_img;
 	endif;
-	echo '</a></th>',"\n";
-	echo '<th class="lhell">',$GLOBALS['messages']['permheader'],'</th>',"\n";
-	echo '<th class="lhebl">',$GLOBALS['messages']['actionheader'],'</th>',"\n";
-	echo '</tr>',"\n";
-	echo '</thead>';
+	echo				'</a>',
+					'</th>',"\n";
+	$new_srt = ($GLOBALS['order'] == 'mod') ? $_srt : 'yes'; 
+	echo			'<th class="lhell">',
+						'<a href="',make_link('list',$dir,NULL,'mod',$new_srt),'">',$GLOBALS["messages"]["modifheader"];
+	if($GLOBALS['order'] == 'mod'):
+							echo $_img;
+	endif;
+	echo				'</a>',
+					'</th>',"\n";
+	echo			'<th class="lhell">',
+						$GLOBALS['messages']['permheader'],
+					'</th>',"\n";
+	echo			'<th class="lhebl">',
+						$GLOBALS['messages']['actionheader'],
+					'</th>',"\n";
+	echo		'</tr>',"\n";
+	echo	'</thead>',"\n";
 	// make & print Table using lists
-	echo '<tbody>';
-	print_table($dir, make_list($dir_list, $file_list));
-	echo '</tbody>';
+	echo	'<tbody>',"\n";
+				print_table($dir, make_list($dir_list, $file_list));
+	echo	'</tbody>',"\n";
 	// print number of items & total filesize
-	echo '<tfoot><tr>';
-	echo '<th class="lcell"></th>';
-	echo '<th class="lcell">',$num_items,' ',$GLOBALS['messages']['miscitems'],' (';
 	$free = format_bytes(diskfreespace('/'),2,false,false);
-	echo $GLOBALS['messages']['miscfree'],': ',$free,')</th>',"\n";
-	echo '<th class="lcell">',format_bytes($tot_file_size,2,false,false),'</th>',"\n";
-	echo '<th class="lcell"></th>';
-	echo '<th class="lcell"></th>';
-	echo '<th class="lcell"></th>';
-	echo '<th class="lcebl"></th>';
-	echo '</tr></tfoot>';
+	echo	'<tfoot>',"\n",
+				'<tr>',"\n",
+					'<th class="lcell"></th>',"\n",
+					'<th class="lcell">',$num_items,' ',$GLOBALS['messages']['miscitems'],' (',$GLOBALS['messages']['miscfree'],': ',$free,')</th>',"\n",
+					'<th class="lcell">',format_bytes($tot_file_size,2,false,false),'</th>',"\n",
+					'<th class="lcebl" colspan="4"></th>',"\n",
+				'</tr>',"\n",
+			'</tfoot>',"\n";
 	echo '</table>',"\n";
-	echo '<div id="submit">',"\n";
-	echo '<input type="hidden" name="do_action">';
-	echo '<input type="hidden" name="first" value="y">',"\n";
-	echo '</div>',"\n";
+	echo '<div id="submit">',"\n",
+			'<input type="hidden" name="do_action">',"\n",
+			'<input type="hidden" name="first" value="y">',"\n",
+		'</div>',"\n";
 	echo '</form>';
 ?>
 <script type="text/javascript">
