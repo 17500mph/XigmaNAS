@@ -58,18 +58,16 @@ function email_validate_settings() {
 // $error - Contains an error message if submission fails.
 // Return 0 if successful, otherwise 1.
 function email_send($address, $subject, $message, &$error) {
-	global $config, $g_languages;
-
+	global $config;
+	
 	$msgfilepath = "/tmp/message";
 
 	// Get date in RFC 2882 format.
 	$rfcdate = date('r');
 
 	// Get the language configured.
-	$language = $config['system']['language'];
-	$codeset = $g_languages[$language]['codeset'];
 	$preferences = [
-		"input-charset" => $codeset,
+		"input-charset" => 'UTF-8',
 		"output-charset" => "UTF-8",
 		"line-length" => 76,
 		"line-break-chars" => "\n"
