@@ -145,16 +145,12 @@ function system_get_language_codeset() {
 /* Get the entity of LanguageCode of the current configured language. */
 /* Return: String containing language code of current laguage. */
 function system_get_language_code() {
-	global $config, $g_languages;
-
 	// a language code, as per [RFC3066]
-	$language = $config['system']['language'];
-	//$code = $g_languages[$language]['code'];
-	$code = str_replace("_", "-", $language);
-
-	if (empty($code))
+	$language = getenv('LANG');
+	$code = str_replace('_','-',$language);
+	if(empty($code)):
 		$code = "en-US"; // Set default code.
-
+	endif;
 	return $code;
 }
 
