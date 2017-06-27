@@ -49,25 +49,87 @@ function system_halt() {
 	mwexec("/sbin/shutdown -p now");
 }
 
-/* Init language environment */
-function system_language_load()
-{
-	global $config, $g_languages;
+///* Init language environment */
+//function system_language_load()
+//{
+//	global $config, $g_languages;
+//
+//	/* Get the language configured. */
+//	$language = $config['system']['language'];
+//	$domain = strtolower(get_product_name());
+//	$codeset = $g_languages[$language]['codeset'];
+//
+//	putenv("LANG=$language");
+//	setlocale(LC_MESSAGES, $language);
+//	bindtextdomain($domain, "/usr/local/share/locale");
+//	bind_textdomain_codeset($domain, $codeset);
+//	textdomain($domain);
+//}
 
-	/* Get the language configured. */
-	$language = $config['system']['language'];
+/* Init language environment */
+function system_language_load() {
+	global $config,$g_languages;
+
+	$language = NULL;
+	if(!isset($language)):
+		//	Get the language from configuration.
+		$test_language = filter_var($config['system']['language'],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
+		if(isset($test_language) && key_exists($test_language,$g_languages)):
+			if('auto' !== $test_language):
+				$language = $test_language;
+			endif;
+		endif;
+	endif;
+	if(!isset($language)):
+		//	Get the language from client.
+		$accept_language = system_get_accept_language();
+		$available_language = [];
+		foreach($g_languages as $key => $val):
+			$available_language[strtolower($key)] = $key;
+		endforeach;
+		if(!empty($accept_language)):
+			$matching_languages = array_intersect_key($accept_language,$available_language);
+			$first_highest_q = 0.0;
+			foreach($matching_languages as $key => $val):
+				if($val > $first_highest_q):
+					$language = $available_language[$key];
+					$first_highest_q = $val;
+				endif;
+			endforeach;
+		endif;
+	endif;
+	if(!isset($language)):
+		$language = 'en_US';
+	endif;
 	$domain = strtolower(get_product_name());
 	$codeset = $g_languages[$language]['codeset'];
-
-	putenv("LANG=$language");
-	setlocale(LC_MESSAGES, $language);
-	bindtextdomain($domain, "/usr/local/share/locale");
-	bind_textdomain_codeset($domain, $codeset);
+	putenv(sprintf('LANG=%s',$language));
+	setlocale(LC_MESSAGES,$language);
+	bindtextdomain($domain,'/usr/local/share/locale');
+	bind_textdomain_codeset($domain,$codeset);
 	textdomain($domain);
 }
-
+function system_get_accept_language(): array {
+	$result = [];
+	$accept_language_string = filter_input(INPUT_SERVER,'HTTP_ACCEPT_LANGUAGE',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
+	if(isset($accept_language_string)):
+		$parse_result = NULL;
+		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i',$accept_language_string,$parse_result);
+		$combined = array_combine($parse_result[1],$parse_result[4]);
+		foreach($combined as $key => $val):
+			$updated_key = strtolower(str_replace('-','_',$key));
+			if('' == $val):
+				$updated_val = 1.0;
+			else:
+				$updated_val = (float)$val;
+			endif;
+			$result[$updated_key] = $updated_val;
+		endforeach;
+	endif;
+	return $result;
+}
 /* Get the codeset of the current configured language. */
-/* Return: String containing codeset of current laguage. */
+/* Return: String containing codeset of current language. */
 function system_get_language_codeset() {
 	global $config, $g_languages;
 
