@@ -49,23 +49,6 @@ function system_halt() {
 	mwexec("/sbin/shutdown -p now");
 }
 
-///* Init language environment */
-//function system_language_load()
-//{
-//	global $config, $g_languages;
-//
-//	/* Get the language configured. */
-//	$language = $config['system']['language'];
-//	$domain = strtolower(get_product_name());
-//	$codeset = $g_languages[$language]['codeset'];
-//
-//	putenv("LANG=$language");
-//	setlocale(LC_MESSAGES, $language);
-//	bindtextdomain($domain, "/usr/local/share/locale");
-//	bind_textdomain_codeset($domain, $codeset);
-//	textdomain($domain);
-//}
-
 /* Init language environment */
 function system_language_load() {
 	global $config,$g_languages;
@@ -73,26 +56,26 @@ function system_language_load() {
 	$language = NULL;
 	if(!isset($language)):
 		//	Get the language from configuration.
-		$test_language = filter_var($config['system']['language'],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
-		if(isset($test_language) && key_exists($test_language,$g_languages)):
-			if('auto' !== $test_language):
-				$language = $test_language;
+		$configured_language = filter_var($config['system']['language'],FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
+		if(isset($configured_language) && key_exists($configured_language,$g_languages)):
+			if('auto' !== $configured_language):
+				$language = $configured_language;
 			endif;
 		endif;
 	endif;
 	if(!isset($language)):
 		//	Get the language from client.
-		$accept_language = system_get_accept_language();
-		$available_language = [];
-		foreach($g_languages as $key => $val):
-			$available_language[strtolower($key)] = $key;
-		endforeach;
-		if(!empty($accept_language)):
-			$matching_languages = array_intersect_key($accept_language,$available_language);
+		$accepted_languages = get_http_accept_language();
+		if(!empty($accepted_languages)):
+			$available_languages = [];
+			foreach($g_languages as $key => $val):
+				$available_languages[strtolower($key)] = $key;
+			endforeach;
+			$matching_languages = array_intersect_key($accepted_languages,$available_languages);
 			$first_highest_q = 0.0;
 			foreach($matching_languages as $key => $val):
 				if($val > $first_highest_q):
-					$language = $available_language[$key];
+					$language = $available_languages[$key];
 					$first_highest_q = $val;
 				endif;
 			endforeach;
@@ -109,13 +92,13 @@ function system_language_load() {
 	bind_textdomain_codeset($domain,$codeset);
 	textdomain($domain);
 }
-function system_get_accept_language(): array {
+function get_http_accept_language(): array {
 	$result = [];
-	$accept_language_string = filter_input(INPUT_SERVER,'HTTP_ACCEPT_LANGUAGE',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
-	if(isset($accept_language_string)):
-		$parse_result = NULL;
-		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i',$accept_language_string,$parse_result);
-		$combined = array_combine($parse_result[1],$parse_result[4]);
+	$accepted_language_string = filter_input(INPUT_SERVER,'HTTP_ACCEPT_LANGUAGE',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
+	if(isset($accepted_language_string)):
+		$matches = NULL;
+		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i',$accepted_language_string,$matches);
+		$combined = array_combine($matches[1],$matches[4]);
 		foreach($combined as $key => $val):
 			$updated_key = strtolower(str_replace('-','_',$key));
 			if('' == $val):
@@ -131,14 +114,13 @@ function system_get_accept_language(): array {
 /* Get the codeset of the current configured language. */
 /* Return: String containing codeset of current language. */
 function system_get_language_codeset() {
-	global $config, $g_languages;
+//	global $config, $g_languages;
 
-	$language = $config['system']['language'];
-	$codeset = $g_languages[$language]['codeset'];
-
-	if (empty($codeset))
-		$codeset = "UTF-8"; // Set default codeset.
-
+//	$language = $config['system']['language'];
+//	$codeset = $g_languages[$language]['codeset'];
+//	if(empty($codeset)):
+		$codeset = 'UTF-8'; // Set default codeset.
+//	endif;
 	return $codeset;
 }
 
