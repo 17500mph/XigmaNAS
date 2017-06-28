@@ -1,5 +1,5 @@
 PORTNAME=		iperf
-PORTVERSION=	3.1.7
+PORTVERSION=	3.2
 PORTREVISION?=  0
 CATEGORIES=		benchmarks ipv6
 COMMENT=		Improved tool to measure TCP and UDP bandwidth
@@ -9,7 +9,7 @@ MASTER_SITES=		http://downloads.es.net/pub/iperf/
 PKGNAMESUFFIX=	3
 
 GNU_CONFIGURE=	yes
-USES=			libtool
+USES=			libtool ssl
 USE_LDCONFIG=		yes
 
 .include <bsd.port.options.mk>
