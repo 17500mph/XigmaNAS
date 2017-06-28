@@ -43,7 +43,8 @@ $pconfig['username'] = $config['system']['username'];
 $pconfig['webguiproto'] = $config['system']['webgui']['protocol'];
 $pconfig['webguiport'] = !empty($config['system']['webgui']['port']) ? $config['system']['webgui']['port'] : "";
 $pconfig['webguihostsallow'] = !empty($config['system']['webgui']['hostsallow']) ? $config['system']['webgui']['hostsallow'] : '';
-$pconfig['webguihostsallow_disable'] = isset($config['system']['webgui']['hostsallow_disable']);
+$config['system']['webgui']['hostsallow_disable'] = isset($config['system']['webgui']['hostsallow_disable']) && (is_bool($config['system']['webgui']['hostsallow_disable']) ? $config['system']['webgui']['hostsallow_disable'] : true);
+$pconfig['webguihostsallow_disable'] = $config['system']['webgui']['hostsallow_disable'];
 $pconfig['language'] = $config['system']['language'];
 if(isset($config['system']['webgui']['auxparam']) && is_array($config['system']['webgui']['auxparam'])):
 	$pconfig['auxparam'] = implode("\n", $config['system']['webgui']['auxparam']);
@@ -60,19 +61,19 @@ $pconfig['certificate'] = base64_decode($config['system']['webgui']['certificate
 $pconfig['privatekey'] = base64_decode($config['system']['webgui']['privatekey']);
 // Set default values if necessary.
 if(!$pconfig['language']):
-	$pconfig['language'] = "English";
+	$pconfig['language'] = 'en_US';
 endif;
 if(!$pconfig['timezone']):
-	$pconfig['timezone'] = "Etc/UTC";
+	$pconfig['timezone'] = 'Etc/UTC';
 endif;
 if(!$pconfig['webguiproto']):
-	$pconfig['webguiproto'] = "http";
+	$pconfig['webguiproto'] = 'http';
 endif;
 if(!$pconfig['username']):
-	$pconfig['username'] = "admin";
+	$pconfig['username'] = 'admin';
 endif;
 if(!$pconfig['ntp_timeservers']):
-	$pconfig['ntp_timeservers'] = "pool.ntp.org";
+	$pconfig['ntp_timeservers'] = 'pool.ntp.org';
 endif;
 if(!isset($pconfig['ntp_updateinterval'])):
 	$pconfig['ntp_updateinterval'] = 300;
@@ -276,9 +277,9 @@ if($_POST) {
 		// in previous selected language.
 		if($oldlanguage !== $config['system']['language']):
 			$_SESSION['g']['headermenu'] = [];
-			header("Location: system.php");
-			exit;
 		endif;
+		header('Location: system.php');
+		exit;
 	endif;
 }
 $pglocalheader = <<< EOD
