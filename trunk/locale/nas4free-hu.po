@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-06-16 01:08+0000\n"
-"PO-Revision-Date: 2017-05-21 18:34+0000\n"
+"PO-Revision-Date: 2017-06-23 17:58+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-19 12:53+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
+"X-Generator: Launchpad (build 18418)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -182,7 +182,7 @@ msgstr ""
 "meghatározott mélységgel."
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "1 vagy több lemez szükséges JBOD kötet létrehozásához."
@@ -191,7 +191,7 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 vagy több lemez szükséges RAID-1 kötet létrehozásához."
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 vagy több lemez szükséges RAID-0 kötet létrehozásához."
@@ -200,7 +200,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 vagy több lemez szükséges RAID-1 kötet létrehozásához."
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 vagy több lemez szükséges RAID-5 kötet létrehozásához."
@@ -399,7 +399,7 @@ msgid "Access Restrictions"
 msgstr "Hozzáférési korlátozások"
 
 msgid "Access Time"
-msgstr ""
+msgstr "Hozzáférési idő"
 
 msgid "Access Time (atime)"
 msgstr "Hozzáférési idő (atime)"
@@ -980,7 +980,7 @@ msgstr ""
 "eredményezhet."
 
 msgid "Attribute Name"
-msgstr ""
+msgstr "Attribútumnév"
 
 msgid "Audio"
 msgstr "audió"
@@ -1255,10 +1255,10 @@ msgid "Bootloader"
 msgstr "Rendszerbetöltő"
 
 msgid "Both user data and metadata will be cached in ARC."
-msgstr ""
+msgstr "Felhasználó adata és metaadata is az ARC-ba kerül gyorsítótárba."
 
 msgid "Both user data and metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Felhasználó adata és metaadata is az L2ARC-ba kerül gyorsítótárba."
 
 msgid "Bridge"
 msgstr "Híd (bridge)"
@@ -1429,7 +1429,7 @@ msgid "Calibration Battery"
 msgstr "Elem kalibrálása"
 
 msgid "Can Mount"
-msgstr ""
+msgstr "Csatolható"
 
 msgid "Can't get UFS ID."
 msgstr "Nincs UFS ID."
@@ -1517,7 +1517,7 @@ msgid "Check the list of available drivers"
 msgstr "Ellenőrizd az elérhető illesztőprogramok listáját"
 
 msgid "Checksum"
-msgstr ""
+msgstr "Ellenőrző összeg"
 
 msgid "Chinese (Simplified)"
 msgstr "Kínai (egyszerűsített)"
@@ -1787,40 +1787,50 @@ msgid ""
 "from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
 "equivalent to 'GZIP-6'."
 msgstr ""
+"A tömörítő algoritmust határozza meg. Az 'LZ4' a javasolt tömörítési "
+"algoritmus. Ha az lz4_compress tulajdonság aktív, akkor a tömörítés 'Be' "
+"állapotban LZ4 tömörítést használ, különben LZJB-t. Beállíthatod a 'GZIP' "
+"szintet 'GZIP-N' kiválasztásával, ahol az N 1 (leggyorsabb) és 9 (legjobb "
+"tömörítés) közötti egész szám. Jelenleg 'GZIP' azonos a 'GZIP-6' "
+"beállítással."
 
 msgid "Controls the dedup method."
-msgstr "Egyszerűsítés eljárását felügyeli."
+msgstr "Az egyszeresítés eljárását határozza meg."
 
 msgid "Controls the number of copies of data stored for this dataset."
-msgstr ""
+msgstr "Ebben az adattárban tárolt adat másolatainak számát határozza meg."
 
 msgid "Controls the power consumption mode."
 msgstr "Szabályozza az energiafogyasztási módot."
 
 msgid "Controls the type of the ZFS dataset."
-msgstr ""
+msgstr "A ZFS adattár típusát határozza meg."
 
 msgid "Controls what is cached in the primary cache (ARC)."
-msgstr ""
+msgstr "Meghatározza, mi kerül az elsődleges (ARC) gyorsítótárba."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
-msgstr ""
+msgstr "Meghatározza, mi kerül a másodlagos (L2ARC) gyorsítótárba."
 
 msgid "Controls what types of metadata are stored redundantly."
-msgstr ""
+msgstr "Meghatározza, milyen típusú metaadatokat tároljuk redundáns módon."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
 msgstr ""
+"Meghatározza, hogy a folyamatok a fájlrendszeren belülről futtathatóak-e."
 
 msgid ""
 "Controls whether the .zfs directory is hidden or visible in the root of the "
 "file system."
 msgstr ""
+"Meghatározza, hogy a .zfs könyvtár rejtve legyen vagy látszódjon "
+"fájlrendszer gyökerében."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read."
 msgstr ""
+"Meghatározza, hogy olvasás esetén a fájl hozzáférési ideje frissüljön-e."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
@@ -1832,10 +1842,10 @@ msgstr ""
 "olvasásakor, ami jelentős teljesítménynövekedéshez vezethet."
 
 msgid "Controls whether the dataset is managed from a jail."
-msgstr ""
+msgstr "Meghatározza, hogy az adattárat egy jail-ből kezelik-e."
 
 msgid "Controls whether the set-UID bit is respected for the file system."
-msgstr ""
+msgstr "Meghatározza, hogy a fájlrendszer tiszteltben tartsa-e a set-UID-et."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Azt szabályozza, hogy az adattárat lehessen-e módosítani."
@@ -1851,7 +1861,7 @@ msgid "Conveyance Self-Test"
 msgstr "Konjov önteszt"
 
 msgid "Copies"
-msgstr ""
+msgstr "Másolatok"
 
 msgid "Core"
 msgstr "Rendszermag"
@@ -2093,7 +2103,7 @@ msgid "Custom"
 msgstr "Egyéni"
 
 msgid "Custom Script"
-msgstr ""
+msgstr "Egyéni szkript"
 
 msgid "Custom device"
 msgstr "Egyéni eszköz"
@@ -2105,7 +2115,7 @@ msgid "Custom script is required."
 msgstr "Egyéni scriptre van szükség."
 
 msgid "Custom script not found."
-msgstr ""
+msgstr "Egyéni szkript nem található."
 
 msgid "Czech"
 msgstr "Cseh"
@@ -2177,7 +2187,7 @@ msgid "Dataset"
 msgstr "Adattár"
 
 msgid "Dataset Type"
-msgstr ""
+msgstr "Adattár típusa"
 
 msgid "Dataset is marked for deletion"
 msgstr "Adattár törlésre megjelölve"
@@ -2232,7 +2242,7 @@ msgid "Dedup"
 msgstr "Egyszeresítés"
 
 msgid "Dedup Method"
-msgstr ""
+msgstr "Egyszeresítés eljárás"
 
 msgid "Default"
 msgstr "Alapértelmezett"
@@ -2272,7 +2282,7 @@ msgid "Define directories/URL's that require authentication."
 msgstr "Hitelesítést igénylő mappák/URL-ek meghatározása."
 
 msgid "Defines the checksum algorithm."
-msgstr ""
+msgstr "Az ellenőrzési algoritmust határozza meg."
 
 msgid "Defines when the shutdown is initiated."
 msgstr "Mikor állítsa le a szervert."
@@ -2298,7 +2308,7 @@ msgid "Delete ARP entry"
 msgstr "ARP bejegyzés törlése"
 
 msgid "Delete Algorithm"
-msgstr ""
+msgstr "Algoritmus törlése"
 
 msgid "Delete Host"
 msgstr "Állomás törlése"
@@ -3631,13 +3641,13 @@ msgid "Enter Command"
 msgstr "Parancs megadása"
 
 msgid "Enter Email Address(es)"
-msgstr ""
+msgstr "Add meg az e-mail cím(ek)et"
 
 msgid "Enter Password"
 msgstr "Add meg a jelszót"
 
 msgid "Enter Subject"
-msgstr ""
+msgstr "Tárgy megadása"
 
 msgid "Enter a comment"
 msgstr "Írj egy hozzászólást"
@@ -3813,7 +3823,7 @@ msgid "Example: pkg install packagename."
 msgstr "Például: pkg install csomagnév."
 
 msgid "Exec"
-msgstr ""
+msgstr "Futtatás"
 
 msgid "Execute"
 msgstr "Futtatás"
@@ -4032,6 +4042,8 @@ msgid ""
 "File System - can be mounted within the standard system namespace and "
 "behaves like other file systems."
 msgstr ""
+"Fájlrendszer - a standard rendszer névtérén belül becsatolható és úgy "
+"viselkedik, mint egy másik fájlrendszer."
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
@@ -4402,7 +4414,7 @@ msgid "Hiadaptive (High Performance)"
 msgstr "Nagy teljesítményű (Nagy teljesítmény)"
 
 msgid "Hidden"
-msgstr ""
+msgstr "Rejtett"
 
 msgid "Hide Default Groups"
 msgstr "Alapértelmezett csoportok elrejtése"
@@ -4658,6 +4670,7 @@ msgstr ""
 
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
+"Ha ez a tulajdonság ki van kapcsolva, a fájlrendszer nem csatolható be."
 
 msgid "Import"
 msgstr "Importálás"
@@ -4720,17 +4733,23 @@ msgid ""
 "should be case-sensitive, case-insensitive, or allow a combination of both "
 "styles of matching."
 msgstr ""
+"Meghatározza, hogy a fájlrendszer névegyezési algoritmusa kisbetű-nagybetű "
+"érzékeny, érzéketlen vagy ezek kombinációja legyen."
 
 msgid ""
 "Indicates whether the file system should perform a unicode normalization of "
 "file names whenever two file names are compared, and which normalization "
 "algorithm should be used."
 msgstr ""
+"Meghatározza, hogy a fájlrendszer névegyezési algoritmusa kisbetű-nagybetű "
+"érzékeny, érzéketlen vagy ezek kombinációja legyen."
 
 msgid ""
 "Indicates whether the file system should reject file names that include "
 "characters that are not present in the UTF-8 character code set."
 msgstr ""
+"Meghatározza, hogy a fájlrendszer visszautasítsa azokat a fájlokat, melyek "
+"neve tartalmaz nem UTF-8 karakterkód-táblázatban található karaktert."
 
 msgid "Info"
 msgstr "Információ"
@@ -4990,7 +5009,7 @@ msgid "JBOD Maintenance"
 msgstr "JBOD karbantartás"
 
 msgid "Jailed"
-msgstr ""
+msgstr "Jail-ben van"
 
 msgid "Jan"
 msgstr "Jan"
@@ -5131,7 +5150,7 @@ msgstr ""
 "100."
 
 msgid "Latency"
-msgstr ""
+msgstr "Késleltetés"
 
 #, php-format
 msgid "Latest Beta Release: %s"
@@ -5202,10 +5221,10 @@ msgstr ""
 "(pl. 'k', 'KB', 'M', 'Gb', stb.)."
 
 msgid "Limits the amount of space a dataset and its descendents can consume."
-msgstr ""
+msgstr "Egy adattár és leszármazottai felhasználható méretét korlátozza."
 
 msgid "Limits the amount of space a dataset can consume."
-msgstr ""
+msgstr "Egy adattár felhasználható méretét korlátozza."
 
 msgid "Link Down Action"
 msgstr "Lecsatlakozási művelet"
@@ -5318,7 +5337,7 @@ msgid "Logarithmic Scaling"
 msgstr "Logaritmikus skálázás"
 
 msgid "Logbias"
-msgstr ""
+msgstr "Logbias"
 
 msgid "Logical Block"
 msgstr "Logikai blokk"
@@ -5714,7 +5733,7 @@ msgstr ""
 "okozhat."
 
 msgid "Most"
-msgstr ""
+msgstr "Legtöbb"
 
 msgid "Mount Point"
 msgstr "Csatolási pont (Mount Point)"
@@ -5841,9 +5860,11 @@ msgstr "A változó neve."
 
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr ""
+"Sem a felhasználó adatát sem a metaadatát nem gyorsítótárazzuk az ARC-ban."
 
 msgid "Neither user data nor metadata will be cached in L2ARC."
 msgstr ""
+"Sem a felhasználó adatát sem a metaadatát nem gyorsítótátrazzuk az L2ARC-ban."
 
 msgid "Nested HVM"
 msgstr "Egymásba ágyazott HVM"
@@ -5931,7 +5952,7 @@ msgid "No DNS setting found."
 msgstr "Nem találtam DNS beállítást."
 
 msgid "No Data"
-msgstr ""
+msgstr "Nincs adat"
 
 msgid "No Extent has been configured."
 msgstr "Egy Extent sincs konfigurálva."
@@ -5946,7 +5967,7 @@ msgid "No Initiator Group has been configured."
 msgstr "Egy Kezdeményező csoport sincs konfigurálva."
 
 msgid "No Parity"
-msgstr ""
+msgstr "Nincs paritás"
 
 msgid "No Portal Group has been configured."
 msgstr "Egy Portal csoport sincs konfigurálva."
@@ -6032,7 +6053,7 @@ msgid "Noallow - Only inherit deny entries"
 msgstr "Nemmegengedő - Csak tiltó bejegyzése öröklődjenek"
 
 msgid "Noauto"
-msgstr ""
+msgstr "Nemauto"
 
 msgid "Node A IP address"
 msgstr "Node A IP cím"
@@ -6095,7 +6116,7 @@ msgid "Normal"
 msgstr "Szokványos"
 
 msgid "Normalization"
-msgstr ""
+msgstr "Normalizálás"
 
 msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
@@ -6237,10 +6258,10 @@ msgstr ""
 "tiltva."
 
 msgid "Only metadata will be cached in ARC."
-msgstr ""
+msgstr "Csak a metaadatot gyorsítótárazzuk az ARC-ban."
 
 msgid "Only metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Csak a metaadatot gyorsítótárazzuk az L2ARC-ban."
 
 msgid "Option"
 msgstr "Beállítás"
@@ -6781,7 +6802,7 @@ msgid "Primary"
 msgstr "Elsődleges"
 
 msgid "Primary Cache"
-msgstr ""
+msgstr "Elsődleges gyorsítótár"
 
 msgid "Primary Group"
 msgstr "Elsődleges csoport"
@@ -6820,6 +6841,7 @@ msgstr "Protokoll"
 msgid ""
 "Provide a hint to ZFS about handling of synchronous requests in this dataset."
 msgstr ""
+"Tájékoztatja a ZFS-t az ebben az adattárban lévő szinkronkérések kezeléséről."
 
 msgid "Provider"
 msgstr "Szolgáltató"
@@ -6979,7 +7001,7 @@ msgid "Ramdisk"
 msgstr "Memórialemez"
 
 msgid "Raw Value"
-msgstr ""
+msgstr "Nyers adat"
 
 msgid "Read"
 msgstr "Olvasás"
@@ -7077,13 +7099,13 @@ msgid "Recycle Bin"
 msgstr "Lomtár"
 
 msgid "Redundant Metadata"
-msgstr ""
+msgstr "Redundáns metaadat"
 
 msgid "Refquota"
-msgstr ""
+msgstr "Hivatkozáskvóta"
 
 msgid "Refreservation"
-msgstr ""
+msgstr "Hivatkozásfoglalás"
 
 msgid "Refresh"
 msgstr "Frissítés"
@@ -7360,7 +7382,7 @@ msgid "Rules"
 msgstr "Szabályok"
 
 msgid "Run Now"
-msgstr ""
+msgstr "Futtatás most"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
@@ -7396,10 +7418,10 @@ msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. napló"
 
 msgid "SHA-256, Verify"
-msgstr ""
+msgstr "SHA-256, Ellenőrzés"
 
 msgid "SHA-512, Verify"
-msgstr ""
+msgstr "SHA-512, Ellenőrzés"
 
 msgid "SHA256, Verify"
 msgstr "SHA256, ellenőrzés"
@@ -7561,7 +7583,7 @@ msgid "Secondary"
 msgstr "Másodlagos"
 
 msgid "Secondary Cache"
-msgstr ""
+msgstr "Másodlagos gyorsítótár"
 
 msgid "Seconds"
 msgstr "Másodperc"
@@ -7816,7 +7838,7 @@ msgid "Services"
 msgstr "Szolgáltatások"
 
 msgid "Set UID"
-msgstr ""
+msgstr "UID beállítása"
 
 msgid "Set additional group memberships for this account."
 msgstr "Állítsd be további csoportot a fiókhoz."
@@ -7997,7 +8019,7 @@ msgstr ""
 "méret függ a lemeztől.)"
 
 msgid "Skein, Verify"
-msgstr ""
+msgstr "Skein, Ellenőrzés"
 
 msgid "Skew"
 msgstr "Skew"
@@ -8028,7 +8050,7 @@ msgid "SmartTrim"
 msgstr "SmartTrim"
 
 msgid "Snapdir"
-msgstr ""
+msgstr "Pillanatkép-könyvtár"
 
 msgid "Snapshot"
 msgstr "Pillanatkép"
@@ -8184,7 +8206,7 @@ msgid "Standard"
 msgstr "Általános"
 
 msgid "Standard Reports"
-msgstr ""
+msgstr "Standard riportok"
 
 msgid "Standby"
 msgstr "Készenlét"
@@ -9090,12 +9112,13 @@ msgstr ""
 
 msgid ""
 "The minimum amount of space guaranteed to a dataset and its descendents."
-msgstr ""
+msgstr "Adattár és leszármazottjai számára garantált hely minimális mérete."
 
 msgid ""
 "The minimum amount of space guaranteed to a dataset, not including its "
 "descendents."
 msgstr ""
+"Adattár (leszármazottjai nélkül) számára garantált hely minimális mérete."
 
 msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
@@ -9328,7 +9351,7 @@ msgid "The uploaded file was only partially uploaded."
 msgstr "A feltöltött fájl csak részlegesen került feltöltésre."
 
 msgid "The value is invalid."
-msgstr ""
+msgstr "Az érték érvénytelen."
 
 msgid "The value of the variable."
 msgstr "A változó értéke."
@@ -9867,7 +9890,7 @@ msgstr ""
 "felé."
 
 msgid "Throughput"
-msgstr ""
+msgstr "Áteresztőképesség"
 
 msgid "Thu"
 msgstr "Cs"
@@ -9931,7 +9954,7 @@ msgid "TitleSpeed"
 msgstr "Címgyorsaság"
 
 msgid "To Email"
-msgstr ""
+msgstr "Címzett"
 
 msgid "To Email Address"
 msgstr "Címzett e-mail címe"
@@ -10262,7 +10285,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "UTF-8 Only"
-msgstr ""
+msgstr "Csak UTF-8"
 
 msgid "Ukrainian"
 msgstr "Ukrán"
@@ -10646,13 +10669,14 @@ msgid "Virtualization"
 msgstr "Virtualizáció"
 
 msgid "Visible"
-msgstr ""
+msgstr "Látható"
 
 msgid "Volume"
 msgstr "Kötet"
 
 msgid "Volume - A logical volume. Can be exported as a raw or block device."
 msgstr ""
+"Kötet - logikai kötet. Nyers adatként vagy blokkeszközként exportálható."
 
 msgid "Volume Label"
 msgstr "Kötet címkéje"
@@ -10664,7 +10688,7 @@ msgid "Volume Name"
 msgstr "Kötetnév"
 
 msgid "Volume Size"
-msgstr ""
+msgstr "Kötet mérete"
 
 msgid "Volume Size Limit"
 msgstr "Kötet méretkorlátja"
@@ -10778,7 +10802,7 @@ msgid "Week Days"
 msgstr "Hétköznapok"
 
 msgid "Weekdays"
-msgstr ""
+msgstr "Hétköznapok"
 
 msgid "Western Digital attribute."
 msgstr "Western Digital attribútum."
@@ -11026,6 +11050,8 @@ msgstr "ZFS kötet-blokkméret. Létrehozás után érteke már nem módosíthat
 msgid ""
 "ZFS volume size. You can use human-readable suffixes like K, KB, M, GB."
 msgstr ""
+"ZFS kötet mérete. Megadásához használd a hagyományos utótag formátumokat "
+"(pl. K, KB, M, GB)."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
