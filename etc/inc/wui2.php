@@ -855,8 +855,12 @@ class HTMLLanguageComboBox2 extends HTMLComboBox2 {
 		global $g_languages;
 		//	generate options.
 		$options = [];
-		foreach($g_languages as $languagek => $languagev):
-			$options[$languagek] = $languagev['desc.localized'];
+		foreach($g_languages as $key => $val):
+			if('auto' == $key):
+				$options[$key] = gtext('Autodetect');
+			else:	
+				$options[$key] = locale_get_display_name($key,$key);
+			endif;
 		endforeach;
 		parent::__construct($ctrlname,$title,$value,$options,$description);
 	}
