@@ -411,13 +411,6 @@ function html_timezonecombobox($ctrlname,$title,$value,$desc,$required = false,$
 	$ctrl->Render();
 }
 
-function html_languagecombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
-	$ctrl = new HTMLLanguageComboBox($ctrlname,$title,$value,$desc);
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->Render();
-}
-
 function html_interfacecombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLInterfaceComboBox($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
