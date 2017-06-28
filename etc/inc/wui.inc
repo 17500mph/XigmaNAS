@@ -577,22 +577,6 @@ class HTMLTimeZoneComboBox extends HTMLComboBox {
 	}
 }
 
-class HTMLLanguageComboBox extends HTMLComboBox {
-	function __construct($ctrlname, $title, $value, $description) {
-		global $g_languages;
-
-		// Generate options.
-		$options = [];
-		foreach ($g_languages as $languagek => $languagev) {
-			$options[$languagek] = $languagev['desc.localized'];
-		}
-		// Sort options alphabetically
-		asort($options);
-
-		parent::__construct($ctrlname, $title, $value, $options, $description);
-	}
-}
-
 class HTMLInterfaceComboBox extends HTMLComboBox {
 	function __construct($ctrlname, $title, $value, $description) {
 		global $config;
