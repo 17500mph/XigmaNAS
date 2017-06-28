@@ -85,9 +85,10 @@ function system_language_load() {
 		$language = 'en_US';
 	endif;
 	$domain = strtolower(get_product_name());
-	$codeset = $g_languages[$language]['codeset'];
+	$codeset = 'UTF-8';
+	putenv(sprintf('LANGUAGE=%s',$language));
 	putenv(sprintf('LANG=%s',$language));
-	setlocale(LC_MESSAGES,$language);
+	setlocale(LC_MESSAGES,sprintf('%s.%s',$language,$codeset));
 	bindtextdomain($domain,'/usr/local/share/locale');
 	bind_textdomain_codeset($domain,$codeset);
 	textdomain($domain);
@@ -96,6 +97,7 @@ function get_http_accept_language(): array {
 	$result = [];
 	$accepted_language_string = filter_input(INPUT_SERVER,'HTTP_ACCEPT_LANGUAGE',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
 	if(isset($accepted_language_string)):
+//		write_log(sprintf('HTTP_ACCEPT_LANGUAGE: %s',$accepted_language_string));
 		$matches = NULL;
 		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i',$accepted_language_string,$matches);
 		$combined = array_combine($matches[1],$matches[4]);
@@ -114,14 +116,7 @@ function get_http_accept_language(): array {
 /* Get the codeset of the current configured language. */
 /* Return: String containing codeset of current language. */
 function system_get_language_codeset() {
-//	global $config, $g_languages;
-
-//	$language = $config['system']['language'];
-//	$codeset = $g_languages[$language]['codeset'];
-//	if(empty($codeset)):
-		$codeset = 'UTF-8'; // Set default codeset.
-//	endif;
-	return $codeset;
+	return 'UTF-8';
 }
 
 /* Get the entity of LanguageCode of the current configured language. */
