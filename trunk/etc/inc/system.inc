@@ -67,10 +67,7 @@ function system_language_load() {
 		//	Get the language from client.
 		$accepted_languages = get_http_accept_language();
 		if(!empty($accepted_languages)):
-			$available_languages = [];
-			foreach($g_languages as $key => $val):
-				$available_languages[strtolower($key)] = $key;
-			endforeach;
+			$available_languages = array_flip($g_languages);
 			$matching_languages = array_intersect_key($accepted_languages,$available_languages);
 			$first_highest_q = 0.0;
 			foreach($matching_languages as $key => $val):
