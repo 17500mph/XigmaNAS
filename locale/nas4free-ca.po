@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: 2017-06-16 09:01+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:14+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:24+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -218,10 +218,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q etiqueta VLAN (des 1 fins a 4094)."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
-"Un nom de servidor d'hora NTP només poden contenir els caràcters a-z, 0-9, '-"
-"' i '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -654,9 +653,6 @@ msgstr "Paràmetres avançats"
 msgid "Advertisement Skew"
 msgstr "Inclinació publicitat"
 
-msgid "Afrikaans"
-msgstr "Africà"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 "Després - es durà a terme d'eliminació d'arxius després de la transferència "
@@ -1085,6 +1081,9 @@ msgstr "Tamany automàtic"
 msgid "AutoScale"
 msgstr "Escala automàtica"
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr "Autoescala"
 
@@ -1325,9 +1324,6 @@ msgstr "Navega directori"
 msgid "Browseable"
 msgstr "Navegable"
 
-msgid "Bulgarian"
-msgstr "Búlgar"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr "Per defecte només els arxius existents poden ser pujats"
 
@@ -1491,9 +1487,6 @@ msgstr "Configuració de CARP"
 msgid "Case Sensitivity"
 msgstr "Entre majúscules i minúscules"
 
-msgid "Catalan"
-msgstr "Català"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1548,12 +1541,6 @@ msgstr "Comproveu la llista de controladors disponibles"
 
 msgid "Checksum"
 msgstr "Suma de verificació"
-
-msgid "Chinese (Simplified)"
-msgstr "xinès (Simplificat)"
-
-msgid "Chinese (Traditional)"
-msgstr "xinès (Tradicional)"
 
 msgid "Choose UPS mode."
 msgstr "Tria mode del SAI"
@@ -2180,9 +2167,6 @@ msgstr "Es requereix script personalitzat."
 msgid "Custom script not found."
 msgstr "Script personalitzat no trobat."
 
-msgid "Czech"
-msgstr "Txec"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2230,9 +2214,6 @@ msgstr "Events del Dimoni"
 
 msgid "Daemon log"
 msgstr "Registre del Dimoni"
-
-msgid "Danish"
-msgstr "Danès"
 
 msgid "Data Integrity"
 msgstr "Integritat de dades"
@@ -3220,9 +3201,6 @@ msgstr ""
 "Durant -  la eliminació d'arxius es farà progressivament a mesura que passa "
 "la transferència."
 
-msgid "Dutch"
-msgstr "Holandès"
-
 msgid "Dynamic DNS"
 msgstr "DNS dinàmica"
 
@@ -3628,6 +3606,9 @@ msgstr ""
 "Activa aquesta opció si voleu editar les pàgines de configuració directament "
 "sense la necessitat de canviar al mode d'edició."
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -3657,6 +3638,10 @@ msgstr "Activa mode de memòria cau d'escriptura."
 
 msgid "Enabled"
 msgstr "Activat"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
 
 msgid "Encrypt password"
 msgstr "Xifrar contrasenya"
@@ -3700,9 +3685,6 @@ msgstr "Eines de xifrat"
 
 msgid "Encryption algorithm"
 msgstr "Algoritme d'encriptació"
-
-msgid "English"
-msgstr "Anglés"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "Compatibilitat millorada amb el servidor netatalk AFP."
@@ -3795,8 +3777,14 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr "Introdueix el nom i cognoms de l'usuari."
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
 msgstr "Introduïu el nom d'amfitrió o l'adreça IP."
+
+msgid "Enter login name"
+msgstr ""
 
 msgid "Enter login name of the user."
 msgstr "Introdueix el nom d'inici de sessió de l'usuari."
@@ -3852,9 +3840,6 @@ msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Introduïu el port per enviar les trampes (per defecte 162)."
-
-msgid "Enter the user password."
-msgstr "Introduïu la contrasenya d'usuari."
 
 msgid "Enter trap host name."
 msgstr "Introduïu trampa nom d'amfitrió."
@@ -4166,9 +4151,6 @@ msgstr "Sistema de fitxers"
 msgid "Filter"
 msgstr "Filtre"
 
-msgid "Finnish"
-msgstr "Finès"
-
 msgid "Firewall"
 msgstr "Tallafocs"
 
@@ -4248,9 +4230,6 @@ msgstr "Fragmentat"
 msgid "Free"
 msgstr "Lliure"
 
-msgid "French"
-msgstr "Francès"
-
 msgid "Frequency"
 msgstr "Freqüència"
 
@@ -4325,9 +4304,6 @@ msgstr "Genera un nou identificador únic per la piscina"
 msgid "Generate password if leave empty."
 msgstr "Generar contrasenya si es deixa buid."
 
-msgid "German"
-msgstr "Alemany"
-
 msgid "Get Target Info"
 msgstr "Obtenir informació de destinació"
 
@@ -4355,9 +4331,6 @@ msgstr "Actualització de gràfics cada %d secons."
 
 msgid "Graphs Height"
 msgstr "Alçada dels gràfics"
-
-msgid "Greek"
-msgstr "Grec"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
@@ -4575,9 +4548,6 @@ msgstr ""
 "Amb quina freqüència s'actualitza la IP, encara que no es canvia. El període "
 "és en segons (màx. És de 10 dies)."
 
-msgid "Hungarian"
-msgstr "Hongarès"
-
 msgid "I/O Statistics"
 msgstr "Estadística de E/S"
 
@@ -4761,6 +4731,9 @@ msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
 "Si aquesta propietat està desactivada, el sistema de fitxers no es pot "
 "muntar."
+
+msgid "Ignore Hosts Allow"
+msgstr ""
 
 msgid "Import"
 msgstr "Importar"
@@ -5093,9 +5066,6 @@ msgstr ""
 "Es recomana canviar el nom d'usuari i la contrasenya per defecte per accedir "
 "a la interfície gràfica d'usuari Web, escriviu el nom aquí."
 
-msgid "Italian"
-msgstr "Italià"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -5113,9 +5083,6 @@ msgstr "Gen"
 
 msgid "January"
 msgstr "Gener"
-
-msgid "Japanese"
-msgstr "Japonès"
 
 msgid "Job is locked"
 msgstr "Treball està bloquejat"
@@ -5150,9 +5117,6 @@ msgstr "Longitud de la clau"
 
 msgid "Key Management Protocol"
 msgstr "Protocol de gestió de claus"
-
-msgid "Korean"
-msgstr "Coreà"
 
 msgid "L2 Cache"
 msgstr "Memòria cau L2"
@@ -6228,9 +6192,6 @@ msgstr ""
 "Normalment, aquesta opció no s'ha d'establir ja que a la fase de negociació "
 "automàtica el protocol SMB s'encarrega de triar el protocol adequat."
 
-msgid "Norwegian (Bokmal)"
-msgstr "Noruec (Bokmål)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6377,6 +6338,9 @@ msgstr "Opció protegida"
 
 msgid "Option is unlocked"
 msgstr "Opció desbloquejada"
+
+msgid "Optional"
+msgstr ""
 
 msgid "Optional user-friendly string of the target."
 msgstr "Cadena de fàcil ús opcional de l'objectiu."
@@ -6744,9 +6708,6 @@ msgstr ""
 "Tingueu en compte que els espais en blanc en els noms de ruta/camí no estan "
 "permesos."
 
-msgid "Polish"
-msgstr "Polonès"
-
 msgid "Polling Time"
 msgstr "Temps de cicle"
 
@@ -6844,12 +6805,6 @@ msgstr "Portals"
 
 msgid "Ports"
 msgstr "Ports"
-
-msgid "Portuguese (Brazil)"
-msgstr "Portuguès (Brasil)"
-
-msgid "Portuguese (Portugal)"
-msgstr "Portuguès (Portugal)"
 
 msgid "PostInit"
 msgstr "PostInit"
@@ -7413,9 +7368,6 @@ msgstr "Rol"
 msgid "Rollback"
 msgstr "Desfer"
 
-msgid "Romanian"
-msgstr "Romanès"
-
 msgid "Root"
 msgstr "Root"
 
@@ -7501,9 +7453,6 @@ msgid ""
 msgstr ""
 "L'execució d'aquest servei com a root no es recomana per raons de seguretat, "
 "utilitzeu al seu propi risc!"
-
-msgid "Russian"
-msgstr "Rus"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7700,6 +7649,9 @@ msgstr "Secure Shell"
 
 msgid "Security"
 msgstr "Seguretat"
+
+msgid "Security Warning"
+msgstr ""
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7956,6 +7908,9 @@ msgstr ""
 "Establir l'interval entre comprovacions de disc de N segons. El valor mínim "
 "permès és de 10."
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Fes-ho només lectura."
 
@@ -8141,12 +8096,6 @@ msgstr "Saltar mode de visualització"
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Somni - Comproveu el dispositiu llevat que sigui en el mode SLEEP."
 
-msgid "Slovak"
-msgstr "Eslovac"
-
-msgid "Slovenian"
-msgstr "Eslovè"
-
 msgid "Smart Outlet Management"
 msgstr "Gestió intel·ligent de sortida"
 
@@ -8219,9 +8168,6 @@ msgid ""
 msgstr ""
 "Espai delimitat conjunt d'IP o la notació CIDR que permet accedir a la "
 "WebGUI. (Buit és la mateixa xarxa d'interfície LAN)"
-
-msgid "Spanish"
-msgstr "Espanyol"
 
 msgid "Spare"
 msgstr "Recanvi"
@@ -8429,9 +8375,6 @@ msgstr "Ús de l'intercanvi"
 
 msgid "Swap is disabled."
 msgstr "Intercanvi deshabilitat"
-
-msgid "Swedish"
-msgstr "Suec"
 
 msgid "Switch VIP to BACKUP"
 msgstr "Canviar VIP a BACKUP"
@@ -9436,8 +9379,8 @@ msgstr ""
 "El temps en segons fins que l'apagat s'inicia. Si el SAI torna abans que el "
 "temps s'ha acabat el tancament es cancel·la."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "L'interval d'actualització de temps ha de ser entre 6 i 1440."
+msgid "The time update interval must be between 6 and 1440."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "El recompte total d'errors a l'escriure un sector."
@@ -10299,9 +10242,6 @@ msgstr "Dimarts"
 msgid "Tuning"
 msgstr "Afinament"
 
-msgid "Turkish"
-msgstr "Turc"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Posa el monitor en mode d'espera després de N segons"
 
@@ -10436,9 +10376,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr "UTF-8 només"
-
-msgid "Ukrainian"
-msgstr "Ucraïnès"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11350,3 +11287,102 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "Un nom de servidor d'hora NTP només poden contenir els caràcters a-z, 0-9, '-"
+#~ "' i '.'."
+
+#~ msgid "Bulgarian"
+#~ msgstr "Búlgar"
+
+#~ msgid "Czech"
+#~ msgstr "Txec"
+
+#~ msgid "Danish"
+#~ msgstr "Danès"
+
+#~ msgid "Dutch"
+#~ msgstr "Holandès"
+
+#~ msgid "English"
+#~ msgstr "Anglés"
+
+#~ msgid "Russian"
+#~ msgstr "Rus"
+
+#~ msgid "Finnish"
+#~ msgstr "Finès"
+
+#~ msgid "French"
+#~ msgstr "Francès"
+
+#~ msgid "German"
+#~ msgstr "Alemany"
+
+#~ msgid "Greek"
+#~ msgstr "Grec"
+
+#~ msgid "Hungarian"
+#~ msgstr "Hongarès"
+
+#~ msgid "Italian"
+#~ msgstr "Italià"
+
+#~ msgid "Korean"
+#~ msgstr "Coreà"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonès"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "Noruec (Bokmål)"
+
+#~ msgid "Polish"
+#~ msgstr "Polonès"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "Portuguès (Portugal)"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "Portuguès (Brasil)"
+
+#~ msgid "Romanian"
+#~ msgstr "Romanès"
+
+#~ msgid "Slovak"
+#~ msgstr "Eslovac"
+
+#~ msgid "Slovenian"
+#~ msgstr "Eslovè"
+
+#~ msgid "Spanish"
+#~ msgstr "Espanyol"
+
+#~ msgid "Swedish"
+#~ msgstr "Suec"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Africà"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "L'interval d'actualització de temps ha de ser entre 6 i 1440."
+
+#~ msgid "Turkish"
+#~ msgstr "Turc"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ucraïnès"
+
+#~ msgid "Catalan"
+#~ msgstr "Català"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "xinès (Simplificat)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "xinès (Tradicional)"
+
+#~ msgid "Enter the user password."
+#~ msgstr "Introduïu la contrasenya d'usuari."

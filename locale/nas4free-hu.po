@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: 2017-06-23 17:58+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:26+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -212,10 +212,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN címke (1 és 4094 közötti érték)."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
-"Az NTP-időkiszolgáló neve csak a-z, 0-9, '-' és '.' karaktereket "
-"tartalmazhat."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -642,9 +641,6 @@ msgstr "Speciális beállítások"
 msgid "Advertisement Skew"
 msgstr "Reklámcsík"
 
-msgid "Afrikaans"
-msgstr "afrikai"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr "Utána - Átvitel befejezése után töröljük a fájlokat."
 
@@ -1066,6 +1062,9 @@ msgstr "Automatikus méret"
 msgid "AutoScale"
 msgstr "Automatikus méretezés"
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr "Automatikus skálázás"
 
@@ -1298,9 +1297,6 @@ msgstr "Könyvtár tallózása"
 msgid "Browseable"
 msgstr "Böngészhető"
 
-msgid "Bulgarian"
-msgstr "Bulgár"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr "Alapértelmezetten csak már létező fájlok tölthetőek fel."
 
@@ -1461,9 +1457,6 @@ msgstr "Carp beállítások"
 msgid "Case Sensitivity"
 msgstr "Kis- és nagybetű érzékenység"
 
-msgid "Catalan"
-msgstr "Katalán"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1518,12 +1511,6 @@ msgstr "Ellenőrizd az elérhető illesztőprogramok listáját"
 
 msgid "Checksum"
 msgstr "Ellenőrző összeg"
-
-msgid "Chinese (Simplified)"
-msgstr "Kínai (egyszerűsített)"
-
-msgid "Chinese (Traditional)"
-msgstr "Kínai (hagyományos)"
 
 msgid "Choose UPS mode."
 msgstr "Válassz szünetmentes módot."
@@ -2117,9 +2104,6 @@ msgstr "Egyéni scriptre van szükség."
 msgid "Custom script not found."
 msgstr "Egyéni szkript nem található."
 
-msgid "Czech"
-msgstr "Cseh"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2167,9 +2151,6 @@ msgstr "Démon események"
 
 msgid "Daemon log"
 msgstr "Démon napló"
-
-msgid "Danish"
-msgstr "Dán"
 
 msgid "Data Integrity"
 msgstr "Adatintegritás"
@@ -3157,9 +3138,6 @@ msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr "Közben - Átvitel közben növekményesen töröljük a fájlokat."
 
-msgid "Dutch"
-msgstr "Holland"
-
 msgid "Dynamic DNS"
 msgstr "Dynamic DNS"
 
@@ -3559,6 +3537,9 @@ msgstr ""
 "Kapcsold be ezt a lehetőséget a konfigurációs oldal közvetlen, a "
 "szerkesztőmód bekapcsolása nélküli módosításához."
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "Ez a beállítás kisebbre állítja az oldal fejlécének magasságát."
@@ -3587,6 +3568,10 @@ msgstr "Írás cache engedélyezése."
 
 msgid "Enabled"
 msgstr "Engedélyezve"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
 
 msgid "Encrypt password"
 msgstr "Titkosító jelszó"
@@ -3630,9 +3615,6 @@ msgstr "Titkosító eszközök"
 
 msgid "Encryption algorithm"
 msgstr "Titkosítási algoritmus"
-
-msgid "English"
-msgstr "Angol"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "Megnövelt kompatibilitás Netatalk AFP szerverrel."
@@ -3725,8 +3707,14 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr "Add meg a felhasználó teljes nevét."
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
 msgstr "Add meg a kiszolgálónevét vagy az IP címét."
+
+msgid "Enter login name"
+msgstr ""
 
 msgid "Enter login name of the user."
 msgstr "Add meg a felhasználó bejelentkezési nevét."
@@ -3781,9 +3769,6 @@ msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Add meg a csapdák portját (alapértelmezetten 162)."
-
-msgid "Enter the user password."
-msgstr "Add meg felhasználó jelszavát."
 
 msgid "Enter trap host name."
 msgstr "Add meg a csapda állomás nevét."
@@ -4086,9 +4071,6 @@ msgstr "Fájlrendszer"
 msgid "Filter"
 msgstr "Szűrő"
 
-msgid "Finnish"
-msgstr "Finn"
-
 msgid "Firewall"
 msgstr "Tűzfal"
 
@@ -4168,9 +4150,6 @@ msgstr "Töredezettség"
 msgid "Free"
 msgstr "Szabad"
 
-msgid "French"
-msgstr "Francia"
-
 msgid "Frequency"
 msgstr "Gyakoriság"
 
@@ -4243,9 +4222,6 @@ msgstr "Egyedi azonosító generálása a tárolónak"
 msgid "Generate password if leave empty."
 msgstr "Jelszó generálásához hagyd üresen."
 
-msgid "German"
-msgstr "Német"
-
 msgid "Get Target Info"
 msgstr "Cél info"
 
@@ -4273,9 +4249,6 @@ msgstr "Grafikon frissítése %d másodpercenként."
 
 msgid "Graphs Height"
 msgstr "Diagramok magassága"
-
-msgid "Greek"
-msgstr "Görög"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr "Az üdvözlő szalaghirdetés a kliens első kapcsolódásakor jelenik meg."
@@ -4489,9 +4462,6 @@ msgstr ""
 "Milyen gyakran elfrissítse az IP címet, még ha az nem is változott. "
 "Másodpercben adandó meg (maximuma 10 nap)."
 
-msgid "Hungarian"
-msgstr "Magyar"
-
 msgid "I/O Statistics"
 msgstr "I/O statisztikák"
 
@@ -4671,6 +4641,9 @@ msgstr ""
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
 "Ha ez a tulajdonság ki van kapcsolva, a fájlrendszer nem csatolható be."
+
+msgid "Ignore Hosts Allow"
+msgstr ""
 
 msgid "Import"
 msgstr "Importálás"
@@ -4996,9 +4969,6 @@ msgstr ""
 "Ajánlott lecserélni az alapértelmezett WebGUI felhasználónevet és jelszót, "
 "add meg itt az új felhasználónevet."
 
-msgid "Italian"
-msgstr "Olasz"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -5016,9 +4986,6 @@ msgstr "Jan"
 
 msgid "January"
 msgstr "Január"
-
-msgid "Japanese"
-msgstr "Japán"
 
 msgid "Job is locked"
 msgstr "Feladat zárolva"
@@ -5053,9 +5020,6 @@ msgstr "Kulcshossz"
 
 msgid "Key Management Protocol"
 msgstr "Kulcskezelő protokoll"
-
-msgid "Korean"
-msgstr "Koreai"
 
 msgid "L2 Cache"
 msgstr "L2 gyorsítótár"
@@ -6126,9 +6090,6 @@ msgstr ""
 "egyeztetési szakaszt az SMB protokollban, ami gondoskodik a megfelelő "
 "protokoll a választásáról."
 
-msgid "Norwegian (Bokmal)"
-msgstr "Norvég (Bokmål)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6277,6 +6238,9 @@ msgstr "Opció védett"
 
 msgid "Option is unlocked"
 msgstr "Opció zárolása feloldva"
+
+msgid "Optional"
+msgstr ""
 
 msgid "Optional user-friendly string of the target."
 msgstr "A cél opcionális felhasználóbarát sztringje."
@@ -6641,9 +6605,6 @@ msgstr ""
 "Kérjük ügyeljen arra, hogy az elérési útvonal nem tartalmazhat üres "
 "karaktert."
 
-msgid "Polish"
-msgstr "Lengyel"
-
 msgid "Polling Time"
 msgstr "Lekérdezési idő"
 
@@ -6740,12 +6701,6 @@ msgstr "Portálok"
 
 msgid "Ports"
 msgstr "Portok"
-
-msgid "Portuguese (Brazil)"
-msgstr "Portugál (brazil)"
-
-msgid "Portuguese (Portugal)"
-msgstr "Portugál"
 
 msgid "PostInit"
 msgstr "Indítás után"
@@ -7309,9 +7264,6 @@ msgstr "Szabály"
 msgid "Rollback"
 msgstr "Visszagörgetés"
 
-msgid "Romanian"
-msgstr "Román"
-
 msgid "Root"
 msgstr "Root"
 
@@ -7398,9 +7350,6 @@ msgid ""
 msgstr ""
 "Ezen szolgáltatás futtatása root-ként biztonsági okok miatt nem ajánlott, "
 "csak saját felelősségre állítsd be!"
-
-msgid "Russian"
-msgstr "Orosz"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7596,6 +7545,9 @@ msgstr "Biztonságos parancsértelmező"
 
 msgid "Security"
 msgstr "Biztonság"
+
+msgid "Security Warning"
+msgstr ""
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7853,6 +7805,9 @@ msgstr ""
 "Állítsd be a lemezellenőrzések közötti időközt másodpercben. A legkisebb "
 "megengedett érték 10."
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Csak olvashatónak beállítás."
 
@@ -8034,12 +7989,6 @@ msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
 "Alvó (Sleep)- Akkor is ellenőrzi a lemezt, amikor az ALVÓ módban van."
 
-msgid "Slovak"
-msgstr "Szlovák"
-
-msgid "Slovenian"
-msgstr "Szlovén"
-
 msgid "Smart Outlet Management"
 msgstr "Smart Outlet menedzsment"
 
@@ -8112,9 +8061,6 @@ msgid ""
 msgstr ""
 "A WebGUI-t elérthető IP-címek vagy CIDR-ek szóközzel elválasztva (ha üres, "
 "akkor a LAN interfésszel azonos hálózat)."
-
-msgid "Spanish"
-msgstr "Spanyol"
 
 msgid "Spare"
 msgstr "Tartalék"
@@ -8322,9 +8268,6 @@ msgstr "Cserehely-használat"
 
 msgid "Swap is disabled."
 msgstr "A cserehely ki van kapcsolva."
-
-msgid "Swedish"
-msgstr "Svéd"
 
 msgid "Switch VIP to BACKUP"
 msgstr "VIP átállítása BACKUP-ra"
@@ -9311,8 +9254,8 @@ msgstr ""
 "A leállítás megkezdéséig szükséges idő. Amennyiben ennyi idő alatt a "
 "szünetmentes visszaáll, a leállítás megszakad."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "A frissítési időintervallumnak 6 és 1440 közé kell esnie."
+msgid "The time update interval must be between 6 and 1440."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "Szektor írásakor fellépő hibák összszáma."
@@ -10149,9 +10092,6 @@ msgstr "Kedd"
 msgid "Tuning"
 msgstr "Finomhangolás"
 
-msgid "Turkish"
-msgstr "Török"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Monitor alvásba tétele N mp után."
 
@@ -10286,9 +10226,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr "Csak UTF-8"
-
-msgid "Ukrainian"
-msgstr "Ukrán"
 
 msgid "Umask"
 msgstr "UImaszk"
@@ -11185,3 +11122,102 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgár"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Kínai (egyszerűsített)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Kínai (hagyományos)"
+
+#~ msgid "Czech"
+#~ msgstr "Cseh"
+
+#~ msgid "Danish"
+#~ msgstr "Dán"
+
+#~ msgid "Dutch"
+#~ msgstr "Holland"
+
+#~ msgid "English"
+#~ msgstr "Angol"
+
+#~ msgid "French"
+#~ msgstr "Francia"
+
+#~ msgid "German"
+#~ msgstr "Német"
+
+#~ msgid "Greek"
+#~ msgstr "Görög"
+
+#~ msgid "Hungarian"
+#~ msgstr "Magyar"
+
+#~ msgid "Italian"
+#~ msgstr "Olasz"
+
+#~ msgid "Japanese"
+#~ msgstr "Japán"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "Norvég (Bokmål)"
+
+#~ msgid "Polish"
+#~ msgstr "Lengyel"
+
+#~ msgid "Romanian"
+#~ msgstr "Román"
+
+#~ msgid "Russian"
+#~ msgstr "Orosz"
+
+#~ msgid "Slovak"
+#~ msgstr "Szlovák"
+
+#~ msgid "Slovenian"
+#~ msgstr "Szlovén"
+
+#~ msgid "Spanish"
+#~ msgstr "Spanyol"
+
+#~ msgid "Swedish"
+#~ msgstr "Svéd"
+
+#~ msgid "Korean"
+#~ msgstr "Koreai"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "Portugál (brazil)"
+
+#~ msgid "Turkish"
+#~ msgstr "Török"
+
+#~ msgid "Finnish"
+#~ msgstr "Finn"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "Portugál"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrán"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "Az NTP-időkiszolgáló neve csak a-z, 0-9, '-' és '.' karaktereket "
+#~ "tartalmazhat."
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "A frissítési időintervallumnak 6 és 1440 közé kell esnie."
+
+#~ msgid "Afrikaans"
+#~ msgstr "afrikai"
+
+#~ msgid "Catalan"
+#~ msgstr "Katalán"
+
+#~ msgid "Enter the user password."
+#~ msgstr "Add meg felhasználó jelszavát."

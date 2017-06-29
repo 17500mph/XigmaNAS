@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: 2017-06-19 18:58+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:26+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -217,11 +217,9 @@ msgstr ""
 "Značka virtuální sítě (VLAN) dle normy 802.1Q – číslo z rozsahu 1 až 4094."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
-"Název časového (NTP) serveru může obsahovat pouze malá písmena „a“ až „z“ "
-"(bez háčků a čárek!), dále číslice 0 až 9 a pak ještě znaky „-“ (spojovník) "
-"a „.“ (tečka)."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -661,9 +659,6 @@ msgstr "Pokročilá nastavení"
 msgid "Advertisement Skew"
 msgstr "Posun propagace"
 
-msgid "Afrikaans"
-msgstr "Afrikánština"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr "Poté – soubory budou smazány až po dokončení přenosu."
 
@@ -1088,6 +1083,9 @@ msgstr "Velikost automaticky"
 msgid "AutoScale"
 msgstr "Měřítko automaticky"
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr "Měřítko automaticky"
 
@@ -1323,9 +1321,6 @@ msgstr "Procházet složku"
 msgid "Browseable"
 msgstr "Možné procházet"
 
-msgid "Bulgarian"
-msgstr "bulharština"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
 "Ve výchozím nastavení je umožněno nahrávat pouze soubory se stejným názvem, "
@@ -1493,9 +1488,6 @@ msgstr "Nastavení CARP"
 msgid "Case Sensitivity"
 msgstr "Rozlišování velkých/malých písmen"
 
-msgid "Catalan"
-msgstr "Katalánština"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1550,12 +1542,6 @@ msgstr "Zkontrolovat seznam ovladačů, které jsou k dispozici"
 
 msgid "Checksum"
 msgstr "Kontrolní součet"
-
-msgid "Chinese (Simplified)"
-msgstr "čínština (zjednodušená)"
-
-msgid "Chinese (Traditional)"
-msgstr "čínština (klasická)"
 
 msgid "Choose UPS mode."
 msgstr "Zvolte režim UPS zdroje."
@@ -2177,9 +2163,6 @@ msgstr "Vlastní skript je vyžadován."
 msgid "Custom script not found."
 msgstr "Vlastní skript nebyl nalezen."
 
-msgid "Czech"
-msgstr "čeština"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2230,9 +2213,6 @@ msgstr "Události na straně procesu služby"
 
 msgid "Daemon log"
 msgstr "Záznam událostí na straně procesu služby"
-
-msgid "Danish"
-msgstr "dánština"
 
 msgid "Data Integrity"
 msgstr "Neporušenost dat"
@@ -3218,9 +3198,6 @@ msgid ""
 msgstr ""
 "Během – mazání souborů bude probíhat postupně, tak jak budou přenášeny."
 
-msgid "Dutch"
-msgstr "holandština"
-
 msgid "Dynamic DNS"
 msgstr "Služba dynamického DNS"
 
@@ -3624,6 +3601,9 @@ msgstr ""
 "Tuto předvolbu zapněte pokud chcete upravovat stránky s nastavením přímo bez "
 "potřeby přepnutí do režimu úprav."
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "Zapnutí této předvolby zmenší výšku záhlaví stránky na minimum."
@@ -3651,6 +3631,10 @@ msgstr "Zapnout režim zápisu s mezipamětí."
 
 msgid "Enabled"
 msgstr "Zapnuto"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
 
 msgid "Encrypt password"
 msgstr "Heslo pro šifrování"
@@ -3694,9 +3678,6 @@ msgstr "Šifrovací nástroje"
 
 msgid "Encryption algorithm"
 msgstr "Šifrovací algoritmus"
-
-msgid "English"
-msgstr "angličtina"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "Vylepšená slučitelnost s Netatalk AFP serverem."
@@ -3785,8 +3766,14 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr "Zadejte úplný název uživatele"
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
 msgstr "Zadejte název nebo IP adresu stroje."
+
+msgid "Enter login name"
+msgstr ""
 
 msgid "Enter login name of the user."
 msgstr "Zadejte přihlašovací jméno uživatele."
@@ -3842,9 +3829,6 @@ msgstr ""
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 "Zadejte číslo portu, na který budou upozornění zasílána (výchozí je 162)."
-
-msgid "Enter the user password."
-msgstr "Zadejte uživatelské heslo."
 
 msgid "Enter trap host name."
 msgstr "Zadejte název stroje, na který budou SNMP upozornění zasílána."
@@ -4150,9 +4134,6 @@ msgstr "Souborový systém"
 msgid "Filter"
 msgstr "Filtr"
 
-msgid "Finnish"
-msgstr "finština"
-
 msgid "Firewall"
 msgstr "Brána firewall"
 
@@ -4232,9 +4213,6 @@ msgstr "Frag"
 msgid "Free"
 msgstr "Volné"
 
-msgid "French"
-msgstr "francouzština"
-
 msgid "Frequency"
 msgstr "Frekvence"
 
@@ -4307,9 +4285,6 @@ msgstr "Vytvořit pro fond nový jedinečný identifikátor"
 msgid "Generate password if leave empty."
 msgstr "Vytvořit heslo, pokud ponecháno nevyplněné."
 
-msgid "German"
-msgstr "němčina"
-
 msgid "Get Target Info"
 msgstr "Získat informace o cíli"
 
@@ -4339,9 +4314,6 @@ msgstr "Graf je aktualizován každých %d sekund."
 
 msgid "Graphs Height"
 msgstr "Výška grafu"
-
-msgid "Greek"
-msgstr "řečtina"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr "Uvítací pruh zobrazovaný klientovi při prvním přihlášení."
@@ -4558,9 +4530,6 @@ msgstr ""
 "Jak často aktualizovat IP adresu i v případě, že se nezměnila. Časový úsek v "
 "sekundách (nejvýše 864000 s, tj. 10 dnů)."
 
-msgid "Hungarian"
-msgstr "maďarština"
-
 msgid "I/O Statistics"
 msgstr "Statistiky vst./výst."
 
@@ -4741,6 +4710,9 @@ msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
 "Pokud je tato vlastnost vypnutá, souborový systém není možné připojit "
 "(mount)."
+
+msgid "Ignore Hosts Allow"
+msgstr ""
 
 msgid "Import"
 msgstr "Importovat"
@@ -5074,9 +5046,6 @@ msgstr ""
 "Je doporučeno změnit výchozí uživatelské jméno a heslo pro přístup do "
 "webového rozhraní. Uživatelské jméno vložíte zde."
 
-msgid "Italian"
-msgstr "italština"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -5094,9 +5063,6 @@ msgstr "led"
 
 msgid "January"
 msgstr "leden"
-
-msgid "Japanese"
-msgstr "japonština"
 
 msgid "Job is locked"
 msgstr "Úloha je uzamčena."
@@ -5131,9 +5097,6 @@ msgstr "Délka klíče"
 
 msgid "Key Management Protocol"
 msgstr "Protokol správy klíčů"
-
-msgid "Korean"
-msgstr "korejština"
 
 msgid "L2 Cache"
 msgstr "Mezipaměť druhé úrovně (L2 cache)"
@@ -6222,9 +6185,6 @@ msgstr ""
 "Běžně by tato předvolba neměla být nastavena  neboť fáze automatického "
 "dohadování v SMB protokolu se postará o volbu příslušného protokolu."
 
-msgid "Norwegian (Bokmal)"
-msgstr "norština (bokmal)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6374,6 +6334,9 @@ msgstr "Předvolba je chráněna"
 
 msgid "Option is unlocked"
 msgstr "Předvolba je odemčena"
+
+msgid "Optional"
+msgstr ""
 
 msgid "Optional user-friendly string of the target."
 msgstr "Nepoviný, uživateli srozumitelný název cíle."
@@ -6735,9 +6698,6 @@ msgstr ""
 "Mějte na paměti, že v popisech umístění nejsou dovoleny prázdné znaky "
 "(mezera, tabulátor, atp.)."
 
-msgid "Polish"
-msgstr "polština"
-
 msgid "Polling Time"
 msgstr "Okamžik dotazování"
 
@@ -6835,12 +6795,6 @@ msgstr "Portály"
 
 msgid "Ports"
 msgstr "Porty"
-
-msgid "Portuguese (Brazil)"
-msgstr "portugalština (Brazílie)"
-
-msgid "Portuguese (Portugal)"
-msgstr "portugalština (Portugalsko)"
 
 msgid "PostInit"
 msgstr "Po inicializaci"
@@ -7409,9 +7363,6 @@ msgstr "Úloha"
 msgid "Rollback"
 msgstr "Vrácení do předchozího stavu"
 
-msgid "Romanian"
-msgstr "rumunština"
-
 msgid "Root"
 msgstr "Správce systému (root)"
 
@@ -7498,9 +7449,6 @@ msgid ""
 msgstr ""
 "Spouštění této služby s právy správce systému (root) není doporučeno z "
 "bezpečnostních dúvodů, použijte pouze na vlastní nebezpečí!"
-
-msgid "Russian"
-msgstr "ruština"
 
 msgid "S.M.A.R.T."
 msgstr "SMART diagnostika"
@@ -7697,6 +7645,9 @@ msgstr "Zabezpečený shell"
 
 msgid "Security"
 msgstr "Zabezpečení"
+
+msgid "Security Warning"
+msgstr ""
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7952,6 +7903,9 @@ msgid ""
 msgstr ""
 "Nastavit interval mezi kontrolami disku na N sekund. Minimální hodnota je 10."
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Nastavit pouze pro čtení"
 
@@ -8130,12 +8084,6 @@ msgstr "Přeskočit prohlížecí režim"
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - Kontrolovat stav zařízení pouze pokud není ve SLEEP režimu."
 
-msgid "Slovak"
-msgstr "slovenština"
-
-msgid "Slovenian"
-msgstr "slovinština"
-
 msgid "Smart Outlet Management"
 msgstr "Správa odpojovatelných zásuvek"
 
@@ -8209,9 +8157,6 @@ msgstr ""
 "Seznam IP adres nebo sítí (v CIDR zápisu), ze kterých bude umožněn přístup k "
 "webovému správnímu rozhraní (nevyplněno znamená umožnit přístup pouze ze "
 "sítě, ze které má adresu rozhraní serveru, zapojené do místní sítě)."
-
-msgid "Spanish"
-msgstr "Španělština"
 
 msgid "Spare"
 msgstr "Pohotovostní náhrada"
@@ -8414,9 +8359,6 @@ msgstr "Využití odkládacího prostoru paměťových stránek (swap)"
 
 msgid "Swap is disabled."
 msgstr "Swap je vypnut."
-
-msgid "Swedish"
-msgstr "švédština"
 
 msgid "Switch VIP to BACKUP"
 msgstr "Přepnout VIP na ZÁLOHU"
@@ -9434,8 +9376,8 @@ msgstr ""
 "Prodleva zahájení vypínání (v sekundách). Když je napájení z rozvodné sítě "
 "obnoveno před vypršením této doby, vypínání je zrušeno."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "Je třeba, aby interval aktualizace času byl mezi 6 a 1440."
+msgid "The time update interval must be between 6 and 1440."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "Celkový počet chyb při zapisování do sektoru."
@@ -10294,9 +10236,6 @@ msgstr "úterý"
 msgid "Tuning"
 msgstr "Ladění"
 
-msgid "Turkish"
-msgstr "turečtina"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Přepnout obrazovku po N sekundách do pohotovostního režimu."
 
@@ -10431,9 +10370,6 @@ msgstr "URL adresa"
 
 msgid "UTF-8 Only"
 msgstr "Pouze UTF-8"
-
-msgid "Ukrainian"
-msgstr "ukrajinština"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11364,3 +11300,103 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
+
+#~ msgid "Dutch"
+#~ msgstr "holandština"
+
+#~ msgid "French"
+#~ msgstr "francouzština"
+
+#~ msgid "Spanish"
+#~ msgstr "Španělština"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "portugalština (Portugalsko)"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "Je třeba, aby interval aktualizace času byl mezi 6 a 1440."
+
+#~ msgid "Bulgarian"
+#~ msgstr "bulharština"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "čínština (zjednodušená)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "čínština (klasická)"
+
+#~ msgid "Czech"
+#~ msgstr "čeština"
+
+#~ msgid "Danish"
+#~ msgstr "dánština"
+
+#~ msgid "Polish"
+#~ msgstr "polština"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "portugalština (Brazílie)"
+
+#~ msgid "Turkish"
+#~ msgstr "turečtina"
+
+#~ msgid "Ukrainian"
+#~ msgstr "ukrajinština"
+
+#~ msgid "English"
+#~ msgstr "angličtina"
+
+#~ msgid "Finnish"
+#~ msgstr "finština"
+
+#~ msgid "German"
+#~ msgstr "němčina"
+
+#~ msgid "Greek"
+#~ msgstr "řečtina"
+
+#~ msgid "Hungarian"
+#~ msgstr "maďarština"
+
+#~ msgid "Italian"
+#~ msgstr "italština"
+
+#~ msgid "Japanese"
+#~ msgstr "japonština"
+
+#~ msgid "Korean"
+#~ msgstr "korejština"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "norština (bokmal)"
+
+#~ msgid "Romanian"
+#~ msgstr "rumunština"
+
+#~ msgid "Russian"
+#~ msgstr "ruština"
+
+#~ msgid "Slovak"
+#~ msgstr "slovenština"
+
+#~ msgid "Slovenian"
+#~ msgstr "slovinština"
+
+#~ msgid "Swedish"
+#~ msgstr "švédština"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "Název časového (NTP) serveru může obsahovat pouze malá písmena „a“ až „z“ "
+#~ "(bez háčků a čárek!), dále číslice 0 až 9 a pak ještě znaky „-“ (spojovník) "
+#~ "a „.“ (tečka)."
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikánština"
+
+#~ msgid "Catalan"
+#~ msgstr "Katalánština"
+
+#~ msgid "Enter the user password."
+#~ msgstr "Zadejte uživatelské heslo."

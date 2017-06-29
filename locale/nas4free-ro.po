@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: 2017-06-25 19:50+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:25+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -214,9 +214,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Etichetă VLAN 802.1Q (între 1 și 4094)."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
-"Numele serverului NTP poate conține doar caracterele a-z, 0-9, '-' şi '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -652,9 +652,6 @@ msgstr "Setări Avansate"
 msgid "Advertisement Skew"
 msgstr "Schimbare anunț"
 
-msgid "Afrikaans"
-msgstr "Africană"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 "După - Ștergerea fișierelor va fi realizată după definitivarea transferului."
@@ -1075,6 +1072,9 @@ msgstr "Dimensionare automată"
 msgid "AutoScale"
 msgstr "AutoScalare"
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr "Autoscalare"
 
@@ -1310,9 +1310,6 @@ msgstr "Navigare directoare"
 msgid "Browseable"
 msgstr "Navigabil"
 
-msgid "Bulgarian"
-msgstr "Bulgară"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr "Implicit, doar fișierele existente deja pot fi încărcate."
 
@@ -1475,9 +1472,6 @@ msgstr "Setări CARP"
 msgid "Case Sensitivity"
 msgstr "Diferențiere literă mare/mică"
 
-msgid "Catalan"
-msgstr "Catalană"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1533,12 +1527,6 @@ msgstr "Verifică lista actualizată a driverelor"
 
 msgid "Checksum"
 msgstr "Sumă de control"
-
-msgid "Chinese (Simplified)"
-msgstr "Chineză (Simplificată)"
-
-msgid "Chinese (Traditional)"
-msgstr "Chineză (Tradițională)"
 
 msgid "Choose UPS mode."
 msgstr "Selecție mod UPS."
@@ -2167,9 +2155,6 @@ msgstr "Scriptul personalizat este necesar."
 msgid "Custom script not found."
 msgstr "Scriptul utilizator nu a fost găsit."
 
-msgid "Czech"
-msgstr "Cehă"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2217,9 +2202,6 @@ msgstr "Evenimente Daemon"
 
 msgid "Daemon log"
 msgstr "Jurnal daemon"
-
-msgid "Danish"
-msgstr "Daneză"
 
 msgid "Data Integrity"
 msgstr "Integritate date"
@@ -3197,9 +3179,6 @@ msgstr ""
 "În timpul - Ștergerea fișierelor se va face incremental în timpul "
 "transferului."
 
-msgid "Dutch"
-msgstr "Olandeză"
-
 msgid "Dynamic DNS"
 msgstr "DNS Dinamic"
 
@@ -3601,6 +3580,9 @@ msgstr ""
 "Activați această opțiune dacă doriți să editați direct paginile de "
 "configurare fără a mai trece în modul editare."
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -3630,6 +3612,10 @@ msgstr "Activare mod cache la scriere."
 
 msgid "Enabled"
 msgstr "Activat"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
 
 msgid "Encrypt password"
 msgstr "Parolă criptare"
@@ -3673,9 +3659,6 @@ msgstr "Unelte criptare"
 
 msgid "Encryption algorithm"
 msgstr "Algoritm criptare"
-
-msgid "English"
-msgstr "Engleză"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "Compatibilitate extinsă cu serverul Netatalk AFP."
@@ -3769,8 +3752,14 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr "Introducere nume complet utilizator."
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
 msgstr "Introducere nume sistem sau adresă IP."
+
+msgid "Enter login name"
+msgstr ""
 
 msgid "Enter login name of the user."
 msgstr "Introducere nume de autentidicare utilizator."
@@ -3825,9 +3814,6 @@ msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Introduceți portul pentru capcane software (implicit 162)."
-
-msgid "Enter the user password."
-msgstr "Introducere parolă utilizator."
 
 msgid "Enter trap host name."
 msgstr "Introduceți numele sistemului pentru capcane software"
@@ -4131,9 +4117,6 @@ msgstr "Sistem de fișiere"
 msgid "Filter"
 msgstr "Filtru"
 
-msgid "Finnish"
-msgstr "Finlandeză"
-
 msgid "Firewall"
 msgstr "Firewall"
 
@@ -4213,9 +4196,6 @@ msgstr "Frag"
 msgid "Free"
 msgstr "Liber"
 
-msgid "French"
-msgstr "Franceză"
-
 msgid "Frequency"
 msgstr "Frecvență"
 
@@ -4289,9 +4269,6 @@ msgstr "Generare a unui nou identificator pentru pool"
 msgid "Generate password if leave empty."
 msgstr "Generare parolă pentru câmp nul."
 
-msgid "German"
-msgstr "Germană"
-
 msgid "Get Target Info"
 msgstr "Obținere Informații Destinație (target)"
 
@@ -4319,9 +4296,6 @@ msgstr "Graficul se va actualiza la fiecare %d secunde."
 
 msgid "Graphs Height"
 msgstr "Înălțime grafice"
-
-msgid "Greek"
-msgstr "Greacă"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr "Banerul de întâmpinare afișat la prima conectare a unui client."
@@ -4538,9 +4512,6 @@ msgstr ""
 "schimbat). Perioada este definită în secunde, valoarea maximă fiind de 10 "
 "zile."
 
-msgid "Hungarian"
-msgstr "Ungară"
-
 msgid "I/O Statistics"
 msgstr "Statistici I/O"
 
@@ -4723,6 +4694,9 @@ msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
 "Dacă această opțiune este dezactivată, sistemul de fișiere nu poate fi "
 "montat."
+
+msgid "Ignore Hosts Allow"
+msgstr ""
 
 msgid "Import"
 msgstr "Import"
@@ -5059,9 +5033,6 @@ msgstr ""
 "implicite NAS4Free pentru accesarea Interfeței Grafice. <br>Introduceți aici "
 "numele de utilizator."
 
-msgid "Italian"
-msgstr "Italiană"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -5079,9 +5050,6 @@ msgstr "Ian"
 
 msgid "January"
 msgstr "Ianuarie"
-
-msgid "Japanese"
-msgstr "Japoneză"
 
 msgid "Job is locked"
 msgstr "Activitate blocată"
@@ -5116,9 +5084,6 @@ msgstr "Lungime cheie"
 
 msgid "Key Management Protocol"
 msgstr "Protocol Management Chei"
-
-msgid "Korean"
-msgstr "Koreană"
 
 msgid "L2 Cache"
 msgstr "CAche L2"
@@ -6181,9 +6146,6 @@ msgstr ""
 "În mod normal această opțiune nu trebuie setată având în vedere ca în faza "
 "de negociere protocolul SMB o stabilește în mod automat."
 
-msgid "Norwegian (Bokmal)"
-msgstr "Norvegiană (Bokmal)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6329,6 +6291,9 @@ msgstr "Opțiunea este protejată"
 
 msgid "Option is unlocked"
 msgstr "Opțiunea este deblocată"
+
+msgid "Optional"
+msgstr ""
 
 msgid "Optional user-friendly string of the target."
 msgstr "Text opțional pentru destinație."
@@ -6693,9 +6658,6 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "De notat că spațiile folosite în calea către fișiere nu sînt permise."
 
-msgid "Polish"
-msgstr "Poloneză"
-
 msgid "Polling Time"
 msgstr "Timp verificare"
 
@@ -6792,12 +6754,6 @@ msgstr "Portaluri"
 
 msgid "Ports"
 msgstr "Porturi"
-
-msgid "Portuguese (Brazil)"
-msgstr "Portugheză (Brazilia)"
-
-msgid "Portuguese (Portugal)"
-msgstr "Portugheză (Portugalia)"
 
 msgid "PostInit"
 msgstr "PostInițializare"
@@ -7362,9 +7318,6 @@ msgstr "Rol"
 msgid "Rollback"
 msgstr "Revenire"
 
-msgid "Romanian"
-msgstr "Română"
-
 msgid "Root"
 msgstr "Rădăcină"
 
@@ -7449,9 +7402,6 @@ msgid ""
 msgstr ""
 "Din motive de securitate rularea acestui serviciu ca root nu este "
 "recomandată, puteți să o faceți pe riscul dumneavoastră!"
-
-msgid "Russian"
-msgstr "Rusă"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7647,6 +7597,9 @@ msgstr "Shell Securizat"
 
 msgid "Security"
 msgstr "Securitate"
+
+msgid "Security Warning"
+msgstr ""
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7902,6 +7855,9 @@ msgstr ""
 "Setare interval între două verificări a discurilor la N secunde. Valoarea "
 "minimă acceptată: 10."
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Setare doar citire."
 
@@ -8083,12 +8039,6 @@ msgstr "Anulare mod vizualizare"
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - Verificare dispozitiv doar dacă nu este deja în modul Sleep."
 
-msgid "Slovak"
-msgstr "Slovacă"
-
-msgid "Slovenian"
-msgstr "Slovenă"
-
 msgid "Smart Outlet Management"
 msgstr "Management Smart Outlet"
 
@@ -8163,9 +8113,6 @@ msgstr ""
 "care au dreptul de a accesa consola de configurare a sistemului.<br>Dacă "
 "lăsați câmpul necompletat (fără nicio adresă) se va permite accesul de la "
 "orice calculator din rețeaua la care este conectat sistemul."
-
-msgid "Spanish"
-msgstr "Spaniolă"
 
 msgid "Spare"
 msgstr "Rezervă"
@@ -8370,9 +8317,6 @@ msgstr "Utilizare swap"
 
 msgid "Swap is disabled."
 msgstr "Fișierul swap este dezactivat."
-
-msgid "Swedish"
-msgstr "Suedeză"
 
 msgid "Switch VIP to BACKUP"
 msgstr "Comutare VIP la BACKUP"
@@ -9357,8 +9301,8 @@ msgstr ""
 "revine înainte de expirarea timpului specificat procesul de oprire se "
 "suspendă."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "Timpul pentru actualizare trebuie să fie între 6 și 1440."
+msgid "The time update interval must be between 6 and 1440."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "Numărul total de erori apărute la scrierea unui sector."
@@ -10206,9 +10150,6 @@ msgstr "Marți"
 msgid "Tuning"
 msgstr "Optimizări"
 
-msgid "Turkish"
-msgstr "Turcă"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Intrare monitor în modul StandBy după N secunde."
 
@@ -10343,9 +10284,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr "Doar UTF-8"
-
-msgid "Ukrainian"
-msgstr "Ucraineană"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11263,3 +11201,101 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgară"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Chineză (Simplificată)"
+
+#~ msgid "Czech"
+#~ msgstr "Cehă"
+
+#~ msgid "Danish"
+#~ msgstr "Daneză"
+
+#~ msgid "Dutch"
+#~ msgstr "Olandeză"
+
+#~ msgid "English"
+#~ msgstr "Engleză"
+
+#~ msgid "French"
+#~ msgstr "Franceză"
+
+#~ msgid "German"
+#~ msgstr "Germană"
+
+#~ msgid "Greek"
+#~ msgstr "Greacă"
+
+#~ msgid "Hungarian"
+#~ msgstr "Ungară"
+
+#~ msgid "Italian"
+#~ msgstr "Italiană"
+
+#~ msgid "Japanese"
+#~ msgstr "Japoneză"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "Norvegiană (Bokmal)"
+
+#~ msgid "Polish"
+#~ msgstr "Poloneză"
+
+#~ msgid "Romanian"
+#~ msgstr "Română"
+
+#~ msgid "Russian"
+#~ msgstr "Rusă"
+
+#~ msgid "Spanish"
+#~ msgstr "Spaniolă"
+
+#~ msgid "Swedish"
+#~ msgstr "Suedeză"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovenă"
+
+#~ msgid "Korean"
+#~ msgstr "Koreană"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "Portugheză (Brazilia)"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "Portugheză (Portugalia)"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovacă"
+
+#~ msgid "Finnish"
+#~ msgstr "Finlandeză"
+
+#~ msgid "Turkish"
+#~ msgstr "Turcă"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "Numele serverului NTP poate conține doar caracterele a-z, 0-9, '-' şi '.'."
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Chineză (Tradițională)"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "Timpul pentru actualizare trebuie să fie între 6 și 1440."
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ucraineană"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Africană"
+
+#~ msgid "Catalan"
+#~ msgstr "Catalană"
+
+#~ msgid "Enter the user password."
+#~ msgstr "Introducere parolă utilizator."

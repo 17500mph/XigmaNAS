@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: 2017-01-29 12:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:14+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:24+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 
 msgid " interfaces:"
 msgstr " koppelvlakke:"
@@ -215,10 +215,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiket (tussen 1 en 4094)."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
-"'n NTP tyd bediener se naam mag slegs bestaan uit die karakters a-z, 0-9, '-"
-"' en '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -650,9 +649,6 @@ msgstr "Gevorderde instellings"
 msgid "Advertisement Skew"
 msgstr ""
 
-msgid "Afrikaans"
-msgstr "Afrikaans"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 "Na - Lêer-uitvee operasies sal eers plaasvind nadat die lêer/s oorgelaai is."
@@ -1070,6 +1066,9 @@ msgstr "Outomatiese grootte"
 msgid "AutoScale"
 msgstr "Outomatiese Skalering"
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr "Outomatiese skalering"
 
@@ -1305,9 +1304,6 @@ msgstr "Lees deur Lêergids"
 msgid "Browseable"
 msgstr "Deurleesbaar"
 
-msgid "Bulgarian"
-msgstr "Bulgaars"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr "As standaard kan net  lêers wat reeds bestaan opgelaai word."
 
@@ -1470,9 +1466,6 @@ msgstr "Carp instellings"
 msgid "Case Sensitivity"
 msgstr "Kas Sensitiviteit"
 
-msgid "Catalan"
-msgstr "Katalaans"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1528,12 +1521,6 @@ msgstr "Kyk na die lys van beskikbare drywers"
 
 msgid "Checksum"
 msgstr ""
-
-msgid "Chinese (Simplified)"
-msgstr "Sjinees (Vereenvoudig)"
-
-msgid "Chinese (Traditional)"
-msgstr "Sjinees (Tradisioneel)"
 
 msgid "Choose UPS mode."
 msgstr "Kies UPS mode."
@@ -2131,9 +2118,6 @@ msgstr "Doelgemaakte skrif word benodig"
 msgid "Custom script not found."
 msgstr ""
 
-msgid "Czech"
-msgstr "Tsjeggies"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2181,9 +2165,6 @@ msgstr "Agtergrondproses gebeurtenisse"
 
 msgid "Daemon log"
 msgstr "Agtergrondproses aanmeldings"
-
-msgid "Danish"
-msgstr "Deens"
 
 msgid "Data Integrity"
 msgstr ""
@@ -3166,9 +3147,6 @@ msgstr ""
 "Gedurende - Lêer sal stukkie-vir-stukkie uitgevee word soos wat die oordrag "
 "voortgaan."
 
-msgid "Dutch"
-msgstr "Nederlands"
-
 msgid "Dynamic DNS"
 msgstr "Dinamiesie DNS"
 
@@ -3571,6 +3549,9 @@ msgid ""
 "the need to switch to edit mode."
 msgstr ""
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -3598,6 +3579,10 @@ msgstr "Ontsper skryf kas geheue modus."
 
 msgid "Enabled"
 msgstr "Geaktiveer"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
 
 msgid "Encrypt password"
 msgstr "Kodeer wagwoord"
@@ -3641,9 +3626,6 @@ msgstr "Kodering Gereedskap"
 
 msgid "Encryption algorithm"
 msgstr "Kodering algoritme"
-
-msgid "English"
-msgstr "Engels"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
@@ -3730,7 +3712,13 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr ""
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name"
 msgstr ""
 
 msgid "Enter login name of the user."
@@ -3785,9 +3773,6 @@ msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Sleutel die poort waarheen lokvalle gestuur word (standaard 162) in."
-
-msgid "Enter the user password."
-msgstr ""
 
 msgid "Enter trap host name."
 msgstr "Insleutel val / \"trap\" gasheer naam"
@@ -4089,9 +4074,6 @@ msgstr "Lêersisteem"
 msgid "Filter"
 msgstr "Filter"
 
-msgid "Finnish"
-msgstr "Fins"
-
 msgid "Firewall"
 msgstr "Brandmuur"
 
@@ -4171,9 +4153,6 @@ msgstr "Frag"
 msgid "Free"
 msgstr "Beskikbaar"
 
-msgid "French"
-msgstr "Fraans"
-
 msgid "Frequency"
 msgstr "Frekwensie"
 
@@ -4246,9 +4225,6 @@ msgstr "Genereer 'n nuwe unieke identifiseerder vir die poel"
 msgid "Generate password if leave empty."
 msgstr "Genereer wagwoord as veld skoon gelos work"
 
-msgid "German"
-msgstr "Duits"
-
 msgid "Get Target Info"
 msgstr "Kry Teiken Inligting"
 
@@ -4276,9 +4252,6 @@ msgstr ""
 
 msgid "Graphs Height"
 msgstr "Grafiek Hoogte"
-
-msgid "Greek"
-msgstr "Grieks"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
@@ -4492,9 +4465,6 @@ msgstr ""
 "Hoe gereeld die IP opgedateer word selfs al is dit nie verander nie, Die "
 "periode word in sekondes gemeet (maks. is 10 dae)."
 
-msgid "Hungarian"
-msgstr "Hongaars"
-
 msgid "I/O Statistics"
 msgstr "I/O Statistieke"
 
@@ -4676,6 +4646,9 @@ msgstr ""
 "lêerstelsel"
 
 msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
+msgid "Ignore Hosts Allow"
 msgstr ""
 
 msgid "Import"
@@ -4996,9 +4969,6 @@ msgstr ""
 "Dit word aanbeveel dat jy die standaarde gebruikernaam en wagwoord vir die "
 "WebGUI verander, sleutel die gebruikernaam hier in."
 
-msgid "Italian"
-msgstr "Italiaans"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -5016,9 +4986,6 @@ msgstr "Jan"
 
 msgid "January"
 msgstr "Januarie"
-
-msgid "Japanese"
-msgstr "Japannees"
 
 msgid "Job is locked"
 msgstr "Werkstuk is gesluit"
@@ -5053,9 +5020,6 @@ msgstr ""
 
 msgid "Key Management Protocol"
 msgstr "Sleutel Bestuur Protokol"
-
-msgid "Korean"
-msgstr "Koreaans"
 
 msgid "L2 Cache"
 msgstr "L2 kasgeheue"
@@ -6102,9 +6066,6 @@ msgstr ""
 "onderhandeling fase wanneer die SMB protokool besluit oor die gewenste "
 "protokool"
 
-msgid "Norwegian (Bokmal)"
-msgstr "Noors (Bokmål)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6248,6 +6209,9 @@ msgid "Option is protected"
 msgstr ""
 
 msgid "Option is unlocked"
+msgstr ""
+
+msgid "Optional"
 msgstr ""
 
 msgid "Optional user-friendly string of the target."
@@ -6613,9 +6577,6 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Neem asseblief kennis dat oop spasies nie in pad name toegalaat word nie."
 
-msgid "Polish"
-msgstr "Pools"
-
 msgid "Polling Time"
 msgstr "Polsing Tyd"
 
@@ -6710,12 +6671,6 @@ msgstr "Portale"
 
 msgid "Ports"
 msgstr "Poorte"
-
-msgid "Portuguese (Brazil)"
-msgstr "Portugees (Brasilië)"
-
-msgid "Portuguese (Portugal)"
-msgstr "Portugees (Portugal)"
 
 msgid "PostInit"
 msgstr "PostInit"
@@ -7275,9 +7230,6 @@ msgstr "Rol"
 msgid "Rollback"
 msgstr "Rol terug"
 
-msgid "Romanian"
-msgstr "Roemeens"
-
 msgid "Root"
 msgstr "Wortel"
 
@@ -7361,9 +7313,6 @@ msgid ""
 "Running this service as root is not recommended for security reasons, use at "
 "your own risk!"
 msgstr ""
-
-msgid "Russian"
-msgstr "Russies"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7555,6 +7504,9 @@ msgstr "Secure Shell"
 
 msgid "Security"
 msgstr "Sekuriteit"
+
+msgid "Security Warning"
+msgstr ""
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7803,6 +7755,9 @@ msgid ""
 "10."
 msgstr ""
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -7983,12 +7938,6 @@ msgstr ""
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Slaap - bedwing die toestel tensy dit in SLAAP mode is."
 
-msgid "Slovak"
-msgstr "Slowaaks"
-
-msgid "Slovenian"
-msgstr "Sloweens"
-
 msgid "Smart Outlet Management"
 msgstr "Slim Afsetpunt Bestuur"
 
@@ -8062,9 +8011,6 @@ msgstr ""
 "Spasie afgebaken stel die IP of CIDS notering wat toestemming gee tot die "
 "WebGUI. (as dit leeg gelaat word dan is dit dieselfde as die netwerk LAN "
 "koppelvlak"
-
-msgid "Spanish"
-msgstr "Spaans"
 
 msgid "Spare"
 msgstr "Spaar"
@@ -8271,9 +8217,6 @@ msgstr "Uitruil Gebruik"
 
 msgid "Swap is disabled."
 msgstr ""
-
-msgid "Swedish"
-msgstr "Sweeds"
 
 msgid "Switch VIP to BACKUP"
 msgstr "Skakel VIP oor na RUGSTEUN"
@@ -9265,8 +9208,8 @@ msgstr ""
 "Die tyd in sekondes totdat afskakel begin. As die UPS dalk weer aanskakel "
 "voordat hierdie tyd verlopp het, word die afskakel gekanseleer."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "Die tyd opdateer interval moet tussen 6 en 1440 wees."
+msgid "The time update interval must be between 6 and 1440."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "Die totale hoeveelheid foute wanneer 'n sektor geskryf word."
@@ -10041,9 +9984,6 @@ msgstr "Dinsdag"
 msgid "Tuning"
 msgstr "Instemming"
 
-msgid "Turkish"
-msgstr "Turks"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Skakel die monitor oor na bystaan na N sekondes."
 
@@ -10176,9 +10116,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr ""
-
-msgid "Ukrainian"
-msgstr "Oekraïens"
 
 msgid "Umask"
 msgstr ""
@@ -11054,3 +10991,99 @@ msgstr "na"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgaars"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Sjinees (Tradisioneel)"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Sjinees (Vereenvoudig)"
+
+#~ msgid "Danish"
+#~ msgstr "Deens"
+
+#~ msgid "Dutch"
+#~ msgstr "Nederlands"
+
+#~ msgid "English"
+#~ msgstr "Engels"
+
+#~ msgid "Finnish"
+#~ msgstr "Fins"
+
+#~ msgid "French"
+#~ msgstr "Fraans"
+
+#~ msgid "German"
+#~ msgstr "Duits"
+
+#~ msgid "Greek"
+#~ msgstr "Grieks"
+
+#~ msgid "Hungarian"
+#~ msgstr "Hongaars"
+
+#~ msgid "Italian"
+#~ msgstr "Italiaans"
+
+#~ msgid "Japanese"
+#~ msgstr "Japannees"
+
+#~ msgid "Korean"
+#~ msgstr "Koreaans"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "Noors (Bokmål)"
+
+#~ msgid "Polish"
+#~ msgstr "Pools"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "Portugees (Brasilië)"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "Portugees (Portugal)"
+
+#~ msgid "Romanian"
+#~ msgstr "Roemeens"
+
+#~ msgid "Russian"
+#~ msgstr "Russies"
+
+#~ msgid "Slovenian"
+#~ msgstr "Sloweens"
+
+#~ msgid "Slovak"
+#~ msgstr "Slowaaks"
+
+#~ msgid "Spanish"
+#~ msgstr "Spaans"
+
+#~ msgid "Swedish"
+#~ msgstr "Sweeds"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "Die tyd opdateer interval moet tussen 6 en 1440 wees."
+
+#~ msgid "Turkish"
+#~ msgstr "Turks"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Oekraïens"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "'n NTP tyd bediener se naam mag slegs bestaan uit die karakters a-z, 0-9, '-"
+#~ "' en '.'."
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikaans"
+
+#~ msgid "Catalan"
+#~ msgstr "Katalaans"
+
+#~ msgid "Czech"
+#~ msgstr "Tsjeggies"

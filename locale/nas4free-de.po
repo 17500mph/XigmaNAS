@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: 2017-06-14 13:58+0000\n"
 "Last-Translator: Mathias Bachmann <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:26+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -223,10 +223,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN-Markierung (zwischen 1 und 4094)."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
-"Ein NTP-Zeitservername darf nur aus den Zeichen  a-z, 0-9, '-' und '.' "
-"bestehen."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -669,9 +668,6 @@ msgstr "Erweiterte Einstellungen"
 msgid "Advertisement Skew"
 msgstr "Werbung Skew"
 
-msgid "Afrikaans"
-msgstr "Afrikaans"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 "Nachfolgede Befehle zum Löschen der Datei erfolgen erst nachdem der "
@@ -1104,6 +1100,9 @@ msgstr "Automatisches Größe"
 msgid "AutoScale"
 msgstr "Autom. Skalierung"
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr "Automatische Skalierung"
 
@@ -1342,9 +1341,6 @@ msgstr "Verzeichnisliste anzeigen"
 msgid "Browseable"
 msgstr "Sichtbar"
 
-msgid "Bulgarian"
-msgstr "Bulgarisch"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
 "Standardmäßig können nur bereits existierende Dateien hochgeladen werden."
@@ -1512,9 +1508,6 @@ msgstr "Carp Einstellungen"
 msgid "Case Sensitivity"
 msgstr "Groß-/Kleinschreibung beachten"
 
-msgid "Catalan"
-msgstr "Katalanisch"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1569,12 +1562,6 @@ msgstr "Prüfen sie die Liste der verfügbaren Treiber"
 
 msgid "Checksum"
 msgstr ""
-
-msgid "Chinese (Simplified)"
-msgstr "Chinesisch (Vereinfacht)"
-
-msgid "Chinese (Traditional)"
-msgstr "Chinesisch (Traditionell)"
 
 msgid "Choose UPS mode."
 msgstr "Wähle UPS modus."
@@ -2147,9 +2134,6 @@ msgstr "Ein Befehlsscript des Anwenders ist erforderlich"
 msgid "Custom script not found."
 msgstr ""
 
-msgid "Czech"
-msgstr "Tschechisch"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2197,9 +2181,6 @@ msgstr "Dienstereignisse"
 
 msgid "Daemon log"
 msgstr "Dienstprotokoll"
-
-msgid "Danish"
-msgstr "Dänisch"
 
 msgid "Data Integrity"
 msgstr "Datenintegrität"
@@ -3192,9 +3173,6 @@ msgstr ""
 "Während -  File-Löschungen werden während des Transfers inkrementell "
 "erledigt."
 
-msgid "Dutch"
-msgstr "Niederländisch"
-
 msgid "Dynamic DNS"
 msgstr "Dynamic DNS"
 
@@ -3597,6 +3575,9 @@ msgstr ""
 "Aktiviere diese Option, wenn du ohne Zwischenschritt direkt auf die "
 "Konfigurationseinstellungen zugreifen möchtest."
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -3626,6 +3607,10 @@ msgstr "Schreibpuffermodus aktivieren."
 
 msgid "Enabled"
 msgstr "Aktiviert"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
 
 msgid "Encrypt password"
 msgstr "Passwort verschlüsseln"
@@ -3669,9 +3654,6 @@ msgstr "Verschlüsselungswerkzeuge"
 
 msgid "Encryption algorithm"
 msgstr "Verschlüsselungsalgorithmus"
-
-msgid "English"
-msgstr "Englisch"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "erhöhte Kompatibilitätsmodus für Netatalk AFP"
@@ -3764,8 +3746,14 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr "Bitte den kompletten Namen des Benutzers eingeben."
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
 msgstr "Bitte Hostname oder IP-Adresse eingeben."
+
+msgid "Enter login name"
+msgstr ""
 
 msgid "Enter login name of the user."
 msgstr "Bitte Benutzernamen eingeben."
@@ -3822,9 +3810,6 @@ msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 "Geben Sie den Port an, an den die Traps gesendet werden sollen (Standard "
 "162)."
-
-msgid "Enter the user password."
-msgstr "Bitte Benutzerpasswort eingeben."
 
 msgid "Enter trap host name."
 msgstr "Geben Sie den Trap Hostnamen an."
@@ -4122,9 +4107,6 @@ msgstr "Dateisystem"
 msgid "Filter"
 msgstr "Filter"
 
-msgid "Finnish"
-msgstr "Finnisch"
-
 msgid "Firewall"
 msgstr "Firewall"
 
@@ -4206,9 +4188,6 @@ msgstr "Fragment"
 msgid "Free"
 msgstr "Frei"
 
-msgid "French"
-msgstr "Französisch"
-
 msgid "Frequency"
 msgstr "Frequenz"
 
@@ -4281,9 +4260,6 @@ msgstr "Einen neuen eindeutige Pool-Identifikator erzeugen"
 msgid "Generate password if leave empty."
 msgstr "Passwort wird automatisch erzeugt, wenn das Feld leer bleibt."
 
-msgid "German"
-msgstr "Deutsch"
-
 msgid "Get Target Info"
 msgstr "Zielinformation festlegen"
 
@@ -4312,9 +4288,6 @@ msgstr "Graph aktualisiert sich alle %d Sekunden."
 
 msgid "Graphs Height"
 msgstr "Diagramm Höhe"
-
-msgid "Greek"
-msgstr "Griechisch"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
@@ -4527,9 +4500,6 @@ msgstr ""
 "Wie oft die IP aktualisiert wird, selbst wenn sie sich nicht verändert hat. "
 "Dauer in Sekunden (max. 10 Tage)."
 
-msgid "Hungarian"
-msgstr "Ungarisch"
-
 msgid "I/O Statistics"
 msgstr "Copy text \t I/O Statistik"
 
@@ -4711,6 +4681,9 @@ msgstr ""
 "Verzeichnis angezeigt."
 
 msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
+msgid "Ignore Hosts Allow"
 msgstr ""
 
 msgid "Import"
@@ -5035,9 +5008,6 @@ msgstr ""
 "Es wird dringend empfohlen zur Sicherheit den Standard-Usernamen und das "
 "Standard-Passwort zu ändern und individuell neu festzulegen"
 
-msgid "Italian"
-msgstr "Italienisch"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -5055,9 +5025,6 @@ msgstr "Jan."
 
 msgid "January"
 msgstr "Januar"
-
-msgid "Japanese"
-msgstr "Japanisch"
 
 msgid "Job is locked"
 msgstr "Auftrag ist gesperrt"
@@ -5092,9 +5059,6 @@ msgstr "Schlüssellänge"
 
 msgid "Key Management Protocol"
 msgstr "Key Management Protocol"
-
-msgid "Korean"
-msgstr "Koreanisch"
 
 msgid "L2 Cache"
 msgstr "L2 Cache"
@@ -6167,9 +6131,6 @@ msgstr ""
 "automatische Aushandlungsphase im SMB-Protokoll sich um die geeigtete Wahl "
 "des Protokolls kümmert."
 
-msgid "Norwegian (Bokmal)"
-msgstr "Norwegisch (Bokmal)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6316,6 +6277,9 @@ msgstr "Möglichkeit ist geschützt"
 
 msgid "Option is unlocked"
 msgstr "Option ist freigeschaltet"
+
+msgid "Optional"
+msgstr ""
 
 msgid "Optional user-friendly string of the target."
 msgstr "Optionaler benutzerfreundlicher String für das Ziel."
@@ -6678,9 +6642,6 @@ msgstr "Bitte den Pfad für das Datenbankverzeichniss angeben."
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Bitte beachten, dass Leerstellen in Pfadnamen nicht erlaubt sind."
 
-msgid "Polish"
-msgstr "Polnisch"
-
 msgid "Polling Time"
 msgstr "Abfrage Zeit"
 
@@ -6777,12 +6738,6 @@ msgstr "Portale"
 
 msgid "Ports"
 msgstr "Ports"
-
-msgid "Portuguese (Brazil)"
-msgstr "Portugiesisch (Brasilien)"
-
-msgid "Portuguese (Portugal)"
-msgstr "Portugiesisch (Portugal)"
 
 msgid "PostInit"
 msgstr "PostInit"
@@ -7341,9 +7296,6 @@ msgstr "Rolle"
 msgid "Rollback"
 msgstr "Zurückrollen"
 
-msgid "Romanian"
-msgstr "Rumänisch"
-
 msgid "Root"
 msgstr "Basisordner"
 
@@ -7428,9 +7380,6 @@ msgid ""
 msgstr ""
 "Aus Sicherheitsgründen wird nicht empfohlen diesen Dienst als 'root' laufen "
 "zu lassen. Nutzung auf eigene Gefahr!"
-
-msgid "Russian"
-msgstr "Russisch"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7626,6 +7575,9 @@ msgstr "Secure Shell"
 
 msgid "Security"
 msgstr "Sicherheit"
+
+msgid "Security Warning"
+msgstr ""
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7885,6 +7837,9 @@ msgstr ""
 "Setze das Zeitintervall zwischen den Laufwerkschecks zu N Sekunden. Der "
 "kleinste erlaubte Wert ist 10."
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Nur Lesen"
 
@@ -8064,12 +8019,6 @@ msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
 "Sleep - Überprüfe das Gerät es sei denn es befindet sich im SLEEP Modus."
 
-msgid "Slovak"
-msgstr "Slowakisch"
-
-msgid "Slovenian"
-msgstr "Slowenisch"
-
 msgid "Smart Outlet Management"
 msgstr "Smart Outlet Verwaltung"
 
@@ -8143,9 +8092,6 @@ msgstr ""
 "Durch Leerzeichen getrennter Satz von IP Adressen oder CIDR Notationen, "
 "denen der Zugriff auf die Weboberfläche erlaubt wird (leer bedeutet das "
 "Netzwerk der LAN Schnittstelle)."
-
-msgid "Spanish"
-msgstr "Spanisch"
 
 msgid "Spare"
 msgstr "Reserve"
@@ -8347,9 +8293,6 @@ msgstr "Swap Auslastung"
 
 msgid "Swap is disabled."
 msgstr "Swap ist abgeschaltet."
-
-msgid "Swedish"
-msgstr "Schwedisch"
 
 msgid "Switch VIP to BACKUP"
 msgstr "VIP in BACKUP ändern"
@@ -9364,8 +9307,8 @@ msgstr ""
 "Stromversorgung wieder anschaltet, bevor die Zeit abgelaufen ist, dann wird "
 "das Herunterfahren beendet."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "Das Zeitupdateintervall mus zwischen 6 und 1440 liegen."
+msgid "The time update interval must be between 6 and 1440."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "gesamte Fehlerzahl während des Schreibens eines Sektors."
@@ -10235,9 +10178,6 @@ msgstr "Dienstag"
 msgid "Tuning"
 msgstr "Feineinstellungen"
 
-msgid "Turkish"
-msgstr "Türkisch"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Schaltet den Monitor nach N Sekunden in den Standby-Modus."
 
@@ -10374,9 +10314,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr ""
-
-msgid "Ukrainian"
-msgstr "Ukrainisch"
 
 msgid "Umask"
 msgstr "Unmaskieren (Unix)"
@@ -11293,3 +11230,102 @@ msgstr "bis"
 
 msgid "umount"
 msgstr "aushängen"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "Ein NTP-Zeitservername darf nur aus den Zeichen  a-z, 0-9, '-' und '.' "
+#~ "bestehen."
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgarisch"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Chinesisch (Vereinfacht)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Chinesisch (Traditionell)"
+
+#~ msgid "Czech"
+#~ msgstr "Tschechisch"
+
+#~ msgid "Danish"
+#~ msgstr "Dänisch"
+
+#~ msgid "Dutch"
+#~ msgstr "Niederländisch"
+
+#~ msgid "English"
+#~ msgstr "Englisch"
+
+#~ msgid "French"
+#~ msgstr "Französisch"
+
+#~ msgid "German"
+#~ msgstr "Deutsch"
+
+#~ msgid "Greek"
+#~ msgstr "Griechisch"
+
+#~ msgid "Hungarian"
+#~ msgstr "Ungarisch"
+
+#~ msgid "Italian"
+#~ msgstr "Italienisch"
+
+#~ msgid "Japanese"
+#~ msgstr "Japanisch"
+
+#~ msgid "Korean"
+#~ msgstr "Koreanisch"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "Norwegisch (Bokmal)"
+
+#~ msgid "Polish"
+#~ msgstr "Polnisch"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "Portugiesisch (Brasilien)"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "Portugiesisch (Portugal)"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumänisch"
+
+#~ msgid "Russian"
+#~ msgstr "Russisch"
+
+#~ msgid "Slovak"
+#~ msgstr "Slowakisch"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slowenisch"
+
+#~ msgid "Spanish"
+#~ msgstr "Spanisch"
+
+#~ msgid "Swedish"
+#~ msgstr "Schwedisch"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "Das Zeitupdateintervall mus zwischen 6 und 1440 liegen."
+
+#~ msgid "Finnish"
+#~ msgstr "Finnisch"
+
+#~ msgid "Turkish"
+#~ msgstr "Türkisch"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainisch"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikaans"
+
+#~ msgid "Catalan"
+#~ msgstr "Katalanisch"
+
+#~ msgid "Enter the user password."
+#~ msgstr "Bitte Benutzerpasswort eingeben."
