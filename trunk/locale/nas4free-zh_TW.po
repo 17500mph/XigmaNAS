@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
-"PO-Revision-Date: 2017-06-17 00:49+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
+"PO-Revision-Date: 2017-06-29 01:33+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:25+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -194,8 +194,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 標籤 （介於1和4094之間）。"
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
-msgstr "NTP 伺服器名稱只可以含有 a-z，0-9，'-' 及 '.' 的字元。"
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
+msgstr "NTP時間服務器名稱只能包含以下字符：a-z，0-9，' - '和'.'。"
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -605,9 +606,6 @@ msgstr "高級設置"
 msgid "Advertisement Skew"
 msgstr "廣播偏斜"
 
-msgid "Afrikaans"
-msgstr "南非荷蘭語(Afrikaans)"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr "在傳輸完成後將 -File-deletions"
 
@@ -981,6 +979,9 @@ msgstr "自動大小"
 msgid "AutoScale"
 msgstr "自動擴展"
 
+msgid "Autodetect"
+msgstr "自動偵測"
+
 msgid "Autoscale"
 msgstr "自動縮放"
 
@@ -1202,9 +1203,6 @@ msgstr "流覽目錄"
 msgid "Browseable"
 msgstr "可流覽"
 
-msgid "Bulgarian"
-msgstr "保加利亞文"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr "默認是只有已經存在的檔可以上傳。"
 
@@ -1364,9 +1362,6 @@ msgstr "CARP設置"
 msgid "Case Sensitivity"
 msgstr "大小寫敏感"
 
-msgid "Catalan"
-msgstr "加泰羅尼亞語"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1416,12 +1411,6 @@ msgstr "檢查可用驅動程式列表"
 
 msgid "Checksum"
 msgstr "校驗"
-
-msgid "Chinese (Simplified)"
-msgstr "簡體中文"
-
-msgid "Chinese (Traditional)"
-msgstr "繁體中文"
 
 msgid "Choose UPS mode."
 msgstr "請選擇UPS 模式。"
@@ -1965,9 +1954,6 @@ msgstr "必需有自定義腳本。"
 msgid "Custom script not found."
 msgstr "自定義腳本未找到"
 
-msgid "Czech"
-msgstr "捷克文"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2015,9 +2001,6 @@ msgstr "守護進程事件"
 
 msgid "Daemon log"
 msgstr "守護進程記錄"
-
-msgid "Danish"
-msgstr "丹麥文"
 
 msgid "Data Integrity"
 msgstr "數據的完整性"
@@ -2958,9 +2941,6 @@ msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
 msgstr "期間-檔-刪除將隨著傳輸發生逐步完成。"
 
-msgid "Dutch"
-msgstr "荷蘭文"
-
 msgid "Dynamic DNS"
 msgstr "動態 DNS"
 
@@ -3351,6 +3331,9 @@ msgid ""
 "the need to switch to edit mode."
 msgstr "如果要直接編輯配置頁面而不需要切換到編輯模式，請啟用此選項。"
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr "啟用此選項以允許任何IP地址訪問WebGUI。"
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "啟用此選項可將頁眉的高度減小到最小。"
@@ -3378,6 +3361,10 @@ msgstr "開啟寫入緩存模式。"
 
 msgid "Enabled"
 msgstr "已啟用"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr "啟用此選項可能會使系統面臨額外的安全隱患！"
 
 msgid "Encrypt password"
 msgstr "加密密碼"
@@ -3421,9 +3408,6 @@ msgstr "加密工具"
 
 msgid "Encryption algorithm"
 msgstr "加密演算法"
-
-msgid "English"
-msgstr "英文"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "增強與Netatalk AFP伺服器的相容性。"
@@ -3504,8 +3488,14 @@ msgstr "請輸入系統時間（格式為 MM/DD/YYYY hh:mm），或點選圖示�
 msgid "Enter full name of the user."
 msgstr "輸入用戶的全名。"
 
+msgid "Enter full user name"
+msgstr "輸入完整的用戶名"
+
 msgid "Enter hostname or IP address."
 msgstr "輸入主機名或IP地址"
+
+msgid "Enter login name"
+msgstr "輸入登錄名"
 
 msgid "Enter login name of the user."
 msgstr "輸入用戶的登錄名。"
@@ -3548,9 +3538,6 @@ msgstr "輸入主目錄的路徑。 這個目錄將存儲統計數據，並每5�
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "請輸入 Traps 傳輸端口（默認為 162）"
-
-msgid "Enter the user password."
-msgstr "輸入用戶密碼"
 
 msgid "Enter trap host name."
 msgstr "請輸入 Trap 主機名。"
@@ -3840,9 +3827,6 @@ msgstr "檔系統"
 msgid "Filter"
 msgstr "過濾"
 
-msgid "Finnish"
-msgstr "芬蘭文"
-
 msgid "Firewall"
 msgstr "防火牆"
 
@@ -3920,9 +3904,6 @@ msgstr "Frag"
 msgid "Free"
 msgstr "可用空間"
 
-msgid "French"
-msgstr "法文"
-
 msgid "Frequency"
 msgstr "頻率"
 
@@ -3995,9 +3976,6 @@ msgstr "為池生成新的唯一識別字"
 msgid "Generate password if leave empty."
 msgstr "如果保留為空白的話，自動生成密碼。"
 
-msgid "German"
-msgstr "德文"
-
 msgid "Get Target Info"
 msgstr "獲取目標資訊"
 
@@ -4025,9 +4003,6 @@ msgstr "圖表每隔%d秒更新一次"
 
 msgid "Graphs Height"
 msgstr "圖表高度"
-
-msgid "Greek"
-msgstr "希臘文"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr "第一個連接進來時向客戶端顯示問候橫幅。"
@@ -4229,9 +4204,6 @@ msgid ""
 "seconds (max. is 10 days)."
 msgstr "多久強制更新一次 IP 資訊。以秒為單位（最多 10 天）"
 
-msgid "Hungarian"
-msgstr "匈牙利語(Hungarian)"
-
 msgid "I/O Statistics"
 msgstr "I/O 統計"
 
@@ -4385,6 +4357,9 @@ msgstr "如果啟用此屬性，.zfs 目錄裏會顯示快照。"
 
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr "如果此屬性設置為關閉，則無法掛載文件系統。"
+
+msgid "Ignore Hosts Allow"
+msgstr "忽略主機允許"
 
 msgid "Import"
 msgstr "導入"
@@ -4685,9 +4660,6 @@ msgid ""
 "the WebGUI, enter the username here."
 msgstr "如果需要用WebGUI登錄，我們推薦您更改系統默認的用戶名和密碼，請在這裏輸入用戶名。"
 
-msgid "Italian"
-msgstr "義大利文"
-
 msgid "JBOD"
 msgstr "JBOD"
 
@@ -4705,9 +4677,6 @@ msgstr "1月"
 
 msgid "January"
 msgstr "1 月"
-
-msgid "Japanese"
-msgstr "日文"
 
 msgid "Job is locked"
 msgstr "任務被鎖定"
@@ -4742,9 +4711,6 @@ msgstr "密鑰長度"
 
 msgid "Key Management Protocol"
 msgstr "密鑰管理協議"
-
-msgid "Korean"
-msgstr "韓文"
 
 msgid "L2 Cache"
 msgstr "２級緩存"
@@ -5763,9 +5729,6 @@ msgid ""
 "the SMB protocol takes care of choosing the appropriate protocol."
 msgstr "通常，此選項不應設置為SMB協議中的自動協商階段，需要選擇適當的協議。"
 
-msgid "Norwegian (Bokmal)"
-msgstr "挪威文 (博克馬爾語)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -5900,6 +5863,9 @@ msgstr "選項被保護"
 
 msgid "Option is unlocked"
 msgstr "選項被解鎖"
+
+msgid "Optional"
+msgstr "可選的"
 
 msgid "Optional user-friendly string of the target."
 msgstr "自選易用的目標字串。"
@@ -6250,9 +6216,6 @@ msgstr "請定義資料庫目錄的位置。"
 msgid "Please note that blanks in path names are not allowed."
 msgstr "請注意在路徑中不可以有空白字符。"
 
-msgid "Polish"
-msgstr "波蘭文"
-
 msgid "Polling Time"
 msgstr "輪詢時間"
 
@@ -6345,12 +6308,6 @@ msgstr "門戶網站（Portals）"
 
 msgid "Ports"
 msgstr "端口"
-
-msgid "Portuguese (Brazil)"
-msgstr "葡萄牙文 (巴西)"
-
-msgid "Portuguese (Portugal)"
-msgstr "葡萄牙文 (葡萄牙)"
 
 msgid "PostInit"
 msgstr "後置初始動作（PostInit）"
@@ -6890,9 +6847,6 @@ msgstr "角色"
 msgid "Rollback"
 msgstr "回滾"
 
-msgid "Romanian"
-msgstr "羅馬尼亞文"
-
 msgid "Root"
 msgstr "根目錄（root）"
 
@@ -6975,9 +6929,6 @@ msgid ""
 "Running this service as root is not recommended for security reasons, use at "
 "your own risk!"
 msgstr "出於安全考慮，不建議以root用戶身份運行此服務，請自擔風險！"
-
-msgid "Russian"
-msgstr "俄文"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7166,6 +7117,9 @@ msgstr "安全系統殼(Secure Shell)"
 
 msgid "Security"
 msgstr "安全選項"
+
+msgid "Security Warning"
+msgstr "安全警告"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7402,6 +7356,9 @@ msgid ""
 "10."
 msgstr "將磁片檢查的間隔設置為N秒。 最小允許值為10。"
 
+msgid "Set or reset user password."
+msgstr "設置或重置用戶密碼。"
+
 msgid "Set read only."
 msgstr "設為只讀。"
 
@@ -7566,12 +7523,6 @@ msgstr "跳過查看模式"
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "睡眠 - 設備除了在睡眠模式之外都將檢查。"
 
-msgid "Slovak"
-msgstr "斯洛伐克文"
-
-msgid "Slovenian"
-msgstr "斯洛維尼亞文"
-
 msgid "Smart Outlet Management"
 msgstr "Smart Outlet管理"
 
@@ -7642,9 +7593,6 @@ msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
 "WebGUI. (empty is the same network of LAN interface)"
 msgstr "允許訪問WebGUI的一組以空格分隔的IP地址或CIDR標記。 （留空為 LAN 介面的同一網路）"
-
-msgid "Spanish"
-msgstr "西班牙文"
 
 msgid "Spare"
 msgstr "備用"
@@ -7831,9 +7779,6 @@ msgstr "交換區使用量"
 
 msgid "Swap is disabled."
 msgstr "交換被禁用"
-
-msgid "Swedish"
-msgstr "瑞典文"
 
 msgid "Switch VIP to BACKUP"
 msgstr "VIP 切換到 BACKUP"
@@ -8722,8 +8667,8 @@ msgid ""
 "back before the time is up the shutdown is canceled."
 msgstr "直到關機的時間（秒）。如果時間到前UPS 恢復，則取消關機。"
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "時間更新間隔必需為 6 到 1440 之間。"
+msgid "The time update interval must be between 6 and 1440."
+msgstr "時間更新間隔必須在6到1440之間。"
 
 msgid "The total count of errors when writing a sector."
 msgstr "寫入扇區時的錯誤總數。"
@@ -9425,9 +9370,6 @@ msgstr "週二"
 msgid "Tuning"
 msgstr "微調"
 
-msgid "Turkish"
-msgstr "土耳其文"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "N 秒後，顯示器進入待機。"
 
@@ -9559,9 +9501,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr "僅限UTF-8"
-
-msgid "Ukrainian"
-msgstr "烏克蘭語"
 
 msgid "Umask"
 msgstr "Umask"
@@ -10403,3 +10342,100 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸載"
+
+#~ msgid "Bulgarian"
+#~ msgstr "保加利亞文"
+
+#~ msgid "Dutch"
+#~ msgstr "荷蘭文"
+
+#~ msgid "English"
+#~ msgstr "英文"
+
+#~ msgid "Romanian"
+#~ msgstr "羅馬尼亞文"
+
+#~ msgid "Russian"
+#~ msgstr "俄文"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "時間更新間隔必需為 6 到 1440 之間。"
+
+#~ msgid "Finnish"
+#~ msgstr "芬蘭文"
+
+#~ msgid "Korean"
+#~ msgstr "韓文"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "葡萄牙文 (巴西)"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "葡萄牙文 (葡萄牙)"
+
+#~ msgid "Slovak"
+#~ msgstr "斯洛伐克文"
+
+#~ msgid "Turkish"
+#~ msgstr "土耳其文"
+
+#~ msgid "Danish"
+#~ msgstr "丹麥文"
+
+#~ msgid "Greek"
+#~ msgstr "希臘文"
+
+#~ msgid "German"
+#~ msgstr "德文"
+
+#~ msgid "Czech"
+#~ msgstr "捷克文"
+
+#~ msgid "Slovenian"
+#~ msgstr "斯洛維尼亞文"
+
+#~ msgid "Japanese"
+#~ msgstr "日文"
+
+#~ msgid "French"
+#~ msgstr "法文"
+
+#~ msgid "Polish"
+#~ msgstr "波蘭文"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典文"
+
+#~ msgid "Italian"
+#~ msgstr "義大利文"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙文"
+
+#~ msgid "Ukrainian"
+#~ msgstr "烏克蘭語"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr "NTP 伺服器名稱只可以含有 a-z，0-9，'-' 及 '.' 的字元。"
+
+#~ msgid "Afrikaans"
+#~ msgstr "南非荷蘭語(Afrikaans)"
+
+#~ msgid "Catalan"
+#~ msgstr "加泰羅尼亞語"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "簡體中文"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "繁體中文"
+
+#~ msgid "Enter the user password."
+#~ msgstr "輸入用戶密碼"
+
+#~ msgid "Hungarian"
+#~ msgstr "匈牙利語(Hungarian)"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "挪威文 (博克馬爾語)"

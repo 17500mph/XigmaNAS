@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
-"PO-Revision-Date: 2017-06-19 06:30+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
+"PO-Revision-Date: 2017-06-29 04:56+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-28 14:13+0000\n"
-"X-Generator: Launchpad (build 18418)\n"
+"X-Launchpad-Export-Date: 2017-06-29 19:25+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -213,7 +213,8 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Метка 802.1Q VLAN (между 1 и 4094)."
 
 msgid ""
-"A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+"A NTP time server name may only contain the following characters: a-z, 0-9, "
+"'-' and '.'."
 msgstr ""
 "Имя сервера времени NTP может содержать только следующие символы: a-z, 0-9, "
 "'-' и '.'."
@@ -648,9 +649,6 @@ msgstr "Расширенные настройки"
 msgid "Advertisement Skew"
 msgstr "Задержка обьявления"
 
-msgid "Afrikaans"
-msgstr "Африканский"
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 "После - File-deletions будет сделано после того, как передача будет "
@@ -1074,6 +1072,9 @@ msgstr "Авторазмер"
 msgid "AutoScale"
 msgstr "Автомасштаб"
 
+msgid "Autodetect"
+msgstr "Автоопределение"
+
 msgid "Autoscale"
 msgstr "Автомасштабирование"
 
@@ -1313,9 +1314,6 @@ msgstr "Просмотр Папки"
 msgid "Browseable"
 msgstr "Просматриваемый"
 
-msgid "Bulgarian"
-msgstr "Болгарский"
-
 msgid "By default, only already existing files can be uploaded."
 msgstr "По умолчанию могут быть загружены только уже существующие файлы."
 
@@ -1479,9 +1477,6 @@ msgstr "Настройки Carp"
 msgid "Case Sensitivity"
 msgstr "Чувствительно к регистру"
 
-msgid "Catalan"
-msgstr "Каталанский"
-
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1536,12 +1531,6 @@ msgstr "Проверьте список доступных драйверов"
 
 msgid "Checksum"
 msgstr "Контрольная сумма"
-
-msgid "Chinese (Simplified)"
-msgstr "Китайский (упрощенный)"
-
-msgid "Chinese (Traditional)"
-msgstr "Китайский (традиционный)"
 
 msgid "Choose UPS mode."
 msgstr "Выберите режим ИБП"
@@ -2153,9 +2142,6 @@ msgstr "Требуется пользовательский сценарий."
 msgid "Custom script not found."
 msgstr "Пользовательский скрипт не найден."
 
-msgid "Czech"
-msgstr "Чешский"
-
 msgid "DAAP"
 msgstr "DAAP"
 
@@ -2203,9 +2189,6 @@ msgstr "События процесса"
 
 msgid "Daemon log"
 msgstr "Журнал процесса"
-
-msgid "Danish"
-msgstr "Датский"
 
 msgid "Data Integrity"
 msgstr "Целостность данных"
@@ -3191,9 +3174,6 @@ msgstr ""
 "В течение - File-deletions будет осуществляться постепенно по мере "
 "осуществления передачи."
 
-msgid "Dutch"
-msgstr "Голландский"
-
 msgid "Dynamic DNS"
 msgstr "Dynamic DNS"
 
@@ -3598,6 +3578,10 @@ msgstr ""
 "Включите эту опцию, если вы хотите редактировать страницы конфигурации "
 "напрямую, без необходимости переключения в режим редактирования."
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+"Включите эту опцию, чтобы разрешить любому IP-адресу доступ к WebGUI."
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -3626,6 +3610,12 @@ msgstr "Включить кеширование записи."
 
 msgid "Enabled"
 msgstr "Включено"
+
+msgid ""
+"Enabling this option may expose your system to additional security risk!"
+msgstr ""
+"Включение этой опции может привести к дополнительной угрозе безопасности "
+"вашей системы!"
 
 msgid "Encrypt password"
 msgstr "Пароль для шифрования"
@@ -3669,9 +3659,6 @@ msgstr "Инструменты шифрования"
 
 msgid "Encryption algorithm"
 msgstr "Алгоритм шифрования"
-
-msgid "English"
-msgstr "Английский"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr "Улучшенная совместимость с сервером Netatalk AFP."
@@ -3764,8 +3751,14 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr "Введите полное имя пользователя."
 
+msgid "Enter full user name"
+msgstr "Введите полное имя пользователя"
+
 msgid "Enter hostname or IP address."
 msgstr "Введите имя хоста или IP-адрес."
+
+msgid "Enter login name"
+msgstr "Введите имя пользователя"
 
 msgid "Enter login name of the user."
 msgstr "Введите имя пользователя для входа."
@@ -3820,9 +3813,6 @@ msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Порт, на который будут отправляться сообщения (по умолчанию 162-й)."
-
-msgid "Enter the user password."
-msgstr "Введите пароль пользователя."
 
 msgid "Enter trap host name."
 msgstr "Имя сервера, ведущего мониторинг и прием сообщений."
@@ -4129,9 +4119,6 @@ msgstr "Файловая система"
 msgid "Filter"
 msgstr "Фильтр"
 
-msgid "Finnish"
-msgstr "Финский"
-
 msgid "Firewall"
 msgstr "Брандмауэр"
 
@@ -4213,9 +4200,6 @@ msgstr "Фрагментировано"
 msgid "Free"
 msgstr "Свободно"
 
-msgid "French"
-msgstr "Французский"
-
 msgid "Frequency"
 msgstr "Частота возникновения"
 
@@ -4290,9 +4274,6 @@ msgstr ""
 msgid "Generate password if leave empty."
 msgstr "Если оставить поле пустым пароль будет сгенерирован."
 
-msgid "German"
-msgstr "Немецкий"
-
 msgid "Get Target Info"
 msgstr "Сведения о цели"
 
@@ -4320,9 +4301,6 @@ msgstr "График обновляется каждые %d секунд."
 
 msgid "Graphs Height"
 msgstr "Высота графиков"
-
-msgid "Greek"
-msgstr "Греческий"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
@@ -4535,9 +4513,6 @@ msgstr ""
 "Частота обновления IP-адреса, даже если он прежний. Интервал в секундах "
 "(максимум 10 дней)."
 
-msgid "Hungarian"
-msgstr "Венгерский"
-
 msgid "I/O Statistics"
 msgstr "Статистика ввода/вывода"
 
@@ -4715,6 +4690,9 @@ msgstr "Если эта настройка включена, снимки пок
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr ""
 "Если это свойство отключено - файловая система не может быть установлена."
+
+msgid "Ignore Hosts Allow"
+msgstr "Игнорировать разрешения хостов"
 
 msgid "Import"
 msgstr "Импортировать"
@@ -5050,9 +5028,6 @@ msgstr ""
 "Рекомендуется сменить имя пользователя и пароль доступа к вебинтерфейсу. В "
 "этом поле укажите имя пользователя."
 
-msgid "Italian"
-msgstr "Итальянский"
-
 msgid "JBOD"
 msgstr "JBOD (простой массив дисков)"
 
@@ -5070,9 +5045,6 @@ msgstr "янв."
 
 msgid "January"
 msgstr "января"
-
-msgid "Japanese"
-msgstr "Японский"
 
 msgid "Job is locked"
 msgstr "Задание заблокировано"
@@ -5107,9 +5079,6 @@ msgstr "Длина ключа"
 
 msgid "Key Management Protocol"
 msgstr "Протокол управления ключом"
-
-msgid "Korean"
-msgstr "Корейский"
 
 msgid "L2 Cache"
 msgstr "L2 Cache"
@@ -6187,9 +6156,6 @@ msgstr ""
 "автоматического согласования в протоколе SMB позаботится о выборе "
 "соответствующего протокола."
 
-msgid "Norwegian (Bokmal)"
-msgstr "Норвежский (книжный)"
-
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6334,6 +6300,9 @@ msgstr "Опция защищена"
 
 msgid "Option is unlocked"
 msgstr "Опция разблокирована"
+
+msgid "Optional"
+msgstr "Дополнительно"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Удобное для восприятия описание цели (необязательно)."
@@ -6698,9 +6667,6 @@ msgstr "Пожалуйста, определите местоположение 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Пожалуйста, помните, что пробелы в пути запрещены."
 
-msgid "Polish"
-msgstr "Польский"
-
 msgid "Polling Time"
 msgstr "Время опроса"
 
@@ -6797,12 +6763,6 @@ msgstr "Порталы"
 
 msgid "Ports"
 msgstr "Порты"
-
-msgid "Portuguese (Brazil)"
-msgstr "Португальский (Бразилия)"
-
-msgid "Portuguese (Portugal)"
-msgstr "Португальский (Португалия)"
 
 msgid "PostInit"
 msgstr "Постинициализация"
@@ -7365,9 +7325,6 @@ msgstr "Роль"
 msgid "Rollback"
 msgstr "Откатить"
 
-msgid "Romanian"
-msgstr "Румынский"
-
 msgid "Root"
 msgstr "Корневой каталог"
 
@@ -7452,9 +7409,6 @@ msgid ""
 msgstr ""
 "Запуск этой службы от имени root не рекомендуется по соображениям "
 "безопасности, используйте на свой страх и риск!"
-
-msgid "Russian"
-msgstr "Русский"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
@@ -7649,6 +7603,9 @@ msgstr "Secure Shell (SSH)"
 
 msgid "Security"
 msgstr "Безопасность"
+
+msgid "Security Warning"
+msgstr "Предупреждение безопасности"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7905,6 +7862,9 @@ msgstr ""
 "Установить интервал между проверками дисков в N секунд. Минимальное "
 "допустимое значение 10."
 
+msgid "Set or reset user password."
+msgstr "Установить или сбросить пароль пользователя."
+
 msgid "Set read only."
 msgstr "Установить только для чтения"
 
@@ -8088,12 +8048,6 @@ msgstr "Пропустить режим просмотра"
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - проверять устройство, пока оно не в режиме сна (SLEEP)."
 
-msgid "Slovak"
-msgstr "Словацкий"
-
-msgid "Slovenian"
-msgstr "Словенский"
-
 msgid "Smart Outlet Management"
 msgstr "Smart Outlet Management"
 
@@ -8167,9 +8121,6 @@ msgstr ""
 "Разделённый пробелами набор IP адресов или CIDR выражений, с которых "
 "разрешён доступ к WebGUI. (пусто означает ту сеть, к кторой принадлежит "
 "интерфейс LAN)"
-
-msgid "Spanish"
-msgstr "Испанский"
 
 msgid "Spare"
 msgstr "Запасной"
@@ -8373,9 +8324,6 @@ msgstr "Использование подкачки"
 
 msgid "Swap is disabled."
 msgstr "Swap отключен."
-
-msgid "Swedish"
-msgstr "Шведский"
 
 msgid "Switch VIP to BACKUP"
 msgstr "Переключить VIP на BACKUP"
@@ -9368,8 +9316,8 @@ msgstr ""
 "Время до начала выключения (в секундах). Если электропитание UPS "
 "возобновится до истечения таймера, процесс выключения будет прерван."
 
-msgid "The time update interval must be either between 6 and 1440."
-msgstr "Интервал обновления времени должен быть между 6 и 1440."
+msgid "The time update interval must be between 6 and 1440."
+msgstr "Интервал времени обновления должен быть между 6 и 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr ""
@@ -10219,9 +10167,6 @@ msgstr "вторник"
 msgid "Tuning"
 msgstr "Настройка"
 
-msgid "Turkish"
-msgstr "Турецкий"
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Переводить монитор в режим энергопотребления через N секунд."
 
@@ -10356,9 +10301,6 @@ msgstr "URL"
 
 msgid "UTF-8 Only"
 msgstr "Только UTF-8"
-
-msgid "Ukrainian"
-msgstr "Украинский"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11287,3 +11229,102 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
+
+#~ msgid ""
+#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+#~ msgstr ""
+#~ "Имя сервера времени NTP может содержать только следующие символы: a-z, 0-9, "
+#~ "'-' и '.'."
+
+#~ msgid "Bulgarian"
+#~ msgstr "Болгарский"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Китайский (упрощенный)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Китайский (традиционный)"
+
+#~ msgid "Czech"
+#~ msgstr "Чешский"
+
+#~ msgid "Danish"
+#~ msgstr "Датский"
+
+#~ msgid "Dutch"
+#~ msgstr "Голландский"
+
+#~ msgid "English"
+#~ msgstr "Английский"
+
+#~ msgid "French"
+#~ msgstr "Французский"
+
+#~ msgid "German"
+#~ msgstr "Немецкий"
+
+#~ msgid "Greek"
+#~ msgstr "Греческий"
+
+#~ msgid "Hungarian"
+#~ msgstr "Венгерский"
+
+#~ msgid "Italian"
+#~ msgstr "Итальянский"
+
+#~ msgid "Japanese"
+#~ msgstr "Японский"
+
+#~ msgid "Korean"
+#~ msgstr "Корейский"
+
+#~ msgid "Norwegian (Bokmal)"
+#~ msgstr "Норвежский (книжный)"
+
+#~ msgid "Polish"
+#~ msgstr "Польский"
+
+#~ msgid "Portuguese (Brazil)"
+#~ msgstr "Португальский (Бразилия)"
+
+#~ msgid "Portuguese (Portugal)"
+#~ msgstr "Португальский (Португалия)"
+
+#~ msgid "Romanian"
+#~ msgstr "Румынский"
+
+#~ msgid "Russian"
+#~ msgstr "Русский"
+
+#~ msgid "Slovak"
+#~ msgstr "Словацкий"
+
+#~ msgid "Slovenian"
+#~ msgstr "Словенский"
+
+#~ msgid "Spanish"
+#~ msgstr "Испанский"
+
+#~ msgid "Swedish"
+#~ msgstr "Шведский"
+
+#~ msgid "The time update interval must be either between 6 and 1440."
+#~ msgstr "Интервал обновления времени должен быть между 6 и 1440."
+
+#~ msgid "Finnish"
+#~ msgstr "Финский"
+
+#~ msgid "Turkish"
+#~ msgstr "Турецкий"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Украинский"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Африканский"
+
+#~ msgid "Catalan"
+#~ msgstr "Каталанский"
+
+#~ msgid "Enter the user password."
+#~ msgstr "Введите пароль пользователя."
