@@ -54,7 +54,7 @@ $g = [
 	'default_passwd' => 'nas4free',
 	'default_ip' => '192.168.1.250'
 ];
-// directory of images
+//	directory of images.
 $g_img= [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -76,7 +76,7 @@ $g_install = [
 	"part1size_embedded" => "1024",	/* 2000MB=1907MiB ->  768MB + SWAP1024MB */
 	"part1size_full" => "3072"	/* 4000MB=3814MiB -> 2560MB + SWAP1024MB */
 ];
-//	available languages/locales
+//	available languages/locales. Function array_flip is used in system.inc
 $g_languages = [
 	'auto'	=> 'auto',
 	'af'    => 'af',
