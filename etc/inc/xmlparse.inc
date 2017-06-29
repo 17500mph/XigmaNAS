@@ -36,142 +36,176 @@
 
 /* tags that are always to be handled as lists */
 /* This are TAGS that can be multiple in the XML config file */
-$listtags = explode(" ", "dnsserver winsserver disk vdisk diskr sharetosync " .
-	"encryption-algorithm-option hash-algorithm-option hosts onetoone hidemount " .
-	"staticmap route pipe queue shellcmd cacert earlyshellcmd user group " .
-	"servernat nfsnetworks passthrumac allowedip mount vlan domainoverrides " .
-	"minute hour day month weekday content rsyncclient rsynclocal package " .
-	"ipv6dnsserver share auxparam extent device target storage group job report " .
-	"cmd module selftest url param lagg laggport vdevice pool dataset volume " .
-	"bridge bridgeif carp hastresource wlan " .
-	"snapshot autosnapshot rule " .
-	"portalgroup portal initiatorgroup iginitiatorname ignetmask authgroup " .
-	"agauth pgigmap agmap lunmap");
+$listtags = [
+	'dnsserver' => 'dnsserver',
+	'winsserver' => 'winsserver',
+	'disk' => 'disk',
+	'vdisk' => 'vdisk',
+	'diskr' => 'diskr',
+	'sharetosync' => 'sharetosync',
+	'encryption-algorithm-option' => 'encryption-algorithm-option',
+	'hash-algorithm-option' => 'hash-algorithm-option',
+	'hosts' => 'hosts',
+	'onetoone' => 'onetoone',
+	'hidemount' => 'hidemount',
+	'staticmap' => 'staticmap',
+	'route' => 'route',
+	'pipe' => 'pipe',
+	'queue' => 'queue',
+	'shellcmd' => 'shellcmd',
+	'cacert' => 'cacert',
+	'earlyshellcmd' => 'earlyshellcmd',
+	'user' => 'user',
+	'group' => 'group',
+	'servernat' => 'servernat',
+	'nfsnetworks' => 'nfsnetworks',
+	'passthrumac' => 'passthrumac',
+	'allowedip' => 'allowedip',
+	'mount' => 'mount',
+	'vlan' => 'vlan',
+	'domainoverrides' => 'domainoverrides',
+	'minute' => 'minute',
+	'hour' => 'hour',
+	'day' => 'day',
+	'month' => 'month',
+	'weekday' => 'weekday',
+	'content' => 'content',
+	'rsyncclient' => 'rsyncclient',
+	'rsynclocal' => 'rsynclocal',
+	'package' => 'package',
+	'ipv6dnsserver' => 'ipv6dnsserver',
+	'share' => 'share',
+	'auxparam' => 'auxparam',
+	'extent' => 'extent',
+	'device' => 'device',
+	'target' => 'target',
+	'storage' => 'storage',
+	'group' => 'group',
+	'job' => 'job',
+	'report' => 'report',
+	'cmd' => 'cmd',
+	'module' => 'module',
+	'selftest' => 'selftest',
+	'url' => 'url',
+	'param' => 'param',
+	'lagg' => 'lagg',
+	'laggport' => 'laggport',
+	'vdevice' => 'vdevice',
+	'pool' => 'pool',
+	'dataset' => 'dataset',
+	'volume' => 'volume',
+	'bridge' => 'bridge',
+	'bridgeif' => 'bridgeif',
+	'carp' => 'carp',
+	'hastresource' => 'hastresource',
+	'wlan' => 'wlan',
+	'snapshot' => 'snapshot',
+	'autosnapshot' => 'autosnapshot',
+	'rule' => 'rule',
+	'portalgroup' => 'portalgroup',
+	'portal' => 'portal',
+	'initiatorgroup' => 'initiatorgroup',
+	'iginitiatorname' => 'iginitiatorname',
+	'ignetmask' => 'ignetmask',
+	'authgroup' => 'authgroup',
+	'agauth' => 'agauth',
+	'pgigmap' => 'pgigmap',
+	'agmap' => 'agmap',
+	'lunmap' => 'lunmap'
+];
+function startElement($parser,$name,$attrs) {
+	global $depth,$curpath,$config,$havedata,$listtags;
 
-function startElement($parser, $name, $attrs) {
-	global $depth, $curpath, $config, $havedata, $listtags;
-
-	array_push($curpath, strtolower($name));
-
+	array_push($curpath,strtolower($name));
 	$ptr =& $config;
-	foreach ($curpath as $path) {
+	foreach($curpath as $path):
 		$ptr =& $ptr[$path];
-	}
-
-	/* is it an element that belongs to a list? */
-	if (in_array(strtolower($name), $listtags)) {
-			/* is there an array already? */
-		if (!is_array($ptr)) {
-			/* make an array */
-			$ptr = [];
-		}
-
-		array_push($curpath, count($ptr));
-
-	} else if (isset($ptr)) {
+	endforeach;
+	if(array_key_exists(strtolower($name),$listtags)): // is it an element that belongs to a list?
+		if(!is_array($ptr)): // is there an array already?
+			$ptr = []; // make an array
+		endif;
+		array_push($curpath,count($ptr));
+	elseif(isset($ptr)):
 		/* multiple entries not allowed for this element, bail out */
-		die(sprintf("XML error: %s at line %d cannot occur more than once\n",
-				$name,
-				xml_get_current_line_number($parser)));
-	}
-
+		die(sprintf("XML error: %s at line %d cannot occur more than once\n",$name,xml_get_current_line_number($parser)));
+	endif;
 	$depth++;
 	$havedata = $depth;
 }
+function endElement($parser,$name) {
+	global $depth,$curpath,$config,$havedata,$listtags;
 
-function endElement($parser, $name) {
-	global $depth, $curpath, $config, $havedata, $listtags;
-
-	if ($havedata == $depth) {
+	if($havedata == $depth):
 		$ptr =& $config;
-		foreach ($curpath as $path) {
+		foreach($curpath as $path):
 			$ptr =& $ptr[$path];
-		}
-		$ptr = "";
-	}
-
+		endforeach;
+		$ptr = '';
+	endif;
 	array_pop($curpath);
-
-	if (in_array(strtolower($name), $listtags))
+	if(array_key_exists(strtolower($name),$listtags)):
 		array_pop($curpath);
-
+	endif;
 	$depth--;
 }
-
-function cData($parser, $data) {
-	global $depth, $curpath, $config, $havedata;
+function cData($parser,$data) {
+	global $depth,$curpath,$config,$havedata;
 
 	$data = trim($data, "\t\n\r");
-
-	if ($data != "") {
+	if($data != ''):
 		$ptr =& $config;
-		foreach ($curpath as $path) {
+		foreach($curpath as $path):
 			$ptr =& $ptr[$path];
-		}
-
-		if (is_string($ptr)) {
+		endforeach;
+		if(is_string($ptr)):
 			$ptr .= $data;
-		} else {
-			if (trim($data, " ") != "") {
-				$ptr = $data;
-				$havedata++;
-			}
-		}
-	}
+		elseif(trim($data,' ') != ''):
+			$ptr = $data;
+			$havedata++;
+		endif;
+	endif;
 }
-
 function parse_xml_config_raw($cffile, $rootobj) {
-	global $depth, $curpath, $config, $havedata, $listtags;
+	global $depth,$curpath,$config,$havedata,$listtags;
 
-	$config = []; // OK
+	$config = [];
 	$curpath = [];
 	$depth = 0;
 	$havedata = 0;
-	$encoding = "UTF-8"; // PHP default
-
+	$encoding = 'UTF-8'; // PHP default
 	// Create XML parser and initialize handler.
 	$xml_parser = xml_parser_create();
-	xml_set_element_handler($xml_parser, "startElement", "endElement");
-	xml_set_character_data_handler($xml_parser, "cdata");
-
+	xml_set_element_handler($xml_parser,'startElement','endElement');
+	xml_set_character_data_handler($xml_parser,'cdata');
 	// Read configuration file.
 	$data = file_get_contents($cffile);
-	if (FALSE === $data)
+	if(false === $data):
 		die("Error: could not open XML input\n");
-
+	endif;
 	// Detect and set output character encoding. Default output encoding is UTF-8
-	if (preg_match('/<?xml.*encoding=[\'"](.*?)[\'"].*?>/m', $data, $m)) {
+	if(preg_match('/<?xml.*encoding=[\'"](.*?)[\'"].*?>/m',$data,$m)):
 		$encoding = strtoupper($m[1]);
-		xml_parser_set_option($xml_parser, XML_OPTION_TARGET_ENCODING, $encoding);
-	}
-
+		xml_parser_set_option($xml_parser,XML_OPTION_TARGET_ENCODING,$encoding);
+	endif;
 	// Parse configuration.
-	if (!xml_parse($xml_parser, $data)) {
-		die(sprintf("XML error: %s at line %d\n",
-			xml_error_string(xml_get_error_code($xml_parser)),
-			xml_get_current_line_number($xml_parser)));
-	}
-
+	if(!xml_parse($xml_parser, $data)):
+		die(sprintf("XML error: %s at line %d\n",xml_error_string(xml_get_error_code($xml_parser)),xml_get_current_line_number($xml_parser)));
+	endif;
 	xml_parser_free($xml_parser);
-
-	if (!empty($rootobj)) {
+	if(!empty($rootobj)):
 		// Remember encoding
 		$config[$rootobj]['encoding'] = $encoding;
-	}
-
+	endif;
 	return $config;
 }
-
-function parse_xml_config($cffile, $rootobj) {
-	$raw_config = parse_xml_config_raw($cffile, $rootobj);
-
-	if (!$raw_config[$rootobj]) {
+function parse_xml_config($cffile,$rootobj) {
+	$raw_config = parse_xml_config_raw($cffile,$rootobj);
+	if(!$raw_config[$rootobj]):
 		die("XML error: no $rootobj object found!\n");
-	}
-
+	endif;
 	return $raw_config[$rootobj];
 }
-
 // Dump configuration.
 // $arr - Array to be dumped
 // $indent - Number of indent
@@ -180,85 +214,75 @@ function parse_xml_config($cffile, $rootobj) {
 // A charset conversion may appear when switching from a ISO-8859-1 language
 // (e.g. English) to a UTF-8 one (e.g. French). If this is not done
 // we will get an parser error.
-function dump_xml_config_sub($arr, $indent, $in_charset, $out_charset) {
+function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 	global $listtags;
 
-	$xmlconfig = "";
-
-	foreach ($arr as $ent => $val) {
-		if (is_array($val)) {
-			/* is it just a list of multiple values? */
-			if (in_array(strtolower($ent), $listtags)) {
-				foreach ($val as $cval) {
-					if (is_array($cval)) {
-						$xmlconfig .= str_repeat("\t", $indent);
-						$xmlconfig .= "<$ent>\n";
-						$xmlconfig .= dump_xml_config_sub($cval, $indent + 1, $in_charset, $out_charset);
-						$xmlconfig .= str_repeat("\t", $indent);
-						$xmlconfig .= "</$ent>\n";
-					} else {
-						$xmlconfig .= str_repeat("\t", $indent);
-						if ((is_bool($cval) && ($cval == true)) ||
-							($cval === ""))
-							$xmlconfig .= "<$ent/>\n";
-						else if (!is_bool($cval))
-							$xmlconfig .= "<$ent>" . htmlspecialchars(iconv($in_charset, $out_charset, $cval)) . "</$ent>\n";
-					}
-				}
-			} else {
-				/* it's an array */
-				$xmlconfig .= str_repeat("\t", $indent);
-				$xmlconfig .= "<$ent>\n";
-				$xmlconfig .= dump_xml_config_sub($val, $indent + 1, $in_charset, $out_charset);
-				$xmlconfig .= str_repeat("\t", $indent);
-				$xmlconfig .= "</$ent>\n";
-			}
-		} else {
-			if ((is_bool($val) && ($val == true)) || ($val === "")) {
-				$xmlconfig .= str_repeat("\t", $indent);
-				$xmlconfig .= "<$ent/>\n";
-			} else if (!is_bool($val)) {
-				$xmlconfig .= str_repeat("\t", $indent);
-				$xmlconfig .= "<$ent>" . htmlspecialchars(iconv($in_charset, $out_charset, $val)) . "</$ent>\n";
-			}
-		}
-	}
-
+	$xmlconfig = '';
+	$s_indent = str_repeat("\t",$indent);
+	$must_convert = ($in_charset !== $out_charset);
+	foreach($arr as $ent => $val):
+		if(is_array($val)):
+			if(array_key_exists(strtolower($ent),$listtags)): // is it a list of multiple values?
+				foreach($val as $cval):
+					if(is_array($cval)):
+						$xmlconfig .= $s_indent . "<$ent>\n" . dump_xml_config_sub($cval,$indent + 1,$in_charset,$out_charset) . $s_indent . "</$ent>\n";
+					elseif(is_bool($cval)):
+						if($cval):
+							$xmlconfig .= $s_indent . "<$ent type=\"bool\">1</$ent>\n";
+						endif;
+					elseif('' === $cval):
+						$xmlconfig .= $s_indent . "<$ent/>\n";
+					elseif($must_convert):
+						$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars(iconv($in_charset,$out_charset,$cval)) . "</$ent>\n";
+					else:
+						$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars($cval) . "</$ent>\n";
+					endif;
+				endforeach;
+			else: // it's an array
+				$xmlconfig .= $s_indent . "<$ent>\n" . dump_xml_config_sub($val,$indent + 1,$in_charset,$out_charset) . $s_indent . "</$ent>\n";
+			endif;
+		elseif(is_bool($val)):
+			if($val):
+				$xmlconfig .= $s_indent . "<$ent type=\"bool\">1</$ent>\n";
+			endif;
+		elseif('' === $val):
+			$xmlconfig .= $s_indent . "<$ent/>\n";
+		elseif($must_convert):
+			$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars(iconv($in_charset,$out_charset,$val)) . "</$ent>\n";
+		else:
+			$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars($val) . "</$ent>\n";
+		endif;
+	endforeach;
 	return $xmlconfig;
 }
-
-function dump_xml_config($arr, $rootobj, $encoding) {
+function dump_xml_config($arr,$rootobj,$encoding) {
 	// Set in/out encoding
-	$in_charset = !empty($arr['encoding']) ? $arr['encoding'] : "";
+	$in_charset = empty($arr['encoding']) ? '' : $arr['encoding'];
 	$out_charset = $encoding;
-
 	// Do not dump temporary encoding attribute
 	unset($arr['encoding']);
-
 	$xmlconfig = "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
 	$xmlconfig .= "<$rootobj>\n";
-	$xmlconfig .= dump_xml_config_sub($arr, 1, $in_charset, $out_charset);
+	$xmlconfig .= dump_xml_config_sub($arr,1,$in_charset,$out_charset);
 	$xmlconfig .= "</$rootobj>\n";
-
 	return $xmlconfig;
 }
-
 /**
  * Validate the configuration xml file.
  * @param[in] cffile Path to the file to validate.
  * @param[in] rootobj The name of the root object.
  * @return TRUE if valid, otherwise FALSE.
  */
-function validate_xml_config($cffile, $rootobj) {
+function validate_xml_config($cffile,$rootobj) {
 	// Parse the configuration
-	$xmlconfig = parse_xml_config($cffile, $rootobj);
+	$xmlconfig = parse_xml_config($cffile,$rootobj);
 
 	// Due the configuration file does not have a DTD, we can only do some
 	// simple checks, e.g. if version is set.
-	if (!isset($xmlconfig['version']))
-		return FALSE;
-
+	if(!isset($xmlconfig['version'])):
+		return false;
+	endif;
 	// Add more checks, or implement a DTD...
-	return TRUE;
+	return true;
 }
 ?>
