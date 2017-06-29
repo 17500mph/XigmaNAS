@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-06-16 01:08+0000\n"
+"POT-Creation-Date: 2017-06-29 02:08+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -166,7 +166,7 @@ msgstr ""
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
 
-msgid "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
+msgid "A NTP time server name may only contain the following characters: a-z, 0-9, '-' and '.'."
 msgstr ""
 
 msgid "A Portal Group is identified by a tag number and defines IP addresses and listening TCP ports."
@@ -557,9 +557,6 @@ msgstr ""
 msgid "Advertisement Skew"
 msgstr ""
 
-msgid "Afrikaans"
-msgstr ""
-
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 
@@ -889,6 +886,9 @@ msgstr ""
 msgid "AutoScale"
 msgstr ""
 
+msgid "Autodetect"
+msgstr ""
+
 msgid "Autoscale"
 msgstr ""
 
@@ -1097,9 +1097,6 @@ msgstr ""
 msgid "Browseable"
 msgstr ""
 
-msgid "Bulgarian"
-msgstr ""
-
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
 
@@ -1256,9 +1253,6 @@ msgstr ""
 msgid "Case Sensitivity"
 msgstr ""
 
-msgid "Catalan"
-msgstr ""
-
 msgid "Causes the server to display the network information for the specified IP address or DNS hostname to the client, on the assumption that that IP address or DNS host is acting as a NAT gateway or port forwarder for the server."
 msgstr ""
 
@@ -1302,12 +1296,6 @@ msgid "Check the list of available drivers"
 msgstr ""
 
 msgid "Checksum"
-msgstr ""
-
-msgid "Chinese (Simplified)"
-msgstr ""
-
-msgid "Chinese (Traditional)"
 msgstr ""
 
 msgid "Choose UPS mode."
@@ -1756,9 +1744,6 @@ msgstr ""
 msgid "Custom script not found."
 msgstr ""
 
-msgid "Czech"
-msgstr ""
-
 msgid "DAAP"
 msgstr ""
 
@@ -1805,9 +1790,6 @@ msgid "Daemon events"
 msgstr ""
 
 msgid "Daemon log"
-msgstr ""
-
-msgid "Danish"
 msgstr ""
 
 msgid "Data Integrity"
@@ -2712,9 +2694,6 @@ msgstr ""
 msgid "During - File-deletions will be done incrementally as the transfer happens."
 msgstr ""
 
-msgid "Dutch"
-msgstr ""
-
 msgid "Dynamic DNS"
 msgstr ""
 
@@ -3093,6 +3072,9 @@ msgstr ""
 msgid "Enable this option if you want to edit configuration pages directly without the need to switch to edit mode."
 msgstr ""
 
+msgid "Enable this option to allow any IP address to access the WebGUI."
+msgstr ""
+
 msgid "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
 
@@ -3118,6 +3100,9 @@ msgid "Enable write cache mode."
 msgstr ""
 
 msgid "Enabled"
+msgstr ""
+
+msgid "Enabling this option may expose your system to additional security risk!"
 msgstr ""
 
 msgid "Encrypt password"
@@ -3161,9 +3146,6 @@ msgid "Encryption Tools"
 msgstr ""
 
 msgid "Encryption algorithm"
-msgstr ""
-
-msgid "English"
 msgstr ""
 
 msgid "Enhanced compatibility with Netatalk AFP server."
@@ -3233,7 +3215,13 @@ msgstr ""
 msgid "Enter full name of the user."
 msgstr ""
 
+msgid "Enter full user name"
+msgstr ""
+
 msgid "Enter hostname or IP address."
+msgstr ""
+
+msgid "Enter login name"
 msgstr ""
 
 msgid "Enter login name of the user."
@@ -3264,9 +3252,6 @@ msgid "Enter the path to the home directory. This directory will store the stati
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
-msgstr ""
-
-msgid "Enter the user password."
 msgstr ""
 
 msgid "Enter trap host name."
@@ -3545,9 +3530,6 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-msgid "Finnish"
-msgstr ""
-
 msgid "Firewall"
 msgstr ""
 
@@ -3623,9 +3605,6 @@ msgstr ""
 msgid "Free"
 msgstr ""
 
-msgid "French"
-msgstr ""
-
 msgid "Frequency"
 msgstr ""
 
@@ -3698,9 +3677,6 @@ msgstr ""
 msgid "Generate password if leave empty."
 msgstr ""
 
-msgid "German"
-msgstr ""
-
 msgid "Get Target Info"
 msgstr ""
 
@@ -3727,9 +3703,6 @@ msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
-msgstr ""
-
-msgid "Greek"
 msgstr ""
 
 msgid "Greeting banner displayed to client when firts connection comes in."
@@ -3916,9 +3889,6 @@ msgstr ""
 msgid "How often the IP is updated even if it is not changed. The period is in seconds (max. is 10 days)."
 msgstr ""
 
-msgid "Hungarian"
-msgstr ""
-
 msgid "I/O Statistics"
 msgstr ""
 
@@ -4046,6 +4016,9 @@ msgid "If this property is enabled, the snapshots are displayed into .zfs direct
 msgstr ""
 
 msgid "If this property is set to off, the file system cannot be mounted."
+msgstr ""
+
+msgid "Ignore Hosts Allow"
 msgstr ""
 
 msgid "Import"
@@ -4317,9 +4290,6 @@ msgstr ""
 msgid "It's recommended to change the default username and password for accessing the WebGUI, enter the username here."
 msgstr ""
 
-msgid "Italian"
-msgstr ""
-
 msgid "JBOD"
 msgstr ""
 
@@ -4336,9 +4306,6 @@ msgid "Jan"
 msgstr ""
 
 msgid "January"
-msgstr ""
-
-msgid "Japanese"
 msgstr ""
 
 msgid "Job is locked"
@@ -4373,9 +4340,6 @@ msgid "Key Length"
 msgstr ""
 
 msgid "Key Management Protocol"
-msgstr ""
-
-msgid "Korean"
 msgstr ""
 
 msgid "L2 Cache"
@@ -5347,9 +5311,6 @@ msgstr ""
 msgid "Normally this option should not be set as the automatic negotiation phase in the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
 
-msgid "Norwegian (Bokmal)"
-msgstr ""
-
 msgid "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do not explicitly support it, VLAN tagging will still work, but the reduced MTU may cause problems."
 msgstr ""
 
@@ -5472,6 +5433,9 @@ msgid "Option is protected"
 msgstr ""
 
 msgid "Option is unlocked"
+msgstr ""
+
+msgid "Optional"
 msgstr ""
 
 msgid "Optional user-friendly string of the target."
@@ -5808,9 +5772,6 @@ msgstr ""
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 
-msgid "Polish"
-msgstr ""
-
 msgid "Polling Time"
 msgstr ""
 
@@ -5898,12 +5859,6 @@ msgid "Portals"
 msgstr ""
 
 msgid "Ports"
-msgstr ""
-
-msgid "Portuguese (Brazil)"
-msgstr ""
-
-msgid "Portuguese (Portugal)"
 msgstr ""
 
 msgid "PostInit"
@@ -6424,9 +6379,6 @@ msgstr ""
 msgid "Rollback"
 msgstr ""
 
-msgid "Romanian"
-msgstr ""
-
 msgid "Root"
 msgstr ""
 
@@ -6506,9 +6458,6 @@ msgid "Running"
 msgstr ""
 
 msgid "Running this service as root is not recommended for security reasons, use at your own risk!"
-msgstr ""
-
-msgid "Russian"
 msgstr ""
 
 msgid "S.M.A.R.T."
@@ -6688,6 +6637,9 @@ msgid "Secure Shell"
 msgstr ""
 
 msgid "Security"
+msgstr ""
+
+msgid "Security Warning"
 msgstr ""
 
 msgid "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -6912,6 +6864,9 @@ msgstr ""
 msgid "Set interval between disk checks to N seconds. The minimum allowed value is 10."
 msgstr ""
 
+msgid "Set or reset user password."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -7063,12 +7018,6 @@ msgstr ""
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
 
-msgid "Slovak"
-msgstr ""
-
-msgid "Slovenian"
-msgstr ""
-
 msgid "Smart Outlet Management"
 msgstr ""
 
@@ -7136,9 +7085,6 @@ msgid "Space Used"
 msgstr ""
 
 msgid "Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)"
-msgstr ""
-
-msgid "Spanish"
 msgstr ""
 
 msgid "Spare"
@@ -7304,9 +7250,6 @@ msgid "Swap Usage"
 msgstr ""
 
 msgid "Swap is disabled."
-msgstr ""
-
-msgid "Swedish"
 msgstr ""
 
 msgid "Switch VIP to BACKUP"
@@ -8076,7 +8019,7 @@ msgstr ""
 msgid "The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."
 msgstr ""
 
-msgid "The time update interval must be either between 6 and 1440."
+msgid "The time update interval must be between 6 and 1440."
 msgstr ""
 
 msgid "The total count of errors when writing a sector."
@@ -8631,9 +8574,6 @@ msgstr ""
 msgid "Tuning"
 msgstr ""
 
-msgid "Turkish"
-msgstr ""
-
 msgid "Turn the monitor to standby after N seconds."
 msgstr ""
 
@@ -8757,9 +8697,6 @@ msgid "URL"
 msgstr ""
 
 msgid "UTF-8 Only"
-msgstr ""
-
-msgid "Ukrainian"
 msgstr ""
 
 msgid "Umask"
