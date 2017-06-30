@@ -1,5 +1,5 @@
 PORTNAME=		arcconf
-DISTVERSION=	v2_02_22404
+DISTVERSION=	v2_04_22665
 CATEGORIES=		sysutils
 COMMENT=		Adaptec SCSI/SAS RAID administration tool
 MAINTAINER=		zoon1@nas4free.org
@@ -20,7 +20,7 @@ NO_WRKSUBDIR=	yes
 .if ${OPSYS} != FreeBSD
 IGNORE=		installs incompatible binaries for FreeBSD
 .else
-DIST_OSVER=	10
+DIST_OSVER=	11
 .endif
 
 .if ${OPSYS} != FreeBSD
@@ -30,8 +30,8 @@ IGNORE=		installs incompatible binaries for FreeBSD
 .if ${ARCH} == amd64
 DIST_EXT=	_x64
 .elif ${ARCH} == i386
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
-# use the 9 i386 version for 10 i386
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100000
+# use the 9 i386 version for 11 i386
 DIST_OSVER=	9
 RUN_DEPENDS+=	${LOCALBASE}/lib/compat/libstdc++.so.6:misc/compat9x
 .endif
