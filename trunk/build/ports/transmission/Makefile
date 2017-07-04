@@ -14,7 +14,7 @@ LIB_DEPENDS=		libb64.so:converters/libb64 \
 					libminiupnpc.so:net/miniupnpc \
 					libnatpmp.so:net/libnatpmp \
 					libutp.so:net/libutp \
-					libevent.so:devel/libevent2
+					libevent.so:devel/libevent
 
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:www/transmission-web
 
