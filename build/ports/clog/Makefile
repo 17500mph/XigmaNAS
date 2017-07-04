@@ -10,7 +10,10 @@ NO_PKG_REGISTER=yes
 
 .include <bsd.port.pre.mk>
 do-build:
-.if ${OSVERSION} >= 1100000
+.if ${OSVERSION} >= 1101000
+	@${TAR} -zxvf ${FILESDIR}/syslogd-clog-11.1.tar.gz -C /usr/src/usr.bin
+	@${TAR} -zxvf ${FILESDIR}/clog-1.0.1-11.1.tar.gz -C /usr/src/usr.bin
+.elif ${OSVERSION} >= 1100000
 	@${TAR} -zxvf ${FILESDIR}/syslogd-clog-11.tar.gz -C /usr/src/usr.bin
 	@${TAR} -zxvf ${FILESDIR}/clog-1.0.1-11.tar.gz -C /usr/src/usr.bin
 .elif ${OSVERSION} >= 1000000
