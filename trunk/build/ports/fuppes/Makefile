@@ -1,6 +1,6 @@
 PORTNAME=		fuppes
 PORTVERSION=	0.692
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=		net
 COMMENT=		Free UPnP Entertainment Service
 MAINTAINER=		zoon1@nas4free.org
@@ -16,6 +16,7 @@ LIB_DEPENDS+=		libsqlite3.so:databases/sqlite3 \
 			libmp3lame.so:audio/lame \
 			libtwolame.so:audio/twolame \
 			libvorbis.so:audio/libvorbis \
+			libmp4v2.so:multimedia/mp4v2 \
 			libavformat.so:multimedia/ffmpeg
 
 USE_AUTOTOOLS=	autoconf
