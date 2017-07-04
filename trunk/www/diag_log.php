@@ -38,44 +38,59 @@ require 'diag_log.inc';
 $sphere_scriptname = basename(__FILE__);
 $sphere_header = 'Location: '.$sphere_scriptname;
 
-if(isset($_GET['log'])):
-	$log = $_GET['log'];
+$log = filter_input(INPUT_GET,'log',FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 0]]);
+if(is_null($log)):
+	$log = filter_input(INPUT_POST,'log',FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => 0,'min_range' => 0]]);
 endif;
-if(isset($_POST['log'])):
-	$log = $_POST['log'];
-endif;
-if(empty($log)):
-	$log = 0;
-endif;
-if(isset($_POST['clear']) && $_POST['clear']):
-	log_clear($loginfo[$log]);
-	header(sprintf('Location: diag_log.php?log=%s',$log));
-	exit;
-endif;
-if(isset($_POST['download']) && $_POST['download']):
-	log_download($loginfo[$log]);
-	exit;
-endif;
-if(isset($_POST['refresh']) && $_POST['refresh']):
-	header(sprintf('Location: diag_log.php?log=%s',$log));
-	exit;
-endif;
-$searchlog = $_POST['searchlog'] ?? '';
+$searchlog = filter_input(INPUT_POST,'searchlog',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => '/\S/']]);
+$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => 'none','regexp' => '/^(clear|download|refresh|search)$/']]);
+switch($action):
+	case 'clear':
+		log_clear($loginfo[$log]);
+		header(sprintf('Location: diag_log.php?log=%s',$log));
+		exit;
+		break;
+	case 'download':
+		log_download($loginfo[$log]);
+		exit;
+		break;
+	case 'refresh':
+		header(sprintf('Location: diag_log.php?log=%s',$log));
+		exit;
+		break;
+	case 'search':
+		break;
+//		case 'none':
+	default:
+		break;
+endswitch;
 $pgtitle = [gtext('Diagnostics'),gtext('Log')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
+var allowspinner = true;
 $(window).on("load",function() {
-<?php // Init spinner on submit for id form.?>
-	$("#iform").submit(function() { spinner(); });
-<?php // Init spinner on click for class spin.?>
-	$(".spin").click(function() { spinner(); });
-}); 
-function log_change() {
-	// Reload page
-	window.document.location.href = 'diag_log.php?log=' + document.iform.log.value;
-}
+<?php
+	//	Determine if spinner can run based on button id.
+?>
+	$("button").on("click",function () { allowspinner = ($(this).attr("id") !== "button_download"); });
+<?php
+	//	Init spinner on submit for id iform.
+?>
+	$("#iform").on("submit",function() { if(allowspinner) spinner(); });
+<?php
+	//	Init spinner on click for class spin.
+?>
+	$(".spin").on("click",function() { spinner(); });
+<?php
+	//	Load page again when log selection changes.
+?>
+	$("#log").on("change",function() {
+		spinner();
+		window.document.location.href = 'diag_log.php?log=' + document.iform.log.value;
+	});
+});
 //]]>
 </script>
 <table id="area_navigator"><tbody>
@@ -84,41 +99,44 @@ function log_change() {
 		<li class="tabinact"><a href="diag_log_settings.php"><span><?=gtext('Settings');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
+<form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 			html_titleline2(gtext('Log Filter'),1);
 			html_separator2(1);
-			?>
+?>
 		</thead>
 		<tbody><tr><td>
-			<select id="log" class="formfld" onchange="log_change()" name="log">
-				<?php 
+			<select id="log" class="formfld" name="log">
+<?php 
 				foreach($loginfo as $loginfo_key => $loginfo_val):
-					if(false === $loginfo_val['visible']):
-						continue;
+					if(false !== $loginfo_val['visible']):
+?>
+						<option value="<?=$loginfo_key;?>" <?php if($loginfo_key == $log) echo 'selected="selected"';?>><?=$loginfo_val['desc'];?></option>
+<?php
 					endif;
-					?>
-					<option value="<?=$loginfo_key;?>" <?php if ($loginfo_key == $log) echo 'selected="selected"';?>><?=$loginfo_val['desc'];?></option>
-				<?php
 				endforeach;
-				?>
+?>
 			</select>
-			<input name="clear" type="submit" class="formbtn" value="<?=gtext("Clear");?>" />
-			<input name="download" type="submit" class="formbtn" value="<?=gtext("Download");?>" />
-			<input name="refresh" type="submit" class="formbtn" value="<?=gtext("Refresh");?>" />
-			<span class="label">&nbsp;&nbsp;&nbsp;<?=gtext("Search event");?></span>
-			<input size="30" id="searchlog" name="searchlog" value="<?=$searchlog;?>" />
-			<input name="search" type="submit" class="formbtn" value="<?=gtext("Search");?>" />
+<?php
+			echo html_button('clear',gtext('Clear'));
+			echo html_button('download',gtext('Download'));
+			echo html_button('refresh',gtext('Refresh'));
+?>
+			<span class="label">&nbsp;&nbsp;&nbsp;<?=gtext('Search event');?></span>
+			<input size="30" id="searchlog" name="searchlog" value="<?=htmlspecialchars($searchlog);?>"/>
+<?php
+			echo html_button('search',gtext('Search'));
+?>
 		</td></tr></tbody>
 	</table>
 	<table class="area_data_settings">
 		<thead>
-			<?php
+<?php
 			$columns = 0;
 			$column_header = [];
 			if(is_array($loginfo[$log])):
@@ -129,11 +147,11 @@ function log_change() {
 			endif;
 			html_separator2($columns);
 			html_titleline2(gtext('Log'),$columns);
-			echo '<tr>',implode("\n",$column_header),'</tr>';
-			?>
+			echo '<tr>',implode(PHP_EOL,$column_header),'</tr>',PHP_EOL;
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			$content_array = log_get_contents($loginfo[$log]['logfile'],$loginfo[$log]['type']);
 			if(!empty($content_array)):
 				// Create table data
@@ -147,17 +165,21 @@ function log_change() {
 					if(count($loginfo[$log]['columns']) == 1 && empty($matches[1])):
 						continue;
 					endif;
-					echo "<tr>\n";
+					echo '<tr>',PHP_EOL;
 						foreach ($loginfo[$log]['columns'] as $column_key => $column_val):
 							echo sprintf('<td %1$s class="%2$s">%3$s</td>',$column_val['param'],$column_val['class'],htmlspecialchars($matches[$column_val['pmid']]));
 						endforeach;
-					echo "</tr>\n";
+					echo '</tr>',PHP_EOL;
 				endforeach;
 //				log_display($loginfo[$log]);
 			endif;
-			?>
+?>
 		</tbody>
 	</table>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
