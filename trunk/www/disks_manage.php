@@ -130,8 +130,7 @@ if($_POST) {
 				//exit;
 				break;
 			case 'rescanbusses':
-				//	XXX using parameter 'all' causes an error in FreeBSD 11.0 XXX
-				$cmd = 'camcontrol rescan al';
+				$cmd = 'camcontrol rescan all';
 				mwexec2($cmd,$rawdata);
 				header($sphere->header());
 				exit;
