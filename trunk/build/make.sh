@@ -1827,11 +1827,6 @@ copy_files() {
 			echo "----------------------------------------------------------";
 			echo ">>> Copy new files to ports directory FreeBSD usr/ports/*.";
 			echo "----------------------------------------------------------";
-			echo "===> Delete pango from ports"
-			rm -rf /usr/ports/x11-toolkits/pango
-			echo "===> Start copy new pango files to ports/x11-toolkits"
-			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango /usr/ports/x11-toolkits/pango
-			echo "===> Copy new files to /usr/ports/x11-toolkits/pango done!"
 			echo "===> Delete ffmpeg from ports"
 			rm -rf /usr/ports/multimedia/ffmpeg
 			echo "===> Start copy new pango files to ports/multimedia"
@@ -1847,8 +1842,9 @@ build_ports() {
 	ports=$NAS4FREE_WORKINGDIR/ports$$
 
 	# Choose what to do.
-	$DIALOG --title "$NAS4FREE_PRODUCTNAME - Build/Install Ports" --menu "Please select whether you want to build or install ports." 10 45 3 \
+	$DIALOG --title "$NAS4FREE_PRODUCTNAME - Build/Install Ports" --menu "Please select whether you want to build or install ports." 11 45 3 \
 		"build" "Build ports" \
+		"rebuild" "Re-build ports (dev only)" \
 		"install" "Install ports" 2> $tempfile
 	if [ 0 != $? ]; then # successful?
 		rm $tempfile
@@ -1886,6 +1882,14 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				fi
 			done
 		fi
+		case ${choice} in
+			rebuild)
+				t=`echo $s/work/.build_done.*`
+				if [ -e "$t" ]; then
+					state="OFF"
+				fi
+				;;
+		esac
 		case ${state} in
 			[hH][iI][dD][eE])
 				;;
@@ -1906,7 +1910,7 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 	rm $tempfile
 
 	case ${choice} in
-		build)
+		build|rebuild)
 			# Set ports options
 			echo;
 			echo "--------------------------------------------------------------";
