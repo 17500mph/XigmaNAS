@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-16 20:42+0000\n"
-"Last-Translator: Victek <Unknown>\n"
+"PO-Revision-Date: 2017-07-02 09:05+0000\n"
+"Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-29 19:26+0000\n"
+"X-Launchpad-Export-Date: 2017-07-04 13:41+0000\n"
 "X-Generator: Launchpad (build 18419)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -215,6 +215,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Un nombre de servidor NTP de tiempo, solo puede contener los siguientes "
+"caracteres: a-z, 0-9, '-' and '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -1074,7 +1076,7 @@ msgid "AutoScale"
 msgstr "Escala Automática"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Autodetectar"
 
 msgid "Autoscale"
 msgstr "Autoescala"
@@ -3587,6 +3589,7 @@ msgstr ""
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Habilitar esta opción para permitir el acceso a la WebGUI desde cualquier IP."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3620,6 +3623,8 @@ msgstr "Habilitado"
 msgid ""
 "Enabling this option may expose your system to additional security risk!"
 msgstr ""
+"¡Habilitar esta opción expone a su sistema a Internet y los riesgos que "
+"conlleva!"
 
 msgid "Encrypt password"
 msgstr "Contraseña de encriptación"
@@ -3757,13 +3762,13 @@ msgid "Enter full name of the user."
 msgstr "Nombre completo del Usuario."
 
 msgid "Enter full user name"
-msgstr ""
+msgstr "Nombre de usuario completo"
 
 msgid "Enter hostname or IP address."
 msgstr "Nombre de Host o IP."
 
 msgid "Enter login name"
-msgstr ""
+msgstr "Nombre para el login"
 
 msgid "Enter login name of the user."
 msgstr "Nombre para logarse"
@@ -4703,7 +4708,7 @@ msgstr ""
 "ser montado."
 
 msgid "Ignore Hosts Allow"
-msgstr ""
+msgstr "Ignorar Host permitidos"
 
 msgid "Import"
 msgstr "Importar"
@@ -6299,7 +6304,7 @@ msgid "Option is unlocked"
 msgstr "Opción desbloqueada"
 
 msgid "Optional"
-msgstr ""
+msgstr "Opcional"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Cadena de el objetivo opcional amistoso al usuario."
@@ -7611,7 +7616,7 @@ msgid "Security"
 msgstr "Seguridad"
 
 msgid "Security Warning"
-msgstr ""
+msgstr "Advertencia de Seguridad"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7866,7 +7871,7 @@ msgstr ""
 "minimo es 10 segundos."
 
 msgid "Set or reset user password."
-msgstr ""
+msgstr "Definir o borrar la contraseña de usuario"
 
 msgid "Set read only."
 msgstr "Solo Lectura"
@@ -9330,7 +9335,7 @@ msgstr ""
 "energia antes que el tiempo termine, el apagado es cancelado."
 
 msgid "The time update interval must be between 6 and 1440."
-msgstr ""
+msgstr "El intervalo de tiempo debe estar entre 6 y 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr "El nº total de errores durante la escritura de un sector."
@@ -11220,102 +11225,3 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Búlgaro"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Chino (simplificado)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Chino (tradicional)"
-
-#~ msgid "Czech"
-#~ msgstr "Checo"
-
-#~ msgid "Danish"
-#~ msgstr "Danés"
-
-#~ msgid "English"
-#~ msgstr "Inglés"
-
-#~ msgid "French"
-#~ msgstr "Francés"
-
-#~ msgid "German"
-#~ msgstr "Alemán"
-
-#~ msgid "Greek"
-#~ msgstr "Griego"
-
-#~ msgid "Hungarian"
-#~ msgstr "Húngaro"
-
-#~ msgid "Italian"
-#~ msgstr "Italiano"
-
-#~ msgid "Japanese"
-#~ msgstr "Japonés"
-
-#~ msgid "Korean"
-#~ msgstr "Coreano"
-
-#~ msgid "Norwegian (Bokmal)"
-#~ msgstr "Noruego (Bokmal)"
-
-#~ msgid "Polish"
-#~ msgstr "Polaco"
-
-#~ msgid "Portuguese (Brazil)"
-#~ msgstr "Portugués (Brasil)"
-
-#~ msgid "Portuguese (Portugal)"
-#~ msgstr "Portugués (Portugal)"
-
-#~ msgid "Romanian"
-#~ msgstr "Rumano"
-
-#~ msgid "Russian"
-#~ msgstr "Ruso"
-
-#~ msgid "Slovak"
-#~ msgstr "Eslovaco"
-
-#~ msgid "Slovenian"
-#~ msgstr "Esloveno"
-
-#~ msgid "Spanish"
-#~ msgstr "Español"
-
-#~ msgid "Swedish"
-#~ msgstr "Sueco"
-
-#~ msgid "The time update interval must be either between 6 and 1440."
-#~ msgstr "El intervalo de tiempo de actualización debe estar entre 6 y 1440."
-
-#~ msgid "Dutch"
-#~ msgstr "Neerlandés"
-
-#~ msgid ""
-#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
-#~ msgstr ""
-#~ "El nombre de un servidor de tiempo NTP solo puede contener los siguientes "
-#~ "caracteres a-z, 0-9, '-' y '.'."
-
-#~ msgid "Finnish"
-#~ msgstr "Finés"
-
-#~ msgid "Turkish"
-#~ msgstr "Turco"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ucraniano"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikaans"
-
-#~ msgid "Catalan"
-#~ msgstr "Catalán"
-
-#~ msgid "Enter the user password."
-#~ msgstr "Contraseña de Usuario."

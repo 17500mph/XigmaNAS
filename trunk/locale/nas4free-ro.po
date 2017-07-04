@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-25 19:50+0000\n"
+"PO-Revision-Date: 2017-07-01 06:10+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-29 19:25+0000\n"
+"X-Launchpad-Export-Date: 2017-07-04 13:42+0000\n"
 "X-Generator: Launchpad (build 18419)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -217,6 +217,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Numele serverului NTP poate conține doar următoarele caractere: a-z, 0-9, '-"
+"' și '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -1073,7 +1075,7 @@ msgid "AutoScale"
 msgstr "AutoScalare"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Detectare automată"
 
 msgid "Autoscale"
 msgstr "Autoscalare"
@@ -3582,6 +3584,8 @@ msgstr ""
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Activarea acestei opțiuni permite accesul interfeței WebGUI de la orice "
+"adresă IP."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3616,6 +3620,8 @@ msgstr "Activat"
 msgid ""
 "Enabling this option may expose your system to additional security risk!"
 msgstr ""
+"Activarea acestei opțiuni poate expune sistemul dumneavoastră la riscuri de "
+"securitate!"
 
 msgid "Encrypt password"
 msgstr "Parolă criptare"
@@ -3753,13 +3759,13 @@ msgid "Enter full name of the user."
 msgstr "Introducere nume complet utilizator."
 
 msgid "Enter full user name"
-msgstr ""
+msgstr "Introduceți numele complet al utilizatorului"
 
 msgid "Enter hostname or IP address."
 msgstr "Introducere nume sistem sau adresă IP."
 
 msgid "Enter login name"
-msgstr ""
+msgstr "Introduceți numele pentru autentificare"
 
 msgid "Enter login name of the user."
 msgstr "Introducere nume de autentidicare utilizator."
@@ -4696,7 +4702,7 @@ msgstr ""
 "montat."
 
 msgid "Ignore Hosts Allow"
-msgstr ""
+msgstr "Ignorare Hosts Allow"
 
 msgid "Import"
 msgstr "Import"
@@ -6293,7 +6299,7 @@ msgid "Option is unlocked"
 msgstr "Opțiunea este deblocată"
 
 msgid "Optional"
-msgstr ""
+msgstr "Opţional"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Text opțional pentru destinație."
@@ -7599,7 +7605,7 @@ msgid "Security"
 msgstr "Securitate"
 
 msgid "Security Warning"
-msgstr ""
+msgstr "Avertisment de securitate"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7856,7 +7862,7 @@ msgstr ""
 "minimă acceptată: 10."
 
 msgid "Set or reset user password."
-msgstr ""
+msgstr "Setare sau resetare parolă utilizator."
 
 msgid "Set read only."
 msgstr "Setare doar citire."
@@ -9303,6 +9309,7 @@ msgstr ""
 
 msgid "The time update interval must be between 6 and 1440."
 msgstr ""
+"Intervalul de timp pentru actualizare trebuie să fie între 6 și 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr "Numărul total de erori apărute la scrierea unui sector."
@@ -11201,101 +11208,3 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Bulgară"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Chineză (Simplificată)"
-
-#~ msgid "Czech"
-#~ msgstr "Cehă"
-
-#~ msgid "Danish"
-#~ msgstr "Daneză"
-
-#~ msgid "Dutch"
-#~ msgstr "Olandeză"
-
-#~ msgid "English"
-#~ msgstr "Engleză"
-
-#~ msgid "French"
-#~ msgstr "Franceză"
-
-#~ msgid "German"
-#~ msgstr "Germană"
-
-#~ msgid "Greek"
-#~ msgstr "Greacă"
-
-#~ msgid "Hungarian"
-#~ msgstr "Ungară"
-
-#~ msgid "Italian"
-#~ msgstr "Italiană"
-
-#~ msgid "Japanese"
-#~ msgstr "Japoneză"
-
-#~ msgid "Norwegian (Bokmal)"
-#~ msgstr "Norvegiană (Bokmal)"
-
-#~ msgid "Polish"
-#~ msgstr "Poloneză"
-
-#~ msgid "Romanian"
-#~ msgstr "Română"
-
-#~ msgid "Russian"
-#~ msgstr "Rusă"
-
-#~ msgid "Spanish"
-#~ msgstr "Spaniolă"
-
-#~ msgid "Swedish"
-#~ msgstr "Suedeză"
-
-#~ msgid "Slovenian"
-#~ msgstr "Slovenă"
-
-#~ msgid "Korean"
-#~ msgstr "Koreană"
-
-#~ msgid "Portuguese (Brazil)"
-#~ msgstr "Portugheză (Brazilia)"
-
-#~ msgid "Portuguese (Portugal)"
-#~ msgstr "Portugheză (Portugalia)"
-
-#~ msgid "Slovak"
-#~ msgstr "Slovacă"
-
-#~ msgid "Finnish"
-#~ msgstr "Finlandeză"
-
-#~ msgid "Turkish"
-#~ msgstr "Turcă"
-
-#~ msgid ""
-#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
-#~ msgstr ""
-#~ "Numele serverului NTP poate conține doar caracterele a-z, 0-9, '-' şi '.'."
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Chineză (Tradițională)"
-
-#~ msgid "The time update interval must be either between 6 and 1440."
-#~ msgstr "Timpul pentru actualizare trebuie să fie între 6 și 1440."
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ucraineană"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Africană"
-
-#~ msgid "Catalan"
-#~ msgstr "Catalană"
-
-#~ msgid "Enter the user password."
-#~ msgstr "Introducere parolă utilizator."
