@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-16 09:01+0000\n"
+"PO-Revision-Date: 2017-06-30 22:34+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-29 19:24+0000\n"
+"X-Launchpad-Export-Date: 2017-07-04 13:42+0000\n"
 "X-Generator: Launchpad (build 18419)\n"
 "Language: ca_ES\n"
 
@@ -221,6 +221,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Un nom del servidor de temps NTP només pot contenir els següents caràcters: "
+"a-z, 0-9, '-' i '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -1082,7 +1084,7 @@ msgid "AutoScale"
 msgstr "Escala automàtica"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Autodetecta"
 
 msgid "Autoscale"
 msgstr "Autoescala"
@@ -3608,6 +3610,8 @@ msgstr ""
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Activeu aquesta opció per permetre que qualsevol adreça IP accedeixi al "
+"WebGUI."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3642,6 +3646,8 @@ msgstr "Activat"
 msgid ""
 "Enabling this option may expose your system to additional security risk!"
 msgstr ""
+"Si habiliteu aquesta opció, podeu exposar el vostre sistema a un risc de "
+"seguretat addicional."
 
 msgid "Encrypt password"
 msgstr "Xifrar contrasenya"
@@ -3778,13 +3784,13 @@ msgid "Enter full name of the user."
 msgstr "Introdueix el nom i cognoms de l'usuari."
 
 msgid "Enter full user name"
-msgstr ""
+msgstr "Introduïu el nom d'usuari complet"
 
 msgid "Enter hostname or IP address."
 msgstr "Introduïu el nom d'amfitrió o l'adreça IP."
 
 msgid "Enter login name"
-msgstr ""
+msgstr "Introduïu el nom d'inici de sessió"
 
 msgid "Enter login name of the user."
 msgstr "Introdueix el nom d'inici de sessió de l'usuari."
@@ -4733,7 +4739,7 @@ msgstr ""
 "muntar."
 
 msgid "Ignore Hosts Allow"
-msgstr ""
+msgstr "Ignora els Amfitrions permesos"
 
 msgid "Import"
 msgstr "Importar"
@@ -6340,7 +6346,7 @@ msgid "Option is unlocked"
 msgstr "Opció desbloquejada"
 
 msgid "Optional"
-msgstr ""
+msgstr "Opcional"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Cadena de fàcil ús opcional de l'objectiu."
@@ -7651,7 +7657,7 @@ msgid "Security"
 msgstr "Seguretat"
 
 msgid "Security Warning"
-msgstr ""
+msgstr "Alerta de seguretat"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7909,7 +7915,7 @@ msgstr ""
 "permès és de 10."
 
 msgid "Set or reset user password."
-msgstr ""
+msgstr "Estableix o reinicia la contrasenya de l'usuari."
 
 msgid "Set read only."
 msgstr "Fes-ho només lectura."
@@ -9380,7 +9386,7 @@ msgstr ""
 "temps s'ha acabat el tancament es cancel·la."
 
 msgid "The time update interval must be between 6 and 1440."
-msgstr ""
+msgstr "L'interval d'actualització del temps ha de ser entre 6 i 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr "El recompte total d'errors a l'escriure un sector."
@@ -11287,102 +11293,3 @@ msgstr "cap a"
 
 msgid "umount"
 msgstr "desmontar"
-
-#~ msgid ""
-#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
-#~ msgstr ""
-#~ "Un nom de servidor d'hora NTP només poden contenir els caràcters a-z, 0-9, '-"
-#~ "' i '.'."
-
-#~ msgid "Bulgarian"
-#~ msgstr "Búlgar"
-
-#~ msgid "Czech"
-#~ msgstr "Txec"
-
-#~ msgid "Danish"
-#~ msgstr "Danès"
-
-#~ msgid "Dutch"
-#~ msgstr "Holandès"
-
-#~ msgid "English"
-#~ msgstr "Anglés"
-
-#~ msgid "Russian"
-#~ msgstr "Rus"
-
-#~ msgid "Finnish"
-#~ msgstr "Finès"
-
-#~ msgid "French"
-#~ msgstr "Francès"
-
-#~ msgid "German"
-#~ msgstr "Alemany"
-
-#~ msgid "Greek"
-#~ msgstr "Grec"
-
-#~ msgid "Hungarian"
-#~ msgstr "Hongarès"
-
-#~ msgid "Italian"
-#~ msgstr "Italià"
-
-#~ msgid "Korean"
-#~ msgstr "Coreà"
-
-#~ msgid "Japanese"
-#~ msgstr "Japonès"
-
-#~ msgid "Norwegian (Bokmal)"
-#~ msgstr "Noruec (Bokmål)"
-
-#~ msgid "Polish"
-#~ msgstr "Polonès"
-
-#~ msgid "Portuguese (Portugal)"
-#~ msgstr "Portuguès (Portugal)"
-
-#~ msgid "Portuguese (Brazil)"
-#~ msgstr "Portuguès (Brasil)"
-
-#~ msgid "Romanian"
-#~ msgstr "Romanès"
-
-#~ msgid "Slovak"
-#~ msgstr "Eslovac"
-
-#~ msgid "Slovenian"
-#~ msgstr "Eslovè"
-
-#~ msgid "Spanish"
-#~ msgstr "Espanyol"
-
-#~ msgid "Swedish"
-#~ msgstr "Suec"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Africà"
-
-#~ msgid "The time update interval must be either between 6 and 1440."
-#~ msgstr "L'interval d'actualització de temps ha de ser entre 6 i 1440."
-
-#~ msgid "Turkish"
-#~ msgstr "Turc"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ucraïnès"
-
-#~ msgid "Catalan"
-#~ msgstr "Català"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "xinès (Simplificat)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "xinès (Tradicional)"
-
-#~ msgid "Enter the user password."
-#~ msgstr "Introduïu la contrasenya d'usuari."

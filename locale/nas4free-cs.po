@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-19 18:58+0000\n"
+"PO-Revision-Date: 2017-06-30 15:18+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-06-29 19:26+0000\n"
+"X-Launchpad-Export-Date: 2017-07-04 13:41+0000\n"
 "X-Generator: Launchpad (build 18419)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -220,6 +220,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Název časového (NTP) serveru se může sestávat pouze z písmen a-z (bez "
+"diakritiky), číslic 0-9, dále znaků „-“ (spojovník), a „.“ (tečka)."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -1084,7 +1086,7 @@ msgid "AutoScale"
 msgstr "Měřítko automaticky"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Automatické rozpoznání"
 
 msgid "Autoscale"
 msgstr "Měřítko automaticky"
@@ -3603,6 +3605,8 @@ msgstr ""
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Pomocí této předvolby umožníte přístup k webovému správnímu rozhraní z "
+"libovolné IP adresy."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3635,6 +3639,8 @@ msgstr "Zapnuto"
 msgid ""
 "Enabling this option may expose your system to additional security risk!"
 msgstr ""
+"Může se stát, že zapnutím této předvolby vystavíte svůj systém dalšímu "
+"bezpečnostnímu riziku!"
 
 msgid "Encrypt password"
 msgstr "Heslo pro šifrování"
@@ -3767,13 +3773,13 @@ msgid "Enter full name of the user."
 msgstr "Zadejte úplný název uživatele"
 
 msgid "Enter full user name"
-msgstr ""
+msgstr "Zadejte jméno a příjmení uživatele"
 
 msgid "Enter hostname or IP address."
 msgstr "Zadejte název nebo IP adresu stroje."
 
 msgid "Enter login name"
-msgstr ""
+msgstr "Zadejte uživatelské jméno"
 
 msgid "Enter login name of the user."
 msgstr "Zadejte přihlašovací jméno uživatele."
@@ -4712,7 +4718,7 @@ msgstr ""
 "(mount)."
 
 msgid "Ignore Hosts Allow"
-msgstr ""
+msgstr "Nevšímat si seznamu strojů kterým je umožněn přístup"
 
 msgid "Import"
 msgstr "Importovat"
@@ -6336,7 +6342,7 @@ msgid "Option is unlocked"
 msgstr "Předvolba je odemčena"
 
 msgid "Optional"
-msgstr ""
+msgstr "Volitelné"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Nepoviný, uživateli srozumitelný název cíle."
@@ -7647,7 +7653,7 @@ msgid "Security"
 msgstr "Zabezpečení"
 
 msgid "Security Warning"
-msgstr ""
+msgstr "Varování o zabezpečení"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7904,7 +7910,7 @@ msgstr ""
 "Nastavit interval mezi kontrolami disku na N sekund. Minimální hodnota je 10."
 
 msgid "Set or reset user password."
-msgstr ""
+msgstr "Nastavit nebo resetovat heslo uživatele."
 
 msgid "Set read only."
 msgstr "Nastavit pouze pro čtení"
@@ -9377,7 +9383,7 @@ msgstr ""
 "obnoveno před vypršením této doby, vypínání je zrušeno."
 
 msgid "The time update interval must be between 6 and 1440."
-msgstr ""
+msgstr "Je třeba aby interval aktualizace času byl mezi 6 a 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr "Celkový počet chyb při zapisování do sektoru."
@@ -11300,103 +11306,3 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
-
-#~ msgid "Dutch"
-#~ msgstr "holandština"
-
-#~ msgid "French"
-#~ msgstr "francouzština"
-
-#~ msgid "Spanish"
-#~ msgstr "Španělština"
-
-#~ msgid "Portuguese (Portugal)"
-#~ msgstr "portugalština (Portugalsko)"
-
-#~ msgid "The time update interval must be either between 6 and 1440."
-#~ msgstr "Je třeba, aby interval aktualizace času byl mezi 6 a 1440."
-
-#~ msgid "Bulgarian"
-#~ msgstr "bulharština"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "čínština (zjednodušená)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "čínština (klasická)"
-
-#~ msgid "Czech"
-#~ msgstr "čeština"
-
-#~ msgid "Danish"
-#~ msgstr "dánština"
-
-#~ msgid "Polish"
-#~ msgstr "polština"
-
-#~ msgid "Portuguese (Brazil)"
-#~ msgstr "portugalština (Brazílie)"
-
-#~ msgid "Turkish"
-#~ msgstr "turečtina"
-
-#~ msgid "Ukrainian"
-#~ msgstr "ukrajinština"
-
-#~ msgid "English"
-#~ msgstr "angličtina"
-
-#~ msgid "Finnish"
-#~ msgstr "finština"
-
-#~ msgid "German"
-#~ msgstr "němčina"
-
-#~ msgid "Greek"
-#~ msgstr "řečtina"
-
-#~ msgid "Hungarian"
-#~ msgstr "maďarština"
-
-#~ msgid "Italian"
-#~ msgstr "italština"
-
-#~ msgid "Japanese"
-#~ msgstr "japonština"
-
-#~ msgid "Korean"
-#~ msgstr "korejština"
-
-#~ msgid "Norwegian (Bokmal)"
-#~ msgstr "norština (bokmal)"
-
-#~ msgid "Romanian"
-#~ msgstr "rumunština"
-
-#~ msgid "Russian"
-#~ msgstr "ruština"
-
-#~ msgid "Slovak"
-#~ msgstr "slovenština"
-
-#~ msgid "Slovenian"
-#~ msgstr "slovinština"
-
-#~ msgid "Swedish"
-#~ msgstr "švédština"
-
-#~ msgid ""
-#~ "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
-#~ msgstr ""
-#~ "Název časového (NTP) serveru může obsahovat pouze malá písmena „a“ až „z“ "
-#~ "(bez háčků a čárek!), dále číslice 0 až 9 a pak ještě znaky „-“ (spojovník) "
-#~ "a „.“ (tečka)."
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikánština"
-
-#~ msgid "Catalan"
-#~ msgstr "Katalánština"
-
-#~ msgid "Enter the user password."
-#~ msgstr "Zadejte uživatelské heslo."
