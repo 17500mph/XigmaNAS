@@ -1,9 +1,9 @@
---- minidlna.c.orig	2015-11-12 02:11:30.895797000 +0900
-+++ minidlna.c	2015-11-12 02:12:27.899892000 +0900
-@@ -263,6 +263,28 @@
- 	else if (strcmp(modelnumber, "NV+ v2") == 0)
- 		memcpy(pnpx_hwid+17, "0109", 4);
- #endif
+--- ./minidlna.c.orig	2017-06-23 15:06:34.948323000 +0200
++++ ./minidlna.c	2017-06-23 15:08:59.000000000 +0200
+@@ -240,6 +240,28 @@
+ 		}
+ 	}
+ 	fclose(info);
 +#elif defined(NAS4Free)
 +	FILE *fp_name, *fp_platform;
 +	char tmpbuf[64], tmpbuf2[64], *name, *platform;
