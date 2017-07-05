@@ -1,24 +1,23 @@
 PORTNAME=	minidlna
-PORTVERSION=	1.1.5
-PORTREVISION=	1
-PORTEPOCH=	0
+PORTVERSION=	1.2.0
+PORTEPOCH=	1
 CATEGORIES=	net multimedia www
 MASTER_SITES=	SF
 
-MAINTAINER=	aoyama@nas4free.org
+MAINTAINER=	zoon1@nas4free.org
 COMMENT=	Media-server compatible with "Digital Life Network Alliance"
 
-LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
-		libexif.so:${PORTSDIR}/graphics/libexif	\
-		libid3tag.so:${PORTSDIR}/audio/libid3tag \
-		libogg.so:${PORTSDIR}/audio/libogg \
-		libvorbis.so:${PORTSDIR}/audio/libvorbis \
-		libFLAC.so:${PORTSDIR}/audio/flac \
-		libavformat.so:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
+		libexif.so:graphics/libexif \
+		libid3tag.so:audio/libid3tag \
+		libogg.so:audio/libogg \
+		libvorbis.so:audio/libvorbis \
+		libFLAC.so:audio/flac \
+		libavformat.so:multimedia/ffmpeg
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-db-path=/var/db/minidlna \
-		--with-os-url="http://www.nas4free.org"
+		--with-os-url="https://www.nas4free.org"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-DNAS4Free
 LIBS+=		-L${LOCALBASE}/lib
@@ -64,8 +63,5 @@ post-install:
 	@echo "install for ${NAS4FREE_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/minidlnad ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/minidlna.in ${NAS4FREE_ROOTFS}/etc/rc.d/minidlna
-#	for lang in da de es fr it ja nb nl pl ru sl sv; do \
-#		${CP} -pv ${STAGEDIR}${PREFIX}/share/locale/$${lang}/LC_MESSAGES/minidlna.mo ${NAS4FREE_ROOTFS}/usr/local/share/locale/$${lang}/LC_MESSAGES; \
-#	done
 
 .include <bsd.port.mk>
