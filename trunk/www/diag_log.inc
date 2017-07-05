@@ -158,7 +158,7 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(.*)$/',
 		'columns' => [
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcell','param' => '','pmid' => 1]
+			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
 		]],
 	[
 		'visible' => true,
@@ -168,7 +168,7 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(.*)$/',
 		'columns' => [
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcell','param' => '','pmid' => 1]
+			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
 		]],
 	[
 		'visible' => true,
@@ -178,7 +178,7 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(.*)$/',
 		'columns' => [
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcell','param' => '','pmid' => 1]
+			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
 		]],
 	[
 		'visible' => true,
