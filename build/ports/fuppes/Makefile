@@ -1,6 +1,6 @@
 PORTNAME=		fuppes
 PORTVERSION=	0.692
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=		net
 COMMENT=		Free UPnP Entertainment Service
 MAINTAINER=		zoon1@nas4free.org
@@ -49,6 +49,13 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src__lib__Common__Common.cpp \
 		${FILESDIR}/extra-patch-src__lib__Common__Directory.cpp \
 		${FILESDIR}/extra-patch-src__lib__ContentDirectory__DatabaseConnection.cpp \
 		${FILESDIR}/extra-patch-src__plugins__database_sqlite3.cpp
+.endif
+
+.include <bsd.port.pre.mk>
+
+pre-patch:
+.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+	${CP} ${FILESDIR}/extra-patch-ffmpeg-configure-n4f ${PORTSDIR}/multimedia/ffmpeg/files/patch-configure-n4f
 .endif
 
 pre-configure:
