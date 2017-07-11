@@ -72,15 +72,19 @@ var \$enableAdvancedConfig = true;
 }
 EOF
 
-	# Create devfs rules for tap devices
-	grep "vbox_tap" /etc/devfs.rules > /dev/null 2>&1
+	# Create devfs rules for vbox
+	grep "vbox" /etc/devfs.rules > /dev/null 2>&1
 	if [ $? -ne 0 ]; then
-		echo "[vbox_tap=10]" >> /etc/devfs.rules
+		echo "[vbox=10]" >> /etc/devfs.rules
+		# Add rule for tap devices
 		echo "add path 'tap*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
-		/usr/local/sbin/rconf attribute set devfs_system_ruleset vbox_tap
-		/etc/rc.d/devfs start
+		if [ 0 -lt `configxml_get_count "//vbox/allowusb"` ]; then
+			# Add rule for USB
+			echo "add path 'usb/*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
+		fi
+		/usr/local/sbin/rconf attribute set devfs_system_ruleset vbox
+		/etc/rc.d/devfs restart
 	fi
-
 	# Create certificate
 	_certificate=`configxml_get "//system/webgui/certificate"`
 	_privatekey=`configxml_get "//system/webgui/privatekey"`
