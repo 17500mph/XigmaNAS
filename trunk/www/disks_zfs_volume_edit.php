@@ -159,14 +159,14 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	foreach(['volsize'] as $ref):
 		if(!isset($sphere_record[$ref])):
 			$sphere_record[$ref] = $_POST[$ref] ?? $prop->$ref->defaultvalue(); // restore $_POST or populate default
-			$input_errors[] = $prop->$ref->errormessage();
+			$input_errors[] = $prop->$ref->message_error();
 		endif;
 	endforeach;
 	// validate list elements
 	foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
 		if(!isset($sphere_record[$ref])):
 			$sphere_record[$ref] = '';
-			$input_errors[] = $prop->$ref->errormessage();
+			$input_errors[] = $prop->$ref->message_error();
 		endif;
 	endforeach;
 	if(empty($input_errors)):
@@ -176,12 +176,12 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."),gtext('Name'));
 		endif;
 	endif;
-	
-	// 1. RECORD_MODIFY: throw error if posted pool is different from configured pool.
-	// 2. RECORD_NEW: posted pool/name must not exist in configuration or live.
-	// 3. RECORD_NEW_MODIFY: if posted pool/name is different from configured pool/name: posted pool/name must not exist in configuration or live.
-	// 4. RECORD_MODIFY: if posted name is different from configured name: pool/posted name must not exist in configuration or live.
-	// 
+/*	
+	1. RECORD_MODIFY: throw error if posted pool is different from configured pool.
+	2. RECORD_NEW: posted pool/name must not exist in configuration or live.
+	3. RECORD_NEW_MODIFY: if posted pool/name is different from configured pool/name: posted pool/name must not exist in configuration or live.
+	4. RECORD_MODIFY: if posted name is different from configured name: pool/posted name must not exist in configuration or live.
+*/
 	// 1.
 	if(empty($input_errors)):
 		if($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0],$sphere_record['pool']))):
@@ -292,7 +292,9 @@ include 'fbegin.inc';
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init spinner onsubmit()
+<?php
+	//	Init spinner on submit for id iform.
+?>
 	$("#iform").submit(function() { spinner(); });
 }); 
 //]]>
