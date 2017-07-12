@@ -17,9 +17,9 @@ BUILD_DEPENDS=		sqlite3>=3.0:databases/sqlite3
 LIB_DEPENDS=		libpcre.so:devel/pcre
 LIB_DEPENDS+=		libcurl.so:ftp/curl
 LIB_DEPENDS+=		libmcrypt.so:security/libmcrypt
-LIB_DEPENDS+=		libonig.so:devel/oniguruma5
+LIB_DEPENDS+=		libonig.so:devel/oniguruma6
 LIB_DEPENDS+=		libfreetype.so:print/freetype2
-LIB_DEPENDS+=		libpng16.so:graphics/png
+LIB_DEPENDS+=		libpng.so:graphics/png
 LIB_DEPENDS+=		libjpeg.so:graphics/jpeg
 LIB_DEPENDS+=		libvpx.so:multimedia/libvpx
 LIB_DEPENDS+=		libgmp.so:math/gmp
