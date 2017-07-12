@@ -189,12 +189,12 @@ embedded_upgrade() {
 			exit 1
 		else
 			printf "${fmtsuccess}" "SUCCESS: ${topic}"
-			# resize boot partition
-			topic="Resizing boot partition."
+			# expand boot file system
+			topic="Expand boot file system."
 			printf "${fmtexecute}" "EXECUTING: ${topic}"
 			/sbin/growfs -y /dev/${CFDEVICE} > /dev/null 2>&1
 			if [ 0 != $? ]; then
-				msg="ERROR: Failed partition resize!"
+				msg="ERROR: Failed expanding boot file system!"
 				printf "\33[31m%s\33[0m\n" "${msg}"
 				/usr/bin/logger "UPGRADE ${msg}"
 				exit 1
