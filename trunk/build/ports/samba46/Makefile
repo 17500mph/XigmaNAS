@@ -13,7 +13,7 @@ NO_LICENSES_INSTALL=		yes
 NO_LICENSES_DIALOGS=		yes
 LICENSE=			GPLv3
 
-CONFLICTS?=			*samba3[2-6]-3.* samba4-4.0.* samba4[1-5]-4.* p5-Parse-Pidl-4.*
+CONFLICTS?=			*samba3[2-6]-3.* samba4-4.0.* samba4[1-57-9]-4.* p5-Parse-Pidl-4.*
 
 #EXTRA_PATCHES=			${PATCHDIR}/extra-patch-security:-p1
 
@@ -291,6 +291,9 @@ CFLAGS+=			-fno-omit-frame-pointer
 .endif
 .if ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=			-fno-color-diagnostics
+.endif
+.if ${readline_ARGS} == port
+CFLAGS+=			-D_FUNCTION_DEF
 .endif
 # NAS4Free
 .if ${OSVERSION} >= 1100000
