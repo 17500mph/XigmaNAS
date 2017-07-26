@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-23 17:58+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-26 05:01+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:41+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -215,6 +215,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Az NTP időszerver neve a következő karaktereket tartalmazhatja: : a-z, 0-9, "
+"'-' és '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -275,6 +277,9 @@ msgstr "Egy újrakeresést kezdeményezett."
 
 msgid "A route to this destination network already exists."
 msgstr "Az útvonal ehhez a célhálózathoz már létezik."
+
+msgid "A sysvol folder was found."
+msgstr "Találtunk egy sysvol mappát."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -734,6 +739,9 @@ msgstr "Új fájlok engedélyezése"
 msgid "Allow TLS connections only."
 msgstr "Csak TLS kapcsolat engedélyezése."
 
+msgid "Allow USB"
+msgstr "USB engedélyezése"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Engedélyezés a klienseknek a jelszó nélküli hozzáféréshez."
 
@@ -1063,7 +1071,7 @@ msgid "AutoScale"
 msgstr "Automatikus méretezés"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Automatikus felismerés"
 
 msgid "Autoscale"
 msgstr "Automatikus skálázás"
@@ -1188,6 +1196,9 @@ msgstr "Akkumulátor hőmérséklete"
 
 msgid "Battery voltage"
 msgstr "Akkumulátor feszültsége"
+
+msgid "Be careful enabling this option."
+msgstr "Legyen óvatos, ha engedélyezi ezt a lehetőséget."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Előtte - Átvitel megkezdése előtt töröljük a fájlokat."
@@ -3539,6 +3550,11 @@ msgstr ""
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Kapcsolja be ezt az opciót, hogy tetszőleges IP címről elérhető legyen a "
+"WEBGUI."
+
+msgid "Enable this option to make host USB available to clients."
+msgstr "Ez a beállítás a kliensek számára bekapcsolja a kiszolgáló USB-jét."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3572,6 +3588,7 @@ msgstr "Engedélyezve"
 msgid ""
 "Enabling this option may expose your system to additional security risk!"
 msgstr ""
+"Ennek bekapcsolásával biztonsági kockázatnak teheted ki a rendszeredet!"
 
 msgid "Encrypt password"
 msgstr "Titkosító jelszó"
@@ -3708,13 +3725,13 @@ msgid "Enter full name of the user."
 msgstr "Add meg a felhasználó teljes nevét."
 
 msgid "Enter full user name"
-msgstr ""
+msgstr "Add meg a felhasználó teljes nevét"
 
 msgid "Enter hostname or IP address."
 msgstr "Add meg a kiszolgálónevét vagy az IP címét."
 
 msgid "Enter login name"
-msgstr ""
+msgstr "Add meg a felhasználó bejelentkezési nevét"
 
 msgid "Enter login name of the user."
 msgstr "Add meg a felhasználó bejelentkezési nevét."
@@ -4062,9 +4079,6 @@ msgstr "Fájl feltöltés leállt."
 msgid "Filename"
 msgstr "Fájlnév"
 
-msgid "Fileserver"
-msgstr "Fájlszerver"
-
 msgid "Filesystem"
 msgstr "Fájlrendszer"
 
@@ -4219,8 +4233,8 @@ msgstr "Általános beállítások"
 msgid "Generate a new unique identifier for a pool"
 msgstr "Egyedi azonosító generálása a tárolónak"
 
-msgid "Generate password if leave empty."
-msgstr "Jelszó generálásához hagyd üresen."
+msgid "Generate password if left empty."
+msgstr "Generáljon jelszót, ha üres."
 
 msgid "Get Target Info"
 msgstr "Cél info"
@@ -4643,7 +4657,7 @@ msgstr ""
 "Ha ez a tulajdonság ki van kapcsolva, a fájlrendszer nem csatolható be."
 
 msgid "Ignore Hosts Allow"
-msgstr ""
+msgstr "Engedélyezett kiszolgálók figyelmen kívül hagyása"
 
 msgid "Import"
 msgstr "Importálás"
@@ -6103,9 +6117,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "Nem csatolt"
 
-msgid "Not found path."
-msgstr "Útvonal nem található."
-
 msgid "Note"
 msgstr "Megjegyzés"
 
@@ -6240,7 +6251,7 @@ msgid "Option is unlocked"
 msgstr "Opció zárolása feloldva"
 
 msgid "Optional"
-msgstr ""
+msgstr "Nem kötelező"
 
 msgid "Optional user-friendly string of the target."
 msgstr "A cél opcionális felhasználóbarát sztringje."
@@ -6472,6 +6483,9 @@ msgstr "Illessz be ide egy privát kulcsot PEM formátumban"
 
 msgid "Path"
 msgstr "Útvonal"
+
+msgid "Path not found."
+msgstr "Útvonal nem található."
 
 msgid "Path of the URL relative to document root."
 msgstr "Az URL relatív útvonala a gyökérdokumentumhoz viszonyítva."
@@ -7547,7 +7561,7 @@ msgid "Security"
 msgstr "Biztonság"
 
 msgid "Security Warning"
-msgstr ""
+msgstr "Biztonsági figyelmeztetés"
 
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
@@ -7806,7 +7820,7 @@ msgstr ""
 "megengedett érték 10."
 
 msgid "Set or reset user password."
-msgstr ""
+msgstr "Jelszó beállítása vagy módosítása."
 
 msgid "Set read only."
 msgstr "Csak olvashatónak beállítás."
@@ -9255,7 +9269,7 @@ msgstr ""
 "szünetmentes visszaáll, a leállítás megszakad."
 
 msgid "The time update interval must be between 6 and 1440."
-msgstr ""
+msgstr "Az időszinkronizáció értéke 6 és 1440 közé kell, hogy essen."
 
 msgid "The total count of errors when writing a sector."
 msgstr "Szektor írásakor fellépő hibák összszáma."
@@ -11113,9 +11127,6 @@ msgstr "sikeresen."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "sysvol létezik az útvonalban."
 
 msgid "to"
 msgstr "eddig:"

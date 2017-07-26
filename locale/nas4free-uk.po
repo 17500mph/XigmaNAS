@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-25 09:56+0000\n"
-"Last-Translator: uniss <uniss@ua.fm>\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-26 13:45+0000\n"
+"Last-Translator: Lintruder <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:43+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -214,6 +214,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Ім'я сервера часу NTP може складатися лише з наступних символів: a-z, 0-9, '-"
+"' та '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -275,6 +277,9 @@ msgstr "Повторне сканування було виконано."
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут до цієї підмережі вже існує."
+
+msgid "A sysvol folder was found."
+msgstr "Було знайдено папку sysvol."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -736,6 +741,9 @@ msgstr "Дозволити нові файли"
 msgid "Allow TLS connections only."
 msgstr "Дозволяти лише TLS з'єднання."
 
+msgid "Allow USB"
+msgstr "Дозволити USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr ""
 "Дозволити клієнтський доступ для облікових записів, що мають пустий пароль."
@@ -1191,6 +1199,9 @@ msgstr "Температура батареї"
 
 msgid "Battery voltage"
 msgstr "Напруга батареї"
+
+msgid "Be careful enabling this option."
+msgstr "Будьте обачні, обираючи цю опцію."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - Видалення файлів буде завершено до початку передачі."
@@ -3568,6 +3579,11 @@ msgstr ""
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Оберіть цю опцію, щоб дозволити доступ до WebGUI з будь-якої IP-адреси."
+
+msgid "Enable this option to make host USB available to clients."
+msgstr ""
+"Оберіть цю опцію, щоб дозволити доступ з кліентів до USB портів хоста."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3601,6 +3617,7 @@ msgstr "Увімкнено"
 msgid ""
 "Enabling this option may expose your system to additional security risk!"
 msgstr ""
+"Обрання цієї опції може наразити вашу систему на додаткові безпекові ризики!"
 
 msgid "Encrypt password"
 msgstr "Пароль шифрування"
@@ -4094,9 +4111,6 @@ msgstr "Завантаження файла зупинено розширенн�
 msgid "Filename"
 msgstr "Ім'я файла"
 
-msgid "Fileserver"
-msgstr "Файловий сервер"
-
 msgid "Filesystem"
 msgstr "Файлова система"
 
@@ -4251,8 +4265,8 @@ msgstr "Загальні налаштування"
 msgid "Generate a new unique identifier for a pool"
 msgstr "Створення нового унікального ідентифікатора для пулу"
 
-msgid "Generate password if leave empty."
-msgstr "Згенерувати пароль, якщо пароль не вказаний."
+msgid "Generate password if left empty."
+msgstr ""
 
 msgid "Get Target Info"
 msgstr "Отримати цільову інформацію"
@@ -6135,9 +6149,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "Не під'єднано"
 
-msgid "Not found path."
-msgstr "Шлях не знайдено."
-
 msgid "Note"
 msgstr "Примітка"
 
@@ -6501,6 +6512,9 @@ msgstr "Вставте тут приватний ключ в PEM форматі.
 
 msgid "Path"
 msgstr "Шлях"
+
+msgid "Path not found."
+msgstr "Шлях не знайдено."
 
 msgid "Path of the URL relative to document root."
 msgstr "Шлях URL відносно кореня документа."
@@ -9278,7 +9292,7 @@ msgstr ""
 "до закінчення цього часу, вимкнення системи не відбудеться."
 
 msgid "The time update interval must be between 6 and 1440."
-msgstr ""
+msgstr "Час інтервалу оновлення має становити від 6 до 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr "Загальна кількість помилок при запису сектора."
@@ -11167,9 +11181,6 @@ msgstr "успішно."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "sysvol існує за вказаною шляху."
 
 msgid "to"
 msgstr "до"
