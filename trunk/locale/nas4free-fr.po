@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-29 03:35+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-21 03:44+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:41+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -287,6 +287,9 @@ msgstr "Un réexamen a été lancé."
 
 msgid "A route to this destination network already exists."
 msgstr "Une route pour cette destination existe déjà."
+
+msgid "A sysvol folder was found."
+msgstr "Un dossier sysvol a été trouvé."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -755,6 +758,9 @@ msgstr "Autoriser les nouveaux fichiers"
 msgid "Allow TLS connections only."
 msgstr "Permettre seulement les connections TLS."
 
+msgid "Allow USB"
+msgstr "Autoriser l'accès aux périphériques USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Autoriser l'accès client aux comptes ayant un mot de passe vide"
 
@@ -1212,6 +1218,9 @@ msgstr "Température de la batterie"
 
 msgid "Battery voltage"
 msgstr "Tension Batterie"
+
+msgid "Be careful enabling this option."
+msgstr "Faites attention si vous activez cette option"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -3631,6 +3640,10 @@ msgstr ""
 "Activez cette option pour permettre à toute adresse IP d'accéder a "
 "l'interface Web."
 
+msgid "Enable this option to make host USB available to clients."
+msgstr ""
+"Activez cette option pour rendre l'hôte USB disponible pour les clients."
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -4160,9 +4173,6 @@ msgstr "Upload du fichier arrêté par l'extension"
 msgid "Filename"
 msgstr "Nom de fichier"
 
-msgid "Fileserver"
-msgstr "Serveur de fichiers"
-
 msgid "Filesystem"
 msgstr "Système de fichier"
 
@@ -4317,8 +4327,8 @@ msgstr "Configuration générale"
 msgid "Generate a new unique identifier for a pool"
 msgstr "Générer un nouvel identifiant unique pour le pool"
 
-msgid "Generate password if leave empty."
-msgstr "Un mot de passe est généré si laissé vide."
+msgid "Generate password if left empty."
+msgstr "Générez le mot de passe s'il est laissé vide."
 
 msgid "Get Target Info"
 msgstr "Obtenir les info de la cible"
@@ -5520,7 +5530,7 @@ msgid "Maintenance"
 msgstr "Maintenance"
 
 msgid "Make sure to select the optimal number of devices"
-msgstr "Assurez vous d'avoir sélectionné le nombre de périphérique optimal"
+msgstr "Assurez vous d'avoir sélectionné le nombre de périphériques optimal"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Assurez-vous que vous avez activé S.M.A.R.T. pour vos périphériques."
@@ -6223,9 +6233,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "Non attaché"
 
-msgid "Not found path."
-msgstr "Chemin non trouvé"
-
 msgid "Note"
 msgstr "Note"
 
@@ -6591,6 +6598,9 @@ msgstr "Coller la clé privée au format PEM ici."
 
 msgid "Path"
 msgstr "Chemin d'accès"
+
+msgid "Path not found."
+msgstr "Chemin introuvable."
 
 msgid "Path of the URL relative to document root."
 msgstr "Chemin de l'URL relative à la racine du document."
@@ -11319,9 +11329,6 @@ msgstr "avec succès."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "sysvol existe dans le chemin."
 
 msgid "to"
 msgstr "à"

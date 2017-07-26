@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-30 15:18+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-21 15:19+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:41+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:32+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -287,6 +287,9 @@ msgstr "Bylo vyvoláno opětovné skenování."
 
 msgid "A route to this destination network already exists."
 msgstr "Trasa do této cílové sítě už existuje."
+
+msgid "A sysvol folder was found."
+msgstr "Byla nalezena složka sysvol."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -754,6 +757,9 @@ msgstr "Umožnit nové soubory"
 msgid "Allow TLS connections only."
 msgstr "Umožnit pouze šifrovaná spojení (TLS)."
 
+msgid "Allow USB"
+msgstr "Umožnit USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Umožnit klientům přístup k účtům, nechráněným heslem."
 
@@ -1213,6 +1219,9 @@ msgstr "Teplota akumulátoru"
 
 msgid "Battery voltage"
 msgstr "Napětí na svorkách akumulátoru/bloku"
+
+msgid "Be careful enabling this option."
+msgstr "Při zapínání této předvolby buďte opatrní."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Před – soubory budou smazány před zahájením přenosu."
@@ -3608,6 +3617,9 @@ msgstr ""
 "Pomocí této předvolby umožníte přístup k webovému správnímu rozhraní z "
 "libovolné IP adresy."
 
+msgid "Enable this option to make host USB available to clients."
+msgstr "Zapnutím této předvolby zpřístupníte USB klientům."
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "Zapnutí této předvolby zmenší výšku záhlaví stránky na minimum."
@@ -4131,9 +4143,6 @@ msgstr "Nahrávání souboru bylo ukončeno rozšiřujícím modulem."
 msgid "Filename"
 msgstr "Název souboru"
 
-msgid "Fileserver"
-msgstr "Souborový server"
-
 msgid "Filesystem"
 msgstr "Souborový systém"
 
@@ -4288,8 +4297,8 @@ msgstr "Obecná nastavení"
 msgid "Generate a new unique identifier for a pool"
 msgstr "Vytvořit pro fond nový jedinečný identifikátor"
 
-msgid "Generate password if leave empty."
-msgstr "Vytvořit heslo, pokud ponecháno nevyplněné."
+msgid "Generate password if left empty."
+msgstr "Pokud není vyplněné, vytvořit heslo."
 
 msgid "Get Target Info"
 msgstr "Získat informace o cíli"
@@ -6204,9 +6213,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "Nepřipojeno"
 
-msgid "Not found path."
-msgstr "Umístění nebylo nalezeno."
-
 msgid "Note"
 msgstr "Poznámka"
 
@@ -6571,6 +6577,9 @@ msgstr "Sem vložte SOUKROMOU část klíče ve formátu PEM."
 
 msgid "Path"
 msgstr "Umístění"
+
+msgid "Path not found."
+msgstr "Popsané umístění nebylo nalezeno."
 
 msgid "Path of the URL relative to document root."
 msgstr "URL adresa vztaženo ke kořenové složce dokumentu."
@@ -11297,9 +11306,6 @@ msgstr "úspěšně."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "v umístění existuje systémový svazek (sysvol)."
 
 msgid "to"
 msgstr "na"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-07-08 14:23+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-24 03:08+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:42+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -250,6 +250,9 @@ msgstr "재확인을 시도했습니다."
 msgid "A route to this destination network already exists."
 msgstr "이 목적지 네트워크에 대한 경로가 이미 존재합니다."
 
+msgid "A sysvol folder was found."
+msgstr ""
+
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
 "count is increased, both when the hard disk is turned on after having before "
@@ -387,7 +390,7 @@ msgid "Activate"
 msgstr "활성화"
 
 msgid "Activate S.M.A.R.T. monitoring for this device."
-msgstr "이 장치에 대한 S.M.A.R.T. 모니터링 활성화하기."
+msgstr "이 장치에 대한 S.M.A.R.T. 감시 활성화하기."
 
 msgid ""
 "Activate email report if you want to be notified if a failure or a new error "
@@ -695,8 +698,11 @@ msgstr "새 파일 허용"
 msgid "Allow TLS connections only."
 msgstr "TLS 연결만 허용"
 
+msgid "Allow USB"
+msgstr "USB 허용"
+
 msgid "Allow client access to accounts that have null passwords."
-msgstr "비밀번호가 없는 계정에 클라이언트가 접근하는 것 허용."
+msgstr "암호가 없는 계정으로 클라이언트가 접근하는 것 허용."
 
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
@@ -1026,7 +1032,7 @@ msgid "Back"
 msgstr "뒤로"
 
 msgid "Background"
-msgstr ""
+msgstr "배경색"
 
 msgid "Backup"
 msgstr "백업"
@@ -1110,6 +1116,9 @@ msgstr "베터리 온도"
 
 msgid "Battery voltage"
 msgstr "배터리 전압"
+
+msgid "Be careful enabling this option."
+msgstr "이 옵션 사용에 주의하십시오."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Before - 파일 삭제가 완료되면 파일 전송을 시작합니다."
@@ -1398,7 +1407,7 @@ msgid "Change the IP address of your server"
 msgstr "귀하의 서버 IP 주소를 변경하십시오"
 
 msgid "Changes to this option will take effect after a reboot."
-msgstr "이 옵션을 변경하는 것은 리붓 후에 적용됩니다."
+msgstr "이 옵션의 변경은 재시동 후에 적용됩니다."
 
 msgid "Channel"
 msgstr "채널"
@@ -1598,7 +1607,7 @@ msgid "Console Menu"
 msgstr "콘솔 메뉴"
 
 msgid "Console Screensaver"
-msgstr "콜솔 화면 보호기"
+msgstr "콘솔 화면 보호기"
 
 msgid "Console Settings"
 msgstr "콘솔 설정"
@@ -2299,7 +2308,7 @@ msgid "Delete self-test"
 msgstr "자체 테스트 삭제"
 
 msgid "Delete target"
-msgstr "타젯 삭제"
+msgstr "타겟 삭제"
 
 msgid "Deletes the recursive snapshot."
 msgstr "제귀적으로 스냅샷을 삭제합니다."
@@ -2548,7 +2557,7 @@ msgstr "Discard - 항목을 상속하지 않음"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
-msgstr "%s을(를) 위한 발견된 iSCSI 타젯"
+msgstr "%s을(를) 위한 발견된 iSCSI 타겟"
 
 msgid "Discovery Auth Group"
 msgstr "발견(Discovery) 인증 그룹"
@@ -2683,7 +2692,7 @@ msgid "Do you really want to delete this scheduled self-test?"
 msgstr "정말로 이 예약된 자체 테스트를 삭제하시겠습니까?"
 
 msgid "Do you really want to delete this target?"
-msgstr "정말로 이 타젯을 삭제하시겠습니까?"
+msgstr "정말로 이 타겟을 삭제하시겠습니까?"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -3111,7 +3120,7 @@ msgid "Edit self-test"
 msgstr "자체 테스트 편집"
 
 msgid "Edit target"
-msgstr "타젯 편집"
+msgstr "타겟 수정"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3171,7 +3180,7 @@ msgstr "NTP 활성화"
 msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
-msgstr "S.M.A.R.T. 사용 함. S.M.A.R.T. 지원 장치가 구성에 추가 되면 모니터링 합니다."
+msgstr "S.M.A.R.T. 사용 함. S.M.A.R.T. 지원 장치가 구성에 추가 되면 감시 합니다."
 
 msgid "Enable SMTP authentication."
 msgstr "SMTP 인증 활성화"
@@ -3287,7 +3296,7 @@ msgstr "이 파일 시스템에 확장 속성 활성화."
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
-msgstr "부트 과정에서 foreground/background 파일 시스템 일관성 체크 활성화."
+msgstr "시동 과정에서 foreground/background 파일 시스템 일관성 검사 활성화."
 
 msgid "Enable guest access."
 msgstr "guest 접근 활성화."
@@ -3329,7 +3338,7 @@ msgid "Enable recycle bin."
 msgstr "휴지통을 사용합니다."
 
 msgid "Enable remote monitoring of the local connected UPS."
-msgstr "로컬 연결된 UPS의 원격 모니터링 활성화."
+msgstr "로컬 연결된 UPS의 원격 감시 활성화."
 
 msgid ""
 "Enable reverse DNS lookup performed on the remote host's IP address for "
@@ -3369,6 +3378,9 @@ msgstr "이 옵션을 사용하면 수정 모드로 전환할 필요 없이 설�
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr "이 옵션을 사용하면 어떤 IP 주소로든 WebGUI에 접근할 수 있습니다."
+
+msgid "Enable this option to make host USB available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3550,7 +3562,7 @@ msgstr "명령 입력"
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
-msgstr "WPA-PSK 모드에서 이용될 비밀번호를 입력하십시오. 이것은 8자에서 63자 사이의 길이여야 합니다."
+msgstr "WPA-PSK 모드에서 사용할 암호를 입력하십시오. 이것은 8자에서 63자 사이의 길이여야 합니다."
 
 msgid ""
 "Enter the path to the database directory. The config files will be created "
@@ -3858,9 +3870,6 @@ msgstr "확장자에 의해 파일 업로드가 정지했습니다."
 msgid "Filename"
 msgstr "파일 명"
 
-msgid "Fileserver"
-msgstr "파일서버"
-
 msgid "Filesystem"
 msgstr "파일시스템"
 
@@ -4013,11 +4022,11 @@ msgstr "일반 설정"
 msgid "Generate a new unique identifier for a pool"
 msgstr "풀을 위한 새 고유 식별자 생성"
 
-msgid "Generate password if leave empty."
-msgstr "비어 있는 경우 암호 생성"
+msgid "Generate password if left empty."
+msgstr ""
 
 msgid "Get Target Info"
-msgstr "타젯 정보 얻기"
+msgstr "타겟 정보 얻기"
 
 msgid "Get a list of available drivers"
 msgstr "사용 가능한 드라이버의 목록 얻기"
@@ -5221,7 +5230,7 @@ msgid "Maximum incoming voltage seen"
 msgstr "확인된 최대 입력 전압"
 
 msgid "Maximum number of allowed password attempts before disconnection."
-msgstr "연결을 해제할 때까지 허용된 비밀번호 재 시도의 최대 수."
+msgstr "연결을 해제할 때까지 허용된 암호 재 시도의 최대 수."
 
 msgid ""
 "Maximum number of connections allowed per IP address. (0 = unlimited)."
@@ -5235,7 +5244,7 @@ msgstr "각 세션에서의 최대 연결 수(기본 값은 %d)."
 msgid ""
 "Maximum number of pre-send R2T in each connection (%d by default). The "
 "actual number is limited to QueueDepth of the target."
-msgstr "각 연결에서 미리 전송되는 R2T의 최대 수(기본 값은 %d). 실제 숫자는 타젯의 QueueDepth로 제한됩니다."
+msgstr "각 연결에서 미리 전송되는 R2T의 최대 수(기본 값은 %d). 실제 숫자는 타겟의 QueueDepth로 제한됩니다."
 
 #, php-format
 msgid "Maximum number of sessions holding at same time (%d by default)."
@@ -5568,7 +5577,7 @@ msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr ""
-"iSCSI 타젯에 대한 접근 권한을 부여 받은 네트워크. IP나 CIDR 주소 또는 모든 IP를 설정할 경우 'ALL'을 이용합니다."
+"iSCSI 타겟에 대한 접근 권한을 부여 받은 네트워크. IP나 CIDR 주소 또는 모든 IP를 설정할 경우 'ALL'을 이용합니다."
 
 msgid "Network mask"
 msgstr "네트워크 마스크"
@@ -5795,9 +5804,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "부착되지 않음"
 
-msgid "Not found path."
-msgstr "경로 찾지 못함."
-
 msgid "Note"
 msgstr "참조"
 
@@ -5924,7 +5930,7 @@ msgid "Optional"
 msgstr "선택적"
 
 msgid "Optional user-friendly string of the target."
-msgstr "타젯의 사용자 친화형 문자열(옵션)."
+msgstr "타겟의 사용자 친화형 문자열(옵션)."
 
 msgid "Options"
 msgstr "옵션"
@@ -6091,10 +6097,10 @@ msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 
 msgid "Password"
-msgstr "비밀번호"
+msgstr "암호"
 
 msgid "Password (confirmed)"
-msgstr "비밀번호(확인됨)"
+msgstr "암호(확인됨)"
 
 msgid "Password Authentication"
 msgstr "암호 인증"
@@ -6114,13 +6120,13 @@ msgid ""
 msgstr "암호가 암호 확인과 일치하지 않습니다. 두 암호가 동일해야 합니다."
 
 msgid "Password don't match."
-msgstr "비밀번호가 맞지 않습니다."
+msgstr "암호가 일치하지 않습니다."
 
 msgid "Password for the administrative pages."
-msgstr "관리자 페이지를 위한 비밀번호."
+msgstr "관리자 페이지를 위한 암호."
 
 msgid "Password of domain administrator account."
-msgstr "도메인 관리 계정의 비밀번호."
+msgstr "도메인 관리 계정의 함호."
 
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
@@ -6143,6 +6149,9 @@ msgstr "여기에 개인 키를 PEM 포맷으로 붙여 넣습니다."
 
 msgid "Path"
 msgstr "경로"
+
+msgid "Path not found."
+msgstr ""
 
 msgid "Path of the URL relative to document root."
 msgstr "문서 루트에 대한 URL의 상대 경로."
@@ -6668,7 +6677,7 @@ msgid "Reason for last transfer to battery (* opaque)"
 msgstr ""
 
 msgid "Reboot"
-msgstr "리붓"
+msgstr "재시동"
 
 msgid "Reboot Required"
 msgstr "재시동 필요"
@@ -7100,7 +7109,7 @@ msgid "Scan Mode"
 msgstr "검사 모드"
 
 msgid "Scan Targets"
-msgstr "타젯 스캔"
+msgstr "타겟 확인"
 
 msgid ""
 "Scan file system every N seconds to see if any files have been added or "
@@ -7108,8 +7117,8 @@ msgid ""
 "is disabled, a scan can still be forced from the status page of the "
 "administrative web interface."
 msgstr ""
-"파일이 추가되었거나 삭제되지 않았는지 보기 위해 N 초 간격으로 파일 시스템을 스캔 합니다. 0으로 설정하면 background 스캐닝이 "
-"비활성화 됩니다. background 재 스캔이 비활성화 되더라도 관리 웹 인터페이스의 상태 페이지에서는 여전히 스캔이 나갈 수 있습니다."
+"파일이 추가되었거나 삭제되었는지 보기 위해 N 초 간격으로 파일 시스템을 확인 합니다. 0으로 설정하면 background 확인이 "
+"비활성화 됩니다. background 재확인이 비활성화 되더라도 관리 웹 인터페이스의 상태 페이지에서는 여전히 확인이 감제될 수 있습니다."
 
 msgid "Schedule Time"
 msgstr "예약된 시간"
@@ -7996,37 +8005,37 @@ msgid "Tape"
 msgstr "테이프"
 
 msgid "Target"
-msgstr "타젯"
+msgstr "타겟"
 
 msgid "Target Address"
 msgstr "대상 주소"
 
 msgid "Target Alias"
-msgstr "타젯 별칭"
+msgstr "타겟 별칭"
 
 msgid "Target Name"
-msgstr "타젯 명"
+msgstr "타겟 이름"
 
 msgid "Target directory."
-msgstr "타젯 디렉터리."
+msgstr "타겟 디렉터리."
 
 msgid "Target information"
-msgstr "타젯 정보"
+msgstr "타겟 정보"
 
 msgid "Target is not selected."
-msgstr "타젯이 선택되지 않았습니다."
+msgstr "타겟이 선택되지 않았습니다."
 
 msgid "Target list"
-msgstr "타젯 리스트"
+msgstr "타겟 목록"
 
 msgid "Target side secret."
-msgstr "타젯 쪽의 비밀."
+msgstr "타겟 측 암호."
 
 msgid "Target side user name. It is usually the initiator name by default."
 msgstr "타겟 측 사용자 이름. 기본 값은 일반적으로 초기자 이름입니다."
 
 msgid "Targets"
-msgstr "타젯"
+msgstr "타겟"
 
 msgid "Temp"
 msgstr ""
@@ -8099,7 +8108,7 @@ msgid "The LAGG protocol is invalid."
 msgstr "LAG 그룹 프로토콜이 올바르지 않습니다."
 
 msgid "The LAN IP address will be reset to"
-msgstr ""
+msgstr "LAN IP 주소가 다음으로 설정됩니다:"
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -8137,7 +8146,7 @@ msgid "The administrator has been notified to apply your changes."
 msgstr "변경 내용을 적용하라는 당신의 공지를 관리자가 받았습니다."
 
 msgid "The administrator password will be reset to"
-msgstr ""
+msgstr "관리자 암호가 다음으로 설정됩니다:"
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8494,7 +8503,7 @@ msgstr "인터페이스를 알 수 없습니다."
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
-msgstr "istgtcontrol은 특수 인증 그룹에서 올바른 사용자와 비밀을 가지고 타젯을 접근할 수 있습니다."
+msgstr "istgtcontrol은 특정 인증 그룹의 올바른 사용자와 암호를 가지고 타겟에 접근할 수 있습니다."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "\"데이터베이스 디렉터리\" 위치는 올바른 위치가 아닙니다."
@@ -8533,7 +8542,7 @@ msgstr "KB/s 단위의 최대 업로드 대역 폭. 빈 필드는 무한을 의�
 msgid ""
 "The method can be accepted by the target. Auto means both none and "
 "authentication."
-msgstr "이 방법은 타젯에 의해 받아 들여질 수 있습니다. 자동은 없음과 인증을 모두 의미합니다."
+msgstr "이 방법은 타겟에 의해 받아 들여질 수 있습니다. 자동은 없음과 인증을 모두 의미합니다."
 
 msgid ""
 "The method can be accepted in discovery session. Auto means both none and "
@@ -8609,7 +8618,7 @@ msgid ""
 msgstr "오류 수정 중 잘못된 체크썸에 의해 발생한 오류의 수."
 
 msgid "The old password is not correct."
-msgstr "기존 비밀번호가 올바르지 않습니다."
+msgstr "기존 암호가 올바르지 않습니다."
 
 msgid "The password contains the illegal character ':'."
 msgstr "암호가 부적절한 문자 ':'를 포함하고 있습니다."
@@ -8618,7 +8627,7 @@ msgid "The password encryption protocol to use."
 msgstr "암호 암호화 프로토콜 사용."
 
 msgid "The passwords do not match."
-msgstr "비밀번호가 일치하지 않습니다."
+msgstr "암호가 일치하지 않습니다."
 
 msgid "The passwords do not match. Please try again."
 msgstr "암호가 일치하지 않습니다. 다시 시도하십시오."
@@ -8725,7 +8734,7 @@ msgid "The tag range is invalid."
 msgstr "태그 범위가 무효합니다."
 
 msgid "The target name already exists."
-msgstr "타젯 명이 이미 존재합니다."
+msgstr "타겟 이름이 이미 존재합니다."
 
 msgid ""
 "The time in seconds until shutdown is initiated. If the UPS happens to come "
@@ -8944,7 +8953,7 @@ msgid ""
 msgstr "이것은 이 공유가 네트워크 보기와 브라우저 목록에 이용 가능한 공유 목록으로 보이는지 여부를 제어합니다."
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
-msgstr "이 타젯 명/타젯 주소 쌍은 디스크 목록에 이미 존재합니다."
+msgstr "이 타겟 이름/타겟 주소 쌍은 디스크 목록에 이미 존재합니다."
 
 msgid "This disk already exists in the disk list."
 msgstr "이 디스크는 이미 디스크 리스트에 존재합니다."
@@ -9138,7 +9147,7 @@ msgstr "이 인자는 머신이 LDAP 디렉터리에 추가될 때 머신을 위
 msgid ""
 "This parameter specifies the suffix that is used for passwords when these "
 "are added to the LDAP directory, e.g. %s"
-msgstr "이 인자는 비밀번호들이 LDAP 디렉터리에 추가될 때 비밀번호를 위해 이용되는 접미사를 명세 합니다. 예. %s"
+msgstr "이 인자는 암호들이 LDAP 디렉터리에 추가될 때 암호를 위해 이용되는 접미사를 명세 합니다. 예. %s"
 
 #, php-format
 msgid ""
@@ -9771,8 +9780,8 @@ msgid ""
 "guest service. This user must exist in the password file, but does not "
 "require a valid login."
 msgstr ""
-"게스트에게 제공된 서비스를 접근하기 위해 이용될 사용자 명(기본 값은 'ftp')을 바꿀 경우 이 옵션을 이용하십시오. 이 사용자가 가진 "
-"권한들은 게스트 서비스에 연결한 클라이언트가 그대로 이용할 수 있게 될 것입니다. 이 사용자는 비밀번호 파일에는 존재해야 하지만 유효한 "
+"손님에게 제공된 서비스에 접근하기 위해 이용될 사용자 이름(기본 값은 'ftp')을 바꿀 경우 이 옵션을 이용하십시오. 이 사용자가 가진 "
+"권한들은 손님 서비스에 연결한 클라이언트가 그대로 이용할 수 있게 될 것입니다. 이 사용자는 암호 파일에는 존재해야 하지만 유효한 "
 "로그인을 필요로 하지는 않습니다."
 
 msgid "Use toggle button instead of enable/disable buttons."
@@ -9821,7 +9830,7 @@ msgid "Username"
 msgstr "사용자 명"
 
 msgid "Username of a domain administrator account."
-msgstr "도메인 관리 계정의 사용자 명."
+msgstr "도메인 관리 계정의 사용자 이름."
 
 msgid "Users"
 msgstr "사용자"
@@ -10186,7 +10195,7 @@ msgstr "로그 파일에서 결과를 검즘하실 수 있습니다."
 msgid ""
 "You can't unmount a drive which is used by swap file, a iSCSI-target file or "
 "any other running process!"
-msgstr "스왑 파일이나 iSCSI 타젯 파일 또는 다른 실행 프로세스에 의해 이둉되는 드라이브는 마운트 해제할 수 없습니다."
+msgstr "스왑 파일이나 iSCSI 타겟 파일 또는 다른 실행 프로세스에 의해 이용중인 드라이브는 탑제 해제할 수 없습니다."
 
 #, php-format
 msgid "You have to activate %s to advertise this service to clients."
@@ -10332,7 +10341,7 @@ msgid "filechooser"
 msgstr "파일 선택기"
 
 msgid "get target info failed."
-msgstr "타젯 정보 얻기가 실패했습니다."
+msgstr "타겟 정보 얻기가 실패했습니다."
 
 msgid "greatest settable high voltage transfer point"
 msgstr ""
@@ -10347,10 +10356,10 @@ msgid "iSCSI Initiator Settings"
 msgstr "iSCSI 초기자 설정"
 
 msgid "iSCSI Target"
-msgstr "iSCSI 타젯"
+msgstr "iSCSI 타겟"
 
 msgid "iSCSI Target Logical Unit Controller"
-msgstr "iSCSI 타젯 논리적 유닛 컨트롤러"
+msgstr "iSCSI 타겟 논리 유닛 컨트롤러"
 
 msgid "iSCSI Targets Information & Status"
 msgstr "iSCSI 타겟 정보 및 상태"
@@ -10412,10 +10421,10 @@ msgid "revision"
 msgstr "개정판"
 
 msgid "scan target failed."
-msgstr "타젯 스캔이 실패했습니다."
+msgstr "타겟 확인이 실패했습니다."
 
 msgid "seconds)"
-msgstr ""
+msgstr "초)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr ""
@@ -10428,9 +10437,6 @@ msgstr "성공적으로."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr ""
 
 msgid "to"
 msgstr ""

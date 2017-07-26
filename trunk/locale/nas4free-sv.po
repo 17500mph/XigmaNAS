@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-30 03:59+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-21 04:34+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:42+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -275,6 +275,9 @@ msgstr "En omskanning har gjorts."
 
 msgid "A route to this destination network already exists."
 msgstr "Nätverks destinationen finns redan."
+
+msgid "A sysvol folder was found."
+msgstr "En sysvol mapp hittades."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -730,6 +733,9 @@ msgstr "Tillåt nya filer"
 msgid "Allow TLS connections only."
 msgstr "Tillåt endast TLS anslutningar."
 
+msgid "Allow USB"
+msgstr "Tillåt USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Ge klienter tillgång till konton utan lösenord."
 
@@ -1180,6 +1186,9 @@ msgstr "Batteritemperatur"
 
 msgid "Battery voltage"
 msgstr "Batterispänning"
+
+msgid "Be careful enabling this option."
+msgstr "Var försiktig vid aktiveraing av denna funktion."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Före - Filborttagning kommer att ske innan överföringen startar."
@@ -3531,6 +3540,10 @@ msgstr ""
 "Aktivera detta alternativ för att tillåta vilken IP adress som helst att "
 "komma åt Webgränssnittet."
 
+msgid "Enable this option to make host USB available to clients."
+msgstr ""
+"Att aktivera denna funktion gör värdens USB tillgängliga för klienterna."
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -4053,9 +4066,6 @@ msgstr "Uppladdningen stoppades p g a fel filtyp."
 msgid "Filename"
 msgstr "Filnamn"
 
-msgid "Fileserver"
-msgstr "Filserver"
-
 msgid "Filesystem"
 msgstr "Filsystem"
 
@@ -4210,8 +4220,8 @@ msgstr "Grundinställningar"
 msgid "Generate a new unique identifier for a pool"
 msgstr "Skapa en ny unik identifierare för en pool"
 
-msgid "Generate password if leave empty."
-msgstr "Skapa lösenord om fältet lämnas tomt."
+msgid "Generate password if left empty."
+msgstr "Skapa lösenord är lämnad tom."
 
 msgid "Get Target Info"
 msgstr "Skaffa Information om Målet"
@@ -6064,9 +6074,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "Inte tillkopplad"
 
-msgid "Not found path."
-msgstr "Ej funnen sökväg."
-
 msgid "Note"
 msgstr "Observera"
 
@@ -6427,6 +6434,9 @@ msgstr "Klistra in en privat nyckel i PEM-format här."
 
 msgid "Path"
 msgstr "Sökväg"
+
+msgid "Path not found."
+msgstr "Sökvägen hittas ej."
 
 msgid "Path of the URL relative to document root."
 msgstr "Sökväg för URL relativt till dokumentroten."
@@ -11052,9 +11062,6 @@ msgstr "lyckades"
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "sysvol finns med i sökvägen."
 
 msgid "to"
 msgstr "till"

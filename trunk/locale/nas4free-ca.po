@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-30 22:34+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-22 18:27+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:43+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:34+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -284,6 +284,9 @@ msgstr "S'ha emès un re-escaneig."
 
 msgid "A route to this destination network already exists."
 msgstr "Ja existeix una ruta a aquesta xarxa de destinació."
+
+msgid "A sysvol folder was found."
+msgstr "S'ha trobat una carpeta sysvol."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -751,6 +754,9 @@ msgstr "Permetre nous arxius"
 msgid "Allow TLS connections only."
 msgstr "Permetre només conexions TSL."
 
+msgid "Allow USB"
+msgstr "Permetre USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permetre l'accés del client als comptes que tenen contrasenyes nul."
 
@@ -1208,6 +1214,9 @@ msgstr "Temperatura de la bateria"
 
 msgid "Battery voltage"
 msgstr "Voltatge de la bateria"
+
+msgid "Be careful enabling this option."
+msgstr "Aneu amb compte d'habilitar aquesta opció."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -3613,6 +3622,11 @@ msgstr ""
 "Activeu aquesta opció per permetre que qualsevol adreça IP accedeixi al "
 "WebGUI."
 
+msgid "Enable this option to make host USB available to clients."
+msgstr ""
+"Activeu aquesta opció perquè el dispositiu USB estigui disponible per als "
+"clients."
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -4148,9 +4162,6 @@ msgstr "S'ha aturat la càrrega a causa de l'extensió del fitxer."
 msgid "Filename"
 msgstr "Nom de fitxer"
 
-msgid "Fileserver"
-msgstr "Servidor de fitxers"
-
 msgid "Filesystem"
 msgstr "Sistema de fitxers"
 
@@ -4307,8 +4318,8 @@ msgstr "Configuració general"
 msgid "Generate a new unique identifier for a pool"
 msgstr "Genera un nou identificador únic per la piscina"
 
-msgid "Generate password if leave empty."
-msgstr "Generar contrasenya si es deixa buid."
+msgid "Generate password if left empty."
+msgstr "Genera la contrasenya si es deixa buida."
 
 msgid "Get Target Info"
 msgstr "Obtenir informació de destinació"
@@ -6210,9 +6221,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "No s'adjunta"
 
-msgid "Not found path."
-msgstr "No trobat camí."
-
 msgid "Note"
 msgstr "Nota"
 
@@ -6581,6 +6589,9 @@ msgstr "Enganxeu una clau privada en format PEM aquí."
 
 msgid "Path"
 msgstr "Ruta"
+
+msgid "Path not found."
+msgstr "Camí no trobat."
 
 msgid "Path of the URL relative to document root."
 msgstr "Ruta de l'URL relativa a l'arrel del document."
@@ -11284,9 +11295,6 @@ msgstr "exitosament"
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "El sysvol existeix a la ruta."
 
 msgid "to"
 msgstr "cap a"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-29 01:33+0000\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-21 01:36+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:42+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -246,6 +246,9 @@ msgstr "已經進行重複掃描"
 
 msgid "A route to this destination network already exists."
 msgstr "到目標網段的路由設置已經存在。"
+
+msgid "A sysvol folder was found."
+msgstr "找到了sysvol文件夾。"
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -686,6 +689,9 @@ msgstr "允許新檔"
 msgid "Allow TLS connections only."
 msgstr "只允許TLS連接。"
 
+msgid "Allow USB"
+msgstr "允許USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "允許沒有設置密碼的帳號連接。"
 
@@ -1100,6 +1106,9 @@ msgstr "電池溫度"
 
 msgid "Battery voltage"
 msgstr "電池電壓"
+
+msgid "Be careful enabling this option."
+msgstr "小心啟用此選項。"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "之前 - 檔刪除將在傳輸開始之前完成。"
@@ -3334,6 +3343,9 @@ msgstr "如果要直接編輯配置頁面而不需要切換到編輯模式，請
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr "啟用此選項以允許任何IP地址訪問WebGUI。"
 
+msgid "Enable this option to make host USB available to clients."
+msgstr "啟用此選項可使主機USB可用於客戶端。"
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "啟用此選項可將頁眉的高度減小到最小。"
@@ -3818,9 +3830,6 @@ msgstr "檔上傳被插件終止了."
 msgid "Filename"
 msgstr "檔案名稱"
 
-msgid "Fileserver"
-msgstr "檔伺服器"
-
 msgid "Filesystem"
 msgstr "檔系統"
 
@@ -3973,8 +3982,8 @@ msgstr "常規設置"
 msgid "Generate a new unique identifier for a pool"
 msgstr "為池生成新的唯一識別字"
 
-msgid "Generate password if leave empty."
-msgstr "如果保留為空白的話，自動生成密碼。"
+msgid "Generate password if left empty."
+msgstr "生成密碼（如果為空）。"
 
 msgid "Get Target Info"
 msgstr "獲取目標資訊"
@@ -5740,9 +5749,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "尚未連結"
 
-msgid "Not found path."
-msgstr "找不到路徑。"
-
 msgid "Note"
 msgstr "提示"
 
@@ -6085,6 +6091,9 @@ msgstr "請在此貼上PEM 格式的密鑰。"
 
 msgid "Path"
 msgstr "路徑"
+
+msgid "Path not found."
+msgstr "路徑未找到。"
 
 msgid "Path of the URL relative to document root."
 msgstr "URL 相對路徑（從根目錄開始）。"
@@ -10333,9 +10342,6 @@ msgstr "成功。"
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "路徑已有 sysvol。"
 
 msgid "to"
 msgstr "到"

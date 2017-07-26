@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-06-29 02:08+0000\n"
-"PO-Revision-Date: 2017-06-29 04:56+0000\n"
-"Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
+"POT-Creation-Date: 2017-07-21 00:19+0000\n"
+"PO-Revision-Date: 2017-07-26 13:03+0000\n"
+"Last-Translator: Lintruder <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-08 14:42+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-26 16:33+0000\n"
+"X-Generator: Launchpad (build 18439)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -279,6 +279,9 @@ msgstr "Повторное сканирование было выполнено.
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут к этой сети уже существует."
+
+msgid "A sysvol folder was found."
+msgstr "Была найдена папка sysvol."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -744,6 +747,9 @@ msgstr "Разрешить новые файлы"
 msgid "Allow TLS connections only."
 msgstr "Разрешить только TLS соединения."
 
+msgid "Allow USB"
+msgstr "Разрешить USB"
+
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Разрешить клиентский доступ к учетным записям без пароля"
 
@@ -1201,6 +1207,9 @@ msgstr "Температура батареи"
 
 msgid "Battery voltage"
 msgstr "Напряжение батареи"
+
+msgid "Be careful enabling this option."
+msgstr "Будьте осторожны с выбором этой опции."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - File-deletions будет сделано до начала передачи."
@@ -3582,6 +3591,10 @@ msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
 "Включите эту опцию, чтобы разрешить любому IP-адресу доступ к WebGUI."
 
+msgid "Enable this option to make host USB available to clients."
+msgstr ""
+"Выберите эту опцию, чтобы сделать USB порты хоста доступными  для клиентов."
+
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
@@ -4110,9 +4123,6 @@ msgstr "&=&Загрузка файла остановлена расширени
 msgid "Filename"
 msgstr "Имя файла"
 
-msgid "Fileserver"
-msgstr "Файловый сервер"
-
 msgid "Filesystem"
 msgstr "Файловая система"
 
@@ -4271,8 +4281,8 @@ msgstr ""
 "Создание нового уникального идентификатора для пула (Generate a new unique "
 "identifier for a pool)"
 
-msgid "Generate password if leave empty."
-msgstr "Если оставить поле пустым пароль будет сгенерирован."
+msgid "Generate password if left empty."
+msgstr ""
 
 msgid "Get Target Info"
 msgstr "Сведения о цели"
@@ -6168,9 +6178,6 @@ msgstr ""
 msgid "Not attached"
 msgstr "Не присоедиен"
 
-msgid "Not found path."
-msgstr "Путь не найден."
-
 msgid "Note"
 msgstr "Примечание"
 
@@ -6536,6 +6543,9 @@ msgstr "Вставьте сюда частный ключ в формате PEM.
 
 msgid "Path"
 msgstr "Путь"
+
+msgid "Path not found."
+msgstr "Путь не найден."
 
 msgid "Path of the URL relative to document root."
 msgstr "Путь URL относительно корневой папки документов."
@@ -11220,9 +11230,6 @@ msgstr "успешно."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
-
-msgid "sysvol exist in path."
-msgstr "SYSVOL существует по указанному пути."
 
 msgid "to"
 msgstr "к"
