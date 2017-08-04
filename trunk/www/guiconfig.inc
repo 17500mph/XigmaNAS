@@ -37,13 +37,13 @@ if(function_exists("date_default_timezone_set") and function_exists("date_defaul
 }
 
 /* make sure nothing is cached */
-if (isset($omit_nocacheheaders) && $omit_nocacheheaders) {
+if(isset($omit_nocacheheaders) && $omit_nocacheheaders):
 	header("Expires: 0");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	header("Cache-Control: no-store, no-cache, must-revalidate");
 	header("Cache-Control: post-check=0, pre-check=0",false);
 	header("Pragma: no-cache");
-}
+endif;
 
 /* parse the configuration and include all configuration functions */
 require_once 'config.inc';
@@ -63,14 +63,14 @@ $d_sysrebootreqd_path = $g['varrun_path'] . "/sysreboot.reqd";
 $d_upnpconfdirty_path = $g['varrun_path'] . "/upnp.conf.dirty";
 $d_packagesconfdirty_path = $g['varrun_path'] . "/packages.conf.dirty";
 
-if (file_exists($d_firmwarelock_path)) {
-	if (!$d_isfwfile) {
+if(file_exists($d_firmwarelock_path)):
+	if(!$d_isfwfile):
 		header("Location: system_firmware.php");
 		exit;
-	} else {
+	else:
 		return;
-	}
-}
+	endif;
+endif;
 
 /* Reserverd login names */
 $reservedlogin = ['root','toor','daemon','operator','bin','tty','kmem','www','nobody','ftp','sshd'];
@@ -85,23 +85,23 @@ $savemsg = "";
 
 /* AJAX misc */
 function is_ajax() {
-	if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-		if (strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'],'XMLHttpRequest') == 0) {
+	if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])):
+		if(strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'],'XMLHttpRequest') == 0):
 			return true;
-		}
-	}
+		endif;
+	endif;
 	return false;
 }
 
 function render_ajax($data,$result = 0) {
 	$a = ['result' => $result];
-	if (isset($data)) {
-		if (is_array($data)) {
+	if(isset($data)):
+		if(is_array($data)):
 			$a = array_merge($a,$data);
-		} else {
+		else:
 			$a = array_merge($a,['data' => $data]);
-		}
-	}
+		endif;
+	endif;
 	header("Content-Type: application/json; UTF-8\n");
 	echo json_encode($a);
 	exit;
@@ -110,28 +110,26 @@ function render_ajax($data,$result = 0) {
 
 function do_input_validation($postdata,$reqdfields,$reqdfieldsn,&$input_errors) {
 	/* check for bad control characters */
-	foreach ($postdata as $pn => $pd) {
-		if (is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/",$pd)) {
+	foreach($postdata as $pn => $pd):
+		if(is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/",$pd)):
 			$input_errors[] = sprintf( gtext("The attribute '%s' contains invalid characters."),$pn);
-		}
-	}
-
-	for ($i = 0; $i < count($reqdfields); $i++) {
-		if (!isset($postdata[$reqdfields[$i]]) || ($postdata[$reqdfields[$i]] === "")) {
+		endif;
+	endforeach;
+	for($i = 0;$i < count($reqdfields);$i++):
+		if(!isset($postdata[$reqdfields[$i]]) || ($postdata[$reqdfields[$i]] === "")):
 			$input_errors[] = sprintf( gtext("The attribute '%s' is required."),$reqdfieldsn[$i]);
-		}
-	}
+		endif;
+	endfor;
 }
 
 /* Validate attribute type. */
 function do_input_validation_type($postdata,$reqdfields,$reqdfieldsn,$reqdfieldst,&$input_errors) {
 	/* Validate type. */
-	for ($i = 0; $i < count($reqdfields); $i++) {
-		if (isset($postdata[$reqdfields[$i]]) && ($postdata[$reqdfields[$i]] !== "")) {
+	for($i = 0;$i < count($reqdfields);$i++):
+		if(isset($postdata[$reqdfields[$i]]) && ($postdata[$reqdfields[$i]] !== '')):
 			$valid = false;
-			$message = "";
-
-			switch($reqdfieldst[$i]) {
+			$message = '';
+			switch($reqdfieldst[$i]):
 				case 'string':
 					$valid = is_string($postdata[$reqdfields[$i]]);
 					$message = sprintf( gtext("The attribute '%s' must be a string."),$reqdfieldsn[$i]);
@@ -212,12 +210,12 @@ function do_input_validation_type($postdata,$reqdfields,$reqdfieldsn,$reqdfields
 					$valid = (is_array($postdata[$reqdfields[$i]]) && !empty($postdata[$reqdfields[$i]]));
 					$message = sprintf( gtext("The attribute '%s' must contain at least one entry."),$reqdfieldsn[$i]);
 					break;
-			}
-			if (!$valid) {
+			endswitch;
+			if(!$valid):
 				$input_errors[] = $message;
-			}
-		}
-	}
+			endif;
+		endif;
+	endfor;
 }
 
 function do_input_validate_synctime($postdata,&$input_errors) {
@@ -238,42 +236,44 @@ function do_input_validate_synctime($postdata,&$input_errors) {
 }
 
 function print_input_errors($input_errors) {
-	echo "  <div id='errorbox'>\n";
-	echo "    <table border=\"0\" cellspacing=\"0\" cellpadding=\"1\" width=\"100%\">\n";
-	echo "      <tr>\n";
-	echo "        <td class=\"icon\" align=\"center\" valign=\"center\"><img src=\"images/error_box.png\" alt=\"\" /></td>\n";
-	echo "        <td class=\"message\">\n";
-	echo "          <div>" . gtext("The following input errors were detected").":\n";
-	echo "            <ul>\n";
-	foreach ($input_errors as $msg) {
-		echo "              <li>{$msg}</li>\n";
-	}
-	echo "            </ul>\n";
-	echo "          </div>\n";
-	echo "        </td>\n";
-	echo "      </tr>\n";
-	echo "    </table>\n";
-	echo "  </div>\n";
+	echo '  <div id="errorbox">',PHP_EOL;
+	echo '    <table border="0" cellspacing="0" cellpadding="1" width="100%">',PHP_EOL;
+	echo '      <tr>',PHP_EOL;
+	echo '        <td class="icon" align="center" valign="center"><img src="images/error_box.png" alt=""/></td>',PHP_EOL;
+	echo '        <td class="message">',PHP_EOL;
+	echo '          <div>',gtext('The following input errors were detected'),':',PHP_EOL;
+	echo '            <ul>',PHP_EOL;
+	foreach($input_errors as $msg):
+		echo '              <li>',$msg,'</li>',PHP_EOL;
+	endforeach;
+	echo '            </ul>',PHP_EOL;
+	echo '          </div>',PHP_EOL;
+	echo '        </td>',PHP_EOL;
+	echo '      </tr>',PHP_EOL;
+	echo '    </table>',PHP_EOL;
+	echo '  </div>',PHP_EOL;
 }
 
 function verify_xz_file($fname) {
 	$returnvar = mwexec("/usr/bin/xz -t " . escapeshellarg($fname),true);
-	if ($returnvar != 0)
+	if($returnvar != 0):
 		return 0;
-	else
+	else:
 		return 1;
+	endif;
 }
 
 function verify_gzip_file($fname) {
 	$returnvar = mwexec("/usr/bin/gzip -t " . escapeshellarg($fname),true);
-	if ($returnvar != 0)
+	if($returnvar != 0):
 		return 0;
-	else
+	else:
 		return 1;
+	endif;
 }
 
 function print_core_box($type,$msg) {
-	switch ($type) {
+	switch ($type):
 		case "info":
 			$id = "infobox";
 			$img = "images/info_box.png";
@@ -286,28 +286,28 @@ function print_core_box($type,$msg) {
 			$id = "errorbox";
 			$img = "images/error_box.png";
 			break;
-	}
+	endswitch;
 
-	echo "<div id='{$id}'>\n";
-	echo "  <table border=\"0\" cellspacing=\"0\" cellpadding=\"1\" width=\"100%\">\n";
-	echo "    <tr>\n";
-	echo "      <td class=\"icon\" align=\"center\" valign=\"center\"><img src=\"/{$img}\" alt=\"\" /></td>\n";
-	echo "      <td class=\"message\">{$msg}</td>\n";
-	echo "    </tr>\n";
-	echo "  </table>\n";
-	echo "</div>\n";
+	echo '<div id="',$id,'">',PHP_EOL;
+	echo '  <table border="0" cellspacing="0" cellpadding="1" width="100%">',PHP_EOL;
+	echo '    <tr>',PHP_EOL;
+	echo '      <td class="icon" align="center" valign="center"><img src="/',$img,'" alt=""/></td>',PHP_EOL;
+	echo '      <td class="message">',$msg,'</td>',PHP_EOL;
+	echo '    </tr>',PHP_EOL;
+	echo '  </table>',PHP_EOL;
+	echo '</div>',PHP_EOL;
 }
 
 function print_info_box($msg) {
-	print_core_box("info",$msg);
+	print_core_box('info',$msg);
 }
 
 function print_error_box($msg) {
-	print_core_box("error",$msg);
+	print_core_box('error',$msg);
 }
 
 function print_warning_box($msg) {
-	print_core_box("warning",$msg);
+	print_core_box('warning',$msg);
 }
 
 function print_config_change_box() {
@@ -329,17 +329,17 @@ function print_config_change_box() {
 function get_std_save_message($ok) {
 	global $d_sysrebootreqd_path;
 
-	if ($ok == 0) {
-		if (file_exists($d_sysrebootreqd_path)) {
+	if($ok == 0):
+		if(file_exists($d_sysrebootreqd_path)):
 			$gt_ret = gtext('The changes have been saved.')
 			. ' '
 			. '<a href="' . 'reboot.php' . '">'
 			. gtext('You have to reboot the system for the changes to take effect.')
 			. '</a>';
-		} else {
+		else:
 			$gt_ret = gtext('The changes have been applied successfully.');
-		}
-	} else {
+		endif;
+	else:
 		$gt_ret = gtext('Error')
 			. ': '
 			. gtext('The changes could not be applied')
@@ -348,7 +348,7 @@ function get_std_save_message($ok) {
 			. ' '
 			. sprintf('%s',$ok)
 			. ').';
-	}
+	endif;
 	return $gt_ret;
 }
 
@@ -506,7 +506,7 @@ function html_inputbox2($ctrlname,$title,$value,$desc,$required = false,$size = 
 	$ctrl->SetAltPadding($altpadding);
 	$ctrl->SetMaxLength($maxlength);
 	$ctrl->SetPlaceholder($placeholder);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_passwordbox2($ctrlname,$title,$value,$desc,$required = false,$size = 25,$readonly = false,string $placeholder = '') {
@@ -514,7 +514,7 @@ function html_passwordbox2($ctrlname,$title,$value,$desc,$required = false,$size
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPlaceholder($placeholder);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_passwordconfbox2($ctrlname,$ctrlnameconf,$title,$value,$valueconf,$desc,$required = false,$size = 25,$readonly = false,string $placeholder = '',string $placeholderconf = '') {
@@ -523,7 +523,7 @@ function html_passwordconfbox2($ctrlname,$ctrlnameconf,$title,$value,$valueconf,
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPlaceholder($placeholder);
 	$ctrl->SetPlaceholderConfirm($placeholderconf);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_textarea2($ctrlname,$title,$value,$desc,$required = false,$columns = 40,$rows = 5,$readonly = false,$wrap = true) {
@@ -531,7 +531,7 @@ function html_textarea2($ctrlname,$title,$value,$desc,$required = false,$columns
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetWrap($wrap);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_filechooser2($ctrlname,$title,$value,$desc,$path,$required = false,$size = 67,$readonly = false) {
@@ -539,7 +539,7 @@ function html_filechooser2($ctrlname,$title,$value,$desc,$path,$required = false
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_combobox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
@@ -547,7 +547,7 @@ function html_combobox2($ctrlname,$title,$value,$options,$desc,$required = false
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_radiobox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = '') {
@@ -555,35 +555,35 @@ function html_radiobox2($ctrlname,$title,$value,$options,$desc,$required = false
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_mountcombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLMountComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_timezonecombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLTimeZoneComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_languagecombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLLanguageComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_interfacecombobox2($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLInterfaceComboBox2($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_checkbox2($ctrlname,$title,$checked,$caption = "",$desc = "",$required = false,$readonly = false,$onclick = "",$altpadding = false) {
@@ -592,43 +592,43 @@ function html_checkbox2($ctrlname,$title,$checked,$caption = "",$desc = "",$requ
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetAltPadding($altpadding);
 	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_separator2($colspan = 2,$ctrlname = '') {
 	$ctrl = new HTMLSeparator2();
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetCtrlName($ctrlname);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_titleline2($title,$colspan = 2,$ctrlname = '') {
 	$ctrl = new HTMLTitleLine2($title);
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetCtrlName($ctrlname);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_titleline_checkbox2($ctrlname,$title,$value,$caption,$onclick = "",$colspan = 2) {
 	$ctrl = new HTMLTitleLineCheckBox2($ctrlname,$title,$value,$caption);
 	$ctrl->SetColSpan($colspan);
 	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_text2($ctrlname,$title,$text) {
 	$ctrl = new HTMLText2($ctrlname,$title,$text);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_textinfo2($ctrlname,$title,$text) {
 	$ctrl = new HTMLTextInfo2($ctrlname,$title,$text);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_remark2($ctrlname,$title,$text) {
 	$ctrl = new HTMLRemark2($ctrlname,$title,$text);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_listbox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = "") {
@@ -636,28 +636,28 @@ function html_listbox2($ctrlname,$title,$value,$options,$desc,$required = false,
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 function html_checkboxbox2($ctrlname,$title,$value,$options,$desc,$required = false,$readonly = false,$onclick = '') {
 	$ctrl = new HTMLCheckboxBox2($ctrlname,$title,$value,$options,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_ipv4addrbox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLIPv4AddressBox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_ipv6addrbox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc,$required = false,$readonly = false) {
 	$ctrl = new HTMLIPv6AddressBox2($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_folderbox2($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
@@ -665,7 +665,7 @@ function html_folderbox2($ctrlname,$title,$value,$desc,$path,$required = false,$
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 
 function html_minidlnabox2($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
@@ -673,7 +673,7 @@ function html_minidlnabox2($ctrlname,$title,$value,$desc,$path,$required = false
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
-	$ctrl->Compose()->flush();
+	$ctrl->Compose()->render();
 }
 function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 	$element = 'button';
@@ -690,58 +690,34 @@ function html_button(string $value = NULL,string $content = NULL,string $id = NU
 	$attributes = ['name' => 'submit','type' => 'submit','class' => $class,'value' => $value,'id' => $id];
 	$root = new co_DOMDocument();
 	$o_button = $root->addElement($element,$attributes,$content);
-	return $root->render();
+	return $root->get_html();
 }
 function html_row_toolbox(string $link = '',string $gt_record_mod = '',string $gt_record_del = '',string $gt_record_loc = '',bool $notprotected = true,bool $notdirty = true) {
 	global $g_img;
 	$root = new co_DOMDocument();
 	$o = $root->addElement('td');
-	if($notdirty && $notprotected) { // editable
+	if($notdirty && $notprotected): // editable
 		$o_a = $o->addElement('a',['href' => $link]);
 		$o_a->addElement('img',['src' => $g_img['mod'],'title' => $gt_record_mod,'alt' => $gt_record_mod,'class' => 'spin']);
-	} else {
-		if($notprotected) { // dirty
-			$o->addElement('img',['src' => $g_img['del'],'title' => $gt_record_del,'alt' => $gt_record_del]);
-		} else { // protected
-			$o->addElement('img',['src' => $g_img['loc'],'title' => $gt_record_loc,'alt' => $gt_record_loc]);
-		}
-	}
-	return $root->render();
-}
-function get_weekday_names(bool $longnames = true,bool $localized = true) {
-	global $g_weekdays;
-	if($longnames):
-		if($localized):
-			$retval = $g_weekdays;
-		else:
-			$retval = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-		endif;
 	else:
-		if($localized):
-			$retval = [gtext('Mon'),gtext('Tue'),gtext('Wed'),gtext('Thu'),gtext('Fri'),gtext('Sat'),gtext('Sun')];
-		else:
-			$retval = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+		if($notprotected): // dirty
+			$o->addElement('img',['src' => $g_img['del'],'title' => $gt_record_del,'alt' => $gt_record_del]);
+		else: // protected
+			$o->addElement('img',['src' => $g_img['loc'],'title' => $gt_record_loc,'alt' => $gt_record_loc]);
 		endif;
 	endif;
-	return $retval;
+	return $root->get_html();
+}
+function get_weekday_names(bool $longnames = true,bool $localized = true) {
+	global $g_weekdays,$g_weekdays_short,$g_weekdays_en,$g_weekdays_en_short;
+	
+	return $longnames ? ($localized ? $g_weekdays : $g_weekdays_en) : ($localized ? $g_weekdays_short : $g_weekdays_en_short);
 }
 
 function get_month_names(bool $longnames = true,bool $localized = true) {
-	global $g_months;
-	if($longnames):
-		if($localized):
-			$retval = $g_months;
-		else:
-			$retval = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-		endif;
-	else:
-		if($localized):
-			$retval = [gtext('Jan'),gtext('Feb'),gtext('Mar'),gtext('Apr'),gtext('May'),gtext('Jun'),gtext('Jul'),gtext('Aug'),gtext('Sep'),gtext('Oct'),gtext('Nov'),gtext('Dec')];
-		else:
-			$retval = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-		endif;
-	endif;
-	return $retval;
+	global $g_months,$g_month_short,$g_month_en,$g_month_en_short;
+
+	return $longnames ? ($localized ? $g_month : $g_month_en) : ($localized ? $g_month_short : $g_month_en_short);
 }
 function gentitle(array $title = []) {
 	$navlevelsep = htmlspecialchars(' > '); // Navigation level separator string.
