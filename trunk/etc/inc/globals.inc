@@ -123,6 +123,48 @@ $g_months = [
 	11 => gtext('November'),
 	12 => gtext('December')
 ];
+$g_months_short = [
+	1 => gtext('Jan'),
+	2 => gtext('Feb'),
+	3 => gtext('Mar'),
+	4 => gtext('Apr'),
+	5 => gtext('May'),
+	6 => gtext('Jun'),
+	7 => gtext('Jul'),
+	8 => gtext('Aug'),
+	9 => gtext('Sep'),
+	10 => gtext('Oct'),
+	11 => gtext('Nov'),
+	12 => gtext('Dec')
+];
+$g_months_en = [
+	1 => 'January',
+	2 => 'February',
+	3 => 'March',
+	4 => 'April',
+	5 => 'May',
+	6 => 'June',
+	7 => 'July',
+	8 => 'August',
+	9 => 'September',
+	10 => 'October',
+	11 => 'November',
+	12 => 'December'
+];
+$g_months_en_short = [
+	1 => 'Jan',
+	2 => 'Feb',
+	3 => 'Mar',
+	4 => 'Apr',
+	5 => 'May',
+	6 => 'Jun',
+	7 => 'Jul',
+	8 => 'Aug',
+	9 => 'Sep',
+	10 => 'Oct',
+	11 => 'Nov',
+	12 => 'Dec'
+];
 $g_weekdays = [
 	1 => gtext('Monday'),
 	2 => gtext('Tuesday'),
@@ -131,6 +173,33 @@ $g_weekdays = [
 	5 => gtext('Friday'),
 	6 => gtext('Saturday'),
 	7 => gtext('Sunday')
+];
+$g_weekdays_short = [
+	1 => gtext('Mon'),
+	2 => gtext('Tue'),
+	3 => gtext('Wed'),
+	4 => gtext('Thu'),
+	5 => gtext('Fri'),
+	6 => gtext('Sat'),
+	7 => gtext('Sun')
+];
+$g_weekdays_en = [
+	1 => 'Monday',
+	2 => 'Tuesday',
+	3 => 'Wednesday',
+	4 => 'Thursday',
+	5 => 'Friday',
+	6 => 'Saturday',
+	7 => 'Sunday'
+];
+$g_weekdays_en_short = [
+	1 => 'Mon',
+	2 => 'Tue',
+	3 => 'Wed',
+	4 => 'Thu',
+	5 => 'Fri',
+	6 => 'Sat',
+	7 => 'Sun'
 ];
 //	supported filesystems
 $g_filesystems = [
