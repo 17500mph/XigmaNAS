@@ -176,10 +176,11 @@ class properties_zfs_dataset {
 	}
 	private function prop_aclinherit(): properties_list {
 		$o = new properties_list();
-		$o->name('aclinherit');
-		$o->title(gtext('ACL Inherit'));
-		$o->description(gtext('This attribute determines the behavior of Access Control List inheritance.'));
-		$o->defaultvalue('restricted');
+		$o->set_id('aclinherit');
+		$o->set_name('aclinherit');
+		$o->set_title(gtext('ACL Inherit'));
+		$o->set_description(gtext('This attribute determines the behavior of Access Control List inheritance.'));
+		$o->set_defaultvalue('restricted');
 		$options = [
 			'discard' => gtext('Discard - Do not inherit entries'),
 			'noallow' => gtext('Noallow - Only inherit deny entries'),
@@ -188,30 +189,31 @@ class properties_zfs_dataset {
 //			'secure' => gtext('Same as "Restricted" - kept for compatibility.'),
 			'passthrough-x' => gtext('Passthrough-X - Inherit all but "execute" when not specified')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_aclmode(): properties_list {
 		$o = new properties_list();
-		$o->name('aclmode');
-		$o->title(gtext('ACL Mode'));
-		$o->description(gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'));
-		$o->defaultvalue('discard');
+		$o->set_id('aclmode');
+		$o->set_name('aclmode');
+		$o->set_title(gtext('ACL Mode'));
+		$o->set_description(gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'));
+		$o->set_defaultvalue('discard');
 		$options = [
 			'discard' => gtext('Discard - Discard ACL'),
 			'groupmask' => gtext('Groupmask - Mask ACL with mode'),
 			'passthrough' => gtext('Passthrough - Do not change ACL'),
 			'restricted' => gtext('Restricted')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_atime(): properties_list {
@@ -219,46 +221,49 @@ class properties_zfs_dataset {
 	}
 	private function prop_canmount(): properties_list {
 		$o = new properties_list();
-		$o->name('canmount');
-		$o->title(gtext('Can Mount'));
-		$o->description(gtext('If this property is set to off, the file system cannot be mounted.'));
-		$o->defaultvalue('on');
+		$o->set_id('canmount');
+		$o->set_name('canmount');
+		$o->set_title(gtext('Can Mount'));
+		$o->set_description(gtext('If this property is set to off, the file system cannot be mounted.'));
+		$o->set_defaultvalue('on');
 		$options = [
 			'on' => gtext('On'),
 			'off' => gtext('Off'),
 			'noauto' => gtext('Noauto'),
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_casesensitivity(): properties_list {
 		$o = new properties_list();
-		$o->name('casesensitivity');
-		$o->title(gtext('Case Sensitivity'));
-		$o->description(gtext('Indicates whether the file name matching algorithm used by the filesystem should be case-sensitive, case-insensitive, or allow a combination of both styles of matching.'));
-		$o->defaultvalue('sensitive');
+		$o->set_id('casesensitivity');
+		$o->set_name('casesensitivity');
+		$o->set_title(gtext('Case Sensitivity'));
+		$o->set_description(gtext('Indicates whether the file name matching algorithm used by the filesystem should be case-sensitive, case-insensitive, or allow a combination of both styles of matching.'));
+		$o->set_defaultvalue('sensitive');
 		$options = [
 			'sensitive' => gtext('Sensitive'),
 			'insensitive' => gtext('Insensitive'),
 			'mixed' => gtext('Mixed'),
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(false);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(false);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_checksum(): properties_list {
 		$o = new properties_list();
-		$o->name('checksum');
-		$o->title(gtext('Checksum'));
-		$o->description(gtext('Defines the checksum algorithm.'));
-		$o->defaultvalue('on');
+		$o->set_id('checksum');
+		$o->set_name('checksum');
+		$o->set_title(gtext('Checksum'));
+		$o->set_description(gtext('Defines the checksum algorithm.'));
+		$o->set_defaultvalue('on');
 		$options = [
 			'on' => gtext('On'),
 			'off' => gtext('Off'),
@@ -270,19 +275,20 @@ class properties_zfs_dataset {
 			'skein' => 'Skein',
 //			'edonr' => 'Edon-R',
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_compression(): properties_list {
 		$o = new properties_list();
-		$o->name('compression');
-		$o->title(gtext('Compression'));
-		$o->description(gtext("Controls the compression algorithm. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."));
-		$o->defaultvalue('on');
+		$o->set_id('compression');
+		$o->set_name('compression');
+		$o->set_title(gtext('Compression'));
+		$o->set_description(gtext("Controls the compression algorithm. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."));
+		$o->set_defaultvalue('on');
 		$options = [
 			'on' => gtext('On'),
 			'off' => gtext('Off'),
@@ -300,29 +306,30 @@ class properties_zfs_dataset {
 			'gzip-9' => 'gzip-9',
 			'zle' => 'zle'
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_copies(): properties_list {
 		$o = new properties_list();
-		$o->name('copies');
-		$o->title(gtext('Copies'));
-		$o->description(gtext('Controls the number of copies of data stored for this dataset.'));
-		$o->defaultvalue('1');
+		$o->set_id('copies');
+		$o->set_name('copies');
+		$o->set_title(gtext('Copies'));
+		$o->set_description(gtext('Controls the number of copies of data stored for this dataset.'));
+		$o->set_defaultvalue('1');
 		$options = [
 			'1' => gtext('1'),
 			'2' => gtext('2'),
 			'3' => gtext('3')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 /*
@@ -332,8 +339,9 @@ class properties_zfs_dataset {
  */
 	private function prop_dedup(): properties_list {
 		$o = new properties_list();
-		$o->name('dedup');
-		$o->title(gtext('Dedup Method'));
+		$o->set_id('dedup');
+		$o->set_name('dedup');
+		$o->set_title(gtext('Dedup Method'));
 		$description = '<div>' . gtext('Controls the dedup method.') . '</div>'
 			. '<div><b>'
 			. '<font color="red">' . gtext('WARNING') . '</font>' . ': '
@@ -341,8 +349,8 @@ class properties_zfs_dataset {
 			. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
 			. '</a>'
 			. '</b></div>';
-		$o->description($description);
-		$o->defaultvalue('off');
+		$o->set_description($description);
+		$o->set_defaultvalue('off');
 		$options = [
 			'on' => gtext('On'),
 			'off' => gtext('Off'),
@@ -355,11 +363,11 @@ class properties_zfs_dataset {
 			'skein,verify' => gtext('Skein, Verify'),
 //			'edonr,verify' => gtext('Edon-R, Verify')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_exec(): properties_list {
@@ -370,24 +378,26 @@ class properties_zfs_dataset {
 	}
 	private function prop_logbias(): properties_list {
 		$o = new properties_list();
-		$o->name('logbias');
-		$o->title(gtext('Logbias'));
-		$o->description(gtext('Provide a hint to ZFS about handling of synchronous requests in this dataset.'));
-		$o->defaultvalue('latency');
+		$o->set_id('logbias');
+		$o->set_name('logbias');
+		$o->set_title(gtext('Logbias'));
+		$o->set_description(gtext('Provide a hint to ZFS about handling of synchronous requests in this dataset.'));
+		$o->set_defaultvalue('latency');
 		$options = [
 			'latency' => gtext('Latency'),
 			'throughput' => gtext('Throughput')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 /*
 	private function prop_name(): properties {
 		$o = new properties();
+		$o->id('name');
 		$o->name('name');
 		$o->title(gtext('Name'));
 		$o->description(gtext('The name of the dataset.'));
@@ -409,10 +419,11 @@ class properties_zfs_dataset {
  */
 	private function prop_normalization(): properties_list {
 		$o = new properties_list();
-		$o->name('normalization');
-		$o->title(gtext('Normalization'));
-		$o->description(gtext('Indicates whether the file system should perform a unicode normalization of file names whenever two file names are compared, and which normalization algorithm should be used.'));
-		$o->defaultvalue('none');
+		$o->set_id('normalization');
+		$o->set_name('normalization');
+		$o->set_title(gtext('Normalization'));
+		$o->set_description(gtext('Indicates whether the file system should perform a unicode normalization of file names whenever two file names are compared, and which normalization algorithm should be used.'));
+		$o->set_defaultvalue('none');
 		$options = [
 			'none' => gtext('None'),
 			'formC' => 'formC',
@@ -420,77 +431,81 @@ class properties_zfs_dataset {
 			'formKC' => 'formKC',
 			'formKD' => 'formKD',
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(false);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(false);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_offon(string $name,string $title,string $description,bool $editableonadd = true,bool $editableonmodify = true): properties_list {
 		$o = new properties_list();
-		$o->name($name);
-		$o->title($title);
-		$o->description($description);
-		$o->defaultvalue('off');
+		$o->set_id($name);
+		$o->set_name($name);
+		$o->set_title($title);
+		$o->set_description($description);
+		$o->set_defaultvalue('off');
 		$options = [
 			'on' => gtext('On'),
 			'off' => gtext('Off'),
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd($editableonadd);
-		$o->editableonmodify($editableonmodify);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd($editableonadd);
+		$o->set_editableonmodify($editableonmodify);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_onoff(string $name,string $title,string $description,bool $editableonadd = true,bool $editableonmodify = true): properties_list {
 		$o = new properties_list();
-		$o->name($name);
-		$o->title($title);
-		$o->description($description);
-		$o->defaultvalue('on');
+		$o->set_id($name);
+		$o->set_name($name);
+		$o->set_title($title);
+		$o->set_description($description);
+		$o->set_defaultvalue('on');
 		$options = [
 			'on' => gtext('On'),
 			'off' => gtext('Off'),
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd($editableonadd);
-		$o->editableonmodify($editableonmodify);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd($editableonadd);
+		$o->set_editableonmodify($editableonmodify);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_primarycache(): properties_list {
 		$o = new properties_list();
-		$o->name('primarycache');
-		$o->title(gtext('Primary Cache'));
-		$o->description(gtext('Controls what is cached in the primary cache (ARC).'));
-		$o->defaultvalue('all');
+		$o->set_id('primarycache');
+		$o->set_name('primarycache');
+		$o->set_title(gtext('Primary Cache'));
+		$o->set_description(gtext('Controls what is cached in the primary cache (ARC).'));
+		$o->set_defaultvalue('all');
 		$options = [
 			'all' => gtext('Both user data and metadata will be cached in ARC.'),
 			'metadata' => gtext('Only metadata will be cached in ARC.'),
 			'none' => gtext('Neither user data nor metadata will be cached in ARC.')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_quota(): properties {
 		$o = new properties();
-		$o->name('quota');
-		$o->title(gtext('Quota'));
-		$o->description(gtext('Limits the amount of space a dataset and its descendents can consume.'));
-		$o->defaultvalue('');
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->filter(FILTER_VALIDATE_REGEXP);
-		$o->filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_id('quota');
+		$o->set_name('quota');
+		$o->set_title(gtext('Quota'));
+		$o->set_description(gtext('Limits the amount of space a dataset and its descendents can consume.'));
+		$o->set_defaultvalue('');
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_filter(FILTER_VALIDATE_REGEXP);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_readonly(): properties_list {
@@ -498,79 +513,84 @@ class properties_zfs_dataset {
 	}
 	private function prop_redundant_metadata(): properties_list {
 		$o = new properties_list();
-		$o->name('redundant_metadata');
-		$o->title(gtext('Redundant Metadata'));
-		$o->description(gtext('Controls what types of metadata are stored redundantly.'));
-		$o->defaultvalue('all');
+		$o->set_id('redundant_metadata');
+		$o->set_name('redundant_metadata');
+		$o->set_title(gtext('Redundant Metadata'));
+		$o->set_description(gtext('Controls what types of metadata are stored redundantly.'));
+		$o->set_defaultvalue('all');
 		$options = [
 			'all' => gtext('All'),
 			'most' => gtext('Most')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_refquota(): properties {
 		$o = new properties();
-		$o->name('refquota');
-		$o->title(gtext('Refquota'));
-		$o->description(gtext('Limits the amount of space a dataset can consume.'));
-		$o->defaultvalue('');
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->filter(FILTER_VALIDATE_REGEXP);
-		$o->filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_id('refquota');
+		$o->set_name('refquota');
+		$o->set_title(gtext('Refquota'));
+		$o->set_description(gtext('Limits the amount of space a dataset can consume.'));
+		$o->set_defaultvalue('');
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_filter(FILTER_VALIDATE_REGEXP);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_refreservation(): properties {
 		$o = new properties();
-		$o->name('refreservation');
-		$o->title(gtext('Refreservation'));
-		$o->description(gtext('The minimum amount of space guaranteed to a dataset, not including its descendents.'));
-		$o->defaultvalue('');
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->filter(FILTER_VALIDATE_REGEXP);
-		$o->filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_id('refreservation');
+		$o->set_name('refreservation');
+		$o->set_title(gtext('Refreservation'));
+		$o->set_description(gtext('The minimum amount of space guaranteed to a dataset, not including its descendents.'));
+		$o->set_defaultvalue('');
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_filter(FILTER_VALIDATE_REGEXP);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_reservation(): properties {
 		$o = new properties();
-		$o->name('reservation');
-		$o->title(gtext('Reservation'));
-		$o->description(gtext('The minimum amount of space guaranteed to a dataset and its descendents.'));
-		$o->defaultvalue('');
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->filter(FILTER_VALIDATE_REGEXP);
-		$o->filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_id('reservation');
+		$o->set_name('reservation');
+		$o->set_title(gtext('Reservation'));
+		$o->set_description(gtext('The minimum amount of space guaranteed to a dataset and its descendents.'));
+		$o->set_defaultvalue('');
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_filter(FILTER_VALIDATE_REGEXP);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZEORNONEORNOTHING]);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_secondarycache(): properties_list {
 		$o = new properties_list();
-		$o->name('secondarycache');
-		$o->title(gtext('Secondary Cache'));
-		$o->description(gtext('Controls what is cached in the secondary cache (L2ARC).'));
-		$o->defaultvalue('all');
+		$o->set_id('secondarycache');
+		$o->set_name('secondarycache');
+		$o->set_title(gtext('Secondary Cache'));
+		$o->set_description(gtext('Controls what is cached in the secondary cache (L2ARC).'));
+		$o->set_defaultvalue('all');
 		$options = [
 			'all' => gtext('Both user data and metadata will be cached in L2ARC.'),
 			'metadata' => gtext('Only metadata will be cached in L2ARC.'),
 			'none' => gtext('Neither user data nor metadata will be cached in L2ARC.')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_setuid(): properties_list {
@@ -592,52 +612,55 @@ class properties_zfs_dataset {
 			'hidden' => gtext('Hidden'),
 			'visible' => gtext('Visible'),
 		];
-		$o->name('snapdir');
-		$o->title(gtext('Snapdir'));
-		$o->description(gtext('Controls whether the .zfs directory is hidden or visible in the root of the file system.'));
-		$o->defaultvalue('hidden');
-		$o->options($options);
+		$o->set_id('snapdir');
+		$o->set_name('snapdir');
+		$o->set_title(gtext('Snapdir'));
+		$o->set_description(gtext('Controls whether the .zfs directory is hidden or visible in the root of the file system.'));
+		$o->set_defaultvalue('hidden');
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_sync(): properties_list {
 		$o = new properties_list();
-		$o->name('sync');
-		$o->title(gtext('Sync'));
-		$o->description(gtext('Controls the behavior of synchronous requests.'));
-		$o->defaultvalue('standard');
+		$o->set_id('sync');
+		$o->set_name('sync');
+		$o->set_title(gtext('Sync'));
+		$o->set_description(gtext('Controls the behavior of synchronous requests.'));
+		$o->set_defaultvalue('standard');
 		$options = [
 			'standard' => gtext('Standard'),
 			'always' => gtext('Always'),
 			'disabled' => gtext('Disabled')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_type(): properties_list {
 		$o = new properties_list();
-		$o->name('type');
-		$o->title(gtext('Dataset Type'));
-		$o->description(gtext('Controls the type of the ZFS dataset.'));
-		$o->defaultvalue('filesystem');
+		$o->set_id('type');
+		$o->set_name('type');
+		$o->set_title(gtext('Dataset Type'));
+		$o->set_description(gtext('Controls the type of the ZFS dataset.'));
+		$o->set_defaultvalue('filesystem');
 		$options = [
 			'filesystem' => gtext('File System - can be mounted within the standard system namespace and behaves like other file systems.'),
 			'volume' => gtext('Volume - A logical volume. Can be exported as a raw or block device.')
 //			'snapshot' => gtext('Snapshot - A read-only version of a file system or volume at a given point in time.')
 //			'bookmark' => gtext('Bookmark - Creates a bookmark of a given snapshot.')
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(false);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(false);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_utf8only(): properties_list {
@@ -645,10 +668,11 @@ class properties_zfs_dataset {
 	}
 	private function prop_volblocksize(): properties_list {
 		$o = new properties_list();
-		$o->name('volblocksize');
-		$o->title(gtext('Block Size'));
-		$o->description(gtext('ZFS volume block size. This value can not be changed after creation.'));
-		$o->defaultvalue('8K');
+		$o->set_id('volblocksize');
+		$o->set_name('volblocksize');
+		$o->set_title(gtext('Block Size'));
+		$o->set_description(gtext('ZFS volume block size. This value can not be changed after creation.'));
+		$o->set_defaultvalue('8K');
 		$options = [
 			'512B' => '512B',
 			'1K' => '1K',
@@ -660,44 +684,46 @@ class properties_zfs_dataset {
 			'64K' => '64K',
 			'128K' => '128K'
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(false);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(false);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_volmode(): properties_list {
 		$o = new properties_list();
-		$o->name('volmode');
-		$o->title(gtext('Volume Mode'));
-		$o->description(gtext('Specifies how the volume should be exposed to the OS.'));
-		$o->defaultvalue('default');
+		$o->set_id('volmode');
+		$o->set_name('volmode');
+		$o->set_title(gtext('Volume Mode'));
+		$o->set_description(gtext('Specifies how the volume should be exposed to the OS.'));
+		$o->set_defaultvalue('default');
 		$options = [
 			'default' => gtext('Default'),
 			'geom' => 'geom',
 			'dev' => 'dev',
 			'none' => 'none'
 		];
-		$o->options($options);
+		$o->set_options($options);
 		$o->filter_use_default();
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_volsize(): properties {
 		$o = new properties();
-		$o->name('volsize');
-		$o->title(gtext('Volume Size'));
-		$o->description(gtext('ZFS volume size. You can use human-readable suffixes like K, KB, M, GB.'));
-		$o->defaultvalue('');
-		$o->editableonadd(true);
-		$o->editableonmodify(true);
-		$o->filter(FILTER_VALIDATE_REGEXP);
-		$o->filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZE]);
-		$o->message_error(sprintf('%s: %s',$o->title(),gtext('The value is invalid.')));
+		$o->set_id('volsize');
+		$o->set_name('volsize');
+		$o->set_title(gtext('Volume Size'));
+		$o->set_description(gtext('ZFS volume size. You can use human-readable suffixes like K, KB, M, GB.'));
+		$o->set_defaultvalue('');
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_filter(FILTER_VALIDATE_REGEXP);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZE]);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 /*

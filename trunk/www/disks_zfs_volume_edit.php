@@ -158,15 +158,15 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	// validate text input elements
 	foreach(['volsize'] as $ref):
 		if(!isset($sphere_record[$ref])):
-			$sphere_record[$ref] = $_POST[$ref] ?? $prop->$ref->defaultvalue(); // restore $_POST or populate default
-			$input_errors[] = $prop->$ref->message_error();
+			$sphere_record[$ref] = $_POST[$ref] ?? $prop->$ref->get_defaultvalue(); // restore $_POST or populate default
+			$input_errors[] = $prop->$ref->get_message_error();
 		endif;
 	endforeach;
 	// validate list elements
 	foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
 		if(!isset($sphere_record[$ref])):
 			$sphere_record[$ref] = '';
-			$input_errors[] = $prop->$ref->message_error();
+			$input_errors[] = $prop->$ref->get_message_error();
 		endif;
 	endforeach;
 	if(empty($input_errors)):
@@ -253,7 +253,7 @@ else:
 			$sphere_record['pool'] = '';
 			$sphere_record['sparse'] = false;
 			foreach($a_ref as $ref):
-				$sphere_record[$ref] = $prop->$ref->defaultvalue();
+				$sphere_record[$ref] = $prop->$ref->get_defaultvalue();
 			endforeach;
 			break;
 		case RECORD_NEW_MODIFY: // get from config only
@@ -340,26 +340,26 @@ $(window).on("load", function() {
 			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
 			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
 			$ref = 'volsize';
-			html_inputbox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->description(),true,20,false,false,20);
+			html_inputbox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_description(),true,20,false,false,20);
 			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
 			$ref = 'volmode';
-			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
 			$ref = 'compression';
-			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
 			$ref = 'dedup';
-			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
 			$ref = 'sync';
-			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),true);
+			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
 			$ref = 'volblocksize';
-			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description(),false,$isrecordmodify);
+			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),false,$isrecordmodify);
 			$ref = 'primarycache';
-			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
+			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
 			$ref = 'secondarycache';
-			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
+			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
 			$ref = 'checksum';
-			html_combobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
+			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
 			$ref = 'logbias';
-			html_radiobox2($ref,$prop->$ref->title(),$sphere_record[$ref],$prop->$ref->options(),$prop->$ref->description());
+			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
 ?>
 		</tbody>
 	</table>

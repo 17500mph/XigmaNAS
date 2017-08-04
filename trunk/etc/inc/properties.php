@@ -32,70 +32,87 @@
   either expressed or implied, of the NAS4Free Project.
  */
 class properties {
-	protected $v_name = '';
-	protected $v_title = '';
-	protected $v_description = '';
+	protected $v_id = NULL;
+	protected $v_name = NULL;
+	protected $v_title = NULL;
+	protected $v_description = NULL;
 	protected $v_defaultvalue = NULL;
-	protected $v_editableonadd = true;
-	protected $v_editableonmodify = true;
+	protected $v_editableonadd = NULL;
+	protected $v_editableonmodify = NULL;
 	protected $v_filter = [];
-	protected $v_message_error = '';
-	protected $v_message_info = '';
-	protected $v_message_warning = '';
+	protected $v_message_error = NULL;
+	protected $v_message_info = NULL;
+	protected $v_message_warning = NULL;
 
 //	get/set methods
-	public function name(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_name = $value;
-		endif;
+	public function set_id(string $value = NULL) {
+		$this->v_id = $value;
+		return $this;
+	}
+	public function get_id() {
+		return $this->v_id;
+	}
+	public function set_name(string $value = NULL) {
+		$this->v_name = $value;
+		return $this;
+	}
+	public function get_name() {
 		return $this->v_name;
 	}
-	public function title(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_title = $value;
-		endif;
+	public function set_title(string $value = NULL) {
+		$this->v_title = $value;
+		return $this;
+	}
+	public function get_title() {
 		return $this->v_title;
 	}
-	public function description(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_description = $value;
-		endif;
+	public function set_description(string $value = NULL) {
+		$this->v_description = $value;
+		return $this;
+	}
+	public function get_description() {
 		return $this->v_description;
 	}
-	public function defaultvalue(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_defaultvalue = $value;
-		endif;
+	public function set_defaultvalue(string $value = NULL) {
+		$this->v_defaultvalue = $value;
+		return $this;
+	}
+	public function get_defaultvalue() {
 		return $this->v_defaultvalue;
 	}
-	public function editableonadd(bool $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_editableonadd = $value;
-		endif;
+	public function set_editableonadd(bool $value = NULL) {
+		$this->v_editableonadd = $value;
+		return $this;
+	}
+	public function get_editableonadd() {
 		return $this->v_editableonadd;
 	}
-	public function editableonmodify(bool $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_editableonmodify = $value;
-		endif;
+	public function set_editableonmodify(bool $value = NULL) {
+		$this->v_editableonmodify = $value;
+		return $this;
+	}
+	public function get_editableonmodify() {
 		return $this->v_editableonmodify;
 	}
-	public function message_error(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_message_error = $value;
-		endif;
+	public function set_message_error(string $value = NULL) {
+		$this->v_message_error = $value;
+		return $this;
+	}
+	public function get_message_error() {
 		return $this->v_message_error;
 	}
-	public function message_info(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_message_info = $value;
-		endif;
+	public function set_message_info(string $value = NULL) {
+		$this->v_message_info = $value;
+		return $this;
+	}
+	public function get_message_info() {
 		return $this->v_message_info;
 	}
-	public function message_warning(string $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_message_warning = $value;
-		endif;
+	public function set_message_warning(string $value = NULL) {
+		$this->v_message_warning = $value;
+		return $this;
+	}
+	public function get_message_warning() {
 		return $this->v_message_warning;
 	}
 /**
@@ -104,12 +121,13 @@ class properties {
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return object Returns $this.
  */	
-	public function filter($value = NULL,string $filter_name = 'ui') {
+	public function set_filter($value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
-		if(!array_key_exists($filter_name,$this->v_filter)):
-			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => NULL,'options' => NULL];
+		if(array_key_exists($filter_name,$this->v_filter)):
+			$this->v_filter[$filter_name]['filter'] = $value;
+		else:
+			$this->v_filter[$filter_name] = ['filter' => $value,'flags' => NULL,'options' => NULL];
 		endif;
-		$this->v_filter[$filter_name]['filter'] = $value;
 		return $this;
 	}
 /**
@@ -118,12 +136,13 @@ class properties {
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return object Returns $this.
  */
-	public function filter_flags($value = NULL,string $filter_name = 'ui') {
+	public function set_filter_flags($value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
-		if(!array_key_exists($filter_name,$this->v_filter)):
-			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => NULL,'options' => NULL];
+		if(array_key_exists($filter_name,$this->v_filter)):
+			$this->v_filter[$filter_name]['flags'] = $value;
+		else:
+			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => $value,'options' => NULL];
 		endif;
-		$this->v_filter[$filter_name]['flags'] = $value;
 		return $this;
 	}
 /**
@@ -132,12 +151,13 @@ class properties {
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return object Returns $this.
  */
-	public function filter_options(array $value = NULL,string $filter_name = 'ui') {
+	public function set_filter_options(array $value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
-		if(!array_key_exists($filter_name,$this->v_filter)):
-			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => NULL,'options' => NULL];
+		if(array_key_exists($filter_name,$this->v_filter)):
+			$this->v_filter[$filter_name]['options'] = $value;
+		else:
+			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => NULL,'options' => $value];
 		endif;
-		$this->v_filter[$filter_name]['options'] = $value;
 		return $this;
 	}
 /**
@@ -147,9 +167,9 @@ class properties {
  * @return object Returns $this.
  */
 	public function filter_use_default(string $filter_name = 'ui') {
-		$this->filter(FILTER_VALIDATE_REGEXP,$filter_name);
-		$this->filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
+		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+		$this->set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
 		return $this;
 	}
 /**
@@ -170,14 +190,14 @@ class properties {
  * @return mixed Filter result.
  */
 	public function validate_input(int $input_type = INPUT_POST,string $filter_name = 'ui') {
-		$fv = $this->get_filter($filter_name);
-		if(isset($fv)):
-			$action  = (isset($fv['flags']) ? 1 : 0) + (isset($fv['options']) ? 2 : 0);
+		$filter_parameter = $this->get_filter($filter_name);
+		if(isset($filter_parameter)):
+			$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 			switch($action):
-				case 3: return filter_input($input_type,$this->name(),$fv['filter'],['flags' => $fv['flags'],'options' => $fv['options']]);
-				case 2: return filter_input($input_type,$this->name(),$fv['filter'],['options' => $fv['options']]);
-				case 1: return filter_input($input_type,$this->name(),$fv['filter'],$fv['flags']);
-				case 0: return filter_input($input_type,$this->name(),$fv['filter']);
+				case 3: return filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+				case 2: return filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+				case 1: return filter_input($input_type,$this->get_name(),$filter_parameter['filter'],$filter_parameter['flags']);
+				case 0: return filter_input($input_type,$this->get_name(),$filter_parameter['filter']);
 			endswitch;
 		endif;
 		return NULL;
@@ -189,35 +209,35 @@ class properties {
  * @return mixed Filter result.
  */
 	public function validate_value($value,string $filter_name = 'ui') {
-		$fv = $this->get_filter($filter_name);
-		if(isset($fv)):
-			$action  = (isset($fv['flags']) ? 1 : 0) + (isset($fv['options']) ? 2 : 0);
+		$filter_parameter = $this->get_filter($filter_name);
+		if(isset($filter_parameter)):
+			$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 			switch($action):
-				case 3: return filter_var($value,$fv['filter'],['flags' => $fv['flags'],'options' => $fv['options']]);
-				case 2: return filter_var($value,$fv['filter'],['options' => $fv['options']]);
-				case 1: return filter_var($value,$fv['filter'],$fv['flags']);
-				case 0: return filter_var($value,$fv['filter']);
+				case 3: return filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+				case 2: return filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+				case 1: return filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+				case 0: return filter_var($value,$filter_parameter['filter']);
 			endswitch;
 		endif;
 		return NULL;
 	}
 /**
- * Method to apply a filter to index 'name' of an array variable.
+ * Method to apply a filter to index [$name] of an array variable.
  * @param array $variable The variable to be tested.
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return mixed Filter result.
  */
-	public function validate_variable(array $variable,string $filter_name = 'ui') {
-		if(array_key_exists($this->name(),$variable)):
-			$value = $variable[$this->name()];
-			$fv = $this->get_filter($filter_name);
-			if(isset($fv)):
-				$action  = (isset($fv['flags']) ? 1 : 0) + (isset($fv['options']) ? 2 : 0);
+	public function validate_array_element(array $variable,string $filter_name = 'ui') {
+		if(array_key_exists($this->get_name(),$variable)):
+			$value = $variable[$this->get_name()];
+			$filter_parameter = $this->get_filter($filter_name);
+			if(isset($filter_parameter)):
+				$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 				switch($action):
-					case 3: return filter_var($value,$fv['filter'],['flags' => $fv['flags'],'options' => $fv['options']]);
-					case 2: return filter_var($value,$fv['filter'],['options' => $fv['options']]);
-					case 1: return filter_var($value,$fv['filter'],$fv['flags']);
-					case 0: return filter_var($value,$fv['filter']);
+					case 3: return filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+					case 2: return filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+					case 1: return filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+					case 0: return filter_var($value,$filter_parameter['filter']);
 				endswitch;
 			endif;
 		endif;
@@ -225,14 +245,15 @@ class properties {
 	}
 }
 class properties_list extends properties {
-	public $v_option = NULL;
+	public $v_options = NULL;
 	
 //	get/set methods
-	public function options(array $value = NULL) {
-		if(func_num_args() > 0):
-			$this->v_option = $value;
-		endif;
-		return $this->v_option;
+	public function set_options(array $value = NULL) {
+		$this->v_options = $value;
+		return $this;
+	}
+	public function get_options() {
+		return $this->v_options;
 	}
 /**
  * Method to apply the default class filter to a filter name.
@@ -241,9 +262,9 @@ class properties_list extends properties {
  * @return object Returns $this.
  */
 	public function filter_use_default(string $filter_name = 'ui') {
-		$this->filter(FILTER_VALIDATE_REGEXP,$filter_name);
-		$this->filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->filter_options(['default' => NULL,'regexp' => sprintf('/^(%s)$/',implode('|',array_keys($this->v_option)))],$filter_name);
+		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+		$this->set_filter_options(['default' => NULL,'regexp' => sprintf('/^(%s)$/',implode('|',array_keys($this->v_options)))],$filter_name);
 		return $this;
 	}
 }
