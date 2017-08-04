@@ -203,13 +203,13 @@ class HTMLBaseControl2 {
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
 		$tr = $root->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfTag()];
-		if($this->GetReadOnly()):
+//		if($this->GetReadOnly()):
 			$tr->addElement('td',$attributes,$this->GetTitle());
-		else:
-			$tdtag = $tr->addElement('td',$attributes);
-			$attributes = ['for' => $ctrlname];
-			$tdtag->addElement('label',$attributes,$this->GetTitle());
-		endif;
+//		else:
+//			$tdtag = $tr->addElement('td',$attributes);
+//			$attributes = ['for' => $ctrlname];
+//			$tdtag->addElement('label',$attributes,$this->GetTitle());
+//		endif;
 		$attributes = ['class' => $this->GetClassOfData()];
 		$tddata = $tr->addElement('td',$attributes);
 		$this->ComposeInner($tddata);
@@ -1492,10 +1492,10 @@ class co_DOMDocument extends \DOMDocument {
 		parent::__construct($version,$encoding);
 		$this->formatOutput = true;
 	}
-	public function flush() {
+	public function render() {
 		echo $this->saveHTML();
 	}
-	public function render() {
+	public function get_html() {
 		return $this->saveHTML();
 	}
 }

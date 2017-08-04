@@ -100,7 +100,7 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 	public function doj() {
 		$output = [];
 		$output[] = '';
-		return implode("\n",$output);
+		return implode(PHP_EOL,$output);
 	}
 	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 		$element = 'button';
@@ -116,7 +116,7 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 		$attributes = ['name' => 'submit','type' => 'submit','class' => $this->_class_button,'value' => $value,'id' => $id];
 		$root = new co_DOMDocument();
 		$o_button = $root->addElement($element,$attributes,$content);
-		return $root->render();
+		return $root->get_html();
 	}
 }
 class co_sphere_level2 extends co_sphere_level1 { // for row and grid
@@ -183,7 +183,7 @@ class co_sphere_row extends co_sphere_level2 {
 		$output[] = '//]]>';
 		$output[] = '</script>';
 		$output[] = '';
-		return implode("\n",$output);
+		return implode(PHP_EOL,$output);
 	}
 	public function upsert() {
 		//	update existing grid record with row record or add row record to grid
@@ -442,7 +442,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$output[] = '//]]>';
 		$output[] = '</script>';
 		$output[] = '';
-		return implode("\n",$output);
+		return implode(PHP_EOL,$output);
 	}
 	public function html_button_delete_rows() {
 		return $this->html_button($this->val_button_del_rows,$this->cbm_delete(),$this->id_button_del_rows);
@@ -469,7 +469,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		endif;
 		$root = new co_DOMDocument();
 		$o_input = $root->addElement($element,$attributes);
-		return $root->render();
+		return $root->get_html();
 	}
 	public function html_checkbox_toggle_cbm() {
 		$element = 'input';
@@ -480,7 +480,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			'title' => gtext('Invert Selection')];
 		$root = new co_DOMDocument();
 		$o_input = $root->addElement($element,$attributes);
-		return $root->render();
+		return $root->get_html();
 	}
 	public function html_toolbox(bool $notprotected = true,bool $notdirty = true) {
 /*
@@ -507,7 +507,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			//	record is protected
 			$o_td->addElement('img',['src' => $g_img['loc'],'title' => $this->sym_loc(),'alt' => $this->sym_loc()]);
 		endif;
-		return $root->render();
+		return $root->get_html();
 	}
 	public function html_maintainbox() {
 		global $g_img;
@@ -516,7 +516,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$link = sprintf('%s?%s=%s',$this->maintain->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 		$o_a = $o_td->addElement('a',['href' => $link]);
 		$o_a->addElement('img', ['src' => $g_img['mai'],'title' => $this->sym_mai(),'alt' => $this->sym_mai(),'class' => 'spin']);
-		return $root->render();
+		return $root->get_html();
 	}
 	public function html_informbox() {
 		global $g_img;
@@ -525,7 +525,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
 		$o_a = $o_td->addElement('a',['href' => $link]);
 		$o_a->addElement('img', ['src' => $g_img['inf'],'title' => $this->sym_inf(),'alt' => $this->sym_inf(),'class' => 'spin']);
-		return $root->render();
+		return $root->get_html();
 	}
 	public function html_footer_add(int $colspan = 2) {
 /*
@@ -547,6 +547,6 @@ class co_sphere_grid extends co_sphere_level2 {
 		$link = sprintf('%s?submit=add',$this->modify->scriptname());
 		$o_a = $o_th2->addElement('a',['href' => $link]);
 		$o_img = $o_a->addElement('img',['src' => $g_img['add'],'title' => $this->sym_add(),'alt' => $this->sym_add(),'class' => 'spin']);
-		return $root->render();
+		return $root->get_html();
 	}
 }
