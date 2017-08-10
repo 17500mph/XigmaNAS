@@ -675,6 +675,33 @@ function html_minidlnabox2($ctrlname,$title,$value,$desc,$path,$required = false
 	$ctrl->SetPath($path);
 	$ctrl->Compose()->render();
 }
+
+function html_combobox3(properties $prop,$value,bool $required = false,bool $readonly = false,$onclick = '') {
+	$ctrl = new HTMLComboBox2($prop->get_id(),$prop->get_title(),$value,$prop->get_options(),$prop->get_description());
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Compose();
+	return $ctrl->get_html();
+}
+function html_inputbox3(properties $prop,$value,bool $required = false,bool $readonly = false,$size = 40,$altpadding = false,$maxlength = 0,string $placeholder = '') {
+	$ctrl = new HTMLEditBox2($prop->get_id(),$prop->get_title(),$value,$prop->get_description(),$size);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetAltPadding($altpadding);
+	$ctrl->SetMaxLength($maxlength);
+	$ctrl->SetPlaceholder($placeholder);
+	$ctrl->Compose();
+	return $ctrl->get_html();
+}
+function html_radiobox3(properties $prop,$value,bool $required = false,bool $readonly = false,$onclick = '') {
+	$ctrl = new HTMLRadioBox2($prop->get_id(),$prop->get_title(),$value,$prop->get_options(),$prop->get_description());
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Compose();
+	return $ctrl->get_html();
+}
 function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 	$element = 'button';
 	$class = 'formbtn';
@@ -893,7 +920,7 @@ function get_headermenu(): array {
 		$menu_name = 'help';
 		$menu[$menu_name] = ['type' => 'nolink','visible' => true,'img' => '','description' => gtext('Help'),'link' => ''];
 		$menu_items = &$menu[$menu_name]['menuitem'];
-		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Forum'),'link' => 'https://www.nas4free.org/forums/'];
+		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Forum'),'link' => 'https://nas4free.org/forums/'];
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Information & Manual'),'link' => 'https://www.nas4free.org/wiki/doku.php'];
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('IRC Live Support'),'link' => 'https://webchat.freenode.net/?channels=#nas4free'];
 		$menu_items[] = ['type' => 'separator','visible' => true,'description' => '','link' => '/index.php'];
