@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-07-21 00:19+0000\n"
-"PO-Revision-Date: 2017-02-24 14:37+0000\n"
-"Last-Translator: Piotr Łobuz <ericsson@go2.pl>\n"
+"PO-Revision-Date: 2017-08-03 12:21+0000\n"
+"Last-Translator: Manveru <manveru@manveru.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-30 14:25+0000\n"
-"X-Generator: Launchpad (build 18441)\n"
+"X-Launchpad-Export-Date: 2017-08-11 13:22+0000\n"
+"X-Generator: Launchpad (build 18446)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
 "X-Poedit-Language: Polish\n"
@@ -24,7 +24,7 @@ msgstr " został przypisany do "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s został użyty do utworzenia %2$s woluminów."
 
 #, php-format
 msgid "%d days"
@@ -104,7 +104,7 @@ msgstr "użyto %sB z %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' usuwa wszystkie dane statystyczne z wykresów!"
 
 msgid "(Change if needed)"
 msgstr "(Zmień jeśli potrzebujesz)"
@@ -113,6 +113,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Domyślne długości: 128 dla AES, 128 dla Blowfish, 128 dla Camellia oraz 192 "
+"dla 3DES)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Znaleziono w dyskach Maxtor 6B200M0 200GB i Maxtor 2R015H1 15GB)"
@@ -181,7 +183,7 @@ msgstr ""
 "0=wyłączony, 1-255=włącz kolejkowanie poleceń z określoną długością kolejki."
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr "1 lub więcej dysków jest wymaganych aby zbudować wolumin JBOD"
@@ -190,7 +192,7 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Jedne lub więcej dysków jest wymagane aby stworzyć wolumin RAID-1"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Co najmniej 2 dyski są potrzebne do RAID-0"
@@ -199,7 +201,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Co najmniej 2 dyski są potrzebne do RAID-1"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Co najmniej 3 dyski są potrzebne do RAID-5"
@@ -214,6 +216,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Nazwa serwera czasu NTP może zawierać tylko następujące znaki: a-z, 0-9, \"-"
+"\" i \".\"."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -228,9 +232,11 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Wykaz katalogu jest generowany, gdy brak pliku indeksu (index.php, "
+"index.html, index.htm lub defailt.htm) w tym katalogu."
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "Aktualizacja oprogramowania w toku."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -261,19 +267,19 @@ msgstr ""
 "żądane operacje."
 
 msgid "A reboot is required"
-msgstr ""
+msgstr "Wymagany restart systemu"
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Żądanie przeładowania zostało wysłane do daemonów."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Zlecono ponowne skanowanie"
 
 msgid "A route to this destination network already exists."
 msgstr "Trasa do sieci docelowej już istnieje."
 
 msgid "A sysvol folder was found."
-msgstr ""
+msgstr "Katalog sysvol został odnaleziony."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -361,16 +367,16 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "Zgodność z AFP"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "Rozmiar odczytu AIO"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "Rozmiar zapisu AIO"
 
 msgid "ALL Interfaces"
 msgstr "Wszystkie interfejsy"
@@ -397,7 +403,7 @@ msgid "Access Restrictions"
 msgstr "Ograniczenia dostępu"
 
 msgid "Access Time"
-msgstr ""
+msgstr "Czas dostępu"
 
 msgid "Access Time (atime)"
 msgstr "Czas dostępu"
@@ -459,10 +465,10 @@ msgid "Add Dataset"
 msgstr "Dodaj zestaw danych"
 
 msgid "Add Disk"
-msgstr ""
+msgstr "Dodaj dysk"
 
 msgid "Add Encrypted Volume"
-msgstr ""
+msgstr "Dodaj wolumin zaszyfrowany"
 
 msgid "Add Group"
 msgstr "Dodaj grupę"
@@ -489,7 +495,7 @@ msgid "Add RAID"
 msgstr "Dodaj RAID"
 
 msgid "Add Record"
-msgstr ""
+msgstr "Dodaj rekord"
 
 msgid "Add Resource"
 msgstr "Dodaj zasób"
@@ -498,13 +504,13 @@ msgid "Add Route"
 msgstr "Dodaj trasę"
 
 msgid "Add Rsync Job"
-msgstr ""
+msgstr "Dodaj zadanie Rsync"
 
 msgid "Add Rsync Module"
-msgstr ""
+msgstr "Dodaj moduł Rsync"
 
 msgid "Add Samba Share"
-msgstr ""
+msgstr "Dodaj udział Samba"
 
 msgid "Add Share"
 msgstr "Dodaj udział"
@@ -531,13 +537,13 @@ msgid "Add WLAN"
 msgstr "Dodaj WLAN"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Dodaj urządzenie pamięci podręcznej do puli"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "Dodaj urządzenie dziennika do puli"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Dodaj zapasowe urządzenie do puli"
 
 msgid "Add a virtual device to a pool"
 msgstr "Dodaj urządzenie virtualne do puli"
@@ -546,7 +552,7 @@ msgid "Add additional scheduled self-test."
 msgstr "Dodaj dodatkowy zaplanowany test wewnetrzny."
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Dodaj parametry uzupełniające"
 
 msgid "Add auth group"
 msgstr "Dodaj grupę zabezpieczeń"
@@ -588,13 +594,13 @@ msgid "Add target"
 msgstr "Dodaj cel"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Dodatkowa grupa"
 
 msgid "Additional Network"
 msgstr "Dodatkowa sieć"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Dodatkowe parametry"
 
 msgid "Additional Storage"
 msgstr "Dodatkowa pamięć"
@@ -613,13 +619,13 @@ msgid "Admin Password"
 msgstr "Hasło Administratora"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Hasło administracyjne"
 
 msgid "Administrative WebGUI"
 msgstr "Strona administracyjna WebGUI"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Nazwa administratora"
 
 msgid "Advanced"
 msgstr "Zaawansowane"
@@ -643,7 +649,7 @@ msgid "Advertisement Skew"
 msgstr ""
 
 msgid "After - File-deletions will be done after the transfer has completed."
-msgstr ""
+msgstr "Po - Usunięcia plików będą wykonywane po zakończeniu transferu."
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
@@ -663,7 +669,7 @@ msgid "Age"
 msgstr "Wiek"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Protokół agregacji"
 
 msgid "Aggressive"
 msgstr "Agresywny"
@@ -680,13 +686,13 @@ msgid "Alert Level"
 msgstr "Poziom alarmowy"
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algorytm"
 
 msgid "All"
 msgstr "Wszystko"
 
 msgid "All Dirs"
-msgstr ""
+msgstr "Wszystkie katalogi"
 
 msgid "All data from the following statistics have been deleted:"
 msgstr "Wszystkie dane z następujących statystyk zostały usunięte:"
@@ -695,6 +701,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"Wszystkie dane w tej ścieżce są nadpisane. Aby uniknąć nieprawidłowych "
+"danych/uprawnień, użyj pustego katalogu UFS."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Wszystkie dane zostaną utracone po wybraniu tej opcji!"
@@ -709,7 +717,7 @@ msgid "All disks are imported."
 msgstr "Wszystkie dyski zostały zaimportowane"
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Wszystkie szyfrowane dyski zostały zaimportowane."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -719,7 +727,7 @@ msgstr ""
 "i cokolwiek zaczynające się od .Apple jest nielegalne."
 
 msgid "All software RAID disks are imported."
-msgstr ""
+msgstr "Wszystkie dyski programowego RAID zostały zaimportowane."
 
 msgid "Alloc"
 msgstr "Przydzielenie"
@@ -734,7 +742,7 @@ msgid "Allow TLS connections only."
 msgstr "Zezwalaj tylko na połączenia TLS"
 
 msgid "Allow USB"
-msgstr ""
+msgstr "Zezwalaj USB"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Zezwalaj klientowi na dostęp do kont z pustym hasłem."
@@ -792,13 +800,13 @@ msgid "AltRoot"
 msgstr "Alt. kat. główny"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Przemienne strumienie danych"
 
 msgid "Alternate TCP port. (Default is 873)."
-msgstr ""
+msgstr "Zamień port TCP (domyślnie 873)."
 
 msgid "Alternative configuration directory."
-msgstr ""
+msgstr "Alternatywny katalog konfiguracji."
 
 msgid "Always"
 msgstr "Zawsze"
@@ -841,7 +849,7 @@ msgid ""
 msgstr ""
 
 msgid "An empty field is default."
-msgstr ""
+msgstr "Domślnie puste pole."
 
 msgid "An error occured."
 msgstr "Wystąpił błąd."
@@ -853,13 +861,13 @@ msgid "An interface with the specified description already exists."
 msgstr "Interfejs z podanym opisem już istnieje."
 
 msgid "Anonymous Bind"
-msgstr ""
+msgstr "Powiązanie anonimowe"
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Anonimowi użytkownicy"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
-msgstr ""
+msgstr "Dostęp anonimowy został dezaprobowany od SMB2."
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -877,17 +885,23 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"Inny serwis DLNA/UPnP już jest uruchomiony. Włączenie Fuppes może powodować "
+"problemy."
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Inny serwis DLNA/UPnP już jest uruchomiony. Włączenie MiniDLNA może "
+"powodować problemy."
 
 msgid "Any"
 msgstr "Dowolny"
 
 msgid "Any service using these disks might become invalid or inaccessible!"
 msgstr ""
+"Jakikolwiek serwis używający tych dysków może stać się nieprawidłowy lub "
+"niedostępny!"
 
 msgid "Append user defined shares"
 msgstr "Dołącz zdefiniowane przez użytkownika zasoby"
@@ -896,7 +910,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apply"
-msgstr ""
+msgstr "Zastosuj"
 
 msgid "Apply Filter"
 msgstr "Zastosuj filtr"
@@ -921,15 +935,16 @@ msgstr "Czy na pewno chcesz, aby ponownie uruchomić serwer?"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
 msgstr ""
+"Czy jesteś pewien przywrócenia ustawień serwera do ustawień fabrycznych?"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Czy na pewno chcesz wyłączyć serwer?"
 
 msgid "Asynchronous I/O"
-msgstr ""
+msgstr "Asynchroniczne We/Wy"
 
 msgid "At least one interface must be selected."
-msgstr ""
+msgstr "Przynajmniej jeden interfejs musi być wybrany."
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -939,13 +954,13 @@ msgstr ""
 "stworzony dla jednego lub większej ilości zakresów."
 
 msgid "Attach"
-msgstr ""
+msgstr "Przyłącz"
 
 msgid "Attach a data device"
-msgstr ""
+msgstr "Przyłącz urządzenie danych"
 
 msgid "Attach a log device"
-msgstr ""
+msgstr "Przyłącz urządzenie dziennika"
 
 msgid "Attached"
 msgstr "Załączone"
@@ -959,9 +974,12 @@ msgid ""
 "NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
+"Próby użycia innych systemów plików, takich jak FAT, FAT32, EXT2, EXT3, EXT4 "
+"lub NTFS mogą wywołać nieprzewidziane rezultaty, włączając uszkodzenie "
+"plików i utratę danych!"
 
 msgid "Attribute Name"
-msgstr ""
+msgstr "Nazwa atrybutu"
 
 msgid "Audio"
 msgstr "Dźwięk"
@@ -995,15 +1013,19 @@ msgid "Authenticate URL"
 msgstr "URL Autentykacji"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Uwierzytelnieni użytkownicy"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Pasmo pobierania w KB/s użytkowników uwierzytelnionych. Puste pole oznacza "
+"nieskończoność."
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Pasmo wysyłania w KB/s użytkowników uwierzytelnionych. Puste pole oznacza "
+"nieskończoność."
 
 msgid "Authentication"
 msgstr "Uwierzytelnianie"
@@ -1012,10 +1034,10 @@ msgid "Authentication Method"
 msgstr "Metoda uwierzytelnienia"
 
 msgid "Authentification method is disabled."
-msgstr ""
+msgstr "Metoda uwierzytelniania jest wyłączona."
 
 msgid "Authorised Network"
-msgstr ""
+msgstr "Autoryzowana sieć"
 
 msgid "Authorised network"
 msgstr "Autoryzowana sieć"
@@ -1030,10 +1052,10 @@ msgid "Auto Snapshot"
 msgstr "Automatyczna migawka"
 
 msgid "Auto Snapshot Settings"
-msgstr ""
+msgstr "Ustawienia migawek automatycznych"
 
 msgid "Auto page refresh."
-msgstr ""
+msgstr "Automatyczne odświeżanie strony"
 
 msgid "Auto size"
 msgstr "Rozmiar automatyczny"
@@ -1042,13 +1064,13 @@ msgid "AutoScale"
 msgstr "Skala automatyczna"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Automatyczne wykrywanie"
 
 msgid "Autoscale"
-msgstr ""
+msgstr "Automatyczne skalowanie"
 
 msgid "Autoscale for graphs."
-msgstr ""
+msgstr "Automatyczne skalowanie wykresów"
 
 msgid "Autoselect"
 msgstr "Wybór automatyczny"
@@ -1085,13 +1107,13 @@ msgid "Background"
 msgstr "Tło"
 
 msgid "Backup"
-msgstr ""
+msgstr "Kopia zapasowa"
 
 msgid "Backup Configuration"
 msgstr "Konfiguracja kopii zapasowej"
 
 msgid "Backup File"
-msgstr ""
+msgstr "Plik kopii zapasowej"
 
 msgid "Backup/Restore"
 msgstr "Backup/Przywróć"
@@ -1100,16 +1122,16 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Zły użytkownik - (Użytkownik nie istnieje)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Algorytm równoważenia"
 
 msgid "Ban List"
 msgstr "Lista zablokowanych"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Zasada listy blokad"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Ustawienia zasady listy blokad"
 
 msgid "Banner"
 msgstr "Baner"
@@ -1170,17 +1192,20 @@ msgid "Battery voltage"
 msgstr "Napięcie baterii"
 
 msgid "Be careful enabling this option."
-msgstr ""
+msgstr "Ostrożnie z włączaniem tej opcji."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
+"Przed - usunięcia plików będą wykonywane przed rozpoczęciem transferu."
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
+"Przed - usunięcia plików będą wykonywane przed rozpoczęciem transferu."
 
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
+"Zanim Klient Unison może rozpocząć pracę, musisz wykonać następujące kroki:"
 
 msgid "Best available"
 msgstr "Najlepszy dostępny"
@@ -1189,7 +1214,7 @@ msgid "Bind DN"
 msgstr "Powiązana DN"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "Hasło przyłączenia"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1199,6 +1224,8 @@ msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
 msgstr ""
+"BitTorrent wymaga przynajmniej uprawnień odczytu i uruchomienia w punkcie "
+"montowania dla katalogu %s!"
 
 msgid "Blank Time"
 msgstr ""
@@ -1228,15 +1255,17 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Partycja bootująca jest za małą. Musisz przeinstalować z LiveCD/LiveUSB lub "
+"zmienić rozmiar tej partycji %s.\n"
 
 msgid "Bootloader"
 msgstr "Program rozruchowy"
 
 msgid "Both user data and metadata will be cached in ARC."
-msgstr ""
+msgstr "Zarówno dane użytkownika, jak i metadane będą przechowywane w ARC."
 
 msgid "Both user data and metadata will be cached in L2ARC."
-msgstr ""
+msgstr "Zarówno dane użytkownika, jak i metadane będą przechowywane w L2ARC."
 
 msgid "Bridge"
 msgstr "Mostek"
@@ -1327,10 +1356,10 @@ msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
 msgid "CIFS/SMB Information"
-msgstr ""
+msgstr "Informacje CIFS/SMB"
 
 msgid "CIFS/SMB is disabled."
-msgstr ""
+msgstr "CIFS/SMB jest wyłączony."
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB jest włączone."
@@ -1366,7 +1395,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Tradycyjny chiński Big5)"
 
 msgid "CPU Core Usage"
-msgstr ""
+msgstr "Użycie rdzenia CPU"
 
 msgid "CPU Frequency"
 msgstr "Częstotliwość zegara CPU"
@@ -1396,12 +1425,14 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
+"Licznik błędów CRC. Zlicza ilość błędów CRC (przy odczycie/zapisie danych "
+"FIS)"
 
 msgid "Calibration Battery"
 msgstr "Kalibracja baterii"
 
 msgid "Can Mount"
-msgstr ""
+msgstr "Może montować"
 
 msgid "Can't get UFS ID."
 msgstr "Nie można pobrać UFS ID"
@@ -1479,12 +1510,13 @@ msgstr ""
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
+"Zapoznaj się z dokumentacją FreeBSD w temacie szczegółów o TCP Wrappers"
 
 msgid "Check the list of available drivers"
-msgstr ""
+msgstr "Sprawdź listę dostępnych sterownikó"
 
 msgid "Checksum"
-msgstr ""
+msgstr "Suma kontrolna"
 
 msgid "Choose UPS mode."
 msgstr "Wybierz tryb UPS"
@@ -1502,22 +1534,24 @@ msgid "Clear"
 msgstr "Wyczyść"
 
 msgid "Clear Config And Import Disks"
-msgstr ""
+msgstr "Wyczyść konfigurację i importuj dyski"
 
 msgid "Clear Configuration"
-msgstr ""
+msgstr "Wyczyść konfigurację"
 
 msgid "Clear Text Authentication"
-msgstr ""
+msgstr "Uwierzytelnianie czystym tekstem"
 
 msgid "Clear configuration information before importing disks."
-msgstr ""
+msgstr "Wyczyść informacje konfiguracyjne przed importowaniem dysków."
 
 msgid "Clear configuration information before importing software RAID disks."
 msgstr ""
+"Wyczyść informacje konfiguracyjne przed importowaniem dysków z programowym "
+"RAID."
 
 msgid "Clear device errors"
-msgstr ""
+msgstr "Wyczyść błędy urządzenia"
 
 msgid "Client"
 msgstr "Klient"
@@ -1532,7 +1566,7 @@ msgid "Clone"
 msgstr "Klon"
 
 msgid "Clone Configuration"
-msgstr ""
+msgstr "Klonuj konfigurację"
 
 msgid "Collecting initial data, please wait..."
 msgstr "Zbieranie danych inicjalizacyjnych, proszę czekać..."
@@ -1547,15 +1581,17 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Oddzielona przecinkami lista nazw grup upoważnionych do logowania na serwer "
+"FTP. (puste = grupa ftp)."
 
 msgid "Command"
 msgstr "Polecenie"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Wyjście polecenia"
 
 msgid "Command Output:"
-msgstr ""
+msgstr "Wyjście polecenia:"
 
 msgid "Command Scripts"
 msgstr "Skrypty poleceń"
@@ -1644,7 +1680,7 @@ msgid "Confirm New Password"
 msgstr ""
 
 msgid "Confirm Password"
-msgstr ""
+msgstr "Potwierdź hasło"
 
 msgid "Confirmation"
 msgstr "Potwierdzenie"
@@ -1681,13 +1717,13 @@ msgid "Content"
 msgstr "Zawartość"
 
 msgid "Content Locations"
-msgstr ""
+msgstr "Lokalizacje treści"
 
 msgid "Continue"
 msgstr "Dalej"
 
 msgid "Control"
-msgstr ""
+msgstr "Kontrola"
 
 msgid "Controller"
 msgstr "Kontroler"
@@ -1727,6 +1763,13 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
+"Kontroluje algorytm kompresji używanego w zestawie danych. \"LZ4\" jest "
+"aktualnie rekomendowanym algorytmem kompresji. Ustawienie kompresji na "
+"\"Włącz\" użyje algorytmu LZ4, jeżeli flaga właściwości lz4_compress jest "
+"aktywna, w przeciwnym wypadku użyty będzie LZJB. Możesz określić poziom "
+"\"GZIP\" wybierając wartości \"GZIP-N\", gdzie jest jest wartością całkowitą "
+"of 1 (najszybsza) do 9 (najlepszy współczynnik kompresji). Aktualnie samo "
+"\"GZIP\" jest równoważne \"GZIP-6\"."
 
 msgid ""
 "Controls the compression algorithm. 'LZ4' is now the recommended compression "
@@ -1736,52 +1779,67 @@ msgid ""
 "from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
 "equivalent to 'GZIP-6'."
 msgstr ""
+"Kontroluje algorytm kompresji. \"LZ4\" jest aktualnie rekomendowanym "
+"algorytmem kompresji. Ustawienie kompresji na \"Włącz\" użyje algorytmu LZ4, "
+"jeżeli flaga właściwości lz4_compress jest aktywna, w przeciwnym wypadku "
+"użyty będzie LZJB. Możesz określić poziom \"GZIP\" wybierając wartości "
+"\"GZIP-N\", gdzie jest jest wartością całkowitą of 1 (najszybsza) do 9 "
+"(najlepszy współczynnik kompresji). Aktualnie samo \"GZIP\" jest równoważne "
+"\"GZIP-6\"."
 
 msgid "Controls the dedup method."
-msgstr ""
+msgstr "Kontroluje metodę deduplikacji."
 
 msgid "Controls the number of copies of data stored for this dataset."
-msgstr ""
+msgstr "Kontroluje ilość kopii danych przechowywanych w tym zestawie danych."
 
 msgid "Controls the power consumption mode."
-msgstr ""
+msgstr "Kontroluje tryb zużycia energii."
 
 msgid "Controls the type of the ZFS dataset."
-msgstr ""
+msgstr "Kontroluje typ zestawu danych ZFS."
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr ""
+"Kontroluje co jest przechowywane w pierwszej pamięci podręcznej (ARC)."
 
 msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
+"Kontroluje co jest przechowywane w drugiej pamięci podręcznej (L2ARC)."
 
 msgid "Controls what types of metadata are stored redundantly."
-msgstr ""
+msgstr "Kontroluje które typy metadanych są przechowywane nadmiarowo."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
-msgstr ""
+msgstr "Kontroluje czy procesy mogą być uruchamiane z tego systemu plików."
 
 msgid ""
 "Controls whether the .zfs directory is hidden or visible in the root of the "
 "file system."
 msgstr ""
+"Kontroluje czy katalog .zfs jest ukryty bądź widoczny w katalogu głównym "
+"tego systemu plików."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read."
 msgstr ""
+"Kontroluje czy czas dostępu do pliku jest aktualizowany przy odczycie."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
 msgstr ""
+"Kontroluje czy czas dostępu do pliku jest aktualizowany przy odczycie. "
+"Wyłączenie tej opcji pozwala uniknąć zapisu w trakcie odczytu co w efekcie "
+"zwiększa wydajność."
 
 msgid "Controls whether the dataset is managed from a jail."
-msgstr ""
+msgstr "Kontroluje czy zestaw danych jest zarządzany z więzienia."
 
 msgid "Controls whether the set-UID bit is respected for the file system."
-msgstr ""
+msgstr "Kontroluje czy bit set-UID jest respektowany przez system plików."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Kotroluje czy ten zbiór danych może być modyfikowany"
@@ -1797,7 +1855,7 @@ msgid "Conveyance Self-Test"
 msgstr ""
 
 msgid "Copies"
-msgstr ""
+msgstr "Liczba kopii"
 
 msgid "Core"
 msgstr "Rdzeń"
