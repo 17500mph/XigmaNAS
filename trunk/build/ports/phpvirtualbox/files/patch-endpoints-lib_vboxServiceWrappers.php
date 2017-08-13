@@ -42,7 +42,7 @@
          $request = new stdClass();
          $request->_this = $this->handle;
          $request->position = $arg_position;
-+       if( $arg_accessMode == null ) {
++       if( $arg_device == null ) {
 +               $arg_device = 0;
 +       }
          $request->device = $arg_device;
