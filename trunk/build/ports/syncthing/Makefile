@@ -27,14 +27,13 @@ NO_PKG_REGISTER= yes
 .include <bsd.port.pre.mk>
 
 do-build:
-	# timestamp here refers to source, not build time
 	@cd ${WRKSRC}/src/github.com/${PORTNAME}/${PORTNAME} ; \
-		${SETENV} GOPATH=${WRKSRC} go run build.go -version v${PORTVERSION} -no-upgrade  tar
+		${SETENV} go run build.go -no-upgrade=true -version v${PORTVERSION}
 
 do-install:
 # NAS4Free install
 	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/github.com/${PORTNAME}/${PORTNAME}/syncthing \
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/github.com/${PORTNAME}/${PORTNAME}/bin/syncthing \
 		${NAS4FREE_ROOTFS}${PREFIX}/bin/
 	@${INSTALL_SCRIPT} -v ${WRKDIR}/syncthing ${NAS4FREE_ROOTFS}/etc/rc.d
 
