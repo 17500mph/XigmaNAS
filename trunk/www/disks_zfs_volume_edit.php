@@ -34,6 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 require 'zfs.inc';
+require 'co_sphere.php';
 require_once 'properties_zfs_dataset.php';
 
 function get_volblocksize($pool,$name) {
@@ -45,43 +46,160 @@ function get_volblocksize($pool,$name) {
 		return '-';
 	endif;
 }
-
-$sphere_scriptname = basename(__FILE__);
-$sphere_header = 'Location: '.$sphere_scriptname;
-$sphere_header_parent = 'Location: disks_zfs_volume.php';
-$sphere_notifier = 'zfsvolume';
-$sphere_array = [];
-$sphere_record = [];
+function get_sphere_disks_zfs_volume_edit() {
+	global $config;
+	$sphere = new co_sphere_row('disks_zfs_volume_edit','php');
+	$sphere->row_identifier('uuid');
+	$sphere->parent->basename('disks_zfs_volume','php');
+	$sphere->notifier('zfsvolume');
+	$sphere->grid = &array_make_branch($config,'zfs','volumes','volume');
+	if(!empty($sphere->grid)):
+		array_sort_key($sphere->grid,'name');
+	endif;
+	return $sphere;
+}
+//	init properties and sphere
+$property = new properties_zfs_volume();
+$sphere = &get_sphere_disks_zfs_volume_edit();
+//	init indicators
+$input_errors = [];
 $prerequisites_ok = true;
-$prop = new properties_zfs_dataset();
-
-$mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
-if(PAGE_MODE_POST == $mode_page): // POST is Cancel or not Submit => cleanup
-	if((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])):
-		header($sphere_header_parent);
-		exit;
+//	request method
+$server_request_method_regexp = '/^(GET|POST)$/';
+$server_request_method = filter_input(
+	INPUT_SERVER,
+	'REQUEST_METHOD',
+	FILTER_VALIDATE_REGEXP,
+	[
+		'flags' => FILTER_REQUIRE_SCALAR,
+		'options' => [
+			'default' => NULL,
+			'regexp' => $server_request_method_regexp
+]]);
+//	resource id
+$resource_id_filter_options = [
+	'flags' => FILTER_REQUIRE_SCALAR,
+	'options' => [
+		'default' => NULL,
+		'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/'
+]];
+//	determine page mode and validate resource id
+switch($server_request_method):
+	default: // unsupported request method
+		$sphere->row[$sphere->row_identifier()] = NULL;
+		break;
+	case 'GET':
+		$action = filter_input(
+			INPUT_GET,
+			'submit',
+			FILTER_VALIDATE_REGEXP,
+			[
+				'flags' => FILTER_REQUIRE_SCALAR,
+				'options' => [
+					'default' => '',
+					'regexp' => '/^(add|edit)$/'
+		]]);
+		switch($action):
+			default: // unsupported action
+				$sphere->row[$sphere->row_identifier()] = NULL;
+				break;
+			case 'add': // bring up a form with default values and let the user modify it
+				$page_mode = PAGE_MODE_ADD;
+				$sphere->row[$sphere->row_identifier()] = uuid();
+				break;
+			case 'edit': // modify the data of the provided resource id and let the user modify it
+				$page_mode = PAGE_MODE_EDIT;
+				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				break;
+		endswitch;
+		break;
+	case 'POST':
+		$action = filter_input(
+			INPUT_POST,
+			'submit',
+			FILTER_VALIDATE_REGEXP,
+			[
+				'flags' => FILTER_REQUIRE_SCALAR,
+				'options' => [
+					'default' => '',
+					'regexp' => '/^(add|cancel|clone|edit|save)$/'
+		]]);
+		switch($action):
+			default:  // unsupported action
+				$sphere->row[$sphere->row_identifier()] = NULL;
+				break;
+			case 'add': // bring up a form with default values and let the user modify it
+				$page_mode = PAGE_MODE_ADD;
+				$sphere->row[$sphere->row_identifier()] = uuid();
+				break;
+			case 'cancel': // cancel - nothing to do
+				$sphere->row[$sphere->row_identifier()] = NULL;
+				break;
+			case 'clone': // clone requires a new resource id, get it from uuid() and validate
+				$page_mode = PAGE_MODE_CLONE;
+				$sphere->row[$sphere->row_identifier()] = uuid();
+				break;
+			case 'edit': // edit requires a resource id, get it from input and validate
+				$page_mode = PAGE_MODE_EDIT;
+				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				break;
+			case 'save': // modify requires a resource id, get it from input and validate
+				$page_mode = PAGE_MODE_POST;
+				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				break;
+		endswitch;
+		break;
+endswitch;
+/*
+ *	exit if $sphere->row[$sphere->row_identifier()] is NULL
+ */
+if(!isset($sphere->row[$sphere->row_identifier()])):
+	header($sphere->parent->header());
+	exit;
+endif;
+/*
+ *	search resource id in sphere
+ */
+$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+/*
+ *	start determine record update mode
+ */
+$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]); // get updatenotify mode
+$record_mode = RECORD_ERROR;
+if(false === $sphere->row_id): // record does not exist in config
+	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_CLONE,PAGE_MODE_POST],true)): // ADD or CLONE or POST
+		switch($updatenotify_mode):
+			case UPDATENOTIFY_MODE_UNKNOWN:
+				$record_mode = RECORD_NEW;
+				break;
+		endswitch;
+	endif;
+else: // record found in configuration
+	if(in_array($page_mode,[PAGE_MODE_EDIT,PAGE_MODE_POST,PAGE_MODE_VIEW],true)): // EDIT or POST or VIEW
+		switch($updatenotify_mode):
+			case UPDATENOTIFY_MODE_NEW:
+				$record_mode = RECORD_NEW_MODIFY;
+				break;
+			case UPDATENOTIFY_MODE_MODIFIED:
+				$record_mode = RECORD_MODIFY;
+				break;
+			case UPDATENOTIFY_MODE_UNKNOWN:
+				$record_mode = RECORD_MODIFY;
+				break;
+		endswitch;
 	endif;
 endif;
-if((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])):
-	$sphere_record['uuid'] = $_POST['uuid'];
-else:
-	if((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])):
-		$sphere_record['uuid'] = $_GET['uuid'];
-	else:
-		$mode_page = PAGE_MODE_ADD; // Force ADD
-		$sphere_record['uuid'] = uuid();
-	endif;
+if(RECORD_ERROR === $record_mode): // oops, something went wrong
+	header($sphere->parent->header());
+	exit;
 endif;
-$a_dataset = &array_make_branch($config,'zfs','datasets','dataset');
-if(empty($a_dataset)):
-else:	
-	array_sort_key($a_dataset,'name');
-endif;
-$sphere_array = &array_make_branch($config,'zfs','volumes','volume');
-if(empty($sphere_array)):
-else:
-	array_sort_key($sphere_array,'name');
-endif;
+$isrecordnew = (RECORD_NEW === $record_mode);
+$isrecordnewmodify = (RECORD_NEW_MODIFY === $record_mode);
+$isrecordmodify = (RECORD_MODIFY === $record_mode);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
+/*
+ *	end determine record update mode
+ */
 $a_pool = &array_make_branch($config,'zfs','pools','pool');
 if(empty($a_pool)): // Throw error message if no pool exists
 	$errormsg = gtext('No configured pools.') . ' ' . '<a href="' . 'disks_zfs_zpool.php' . '">' . gtext('Please add new pools first.') . '</a>';
@@ -89,192 +207,10 @@ if(empty($a_pool)): // Throw error message if no pool exists
 else:
 	array_sort_key($a_pool,'name');
 endif;
-
-$index = array_search_ex($sphere_record['uuid'],$sphere_array,'uuid'); // get index from config for volume by looking up uuid
-$mode_updatenotify = updatenotify_get_mode($sphere_notifier,$sphere_record['uuid']); // get updatenotify mode for uuid
-$mode_record = RECORD_ERROR;
-if(false !== $index): // uuid found
-	if((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))): // POST or EDIT
-		switch($mode_updatenotify):
-			case UPDATENOTIFY_MODE_NEW:
-				$mode_record = RECORD_NEW_MODIFY;
-				break;
-			case UPDATENOTIFY_MODE_MODIFIED:
-			case UPDATENOTIFY_MODE_UNKNOWN:
-				$mode_record = RECORD_MODIFY;
-				break;
-		endswitch;
-	endif;
-else: // uuid not found
-	if((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page)): // POST or ADD
-		switch($mode_updatenotify):
-			case UPDATENOTIFY_MODE_UNKNOWN:
-				$mode_record = RECORD_NEW;
-				break;
-		endswitch;
-	endif;
-endif;
-if(RECORD_ERROR == $mode_record): // oops, someone tries to cheat, over and out
-	header($sphere_header_parent);
-	exit;
-endif;
-$isrecordnew = (RECORD_NEW === $mode_record);
-$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
-$isrecordmodify = (RECORD_MODIFY === $mode_record);
-$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
-
-if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
-	unset($input_errors);
-	// apply post values that are applicable for all record modes
-	$ref = 'desc';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
-	$ref = 'sparse';
-	$sphere_record[$ref] = filter_input(INPUT_POST,$ref,FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
-	foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volmode','volsize'] as $ref):
-		$sphere_record[$ref] = $prop->$ref->validate_input();
-	endforeach;
-	switch($mode_record):
-		case RECORD_NEW:
-		case RECORD_NEW_MODIFY:
-			$sphere_record['name'] = isset($_POST['name']) ? $_POST['name'] : '';
-			$sphere_record['pool'] = isset($_POST['pool']) ? $_POST['pool'] : '';
-			$ref = 'volblocksize';
-			$sphere_record[$ref] = $prop->$ref->validate_input();
-			break;
-		case RECORD_MODIFY:
-			$sphere_record['name'] = $sphere_array[$index]['name'];
-			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$ref = 'volblocksize';
-			$sphere_record[$ref] = $prop->$ref->validate_value($sphere_array[$index][$ref]);
-			break;
-	endswitch;
-	// Input validation
-	$reqdfields = ['pool','name'];
-	$reqdfieldsn = [gtext('Pool'),gtext('Name')];
-	$reqdfieldst = ['string','string'];
-	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
-	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
-
-	// validate text input elements
-	foreach(['volsize'] as $ref):
-		if(!isset($sphere_record[$ref])):
-			$sphere_record[$ref] = $_POST[$ref] ?? $prop->$ref->get_defaultvalue(); // restore $_POST or populate default
-			$input_errors[] = $prop->$ref->get_message_error();
-		endif;
-	endforeach;
-	// validate list elements
-	foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $ref):
-		if(!isset($sphere_record[$ref])):
-			$sphere_record[$ref] = '';
-			$input_errors[] = $prop->$ref->get_message_error();
-		endif;
-	endforeach;
-	if(empty($input_errors)):
-		// check for a valid name with the format name[/name], blanks are not supported.
-		$helpinghand = preg_quote('.:-_','/');
-		if(!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i',$sphere_record['name']))):
-			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."),gtext('Name'));
-		endif;
-	endif;
-/*	
-	1. RECORD_MODIFY: throw error if posted pool is different from configured pool.
-	2. RECORD_NEW: posted pool/name must not exist in configuration or live.
-	3. RECORD_NEW_MODIFY: if posted pool/name is different from configured pool/name: posted pool/name must not exist in configuration or live.
-	4. RECORD_MODIFY: if posted name is different from configured name: pool/posted name must not exist in configuration or live.
-*/
-	// 1.
-	if(empty($input_errors)):
-		if($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0],$sphere_record['pool']))):
-			$input_errors[] = gtext('Pool cannot be changed.');
-		endif;
-	endif;
-	// 2., 3., 4.
-	if(empty($input_errors)):
-		$poolslashname = escapeshellarg($sphere_record['pool']."/".$sphere_record['name']); // create quoted full dataset name
-		if($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']),$poolslashname)))):
-			// throw error when pool/name already exists in live
-			if(empty($input_errors)):
-				mwexec2(sprintf("zfs get -H -o value type %s 2>&1",$poolslashname),$retdat,$retval);
-				switch($retval):
-					case 1: // An error occured. => zfs dataset doesn't exist
-						break;
-					case 0: // Successful completion. => zfs dataset found
-						$input_errors[] = sprintf(gtext('%s already exists as a %s.'),$poolslashname,$retdat[0]);
-						break;
- 					case 2: // Invalid command line options were specified.
-						$input_errors[] = gtext('Failed to execute command zfs.');
-						break;
-				endswitch;
-			endif;
-			// throw error when pool/name exists in configuration file, zfs->volumes->volume[]
-			if(empty($input_errors)):
-				foreach($sphere_array as $r_volume):
-					if(0 === strcmp(escapeshellarg($r_volume['pool'][0].'/'.$r_volume['name']),$poolslashname)):
-						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'),$poolslashname);
-						break;
-					endif;
-				endforeach;
-			endif;
-			// throw error when pool/name exists in configuration file, zfs->datasets->dataset[] 
-			if(empty($input_errors)):
-				foreach($a_dataset as $r_dataset):
-					if(0 === strcmp(escapeshellarg($r_dataset['pool'][0].'/'.$r_dataset['name']),$poolslashname)):
-						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'),$poolslashname);
-						break;
-					endif;
-				endforeach;
-			endif;
-		endif;
-	endif;
-	
-	if($prerequisites_ok && empty($input_errors)):
-		// convert listtags to arrays
-		$helpinghand = $sphere_record['pool'];
-		$sphere_record['pool'] = [$helpinghand];
-		if($isrecordnew):
-			$sphere_array[] = $sphere_record;
-			updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_NEW,$sphere_record['uuid']);
-		else:
-			$sphere_array[$index] = $sphere_record;
-			if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-				updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_MODIFIED,$sphere_record['uuid']);
-			endif;
-		endif;
-		write_config();
-		header($sphere_header_parent); // cleanup
-		exit;
-	endif;
-else:
-	$a_ref = ['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode','volsize'];
-	switch($mode_record):
-		case RECORD_NEW:
-			$sphere_record['desc'] = '';
-			$sphere_record['name'] = '';
-			$sphere_record['pool'] = '';
-			$sphere_record['sparse'] = false;
-			foreach($a_ref as $ref):
-				$sphere_record[$ref] = $prop->$ref->get_defaultvalue();
-			endforeach;
-			break;
-		case RECORD_NEW_MODIFY: // get from config only
-			$sphere_record['desc'] = $sphere_array[$index]['desc'];
-			$sphere_record['name'] = $sphere_array[$index]['name'];
-			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
-			foreach($a_ref as $ref):
-				$sphere_record[$ref] = $prop->$ref->validate_value($sphere_array[$index][$ref]) ?? '';
-			endforeach;
-			break;
-		case RECORD_MODIFY: // get from config or system
-			$sphere_record['desc'] = $sphere_array[$index]['desc'];
-			$sphere_record['name'] = $sphere_array[$index]['name'];
-			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
-			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
-			foreach($a_ref as $ref):
-				$sphere_record[$ref] = $prop->$ref->validate_value($sphere_array[$index][$ref]) ?? '';
-			endforeach;
-			break;
-	endswitch;
+$a_dataset = &array_make_branch($config,'zfs','datasets','dataset');
+if(empty($a_dataset)):
+else:	
+	array_sort_key($a_dataset,'name');
 endif;
 $a_poollist = zfs_get_pool_list();
 $l_poollist = [];
@@ -286,19 +222,158 @@ foreach($a_pool as $r_pool):
 	endif;
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 endforeach;
+$a_referer = ['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode','volsize'];
+switch($page_mode):
+	case PAGE_MODE_ADD:
+		$sphere->row['name'] = '';
+		$sphere->row['pool'] = '';
+		$sphere->row['desc'] = '';
+		$sphere->row['sparse'] = false;
+		foreach($a_referer as $referer):
+			$sphere->row[$referer] = $property->$referer->get_defaultvalue();
+		endforeach;
+		break;
+	case PAGE_MODE_CLONE:
+		$sphere->row['name'] = filter_input(INPUT_POST,'name',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['pool'] = filter_input(INPUT_POST,'pool',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['desc'] = filter_input(INPUT_POST,'desc',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['sparse'] = filter_input(INPUT_POST,'sparse',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+		foreach($a_referer as $referer):
+			$sphere->row[$referer] = $property->$referer->validate_input() ?? $property->$referer->get_defaultvalue();
+		endforeach;
+		//	adjust page mode
+		$page_mode = PAGE_MODE_ADD;
+		break;
+	case PAGE_MODE_EDIT:
+		$sphere->row['name'] = $sphere->grid[$sphere->row_id]['name'];
+		$sphere->row['pool'] = $sphere->grid[$sphere->row_id]['pool'][0];
+		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'];
+		$sphere->row['sparse'] = isset($sphere->grid[$sphere->row_id]['sparse']);
+		foreach($a_referer as $referer):
+			$sphere->row[$referer] = $property->$referer->validate_value($sphere->grid[$sphere->row_id][$referer]) ?? $property->$referer->get_defaultvalue();
+		endforeach;
+		break;
+	case PAGE_MODE_POST:
+		// apply post values that are applicable for all record modes
+		$sphere->row['desc'] = filter_input(INPUT_POST,'desc',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+		$sphere->row['sparse'] = filter_input(INPUT_POST,'sparse',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
+		foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volmode','volsize'] as $referer):
+			$sphere->row[$referer] = $property->$referer->validate_input();
+		endforeach;
+		switch($record_mode):
+			case RECORD_NEW:
+			case RECORD_NEW_MODIFY:
+				$sphere->row['name'] = filter_input(INPUT_POST,'name',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+				$sphere->row['pool'] = filter_input(INPUT_POST,'pool',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+				$sphere->row['volblocksize'] = $property->volblocksize->validate_input();
+				break;
+			case RECORD_MODIFY:
+				$sphere->row['name'] = $sphere->grid[$sphere->row_id]['name'];
+				$sphere->row['pool'] = $sphere->grid[$sphere->row_id]['pool'][0];
+				$sphere->row['volblocksize'] = $property->volblocksize->validate_value($sphere->grid[$sphere->row_id]['volblocksize']);
+				break;
+		endswitch;
+		// Input validation
+		$reqdfields = ['pool','name'];
+		$reqdfieldsn = [gtext('Pool'),gtext('Name')];
+		$reqdfieldst = ['string','string'];
+		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
+		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+		// validate text input elements
+		foreach(['volsize'] as $referer):
+			if(!isset($sphere->row[$referer])):
+				$sphere->row[$referer] = $_POST[$referer] ?? $property->$referer->get_defaultvalue(); // restore $_POST or populate default
+				$input_errors[] = $property->$referer->get_message_error();
+			endif;
+		endforeach;
+		// validate list elements
+		foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $referer):
+			if(!isset($sphere->row[$referer])):
+				$sphere->row[$referer] = '';
+				$input_errors[] = $property->$referer->get_message_error();
+			endif;
+		endforeach;
+		if(empty($input_errors)):
+			// check for a valid name with the format name[/name], blanks are not supported.
+			$helpinghand = preg_quote('.:-_','/');
+			if(!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i',$sphere->row['name']))):
+				$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."),gtext('Name'));
+			endif;
+		endif;
+/*	
+		1. RECORD_MODIFY: throw error if posted pool is different from configured pool.
+		2. RECORD_NEW: posted pool/name must not exist in configuration or live.
+		3. RECORD_NEW_MODIFY: if posted pool/name is different from configured pool/name: posted pool/name must not exist in configuration or live.
+		4. RECORD_MODIFY: if posted name is different from configured name: pool/posted name must not exist in configuration or live.
+*/
+		// 1.
+		if(empty($input_errors)):
+			if($isrecordmodify && (0 !== strcmp($sphere->grid[$sphere->row_id]['pool'][0],$sphere->row['pool']))):
+				$input_errors[] = gtext('Pool cannot be changed.');
+			endif;
+		endif;
+		// 2., 3., 4.
+		if(empty($input_errors)):
+			$poolslashname = escapeshellarg($sphere->row['pool'] . '/' . $sphere->row['name']); // create quoted full dataset name
+			if($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere->grid[$sphere->row_id]['pool'][0] . '/' . $sphere->grid[$sphere->row_id]['name']),$poolslashname)))):
+				// throw error when pool/name already exists in live
+				if(empty($input_errors)):
+					$cmd = sprintf('zfs get -H -o value type %s 2>&1',$poolslashname);
+					mwexec2($cmd,$retdat,$retval);
+					switch($retval):
+						case 1: // An error occured. => zfs dataset doesn't exist
+							break;
+						case 0: // Successful completion. => zfs dataset found
+							$input_errors[] = sprintf(gtext('%s already exists as a %s.'),$poolslashname,$retdat[0]);
+							break;
+						case 2: // Invalid command line options were specified.
+							$input_errors[] = gtext('Failed to execute command zfs.');
+							break;
+					endswitch;
+				endif;
+				// throw error when pool/name exists in configuration file, zfs->volumes->volume[]
+				if(empty($input_errors)):
+					foreach($sphere->grid as $r_volume):
+						if(0 === strcmp(escapeshellarg($r_volume['pool'][0].'/'.$r_volume['name']),$poolslashname)):
+							$input_errors[] = sprintf(gtext('%s is already configured as a volume.'),$poolslashname);
+							break;
+						endif;
+					endforeach;
+				endif;
+				// throw error when pool/name exists in configuration file, zfs->datasets->dataset[] 
+				if(empty($input_errors)):
+					foreach($a_dataset as $r_dataset):
+						if(0 === strcmp(escapeshellarg($r_dataset['pool'][0].'/'.$r_dataset['name']),$poolslashname)):
+							$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'),$poolslashname);
+							break;
+						endif;
+					endforeach;
+				endif;
+			endif;
+		endif;
+		if($prerequisites_ok && empty($input_errors)):
+			// convert listtags to arrays
+			$helpinghand = $sphere->row['pool'];
+			$sphere->row['pool'] = [$helpinghand];
+			if($isrecordnew):
+				$sphere->grid[] = $sphere->row;
+				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->row_identifier()]);
+			else:
+				$sphere->grid[$sphere->row_id] = $sphere->row;
+				if(UPDATENOTIFY_MODE_UNKNOWN == $updatenotify_mode):
+					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->row_identifier()]);
+				endif;
+			endif;
+			write_config();
+			header($sphere->parent->header()); // cleanup
+			exit;
+		endif;
+		break;
+endswitch;
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Volumes'),gtext('Volume'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 include 'fbegin.inc';
+$sphere->doj();
 ?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-<?php
-	//	Init spinner on submit for id iform.
-?>
-	$("#iform").submit(function() { spinner(); });
-}); 
-//]]>
-</script>
 <table id="area_navigator">
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
@@ -312,7 +387,7 @@ $(window).on("load", function() {
 		<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext('Information');?></span></a></li>
 	</ul></td></tr>
 </table>
-<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
 		print_error_box($errormsg);
@@ -336,37 +411,40 @@ $(window).on("load", function() {
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
-			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
-			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
-			$ref = 'volsize';
-			html_inputbox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_description(),true,20,false,false,20);
-			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere_record['sparse']) ? true : false,gtext('Use as sparse volume. (thin provisioning)'),'',false);
-			$ref = 'volmode';
-			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
-			$ref = 'compression';
-			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
-			$ref = 'dedup';
-			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
-			$ref = 'sync';
-			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),true);
-			$ref = 'volblocksize';
-			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description(),false,$isrecordmodify);
-			$ref = 'primarycache';
-			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
-			$ref = 'secondarycache';
-			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
-			$ref = 'checksum';
-			html_combobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
-			$ref = 'logbias';
-			html_radiobox2($prop->$ref->get_id(),$prop->$ref->get_title(),$sphere_record[$ref],$prop->$ref->get_options(),$prop->$ref->get_description());
+			html_inputbox2('name',gtext('Name'),$sphere->row['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
+			html_combobox2('pool',gtext('Pool'),$sphere->row['pool'],$l_poollist,'',true,$isrecordmodify);
+			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
+			$node = new co_DOMDocument();
+			$node->add_input($property->volsize,$sphere->row['volsize'],true,false,20,false,20);
+			$node->render();
+			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere->row['sparse']) ? true : false,gtext('Use as sparse volume (thin provisioning).'),'',false);
+			$node = new co_DOMDocument();
+			$node->add_radio_grid($property->volmode,$sphere->row['volmode'],true);
+			$node->add_select($property->compression,$sphere->row['compression'],true);
+			$node->add_select($property->dedup,$sphere->row['dedup'],true);
+			$node->add_radio_grid($property->sync,$sphere->row['sync'],true); 
+			$node->add_select($property->volblocksize,$sphere->row['volblocksize'],false,$isrecordmodify);
+			$node->add_radio_grid($property->primarycache,$sphere->row['primarycache']);
+			$node->add_radio_grid($property->secondarycache,$sphere->row['secondarycache']);
+			$node->add_select($property->checksum,$sphere->row['checksum']);
+			$node->add_radio_grid($property->logbias,$sphere->row['logbias']);
+			$node->render();
 ?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gtext('Add') : gtext('Save');?>"/>
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>"/>
-		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
+<?php
+		if($isrecordnew):
+			echo $sphere->html_button('save',gtext('Add'));
+		else:
+			echo $sphere->html_button('save',gtext('Apply'));
+			if($prerequisites_ok && empty($input_errors)):
+				echo $sphere->html_button('clone',gtext('Clone Configuration'));
+			endif;
+		endif;
+			echo $sphere->html_button('cancel',gtext('Cancel'));
+?>
+		<input name="<?=$sphere->row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->row_identifier()];?>"/>
 	</div>
 <?php
 	include 'formend.inc';

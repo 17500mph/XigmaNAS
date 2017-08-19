@@ -70,27 +70,26 @@ if(empty($sphere_array)):
 else:
 	array_sort_key($sphere_array,'name');
 endif;
-
-if ($_POST) {
-	if (isset($_POST['apply']) && $_POST['apply']) {
+if($_POST) {
+	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
+		if(!file_exists($d_sysrebootreqd_path)):
 			// Process notifications
 			$retval |= updatenotify_process($sphere_notifier, $sphere_notifier_processor);
-		}
+		endif;
 		$savemsg = get_std_save_message($retval);
-		if ($retval == 0) {
+		if($retval == 0):
 			updatenotify_delete($sphere_notifier);
-		}
+		endif;
 		header($sphere_header);
 		exit;
-	}
-	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
+	endif;
+	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))):
 				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				switch ($mode_updatenotify) {
+				switch($mode_updatenotify):
 					case UPDATENOTIFY_MODE_NEW:  
 						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
@@ -102,33 +101,29 @@ if ($_POST) {
 					case UPDATENOTIFY_MODE_UNKNOWN:
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
 						break;
-				}
-			}
-		}
+				endswitch;
+			endif;
+		endforeach;
 		header($sphere_header);
 		exit;
-	}
+	endif;
 }
-
-function get_volsize($pool, $name) {
-	mwexec2('zfs get -H -o value volsize '.escapeshellarg($pool.'/'.$name).' 2>&1', $rawdata);
+function get_volsize($pool,$name) {
+	mwexec2('zfs get -H -o value volsize ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
 	return $rawdata[0];
 }
-
-function get_volused($pool, $name) {
-	mwexec2('zfs get -H -o value used '.escapeshellarg($pool.'/'.$name).' 2>&1', $rawdata);
+function get_volused($pool,$name) {
+	mwexec2('zfs get -H -o value used ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
 	return $rawdata[0];
 }
-
-function get_volblock($pool, $name) {
-	mwexec2('zfs get -H -o value volblock '.escapeshellarg($pool.'/'.$name).' 2>&1', $rawdata);
+function get_volblock($pool,$name) {
+	mwexec2('zfs get -H -o value volblock ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
 	return $rawdata[0];
 }
-
-function zfsvolume_process_updatenotification($mode, $data) {
+function zfsvolume_process_updatenotification($mode,$data) {
 	global $config;
 	$retval = 0;
-	switch ($mode) {
+	switch($mode):
 		case UPDATENOTIFY_MODE_NEW:
 			$retval |= zfs_volume_configure($data);
 			break;
@@ -136,27 +131,26 @@ function zfsvolume_process_updatenotification($mode, $data) {
 			$retval |= zfs_volume_properties($data);
 			break;
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if (false !== ($index = array_search_ex($data, $config['zfs']['volumes']['volume'], 'uuid'))) {
+			if(false !== ($index = array_search_ex($data, $config['zfs']['volumes']['volume'],'uuid'))):
 				unset($config['zfs']['volumes']['volume'][$index]);
 				write_config();
-			}
+			endif;
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			if (false !== ($index = array_search_ex($data, $config['zfs']['volumes']['volume'], 'uuid'))) {
+			if(false !== ($index = array_search_ex($data, $config['zfs']['volumes']['volume'],'uuid'))):
 				$retval |= zfs_volume_destroy($data);
-				if ($retval === 0) {
+				if($retval === 0):
 					unset($config['zfs']['volumes']['volume'][$index]);
 					write_config();
-				}
-			}
+				endif;
+			endif;
 			break;
-	}
+	endswitch;
 	return $retval;
 }
-
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Volumes'),gtext('Volume')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -216,122 +210,148 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext("Information");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext("Information");?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
-		if (!empty($savemsg)) {
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+		if(!empty($savemsg)):
 			print_info_box($savemsg);
-		} else {
-			if (file_exists($d_sysrebootreqd_path)) {
+		else:
+			if(file_exists($d_sysrebootreqd_path)):
 				print_info_box(get_std_save_message(0));
-			}
-		}
-		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
-	?>
-	<table class="area_data_selection">
-		<colgroup>
-			<col style="width:5%"><!-- // Checkbox -->
-			<col style="width:15%"><!-- // Pool -->
-			<col style="width:15%"><!-- // Name -->
-			<col style="width:10%"><!-- // Size -->
-			<col style="width:10%"><!-- // Compression -->
-			<col style="width:10%"><!-- // Sparse -->
-			<col style="width:10%"><!-- // Block Size -->
-			<col style="width:15%"><!-- // Description -->
-			<col style="width:10%"><!-- // Toolbox -->
-		</colgroup>
-		<thead>
-			<?php html_titleline2(gtext('Overview'), 9);?>
-			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
-				<td class="lhell"><?=gtext('Pool');?></td>
-				<td class="lhell"><?=gtext('Name');?></td>
-				<td class="lhell"><?=gtext('Size');?></td>
-				<td class="lhell"><?=gtext('Compression');?></td>
-				<td class="lhell"><?=gtext('Sparse');?></td>
-				<td class="lhell"><?=gtext('Block Size');?></td>
-				<td class="lhell"><?=gtext('Description');?></td>
-				<td class="lhebl"><?=gtext('Toolbox');?></td>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach ($sphere_array as $sphere_record):?>
-				<?php
+			endif;
+		endif;
+		if(updatenotify_exists($sphere_notifier)):
+			print_config_change_box();
+		endif;
+?>
+		<table class="area_data_selection">
+			<colgroup>
+				<col style="width:5%">
+				<col style="width:15%">
+				<col style="width:15%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:15%">
+				<col style="width:10%">
+			</colgroup>
+			<thead>
+<?php
+				html_titleline2(gtext('Overview'),9);
+?>
+				<tr>
+					<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
+					<td class="lhell"><?=gtext('Pool');?></td>
+					<td class="lhell"><?=gtext('Name');?></td>
+					<td class="lhell"><?=gtext('Size');?></td>
+					<td class="lhell"><?=gtext('Compression');?></td>
+					<td class="lhell"><?=gtext('Sparse');?></td>
+					<td class="lhell"><?=gtext('Block Size');?></td>
+					<td class="lhell"><?=gtext('Description');?></td>
+					<td class="lhebl"><?=gtext('Toolbox');?></td>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+				foreach($sphere_array as $sphere_record):
 					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
 					$notdirty = ((UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode));
 					$notprotected = !isset($sphere_record['protected']);
-				?>
+?>
+					<tr>
+						<td class="lcelc">
+<?php
+							if($notdirty && $notprotected):
+?>
+								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
+<?php
+							else:
+?>
+								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+<?php
+							endif;
+?>
+						</td>
+						<td class="lcell"><?=htmlspecialchars($sphere_record['pool'][0]);?>&nbsp;</td>
+						<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
+<?php
+						if(UPDATENOTIFY_MODE_MODIFIED == $notificationmode || UPDATENOTIFY_MODE_NEW == $notificationmode || UPDATENOTIFY_MODE_DIRTY_CONFIG ==$notificationmode):
+?>
+							<td class="lcell"><?=htmlspecialchars($sphere_record['volsize']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($sphere_record['compression']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars((!isset($sphere_record['sparse']) ? '-' : 'on'));?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($sphere_record['volblocksize']);?>&nbsp;</td>
+<?php
+						else:
+?>
+							<td class="lcell"><?=htmlspecialchars(get_volsize($sphere_record['pool'][0], $sphere_record['name']));?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($sphere_record['compression']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars(isset($sphere_record['sparse']) ? get_volused($sphere_record['pool'][0], $sphere_record['name']) : '-');?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars(get_volblock($sphere_record['pool'][0], $sphere_record['name']));?>&nbsp;</td>
+<?php
+						endif;
+?>
+						<td class="lcell"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
+						<td class="lcebld">
+							<table class="area_data_selection_toolbox"><tbody><tr>
+								<td>
+<?php
+									if($notdirty && $notprotected):
+?>
+										<a href="<?=$sphere_scriptname_child;?>?submit=edit&uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
+<?php
+									else:
+										if ($notprotected):
+?>
+											<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
+<?php
+										else:
+?>
+											<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
+<?php
+										endif;
+									endif;
+?>
+								</td>
+								<td></td>
+								<td><a href="disks_zfs_volume_info.php"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a></td>
+							</tr></tbody></table>
+						</td>
+					</tr>
+<?php
+				endforeach;
+?>
+			</tbody>
+			<tfoot>
+<?php
+/*
+				echo $sphere->html_footer_add(9);
+ */
+?>
 				<tr>
-					<td class="lcelc">
-						<?php if ($notdirty && $notprotected):?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
-					</td>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['pool'][0]);?>&nbsp;</td>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
-					<?php if (UPDATENOTIFY_MODE_MODIFIED == $notificationmode || UPDATENOTIFY_MODE_NEW == $notificationmode || UPDATENOTIFY_MODE_DIRTY_CONFIG ==$notificationmode):?>
-						<td class="lcell"><?=htmlspecialchars($sphere_record['volsize']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($sphere_record['compression']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars((!isset($sphere_record['sparse']) ? '-' : 'on'));?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($sphere_record['volblocksize']);?>&nbsp;</td>
-					<?php else:?>
-						<td class="lcell"><?=htmlspecialchars(get_volsize($sphere_record['pool'][0], $sphere_record['name']));?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($sphere_record['compression']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars(isset($sphere_record['sparse']) ? get_volused($sphere_record['pool'][0], $sphere_record['name']) : '-');?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars(get_volblock($sphere_record['pool'][0], $sphere_record['name']));?>&nbsp;</td>
-					<?php endif;?>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
-					<td class="lcebld">
-						<table class="area_data_selection_toolbox"><tbody><tr>
-							<td>
-								<?php if ($notdirty && $notprotected):?>
-									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
-							</td>
-							<td></td>
-							<td><a href="disks_zfs_volume_info.php"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a></td>
-						</tr></tbody></table>
-					</td>
+					<th class="lcenl" colspan="8"></th>
+					<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>?submit=add"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
 				</tr>
-			<?php endforeach;?>
-		</tbody>
-		<tfoot>
-			<tr>
-				<th class="lcenl" colspan="8"></th>
-				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
-			</tr>
-		</tfoot>
-	</table>
-	<div id="submit">
-		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
-	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
+			</tfoot>
+		</table>
+		<div id="submit">
+			<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
+		</div>
+<?php
+		include 'formend.inc';?>
+	</td></tr></tbody></table>
+</form>
 <?php include 'fend.inc';?>
