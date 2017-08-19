@@ -194,14 +194,15 @@ class HTMLBaseControl2 {
 		endif;
 		return $description_output;
 	}
-	function Compose() {
-		$ctrlname = $this->GetCtrlName();
+	function Compose(DOMNode &$anchor = NULL) {
+		//	create root DOM if anchor not provided
+		if(is_null($anchor)):
+			$anchor = new co_DOMDocument();
+		endif;
 		$description = $this->GetDescriptionOutput();
-		//	root DOM
-		$root = new co_DOMDocument();
 		//	compose
-		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
-		$tr = $root->addElement('tr',$attributes);
+		$attributes = ['id' => sprintf('%s_tr',$this->GetCtrlName())];
+		$tr = $anchor->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfTag()];
 //		if($this->GetReadOnly()):
 			$tr->addElement('td',$attributes,$this->GetTitle());
@@ -217,10 +218,9 @@ class HTMLBaseControl2 {
 			$attributes = ['class' => 'formfldadditionalinfo'];
 			$tddata->addElement('div',$attributes,$description);
 		endif;
-		//	showtime
-		return $root;
+		return $anchor;
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 	}
 }
 class HTMLBaseControlJS2 extends HTMLBaseControl2 {
@@ -297,7 +297,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 			return $this->GetClassInputText();
 		endif;
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$attributes = [
 			'type' => 'text',
 			'id' => $this->GetCtrlName(),
@@ -307,7 +307,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 			'value' => $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
-		$root->addElement('input',$attributes);
+		$anchor->addElement('input',$attributes);
 	}
 }
 class HTMLPasswordBox2 extends HTMLEditBox2 {
@@ -323,7 +323,7 @@ class HTMLPasswordBox2 extends HTMLEditBox2 {
 	function GetClassOfInputPassword() {
 		return $this->GetClassInputPassword();
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$attributes = [
 			'type' => 'password',
@@ -334,7 +334,7 @@ class HTMLPasswordBox2 extends HTMLEditBox2 {
 			'value'=> $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
-		$root->addElement('input',$attributes);
+		$anchor->addElement('input',$attributes);
 	}
 }
 class HTMLPasswordConfBox2 extends HTMLEditBox2 {
@@ -385,7 +385,7 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 	function GetClassOfInputPassword() {
 		return $this->GetClassInputPassword();
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnameconf = $this->GetCtrlNameConf();
 		$attributes = [
@@ -397,7 +397,7 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'value'=> $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
-		$o_div1 = $root->addElement('div');
+		$o_div1 = $anchor->addElement('div');
 		$o_div1->addElement('input',$attributes);
 		$attributes = [
 			'type' => 'password',
@@ -408,7 +408,7 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'value' => $this->GetValueConf()
 		];
 		$this->GetAttributesConfirm($attributes);
-		$o_div2 = $root->addElement('div');
+		$o_div2 = $anchor->addElement('div');
 		$o_div2->addElement('input',$attributes);
 	}
 }
@@ -471,7 +471,7 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 	function GetClassOfTextarea() {
 		return ($this->GetReadOnly() ? $this->GetClassTextareaRO() : $this->GetClassTextarea());
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$attributes = [
 			'id' => $ctrlname,
@@ -481,7 +481,7 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 			'rows' => $this->GetRows()
 		];
 		$this->GetAttributes($attributes);
-		$root->addElement('textarea',$attributes,htmlspecialchars($this->GetValue(),ENT_QUOTES));
+		$anchor->addElement('textarea',$attributes,htmlspecialchars($this->GetValue(),ENT_QUOTES));
 	}
 }
 class HTMLFileChooser2 extends HTMLEditBox2 {
@@ -495,7 +495,7 @@ class HTMLFileChooser2 extends HTMLEditBox2 {
 	function GetPath() {
 		return $this->_path;
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		//	helper variables
 		$ctrlname = $this->GetCtrlName();
 		$size = $this->GetSize();
@@ -509,7 +509,7 @@ class HTMLFileChooser2 extends HTMLEditBox2 {
 			'size' => $size
 		];
 		$this->GetAttributes($attributes);
-		$root->addElement('input',$attributes);
+		$anchor->addElement('input',$attributes);
 		//	file chooser
 		$js = sprintf('%1$sifield = form.%1$s;',$ctrlname)
 			. 'filechooser = window.open("filechooser.php?p="+'
@@ -530,7 +530,7 @@ class HTMLFileChooser2 extends HTMLEditBox2 {
 			'value' => '...'
 		];
 		$this->GetAttributes($attributes);
-		$root->addElement('input',$attributes);
+		$anchor->addElement('input',$attributes);
 	}
 }
 class HTMLIPAddressBox2 extends HTMLEditBox2 {
@@ -566,7 +566,7 @@ class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
 		$this->SetSize(20);
 	}
 	//	support methods
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamenetmask = $this->GetCtrlNameNetmask();
 		$valuenetmask = $this->GetValueNetmask();
@@ -578,11 +578,11 @@ class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
 			'value' => $this->GetValue(),
 			'size' => $this->GetSize()
 		];
-		$root->addElement('input',$attributes);
-		$slash = $root->ownerDocument->createTextNode(' / ');
-		$root->appendChild($slash);
+		$anchor->addElement('input',$attributes);
+		$slash = $anchor->ownerDocument->createTextNode(' / ');
+		$anchor->appendChild($slash);
 		$attributes = ['id' => $ctrlnamenetmask,'name' => $ctrlnamenetmask,'class' => 'formfld'];
-		$o_select = $root->addElement('select',$attributes);
+		$o_select = $anchor->addElement('select',$attributes);
 		foreach(range(1,32) as $netmask):
 			$attributes = ['value' => $netmask];
 			if($netmask == $valuenetmask):
@@ -599,7 +599,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 		$this->SetSize(30);
 	}
 	//	support methods
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamenetmask = $this->GetCtrlNameNetmask();
 		$attributes = [
@@ -610,9 +610,9 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'value' => $this->GetValue(),
 			'size' => $this->GetSize()
 		];
-		$root->addElement('input',$attributes);
-		$slash = $root->ownerDocument->createTextNode(' / ');
-		$root->appendChild($slash);
+		$anchor->addElement('input',$attributes);
+		$slash = $anchor->ownerDocument->createTextNode(' / ');
+		$anchor->appendChild($slash);
 		$attributes = [
 			'type' => 'text',
 			'id' => $ctrlnamenetmask,
@@ -621,7 +621,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'value' => $this->GetValueNetmask(),
 			'size' => 2
 		];
-		$root->addElement('input',$attributes);
+		$anchor->addElement('input',$attributes);
 	}
 }
 class HTMLCheckBox2 extends HTMLBaseControlJS2 {
@@ -675,11 +675,11 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 	function GetClassOfCheckbox() {
 		return ($this->GetReadOnly() ? $this->GetClassCheckboxRO() : $this->GetClassCheckbox());
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		//	helper variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
-		$div = $root->addElement('div',['class' => $this->GetClassOfCheckbox()]);
+		$div = $anchor->addElement('div',['class' => $this->GetClassOfCheckbox()]);
 		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'value' => 'yes'];
 		$this->GetAttributes($attributes);
 		$div->addElement('input',$attributes);
@@ -718,7 +718,7 @@ class HTMLSelectControl2 extends HTMLBaseControlJS2 {
 		endif;
 		return $attributes;
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
@@ -728,7 +728,7 @@ class HTMLSelectControl2 extends HTMLBaseControlJS2 {
 			'class' => $this->GetCtrlClass()
 		];
 		$this->GetAttributes($attributes);
-		$select = $root->addElement('select',$attributes);
+		$select = $anchor->addElement('select',$attributes);
 		foreach($options as $option_tag => $option_val):
 			$attributes = ['value' => $option_tag];
 			if($value == $option_tag):
@@ -752,7 +752,7 @@ class HTMLMultiSelectControl2 extends HTMLSelectControl2 {
 		$this->_size = $size;
 	}
 	//	support methods
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
@@ -764,7 +764,7 @@ class HTMLMultiSelectControl2 extends HTMLSelectControl2 {
 			'size' => $this->GetSize()
 		];
 		$this->GetAttributes($attributes);
-		$select = $root->addElement('select',$attributes);
+		$select = $anchor->addElement('select',$attributes);
 		foreach($options as $option_tag => $option_val):
 			$attributes = ['value' => $option_tag];
 			if(is_array($value) && in_array($option_tag,$value)):
@@ -781,11 +781,11 @@ class HTMLComboBox2 extends HTMLSelectControl2 {
 	}
 }
 class HTMLRadioBox2 extends HTMLComboBox2 {
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
-		$table = $root->addElement('table',['class' => 'area_data_selection']);
+		$table = $anchor->addElement('table',['class' => 'area_data_selection']);
 		$colgroup = $table->addElement('colgroup');
 		$colgroup->addElement('col',['style' => 'width:5%']);
 		$colgroup->addElement('col',['style' => 'width:95%']);
@@ -884,11 +884,11 @@ class HTMLListBox2 extends HTMLMultiSelectControl2 {
 	}
 }
 class HTMLCheckboxBox2 extends HTMLListBox2 {
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
-		$table = $root->addElement('table',['class' => 'area_data_selection']);
+		$table = $anchor->addElement('table',['class' => 'area_data_selection']);
 		$colgroup = $table->addElement('colgroup');
 		$colgroup->addElement('col',['style' => 'width:5%']);
 		$colgroup->addElement('col',['style' => 'width:95%']);
@@ -941,9 +941,11 @@ class HTMLSeparator2 extends HTMLBaseControl2 {
 	function GetClassOfSeparator() {
 		return $this->GetClassSeparator();
 	}
-	function Compose() {
-		//	root DOM
-		$root = new co_DOMDocument();
+	function Compose(DOMNode &$anchor = NULL) {
+		//	create root DOM if anchor not provided
+		if(is_null($anchor)):
+			$anchor = new co_DOMDocument();
+		endif;
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
@@ -951,11 +953,10 @@ class HTMLSeparator2 extends HTMLBaseControl2 {
 		if(preg_match('/\S/',$ctrlname)):
 			$attributes['id'] = $ctrlname;
 		endif;
-		$o_tr = $root->addElement('tr',$attributes);
+		$o_tr = $anchor->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfSeparator(),'colspan' => $this->GetColSpan()];
 		$o_tr->addElement('td',$attributes);
-		//	showtime
-		return $root;
+		return $anchor;
 	}
 }
 class HTMLTitleLine2 extends HTMLBaseControl2 {
@@ -982,9 +983,11 @@ class HTMLTitleLine2 extends HTMLBaseControl2 {
 	function GetClassOfTopic() {
 		return $this->GetClassTopic();
 	}
-	function Compose() {
-		//	root DOM
-		$root = new co_DOMDocument();
+	function Compose(DOMNode &$anchor = NULL) {
+		//	create root DOM if anchor not provided
+		if(is_null($anchor)):
+			$anchor = new co_DOMDocument();
+		endif;
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
@@ -992,11 +995,10 @@ class HTMLTitleLine2 extends HTMLBaseControl2 {
 		if(preg_match('/\S/',$ctrlname)):
 			$attributes['id'] = $ctrlname;
 		endif;
-		$tr = $root->addElement('tr',$attributes);
+		$tr = $anchor->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
 		$th = $tr->addElement('th',$attributes,$this->GetTitle());
-		//	showtime
-		return $root;
+		return $anchor;
 	}
 }
 class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
@@ -1023,14 +1025,16 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 	function GetClassOfTopic() {
 		return $this->GetClassTopic();
 	}
-	function Compose() {
-		//	root DOM
-		$root = new co_DOMDocument();
+	function Compose(DOMNode &$anchor = NULL) {
+		//	create root DOM if anchor not provided
+		if(is_null($anchor)):
+			$anchor = new co_DOMDocument();
+		endif;
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
-		$tr = $root->addElement('tr',$attributes);	
+		$tr = $anchor->addElement('tr',$attributes);	
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
 		$th = $tr->addElement('th',$attributes);
 		$attributes = ['style' => 'float:left'];
@@ -1043,8 +1047,7 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		$label->addElement('input',$attributes);
 		$attributes = ['class' => 'cblot'];
 		$label->addElement('span',$attributes,$this->GetCaption());
-		//	showtime
-		return $root;
+		return $anchor;
 	}
 }
 class HTMLText2 extends HTMLBaseControl2 {
@@ -1057,9 +1060,9 @@ class HTMLText2 extends HTMLBaseControl2 {
 		$this->SetValue($text);
 	}
 	//	support methods
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		//	compose
-		$root->addElement('span',[],$this->GetValue());
+		$anchor->addElement('span',[],$this->GetValue());
 	}
 }
 class HTMLTextInfo2 extends HTMLBaseControl2 {
@@ -1068,22 +1071,23 @@ class HTMLTextInfo2 extends HTMLBaseControl2 {
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
-	function Compose() {
-		//	root DOM
-		$root = new co_DOMDocument();
+	function Compose(DOMNode &$anchor = NULL) {
+		//	create root DOM if anchor not provided
+		if(is_null($anchor)):
+			$anchor = new co_DOMDocument();
+		endif;
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
-		$tr = $root->addElement('tr',$attributes);
+		$tr = $anchor->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfTag()];
 		$tdtag = $tr->addElement('td',$attributes,$this->GetTitle());
 		$attributes = ['class' => $this->GetClassOfData()];
 		$tddata = $tr->addElement('td',$attributes);
 		$attributes = ['id' => $ctrlname];
 		$tddata->addElement('span',$attributes,$this->getValue());
-		//	showtime
-		return $root;
+		return $anchor;
 	}
 }
 class HTMLRemark2 extends HTMLBaseControl2 {
@@ -1092,20 +1096,21 @@ class HTMLRemark2 extends HTMLBaseControl2 {
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
-	function Compose() {
-		//	root DOM
-		$root = new co_DOMDocument();
+	function Compose(DOMNode &$anchor = NULL) {
+		//	create root DOM if anchor not provided
+		if(is_null($anchor)):
+			$anchor = new co_DOMDocument();
+		endif;
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => $ctrlname];
-		$div1 = $root->addElement('div',$attributes);
+		$div1 = $anchor->addElement('div',$attributes);
 		$attributes = ['class' => 'red'];
 		$div1->addElement('strong',$attributes,$this->GetTitle());
 		$attributes = [];
-		$div2 = $root->addElement('div',$attributes,$this->GetValue());
-		//	showtime
-		return $root;
+		$div2 = $anchor->addElement('div',$attributes,$this->GetValue());
+		return $anchor;
 	}
 }
 class HTMLFolderBox2 extends HTMLBaseControl2 {
@@ -1120,21 +1125,21 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 	function SetPath($path) {
 		$this->_path = $path;
 	}
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamedata = $ctrlname . 'data';
 		$value = $this->GetValue();
 		//	control code for folders
 		$t = [];
-		$t[] = 'function onchange_' . $ctrlname . '() {';
-		$t[] = "\t" . 'document.getElementById("' . $ctrlnamedata . '").value = document.getElementById("' . $ctrlname . '").value;';
+		$t[] = sprintf('function onchange_%s() {',$ctrlname);
+		$t[] = "\t" . sprintf('document.getElementById("%s").value = document.getElementById("%s").value;',$ctrlnamedata,$ctrlname);
 		$t[] = '}';
-		$t[] = 'function onclick_add_' . $ctrlname . '() {';
-		$t[] = "\t" . 'var value = document.getElementById("' . $ctrlnamedata . '").value;';
+		$t[] = sprintf('function onclick_add_%s() {',$ctrlname);
+		$t[] = "\t" . sprintf('var value = document.getElementById("%s").value;',$ctrlnamedata);
 		$t[] = "\t" . 'if (value != "") {';
 		$t[] = "\t\t" . 'var found = false;';
-		$t[] = "\t\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = "\t\t" . sprintf('var element = document.getElementById("%s");',$ctrlname);
 		$t[] = "\t\t" . 'for (var i = 0; i < element.length; i++) {';
 		$t[] = "\t\t\t" . 'if (element.options[i].text == value) {';
 		$t[] = "\t\t\t\t" . 'found = true;';
@@ -1143,40 +1148,40 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 		$t[] = "\t\t" . '}';
 		$t[] = "\t\t" . 'if (found != true) {';
 		$t[] = "\t\t\t" . 'element.options[element.length] = new Option(value, value, false, true);';
-		$t[] = "\t\t\t" . 'document.getElementById("' . $ctrlnamedata . '").value = "";';
+		$t[] = "\t\t\t" . sprintf('document.getElementById("%s").value = "";',$ctrlnamedata);
 		$t[] = "\t\t" . '}';
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$t[] = 'function onclick_delete_' . $ctrlname . '() {';
-		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = sprintf('function onclick_delete_%s() {',$ctrlname);
+		$t[] = "\t" . sprintf('var element = document.getElementById("%s");',$ctrlname);
 		$t[] = "\t" . 'if (element.value != "") {';
-		$t[] = "\t\t" . 'var msg = confirm("' . gtext('Do you really want to remove the selected item from the list?') . '");';
+		$t[] = "\t\t" . sprintf('var msg = confirm("%s");',gtext('Do you really want to remove the selected item from the list?'));
 		$t[] = "\t\t" . 'if (msg == true) {';
 		$t[] = "\t\t\t" . 'element.options[element.selectedIndex] = null;';
-		$t[] = "\t\t\t" . 'document.getElementById("' . $ctrlnamedata . '").value = "";';
+		$t[] = "\t\t\t" . sprintf('document.getElementById("%s").value = "";',$ctrlnamedata);
 		$t[] = "\t\t" . '}';
 		$t[] = "\t" . '} else {';
-		$t[] = "\t\t" . 'alert("' . gtext('Select item to remove from the list') . '");';
+		$t[] = "\t\t" . sprintf('alert("%s");',gtext('Select item to remove from the list'));
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$t[] = 'function onclick_change_' . $ctrlname . '() {';
-		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = sprintf('function onclick_change_%s() {',$ctrlname);
+		$t[] = "\t" . sprintf('var element = document.getElementById("%s");',$ctrlname);
 		$t[] = "\t" . 'if (element.value != "") {';
-		$t[] = "\t\t" . 'var value = document.getElementById("' . $ctrlnamedata . '").value;';
+		$t[] = "\t\t" . sprintf('var value = document.getElementById("%s").value;',$ctrlnamedata);
 		$t[] = "\t\t" . 'element.options[element.selectedIndex].text = value;';
 		$t[] = "\t\t" . 'element.options[element.selectedIndex].value = value;';
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$t[] = 'function onsubmit_' . $ctrlname . '() {';
-		$t[] = "\t" . 'var element = document.getElementById("' . $ctrlname . '");';
+		$t[] = sprintf('function onsubmit_%s() {',$ctrlname);
+		$t[] = "\t" . sprintf('var element = document.getElementById("%s");',$ctrlname);
 		$t[] = "\t" . 'for (var i = 0; i < element.length; i++) {';
 		$t[] = "\t\t" . 'if (element.options[i].value != "")';
 		$t[] = "\t\t\t" . 'element.options[i].selected = true;';
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$root->addJavaScript(implode("\n",$t));
+		$anchor->addJavaScript(implode(PHP_EOL,$t));
 		//	section 1: select + delete
-		$div1 = $root->addElement('div');
+		$div1 = $anchor->addElement('div');
 		//	selected folder
 		$attributes = [
 			'id' => $ctrlname,
@@ -1203,7 +1208,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 		];
 		$div1->addElement('input',$attributes);
 		//	section 2: choose, add + change
-		$div2 = $root->addElement('div');
+		$div2 = $anchor->addElement('div');
 		//	path input field
 		$attributes = [
 			'type' => 'text',
@@ -1255,7 +1260,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 	}
 }
 class HTMLFolderBox12 extends HTMLFolderBox2 {
-	function ComposeInner(&$root) {
+	function ComposeInner(&$anchor) {
 		//	helping variables
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnamedata = $ctrlname . 'data';
@@ -1327,9 +1332,9 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		$t[] = "\t\t\t" . 'element.options[i].selected = true;';
 		$t[] = "\t" . '}';
 		$t[] = '}';
-		$root->addJavaScript(implode("\n",$t));
+		$anchor->addJavaScript(implode(PHP_EOL,$t));
 		//	section 1: select + delete
-		$div1 = $root->addElement('div');
+		$div1 = $anchor->addElement('div');
 		//	selected folder
 		$attributes = ['id' => $ctrlname,'name' => sprintf('%s[]',$ctrlname),'class' => 'formfld','multiple' => 'multiple','style' => 'width:350px','onchange' => sprintf('onchange_%s()',$ctrlname)];
 		$select = $div1->addElement('select',$attributes);
@@ -1348,7 +1353,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		];
 		$div1->addElement('input',$attributes);
 		//	section 2: choose, add + change
-		$div2 = $root->addElement('div');
+		$div2 = $anchor->addElement('div');
 		//	media type
 		$attributes = ['id' => sprintf('%sfiletype',$ctrlname),'name' => sprintf('%sfiletype',$ctrlname),'class' => 'formfld'];
 		$select = $div2->addElement('select',$attributes);
@@ -1430,17 +1435,80 @@ trait co_DOMTools {
 		if(false === $node):
 			return false;
 		endif;
-		$newline = $node->ownerDocument->createTextNode("\n//");
+		$newline = $node->ownerDocument->createTextNode(PHP_EOL . '//');
 		if(false === $newline):
 			return false;
 		endif;
 		$node->appendChild($newline);
-		$cdata = $node->ownerDocument->createCDATASection("\n" . $text . "\n//");
+		$cdata = $node->ownerDocument->createCDATASection(PHP_EOL . $text . PHP_EOL . '//');
 		if(false === $cdata):
 			return false;
 		endif;
 		$node->appendChild($cdata);
 		return $node;
+	}
+	//	tags
+	public function add_col(array $attributes = []) {
+		$this_return = $this->addElement('col',$attributes);
+		return $this_return;
+	}
+	public function add_colgroup(array $attributes = []) {
+		$this_return = $this->addElement('colgroup',$attributes);
+		return $this_return;
+	}
+	public function add_table(array $attributes = []) {
+		$this_return = $this->addElement('table',$attributes);
+		return $this_return;
+	}
+	public function add_tbody(array $attributes = []) {
+		$this_return = $this->addElement('tbody',$attributes);
+		return $this_return;
+	}
+	public function add_thead(array $attributes = []) {
+		$this_return = $this->addElement('thead',$attributes);
+		return $this_return;
+	}
+	//	macros
+	public function add_colgroup_2c() {
+		$this_return = $this->add_colgroup();
+		$this_return->add_col(['class' => 'area_data_settings_col_tag']);
+		$this_return->add_col(['class' => 'area_data_settings_col_data']);
+		return $this_return;
+	}
+	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$caption = '',$onclick = '',$altpadding = false) {
+		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$caption,$p->get_description());
+		$ctrl->SetRequired($required);
+		$ctrl->SetReadOnly($readonly);
+		$ctrl->SetAltPadding($altpadding);
+		$ctrl->SetJSonClick($onclick);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_input(properties $p,$value,bool $required = false,bool $readonly = false,$size = 40,$altpadding = false,$maxlength = 0,string $placeholder = '') {
+		$ctrl = new HTMLEditBox2($p->get_id(),$p->get_title(),$value,$p->get_description(),$size);
+		$ctrl->SetRequired($required);
+		$ctrl->SetReadOnly($readonly);
+		$ctrl->SetAltPadding($altpadding);
+		$ctrl->SetMaxLength($maxlength);
+		$ctrl->SetPlaceholder($placeholder);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_radio_grid(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
+		$ctrl = new HTMLRadioBox2($p->get_id(),$p->get_title(),$value,$p->get_options(),$p->get_description());
+		$ctrl->SetRequired($required);
+		$ctrl->SetReadOnly($readonly);
+		$ctrl->SetJSonClick($onclick);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_select(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
+		$ctrl = new HTMLComboBox2($p->get_id(),$p->get_title(),$value,$p->get_options(),$p->get_description());
+		$ctrl->SetRequired($required);
+		$ctrl->SetReadOnly($readonly);
+		$ctrl->SetJSonClick($onclick);
+		$ctrl->Compose($this);
+		return $this;
 	}
 }
 class co_DOMImplementation extends \DOMImplementation {
@@ -1479,9 +1547,9 @@ class co_DOMElement extends \DOMElement {
 	use co_DOMTools;
 	
 	public function addAttributes($attributes = []) {
-		foreach($attributes as $key => $value) {
+		foreach($attributes as $key => $value):
 			$this->setAttribute($key,$value);
-		}
+		endforeach;
 		return $this;
 	}
 }
