@@ -675,33 +675,6 @@ function html_minidlnabox2($ctrlname,$title,$value,$desc,$path,$required = false
 	$ctrl->SetPath($path);
 	$ctrl->Compose()->render();
 }
-
-function html_combobox3(properties $prop,$value,bool $required = false,bool $readonly = false,$onclick = '') {
-	$ctrl = new HTMLComboBox2($prop->get_id(),$prop->get_title(),$value,$prop->get_options(),$prop->get_description());
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose();
-	return $ctrl->get_html();
-}
-function html_inputbox3(properties $prop,$value,bool $required = false,bool $readonly = false,$size = 40,$altpadding = false,$maxlength = 0,string $placeholder = '') {
-	$ctrl = new HTMLEditBox2($prop->get_id(),$prop->get_title(),$value,$prop->get_description(),$size);
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->SetAltPadding($altpadding);
-	$ctrl->SetMaxLength($maxlength);
-	$ctrl->SetPlaceholder($placeholder);
-	$ctrl->Compose();
-	return $ctrl->get_html();
-}
-function html_radiobox3(properties $prop,$value,bool $required = false,bool $readonly = false,$onclick = '') {
-	$ctrl = new HTMLRadioBox2($prop->get_id(),$prop->get_title(),$value,$prop->get_options(),$prop->get_description());
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->SetJSonClick($onclick);
-	$ctrl->Compose();
-	return $ctrl->get_html();
-}
 function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 	$element = 'button';
 	$class = 'formbtn';
@@ -1078,7 +1051,7 @@ function display_headermenu() {
 	endforeach;
 	$output[] = '</ul>';
 	$output[] = '</nav>';
-	$return = implode("\n",$output);
+	$return = implode(PHP_EOL,$output);
 	echo $return;
 }
 ?>
