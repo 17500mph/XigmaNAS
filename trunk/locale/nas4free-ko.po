@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-07-21 00:19+0000\n"
-"PO-Revision-Date: 2017-08-03 12:21+0000\n"
+"PO-Revision-Date: 2017-08-18 01:54+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-08-11 13:22+0000\n"
+"X-Launchpad-Export-Date: 2017-08-20 09:33+0000\n"
 "X-Generator: Launchpad (build 18446)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -123,12 +123,16 @@ msgid ""
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
+"(Kingston) 플래시 지우기 실패 횟수. 이 속성은 드라이브가 배치 된 이후 플래시 지우기 연산 실패의 총 수를 반환합니다. 이 "
+"속성은 속성 182와 동일합니다."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
 "returns the total number of Flash program operation failures since the drive "
 "was deployed. This attribute is identical to attribute 181."
 msgstr ""
+"(Kingston) 플래시 프로그램 실패 횟수. 이 속성은 드라이브가 배포 된 이후의 총 플래시 프로그램 작동 오류 수를 반환합니다. 이 "
+"속성은 속성 181과 동일합니다."
 
 msgid ""
 "(Vendor specific raw value.) Rate of seek errors of the magnetic heads. If "
@@ -138,6 +142,9 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
+"(공급자별 저수준 값) 자기 헤드의 탐색 오류율. 기계적 위치 결정 시스템에 부분적인 고장이 있으면 탐색 오류가 발생합니다. 이러한 "
+"오류는 서보 손상이나 하드 디스크 열 확대와 같은 여러 가지 요인으로 인해 발생할 수 있습니다. 원시 값은 다른 공급 업체마다 다른 "
+"구조를 가지며 십진수로 의미가없는 경우가 많습니다."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -145,6 +152,8 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
+"(공급자별 저수준 값) 디스크 표면에서 데이터를 읽을 때 발생한 하드웨어 읽기 오류 비율과 관련된 데이터를 저장합니다. 원시 값은 다른 "
+"공급 업체마다 다른 구조를 가지며 십진수로 의미가없는 경우가 많습니다."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
@@ -251,7 +260,7 @@ msgid "A route to this destination network already exists."
 msgstr "이 목적지 네트워크에 대한 경로가 이미 존재합니다."
 
 msgid "A sysvol folder was found."
-msgstr ""
+msgstr "sysvol 폴더를 찾았습니다."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -1137,7 +1146,7 @@ msgid "Bind DN"
 msgstr "bind DN"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "바인드 암호"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1432,7 +1441,7 @@ msgid "Check the list of available drivers"
 msgstr "사용 가능한 드라이버를 확인하십시오"
 
 msgid "Checksum"
-msgstr ""
+msgstr "검사합"
 
 msgid "Choose UPS mode."
 msgstr "UPS 모드를 선택하십시오."
@@ -3163,7 +3172,7 @@ msgid "Enable Asynchronous I/O. (AIO)."
 msgstr "비동기 I/O 사용 함(AIO)"
 
 msgid "Enable Challenge-Response Authentication"
-msgstr ""
+msgstr "Challenge-Response 인증 사용"
 
 msgid "Enable FXP protocol."
 msgstr "FXP 프로토콜 활성화."
@@ -4669,7 +4678,7 @@ msgid "Interval to wait after shutdown with delay command"
 msgstr "Interval to wait after shutdown with delay command"
 
 msgid "Interval to wait before rebooting the UPS)"
-msgstr ""
+msgstr "UPS 재시동 전에 대기할 간격)"
 
 msgid "Interval to wait before restarting the load"
 msgstr ""
@@ -5221,7 +5230,7 @@ msgid "Maximum (Highest Performance)"
 msgstr "최대(최고 성능)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
+msgstr "최대 성능, 최대 소음 발생"
 
 msgid "Maximum idle time in seconds."
 msgstr "초당 최대 유휴 시간."
@@ -5281,7 +5290,7 @@ msgid "Media server name"
 msgstr "미디어 서버 이름"
 
 msgid "Medium Acoustic Output"
-msgstr ""
+msgstr "중간 정도의 소음 발생"
 
 msgid "Mem"
 msgstr "메모리"
@@ -5329,7 +5338,7 @@ msgid "Minimum Free Space"
 msgstr "최소 여유 공간"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
-msgstr ""
+msgstr "최소 성능, 최소 소음 발생"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "전원 끈 후 UPS를 재시작할 최소 베터리 수준"
@@ -6151,7 +6160,7 @@ msgid "Path"
 msgstr "경로"
 
 msgid "Path not found."
-msgstr ""
+msgstr "경로를 찾을 수 없습니다."
 
 msgid "Path of the URL relative to document root."
 msgstr "문서 루트에 대한 URL의 상대 경로."
@@ -6915,10 +6924,10 @@ msgid "Root"
 msgstr "루트"
 
 msgid "Root Bind DN"
-msgstr ""
+msgstr "최상위 바인드 DN"
 
 msgid "Root Bind Password"
-msgstr ""
+msgstr "최상위 바인드 암호"
 
 msgid "Rotation Rate"
 msgstr "회전 속도"
@@ -7160,7 +7169,7 @@ msgid "Search event"
 msgstr "이벤트 검색"
 
 msgid "Search for and import all disks found"
-msgstr ""
+msgstr "감지된 모든 디스크 검색"
 
 msgid "Second"
 msgstr "초"
@@ -7593,7 +7602,7 @@ msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "휴면 - 휴면 모드가 아닐 경우 장치를 check 합니다."
 
 msgid "Smart Outlet Management"
-msgstr ""
+msgstr "적절한 외곽선 관리"
 
 msgid "SmartBoost"
 msgstr ""
@@ -7728,6 +7737,8 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
 msgstr ""
+"일반적인 사용에서 되돌릴 디스크 공간을 백분율로 지정하십시오. 이 임계 값을 낮추면 성능 및 자동 조각 모음에 나쁜 영향을 줄 수 "
+"있습니다!"
 
 msgid "Split request"
 msgstr "분할 요청"
@@ -8414,7 +8425,7 @@ msgstr "이 디스크/파티션은 이미 구성되었습니다."
 
 #, php-format
 msgid "The distinguished name to bind to the directory server, e.g. %s"
-msgstr ""
+msgstr "디렉터리 서버에 바인드할 고유 이름. 예: %s"
 
 #, php-format
 msgid ""
@@ -8673,7 +8684,7 @@ msgstr ""
 msgid ""
 "The powerd utility monitors the server state and sets various power control "
 "options accordingly."
-msgstr ""
+msgstr "전원 유틸리티는 서버 상태를 감시하고 이에 따라 다양한 전원 제어 옵션을 설정합니다."
 
 msgid "The queuedepth range is invalid."
 msgstr "큐 깊이 범위가 무효합니다."
@@ -9147,7 +9158,7 @@ msgstr "이 인자는 머신이 LDAP 디렉터리에 추가될 때 머신을 위
 msgid ""
 "This parameter specifies the suffix that is used for passwords when these "
 "are added to the LDAP directory, e.g. %s"
-msgstr "이 인자는 암호들이 LDAP 디렉터리에 추가될 때 암호를 위해 이용되는 접미사를 명세 합니다. 예. %s"
+msgstr "이 인자는 암호들이 LDAP 디렉터리에 추가될 때 암호를 위해 이용되는 접미사를 명시 합니다. 예. %s"
 
 #, php-format
 msgid ""
@@ -9311,7 +9322,7 @@ msgstr "방화벽 규칙 작성에 관한 자세한 정보를 얻으려면 FreeB
 msgid ""
 "To get more information how to configure LCDproc check the LCDproc "
 "documentation"
-msgstr ""
+msgstr "LCDproc 구성에 대한 더 많은 정보를 얻으려면 LCDproc 문서를 확인하십시오."
 
 msgid ""
 "To get more information how to configure your UPS please check the NUT "
@@ -9496,12 +9507,14 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
+"UFS와 ZFS는 %s의 고유 파일시스템입니다. EXT2, EXT3, EXT4, FAT, FAT32 또는 NTFS와 같은 다른 "
+"파일시스템을 사용하면 파일 손상 및 데이터 손실 같은 예기치 않은 결과가 발생할 수 있습니다!"
 
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
 "of %s)."
-msgstr ""
+msgstr "UFS와 변형은 FreeBSD(%s의 기본 OS)의 기본 파일 형식입니다."
 
 msgid "UFS with Soft Updates"
 msgstr ""
@@ -9645,7 +9658,7 @@ msgid "Unknown Activity"
 msgstr "알 수 없는 활동"
 
 msgid "Unknown Aggregation Protocol"
-msgstr ""
+msgstr "알 수 없는 집계 프로토콜"
 
 msgid "Unknown or Unformatted"
 msgstr "알 수 없거나 포맷 되지 않음"
@@ -9728,7 +9741,7 @@ msgid "Use as sparse volume. (thin provisioning)"
 msgstr "sparse 볼륨 사용. (thin provisioning)"
 
 msgid "Use different container as root of the tree."
-msgstr ""
+msgstr "트리의 최상위로 다른 컨테이너를 사용합니다."
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr "새 파일 자동 강지를 위해 inotify 감시를 사용합니다."
@@ -9845,7 +9858,7 @@ msgstr "파일 시스템 검사가 실행되는 동안 이 탑제 지점에 접�
 
 #, php-format
 msgid "Using %s bytes fragment size."
-msgstr ""
+msgstr "%s 바이트 조각 크기 사용."
 
 msgid "VCPUs"
 msgstr "VCPU"
@@ -9999,6 +10012,8 @@ msgid ""
 "starting at number n, Use [n for the rightmost n characters of the device "
 "serial number."
 msgstr ""
+"새 파일 시스템의 볼륨 레이블. 카운터에는 %를 사용하고 숫자 n에서 시작하는 카운터에는 %n을 사용하고 장치 일련 번호의 오른쪽 n 개 "
+"문자에는 [n을 사용하십시오."
 
 msgid "Volumes"
 msgstr "볼륨"
@@ -10095,12 +10110,12 @@ msgid "Weekdays"
 msgstr "평일"
 
 msgid "Western Digital attribute."
-msgstr ""
+msgstr "웨스턴 디지털 속성."
 
 msgid ""
 "Western Digital, Samsung or Seagate attribute: Total number of data blocks "
 "with detected, uncorrectable errors encountered during normal operation."
-msgstr ""
+msgstr "웨스턴 디지털, 삼성 또는 시게이트 속성: 일반적인 동작시 교정 불가능한 오류가 감지된 데이터 블록의 총 개수."
 
 msgid ""
 "When HAST is enabled, the local devices, the local services and the "
@@ -10172,7 +10187,7 @@ msgid "Xen Virtual Machine"
 msgstr "Xen 가상 머신"
 
 msgid "Y-axis Range"
-msgstr ""
+msgstr "Y 축 범위"
 
 msgid "Yes"
 msgstr "예"
@@ -10403,7 +10418,7 @@ msgid "network traffic"
 msgstr "네트워크 트래픽"
 
 msgid "noVNC"
-msgstr ""
+msgstr "noVNC"
 
 msgid "none"
 msgstr "없음"
