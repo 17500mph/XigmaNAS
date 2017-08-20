@@ -1,21 +1,29 @@
-PORTNAME=	phpvirtualbox
-DISTVERSION=	5.0-5
-PORTREVISION=	1
-CATEGORIES=	www
-MASTER_SITES=	SF/${PORTNAME}
+# Created by: Bernhard Froehlich <decke@bluelife.at>
+# $FreeBSD: head/www/phpvirtualbox/Makefile 446746 2017-07-27 15:21:31Z decke $
 
-MAINTAINER=	zoon1@nas4free.org
-COMMENT=	Web Interface for VirtualBox
+PORTNAME=	phpvirtualbox
+DISTVERSION=	5.1-1
+CATEGORIES=	www
+
+MAINTAINER=	vbox@FreeBSD.org
+COMMENT=	AJAX Web Interface for VirtualBox
 
 LICENSE=	GPLv3
 
+NO_ARCH=	yes
 NO_BUILD=	yes
-# NAS4Free
-#USE_PHP=	json session soap simplexml xml
-USES=		dos2unix zip
+USES=		dos2unix php
+USE_PHP=	json session simplexml soap xml
+
+USE_GITHUB=	yes
+GH_TAGNAME=	65ebced
 
 DOS2UNIX_REGEX=	.*\.(php|txt|js|css|html)
 ETCDIR=		${WWWDIR}
+
+post-patch:
+	@${MV} ${WRKSRC}/endpoints/lib/vboxweb-5.0.wsdl ${WRKSRC}/endpoints/lib/vboxweb-5.1.wsdl
+	@${MV} ${WRKSRC}/endpoints/lib/vboxwebService-5.0.wsdl ${WRKSRC}/endpoints/lib/vboxwebService-5.1.wsdl
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
@@ -24,12 +32,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config.php-example \
 	    ${STAGEDIR}${WWWDIR}/config.php.sample
 
-# NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${RM} -f ${STAGEDIR}${WWWDIR}/*.txt
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -Rpv ${STAGEDIR}${WWWDIR} ${NAS4FREE_ROOTFS}${PREFIX}/www
-# NAS4Free workaround incompatible version message
-	@${MV} ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxwebService-5.0.wsdl ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxwebService-5.1.wsdl
-	@${MV} ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxweb-5.0.wsdl ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxweb-5.1.wsdl
 .include <bsd.port.mk>
