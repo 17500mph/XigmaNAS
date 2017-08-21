@@ -7,7 +7,7 @@
 -        $request->accessMode = $arg_accessMode;
 -        $request->forceNewUuid = $arg_forceNewUuid;
 +        $request->accessMode = $arg_accessMode === null ? "ReadWrite" : $arg_accessMode;
-+        $request->forceNewUuid = $arg_forceNewUuid === null ? false : $arg_forceNewUudid;
++        $request->forceNewUuid = $arg_forceNewUuid === null ? false : $arg_forceNewUuid;
          $response = $this->connection->__soapCall('IVirtualBox_openMedium', array((array)$request));
          return new IMedium ($this->connection, $response->returnval);
      }
