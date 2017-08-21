@@ -1,5 +1,5 @@
 PORTNAME=       noVNC
-PORTVERSION=    20170504
+PORTVERSION=    20170816
 PORTREVISION=   0
 CATEGORIES=     net
 
@@ -9,8 +9,8 @@ COMMENT=        HTML5 VNC Client
 LICENSE=        MPL
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	kanaka
-GH_TAGNAME=	099eb85
+GH_ACCOUNT=	novnc
+GH_TAGNAME=	d1a1e0e
 
 NO_BUILD=		yes
 NO_PKG_REGISTER=	yes
@@ -25,6 +25,6 @@ do-install:
 	@${CP} -Rpv ${WRKSRC}/core ${NAS4FREE_ROOTFS}${WWWDIR}
 	@${CP} -Rpv ${WRKSRC}/vendor ${NAS4FREE_ROOTFS}${WWWDIR}
 	@${CP} -pv ${WRKSRC}/vnc.html ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -pv ${WRKSRC}/vnc_auto.html ${NAS4FREE_ROOTFS}${WWWDIR}
+	@${CP} -pv ${WRKSRC}/vnc_lite.html ${NAS4FREE_ROOTFS}${WWWDIR}
 
 .include <bsd.port.mk>
