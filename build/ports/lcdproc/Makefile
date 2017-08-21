@@ -1,10 +1,14 @@
 PORTNAME=		lcdproc
-PORTVERSION=	0.5.7
-PORTREVISION= 1
+PORTVERSION=  0.5.9
+PORTREVISION= 0
+DISTVERSIONPREFIX=	lcdproc-
 CATEGORIES=		sysutils
-MASTER_SITES=		SF
-COMMENT=		Client/server suite for LCD devices
+
 MAINTAINER=		zoon1@nas4free.org
+COMMENT=		Client/Server suite for LCD devices
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	lcdproc
 
 GNU_CONFIGURE=	yes
 USES=           autoreconf pkgconfig
@@ -12,7 +16,7 @@ USES=           autoreconf pkgconfig
 # Options
 OPTIONS_DEFINE= USB FTDI HID FREETYPE SERDISP
 
-LIB_DEPENDS+=		libftdi.so:${PORTSDIR}/devel/libftdi
+LIB_DEPENDS+=		libftdi1.so:${PORTSDIR}/devel/libftdi1
 LIB_DEPENDS+=		libhid.so:${PORTSDIR}/devel/libhid
 
 CONFIGURE_ARGS=	--enable-drivers="${LCDPROC_DRIVERS}" \
@@ -47,10 +51,11 @@ ACLOCAL_ARGS=
 LCDPROC_DRIVERS=	bayrad \
 					CFontz \
 					CFontzPacket \
-					CwLnx \
 					curses \
+					CwLnx \
 					ea65 \
 					EyeboxOne \
+					futaba \
 					glcd \
 					glk \
 					hd44780 \
@@ -98,7 +103,7 @@ LCDPROC_DRIVERS+=IOWarrior \
 		shuttleVFD
 
 . if ${PORT_OPTIONS:MFTDI}
-LIB_DEPENDS+=		libftdi.so:${PORTSDIR}/devel/libftdi
+LIB_DEPENDS+=		libftdi1.so:${PORTSDIR}/devel/libftdi1
 CONFIGURE_ARGS+=	--enable-libftdi
 PLIST_SUB+=		FTDI=""
 LCDPROC_DRIVERS+=i2500vfd \
