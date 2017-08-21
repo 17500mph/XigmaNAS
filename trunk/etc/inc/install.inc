@@ -757,11 +757,6 @@ function install_init_gptdisk($disk, $partlayout)
 		write_console("Error: Failed to create GPT partition table!\n");
 		return 1;
 	}
-	if (mwexec("/sbin/gpart bootcode -b /boot/pmbr {$disk}")) {
-		set_kern_geom_debugflags(0);
-		write_console("Error: Failed to install pmbr!\n");
-		return 1;
-	}
 
 	$newfs_sector = 4096;
 	$newfs_fsize = 4096;
@@ -779,7 +774,7 @@ function install_init_gptdisk($disk, $partlayout)
 
 		// force delete existing partitions (error is OK)
 		mwexec("/sbin/gpart destroy -F {$diskdevicename}");
-		// create BSD partition with alignment (UFS or swap)
+		// Create GPT partition with alignment (UFS or swap)
 		if ($partlayoutv['fstype'] === "boot") {
 			$flags = "-a 4k -t freebsd-boot -l gptboot";
 		} else if ($partlayoutv['fstype'] === "swap") {
@@ -792,16 +787,14 @@ function install_init_gptdisk($disk, $partlayout)
 		if ($partitionsize !== "*")
 			$flags .= " -s {$partitionsize}";
 		$flags .= " -i {$partlayoutv['partition']}";
-		//write_console("    /sbin/gpart add {$flags} {$disk}\n");
 		if (mwexec("/sbin/gpart add {$flags} {$disk}")) {
 			set_kern_geom_debugflags(0);
 			write_console("\nError: Failed to add partition on {$disk}!\n");
 			return 1;
 		}
 		if ($partlayoutv['fstype'] === "boot") {
-			// install boot code
-			//write_console("    /sbin/gpart bootcode -p /boot/gptboot -i {$partlayoutv['partition']} {$disk}\n");
-			if (mwexec("/sbin/gpart bootcode -p /boot/gptboot -i {$partlayoutv['partition']} {$disk}")) {
+			// Install boot code
+			if (mwexec("/sbin/gpart bootcode -b /boot/pmbr -p /boot/gptboot -i {$partlayoutv['partition']} {$disk}")) {
 				set_kern_geom_debugflags(0);
 				write_console("Error: Failed to install gptboot on {$diskdevicename}!\n");
 				return 1;
