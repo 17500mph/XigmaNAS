@@ -268,6 +268,12 @@ vbox_stop()
 		fi
 	done
 	echo ""
+
+	# kill remaining vboxusers processes
+	PIDS=`ps aux | grep "vboxusers" | awk '{print $2}'`
+	for PID in ${PIDS}; do 
+		kill -9 ${PID};
+	done
 }
 
 load_rc_config "${name}"
