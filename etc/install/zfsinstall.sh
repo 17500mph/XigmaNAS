@@ -198,6 +198,7 @@ zdisk_init()
 
 	# Add swap device to fstab.
 	if [ ! -z "${SWAP}" ]; then
+		echo "Adding swap device to fstab..."
 		echo "/dev/gpt/swap0 none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
 	fi
 
@@ -282,15 +283,22 @@ zmirror_init()
 	sysctl kern.geom.debugflags=0
 	sleep 1
 
-	# Creating the mirrored swap with gmirror.
+	# Creating/adding the swap device.
 	if [ ! -z "${SWAP}" ]; then
-		echo "Creating swap Mirror..."
-		if ! kldstat | grep -q geom_mirror; then
-			kldload /boot/kernel/geom_mirror.ko
+		if [ "${SWAPMODE}" == 1 ]; then
+			echo "Creating swap Mirror..."
+			if ! kldstat | grep -q geom_mirror; then
+				kldload /boot/kernel/geom_mirror.ko
+			fi
+			gmirror label -b prefer gswap /dev/gpt/swap0 /dev/gpt/swap1
+			# Add swap device to fstab.
+			echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+		elif [ "${SWAPMODE}" == 2 ]; then
+			# Add swap device to fstab.
+			echo "Adding swap devices to fstab..."
+			echo "/dev/gpt/swap0 none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+			echo "/dev/gpt/swap1 none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
 		fi
-		gmirror label -b prefer gswap /dev/gpt/swap0 /dev/gpt/swap1
-		# Add swap device to fstab.
-		echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
 	fi
 
 	# Unmount cd-rom.
@@ -699,6 +707,26 @@ menu_swap()
 	fi
 
 	export SWAP=`awk '{ print $1; }' ${tmpfile} | tr -d '"'`
+	
+	if [ ! -z "${SWAP}" ]; then
+		if [ "${choise}" == 2 ]; then
+			swap_mode
+		fi
+	fi
+}
+
+swap_mode()
+{
+	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
+	--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
+	1 "Mirrored System Swap" on \
+	2 "Stripped System Swap" off \
+	2>${tmpfile}
+	if [ 0 -ne $? ]; then
+		exit 0;
+	fi
+
+	export SWAPMODE=`cat ${tmpfile}`
 }
 
 menu_zrootsize()
