@@ -141,16 +141,6 @@ gptpart_init()
 # Install NAS4Free on single zfs disk.
 zdisk_init()
 {
-	# Halt if more than one drive has been specified.
-	if [ ! -z "${DISK2}" ]; then
-		cdialog --msgbox "You should select a maximum of one drive for ZFS Disk Install!" 6 50 && exit 1
-	fi
-
-	# Check if disk has been specified.
-	if [ -z "${DISK1}" ]; then
-		cdialog --msgbox "You should select at least one drive for ZFS Disk Install!" 6 50 && exit 1
-	fi
-
 	# Install confirmation.
 	install_yesno
 
@@ -209,7 +199,7 @@ zdisk_init()
 	create_default_snapshot
 
 	# Flush disk cache and wait 1 second.
-	sync && sleep 1
+	sync; sleep 1
 	zpool export ${ZROOT}
 	rm -Rf ${ALTROOT}
 
@@ -226,16 +216,6 @@ zdisk_init()
 # Install NAS4Free RootOnZFS on zfs mirror.
 zmirror_init()
 {
-	# Halt if more than one drive has been specified.
-	if [ ! -z "${DISKX}" ]; then
-		cdialog --msgbox "You should select a maximum of two drive for ZFS Mirror Install!" 6 50 && exit 1
-	fi
-
-	# Check if disk has been specified.
-	if [ -z "${DISK2}" ]; then
-		cdialog --msgbox "You should select a minimum of two drives for ZFS Mirror Install!" 6 50 && exit 1
-	fi
-
 	# Install confirmation.
 	install_yesno
 
@@ -308,7 +288,7 @@ zmirror_init()
 	create_default_snapshot
 
 	# Flush disk cache and wait 1 second.
-	sync && sleep 1
+	sync; sleep 1
 	zpool export ${ZROOT}
 	rm -Rf ${ALTROOT}
 
@@ -616,7 +596,7 @@ upgrade_system()
 	create_upgrade_snapshot
 
 	# Flush disk cache and wait 1 second..
-	sync && sleep 1
+	sync; sleep 1
 	zpool export ${ZROOT}
 
 	# Final message.
@@ -720,7 +700,7 @@ swap_mode()
 	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
 	--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
 	1 "Mirrored System Swap" on \
-	2 "Stripped System Swap" off \
+	2 "Miltiple System Swap" off \
 	2>${tmpfile}
 	if [ 0 -ne $? ]; then
 		exit 0;
@@ -847,13 +827,39 @@ menu_install()
 		disklist=$(eval "echo `cat "${tmpfile}"`")
 	fi
 
+	# Check user input specified disks.
 	if [ -z "${disklist}" ]; then
-		cdialog --msgbox "You need to select at least one disk!" 6 50 && exit 1
+		if [ ${choise} == 1 ]; then
+			cdialog --msgbox "Notice: You need to select at least one disk!" 6 50; exit 1
+		elif [ ${choise} == 2 ]; then
+			cdialog --msgbox "Notice: You need to select at least two disk!" 6 50; exit 1
+		fi
 	fi
 
 	export DISK1=`awk '{ print $1; }' ${tmpfile} | tr -d '"'`
 	export DISK2=`awk '{ print $2; }' ${tmpfile} | tr -d '"'`
 	export DISKX=`awk '{ print $3; }' ${tmpfile} | tr -d '"'`
+
+	if [ ${choise} == 1 ]; then
+		# Check if more than one drive has been specified.
+		if [ ! -z "${DISK2}" ]; then
+			cdialog --msgbox "Notice: You should select a maximum of one drive for ZFS Disk Install!" 6 50; exit 1
+		fi
+		# Check if one disk has been specified.
+		if [ -z "${DISK1}" ]; then
+			cdialog --msgbox "Notice: You should select at least one drive for ZFS Disk Install!" 6 50; exit 1
+		fi
+
+	elif [ ${choise} == 2 ]; then
+		# Check if more than one drive has been specified.
+		if [ ! -z "${DISKX}" ]; then
+			cdialog --msgbox "Notice: You should select a maximum of two drive for ZFS Mirror Install!" 6 50; exit 1
+		fi
+		# Check if two disk has been specified.
+		if [ -z "${DISK2}" ]; then
+			cdialog --msgbox "Notice: You should select a minimum of two drives for ZFS Mirror Install!" 6 50; exit 1
+		fi
+	fi
 }
 
 menu_main()
