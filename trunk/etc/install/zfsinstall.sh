@@ -700,7 +700,7 @@ swap_mode()
 	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
 	--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
 	1 "Mirrored System Swap" on \
-	2 "Miltiple System Swap" off \
+	2 "Multiple System Swap" off \
 	2>${tmpfile}
 	if [ 0 -ne $? ]; then
 		exit 0;
