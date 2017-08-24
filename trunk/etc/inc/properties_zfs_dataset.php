@@ -32,58 +32,6 @@
   either expressed or implied, of the NAS4Free Project.
  */
 require 'properties.php';
-class properties_zfs_filesystem extends properties_zfs_dataset_enhanced {
-	public function load() {
-		parent::load();
-		$this->supported_properties = [
-			'aclinherit',
-			'aclmode',
-			'atime',
-			'canmount',
-			'casesensitivity',
-			'checksum',
-			'compression',
-			'copies',
-			'dedup',
-			'logbias',
-			'normalization',
-			'primarycache',
-			'quota',
-			'readonly',
-			'redundant_metadata',
-			'refquota',
-			'refreservation',
-			'reservation',
-			'secondarycache',
-			'setuid',
-			'snapdir',
-			'sync',
-			'type',
-			'utf8only'
-		];
-	}
-}
-class properties_zfs_volume extends properties_zfs_dataset_enhanced {
-	public function load() {
-		parent::load();
-		$this->supported_properties = [
-			'checksum',
-			'compression',
-			'dedup',
-			'logbias',
-			'primarycache',
-			'secondarycache',
-			'sparse',
-			'sync',
-			'volblocksize',
-			'volmode',
-			'volsize'
-		];
-	}
-}
-class properties_zfs_dataset_enhanced extends properties_zfs_dataset {
-	public $supported_properties = [];
-}
 /*
  * To activate a property:
  * - Enable property variable.
@@ -736,4 +684,56 @@ class properties_zfs_dataset {
 		return $this->prop_offon('xattr',gtext('Xattr'),gtext('The xattr property is currently not supported on FreeBSD.'),true,true);
 	}
  */
+}
+class properties_zfs_dataset_enhanced extends properties_zfs_dataset {
+	public $supported_properties = [];
+}
+class properties_zfs_filesystem extends properties_zfs_dataset_enhanced {
+	public function load() {
+		parent::load();
+		$this->supported_properties = [
+			'aclinherit',
+			'aclmode',
+			'atime',
+			'canmount',
+			'casesensitivity',
+			'checksum',
+			'compression',
+			'copies',
+			'dedup',
+			'logbias',
+			'normalization',
+			'primarycache',
+			'quota',
+			'readonly',
+			'redundant_metadata',
+			'refquota',
+			'refreservation',
+			'reservation',
+			'secondarycache',
+			'setuid',
+			'snapdir',
+			'sync',
+			'type',
+			'utf8only'
+		];
+	}
+}
+class properties_zfs_volume extends properties_zfs_dataset_enhanced {
+	public function load() {
+		parent::load();
+		$this->supported_properties = [
+			'checksum',
+			'compression',
+			'dedup',
+			'logbias',
+			'primarycache',
+			'secondarycache',
+			'sparse',
+			'sync',
+			'volblocksize',
+			'volmode',
+			'volsize'
+		];
+	}
 }
