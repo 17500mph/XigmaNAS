@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-07-21 00:19+0000\n"
-"PO-Revision-Date: 2017-08-23 10:23+0000\n"
-"Last-Translator: LoveAngel <Unknown>\n"
+"PO-Revision-Date: 2017-08-29 22:55+0000\n"
+"Last-Translator: Sang-Eun Lee <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-08-23 10:41+0000\n"
+"X-Launchpad-Export-Date: 2017-08-29 22:57+0000\n"
 "X-Generator: Launchpad (build 18446)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -158,7 +158,7 @@ msgstr ""
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
-msgstr ""
+msgstr "(공급자별 원시 값) 원시 값은 여러 공급자 마다 다른 구조를 가지며 종종 십진수로는 의미가 없을 수 있습니다."
 
 #, php-format
 msgid "(default %s %s"
@@ -195,7 +195,7 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "RAID-5 볼륨을 만들기 위해서는 3개 이상의 디스크가 필요합니다."
 
 msgid "4KB wrapper"
-msgstr ""
+msgstr "4KB 보정"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 태그(1에서 4094까지)."
@@ -240,12 +240,12 @@ msgstr ""
 "뒤따라오는 16진 숫자의 문자열로 분류합니다."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr "마운트된  RAID 볼륨은 삭제 할 수없습니다."
+msgstr "탑재된  RAID 볼륨은 삭제 할 수없습니다."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
-msgstr "마운트된 디스크나 파티션은 요청된 작업 수행을 위해 임시로 마운트 해제 될 것입니다."
+msgstr "탑재된 디스크나 분할 영역은 요청된 작업 수행을 위해 임시로 탑재 해제 될 것입니다."
 
 msgid "A reboot is required"
 msgstr "재시동이 필요합니다."
@@ -318,7 +318,7 @@ msgid "A valid network bit count (1-32) must be specified."
 msgstr "올바른 네트워크 bit 수(1-32)를 명시해야 합니다."
 
 msgid "A valid prefix (1-128) must be specified."
-msgstr "유효한 접두사(1-128)이 명세 되어야 합니다."
+msgstr "올바른 접두사(1-128)이 명시 되어야 합니다."
 
 msgid "A valid systctl MIB value."
 msgstr "유효한 systctl MIB 값."
@@ -375,7 +375,7 @@ msgid "Access"
 msgstr "접근"
 
 msgid "Access Mode"
-msgstr "액세스 모드"
+msgstr "접근 모드"
 
 msgid "Access Restrictions"
 msgstr "접근 제한"
@@ -387,7 +387,7 @@ msgid "Access Time (atime)"
 msgstr "접근한 시간(atime)"
 
 msgid "Access the webGUI with the new IP address"
-msgstr "새 IP주소로 webGUI에 접속"
+msgstr "새 IP주소로 WebGUI에 접속"
 
 msgid "Acoustic level"
 msgstr "소음 레벨"
@@ -412,7 +412,7 @@ msgid "Active"
 msgstr "활성"
 
 msgid "Active Directory"
-msgstr "액티브 디렉터리"
+msgstr "Active Directory"
 
 msgid "Active Shares"
 msgstr "활성 공유"
@@ -472,13 +472,13 @@ msgid "Add RAID"
 msgstr "RAID 추가"
 
 msgid "Add Record"
-msgstr "레코드 추가"
+msgstr "항목 추가"
 
 msgid "Add Resource"
 msgstr "자원 추가"
 
 msgid "Add Route"
-msgstr "라우트 추가"
+msgstr "경로 추가"
 
 msgid "Add Rsync Job"
 msgstr "rsync 작업 추가"
@@ -529,7 +529,7 @@ msgid "Add additional scheduled self-test."
 msgstr "추가적인 자체 테스트 예약 추가"
 
 msgid "Add any supplemental parameters."
-msgstr "부가적인 인자 추가"
+msgstr "추가적인 매개 변수 추가"
 
 msgid "Add auth group"
 msgstr "인증 그룹 추가"
@@ -556,7 +556,7 @@ msgid "Add job"
 msgstr "작업 추가"
 
 msgid "Add mount point"
-msgstr "마운트 포인트 추가"
+msgstr "탑재 지점 추가"
 
 msgid "Add portal group"
 msgstr "포털 그룹 추가"
@@ -577,13 +577,13 @@ msgid "Additional Network"
 msgstr "추가 네트워크"
 
 msgid "Additional Parameters"
-msgstr "추가 인자"
+msgstr "추가 매개 변수"
 
 msgid "Additional Storage"
 msgstr "추가 저장소"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
-msgstr "장치의 하드웨어 고유 부분에 대한 추가적인 인자들."
+msgstr "장치의 하드웨어 고유 부분에 대한 추가적인 매개 변수들."
 
 msgid "Address"
 msgstr "주소"
@@ -622,7 +622,7 @@ msgid "Advanced settings"
 msgstr "고급 설정"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Skew 알림"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr "After - 파일 전송이 완료된 후 파일 삭제가 이루어 집니다."
@@ -650,6 +650,7 @@ msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
 msgstr ""
+"웨스턴 디지털 하드 디스크의 기류 온도 (온도와 동일하지만 일부 모델의 경우 현재 값은 50보다 적음, 오래된 것으로 표시됨)."
 
 msgid "Alert Level"
 msgstr "알림 수준"
@@ -677,7 +678,7 @@ msgstr "이 옵션을 활성화하면 모든 자료를 잃게 됩니다!"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
-msgstr "'모든 디렉터리'는 마운트 된 경로를 필요로 하는데 경로 %s은(는) 마운트 되지 않았습니다."
+msgstr "'모든 디렉터리'는 탑재된 경로를 필요로 하는데 경로 %s은(는) 탑재 되지 않았습니다."
 
 msgid "All disks are imported."
 msgstr "모든 디스크를 불러들였습니다."
@@ -689,8 +690,8 @@ msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
 msgstr ""
-"모든 공유는 'usedots' 옵션을 이용하므로 파일 명을 .Parent로 하거나 .Apple로 시작하는 이름으로 하는 것은 합법적이지 "
-"않습니다."
+"모든 공유는 'usedots' 옵션을 이용하므로 파일 이름을 .Parent로 하거나 .Apple로 시작하는 이름으로 하는 것은 규칙에 "
+"맞지 않습니다."
 
 msgid "All software RAID disks are imported."
 msgstr "모든 소프트웨어 RAID 디스크를 불러들였습니다."
@@ -752,6 +753,9 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
+"기존의 HDD 용어에 따라 '전원 끄기 회수 수'라고도 합니다. Raw 값은 SSD의 수명 동안 누적 된 비정상 정지 수를 보고합니다. "
+"여기서 '비정상 정지'는 마지막 명령으로 STANDBY IMMEDIATE 없이 전원을 제거하는 것입니다 (커패시터 전원을 사용하는 PLI "
+"동작과 관계 없음). 일반적인 값은 항상 100입니다."
 
 msgid "AltRoot"
 msgstr "대체 루트"
@@ -784,12 +788,12 @@ msgid "Ambient temperature (degrees C)"
 msgstr "주변 온도(℃)"
 
 msgid "Amount of surge current used to spin up the drive."
-msgstr ""
+msgstr "드라이브를 회전시키는 데에 사용한 유입전류량"
 
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
-msgstr ""
+msgstr "쓰래싱 (thrashing) 크기(바늘이 반복적으로 앞 또는 뒤로 움직일 때의 이동거리)"
 
 msgid ""
 "An Auth Group is identified by a tag number and is optional. If the Target "
@@ -814,10 +818,10 @@ msgid "An error occured."
 msgstr "오류가 발생했습니다."
 
 msgid "An host with this name already exists."
-msgstr "해당 이름을 가지고 있는 호스트가 존재합니다."
+msgstr "해당 이름의 호스트가 존재합니다."
 
 msgid "An interface with the specified description already exists."
-msgstr "명세 된 설명을 가지고 있는 인터페이스가 이미 존재합니다"
+msgstr "명시 된 설명의 인터페이스가 이미 존재합니다"
 
 msgid "Anonymous Bind"
 msgstr "익명 연결"
@@ -856,7 +860,7 @@ msgid "Append user defined shares"
 msgstr "사용자 정의 공유 추가"
 
 msgid "Apple Filing Protocol"
-msgstr "애플 파일링 프로토콜"
+msgstr "Apple Filing Protocol"
 
 msgid "Apply"
 msgstr "적용"
@@ -874,10 +878,10 @@ msgid "April"
 msgstr "4월"
 
 msgid "Archive"
-msgstr "아카이브"
+msgstr "보존"
 
 msgid "Archive mode."
-msgstr "아카이브 모드."
+msgstr "보존 모드."
 
 msgid "Are you sure you want to reboot the server?"
 msgstr "서버를 재시동하시겠습니까?"
@@ -1002,7 +1006,7 @@ msgid "Auto size"
 msgstr "자동 크기"
 
 msgid "AutoScale"
-msgstr "자동 스케일"
+msgstr "자동 크기 조정"
 
 msgid "Autodetect"
 msgstr "자동 감지"
@@ -1077,11 +1081,11 @@ msgid "Base DN"
 msgstr "기본 DN"
 
 msgid "Base Name"
-msgstr "기본 명"
+msgstr "기본 이름"
 
 msgid ""
 "Base Name will be appended automatically when starting without 'iqn.'."
-msgstr "'iqn.'이 없이 시작할 때 기본 명이 자동으로 추가될 것입니다."
+msgstr "'iqn.'이 없이 시작할 때 기본 이름이 자동으로 추가될 것입니다."
 
 msgid "Battery Details"
 msgstr "베터리 상세"
@@ -1158,7 +1162,7 @@ msgid ""
 msgstr "BitTorrent는 탑제 지점 디렉터리 %s에 적어도 읽기 및 실행 허가가 필요합니다!"
 
 msgid "Blank Time"
-msgstr ""
+msgstr "반응불가시간"
 
 msgid "Block Size"
 msgstr "블록 크기"
@@ -1207,7 +1211,7 @@ msgid ""
 msgstr "아직 인터페이스로 사용되고 있어서 브릿지를 삭제할 수 없습니다."
 
 msgid "Bridge is marked for deletion"
-msgstr "브릿지가 삭제 마크됨"
+msgstr "브릿지 삭제 표시됨"
 
 msgid "Bridge is protected"
 msgstr "브릿지 보호됨"
@@ -1249,7 +1253,7 @@ msgid ""
 msgstr "인터페이스로 사용중이어서 CARP를 삭제할 수 없습니다."
 
 msgid "CARP is marked for deletion"
-msgstr "CARP 삭제 마크됨"
+msgstr "CARP 삭제 표시됨"
 
 msgid "CARP is protected"
 msgstr "CARP 보호됨"
@@ -1345,7 +1349,7 @@ msgid "CPU Usage"
 msgstr "CPU 사용량"
 
 msgid "CPU frequencies:"
-msgstr "CPU 사용량:"
+msgstr "CPU 주파수:"
 
 msgid "CPU load"
 msgstr "CPU 부하"
@@ -1353,7 +1357,7 @@ msgstr "CPU 부하"
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
-msgstr ""
+msgstr "CRC 오류 개수. CRC 오류의 개수(자료 읽기/쓰기 FIS CRC 오류)."
 
 msgid "Calibration Battery"
 msgstr "베터리 초기화"
@@ -1365,13 +1369,13 @@ msgid "Can't get UFS ID."
 msgstr "UFS ID 얻을 수 없음."
 
 msgid "Can't mount the system partition 1, the DATA partition is the 2."
-msgstr "시스템 파티션 1은 마운트 할 수 없습니다. 데이터 파티션은 2입니다."
+msgstr "시스템 분할 영역 1은 탑재할 수 없습니다. 데이터 분할 영역은 2입니다."
 
 msgid "Cancel"
 msgstr "취소"
 
 msgid "Canmount"
-msgstr "마운트 가능"
+msgstr "탑재 가능"
 
 msgid "Cannot get CPU load"
 msgstr "CPU 부하 얻을 수 없음"
@@ -1397,8 +1401,8 @@ msgid ""
 "address or DNS host is acting as a NAT gateway or port forwarder for the "
 "server."
 msgstr ""
-"명세 된 IP 주소나 DNS 호스트가 NAT 게이트웨이나 서버의 포트 포워더라는 가정 하에 서버가 클라이언트에게 명세 된 IP 주소나 "
-"DNS 호스트 명의 네트워크 정보를 표시하게 합니다."
+"명시 된 IP 주소나 DNS 호스트가 NAT 게이트웨이나 서버의 포트 포워더라는 가정 하에 서버가 클라이언트에게 명시 된 IP 주소나 "
+"DNS 호스트 이름의 네트워크 정보를 표시하게 합니다."
 
 msgid "Certificate"
 msgstr "인증서"
@@ -1410,10 +1414,10 @@ msgid "Change below file"
 msgstr "아래 파일 변경"
 
 msgid "Change the IP address of your computer"
-msgstr "귀하의 컴퓨터 IP 주소를 변경하십시오"
+msgstr "귀하의 컴퓨터 IP 주소를 변경"
 
 msgid "Change the IP address of your server"
-msgstr "귀하의 서버 IP 주소를 변경하십시오"
+msgstr "귀하의 서버 IP 주소를 변경"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "이 옵션의 변경은 재시동 후에 적용됩니다."
@@ -1438,7 +1442,7 @@ msgid ""
 msgstr "FreeBSD 메뉴얼에서 tcp Wrapper에 대한 정보를 확인하십시오"
 
 msgid "Check the list of available drivers"
-msgstr "사용 가능한 드라이버를 확인하십시오"
+msgstr "사용 가능한 드라이버 목록을 확인하십시오"
 
 msgid "Checksum"
 msgstr "검사합"
@@ -1453,7 +1457,7 @@ msgid "Choose which IP protocol this rule should match."
 msgstr "이 규칙이 일치해야 할 IP 프로토콜을 선택하십시오."
 
 msgid "Choose which interface this route applies to."
-msgstr "이 라우트가 적용되어야 할 인터페이스를 선택하십시오."
+msgstr "이 경로가 적용될 인터페이스를 선택하십시오."
 
 msgid "Clear"
 msgstr "제거"
@@ -1550,7 +1554,7 @@ msgid "Comment"
 msgstr "설명"
 
 msgid "Common Internet File System"
-msgstr "공통 인터넷 파일 시스텡"
+msgstr "공용 인터넷 파일 시스텡"
 
 msgid "Community"
 msgstr "커뮤니티"
@@ -1562,7 +1566,7 @@ msgid "Compiled"
 msgstr "컴파일됨"
 
 msgid "Compliant profile to be used."
-msgstr "이용될 호환 프로파일."
+msgstr "이용할 호환 프로파일."
 
 msgid "Compress"
 msgstr "압축하기"
@@ -1682,7 +1686,7 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
-"이 데이터셋에 사용 될 압축 알고리듬을 제어합니다. 이제 'LZ4'가 권장되는 압축 알고리듬입니다. 압축을 'On'으로 설정하면 기능 "
+"이 데이터셋에 사용 될 압축 알고리듬을 제어합니다. 이제 'LZ4'가 권장되는 압축 알고리듬입니다. 압축을 '켬'으로 설정하면 기능 "
 "플래그 lz4_compress가 활성 인 경우 LZ4 압축 알고리듬을 사용하고, 그렇지 않으면 LZJB가 사용됩니다. 'GZIP-N'값을 "
 "사용하여 'GZIP'레벨을 지정할 수 있습니다. 여기서 N은 1 (가장 빠름)에서 9 (가장 좋은 압축 비율)의 정수입니다. 현재 "
 "'GZIP'은 'GZIP-6'과 동일합니다."
@@ -1695,7 +1699,7 @@ msgid ""
 "from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
 "equivalent to 'GZIP-6'."
 msgstr ""
-"압축 알고리듬을 제어합니다. 이제 'LZ4'가 권장되는 압축 알고리듬입니다. 압축을 'On'으로 설정하면 기능 플래그 "
+"압축 알고리듬을 제어합니다. 이제 'LZ4'가 권장되는 압축 알고리듬입니다. 압축을 '켬'으로 설정하면 기능 플래그 "
 "lz4_compress가 활성 인 경우 LZ4 압축 알고리듬을 사용하고, 그렇지 않으면 LZJB가 사용됩니다. 'GZIP-N'값을 "
 "사용하여 'GZIP'레벨을 지정할 수 있습니다. 여기서 N은 1 (가장 빠름)에서 9 (가장 좋은 압축 비율)의 정수입니다. 현재 "
 "'GZIP'은 'GZIP-6'과 동일합니다."
@@ -1739,17 +1743,17 @@ msgid ""
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
 msgstr ""
-"파일을 읽을 때 접근 시간을 갱신할지 여부를 제어합니다. 이 옵션을 해제하면 파일을 읽을 때 쓰기 트래픽이 생성되지 않으므로 성능이 크게 "
+"파일을 읽을 때 접근 시간을 갱신할지 여부를 제어합니다. 이 옵션을 해제하면 파일을 읽을 때 쓰기 동작이 일어나지 않으므로 성능이 크게 "
 "향상 될 수 있습니다."
 
 msgid "Controls whether the dataset is managed from a jail."
-msgstr ""
+msgstr "데이터를 유치장(jail)에서 관리할 지의 여부를 제어한다."
 
 msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr "파일 시스템이 set-UID bit을 지원하는지 여부를 제어합니다."
 
 msgid "Controls whether this dataset can be modified."
-msgstr "이 데이터 셋을 변경할 수 있는 지를 제어합니다."
+msgstr "이 데이터셋을 변경할 수 있는지 여부를 제어합니다."
 
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
@@ -1757,7 +1761,7 @@ msgid ""
 msgstr "DOS 속성이 비활성화 된 경우 DOS 속성을 UNIX 실행 비트로 변환합니다."
 
 msgid "Conveyance Self-Test"
-msgstr ""
+msgstr "운송 자체 테스트"
 
 msgid "Copies"
 msgstr "복본"
@@ -1825,7 +1829,7 @@ msgid "Count of load/unload cycles into head landing zone position."
 msgstr "헤드 종착점 위치로의 로드/언로드 횟수"
 
 msgid "Count of off-track errors."
-msgstr ""
+msgstr "트랙 분리 오류 개수."
 
 msgid ""
 "Count of reallocated sectors. When the hard drive finds a "
@@ -1882,7 +1886,7 @@ msgid "Count of times the link is reset during a data transfer."
 msgstr "자료 전송 중 링크가 재설정 된 횟수"
 
 msgid "Counts the maximum worst erase count on any block."
-msgstr ""
+msgstr "모든 블록에서 발생한 최악 지우기 최대치의 개수."
 
 msgid ""
 "Counts the number of SATA PHY errors. This value includes all PHY error "
@@ -1893,7 +1897,7 @@ msgstr ""
 "crc를 포함합니다. 시스템 전원이 꺼지면 값이 지워집니다."
 
 msgid "Create 4KB wrapper (nop device)."
-msgstr ""
+msgstr "4KB 보정 생성(장치 아님)."
 
 msgid "Create Date"
 msgstr "생성 날짜"
@@ -1914,7 +1918,7 @@ msgid "Create and initialize RAID."
 msgstr "RAID 생성 및 초기화."
 
 msgid "Create work directory if it doesn't exist."
-msgstr "존재하지 않을 경우 작업 디렉터리를 생성합니다."
+msgstr "작업 디렉터리가 존재하지 않으면 생성합니다."
 
 msgid "Created UFS file system:"
 msgstr "생성된 UFS 파일 시스템:"
@@ -1932,7 +1936,7 @@ msgid "Creating filesystem with 'Soft Updates'"
 msgstr "'Soft Updates'로 파일 시스템을 생성 중"
 
 msgid "Creating partition"
-msgstr "파티션 생성 중"
+msgstr "분할 영역 생성 중"
 
 msgid "Creation"
 msgstr "생성일"
@@ -1971,7 +1975,7 @@ msgid "Current password is incorrectly entered."
 msgstr "현재 암호를 잘못 입력하셨습니다."
 
 msgid "Current state of drive operation based upon the Life Curve."
-msgstr "라이프 커브를 기반으로 한 드라이브 작동의 현재 상태."
+msgstr "생존 곡선을 기반으로 한 드라이브 작동의 현재 상태."
 
 msgid ""
 "Current system password is using the default password. You should choose a "
@@ -2054,7 +2058,7 @@ msgid "Data Integrity"
 msgstr "데이터 무결성"
 
 msgid "Data digest"
-msgstr "데이터 digest"
+msgstr "자료 요약"
 
 msgid "Database Directory"
 msgstr "데이터베이스 디렉터리"
@@ -2063,22 +2067,22 @@ msgid "Database directory"
 msgstr "데이터베이스 디렉터리"
 
 msgid "Dataset"
-msgstr "데이터 셋"
+msgstr "데이터셋"
 
 msgid "Dataset Type"
 msgstr "데이터셋 형태"
 
 msgid "Dataset is marked for deletion"
-msgstr "데이터셋이 삭제 표시됨"
+msgstr "데이터셋 삭제 표시됨"
 
 msgid "Dataset is protected"
-msgstr "데이터셋이 보호됨"
+msgstr "데이터셋 보호됨"
 
 msgid "Dataset is unlocked"
-msgstr "데이터셋이 잠금 해제됨"
+msgstr "데이터셋 잠금 해제됨"
 
 msgid "Datasets"
-msgstr "데이터 셋"
+msgstr "데이터셋"
 
 msgid "Date"
 msgstr "날짜"
@@ -2111,6 +2115,7 @@ msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
 "max erase count (big endian)."
 msgstr ""
+"해독결과: 바이트 0-1-2 = 평균 지우기 횟수 (big endian), 바이트 3-4-5 = 최대 지우기 횟수 (big endian)"
 
 msgid "Decryption Password"
 msgstr "복호화 암호"
@@ -2142,10 +2147,10 @@ msgid "Default Device Settings"
 msgstr "기본 장치 설정"
 
 msgid "Default Root"
-msgstr "기본 경로"
+msgstr "기본 최상위 지점"
 
 msgid "Default user name is 'admin'."
-msgstr "기본 사용자 명은 'admin'입니다."
+msgstr "기본 사용자 이름은 'admin'입니다."
 
 msgid "DefaultTime2Retain"
 msgstr "DefaultTime2Retain"
@@ -2157,15 +2162,15 @@ msgid "Define directories/URL's that require authentication."
 msgstr "인증을 필요로 하는 디렉터리/URL을 정의합니다."
 
 msgid "Defines the checksum algorithm."
-msgstr "체크썸 알고리듬을 정의합니다."
+msgstr "검사합 알고리듬을 정의합니다."
 
 msgid "Defines when the shutdown is initiated."
-msgstr "언제 끄기가 시작되는 지를 정의합니다."
+msgstr "언제 시스템이 종료되는지를 정의합니다."
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
 "after the transfer."
-msgstr "파일 삭제는 전송 중에 계산되며 전송 후에 완료됩니다."
+msgstr "Delay - 파일 삭제는 전송 중에 계산되며 전송 후에 완료됩니다."
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer, and then "
@@ -2176,13 +2181,13 @@ msgid "Delete"
 msgstr "삭제"
 
 msgid "Delete ARP entry"
-msgstr "ARP 엔트리 삭제"
+msgstr "ARP 항목 삭제"
 
 msgid "Delete Algorithm"
 msgstr "삭제 알고리듬"
 
 msgid "Delete Host"
-msgstr "Host 삭제"
+msgstr "호스트 삭제"
 
 msgid "Delete Login Info"
 msgstr "로그인 정보 삭제"
@@ -2227,7 +2232,7 @@ msgid "Delete Selected RAID Volumes"
 msgstr "선택된 RAID 볼륨들 삭제"
 
 msgid "Delete Selected Records"
-msgstr "선택된 레코드 삭제"
+msgstr "선택된 항목 삭제"
 
 msgid "Delete Selected Resources"
 msgstr "선택된 자원 삭제"
@@ -2305,7 +2310,7 @@ msgid "Delete interface"
 msgstr "인터페이스 삭제"
 
 msgid "Delete mount point"
-msgstr "마운트 지점 삭제"
+msgstr "탑재 지점 삭제"
 
 msgid "Delete portal group"
 msgstr "포털 그룹 삭제"
@@ -2329,12 +2334,14 @@ msgid "Deleting GEOM metadata"
 msgstr "GEOM 메타 데이터 삭제 중"
 
 msgid "Deleting MBR and partition table"
-msgstr "MBR과 파티션 테이블 삭제 중"
+msgstr "MBR과 분할 영역 테이블 삭제 중"
 
 msgid ""
 "Delta between most-worn and least-worn Flash blocks. It describes how "
 "good/bad the wearleveling of the SSD works on a more technical way."
 msgstr ""
+"가장 마모된 플래시 블락과 가장 온전한 플래시 블락 사이의 델타값. 이 값은 보다 기술적으로 SSD가 "
+"웨어레벨링(wearleveling)을 하는지를 알려줍니다."
 
 msgid "Deny"
 msgstr "거부"
@@ -2343,7 +2350,7 @@ msgid "Description"
 msgstr "설명"
 
 msgid "Destination"
-msgstr "목적지"
+msgstr "대상"
 
 msgid "Destination Network"
 msgstr "대상 네트워크"
@@ -2413,7 +2420,8 @@ msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
 "retransmitted. The default is 1000000 (1 second)."
 msgstr ""
-"첫 번째 패킷이 재 전송되기 전에 기다릴 기본 타임아웃 시간을 백만 분의 1초 단위로 결정합니다. 기본 값은 1000000(1초)입니다."
+"첫 번째 패킷이 재전송되기 전에 기다릴 기본 시간 초과 값을 microsecond 단위로 결정합니다. 기본 값은 "
+"1000000(1초)입니다."
 
 msgid "Device"
 msgstr "장치"
@@ -2526,7 +2534,7 @@ msgid "Disable Selected Options"
 msgstr "선택된 옵션 사용 안 함"
 
 msgid "Disable Selected Records"
-msgstr "선택된 레코드 사용 안 함"
+msgstr "선택된 항목 사용 안 함"
 
 msgid "Disable Selected Rsync Jobs"
 msgstr "선택된 rsync 작업들 사용 안 함"
@@ -2622,7 +2630,7 @@ msgstr "ZFS 명령 기록 보기"
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
-msgstr ""
+msgstr "(주로 충격이나 온도로 인해) 디스크가 회전축으로부터 벗어난 거리. 임의측정단위"
 
 msgid "Distributed Hash Table"
 msgstr "분산 해시 테이블"
@@ -2641,7 +2649,7 @@ msgstr "주 부트 레코드를 지우지 않음( 일부 RAID 컨트롤러 카�
 msgid ""
 "Do not let the server check for newer firmware versions when the %s page "
 "gets loaded."
-msgstr "%s 페이지가 로드되었을 때 서버가 펌웨어 새 버전 확인을 하지 않습니다."
+msgstr "%s 페이지가 로드되었을 때 서버가 새 버전의 펌웨어를 확인하지 않습니다."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2689,7 +2697,7 @@ msgstr "정말로 이 초기자를 삭제하시겠습니까? 여전히 이것을
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
-msgstr "정말로 이 마운트 지점을 삭제하시겠습니까? 아직도 이것을 이용하는 모든 요소들은 무효화될 것입니다(예. 공유)!"
+msgstr "정말로 이 탑재 지점을 삭제하시겠습니까? 아직도 이것을 이용하는 모든 요소들은 무효화될 것입니다(예. 공유)!"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "정말로 이 포털 그룹을 삭제하시겠습니까?"
@@ -2804,7 +2812,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "선택된 풀을 삭제하시겠습니까?"
 
 msgid "Do you want to delete selected records?"
-msgstr "선택된 레코드를 삭제하시겠습니까?"
+msgstr "선택된 항목을 삭제하시겠습니까?"
 
 msgid "Do you want to delete selected resources?"
 msgstr "선택된 자원을 삭제하시겠습니까?"
@@ -2846,7 +2854,7 @@ msgid "Do you want to disable selected options?"
 msgstr "선택된 옵션들을 사용하지 않으시겠습니까?"
 
 msgid "Do you want to disable selected records?"
-msgstr "선택된 레코드를 사용하지 않으시겠습니까?"
+msgstr "선택된 항목을 사용하지 않으시겠습니까?"
 
 msgid "Do you want to disable selected rsync jobs?"
 msgstr "선택된 rsync 작업들을 사용하지 않으시겠습니까?"
@@ -2864,7 +2872,7 @@ msgid "Do you want to enable selected options?"
 msgstr "선택된 옵션들을 사용하시겠습니까?"
 
 msgid "Do you want to enable selected records?"
-msgstr "선택된 레코드를 사용하시겠습니까?"
+msgstr "선택된 항목을 사용하시겠습니까?"
 
 msgid "Do you want to enable selected rsync jobs?"
 msgstr "선택된 rsync 작업들을 사용하시겠습니까?"
@@ -2879,7 +2887,7 @@ msgid "Do you want to import software RAID disks?"
 msgstr "소프트웨어 RAID 디스크를 불러오시겠습니까?"
 
 msgid "Do you want to lock selected records?"
-msgstr "선택된 레코드를 잠그시겠습니까?"
+msgstr "선택된 항목을 잠그시겠습니까?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "선택된 명령들을 전환하시겠습니까?"
@@ -2891,7 +2899,7 @@ msgid "Do you want to toggle selected options?"
 msgstr "선택된 옵션들을 전환하시겠습니까?"
 
 msgid "Do you want to toggle selected records?"
-msgstr "선택된 레코드를 전환하시겠습니까?"
+msgstr "선택된 항목의 상태를 전환하시겠습니까?"
 
 msgid "Do you want to toggle selected rsync jobs?"
 msgstr "선택된 rsync 작업들을 전환하시겠습니까?"
@@ -2900,7 +2908,7 @@ msgid "Do you want to toggle selected rsync modules?"
 msgstr "선택된 rsync 모듈들을 전환하시겠습니까?"
 
 msgid "Do you want to unlock selected records?"
-msgstr "선택된 레코드를 잠금 해제하시겠습니까?"
+msgstr "선택된 항목을 잠금 해제하시겠습니까?"
 
 msgid "Document Root"
 msgstr "문서 루트"
@@ -2972,7 +2980,7 @@ msgid "Driver List"
 msgstr "드라이버 목록"
 
 msgid "Driver Parameter"
-msgstr "드라이버 인자"
+msgstr "드라이버 매개 변수"
 
 msgid "Driver used"
 msgstr "사용된 드라이버"
@@ -2987,7 +2995,7 @@ msgid "Duplex"
 msgstr "Duplex"
 
 msgid "Duplicate mount point name."
-msgstr "중복되는 마운트 지점 이름."
+msgstr "탑재 지점 이름이 중복됩니다."
 
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
@@ -2997,13 +3005,13 @@ msgid "Dynamic DNS"
 msgstr "Dynamic DNS"
 
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
-msgstr "HAST 자원을 위해 동적 IP(DHCP)를 사용할 수 없습니다."
+msgstr "동적 IP는 HAST 자원 용으로 사용할 수 없습니다."
 
 msgid "EA Support"
 msgstr "EA(역자: 확장 속성) 지원"
 
 msgid "EFI/GPT partition can be use with UFS only."
-msgstr "EFI/GPT 파티션은 UFS에서만 이용할 수 있습니다."
+msgstr "EFI/GPT 분할 영역은 UFS에서만 이용할 수 있습니다."
 
 msgid "ERROR:"
 msgstr "오류:"
@@ -3051,13 +3059,13 @@ msgid "Edit RAID"
 msgstr "RAID 편집"
 
 msgid "Edit Record"
-msgstr "레코드 수정"
+msgstr "항목 수정"
 
 msgid "Edit Resource"
 msgstr "자원 수정"
 
 msgid "Edit Route"
-msgstr "라우트 편집"
+msgstr "경로 수정"
 
 msgid "Edit Rsync Job"
 msgstr "rsync 작업 수정"
@@ -3117,7 +3125,7 @@ msgid "Edit job"
 msgstr "작업 편집"
 
 msgid "Edit mount point"
-msgstr "마운트 지점 편집"
+msgstr "탑재 지점 수정"
 
 msgid "Edit portal group"
 msgstr "포털 그룹 편집"
@@ -3172,7 +3180,7 @@ msgid "Enable Asynchronous I/O. (AIO)."
 msgstr "비동기 I/O 사용 함(AIO)"
 
 msgid "Enable Challenge-Response Authentication"
-msgstr "Challenge-Response 인증 사용"
+msgstr "시도 응답 인증 사용"
 
 msgid "Enable FXP protocol."
 msgstr "FXP 프로토콜 활성화."
@@ -3210,7 +3218,7 @@ msgid "Enable Selected Options"
 msgstr "선택된 옵션들 사용 함"
 
 msgid "Enable Selected Records"
-msgstr "선택된 레코드 사용 함"
+msgstr "선택된 항목 사용"
 
 msgid "Enable Selected Rsync Jobs"
 msgstr "선택된 rsync 작업들 사용 함"
@@ -3366,7 +3374,7 @@ msgid "Enable serial console."
 msgstr "직렬 콘솔을 사용합니다."
 
 msgid "Enable service SSH when disabled"
-msgstr ""
+msgstr "고장 시 SSH 서비스 활성화"
 
 msgid "Enable shadow copy."
 msgstr "쉐도 복사본을 사용합니다."
@@ -3389,7 +3397,7 @@ msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr "이 옵션을 사용하면 어떤 IP 주소로든 WebGUI에 접근할 수 있습니다."
 
 msgid "Enable this option to make host USB available to clients."
-msgstr ""
+msgstr "고객들이 호스트 USB를 사용가능케 하려면 이 옵션을 활성화"
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3433,10 +3441,10 @@ msgid "Encrypted"
 msgstr "암호화됨"
 
 msgid "Encrypted configuration is automatically gzipped."
-msgstr "암호화된 설정은 자동으로 gzip 압축 되었습니다."
+msgstr "암호화된 설정은 자동으로 gzip 압축됩니다."
 
 msgid "Encrypted volume is marked for deletion"
-msgstr "암호화 볼륨 삭제 표시 됨"
+msgstr "암호화 볼륨 삭제 표시됨"
 
 msgid "Encrypted volume is protected"
 msgstr "암호화 볼륨 보호됨"
@@ -3597,7 +3605,7 @@ msgid "Enter the port to send the traps to (default 162)."
 msgstr "트랩을 전송할 포트를 입력하십시오(기본 값은 162)."
 
 msgid "Enter trap host name."
-msgstr "트랩 호스트 명을 입력하십시오."
+msgstr "트랩 호스트 이름을 입력하십시오."
 
 msgid "Entire Device"
 msgstr "장치 전체"
@@ -3643,7 +3651,7 @@ msgstr "명령 실행"
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
 "shutdown."
-msgstr "시스템 초기화(부팅) 전후나 시스템을 끄기 전에 명령을 실행합니다."
+msgstr "시스템 초기화(시동) 전후나 시스템을 종료하기 전에 명령을 실행합니다."
 
 msgid "Execute now"
 msgstr "지금 실행"
@@ -3652,7 +3660,7 @@ msgid "Expand device to use all available space."
 msgstr "사용 가능한 전체 공간으로 장치를 확장합니다."
 
 msgid "Expandsz"
-msgstr ""
+msgstr "Expandsz"
 
 msgid "Expire"
 msgstr "만료"
@@ -3919,7 +3927,7 @@ msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
 
 msgid "Flag xxx (ups.conf or cmdline -x) status"
-msgstr ""
+msgstr "플래그 xxx (ups.conf or cmdline -x) 상태"
 
 msgid "Flags"
 msgstr "플래그"
@@ -4014,7 +4022,7 @@ msgid "GPT Partition"
 msgstr "GPT 분할 영역"
 
 msgid "GPT partition"
-msgstr "GPT 파티션"
+msgstr "GPT 분할 영역"
 
 msgid "Gateway"
 msgstr "게이트웨이"
@@ -4096,13 +4104,13 @@ msgid "Group numeric id."
 msgstr "그룹 숫자 id."
 
 msgid "Groupmask - Mask ACL with mode"
-msgstr ""
+msgstr "Groupmask - Mask ACL with mode"
 
 msgid "Groups"
 msgstr "그룹"
 
 msgid "Guest"
-msgstr "게스트"
+msgstr "손님"
 
 msgid "Guest Account"
 msgstr "손님 계정"
@@ -4173,7 +4181,7 @@ msgid "Header digest"
 msgstr "헤더 digest"
 
 msgid "Health"
-msgstr "활력"
+msgstr "상태"
 
 msgid ""
 "Height of heads above the disk surface. A flying height that's too low "
@@ -4203,13 +4211,13 @@ msgid "Hide Dot Files"
 msgstr "점파일(역주: .으로 시작되는 파일명의 파일들) 숨기기"
 
 msgid "High voltage boosting transfer point"
-msgstr ""
+msgstr "고전압 승압 변환지점"
 
 msgid "High voltage transfer point"
-msgstr ""
+msgstr "고전압 변환지점"
 
 msgid "High voltage trimming transfer point"
-msgstr ""
+msgstr "고전압 안정화 변환지점"
 
 msgid "Highlighting"
 msgstr "강조"
@@ -4233,7 +4241,7 @@ msgid "Host resources"
 msgstr "호스트 자원"
 
 msgid "Hostname"
-msgstr "호스트 명"
+msgstr "호스트 이름"
 
 msgid "Hostname Database"
 msgstr "호스트이름 데이터베이스"
@@ -4258,7 +4266,7 @@ msgstr "시간"
 
 msgid ""
 "How often the IP is checked. The period is in seconds (max. is 10 days)."
-msgstr "얼마나 자주 IP가 check 되는 지를 설정. 간격은 초 단위입니다(최대는 10일)."
+msgstr "얼마나 자주 IP가 확인 되는 지를 설정. 간격은 초 단위입니다(최대는 10일)."
 
 msgid ""
 "How often the IP is updated even if it is not changed. The period is in "
@@ -4269,11 +4277,11 @@ msgid "I/O Statistics"
 msgstr "I/O 통계"
 
 msgid "I/O Timeout"
-msgstr "I/O 타임아웃"
+msgstr "I/O 시간 초과"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
-msgstr "초 단위의 I/O 타임아웃(기본 값은 %d)."
+msgstr "초 단위의 I/O 시간 초과(기본 값은 %d)."
 
 msgid "ID"
 msgstr "ID"
@@ -4347,13 +4355,13 @@ msgid "ISO file path (e.g. %s) used as CD/DVD drive."
 msgstr "CD/DVD로 사용할 ISO 파일 경로(예: %s)를 입력하십시오."
 
 msgid "ISO file to be mounted."
-msgstr "마운트 될 ISO 파일."
+msgstr "탑재될 ISO 파일."
 
 msgid "ISP DNS Servers"
 msgstr "ISP DNS 서버"
 
 msgid "IdentLookups"
-msgstr "IdentLookups"
+msgstr "Ident 조회"
 
 msgid "Identifier"
 msgstr "식별자"
@@ -4363,8 +4371,8 @@ msgid ""
 "IDLE state, most disks are still spinning, so this is probably not what you "
 "want."
 msgstr ""
-"유휴 - 휴면, 대기 모드나 유휴 모드가 아닐 경우 장치를 check 합니다. 유휴 상태에서 대부분의 디스크가 여전히 회전을 하므로 "
-"아마도 원하는 옵션은 아닐 것입니다."
+"유휴 - 휴면, 대기 모드나 유휴 모드가 아닐 경우 장치를 검하합니다. 유휴 상태에서 대부분의 디스크가 여전히 회전을 하므로 아마도 "
+"원하는 옵션은 아닐 것입니다."
 
 msgid "If allowed, a user of the trusted domains can access the share."
 msgstr "허용된 경우 신뢰하는 도메인의 사용자가 접근할 수 있습니다."
@@ -4404,17 +4412,17 @@ msgid ""
 "attributes will be stored onto an extended attribute in the UNIX filesystem, "
 "associated with the file or directory."
 msgstr ""
-"이 인자가 설정되면 삼바는 도스 속성을 유닉스 권한 비트로 mapping 하기 전에 파일 시스템 확장 속성에서 먼저 도스 "
+"이 매개 변수가 설정되면 Samba는 DOS 속성을 UNIX 권한 비트로 연동하기 전에 파일 시스템 확장 속성에서 먼저 DOS "
 "속성(SYSTEM, HIDDEN, ARCHIVE 또는 READ-ONLY)을 읽으려고 시도합니다. 설정되었을 경우 도스 속성들은 파일이나 "
-"디렉터리와 연관해서 유닉스 파일 시스템의 확장 속성으로 저장될 것입니다."
+"디렉터리와 연관해서 UNIX 파일 시스템의 확장 속성으로 저장될 것입니다."
 
 msgid ""
 "If this parameter is set, then users may not create or modify files in the "
 "share."
-msgstr "이 인자가 설정되면 사용자들이 이 공유에서 파일을 생성하거나 변경할 수 없을 수도 있습니다."
+msgstr "이 매개 변수가 설정되면 사용자들이 이 공유에서 파일을 생성하거나 변경할 수 없을 수도 있습니다."
 
 msgid "If this property is disabled, the file system cannot be mounted."
-msgstr "이 속성이 비활성화 되면 파일 시스템은 마운트 될 수 없습니다."
+msgstr "이 속성이 비활성화 되면 파일 시스템을 탑재할 수 없습니다."
 
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
@@ -4477,7 +4485,7 @@ msgstr "미완성 디렉터리"
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
-msgstr ""
+msgstr "쓰기/지우기 횟수 또는 현재 사용가능한 플래시 블락들을 이용하여 SSD의 잔여수명을 표시."
 
 msgid ""
 "Indicates whether the file name matching algorithm used by the filesystem "
@@ -4675,13 +4683,13 @@ msgid "Interval must be greater or equal than 10 seconds."
 msgstr "시간 간격은 최소 10초 이상이어야 합니다."
 
 msgid "Interval to wait after shutdown with delay command"
-msgstr "Interval to wait after shutdown with delay command"
+msgstr "지연된 명령으로 시스템이 종료된 후 기다릴 간격"
 
 msgid "Interval to wait before rebooting the UPS)"
 msgstr "UPS 재시동 전에 대기할 간격)"
 
 msgid "Interval to wait before restarting the load"
-msgstr ""
+msgstr "다시 로드를 시작할 때까지 기다려야 하는 시간"
 
 msgid "Invalid command line option"
 msgstr "잘못된 명령줄 옵션"
@@ -4741,7 +4749,7 @@ msgid "JBOD Maintenance"
 msgstr "JBOD 유지보수"
 
 msgid "Jailed"
-msgstr ""
+msgstr "갇힘 (Jailed)"
 
 msgid "Jan"
 msgstr "1월"
@@ -4913,7 +4921,7 @@ msgid "Life time"
 msgstr "수명"
 
 msgid "Lightweight Directory Access Protocol"
-msgstr "Lightweight 디렉터리 접근 프로토콜"
+msgstr "경량 디렉터리 접근 프로토콜"
 
 msgid ""
 "Limits the amount of space a dataset and its descendants can consume. This "
@@ -4969,7 +4977,7 @@ msgid "Load on UPS"
 msgstr "UPS로 부터 로드"
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
-msgstr ""
+msgstr "UPS 스위치의 과부하 조건이 (\"OVER\")로 되었을 경우 로드"
 
 msgid "Loadbalance"
 msgstr "부하분산"
@@ -5011,7 +5019,7 @@ msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr "작업 파일이 저장될 위치, 예를 들어 %s/backup/.unison"
 
 msgid "Lock Selected Records"
-msgstr "선택된 레코드 잠금"
+msgstr "선택된 항목 잠금"
 
 msgid "Locked Files"
 msgstr "잠긴 파일들"
@@ -5038,10 +5046,10 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "이 규칙에 의해 처리된 패킷들을 syslog에 기록합니다."
 
 msgid "Logarithmic Scaling"
-msgstr ""
+msgstr "로그 비율"
 
 msgid "Logbias"
-msgstr ""
+msgstr "Logbias"
 
 msgid "Logical Block"
 msgstr "논리 블록"
@@ -5074,13 +5082,13 @@ msgid "Long Self-Test"
 msgstr "장기적 자체 테스트"
 
 msgid "Low voltage boosting transfer point"
-msgstr ""
+msgstr "저전압 승압 변환지점"
 
 msgid "Low voltage transfer point"
-msgstr ""
+msgstr "저전압 변환지점"
 
 msgid "Low voltage trimming transfer point"
-msgstr ""
+msgstr "저전압 안정화 변환지점"
 
 msgid "Lower"
 msgstr "낮음"
@@ -5096,7 +5104,7 @@ msgid "MAC Address"
 msgstr "MAC 주소"
 
 msgid "MBR partition"
-msgstr "MBR 파티션"
+msgstr "MBR 분할 영역"
 
 msgid "MIB"
 msgstr "MIB"
@@ -5185,7 +5193,7 @@ msgstr "3월"
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
-msgstr ""
+msgstr "데이터 읽을 시의 채널 마진. 이 속성의 기능은 정해지지 않음."
 
 msgid "Masquerade Address"
 msgstr "Masquerade 주소"
@@ -5296,7 +5304,7 @@ msgid "Mem"
 msgstr "메모리"
 
 msgid "Member Interface"
-msgstr "구성 인터페이스"
+msgstr "구성원 인터페이스"
 
 msgid "Memory (MiB)"
 msgstr "메모리(MiB)"
@@ -5365,7 +5373,7 @@ msgid "Missing a temporary folder."
 msgstr "임시 폴더를 찾을 수 없습니다."
 
 msgid "Missing parameter"
-msgstr "인자 없음"
+msgstr "매개 변수 누락됨"
 
 msgid "Mixed"
 msgstr "혼합됨"
@@ -5427,7 +5435,7 @@ msgid "Most"
 msgstr "모두"
 
 msgid "Mount Point"
-msgstr "마운트 지점"
+msgstr "탑재 지점"
 
 msgid "Mount Point Fsck"
 msgstr "탑제 지점 fsck"
@@ -5442,20 +5450,20 @@ msgid "Mount Points"
 msgstr "탑제 지점"
 
 msgid "Mount point name"
-msgstr "마운트 지점 명"
+msgstr "탑재 지점 이름"
 
 msgid ""
 "Mount the file system read-only (even the super-user may not write it)."
-msgstr "읽기 전용으로 파일 시스템 마운트(슈퍼 유저도 기록할 수 없을 수 있음)."
+msgstr "읽기 전용으로 파일 시스템 탑재(최고 관리자도 기록할 수 없을 수 있음)."
 
 msgid "Mounting device."
-msgstr "장치 마운트."
+msgstr "장치 탑재."
 
 msgid "Mounting..."
-msgstr "마운트 중..."
+msgstr "탑재 중..."
 
 msgid "Mounts"
-msgstr "마운트"
+msgstr "탑재"
 
 msgid "Move down"
 msgstr "아래로 이동"
@@ -5601,13 +5609,12 @@ msgid "Networks"
 msgstr "네트워크"
 
 msgid "Never - (Default)"
-msgstr ""
+msgstr "절대 하지않음 - (기본설정)"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
-msgstr ""
-"전혀 - 파워 모드와 관계 없이 장치를 check 합니다. check 될 때 디스크가 회전 정지라면 다시 회전하도록 할 것입니다."
+msgstr "전혀 - 전원 모드와 관계 없이 장치를 검사합니다. 검사될 때 디스크가 회전 중이 아니라면 다시 회전하도록 할 것입니다."
 
 msgid "New Password"
 msgstr "새 암호"
@@ -5801,6 +5808,8 @@ msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
+"SMB 프로토콜의 경우 일반적으로 이 옵션은 자동 조정 모드로 설정하면 안 됩니다. 왜냐하면 SMB 프로토콜이 적절한 프로토콜을 선택하는 "
+"것을 관리하고 있기 때문입니다."
 
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
@@ -6053,7 +6062,7 @@ msgid "Parameter"
 msgstr "매개변수"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
-msgstr ""
+msgstr "매개 변수 xxx(ups.conf 또는 명령행 -x) 설정"
 
 msgid "Parent Directory"
 msgstr "상위 디렉터리"
@@ -6062,13 +6071,13 @@ msgid "Partition"
 msgstr "분할 영역"
 
 msgid "Partition number"
-msgstr "파티션 번호"
+msgstr "분할 영역 번호"
 
 msgid "Partition type"
-msgstr "파티션 타입"
+msgstr "분할 영역 형식"
 
 msgid "Partitions"
-msgstr "파티션"
+msgstr "분할 영역"
 
 msgid "Passive Port"
 msgstr "Passive 포트"
@@ -6103,7 +6112,7 @@ msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - 모든 항목 상속"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
-msgstr ""
+msgstr "Passthrough-X - 특별한 지시사항이 없을 경우 \"실행 (execute)\" 외의 모든 것을 상속받는다."
 
 msgid "Password"
 msgstr "암호"
@@ -6222,7 +6231,7 @@ msgid "Ping may take a while, please be patient."
 msgstr "Ping이 진행 중입니다, 기다려 주십시오."
 
 msgid "Ping winbindd to see if it is alive"
-msgstr ""
+msgstr "winbindd의 작동여부를 알기 위해 통신상태체크"
 
 msgid "Ping/Traceroute"
 msgstr "ping/traceroute"
@@ -6401,10 +6410,10 @@ msgid "Power management"
 msgstr "전원 관리"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
-msgstr ""
+msgstr "HP 기기용 Pre-Fail' 속성"
 
 msgid "Pre-Fail' Attribute used at least in Samsung devices."
-msgstr ""
+msgstr "삼성 기기용 Pre-Fail' 속성"
 
 msgid "PreInit"
 msgstr "초기화 전"
@@ -6671,7 +6680,7 @@ msgid "Read/Write Access"
 msgstr "읽기/쓰기 접근"
 
 msgid "Reading"
-msgstr ""
+msgstr "읽는 중"
 
 msgid "Readonly"
 msgstr "읽기 전용"
@@ -6695,22 +6704,22 @@ msgid "Receive Buffer"
 msgstr "수신 버퍼"
 
 msgid "Record Information"
-msgstr "레코드 정보"
+msgstr "항목 정보"
 
 msgid "Record Maintenance"
-msgstr "레코드 유지보수"
+msgstr "항목 유지보수"
 
 msgid "Record is locked"
-msgstr "레코드 잠김"
+msgstr "항목 잠김"
 
 msgid "Record is marked for deletion"
-msgstr "레코드 삭제 표시됨"
+msgstr "항목 삭제 표시됨"
 
 msgid "Record is protected"
-msgstr "레코드 보호됨"
+msgstr "항목 보호됨"
 
 msgid "Record is unlocked"
-msgstr "레코드 잠금 해제됨"
+msgstr "항목 잠금 해제됨"
 
 msgid "Recurse into directories."
 msgstr "디렉터리로 재귀 순환."
@@ -6852,7 +6861,7 @@ msgid "Reset Graphs"
 msgstr "그래프 재설정"
 
 msgid "Resistance caused by friction in mechanical parts while operating."
-msgstr ""
+msgstr "작동중 부속품의 물리적 마찰로 인해 생긴 저항"
 
 msgid "Resolve IP"
 msgstr "IP 탐색"
@@ -6948,7 +6957,7 @@ msgid "Route is unlocked"
 msgstr "경로 잠금 해제됨"
 
 msgid "Routes"
-msgstr "라우트"
+msgstr "경로"
 
 msgid "Routing Tables"
 msgstr "라우팅 테이블"
@@ -7211,7 +7220,8 @@ msgstr "GPT 포맷된 드라이브를 탑제하시려면 GPT 분할영역을 선
 msgid ""
 "Select 'MBR partition' default partition if you want to mount a UFS "
 "formatted drive or if you want to import disks from other OS."
-msgstr "UFS로 포맷 된 드라이브를 마운트하거나 다른 OS에서 디스크를 가져 오려면 'MBR 파티션'기본 파티션을 선택하십시오."
+msgstr ""
+"UFS로 포맷 된 드라이브를 탑재하거나 다른 OS에서 디스크를 가져 오려면 'MBR 분할 영역' 기본 분할 영역을 선택하십시오."
 
 msgid "Select Cache Device"
 msgstr "캐시 장치 선택"
@@ -7270,14 +7280,14 @@ msgid ""
 msgstr "나가는 조사 패킷에 사용할 최대 time-to-live(최대 단계 수)를 선택하십시오."
 
 msgid "Select mount point where to create the swap file."
-msgstr "스왑 파일을 생성할 마운트 지점을 선택하십시오."
+msgstr "스왑 파일을 생성할 탑재 지점을 선택하십시오."
 
 msgid "Select number of ICMP ECHO REQUEST packets."
 msgstr "ICMP echo 요청 패킷의 수를 선택하십시오."
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
+msgstr "포맷하지 않은 디스크의 경우 '포맷되지 않음' 옵션을 선택하고 다음 방식으로 포맷:"
 
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "파일 선할당 모드를 선택하십시오(기본 값은 빠름)"
@@ -7357,7 +7367,7 @@ msgid "Send a TEST warning email on startup."
 msgstr "기동 시 테스트 경보 전자우편 보내기."
 
 msgid "Sensitive"
-msgstr ""
+msgstr "반응"
 
 msgid "Sensor"
 msgstr "센서"
@@ -7447,12 +7457,14 @@ msgid ""
 "Set the Read and Execute bits permission for Others (Access Restrictions | "
 "Mode) for the mount point %s in %s and hit Save in order to take them effect."
 msgstr ""
+"마운트 지점 %s2 중 %s1의 경우 읽기(Read)와 실행(Execute)의 비트 권한을 기타(Others)로 설정한 후 이 설정을 "
+"유효화하기 위해 저장(Save)버튼을 누르시오."
 
 msgid "Set the account's primary group to the given group."
 msgstr "주어진 그룹으로 계정의 기본 그룹을 설정합니다."
 
 msgid "Set the content location(s) to or from the media library."
-msgstr ""
+msgstr "미디어 라이브러리에 내용물을 저장할 또는 저장한 위치를 설정"
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "원하는 서비스 셋 식별자(네트워크 이름으로도 알려짐)를 설정합니다."
@@ -7464,7 +7476,7 @@ msgid ""
 "some interfaces have range restrictions."
 msgstr ""
 "인터페이스의 최대 전송 유닛을 n으로 설정합니다. 기본 값은 인터페이스에 따라 다릅니다. MTU는 인터페이스에 전송되는 패킷의 크기를 "
-"제한하는 데에 이용됩니다. 모든 인터페이스가 MTU 설정을 지원하지는 않으면 몇몇 인터페이스는 범위를 제한합니다."
+"제한하는 데에 이용됩니다. 모든 인터페이스가 MTU 설정을 지원하지는 않으며 몇몇 인터페이스는 범위가 제한됩니다."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "제목 스크롤 속도를 0-10 사이에서 설정하십시오(기본 값은 10)."
@@ -7473,10 +7485,10 @@ msgid "Set user login shell."
 msgstr "사용자 로그인 쉘 설정."
 
 msgid "Setkey"
-msgstr ""
+msgstr "Setkey"
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
-msgstr "root 데이터 셋을 위한 다른 마운트 지점을 설정합니다. 기본 값은 /mnt입니다."
+msgstr "최상위 데이터 셋을 위한 다른 탑재 지점을 설정합니다. 기본 값은 /mnt입니다."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -7550,13 +7562,13 @@ msgstr "로그를 역순으로 보기(최근 것을 최상단에)"
 msgid ""
 "Show positive/negative values for %s graphs. (can not be used together with "
 "logarithmic scaling)"
-msgstr ""
+msgstr "%s 그래프의 음/양 값을 보기. (로그 축척으로 볼 수 없음)"
 
 msgid "Shrink Page Header"
 msgstr "페이지 상단 축소"
 
 msgid "Shutdown"
-msgstr "끄기"
+msgstr "시스템 종료"
 
 msgid "Shutdown Mode"
 msgstr "종료 모드"
@@ -7590,7 +7602,7 @@ msgid "Skein, Verify"
 msgstr "Skein, 검증"
 
 msgid "Skew"
-msgstr ""
+msgstr "휘었음"
 
 msgid "Skip First Scan"
 msgstr "최초 검사 건너뛰기"
@@ -7599,16 +7611,16 @@ msgid "Skip View Mode"
 msgstr "보기 모드 건너뛰기"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
-msgstr "휴면 - 휴면 모드가 아닐 경우 장치를 check 합니다."
+msgstr "휴면 - 휴면 모드가 아닐 경우 장치를 검사합니다."
 
 msgid "Smart Outlet Management"
 msgstr "적절한 외곽선 관리"
 
 msgid "SmartBoost"
-msgstr ""
+msgstr "SmartBoost"
 
 msgid "SmartTrim"
-msgstr ""
+msgstr "SmartTrim"
 
 msgid "Snapdir"
 msgstr "Snapdir"
@@ -7677,10 +7689,10 @@ msgid "Spare"
 msgstr "예비"
 
 msgid "Sparse"
-msgstr "Sparse"
+msgstr "분산"
 
 msgid "Sparse Volume"
-msgstr "Sparse 볼륨"
+msgstr "분산 볼륨"
 
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
@@ -7688,6 +7700,9 @@ msgid ""
 "of the Helium in the drive. It is a pre-fail attribute that trips once the "
 "drive detects that the internal environment is out of specification."
 msgstr ""
+"특정 헬륨 수치. 연구에 따르면 헬륨은 드라이브를 더 차갑고 조용하게 작동할 수 있게 해주며, 또한 전기 사용량을 줄여준다고 합니다. 이 "
+"수치가 이 드라이브의 잔여 헬륨 상태입니다. 이 수치는 pre-fail 속성이기에 드라이브의 내부 환경에 대한 아무런 세부사항이 없을 "
+"경우 한 번 체크합니다."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "명시된 경로는 NFSv4 최상위 디렉터리입니다."
@@ -7702,12 +7717,12 @@ msgid "Specifies that the file system should be exported read-only."
 msgstr "파일 시스템이 읽기 전용으로 export 되어야 하는 지를 명세 합니다."
 
 msgid "Specifies the command to be run."
-msgstr "실행될 명령을 명시합니다."
+msgstr "실행될 명령을 지정 합니다."
 
 msgid ""
 "Specifies the maximum permitted block size. The permitted range for this "
 "parameter is from 512 to 65464."
-msgstr "허용된 최대 블록 크기를 명세 합니다. 이 인자의 허용 범위는 512에서 65464입니다."
+msgstr "허용할 최대 블록 크기를 지정 합니다. 이 매개 변수의 허용 범위는 512에서 65464입니다."
 
 msgid ""
 "Specifies the share character set. For example UTF8, UTF8-MAC, ISO-8859-15, "
@@ -7723,10 +7738,10 @@ msgid ""
 msgstr "발생 횟수가 설정 횟수를 넘어 추방에 추가하게 될 시간 간격을 hh:mm:ss 형식으로 명세 합니다."
 
 msgid "Specifies the usage of Challenge-Response Authentication."
-msgstr ""
+msgstr "시도 응답 인증을 지정하십시오."
 
 msgid "Specifies the username which the service will run as."
-msgstr "서비스를 실행할 사용자 명을 명세 합니다."
+msgstr "서비스를 실행할 사용자 이름을 지정 합니다."
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -7757,8 +7772,8 @@ msgid ""
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
 "from spinning up each poll, this is probably what you want."
 msgstr ""
-"대기 - 휴면이나 대기 모드가 아닐 경우 장치를 check 합니다. 이 모드에서 대부분의 디스크는 회전하므로 poll이 있을 때마다 랩탑 "
-"디스크가 다시 회전하는 것을 방지하려면 아마도 이 옵션이 원하는 옵션일 것입니다."
+"대기 - 휴면이나 대기 모드가 아닐 경우 장치를 검사합니다. 이 모드에서 대부분의 디스크는 회전하므로 확인이 있을 때마다 랩탑 디스크가 "
+"다시 회전하는 것을 방지하려면 아마도 이 옵션이 원하는 옵션일 것입니다."
 
 msgid "Start"
 msgstr "시작"
@@ -7767,7 +7782,7 @@ msgid "Static"
 msgstr "스태틱"
 
 msgid "Static Routes"
-msgstr "스태틱 라우트"
+msgstr "고정 경로"
 
 msgid "Static Routes Settings"
 msgstr "고정 경로 설정"
@@ -8007,7 +8022,7 @@ msgid "Tag%d (%s)"
 msgstr "태그 %d(%s)"
 
 msgid "Take a device offline"
-msgstr "장치를 오프라인으로 설정"
+msgstr "장치를 오프라인 상태로 설정"
 
 msgid "Tap Device"
 msgstr "Tap 장치"
@@ -8049,7 +8064,7 @@ msgid "Targets"
 msgstr "타겟"
 
 msgid "Temp"
-msgstr ""
+msgstr "임시영역"
 
 msgid "Temperature"
 msgstr "온도"
@@ -8100,7 +8115,7 @@ msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "이 옵션을 활성화하기 전에 바이오스에서 COM 포트가 활성화되어야 합니다."
 
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
-msgstr ""
+msgstr "HAST 볼륨은 HAST 노드가 Primary가 되기 전까지는 접근할 수 없습니다."
 
 msgid "The IP address of the UPS master."
 msgstr "주 UPS의 IP 주소."
@@ -8109,7 +8124,7 @@ msgid "The IP address of the device."
 msgstr "장치의 IP 주소."
 
 msgid "The IP address that this hostname represents."
-msgstr "이 호스트 명이 가리키는 IP 주소."
+msgstr "이 호스트 이름이 가리키는 IP 주소."
 
 msgid ""
 "The LAGG interface cannot be added because the interface name already exists."
@@ -8119,7 +8134,7 @@ msgid "The LAGG protocol is invalid."
 msgstr "LAG 그룹 프로토콜이 올바르지 않습니다."
 
 msgid "The LAN IP address will be reset to"
-msgstr "LAN IP 주소가 다음으로 설정됩니다:"
+msgstr "LAN IP 주소가 다음으로 설정됩니다"
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -8157,7 +8172,7 @@ msgid "The administrator has been notified to apply your changes."
 msgstr "변경 내용을 적용하라는 당신의 공지를 관리자가 받았습니다."
 
 msgid "The administrator password will be reset to"
-msgstr "관리자 암호가 다음으로 설정됩니다:"
+msgstr "관리자 암호가 다음으로 설정됩니다"
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8312,10 +8327,10 @@ msgid ""
 "order for a matching rule. When a match is found the rule is applied and the "
 "search process will halt."
 msgstr ""
-"기본 설정은 보통 '데몬 : 주소 : 행위'의 형태를 취합니다. 데몬은 시작되는 서비스의 데몬 이름입니다. 주소는 유효한 호스트 명, "
-"IP 주소나 괄호에 둘러싸인 IP6 주소가 올 수 있습니다. 행위 필드는 접근을 적절히 허용하거나 거부하기 위해 allow나 deny를 "
-"이용할 수 있습니다. 설정은 첫 번째 일치하는 규칙이 의미를 가지므로 일치하는 규칙을 찾아서 설정 파일이 오름차순으로 스캔 된다는 것을 "
-"기억하기 바랍니다. 일치하는 것이 발견되면 그 규칙이 적용되고 검색 과정은 정지할 것입니다."
+"기본 설정은 보통 '데몬 : 주소 : 동작'의 형태를 취합니다. 데몬은 시작되는 서비스의 데몬 이름입니다. 주소는 유효한 호스트 이름, "
+"IP 주소나 괄호에 둘러싸인 IP6 주소가 올 수 있습니다. 동작 필드는 접근을 적절히 허용하거나 거부하기 위해 allow나 deny를 "
+"이용할 수 있습니다. 설정은 첫 번째 일치하는 규칙이 의미를 가지므로 일치하는 규칙을 찾아서 설정 파일이 오름차순으로 검사된다는 것을 "
+"기억하시기 바랍니다. 일치하는 것이 발견되면 그 규칙이 적용되고 검색 과정은 정지될 것입니다."
 
 msgid "The changes could not be applied"
 msgstr "변경 내용을 적용할 수 없음"
@@ -8360,6 +8375,8 @@ msgid ""
 "likely there will be some serious problems with power supply or an oxidized "
 "data cable."
 msgstr ""
+"하드디스크의 대기시간초과로 인한 작동중지 횟수. 일반적으로 이 속성은 값이 0보다 지나치게 높을 경우 0으로 봐도 됩니다만, 이 경우 "
+"파워 서플라이나 산화 데이터 케이블에 심각한 문제가 발생했을 소지가 다분합니다."
 
 msgid ""
 "The count of errors found when writing a sector. The higher the value, the "
@@ -8370,10 +8387,11 @@ msgid ""
 "The count of errors in data transfer via the interface cable as determined "
 "by ICRC (Interface Cyclic Redundancy Check)."
 msgstr ""
+"ICRC(Interface Cyclic Redundancy Check)에 의해 결정된 인터페이스 케이블을 통한 자료 전송 오류의 수."
 
 msgid ""
 "The count of errors resulting from externally induced shock & vibration."
-msgstr ""
+msgstr "외부 충격 및 진동으로 인한 에러 횟수"
 
 msgid ""
 "The count of errors that could not be recovered using hardware ECC (see "
@@ -8383,7 +8401,7 @@ msgstr "하드웨어 ECC를 사용하여 복구 할 수 없는 오류의 수(속
 msgid ""
 "The count of times the magnetic armature was retracted automatically as a "
 "result of cutting power."
-msgstr ""
+msgstr "전력공급 중단으로 인해 자극의 접극자를 자동으로 회수한 횟수."
 
 msgid "The credentials with which to bind."
 msgstr "bind 할 때 이용할 자격 증명서."
@@ -8418,10 +8436,10 @@ msgstr "현재 디스크가 탑제되어 있습니다!"
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
 "to perform selected command."
-msgstr "디스크가 현재 마운트 되어 있습니다! 선택된 명령을 수행하기 위해 마운트 지점이 일시적으로 제거될 것입니다."
+msgstr "디스크가 현재 탑재 되어 있습니다! 선택된 명령을 수행하기 위해 탑재 지점이 일시적으로 제거될 것입니다."
 
 msgid "The disk/partition is already configured."
-msgstr "이 디스크/파티션은 이미 구성되었습니다."
+msgstr "이 디스크/분할 영역은 이미 구성되었습니다."
 
 #, php-format
 msgid "The distinguished name to bind to the directory server, e.g. %s"
@@ -8479,12 +8497,12 @@ msgid "The group name contains invalid characters."
 msgstr "그룹 이름이 무효한 문자를 포함하고 있습니다."
 
 msgid "The host name contain invalid characters."
-msgstr "호스트 명이 무효한 문자를 포함하고 있습니다."
+msgstr "호스트 이름이 올바르지 않은 문자를 포함하고 있습니다."
 
 msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
-msgstr "호스트 명은 a-z, A-Z, 0-9, -, _과 . 문자만 포함할 수 있습니다."
+msgstr "호스트 이름은 a-z, A-Z, 0-9, -, _과 . 문자만 포함할 수 있습니다."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "초기자 협상 초기 digest 모드"
@@ -8626,7 +8644,7 @@ msgstr "네트워크 '%s'은(는) 무효합니다."
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
-msgstr "오류 수정 중 잘못된 체크썸에 의해 발생한 오류의 수."
+msgstr "오류 수정 중 잘못된 검사합에 의해 발생한 오류의 수."
 
 msgid "The old password is not correct."
 msgstr "기존 암호가 올바르지 않습니다."
@@ -8750,7 +8768,7 @@ msgstr "타겟 이름이 이미 존재합니다."
 msgid ""
 "The time in seconds until shutdown is initiated. If the UPS happens to come "
 "back before the time is up the shutdown is canceled."
-msgstr "시스템 끄기가 시작될 때까지의 초 단위의 시간. 시간이 다 지나기 전에 UPS가 되돌아오면 시스템 끄기는 취소됩니다."
+msgstr "시스템 종료가 시작될 때까지의 초 단위의 시간. 시간이 다 지나기 전에 UPS가 되돌아오면 시스템 종료는 취소됩니다."
 
 msgid "The time update interval must be between 6 and 1440."
 msgstr "시간 갱신 간격은 6과 1440 사이여야 합니다."
@@ -8858,15 +8876,15 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to %s."
-msgstr "이들 인자들이 %s에 추가됩니다."
+msgstr "이 매개 변수들이 %s에 추가됩니다."
 
 #, php-format
 msgid "These parameters are added to [Global] section of %s."
-msgstr "이들 인자들이 %s의 [Global] 섹션에 추가됩니다."
+msgstr "이 매개 변수들이 %s의 [Global] 섹션에 추가됩니다."
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
-msgstr "이들 인자들이 %s의 [Share] 섹션에 추가됩니다."
+msgstr "이 매개 변수들이 %s의 [Share] 섹션에 추가됩니다."
 
 msgid ""
 "These parameters are added to the hardware-specific part of the driver for "
@@ -8879,22 +8897,22 @@ msgstr "이 매개 변수는 드라이버의 하드웨어 관련 부분에 추�
 
 #, php-format
 msgid "These parameters will be added to %s."
-msgstr "이들 인자들이 %s에 추가될 것입니다."
+msgstr "이 매개 변수들이 %s에 추가될 것입니다."
 
 #, php-format
 msgid "These parameters will be added to [global] settings in %s."
-msgstr "이들 인자들이 %s의 [global] 섹션에 추가될 것입니다."
+msgstr "이 매개 변수들이 %s의 [global] 섹션에 추가될 것입니다."
 
 #, php-format
 msgid "These parameters will be added to global settings in %s."
-msgstr "이 인자들은 %s의 전역 설정에 추가될 것입니다."
+msgstr "이 매개 변수들은 %s의 전역 설정에 추가될 것입니다."
 
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
-msgstr "이들 인자들이 rsyncd.conf의 모듈 설정에 추가될 것입니다."
+msgstr "이 매개 변수들이 rsyncd.conf의 모듈 설정에 추가될 것입니다."
 
 msgid "These parameters will be added to the ping command."
-msgstr "이 인자들은 ping 명령에 추가됩니다."
+msgstr "이 개개 변수들은 ping 명령에 추가됩니다."
 
 msgid "This URL is already configured."
 msgstr "이 URL은 이미 설정되었습니다."
@@ -9058,9 +9076,9 @@ msgid ""
 "to the hosts allow parameter those hosts that should be permitted access. "
 "Leave this field empty to use default settings."
 msgstr ""
-"이 옵션은 이 모듈을 접근하도록 허용되지 않은 콤마, 공백 또는 탭으로 분리된 호스트들의 집합입니다. 목록 내용이 서로 충돌할 경우 허용 "
-"목록이 우선권을 가집니다. 기본 값으로 모두 거부할 필요가 있는 이벤트에는 키워드 ALL(또는 네트마스크 0.0.0.0/0)을 이용한 후 "
-"접근을 허용해야 하는 호스트들에 명시적으로 allow 인자를 명세 합니다. 기본 값으로 설정하려면 이 난을 비워 두십시오."
+"이 옵션은 이 모듈에 접근하도록 허용되지 않은 콤마, 공백 또는 탭으로 분리된 호스트들의 집합입니다. 목록 내용이 서로 충돌할 경우 허용 "
+"목록이 우선권을 가집니다. 기본 값으로 모두 거부할 필요가 있는 이벤트에는 키워드 ALL(또는 넷마스크 0.0.0.0/0)을 이용한 후 "
+"접근을 허용해야 하는 호스트들에 명시적으로 allow 인자를 명시 합니다. 기본 값으로 설정하려면 이 난을 비워 두십시오."
 
 msgid ""
 "This option is a comma, space, or tab delimited set of host which are NOT "
@@ -9070,8 +9088,8 @@ msgid ""
 "to the hosts allow parameter those hosts that should be permitted access. "
 "Leave this field empty to use default settings."
 msgstr ""
-"이 옵션은 이 공유를 접근하도록 허용되지 않은 콤마, 공백 또는 탭으로 분리된 호스트들의 집합입니다. 목록 내용이 서로 충돌할 경우 허용 "
-"목록이 우선권을 가집니다. 기본 값으로 모두 거부할 필요가 있는 이벤트에는 키워드 ALL(또는 네트마스크 0.0.0.0/0)을 이용한 후 "
+"이 옵션은 이 공유에 접근하도록 허용되지 않은 콤마, 공백 또는 탭으로 분리된 호스트들의 집합입니다. 목록 내용이 서로 충돌할 경우 허용 "
+"목록이 우선권을 가집니다. 기본 값으로 모두 거부할 필요가 있는 이벤트에는 키워드 ALL(또는 넷마스크 0.0.0.0/0)을 이용한 후 "
 "접근을 허용해야 하는 호스트들에 명시적으로 allow 인자를 명세 합니다. 기본 값으로 설정하려면 이 난을 비워 두십시오."
 
 msgid ""
@@ -9104,8 +9122,8 @@ msgid ""
 "determines what file permissions are available. Leave this field empty to "
 "use default settings."
 msgstr ""
-"이 옵션은 그 모듈과 파일 전송을 주고 받아야 하는 사용자 명이나 사용자 ID를 명세 합니다. 기본 값으로 설정하려면 이 난을 비워 "
-"두십시오.'%s' 옵션과 조합해서 이것은 어떤 파일 권한을 이용할 수 있는 지를 결정합니다. 기본 값으로 설정하려면 이 난을 비워 "
+"이 옵션은 해당 모듈과 파일 전송을 주고 받아야 하는 사용자 이름이나 사용자 ID를 지정 합니다. 기본 값으로 설정하려면 이 난을 비워 "
+"두십시오. 이것은 '%s' 옵션과 조합해서 어떤 파일 권한을 이용할 수 있는 지를 결정합니다. 기본 값으로 설정하려면 이 난을 비워 "
 "두십시오."
 
 msgid "This page is for maintenance only."
@@ -9125,7 +9143,7 @@ msgstr ""
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
 "files."
-msgstr "이 인자는 점으로 시작되는 파일들이 숨김 파일로 보이는지 여부를 제어합니다."
+msgstr "이 매개 변수는 점으로 시작되는 파일들이 숨김 파일로 펴시되는지 여부를 제어합니다."
 
 msgid ""
 "This parameter says that if N occurrences of the event happen within the "
@@ -9135,36 +9153,36 @@ msgstr "이 인자는 주어진 시간 간격 내에 이벤트가 N번 발생하
 msgid ""
 "This parameter sets the highest protocol level that will be supported by the "
 "client."
-msgstr "이 인자른 클라이언트가 지원하는 최고 프로토콜 수준을 설정합니다."
+msgstr "이 매개 변수는 클라이언트가 지원하는 최고 프로토콜 수준을 설정합니다."
 
 msgid ""
 "This parameter sets the highest protocol level that will be supported by the "
 "server."
-msgstr "이 인자는 서버가 지원하는 최고 프로토콜 수준을 설정합니다."
+msgstr "이 매개 변수는 서버가 지원하는 최고 프로토콜 수준을 설정합니다."
 
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for groups when these are "
 "added to the LDAP directory, e.g. %s"
-msgstr "이 인자는 그룹이 LDAP 디렉터리에 추가될 때 그룹을 위해 이용되는 접미사를 명세 합니다. 예. %s"
+msgstr "이 매개 변수는 그룹이 LDAP 디렉터리에 추가될 때 그룹을 위해 이용되는 접미사를 명시 합니다. 예. %s"
 
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for machines when these are "
 "added to the LDAP directory, e.g. %s"
-msgstr "이 인자는 머신이 LDAP 디렉터리에 추가될 때 머신을 위해 이용되는 접미사를 명세 합니다. 예. %s"
+msgstr "이 매개 변수는 기기가 LDAP 디렉터리에 추가될 때 기기를 위해 이용되는 접미사를 명시 합니다. 예. %s"
 
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for passwords when these "
 "are added to the LDAP directory, e.g. %s"
-msgstr "이 인자는 암호들이 LDAP 디렉터리에 추가될 때 암호를 위해 이용되는 접미사를 명시 합니다. 예. %s"
+msgstr "이 매개 변수는 암호들이 LDAP 디렉터리에 추가될 때 암호를 위해 이용되는 접미사를 명시 합니다. 예. %s"
 
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for users when these are "
 "added to the LDAP directory, e.g. %s"
-msgstr "이 인자는 사용자들이 LDAP 디렉터리에 추가될 때 사용자들을 위해 이용되는 접미사를 명세 합니다. 예. %s"
+msgstr "이 매개 변수는 사용자들이 LDAP 디렉터리에 추가될 때 사용자들을 위해 이용되는 접미사를 명세 합니다. 예. %s"
 
 msgid "This password is required to access the admin web interface."
 msgstr "이 암호른 관리 웹 인터페이스에 접근하기 위해 필요합니다."
@@ -9295,7 +9313,7 @@ msgid "Time update interval"
 msgstr "시간 갱신 간격"
 
 msgid "Timeout"
-msgstr "타임아웃"
+msgstr "시간 초과"
 
 msgid "Times"
 msgstr "시간"
@@ -9353,7 +9371,7 @@ msgid "Toggle Selected Options"
 msgstr "선택된 옵션들 전환"
 
 msgid "Toggle Selected Records"
-msgstr "선택된 레코드 전환"
+msgstr "선택된 항목 상태 전환"
 
 msgid "Toggle Selected Rsync Jobs"
 msgstr "선택된 rsync 작업 전환"
@@ -9671,7 +9689,7 @@ msgid "Unload"
 msgstr "Unload"
 
 msgid "Unlock Selected Records"
-msgstr "선택된 레코드 잠금 해제"
+msgstr "선택된 항목 잠금 해제"
 
 msgid "Unmount Disk/Partition"
 msgstr "디스크/분할 영역 탑제 해제"
@@ -9680,7 +9698,7 @@ msgid "Unmount this disk first before proceeding."
 msgstr "처리하기 전에 이 디스크를 탑제 해제 하십시오."
 
 msgid "Unmounting..."
-msgstr "마운트 해제 중..."
+msgstr "탑재 해제 중..."
 
 msgid "Up"
 msgstr "Up"
@@ -9732,8 +9750,8 @@ msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
 msgstr ""
-"공백 문자를 이용해서 여러 개의 호스트(필요한 것만)를 분리합니다. 여기에 호스트 명을 입력할 경우 최소 한 개의 DNS 서버를 설정해야 "
-"한다는 것을 기억하시기 바랍니다!"
+"공백 문자를 이용해서 여러 개의 호스트(필요한 것만)를 분리합니다. 여기에 호스트 이름을 입력할 경우 최소 한 개의 DNS 서버를 "
+"설정해야 한다는 것을 기억하시기 바랍니다!"
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "분산 볼륨 사용. (thin provisioning)"
@@ -9799,7 +9817,7 @@ msgid "Use toggle button instead of enable/disable buttons."
 msgstr "사용/사용 안함 버튼 대신 전환 버튼을 사용합니다."
 
 msgid "Used"
-msgstr "이용 양"
+msgstr "사용량"
 
 msgid "User"
 msgstr "사용자"
@@ -10130,7 +10148,7 @@ msgstr ""
 msgid ""
 "When a client initially connects to the server the ident protocol is used to "
 "attempt to identify the remote username."
-msgstr "클라이언트가 서버에 처음 연결할 때 원격 사용자 명을 확인하기 위한 시도로서 ident 프로토콜이 이용됩니다."
+msgstr "클라이언트가 서버에 처음 연결할 때 원격 사용자 이름을 확인하기 위한 시도로서 ident 프로토콜이 이용됩니다."
 
 msgid "Where to save downloaded data."
 msgstr "다운로드 한 데이터를 저장하는 곳."
@@ -10172,7 +10190,7 @@ msgid "Write only"
 msgstr "쓰기 전용"
 
 msgid "Wrong partition type or partition number."
-msgstr "잘못된 파티션 타입이나 파티션 번호."
+msgstr "잘못된 분할 영역 형식이나 분할 영역 번호."
 
 #, php-format
 msgid "Wrong permission on %s."
@@ -10397,7 +10415,7 @@ msgid "loader.conf"
 msgstr "loader.conf"
 
 msgid "mount"
-msgstr "마운트"
+msgstr "탑재"
 
 msgid "mount point"
 msgstr "탑제 지점"
@@ -10455,4 +10473,4 @@ msgid "to"
 msgstr ""
 
 msgid "umount"
-msgstr "마운트 해제"
+msgstr "탑재 해제"
