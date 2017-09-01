@@ -87,6 +87,8 @@ EOF
 	else
 		/sbin/devfs rule -s 10 del 200
 	fi
+	# Apply changes to ruleset
+	/sbin/devfs rule applyset
 	# Create certificate
 	_certificate=`configxml_get "//system/webgui/certificate"`
 	_privatekey=`configxml_get "//system/webgui/privatekey"`
