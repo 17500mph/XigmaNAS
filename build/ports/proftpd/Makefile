@@ -1,5 +1,5 @@
 PORTNAME=		proftpd
-PORTVERSION=	1.3.5e
+PORTVERSION=	1.3.6
 PORTREVISION=	0
 CATEGORIES=		ftp
 COMMENT=		Highly configurable FTP daemon
@@ -43,7 +43,7 @@ CPPFLAGS+=      -DHAVE_OPENSSL -I${OPENSSLINC}
 .include <bsd.port.pre.mk>
 
 # FreeBSD-SA-11:07.chroot
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-8-src-fsio.c
+# EXTRA_PATCHES+=	${FILESDIR}/extra-patch-8-src-fsio.c
 
 MODULES!=${ECHO} ${MODULES} | ${SED} -e 's,^:,,' -e 's,:$$,,'
 
