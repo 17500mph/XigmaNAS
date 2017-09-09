@@ -1860,7 +1860,7 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 		port=`basename $s`
 		state=`cat $s/pkg-state`
 		if [ "arm" = ${NAS4FREE_ARCH} ]; then
-			for forceoff in arcconf isboot grub2-bhyve open-vm-tools tw_cli vbox vbox-additions vmxnet3; do
+			for forceoff in arcconf isboot grub2-bhyve open-vm-tools tw_cli vbox vbox-additions vmxnet3 icu; do
 				if [ "$port" = "$forceoff" ]; then
 					state="OFF"; break;
 				fi
