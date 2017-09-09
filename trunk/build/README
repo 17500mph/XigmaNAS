@@ -20,6 +20,14 @@
 ================================
 2. Generate an NAS4Free ISO or IMG file
 
+Copy make.conf to /etc.
+
+#cp /nas4free/svn/build/make.conf /etc
+
+Delete all ports built without make.conf.
+
+#pkg delete -f \*
+
 Edit the script '/nas4free/svn/build/make.sh' and adapt the directory
 variables with your local ones.
 
