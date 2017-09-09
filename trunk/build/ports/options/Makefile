@@ -16,3 +16,9 @@ install:
 		cp -pv files/$$i-options-i386 /var/db/ports/$$i/options; \
 	done;
 .endif
+.if ${ARCH} == "armv6"
+	@for i in `cd files && ls *-options-armv6 | sed -e 's/-options-armv6//'`; do \
+		mkdir -pv /var/db/ports/$$i; \
+		cp -pv files/$$i-options-armv6 /var/db/ports/$$i/options; \
+	done;
+.endif
