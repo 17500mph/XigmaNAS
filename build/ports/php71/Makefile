@@ -13,7 +13,6 @@ USES+=			tar:xz cpe iconv
 CPE_PRODUCT=		php
 NO_OPTIONS_SORT=	yes
 
-BUILD_DEPENDS=		sqlite3>=3.0:databases/sqlite3
 LIB_DEPENDS=		libpcre.so:devel/pcre
 LIB_DEPENDS+=		libcurl.so:ftp/curl
 LIB_DEPENDS+=		libmcrypt.so:security/libmcrypt
@@ -24,17 +23,15 @@ LIB_DEPENDS+=		libjpeg.so:graphics/jpeg
 LIB_DEPENDS+=		libvpx.so:multimedia/libvpx
 LIB_DEPENDS+=		libgmp.so:math/gmp
 LIB_DEPENDS+=		libc-client4.so.9:mail/cclient
-LIB_DEPENDS+=		libmysqlclient.so.18:databases/mariadb101-client
+LIB_DEPENDS+=		libicui18n.so:devel/icu
 
 USE_AUTOTOOLS=	 autoconf
 AUTOTOOLSFILES=	 scripts/phpize.in
-USE_BZIP2=	 yes
-USE_GETOPT_LONG= yes
 USE_GNOME=	 libxml2
 USE_OPENLDAP=	 yes
-USE_OPENSSL=	 yes
 GNU_CONFIGURE=	 yes
 NO_PKG_REGISTER= yes
+USES+=		 ssl sqlite
 
 CONFIGURE_ARGS+=	\
 		--with-pear \
@@ -60,7 +57,7 @@ CONFIGURE_ARGS+=	\
 		--with-freetype-dir=${LOCALBASE} \
 		--with-jpeg-dir=${LOCALBASE} \
 		--with-png-dir=${LOCALBASE} \
-		--with-vpx-dir=${LOCALBASE} \
+		--enable-intl \
 		--with-ldap=${LOCALBASE} \
 		--enable-mbstring \
 		--with-onig=${LOCALBASE} \
@@ -128,6 +125,5 @@ do-install:
 	@${MKDIR} ${NAS4FREE_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20160303
 	${INSTALL_DATA} ${WRKSRC}/ext/opcache/.libs/opcache.so ${NAS4FREE_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20160303
 	@${CP} -pv ${FILESDIR}/opcache.ini ${NAS4FREE_ROOTFS}/${PREFIX}/etc/php
-	@${CP} -pv /usr/local/lib/mysql/libmysqlclient.so.18 ${NAS4FREE_ROOTFS}/${PREFIX}/lib
 
 .include <bsd.port.mk>
