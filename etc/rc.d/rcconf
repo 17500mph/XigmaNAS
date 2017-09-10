@@ -572,6 +572,7 @@ setserialconsole()
     #_sio=`configxml_isset "//system/enableserialconsole"`
     _sio=`kenv console | sed -n 's/.*comconsole.*/on/p'`
     _uboot=`kenv console | sed -n 's/.*uboot.*/on/p'`
+    _speed=`kenv -q comconsole_speed || echo "9600"`
 
     if [ "$_sio" = "on" -o "$_uboot" = "on" ]; then
 	if [ "$_ttyuonoff" != "on" ]; then
@@ -583,10 +584,13 @@ setserialconsole()
     else
 	if [ "$_ttyuonoff" = "on" ]; then
 	    #sed -i.bak -e "/^${_ttyu}/ s/on/off/" /etc/ttys
-	    sed -i.bak -e "/^${_ttyu}/ s/on/onifconsole/" /etc/ttys
+	    sed -i.bak -e "/^${_ttyu}/ s/on /onifconsole /" /etc/ttys
 	else
 	    sed -i.bak -e "/^${_ttyu}/ s/off/onifconsole/" /etc/ttys
 	fi
+    fi
+    if [ "$_speed" != "9600" ]; then
+	sed -i.bak -e "/^${_ttyu}/ s/autologin/al.${_speed}/" /etc/ttys
     fi
 }
 
