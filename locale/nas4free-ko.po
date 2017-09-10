@@ -3,17 +3,15 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-07-21 00:19+0000\n"
-"PO-Revision-Date: 2017-08-29 22:55+0000\n"
-"Last-Translator: Sang-Eun Lee <Unknown>\n"
+"PO-Revision-Date: 2017-09-09 03:00+0000\n"
+"Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-08-29 22:57+0000\n"
-"X-Generator: Launchpad (build 18446)\n"
-"X-Poedit-Country: KOREA\n"
-"Language: \n"
-"X-Poedit-Language: Korean\n"
+"X-Launchpad-Export-Date: 2017-09-10 03:46+0000\n"
+"X-Generator: Launchpad (build 18449)\n"
+"Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid " interfaces:"
@@ -725,7 +723,7 @@ msgid "Allow new files to be created."
 msgstr "새 파일 생성 허용."
 
 msgid "Allow to start UPS from battery"
-msgstr "베터리에서 시작 허용"
+msgstr "베터리 상태에서 UPS 시작 허용"
 
 msgid "Allow trusted domains."
 msgstr "신뢰 도메인 허용"
@@ -753,7 +751,7 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
-"기존의 HDD 용어에 따라 '전원 끄기 회수 수'라고도 합니다. Raw 값은 SSD의 수명 동안 누적 된 비정상 정지 수를 보고합니다. "
+"기존의 HDD 용어에 따르면 '전원 끄기 회수 수'라고도 합니다. Raw 값은 SSD의 수명 동안 누적 된 비정상 정지 수를 보고합니다. "
 "여기서 '비정상 정지'는 마지막 명령으로 STANDBY IMMEDIATE 없이 전원을 제거하는 것입니다 (커패시터 전원을 사용하는 PLI "
 "동작과 관계 없음). 일반적인 값은 항상 100입니다."
 
@@ -1098,7 +1096,7 @@ msgstr "배터리 부족"
 
 msgid ""
 "Battery Remaining level when UPS switches to Shutdown mode (Low Battery)"
-msgstr "UPS가 종료 모드로 전환하는 베터리 잔량 수준(Low Battery)"
+msgstr "UPS가 종료 모드로 전환하는 베터리 잔량 수준(베터리 부족)"
 
 msgid "Battery alarm threshold"
 msgstr "베터리 경고 임계 값"
@@ -1460,7 +1458,7 @@ msgid "Choose which interface this route applies to."
 msgstr "이 경로가 적용될 인터페이스를 선택하십시오."
 
 msgid "Clear"
-msgstr "제거"
+msgstr "정리(모두 지우기)"
 
 msgid "Clear Config And Import Disks"
 msgstr "설정 초기화 및 디스크 불러오기"
@@ -2374,7 +2372,7 @@ msgid "Destination network for this static route."
 msgstr "이 고정 경로를 위한 대상 네트워크."
 
 msgid "Destination port"
-msgstr "목적지 포트"
+msgstr "대상 포트"
 
 msgid "Destroy a pool"
 msgstr "풀 제거"
@@ -3355,7 +3353,7 @@ msgid "Enable recycle bin."
 msgstr "휴지통을 사용합니다."
 
 msgid "Enable remote monitoring of the local connected UPS."
-msgstr "로컬 연결된 UPS의 원격 감시 활성화."
+msgstr "직접 연결된 UPS의 원격 감시 활성화."
 
 msgid ""
 "Enable reverse DNS lookup performed on the remote host's IP address for "
@@ -4462,7 +4460,7 @@ msgid "Import using GPT labels"
 msgstr "GTP 라벨을 이용해 불러오기"
 
 msgid "In"
-msgstr "안"
+msgstr "들어오는"
 
 msgid "In most cases, 'public' is used here."
 msgstr "대부분의 경우 여기에는 'public'이 이용됩니다."
@@ -4974,7 +4972,7 @@ msgid "Load averages"
 msgstr "부하 평균"
 
 msgid "Load on UPS"
-msgstr "UPS로 부터 로드"
+msgstr "UPS 부하"
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr "UPS 스위치의 과부하 조건이 (\"OVER\")로 되었을 경우 로드"
@@ -5128,10 +5126,10 @@ msgid "MOTD"
 msgstr "MOTD"
 
 msgid "MOVED TO"
-msgstr "MOVED TO"
+msgstr "이동 됨"
 
 msgid "MS Active Directory"
-msgstr "MS 액티브 디렉터리"
+msgstr "MS Active Directory"
 
 msgid "MS Active Directory Information & Status"
 msgstr "MS Active Directory 정보 및 상태"
@@ -5960,7 +5958,7 @@ msgid "Others"
 msgstr "기타"
 
 msgid "Out"
-msgstr "밖"
+msgstr "나가는"
 
 msgid "Outgoing Power/Inverter Information"
 msgstr "출력 전원 및 인버터 정보"
@@ -7112,10 +7110,10 @@ msgid "Save"
 msgstr "저장"
 
 msgid "Save & Restart"
-msgstr "저장 및 재시동"
+msgstr "저장 및 재시작"
 
 msgid "Save and Restart"
-msgstr "저장 후 재 시작"
+msgstr "저장 및 재시동"
 
 msgid "Save login information in configuration file."
 msgstr "설정 파일에 로그인 정보 저장."
@@ -8719,10 +8717,10 @@ msgid "The rule number determines the order of the rule."
 msgstr "규칙 번호가 규칙의 순서를 결정합니다."
 
 msgid "The serial or USB port where your UPS is connected."
-msgstr "당신의 UPS가 연결된 직렬 포트나 USB 포트."
+msgstr "UPS가 연결된 직렬 포트나 USB 포트."
 
 msgid "The serial or USB port where your second UPS is connected."
-msgstr "두번째 UPS가 직렬 또는 USB 포트에 연결되었습니다."
+msgstr "두 번째 UPS가 연결된 직렬 포트 또는 USB 포트."
 
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "Windows 클라이언트에 서버 자신을 시간 서버로 알립니다."
@@ -9025,7 +9023,7 @@ msgid "This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."
 msgstr "이 이름은 예를 든 것입니다: iqn.2005-01.il.ac.huji.cs:somebody."
 
 msgid "This name is used to uniquely identify your UPS on this system."
-msgstr "이 이름은 이 시스템에서 UPS를 유일하게 식별하기 위해서 이용됩니다."
+msgstr "이 이름은 시스템의 UPS를 유일하게 식별하는 이름입니다."
 
 msgid ""
 "This name is used to uniquely identify your second UPS on this system."
@@ -9578,7 +9576,7 @@ msgid "UPS beeper status"
 msgstr "UPS 신호기 상태"
 
 msgid "UPS coldstarts from battery"
-msgstr ""
+msgstr "베터리 상태에서 UPS 완전 시동"
 
 msgid "UPS disabled"
 msgstr "UPS 비활성화됨"
@@ -9590,13 +9588,13 @@ msgid "UPS firmware"
 msgstr "UPS 펌웨어"
 
 msgid "UPS goes on battery"
-msgstr "UPS가 배터리 상태로 갔습니다"
+msgstr "UPS가 베터리 상태로 전환 됨"
 
 msgid "UPS model"
 msgstr "UPS 모델"
 
 msgid "UPS reaches low battery"
-msgstr "UPS가 낮은 배터리 상태로 갔습니다"
+msgstr "UPS가 베터리 부족 상태에 도달함"
 
 msgid "UPS starts when mains is (re)applied"
 msgstr ""
@@ -10099,7 +10097,7 @@ msgid "Warning Level"
 msgstr "경고 수준"
 
 msgid "Watch Directory"
-msgstr "디렉터리 보기"
+msgstr "감시할 디렉터리"
 
 msgid "WebGUI"
 msgstr "WebGUI"
@@ -10143,7 +10141,7 @@ msgid ""
 msgstr "Samba AD를 사용하게 되면, 독립적인 CIFS/SMB 파일 공유는 사용할 수 없게 됩니다."
 
 msgid "When UPS switches to Low Battery"
-msgstr ""
+msgstr "UPS를 언제 베터리 부족 상태로 전환할 지 지정"
 
 msgid ""
 "When a client initially connects to the server the ident protocol is used to "
@@ -10354,7 +10352,7 @@ msgid "and"
 msgstr "그리고"
 
 msgid "change failed."
-msgstr "변경이 실패되었습니다."
+msgstr "변경이 실패했습니다."
 
 msgid "chroot() everyone, but root."
 msgstr "root를 제외한 모두에게 chroot()."
@@ -10425,7 +10423,7 @@ msgstr "정의 해야 합니다!"
 
 #, php-format
 msgid "must be in the format: %s."
-msgstr ""
+msgstr "다음으로 포맷해야 함: %s"
 
 msgid "n/a"
 msgstr "n/a"
