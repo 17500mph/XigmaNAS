@@ -404,7 +404,7 @@ include 'fbegin.inc';
 				</colgroup>
 				<thead>
 <?php
-					html_titleline2(gtext('Firmware'));
+					html_titleline2(gtext('Firmware Information'));
 ?>
 				</thead>
 				<tbody>
@@ -440,7 +440,21 @@ include 'fbegin.inc';
 ?>
 			<form action="system_firmware.php" method="post" enctype="multipart/form-data" onsubmit="spinner()">
 				<div id="submit">
-					<strong><?=gtext('Select firmware:');?></strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40"/>
+					<table class="area_data_settings">
+						<colgroup>
+							<col class="area_data_settings_col_tag">
+							<col class="area_data_settings_col_data">
+						</colgroup>
+						<thead>
+<?php
+							html_titleline2(gtext('Firmware Selection'));
+?>
+						</thead>
+						<tbody><tr>
+							<td class="celltagreq"><?=gtext('Choose File');?></td>
+							<td class="celldatareq"><input name="ulfile" type="file" style="width:100%"/></td>
+						</tr></tbody>
+					</table>
 				</div>
 				<div id="submit">
 					<button type="submit" name="submit" class="formbtn" id="button_disable" value="disable"><?=gtext('Disable Firmware Upgrade');?></button>
