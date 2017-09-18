@@ -9,6 +9,7 @@
     SUBDIR += ca_root_nss
     SUBDIR += cdialog
     SUBDIR += clog
+    SUBDIR += devcpu-data
     SUBDIR += dmidecode
     SUBDIR += e2fsprogs
     SUBDIR += fdisk
