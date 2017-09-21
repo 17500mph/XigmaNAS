@@ -374,8 +374,6 @@ function sysconsaver_change() {
 			if(('true' == $g['zroot']) || ('full' !== $g['platform'])):
 				$node->add_checkbox($property->disablefirmwarecheck,!empty($pconfig['disablefirmwarecheck']));
 			endif;
-			$node->add_checkbox($property->disablebeep,!empty($pconfig['disablebeep']));
-			$node->add_checkbox($property->microcode_update,!empty($pconfig['microcode_update']));
 			$node->add_checkbox($property->enabletogglemode,!empty($pconfig['enabletogglemode']));
 			$node->add_checkbox($property->skipviewmode,!empty($pconfig['skipviewmode']));
 			$node->add_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
@@ -392,12 +390,14 @@ function sysconsaver_change() {
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Performance Settings'));
+			html_titleline2(gtext('Platform and Performance Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
+			$node->add_checkbox($property->disablebeep,!empty($pconfig['disablebeep']));
+			$node->add_checkbox($property->microcode_update,!empty($pconfig['microcode_update']));
 			$node->add_checkbox($property->tune_enable,!empty($pconfig['tune_enable']));
 			$node->add_checkbox($property->powerd,!empty($pconfig['powerd']));
 			$node->add_radio_grid($property->pwmode,$pconfig['pwmode']);
