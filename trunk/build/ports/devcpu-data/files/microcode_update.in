@@ -10,6 +10,8 @@
 # PROVIDE:	microcode_update
 # REQUIRE:	root mountcritlocal
 # KEYWORD:	nojail
+# XQUERY: -i "count(//system/microcode_update) > 0" -o "0" -b
+# RCVAR: microcode_update_enable
 
 #
 # Add the following line to /etc/rc.conf to enable flow-capture:
