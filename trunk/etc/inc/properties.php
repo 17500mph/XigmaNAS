@@ -73,7 +73,7 @@ class properties {
 	public function get_description() {
 		return $this->v_description;
 	}
-	public function set_defaultvalue(string $value = NULL) {
+	public function set_defaultvalue($value = NULL) {
 		$this->v_defaultvalue = $value;
 		return $this;
 	}
@@ -271,10 +271,6 @@ class properties_list extends properties {
 class properties_bool extends properties {
 	public $v_caption = NULL;
 	
-	public function set_defaultvalue(bool $value = NULL) {
-		$this->v_defaultvalue = $value;
-		return $this;
-	}
 	public function set_caption(string $value = NULL) {
 		$this->v_caption = $value;
 		return $this;
