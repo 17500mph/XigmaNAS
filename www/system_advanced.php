@@ -115,12 +115,6 @@ function get_sphere_system_advanced() {
 	global $config;
 	$sphere = new co_sphere_settings('system_advanced','php');
 	$sphere->grid = &array_make_branch($config,'system');
-	if(empty($sphere->grid)):
-		$sphere->grid = $sphere->row_default;
-		write_config();
-		header($sphere->header());
-		exit;
-	endif;
 	return $sphere;
 }
 //	init properties and sphere
