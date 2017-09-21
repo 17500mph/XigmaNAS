@@ -1470,17 +1470,16 @@ trait co_DOMTools {
 	}
 	//	macros
 	public function add_colgroup_2c() {
-		$this_return = $this->add_colgroup();
-		$this_return->add_col(['class' => 'area_data_settings_col_tag']);
-		$this_return->add_col(['class' => 'area_data_settings_col_data']);
-		return $this_return;
+		$ctrl = $this->add_colgroup();
+		$ctrl->add_col(['class' => 'area_data_settings_col_tag']);
+		$ctrl->add_col(['class' => 'area_data_settings_col_data']);
+		return $this;
 	}
-	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$caption = '',$onclick = '',$altpadding = false) {
-		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$caption,$p->get_description());
+	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
+		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption(),$p->get_description());
 		$ctrl->SetRequired($required);
 		$ctrl->SetReadOnly($readonly);
 		$ctrl->SetAltPadding($altpadding);
-		$ctrl->SetJSonClick($onclick);
 		$ctrl->Compose($this);
 		return $this;
 	}
@@ -1508,6 +1507,18 @@ trait co_DOMTools {
 		$ctrl->SetReadOnly($readonly);
 		$ctrl->SetJSonClick($onclick);
 		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_nav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
+		$class = $active ? 'tabact' : 'tabinact';
+		$attributes = [];
+		if(preg_match('/\S/',$href)):
+			$attributes['href'] = $href;
+		endif;
+		if(preg_match('/\S/',$title)):
+			$attributes['title'] = $title;
+		endif;
+		$this->addElement('li',['class' => $class])->addElement('a',$attributes)->addElement('span',[],$value);
 		return $this;
 	}
 }
