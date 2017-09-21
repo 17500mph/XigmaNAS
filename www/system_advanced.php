@@ -231,7 +231,6 @@ if($_POST):
 			$_SESSION['g']['headermenu'] = [];
 		endif;
 		$config['system']['disableextensionmenu'] = $helpinghand;
-		$config['system']['webgui']['noantilockout'] = $property->noantilockout->validate_input();
 		$config['system']['disablebeep'] = $property->disablebeep->validate_input();
 		$helpinghand = $property->microcode_update->validate_input();
 		if(isset($config['system']['microcode_update']) !== $helpinghand):
