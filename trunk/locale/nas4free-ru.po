@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-15 23:23+0000\n"
+"POT-Creation-Date: 2017-09-21 23:35+0000\n"
 "PO-Revision-Date: 2017-09-16 12:43+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-21 20:53+0000\n"
+"X-Launchpad-Export-Date: 2017-09-21 22:13+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -1428,6 +1428,9 @@ msgstr "Загрузка процессора"
 msgid "CPU Maximum Frequency"
 msgstr "Максимальная частота процессора"
 
+msgid "CPU Microcode Update"
+msgstr ""
+
 msgid "CPU Minimum Frequency"
 msgstr "Минимальная частота процессора"
 
@@ -2710,8 +2713,8 @@ msgstr "Отключить TCP wrapper (mod_wrap module)."
 msgid "Disable console menu."
 msgstr "Отключить меню консоли."
 
-msgid "Disable file manager completely."
-msgstr "Отключить файловый менеджер полностью."
+msgid "Disable file manager."
+msgstr ""
 
 msgid "Disable firmware version check."
 msgstr "Отключить проверку версии прошивки."
@@ -2719,8 +2722,8 @@ msgstr "Отключить проверку версии прошивки."
 msgid "Disable scanning of folders for existing extension menus."
 msgstr "Отключить сканирование папок существующих расширений для меню."
 
-msgid "Disable speaker beep on startup and shutdowns."
-msgstr "Отключить звуковой сигнал при запуске и останове."
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "Отключить сжатие повторяющихся строк."
@@ -3602,6 +3605,9 @@ msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
 "Включите эту опцию, чтобы уменьшить высоту заголовка страницы до минимума."
+
+msgid "Enable this option to update the CPU microcode on startup."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Включить строгое придерживание стандартов DLNA."
@@ -6578,9 +6584,6 @@ msgstr "Ключ безопасности инициатора"
 msgid "Peer User"
 msgstr "Имя инициатора"
 
-msgid "Performance Settings"
-msgstr "Настройки производительности"
-
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Постоянный путь данных Samba (например %s)."
@@ -6626,6 +6629,9 @@ msgstr "Платформа"
 
 msgid "Platform OS"
 msgstr "ОС Платформы"
+
+msgid "Platform and Performance Settings"
+msgstr ""
 
 msgid "Please add a bridge interface first."
 msgstr "Пожалуйста, в первую очередь добавьте интерфейс моста."
@@ -7816,9 +7822,6 @@ msgstr "Несколько адресов e-mail разделяются точк
 
 msgid "September"
 msgstr "сентября"
-
-msgid "Serial Console"
-msgstr "Консоль serial-порта"
 
 msgid "Serial Number"
 msgstr "Серийный номер"
@@ -11237,3 +11240,15 @@ msgstr "к"
 
 msgid "umount"
 msgstr "размонтировать"
+
+#~ msgid "Serial Console"
+#~ msgstr "Консоль serial-порта"
+
+#~ msgid "Disable file manager completely."
+#~ msgstr "Отключить файловый менеджер полностью."
+
+#~ msgid "Performance Settings"
+#~ msgstr "Настройки производительности"
+
+#~ msgid "Disable speaker beep on startup and shutdowns."
+#~ msgstr "Отключить звуковой сигнал при запуске и останове."

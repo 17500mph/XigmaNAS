@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-15 23:23+0000\n"
+"POT-Creation-Date: 2017-09-21 23:35+0000\n"
 "PO-Revision-Date: 2017-09-09 03:00+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-21 20:53+0000\n"
+"X-Launchpad-Export-Date: 2017-09-21 22:13+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1337,6 +1337,9 @@ msgstr "CPU 부하"
 msgid "CPU Maximum Frequency"
 msgstr "최대 CPU 주파수"
 
+msgid "CPU Microcode Update"
+msgstr ""
+
 msgid "CPU Minimum Frequency"
 msgstr "최소 CPU 주파수"
 
@@ -2549,8 +2552,8 @@ msgstr "TCP wrapper 사용 안 함(mod_wrap 모듈)"
 msgid "Disable console menu."
 msgstr "콘솔 메뉴를 사용하지 않습니다."
 
-msgid "Disable file manager completely."
-msgstr "파일 관리자를 완전히 사용하지 않습니다."
+msgid "Disable file manager."
+msgstr ""
 
 msgid "Disable firmware version check."
 msgstr "펌웨어 버전 확인을 사용하지 않습니다."
@@ -2558,8 +2561,8 @@ msgstr "펌웨어 버전 확인을 사용하지 않습니다."
 msgid "Disable scanning of folders for existing extension menus."
 msgstr "기존 확장 메뉴의 폴더 검색을 비활성화합니다."
 
-msgid "Disable speaker beep on startup and shutdowns."
-msgstr "시동 및 종료 시 스피커 비프음을 사용하지 않습니다."
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "반복된 줄 압축을 사용하지 않습니다."
@@ -3403,6 +3406,9 @@ msgstr "고객들이 호스트 USB를 사용가능케 하려면 이 옵션을 �
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "이 옵션을 사용하면 페이지 상단의 높이를 최소화 합니다."
+
+msgid "Enable this option to update the CPU microcode on startup."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "DLNA 표준을 엄격히 준수하게 합니다."
@@ -6200,9 +6206,6 @@ msgstr "피어 비밀"
 msgid "Peer User"
 msgstr "피어 사용자"
 
-msgid "Performance Settings"
-msgstr "성능 설정"
-
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "고정 Samba 자료 경로(예: %s)."
@@ -6248,6 +6251,9 @@ msgstr "플랫폼"
 
 msgid "Platform OS"
 msgstr "플렛폼 OS"
+
+msgid "Platform and Performance Settings"
+msgstr ""
 
 msgid "Please add a bridge interface first."
 msgstr "먼저 브릿지 인터페이스를 추가해 주십시오."
@@ -7387,9 +7393,6 @@ msgstr "전자우편 주소들을 세미콜론 문자로 분리하십시오."
 
 msgid "September"
 msgstr "9월"
-
-msgid "Serial Console"
-msgstr "직렬 콘솔"
 
 msgid "Serial Number"
 msgstr "일련번호"
@@ -10475,3 +10478,15 @@ msgstr ""
 
 msgid "umount"
 msgstr "탑재 해제"
+
+#~ msgid "Serial Console"
+#~ msgstr "직렬 콘솔"
+
+#~ msgid "Disable file manager completely."
+#~ msgstr "파일 관리자를 완전히 사용하지 않습니다."
+
+#~ msgid "Disable speaker beep on startup and shutdowns."
+#~ msgstr "시동 및 종료 시 스피커 비프음을 사용하지 않습니다."
+
+#~ msgid "Performance Settings"
+#~ msgstr "성능 설정"

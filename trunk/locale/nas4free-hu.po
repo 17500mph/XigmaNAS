@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-15 23:23+0000\n"
+"POT-Creation-Date: 2017-09-21 23:35+0000\n"
 "PO-Revision-Date: 2017-09-17 13:08+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-21 20:53+0000\n"
+"X-Launchpad-Export-Date: 2017-09-21 22:13+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1411,6 +1411,9 @@ msgstr "Processzorterhelés"
 msgid "CPU Maximum Frequency"
 msgstr "CPU maximális frekvencia"
 
+msgid "CPU Microcode Update"
+msgstr ""
+
 msgid "CPU Minimum Frequency"
 msgstr "CPU minimális frekvencia"
 
@@ -2673,8 +2676,8 @@ msgstr "TCP csomagolás tiltása (mod_wrap module)."
 msgid "Disable console menu."
 msgstr "Konzolmenü tiltása"
 
-msgid "Disable file manager completely."
-msgstr "Fájlkezelő teljes tiltása."
+msgid "Disable file manager."
+msgstr ""
 
 msgid "Disable firmware version check."
 msgstr "Firmware-verzió ellenőrzésének kikapcsolása"
@@ -2682,8 +2685,8 @@ msgstr "Firmware-verzió ellenőrzésének kikapcsolása"
 msgid "Disable scanning of folders for existing extension menus."
 msgstr "Bővítmények-könyvtárak keresésének kikapcsolása"
 
-msgid "Disable speaker beep on startup and shutdowns."
-msgstr "Indításkori és leállításkori sípolás kikapcsolása."
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "Ismétlődő sorok tömörítésének tiltása."
@@ -3562,6 +3565,9 @@ msgstr "Ez a beállítás a kliensek számára bekapcsolja a kiszolgáló USB-j�
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "Ez a beállítás kisebbre állítja az oldal fejlécének magasságát."
+
+msgid "Enable this option to update the CPU microcode on startup."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "DLNA-szabványok szigorú betartásának engedélyezése."
@@ -6518,9 +6524,6 @@ msgstr "Peer titok"
 msgid "Peer User"
 msgstr "Peer felhasználó"
 
-msgid "Performance Settings"
-msgstr "Teljesítmény beállítások"
-
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Állandó Samba-adatútvonal (pl. %s)."
@@ -6566,6 +6569,9 @@ msgstr "Platform"
 
 msgid "Platform OS"
 msgstr "Platform operációs rendszere"
+
+msgid "Platform and Performance Settings"
+msgstr ""
 
 msgid "Please add a bridge interface first."
 msgstr "Először egy híd interfészt hozz létre."
@@ -7763,9 +7769,6 @@ msgstr "Több e-mailcímet pontosvesszővel elválasztva adj meg."
 
 msgid "September"
 msgstr "Szeptember"
-
-msgid "Serial Console"
-msgstr "Soros konzol"
 
 msgid "Serial Number"
 msgstr "Sorozatszám"
@@ -11136,3 +11139,15 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+#~ msgid "Serial Console"
+#~ msgstr "Soros konzol"
+
+#~ msgid "Disable file manager completely."
+#~ msgstr "Fájlkezelő teljes tiltása."
+
+#~ msgid "Performance Settings"
+#~ msgstr "Teljesítmény beállítások"
+
+#~ msgid "Disable speaker beep on startup and shutdowns."
+#~ msgstr "Indításkori és leállításkori sípolás kikapcsolása."

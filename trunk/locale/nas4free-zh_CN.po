@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-15 23:23+0000\n"
+"POT-Creation-Date: 2017-09-21 23:35+0000\n"
 "PO-Revision-Date: 2017-07-21 01:34+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-21 20:53+0000\n"
+"X-Launchpad-Export-Date: 2017-09-21 22:13+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -1315,6 +1315,9 @@ msgstr "CPU 负载"
 msgid "CPU Maximum Frequency"
 msgstr "CPU最大频率"
 
+msgid "CPU Microcode Update"
+msgstr ""
+
 msgid "CPU Minimum Frequency"
 msgstr "CPU最小频率"
 
@@ -2500,8 +2503,8 @@ msgstr "关闭 TCP Wrapper（mod_wrap 模块）。"
 msgid "Disable console menu."
 msgstr "禁止控制台菜单。"
 
-msgid "Disable file manager completely."
-msgstr "完全禁止文件管理器。"
+msgid "Disable file manager."
+msgstr ""
 
 msgid "Disable firmware version check."
 msgstr "禁止固件版本检查。"
@@ -2509,8 +2512,8 @@ msgstr "禁止固件版本检查。"
 msgid "Disable scanning of folders for existing extension menus."
 msgstr "禁用对现有扩展菜单的文件夹扫描。"
 
-msgid "Disable speaker beep on startup and shutdowns."
-msgstr "在启动和关闭时禁用扬声器蜂鸣。"
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "禁止对重复行压缩。"
@@ -3352,6 +3355,9 @@ msgstr "启用此选项可使主机USB可用于客户端。"
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr "启用此选项可将页眉的高度减小到最小。"
+
+msgid "Enable this option to update the CPU microcode on startup."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "使得能够严格遵守DLNA标准。"
@@ -6126,9 +6132,6 @@ msgstr "对等密钥"
 msgid "Peer User"
 msgstr "对等用户"
 
-msgid "Performance Settings"
-msgstr "性能设置"
-
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "永久Samba数据路径（如 %s）。"
@@ -6174,6 +6177,9 @@ msgstr "硬件平台"
 
 msgid "Platform OS"
 msgstr "操作系统平台"
+
+msgid "Platform and Performance Settings"
+msgstr ""
 
 msgid "Please add a bridge interface first."
 msgstr "请先添加网桥接口。"
@@ -7311,9 +7317,6 @@ msgstr "以 \";\" 分号隔开Email地址。"
 
 msgid "September"
 msgstr "9月"
-
-msgid "Serial Console"
-msgstr "串行控制台（Serial Console）"
 
 msgid "Serial Number"
 msgstr "序号"
@@ -10350,3 +10353,15 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
+
+#~ msgid "Serial Console"
+#~ msgstr "串行控制台（Serial Console）"
+
+#~ msgid "Disable file manager completely."
+#~ msgstr "完全禁止文件管理器。"
+
+#~ msgid "Disable speaker beep on startup and shutdowns."
+#~ msgstr "在启动和关闭时禁用扬声器蜂鸣。"
+
+#~ msgid "Performance Settings"
+#~ msgstr "性能设置"
