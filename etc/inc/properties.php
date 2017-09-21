@@ -268,3 +268,24 @@ class properties_list extends properties {
 		return $this;
 	}
 }
+class properties_bool extends properties {
+	public $v_caption = NULL;
+	
+	public function set_defaultvalue(bool $value = NULL) {
+		$this->v_defaultvalue = $value;
+		return $this;
+	}
+	public function set_caption(string $value = NULL) {
+		$this->v_caption = $value;
+		return $this;
+	}
+	public function get_caption() {
+		return $this->v_caption;
+	}
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_BOOLEAN,$filter_name);
+//		$this->set_filter_flags(FILTER_NULL_ON_FAILURE,$filter_name);
+//		$this->set_filter_options(['default' => false],$filter_name);
+		return $this;
+	}
+}
