@@ -46,9 +46,9 @@ do-install:
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/rrdinfo ${NAS4FREE_ROOTFS}/usr/local/bin
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/rrdtool ${NAS4FREE_ROOTFS}/usr/local/bin
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/rrdupdate ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/lib/librrd.so.8.0.0 ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${LN} -fsv /usr/local/lib/librrd.so.8.0.0 ${NAS4FREE_ROOTFS}/usr/local/lib/librrd.so
-	@${LN} -fsv /usr/local/lib/librrd.so.8.0.0 ${NAS4FREE_ROOTFS}/usr/local/lib/librrd.so.8
+	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/lib/librrd.so.8.1.0 ${NAS4FREE_ROOTFS}/usr/local/lib
+	@${LN} -fsv /usr/local/lib/librrd.so.8.1.0 ${NAS4FREE_ROOTFS}/usr/local/lib/librrd.so
+	@${LN} -fsv /usr/local/lib/librrd.so.8.1.0 ${NAS4FREE_ROOTFS}/usr/local/lib/librrd.so.8
 # bindings
 	@${MKDIR} -p ${NAS4FREE_ROOTFS}${SITE_PERL}/${PERL_ARCH}/${PERL_VER}/auto/RRDs
 	@${CP} -pv ${DEP_STAGEDIR}${SITE_PERL}/${PERL_ARCH}/${PERL_VER}/auto/RRDs/RRDs.so ${NAS4FREE_ROOTFS}${SITE_PERL}/${PERL_ARCH}/${PERL_VER}/auto/RRDs/
