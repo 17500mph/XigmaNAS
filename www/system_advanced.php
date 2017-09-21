@@ -245,7 +245,7 @@ if($_POST):
 		$config['system']['pwmax'] = $_POST['pwmax'];
 		$config['system']['pwmin'] = $_POST['pwmin'];
 		$config['system']['motd'] = base64_encode($_POST['motd']); // Encode string, otherwise line breaks will get lost
-		$config['system']['sysconsaver']['enable'] = $property->pwmode->sysconsaver->validate_input();
+		$config['system']['sysconsaver']['enable'] = $property->sysconsaver->validate_input();
 		$config['system']['sysconsaver']['blanktime'] = $_POST['sysconsaverblanktime'];
 		$config['system']['enableserialconsole'] = $property->enableserialconsole->validate_input();
 		//	adjust power mode
