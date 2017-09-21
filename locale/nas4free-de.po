@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-15 23:23+0000\n"
+"POT-Creation-Date: 2017-09-21 23:35+0000\n"
 "PO-Revision-Date: 2017-09-18 21:58+0000\n"
 "Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-21 20:52+0000\n"
+"X-Launchpad-Export-Date: 2017-09-21 22:12+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -1458,6 +1458,9 @@ msgstr "Prozessorlast"
 msgid "CPU Maximum Frequency"
 msgstr "Maximum CPU Frequenz"
 
+msgid "CPU Microcode Update"
+msgstr ""
+
 msgid "CPU Minimum Frequency"
 msgstr "Minimum CPU Frequenz"
 
@@ -2719,8 +2722,8 @@ msgstr "Deaktivieren des TCP Wrapper (mod_wrap Modul)"
 msgid "Disable console menu."
 msgstr "Konsolenmenü deaktivieren."
 
-msgid "Disable file manager completely."
-msgstr "Datei-Manager vollständig deaktivieren."
+msgid "Disable file manager."
+msgstr ""
 
 msgid "Disable firmware version check."
 msgstr "Überprüfung der Firmware-Version deaktivieren."
@@ -2728,9 +2731,8 @@ msgstr "Überprüfung der Firmware-Version deaktivieren."
 msgid "Disable scanning of folders for existing extension menus."
 msgstr "Verzeichnisse von bestehenden Erweiterungsmenüs deaktivieren"
 
-msgid "Disable speaker beep on startup and shutdowns."
+msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
-"Deaktivieren des Pieptons  bei Systemstart und Herunterfahren des Systems"
 
 msgid "Disable the compression of repeated line."
 msgstr "Die Kompression der wiederholten Linie deaktivieren"
@@ -3619,6 +3621,9 @@ msgid ""
 msgstr ""
 "Aktiviere diese Option um die Höhe der Kopfzeile auf ein Minimum zu "
 "reduzieren."
+
+msgid "Enable this option to update the CPU microcode on startup."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "strikte Einhaltung von DLNA Standards erzwingen"
@@ -6589,9 +6594,6 @@ msgstr "Peer Geheimnis (Peer Secret)"
 msgid "Peer User"
 msgstr "Peer Benutzer"
 
-msgid "Performance Settings"
-msgstr "Leistungseinstellungen"
-
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Dauerhafter Samba Datenpfad (z.B. %s)."
@@ -6637,6 +6639,9 @@ msgstr "Plattform"
 
 msgid "Platform OS"
 msgstr "Betriebssystem"
+
+msgid "Platform and Performance Settings"
+msgstr ""
 
 msgid "Please add a bridge interface first."
 msgstr "Bitte fügen Sie zuerst ein Brücken Interface hinzu."
@@ -7829,9 +7834,6 @@ msgstr "Semikolon getrennte Liste von E-Mail Adressen."
 
 msgid "September"
 msgstr "September"
-
-msgid "Serial Console"
-msgstr "Serial Console"
 
 msgid "Serial Number"
 msgstr "Seriennummer"
@@ -11288,3 +11290,16 @@ msgstr "bis"
 
 msgid "umount"
 msgstr "aushängen"
+
+#~ msgid "Serial Console"
+#~ msgstr "Serial Console"
+
+#~ msgid "Disable file manager completely."
+#~ msgstr "Datei-Manager vollständig deaktivieren."
+
+#~ msgid "Performance Settings"
+#~ msgstr "Leistungseinstellungen"
+
+#~ msgid "Disable speaker beep on startup and shutdowns."
+#~ msgstr ""
+#~ "Deaktivieren des Pieptons  bei Systemstart und Herunterfahren des Systems"

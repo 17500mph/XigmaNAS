@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-15 23:23+0000\n"
-"PO-Revision-Date: 2017-09-15 23:20+0000\n"
+"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"PO-Revision-Date: 2017-09-21 21:59+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-21 20:52+0000\n"
+"X-Launchpad-Export-Date: 2017-09-21 22:12+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -1449,6 +1449,9 @@ msgstr "CPU Belasting"
 msgid "CPU Maximum Frequency"
 msgstr "CPU Maximale Frequentie"
 
+msgid "CPU Microcode Update"
+msgstr "CPU Microcode Update"
+
 msgid "CPU Minimum Frequency"
 msgstr "CPU Minimale Frequentie"
 
@@ -2755,10 +2758,8 @@ msgstr "Uitschakelen TCP wrapper (mod_wrap module)."
 msgid "Disable console menu."
 msgstr "Uitschakelen console menu."
 
-msgid "Disable file manager completely."
-msgstr ""
-"Uitschakelen Bestands Manager, gebruik is dan niet meer mogelijk vanaf deze "
-"server."
+msgid "Disable file manager."
+msgstr "Uitschakelen bestands manager."
 
 msgid "Disable firmware version check."
 msgstr "Uitschakelen firmware versie controle."
@@ -2766,10 +2767,9 @@ msgstr "Uitschakelen firmware versie controle."
 msgid "Disable scanning of folders for existing extension menus."
 msgstr "Uitschakelen scannen van folders voor bestaande extensie menus."
 
-msgid "Disable speaker beep on startup and shutdowns."
+msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
-"Uitschakelen luidspreker geluiden tijdens het opstarten en afsluiten van de "
-"server."
+"Uitschakelen luidspreker geluiden tijdens het opstarten en afsluiten."
 
 msgid "Disable the compression of repeated line."
 msgstr "Uitschakelen compressie van herhaalde lijn."
@@ -3652,13 +3652,17 @@ msgstr ""
 
 msgid "Enable this option to make host USB available to clients."
 msgstr ""
-"Inschakelen van deze optie om host USB beschikbaar te maken voor cliënten."
+"Schakel deze optie in om host USB beschikbaar te maken voor cliënten."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
 "Schakel deze optie in om de hoogte van de koptekst van de pagina tot een "
 "minimum te beperken."
+
+msgid "Enable this option to update the CPU microcode on startup."
+msgstr ""
+"Schakel deze optie in om de cpu microcode te updaten tijdens het opstarten."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Inschakelen om zich strikt aan de DLNA-normen te houden."
@@ -6638,9 +6642,6 @@ msgstr "Peer Wachtwoord"
 msgid "Peer User"
 msgstr "Peer gebruiker"
 
-msgid "Performance Settings"
-msgstr "Prestatie Instellingen"
-
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Permanente samba data locatie (bijv. %s)."
@@ -6686,6 +6687,9 @@ msgstr "Platform"
 
 msgid "Platform OS"
 msgstr "Platform OS"
+
+msgid "Platform and Performance Settings"
+msgstr "Platform en Prestatie Instellingen"
 
 msgid "Please add a bridge interface first."
 msgstr "U dient eerst een bridge netwerk toe te voegen."
@@ -7882,9 +7886,6 @@ msgstr ""
 
 msgid "September"
 msgstr "September"
-
-msgid "Serial Console"
-msgstr "Serial Console"
 
 msgid "Serial Number"
 msgstr "Serienummer"
@@ -11329,3 +11330,19 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
+
+#~ msgid "Serial Console"
+#~ msgstr "Serial Console"
+
+#~ msgid "Performance Settings"
+#~ msgstr "Prestatie Instellingen"
+
+#~ msgid "Disable file manager completely."
+#~ msgstr ""
+#~ "Uitschakelen Bestands Manager, gebruik is dan niet meer mogelijk vanaf deze "
+#~ "server."
+
+#~ msgid "Disable speaker beep on startup and shutdowns."
+#~ msgstr ""
+#~ "Uitschakelen luidspreker geluiden tijdens het opstarten en afsluiten van de "
+#~ "server."
