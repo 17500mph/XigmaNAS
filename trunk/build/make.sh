@@ -1869,7 +1869,13 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				fi
 			done
 		elif [ "i386" = ${NAS4FREE_ARCH} ]; then
-			for forceoff in grub2-bhyve novnc open-vm-tools phpvirtualbox vbox vbox-additions; do
+			for forceoff in grub2-bhyve novnc open-vm-tools phpvirtualbox vbox vbox-additions xmd; do
+				if [ "$port" = "$forceoff" ]; then
+					state="OFF"; break;
+				fi
+			done
+		elif [ "amd64" = ${NAS4FREE_ARCH} ]; then
+			for forceoff in xmd; do
 				if [ "$port" = "$forceoff" ]; then
 					state="OFF"; break;
 				fi
