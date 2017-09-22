@@ -1469,10 +1469,30 @@ trait co_DOMTools {
 		return $this_return;
 	}
 	//	macros
-	public function add_colgroup_2c() {
+	public function add_colgroup_data_settings() {
 		$ctrl = $this->add_colgroup();
 		$ctrl->add_col(['class' => 'area_data_settings_col_tag']);
 		$ctrl->add_col(['class' => 'area_data_settings_col_data']);
+		return $this;
+	}
+	public function add_separator($colspan = 2,$ctrlname = '') {
+		$ctrl = new HTMLSeparator2();
+		$ctrl->SetColSpan($colspan);
+		$ctrl->SetCtrlName($ctrlname);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
+		$ctrl = new HTMLTitleLine2($title);
+		$ctrl->SetColSpan($colspan);
+		$ctrl->SetCtrlName($ctrlname);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_titleline_checkbox(properties $p,$value,int $colspan = 2) {
+		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
+		$ctrl->SetColSpan($colspan);
+		$ctrl->Compose($this);
 		return $this;
 	}
 	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
