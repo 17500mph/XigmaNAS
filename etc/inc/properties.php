@@ -222,7 +222,7 @@ class properties {
 		return NULL;
 	}
 /**
- * Method to apply a filter to index [$name] of an array variable.
+ * Method to apply a filter to an array variable. Index is the name.
  * @param array $variable The variable to be tested.
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return mixed Filter result.
@@ -283,5 +283,13 @@ class properties_bool extends properties {
 		$this->set_filter_flags(FILTER_NULL_ON_FAILURE,$filter_name);
 		$this->set_filter_options(['default' => false],$filter_name);
 		return $this;
+	}
+	public function validate_config(array $variable) {
+		if(array_key_exists($this->get_name(),$variable)):
+			$value = $variable[$this->get_name()];
+			return (is_bool($value) ? $value : true);
+		else:
+			return false;
+		endif;
 	}
 }
