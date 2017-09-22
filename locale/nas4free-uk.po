@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2017-08-27 09:40+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:42+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:45+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -2193,8 +2193,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Демон"
 
-msgid "Daemon events"
-msgstr "Події демона"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Журнал демона"
@@ -2720,8 +2720,8 @@ msgstr "Заборонити сканування каталогів щодо і
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
-msgstr "Заборонити стиск повторної лінії."
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Вимкнено"
@@ -3855,9 +3855,6 @@ msgstr "В процесі імпорту були виявлені помилк�
 msgid "Event"
 msgstr "Подія"
 
-msgid "Event Selection"
-msgstr "Обрання події"
-
 msgid "Example: pkg install packagename."
 msgstr "Приклад: pkg install ім'я_пакету."
 
@@ -3976,14 +3973,14 @@ msgstr "FTP - бан модуль"
 msgid "FTP - File Transfer"
 msgstr "FTP - передавання файлів"
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr "Прокси FTP"
 
 msgid "FTP User Information & Status"
 msgstr "Інформація та Статус Користувача FTP"
-
-msgid "FTP events"
-msgstr "Події FTP"
 
 msgid "FTP log"
 msgstr "Журнал FTP"
@@ -4543,8 +4540,8 @@ msgstr "IP адреса"
 msgid "IP address"
 msgstr "IP адреса"
 
-msgid "IP address of remote syslog server."
-msgstr "ІР адреса віддаленого сервера для логування."
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5515,9 +5512,6 @@ msgstr "Межа каналу при читанні даних. Функція �
 msgid "Masquerade Address"
 msgstr "Адреса Маскарадінгу"
 
-msgid "Max Entries"
-msgstr "Макс. кількість записів"
-
 msgid "Max. Block Size"
 msgstr "Максимальний Розмір Блоку"
 
@@ -6206,12 +6200,6 @@ msgstr "Кількість блоків батареї"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Кількість годин у включеному стані."
-
-msgid "Number of log entries to show"
-msgstr "Кількість записів журналу, яку показувати"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "Кількість записів журналу, яку показувати має бути між 5 і 1000."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -6994,11 +6982,11 @@ msgstr "Клієнт RSYNC"
 msgid "RSYNC Client Information & Status"
 msgstr "Інформація та статус RSYNC клієнта"
 
+msgid "RSYNC Events"
+msgstr ""
+
 msgid "RSYNC client number"
 msgstr "Число клієнту RSYNC"
-
-msgid "RSYNC events"
-msgstr "Події RSYNC"
 
 msgid "RSYNC log"
 msgstr "Журнал RSYNC"
@@ -7403,11 +7391,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "Моніторинг параметрів S.M.A.R.T."
-
-msgid "S.M.A.R.T. events"
-msgstr "Події S.M.A.R.T."
 
 msgid "S.M.A.R.T. extra options"
 msgstr "Додаткові налаштування S.M.A.R.T."
@@ -7451,8 +7439,8 @@ msgstr "Модулі SNMP"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "Події SSH"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "Журнал SSHD"
@@ -7764,14 +7752,32 @@ msgstr "Буфер Відправлення"
 msgid "Send Command!"
 msgstr "Надіслати команду!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "Надіслати зараз"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "Надіслати Тестовий Лист"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Надіслати тестовий лист-попередження при старті."
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "Чутливе до регістру"
@@ -7962,6 +7968,9 @@ msgstr "Коротке самотестування (Short Self-Test)"
 
 msgid "Show Default Groups"
 msgstr "Показати групи за замовчуванням"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Показати інформацію про процес"
@@ -8364,6 +8373,9 @@ msgstr "Налагоджування системи Емейл звітів"
 msgid "System Email Settings"
 msgstr "Налаштування електронної пошти системи"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "Системна інформація"
 
@@ -8387,9 +8399,6 @@ msgstr "Системний час"
 
 msgid "System Uptime"
 msgstr "Час роботи системи"
-
-msgid "System events"
-msgstr "Події системи"
 
 msgid "System info"
 msgstr "Відомості про систему"
@@ -9164,6 +9173,9 @@ msgid ""
 msgstr ""
 "Кількість помилок, викликаних неправильною контрольною сумою при корекції "
 "помилок."
+
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
 
 msgid "The old password is not correct."
 msgstr "Старий пароль не правильний."
@@ -11191,3 +11203,39 @@ msgstr "до"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "RSYNC events"
+#~ msgstr "Події RSYNC"
+
+#~ msgid "Daemon events"
+#~ msgstr "Події демона"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Кількість записів журналу, яку показувати"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "Події S.M.A.R.T."
+
+#~ msgid "SSH events"
+#~ msgstr "Події SSH"
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "ІР адреса віддаленого сервера для логування."
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "Заборонити стиск повторної лінії."
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "Кількість записів журналу, яку показувати має бути між 5 і 1000."
+
+#~ msgid "FTP events"
+#~ msgstr "Події FTP"
+
+#~ msgid "System events"
+#~ msgstr "Події системи"
+
+#~ msgid "Max Entries"
+#~ msgstr "Макс. кількість записів"
+
+#~ msgid "Event Selection"
+#~ msgstr "Обрання події"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:41+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:45+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -2016,8 +2016,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Proces v ozadju"
 
-msgid "Daemon events"
-msgstr "Demon dogodki"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Dnevnik procesa v ozadju"
@@ -2523,7 +2523,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
+msgid "Disable the compression of repeating lines."
 msgstr ""
 
 msgid "Disabled"
@@ -3609,9 +3609,6 @@ msgstr ""
 msgid "Event"
 msgstr "Dogodek"
 
-msgid "Event Selection"
-msgstr ""
-
 msgid "Example: pkg install packagename."
 msgstr ""
 
@@ -3729,14 +3726,14 @@ msgstr ""
 msgid "FTP - File Transfer"
 msgstr ""
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr ""
 
 msgid "FTP User Information & Status"
 msgstr ""
-
-msgid "FTP events"
-msgstr "FTP dogodki"
 
 msgid "FTP log"
 msgstr "FTP dnevnik"
@@ -4279,7 +4276,7 @@ msgstr "Naslov IP"
 msgid "IP address"
 msgstr "IP naslov"
 
-msgid "IP address of remote syslog server."
+msgid "IP address of the remote syslog server."
 msgstr ""
 
 msgid ""
@@ -5181,9 +5178,6 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr ""
 
-msgid "Max Entries"
-msgstr ""
-
 msgid "Max. Block Size"
 msgstr ""
 
@@ -5854,12 +5848,6 @@ msgstr ""
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
-
-msgid "Number of log entries to show"
-msgstr "Število prikazanih dnevniških vnosov"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "Število zapisov v dnevniku mora biti med 5 in 1000."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -6620,11 +6608,11 @@ msgstr "RSYNC klient"
 msgid "RSYNC Client Information & Status"
 msgstr ""
 
-msgid "RSYNC client number"
+msgid "RSYNC Events"
 msgstr ""
 
-msgid "RSYNC events"
-msgstr "RSYNC dogodki"
+msgid "RSYNC client number"
+msgstr ""
 
 msgid "RSYNC log"
 msgstr "RSYNC dnevnik"
@@ -7018,11 +7006,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
-msgid "S.M.A.R.T. Monitoring"
+msgid "S.M.A.R.T. Events"
 msgstr ""
 
-msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T. dogodki"
+msgid "S.M.A.R.T. Monitoring"
+msgstr ""
 
 msgid "S.M.A.R.T. extra options"
 msgstr "S.M.A.R.T. dodatne možnosti"
@@ -7066,8 +7054,8 @@ msgstr "SNMP moduli"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH dogodki"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD dnevnik"
@@ -7356,14 +7344,32 @@ msgstr ""
 msgid "Send Command!"
 msgstr "Pošlji ukaz!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "Pošlji zdaj"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "Pošlji testno sporočilo"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Pošlji testno opozorilno e-poštno sporočilo ob zagonu."
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "Občutljivo"
@@ -7542,6 +7548,9 @@ msgid "Short Self-Test"
 msgstr ""
 
 msgid "Show Default Groups"
+msgstr ""
+
+msgid "Show Log Entries"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7927,6 +7936,9 @@ msgstr ""
 msgid "System Email Settings"
 msgstr ""
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "Podatki o sistemu"
 
@@ -7950,9 +7962,6 @@ msgstr ""
 
 msgid "System Uptime"
 msgstr ""
-
-msgid "System events"
-msgstr "Sistemski dogodki"
 
 msgid "System info"
 msgstr "Podatki o sistemu"
@@ -8640,6 +8649,9 @@ msgstr ""
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
+msgstr ""
+
+msgid "The number of log entries to show must be between 5 and 1000."
 msgstr ""
 
 msgid "The old password is not correct."
@@ -10426,3 +10438,27 @@ msgstr ""
 
 msgid "umount"
 msgstr "izvrzi"
+
+#~ msgid "Daemon events"
+#~ msgstr "Demon dogodki"
+
+#~ msgid "FTP events"
+#~ msgstr "FTP dogodki"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Število prikazanih dnevniških vnosov"
+
+#~ msgid "RSYNC events"
+#~ msgstr "RSYNC dogodki"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "S.M.A.R.T. dogodki"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH dogodki"
+
+#~ msgid "System events"
+#~ msgstr "Sistemski dogodki"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "Število zapisov v dnevniku mora biti med 5 in 1000."

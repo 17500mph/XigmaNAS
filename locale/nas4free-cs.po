@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2017-09-17 11:59+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:41+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -2225,8 +2225,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Proces služby"
 
-msgid "Daemon events"
-msgstr "Události na straně procesu služby"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Záznam událostí na straně procesu služby"
@@ -2751,8 +2751,8 @@ msgstr "Vypnout skenování složek pro existující nabídky rozšíření."
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
-msgstr "Vypnout vynechání opakujících se řádek."
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Vypnuto"
@@ -3887,9 +3887,6 @@ msgstr "Při importu byly zjištěny chyby."
 msgid "Event"
 msgstr "Událost"
 
-msgid "Event Selection"
-msgstr "Výběr události"
-
 msgid "Example: pkg install packagename."
 msgstr "Příklad: pkg install nazevbalicku."
 
@@ -4007,14 +4004,14 @@ msgstr "FTP – modul vyloučení (ban)"
 msgid "FTP - File Transfer"
 msgstr "FTP – přenos souborů"
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 msgid "FTP User Information & Status"
 msgstr "Informace a stav FTP uživatele"
-
-msgid "FTP events"
-msgstr "Události FTP"
 
 msgid "FTP log"
 msgstr "Záznam událostí na FTP"
@@ -4581,8 +4578,8 @@ msgstr "IP adresa"
 msgid "IP address"
 msgstr "IP adresa"
 
-msgid "IP address of remote syslog server."
-msgstr "IP adresa vzdáleného syslog serveru."
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5569,9 +5566,6 @@ msgstr "Přesah kanálu při čtení dat. Funkce tohoto atributu není známa."
 msgid "Masquerade Address"
 msgstr "Maškarádovací adresa"
 
-msgid "Max Entries"
-msgstr "Nejvýše položek"
-
 msgid "Max. Block Size"
 msgstr "Nejvyšší velikost bloku"
 
@@ -6271,13 +6265,6 @@ msgid "Number of hours elapsed in the power-on state."
 msgstr ""
 "Celkový počet hodin, které jednotka od svého prvního zapnutí strávila v "
 "zapnutém stavu."
-
-msgid "Number of log entries to show"
-msgstr "Kolik položek záznamu událostí zobrazovat"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr ""
-"Počet zobrazovaných položek záznamu událostí může nabývat hodnoty 5 až 1000."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -7072,11 +7059,11 @@ msgstr "RSYNC klient"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC klient – informace a stav"
 
+msgid "RSYNC Events"
+msgstr ""
+
 msgid "RSYNC client number"
 msgstr "Číslo klienta RSYNC"
-
-msgid "RSYNC events"
-msgstr "Události v RSYNC"
 
 msgid "RSYNC log"
 msgstr "RSYNC – záznam událostí"
@@ -7479,11 +7466,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "SMART diagnostika"
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "Dohledování SMART diagnostiky"
-
-msgid "S.M.A.R.T. events"
-msgstr "Události SMART diagnostiky"
 
 msgid "S.M.A.R.T. extra options"
 msgstr "Další předvolby SMART diagnostiky"
@@ -7527,8 +7514,8 @@ msgstr "SNMP moduly"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH události"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "Protokol událostí služby ssh"
@@ -7839,14 +7826,32 @@ msgstr "Vyrovnávací paměť odesílání"
 msgid "Send Command!"
 msgstr "Odeslat (potvrdit) příkaz!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "Odeslat nyní"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "Odeslat testovací e-mail"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Při spouštění poslat ZKUŠEBNÍ varovný e-mail."
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "Rozlišovat"
@@ -8031,6 +8036,9 @@ msgstr "Krátký samotest"
 
 msgid "Show Default Groups"
 msgstr "Zobrazit výchozí skupiny"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Zobrazit informace o procesu"
@@ -8435,6 +8443,9 @@ msgstr "Nastavení hlášení o systému e-mailem"
 msgid "System Email Settings"
 msgstr "Nastavení systémového e-mailu"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "Informace o systému"
 
@@ -8458,9 +8469,6 @@ msgstr "Systémový čas"
 
 msgid "System Uptime"
 msgstr "Uptime systému"
-
-msgid "System events"
-msgstr "Systémové události"
 
 msgid "System info"
 msgstr "Informace o systému"
@@ -9263,6 +9271,9 @@ msgid ""
 msgstr ""
 "Počet chyb způsobených nesouhlasícím kontrolním součtem v průběhu opravy "
 "chyby."
+
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
 
 msgid "The old password is not correct."
 msgstr "Původní heslo nebylo zadáno správně."
@@ -11317,3 +11328,40 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
+
+#~ msgid "FTP events"
+#~ msgstr "Události FTP"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH události"
+
+#~ msgid "System events"
+#~ msgstr "Systémové události"
+
+#~ msgid "Daemon events"
+#~ msgstr "Události na straně procesu služby"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Kolik položek záznamu událostí zobrazovat"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr ""
+#~ "Počet zobrazovaných položek záznamu událostí může nabývat hodnoty 5 až 1000."
+
+#~ msgid "RSYNC events"
+#~ msgstr "Události v RSYNC"
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "IP adresa vzdáleného syslog serveru."
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "Vypnout vynechání opakujících se řádek."
+
+#~ msgid "Event Selection"
+#~ msgstr "Výběr události"
+
+#~ msgid "Max Entries"
+#~ msgstr "Nejvýše položek"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "Události SMART diagnostiky"
