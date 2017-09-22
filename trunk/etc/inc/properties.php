@@ -117,7 +117,7 @@ class properties {
 	}
 /**
  * Method to set filter type.
- * @param type $value Filter type.
+ * @param int $value Filter type.
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return object Returns $this.
  */	
