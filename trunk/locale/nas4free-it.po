@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
-"PO-Revision-Date: 2017-09-21 15:55+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
+"PO-Revision-Date: 2017-09-22 15:54+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:41+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -1439,7 +1439,7 @@ msgid "CPU Maximum Frequency"
 msgstr "Frequenza massima CPU"
 
 msgid "CPU Microcode Update"
-msgstr ""
+msgstr "Aggiornamento del codice macchina"
 
 msgid "CPU Minimum Frequency"
 msgstr "Frequenza minima CPU"
@@ -2226,8 +2226,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Daemon"
 
-msgid "Daemon events"
-msgstr "Eventi dei demoni di sistema"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Log del Daemon"
@@ -2744,7 +2744,7 @@ msgid "Disable console menu."
 msgstr "Disabilita menu della console."
 
 msgid "Disable file manager."
-msgstr ""
+msgstr "Disattivare file manager"
 
 msgid "Disable firmware version check."
 msgstr "Disabilita il controllo della versione del firmware."
@@ -2755,10 +2755,10 @@ msgstr ""
 "esistenti."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Disabilita il cicalino di sistema all'avvio e allo spegnimento"
 
-msgid "Disable the compression of repeated line."
-msgstr "Disattivare la compressione delle linee ripetute."
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Disabilitato"
@@ -3639,7 +3639,7 @@ msgstr ""
 "al minimo."
 
 msgid "Enable this option to update the CPU microcode on startup."
-msgstr ""
+msgstr "Attivare questa opzione per aggiornare il codice macchina all'avvio"
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Abilita per aderire rigorosamente agli standard DLNA"
@@ -3900,9 +3900,6 @@ msgstr "Errori rilevati durante l'importazione"
 msgid "Event"
 msgstr "Evento"
 
-msgid "Event Selection"
-msgstr "Selezione Eventi"
-
 msgid "Example: pkg install packagename."
 msgstr "Ad esempio: pkg install Nome_Package"
 
@@ -4020,14 +4017,14 @@ msgstr "FTP - Modulo delle esclusioni"
 msgid "FTP - File Transfer"
 msgstr "FTP - Trasferimento file"
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr "Proxy FTP"
 
 msgid "FTP User Information & Status"
 msgstr "FTP Informazioni utente e status"
-
-msgid "FTP events"
-msgstr "Eventi FTP"
 
 msgid "FTP log"
 msgstr "Log di FTP"
@@ -4589,8 +4586,8 @@ msgstr "Indirizzo IP"
 msgid "IP address"
 msgstr "Indirizzo IP"
 
-msgid "IP address of remote syslog server."
-msgstr "Indirizzo IP per syslog server remoto"
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5560,9 +5557,6 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr "Indirizzo mascherato"
 
-msgid "Max Entries"
-msgstr "Entità massima"
-
 msgid "Max. Block Size"
 msgstr "Massima dimensione del blocco"
 
@@ -6249,12 +6243,6 @@ msgstr "Numero di pacchi di batterie"
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Numero di ore trascorse in accensione."
 
-msgid "Number of log entries to show"
-msgstr "Numero di righe di log da mostrare"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "Il numero di log da visualizzare deve essere compreso tra 5 e 1000."
-
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
 "the maximum physical erase cycles the drive is designed to endure."
@@ -6644,7 +6632,7 @@ msgid "Platform OS"
 msgstr "Piattaforma OS"
 
 msgid "Platform and Performance Settings"
-msgstr ""
+msgstr "Settaggio di piattaforma e prestazioni"
 
 msgid "Please add a bridge interface first."
 msgstr "Per favore aggiungere prima una interfaccia bridge"
@@ -7042,11 +7030,11 @@ msgstr "RSYNC Client"
 msgid "RSYNC Client Information & Status"
 msgstr "Informazioni e status del client RSYNC"
 
+msgid "RSYNC Events"
+msgstr ""
+
 msgid "RSYNC client number"
 msgstr "Numero client RSYNC"
-
-msgid "RSYNC events"
-msgstr "Eventi RSYNC"
 
 msgid "RSYNC log"
 msgstr "Log di RSYNC"
@@ -7450,11 +7438,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "Monitoraggio S.M.A.R.T."
-
-msgid "S.M.A.R.T. events"
-msgstr "Eventi S.M.A.R.T."
 
 msgid "S.M.A.R.T. extra options"
 msgstr "opzioni aggiuntive S.M.A.R.T."
@@ -7498,8 +7486,8 @@ msgstr "Moduli SNMP"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "Eventi SSH"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "Log di SSHD"
@@ -7810,14 +7798,32 @@ msgstr "Invio buffer"
 msgid "Send Command!"
 msgstr "Esegui comando!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "Invia Adesso"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "Invia Email di Prova"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Invia email TEST di avvertimento all'avvio"
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "Sensibile"
@@ -8008,6 +8014,9 @@ msgstr "Autocontrollo veloce"
 
 msgid "Show Default Groups"
 msgstr "Mostra il gruppo di default"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Mostra informazioni sul processo"
@@ -8418,6 +8427,9 @@ msgstr "Settaggi del sistema di report via E-Mail"
 msgid "System Email Settings"
 msgstr "Settaggi sistema E-Mail"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "Informazioni di sistema"
 
@@ -8441,9 +8453,6 @@ msgstr "Ora di sistema"
 
 msgid "System Uptime"
 msgstr "Tempo di accensione del sistema"
-
-msgid "System events"
-msgstr "Eventi di sistema"
 
 msgid "System info"
 msgstr "Informazioni di sistema"
@@ -9233,6 +9242,9 @@ msgstr ""
 "Il numero di errori causato da incorretta verifica durante la correzione "
 "degli errori."
 
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
+
 msgid "The old password is not correct."
 msgstr "La vecchia password non è corretta."
 
@@ -9586,6 +9598,10 @@ msgid ""
 "contains a count of parity errors which occur in the data path to the media "
 "via the drive's cache RAM."
 msgstr ""
+"Questo attributo è parte della tecnologia SMART IV della HP: è parte del "
+"sistema di controllo e correzione errori IO di altri produttori e può "
+"contenere un conteggio della parità che si verifica nel percoso dati al "
+"dispositivo via cache del disco."
 
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
@@ -9888,6 +9904,9 @@ msgid ""
 "file system should be casesensitive, caseinsensitive, or allow a combination "
 "of both styles of matching"
 msgstr ""
+"Questa proprietà indica se il nome file è concorde con l'algoritmo usato dal "
+"file system e dovrebbe supportare maiu/minuscole, solo maiuscole o minuscole "
+"o una combinazione di entrambi i sistemi."
 
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
@@ -9929,6 +9948,8 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "impact JPEG serving performance on some DLNA products."
 msgstr ""
+"Questo consentirà un ridimensionamento sul server delle immagini JPEG molto "
+"grandi: questo potrebbe degradare le prestazioni di alcuni software DLNA."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Questo creera' un cestino nella condivisione."
@@ -9959,7 +9980,7 @@ msgstr ""
 "Questo supporterà lo streaming .jpeg e file .mp3 ad un TiVo che supporta HMO."
 
 msgid "Throughput"
-msgstr ""
+msgstr "Banda di trasmissione"
 
 msgid "Thu"
 msgstr "Giovedi"
@@ -10159,13 +10180,14 @@ msgid "Traceroute"
 msgstr "Traceroute"
 
 msgid "Traceroute Host"
-msgstr ""
+msgstr "Host tracciamento percorso"
 
 msgid "Traceroute Output"
-msgstr ""
+msgstr "Risultato del tracciamento percorso"
 
 msgid "Traceroute may take a while, please be patient."
 msgstr ""
+"Il tracciamento percorso potrebbe richiedere del tempo: per favore attendere."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -10185,13 +10207,13 @@ msgid "Transfer mode"
 msgstr "Modalita' di trasferimento"
 
 msgid "Trap Host"
-msgstr ""
+msgstr "Host messaggi"
 
 msgid "Trap Port"
-msgstr ""
+msgstr "Porta messaggi"
 
 msgid "Trap String"
-msgstr ""
+msgstr "Stringa messaggio"
 
 msgid "Trap string."
 msgstr "Trap string."
@@ -10612,6 +10634,8 @@ msgid ""
 "Users will notice a service disruption when trying to access this mount "
 "while the file system check is running."
 msgstr ""
+"L'utente noterà una interruzione del servizio quando cercherà di accedere "
+"questa partizione quando viene eseguito un controllo del file system"
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -10661,6 +10685,8 @@ msgid ""
 "Value is equal to (100-temp. Celsius), allowing manufacturer to set a "
 "minimum threshold which corresponds to a maximum temperature."
 msgstr ""
+"Questo valore è uguale a 100-temp. celsius, consentendo ai produttori di "
+"settare una soglia minima che corrisponde ad una temperatura massima"
 
 msgid "Variable"
 msgstr "Variabile"
@@ -10739,6 +10765,8 @@ msgstr "Volume"
 
 msgid "Volume - A logical volume. Can be exported as a raw or block device."
 msgstr ""
+"Volume - un volume logico. Può essere essere esportato grezzo o come "
+"dispositivo a blocchi"
 
 msgid "Volume Label"
 msgstr "Etichetta volume"
@@ -10769,6 +10797,9 @@ msgid ""
 "starting at number n, Use [n for the rightmost n characters of the device "
 "serial number."
 msgstr ""
+"Etichetta di volume del nuovo file system. Usare % come un contatore o %n "
+"come contatore che parte dal numero n. Usare [n per gli n caratteri più a "
+"destra del seriale del dispositivo."
 
 msgid "Volumes"
 msgstr "Volumi"
@@ -10905,6 +10936,8 @@ msgstr "Dove salvare i dati scaricati"
 
 msgid "Whether compilations should be shown together under Various Artists."
 msgstr ""
+"Indica se le compilations debbano essere indicate assieme sotto la voce "
+"\"Artisti vari\"."
 
 msgid ""
 "Whether scans should be skipped if there are no users connected. This allows "
@@ -11252,3 +11285,39 @@ msgstr "verso"
 
 msgid "umount"
 msgstr "smonta"
+
+#~ msgid "Daemon events"
+#~ msgstr "Eventi dei demoni di sistema"
+
+#~ msgid "FTP events"
+#~ msgstr "Eventi FTP"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Numero di righe di log da mostrare"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "Il numero di log da visualizzare deve essere compreso tra 5 e 1000."
+
+#~ msgid "RSYNC events"
+#~ msgstr "Eventi RSYNC"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "Eventi S.M.A.R.T."
+
+#~ msgid "SSH events"
+#~ msgstr "Eventi SSH"
+
+#~ msgid "System events"
+#~ msgstr "Eventi di sistema"
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "Indirizzo IP per syslog server remoto"
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "Disattivare la compressione delle linee ripetute."
+
+#~ msgid "Event Selection"
+#~ msgstr "Selezione Eventi"
+
+#~ msgid "Max Entries"
+#~ msgstr "Entità massima"

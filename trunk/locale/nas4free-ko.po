@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2017-09-09 03:00+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:41+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -2052,8 +2052,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "데몬"
 
-msgid "Daemon events"
-msgstr "데몬 이벤트"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "데몬 로그"
@@ -2564,8 +2564,8 @@ msgstr "기존 확장 메뉴의 폴더 검색을 비활성화합니다."
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
-msgstr "반복된 줄 압축을 사용하지 않습니다."
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "비활성화됨"
@@ -3640,9 +3640,6 @@ msgstr "불러오는 도중 오류가 발견되었습니다."
 msgid "Event"
 msgstr "이벤트"
 
-msgid "Event Selection"
-msgstr "이벤트 선택"
-
 msgid "Example: pkg install packagename."
 msgstr "예: pkg install 꾸러미이름"
 
@@ -3756,14 +3753,14 @@ msgstr "FTP - Ban Module"
 msgid "FTP - File Transfer"
 msgstr "FTP - File Transfer"
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr "FTP 프록시"
 
 msgid "FTP User Information & Status"
 msgstr "FTP 사용자 정보 및 상태"
-
-msgid "FTP events"
-msgstr "FTP 이벤트"
 
 msgid "FTP log"
 msgstr "FTP 로그"
@@ -4308,8 +4305,8 @@ msgstr "IP 주소"
 msgid "IP address"
 msgstr "IP 주소"
 
-msgid "IP address of remote syslog server."
-msgstr "원격지 syslog 서버의 IP 주소."
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5208,9 +5205,6 @@ msgstr "데이터 읽을 시의 채널 마진. 이 속성의 기능은 정해지
 msgid "Masquerade Address"
 msgstr "Masquerade 주소"
 
-msgid "Max Entries"
-msgstr "최대 항목 수"
-
 msgid "Max. Block Size"
 msgstr "최대 블록 크기"
 
@@ -5873,12 +5867,6 @@ msgstr "베터리 팩 개수"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "전원이 켜진 상태로 소요된 시간 단위 수."
-
-msgid "Number of log entries to show"
-msgstr "보일 로그 항목의 수"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "보일 로그 항목의 수는 5에서 1000 사이여야 합니다."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -6635,11 +6623,11 @@ msgstr "RSYNC 클라이언트"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC 클라이언트 정보 및 상태"
 
+msgid "RSYNC Events"
+msgstr ""
+
 msgid "RSYNC client number"
 msgstr "RSYNC 클라이언트 번호"
-
-msgid "RSYNC events"
-msgstr "RSYNC 이벤트"
 
 msgid "RSYNC log"
 msgstr "RSYNC 로그"
@@ -7025,11 +7013,11 @@ msgstr "이 서비스를 root 로 실행하는 것은 보안상 이유로 권장
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. 감시"
-
-msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T. 이벤트"
 
 msgid "S.M.A.R.T. extra options"
 msgstr "S.M.A.R.T. 추가 옵션"
@@ -7073,8 +7061,8 @@ msgstr "SNMP 모듈"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH 이벤트"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD 로그"
@@ -7364,14 +7352,32 @@ msgstr "송신 버퍼"
 msgid "Send Command!"
 msgstr "명령 보냄!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "지금 보내기"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "테스트 전자우편 보내기"
 
 msgid "Send a TEST warning email on startup."
 msgstr "기동 시 테스트 경보 전자우편 보내기."
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "반응"
@@ -7549,6 +7555,9 @@ msgstr "단기 자체 테스트."
 
 msgid "Show Default Groups"
 msgstr "기본 그룹 보기"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "프로세스 정보 보기"
@@ -7933,6 +7942,9 @@ msgstr "시스템 전자우편 보고 설정"
 msgid "System Email Settings"
 msgstr "시스템 전자우편 설정"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "시스템 정보"
 
@@ -7956,9 +7968,6 @@ msgstr "시스템 시간"
 
 msgid "System Uptime"
 msgstr "시스템 가동 시간"
-
-msgid "System events"
-msgstr "시스템 이벤트"
 
 msgid "System info"
 msgstr "시스템 정보"
@@ -8649,6 +8658,9 @@ msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
 msgstr "오류 수정 중 잘못된 검사합에 의해 발생한 오류의 수."
+
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
 
 msgid "The old password is not correct."
 msgstr "기존 암호가 올바르지 않습니다."
@@ -10478,3 +10490,39 @@ msgstr ""
 
 msgid "umount"
 msgstr "탑재 해제"
+
+#~ msgid "Daemon events"
+#~ msgstr "데몬 이벤트"
+
+#~ msgid "FTP events"
+#~ msgstr "FTP 이벤트"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "보일 로그 항목의 수"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "보일 로그 항목의 수는 5에서 1000 사이여야 합니다."
+
+#~ msgid "RSYNC events"
+#~ msgstr "RSYNC 이벤트"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "S.M.A.R.T. 이벤트"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH 이벤트"
+
+#~ msgid "System events"
+#~ msgstr "시스템 이벤트"
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "반복된 줄 압축을 사용하지 않습니다."
+
+#~ msgid "Event Selection"
+#~ msgstr "이벤트 선택"
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "원격지 syslog 서버의 IP 주소."
+
+#~ msgid "Max Entries"
+#~ msgstr "최대 항목 수"

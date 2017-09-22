@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2017-08-13 16:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:42+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:46+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 
 msgid " interfaces:"
@@ -2175,8 +2175,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Agtergrondproses"
 
-msgid "Daemon events"
-msgstr "Agtergrondproses gebeurtenisse"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Agtergrondproses aanmeldings"
@@ -2699,8 +2699,8 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
-msgstr "Deaktiveer die saampers van herhaalde lyne."
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Deaktiveer"
@@ -3826,9 +3826,6 @@ msgstr ""
 msgid "Event"
 msgstr "Gebeurtenis"
 
-msgid "Event Selection"
-msgstr ""
-
 msgid "Example: pkg install packagename."
 msgstr ""
 
@@ -3946,14 +3943,14 @@ msgstr ""
 msgid "FTP - File Transfer"
 msgstr ""
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr ""
 
 msgid "FTP User Information & Status"
 msgstr ""
-
-msgid "FTP events"
-msgstr "FTP gebeurtenisse"
 
 msgid "FTP log"
 msgstr "FTP aantekeninge"
@@ -4511,8 +4508,8 @@ msgstr "IP Adres"
 msgid "IP address"
 msgstr "IP adres"
 
-msgid "IP address of remote syslog server."
-msgstr "IP adres van afgeleë syslog bediener"
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5457,9 +5454,6 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr ""
 
-msgid "Max Entries"
-msgstr ""
-
 msgid "Max. Block Size"
 msgstr ""
 
@@ -6144,12 +6138,6 @@ msgstr "Hoeveelheid battery pakke"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Hoeveelheid ure verloop in die krag-aan staat."
-
-msgid "Number of log entries to show"
-msgstr "Hoeveelheid aantekeninge om te wys"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "Hoeveelheid aantekeninge om te wys moet tussen 5 en 1000 wees."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -6934,11 +6922,11 @@ msgstr "RSYNC -Klient"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC -Klient Informasie & Status"
 
-msgid "RSYNC client number"
+msgid "RSYNC Events"
 msgstr ""
 
-msgid "RSYNC events"
-msgstr "RSYNC voorval"
+msgid "RSYNC client number"
+msgstr ""
 
 msgid "RSYNC log"
 msgstr "RSYNC register"
@@ -7338,11 +7326,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. Monitering"
-
-msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T. gebeurtenisse"
 
 msgid "S.M.A.R.T. extra options"
 msgstr "S.M.A.R.T. ekstra opsies"
@@ -7386,8 +7374,8 @@ msgstr "SNMP Modules"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH gebeurtenisse"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD register"
@@ -7687,14 +7675,32 @@ msgstr ""
 msgid "Send Command!"
 msgstr "Stuur Bevel!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "Stuur Nou"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "Stuur Toets Epos"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Stuur 'n TOETS waarskuwing epos gedurende aanskakel."
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "Sensitief"
@@ -7880,6 +7886,9 @@ msgstr ""
 
 msgid "Show Default Groups"
 msgstr "Vertoon die Verstek Groepe"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Wys Proses Inligting"
@@ -8288,6 +8297,9 @@ msgstr "Sisteem Epos Verslag Instellings"
 msgid "System Email Settings"
 msgstr "Sisteem Epos Verstellings"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "Sisteem Inligting"
 
@@ -8311,9 +8323,6 @@ msgstr "Stelsel Tyd"
 
 msgid "System Uptime"
 msgstr "Stelsel bedryfstyd"
-
-msgid "System events"
-msgstr "Stelsel gebeure"
 
 msgid "System info"
 msgstr "Stelsel inligting"
@@ -9088,6 +9097,9 @@ msgid ""
 msgstr ""
 "Die aantal foute wat veroorsaak word deur die verkeerde kontrolesom "
 "gedurende fout korrigering."
+
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
 
 msgid "The old password is not correct."
 msgstr "Die ou wagwoord is verkeerd."
@@ -11003,3 +11015,33 @@ msgstr "na"
 
 msgid "umount"
 msgstr ""
+
+#~ msgid "FTP events"
+#~ msgstr "FTP gebeurtenisse"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Hoeveelheid aantekeninge om te wys"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "Hoeveelheid aantekeninge om te wys moet tussen 5 en 1000 wees."
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "S.M.A.R.T. gebeurtenisse"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH gebeurtenisse"
+
+#~ msgid "System events"
+#~ msgstr "Stelsel gebeure"
+
+#~ msgid "Daemon events"
+#~ msgstr "Agtergrondproses gebeurtenisse"
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "Deaktiveer die saampers van herhaalde lyne."
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "IP adres van afgeleë syslog bediener"
+
+#~ msgid "RSYNC events"
+#~ msgstr "RSYNC voorval"

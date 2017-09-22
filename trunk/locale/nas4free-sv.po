@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2017-09-22 03:47+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:42+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:45+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -2159,8 +2159,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Demon"
 
-msgid "Daemon events"
-msgstr "Demonhändelser"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Daemon logg"
@@ -2685,8 +2685,8 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr "Inaktivera högtalarpip vid start och avstängning."
 
-msgid "Disable the compression of repeated line."
-msgstr "Inaktivera komprimering av upprepade rader."
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Inaktiverad"
@@ -3815,9 +3815,6 @@ msgstr "Fel har upptäckts under importen."
 msgid "Event"
 msgstr "Händelse"
 
-msgid "Event Selection"
-msgstr "Val av händelse"
-
 msgid "Example: pkg install packagename."
 msgstr "Exempelvis: pkg install packagename."
 
@@ -3935,14 +3932,14 @@ msgstr "FTP - Svartlistningsmodul"
 msgid "FTP - File Transfer"
 msgstr "FTP - Filöverföring"
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 msgid "FTP User Information & Status"
 msgstr "FTP Användarinformation & status"
-
-msgid "FTP events"
-msgstr "FTP-händelser"
 
 msgid "FTP log"
 msgstr "FTP-logg"
@@ -4498,8 +4495,8 @@ msgstr "IP adress"
 msgid "IP address"
 msgstr "IP-adress"
 
-msgid "IP address of remote syslog server."
-msgstr "IP-adress till extern syslogserver."
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5447,9 +5444,6 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr "Dölj Adress"
 
-msgid "Max Entries"
-msgstr "Mas antal poster"
-
 msgid "Max. Block Size"
 msgstr "Max. blockstorlek"
 
@@ -6131,12 +6125,6 @@ msgstr "Antal batteripack"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Antal timmar i påslaget läge."
-
-msgid "Number of log entries to show"
-msgstr "Antal loggposter att visa"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "Antalet logg-poster att visa måste vara mellan 5 och 1000."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -6918,11 +6906,11 @@ msgstr "RSYNC Klient"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC Klient Information & Status"
 
+msgid "RSYNC Events"
+msgstr ""
+
 msgid "RSYNC client number"
 msgstr "RSYNC klientnummer"
-
-msgid "RSYNC events"
-msgstr "RSYNC-händelser"
 
 msgid "RSYNC log"
 msgstr "RSYNC logg"
@@ -7321,11 +7309,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. övervakning"
-
-msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T.-händelser"
 
 msgid "S.M.A.R.T. extra options"
 msgstr "S.M.A.R.T. extraval"
@@ -7369,8 +7357,8 @@ msgstr "SNMP Moduler"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH händelser"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD logg"
@@ -7675,14 +7663,32 @@ msgstr "Sändbuffert"
 msgid "Send Command!"
 msgstr "Skicka kommando!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "Skicka nu"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "Skicka test e-post"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Skicka ett TEST e-brev under uppstarten."
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "Känslig"
@@ -7867,6 +7873,9 @@ msgstr "Kort självtest"
 
 msgid "Show Default Groups"
 msgstr "Visa standardgrupper"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Visa imformation om processer"
@@ -8276,6 +8285,9 @@ msgstr "System e-postrapportinställningar"
 msgid "System Email Settings"
 msgstr "System e-postinställningar"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "Systeminformation"
 
@@ -8299,9 +8311,6 @@ msgstr "Systemtid"
 
 msgid "System Uptime"
 msgstr "Systemets drifttid"
-
-msgid "System events"
-msgstr "Systemhändelser"
 
 msgid "System info"
 msgstr "Systeminfo"
@@ -9066,6 +9075,9 @@ msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
 msgstr "Antal fel orsakade av felaktig checksumma vid felkorrigeringen."
+
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
 
 msgid "The old password is not correct."
 msgstr "Det gamla lösenordet stämmer ej."
@@ -11075,3 +11087,39 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+#~ msgid "Daemon events"
+#~ msgstr "Demonhändelser"
+
+#~ msgid "FTP events"
+#~ msgstr "FTP-händelser"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Antal loggposter att visa"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "Antalet logg-poster att visa måste vara mellan 5 och 1000."
+
+#~ msgid "RSYNC events"
+#~ msgstr "RSYNC-händelser"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "S.M.A.R.T.-händelser"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH händelser"
+
+#~ msgid "System events"
+#~ msgstr "Systemhändelser"
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "IP-adress till extern syslogserver."
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "Inaktivera komprimering av upprepade rader."
+
+#~ msgid "Event Selection"
+#~ msgstr "Val av händelse"
+
+#~ msgid "Max Entries"
+#~ msgstr "Mas antal poster"

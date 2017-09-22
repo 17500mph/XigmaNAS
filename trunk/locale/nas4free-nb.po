@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: 2017-03-09 19:22+0000\n"
 "Last-Translator: vmwarewolf <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:41+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -2021,8 +2021,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "Tjeneste"
 
-msgid "Daemon events"
-msgstr "Tjenestehendelser"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "Tjenestelogg"
@@ -2529,7 +2529,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
+msgid "Disable the compression of repeating lines."
 msgstr ""
 
 msgid "Disabled"
@@ -3618,9 +3618,6 @@ msgstr ""
 msgid "Event"
 msgstr "Hendelse"
 
-msgid "Event Selection"
-msgstr ""
-
 msgid "Example: pkg install packagename."
 msgstr ""
 
@@ -3737,14 +3734,14 @@ msgstr ""
 msgid "FTP - File Transfer"
 msgstr ""
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr ""
 
 msgid "FTP User Information & Status"
 msgstr ""
-
-msgid "FTP events"
-msgstr "FTP hendelser"
 
 msgid "FTP log"
 msgstr "FTP logg"
@@ -4286,7 +4283,7 @@ msgstr ""
 msgid "IP address"
 msgstr "IP adresse"
 
-msgid "IP address of remote syslog server."
+msgid "IP address of the remote syslog server."
 msgstr ""
 
 msgid ""
@@ -5173,9 +5170,6 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr ""
 
-msgid "Max Entries"
-msgstr ""
-
 msgid "Max. Block Size"
 msgstr ""
 
@@ -5842,12 +5836,6 @@ msgstr ""
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
-
-msgid "Number of log entries to show"
-msgstr "Antall log innslag som skal vises"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "Antall logg-innlegg å vise må være mellom 5 og 1000."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -6609,11 +6597,11 @@ msgstr "RSYNC Klient"
 msgid "RSYNC Client Information & Status"
 msgstr ""
 
-msgid "RSYNC client number"
+msgid "RSYNC Events"
 msgstr ""
 
-msgid "RSYNC events"
-msgstr "RSYNC hendelser"
+msgid "RSYNC client number"
+msgstr ""
 
 msgid "RSYNC log"
 msgstr "RSYNC logg"
@@ -7003,11 +6991,11 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
-msgid "S.M.A.R.T. Monitoring"
+msgid "S.M.A.R.T. Events"
 msgstr ""
 
-msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T. saker"
+msgid "S.M.A.R.T. Monitoring"
+msgstr ""
 
 msgid "S.M.A.R.T. extra options"
 msgstr "S.M.A.R.T. ekstra alternativer"
@@ -7051,8 +7039,8 @@ msgstr "SNMP Moduler"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH saker"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD logg"
@@ -7336,7 +7324,19 @@ msgstr ""
 msgid "Send Command!"
 msgstr "Send kommando!"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
+msgstr ""
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
 msgstr ""
 
 msgid "Send Test Email"
@@ -7344,6 +7344,12 @@ msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "Send en TEST advarsels e-post under oppstart"
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr ""
@@ -7516,6 +7522,9 @@ msgid "Short Self-Test"
 msgstr ""
 
 msgid "Show Default Groups"
+msgstr ""
+
+msgid "Show Log Entries"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7895,6 +7904,9 @@ msgstr ""
 msgid "System Email Settings"
 msgstr ""
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr ""
 
@@ -7918,9 +7930,6 @@ msgstr ""
 
 msgid "System Uptime"
 msgstr ""
-
-msgid "System events"
-msgstr "System hendelser"
 
 msgid "System info"
 msgstr "System info"
@@ -8597,6 +8606,9 @@ msgstr ""
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
+msgstr ""
+
+msgid "The number of log entries to show must be between 5 and 1000."
 msgstr ""
 
 msgid "The old password is not correct."
@@ -10392,3 +10404,27 @@ msgstr ""
 
 msgid "umount"
 msgstr "avmontér"
+
+#~ msgid "Daemon events"
+#~ msgstr "Tjenestehendelser"
+
+#~ msgid "FTP events"
+#~ msgstr "FTP hendelser"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "Antall log innslag som skal vises"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "Antall logg-innlegg å vise må være mellom 5 og 1000."
+
+#~ msgid "RSYNC events"
+#~ msgstr "RSYNC hendelser"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "S.M.A.R.T. saker"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH saker"
+
+#~ msgid "System events"
+#~ msgstr "System hendelser"

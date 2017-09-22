@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
-"PO-Revision-Date: 2017-07-21 01:36+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
+"PO-Revision-Date: 2017-09-22 15:16+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 14:42+0000\n"
+"X-Launchpad-Export-Date: 2017-09-22 22:45+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -1316,7 +1316,7 @@ msgid "CPU Maximum Frequency"
 msgstr "CPU最大頻率"
 
 msgid "CPU Microcode Update"
-msgstr ""
+msgstr "CPU微碼更新"
 
 msgid "CPU Minimum Frequency"
 msgstr "CPU最小頻率"
@@ -1425,7 +1425,7 @@ msgid "Checksum"
 msgstr "校驗"
 
 msgid "Choose File"
-msgstr ""
+msgstr "選擇檔案"
 
 msgid "Choose UPS mode."
 msgstr "請選擇UPS 模式。"
@@ -2011,8 +2011,8 @@ msgstr "DVD"
 msgid "Daemon"
 msgstr "守護進程"
 
-msgid "Daemon events"
-msgstr "守護進程事件"
+msgid "Daemon Events"
+msgstr ""
 
 msgid "Daemon log"
 msgstr "守護進程記錄"
@@ -2504,7 +2504,7 @@ msgid "Disable console menu."
 msgstr "禁止控制臺菜單。"
 
 msgid "Disable file manager."
-msgstr ""
+msgstr "禁用檔案管理器。"
 
 msgid "Disable firmware version check."
 msgstr "禁止固件版本檢查。"
@@ -2513,10 +2513,10 @@ msgid "Disable scanning of folders for existing extension menus."
 msgstr "禁用對現有擴展菜單的檔夾掃描。"
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "禁用揚聲器啟動和關機時發出蜂鳴聲。"
 
-msgid "Disable the compression of repeated line."
-msgstr "禁止對重複行壓縮。"
+msgid "Disable the compression of repeating lines."
+msgstr ""
 
 msgid "Disabled"
 msgstr "關閉"
@@ -3357,7 +3357,7 @@ msgid ""
 msgstr "啟用此選項可將頁眉的高度減小到最小。"
 
 msgid "Enable this option to update the CPU microcode on startup."
-msgstr ""
+msgstr "啟動此選項可在啟動時更新CPU微代碼。"
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "使得能夠嚴格遵守DLNA標準。"
@@ -3589,9 +3589,6 @@ msgstr "導入期間檢測到錯誤。"
 msgid "Event"
 msgstr "事件"
 
-msgid "Event Selection"
-msgstr "事件選擇"
-
 msgid "Example: pkg install packagename."
 msgstr "示例：pkg install packagename。"
 
@@ -3703,14 +3700,14 @@ msgstr "FTP - 禁止模組"
 msgid "FTP - File Transfer"
 msgstr "FTP - 檔傳輸"
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr "FTP 代理"
 
 msgid "FTP User Information & Status"
 msgstr "FTP用戶資訊和狀態"
-
-msgid "FTP events"
-msgstr "FTP 事件"
 
 msgid "FTP log"
 msgstr "FTP 記錄"
@@ -3855,10 +3852,10 @@ msgid "Firmware Check"
 msgstr "固件檢查"
 
 msgid "Firmware Information"
-msgstr ""
+msgstr "固件信息"
 
 msgid "Firmware Selection"
-msgstr ""
+msgstr "固件選擇"
 
 msgid "Firmware Update"
 msgstr "固件升級"
@@ -4250,8 +4247,8 @@ msgstr "IP 地址"
 msgid "IP address"
 msgstr "IP 地址"
 
-msgid "IP address of remote syslog server."
-msgstr "遠程系統日誌伺服器IP地址"
+msgid "IP address of the remote syslog server."
+msgstr ""
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -5140,9 +5137,6 @@ msgstr "讀取數據時通道的餘量。 未指定此屬性的功能。"
 msgid "Masquerade Address"
 msgstr "偽裝地址"
 
-msgid "Max Entries"
-msgstr "最大條目"
-
 msgid "Max. Block Size"
 msgstr "最大塊尺寸"
 
@@ -5803,12 +5797,6 @@ msgstr "電池組的數量"
 msgid "Number of hours elapsed in the power-on state."
 msgstr "在通電狀態下經過的小時數。"
 
-msgid "Number of log entries to show"
-msgstr "顯示記錄的數量"
-
-msgid "Number of log entries to show must be between 5 and 1000."
-msgstr "一次要顯示多少記錄（5-100）"
-
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
 "the maximum physical erase cycles the drive is designed to endure."
@@ -6179,7 +6167,7 @@ msgid "Platform OS"
 msgstr "操作系統平臺"
 
 msgid "Platform and Performance Settings"
-msgstr ""
+msgstr "平台和性能設置"
 
 msgid "Please add a bridge interface first."
 msgstr "請先添加網橋介面。"
@@ -6564,11 +6552,11 @@ msgstr "RSYNC 客戶端"
 msgid "RSYNC Client Information & Status"
 msgstr "RSYNC 客戶端資訊和狀態"
 
+msgid "RSYNC Events"
+msgstr ""
+
 msgid "RSYNC client number"
 msgstr "RSYNC客戶數"
-
-msgid "RSYNC events"
-msgstr "RSYNC 事件"
 
 msgid "RSYNC log"
 msgstr "RSYNC 記錄"
@@ -6954,11 +6942,11 @@ msgstr "出於安全考慮，不建議以root用戶身份運行此服務，請�
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
+msgid "S.M.A.R.T. Events"
+msgstr ""
+
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. 監控"
-
-msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T. 事件"
 
 msgid "S.M.A.R.T. extra options"
 msgstr "S.M.A.R.T. 額外選項"
@@ -7002,8 +6990,8 @@ msgstr "SNMP 模組"
 msgid "SSH"
 msgstr "SSH"
 
-msgid "SSH events"
-msgstr "SSH 事件"
+msgid "SSH Events"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD 記錄"
@@ -7288,14 +7276,32 @@ msgstr "發送緩衝區"
 msgid "Send Command!"
 msgstr "發送命令！"
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
 msgstr "現在發送"
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
+msgstr ""
 
 msgid "Send Test Email"
 msgstr "發送測試電子郵件"
 
 msgid "Send a TEST warning email on startup."
 msgstr "啟動時傳送測試警示電郵。"
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
+msgstr ""
 
 msgid "Sensitive"
 msgstr "敏感"
@@ -7470,6 +7476,9 @@ msgstr "短自檢"
 
 msgid "Show Default Groups"
 msgstr "顯示默認組"
+
+msgid "Show Log Entries"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "顯示進程資訊"
@@ -7849,6 +7858,9 @@ msgstr "系統Email報告設置"
 msgid "System Email Settings"
 msgstr "系統Email設置"
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr "系統資料"
 
@@ -7872,9 +7884,6 @@ msgstr "系統時間"
 
 msgid "System Uptime"
 msgstr "系統運行時間"
-
-msgid "System events"
-msgstr "系統事件"
 
 msgid "System info"
 msgstr "系統資訊"
@@ -8557,6 +8566,9 @@ msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
 msgstr "在錯誤校正期間由不正確的校驗導致的錯誤數。"
+
+msgid "The number of log entries to show must be between 5 and 1000."
+msgstr ""
 
 msgid "The old password is not correct."
 msgstr "舊的密碼不正確。"
@@ -9638,7 +9650,7 @@ msgid ""
 msgstr "使用空白字元來分隔多個主機位置(一個空白即可)。如果你輸入主機名稱，請先設置DNS伺服器。"
 
 msgid "Use as sparse volume (thin provisioning)."
-msgstr ""
+msgstr "用作稀疏卷（精簡配置）。"
 
 msgid "Use different container as root of the tree."
 msgstr "使用不同的容器作為樹的根。"
@@ -10354,3 +10366,39 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸載"
+
+#~ msgid "RSYNC events"
+#~ msgstr "RSYNC 事件"
+
+#~ msgid "S.M.A.R.T. events"
+#~ msgstr "S.M.A.R.T. 事件"
+
+#~ msgid "SSH events"
+#~ msgstr "SSH 事件"
+
+#~ msgid "System events"
+#~ msgstr "系統事件"
+
+#~ msgid "Number of log entries to show must be between 5 and 1000."
+#~ msgstr "一次要顯示多少記錄（5-100）"
+
+#~ msgid "Number of log entries to show"
+#~ msgstr "顯示記錄的數量"
+
+#~ msgid "Daemon events"
+#~ msgstr "守護進程事件"
+
+#~ msgid "Disable the compression of repeated line."
+#~ msgstr "禁止對重複行壓縮。"
+
+#~ msgid "Event Selection"
+#~ msgstr "事件選擇"
+
+#~ msgid "FTP events"
+#~ msgstr "FTP 事件"
+
+#~ msgid "IP address of remote syslog server."
+#~ msgstr "遠程系統日誌伺服器IP地址"
+
+#~ msgid "Max Entries"
+#~ msgstr "最大條目"
