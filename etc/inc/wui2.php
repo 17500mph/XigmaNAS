@@ -1482,6 +1482,11 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
+	public function add_textinfo(string $id,string $title = '',$value) {
+		$ctrl = new HTMLTextInfo2($id,$title,$value);
+		$ctrl->Compose($this);
+		return $this;
+	}
 	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
 		$ctrl = new HTMLTitleLine2($title);
 		$ctrl->SetColSpan($colspan);
