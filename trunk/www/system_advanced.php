@@ -302,6 +302,12 @@ $(window).on("load", function() {
 	$("#powerd").on("click",function(){ powerd_change(); });
 	$("#sysconsaver").on("click",function(){ sysconsaver_change() });
 });
+function enable_change(enable_change) {
+	var endis = !(enable_change);
+	document.iform.pwmax.disabled = endis;
+	document.iform.pwmin.disabled = endis;
+	document.iform.sysconsaverblanktime.disabled = endis;
+}
 function powerd_change() {
 	switch (document.iform.powerd.checked) {
 		case true:
