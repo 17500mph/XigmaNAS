@@ -34,70 +34,209 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 require 'diag_log.inc';
+require 'co_sphere.php';
+require_once 'properties_diag_log_settings.php';
 
+function get_sphere_diag_log_settings() {
+	global $config;
+	$sphere = new co_sphere_row('diag_log_settings','php');
+	$sphere->grid = &array_make_branch($config,'syslogd');
+	array_make_branch($config,'syslogd','remote');
+	return $sphere;
+}
+//	init properties and sphere
+$property = new properties_diag_log_settings();
+$sphere = &get_sphere_diag_log_settings();
+unset($input_errors);
+
+//	request method
+$server_request_method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/^POST$/']]);
+//	determine page mode
+$page_mode = PAGE_MODE_VIEW;
+switch($server_request_method):
+	case 'POST':
+		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => '/^(edit|save)$/']]);
+		switch($action):
+			case 'edit':
+				$page_mode = PAGE_MODE_EDIT;
+				break;
+			case 'save':
+				$page_mode = PAGE_MODE_POST;
+				break;
+		endswitch;
+		break;
+endswitch;
+switch($page_mode):
+	case PAGE_MODE_VIEW:
+	case PAGE_MODE_EDIT:
+		$sphere->row['reverse'] = $property->reverse->validate_config($sphere->grid);
+		$sphere->row['nentries'] = $property->nentries->validate_array_element($sphere->grid) ?? $property->nentries->get_defaultvalue();
+		$sphere->row['resolve'] = $property->resolve->validate_config($sphere->grid);
+		$sphere->row['disablecomp'] = $property->disablecomp->validate_config($sphere->grid);
+		$sphere->row['disablesecure'] = $property->disablesecure->validate_config($sphere->grid);
+		$sphere->row['enable'] = $property->enable->validate_config($sphere->grid['remote']);
+		$sphere->row['ipaddr'] = $property->ipaddr->validate_array_element($sphere->grid['remote']) ?? $property->ipaddr->get_defaultvalue();
+		$sphere->row['daemon'] = $property->daemon->validate_config($sphere->grid['remote']);
+		$sphere->row['ftp'] = $property->ftp->validate_config($sphere->grid['remote']);
+		$sphere->row['rsyncd'] = $property->rsyncd->validate_config($sphere->grid['remote']);
+		$sphere->row['smartd'] = $property->smartd->validate_config($sphere->grid['remote']);
+		$sphere->row['sshd'] = $property->sshd->validate_config($sphere->grid['remote']);
+		$sphere->row['system'] = $property->system->validate_config($sphere->grid['remote']);
+		break;
+	case PAGE_MODE_POST:
+		$sphere->row['reverse'] = $property->reverse->validate_input();
+		$sphere->row['nentries'] = $property->nentries->validate_input();
+		if(is_null($sphere->row['nentries'])):
+			$input_errors[] = $property->nentries->get_message_error();
+			$sphere->row['nentries'] = $_POST['nentries'];
+		endif;
+		$sphere->row['resolve'] = $property->resolve->validate_input();
+		$sphere->row['disablecomp'] = $property->disablecomp->validate_input();
+		$sphere->row['disablesecure'] = $property->disablesecure->validate_input();
+		$sphere->row['enable'] = $property->enable->validate_input();
+		$sphere->row['ipaddr'] = $property->ipaddr->validate_input();
+		if(is_null($sphere->row['ipaddr'])):
+			if($sphere->row['enable']):
+				$input_errors[] = $property->ipaddr->getmessage_error();
+			endif;
+			$sphere->row['ipaddr'] = $_POST['ipaddr'];
+		endif;
+		$sphere->row['daemon'] = $property->daemon->validate_input();
+		$sphere->row['ftp'] = $property->ftp->validate_input();
+		$sphere->row['rsyncd'] = $property->rsyncd->validate_input();
+		$sphere->row['smartd'] = $property->smartd->validate_input();
+		$sphere->row['sshd'] = $property->sshd->validate_input();
+		$sphere->row['system'] = $property->system->validate_input();
+		if(empty($input_errors)):
+			$sphere->grid['reverse'] = $sphere->row['reverse'];
+			$sphere->grid['nentries'] = $sphere->row['nentries'];
+			$sphere->grid['resolve'] = $sphere->row['resolve'];
+			$sphere->grid['disablecomp'] = $sphere->row['disablecomp'];
+			$sphere->grid['disablesecure'] = $sphere->row['disablesecure'];
+			$sphere->grid['remote']['enable'] = $sphere->row['enable'];
+			$sphere->grid['remote']['ipaddr'] = $sphere->row['ipaddr'];
+			$sphere->grid['remote']['system'] = $sphere->row['system'];
+			$sphere->grid['remote']['ftp'] = $sphere->row['ftp'];
+			$sphere->grid['remote']['rsyncd'] = $sphere->row['rsyncd'];
+			$sphere->grid['remote']['sshd'] = $sphere->row['sshd'];
+			$sphere->grid['remote']['smartd'] = $sphere->row['smartd'];
+			$sphere->grid['remote']['daemon'] = $sphere->row['daemon'];
+			write_config();
+			$retval = 0;
+			if(!file_exists($d_sysrebootreqd_path)):
+				config_lock();
+				$retval = rc_restart_service('syslogd');
+				config_unlock();
+			endif;
+			$savemsg = get_std_save_message($retval);
+			$page_mode = PAGE_MODE_VIEW;
+		else:
+			$page_mode = PAGE_MODE_EDIT;
+		endif;
+		break;
+endswitch;
 $pgtitle = [gtext('Diagnostics'),gtext('Log'),gtext('Settings')];
-
-$pconfig['reverse']  = isset($config['syslogd']['reverse']);
-$pconfig['nentries'] = $config['syslogd']['nentries'];
-$pconfig['resolve']  = isset($config['syslogd']['resolve']);
-$pconfig['disablecomp'] = isset($config['syslogd']['disablecomp']);
-$pconfig['disablesecure'] = isset($config['syslogd']['disablesecure']);
-if (!empty($config['syslogd']['remote']) && is_array($config['syslogd']['remote'])) {
-	$pconfig['enable'] = isset($config['syslogd']['remote']['enable']);
-	$pconfig['ipaddr'] = $config['syslogd']['remote']['ipaddr'];
-	$pconfig['daemon'] = isset($config['syslogd']['remote']['daemon']);
-	$pconfig['ftp']    = isset($config['syslogd']['remote']['ftp']);
-	$pconfig['rsyncd'] = isset($config['syslogd']['remote']['rsyncd']);
-	$pconfig['smartd'] = isset($config['syslogd']['remote']['smartd']);
-	$pconfig['sshd']   = isset($config['syslogd']['remote']['sshd']);
-	$pconfig['system'] = isset($config['syslogd']['remote']['system']);
-}
-
-if (!$pconfig['nentries'])
-	$pconfig['nentries'] = 50;
-
-if ($_POST) {
-	unset($input_errors);
-	$pconfig = $_POST;
-
-	/* input validation */
-	if (isset($_POST['enable']) && $_POST['enable'] && !is_ipaddr($_POST['ipaddr'])) {
-		$input_errors[] = gtext("A valid IP address must be specified.");
-	}
-	if (($_POST['nentries'] < 5) || ($_POST['nentries'] > 1000)) {
-		$input_errors[] = gtext("Number of log entries to show must be between 5 and 1000.");
-	}
-
-	if (empty($input_errors)) {
-		$config['syslogd']['reverse'] = isset($_POST['reverse']) ? true : false;
-		$config['syslogd']['nentries'] = (int)$_POST['nentries'];
-		$config['syslogd']['resolve'] = isset($_POST['resolve']) ? true : false;
-		$config['syslogd']['disablecomp'] = isset($_POST['disablecomp']) ? true : false;
-		$config['syslogd']['disablesecure'] = isset($_POST['disablesecure']) ? true : false;
-		$config['syslogd']['remote']['enable'] = isset($_POST['enable']) ? true : false;
-		$config['syslogd']['remote']['ipaddr'] = $_POST['ipaddr'];
-		$config['syslogd']['remote']['system'] = isset($_POST['system']) ? true : false;
-		$config['syslogd']['remote']['ftp'] = isset($_POST['ftp']) ? true : false;
-		$config['syslogd']['remote']['rsyncd'] = isset($_POST['rsyncd']) ? true : false;
-		$config['syslogd']['remote']['sshd'] = isset($_POST['sshd']) ? true : false;
-		$config['syslogd']['remote']['smartd'] = isset($_POST['smartd']) ? true : false;
-		$config['syslogd']['remote']['daemon'] = isset($_POST['daemon']) ? true : false;
-
-		write_config();
-
-		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
-			config_lock();
-			$retval = rc_restart_service("syslogd");
-			config_unlock();
-		}
-		$savemsg = get_std_save_message($retval);
-	}
-}
+include 'fbegin.inc';
+switch($page_mode):
+//	****************************************************************************
+	case PAGE_MODE_VIEW:
+//	****************************************************************************
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+$(window).on("load", function() {
+<?php	// Init spinner onsubmit() ?>
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+});
+//]]>
+</script>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+<?php
+		$node = new co_DOMDocument();
+		$node->
+			add_nav_record('diag_log.php',gtext('Log'))->
+			add_nav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true)->
+			render();
+?>
+	</ul></td></tr>
+</tbody></table>
+<form action="diag_log_settings.php" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($input_errors)):
+		 print_input_errors($input_errors);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	$node = new co_DOMDocument();
+
+	$table1 = $node->add_table(['class' => 'area_data_settings']);
+	$table1->add_colgroup_data_settings();
+	$thead1 = $table1->add_thead();
+	$tbody1 = $table1->add_tbody();
+	
+	$thead1->
+		add_titleline(gtext('Log Settings'));
+	
+	$tbody1->
+		add_checkbox($property->reverse,$sphere->row['reverse'],false,true)->
+		add_input($property->nentries,htmlspecialchars($sphere->row['nentries']),false,true,4)->
+		add_checkbox($property->resolve,$sphere->row['resolve'],false,true)->
+		add_checkbox($property->disablecomp,$sphere->row['disablecomp'],false,true)->
+		add_checkbox($property->disablesecure,$sphere->row['disablesecure'],false,true);
+	
+	$table2 = $node->add_table(['class' => 'area_data_settings']);
+	$table2->add_colgroup_data_settings();
+	$thead2 = $table2->add_thead();
+	$tbody2 = $table2->add_tbody();
+
+	$thead2->
+		add_separator()->
+		add_titleline($property->enable->get_title());
+
+	$tbody2->
+		add_textinfo($property->enable->get_id(),gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'))->
+		add_input($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,true,39)->
+		add_checkbox($property->system,$sphere->row['system'],false,true)->
+		add_checkbox($property->ftp,$sphere->row['ftp'],false,true)->
+		add_checkbox($property->rsyncd,$sphere->row['rsyncd'],false,true)->
+		add_checkbox($property->sshd,$sphere->row['sshd'],false,true)->
+		add_checkbox($property->smartd,$sphere->row['smartd'],false,true)->
+		add_checkbox($property->daemon,$sphere->row['daemon'],false,true);
+	$node->render();
+?>
+	<div id="submit">
+<?php
+		echo $sphere->html_button('edit',gtext('Edit'));
+?>
+	</div>
+	<div id="remarks">
+<?php
+		html_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
+?>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+		break;
+//	****************************************************************************
+	case PAGE_MODE_EDIT:
+//	****************************************************************************
+?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+<?php	// Init spinner onsubmit() ?>
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+<?php	// Init click events ?>
+	$("#enable").on("click",function() { enable_change(false) });
+	$("#button_save").on("click",function() { enable_change(true) });
+});
 function enable_change(enable_change) {
 	var endis = !(document.iform.enable.checked || enable_change);
 	document.iform.ipaddr.disabled = endis;
@@ -108,100 +247,86 @@ function enable_change(enable_change) {
 	document.iform.smartd.disabled = endis;
 	document.iform.daemon.disabled = endis;
 }
-// -->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_log.php"><span><?=gtext("Log");?></span></a></li>
-				<li class="tabact"><a href="diag_log_settings.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-<tr>
-    <td class="tabcont">
-			<form action="diag_log_settings.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-			<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			<?php html_titleline(gtext("Log Settings"));?>
-		   <tr>
-		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gtext("Log Order");?></td>
-			<td width="78%" class="vtable">
-			<input name="reverse" type="checkbox" id="reverse" value="yes" <?php if (!empty($pconfig['reverse'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("Show log entries in reverse order (newest entries on top).");?>
-		   </td>
-		</tr>
-	        <tr>
-		<td width="22%" valign="top" class="vncell"><?=gtext("Max Entries");?></td>
-		<td width="78%" class="vtable">
-			<?=gtext("Number of log entries to show");?>:
-			<input name="nentries" id="nentries" type="text" class="formfld" size="4" value="<?=htmlspecialchars($pconfig['nentries']);?>" /></td>
-		   </tr>
-		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gtext("Resolve IP");?></td>
-			<td width="78%" class="vtable">
-			<input name="resolve" type="checkbox" id="resolve" value="yes" <?php if (!empty($pconfig['resolve'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("Resolve IP addresses to hostnames.");?><br />
-			<?php
-			echo gtext('Hint'), ': ', gtext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'), '<br><font color="red">', gtext('Warning'), '</font>: ', gtext('This can cause a huge delay in loading the log page!');
-			?>
-		   </td>
-		</tr>
-		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gtext("Compression");?></td>
-			<td width="78%" class="vtable">
-			<input name="disablecomp" type="checkbox" id="disablecomp" value="yes" <?php if (!empty($pconfig['disablecomp'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("Disable the compression of repeated line.");?></td>
-		   </tr>
-		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gtext("Remote Syslog Messages");?></td>
-			<td width="78%" class="vtable">
-			<input name="disablesecure" type="checkbox" id="disablesecure" value="yes" <?php if (!empty($pconfig['disablesecure'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("Accept remote syslog messages.");?></td>
-			<?php html_separator();?>
-		   </tr>
-		<tr>
-			<?php html_titleline_checkbox("enable", gtext("Remote Syslog Server"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-			<td width="22%" valign="top" class="vncell"><?=gtext("IP Address");?></td>
-			<td width="78%" class="vtable">
-			<input name="ipaddr" id="ipaddr" type="text" class="formfld" size="17" value="<?=htmlspecialchars($pconfig['ipaddr']);?>" />
-			<br /><?=gtext("IP address of remote syslog server.");?>
-		   </tr>
-		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gtext("Event Selection");?></td>
-			<td width="78%" class="vtable">
-			<input name="system" id="system" type="checkbox" value="yes" <?php if (!empty($pconfig['system'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("System events");?><br />
-			<input name="ftp" id="ftp" type="checkbox" value="yes" <?php if (!empty($pconfig['ftp'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("FTP events");?><br />
-			<input name="rsyncd" id="rsyncd" type="checkbox" value="yes" <?php if (!empty($pconfig['rsyncd'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("RSYNC events");?><br />
-			<input name="sshd" id="sshd" type="checkbox" value="yes" <?php if (!empty($pconfig['sshd'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("SSH events");?><br />
-			<input name="smartd" id="smartd" type="checkbox" value="yes" <?php if (!empty($pconfig['smartd'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("S.M.A.R.T. events");?><br />
-			<input name="daemon" id="daemon" type="checkbox" value="yes" <?php if (!empty($pconfig['daemon'])) echo "checked=\"checked\""; ?> />
-			<?=gtext("Daemon events");?><br />
-		   </td>
-		</tr>
-	</table>
-		<div id="submit">
-			<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
-			</div>
-			<div id="remarks">
-			<?php html_remark("note", gtext("Note"), sprintf(gtext("Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.")));?>
-			</div>
-			<?php include 'formend.inc';?>
-		   </form>
-		</td>
-	</tr>
-</table>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+<?php
+		$node = new co_DOMDocument();
+		$node->
+			add_nav_record('diag_log.php',gtext('Log'))->
+			add_nav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true)->
+			render();
+?>
+	</ul></td></tr>
+</tbody></table>
+<form action="diag_log_settings.php" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($input_errors)):
+		 print_input_errors($input_errors);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	$node = new co_DOMDocument();
+
+	$table1 = $node->add_table(['class' => 'area_data_settings']);
+	$table1->add_colgroup_data_settings();
+	$thead1 = $table1->add_thead();
+	$tbody1 = $table1->add_tbody();
+	
+	$thead1->
+		add_titleline(gtext('Log Settings'));
+	
+	$tbody1->
+		add_checkbox($property->reverse,$sphere->row['reverse'])->
+		add_input($property->nentries,htmlspecialchars($sphere->row['nentries']),false,false,4)->
+		add_checkbox($property->resolve,$sphere->row['resolve'])->
+		add_checkbox($property->disablecomp,$sphere->row['disablecomp'])->
+		add_checkbox($property->disablesecure,$sphere->row['disablesecure']);
+
+	$table2 = $node->add_table(['class' => 'area_data_settings']);
+	$table2->add_colgroup_data_settings();
+	$thead2 = $table2->add_thead();
+	$tbody2 = $table2->add_tbody();
+
+	$thead2->
+		add_separator()->
+		add_titleline_checkbox($property->enable,$sphere->row['enable']);
+
+	$tbody2->
+		add_input($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,false,39)->
+		add_checkbox($property->system,$sphere->row['system'])->
+		add_checkbox($property->ftp,$sphere->row['ftp'])->
+		add_checkbox($property->rsyncd,$sphere->row['rsyncd'])->
+		add_checkbox($property->sshd,$sphere->row['sshd'])->
+		add_checkbox($property->smartd,$sphere->row['smartd'])->
+		add_checkbox($property->daemon,$sphere->row['daemon']);
+	$node->render();
+?>
+	<div id="submit">
+<?php
+		echo $sphere->html_button('save',gtext('Apply'));
+		echo $sphere->html_button('cancel',gtext('Cancel'));
+?>
+	</div>
+	<div id="remarks">
+<?php
+		html_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
+?>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
 <script type="text/javascript">
-<!--
+//<![CDATA[
 enable_change(false);
-//-->
+//]]>
 </script>
-<?php include 'fend.inc';?>
+<?php
+		break;
+//	****************************************************************************
+endswitch;
+include 'fend.inc';
+?>
