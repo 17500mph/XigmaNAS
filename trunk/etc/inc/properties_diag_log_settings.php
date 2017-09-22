@@ -234,7 +234,7 @@ class properties_diag_log_settings {
 		$o->set_name('ipaddr');
 		$o->set_title(gtext('IP Address'));
 		$o->set_description(gtext('IP address of the remote syslog server.'));
-		$o->set_defaultvalue('127.0.0.1');
+		$o->set_defaultvalue('');
 		$o->set_filter(FILTER_VALIDATE_IP);
 		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
 		$o->set_filter_options(['default' => NULL]);
