@@ -4,14 +4,14 @@
 # Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# $FreeBSD: head/sysutils/devcpu-data/files/microcode_update.in 340872 2014-01-24 00:14:07Z mat $
+# CPU microcode update
 #
 
 # PROVIDE:	microcode_update
 # REQUIRE:	root mountcritlocal
 # KEYWORD:	nojail
 # XQUERY: -i "count(//system/microcode_update) > 0" -o "0" -b
-# RCVAR: microcode_update_enable
+# RCVAR: microcode_update
 
 #
 # Add the following line to /etc/rc.conf to enable flow-capture:
