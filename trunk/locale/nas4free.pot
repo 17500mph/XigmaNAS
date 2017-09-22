@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-09-21 23:35+0000\n"
+"POT-Creation-Date: 2017-09-23 00:12+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1801,7 +1801,7 @@ msgstr ""
 msgid "Daemon"
 msgstr ""
 
-msgid "Daemon events"
+msgid "Daemon Events"
 msgstr ""
 
 msgid "Daemon log"
@@ -2281,7 +2281,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line."
+msgid "Disable the compression of repeating lines."
 msgstr ""
 
 msgid "Disabled"
@@ -3302,9 +3302,6 @@ msgstr ""
 msgid "Event"
 msgstr ""
 
-msgid "Event Selection"
-msgstr ""
-
 msgid "Example: pkg install packagename."
 msgstr ""
 
@@ -3410,13 +3407,13 @@ msgstr ""
 msgid "FTP - File Transfer"
 msgstr ""
 
+msgid "FTP Events"
+msgstr ""
+
 msgid "FTP Proxy"
 msgstr ""
 
 msgid "FTP User Information & Status"
-msgstr ""
-
-msgid "FTP events"
 msgstr ""
 
 msgid "FTP log"
@@ -3935,7 +3932,7 @@ msgstr ""
 msgid "IP address"
 msgstr ""
 
-msgid "IP address of remote syslog server."
+msgid "IP address of the remote syslog server."
 msgstr ""
 
 msgid "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -4738,9 +4735,6 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr ""
 
-msgid "Max Entries"
-msgstr ""
-
 msgid "Max. Block Size"
 msgstr ""
 
@@ -5376,12 +5370,6 @@ msgid "Number of battery packs"
 msgstr ""
 
 msgid "Number of hours elapsed in the power-on state."
-msgstr ""
-
-msgid "Number of log entries to show"
-msgstr ""
-
-msgid "Number of log entries to show must be between 5 and 1000."
 msgstr ""
 
 msgid "Number of physical erase cycles completed on the drive as a percentage of the maximum physical erase cycles the drive is designed to endure."
@@ -6105,10 +6093,10 @@ msgstr ""
 msgid "RSYNC Client Information & Status"
 msgstr ""
 
-msgid "RSYNC client number"
+msgid "RSYNC Events"
 msgstr ""
 
-msgid "RSYNC events"
+msgid "RSYNC client number"
 msgstr ""
 
 msgid "RSYNC log"
@@ -6484,10 +6472,10 @@ msgstr ""
 msgid "S.M.A.R.T."
 msgstr ""
 
-msgid "S.M.A.R.T. Monitoring"
+msgid "S.M.A.R.T. Events"
 msgstr ""
 
-msgid "S.M.A.R.T. events"
+msgid "S.M.A.R.T. Monitoring"
 msgstr ""
 
 msgid "S.M.A.R.T. extra options"
@@ -6532,7 +6520,7 @@ msgstr ""
 msgid "SSH"
 msgstr ""
 
-msgid "SSH events"
+msgid "SSH Events"
 msgstr ""
 
 msgid "SSHD log"
@@ -6798,13 +6786,31 @@ msgstr ""
 msgid "Send Command!"
 msgstr ""
 
+msgid "Send FTP event messages."
+msgstr ""
+
 msgid "Send Now"
+msgstr ""
+
+msgid "Send RSYNC event messages."
+msgstr ""
+
+msgid "Send S.M.A.R.T. event messages."
+msgstr ""
+
+msgid "Send SSH event messages."
 msgstr ""
 
 msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
+msgstr ""
+
+msgid "Send daemon event messages."
+msgstr ""
+
+msgid "Send system event messages."
 msgstr ""
 
 msgid "Sensitive"
@@ -6968,6 +6974,9 @@ msgid "Short Self-Test"
 msgstr ""
 
 msgid "Show Default Groups"
+msgstr ""
+
+msgid "Show Log Entries"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7316,6 +7325,9 @@ msgstr ""
 msgid "System Email Settings"
 msgstr ""
 
+msgid "System Events"
+msgstr ""
+
 msgid "System Information"
 msgstr ""
 
@@ -7338,9 +7350,6 @@ msgid "System Time"
 msgstr ""
 
 msgid "System Uptime"
-msgstr ""
-
-msgid "System events"
 msgstr ""
 
 msgid "System info"
@@ -7926,6 +7935,9 @@ msgid "The network '%s' is invalid."
 msgstr ""
 
 msgid "The number of errors caused by incorrect checksum during the error correction."
+msgstr ""
+
+msgid "The number of log entries to show must be between 5 and 1000."
 msgstr ""
 
 msgid "The old password is not correct."
