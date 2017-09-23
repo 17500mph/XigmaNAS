@@ -1497,6 +1497,13 @@ trait co_DOMTools {
 	public function add_nav_upper() {
 		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav']);
 	}
+/**
+ *	Creates tags for lower navigation menu 
+ *	@return DOMNode
+ */
+	public function add_nav_lower() {
+		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav2']);
+	}
 	//	settings basics macros
 	public function add_colgroup_data_settings() {
 		$ctrl = $this->add_colgroup();
