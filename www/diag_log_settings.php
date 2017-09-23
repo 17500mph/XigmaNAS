@@ -163,17 +163,15 @@ $(window).on("load", function() {
 });
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
 <?php
-		$node = new co_DOMDocument();
-		$node->
-			add_nav_record('diag_log.php',gtext('Log'))->
-			add_nav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true)->
-			render();
+$node = new co_DOMDocument();
+$nav = $node->add_nav_table();
+$nav->
+	add_nav_upper()->
+	add_nav_record('diag_log.php',gtext('Log'))->
+	add_nav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true);
+$node->render();
 ?>
-	</ul></td></tr>
-</tbody></table>
 <form action="diag_log_settings.php" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($input_errors)):
@@ -226,7 +224,7 @@ $(window).on("load", function() {
 	</div>
 	<div id="remarks">
 <?php
-		html_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
+		html_remark2('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
 ?>
 	</div>
 <?php
@@ -324,7 +322,7 @@ function enable_change(enable_change) {
 	</div>
 	<div id="remarks">
 <?php
-		html_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
+		html_remark2('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
 ?>
 	</div>
 <?php
