@@ -1447,59 +1447,64 @@ trait co_DOMTools {
 		$node->appendChild($cdata);
 		return $node;
 	}
-	//	tags
+	//	tag fragments
 	public function add_col(array $attributes = []) {
-		$this_return = $this->addElement('col',$attributes);
-		return $this_return;
+		return $this->addElement('col',$attributes);
 	}
 	public function add_colgroup(array $attributes = []) {
-		$this_return = $this->addElement('colgroup',$attributes);
-		return $this_return;
+		return($this->addElement('colgroup',$attributes));
 	}
 	public function add_table(array $attributes = []) {
-		$this_return = $this->addElement('table',$attributes);
-		return $this_return;
+		return $this->addElement('table',$attributes);
 	}
 	public function add_tbody(array $attributes = []) {
-		$this_return = $this->addElement('tbody',$attributes);
-		return $this_return;
+		return $this->addElement('tbody',$attributes);
 	}
 	public function add_thead(array $attributes = []) {
-		$this_return = $this->addElement('thead',$attributes);
-		return $this_return;
+		return $this->addElement('thead',$attributes);
 	}
-	//	macros
+	//	navigator menu fragments and macros
+/**
+ *	Adds a menu item to the navigation menu
+ *	@param string $href Link to script
+ *	@param string $value Name of the menu item
+ *	@param string $title Title of the menu item
+ *	@param bool $active Flag to indicate an active menu item
+ *	@return DOMNode
+ */
+	public function add_nav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
+		$attributes = [];
+		if(preg_match('/\S/',$href)):
+			$attributes['href'] = $href;
+		endif;
+		if(preg_match('/\S/',$title)):
+			$attributes['title'] = $title;
+		endif;
+		$this->addElement('li',['class' => $active ? 'tabact' : 'tabinact'])->addElement('a',$attributes)->addElement('span',[],$value);
+		return $this;
+	}
+/**
+ *	Creates necessary tags for navigator menu
+ *	@return DOMNode
+ */
+	public function add_nav_table() {
+		return $this->add_table(['id' => 'area_navigator'])->add_tbody();
+	}
+/**
+ *	Creates tags for upper navigation menu 
+ *	@return DOMNode
+ */
+	public function add_nav_upper() {
+		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav']);
+	}
+	//	settings basics macros
 	public function add_colgroup_data_settings() {
 		$ctrl = $this->add_colgroup();
 		$ctrl->add_col(['class' => 'area_data_settings_col_tag']);
 		$ctrl->add_col(['class' => 'area_data_settings_col_data']);
 		return $this;
 	}
-	public function add_separator($colspan = 2,$ctrlname = '') {
-		$ctrl = new HTMLSeparator2();
-		$ctrl->SetColSpan($colspan);
-		$ctrl->SetCtrlName($ctrlname);
-		$ctrl->Compose($this);
-		return $this;
-	}
-	public function add_textinfo(string $id,string $title = '',$value) {
-		$ctrl = new HTMLTextInfo2($id,$title,$value);
-		$ctrl->Compose($this);
-		return $this;
-	}
-	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
-		$ctrl = new HTMLTitleLine2($title);
-		$ctrl->SetColSpan($colspan);
-		$ctrl->SetCtrlName($ctrlname);
-		$ctrl->Compose($this);
-		return $this;
-	}
-	public function add_titleline_checkbox(properties $p,$value,int $colspan = 2) {
-		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
-		$ctrl->SetColSpan($colspan);
-		$ctrl->Compose($this);
-		return $this;
-	}
+	//	settings elements
 	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
 		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption(),$p->get_description());
 		$ctrl->SetRequired($required);
@@ -1534,16 +1539,29 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_nav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
-		$class = $active ? 'tabact' : 'tabinact';
-		$attributes = [];
-		if(preg_match('/\S/',$href)):
-			$attributes['href'] = $href;
-		endif;
-		if(preg_match('/\S/',$title)):
-			$attributes['title'] = $title;
-		endif;
-		$this->addElement('li',['class' => $class])->addElement('a',$attributes)->addElement('span',[],$value);
+	public function add_separator($colspan = 2,$ctrlname = '') {
+		$ctrl = new HTMLSeparator2();
+		$ctrl->SetColSpan($colspan);
+		$ctrl->SetCtrlName($ctrlname);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_textinfo(string $id,string $title = '',$value) {
+		$ctrl = new HTMLTextInfo2($id,$title,$value);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
+		$ctrl = new HTMLTitleLine2($title);
+		$ctrl->SetColSpan($colspan);
+		$ctrl->SetCtrlName($ctrlname);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_titleline_checkbox(properties $p,$value,int $colspan = 2) {
+		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
+		$ctrl->SetColSpan($colspan);
+		$ctrl->Compose($this);
 		return $this;
 	}
 }
