@@ -135,6 +135,18 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
+//	determine final page mode
+switch($page_mode):
+	case PAGE_MODE_EDIT:
+		break;
+	default:
+		if(isset($config['system']['skipviewmode']) && (is_bool($config['system']['skipviewmode']) ? $config['system']['skipviewmode'] : true)):
+			$page_mode = PAGE_MODE_EDIT;
+		else:
+			$page_mode = PAGE_MODE_VIEW;
+		endif;
+		break;
+endswitch;
 $pgtitle = [gtext('Diagnostics'),gtext('Log'),gtext('Settings')];
 include 'fbegin.inc';
 switch($page_mode):
