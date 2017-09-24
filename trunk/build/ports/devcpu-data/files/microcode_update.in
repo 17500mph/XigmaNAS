@@ -64,7 +64,7 @@ load_rc_config $name
 
 # Set default values
 : ${microcode_update_enable="NO"}
-: ${microcode_update_datadir="%%DATADIR%%"}
+: ${microcode_update_datadir="/usr/local/share/cpucontrol"}
 : ${microcode_cpus="ALL"}
 
 run_rc_command "$1"
