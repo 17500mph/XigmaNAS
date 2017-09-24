@@ -15,19 +15,19 @@ $GLOBALS["unzipable_ext"]=array(
 );
 //------------------------------------------------------------------------------
 // image files:
-$GLOBALS["images_ext"]="\.png$|\.bmp$|\.jpg$|\.jpeg$|\.gif$";
+$GLOBALS["images_ext"]="\.png$|\.bmp$|\.jpg$|\.jpeg$|\.gif$|\.tif$";
 //------------------------------------------------------------------------------
 // mime types: (description,image,extension,type)
 $GLOBALS["super_mimes"]=array(
 	// dir, exe, file
-	"dir"	=> array($GLOBALS["mimes"]["dir"],		"filetypes/folder_2.png",		"",													"dir"),
+	"dir"	=> array($GLOBALS["mimes"]["dir"],		"filetypes/folder_2.png",		"",							"dir"),
 	"exe"	=> array($GLOBALS["mimes"]["exe"],		"exe.gif",						"\.exe$|\.com$|\.bin$","",							"exe"),
 	"file"	=> array($GLOBALS["mimes"]["file"],		"filetypes/icon_generic.gif",	"",													"file"),
 	"link"	=> array($GLOBALS["mimes"]["link"],		"filetypes/icon_generic.gif",	"",													"link")
 );
 $GLOBALS["used_mime_types"]=array(
 	// text
-	"text"	=> array($GLOBALS["mimes"]["text"],		"filetypes/document-text.png",	"\.txt$|\.htaccess$",								"text"),
+	"text"	=> array($GLOBALS["mimes"]["text"],		"filetypes/document-text.png",	"\.txt$|\.htaccess$|\.plexignore$",					"text"),
 	
 	// programming
 	"php"	=> array($GLOBALS["mimes"]["php"],		"filetypes/page_white_php.png",	"\.php$|\.php3$|\.phtml$|\.inc$|\.dxs$|\.uni$",		"php"),
@@ -38,8 +38,8 @@ $GLOBALS["used_mime_types"]=array(
 	"js"	=> array($GLOBALS["mimes"]["js"],		"filetypes/icon_js.gif",		"\.js$",											"js"),
 	"css"	=> array($GLOBALS["mimes"]["css"],		"src.gif",						"\.css$",											"css"),
 	"cgi"	=> array($GLOBALS["mimes"]["cgi"],		"exe.gif",						"\.cgi$",											"cgi"),
-	//"py"	=> array($GLOBALS["mimes"]["py"],		"py.gif",						"\.py$",											"py"),
-	//"sh"	=> array($GLOBALS["mimes"]["sh"],		"sh.gif",						"\.sh$",											"sh"),
+	"py"	=> array($GLOBALS["mimes"]["py"],		"py.gif",						"\.py$",											"py"),
+	"sh"	=> array($GLOBALS["mimes"]["sh"],		"sh.gif",						"\.sh$",											"sh"),
 	// C++
 	"c"		=> array($GLOBALS["mimes"]["c"],		"filetypes/page_white_c.png",	"\.c$",												"c"),
 	"cpps"	=> array($GLOBALS["mimes"]["cpps"],		"filetypes/page_white_cplusplus.png",
@@ -56,6 +56,7 @@ $GLOBALS["used_mime_types"]=array(
 	"jpg"	=> array($GLOBALS["mimes"]["jpg"],		"filetypes/picture_2.png",		"\.jpg$|\.jpeg$",									"jpg"),
 	"bmp"	=> array($GLOBALS["mimes"]["bmp"],		"filetypes/picture_2.png",		"\.bmp$",											"bmp"),
 	"png"	=> array($GLOBALS["mimes"]["png"],		"filetypes/picture_2.png",		"\.png$",											"png"),
+	"tif"	=> array($GLOBALS["mimes"]["tif"],		"filetypes/picture_2.png",		"\.tif$|\.tiff$",									"tif"),
 	
 	//PSD
 	"psd"	=> array($GLOBALS["mimes"]["psd"],		"filetypes/icon_photoshop.gif",	"\.psd$",											"psd"),
@@ -71,25 +72,30 @@ $GLOBALS["used_mime_types"]=array(
 	
 	// music
 	"mp3"	=> array($GLOBALS["mimes"]["mp3"],		"filetypes/music.png",			"\.mp3$",											"mp3"),
-	"flac"	=> array($GLOBALS["mimes"]["flac"],		"flac.gif",					"\.flac$",											"flac"),
+	"flac"	=> array($GLOBALS["mimes"]["flac"],		"flac.gif",						"\.flac$",											"flac"),
 	"wav"	=> array($GLOBALS["mimes"]["wav"],		"sound.gif",					"\.wav$",											"wav"),
 	"midi"	=> array($GLOBALS["mimes"]["midi"],		"midi.gif",						"\.mid$",											"mid"),
 	"real"	=> array($GLOBALS["mimes"]["real"],		"real.gif",						"\.rm$|\.ra$|\.ram$",								"real"),
+	"dts"	=> array($GLOBALS["mimes"]["dts"],		"sound.gif",			"\.dts$",											"dts"),
+	"ac3"	=> array($GLOBALS["mimes"]["ac3"],		"sound.gif",			"\.ac3$",											"ac3"),
+	"ogg"	=> array($GLOBALS["mimes"]["ogg"],		"sound.gif",			"\.ogg$",											"ogg"),
 	//"play"	=> array($GLOBALS["mimes"]["play"],	"mp3.gif",						"\.pls$|\.m3u$"),
 	
 	// movie
-	"avi"	=> array($GLOBALS["mimes"]["avi"],		"video.gif",					"\.avi$",											"avi"),
+	"avi"	=> array($GLOBALS["mimes"]["avi"],		"film_2.png",					"\.avi$",											"avi"),
 	"mpg"	=> array($GLOBALS["mimes"]["mpg"],		"video.gif",					"\.mpg$|\.mpeg$",									"mpeg"),
 	"mov"	=> array($GLOBALS["mimes"]["mov"],		"video.gif",					"\.mov$",											"mov"),
-	"mkv"	=> array($GLOBALS["mimes"]["avi"],		"mkv.gif",					"\.mkv$",											"mkv"),
-	"vob"	=> array($GLOBALS["mimes"]["vob"],		"vob.gif",					"\.vob$",											"vob"),
-	"flash"	=> array($GLOBALS["mimes"]["flash"],	"flash.gif",					"\.swf$",											"swf"),
+	"mkv"	=> array($GLOBALS["mimes"]["mkv"],		"mkv.gif",						"\.mkv$",											"mkv"),
+	"vob"	=> array($GLOBALS["mimes"]["vob"],		"vob.gif",						"\.vob$",											"vob"),
+	"flash"	=> array($GLOBALS["mimes"]["flash"],		"flash.gif",					"\.swf$",										"swf"),
+	"mp4"	=> array($GLOBALS["mimes"]["mp4"],		"film_1.png",					"\.mp4$",	"mp4"),
+	"ts"	=> array($GLOBALS["mimes"]["ts"],		"ts.png",					"\.ts$",	"ts"),
 	
 	// Micosoft / Adobe
-	"word"	 => array($GLOBALS["mimes"]["word"],	"filetypes/page_white_word_1.png",		"\.doc$|\.docx$",									"doc"),
-	"excel" => array($GLOBALS["mimes"]["excel"],	"filetypes/page_white_excel_1.png",	 	"\.xls$|\.xlsx$",									"xls"),
-	"power" => array($GLOBALS["mimes"]["point"],	"filetypes/page_white_powerpoint.png",	 		"\.ppt$|\.pptx$|\.pps$",								"xls"),
-	"pdf"	=> array($GLOBALS["mimes"]["pdf"],		"filetypes/document-pdf.png",		"\.pdf$",										"pdf")
+	"word"	=> array($GLOBALS["mimes"]["word"],	"filetypes/page_white_word_1.png",		"\.doc$|\.docx$",							"doc"),
+	"excel"	=> array($GLOBALS["mimes"]["excel"],	"filetypes/page_white_excel_1.png",		"\.xls$|\.xlsx$",							"xls"),
+	"power"	=> array($GLOBALS["mimes"]["point"],	"filetypes/page_white_powerpoint.png",		"\.ppt$|\.pptx$|\.pps$",					"ppt"),
+	"pdf"	=> array($GLOBALS["mimes"]["pdf"],	"filetypes/document-pdf.png",			"\.pdf$",									"pdf")
 );
 
 ?>

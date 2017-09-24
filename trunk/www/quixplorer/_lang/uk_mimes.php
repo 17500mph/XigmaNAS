@@ -38,73 +38,78 @@
 
 $GLOBALS["mimes"]=array(
 
-	// dir, exe, file
-	"dir"		=> "Directory",
-	"exe"		=> "Executable File",
-	"file"		=> "File",
-	"link"		=> "Link",
+      // dir, exe, file
+      "dir"       => "Каталог",
+      "exe"       => "Файл",
+      "file"      => "Файл",
+      "link"      => "Посилання",
+      "sh"        => "Виконуваний файл",
 
-	// text
-	"text"		=> "Text File",
+      // text
+      "text"      => "Текстовий файл",
 
-	// programming
-	"php"		=> "PHP Script",
-	"sql"		=> "SQL File",
-	"perl"		=> "PERL Script",
-	"html"		=> "HTML Page",
-	"js"		=> "Javascript File",
-	"css"		=> "CSS File",
-	"cgi"		=> "CGI Script",
+      // programming
+      "php"       => "PHP-скрипт",
+      "sql"       => "SQL-файл",
+      "perl"      => "PERL-скрипт",
+      "html"      => "HTML-сторінка",
+      "js"        => "JavaScript-файл",
+      "css"       => "CSS-стиль",
+      "cgi"       => "CGI-скрипт",
+      // C++
+      "cpps"      => "Початковий код C++",
+      "cpph"      => "Заголовок коду C++",
+      // Java
+      "javas"     => "Початковий код Java",
+      "javac"     => "Початковий код Java class",
+      // Pascal
+      "pas"       => "Початковий код Pascal",
 
-	// C++
-	"cpps"		=> "C++ Source File",
-	"cpph"		=> "C++ Header File",
+      // images
+      "gif"       => "Зображення GIF",
+      "jpg"       => "Зображення JPG",
+      "jpeg"      => "Зображення JPEG",
+      "bmp"       => "Зображення BMP",
+      "png"       => "Зображення PNG",
+      "tiff"      => "Зображення TIFF",
 
-	// Java
-	"javas"		=> "Java Source File",
-	"javac"		=> "Java Class File",
+      // compressed
+      "zip"       => "Архив ZIP",
+      "tar"       => "Архив TAR",
+      "gzip"      => "Архив GZIP",
+      "bzip2"     => "Архив BZIP2",
+      "rar"       => "Архив RAR",
+      "iso"       => "Архив ISO",
+      "mds"       => "Файл MDS",
 
-	// Pascal
-	"pas"		=> "Pascal File",
+      // music
+      "mp3"       => "Файл MP3",
+      "wav"       => "Файл WAV",
+      "midi"      => "Файл MIDI",
+      "real"      => "Файл RealAudio",
+      "flac"      => "Файл FLAC",
+      "ogg"       => "Файл OGG Vorbis",
+      "dts"       => "Звукова доріжка DTS",
+      "ac3"       => "Звукова доріжка AC3",
 
-	// images
-	"gif"		=> "GIF Picture",
-	"jpg"		=> "JPG Picture",
-	"bmp"		=> "BMP Picture",
-	"png"		=> "PNG Picture",
-
-	// compressed
-	"zip"		=> "ZIP Archive",
-	"tar"		=> "TAR Archive",
-	"gzip"		=> "GZIP Archive",
-	"bzip2"		=> "BZIP2 Archive",
-	"rar"		=> "RAR Archive",
-	"iso"		=> "ISO File",
-	"mds"		=> "MDS File",
-
-	// music
-	"mp3"		=> "MP3 Audio File",
-	"wav"		=> "WAV Audio File",
-	"midi"		=> "MIDI Audio File",
-	"real"		=> "RealAudio File",
-	"flac"		=> "FLAC Audio File",
-
-	// movie
-	"mpg"		=> "MPG File",
-	"mov"		=> "MOV File",
-	"avi"		=> "AVI File",
-	"flash"		=> "Flash File",
-	"mkv"		=> "MKV File",
-	"vob"		=> "VOB File",
+      // movie
+      "mpg"       => "Відеофайл MPG",
+      "mov"       => "Відеофайл Apple Movie",
+      "avi"       => "Відеофайл AVI",
+      "flash"     => "Файл Flash",
+      "mkv"       => "Відеофайл MKV",
+      "vob"       => "Відеофайл VOB",
+      "mp4"       => "Відеофайл MP4",
+      "ts"        => "Відеофайл TS",
 
 	// Micosoft / Adobe
-	"word"		=> "Word Document",
-	"excel"		=> "Excel Document",
-	"pdf"		=> "PDF File",
-	"xml"		=> "XML File",
-	"c"		=> "C File",
-	"psd"		=> "Photoshop File",
-	"point"		=> "PowerPoint Presentation"
+      "word"      => "Документ Word",
+      "excel"     => "Документ Excel",
+      "pdf"       => "Документ PDF",
+      "xml"       => "Файл XML",
+      "c"         => "Файл C",
+      "psd"       => "Файл Photoshop",
+      "point"     => "Документ PowerPoint"
 );
 
 ?>
