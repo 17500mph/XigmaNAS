@@ -66,7 +66,7 @@ class properties {
 	public function get_title() {
 		return $this->v_title;
 	}
-	public function set_description(string $value = NULL) {
+	public function set_description($value = NULL) {
 		$this->v_description = $value;
 		return $this;
 	}
