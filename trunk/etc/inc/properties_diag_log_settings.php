@@ -102,12 +102,14 @@ class properties_diag_log_settings {
 		$o->set_name('resolve');
 		$o->set_title(gtext('Resolve IP'));
 		$o->set_caption(gtext('Resolve IP addresses to hostnames.'));
-		$helpinghand = sprintf('%1$s: %2$s<br /><font color="red">%3$s</font>: %4$s',
+		$helpinghand = [
 			gtext('Hint'),
-			gtext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'),
-			gtext('Warning'),
-			gtext('This can cause a huge delay in loading the log page!')
-		);
+			[': ',true],
+			[gtext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'),true],
+			[gtext('Warning'),'red'],
+			[': ',true],
+			[gtext('This can cause a huge delay in loading the log page!'),true]
+		];
 		$o->set_description($helpinghand);
 		$o->set_defaultvalue(false);
 		$o->filter_use_default();
@@ -240,7 +242,7 @@ class properties_diag_log_settings {
 		$o->set_filter_options(['default' => NULL]);
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('This is not a valid IP Address.')));
 		return $o;
 	}
 	private function prop_enable(): properties_bool {
