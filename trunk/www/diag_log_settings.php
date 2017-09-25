@@ -210,7 +210,7 @@ switch($page_mode):
 					parentNode->
 				ins_tbody()->
 					add_textinfo($property->enable->get_id(),gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'))->
-					add_input($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,true,60,false,39)->
+					add_input($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,true,60,false,45)->
 					add_checkbox($property->system,$sphere->row['system'],false,true)->
 					add_checkbox($property->ftp,$sphere->row['ftp'],false,true)->
 					add_checkbox($property->rsyncd,$sphere->row['rsyncd'],false,true)->
@@ -243,7 +243,7 @@ switch($page_mode):
 					add_titleline_checkbox($property->enable,$sphere->row['enable'])->
 					parentNode->
 				ins_tbody()->
-					add_input($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,false,60,false,39)->
+					add_input($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,false,60,false,45)->
 					add_checkbox($property->system,$sphere->row['system'])->
 					add_checkbox($property->ftp,$sphere->row['ftp'])->
 					add_checkbox($property->rsyncd,$sphere->row['rsyncd'])->
