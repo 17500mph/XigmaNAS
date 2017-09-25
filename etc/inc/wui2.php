@@ -142,12 +142,13 @@ class HTMLBaseControl2 {
 		return $class;
 	}
 	function GetDescriptionOutput() {
-		//	description
+		//	description:
 		//	string
-		//	[string, string, ...]
-		//	[ [string], [string], ... ]
-		//	[ [string, color], [string, color], ...]
-		//	[ [string, color, no_br], [string, color, no_br], ...]
+		//	[string, ...]
+		//	[ [string], ...]
+		//	[ [string,no_br], ...]
+		//	[ [string,color], ...]
+		//	[ [string,color,no_br], ...]
 		$description = $this->GetDescription();
 		$description_output = '';
 		$suppressbr = true;
@@ -166,25 +167,55 @@ class HTMLBaseControl2 {
 					elseif(is_array($description_row)):
 						switch(count($description_row)):
 							case 1:
-								if($suppressbr):
-									$suppressbr = false;
-								else:
-									$description_output .= '<br />';
+								if(is_string($description_row[0])):
+									if($suppressbr):
+										$suppressbr = false;
+									else:
+										$description_output .= '<br />';
+									endif;
+									$description_output .= $description_row[0];
 								endif;
-								$description_output .= $description_row[0];
+								break;
+							case 2:
+								if(is_string($description_row[0])):
+									$color = NULL;
+									if(is_string($description_row[1])):
+										$color = $description_row[1];
+									endif;
+									if(is_bool($description_row[1])):
+										$suppressbr = $description_row[1];
+									endif;
+									if($suppressbr):
+										$suppressbr = false;
+									else:
+										$description_output .= '<br />';
+									endif;
+									if(is_null($color)):
+										$description_output .= $description_row[0];
+									else:
+										$description_output .= sprintf('<span style="color:%2$s">%1$s</span>',$description_row[0],$color);
+									endif;
+								endif;
 								break;
 							case 3: // allow not to break
-								$suppressbr = (is_bool($description_row[2])) ? $description_row[2] : $suppressbr;
-							case 2:
-								if($suppressbr):
-									$suppressbr = false;
-								else:
-									$description_output .= '<br />';
-								endif;
-								if(is_null($description_row[1])):
-									$description_output .= $description_row[0];
-								else:
-									$description_output .= sprintf('<font color="%2$s">%1$s</font>',$description_row[0],$description_row[1]);
+								if(is_string($description_row[0])):
+									$color = NULL;
+									if(is_string($description_row[1])):
+										$color = $description_row[1];
+									endif;									
+									if(is_bool($description_row[2])):
+										$suppressbr = $description_row[2];
+									endif;
+									if($suppressbr):
+										$suppressbr = false;
+									else:
+										$description_output .= '<br />';
+									endif;
+									if(is_null($color)):
+										$description_output .= $description_row[0];
+									else:
+										$description_output .= sprintf('<span style="color:%2$s">%1$s</span>',$description_row[0],$color);
+									endif;
 								endif;
 								break;
 						endswitch;
@@ -1447,20 +1478,21 @@ trait co_DOMTools {
 		$node->appendChild($cdata);
 		return $node;
 	}
-	//	tag fragments
+	//	tags
 	public function add_col(array $attributes = []) {
-		return $this->addElement('col',$attributes);
+		$this->addElement('col',$attributes);
+		return $this;
 	}
-	public function add_colgroup(array $attributes = []) {
+	public function ins_colgroup(array $attributes = []) {
 		return($this->addElement('colgroup',$attributes));
 	}
-	public function add_table(array $attributes = []) {
+	public function ins_table(array $attributes = []) {
 		return $this->addElement('table',$attributes);
 	}
-	public function add_tbody(array $attributes = []) {
+	public function ins_tbody(array $attributes = []) {
 		return $this->addElement('tbody',$attributes);
 	}
-	public function add_thead(array $attributes = []) {
+	public function ins_thead(array $attributes = []) {
 		return $this->addElement('thead',$attributes);
 	}
 	//	navigator menu fragments and macros
@@ -1487,31 +1519,112 @@ trait co_DOMTools {
  *	Creates necessary tags for navigator menu
  *	@return DOMNode
  */
-	public function add_nav_table() {
-		return $this->add_table(['id' => 'area_navigator'])->add_tbody();
+	public function ins_nav_table() {
+		return $this->ins_table(['id' => 'area_navigator'])->ins_tbody();
 	}
 /**
  *	Creates tags for upper navigation menu 
  *	@return DOMNode
  */
-	public function add_nav_upper() {
+	public function ins_nav_upper() {
 		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav']);
 	}
 /**
  *	Creates tags for lower navigation menu 
  *	@return DOMNode
  */
-	public function add_nav_lower() {
+	public function ins_nav_lower() {
 		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav2']);
 	}
-	//	settings basics macros
-	public function add_colgroup_data_settings() {
-		$ctrl = $this->add_colgroup();
-		$ctrl->add_col(['class' => 'area_data_settings_col_tag']);
-		$ctrl->add_col(['class' => 'area_data_settings_col_data']);
+	public function hlp_area_data_form(string $action) {
+		return $this->addElement('form',['action' => $action,'method' => 'post','id' => 'iform','name' => 'iform']);
+	}
+	public function hlp_area_data_table() {
+		return $this->ins_table(['id' => 'area_data'])->ins_tbody()->addElement('tr')->addElement('td',['id' => 'area_data_frame']);
+	}
+	public function ins_area_data(string $action) {
+		return $this->hlp_area_data_form($action)->hlp_area_data_table();
+	}
+	public function add_input_errors(array $input_errors = []) {
+		foreach($input_errors as $input_error):
+			if(is_string($input_error)):
+				if(preg_match('/\S/',$input_error)):
+					$messages[] = $input_error;
+				endif;
+			endif;
+		endforeach;
+		if(!empty($messages)):
+			$node = $this->
+				addElement('div',['id' => 'errorbox'])->
+				ins_table(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
+					addElement('tr')->
+						addElement('td',['class' => 'icon','align' => 'center','valign' => 'center'])->
+							addElement('img',['src' => 'images/error_box.png','alt' => ''])->
+								parentNode->
+							parentNode->
+						addElement('td',['class' => 'message'])->
+							addElement('div',[],sprintf('%s:',gtext('The following input errors were detected'),':'))->
+								addElement('ul');
+			foreach($messages as $message):
+				$node->addElement('li',[],$message);
+			endforeach;
+		endif;
 		return $this;
 	}
-	//	settings elements
+	public function hlp_core_box(string $type,string $message = '') {
+		if(preg_match('/\S/',$message)):
+			switch($type):
+				case 'error': $id = 'errorbox';$img = 'error_box.png';break;
+				case 'info': $id = 'infobox';$img = 'info_box.png';break;
+				case 'warning': $id = 'warningbox';$img = 'warn_box.png';break;
+			endswitch;
+			$node = $this->
+				addElement('div',['id' => $id])->
+				ins_table(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
+					addElement('tr')->
+						addElement('td',['class' => 'icon','align' => 'center','valign' => 'center'])->
+							addElement('img',['src' => sprintf('/images/%s',$img),'alt' => ''])->
+								parentNode->
+							parentNode->
+						addElement('td',['class' => 'message'],$message);
+		endif;
+		return $this;
+	}
+	public function add_error_box(string $message = '') {
+		return $this->hlp_core_box('error',$message);
+	}
+	public function add_info_box(string $message = '') {
+		return $this->hlp_core_box('info',$message);
+	}
+	public function add_warning_box(string $message = '') {
+		return $this->hlp_core_box('warning',$message);
+	}
+	//	data settings table macros
+	public function ins_table_data_settings() {
+		return $this->ins_table(['class' => 'area_data_settings']);
+	}
+	public function add_colgroup_data_settings() {
+		$this->
+			ins_colgroup()->
+				add_col(['class' => 'area_data_settings_col_tag'])->
+				add_col(['class' => 'area_data_settings_col_data']);
+		return $this;
+	}
+	//	title macros
+	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
+		$ctrl = new HTMLTitleLine2($title);
+		$ctrl->SetColSpan($colspan);
+		$ctrl->SetCtrlName($ctrlname);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	public function add_titleline_checkbox(properties $p,$value,int $colspan = 2) {
+		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
+		$ctrl->SetColSpan($colspan);
+		$ctrl->Compose($this);
+		return $this;
+	}
+	//	elements
 	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
 		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption(),$p->get_description());
 		$ctrl->SetRequired($required);
@@ -1558,53 +1671,43 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
-		$ctrl = new HTMLTitleLine2($title);
-		$ctrl->SetColSpan($colspan);
-		$ctrl->SetCtrlName($ctrlname);
+	//	submit area macros
+	public function ins_submit() {
+		return $this->addElement('div',['id' => 'submit']);
+	}
+	public function add_submit_button(string $value = NULL,string $content = NULL,string $id = NULL) {
+		$element      = 'button';
+		$class_button = 'formbtn';
+		$value        = $value ?? 'cancel';
+		$id           = $id ?? sprintf('%1$s_%2$s',$element,$value);
+		$content      = $content ?? gtext('Cancel');
+		$attributes   = ['name' => 'submit','type' => 'submit','class' => $class_button,'value' => $value,'id' => $id];
+		$this->addElement($element,$attributes,$content);
+		return $this;
+	}
+	public function add_cancel_button() {
+		return $this->add_submit_button('cancel',gtext('Cancel'));
+	}
+	public function add_edit_button() {
+		return $this->add_submit_button('edit',gtext('Edit'));
+	}
+	public function add_save_button() {
+		return $this->add_submit_button('save',gtext('Apply'));
+	}
+	//	remark area macros
+	public function ins_remarks() {
+		return $this->addElement('div',['id' => 'remarks']);
+	}
+	public function add_remark($ctrlname,$title,$text) {
+		$ctrl = new HTMLRemark2($ctrlname,$title,$text);
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_titleline_checkbox(properties $p,$value,int $colspan = 2) {
-		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
-		$ctrl->SetColSpan($colspan);
-		$ctrl->Compose($this);
-		return $this;
+	public function add_form_end() {
+		return $this->addElement('input',['name' => 'authtoken','type' => 'hidden','value' => Session::getAuthToken()]);
 	}
 }
-class co_DOMImplementation extends \DOMImplementation {
-	private $document;
-	public function __construct() {
-		return $this->createDocument();
-	}
-	public function __get($name) {
-		return $this->doc->{$name};
-	}
-	public function __set($name,$value) {
-		$this->doc->{$name}=$value;
-	}
-	public function __isset($name) {
-		return isset($this->doc->{$name});
-	}
-	public function __unset($name) {
-		return $this->doc->__unset($name);
-	}
-	public function __call($name,$args) {
-		return call_user_func_array(array($this->doc,$name),$args);
-	}
-	public function createDocument($namespaceURI = NULL,$qualifiedName = NULL,DOMDocumentType $docType = NULL) {
-		$this->document = parent::createDocument($namespaceURI,$qualifiedName,$docType);
-		$this->document->xmlVersion='1.0';
-		$this->document->xmlEncoding='UTF-8';
-		$this->document->registerNodeClass('DOMDocument','co_DOMDocument');
-//		$this->document->registerNodeClass('DOMDocumentFragment','co_DOMDocumentFragment');
-		$this->document->registerNodeClass('DOMElement','co_DOMElement');
-//		$this->document->registerNodeClass('DOMComment','co_DOMComment');
-//		$this->document->registerNodeClass('DOMNode','co_DOMNode');
-		return $this->document;
-	}	
-}
-class co_DOMElement extends \DOMElement {
+class co_DOMElement extends \DOMElement implements ci_DOM {
 	use co_DOMTools;
 	
 	public function addAttributes($attributes = []) {
@@ -1614,11 +1717,12 @@ class co_DOMElement extends \DOMElement {
 		return $this;
 	}
 }
-class co_DOMDocument extends \DOMDocument {
+class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	use co_DOMTools;
 	
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
+		$this->registerNodeClass('DOMElement','co_DOMElement');
 		$this->formatOutput = true;
 	}
 	public function render() {
@@ -1627,5 +1731,7 @@ class co_DOMDocument extends \DOMDocument {
 	public function get_html() {
 		return $this->saveHTML();
 	}
+}
+interface ci_DOM {
 }
 ?>
