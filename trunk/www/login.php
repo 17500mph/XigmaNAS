@@ -142,13 +142,6 @@ echo '<!DOCTYPE html>',"\n";
 	<meta charset="<?=system_get_language_codeset();?>"/>
 	<meta name="format-detection" content="telephone=no"/>
 	<title><?=genhtmltitle($pgtitle ?? []);?></title>
-<?php
-	if (isset($pgrefresh) && $pgrefresh):
-?>
-	<meta http-equiv="refresh" content="<?=$pgrefresh;?>"/>
-<?php
-	endif;
-?>
 	<link href="css/gui.css" rel="stylesheet" type="text/css"/>
 	<link href="css/navbar.css" rel="stylesheet" type="text/css"/>
 	<link href="css/tabs.css" rel="stylesheet" type="text/css"/>

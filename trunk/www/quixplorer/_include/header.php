@@ -67,9 +67,6 @@ function show_header($title, $additional_header_content = null) {
 	echo '<meta charset="',$GLOBALS["charset"],'">',"\n";
 	echo '<meta name="format-detection" content="telephone=no"/>',"\n";
 	echo '<title>',genhtmltitle($pgtitle ?? []),'</title>',"\n";
-	if(isset($pgrefresh) && $pgrefresh):
-		echo '<meta http-equiv="refresh" content="',$pgrefresh,'"/>',"\n";
-	endif;
 	echo '<link href="./_style/style.css" rel="stylesheet" type="text/css">',"\n";
 	echo '<link href="../css/gui.css" rel="stylesheet" type="text/css">',"\n";
 	echo '<link href="../css/navbar.css" rel="stylesheet" type="text/css">',"\n";
