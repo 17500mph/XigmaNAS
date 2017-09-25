@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-09-23 00:12+0000\n"
-"PO-Revision-Date: 2017-09-22 09:57+0000\n"
+"PO-Revision-Date: 2017-09-24 16:33+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
+"X-Launchpad-Export-Date: 2017-09-25 21:41+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -2214,7 +2214,7 @@ msgid "Daemon"
 msgstr "Demonio"
 
 msgid "Daemon Events"
-msgstr ""
+msgstr "Eventos Demonio"
 
 msgid "Daemon log"
 msgstr "Registro del demonio"
@@ -2739,7 +2739,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Deshabilitar altavoz en arranques y apagados."
 
 msgid "Disable the compression of repeating lines."
-msgstr ""
+msgstr "Deshabilitar la compresión de lineas repetidas"
 
 msgid "Disabled"
 msgstr "Desactivado"
@@ -3996,7 +3996,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - Transferencia de archivos"
 
 msgid "FTP Events"
-msgstr ""
+msgstr "Eventos FTP"
 
 msgid "FTP Proxy"
 msgstr "Proxy FTP"
@@ -4567,7 +4567,7 @@ msgid "IP address"
 msgstr "Dirección IP"
 
 msgid "IP address of the remote syslog server."
-msgstr ""
+msgstr "IP del servidor remoto de syslog"
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -7021,7 +7021,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "Info y estado RSYNC"
 
 msgid "RSYNC Events"
-msgstr ""
+msgstr "Eventos RSYNC"
 
 msgid "RSYNC client number"
 msgstr "Numero de cliente RSYNC"
@@ -7432,7 +7432,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Events"
-msgstr ""
+msgstr "Eventos S.M.A.R.T."
 
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T."
@@ -7480,7 +7480,7 @@ msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH Events"
-msgstr ""
+msgstr "Eventos SSH"
 
 msgid "SSHD log"
 msgstr "Registro de SSHD"
@@ -7790,19 +7790,19 @@ msgid "Send Command!"
 msgstr "¡Enviar el Comando!"
 
 msgid "Send FTP event messages."
-msgstr ""
+msgstr "Enviar eventos FTP"
 
 msgid "Send Now"
 msgstr "Enviar ahora"
 
 msgid "Send RSYNC event messages."
-msgstr ""
+msgstr "Enviar eventos RSYNC"
 
 msgid "Send S.M.A.R.T. event messages."
-msgstr ""
+msgstr "Enviar eventos S.M.A.R.T."
 
 msgid "Send SSH event messages."
-msgstr ""
+msgstr "Enviar eventos SSH"
 
 msgid "Send Test Email"
 msgstr "Enviar Email de prueba"
@@ -7811,10 +7811,10 @@ msgid "Send a TEST warning email on startup."
 msgstr "Enviar una alerta de PRUEBA por correo (e-mail) al arrancar el PC"
 
 msgid "Send daemon event messages."
-msgstr ""
+msgstr "Enviar eventos Demonios"
 
 msgid "Send system event messages."
-msgstr ""
+msgstr "Enviar eventos del sistema"
 
 msgid "Sensitive"
 msgstr "Sensible"
@@ -8008,7 +8008,7 @@ msgid "Show Default Groups"
 msgstr "Muestra grupos por defecto"
 
 msgid "Show Log Entries"
-msgstr ""
+msgstr "Mostrar entradas del log"
 
 msgid "Show Process Information"
 msgstr "Mostar información de los procesos"
@@ -8414,7 +8414,7 @@ msgid "System Email Settings"
 msgstr "E-mail opciones del sistema"
 
 msgid "System Events"
-msgstr ""
+msgstr "Eventos del sistema"
 
 msgid "System Information"
 msgstr "Información del sistema"
@@ -9225,7 +9225,7 @@ msgstr ""
 "la corrección de errores."
 
 msgid "The number of log entries to show must be between 5 and 1000."
-msgstr ""
+msgstr "El nº de entradas de log a mostrar debe estar entre 5 y 1000"
 
 msgid "The old password is not correct."
 msgstr "La antigua contraseña no es correcta."
@@ -11250,39 +11250,3 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
-
-#~ msgid "Daemon events"
-#~ msgstr "Eventos del demonio"
-
-#~ msgid "FTP events"
-#~ msgstr "Acciones FTP"
-
-#~ msgid "Number of log entries to show"
-#~ msgstr "Numero de entradas de registro a mostrar"
-
-#~ msgid "Number of log entries to show must be between 5 and 1000."
-#~ msgstr "Número de entradas al log para mostrar, debe ser entre 5 y 1000."
-
-#~ msgid "RSYNC events"
-#~ msgstr "eventos RSYNC"
-
-#~ msgid "S.M.A.R.T. events"
-#~ msgstr "eventos S.M.A.R.T."
-
-#~ msgid "SSH events"
-#~ msgstr "eventos SSH"
-
-#~ msgid "System events"
-#~ msgstr "Acciones del sistema"
-
-#~ msgid "Disable the compression of repeated line."
-#~ msgstr "Deshabilitar el eliminar las lineas repetidas."
-
-#~ msgid "IP address of remote syslog server."
-#~ msgstr "IP del servidor syslog remoto."
-
-#~ msgid "Event Selection"
-#~ msgstr "Seleccionar evento"
-
-#~ msgid "Max Entries"
-#~ msgstr "Máximas entradas"

@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-09-23 00:12+0000\n"
-"PO-Revision-Date: 2017-09-17 11:59+0000\n"
+"PO-Revision-Date: 2017-09-24 10:37+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
+"X-Launchpad-Export-Date: 2017-09-25 21:41+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1438,7 +1438,7 @@ msgid "CPU Maximum Frequency"
 msgstr "Nejvyšší frekvence procesoru"
 
 msgid "CPU Microcode Update"
-msgstr ""
+msgstr "Aktualizace mikroḱódu procesoru"
 
 msgid "CPU Minimum Frequency"
 msgstr "Nejnižší frekvence procesoru"
@@ -2226,7 +2226,7 @@ msgid "Daemon"
 msgstr "Proces služby"
 
 msgid "Daemon Events"
-msgstr ""
+msgstr "Události v procesu služby"
 
 msgid "Daemon log"
 msgstr "Záznam událostí na straně procesu služby"
@@ -2740,7 +2740,7 @@ msgid "Disable console menu."
 msgstr "Vypnout nabídku na konzoli."
 
 msgid "Disable file manager."
-msgstr ""
+msgstr "Vypnout správce souborů."
 
 msgid "Disable firmware version check."
 msgstr "Vypnout zjišťování novějších verzí základního systému."
@@ -2749,10 +2749,10 @@ msgid "Disable scanning of folders for existing extension menus."
 msgstr "Vypnout skenování složek pro existující nabídky rozšíření."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Vypnout pípnutí vestavěného reproduktoru při spouštění a vypínání."
 
 msgid "Disable the compression of repeating lines."
-msgstr ""
+msgstr "Vypnout kompresi opakujících se řádků."
 
 msgid "Disabled"
 msgstr "Vypnuto"
@@ -3631,6 +3631,7 @@ msgstr "Zapnutí této předvolby zmenší výšku záhlaví stránky na minimum
 
 msgid "Enable this option to update the CPU microcode on startup."
 msgstr ""
+"Zapněte tuto předvolbu pro aktualizaci mikroḱódu procesoru při spouštění."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Zapnutím budou striktně dodržovány standardy pro DLNA."
@@ -4005,7 +4006,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP – přenos souborů"
 
 msgid "FTP Events"
-msgstr ""
+msgstr "Události v FTP"
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -4579,7 +4580,7 @@ msgid "IP address"
 msgstr "IP adresa"
 
 msgid "IP address of the remote syslog server."
-msgstr ""
+msgstr "IP adresa vzdáleného syslog serveru."
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -6651,7 +6652,7 @@ msgid "Platform OS"
 msgstr "Založeno na operačním systému"
 
 msgid "Platform and Performance Settings"
-msgstr ""
+msgstr "Nastavení platformy a výkonu"
 
 msgid "Please add a bridge interface first."
 msgstr "Nejprve je třeba přidat síťové přemostění."
@@ -7060,7 +7061,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC klient – informace a stav"
 
 msgid "RSYNC Events"
-msgstr ""
+msgstr "Události v RSYNC"
 
 msgid "RSYNC client number"
 msgstr "Číslo klienta RSYNC"
@@ -7467,7 +7468,7 @@ msgid "S.M.A.R.T."
 msgstr "SMART diagnostika"
 
 msgid "S.M.A.R.T. Events"
-msgstr ""
+msgstr "Události ve SMART diagnostice datových úložišť"
 
 msgid "S.M.A.R.T. Monitoring"
 msgstr "Dohledování SMART diagnostiky"
@@ -7515,7 +7516,7 @@ msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH Events"
-msgstr ""
+msgstr "Události v SSH"
 
 msgid "SSHD log"
 msgstr "Protokol událostí služby ssh"
@@ -7827,19 +7828,20 @@ msgid "Send Command!"
 msgstr "Odeslat (potvrdit) příkaz!"
 
 msgid "Send FTP event messages."
-msgstr ""
+msgstr "Posílat zprávy o událostech v FTP."
 
 msgid "Send Now"
 msgstr "Odeslat nyní"
 
 msgid "Send RSYNC event messages."
-msgstr ""
+msgstr "Posílat zprávy o událostech v RSYNC."
 
 msgid "Send S.M.A.R.T. event messages."
 msgstr ""
+"Posílat zprávy o událostech ve SMART diagnostice jednotek datového úložiště."
 
 msgid "Send SSH event messages."
-msgstr ""
+msgstr "Posílat zprávy o událostech v SSH."
 
 msgid "Send Test Email"
 msgstr "Odeslat testovací e-mail"
@@ -7848,10 +7850,10 @@ msgid "Send a TEST warning email on startup."
 msgstr "Při spouštění poslat ZKUŠEBNÍ varovný e-mail."
 
 msgid "Send daemon event messages."
-msgstr ""
+msgstr "Posílat zprávy o událostech v procesu služby."
 
 msgid "Send system event messages."
-msgstr ""
+msgstr "Posílat zprávy o událostech v systému."
 
 msgid "Sensitive"
 msgstr "Rozlišovat"
@@ -8038,7 +8040,7 @@ msgid "Show Default Groups"
 msgstr "Zobrazit výchozí skupiny"
 
 msgid "Show Log Entries"
-msgstr ""
+msgstr "Zobrazit položky záznamu událostí (log)"
 
 msgid "Show Process Information"
 msgstr "Zobrazit informace o procesu"
@@ -8444,7 +8446,7 @@ msgid "System Email Settings"
 msgstr "Nastavení systémového e-mailu"
 
 msgid "System Events"
-msgstr ""
+msgstr "Události v systému"
 
 msgid "System Information"
 msgstr "Informace o systému"
@@ -9274,6 +9276,7 @@ msgstr ""
 
 msgid "The number of log entries to show must be between 5 and 1000."
 msgstr ""
+"Je třeba, aby počet položek událostí bylo celé číslo z rozmezí 5 až 1000."
 
 msgid "The old password is not correct."
 msgstr "Původní heslo nebylo zadáno správně."
@@ -11328,40 +11331,3 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
-
-#~ msgid "FTP events"
-#~ msgstr "Události FTP"
-
-#~ msgid "SSH events"
-#~ msgstr "SSH události"
-
-#~ msgid "System events"
-#~ msgstr "Systémové události"
-
-#~ msgid "Daemon events"
-#~ msgstr "Události na straně procesu služby"
-
-#~ msgid "Number of log entries to show"
-#~ msgstr "Kolik položek záznamu událostí zobrazovat"
-
-#~ msgid "Number of log entries to show must be between 5 and 1000."
-#~ msgstr ""
-#~ "Počet zobrazovaných položek záznamu událostí může nabývat hodnoty 5 až 1000."
-
-#~ msgid "RSYNC events"
-#~ msgstr "Události v RSYNC"
-
-#~ msgid "IP address of remote syslog server."
-#~ msgstr "IP adresa vzdáleného syslog serveru."
-
-#~ msgid "Disable the compression of repeated line."
-#~ msgstr "Vypnout vynechání opakujících se řádek."
-
-#~ msgid "Event Selection"
-#~ msgstr "Výběr události"
-
-#~ msgid "Max Entries"
-#~ msgstr "Nejvýše položek"
-
-#~ msgid "S.M.A.R.T. events"
-#~ msgstr "Události SMART diagnostiky"

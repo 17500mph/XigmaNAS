@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-09-23 00:12+0000\n"
-"PO-Revision-Date: 2017-09-22 16:52+0000\n"
+"PO-Revision-Date: 2017-09-23 07:59+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 22:44+0000\n"
+"X-Launchpad-Export-Date: 2017-09-25 21:41+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -2164,7 +2164,7 @@ msgid "Daemon"
 msgstr "Démon"
 
 msgid "Daemon Events"
-msgstr ""
+msgstr "Daemon események"
 
 msgid "Daemon log"
 msgstr "Démon napló"
@@ -2689,7 +2689,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Hangszóró sípolásának kikapcsolása indításkor és leállításkor."
 
 msgid "Disable the compression of repeating lines."
-msgstr ""
+msgstr "Ismétlődő sorok tömörítésének tiltása."
 
 msgid "Disabled"
 msgstr "Tiltva"
@@ -3947,7 +3947,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - Fájltranszfer"
 
 msgid "FTP Events"
-msgstr ""
+msgstr "FTP események"
 
 msgid "FTP Proxy"
 msgstr "FTP proxy"
@@ -4512,7 +4512,7 @@ msgid "IP address"
 msgstr "IP-cím"
 
 msgid "IP address of the remote syslog server."
-msgstr ""
+msgstr "Távoli syslog szerver IP címe."
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -6958,7 +6958,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC kliens  információ & állapot"
 
 msgid "RSYNC Events"
-msgstr ""
+msgstr "RSYNC események"
 
 msgid "RSYNC client number"
 msgstr "RSYNC kliens száma"
@@ -7369,7 +7369,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Events"
-msgstr ""
+msgstr "S.M.A.R.T. események"
 
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. figyelés"
@@ -7417,7 +7417,7 @@ msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH Events"
-msgstr ""
+msgstr "SSH események"
 
 msgid "SSHD log"
 msgstr "SSHD napló"
@@ -7729,19 +7729,19 @@ msgid "Send Command!"
 msgstr "Parancs kiadása!"
 
 msgid "Send FTP event messages."
-msgstr ""
+msgstr "FTP eseményüzenetek küldése"
 
 msgid "Send Now"
 msgstr "Küldés most"
 
 msgid "Send RSYNC event messages."
-msgstr ""
+msgstr "RSYNC eseményüzenetek küldése"
 
 msgid "Send S.M.A.R.T. event messages."
-msgstr ""
+msgstr "S.M.A.R.T. eseményüzenetek küldése."
 
 msgid "Send SSH event messages."
-msgstr ""
+msgstr "SSH eseményüzenetek küldése."
 
 msgid "Send Test Email"
 msgstr "Teszt e-mail küldése"
@@ -7750,10 +7750,10 @@ msgid "Send a TEST warning email on startup."
 msgstr "A rendszer indulásakor figyelmeztető TESZT email küldése."
 
 msgid "Send daemon event messages."
-msgstr ""
+msgstr "Deamon eseményüzenetek küldése."
 
 msgid "Send system event messages."
-msgstr ""
+msgstr "Rendszeresemény-üzenetek küldése"
 
 msgid "Sensitive"
 msgstr "Érzékenység"
@@ -7943,7 +7943,7 @@ msgid "Show Default Groups"
 msgstr "Alapértelmezett csoportok megjelenítése"
 
 msgid "Show Log Entries"
-msgstr ""
+msgstr "Naplóbejegyzések megjelenítése"
 
 msgid "Show Process Information"
 msgstr "Folyamatinformációk megjelenítése"
@@ -8354,7 +8354,7 @@ msgid "System Email Settings"
 msgstr "Rendszer e-mail beállítások"
 
 msgid "System Events"
-msgstr ""
+msgstr "Rendszeresemények"
 
 msgid "System Information"
 msgstr "Rendszerinformáció"
@@ -9149,6 +9149,7 @@ msgstr ""
 
 msgid "The number of log entries to show must be between 5 and 1000."
 msgstr ""
+"A megjelenítendő naplóbejegyzések száma 5 és 100 között kell, hogy legyen."
 
 msgid "The old password is not correct."
 msgstr "A régi jelszó nem megfelelő."
@@ -11151,40 +11152,3 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
-
-#~ msgid "Daemon events"
-#~ msgstr "Démon események"
-
-#~ msgid "FTP events"
-#~ msgstr "FTP események"
-
-#~ msgid "Number of log entries to show must be between 5 and 1000."
-#~ msgstr ""
-#~ "A megjelenítendő naplófeljegyzések száma 5 és 1000 közé kell, hogy essen."
-
-#~ msgid "RSYNC events"
-#~ msgstr "RSYNC események"
-
-#~ msgid "S.M.A.R.T. events"
-#~ msgstr "S.M.A.R.T. események"
-
-#~ msgid "SSH events"
-#~ msgstr "SSH események"
-
-#~ msgid "System events"
-#~ msgstr "Rendszeresemények"
-
-#~ msgid "Number of log entries to show"
-#~ msgstr "Megjelenítendő naplóbejegyzések száma"
-
-#~ msgid "Disable the compression of repeated line."
-#~ msgstr "Ismétlődő sorok tömörítésének tiltása."
-
-#~ msgid "IP address of remote syslog server."
-#~ msgstr "Távoli rendszernapló-szerver IP címe"
-
-#~ msgid "Event Selection"
-#~ msgstr "Esemény kiválasztása"
-
-#~ msgid "Max Entries"
-#~ msgstr "Maximális bejegyzésszám"
