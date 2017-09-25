@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-09-23 00:12+0000\n"
-"PO-Revision-Date: 2017-09-22 03:47+0000\n"
+"PO-Revision-Date: 2017-09-24 04:13+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 22:45+0000\n"
+"X-Launchpad-Export-Date: 2017-09-25 21:41+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -2160,7 +2160,7 @@ msgid "Daemon"
 msgstr "Demon"
 
 msgid "Daemon Events"
-msgstr ""
+msgstr "Demonhändelser"
 
 msgid "Daemon log"
 msgstr "Daemon logg"
@@ -2686,7 +2686,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Inaktivera högtalarpip vid start och avstängning."
 
 msgid "Disable the compression of repeating lines."
-msgstr ""
+msgstr "Inaktivera sammanslagning av upprepade rader."
 
 msgid "Disabled"
 msgstr "Inaktiverad"
@@ -3933,7 +3933,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - Filöverföring"
 
 msgid "FTP Events"
-msgstr ""
+msgstr "FTP-händelser"
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -4496,7 +4496,7 @@ msgid "IP address"
 msgstr "IP-adress"
 
 msgid "IP address of the remote syslog server."
-msgstr ""
+msgstr "IP adress till fjärrsyslog servern"
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -6907,7 +6907,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC Klient Information & Status"
 
 msgid "RSYNC Events"
-msgstr ""
+msgstr "RSYNC-händelser"
 
 msgid "RSYNC client number"
 msgstr "RSYNC klientnummer"
@@ -7310,7 +7310,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Events"
-msgstr ""
+msgstr "S.M.A.R.T.-händelser"
 
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. övervakning"
@@ -7358,7 +7358,7 @@ msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH Events"
-msgstr ""
+msgstr "SSH-händelser"
 
 msgid "SSHD log"
 msgstr "SSHD logg"
@@ -7664,19 +7664,19 @@ msgid "Send Command!"
 msgstr "Skicka kommando!"
 
 msgid "Send FTP event messages."
-msgstr ""
+msgstr "Skicka meddeladen om FTP-händelser."
 
 msgid "Send Now"
 msgstr "Skicka nu"
 
 msgid "Send RSYNC event messages."
-msgstr ""
+msgstr "Skicka meddeladen om RSYNC-händelser."
 
 msgid "Send S.M.A.R.T. event messages."
-msgstr ""
+msgstr "Skicka meddeladen om S.M.A.R.T.-händelser."
 
 msgid "Send SSH event messages."
-msgstr ""
+msgstr "Skicka meddeladen om SSH-händelser."
 
 msgid "Send Test Email"
 msgstr "Skicka test e-post"
@@ -7685,10 +7685,10 @@ msgid "Send a TEST warning email on startup."
 msgstr "Skicka ett TEST e-brev under uppstarten."
 
 msgid "Send daemon event messages."
-msgstr ""
+msgstr "Skicka meddeladen om demonhändelser."
 
 msgid "Send system event messages."
-msgstr ""
+msgstr "Skicka meddeladen om systemhändelser."
 
 msgid "Sensitive"
 msgstr "Känslig"
@@ -7875,7 +7875,7 @@ msgid "Show Default Groups"
 msgstr "Visa standardgrupper"
 
 msgid "Show Log Entries"
-msgstr ""
+msgstr "Visa loggposter"
 
 msgid "Show Process Information"
 msgstr "Visa imformation om processer"
@@ -8286,7 +8286,7 @@ msgid "System Email Settings"
 msgstr "System e-postinställningar"
 
 msgid "System Events"
-msgstr ""
+msgstr "Systemhändelser"
 
 msgid "System Information"
 msgstr "Systeminformation"
@@ -9077,7 +9077,7 @@ msgid ""
 msgstr "Antal fel orsakade av felaktig checksumma vid felkorrigeringen."
 
 msgid "The number of log entries to show must be between 5 and 1000."
-msgstr ""
+msgstr "Antal loggposter som skall visas måste vara mellan 5 och 1000."
 
 msgid "The old password is not correct."
 msgstr "Det gamla lösenordet stämmer ej."
@@ -11087,39 +11087,3 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
-
-#~ msgid "Daemon events"
-#~ msgstr "Demonhändelser"
-
-#~ msgid "FTP events"
-#~ msgstr "FTP-händelser"
-
-#~ msgid "Number of log entries to show"
-#~ msgstr "Antal loggposter att visa"
-
-#~ msgid "Number of log entries to show must be between 5 and 1000."
-#~ msgstr "Antalet logg-poster att visa måste vara mellan 5 och 1000."
-
-#~ msgid "RSYNC events"
-#~ msgstr "RSYNC-händelser"
-
-#~ msgid "S.M.A.R.T. events"
-#~ msgstr "S.M.A.R.T.-händelser"
-
-#~ msgid "SSH events"
-#~ msgstr "SSH händelser"
-
-#~ msgid "System events"
-#~ msgstr "Systemhändelser"
-
-#~ msgid "IP address of remote syslog server."
-#~ msgstr "IP-adress till extern syslogserver."
-
-#~ msgid "Disable the compression of repeated line."
-#~ msgstr "Inaktivera komprimering av upprepade rader."
-
-#~ msgid "Event Selection"
-#~ msgstr "Val av händelse"
-
-#~ msgid "Max Entries"
-#~ msgstr "Mas antal poster"

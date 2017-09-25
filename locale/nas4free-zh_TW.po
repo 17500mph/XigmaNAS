@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-09-23 00:12+0000\n"
-"PO-Revision-Date: 2017-09-22 15:16+0000\n"
+"PO-Revision-Date: 2017-09-25 07:12+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-09-22 22:45+0000\n"
+"X-Launchpad-Export-Date: 2017-09-25 21:41+0000\n"
 "X-Generator: Launchpad (build 18463)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -2012,7 +2012,7 @@ msgid "Daemon"
 msgstr "守護進程"
 
 msgid "Daemon Events"
-msgstr ""
+msgstr "守護進程事件"
 
 msgid "Daemon log"
 msgstr "守護進程記錄"
@@ -2516,7 +2516,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "禁用揚聲器啟動和關機時發出蜂鳴聲。"
 
 msgid "Disable the compression of repeating lines."
-msgstr ""
+msgstr "禁用重複行的壓縮。"
 
 msgid "Disabled"
 msgstr "關閉"
@@ -3701,7 +3701,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - 檔傳輸"
 
 msgid "FTP Events"
-msgstr ""
+msgstr "FTP事件"
 
 msgid "FTP Proxy"
 msgstr "FTP 代理"
@@ -4248,7 +4248,7 @@ msgid "IP address"
 msgstr "IP 地址"
 
 msgid "IP address of the remote syslog server."
-msgstr ""
+msgstr "遠程日誌伺服器的IP地址。"
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -6553,7 +6553,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC 客戶端資訊和狀態"
 
 msgid "RSYNC Events"
-msgstr ""
+msgstr "RSYNC事件"
 
 msgid "RSYNC client number"
 msgstr "RSYNC客戶數"
@@ -6943,7 +6943,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Events"
-msgstr ""
+msgstr "S.M.A.R.T. 事件"
 
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. 監控"
@@ -6991,7 +6991,7 @@ msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH Events"
-msgstr ""
+msgstr "SSH事件"
 
 msgid "SSHD log"
 msgstr "SSHD 記錄"
@@ -7277,19 +7277,19 @@ msgid "Send Command!"
 msgstr "發送命令！"
 
 msgid "Send FTP event messages."
-msgstr ""
+msgstr "發送FTP事件消息。"
 
 msgid "Send Now"
 msgstr "現在發送"
 
 msgid "Send RSYNC event messages."
-msgstr ""
+msgstr "發送RSYNC事件消息。"
 
 msgid "Send S.M.A.R.T. event messages."
-msgstr ""
+msgstr "發送S.M.A.R.T. 事件消息。"
 
 msgid "Send SSH event messages."
-msgstr ""
+msgstr "發送SSH事件消息。"
 
 msgid "Send Test Email"
 msgstr "發送測試電子郵件"
@@ -7298,10 +7298,10 @@ msgid "Send a TEST warning email on startup."
 msgstr "啟動時傳送測試警示電郵。"
 
 msgid "Send daemon event messages."
-msgstr ""
+msgstr "發送守護進程事件消息。"
 
 msgid "Send system event messages."
-msgstr ""
+msgstr "發送系統事件消息。"
 
 msgid "Sensitive"
 msgstr "敏感"
@@ -7478,7 +7478,7 @@ msgid "Show Default Groups"
 msgstr "顯示默認組"
 
 msgid "Show Log Entries"
-msgstr ""
+msgstr "顯示日誌條目"
 
 msgid "Show Process Information"
 msgstr "顯示進程資訊"
@@ -7859,7 +7859,7 @@ msgid "System Email Settings"
 msgstr "系統Email設置"
 
 msgid "System Events"
-msgstr ""
+msgstr "系統事件"
 
 msgid "System Information"
 msgstr "系統資料"
@@ -8568,7 +8568,7 @@ msgid ""
 msgstr "在錯誤校正期間由不正確的校驗導致的錯誤數。"
 
 msgid "The number of log entries to show must be between 5 and 1000."
-msgstr ""
+msgstr "要顯示的日誌條目數必須介於5到1000之間。"
 
 msgid "The old password is not correct."
 msgstr "舊的密碼不正確。"
@@ -10366,39 +10366,3 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸載"
-
-#~ msgid "RSYNC events"
-#~ msgstr "RSYNC 事件"
-
-#~ msgid "S.M.A.R.T. events"
-#~ msgstr "S.M.A.R.T. 事件"
-
-#~ msgid "SSH events"
-#~ msgstr "SSH 事件"
-
-#~ msgid "System events"
-#~ msgstr "系統事件"
-
-#~ msgid "Number of log entries to show must be between 5 and 1000."
-#~ msgstr "一次要顯示多少記錄（5-100）"
-
-#~ msgid "Number of log entries to show"
-#~ msgstr "顯示記錄的數量"
-
-#~ msgid "Daemon events"
-#~ msgstr "守護進程事件"
-
-#~ msgid "Disable the compression of repeated line."
-#~ msgstr "禁止對重複行壓縮。"
-
-#~ msgid "Event Selection"
-#~ msgstr "事件選擇"
-
-#~ msgid "FTP events"
-#~ msgstr "FTP 事件"
-
-#~ msgid "IP address of remote syslog server."
-#~ msgstr "遠程系統日誌伺服器IP地址"
-
-#~ msgid "Max Entries"
-#~ msgstr "最大條目"
