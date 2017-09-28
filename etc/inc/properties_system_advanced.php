@@ -80,7 +80,7 @@ class properties_system_advanced {
 		return $this;
 	}
 	private function prop_disableconsolemenu(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disableconsolemenu');
 		$o->set_name('disableconsolemenu');
 		$o->set_title(gtext('Console Menu'));
@@ -94,7 +94,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_disablefm(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disablefm');
 		$o->set_name('disablefm');
 		$o->set_title(gtext('File Manager'));
@@ -108,7 +108,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_disablefirmwarecheck(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disablefirmwarecheck');
 		$o->set_name('disablefirmwarecheck');
 		$o->set_title(gtext('Firmware Check'));
@@ -124,7 +124,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_disablebeep(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disablebeep');
 		$o->set_name('disablebeep');
 		$o->set_title(gtext('Internal Speaker'));
@@ -138,7 +138,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_microcode_update(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('microcode_update');
 		$o->set_name('microcode_update');
 		$o->set_title(gtext('CPU Microcode Update'));
@@ -152,7 +152,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_enabletogglemode(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('enabletogglemode');
 		$o->set_name('enabletogglemode');
 		$o->set_title(gtext('Toggle Mode'));
@@ -166,7 +166,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_skipviewmode(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('skipviewmode');
 		$o->set_name('skipviewmode');
 		$o->set_title(gtext('Skip View Mode'));
@@ -180,7 +180,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_disableextensionmenu(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disableextensionmenu');
 		$o->set_name('disableextensionmenu');
 		$o->set_title(gtext('Disable Extension Menu'));
@@ -194,7 +194,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_tune_enable(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('tune_enable');
 		$o->set_name('tune_enable');
 		$o->set_title(gtext('Tuning'));
@@ -208,7 +208,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_zeroconf(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('zeroconf');
 		$o->set_name('zeroconf');
 		$o->set_title(gtext('Zeroconf/Bonjour'));
@@ -222,7 +222,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_powerd(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('powerd');
 		$o->set_name('powerd');
 		$o->set_title(gtext('Power Daemon'));
@@ -236,7 +236,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_pwmode(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('pwmode');
 		$o->set_name('pwmode');
 		$o->set_title(gtext('Power Mode'));
@@ -256,7 +256,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_pwmax(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		return $o;
 /*
 		$clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
@@ -274,17 +274,17 @@ class properties_system_advanced {
 */
 	}
 	private function prop_pwmin(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		return $o;
 //		html_inputbox2('pwmin',gtext('CPU Minimum Frequency'),$pconfig['pwmin'],gtext('An empty field is default.'),false,5);
 	}
 	private function prop_motd(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		return $o;
 //		html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,7,false,false);
 	}
 	private function prop_shrinkpageheader(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('shrinkpageheader');
 		$o->set_name('shrinkpageheader');
 		$o->set_title(gtext('Shrink Page Header'));
@@ -298,7 +298,7 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_sysconsaver(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('sysconsaver');
 		$o->set_name('sysconsaver');
 		$o->set_title(gtext('Console Screensaver'));
@@ -312,12 +312,12 @@ class properties_system_advanced {
 		return $o;
 	}
 	private function prop_sysconsaverblanktime(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		return $o;
 //		html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
 	}
 	private function prop_enableserialconsole(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('enableserialconsole');
 		$o->set_name('enableserialconsole');
 		$o->set_title(gtext('Console Screensaver'));
