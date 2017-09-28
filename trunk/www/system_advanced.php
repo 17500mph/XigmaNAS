@@ -338,16 +338,17 @@ function sysconsaver_change() {
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 <?php
 		$node = new co_DOMDocument();
-		$node->add_nav_record('system_advanced.php',gtext('Advanced'),gtext('Reload page'),true)->
-			add_nav_record('system_email.php',gtext('Email'))->
-			add_nav_record('system_email_reports.php',gtext('Email Reports'))->
-			add_nav_record('system_monitoring.php',gtext('Monitoring'))->
-			add_nav_record('system_swap.php',gtext('Swap'))->
-			add_nav_record('system_rc.php',gtext('Command Scripts'))->
-			add_nav_record('system_cron.php',gtext('Cron'))->
-			add_nav_record('system_loaderconf.php',gtext('loader.conf'))->
-			add_nav_record('system_rcconf.php',gtext('rc.conf'))->
-			add_nav_record('system_sysctl.php',gtext('sysctl.conf'))->
+		$node->
+			mount_tabnav_record('system_advanced.php',gtext('Advanced'),gtext('Reload page'),true)->
+			mount_tabnav_record('system_email.php',gtext('Email'))->
+			mount_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
+			mount_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
+			mount_tabnav_record('system_swap.php',gtext('Swap'))->
+			mount_tabnav_record('system_rc.php',gtext('Command Scripts'))->
+			mount_tabnav_record('system_cron.php',gtext('Cron'))->
+			mount_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
+			mount_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
+			mount_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
 			render();
 ?>
 	</ul></td></tr>
@@ -374,15 +375,15 @@ function sysconsaver_change() {
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->add_checkbox($property->zeroconf,!empty($pconfig['zeroconf']));
-			$node->add_checkbox($property->disablefm,!empty($pconfig['disablefm']));
+			$node->mount_checkbox($property->zeroconf,!empty($pconfig['zeroconf']));
+			$node->mount_checkbox($property->disablefm,!empty($pconfig['disablefm']));
 			if(('true' == $g['zroot']) || ('full' !== $g['platform'])):
-				$node->add_checkbox($property->disablefirmwarecheck,!empty($pconfig['disablefirmwarecheck']));
+				$node->mount_checkbox($property->disablefirmwarecheck,!empty($pconfig['disablefirmwarecheck']));
 			endif;
-			$node->add_checkbox($property->enabletogglemode,!empty($pconfig['enabletogglemode']));
-			$node->add_checkbox($property->skipviewmode,!empty($pconfig['skipviewmode']));
-			$node->add_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
-			$node->add_checkbox($property->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
+			$node->mount_checkbox($property->enabletogglemode,!empty($pconfig['enabletogglemode']));
+			$node->mount_checkbox($property->skipviewmode,!empty($pconfig['skipviewmode']));
+			$node->mount_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
+			$node->mount_checkbox($property->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
 			$node->render();
 ?>
 		</tbody>
@@ -401,11 +402,11 @@ function sysconsaver_change() {
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->add_checkbox($property->disablebeep,!empty($pconfig['disablebeep']));
-			$node->add_checkbox($property->microcode_update,!empty($pconfig['microcode_update']));
-			$node->add_checkbox($property->tune_enable,!empty($pconfig['tune_enable']));
-			$node->add_checkbox($property->powerd,!empty($pconfig['powerd']));
-			$node->add_radio_grid($property->pwmode,$pconfig['pwmode']);
+			$node->mount_checkbox($property->disablebeep,!empty($pconfig['disablebeep']));
+			$node->mount_checkbox($property->microcode_update,!empty($pconfig['microcode_update']));
+			$node->mount_checkbox($property->tune_enable,!empty($pconfig['tune_enable']));
+			$node->mount_checkbox($property->powerd,!empty($pconfig['powerd']));
+			$node->mount_radio_grid($property->pwmode,$pconfig['pwmode']);
 			$node->render();
 			$clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
 			$a_freq = [];
@@ -437,9 +438,9 @@ function sysconsaver_change() {
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->add_checkbox($property->disableconsolemenu,!empty($pconfig['disableconsolemenu']));
-			$node->add_checkbox($property->enableserialconsole,!empty($pconfig['enableserialconsole']));
-			$node->add_checkbox($property->sysconsaver,!empty($pconfig['sysconsaver']));
+			$node->mount_checkbox($property->disableconsolemenu,!empty($pconfig['disableconsolemenu']));
+			$node->mount_checkbox($property->enableserialconsole,!empty($pconfig['enableserialconsole']));
+			$node->mount_checkbox($property->sysconsaver,!empty($pconfig['sysconsaver']));
 			$node->render();
 			html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
 			html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,7,false,false);
