@@ -1447,64 +1447,214 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 	}
 }
 trait co_DOMTools {
+/**
+ *	Appends a child node to an element
+ *	@param string $name
+ *	@param array $attributes
+ *	@param string $value
+ *	@param string $namespaceURI
+ *	@return DOMNode $subnode
+ */
 	public function addElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		$node = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
-		$node->addAttributes($attributes);
+		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
+		$subnode->addAttributes($attributes);
 		if(preg_match('/\S/',$value)):
 			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
-			$innerhtml = $node->ownerDocument->createDocumentFragment(); // create fragment from $value
+			$document = $subnode->ownerDocument ?? $this;
+			$innerhtml = $document->createDocumentFragment(); // create fragment from $value
 			if($innerhtml->appendXML($value)):
-				$node->appendChild($innerhtml);
+				$subnode->appendChild($innerhtml);
 			endif;
 			libxml_clear_errors();
 			libxml_use_internal_errors($saved_setting);
 		endif;
-		return $node;
+		return $subnode;
 	}
-	public function addJavaScript(string $text) {
+/**
+ *	Inserts a child node on top of the children
+ *	@param string $name
+ *	@param array $attributes
+ *	@param string $value
+ *	@param string $namespaceURI
+ *	@return DOMNode $subnode
+ */
+	public function prepend_element(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
+		if(is_null($this->firstChild)):
+			$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI));
+		else:
+			$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI),$this->firstChild);
+		endif;
+		$subnode->addAttributes($attributes);
+		if(preg_match('/\S/',$value)):
+			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
+			$innerhtml = $subnode->ownerDocument->createDocumentFragment(); // create fragment from $value
+			if($innerhtml->appendXML($value)):
+				$subnode->appendChild($innerhtml);
+			endif;
+			libxml_clear_errors();
+			libxml_use_internal_errors($saved_setting);
+		endif;
+		return $subnode;
+	}
+/**
+ *	Appends a JavaScript node to the DOM
+ *	@param string $text
+ *	@return DOMNode $this
+ */
+	public function addJavaScript(string $text = '') {
 		$node = $this->addElement('script');
-		if(false === $node):
-			return false;
+		if(false !== $node):
+			$opening = $node->ownerDocument->createTextNode(PHP_EOL . '//![CDATA[' . PHP_EOL);
+			if(false !== $opening):
+				$node->appendChild($opening);
+				$cdata = $node->ownerDocument->createCDATASection($text);
+				if(false !== $cdata):
+					$node->appendChild($cdata);
+					$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
+					if(false !== $ending):
+						$node->appendChild($ending);
+					endif;
+				endif;
+			endif;
 		endif;
-		$newline = $node->ownerDocument->createTextNode(PHP_EOL . '//');
-		if(false === $newline):
-			return false;
-		endif;
-		$node->appendChild($newline);
-		$cdata = $node->ownerDocument->createCDATASection(PHP_EOL . $text . PHP_EOL . '//');
-		if(false === $cdata):
-			return false;
-		endif;
-		$node->appendChild($cdata);
-		return $node;
+		return $this;
 	}
 	//	tags
-	public function add_col(array $attributes = []) {
+	public function putCOL(array $attributes = []) {
 		$this->addElement('col',$attributes);
 		return $this;
 	}
-	public function ins_colgroup(array $attributes = []) {
-		return($this->addElement('colgroup',$attributes));
+	public function putIMG(array $attributes = []) {
+		$this->addElement('img',$attributes);
+		return $this;
 	}
-	public function ins_table(array $attributes = []) {
-		return $this->addElement('table',$attributes);
+	public function addA(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('a',$attributes,$value);
+		return $subnode;
 	}
-	public function ins_tbody(array $attributes = []) {
-		return $this->addElement('tbody',$attributes);
+	public function addDIV(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('div',$attributes,$value);
+		return $subnode;
 	}
-	public function ins_thead(array $attributes = []) {
-		return $this->addElement('thead',$attributes);
+	public function addFORM(array $attributes = []) {
+		$subnode = $this->addElement('form',$attributes);
+		return $subnode;
 	}
-	//	navigator menu fragments and macros
+	public function addLI(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('li',$attributes,$value);
+		return $subnode;
+	}
+	public function addP(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('p',$attributes,$value);
+		return $subnode;
+	}
+	public function addSPAN(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('span',$attributes,$value);
+		return $subnode;
+	}
+	public function addUL(array $attributes = []) {
+		$subnode = $this->addElement('ul',$attributes);
+		return $subnode;
+	}
+	public function addTABLE(array $attributes = []) {
+		$subnode = $this->addElement('table',$attributes);
+		return $subnode;
+	}
+	public function addCOLGROUP(array $attributes = []) {
+		$subnode = $this->addElement('colgroup',$attributes);
+		return $subnode; 
+	}
+	public function addTHEAD(array $attributes = []) {
+		$subnode = $this->addElement('thead',$attributes);
+		return $subnode;
+	}
+	public function addTBODY(array $attributes = []) {
+		$subnode = $this->addElement('tbody',$attributes);
+		return $subnode;
+	}
+	public function addTFOOT(array $attributes = []) {
+		$subnode = $this->addElement('tfoot',$attributes);
+		return $subnode;
+	}
+	public function addTR(array $attributes = []) {
+		$subnode = $this->addElement('tr',$attributes);
+		return $subnode;
+	}
+	public function addTD(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('td',$attributes,$value);
+		return $subnode;
+	}
+	public function addTH(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('th',$attributes,$value);
+		return $subnode;
+	}
+	//	tab menu fragments and macros
+/**
+ * 
+ *	@return DOMNode $subnode
+ */
+	public function add_tabnav_area() {
+		$table_attributes = [
+			'id' => 'area_navigator'
+		];
+		$document = $this->ownerDocument ?? $this;
+		$target = $document->getElementById('g4h');
+		if(isset($target)):
+			$append_mode = true; // last element of header section
+			$div_attributes = [
+				'id' => 'area_tabnav',
+				'style' => 'padding: 0px 25px 10px 25px;'
+			];
+			if($append_mode):
+				$subnode = $target->
+					addDIV($div_attributes)->
+						addTABLE($table_attributes)->
+							addTBODY();
+			else:
+				$subnode = $target->
+					prepend_element('div',$div_attributes)->
+						addTABLE($table_attributes)->
+							addTBODY();
+			endif;
+		else: // workaround for unconverted pages because of padding
+			$target = $this;
+			$subnode = $target->
+				addTABLE($table_attributes)->
+					addTBODY();
+		endif;
+		return $subnode;
+	}
+/**
+ *	Creates tags for upper navigation menu 
+ *	@return DOMNode $subnode
+ */
+	public function add_tabnav_upper() {
+		$subnode = $this->
+			addTR()->
+				addTD(['class' => 'tabnavtbl'])->
+					addUL(['id' => 'tabnav']);
+		return $subnode;
+	}
+/**
+ *	Creates tags for lower navigation menu 
+ *	@return DOMNode
+ */
+	public function add_tabnav_lower() {
+		$subnode = $this->
+			addTR()->
+				addTD(['class' => 'tabnavtbl'])->
+					addUL(['id' => 'tabnav2']);
+		return $subnode;
+	}
 /**
  *	Adds a menu item to the navigation menu
  *	@param string $href Link to script
  *	@param string $value Name of the menu item
  *	@param string $title Title of the menu item
  *	@param bool $active Flag to indicate an active menu item
- *	@return DOMNode
+ *	@return object $this
  */
-	public function add_nav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
+	public function mount_tabnav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
 		$attributes = [];
 		if(preg_match('/\S/',$href)):
 			$attributes['href'] = $href;
@@ -1512,40 +1662,25 @@ trait co_DOMTools {
 		if(preg_match('/\S/',$title)):
 			$attributes['title'] = $title;
 		endif;
-		$this->addElement('li',['class' => $active ? 'tabact' : 'tabinact'])->addElement('a',$attributes)->addElement('span',[],$value);
+		$this->
+			addLI(['class' => $active ? 'tabact' : 'tabinact'])->
+				addA($attributes)->
+					addSPAN([],$value);
 		return $this;
 	}
-/**
- *	Creates necessary tags for navigator menu
- *	@return DOMNode
- */
-	public function ins_nav_table() {
-		return $this->ins_table(['id' => 'area_navigator'])->ins_tbody();
+	/**
+	 * 
+	 * @return object $subnode
+	 */
+	public function add_area_data() {
+		$subnode = $this->
+			addTABLE(['id' => 'area_data'])->
+				addTBODY()->
+					addTR()->
+						addTD(['id' => 'area_data_frame']);
+		return $subnode;
 	}
-/**
- *	Creates tags for upper navigation menu 
- *	@return DOMNode
- */
-	public function ins_nav_upper() {
-		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav']);
-	}
-/**
- *	Creates tags for lower navigation menu 
- *	@return DOMNode
- */
-	public function ins_nav_lower() {
-		return $this->addElement('tr')->addElement('td',['class' => 'tabnavtbl'])->addElement('ul',['id' => 'tabnav2']);
-	}
-	public function hlp_area_data_form(string $action) {
-		return $this->addElement('form',['action' => $action,'method' => 'post','id' => 'iform','name' => 'iform']);
-	}
-	public function hlp_area_data_table() {
-		return $this->ins_table(['id' => 'area_data'])->ins_tbody()->addElement('tr')->addElement('td',['id' => 'area_data_frame']);
-	}
-	public function ins_area_data(string $action) {
-		return $this->hlp_area_data_form($action)->hlp_area_data_table();
-	}
-	public function add_input_errors(array $input_errors = []) {
+	public function mount_input_errors(array $input_errors = []) {
 		foreach($input_errors as $input_error):
 			if(is_string($input_error)):
 				if(preg_match('/\S/',$input_error)):
@@ -1554,78 +1689,96 @@ trait co_DOMTools {
 			endif;
 		endforeach;
 		if(!empty($messages)):
-			$node = $this->
-				addElement('div',['id' => 'errorbox'])->
-				ins_table(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
-					addElement('tr')->
-						addElement('td',['class' => 'icon','align' => 'center','valign' => 'center'])->
-							addElement('img',['src' => 'images/error_box.png','alt' => ''])->
+			$ul = $this->
+				addDIV(['id' => 'errorbox'])->
+					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
+						addTR()->
+							addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
+								putIMG(['src' => 'images/error_box.png','alt' => ''])->
 								parentNode->
-							parentNode->
-						addElement('td',['class' => 'message'])->
-							addElement('div',[],sprintf('%s:',gtext('The following input errors were detected'),':'))->
-								addElement('ul');
+							addTD(['class' => 'message'])->
+								addDIV([],sprintf('%s:',gtext('The following input errors were detected'),':'))->
+									addUL();
 			foreach($messages as $message):
-				$node->addElement('li',[],$message);
+				$ul->addLI([],$message);
 			endforeach;
 		endif;
 		return $this;
 	}
-	public function hlp_core_box(string $type,string $message = '') {
+	public function helper_core_box(string $type,string $message = '') {
 		if(preg_match('/\S/',$message)):
 			switch($type):
 				case 'error': $id = 'errorbox';$img = 'error_box.png';break;
 				case 'info': $id = 'infobox';$img = 'info_box.png';break;
 				case 'warning': $id = 'warningbox';$img = 'warn_box.png';break;
 			endswitch;
-			$node = $this->
-				addElement('div',['id' => $id])->
-				ins_table(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
-					addElement('tr')->
-						addElement('td',['class' => 'icon','align' => 'center','valign' => 'center'])->
-							addElement('img',['src' => sprintf('/images/%s',$img),'alt' => ''])->
+			$this->
+				addDIV(['id' => $id])->
+					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
+						addTR()->
+							addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
+								putIMG(['src' => sprintf('/images/%s',$img),'alt' => ''])->
 								parentNode->
-							parentNode->
-						addElement('td',['class' => 'message'],$message);
+							addTD(['class' => 'message'],$message);
 		endif;
 		return $this;
 	}
-	public function add_error_box(string $message = '') {
-		return $this->hlp_core_box('error',$message);
+	public function mount_error_box(string $message = '') {
+		$this->helper_core_box('error',$message);
+		return $this;
 	}
-	public function add_info_box(string $message = '') {
-		return $this->hlp_core_box('info',$message);
+	public function mount_info_box(string $message = '') {
+		$this->helper_core_box('info',$message);
+		return $this;
 	}
-	public function add_warning_box(string $message = '') {
-		return $this->hlp_core_box('warning',$message);
+	public function mount_warning_box(string $message = '') {
+		$this->helper_core_box('warning',$message);
+		return $this;
 	}
 	//	data settings table macros
-	public function ins_table_data_settings() {
-		return $this->ins_table(['class' => 'area_data_settings']);
+	public function add_table_data_settings() {
+		$subnode = $this->addTABLE(['class' => 'area_data_settings']);
+		return $subnode;
 	}
-	public function add_colgroup_data_settings() {
-		$this->
-			ins_colgroup()->
-				add_col(['class' => 'area_data_settings_col_tag'])->
-				add_col(['class' => 'area_data_settings_col_data']);
+	/**
+	 * 
+	 *	@return DOMNode $this
+	 */
+	public function mount_colgroup_data_settings() {
+		$this->mount_colgroup_with_classes(['area_data_settings_col_tag','area_data_settings_col_data']);
+		return $this;
+	}
+	public function mount_colgroup_with_classes(array $data = []) {
+		$colgroup = $this->addCOLGROUP();
+		foreach($data as $value):
+			$colgroup->putCOL(['class' => htmlspecialchars($value)]);
+		endforeach;
+		return $this;
+	}
+	public function mount_colgroup_with_styles(string $tag,array $data = []) {
+		$colgroup = $this->addCOLGROUP();
+		$tag = htmlspecialchars($tag);
+		foreach($data as $value):
+			$colgroup->putCOL(['style' => sprintf('%s:%s;',$tag,htmlspecialchars($value))]);
+		endforeach;
 		return $this;
 	}
 	//	title macros
-	public function add_titleline($title,$colspan = 2,$ctrlname = '') {
+	public function mount_titleline($title,$colspan = 2,$ctrlname = '') {
 		$ctrl = new HTMLTitleLine2($title);
 		$ctrl->SetColSpan($colspan);
 		$ctrl->SetCtrlName($ctrlname);
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_titleline_checkbox(properties $p,$value,int $colspan = 2) {
+	public function mount_titleline_with_checkbox(properties $p,$value,int $colspan = 2) {
 		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
 		$ctrl->SetColSpan($colspan);
 		$ctrl->Compose($this);
 		return $this;
 	}
 	//	elements
-	public function add_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
+	public function mount_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
 		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption(),$p->get_description());
 		$ctrl->SetRequired($required);
 		$ctrl->SetReadOnly($readonly);
@@ -1633,7 +1786,7 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_input(properties $p,$value,bool $required = false,bool $readonly = false,$size = 40,$altpadding = false,$maxlength = 0,string $placeholder = '') {
+	public function mount_input_text(properties $p,$value,bool $required = false,bool $readonly = false,$size = 40,$altpadding = false,$maxlength = 0,string $placeholder = '') {
 		$ctrl = new HTMLEditBox2($p->get_id(),$p->get_title(),$value,$p->get_description(),$size);
 		$ctrl->SetRequired($required);
 		$ctrl->SetReadOnly($readonly);
@@ -1643,7 +1796,7 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_radio_grid(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
+	public function mount_radio_grid(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
 		$ctrl = new HTMLRadioBox2($p->get_id(),$p->get_title(),$value,$p->get_options(),$p->get_description());
 		$ctrl->SetRequired($required);
 		$ctrl->SetReadOnly($readonly);
@@ -1651,7 +1804,7 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_select(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
+	public function mount_select(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
 		$ctrl = new HTMLComboBox2($p->get_id(),$p->get_title(),$value,$p->get_options(),$p->get_description());
 		$ctrl->SetRequired($required);
 		$ctrl->SetReadOnly($readonly);
@@ -1659,23 +1812,32 @@ trait co_DOMTools {
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_separator($colspan = 2,$ctrlname = '') {
+	public function mount_separator($colspan = 2,$ctrlname = '') {
 		$ctrl = new HTMLSeparator2();
 		$ctrl->SetColSpan($colspan);
 		$ctrl->SetCtrlName($ctrlname);
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_textinfo(string $id,string $title = '',$value) {
+	public function mount_textinfo(string $id,string $title = '',$value) {
 		$ctrl = new HTMLTextInfo2($id,$title,$value);
 		$ctrl->Compose($this);
 		return $this;
 	}
 	//	submit area macros
-	public function ins_submit() {
-		return $this->addElement('div',['id' => 'submit']);
+	public function add_button_area() {
+		$root = $this->ownerDocument ?? $this;
+		$target = $root->getElementById('g4f') ?? $this;
+		$append_mode = false; // top element of footer area
+		$div_attributes = ['id' => 'submit','style' => 'padding: 0px 25px 0px 25px;'];
+		if($append_mode):
+			$subnode = $target->addDIV($div_attributes);
+		else:
+			$subnode = $target->prepend_element('div',$div_attributes);
+		endif;
+		return $subnode;
 	}
-	public function add_submit_button(string $value = NULL,string $content = NULL,string $id = NULL) {
+	public function mount_button_submit(string $value = NULL,string $content = NULL,string $id = NULL) {
 		$element      = 'button';
 		$class_button = 'formbtn';
 		$value        = $value ?? 'cancel';
@@ -1685,26 +1847,153 @@ trait co_DOMTools {
 		$this->addElement($element,$attributes,$content);
 		return $this;
 	}
-	public function add_cancel_button() {
-		return $this->add_submit_button('cancel',gtext('Cancel'));
+	public function mount_button_cancel() {
+		$this->mount_button_submit('cancel',gtext('Cancel'));
+		return $this;
 	}
-	public function add_edit_button() {
-		return $this->add_submit_button('edit',gtext('Edit'));
+	public function mount_button_edit() {
+		$this->mount_button_submit('edit',gtext('Edit'));
+		return $this;
 	}
-	public function add_save_button() {
-		return $this->add_submit_button('save',gtext('Apply'));
+	public function mount_button_save() {
+		$this->mount_button_submit('save',gtext('Apply'));
+		return $this;
 	}
 	//	remark area macros
-	public function ins_remarks() {
-		return $this->addElement('div',['id' => 'remarks']);
+	public function add_remarks() {
+		$subnode = $this->addDIV(['id' => 'remarks']);
+		return $subnode;
 	}
-	public function add_remark($ctrlname,$title,$text) {
+	public function mount_remark($ctrlname,$title,$text) {
 		$ctrl = new HTMLRemark2($ctrlname,$title,$text);
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function add_form_end() {
-		return $this->addElement('input',['name' => 'authtoken','type' => 'hidden','value' => Session::getAuthToken()]);
+	public function mount_authtoken() {
+		$this->addElement('input',['name' => 'authtoken','type' => 'hidden','value' => Session::getAuthToken()]);
+		return $this;
+	}
+	public function clc_page_title(array $page_title = []) {
+		$output = implode(htmlspecialchars(' · '),$page_title);
+		return $output;
+	}
+	public function clc_html_page_title(array $page_title = []) {
+		$output = htmlspecialchars(system_get_hostname());
+		if(!empty($page_title)):
+			$output .= htmlspecialchars(' - ');
+			$output .= $this->clc_page_title($page_title);
+		endif;
+		return $output;
+	}
+	public function mount_head(array $page_title = [],bool $requires_datechooser = false) {
+		$head = $this->addElement('head',['id' => 'head']);
+		$head->addElement('meta',['charset' => system_get_language_codeset()]);
+		$head->addElement('meta',['name' => 'format-detection','content' => 'telephone=no']);
+		$head->addElement('title',[],$this->clc_html_page_title($page_title));
+		$head->addElement('link',['href' => '/css/gui.css','rel' => 'stylesheet','type' => 'text/css']);
+		$head->addElement('link',['href' => '/css/navbar.css','rel' => 'stylesheet','type' => 'text/css']);
+		$head->addElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);	
+		$head->addElement('script',['type' => 'text/javascript','src' => '/js/jquery.min.js']);
+		$head->addElement('script',['type' => 'text/javascript','src' => '/js/gui.js']);
+		$head->addElement('script',['type' => 'text/javascript','src' => '/js/spinner.js']);
+		$head->addElement('script',['type' => 'text/javascript','src' => '/js/spin.min.js']);
+		if($requires_datechooser):
+			$head->addElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css']);
+			$head->addElement('script',['type' => 'text/javascript','src' => 'js/datechooser.js']);
+		endif;
+		return $this;
+	}
+	/**
+	 *	Creates the body element of the page with all basic subnodes.
+	 *	
+	 *	@param array $page_title
+	 *	@param string $action_url If $action_url empty no form element will be created.
+	 *	@return DOMNode $this
+	 */
+	public function mount_body(array $page_title = [],string $action_url = NULL) {
+		$jdata = <<<EOJ
+$(window).on("load", function() {
+	$("#tabnav").on('click', function() { spinner(); });
+	$("#tabnav2").on('click', function() { spinner(); });
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+});
+EOJ;
+		$body = $this->addElement('body',['id' => 'main']);
+		if(isset($action_url) && preg_match('/\S/',$action_url)):
+			$form_attributes = ['action' => $action_url,'method' => 'post','id' => 'iform','name' => 'iform'];
+			$flexcontainer = $body->addFORM($form_attributes)->addDIV(['id' => 'pagebodyflex']);
+		else:
+			$flexcontainer = $body->addDIV(['id' => 'pagebodyflex']);
+		endif;
+		$flexcontainer->addDIV(['id' => 'spinner_main']);
+		$flexcontainer->addDIV(['id' => 'spinner_overlay','style' => 'display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;']);
+		$flexcontainer->mount_header($page_title);
+		$flexcontainer->mount_main();
+		$flexcontainer->mount_footer();
+		$flexcontainer->addJavascript($jdata);
+		return $this;
+	}
+	public function mount_header(array $page_title = []) {
+		$header = $this->addElement('header',['id' => 'g4h']);
+		if(!$_SESSION['g']['shrinkpageheader']):
+			$header->
+				addDIV(['id' => 'header'])->
+					addDIV(['id' => 'headerrlogo'])->
+						addDIV(['class' => 'hostname'])->
+							addSPAN([],system_get_hostname())->
+								parentNode->
+							parentNode->
+						parentNode->
+					addDIV(['id' => 'headerlogo'])->
+						addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
+							putIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
+		endif;
+		$header->addDIV(['id' => 'area_navhdr'],make_headermenu());
+		$header->addDIV(['id' => 'gapheader']);
+		if(!empty($page_title)):
+			$header->addP(['class' => 'pgtitle','style' => 'padding:0px 25px 0px 25px;' ],$this->clc_page_title($page_title));
+		endif;
+		return $this;
+	}
+	public function mount_main() {
+		$this->
+			addElement('main',['id' => 'g4m'])->
+			addDIV(['id' => 'pagecontent']);
+		return $this;
+	}
+	/**
+	 * 
+	 * @global array $g
+	 * @return $this
+	 */
+	public function mount_footer() {
+		global $g;
+		
+		$g4fx = $this->
+			addElement('footer',['id' => 'g4f'])->
+				addDIV(['id' => 'gapfooter'])->
+					parentNode->
+				addDIV(['id' => 'pagefooter'])->
+					add_table_data_settings()->
+						addCOLGROUP()->
+							putCOL(['style' => 'width:10%'])->
+							putCOL(['style' => 'width:80%'])->
+							putCOL(['style' => 'width:10%'])->
+							parentNode->
+						addTBODY()->
+							addTR();
+		$g4fl = $g4fx->addTD(['class' => 'g4fl']);
+		if(Session::isAdmin()):
+			if(file_exists(sprintf('%s/sysreboot.reqd',$g['varrun_path']))):
+				$g4fl->
+					addA(['class' => 'g4fi','href' => '/reboot.php'])->
+						putIMG(['src' => '/images/notify_reboot.png','title' => gtext('A reboot is required'),'alt' => gtext('Reboot Required')]);
+			endif;
+		endif;
+		$g4fc = $g4fx->addTD(['class' => 'g4fc'],htmlspecialchars(get_product_copyright()));
+		$g4fr = $g4fx->addTD(['class' => 'g4fr']);
+		return $this;
 	}
 }
 class co_DOMElement extends \DOMElement implements ci_DOM {
@@ -1722,16 +2011,35 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
-		$this->registerNodeClass('DOMElement','co_DOMElement');
+		$this->preserveWhiteSpace = false;
 		$this->formatOutput = true;
+		$this->registerNodeClass('DOMElement','co_DOMElement');
 	}
 	public function render() {
 		echo $this->saveHTML();
+		return $this;
 	}
 	public function get_html() {
 		return $this->saveHTML();
 	}
+/*
+	public function getElementById($id) {
+		$xpath = new DOMXPath($this);
+		return $xpath->query("//*[@id='$id']")->item(0);
+	}
+ */
 }
 interface ci_DOM {
+}
+function new_page(array $page_title = [],string $action_url = NULL) {
+	$document = new co_DOMDocument();
+	
+	$document->
+		loadHTML('<!DOCTYPE HTML>',LIBXML_HTML_NOIMPLIED);
+	$document->
+		addElement('html')->
+			mount_head($page_title)->
+			mount_body($page_title,$action_url);
+	return $document;
 }
 ?>
