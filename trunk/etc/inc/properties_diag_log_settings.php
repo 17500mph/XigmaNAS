@@ -68,7 +68,7 @@ class properties_diag_log_settings {
 		return $this;
 	}
 	private function prop_reverse(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('reverse');
 		$o->set_name('reverse');
 		$o->set_title(gtext('Log Order'));
@@ -82,7 +82,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_nentries(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('nentries');
 		$o->set_name('nentries');
 		$o->set_title(gtext('Show Log Entries'));
@@ -97,7 +97,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_resolve(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('resolve');
 		$o->set_name('resolve');
 		$o->set_title(gtext('Resolve IP'));
@@ -119,7 +119,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_disablecomp(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disablecomp');
 		$o->set_name('disablecomp');
 		$o->set_title(gtext('Compression'));
@@ -133,7 +133,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_disablesecure(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('disablesecure');
 		$o->set_name('disablesecure');
 		$o->set_title(gtext('Remote Syslog Messages'));
@@ -147,7 +147,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_system(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('system');
 		$o->set_name('system');
 		$o->set_title(gtext('System Events'));
@@ -161,7 +161,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_ftp(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('ftp');
 		$o->set_name('ftp');
 		$o->set_title(gtext('FTP Events'));
@@ -175,7 +175,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_rsyncd(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('rsyncd');
 		$o->set_name('rsyncd');
 		$o->set_title(gtext('RSYNC Events'));
@@ -189,7 +189,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_sshd(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('sshd');
 		$o->set_name('sshd');
 		$o->set_title(gtext('SSH Events'));
@@ -203,7 +203,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_smartd(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('smartd');
 		$o->set_name('smartd');
 		$o->set_title(gtext('S.M.A.R.T. Events'));
@@ -217,7 +217,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_daemon(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('daemon');
 		$o->set_name('daemon');
 		$o->set_title(gtext('Daemon Events'));
@@ -231,7 +231,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_ipaddr(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('ipaddr');
 		$o->set_name('ipaddr');
 		$o->set_title(gtext('IP Address'));
@@ -246,7 +246,7 @@ class properties_diag_log_settings {
 		return $o;
 	}
 	private function prop_enable(): properties_bool {
-		$o = new properties_bool();
+		$o = new properties_bool($this);
 		$o->set_id('enable');
 		$o->set_name('enable');
 		$o->set_title(gtext('Remote Syslog Server'));

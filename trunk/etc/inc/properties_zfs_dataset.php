@@ -123,7 +123,7 @@ class properties_zfs_dataset {
 		return $this;
 	}
 	private function prop_aclinherit(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('aclinherit');
 		$o->set_name('aclinherit');
 		$o->set_title(gtext('ACL Inherit'));
@@ -145,7 +145,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_aclmode(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('aclmode');
 		$o->set_name('aclmode');
 		$o->set_title(gtext('ACL Mode'));
@@ -168,7 +168,7 @@ class properties_zfs_dataset {
 		return $this->prop_onoff('atime',gtext('Access Time'),gtext('Controls whether the access time for files is updated when they are read.'),true,true);
 	}
 	private function prop_canmount(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('canmount');
 		$o->set_name('canmount');
 		$o->set_title(gtext('Can Mount'));
@@ -187,7 +187,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_casesensitivity(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('casesensitivity');
 		$o->set_name('casesensitivity');
 		$o->set_title(gtext('Case Sensitivity'));
@@ -206,7 +206,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_checksum(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('checksum');
 		$o->set_name('checksum');
 		$o->set_title(gtext('Checksum'));
@@ -231,7 +231,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_compression(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('compression');
 		$o->set_name('compression');
 		$o->set_title(gtext('Compression'));
@@ -262,7 +262,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_copies(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('copies');
 		$o->set_name('copies');
 		$o->set_title(gtext('Copies'));
@@ -286,7 +286,7 @@ class properties_zfs_dataset {
 	}
  */
 	private function prop_dedup(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('dedup');
 		$o->set_name('dedup');
 		$o->set_title(gtext('Dedup Method'));
@@ -325,7 +325,7 @@ class properties_zfs_dataset {
 		return $this->prop_offon('jailed',gtext('Jailed'),gtext('Controls whether the dataset is managed from a jail.'),true,true);
 	}
 	private function prop_logbias(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('logbias');
 		$o->set_name('logbias');
 		$o->set_title(gtext('Logbias'));
@@ -344,7 +344,7 @@ class properties_zfs_dataset {
 	}
 /*
 	private function prop_name(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->id('name');
 		$o->name('name');
 		$o->title(gtext('Name'));
@@ -366,7 +366,7 @@ class properties_zfs_dataset {
 	}
  */
 	private function prop_normalization(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('normalization');
 		$o->set_name('normalization');
 		$o->set_title(gtext('Normalization'));
@@ -387,7 +387,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_offon(string $name,string $title,string $description,bool $editableonadd = true,bool $editableonmodify = true): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id($name);
 		$o->set_name($name);
 		$o->set_title($title);
@@ -405,7 +405,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_onoff(string $name,string $title,string $description,bool $editableonadd = true,bool $editableonmodify = true): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id($name);
 		$o->set_name($name);
 		$o->set_title($title);
@@ -423,7 +423,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_primarycache(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('primarycache');
 		$o->set_name('primarycache');
 		$o->set_title(gtext('Primary Cache'));
@@ -442,7 +442,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_quota(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('quota');
 		$o->set_name('quota');
 		$o->set_title(gtext('Quota'));
@@ -460,7 +460,7 @@ class properties_zfs_dataset {
 		return $this->prop_offon('readonly',gtext('Read Only'),gtext('Controls whether this dataset can be modified.'),true,true);
 	}
 	private function prop_redundant_metadata(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('redundant_metadata');
 		$o->set_name('redundant_metadata');
 		$o->set_title(gtext('Redundant Metadata'));
@@ -478,7 +478,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_refquota(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('refquota');
 		$o->set_name('refquota');
 		$o->set_title(gtext('Refquota'));
@@ -493,7 +493,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_refreservation(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('refreservation');
 		$o->set_name('refreservation');
 		$o->set_title(gtext('Refreservation'));
@@ -508,7 +508,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_reservation(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('reservation');
 		$o->set_name('reservation');
 		$o->set_title(gtext('Reservation'));
@@ -523,7 +523,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_secondarycache(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('secondarycache');
 		$o->set_name('secondarycache');
 		$o->set_title(gtext('Secondary Cache'));
@@ -555,7 +555,7 @@ class properties_zfs_dataset {
 	}
  */
 	private function prop_snapdir(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$options = [
 			'hidden' => gtext('Hidden'),
 			'visible' => gtext('Visible'),
@@ -573,7 +573,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_sync(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('sync');
 		$o->set_name('sync');
 		$o->set_title(gtext('Sync'));
@@ -592,7 +592,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_type(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('type');
 		$o->set_name('type');
 		$o->set_title(gtext('Dataset Type'));
@@ -615,7 +615,7 @@ class properties_zfs_dataset {
 		return $this->prop_offon('utf8only',gtext('UTF-8 Only'),gtext('Indicates whether the file system should reject file names that include characters that are not present in the UTF-8 character code set.'),true,false);
 	}
 	private function prop_volblocksize(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('volblocksize');
 		$o->set_name('volblocksize');
 		$o->set_title(gtext('Block Size'));
@@ -640,7 +640,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_volmode(): properties_list {
-		$o = new properties_list();
+		$o = new properties_list($this);
 		$o->set_id('volmode');
 		$o->set_name('volmode');
 		$o->set_title(gtext('Volume Mode'));
@@ -660,7 +660,7 @@ class properties_zfs_dataset {
 		return $o;
 	}
 	private function prop_volsize(): properties {
-		$o = new properties();
+		$o = new properties($this);
 		$o->set_id('volsize');
 		$o->set_name('volsize');
 		$o->set_title(gtext('Volume Size'));
