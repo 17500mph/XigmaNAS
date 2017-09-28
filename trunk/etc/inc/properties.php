@@ -32,6 +32,7 @@
   either expressed or implied, of the NAS4Free Project.
  */
 class properties {
+	protected $owner = NULL;
 	protected $v_id = NULL;
 	protected $v_name = NULL;
 	protected $v_title = NULL;
@@ -44,7 +45,20 @@ class properties {
 	protected $v_message_info = NULL;
 	protected $v_message_warning = NULL;
 
+	public function __construct($owner = NULL) {
+		$this->setOwner($owner);
+		return $this;
+	}
 //	get/set methods
+	public function setOwner($owner = NULL) {
+		if(is_object($owner)):
+			$this->owner = $owner;
+		endif;
+		return $this;
+	}
+	public function getOwner() {
+		return $this->owner;
+	}
 	public function set_id(string $value = NULL) {
 		$this->v_id = $value;
 		return $this;
