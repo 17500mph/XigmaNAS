@@ -988,7 +988,7 @@ function make_headermenu_extensions(array &$menu) {
 		closedir($dir_handle);
 	endif;
 }
-function display_headermenu() {
+function make_headermenu() {
 	$hard_link_regex = '~^[a-z]+://~';
 	$output = [];
 	$menu = get_headermenu();
@@ -1002,11 +1002,11 @@ function display_headermenu() {
 			$a_tag = [];
 			switch($menu[$menuid]['type']):
 				case 'external':
-					$a_tag['href'] = sprintf('href="%s"',$menu[$menuid]['link']);
+					$a_tag['href'] = sprintf('href="%s"',htmlspecialchars($menu[$menuid]['link']));
 					$a_tag['target'] = sprintf('target="%s"','_blank');
 					break;
 				case 'internal':
-					$a_tag['href'] = sprintf('href="%s"',$menu[$menuid]['link']);
+					$a_tag['href'] = sprintf('href="%s"',htmlspecialchars($menu[$menuid]['link']));
 					$a_tag['onclick'] = sprintf('onclick="%s"','spinner()');
 					break;
 				case 'nolink':
@@ -1017,7 +1017,7 @@ function display_headermenu() {
 			if(empty($menu[$menuid]['img'])):
 				$value = $menu[$menuid]['description'];
 			else:
-				$value = sprintf('<img src="%1$s" title="%2$s" alt="%2$s">',$menu[$menuid]['img'],$menu[$menuid]['description']);
+				$value = sprintf('<img src="%1$s" title="%2$s" alt="%2$s"/>',htmlspecialchars($menu[$menuid]['img']),$menu[$menuid]['description']);
 			endif;
 			if(empty($tags)):
 				$output[] = sprintf('<a>%s</a>',$value);
@@ -1032,13 +1032,13 @@ function display_headermenu() {
 						$output[] = '<li>';
 						$target = ('internal' === $menu_item['type']) ? '_self' : '_blank';
 						if('separator' === $menu_item['type']):
-							$output[] = '<span class="tabseparator">&nbsp;</span>';
+							$output[] = '<span class="tabseparator"></span>';
 						else:
 							$link = $menu_item['link'];
 							if(preg_match($hard_link_regex,$link)): // hard link = no spinner
-								$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="">%3$s</a>',$link,$target,$menu_item['description']);
+								$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="">%3$s</a>',htmlspecialchars($link),$target,$menu_item['description']);
 							else: // local link = spinner
-								$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',$link,$target,$menu_item['description']);
+								$output[] = sprintf('<a href="%1$s" target="%2$s" onclick="spinner()">%3$s</a>',htmlspecialchars($link),$target,$menu_item['description']);
 							endif;
 						endif;
 						$output[] = '</li>';
@@ -1051,7 +1051,10 @@ function display_headermenu() {
 	endforeach;
 	$output[] = '</ul>';
 	$output[] = '</nav>';
-	$return = implode(PHP_EOL,$output);
-	echo $return;
+	return implode('',$output);
+}
+function display_headermenu() {
+	echo make_headermenu();
+	return;
 }
 ?>
