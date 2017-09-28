@@ -64,6 +64,23 @@ body a:hover {
 }
 form {
 	margin: 0px;
+	height: 100%;
+}
+div#pagebodyflex {
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	display: -ms-flex;
+	-ms-flex-direction: column;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	display: flex;         
+	flex-direction: column;
+	width: 100%;
 }
 html {
 	height: 100%;
@@ -86,7 +103,7 @@ pre {
 	font-size: 9pt;
 }
 .pgtitle {
-	font-size: 18px;
+	font-size: 14px;
 	color: #777777;
 	font-weight: bold;
 }
