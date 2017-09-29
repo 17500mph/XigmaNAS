@@ -48,7 +48,38 @@ function system_halt() {
 	// reverse order (the 'KEYWORD: shutdown' must be defined).
 	mwexec("/sbin/shutdown -p now");
 }
-
+function get_http_accept_language(): array {
+	$accepted_languages = [];
+	$result = [];
+	$accepted_language_string = filter_input(INPUT_SERVER,'HTTP_ACCEPT_LANGUAGE',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
+	if(isset($accepted_language_string)):
+		$matches = NULL;
+		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i',$accepted_language_string,$matches);
+		$combined = array_combine($matches[1],$matches[4]);
+		foreach($combined as $key => $val):
+			$updated_key = strtolower(str_replace('-','_',$key));
+			if('' == $val):
+				$updated_val = 1.0;
+			else:
+				$updated_val = (float)$val;
+			endif;
+			$accepted_languages[$updated_key] = $updated_val;
+		endforeach;
+		//	add languages with stripped country code to the list of accepted languages if necessary
+		foreach($accepted_languages as $key => $q):
+			$result[$key] = $q; // transfer original row
+			if(false !== strpos($key,'_')): // check for underscore character
+				$additional_key = strstr($key,'_',true); // get the good portion the string i.e. en-US -> en
+				if(!isset($accepted_language_string[$additional_key])): // don't process if the additional key already exists...
+					if(!isset($result[$additional_key])): // in both accepted_languages and result lists.
+						$result[$additional_key] = $q; // no duplicate found, add with the same q factor
+					endif;
+				endif;
+			endif;
+		endforeach;
+	endif;
+	return $result;
+}
 /* Init language environment */
 function system_language_load() {
 	global $config,$g_languages;
@@ -89,26 +120,6 @@ function system_language_load() {
 	bindtextdomain($domain,'/usr/local/share/locale');
 	bind_textdomain_codeset($domain,$codeset);
 	textdomain($domain);
-}
-function get_http_accept_language(): array {
-	$result = [];
-	$accepted_language_string = filter_input(INPUT_SERVER,'HTTP_ACCEPT_LANGUAGE',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
-	if(isset($accepted_language_string)):
-//		write_log(sprintf('HTTP_ACCEPT_LANGUAGE: %s',$accepted_language_string));
-		$matches = NULL;
-		preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i',$accepted_language_string,$matches);
-		$combined = array_combine($matches[1],$matches[4]);
-		foreach($combined as $key => $val):
-			$updated_key = strtolower(str_replace('-','_',$key));
-			if('' == $val):
-				$updated_val = 1.0;
-			else:
-				$updated_val = (float)$val;
-			endif;
-			$result[$updated_key] = $updated_val;
-		endforeach;
-	endif;
-	return $result;
 }
 /* Get the codeset of the current configured language. */
 /* Return: String containing codeset of current language. */
