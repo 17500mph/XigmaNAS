@@ -71,7 +71,7 @@ function get_http_accept_language(): array {
 			if(false !== strpos($key,'_')): // check for underscore character
 				$additional_key = strstr($key,'_',true); // get the good portion the string i.e. en-US -> en
 				if(!isset($accepted_language_string[$additional_key])): // don't process if the additional key already exists...
-					if(!isset($result[$additional_key])): // in both accepted_languages and result lists.
+					if(!isset($result[$additional_key])): // in accepted_languages or result lists.
 						$result[$additional_key] = $q; // no duplicate found, add with the same q factor
 					endif;
 				endif;
