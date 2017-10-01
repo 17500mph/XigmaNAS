@@ -49,8 +49,8 @@
 	* 	Arguably, a full client install could be done too to
 	allow NAS4Free to NAS4Free syncing.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 array_make_branch($config,'unison');
 $pconfig['enable'] = isset($config['unison']['enable']);

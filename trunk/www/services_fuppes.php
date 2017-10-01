@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
-require 'services.inc';
-require 'co_sphere.php';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'services.inc';
+require_once 'co_sphere.php';
 
 function services_fuppes_get_sphere() {
 	global $config;

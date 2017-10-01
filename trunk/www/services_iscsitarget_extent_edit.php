@@ -38,8 +38,8 @@ TODO: 	1) Script to creat file based extend in existing(mounted) File System e.g
 		2) Insert changes to GUI for script.
 		3) row 196.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
