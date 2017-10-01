@@ -31,9 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
-require 'services.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'services.inc';
 
 array_make_branch($config,'bittorrent');
 $os_release = exec('uname -r | cut -d - -f1');
