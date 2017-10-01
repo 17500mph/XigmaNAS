@@ -31,7 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'interfaces.inc';
+require_once 'interfaces.inc';
 
 function wireless_config_init() {
 	global $optcfg, $pconfig;

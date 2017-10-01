@@ -31,7 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'guiconfig.inc';
+require_once 'guiconfig.inc';
 
 unset($input_errors);
 if($_SERVER['REQUEST_METHOD'] === 'POST'):
