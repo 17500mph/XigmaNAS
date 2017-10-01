@@ -31,12 +31,12 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
-require 'zfs.inc';
-require 'co_zpool_info.inc';
-require 'disks_zfs_zpool_tools_render.inc';
-require 'co_geom_info.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'zfs.inc';
+require_once 'co_zpool_info.inc';
+require_once 'disks_zfs_zpool_tools_render.inc';
+require_once 'co_geom_info.inc';
 
 $b_test = false; // flag to force all options to show - remove after testing
 $b_exec = true; // flag to indicate to execute a command or not - remove after testing

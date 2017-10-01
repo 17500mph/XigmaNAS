@@ -35,8 +35,8 @@
  *	ini_set('display_errors',true);
  *	ini_set('display_startup_errors',true);
  */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $a_raid = &array_make_branch($config,'gconcat','vdisk');
 if(empty($a_raid)):

@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 function disks_zfs_zpool_io_ajax() {
 	if(isset($_GET['pool']) && is_string($_GET['pool'])):
