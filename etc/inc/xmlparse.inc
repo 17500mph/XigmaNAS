@@ -166,7 +166,7 @@ function cData($parser,$data) {
 		endif;
 	endif;
 }
-function parse_xml_config_raw($cffile, $rootobj) {
+function parse_xml_config_raw($cffile,$rootobj) {
 	global $depth,$curpath,$config,$havedata,$listtags;
 
 	$config = [];
@@ -225,32 +225,44 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 			if(array_key_exists(strtolower($ent),$listtags)): // is it a list of multiple values?
 				foreach($val as $cval):
 					if(is_array($cval)):
-						$xmlconfig .= $s_indent . "<$ent>\n" . dump_xml_config_sub($cval,$indent + 1,$in_charset,$out_charset) . $s_indent . "</$ent>\n";
+						$xmlconfig .= $s_indent . sprintf('<%s>',$ent) . PHP_EOL;
+						$xmlconfig .= dump_xml_config_sub($cval,$indent + 1,$in_charset,$out_charset);
+						$xmlconfig .= $s_indent . sprintf('</%s>',$ent) . PHP_EOL;
 					elseif(is_bool($cval)):
 						if($cval):
-							$xmlconfig .= $s_indent . "<$ent type=\"bool\">1</$ent>\n";
+							$xmlconfig .= $s_indent . sprintf('<%1$s type="bool">1</%1$s>',$ent) . PHP_EOL;
 						endif;
 					elseif('' === $cval):
-						$xmlconfig .= $s_indent . "<$ent/>\n";
+						$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
 					elseif($must_convert):
-						$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars(iconv($in_charset,$out_charset,$cval)) . "</$ent>\n";
+						$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
+						$xmlconfig .= htmlspecialchars(iconv($in_charset,$out_charset,$cval));
+						$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 					else:
-						$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars($cval) . "</$ent>\n";
+						$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
+						$xmlconfig .= htmlspecialchars($cval);
+						$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 					endif;
 				endforeach;
 			else: // it's an array
-				$xmlconfig .= $s_indent . "<$ent>\n" . dump_xml_config_sub($val,$indent + 1,$in_charset,$out_charset) . $s_indent . "</$ent>\n";
+				$xmlconfig .= $s_indent . "<$ent>" . PHP_EOL;
+				$xmlconfig .= dump_xml_config_sub($val,$indent + 1,$in_charset,$out_charset);
+				$xmlconfig .= $s_indent . "</$ent>" . PHP_EOL;
 			endif;
 		elseif(is_bool($val)):
 			if($val):
-				$xmlconfig .= $s_indent . "<$ent type=\"bool\">1</$ent>\n";
+				$xmlconfig .= $s_indent . sprintf('<%1$s type="bool">1</%1$s>',$ent) . PHP_EOL;
 			endif;
 		elseif('' === $val):
-			$xmlconfig .= $s_indent . "<$ent/>\n";
+			$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
 		elseif($must_convert):
-			$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars(iconv($in_charset,$out_charset,$val)) . "</$ent>\n";
+			$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
+			$xmlconfig .= htmlspecialchars(iconv($in_charset,$out_charset,$val));
+			$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 		else:
-			$xmlconfig .= $s_indent . "<$ent>" . htmlspecialchars($val) . "</$ent>\n";
+			$xmlconfig .= $s_indent . sprintf("<%s>",$ent);
+			$xmlconfig .= htmlspecialchars($val);
+			$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 		endif;
 	endforeach;
 	return $xmlconfig;
@@ -261,10 +273,10 @@ function dump_xml_config($arr,$rootobj,$encoding) {
 	$out_charset = $encoding;
 	// Do not dump temporary encoding attribute
 	unset($arr['encoding']);
-	$xmlconfig = "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
-	$xmlconfig .= "<$rootobj>\n";
+	$xmlconfig = sprintf('<?xml version="1.0" encoding="%s"?>',$encoding) . PHP_EOL;
+	$xmlconfig .= sprintf('<%s>',$rootobj) . PHP_EOL;
 	$xmlconfig .= dump_xml_config_sub($arr,1,$in_charset,$out_charset);
-	$xmlconfig .= "</$rootobj>\n";
+	$xmlconfig .= sprintf('</%s>',$rootobj) . PHP_EOL;
 	return $xmlconfig;
 }
 /**
