@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
-require 'diag_log.inc';
-require 'co_sphere.php';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'diag_log.inc';
+require_once 'co_sphere.php';
 require_once 'properties_diag_log_settings.php';
 
 function get_sphere_diag_log_settings() {
@@ -173,7 +173,7 @@ if(isset($jcode[$page_mode]) && preg_match('/\S/',$jcode[$page_mode])):
 	$body->addJavaScript($jcode[$page_mode]);
 endif;
 $document->
-	add_tabnav_area()->
+	add_area_tabnav()->
 		add_tabnav_upper()->
 			mount_tabnav_record('diag_log.php',gtext('Log'))->
 			mount_tabnav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true);
@@ -211,7 +211,7 @@ switch($page_mode):
 					mount_checkbox($property->sshd,$sphere->row['sshd'],false,true)->
 					mount_checkbox($property->smartd,$sphere->row['smartd'],false,true)->
 					mount_checkbox($property->daemon,$sphere->row['daemon'],false,true);
-		$document->add_button_area()->
+		$document->add_area_buttons()->
 			mount_button_edit();
 		break;
 	case PAGE_MODE_EDIT:
@@ -242,12 +242,12 @@ switch($page_mode):
 					mount_checkbox($property->sshd,$sphere->row['sshd'])->
 					mount_checkbox($property->smartd,$sphere->row['smartd'])->
 					mount_checkbox($property->daemon,$sphere->row['daemon']);
-		$document->add_button_area()->
+		$document->add_area_buttons()->
 			mount_button_save()->
 			mount_button_cancel();
 		break;
 endswitch;
-$content->add_remarks()->
+$content->add_area_remarks()->
 	mount_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
 $content->
 	mount_authtoken();
