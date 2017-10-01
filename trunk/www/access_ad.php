@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 array_make_branch($config,'ad');
 array_make_branch($config,'samba');
@@ -167,7 +167,9 @@ function enable_change(enable_change) {
 			</td>
 		</tr>
 	</table>
-	<?php include 'formend.inc';?>
+<?php
+include 'formend.inc';
+?>
 </form>
 <script type="text/javascript">
 <!--
