@@ -31,9 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
-require 'packages.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'packages.inc';
 
 if (isset($_POST) && $_POST) {
 	unset($input_errors);

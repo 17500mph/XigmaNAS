@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
  */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_notifier = 'rrdgraphs';
@@ -478,7 +478,9 @@ function enable_change(enable_change) {
 		html_remark("warning", gtext('Warning'), $helpinghand );
 		?>
 	</div>
-	<?php require 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
 <script type="text/javascript">
 //<![CDATA[
