@@ -33,8 +33,8 @@
 */
 $d_isfwfile = 1; //	for guiconfig.inc, set means do not execute header('system_firmware.php') when file_exists($d_firmwarelock_path);
 
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 function check_firmware_version($locale) {
 /*
