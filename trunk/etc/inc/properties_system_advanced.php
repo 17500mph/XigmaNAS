@@ -31,7 +31,7 @@
   of the authors and should not be interpreted as representing official policies,
   either expressed or implied, of the NAS4Free Project.
  */
-require 'properties.php';
+require_once 'properties.php';
 
 class properties_system_advanced {
 	public $disableconsolemenu;

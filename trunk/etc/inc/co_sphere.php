@@ -32,7 +32,7 @@
   either expressed or implied, of the NAS4Free Project.
  */
 /*
- *	require 'wui2.php';
+ *	require_once 'wui2.php';
  *	global $config;
  *	global $g_img;
  */
