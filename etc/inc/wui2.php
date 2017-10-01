@@ -627,7 +627,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 	//	constructor
 	function __construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description) {
 		parent::__construct($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask,$description);
-		$this->SetSize(30);
+		$this->SetSize(60);
 	}
 	//	support methods
 	function ComposeInner(&$anchor) {
@@ -1593,7 +1593,7 @@ trait co_DOMTools {
  * 
  *	@return DOMNode $subnode
  */
-	public function add_tabnav_area() {
+	public function add_area_tabnav() {
 		$table_attributes = [
 			'id' => 'area_navigator'
 		];
@@ -1825,7 +1825,7 @@ trait co_DOMTools {
 		return $this;
 	}
 	//	submit area macros
-	public function add_button_area() {
+	public function add_area_buttons() {
 		$root = $this->ownerDocument ?? $this;
 		$target = $root->getElementById('g4f') ?? $this;
 		$append_mode = false; // top element of footer area
@@ -1860,7 +1860,7 @@ trait co_DOMTools {
 		return $this;
 	}
 	//	remark area macros
-	public function add_remarks() {
+	public function add_area_remarks() {
 		$subnode = $this->addDIV(['id' => 'remarks']);
 		return $subnode;
 	}
