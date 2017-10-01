@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $status_graph = true;
 $graph_gap = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'; 
@@ -62,11 +62,13 @@ $gt_notsupported = gtext('Your browser does not support this svg object type.') 
 		'<br/>';
 
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('System Load')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<?php require 'status_graph_tabs.inc';?>
+<?php
+		include 'status_graph_tabs.inc';
+?>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -75,14 +77,16 @@ $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('System Load')];
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('System Load'),1);?>
+<?php
+			html_titleline2(gtext('System Load'),1);
+?>
 		</thead>
 		<tbody>
 			<tr><td><?=gtext('Graph shows last 120 seconds');?></td></tr>
 			<tr><td>
 				<div align="center" style="min-width:840px;">
 					<br />
-					<?php
+<?php
 					$a_object['id'] = 'id="graph"';
 					$a_object['data'] = sprintf('data="status_graph2.php?ifnum=%1$s&amp;ifname=%2$s"',$ifnum,rawurlencode($ifdescrs[$curif]));
 					$a_param['value'] = sprintf('value="graph.php?ifnum=%1$s&amp;ifname=%2$s"',$ifnum,rawurlencode($ifdescrs[$curif]));
@@ -115,10 +119,12 @@ $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('System Load')];
 					echo sprintf('<param %s/>',implode(' ',$a_param));
 					echo $gt_notsupported;
 					echo '</object>',"\n";
-					?>
+?>
 				</div>
 			</td></tr>
 		</tbody>
 	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
