@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $a_vms = &array_make_branch($config,'xen','vms','param');
 $a_bridge = &array_make_branch($config,'vinterfaces','bridge');
