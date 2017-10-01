@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $a_disk = &array_make_branch($config,'disks','disk');
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
