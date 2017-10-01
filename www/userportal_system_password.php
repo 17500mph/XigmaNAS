@@ -34,9 +34,9 @@
 // Configure page permission
 $pgperm['allowuser'] = true;
 
-require 'auth.inc';
-require 'guiconfig.inc';
-require 'email.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'email.inc';
 
 $a_user = &array_make_branch($config,'access','user');
 //	Get user configuration. Ensure current logged in user is available,
