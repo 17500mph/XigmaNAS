@@ -36,7 +36,7 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 /* NAS4FREE CODE */
-require 'guiconfig.inc';
+require_once 'guiconfig.inc';
 require_once 'session.inc';
 
 Session::start();

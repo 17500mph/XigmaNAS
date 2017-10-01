@@ -34,8 +34,8 @@
 // Configure page permission
 $pgperm['allowuser'] = TRUE;
 
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $pgtitle = [gtext('Help'), gtext('License & Credits')];
 ?>

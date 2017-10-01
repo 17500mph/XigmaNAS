@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require 'auth.inc';
-require 'guiconfig.inc';
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
 
 $sphere_scriptname = 'notavailable-php';
 $sphere_header = 'Location: ' + $sphere_scriptname;
@@ -70,7 +70,7 @@ $(window).on("load", function() {
 ?>
 	</div>
 <?php
-	require 'formend.inc';
+	include 'formend.inc';
 ?>
 </td></tr></tbody></table></form>
 <?php
