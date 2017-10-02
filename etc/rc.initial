@@ -20,9 +20,6 @@ trap : 18
 # Set our operating platform
 PLATFORM=`cat /etc/platform`
 
-# Redirect input/output
-#exec </dev/console >/dev/console 2>/dev/console
-
 # Check if console menu is disabled.
 if configxml_isset "//system/disableconsolemenu"; then
 	while : ; do
