@@ -51,12 +51,6 @@ enable_upgrade() {
 }
 
 disable_upgrade() {
-	# Redirect I/O to console.
-	# Prevent console redirect if no physical video adapter found.
-	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
-		exec </dev/console >/dev/console 2>/dev/console
-	fi
-
 	# Get the md device.
 	mdid=`/sbin/mount -p | /usr/bin/grep ${FTMP} | /usr/bin/awk '{print $1}'`
 
@@ -75,12 +69,6 @@ disable_upgrade() {
 embedded_upgrade() {
 	# Wait 5 seconds before beginning
 	sleep 5
-
-	# Redirect I/O to console.
-	# Prevent console redirect if no physical video adapter found.
-	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
-		exec </dev/console >/dev/console 2>/dev/console
-	fi
 
 	printf "\n\n\33[37m%s\33[0m\n" "Firmware upgrade in progress. Please wait..."
 
