@@ -1,6 +1,6 @@
 PORTNAME=		nut
 PORTVERSION=	2.7.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=		sysutils
 COMMENT=		Network UPS tools
 MAINTAINER=		zoon1@nas4free.org
@@ -120,7 +120,6 @@ do-install:
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplite_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplitesu ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upscode2 ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upsdrvctl ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/usbhid-ups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/victronups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
 
@@ -134,6 +133,7 @@ do-install:
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsrw ${NAS4FREE_ROOTFS}/usr/local/bin
 
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/upsd ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upsdrvctl ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/upssched ${NAS4FREE_ROOTFS}/usr/local/sbin
 
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut.sh.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut
