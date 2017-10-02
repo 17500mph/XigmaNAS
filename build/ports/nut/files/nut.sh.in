@@ -132,11 +132,11 @@ EOF
 }
 
 nut_prestart() {
-	${nut_prefix}/libexec/nut/upsdrvctl -u ${nut_runas} start
+	${nut_prefix}/sbin/upsdrvctl -u ${nut_runas} start
 }
 
 nut_poststop() {
-	${nut_prefix}/libexec/nut/upsdrvctl -u ${nut_runas} stop
+	${nut_prefix}/sbin/upsdrvctl -u ${nut_runas} stop
 }
 
 # Prepare state dir
