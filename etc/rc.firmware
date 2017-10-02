@@ -38,12 +38,6 @@ fmtskipped="\33[33m%s\33[0m\n"
 fmtexecute="\33[37m%s\33[0m\n"
 
 enable_upgrade() {
-	# Redirect I/O to console.
-	# Prevent console redirect if no physical video adapter found.
-	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
-		exec </dev/console >/dev/console 2>/dev/console
-	fi
-
 	# Create efficient memory file system.
 	if ! df | grep -qw ${FTMP}; then
 		/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
