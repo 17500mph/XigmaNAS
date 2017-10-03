@@ -659,29 +659,27 @@ class PEAR
 
 // {{{ _PEAR_call_destructors()
 
-function _PEAR_call_destructors()
-{
+function _PEAR_call_destructors() {
     global $_PEAR_destructor_object_list;
-    if (is_array($_PEAR_destructor_object_list) &&
-        sizeof($_PEAR_destructor_object_list))
-    {
+    if(is_array($_PEAR_destructor_object_list) && sizeof($_PEAR_destructor_object_list)):
+		
         reset($_PEAR_destructor_object_list);
-        while (list($k, $objref) = each($_PEAR_destructor_object_list)) {
+        foreach($_PEAR_destructor_object_list as $k => $objref):
             $classname = get_class($objref);
-            while ($classname) {
+            while($classname):
                 $destructor = "_$classname";
-                if (method_exists($objref, $destructor)) {
+                if(method_exists($objref, $destructor)):
                     $objref->$destructor();
                     break;
-                } else {
+                else:
                     $classname = get_parent_class($classname);
-                }
-            }
-        }
+                endif;
+            endwhile;
+        endforeach;
         // Empty the object list to ensure that destructors are
         // not called more than once.
         $_PEAR_destructor_object_list = [];
-    }
+    endif;
 
     // Now call the shutdown functions
     if (is_array($GLOBALS['_PEAR_shutdown_funcs']) AND !empty($GLOBALS['_PEAR_shutdown_funcs'])) {
