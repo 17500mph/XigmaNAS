@@ -441,8 +441,8 @@ class properties_zfs_dataset {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_quota(): properties {
-		$o = new properties($this);
+	private function prop_quota(): properties_text {
+		$o = new properties_text($this);
 		$o->set_id('quota');
 		$o->set_name('quota');
 		$o->set_title(gtext('Quota'));
@@ -477,8 +477,8 @@ class properties_zfs_dataset {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_refquota(): properties {
-		$o = new properties($this);
+	private function prop_refquota(): properties_text {
+		$o = new properties_text($this);
 		$o->set_id('refquota');
 		$o->set_name('refquota');
 		$o->set_title(gtext('Refquota'));
@@ -492,8 +492,8 @@ class properties_zfs_dataset {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_refreservation(): properties {
-		$o = new properties($this);
+	private function prop_refreservation(): properties_text {
+		$o = new properties_text($this);
 		$o->set_id('refreservation');
 		$o->set_name('refreservation');
 		$o->set_title(gtext('Refreservation'));
@@ -507,8 +507,8 @@ class properties_zfs_dataset {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_reservation(): properties {
-		$o = new properties($this);
+	private function prop_reservation(): properties_text {
+		$o = new properties_text($this);
 		$o->set_id('reservation');
 		$o->set_name('reservation');
 		$o->set_title(gtext('Reservation'));
@@ -659,8 +659,8 @@ class properties_zfs_dataset {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_volsize(): properties {
-		$o = new properties($this);
+	private function prop_volsize(): properties_text {
+		$o = new properties_text($this);
 		$o->set_id('volsize');
 		$o->set_name('volsize');
 		$o->set_title(gtext('Volume Size'));
