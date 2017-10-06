@@ -31,7 +31,7 @@
   of the authors and should not be interpreted as representing official policies,
   either expressed or implied, of the NAS4Free Project.
  */
-class properties {
+abstract class properties {
 	protected $owner = NULL;
 	protected $v_id = NULL;
 	protected $v_name = NULL;
@@ -49,7 +49,7 @@ class properties {
 		$this->setOwner($owner);
 		return $this;
 	}
-//	get/set methods
+	abstract public function filter_use_default(string $filter_name = 'ui');
 	public function setOwner($owner = NULL) {
 		if(is_object($owner)):
 			$this->owner = $owner;
@@ -175,18 +175,6 @@ class properties {
 		return $this;
 	}
 /**
- * Method to apply the default class filter to a filter name.
- * Filter expects a string containing at least one non-whitespace character.
- * @param string $filter_name Name of the filter, default = 'ui'.
- * @return object Returns $this.
- */
-	public function filter_use_default(string $filter_name = 'ui') {
-		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
-		return $this;
-	}
-/**
  * Method returns the filter settings of $filter_name:
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return array If $filter_name exists the filter configuration is returned, otherwise NULL is returned.
@@ -258,10 +246,128 @@ class properties {
 		return NULL;
 	}
 }
+class properties_text extends properties {
+	public $v_maxlength = 0;
+	public $v_placeholder = NULL;
+	public $v_size = 40;
+	
+	public function set_maxlength(int $value = 0) {
+		$this->v_maxlength = $value;
+		return $this;
+	}
+	public function get_maxlength() {
+		return $this->v_maxlength;
+	}
+	public function set_placeholder(string $value = NULL) {
+		$this->v_placeholder = $value;
+		return $this;
+	}
+	public function get_placeholder() {
+		return $this->v_placeholder;
+	}
+	public function set_size(int $value = 40) {
+		$this->v_size = $value;
+		return $this;
+	}
+	public function get_size() {
+		return $this->v_size;
+	}
+/**
+ * Method to apply the default class filter to a filter name.
+ * Filter expects a string containing at least one non-whitespace character.
+ * @param string $filter_name Name of the filter, default = 'ui'.
+ * @return object Returns $this.
+ */
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+		$this->set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
+		return $this;
+	}
+}
+class properties_ipaddress extends properties_text {
+	public function __construct() {
+		parent::__construct();
+		$this->set_maxlength(45);
+		$this->set_placeholder(gtext('Enter IP Address'));
+		$this->set_size(60);
+		return $this;
+	}
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+		$this->set_filter_options(['default' => NULL],$filter_name);
+		return $this;
+	}
+}
+class properties_ipv4 extends properties_text {
+	public function __construct() {
+		parent::__construct();
+		$this->set_maxlength(15);
+		$this->set_placeholder(gtext('Enter IP Address'));
+		$this->set_size(20);
+		return $this;
+	}
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV4,$filter_name);
+		$this->set_filter_options(['default' => NULL],$filter_name);
+		return $this;
+	}
+}
+class properties_ipv6 extends properties_text {
+	public function __construct() {
+		parent::__construct();
+		$this->set_maxlength(45);
+		$this->set_placeholder(gtext('Enter IP Address'));
+		$this->set_size(60);
+		return $this;
+	}
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV6,$filter_name);
+		$this->set_filter_options(['default' => NULL],$filter_name);
+		return $this;
+	}
+}
+class properties_int extends properties_text {
+	public $v_min = NULL;
+	public $v_max = NULL;
+
+	public function set_min(int $value = NULL) {
+		$this->v_min = $value;
+		return $this;
+	}
+	public function get_min() {
+		return $this->v_min;
+	}
+	public function set_max(int $value = NULL) {
+		$this->v_max = $value;
+		return $this;
+	}
+	public function get_max() {
+		return $this->v_max;
+	}
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_INT,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+		$options = [];
+		$options['default'] = NULL;
+		$min = $this->get_min();
+		if(isset($min)):
+			$options['min_range'] = $min;
+		endif;
+		$max = $this->get_max();
+		if(isset($max)):
+			$options['max_range'] = $max;
+		endif;
+		$this->set_filter_options($options,$filter_name);
+		return $this;
+	}
+}
 class properties_list extends properties {
 	public $v_options = NULL;
 	
-//	get/set methods
 	public function set_options(array $value = NULL) {
 		$this->v_options = $value;
 		return $this;
