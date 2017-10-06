@@ -1510,24 +1510,16 @@ trait co_DOMTools {
 				$cdata = $node->ownerDocument->createCDATASection($text);
 				if(false !== $cdata):
 					$node->appendChild($cdata);
-					$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
-					if(false !== $ending):
-						$node->appendChild($ending);
-					endif;
+				endif;
+				$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
+				if(false !== $ending):
+					$node->appendChild($ending);
 				endif;
 			endif;
 		endif;
 		return $this;
 	}
 	//	tags
-	public function putCOL(array $attributes = []) {
-		$this->addElement('col',$attributes);
-		return $this;
-	}
-	public function putIMG(array $attributes = []) {
-		$this->addElement('img',$attributes);
-		return $this;
-	}
 	public function addA(array $attributes = [],string $value = NULL) {
 		$subnode = $this->addElement('a',$attributes,$value);
 		return $subnode;
@@ -1536,8 +1528,8 @@ trait co_DOMTools {
 		$subnode = $this->addElement('div',$attributes,$value);
 		return $subnode;
 	}
-	public function addFORM(array $attributes = []) {
-		$subnode = $this->addElement('form',$attributes);
+	public function addFORM(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('form',$attributes,$value);
 		return $subnode;
 	}
 	public function addLI(array $attributes = [],string $value = NULL) {
@@ -1552,32 +1544,32 @@ trait co_DOMTools {
 		$subnode = $this->addElement('span',$attributes,$value);
 		return $subnode;
 	}
-	public function addUL(array $attributes = []) {
-		$subnode = $this->addElement('ul',$attributes);
+	public function addUL(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('ul',$attributes,$value);
 		return $subnode;
 	}
-	public function addTABLE(array $attributes = []) {
-		$subnode = $this->addElement('table',$attributes);
+	public function addTABLE(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('table',$attributes,$value);
 		return $subnode;
 	}
-	public function addCOLGROUP(array $attributes = []) {
-		$subnode = $this->addElement('colgroup',$attributes);
+	public function addCOLGROUP(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('colgroup',$attributes,$value);
 		return $subnode; 
 	}
-	public function addTHEAD(array $attributes = []) {
-		$subnode = $this->addElement('thead',$attributes);
+	public function addTHEAD(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('thead',$attributes,$value);
 		return $subnode;
 	}
-	public function addTBODY(array $attributes = []) {
-		$subnode = $this->addElement('tbody',$attributes);
+	public function addTBODY(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('tbody',$attributes,$value);
 		return $subnode;
 	}
-	public function addTFOOT(array $attributes = []) {
-		$subnode = $this->addElement('tfoot',$attributes);
+	public function addTFOOT(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('tfoot',$attributes,$value);
 		return $subnode;
 	}
-	public function addTR(array $attributes = []) {
-		$subnode = $this->addElement('tr',$attributes);
+	public function addTR(array $attributes = [],string $value = NULL) {
+		$subnode = $this->addElement('tr',$attributes,$value);
 		return $subnode;
 	}
 	public function addTD(array $attributes = [],string $value = NULL) {
@@ -1588,15 +1580,33 @@ trait co_DOMTools {
 		$subnode = $this->addElement('th',$attributes,$value);
 		return $subnode;
 	}
+	public function mountCOL(array $attributes = []) {
+		$this->addElement('col',$attributes);
+		return $this;
+	}
+	public function mountIMG(array $attributes = []) {
+		$this->addElement('img',$attributes);
+		return $this;
+	}
+	public function mountINPUT(array $attributes = [],string $value = NULL) {
+		$this->addElement('input',$attributes,$value);
+		return $this;
+	}
+	public function mountTD(array $attributes = [],string $value = NULL) {
+		$this->addElement('td',$attributes,$value);
+		return $this;
+	}
+	public function mountTH(array $attributes = [],string $value = NULL) {
+		$this->addElement('th',$attributes,$value);
+		return $this;
+	}
 	//	tab menu fragments and macros
 /**
  * 
  *	@return DOMNode $subnode
  */
 	public function add_area_tabnav() {
-		$table_attributes = [
-			'id' => 'area_navigator'
-		];
+		$table_attributes = ['id' => 'area_navigator'];
 		$document = $this->ownerDocument ?? $this;
 		$target = $document->getElementById('g4h');
 		if(isset($target)):
@@ -1636,8 +1646,8 @@ trait co_DOMTools {
 		return $subnode;
 	}
 /**
- *	Creates tags for lower navigation menu 
- *	@return DOMNode
+ *	Creates tags for lower navigation menu
+ *	@return DOMNode $subnode
  */
 	public function add_tabnav_lower() {
 		$subnode = $this->
@@ -1670,7 +1680,7 @@ trait co_DOMTools {
 	}
 	/**
 	 * 
-	 * @return object $subnode
+	 *	@return DOMNode $subnode
 	 */
 	public function add_area_data() {
 		$subnode = $this->
@@ -1694,10 +1704,10 @@ trait co_DOMTools {
 					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
 						addTR()->
 							addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
-								putIMG(['src' => 'images/error_box.png','alt' => ''])->
+								mountIMG(['src' => 'images/error_box.png','alt' => ''])->
 								parentNode->
 							addTD(['class' => 'message'])->
-								addDIV([],sprintf('%s:',gtext('The following input errors were detected'),':'))->
+								addDIV([],sprintf('%s:',gtext('The following errors were detected'),':'))->
 									addUL();
 			foreach($messages as $message):
 				$ul->addLI([],$message);
@@ -1708,16 +1718,26 @@ trait co_DOMTools {
 	public function helper_core_box(string $type,string $message = '') {
 		if(preg_match('/\S/',$message)):
 			switch($type):
-				case 'error': $id = 'errorbox';$img = 'error_box.png';break;
-				case 'info': $id = 'infobox';$img = 'info_box.png';break;
-				case 'warning': $id = 'warningbox';$img = 'warn_box.png';break;
+				case 'error':
+					$id = 'errorbox';
+					$img = 'error_box.png';
+					break;
+				case 'warning':
+					$id = 'warningbox';
+					$img = 'warn_box.png';
+					break;
+				case 'info':
+				default:
+					$id = 'infobox';
+					$img = 'info_box.png';
+					break;
 			endswitch;
 			$this->
 				addDIV(['id' => $id])->
 					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
 						addTR()->
 							addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
-								putIMG(['src' => sprintf('/images/%s',$img),'alt' => ''])->
+								mountIMG(['src' => sprintf('/images/%s',$img),'alt' => ''])->
 								parentNode->
 							addTD(['class' => 'message'],$message);
 		endif;
@@ -1748,10 +1768,14 @@ trait co_DOMTools {
 		$this->mount_colgroup_with_classes(['area_data_settings_col_tag','area_data_settings_col_data']);
 		return $this;
 	}
+	public function add_table_data_selection() {
+		$subnode = $this->addTABLE(['class' => 'area_data_selection']);
+		return $subnode;
+	}
 	public function mount_colgroup_with_classes(array $data = []) {
 		$colgroup = $this->addCOLGROUP();
 		foreach($data as $value):
-			$colgroup->putCOL(['class' => htmlspecialchars($value)]);
+			$colgroup->mountCOL(['class' => htmlspecialchars($value)]);
 		endforeach;
 		return $this;
 	}
@@ -1759,69 +1783,396 @@ trait co_DOMTools {
 		$colgroup = $this->addCOLGROUP();
 		$tag = htmlspecialchars($tag);
 		foreach($data as $value):
-			$colgroup->putCOL(['style' => sprintf('%s:%s;',$tag,htmlspecialchars($value))]);
+			$colgroup->mountCOL(['style' => sprintf('%s:%s;',$tag,htmlspecialchars($value))]);
 		endforeach;
 		return $this;
 	}
 	//	title macros
-	public function mount_titleline($title,$colspan = 2,$ctrlname = '') {
-		$ctrl = new HTMLTitleLine2($title);
-		$ctrl->SetColSpan($colspan);
-		$ctrl->SetCtrlName($ctrlname);
-		$ctrl->Compose($this);
+	public function mount_titleline(string $title = NULL,int $colspan = 0,string $id = NULL) {
+		$tr_attributes = [];
+		if(!is_null($id) && preg_match('/\S/',$id)):
+			$tr_attributes['id'] = sprintf('%s_tr',$id);
+		endif;
+		$th_attributes = ['class' => 'lhetop'];
+		if($colspan > 0):
+			$th_attributes['colspan'] = $colspan;
+		endif;
+		$spanleft_attributes = ['style' => 'float:left'];
+		$this->addTR($tr_attributes)->addTH($th_attributes)->addSPAN($spanleft_attributes,$title);
 		return $this;
 	}
-	public function mount_titleline_with_checkbox(properties $p,$value,int $colspan = 2) {
-		$ctrl = new HTMLTitleLineCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption());
-		$ctrl->SetColSpan($colspan);
-		$ctrl->Compose($this);
+	public function mount_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,int $colspan = 0) {
+		$tr_attributes = ['id' => sprintf('%s_tr',$p->get_id())];
+		$th_attributes = ['class' => 'lhetop'];
+		if($colspan > 0):
+			$th_attributes['colspan'] = $colspan;
+		endif;
+		$spanleft_attributes = ['style' => 'float:left'];
+		$spanright_attributes = ['style' => 'float:right'];
+		$input_attributes = [
+			'type' => 'checkbox',
+			'id' => $p->get_id(),
+			'name' => $p->get_name(),
+			'class' => 'formfld cblot',
+			'value' => 'yes'
+		];
+		if(isset($value) && $value):
+			$input_attributes['checked'] = 'checked';
+		endif;
+		if($is_readonly):
+			$input_attributes['disabled'] = 'disabled';
+			$is_required = false;
+		endif;
+		if($is_required):
+			$input_attributes['required'] = 'required';
+		endif;
+		$span_attributes = ['class' => 'cblot'];
+		$th = $this->addTR($tr_attributes)->addTH($th_attributes);
+		$th->addSPAN($spanleft_attributes,$p->get_title());
+		$label = $th->addSPAN($spanright_attributes)->addElement('label');
+		$label->addElement('input',$input_attributes);
+		$label->addSPAN($span_attributes,$p->get_caption());
 		return $this;
 	}
-	//	elements
-	public function mount_checkbox(properties $p,$value,bool $required = false,bool $readonly = false,$altpadding = false) {
-		$ctrl = new HTMLCheckBox2($p->get_id(),$p->get_title(),$value,$p->get_caption(),$p->get_description());
-		$ctrl->SetRequired($required);
-		$ctrl->SetReadOnly($readonly);
-		$ctrl->SetAltPadding($altpadding);
-		$ctrl->Compose($this);
+	public function mount_description(properties $p) {
+		//	description can be:
+		//	string
+		//	[string, ...]
+		//	[ [string], ...]
+		//	[ [string,no_br], ...]
+		//	[ [string,color], ...]
+		//	[ [string,color,no_br], ...]
+		$description = $p->get_description();
+		if(isset($description)):
+			$description_output = '';
+			$suppressbr = true;
+			if(!empty($description)): // string or array
+				if(is_string($description)):
+					$description_output = $description;
+				elseif(is_array($description)):
+					foreach($description as $description_row):
+						if(is_string($description_row)):
+							if($suppressbr):
+								$description_output .= $description_row;
+								$suppressbr = false;
+							else:
+								$description_output .= ('<br />' . $description_row);
+							endif;
+						elseif(is_array($description_row)):
+							switch(count($description_row)):
+								case 1:
+									if(is_string($description_row[0])):
+										if($suppressbr):
+											$suppressbr = false;
+										else:
+											$description_output .= '<br />';
+										endif;
+										$description_output .= $description_row[0];
+									endif;
+									break;
+								case 2:
+									if(is_string($description_row[0])):
+										$color = NULL;
+										if(is_string($description_row[1])):
+											$color = $description_row[1];
+										endif;
+										if(is_bool($description_row[1])):
+											$suppressbr = $description_row[1];
+										endif;
+										if($suppressbr):
+											$suppressbr = false;
+										else:
+											$description_output .= '<br />';
+										endif;
+										if(is_null($color)):
+											$description_output .= $description_row[0];
+										else:
+											$description_output .= sprintf('<span style="color:%2$s">%1$s</span>',$description_row[0],$color);
+										endif;
+									endif;
+									break;
+								case 3: // allow not to break
+									if(is_string($description_row[0])):
+										$color = NULL;
+										if(is_string($description_row[1])):
+											$color = $description_row[1];
+										endif;									
+										if(is_bool($description_row[2])):
+											$suppressbr = $description_row[2];
+										endif;
+										if($suppressbr):
+											$suppressbr = false;
+										else:
+											$description_output .= '<br />';
+										endif;
+										if(is_null($color)):
+											$description_output .= $description_row[0];
+										else:
+											$description_output .= sprintf('<span style="color:%2$s">%1$s</span>',$description_row[0],$color);
+										endif;
+									endif;
+									break;
+							endswitch;
+						endif;
+					endforeach;
+				endif;
+			endif;
+			if(!empty($description_output)):
+				$this->addDIV(['class' => 'formfldadditionalinfo'],$description_output);
+			endif;
+		endif;
 		return $this;
 	}
-	public function mount_input_text(properties $p,$value,bool $required = false,bool $readonly = false,$size = 40,$altpadding = false,$maxlength = 0,string $placeholder = '') {
-		$ctrl = new HTMLEditBox2($p->get_id(),$p->get_title(),$value,$p->get_description(),$size);
-		$ctrl->SetRequired($required);
-		$ctrl->SetReadOnly($readonly);
-		$ctrl->SetAltPadding($altpadding);
-		$ctrl->SetMaxLength($maxlength);
-		$ctrl->SetPlaceholder($placeholder);
-		$ctrl->Compose($this);
+	public function mount_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$input_attributes = [
+			'type' => 'checkbox',
+			'id' => $p->get_id(),
+			'name' => $p->get_name(),
+			'value' => 'yes'
+		];
+		if(isset($value) && $value):
+			$input_attributes['checked'] = 'checked';
+		endif;
+		if($is_readonly):
+			$class_checkbox = 'celldatacheckbox';
+			$input_attributes['disabled'] = 'disabled';
+			$is_required = false;
+		else:
+			$class_checkbox = 'celldatacheckbox';
+		endif;
+		if($is_required):
+			$class_checkbox = 'celldatacheckbox';
+			$input_attributes['required'] = 'required';
+		endif;
+		$div = $this->addDIV(['class' => $class_checkbox]);
+		$div->addElement('input',$input_attributes);
+		$div->addElement('label',['for' => $p->get_id()],$p->get_caption());
 		return $this;
 	}
-	public function mount_radio_grid(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
-		$ctrl = new HTMLRadioBox2($p->get_id(),$p->get_title(),$value,$p->get_options(),$p->get_description());
-		$ctrl->SetRequired($required);
-		$ctrl->SetReadOnly($readonly);
-		$ctrl->SetJSonClick($onclick);
-		$ctrl->Compose($this);
+	public function mount_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$input_attributes = [
+			'type' => 'text',
+			'id' => $p->get_id(),
+			'name' => $p->get_name(),
+			'value' => $value
+		];
+		if($is_readonly):
+			$input_attributes['class'] = 'formfldro';
+			$input_attributes['disabled'] = 'disabled';
+			$is_required = false;
+			$maxlength = 0;
+			$placeholder = NULL;
+		else:
+			$input_attributes['class'] = 'formfld';
+			$maxlength = $p->get_maxlength();
+			$placeholder = $p->get_placeholder();
+		endif;
+		if($is_required):
+			$input_attributes['class'] = 'formfld';
+			$input_attributes['required'] = 'required';
+		endif;
+		if(isset($placeholder)):
+			$input_attributes['placeholder'] = $placeholder;
+		endif;
+		$size = $p->get_size();
+		if($size > 0):
+			$input_attributes['size'] = $size;
+		endif;
+		if($maxlength > 0):
+			$input_attributes['maxlength'] = $maxlength;
+		endif;
+		$this->addDIV()->addElement('input',$input_attributes);
 		return $this;
 	}
-	public function mount_select(properties $p,$value,bool $required = false,bool $readonly = false,$onclick = '') {
-		$ctrl = new HTMLComboBox2($p->get_id(),$p->get_title(),$value,$p->get_options(),$p->get_description());
-		$ctrl->SetRequired($required);
-		$ctrl->SetReadOnly($readonly);
-		$ctrl->SetJSonClick($onclick);
-		$ctrl->Compose($this);
+	public function mount_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$input_attributes = [
+			'name' => sprintf('%s[]',$p->get_name()),
+			'type' => 'checkbox',
+		];
+		if($is_readonly):
+			$input_attributes['disabled'] = 'disabled';
+			$is_required = false;
+		endif;
+		if($is_required):
+			$input_attributes['required'] = 'required';
+		endif;
+		$table = $this->add_table_data_selection();
+		$table->mount_colgroup_with_styles('width',['5%','95%']);
+		$table->
+			addTHEAD()->
+				addTR()->
+					mountTH(['class' => 'lhelc'])->
+					mountTH(['class' => 'lhebl'],$p->get_title());
+		$tbody = $table->addTBODY();
+		foreach($p->get_options() as $option_tag => $option_val):
+			//	create a unique identifier for each row and use label tag for text
+			//	column to allow toggling the checkbox button by clicking on the text.
+			$input_attributes['value'] = $option_tag;
+			$input_attributes['id'] = sprintf('checkbox_%s',uuid());
+			if(is_array($value) && in_array($option_tag,$value)):
+				$input_attributes['checked'] = 'checked';
+			elseif(array_key_exists('checked',$input_attributes)):
+				unset($input_attributes['checked']);
+			endif;
+			$tr = $tbody->addTR();
+			$tr->
+				addTD(['class' => 'lcelc'])->
+					addElement('input',$input_attributes);
+			$tr->
+				addTD(['class' => 'lcebl'])->
+					addElement('label',['for' => $input_attributes['id']],$option_val);
+		endforeach;
+	}
+	public function mount_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$table = $this->add_table_data_selection();
+		$table->mount_colgroup_with_styles('width',['5%','95%']);
+		$table->
+			addTHEAD()->
+				addTR()->
+					mountTH(['class' => 'lhelc'])->
+					mountTH(['class' => 'lhebl'],$p->get_title());
+		$tbody = $table->addTBODY();
+		$input_attributes = [
+			'name' => $p->get_name(),
+			'type' => 'radio'
+		];
+		if($is_readonly):
+			$input_attributes['disabled'] = 'disabled';
+			$is_required = false;
+		endif;
+		if($is_required):
+			$input_attributes['required'] = 'required';
+		endif;
+		foreach($p->get_options() as $option_tag => $option_val):
+			//	create a unique identifier for each row.
+			$uuid = uuid();
+			//	use label tag for text column to allow enabling the radio button by clicking on the text
+			$input_attributes['value'] = $option_tag;
+			$input_attributes['id'] = sprintf('radio_%s',$uuid);
+			if($value === $option_tag):
+				$input_attributes['checked'] = 'checked';
+			elseif(array_key_exists('checked',$input_attributes)):
+				unset($input_attributes['checked']);
+			endif;
+			$tr = $tbody->addTR();
+			$tr->addTD(['class' => 'lcelc'])->addElement('input',$input_attributes);
+			$tr->addTD(['class' => 'lcebl'])->addElement('label',['for' => $uuid],$option_val);
+		endforeach;
 		return $this;
 	}
-	public function mount_separator($colspan = 2,$ctrlname = '') {
-		$ctrl = new HTMLSeparator2();
-		$ctrl->SetColSpan($colspan);
-		$ctrl->SetCtrlName($ctrlname);
-		$ctrl->Compose($this);
+	public function mount_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$select_attributes = [
+			'id' => $p->get_id(),
+			'name' => $p->get_name(),
+			'class' => 'formfld'
+		];
+		if($is_readonly):
+			$select_attributes['disabled'] = 'disabled';
+			$is_required = false;
+		endif;
+		if($is_required):
+			$select_attributes['required'] = 'required';
+		endif;
+		$select = $this->addElement('select',$select_attributes);
+		foreach($p->get_options() as $option_tag => $option_val):
+			$option_attributes = ['value' => $option_tag];
+			if($value == $option_tag):
+				$option_attributes['selected'] = 'selected';
+			endif;
+			$select->addElement('option',$option_attributes,$option_val);
+		endforeach;
 		return $this;
 	}
-	public function mount_textinfo(string $id,string $title = '',$value) {
-		$ctrl = new HTMLTextInfo2($id,$title,$value);
-		$ctrl->Compose($this);
+	public function mount_separator(int $colspan = 0,string $id = NULL) {
+		$tr_attributes = [];
+		if(isset($id) && preg_match('/\S/',$id)):
+			$tr_attributes['id'] = sprintf('%s_tr',$id);
+		endif;
+		$td_attributes = [
+			'class' => 'gap'
+		];
+		if($colspan > 0):
+			$td_attributes['colspan'] = $colspan;
+		endif;
+		$this->addTR($tr_attributes)->addTD($td_attributes);
+		return $this;
+	}
+	public function mount_textinfo(string $id = NULL,string $value = NULL) {
+		if(isset($value)):
+			$span_attributes  = [];
+			if(isset($id)):
+				$span_attributes = ['id' => $id];
+			endif;
+			$this->addElement('span',$span_attributes,$value);
+		endif;
+		return $this;
+	}
+	//	c2 blocks
+	public function c2_row(properties $p,bool $is_required = false,bool $is_readonly = false,bool $tagaslabel = false) {
+		if($is_readonly):
+			$class_tag = 'celltag';
+			$class_data = 'celldata';
+			$is_required = false;
+		else:
+			$class_tag = 'celltag';
+			$class_data = 'celldata';
+		endif;
+		if($is_required):
+			$class_tag = 'celltagreq';
+			$class_data = 'celldatareq';
+		endif;
+		$tr = $this->addTR(['id' => sprintf('%s_tr',$p->get_id())]);
+		if($tagaslabel):
+			$tr->addTD(['class' => $class_tag])->addElement('label',['for' => $p->get_id()],$p->get_title());
+		else:
+			$tr->addTD(['class' => $class_tag],$p->get_title());
+		endif;
+		$subnode = $tr->addTD(['class' => $class_data]);
+		return $subnode;
+	}
+	public function c2_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->c2_row($p,$is_required,$is_readonly,true)->mount_checkbox($p,$value,$is_required,$is_readonly)->mount_description($p);
+		return $this;
+	}
+	public function c2_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->c2_row($p,$is_required,$is_readonly,true)->mount_checkbox_grid($p,$value,$is_required,$is_readonly)->mount_description($p);
+		return $this;
+	}
+	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false,int $size = 40,int $maxlength = 0,string $placeholder = NULL) {
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				mount_input_text($p,$value,$is_required,$is_readonly,$size,$maxlength,$placeholder)->
+				mount_description($p);
+		return $this;
+	}
+	public function c2_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->c2_row($p,$is_required,$is_readonly,true)->mount_radio_grid($p,$value,$is_required,$is_readonly)->mount_description($p);
+		return $this;
+	}
+	public function c2_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->c2_row($p,$is_required,$is_readonly,true)->mount_select($p,$value,$is_required,$is_readonly)->mount_description($p);
+		return $this;
+	}
+	public function c2_separator() {
+		$this->mount_separator(2);
+		return $this;
+	}
+	public function c2_textinfo(string $id,string $title,$value) {
+		$tr_attributes = [];
+		if(isset($id)):
+			$tr_attributes['id'] = sprintf('%s_tr',$id);
+		endif;
+		$tr = $this->addTR($tr_attributes);
+		$tr->addTD(['class' => 'celltag'],$title);
+		$tr->addTD(['class' => 'celldata'])->mount_textinfo($id,$value);
+		return $this;
+	}
+	public function c2_titleline(string $title = '') {
+		$this->mount_titleline($title,2);
+		return $this;
+	}
+	public function c2_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->mount_titleline_with_checkbox($p,$value,$is_required,$is_readonly,2);
 		return $this;
 	}
 	//	submit area macros
@@ -1829,7 +2180,10 @@ trait co_DOMTools {
 		$root = $this->ownerDocument ?? $this;
 		$target = $root->getElementById('g4f') ?? $this;
 		$append_mode = false; // top element of footer area
-		$div_attributes = ['id' => 'submit','style' => 'padding: 0px 25px 0px 25px;'];
+		$div_attributes = [
+			'id' => 'submit',
+			'style' => 'padding: 0px 25px 0px 25px;'
+		];
 		if($append_mode):
 			$subnode = $target->addDIV($div_attributes);
 		else:
@@ -1843,8 +2197,14 @@ trait co_DOMTools {
 		$value        = $value ?? 'cancel';
 		$id           = $id ?? sprintf('%1$s_%2$s',$element,$value);
 		$content      = $content ?? gtext('Cancel');
-		$attributes   = ['name' => 'submit','type' => 'submit','class' => $class_button,'value' => $value,'id' => $id];
-		$this->addElement($element,$attributes,$content);
+		$button_attributes   = [
+			'name' => 'submit',
+			'type' => 'submit',
+			'class' => $class_button,
+			'value' => $value,
+			'id' => $id
+		];
+		$this->addElement($element,$button_attributes,$content);
 		return $this;
 	}
 	public function mount_button_cancel() {
@@ -1870,7 +2230,12 @@ trait co_DOMTools {
 		return $this;
 	}
 	public function mount_authtoken() {
-		$this->addElement('input',['name' => 'authtoken','type' => 'hidden','value' => Session::getAuthToken()]);
+		$input_attributes = [
+			'name' => 'authtoken',
+			'type' => 'hidden',
+			'value' => Session::getAuthToken()
+		];
+		$this->addElement('input',$input_attributes);
 		return $this;
 	}
 	public function clc_page_title(array $page_title = []) {
@@ -1910,7 +2275,7 @@ trait co_DOMTools {
 	 *	@param string $action_url If $action_url empty no form element will be created.
 	 *	@return DOMNode $this
 	 */
-	public function mount_body(array $page_title = [],string $action_url = NULL) {
+	public function mount_body(array $page_title = [],string $action_url = NULL,bool $setenctype = false) {
 		$jdata = <<<EOJ
 $(window).on("load", function() {
 	$("#tabnav").on('click', function() { spinner(); });
@@ -1920,8 +2285,16 @@ $(window).on("load", function() {
 });
 EOJ;
 		$body = $this->addElement('body',['id' => 'main']);
-		if(isset($action_url) && preg_match('/\S/',$action_url)):
-			$form_attributes = ['action' => $action_url,'method' => 'post','id' => 'iform','name' => 'iform'];
+		if(isset($action_url) && preg_match('/^\S+$/',$action_url)):
+			$form_attributes = [
+				'action' => $action_url,
+				'method' => 'post',
+				'id' => 'iform',
+				'name' => 'iform'
+			];
+			if($setenctype):
+				$form_attributes['enctype'] = 'multipart/form-data';
+			endif;
 			$flexcontainer = $body->addFORM($form_attributes)->addDIV(['id' => 'pagebodyflex']);
 		else:
 			$flexcontainer = $body->addDIV(['id' => 'pagebodyflex']);
@@ -1947,7 +2320,7 @@ EOJ;
 						parentNode->
 					addDIV(['id' => 'headerlogo'])->
 						addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
-							putIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
+							mountIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
 		endif;
 		$header->addDIV(['id' => 'area_navhdr'],make_headermenu());
 		$header->addDIV(['id' => 'gapheader']);
@@ -1977,9 +2350,9 @@ EOJ;
 				addDIV(['id' => 'pagefooter'])->
 					add_table_data_settings()->
 						addCOLGROUP()->
-							putCOL(['style' => 'width:10%'])->
-							putCOL(['style' => 'width:80%'])->
-							putCOL(['style' => 'width:10%'])->
+							mountCOL(['style' => 'width:10%'])->
+							mountCOL(['style' => 'width:80%'])->
+							mountCOL(['style' => 'width:10%'])->
 							parentNode->
 						addTBODY()->
 							addTR();
@@ -1988,11 +2361,11 @@ EOJ;
 			if(file_exists(sprintf('%s/sysreboot.reqd',$g['varrun_path']))):
 				$g4fl->
 					addA(['class' => 'g4fi','href' => '/reboot.php'])->
-						putIMG(['src' => '/images/notify_reboot.png','title' => gtext('A reboot is required'),'alt' => gtext('Reboot Required')]);
+						mountIMG(['src' => '/images/notify_reboot.png','title' => gtext('A reboot is required'),'alt' => gtext('Reboot Required')]);
 			endif;
 		endif;
-		$g4fc = $g4fx->addTD(['class' => 'g4fc'],htmlspecialchars(get_product_copyright()));
-		$g4fr = $g4fx->addTD(['class' => 'g4fr']);
+		$g4fx->addTD(['class' => 'g4fc'],htmlspecialchars(get_product_copyright()));
+		$g4fx->addTD(['class' => 'g4fr']);
 		return $this;
 	}
 }
