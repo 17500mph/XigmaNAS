@@ -1,5 +1,5 @@
 PORTNAME=		tmux
-PORTVERSION=	2.5
+PORTVERSION=	2.6
 PORTREVISION=	0
 CATEGORIES=		sysutils
 COMMENT=		Terminal Multiplexer
@@ -11,6 +11,7 @@ MASTER_SITES=	https://github.com/tmux/tmux/releases/download/${PORTVERSION}/ \
 USES=		gmake libtool
 
 GNU_CONFIGURE=	yes
+NO_PKG_REGISTER= yes
 CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc
 
 PLIST_FILES=	bin/tmux
@@ -32,12 +33,8 @@ post-patch:
 		${WRKSRC}/tmux.1 ${WRKSRC}/tmux.h ${WRKSRC}/CHANGES
 	${REINPLACE_CMD} -e '/LIBS=/s/-lrt//' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tmux ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/tmux.1 ${STAGEDIR}${MANPREFIX}/man/man1
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 # NAS4Free install
+do-install:
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/tmux ${NAS4FREE_ROOTFS}/bin
 
 .include <bsd.port.mk>
