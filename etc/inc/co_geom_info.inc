@@ -106,4 +106,15 @@ class co_geom_info {
 		}
 		return $a_ret;
 	}
+	public function get_provider_ref(&$a_ret = []) {
+		$r_ret = [];
+		$x_provider = '//provider[@ref]';
+		if(false !== ($a_provider = $this->a_xml->xpath($x_provider))) {
+			foreach($a_provider as $r_provider) {
+				$r_ret['provider.ref'] = (string)$r_provider['ref'];
+				$a_ret[(string)$r_provider['ref']] = $r_ret;
+			}
+		}
+		return $a_ret;
+	}
 }
