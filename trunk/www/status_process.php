@@ -33,47 +33,52 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
 
-$sphere_scriptname = basename(__FILE__);
+function get_sphere_status_process() {
+	global $config;
+	
+	$sphere = new co_sphere_row('status_process','php');
+	return $sphere;
+}
 function status_process_ajax() {
 	$cmd = 'top -d1 25';
 	mwexec2($cmd,$rawdata);
-	return implode("\n",$rawdata);
+	return implode(PHP_EOL,$rawdata);
 }
 if(is_ajax()):
 	$status = status_process_ajax();
 	render_ajax($status);
 endif;
-$pgtitle = [gtext('Status'),gtext('Processes')];
-?>
-<?php include 'fbegin.inc';?>
-<script type="text/javascript">
-//<![CDATA[
+$sphere = &get_sphere_status_process();
+$jcode = <<<EOJ
 $(document).ready(function(){
 	var gui = new GUI;
-	gui.recall(5000, 5000, '<?=$sphere_scriptname;?>', null, function(data) {
-		$('#area_refresh').text(data.data);
+	gui.recall(5000, 5000, 'status_process.php', null, function(data) {
+		if ($('#area_refresh').length > 0) {
+			$('#area_refresh').html(data.data);
+		}
 	});
 });
-//]]>
-</script>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-			<?php html_titleline2(gtext('Process Status'));?>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="celltag"><?=gtext('Information');?></td>
-				<td class="celldata">
-					<pre><span id="area_refresh"><?=status_process_ajax();?></span></pre>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</td></tr></tbody></table>
-<?php include 'fend.inc';?>
+EOJ;
+$document = new_page([gtext('Status'),gtext('Processes')],$sphere->scriptname());
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+$body->addJavaScript($jcode);
+$content = $pagecontent->add_area_data();
+$content->
+	add_table_data_settings()->
+		mount_colgroup_data_settings()->
+		addTHEAD()->
+			c2_titleline(gtext('Process State'))->
+			parentNode->
+		addTBODY()->
+			addTR()->
+				mountTD(['class' => 'celltag'],gtext('Information'))->
+				addTD(['class' => 'celldata'])->
+					addElement('pre')->
+						addElement('span',['id' => 'area_refresh'],status_process_ajax());
+$content->
+	mount_authtoken();
+$document->render();
+?>
