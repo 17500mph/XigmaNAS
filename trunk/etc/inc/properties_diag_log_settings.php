@@ -81,19 +81,20 @@ class properties_diag_log_settings {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_nentries(): properties {
-		$o = new properties($this);
+	private function prop_nentries(): properties_int {
+		$o = new properties_int($this);
 		$o->set_id('nentries');
 		$o->set_name('nentries');
 		$o->set_title(gtext('Show Log Entries'));
 		$o->set_description('');
 		$o->set_defaultvalue(50);
-		$o->set_filter(FILTER_VALIDATE_INT);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => NULL,'min_range' => 5,'max_range' => 1000]);
+		$o->set_size(5);
+		$o->set_maxlength(4);
+		$o->set_min(5)->set_max(1000);
+		$o->filter_use_default();
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The number of log entries to show must be between 5 and 1000.')));
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Must be a number between 5 and 1000.')));
 		return $o;
 	}
 	private function prop_resolve(): properties_bool {
@@ -230,16 +231,14 @@ class properties_diag_log_settings {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_ipaddr(): properties {
-		$o = new properties($this);
+	private function prop_ipaddr(): properties_ipaddress {
+		$o = new properties_ipaddress($this);
 		$o->set_id('ipaddr');
 		$o->set_name('ipaddr');
 		$o->set_title(gtext('IP Address'));
 		$o->set_description(gtext('IP address of the remote syslog server.'));
 		$o->set_defaultvalue('');
-		$o->set_filter(FILTER_VALIDATE_IP);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => NULL]);
+		$o->filter_use_default();
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('This is not a valid IP Address.')));

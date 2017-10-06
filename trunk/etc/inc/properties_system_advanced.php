@@ -273,13 +273,13 @@ class properties_system_advanced {
 		html_inputbox2('pwmax',gtext('CPU Maximum Frequency'),$pconfig['pwmax'],sprintf('%s %s',gtext('CPU frequencies:'),join(', ',$a_freq)) . '.<br />' . gtext('An empty field is default.'),false,5);
 */
 	}
-	private function prop_pwmin(): properties {
-		$o = new properties($this);
+	private function prop_pwmin(): properties_text {
+		$o = new properties_text($this);
 		return $o;
 //		html_inputbox2('pwmin',gtext('CPU Minimum Frequency'),$pconfig['pwmin'],gtext('An empty field is default.'),false,5);
 	}
-	private function prop_motd(): properties {
-		$o = new properties($this);
+	private function prop_motd(): properties_text {
+		$o = new properties_text($this);
 		return $o;
 //		html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,7,false,false);
 	}
@@ -311,8 +311,8 @@ class properties_system_advanced {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_sysconsaverblanktime(): properties {
-		$o = new properties($this);
+	private function prop_sysconsaverblanktime(): properties_text {
+		$o = new properties_text($this);
 		return $o;
 //		html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
 	}
