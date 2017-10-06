@@ -54,47 +54,48 @@ class co_geom_info {
 	public function get_disk(&$a_ret = []) {
 		$r_ret = [];
 		$x_disk = '/mesh/class[name="DISK"]/geom';
-		if(false !== ($a_disk = $this->a_xml->xpath($x_disk))) {
-			foreach($a_disk as $r_disk) {
+		if(false !== ($a_disk = $this->a_xml->xpath($x_disk))):
+			foreach($a_disk as $r_disk):
 				$r_ret['geom_id'] = (string)$r_disk['id'];
 				$r_ret['rank'] = (int)$r_disk->rank;
 				$r_ret['name'] = (string)$r_disk->name;
 				$a_ret[(string)$r_disk['id']] = $r_ret;
-			}
-		}
+				
+			endforeach;
+		endif;
 		return $a_ret;
 	}
 	public function get_dev(&$a_ret = []) {
 		$r_ret = [];
 		$x_dev = '/mesh/class[name="DEV"]/geom';
-		if(false !== ($a_dev = $this->a_xml->xpath($x_dev))) {
-			foreach($a_dev as $r_dev) {
+		if(false !== ($a_dev = $this->a_xml->xpath($x_dev))):
+			foreach($a_dev as $r_dev):
 				$r_ret['geom.id'] = (string)$r_dev['id'];
 				$r_ret['rank'] = (int)$r_dev->rank;
 				$r_ret['name'] = (string)$r_dev->name;
 				$a_ret[(string)$r_dev['id']] = $r_ret;
-			}
-		}
+			endforeach;
+		endif;
 		return $a_ret;
 	}
 	public function get_part(&$a_ret = []) {
 		$r_ret = [];
 		$x_part = '/mesh/class[name="PART"]/geom';
-		if(false !== ($a_result = $this->a_xml->xpath($x_part))) {
-			foreach($a_part as $r_part) {
+		if(false !== ($a_result = $this->a_xml->xpath($x_part))):
+			foreach($a_part as $r_part):
 				$r_ret['geom.id'] = (string)$r_part['id'];
 				$r_ret['rank'] = (int)$r_part->rank;
 				$r_ret['name'] = (string)$r_part->name;
 				$a_ret[(string)$r_part['id']] = $r_ret;
-			}
-		}
+			endforeach;
+		endif;
 		return $a_ret;
 	}
 	public function get_provider(&$a_ret = []) {
 		$r_ret = [];
 		$x_provider = '//provider[@id]';
-		if(false !== ($a_provider = $this->a_xml->xpath($x_provider))) {
-			foreach($a_provider as $r_provider) {
+		if(false !== ($a_provider = $this->a_xml->xpath($x_provider))):
+			foreach($a_provider as $r_provider):
 				$r_ret['provider.id'] = (string)$r_provider['id'];
 				$r_ret['name'] = (string)$r_provider->name;
 				$r_ret['mediasize'] = (int)$r_provider->mediasize;
@@ -102,19 +103,19 @@ class co_geom_info {
 				$r_ret['stripesize'] = (int)$r_provider->stripesize;
 				$r_ret['stripeoffset'] = (int)$r_provider->stripeoffset;
 				$a_ret[(string)$r_provider['id']] = $r_ret;
-			}
-		}
+			endforeach;
+		endif;
 		return $a_ret;
 	}
 	public function get_provider_ref(&$a_ret = []) {
 		$r_ret = [];
 		$x_provider = '//provider[@ref]';
-		if(false !== ($a_provider = $this->a_xml->xpath($x_provider))) {
-			foreach($a_provider as $r_provider) {
+		if(false !== ($a_provider = $this->a_xml->xpath($x_provider))):
+			foreach($a_provider as $r_provider):
 				$r_ret['provider.ref'] = (string)$r_provider['ref'];
 				$a_ret[(string)$r_provider['ref']] = $r_ret;
-			}
-		}
+			endforeach;
+		endif;
 		return $a_ret;
 	}
 }
