@@ -33,11 +33,17 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
 
+function get_sphere_status_disks() {
+	global $config;
+	$sphere = new co_sphere_row('status_disks','php');
+	return $sphere;
+}
 function status_disks_ajax() {
 	global $config;
-	
-	$body_output = '';
+
+	$pconfig = [];
 	$pconfig['temp_info'] = $config['smartd']['temp']['info'] ?? 0;
 	$pconfig['temp_crit'] = $config['smartd']['temp']['crit'] ?? 0;
 	$a_phy_hast = array_merge((array)get_hast_disks_list());
@@ -47,6 +53,9 @@ function status_disks_ajax() {
 		array_sort_key($a_disk_conf,'name');
 	endif;
 	$raidstatus = get_sraid_disks_list();
+	$fragment = new co_DOMDocument();
+	$a_lcell = ['class' => 'lcell'];
+	$a_lcebld = ['class' => 'lcebld']; 
 	foreach($a_disk_conf as $disk):
 		$iostat_value = system_get_device_iostat($disk['name']);
 		$iostat_available = (false !== $iostat_value);
@@ -73,30 +82,27 @@ function status_disks_ajax() {
 		$gt_description = empty($disk['desc']) ? gtext('n/a') : htmlspecialchars($disk['desc']);
 		$gt_serial = empty($disk['serial']) ? gtext('n/a') : htmlspecialchars($disk['serial']);
 		$gt_fstype = empty($disk['fstype']) ? gtext('Unknown or unformatted') : htmlspecialchars(get_fstype_shortdesc($disk['fstype']));
-
-		$body_output .= '<tr>';
-		$body_output .= '<td class="lcell">' . $gt_name . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_size . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_model . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_description . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_serial . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_fstype . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_iostat . '</td>';
-		$body_output .= '<td class="lcell">';
+		$tr = $fragment->addTR();
+		$tr->
+			mountTD($a_lcell,$gt_name)->
+			mountTD($a_lcell,$gt_size)->
+			mountTD($a_lcell,$gt_model)->
+			mountTD($a_lcell,$gt_description)->
+			mountTD($a_lcell,$gt_serial)->
+			mountTD($a_lcell,$gt_fstype)->
+			mountTD($a_lcell,$gt_iostat);
 		if($temp_available):
 			if(!empty($pconfig['temp_crit']) && $temp_value >= $pconfig['temp_crit']):
-				$body_output .= '<div class="errortext">' . $gt_temp . '</div>';
+				$tr->addTD($a_lcell)->addDIV(['class'=> 'errortext'],$gt_temp);
 			elseif(!empty($pconfig['temp_info']) && $gt_temp >= $pconfig['temp_info']):
-				$body_output .= '<div class="warningtext">' . $gt_temp . '</div>';
+				$tr->addTD($a_lcell)->addDIV(['class'=> 'warningtext'],$gt_temp);
 			else:
-				$body_output .= $gt_temp;
+				$tr->mountTD($a_lcell,$gt_temp);
 			endif;  
 		else:
-			$body_output .= gtext('n/a');
+			$tr->mountTD($a_lcell,gtext('n/a'));
 		endif;
-		$body_output .= '</td>';
-		$body_output .= '<td class="lcebld">' . $gt_status . '</td>';
-		$body_output .= '</tr>';
+		$tr->mountTD($a_lcebld,$gt_status);
 	endforeach;
 	foreach($raidstatus as $diskk => $diskv):
 		$iostat_value = system_get_device_iostat($diskk);
@@ -118,41 +124,36 @@ function status_disks_ajax() {
 		$gt_serial = gtext('n/a');
 		$gt_fstype = empty($diskv['fstype']) ? gtext('UFS') : htmlspecialchars(get_fstype_shortdesc($diskv['fstype']));
 		$gt_status = htmlspecialchars($diskv['state']);
-		$body_output .= '<tr>';
-		$body_output .= '<td class="lcell">' . $gt_name . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_size . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_model . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_description . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_serial . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_fstype . '</td>';
-		$body_output .= '<td class="lcell">' . $gt_iostat . '</td>';
-		$body_output .= '<td class="lcell">';
+		$tr = $fragment->addTR();
+		$tr->
+			mountTD($a_lcell,$gt_name)->
+			mountTD($a_lcell,$gt_size)->
+			mountTD($a_lcell,$gt_model)->
+			mountTD($a_lcell,$gt_description)->
+			mountTD($a_lcell,$gt_serial)->
+			mountTD($a_lcell,$gt_fstype)->
+			mountTD($a_lcell,$gt_iostat);
 		if($temp_available):
 			if(!empty($pconfig['temp_crit']) && $temp_value >= $pconfig['temp_crit']):
-				$body_output .= '<div class="errortext">' . $gt_temp . '</div>';
+				$tr->addTD($a_lcell)->addDIV(['class'=> 'errortext'],$gt_temp);
 			elseif(!empty($pconfig['temp_info']) && $gt_temp >= $pconfig['temp_info']):
-				$body_output .= '<div class="warningtext">' . $gt_temp . '</div>';
+				$tr->addTD($a_lcell)->addDIV(['class'=> 'warningtext'],$gt_temp);
 			else:
-				$body_output .= $gt_temp;
+				$tr->mountTD($a_lcell,$gt_temp);
 			endif;  
 		else:
-			$body_output .= gtext('n/a');
+			$tr->mountTD($a_lcell,gtext('n/a'));
 		endif;
-		$body_output .= '</td>';
-		$body_output .= '<td class="lcebld">' . $gt_status . '</td>';
-		$body_output .= '</tr>';
 	endforeach;
-	return $body_output;
+	return $fragment->get_html();
 }
 if(is_ajax()):
 	$status = status_disks_ajax();
 	render_ajax($status);
 endif;
-$pgtitle = [gtext('Status'),gtext('Disks')];
-include 'fbegin.inc';
-?>
-<script type="text/javascript">
-//<![CDATA[
+
+$sphere = &get_sphere_status_disks();
+$jcode = <<<EOJ
 $(document).ready(function(){
 	var gui = new GUI;
 	gui.recall(5000, 5000, 'status_disks.php', null, function(data) {
@@ -161,38 +162,41 @@ $(document).ready(function(){
 		}
 	});
 });
-//]]>
-</script>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_selection">
-		<colgroup>
-			<col style="width:5%"> 
-			<col style="width:7%">
-			<col style="width:15%">
-			<col style="width:17%">
-			<col style="width:13%">
-			<col style="width:10%">
-			<col style="width:18%">
-			<col style="width:8%">
-			<col style="width:7%">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gtext('Status & Information'),9);
+EOJ;
+$colwidth = ['5%','7%','15%','17%','13%','10%','18%','8%','7%'];
+$a_lhell = ['class' => 'lhell'];
+$a_lhebl = ['class' => 'lhebl'];
+//	create document
+$document = new_page([gtext('Status'),gtext('Disks')],$sphere->scriptname());
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add additional javascript code
+$body->addJavaScript($jcode);
+//	create data area
+$content = $pagecontent->add_area_data();
+//	add content
+$content->
+	add_table_data_selection()->
+		mount_colgroup_with_styles('width',$colwidth)->
+		addTHEAD()->
+			mount_titleline(gtext('Status & Information'),count($colwidth))->
+			addTR()->
+				mountTH($a_lhell,gtext('Device'))->
+				mountTH($a_lhell,gtext('Size'))->
+				mountTH($a_lhell,gtext('Device Model'))->
+				mountTH($a_lhell,gtext('Description'))->
+				mountTH($a_lhell,gtext('Serial Number'))->
+				mountTH($a_lhell,gtext('Filesystem'))->
+				mountTH($a_lhell,gtext('I/O Statistics'))->
+				mountTH($a_lhell,gtext('Temperature'))->
+				mountTH($a_lhebl,gtext('Status'))->
+				parentNode->
+			parentNode->
+		addTBODY(['id' => 'area_refresh'],status_disks_ajax());
+//	add auth token
+$content->
+	mount_authtoken();
+//	done
+$document->render();
 ?>
-			<tr>
-				<th class="lhell"><?=gtext('Device');?></th>
-				<th class="lhell"><?=gtext('Size');?></th>
-				<th class="lhell"><?=gtext('Device Model');?></th>
-				<th class="lhell"><?=gtext('Description');?></th>
-				<th class="lhell"><?=gtext('Serial Number');?></th>
-				<th class="lhell"><?=gtext('Filesystem'); ?></th>
-				<th class="lhell"><?=gtext('I/O Statistics');?></th>
-				<th class="lhell"><?=gtext('Temperature');?></th>
-				<th class="lhebl"><?=gtext('Status');?></th>
-			</tr>
-		</thead>
-		<tbody id="area_refresh"><?=status_disks_ajax();?></tbody>
-	</table>
-</td></tr></tbody></table>
-<?php include 'fend.inc';?>
