@@ -61,7 +61,7 @@ $(document).ready(function(){
 	});
 });
 EOJ;
-$document = new_page([gtext('Status'),gtext('Processes')],$sphere->scriptname());
+$document = new_page([gtext('Status'),gtext('Processes')]);
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
 $body->addJavaScript($jcode);
@@ -78,7 +78,5 @@ $content->
 				addTD(['class' => 'celldata'])->
 					addElement('pre')->
 						addElement('span',['id' => 'area_refresh'],status_process_ajax());
-$content->
-	mount_authtoken();
 $document->render();
 ?>
