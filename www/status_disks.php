@@ -151,7 +151,6 @@ if(is_ajax()):
 	$status = status_disks_ajax();
 	render_ajax($status);
 endif;
-
 $sphere = &get_sphere_status_disks();
 $jcode = <<<EOJ
 $(document).ready(function(){
@@ -166,16 +165,11 @@ EOJ;
 $colwidth = ['5%','7%','15%','17%','13%','10%','18%','8%','7%'];
 $a_lhell = ['class' => 'lhell'];
 $a_lhebl = ['class' => 'lhebl'];
-//	create document
-$document = new_page([gtext('Status'),gtext('Disks')],$sphere->scriptname());
-//	get areas
+$document = new_page([gtext('Status'),gtext('Disks')]);
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
-//	add additional javascript code
 $body->addJavaScript($jcode);
-//	create data area
 $content = $pagecontent->add_area_data();
-//	add content
 $content->
 	add_table_data_selection()->
 		mount_colgroup_with_styles('width',$colwidth)->
@@ -194,9 +188,5 @@ $content->
 				parentNode->
 			parentNode->
 		addTBODY(['id' => 'area_refresh'],status_disks_ajax());
-//	add auth token
-$content->
-	mount_authtoken();
-//	done
 $document->render();
 ?>
