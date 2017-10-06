@@ -375,15 +375,15 @@ function sysconsaver_change() {
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->mount_checkbox($property->zeroconf,!empty($pconfig['zeroconf']));
-			$node->mount_checkbox($property->disablefm,!empty($pconfig['disablefm']));
+			$node->c2_checkbox($property->zeroconf,!empty($pconfig['zeroconf']));
+			$node->c2_checkbox($property->disablefm,!empty($pconfig['disablefm']));
 			if(('true' == $g['zroot']) || ('full' !== $g['platform'])):
-				$node->mount_checkbox($property->disablefirmwarecheck,!empty($pconfig['disablefirmwarecheck']));
+				$node->c2_checkbox($property->disablefirmwarecheck,!empty($pconfig['disablefirmwarecheck']));
 			endif;
-			$node->mount_checkbox($property->enabletogglemode,!empty($pconfig['enabletogglemode']));
-			$node->mount_checkbox($property->skipviewmode,!empty($pconfig['skipviewmode']));
-			$node->mount_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
-			$node->mount_checkbox($property->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
+			$node->c2_checkbox($property->enabletogglemode,!empty($pconfig['enabletogglemode']));
+			$node->c2_checkbox($property->skipviewmode,!empty($pconfig['skipviewmode']));
+			$node->c2_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
+			$node->c2_checkbox($property->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
 			$node->render();
 ?>
 		</tbody>
@@ -402,11 +402,11 @@ function sysconsaver_change() {
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->mount_checkbox($property->disablebeep,!empty($pconfig['disablebeep']));
-			$node->mount_checkbox($property->microcode_update,!empty($pconfig['microcode_update']));
-			$node->mount_checkbox($property->tune_enable,!empty($pconfig['tune_enable']));
-			$node->mount_checkbox($property->powerd,!empty($pconfig['powerd']));
-			$node->mount_radio_grid($property->pwmode,$pconfig['pwmode']);
+			$node->c2_checkbox($property->disablebeep,!empty($pconfig['disablebeep']));
+			$node->c2_checkbox($property->microcode_update,!empty($pconfig['microcode_update']));
+			$node->c2_checkbox($property->tune_enable,!empty($pconfig['tune_enable']));
+			$node->c2_checkbox($property->powerd,!empty($pconfig['powerd']));
+			$node->c2_radio_grid($property->pwmode,$pconfig['pwmode']);
 			$node->render();
 			$clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
 			$a_freq = [];
@@ -438,9 +438,9 @@ function sysconsaver_change() {
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->mount_checkbox($property->disableconsolemenu,!empty($pconfig['disableconsolemenu']));
-			$node->mount_checkbox($property->enableserialconsole,!empty($pconfig['enableserialconsole']));
-			$node->mount_checkbox($property->sysconsaver,!empty($pconfig['sysconsaver']));
+			$node->c2_checkbox($property->disableconsolemenu,!empty($pconfig['disableconsolemenu']));
+			$node->c2_checkbox($property->enableserialconsole,!empty($pconfig['enableserialconsole']));
+			$node->c2_checkbox($property->sysconsaver,!empty($pconfig['sysconsaver']));
 			$node->render();
 			html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
 			html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,7,false,false);
