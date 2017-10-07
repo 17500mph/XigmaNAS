@@ -2285,7 +2285,8 @@ $(window).on("load", function() {
 });
 EOJ;
 		$body = $this->addElement('body',['id' => 'main']);
-		if(isset($action_url) && preg_match('/^\S+$/',$action_url)):
+		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
+		if($is_form):
 			$form_attributes = [
 				'action' => $action_url,
 				'method' => 'post',
@@ -2301,6 +2302,9 @@ EOJ;
 		endif;
 		$flexcontainer->addDIV(['id' => 'spinner_main']);
 		$flexcontainer->addDIV(['id' => 'spinner_overlay','style' => 'display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;']);
+		if($is_form):
+			$flexcontainer->addDIV(['id' => 'formextension'])->mount_authtoken();
+		endif;
 		$flexcontainer->mount_header($page_title);
 		$flexcontainer->mount_main();
 		$flexcontainer->mount_footer();
