@@ -261,9 +261,6 @@ endswitch;
 //	add remarks
 $content->add_area_remarks()->
 	mount_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
-//	add auth token
-$content->
-	mount_authtoken();
 //	done
 $document->render();
 ?>
