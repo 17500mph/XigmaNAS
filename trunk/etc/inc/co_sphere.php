@@ -151,6 +151,9 @@ class co_sphere_level2 extends co_sphere_level1 { // for row and grid
 		endif;
 		return $this->_row_identifier ?? false;
 	}
+	public function get_row_identifier_value() {
+		return $this->row[$this->_row_identifier] ?? NULL;
+	}
 }
 class co_sphere_settings extends co_sphere_level1 {
 //	methods
