@@ -217,7 +217,7 @@ function smart_enable_change() {
 					html_checkbox("smart_enable", gtext("S.M.A.R.T."), !empty($pconfig['smart_enable']) ? true : false, gtext("Activate S.M.A.R.T. monitoring for this device."), "", false, "smart_enable_change()");
 					$helpinghand = gtext('Extra options (usually empty).')
 						. ' '
-						. '<a href="' . 'http://smartmontools.sourceforge.net/man/smartd.conf.5.html' . '" target="_blank">'
+						. '<a href="' . 'https://www.smartmontools.org/browser/trunk/smartmontools/smartd.conf.5.in' . '" target="_blank">'
 						. gtext('Please check the documentation.')
 						. '</a>';
 					html_inputbox("smart_extraoptions", gtext("S.M.A.R.T. extra options"), $pconfig['smart_extraoptions'], $helpinghand, false, 40);
