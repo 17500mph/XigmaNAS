@@ -1160,8 +1160,6 @@ function parse_controller_config(&$devlist) {
 				$device['model'] = parse_device_desc($device['name']);
 				$device['controller_desc'] = parse_umass_controller_desc($device['controller_id']);
 				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
-				$device['smart']['devicetype'] = 'sat';
-				$device['smart']['devicetypearg'] = 'sat';
 				break;
 			// Auto detect devices to cater for SATA disks pass through via HBA (non-RAID) (such as LSI SAS2008 RAID controller (e.g. IBM ServeRAID M1015) flashed to LSI9211-IT firmware)
 			default:
