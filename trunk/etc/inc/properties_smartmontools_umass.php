@@ -100,3 +100,4 @@ class properties_smartmontools_umass {
 		return $o;
 	}
 }
+?>

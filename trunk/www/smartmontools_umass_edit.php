@@ -247,17 +247,17 @@ if(isset($jcode)):
 	$body->addJavaScript($jcode);
 endif;
 //	add tab navigation
-$document->
-	add_area_tabnav()->
-		add_tabnav_upper()->
-			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
-			parentNode->
-		add_tabnav_lower()->
-			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+$tabnav = $document->add_area_tabnav();
+$tabnav->
+	add_tabnav_upper()->
+		mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+		mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
+		mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+		mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'));
+$tabnav->
+	add_tabnav_lower()->
+		mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+		mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -276,8 +276,7 @@ $content->add_table_data_settings()->
 		addTBODY()->
 			c2_input_text($property->name,htmlspecialchars($sphere->row['name']),true,false)->
 			c2_input_text($property->type,htmlspecialchars($sphere->row['type']),false,false)->
-			c2_input_text($property->description,$sphere->row['description'],false,false)->
-			addElement('input',['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+			c2_input_text($property->description,$sphere->row['description'],false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->mount_button_add();
@@ -285,5 +284,6 @@ else:
 	$buttons->mount_button_save();
 endif;
 $buttons->mount_button_cancel();
+$buttons->addElement('input',['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
 $document->render();
 ?>

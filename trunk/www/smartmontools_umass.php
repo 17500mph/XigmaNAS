@@ -123,7 +123,7 @@ if($_POST):
 endif;
 $pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('USB Mass Storage Devices')];
 $record_exists = count($sphere->grid) > 0;
-$a_col_width = ['5%','25%','25%','35','10%'];
+$a_col_width = ['5%','25%','25%','35%','10%'];
 $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
@@ -136,17 +136,17 @@ if(isset($jcode)):
 	$body->addJavaScript($jcode);
 endif;
 //	add tab navigation
-$document->
-	add_area_tabnav()->
-		add_tabnav_upper()->
-			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
-			parentNode->
-		add_tabnav_lower()->
-			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+$tabnav = $document->add_area_tabnav();
+$tabnav->
+	add_tabnav_upper()->
+		mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+		mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
+		mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+		mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'));
+$tabnav->
+	add_tabnav_lower()->
+		mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+		mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
