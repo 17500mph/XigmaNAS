@@ -1,0 +1,206 @@
+<?php
+/*
+	smartmontools_umass.php
+
+	Part of NAS4Free (http://www.nas4free.org).
+	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
+	All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions are met:
+
+	1. Redistributions of source code must retain the above copyright notice, this
+	   list of conditions and the following disclaimer.
+
+	2. Redistributions in binary form must reproduce the above copyright notice,
+	   this list of conditions and the following disclaimer in the documentation
+	   and/or other materials provided with the distribution.
+
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	The views and conclusions contained in the software and documentation are those
+	of the authors and should not be interpreted as representing official policies,
+	either expressed or implied, of the NAS4Free Project.
+*/
+require_once 'auth.inc';
+require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
+
+function get_sphere_smartmontools_umass() {
+	global $config;
+	
+//	sphere structure
+	$sphere = new co_sphere_grid('smartmontools_umass','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->notifier('smartmontools_umass');
+	$sphere->row_identifier('uuid');
+	$sphere->enadis(false);
+	$sphere->lock(false);
+	$sphere->sym_add(gtext('Add Record'));
+	$sphere->sym_mod(gtext('Edit Record'));
+	$sphere->sym_del(gtext('Record is marked for deletion'));
+	$sphere->sym_loc(gtext('Record is locked'));
+	$sphere->sym_unl(gtext('Record is unlocked'));
+	$sphere->cbm_delete(gtext('Delete Selected Records'));
+	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected records?'));
+//	sphere external content
+	$sphere->grid = &array_make_branch($config,'smartmontools','umass','param');
+	array_sort_key($sphere->grid,'name');
+	return $sphere;
+}
+function smartmontools_umass_process_updatenotification($mode,$data) {
+	global $d_sysrebootreqd_path;
+	global $config;
+
+	$retval = 0;
+	$sphere = &get_sphere_smartmontools_umass();
+	switch($mode):
+		case UPDATENOTIFY_MODE_NEW:
+		case UPDATENOTIFY_MODE_MODIFIED:
+			break;
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+		case UPDATENOTIFY_MODE_DIRTY:
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+				unset($sphere->grid[$sphere->row_id]);
+				write_config();
+			endif;
+			break;
+	endswitch;
+	return $retval;
+}
+//	get environment
+$sphere = &get_sphere_smartmontools_umass();
+$errormsg = '';
+if($_POST):
+	if(isset($_POST['apply']) && $_POST['apply']):
+		$retval = 0;
+		if(!file_exists($d_sysrebootreqd_path)):
+			$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+		endif;
+		$savemsg = get_std_save_message($retval);
+		if($retval == 0):
+			updatenotify_delete($sphere->notifier());
+		endif;
+		header($sphere->header());
+		exit;
+	endif;
+	if(isset($_POST['submit'])):
+		switch($_POST['submit']):
+			case 'rows.delete':
+				$sphere->cbm_array = $_POST[$sphere->cbm_name] ?? [];
+				foreach($sphere->cbm_array as $sphere->cbm_record):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_record,$sphere->grid,$sphere->row_identifier()))):
+						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+						switch ($mode_updatenotify):
+							case UPDATENOTIFY_MODE_NEW:  
+								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								break;
+							case UPDATENOTIFY_MODE_MODIFIED:
+								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								break;
+							case UPDATENOTIFY_MODE_UNKNOWN:
+								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								break;
+						endswitch;
+					endif;
+				endforeach;
+				header($sphere->header());
+				exit;
+				break;
+		endswitch;
+	endif;
+endif;
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('USB Mass Storage Devices')];
+$record_exists = count($sphere->grid) > 0;
+$a_col_width = ['5%','25%','25%','35','10%'];
+$n_col_width = count($a_col_width);
+//	prepare additional javascript code
+$jcode = $sphere->doj(false);
+$document = new_page($pgtitle,$sphere->scriptname());
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add additional javascript code
+if(isset($jcode)):
+	$body->addJavaScript($jcode);
+endif;
+//	add tab navigation
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			parentNode->
+		add_tabnav_lower()->
+			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+//	create data area
+$content = $pagecontent->add_area_data();
+//	display information, warnings and errors
+$content->
+	mount_input_errors($input_errors)->
+	mount_info_box($savemsg)->
+	mount_error_box($errormsg);
+if(file_exists($d_sysrebootreqd_path)):
+	$content->mount_info_box(get_std_save_message(0));
+endif;
+if(updatenotify_exists($sphere->notifier())):
+	$content->mount_config_has_changed_box();
+endif;
+$table = $content->add_table_data_selection();
+$table->mount_colgroup_with_styles('width',$a_col_width);
+$thead = $table->addTHEAD();
+$thead->mount_titleline(gtext('Overview'),$n_col_width);
+$tr = $thead->addTR();
+if($record_exists):
+	$tr->addTH_class('lhelc')->mount_cbm_checkbox_toggle($sphere);
+else:
+	$tr->mountTH_class('lhelc');
+endif;
+$tr->
+	mountTH_class('lhell',gtext('Identifier'))->
+	mountTH_class('lhell',gtext('Type'))->
+	mountTH_class('lhell',gtext('Description'))->
+	mountTH_class('lhebl',gtext('Toolbox'));
+$tbody = $table->addTBODY();
+if($record_exists):
+	foreach($sphere->grid as $sphere->row_id => $sphere->row):
+		$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value());
+		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+		$is_enabled = $sphere->mode->enadis ? isset($sphere->row['enable']) : true;
+		$is_notprotected = $sphere->mode->lock ? !$sphere->row['protected'] : true;
+		$tr = $tbody->addTR();
+		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected));
+		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row['name'] ?? ''));
+		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row['type'] ?? ''));
+		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row['description'] ?? ''));
+		$toolbox = $tr->
+			addTD_class('lcebld')->
+				addTABLE(['class' => 'area_data_selection_toolbox'])->
+					mount_colgroup_with_styles('width',['33%','34%','33%'])->
+					addTBODY()->
+						addTR();
+		$toolbox->mount_toolbox($sphere,$is_notprotected,$is_notdirty);
+		$toolbox->addTD();
+		$toolbox->addTD();
+	endforeach;
+else:
+	$tbody->addTR()->addTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
+endif;
+$table->mount_footer_with_add($sphere,$n_col_width);
+$document->add_area_buttons()->mount_cbm_button_enadis($sphere)->mount_cbm_button_delete($sphere);
+$document->render();
+?>
