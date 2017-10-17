@@ -2016,7 +2016,16 @@ trait co_DOMTools {
 		if($maxlength > 0):
 			$input_attributes['maxlength'] = $maxlength;
 		endif;
-		$this->addDIV()->addElement('input',$input_attributes);
+		$div = $this->addDIV();
+		$div->addElement('input',$input_attributes);
+		$caption = $p->get_caption();
+		if(isset($caption)):
+			if($is_readonly):
+				$div->addElement('span',['style' => 'margin-left:8px;'],$caption);
+			else:
+				$div->addElement('label',['style' => 'margin-left:8px;','for' => $p->get_id()],$p->get_caption());
+			endif;
+		endif;
 		return $this;
 	}
 	public function mount_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
