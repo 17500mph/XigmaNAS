@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-09-26 01:25+0000\n"
-"PO-Revision-Date: 2017-09-09 03:00+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2017-10-17 20:19+0000\n"
+"PO-Revision-Date: 2017-10-17 02:01+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-13 13:53+0000\n"
-"X-Generator: Launchpad (build 18474)\n"
+"X-Launchpad-Export-Date: 2017-10-17 19:09+0000\n"
+"X-Generator: Launchpad (build 18476)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -1338,7 +1338,7 @@ msgid "CPU Maximum Frequency"
 msgstr "최대 CPU 주파수"
 
 msgid "CPU Microcode Update"
-msgstr ""
+msgstr "CPU 마이크로코드 업데이트"
 
 msgid "CPU Minimum Frequency"
 msgstr "최소 CPU 주파수"
@@ -1449,7 +1449,7 @@ msgid "Checksum"
 msgstr "검사합"
 
 msgid "Choose File"
-msgstr ""
+msgstr "파일 선택"
 
 msgid "Choose UPS mode."
 msgstr "UPS 모드를 선택하십시오."
@@ -2053,7 +2053,7 @@ msgid "Daemon"
 msgstr "데몬"
 
 msgid "Daemon Events"
-msgstr ""
+msgstr "데몬 이벤트"
 
 msgid "Daemon log"
 msgstr "데몬 로그"
@@ -2553,7 +2553,7 @@ msgid "Disable console menu."
 msgstr "콘솔 메뉴를 사용하지 않습니다."
 
 msgid "Disable file manager."
-msgstr ""
+msgstr "파일 관리자 비활성화."
 
 msgid "Disable firmware version check."
 msgstr "펌웨어 버전 확인을 사용하지 않습니다."
@@ -2562,10 +2562,10 @@ msgid "Disable scanning of folders for existing extension menus."
 msgstr "기존 확장 메뉴의 폴더 검색을 비활성화합니다."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "시동 및 종료 시 스피커 비프음 비활성화."
 
 msgid "Disable the compression of repeating lines."
-msgstr ""
+msgstr "반복되는 줄의 압축 비활성화."
 
 msgid "Disabled"
 msgstr "비활성화됨"
@@ -3408,7 +3408,7 @@ msgid ""
 msgstr "이 옵션을 사용하면 페이지 상단의 높이를 최소화 합니다."
 
 msgid "Enable this option to update the CPU microcode on startup."
-msgstr ""
+msgstr "이 옵션은 시동시 CPU 마이크로코드 업데이트를 활성화 합니다."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "DLNA 표준을 엄격히 준수하게 합니다."
@@ -3490,11 +3490,20 @@ msgstr "명령어 입력"
 msgid "Enter Email Address(es)"
 msgstr "전자우편 주소(들) 입력"
 
+msgid "Enter IP Address"
+msgstr ""
+
+msgid "Enter Identifier"
+msgstr ""
+
 msgid "Enter Password"
 msgstr "암호 입력"
 
 msgid "Enter Subject"
 msgstr "제목 입력"
+
+msgid "Enter Type"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "설명 입력"
@@ -3522,6 +3531,9 @@ msgstr "기본 포트를 사용하지 않으려는 경우 사용자 정의 포�
 
 msgid "Enter a description"
 msgstr "설명 입력"
+
+msgid "Enter a description for your reference"
+msgstr ""
 
 msgid "Enter a description for your reference."
 msgstr "참고하기 위한 설명 입력"
@@ -3754,7 +3766,7 @@ msgid "FTP - File Transfer"
 msgstr "FTP - File Transfer"
 
 msgid "FTP Events"
-msgstr ""
+msgstr "FTP 이벤트"
 
 msgid "FTP Proxy"
 msgstr "FTP 프록시"
@@ -3907,10 +3919,10 @@ msgid "Firmware Check"
 msgstr "펌웨어 확인"
 
 msgid "Firmware Information"
-msgstr ""
+msgstr "펌웨어 정보"
 
 msgid "Firmware Selection"
-msgstr ""
+msgstr "펌웨어 선택"
 
 msgid "Firmware Update"
 msgstr "펌웨어 업데이트"
@@ -4306,7 +4318,7 @@ msgid "IP address"
 msgstr "IP 주소"
 
 msgid "IP address of the remote syslog server."
-msgstr ""
+msgstr "원격 syslog 서버의 IP 주소."
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
@@ -4734,7 +4746,7 @@ msgstr "비정상적인 풀이나 비정상적인 풀의 일부인 가상 장치
 
 msgid ""
 "It is recommended that you backup the server configuration before you upgrade"
-msgstr "업그레이드를 진행하기 전에 서버 설정을 백업하실길 권장합니다"
+msgstr "업그레이드를 진행하기 전에 서버 설정을 백업하시길 권장합니다"
 
 msgid ""
 "It is recommended to encrypt your configuration and store it in a safe "
@@ -5478,6 +5490,9 @@ msgstr "위로 이동"
 msgid "Music"
 msgstr "음악"
 
+msgid "Must be a number between 5 and 1000."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "반드시 선택해야 함"
 
@@ -5723,6 +5738,9 @@ msgstr "풀을 찾을 수 없습니다."
 
 msgid "No pools have been selected"
 msgstr "풀 선택되지 않음"
+
+msgid "No records found."
+msgstr ""
 
 msgid "No softraid-formatted disks available."
 msgstr "사용 가능한 소프트웨어 RAID 포맷된 디스크가 없습니다."
@@ -6241,7 +6259,7 @@ msgid "Platform OS"
 msgstr "플렛폼 OS"
 
 msgid "Platform and Performance Settings"
-msgstr ""
+msgstr "플렛폼 및 성능 설정"
 
 msgid "Please add a bridge interface first."
 msgstr "먼저 브릿지 인터페이스를 추가해 주십시오."
@@ -6461,8 +6479,8 @@ msgstr "개인 키"
 msgid "Private key"
 msgstr "개인 키"
 
-msgid "Process Status"
-msgstr "프로세스 상태"
+msgid "Process State"
+msgstr ""
 
 msgid "Processes"
 msgstr "프로세스"
@@ -6624,7 +6642,7 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC 클라이언트 정보 및 상태"
 
 msgid "RSYNC Events"
-msgstr ""
+msgstr "rsync 이벤트"
 
 msgid "RSYNC client number"
 msgstr "RSYNC 클라이언트 번호"
@@ -6751,6 +6769,9 @@ msgstr "높은 상대 습도 임계치(퍼센트)"
 
 msgid "Release Notes"
 msgstr "배포 정보"
+
+msgid "Reload Page"
+msgstr ""
 
 msgid "Reload page"
 msgstr "페이지 다시 읽기"
@@ -7014,7 +7035,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Events"
-msgstr ""
+msgstr "S.M.A.R.T. 이벤트"
 
 msgid "S.M.A.R.T. Monitoring"
 msgstr "S.M.A.R.T. 감시"
@@ -7062,7 +7083,7 @@ msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH Events"
-msgstr ""
+msgstr "SSH 이벤트"
 
 msgid "SSHD log"
 msgstr "SSHD 로그"
@@ -7343,8 +7364,8 @@ msgstr "선택"
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "자체 감시, 분석 및 보고 기술"
 
-msgid "Self-tests Management"
-msgstr "자체 테스트 관리"
+msgid "Self-Test Schedules"
+msgstr ""
 
 msgid "Send Buffer"
 msgstr "송신 버퍼"
@@ -7353,19 +7374,19 @@ msgid "Send Command!"
 msgstr "명령 보냄!"
 
 msgid "Send FTP event messages."
-msgstr ""
+msgstr "FTP 이벤트 메시지를 전송합니다."
 
 msgid "Send Now"
 msgstr "지금 보내기"
 
 msgid "Send RSYNC event messages."
-msgstr ""
+msgstr "rsync 이벤트 메시지를 전송합니다."
 
 msgid "Send S.M.A.R.T. event messages."
-msgstr ""
+msgstr "S.M.A.R.T. 이벤트 메시지를 전송합니다."
 
 msgid "Send SSH event messages."
-msgstr ""
+msgstr "SSH 이벤트 메시지를 전송합니다."
 
 msgid "Send Test Email"
 msgstr "테스트 전자우편 보내기"
@@ -7374,10 +7395,10 @@ msgid "Send a TEST warning email on startup."
 msgstr "기동 시 테스트 경보 전자우편 보내기."
 
 msgid "Send daemon event messages."
-msgstr ""
+msgstr "데몬 이벤트 메시지를 전송합니다."
 
 msgid "Send system event messages."
-msgstr ""
+msgstr "시스템 이벤트 메시지를 전송합니다."
 
 msgid "Sensitive"
 msgstr "반응"
@@ -7557,7 +7578,7 @@ msgid "Show Default Groups"
 msgstr "기본 그룹 보기"
 
 msgid "Show Log Entries"
-msgstr ""
+msgstr "로그 항목 보기"
 
 msgid "Show Process Information"
 msgstr "프로세스 정보 보기"
@@ -7943,7 +7964,7 @@ msgid "System Email Settings"
 msgstr "시스템 전자우편 설정"
 
 msgid "System Events"
-msgstr ""
+msgstr "시스템 이벤트"
 
 msgid "System Information"
 msgstr "시스템 정보"
@@ -8494,6 +8515,9 @@ msgid ""
 "The firmware is now being installed. The server will reboot automatically."
 msgstr "지금 펌웨어 파일이 설치되고 있습니다. 서버는 자동으로 재시동 됩니다."
 
+msgid "The following errors were detected"
+msgstr ""
+
 msgid "The following input errors were detected"
 msgstr "아래의 입력 에러가 탐지되었습니다"
 
@@ -8658,9 +8682,6 @@ msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
 msgstr "오류 수정 중 잘못된 검사합에 의해 발생한 오류의 수."
-
-msgid "The number of log entries to show must be between 5 and 1000."
-msgstr ""
 
 msgid "The old password is not correct."
 msgstr "기존 암호가 올바르지 않습니다."
@@ -8958,7 +8979,7 @@ msgid ""
 msgstr "이 속성은 접근 제어 목록의 상속 동작을 결정합니다."
 
 msgid "This attribute indicates the count of full disk power on/off cycles."
-msgstr ""
+msgstr "이 속성은 완전한 디스크 전원 켜짐/꺼짐 횟수를 표시합니다."
 
 msgid ""
 "This attribute indicates the count that recalibration was requested (under "
@@ -9031,7 +9052,7 @@ msgid "This is for information only. (not used during iSCSI negotiation)."
 msgstr "이것은 정보 제공 용입니다(iSCSI 협상시 사용되지 않음)."
 
 msgid "This is not a valid IP Address."
-msgstr ""
+msgstr "올바른 IP 주소가 아닙니다."
 
 msgid "This name already exists in the disk list."
 msgstr "이 이름은 디스크 리스트에 이미 존재합니다."
@@ -9338,7 +9359,7 @@ msgid "Times"
 msgstr "시간"
 
 msgid "Title Speed"
-msgstr ""
+msgstr "타이틀 속도"
 
 msgid "TitleSpeed"
 msgstr ""
@@ -9646,6 +9667,9 @@ msgstr "URI"
 
 msgid "URL"
 msgstr "URL"
+
+msgid "USB Mass Storage Devices"
+msgstr ""
 
 msgid "UTF-8 Only"
 msgstr "UTF-8 전용"
@@ -10493,3 +10517,12 @@ msgstr ""
 
 msgid "umount"
 msgstr "탑재 해제"
+
+#~ msgid "Process Status"
+#~ msgstr "프로세스 상태"
+
+#~ msgid "Self-tests Management"
+#~ msgstr "자체 테스트 관리"
+
+#~ msgid "The number of log entries to show must be between 5 and 1000."
+#~ msgstr "로그 항목 표시 개수는 5에서 1000 사이여야 합니다."
