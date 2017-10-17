@@ -1576,8 +1576,16 @@ trait co_DOMTools {
 		$subnode = $this->addElement('td',$attributes,$value);
 		return $subnode;
 	}
+	public function addTD_class(string $class,string $value = NULL) {
+		$subnode = $this->addElement('td',['class' => $class],$value);
+		return $subnode;
+	}
 	public function addTH(array $attributes = [],string $value = NULL) {
 		$subnode = $this->addElement('th',$attributes,$value);
+		return $subnode;
+	}
+	public function addTH_class(string $class,string $value = NULL) {
+		$subnode = $this->addElement('th',['class' => $class],$value);
 		return $subnode;
 	}
 	public function mountCOL(array $attributes = []) {
@@ -1596,8 +1604,16 @@ trait co_DOMTools {
 		$this->addElement('td',$attributes,$value);
 		return $this;
 	}
+	public function mountTD_class(string $class,string $value = NULL) {
+		$this->addElement('td',['class' => $class],$value);
+		return $this;
+	}
 	public function mountTH(array $attributes = [],string $value = NULL) {
 		$this->addElement('th',$attributes,$value);
+		return $this;
+	}
+	public function mountTH_class(string $class,string $value = NULL) {
+		$this->addElement('th',['class' => $class],$value);
 		return $this;
 	}
 	//	tab menu fragments and macros
@@ -1613,7 +1629,7 @@ trait co_DOMTools {
 			$append_mode = true; // last element of header section
 			$div_attributes = [
 				'id' => 'area_tabnav',
-				'style' => 'padding: 0px 25px 10px 25px;'
+				'style' => 'padding: 0px 25px 0px 25px;'
 			];
 			if($append_mode):
 				$subnode = $target->
@@ -1755,15 +1771,34 @@ trait co_DOMTools {
 		$this->helper_core_box('warning',$message);
 		return $this;
 	}
+	public function mount_config_has_changed_box() {
+		$gt_info = gtext('The configuration has been changed.')
+			. '<br />'
+			. gtext('You must apply the changes in order for them to take effect.')
+			. '<br />'
+			. '<b>'
+			. '<a href="diag_log.php">'
+			. gtext('If this message persist take a look at the system log for more information.')
+			. '</a>'
+			. '</b>';
+		$input_attributes = [
+			'id' => 'apply',
+			'name' => 'apply',
+			'type' => 'submit',
+			'class' => 'formbtn',
+			'value' => gtext('Apply changes')
+		];
+		$this->
+			addDIV(['id' => 'applybox'])->
+				mount_info_box($gt_info)->
+				addElement('input',$input_attributes);
+		return $this;
+	}
 	//	data settings table macros
 	public function add_table_data_settings() {
 		$subnode = $this->addTABLE(['class' => 'area_data_settings']);
 		return $subnode;
 	}
-	/**
-	 * 
-	 *	@return DOMNode $this
-	 */
 	public function mount_colgroup_data_settings() {
 		$this->mount_colgroup_with_classes(['area_data_settings_col_tag','area_data_settings_col_data']);
 		return $this;
@@ -2107,6 +2142,98 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
+	//	elements requiring sphere
+	public function mount_cbm_checkbox_toggle($sphere) {
+		$element = 'input';
+		$cbm_toggle_id = $sphere->get_cbm_toggle_id();
+		$input_attributes = [
+			'type' => 'checkbox',
+			'name' => $cbm_toggle_id,
+			'id' => $cbm_toggle_id,
+			'title' => gtext('Invert Selection')];
+		$this->addElement($element,$input_attributes);
+		return $this;
+	}
+	public function mount_cbm_checkbox($sphere,bool $disabled = false) {
+		$element = 'input';
+		$identifier = $sphere->get_row_identifier_value();
+		$input_attributes = [
+			'type' => 'checkbox',
+			'name' => $sphere->cbm_name . '[]',
+			'value' => $identifier,
+			'id' => $identifier
+		];
+		if($disabled):
+			$input_attributes['disabled'] = 'disabled';
+		endif;
+		$this->addElement($element,$input_attributes);
+		return $this;
+	}
+	public function mount_toolbox($sphere,bool $notprotected = true,bool $notdirty = true) {
+		global $g_img;
+/*
+ *	<td>
+ *		<a href="scriptname_edit.php?submit=edit&uuid=12345678-1234-1234-1234-1234567890AB"><img="images/edit.png" title="Edit Record" alt="Edit Record" class="spin"/></a>
+ *		or
+ *		<img src="images/delete.png" title="Record is marked for deletion" alt="Record is marked for deletion"/>
+ *		or
+ *		<img src="images/locked.png" title="Record is protected" alt="Record is protected"/>
+ *	</td>
+ */
+		if($notdirty && $notprotected): // record is editable
+			$link = sprintf('%s?submit=edit&%s=%s',$sphere->modify->scriptname(),$sphere->row_identifier(),$sphere->get_row_identifier_value());
+			$this->addTD()->
+				addElement('a',['href' => $link])->
+					addElement('img', ['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin']);
+		elseif($notprotected): //record is dirty
+			$this->addTD()->
+				addElement('img',['src' => $g_img['del'],'title' => $sphere->sym_del(),'alt' => $sphere->sym_del()]);
+		else: // record is protected
+			$this->addTD()->
+				addElement('img',['src' => $g_img['loc'],'title' => $sphere->sym_loc(),'alt' => $sphere->sym_loc()]);
+		endif;
+		return $this;
+	}
+	public function mount_footer_with_add($sphere,int $colspan = 2) {
+		global $g_img;
+/*
+ *	<tfoot>
+ *		<tr>
+ *			<th class="lcenl" colspan="1"></th>
+ *			<th class="lceadd">
+ *				<a href="scriptname_edit.php?submit=add">
+ *					<img src="images/add.png" title="Add Record" alt="Add Record" class="spin"/>
+ *				</a>
+ *			</th>
+ *		</tr>
+ *	</tfoot>
+ */
+		$link = sprintf('%s?submit=add',$sphere->modify->scriptname());
+		$tr = $this->addTFOOT()->addTR();
+		if($colspan > 1):
+			$tr->addTH(['class' => 'lcenl','colspan' => $colspan - 1]);
+		endif;
+		$tr->
+			addTH(['class' => 'lceadd'])->
+				addA(['href' => $link])->
+					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin']);
+		return $this;
+	}
+	public function mount_cbm_button_delete($sphere) {
+		$this->mount_button_submit($sphere->get_cbm_button_val_delete(),$sphere->cbm_delete(),[],$sphere->get_cbm_button_id_delete());
+		return $this;
+	}
+	public function mount_cbm_button_enadis($sphere) {
+		if($sphere->enadis()):
+			if($sphere->toggle()):
+				$this->mount_button_submit($sphere->get_cbm_button_val_toggle(),$sphere->cbm_toggle(),[],get_cbm_button_id_toggle());
+			else:
+				$this->mount_button_submit($sphere->get_cbm_button_val_enable(),$sphere->cbm_enable(),[],get_cbm_button_id_enable());
+				$this->mount_button_submit($sphere->get_cbm_button_val_disable(),$sphere->cbm_disable(),[],get_cbm_button_id_disable());
+			endif;
+		endif;
+		return $this;
+	}
 	//	c2 blocks
 	public function c2_row(properties $p,bool $is_required = false,bool $is_readonly = false,bool $tagaslabel = false) {
 		if($is_readonly):
@@ -2138,10 +2265,10 @@ trait co_DOMTools {
 		$this->c2_row($p,$is_required,$is_readonly,true)->mount_checkbox_grid($p,$value,$is_required,$is_readonly)->mount_description($p);
 		return $this;
 	}
-	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false,int $size = 40,int $maxlength = 0,string $placeholder = NULL) {
+	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
 			c2_row($p,$is_required,$is_readonly,true)->
-				mount_input_text($p,$value,$is_required,$is_readonly,$size,$maxlength,$placeholder)->
+				mount_input_text($p,$value,$is_required,$is_readonly)->
 				mount_description($p);
 		return $this;
 	}
@@ -2191,7 +2318,7 @@ trait co_DOMTools {
 		endif;
 		return $subnode;
 	}
-	public function mount_button_submit(string $value = NULL,string $content = NULL,string $id = NULL) {
+	public function mount_button_submit(string $value = NULL,string $content = NULL,$attributes = [],string $id = NULL) {
 		$element      = 'button';
 		$class_button = 'formbtn';
 		$value        = $value ?? 'cancel';
@@ -2204,11 +2331,18 @@ trait co_DOMTools {
 			'value' => $value,
 			'id' => $id
 		];
+		foreach($attributes as $key => $value):
+			$button_attributes[$key] = $value;
+		endforeach;
 		$this->addElement($element,$button_attributes,$content);
 		return $this;
 	}
+	public function mount_button_add() {
+		$this->mount_button_submit('save',gtext('Add'));
+		return $this;
+	}
 	public function mount_button_cancel() {
-		$this->mount_button_submit('cancel',gtext('Cancel'));
+		$this->mount_button_submit('cancel',gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
 		return $this;
 	}
 	public function mount_button_edit() {
