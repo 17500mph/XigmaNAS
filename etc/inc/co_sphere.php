@@ -113,9 +113,15 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 		if(is_null($content)):
 			$content = gtext('Cancel');
 		endif;
-		$attributes = ['name' => 'submit','type' => 'submit','class' => $this->_class_button,'value' => $value,'id' => $id];
+		$button_attributes = [
+			'name' => 'submit',
+			'type' => 'submit',
+			'class' => $this->_class_button,
+			'value' => $value,
+			'id' => $id
+		];
 		$root = new co_DOMDocument();
-		$o_button = $root->addElement($element,$attributes,$content);
+		$o_button = $root->addElement($element,$button_attributes,$content);
 		return $root->get_html();
 	}
 }
@@ -174,18 +180,22 @@ class co_sphere_row extends co_sphere_level2 {
 		endif;
 		return $this->_protectable ?? false;
 	}
-	public function doj() {
+	public function doj(bool $with_envelope = true) {
 		$output = [];
-		$output[] = '<script type="text/javascript">';
-		$output[] = '//<![CDATA[';
+		if($with_envelope):
+			$output[] = '<script type="text/javascript">';
+			$output[] = '//<![CDATA[';
+		endif;
 		$output[] = '$(window).on("load", function() {';
 		//	Init spinner.
 		$output[] = "\t" . '$("#iform").submit(function() { spinner(); });';
 		$output[] = "\t" . '$(".spin").click(function() { spinner(); });';
 		$output[] = '});';
-		$output[] = '//]]>';
-		$output[] = '</script>';
-		$output[] = '';
+		if($with_envelope):
+			$output[] = '//]]>';
+			$output[] = '</script>';
+			$output[] = '';
+		endif;
 		return implode(PHP_EOL,$output);
 	}
 	public function upsert() {
@@ -257,6 +267,69 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function toggle() {
 		global $config;
 		return $this->enadis() && isset($config['system']['enabletogglemode']);
+	}
+	public function set_cbm_button_id_delete(string $id = 'delete_selected_rows') {
+		$this->id_button_del_rows = $id;
+		return $this;
+	}
+	public function set_cbm_button_id_enable(string $id = 'enable_selected_rows') {
+		$this->id_button_ena_rows = $id;
+		return $this;
+	}
+	public function set_cbm_button_id_disable(string $id = 'disable_selected_rows') {
+		$this->id_button_dis_rows = $id;
+		return $this;
+	}
+	public function set_cbm_button_id_toggle(string $id = 'toggle_selected_rows') {
+		$this->id_button_tog_rows = $id;
+		return $this;
+	}
+	public function set_cbm_toggle_id(string $id = 'togglemembers') {
+		$this->id_checkbox_tog_rows = $id;
+		return $this;
+	}
+	public function get_cbm_button_id_delete() {
+		return $this->id_button_del_rows;
+	}
+	public function get_cbm_button_id_enable() {
+		return $this->id_button_ena_rows;
+	}
+	public function get_cbm_button_id_disable() {
+		return $this->id_button_dis_rows;
+	}
+	public function get_cbm_button_id_toggle() {
+		return $this->id_button_tog_rows;
+	}
+	public function get_cbm_toggle_id() {
+		return $this->id_checkbox_tog_rows;
+	}
+	public function set_cbm_button_val_delete(string $value = 'rows.delete') {
+		$this->val_button_del_rows = $value;
+		return $this;
+	}
+	public function set_cbm_button_val_enable(string $value = 'rows.enable') {
+		$this->val_button_ena_rows = $value;
+		return $this;
+	}
+	public function set_cbm_button_val_disable(string $value = 'rows.disable') {
+		$this->val_button_dis_rows = $value;
+		return $this;
+	}
+	public function set_cbm_button_val_toggle(string $value = 'rows.toggle') {
+		$this->val_button_tog_rows = $value;
+		return $this;
+	}
+	public function get_cbm_button_val_delete() {
+		return $this->val_button_del_rows;
+	}
+	public function get_cbm_button_val_enable() {
+		return $this->val_button_ena_rows;
+	}
+	public function get_cbm_button_val_disable() {
+		return $this->val_button_dis_rows;
+	}
+	public function get_cbm_button_val_toggle() {
+		return $this->val_button_tog_rows;
 	}
 	public function cbm_delete(string $message = NULL) {
 		if(isset($message)):
@@ -384,10 +457,12 @@ class co_sphere_grid extends co_sphere_level2 {
 		endif;
 		return $this->_sym_mdn ?? gtext('Move down');
 	}
-	public function doj() {
+	public function doj(bool $with_envelope = true) {
 		$output = [];
-		$output[] = '<script type="text/javascript">';
-		$output[] = '//<![CDATA[';
+		if($with_envelope):
+			$output[] = '<script type="text/javascript">';
+			$output[] = '//<![CDATA[';
+		endif;
 		$output[] = '$(window).on("load", function() {';
 		//	Init action buttons.
 		if($this->enadis()):
@@ -442,9 +517,11 @@ class co_sphere_grid extends co_sphere_level2 {
 		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
 		$output[] = "\t" . 'ab_disable(1 > cba.filter(":checked").length);';
 		$output[] = '}';
-		$output[] = '//]]>';
-		$output[] = '</script>';
-		$output[] = '';
+		if($with_envelope):
+			$output[] = '//]]>';
+			$output[] = '</script>';
+			$output[] = '';
+		endif;
 		return implode(PHP_EOL,$output);
 	}
 	public function html_button_delete_rows() {
@@ -461,28 +538,28 @@ class co_sphere_grid extends co_sphere_level2 {
 	}
 	public function html_checkbox_cbm(bool $disabled = false) {
 		$element = 'input';
-		$identifier = $this->row[$this->row_identifier()];
-		$attributes = [
+		$identifier = $this->get_row_identifier_value();
+		$input_attributes = [
 			'type' => 'checkbox',
 			'name' => $this->cbm_name . '[]',
 			'value' => $identifier,
 			'id' => $identifier];
 		if($disabled):
-			$attributes['disabled'] = 'disabled';
+			$input_attributes['disabled'] = 'disabled';
 		endif;
 		$root = new co_DOMDocument();
-		$o_input = $root->addElement($element,$attributes);
+		$o_input = $root->addElement($element,$input_attributes);
 		return $root->get_html();
 	}
 	public function html_checkbox_toggle_cbm() {
 		$element = 'input';
-		$attributes = [
+		$input_attributes = [
 			'type' => 'checkbox',
 			'name' => $this->id_checkbox_tog_rows,
 			'id' => $this->id_checkbox_tog_rows,
 			'title' => gtext('Invert Selection')];
 		$root = new co_DOMDocument();
-		$o_input = $root->addElement($element,$attributes);
+		$o_input = $root->addElement($element,$input_attributes);
 		return $root->get_html();
 	}
 	public function html_toolbox(bool $notprotected = true,bool $notdirty = true) {
@@ -496,38 +573,72 @@ class co_sphere_grid extends co_sphere_level2 {
  *	</td>
  */
 		global $g_img;
+
 		$root = new co_DOMDocument();
-		$o_td = $root->addElement('td');
+		$o_td = $root->addTD();
 		if($notdirty && $notprotected):
 			//	record is editable
-			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
-			$o_a = $o_td->addElement('a',['href' => $link]);
-			$o_a->addElement('img', ['src' => $g_img['mod'],'title' => $this->sym_mod(),'alt' => $this->sym_mod(),'class' => 'spin']);
+			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+			$img_attributes = [
+				'src' => $g_img['mod'],
+				'title' => $this->sym_mod(),
+				'alt' => $this->sym_mod(),
+				'class' => 'spin'
+			];
+			$o_td->
+				addA(['href' => $link])->
+					mountIMG($img_attributes);
 		elseif($notprotected):
 			//	record is dirty
-			$o_td->addElement('img',['src' => $g_img['del'],'title' => $this->sym_del(),'alt' => $this->sym_del()]);
+			$img_attributes = [
+				'src' => $g_img['del'],
+				'title' => $this->sym_del(),
+				'alt' => $this->sym_del()
+			];
+			$o_td->mountIMG($img_attributes);
 		else:
 			//	record is protected
-			$o_td->addElement('img',['src' => $g_img['loc'],'title' => $this->sym_loc(),'alt' => $this->sym_loc()]);
+			$img_attributes = [
+				'src' => $g_img['loc'],
+				'title' => $this->sym_loc(),
+				'alt' => $this->sym_loc()
+			];
+			$o_td->mountIMG($img_attributes);
 		endif;
 		return $root->get_html();
 	}
 	public function html_maintainbox() {
 		global $g_img;
+
+		$link = sprintf('%s?%s=%s',$this->maintain->scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+		$img_attributes = [
+			'src' => $g_img['mai'],
+			'title' => $this->sym_mai(),
+			'alt' => $this->sym_mai(),
+			'class' => 'spin'
+		];
 		$root = new co_DOMDocument();
-		$o_td = $root->addElement('td');
-		$link = sprintf('%s?%s=%s',$this->maintain->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
-		$o_a = $o_td->addElement('a',['href' => $link]);
-		$o_a->addElement('img', ['src' => $g_img['mai'],'title' => $this->sym_mai(),'alt' => $this->sym_mai(),'class' => 'spin']);
+		$root->
+			addTD()->
+				addA(['href' => $link])->
+					mountIMG($img_attributes);
 		return $root->get_html();
 	}
 	public function html_informbox() {
 		global $g_img;
+
+		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->get_row_identifier_value);
+		$img_attributes = [
+			'src' => $g_img['inf'],
+			'title' => $this->sym_inf(),
+			'alt' => $this->sym_inf(),
+			'class' => 'spin'
+		];
 		$root = new co_DOMDocument();
-		$o_td = $root->addElement('td');
-		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->row[$this->row_identifier()]);
-		$o_a = $o_td->addElement('a',['href' => $link]);
-		$o_a->addElement('img', ['src' => $g_img['inf'],'title' => $this->sym_inf(),'alt' => $this->sym_inf(),'class' => 'spin']);
+		$root->
+			addTD()->
+				addA(['href' => $link])->
+					mountIMG($img_attributes);
 		return $root->get_html();
 	}
 	public function html_footer_add(int $colspan = 2) {
@@ -542,7 +653,7 @@ class co_sphere_grid extends co_sphere_level2 {
  */
 		global $g_img;
 		$root = new co_DOMDocument();
-		$o_tr = $root->addElement('tr');
+		$o_tr = $root->addTR();
 		if($colspan > 1):
 			$o_th1 = $o_tr->addElement('th',['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
