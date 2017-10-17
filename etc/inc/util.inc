@@ -1,6 +1,6 @@
 <?php
 /*
-	util.inc TEST Commit
+	util.inc
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
@@ -1073,6 +1073,70 @@ function parse_camcontrol_info($devtype) {
 	return $devlist;
 }
 /*
+ *
+ */
+function parse_umass_controller_desc($controller_id) {
+	$matches3 = [];
+	mwexec2("dmesg | grep -w umass$controller_id",$lines);
+	foreach($lines as $line):
+		// example: umass0: <Corsair Voyager, class 0/0, rev 2.00/11.00, addr 2> on usbus7
+		if(preg_match("/(?<=\> on )[a-z]+[0-9]+$/",$line,$matches)):
+			mwexec2("dmesg | grep \"$matches[0] on \"",$lines2);
+			foreach($lines2 as $line2):
+				// example : usbus7 on ehci1
+				if(preg_match("/(?<= on )[a-z]+[0-9]+$/",$line2,$matches2)):
+					mwexec2("dmesg | grep \"$matches2[0]: <\"",$lines3);
+					// example : ehci1: <Intel 82801JI (ICH10) USB 2.0 controller USB-A> mem 0xfdffe000-0xfdffe3ff irq 23 at device 29.7 on pci0
+					foreach($lines3 as $line3):
+						if(preg_match("/(?<=: \<).*(?=\> )+/",$line3,$matches3)):
+							return $matches3[0];
+						endif;
+					endforeach;
+				endif;
+			endforeach;
+		endif;
+	endforeach;
+	return $matches3[0];
+}
+function parse_umass_controller(&$device) {
+	global $config;
+	
+	$output = '';
+	$searchresult = '';
+
+	$device['model'] = parse_device_desc($device['name']);
+	$device['controller_desc'] = parse_umass_controller_desc($device['controller_id']);
+
+	$devicefilepath = sprintf('/dev/%s',$device['name']);
+
+	$device['smart']['devicefilepath'] = $devicefilepath;
+	$device['smart']['devicetype'] = '';
+	$device['smart']['devicetypearg'] = '';
+	
+	$cmd = sprintf('smartctl -d test %s',escapeshellarg($devicefilepath));
+	mwexec2($cmd,$output);
+	foreach($output as $row):
+		if(1 === preg_match("/Device of type '(.*)' \[.*\] opened/i",$row,$searchresult)):
+			//	supported by smartmontools, leave args empty
+			//	$device['smart']['devicetype'] = $searchresult[1];
+			//	$device['smart']['devicetypearg'] = $searchresult[1];
+			break;
+		elseif(1 === preg_match('/Unknown USB bridge (\[.*\])/i',$row,$searchresult)):
+			//	unknown to smartmontools, generate key to lookup amended configurations
+			$name = $searchresult[1];
+			$a_param = &array_make_branch($config,'smartmontools','umass','param');
+			$key = array_search_ex($name,$a_param,'name');
+			if(false !== $key):
+				$value = $a_param[$key]['type'] ?? '';
+				$device['smart']['devicetype'] = $value;
+				$device['smart']['devicetypearg'] = $value;
+			endif;	
+			break;
+		endif;
+	endforeach;
+	return true;
+}
+/*
  *	Parse controller dependent info
  */
 function parse_controller_config(&$devlist) {
@@ -1157,9 +1221,7 @@ function parse_controller_config(&$devlist) {
 				break;
 			// USB Mass Storage
 			case 'umass-sim':
-				$device['model'] = parse_device_desc($device['name']);
-				$device['controller_desc'] = parse_umass_controller_desc($device['controller_id']);
-				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
+				parse_umass_controller($device);
 				break;
 			// Auto detect devices to cater for SATA disks pass through via HBA (non-RAID) (such as LSI SAS2008 RAID controller (e.g. IBM ServeRAID M1015) flashed to LSI9211-IT firmware)
 			default:
@@ -1408,32 +1470,6 @@ function parse_raid_controller_desc($controller) {
 		endforeach;
 	endif;
 	return $matches[0];
-}
-/*
- *
- */
-function parse_umass_controller_desc($controller_id) {
-	$matches3 = [];
-	mwexec2("dmesg | grep -w umass$controller_id",$lines);
-	foreach($lines as $line):
-		// example: umass0: <Corsair Voyager, class 0/0, rev 2.00/11.00, addr 2> on usbus7
-		if(preg_match("/(?<=\> on )[a-z]+[0-9]+$/",$line,$matches)):
-			mwexec2("dmesg | grep \"$matches[0] on \"",$lines2);
-			foreach($lines2 as $line2):
-				// example : usbus7 on ehci1
-				if(preg_match("/(?<= on )[a-z]+[0-9]+$/",$line2,$matches2)):
-					mwexec2("dmesg | grep \"$matches2[0]: <\"",$lines3);
-					// example : ehci1: <Intel 82801JI (ICH10) USB 2.0 controller USB-A> mem 0xfdffe000-0xfdffe3ff irq 23 at device 29.7 on pci0
-					foreach($lines3 as $line3):
-						if(preg_match("/(?<=: \<).*(?=\> )+/",$line3,$matches3)):
-							return $matches3[0];
-						endif;
-					endforeach;
-				endif;
-			endforeach;
-		endif;
-	endforeach;
-	return $matches3[0];
 }
 /*
  *	Get list of ATA disks.
