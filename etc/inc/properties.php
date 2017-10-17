@@ -37,6 +37,7 @@ abstract class properties {
 	protected $v_name = NULL;
 	protected $v_title = NULL;
 	protected $v_description = NULL;
+	protected $v_caption = NULL;
 	protected $v_defaultvalue = NULL;
 	protected $v_editableonadd = NULL;
 	protected $v_editableonmodify = NULL;
@@ -86,6 +87,13 @@ abstract class properties {
 	}
 	public function get_description() {
 		return $this->v_description;
+	}
+	public function set_caption(string $value = NULL) {
+		$this->v_caption = $value;
+		return $this;
+	}
+	public function get_caption() {
+		return $this->v_caption;
 	}
 	public function set_defaultvalue($value = NULL) {
 		$this->v_defaultvalue = $value;
@@ -389,15 +397,6 @@ class properties_list extends properties {
 	}
 }
 class properties_bool extends properties {
-	public $v_caption = NULL;
-	
-	public function set_caption(string $value = NULL) {
-		$this->v_caption = $value;
-		return $this;
-	}
-	public function get_caption() {
-		return $this->v_caption;
-	}
 	public function filter_use_default(string $filter_name = 'ui') {
 		$this->set_filter(FILTER_VALIDATE_BOOLEAN,$filter_name);
 		$this->set_filter_flags(FILTER_NULL_ON_FAILURE,$filter_name);
