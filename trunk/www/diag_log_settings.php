@@ -194,6 +194,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
+//	prepare additional javascript code
 $jcode = [];
 $jcode[PAGE_MODE_EDIT] = NULL;
 $jcode[PAGE_MODE_VIEW] = NULL;
@@ -227,7 +228,7 @@ $content->
 			parentNode->
 		addTBODY()->
 			c2_checkbox($property->reverse,$sphere->row['reverse'],false,$is_readonly)->
-			c2_input_text($property->nentries,htmlspecialchars($sphere->row['nentries']),false,$is_readonly,4)->
+			c2_input_text($property->nentries,htmlspecialchars($sphere->row['nentries']),false,$is_readonly)->
 			c2_checkbox($property->resolve,$sphere->row['resolve'],false,$is_readonly)->
 			c2_checkbox($property->disablecomp,$sphere->row['disablecomp'],false,$is_readonly)->
 			c2_checkbox($property->disablesecure,$sphere->row['disablesecure'],false,$is_readonly);
@@ -239,7 +240,7 @@ $content->
 			c2_titleline_with_checkbox($property->enable,$sphere->row['enable'],false,$is_readonly)->
 			parentNode->
 		addTBODY()->
-			c2_input_text($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,$is_readonly,60,45)->
+			c2_input_text($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,$is_readonly)->
 			c2_checkbox($property->system,$sphere->row['system'],false,$is_readonly)->
 			c2_checkbox($property->ftp,$sphere->row['ftp'],false,$is_readonly)->
 			c2_checkbox($property->rsyncd,$sphere->row['rsyncd'],false,$is_readonly)->
@@ -249,13 +250,10 @@ $content->
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
-		$document->add_area_buttons()->
-			mount_button_edit();
+		$document->add_area_buttons()->mount_button_edit();
 		break;
 	case PAGE_MODE_EDIT:
-		$document->add_area_buttons()->
-			mount_button_save()->
-			mount_button_cancel();
+		$document->add_area_buttons()->mount_button_save()->mount_button_cancel();
 		break;
 endswitch;
 //	add remarks
