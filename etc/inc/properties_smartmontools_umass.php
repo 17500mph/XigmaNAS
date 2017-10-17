@@ -52,7 +52,7 @@ class properties_smartmontools_umass {
 		$o->set_id('name');
 		$o->set_name('name');
 		$o->set_title(gtext('Identifier'));
-		$o->set_description(gtext(''));
+		$o->set_description(gtext('The identifier reported as unknown by smartmontools including brackets.'));
 		$o->set_defaultvalue('');
 		$o->set_size(60);
 		$o->set_maxlength(64);
@@ -68,7 +68,7 @@ class properties_smartmontools_umass {
 		$o->set_id('type');
 		$o->set_name('type');
 		$o->set_title(gtext('Type'));
-		$o->set_description(gtext(''));
+		$o->set_description('');
 		$o->set_defaultvalue('sat');
 		$o->set_size(60);
 		$o->set_maxlength(64);
@@ -86,7 +86,7 @@ class properties_smartmontools_umass {
 		$o->set_id('description');
 		$o->set_name('description');
 		$o->set_title(gtext('Description'));
-		$o->set_description(gtext(''));
+		$o->set_description('');
 		$o->set_defaultvalue('');
 		$o->set_size(60);
 		$o->set_maxlength(256);
