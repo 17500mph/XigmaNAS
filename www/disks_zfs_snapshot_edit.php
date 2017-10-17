@@ -250,7 +250,7 @@ function action_change() {
 				html_combobox("action", gtext("Action"), $pconfig['action'], $a_action, "", true, false, "action_change()");
 				html_inputbox("newpath", gtext("Path"), $pconfig['newpath'], "", true, 30);
 				html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Deletes the recursive snapshot."), "", false);
-				html_checkbox("force_delete", gtext("Force delete"), !empty($pconfig['force_delete']) ? true : false, gtext("Destroy any snapshots and bookmarks more recent than the one specified."), "", false);
+				html_checkbox("force_delete", gtext("Force Delete"), !empty($pconfig['force_delete']) ? true : false, gtext("Destroy any snapshots and bookmarks more recent than the one specified."), "", false);
 				?>
 		</table>
 		<div id="submit">
