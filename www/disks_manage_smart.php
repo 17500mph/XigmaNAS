@@ -48,30 +48,30 @@ $pconfig['email_to'] = $config['smartd']['email']['to'];
 $pconfig['email_testemail'] = isset($config['smartd']['email']['testemail']);
 $pconfig['enablesmartmonondevice'] = isset($config['smartd']['enablesmartmonondevice']);
 
-if ($_POST) {
+if($_POST):
 	unset($input_errors);
 	$pconfig = $_POST;
 
-	if (isset($_POST['enable']) && $_POST['enable']) {
+	if(isset($_POST['enable']) && $_POST['enable']):
 		$reqdfields = ['interval','powermode','temp_diff','temp_info','temp_crit'];
 		$reqdfieldsn = [gtext('Interval'),gtext('Power Mode'),gtext('Difference'),gtext('Informal'),gtext('Critical')];
 		$reqdfieldst = ['numericint','string','numericint','numericint','numericint'];
 
-		if (isset($_POST['email_enable']) && $_POST['email_enable']) {
+		if(isset($_POST['email_enable']) && $_POST['email_enable']):
 			$reqdfields = array_merge($reqdfields, ['email_to']);
 			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('To Email Address')]);
 			$reqdfieldst = array_merge($reqdfieldst, ['string']);
-		}
+		endif;
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
-		if (10 > $_POST['interval']) {
+		if(10 > $_POST['interval']):
 			$input_errors[] = gtext("Interval must be greater or equal than 10 seconds.");
-		}
-	}
+		endif;
+	endif;
 
-	if (empty($input_errors)) {
+	if(empty($input_errors)):
 		$config['smartd']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['smartd']['interval'] = $_POST['interval'];
 		$config['smartd']['powermode'] = $_POST['powermode'];
@@ -86,60 +86,60 @@ if ($_POST) {
 		write_config();
 
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
-			$retval |= updatenotify_process("smartssd", "smartssd_process_updatenotification");
+		if(!file_exists($d_sysrebootreqd_path)):
+			$retval |= updatenotify_process('smartssd','smartssd_process_updatenotification');
 			config_lock();
-			$retval |= rc_update_service("smartd");
+			$retval |= rc_update_service('smartd');
 			config_unlock();
-		}
+		endif;
 		$savemsg = get_std_save_message($retval);
-		if ($retval == 0) {
-			updatenotify_delete("smartssd");
-		}
-	}
-}
+		if($retval == 0):
+			updatenotify_delete('smartssd');
+		endif;
+	endif;
+endif;
 array_make_branch($config,'disks','disk');
 $a_selftest = &array_make_branch($config,'smartd','selftest');
 $a_type = ['S' => gtext('Short Self-Test'),'L' => gtext('Long Self-Test'),'C' => gtext('Conveyance Self-Test'),'O' => gtext('Offline Immediate Test')];
 
-if (isset($_GET['act']) && $_GET['act'] === "del") {
-	if ($_GET['uuid'] === "all") {
-		foreach ($a_selftest as $selftestv) {
+if(isset($_GET['act']) && $_GET['act'] === "del"):
+	if($_GET['uuid'] === 'all'):
+		foreach ($a_selftest as $selftestv):
 			updatenotify_set("smartssd", UPDATENOTIFY_MODE_DIRTY, $selftestv['uuid']);
-		}
-	} else {
-		updatenotify_set("smartssd", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
-	}
-	header("Location: disks_manage_smart.php");
+		endforeach;
+	else:
+		updatenotify_set('smartssd',UPDATENOTIFY_MODE_DIRTY,$_GET['uuid']);
+	endif;
+	header('Location: disks_manage_smart.php');
 	exit;
-}
+endif;
 
 function smartssd_process_updatenotification($mode, $data) {
 	global $config;
 
 	$retval = 0;
 
-	switch ($mode) {
+	switch($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			if (is_array($config['smartd']['selftest'])) {
+			if(is_array($config['smartd']['selftest'])):
 				$index = array_search_ex($data, $config['smartd']['selftest'], "uuid");
-				if (false !== $index) {
+				if(false !== $index):
 					unset($config['smartd']['selftest'][$index]);
 					write_config();
-				}
-			}
+				endif;
+			endif;
 			break;
-	}
+	endswitch;
 
 	return $retval;
 }
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//![CDATA[
 function enable_change(enable_change) {
 	var endis = !(document.iform.enable.checked || enable_change);
 
@@ -165,166 +165,174 @@ function enable_change(enable_change) {
 		document.iform.email_testemail.disabled = endis;
 	}
 }
-//-->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_manage.php"><span><?=gtext("HDD Management");?></span></a></li>
-				<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
-				<li class="tabact"><a href="disks_manage_smart.php" title="<?=gtext('Reload page');?>"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="disks_manage_smart.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php
-				if (!empty($pconfig['enable']) && !empty($pconfig['email_enable']) && (0 !== email_validate_settings())) {
-					$helpinghand = '<a href="'
-						. 'system_email.php'
-						. '">'
-						. gtext('Make sure you have already configured your email settings')
-						. '</a>.';
-					print_error_box($helpinghand);
-				}
-				$smart = false;
-				foreach ($config['disks']['disk'] as $device) {
-					if (isset($device['smart'])) {
-						$smart = true;
-					}
-				}
-				if (false === $smart) {
-					print_error_box(gtext("Make sure you have activated S.M.A.R.T. for your devices."));
-				}
-				if (!empty($input_errors)) {
-					print_input_errors($input_errors);
-				}
-				if (!empty($savemsg)) {
-					print_info_box($savemsg);
-				}
-				if (updatenotify_exists("smartssd")) {
-					print_config_change_box();
-				}
-				?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php
-					html_titleline_checkbox("enable", gtext("Self-Monitoring, Analysis & Reporting Technology"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(this)");
-					html_inputbox("interval", gtext("Interval"), $pconfig['interval'], gtext("Set interval between disk checks to N seconds. The minimum allowed value is 10."), true, 5);
-					?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Power Mode");?></td>
-						<td width="78%" class="vtable">
-							<select name="powermode" class="formfld" id="powermode">
-								<?php $types = ['Never','Sleep','Standby','Idle']; $vals = ['never','sleep','standby','idle'];?>
-								<?php $j = 0; for ($j = 0; $j < count($vals); $j++):?>
-								<option value="<?=$vals[$j];?>" <?php if ($vals[$j] == $pconfig['powermode']) echo "selected=\"selected\"";?>><?=htmlspecialchars($types[$j]);?></option>
-								<?php endfor;?>
-							</select>
-							<div id="enumeration">
-								<ul>
-									<li><?=gtext("Never - Poll (check) the device regardless of its power mode. This may cause a disk which is spun-down to be spun-up when it is checked.");?></li>
-									<li><?=gtext("Sleep - Check the device unless it is in SLEEP mode.");?></li>
-									<li><?=gtext("Standby - Check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a laptop disk from spinning up each poll, this is probably what you want.");?></li>
-									<li><?=gtext("Idle - Check the device unless it is in SLEEP, STANDBY or IDLE mode. In the IDLE state, most disks are still spinning, so this is probably not what you want.");?></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<?php
-					html_separator();
-					html_titleline(gtext("Default Device Settings"));
-					html_checkbox("enablesmartmonondevice", gtext("S.M.A.R.T. Monitoring"), !empty($pconfig['enablesmartmonondevice']) ? true : false, gtext("Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are added to the configuration."));
-					html_separator();
-					html_titleline(gtext("Temperature Monitoring"));
-					?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Difference");?></td>
-						<td width="78%" class="vtable">
-							<input name="temp_diff" type="text" class="formfld" id="temp_diff" size="5" value="<?=htmlspecialchars($pconfig['temp_diff']);?>" />&nbsp;&deg;C<br />
-							<span class="vexpl"><?=gtext("Report if the temperature had changed by at least N degrees Celsius since last report. Set to 0 to disable this report.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Informal");?></td>
-						<td width="78%" class="vtable">
-							<input name="temp_info" type="text" class="formfld" id="temp_info" size="5" value="<?=htmlspecialchars($pconfig['temp_info']);?>" />&nbsp;&deg;C<br />
-							<span class="vexpl"><?=gtext("Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Critical");?></td>
-						<td width="78%" class="vtable">
-							<input name="temp_crit" type="text" class="formfld" id="temp_crit" size="5" value="<?=htmlspecialchars($pconfig['temp_crit']);?>" />&nbsp;&deg;C<br />
-							<span class="vexpl"><?=gtext("Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.");?></span>
-						</td>
-					</tr>
-					<?php html_separator();?>
-					<?php html_titleline(gtext("Self-tests Management"));?>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Scheduled Tests");?></td>
-						<td width="78%" class="vtable">
-							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			parentNode->
+		add_tabnav_lower()->
+			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'),gtext('Reload Page'),true)->
+			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'));
+$document->render();
+?>
+<form action="disks_manage_smart.php" method="post" name="iform" id="iform" onsubmit="spinner()"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($pconfig['enable']) && !empty($pconfig['email_enable']) && (0 !== email_validate_settings())):
+		$helpinghand = '<a href="'
+			. 'system_email.php'
+			. '">'
+			. gtext('Make sure you have already configured your email settings')
+			. '</a>.';
+		print_error_box($helpinghand);
+	endif;
+	$smart = false;
+	foreach($config['disks']['disk'] as $device):
+		if(isset($device['smart'])):
+			$smart = true;
+		endif;
+	endforeach;
+	if(false === $smart):
+		print_error_box(gtext("Make sure you have activated S.M.A.R.T. for your devices."));
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(updatenotify_exists("smartssd")):
+		print_config_change_box();
+	endif;
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline_checkbox2('enable',gtext('Self-Monitoring, Analysis & Reporting Technology'),!empty($pconfig['enable']) ? true : false,gtext('Enable'),'enable_change(this)');
+?>
+		</thead>
+		<tbody>
+<?php
+
+			html_inputbox2('interval',gtext('Interval'),$pconfig['interval'],gtext('Set interval between disk checks to N seconds. The minimum allowed value is 10.'),true,5);
+			$l_powermode = [
+				'never' => gtext('Never - Poll (check) the device regardless of its power mode. This may cause a disk which is spun-down to be spun-up when it is checked.'),
+				'sleep' => gtext('Sleep - Check the device unless it is in SLEEP mode.'),
+				'standby' => gtext('Standby - Check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a laptop disk from spinning up each poll, this is probably what you want.'),
+				'idle' => gtext('Idle - Check the device unless it is in SLEEP, STANDBY or IDLE mode. In the IDLE state, most disks are still spinning, so this is probably not what you want.')
+			];
+			html_radiobox2('powermode',gtext('Power Mode'),$pconfig['powermode'],$l_powermode,'',false,false);
+			html_separator2();
+			html_titleline2(gtext('Default Device Settings'));
+			html_checkbox2('enablesmartmonondevice',gtext('S.M.A.R.T. Monitoring'),!empty($pconfig['enablesmartmonondevice']) ? true : false,gtext('Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are added to the configuration.'));
+			html_separator2();
+			html_titleline2(gtext('Temperature Monitoring'));
+			html_inputbox2('temp_diff',gtext('Difference'),htmlspecialchars($pconfig['temp_diff']),gtext('Report if the temperature had changed by at least N degrees Celsius since last report. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_info',gtext('Informal'),htmlspecialchars($pconfig['temp_info']),gtext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_crit',gtext('Critical'),htmlspecialchars($pconfig['temp_crit']),gtext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
+			html_separator2();
+			html_titleline2(gtext('Self-Test Schedules'));
+?>
+			<tr>
+				<td class="celltag"><?=gtext('Scheduled Tests');?></td>
+				<td class="celldata">
+					<table class="area_data_selection">
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:30%">
+							<col style="width:40%">
+							<col style="width:10%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="lhell"><?=gtext('Disk');?></th>
+								<th class="lhell"><?=gtext('Type');?></th>
+								<th class="lhell"><?=gtext('Description');?></th>
+								<th class="lhebl"><?=gtext('Toolbox');?></th>
+							</tr>
+						</thead>
+						<tbody>
+<?php 
+							foreach($a_selftest as $selftest):
+								$notificationmode = updatenotify_get_mode('smartssd',$selftest['uuid']);
+?>
 								<tr>
-									<td width="20%" class="listhdrlr"><?=gtext("Disk");?></td>
-									<td width="30%" class="listhdrr"><?=gtext("Type");?></td>
-									<td width="40%" class="listhdrr"><?=gtext("Description");?></td>
-									<td width="10%" class="list"></td>
+									<td class="lcell"><?=htmlspecialchars($selftest['devicespecialfile']);?>&nbsp;</td>
+									<td class="lcell"><?=gtext($a_type[$selftest['type']]);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($selftest['desc']);?>&nbsp;</td>
+<?php
+									if(UPDATENOTIFY_MODE_DIRTY != $notificationmode):
+?>
+										<td valign="middle" nowrap="nowrap" class="lcebl">
+											<a href="disks_manage_smart_edit.php?uuid=<?=$selftest['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit self-test");?>" border="0" alt="<?=gtext('Edit self-test');?>" /></a>
+											<a href="disks_manage_smart.php?act=del&amp;uuid=<?=$selftest['uuid'];?>" onclick="return confirm('<?=gtext('Do you really want to delete this scheduled self-test?');?>')"><img src="images/delete.png" title="<?=gtext('Delete self-test');?>" border="0" alt="<?=gtext('Delete self-test');?>" /></a>
+										</td>
+<?php
+									else:
+?>
+										<td valign="middle" nowrap="nowrap" class="lcebl">
+											<img src="images/delete.png" border="0" alt="" />
+										</td>
+<?php
+									endif;
+?>
 								</tr>
-								<?php foreach($a_selftest as $selftest):?>
-									<?php $notificationmode = updatenotify_get_mode("smartssd", $selftest['uuid']);?>
-									<tr>
-										<td class="listlr"><?=htmlspecialchars($selftest['devicespecialfile']);?>&nbsp;</td>
-										<td class="listr"><?=gtext($a_type[$selftest['type']]);?>&nbsp;</td>
-										<td class="listr"><?=htmlspecialchars($selftest['desc']);?>&nbsp;</td>
-										<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-											<td valign="middle" nowrap="nowrap" class="list">
-												<a href="disks_manage_smart_edit.php?uuid=<?=$selftest['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit self-test");?>" border="0" alt="<?=gtext("Edit self-test");?>" /></a>
-												<a href="disks_manage_smart.php?act=del&amp;uuid=<?=$selftest['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this scheduled self-test?");?>')"><img src="images/delete.png" title="<?=gtext("Delete self-test");?>" border="0" alt="<?=gtext("Delete self-test");?>" /></a>
-											</td>
-										<?php else:?>
-											<td valign="middle" nowrap="nowrap" class="list">
-												<img src="images/delete.png" border="0" alt="" />
-											</td>
-										<?php endif;?>
-									</tr>
-								<?php endforeach;?>
-								<tr>
-									<td class="list" colspan="3"></td>
-									<td class="list">
-										<a href="disks_manage_smart_edit.php"><img src="images/add.png" title="<?=gtext("Add self-test");?>" border="0" alt="<?=gtext("Add self-test");?>" /></a>
-										<?php if (!empty($a_selftest)):?>
-											<a href="disks_manage_smart.php?act=del&amp;uuid=all" onclick="return confirm('<?=gtext("Do you really want to delete all scheduled self-tests?");?>')"><img src="images/delete.png" title="<?=gtext("Delete all self-tests");?>" border="0" alt="<?=gtext("Delete all self-tests");?>" /></a>
-										<?php endif;?>
-									</td>
-								</tr>
-							</table>
-							<span class="vexpl"><?=gtext("Add additional scheduled self-test.");?></span>
-						</td>
-					</tr>
-					<?php
-					html_separator();
-					html_titleline_checkbox("email_enable", gtext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
-					html_inputbox("email_to", gtext("To Email Address"), !empty($pconfig['email_to']) ? $pconfig['email_to'] : "", sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
-					html_checkbox("email_testemail", gtext("Test Email"), !empty($pconfig['email_testemail']) ? true : false, gtext("Send a TEST warning email on startup."));
-					?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" onclick="enable_change(true)" />
-				</div>
-				<div id="remarks">
-					<?php html_remark("note", gtext("Note"), gtext("Activate email report if you want to be notified if a failure or a new error has been detected, or if a S.M.A.R.T. command to a disk fails."));?>
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
+<?php
+							endforeach;
+?>
+							<tr>
+								<td class="lcenl" colspan="3"></td>
+								<td class="lceadd">
+									<a href="disks_manage_smart_edit.php"><img src="images/add.png" title="<?=gtext('Add self-test');?>" border="0" alt="<?=gtext('Add self-test');?>" /></a>
+<?php
+									if(!empty($a_selftest)):
+?>
+										<a href="disks_manage_smart.php?act=del&amp;uuid=all" onclick="return confirm('<?=gtext('Do you really want to delete all scheduled self-tests?');?>')"><img src="images/delete.png" title="<?=gtext('Delete all self-tests');?>" border="0" alt="<?=gtext('Delete all self-tests');?>" /></a>
+<?php
+									endif;
+?>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<span class="vexpl"><?=gtext("Add additional scheduled self-test.");?></span>
+				</td>
+			</tr>
+<?php
+			html_separator2();
+			html_titleline_checkbox2('email_enable',gtext('Email Report'),!empty($pconfig['email_enable']) ? true : false,gtext('Activate'),'enable_change(this)');
+			html_inputbox2('email_to',gtext('To Email Address'),!empty($pconfig['email_to']) ? $pconfig['email_to'] : '',sprintf('%s %s',gtext('Destination email address.'),gtext('Separate email addresses by semi-colon.')),true,60);
+			html_checkbox2('email_testemail',gtext('Test Email'),!empty($pconfig['email_testemail']) ? true : false,gtext('Send a TEST warning email on startup.'));
+?>
+		</tbody>		
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save and Restart');?>" onclick="enable_change(true)" />
+	</div>
+	<div id="remarks">
+<?php
+		html_remark2('note',gtext('Note'),gtext('Activate email report if you want to be notified if a failure or a new error has been detected, or if a S.M.A.R.T. command to a disk fails.'));
+?>
+	</div>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
 <script type="text/javascript">
-<!--
+//![CDATA[
 enable_change(false);
-//-->
+//]]>
 </script>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
