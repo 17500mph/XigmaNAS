@@ -666,6 +666,8 @@ class properties_zfs_dataset {
 		$o->set_title(gtext('Volume Size'));
 		$o->set_description(gtext('ZFS volume size. You can use human-readable suffixes like K, KB, M, GB.'));
 		$o->set_defaultvalue('');
+		$o->set_size(20);
+		$o->set_maxlength(20);
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
 		$o->set_filter(FILTER_VALIDATE_REGEXP);
