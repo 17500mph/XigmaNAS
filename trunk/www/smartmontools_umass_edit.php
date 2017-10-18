@@ -247,17 +247,16 @@ if(isset($jcode)):
 	$body->addJavaScript($jcode);
 endif;
 //	add tab navigation
-$tabnav = $document->add_area_tabnav();
-$tabnav->
-	add_tabnav_upper()->
-		mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-		mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-		mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-		mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'));
-$tabnav->
-	add_tabnav_lower()->
-		mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-		mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+$document->
+	add_area_tabnav()->
+		push()->add_tabnav_upper()->
+			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+		pop()->add_tabnav_lower()->
+			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -274,9 +273,9 @@ $content->add_table_data_settings()->
 			c2_titleline(gtext('Settings'))->
 			parentNode->
 		addTBODY()->
-			c2_input_text($property->name,htmlspecialchars($sphere->row['name']),true,false)->
-			c2_input_text($property->type,htmlspecialchars($sphere->row['type']),false,false)->
-			c2_input_text($property->description,$sphere->row['description'],false,false);
+			c2_input_text($property->name,htmlspecialchars($sphere->row[$property->name->get_name()]),true,false)->
+			c2_input_text($property->type,htmlspecialchars($sphere->row[$property->type->get_name()]),false,false)->
+			c2_input_text($property->description,htmlspecialchars($sphere->row[$property->description->get_name()]),false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->mount_button_add();

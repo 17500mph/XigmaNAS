@@ -34,6 +34,7 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
+require_once 'properties_smartmontools_umass.php';
 
 function get_sphere_smartmontools_umass() {
 	global $config;
@@ -78,6 +79,7 @@ function smartmontools_umass_process_updatenotification($mode,$data) {
 	return $retval;
 }
 //	get environment
+$property = new properties_smartmontools_umass();
 $sphere = &get_sphere_smartmontools_umass();
 $errormsg = '';
 if($_POST):
@@ -136,17 +138,16 @@ if(isset($jcode)):
 	$body->addJavaScript($jcode);
 endif;
 //	add tab navigation
-$tabnav = $document->add_area_tabnav();
-$tabnav->
-	add_tabnav_upper()->
-		mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-		mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-		mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-		mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'));
-$tabnav->
-	add_tabnav_lower()->
-		mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-		mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+$document->
+	add_area_tabnav()->
+		push()->add_tabnav_upper()->
+			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+		pop()->add_tabnav_lower()->
+			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -171,9 +172,9 @@ else:
 	$tr->mountTH_class('lhelc');
 endif;
 $tr->
-	mountTH_class('lhell',gtext('Identifier'))->
-	mountTH_class('lhell',gtext('Type'))->
-	mountTH_class('lhell',gtext('Description'))->
+	mountTH_class('lhell',$property->name->get_title())->
+	mountTH_class('lhell',$property->type->get_Title())->
+	mountTH_class('lhell',$property->description->get_Title())->
 	mountTH_class('lhebl',gtext('Toolbox'));
 $tbody = $table->addTBODY();
 if($record_exists):
@@ -184,18 +185,14 @@ if($record_exists):
 		$is_notprotected = $sphere->mode->lock ? !$sphere->row['protected'] : true;
 		$tr = $tbody->addTR();
 		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected));
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row['name'] ?? ''));
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row['type'] ?? ''));
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row['description'] ?? ''));
-		$toolbox = $tr->
-			addTD_class('lcebld')->
-				addTABLE(['class' => 'area_data_selection_toolbox'])->
-					mount_colgroup_with_styles('width',['33%','34%','33%'])->
-					addTBODY()->
-						addTR();
-		$toolbox->mount_toolbox($sphere,$is_notprotected,$is_notdirty);
-		$toolbox->addTD();
-		$toolbox->addTD();
+		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''));
+		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->type->get_name()] ?? ''));
+		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->description->get_name()] ?? ''));
+		$tr->
+			add_toolbox_area()->
+				mount_toolbox($sphere,$is_notprotected,$is_notdirty)->
+				mountTD()->
+				mountTD();
 	endforeach;
 else:
 	$tbody->addTR()->addTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
