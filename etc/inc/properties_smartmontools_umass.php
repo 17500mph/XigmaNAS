@@ -34,6 +34,7 @@
 require_once 'properties.php';
 
 class properties_smartmontools_umass {
+	public $uuid;
 	public $name;
 	public $type;
 	public $description;
@@ -42,10 +43,15 @@ class properties_smartmontools_umass {
 		$this->load();
 	}
 	public function load() {
+		$this->uuid = $this->prop_uuid();
 		$this->name = $this->prop_name();
 		$this->type = $this->prop_type();
 		$this->description = $this->prop_description();
 		return $this;
+	}
+	private function prop_uuid(): properties_uuid {
+		$o = new properties_uuid($this);
+		return $o;
 	}
 	private function prop_name(): properties_text {
 		$o = new properties_text($this);
