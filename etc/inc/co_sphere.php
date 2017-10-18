@@ -120,6 +120,9 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 			'value' => $value,
 			'id' => $id
 		];
+		if($value === 'cancel'):
+			$button_attributes['formnovalidate'] = 'formnovalidate';
+		endif;
 		$root = new co_DOMDocument();
 		$o_button = $root->addElement($element,$button_attributes,$content);
 		return $root->get_html();
