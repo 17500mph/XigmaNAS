@@ -1731,62 +1731,52 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
-	public function helper_core_box(string $type,string $message = '') {
+	public function mount_error_box(string $message = '') {
 		if(preg_match('/\S/',$message)):
-			switch($type):
-				case 'error':
-					$id = 'errorbox';
-					$img = 'error_box.png';
-					break;
-				case 'warning':
-					$id = 'warningbox';
-					$img = 'warn_box.png';
-					break;
-				case 'info':
-				default:
-					$id = 'infobox';
-					$img = 'info_box.png';
-					break;
-			endswitch;
 			$this->
-				addDIV(['id' => $id])->
-					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
+				addDIV(['id' => 'errorbox'])->
+					addTABLE(['style' => 'width:100%;border-spacing:0;'])->
 						addTR()->
-							addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
-								mountIMG(['src' => sprintf('/images/%s',$img),'alt' => ''])->
-								parentNode->
-							addTD(['class' => 'message'],$message);
+							push()->addTD(['class' => 'icon'])->mountIMG(['src' => '/images/error_box.png','alt' => ''])->
+							pop()->addTD(['class' => 'message'],$message);
 		endif;
 		return $this;
 	}
-	public function mount_error_box(string $message = '') {
-		$this->helper_core_box('error',$message);
-		return $this;
-	}
 	public function mount_info_box(string $message = '') {
-		$this->helper_core_box('info',$message);
+		if(preg_match('/\S/',$message)):
+			$this->
+				addDIV(['id' => 'infobox'])->
+					addTABLE(['style' => 'width:100%;border-spacing:0;'])->
+						addTR()->
+							push()->addTD(['class' => 'icon'])->mountIMG(['src' => '/images/info_box.png','alt' => ''])->
+							pop()->addTD(['class' => 'message'],$message);
+		endif;
 		return $this;
 	}
 	public function mount_warning_box(string $message = '') {
-		$this->helper_core_box('warning',$message);
+		if(preg_match('/\S/',$message)):
+			$this->
+				addDIV(['id' => 'warningbox'])->
+					addTABLE(['style' => 'width:100%;border-spacing:0;'])->
+						addTR()->
+							push()->addTD(['class' => 'icon'])->mountIMG(['src' => '/images/warn_box.png','alt' => ''])->
+							pop()->addTD(['class' => 'message'],$message);
+		endif;
 		return $this;
 	}
 	public function mount_config_has_changed_box() {
-		$gt_info = gtext('The configuration has been changed.')
-			. '<br />'
-			. gtext('You must apply the changes in order for them to take effect.')
-			. '<br />'
-			. '<b>'
-			. '<a href="diag_log.php">'
-			. gtext('If this message persist take a look at the system log for more information.')
-			. '</a>'
-			. '</b>';
+		$gt_info = sprintf(
+			'%s<br />%s<br /><b><a href="diag_log.php">%s</a></b>',
+			gtext('The configuration has been changed.'),
+			gtext('You must apply the changes in order for them to take effect.'),
+			gtext('If this message persists take a look at the system log for more information.')
+		);
 		$input_attributes = [
 			'id' => 'apply',
 			'name' => 'apply',
 			'type' => 'submit',
 			'class' => 'formbtn',
-			'value' => gtext('Apply changes')
+			'value' => gtext('Apply Changes')
 		];
 		$this->
 			addDIV(['id' => 'applybox'])->
@@ -2178,6 +2168,15 @@ trait co_DOMTools {
 		$this->addElement($element,$input_attributes);
 		return $this;
 	}
+	public function add_toolbox_area() {
+		$subnode = $this->
+			addTD_class('lcebld')->
+				addTABLE(['class' => 'area_data_selection_toolbox'])->
+					mount_colgroup_with_styles('width',['33%','34%','33%'])->
+					addTBODY()->
+						addTR();
+		return $subnode;
+	}
 	public function mount_toolbox($sphere,bool $notprotected = true,bool $notdirty = true) {
 		global $g_img;
 /*
@@ -2525,15 +2524,31 @@ class co_DOMElement extends \DOMElement implements ci_DOM {
 		endforeach;
 		return $this;
 	}
+	public function push() {
+		$this->ownerDocument->push($this);
+		return $this;
+	}
+	public function pop() {
+		return $this->ownerDocument->pop();
+	}
 }
 class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	use co_DOMTools;
+
+	protected $stack = [];
 	
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
 		$this->preserveWhiteSpace = false;
 		$this->formatOutput = true;
 		$this->registerNodeClass('DOMElement','co_DOMElement');
+	}
+	public function push($element) {
+		array_push($this->stack,$element);
+		return $element;
+	}
+	public function pop() {
+		return array_pop($this->stack);
 	}
 	public function render() {
 		echo $this->saveHTML();
