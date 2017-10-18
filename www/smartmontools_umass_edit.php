@@ -75,13 +75,6 @@ $server_request_method = filter_input(
 			'default' => NULL,
 			'regexp' => $server_request_method_regexp
 ]]);
-//	resource id
-$resource_id_filter_options = [
-	'flags' => FILTER_REQUIRE_SCALAR,
-	'options' => [
-		'default' => NULL,
-		'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/'
-]];
 //	determine page mode and validate resource id
 switch($server_request_method):
 	default: // unsupported request method
@@ -108,7 +101,7 @@ switch($server_request_method):
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->validate_input(INPUT_GET);
 				break;
 		endswitch;
 		break;
@@ -136,11 +129,11 @@ switch($server_request_method):
 				break;
 			case 'edit': // edit requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->validate_input();
 				break;
 			case 'save': // modify requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_POST;
-				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->validate_input();
 				break;
 		endswitch;
 		break;
@@ -204,15 +197,17 @@ switch($page_mode):
 		break;
 	case PAGE_MODE_EDIT:
 		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_value($sphere->grid[$sphere->row_id][$referer]) ?? $property->$referer->get_defaultvalue();
+			$sphere->row[$referer] = $property->$referer->validate_array_element($sphere->grid[$sphere->row_id]);
+			if(!isset($sphere->row[$referer])):
+				$sphere->row[$referer] = $sphere->grid[$sphere->row_id][$referer] ?? $property->$referer->get_defaultvalue();
+				$input_errors[] = $property->$referer->get_message_error();
+			endif;
 		endforeach;
 		break;
 	case PAGE_MODE_POST:
 		// apply post values that are applicable for all record modes
 		foreach($a_referer as $referer):
 			$sphere->row[$referer] = $property->$referer->validate_input();
-		endforeach;
-		foreach($a_referer as $referer):
 			if(!isset($sphere->row[$referer])):
 				$sphere->row[$referer] = $_POST[$referer] ?? $property->$referer->get_defaultvalue();
 				$input_errors[] = $property->$referer->get_message_error();
@@ -269,13 +264,12 @@ if(file_exists($d_sysrebootreqd_path)):
 endif;
 $content->add_table_data_settings()->
 	mount_colgroup_data_settings()->
-		addTHEAD()->
-			c2_titleline(gtext('Settings'))->
-			parentNode->
-		addTBODY()->
-			c2_input_text($property->name,htmlspecialchars($sphere->row[$property->name->get_name()]),true,false)->
-			c2_input_text($property->type,htmlspecialchars($sphere->row[$property->type->get_name()]),false,false)->
-			c2_input_text($property->description,htmlspecialchars($sphere->row[$property->description->get_name()]),false,false);
+	push()->addTHEAD()->
+		c2_titleline(gtext('Settings'))->
+	pop()->addTBODY()->
+		c2_input_text($property->name,htmlspecialchars($sphere->row[$property->name->get_name()]),true,false)->
+		c2_input_text($property->type,htmlspecialchars($sphere->row[$property->type->get_name()]),false,false)->
+		c2_input_text($property->description,htmlspecialchars($sphere->row[$property->description->get_name()]),false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->mount_button_add();
