@@ -294,8 +294,8 @@ class properties_text extends properties {
 	}
 }
 class properties_ipaddress extends properties_text {
-	public function __construct() {
-		parent::__construct();
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
 		$this->set_maxlength(45);
 		$this->set_placeholder(gtext('Enter IP Address'));
 		$this->set_size(60);
@@ -309,8 +309,8 @@ class properties_ipaddress extends properties_text {
 	}
 }
 class properties_ipv4 extends properties_text {
-	public function __construct() {
-		parent::__construct();
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
 		$this->set_maxlength(15);
 		$this->set_placeholder(gtext('Enter IP Address'));
 		$this->set_size(20);
@@ -324,8 +324,8 @@ class properties_ipv4 extends properties_text {
 	}
 }
 class properties_ipv6 extends properties_text {
-	public function __construct() {
-		parent::__construct();
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
 		$this->set_maxlength(45);
 		$this->set_placeholder(gtext('Enter IP Address'));
 		$this->set_size(60);
@@ -374,8 +374,8 @@ class properties_int extends properties_text {
 	}
 }
 class properties_uuid extends properties_text {
-	public function __construct() {
-		parent::__construct();
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
 		$this->set_id('uuid');
 		$this->set_name('uuid');
 		$this->set_title(gtext('Universally Unique Identifier'));
