@@ -842,7 +842,7 @@ class HTMLRadioBox2 extends HTMLComboBox2 {
 			endif;
 			$tdl->addElement('input',$attributes);
 			$tdr = $tr->addElement('td',['class' => 'lcebl']);
-			$tdr->addElement('label',['for' => $uuid],$option_val);
+			$tdr->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
 }
@@ -945,7 +945,7 @@ class HTMLCheckboxBox2 extends HTMLListBox2 {
 			endif;
 			$tdl->addElement('input',$attributes);
 			$tdr = $tr->addElement('td',['class' => 'lcebl']);
-			$tdr->addElement('label',['for' => $uuid],$option_val);
+			$tdr->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
 }
@@ -2049,12 +2049,8 @@ trait co_DOMTools {
 				unset($input_attributes['checked']);
 			endif;
 			$tr = $tbody->addTR();
-			$tr->
-				addTD(['class' => 'lcelc'])->
-					addElement('input',$input_attributes);
-			$tr->
-				addTD(['class' => 'lcebl'])->
-					addElement('label',['for' => $input_attributes['id']],$option_val);
+			$tr->addTD(['class' => 'lcelc'])->addElement('input',$input_attributes);
+			$tr->addTD(['class' => 'lcebl'])->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
 	public function mount_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
@@ -2090,7 +2086,7 @@ trait co_DOMTools {
 			endif;
 			$tr = $tbody->addTR();
 			$tr->addTD(['class' => 'lcelc'])->addElement('input',$input_attributes);
-			$tr->addTD(['class' => 'lcebl'])->addElement('label',['for' => $uuid],$option_val);
+			$tr->addTD(['class' => 'lcebl'])->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 		return $this;
 	}
