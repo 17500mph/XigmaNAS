@@ -687,9 +687,18 @@ function html_button(string $value = NULL,string $content = NULL,string $id = NU
 	if(is_null($content)):
 		$content = gtext('Cancel');
 	endif;
-	$attributes = ['name' => 'submit','type' => 'submit','class' => $class,'value' => $value,'id' => $id];
+	$button_attributes = [
+		'name' => 'submit',
+		'type' => 'submit',
+		'class' => $class,
+		'value' => $value,
+		'id' => $id
+	];
+	if($value === 'cancel'):
+		$button_attributes['formnovalidate'] = 'formnovalidate';
+	endif;
 	$root = new co_DOMDocument();
-	$o_button = $root->addElement($element,$attributes,$content);
+	$o_button = $root->addElement($element,$button_attributes,$content);
 	return $root->get_html();
 }
 function html_row_toolbox(string $link = '',string $gt_record_mod = '',string $gt_record_del = '',string $gt_record_loc = '',bool $notprotected = true,bool $notdirty = true) {
