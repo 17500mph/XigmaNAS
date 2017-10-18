@@ -195,10 +195,11 @@ $document->render();
 	foreach($config['disks']['disk'] as $device):
 		if(isset($device['smart'])):
 			$smart = true;
+			break;
 		endif;
 	endforeach;
 	if(false === $smart):
-		print_error_box(gtext("Make sure you have activated S.M.A.R.T. for your devices."));
+		print_error_box(gtext('Make sure you have activated S.M.A.R.T. for your devices.'));
 	endif;
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
@@ -206,7 +207,7 @@ $document->render();
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
-	if(updatenotify_exists("smartssd")):
+	if(updatenotify_exists('smartssd')):
 		print_config_change_box();
 	endif;
 ?>
@@ -289,9 +290,11 @@ $document->render();
 <?php
 							endforeach;
 ?>
+						</tbody>
+						<tfoot>
 							<tr>
-								<td class="lcenl" colspan="3"></td>
-								<td class="lceadd">
+								<th class="lcenl" colspan="3"></th>
+								<th class="lceadd">
 									<a href="disks_manage_smart_edit.php"><img src="images/add.png" title="<?=gtext('Add self-test');?>" border="0" alt="<?=gtext('Add self-test');?>" /></a>
 <?php
 									if(!empty($a_selftest)):
@@ -300,9 +303,9 @@ $document->render();
 <?php
 									endif;
 ?>
-								</td>
+								</th>
 							</tr>
-						</tbody>
+						</tfoot>
 					</table>
 					<span class="vexpl"><?=gtext("Add additional scheduled self-test.");?></span>
 				</td>
