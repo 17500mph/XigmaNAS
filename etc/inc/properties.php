@@ -373,6 +373,29 @@ class properties_int extends properties_text {
 		return $this;
 	}
 }
+class properties_uuid extends properties_text {
+	public function __construct() {
+		parent::__construct();
+		$this->set_id('uuid');
+		$this->set_name('uuid');
+		$this->set_title(gtext('Universally Unique Identifier'));
+		$this->set_description(gtext('The UUID of the record.'));
+		$this->set_defaultvalue(uuid());
+		$this->set_size(45);
+		$this->set_maxlength(36);
+		$this->set_placeholder(gtext('Enter Universally Unique Identifier'));
+		$this->filter_use_default();
+		$this->set_editableonadd(false);
+		$this->set_editableonmodify(false);
+		$this->set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+	}
+	public function filter_use_default(string $filter_name = 'ui') {
+		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+		$this->set_filter_options(['default' => NULL,'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i'],$filter_name);
+		return $this;
+	}
+}
 class properties_list extends properties {
 	public $v_options = NULL;
 	
