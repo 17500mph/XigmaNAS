@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
-"PO-Revision-Date: 2017-09-27 18:31+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
+"PO-Revision-Date: 2017-10-18 20:48+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:56+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:17+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "Language: ca_ES\n"
 
@@ -935,6 +935,9 @@ msgstr "Protocol de presentació d'Apple."
 
 msgid "Apply"
 msgstr "Aplicar"
+
+msgid "Apply Changes"
+msgstr "Aplicar els canvis"
 
 msgid "Apply Filter"
 msgstr "Aplicar filtre"
@@ -3726,10 +3729,10 @@ msgid "Enter Email Address(es)"
 msgstr "Introduir adreça (és) de correu electrònic"
 
 msgid "Enter IP Address"
-msgstr ""
+msgstr "Introduïu l'adreça IP"
 
 msgid "Enter Identifier"
-msgstr ""
+msgstr "Introduïu l'identificador"
 
 msgid "Enter Password"
 msgstr "Introduïu la contrasenya"
@@ -3737,7 +3740,7 @@ msgstr "Introduïu la contrasenya"
 msgid "Enter Subject"
 msgstr "Escriviu l'assumpte"
 
-msgid "Enter Type"
+msgid "Enter Universally Unique Identifier"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3776,7 +3779,7 @@ msgid "Enter a description"
 msgstr "Introduïu una descripció"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Introduïu una descripció per a la vostra referència"
 
 msgid "Enter a description for your reference."
 msgstr "Introduïu una descripció per la teva referència."
@@ -3830,6 +3833,9 @@ msgstr "Introduïu el nom d'inici de sessió"
 
 msgid "Enter login name of the user."
 msgstr "Introdueix el nom d'inici de sessió de l'usuari."
+
+msgid "Enter smartctl pass-through type."
+msgstr "Introduïu el tipus de passarel·la smartctl."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Introduïu l'adreça IP o el nom DNS del destí iSCSI."
@@ -4233,7 +4239,7 @@ msgid "Follow"
 msgstr "Seguir"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Forçar esborrat"
 
 msgid "Force Operation"
 msgstr "Força operació"
@@ -4727,6 +4733,12 @@ msgid ""
 msgstr ""
 "Si el missatge persisteix fes una ullada a el registre del sistema per "
 "obtenir més informació."
+
+msgid ""
+"If this message persists take a look at the system log for more information."
+msgstr ""
+"Si aquest missatge continua, consulteu el registre del sistema per obtenir "
+"més informació."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5876,7 +5888,7 @@ msgid "Music"
 msgstr "Música"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "Ha de ser un número entre 5 i 1000."
 
 msgid "Must choose one"
 msgstr "Ha de triar un"
@@ -6141,7 +6153,7 @@ msgid "No pools have been selected"
 msgstr "No s'han seleccionat piscines"
 
 msgid "No records found."
-msgstr ""
+msgstr "No s'ha trobat cap registre."
 
 msgid "No softraid-formatted disks available."
 msgstr "No hi ha discos SoftRAID amb format disponible."
@@ -6913,7 +6925,7 @@ msgid "Private key"
 msgstr "Clau privada"
 
 msgid "Process State"
-msgstr ""
+msgstr "Estat del procés"
 
 msgid "Processes"
 msgstr "Processos"
@@ -7219,7 +7231,7 @@ msgid "Release Notes"
 msgstr "Notes de publicació"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Recarregar pàgina"
 
 msgid "Reload page"
 msgstr "Recarregar pàgina"
@@ -7848,7 +7860,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Auto-Monitorització, Anàlisis i Tecnologia d'Informes"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Programacións d'autotest"
 
 msgid "Send Buffer"
 msgstr "Buffer d'enviament"
@@ -8727,6 +8739,9 @@ msgstr "El port TCP ha de ser un número de port vàlid."
 msgid "The UPS identifier and IP address"
 msgstr "L'identificador del SAI i adreça IP"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "L'ID de VLAN ha d'estar entre 1 i 4094."
 
@@ -9100,7 +9115,7 @@ msgstr ""
 "Ara es va a instal·lar el micro-programari. El servidor es reiniciarà."
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "Es van detectar els errors següents"
 
 msgid "The following input errors were detected"
 msgstr "Es van detectar els següents errors d'ingrés"
@@ -9126,9 +9141,9 @@ msgid ""
 msgstr ""
 "El nom d'amfitrió només pot constar dels caràcters a-z, A-Z i 0-9, -, _ i."
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
+"L'identificador informa que es desconegut per smartctl incloent parèntesis."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "El mode inicial de compendi negociat amb l'iniciador."
@@ -10439,7 +10454,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "Dispositius d'emmagatzematge massiu USB"
 
 msgid "UTF-8 Only"
 msgstr "UTF-8 només"
@@ -10473,6 +10488,9 @@ msgstr "Unison"
 
 msgid "Unison File Synchronisation"
 msgstr "Sincronització d'arxius Uníson"
+
+msgid "Universally Unique Identifier"
+msgstr ""
 
 msgid "Unix Charset"
 msgstr "Joc de caràcters Unix"
@@ -11352,15 +11370,11 @@ msgstr "cap a"
 msgid "umount"
 msgstr "desmontar"
 
-#~ msgid "Process Status"
-#~ msgstr "Estat de procés"
+#~ msgid "Enter Type"
+#~ msgstr "Introduïu el tipus"
 
-#~ msgid "Self-tests Management"
-#~ msgstr "Gestió de proves automàtiques"
-
-#~ msgid "Force delete"
-#~ msgstr "Forçar esborrar"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
+#~ msgid ""
+#~ "The identifier reported as unknown by smartmontools including brackets."
 #~ msgstr ""
-#~ "El nombre d'entrades de registre que es mostraran ha d'estar entre 5 i 1000."
+#~ "L'identificador informat com a desconegut per 'smartmontools' incloent els "
+#~ "parèntesis."

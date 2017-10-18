@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
-"PO-Revision-Date: 2017-09-26 04:00+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
+"PO-Revision-Date: 2017-10-18 05:34+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:57+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:16+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -937,6 +937,9 @@ msgstr "Apple Filing Protocol (AFP)"
 
 msgid "Apply"
 msgstr "Appliquer"
+
+msgid "Apply Changes"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Appliquer le filtre"
@@ -3744,10 +3747,10 @@ msgid "Enter Email Address(es)"
 msgstr "Entrez l'adresse courriel (s)"
 
 msgid "Enter IP Address"
-msgstr ""
+msgstr "Entrez l'adresse IP"
 
 msgid "Enter Identifier"
-msgstr ""
+msgstr "Entrer l'identifiant"
 
 msgid "Enter Password"
 msgstr "Saisissez le mot de passe"
@@ -3755,7 +3758,7 @@ msgstr "Saisissez le mot de passe"
 msgid "Enter Subject"
 msgstr "Saisissez un sujet"
 
-msgid "Enter Type"
+msgid "Enter Universally Unique Identifier"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3794,7 +3797,7 @@ msgid "Enter a description"
 msgstr "Entrez une description"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Entrez une description pour votre référence"
 
 msgid "Enter a description for your reference."
 msgstr "Entrez une description pour votre référence."
@@ -3848,6 +3851,9 @@ msgstr "Entrez le nom pour la connexion"
 
 msgid "Enter login name of the user."
 msgstr "Entrez le nom de connexion de l'utilisateur."
+
+msgid "Enter smartctl pass-through type."
+msgstr ""
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Entrez l'adresse IP ou le nom DNS de la cible iSCSI."
@@ -4247,7 +4253,7 @@ msgid "Follow"
 msgstr "Suivre"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Forcer la suppression"
 
 msgid "Force Operation"
 msgstr "Forcer l'opération"
@@ -4732,6 +4738,10 @@ msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr ""
 "Si ce message persiste regardez le journal système pour plus d'informations."
+
+msgid ""
+"If this message persists take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5892,7 +5902,7 @@ msgid "Music"
 msgstr "Musique"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "Doit être un nombre compris entre 5 et 1000."
 
 msgid "Must choose one"
 msgstr "Vous devez choisir une valeur"
@@ -6154,7 +6164,7 @@ msgid "No pools have been selected"
 msgstr "Aucun pool n'a été séléctionné"
 
 msgid "No records found."
-msgstr ""
+msgstr "Aucun enregistrement trouvé."
 
 msgid "No softraid-formatted disks available."
 msgstr "Pas de disque formaté pour du Raid Logiciel disponible"
@@ -6928,7 +6938,7 @@ msgid "Private key"
 msgstr "Clé privée"
 
 msgid "Process State"
-msgstr ""
+msgstr "État du processus"
 
 msgid "Processes"
 msgstr "Processus"
@@ -7234,7 +7244,7 @@ msgid "Release Notes"
 msgstr "Notes de Version"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Rafraîchir la page"
 
 msgid "Reload page"
 msgstr "Rechargement de la page"
@@ -7866,7 +7876,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Auto-surveillance, Analyse & Rapports"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Horaires d'autotest"
 
 msgid "Send Buffer"
 msgstr "Tampon d'envoi"
@@ -8743,6 +8753,9 @@ msgstr "Le port TCP doit être un numéro de port valide."
 msgid "The UPS identifier and IP address"
 msgstr "L'identifiant et l'adresse IP de l'UPS"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "L'ID VLAN doit être compris entre 1 et 4094."
 
@@ -9120,7 +9133,7 @@ msgstr ""
 "automatiquement"
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "Les erreurs suivantes ont été détectées"
 
 msgid "The following input errors were detected"
 msgstr "Les erreurs suivantes ont été détectées"
@@ -9147,8 +9160,7 @@ msgstr ""
 "Le nom d'hôte doit contenir uniquement les caractères a-z, A-Z, 0-9, -, _ et "
 "."
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
 
 msgid "The initial digest mode negotiated with the initiator."
@@ -10465,7 +10477,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "Périphériques de stockage de masse USB"
 
 msgid "UTF-8 Only"
 msgstr "UTF-8 Seulement"
@@ -10499,6 +10511,9 @@ msgstr "Unison"
 
 msgid "Unison File Synchronisation"
 msgstr "Synchronisation de fichiers Unison"
+
+msgid "Universally Unique Identifier"
+msgstr ""
 
 msgid "Unix Charset"
 msgstr "Jeu de caractères UNIX"
@@ -11388,15 +11403,10 @@ msgstr "à"
 msgid "umount"
 msgstr "démontage"
 
-#~ msgid "Self-tests Management"
-#~ msgstr "Gestion des auto-tests"
+#~ msgid "Enter Type"
+#~ msgstr "Entrez le type"
 
-#~ msgid "Force delete"
-#~ msgstr "Focer l'effacement"
-
-#~ msgid "Process Status"
-#~ msgstr "Statut des  processus"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
+#~ msgid ""
+#~ "The identifier reported as unknown by smartmontools including brackets."
 #~ msgstr ""
-#~ "Le nombre d'entrées de journal à afficher doit être compris entre 5 et 1000."
+#~ "L'identifiant signalé comme inconnu par smartmontools, entre parenthèses."

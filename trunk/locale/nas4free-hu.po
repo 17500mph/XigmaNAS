@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
 "PO-Revision-Date: 2017-09-28 19:47+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:57+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:16+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -917,6 +917,9 @@ msgstr "Apple Filing Protokoll"
 
 msgid "Apply"
 msgstr "Alkalmaz"
+
+msgid "Apply Changes"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Szűrő alkalmazása"
@@ -3664,7 +3667,7 @@ msgstr "Add meg a jelszót"
 msgid "Enter Subject"
 msgstr "Tárgy megadása"
 
-msgid "Enter Type"
+msgid "Enter Universally Unique Identifier"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3757,6 +3760,9 @@ msgstr "Add meg a felhasználó bejelentkezési nevét"
 
 msgid "Enter login name of the user."
 msgstr "Add meg a felhasználó bejelentkezési nevét."
+
+msgid "Enter smartctl pass-through type."
+msgstr ""
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Add meg a iSCSI cél IP címét vagy DNS nevét."
@@ -4637,6 +4643,10 @@ msgid ""
 msgstr ""
 "Ha ez az üzenet később is előfordul, nézze meg a rendszernaplót további "
 "információért."
+
+msgid ""
+"If this message persists take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -8613,6 +8623,9 @@ msgstr "A TCP portnak érvényes számnak kell lennie."
 msgid "The UPS identifier and IP address"
 msgstr "A szünetmentes azonosítója és IP címe"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "A VLAN azonosítónak 1 és 4094 között kell lennie."
 
@@ -9000,8 +9013,7 @@ msgstr ""
 "Az állomásnév csak a következő karaktereket tartalmazhatja: a-z, A-Z, 0-9, - "
 "és _."
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
 
 msgid "The initial digest mode negotiated with the initiator."
@@ -10320,6 +10332,9 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison fájlszinkronizálás"
 
+msgid "Universally Unique Identifier"
+msgstr ""
+
 msgid "Unix Charset"
 msgstr "Unix karaktergyűjtemény"
 
@@ -11182,16 +11197,3 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
-
-#~ msgid "Self-tests Management"
-#~ msgstr "Öntesztek kezelése"
-
-#~ msgid "Force delete"
-#~ msgstr "Törlés kikényszerítése"
-
-#~ msgid "Process Status"
-#~ msgstr "Folyamatállapot"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
-#~ msgstr ""
-#~ "A megjelenítendő naplóbejegyzések száma 5 és 100 között kell, hogy legyen."

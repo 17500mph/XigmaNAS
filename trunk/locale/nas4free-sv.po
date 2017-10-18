@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
-"PO-Revision-Date: 2017-10-17 19:03+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
+"PO-Revision-Date: 2017-10-18 16:38+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:57+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:17+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -910,6 +910,9 @@ msgstr "Apple Filprotokoll"
 
 msgid "Apply"
 msgstr "Verkställ"
+
+msgid "Apply Changes"
+msgstr "Verkställ ändringar"
 
 msgid "Apply Filter"
 msgstr "Använd filter"
@@ -3654,8 +3657,8 @@ msgstr "Ange lösenord"
 msgid "Enter Subject"
 msgstr "Ange ämne"
 
-msgid "Enter Type"
-msgstr "Mata in typ"
+msgid "Enter Universally Unique Identifier"
+msgstr ""
 
 msgid "Enter a comment"
 msgstr "Skriv en kommentar"
@@ -3744,6 +3747,9 @@ msgstr "Mata in inloggningsnamn"
 
 msgid "Enter login name of the user."
 msgstr "Mata in inloggningsnamnet för användaren"
+
+msgid "Enter smartctl pass-through type."
+msgstr "Mata in smartctr vidarebefodranstyp."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Mata in IP-sdressen eller DNS-namnet för iSCSI målet."
@@ -4137,7 +4143,7 @@ msgid "Follow"
 msgstr "Följ"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Tvinga radering"
 
 msgid "Force Operation"
 msgstr "Tvinga operationen"
@@ -4614,6 +4620,11 @@ msgstr ""
 
 msgid ""
 "If this message persist take a look at the system log for more information."
+msgstr ""
+"Titta i systemloggen för mer information om detta meddelande kvarstår."
+
+msgid ""
+"If this message persists take a look at the system log for more information."
 msgstr ""
 "Titta i systemloggen för mer information om detta meddelande kvarstår."
 
@@ -8543,6 +8554,9 @@ msgstr "TCP-porten måste vara ett giltigt portnummer."
 msgid "The UPS identifier and IP address"
 msgstr "UPS-namn och IP-adress"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "'VLAN ID' måste vara mellan 1 och 4094."
 
@@ -8937,9 +8951,9 @@ msgid ""
 msgstr ""
 "Värdnamnet får endast innehåller tecknen a-z, A-Z och 0-9, - , _ och ."
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
+"Identifieraren som rapporterade som okänd av smartctl innehåller parenteser."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "Det initiala sammansmältningsläget är förhandlat med Initiatorn."
@@ -10250,6 +10264,9 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison Filsynkronisering"
 
+msgid "Universally Unique Identifier"
+msgstr ""
+
 msgid "Unix Charset"
 msgstr "Unix teckenuppsättning"
 
@@ -11119,14 +11136,10 @@ msgstr "till"
 msgid "umount"
 msgstr "umount"
 
-#~ msgid "Self-tests Management"
-#~ msgstr "Hantering av självtester"
+#~ msgid "Enter Type"
+#~ msgstr "Mata in typ"
 
-#~ msgid "Force delete"
-#~ msgstr "Tvinga borttagning"
-
-#~ msgid "Process Status"
-#~ msgstr "Processtatus"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
-#~ msgstr "Antal loggposter som skall visas måste vara mellan 5 och 1000."
+#~ msgid ""
+#~ "The identifier reported as unknown by smartmontools including brackets."
+#~ msgstr ""
+#~ "Identifieraren som rapporteras okänd av smartmontools innehåller paranteser."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
 "PO-Revision-Date: 2017-10-17 02:01+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:57+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:17+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -862,6 +862,9 @@ msgstr "Apple Filing Protocol"
 
 msgid "Apply"
 msgstr "적용"
+
+msgid "Apply Changes"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "필터 적용"
@@ -3502,7 +3505,7 @@ msgstr "암호 입력"
 msgid "Enter Subject"
 msgstr "제목 입력"
 
-msgid "Enter Type"
+msgid "Enter Universally Unique Identifier"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3583,6 +3586,9 @@ msgstr "로그인 이름 입력"
 
 msgid "Enter login name of the user."
 msgstr "사용자의 로그인 이름을 입력하십시오."
+
+msgid "Enter smartctl pass-through type."
+msgstr ""
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "iSCSI 타겟의 IP 주소 또는 DNS 이름을 입력하십시오."
@@ -4418,6 +4424,10 @@ msgstr "서버가 프록시 뒤에 있는 경우 이 매개 변수들을 설정�
 msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr "이 메시지가 계속 표시되면 시스템 로그에서 더 많은 정보를 얻으십시오."
+
+msgid ""
+"If this message persists take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -8191,6 +8201,9 @@ msgstr "TCP 포트는 올바른 포트 번호여야 합니다."
 msgid "The UPS identifier and IP address"
 msgstr "UPS 식볈자와 IP 주소"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID는 1에서 4094 사이의 값이어야 합니다."
 
@@ -8541,8 +8554,7 @@ msgid ""
 "."
 msgstr "호스트 이름은 a-z, A-Z, 0-9, -, _과 . 문자만 포함할 수 있습니다."
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
 
 msgid "The initial digest mode negotiated with the initiator."
@@ -9708,6 +9720,9 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison 파일 동기화"
 
+msgid "Universally Unique Identifier"
+msgstr ""
+
 msgid "Unix Charset"
 msgstr "Unix 문자셋"
 
@@ -10521,15 +10536,3 @@ msgstr ""
 
 msgid "umount"
 msgstr "탑재 해제"
-
-#~ msgid "Force delete"
-#~ msgstr "강제로 삭제"
-
-#~ msgid "Process Status"
-#~ msgstr "프로세스 상태"
-
-#~ msgid "Self-tests Management"
-#~ msgstr "자체 테스트 관리"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
-#~ msgstr "로그 항목 표시 개수는 5에서 1000 사이여야 합니다."
