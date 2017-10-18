@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
-"PO-Revision-Date: 2017-09-27 18:44+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
+"PO-Revision-Date: 2017-10-18 07:49+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:57+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:16+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -938,6 +938,9 @@ msgstr "Apple Filing Protocol"
 
 msgid "Apply"
 msgstr "Použít"
+
+msgid "Apply Changes"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Použít filtr"
@@ -3716,10 +3719,10 @@ msgid "Enter Email Address(es)"
 msgstr "Zadejte e-mailové adresy"
 
 msgid "Enter IP Address"
-msgstr ""
+msgstr "Zadejte IP adresu"
 
 msgid "Enter Identifier"
-msgstr ""
+msgstr "Zadejte identifikátor"
 
 msgid "Enter Password"
 msgstr "Zadejte heslo"
@@ -3727,7 +3730,7 @@ msgstr "Zadejte heslo"
 msgid "Enter Subject"
 msgstr "Zadejte předmět"
 
-msgid "Enter Type"
+msgid "Enter Universally Unique Identifier"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3762,7 +3765,7 @@ msgid "Enter a description"
 msgstr "Zadejte popis"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Zadejte popis podle kterého se zorientujete"
 
 msgid "Enter a description for your reference."
 msgstr "Zadejte popis své předvolby."
@@ -3816,6 +3819,9 @@ msgstr "Zadejte uživatelské jméno"
 
 msgid "Enter login name of the user."
 msgstr "Zadejte přihlašovací jméno uživatele."
+
+msgid "Enter smartctl pass-through type."
+msgstr ""
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Zadejte IP adresu nebo DNS název iSCSI cíle."
@@ -4213,7 +4219,7 @@ msgid "Follow"
 msgstr "Následovat"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Vynutit smazání"
 
 msgid "Force Operation"
 msgstr "Vynutit operaci"
@@ -4704,6 +4710,10 @@ msgid ""
 msgstr ""
 "Pokud se toto hlášení bude i nadále opakovat, je třeba zjistit podrobnosti "
 "ze záznamu událostí systému."
+
+msgid ""
+"If this message persists take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5869,7 +5879,7 @@ msgid "Music"
 msgstr "Hudba"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "Je třeba, aby bylo číslo z rozmezí 5 až 1000."
 
 msgid "Must choose one"
 msgstr "Je třeba něco zvolit"
@@ -6131,7 +6141,7 @@ msgid "No pools have been selected"
 msgstr "Nebyly vybrány žádné fondy"
 
 msgid "No records found."
-msgstr ""
+msgstr "Nebyly nalezeny žádné záznamy."
 
 msgid "No softraid-formatted disks available."
 msgstr "Nejsou k dispozici žádné disky, formátované na softraid"
@@ -6902,7 +6912,7 @@ msgid "Private key"
 msgstr "Soukromá část klíče"
 
 msgid "Process State"
-msgstr ""
+msgstr "Stav procesu"
 
 msgid "Processes"
 msgstr "Procesy"
@@ -7213,7 +7223,7 @@ msgid "Release Notes"
 msgstr "Poznámky k vydání"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Načíst stránku znovu"
 
 msgid "Reload page"
 msgstr "Načíst stránku znovu"
@@ -7840,7 +7850,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Technologie samo-dohledování, analýzy a hlášení"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Naplánované samotesty"
 
 msgid "Send Buffer"
 msgstr "Vyrovnávací paměť odesílání"
@@ -8708,6 +8718,9 @@ msgstr "Je třeba, aby TCP port bylo platné číslo portu."
 msgid "The UPS identifier and IP address"
 msgstr "Identifikátor a IP adresa UPS zdroje"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr ""
 "Je třeba, aby označení virtuální sítě (VLAN) bylo číslo z rozsahu 1 až 4094."
@@ -9095,7 +9108,7 @@ msgstr ""
 "automaticky zrestartuje."
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "Byly zjištěny následující chyby"
 
 msgid "The following input errors were detected"
 msgstr "V zadaných údajích byly zjištěny následující chyby"
@@ -9123,8 +9136,7 @@ msgstr ""
 "čárek!) – „a“ až „z“ a „A“ až „Z“ – arabských číslic „0“ (nula) až „9“ a "
 "dále znaků „-“ (spojovník), „_“ (podtržítko) a „.“ (tečka)."
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
 
 msgid "The initial digest mode negotiated with the initiator."
@@ -10430,7 +10442,7 @@ msgid "URL"
 msgstr "URL adresa"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "USB jednotky pro ukládání dat"
 
 msgid "UTF-8 Only"
 msgstr "Pouze UTF-8"
@@ -10464,6 +10476,9 @@ msgstr "Unison"
 
 msgid "Unison File Synchronisation"
 msgstr "Unison synchronizace souborů"
+
+msgid "Universally Unique Identifier"
+msgstr ""
 
 msgid "Unix Charset"
 msgstr "Znaková sada Unix"
@@ -11362,15 +11377,10 @@ msgstr "na"
 msgid "umount"
 msgstr "odpojit (umount)"
 
-#~ msgid "Self-tests Management"
-#~ msgstr "Správa samotestů"
+#~ msgid "Enter Type"
+#~ msgstr "Zadejte typ"
 
-#~ msgid "Force delete"
-#~ msgstr "Vynucené smazání"
-
-#~ msgid "Process Status"
-#~ msgstr "Stav procesu"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
+#~ msgid ""
+#~ "The identifier reported as unknown by smartmontools including brackets."
 #~ msgstr ""
-#~ "Je třeba, aby počet položek událostí bylo celé číslo z rozmezí 5 až 1000."
+#~ "Identifikátor (včetně hranatých závorek) není nástroji smartmontools znám."

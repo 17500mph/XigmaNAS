@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-17 21:32+0000\n"
+"POT-Creation-Date: 2017-10-18 22:54+0000\n"
 "PO-Revision-Date: 2017-09-26 05:16+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-17 19:57+0000\n"
+"X-Launchpad-Export-Date: 2017-10-18 21:17+0000\n"
 "X-Generator: Launchpad (build 18476)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -843,6 +843,9 @@ msgstr "苹果文件协议（Apple Filing Protocol）"
 
 msgid "Apply"
 msgstr "应用"
+
+msgid "Apply Changes"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "应用过滤器"
@@ -3451,7 +3454,7 @@ msgstr "输入密码"
 msgid "Enter Subject"
 msgstr "输入主题"
 
-msgid "Enter Type"
+msgid "Enter Universally Unique Identifier"
 msgstr ""
 
 msgid "Enter a comment"
@@ -3532,6 +3535,9 @@ msgstr "输入登录名"
 
 msgid "Enter login name of the user."
 msgstr "输入用户的登录名。"
+
+msgid "Enter smartctl pass-through type."
+msgstr ""
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "输入iSCSI目标的IP地址或DNS名称。"
@@ -4356,6 +4362,10 @@ msgstr "如果服务器是位于代理服务器后，设置这些参数可让本
 msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr "如果此消息持续存在，请查看系统日志以获取更多信息。"
+
+msgid ""
+"If this message persists take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -8107,6 +8117,9 @@ msgstr "TCP端口必须是有效的端口号。"
 msgid "The UPS identifier and IP address"
 msgstr "UPS标识符和IP地址"
 
+msgid "The UUID of the record."
+msgstr ""
+
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID必须在1和4094之间。"
 
@@ -8452,8 +8465,7 @@ msgid ""
 "."
 msgstr "主机名称只可以由a-z , A-Z , 0-9 , \"-\" 和\".\" 组成。"
 
-msgid ""
-"The identifier reported as unknown by smartmontools including brackets."
+msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
 
 msgid "The initial digest mode negotiated with the initiator."
@@ -9590,6 +9602,9 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison 文件同步机制"
 
+msgid "Universally Unique Identifier"
+msgstr ""
+
 msgid "Unix Charset"
 msgstr "Unix字符集"
 
@@ -10396,15 +10411,3 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸载"
-
-#~ msgid "Force delete"
-#~ msgstr "强制删除"
-
-#~ msgid "Process Status"
-#~ msgstr "进程状态"
-
-#~ msgid "Self-tests Management"
-#~ msgstr "自检管理"
-
-#~ msgid "The number of log entries to show must be between 5 and 1000."
-#~ msgstr "要显示的日志条目数必须介于5到1000之间。"
