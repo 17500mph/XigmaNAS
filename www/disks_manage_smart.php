@@ -267,7 +267,7 @@ $document->render();
 ?>
 								<tr>
 									<td class="lcell"><?=htmlspecialchars($selftest['devicespecialfile']);?>&nbsp;</td>
-									<td class="lcell"><?=gtext($a_type[$selftest['type']]);?>&nbsp;</td>
+									<td class="lcell"><?=$a_type[$selftest['type']];?>&nbsp;</td>
 									<td class="lcell"><?=htmlspecialchars($selftest['desc']);?>&nbsp;</td>
 <?php
 									if(UPDATENOTIFY_MODE_DIRTY != $notificationmode):
