@@ -230,6 +230,14 @@ embedded_upgrade() {
 		fi
 	fi
 #
+#	unmount tmpfs
+	/sbin/umount -f ${FTMP} > /dev/null 2>&1
+#
+	if [ ${RESULT} -eq 0 ]; then
+		sync
+		sleep 2
+	fi
+#
 	if [ ${RESULT} -eq 0 ]; then
 		topic="expand boot file system"
 		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
@@ -244,19 +252,8 @@ embedded_upgrade() {
 	fi
 #
 	if [ ${RESULT} -eq 0 ]; then
-#		topic="sync buffers after imaging"
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
-#
 		sync
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - success."
-	fi
-#
-	if [ ${RESULT} -eq 0 ]; then
-#		topic="wait after sync buffers"
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
-#
 		sleep 2
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - success."
 	fi
 #
 	if [ ${RESULT} -eq 0 ]; then
@@ -333,23 +330,8 @@ embedded_upgrade() {
 	fi
 #
 	if [ ${RESULT} -eq 0 ]; then
-		rm -r /tmp/configbak
-	fi
-#
-	if [ ${RESULT} -eq 0 ]; then
-#		topic="sync buffers after restore"
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
-#
 		sync
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - success."
-	fi
-#
-	if [ ${RESULT} -eq 0 ]; then
-#		topic="wait after sync buffers"
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
-#
 		sleep 2
-#		/usr/bin/logger -p console.debug "${program}: ${topic} - success."
 	fi
 #
 	if [ ${RESULT} -eq 0 ]; then
@@ -402,8 +384,9 @@ embedded_upgrade() {
 		fi
 	fi
 #
-#	topic="unmount tmpfs"
-	/sbin/umount -f ${FTMP} > /dev/null 2>&1
+	if [ ${RESULT} -eq 0 ]; then
+		rm -r /tmp/configbak
+	fi
 #
 	if [ ${RESULT} -eq 0 ]; then
 		/usr/bin/logger -p console.info "${program}: success."
