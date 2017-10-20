@@ -31,12 +31,6 @@ ZROOT="zroot"
 BENAME="upgrade"
 BEPATH="/var/tmp/be_upgrade"
 
-# Define some color codes for messages
-fmterror="\33[31m%s\33[0m\n"
-fmtsuccess="\33[37m%s\33[0m\n"
-fmtskipped="\33[33m%s\33[0m\n"
-fmtexecute="\33[37m%s\33[0m\n"
-
 enable_upgrade() {
 	program="Enable Upgrade"
 	/usr/bin/logger -p console.info "${program} - processing."
