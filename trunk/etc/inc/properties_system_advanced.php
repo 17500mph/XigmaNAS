@@ -320,7 +320,7 @@ class properties_system_advanced {
 		$o = new properties_bool($this);
 		$o->set_id('enableserialconsole');
 		$o->set_name('enableserialconsole');
-		$o->set_title(gtext('Console Screensaver'));
+		$o->set_title(gtext('Serial Console'));
 		$o->set_caption(gtext('Enable serial console.'));
 		$o->set_description(sprintf('<span class="red"><strong>%s</strong></span><br />%s',gtext('The COM port in BIOS has to be enabled before enabling this option.'), gtext('Changes to this option will take effect after a reboot.')));
 		$o->set_defaultvalue(false);
