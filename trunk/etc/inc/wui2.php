@@ -2230,10 +2230,10 @@ trait co_DOMTools {
 	public function mount_cbm_button_enadis($sphere) {
 		if($sphere->enadis()):
 			if($sphere->toggle()):
-				$this->mount_button_submit($sphere->get_cbm_button_val_toggle(),$sphere->cbm_toggle(),[],get_cbm_button_id_toggle());
+				$this->mount_button_submit($sphere->get_cbm_button_val_toggle(),$sphere->cbm_toggle(),[],$sphere->get_cbm_button_id_toggle());
 			else:
-				$this->mount_button_submit($sphere->get_cbm_button_val_enable(),$sphere->cbm_enable(),[],get_cbm_button_id_enable());
-				$this->mount_button_submit($sphere->get_cbm_button_val_disable(),$sphere->cbm_disable(),[],get_cbm_button_id_disable());
+				$this->mount_button_submit($sphere->get_cbm_button_val_enable(),$sphere->cbm_enable(),[],$sphere->get_cbm_button_id_enable());
+				$this->mount_button_submit($sphere->get_cbm_button_val_disable(),$sphere->cbm_disable(),[],$sphere->get_cbm_button_id_disable());
 			endif;
 		endif;
 		return $this;
