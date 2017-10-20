@@ -1122,7 +1122,9 @@ function parse_umass_controller(&$device) {
 			//	$device['smart']['devicetypearg'] = $searchresult[1];
 			break;
 		elseif(1 === preg_match('/Unknown USB bridge (\[.*\])/i',$row,$searchresult)):
-			//	unknown to smartmontools, generate key to lookup amended configurations
+			//	unknown to smartmontools, take $searchresult to lookup additional configuration
+			//	if no version is provided the usb id is returned using format [0x%04x:0x%04x],vendor_id,product_id
+			//	if version exists the usb id is returned using format [0x%04x:0x%04x (0x%03x)],vendor_id,product_id,version
 			$name = $searchresult[1];
 			$a_param = &array_make_branch($config,'smartmontools','umass','param');
 			$key = array_search_ex($name,$a_param,'name');
