@@ -83,22 +83,25 @@ daemon.* %${clog_logdir}/daemon.log
 *.notice;authpriv.none;kern.debug;lpr.info;mail.crit;mail.info;news.err;local0.none;local7.none %${clog_logdir}/system.log
 security.* %${clog_logdir}/system.log
 auth.info;authpriv.info %${clog_logdir}/system.log
-console.info %${clog_logdir}/system.log
 *.emerg *" > ${syslogd_config}
+
+	# Add console configuration
+	/usr/local/bin/xml sel -t -m "//system/syslogconf/param[enable]" \
+		-i "string-length(facility) > 0" \
+			-i "string-length(level) > 0" \
+				-i "string-length(value) > 0" -v "concat(facility,'.',level,' ',value)" -n -b \
+			-b \
+		-b \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${syslogd_config}
 
 	# Add remote server configuration if syslog'ing to remote syslog server is enabled
 	/usr/local/bin/xml sel -t \
 		-i "//syslogd/remote/enable" \
-			-i "//syslogd/remote/ftp" \
-				-o "ftp.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/sshd" \
-				-o "local3.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/rsyncd" \
-				-o "local4.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/smartd" \
-				-o "local5.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/daemon" \
-				-o "daemon.* @" -v "//syslogd/remote/ipaddr" -n -b \
+			-i "//syslogd/remote/sshd" -o "local3.* @" -v "//syslogd/remote/ipaddr" -n -b \
+			-i "//syslogd/remote/rsyncd" -o "local4.* @" -v "//syslogd/remote/ipaddr" -n -b \
+			-i "//syslogd/remote/smartd" -o "local5.* @" -v "//syslogd/remote/ipaddr" -n -b \
+			-i "//syslogd/remote/ftp" -o "ftp.* @" -v "//syslogd/remote/ipaddr" -n -b \
+			-i "//syslogd/remote/daemon" -o "daemon.* @" -v "//syslogd/remote/ipaddr" -n -b \
 			-i "//syslogd/remote/system" \
 				-o "*.notice;kern.debug;lpr.info;mail.crit;news.err;local0.none;local7.none @" -v "//syslogd/remote/ipaddr" -n \
 				-o "security.* @" -v "//syslogd/remote/ipaddr" -n \
