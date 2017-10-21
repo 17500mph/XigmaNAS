@@ -181,8 +181,8 @@ if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->mode->enadis ? isset($sphere->row['enable']) : true;
-		$is_notprotected = $sphere->mode->lock ? !$sphere->row['protected'] : true;
+		$is_enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
+		$is_notprotected = $sphere->lock() ? !$sphere->row['protected'] : true;
 		$tr = $tbody->addTR();
 		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected));
 		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''));
