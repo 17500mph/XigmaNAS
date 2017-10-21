@@ -45,13 +45,17 @@ enable_upgrade() {
 			if [ $? -ne 0 ]; then
 				/usr/bin/logger -p console.err "${program}: ${topic} - mount command failed."
 				exit 1
+			else
+				/usr/bin/logger -p console.debug "${program}: ${topic} - success."
 			fi
 		else
 			/usr/bin/logger -p console.err "${program}: ${topic} - failed because of missing folder."
 			exit 1
 		fi
+	else
+		/usr/bin/logger -p console.debug "${program}: ${topic} - success (already existing)."
 	fi
-	/usr/bin/logger -p console.debug "${program}: ${topic} - success."
+	/usr/bin/logger -p console.info "${program} - success."
 }
 
 disable_upgrade() {
@@ -70,9 +74,13 @@ disable_upgrade() {
 		if [ $? -ne 0 ]; then
 			/usr/bin/logger -p console.err "${program}: ${topic} - unmount command failed."
 			exit 1
+		else:
+			/usr/bin/logger -p console.debug "${program}: ${topic} - success."
 		fi
+	else
+		/usr/bin/logger -p console.debug "${program}: ${topic} - success (already gone)."
 	fi
-	/usr/bin/logger -p console.debug "${program}: ${topic} - success."
+	/usr/bin/logger -p console.info "${program}: ${topic} - success."
 }
 
 embedded_upgrade() {
@@ -429,7 +437,7 @@ embedded_upgrade() {
 		/usr/bin/logger -p console.info "${program}: rebooting."
 		/sbin/shutdown -r now > /dev/null 2>&1
 	else
-		/usr/bin/logger -p console.info "${program}: failed."
+		/usr/bin/logger -p console.err "${program}: failed."
 		exit 1
 	fi
 }
