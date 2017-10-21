@@ -95,10 +95,10 @@ switch($method):
 		switch($action):
 			case 'apply':
 				$retval = 0;
-		//		if(!file_exists($d_sysrebootreqd_path)):
-		//			touch($d_sysrebootreqd_path);
-		//		endif;
 				$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+				config_lock();
+				$retval |= rc_update_service('syslogd');
+				config_unlock();
 				$savemsg = get_std_save_message($retval);
 				if($retval == 0):
 					updatenotify_delete($sphere->notifier());
