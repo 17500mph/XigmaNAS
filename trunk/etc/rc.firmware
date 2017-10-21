@@ -40,9 +40,14 @@ enable_upgrade() {
 #
 	# Create efficient memory file system.
 	if ! df | grep -qw ${FTMP}; then
-		/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
-		if [ $? -ne 0 ]; then
-			/usr/bin/logger -p console.err "${program}: ${topic} - mount command failed."
+		if [ -d ${FTMP} ]; then
+			/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
+			if [ $? -ne 0 ]; then
+				/usr/bin/logger -p console.err "${program}: ${topic} - mount command failed."
+				exit 1
+			fi
+		else
+			/usr/bin/logger -p console.err "${program}: ${topic} - failed because of missing folder."
 			exit 1
 		fi
 	fi
