@@ -1771,17 +1771,10 @@ trait co_DOMTools {
 			gtext('You must apply the changes in order for them to take effect.'),
 			gtext('If this message persists take a look at the system log for more information.')
 		);
-		$input_attributes = [
-			'id' => 'apply',
-			'name' => 'apply',
-			'type' => 'submit',
-			'class' => 'formbtn',
-			'value' => gtext('Apply Changes')
-		];
 		$this->
 			addDIV(['id' => 'applybox'])->
 				mount_info_box($gt_info)->
-				addElement('input',$input_attributes);
+				mount_button_apply();
 		return $this;
 	}
 	//	data settings table macros
@@ -2343,6 +2336,10 @@ trait co_DOMTools {
 	}
 	public function mount_button_add() {
 		$this->mount_button_submit('save',gtext('Add'));
+		return $this;
+	}
+	public function mount_button_apply() {
+		$this->mount_button_submit('apply',gtext('Apply Changes'));
 		return $this;
 	}
 	public function mount_button_cancel() {
