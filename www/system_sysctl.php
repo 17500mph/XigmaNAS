@@ -199,21 +199,23 @@ endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf')];
 include 'fbegin.inc';
 echo $sphere->doj();
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			mount_tabnav_record('system_advanced.php',gtext('Advanced'))->
+			mount_tabnav_record('system_email.php',gtext('Email'))->
+			mount_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
+			mount_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
+			mount_tabnav_record('system_swap.php',gtext('Swap'))->
+			mount_tabnav_record('system_rc.php',gtext('Command Scripts'))->
+			mount_tabnav_record('system_cron.php',gtext('Cron'))->
+			mount_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
+			mount_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
+			mount_tabnav_record('system_sysctl.php',gtext('sysctl.conf'),gtext('Reload page'),true)->
+			mount_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+$document->render();
 ?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
-		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
-		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
-		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
-		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
-		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
-		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('sysctl.conf');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
 <form action="<?=$sphere->scriptname();?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
