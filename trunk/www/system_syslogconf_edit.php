@@ -165,7 +165,7 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 /*
  *	end determine record update mode
  */
-$a_referer = ['facility','level','value','comment'];
+$a_referer = ['enable','facility','level','value','comment'];
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		foreach($a_referer as $referer):
@@ -246,7 +246,7 @@ endif;
 $content->add_table_data_settings()->
 	mount_colgroup_data_settings()->
 	push()->addTHEAD()->
-		c2_titleline(gtext('Settings'))->
+		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false)->
 	pop()->addTBODY()->
 		c2_input_text($property->facility,htmlspecialchars($sphere->row[$property->facility->get_name()]),true,false)->
 		c2_input_text($property->level,htmlspecialchars($sphere->row[$property->level->get_name()]),false,false)->

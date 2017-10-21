@@ -66,8 +66,8 @@ class properties_syslogconf {
 		$o = new properties_bool($this);
 		$o->set_id('enable');
 		$o->set_name('enable');
-		$o->set_title(gtext('Enable'));
-		$o->set_caption('');
+		$o->set_title(gtext('Configuration'));
+		$o->set_caption(gtext('Enable'));
 		$o->set_description('');
 		$o->set_defaultvalue(true);
 		$o->filter_use_default();
