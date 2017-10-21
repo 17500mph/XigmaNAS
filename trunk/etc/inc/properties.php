@@ -240,16 +240,18 @@ abstract class properties {
 	public function validate_array_element(array $variable,string $filter_name = 'ui') {
 		if(array_key_exists($this->get_name(),$variable)):
 			$value = $variable[$this->get_name()];
-			$filter_parameter = $this->get_filter($filter_name);
-			if(isset($filter_parameter)):
-				$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
-				switch($action):
-					case 3: return filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
-					case 2: return filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
-					case 1: return filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
-					case 0: return filter_var($value,$filter_parameter['filter']);
-				endswitch;
-			endif;
+		else:
+			$value = NULL;
+		endif;
+		$filter_parameter = $this->get_filter($filter_name);
+		if(isset($filter_parameter)):
+			$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+			switch($action):
+				case 3: return filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+				case 2: return filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+				case 1: return filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+				case 0: return filter_var($value,$filter_parameter['filter']);
+			endswitch;
 		endif;
 		return NULL;
 	}
