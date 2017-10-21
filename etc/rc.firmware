@@ -62,7 +62,7 @@ disable_upgrade() {
 	# Umount in-memory file system.
 	if df | grep -qw ${FTMP}; then
 		/sbin/umount -f ${FTMP} > /dev/null 2>&1
-		if [ 0 != $? ]; then
+		if [ $? -ne 0 ]; then
 			/usr/bin/logger -p console.err "${program}: ${topic} - unmount command failed."
 			exit 1
 		fi
@@ -249,7 +249,7 @@ embedded_upgrade() {
 		sync
 		sleep 2
 	fi
-#
+#	try 1, rw mount
 	if [ ${RESULT} -eq 0 ]; then
 		topic="mount /cf in read-write mode"
 		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
@@ -257,17 +257,49 @@ embedded_upgrade() {
 		/sbin/mount -w -o noatime /cf
 		if [ $? -ne 0 ]; then
 			/usr/bin/logger -p console.err "${program}: ${topic} - failed."
+			RESULT=1
+		else
+			/usr/bin/logger -p console.debug "${program}: ${topic} - success."
+		fi
+	fi
+#	try 2, update rw mount
+	if [ ${RESULT} -ne 0 ]; then
+		RESULT=0
+		topic="update mount /cf to read-write mode"
+		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
 #
-			topic="force mount /cf in read-write mode"
-			/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
+		/sbin/mount -u -o noatime -w /cf
+		if [ $? -ne 0 ]; then
+			/usr/bin/logger -p console.err "${program}: ${topic} - failed."
+			RESULT=1
+		else
+			/usr/bin/logger -p console.debug "${program}: ${topic} - success."
+		fi
+	fi
+#	try 3, force rw mount
+	if [ ${RESULT} -ne 0 ]; then
+		RESULT=0
+		topic="force mount /cf in read-write mode"
+		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
 #
-			/sbin/mount -f -w -o noatime /cf
-			if [ $? -ne 0 ]; then
-				/usr/bin/logger -p console.err "${program}: ${topic} - failed."
-				RESULT=1
-			else
-				/usr/bin/logger -p console.debug "${program}: ${topic} - success."
-			fi
+		/sbin/mount -f -w -o noatime /cf
+		if [ $? -ne 0 ]; then
+			/usr/bin/logger -p console.err "${program}: ${topic} - failed."
+			RESULT=1
+		else
+			/usr/bin/logger -p console.debug "${program}: ${topic} - success."
+		fi
+	fi
+#	try 4, update force rw mount
+	if [ ${RESULT} -ne 0 ]; then
+		RESULT=0
+		topic="force update mount /cf to read-write mode"
+		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
+#
+		/sbin/mount -u -f -o noatime -w /cf
+		if [ $? -ne 0 ]; then
+			/usr/bin/logger -p console.err "${program}: ${topic} - failed."
+			RESULT=1
 		else
 			/usr/bin/logger -p console.debug "${program}: ${topic} - success."
 		fi
