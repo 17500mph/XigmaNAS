@@ -137,8 +137,8 @@ class properties_syslogconf {
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
 		$o->set_filter(FILTER_UNSAFE_RAW);
-		$o->set_filter(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['options' => ['default' => '']]);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => '']);
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
