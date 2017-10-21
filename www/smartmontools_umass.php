@@ -81,22 +81,32 @@ function smartmontools_umass_process_updatenotification($mode,$data) {
 //	get environment
 $property = new properties_smartmontools_umass();
 $sphere = &get_sphere_smartmontools_umass();
+//	init indicators
+$input_errors = [];
+$prerequisites_ok = true;
 $errormsg = '';
-if($_POST):
-	if(isset($_POST['apply']) && $_POST['apply']):
-		$retval = 0;
-		if(!file_exists($d_sysrebootreqd_path)):
-			$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
-		endif;
-		$savemsg = get_std_save_message($retval);
-		if($retval == 0):
-			updatenotify_delete($sphere->notifier());
-		endif;
-		header($sphere->header());
-		exit;
-	endif;
-	if(isset($_POST['submit'])):
-		switch($_POST['submit']):
+//	request method
+$methods = ['GET','POST'];
+$methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
+$method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
+//	determine page mode and validate resource id
+switch($method):
+	case 'POST':
+		$actions = ['apply','rows.delete'];
+		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
+		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
+		switch($action):
+			case 'apply':
+				$retval = 0;
+				if(!file_exists($d_sysrebootreqd_path)):
+					$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+				endif;
+				$savemsg = get_std_save_message($retval);
+				if($retval == 0):
+					updatenotify_delete($sphere->notifier());
+				endif;
+				header($sphere->header());
+				exit;
 			case 'rows.delete':
 				$sphere->cbm_array = $_POST[$sphere->cbm_name] ?? [];
 				foreach($sphere->cbm_array as $sphere->cbm_record):
@@ -121,8 +131,8 @@ if($_POST):
 				exit;
 				break;
 		endswitch;
-	endif;
-endif;
+		break;
+endswitch;
 $pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('USB Mass Storage Devices')];
 $record_exists = count($sphere->grid) > 0;
 $a_col_width = ['5%','25%','25%','35%','10%'];
