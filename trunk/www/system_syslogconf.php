@@ -83,22 +83,29 @@ function syslogconf_process_updatenotification($mode,$data) {
 //	init properties and sphere
 $property = new properties_syslogconf();
 $sphere = &system_syslogconf_get_sphere();
-if($_POST):
-	if(isset($_POST['apply']) && $_POST['apply']):
-		$retval = 0;
-		if(!file_exists($d_sysrebootreqd_path)):
-			touch($d_sysrebootreqd_path);
-		endif;
-		$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
-		$savemsg = get_std_save_message($retval);
-		if($retval == 0):
-			updatenotify_delete($sphere->notifier());
-		endif;
-		header($sphere->header());
-		exit;
-	endif;
-	if(isset($_POST['submit'])):
-		switch($_POST['submit']):
+
+$methods = ['GET','POST'];
+$methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
+$method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
+switch($method):
+	case 'POST':
+		$actions = ['apply','rows.enable','rows.disable','rows.toggle','rows.delete'];
+		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
+		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
+		switch($action):
+			case 'apply':
+				$retval = 0;
+		//		if(!file_exists($d_sysrebootreqd_path)):
+		//			touch($d_sysrebootreqd_path);
+		//		endif;
+				$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+				$savemsg = get_std_save_message($retval);
+				if($retval == 0):
+					updatenotify_delete($sphere->notifier());
+				endif;
+				header($sphere->header());
+				exit;
+				break;
 			case 'rows.enable':
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				$updateconfig = false;
@@ -191,11 +198,11 @@ if($_POST):
 				exit;
 				break;
 		endswitch;
-	endif;
-endif;
+		break;
+endswitch;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('syslog.conf')];
 $record_exists = count($sphere->grid) > 0;
-$a_col_width = ['5%','25%','25%','20%','15','10%'];
+$a_col_width = ['5%','20%','20%','20%','10%','15','10%'];
 $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
@@ -249,6 +256,7 @@ $tr->
 	mountTH_class('lhell',$property->facility->get_title())->
 	mountTH_class('lhell',$property->level->get_Title())->
 	mountTH_class('lhell',$property->value->get_Title())->
+	mountTH_class('lhelc',gtext('Status'))->
 	mountTH_class('lhell',$property->comment->get_Title())->
 	mountTH_class('lhebl',gtext('Toolbox'));
 $tbody = $table->addTBODY();
@@ -258,11 +266,15 @@ if($record_exists):
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 		$is_enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 		$is_notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+		$src = ($is_enabled) ? $g_img['ena'] : $g_img['dis'];
+		$title = ($is_enabled) ? gtext('Enabled') : gtext('Disabled');
+
 		$tr = $tbody->addTR();
 		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected));
 		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->facility->get_name()] ?? ''));
 		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->level->get_name()] ?? ''));
 		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->value->get_name()] ?? ''));
+		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->addA(['title' => $title])->mountIMG(['src' => $src,'alt' => '']);
 		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->comment->get_name()] ?? ''));
 		$tr->
 			add_toolbox_area()->
