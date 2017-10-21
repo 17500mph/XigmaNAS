@@ -334,11 +334,11 @@ function sysconsaver_change() {
 }
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
 <?php
-		$node = new co_DOMDocument();
-		$node->
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
 			mount_tabnav_record('system_advanced.php',gtext('Advanced'),gtext('Reload page'),true)->
 			mount_tabnav_record('system_email.php',gtext('Email'))->
 			mount_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
@@ -349,10 +349,9 @@ function sysconsaver_change() {
 			mount_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
 			mount_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
 			mount_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			render();
+			mount_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+$document->render();
 ?>
-	</ul></td></tr>
-</tbody></table>
 <form action="system_advanced.php" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($input_errors)):
