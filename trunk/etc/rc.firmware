@@ -15,13 +15,18 @@
 # - fullupgrade <file> : Do a full release (TGZ file) upgrade using the file <file>
 #
 
+. /etc/rc.subr
+
+# Gather upload folder
+load_rc_config_var lighttpd lighttpd_uploaddir
+
 SIZE="320M"
 PLATFORM=`cat /etc/platform`
 XARCH=`/bin/echo ${PLATFORM} | sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
 CFDEVICE=`cat /etc/cfdevice`
 SKIP=`expr \( 1 \* 1024 \* 1024 \) / \( 32 \* 1024 \)`
-FTMP="/var/tmp/ftmp"
+FTMP="${lighttpd_uploaddir:-/var/tmp}/ftmp"
 ARG="$2"
 
 # Required for boot environment upgrade.
@@ -360,6 +365,7 @@ embedded_upgrade() {
 	if [ ${RESULT} -eq 0 ]; then
 		topic="restore loader.conf.local"
 		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
+#
 		if [ -f /conf/loader.conf.local ]; then
 			mv /conf/loader.conf.local /cf/boot
 			if [ $? -ne 0 ]; then
@@ -408,6 +414,7 @@ embedded_upgrade() {
 	if [ ${RESULT} -eq 0 ]; then
 		topic="checksum restored config.xml"
 		/usr/bin/logger -p console.debug "${program}: ${topic} - processing."
+#
 		if [ -n ${CONFSUM} ]; then
 			CONFSUM_NEW=`sha256 /conf/config.xml | cut -d= -f2`
 			/usr/bin/logger -p console.debug "${program}: ${topic} - success."
@@ -444,7 +451,8 @@ embedded_upgrade() {
 
 backup_sys_files() {
 	# Backup common system configuration files.
-	echo "Backup system configuration..."
+	msg="Backup system configuration..."
+	/usr/bin/logger -p console.info "UPGRADE: ${msg}"
 	cp -p ${BEPATH}/boot/loader.conf ${SYSBACKUP}
 
 	if [ -f "/${ZROOT}/boot.config" ]; then
@@ -464,7 +472,8 @@ backup_sys_files() {
 
 restore_sys_files() {
 	# Restore previous backup files on the boot environment.
-	echo "Restore system configuration..."
+	msg="Restore system configuration..."
+	/usr/bin/logger -p console.info "UPGRADE: ${msg}"
 	cp -pf ${SYSBACKUP}/loader.conf ${BEPATH}/boot
 
 	if [ -f "${SYSBACKUP}/boot.config" ]; then
@@ -487,51 +496,47 @@ restore_sys_files() {
 full_upgrade() {
 	# Ensure the system is configured for boot environments.
 	if ! echo ${ROOTFS} | grep -qw "${ZROOT}/ROOT"; then
-		echo "ERROR: This system does not boot from ZFS pool."
+		msg="ERROR: This system does not boot from ZFS pool."
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		exit 1
 	elif ! zpool list -H -o bootfs | grep -qw "${ZROOT}/ROOT"; then
-		echo "ERROR: This system is not configured for boot environments."
+		msg="ERROR: This system is not configured for boot environments."
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		exit 1
 	fi
 
 	# Wait 2 seconds before proceed.
 	sleep 2
 
-	# Redirect I/O to console.
-	# Prevent console redirect if no physical video adapter found.
-	if /usr/sbin/pciconf -l | grep -qw "vgapci[0-9]"; then
-		exec </dev/console >/dev/console 2>/dev/console
-	fi
-
-	printf "\n\n\33[37m%s\33[0m\n" "System upgrade in progress. Please wait..." | tee /dev/console
+	msg="System upgrade in progress. Please wait..."
+	/usr/bin/logger -p console.info "UPGRADE: ${msg}"
 
 	# Check if firmware file exists.
 	if [ ! -r "${ARG}" ]; then
 		msg="ERROR: Firmware file does not exist."
-		printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		exit 1
 	fi
 
 	# Test firmware file.
-	echo "Testing firmware file integrity..."
+	msg="Testing firmware file integrity..."
+	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	/usr/bin/gunzip -t "${ARG}"
 	if [ 0 != $? ]; then
 		msg="ERROR: Firmware file is corrupted."
-		printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		exit 1
 	fi
 
 	# Create and mount the new upgrade boot environment.
-	echo "Creating and mounting new boot environment..."
+	$msg="Creating and mounting new boot environment..."
+	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	DATE=`date +%Y-%m-%d-%H%M%S`
 	/usr/local/sbin/beadm create ${BENAME}-${DATE}
 	/usr/local/sbin/beadm mount ${BENAME}-${DATE} ${BEPATH}
 	if [ 0 != $? ]; then
 		msg="ERROR: Unable to create/mount new boot environment."
-		printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		exit 1
 	fi
 
@@ -542,8 +547,7 @@ full_upgrade() {
 	backup_sys_files
 	if [ 0 != $? ]; then
 		msg="ERROR: Failed to backup configuration."
-		printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 		/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 		disable_upgrade
@@ -558,19 +562,20 @@ full_upgrade() {
 	# Start upgrade script to remove obsolete files. This should be done
 	# before system is updated because it may happen that some files
 	# may be reintroduced in the system.
-	echo "Remove obsolete files..."
+	msg="Remove obsolete files..."
+	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	/etc/install/upgrade.sh clean ${BEPATH}
 
 	# Install system files and discard unwanted folders/files.
-	echo "Upgrading system on new boot environment..."
+	msg="Upgrading system on new boot environment..."
+	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	RESULT=1
 	EXCLUDED="--exclude=cf --exclude=conf --exclude=tmp --exclude=var --exclude=version"
 	/usr/bin/tar ${EXCLUDED} --keep-newer-files -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
 	RESULT=$?
 	if [ 0 != ${RESULT} ]; then
 		msg="ERROR: Failed to upgrade system."
-		printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "UPGRADE ${msg}"
+		/usr/bin/logger -p console.err "UPGRADE ${msg}"
 		/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 		/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 		disable_upgrade
@@ -580,29 +585,27 @@ full_upgrade() {
 		restore_sys_files
 		if [ 0 != $? ]; then
 			msg="ERROR: Failed restoring configuration."
-			printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-			/usr/bin/logger "UPGRADE ${msg}"
+			/usr/bin/logger -p console.err "UPGRADE ${msg}"
 			/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 			/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 			disable_upgrade
 			exit 1
 		fi
-		# Unmoun and activate the new boot environment.
-		echo "Unmount and activate new boot environment..."
+		# Unmount and activate the new boot environment.
+		msg="Unmount and activate new boot environment..."
+		/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 		/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 		/usr/local/sbin/beadm activate ${BENAME}-${DATE}
 		if [ 0 != $? ]; then
 			msg="ERROR: Failed to unmount/activate boot environment."
-			printf "\33[31m%s\33[0m\n" "${msg}" | tee /dev/console
-			/usr/bin/logger "UPGRADE ${msg}"
+			/usr/bin/logger -p console.err "UPGRADE ${msg}"
 			/usr/local/sbin/beadm unmount -f ${BENAME}-${DATE}
 			/usr/local/sbin/beadm destroy -F ${BENAME}-${DATE}
 			disable_upgrade
 			exit 1
 		fi
 		msg="System upgraded successfully."
-		printf "\33[37;41m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "UPGRADE: ${msg}"
+		/usr/bin/logger -p console.info "UPGRADE: ${msg}"
 	fi
 
 	# Cleanup and sync.
@@ -614,8 +617,7 @@ full_upgrade() {
 	# Reboot system if upgrade was successfully.
 	if [ 0 -eq ${RESULT} ]; then
 		msg="Rebooting server..."
-		printf "\33[37m%s\33[0m\n" "${msg}" | tee /dev/console
-		/usr/bin/logger "${msg}"
+		/usr/bin/logger -p console.info "${msg}"
 		/sbin/shutdown -r now > /dev/null 2>&1
 	else
 		exit 1
