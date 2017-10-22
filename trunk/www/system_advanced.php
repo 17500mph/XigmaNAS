@@ -124,7 +124,8 @@ $sphere = &get_sphere_system_advanced();
 //	take the value of the parameter if its type is bool
 //	set value to true if the parameter exists and is not NULL
 //	set value to false if the parameter doesn't exist or is NULL
-$pconfig['disableconsolemenu'] = isset($config['system']['disableconsolemenu']) && (is_bool($config['system']['disableconsolemenu']) ? $config['system']['disableconsolemenu'] : true);
+$pconfig['adddivsubmittodataframe'] = $property->adddivsubmittodataframe->validate_config($config['system']);
+$pconfig['disableconsolemenu'] = $property->disableconsolemenu->validate_config($config['system']);
 $pconfig['disablefm'] = isset($config['system']['disablefm']);
 $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck']);
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
@@ -208,6 +209,7 @@ if($_POST):
 				config_unlock();
 			endif;
 		endif;
+		$config['system']['adddivsubmittodataframe'] = $property->adddivsubmittodataframe->validate_input();
 		$helpinghand = $property->disableconsolemenu->validate_input();
 		if(isset($config['system']['disableconsolemenu']) !== $helpinghand):
 			//	server needs to be restarted to activate setting.
@@ -381,6 +383,7 @@ $document->render();
 			endif;
 			$node->c2_checkbox($property->enabletogglemode,!empty($pconfig['enabletogglemode']));
 			$node->c2_checkbox($property->skipviewmode,!empty($pconfig['skipviewmode']));
+			$node->c2_checkbox($property->adddivsubmittodataframe,!empty($pconfig['adddivsubmittodataframe']));
 			$node->c2_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
 			$node->c2_checkbox($property->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
 			$node->render();
