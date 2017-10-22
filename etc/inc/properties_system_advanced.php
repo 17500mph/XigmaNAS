@@ -34,6 +34,7 @@
 require_once 'properties.php';
 
 class properties_system_advanced {
+	public $adddivsubmittodataframe;
 	public $disableconsolemenu;
 	public $disablefm;
 	public $disablefirmwarecheck;
@@ -58,6 +59,7 @@ class properties_system_advanced {
 		$this->load();
 	}
 	public function load() {
+		$this->adddivsubmittodataframe = $this->prop_adddivsubmittodataframe();
 		$this->disableconsolemenu = $this->prop_disableconsolemenu();
 		$this->disablefm = $this->prop_disablefm();
 		$this->disablefirmwarecheck = $this->prop_disablefirmwarecheck();
@@ -78,6 +80,20 @@ class properties_system_advanced {
 		$this->sysconsaverblanktime = $this->prop_sysconsaverblanktime();
 		$this->enableserialconsole = $this->prop_enableserialconsole();
 		return $this;
+	}
+	private function prop_adddivsubmittodataframe(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('adddivsubmittodataframe');
+		$o->set_name('adddivsubmittodataframe');
+		$o->set_title(gtext('Button Location'));
+		$o->set_caption(gtext('Display action buttons in the scrollable area instead of the footer area.'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
 	}
 	private function prop_disableconsolemenu(): properties_bool {
 		$o = new properties_bool($this);
