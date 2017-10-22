@@ -2133,7 +2133,7 @@ trait co_DOMTools {
 	//	elements requiring sphere
 	public function mount_cbm_checkbox_toggle($sphere) {
 		$element = 'input';
-		$cbm_toggle_id = $sphere->get_cbm_toggle_id();
+		$cbm_toggle_id = $sphere->get_cbm_checkbox_id_toggle();
 		$input_attributes = [
 			'type' => 'checkbox',
 			'name' => $cbm_toggle_id,
@@ -2416,7 +2416,7 @@ trait co_DOMTools {
 	 *	@return DOMNode $this
 	 */
 	public function mount_body(array $page_title = [],string $action_url = NULL,bool $setenctype = false) {
-		$jdata = <<<EOJ
+		$jdata = <<<'EOJ'
 $(window).on("load", function() {
 	$("#tabnav").on('click', function() { spinner(); });
 	$("#tabnav2").on('click', function() { spinner(); });
