@@ -2300,18 +2300,23 @@ trait co_DOMTools {
 		return $this;
 	}
 	//	submit area macros
-	public function add_area_buttons() {
-		$root = $this->ownerDocument ?? $this;
-		$target = $root->getElementById('g4f') ?? $this;
-		$append_mode = false; // top element of footer area
-		$div_attributes = [
-			'id' => 'submit',
-			'style' => 'padding: 0px 25px 0px 25px;'
-		];
-		if($append_mode):
-			$subnode = $target->addDIV($div_attributes);
+	public function add_area_buttons(bool $use_config_setting = true) {
+		global $config;
+		
+		$div_attributes = ['id' => 'submit'];
+		if($use_config_setting):
+			$referer = 'adddivsubmittodataframe';
+			$root = $this->ownerDocument ?? $this;
+			if(isset($config['system'][$referer]) && (is_bool($config['system'][$referer]) ? $config['system'][$referer] : true)):
+				$target = $root->getElementById('area_data_frame') ?? $this;
+				$subnode = $target->addDIV($div_attributes);
+			else:
+				$target = $root->getElementById('g4f') ?? $this;
+				$div_attributes['style'] = 'padding: 0px 25px;';
+				$subnode = $target->prepend_element('div',$div_attributes);
+			endif;
 		else:
-			$subnode = $target->prepend_element('div',$div_attributes);
+			$subnode = $this->addDIV($div_attributes);
 		endif;
 		return $subnode;
 	}
