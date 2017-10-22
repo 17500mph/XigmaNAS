@@ -2216,6 +2216,14 @@ trait co_DOMTools {
 					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin']);
 		return $this;
 	}
+	public function mount_no_records_found(int $colspan = 0) {
+		$td_attributes = ['class' => 'lcebl'];
+		if($colspan > 0):
+			$td_attributes['colspan'] = $colspan;
+		endif;
+		$this->addTR()->addTD($td_attributes,gtext('No records found.'));
+		return $this;
+	}
 	public function mount_cbm_button_delete($sphere) {
 		$this->mount_button_submit($sphere->get_cbm_button_val_delete(),$sphere->cbm_delete(),[],$sphere->get_cbm_button_id_delete());
 		return $this;

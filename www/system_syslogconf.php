@@ -283,7 +283,7 @@ if($record_exists):
 				mountTD();
 	endforeach;
 else:
-	$tbody->addTR()->addTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
+	$tbody->mount_no_records_found($n_col_width);
 endif;
 $table->mount_footer_with_add($sphere,$n_col_width);
 $document->add_area_buttons()->mount_cbm_button_enadis($sphere)->mount_cbm_button_delete($sphere);
