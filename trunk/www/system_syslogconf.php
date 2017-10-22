@@ -89,7 +89,7 @@ $methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { 
 $method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
 switch($method):
 	case 'POST':
-		$actions = ['apply','rows.enable','rows.disable','rows.toggle','rows.delete'];
+		$actions = ['apply',$sphere->get_cbm_button_val_enable(),$sphere->get_cbm_button_val_disable(),$sphere->get_cbm_button_val_toggle(),$sphere->get_cbm_button_val_delete()];
 		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
 		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
@@ -106,7 +106,7 @@ switch($method):
 				header($sphere->header());
 				exit;
 				break;
-			case 'rows.enable':
+			case $sphere->get_cbm_button_val_enable():
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
@@ -128,7 +128,7 @@ switch($method):
 				header($sphere->header());
 				exit;
 				break;
-			case 'rows.disable':
+			case $sphere->get_cbm_button_val_disable():
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
@@ -150,7 +150,7 @@ switch($method):
 				header($sphere->header());
 				exit;
 				break;
-			case 'rows.toggle':
+			case $sphere->get_cbm_button_val_toggle():
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
@@ -174,7 +174,7 @@ switch($method):
 				header($sphere->header());
 				exit;
 				break;
-			case 'rows.delete':
+			case $sphere->get_cbm_button_val_delete():
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
