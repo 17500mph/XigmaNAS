@@ -71,18 +71,8 @@ class properties_smartmontools_umass {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_enable(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('enable');
-		$o->set_name('enable');
-		$o->set_title(gtext('Enable Setting'));
-		$o->set_caption(gtext('Enable'));
-		$o->set_description('');
-		$o->set_defaultvalue(true);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+	private function prop_enable(): property_enable {
+		$o = new property_enable($this);
 		return $o;
 	}
 	private function prop_name(): properties_text {
@@ -101,18 +91,8 @@ class properties_smartmontools_umass {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_protected(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('protected');
-		$o->set_name('protected');
-		$o->set_title(gtext('Protect Setting'));
-		$o->set_caption(gtext('Protect'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+	private function prop_protected(): property_protected {
+		$o = new property_protected($this);
 		return $o;
 	}
 	private function prop_type(): properties_text {
@@ -133,8 +113,8 @@ class properties_smartmontools_umass {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_uuid(): properties_uuid {
-		$o = new properties_uuid($this);
+	private function prop_uuid(): property_uuid {
+		$o = new property_uuid($this);
 		return $o;
 	}
 }
