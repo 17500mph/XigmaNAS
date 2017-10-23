@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-22 00:32+0000\n"
-"PO-Revision-Date: 2017-10-19 01:23+0000\n"
+"POT-Creation-Date: 2017-10-23 23:18+0000\n"
+"PO-Revision-Date: 2017-10-23 05:45+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-22 21:17+0000\n"
+"X-Launchpad-Export-Date: 2017-10-23 21:49+0000\n"
 "X-Generator: Launchpad (build 18484)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -1214,6 +1214,9 @@ msgstr "流覽目錄"
 
 msgid "Browseable"
 msgstr "可流覽"
+
+msgid "Button Location"
+msgstr "按鈕位置"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr "默認是只有已經存在的檔可以上傳。"
@@ -2586,6 +2589,10 @@ msgid "Display ZFS command history"
 msgstr "顯示ZFS命令歷史記錄"
 
 msgid ""
+"Display action buttons in the scrollable area instead of the footer area."
+msgstr "在可滾動區域中顯示操作按鈕，而不是頁腳區域。"
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr "磁片相對於主軸的距離（通常由於衝擊或溫度）。 計量單位未知。"
@@ -3183,6 +3190,12 @@ msgstr "啟用選中的Rsync任務"
 msgid "Enable Selected Rsync Modules"
 msgstr "啟用選中的Rsync模組"
 
+msgid "Enable Server"
+msgstr ""
+
+msgid "Enable Setting"
+msgstr ""
+
 msgid "Enable TLS connections."
 msgstr "啟用TLS連接。"
 
@@ -3522,10 +3535,10 @@ msgid ""
 msgstr "請輸入系統時間（格式為 MM/DD/YYYY hh:mm），或點選圖示來選擇時間。"
 
 msgid "Enter destination"
-msgstr ""
+msgstr "輸入目的地"
 
 msgid "Enter facility name"
-msgstr ""
+msgstr "輸入設備名稱"
 
 msgid "Enter full name of the user."
 msgstr "輸入用戶的全名。"
@@ -3537,7 +3550,7 @@ msgid "Enter hostname or IP address."
 msgstr "輸入主機名或IP地址"
 
 msgid "Enter level name"
-msgstr ""
+msgstr "輸入級別名稱"
 
 msgid "Enter login name"
 msgstr "輸入登錄名"
@@ -3751,7 +3764,7 @@ msgid ""
 msgstr "FXP是支持兩個遠端伺服器互傳檔的通訊協議。(有安全疑慮！)."
 
 msgid "Facility"
-msgstr ""
+msgstr "設施"
 
 msgid "Factory Defaults"
 msgstr "原廠默認"
@@ -4868,7 +4881,7 @@ msgid "Leave this field empty to use default settings."
 msgstr "將此字段留空以使用默認的設置。"
 
 msgid "Level"
-msgstr ""
+msgstr "級別"
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr "1級 - 待機（降低轉速）的最小功耗"
@@ -6445,6 +6458,12 @@ msgstr "配置檔"
 msgid "Properties"
 msgstr "屬性"
 
+msgid "Protect"
+msgstr ""
+
+msgid "Protect Setting"
+msgstr ""
+
 msgid "Proto"
 msgstr "協議"
 
@@ -7371,7 +7390,7 @@ msgid "September"
 msgstr "9月"
 
 msgid "Serial Console"
-msgstr ""
+msgstr "串口控制台"
 
 msgid "Serial Number"
 msgstr "序號"
@@ -10426,7 +10445,7 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "syslog.conf"
-msgstr ""
+msgstr "syslog.conf"
 
 msgid "to"
 msgstr "到"

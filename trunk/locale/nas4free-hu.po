@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-22 00:32+0000\n"
-"PO-Revision-Date: 2017-09-28 19:47+0000\n"
+"POT-Creation-Date: 2017-10-23 23:18+0000\n"
+"PO-Revision-Date: 2017-10-23 16:37+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-22 21:17+0000\n"
+"X-Launchpad-Export-Date: 2017-10-23 21:49+0000\n"
 "X-Generator: Launchpad (build 18484)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -919,7 +919,7 @@ msgid "Apply"
 msgstr "Alkalmaz"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Módosítások alkalmazása"
 
 msgid "Apply Filter"
 msgstr "Szűrő alkalmazása"
@@ -1310,6 +1310,9 @@ msgstr "Könyvtár tallózása"
 
 msgid "Browseable"
 msgstr "Böngészhető"
+
+msgid "Button Location"
+msgstr "Gombv elhelyezkedése"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr "Alapértelmezetten csak már létező fájlok tölthetőek fel."
@@ -2571,7 +2574,7 @@ msgid "Device Model"
 msgstr "Eszköz modell"
 
 msgid "Device Pass-through"
-msgstr "Átmenő Eszköz"
+msgstr "Átmenő eszköz"
 
 msgid "Device Polling"
 msgstr "Eszköz lehívása"
@@ -2757,6 +2760,10 @@ msgstr "Kijelző"
 
 msgid "Display ZFS command history"
 msgstr "ZFS parancstörténelem megjelenítése"
+
+msgid ""
+"Display action buttons in the scrollable area instead of the footer area."
+msgstr "Műveletek gomb a görgethető területen legyen, ne a láblécen."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3386,6 +3393,12 @@ msgstr "Kijelölt Rsync feladatok bekapcsolása"
 msgid "Enable Selected Rsync Modules"
 msgstr "Kijelölt Rsync modulok bekapcsolása"
 
+msgid "Enable Server"
+msgstr ""
+
+msgid "Enable Setting"
+msgstr ""
+
 msgid "Enable TLS connections."
 msgstr "TLS kapcsolat engedélyezése."
 
@@ -3656,10 +3669,10 @@ msgid "Enter Email Address(es)"
 msgstr "Add meg az e-mail cím(ek)et"
 
 msgid "Enter IP Address"
-msgstr ""
+msgstr "Adja meg az IP címet"
 
 msgid "Enter Identifier"
-msgstr ""
+msgstr "Adja meg az azonosítót"
 
 msgid "Enter Password"
 msgstr "Add meg a jelszót"
@@ -3668,7 +3681,7 @@ msgid "Enter Subject"
 msgstr "Tárgy megadása"
 
 msgid "Enter Universally Unique Identifier"
-msgstr ""
+msgstr "Adja meg az univerzálisan egyedi azonosítót"
 
 msgid "Enter a comment"
 msgstr "Írj egy hozzászólást"
@@ -3706,7 +3719,7 @@ msgid "Enter a description"
 msgstr "Adj meg egy leírást"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Adja meg hivatkozása leírását"
 
 msgid "Enter a description for your reference."
 msgstr "Add meg a hivatkozás leírását."
@@ -3747,10 +3760,10 @@ msgstr ""
 "ikonra kattintva válaszd ki."
 
 msgid "Enter destination"
-msgstr ""
+msgstr "Adja meg a leírást"
 
 msgid "Enter facility name"
-msgstr ""
+msgstr "Adja meg a terület nevét"
 
 msgid "Enter full name of the user."
 msgstr "Add meg a felhasználó teljes nevét."
@@ -3762,7 +3775,7 @@ msgid "Enter hostname or IP address."
 msgstr "Add meg a kiszolgálónevét vagy az IP címét."
 
 msgid "Enter level name"
-msgstr ""
+msgstr "Adja meg a szint nevét"
 
 msgid "Enter login name"
 msgstr "Add meg a felhasználó bejelentkezési nevét"
@@ -3771,7 +3784,7 @@ msgid "Enter login name of the user."
 msgstr "Add meg a felhasználó bejelentkezési nevét."
 
 msgid "Enter smartctl pass-through type."
-msgstr ""
+msgstr "Adja meg a smartctlpass-through típusát."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Add meg a iSCSI cél IP címét vagy DNS nevét."
@@ -3999,7 +4012,7 @@ msgstr ""
 "klienstől kérnék az átvitelt."
 
 msgid "Facility"
-msgstr ""
+msgstr "Terület"
 
 msgid "Factory Defaults"
 msgstr "Gyári beállítások"
@@ -4168,7 +4181,7 @@ msgid "Follow"
 msgstr "Követés"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Törlés kikényszerítése"
 
 msgid "Force Operation"
 msgstr "Művelet kikényszerrítése"
@@ -4659,6 +4672,8 @@ msgstr ""
 msgid ""
 "If this message persists take a look at the system log for more information."
 msgstr ""
+"Amennyiben ez az üzenet többször megjelenik, nézze meg a rendszernaplót "
+"további információkért."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5192,7 +5207,7 @@ msgid "Leave this field empty to use default settings."
 msgstr "Az alapértelmezett beállításokhoz hagyd üresen."
 
 msgid "Level"
-msgstr ""
+msgstr "Szint"
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
@@ -5799,7 +5814,7 @@ msgid "Music"
 msgstr "Zene"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "5 és 1000 közötti szám kell, hogy legyen."
 
 msgid "Must choose one"
 msgstr "Válassz"
@@ -6060,7 +6075,7 @@ msgid "No pools have been selected"
 msgstr "Egy tárolót sem választott ki"
 
 msgid "No records found."
-msgstr ""
+msgstr "Egy bejegyzés sem található."
 
 msgid "No softraid-formatted disks available."
 msgstr "Egy softraid-formázott eszköz sincs."
@@ -6830,7 +6845,7 @@ msgid "Private key"
 msgstr "Privát kulcs"
 
 msgid "Process State"
-msgstr ""
+msgstr "Folyamatállapot"
 
 msgid "Processes"
 msgstr "Folyamatok"
@@ -6843,6 +6858,12 @@ msgstr "Profil"
 
 msgid "Properties"
 msgstr "Tulajdonságok"
+
+msgid "Protect"
+msgstr ""
+
+msgid "Protect Setting"
+msgstr ""
 
 msgid "Proto"
 msgstr "Proto"
@@ -7135,7 +7156,7 @@ msgid "Release Notes"
 msgstr "Kiadási megjegyzések"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Oldal újratöltése"
 
 msgid "Reload page"
 msgstr "Oldal újratöltése"
@@ -7766,7 +7787,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Önellenőrző, Analizáló és Nyilvántartó Technológia"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Önteszt időzítései"
 
 msgid "Send Buffer"
 msgstr "Küldő puffer"
@@ -7823,7 +7844,7 @@ msgid "September"
 msgstr "Szeptember"
 
 msgid "Serial Console"
-msgstr ""
+msgstr "Soros konzol"
 
 msgid "Serial Number"
 msgstr "Sorozatszám"
@@ -8642,7 +8663,7 @@ msgid "The UPS identifier and IP address"
 msgstr "A szünetmentes azonosítója és IP címe"
 
 msgid "The UUID of the record."
-msgstr ""
+msgstr "A bejegyzés UUID-je."
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "A VLAN azonosítónak 1 és 4094 között kell lennie."
@@ -9004,7 +9025,7 @@ msgid ""
 msgstr "Firmware települ. A szerver hamarosan automatikusan újraindul."
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "A következő hibákat észleltük"
 
 msgid "The following input errors were detected"
 msgstr "A következő bemeneti hibák fordultak elő"
@@ -9033,6 +9054,7 @@ msgstr ""
 
 msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
+"Az azonosítót ismeretlennek jelentette a smartctl, beleértve a zárójeleket."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "A kezdeti kivonat mód egyeztetett a kezdeményezővel."
@@ -10315,7 +10337,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "USB Mass tároló eszközö"
 
 msgid "UTF-8 Only"
 msgstr "Csak UTF-8"
@@ -10351,7 +10373,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison fájlszinkronizálás"
 
 msgid "Universally Unique Identifier"
-msgstr ""
+msgstr "Univerzálisan egyedi azonosító"
 
 msgid "Unix Charset"
 msgstr "Unix karaktergyűjtemény"
@@ -11211,7 +11233,7 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "syslog.conf"
-msgstr ""
+msgstr "syslog.conf"
 
 msgid "to"
 msgstr "eddig:"
