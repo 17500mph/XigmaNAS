@@ -378,7 +378,7 @@ class properties_int extends properties_text {
 		return $this;
 	}
 }
-class properties_uuid extends properties_text {
+class property_uuid extends properties_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->set_id('uuid');
@@ -440,5 +440,37 @@ class properties_bool extends properties {
 		else:
 			return false;
 		endif;
+	}
+}
+class property_enable extends properties_bool {
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
+		$this->set_id('enable');
+		$this->set_name('enable');
+		$this->set_title(gtext('Enable Setting'));
+		$this->set_caption(gtext('Enable'));
+		$this->set_description('');
+		$this->set_defaultvalue(true);
+		$this->filter_use_default();
+		$this->set_editableonadd(true);
+		$this->set_editableonmodify(true);
+		$this->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $this;
+	}
+}
+class property_protected extends properties_bool {
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
+		$this->set_id('protected');
+		$this->set_name('protected');
+		$this->set_title(gtext('Protect Setting'));
+		$this->set_caption(gtext('Protect'));
+		$this->set_description('');
+		$this->set_defaultvalue(false);
+		$this->filter_use_default();
+		$this->set_editableonadd(true);
+		$this->set_editableonmodify(true);
+		$this->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
 	}
 }
