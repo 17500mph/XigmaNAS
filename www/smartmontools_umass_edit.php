@@ -44,7 +44,7 @@ function get_sphere_smartmontools_umass_edit() {
 	$sphere->parent->basename('smartmontools_umass');
 	$sphere->notifier('smartmontools_umass');
 	$sphere->row_identifier('uuid');
-	$sphere->enadis(false);
+	$sphere->enadis(true);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add Record'));
 	$sphere->sym_mod(gtext('Edit Record'));
@@ -64,40 +64,25 @@ $prerequisites_ok = true;
 $input_errors = [];
 $prerequisites_ok = true;
 //	request method
-$server_request_method_regexp = '/^(GET|POST)$/';
-$server_request_method = filter_input(
-	INPUT_SERVER,
-	'REQUEST_METHOD',
-	FILTER_VALIDATE_REGEXP,
-	[
-		'flags' => FILTER_REQUIRE_SCALAR,
-		'options' => [
-			'default' => NULL,
-			'regexp' => $server_request_method_regexp
-]]);
+$methods = ['GET','POST'];
+$methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
+$method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
 //	determine page mode and validate resource id
-switch($server_request_method):
+switch($method):
 	default: // unsupported request method
 		$sphere->row[$sphere->row_identifier()] = NULL;
 		break;
 	case 'GET':
-		$action = filter_input(
-			INPUT_GET,
-			'submit',
-			FILTER_VALIDATE_REGEXP,
-			[
-				'flags' => FILTER_REQUIRE_SCALAR,
-				'options' => [
-					'default' => '',
-					'regexp' => '/^(add|edit)$/'
-		]]);
+		$actions = ['add','edit'];
+		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
+		$action = filter_input(INPUT_GET,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
 			default: // unsupported action
 				$sphere->row[$sphere->row_identifier()] = NULL;
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
 				$page_mode = PAGE_MODE_EDIT;
@@ -106,23 +91,16 @@ switch($server_request_method):
 		endswitch;
 		break;
 	case 'POST':
-		$action = filter_input(
-			INPUT_POST,
-			'submit',
-			FILTER_VALIDATE_REGEXP,
-			[
-				'flags' => FILTER_REQUIRE_SCALAR,
-				'options' => [
-					'default' => '',
-					'regexp' => '/^(add|cancel|edit|save)$/'
-		]]);
+		$actions = ['add','cancel','edit','save'];
+		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
+		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
 			default:  // unsupported action
 				$sphere->row[$sphere->row_identifier()] = NULL;
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->row_identifier()] =  $property->{$sphere->row_identifier()}->get_defaultvalue();
 				break;
 			case 'cancel': // cancel - nothing to do
 				$sphere->row[$sphere->row_identifier()] = NULL;
@@ -141,18 +119,18 @@ endswitch;
 /*
  *	exit if $sphere->row[$sphere->row_identifier()] is NULL
  */
-if(!isset($sphere->row[$sphere->row_identifier()])):
+if(is_null($sphere->get_row_identifier_value())):
 	header($sphere->parent->header());
 	exit;
 endif;
 /*
  *	search resource id in sphere
  */
-$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+$sphere->row_id = array_search_ex($sphere->get_row_identifier_value(),$sphere->grid,$sphere->row_identifier());
 /*
  *	start determine record update mode
  */
-$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]); // get updatenotify mode
+$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value()); // get updatenotify mode
 $record_mode = RECORD_ERROR;
 if(false === $sphere->row_id): // record does not exist in config
 	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_POST],true)): // ADD or POST
@@ -188,41 +166,41 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 /*
  *	end determine record update mode
  */
-$a_referer = ['name','type','description'];
+$a_referrer = ['description','enable','name','type'];
 switch($page_mode):
 	case PAGE_MODE_ADD:
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->get_defaultvalue();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 		endforeach;
 		break;
 	case PAGE_MODE_EDIT:
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_array_element($sphere->grid[$sphere->row_id]);
-			if(!isset($sphere->row[$referer])):
-				$sphere->row[$referer] = $sphere->grid[$sphere->row_id][$referer] ?? $property->$referer->get_defaultvalue();
-				$input_errors[] = $property->$referer->get_message_error();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid[$sphere->row_id]);
+			if(!isset($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $sphere->grid[$sphere->row_id][$referrer] ?? $property->{$referrer}->get_defaultvalue();
+				$input_errors[] = $property->{$referrer}->get_message_error();
 			endif;
 		endforeach;
 		break;
 	case PAGE_MODE_POST:
 		// apply post values that are applicable for all record modes
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_input();
-			if(!isset($sphere->row[$referer])):
-				$sphere->row[$referer] = $_POST[$referer] ?? $property->$referer->get_defaultvalue();
-				$input_errors[] = $property->$referer->get_message_error();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+			if(!isset($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $_POST[$referrer] ?? $property->{$referrer}->get_defaultvalue();
+				$input_errors[] = $property->{$referrer}->get_message_error();
 			endif;
 		endforeach;
 		if($prerequisites_ok && empty($input_errors)):
 			if($isrecordnew):
 				$sphere->grid[] = $sphere->row;
-				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->row_identifier()]);
+				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->get_row_identifier_value());
 			else:
 				foreach($sphere->row as $key => $value):
 					$sphere->grid[$sphere->row_id][$key] = $value;
 				endforeach;
 				if(UPDATENOTIFY_MODE_UNKNOWN == $updatenotify_mode):
-					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->row_identifier()]);
+					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->get_row_identifier_value());
 				endif;
 			endif;
 			write_config();
@@ -244,12 +222,14 @@ endif;
 //	add tab navigation
 $document->
 	add_area_tabnav()->
-		push()->add_tabnav_upper()->
+		push()->
+		add_tabnav_upper()->
 			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
 			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
 			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
 			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
-		pop()->add_tabnav_lower()->
+		pop()->
+		add_tabnav_lower()->
 			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
 			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
@@ -264,9 +244,11 @@ if(file_exists($d_sysrebootreqd_path)):
 endif;
 $content->add_table_data_settings()->
 	mount_colgroup_data_settings()->
-	push()->addTHEAD()->
-		c2_titleline(gtext('Settings'))->
-	pop()->addTBODY()->
+	push()->
+	addTHEAD()->
+		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false,gtext('Settings'))->
+	pop()->
+	addTBODY()->
 		c2_input_text($property->name,htmlspecialchars($sphere->row[$property->name->get_name()]),true,false)->
 		c2_input_text($property->type,htmlspecialchars($sphere->row[$property->type->get_name()]),false,false)->
 		c2_input_text($property->description,htmlspecialchars($sphere->row[$property->description->get_name()]),false,false);
