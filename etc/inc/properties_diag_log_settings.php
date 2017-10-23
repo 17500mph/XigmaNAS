@@ -34,51 +34,120 @@
 require_once 'properties.php';
 
 class properties_diag_log_settings {
-	public $reverse;
-	public $nentries;
-	public $resolve;
+	public $daemon;
 	public $disablecomp;
 	public $disablesecure;
-	public $system;
-	public $ftp;
-	public $rsyncd;
-	public $sshd;
-	public $smartd;
-	public $daemon;
-	public $ipaddr;
 	public $enable;
+	public $ftp;
+	public $ipaddr;
+	public $nentries;
+	public $resolve;
+	public $reverse;
+	public $rsyncd;
+	public $smartd;
+	public $sshd;
+	public $system;
 	
 	public function __construct() {
 		$this->load();
 	}
 	public function load() {
-		$this->reverse = $this->prop_reverse();
-		$this->nentries = $this->prop_nentries();
-		$this->resolve = $this->prop_resolve();
+		$this->daemon = $this->prop_daemon();
 		$this->disablecomp = $this->prop_disablecomp();
 		$this->disablesecure = $this->prop_disablesecure();
-		$this->system = $this->prop_system();
-		$this->ftp = $this->prop_ftp();
-		$this->rsyncd = $this->prop_rsyncd();
-		$this->sshd = $this->prop_sshd();
-		$this->smartd = $this->prop_smartd();
-		$this->daemon = $this->prop_daemon();
-		$this->ipaddr = $this->prop_ipaddr();
 		$this->enable = $this->prop_enable();
+		$this->ftp = $this->prop_ftp();
+		$this->ipaddr = $this->prop_ipaddr();
+		$this->nentries = $this->prop_nentries();
+		$this->resolve = $this->prop_resolve();
+		$this->reverse = $this->prop_reverse();
+		$this->rsyncd = $this->prop_rsyncd();
+		$this->smartd = $this->prop_smartd();
+		$this->sshd = $this->prop_sshd();
+		$this->system = $this->prop_system();
 		return $this;
 	}
-	private function prop_reverse(): properties_bool {
+	private function prop_daemon(): properties_bool {
 		$o = new properties_bool($this);
-		$o->set_id('reverse');
-		$o->set_name('reverse');
-		$o->set_title(gtext('Log Order'));
-		$o->set_caption(gtext('Show log entries in reverse order (newest entries on top).'));
+		$o->set_id('daemon');
+		$o->set_name('daemon');
+		$o->set_title(gtext('Daemon Events'));
+		$o->set_caption(gtext('Send daemon event messages.'));
 		$o->set_description('');
 		$o->set_defaultvalue(false);
 		$o->filter_use_default();
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_disablecomp(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('disablecomp');
+		$o->set_name('disablecomp');
+		$o->set_title(gtext('Compression'));
+		$o->set_caption(gtext('Disable the compression of repeating lines.'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_disablesecure(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('disablesecure');
+		$o->set_name('disablesecure');
+		$o->set_title(gtext('Remote Syslog Messages'));
+		$o->set_caption(gtext('Accept remote syslog messages.'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_enable(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('enable');
+		$o->set_name('enable');
+		$o->set_title(gtext('Enable Server'));
+		$o->set_caption(gtext('Enable'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_ftp(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('ftp');
+		$o->set_name('ftp');
+		$o->set_title(gtext('FTP Events'));
+		$o->set_caption(gtext('Send FTP event messages.'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_ipaddr(): properties_ipaddress {
+		$o = new properties_ipaddress($this);
+		$o->set_id('ipaddr');
+		$o->set_name('ipaddr');
+		$o->set_title(gtext('IP Address'));
+		$o->set_description(gtext('IP address of the remote syslog server.'));
+		$o->set_defaultvalue('');
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('This is not a valid IP Address.')));
 		return $o;
 	}
 	private function prop_nentries(): properties_int {
@@ -119,54 +188,12 @@ class properties_diag_log_settings {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_disablecomp(): properties_bool {
+	private function prop_reverse(): properties_bool {
 		$o = new properties_bool($this);
-		$o->set_id('disablecomp');
-		$o->set_name('disablecomp');
-		$o->set_title(gtext('Compression'));
-		$o->set_caption(gtext('Disable the compression of repeating lines.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
-	}
-	private function prop_disablesecure(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('disablesecure');
-		$o->set_name('disablesecure');
-		$o->set_title(gtext('Remote Syslog Messages'));
-		$o->set_caption(gtext('Accept remote syslog messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
-	}
-	private function prop_system(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('system');
-		$o->set_name('system');
-		$o->set_title(gtext('System Events'));
-		$o->set_caption(gtext('Send system event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
-	}
-	private function prop_ftp(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('ftp');
-		$o->set_name('ftp');
-		$o->set_title(gtext('FTP Events'));
-		$o->set_caption(gtext('Send FTP event messages.'));
+		$o->set_id('reverse');
+		$o->set_name('reverse');
+		$o->set_title(gtext('Log Order'));
+		$o->set_caption(gtext('Show log entries in reverse order (newest entries on top).'));
 		$o->set_description('');
 		$o->set_defaultvalue(false);
 		$o->filter_use_default();
@@ -189,20 +216,6 @@ class properties_diag_log_settings {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_sshd(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('sshd');
-		$o->set_name('sshd');
-		$o->set_title(gtext('SSH Events'));
-		$o->set_caption(gtext('Send SSH event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
-	}
 	private function prop_smartd(): properties_bool {
 		$o = new properties_bool($this);
 		$o->set_id('smartd');
@@ -217,12 +230,12 @@ class properties_diag_log_settings {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_daemon(): properties_bool {
+	private function prop_sshd(): properties_bool {
 		$o = new properties_bool($this);
-		$o->set_id('daemon');
-		$o->set_name('daemon');
-		$o->set_title(gtext('Daemon Events'));
-		$o->set_caption(gtext('Send daemon event messages.'));
+		$o->set_id('sshd');
+		$o->set_name('sshd');
+		$o->set_title(gtext('SSH Events'));
+		$o->set_caption(gtext('Send SSH event messages.'));
 		$o->set_description('');
 		$o->set_defaultvalue(false);
 		$o->filter_use_default();
@@ -231,25 +244,12 @@ class properties_diag_log_settings {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_ipaddr(): properties_ipaddress {
-		$o = new properties_ipaddress($this);
-		$o->set_id('ipaddr');
-		$o->set_name('ipaddr');
-		$o->set_title(gtext('IP Address'));
-		$o->set_description(gtext('IP address of the remote syslog server.'));
-		$o->set_defaultvalue('');
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('This is not a valid IP Address.')));
-		return $o;
-	}
-	private function prop_enable(): properties_bool {
+	private function prop_system(): properties_bool {
 		$o = new properties_bool($this);
-		$o->set_id('enable');
-		$o->set_name('enable');
-		$o->set_title(gtext('Remote Syslog Server'));
-		$o->set_caption(gtext('Enable'));
+		$o->set_id('system');
+		$o->set_name('system');
+		$o->set_title(gtext('System Events'));
+		$o->set_caption(gtext('Send system event messages.'));
 		$o->set_description('');
 		$o->set_defaultvalue(false);
 		$o->filter_use_default();
