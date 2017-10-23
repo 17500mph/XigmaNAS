@@ -49,18 +49,17 @@ $property = new properties_diag_log_settings();
 $sphere = &get_sphere_diag_log_settings();
 $input_errors = [];
 $savemsg = '';
-//	determine server request method
-$allowed_srm = ['POST'];
-$allowed_srmr = sprintf('/^(%s)$/',implode('|',$allowed_srm));
-$srm = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $allowed_srmr]]);
+//	request method
+$methods = ['GET','POST'];
+$methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
+$method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
 //	determine page mode
 $page_mode = PAGE_MODE_VIEW;
-switch($srm):
+switch($method):
 	case 'POST':
-		//	determine allowed POST actions
-		$apa = ['edit','save','cancel'];
-		$apar = sprintf('/^(%s)$/',implode('|',$apa));
-		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $apar]]);
+		$actions = ['edit','save','cancel'];
+		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
+		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
 			case 'edit':
 				$page_mode = PAGE_MODE_EDIT;
@@ -74,97 +73,122 @@ endswitch;
 switch($page_mode):
 	case PAGE_MODE_VIEW:
 	case PAGE_MODE_EDIT:
-		$sphere->row['reverse'] = $property->reverse->validate_config($sphere->grid);
-		$ref = 'nentries';
-		$sphere->row[$ref] = $property->$ref->validate_array_element($sphere->grid);
-		if(is_null($sphere->row[$ref])):
-			$input_errors[] = $property->$ref->get_message_error();
-			if(array_key_exists($ref,$sphere->grid) && is_scalar($sphere->grid[$ref])): 
-				$sphere->row[$ref] = $sphere->grid[$ref];
+		$a_referrer = [
+			$property->disablecomp->get_name(),
+			$property->disablesecure->get_name(),
+			$property->resolve->get_name(),
+			$property->reverse->get_name(),
+		];
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_config($sphere->grid);
+		endforeach;
+		$a_referrer = [
+			$property->daemon->get_name(),
+			$property->enable->get_name(),
+			$property->ftp->get_name(),
+			$property->rsyncd->get_name(),
+			$property->smartd->get_name(),
+			$property->sshd->get_name(),
+			$property->system->get_name(),
+		];
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_config($sphere->grid['remote']);
+		endforeach;
+		$referrer = $property->nentries->get_name();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid);
+		if(is_null($sphere->row[$referrer])):
+			$input_errors[] = $property->{$referrer}->get_message_error();
+			if(array_key_exists($referrer,$sphere->grid) && is_scalar($sphere->grid[$referrer])): 
+				$sphere->row[$referrer] = $sphere->grid[$referrer];
 			else:
-				$sphere->row[$ref] = $property->$ref->get_defaultvalue();
+				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 			endif;
 		endif;
-		$sphere->row['resolve'] = $property->resolve->validate_config($sphere->grid);
-		$sphere->row['disablecomp'] = $property->disablecomp->validate_config($sphere->grid);
-		$sphere->row['disablesecure'] = $property->disablesecure->validate_config($sphere->grid);
-		$sphere->row['enable'] = $property->enable->validate_config($sphere->grid['remote']);
-		$ref = 'ipaddr';
-		$sphere->row[$ref] = $property->$ref->validate_array_element($sphere->grid['remote']);
-		if(is_null($sphere->row[$ref])):
-			$throw_error = $sphere->row['enable'];
-			if(array_key_exists($ref,$sphere->grid['remote']) && is_string($sphere->grid['remote'][$ref])):
-				$sphere->row[$ref] = $sphere->grid['remote'][$ref];
-				if(preg_match('/\S/',$sphere->grid['remote'][$ref])):
+		$referrer = $property->ipaddr->get_name();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote']);
+		if(is_null($sphere->row[$referrer])):
+			$throw_error = $sphere->row[$property->enable->get_name()];
+			if(array_key_exists($referrer,$sphere->grid['remote']) && is_string($sphere->grid['remote'][$referrer])):
+				$sphere->row[$referrer] = $sphere->grid['remote'][$referrer];
+				if(preg_match('/\S/',$sphere->grid['remote'][$referrer])):
 					$throw_error = true;
 				endif;
 			else:
-				$sphere->row[$ref] = $property->$ref->get_defaultvalue();
+				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 			endif;
 			if($throw_error):
-				$input_errors[] = $property->$ref->get_message_error();
+				$input_errors[] = $property->{$referrer}->get_message_error();
 			endif;
 		endif;
-		$sphere->row['daemon'] = $property->daemon->validate_config($sphere->grid['remote']);
-		$sphere->row['ftp'] = $property->ftp->validate_config($sphere->grid['remote']);
-		$sphere->row['rsyncd'] = $property->rsyncd->validate_config($sphere->grid['remote']);
-		$sphere->row['smartd'] = $property->smartd->validate_config($sphere->grid['remote']);
-		$sphere->row['sshd'] = $property->sshd->validate_config($sphere->grid['remote']);
-		$sphere->row['system'] = $property->system->validate_config($sphere->grid['remote']);
 		break;
 	case PAGE_MODE_POST:
-		$sphere->row['reverse'] = $property->reverse->validate_input();
-		$ref = 'nentries';
-		$sphere->row[$ref] = $property->$ref->validate_input();
-		if(is_null($sphere->row[$ref])):
-			$input_errors[] = $property->$ref->get_message_error();
-			if(array_key_exists($ref,$_POST) && is_scalar($_POST[$ref])): 
-				$sphere->row[$ref] = $_POST[$ref];
+		$a_referrer = [
+			$property->disablecomp->get_name(),
+			$property->disablesecure->get_name(),
+			$property->resolve->get_name(),
+			$property->reverse->get_name(),
+			$property->daemon->get_name(),
+			$property->enable->get_name(),
+			$property->ftp->get_name(),
+			$property->rsyncd->get_name(),
+			$property->smartd->get_name(),
+			$property->sshd->get_name(),
+			$property->system->get_name(),
+		];
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		endforeach;
+		$referrer = $property->nentries->get_name();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		if(is_null($sphere->row[$referrer])):
+			$input_errors[] = $property->{$referrer}->get_message_error();
+			if(array_key_exists($referrer,$_POST) && is_scalar($_POST[$referrer])): 
+				$sphere->row[$referrer] = $_POST[$referrer];
 			else:
-				$sphere->row[$ref] = $property->$ref->get_defaultvalue();
+				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 			endif;
 		endif;
-		$sphere->row['resolve'] = $property->resolve->validate_input();
-		$sphere->row['disablecomp'] = $property->disablecomp->validate_input();
-		$sphere->row['disablesecure'] = $property->disablesecure->validate_input();
-		$sphere->row['enable'] = $property->enable->validate_input();
-		$ref = 'ipaddr';
-		$sphere->row[$ref] = $property->$ref->validate_input();
-		if(is_null($sphere->row[$ref])):
-			$throw_error = $sphere->row['enable'];
-			if(array_key_exists($ref,$_POST) && is_string($_POST[$ref])):
-				$sphere->row[$ref] = $_POST[$ref];
-				if(preg_match('/\S/',$_POST[$ref])):
+		$referrer = $property->ipaddr->get_name();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		if(is_null($sphere->row[$referrer])):
+			$throw_error = $sphere->row[$property->enable->get_name()];
+			if(array_key_exists($referrer,$_POST) && is_string($_POST[$referrer])):
+				$sphere->row[$referrer] = $_POST[$referrer];
+				if(preg_match('/\S/',$_POST[$referrer])):
 					$throw_error = true;
 				endif;
 			else:
-				$sphere->row[$ref] = $property->$ref->get_defaultvalue();
+				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 				$throw_error = true;
 			endif;
 			if($throw_error):
-				$input_errors[] = $property->$ref->get_message_error();
+				$input_errors[] = $property->{$referrer}->get_message_error();
 			endif;
 		endif;
-		$sphere->row['daemon'] = $property->daemon->validate_input();
-		$sphere->row['ftp'] = $property->ftp->validate_input();
-		$sphere->row['rsyncd'] = $property->rsyncd->validate_input();
-		$sphere->row['smartd'] = $property->smartd->validate_input();
-		$sphere->row['sshd'] = $property->sshd->validate_input();
-		$sphere->row['system'] = $property->system->validate_input();
 		if(empty($input_errors)):
-			$sphere->grid['reverse'] = $sphere->row['reverse'];
-			$sphere->grid['nentries'] = $sphere->row['nentries'];
-			$sphere->grid['resolve'] = $sphere->row['resolve'];
-			$sphere->grid['disablecomp'] = $sphere->row['disablecomp'];
-			$sphere->grid['disablesecure'] = $sphere->row['disablesecure'];
-			$sphere->grid['remote']['enable'] = $sphere->row['enable'];
-			$sphere->grid['remote']['ipaddr'] = $sphere->row['ipaddr'];
-			$sphere->grid['remote']['system'] = $sphere->row['system'];
-			$sphere->grid['remote']['ftp'] = $sphere->row['ftp'];
-			$sphere->grid['remote']['rsyncd'] = $sphere->row['rsyncd'];
-			$sphere->grid['remote']['sshd'] = $sphere->row['sshd'];
-			$sphere->grid['remote']['smartd'] = $sphere->row['smartd'];
-			$sphere->grid['remote']['daemon'] = $sphere->row['daemon'];
+			$a_referrer = [
+				$property->disablecomp->get_name(),
+				$property->disablesecure->get_name(),
+				$property->nentries->get_name(),
+				$property->resolve->get_name(),
+				$property->reverse->get_name()
+			];
+			foreach($a_referrer as $referrer):
+				$sphere->grid[$referrer] = $sphere->row[$referrer];
+			endforeach;
+			$a_referrer = [
+				$property->daemon->get_name(),
+				$property->enable->get_name(),
+				$property->ftp->get_name(),
+				$property->ipaddr->get_name(),
+				$property->rsyncd->get_name(),
+				$property->smartd->get_name(),
+				$property->sshd->get_name(),
+				$property->system->get_name()
+			];
+			foreach($a_referrer as $referrer):
+				$sphere->grid['remote'][$referrer] = $sphere->row[$referrer];
+			endforeach;
 			write_config();
 			$retval = 0;
 			if(!file_exists($d_sysrebootreqd_path)):
@@ -227,26 +251,26 @@ $content->
 			c2_titleline(gtext('Log Settings'))->
 			parentNode->
 		addTBODY()->
-			c2_checkbox($property->reverse,$sphere->row['reverse'],false,$is_readonly)->
-			c2_input_text($property->nentries,htmlspecialchars($sphere->row['nentries']),false,$is_readonly)->
-			c2_checkbox($property->resolve,$sphere->row['resolve'],false,$is_readonly)->
-			c2_checkbox($property->disablecomp,$sphere->row['disablecomp'],false,$is_readonly)->
-			c2_checkbox($property->disablesecure,$sphere->row['disablesecure'],false,$is_readonly);
+			c2_checkbox($property->reverse,$sphere->row[$property->reverse->get_name()],false,$is_readonly)->
+			c2_input_text($property->nentries,htmlspecialchars($sphere->row[$property->nentries->get_name()]),false,$is_readonly)->
+			c2_checkbox($property->resolve,$sphere->row[$property->resolve->get_name()],false,$is_readonly)->
+			c2_checkbox($property->disablecomp,$sphere->row[$property->disablecomp->get_name()],false,$is_readonly)->
+			c2_checkbox($property->disablesecure,$sphere->row[$property->disablesecure->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
 		mount_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline_with_checkbox($property->enable,$sphere->row['enable'],false,$is_readonly)->
+			c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,$is_readonly,gtext('Remote Syslog Server'))->
 			parentNode->
 		addTBODY()->
-			c2_input_text($property->ipaddr,htmlspecialchars($sphere->row['ipaddr']),false,$is_readonly)->
-			c2_checkbox($property->system,$sphere->row['system'],false,$is_readonly)->
-			c2_checkbox($property->ftp,$sphere->row['ftp'],false,$is_readonly)->
-			c2_checkbox($property->rsyncd,$sphere->row['rsyncd'],false,$is_readonly)->
-			c2_checkbox($property->sshd,$sphere->row['sshd'],false,$is_readonly)->
-			c2_checkbox($property->smartd,$sphere->row['smartd'],false,$is_readonly)->
-			c2_checkbox($property->daemon,$sphere->row['daemon'],false,$is_readonly);
+			c2_input_text($property->ipaddr,htmlspecialchars($sphere->row[$property->ipaddr->get_name()]),false,$is_readonly)->
+			c2_checkbox($property->system,$sphere->row[$property->system->get_name()],false,$is_readonly)->
+			c2_checkbox($property->ftp,$sphere->row[$property->ftp->get_name()],false,$is_readonly)->
+			c2_checkbox($property->rsyncd,$sphere->row[$property->rsyncd->get_name()],false,$is_readonly)->
+			c2_checkbox($property->sshd,$sphere->row[$property->sshd->get_name()],false,$is_readonly)->
+			c2_checkbox($property->smartd,$sphere->row[$property->smartd->get_name()],false,$is_readonly)->
+			c2_checkbox($property->daemon,$sphere->row[$property->daemon->get_name()],false,$is_readonly);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
