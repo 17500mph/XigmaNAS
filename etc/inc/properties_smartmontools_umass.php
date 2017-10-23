@@ -34,23 +34,53 @@
 require_once 'properties.php';
 
 class properties_smartmontools_umass {
-	public $uuid;
+	public $description;
+	public $enable;
 	public $name;
 	public $type;
-	public $description;
+	public $uuid;
 
 	public function __construct() {
 		$this->load();
 	}
 	public function load() {
-		$this->uuid = $this->prop_uuid();
+		$this->description = $this->prop_description();
+		$this->enable = $this->prop_enable();
 		$this->name = $this->prop_name();
 		$this->type = $this->prop_type();
-		$this->description = $this->prop_description();
+		$this->uuid = $this->prop_uuid();
 		return $this;
 	}
-	private function prop_uuid(): properties_uuid {
-		$o = new properties_uuid($this);
+	private function prop_description(): properties_text {
+		$o = new properties_text($this);
+		$o->set_id('description');
+		$o->set_name('description');
+		$o->set_title(gtext('Description'));
+//		$o->set_description('');
+		$o->set_defaultvalue('');
+		$o->set_size(60);
+		$o->set_maxlength(256);
+		$o->set_placeholder(gtext('Enter a description for your reference'));
+		$o->set_filter(FILTER_VALIDATE_REGEXP);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => NULL,'regexp' => '/.*/']);
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_enable(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('enable');
+		$o->set_name('enable');
+		$o->set_title(gtext('Enable Setting'));
+		$o->set_caption(gtext('Enable'));
+		$o->set_description('');
+		$o->set_defaultvalue(true);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_name(): properties_text {
@@ -87,22 +117,8 @@ class properties_smartmontools_umass {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
-	private function prop_description(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('description');
-		$o->set_name('description');
-		$o->set_title(gtext('Description'));
-//		$o->set_description('');
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(256);
-		$o->set_placeholder(gtext('Enter a description for your reference'));
-		$o->set_filter(FILTER_VALIDATE_REGEXP);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => NULL,'regexp' => '/.*/']);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+	private function prop_uuid(): properties_uuid {
+		$o = new properties_uuid($this);
 		return $o;
 	}
 }
