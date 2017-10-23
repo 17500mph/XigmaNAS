@@ -81,7 +81,7 @@ switch($method):
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
 				$page_mode = PAGE_MODE_EDIT;
@@ -99,7 +99,7 @@ switch($method):
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
 				break;
 			case 'cancel': // cancel - nothing to do
 				$sphere->row[$sphere->row_identifier()] = NULL;
@@ -118,18 +118,18 @@ endswitch;
 /*
  *	exit if $sphere->row[$sphere->row_identifier()] is NULL
  */
-if(!isset($sphere->row[$sphere->row_identifier()])):
+if(is_null($sphere->get_row_identifier_value())):
 	header($sphere->parent->header());
 	exit;
 endif;
 /*
  *	search resource id in sphere
  */
-$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+$sphere->row_id = array_search_ex($sphere->get_row_identifier_value(),$sphere->grid,$sphere->row_identifier());
 /*
  *	start determine record update mode
  */
-$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]); // get updatenotify mode
+$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value()); // get updatenotify mode
 $record_mode = RECORD_ERROR;
 if(false === $sphere->row_id): // record does not exist in config
 	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_POST],true)): // ADD or POST
@@ -165,41 +165,47 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 /*
  *	end determine record update mode
  */
-$a_referer = ['enable','facility','level','value','comment'];
+$a_referrer = [
+	$property->enable->get_name(),
+	$property->facility->get_name(),
+	$property->level->get_name(),
+	$property->value->get_name(),
+	$property->comment->get_name()
+];
 switch($page_mode):
 	case PAGE_MODE_ADD:
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->get_defaultvalue();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 		endforeach;
 		break;
 	case PAGE_MODE_EDIT:
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_array_element($sphere->grid[$sphere->row_id]);
-			if(!isset($sphere->row[$referer])):
-				$sphere->row[$referer] = $sphere->grid[$sphere->row_id][$referer] ?? $property->$referer->get_defaultvalue();
-				$input_errors[] = $property->$referer->get_message_error();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid[$sphere->row_id]);
+			if(!isset($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $sphere->grid[$sphere->row_id][$referrer] ?? $property->{$referrer}->get_defaultvalue();
+				$input_errors[] = $property->{$referrer}->get_message_error();
 			endif;
 		endforeach;
 		break;
 	case PAGE_MODE_POST:
 		// apply post values that are applicable for all record modes
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_input();
-			if(!isset($sphere->row[$referer])):
-				$sphere->row[$referer] = $_POST[$referer] ?? $property->$referer->get_defaultvalue();
-				$input_errors[] = $property->$referer->get_message_error();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+			if(!isset($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $_POST[$referrer] ?? $property->{$referrer}->get_defaultvalue();
+				$input_errors[] = $property->{$referrer}->get_message_error();
 			endif;
 		endforeach;
 		if($prerequisites_ok && empty($input_errors)):
 			if($isrecordnew):
 				$sphere->grid[] = $sphere->row;
-				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->row_identifier()]);
+				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->get_row_identifier_value());
 			else:
 				foreach($sphere->row as $key => $value):
 					$sphere->grid[$sphere->row_id][$key] = $value;
 				endforeach;
 				if(UPDATENOTIFY_MODE_UNKNOWN == $updatenotify_mode):
-					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->row_identifier()]);
+					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->get_row_identifier_value());
 				endif;
 			endif;
 			write_config();
@@ -245,9 +251,11 @@ if(file_exists($d_sysrebootreqd_path)):
 endif;
 $content->add_table_data_settings()->
 	mount_colgroup_data_settings()->
-	push()->addTHEAD()->
-		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false)->
-	pop()->addTBODY()->
+	push()->
+	addTHEAD()->
+		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false,gtext('Configuration'))->
+	pop()->
+	addTBODY()->
 		c2_input_text($property->facility,htmlspecialchars($sphere->row[$property->facility->get_name()]),true,false)->
 		c2_input_text($property->level,htmlspecialchars($sphere->row[$property->level->get_name()]),false,false)->
 		c2_input_text($property->value,htmlspecialchars($sphere->row[$property->value->get_name()]),false,false)->
