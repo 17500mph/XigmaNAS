@@ -38,6 +38,7 @@ require_once 'properties_syslogconf.php';
 
 function system_syslogconf_get_sphere() {
 	global $config;
+	
 	$sphere = new co_sphere_grid('system_syslogconf','php');
 	$sphere->modify->basename($sphere->basename() . '_edit');
 	$sphere->notifier('syslogconf');
@@ -83,14 +84,30 @@ function syslogconf_process_updatenotification($mode,$data) {
 //	init properties and sphere
 $property = new properties_syslogconf();
 $sphere = &system_syslogconf_get_sphere();
-
+//	silent fix identifier
+if(false !== $sphere->row_identifier()):
+	$updateconfig = false;
+	foreach($sphere->grid as $sphere->row_id => $sphere->row):
+		if(is_array($sphere->row)):
+			if(is_null($property->{$sphere->row_identifier()}->validate_array_element($sphere->row))):
+				$sphere->grid[$sphere->row_id][$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
+				$updateconfig = true;
+			endif;
+		else:
+			unset($sphere->grid[$sphere->row_id]);
+			$updateconfig = true;
+		endif;
+	endforeach;
+	if($updateconfig):
+		write_config();
+	endif;
+endif;
 $methods = ['GET','POST'];
 $methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
 $method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
 switch($method):
 	case 'POST':
 		$actions = ['apply',$sphere->get_cbm_button_val_enable(),$sphere->get_cbm_button_val_disable(),$sphere->get_cbm_button_val_toggle(),$sphere->get_cbm_button_val_delete()];
-		/* @var $actions_regexp string */
 		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
 		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
@@ -112,8 +129,8 @@ switch($method):
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
-						if(!(isset($sphere->grid[$sphere->row_id]['enable']))):
-							$sphere->grid[$sphere->row_id]['enable'] = true;
+						if(!(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()]))):
+							$sphere->grid[$sphere->row_id][$property->enable->get_name()] = true;
 							$updateconfig = true;
 							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
@@ -134,8 +151,8 @@ switch($method):
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
-						if(isset($sphere->grid[$sphere->row_id]['enable'])):
-							unset($sphere->grid[$sphere->row_id]['enable']);
+						if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()])):
+							unset($sphere->grid[$sphere->row_id][$property->enable->get_name()]);
 							$updateconfig = true;
 							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
@@ -156,10 +173,10 @@ switch($method):
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
-						if(isset($sphere->grid[$sphere->row_id]['enable'])):
-							unset($sphere->grid[$sphere->row_id]['enable']);
+						if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()])):
+							unset($sphere->grid[$sphere->row_id][$property->enable->get_name()]);
 						else:
-							$sphere->grid[$sphere->row_id]['enable'] = true;					
+							$sphere->grid[$sphere->row_id][$property->enable->get_name()] = true;					
 						endif;
 						$updateconfig = true;
 						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
@@ -229,7 +246,7 @@ $document->
 			mount_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
 			mount_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
 			mount_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			mount_tabnav_record($sphere->scriptname(),gtext('syslog.conf'),gtext('Reload page'),true);
+			mount_tabnav_record('system_syslogconf.php',gtext('syslog.conf'),gtext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -265,23 +282,28 @@ if($record_exists):
 	foreach ($sphere->grid as $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
-		$is_notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+		$is_enabled = $sphere->enadis() ? isset($sphere->row[$property->enable->get_name()]) : true;
+		$is_notprotected = $sphere->lock() ? !isset($sphere->row[$property->protected->get_name()]) : true;
 		$src = ($is_enabled) ? $g_img['ena'] : $g_img['dis'];
 		$title = ($is_enabled) ? gtext('Enabled') : gtext('Disabled');
-
-		$tr = $tbody->addTR();
-		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected));
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->facility->get_name()] ?? ''));
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->level->get_name()] ?? ''));
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->value->get_name()] ?? ''));
-		$tr->addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->addA(['title' => $title])->mountIMG(['src' => $src,'alt' => '']);
-		$tr->addTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->comment->get_name()] ?? ''));
-		$tr->
-			add_toolbox_area()->
-				mount_toolbox($sphere,$is_notprotected,$is_notdirty)->
-				mountTD()->
-				mountTD();
+		$tbody->
+			addTR()->
+				push()->
+				addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->
+					mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
+				pop()->
+				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->facility->get_name()] ?? ''))->
+				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->level->get_name()] ?? ''))->
+				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->value->get_name()] ?? ''))->
+				push()->
+				addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->
+					addA(['title' => $title])->mountIMG(['src' => $src,'alt' => ''])->
+				pop()->
+				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->comment->get_name()] ?? ''))->
+				add_toolbox_area()->
+					mount_toolbox($sphere,$is_notprotected,$is_notdirty)->
+					mountTD()->
+					mountTD();
 	endforeach;
 else:
 	$tbody->mount_no_records_found($n_col_width);
