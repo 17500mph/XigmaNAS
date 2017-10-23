@@ -2313,9 +2313,9 @@ trait co_DOMTools {
 		
 		$div_attributes = ['id' => 'submit'];
 		if($use_config_setting):
-			$referer = 'adddivsubmittodataframe';
+			$referrer = 'adddivsubmittodataframe';
 			$root = $this->ownerDocument ?? $this;
-			if(isset($config['system'][$referer]) && (is_bool($config['system'][$referer]) ? $config['system'][$referer] : true)):
+			if(isset($config['system'][$referrer]) && (is_bool($config['system'][$referrer]) ? $config['system'][$referrer] : true)):
 				$target = $root->getElementById('area_data_frame') ?? $this;
 				$subnode = $target->addDIV($div_attributes);
 			else:
