@@ -37,6 +37,7 @@ class properties_smartmontools_umass {
 	public $description;
 	public $enable;
 	public $name;
+	public $protected;
 	public $type;
 	public $uuid;
 
@@ -47,6 +48,7 @@ class properties_smartmontools_umass {
 		$this->description = $this->prop_description();
 		$this->enable = $this->prop_enable();
 		$this->name = $this->prop_name();
+		$this->protected = $this->prop_protected();
 		$this->type = $this->prop_type();
 		$this->uuid = $this->prop_uuid();
 		return $this;
@@ -93,6 +95,20 @@ class properties_smartmontools_umass {
 		$o->set_size(60);
 		$o->set_maxlength(64);
 		$o->set_placeholder(gtext('Enter Identifier'));
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_protected(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('protected');
+		$o->set_name('protected');
+		$o->set_title(gtext('Protect Setting'));
+		$o->set_caption(gtext('Protect'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
 		$o->filter_use_default();
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
