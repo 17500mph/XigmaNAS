@@ -1129,9 +1129,12 @@ function parse_umass_controller(&$device) {
 			$a_param = &array_make_branch($config,'smartmontools','umass','param');
 			$key = array_search_ex($name,$a_param,'name');
 			if(false !== $key):
-				$value = $a_param[$key]['type'] ?? '';
-				$device['smart']['devicetype'] = $value;
-				$device['smart']['devicetypearg'] = $value;
+				$is_enabled = isset($a_param[$key]['enable']) && (is_bool($a_param[$key]['enable']) ? $a_param[$key]['enable'] : true);
+				if($is_enabled):
+					$value = $a_param[$key]['type'] ?? '';
+					$device['smart']['devicetype'] = $value;
+					$device['smart']['devicetypearg'] = $value;
+				endif;
 			endif;	
 			break;
 		endif;
