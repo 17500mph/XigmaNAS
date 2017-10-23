@@ -115,7 +115,7 @@ switch($method):
 				$retval = 0;
 				$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
 				config_lock();
-				$retval |= rc_update_service('syslogd');
+				$retval |= rc_restart_service('syslogd');
 				config_unlock();
 				$savemsg = get_std_save_message($retval);
 				if($retval == 0):
