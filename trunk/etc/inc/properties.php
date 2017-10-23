@@ -31,6 +31,9 @@
   of the authors and should not be interpreted as representing official policies,
   either expressed or implied, of the NAS4Free Project.
  */
+
+require_once 'util.inc';
+
 abstract class properties {
 	protected $owner = NULL;
 	protected $v_id = NULL;
@@ -382,7 +385,6 @@ class properties_uuid extends properties_text {
 		$this->set_name('uuid');
 		$this->set_title(gtext('Universally Unique Identifier'));
 		$this->set_description(gtext('The UUID of the record.'));
-		$this->set_defaultvalue(uuid());
 		$this->set_size(45);
 		$this->set_maxlength(36);
 		$this->set_placeholder(gtext('Enter Universally Unique Identifier'));
@@ -396,6 +398,9 @@ class properties_uuid extends properties_text {
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
 		$this->set_filter_options(['default' => NULL,'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i'],$filter_name);
 		return $this;
+	}
+	public function get_defaultvalue() {
+		return uuid();
 	}
 }
 class properties_list extends properties {
