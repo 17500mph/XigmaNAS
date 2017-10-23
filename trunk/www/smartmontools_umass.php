@@ -85,6 +85,24 @@ $sphere = &get_sphere_smartmontools_umass();
 $input_errors = [];
 $prerequisites_ok = true;
 $errormsg = '';
+//	silent fix identifier
+if(false !== $sphere->row_identifier()):
+	$updateconfig = false;
+	foreach($sphere->grid as $sphere->row_id => $sphere->row):
+		if(is_array($sphere->row)):
+			if(is_null($property->{$sphere->row_identifier()}->validate_array_element($sphere->row))):
+				$sphere->grid[$sphere->row_id][$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
+				$updateconfig = true;
+			endif;
+		else:
+			unset($sphere->grid[$sphere->row_id]);
+			$updateconfig = true;
+		endif;
+	endforeach;
+	if($updateconfig):
+		write_config();
+	endif;
+endif;
 //	request method
 $methods = ['GET','POST'];
 $methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
