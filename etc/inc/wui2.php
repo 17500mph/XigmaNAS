@@ -1819,7 +1819,7 @@ trait co_DOMTools {
 		$this->addTR($tr_attributes)->addTH($th_attributes)->addSPAN($spanleft_attributes,$title);
 		return $this;
 	}
-	public function mount_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,int $colspan = 0) {
+	public function mount_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,string $title = '',int $colspan = 0) {
 		$tr_attributes = ['id' => sprintf('%s_tr',$p->get_id())];
 		$th_attributes = ['class' => 'lhetop'];
 		if($colspan > 0):
@@ -1846,7 +1846,7 @@ trait co_DOMTools {
 		endif;
 		$span_attributes = ['class' => 'cblot'];
 		$th = $this->addTR($tr_attributes)->addTH($th_attributes);
-		$th->addSPAN($spanleft_attributes,$p->get_title());
+		$th->addSPAN($spanleft_attributes,$title);
 		$label = $th->addSPAN($spanright_attributes)->addElement('label');
 		$label->addElement('input',$input_attributes);
 		$label->addSPAN($span_attributes,$p->get_caption());
@@ -2303,8 +2303,8 @@ trait co_DOMTools {
 		$this->mount_titleline($title,2);
 		return $this;
 	}
-	public function c2_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->mount_titleline_with_checkbox($p,$value,$is_required,$is_readonly,2);
+	public function c2_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,string $title = '') {
+		$this->mount_titleline_with_checkbox($p,$value,$is_required,$is_readonly,$title,2);
 		return $this;
 	}
 	//	submit area macros
