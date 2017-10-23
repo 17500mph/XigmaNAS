@@ -39,34 +39,50 @@ require_once 'properties.php';
  * - Enable property method.
  */
 class properties_syslogconf {
-	public $uuid;
+	public $comment;
 	public $enable;
 	public $facility;
 	public $level;
+	public $protected;
+	public $uuid;
 	public $value;
-	public $comment;
 
 	public function __construct() {
 		$this->load();
 	}
 	public function load() {
-		$this->uuid = $this->prop_uuid();
+		$this->comment = $this->prop_comment();
 		$this->enable = $this->prop_enable();
 		$this->facility = $this->prop_facility();
 		$this->level = $this->prop_level();
+		$this->protected = $this->prop_protected();
+		$this->uuid = $this->prop_uuid();
 		$this->value = $this->prop_value();
-		$this->comment = $this->prop_comment();
 		return $this;
 	}
-	private function prop_uuid(): properties_uuid {
-		$o = new properties_uuid($this);
+	private function prop_comment(): properties_text {
+		$o = new properties_text($this);
+		$o->set_id('comment');
+		$o->set_name('comment');
+		$o->set_title(gtext('Description'));
+		$o->set_description('');
+		$o->set_placeholder(gtext('Enter a description'));
+		$o->set_defaultvalue('');
+		$o->set_size(60);
+		$o->set_maxlength(80);
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_filter(FILTER_UNSAFE_RAW);
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
+		$o->set_filter_options(['default' => '']);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
 	private function prop_enable(): properties_bool {
 		$o = new properties_bool($this);
 		$o->set_id('enable');
 		$o->set_name('enable');
-		$o->set_title(gtext('Configuration'));
+		$o->set_title(gtext('Enable Setting'));
 		$o->set_caption(gtext('Enable'));
 		$o->set_description('');
 		$o->set_defaultvalue(true);
@@ -108,6 +124,24 @@ class properties_syslogconf {
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
+	private function prop_protected(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('protected');
+		$o->set_name('protected');
+		$o->set_title(gtext('Protect Setting'));
+		$o->set_caption(gtext('Protect'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_uuid(): properties_uuid {
+		$o = new properties_uuid($this);
+		return $o;
+	}
 	private function prop_value(): properties_text {
 		$o = new properties_text($this);
 		$o->set_id('value');
@@ -121,24 +155,6 @@ class properties_syslogconf {
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
 		$o->filter_use_default();
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
-	}
-	private function prop_comment(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('comment');
-		$o->set_name('comment');
-		$o->set_title(gtext('Description'));
-		$o->set_description('');
-		$o->set_placeholder(gtext('Enter a description'));
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(80);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_filter(FILTER_UNSAFE_RAW);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => '']);
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
 		return $o;
 	}
