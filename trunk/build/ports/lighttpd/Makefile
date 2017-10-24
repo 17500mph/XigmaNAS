@@ -1,5 +1,5 @@
 PORTNAME=	lighttpd
-PORTVERSION=	1.4.45
+PORTVERSION=	1.4.47
 PORTREVISION=	0
 CATEGORIES=		www
 COMMENT=		A secure, fast, compliant, and very flexible Web Server
@@ -80,6 +80,8 @@ do-install:
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_uploadprogress.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_userdir.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_usertrack.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_vhostdb.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_webdav.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_wstunnel.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 
 .include <bsd.port.mk>

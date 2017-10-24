@@ -264,7 +264,7 @@ function authentication_change() {
 					<?php
 					html_checkbox("dirlisting", gtext("Directory listing"), !empty($pconfig['dirlisting']) ? true : false, gtext("Enable directory listing."), gtext("A directory listing is generated when no index-files (index.php, index.html, index.htm or default.htm) are found in a directory."), false);
 					$helpinghand = '<a href="'
-						. 'http://redmine.lighttpd.net/projects/lighttpd/wiki'
+						. 'https://redmine.lighttpd.net/projects/lighttpd/wiki'
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
