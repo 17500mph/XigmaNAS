@@ -1834,6 +1834,9 @@ copy_files() {
 			echo "===> Start copy new php71-APCu files to ports/devel/"
 			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/php71-APCu /usr/ports/devel
 			echo "===> Copy new files to /usr/ports/devel/php71-APCu done!"
+			echo "===> Start copy new patch file to ports/emulators/"
+			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/virtualbox-ose/files/patch-src_VBox_HostServices_SharedClipboard_x11-stub.cpp /usr/ports/emulators/virtualbox-ose/files/
+			echo "===> Copy new files to /usr/ports/emulators/virtualbox-ose/files/ done!"
 	return 0
 }
 build_ports() {
