@@ -21,8 +21,8 @@ DOS2UNIX_REGEX=	.*\.(php|txt|js|css|html)
 ETCDIR=		${WWWDIR}
 
 post-patch:
-	@${MV} ${WRKSRC}/endpoints/lib/vboxweb-5.0.wsdl ${WRKSRC}/endpoints/lib/vboxweb-5.1.wsdl
-	@${MV} ${WRKSRC}/endpoints/lib/vboxwebService-5.0.wsdl ${WRKSRC}/endpoints/lib/vboxwebService-5.1.wsdl
+	@${MV} ${WRKSRC}/endpoints/lib/vboxweb-5.0.wsdl ${WRKSRC}/endpoints/lib/vboxweb-5.2.wsdl
+	@${MV} ${WRKSRC}/endpoints/lib/vboxwebService-5.0.wsdl ${WRKSRC}/endpoints/lib/vboxwebService-5.2.wsdl
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
@@ -36,7 +36,5 @@ do-install:
 	@${RM} -f ${STAGEDIR}${WWWDIR}/*.txt
 	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${WWWDIR}
 	@${CP} -Rpv ${STAGEDIR}${WWWDIR} ${NAS4FREE_ROOTFS}${PREFIX}/www
-# NAS4Free workaround incompatible version message
-#	@${MV} ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxwebService-5.0.wsdl ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxwebService-5.1.wsdl
-#	@${MV} ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxweb-5.0.wsdl ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxweb-5.1.wsdl
+
 .include <bsd.port.mk>
