@@ -1289,6 +1289,8 @@ function config_upgrade() {
 		endif;
 		$config['version'] = '3.4';
 	endif;
+	/*	Convert 3.4 -> 3.5 */
+	/*	syslogd parameter */
 	if($config['version'] === '3.4'):
 		array_make_branch($config,'system','syslogconf','param');
 		$config['system']['syslogconf']['param'][] = [
@@ -1298,7 +1300,6 @@ function config_upgrade() {
 			'value' => '/dev/console',
 			'comment' => 'default setting',
 			'enable' => true
-
 		];
 		$config['version'] = '3.5';
 	endif;
@@ -1307,9 +1308,9 @@ function config_upgrade() {
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
 
-	if (is_booting())
-		echo "done\n";
-
+	if(is_booting()):
+		echo 'done',PHP_EOL;
+	endif;
 	return 0;
 }
 
