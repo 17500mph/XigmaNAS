@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- NAS4Free default system configuration -->
 <nas4free>
-	<version>3.4</version>
+	<version>3.5</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>nas4free</hostname>
@@ -402,6 +402,15 @@
 			</param>
 			-->
 		</sysctl>
+		<syslogconf>
+			<param>
+				<uuid>43b57288-90c1-44ff-91f7-22e5f5b9bbbe</uuid>
+				<facility>console</facility>
+				<level>debug</level>
+				<value>/dev/console</value>
+				<comment/>
+			</param>
+		</syslogconf>
 		<!--
 		<hosts>
 			<uuid>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</uuid>

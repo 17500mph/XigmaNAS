@@ -1289,6 +1289,20 @@ function config_upgrade() {
 		endif;
 		$config['version'] = '3.4';
 	endif;
+	if($config['version'] === '3.4'):
+		array_make_branch($config,'system','syslogconf','param');
+		$config['system']['syslogconf']['param'][] = [
+			'uuid' => uuid(),
+			'facility' => 'console',
+			'level' => 'debug',
+			'value' => '/dev/console',
+			'comment' => 'default setting',
+			'enable' => true
+
+		];
+		$config['version'] = '3.5';
+	endif;
+	
 	
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
