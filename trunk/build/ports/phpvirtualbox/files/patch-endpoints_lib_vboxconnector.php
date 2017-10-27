@@ -1,11 +1,11 @@
---- /usr/local/nas4free/svn/build/ports/phpvirtualbox/work/phpvirtualbox-65ebced/endpoints/lib/vboxconnector.php.orig	2017-08-31 00:23:08.867384000 +0200
-+++ /usr/local/nas4free/svn/build/ports/phpvirtualbox/work/phpvirtualbox-65ebced/endpoints/lib/vboxconnector.php	2017-09-01 20:15:19.000000000 +0200
+--- endpoints/lib/vboxconnector.php.orig	2017-10-25 23:27:18.693234000 +0200
++++ endpoints/lib/vboxconnector.php	2017-10-27 21:19:01.000000000 +0200
 @@ -1126,7 +1126,7 @@
  			// Try to register medium.
  			foreach($checks as $iso) {
  				try {
 -					$gem = $this->vbox->openMedium($iso,'DVD','ReadOnly');
-+					$gem = $this->vbox->openMedium($iso,'DVD','ReadOnly',null);
++					$gem = $this->vbox->openMedium($iso,'DVD','ReadOnly',false);
  					break;
  				} catch (Exception $e) {
  					// Ignore
@@ -23,7 +23,7 @@
  								}
  							} else {
 -								$med = $this->vbox->openMedium($ma['medium']['location'],$ma['type']);
-+								$med = $this->vbox->openMedium($ma['medium']['location'],$ma['type'],null,null);
++								$med = $this->vbox->openMedium($ma['medium']['location'],$ma['type'],'ReadWrite',false);
  							}
  						} else {
  							$med = null;
@@ -36,12 +36,21 @@
  				$eprops = array_combine($eprops[1],$eprops[0]);
  				$iprops = array_map(create_function('$a','$b=explode("=",$a); return array($b[0]=>$b[1]);'),preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
  				$inprops = array();
+@@ -1942,7 +1942,7 @@
+ 			if($args['bootOrder'][$i]) {
+ 				$m->setBootOrder(($i + 1),$args['bootOrder'][$i]);
+ 			} else {
+-				$m->setBootOrder(($i + 1),null);
++				$m->setBootOrder(($i + 1),'Null');
+ 			}
+ 		}
+ 
 @@ -2028,7 +2028,7 @@
  						}
  					} else {
  						/* @var $med IMedium */
 -						$med = $this->vbox->openMedium($ma['medium']['location'],$ma['type']);
-+						$med = $this->vbox->openMedium($ma['medium']['location'],$ma['type'],null,null);
++						$med = $this->vbox->openMedium($ma['medium']['location'],$ma['type'],'ReadWrite',false);
  					}
  				} else {
  					$med = null;
@@ -81,7 +90,7 @@
  			$delete = $machine->unregister('DetachAllReturnHardDisksOnly');
  			foreach($delete as $hd) {
 -				$hds[] = $this->vbox->openMedium($hd->location,'HardDisk')->handle;
-+				$hds[] = $this->vbox->openMedium($hd->location,'HardDisk',null,null)->handle;
++				$hds[] = $this->vbox->openMedium($hd->location,'HardDisk','ReadWrite',false)->handle;
  			}
  
  			/* @var $progress IProgress */
@@ -99,7 +108,7 @@
  				$sc->releaseRemote();
  
 -				$m = $this->vbox->openMedium($args['disk'],'HardDisk');
-+				$m = $this->vbox->openMedium($args['disk'],'HardDisk',null,null);
++				$m = $this->vbox->openMedium($args['disk'],'HardDisk','ReadWrite',false);
  
  				$this->session->machine->attachDevice(trans($HDbusType,'UIMachineSettingsStorage'),0,0,'HardDisk',$m->handle);
  
@@ -135,7 +144,7 @@
  	    $this->connect();
  
 -	    $m = $this->vbox->openMedium($args['medium'],'HardDisk');
-+	    $m = $this->vbox->openMedium($args['medium'],'HardDisk',null,null);
++	    $m = $this->vbox->openMedium($args['medium'],'HardDisk','ReadWrite',false);
  
  	    $retval = $m->checkEncryptionPassword($args['password']);
  
@@ -144,7 +153,7 @@
  	    $this->connect();
  
 -	    $m = $this->vbox->openMedium($args['medium'], 'HardDisk', 'ReadWrite');
-+	    $m = $this->vbox->openMedium($args['medium'], 'HardDisk', 'ReadWrite',null);
++	    $m = $this->vbox->openMedium($args['medium'], 'HardDisk', 'ReadWrite', false);
  
  	    /* @var $progress IProgress */
  	    $progress = $m->changeEncryption($args['old_password'],
@@ -153,7 +162,7 @@
  		$this->connect();
  
 -		$m = $this->vbox->openMedium($args['medium'], 'HardDisk');
-+		$m = $this->vbox->openMedium($args['medium'], 'HardDisk',null,null);
++		$m = $this->vbox->openMedium($args['medium'], 'HardDisk', 'ReadWrite', false);
  
  		/* @var $progress IProgress */
  		$progress = $m->resize($args['bytes']);
@@ -162,7 +171,7 @@
  
  		/* @var $src IMedium */
 -		$src = $this->vbox->openMedium($args['src'], 'HardDisk');
-+		$src = $this->vbox->openMedium($args['src'], 'HardDisk',null,null);
++		$src = $this->vbox->openMedium($args['src'], 'HardDisk', 'ReadWrite', false);
  
  		$type = array(($args['type'] == 'fixed' ? 'Fixed' : 'Standard'));
  		if($args['split']) $type[] = 'VmdkSplit2G';
@@ -171,7 +180,7 @@
  
  		/* @var $m IMedium */
 -		$m = $this->vbox->openMedium($args['medium'], 'HardDisk');
-+		$m = $this->vbox->openMedium($args['medium'], 'HardDisk',null,null);
++		$m = $this->vbox->openMedium($args['medium'], 'HardDisk', 'ReadWrite', false);
  		$m->type = $args['type'];
  		$m->releaseRemote();
  
@@ -189,7 +198,7 @@
  
  		/* @var $m IMedium */
 -		$m = $this->vbox->openMedium($args['medium'],$args['type']);
-+		$m = $this->vbox->openMedium($args['medium'],$args['type'],null,null);
++		$m = $this->vbox->openMedium($args['medium'],$args['type'],'ReadWrite',false);
  		$mediumid = $m->id;
  
  		// connected to...
@@ -198,7 +207,7 @@
  
  		/* @var $m IMedium */
 -		$m = $this->vbox->openMedium($args['medium'],$args['type']);
-+		$m = $this->vbox->openMedium($args['medium'],$args['type'],null,null);
++		$m = $this->vbox->openMedium($args['medium'],$args['type'],'ReadWrite',false);
  
  		if($args['delete'] && @$this->settings->deleteOnRemove && (string)$m->deviceType == 'HardDisk') {
  
@@ -207,7 +216,7 @@
  			} else {
  				/* @var $med IMedium */
 -				$med = $this->vbox->openMedium($args['medium']['location'],$args['medium']['deviceType']);
-+				$med = $this->vbox->openMedium($args['medium']['location'],$args['medium']['deviceType'],null,null);
++				$med = $this->vbox->openMedium($args['medium']['location'],$args['medium']['deviceType'],'ReadWrite',false);
  			}
  		}
  
