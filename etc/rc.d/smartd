@@ -62,11 +62,12 @@ smartd_mkconf()
 		${configxml_file} | /usr/local/bin/xml unesc`
 
 	# Create configuration file
+	# bugfix: use separator  "#" instead of the space character to avoid parameter shifting when one or more values are empty.
 	/usr/local/bin/xml sel -t -m "//disks/disk/smart[enable]" \
-		-v "concat(../devicespecialfile,' ',devicefilepath,' ',devicetypearg,' ',extraoptions)" \
+		-v "concat(../devicespecialfile,'#',devicefilepath,'#',devicetypearg,'#',extraoptions)" \
 		-i "position() <= last()" -n -b \
 		${configxml_file} | /usr/local/bin/xml unesc | \
-		while read _devicespecialfile _devicefilepath _devicetypearg _smartextraoptions; do
+		while IFS='#' read _devicespecialfile _devicefilepath _devicetypearg _smartextraoptions; do
 			_param="-a"
 			
 			# Device Type
