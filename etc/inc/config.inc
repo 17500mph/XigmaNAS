@@ -1295,10 +1295,10 @@ function config_upgrade() {
 		//	find existing console records, skip configuration when found
 		$record_not_found = true;
 		$grid = &array_make_branch($config,'system','syslogconf','param');
-		foreach($grid as $param):
-			if(is_array($param)):
-				$test = sprintf('%s.%s',trim($param['facility'] ?? ''),trim($param['level'] ?? ''));
-				if(preg_match('/^(\S*;)*console\.\S+ /i',$test)):
+		foreach($grid as $row):
+			if(is_array($row)):
+				$test = sprintf('%s.%s',trim($row['facility'] ?? ''),trim($row['level'] ?? ''));
+				if(preg_match('/^(\S*;)*console\.\S+\s+\S+/i',$test)):
 					$record_not_found = false;
 					break;
 				endif;
