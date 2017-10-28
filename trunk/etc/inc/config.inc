@@ -1298,7 +1298,7 @@ function config_upgrade() {
 		foreach($grid as $param):
 			if(is_array($param)):
 				$test = sprintf('%s.%s',trim($param['facility'] ?? ''),trim($param['level'] ?? ''));
-				if(preg_match('/^(\S*;)*console\.\S+ +\S+$/i',$test)):
+				if(preg_match('/^(\S*;)*console\.\S+ /i',$test)):
 					$record_not_found = false;
 					break;
 				endif;
