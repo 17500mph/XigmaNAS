@@ -66,7 +66,7 @@ do-install:
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_fastcgi.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_flv_streaming.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_indexfile.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_openssl ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_openssl.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_proxy.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_redirect.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
 		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_rewrite.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
