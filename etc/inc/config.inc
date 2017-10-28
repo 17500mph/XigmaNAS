@@ -1292,18 +1292,30 @@ function config_upgrade() {
 	/*	Convert 3.4 -> 3.5 */
 	/*	syslogd parameter */
 	if($config['version'] === '3.4'):
-		array_make_branch($config,'system','syslogconf','param');
-		$config['system']['syslogconf']['param'][] = [
-			'uuid' => uuid(),
-			'facility' => 'console',
-			'level' => 'debug',
-			'value' => '/dev/console',
-			'comment' => 'default setting',
-			'enable' => true
-		];
+		//	find existing console records, skip configuration when found
+		$record_not_found = true;
+		$grid = &array_make_branch($config,'system','syslogconf','param');
+		foreach($grid as $param):
+			if(is_array($param)):
+				$test = sprintf('%s.%s',trim($param['facility'] ?? ''),trim($param['level'] ?? ''));
+				if(preg_match('/^(\S*;)*console\.\S+ +\S+$/i',$test)):
+					$record_not_found = false;
+					break;
+				endif;
+			endif;
+		endforeach;
+		if($record_not_found):
+			$grid[] = [
+				'uuid' => uuid(),
+				'facility' => 'console',
+				'level' => 'debug',
+				'value' => '/dev/console',
+				'comment' => 'default setting',
+				'enable' => true
+			];
+		endif;
 		$config['version'] = '3.5';
 	endif;
-	
 	
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
