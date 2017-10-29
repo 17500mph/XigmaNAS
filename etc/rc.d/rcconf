@@ -518,6 +518,15 @@ setoptions()
 {
 	local _option _name _value _platform
 
+	# Unset rc.conf variables configured via WebGUI
+	/usr/local/bin/xml sel -t -m "//system/rcconf/param[not(enable)]" \
+		-v "concat(name,'')" \
+		-i "position() <= last()" -n -b \
+		${configxml_file} | /usr/local/bin/xml unesc | \
+		while read _name; do
+			eval /usr/local/sbin/rconf attribute remove "${_name}"
+		done
+
 	# Set rc.conf variables configured via WebGUI.
 	/usr/local/bin/xml sel -t -m "//system/rcconf/param[enable]" \
 		-v "concat(name,'=',value)" \

@@ -35,6 +35,30 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
 
+function system_rcconf_get_sphere() {
+	global $config;
+	$sphere = new co_sphere_grid('system_rcconf','php');
+	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->notifier('rcconf');
+	$sphere->row_identifier('uuid');
+	$sphere->enadis(true);
+	$sphere->lock(false);
+	$sphere->sym_add(gtext('Add Option'));
+	$sphere->sym_mod(gtext('Edit Option'));
+	$sphere->sym_del(gtext('Option is marked for deletion'));
+	$sphere->sym_loc(gtext('Option is protected'));
+	$sphere->sym_unl(gtext('Option is unlocked'));
+	$sphere->cbm_delete(gtext('Delete Selected Options'));
+	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected options?'));
+	$sphere->cbm_disable(gtext('Disable Selected Options'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected options?'));
+	$sphere->cbm_enable(gtext('Enable Selected Options'));
+	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected options?'));
+	$sphere->cbm_toggle(gtext('Toggle Selected Options'));
+	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected options?'));
+	$sphere->grid = &array_make_branch($config,'system','rcconf','param');
+	return $sphere;
+}
 function rcconf_process_updatenotification($mode,$data) {
 	global $config;
 	$retval = 0;
@@ -59,30 +83,6 @@ function rcconf_process_updatenotification($mode,$data) {
 			break;
 	endswitch;
 	return $retval;
-}
-function system_rcconf_get_sphere() {
-	global $config;
-	$sphere = new co_sphere_grid('system_rcconf','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
-	$sphere->notifier('rcconf');
-	$sphere->row_identifier('uuid');
-	$sphere->enadis(true);
-	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Option'));
-	$sphere->sym_mod(gtext('Edit Option'));
-	$sphere->sym_del(gtext('Option is marked for deletion'));
-	$sphere->sym_loc(gtext('Option is protected'));
-	$sphere->sym_unl(gtext('Option is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Options'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected options?'));
-	$sphere->cbm_disable(gtext('Disable Selected Options'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected options?'));
-	$sphere->cbm_enable(gtext('Enable Selected Options'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected options?'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Options'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected options?'));
-	$sphere->grid = &array_make_branch($config,'system','rcconf','param');
-	return $sphere;
 }
 $sphere = &system_rcconf_get_sphere();
 if($_POST):
