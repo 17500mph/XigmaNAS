@@ -72,7 +72,7 @@ $img_path = [
 function get_zfs_snapshots() {
 	$result = [];
 	mwexec2("zfs list -H -o name,used,creation -t snapshot 2>&1", $rawdata);
-	foreach ($rawdata as $line) {
+	foreach ($rawdata as $line):
 		$a = preg_split("/\t/", $line);
 		$r = [];
 		$name = $a[0];
@@ -82,85 +82,89 @@ function get_zfs_snapshots() {
 		// 2: /[dataset name | volume name]
 		// 3: [dataset name | volume name]
 		// 4: [snapshot name]
-		if (preg_match('/^([^\/\@]+)(\/([^\@]+))?\@(.*)$/', $name, $m)) {
+		if(preg_match('/^([^\/\@]+)(\/([^\@]+))?\@(.*)$/', $name, $m)):
 			$r['pool'] = $m[1];
 			$r['name'] = $m[4];
 			$r['path'] = $m[1].$m[2];
-		} else {
+		else:
 			$r['pool'] = 'unknown'; // XXX
 			$r['name'] = 'unknown'; // XXX
 			$r['path'] = $name;
-		}
+		endif;
 		$r['used'] = $a[1];
-		$r['creation'] = $a[2];
+		//	collect creation date as timestamp
+		unset($creation);
+		$cmd = sprintf('zfs get -pH -o value creation %s',$name);
+		mwexec2($cmd,$creation);
+		$r['creation'] = $creation[0];
 		$result[] = $r;
-	}
+	endforeach;
 	return $result;
 }
 $a_snapshot = get_zfs_snapshots();
 
-if (isset($_SESSION['filter_time'])) {
+if(isset($_SESSION['filter_time'])):
 	$filter_time = $_SESSION['filter_time'];
-} else {
+else:
 	$filter_time = '1week';
-}
+endif;
 $l_filter_time = [
-	    '1week' => sprintf(gtext('%d week'), 1),
-	    '2weeks' => sprintf(gtext('%d weeks'), 2),
-	    '30days' => sprintf(gtext('%d days'), 30),
-	    '60days' => sprintf(gtext('%d days'), 60),
-	    '90days' => sprintf(gtext('%d days'), 90),
-	    '180days' => sprintf(gtext('%d days'), 180),
-	    '0' => gtext('All')
+    '1week' => sprintf(gtext('%d week'),1),
+    '2weeks' => sprintf(gtext('%d weeks'),2),
+    '30days' => sprintf(gtext('%d days'),30),
+    '60days' => sprintf(gtext('%d days'),60),
+    '90days' => sprintf(gtext('%d days'),90),
+    '180days' => sprintf(gtext('%d days'),180),
+    '0' => gtext('All')
 ];
 
-function get_zfs_snapshots_filter($snapshots, $filter) {
-	$now = time() / 86400;
-	$now *= 86400;
-	if ($filter['time'] != 0) {
-		$f_time = strtotime("-".$filter['time'], $now);
-	} else {
-		$f_time = 0;
-	}
-	$result = [];
-	foreach ($snapshots as $v) {
-		$t = strtotime($v['creation']);
-		if ($f_time != 0 && $t < $f_time) continue;
-		$result[] = $v;
-	}
+function get_zfs_snapshots_filter($snapshots,$filter) {
+	if($filter['time'] == 0):
+		return $snapshots;
+	else:
+		$now = time() / 86400;
+		$now *= 86400;
+		$f_time = strtotime(sprintf('-%s',$filter['time']),$now);
+		$result = [];
+		foreach($snapshots as $snapshot):
+			if($snapshot['creation'] >= $f_time):
+				$result[] = $snapshot;
+			endif;
+		endforeach;
+	endif;
 	return $result;
 }
-$sphere_array = get_zfs_snapshots_filter($a_snapshot, ['time' => $filter_time]);
+$sphere_array = get_zfs_snapshots_filter($a_snapshot,['time' => $filter_time]);
 
-if ($_POST) {
-	if (isset($_POST['filter']) && $_POST['filter']) {
+if($_POST):
+	if(isset($_POST['filter']) && $_POST['filter']):
 		$_SESSION['filter_time'] = $_POST['filter_time'];
 		header($sphere_header);
 		exit;
-	}
-	if (isset($_POST['apply']) && $_POST['apply']) {
+	endif;
+	if(isset($_POST['apply']) && $_POST['apply']):
 		$ret = array('output' => [], 'retval' => 0);
-		if (!file_exists($d_sysrebootreqd_path)) {
+		if(!file_exists($d_sysrebootreqd_path)):
 			// Process notifications
 			$ret = zfs_updatenotify_process($sphere_notifier, $sphere_notifier_processor);
-		}
+		endif;
 		$savemsg = get_std_save_message($ret['retval']);
-		if ($ret['retval'] == 0) {
+		if($ret['retval'] == 0):
 			updatenotify_delete($sphere_notifier);
 			header($sphere_header);
 			exit;
-		}
+		endif;
 		updatenotify_delete($sphere_notifier);
 		$errormsg = implode("\n", $ret['output']);
-	}
-	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
+	endif;
+	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'snapshot'))) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'snapshot'))):
 				$identifier = serialize(['snapshot' => $checkbox_member_record, 'recursive' => false]);
-				if (!isset($sphere_array[$index]['protected'])) {
+				if(!isset($sphere_array[$index]['protected'])):
 					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $identifier);
-					switch ($mode_updatenotify) {
+					switch($mode_updatenotify):
 						case UPDATENOTIFY_MODE_NEW:  
 							updatenotify_clear($sphere_notifier, $identifier);
 							updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $identifier);
@@ -172,14 +176,14 @@ if ($_POST) {
 						case UPDATENOTIFY_MODE_UNKNOWN:
 							updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $identifier);
 							break;
-					}
-				}
-			}
-		}
+					endswitch;
+				endif;
+			endif;
+		endforeach;
 		header($sphere_header);
 		exit;
-	}
-}
+	endif;
+endif;
 
 function zfssnapshot_process_updatenotification($mode, $data) {
 	global $config;
@@ -187,7 +191,7 @@ function zfssnapshot_process_updatenotification($mode, $data) {
 		'output' => [],
 		'retval' => 0
 	];
-	switch ($mode) {
+	switch ($mode):
 		case UPDATENOTIFY_MODE_NEW:
 			$data = unserialize($data);
 			$ret = zfs_snapshot_configure($data);
@@ -200,12 +204,12 @@ function zfssnapshot_process_updatenotification($mode, $data) {
 			$data = unserialize($data);
 			$ret = zfs_snapshot_destroy($data);
 			break;
-	}
+	endswitch;
 	return $ret;
 }
 $pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Snapshots'), gtext('Snapshot')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -285,30 +289,32 @@ function controlactionbuttons(ego, triggerbyname) {
 		</td>
 	</tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
-		if (!empty($errormsg)) {
-			print_error_box($errormsg);
-		}
-		if (!empty($savemsg)) {
-			print_info_box($savemsg);
-		}
-		if (updatenotify_exists($sphere_notifier)) {
-			print_config_change_box();
-		}
-	?>
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Filter'));?>
+<?php
+			html_titleline2(gtext('Filter'));
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 				html_combobox2('filter_time', gtext('Age'), $filter_time, $l_filter_time, '');
-			?>
+?>
 		</tbody>
 	</table>
 	<div id="submit">
@@ -316,18 +322,18 @@ function controlactionbuttons(ego, triggerbyname) {
 	</div>
 	<table class="area_data_selection">
 		<colgroup>
-			<col style="width:5%"><!-- // Checkbox -->
-			<col style="width:35%"><!-- // Path -->
-			<col style="width:20%"><!-- // Name -->
-			<col style="width:10%"><!-- // Used -->
-			<col style="width:20%"><!-- // Creation -->
-			<col style="width:10%"><!-- // Toolbox -->
+			<col style="width:5%">
+			<col style="width:35%">
+			<col style="width:20%">
+			<col style="width:10%">
+			<col style="width:20%">
+			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 				html_separator2();
 				html_titleline2(gtext('Overview'), 6);
-			?>
+?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=sprintf('%1$s (%2$d/%3$d)', gtext('Path'), count($sphere_array), count($a_snapshot));?></th>
@@ -338,20 +344,26 @@ function controlactionbuttons(ego, triggerbyname) {
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach ($sphere_array as $sphere_record):?>
-				<?php
-					$identifier = serialize(['snapshot' => $sphere_record['snapshot'], 'recursive'=> false]);
-					$notificationmode = updatenotify_get_mode($sphere_notifier, $identifier);
-					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-					$notprotected = !isset($sphere_record['protected']);
-				?>
+<?php
+			foreach ($sphere_array as $sphere_record):
+				$identifier = serialize(['snapshot' => $sphere_record['snapshot'], 'recursive'=> false]);
+				$notificationmode = updatenotify_get_mode($sphere_notifier, $identifier);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$notprotected = !isset($sphere_record['protected']);
+?>
 				<tr>
 					<td class="lcelc">
-						<?php if ($notdirty && $notprotected):?>
+<?php
+						if ($notdirty && $notprotected):
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['snapshot'];?>" id="<?=$sphere_record['snapshot'];?>"/>
-						<?php else:?>
+<?php
+						else:
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['snapshot'];?>" id="<?=$sphere_record['snapshot'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['path']);?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
@@ -362,7 +374,7 @@ function controlactionbuttons(ego, triggerbyname) {
 							<?=htmlspecialchars($sphere_record['used']);?>&nbsp;
 						<?php endif;?>
 					</td>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['creation']);?>&nbsp;</td>
+					<td class="lcell"><?=htmlspecialchars(get_datetime_locale($sphere_record['creation']));?>&nbsp;</td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
@@ -381,7 +393,9 @@ function controlactionbuttons(ego, triggerbyname) {
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -395,6 +409,10 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
