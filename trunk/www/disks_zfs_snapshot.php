@@ -95,7 +95,7 @@ function get_zfs_snapshots() {
 		$r['used'] = $a[1];
 		//	collect creation date as timestamp
 		unset($creation);
-		$cmd = sprintf('zfs get -pH -o value creation %s',$name);
+		$cmd = sprintf('zfs get -pH -o value creation %s',escapeshellarg($name));
 		mwexec2($cmd,$creation);
 		$r['creation'] = $creation[0];
 		$result[] = $r;
