@@ -71,9 +71,10 @@ $img_path = [
 
 function get_zfs_snapshots() {
 	$result = [];
-	mwexec2("zfs list -H -o name,used,creation -t snapshot 2>&1", $rawdata);
-	foreach ($rawdata as $line):
-		$a = preg_split("/\t/", $line);
+	$cmd = 'zfs list -H -o name,used,creation -t snapshot 2>&1';
+	mwexec2($cmd,$rawdata);
+	foreach($rawdata as $line):
+		$a = preg_split('/\t/',$line);
 		$r = [];
 		$name = $a[0];
 		$r['snapshot'] = $name;
