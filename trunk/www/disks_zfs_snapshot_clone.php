@@ -45,8 +45,8 @@ endif;
 
 function get_zfs_clones() {
 	$result = [];
-	mwexec2("zfs list -H -o name,origin,creation -t filesystem,volume 2>&1", $rawdata);
-	foreach ($rawdata as $line) {
+	mwexec2("zfs list -H -o name,origin -t filesystem,volume 2>&1", $rawdata);
+	foreach($rawdata as $line):
 		$a = preg_split("/\t/", $line);
 		$r = [];
 		$name = $a[0];
@@ -57,10 +57,16 @@ function get_zfs_clones() {
 			$r['pool'] = 'unknown'; // XXX
 		}
 		$r['origin'] = $a[1];
-		$r['creation'] = $a[2];
-		if ($r['origin'] == '-') continue;
+		if ($r['origin'] == '-'):
+			continue;
+		endif;
+		//	collect creation date as timestamp
+		unset($creation);
+		$cmd = sprintf('zfs get -pH -o value creation %s',escapeshellarg($name));
+		mwexec2($cmd,$creation);
+		$r['creation'] = $creation[0];
 		$result[] = $r;
-	}
+	endforeach;
 	return $result;
 }
 $a_clone = get_zfs_clones();
@@ -162,7 +168,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="listlr"><?=htmlspecialchars($clonev['path']);?>&nbsp;</td>
 						<td class="listr"><?=htmlspecialchars($clonev['origin']);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($clonev['creation']);?>&nbsp;</td>
+						<td class="listr"><?=htmlspecialchars(get_datetime_locale($clonev['creation']));?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							&nbsp; &nbsp; &nbsp;
