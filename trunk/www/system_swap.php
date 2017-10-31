@@ -173,14 +173,14 @@ $document->render();
 							foreach ($swapinfo as $swapk => $swapv):
 								$ctrlid++;
 								$percent_used = rtrim($swapv['capacity'], "%");
-								$tooltip_used = sprintf(gtext("%sB used of %sB"), $swapv['used'], $swapv['total']);
-								$tooltip_available = sprintf(gtext("%sB available of %sB"), $swapv['avail'], $swapv['total']);
+								$tooltip_used = sprintf(gtext("%s used of %s"), $swapv['used'], $swapv['total']);
+								$tooltip_available = sprintf(gtext("%s available of %s"),$swapv['avail'],$swapv['total']);
 								echo "<tr><td><div id='swapusage'>";
 								echo "<img src='images/bar_left.gif' class='progbarl' alt='' />";
 								echo "<img src='images/bar_blue.gif' name='swapusage_{$ctrlid}_bar_used' id='swapusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
 								echo "<img src='images/bar_gray.gif' name='swapusage_{$ctrlid}_bar_free' id='swapusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_available}' alt='' />";
 								echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
-								echo sprintf(gtext("%s of %sB"),
+								echo sprintf(gtext('%s of %s'),
 									"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$swapv['capacity']}</span>",
 									$swapv['total']);
 								echo "<br />";
