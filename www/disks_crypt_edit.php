@@ -96,7 +96,7 @@ if($_POST):
 			$geli['device'] = $pconfig['devicespecialfile'];
 			$geli['devicespecialfile'] = "{$geli['device']}.eli";
 			$geli['desc'] = "Encrypted disk";
-			$geli['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$geli['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,is_sidisksizevalues());
 			$geli['aalgo'] = $pconfig['aalgo'];
 			$geli['ealgo'] = $pconfig['ealgo'];
 			$a_geli[] = $geli;
@@ -178,6 +178,7 @@ function ealgo_change() {
 								<option value=""><?=gtext("Must choose one");?></option>
 <?php
 								$i = -1;
+								$use_si = is_sidisksizevalues();
 								foreach ($a_alldisk as $diskv):
 									++$i;
 									if(0 == strcmp($diskv['class'], "geli")):
@@ -193,7 +194,7 @@ function ealgo_change() {
 									<option value="<?=$i;?>" <?php if ($pconfig['disk'] == $i) echo "selected=\"selected\"";?>>
 <?php
 										$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
-										$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+										$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 										echo htmlspecialchars(sprintf('%s: %s (%s)',$diskv['name'],$helpinghand,$diskv['desc']));
 ?>
 									</option>
