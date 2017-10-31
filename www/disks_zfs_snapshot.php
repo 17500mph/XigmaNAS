@@ -71,7 +71,7 @@ $img_path = [
 
 function get_zfs_snapshots() {
 	$result = [];
-	$cmd = 'zfs list -H -o name,used -t snapshot 2>&1';
+	$cmd = 'zfs list -pH -o name,used,creation -t snapshot 2>&1';
 	mwexec2($cmd,$rawdata);
 	foreach($rawdata as $line):
 		$a = preg_split('/\t/',$line);
@@ -93,11 +93,7 @@ function get_zfs_snapshots() {
 			$r['path'] = $name;
 		endif;
 		$r['used'] = $a[1];
-		//	collect creation date as timestamp
-		unset($creation);
-		$cmd = sprintf('zfs get -pH -o value creation %s',escapeshellarg($name));
-		mwexec2($cmd,$creation);
-		$r['creation'] = $creation[0];
+		$r['creation'] = $a[2];
 		$result[] = $r;
 	endforeach;
 	return $result;
@@ -368,26 +364,28 @@ function controlactionbuttons(ego, triggerbyname) {
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['path']);?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
-					<td class="lcell">
-						<?php if (UPDATENOTIFY_MODE_MODIFIED == $notificationmode):?>
-							<?=htmlspecialchars($sphere_record['used']);?>&nbsp;
-						<?php else:?>
-							<?=htmlspecialchars($sphere_record['used']);?>&nbsp;
-						<?php endif;?>
-					</td>
+					<td class="lcell"><?=format_bytes($sphere_record['used'],2,false);?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars(get_datetime_locale($sphere_record['creation']));?>&nbsp;</td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
-								<?php if ($notdirty && $notprotected):?>
+<?php
+								if($notdirty && $notprotected):
+?>
 									<a href="<?=$sphere_scriptname_child;?>?snapshot=<?=urlencode($sphere_record['snapshot']);?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected):?>
+<?php
+								else:
+									if ($notprotected):
+?>
 										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
+<?php
+									else:
+?>
 										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+<?php
+									endif;
+								endif;
+?>
 							</td>
 							<td></td>
 							<td></td>
