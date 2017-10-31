@@ -41,6 +41,7 @@ class properties_system_advanced {
 	public $disablebeep;
 	public $microcode_update;
 	public $enabletogglemode;
+	public $nonsidisksizevalues;
 	public $skipviewmode;
 	public $disableextensionmenu;
 	public $tune_enable;
@@ -66,6 +67,7 @@ class properties_system_advanced {
 		$this->disablebeep = $this->prop_disablebeep();
 		$this->microcode_update = $this->prop_microcode_update();
 		$this->enabletogglemode = $this->prop_enabletogglemode();
+		$this->nonsidisksizevalues = $this->prop_nonsidisksizevalues();
 		$this->skipviewmode = $this->prop_skipviewmode();
 		$this->disableextensionmenu = $this->prop_disableextensionmenu();
 		$this->tune_enable = $this->prop_tune_enable();
@@ -173,6 +175,20 @@ class properties_system_advanced {
 		$o->set_name('enabletogglemode');
 		$o->set_title(gtext('Toggle Mode'));
 		$o->set_caption(gtext('Use toggle button instead of enable/disable buttons.'));
+		$o->set_description('');
+		$o->set_defaultvalue(false);
+		$o->filter_use_default();
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
+		return $o;
+	}
+	private function prop_nonsidisksizevalues(): properties_bool {
+		$o = new properties_bool($this);
+		$o->set_id('nonsidisksizevalues');
+		$o->set_name('nonsidisksizevalues');
+		$o->set_title(gtext('Binary Prefix'));
+		$o->set_caption(gtext('Display disk size values using binary prefixes instead of decimal prefixes.'));
 		$o->set_description('');
 		$o->set_defaultvalue(false);
 		$o->filter_use_default();
