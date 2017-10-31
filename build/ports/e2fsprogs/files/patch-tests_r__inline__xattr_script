@@ -19,3 +19,4 @@
 +$DEBUGFS -R "stat file" $TMPFILE 2>&1 | grep -E "^Inode|in inode body|user.name \(" >> $OUT
  status=$?
  echo Exit status is $status >> $OUT
+ 
