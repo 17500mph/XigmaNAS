@@ -442,6 +442,15 @@ function is_valid_privatekey($privatekey,$type = 'RSA') {
 function is_uuid_v4($uuid): bool {
 	return (bool)preg_match('/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i',$uuid);
 }
+/**
+ * Determines the use of binary prefixes instead of decimal prefixes.
+ * @global type $config
+ * @return bool
+ */
+function is_sidisksizevalues(): bool {
+	global $config;
+	return !(isset($config['system']['nonsidisksizevalues']) && (is_bool($config['system']['nonsidisksizevalues']) ? $config['system']['nonsidisksizevalues'] : true));
+}
 /*
  *
  */
@@ -667,6 +676,7 @@ function get_gvinum_disks_list() {
 	$disklist = [];
 	/* Send the shell cmd and get the result */
 	exec("/sbin/gvinum list",$rawdata);
+	$use_si = is_sidisksizevalues();
 	foreach($rawdata as $line):
 		/* Split the line using the space as separator */
 		$aline = preg_split("/\s+/",$line);
@@ -683,7 +693,7 @@ function get_gvinum_disks_list() {
 		$disklist[$diskname]['state'] = $aline[3];
 		/* Get diskinfo to get disk size */
 		$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-		$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+		$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 	endforeach;
 	return $disklist;
 }
@@ -703,6 +713,7 @@ function get_gmirror_disks_list() {
 	/* Display all configured gmirror volume */
 	exec("/sbin/gmirror list",$rawdata);
 	$foundstate = $foundname = 0 ;
+	$use_si = is_sidisksizevalues();
 	foreach($rawdata as $line):
 		/* Use space for break the line */
 		$aline = preg_split("/\s+/",$line);
@@ -719,7 +730,7 @@ function get_gmirror_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -759,7 +770,8 @@ function get_gconcat_disks_list() {
 	$disklist = [];
 	/* Display all configured gconcat volume */
 	exec("/sbin/gconcat list",$rawdata);
-	$foundname = 0 ;
+	$foundname = 0;
+	$use_si = is_sidisksizevalues();
 	foreach($rawdata as $line):
 		/* Use space for break the line */
 		$aline = preg_split("/\s+/",$line);
@@ -776,7 +788,7 @@ function get_gconcat_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -807,7 +819,8 @@ function get_gstripe_disks_list() {
 	$disklist = [];
 	/* Display all configured gstripe volume */
 	exec("/sbin/gstripe list",$rawdata);
-	$foundname = 0 ;
+	$foundname = 0;
+	$use_si = is_sidisksizevalues();
 	foreach($rawdata as $line):
 		/* Use space for break the line */
 		$aline = preg_split("/\s+/",$line);
@@ -824,7 +837,7 @@ function get_gstripe_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -855,7 +868,8 @@ function get_graid5_disks_list() {
 	$disklist = [];
 	/* Display all configured graid5 volume */
 	exec('/sbin/graid5 list',$rawdata);
-	$foundname = 0 ;
+	$foundname = 0;
+	$use_si = is_sidisksizevalues();
 	foreach($rawdata as $line):
 		/* Use space for break the line */
 		$aline = preg_split('/\s+/',$line);
@@ -872,7 +886,7 @@ function get_graid5_disks_list() {
 			$disklist[$diskname]['state'] = gtext('Unknown');
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			$foundname = 1 ;
 			continue ;
 		endif;
@@ -903,6 +917,7 @@ function get_graid5_disks_list() {
  */
 function get_hast_disks_list() {
 	$disklist = [];
+	$use_si = is_sidisksizevalues();
 	exec('/sbin/hastctl list 2>/dev/null',$rawdata);
 	foreach($rawdata as $line):
 		if(preg_match('/^(\S+):$/',$line,$match)):
@@ -921,7 +936,7 @@ function get_hast_disks_list() {
 			$disklist[$diskname]['role'] = $role;
 			if($role == 'primary'):
 				$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
-				$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+				$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			else:
 				$disklist[$diskname]['size'] = 'N/A';
 			endif;
@@ -946,6 +961,7 @@ function parse_camcontrol_info($devtype) {
 	$controller_id = '';
 	$target_id = '';
 	$lun_id = '';
+	$use_si = is_sidisksizevalues();
 	mwexec2('/sbin/camcontrol devlist -v 2> /dev/null',$rawdata);
 	foreach($rawdata as $line):
 		//	get controller
@@ -1018,7 +1034,7 @@ function parse_camcontrol_info($devtype) {
 						init_device_attributes($devlist[$device_name]);
 						// Get diskinfo to get disk size
 						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
-						$devlist[$device_name]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+						$devlist[$device_name]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 						$devlist[$device_name]['controller'] = $controller[0];
 						$devlist[$device_name]['controller_id'] = $controller[1];
 						$devlist[$device_name]['target_id'] = $target_id;
@@ -1048,7 +1064,7 @@ function parse_camcontrol_info($devtype) {
 						init_device_attributes($devlist[$device_name]);
 						// Get diskinfo to get disk size
 						$diskinfo = disks_get_diskinfo($devlist[$device_name]['devicespecialfile']);
-						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_bytes']) ? format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues'])) : gtext('Unknown');
+						$devlist[$device_name]['size'] = isset($diskinfo['mediasize_bytes']) ? format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si) : gtext('Unknown');
 						$devlist[$device_name]['controller'] = $controller[0];
 						$devlist[$device_name]['controller_id'] = $controller[1];
 						$devlist[$device_name]['target_id'] = $target_id;
@@ -1508,6 +1524,7 @@ function get_scsi_disks_list() {
  */
 function get_iscsi_disks_list() {
 	$disklist = [];
+	$use_si = is_sidisksizevalues();
 	/* get all devlist w/bus */
 	exec('/sbin/camcontrol devlist -v',$rawdata);
 	$iscsi = false;
@@ -1546,7 +1563,7 @@ function get_iscsi_disks_list() {
 			$disklist[$diskname]['desc'] = $match[1];
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			/* Get serial number */
 			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
@@ -1567,6 +1584,7 @@ function get_iscsi_disks_list() {
  */
 function get_hraid_disks_list() {
 	$disklist = [];
+	$use_si = is_sidisksizevalues();
 	/* Recupere la liste des disques RAID */
 	$kerneldisks = explode(' ',trim(preg_replace('/kern.disks: /','',exec('/sbin/sysctl kern.disks'))));
 	/* Recupere la liste des disques ATA et SCSI */
@@ -1629,7 +1647,7 @@ function get_hraid_disks_list() {
 			endif;
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($diskname);
-			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$disklist[$diskname]['size'] = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 			/* Get serial number */
 			$serial = system_get_volume_serial('/dev/' . $diskname,$disklist[$diskname]['controller']);
 			$disklist[$diskname]['serial'] = $serial;
@@ -2682,15 +2700,6 @@ function get_filesize($file) {
 		return @exec('zfs get -Hp -o value volsize ' . escapeshellarg($volname));
 	endif;
 	return @exec('stat -f %z ' . escapeshellarg($file));
-}
-/**
- * Determines the use of binary prefixes instead of decimal prefixes.
- * @global type $config
- * @return bool
- */
-function is_sidisksizevalues(): bool {
-	global $config;
-	return !(isset($config['system']['nonsidisksizevalues']) && (is_bool($config['system']['nonsidisksizevalues']) ? $config['system']['nonsidisksizevalues'] : true));
 }
 /**
  * Converts an integer or an integer string into a human readable format for unit byte.
