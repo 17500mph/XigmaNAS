@@ -364,7 +364,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['path']);?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
-					<td class="lcell"><?=format_bytes($sphere_record['used'],2,false);?>&nbsp;</td>
+					<td class="lcell"><?=format_bytes($sphere_record['used'],2,false,is_sidisksizevalues());?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars(get_datetime_locale($sphere_record['creation']));?>&nbsp;</td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
