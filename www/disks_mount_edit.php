@@ -49,20 +49,21 @@ endif;
 
 function get_all_hast() {
 	$a = [];
-	$a[''] = gtext("Must choose one");
-	mwexec2("hastctl dump | grep resource", $rawdata);
-	foreach ($rawdata as $line) {
-		$hast = preg_split("/\s/", $line);
+	$a[''] = gtext('Must choose one');
+	$use_si = is_sidisksizevalues();
+	mwexec2('hastctl dump | grep resource',$rawdata);
+	foreach($rawdata as $line):
+		$hast = preg_split('/\s/',$line);
 		$name = $hast[1];
 		$file = "/dev/hast/$name";
-		if (file_exists($file)) {
+		if(file_exists($file)):
 			$diskinfo = disks_get_diskinfo($file);
-			$size = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
-		} else {
-			$size = "(secondary)";
-		}
+			$size = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
+		else:
+			$size = '(secondary)';
+		endif;
 		$a[$file] = htmlspecialchars("$name: $size");
-	}
+	endforeach;
 	return $a;
 }
 
@@ -571,7 +572,7 @@ function enable_change(enable_change) {
 								<option value="<?=$diskv['devicespecialfile'];?>" <?php if ($pconfig['mdisk'] === $diskv['devicespecialfile']) echo "selected=\"selected\"";?>>
 <?php
 									$diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
-									$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+									$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,is_sidisksizevalues());
 									echo htmlspecialchars(sprintf('%s: %s (%s)',$diskv['name'],$helpinghand,$diskv['desc']));
 ?>
 								</option>
