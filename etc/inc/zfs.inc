@@ -119,7 +119,7 @@ function cli_zpool_info($name = '',string $options = '') {
 	endif;
 	if(!empty($a_key)):
 		$a_key = array_map('strtolower',$a_key); // $a_key to lowercase
-		$clicmd = sprintf('zpool list -pH -o %1$s %2$s', $clioptions, $cliname);
+		$clicmd = sprintf('zpool list -pH -o %1$s %2$s',$clioptions,$cliname);
 		unset($a_line);
 		mwexec2($clicmd,$a_line,$exitcode);
 		if((0 == $exitcode) && (0 < count($a_line))): // at least 1 line must be returned
@@ -146,11 +146,11 @@ function cli_zfs_info($name = '',$options = '') {
 	$a_key = [];
 	$a_val = [];
 	$cliname = '';
-	if(preg_match('/\S/', $name)):
+	if(preg_match('/\S/',$name)):
 		$name = ltrim($name);
 		$cliname = escapeshellarg($name);
 	endif;
-	$clioptions = preg_replace('/\s/', '',$options); // remove all whitespaces
+	$clioptions = preg_replace('/\s/','',$options); // remove all whitespaces
 	if(empty($options)): // options must not be blank
 		$options = 'name,used,avail,refer,mountpoint';
 	endif;
@@ -167,7 +167,7 @@ function cli_zfs_info($name = '',$options = '') {
 	endif;
 	if(!empty($a_key)):
 		$a_key = array_map('strtolower',$a_key); // $a_key to lowercase
-		$clicmd = sprintf('zfs list -pH -o %1$s %2$s', $clioptions,$cliname);
+		$clicmd = sprintf('zfs list -pH -o %1$s %2$s',$clioptions,$cliname);
 		unset($a_line);
 		mwexec2($clicmd,$a_line,$exitcode);
 		if((0 == $exitcode) && (0 < count($a_line))): // at least 1 line must be returned
