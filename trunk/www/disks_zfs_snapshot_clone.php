@@ -45,9 +45,10 @@ endif;
 
 function get_zfs_clones() {
 	$result = [];
-	mwexec2("zfs list -H -o name,origin -t filesystem,volume 2>&1", $rawdata);
+	$cmd = 'zfs list -pH -o name,origin,creation -t filesystem,volume 2>&1';
+	mwexec2($cmd,$rawdata);
 	foreach($rawdata as $line):
-		$a = preg_split("/\t/", $line);
+		$a = preg_split('/\t/', $line);
 		$r = [];
 		$name = $a[0];
 		$r['path'] = $name;
@@ -60,11 +61,7 @@ function get_zfs_clones() {
 		if ($r['origin'] == '-'):
 			continue;
 		endif;
-		//	collect creation date as timestamp
-		unset($creation);
-		$cmd = sprintf('zfs get -pH -o value creation %s',escapeshellarg($name));
-		mwexec2($cmd,$creation);
-		$r['creation'] = $creation[0];
+		$r['creation'] = $a[2];
 		$result[] = $r;
 	endforeach;
 	return $result;
