@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-10-05 15:12+0000\n"
+"PO-Revision-Date: 2017-10-30 13:15+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-24 15:01+0000\n"
-"X-Generator: Launchpad (build 18484)\n"
+"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -955,7 +955,7 @@ msgid "Apply"
 msgstr "Anwenden"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Änderungen übernehmen"
 
 msgid "Apply Filter"
 msgstr "Filter Anwenden"
@@ -1356,7 +1356,7 @@ msgid "Browseable"
 msgstr "Sichtbar"
 
 msgid "Button Location"
-msgstr ""
+msgstr "Knopfleistenanordnung (Button)"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
@@ -2810,6 +2810,7 @@ msgstr "Zeige die ZFS Befehlshistorie an"
 msgid ""
 "Display action buttons in the scrollable area instead of the footer area."
 msgstr ""
+"Anzeige der Action-Buttons im Scrollbereich statt im Fußzeilenbereich."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3443,10 +3444,10 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Aktiviere ausgewählte RSYNC-Module"
 
 msgid "Enable Server"
-msgstr ""
+msgstr "Server aktivieren"
 
 msgid "Enable Setting"
-msgstr ""
+msgstr "Einstellung aktivieren"
 
 msgid "Enable TLS connections."
 msgstr "SSL-Verbindungen aktivieren."
@@ -3724,10 +3725,10 @@ msgid "Enter Email Address(es)"
 msgstr "Geben Sie die Email-Adresse ein:"
 
 msgid "Enter IP Address"
-msgstr ""
+msgstr "IP Adresse eingeben"
 
 msgid "Enter Identifier"
-msgstr ""
+msgstr "Identifier eingeben"
 
 msgid "Enter Password"
 msgstr "Passwort eingeben"
@@ -3736,7 +3737,7 @@ msgid "Enter Subject"
 msgstr "Betreff eingeben"
 
 msgid "Enter Universally Unique Identifier"
-msgstr ""
+msgstr "Universally Unique Identifier eingeben"
 
 msgid "Enter a comment"
 msgstr "Kommentar eingeben"
@@ -3775,7 +3776,7 @@ msgid "Enter a description"
 msgstr "Geben Sie eine Beschreibung ein"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Eine Beschreibung zu Ihrer eigenen Information"
 
 msgid "Enter a description for your reference."
 msgstr "Eine Beschreibung als Referenz eingeben."
@@ -3815,10 +3816,10 @@ msgstr ""
 "oder benutzen Sie das Symbol zur Auswahl."
 
 msgid "Enter destination"
-msgstr ""
+msgstr "Ziel eingeben"
 
 msgid "Enter facility name"
-msgstr ""
+msgstr "Name der Einrichtung angeben"
 
 msgid "Enter full name of the user."
 msgstr "Bitte den kompletten Namen des Benutzers eingeben."
@@ -3830,7 +3831,7 @@ msgid "Enter hostname or IP address."
 msgstr "Bitte Hostname oder IP-Adresse eingeben."
 
 msgid "Enter level name"
-msgstr ""
+msgstr "Name des Niveaus (Level) angeben"
 
 msgid "Enter login name"
 msgstr "Geben Sie den Login-Namen ein"
@@ -3839,7 +3840,7 @@ msgid "Enter login name of the user."
 msgstr "Bitte Benutzernamen eingeben."
 
 msgid "Enter smartctl pass-through type."
-msgstr ""
+msgstr "Smartctl pass-through Typ angeben"
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Bitte IP-Adresse oder DNS-Name des iSCSI Ziels eingeben."
@@ -4066,7 +4067,7 @@ msgstr ""
 "von Daten über den anfragenden Rechner (unsicher!)."
 
 msgid "Facility"
-msgstr ""
+msgstr "Einrichtung"
 
 msgid "Factory Defaults"
 msgstr "Werkeinstellungen"
@@ -4237,7 +4238,7 @@ msgid "Follow"
 msgstr "Nachfolgen"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Erzwinge Löschung"
 
 msgid "Force Operation"
 msgstr "Befehlsausführung erzwingen"
@@ -4729,6 +4730,8 @@ msgstr ""
 msgid ""
 "If this message persists take a look at the system log for more information."
 msgstr ""
+"Wenn diese Meldung bestehen bleibt, schauen Sie in das \"system log\" für "
+"mehr Informationen."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5272,7 +5275,7 @@ msgid "Leave this field empty to use default settings."
 msgstr "Dieses Feld leer lassen, um die Standardeinstellungen zu nutzen."
 
 msgid "Level"
-msgstr ""
+msgstr "Level"
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
@@ -5886,7 +5889,7 @@ msgid "Music"
 msgstr "Musik"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "Muss eine Zahl zwischen 5 und 1000 sein."
 
 msgid "Must choose one"
 msgstr "Es muss eines ausgewählt sein"
@@ -6144,7 +6147,7 @@ msgid "No pools have been selected"
 msgstr "Es wurden keine Pools ausgewählt"
 
 msgid "No records found."
-msgstr ""
+msgstr "Keine Einträge gefunden. (records)"
 
 msgid "No softraid-formatted disks available."
 msgstr "Keine SoftRAID formatierte Festplatte vorhanden."
@@ -6909,7 +6912,7 @@ msgid "Private key"
 msgstr "Privater Schlüssel"
 
 msgid "Process State"
-msgstr ""
+msgstr "Verfahrensstufe"
 
 msgid "Processes"
 msgstr "Prozesse"
@@ -6924,10 +6927,10 @@ msgid "Properties"
 msgstr "Eigenschaften"
 
 msgid "Protect"
-msgstr ""
+msgstr "Schützen"
 
 msgid "Protect Setting"
-msgstr ""
+msgstr "Einstellung schützen"
 
 msgid "Proto"
 msgstr "Proto"
@@ -7219,7 +7222,7 @@ msgid "Release Notes"
 msgstr "Versionshinweise"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Seite nochmal laden"
 
 msgid "Reload page"
 msgstr "Seite neu laden"
@@ -7849,7 +7852,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "SMART"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Selbsttestablaufplan"
 
 msgid "Send Buffer"
 msgstr "Sendebuffer"
@@ -7906,7 +7909,7 @@ msgid "September"
 msgstr "September"
 
 msgid "Serial Console"
-msgstr ""
+msgstr "Serielle Konsole"
 
 msgid "Serial Number"
 msgstr "Seriennummer"
@@ -8721,7 +8724,7 @@ msgid "The UPS identifier and IP address"
 msgstr "Die USV-Kennung und IP-Adresse"
 
 msgid "The UUID of the record."
-msgstr ""
+msgstr "Die UUID des Eintrages (record)."
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "Die VLAN ID muss zwischen 1 und 4094 liegen."
@@ -9104,7 +9107,7 @@ msgstr ""
 "Die Firmware wird jetzt installiert. Der Server wird automatisch neustarten."
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "Die folgenden Fehler wurden erkannt"
 
 msgid "The following input errors were detected"
 msgstr "Die folgenden Eingabefehler sind aufgetreten"
@@ -10461,7 +10464,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "USB Massenspeichergerät"
 
 msgid "UTF-8 Only"
 msgstr "Nur UTF-8"
@@ -10497,7 +10500,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison Datei Synchronisation"
 
 msgid "Universally Unique Identifier"
-msgstr ""
+msgstr "Eindeutiger Bezeichner UUID"
 
 msgid "Unix Charset"
 msgstr "Unix Zeichensatz"
