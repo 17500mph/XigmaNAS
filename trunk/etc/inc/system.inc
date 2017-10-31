@@ -872,9 +872,9 @@ function get_swap_usage() {
 			$r_swapusage['size'] = $swapv['total'];
 			$r_swapusage['used'] = $swapv['used'];
 			$r_swapusage['avail'] = $swapv['avail'];
-			$r_swapusage['capofsize'] = sprintf(gtext("%s of %sB"),$r_swapusage['capacity'],$r_swapusage['size']);
-			$r_swapusage['tooltip']['used'] = sprintf(gtext("%sB used of %sB"),$r_swapusage['used'],$r_swapusage['size']);
-			$r_swapusage['tooltip']['avail']  = sprintf(gtext("%sB available of %sB"),$r_swapusage['avail'],$r_swapusage['size']);
+			$r_swapusage['capofsize'] = sprintf(gtext("%s of %s"),$r_swapusage['capacity'],$r_swapusage['size']);
+			$r_swapusage['tooltip']['used'] = sprintf(gtext("%s used of %s"),$r_swapusage['used'],$r_swapusage['size']);
+			$r_swapusage['tooltip']['avail']  = sprintf(gtext("%s available of %s"),$r_swapusage['avail'],$r_swapusage['size']);
 			$a_swapusage[]= $r_swapusage;
 		endforeach;
 		array_sort_key($a_swapusage,'name');
