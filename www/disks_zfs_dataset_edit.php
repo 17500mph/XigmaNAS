@@ -387,10 +387,11 @@ switch($mode_page):
 endswitch;
 $a_poollist = zfs_get_pool_list();
 $l_poollist = [];
+$use_si = is_sidisksizevalues();
 foreach($a_pool as $r_pool):
 	$r_poollist = $a_poollist[$r_pool['name']];
-	$helpinghand = $r_pool['name'] . ': ' . $r_poollist['size'];
-	if (!empty($r_pool['desc'])):
+	$helpinghand = sprintf('%s: %s',$r_pool['name'],format_bytes($r_poollist['size'],2,false,$use_si));
+	if(!empty($r_pool['desc'])):
 		$helpinghand .= ' ' . $r_pool['desc'];
 	endif;
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
