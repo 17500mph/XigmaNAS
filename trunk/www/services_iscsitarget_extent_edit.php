@@ -124,7 +124,8 @@ function get_all_zvol($a_extent,$uuid) {
 
 function get_all_hast($a_extent,$uuid) {
 	$a = [];
-	$a[''] = gtext("Must choose one");
+	$a[''] = gtext('Must choose one');
+	$use_si = is_sidisksizevalues();
 	mwexec2("hastctl dump | grep resource", $rawdata);
 	foreach ($rawdata as $line) {
 		$hast = preg_split("/\s/", $line);
@@ -132,7 +133,7 @@ function get_all_hast($a_extent,$uuid) {
 		$file = "/dev/hast/$name";
 		if (file_exists($file)) {
 			$diskinfo = disks_get_diskinfo($file);
-			$size = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+			$size = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 		} else {
 			$size = "(secondary)";
 		}
