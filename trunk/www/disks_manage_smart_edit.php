@@ -109,6 +109,7 @@ if($_POST):
 endif;
 $l_devicespecialfiles = [];
 $l_devicespecialfiles[''] = gtext('Must choose one');
+$use_si = is_sidisksizevalues();
 foreach($a_disk as $r_disk):
 	if(0 == strcmp($r_disk['size'],'NA')):
 		continue;
@@ -120,7 +121,7 @@ foreach($a_disk as $r_disk):
 		continue;
 	endif;
 	$diskinfo = disks_get_diskinfo($r_disk['devicespecialfile']);
-	$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,!isset($config['system']['nonsidisksizevalues']));
+	$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
 	$l_devicespecialfiles[$r_disk['devicespecialfile']] = htmlspecialchars(sprintf('%s: %s (%s)',$r_disk['name'],$helpinghand,$r_disk['desc']));
 endforeach;
 $l_types = [
