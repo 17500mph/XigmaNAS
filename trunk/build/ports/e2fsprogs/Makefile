@@ -1,5 +1,5 @@
 PORTNAME=	e2fsprogs
-PORTVERSION=	1.43.6
+PORTVERSION=	1.43.7
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
@@ -13,36 +13,56 @@ NO_LICENSES_DIALOGS=	yes
 
 PORTSCOUT=	ignore	# cannot handle the version in the directory
 
-BROKEN_aarch64=	Fails to link: missing sbrk
+.if !defined(MASTERDIR)
+BROKEN_aarch64=		fails to link: missing sbrk
+.endif
 
-USES=		cpe gmake pkgconfig tar:xz
+USES=		cpe gmake makeinfo pkgconfig tar:xz
 CPE_VENDOR=	e2fsprogs_project
 USE_CSTD=	gnu99
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--disable-fsck --disable-e2initrd-helper \
-		--with-root-prefix='${PREFIX}'
+CONFIGURE_ARGS?=--disable-fsck \
+		--disable-e2initrd-helper \
+		--disable-libuuid \
+		--disable-uuidd \
+		--enable-libblkid \
+		--enable-elf-shlibs \
+		--libdir='${PREFIX}/lib/e2fsprogs/' \
+		--includedir='${PREFIX}/include/e2fsprogs/' \
+		--with-root-prefix='${PREFIX}' \
+		--without-included-gettext \
+		LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib -Wl,--rpath -Wl,${LOCALBASE}/lib/e2fsprogs'
 CPPFLAGS+=	-I${WRKSRC}/lib -I${LOCALBASE}/include # -D_EXT2_USE_C_VERSIONS
-MAKE_ARGS+=	LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib' pkgconfigdir='${PREFIX}/libdata/pkgconfig'
+MAKE_ARGS+=	pkgconfigdir='${PREFIX}/libdata/pkgconfig'
 MAKE_ENV+=	CHECK_CMD=@true
 
 .if !defined(MASTERDIR)
-OPTIONS_DEFINE=		DOCS NLS
+INSTALL_TARGET=		install install-libs
+
+OPTIONS_DEFINE=		DOCS NLS FUSEFS PARALLELTESTS
 OPTIONS_EXCLUDE+=	EXAMPLES
+OPTIONS_SUB=		yes
 
-BUILD_DEPENDS+=	gdd:sysutils/coreutils
-
-PORTDOCS=	NOTICE README RELEASE-NOTES SUBMITTING-PATCHES
-
-OPTIONS_DEFINE=			PARALLELTESTS
 OPTIONS_SINGLE=			SELFTEST
 OPTIONS_SINGLE_SELFTEST=	NOTESTS SMALLTESTS ALLTESTS
 OPTIONS_DEFAULT=		SMALLTESTS
+FUSEFS_DESC=	Build user-land ext2/3/4 FUSE module (slow!)
 SELFTEST_DESC=	Choose which set of self-tests to run
-NOTESTS_DESC=	Do not run any self-tests (only Tier-1 & DISCOURAGED)
-SMALLTESTS_DESC=Run tests that fit into 500 MB disk space (DEFAULT)
-ALLTESTS_DESC=	Run most self-tests (requires more RAM & disk space)
-PARALLELTESTS_DESC=	Run self-tests in parallel (requires more disk space)
+NOTESTS_DESC=	Do not run any self-tests (Tier-1, DISCOURAGED)
+SMALLTESTS_DESC=Run tests that need <500 MB disk space (DEFAULT)
+ALLTESTS_DESC=	Run most self-tests (needs more RAM/disk space)
+PARALLELTESTS_DESC=	Parallelize self-tests (needs more disk space)
+
+FUSEFS_CONFIGURE_ENABLE=	fuse2fs
+
+BUILD_DEPENDS+=	gdd:sysutils/coreutils
+
+LIB_DEPENDS+=	libblkid.so:misc/e2fsprogs-libblkid
+LIB_DEPENDS+=	libss.so:devel/e2fsprogs-libss
+LIB_DEPENDS+=	libuuid.so:misc/e2fsprogs-libuuid
+
+PORTDOCS=	NOTICE README RELEASE-NOTES SUBMITTING-PATCHES
 .endif
 
 PKGDEINSTALL=	${PKGINSTALL}
@@ -50,6 +70,10 @@ PKGDEINSTALL=	${PKGINSTALL}
 MAKE_ARGS+=	V=1
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MFUSEFS}
+USES+=		fuse
+.endif
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext iconv:build
@@ -63,15 +87,13 @@ USE_PERL5=	build
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-PLIST_SUB=	NLS=""
 . if empty(ICONV_LIB)
-libintl=	"${LOCALBASE}/lib/libintl.a"
+libintl=	${LOCALBASE}/lib/libintl.a
 . else
-libintl=	"${LOCALBASE}/lib/libintl.a ${LOCALBASE}/lib/libiconv.a"
+libintl=	${LOCALBASE}/lib/libintl.a ${LOCALBASE}/lib/libiconv.a
 . endif
 .else
 CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB=	NLS="@comment "
 libintl=
 .endif
 
@@ -128,7 +150,7 @@ post-patch::
 .if ${MASTERDIR} == ${.CURDIR}
 # NOTE: The previous .if block goes all the way to the end of the file.
 
-.if !empty(PORT_OPTIONS:MNOTESTS) && (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1100000 || ((${ARCH} != i386) && (${ARCH} != amd64)))
+.if !empty(PORT_OPTIONS:MNOTESTS) && (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1200000 || ((${ARCH} != i386) && (${ARCH} != amd64)))
 BROKEN=	it was not tested on your system by the maintainer; you must run self-tests
 .endif
 
@@ -152,11 +174,11 @@ post-build:
 # system are statically linked against anything that is outside the root fs,
 # else we're in trouble if e2fsck is needed for boot:
 # (we don't use e2fsck.static, since we can link libc.so dynamically)
-	cd ${WRKSRC}/e2fsck && ${RM} e2fsck \
-		&& ${MAKE_CMD} e2fsck \
-		STATIC_LIBS="../lib/libext2fs.a ../lib/libcom_err.a \
-		../lib/libblkid.a  ../lib/libuuid.a" \
-		LIBINTL=${libintl} LIBMAGIC=/usr/lib/libmagic.a\ -lz
+	cd ${WRKSRC}/e2fsck && ${RM} -f e2fsck \
+		&& ${MAKE_CMD} e2fsck V=1 \
+		LIBS="../lib/libsupport.a ../lib/libext2fs.a ../lib/libcom_err.a \
+		${LOCALBASE}/lib/libblkid.a ${LOCALBASE}/lib/libuuid.a ${libintl} ../lib/libe2p.a" \
+		LIBMAGIC=/usr/lib/libmagic.a\ -lz
 # Regression check: avoid a port (not upstream!) regression from 1.40.5,
 # check that e2fsck isn't dynalinked against anything but libc.so:
 	@${ECHO_CMD} -n "===>  checking that e2fsck depends on no shared objects outside /lib: "
@@ -192,7 +214,6 @@ post-build:
 .endif
 
 post-install:
-	${RM} ${STAGEDIR}${PREFIX}/sbin/uuidd
 	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${STAGEDIR}${PREFIX}/sbin/
 	${INSTALL_MAN} ${FILESDIR}/fsck_ext2fs.8 ${STAGEDIR}${PREFIX}/man/man8/
 .if ${PORT_OPTIONS:MDOCS}
@@ -201,19 +222,20 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
-#
+
 # the next line closes .if ${MASTERDIR} == ${.CURDIR}
 .endif
 do-install:
 # NAS4Free install
 	@echo "install for ${NAS4FREE_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/fsck_ext2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/e2fsck/e2fsck ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/badblocks ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/dumpe2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/mke2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/tune2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/fsck_ext2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
 
 	@${LN} -s -f -v /usr/local/sbin/e2fsck ${NAS4FREE_ROOTFS}/sbin/e2fsck
 	@${LN} -s -f -v /usr/local/sbin/fsck_ext2fs ${NAS4FREE_ROOTFS}/sbin/fsck_ext2fs
+
 .include <bsd.port.post.mk>
