@@ -214,23 +214,24 @@ else:
 endif;
 $a_poollist = zfs_get_pool_list();
 $l_poollist = [];
+$use_si = is_sidisksizevalues();
 foreach($a_pool as $r_pool):
 	$r_poollist = $a_poollist[$r_pool['name']];
-	$helpinghand = $r_pool['name'].': '.$r_poollist['size']; 
+	$helpinghand = sprintf('%s: %s',$r_pool['name'],format_bytes($r_poollist['size'],2,false,$use_si));
 	if(!empty($r_pool['desc'])):
 		$helpinghand .= ' ' . $r_pool['desc'];
 	endif;
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 endforeach;
-$a_referer = ['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode','volsize'];
+$a_referrer = ['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode','volsize'];
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		$sphere->row['name'] = '';
 		$sphere->row['pool'] = '';
 		$sphere->row['desc'] = '';
 		$sphere->row['sparse'] = false;
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->get_defaultvalue();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->$referrer->get_defaultvalue();
 		endforeach;
 		break;
 	case PAGE_MODE_CLONE:
@@ -238,8 +239,8 @@ switch($page_mode):
 		$sphere->row['pool'] = filter_input(INPUT_POST,'pool',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
 		$sphere->row['desc'] = filter_input(INPUT_POST,'desc',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
 		$sphere->row['sparse'] = filter_input(INPUT_POST,'sparse',FILTER_VALIDATE_BOOLEAN,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_input() ?? $property->$referer->get_defaultvalue();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->$referrer->validate_input() ?? $property->$referrer->get_defaultvalue();
 		endforeach;
 		//	adjust page mode
 		$page_mode = PAGE_MODE_ADD;
@@ -249,16 +250,16 @@ switch($page_mode):
 		$sphere->row['pool'] = $sphere->grid[$sphere->row_id]['pool'][0];
 		$sphere->row['desc'] = $sphere->grid[$sphere->row_id]['desc'];
 		$sphere->row['sparse'] = isset($sphere->grid[$sphere->row_id]['sparse']);
-		foreach($a_referer as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_value($sphere->grid[$sphere->row_id][$referer]) ?? $property->$referer->get_defaultvalue();
+		foreach($a_referrer as $referrer):
+			$sphere->row[$referrer] = $property->$referrer->validate_value($sphere->grid[$sphere->row_id][$referrer]) ?? $property->$referrer->get_defaultvalue();
 		endforeach;
 		break;
 	case PAGE_MODE_POST:
 		// apply post values that are applicable for all record modes
 		$sphere->row['desc'] = filter_input(INPUT_POST,'desc',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
 		$sphere->row['sparse'] = filter_input(INPUT_POST,'sparse',FILTER_VALIDATE_BOOLEAN,['options' => ['default' => false]]);
-		foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volmode','volsize'] as $referer):
-			$sphere->row[$referer] = $property->$referer->validate_input();
+		foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volmode','volsize'] as $referrer):
+			$sphere->row[$referrer] = $property->$referrer->validate_input();
 		endforeach;
 		switch($record_mode):
 			case RECORD_NEW:
@@ -280,17 +281,17 @@ switch($page_mode):
 		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		// validate text input elements
-		foreach(['volsize'] as $referer):
-			if(!isset($sphere->row[$referer])):
-				$sphere->row[$referer] = $_POST[$referer] ?? $property->$referer->get_defaultvalue(); // restore $_POST or populate default
-				$input_errors[] = $property->$referer->get_message_error();
+		foreach(['volsize'] as $referrer):
+			if(!isset($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $_POST[$referrer] ?? $property->$referrer->get_defaultvalue(); // restore $_POST or populate default
+				$input_errors[] = $property->$referrer->get_message_error();
 			endif;
 		endforeach;
 		// validate list elements
-		foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $referer):
-			if(!isset($sphere->row[$referer])):
-				$sphere->row[$referer] = '';
-				$input_errors[] = $property->$referer->get_message_error();
+		foreach(['checksum','compression','dedup','logbias','primarycache','secondarycache','sync','volblocksize','volmode'] as $referrer):
+			if(!isset($sphere->row[$referrer])):
+				$sphere->row[$referrer] = '';
+				$input_errors[] = $property->$referrer->get_message_error();
 			endif;
 		endforeach;
 		if(empty($input_errors)):
