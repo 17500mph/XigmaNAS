@@ -131,6 +131,7 @@ $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
 $pconfig['microcode_update'] = isset($config['system']['microcode_update']);
 $pconfig['enabletogglemode'] = isset($config['system']['enabletogglemode']);
+$pconfig['nonsidisksizevalues'] = isset($config['system']['nonsidisksizevalues']);
 $pconfig['skipviewmode'] = isset($config['system']['skipviewmode']);
 $pconfig['disableextensionmenu'] = isset($config['system']['disableextensionmenu']);
 $pconfig['tune_enable'] = isset($config['system']['tune']);
@@ -225,6 +226,7 @@ if($_POST):
 		$config['system']['disablefm'] = $helpinghand;
 		$config['system']['disablefirmwarecheck'] = $property->disablefirmwarecheck->validate_input();
 		$config['system']['enabletogglemode'] = $property->enabletogglemode->validate_input();
+		$config['system']['nonsidisksizevalues'] = $property->nonsidisksizevalues->validate_input();
 		$config['system']['skipviewmode'] = $property->skipviewmode->validate_input();
 		$_SESSION['g']['shrinkpageheader'] = $property->shrinkpageheader->validate_input();
 		$helpinghand = $property->disableextensionmenu->validate_input();
@@ -386,6 +388,7 @@ $document->render();
 			$node->c2_checkbox($property->adddivsubmittodataframe,!empty($pconfig['adddivsubmittodataframe']));
 			$node->c2_checkbox($property->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
 			$node->c2_checkbox($property->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
+			$node->c2_checkbox($property->nonsidisksizevalues,!empty($pconfig['nonsidisksizevalues']));
 			$node->render();
 ?>
 		</tbody>
