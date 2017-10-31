@@ -213,6 +213,7 @@ echo $sphere->doj();
 		</thead>
 		<tbody>
 <?php
+			$use_si = is_sidisksizevalues();
 			foreach($sphere->grid as $sphere->row):
 				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
@@ -231,13 +232,13 @@ echo $sphere->doj();
 				endswitch;
 				if(is_array($sphere_addon_grid) && array_key_exists($sphere->row['name'],$sphere_addon_grid)):
 					$sphere_addon_row = $sphere_addon_grid[$sphere->row['name']];
-					$size = $sphere_addon_row['size'];
-					$used = $sphere_addon_row['used'];
-					$alloc = $sphere_addon_row['alloc'];
-					$avail = $sphere_addon_row['avail'];
-					$free = $sphere_addon_row['free'];
+					$size = format_bytes($sphere_addon_row['size'],2,false,$use_si);
+					$used = format_bytes($sphere_addon_row['used'],2,false,$use_si);
+					$alloc = format_bytes($sphere_addon_row['alloc'],2,false,$use_si);
+					$avail = format_bytes($sphere_addon_row['avail'],2,false,$use_si);
+					$free = format_bytes($sphere_addon_row['free'],2,false,$use_si);
 					$frag = $sphere_addon_row['frag'];
-					$cap = $sphere_addon_row['cap'];
+					$cap = sprintf('%d%%',$sphere_addon_row['cap']);
 					$dedup = $sphere_addon_row['dedup'];
 					$health = $sphere_addon_row['health'];
 					$altroot = $sphere_addon_row['altroot'];
