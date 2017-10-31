@@ -109,16 +109,16 @@ if($_POST) {
 	endif;
 }
 function get_volsize($pool,$name) {
-	mwexec2('zfs get -H -o value volsize ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
-	return $rawdata[0];
+	mwexec2('zfs get -pH -o value volsize ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
+	return format_bytes($rawdata[0],2,false,is_sidisksizevalues());
 }
 function get_volused($pool,$name) {
-	mwexec2('zfs get -H -o value used ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
-	return $rawdata[0];
+	mwexec2('zfs get -pH -o value used ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
+	return format_bytes($rawdata[0],2,false,is_sidisksizevalues());
 }
 function get_volblock($pool,$name) {
-	mwexec2('zfs get -H -o value volblock ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
-	return $rawdata[0];
+	mwexec2('zfs get -pH -o value volblock ' . escapeshellarg($pool . '/' . $name) . ' 2>&1',$rawdata);
+	return format_bytes($rawdata[0],0,false,false);
 }
 function zfsvolume_process_updatenotification($mode,$data) {
 	global $config;
@@ -297,9 +297,9 @@ function controlactionbuttons(ego, triggerbyname) {
 <?php
 						else:
 ?>
-							<td class="lcell"><?=htmlspecialchars(get_volsize($sphere_record['pool'][0], $sphere_record['name']));?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars(get_volsize($sphere_record['pool'][0],$sphere_record['name']));?>&nbsp;</td>
 							<td class="lcell"><?=htmlspecialchars($sphere_record['compression']);?>&nbsp;</td>
-							<td class="lcell"><?=htmlspecialchars(isset($sphere_record['sparse']) ? get_volused($sphere_record['pool'][0], $sphere_record['name']) : '-');?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars(isset($sphere_record['sparse']) ? get_volused($sphere_record['pool'][0],$sphere_record['name']) : '-');?>&nbsp;</td>
 							<td class="lcell"><?=htmlspecialchars(get_volblock($sphere_record['pool'][0], $sphere_record['name']));?>&nbsp;</td>
 <?php
 						endif;
