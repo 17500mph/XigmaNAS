@@ -827,6 +827,7 @@ function get_pool_usage() {
 	global $config;
  	$retval = [];
 	$a_poolusage = [];
+	$use_si = is_sidisksizevalues();
 	$a_poolinfo = zfs_get_pool_list();
 	if(!empty($a_poolinfo)):
 		foreach($a_poolinfo as $poolk => $poolv):
@@ -835,20 +836,20 @@ function get_pool_usage() {
 			$r_poolusage = [];
 			$r_poolusage['id'] = $id;
 			$r_poolusage['name'] = $poolv['name'];
-			$r_poolusage['capacity'] = $poolv['cap'];
-			$r_poolusage['percentage'] = rtrim($poolv['cap'],"%");
-			$r_poolusage['size'] = $poolv['size'];
+			$r_poolusage['capacity'] = sprintf('%d%%',$poolv['cap']);
+			$r_poolusage['percentage'] = $poolv['cap'];
+			$r_poolusage['size'] = format_bytes($poolv['size'],2,false,$use_si);
 			if(isset($config['zfs']['settings']['showusedavail'])):
-				$r_poolusage['used'] = $poolv['used'];
-				$r_poolusage['avail'] = $poolv['avail'];
+				$r_poolusage['used'] = format_bytes($poolv['used'],2,false,$use_si);
+				$r_poolusage['avail'] = format_bytes($poolv['avail'],2,false,$use_si);
 			else: // this is the default setting
-				$r_poolusage['used'] = $poolv['alloc'];
-				$r_poolusage['avail'] = $poolv['free'];
+				$r_poolusage['used'] = format_bytes($poolv['alloc'],2,false,$use_si);
+				$r_poolusage['avail'] = format_bytes($poolv['free'],2,false,$use_si);
 			endif;
 			$r_poolusage['health'] = $poolv['health'];
-			$r_poolusage['capofsize'] = sprintf(gtext("%s of %sB"),$r_poolusage['capacity'],$r_poolusage['size']);
-			$r_poolusage['tooltip']['used'] = sprintf(gtext("%sB used of %sB"),$r_poolusage['used'],$r_poolusage['size']);
-			$r_poolusage['tooltip']['avail'] = sprintf(gtext("%sB available of %sB"),$r_poolusage['avail'],$r_poolusage['size']);
+			$r_poolusage['capofsize'] = sprintf('%1$s %3$s %2$s',$r_poolusage['capacity'],$r_poolusage['size'],gtext('of'));
+			$r_poolusage['tooltip']['used'] = sprintf('%1$s %3$s %2$s',$r_poolusage['used'],$r_poolusage['size'],gtext('used of'));
+			$r_poolusage['tooltip']['avail'] = sprintf('%1$s %3$s %2$s',$r_poolusage['avail'],$r_poolusage['size'],gtext('available of'));
 			$a_poolusage[] = $r_poolusage;
 		endforeach;
 		array_sort_key($a_poolusage,'name');
