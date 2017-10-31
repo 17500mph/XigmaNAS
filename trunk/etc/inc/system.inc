@@ -534,9 +534,9 @@ function system_get_ram_info() {
 //    [capacity] => "0%"
 //  )
 function system_get_swap_info() {
-	exec("/usr/sbin/swapinfo -k",$swap);
-
-	// blocks
+	$use_si = is_sidisksizevalues();
+	exec('/usr/sbin/swapinfo -k',$swap);
+	//	blocks
 	$val = 512;
 	if(preg_match("/(?:Device)(?:\s+)(\d+)(?:K-blocks|-blocks)(?:\s+)(?:Used)(?:\s+)(?:Avail)(?:\s)(?:Capacity)/",$swap[0],$matches)):
 		if($matches[1] == 1):
@@ -551,11 +551,10 @@ function system_get_swap_info() {
 		if(preg_match("/(\/dev\/.*)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s+)(\d+)(?:\s)(.+)/",$swapv,$matches)):
 			$devswap = [];
 			$devswap['device'] = trim($matches[1]);
-			$devswap['total'] = decode_size(trim($matches[2])*$val);
-			$devswap['used'] = decode_size(trim($matches[3])*$val);
-			$devswap['avail'] = decode_size(trim($matches[4])*$val);
+			$devswap['total'] = format_bytes(trim($matches[2])*$val,2,false,$use_si);
+			$devswap['used'] = format_bytes(trim($matches[3])*$val,2,false,$use_si);
+			$devswap['avail'] = format_bytes(trim($matches[4])*$val,2,false,$use_si);
 			$devswap['capacity'] = trim($matches[5]);
-
 			$swapinfo[] = $devswap;
 		endif;
 	endforeach;
