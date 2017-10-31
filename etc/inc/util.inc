@@ -2684,6 +2684,15 @@ function get_filesize($file) {
 	return @exec('stat -f %z ' . escapeshellarg($file));
 }
 /**
+ * Determines the use of binary prefixes instead of decimal prefixes.
+ * @global type $config
+ * @return bool
+ */
+function is_sidisksizevalues(): bool {
+	global $config;
+	return !(isset($config['system']['nonsidisksizevalues']) && (is_bool($config['system']['nonsidisksizevalues']) ? $config['system']['nonsidisksizevalues'] : true));
+}
+/**
  * Converts an integer or an integer string into a human readable format for unit byte.
  * @param int/string $value Value to be converted into a human readable format.
  * @param int $precision The number of decimal digits. Default is 2.
