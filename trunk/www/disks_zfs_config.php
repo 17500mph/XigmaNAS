@@ -34,6 +34,7 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
+$use_si = is_sidisksizevalues();
 $zfs = [
 	'vdevices' => ['vdevice' => []],
 	'pools' => ['pool' => []],
@@ -127,7 +128,7 @@ if(0 == $retval):
 		endif;
 	endforeach;
 endif;
-$cmd = 'zfs list -H -t volume -o name,volsize,volblocksize,compression,origin,dedup,sync,refreservation';
+$cmd = 'zfs list -pH -t volume -o name,volsize,volblocksize,compression,origin,dedup,sync,refreservation';
 unset($rawdata);
 unset($retval);
 mwexec2($cmd,$rawdata,$retval);
@@ -147,8 +148,8 @@ if(0 == $retval):
 				'uuid' => uuid(),
 				'name' => $name,
 				'pool' => $pool,
-				'volsize' => $volsize,
-				'volblocksize' => $volblocksize,
+				'volsize' => format_bytes($volsize,2,false,$use_si),
+				'volblocksize' => format_bytes($volblocksize,0,false,false),
 				'compression' => $compress,
 				'dedup' => $dedup,
 				'sync' => $sync,
@@ -158,7 +159,7 @@ if(0 == $retval):
 		endif;
 	endforeach;
 endif;
-$cmd = 'zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup';
+$cmd = 'zpool list -pH -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup';
 unset($rawdata);
 unset($retval);
 mwexec2($cmd,$rawdata,$retval);
@@ -171,12 +172,12 @@ if(0 == $retval):
 		if ($root != '-'):
 			$zfs['pools']['pool'][$pool]['root'] = $root;
 		endif;
-		$zfs['extra']['pools']['pool'][$pool]['size'] = $size;
-		$zfs['extra']['pools']['pool'][$pool]['alloc'] = $alloc;
-		$zfs['extra']['pools']['pool'][$pool]['free'] = $free;
+		$zfs['extra']['pools']['pool'][$pool]['size'] = format_bytes($size,2,false,$use_si);
+		$zfs['extra']['pools']['pool'][$pool]['alloc'] = format_bytes($alloc,2,false,$use_si);
+		$zfs['extra']['pools']['pool'][$pool]['free'] = format_bytes($free,2,false,$use_si);
 		$zfs['extra']['pools']['pool'][$pool]['expandsz'] = $expandsz;
 		$zfs['extra']['pools']['pool'][$pool]['frag'] = $frag;
-		$zfs['extra']['pools']['pool'][$pool]['cap'] = $cap;
+		$zfs['extra']['pools']['pool'][$pool]['cap'] = sprintf('%d%%',$cap);
 		$zfs['extra']['pools']['pool'][$pool]['health'] = $health;
 		$zfs['extra']['pools']['pool'][$pool]['dedup'] = $dedup;
 	endforeach;
