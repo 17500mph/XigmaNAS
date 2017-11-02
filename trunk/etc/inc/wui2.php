@@ -2420,16 +2420,26 @@ trait co_DOMTools {
 	 *	@return DOMNode $this
 	 */
 	public function mount_body(array $page_title = [],string $action_url = NULL,bool $setenctype = false) {
-		$jdata = <<<'EOJ'
+		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
+		if($is_form):
+			$jdata = <<<'EOJ'
 $(window).on("load", function() {
 	$("#tabnav").on('click', function() { spinner(); });
 	$("#tabnav2").on('click', function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 	$("#iform").submit(function() { spinner(); });
+});
+EOJ;
+		else:
+			$jdata = <<<'EOJ'
+$(window).on("load", function() {
+	$("#tabnav").on('click', function() { spinner(); });
+	$("#tabnav2").on('click', function() { spinner(); });
 	$(".spin").click(function() { spinner(); });
 });
 EOJ;
+		endif;
 		$body = $this->addElement('body',['id' => 'main']);
-		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
 		if($is_form):
 			$form_attributes = [
 				'action' => $action_url,
