@@ -993,10 +993,6 @@ class HTMLSeparator2 extends HTMLBaseControl2 {
 class HTMLTitleLine2 extends HTMLBaseControl2 {
 	var $_colspan = 2;
 	var $_classtopic = 'lhetop';
-	//	constructor
-	function __construct($title) {
-		$this->SetTitle($title);
-	}
 	//	get/set methods
 	function SetClassTopic($cssclass) {
 		$this->_classtopic = $cssclass;
