@@ -603,9 +603,8 @@ function html_separator2($colspan = 2,$ctrlname = '') {
 }
 
 function html_titleline2($title,$colspan = 2,$ctrlname = '') {
-	$ctrl = new HTMLTitleLine2($title);
+	$ctrl = new HTMLTitleLine2($ctrlname,$title,'');
 	$ctrl->SetColSpan($colspan);
-	$ctrl->SetCtrlName($ctrlname);
 	$ctrl->Compose()->render();
 }
 
