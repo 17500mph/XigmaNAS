@@ -497,8 +497,10 @@ class co_sphere_grid extends co_sphere_level2 {
 		$output[] = "\t\t" . 'ab_control(this,"' . $this->cbm_name . '[]");';
 		$output[] = "\t" . '});';
 		//	Init spinner.
-		$output[] = "\t" . '$("#iform").submit(function() { spinner(); });';
-		$output[] = "\t" . '$(".spin").click(function() { spinner(); });';
+		if($with_envelope):
+			$output[] = "\t" . '$("#iform").submit(function() { spinner(); });';
+			$output[] = "\t" . '$(".spin").click(function() { spinner(); });';
+		endif;
 		$output[] = '});';
 		$output[] = 'function ab_disable(flag) {';
 		if($this->enadis()):
