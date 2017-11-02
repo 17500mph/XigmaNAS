@@ -38,6 +38,8 @@ array_make_branch($config,'vbox');
 $pconfig['enable'] = isset($config['vbox']['enable']);
 $pconfig['homedir'] = $config['vbox']['homedir'] ?? '';
 $pconfig['allowusb'] = isset($config['vbox']['allowusb']);
+$pconfig['allowserial'] = isset($config['vbox']['allowserial']);
+$pconfig['allowusbserial'] = isset($config['vbox']['allowusbserial']);
 $vbox_user = rc_getenv_ex('vbox_user','vboxusers');
 $vbox_group = rc_getenv_ex('vbox_group','vboxusers');
 if($_POST):
@@ -60,6 +62,8 @@ if($_POST):
 		$config['vbox']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['vbox']['homedir'] = $_POST['homedir'];
 		$config['vbox']['allowusb'] = isset($_POST['allowusb']) ? true : false;
+		$config['vbox']['allowserial'] = isset($_POST['allowserial']) ? true : false;
+		$config['vbox']['allowusbserial'] = isset($_POST['allowusbserial']) ? true : false;
 		$dir = $config['vbox']['homedir'];
 		if($dir == '' || !file_exists($dir)):
 			$dir = '/nonexistent';
@@ -133,8 +137,27 @@ $(window).on("load", function() {
 		<tbody>
 <?php			
 			html_filechooser2('homedir',gtext('Home Directory'),$pconfig['homedir'],gtext('Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory.'),$g['media_path'],false,60);
-			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Be careful enabling this option.') . '</strong>';
-			html_checkbox2('allowusb',gtext('Allow USB'),!empty($pconfig['allowusb']),gtext('Enable this option to make host USB available to clients.'),$desc);
+?>
+		</tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_separator2();
+			html_titleline2(gtext('Host Resources'));
+?>
+		</thead>
+		<tbody>
+<?php			
+			html_checkbox2('allowusb',gtext('Allow USB'),!empty($pconfig['allowusb']),gtext('Enable this option to make host USB available to clients.'));
+			html_checkbox2('allowserial',gtext('Allow Serial Ports'),!empty($pconfig['allowserial']),gtext('Enable this option to make host serial ports available to clients.'));
+			html_checkbox2('allowusbserial',gtext('Allow USB Serial Ports'),!empty($pconfig['allowusbserial']),gtext('Enable this option to make host USB serial ports available to clients.'));
+			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Be careful with turning on these options.') . '</strong>';
+			html_text2('warning',gtext('Warning'),$desc);
 ?>
 		</tbody>
 	</table>
