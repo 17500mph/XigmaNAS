@@ -71,24 +71,29 @@ var \$startStopConfig = true;
 var \$enableAdvancedConfig = true;
 }
 EOF
-
-	# Create devfs rules for vbox
+	# delete vbox_rules from devfs rules
 	grep "vbox_rules" /etc/devfs.rules > /dev/null 2>&1
-	if [ $? -ne 0 ]; then
-		echo "[vbox_rules=10]" >> /etc/devfs.rules
-		# Add rule for tap devices
-		echo "add 100 path 'tap*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
-		/usr/local/sbin/rconf attribute set devfs_system_ruleset vbox_rules
-		/etc/rc.d/devfs start
+	if [ $? -eq 0 ]; then
+		sed -i.bak '/^\[vbox_rules=/,/^\[/{/^\[vbox_rules=/d;/^\[/p;d;}' /etc/devfs.rules
 	fi
+	# Create devfs rules for vbox
+	echo "[vbox_rules=10]" >> /etc/devfs.rules
+	# Add rule for tap devices
+	echo "add 100 path 'tap*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
 	# Add rule for USB when enabled
 	if [ 0 -lt `configxml_get_count "//vbox/allowusb"` ]; then
-		/sbin/devfs rule -s 10 add 200 path 'usb/*' mode 0660 group ${vbox_group}
-	else
-		/sbin/devfs rule -s 10 del 200
+		echo "add 200 path 'usb/*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
 	fi
-	# Apply changes to ruleset
-	/sbin/devfs rule applyset
+	# Add rule for ttyU ports when enabled
+	if [ 0 -lt `configxml_get_count "//vbox/allowserial"` ]; then
+		echo "add 300 path 'ttyU*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
+	fi
+	# Add rule for USB serial ports when enabled
+	if [ 0 -lt `configxml_get_count "//vbox/allowusbserial"` ]; then
+		echo "add 310 path 'cuaU*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
+	fi
+	/usr/local/sbin/rconf attribute set devfs_system_ruleset vbox_rules
+	/etc/rc.d/devfs restart
 	# Create certificate
 	_certificate=`configxml_get "//system/webgui/certificate"`
 	_privatekey=`configxml_get "//system/webgui/privatekey"`
