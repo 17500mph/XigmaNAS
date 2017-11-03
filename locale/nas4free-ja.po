@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-10-11 12:48+0000\n"
 "Last-Translator: Kenichi Yamada <yamaken_sapporo@me.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -67,6 +67,10 @@ msgid "%s already exists."
 msgstr "%s は既に存在します。"
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s は既にファイルシステムとして構成されています。"
 
@@ -79,12 +83,20 @@ msgid "%s is too long."
 msgstr "%s は長すぎます。"
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%2$sB 中 %1$s"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s ＠ %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -699,10 +711,16 @@ msgstr "許可"
 msgid "Allow New Files"
 msgstr "新規ファイルを許可"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "TLS 接続のみ許可する。"
 
 msgid "Allow USB"
+msgstr ""
+
+msgid "Allow USB Serial Ports"
 msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
@@ -1126,7 +1144,7 @@ msgstr "バッテリー温度"
 msgid "Battery voltage"
 msgstr "バッテリー電圧"
 
-msgid "Be careful enabling this option."
+msgid "Be careful with turning on these options."
 msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
@@ -1141,6 +1159,9 @@ msgstr "Unisonクライアントを利用する前に以下を実行する必要
 
 msgid "Best available"
 msgstr "最も良いものを自動選択"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "Bind DN"
@@ -2615,6 +2636,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr "ディスクが（通常は原因衝撃や温度により）スピンドルに対してシフトした距離。測定単位は不明です。"
@@ -3389,6 +3414,13 @@ msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
 
 msgid "Enable this option to make host USB available to clients."
+msgstr ""
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
 
 msgid ""
@@ -4253,6 +4285,9 @@ msgid "Host"
 msgstr "ホスト"
 
 msgid "Host Access Control"
+msgstr ""
+
+msgid "Host Resources"
 msgstr ""
 
 msgid "Host resources"
@@ -10410,6 +10445,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr ""
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "変更に失敗しました。"
 
@@ -10436,6 +10474,9 @@ msgstr "設定可能な最大切り替え電圧上限値"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "設定可能な最大切り替え電圧下限値"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI イニシエータ"
@@ -10496,6 +10537,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "none"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10534,3 +10584,9 @@ msgstr "から"
 
 msgid "umount"
 msgstr "アンマウント"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""

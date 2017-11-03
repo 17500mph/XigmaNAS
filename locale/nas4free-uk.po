@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-09-29 16:01+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"PO-Revision-Date: 2017-10-31 18:36+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -66,6 +66,10 @@ msgid "%s already exists."
 msgstr "%s вже існує."
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s вже налаштовано як файлова система."
 
@@ -78,12 +82,20 @@ msgid "%s is too long."
 msgstr "%s занадто довге."
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s з %s байт"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s на %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -738,11 +750,17 @@ msgstr "Дозволити"
 msgid "Allow New Files"
 msgstr "Дозволити нові файли"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Дозволяти лише TLS з'єднання."
 
 msgid "Allow USB"
 msgstr "Дозволити USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr ""
@@ -923,7 +941,7 @@ msgid "Apply"
 msgstr "Застосувати"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Застосувати зміни"
 
 msgid "Apply Filter"
 msgstr "Застосувати фільтр"
@@ -1203,8 +1221,8 @@ msgstr "Температура батареї"
 msgid "Battery voltage"
 msgstr "Напруга батареї"
 
-msgid "Be careful enabling this option."
-msgstr "Будьте обачні, обираючи цю опцію."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - Видалення файлів буде завершено до початку передачі."
@@ -1220,6 +1238,9 @@ msgstr ""
 
 msgid "Best available"
 msgstr "Найкраще з доступного"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "Приєднати(прив'язати) доменне ім'я"
@@ -2798,6 +2819,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3606,6 +3631,13 @@ msgstr ""
 msgid "Enable this option to make host USB available to clients."
 msgstr ""
 "Оберіть цю опцію, щоб дозволити доступ з кліентів до USB портів хоста."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4519,6 +4551,9 @@ msgstr "Хост"
 
 msgid "Host Access Control"
 msgstr "Керування Доступом до Хосту"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Ресурси хоста"
@@ -11163,6 +11198,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "та"
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "відмова зміни."
 
@@ -11191,6 +11229,9 @@ msgstr "найбільше значення високої напруги для
 
 msgid "greatest settable low voltage transfer point"
 msgstr "найбільше значення низької напруги для перемикання що встановлюється"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI ініціатор"
@@ -11251,6 +11292,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "немає"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11282,10 +11332,19 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "syslog.conf"
-msgstr ""
+msgstr "syslog.conf"
 
 msgid "to"
 msgstr "до"
 
 msgid "umount"
 msgstr "umount"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Будьте обачні, обираючи цю опцію."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-10-20 17:00+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -65,6 +65,10 @@ msgid "%s already exists."
 msgstr "%s există deja."
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s este deja configurat ca sistem de fișiere."
 
@@ -77,12 +81,20 @@ msgid "%s is too long."
 msgstr "%s este prea lung."
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s din %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s pe %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -747,11 +759,17 @@ msgstr "Permite"
 msgid "Allow New Files"
 msgstr "Permite fișiere noi"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Permite doar conexiuni TLS."
 
 msgid "Allow USB"
 msgstr "Permite USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permite accesul la sistem pentru conturile fără parolă."
@@ -1212,8 +1230,8 @@ msgstr "Temperatură acumulator"
 msgid "Battery voltage"
 msgstr "Tensiune acumulator"
 
-msgid "Be careful enabling this option."
-msgstr "Aveți grijă la activarea acestei opțiuni."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Înainte - Fișierele vor fi șterse înainte de începerea transferului."
@@ -1228,6 +1246,9 @@ msgstr ""
 
 msgid "Best available"
 msgstr "Cel mai bun disponibil"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "DN legare"
@@ -2819,6 +2840,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3621,6 +3646,13 @@ msgstr ""
 msgid "Enable this option to make host USB available to clients."
 msgstr ""
 "Activați opțiunea pentru a pune portul USB la dispoziția utilizatorilor."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4540,6 +4572,9 @@ msgstr "Sistem"
 
 msgid "Host Access Control"
 msgstr "Control acces gazdă"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Resurse sistem"
@@ -11199,6 +11234,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "și"
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "schimbare eșuată."
 
@@ -11227,6 +11265,9 @@ msgstr "valoarea maximă punct de transfer tensiune înaltă"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "valoarea maximă punct de transfer tensiune joasă"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "Inițiator iSCSI"
@@ -11287,6 +11328,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "nimic"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11325,3 +11375,12 @@ msgstr "către"
 
 msgid "umount"
 msgstr "demontare"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Aveți grijă la activarea acestei opțiuni."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-10-23 21:11+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"PO-Revision-Date: 2017-11-01 16:51+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -68,6 +68,10 @@ msgid "%s already exists."
 msgstr "%s existe déjà."
 
 #, php-format
+msgid "%s available of %s"
+msgstr "%s disponible sur %s"
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s est déjà configuré comme système de fichier"
 
@@ -80,12 +84,20 @@ msgid "%s is too long."
 msgstr "%s est trop long"
 
 #, php-format
+msgid "%s of %s"
+msgstr "%s sur %s"
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s de %s octet(s)"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s sur %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr "%s utilisé sur %s"
 
 #, php-format
 msgid "%s%% available"
@@ -755,11 +767,17 @@ msgstr "Autoriser"
 msgid "Allow New Files"
 msgstr "Autoriser les nouveaux fichiers"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Permettre seulement les connections TLS."
 
 msgid "Allow USB"
 msgstr "Autoriser l'accès aux périphériques USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Autoriser l'accès client aux comptes ayant un mot de passe vide"
@@ -1222,8 +1240,8 @@ msgstr "Température de la batterie"
 msgid "Battery voltage"
 msgstr "Tension Batterie"
 
-msgid "Be careful enabling this option."
-msgstr "Faites attention si vous activez cette option"
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1243,6 +1261,9 @@ msgstr ""
 
 msgid "Best available"
 msgstr "Meilleur disponible"
+
+msgid "Binary Prefix"
+msgstr "Préfixe binaire"
 
 msgid "Bind DN"
 msgstr "DN pour se lier"
@@ -2844,6 +2865,12 @@ msgstr ""
 "du pied de page."
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+"Afficher les valeurs de taille de disque en utilisant des préfixes binaires "
+"au lieu de préfixes décimaux."
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3479,10 +3506,10 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Activer les modules Rsync sélectionnés"
 
 msgid "Enable Server"
-msgstr ""
+msgstr "Activer le serveur"
 
 msgid "Enable Setting"
-msgstr ""
+msgstr "Activer le Réglage"
 
 msgid "Enable TLS connections."
 msgstr "Autorise les connexions TLS."
@@ -3667,6 +3694,13 @@ msgstr ""
 msgid "Enable this option to make host USB available to clients."
 msgstr ""
 "Activez cette option pour rendre l'hôte USB disponible pour les clients."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4587,6 +4621,9 @@ msgstr "Hôte"
 
 msgid "Host Access Control"
 msgstr "Contrôle d'Accès de l'Hôte"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Ressources du serveur"
@@ -6985,10 +7022,10 @@ msgid "Properties"
 msgstr "Propriétés"
 
 msgid "Protect"
-msgstr ""
+msgstr "Protéger"
 
 msgid "Protect Setting"
-msgstr ""
+msgstr "Protéger le réglage"
 
 msgid "Proto"
 msgstr "Protocole"
@@ -11319,6 +11356,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "et"
 
+msgid "available of"
+msgstr "disponible de"
+
 msgid "change failed."
 msgstr "Échec de modification."
 
@@ -11347,6 +11387,9 @@ msgstr "Plus grande valeur du point de transfert tension haute configurable"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "Plus grande valeur du point de transfert tension basse configurable"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "Initiateur iSCSI"
@@ -11407,6 +11450,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "aucun"
 
+msgid "of"
+msgstr "de"
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11447,3 +11499,12 @@ msgstr "à"
 
 msgid "umount"
 msgstr "démontage"
+
+msgid "used of"
+msgstr "utilisé de"
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Faites attention si vous activez cette option"

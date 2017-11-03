@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-10-24 07:38+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"PO-Revision-Date: 2017-11-01 11:32+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -68,6 +68,10 @@ msgid "%s already exists."
 msgstr "%s már létezik."
 
 #, php-format
+msgid "%s available of %s"
+msgstr "%s / %s érhető el"
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s már fájlrendszernek be lett állítva."
 
@@ -80,12 +84,20 @@ msgid "%s is too long."
 msgstr "%s túl hosszú."
 
 #, php-format
+msgid "%s of %s"
+msgstr "%s / %s"
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s a(z) %sB-ból"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s ezen: %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr "%s / %s van használatban"
 
 #, php-format
 msgid "%s%% available"
@@ -736,11 +748,17 @@ msgstr "Engedélyez"
 msgid "Allow New Files"
 msgstr "Új fájlok engedélyezése"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Csak TLS kapcsolat engedélyezése."
 
 msgid "Allow USB"
 msgstr "USB engedélyezése"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Engedélyezés a klienseknek a jelszó nélküli hozzáféréshez."
@@ -1200,8 +1218,8 @@ msgstr "Akkumulátor hőmérséklete"
 msgid "Battery voltage"
 msgstr "Akkumulátor feszültsége"
 
-msgid "Be careful enabling this option."
-msgstr "Legyen óvatos, ha engedélyezi ezt a lehetőséget."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Előtte - Átvitel megkezdése előtt töröljük a fájlokat."
@@ -1215,6 +1233,9 @@ msgstr "Az Unison kliens működése előtt a következőket kell végrehajtanod
 
 msgid "Best available"
 msgstr "Az elérhető legjobb"
+
+msgid "Binary Prefix"
+msgstr "Bináris előtag"
 
 msgid "Bind DN"
 msgstr "Kapcsolódó DN"
@@ -2766,6 +2787,11 @@ msgid ""
 msgstr "Műveletek gomb a görgethető területen legyen, ne a láblécen."
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+"Lemezméret értékének megjelenítése decimális helyett bináris előtaggal."
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3577,6 +3603,13 @@ msgstr ""
 
 msgid "Enable this option to make host USB available to clients."
 msgstr "Ez a beállítás a kliensek számára bekapcsolja a kiszolgáló USB-jét."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4488,6 +4521,9 @@ msgstr "Állomás"
 
 msgid "Host Access Control"
 msgstr "Kiszolgálóhozzáférés-felügyelet"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Állomás-erőforrások"
@@ -11114,6 +11150,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "és"
 
+msgid "available of"
+msgstr "érhető el"
+
 msgid "change failed."
 msgstr "változtatás sikertelen"
 
@@ -11142,6 +11181,9 @@ msgstr "legnagyobb beállítható magas feszültségű átviteli pont"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "legnagyobb beállítható alacsony feszültségű átviteli pont"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Kezdeményező"
@@ -11202,6 +11244,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "nincs"
 
+msgid "of"
+msgstr "/"
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11240,3 +11291,12 @@ msgstr "eddig:"
 
 msgid "umount"
 msgstr "leválasztás"
+
+msgid "used of"
+msgstr "használatban"
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Legyen óvatos, ha engedélyezi ezt a lehetőséget."

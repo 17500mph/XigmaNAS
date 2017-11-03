@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-10-26 05:49+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"PO-Revision-Date: 2017-11-02 07:23+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -65,6 +65,10 @@ msgid "%s already exists."
 msgstr "%s ya existe."
 
 #, php-format
+msgid "%s available of %s"
+msgstr "%s disponible de %s"
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s Ya está configurado como un sistema de archivos."
 
@@ -77,12 +81,20 @@ msgid "%s is too long."
 msgstr "%s es demasiado largo."
 
 #, php-format
+msgid "%s of %s"
+msgstr "%s de %s"
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s de %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s en %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr "%s usados de %s"
 
 #, php-format
 msgid "%s%% available"
@@ -742,11 +754,17 @@ msgstr "Permitir"
 msgid "Allow New Files"
 msgstr "Permitir archivos nuevos"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Permitir conexiones TSL únicamente"
 
 msgid "Allow USB"
 msgstr "Permitir USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permitir acceso de clientes a cuentas que tienen contraseñas nulas."
@@ -1213,8 +1231,8 @@ msgstr "Temperatura de la batería"
 msgid "Battery voltage"
 msgstr "Tensión d ela batería"
 
-msgid "Be careful enabling this option."
-msgstr "Habilitar esta opción con precaución"
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1232,6 +1250,9 @@ msgstr "Antes de iniciar el cliente Unison, necesita hacer lo siguiente:"
 
 msgid "Best available"
 msgstr "Mejor disponible"
+
+msgid "Binary Prefix"
+msgstr "prefijo binario"
 
 msgid "Bind DN"
 msgstr "Bind DN"
@@ -2817,6 +2838,11 @@ msgstr ""
 "Muestra los botones en el area de scroll en lugar de en la parte inferior"
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+"Muestra el tmaño del disco usando prefijos binarios en lugar de decimales."
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3625,6 +3651,13 @@ msgstr ""
 
 msgid "Enable this option to make host USB available to clients."
 msgstr "Habilitar esta opción permite el host USB a los clientes"
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4543,6 +4576,9 @@ msgstr "Equipo"
 
 msgid "Host Access Control"
 msgstr "Control de acceso al Host"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Recursos del host."
@@ -11216,6 +11252,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "y"
 
+msgid "available of"
+msgstr "disponibles de"
+
 msgid "change failed."
 msgstr "No ha podido realizarse el cambio"
 
@@ -11243,6 +11282,9 @@ msgstr "Max. valor permitido de alta tensión"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "Max. valor permitido de baja tensión"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "Iniciador iSCSI"
@@ -11303,6 +11345,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "ninguno"
 
+msgid "of"
+msgstr "de"
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11341,3 +11392,12 @@ msgstr "hasta"
 
 msgid "umount"
 msgstr "Desmontar"
+
+msgid "used of"
+msgstr "usados de"
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Habilitar esta opción con precaución"
