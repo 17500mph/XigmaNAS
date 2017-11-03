@@ -17,6 +17,13 @@ OUTPUTDIR="${NAS4FREE_SVNDIR}/locale"
 PARAMETERS="--output-dir=${OUTPUTDIR} --output=${OUTPUT} --language=PHP \
 --force-po --no-location --no-wrap --sort-output --omit-header --keyword="gtext""
 
+echo "==> Delete current pot file..."
+cd ${NAS4FREE_SVNDIR}/locale
+rm -f nas4free.pot
+echo "==> Delete current pot file completed!"
+echo "==> Start building new translations pot file..."
+sleep 3
+
 cd ${NAS4FREE_SVNDIR}/www
 xgettext ${PARAMETERS} *.*
 
@@ -44,6 +51,5 @@ msgstr \"\"
 
 cat ${OUTPUTDIR}/${OUTPUT} >>${OUTPUTDIR}/${OUTPUT}.tmp
 mv -f ${OUTPUTDIR}/${OUTPUT}.tmp ${OUTPUTDIR}/${OUTPUT}
-
 echo -e "\033\\033[32m";
-echo -e "==> Translation file created into:""\033[37m ${OUTPUTDIR}/${OUTPUT}\033[37m";
+echo -e "==> Translations exported into:""\033[37m ${OUTPUTDIR}/${OUTPUT}\033[37m";
