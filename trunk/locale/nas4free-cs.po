@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-10-24 12:05+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -65,6 +65,10 @@ msgid "%s already exists."
 msgstr "%s už existuje."
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s je už používáno jako souborový systém."
 
@@ -77,12 +81,20 @@ msgid "%s is too long."
 msgstr "%s je příliš dlouhé."
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s z %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s na %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -754,11 +766,17 @@ msgstr "Umožnit"
 msgid "Allow New Files"
 msgstr "Umožnit nové soubory"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Umožnit pouze šifrovaná spojení (TLS)."
 
 msgid "Allow USB"
 msgstr "Umožnit USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Umožnit klientům přístup k účtům, nechráněným heslem."
@@ -1223,8 +1241,8 @@ msgstr "Teplota akumulátoru"
 msgid "Battery voltage"
 msgstr "Napětí na svorkách akumulátoru/bloku"
 
-msgid "Be careful enabling this option."
-msgstr "Při zapínání této předvolby buďte opatrní."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Před – soubory budou smazány před zahájením přenosu."
@@ -1238,6 +1256,9 @@ msgstr "Aby Unison klient začal fungovat, je třeba provést následující:"
 
 msgid "Best available"
 msgstr "Nejlepší dostupné"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "Rozlišený název (DN), kterým se spojovat"
@@ -2829,6 +2850,10 @@ msgid ""
 msgstr "Zobrazit tlačítka akcí v posouvatelné oblasti namísto v zápatí."
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3640,6 +3665,13 @@ msgstr ""
 
 msgid "Enable this option to make host USB available to clients."
 msgstr "Zapnutím této předvolby zpřístupníte USB klientům."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4556,6 +4588,9 @@ msgstr "Stroj"
 
 msgid "Host Access Control"
 msgstr "Řízení přístupu ke stroji"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Postředky stroje"
@@ -11285,6 +11320,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "a"
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "změna se nezdařila."
 
@@ -11318,6 +11356,9 @@ msgid "greatest settable low voltage transfer point"
 msgstr ""
 "až jak „vysoko“ lze nastavit hranici podpětí, při poklesu pod kterou "
 "přepnout na akumulátory"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI iniciátor"
@@ -11378,6 +11419,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "žádné"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11420,3 +11470,12 @@ msgstr "na"
 
 msgid "umount"
 msgstr "odpojit (umount)"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Při zapínání této předvolby buďte opatrní."

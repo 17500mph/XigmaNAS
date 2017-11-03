@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-10-24 02:00+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -66,6 +66,10 @@ msgid "%s already exists."
 msgstr "%s 已經存在。"
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s 檔系統配置檔已存在。"
 
@@ -78,12 +82,20 @@ msgid "%s is too long."
 msgstr "%s 太長了。"
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s 於 %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s 於 %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -686,11 +698,17 @@ msgstr "允許"
 msgid "Allow New Files"
 msgstr "允許新檔"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "只允許TLS連接。"
 
 msgid "Allow USB"
 msgstr "允許USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "允許沒有設置密碼的帳號連接。"
@@ -1110,8 +1128,8 @@ msgstr "電池溫度"
 msgid "Battery voltage"
 msgstr "電池電壓"
 
-msgid "Be careful enabling this option."
-msgstr "小心啟用此選項。"
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "之前 - 檔刪除將在傳輸開始之前完成。"
@@ -1125,6 +1143,9 @@ msgstr "在Unison客戶端可以開始工作之前，您需要執行以下操作
 
 msgid "Best available"
 msgstr "現有最佳"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "綁定 DN （Bind DN）"
@@ -2593,6 +2614,10 @@ msgid ""
 msgstr "在可滾動區域中顯示操作按鈕，而不是頁腳區域。"
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr "磁片相對於主軸的距離（通常由於衝擊或溫度）。 計量單位未知。"
@@ -3367,6 +3392,13 @@ msgstr "啟用此選項以允許任何IP地址訪問WebGUI。"
 
 msgid "Enable this option to make host USB available to clients."
 msgstr "啟用此選項可使主機USB可用於客戶端。"
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4228,6 +4260,9 @@ msgstr "主機"
 
 msgid "Host Access Control"
 msgstr "主機訪問控制"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "主機資源"
@@ -10328,6 +10363,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "and"
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "更改失敗。"
 
@@ -10354,6 +10392,9 @@ msgstr "最大可設定高電壓轉換點"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "最大可設置的低電壓轉換點"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI 啟動器"
@@ -10414,6 +10455,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "無"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10452,3 +10502,12 @@ msgstr "到"
 
 msgid "umount"
 msgstr "卸載"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "小心啟用此選項。"

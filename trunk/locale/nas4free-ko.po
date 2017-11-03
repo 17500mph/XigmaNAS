@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-10-17 02:01+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -65,6 +65,10 @@ msgid "%s already exists."
 msgstr "%s이(가) 이미 존재합니다."
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s은(는) 이미 파일시스템으로 설정되었습니다."
 
@@ -77,12 +81,20 @@ msgid "%s is too long."
 msgstr "%s은(는) 너무 깁니다."
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s 전체(%sB)"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s on %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -703,11 +715,17 @@ msgstr "허용"
 msgid "Allow New Files"
 msgstr "새 파일 허용"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "TLS 연결만 허용"
 
 msgid "Allow USB"
 msgstr "USB 허용"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "암호가 없는 계정으로 클라이언트가 접근하는 것 허용."
@@ -1131,8 +1149,8 @@ msgstr "베터리 온도"
 msgid "Battery voltage"
 msgstr "배터리 전압"
 
-msgid "Be careful enabling this option."
-msgstr "이 옵션 사용에 주의하십시오."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Before - 파일 삭제가 완료되면 파일 전송을 시작합니다."
@@ -1146,6 +1164,9 @@ msgstr "Unison Client가 작동하려면 먼저 다음을 수행해야합니다:
 
 msgid "Best available"
 msgstr "가장 적합한 것"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "bind DN"
@@ -2642,6 +2663,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr "(주로 충격이나 온도로 인해) 디스크가 회전축으로부터 벗어난 거리. 임의측정단위"
@@ -3418,6 +3443,13 @@ msgstr "이 옵션을 사용하면 어떤 IP 주소로든 WebGUI에 접근할 �
 
 msgid "Enable this option to make host USB available to clients."
 msgstr "고객들이 호스트 USB를 사용가능케 하려면 이 옵션을 활성화"
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4286,6 +4318,9 @@ msgstr "호스트"
 
 msgid "Host Access Control"
 msgstr "호스트 접근 제어"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "호스트 자원"
@@ -10452,6 +10487,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "그리고"
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "변경이 실패했습니다."
 
@@ -10477,6 +10515,9 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
+msgstr ""
+
+msgid "hidden"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -10538,6 +10579,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "없음"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10576,3 +10626,12 @@ msgstr ""
 
 msgid "umount"
 msgstr "탑재 해제"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "이 옵션 사용에 주의하십시오."

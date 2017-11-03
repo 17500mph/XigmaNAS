@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-10-30 11:12+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -67,6 +67,10 @@ msgid "%s already exists."
 msgstr "το %s υπάρχει ήδη."
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "Το %s είναι ήδη ρυθμισμένο σαν σύστημα αρχείων."
 
@@ -79,12 +83,20 @@ msgid "%s is too long."
 msgstr "%s είναι πολύ μεγάλο."
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s από %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s σε %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -765,11 +777,17 @@ msgstr "Επιτρέπονται"
 msgid "Allow New Files"
 msgstr "Να Επτρέπονται Νέα αρχεία"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Να επιτρέπονται μόνο συνδέσεις TLS."
 
 msgid "Allow USB"
 msgstr "Να επιτρέπονται τα USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr ""
@@ -1243,8 +1261,8 @@ msgstr "Θερμοκρασία μπαταρίας"
 msgid "Battery voltage"
 msgstr "Τάση Μπαταρίας"
 
-msgid "Be careful enabling this option."
-msgstr "Η ενεργοποίηση αυτής της επιλογής χρειάζεται προσοχή."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Πριν - Οι διαγραφές αρχείων θα γίνουν πριν ξεκινήσει η μεταφορά."
@@ -1260,6 +1278,9 @@ msgstr ""
 
 msgid "Best available"
 msgstr "Οι βέλτιστες διαθέσιμες"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr "Δεσμευση DN"
@@ -2870,6 +2891,10 @@ msgstr ""
 "Εμφάνιση των κουμπιών ενεργειών στην περιοχή κύλισης αντί για το υποσέλιδο."
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3698,6 +3723,13 @@ msgid "Enable this option to make host USB available to clients."
 msgstr ""
 "Ενεργοποιήστε αυτή την επιλογή για να είναι διαθέσιμα τα USB του κεντρικού "
 "υπολογιστή στους υπολογιστές-πελάτες."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4627,6 +4659,9 @@ msgstr "Υπολογιστής"
 
 msgid "Host Access Control"
 msgstr "Έλεγχος Πρόσβασης υπολογιστών"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Πόροι υπολογιστή"
@@ -11456,6 +11491,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "και"
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr "η αλλαγή απέτυχε."
 
@@ -11484,6 +11522,9 @@ msgstr "μέγιστο οριζόμενο σημείο μεταφοράς υψη
 
 msgid "greatest settable low voltage transfer point"
 msgstr "μέγιστο οριζόμενο σημείο μεταφοράς χαμηλής τάσης"
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "Εκκινητής iSCSI"
@@ -11544,6 +11585,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "κανένα"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11582,3 +11632,12 @@ msgstr "σε"
 
 msgid "umount"
 msgstr "αποπροσάρτηση"
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Η ενεργοποίηση αυτής της επιλογής χρειάζεται προσοχή."

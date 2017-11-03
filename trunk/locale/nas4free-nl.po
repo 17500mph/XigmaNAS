@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-10-23 21:35+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"PO-Revision-Date: 2017-11-03 03:34+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:54+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -67,6 +67,10 @@ msgid "%s already exists."
 msgstr "%s bestaat reeds."
 
 #, php-format
+msgid "%s available of %s"
+msgstr "%s beschikbaar van %s"
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s is al geconfigureerd als bestandssysteem."
 
@@ -79,12 +83,20 @@ msgid "%s is too long."
 msgstr "%s is te lang."
 
 #, php-format
+msgid "%s of %s"
+msgstr "%s van %s"
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s van %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s op %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr "%s gebruikt van %s"
 
 #, php-format
 msgid "%s%% available"
@@ -758,11 +770,17 @@ msgstr "Toestaan"
 msgid "Allow New Files"
 msgstr "Toestaan Nieuwe Bestanden"
 
+msgid "Allow Serial Ports"
+msgstr "Seriële Poorten Toestaan"
+
 msgid "Allow TLS connections only."
 msgstr "Alleen TLS verbindingen toestaan."
 
 msgid "Allow USB"
 msgstr "USB Toestaan"
+
+msgid "Allow USB Serial Ports"
+msgstr "USB Seriële Poorten Toestaan"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Sta werkstations toe tot accounts met een leeg wachtwoord."
@@ -1226,8 +1244,8 @@ msgstr "Batterij temperatuur"
 msgid "Battery voltage"
 msgstr "Batterij  voltage"
 
-msgid "Be careful enabling this option."
-msgstr "Wees voorzichtig met deze optie in te schakelen."
+msgid "Be careful with turning on these options."
+msgstr "Wees voorzichtig met het inschakelen van deze opties."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1246,6 +1264,9 @@ msgstr ""
 
 msgid "Best available"
 msgstr "Best beschikbaar"
+
+msgid "Binary Prefix"
+msgstr "Binair Voorvoegsel"
 
 msgid "Bind DN"
 msgstr "Koppel DN"
@@ -2850,6 +2871,12 @@ msgstr ""
 "Toon actieknoppen in het scrollbare gebied in plaats van het voettekstgebied."
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+"Toon schijfgrootte met een binair voorvoegsels in plaats van een decimaal "
+"voorvoegsel."
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3670,6 +3697,17 @@ msgstr ""
 msgid "Enable this option to make host USB available to clients."
 msgstr ""
 "Schakel deze optie in om host USB beschikbaar te maken voor cliënten."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+"Schakel deze optie in om host USB seriële poorten beschikbaar te maken voor "
+"cliënten."
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
+"Schakel deze optie in om host seriële poorten beschikbaar te maken voor "
+"cliënten."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4588,6 +4626,9 @@ msgstr "Host"
 
 msgid "Host Access Control"
 msgstr "Host toegangsbeheer"
+
+msgid "Host Resources"
+msgstr "Hostbronnen"
 
 msgid "Host resources"
 msgstr "Host bronnen"
@@ -11304,6 +11345,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "en"
 
+msgid "available of"
+msgstr "beschikbaar van"
+
 msgid "change failed."
 msgstr "wijziging mislukt."
 
@@ -11332,6 +11376,9 @@ msgstr "grootste instelbare hoogspanning overschakelpunt"
 
 msgid "greatest settable low voltage transfer point"
 msgstr "grootste instelbare laagspanning overschakelpunt"
+
+msgid "hidden"
+msgstr "verborgen"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -11392,6 +11439,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "geen"
 
+msgid "of"
+msgstr "van"
+
+msgid "off"
+msgstr "uit"
+
+msgid "on"
+msgstr "aan"
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11430,3 +11486,12 @@ msgstr "naar"
 
 msgid "umount"
 msgstr "loskoppelen"
+
+msgid "used of"
+msgstr "gebruikt van"
+
+msgid "visible"
+msgstr "zichtbaar"
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Wees voorzichtig met deze optie in te schakelen."

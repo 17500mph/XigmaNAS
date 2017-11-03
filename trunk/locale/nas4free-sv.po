@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
-"PO-Revision-Date: 2017-10-24 19:06+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"PO-Revision-Date: 2017-11-01 16:27+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -67,6 +67,10 @@ msgid "%s already exists."
 msgstr "%s finns redan."
 
 #, php-format
+msgid "%s available of %s"
+msgstr "%s tillgängligt av %s"
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s är redan konfigurerat som ett filsystem."
 
@@ -79,12 +83,20 @@ msgid "%s is too long."
 msgstr "%s är för lång."
 
 #, php-format
+msgid "%s of %s"
+msgstr "%s av %s"
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s av %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s på %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr "%s använt av %s"
 
 #, php-format
 msgid "%s%% available"
@@ -730,11 +742,17 @@ msgstr "Tillåt"
 msgid "Allow New Files"
 msgstr "Tillåt nya filer"
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr "Tillåt endast TLS anslutningar."
 
 msgid "Allow USB"
 msgstr "Tillåt USB"
+
+msgid "Allow USB Serial Ports"
+msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Ge klienter tillgång till konton utan lösenord."
@@ -1190,8 +1208,8 @@ msgstr "Batteritemperatur"
 msgid "Battery voltage"
 msgstr "Batterispänning"
 
-msgid "Be careful enabling this option."
-msgstr "Var försiktig vid aktiveraing av denna funktion."
+msgid "Be careful with turning on these options."
+msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Före - Filborttagning kommer att ske innan överföringen startar."
@@ -1205,6 +1223,9 @@ msgstr "Innan en Unisonklient kan börja fungera måste du göra följande:"
 
 msgid "Best available"
 msgstr "Bästa tillgängliga"
+
+msgid "Binary Prefix"
+msgstr "Binärt prefix"
 
 msgid "Bind DN"
 msgstr "Bind DN"
@@ -2764,6 +2785,10 @@ msgstr ""
 "Visa aktivitetsknappar i den rullningsbara delen i stället för sidfoten."
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr "Visa diskstorlekar med binära prefix i stället för decimala prefix."
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3566,6 +3591,13 @@ msgstr ""
 msgid "Enable this option to make host USB available to clients."
 msgstr ""
 "Att aktivera denna funktion gör värdens USB tillgängliga för klienterna."
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
+msgstr ""
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4473,6 +4505,9 @@ msgstr "Värd"
 
 msgid "Host Access Control"
 msgstr "Värd åtkomstkontroll"
+
+msgid "Host Resources"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Värdresurser"
@@ -11050,6 +11085,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "och"
 
+msgid "available of"
+msgstr "tillgängligt av"
+
 msgid "change failed."
 msgstr "Ändringen misslyckades."
 
@@ -11078,6 +11116,9 @@ msgstr "Högsta inställningen till hög spänning till överförings punkten."
 
 msgid "greatest settable low voltage transfer point"
 msgstr "Högsta inställningen för låg spänning till överförings punkten."
+
+msgid "hidden"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initierare"
@@ -11138,6 +11179,15 @@ msgstr "noVNC"
 msgid "none"
 msgstr "ingen"
 
+msgid "of"
+msgstr "av"
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -11176,3 +11226,12 @@ msgstr "till"
 
 msgid "umount"
 msgstr "umount"
+
+msgid "used of"
+msgstr "använt av"
+
+msgid "visible"
+msgstr ""
+
+#~ msgid "Be careful enabling this option."
+#~ msgstr "Var försiktig vid aktiveraing av denna funktion."

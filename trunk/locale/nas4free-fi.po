@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-10-23 23:31+0000\n"
+"POT-Creation-Date: 2017-11-03 03:32+0000\n"
 "PO-Revision-Date: 2017-03-28 11:14+0000\n"
 "Last-Translator: rainland <reino.kinner@aalto.fi>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-10-31 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -71,6 +71,10 @@ msgid "%s already exists."
 msgstr "%s on jo olemassa."
 
 #, php-format
+msgid "%s available of %s"
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s on jo määritelty tiedostojärjestelmäksi"
 
@@ -83,12 +87,20 @@ msgid "%s is too long."
 msgstr "%s on liian pitkä"
 
 #, php-format
+msgid "%s of %s"
+msgstr ""
+
+#, php-format
 msgid "%s of %sB"
 msgstr "%s / %sB"
 
 #, php-format
 msgid "%s on %s"
 msgstr "%s palvelimella %s"
+
+#, php-format
+msgid "%s used of %s"
+msgstr ""
 
 #, php-format
 msgid "%s%% available"
@@ -721,10 +733,16 @@ msgstr "Salli"
 msgid "Allow New Files"
 msgstr ""
 
+msgid "Allow Serial Ports"
+msgstr ""
+
 msgid "Allow TLS connections only."
 msgstr ""
 
 msgid "Allow USB"
+msgstr ""
+
+msgid "Allow USB Serial Ports"
 msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
@@ -1145,7 +1163,7 @@ msgstr "Akun lämpötila"
 msgid "Battery voltage"
 msgstr "Akun jännite"
 
-msgid "Be careful enabling this option."
+msgid "Be careful with turning on these options."
 msgstr ""
 
 msgid "Before - File-deletions will be done before the transfer starts."
@@ -1160,6 +1178,9 @@ msgstr ""
 
 msgid "Best available"
 msgstr "Paras saatavilla oleva"
+
+msgid "Binary Prefix"
+msgstr ""
 
 msgid "Bind DN"
 msgstr ""
@@ -2609,6 +2630,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Display disk size values using binary prefixes instead of decimal prefixes."
+msgstr ""
+
+msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3382,6 +3407,13 @@ msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
 
 msgid "Enable this option to make host USB available to clients."
+msgstr ""
+
+msgid ""
+"Enable this option to make host USB serial ports available to clients."
+msgstr ""
+
+msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
 
 msgid ""
@@ -4242,6 +4274,9 @@ msgid "Host"
 msgstr "Palvelin"
 
 msgid "Host Access Control"
+msgstr ""
+
+msgid "Host Resources"
 msgstr ""
 
 msgid "Host resources"
@@ -10305,6 +10340,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr ""
 
+msgid "available of"
+msgstr ""
+
 msgid "change failed."
 msgstr ""
 
@@ -10330,6 +10368,9 @@ msgid "greatest settable high voltage transfer point"
 msgstr ""
 
 msgid "greatest settable low voltage transfer point"
+msgstr ""
+
+msgid "hidden"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -10391,6 +10432,15 @@ msgstr ""
 msgid "none"
 msgstr "ei mikään"
 
+msgid "of"
+msgstr ""
+
+msgid "off"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
 msgid "phpVirtualBox"
 msgstr ""
 
@@ -10428,4 +10478,10 @@ msgid "to"
 msgstr "kohteelle"
 
 msgid "umount"
+msgstr ""
+
+msgid "used of"
+msgstr ""
+
+msgid "visible"
 msgstr ""
