@@ -1,6 +1,6 @@
 PORTNAME=		nut
 PORTVERSION=	2.7.4
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=		sysutils
 COMMENT=		Network UPS tools
 MAINTAINER=		zoon1@nas4free.org
@@ -136,9 +136,9 @@ do-install:
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upsdrvctl ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/upssched ${NAS4FREE_ROOTFS}/usr/local/sbin
 
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut.sh.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upslog.sh.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut_upslog
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upsmon.sh.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut_upsmon
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upslog.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut_upslog
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upsmon.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut_upsmon
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/upssched-cmd.in ${NAS4FREE_ROOTFS}/usr/local/bin/upssched-cmd
 
 .include <bsd.port.post.mk>
