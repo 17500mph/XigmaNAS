@@ -768,8 +768,10 @@ function system_get_mount_usage() {
 	$result = [];
 	if(is_sidisksizevalues()):
 		exec('/bin/df -H',$rawdata);
+		$unit_suffix = 'B';
 	else:
 		exec('/bin/df -h',$rawdata);
+		$unit_suffix = 'iB';
 	endif;
 	foreach($rawdata as $line):
 		if(0 == preg_match("/^(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\d+%)\s+(.+)/",$line,$aline)):
@@ -789,9 +791,9 @@ function system_get_mount_usage() {
 					$result[$mountpoint]['name'] = $mountcfg['sharename'];
 					$result[$mountpoint]['filesystem'] = $filesystem;
 					$result[$mountpoint]['capacity'] = $capacity;
-					$result[$mountpoint]['avail'] = $avail;
-					$result[$mountpoint]['used'] = $used;
-					$result[$mountpoint]['size'] = $size;
+					$result[$mountpoint]['avail'] = sprintf('%s%s',$avail,$unit_suffix);
+					$result[$mountpoint]['used'] = sprintf('%s%s',$used,$unit_suffix);
+					$result[$mountpoint]['size'] = sprintf('%s%s',$size,$unit_suffix);
 				endif;
 			endforeach;
 		endif;
@@ -804,7 +806,6 @@ function get_disk_usage() {
 	$a_diskusage = [];
 	$a_diskinfo = system_get_mount_usage();
 	if(!empty($a_diskinfo)):
-		$unit_suffix = is_sidisksizevalues() ? 'B' : 'iB';
 		foreach($a_diskinfo as $diskk => $diskv):
 			$id = get_mount_fsid($diskv['filesystem'],$diskk);
 			$r_diskusage = [];
@@ -813,9 +814,9 @@ function get_disk_usage() {
 			$r_diskusage['name'] = $diskv['name'];
 			$r_diskusage['capacity'] = $diskv['capacity'];
 			$r_diskusage['percentage'] = rtrim($diskv['capacity'],"%");
-			$r_diskusage['size'] = sprintf('%s%s',$diskv['size'],$unit_suffix);
-			$r_diskusage['used'] = sprintf('%s%s',$diskv['used'],$unit_suffix);
-			$r_diskusage['avail'] = sprintf('%s%s',$diskv['avail'],$unit_suffix);
+			$r_diskusage['size'] = $diskv['size'];
+			$r_diskusage['used'] = $diskv['used'];
+			$r_diskusage['avail'] = $diskv['avail'];
 			$r_diskusage['capofsize'] = sprintf(gtext('%1$s %3$s %2$s'),$r_diskusage['capacity'],$r_diskusage['size'],gtext('of'));
 			$r_diskusage['tooltip']['used'] = sprintf(gtext('%1$s %3$s %2$s'),$r_diskusage['used'],$r_diskusage['size'],gtext('used of'));
 			$r_diskusage['tooltip']['avail'] = sprintf(gtext('%1$s %3$s %2$s'),$r_diskusage['avail'],$r_diskusage['size'],gtext('available of'));
