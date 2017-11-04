@@ -612,7 +612,7 @@ $(document).ready(function(){
 						echo '<img src="images/bar_blue.gif" name="memusageu" id="memusageu" width="',$percentage,'" class="progbarcf" alt=""/>';
 						echo '<img src="images/bar_gray.gif" name="memusagef" id="memusagef" width="',(100 - $percentage),'" class="progbarc" alt="" />';
 						echo '<img src="images/bar_right.gif" class="progbarr" alt="" style="padding-right:8px"/>';
-						echo '<span id="memusage">',sprintf(gtext("%d%% of %dMiB"),0,round($raminfo['physical'] / 1024 / 1024)),'</span>';
+						echo '<span id="memusage">',sprintf(gtext('%d%% of %s'),0,format_bytes($raminfo['physical'],2,false,false)),'</span>';
 ?>
 					</td>
 				</tr>
