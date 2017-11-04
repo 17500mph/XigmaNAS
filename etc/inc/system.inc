@@ -766,7 +766,11 @@ function system_get_mount_usage() {
 	global $config,$g;
 
 	$result = [];
-	exec("/bin/df -h",$rawdata);
+	if(is_sidisksizevalues()):
+		exec('/bin/df -H',$rawdata);
+	else:
+		exec('/bin/df -h',$rawdata);
+	endif;
 	foreach($rawdata as $line):
 		if(0 == preg_match("/^(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\d+%)\s+(.+)/",$line,$aline)):
 			continue;
@@ -896,7 +900,7 @@ function system_get_sysinfo() {
 	$raminfo = system_get_ram_info();
 	$percentage = round(($raminfo['used'] * 100) / $raminfo['total'],0);
 	$value['memusage']['percentage'] = $percentage;
-	$value['memusage']['caption'] = sprintf(gtext("%d%% of %dMiB"),$percentage,round($raminfo['physical'] / 1024 / 1024));
+	$value['memusage']['caption'] = sprintf(gtext('%d%% of %s'),$percentage,format_bytes($raminfo['physical'],2,false,false));
 	// Get load average.
 	exec('uptime',$result);
 	$value['loadaverage'] = substr(strrchr($result[0],'load averages:'),15);
