@@ -804,6 +804,7 @@ function get_disk_usage() {
 	$a_diskusage = [];
 	$a_diskinfo = system_get_mount_usage();
 	if(!empty($a_diskinfo)):
+		$unit_suffix = is_sidisksizevalues() ? 'B' : 'iB';
 		foreach($a_diskinfo as $diskk => $diskv):
 			$id = get_mount_fsid($diskv['filesystem'],$diskk);
 			$r_diskusage = [];
@@ -812,12 +813,12 @@ function get_disk_usage() {
 			$r_diskusage['name'] = $diskv['name'];
 			$r_diskusage['capacity'] = $diskv['capacity'];
 			$r_diskusage['percentage'] = rtrim($diskv['capacity'],"%");
-			$r_diskusage['size'] = $diskv['size'];
-			$r_diskusage['used'] = $diskv['used'];
-			$r_diskusage['avail'] = $diskv['avail'];
-			$r_diskusage['capofsize'] = sprintf(gtext("%s of %sB"),$r_diskusage['capacity'],$r_diskusage['size']);
-			$r_diskusage['tooltip']['used'] = sprintf(gtext("%sB used of %sB"),$r_diskusage['used'],$r_diskusage['size']);
-			$r_diskusage['tooltip']['avail'] = sprintf(gtext("%sB available of %sB"),$r_diskusage['avail'],$r_diskusage['size']);
+			$r_diskusage['size'] = sprintf('%s%s',$diskv['size'],$unit_suffix);
+			$r_diskusage['used'] = sprintf('%s%s',$diskv['used'],$unit_suffix);
+			$r_diskusage['avail'] = sprintf('%s%s',$diskv['avail'],$unit_suffix);
+			$r_diskusage['capofsize'] = sprintf(gtext('%1$s %3$s %2$s'),$r_diskusage['capacity'],$r_diskusage['size'],gtext('of'));
+			$r_diskusage['tooltip']['used'] = sprintf(gtext('%1$s %3$s %2$s'),$r_diskusage['used'],$r_diskusage['size'],gtext('used of'));
+			$r_diskusage['tooltip']['avail'] = sprintf(gtext('%1$s %3$s %2$s'),$r_diskusage['avail'],$r_diskusage['size'],gtext('available of'));
 			$a_diskusage[] = $r_diskusage;
 		endforeach;
 		array_sort_key($a_diskusage,'name');
