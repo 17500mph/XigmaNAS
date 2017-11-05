@@ -34,8 +34,8 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 
-/* tags that are always to be handled as lists */
-/* This are TAGS that can be multiple in the XML config file */
+//	Tags that are always to be handled as lists.
+//	These tags can occur multiple times in the XML config file.
 $listtags = [
 	'dnsserver' => 'dnsserver',
 	'winsserver' => 'winsserver',
@@ -113,91 +113,132 @@ $listtags = [
 	'agmap' => 'agmap',
 	'lunmap' => 'lunmap'
 ];
-function startElement($parser,$name,$attrs) {
-	global $depth,$curpath,$config,$havedata,$listtags;
-
-	array_push($curpath,strtolower($name));
-	$ptr =& $config;
-	foreach($curpath as $path):
-		$ptr =& $ptr[$path];
-	endforeach;
-	if(array_key_exists(strtolower($name),$listtags)): // is it an element that belongs to a list?
-		if(!is_array($ptr)): // is there an array already?
-			$ptr = []; // make an array
-		endif;
-		array_push($curpath,count($ptr));
-	elseif(isset($ptr)):
-		/* multiple entries not allowed for this element, bail out */
-		die(sprintf("XML error: %s at line %d cannot occur more than once\n",$name,xml_get_current_line_number($parser)));
-	endif;
-	$depth++;
-	$havedata = $depth;
-}
-function endElement($parser,$name) {
-	global $depth,$curpath,$config,$havedata,$listtags;
-
-	if($havedata == $depth):
-		$ptr =& $config;
-		foreach($curpath as $path):
-			$ptr =& $ptr[$path];
+class config_xml_reader {
+	private $parser;
+	public $depth;
+	public $curpath;
+	public $config;
+	public $havedata;
+	public $attributes;
+	
+	public function __construct() {
+		//	Create XML parser.
+		$this->parser = xml_parser_create();
+		xml_set_object($this->parser,$this);
+		//	Initialize start element handler and end element handler.
+		xml_set_element_handler($this->parser,'startelementhandler','endelementhandler');
+		//	Initialize data handler.
+		xml_set_character_data_handler($this->parser,'datahandler');
+	}
+	public function __destruct() {
+		//	Destroy parser
+		xml_parser_free($this->parser);
+		//	Free memory
+		unset($this->parser);
+	}
+	public function startelementhandler($parser,$name,$attributes) {
+		global $listtags;
+		$lowercase_name = strtolower($name);
+		//	Push start element
+		array_push($this->curpath,$lowercase_name);
+		$ptr = &$this->config;
+		foreach($this->curpath as $path):
+			$ptr = &$ptr[$path];
 		endforeach;
-		$ptr = '';
-	endif;
-	array_pop($curpath);
-	if(array_key_exists(strtolower($name),$listtags)):
-		array_pop($curpath);
-	endif;
-	$depth--;
-}
-function cData($parser,$data) {
-	global $depth,$curpath,$config,$havedata;
-
-	$data = trim($data, "\t\n\r");
-	if($data != ''):
-		$ptr =& $config;
-		foreach($curpath as $path):
-			$ptr =& $ptr[$path];
-		endforeach;
-		if(is_string($ptr)):
-			$ptr .= $data;
-		elseif(trim($data,' ') != ''):
-			$ptr = $data;
-			$havedata++;
+		//	Is it an element that belongs to a list?
+		if(array_key_exists($lowercase_name,$listtags)):
+			if(!is_array($ptr)): // is there an array already?
+				$ptr = []; // make an array
+			endif;
+			//	Push array index
+			array_push($this->curpath,count($ptr));
+		elseif(isset($ptr)):
+			//	multiple entries not allowed for this element, bail out
+			die(sprintf("XML error: %s at line %d cannot occur more than once\n",$name,xml_get_current_line_number($parser)));
 		endif;
-	endif;
+		$this->depth++;
+		$this->havedata = $this->depth;
+		$this->attributes = [];
+		foreach($attributes as $key => $value):
+			$this->attributes[strtolower($key)] = $value;
+		endforeach;
+	}
+	public function endelementhandler($parser,$name) {
+		global $listtags;
+		$lowercase_name = strtolower($name);
+		if($this->havedata == $this->depth):
+			$ptr = &$this->config;
+			foreach($this->curpath as $path):
+				$ptr = &$ptr[$path];
+			endforeach;
+			$ptr = '';
+		endif;
+		array_pop($this->curpath);
+		if(array_key_exists($lowercase_name,$listtags)):
+			array_pop($this->curpath);
+		endif;
+		$this->depth--;
+	}
+	public function datahandler($parser,$data) {
+		$trimmed_data = trim($data,"\t\n\r");
+		if($trimmed_data != ''):
+			$ptr = &$this->config;
+			foreach($this->curpath as $path):
+				$ptr = &$ptr[$path];
+			endforeach;
+			if(is_string($ptr)):
+				//	Multiline
+				$ptr .= $trimmed_data;
+			elseif(preg_match('/\S/',$trimmed_data)):
+				//	Data is not empty, check for type attribute
+				if(array_key_exists('type',$this->attributes)):
+					switch($this->attributes['type']):
+						case 'bool':
+							$ptr = (bool)$trimmed_data;
+							break;
+						default:
+							$ptr = $trimmed_data;
+							break;
+					endswitch;
+				else:
+					$ptr = $trimmed_data;
+				endif;
+				$this->havedata++;
+			endif;
+		endif;
+	}
+	public function parse(string $cffile,string $rootobj) {
+		global $g;
+		$this->config = [];
+		$this->curpath = [];
+		$this->depth = 0;
+		$this->havedata = 0;
+		$this->attributes = [];
+		$encoding = 'UTF-8'; // PHP default
+		//	Read configuration file.
+		$data = file_get_contents($cffile);
+		if(false === $data):
+			die("Error: could not open XML input\n");
+		endif;
+		//	Detect and set output character encoding. Default output encoding is UTF-8
+		if(preg_match('/<?xml.*encoding=[\'"](.*?)[\'"].*?>/m',$data,$m)):
+			$encoding = strtoupper($m[1]);
+			xml_parser_set_option($this->parser,XML_OPTION_TARGET_ENCODING,$encoding);
+		endif;
+		//	Parse configuration.
+		if(!xml_parse($this->parser,$data)):
+			die(sprintf("XML error: %s at line %d\n",xml_error_string(xml_get_error_code($this->parser)),xml_get_current_line_number($this->parser)));
+		endif;
+		if(!empty($rootobj)):
+			//	Remember encoding
+			$this->config[$rootobj]['encoding'] = $encoding;
+		endif;
+		return $this->config;
+	}
 }
 function parse_xml_config_raw($cffile,$rootobj) {
-	global $depth,$curpath,$config,$havedata,$listtags;
-
-	$config = [];
-	$curpath = [];
-	$depth = 0;
-	$havedata = 0;
-	$encoding = 'UTF-8'; // PHP default
-	// Create XML parser and initialize handler.
-	$xml_parser = xml_parser_create();
-	xml_set_element_handler($xml_parser,'startElement','endElement');
-	xml_set_character_data_handler($xml_parser,'cdata');
-	// Read configuration file.
-	$data = file_get_contents($cffile);
-	if(false === $data):
-		die("Error: could not open XML input\n");
-	endif;
-	// Detect and set output character encoding. Default output encoding is UTF-8
-	if(preg_match('/<?xml.*encoding=[\'"](.*?)[\'"].*?>/m',$data,$m)):
-		$encoding = strtoupper($m[1]);
-		xml_parser_set_option($xml_parser,XML_OPTION_TARGET_ENCODING,$encoding);
-	endif;
-	// Parse configuration.
-	if(!xml_parse($xml_parser, $data)):
-		die(sprintf("XML error: %s at line %d\n",xml_error_string(xml_get_error_code($xml_parser)),xml_get_current_line_number($xml_parser)));
-	endif;
-	xml_parser_free($xml_parser);
-	if(!empty($rootobj)):
-		// Remember encoding
-		$config[$rootobj]['encoding'] = $encoding;
-	endif;
-	return $config;
+	$o = new config_xml_reader();
+	return $o->parse($cffile,$rootobj);
 }
 function parse_xml_config($cffile,$rootobj) {
 	$raw_config = parse_xml_config_raw($cffile,$rootobj);
@@ -231,6 +272,8 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 					elseif(is_bool($cval)):
 						if($cval):
 							$xmlconfig .= $s_indent . sprintf('<%1$s type="bool">1</%1$s>',$ent) . PHP_EOL;
+//						else:
+//							$xmlconfig .= $s_indent . sprintf('<%1$s type="bool">0</%1$s>',$ent) . PHP_EOL;
 						endif;
 					elseif('' === $cval):
 						$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
@@ -245,13 +288,15 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 					endif;
 				endforeach;
 			else: // it's an array
-				$xmlconfig .= $s_indent . "<$ent>" . PHP_EOL;
+				$xmlconfig .= $s_indent . sprintf('<%s>',$ent) . PHP_EOL;
 				$xmlconfig .= dump_xml_config_sub($val,$indent + 1,$in_charset,$out_charset);
-				$xmlconfig .= $s_indent . "</$ent>" . PHP_EOL;
+				$xmlconfig .= $s_indent . sprintf('</%s>',$ent) . PHP_EOL;
 			endif;
 		elseif(is_bool($val)):
 			if($val):
 				$xmlconfig .= $s_indent . sprintf('<%1$s type="bool">1</%1$s>',$ent) . PHP_EOL;
+//			else:
+//				$xmlconfig .= $s_indent . sprintf('<%1$s type="bool">0</%1$s>',$ent) . PHP_EOL;
 			endif;
 		elseif('' === $val):
 			$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
