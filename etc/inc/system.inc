@@ -376,6 +376,7 @@ function system_get_cpuid($cpuidx,$level) {
 //    [freqlevels] => 1990/67000 1791/64700 995/28600
 //  )
 function system_get_cpu_info() {
+	$platform = '';
 	$cpuinfo = [];
 	$cpuinfo['number'] = chop(`/sbin/sysctl -n hw.ncpu`);
 	$cpuinfo['model'] = chop(`/sbin/sysctl -n hw.model`);
@@ -400,7 +401,7 @@ function system_get_cpu_info() {
 		endswitch;
 	endif;
 	$cpuinfo['clockrate'] = chop(`/sbin/sysctl -n hw.clockrate`);
-	if(chop(`/sbin/sysctl -n hw.platform`) == 'a20'):
+	if($platform == 'a20'):
 		$cpuinfo['temperature'] = chop(`/sbin/sysctl -n dev.axp209_pmu.0.temp`);
 	else:
 		$cpuinfo['temperature'] = chop(`/sbin/sysctl -n hw.acpi.thermal.tz0.temperature`);
