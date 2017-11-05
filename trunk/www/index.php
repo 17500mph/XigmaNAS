@@ -55,171 +55,144 @@ function get_vip_status() {
 		return '';
 	endif;
 	$a_vipaddrs = [];
-	foreach ($config['vinterfaces']['carp'] as $carp) {
+	foreach($config['vinterfaces']['carp'] as $carp):
 		$ifinfo = get_carp_info($carp['if']);
 		//$a_vipaddrs[] = $carp['vipaddr']." ({$ifinfo['state']},{$ifinfo['advskew']})";
 		$a_vipaddrs[] = $carp['vipaddr']." ({$ifinfo['state']})";
-	}
-	return join(', ', $a_vipaddrs);
+	endforeach;
+	return implode(', ',$a_vipaddrs);
 }
 function get_ups_disp_status($ups_status) {
-	if (empty($ups_status))
-		return "";
-	$status = explode(' ', $ups_status);
-	foreach ($status as $condition) {
-		if ($disp_status) $disp_status .= ', ';
-		switch ($condition) {
-		case 'WAIT':
-			$disp_status .= gtext('UPS Waiting');
-			break;
-		case 'OFF':
-			$disp_status .= gtext('UPS Off Line');
-			break;
-		case 'OL':
-			$disp_status .= gtext('UPS On Line');
-			break;
-		case 'OB':
-			$disp_status .= gtext('UPS On Battery');
-			break;
-		case 'TRIM':
-			$disp_status .= gtext('SmartTrim');
-			break;
-		case 'BOOST':
-			$disp_status .= gtext('SmartBoost');
-			break;
-		case 'OVER':
-			$disp_status .= gtext('Overload');
-			break;
-		case 'LB':
-			$disp_status .= gtext('Battery Low');
-			break;
-		case 'RB':
-			$disp_status .= gtext('Replace Battery UPS');
-			break;
-		case 'CAL':
-			$disp_status .= gtext('Calibration Battery');
-			break;
-		case 'CHRG':
-			$disp_status .= gtext('Charging Battery');
-			break;
-		default:
-			$disp_status .= $condition;
-			break;
-		}
-	}
-	return $disp_status;
+	if (empty($ups_status)):
+		return '';
+	endif;
+	$upstodisplay = [
+		'WAIT' => gtext('UPS Waiting'),
+		'OFF' => gtext('UPS Off Line'),
+		'OL' => gtext('UPS On Line'),
+		'OB' => gtext('UPS On Battery'),
+		'TRIM' => gtext('SmartTrim'),
+		'BOOST' => gtext('SmartBoost'),
+		'OVER' => gtext('Overload'),
+		'LB' => gtext('Battery Low'),
+		'RB' => gtext('Replace Battery UPS'),
+		'CAL' => gtext('Calibration Battery'),
+		'CHRG' => gtext('Charging Battery')
+	];
+	$status = explode(' ',$ups_status);
+	$disp_status = [];
+	foreach($status as $condition):
+		$disp_status[] = $upstodisplay[$condition] ?? $condition;
+	endforeach;
+	return implode(', ',$disp_status);
 }
-
 function get_upsinfo() {
 	global $config;
 
-	if (!isset($config['ups']['enable']))
+	if(!isset($config['ups']['enable'])):
 		return NULL;
+	endif;
 	$ups = [];
-	$cmd = "/usr/local/bin/upsc {$config['ups']['upsname']}@{$config['ups']['ip']}";
+	$cmd = sprintf('/usr/local/bin/upsc %s@%s',$config['ups']['upsname'],$config['ups']['ip']);
 	exec($cmd,$rawdata);
-	foreach($rawdata as $line) {
-		$line = explode(':', $line);
+	foreach($rawdata as $line):
+		$line = explode(':',$line);
 		$ups[$line[0]] = trim($line[1]);
-	}
+	endforeach;
 	$disp_status = get_ups_disp_status($ups['ups.status']);
 	$ups['disp_status'] = $disp_status;
 	$value = !empty($ups['ups.load']) ? $ups['ups.load'] : 0;
 	$ups['load'] = [
-		"percentage" => $value,
-		"used" => sprintf("%.1f", $value),
-		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
+		'percentage' => $value,
+		'used' => sprintf('%.1f',$value),
+		'tooltip_used' => sprintf('%s%%',$value),
+		'tooltip_available' => sprintf('%s%% %s',100 - $value,gtext('available'))
 	];
 	$value = !empty($ups['battery.charge']) ? $ups['battery.charge'] : 0;
 	$ups['battery'] = [
-		"percentage" => $value,
-		"used" => sprintf("%.1f", $value),
-		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
+		'percentage' => $value,
+		'used' => sprintf('%.1f',$value),
+		'tooltip_used' => sprintf('%s%%',$value),
+		'tooltip_available' => sprintf('%s%% %s',100 - $value,gtext('available'))
 	];
 	return $ups;
 }
-
 function get_upsinfo2() {
 	global $config;
 
-	if (!isset($config['ups']['enable']) || !isset($config['ups']['ups2']))
+	if(!isset($config['ups']['enable']) || !isset($config['ups']['ups2'])):
 		return NULL;
+	endif;
 	$ups = [];
-	$cmd = "/usr/local/bin/upsc {$config['ups']['ups2_upsname']}@{$config['ups']['ip']}";
+	$cmd = sprintf('/usr/local/bin/upsc %s@%s',$config['ups']['ups2_upsname'],$config['ups']['ip']);
 	exec($cmd,$rawdata);
-	foreach($rawdata as $line) {
-		$line = explode(':', $line);
+	foreach($rawdata as $line):
+		$line = explode(':',$line);
 		$ups[$line[0]] = trim($line[1]);
-	}
+	endforeach;
 	$disp_status = get_ups_disp_status($ups['ups.status']);
 	$ups['disp_status'] = $disp_status;
 	$value = !empty($ups['ups.load']) ? $ups['ups.load'] : 0;
 	$ups['load'] = [
-		"percentage" => $value,
-		"used" => sprintf("%.1f", $value),
-		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
+		'percentage' => $value,
+		'used' => sprintf('%.1f',$value),
+		'tooltip_used' => sprintf('%s%%',$value),
+		'tooltip_available' => sprintf('%s%% %s',100 - $value,gtext('available'))
 	];
 	$value = !empty($ups['battery.charge']) ? $ups['battery.charge'] : 0;
 	$ups['battery'] = [
-		"percentage" => $value,
-		"used" => sprintf("%.1f", $value),
-		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
+		'percentage' => $value,
+		'used' => sprintf('%.1f',$value),
+		'tooltip_used' => sprintf('%s%%',$value),
+		'tooltip_available' => sprintf('%s%% %s',100 - $value,gtext('available'))
 	];
 	return $ups;
 }
-
-function get_vbox_vminfo($user, $uuid) {
+function get_vbox_vminfo($user,$uuid) {
 	$vminfo = [];
 	unset($rawdata);
-	mwexec2("/usr/local/bin/sudo -u {$user} /usr/local/bin/VBoxManage showvminfo --machinereadable {$uuid}", $rawdata);
-	foreach ($rawdata as $line) {
-		if (preg_match("/^([^=]+)=(\"([^\"]+)\"|[^\"]+)/", $line, $match)) {
+	mwexec2("/usr/local/bin/sudo -u {$user} /usr/local/bin/VBoxManage showvminfo --machinereadable {$uuid}",$rawdata);
+	foreach($rawdata as $line):
+		if(preg_match("/^([^=]+)=(\"([^\"]+)\"|[^\"]+)/",$line,$match)):
 			$a = [];
 			$a['raw'] = $match[0];
 			$a['key'] = $match[1];
 			$a['value'] = isset($match[3]) ? $match[3] : $match[2];
 			$vminfo[$a['key']] = $a;
-		}
-	}
+		endif;
+	endforeach;
 	return $vminfo;
 }
-
 function get_xen_info() {
 	$info = [];
 	unset($rawdata);
-	mwexec2("/usr/local/sbin/xl info", $rawdata);
-	foreach ($rawdata as $line) {
-		if (preg_match("/^([^:]+)\s+:\s+(.+)\s*$/", $line, $match)) {
+	mwexec2("/usr/local/sbin/xl info",$rawdata);
+	foreach($rawdata as $line):
+		if(preg_match("/^([^:]+)\s+:\s+(.+)\s*$/",$line,$match)):
 			$a = [];
 			$a['raw'] = $match[0];
 			$a['key'] = trim($match[1]);
 			$a['value'] = trim($match[2]);
 			$info[$a['key']] = $a;
-		}
-	}
+		endif;
+	endforeach;
 	return $info;
 }
-
 function get_xen_console($domid) {
 	$info = [];
 	unset($rawdata);
-	mwexec2("/usr/local/bin/xenstore-ls /local/domain/{$domid}/console", $rawdata);
-	foreach ($rawdata as $line) {
-		if (preg_match("/^([^=]+)\s+=\s+\"(.+)\"$/", $line, $match)) {
+	mwexec2("/usr/local/bin/xenstore-ls /local/domain/{$domid}/console",$rawdata);
+	foreach($rawdata as $line):
+		if(preg_match("/^([^=]+)\s+=\s+\"(.+)\"$/",$line,$match)):
 			$a = [];
 			$a['raw'] = $match[0];
 			$a['key'] = trim($match[1]);
 			$a['value'] = trim($match[2]);
 			$info[$a['key']] = $a;
-		}
-	}
+		endif;
+	endforeach;
 	return $info;
 }
-
 if (is_ajax()) {
 	$sysinfo = system_get_sysinfo();
 	$vipstatus = get_vip_status();
@@ -230,15 +203,15 @@ if (is_ajax()) {
 	$sysinfo['upsinfo2'] = $upsinfo2;
 	render_ajax($sysinfo);
 }
-function tblrow ($name, $value, $symbol = null, $id = null) {
+function tblrow ($name,$value,$symbol = null,$id = null) {
 	if(!$value):
 		return;
 	endif;
 	if($symbol == '&deg;'):
-		$value = sprintf("%.1f", $value);
+		$value = sprintf('%.1f',$value);
 	endif;
 	if($symbol == 'Hz'):
-		$value = sprintf("%d", $value);
+		$value = sprintf('%d',$value);
 	endif;
 	if ($symbol == 'pre'):
 		$value = '<pre>'.$value;
@@ -254,16 +227,16 @@ function tblrow ($name, $value, $symbol = null, $id = null) {
 	</td>
 </tr>
 EOD
-	."\n");
+	. PHP_EOL);
 }
-function tblrowbar ($id, $name, $value) {
+function tblrowbar ($id,$name,$value) {
 	if(is_null($value)):
 		return;
 	endif;
 	$available = 100 - $value;
-	$tooltip_used = sprintf("%s%%", $value);
-	$tooltip_available = sprintf(gtext("%s%% available"), $available);
-	$span_used = sprintf("%s%%", "<span name='ups_status_used' id='ups_status_{$id}_used' class='capacity'>".$value."</span>");
+	$tooltip_used = sprintf('%s%%',$value);
+	$tooltip_available = sprintf('%s%% %s',$available,gtext('available'));
+	$span_used = sprintf('<span name="ups_status_used" id="ups_status_%s_used" class="capacity">%s%</span>',$id,$value);
 	print(<<<EOD
 <tr>
 	<td>
@@ -275,13 +248,13 @@ function tblrowbar ($id, $name, $value) {
 	</td>
 </tr>
 EOD
-	."\n");
+	. PHP_EOL);
 }
 if(function_exists('date_default_timezone_set') and function_exists('date_default_timezone_get')):
 	@date_default_timezone_set(@date_default_timezone_get());
 endif;
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -452,27 +425,28 @@ $(document).ready(function(){
 <?php
 	// make sure normal user such as www can write to temporary
 	$perms = fileperms("/tmp");
-	if (($perms & 01777) != 01777) {
+	if(($perms & 01777) != 01777):
 		$errormsg .= sprintf(gtext("Wrong permission on %s."), "/tmp");
 		$errormsg .= "<br />\n";
-	}
+	endif;
 	$perms = fileperms("/var/tmp");
-	if (($perms & 01777) != 01777) {
+	if(($perms & 01777) != 01777):
 		$errormsg .= sprintf(gtext("Wrong permission on %s."), "/var/tmp");
 		$errormsg .= "<br />\n";
-	}
+	endif;
 	// check DNS
 	list($v4dns1,$v4dns2) = get_ipv4dnsserver();
 	list($v6dns1,$v6dns2) = get_ipv6dnsserver();
-	if (empty($v4dns1) && empty($v4dns2) && empty($v6dns1) && empty($v6dns2)) {
+	if(empty($v4dns1) && empty($v4dns2) && empty($v6dns1) && empty($v6dns2)):
 		// need by service/firmware check?
-		if (!isset($config['system']['disablefirmwarecheck'])
-		   || isset($config['ftpd']['enable'])) {
-			$errormsg .= gtext("No DNS setting found.");
+		if(!isset($config['system']['disablefirmwarecheck']) || isset($config['ftpd']['enable'])):
+			$errormsg .= gtext('No DNS setting found.');
 			$errormsg .= "<br />\n";
-		}
-	}
-	if (!empty($errormsg)) print_error_box($errormsg);
+		endif;
+	endif;
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
