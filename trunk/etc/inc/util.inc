@@ -2729,6 +2729,26 @@ function format_bytes($number,int $precision = 2,bool $fixedformat = true,bool $
 	return sprintf($fixedformat ? '%.' . $decimals . 'f%s' : '%s%s',(float)$number,$unit_grid[$laps] ?? $unit_overflow);
 }
 /**
+ * Converts an integer or an integer string into a human readable format for unit Hertz.
+ * @param int/string $value Value to be converted into a human readable format.
+ * @param int $precision The number of decimal digits. Default is 2.
+ * @param bool $fixedformat Flag to format the returned string with the number of decimals given by $precision. Default is true.
+ * @return string Human readable version of Hertz.
+ */
+function format_hertz($number,int $precision = 2,bool $fixedformat = true) {
+	if((0 > $number)):
+		$number = 0;
+	endif;
+	$decimals = filter_var($precision,FILTER_VALIDATE_INT,['options' => ['default' => 2,'min_range' => 0]]);
+	$unit_grid = ['Hz','kHz','MHz','GHz','THz','PHz','EHz','ZHz','YHz'];
+	$unit_overflow = '#Hz';
+	$divisor = 1000;
+	for($laps = 0;bccomp($number,$divisor) >= 0;$laps++):
+		$number = bcdiv($number,$divisor,$decimals);
+	endfor;
+	return sprintf($fixedformat ? '%.' . $decimals . 'f%s' : '%s%s',(float)$number,$unit_grid[$laps] ?? $unit_overflow);
+}
+/**
  * Converts an integer or an integer string into a human readable format for unit bit.
  * @param int/string $value Value to be converted into a human readable format.
  * @param int $precision The number of decimal digits. Default is 2.
