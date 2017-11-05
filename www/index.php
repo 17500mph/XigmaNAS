@@ -236,7 +236,7 @@ function tblrowbar ($id,$name,$value) {
 	$available = 100 - $value;
 	$tooltip_used = sprintf('%s%%',$value);
 	$tooltip_available = sprintf('%s%% %s',$available,gtext('available'));
-	$span_used = sprintf('<span name="ups_status_used" id="ups_status_%s_used" class="capacity">%s%</span>',$id,$value);
+	$span_used = sprintf('<span name="ups_status_used" id="ups_status_%s_used" class="capacity">%s%%</span>',$id,$value);
 	print(<<<EOD
 <tr>
 	<td>
