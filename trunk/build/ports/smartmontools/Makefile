@@ -1,12 +1,11 @@
 PORTNAME=		smartmontools
-PORTVERSION=	6.5
-PORTREVISION?=	2
+PORTVERSION=	6.6
+PORTREVISION?=	0
 CATEGORIES=		sysutils
 COMMENT=		S.M.A.R.T. disk monitoring tools
 MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=		SF
-
 CONFLICTS=		smartmontools-devel-[0-9]*
 
 USE_GMAKE=		yes
