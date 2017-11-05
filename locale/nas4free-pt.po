@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
 "PO-Revision-Date: 2017-06-24 16:15+0000\n"
 "Last-Translator: Joao Saraiva <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:06+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " interfaces:"
 
 msgid " was assigned to "
 msgstr " foi atribuído a "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -47,8 +51,8 @@ msgid "%d years"
 msgstr "%d anos"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% de %dMiB"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -87,10 +91,6 @@ msgid "%s of %s"
 msgstr ""
 
 #, php-format
-msgid "%s of %sB"
-msgstr "%s de %sB"
-
-#, php-format
 msgid "%s on %s"
 msgstr "%s em %s"
 
@@ -99,20 +99,8 @@ msgid "%s used of %s"
 msgstr ""
 
 #, php-format
-msgid "%s%% available"
-msgstr "%s%% disponivel"
-
-#, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s já está a ser usado por %s%d."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sB disponíveis de %sB"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sB usados de %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -10753,6 +10741,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr ""
 
+msgid "available"
+msgstr ""
+
 msgid "available of"
 msgstr ""
 
@@ -10900,3 +10891,23 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% de %dMiB"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s de %sB"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sB disponíveis de %sB"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sB usados de %sB"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% disponivel"

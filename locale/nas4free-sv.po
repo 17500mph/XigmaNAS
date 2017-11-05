@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
-"PO-Revision-Date: 2017-11-01 16:27+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"PO-Revision-Date: 2017-11-03 06:14+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:07+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " gränssnitt:"
 
 msgid " was assigned to "
 msgstr " tilldelades "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -47,8 +51,8 @@ msgid "%d years"
 msgstr "%d år"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% av %dMiB"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -87,10 +91,6 @@ msgid "%s of %s"
 msgstr "%s av %s"
 
 #, php-format
-msgid "%s of %sB"
-msgstr "%s av %sB"
-
-#, php-format
 msgid "%s on %s"
 msgstr "%s på %s"
 
@@ -99,20 +99,8 @@ msgid "%s used of %s"
 msgstr "%s använt av %s"
 
 #, php-format
-msgid "%s%% available"
-msgstr "%s%%tillgänglig"
-
-#, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s används redan av %s%d."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sB tillgängligt av %sB"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sB använt av %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -743,7 +731,7 @@ msgid "Allow New Files"
 msgstr "Tillåt nya filer"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Tillåt serieportar"
 
 msgid "Allow TLS connections only."
 msgstr "Tillåt endast TLS anslutningar."
@@ -752,7 +740,7 @@ msgid "Allow USB"
 msgstr "Tillåt USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Tillåt USB-portar"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Ge klienter tillgång till konton utan lösenord."
@@ -1209,7 +1197,7 @@ msgid "Battery voltage"
 msgstr "Batterispänning"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Överväg noga om dessa alternativ skall aktiveras."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Före - Filborttagning kommer att ske innan överföringen startar."
@@ -3595,9 +3583,13 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Aktivera detta alternativ för att göra värdens USB-serieportar tillgängliga "
+"för klienterna."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Aktivera detta alternativ för att göra värdens serieportar tillgängliga för "
+"klienterna."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4507,7 +4499,7 @@ msgid "Host Access Control"
 msgstr "Värd åtkomstkontroll"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Värdresurser"
 
 msgid "Host resources"
 msgstr "Värdresurser"
@@ -11085,6 +11077,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "och"
 
+msgid "available"
+msgstr ""
+
 msgid "available of"
 msgstr "tillgängligt av"
 
@@ -11118,7 +11113,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "Högsta inställningen för låg spänning till överförings punkten."
 
 msgid "hidden"
-msgstr ""
+msgstr "dold"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initierare"
@@ -11183,10 +11178,10 @@ msgid "of"
 msgstr "av"
 
 msgid "off"
-msgstr ""
+msgstr "av"
 
 msgid "on"
-msgstr ""
+msgstr "på"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11231,7 +11226,24 @@ msgid "used of"
 msgstr "använt av"
 
 msgid "visible"
-msgstr ""
+msgstr "synlig"
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "Var försiktig vid aktiveraing av denna funktion."
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% av %dMiB"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s av %sB"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sB tillgängligt av %sB"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sB använt av %sB"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%%tillgänglig"

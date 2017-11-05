@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
 "PO-Revision-Date: 2017-10-20 17:00+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:07+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,6 +19,10 @@ msgstr " interfețe:"
 
 msgid " was assigned to "
 msgstr " a fost alocat la "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -45,8 +49,8 @@ msgid "%d years"
 msgstr "%d ani"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% din %dMiB"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -85,10 +89,6 @@ msgid "%s of %s"
 msgstr ""
 
 #, php-format
-msgid "%s of %sB"
-msgstr "%s din %sB"
-
-#, php-format
 msgid "%s on %s"
 msgstr "%s pe %s"
 
@@ -97,20 +97,8 @@ msgid "%s used of %s"
 msgstr ""
 
 #, php-format
-msgid "%s%% available"
-msgstr "%s%% disponibil"
-
-#, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s este deja utilizat de %s%d."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sB disponibili din %sB"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sB utilizați din %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -11234,6 +11222,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "și"
 
+msgid "available"
+msgstr ""
+
 msgid "available of"
 msgstr ""
 
@@ -11382,5 +11373,22 @@ msgstr ""
 msgid "visible"
 msgstr ""
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "Aveți grijă la activarea acestei opțiuni."
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% din %dMiB"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s din %sB"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sB disponibili din %sB"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sB utilizați din %sB"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% disponibil"
