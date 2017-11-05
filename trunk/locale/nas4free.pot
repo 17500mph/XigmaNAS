@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,6 +16,10 @@ msgid " interfaces:"
 msgstr ""
 
 msgid " was assigned to "
+msgstr ""
+
+#, php-format
+msgid "%1$s %3$s %2$s"
 msgstr ""
 
 #, php-format
@@ -43,7 +47,7 @@ msgid "%d years"
 msgstr ""
 
 #, php-format
-msgid "%d%% of %dMiB"
+msgid "%d%% of %s"
 msgstr ""
 
 #, php-format
@@ -83,10 +87,6 @@ msgid "%s of %s"
 msgstr ""
 
 #, php-format
-msgid "%s of %sB"
-msgstr ""
-
-#, php-format
 msgid "%s on %s"
 msgstr ""
 
@@ -95,19 +95,7 @@ msgid "%s used of %s"
 msgstr ""
 
 #, php-format
-msgid "%s%% available"
-msgstr ""
-
-#, php-format
 msgid "%s%d %s is already used by %s%d."
-msgstr ""
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr ""
-
-#, php-format
-msgid "%sB used of %sB"
 msgstr ""
 
 #, php-format
@@ -9506,6 +9494,9 @@ msgid "Zeroconf/Bonjour"
 msgstr ""
 
 msgid "and"
+msgstr ""
+
+msgid "available"
 msgstr ""
 
 msgid "available of"
