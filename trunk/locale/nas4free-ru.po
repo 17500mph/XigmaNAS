@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
-"PO-Revision-Date: 2017-11-01 10:26+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"PO-Revision-Date: 2017-11-05 09:25+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:07+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " интерфейсы:"
 
 msgid " was assigned to "
 msgstr " был присвоен "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -47,8 +51,8 @@ msgid "%d years"
 msgstr "%d года"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% из %d Мбайт"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -68,7 +72,7 @@ msgstr "%s уже существует."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s доступно из %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -84,11 +88,7 @@ msgstr "Значение %s слишком длинное."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
-
-#, php-format
-msgid "%s of %sB"
-msgstr "%s из %s байт"
+msgstr "%s из %s"
 
 #, php-format
 msgid "%s on %s"
@@ -96,23 +96,11 @@ msgstr "%s на %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
-
-#, php-format
-msgid "%s%% available"
-msgstr "%s%% доступного"
+msgstr "%s использовано из %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s уже используется %s%d."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%s байт доступно из %s байт"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "занято %s из %s байт"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -757,7 +745,7 @@ msgid "Allow New Files"
 msgstr "Разрешить новые файлы"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Разрешить serial-порты"
 
 msgid "Allow TLS connections only."
 msgstr "Разрешить только TLS соединения."
@@ -766,7 +754,7 @@ msgid "Allow USB"
 msgstr "Разрешить USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Разрешить USB serial-порты"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Разрешить клиентский доступ к учетным записям без пароля"
@@ -1230,7 +1218,7 @@ msgid "Battery voltage"
 msgstr "Напряжение батареи"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Будьте осторожны, включив эти параметры."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - File-deletions будет сделано до начала передачи."
@@ -3649,9 +3637,11 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Включите эту опцию, чтобы сделать USB serial-порты доступными для клиентов."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Включите эту опцию, чтобы сделать serial-порты доступными для клиентов."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3859,7 +3849,7 @@ msgid "Enter login name of the user."
 msgstr "Введите имя пользователя для входа."
 
 msgid "Enter smartctl pass-through type."
-msgstr ""
+msgstr "Введите smartctl pass-through тип."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Введите IP-адрес или DNS-имя целевого устройства."
@@ -4574,7 +4564,7 @@ msgid "Host Access Control"
 msgstr "Управление доступом хоста"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Ресурсы хоста"
 
 msgid "Host resources"
 msgstr "Ресурсы хоста"
@@ -11251,6 +11241,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "и"
 
+msgid "available"
+msgstr ""
+
 msgid "available of"
 msgstr "доступно из"
 
@@ -11286,7 +11279,7 @@ msgstr ""
 "наибольшее устанавливаемое значение низкого напряжения для переключения"
 
 msgid "hidden"
-msgstr ""
+msgstr "скрыть"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI-инициатор"
@@ -11351,10 +11344,10 @@ msgid "of"
 msgstr "из"
 
 msgid "off"
-msgstr ""
+msgstr "выкл."
 
 msgid "on"
-msgstr ""
+msgstr "вкл."
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11401,7 +11394,24 @@ msgid "used of"
 msgstr "использовано из"
 
 msgid "visible"
-msgstr ""
+msgstr "показать"
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "Будьте осторожны с выбором этой опции."
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% из %d Мбайт"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s из %s байт"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%s байт доступно из %s байт"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "занято %s из %s байт"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% доступного"

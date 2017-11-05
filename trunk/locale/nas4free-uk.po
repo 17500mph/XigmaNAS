@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
-"PO-Revision-Date: 2017-10-31 18:36+0000\n"
-"Last-Translator: uniss <uniss@ua.fm>\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"PO-Revision-Date: 2017-11-03 13:59+0000\n"
+"Last-Translator: Anatoliy Pavlyuchenko <anatoly.pavluchenko@googlemail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:07+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -20,6 +20,10 @@ msgstr " інтерфейси:"
 
 msgid " was assigned to "
 msgstr " було присвоєно "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -46,8 +50,8 @@ msgid "%d years"
 msgstr "%d років"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% із %dМіБ"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -67,7 +71,7 @@ msgstr "%s вже існує."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s доступно з %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -83,11 +87,7 @@ msgstr "%s занадто довге."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
-
-#, php-format
-msgid "%s of %sB"
-msgstr "%s з %s байт"
+msgstr "%s з %s"
 
 #, php-format
 msgid "%s on %s"
@@ -95,23 +95,11 @@ msgstr "%s на %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
-
-#, php-format
-msgid "%s%% available"
-msgstr "%s%% доступно"
+msgstr "%s використано з %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s вже використовується %s%d."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sбайт доступно з %sбайт"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sбайт зайнято з %sбайт"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -751,7 +739,7 @@ msgid "Allow New Files"
 msgstr "Дозволити нові файли"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Дозволити послідовні порти"
 
 msgid "Allow TLS connections only."
 msgstr "Дозволяти лише TLS з'єднання."
@@ -760,7 +748,7 @@ msgid "Allow USB"
 msgstr "Дозволити USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Дозволити USB послідовні порти"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr ""
@@ -1222,7 +1210,7 @@ msgid "Battery voltage"
 msgstr "Напруга батареї"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Треба бути уважним, дозволяючи ці параметри"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - Видалення файлів буде завершено до початку передачі."
@@ -1240,7 +1228,7 @@ msgid "Best available"
 msgstr "Найкраще з доступного"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "Бінарний префікс"
 
 msgid "Bind DN"
 msgstr "Приєднати(прив'язати) доменне ім'я"
@@ -1340,7 +1328,7 @@ msgid "Browseable"
 msgstr "Доступний для перегляду"
 
 msgid "Button Location"
-msgstr ""
+msgstr "Розташуваня кнопки"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr "За замовчуванням, тільки вже існуючі файли можуть бути завантажені."
@@ -2816,11 +2804,13 @@ msgstr "Відображення історії команд ZFS"
 
 msgid ""
 "Display action buttons in the scrollable area instead of the footer area."
-msgstr ""
+msgstr "Показувати кнопки виконання в зоні прокрутки замість зони виноски"
 
 msgid ""
 "Display disk size values using binary prefixes instead of decimal prefixes."
 msgstr ""
+"Показувати значення розміру диску, використовуючи бінарні префікси замість "
+"десятичних префіксів"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3445,10 +3435,10 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Дозволити Обрані Модулі Rsync"
 
 msgid "Enable Server"
-msgstr ""
+msgstr "Дозволити Сервер"
 
 msgid "Enable Setting"
-msgstr ""
+msgstr "Дозволити Параметри"
 
 msgid "Enable TLS connections."
 msgstr "Дозволити TLS з'єднання."
@@ -3635,9 +3625,13 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Дозвольте цей параметр, щоб зробити доступними для клієнтів USB послідовні "
+"порти хоста"
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Дозвольте цей параметр, щоб зробити доступними для клієнтів послідовні порти "
+"хоста"
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3729,10 +3723,10 @@ msgid "Enter Email Address(es)"
 msgstr "Додавання адреси(-ів) емайл."
 
 msgid "Enter IP Address"
-msgstr ""
+msgstr "Введіть IP адресу"
 
 msgid "Enter Identifier"
-msgstr ""
+msgstr "Введіть ідентифікатор"
 
 msgid "Enter Password"
 msgstr "Введіть пароль"
@@ -3741,7 +3735,7 @@ msgid "Enter Subject"
 msgstr "Вкажіть тему"
 
 msgid "Enter Universally Unique Identifier"
-msgstr ""
+msgstr "Введіть Універсальний Унікальний Ідентифікатор (UUI)"
 
 msgid "Enter a comment"
 msgstr "Введіть коментар"
@@ -3779,7 +3773,7 @@ msgid "Enter a description"
 msgstr "Введіть опис"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Введіть опис собі на згадку"
 
 msgid "Enter a description for your reference."
 msgstr "Введіть опис для вашого посилання."
@@ -3820,10 +3814,10 @@ msgstr ""
 "іконку для вибору."
 
 msgid "Enter destination"
-msgstr ""
+msgstr "Введіть ціль"
 
 msgid "Enter facility name"
-msgstr ""
+msgstr "Введіть назву обладнання"
 
 msgid "Enter full name of the user."
 msgstr "Введіть повне ім'я користувача."
@@ -3835,7 +3829,7 @@ msgid "Enter hostname or IP address."
 msgstr "Введіть ім'я хоста або IP-адресу."
 
 msgid "Enter level name"
-msgstr ""
+msgstr "Введіть назву рівня"
 
 msgid "Enter login name"
 msgstr "Введіть логін користувача"
@@ -4071,7 +4065,7 @@ msgstr ""
 "їх до клієнта, що запросив передачу (небезпечно!)."
 
 msgid "Facility"
-msgstr ""
+msgstr "Обладнання"
 
 msgid "Factory Defaults"
 msgstr "Заводські налаштування"
@@ -4244,7 +4238,7 @@ msgid "Follow"
 msgstr "Стежити"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Видалити в будь-якому випадку"
 
 msgid "Force Operation"
 msgstr "примусова операція"
@@ -4553,7 +4547,7 @@ msgid "Host Access Control"
 msgstr "Керування Доступом до Хосту"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Ресурси хосту"
 
 msgid "Host resources"
 msgstr "Ресурси хоста"
@@ -4735,6 +4729,8 @@ msgstr ""
 msgid ""
 "If this message persists take a look at the system log for more information."
 msgstr ""
+"Якщо це повідомлення все ще зберігається, зверніться для системного логу для "
+"подальшої інформації"
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5276,7 +5272,7 @@ msgstr ""
 "Залишіть це поле пустим для використання налаштувань за замовчуванням."
 
 msgid "Level"
-msgstr ""
+msgstr "Рівень"
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
@@ -5879,7 +5875,7 @@ msgid "Music"
 msgstr "Музика"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "Має бути цифра від 5 до 1000"
 
 msgid "Must choose one"
 msgstr "Треба вибрати один з варіантів"
@@ -6141,7 +6137,7 @@ msgid "No pools have been selected"
 msgstr "Немає обраних пулів"
 
 msgid "No records found."
-msgstr ""
+msgstr "Не знайдено записів"
 
 msgid "No softraid-formatted disks available."
 msgstr "Немає доступних відформатованих SoftRAID дисків."
@@ -6905,7 +6901,7 @@ msgid "Private key"
 msgstr "Приватний ключ"
 
 msgid "Process State"
-msgstr ""
+msgstr "Статус процесу"
 
 msgid "Processes"
 msgstr "Процеси"
@@ -6920,10 +6916,10 @@ msgid "Properties"
 msgstr "Властивості"
 
 msgid "Protect"
-msgstr ""
+msgstr "Захистити"
 
 msgid "Protect Setting"
-msgstr ""
+msgstr "Параметри захисту"
 
 msgid "Proto"
 msgstr "Протокол"
@@ -7214,7 +7210,7 @@ msgid "Release Notes"
 msgstr "Примітки релізу"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Перезавантажити сторінку"
 
 msgid "Reload page"
 msgstr "Перезавантажити сторінку"
@@ -7901,7 +7897,7 @@ msgid "September"
 msgstr "Вересень"
 
 msgid "Serial Console"
-msgstr ""
+msgstr "Консоль послідовного доступу"
 
 msgid "Serial Number"
 msgstr "Серійний номер"
@@ -9087,7 +9083,7 @@ msgstr ""
 "Зараз буде інстальована прошивка. Сервер перезавантажиться автоматично."
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "Були знайдені наступні помилки"
 
 msgid "The following input errors were detected"
 msgstr "Були виявлені наступні помилки вводу"
@@ -10439,7 +10435,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison File Synchronisation"
 
 msgid "Universally Unique Identifier"
-msgstr ""
+msgstr "Універсальний Унікальний Ідентифікатор (UUI)"
 
 msgid "Unix Charset"
 msgstr "Набір Символів Unix"
@@ -11198,8 +11194,11 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "та"
 
-msgid "available of"
+msgid "available"
 msgstr ""
+
+msgid "available of"
+msgstr "доступно з"
 
 msgid "change failed."
 msgstr "відмова зміни."
@@ -11293,13 +11292,13 @@ msgid "none"
 msgstr "немає"
 
 msgid "of"
-msgstr ""
+msgstr "з"
 
 msgid "off"
-msgstr ""
+msgstr "вимкнено"
 
 msgid "on"
-msgstr ""
+msgstr "увімкнено"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11341,10 +11340,27 @@ msgid "umount"
 msgstr "umount"
 
 msgid "used of"
-msgstr ""
+msgstr "використано з"
 
 msgid "visible"
 msgstr ""
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "Будьте обачні, обираючи цю опцію."
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s з %s байт"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sбайт зайнято з %sбайт"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sбайт доступно з %sбайт"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% доступно"
+
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% із %dМіБ"

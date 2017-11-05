@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
-"PO-Revision-Date: 2017-10-24 01:59+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"PO-Revision-Date: 2017-11-04 18:39+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:37+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:07+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -20,6 +20,10 @@ msgstr " 接口："
 
 msgid " was assigned to "
 msgstr " 被指派为 "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -46,8 +50,8 @@ msgid "%d years"
 msgstr "%d 年"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "已用百分之 %d ，共 %dMiB"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -67,7 +71,7 @@ msgstr "%s 已存在。"
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s可用，共%s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -83,11 +87,7 @@ msgstr "%s 太长了。"
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
-
-#, php-format
-msgid "%s of %sB"
-msgstr "%s 于 %sB"
+msgstr "%s/%s"
 
 #, php-format
 msgid "%s on %s"
@@ -95,23 +95,11 @@ msgstr "%s 于 %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
-
-#, php-format
-msgid "%s%% available"
-msgstr "%s%% 可用"
+msgstr "%s已用，共%s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s 已被 %s%d 使用。"
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sB 有效，于 %sB"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sB 已用，于 %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -699,7 +687,7 @@ msgid "Allow New Files"
 msgstr "允许新文件"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "允许串行端口"
 
 msgid "Allow TLS connections only."
 msgstr "只允许TLS连接。"
@@ -708,7 +696,7 @@ msgid "Allow USB"
 msgstr "允许USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "允许USB串行端口"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "允许没有设置密码的帐号访问。"
@@ -1129,7 +1117,7 @@ msgid "Battery voltage"
 msgstr "电池电压"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "开启这些选项时要小心。"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "之前 - 文件删除将在传输开始之前完成。"
@@ -1145,7 +1133,7 @@ msgid "Best available"
 msgstr "现有最佳"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "二进制前缀"
 
 msgid "Bind DN"
 msgstr "绑定 DN （Bind DN）"
@@ -2615,7 +2603,7 @@ msgstr "在可滚动区域中显示操作按钮，而不是页脚区域。"
 
 msgid ""
 "Display disk size values using binary prefixes instead of decimal prefixes."
-msgstr ""
+msgstr "使用二进制前缀而不是小数前缀显示磁盘大小值。"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3395,10 +3383,10 @@ msgstr "启用此选项可使主机USB可用于客户端。"
 
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
-msgstr ""
+msgstr "启用此选项可使主机USB串行端口可供客户端使用。"
 
 msgid "Enable this option to make host serial ports available to clients."
-msgstr ""
+msgstr "启用此选项可使主机串行端口可供客户端使用。"
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4262,7 +4250,7 @@ msgid "Host Access Control"
 msgstr "主机访问控制"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "主机资源"
 
 msgid "Host resources"
 msgstr "主机资源"
@@ -10362,8 +10350,11 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "and"
 
-msgid "available of"
+msgid "available"
 msgstr ""
+
+msgid "available of"
+msgstr "可用的"
 
 msgid "change failed."
 msgstr "更改失败。"
@@ -10393,7 +10384,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "最大可设置的低电压转换点"
 
 msgid "hidden"
-msgstr ""
+msgstr "已隐藏"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI 启动器"
@@ -10455,13 +10446,13 @@ msgid "none"
 msgstr "无"
 
 msgid "of"
-msgstr ""
+msgstr "/"
 
 msgid "off"
-msgstr ""
+msgstr "关闭"
 
 msgid "on"
-msgstr ""
+msgstr "打开"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -10503,10 +10494,27 @@ msgid "umount"
 msgstr "卸载"
 
 msgid "used of"
-msgstr ""
+msgstr "已用的"
 
 msgid "visible"
-msgstr ""
+msgstr "可见"
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "小心启用此选项。"
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sB 有效，于 %sB"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sB 已用，于 %sB"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% 可用"
+
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "已用百分之 %d ，共 %dMiB"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s 于 %sB"

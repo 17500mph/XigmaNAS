@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
-"PO-Revision-Date: 2017-10-30 13:15+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"PO-Revision-Date: 2017-11-05 17:39+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:05+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -24,6 +24,10 @@ msgstr " Schnittstellen:"
 
 msgid " was assigned to "
 msgstr " wurde zugewiesen zu "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -50,8 +54,8 @@ msgid "%d years"
 msgstr "%d Jahre"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% von %dMiB"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -71,7 +75,7 @@ msgstr "%s existiert bereits."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s verfügbar von %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -87,11 +91,7 @@ msgstr "%s ist zu lang."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
-
-#, php-format
-msgid "%s of %sB"
-msgstr "%s von %s B"
+msgstr "%s von %s"
 
 #, php-format
 msgid "%s on %s"
@@ -99,23 +99,11 @@ msgstr "%s auf %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
-
-#, php-format
-msgid "%s%% available"
-msgstr "%s%% verfügbar"
+msgstr "%s verwendet von %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s wird bereits verwendet von %s%d ."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sB von %sB verfügbar"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sB von %sB verwendet"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -779,7 +767,7 @@ msgid "Allow New Files"
 msgstr "Neue Dateien Zulassen"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Erlaube Serielle Anschlüsse"
 
 msgid "Allow TLS connections only."
 msgstr "Erlauben Sie nur TLS Anschlüsse."
@@ -788,7 +776,7 @@ msgid "Allow USB"
 msgstr "Erlaube USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Erlaube USB Anschlüsse"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr ""
@@ -1257,7 +1245,7 @@ msgid "Battery voltage"
 msgstr "Akkuspannung"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Seien Sie vorsichtig, wenn Sie diese Optionen einschalten."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -11300,6 +11288,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "und"
 
+msgid "available"
+msgstr ""
+
 msgid "available of"
 msgstr ""
 
@@ -11448,5 +11439,22 @@ msgstr ""
 msgid "visible"
 msgstr ""
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "Vorsicht beim Erlauben dieser Einstellung."
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% von %dMiB"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s von %s B"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sB von %sB verwendet"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% verfügbar"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sB von %sB verfügbar"

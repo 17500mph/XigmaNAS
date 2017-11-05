@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-03 03:32+0000\n"
-"PO-Revision-Date: 2017-11-01 11:32+0000\n"
+"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"PO-Revision-Date: 2017-11-03 08:08+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 03:38+0000\n"
+"X-Launchpad-Export-Date: 2017-11-05 18:06+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -22,6 +22,10 @@ msgstr " interfészek:"
 
 msgid " was assigned to "
 msgstr " ki lett jelölve a "
+
+#, php-format
+msgid "%1$s %3$s %2$s"
+msgstr ""
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -48,8 +52,8 @@ msgid "%d years"
 msgstr "%d év"
 
 #, php-format
-msgid "%d%% of %dMiB"
-msgstr "%d%% a(z) %dMB-ból"
+msgid "%d%% of %s"
+msgstr ""
 
 #, php-format
 msgid "%dB / block"
@@ -88,10 +92,6 @@ msgid "%s of %s"
 msgstr "%s / %s"
 
 #, php-format
-msgid "%s of %sB"
-msgstr "%s a(z) %sB-ból"
-
-#, php-format
 msgid "%s on %s"
 msgstr "%s ezen: %s"
 
@@ -100,20 +100,8 @@ msgid "%s used of %s"
 msgstr "%s / %s van használatban"
 
 #, php-format
-msgid "%s%% available"
-msgstr "%s%% elérhető"
-
-#, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s már használatban van: %s%d."
-
-#, php-format
-msgid "%sB available of %sB"
-msgstr "%sB elérhető a(z) %sB-ból"
-
-#, php-format
-msgid "%sB used of %sB"
-msgstr "%sB foglalt a(z) %sB-ból"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
@@ -749,7 +737,7 @@ msgid "Allow New Files"
 msgstr "Új fájlok engedélyezése"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Soros port engedélyezése"
 
 msgid "Allow TLS connections only."
 msgstr "Csak TLS kapcsolat engedélyezése."
@@ -758,7 +746,7 @@ msgid "Allow USB"
 msgstr "USB engedélyezése"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "USB soros port engedélyezése"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Engedélyezés a klienseknek a jelszó nélküli hozzáféréshez."
@@ -1219,7 +1207,7 @@ msgid "Battery voltage"
 msgstr "Akkumulátor feszültsége"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Ezen lehetőségek bekapcsolásával óvatosan bánjon."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Előtte - Átvitel megkezdése előtt töröljük a fájlokat."
@@ -3607,9 +3595,13 @@ msgstr "Ez a beállítás a kliensek számára bekapcsolja a kiszolgáló USB-j�
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Kapcsolja be ezt a lehetőséget, hogy kliensek elérhessék a kiszolgáló USB "
+"soros portjait."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Kapcsolja be ezt a lehetőséget, hogy kliensek elérhessék a kiszolgáló soros "
+"portjait."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4523,7 +4515,7 @@ msgid "Host Access Control"
 msgstr "Kiszolgálóhozzáférés-felügyelet"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Kiszolgáló erőforrásai"
 
 msgid "Host resources"
 msgstr "Állomás-erőforrások"
@@ -11150,6 +11142,9 @@ msgstr "Zeroconf/Bonjour"
 msgid "and"
 msgstr "és"
 
+msgid "available"
+msgstr ""
+
 msgid "available of"
 msgstr "érhető el"
 
@@ -11183,7 +11178,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "legnagyobb beállítható alacsony feszültségű átviteli pont"
 
 msgid "hidden"
-msgstr ""
+msgstr "rejtett"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Kezdeményező"
@@ -11248,10 +11243,10 @@ msgid "of"
 msgstr "/"
 
 msgid "off"
-msgstr ""
+msgstr "ki"
 
 msgid "on"
-msgstr ""
+msgstr "be"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11296,7 +11291,24 @@ msgid "used of"
 msgstr "használatban"
 
 msgid "visible"
-msgstr ""
+msgstr "látható"
 
-#~ msgid "Be careful enabling this option."
-#~ msgstr "Legyen óvatos, ha engedélyezi ezt a lehetőséget."
+#, php-format
+#~ msgid "%d%% of %dMiB"
+#~ msgstr "%d%% a(z) %dMB-ból"
+
+#, php-format
+#~ msgid "%sB available of %sB"
+#~ msgstr "%sB elérhető a(z) %sB-ból"
+
+#, php-format
+#~ msgid "%s of %sB"
+#~ msgstr "%s a(z) %sB-ból"
+
+#, php-format
+#~ msgid "%s%% available"
+#~ msgstr "%s%% elérhető"
+
+#, php-format
+#~ msgid "%sB used of %sB"
+#~ msgstr "%sB foglalt a(z) %sB-ból"
