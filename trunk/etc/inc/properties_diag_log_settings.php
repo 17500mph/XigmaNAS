@@ -41,6 +41,7 @@ class properties_diag_log_settings {
 	public $ftp;
 	public $ipaddr;
 	public $nentries;
+	public $port;
 	public $resolve;
 	public $reverse;
 	public $rsyncd;
@@ -59,6 +60,7 @@ class properties_diag_log_settings {
 		$this->ftp = $this->prop_ftp();
 		$this->ipaddr = $this->prop_ipaddr();
 		$this->nentries = $this->prop_nentries();
+		$this->port = $this->prop_port();
 		$this->resolve = $this->prop_resolve();
 		$this->reverse = $this->prop_reverse();
 		$this->rsyncd = $this->prop_rsyncd();
@@ -164,6 +166,33 @@ class properties_diag_log_settings {
 		$o->set_editableonadd(true);
 		$o->set_editableonmodify(true);
 		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Must be a number between 5 and 1000.')));
+		return $o;
+	}
+	private function prop_port(): properties_int {
+		$o = new properties_int($this);
+		$o->set_id('port');
+		$o->set_name('port');
+		$o->set_title(gtext('Port'));
+		$o->set_caption(gtext('Port of the remote syslog server. Leave blank to use the default port.'));
+		$o->set_description(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.'));
+		$o->set_defaultvalue('');
+		$o->set_size(6);
+		$o->set_maxlength(5);
+		$o->set_min(1024)->set_max(49151);
+		$o->set_placeholder(gtext('514'));
+		$o->filter_use_default();
+		$o->set_filter(FILTER_VALIDATE_INT,'514');
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR,'514');
+		$o->set_filter_options(['default' => NULL,'min_range' => 514,'max_range' => 514],'514');
+		$o->set_filter(FILTER_VALIDATE_REGEXP,'empty');
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR,'empty');
+		$o->set_filter_options(['default' => NULL,'regexp' => '/^$/'],'empty');
+		$o->set_filter(FILTER_UNSAFE_RAW,'scalar');
+		$o->set_filter_flags(FILTER_REQUIRE_SCALAR,'scalar');
+		$o->set_filter_options(['default' => ''],'scalar');
+		$o->set_editableonadd(true);
+		$o->set_editableonmodify(true);
+		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Port number must be 514 or a number between 1024 and 49151.')));
 		return $o;
 	}
 	private function prop_resolve(): properties_bool {

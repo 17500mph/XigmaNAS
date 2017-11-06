@@ -75,6 +75,8 @@ debug "flags: ${syslogd_flags}"
 
 syslogd_mkconf()
 {
+	local _ipaddr _port
+
 	echo "local3.* %${clog_logdir}/sshd.log
 local4.* %${clog_logdir}/rsyncd.log
 local5.* %${clog_logdir}/smartd.log
@@ -94,19 +96,27 @@ auth.info;authpriv.info %${clog_logdir}/system.log
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc >> ${syslogd_config}
 
+	# Collect ip address and port of remote syslog server
+	_ipaddr=`configxml_get "//syslogd/remote/ipaddr"`
+	if [ "${_ipaddr}" != "" ]; then
+		_port=`configxml_get "//syslogd/remote/port"`
+		if [ "${_port}" != "" ]; then
+			_ipaddr="${_ipaddr}:${_port}"
+		fi
+	fi
 	# Add remote server configuration if syslog'ing to remote syslog server is enabled
 	/usr/local/bin/xml sel -t \
 		-i "//syslogd/remote/enable" \
-			-i "//syslogd/remote/sshd" -o "local3.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/rsyncd" -o "local4.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/smartd" -o "local5.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/ftp" -o "ftp.* @" -v "//syslogd/remote/ipaddr" -n -b \
-			-i "//syslogd/remote/daemon" -o "daemon.* @" -v "//syslogd/remote/ipaddr" -n -b \
+			-i "//syslogd/remote/sshd" -o "local3.* @" -o "${_ipaddr}" -n -b \
+			-i "//syslogd/remote/rsyncd" -o "local4.* @" -o "${_ipaddr}" -n -b \
+			-i "//syslogd/remote/smartd" -o "local5.* @" -o "${_ipaddr}" -n -b \
+			-i "//syslogd/remote/ftp" -o "ftp.* @" -o "${_ipaddr}" -n -b \
+			-i "//syslogd/remote/daemon" -o "daemon.* @" -o "${_ipaddr}" -n -b \
 			-i "//syslogd/remote/system" \
-				-o "*.notice;kern.debug;lpr.info;mail.crit;news.err;local0.none;local7.none @" -v "//syslogd/remote/ipaddr" -n \
-				-o "security.* @" -v "//syslogd/remote/ipaddr" -n \
-				-o "auth.info;authpriv.info @" -v "//syslogd/remote/ipaddr" -n \
-				-o "*.emerg	@" -v "//syslogd/remote/ipaddr" -n -b \
+				-o "*.notice;kern.debug;lpr.info;mail.crit;news.err;local0.none;local7.none @" -o "${_ipaddr}" -n \
+				-o "security.* @" -o "${_ipaddr}" -n \
+				-o "auth.info;authpriv.info @" -o "${_ipaddr}" -n \
+				-o "*.emerg	@" -o "${_ipaddr}" -n -b \
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc >> ${syslogd_config}
 }
