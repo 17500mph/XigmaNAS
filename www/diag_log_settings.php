@@ -108,16 +108,26 @@ switch($page_mode):
 		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote']);
 		if(is_null($sphere->row[$referrer])):
 			$throw_error = $sphere->row[$property->enable->get_name()];
-			if(array_key_exists($referrer,$sphere->grid['remote']) && is_string($sphere->grid['remote'][$referrer])):
+			if(array_key_exists($referrer,$sphere->grid['remote']) && is_string($sphere->grid['remote'][$referrer]) && preg_match('/\S/',$sphere->grid['remote'][$referrer])):
+				$throw_error = true;
 				$sphere->row[$referrer] = $sphere->grid['remote'][$referrer];
-				if(preg_match('/\S/',$sphere->grid['remote'][$referrer])):
-					$throw_error = true;
-				endif;
 			else:
 				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 			endif;
 			if($throw_error):
 				$input_errors[] = $property->{$referrer}->get_message_error();
+			endif;
+		endif;
+		$referrer = $property->port->get_name();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote']);
+		if(is_null($sphere->row[$referrer])):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'514');
+			if(is_null($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'empty');
+				if(is_null($sphere->row[$referrer])):
+					$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'scalar');
+					$input_errors[] = $property->{$referrer}->get_message_error();
+				endif;
 			endif;
 		endif;
 		break;
@@ -148,21 +158,27 @@ switch($page_mode):
 				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
 			endif;
 		endif;
+		//	IP address must be valid when remote syslog is enabled
+		//	IP address can be empty or must be valid when remote syslog is disabled
 		$referrer = $property->ipaddr->get_name();
 		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
 		if(is_null($sphere->row[$referrer])):
-			$throw_error = $sphere->row[$property->enable->get_name()];
-			if(array_key_exists($referrer,$_POST) && is_string($_POST[$referrer])):
-				$sphere->row[$referrer] = $_POST[$referrer];
-				if(preg_match('/\S/',$_POST[$referrer])):
-					$throw_error = true;
-				endif;
-			else:
-				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
-				$throw_error = true;
-			endif;
-			if($throw_error):
+			$sphere->row[$referrer] = filter_input(INPUT_POST,$referrer,FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
+			if($sphere->row[$property->enable->get_name()] || preg_match('/\S/',$sphere->row[$referrer])):
 				$input_errors[] = $property->{$referrer}->get_message_error();
+			endif;
+		endif;
+		//	Port must be empty or a valid port number
+		$referrer = $property->port->get_name();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		if(is_null($sphere->row[$referrer])):
+			$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'514');
+			if(is_null($sphere->row[$referrer])):
+				$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'empty');
+				if(is_null($sphere->row[$referrer])):
+					$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'scalar');
+					$input_errors[] = $property->{$referrer}->get_message_error();
+				endif;
 			endif;
 		endif;
 		if(empty($input_errors)):
@@ -181,6 +197,7 @@ switch($page_mode):
 				$property->enable->get_name(),
 				$property->ftp->get_name(),
 				$property->ipaddr->get_name(),
+				$property->port->get_name(),
 				$property->rsyncd->get_name(),
 				$property->smartd->get_name(),
 				$property->sshd->get_name(),
@@ -265,6 +282,7 @@ $content->
 			parentNode->
 		addTBODY()->
 			c2_input_text($property->ipaddr,htmlspecialchars($sphere->row[$property->ipaddr->get_name()]),false,$is_readonly)->
+			c2_input_text($property->port,htmlspecialchars($sphere->row[$property->port->get_name()]),false,$is_readonly)->
 			c2_checkbox($property->system,$sphere->row[$property->system->get_name()],false,$is_readonly)->
 			c2_checkbox($property->ftp,$sphere->row[$property->ftp->get_name()],false,$is_readonly)->
 			c2_checkbox($property->rsyncd,$sphere->row[$property->rsyncd->get_name()],false,$is_readonly)->
@@ -280,9 +298,6 @@ switch($page_mode):
 		$document->add_area_buttons()->mount_button_save()->mount_button_cancel();
 		break;
 endswitch;
-//	add remarks
-$content->add_area_remarks()->
-	mount_remark('note',gtext('Note'),sprintf(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.')));
 //	done
 $document->render();
 ?>
