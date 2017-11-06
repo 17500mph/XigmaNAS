@@ -216,8 +216,8 @@ pre {
 }
 .formfldro {
 	background-color: transparent;
-	border: 1.6px transparent;
-	color: #000000;
+	border: 1px outset #eeeeee;
+	color: black;
 }
 .formfld[type=file] {
 	width: 350px;
@@ -536,9 +536,9 @@ main#g4m {
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	width: 100%;
-	-webkit-flex: 1 1 0%;
-	-ms-flex: 1 1 0%;
-	flex: 1 1 0%;
+	-webkit-flex: 1 1 0px;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0px;
 	overflow-y: auto;
 	background-color: transparent;
 }
