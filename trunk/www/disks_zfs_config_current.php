@@ -121,161 +121,161 @@ $pagecontent = $document->getElementById('pagecontent');
 $document->
 	add_area_tabnav()->
 		push()->add_tabnav_upper()->
-			mount_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			mount_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			mount_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			mount_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			mount_tabnav_record('disks_zfs_config.php',gtext('Configuration'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'),gtext('Reload page'),true)->
 		pop()->add_tabnav_lower()->
-			mount_tabnav_record('disks_zfs_config_current.php',gtext('Current'),gtext('Reload page'),true)->
-			mount_tabnav_record('disks_zfs_config.php',gtext('Detected'))->
-			mount_tabnav_record('disks_zfs_config_sync.php',gtext('Synchronize'));
+			ins_tabnav_record('disks_zfs_config_current.php',gtext('Current'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Detected'))->
+			ins_tabnav_record('disks_zfs_config_sync.php',gtext('Synchronize'));
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
-$content->mount_info_box($savemsg);
+$content->ins_info_box($savemsg);
 $table = $content->add_table_data_selection();
 $a_col_width = ['16%','10%','9%','9%','9%','9%','9%','9%','10%','10%'];
 $n_col_width = count($a_col_width);
-$table->mount_colgroup_with_styles('width',$a_col_width);
+$table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
-$thead->mount_titleline(sprintf('%s (%d)',gtext('Pools'),count($zfs['pools']['pool'])),$n_col_width);
+$thead->ins_titleline(sprintf('%s (%d)',gtext('Pools'),count($zfs['pools']['pool'])),$n_col_width);
 $tr = $thead->addTR();
 $tr->
-	mountTH_class('lhell',gtext('Name'))->
-	mountTH_class('lhell',gtext('Size'));
+	insTHwC('lhell',gtext('Name'))->
+	insTHwC('lhell',gtext('Size'));
 if($showusedavail):
 	$tr->
-		mountTH_class('lhell',gtext('Used'))->
-		mountTH_class('lhell',gtext('Avail'));
+		insTHwC('lhell',gtext('Used'))->
+		insTHwC('lhell',gtext('Avail'));
 else:
 	$tr->
-		mountTH_class('lhell',gtext('Alloc'))->
-		mountTH_class('lhell',gtext('Free'));
+		insTHwC('lhell',gtext('Alloc'))->
+		insTHwC('lhell',gtext('Free'));
 endif;
 $tr->
-	mountTH_class('lhell',gtext('Expandsz'))->
-	mountTH_class('lhell',gtext('Frag'))->
-	mountTH_class('lhell',gtext('Dedup'))->
-	mountTH_class('lhell',gtext('Health'))->
-	mountTH_class('lhell',gtext('Mount Point'))->
-	mountTH_class('lhebl',gtext('AltRoot'));
+	insTHwC('lhell',gtext('Expandsz'))->
+	insTHwC('lhell',gtext('Frag'))->
+	insTHwC('lhell',gtext('Dedup'))->
+	insTHwC('lhell',gtext('Health'))->
+	insTHwC('lhell',gtext('Mount Point'))->
+	insTHwC('lhebl',gtext('AltRoot'));
 $tbody = $table->addTBODY();
 foreach($zfs['pools']['pool'] as $pool):
 	$tr = $tbody->addTR();
 	$tr->
-		mountTD_class('lcell',$pool['name'])->
-		mountTD_class('lcell',$pool['size']);
+		insTDwC('lcell',$pool['name'])->
+		insTDwC('lcell',$pool['size']);
 		if($showusedavail):
 			$tr->
-				mountTD_class('lcell',$pool['used'])->
-				mountTD_class('lcell',$pool['avail']);
+				insTDwC('lcell',$pool['used'])->
+				insTDwC('lcell',$pool['avail']);
 		else:
 			$tr->
-				mountTD_class('lcell',$pool['alloc'])->
-				mountTD_class('lcell',$pool['free']);
+				insTDwC('lcell',$pool['alloc'])->
+				insTDwC('lcell',$pool['free']);
 		endif;
 	$tr->
-		mountTD_class('lcell',$pool['expandsz'])->
-		mountTD_class('lcell',$pool['frag'])->
-		mountTD_class('lcell',$pool['dedup'])->
-		mountTD_class('lcell',$pool['health'])->
-		mountTD_class('lcell',empty($pool['mountpoint']) ? sprintf('/mnt/%s',$pool['name']) : $pool['mountpoint'])->
-		mountTD_class('lcebl',empty($pool['root']) ? '-' : $pool['root']);
+		insTDwC('lcell',$pool['expandsz'])->
+		insTDwC('lcell',$pool['frag'])->
+		insTDwC('lcell',$pool['dedup'])->
+		insTDwC('lcell',$pool['health'])->
+		insTDwC('lcell',empty($pool['mountpoint']) ? sprintf('/mnt/%s',$pool['name']) : $pool['mountpoint'])->
+		insTDwC('lcebl',empty($pool['root']) ? '-' : $pool['root']);
 endforeach;
 $table = $content->add_table_data_selection();
 $a_col_width = ['16%','21%','21%','42%'];
 $n_col_width = count($a_col_width);
-$table->mount_colgroup_with_styles('width',$a_col_width);
+$table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $thead->
-	mount_separator($n_col_width)->
-	mount_titleline(sprintf('%s (%d)',gtext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),$n_col_width);
+	ins_separator($n_col_width)->
+	ins_titleline(sprintf('%s (%d)',gtext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),$n_col_width);
 $thead->
 	addTR()->
-		mountTH_class('lhell',gtext('Name'))->
-		mountTH_class('lhell',gtext('Type'))->
-		mountTH_class('lhell',gtext('Pool'))->
-		mountTH_class('lhebl',gtext('Devices'));
+		insTHwC('lhell',gtext('Name'))->
+		insTHwC('lhell',gtext('Type'))->
+		insTHwC('lhell',gtext('Pool'))->
+		insTHwC('lhebl',gtext('Devices'));
 $tbody = $table->addTBODY();
 foreach($zfs['vdevices']['vdevice'] as $vdevice):
 	$tbody->
 		addTR()->
-			mountTD_class('lcell',$vdevice['name'])->
-			mountTD_class('lcell',$vdevice['type'])->
-			mountTD_class('lcell',!empty($vdevice['pool']) ? $vdevice['pool'] : '')->
-			mountTD_class('lcebl',implode(',',$vdevice['device']));
+			insTDwC('lcell',$vdevice['name'])->
+			insTDwC('lcell',$vdevice['type'])->
+			insTDwC('lcell',!empty($vdevice['pool']) ? $vdevice['pool'] : '')->
+			insTDwC('lcebl',implode(',',$vdevice['device']));
 endforeach;
 $table = $content->add_table_data_selection();
 $a_col_width = ['14%','14%','7%','7%','9%','9%','9%','7%','8%','7%','9%'];
 $n_col_width = count($a_col_width);
-$table->mount_colgroup_with_styles('width',$a_col_width);
+$table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $thead->
-	mount_separator($n_col_width)->
-	mount_titleline(sprintf('%s (%d)',gtext('Datasets'),count($zfs['datasets']['dataset'])),$n_col_width);
+	ins_separator($n_col_width)->
+	ins_titleline(sprintf('%s (%d)',gtext('Datasets'),count($zfs['datasets']['dataset'])),$n_col_width);
 $thead->
 	addTR()->
-		mountTH_class('lhell',gtext('Name'))->
-		mountTH_class('lhell',gtext('Pool'))->
-		mountTH_class('lhell',gtext('Compression'))->
-		mountTH_class('lhell',gtext('Dedup'))->
-		mountTH_class('lhell',gtext('Sync'))->
-		mountTH_class('lhell',gtext('ACL Inherit'))->
-		mountTH_class('lhell',gtext('ACL Mode'))->
-		mountTH_class('lhell',gtext('Canmount'))->
-		mountTH_class('lhell',gtext('Quota'))->
-		mountTH_class('lhell',gtext('Readonly'))->
-		mountTH_class('lhebl',gtext('Snapshot Visibility'));
+		insTHwC('lhell',gtext('Name'))->
+		insTHwC('lhell',gtext('Pool'))->
+		insTHwC('lhell',gtext('Compression'))->
+		insTHwC('lhell',gtext('Dedup'))->
+		insTHwC('lhell',gtext('Sync'))->
+		insTHwC('lhell',gtext('ACL Inherit'))->
+		insTHwC('lhell',gtext('ACL Mode'))->
+		insTHwC('lhell',gtext('Canmount'))->
+		insTHwC('lhell',gtext('Quota'))->
+		insTHwC('lhell',gtext('Readonly'))->
+		insTHwC('lhebl',gtext('Snapshot Visibility'));
 $tbody = $table->addTBODY();
 foreach($zfs['datasets']['dataset'] as $dataset):
 	$tbody->
 		addTR()->
-			mountTD_class('lcell',$dataset['name'])->
-			mountTD_class('lcell',$dataset['pool'][0])->
-			mountTD_class('lcell',$dataset['compression'])->
-			mountTD_class('lcell',$dataset['dedup'])->
-			mountTD_class('lcell',$dataset['sync'])->
-			mountTD_class('lcell',$dataset['aclinherit'])->
-			mountTD_class('lcell',$dataset['aclmode'])->
-			mountTD_class('lcell',isset($dataset['canmount']) ? gtext('on') : gtext('off'))->
-			mountTD_class('lcell',empty($dataset['quota']) ? gtext('none') : $dataset['quota'])->
-			mountTD_class('lcell',isset($dataset['readonly']) ? gtext('on') : gtext('off'))->
-			mountTD_class('lcebl',isset($dataset['snapdir']) ? gtext('visible') : gtext('hidden'));
+			insTDwC('lcell',$dataset['name'])->
+			insTDwC('lcell',$dataset['pool'][0])->
+			insTDwC('lcell',$dataset['compression'])->
+			insTDwC('lcell',$dataset['dedup'])->
+			insTDwC('lcell',$dataset['sync'])->
+			insTDwC('lcell',$dataset['aclinherit'])->
+			insTDwC('lcell',$dataset['aclmode'])->
+			insTDwC('lcell',isset($dataset['canmount']) ? gtext('on') : gtext('off'))->
+			insTDwC('lcell',empty($dataset['quota']) ? gtext('none') : $dataset['quota'])->
+			insTDwC('lcell',isset($dataset['readonly']) ? gtext('on') : gtext('off'))->
+			insTDwC('lcebl',isset($dataset['snapdir']) ? gtext('visible') : gtext('hidden'));
 endforeach;
 $table = $content->add_table_data_selection();
 $a_col_width = ['16%','12%','12%','12%','12%','12%','12%','12%'];
 $n_col_width = count($a_col_width);
-$table->mount_colgroup_with_styles('width',$a_col_width);
+$table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $thead->
-	mount_separator($n_col_width)->
-	mount_titleline(sprintf('%s (%d)',gtext('Volumes'),count($zfs['volumes']['volume'])),$n_col_width);
+	ins_separator($n_col_width)->
+	ins_titleline(sprintf('%s (%d)',gtext('Volumes'),count($zfs['volumes']['volume'])),$n_col_width);
 $thead->
 	addTR()->
-		mountTH_class('lhell',gtext('Name'))->
-		mountTH_class('lhell',gtext('Pool'))->
-		mountTH_class('lhell',gtext('Size'))->
-		mountTH_class('lhell',gtext('Blocksize'))->
-		mountTH_class('lhell',gtext('Sparse'))->
-		mountTH_class('lhell',gtext('Compression'))->
-		mountTH_class('lhell',gtext('Dedup'))->
-		mountTH_class('lhebl',gtext('Sync'));
+		insTHwC('lhell',gtext('Name'))->
+		insTHwC('lhell',gtext('Pool'))->
+		insTHwC('lhell',gtext('Size'))->
+		insTHwC('lhell',gtext('Blocksize'))->
+		insTHwC('lhell',gtext('Sparse'))->
+		insTHwC('lhell',gtext('Compression'))->
+		insTHwC('lhell',gtext('Dedup'))->
+		insTHwC('lhebl',gtext('Sync'));
 $tbody = $table->addTBODY();
 foreach($zfs['volumes']['volume'] as $volume):
 	$tbody->
 		addTR()->
-			mountTD_class('lcell',$volume['name'])->
-			mountTD_class('lcell',$volume['pool'][0])->
-			mountTD_class('lcell',$volume['volsize'])->
-			mountTD_class('lcell',!empty($volume['volblocksize']) ? $volume['volblocksize'] : '-')->
-			mountTD_class('lcell',!isset($volume['sparse']) ? '-' : gtext('on'))->
-			mountTD_class('lcell',$volume['compression'])->
-			mountTD_class('lcell',$volume['dedup'])->
-			mountTD_class('lcebl',$volume['sync']);
+			insTDwC('lcell',$volume['name'])->
+			insTDwC('lcell',$volume['pool'][0])->
+			insTDwC('lcell',$volume['volsize'])->
+			insTDwC('lcell',!empty($volume['volblocksize']) ? $volume['volblocksize'] : '-')->
+			insTDwC('lcell',!isset($volume['sparse']) ? '-' : gtext('on'))->
+			insTDwC('lcell',$volume['compression'])->
+			insTDwC('lcell',$volume['dedup'])->
+			insTDwC('lcebl',$volume['sync']);
 endforeach;
 $content->
 	add_area_remarks()->
-		mount_remark('note',gtext('Note'),gtext('This page reflects the configuration that has been created with the WebGUI.'));
+		ins_remark('note',gtext('Note'),gtext('This page reflects the configuration that has been created with the WebGUI.'));
 $document->render();
 ?>

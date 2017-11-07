@@ -111,17 +111,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			mount_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			mount_tabnav_record('system_email.php',gtext('Email'))->
-			mount_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			mount_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			mount_tabnav_record('system_swap.php',gtext('Swap'))->
-			mount_tabnav_record('system_rc.php',gtext('Command Scripts'),gtext('Reload page'),true)->
-			mount_tabnav_record('system_cron.php',gtext('Cron'))->
-			mount_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			mount_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			mount_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			mount_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
+			ins_tabnav_record('system_email.php',gtext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gtext('Swap'))->
+			ins_tabnav_record('system_rc.php',gtext('Command Scripts'),gtext('Reload page'),true)->
+			ins_tabnav_record('system_cron.php',gtext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">

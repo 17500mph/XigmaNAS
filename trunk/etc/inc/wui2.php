@@ -1572,7 +1572,7 @@ trait co_DOMTools {
 		$subnode = $this->addElement('td',$attributes,$value);
 		return $subnode;
 	}
-	public function addTD_class(string $class,string $value = NULL) {
+	public function addTDwC(string $class,string $value = NULL) {
 		$subnode = $this->addElement('td',['class' => $class],$value);
 		return $subnode;
 	}
@@ -1580,35 +1580,35 @@ trait co_DOMTools {
 		$subnode = $this->addElement('th',$attributes,$value);
 		return $subnode;
 	}
-	public function addTH_class(string $class,string $value = NULL) {
+	public function addTHwC(string $class,string $value = NULL) {
 		$subnode = $this->addElement('th',['class' => $class],$value);
 		return $subnode;
 	}
-	public function mountCOL(array $attributes = []) {
+	public function insCOL(array $attributes = []) {
 		$this->addElement('col',$attributes);
 		return $this;
 	}
-	public function mountIMG(array $attributes = []) {
+	public function insIMG(array $attributes = []) {
 		$this->addElement('img',$attributes);
 		return $this;
 	}
-	public function mountINPUT(array $attributes = [],string $value = NULL) {
+	public function insINPUT(array $attributes = [],string $value = NULL) {
 		$this->addElement('input',$attributes,$value);
 		return $this;
 	}
-	public function mountTD(array $attributes = [],string $value = NULL) {
+	public function insTD(array $attributes = [],string $value = NULL) {
 		$this->addElement('td',$attributes,$value);
 		return $this;
 	}
-	public function mountTD_class(string $class,string $value = NULL) {
+	public function insTDwC(string $class,string $value = NULL) {
 		$this->addElement('td',['class' => $class],$value);
 		return $this;
 	}
-	public function mountTH(array $attributes = [],string $value = NULL) {
+	public function insTH(array $attributes = [],string $value = NULL) {
 		$this->addElement('th',$attributes,$value);
 		return $this;
 	}
-	public function mountTH_class(string $class,string $value = NULL) {
+	public function insTHwC(string $class,string $value = NULL) {
 		$this->addElement('th',['class' => $class],$value);
 		return $this;
 	}
@@ -1653,7 +1653,7 @@ trait co_DOMTools {
 	public function add_tabnav_upper() {
 		$subnode = $this->
 			addTR()->
-				addTD(['class' => 'tabnavtbl'])->
+				addTDwC('tabnavtbl')->
 					addUL(['id' => 'tabnav']);
 		return $subnode;
 	}
@@ -1664,7 +1664,7 @@ trait co_DOMTools {
 	public function add_tabnav_lower() {
 		$subnode = $this->
 			addTR()->
-				addTD(['class' => 'tabnavtbl'])->
+				addTDwC('tabnavtbl')->
 					addUL(['id' => 'tabnav2']);
 		return $subnode;
 	}
@@ -1676,7 +1676,7 @@ trait co_DOMTools {
  *	@param bool $active Flag to indicate an active menu item
  *	@return object $this
  */
-	public function mount_tabnav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
+	public function ins_tabnav_record(string $href = '',string $value = '',string $title = '',bool $active = false) {
 		$attributes = [];
 		if(preg_match('/\S/',$href)):
 			$attributes['href'] = $href;
@@ -1702,7 +1702,7 @@ trait co_DOMTools {
 						addTD(['id' => 'area_data_frame']);
 		return $subnode;
 	}
-	public function mount_input_errors(array $input_errors = []) {
+	public function ins_input_errors(array $input_errors = []) {
 		foreach($input_errors as $input_error):
 			if(is_string($input_error)):
 				if(preg_match('/\S/',$input_error)):
@@ -1715,10 +1715,9 @@ trait co_DOMTools {
 				addDIV(['id' => 'errorbox'])->
 					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
 						addTR()->
-							addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
-								mountIMG(['src' => 'images/error_box.png','alt' => ''])->
-								parentNode->
-							addTD(['class' => 'message'])->
+							push()->addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
+								insIMG(['src' => 'images/error_box.png','alt' => ''])->
+							pop()->addTDwC('message')->
 								addDIV([],sprintf('%s:',gtext('The following errors were detected'),':'))->
 									addUL();
 			foreach($messages as $message):
@@ -1727,40 +1726,40 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
-	public function mount_error_box(string $message = '') {
+	public function ins_error_box(string $message = '') {
 		if(preg_match('/\S/',$message)):
 			$this->
 				addDIV(['id' => 'errorbox'])->
 					addTABLE(['style' => 'width:100%;border-spacing:0;'])->
 						addTR()->
-							push()->addTD(['class' => 'icon'])->mountIMG(['src' => '/images/error_box.png','alt' => ''])->
-							pop()->addTD(['class' => 'message'],$message);
+							push()->addTDwC('icon')->insIMG(['src' => '/images/error_box.png','alt' => ''])->
+							pop()->addTDwC('message',$message);
 		endif;
 		return $this;
 	}
-	public function mount_info_box(string $message = '') {
+	public function ins_info_box(string $message = '') {
 		if(preg_match('/\S/',$message)):
 			$this->
 				addDIV(['id' => 'infobox'])->
 					addTABLE(['style' => 'width:100%;border-spacing:0;'])->
 						addTR()->
-							push()->addTD(['class' => 'icon'])->mountIMG(['src' => '/images/info_box.png','alt' => ''])->
-							pop()->addTD(['class' => 'message'],$message);
+							push()->addTDwC('icon')->insIMG(['src' => '/images/info_box.png','alt' => ''])->
+							pop()->addTDwC('message',$message);
 		endif;
 		return $this;
 	}
-	public function mount_warning_box(string $message = '') {
+	public function ins_warning_box(string $message = '') {
 		if(preg_match('/\S/',$message)):
 			$this->
 				addDIV(['id' => 'warningbox'])->
 					addTABLE(['style' => 'width:100%;border-spacing:0;'])->
 						addTR()->
-							push()->addTD(['class' => 'icon'])->mountIMG(['src' => '/images/warn_box.png','alt' => ''])->
-							pop()->addTD(['class' => 'message'],$message);
+							push()->addTDwC('icon')->insIMG(['src' => '/images/warn_box.png','alt' => ''])->
+							pop()->addTDwC('message',$message);
 		endif;
 		return $this;
 	}
-	public function mount_config_has_changed_box() {
+	public function ins_config_has_changed_box() {
 		$gt_info = sprintf(
 			'%s<br />%s<br /><b><a href="diag_log.php">%s</a></b>',
 			gtext('The configuration has been changed.'),
@@ -1769,8 +1768,8 @@ trait co_DOMTools {
 		);
 		$this->
 			addDIV(['id' => 'applybox'])->
-				mount_info_box($gt_info)->
-				mount_button_apply();
+				ins_info_box($gt_info)->
+				ins_button_apply();
 		return $this;
 	}
 	//	data settings table macros
@@ -1778,31 +1777,31 @@ trait co_DOMTools {
 		$subnode = $this->addTABLE(['class' => 'area_data_settings']);
 		return $subnode;
 	}
-	public function mount_colgroup_data_settings() {
-		$this->mount_colgroup_with_classes(['area_data_settings_col_tag','area_data_settings_col_data']);
+	public function ins_colgroup_data_settings() {
+		$this->ins_colgroup_with_classes(['area_data_settings_col_tag','area_data_settings_col_data']);
 		return $this;
 	}
 	public function add_table_data_selection() {
 		$subnode = $this->addTABLE(['class' => 'area_data_selection']);
 		return $subnode;
 	}
-	public function mount_colgroup_with_classes(array $data = []) {
+	public function ins_colgroup_with_classes(array $data = []) {
 		$colgroup = $this->addCOLGROUP();
 		foreach($data as $value):
-			$colgroup->mountCOL(['class' => htmlspecialchars($value)]);
+			$colgroup->insCOL(['class' => htmlspecialchars($value)]);
 		endforeach;
 		return $this;
 	}
-	public function mount_colgroup_with_styles(string $tag,array $data = []) {
+	public function ins_colgroup_with_styles(string $tag,array $data = []) {
 		$colgroup = $this->addCOLGROUP();
 		$tag = htmlspecialchars($tag);
 		foreach($data as $value):
-			$colgroup->mountCOL(['style' => sprintf('%s:%s;',$tag,htmlspecialchars($value))]);
+			$colgroup->insCOL(['style' => sprintf('%s:%s;',$tag,htmlspecialchars($value))]);
 		endforeach;
 		return $this;
 	}
 	//	title macros
-	public function mount_titleline(string $title = NULL,int $colspan = 0,string $id = NULL) {
+	public function ins_titleline(string $title = NULL,int $colspan = 0,string $id = NULL) {
 		$tr_attributes = [];
 		if(!is_null($id) && preg_match('/\S/',$id)):
 			$tr_attributes['id'] = sprintf('%s_tr',$id);
@@ -1815,7 +1814,7 @@ trait co_DOMTools {
 		$this->addTR($tr_attributes)->addTH($th_attributes)->addSPAN($spanleft_attributes,$title);
 		return $this;
 	}
-	public function mount_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,string $title = '',int $colspan = 0) {
+	public function ins_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,string $title = '',int $colspan = 0) {
 		$tr_attributes = ['id' => sprintf('%s_tr',$p->get_id())];
 		$th_attributes = ['class' => 'lhetop'];
 		if($colspan > 0):
@@ -1848,7 +1847,7 @@ trait co_DOMTools {
 		$label->addSPAN($span_attributes,$p->get_caption());
 		return $this;
 	}
-	public function mount_description(properties $p) {
+	public function ins_description(properties $p) {
 		//	description can be:
 		//	string
 		//	[string, ...]
@@ -1937,7 +1936,7 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
-	public function mount_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+	public function ins_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$input_attributes = [
 			'type' => 'checkbox',
 			'id' => $p->get_id(),
@@ -1963,7 +1962,7 @@ trait co_DOMTools {
 		$div->addElement('label',['for' => $p->get_id()],$p->get_caption());
 		return $this;
 	}
-	public function mount_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+	public function ins_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$input_attributes = [
 			'type' => 'text',
 			'id' => $p->get_id(),
@@ -2007,7 +2006,7 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
-	public function mount_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+	public function ins_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$input_attributes = [
 			'name' => sprintf('%s[]',$p->get_name()),
 			'type' => 'checkbox',
@@ -2020,12 +2019,12 @@ trait co_DOMTools {
 			$input_attributes['required'] = 'required';
 		endif;
 		$table = $this->add_table_data_selection();
-		$table->mount_colgroup_with_styles('width',['5%','95%']);
+		$table->ins_colgroup_with_styles('width',['5%','95%']);
 		$table->
 			addTHEAD()->
 				addTR()->
-					mountTH(['class' => 'lhelc'])->
-					mountTH(['class' => 'lhebl'],$p->get_title());
+					insTHwC('lhelc')->
+					insTHwC('lhebl',$p->get_title());
 		$tbody = $table->addTBODY();
 		foreach($p->get_options() as $option_tag => $option_val):
 			//	create a unique identifier for each row and use label tag for text
@@ -2038,18 +2037,18 @@ trait co_DOMTools {
 				unset($input_attributes['checked']);
 			endif;
 			$tr = $tbody->addTR();
-			$tr->addTD(['class' => 'lcelc'])->addElement('input',$input_attributes);
-			$tr->addTD(['class' => 'lcebl'])->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
+			$tr->addTDwC('lcelc')->addElement('input',$input_attributes);
+			$tr->addTDwC('lcebl')->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
-	public function mount_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+	public function ins_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$table = $this->add_table_data_selection();
-		$table->mount_colgroup_with_styles('width',['5%','95%']);
+		$table->ins_colgroup_with_styles('width',['5%','95%']);
 		$table->
 			addTHEAD()->
 				addTR()->
-					mountTH(['class' => 'lhelc'])->
-					mountTH(['class' => 'lhebl'],$p->get_title());
+					insTHwC('lhelc')->
+					insTHwC('lhebl',$p->get_title());
 		$tbody = $table->addTBODY();
 		$input_attributes = [
 			'name' => $p->get_name(),
@@ -2074,12 +2073,12 @@ trait co_DOMTools {
 				unset($input_attributes['checked']);
 			endif;
 			$tr = $tbody->addTR();
-			$tr->addTD(['class' => 'lcelc'])->addElement('input',$input_attributes);
-			$tr->addTD(['class' => 'lcebl'])->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
+			$tr->addTDwC('lcelc')->addElement('input',$input_attributes);
+			$tr->addTDwC('lcebl')->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 		return $this;
 	}
-	public function mount_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+	public function ins_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$select_attributes = [
 			'id' => $p->get_id(),
 			'name' => $p->get_name(),
@@ -2102,7 +2101,7 @@ trait co_DOMTools {
 		endforeach;
 		return $this;
 	}
-	public function mount_separator(int $colspan = 0,string $id = NULL) {
+	public function ins_separator(int $colspan = 0,string $id = NULL) {
 		$tr_attributes = [];
 		if(isset($id) && preg_match('/\S/',$id)):
 			$tr_attributes['id'] = sprintf('%s_tr',$id);
@@ -2116,7 +2115,7 @@ trait co_DOMTools {
 		$this->addTR($tr_attributes)->addTD($td_attributes);
 		return $this;
 	}
-	public function mount_textinfo(string $id = NULL,string $value = NULL) {
+	public function ins_textinfo(string $id = NULL,string $value = NULL) {
 		if(isset($value)):
 			$span_attributes  = [];
 			if(isset($id)):
@@ -2127,7 +2126,7 @@ trait co_DOMTools {
 		return $this;
 	}
 	//	elements requiring sphere
-	public function mount_cbm_checkbox_toggle($sphere) {
+	public function ins_cbm_checkbox_toggle($sphere) {
 		$element = 'input';
 		$cbm_toggle_id = $sphere->get_cbm_checkbox_id_toggle();
 		$input_attributes = [
@@ -2138,7 +2137,7 @@ trait co_DOMTools {
 		$this->addElement($element,$input_attributes);
 		return $this;
 	}
-	public function mount_cbm_checkbox($sphere,bool $disabled = false) {
+	public function ins_cbm_checkbox($sphere,bool $disabled = false) {
 		$element = 'input';
 		$identifier = $sphere->get_row_identifier_value();
 		$input_attributes = [
@@ -2155,14 +2154,14 @@ trait co_DOMTools {
 	}
 	public function add_toolbox_area() {
 		$subnode = $this->
-			addTD_class('lcebld')->
+			addTDwC('lcebld')->
 				addTABLE(['class' => 'area_data_selection_toolbox'])->
-					mount_colgroup_with_styles('width',['33%','34%','33%'])->
+					ins_colgroup_with_styles('width',['33%','34%','33%'])->
 					addTBODY()->
 						addTR();
 		return $subnode;
 	}
-	public function mount_toolbox($sphere,bool $notprotected = true,bool $notdirty = true) {
+	public function ins_toolbox($sphere,bool $notprotected = true,bool $notdirty = true) {
 		global $g_img;
 /*
  *	<td>
@@ -2187,7 +2186,7 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
-	public function mount_footer_with_add($sphere,int $colspan = 2) {
+	public function ins_footerwa($sphere,int $colspan = 2) {
 		global $g_img;
 /*
  *	<tfoot>
@@ -2207,12 +2206,12 @@ trait co_DOMTools {
 			$tr->addTH(['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
 		$tr->
-			addTH(['class' => 'lceadd'])->
+			addTHwC('lceadd')->
 				addA(['href' => $link])->
 					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin']);
 		return $this;
 	}
-	public function mount_no_records_found(int $colspan = 0) {
+	public function ins_no_records_found(int $colspan = 0) {
 		$td_attributes = ['class' => 'lcebl'];
 		if($colspan > 0):
 			$td_attributes['colspan'] = $colspan;
@@ -2220,17 +2219,17 @@ trait co_DOMTools {
 		$this->addTR()->addTD($td_attributes,gtext('No records found.'));
 		return $this;
 	}
-	public function mount_cbm_button_delete($sphere) {
-		$this->mount_button_submit($sphere->get_cbm_button_val_delete(),$sphere->cbm_delete(),[],$sphere->get_cbm_button_id_delete());
+	public function ins_cbm_button_delete($sphere) {
+		$this->ins_button_submit($sphere->get_cbm_button_val_delete(),$sphere->cbm_delete(),[],$sphere->get_cbm_button_id_delete());
 		return $this;
 	}
-	public function mount_cbm_button_enadis($sphere) {
+	public function ins_cbm_button_enadis($sphere) {
 		if($sphere->enadis()):
 			if($sphere->toggle()):
-				$this->mount_button_submit($sphere->get_cbm_button_val_toggle(),$sphere->cbm_toggle(),[],$sphere->get_cbm_button_id_toggle());
+				$this->ins_button_submit($sphere->get_cbm_button_val_toggle(),$sphere->cbm_toggle(),[],$sphere->get_cbm_button_id_toggle());
 			else:
-				$this->mount_button_submit($sphere->get_cbm_button_val_enable(),$sphere->cbm_enable(),[],$sphere->get_cbm_button_id_enable());
-				$this->mount_button_submit($sphere->get_cbm_button_val_disable(),$sphere->cbm_disable(),[],$sphere->get_cbm_button_id_disable());
+				$this->ins_button_submit($sphere->get_cbm_button_val_enable(),$sphere->cbm_enable(),[],$sphere->get_cbm_button_id_enable());
+				$this->ins_button_submit($sphere->get_cbm_button_val_disable(),$sphere->cbm_disable(),[],$sphere->get_cbm_button_id_disable());
 			endif;
 		endif;
 		return $this;
@@ -2251,38 +2250,38 @@ trait co_DOMTools {
 		endif;
 		$tr = $this->addTR(['id' => sprintf('%s_tr',$p->get_id())]);
 		if($tagaslabel):
-			$tr->addTD(['class' => $class_tag])->addElement('label',['for' => $p->get_id()],$p->get_title());
+			$tr->addTDwC($class_tag)->addElement('label',['for' => $p->get_id()],$p->get_title());
 		else:
-			$tr->addTD(['class' => $class_tag],$p->get_title());
+			$tr->addTDwC($class_tag,$p->get_title());
 		endif;
-		$subnode = $tr->addTD(['class' => $class_data]);
+		$subnode = $tr->addTDwC($class_data);
 		return $subnode;
 	}
 	public function c2_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->mount_checkbox($p,$value,$is_required,$is_readonly)->mount_description($p);
+		$this->c2_row($p,$is_required,$is_readonly,true)->ins_checkbox($p,$value,$is_required,$is_readonly)->ins_description($p);
 		return $this;
 	}
 	public function c2_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->mount_checkbox_grid($p,$value,$is_required,$is_readonly)->mount_description($p);
+		$this->c2_row($p,$is_required,$is_readonly,true)->ins_checkbox_grid($p,$value,$is_required,$is_readonly)->ins_description($p);
 		return $this;
 	}
 	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
 			c2_row($p,$is_required,$is_readonly,true)->
-				mount_input_text($p,$value,$is_required,$is_readonly)->
-				mount_description($p);
+				ins_input_text($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->mount_radio_grid($p,$value,$is_required,$is_readonly)->mount_description($p);
+		$this->c2_row($p,$is_required,$is_readonly,true)->ins_radio_grid($p,$value,$is_required,$is_readonly)->ins_description($p);
 		return $this;
 	}
 	public function c2_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->mount_select($p,$value,$is_required,$is_readonly)->mount_description($p);
+		$this->c2_row($p,$is_required,$is_readonly,true)->ins_select($p,$value,$is_required,$is_readonly)->ins_description($p);
 		return $this;
 	}
 	public function c2_separator() {
-		$this->mount_separator(2);
+		$this->ins_separator(2);
 		return $this;
 	}
 	public function c2_textinfo(string $id,string $title,$value) {
@@ -2291,16 +2290,16 @@ trait co_DOMTools {
 			$tr_attributes['id'] = sprintf('%s_tr',$id);
 		endif;
 		$tr = $this->addTR($tr_attributes);
-		$tr->addTD(['class' => 'celltag'],$title);
-		$tr->addTD(['class' => 'celldata'])->mount_textinfo($id,$value);
+		$tr->addTDwC('celltag',$title);
+		$tr->addTDwC('celldata')->ins_textinfo($id,$value);
 		return $this;
 	}
 	public function c2_titleline(string $title = '') {
-		$this->mount_titleline($title,2);
+		$this->ins_titleline($title,2);
 		return $this;
 	}
 	public function c2_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,string $title = '') {
-		$this->mount_titleline_with_checkbox($p,$value,$is_required,$is_readonly,$title,2);
+		$this->ins_titleline_with_checkbox($p,$value,$is_required,$is_readonly,$title,2);
 		return $this;
 	}
 	//	submit area macros
@@ -2324,7 +2323,7 @@ trait co_DOMTools {
 		endif;
 		return $subnode;
 	}
-	public function mount_button_submit(string $value = NULL,string $content = NULL,$attributes = [],string $id = NULL) {
+	public function ins_button_submit(string $value = NULL,string $content = NULL,$attributes = [],string $id = NULL) {
 		$element      = 'button';
 		$class_button = 'formbtn';
 		$value        = $value ?? 'cancel';
@@ -2343,24 +2342,24 @@ trait co_DOMTools {
 		$this->addElement($element,$button_attributes,$content);
 		return $this;
 	}
-	public function mount_button_add() {
-		$this->mount_button_submit('save',gtext('Add'));
+	public function ins_button_add() {
+		$this->ins_button_submit('save',gtext('Add'));
 		return $this;
 	}
-	public function mount_button_apply() {
-		$this->mount_button_submit('apply',gtext('Apply Changes'));
+	public function ins_button_apply() {
+		$this->ins_button_submit('apply',gtext('Apply Changes'));
 		return $this;
 	}
-	public function mount_button_cancel() {
-		$this->mount_button_submit('cancel',gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
+	public function ins_button_cancel() {
+		$this->ins_button_submit('cancel',gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
 		return $this;
 	}
-	public function mount_button_edit() {
-		$this->mount_button_submit('edit',gtext('Edit'));
+	public function ins_button_edit() {
+		$this->ins_button_submit('edit',gtext('Edit'));
 		return $this;
 	}
-	public function mount_button_save() {
-		$this->mount_button_submit('save',gtext('Apply'));
+	public function ins_button_save() {
+		$this->ins_button_submit('save',gtext('Apply'));
 		return $this;
 	}
 	//	remark area macros
@@ -2368,12 +2367,12 @@ trait co_DOMTools {
 		$subnode = $this->addDIV(['id' => 'remarks']);
 		return $subnode;
 	}
-	public function mount_remark($ctrlname,$title,$text) {
+	public function ins_remark($ctrlname,$title,$text) {
 		$ctrl = new HTMLRemark2($ctrlname,$title,$text);
 		$ctrl->Compose($this);
 		return $this;
 	}
-	public function mount_authtoken() {
+	public function ins_authtoken() {
 		$input_attributes = [
 			'name' => 'authtoken',
 			'type' => 'hidden',
@@ -2394,7 +2393,7 @@ trait co_DOMTools {
 		endif;
 		return $output;
 	}
-	public function mount_head(array $page_title = [],bool $requires_datechooser = false) {
+	public function ins_head(array $page_title = [],bool $requires_datechooser = false) {
 		$head = $this->addElement('head',['id' => 'head']);
 		$head->addElement('meta',['charset' => system_get_language_codeset()]);
 		$head->addElement('meta',['name' => 'format-detection','content' => 'telephone=no']);
@@ -2419,7 +2418,7 @@ trait co_DOMTools {
 	 *	@param string $action_url If $action_url empty no form element will be created.
 	 *	@return DOMNode $this
 	 */
-	public function mount_body(array $page_title = [],string $action_url = NULL,bool $setenctype = false) {
+	public function ins_body(array $page_title = [],string $action_url = NULL,bool $setenctype = false) {
 		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
 		if($is_form):
 			$jdata = <<<'EOJ'
@@ -2457,28 +2456,25 @@ EOJ;
 		$flexcontainer->addDIV(['id' => 'spinner_main']);
 		$flexcontainer->addDIV(['id' => 'spinner_overlay','style' => 'display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;']);
 		if($is_form):
-			$flexcontainer->addDIV(['id' => 'formextension'])->mount_authtoken();
+			$flexcontainer->addDIV(['id' => 'formextension'])->ins_authtoken();
 		endif;
-		$flexcontainer->mount_header($page_title);
-		$flexcontainer->mount_main();
-		$flexcontainer->mount_footer();
+		$flexcontainer->ins_header($page_title);
+		$flexcontainer->ins_main();
+		$flexcontainer->ins_footer();
 		$flexcontainer->addJavascript($jdata);
 		return $this;
 	}
-	public function mount_header(array $page_title = []) {
+	public function ins_header(array $page_title = []) {
 		$header = $this->addElement('header',['id' => 'g4h']);
 		if(!$_SESSION['g']['shrinkpageheader']):
 			$header->
 				addDIV(['id' => 'header'])->
-					addDIV(['id' => 'headerrlogo'])->
+					push()->addDIV(['id' => 'headerrlogo'])->
 						addDIV(['class' => 'hostname'])->
 							addSPAN([],system_get_hostname())->
-								parentNode->
-							parentNode->
-						parentNode->
-					addDIV(['id' => 'headerlogo'])->
+					pop()->addDIV(['id' => 'headerlogo'])->
 						addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
-							mountIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
+							insIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
 		endif;
 		$header->addDIV(['id' => 'area_navhdr'],make_headermenu());
 		$header->addDIV(['id' => 'gapheader']);
@@ -2487,10 +2483,10 @@ EOJ;
 		endif;
 		return $this;
 	}
-	public function mount_main() {
+	public function ins_main() {
 		$this->
 			addElement('main',['id' => 'g4m'])->
-			addDIV(['id' => 'pagecontent']);
+				addDIV(['id' => 'pagecontent']);
 		return $this;
 	}
 	/**
@@ -2498,7 +2494,7 @@ EOJ;
 	 * @global array $g
 	 * @return $this
 	 */
-	public function mount_footer() {
+	public function ins_footer() {
 		global $g;
 		
 		$g4fx = $this->
@@ -2507,23 +2503,22 @@ EOJ;
 					parentNode->
 				addDIV(['id' => 'pagefooter'])->
 					add_table_data_settings()->
-						addCOLGROUP()->
-							mountCOL(['style' => 'width:10%'])->
-							mountCOL(['style' => 'width:80%'])->
-							mountCOL(['style' => 'width:10%'])->
-							parentNode->
-						addTBODY()->
+						push()->addCOLGROUP()->
+							insCOL(['style' => 'width:10%'])->
+							insCOL(['style' => 'width:80%'])->
+							insCOL(['style' => 'width:10%'])->
+						pop()->addTBODY()->
 							addTR();
-		$g4fl = $g4fx->addTD(['class' => 'g4fl']);
+		$g4fl = $g4fx->addTDwC('g4fl');
 		if(Session::isAdmin()):
 			if(file_exists(sprintf('%s/sysreboot.reqd',$g['varrun_path']))):
 				$g4fl->
 					addA(['class' => 'g4fi','href' => '/reboot.php'])->
-						mountIMG(['src' => '/images/notify_reboot.png','title' => gtext('A reboot is required'),'alt' => gtext('Reboot Required')]);
+						insIMG(['src' => '/images/notify_reboot.png','title' => gtext('A reboot is required'),'alt' => gtext('Reboot Required')]);
 			endif;
 		endif;
-		$g4fx->addTD(['class' => 'g4fc'],htmlspecialchars(get_product_copyright()));
-		$g4fx->addTD(['class' => 'g4fr']);
+		$g4fx->addTDwC('g4fc',htmlspecialchars(get_product_copyright()));
+		$g4fx->addTDwC('g4fr');
 		return $this;
 	}
 }
@@ -2585,8 +2580,8 @@ function new_page(array $page_title = [],string $action_url = NULL) {
 		loadHTML('<!DOCTYPE HTML>',LIBXML_HTML_NOIMPLIED);
 	$document->
 		addElement('html')->
-			mount_head($page_title)->
-			mount_body($page_title,$action_url);
+			ins_head($page_title)->
+			ins_body($page_title,$action_url);
 	return $document;
 }
 ?>

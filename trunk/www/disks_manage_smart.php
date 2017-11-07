@@ -172,13 +172,13 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		push()->add_tabnav_upper()->
-			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
 		pop()->add_tabnav_lower()->
-			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'),gtext('Reload Page'),true)->
-			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'));
+			ins_tabnav_record('disks_manage_smart.php',gtext('Settings'),gtext('Reload Page'),true)->
+			ins_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'));
 $document->render();
 ?>
 <form action="disks_manage_smart.php" method="post" name="iform" id="iform" onsubmit="spinner()"><table id="area_data"><tbody><tr><td id="area_data_frame">

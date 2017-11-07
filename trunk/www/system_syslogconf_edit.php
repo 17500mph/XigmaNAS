@@ -228,29 +228,29 @@ endif;
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			mount_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			mount_tabnav_record('system_email.php',gtext('Email'))->
-			mount_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			mount_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			mount_tabnav_record('system_swap.php',gtext('Swap'))->
-			mount_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			mount_tabnav_record('system_cron.php',gtext('Cron'))->
-			mount_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			mount_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			mount_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			mount_tabnav_record('system_syslogconf.php',gtext('syslog.conf'),gtext('Reload page'),true);
+			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
+			ins_tabnav_record('system_email.php',gtext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gtext('Swap'))->
+			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gtext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'),gtext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
 $content->
-	mount_input_errors($input_errors)->
-	mount_info_box($savemsg)->
-	mount_error_box($errormsg);
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg)->
+	ins_error_box($errormsg);
 if(file_exists($d_sysrebootreqd_path)):
-	$content->mount_info_box(get_std_save_message(0));
+	$content->ins_info_box(get_std_save_message(0));
 endif;
 $content->add_table_data_settings()->
-	mount_colgroup_data_settings()->
+	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
 		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false,gtext('Configuration'))->
@@ -262,11 +262,11 @@ $content->add_table_data_settings()->
 		c2_input_text($property->comment,htmlspecialchars($sphere->row[$property->comment->get_name()]),false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
-	$buttons->mount_button_add();
+	$buttons->ins_button_add();
 else:
-	$buttons->mount_button_save();
+	$buttons->ins_button_save();
 endif;
-$buttons->mount_button_cancel();
+$buttons->ins_button_cancel();
 $buttons->addElement('input',['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
 $document->render();
 ?>
