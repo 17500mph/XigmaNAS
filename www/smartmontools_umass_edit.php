@@ -224,26 +224,26 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
 		pop()->
 		add_tabnav_lower()->
-			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+			ins_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+			ins_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
 $content->
-	mount_input_errors($input_errors)->
-	mount_info_box($savemsg)->
-	mount_error_box($errormsg);
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg)->
+	ins_error_box($errormsg);
 if(file_exists($d_sysrebootreqd_path)):
-	$content->mount_info_box(get_std_save_message(0));
+	$content->ins_info_box(get_std_save_message(0));
 endif;
 $content->add_table_data_settings()->
-	mount_colgroup_data_settings()->
+	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
 		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false,gtext('Settings'))->
@@ -254,11 +254,11 @@ $content->add_table_data_settings()->
 		c2_input_text($property->description,htmlspecialchars($sphere->row[$property->description->get_name()]),false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
-	$buttons->mount_button_add();
+	$buttons->ins_button_add();
 else:
-	$buttons->mount_button_save();
+	$buttons->ins_button_save();
 endif;
-$buttons->mount_button_cancel();
+$buttons->ins_button_cancel();
 $buttons->addElement('input',['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
 $document->render();
 ?>

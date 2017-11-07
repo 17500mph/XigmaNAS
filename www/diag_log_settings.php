@@ -252,18 +252,18 @@ endif;
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			mount_tabnav_record('diag_log.php',gtext('Log'))->
-			mount_tabnav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true);
+			ins_tabnav_record('diag_log.php',gtext('Log'))->
+			ins_tabnav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
 $content->
-	mount_input_errors($input_errors)->
-	mount_info_box($savemsg);
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg);
 //	add content
 $content->
 	add_table_data_settings()->
-		mount_colgroup_data_settings()->
+		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_titleline(gtext('Log Settings'))->
 			parentNode->
@@ -275,7 +275,7 @@ $content->
 			c2_checkbox($property->disablesecure,$sphere->row[$property->disablesecure->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
-		mount_colgroup_data_settings()->
+		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
 			c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,$is_readonly,gtext('Remote Syslog Server'))->
@@ -292,10 +292,10 @@ $content->
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
-		$document->add_area_buttons()->mount_button_edit();
+		$document->add_area_buttons()->ins_button_edit();
 		break;
 	case PAGE_MODE_EDIT:
-		$document->add_area_buttons()->mount_button_save()->mount_button_cancel();
+		$document->add_area_buttons()->ins_button_save()->ins_button_cancel();
 		break;
 endswitch;
 //	done

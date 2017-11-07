@@ -593,7 +593,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			];
 			$o_td->
 				addA(['href' => $link])->
-					mountIMG($img_attributes);
+					insIMG($img_attributes);
 		elseif($notprotected):
 			//	record is dirty
 			$img_attributes = [
@@ -601,7 +601,7 @@ class co_sphere_grid extends co_sphere_level2 {
 				'title' => $this->sym_del(),
 				'alt' => $this->sym_del()
 			];
-			$o_td->mountIMG($img_attributes);
+			$o_td->insIMG($img_attributes);
 		else:
 			//	record is protected
 			$img_attributes = [
@@ -609,7 +609,7 @@ class co_sphere_grid extends co_sphere_level2 {
 				'title' => $this->sym_loc(),
 				'alt' => $this->sym_loc()
 			];
-			$o_td->mountIMG($img_attributes);
+			$o_td->insIMG($img_attributes);
 		endif;
 		return $root->get_html();
 	}
@@ -627,7 +627,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$root->
 			addTD()->
 				addA(['href' => $link])->
-					mountIMG($img_attributes);
+					insIMG($img_attributes);
 		return $root->get_html();
 	}
 	public function html_informbox() {
@@ -644,7 +644,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$root->
 			addTD()->
 				addA(['href' => $link])->
-					mountIMG($img_attributes);
+					insIMG($img_attributes);
 		return $root->get_html();
 	}
 	public function html_footer_add(int $colspan = 2) {

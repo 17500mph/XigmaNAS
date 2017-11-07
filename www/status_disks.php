@@ -54,8 +54,6 @@ function status_disks_ajax() {
 	endif;
 	$raidstatus = get_sraid_disks_list();
 	$fragment = new co_DOMDocument();
-	$a_lcell = ['class' => 'lcell'];
-	$a_lcebld = ['class' => 'lcebld']; 
 	foreach($a_disk_conf as $disk):
 		$iostat_value = system_get_device_iostat($disk['name']);
 		$iostat_available = (false !== $iostat_value);
@@ -84,25 +82,25 @@ function status_disks_ajax() {
 		$gt_fstype = empty($disk['fstype']) ? gtext('Unknown or unformatted') : htmlspecialchars(get_fstype_shortdesc($disk['fstype']));
 		$tr = $fragment->addTR();
 		$tr->
-			mountTD($a_lcell,$gt_name)->
-			mountTD($a_lcell,$gt_size)->
-			mountTD($a_lcell,$gt_model)->
-			mountTD($a_lcell,$gt_description)->
-			mountTD($a_lcell,$gt_serial)->
-			mountTD($a_lcell,$gt_fstype)->
-			mountTD($a_lcell,$gt_iostat);
+			insTDwC('lcell',$gt_name)->
+			insTDwC('lcell',$gt_size)->
+			insTDwC('lcell',$gt_model)->
+			insTDwC('lcell',$gt_description)->
+			insTDwC('lcell',$gt_serial)->
+			insTDwC('lcell',$gt_fstype)->
+			insTDwC('lcell',$gt_iostat);
 		if($temp_available):
 			if(!empty($pconfig['temp_crit']) && $temp_value >= $pconfig['temp_crit']):
-				$tr->addTD($a_lcell)->addDIV(['class'=> 'errortext'],$gt_temp);
+				$tr->addTDwC('lcell')->addDIV(['class'=> 'errortext'],$gt_temp);
 			elseif(!empty($pconfig['temp_info']) && $gt_temp >= $pconfig['temp_info']):
-				$tr->addTD($a_lcell)->addDIV(['class'=> 'warningtext'],$gt_temp);
+				$tr->addTDwC('lcell')->addDIV(['class'=> 'warningtext'],$gt_temp);
 			else:
-				$tr->mountTD($a_lcell,$gt_temp);
+				$tr->insTDwC('lcell',$gt_temp);
 			endif;  
 		else:
-			$tr->mountTD($a_lcell,gtext('n/a'));
+			$tr->insTDwC('lcell',gtext('n/a'));
 		endif;
-		$tr->mountTD($a_lcebld,$gt_status);
+		$tr->insTDwC('lcebld',$gt_status);
 	endforeach;
 	foreach($raidstatus as $diskk => $diskv):
 		$iostat_value = system_get_device_iostat($diskk);
@@ -126,23 +124,23 @@ function status_disks_ajax() {
 		$gt_status = htmlspecialchars($diskv['state']);
 		$tr = $fragment->addTR();
 		$tr->
-			mountTD($a_lcell,$gt_name)->
-			mountTD($a_lcell,$gt_size)->
-			mountTD($a_lcell,$gt_model)->
-			mountTD($a_lcell,$gt_description)->
-			mountTD($a_lcell,$gt_serial)->
-			mountTD($a_lcell,$gt_fstype)->
-			mountTD($a_lcell,$gt_iostat);
+			insTDwC('lcell',$gt_name)->
+			insTDwC('lcell',$gt_size)->
+			insTDwC('lcell',$gt_model)->
+			insTDwC('lcell',$gt_description)->
+			insTDwC('lcell',$gt_serial)->
+			insTDwC('lcell',$gt_fstype)->
+			insTDwC('lcell',$gt_iostat);
 		if($temp_available):
 			if(!empty($pconfig['temp_crit']) && $temp_value >= $pconfig['temp_crit']):
-				$tr->addTD($a_lcell)->addDIV(['class'=> 'errortext'],$gt_temp);
+				$tr->addTDwC('lcell')->addDIV(['class'=> 'errortext'],$gt_temp);
 			elseif(!empty($pconfig['temp_info']) && $gt_temp >= $pconfig['temp_info']):
-				$tr->addTD($a_lcell)->addDIV(['class'=> 'warningtext'],$gt_temp);
+				$tr->addTDwC('lcell')->addDIV(['class'=> 'warningtext'],$gt_temp);
 			else:
-				$tr->mountTD($a_lcell,$gt_temp);
+				$tr->insTDwC('lcell',$gt_temp);
 			endif;  
 		else:
-			$tr->mountTD($a_lcell,gtext('n/a'));
+			$tr->insTDwC('lcell',gtext('n/a'));
 		endif;
 	endforeach;
 	return $fragment->get_html();
@@ -162,9 +160,8 @@ $(document).ready(function(){
 	});
 });
 EOJ;
-$colwidth = ['5%','7%','15%','17%','13%','10%','18%','8%','7%'];
-$a_lhell = ['class' => 'lhell'];
-$a_lhebl = ['class' => 'lhebl'];
+$a_colwidth = ['5%','7%','15%','17%','13%','10%','18%','8%','7%'];
+$n_colwidth = count($a_colwidth);
 $document = new_page([gtext('Status'),gtext('Disks')]);
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -172,21 +169,19 @@ $body->addJavaScript($jcode);
 $content = $pagecontent->add_area_data();
 $content->
 	add_table_data_selection()->
-		mount_colgroup_with_styles('width',$colwidth)->
-		addTHEAD()->
-			mount_titleline(gtext('Status & Information'),count($colwidth))->
+		ins_colgroup_with_styles('width',$a_colwidth)->
+		push()->addTHEAD()->
+			ins_titleline(gtext('Status & Information'),$n_colwidth)->
 			addTR()->
-				mountTH($a_lhell,gtext('Device'))->
-				mountTH($a_lhell,gtext('Size'))->
-				mountTH($a_lhell,gtext('Device Model'))->
-				mountTH($a_lhell,gtext('Description'))->
-				mountTH($a_lhell,gtext('Serial Number'))->
-				mountTH($a_lhell,gtext('Filesystem'))->
-				mountTH($a_lhell,gtext('I/O Statistics'))->
-				mountTH($a_lhell,gtext('Temperature'))->
-				mountTH($a_lhebl,gtext('Status'))->
-				parentNode->
-			parentNode->
-		addTBODY(['id' => 'area_refresh'],status_disks_ajax());
+				insTHwC('lhell',gtext('Device'))->
+				insTHwC('lhell',gtext('Size'))->
+				insTHwC('lhell',gtext('Device Model'))->
+				insTHwC('lhell',gtext('Description'))->
+				insTHwC('lhell',gtext('Serial Number'))->
+				insTHwC('lhell',gtext('Filesystem'))->
+				insTHwC('lhell',gtext('I/O Statistics'))->
+				insTHwC('lhell',gtext('Temperature'))->
+				insTHwC('lhebl',gtext('Status'))->
+		pop()->addTBODY(['id' => 'area_refresh'],status_disks_ajax());
 $document->render();
 ?>

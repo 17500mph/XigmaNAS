@@ -237,42 +237,42 @@ endif;
 $document->
 	add_area_tabnav()->
 		push()->add_tabnav_upper()->
-			mount_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			mount_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			mount_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			mount_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
+			ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
+			ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
+			ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
 		pop()->add_tabnav_lower()->
-			mount_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-			mount_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+			ins_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
+			ins_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
 $content->
-	mount_input_errors($input_errors)->
-	mount_info_box($savemsg)->
-	mount_error_box($errormsg);
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg)->
+	ins_error_box($errormsg);
 if(file_exists($d_sysrebootreqd_path)):
-	$content->mount_info_box(get_std_save_message(0));
+	$content->ins_info_box(get_std_save_message(0));
 endif;
 if(updatenotify_exists($sphere->notifier())):
-	$content->mount_config_has_changed_box();
+	$content->ins_config_has_changed_box();
 endif;
 $table = $content->add_table_data_selection();
-$table->mount_colgroup_with_styles('width',$a_col_width);
+$table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
-$thead->mount_titleline(gtext('Overview'),$n_col_width);
+$thead->ins_titleline(gtext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
-	$tr->addTH_class('lhelc')->mount_cbm_checkbox_toggle($sphere);
+	$tr->addTHwC('lhelc')->ins_cbm_checkbox_toggle($sphere);
 else:
-	$tr->mountTH_class('lhelc');
+	$tr->insTHwC('lhelc');
 endif;
 $tr->
-	mountTH_class('lhell',$property->name->get_title())->
-	mountTH_class('lhell',$property->type->get_Title())->
-	mountTH_class('lhelc',gtext('Status'))->
-	mountTH_class('lhell',$property->description->get_Title())->
-	mountTH_class('lhebl',gtext('Toolbox'));
+	insTHwC('lhell',$property->name->get_title())->
+	insTHwC('lhell',$property->type->get_Title())->
+	insTHwC('lhelc',gtext('Status'))->
+	insTHwC('lhell',$property->description->get_Title())->
+	insTHwC('lhebl',gtext('Toolbox'));
 $tbody = $table->addTBODY();
 if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
@@ -285,25 +285,25 @@ if($record_exists):
 		$tbody->
 			addTR()->
 				push()->
-				addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->
-					mount_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
+				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
+					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''))->
-				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->type->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->type->get_name()] ?? ''))->
 				push()->
-				addTD_class($is_enabled ? 'lcelc' : 'lcelcd')->
-					addA(['title' => $title])->mountIMG(['src' => $src,'alt' => ''])->
+				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
+					addA(['title' => $title])->insIMG(['src' => $src,'alt' => ''])->
 				pop()->
-				mountTD_class($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->description->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->description->get_name()] ?? ''))->
 				add_toolbox_area()->
-					mount_toolbox($sphere,$is_notprotected,$is_notdirty)->
-					mountTD()->
-					mountTD();
+					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
+					insTD()->
+					insTD();
 	endforeach;
 else:
 	$tbody->addTR()->addTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
 endif;
-$table->mount_footer_with_add($sphere,$n_col_width);
-$document->add_area_buttons()->mount_cbm_button_enadis($sphere)->mount_cbm_button_delete($sphere);
+$table->ins_footerwa($sphere,$n_col_width);
+$document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
 $document->render();
 ?>

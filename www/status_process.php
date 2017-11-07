@@ -68,14 +68,14 @@ $body->addJavaScript($jcode);
 $content = $pagecontent->add_area_data();
 $content->
 	add_table_data_settings()->
-		mount_colgroup_data_settings()->
+		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_titleline(gtext('Process State'))->
 			parentNode->
 		addTBODY()->
 			addTR()->
-				mountTD(['class' => 'celltag'],gtext('Information'))->
-				addTD(['class' => 'celldata'])->
+				insTDwC('celltag',gtext('Information'))->
+				addTDwC('celldata')->
 					addElement('pre')->
 						addElement('span',['id' => 'area_refresh'],status_process_ajax());
 $document->render();
