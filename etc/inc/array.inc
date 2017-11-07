@@ -33,86 +33,69 @@
 */
 
 // Search in a multidimensional array.
-function array_search_ex($needle, $haystack, $key) {
-	if (empty($haystack) || !is_array($haystack))
-		return false;
-	if ($needle === "" || $key === "")
-		return false;
-
-	foreach ($haystack as $haystackval => $value) {
-		$found = false;
-		if (is_array($needle) && is_array($key)) {
-			foreach ($needle as $n => $needlev) {
-				$found = ($value[$key[$n]] === $needlev);
-				if (false === $found) {
-					break;
-				}
-			}
-		} else {
-			if (!isset($value[$key])) {
+function array_search_ex($needle,$haystack,$key) {
+	if(is_array($haystack)):
+		if($needle !== '' && $key !== ''):
+			foreach($haystack as $haystackval => $value):
 				$found = false;
-			} else if (true === is_array($value[$key])) {
-				$found = in_array($needle, $value[$key]);
-			} else {
-				$found = ($value[$key] === $needle);
-			}
-		}
-		if (true === $found) {
-			return $haystackval;
-		}
-	}
+				if(is_array($needle) && is_array($key)):
+					foreach($needle as $n => $needlev):
+						$found = ($value[$key[$n]] === $needlev);
+						if(!$found):
+							break;
+						endif;
+					endforeach;
+				elseif(!isset($value[$key])):
+					$found = false;
+				elseif(is_array($value[$key])):
+					$found = in_array($needle,$value[$key]);
+				else:
+					$found = ($value[$key] === $needle);
+				endif;
+				if($found):
+					return $haystackval;
+				endif;
+			endforeach;
+		endif;
+	endif;
 	return false;
 }
-
 // Sort an array by values using a user-defined key.
 // Returns TRUE on success or FALSE on failure.
 // array - The array to sort
 // key - the key used as sort criteria
-function array_sort_key(array &$array, $key) {
+function array_sort_key(array &$array,$key) {
 	global $_key;
 
-	if (empty($array) || !is_array($array))
+	if(empty($array) || !is_array($array)):
 		return true;
-	if ($key === "")
+	endif;
+	if($key === ''):
 		return true;
-
-	// Declare local compare function.
-	if(!function_exists("_array_sort_key_cmp")) {
-		function _array_sort_key_cmp($a, $b) {
-			global $_key;
-			if (!isset($a[$_key])) {
-				if (!isset($b[$_key]))
-					return 0;
-				return -1;
-			} else if (!isset($b[$_key])) {
-				return 1;
-			}
-			return strnatcmp($a[$_key], $b[$_key]);
-		}
-	}
-
-	// Sort array. Set key used my compare function. Finally unset useless global variable.
+	endif;
 	$_key = $key;
-	$result = uasort($array, "_array_sort_key_cmp");
+	$result = uasort($array,function($a,$b) {
+		global $_key;
+		return isset($a[$_key]) ? (isset($b[$_key]) ? strnatcmp($a[$_key],$b[$_key]) : 1) : (isset($b[$_key]) ? -1 : 0);
+	});
 	unset($_key);
-
 	return $result;
 }
-
 // Remove duplicate values by user-defined key.
 // array - The array to be processed
 // key - The key used as filter criteria
-function array_remove_duplicate($array, $key) {
+function array_remove_duplicate($array,$key) {
 	$result = [];
-	if (!is_array($array))
+	if(!is_array($array)):
 		return false;
+	endif;
 	$subarray = [];
-	foreach ($array as $value) {
+	foreach($array as $value):
 		$subarray[] = $value[$key];
-	}
-	foreach (array_unique($subarray) as $k => $value) {
+	endforeach;
+	foreach(array_unique($subarray) as $k => $value):
 		$result[] = $array[$k];
-	}
+	endforeach;
 	return $result;
 }
 function &array_make_branch(array &$branch,string ...$leaves) {
