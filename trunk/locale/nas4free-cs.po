@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-11-03 05:34+0000\n"
+"PO-Revision-Date: 2017-11-07 16:00+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-05 18:05+0000\n"
+"X-Launchpad-Export-Date: 2017-11-08 10:26+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -22,7 +22,7 @@ msgstr " bylo přiřazeno k "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -50,7 +50,7 @@ msgstr "%d let"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% z %s"
 
 #, php-format
 msgid "%dB / block"
@@ -11311,7 +11311,7 @@ msgid "and"
 msgstr "a"
 
 msgid "available"
-msgstr ""
+msgstr "k dispozici"
 
 msgid "available of"
 msgstr "dostupné z"
@@ -11469,23 +11469,3 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
-
-#, php-format
-#~ msgid "%d%% of %dMiB"
-#~ msgstr "%d%% z %dMiB"
-
-#, php-format
-#~ msgid "%s of %sB"
-#~ msgstr "%s z %sB"
-
-#, php-format
-#~ msgid "%sB used of %sB"
-#~ msgstr "použito %sB z %sB"
-
-#, php-format
-#~ msgid "%s%% available"
-#~ msgstr "%s%% k dispozici"
-
-#, php-format
-#~ msgid "%sB available of %sB"
-#~ msgstr "%sB z %sB k dispozici"

@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-11-05 09:25+0000\n"
+"PO-Revision-Date: 2017-11-06 03:15+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-05 18:07+0000\n"
+"X-Launchpad-Export-Date: 2017-11-08 10:25+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -24,7 +24,7 @@ msgstr " был присвоен "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -52,7 +52,7 @@ msgstr "%d года"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% из %s"
 
 #, php-format
 msgid "%dB / block"
@@ -11242,7 +11242,7 @@ msgid "and"
 msgstr "и"
 
 msgid "available"
-msgstr ""
+msgstr "доступно"
 
 msgid "available of"
 msgstr "доступно из"
@@ -11395,23 +11395,3 @@ msgstr "использовано из"
 
 msgid "visible"
 msgstr "показать"
-
-#, php-format
-#~ msgid "%d%% of %dMiB"
-#~ msgstr "%d%% из %d Мбайт"
-
-#, php-format
-#~ msgid "%s of %sB"
-#~ msgstr "%s из %s байт"
-
-#, php-format
-#~ msgid "%sB available of %sB"
-#~ msgstr "%s байт доступно из %s байт"
-
-#, php-format
-#~ msgid "%sB used of %sB"
-#~ msgstr "занято %s из %s байт"
-
-#, php-format
-#~ msgid "%s%% available"
-#~ msgstr "%s%% доступного"
