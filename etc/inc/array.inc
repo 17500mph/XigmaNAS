@@ -65,20 +65,11 @@ function array_search_ex($needle,$haystack,$key) {
 // array - The array to sort
 // key - the key used as sort criteria
 function array_sort_key(array &$array,$key) {
-	global $_key;
-
-	if(empty($array) || !is_array($array)):
-		return true;
+	if(empty($array) || ($key === '')):
+		$result = true;
+	else:
+		$result = uasort($array,function($a,$b) use ($key) { return isset($a[$key]) ? (isset($b[$key]) ? strnatcmp($a[$key],$b[$key]) : 1) : (isset($b[$key]) ? -1 : 0); });
 	endif;
-	if($key === ''):
-		return true;
-	endif;
-	$_key = $key;
-	$result = uasort($array,function($a,$b) {
-		global $_key;
-		return isset($a[$_key]) ? (isset($b[$_key]) ? strnatcmp($a[$_key],$b[$_key]) : 1) : (isset($b[$_key]) ? -1 : 0);
-	});
-	unset($_key);
 	return $result;
 }
 // Remove duplicate values by user-defined key.
