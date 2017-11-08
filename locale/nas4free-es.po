@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-11-02 07:23+0000\n"
+"PO-Revision-Date: 2017-11-07 06:38+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-05 18:05+0000\n"
+"X-Launchpad-Export-Date: 2017-11-08 10:26+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -22,7 +22,7 @@ msgstr " fue asignada a "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -50,7 +50,7 @@ msgstr "%d años"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% de %s"
 
 #, php-format
 msgid "%dB / block"
@@ -743,7 +743,7 @@ msgid "Allow New Files"
 msgstr "Permitir archivos nuevos"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Permitir puerto serie"
 
 msgid "Allow TLS connections only."
 msgstr "Permitir conexiones TSL únicamente"
@@ -752,7 +752,7 @@ msgid "Allow USB"
 msgstr "Permitir USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Permitir puertos USB"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permitir acceso de clientes a cuentas que tienen contraseñas nulas."
@@ -1220,7 +1220,7 @@ msgid "Battery voltage"
 msgstr "Tensión d ela batería"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Precaución al habilitar estas opciones."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -3642,10 +3642,10 @@ msgstr "Habilitar esta opción permite el host USB a los clientes"
 
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
-msgstr ""
+msgstr "Habilite esta opción para permitir los puertos USB a los clientes"
 
 msgid "Enable this option to make host serial ports available to clients."
-msgstr ""
+msgstr "Habilite esta opción para permitir los puertos serie a los clientes"
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4566,7 +4566,7 @@ msgid "Host Access Control"
 msgstr "Control de acceso al Host"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Recursos del Host"
 
 msgid "Host resources"
 msgstr "Recursos del host."
@@ -11241,7 +11241,7 @@ msgid "and"
 msgstr "y"
 
 msgid "available"
-msgstr ""
+msgstr "disponible"
 
 msgid "available of"
 msgstr "disponibles de"
@@ -11275,7 +11275,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "Max. valor permitido de baja tensión"
 
 msgid "hidden"
-msgstr ""
+msgstr "oculto"
 
 msgid "iSCSI Initiator"
 msgstr "Iniciador iSCSI"
@@ -11340,10 +11340,10 @@ msgid "of"
 msgstr "de"
 
 msgid "off"
-msgstr ""
+msgstr "apagado"
 
 msgid "on"
-msgstr ""
+msgstr "encendido"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11388,24 +11388,4 @@ msgid "used of"
 msgstr "usados de"
 
 msgid "visible"
-msgstr ""
-
-#, php-format
-#~ msgid "%d%% of %dMiB"
-#~ msgstr "%d%% de %dMiB"
-
-#, php-format
-#~ msgid "%s of %sB"
-#~ msgstr "%s de %sB"
-
-#, php-format
-#~ msgid "%sB available of %sB"
-#~ msgstr "%sB disponible de %sB"
-
-#, php-format
-#~ msgid "%sB used of %sB"
-#~ msgstr "%sB usado de %sB"
-
-#, php-format
-#~ msgid "%s%% available"
-#~ msgstr "%s%% disponible"
+msgstr "Visible"

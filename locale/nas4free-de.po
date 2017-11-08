@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-11-05 17:39+0000\n"
+"PO-Revision-Date: 2017-11-06 22:31+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-05 18:05+0000\n"
+"X-Launchpad-Export-Date: 2017-11-08 10:26+0000\n"
 "X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -27,7 +27,7 @@ msgstr " wurde zugewiesen zu "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -55,7 +55,7 @@ msgstr "%d Jahre"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% von %s"
 
 #, php-format
 msgid "%dB / block"
@@ -1266,7 +1266,7 @@ msgid "Best available"
 msgstr "Bester verfügbarer"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "Binärer Vorsatz"
 
 msgid "Bind DN"
 msgstr "Bind DN"
@@ -2824,6 +2824,8 @@ msgstr ""
 msgid ""
 "Display disk size values using binary prefixes instead of decimal prefixes."
 msgstr ""
+"Festplattengrößen werden mit binären Vorsätzen statt mit dezimalen Vorsätzen "
+"angezeigt."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3649,9 +3651,13 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Aktiviere diese Einstellung, um serielle USB Host-Anschlüsse für die "
+"Clienten verfügbar zu machen."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Aktiviere diese Einstellung, um serialle Host-Anschlüsse für die Clienten "
+"verfügbar zu machen."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -4567,7 +4573,7 @@ msgid "Host Access Control"
 msgstr "Host Zugangskontrolle"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Host Ressourcen"
 
 msgid "Host resources"
 msgstr "Host-Ressourcen"
@@ -9159,6 +9165,8 @@ msgstr ""
 
 msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
+"Die Kennung (identifier) wurde durch smartctl brackets  als unbekannt "
+"gemeldet."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "Der zu Beginn mit dem Initiator ausgehandelte Verarbeitungsmodus."
@@ -11289,10 +11297,10 @@ msgid "and"
 msgstr "und"
 
 msgid "available"
-msgstr ""
+msgstr "verfügbar"
 
 msgid "available of"
-msgstr ""
+msgstr "verfügbar von"
 
 msgid "change failed."
 msgstr "Die Änderungen wurden nicht durchgeführt"
@@ -11324,7 +11332,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "größter einstellbarer minimaler Spannungserhöhungsschwellwert"
 
 msgid "hidden"
-msgstr ""
+msgstr "verborgen"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -11386,13 +11394,13 @@ msgid "none"
 msgstr "keine"
 
 msgid "of"
-msgstr ""
+msgstr "von"
 
 msgid "off"
-msgstr ""
+msgstr "aus"
 
 msgid "on"
-msgstr ""
+msgstr "an"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11425,7 +11433,7 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "syslog.conf"
-msgstr ""
+msgstr "syslog.conf"
 
 msgid "to"
 msgstr "bis"
@@ -11434,27 +11442,7 @@ msgid "umount"
 msgstr "aushängen"
 
 msgid "used of"
-msgstr ""
+msgstr "benutzt von"
 
 msgid "visible"
-msgstr ""
-
-#, php-format
-#~ msgid "%d%% of %dMiB"
-#~ msgstr "%d%% von %dMiB"
-
-#, php-format
-#~ msgid "%s of %sB"
-#~ msgstr "%s von %s B"
-
-#, php-format
-#~ msgid "%sB used of %sB"
-#~ msgstr "%sB von %sB verwendet"
-
-#, php-format
-#~ msgid "%s%% available"
-#~ msgstr "%s%% verfügbar"
-
-#, php-format
-#~ msgid "%sB available of %sB"
-#~ msgstr "%sB von %sB verfügbar"
+msgstr "sichtbar"
