@@ -531,6 +531,17 @@ header#g4h {
 	flex: 0 0 auto;
 	background-color: transparent;
 }
+header#g4l {
+	min-width: inherit;
+	width: 100%;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	width: 100%;
+	-webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	background-color: transparent;
+}
 main#g4m {
 	min-width: inherit;
 	-webkit-box-flex: 1;

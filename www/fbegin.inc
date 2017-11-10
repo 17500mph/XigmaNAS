@@ -67,10 +67,10 @@ echo '<!DOCTYPE html>',"\n";
 <body id="main">
 <div id="spinner_main"></div>
 <div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
-<header id="g4h">
 <?php
 	if(!$_SESSION['g']['shrinkpageheader']):
 ?>
+<header id="g4l">
 	<div id="header">
 		<div id="headerrlogo">
 			<div class="hostname">
@@ -81,8 +81,12 @@ echo '<!DOCTYPE html>',"\n";
 			<a title="www.<?=get_product_url();?>" href="https://www.<?=get_product_url();?>" target="_blank"><img src="/images/header_logo.png" alt="logo" /></a>
 		</div>
 	</div>
+</header>
 <?php
 	endif; 
+?>
+<header id="g4h">
+<?php
 	display_headermenu();
 ?>
 	<div id="gapheader"></div>
