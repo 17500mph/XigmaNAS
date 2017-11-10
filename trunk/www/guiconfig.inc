@@ -910,10 +910,8 @@ function get_headermenu(): array {
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Donate'),'link' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest'];
 		unset($menu_items);
  		$_SESSION['g']['headermenu'] = $menu;
-	else:
-		$menu = $_SESSION['g']['headermenu'];
 	endif;
-	return $menu;
+	return $_SESSION['g']['headermenu'];
 }
 function make_headermenu_extensions(array &$menu) {
 	global $g;

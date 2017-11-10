@@ -1444,7 +1444,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 }
 trait co_DOMTools {
 /**
- *	Appends a child node to an element
+ *	Appends a child node to an element and returns $subnode
  *	@param string $name
  *	@param array $attributes
  *	@param string $value
@@ -1465,6 +1465,29 @@ trait co_DOMTools {
 			libxml_use_internal_errors($saved_setting);
 		endif;
 		return $subnode;
+	}
+/**
+ *	Appends a child node to an element and returns $this
+ *	@param string $name
+ *	@param array $attributes
+ *	@param string $value
+ *	@param string $namespaceURI
+ *	@return DOMNode $this
+ */
+	public function insElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
+		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
+		$subnode->addAttributes($attributes);
+		if(preg_match('/\S/',$value)):
+			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
+			$document = $subnode->ownerDocument ?? $this;
+			$innerhtml = $document->createDocumentFragment(); // create fragment from $value
+			if($innerhtml->appendXML($value)):
+				$subnode->appendChild($innerhtml);
+			endif;
+			libxml_clear_errors();
+			libxml_use_internal_errors($saved_setting);
+		endif;
+		return $this;
 	}
 /**
  *	Inserts a child node on top of the children
@@ -1517,100 +1540,83 @@ trait co_DOMTools {
 	}
 	//	tags
 	public function addA(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('a',$attributes,$value);
-		return $subnode;
-	}
-	public function addDIV(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('div',$attributes,$value);
-		return $subnode;
-	}
-	public function addFORM(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('form',$attributes,$value);
-		return $subnode;
-	}
-	public function addLI(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('li',$attributes,$value);
-		return $subnode;
-	}
-	public function addP(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('p',$attributes,$value);
-		return $subnode;
-	}
-	public function addSPAN(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('span',$attributes,$value);
-		return $subnode;
-	}
-	public function addUL(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('ul',$attributes,$value);
-		return $subnode;
-	}
-	public function addTABLE(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('table',$attributes,$value);
-		return $subnode;
-	}
-	public function addCOLGROUP(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('colgroup',$attributes,$value);
-		return $subnode; 
-	}
-	public function addTHEAD(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('thead',$attributes,$value);
-		return $subnode;
-	}
-	public function addTBODY(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('tbody',$attributes,$value);
-		return $subnode;
-	}
-	public function addTFOOT(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('tfoot',$attributes,$value);
-		return $subnode;
-	}
-	public function addTR(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('tr',$attributes,$value);
-		return $subnode;
-	}
-	public function addTD(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('td',$attributes,$value);
-		return $subnode;
-	}
-	public function addTDwC(string $class,string $value = NULL) {
-		$subnode = $this->addElement('td',['class' => $class],$value);
-		return $subnode;
-	}
-	public function addTH(array $attributes = [],string $value = NULL) {
-		$subnode = $this->addElement('th',$attributes,$value);
-		return $subnode;
-	}
-	public function addTHwC(string $class,string $value = NULL) {
-		$subnode = $this->addElement('th',['class' => $class],$value);
-		return $subnode;
+		return $this->addElement('a',$attributes,$value);
 	}
 	public function insCOL(array $attributes = []) {
-		$this->addElement('col',$attributes);
-		return $this;
+		return $this->insElement('col',$attributes);
+	}
+	public function addDIV(array $attributes = [],string $value = NULL) {
+		return $this->addElement('div',$attributes,$value);
+	}
+	public function insDIV(array $attributes = [],string $value = NULL) {
+		return $this->insElement('div',$attributes,$value);
+	}
+	public function addFORM(array $attributes = [],string $value = NULL) {
+		return $this->addElement('form',$attributes,$value);
 	}
 	public function insIMG(array $attributes = []) {
-		$this->addElement('img',$attributes);
-		return $this;
+		return $this->insElement('img',$attributes);
 	}
 	public function insINPUT(array $attributes = [],string $value = NULL) {
-		$this->addElement('input',$attributes,$value);
-		return $this;
+		return $this->insElement('input',$attributes,$value);
+	}
+	public function addLI(array $attributes = [],string $value = NULL) {
+		return $this->addElement('li',$attributes,$value);
+	}
+	public function addP(array $attributes = [],string $value = NULL) {
+		return $this->addElement('p',$attributes,$value);
+	}
+	public function addSPAN(array $attributes = [],string $value = NULL) {
+		return $this->addElement('span',$attributes,$value);
+	}
+	public function insSPAN(array $attributes = [],string $value = NULL) {
+		return $this->insElement('span',$attributes,$value);
+	}
+	public function addUL(array $attributes = [],string $value = NULL) {
+		return $this->addElement('ul',$attributes,$value);
+	}
+	//	table tags
+	public function addTABLE(array $attributes = [],string $value = NULL) {
+		return $this->addElement('table',$attributes,$value);
+	}
+	public function addCOLGROUP(array $attributes = [],string $value = NULL) {
+		return $this->addElement('colgroup',$attributes,$value);
+	}
+	public function addTHEAD(array $attributes = [],string $value = NULL) {
+		return $this->addElement('thead',$attributes,$value);
+	}
+	public function addTBODY(array $attributes = [],string $value = NULL) {
+		return $this->addElement('tbody',$attributes,$value);
+	}
+	public function addTFOOT(array $attributes = [],string $value = NULL) {
+		return $this->addElement('tfoot',$attributes,$value);
+	}
+	public function addTR(array $attributes = [],string $value = NULL) {
+		return $this->addElement('tr',$attributes,$value);
+	}
+	public function addTD(array $attributes = [],string $value = NULL) {
+		return $this->addElement('td',$attributes,$value);
 	}
 	public function insTD(array $attributes = [],string $value = NULL) {
-		$this->addElement('td',$attributes,$value);
-		return $this;
+		return $this->insElement('td',$attributes,$value);
+	}
+	public function addTDwC(string $class,string $value = NULL) {
+		return $this->addElement('td',['class' => $class],$value);
 	}
 	public function insTDwC(string $class,string $value = NULL) {
-		$this->addElement('td',['class' => $class],$value);
-		return $this;
+		return $this->insElement('td',['class' => $class],$value);
+	}
+	public function addTH(array $attributes = [],string $value = NULL) {
+		return $this->addElement('th',$attributes,$value);
 	}
 	public function insTH(array $attributes = [],string $value = NULL) {
-		$this->addElement('th',$attributes,$value);
-		return $this;
+		return $this->insElement('th',$attributes,$value);
+	}
+	public function addTHwC(string $class,string $value = NULL) {
+		return $this->addElement('th',['class' => $class],$value);
 	}
 	public function insTHwC(string $class,string $value = NULL) {
-		$this->addElement('th',['class' => $class],$value);
-		return $this;
+		return $this->insElement('th',['class' => $class],$value);
 	}
 	//	tab menu fragments and macros
 /**
@@ -1840,11 +1846,14 @@ trait co_DOMTools {
 			$input_attributes['required'] = 'required';
 		endif;
 		$span_attributes = ['class' => 'cblot'];
-		$th = $this->addTR($tr_attributes)->addTH($th_attributes);
-		$th->addSPAN($spanleft_attributes,$title);
-		$label = $th->addSPAN($spanright_attributes)->addElement('label');
-		$label->addElement('input',$input_attributes);
-		$label->addSPAN($span_attributes,$p->get_caption());
+		$this->
+			addTR($tr_attributes)->
+				addTH($th_attributes)->
+					insSPAN($spanleft_attributes,$title)->
+					addSPAN($spanright_attributes)->
+						addElement('label')->
+							insElement('input',$input_attributes)->
+							addSPAN($span_attributes,$p->get_caption());
 		return $this;
 	}
 	public function ins_description(properties $p) {
@@ -2458,24 +2467,39 @@ EOJ;
 		if($is_form):
 			$flexcontainer->addDIV(['id' => 'formextension'])->ins_authtoken();
 		endif;
+		$flexcontainer->ins_header_logo();
 		$flexcontainer->ins_header($page_title);
 		$flexcontainer->ins_main();
 		$flexcontainer->ins_footer();
 		$flexcontainer->addJavascript($jdata);
 		return $this;
 	}
-	public function ins_header(array $page_title = []) {
-		$header = $this->addElement('header',['id' => 'g4h']);
+	public function ins_header_logo() {
 		if(!$_SESSION['g']['shrinkpageheader']):
-			$header->
+			$a_attributes = [
+				'title' => sprintf('www.%s',get_product_url()),
+				'href' => sprintf('https://www.%s',get_product_url()),
+				'target' => '_blank'
+			];
+			$img_attributes = [
+				'src' => '/images/header_logo.png',
+				'alt' => 'logo'
+			];
+			$this->addElement('header',['id' => 'g4l'])->
 				addDIV(['id' => 'header'])->
-					push()->addDIV(['id' => 'headerrlogo'])->
+					push()->
+					addDIV(['id' => 'headerrlogo'])->
 						addDIV(['class' => 'hostname'])->
 							addSPAN([],system_get_hostname())->
-					pop()->addDIV(['id' => 'headerlogo'])->
-						addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
-							insIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
+					pop()->
+					addDIV(['id' => 'headerlogo'])->
+						addA($a_attributes)->
+							insIMG($img_attributes);
 		endif;
+		return $this;
+	}
+	public function ins_header(array $page_title = []) {
+		$header = $this->addElement('header',['id' => 'g4h']);
 		$header->addDIV(['id' => 'area_navhdr'],make_headermenu());
 		$header->addDIV(['id' => 'gapheader']);
 		if(!empty($page_title)):
@@ -2499,15 +2523,11 @@ EOJ;
 		
 		$g4fx = $this->
 			addElement('footer',['id' => 'g4f'])->
-				addDIV(['id' => 'gapfooter'])->
-					parentNode->
+				insDIV(['id' => 'gapfooter'])->
 				addDIV(['id' => 'pagefooter'])->
 					add_table_data_settings()->
-						push()->addCOLGROUP()->
-							insCOL(['style' => 'width:10%'])->
-							insCOL(['style' => 'width:80%'])->
-							insCOL(['style' => 'width:10%'])->
-						pop()->addTBODY()->
+						ins_colgroup_with_styles('width',['10%','80%','10%'])->
+						addTBODY()->
 							addTR();
 		$g4fl = $g4fx->addTDwC('g4fl');
 		if(Session::isAdmin()):

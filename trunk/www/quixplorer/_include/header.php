@@ -61,65 +61,68 @@ function show_header($title, $additional_header_content = null) {
 	header("Content-Type: text/html; charset=".$GLOBALS["charset"]);
 /* NAS4FREE & QUIXPLORER CODE*/
 	// Html & Page Headers
-	echo '<!DOCTYPE html>',"\n";
-	echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="',system_get_language_code(),'" lang="',system_get_language_code(),'" dir="',$GLOBALS['text_dir'],'">',"\n";
-	echo '<head>',"\n";
-	echo '<meta charset="',$GLOBALS["charset"],'">',"\n";
-	echo '<meta name="format-detection" content="telephone=no"/>',"\n";
-	echo '<title>',genhtmltitle($pgtitle ?? []),'</title>',"\n";
-	echo '<link href="./_style/style.css" rel="stylesheet" type="text/css">',"\n";
-	echo '<link href="../css/gui.css" rel="stylesheet" type="text/css">',"\n";
-	echo '<link href="../css/navbar.css" rel="stylesheet" type="text/css">',"\n";
-	echo '<link href="../css/tabs.css" rel="stylesheet" type="text/css">',"\n";	
-	echo '<script type="text/javascript" src="../js/jquery.min.js"></script>',"\n";
-	echo '<script type="text/javascript" src="../js/gui.js"></script>',"\n";
-	echo '<script type="text/javascript" src="../js/spinner.js"></script>',"\n";
-	echo '<script type="text/javascript" src="../js/spin.min.js"></script>',"\n";
+	echo '<!DOCTYPE html>',PHP_EOL;
+	echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="',system_get_language_code(),'" lang="',system_get_language_code(),'" dir="',$GLOBALS['text_dir'],'">',PHP_EOL;
+	echo '<head>',PHP_EOL;
+	echo '<meta charset="',$GLOBALS["charset"],'">',PHP_EOL;
+	echo '<meta name="format-detection" content="telephone=no"/>',PHP_EOL;
+	echo '<title>',genhtmltitle($pgtitle ?? []),'</title>',PHP_EOL;
+	echo '<link href="./_style/style.css" rel="stylesheet" type="text/css">',PHP_EOL;
+	echo '<link href="../css/gui.css" rel="stylesheet" type="text/css">',PHP_EOL;
+	echo '<link href="../css/navbar.css" rel="stylesheet" type="text/css">',PHP_EOL;
+	echo '<link href="../css/tabs.css" rel="stylesheet" type="text/css">',PHP_EOL;	
+	echo '<script type="text/javascript" src="../js/jquery.min.js"></script>',PHP_EOL;
+	echo '<script type="text/javascript" src="../js/gui.js"></script>',PHP_EOL;
+	echo '<script type="text/javascript" src="../js/spinner.js"></script>',PHP_EOL;
+	echo '<script type="text/javascript" src="../js/spin.min.js"></script>',PHP_EOL;
 	if(isset($pglocalheader) && !empty($pglocalheader)):
 		if(is_array($pglocalheader)):
 			foreach($pglocalheader as $pglocalheaderv):
-		 		echo $pglocalheaderv,"\n";
+		 		echo $pglocalheaderv,PHP_EOL;
 			endforeach;
 		else:
-			echo $pglocalheader,"\n";
+			echo $pglocalheader,PHP_EOL;
 		endif;
 	endif;
-	echo '</head>',"\n";
+	echo '</head>',PHP_EOL;
 	// NAS4Free Header
-	echo '<body id="main">',"\n";
-	echo '<div id="spinner_main"></div>',"\n";
-	echo '<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>',"\n";
-	echo '<header id="g4h">',"\n";
+	echo '<body id="main">',PHP_EOL;
+	echo '<div id="spinner_main"></div>',PHP_EOL;
+	echo '<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>',PHP_EOL;
+	echo '<header id="g4h">',PHP_EOL;
 	if(!$_SESSION['g']['shrinkpageheader']):
-		echo '<div id="header">',"\n";
-		echo '<div id="headerlogo">',"\n";
-		echo '<a title="www.',get_product_url(),'" href="https://www.',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',"\n";
-		echo '</div>',"\n";
-		echo '<div id="headerrlogo">',"\n";
-		echo '<div class="hostname">',"\n";
-		echo '<span>',system_get_hostname(),'&nbsp;</span>',"\n";
-		echo '</div>',"\n";
-		echo '</div>',"\n";
-		echo '</div>',"\n";
+		echo '<header id="g4l">',PHP_EOL;
+		echo '<div id="header">',PHP_EOL;
+		echo '<div id="headerlogo">',PHP_EOL;
+		echo '<a title="www.',get_product_url(),'" href="https://www.',get_product_url(),'" target="_blank"><img src="../images/header_logo.png" alt="logo"/></a>',PHP_EOL;
+		echo '</div>',PHP_EOL;
+		echo '<div id="headerrlogo">',PHP_EOL;
+		echo '<div class="hostname">',PHP_EOL;
+		echo '<span>',system_get_hostname(),'&nbsp;</span>',PHP_EOL;
+		echo '</div>',PHP_EOL;
+		echo '</div>',PHP_EOL;
+		echo '</div>',PHP_EOL;
+		echo '</header>',PHP_EOL;
 	endif;
+	echo '<header id="g4h">',PHP_EOL;
 	display_headermenu();
-	echo '<div id="gapheader"></div>', "\n";
-	echo "</header>\n";
-	echo '<main id="g4m">', "\n";
+	echo '<div id="gapheader"></div>',PHP_EOL;
+	echo '</header>',PHP_EOL;
+	echo '<main id="g4m">',PHP_EOL;
 	echo '<div id="pagecontent">';
 	// QuiXplorer Header
 	if(!isset($pgtitle_omit) || !$pgtitle_omit):
-		echo '<p class="pgtitle">',gentitle($pgtitle),'</p>',"\n";
+		echo '<p class="pgtitle">',gentitle($pgtitle),'</p>',PHP_EOL;
 	endif;
-	echo '<table id="area_data"><tbody><tr><td id="area_data_frame">',"\n",
-			'<table class="area_data_settings"><tbody><tr>',"\n",
+	echo '<table id="area_data"><tbody><tr><td id="area_data_frame">',PHP_EOL,
+			'<table class="area_data_settings"><tbody><tr>',PHP_EOL,
 				'<td class="lhetop" style="text-align:left">';
 					if($GLOBALS['require_login'] && isset($GLOBALS['__SESSION']['s_user'])):
 						echo '[',$GLOBALS['__SESSION']['s_user'],'] ';
 					endif;
 					echo $title;
-	echo		'</td>',"\n",
-				'<td class="lhetop" style="text-align:right">Powered by QuiXplorer</td>',"\n",
-			'</tr></tbody></table>',"\n";
+	echo		'</td>',PHP_EOL,
+				'<td class="lhetop" style="text-align:right">Powered by QuiXplorer</td>',PHP_EOL,
+			'</tr></tbody></table>',PHP_EOL;
 }
 ?>
