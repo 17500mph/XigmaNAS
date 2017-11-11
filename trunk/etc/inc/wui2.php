@@ -1972,9 +1972,11 @@ trait co_DOMTools {
 		return $this;
 	}
 	public function ins_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$id = $p->get_id();
+		$caption = $p->get_caption();
 		$input_attributes = [
 			'type' => 'text',
-			'id' => $p->get_id(),
+			'id' => $id,
 			'name' => $p->get_name(),
 			'value' => $value
 		];
@@ -2005,12 +2007,11 @@ trait co_DOMTools {
 		endif;
 		$div = $this->addDIV();
 		$div->addElement('input',$input_attributes);
-		$caption = $p->get_caption();
 		if(isset($caption)):
 			if($is_readonly):
 				$div->addElement('span',['style' => 'margin-left:8px;'],$caption);
 			else:
-				$div->addElement('label',['style' => 'margin-left:8px;','for' => $p->get_id()],$p->get_caption());
+				$div->addElement('label',['style' => 'margin-left:8px;','for' => $id],$caption);
 			endif;
 		endif;
 		return $this;
@@ -2050,6 +2051,74 @@ trait co_DOMTools {
 			$tr->addTDwC('lcebl')->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
+	
+	public function ins_filechooser($p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$id = $p->get_id();
+		$name = $p->get_name();
+		$input_attributes = [
+			'type' => 'text',
+			'id' => $id,
+			'name' => $name,
+			'value' => $value
+		];
+		if($is_readonly):
+			$input_attributes['class'] = 'formfldro';
+			$input_attributes['disabled'] = 'disabled';
+			$is_required = false;
+			$maxlength = 0;
+			$placeholder = NULL;
+		else:
+			$input_attributes['class'] = 'formfld';
+			$maxlength = $p->get_maxlength();
+			$placeholder = $p->get_placeholder();
+		endif;
+		if($is_required):
+			$input_attributes['class'] = 'formfld';
+			$input_attributes['required'] = 'required';
+		endif;
+		if(isset($placeholder)):
+			$input_attributes['placeholder'] = $placeholder;
+		endif;
+		$size = $p->get_size();
+		if($size > 0):
+			$input_attributes['size'] = $size;
+		endif;
+		if($maxlength > 0):
+			$input_attributes['maxlength'] = $maxlength;
+		endif;
+		$div = $this->addDIV();
+		$div->addElement('input',$input_attributes);
+//	file chooser start
+		if(!$is_readonly):
+			$var = 'ifield';
+			$idifield = sprintf('%1$s%2$s',$id,$var);
+			$js = <<<EOJ
+{$idifield} = form.{$id};
+filechooser = window.open("filechooser.php?p="+encodeURIComponent({$idifield}.value)+"&sd={$value}","filechooser","scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300");
+filechooser.{$var} = {$idifield};
+window.{$var} = {$idifield};
+EOJ;
+			$button_attributes = [
+				'type' => 'button',
+				'id' => $id . 'browsebtn',
+				'name' => $name . 'browsebtn',
+				'class' => 'formbtn',
+				'onclick' => $js,
+				'value' => '...'
+			];
+			$div->addElement('input',$button_attributes);
+		endif;
+//	file chooser end
+		$caption = $p->get_caption();
+		if(isset($caption)):
+			if($is_readonly):
+				$div->addElement('span',['style' => 'margin-left:8px;'],$caption);
+			else:
+				$div->addElement('label',['style' => 'margin-left:8px;','for' => $p->get_id()],$p->get_caption());
+			endif;
+		endif;
+		return $this;
+	}
 	public function ins_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$table = $this->add_table_data_selection();
 		$table->ins_colgroup_with_styles('width',['5%','95%']);
@@ -2088,6 +2157,7 @@ trait co_DOMTools {
 		return $this;
 	}
 	public function ins_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$caption = $p->get_caption();
 		$select_attributes = [
 			'id' => $p->get_id(),
 			'name' => $p->get_name(),
@@ -2108,6 +2178,9 @@ trait co_DOMTools {
 			endif;
 			$select->addElement('option',$option_attributes,$option_val);
 		endforeach;
+		if(isset($caption)):
+			$this->addElement('span',['style' => 'margin-left:8px;'],$caption);
+		endif;
 		return $this;
 	}
 	public function ins_separator(int $colspan = 0,string $id = NULL) {
@@ -2273,6 +2346,9 @@ trait co_DOMTools {
 	public function c2_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->c2_row($p,$is_required,$is_readonly,true)->ins_checkbox_grid($p,$value,$is_required,$is_readonly)->ins_description($p);
 		return $this;
+	}
+	public function c2_filechooser(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->c2_row($p,$is_required,$is_readonly,true)->ins_filechooser($p,$value,$is_required,$is_readonly)->ins_description($p);
 	}
 	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
