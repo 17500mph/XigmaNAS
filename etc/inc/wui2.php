@@ -2349,6 +2349,7 @@ EOJ;
 	}
 	public function c2_filechooser(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->c2_row($p,$is_required,$is_readonly,true)->ins_filechooser($p,$value,$is_required,$is_readonly)->ins_description($p);
+		return $this;
 	}
 	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
