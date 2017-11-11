@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-10-17 02:01+0000\n"
+"PO-Revision-Date: 2017-11-10 14:11+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-08 10:26+0000\n"
-"X-Generator: Launchpad (build 18493)\n"
+"X-Launchpad-Export-Date: 2017-11-11 15:54+0000\n"
+"X-Generator: Launchpad (build 18505)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -86,11 +86,11 @@ msgstr "%s은(는) 너무 깁니다."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%2s의 %1s"
 
 #, php-format
 msgid "%s on %s"
-msgstr "%s on %s"
+msgstr "%2s의 %1s"
 
 #, php-format
 msgid "%s used of %s"
@@ -3430,7 +3430,7 @@ msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr "이 옵션을 사용하면 어떤 IP 주소로든 WebGUI에 접근할 수 있습니다."
 
 msgid "Enable this option to make host USB available to clients."
-msgstr "고객들이 호스트 USB를 사용가능케 하려면 이 옵션을 활성화"
+msgstr "이 옵션을 활성화 하면 클라이언트가 호스트 USB를 사용할 수 있게 됩니다."
 
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
@@ -8168,7 +8168,7 @@ msgid "Targets"
 msgstr "타겟"
 
 msgid "Temp"
-msgstr "임시영역"
+msgstr "온도"
 
 msgid "Temperature"
 msgstr "온도"
@@ -8247,7 +8247,7 @@ msgstr "이 MIB '%s'은(는) sysctl에 존재하지 않습니다."
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
 "spare blocks as a percentage of the total number of spare blocks available."
-msgstr "최소 예비 여유 속성은 총 사용가능한 공간 중 남은 예비 블록의 수를 백분율로 나태냅니다."
+msgstr "최소 예비 여유 속성은 총 사용가능한 공간 중 남은 예비 블록의 수를 백분율로 나타냅니다."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -8826,7 +8826,7 @@ msgstr "권장되는 큐 깊이는 %d입니다."
 
 #, php-format
 msgid "The removable area mapped to LUN%d."
-msgstr "이동 영역이 LUN%d로(으로) mapping 되었ㅅ습니다."
+msgstr "이동 가능 영역이 LUN%d으(로) mapping 되었습니다."
 
 msgid "The rule number determines the order of the rule."
 msgstr "규칙 번호가 규칙의 순서를 결정합니다."
@@ -8867,7 +8867,7 @@ msgstr "공백으로 구분된 LDAP 서버 URL의 목록입니다."
 
 #, php-format
 msgid "The storage area mapped to LUN%d."
-msgstr "저장 영역이 LUN%d로(으로) mapping 되었습니다."
+msgstr "저장 영역이 LUN%d으(로) mapping 되었습니다."
 
 msgid "The subject of the email."
 msgstr "전자우편의 제목."

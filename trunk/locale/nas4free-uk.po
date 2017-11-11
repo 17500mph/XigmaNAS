@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-11-03 13:59+0000\n"
-"Last-Translator: Anatoliy Pavlyuchenko <anatoly.pavluchenko@googlemail.com>\n"
+"PO-Revision-Date: 2017-11-10 18:52+0000\n"
+"Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-08 10:25+0000\n"
-"X-Generator: Launchpad (build 18493)\n"
+"X-Launchpad-Export-Date: 2017-11-11 15:53+0000\n"
+"X-Generator: Launchpad (build 18505)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -23,7 +23,7 @@ msgstr " було присвоєно "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -51,7 +51,7 @@ msgstr "%d років"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% з %s"
 
 #, php-format
 msgid "%dB / block"
@@ -760,7 +760,8 @@ msgstr ""
 "Дозволити клієнтам зберігати атрибути в стилі OS/2 на загальному ресурсі."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
-msgstr "Дозволити клієнтам продовжувати перервані закачування і скачування."
+msgstr ""
+"Дозволити клієнтам продовжувати перервані вивантаження і завантаження."
 
 msgid "Allow new files to be created."
 msgstr "Дозволити створення нових файлів."
@@ -889,14 +890,14 @@ msgstr "Анонімний доступ є застарілим, починаю�
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
-"Швидкість скачування для анонімного користувача в КБ/с. Пусте поле - без "
-"обмежень"
+"Швидкість завантаження для анонімного користувача в КБ/с. Пусте поле означає "
+"без обмежень"
 
 msgid ""
 "Anonymous user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
-"Швидкість закачування для анонімного користувача в КБ/с. Пусте поле - без "
-"обмежень"
+"Швидкість вивантаження для анонімного користувача в КБ/с. Пусте поле означає "
+"без обмежень"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -1210,7 +1211,7 @@ msgid "Battery voltage"
 msgstr "Напруга батареї"
 
 msgid "Be careful with turning on these options."
-msgstr "Треба бути уважним, дозволяючи ці параметри"
+msgstr "Треба бути уважним, вмикаючи  ці параметри."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Перед - Видалення файлів буде завершено до початку передачі."
@@ -1331,7 +1332,7 @@ msgid "Button Location"
 msgstr "Розташуваня кнопки"
 
 msgid "By default, only already existing files can be uploaded."
-msgstr "За замовчуванням, тільки вже існуючі файли можуть бути завантажені."
+msgstr "За замовчуванням, тільки вже існуючі файли можуть бути вивантажені."
 
 msgid "Bytes/sec"
 msgstr "Байт/сек"
@@ -2804,13 +2805,13 @@ msgstr "Відображення історії команд ZFS"
 
 msgid ""
 "Display action buttons in the scrollable area instead of the footer area."
-msgstr "Показувати кнопки виконання в зоні прокрутки замість зони виноски"
+msgstr "Відображати кнопки виконання в зоні прокрутки замість зони виноски."
 
 msgid ""
 "Display disk size values using binary prefixes instead of decimal prefixes."
 msgstr ""
-"Показувати значення розміру диску, використовуючи бінарні префікси замість "
-"десятичних префіксів"
+"Відображати значення розміру диску, використовуючи бінарні префікси замість "
+"десятичних префіксів."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3626,12 +3627,12 @@ msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
 "Дозвольте цей параметр, щоб зробити доступними для клієнтів USB послідовні "
-"порти хоста"
+"порти хоста."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
 "Дозвольте цей параметр, щоб зробити доступними для клієнтів послідовні порти "
-"хоста"
+"хоста."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3814,7 +3815,7 @@ msgstr ""
 "іконку для вибору."
 
 msgid "Enter destination"
-msgstr "Введіть ціль"
+msgstr "Введіть місце призначення"
 
 msgid "Enter facility name"
 msgstr "Введіть назву обладнання"
@@ -3838,7 +3839,7 @@ msgid "Enter login name of the user."
 msgstr "Введіть логін користувача."
 
 msgid "Enter smartctl pass-through type."
-msgstr ""
+msgstr "Вкажіть тип проходження smartctl."
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Введіть IP-адресу або DNS ім'я iSCSI цілі."
@@ -3959,7 +3960,7 @@ msgid "Export a pool from the system"
 msgstr "Експорт пулу з системи"
 
 msgid "Export all the directories in the specified path."
-msgstr "Експортувати всі папки за вказаним шляхом."
+msgstr "Експортувати всі каталоги за вказаним шляхом."
 
 msgid "Export firewall rules."
 msgstr "Експорт правил брандмауера."
@@ -4099,7 +4100,7 @@ msgid "Failed to upload file."
 msgstr "Неможливо вивантажити файл."
 
 msgid "Failed to upload metadata backup file."
-msgstr "Неможливо завантажити резервний файл з метаданими."
+msgstr "Неможливо вивантажити резервний файл з метаданими."
 
 msgid "Failed to write file to disk."
 msgstr "Помилка запису файла на диск."
@@ -4181,7 +4182,7 @@ msgid "File system check"
 msgstr "Перевірка файлової системи"
 
 msgid "File upload stopped by extension."
-msgstr "Завантаження файла зупинено розширенням."
+msgstr "Вивантаження файла зупинено розширенням."
 
 msgid "Filename"
 msgstr "Ім'я файла"
@@ -4214,13 +4215,13 @@ msgid "Firmware upgrade check has been disabled."
 msgstr "Перевірка оновлення прошивки була заборонена."
 
 msgid "Firmware upload failed (out of memory?)"
-msgstr "Не вдалося завантажити прошивку (недостатньо пам'яті?)"
+msgstr "Не вдалося вивантажити прошивку (недостатньо пам'яті?)"
 
 msgid "Firmware upload failed with error message:"
-msgstr "Збій завантаження прошивки з повідомленням про помилку:"
+msgstr "Збій вивантаження прошивки з повідомленням про помилку:"
 
 msgid "Firmware uploading is not supported on this platform."
-msgstr "Ця платформа не підтримує завантаження прошивок."
+msgstr "Ця платформа не підтримує вивантаження прошивок."
 
 msgid "Firmware version"
 msgstr "Версія прошивки"
@@ -4238,7 +4239,7 @@ msgid "Follow"
 msgstr "Стежити"
 
 msgid "Force Delete"
-msgstr "Видалити в будь-якому випадку"
+msgstr "Примусове видалення"
 
 msgid "Force Operation"
 msgstr "примусова операція"
@@ -4347,7 +4348,7 @@ msgid "Generate password if left empty."
 msgstr "Пароль буде згенерований якщо залишити пустим."
 
 msgid "Get Target Info"
-msgstr "Отримати цільову інформацію"
+msgstr "Отримати інформацію про ціль"
 
 msgid "Get a list of available drivers"
 msgstr "Отримати список доступних драйверів"
@@ -4723,14 +4724,14 @@ msgstr ""
 msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr ""
-"Якщо це повідомлення зберігається, подивіться у системний журнал для "
-"отримання додаткової інформації."
+"Якщо це повідомлення все ще залишається, зверніться для системного журнала "
+"для отримання додаткової інформації."
 
 msgid ""
 "If this message persists take a look at the system log for more information."
 msgstr ""
-"Якщо це повідомлення все ще зберігається, зверніться для системного логу для "
-"подальшої інформації"
+"Якщо це повідомлення все ще залишається, зверніться для системного журнала "
+"для отримання додаткової інформації."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4761,13 +4762,12 @@ msgstr ""
 
 msgid "If this property is disabled, the file system cannot be mounted."
 msgstr ""
-"Якщо цей параметр заборонений, файлова система не може бути приєднана."
+"Якщо цей параметр вимкнений, файлова система не може бути змонтована."
 
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
-"Якщо цей параметр дозволений, знімки стану будуть відображені в каталозі "
-".zfs."
+"Якщо цей параметр увімкнутий, знімки будуть відображені в каталозі .zfs."
 
 msgid "If this property is set to off, the file system cannot be mounted."
 msgstr "Якщо вимкнено, файлову систему неможливо змонтувати."
@@ -5875,7 +5875,7 @@ msgid "Music"
 msgstr "Музика"
 
 msgid "Must be a number between 5 and 1000."
-msgstr "Має бути цифра від 5 до 1000"
+msgstr "Має бути числом від 5 до 1000."
 
 msgid "Must choose one"
 msgstr "Треба вибрати один з варіантів"
@@ -6113,7 +6113,7 @@ msgid "No fdisk information found."
 msgstr "Не знайдено ніякої інформації fdisk."
 
 msgid "No file was uploaded."
-msgstr "Файл не завантажено."
+msgstr "Файл не вивантажено."
 
 msgid "No new disk found."
 msgstr "Нових дисків не знайдено."
@@ -6137,7 +6137,7 @@ msgid "No pools have been selected"
 msgstr "Немає обраних пулів"
 
 msgid "No records found."
-msgstr "Не знайдено записів"
+msgstr "Не знайдено записів."
 
 msgid "No softraid-formatted disks available."
 msgstr "Немає доступних відформатованих SoftRAID дисків."
@@ -6467,7 +6467,7 @@ msgid "Package is already installed."
 msgstr "Пекет вже встановлений."
 
 msgid "Package upload failed (out of memory?)"
-msgstr "Відмова завантаження пакета (недостатньо пам'яті?)"
+msgstr "Відмова вивантаження пакета (недостатньо пам'яті?)"
 
 msgid "Packages"
 msgstr "Пакети"
@@ -7177,7 +7177,7 @@ msgid "Record is unlocked"
 msgstr "Запис розблокований"
 
 msgid "Recurse into directories."
-msgstr "Рекурсивно для директорій"
+msgstr "Рекурсивно для каталогів."
 
 msgid "Recursive"
 msgstr "Рекурсивно"
@@ -7644,7 +7644,7 @@ msgid "Script"
 msgstr "Скрипт"
 
 msgid "Script has been uploaded."
-msgstr "Скріпт був завантажений."
+msgstr "Скріпт був вивантажений."
 
 msgid "Scrub a pool"
 msgstr "Перевірка пулу"
@@ -7840,7 +7840,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Моніторинг, технологія аналізу і звітності"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Розклад самотестування"
 
 msgid "Send Buffer"
 msgstr "Буфер Відправлення"
@@ -8711,7 +8711,7 @@ msgid "The UPS identifier and IP address"
 msgstr "Ідентифікатор та IP адреса ДБЖ"
 
 msgid "The UUID of the record."
-msgstr ""
+msgstr "UUID запису."
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID повинно бути між 1 і 4094."
@@ -8917,7 +8917,7 @@ msgid "The configuration could not be restored."
 msgstr "Конфігурація не може бути відновлена."
 
 msgid "The configuration could not be restored. No file was uploaded!"
-msgstr "Конфігурація не може бути відновлена. Файл не завантажено!"
+msgstr "Конфігурація не може бути відновлена. Файл не вивантажено!"
 
 msgid "The configuration has been changed."
 msgstr "Конфігурація була змінена."
@@ -9109,7 +9109,7 @@ msgid ""
 msgstr "Ім'я хоста може містити лише символи a-z, A-Z і 0-9, - , _ і ."
 
 msgid "The identifier reported as unknown by smartctl including brackets."
-msgstr ""
+msgstr "Ідентифікатор повідомляється smartctl як невідомий включаючи дужки."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr ""
@@ -9173,7 +9173,8 @@ msgstr "Максимальне число клієнтів повинно бут
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
-msgstr "Максимальна швидкість скачування в KiB/s. Пусте поле - без обмежень."
+msgstr ""
+"Максимальна швидкість завантаження в KiB/s. Пусте поле означає без обмежень."
 
 msgid "The maximum idle time must be a number."
 msgstr "Максимальний час простою повинен бути числом."
@@ -9186,7 +9187,8 @@ msgstr ""
 "використовувати будь-який порт)."
 
 msgid "The maximum upload bandwith in KB/s. An empty field means infinity."
-msgstr "Максимальна швидкість закачування в KB/s. Пусте поле - без обмежень."
+msgstr ""
+"Максимальна швидкість вивантаження в KB/s. Пусте поле означає без обмежень."
 
 msgid ""
 "The method can be accepted by the target. Auto means both none and "
@@ -9442,12 +9444,12 @@ msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form."
 msgstr ""
-"Завантажений файл перевищує директиву MAX_FILE_SIZE, яка була вказана в HTML "
+"Вивантажений файл перевищує директиву MAX_FILE_SIZE, яка була вказана в HTML "
 "формі."
 
 msgid ""
 "The uploaded file exceeds the upload_max_filesize directive in php.ini."
-msgstr "Завантажений файл перевищує директиву upload_max_filesize в php.ini."
+msgstr "Вивантажений файл перевищує директиву upload_max_filesize в php.ini."
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Файл був лише частково вивантежний."
@@ -9472,7 +9474,7 @@ msgid "There are too many additional groups."
 msgstr "Забагато додаткових груп."
 
 msgid "There is no error, the file uploaded with success."
-msgstr "Файл завантажено без помилок."
+msgstr "Файл вивантажено без помилок."
 
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
@@ -10104,7 +10106,7 @@ msgstr "Щоб використовувати Active Directory служба CIFS
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
-"Щоб використовувати піддиректорії, ви повинні змонтувати кожну директорію. "
+"Щоб використовувати підкаталоги, ви повинні змонтувати кожний каталог. "
 "(напр. %s)"
 
 msgid "Toggle Mode"
@@ -10396,7 +10398,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "Пристрої USB Mass Storage"
 
 msgid "UTF-8 Only"
 msgstr "тільки UTF-8"
@@ -11195,7 +11197,7 @@ msgid "and"
 msgstr "та"
 
 msgid "available"
-msgstr ""
+msgstr "доступний"
 
 msgid "available of"
 msgstr "доступно з"
@@ -11230,7 +11232,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "найбільше значення низької напруги для перемикання що встановлюється"
 
 msgid "hidden"
-msgstr ""
+msgstr "прихований"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI ініціатор"
@@ -11343,4 +11345,4 @@ msgid "used of"
 msgstr "використано з"
 
 msgid "visible"
-msgstr ""
+msgstr "видимий"
