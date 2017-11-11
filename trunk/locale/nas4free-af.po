@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"POT-Creation-Date: 2017-11-11 21:26+0000\n"
 "PO-Revision-Date: 2017-08-13 16:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-11 15:52+0000\n"
+"X-Launchpad-Export-Date: 2017-11-11 20:49+0000\n"
 "X-Generator: Launchpad (build 18505)\n"
 
 msgid " interfaces:"
@@ -210,6 +210,9 @@ msgstr "3 of meer skywe word benodig om 'n RAID-5 volume te bou."
 
 msgid "4KB wrapper"
 msgstr "4KG omhulsel"
+
+msgid "514"
+msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiket (tussen 1 en 4094)."
@@ -6717,9 +6720,16 @@ msgstr "Poort %ld woord reeds deur 'n ander toestel gebruik."
 msgid "Port Forwarding"
 msgstr ""
 
+msgid "Port number must be 514 or a number between 1024 and 49151."
+msgstr ""
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "Poort nommers moet in die strek tussed %d en %d wees."
+
+msgid ""
+"Port of the remote syslog server. Leave blank to use the default port."
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."

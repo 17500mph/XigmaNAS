@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-11-05 18:41+0000\n"
+"POT-Creation-Date: 2017-11-11 21:26+0000\n"
 "PO-Revision-Date: 2017-04-06 18:11+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-11 15:53+0000\n"
+"X-Launchpad-Export-Date: 2017-11-11 20:49+0000\n"
 "X-Generator: Launchpad (build 18505)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -194,6 +194,9 @@ msgstr "RAID-5 oluşturmak için 3 veya daha fazla disk gereklidir."
 
 msgid "4KB wrapper"
 msgstr "4KB yaması"
+
+msgid "514"
+msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiketi (1 ve 4094 arası)."
@@ -6353,8 +6356,15 @@ msgstr "%ld portunu başka bir hizmet kullanılıyor."
 msgid "Port Forwarding"
 msgstr ""
 
+msgid "Port number must be 514 or a number between 1024 and 49151."
+msgstr ""
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+msgid ""
+"Port of the remote syslog server. Leave blank to use the default port."
 msgstr ""
 
 #, php-format
