@@ -413,6 +413,13 @@ class properties_list extends properties {
 	public function get_options() {
 		return $this->v_options;
 	}
+	public function validate_option($option) {
+		if(array_key_exists($option,$this->get_options())):
+			return $option;
+		else:
+			return NULL;
+		endif;
+	}
 /**
  * Method to apply the default class filter to a filter name.
  * The filter is a regex to match any of the option array keys.
@@ -420,9 +427,8 @@ class properties_list extends properties {
  * @return object Returns $this.
  */
 	public function filter_use_default(string $filter_name = 'ui') {
-		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->set_filter_options(['default' => NULL,'regexp' => sprintf('/^(%s)$/',implode('|',array_keys($this->v_options)))],$filter_name);
+		$this->set_filter(FILTER_CALLBACK,$filter_name);
+		$this->set_filter_options([$this,'validate_option'],$filter_name);
 		return $this;
 	}
 }
