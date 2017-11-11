@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-05 18:41+0000\n"
-"PO-Revision-Date: 2017-10-20 17:00+0000\n"
+"PO-Revision-Date: 2017-11-10 17:23+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-08 10:26+0000\n"
-"X-Generator: Launchpad (build 18493)\n"
+"X-Launchpad-Export-Date: 2017-11-11 15:53+0000\n"
+"X-Generator: Launchpad (build 18505)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -22,7 +22,7 @@ msgstr " a fost alocat la "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -50,7 +50,7 @@ msgstr "%d ani"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% din %s"
 
 #, php-format
 msgid "%dB / block"
@@ -70,7 +70,7 @@ msgstr "%s există deja."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s disponibil din %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -86,7 +86,7 @@ msgstr "%s este prea lung."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s din %s"
 
 #, php-format
 msgid "%s on %s"
@@ -94,7 +94,7 @@ msgstr "%s pe %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s utilizat din %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -748,7 +748,7 @@ msgid "Allow New Files"
 msgstr "Permite fișiere noi"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Permite porturi seriale"
 
 msgid "Allow TLS connections only."
 msgstr "Permite doar conexiuni TLS."
@@ -757,7 +757,7 @@ msgid "Allow USB"
 msgstr "Permite USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Permite porturi seriale USB"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permite accesul la sistem pentru conturile fără parolă."
@@ -1219,7 +1219,7 @@ msgid "Battery voltage"
 msgstr "Tensiune acumulator"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Atenție la activarea acestor opțiuni"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr "Înainte - Fișierele vor fi șterse înainte de începerea transferului."
@@ -1236,7 +1236,7 @@ msgid "Best available"
 msgstr "Cel mai bun disponibil"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "Prefix binar"
 
 msgid "Bind DN"
 msgstr "DN legare"
@@ -1334,7 +1334,7 @@ msgid "Browseable"
 msgstr "Navigabil"
 
 msgid "Button Location"
-msgstr ""
+msgstr "Localizare buton"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr "Implicit, doar fișierele existente deja pot fi încărcate."
@@ -2826,10 +2826,13 @@ msgstr "Afișare istoric comenzi ZFS"
 msgid ""
 "Display action buttons in the scrollable area instead of the footer area."
 msgstr ""
+"Afișare butoane de acțiune în zona de derulare în loc de zona de subsol."
 
 msgid ""
 "Display disk size values using binary prefixes instead of decimal prefixes."
 msgstr ""
+"Afișare dimensiune disc folosind prefixuri binare în loc de prefixuri "
+"zecimale."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3448,10 +3451,10 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Activare module Rsync selectate"
 
 msgid "Enable Server"
-msgstr ""
+msgstr "Activare server"
 
 msgid "Enable Setting"
-msgstr ""
+msgstr "Activare setări"
 
 msgid "Enable TLS connections."
 msgstr "Activare conexiuni TLS."
@@ -3638,9 +3641,13 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Activați această opțiune pentru a pune portul serial USB la dispoziția "
+"clienților."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Activați această opțiune pentru a pune portul serial la dispoziția "
+"clienților."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3828,10 +3835,10 @@ msgstr ""
 "sau utilizați butonul de selecție pentru calendar."
 
 msgid "Enter destination"
-msgstr ""
+msgstr "Introducere destinații"
 
 msgid "Enter facility name"
-msgstr ""
+msgstr "Introducere nume facilitate"
 
 msgid "Enter full name of the user."
 msgstr "Introducere nume complet utilizator."
@@ -3843,7 +3850,7 @@ msgid "Enter hostname or IP address."
 msgstr "Introducere nume sistem sau adresă IP."
 
 msgid "Enter level name"
-msgstr ""
+msgstr "Introducere nume nivel"
 
 msgid "Enter login name"
 msgstr "Introduceți numele pentru autentificare"
@@ -4080,7 +4087,7 @@ msgstr ""
 "(mod nesigur)!"
 
 msgid "Facility"
-msgstr ""
+msgstr "Facilitate"
 
 msgid "Factory Defaults"
 msgstr "Setări implicite"
@@ -4562,7 +4569,7 @@ msgid "Host Access Control"
 msgstr "Control acces gazdă"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Rasurse gazdă"
 
 msgid "Host resources"
 msgstr "Resurse sistem"
@@ -5295,7 +5302,7 @@ msgid "Leave this field empty to use default settings."
 msgstr "Lăsați cîmpul necompletat pentru setările implicite."
 
 msgid "Level"
-msgstr ""
+msgstr "Nivel"
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr "Nivel 1 - Nicxel minim consum cu mod standby (oprire platane disc)"
@@ -6943,10 +6950,10 @@ msgid "Properties"
 msgstr "Proprietăți"
 
 msgid "Protect"
-msgstr ""
+msgstr "Protejare"
 
 msgid "Protect Setting"
-msgstr ""
+msgstr "Protejare setări"
 
 msgid "Proto"
 msgstr "Protocol"
@@ -7921,7 +7928,7 @@ msgid "September"
 msgstr "Septembrie"
 
 msgid "Serial Console"
-msgstr ""
+msgstr "Consolă serială"
 
 msgid "Serial Number"
 msgstr "Număr serial"
@@ -11223,10 +11230,10 @@ msgid "and"
 msgstr "și"
 
 msgid "available"
-msgstr ""
+msgstr "disponibil"
 
 msgid "available of"
-msgstr ""
+msgstr "disponibil din"
 
 msgid "change failed."
 msgstr "schimbare eșuată."
@@ -11258,7 +11265,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "valoarea maximă punct de transfer tensiune joasă"
 
 msgid "hidden"
-msgstr ""
+msgstr "ascuns"
 
 msgid "iSCSI Initiator"
 msgstr "Inițiator iSCSI"
@@ -11320,13 +11327,13 @@ msgid "none"
 msgstr "nimic"
 
 msgid "of"
-msgstr ""
+msgstr "din"
 
 msgid "off"
-msgstr ""
+msgstr "dezactivat"
 
 msgid "on"
-msgstr ""
+msgstr "activat"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11359,7 +11366,7 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "syslog.conf"
-msgstr ""
+msgstr "syslog.conf"
 
 msgid "to"
 msgstr "către"
@@ -11368,7 +11375,7 @@ msgid "umount"
 msgstr "demontare"
 
 msgid "used of"
-msgstr ""
+msgstr "utilizat din"
 
 msgid "visible"
-msgstr ""
+msgstr "vizibil"
