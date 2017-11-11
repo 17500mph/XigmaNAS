@@ -60,6 +60,7 @@ $smartValueInfo = [
 	"175" => [False,"",gtext("Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100.")],
 	"176" => [False,"",gtext("Erase Fail Count (chip). This parameter indicates a number of flash erase command failures.")],
 	"177" => [False,"",gtext("Delta between most-worn and least-worn Flash blocks. It describes how good/bad the wearleveling of the SSD works on a more technical way.")],
+	"178" => [False,"",gtext("Pre-Fail' Attribute used at least in Samsung devices.")],
 	"179" => [False,"",gtext("Pre-Fail' Attribute used at least in Samsung devices.")],
 	"180" => [False,"",gtext("Pre-Fail' Attribute used at least in HP devices.")],
 	"181" => [False,"",gtext("Total number of Flash program operation failures since the drive was deployed.")],
