@@ -89,7 +89,6 @@ function show_header($title, $additional_header_content = null) {
 	echo '<body id="main">',PHP_EOL;
 	echo '<div id="spinner_main"></div>',PHP_EOL;
 	echo '<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>',PHP_EOL;
-	echo '<header id="g4h">',PHP_EOL;
 	if(!$_SESSION['g']['shrinkpageheader']):
 		echo '<header id="g4l">',PHP_EOL;
 		echo '<div id="header">',PHP_EOL;
