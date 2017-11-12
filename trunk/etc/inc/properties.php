@@ -53,7 +53,7 @@ abstract class properties {
 		$this->setOwner($owner);
 		return $this;
 	}
-	abstract public function filter_use_default(string $filter_name = 'ui');
+	abstract public function filter_use_default();
 	public function setOwner($owner = NULL) {
 		if(is_object($owner)):
 			$this->owner = $owner;
@@ -197,66 +197,134 @@ abstract class properties {
 		return NULL;
 	}
 /**
- * Method to apply a filter to an input elemet.
+ * Method to apply filter to an input element.
+ * A list of filters will be processed until a filter does not return NULL.
  * @param int $input_type Input type. Check the PHP manual for supported input types.
- * @param string $filter_name Name of the filter, default is 'ui'.
+ * @param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
  * @return mixed Filter result.
  */
-	public function validate_input(int $input_type = INPUT_POST,string $filter_name = 'ui') {
-		$filter_parameter = $this->get_filter($filter_name);
-		if(isset($filter_parameter)):
-			$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
-			switch($action):
-				case 3: return filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
-				case 2: return filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['options' => $filter_parameter['options']]);
-				case 1: return filter_input($input_type,$this->get_name(),$filter_parameter['filter'],$filter_parameter['flags']);
-				case 0: return filter_input($input_type,$this->get_name(),$filter_parameter['filter']);
-			endswitch;
+	public function validate_input(int $input_type = INPUT_POST,$filter = ['ui']) {
+		$result = NULL;
+		$filter_names = [];
+		if(is_array($filter)):
+			$filter_names = $filter;
+		elseif(is_string($filter)):
+			$filter_names = [$filter];
 		endif;
-		return NULL;
+		foreach($filter_names as $filter_name):
+			if(is_string($filter_name)):
+				$filter_parameter = $this->get_filter($filter_name);
+				if(isset($filter_parameter)):
+					$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+					switch($action):
+						case 3:
+							$result = filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+							break;
+						case 2:
+							$result = filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+							break;
+						case 1:
+							$result = filter_input($input_type,$this->get_name(),$filter_parameter['filter'],$filter_parameter['flags']);
+							break;
+						case 0:
+							$result = filter_input($input_type,$this->get_name(),$filter_parameter['filter']);
+							break;
+					endswitch;
+				endif;
+				if(isset($result)):
+					break; // foreach
+				endif;
+			endif;
+		endforeach;
+		return $result;
 	}
 /**
- * Method to apply a filter to a value.
+ * Method to validate a value.
+ * A list of filters will be processed until a filter does not return NULL.
  * @param mixed $value The value to be tested.
- * @param string $filter_name Name of the filter, default is 'ui'.
+ * @param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
  * @return mixed Filter result.
  */
-	public function validate_value($value,string $filter_name = 'ui') {
-		$filter_parameter = $this->get_filter($filter_name);
-		if(isset($filter_parameter)):
-			$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
-			switch($action):
-				case 3: return filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
-				case 2: return filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
-				case 1: return filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
-				case 0: return filter_var($value,$filter_parameter['filter']);
-			endswitch;
+	public function validate_value($value,$filter = ['ui']) {
+		$result = NULL;
+		$filter_names = [];
+		if(is_array($filter)):
+			$filter_names = $filter;
+		elseif(is_string($filter)):
+			$filter_names = [$filter];
 		endif;
-		return NULL;
+		foreach($filter_names as $filter_name):
+			if(is_string($filter_name)):
+				$filter_parameter = $this->get_filter($filter_name);
+				if(isset($filter_parameter)):
+					$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+					switch($action):
+						case 3:
+							$result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+							break;
+						case 2:
+							$result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+							break;
+						case 1:
+							$result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+							break;
+						case 0:
+							$result = filter_var($value,$filter_parameter['filter']);
+							break;
+					endswitch;
+				endif;
+				if(isset($result)):
+					break; // foreach
+				endif;
+			endif;
+		endforeach;
+		return $result;
 	}
 /**
- * Method to apply a filter to an array variable. Index is the name.
+ * Method to validate an array value. Index is the name property of $this.
  * @param array $variable The variable to be tested.
- * @param string $filter_name Name of the filter, default is 'ui'.
+ * @param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
  * @return mixed Filter result.
  */
-	public function validate_array_element(array $variable,string $filter_name = 'ui') {
+	public function validate_array_element(array $variable,$filter = ['ui']) {
+		$result = NULL;
+		$filter_names = [];
+		if(is_array($filter)):
+			$filter_names = $filter;
+		elseif(is_string($filter)):
+			$filter_names = [$filter];
+		endif;
 		if(array_key_exists($this->get_name(),$variable)):
 			$value = $variable[$this->get_name()];
 		else:
 			$value = NULL;
 		endif;
-		$filter_parameter = $this->get_filter($filter_name);
-		if(isset($filter_parameter)):
-			$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
-			switch($action):
-				case 3: return filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
-				case 2: return filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
-				case 1: return filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
-				case 0: return filter_var($value,$filter_parameter['filter']);
-			endswitch;
-		endif;
-		return NULL;
+		foreach($filter_names as $filter_name):
+			if(is_string($filter_name)):
+				$filter_parameter = $this->get_filter($filter_name);
+				if(isset($filter_parameter)):
+					$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+					switch($action):
+						case 3:
+							$result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+							break;
+						case 2:
+							$result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+							break;
+						case 1:
+							$result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+							break;
+						case 0:
+							$result = filter_var($value,$filter_parameter['filter']);
+							break;
+					endswitch;
+				endif;
+				if(isset($result)):
+					break; // foreach
+				endif;
+			endif;
+		endforeach;
+		return $result;
 	}
 }
 class properties_text extends properties {
@@ -291,7 +359,9 @@ class properties_text extends properties {
  * @param string $filter_name Name of the filter, default = 'ui'.
  * @return object Returns $this.
  */
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		//	not empty, does contain at least one printable character
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
 		$this->set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
@@ -306,7 +376,8 @@ class properties_ipaddress extends properties_text {
 		$this->set_size(60);
 		return $this;
 	}
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
 		$this->set_filter_options(['default' => NULL],$filter_name);
@@ -321,7 +392,8 @@ class properties_ipv4 extends properties_text {
 		$this->set_size(20);
 		return $this;
 	}
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV4,$filter_name);
 		$this->set_filter_options(['default' => NULL],$filter_name);
@@ -336,7 +408,8 @@ class properties_ipv6 extends properties_text {
 		$this->set_size(60);
 		return $this;
 	}
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV6,$filter_name);
 		$this->set_filter_options(['default' => NULL],$filter_name);
@@ -361,9 +434,8 @@ class properties_int extends properties_text {
 	public function get_max() {
 		return $this->v_max;
 	}
-	public function filter_use_default(string $filter_name = 'ui') {
-		$this->set_filter(FILTER_VALIDATE_INT,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$options = [];
 		$options['default'] = NULL;
 		$min = $this->get_min();
@@ -374,6 +446,8 @@ class properties_int extends properties_text {
 		if(isset($max)):
 			$options['max_range'] = $max;
 		endif;
+		$this->set_filter(FILTER_VALIDATE_INT,$filter_name);
+		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
 		$this->set_filter_options($options,$filter_name);
 		return $this;
 	}
@@ -393,7 +467,8 @@ class property_uuid extends properties_text {
 		$this->set_editableonmodify(false);
 		$this->set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
 	}
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
 		$this->set_filter_options(['default' => NULL,'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i'],$filter_name);
@@ -426,14 +501,16 @@ class properties_list extends properties {
  * @param string $filter_name Name of the filter, default = 'ui'.
  * @return object Returns $this.
  */
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_CALLBACK,$filter_name);
 		$this->set_filter_options([$this,'validate_option'],$filter_name);
 		return $this;
 	}
 }
 class properties_bool extends properties {
-	public function filter_use_default(string $filter_name = 'ui') {
+	public function filter_use_default() {
+		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_BOOLEAN,$filter_name);
 		$this->set_filter_flags(FILTER_NULL_ON_FAILURE,$filter_name);
 		$this->set_filter_options(['default' => false],$filter_name);
