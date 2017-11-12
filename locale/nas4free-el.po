@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-11 21:26+0000\n"
-"PO-Revision-Date: 2017-11-06 09:02+0000\n"
+"PO-Revision-Date: 2017-11-12 17:31+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-11 20:48+0000\n"
+"X-Launchpad-Export-Date: 2017-11-12 20:45+0000\n"
 "X-Generator: Launchpad (build 18505)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -222,7 +222,7 @@ msgid "4KB wrapper"
 msgstr "4KB wrapper"
 
 msgid "514"
-msgstr ""
+msgstr "514"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "ετικέτα 802.1Q VLAN  (μεταξύ  1 και 4094)."
@@ -6945,6 +6945,7 @@ msgstr "Προώθηση Θύρας"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr ""
+"Το νούμερο της θύρας πρέπει να είναι 514 ή ένα νούμερο μεταξύ 1024 και 49151."
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6953,6 +6954,8 @@ msgstr "Το νούμερο της θύρας πρέπει να είναι σε 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
 msgstr ""
+"Θύρα του απομακρυσμένου διακομιστή syslog. Αφήστε το κενό για να "
+"χρησιμοποιήσετε την προεπιλεγμένη θύρα."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
