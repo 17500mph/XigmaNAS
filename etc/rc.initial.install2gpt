@@ -60,7 +60,7 @@ $text = <<<EOD
 
 - Create GPT partition 1, for bootcode
 - Create GPT partition 2, using UFS, {$part1size}MB size for OS image
-- Create GPT partition 3, as SWAP, {$swapsize}MB or more
+- Create GPT partition 3, as SWAP partition
 - Create GPT partition 4, using UFS, for DATA
 - Uses a RAM disk to limit read/write access to the device
 
@@ -122,7 +122,7 @@ if(array_key_exists($harddrive,$disklist)):
 		$diskinfo = disks_get_diskinfo($disklist[$harddrive]['devicespecialfile']);
 		$available_swap_space = $diskinfo['mediasize_bytes'] ?? 0;
 		$available_swap_space -= (512 * 8 * 1024); // subtract 4MiB for size of partition 1 (boot) which is 512KiB
-		$available_swap_space -= ($partlayout[2]['size'] * 1024 * 1024); // subtract size of partition 2 (root)
+		$available_swap_space -= ($partlayout[1]['size'] * 1024 * 1024); // subtract size of partition 2 (root)
 		if($available_swap_space > 0):
 			$available_swap_space = intval($available_swap_space / (1024 * 1024)); // convert into MiB
 		else:
