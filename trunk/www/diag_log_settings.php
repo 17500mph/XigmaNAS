@@ -119,16 +119,10 @@ switch($page_mode):
 			endif;
 		endif;
 		$referrer = $property->port->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote']);
+		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],['ui','514','empty']);
 		if(is_null($sphere->row[$referrer])):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'514');
-			if(is_null($sphere->row[$referrer])):
-				$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'empty');
-				if(is_null($sphere->row[$referrer])):
-					$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'scalar');
-					$input_errors[] = $property->{$referrer}->get_message_error();
-				endif;
-			endif;
+			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'scalar');
+			$input_errors[] = $property->{$referrer}->get_message_error();
 		endif;
 		break;
 	case PAGE_MODE_POST:
@@ -170,16 +164,10 @@ switch($page_mode):
 		endif;
 		//	Port must be empty or a valid port number
 		$referrer = $property->port->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,['ui','514','empty']);
 		if(is_null($sphere->row[$referrer])):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'514');
-			if(is_null($sphere->row[$referrer])):
-				$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'empty');
-				if(is_null($sphere->row[$referrer])):
-					$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'scalar');
-					$input_errors[] = $property->{$referrer}->get_message_error();
-				endif;
-			endif;
+			$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'scalar');
+			$input_errors[] = $property->{$referrer}->get_message_error();
 		endif;
 		if(empty($input_errors)):
 			$a_referrer = [
