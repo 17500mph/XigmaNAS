@@ -1,6 +1,6 @@
 PORTNAME=	phpvirtualbox
 DISTVERSION=	5.1-1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	zoon1@nas4free.org
@@ -30,6 +30,9 @@ do-install:
 	    "-not -name *.orig -not -name config.php-example")
 	${INSTALL_DATA} ${WRKSRC}/config.php-example \
 	    ${STAGEDIR}${WWWDIR}/config.php.sample
+# Update translation & install as patching can fail
+	${INSTALL_DATA} -v ${FILESDIR}/fr.xml \
+	    ${STAGEDIR}${WWWDIR}/languages/fr.xml
 
 # NAS4Free install
 	@echo "install for ${NAS4FREE_ROOTFS}"
