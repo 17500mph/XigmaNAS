@@ -34,101 +34,99 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
+global $config_disks;
 // Get all physical disks.
 $a_phy_disk = array_merge((array)get_physical_disks_list());
-
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks')];
+$a_colwidth = ['5%','12%','11%','8%','10%','7%','7%','8%','5%','14%','7%','6%'];
+$n_colwidth = count($a_colwidth);
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
+$document->
+	add_area_tabnav()->
+		push()->add_tabnav_upper()->
+			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'),gtext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
+		pop()->add_tabnav_lower()->
+			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+//	create data area
+$content = $pagecontent->add_area_data();
+$tbody = $content->
+	add_table_data_selection()->
+		ins_colgroup_with_styles('width',$a_colwidth)->
+		push()->addTHEAD()->
+			ins_titleline(gtext('Detected Disks'),$n_colwidth)->
+			addTR()->
+				insTHwC('lhell',gtext('Device'))->
+				insTHwC('lhell',gtext('Device Model'))->
+				insTHwC('lhell',gtext("Description"))->
+				insTHwC('lhell',gtext('Size'))->
+				insTHwC('lhell',gtext('Serial Number'))->
+				insTHwC('lhell',gtext('Rotation Rate'))->
+				insTHwC('lhell',gtext('Transfer Rate'))->
+				insTHwC('lhell',gtext('S.M.A.R.T.'))->
+				insTHwC('lhell',gtext('Controller'))->
+				insTHwC('lhell',gtext('Controller Model'))->
+				insTHwC('lhell',gtext('Temperature'))->
+				insTHwC('lhebl',gtext('Status'))->
+		pop()->addTBODY();
+foreach($a_phy_disk as $disk):
+	$disk['desc'] = $config_disks[$disk['devicespecialfile']]['desc'];
+	$temperature = (false !== ($device_temperature = system_get_device_temp($disk['devicespecialfile']))) ? htmlspecialchars(sprintf('%s °C',$device_temperature)) : gtext('n/a');
+	if($disk['type'] == 'HAST'):
+		$role = $a_phy_disk[$disk['name']]['role'];
+		$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gtext('ONLINE') : gtext('MISSING'),$role);
+		$disk['size'] = $a_phy_disk[$disk['name']]['size'];
+	else:
+		$status = (0 == disks_exists($disk['devicespecialfile'])) ? gtext('ONLINE') : gtext('MISSING');
+	endif;
+	$matches = preg_split('/[\s\,]+/',$disk['smart']['smart_support']);
+	$smartsupport = '';
+	if(isset($matches[0])):
+		if(0 == strcasecmp($matches[0],'available')):
+			$smartsupport .= gtext('Available');
+			if(isset($matches[1])):
+				if(0 == strcasecmp($matches[1],'enabled')):
+					$smartsupport .= (', ' . gtext('Enabled'));
+				elseif(0 ==  strcasecmp($matches[1],'disabled')):
+					$smartsupport .= (', ' . gtext('Disabled'));
+				endif;
+			endif;
+		elseif(0 == strcasecmp($matches[0],'unavailable')):
+			$smartsupport .= gtext('Unavailable');
+		endif;
+	endif;
+	$tbody->
+		addTR()->
+			insTDwC('lcell',htmlspecialchars($disk['name']))->
+			insTDwC('lcell',htmlspecialchars($disk['model']))->
+			insTDwC('lcell',empty($disk['desc']) ?  gtext('n/a') : htmlspecialchars($disk['desc']))->
+			insTDwC('lcell',htmlspecialchars($disk['size']))->
+			insTDwC('lcell',empty($disk['serial']) ? gtext('n/a') : htmlspecialchars($disk['serial']))->
+			insTDwC('lcell',empty($disk['rotation_rate']) ? gtext('Unknown') : htmlspecialchars($disk['rotation_rate']))->
+			insTDwC('lcell',empty($disk['transfer_rate']) ? gtext('n/a') : htmlspecialchars($disk['transfer_rate']))->
+			insTDwC('lcell',$smartsupport)->
+			insTDwC('lcell',htmlspecialchars($disk['controller'] . $disk['controller_id']))->
+			insTDwC('lcell',htmlspecialchars($disk['controller_desc']))->
+			insTDwC('lcell',$temperature)->
+			insTDwC('lcebld',$status);
+endforeach;
+$document->render();
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-			<li class="tabact"><a href="diag_infos_disks.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Disks");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_disks_info.php"><span><?=gtext("Disks (Info)");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext("Swap");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext("Software RAID");?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-			<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext("CIFS/SMB");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_netstat.php"><span><?=gtext('Netstat');?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
-			<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
-	</ul></td></tr>
-	<tr>
-		<td class="tabcont">
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline2(gtext('Detected Disks'),12);?>
-				<tr>
-					<td width="5%" class="listhdrlr"><?=gtext("Device");?></td>
-					<td width="12%" class="listhdrr"><?=gtext("Device Model"); ?></td>
-					<td width="11%" class="listhdrr"><?=gtext("Description"); ?></td>
-					<td width="8%" class="listhdrr"><?=gtext("Size");?></td>
-					<td width="10%" class="listhdrr"><?=gtext("Serial Number"); ?></td>
-					<td width="7%" class="listhdrr"><?=gtext("Rotation Rate"); ?></td>
-					<td width="7%" class="listhdrr"><?=gtext("Transfer Rate"); ?></td>
-					<td width="8%" class="listhdrr"><?=gtext("S.M.A.R.T."); ?></td>
-					<td width="5%" class="listhdrr"><?=gtext("Controller"); ?></td>
-					<td width="14%" class="listhdrr"><?=gtext("Controller Model"); ?></td>
-					<td width="7%" class="listhdrr"><?=gtext("Temperature");?></td>
-					<td width="6%" class="listhdrr"><?=gtext("Status");?></td>
-				</tr>
-				<?php foreach ($a_phy_disk as $disk):?>
-					<?php (($temp = system_get_device_temp($disk['devicespecialfile'])) === FALSE) ? $temp = gtext("n/a") : $temp = sprintf("%s &deg;C", htmlspecialchars($temp));?>
-					<?php
-					if ($disk['type'] == 'HAST') {
-						$role = $a_phy_disk[$disk['name']]['role'];
-						$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gtext("ONLINE") : gtext("MISSING"), $role);
-						$disk['size'] = $a_phy_disk[$disk['name']]['size'];
-					} else {
-						$status = (0 == disks_exists($disk['devicespecialfile'])) ? gtext("ONLINE") : gtext("MISSING");
-					}
-					?>
-					<tr>
-						<td class="listlr"><?=htmlspecialchars($disk['name']);?></td>
-						<td class="listr"><?=htmlspecialchars($disk['model']);?>&nbsp;</td>
-						<?php global $config_disks;
-						$disk['desc'] = $config_disks[$disk['devicespecialfile']]['desc'];
-						?>
-						<td class="listr"><?=(empty($disk['desc']) ) === FALSE ? htmlspecialchars($disk['desc']) : gtext("n/a");?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($disk['size']);?></td>
-						<td class="listr"><?=(empty($disk['serial']) ) === FALSE ? htmlspecialchars($disk['serial']) : gtext("n/a");?>&nbsp;</td>
-						<td class="listr"><?=(empty($disk['rotation_rate']) ) === FALSE ? htmlspecialchars($disk['rotation_rate']) : gtext("Unknown");?>&nbsp;</td>
-						<td class="listr"><?=(empty($disk['transfer_rate']) ) === FALSE ? htmlspecialchars($disk['transfer_rate']) : gtext("n/a");?>&nbsp;</td>
-						<?php
-						$matches = preg_split("/[\s\,]+/", $disk['smart']['smart_support']);
-						$smartsupport = '';
-						if (isset($matches[0])) {
-							if (0 == strcasecmp($matches[0], 'available')) {
-								$smartsupport .= gtext('Available');
-								if (isset($matches[1])) {
-									if (0 == strcasecmp($matches[1], 'enabled')) {
-										$smartsupport .= (', ' . gtext('Enabled'));
-									} elseif (0 ==  strcasecmp($matches[1], 'disabled')) {
-										$smartsupport .= (', ' . gtext('Disabled'));
-									}
-								}
-							} elseif (0 == strcasecmp($matches[0], 'unavailable')) {
-								$smartsupport .= gtext('Unavailable');
-							}
-						}
-						?>
-						<td class="listr"><?=htmlspecialchars($smartsupport);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($disk['controller'].$disk['controller_id']);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($disk['controller_desc']);?>&nbsp;</td>
-						<td class="listr"><?=$temp;?>&nbsp;</td>
-						<td class="listbg"><?=$status;?>&nbsp;</td>
-					</tr>
-				<?php endforeach;?>
-			</table>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
