@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-11 21:26+0000\n"
-"PO-Revision-Date: 2017-10-31 09:05+0000\n"
+"PO-Revision-Date: 2017-11-16 16:51+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-12 20:45+0000\n"
+"X-Launchpad-Export-Date: 2017-11-19 09:13+0000\n"
 "X-Generator: Launchpad (build 18505)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -24,7 +24,7 @@ msgstr " era assegnata a "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -52,7 +52,7 @@ msgstr "%d anni"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% di %s"
 
 #, php-format
 msgid "%dB / block"
@@ -72,7 +72,7 @@ msgstr "%s esiste già."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s disponibile di %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -88,7 +88,7 @@ msgstr "%s è troppo lungo."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s di %s"
 
 #, php-format
 msgid "%s on %s"
@@ -96,7 +96,7 @@ msgstr "%s su %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s usato di %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -213,7 +213,7 @@ msgid "4KB wrapper"
 msgstr "4KB wrapper"
 
 msgid "514"
-msgstr ""
+msgstr "514"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tag (tra 1 e 4094)"
@@ -753,7 +753,7 @@ msgid "Allow New Files"
 msgstr "Permetti nuovi files"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Consenti porte seriali"
 
 msgid "Allow TLS connections only."
 msgstr "Consenti solo connessioni TLS."
@@ -762,7 +762,7 @@ msgid "Allow USB"
 msgstr "Consenti USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Consenti porte seriali USB"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Consentire l'accesso agli account dei client con nessuna password."
@@ -1227,7 +1227,7 @@ msgid "Battery voltage"
 msgstr "Voltaggio batteria"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Fare attenzione abilitando queste opzioni"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1248,7 +1248,7 @@ msgid "Best available"
 msgstr "Il migliore disponibile"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "Prefisso binario"
 
 msgid "Bind DN"
 msgstr "Bind DN"
@@ -1348,7 +1348,7 @@ msgid "Browseable"
 msgstr "Esplorabile"
 
 msgid "Button Location"
-msgstr ""
+msgstr "Posizione dei bottoni"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
@@ -3476,7 +3476,7 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Attiva moduli rsync selezionati"
 
 msgid "Enable Server"
-msgstr ""
+msgstr "Attiva server"
 
 msgid "Enable Setting"
 msgstr "Attiva settaggi"
@@ -3667,9 +3667,11 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Attiva questa opzione per rendere disponibile ai clients le porte seriali USB"
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Attiva questa opzione per rendere disponibile ai clients le porte seriali"
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3870,7 +3872,7 @@ msgid "Enter hostname or IP address."
 msgstr "Inserisci hostname o indirizzo IP"
 
 msgid "Enter level name"
-msgstr ""
+msgstr "Inserire un nome per il livello"
 
 msgid "Enter login name"
 msgstr "Inserire nome utente"
@@ -4106,7 +4108,7 @@ msgstr ""
 "giunga al client che chiede il trasferimento (insicuro!)."
 
 msgid "Facility"
-msgstr ""
+msgstr "Sede"
 
 msgid "Factory Defaults"
 msgstr "Impostazioni di fabbrica"
@@ -4277,7 +4279,7 @@ msgid "Follow"
 msgstr "Segui"
 
 msgid "Force Delete"
-msgstr ""
+msgstr "Forza l'eliminazione"
 
 msgid "Force Operation"
 msgstr "Forzare l'operazione"
@@ -4589,7 +4591,7 @@ msgid "Host Access Control"
 msgstr "Controllo Accesso al Host"
 
 msgid "Host Resources"
-msgstr ""
+msgstr "Risorse del host"
 
 msgid "Host resources"
 msgstr "Risorse dell'Host"
@@ -11279,10 +11281,10 @@ msgid "and"
 msgstr "e"
 
 msgid "available"
-msgstr ""
+msgstr "disponibile"
 
 msgid "available of"
-msgstr ""
+msgstr "disponibile di"
 
 msgid "change failed."
 msgstr "modifica falita."
@@ -11314,7 +11316,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "valore massimo impostabile del punto di trasferimento bassa tensione"
 
 msgid "hidden"
-msgstr ""
+msgstr "nascosto"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -11376,13 +11378,13 @@ msgid "none"
 msgstr "nessuno"
 
 msgid "of"
-msgstr ""
+msgstr "di"
 
 msgid "off"
-msgstr ""
+msgstr "spento"
 
 msgid "on"
-msgstr ""
+msgstr "acceso"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
@@ -11415,7 +11417,7 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "syslog.conf"
-msgstr ""
+msgstr "syslog.conf"
 
 msgid "to"
 msgstr "verso"
@@ -11427,4 +11429,4 @@ msgid "used of"
 msgstr ""
 
 msgid "visible"
-msgstr ""
+msgstr "visibile"
