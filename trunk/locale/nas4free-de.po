@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-11-11 21:26+0000\n"
-"PO-Revision-Date: 2017-11-17 14:39+0000\n"
+"PO-Revision-Date: 2017-11-19 18:36+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-19 09:13+0000\n"
+"X-Launchpad-Export-Date: 2017-11-19 18:48+0000\n"
 "X-Generator: Launchpad (build 18505)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -1166,7 +1166,7 @@ msgid "Backup"
 msgstr "Sicherung"
 
 msgid "Backup Configuration"
-msgstr "Sicherungskonfiguration"
+msgstr "Einstellungen für die Sicherung"
 
 msgid "Backup File"
 msgstr "Sicherungsdatei"
@@ -1587,7 +1587,7 @@ msgstr "Geheimes Geheimnis überprüfen"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
-msgstr "Prpfen Sie die FreeBSD Dokumentation für Details zu 'TCP Wrappers'"
+msgstr "Lesen Sie die FreeBSD Dokumentation für Details zu 'TCP Wrappers'"
 
 msgid "Check the list of available drivers"
 msgstr "Prüfen sie die Liste der verfügbaren Treiber"
@@ -2296,7 +2296,7 @@ msgstr ""
 "Bytes 3-4-5 = Maximale Löschanzahl (Big Endian)."
 
 msgid "Decryption Password"
-msgstr "Kennwortentschlüsselung"
+msgstr "Entschlüsselungskennwort"
 
 msgid "Dedup"
 msgstr "Deduplikation"
@@ -2790,7 +2790,7 @@ msgid "Disk Space Usage"
 msgstr "Verwendeter Speicherplatz"
 
 msgid "Disk Usage"
-msgstr "Festplattenauslastung"
+msgstr "Festplattenbelegung"
 
 msgid "Disk is locked"
 msgstr "Platte ist gesperrt"
@@ -3654,13 +3654,13 @@ msgstr ""
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
-"Aktiviere diese Einstellung, um serielle USB Host-Anschlüsse für die "
+"Aktivieren Sie diese Einstellung, um serielle USB Host-Anschlüsse für die "
 "Clienten verfügbar zu machen."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
-"Aktiviere diese Einstellung, um serialle Host-Anschlüsse für die Clienten "
-"verfügbar zu machen."
+"Aktivieren Sie diese Einstellung, um serielle Host-Anschlüsse für die "
+"Clienten verfügbar zu machen."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
@@ -3733,7 +3733,7 @@ msgid "Encryption Management"
 msgstr "Konfiguration der Verschlüsselungsparameter"
 
 msgid "Encryption Password"
-msgstr "Kennwortverschlüsselung"
+msgstr "Verschlüsselungspasswort"
 
 msgid "Encryption Settings"
 msgstr "Verschlüsselungseinstellungen"
@@ -4619,14 +4619,14 @@ msgstr ""
 "Dauer in Sekunden (max. 10 Tage)."
 
 msgid "I/O Statistics"
-msgstr "Copy text \t I/O Statistik"
+msgstr "I/O Statistik"
 
 msgid "I/O Timeout"
 msgstr "I/O Timeout"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
-msgstr "I/O Timeout in Sekunden (%d sind standard)."
+msgstr "I/O Timeout in Sekunden (%d sind Standard)."
 
 msgid "ID"
 msgstr "ID"
@@ -4692,7 +4692,7 @@ msgid "IPv6 addresses"
 msgstr "IPv6 Adressen"
 
 msgid "IRC Live Support"
-msgstr "Copy text \t IRC Live Support"
+msgstr "IRC Live Support"
 
 msgid "IRC NAS4Free"
 msgstr "IRC NAS4Free"
@@ -5132,15 +5132,16 @@ msgid ""
 "It is recommended to encrypt your configuration and store it in a safe "
 "location."
 msgstr ""
-"Es wird vorgeschlagen die Konfiguration zu verschlüsseln und diese an einem "
+"Es wird vorgeschlagen, die Konfiguration zu verschlüsseln und diese an einem "
 "sicheren Ort zu speichern."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
 msgstr ""
-"Es wird dringend empfohlen zur Sicherheit den Standard-Usernamen und das "
-"Standard-Passwort zu ändern und individuell neu festzulegen"
+"Es wird dringend empfohlen, zur Sicherheit den Standard-Usernamen und das "
+"Standard-Passwort für den Zugriff auf die Weboberfläche zu ändern und "
+"individuell neu festzulegen."
 
 msgid "JBOD"
 msgstr "JBOD"
@@ -5691,7 +5692,7 @@ msgstr "Maximale Anzahl der Verbindungen pro IP-Adresse (0 = unbegrenzt)."
 
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
-msgstr "Maximale Anzahl an Verbindungen pro Session (%d sind standard)."
+msgstr "Maximale Anzahl an Verbindungen pro Session (%d sind Standard)."
 
 #, php-format
 msgid ""
@@ -5924,7 +5925,7 @@ msgid "Must be a number between 5 and 1000."
 msgstr "Muss eine Zahl zwischen 5 und 1000 sein."
 
 msgid "Must choose one"
-msgstr "Es muss eines ausgewählt sein"
+msgstr "Es muss eine ausgewählt werden"
 
 msgid "Mutual CHAP"
 msgstr "Gegenseitiges CHAP"
@@ -6830,7 +6831,7 @@ msgid "Port Forwarding"
 msgstr "Port-Weiterleitung"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
-msgstr ""
+msgstr "Die Portnummer muss 514 oder eine Zahl zwischen 1024 und 49151 sein."
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6839,6 +6840,7 @@ msgstr "Portnummer muss zwischen %d und %d liegen."
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
 msgstr ""
+"Portnummer des entfernten Syslog Servers. Freilassen für den Standardport."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -6951,7 +6953,7 @@ msgid "Private key"
 msgstr "Privater Schlüssel"
 
 msgid "Process State"
-msgstr "Verfahrensstufe"
+msgstr "Prozessstatus"
 
 msgid "Processes"
 msgstr "Prozesse"
@@ -7385,7 +7387,7 @@ msgid "Resolve IP"
 msgstr "IP Adresse auflösen"
 
 msgid "Resolve IP addresses to hostnames."
-msgstr "IP Adresse auflösen nach em Hostnamen"
+msgstr "IP Adressen zu Hostnamen auflösen"
 
 msgid "Resource"
 msgstr "Ressource"
@@ -7800,7 +7802,7 @@ msgid "Select an encryption algorithm to use."
 msgstr "Wähle den Verschlüsselungsalgorithmus"
 
 msgid "Select configuration file:"
-msgstr "Wählen sie die Konfigurationsdatei aus."
+msgstr "Wählen Sie die Konfigurationsdatei aus."
 
 msgid "Select file system format."
 msgstr "Wählen Sie das Dateisystem Format"
@@ -7879,7 +7881,7 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "Gewählte Datei ist keine gültige ISO-Datei"
 
 msgid "Selected graph:"
-msgstr "Ausgewähltes Diagramm:"
+msgstr "Diagrammauswahl:"
 
 msgid "Selected interface:"
 msgstr "Ausgewählte Schnittstelle:"
@@ -8159,11 +8161,11 @@ msgstr "Größe"
 
 #, php-format
 msgid "Size of receive buffer (%d by default)."
-msgstr "Größe des 'Receive' Puffer (%d sind standard)."
+msgstr "Größe des 'Receive' Puffer (%d sind Standard)."
 
 #, php-format
 msgid "Size of send buffer (%d by default)."
-msgstr "Größe des 'Send' Puffer (%d sind standard)."
+msgstr "Größe des 'Send' Puffer (%d sind Standard)."
 
 msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
 msgstr "Angegebene Größe für den Initiator. (bis zu 8EiB=8388608TiB)."
@@ -9549,7 +9551,7 @@ msgid ""
 "clients. (maximum 15 characters)."
 msgstr ""
 "Die Arbeitsgruppe, in der der Server erscheinen wird, wenn Windows oder SMB "
-"Clients danach suchen.(Maximal 15 Zeichen)."
+"Clients danach suchen. (Maximal 15 Zeichen)."
 
 msgid "There are too many additional groups."
 msgstr "Fehler ! Es leigen zuviele zusätzliche Gruppen vor"
@@ -10140,7 +10142,7 @@ msgid "Time Synchronization"
 msgstr "Zeit-Abgleich"
 
 msgid "Time Zone"
-msgstr "Zeitserver"
+msgstr "Zeitzone"
 
 msgid "Time before the load will be rebooted"
 msgstr "Zeit bevor die Last neu gestartet wird"
@@ -10201,14 +10203,15 @@ msgstr ""
 "bitte die NUT (Network UPS Tools) Dokumentation"
 
 msgid "To increase CIFS performance try the following:"
-msgstr "Um die CIFS Leistung zu erhöhen versuchen Sie bitte Folgendes:"
+msgstr "Um die CIFS Leistung zu erhöhen, versuchen Sie bitte Folgendes:"
 
 msgid "To match any IP address leave this field empty."
 msgstr "Um alle IP Adressen abzudecken, lassen Sie dieses Feld frei."
 
 msgid "To use Active Directory the CIFS/SMB service will enabled as well."
 msgstr ""
-"Um Active Directory zu benutzen wird der CIFS/SMB Dienst ebenfalls aktiviert."
+"Um Active Directory zu benutzen, wird der CIFS/SMB Dienst ebenfalls "
+"aktiviert."
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
