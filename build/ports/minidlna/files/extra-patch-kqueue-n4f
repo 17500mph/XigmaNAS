@@ -318,7 +318,7 @@
 +		return 0;
 +	}
 +
-+	while( scanning )
++	while( GETFLAG(SCANNING_MASK) )
 +	{
 +		if( quitting )
 +			goto quitting;
