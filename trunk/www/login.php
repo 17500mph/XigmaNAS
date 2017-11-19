@@ -34,181 +34,160 @@
 require_once 'guiconfig.inc';
 
 unset($input_errors);
-if($_SERVER['REQUEST_METHOD'] === 'POST'):
-	if(is_validlogin($_POST['username'])):
+if(filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_CALLBACK,['options' =>	function($value) { return $value === 'POST'; }])):
+	$username = filter_input(INPUT_POST,'username',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/^[a-z\d\.\-_]+$/i']]);
+	$remote_addr = (isset($_SERVER['REMOTE_ADDR']) && is_string($_SERVER['REMOTE_ADDR'])) ? $_SERVER['REMOTE_ADDR'] : '';
+	if(isset($username)):
 		Session::start();
 		array_make_branch($config,'system');
-		if($_POST['username'] === $config['system']['username']):
-			if(password_verify($_POST['password'],$config['system']['password'])):
-				Session::initAdmin();
-				header('Location: index.php');
-				exit;
-			else:
-				write_log(sprintf('AUTH: Illegal password entererd by user: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+		if(isset($config['system']['username']) && is_string($config['system']['username']) && ($username === $config['system']['username'])):
+			$success = true;
+			if($success):
+				$password = (isset($_POST['password']) && is_string($_POST['password'])) ? $_POST['password'] : NULL;
+				if(isset($password)):
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: No password provided for user: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				if(isset($config['system']['password']) && is_string($config['system']['password'])):
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: No password configured for user: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				if(password_verify($password,$config['system']['password'])):
+					Session::initAdmin();
+					header('Location: index.php');
+					exit;
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: Invalid password entererd for user: %s from %s',$username,$remote_addr));
+				endif;
 			endif;
 		else:
-			$users = system_get_user_list();
-			if(false !== ($cnid = array_search_ex($_POST['username'],$users,'name'))):
-				$userv = $users[$cnid];
-				if(password_verify($_POST['password'],$userv['password'])):
-					array_make_branch($config,'access','user');
-					//	Check if it is a local user
-					if(false !== ($cnid = array_search_ex($userv['uid'],$config['access']['user'],'id'))):
-						//	Is user allowed to access the user portal?
-						if(isset($config['access']['user'][$cnid]['userportal'])):
-							Session::initUser($userv['uid'],$userv['name']);
-							header('Location: index.php');
-							exit;
-						else:
-							write_log(sprintf('AUTH: No access to user portal for user: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
-						endif;
-					else:
-						write_log(sprintf('AUTH: Username not found in configuration: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
-					endif;
+			$success = true;
+			if($success):
+				//	Check if username is listed as a system user
+				$users = system_get_user_list();
+				$system_user_row_id = array_search_ex($username,$users,'name');
+				if(false !== $system_user_row_id):
+					$system_user = $users[$system_user_row_id];
 				else:
-					write_log(sprintf('AUTH: Illegal password entererd by user: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+					$success = false;
+					write_log(sprintf('AUTH: Username not found: %s from %s',$username,$remote_addr));
 				endif;
-			else:
-				write_log(sprintf('AUTH: Username not found: %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+			endif;
+			if($success):
+				//	Check if UID column exists
+				if(array_key_exists('uid',$system_user)):
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: UID for username not found: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				//	Check if it is a local user
+				array_make_branch($config,'access','user');
+				$portal_user_row_id = array_search_ex($system_user['uid'],$config['access']['user'],'id');
+				if(false !== $portal_user_row_id):
+					$portal_user = $config['access']['user'][$portal_user_row_id];
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: Username not found in portal configuration: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				//	check if a password has been received
+				$password = (isset($_POST['password']) && is_string($_POST['password'])) ? $_POST['password'] : NULL;
+				if(isset($password)):
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: No password provided for user: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				//	Check if password has been configured for user
+				if(isset($system_user['password']) && is_string($system_user['password'])):
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: No password configured for user: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				//	Verify password
+				if(password_verify($password,$system_user['password'])):
+				else:
+					write_log(sprintf('AUTH: Invalid password entererd for user: %s from %s',$username,$remote_addr));
+				endif;
+			endif;
+			if($success):
+				//	Check if user is allowed to access the user portal
+				if(isset($portal_user['userportal'])):
+					Session::initUser($system_user['uid'],$system_user['name']);
+					header('Location: index.php');
+					exit;
+				else:
+					$success = false;
+					write_log(sprintf('AUTH: No portal access for username: %s from %s',$username,$remote_addr));
+				endif;
 			endif;
 		endif;
-		$input_errors = gtext('Invalid username or password.');
+		$input_errors = gtext('Invalid login credentials.');
 	else:
-		write_log(sprintf('AUTH: Username contains invalid character(s): %s from %s',$_POST['username'],$_SERVER['REMOTE_ADDR']));
+		write_log(sprintf('AUTH: Username contains invalid character(s): %s from %s',$username,$remote_addr));
 		$input_errors = gtext('Invalid username or password.');
 	endif;
 endif;
-header("Content-Type: text/html; charset=" . system_get_language_codeset());
-//	Menu items.
-//	Info and Manual
-$menu['info']['desc'] = gtext('Information & Manuals');
-$menu['info']['visible'] = true;
-$menu['info']['link'] = 'https://www.nas4free.org/wiki/doku.php';
-$menu['info']['menuitem']['visible'] = false;
-// Forum
-$menu['forum']['desc'] = gtext('Forum');
-$menu['forum']['link'] = 'https://www.nas4free.org/forums/';
-$menu['forum']['visible'] = true;
-$menu['forum']['menuitem']['visible'] = false;
-// IRC
-$menu['irc']['desc'] = gtext('IRC NAS4Free');
-$menu['irc']['visible'] = true;
-$menu['irc']['link'] = 'https://webchat.freenode.net/?channels=#nas4free';
-$menu['irc']['menuitem']['visible'] = false;
-// Donate
-$menu['donate']['desc'] = gtext('Donate');
-$menu['donate']['visible'] = true;
-$menu['donate']['link'] = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest';
-$menu['donate']['menuitem']['visible'] = false;
+$document = new_page([],'login.php','login');
+$pagecontent = $document->getElementById('pagecontent');
 
-function display_menu($menuid) {
-	global $menu;
+$loginwrap = $pagecontent->
+	addDIV(['class' => 'loginwrapper'])->
+		addDIV(['class' => 'tabcont','style' => 'border-radius:4px'])->
+			addDIV(['class' => 'loginwrap']);
 
-	// Is menu visible?
-	if (!isset($menu[$menuid]) || !$menu[$menuid]['visible'])
-		return;
+$loginwrap->
+	addElement('h1',['class' => 'logintitle'])->
+		push()->
+		addSPAN(['class' => 'iconfa-lock'])->
+			insIMG(['src' => '/images/lock.png','alt' => ''])->
+		pop()->
+		push()->
+		addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
+			insIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
+		pop()->
+		insSPAN(['class' => 'subtitle'],system_get_hostname());
 
-	$link = $menu[$menuid]['link'];
-	if ($link == '') $link = 'index.php';
-	echo "<li>\n";
-	echo "	<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">" . $menu[$menuid]['desc'] . "</a>\n";
-	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
+$loginwrap->
+	addDIV(['class' => 'loginwrapperinner'])->
+		push()->
+		addP(['class' => 'allocate'])->
+			insINPUT(['type' => 'text','id' => 'username','name' => 'username','placeholder' => gtext('Username'),'autofocus' => 'autofocus'])->
+		pop()->
+		push()->
+		addP(['class' => 'allocate'])->
+			insINPUT(['type' => 'password','id' => 'password','name' => 'password','placeholder' => gtext('Password')])->
+		pop()->
+		addP(['class' => 'allocate'])->
+			insINPUT(['class' => 'btn formbtn','type' => 'submit','value' => gtext('Login')]);
 
-	# Display menu items.
-	foreach ($menu[$menuid]['menuitem'] as $menuk => $menuv) {
-		# Is menu item visible?
-		if (!$menuv['visible']) {
-			continue;
-		}
-		if ("separator" !== $menuv['type']) {
-			# Display menuitem.
-			$link = $menuv['link'];
-			if ($link == '') $link = 'index.php';
-			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"" . $menuv['desc'] . "\">" . $menuv['desc']."</a>\n";
-		} else {
-			# Display separator.
-			echo "<span class=\"tabseparator\">&nbsp;</span>";
-		}
-	}
+$loginwrap->
+	addDIV(['id' => 'login_links'])->
+		addUL()->
+			push()->addLI()->
+				insA(['target' => '_blank','href' => 'https://www.nas4free.org/forums/'],gtext('Forum'))->
+			pop()->push()->addLI()->
+				insA(['target' => '_blank','href' => 'https://www.nas4free.org/wiki/doku.php'],gtext('Information & Manuals'))->
+			pop()->push()->addLI()->
+				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#nas4free'],gtext('IRC NAS4Free'))->
+			pop()->addLI()->
+				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest'],gtext('Donate'));
 
-	echo "	</div>\n";
-	echo "</li>\n";
-}
-header("Content-Type: text/html; charset=" . system_get_language_codeset());
-echo '<!DOCTYPE html>',"\n";
-?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
-<head>
-	<meta charset="<?=system_get_language_codeset();?>"/>
-	<meta name="format-detection" content="telephone=no"/>
-	<title><?=genhtmltitle($pgtitle ?? []);?></title>
-	<link href="css/gui.css" rel="stylesheet" type="text/css"/>
-	<link href="css/navbar.css" rel="stylesheet" type="text/css"/>
-	<link href="css/tabs.css" rel="stylesheet" type="text/css"/>
-	<link href="css/login.css" rel="stylesheet" type="text/css"/>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/gui.js"></script>
-<?php
-	if (isset($pglocalheader) && !empty($pglocalheader)) {
-		if (is_array($pglocalheader)) {
-			foreach ($pglocalheader as $pglocalheaderv) {
-		 		echo $pglocalheaderv;
-				echo "\n";
-			}
-		} else {
-			echo $pglocalheader;
-			echo "\n";
-		}
-	}
-?>
-</head>
-<body>
-<script type="text/javascript">
-//<![CDATA[
-window.onload=function() {
-	document.loginform.username.focus();
-}
-//]]>
-</script>
-	<header id="g4h"></header>
-	<main id="g4m">
-		<div class="loginwrapper">
-			<div class="tabcont" style="border-radius:4px;">
-				<div class="loginwrap">
-					<h1 class="logintitle"><span class="iconfa-lock"><img src="images/lock.png" alt=""></span><a title="www.<?=get_product_url();?>" href="https://www.<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
-						<span class="subtitle"><?=system_get_hostname();?>&nbsp;</span>
-					</h1>
-					<div class="loginwrapperinner">
-						<form id="loginform" action="login.php" method="post" name="loginform">
-							<p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gtext("Username");?>" value="<?=gtext("Username");?>"></p>
-							<p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gtext("Password");?>" value="password"></p>
-							<p class="allocate"><input class="btn formbtn" type="submit" value="<?=gtext("Login");?>" /></p>
-						</form>
-					</div>
-					<div id="login_links">
-						<ul>
-<?php
-							echo display_menu('forum');
-							echo display_menu('info');
-							echo display_menu('irc');
-							echo display_menu('donate');
-?>
-						</ul>
-					</div>
-<?php
-					if(!empty($input_errors)):
-?>
-						<div id="loginerror"><?=$input_errors;?></div>
-<?php
-					endif;
-?>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer id="g4f">
-		<div id="gapfooter"></div>
-		<div id="pagefooter"><span><?=htmlspecialchars(get_product_copyright());?></span></div>
-	</footer>
-</body>
-</html>
+if(!empty($input_errors)):
+	$loginwrap->
+		insDIV(['id' => 'loginerror'],$input_errors);
+endif;
+$document->render();
