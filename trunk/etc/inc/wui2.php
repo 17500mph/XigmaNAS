@@ -2698,7 +2698,7 @@ function new_page(array $page_title = [],string $action_url = NULL,string ...$op
 	$document->
 		loadHTML('<!DOCTYPE html>',LIBXML_HTML_NOIMPLIED);
 	$document->
-		addElement('html')->
+		addElement('html',['lang' => system_get_language_code()])->
 			ins_head($page_title,...$options)->
 			ins_body($page_title,$action_url,...$options);
 	return $document;
