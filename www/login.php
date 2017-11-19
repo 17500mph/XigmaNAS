@@ -157,7 +157,7 @@ $loginwrap->
 		pop()->
 		push()->
 		addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
-			insIMG(['src' => '/images/header_logo.png','alt' => 'logo']);
+			insIMG(['src' => '/images/header_logo.png','alt' => 'logo'])->
 		pop()->
 		insSPAN(['class' => 'subtitle'],system_get_hostname());
 
