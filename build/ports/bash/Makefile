@@ -24,6 +24,7 @@ HELP_DESC=		Enable builtin help
 COLONBREAKSWORDS_EXTRA_PATCHES= ${PATCHDIR}/extrapatch-colonbreakswords
 
 GNU_CONFIGURE=  yes
+NO_PKG_REGISTER=yes
 USES=		  bison
 USE_GETTEXT=	  yes
 CONFIGURE_ARGS=	--without-bash-malloc \
