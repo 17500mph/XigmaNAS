@@ -1542,6 +1542,9 @@ trait co_DOMTools {
 	public function addA(array $attributes = [],string $value = NULL) {
 		return $this->addElement('a',$attributes,$value);
 	}
+	public function insA(array $attributes = [],string $value = NULL) {
+		return $this->insElement('a',$attributes,$value);
+	}
 	public function insCOL(array $attributes = []) {
 		return $this->insElement('col',$attributes);
 	}
@@ -2479,21 +2482,31 @@ EOJ;
 		endif;
 		return $output;
 	}
-	public function ins_head(array $page_title = [],bool $requires_datechooser = false) {
+	public function ins_head(array $page_title = [],string ...$options) {
+		$is_login = in_array('login',$options);
+		$is_datechooser = in_array('datechooser',$options);
+
 		$head = $this->addElement('head',['id' => 'head']);
-		$head->addElement('meta',['charset' => system_get_language_codeset()]);
-		$head->addElement('meta',['name' => 'format-detection','content' => 'telephone=no']);
-		$head->addElement('title',[],$this->clc_html_page_title($page_title));
-		$head->addElement('link',['href' => '/css/gui.css','rel' => 'stylesheet','type' => 'text/css']);
-		$head->addElement('link',['href' => '/css/navbar.css','rel' => 'stylesheet','type' => 'text/css']);
-		$head->addElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);	
-		$head->addElement('script',['type' => 'text/javascript','src' => '/js/jquery.min.js']);
-		$head->addElement('script',['type' => 'text/javascript','src' => '/js/gui.js']);
-		$head->addElement('script',['type' => 'text/javascript','src' => '/js/spinner.js']);
-		$head->addElement('script',['type' => 'text/javascript','src' => '/js/spin.min.js']);
-		if($requires_datechooser):
-			$head->addElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css']);
-			$head->addElement('script',['type' => 'text/javascript','src' => 'js/datechooser.js']);
+		$head->
+			insElement('meta',['charset' => system_get_language_codeset()])->
+			insElement('meta',['name' => 'format-detection','content' => 'telephone=no'])->
+			insElement('title',[],$this->clc_html_page_title($page_title))->
+			insElement('link',['href' => '/css/gui.css','rel' => 'stylesheet','type' => 'text/css'])->
+			insElement('link',['href' => '/css/navbar.css','rel' => 'stylesheet','type' => 'text/css'])->
+			insElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);	
+		if($is_login):
+			$head->
+				insElement('link',['href' => '/css/login.css','rel' => 'stylesheet','type' => 'text/css']);
+		endif;
+		$head->
+			insElement('script',['type' => 'text/javascript','src' => '/js/jquery.min.js'])->
+			insElement('script',['type' => 'text/javascript','src' => '/js/gui.js'])->
+			insElement('script',['type' => 'text/javascript','src' => '/js/spinner.js'])->
+			insElement('script',['type' => 'text/javascript','src' => '/js/spin.min.js']);
+		if($is_datechooser):
+			$head->
+				insElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css'])->
+				insElement('script',['type' => 'text/javascript','src' => 'js/datechooser.js']);
 		endif;
 		return $this;
 	}
@@ -2504,9 +2517,17 @@ EOJ;
 	 *	@param string $action_url If $action_url empty no form element will be created.
 	 *	@return DOMNode $this
 	 */
-	public function ins_body(array $page_title = [],string $action_url = NULL,bool $setenctype = false) {
+	public function ins_body(array $page_title = [],string $action_url = NULL,string ...$options) {
+		$is_login = in_array('login',$options);
+		$is_multipart = in_array('multipart',$options);
 		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
-		if($is_form):
+		if($is_login && $is_form):
+			$jdata = <<<'EOJ'
+$(window).on("load", function() {
+	$("#iform").submit(function() { spinner(); });
+});
+EOJ;
+		elseif($is_form):
 			$jdata = <<<'EOJ'
 $(window).on("load", function() {
 	$("#tabnav").on('click', function() { spinner(); });
@@ -2532,7 +2553,7 @@ EOJ;
 				'id' => 'iform',
 				'name' => 'iform'
 			];
-			if($setenctype):
+			if($is_multipart):
 				$form_attributes['enctype'] = 'multipart/form-data';
 			endif;
 			$flexcontainer = $body->addFORM($form_attributes)->addDIV(['id' => 'pagebodyflex']);
@@ -2541,11 +2562,13 @@ EOJ;
 		endif;
 		$flexcontainer->addDIV(['id' => 'spinner_main']);
 		$flexcontainer->addDIV(['id' => 'spinner_overlay','style' => 'display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;']);
-		if($is_form):
+		if(!$is_login && $is_form):
 			$flexcontainer->addDIV(['id' => 'formextension'])->ins_authtoken();
 		endif;
-		$flexcontainer->ins_header_logo();
-		$flexcontainer->ins_header($page_title);
+		if(!$is_login):
+			$flexcontainer->ins_header_logo();
+			$flexcontainer->ins_header($page_title);
+		endif;
 		$flexcontainer->ins_main();
 		$flexcontainer->ins_footer();
 		$flexcontainer->addJavascript($jdata);
@@ -2670,15 +2693,14 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 }
 interface ci_DOM {
 }
-function new_page(array $page_title = [],string $action_url = NULL) {
+function new_page(array $page_title = [],string $action_url = NULL,string ...$options) {
 	$document = new co_DOMDocument();
-	
 	$document->
-		loadHTML('<!DOCTYPE HTML>',LIBXML_HTML_NOIMPLIED);
+		loadHTML('<!DOCTYPE html>',LIBXML_HTML_NOIMPLIED);
 	$document->
 		addElement('html')->
-			ins_head($page_title)->
-			ins_body($page_title,$action_url);
+			ins_head($page_title,...$options)->
+			ins_body($page_title,$action_url,...$options);
 	return $document;
 }
 ?>
