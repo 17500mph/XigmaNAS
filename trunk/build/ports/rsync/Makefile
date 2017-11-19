@@ -16,6 +16,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${PORTNAME}-patches-${PORTVERSION}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=	yes
+NO_PKG_REGISTER=yes
 CONFIGURE_ARGS+=		--disable-debug \
 							--enable-ipv6 \
 							--with-rsyncd-conf=/var/etc/rsyncd.conf \
