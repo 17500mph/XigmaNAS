@@ -31,27 +31,33 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once("session.inc");
+require_once 'session.inc';
 
 Session::start();
 
 // Check if session is valid
-if (!Session::isLogin()) {
+if(!Session::isLogin()):
 	header('Location: login.php');
 	exit;
-}
+endif;
+
+if(array_key_exists('SERVER_PROTOCOL',$_SERVER) && is_string($_SERVER['SERVER_PROTOCOL'])):
+	$server_protocol = htmlspecialchars($_SERVER['SERVER_PROTOCOL']);
+else:
+	$server_protocol = 'HTTP/1.0';
+endif;
 
 // Check page permission
-if (!Session::isAdmin() && (!isset($pgperm['allowuser']) || !$pgperm['allowuser'])) {
-	header('HTTP/1.0 403 Forbidden');
+if(!Session::isAdmin() && (!isset($pgperm['allowuser']) || !$pgperm['allowuser'])):
+	header(sprintf('%s 403 Forbidden',$server_protocol));
 	header('Status: 403 Forbidden');
 	echo <<<EOD
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
 		<title>403 - Forbidden</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>
 	<body>
 		<h1>403 - Forbidden</h1>
@@ -60,28 +66,28 @@ if (!Session::isAdmin() && (!isset($pgperm['allowuser']) || !$pgperm['allowuser'
 EOD;
 	Session::destroy();
 	exit;
-}
+endif;
 
 // Check if request is valid and authorized
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if (!isset($_POST['authtoken']) || !Session::isValidAuthToken($_POST['authtoken'])) {
-		header('HTTP/1.0 401 Unauthorized');
+if($_SERVER['REQUEST_METHOD'] === 'POST'):
+	if(!isset($_POST['authtoken']) || !Session::isValidAuthToken($_POST['authtoken'])):
+		header(sprintf('%s 401 Unauthorized',$server_protocol));
 		header('Status: 401 Unauthorized');
-		echo <<<EOD
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+		echo <<<EOH
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
 		<title>401 - Unauthorized</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	<body>
 		<h1>401 - Unauthorized</h1>
 	</body>
 </html>
-EOD;
+EOH;
 		Session::destroy();
 		exit;
-	}
-}
+	endif;
+endif;
 ?>
