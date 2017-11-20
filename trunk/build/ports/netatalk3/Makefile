@@ -19,6 +19,7 @@ USES=           bdb:5+ gettext gmake iconv libtool perl5 pkgconfig shebangfix ss
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 #USE_RC_SUBR=	netatalk
+SHEBANG_GLOB=   afpstats
 
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PREFIX}/etc \
 			--with-libgcrypt-dir=${LOCALBASE} \
