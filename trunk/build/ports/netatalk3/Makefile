@@ -1,9 +1,10 @@
 PORTNAME=		netatalk
-PORTVERSION=	 3.1.11
-PORTREVISION=	 0
-CATEGORIES=	 net
-MASTER_SITES=	 SF
-PKGNAMESUFFIX=   4
+PORTVERSION=	3.1.11
+PORTREVISION=	1
+PORTEPOCH=	1
+CATEGORIES=	net
+MASTER_SITES=	SF
+PKGNAMESUFFIX=  3
 
 MAINTAINER=	zoon1@nas4free.org
 COMMENT=	File server for Mac OS X
@@ -13,7 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libevent.so:devel/libevent
 
-USES=           iconv gmake pkgconfig perl5 libtool tar:bzip2 bdb:5+ ssl
+USES=           bdb:5+ gettext gmake iconv libtool perl5 pkgconfig shebangfix ssl tar:bzip2
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
