@@ -100,7 +100,7 @@ $(window).on("load",function() {
 	</ul></td></tr>
 </tbody></table>
 <form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_settings">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
@@ -110,14 +110,16 @@ $(window).on("load",function() {
 			html_separator2(1);
 ?>
 		</thead>
-		<tbody><tr><td>
+		<tbody class="donothighlight"><tr><td>
 			<select id="log" class="formfld" name="log">
 <?php 
 				foreach($loginfo as $loginfo_key => $loginfo_val):
 					if(false !== $loginfo_val['visible']):
-?>
-						<option value="<?=$loginfo_key;?>" <?php if($loginfo_key == $log) echo 'selected="selected"';?>><?=$loginfo_val['desc'];?></option>
-<?php
+						echo '<option value="',$loginfo_key,'"';
+						if($loginfo_key == $log):
+							echo ' selected="selected"';
+						endif;
+						echo '>',$loginfo_val['desc'],'</option>';
 					endif;
 				endforeach;
 ?>
@@ -134,20 +136,34 @@ $(window).on("load",function() {
 ?>
 		</td></tr></tbody>
 	</table>
-	<table class="area_data_settings">
+	<table class="area_data_selection">
+<?php
+		if(is_array($loginfo[$log])):
+			echo '<colgroup>';
+			foreach($loginfo[$log]['columns'] as $column_key => $column_val):
+				echo '<col style="width:',$column_val['width'],'">';
+			endforeach;
+			echo '</colgroup>';
+		endif;
+?>
+		
 		<thead>
 <?php
 			$columns = 0;
 			$column_header = [];
 			if(is_array($loginfo[$log])):
 				$columns = count($loginfo[$log]['columns']);
+				echo '<th class="gap" colspan="',$columns,'"></th>',PHP_EOL;
+				html_titleline2(gtext('Log'),$columns);
+				echo '<tr>',PHP_EOL;
 				foreach($loginfo[$log]['columns'] as $column_key => $column_val):
-					$column_header[] = sprintf('<td %1$s class="%2$s">%3$s</td>',$column_val['param'],$column_val['hdrclass'],$column_val['title']);
+					echo sprintf('<th class="%1$s" %2$s>%3$s</th>',$column_val['hdrclass'],$column_val['param'],$column_val['title']),PHP_EOL;
 				endforeach;
+				echo '</tr>',PHP_EOL;
+			else:
+				echo '<th class="gap"></th>',PHP_EOL;
+				html_titleline2(gtext('Log'),1);
 			endif;
-			html_separator2($columns);
-			html_titleline2(gtext('Log'),$columns);
-			echo '<tr>',implode(PHP_EOL,$column_header),'</tr>',PHP_EOL;
 ?>
 		</thead>
 		<tbody>
@@ -167,7 +183,7 @@ $(window).on("load",function() {
 					endif;
 					echo '<tr>',PHP_EOL;
 						foreach ($loginfo[$log]['columns'] as $column_key => $column_val):
-							echo sprintf('<td %1$s class="%2$s">%3$s</td>',$column_val['param'],$column_val['class'],htmlspecialchars($matches[$column_val['pmid']]));
+							echo sprintf('<td class="%1$s" %2$s>%3$s</td>',$column_val['class'],$column_val['param'],htmlspecialchars($matches[$column_val['pmid']]));
 						endforeach;
 					echo '</tr>',PHP_EOL;
 				endforeach;
