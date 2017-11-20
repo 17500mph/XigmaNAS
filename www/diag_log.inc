@@ -55,9 +55,9 @@ $loginfo = [
 		'size' => '262144',
 		'pattern' => '/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => true,
@@ -68,9 +68,9 @@ $loginfo = [
 		"size" => '32768',
 		'pattern' => '/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => true,
@@ -81,9 +81,9 @@ $loginfo = [
 		"size" => '32768',
 		'pattern' => '/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => true,
@@ -94,9 +94,9 @@ $loginfo = [
 		"size" => '32768',
 		'pattern' => '/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => isset($config['ftpd']['mod_ban']['enable']),
@@ -106,8 +106,8 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(\S+\s+\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 2]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('Event'),'width' => '85%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 2]
 		]],
 	[
 		'visible' => true,
@@ -117,12 +117,12 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(\S+\s+\S+\s+\d+\s+\S+\s+\d+) ((\d+) (\S+) (\d+) (\S+) (a|b) (C|U|T|_) (o|i|d) (a|g|r) (\S+) (\S+) (0|1) (\S+) (c|i))$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('IP'),'hdrclass' => 'lhell','class' => 'lcell','param' => '','pmid' => 4],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => '','pmid' => 11],
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('IP'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => '','pmid' => 4],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => '','pmid' => 11],
 //		['title' => gtext('File'),'hdrclass' => 'lhell','class' => 'lcell','param' => '','pmid' => 6],
 //		['title' => gtext('Filesize'),'hdrclass' => 'lhell','class' => 'lcell','param' => '','pmid' => 5],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 2]
+			['title' => gtext('Event'),'width' => '65%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 2]
 		]],
 	[
 		'visible' => true,
@@ -133,9 +133,9 @@ $loginfo = [
 		"size" => '32768',
 		'pattern' => '/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => true,
@@ -146,9 +146,9 @@ $loginfo = [
 		"size" => '32768',
 		'pattern' => '/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('User'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('User'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => true,
@@ -158,7 +158,7 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(.*)$/',
 		'columns' => [
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
+			['title' => gtext('Event'),'width' => '100%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
 		]],
 	[
 		'visible' => true,
@@ -168,7 +168,7 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(.*)$/',
 		'columns' => [
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
+			['title' => gtext('Event'),'width' => '100%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
 		]],
 	[
 		'visible' => true,
@@ -178,7 +178,7 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(.*)$/',
 		'columns' => [
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
+			['title' => gtext('Event'),'width' => '100%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 1]
 		]],
 	[
 		'visible' => true,
@@ -188,9 +188,9 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^\[(.*?)\]\s+(.*?)\..*?:\d+:\s+.*?:\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('Who'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 2],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('Who'),'width' => '10%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 2],
+			['title' => gtext('Event'),'width' => '75%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 3]
 		]],
 	[
 		'visible' => true,
@@ -200,8 +200,8 @@ $loginfo = [
 		'type' => 'plain',
 		'pattern' => '/^(\S+\s+\S+)\s+\S+:\s+(.*)$/',
 		'columns' => [
-			['title' => gtext('Date & Time'),'hdrclass' => 'lhell','class' => 'lcell','param' => 'nowrap="nowrap"','pmid' => 1],
-			['title' => gtext('Event'),'hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 2]
+			['title' => gtext('Date & Time'),'width' => '15%','hdrclass' => 'lhell','class' => 'lcell','param' => 'style="white-space: nowrap;"','pmid' => 1],
+			['title' => gtext('Event'),'width' => '85%','hdrclass' => 'lhebl','class' => 'lcebl','param' => '','pmid' => 2]
 		]],
 ];
 function log_get_contents($logfile,$type) {
