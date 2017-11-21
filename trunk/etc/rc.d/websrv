@@ -262,7 +262,7 @@ EOF
 websrv_check()
 {
 	echo "Performing sanity check on ${name} configuration:"
-	eval "${command} ${command_args} -t"
+	eval "${command} ${command_args} -tt"
 }
 
 websrv_poststop()
