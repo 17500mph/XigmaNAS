@@ -69,17 +69,17 @@ else:
 	$a_service[] = ['desc' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
 endif;
 $pgtitle = [gtext('Status'),gtext('Services')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-<?php // Init spinner on submit for id form.?>
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 }); 
 //]]>
 </script>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
+<form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:70%">
@@ -88,7 +88,9 @@ $(window).on("load", function() {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'),4);?>
+<?php
+			html_titleline2(gtext('Overview'),4);
+?>
 			<tr>
 				<th class="lhell"><?=gtext('Service');?></th>
 				<th class="lhell"><?=gtext('Enabled');?></th>
@@ -97,41 +99,60 @@ $(window).on("load", function() {
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach($a_service as $r_service):?>
+<?php
+			foreach($a_service as $r_service):
+?>
 				<tr>
-					<?php
+<?php
 					$enable = isset($config[$r_service['config']]['enable']);
 					$status = rc_is_service_running($r_service['scriptname']);
-					?>
+?>
 					<td class="<?=$enable ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($r_service['desc']);?>&nbsp;</td>
 					<td class="<?=$enable ? 'lcelc' : 'lcelcd';?>">
-						<?php if($enable):?>
+<?php
+						if($enable):
+?>
 							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
-						<?php else:?>
+<?php
+						else:
+?>
 							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$enable ? 'lcelc' : 'lcelcd';?>">
-						<?php if(0 === $status):?>
+<?php
+						if(0 === $status):
+?>
 							<a title="<?=gtext('Running');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
-						<?php else:?>
+<?php
+						else:
+?>
 							<a title="<?=gtext('Stopped');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
-					<td class="lcebld">
+					<td class="<?=$enable ? 'lcebl' : 'lcebld';?>">
 						<table class="area_data_selection_toolbox"><tbody><tr>
-							<?php
+<?php
 							echo html_row_toolbox($r_service['link'],gtext('Modify Service'),'','',true,true);
-							?>
+?>
 							<td></td>
 							<td></td>
 						</tr></tbody></table>
 					</td>
 					
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 	</table>
-<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
