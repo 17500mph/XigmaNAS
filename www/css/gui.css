@@ -133,6 +133,7 @@ pre {
 	border-spacing: 0px; 
 	border-collapse: separate;
 	width: 100%;
+	table-layout: fixed;
 }
 .area_data_messages_col_tag {
 	width: 10%;
@@ -157,6 +158,7 @@ pre {
 	border-collapse: separate;
 	margin: 0px;
 	width: 100%;
+	table-layout: fixed;
 }
 .area_data_settings {
 	border: 0;
@@ -164,6 +166,7 @@ pre {
 	border-collapse: separate;
 	margin: 0px;
 	width: 100%;
+	table-layout: fixed;
 }
 .area_data_settings_col_tag {
 	width: 22%;
@@ -512,6 +515,7 @@ div#headerrlogo {
 	height: 100%;
 	width: 350px;
 	background-image: url("/images/header_rlogo.png");
+	margin-left: -350px;
 }
 div#headerrlogo .hostname {
 	font-size: 11px;
