@@ -271,3 +271,4 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
+?>
