@@ -39,7 +39,7 @@ $sphere_scriptname = basename(__FILE__);
 
 array_make_branch($config,'system','email');
 
-$gt_sendtestemailbuttonvalue = gtext('Send Test Email');
+
 $pconfig['from'] = $config['system']['email']['from'];
 $pconfig['server'] = $config['system']['email']['server'];
 $pconfig['port'] = $config['system']['email']['port'];
@@ -88,7 +88,7 @@ if($_POST):
 		$config['system']['email']['security'] = $_POST['security'];
 		$config['system']['email']['starttls'] = isset($_POST['starttls']) ? true : false;
 		$config['system']['email']['tls_certcheck'] = $_POST['tls_certcheck'];
-		$config['system']['email']['tls_trust_file'] = $_POST('tls_trust_file') ?? '';
+		$config['system']['email']['tls_trust_file'] = $_POST['tls_trust_file'] ?? '';
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
 		write_config();
@@ -99,24 +99,25 @@ if($_POST):
 			config_unlock();
 		endif;
 		// Send test email.
-		if(isset($_POST['SendTestEmail']) && $_POST['SendTestEmail']):
-//		if(stristr($_POST['Submit'], $gt_sendtestemailbuttonvalue)) {
-			$subject = sprintf(gtext('Test email from host: %s'), system_get_hostname());
-			$message = gtext('This email has been sent to validate your email configuration.');
-			$retval = @email_send($config['system']['email']['sendto'], $subject, $message, $error);
-			if(0 == $retval):
-				$savemsg = gtext('Test email successfully sent.');
-				write_log(sprintf('Test email successfully sent to: %s.', $config['system']['email']['sendto']));
-			else:
-				$failmsg = gtext('Failed to send test email.')
-					. ' '
-					. '<a href="' . 'diag_log.php' . '">'
-					. gtext('Please check the log files')
-					. '</a>.';
-				write_log(sprintf('Failed to send test email to: %s.', $config['system']['email']['sendto']));
+		if(isset($_POST['submit'])):
+			if($_POST['submit'] == 'sendtestemail'):
+				$subject = sprintf(gtext('Test email from host: %s'), system_get_hostname());
+				$message = gtext('This email has been sent to validate your email configuration.');
+				$retval = @email_send($config['system']['email']['sendto'], $subject, $message, $error);
+				if(0 == $retval):
+					$savemsg = gtext('Test email successfully sent.');
+					write_log(sprintf('Test email successfully sent to: %s.', $config['system']['email']['sendto']));
+				else:
+					$failmsg = gtext('Failed to send test email.')
+						. ' '
+						. '<a href="' . 'diag_log.php' . '">'
+						. gtext('Please check the log files')
+						. '</a>.';
+					write_log(sprintf('Failed to send test email to: %s.', $config['system']['email']['sendto']));
+				endif;
+			elseif($_POST['submit'] == 'save'):
+				$savemsg = get_std_save_message($retval);
 			endif;
-		else:
-			$savemsg = get_std_save_message($retval);
 		endif;
 	endif;
 endif;
@@ -259,8 +260,10 @@ $document->render();
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>" />
-		<input name="SendTestEmail" id="sendnow" type="submit" class="formbtn" value="<?=$gt_sendtestemailbuttonvalue;?>"/>
+<?php
+		echo html_button('save',gtext('Save'));
+		echo html_button('sendtestemail',gtext('Send Test Email'));
+?>
 	</div>
 <?php
 	include 'formend.inc';
