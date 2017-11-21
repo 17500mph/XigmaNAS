@@ -47,6 +47,7 @@ $pconfig['auth'] = isset($config['system']['email']['auth']);
 $pconfig['authmethod'] = $config['system']['email']['authmethod'];
 $pconfig['starttls'] = isset($config['system']['email']['starttls']);
 $pconfig['tls_certcheck'] = $config['system']['email']['tls_certcheck'];
+$pconfig['tls_trust_file'] = $config['system']['email']['tls_trust_file'] ?? '';
 $pconfig['security'] = $config['system']['email']['security'];
 $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
@@ -87,6 +88,7 @@ if($_POST):
 		$config['system']['email']['security'] = $_POST['security'];
 		$config['system']['email']['starttls'] = isset($_POST['starttls']) ? true : false;
 		$config['system']['email']['tls_certcheck'] = $_POST['tls_certcheck'];
+		$config['system']['email']['tls_trust_file'] = $_POST('tls_trust_file') ?? '';
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
 		write_config();
@@ -119,9 +121,9 @@ if($_POST):
 	endif;
 endif;
 $l_security = [
-	"none" => gtext('None'),
-	"ssl" => 'SSL',
-	"tls" => 'TLS'
+	'none' => gtext('None'),
+	'ssl' => 'SSL',
+	'tls' => 'TLS'
 ];
 $l_tls_certcheck = [
 	'tls_certcheck off' => gtext('Off'),
@@ -138,13 +140,14 @@ $l_authmethod = [
 	'on' => gtext('Best available')
 ];
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Setup')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 	auth_change();
 });
 function auth_change() {
@@ -184,8 +187,8 @@ $document->
 			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
 $document->render();
 ?>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;
@@ -195,37 +198,73 @@ $document->render();
 	if(!empty($failmsg)):
 		print_error_box($failmsg);
 	endif;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 			html_titleline2(gtext('System Email Settings'));
-			?>
+?>
 		</thead>
 		<tbody>
-			<?php
+<?php
 			html_inputbox2('from', gtext('From Email Address'), $pconfig['from'], gtext('From email address for sending system messages.'), true, 62);
 			html_inputbox2('sendto', gtext('To Email Address'), $pconfig['sendto'], gtext('Destination email address. Separate email addresses by semi-colon.'), true, 62);
 			html_inputbox2('server', gtext('SMTP Server'), $pconfig['server'], gtext('Outgoing SMTP mail server address.'), true, 62);
 			html_inputbox2('port', gtext('Port'), $pconfig['port'], gtext('The default SMTP mail server port, e.g. 25 or 587.'), true, 5);
-			html_combobox2('security', gtext('Security'), $pconfig['security'], $l_security, '', true);
-			html_checkbox2('starttls', gtext('TLS Mode'), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext('This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS.'), false);
-			html_combobox2('tls_certcheck', gtext('TLS Server Certificate Check'), $pconfig['tls_certcheck'], $l_tls_certcheck, gtext('Enable or disable checks of the server certificate.'), '', false);
+?>
+		</tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_separator2();
+			html_titleline2(gtext('SMTP Authentication'));
+?>
+		</thead>
+		<tbody>
+<?php
 			html_checkbox2('auth', gtext('Authentication'), !empty($pconfig['auth']) ? true : false, gtext("Enable SMTP authentication."), '', false, false, 'auth_change()');
 			html_inputbox2('username', gtext('Username'), $pconfig['username'], '', true, 40);
 			html_passwordconfbox2('password', 'passwordconf', gtext('Password'), $pconfig['password'], $pconfig['passwordconf'], '', true);
 			html_combobox2('authmethod', gtext('Authentication Method'), $pconfig['authmethod'], $l_authmethod, '', true);
-			?>
+?>
+		</tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_separator2();
+			html_titleline2(gtext('Transport Layer Security (TLS)'));
+?>
+		</thead>
+		<tbody>
+<?php
+			html_combobox2('security', gtext('Security'), $pconfig['security'], $l_security, '', true);
+			html_checkbox2('starttls', gtext('TLS Mode'), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext('This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS.'), false);
+			html_combobox2('tls_certcheck', gtext('TLS Server Certificate Check'), $pconfig['tls_certcheck'], $l_tls_certcheck, gtext('Enable or disable checks of the server certificate.'), '', false);
+			html_inputbox2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('This command activates strict server certificate verification. The filename must be the absolute path name of a file in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),false,60);
+?>
 		</tbody>
 	</table>
 	<div id="submit">
 		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>" />
 		<input name="SendTestEmail" id="sendnow" type="submit" class="formbtn" value="<?=$gt_sendtestemailbuttonvalue;?>"/>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';

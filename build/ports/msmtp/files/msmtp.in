@@ -24,9 +24,7 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 # Create msmtp.conf configuration
 /usr/local/bin/xml sel -t \
 	-o "account default" -n \
-	-i "string-length(//system/domain) > 0" \
-		-v "concat('domain ',//system/domain)" -n \
-	-b \
+	-i "string-length(//system/domain) > 0" -v "concat('domain ',//system/domain)" -n -b \
 	-v "concat('host ',//system/email/server)" -n \
 	-v "concat('port ',//system/email/port)" -n \
 	-o "protocol smtp" -n \
@@ -40,7 +38,8 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 		-o "tls on" -n \
 		-i "count(//system/email/starttls) > 0" -o "tls_starttls on" -n -b \
 		-i "count(//system/email/starttls) = 0" -o "tls_starttls off" -n -b \
-	-v "concat('',//system/email/tls_certcheck)" -n \
+		-i "string-length(//system/email/tls_certcheck) > 0" -v "concat('',//system/email/tls_certcheck)" -n -b \
+		-i "string-length(//system/email/tls_trust_file) > 0" -v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n -b \
 	-b \
 	-o "syslog LOG_MAIL" -n \
 	${configxml_file} | /usr/local/bin/xml unesc > ${msmtp_config}
