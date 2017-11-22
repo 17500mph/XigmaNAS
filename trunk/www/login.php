@@ -144,38 +144,39 @@ endif;
 $document = new_page([],'login.php','login');
 $pagecontent = $document->getElementById('pagecontent');
 
-$loginwrap = $pagecontent->
-	addDIV(['class' => 'loginwrapper'])->
-		addDIV(['class' => 'tabcont','style' => 'border-radius:4px'])->
-			addDIV(['class' => 'loginwrap']);
+$loginpagedata = $pagecontent->
+	addDIV(['class' => 'loginpageworkspace'])->
+		addDIV(['class' => 'loginpageframe'])->
+			addDIV(['class' => 'loginpagedata']);
 
-$loginwrap->
-	addElement('h1',['class' => 'logintitle'])->
+$loginpagedata->
+	addElement('header',['class' => 'lph'])->
 		push()->
-		addSPAN(['class' => 'iconfa-lock'])->
-			insIMG(['src' => '/images/lock.png','alt' => ''])->
+		addDIV(['class' => 'lphl'])->
+			push()->
+			addDIV(['class' => 'lphll'])->
+				insIMG(['src' => '/images/lock.png','alt' => ''])->
+			pop()->
+			addDIV(['class' => 'lphlr'])->
+				addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
+					insIMG(['src' => '/images/header_logo.png','alt' => 'logo'])->
 		pop()->
+		addDIV(['class' => 'lphh'])->
+			insDIV(['class' => 'hostname'],system_get_hostname());
+$loginpagedata->
+	addElement('main',['class' => 'lpm'])->
 		push()->
-		addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
-			insIMG(['src' => '/images/header_logo.png','alt' => 'logo'])->
-		pop()->
-		insSPAN(['class' => 'subtitle'],system_get_hostname());
-
-$loginwrap->
-	addDIV(['class' => 'loginwrapperinner'])->
-		push()->
-		addP(['class' => 'allocate'])->
+		addDIV(['class' => 'lpmi'])->
 			insINPUT(['type' => 'text','id' => 'username','name' => 'username','placeholder' => gtext('Username'),'autofocus' => 'autofocus'])->
 		pop()->
 		push()->
-		addP(['class' => 'allocate'])->
+		addDIV(['class' => 'lpmi'])->
 			insINPUT(['type' => 'password','id' => 'password','name' => 'password','placeholder' => gtext('Password')])->
 		pop()->
-		addP(['class' => 'allocate'])->
-			insINPUT(['class' => 'btn formbtn','type' => 'submit','value' => gtext('Login')]);
-
-$loginwrap->
-	addDIV(['id' => 'login_links'])->
+		addDIV(['class' => 'lpmi'])->
+			insINPUT(['class' => 'formbtn','type' => 'submit','value' => gtext('Login')]);
+$loginpagedata->
+	addElement('footer',['class' => 'lpf'])->
 		addUL()->
 			push()->addLI()->
 				insA(['target' => '_blank','href' => 'https://www.nas4free.org/forums/'],gtext('Forum'))->
@@ -185,9 +186,8 @@ $loginwrap->
 				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#nas4free'],gtext('IRC NAS4Free'))->
 			pop()->addLI()->
 				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest'],gtext('Donate'));
-
 if(!empty($input_errors)):
-	$loginwrap->
-		insDIV(['id' => 'loginerror'],$input_errors);
+	$loginpagedata->
+		insDIV(['class' => 'lpe'],$input_errors);
 endif;
 $document->render();
