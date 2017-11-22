@@ -31,8 +31,11 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 #navhdr {
-	background: black url("/images/navbar_default.png") center center repeat-x;
-	height: 30px;
+	background: gray;
+	background: -webkit-linear-gradient(gray, black, gray); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(gray, black, gray); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(gray, black, gray); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(gray, black, gray); /* Standard syntax */
 }
 #navhdr ul ul {
 	display: none;
@@ -47,8 +50,8 @@
 	position: relative;
 	display: inline-table;
 	margin: 0;
-	padding: 0px 0px 0px 25px;
-	line-height: 26px;
+	padding: 0px 25px;
+	z-index: 5;
 }
 #navhdr > ul:after {
 	content: "";
@@ -59,10 +62,15 @@
 	float: left;
 	font-weight: bold;
 	font-size: 13px;
+	position: relative;
 }
 #navhdr > ul > li:hover > a {
 /*	color and background of top menu when hovered */
-	background: transparent url(/images/navbar_active.png) center center repeat-x;
+	background: transparent;
+	background: -webkit-linear-gradient(gray, white, white, gray); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(gray, white, white, gray); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(gray, white, white, gray); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(gray, white, white, gray); /* Standard syntax */
 	color: black;
 }
 #navhdr > ul > li:hover > a > img {
@@ -73,7 +81,7 @@
 #navhdr > ul > li > a {
 	display: block;
 	text-decoration: none;
-	padding: 2px 11px;
+	padding: 5px 11px;
 	color: white;
 }
 #navhdr > ul > li > a > img {
@@ -92,6 +100,7 @@
 /*	max-width:225px; */
 	line-height: 12px;
 	list-style: none;
+	z-index: 10;
 }
 #navhdr ul ul li {
 	float: none; 
@@ -112,7 +121,10 @@
 	color: white;
 }
 #navhdr ul ul li a:hover {
-	background: transparent url(/images/navbar_active.png) center center repeat-x;
+	background: -webkit-linear-gradient(gray, white, white, gray); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(gray, white, white, gray); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(gray, white, white, gray); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(gray, white, white, gray); /* Standard syntax */
 	color: black;
 }
 #navhdr ul span.tabseparator {
