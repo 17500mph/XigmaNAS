@@ -164,7 +164,7 @@ $loginpagedata->
 		addDIV(['class' => 'lphh'])->
 			insDIV(['class' => 'hostname'],system_get_hostname());
 $loginpagedata->
-	addElement('main',['class' => 'lpm'])->
+	addDIV(['class' => 'lpm'])->
 		push()->
 		addDIV(['class' => 'lpmi'])->
 			insINPUT(['type' => 'text','id' => 'username','name' => 'username','placeholder' => gtext('Username'),'autofocus' => 'autofocus'])->
