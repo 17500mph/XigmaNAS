@@ -94,7 +94,7 @@ OPTIONS=	CLI "Build CLI version" on \
 		LINKTHR "Link thread lib (for threaded extensions)" on \
 		ZTS "Force Zend Thread Safety (ZTS) build" off
 
-CONFLICTS=	php56-* php70-*
+CONFLICTS=	php56-* php70-* php72-*
 
 .if defined(WITH_DTRACE)
 .if ${OSVERSION} < 900000
