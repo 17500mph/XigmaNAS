@@ -168,8 +168,7 @@ $loginpagedata->
 		push()->
 		addDIV(['class' => 'lpmi'])->
 			insINPUT(['type' => 'text','id' => 'username','name' => 'username','placeholder' => gtext('Username'),'autofocus' => 'autofocus'])->
-		pop()->
-		push()->
+		last()->
 		addDIV(['class' => 'lpmi'])->
 			insINPUT(['type' => 'password','id' => 'password','name' => 'password','placeholder' => gtext('Password')])->
 		pop()->
@@ -180,9 +179,9 @@ $loginpagedata->
 		addUL()->
 			push()->addLI()->
 				insA(['target' => '_blank','href' => 'https://www.nas4free.org/forums/'],gtext('Forum'))->
-			pop()->push()->addLI()->
+			last()->addLI()->
 				insA(['target' => '_blank','href' => 'https://www.nas4free.org/wiki/doku.php'],gtext('Information & Manuals'))->
-			pop()->push()->addLI()->
+			last()->addLI()->
 				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#nas4free'],gtext('IRC NAS4Free'))->
 			pop()->addLI()->
 				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest'],gtext('Donate'));
