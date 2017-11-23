@@ -2426,7 +2426,14 @@ EOJ;
 			'id' => $id
 		];
 		foreach($attributes as $key => $value):
-			$button_attributes[$key] = $value;
+			switch($key):
+				case 'class+':
+					$button_attributes['class'] += ' ' . $value;
+					break;
+				default:
+					$button_attributes[$key] = $value;
+					break;
+			endswitch;
 		endforeach;
 		$this->addElement($element,$button_attributes,$content);
 		return $this;
