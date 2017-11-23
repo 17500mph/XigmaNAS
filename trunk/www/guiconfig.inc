@@ -102,7 +102,7 @@ function render_ajax($data,$result = 0) {
 			$a = array_merge($a,['data' => $data]);
 		endif;
 	endif;
-	header("Content-Type: application/json; UTF-8\n");
+	header('Content-Type: application/json; charset=UTF-8');
 	echo json_encode($a);
 	exit;
 }
