@@ -78,7 +78,7 @@ function _download_header($filename,$filesize = 0) {
 	if ($filesize != 0):
 		header('Content-Length: ' . $filesize);
 	endif;
-	header('Content-Disposition: attachment; filename="' . $filename . '"');
+	header(sprintf('Content-Disposition: attachment; filename="%s"',$filename));
 	if($browser == 'IE'):
 		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 		header('Pragma: public');
