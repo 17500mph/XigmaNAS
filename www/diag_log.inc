@@ -247,14 +247,13 @@ function log_download($loginfo) {
 				else:
 					$content = $gt_logisempty;
 				endif;
-				$fs = strlen($content);
-				header("Content-Type: application/octet-stream");
-				header("Content-Disposition: attachment; filename={$loginfo['filename']}");
-				header("Content-Length: {$fs}");
-				header("Pragma: hack");
+				header('Content-Type: application/octet-stream');
+				header(sprintf('Content-Disposition: attachment; filename="%s"',$loginfo['filename']));
+				header(sprintf('Content-Length: %d',strlen($content)));
+				header('Pragma: hack');
 				echo $content;
 				break;
-			case "plain":
+			case 'plain':
 				if(file_exists($loginfo['logfile'])):
 					if(false === ($content = file_get_contents($loginfo['logfile']))):
 						$content = $gt_logisempty;
@@ -265,11 +264,10 @@ function log_download($loginfo) {
 				if(empty($content)):
 					$content = $gt_logisempty;
 				endif;
-				$fs = strlen($content);
-				header("Content-Type: application/octet-stream");
-				header("Content-Disposition: attachment; filename={$loginfo['filename']}");
-				header("Content-Length: {$fs}");
-				header("Pragma: hack");
+				header('Content-Type: application/octet-stream');
+				header(sprintf('Content-Disposition: attachment; filename="%s"',$loginfo['filename']));
+				header(sprintf('Content-Length: %d',strlen($content)));
+				header('Pragma: hack');
 				echo $content;
 				break;
 		endswitch;
