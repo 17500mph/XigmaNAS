@@ -2658,6 +2658,9 @@ class co_DOMElement extends \DOMElement implements ci_DOM {
 	public function pop() {
 		return $this->ownerDocument->pop();
 	}
+	public function last() {
+		return $this->ownerDocument->last();
+	}
 }
 class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	use co_DOMTools;
@@ -2676,6 +2679,11 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	}
 	public function pop() {
 		return array_pop($this->stack);
+	}
+	public function last() {
+		$element = end($this->stack);
+		reset($this->stack);
+		return $element;
 	}
 	public function render() {
 		echo $this->saveHTML();
