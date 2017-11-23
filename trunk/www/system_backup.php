@@ -88,8 +88,8 @@ if($_POST):
 			$data = file_get_contents($source_file_name);
 		endif;
 		header('Content-Type: application/octet-stream');
-		header(sprintf('Content-Disposition: attachment; filename=%s',$destination_file_name));
-		header(sprintf('Content-Length: %s',strlen($data)));
+		header(sprintf('Content-Disposition: attachment; filename="%s"',$destination_file_name));
+		header(sprintf('Content-Length: %d',strlen($data)));
 		header('Pragma: hack');
 		echo $data;
 		config_unlock();
