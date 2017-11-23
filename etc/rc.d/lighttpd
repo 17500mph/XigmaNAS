@@ -254,6 +254,7 @@ mimetype.assign             = (
 static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
 server.pid-file = "${pidfile}"
 #cgi.assign = (".php" => "/usr/local/bin/php-cgi")
+server.tag = "WebGUI"
 
 # FastCGI
 fastcgi.server = ( ".php" =>
