@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-11 21:26+0000\n"
+"POT-Creation-Date: 2017-11-22 00:28+0000\n"
 "PO-Revision-Date: 2017-11-17 19:28+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-19 09:13+0000\n"
-"X-Generator: Launchpad (build 18505)\n"
+"X-Launchpad-Export-Date: 2017-11-24 00:17+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -5090,6 +5090,9 @@ msgstr "Format invalid de fișier sau parolă incorectă."
 msgid "Invalid file format."
 msgstr "Format invalid fișier."
 
+msgid "Invalid login credentials."
+msgstr ""
+
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
@@ -7569,6 +7572,9 @@ msgstr "SMB3 (Windows 8.1)"
 msgid "SMB3_11 (Windows 10)"
 msgstr "SMB3_11 (Windows 10)"
 
+msgid "SMTP Authentication"
+msgstr ""
+
 msgid "SMTP Server"
 msgstr "Server SMTP"
 
@@ -8592,6 +8598,9 @@ msgstr "Doar TLS"
 
 msgid "TLS Server Certificate Check"
 msgstr "Verificare certificat TLS Server"
+
+msgid "TLS Trust File"
+msgstr ""
 
 msgid "Tag"
 msgstr "Etichetă"
@@ -9681,6 +9690,12 @@ msgstr ""
 "Poate determina o scădere importantă în viteza de încărcare a paginilor."
 
 msgid ""
+"This command activates strict server certificate verification. The filename "
+"must be the absolute path name of a file in PEM format containing one or "
+"more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
+msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
 "file which is required by the NUT UPS daemon."
 msgstr ""
@@ -10273,6 +10288,9 @@ msgstr "Rata de transfer"
 
 msgid "Transfer mode"
 msgstr "Mod transfer"
+
+msgid "Transport Layer Security (TLS)"
+msgstr ""
 
 msgid "Trap Host"
 msgstr "Sistem captură"
