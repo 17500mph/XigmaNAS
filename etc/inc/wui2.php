@@ -2528,30 +2528,29 @@ EOJ;
 		$is_login = in_array('login',$options);
 		$is_multipart = in_array('multipart',$options);
 		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
-		if($is_login && $is_form):
-			$jdata = <<<'EOJ'
+		$is_spinonsubmit = $is_form && !in_array('nospinonsubmit',$options);
+		$is_tabnav = !($is_login || in_array('notabnav',$options));
+		$jdata = <<<'EOJ'
 $(window).on("load", function() {
-	$("#iform").submit(function() { spinner(); });
-});
-EOJ;
-		elseif($is_form):
-			$jdata = <<<'EOJ'
-$(window).on("load", function() {
-	$("#tabnav").on('click', function() { spinner(); });
-	$("#tabnav2").on('click', function() { spinner(); });
 	$(".spin").click(function() { spinner(); });
-	$("#iform").submit(function() { spinner(); });
-});
+
 EOJ;
-		else:
-			$jdata = <<<'EOJ'
-$(window).on("load", function() {
-	$("#tabnav").on('click', function() { spinner(); });
-	$("#tabnav2").on('click', function() { spinner(); });
-	$(".spin").click(function() { spinner(); });
-});
+		if($is_spinonsubmit):
+			$jdata .= <<<'EOJ'
+	$("#iform").submit(function() { spinner(); });
+
 EOJ;
 		endif;
+		if($is_tabnav):
+			$jdata .= <<<'EOJ'
+	$("#tabnav").on('click', function() { spinner(); });
+	$("#tabnav2").on('click', function() { spinner(); });
+
+EOJ;
+		endif;
+		$jdata .= <<<'EOJ'
+});
+EOJ;
 		$body = $this->addElement('body',['id' => 'main']);
 		if($is_form):
 			$form_attributes = [
@@ -2572,7 +2571,9 @@ EOJ;
 		if(!$is_login && $is_form):
 			$flexcontainer->addDIV(['id' => 'formextension'])->ins_authtoken();
 		endif;
-		if(!$is_login):
+		if($is_login):
+			$flexcontainer->ins_header_login();
+		else:
 			$flexcontainer->ins_header_logo();
 			$flexcontainer->ins_header($page_title);
 		endif;
@@ -2603,6 +2604,12 @@ EOJ;
 						addA($a_attributes)->
 							insIMG($img_attributes);
 		endif;
+		return $this;
+	}
+	public function ins_header_login() {
+		$header = $this->
+			addElement('header',['id' => 'g4h'])->
+				addDIV(['id' => 'gapheader']);
 		return $this;
 	}
 	public function ins_header(array $page_title = []) {
