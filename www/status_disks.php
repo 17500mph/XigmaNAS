@@ -153,7 +153,7 @@ $sphere = &get_sphere_status_disks();
 $jcode = <<<EOJ
 $(document).ready(function(){
 	var gui = new GUI;
-	gui.recall(5000, 5000, 'status_disks.php', null, function(data) {
+	gui.recall(30000, 30000, 'status_disks.php', null, function(data) {
 		if ($('#area_refresh').length > 0) {
 			$('#area_refresh').html(data.data);
 		}
