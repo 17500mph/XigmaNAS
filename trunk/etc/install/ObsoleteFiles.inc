@@ -9,4 +9,5 @@
 /usr/local/www/status_report.php
 /usr/local/www/system_rrdgraphs.php
 /usr/local/www/xmlrpc.php
-
+/usr/local/www/images/navbar_active.png
+/usr/local/www/images/navbar_default.png
