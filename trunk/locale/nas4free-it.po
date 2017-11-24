@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-11 21:26+0000\n"
-"PO-Revision-Date: 2017-11-16 16:51+0000\n"
+"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"PO-Revision-Date: 2017-11-20 16:56+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-19 09:13+0000\n"
-"X-Generator: Launchpad (build 18505)\n"
+"X-Launchpad-Export-Date: 2017-11-24 00:17+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -2845,10 +2845,14 @@ msgstr "Mostra la history del comando ZFS"
 msgid ""
 "Display action buttons in the scrollable area instead of the footer area."
 msgstr ""
+"Visualizza il tasto delle attività nell'area scrollabile invece che nella "
+"parte bassa."
 
 msgid ""
 "Display disk size values using binary prefixes instead of decimal prefixes."
 msgstr ""
+"Visualizza il valore della dimensione del disco usando prefisso binario "
+"invece che decimale."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3778,7 +3782,7 @@ msgid "Enter Subject"
 msgstr "Inserire l'oggetto"
 
 msgid "Enter Universally Unique Identifier"
-msgstr ""
+msgstr "Inserire un identificativo universalmente univoco"
 
 msgid "Enter a comment"
 msgstr "Inserisci un commento"
@@ -3816,7 +3820,7 @@ msgid "Enter a description"
 msgstr "Immetti una descrizione"
 
 msgid "Enter a description for your reference"
-msgstr ""
+msgstr "Inserire una descrizione per il riferimento"
 
 msgid "Enter a description for your reference."
 msgstr "Inserisci una descrizione per propria referenza."
@@ -3860,7 +3864,7 @@ msgid "Enter destination"
 msgstr "Inserisci destinazione"
 
 msgid "Enter facility name"
-msgstr ""
+msgstr "Inserire il nome della struttura"
 
 msgid "Enter full name of the user."
 msgstr "Inserisci il nome completo dell'utente"
@@ -3881,7 +3885,7 @@ msgid "Enter login name of the user."
 msgstr "Inserisci il nome di login dell'utente."
 
 msgid "Enter smartctl pass-through type."
-msgstr ""
+msgstr "Inserire il tipo smartctl passthroug"
 
 msgid "Enter the IP address or DNS name of the iSCSI target."
 msgstr "Inserisci l'indirizzo IP o il nome DNS del target iSCSI"
@@ -4776,6 +4780,8 @@ msgstr ""
 msgid ""
 "If this message persists take a look at the system log for more information."
 msgstr ""
+"Se il messaggio persiste, controllare il log di sistema per maggiori "
+"informazioni"
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -5102,6 +5108,9 @@ msgstr "Formato file non valido o password incorretta"
 
 msgid "Invalid file format."
 msgstr "Formato file non valido."
+
+msgid "Invalid login credentials."
+msgstr ""
 
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
@@ -5918,7 +5927,7 @@ msgid "Music"
 msgstr "Musica"
 
 msgid "Must be a number between 5 and 1000."
-msgstr ""
+msgstr "Deve essere un numero tra 5 e 1000."
 
 msgid "Must choose one"
 msgstr "Bisogna sceglierne uno"
@@ -6176,7 +6185,7 @@ msgid "No pools have been selected"
 msgstr "Nessun pool selezionato."
 
 msgid "No records found."
-msgstr ""
+msgstr "Nessuna registrazione trovata"
 
 msgid "No softraid-formatted disks available."
 msgstr "Nessun disco formattato come softraid disponibile."
@@ -6829,6 +6838,7 @@ msgstr "Inoltro porta"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr ""
+"Il numero porta deve essere 514 oppure un numero compreso tra 1024 e 49151."
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6836,7 +6846,7 @@ msgstr "Il numero della porta deve essere tra %d e %d."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
-msgstr ""
+msgstr "Porta del syslog server remoto. Lasciare vuoto per la porta default."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -6950,7 +6960,7 @@ msgid "Private key"
 msgstr "Chiave privata"
 
 msgid "Process State"
-msgstr ""
+msgstr "Stato del processo"
 
 msgid "Processes"
 msgstr "Processi"
@@ -6968,7 +6978,7 @@ msgid "Protect"
 msgstr "Proteggi"
 
 msgid "Protect Setting"
-msgstr ""
+msgstr "Settaggi della protezione"
 
 msgid "Proto"
 msgstr "Proto"
@@ -7261,7 +7271,7 @@ msgid "Release Notes"
 msgstr "Note di rilascio"
 
 msgid "Reload Page"
-msgstr ""
+msgstr "Ricarica pagina"
 
 msgid "Reload page"
 msgstr "Ricarica pagina"
@@ -7573,6 +7583,9 @@ msgstr "SMB3 (Windows 8.1)"
 
 msgid "SMB3_11 (Windows 10)"
 msgstr "SMB3_11 (Windows 10)"
+
+msgid "SMTP Authentication"
+msgstr ""
 
 msgid "SMTP Server"
 msgstr "SMTP Server"
@@ -7890,7 +7903,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Tecnologia di automonitoraggio, analisi e report"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "Auto test prgorammato"
 
 msgid "Send Buffer"
 msgstr "Invio buffer"
@@ -8605,6 +8618,9 @@ msgstr "Solo TLS"
 msgid "TLS Server Certificate Check"
 msgstr "Controllo certificato del server TLS"
 
+msgid "TLS Trust File"
+msgstr ""
+
 msgid "Tag"
 msgstr "Tag"
 
@@ -8773,7 +8789,7 @@ msgid "The UPS identifier and IP address"
 msgstr "L'identificativo UPS e l'indirizzo IP"
 
 msgid "The UUID of the record."
-msgstr ""
+msgstr "Il UUID della registrazione"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "L'ID della VLAN deve essere tra 1 e 4094"
@@ -9154,7 +9170,7 @@ msgstr ""
 "Il firmware viene installato. Il server si riavvierà automaticamente."
 
 msgid "The following errors were detected"
-msgstr ""
+msgstr "I seguenti errori sono stati individuati"
 
 msgid "The following input errors were detected"
 msgstr "Sono stati trovati i seguenti errori di input"
@@ -9183,6 +9199,7 @@ msgstr ""
 
 msgid "The identifier reported as unknown by smartctl including brackets."
 msgstr ""
+"L'identificativo riportato come sconosciuto da smartctl incluso le parentesi."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "La modalità iniziale di digest negoziata con l'iniziatore."
@@ -9716,6 +9733,12 @@ msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Questo può determinare un elevato ritardo nel caricamento della pagina di "
 "log!"
+
+msgid ""
+"This command activates strict server certificate verification. The filename "
+"must be the absolute path name of a file in PEM format containing one or "
+"more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10318,6 +10341,9 @@ msgstr "Velocità di trasferimento"
 msgid "Transfer mode"
 msgstr "Modalita' di trasferimento"
 
+msgid "Transport Layer Security (TLS)"
+msgstr ""
+
 msgid "Trap Host"
 msgstr "Host messaggi"
 
@@ -10486,7 +10512,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "Dispositivo di memorizzazione di massa USB"
 
 msgid "UTF-8 Only"
 msgstr "Solo UTF-8"
@@ -10522,7 +10548,7 @@ msgid "Unison File Synchronisation"
 msgstr "Sincronizzazione File Unison"
 
 msgid "Universally Unique Identifier"
-msgstr ""
+msgstr "Identificativo universalmente univoco"
 
 msgid "Unix Charset"
 msgstr "Set caratteri Unix"
@@ -11426,7 +11452,7 @@ msgid "umount"
 msgstr "smonta"
 
 msgid "used of"
-msgstr ""
+msgstr "utilizzo di"
 
 msgid "visible"
 msgstr "visibile"

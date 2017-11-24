@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-11 21:26+0000\n"
+"POT-Creation-Date: 2017-11-22 00:28+0000\n"
 "PO-Revision-Date: 2017-11-19 12:57+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-19 18:52+0000\n"
-"X-Generator: Launchpad (build 18505)\n"
+"X-Launchpad-Export-Date: 2017-11-24 00:17+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -5061,6 +5061,9 @@ msgstr "Неправильний формат файла або пароль."
 msgid "Invalid file format."
 msgstr "Неправильний формат файла."
 
+msgid "Invalid login credentials."
+msgstr ""
+
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
@@ -7536,6 +7539,9 @@ msgstr "SMB3 (Windows 8.1)"
 msgid "SMB3_11 (Windows 10)"
 msgstr "SMB3_11 (Windows 10)"
 
+msgid "SMTP Authentication"
+msgstr ""
+
 msgid "SMTP Server"
 msgstr "Сервер SMTP"
 
@@ -8559,6 +8565,9 @@ msgstr "Тільки TLS"
 
 msgid "TLS Server Certificate Check"
 msgstr "Перевірка TLS сертифіката сервера"
+
+msgid "TLS Trust File"
+msgstr ""
 
 msgid "Tag"
 msgstr "Мітка"
@@ -9647,6 +9656,12 @@ msgid "This can cause a huge delay in loading the log page!"
 msgstr "Це може викликати величезну затримку в завантаженні сторінки логу!"
 
 msgid ""
+"This command activates strict server certificate verification. The filename "
+"must be the absolute path name of a file in PEM format containing one or "
+"more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
+msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
 "file which is required by the NUT UPS daemon."
 msgstr ""
@@ -10241,6 +10256,9 @@ msgstr "Швидкість передачі"
 
 msgid "Transfer mode"
 msgstr "Режим передачі"
+
+msgid "Transport Layer Security (TLS)"
+msgstr ""
 
 msgid "Trap Host"
 msgstr "Хост Trap"

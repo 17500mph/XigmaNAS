@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-11 21:26+0000\n"
+"POT-Creation-Date: 2017-11-22 00:28+0000\n"
 "PO-Revision-Date: 2017-11-10 14:11+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-19 09:13+0000\n"
-"X-Generator: Launchpad (build 18505)\n"
+"X-Launchpad-Export-Date: 2017-11-24 00:17+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -4780,6 +4780,9 @@ msgstr "올바르지 않은 파일 형식이거나 암호가 정확하지 않습
 msgid "Invalid file format."
 msgstr "무효한 파일 포맷."
 
+msgid "Invalid login credentials."
+msgstr ""
+
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr "블록 크기가 올바르지 않습니다! 이 값은 %d에서 %d 범위 안에 있어야 합니다."
@@ -7147,6 +7150,9 @@ msgstr "SMB3 (Windows 8.1)"
 msgid "SMB3_11 (Windows 10)"
 msgstr "SMB3_11 (Windows 10)"
 
+msgid "SMTP Authentication"
+msgstr ""
+
 msgid "SMTP Server"
 msgstr "SMTP 서버"
 
@@ -8118,6 +8124,9 @@ msgstr "TLS 전용"
 msgid "TLS Server Certificate Check"
 msgstr "TLS 서버 인증서 확인"
 
+msgid "TLS Trust File"
+msgstr ""
+
 msgid "Tag"
 msgstr "태그"
 
@@ -9086,6 +9095,12 @@ msgid "This can cause a huge delay in loading the log page!"
 msgstr "이것은 로그 페이지 불러오기를 엄청나게 지연시킬 수 있습니다!"
 
 msgid ""
+"This command activates strict server certificate verification. The filename "
+"must be the absolute path name of a file in PEM format containing one or "
+"more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
+msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
 "file which is required by the NUT UPS daemon."
 msgstr "이 구성 설정은 NUT UPS 데몬에 필요한 ups.conf 구성 파일을 생성하는 데 사용됩니다."
@@ -9588,6 +9603,9 @@ msgstr "전송율"
 
 msgid "Transfer mode"
 msgstr "전송 모드"
+
+msgid "Transport Layer Security (TLS)"
+msgstr ""
 
 msgid "Trap Host"
 msgstr "Trap 호스트"
