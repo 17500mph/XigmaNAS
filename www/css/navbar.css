@@ -32,10 +32,10 @@
 */
 #navhdr {
 	background: gray;
-	background: -webkit-linear-gradient(gray, black); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(gray, black); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(gray, black); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(gray, black); /* Standard syntax */
+	background: -webkit-linear-gradient(#9c9c9c, #777777 4%, #000000); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#9c9c9c, #777777 4%, #000000); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#9c9c9c, #777777 4%, #000000); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#9c9c9c, #777777 4%, #000000); /* Standard syntax */
 }
 #navhdr ul ul {
 	display: none;
@@ -65,12 +65,8 @@
 	position: relative;
 }
 #navhdr > ul > li:hover > a {
-/*	color and background of top menu when hovered */
+/*	color of top menu when hovered */
 	background: transparent;
-	background: -webkit-linear-gradient(white, white, gray); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(white, white, gray); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(white, white, gray); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(white, white, gray); /* Standard syntax */
 	color: black;
 }
 #navhdr > ul > li:hover > a > img {
@@ -121,11 +117,14 @@
 	color: white;
 }
 #navhdr ul ul li a:hover {
-	background: -webkit-linear-gradient(white, white, gray); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(white, white, gray); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(white, white, gray); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(white, white, gray); /* Standard syntax */
 	color: black;
+}
+/*	background of top menu when hovered */
+#navhdr > ul > li:hover > a, #navhdr ul ul li a:hover {
+	background: -webkit-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* Standard syntax */
 }
 #navhdr ul span.tabseparator {
 	background: #AAAAAA;

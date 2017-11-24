@@ -584,7 +584,11 @@ div#gapfooter {
 div#pagefooter {
 	margin: 0px 0px 0px 0px;
 	text-align: center;
-	background: url("/images/navbar_default.png");
+	background #000000;
+	background: -webkit-linear-gradient(#9c9c9c, #000000); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#9c9c9c, #000000); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#9c9c9c, #000000); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#9c9c9c, #000000); /* Standard syntax */
 	width: 100%;
 	font-size: 10px;
 	padding-top: 4px;
@@ -758,7 +762,11 @@ pre.cmdoutput {
 	padding-bottom: 5px;
 	padding-right: 6px;
 	padding-left: 6px;
-	background: #BBBBBB url("/images/gradient_listhdr.png") repeat-x scroll left top;
+	background: #BBBBBB;
+	background: -webkit-linear-gradient(#cbcbcb, #fafafa 4%, #e9e9e9); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#cbcbcb, #fafafa 4%, #e9e9e9); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#cbcbcb, #fafafa 4%, #e9e9e9); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#cbcbcb, #fafafa 4%, #e9e9e9);
 	font-size: 11px;
 	font-weight: bold;
 	white-space: normal;
@@ -826,8 +834,11 @@ pre.cmdoutput {
 	padding-bottom: 5px;
 	padding-left: 6px;
 	padding-right: 16px;
-	background-image: url("/images/listtopic_bg.png");
-	background-color: #95A7C0;
+	background: #95A7C0;
+	background: -webkit-linear-gradient(#95a7c0, #97aac2, #8197b4); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#95a7c0, #97aac2, #8197b4); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#95a7c0, #97aac2, #8197b4); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#95a7c0, #97aac2, #8197b4); /* Standard syntax */
 	vertical-align: middle;
 	text-align: left;
 	font-size: 11px;
