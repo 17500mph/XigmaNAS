@@ -42,12 +42,13 @@ echo '<!DOCTYPE html>',"\n";
 ?>
 <html lang="<?=system_get_language_code();?>">
 <head>
-	<meta charset="<?=system_get_language_codeset();?>"/>
-	<meta name="format-detection" content="telephone=no"/>
+	<meta charset="<?=system_get_language_codeset();?>">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?=genhtmltitle($pgtitle ?? []);?></title>
-	<link href="/css/gui.css" rel="stylesheet" type="text/css"/>
-	<link href="/css/navbar.css" rel="stylesheet" type="text/css"/>
-	<link href="/css/tabs.css" rel="stylesheet" type="text/css"/>	
+	<link href="/css/gui.css" rel="stylesheet" type="text/css">
+	<link href="/css/navbar.css" rel="stylesheet" type="text/css">
+	<link href="/css/tabs.css" rel="stylesheet" type="text/css">	
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/gui.js"></script>
 	<script type="text/javascript" src="/js/spinner.js"></script>
