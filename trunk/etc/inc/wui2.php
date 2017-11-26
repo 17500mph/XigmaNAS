@@ -202,7 +202,7 @@ class HTMLBaseControl2 {
 									$color = NULL;
 									if(is_string($description_row[1])):
 										$color = $description_row[1];
-									endif;									
+									endif;
 									if(is_bool($description_row[2])):
 										$suppressbr = $description_row[2];
 									endif;
@@ -889,7 +889,7 @@ class HTMLLanguageComboBox2 extends HTMLComboBox2 {
 		foreach($g_languages as $key => $val):
 			if('auto' == $key):
 				$options[$key] = gtext('Autodetect');
-			else:	
+			else:
 				$options[$key] = locale_get_display_name($key,$key);
 			endif;
 		endforeach;
@@ -1061,7 +1061,7 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
-		$tr = $anchor->addElement('tr',$attributes);	
+		$tr = $anchor->addElement('tr',$attributes);
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
 		$th = $tr->addElement('th',$attributes);
 		$attributes = ['style' => 'float:left'];
@@ -1244,7 +1244,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'class' => 'formfld',
 			'value' => '',
 			'size' => 60
-		];			
+		];
 		$div2->addElement('input',$attributes);
 		//	choose button
 		$js = sprintf('ifield = form.%s;',$ctrlnamedata)
@@ -1271,7 +1271,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'name' => sprintf('%saddbtn',$ctrlname),
 			'class' => 'formbtn',
 			'value' => gtext('Add'),
-			'onclick' => sprintf('onclick_add_%s()',$ctrlname) 
+			'onclick' => sprintf('onclick_add_%s()',$ctrlname)
 		];
 		$div2->addElement('input',$attributes);
 		//	change button
@@ -1281,7 +1281,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'name' => sprintf('%schangebtn',$ctrlname),
 			'class' => 'formbtn',
 			'value' => gtext('Change'),
-			'onclick' => sprintf('onclick_change_%s()',$ctrlname) 
+			'onclick' => sprintf('onclick_change_%s()',$ctrlname)
 		];
 		$div2->addElement('input',$attributes);
 	}
@@ -1400,7 +1400,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'class' => 'formfld',
 			'value' => '',
 			'size' => 60
-		];			
+		];
 		$div2->addElement('input',$attributes);
 		//	choose button
 		$js = sprintf('ifield = form.%s;',$ctrlnamedata)
@@ -1427,7 +1427,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'name' => sprintf('%saddbtn',$ctrlname),
 			'class' => 'formbtn',
 			'value' => gtext('Add'),
-			'onclick' => sprintf('onclick_add_%s()',$ctrlname) 
+			'onclick' => sprintf('onclick_add_%s()',$ctrlname)
 		];
 		$div2->addElement('input',$attributes);
 		//	change button
@@ -1437,7 +1437,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'name' => sprintf('%schangebtn',$ctrlname),
 			'class' => 'formbtn',
 			'value' => gtext('Change'),
-			'onclick' => sprintf('onclick_change_%s()',$ctrlname) 
+			'onclick' => sprintf('onclick_change_%s()',$ctrlname)
 		];
 		$div2->addElement('input',$attributes);
 	}
@@ -1623,7 +1623,7 @@ trait co_DOMTools {
 	}
 	//	tab menu fragments and macros
 /**
- * 
+ *
  *	@return DOMNode $subnode
  */
 	public function add_area_tabnav() {
@@ -1656,7 +1656,7 @@ trait co_DOMTools {
 		return $subnode;
 	}
 /**
- *	Creates tags for upper navigation menu 
+ *	Creates tags for upper navigation menu
  *	@return DOMNode $subnode
  */
 	public function add_tabnav_upper() {
@@ -1700,7 +1700,7 @@ trait co_DOMTools {
 		return $this;
 	}
 	/**
-	 * 
+	 *
 	 *	@return DOMNode $subnode
 	 */
 	public function add_area_data() {
@@ -1836,7 +1836,8 @@ trait co_DOMTools {
 			'id' => $p->get_id(),
 			'name' => $p->get_name(),
 			'class' => 'formfld cblot',
-			'value' => 'yes'
+			'value' => 'yes',
+			'class' => 'oneemhigh'
 		];
 		if(isset($value) && $value):
 			$input_attributes['checked'] = 'checked';
@@ -1921,7 +1922,7 @@ trait co_DOMTools {
 										$color = NULL;
 										if(is_string($description_row[1])):
 											$color = $description_row[1];
-										endif;									
+										endif;
 										if(is_bool($description_row[2])):
 											$suppressbr = $description_row[2];
 										endif;
@@ -1953,7 +1954,8 @@ trait co_DOMTools {
 			'type' => 'checkbox',
 			'id' => $p->get_id(),
 			'name' => $p->get_name(),
-			'value' => 'yes'
+			'value' => 'yes',
+			'class' => 'oneemhigh'
 		];
 		if(isset($value) && $value):
 			$input_attributes['checked'] = 'checked';
@@ -2023,6 +2025,7 @@ trait co_DOMTools {
 		$input_attributes = [
 			'name' => sprintf('%s[]',$p->get_name()),
 			'type' => 'checkbox',
+			'class' => 'oneemhigh'
 		];
 		if($is_readonly):
 			$input_attributes['disabled'] = 'disabled';
@@ -2054,7 +2057,7 @@ trait co_DOMTools {
 			$tr->addTDwC('lcebl')->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
-	
+
 	public function ins_filechooser($p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$id = $p->get_id();
 		$name = $p->get_name();
@@ -2133,7 +2136,8 @@ EOJ;
 		$tbody = $table->addTBODY();
 		$input_attributes = [
 			'name' => $p->get_name(),
-			'type' => 'radio'
+			'type' => 'radio',
+			'class' => 'oneemhigh'
 		];
 		if($is_readonly):
 			$input_attributes['disabled'] = 'disabled';
@@ -2218,7 +2222,9 @@ EOJ;
 			'type' => 'checkbox',
 			'name' => $cbm_toggle_id,
 			'id' => $cbm_toggle_id,
-			'title' => gtext('Invert Selection')];
+			'title' => gtext('Invert Selection'),
+			'class' => 'oneemhigh'
+		];
 		$this->addElement($element,$input_attributes);
 		return $this;
 	}
@@ -2229,7 +2235,8 @@ EOJ;
 			'type' => 'checkbox',
 			'name' => $sphere->cbm_name . '[]',
 			'value' => $identifier,
-			'id' => $identifier
+			'id' => $identifier,
+			'class' => 'oneemhigh'
 		];
 		if($disabled):
 			$input_attributes['disabled'] = 'disabled';
@@ -2261,13 +2268,13 @@ EOJ;
 			$link = sprintf('%s?submit=edit&%s=%s',$sphere->modify->scriptname(),$sphere->row_identifier(),$sphere->get_row_identifier_value());
 			$this->addTD()->
 				addElement('a',['href' => $link])->
-					addElement('img', ['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin']);
+					addElement('img', ['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin','class' => 'oneemhigh']);
 		elseif($notprotected): //record is dirty
 			$this->addTD()->
-				addElement('img',['src' => $g_img['del'],'title' => $sphere->sym_del(),'alt' => $sphere->sym_del()]);
+				addElement('img',['src' => $g_img['del'],'title' => $sphere->sym_del(),'alt' => $sphere->sym_del(),'class' => 'oneemhigh']);
 		else: // record is protected
 			$this->addTD()->
-				addElement('img',['src' => $g_img['loc'],'title' => $sphere->sym_loc(),'alt' => $sphere->sym_loc()]);
+				addElement('img',['src' => $g_img['loc'],'title' => $sphere->sym_loc(),'alt' => $sphere->sym_loc(),'class' => 'oneemhigh']);
 		endif;
 		return $this;
 	}
@@ -2293,7 +2300,7 @@ EOJ;
 		$tr->
 			addTHwC('lceadd')->
 				addA(['href' => $link])->
-					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin']);
+					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin','class' => 'oneemhigh']);
 		return $this;
 	}
 	public function ins_no_records_found(int $colspan = 0) {
@@ -2394,7 +2401,7 @@ EOJ;
 	//	submit area macros
 	public function add_area_buttons(bool $use_config_setting = true) {
 		global $config;
-		
+
 		$div_attributes = ['id' => 'submit'];
 		if($use_config_setting):
 			$referrer = 'adddivsubmittodataframe';
@@ -2501,7 +2508,7 @@ EOJ;
 			insElement('title',[],$this->clc_html_page_title($page_title))->
 			insElement('link',['href' => '/css/gui.css','rel' => 'stylesheet','type' => 'text/css'])->
 			insElement('link',['href' => '/css/navbar.css','rel' => 'stylesheet','type' => 'text/css'])->
-			insElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);	
+			insElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);
 		if($is_login):
 			$head->
 				insElement('link',['href' => '/css/login.css','rel' => 'stylesheet','type' => 'text/css']);
@@ -2520,7 +2527,7 @@ EOJ;
 	}
 	/**
 	 *	Creates the body element of the page with all basic subnodes.
-	 *	
+	 *
 	 *	@param array $page_title
 	 *	@param string $action_url If $action_url empty no form element will be created.
 	 *	@return DOMNode $this
@@ -2629,13 +2636,13 @@ EOJ;
 		return $this;
 	}
 	/**
-	 * 
+	 *
 	 * @global array $g
 	 * @return $this
 	 */
 	public function ins_footer() {
 		global $g;
-		
+
 		$g4fx = $this->
 			addElement('footer',['id' => 'g4f'])->
 				insDIV(['id' => 'gapfooter'])->
@@ -2659,7 +2666,7 @@ EOJ;
 }
 class co_DOMElement extends \DOMElement implements ci_DOM {
 	use co_DOMTools;
-	
+
 	public function addAttributes($attributes = []) {
 		foreach($attributes as $key => $value):
 			$this->setAttribute($key,$value);
@@ -2681,7 +2688,7 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	use co_DOMTools;
 
 	protected $stack = [];
-	
+
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
 		$this->preserveWhiteSpace = false;
