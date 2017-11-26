@@ -146,7 +146,8 @@ endif;
 $l_type = [
 	'1' => gtext('PreInit'),
 	'2' => gtext('PostInit'),
-	'3' => gtext('Shutdown')
+	'3' => gtext('Shutdown'),
+	'971' => gtext('Post Upgrade')
 ];
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'),(RECORD_NEW !== $mode_record) ? gtext('Edit') : gtext('Add')];
 include 'fbegin.inc';
@@ -178,7 +179,7 @@ $document->
 			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
 $document->render();
 ?>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
 		print_error_box($errormsg);
@@ -205,7 +206,7 @@ $document->render();
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a name for the command.'),false, 40,false,false,40,gtext('Enter a name'));
 			html_inputbox2('value',gtext('Command'),$sphere_record['value'],gtext('The command to be executed.'),true,60,false,false,1024,gtext('Enter the command'));
 			html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('Enter a description for your reference.'),false,60,false,false,60,gtext('Enter a comment'));
-			html_combobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Execute command pre or post system initialization (booting) or before system shutdown.'),true,false);
+			html_combobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Select at which stage the command should be executed.'),true,false);
 ?>
 		</tbody>
 	</table>
@@ -217,7 +218,7 @@ $document->render();
 <?php
 	include 'formend.inc';
 ?>
-</form></td></tr></tbody></table>
+</td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
 ?>

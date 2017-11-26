@@ -80,91 +80,91 @@ $img_path = [
 // sunrise: verify if setting exists, otherwise run init tasks
 $sphere_array = &array_make_branch($config,'rc','param');
 
-if($_POST) {
-	if(isset($_POST['apply']) && $_POST['apply']) {
+if($_POST):
+	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 		$retval |= updatenotify_process($sphere_notifier, $sphere_notifier_processor);
 		$savemsg = get_std_save_message($retval);
-		if($retval == 0) {
+		if($retval == 0):
 			updatenotify_delete($sphere_notifier);
-		}
+		endif;
 		header($sphere_header);
 		exit;
-	}
-	if (isset($_POST['enable_selected_rows']) && $_POST['enable_selected_rows']) {
+	endif;
+	if(isset($_POST['enable_selected_rows']) && $_POST['enable_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 		$updateconfigfile = false;
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (!(isset($sphere_array[$index]['enable']))) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))):
+				if(!(isset($sphere_array[$index]['enable']))):
 					$sphere_array[$index]['enable'] = true;
 					$updateconfigfile = true;
 					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+					if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
-					}
-				}
-			}
-		}
-		if ($updateconfigfile) {
+					endif;
+				endif;
+			endif;
+		endforeach;
+		if($updateconfigfile):
 			write_config();
 			$updateconfigfile = false;
-		}
+		endif;
 		header($sphere_header);
 		exit;
-	}
-	if (isset($_POST['disable_selected_rows']) && $_POST['disable_selected_rows']) {
+	endif;
+	if(isset($_POST['disable_selected_rows']) && $_POST['disable_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 		$updateconfigfile = false;
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (isset($sphere_array[$index]['enable'])) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))):
+				if(isset($sphere_array[$index]['enable'])):
 					unset($sphere_array[$index]['enable']);
 					$updateconfigfile = true;
 					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+					if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
-					}
-				}
-			}
-		}
-		if ($updateconfigfile) {
+					endif;
+				endif;
+			endif;
+		endforeach;
+		if($updateconfigfile):
 			write_config();
 			$updateconfigfile = false;
-		}
+		endif;
 		header($sphere_header);
 		exit;
-	}
-	if (isset($_POST['toggle_selected_rows']) && $_POST['toggle_selected_rows']) {
+	endif;
+	if(isset($_POST['toggle_selected_rows']) && $_POST['toggle_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 		$updateconfigfile = false;
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (isset($sphere_array[$index]['enable'])) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))):
+				if(isset($sphere_array[$index]['enable'])):
 					unset($sphere_array[$index]['enable']);
-				} else {
+				else:
 					$sphere_array[$index]['enable'] = true;
-				}
+				endif;
 				$updateconfigfile = true;
 				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+				if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
 					updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
-				}
-			}
-		}
-		if ($updateconfigfile) {
+				endif;
+			endif;
+		endforeach;
+		if($updateconfigfile):
 			write_config();
 			$updateconfigfile = false;
-		}
+		endif;
 		header($sphere_header);
 		exit;
-	}
-	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
+	endif;
+	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record,$sphere_array,'uuid'))):
 				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				switch ($mode_updatenotify) {
+				switch($mode_updatenotify):
 					case UPDATENOTIFY_MODE_NEW:
 						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
@@ -176,17 +176,17 @@ if($_POST) {
 					case UPDATENOTIFY_MODE_UNKNOWN:
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
 						break;
-				}
-			}
-		}
+				endswitch;
+			endif;
+		endforeach;
 		header($sphere_header);
 		exit;
-	}
-}
+	endif;
+endif;
 function rc_process_updatenotification($mode, $data) {
 	global $config;
 	$retval = 0;
-	switch ($mode) {
+	switch ($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
 			write_config();
@@ -194,18 +194,24 @@ function rc_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_DIRTY:
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 			array_make_branch($config,'rc','param');
-			if(false !== ($index = array_search_ex($data, $config['rc']['param'], 'uuid'))) {
+			if(false !== ($index = array_search_ex($data,$config['rc']['param'],'uuid'))):
 				unset($config['rc']['param'][$index]);
 				write_config();
-			}
+			endif;
 			break;
-	}
+	endswitch;
 	return $retval;
 }
+$l_type = [
+	'1' => gtext('PreInit'),
+	'2' => gtext('PostInit'),
+	'3' => gtext('Shutdown'),
+	'971' => gtext('Post Upgrade')
+];
 $enabletogglemode = isset($config['system']['enabletogglemode']);
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -302,8 +308,8 @@ $document->
 			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
 $document->render();
 ?>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
@@ -313,7 +319,7 @@ $document->render();
 	if(updatenotify_exists($sphere_notifier)):
 		print_config_change_box();
 	endif;
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
@@ -325,7 +331,9 @@ $document->render();
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'), 7);?>
+<?php
+			html_titleline2(gtext('Overview'), 7);
+?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=gtext('Name');?></th>
@@ -337,67 +345,80 @@ $document->render();
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach($sphere_array as $sphere_record):?>
-				<?php
+<?php
+			foreach($sphere_array as $sphere_record):
 				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$enabled = isset($sphere_record['enable']);
 				$notprotected = !isset($sphere_record['protected']);
-				switch ($sphere_record['typeid']):
-					case 1:
-						$gt_type = gtext('PreInit');
-						break;
-					case 2:
-						$gt_type = gtext('PostInit');
-						break;
-					case 3:
-						$gt_type = gtext('Shutdown');
-						break;
-					default:
-						$gt_type = gtext('Unknown');
-						break;
-				endswitch;
-				?>
+				$gt_type = array_key_exists($sphere_record['typeid'],$l_type) ? $l_type[$sphere_record['typeid']] : gtext('Unknown');
+?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-						<?php if($notdirty && $notprotected):?>
+<?php
+						if($notdirty && $notprotected):
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
+<?php
+						else:
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
-						<?php if ($enabled):?>
+<?php
+						if($enabled):
+?>
 							<a title="<?=gtext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>"/></center></a>
-						<?php else:?>
+<?php
+						else:
+?>
 							<a title="<?=gtext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>"/></center></a>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$gt_type;?></td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
-								<?php if($notdirty && $notprotected):?>
+<?php
+								if($notdirty && $notprotected):
+?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if($notprotected):?>
+<?php
+								else:
+									if($notprotected):
+?>
 										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
+<?php
+									else:
+?>
 										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+<?php
+									endif;
+								endif;
+?>
 							</td>
-							<?php if(updatenotify_exists($sphere_notifier)):?>
-							<?php else:?>
+<?php
+							if(updatenotify_exists($sphere_notifier)):
+							else:
+?>
 								<td><a href="system_rc_sort.php"><img src="<?=$img_path['mai'];?>" title="<?=$gt_record_mai;?>" alt="<?=$gt_record_mai;?>" /></a></td>
-							<?php endif;?>
+<?php
+							endif;
+?>
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -407,17 +428,29 @@ $document->render();
 		</tfoot>
 	</table>
 	<div id="submit">
-		<?php if ($enabletogglemode):?>
+<?php
+		if ($enabletogglemode):
+?>
 			<input type="submit" class="formbtn" name="toggle_selected_rows" id="toggle_selected_rows" value="<?=$gt_selection_toggle;?>"/>
-		<?php else:?>
+<?php
+		else:
+?>
 			<input type="submit" class="formbtn" name="enable_selected_rows" id="enable_selected_rows" value="<?=$gt_selection_enable;?>"/>
 			<input type="submit" class="formbtn" name="disable_selected_rows" id="disable_selected_rows" value="<?=$gt_selection_disable;?>"/>
-		<?php endif;?>
+<?php
+		endif;
+?>
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
 	<div id="remarks">
-		<?php html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));?>
+<?php
+		html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));
+?>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>

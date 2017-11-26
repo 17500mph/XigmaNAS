@@ -16,6 +16,7 @@
 #
 
 . /etc/rc.subr
+. /etc/configxml.subr
 
 # Gather upload folder
 load_rc_config_var lighttpd lighttpd_uploaddir
@@ -441,6 +442,14 @@ embedded_upgrade() {
 #
 	if [ ${RESULT} -eq 0 ]; then
 		/usr/bin/logger -t "${program}" -p console.info "success."
+		/usr/bin/logger -t "${program}" -p console.info "running post upgrade tasks."
+		/usr/local/bin/xml sel -t -m "//rc/param[typeid=971 and enable]/value" \
+			-v "." \
+			-i "position() <= last()" -n -b \
+			${configxml_file} | /usr/local/bin/xml unesc | \
+			while read _cmd; do
+				eval ${_cmd}
+			done
 		/usr/bin/logger -t "${program}" -p console.info "rebooting."
 		/sbin/shutdown -r now > /dev/null 2>&1
 	else
@@ -616,6 +625,15 @@ full_upgrade() {
 
 	# Reboot system if upgrade was successfully.
 	if [ 0 -eq ${RESULT} ]; then
+		msg="Running post upgrade tasks..."
+		/usr/bin/logger -p console.info "${msg}"
+		/usr/local/bin/xml sel -t -m "//rc/param[typeid=971 and enable]/value" \
+			-v "." \
+			-i "position() <= last()" -n -b \
+			${configxml_file} | /usr/local/bin/xml unesc | \
+			while read _cmd; do
+				eval ${_cmd}
+			done
 		msg="Rebooting server..."
 		/usr/bin/logger -p console.info "${msg}"
 		/sbin/shutdown -r now > /dev/null 2>&1

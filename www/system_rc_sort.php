@@ -89,9 +89,15 @@ if($_POST):
 		exit;
 	endif;
 endif;
+$l_type = [
+	'1' => gtext('PreInit'),
+	'2' => gtext('PostInit'),
+	'3' => gtext('Shutdown'),
+	'971' => gtext('Post Upgrade')
+];
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'),gtext('Sort')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -124,8 +130,8 @@ $document->
 			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
 $document->render();
 ?>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
@@ -135,7 +141,7 @@ $document->render();
 	if(updatenotify_exists($sphere_notifier)):
 		print_config_change_box();
 	endif;
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
@@ -147,7 +153,9 @@ $document->render();
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Reorder Commands'), 7);?>
+<?php
+			html_titleline2(gtext('Reorder Commands'), 7);
+?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
 				<th class="lhell"><?=gtext('Name');?></th>
@@ -159,27 +167,14 @@ $document->render();
 			</tr>
 		</thead>
 		<tbody id="system_rc_list">
-			<?php foreach($sphere_array as $sphere_record):?>
-				<?php
+<?php
+			foreach($sphere_array as $sphere_record):
 				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$enabled = isset($sphere_record['enable']);
 				$notprotected = !isset($sphere_record['protected']);
-				switch ($sphere_record['typeid']) {
-					case 1:
-						$gt_type = gtext('PreInit');
-						break;
-					case 2:
-						$gt_type = gtext('PostInit');
-						break;
-					case 3:
-						$gt_type = gtext('Shutdown');
-						break;
-					default:
-						$gt_type = gtext('Unknown');
-						break;
-				}
-				?>
+				$gt_type = array_key_exists($sphere_record['typeid'],$l_type) ? $l_type[$sphere_record['typeid']] : gtext('Unknown');
+?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 						<input type="hidden" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
@@ -187,11 +182,17 @@ $document->render();
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
-						<?php if ($enabled):?>
+<?php
+						if ($enabled):
+?>
 							<a title="<?=gtext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>"/></center></a>
-						<?php else:?>
+<?php
+						else:
+?>
 							<a title="<?=gtext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>"/></center></a>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$gt_type;?></td>
@@ -204,15 +205,23 @@ $document->render();
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 	</table>
 	<div id="submit">
 		<input name="Submit" id="reorder_rows" type="submit" class="formbtn" value="<?=gtext('Reorder Commands');?>"/>
 	</div>
 	<div id="remarks">
-		<?php html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));?>
+<?php
+		html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));
+?>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
