@@ -549,7 +549,9 @@ class co_sphere_grid extends co_sphere_level2 {
 			'type' => 'checkbox',
 			'name' => $this->cbm_name . '[]',
 			'value' => $identifier,
-			'id' => $identifier];
+			'id' => $identifier,
+			'class' => 'oneemhigh'
+		];
 		if($disabled):
 			$input_attributes['disabled'] = 'disabled';
 		endif;
@@ -563,7 +565,9 @@ class co_sphere_grid extends co_sphere_level2 {
 			'type' => 'checkbox',
 			'name' => $this->get_cbm_checkbox_id_toggle(),
 			'id' => $this->get_cbm_checkbox_id_toggle(),
-			'title' => gtext('Invert Selection')];
+			'title' => gtext('Invert Selection'),
+			'class' => 'oneemhigh'
+		];
 		$root = new co_DOMDocument();
 		$o_input = $root->addElement($element,$input_attributes);
 		return $root->get_html();
@@ -589,7 +593,7 @@ class co_sphere_grid extends co_sphere_level2 {
 				'src' => $g_img['mod'],
 				'title' => $this->sym_mod(),
 				'alt' => $this->sym_mod(),
-				'class' => 'spin'
+				'class' => 'spin oneemhigh'
 			];
 			$o_td->
 				addA(['href' => $link])->
@@ -599,7 +603,8 @@ class co_sphere_grid extends co_sphere_level2 {
 			$img_attributes = [
 				'src' => $g_img['del'],
 				'title' => $this->sym_del(),
-				'alt' => $this->sym_del()
+				'alt' => $this->sym_del(),
+				'class' => 'oneemhigh'
 			];
 			$o_td->insIMG($img_attributes);
 		else:
@@ -607,7 +612,8 @@ class co_sphere_grid extends co_sphere_level2 {
 			$img_attributes = [
 				'src' => $g_img['loc'],
 				'title' => $this->sym_loc(),
-				'alt' => $this->sym_loc()
+				'alt' => $this->sym_loc(),
+				'class' => 'oneemhigh'
 			];
 			$o_td->insIMG($img_attributes);
 		endif;
@@ -621,7 +627,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			'src' => $g_img['mai'],
 			'title' => $this->sym_mai(),
 			'alt' => $this->sym_mai(),
-			'class' => 'spin'
+			'class' => 'spin oneemhigh'
 		];
 		$root = new co_DOMDocument();
 		$root->
@@ -638,7 +644,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			'src' => $g_img['inf'],
 			'title' => $this->sym_inf(),
 			'alt' => $this->sym_inf(),
-			'class' => 'spin'
+			'class' => 'spin oneemhigh'
 		];
 		$root = new co_DOMDocument();
 		$root->
@@ -658,15 +664,23 @@ class co_sphere_grid extends co_sphere_level2 {
  *	</tr>
  */
 		global $g_img;
+		
+		$img_attributes = [
+			'src' => $g_img['add'],
+			'title' => $this->sym_add(),
+			'alt' => $this->sym_add(),
+			'class' => 'spin oneemhigh'
+		];
+		$link = sprintf('%s?submit=add',$this->modify->scriptname());
 		$root = new co_DOMDocument();
 		$o_tr = $root->addTR();
 		if($colspan > 1):
-			$o_th1 = $o_tr->addElement('th',['class' => 'lcenl','colspan' => $colspan - 1]);
+			$o_tr->insTH(['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
-		$o_th2 = $o_tr->addElement('th',['class' => 'lceadd']);
-		$link = sprintf('%s?submit=add',$this->modify->scriptname());
-		$o_a = $o_th2->addElement('a',['href' => $link]);
-		$o_img = $o_a->addElement('img',['src' => $g_img['add'],'title' => $this->sym_add(),'alt' => $this->sym_add(),'class' => 'spin']);
+		$o_tr->
+			addTH(['class' => 'lceadd'])->
+				addA(['href' => $link])->
+					insIMG($img_attributes);
 		return $root->get_html();
 	}
 }
