@@ -274,11 +274,11 @@ $document->render();
 <?php
 						if($enabled):
 ?>
-							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
+							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt="" class="oneemhigh"/></a>
 <?php
 						else:
 ?>
-							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
+							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt="" class="oneemhigh"/></a>
 <?php
 						endif;
 ?>
