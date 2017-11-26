@@ -317,7 +317,7 @@ if($record_exists):
 				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->value->get_name()] ?? ''))->
 				push()->
 				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
-					addA(['title' => $title])->insIMG(['src' => $src,'alt' => ''])->
+					addA(['title' => $title])->insIMG(['src' => $src,'alt' => '','class' => 'oneemhigh'])->
 				pop()->
 				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->comment->get_name()] ?? ''))->
 				add_toolbox_area()->
