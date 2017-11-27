@@ -91,7 +91,7 @@
 	border: 1px solid black;
 	font-size: 11px;
 	font-weight: normal;
-	min-width:14em;
+	min-width: 14em;
 	list-style: none;
 	z-index: 10;
 }
@@ -114,10 +114,10 @@
 }
 /*	background of top menu when hovered */
 #navhdr > ul > li:hover > a, #navhdr ul ul li a:hover {
-	background: -webkit-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* Standard syntax */
+	background: -webkit-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1);
+	background: -o-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1);
+	background: -moz-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1);
+	background: linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1);
 }
 #navhdr ul span.tabseparator {
 	background: #AAAAAA;
