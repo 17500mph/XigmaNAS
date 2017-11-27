@@ -93,7 +93,7 @@ body#main {
 */
 }
 img {
-	border: 0;
+	border: 0px;
 }
 p {
 	margin: 0 0 0.5em 0;
@@ -131,7 +131,7 @@ pre {
 }
 .area_data_messages {
 	margin: 0;
-	border: 0;
+	border: 0px;
 	border-spacing: 0px;
 	border-collapse: separate;
 	width: 100%;
@@ -145,7 +145,7 @@ pre {
 }
 .area_data_selection {
 	margin: 0;
-	border: 0;
+	border: 0px;
 	border-spacing: 0px;
 	border-collapse: separate;
 	width: 100%;
@@ -155,7 +155,7 @@ pre {
 	background-color:#CCCCCC;
 }
 .area_data_selection_toolbox {
-	border: 0;
+	border: 0px;
 	border-spacing: 0px;
 	border-collapse: separate;
 	margin: 0px;
@@ -163,7 +163,7 @@ pre {
 	table-layout: fixed;
 }
 .area_data_settings {
-	border: 0;
+	border: 0px;
 	border-spacing: 0px;
 	border-collapse: separate;
 	margin: 0px;
@@ -198,6 +198,9 @@ pre {
 	padding-right: 0.5em;
 	vertical-align: top;
 	border-bottom: 1px solid #999999;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	white-space: normal;
 }
 .cellabout {
 	font-size: 11px;
@@ -416,7 +419,7 @@ a {
 }
 .listcontent {
 	padding: 0;
-	border: 0;
+	border: 0px;
 	background-color: #EEEEEE;
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 9pt;
@@ -437,11 +440,11 @@ a {
 .tabcont {
 	background-color: #EEEEEE;
 	padding: 20px;
-	border: 0;
+	border: 0px;
 }
 table#area_navigator {
 	width: 100%;
-	border: 0;
+	border: 0px;
 	border-spacing: 0px;
 	border-collapse: collapse;
 	margin: 0px;
@@ -460,7 +463,7 @@ td#area_data_frame {
 }
 table#area_data_settings_submit {
 	margin: 0;
-	border: 0;
+	border: 0px;
 	border-spacing: 0px;
 	border-collapse: separate;
 	width: 100%;
@@ -510,7 +513,7 @@ div#headerlogo a {
 div#headerlogo a img {
 	margin-top: 6px;
 	margin-left: 34px;
-	border: 0;
+	border: 0px;
 }
 div#headerrlogo {
 	float: right;
@@ -524,7 +527,7 @@ div#headerrlogo .hostname {
 	color: #FFFFFF;
 	text-align: right;
 	margin-top: 63px;
-	margin-right: 25px;
+	margin-right: 2em;
 }
 header#g4h {
 	min-width: inherit;
@@ -752,9 +755,9 @@ pre.cmdoutput {
 
 .lhell, .lhebl, .lhelc, .lhebc, .lhelr, .lhebr {
 	margin: 0;
-	border-top-width: 0;
+	border-top-width: 0px;
 	border-bottom: 1px solid #999999;
-	padding: 0.1em 0.3em;
+	padding: 0.3em 0.3em;
 	background: #BBBBBB;
 	background: -webkit-linear-gradient(#cbcbcb, #fafafa 4%, #e9e9e9); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(#cbcbcb, #fafafa 4%, #e9e9e9); /* For Opera 11.1 to 12.0 */
@@ -768,8 +771,8 @@ pre.cmdoutput {
 }
 .lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lcelcd, .lcebcd, .lcelr, .lcebr, .lcelrd, .lcebrd, .lceadd, .lcenl {
 	margin: 0;
-	border-top-width: 0;
-	padding: 0.1em 0.3em;
+	border-top-width: 0px;
+	padding: 0.2em 0.3em;
 	vertical-align: middle;
 	font-size: 11px;
 	font-weight: normal;
@@ -794,7 +797,7 @@ pre.cmdoutput {
 	border-bottom: 1px solid #999999;
 }
 .lcenl {
-	border-bottom-width: 0;
+	border-bottom-width: 0px;
 }
 .lhell, .lhebl, .lhelc, .lhebc, .lhelr, .lhebr, .lcell, .lcebl, .lcelc, .lcebc, .lcelr, .lcebr, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd, .lcelrd, .lcebrd {
 	border-left: 1px solid #999999;
@@ -819,7 +822,7 @@ pre.cmdoutput {
 }
 .lhetop {
 	margin: 0;
-	border: 0;
+	border: 0px;
 	padding: 0.4em 0.5em;
 	background: #95A7C0;
 	background: -webkit-linear-gradient(#95a7c0, #97aac2, #8197b4); /* For Safari 5.1 to 6.0 */
@@ -886,4 +889,6 @@ input[type="radio"].rblo.dimassoctable:not(:checked) + span + table {
 }
 .oneemhigh {
 	max-height: 1em;
+	vertical-align: middle;
+	margin: 0em;
 }
