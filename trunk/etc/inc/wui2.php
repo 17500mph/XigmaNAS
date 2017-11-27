@@ -1634,7 +1634,7 @@ trait co_DOMTools {
 			$append_mode = true; // last element of header section
 			$div_attributes = [
 				'id' => 'area_tabnav',
-				'style' => 'padding: 0px 25px 0px 25px;'
+				'style' => 'padding: 0em 2em;'
 			];
 			if($append_mode):
 				$subnode = $target->
@@ -2014,9 +2014,9 @@ trait co_DOMTools {
 		$div->addElement('input',$input_attributes);
 		if(isset($caption)):
 			if($is_readonly):
-				$div->addElement('span',['style' => 'margin-left:8px;'],$caption);
+				$div->addElement('span',['style' => 'margin-left: 0.7em;'],$caption);
 			else:
-				$div->addElement('label',['style' => 'margin-left:8px;','for' => $id],$caption);
+				$div->addElement('label',['style' => 'margin-left: 0.7em;','for' => $id],$caption);
 			endif;
 		endif;
 		return $this;
@@ -2118,9 +2118,9 @@ EOJ;
 		$caption = $p->get_caption();
 		if(isset($caption)):
 			if($is_readonly):
-				$div->addElement('span',['style' => 'margin-left:8px;'],$caption);
+				$div->addElement('span',['style' => 'margin-left: 0.7em;'],$caption);
 			else:
-				$div->addElement('label',['style' => 'margin-left:8px;','for' => $p->get_id()],$p->get_caption());
+				$div->addElement('label',['style' => 'margin-left: 0.7em;','for' => $p->get_id()],$p->get_caption());
 			endif;
 		endif;
 		return $this;
@@ -2186,7 +2186,7 @@ EOJ;
 			$select->addElement('option',$option_attributes,$option_val);
 		endforeach;
 		if(isset($caption)):
-			$this->addElement('span',['style' => 'margin-left:8px;'],$caption);
+			$this->addElement('span',['style' => 'margin-left: 0.7em;'],$caption);
 		endif;
 		return $this;
 	}
@@ -2300,7 +2300,7 @@ EOJ;
 		$tr->
 			addTHwC('lceadd')->
 				addA(['href' => $link])->
-					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin','class' => 'oneemhigh']);
+					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin oneemhigh']);
 		return $this;
 	}
 	public function ins_no_records_found(int $colspan = 0) {
@@ -2411,7 +2411,7 @@ EOJ;
 				$subnode = $target->addDIV($div_attributes);
 			else:
 				$target = $root->getElementById('g4f') ?? $this;
-				$div_attributes['style'] = 'padding: 0px 25px;';
+				$div_attributes['style'] = 'padding: 0em 2em;';
 				$subnode = $target->prepend_element('div',$div_attributes);
 			endif;
 		else:
@@ -2625,7 +2625,7 @@ EOJ;
 		$header->addDIV(['id' => 'area_navhdr'],make_headermenu());
 		$header->addDIV(['id' => 'gapheader']);
 		if(!empty($page_title)):
-			$header->addP(['class' => 'pgtitle','style' => 'padding:0px 25px 0px 25px;' ],$this->clc_page_title($page_title));
+			$header->addP(['class' => 'pgtitle','style' => 'padding:0em 2em;' ],$this->clc_page_title($page_title));
 		endif;
 		return $this;
 	}
@@ -2654,9 +2654,15 @@ EOJ;
 		$g4fl = $g4fx->addTDwC('g4fl');
 		if(Session::isAdmin()):
 			if(file_exists(sprintf('%s/sysreboot.reqd',$g['varrun_path']))):
+				$img_attributes = [
+					'src' => '/images/notify_reboot.png',
+					'title' => gtext('A reboot is required'),
+					'alt' => gtext('Reboot Required'),
+					'class' => 'oneemhigh'
+				];
 				$g4fl->
 					addA(['class' => 'g4fi','href' => '/reboot.php'])->
-						insIMG(['src' => '/images/notify_reboot.png','title' => gtext('A reboot is required'),'alt' => gtext('Reboot Required')]);
+						insIMG($img_attributes);
 			endif;
 		endif;
 		$g4fx->addTDwC('g4fc',htmlspecialchars(get_product_copyright()));
