@@ -261,44 +261,43 @@ $document->render();
 <?php
 			foreach ($sphere->grid as $sphere->row):
 				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
-				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
-				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+				$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$is_enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
+				$is_notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
+				$src = ($is_enabled) ? $g_img['ena'] : $g_img['dis'];
+				$title = ($is_enabled) ? gtext('Enabled') : gtext('Disabled');
 ?>
 				<tr>
-					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
+					<td class="<?=$is_enabled ? "lcelc" : "lcelcd";?>">
 <?php
-						if ($notdirty && $notprotected):
+						if($is_notdirty && $is_notprotected):
 							echo $sphere->html_checkbox_cbm(false);
 						else:
 							echo $sphere->html_checkbox_cbm(true);
 						endif;
 ?>
 					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['name']);?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['value']);?></td>
-					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-<?php
-						if ($enabled):
-?>
-							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
-<?php
-						else:
-?>
-							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
-<?php
-						endif;
-?>
+					<td class="<?=$is_enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['name']);?></td>
+					<td class="<?=$is_enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['value']);?></td>
+					<td class="<?=$is_enabled ? "lcelc" : "lcelcd";?>">
+						<a title="<?=$title;?>"><img src="<?=$src;?>" alt="" class="oneemhigh"/></a>
 					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['comment']);?></td>
+					<td class="<?=$is_enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['comment']);?></td>
 					<td class="lcebld">
-						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
+						<table class="area_data_selection_toolbox">
+							<colgroup>
+								<col style="width:33%">
+								<col style="width:34%">
+								<col style="width:33%">
+							</colgroup>
+							<tbody><tr>
 <?php
-							echo $sphere->html_toolbox($notprotected,$notdirty);
+								echo $sphere->html_toolbox($is_notprotected,$is_notdirty);
 ?>
-							<td></td>
-							<td></td>
-						</tr></tbody></table>
+								<td></td>
+								<td></td>
+							</tr></tbody>
+						</table>
 					</td>
 				</tr>
 <?php
