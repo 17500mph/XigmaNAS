@@ -88,6 +88,11 @@
 	position: absolute;
 	top: 100%;
 	background: #101010;
+	background: -webkit-linear-gradient(#101010, #95a7c0 70%);
+	background: -o-linear-gradient(#101010, #95a7c0 70%);
+	background: -moz-linear-gradient(#101010, #95a7c0 70%);
+	background: linear-gradient(#101010, #95a7c0 70%);
+	opacity: 0.98;
 	border: 1px solid black;
 	font-size: 11px;
 	font-weight: normal;
