@@ -134,7 +134,7 @@ function user_find ($user, $pass = NULL)
 
 	// if no password check should be done, return
 	// the user
-	if ($pass == NULL)
+	if (!isset($pass))
 		return $GLOBALS["users"][$idx];
 
 	// check if the password matches

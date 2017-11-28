@@ -89,7 +89,7 @@ function login ()
 	    if ( ! user_activate( $_POST["p_user"], $p_pass ) ) 
             {
                 global $error_msg;
-                show_error( $error_msg["login_failed"] . ": " . htmlspecialchars($_POST["p_user"]) );
+                show_error( $GLOBALS['error_msg']["miscnouserpass"] );
             }
             // authentication sucessfull
             _debug( "user '" . $_POST[ "p_user" ]  . "' successfully authenticated" );
