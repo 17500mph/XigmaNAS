@@ -51,8 +51,6 @@ td.tabnavtbl a {
 	font-weight: bold;
 	text-decoration: none;
 }
-td.tabnavtbl a:hover {
-}
 td.tabnavtbl span {
 	color: grey;
 	float: left;
@@ -78,13 +76,12 @@ td.tabnavtbl a:hover span {
 	color: black;
 	background: #ffffff;
 }
-td.tabnavtbl li.tabact a {
-}
 td.tabnavtbl li.tabact span {
 	color: white;
 	background: #ffffff;
 }
-td.tabnavtbl li.tabinact a {
+td.tabnavtbl li.tabact a:hover span {
+	color: gray;
 }
 /*	background default */
 td.tabnavtbl span, td.tabnavtbl li.tabact span {
