@@ -102,6 +102,26 @@ if(false !== $sphere->row_identifier()):
 		write_config();
 	endif;
 endif;
+
+$action_pool = [
+	'GET',
+	'POST' => [
+		'apply',
+		$sphere->get_cbm_button_val_delete()
+	],
+	'NONE' => [
+		'view' => PAGE_MODE_VIEW
+	]
+];
+if(property_exists($property,'enable')):
+	if($sphere->toggle()):
+		$action_pool['POST'][] = $sphere->get_cbm_button_val_toggle();
+	else:
+		$action_pool['POST'][] = $sphere->get_cbm_button_val_enable();
+		$action_pool['POST'][] = $sphere->get_cbm_button_val_disable();
+	endif;
+endif;
+
 $methods = ['GET','POST'];
 $methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
 $method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
@@ -244,7 +264,7 @@ $a_col_width = ['5%','20%','20%','20%','10%','15','10%'];
 $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
-$document = new_page($pgtitle,$sphere->scriptname());
+$document = new_page($pgtitle,$sphere->scriptname(),'tablesort');
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -286,17 +306,17 @@ $thead = $table->addTHEAD();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
-	$tr->addTHwC('lhelc')->ins_cbm_checkbox_toggle($sphere);
+	$tr->addTHwC('lhelc sorter-false')->ins_cbm_checkbox_toggle($sphere);
 else:
-	$tr->insTHwC('lhelc');
+	$tr->insTHwC('lhelc sorter-false');
 endif;
 $tr->
 	insTHwC('lhell',$property->facility->get_title())->
 	insTHwC('lhell',$property->level->get_Title())->
 	insTHwC('lhell',$property->value->get_Title())->
-	insTHwC('lhelc',gtext('Status'))->
+	insTHwC('lhelc sorter-false',gtext('Status'))->
 	insTHwC('lhell',$property->comment->get_Title())->
-	insTHwC('lhebl',gtext('Toolbox'));
+	insTHwC('lhebl sorter-false',gtext('Toolbox'));
 $tbody = $table->addTBODY();
 if($record_exists):
 	foreach ($sphere->grid as $sphere->row):
