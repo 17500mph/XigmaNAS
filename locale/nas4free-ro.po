@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-11-17 19:28+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:24+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -3958,13 +3958,6 @@ msgstr "Executare"
 msgid "Execute Command"
 msgstr "Executare comandă"
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr ""
-"Execută comanda înainte sau după inițializarea sistemului, sau înainte de "
-"oprirea sistemului."
-
 msgid "Execute now"
 msgstr "Execută acum"
 
@@ -3980,14 +3973,14 @@ msgstr "Expiră la"
 msgid "Export"
 msgstr "Exportă"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr "Export pool"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportă toate directoarele din calea specificată."
-
-msgid "Export firewall rules."
-msgstr "Export reguli firewall."
 
 msgid "Exported"
 msgstr "Exportat"
@@ -4219,6 +4212,9 @@ msgstr "Firewall"
 
 msgid "Firewall Rule Settings"
 msgstr "Reguli firewall"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr "Verificare firmware"
@@ -4813,6 +4809,9 @@ msgstr "Import"
 msgid "Import Disks"
 msgstr "Import discuri"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr "Import discuri RAID software"
 
@@ -4821,9 +4820,6 @@ msgstr "Import discuri"
 
 msgid "Import disks used in configuration."
 msgstr "Import discuri utilizate în configurație."
-
-msgid "Import firewall rules."
-msgstr "Import reguli firewall."
 
 msgid "Import on-disk ZFS config"
 msgstr "Import configuraţie ZFS"
@@ -5921,6 +5917,10 @@ msgstr "CHAP mutual"
 msgid "Mutual CHAP Users"
 msgstr "Utilizatori CHAP mutual"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6876,6 +6876,9 @@ msgstr "Portaluri"
 msgid "Ports"
 msgstr "Porturi"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "PostInițializare"
 
@@ -6969,9 +6972,6 @@ msgstr "Protejare"
 
 msgid "Protect Setting"
 msgstr "Protejare setări"
-
-msgid "Proto"
-msgstr "Protocol"
 
 msgid "Protocol"
 msgstr "Protocol"
@@ -7798,6 +7798,9 @@ msgstr ""
 
 msgid "Select an encryption algorithm to use."
 msgstr "Selectați algortimul de criptare de utilizat."
+
+msgid "Select at which stage the command should be executed."
+msgstr ""
 
 msgid "Select configuration file:"
 msgstr "Selectare fișier configurare:"
@@ -8752,6 +8755,11 @@ msgstr ""
 "raportat la numărul total de zone de rezervă."
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -9141,6 +9149,9 @@ msgstr "Au fost detectate următoarele erori"
 
 msgid "The following input errors were detected"
 msgstr "Au fost detectate urmatoarele erori"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Serviciile următoare folosesc autentificarea AD:"
@@ -11409,3 +11420,19 @@ msgstr "utilizat din"
 
 msgid "visible"
 msgstr "vizibil"
+
+#~ msgid "Proto"
+#~ msgstr "Protocol"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr ""
+#~ "Execută comanda înainte sau după inițializarea sistemului, sau înainte de "
+#~ "oprirea sistemului."
+
+#~ msgid "Import firewall rules."
+#~ msgstr "Import reguli firewall."
+
+#~ msgid "Export firewall rules."
+#~ msgstr "Export reguli firewall."

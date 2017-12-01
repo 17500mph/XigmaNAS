@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
-"PO-Revision-Date: 2017-11-24 19:15+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
+"PO-Revision-Date: 2017-11-30 07:12+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:40+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:24+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -3965,13 +3965,6 @@ msgstr "Spustit"
 msgid "Execute Command"
 msgstr "Spustit příkaz"
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr ""
-"Spouštět příkaz před nebo po inicializaci systému (zavádění), případně před "
-"vypínáním systému."
-
 msgid "Execute now"
 msgstr "Spustit nyní"
 
@@ -3987,14 +3980,14 @@ msgstr "Platnost skončí v"
 msgid "Export"
 msgstr "Exportovat"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr "Exportovat fond ze systému"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportovat všechny složky v zadaném umístění."
-
-msgid "Export firewall rules."
-msgstr "Exportovat pravidla brány firewall."
 
 msgid "Exported"
 msgstr "Exportováno"
@@ -4228,6 +4221,9 @@ msgstr "Brána firewall"
 
 msgid "Firewall Rule Settings"
 msgstr "Nastavení pravidla brány firewall"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr "Kontrola firmware"
@@ -4821,6 +4817,9 @@ msgstr "Importovat"
 msgid "Import Disks"
 msgstr "Importovat disky"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr "Importovat jednotky datového úložiště sofwarového RAID pole"
 
@@ -4829,9 +4828,6 @@ msgstr "Importovat disky"
 
 msgid "Import disks used in configuration."
 msgstr "Importovat disky uvedené v nastavení."
-
-msgid "Import firewall rules."
-msgstr "Import pravidel brány firewall"
 
 msgid "Import on-disk ZFS config"
 msgstr "Import nastavení ZFS přímo z disku"
@@ -5951,6 +5947,10 @@ msgstr "Vzájemné ověření CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Uživatelé, ověřovaní vzájemně protokolem CHAP"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6907,6 +6907,9 @@ msgstr "Portály"
 msgid "Ports"
 msgstr "Porty"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "Po inicializaci"
 
@@ -7000,9 +7003,6 @@ msgstr "Chránit"
 
 msgid "Protect Setting"
 msgstr "Nastaení ochrany"
-
-msgid "Proto"
-msgstr "Prot."
 
 msgid "Protocol"
 msgstr "Protokol"
@@ -7836,6 +7836,9 @@ msgstr ""
 msgid "Select an encryption algorithm to use."
 msgstr "Vyberte který šifrovací algoritmus používat."
 
+msgid "Select at which stage the command should be executed."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "Vyberte soubor s nastaveními:"
 
@@ -8549,7 +8552,7 @@ msgid "System BIOS"
 msgstr "Systémový BIOS/(U)EFI"
 
 msgid "System Config Change"
-msgstr "Zmeně v nastavení systému"
+msgstr "Změna v nastavení systému"
 
 msgid "System Email Report Settings"
 msgstr "Nastavení hlášení o systému e-mailem"
@@ -8786,6 +8789,11 @@ msgstr ""
 "Atribut „Přinejmenším zbývajících náhradních“ značí počet zbývajících "
 "náhradních bloků vyjádřeno jako procento celkového počtu dostupných "
 "náhradních buněk flash paměti."
+
+msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9196,6 +9204,9 @@ msgstr "Byly zjištěny následující chyby"
 
 msgid "The following input errors were detected"
 msgstr "V zadaných údajích byly zjištěny následující chyby"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Tyto služby budou používat ověřování vůči Active Directory:"
@@ -11501,3 +11512,19 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
+
+#~ msgid "Proto"
+#~ msgstr "Prot."
+
+#~ msgid "Import firewall rules."
+#~ msgstr "Import pravidel brány firewall"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr ""
+#~ "Spouštět příkaz před nebo po inicializaci systému (zavádění), případně před "
+#~ "vypínáním systému."
+
+#~ msgid "Export firewall rules."
+#~ msgstr "Exportovat pravidla brány firewall."

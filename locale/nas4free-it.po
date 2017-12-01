@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-11-27 10:14+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:24+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -3981,13 +3981,6 @@ msgstr "Esegui"
 msgid "Execute Command"
 msgstr "Esegui comando"
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr ""
-"Esegui comando prima o dopo l'inizializzazione (avvio) o prima dello "
-"spegnimento del sistema."
-
 msgid "Execute now"
 msgstr "Esegui ora"
 
@@ -4003,14 +3996,14 @@ msgstr "Scadenza"
 msgid "Export"
 msgstr "Esporta"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr "Esporta un pool dal sistema"
 
 msgid "Export all the directories in the specified path."
 msgstr "Esporta tutte le directory nel percrso specificato."
-
-msgid "Export firewall rules."
-msgstr "Esporta regole del firewall"
 
 msgid "Exported"
 msgstr "Esportato"
@@ -4242,6 +4235,9 @@ msgstr "Firewall"
 
 msgid "Firewall Rule Settings"
 msgstr "Impostazioni delle regole del Firewall"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr "Controllo Firmware"
@@ -4833,6 +4829,9 @@ msgstr "Importa"
 msgid "Import Disks"
 msgstr "Importa Dischi"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr "Importa i dischi del RAID software"
 
@@ -4841,9 +4840,6 @@ msgstr "Importa dischi"
 
 msgid "Import disks used in configuration."
 msgstr "Importa dischi usati nella configurazione."
-
-msgid "Import firewall rules."
-msgstr "Importa regole firewall"
 
 msgid "Import on-disk ZFS config"
 msgstr "Importa la configurazione ZFS che risiede sui dischi."
@@ -5938,6 +5934,10 @@ msgstr "CHAP reciproco"
 msgid "Mutual CHAP Users"
 msgstr "Utenti CHAP reciproco"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6890,6 +6890,9 @@ msgstr "Portali"
 msgid "Ports"
 msgstr "Porte"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "PostInit"
 
@@ -6979,9 +6982,6 @@ msgstr "Proteggi"
 
 msgid "Protect Setting"
 msgstr "Settaggi della protezione"
-
-msgid "Proto"
-msgstr "Proto"
 
 msgid "Protocol"
 msgstr "Protocollo"
@@ -7810,6 +7810,9 @@ msgstr ""
 
 msgid "Select an encryption algorithm to use."
 msgstr "Selezionare l'algoritmo di criptaggio da usare."
+
+msgid "Select at which stage the command should be executed."
+msgstr ""
 
 msgid "Select configuration file:"
 msgstr "Selezionare il file di configurazione:"
@@ -8774,6 +8777,11 @@ msgstr ""
 "disponibili."
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -9174,6 +9182,9 @@ msgstr "I seguenti errori sono stati individuati"
 
 msgid "The following input errors were detected"
 msgstr "Sono stati trovati i seguenti errori di input"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "I servizi seguenti utilizzeranno l'autenticazione AD:"
@@ -11459,3 +11470,19 @@ msgstr "utilizzo di"
 
 msgid "visible"
 msgstr "visibile"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr ""
+#~ "Esegui comando prima o dopo l'inizializzazione (avvio) o prima dello "
+#~ "spegnimento del sistema."
+
+#~ msgid "Import firewall rules."
+#~ msgstr "Importa regole firewall"
+
+#~ msgid "Proto"
+#~ msgstr "Proto"
+
+#~ msgid "Export firewall rules."
+#~ msgstr "Esporta regole del firewall"

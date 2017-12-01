@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-10-11 12:48+0000\n"
 "Last-Translator: Kenichi Yamada <yamaken_sapporo@me.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:24+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -3687,11 +3687,6 @@ msgstr "実行"
 msgid "Execute Command"
 msgstr ""
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr "システム初期化の前後、又はシステムシャットダウン前にコマンドを実行します。"
-
 msgid "Execute now"
 msgstr "今すぐ実行"
 
@@ -3707,14 +3702,14 @@ msgstr "有効期限"
 msgid "Export"
 msgstr "エクスポート"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
 msgstr "指定されたパスの中にあるすべてのディレクトリーをエクスポートします。"
-
-msgid "Export firewall rules."
-msgstr ""
 
 msgid "Exported"
 msgstr ""
@@ -3939,6 +3934,9 @@ msgstr "ファイアウォール"
 
 msgid "Firewall Rule Settings"
 msgstr "ファイアウォールルール設定"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr ""
@@ -4489,6 +4487,9 @@ msgstr "インポート"
 msgid "Import Disks"
 msgstr "ディスクのインポート"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr ""
 
@@ -4497,9 +4498,6 @@ msgstr "ディスクのインポート"
 
 msgid "Import disks used in configuration."
 msgstr "この設定で利用されているディスクをインポートします。"
-
-msgid "Import firewall rules."
-msgstr "ファイアウォールルールをインポート。"
 
 msgid "Import on-disk ZFS config"
 msgstr "ディスク上のZFS設定をインポート"
@@ -5540,6 +5538,10 @@ msgstr "双方向 CHAP"
 msgid "Mutual CHAP Users"
 msgstr "双方向 CHAP ユーザ"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6453,6 +6455,9 @@ msgstr "ポータル"
 msgid "Ports"
 msgstr "ポート"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "初期化後"
 
@@ -6542,9 +6547,6 @@ msgstr ""
 
 msgid "Protect Setting"
 msgstr ""
-
-msgid "Proto"
-msgstr "プロトコル"
 
 msgid "Protocol"
 msgstr "プロトコル"
@@ -7333,6 +7335,9 @@ msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
 
 msgid "Select an encryption algorithm to use."
 msgstr "使用する暗号化アルゴリズムを選択"
+
+msgid "Select at which stage the command should be executed."
+msgstr ""
 
 msgid "Select configuration file:"
 msgstr "設定ファイルを選択:"
@@ -8233,6 +8238,11 @@ msgid ""
 msgstr "最小スペア残数の属性は使用可能なスペアブロックの合計数の割合として予備ブロックの残数を示します。"
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -8576,6 +8586,9 @@ msgstr ""
 
 msgid "The following input errors were detected"
 msgstr "以下の入力エラーが検出されました"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "以下のサービスは Active Directory の認証に使われます:"
@@ -10609,3 +10622,14 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr "システム初期化の前後、又はシステムシャットダウン前にコマンドを実行します。"
+
+#~ msgid "Import firewall rules."
+#~ msgstr "ファイアウォールルールをインポート。"
+
+#~ msgid "Proto"
+#~ msgstr "プロトコル"

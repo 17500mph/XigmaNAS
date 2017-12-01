@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-11-24 18:26+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:25+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -3664,11 +3664,6 @@ msgstr "執行"
 msgid "Execute Command"
 msgstr "執行命令"
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr "系統啟動/關機之前或之後的命令。"
-
 msgid "Execute now"
 msgstr "立刻執行"
 
@@ -3684,14 +3679,14 @@ msgstr "過期"
 msgid "Export"
 msgstr "導出"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr "從系統導出池"
 
 msgid "Export all the directories in the specified path."
 msgstr "導出指定的路徑中的所有目錄。"
-
-msgid "Export firewall rules."
-msgstr "導出防火牆規則"
 
 msgid "Exported"
 msgstr "已導出"
@@ -3913,6 +3908,9 @@ msgstr "防火牆"
 
 msgid "Firewall Rule Settings"
 msgstr "防火牆規則設置"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr "固件檢查"
@@ -4458,6 +4456,9 @@ msgstr "導入"
 msgid "Import Disks"
 msgstr "導入磁片"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr "導入軟體RAID磁碟"
 
@@ -4466,9 +4467,6 @@ msgstr "導入磁片"
 
 msgid "Import disks used in configuration."
 msgstr "導入磁片的配置。"
-
-msgid "Import firewall rules."
-msgstr "導入防火牆規則。"
 
 msgid "Import on-disk ZFS config"
 msgstr "從硬碟上導入ZFS設置"
@@ -5501,6 +5499,10 @@ msgstr "CHAP 相互驗證"
 msgid "Mutual CHAP Users"
 msgstr "CHAP 相互驗證用戶"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6410,6 +6412,9 @@ msgstr "門戶網站（Portals）"
 msgid "Ports"
 msgstr "端口"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "後置初始動作（PostInit）"
 
@@ -6499,9 +6504,6 @@ msgstr "保護"
 
 msgid "Protect Setting"
 msgstr "保護設置"
-
-msgid "Proto"
-msgstr "協議"
 
 msgid "Protocol"
 msgstr "協議"
@@ -7289,6 +7291,9 @@ msgstr "請選擇已開啟 S.M.A.R.T. 監測的硬碟。"
 
 msgid "Select an encryption algorithm to use."
 msgstr "選擇要使用的加密演算法。"
+
+msgid "Select at which stage the command should be executed."
+msgstr ""
 
 msgid "Select configuration file:"
 msgstr "選擇配置文件："
@@ -8185,6 +8190,11 @@ msgid ""
 msgstr "“Minimum Spares Remaining”屬性指示剩餘空閒塊的數量占可用空閒塊總數的百分比。"
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -8523,6 +8533,9 @@ msgstr "檢測到以下錯誤"
 
 msgid "The following input errors were detected"
 msgstr "檢測到以下的輸入錯誤"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "以下服務將使用AD身份驗證："
@@ -10527,3 +10540,17 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可見"
+
+#~ msgid "Import firewall rules."
+#~ msgstr "導入防火牆規則。"
+
+#~ msgid "Proto"
+#~ msgstr "協議"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr "系統啟動/關機之前或之後的命令。"
+
+#~ msgid "Export firewall rules."
+#~ msgstr "導出防火牆規則"
