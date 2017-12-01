@@ -153,7 +153,7 @@ $(window).on("load",function() {
 			$column_header = [];
 			if(is_array($loginfo[$log])):
 				$columns = count($loginfo[$log]['columns']);
-				echo '<th class="gap" colspan="',$columns,'"></th>',PHP_EOL;
+				echo '<tr><th class="gap" colspan="',$columns,'"></th></tr>',PHP_EOL;
 				html_titleline2(gtext('Log'),$columns);
 				echo '<tr>',PHP_EOL;
 				foreach($loginfo[$log]['columns'] as $column_key => $column_val):
