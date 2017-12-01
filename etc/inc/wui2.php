@@ -1812,10 +1812,14 @@ trait co_DOMTools {
 	//	title macros
 	public function ins_titleline(string $title = NULL,int $colspan = 0,string $id = NULL) {
 		$tr_attributes = [];
+		$th_attributes = [];
 		if(!is_null($id) && preg_match('/\S/',$id)):
 			$tr_attributes['id'] = sprintf('%s_tr',$id);
 		endif;
-		$th_attributes = ['class' => 'lhetop'];
+		$th_attributes['class'] = 'lhetop';
+		if($this->option_exists('tablesort')):
+			$th_attributes['class'] .= ' sorter-false';
+		endif;
 		if($colspan > 0):
 			$th_attributes['colspan'] = $colspan;
 		endif;
@@ -1824,8 +1828,13 @@ trait co_DOMTools {
 		return $this;
 	}
 	public function ins_titleline_with_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false,string $title = '',int $colspan = 0) {
-		$tr_attributes = ['id' => sprintf('%s_tr',$p->get_id())];
-		$th_attributes = ['class' => 'lhetop'];
+		$tr_attributes = [];
+		$th_attributes = [];
+		$tr_attributes['id'] = sprintf('%s_tr',$p->get_id());
+		$th_attributes['class'] = 'lhetop';
+		if($this->option_exists('tablesort')):
+			$th_attributes['class'] .= ' sorter-false';
+		endif;
 		if($colspan > 0):
 			$th_attributes['colspan'] = $colspan;
 		endif;
@@ -2496,10 +2505,10 @@ EOJ;
 		endif;
 		return $output;
 	}
-	public function ins_head(array $page_title = [],string ...$options) {
-		$is_login = in_array('login',$options);
-		$is_datechooser = in_array('datechooser',$options);
-
+	public function ins_head(array $page_title = []) {
+		$is_login = $this->option_exists('login');
+		$is_tablesort = $this->option_exists('tablesort');
+		$is_datechooser = $this->option_exists('datechooser');
 		$head = $this->addElement('head',['id' => 'head']);
 		$head->
 			insElement('meta',['charset' => system_get_language_codeset()])->
@@ -2518,6 +2527,11 @@ EOJ;
 			insElement('script',['type' => 'text/javascript','src' => '/js/gui.js'])->
 			insElement('script',['type' => 'text/javascript','src' => '/js/spinner.js'])->
 			insElement('script',['type' => 'text/javascript','src' => '/js/spin.min.js']);
+		if($is_tablesort):
+			$head->
+				insElement('script',['type' => 'text/javascript','src' => '/js/jquery.tablesorter.min.js']);
+//				insElement('script',['type' => 'text/javascript','src' => '/js/jquery.tablesorter.widgets.min.js']);
+		endif;
 		if($is_datechooser):
 			$head->
 				insElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css'])->
@@ -2532,12 +2546,13 @@ EOJ;
 	 *	@param string $action_url If $action_url empty no form element will be created.
 	 *	@return DOMNode $this
 	 */
-	public function ins_body(array $page_title = [],string $action_url = NULL,string ...$options) {
-		$is_login = in_array('login',$options);
-		$is_multipart = in_array('multipart',$options);
+	public function ins_body(array $page_title = [],string $action_url = NULL) {
+		$is_login = $this->option_exists('login');
+		$is_multipart = $this->option_exists('multipart');
+		$is_tablesort = $this->option_exists('tablesort');
 		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
-		$is_spinonsubmit = $is_form && !in_array('nospinonsubmit',$options);
-		$is_tabnav = !($is_login || in_array('notabnav',$options));
+		$is_spinonsubmit = $is_form && !$this->option_exists('nospinonsubmit');
+		$is_tabnav = !($is_login || $this->option_exists('notabnav'));
 		$jdata = <<<'EOJ'
 $(window).on("load", function() {
 	$(".spin").click(function() { spinner(); });
@@ -2559,6 +2574,15 @@ EOJ;
 		$jdata .= <<<'EOJ'
 });
 EOJ;
+		if($is_tablesort):
+			$jdata .= <<<'EOJ'
+$(document).ready(function() { 
+	$(".area_data_selection").tablesorter({
+		emptyTo: 'none'
+	});
+}); 
+EOJ;
+		endif;
 		$body = $this->addElement('body',['id' => 'main']);
 		if($is_form):
 			$form_attributes = [
@@ -2679,6 +2703,9 @@ class co_DOMElement extends \DOMElement implements ci_DOM {
 		endforeach;
 		return $this;
 	}
+	public function option_exists(string $option) {
+		return $this->ownerDocument->option_exists($option);
+	}
 	public function push() {
 		$this->ownerDocument->push($this);
 		return $this;
@@ -2694,12 +2721,22 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	use co_DOMTools;
 
 	protected $stack = [];
-
+	protected $options = [];
+	
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
 		$this->preserveWhiteSpace = false;
 		$this->formatOutput = true;
 		$this->registerNodeClass('DOMElement','co_DOMElement');
+	}
+	public function set_options(string ...$options) {
+		foreach($options as $value):
+			$this->options[$value] = $value;
+		endforeach;
+		return $this;
+	}
+	public function option_exists(string $option) {
+		return array_key_exists($option,$this->options);
 	}
 	public function push($element) {
 		array_push($this->stack,$element);
@@ -2720,23 +2757,33 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	public function get_html() {
 		return $this->saveHTML();
 	}
-/*
-	public function getElementById($id) {
-		$xpath = new DOMXPath($this);
-		return $xpath->query("//*[@id='$id']")->item(0);
-	}
- */
 }
 interface ci_DOM {
 }
+/**
+ * 
+ * @param array $page_title
+ * @param string $action_url
+ * @param string ...$options
+ * @return \co_DOMDocument
+ */
+/*
+ *	login
+ *	datechooser
+ *	multipart
+ *	nospinonsubmit
+ *	notabnav
+ *	tablesort
+ */
 function new_page(array $page_title = [],string $action_url = NULL,string ...$options) {
 	$document = new co_DOMDocument();
 	$document->
 		loadHTML('<!DOCTYPE html>',LIBXML_HTML_NOIMPLIED);
 	$document->
+		set_options(...$options)->
 		addElement('html',['lang' => system_get_language_code()])->
-			ins_head($page_title,...$options)->
-			ins_body($page_title,$action_url,...$options);
+			ins_head($page_title)->
+			ins_body($page_title,$action_url);
 	return $document;
 }
 ?>
