@@ -225,7 +225,7 @@ $a_col_width = ['5%','25%','25%','10%','25%','10%'];
 $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
-$document = new_page($pgtitle,$sphere->scriptname());
+$document = new_page($pgtitle,$sphere->scriptname(),'tablesort');
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -263,16 +263,16 @@ $thead = $table->addTHEAD();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
-	$tr->addTHwC('lhelc')->ins_cbm_checkbox_toggle($sphere);
+	$tr->addTHwC('lhelc sorter-false')->ins_cbm_checkbox_toggle($sphere);
 else:
-	$tr->insTHwC('lhelc');
+	$tr->insTHwC('lhelc sorter-false');
 endif;
 $tr->
 	insTHwC('lhell',$property->name->get_title())->
 	insTHwC('lhell',$property->type->get_Title())->
-	insTHwC('lhelc',gtext('Status'))->
+	insTHwC('lhelc sorter-false',gtext('Status'))->
 	insTHwC('lhell',$property->description->get_Title())->
-	insTHwC('lhebl',gtext('Toolbox'));
+	insTHwC('lhebl sorter-false',gtext('Toolbox'));
 $tbody = $table->addTBODY();
 if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
