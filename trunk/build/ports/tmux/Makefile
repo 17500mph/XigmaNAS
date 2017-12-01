@@ -8,9 +8,6 @@ MAINTAINER=	zoon1@nas4free.org
 MASTER_SITES=	https://github.com/tmux/tmux/releases/download/${PORTVERSION}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	mat@FreeBSD.org
-COMMENT=	Terminal Multiplexer
-
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
 
@@ -20,6 +17,7 @@ USE_GITHUB=	nodefault
 GH_TUPLE=	imomaliev:tmux-bash-completion:ef56d3e:bash
 
 GNU_CONFIGURE=	yes
+NO_PKG_REGISTER=yes
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc --enable-utempter
 
 PLIST_FILES=	bin/tmux \
