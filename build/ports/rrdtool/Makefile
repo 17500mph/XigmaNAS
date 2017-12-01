@@ -1,6 +1,6 @@
 PORTNAME=		rrdtool
 PORTVERSION=		1.7.0
-PORTREVISION=		0
+PORTREVISION=		1
 CATEGORIES=		databases graphics
 
 COMMENT=		Round Robin Database Tools
@@ -14,7 +14,7 @@ NO_PKG_REGISTER=	yes
 DEPENDS_TARGET=	clean build stage
 
 BUILD_DEPENDS=		${NONEXISTENT}:databases/rrdtool
-DEP_STAGEDIR=		${PORTSDIR}/databases/rrdtool/work/stage
+DEP_STAGEDIR=		${PORTSDIR}/databases/rrdtool/work-py27/stage
 PANGO_MODULES=		${PREFIX}/lib/pango/1.8.0/modules
 
 do-install:
