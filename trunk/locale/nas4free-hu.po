@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-11-24 09:20+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:24+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -3908,13 +3908,6 @@ msgstr "Futtatás"
 msgid "Execute Command"
 msgstr "Parancs végrehajtása"
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr ""
-"Parancs futtatása rendszerindítás (bootolás) előtt vagy után, vagy mielőtt a "
-"rendszer leáll."
-
 msgid "Execute now"
 msgstr "Futtatás most"
 
@@ -3930,14 +3923,14 @@ msgstr "Lejár"
 msgid "Export"
 msgstr "Exportálás"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr "Tároló exportálása a rendszerből"
 
 msgid "Export all the directories in the specified path."
 msgstr "A kiválasztott útvonalon lévő összes könyvtár exportálása."
-
-msgid "Export firewall rules."
-msgstr "Tűzfal-szabályok exportálása."
 
 msgid "Exported"
 msgstr "Exportálva"
@@ -4168,6 +4161,9 @@ msgstr "Tűzfal"
 
 msgid "Firewall Rule Settings"
 msgstr "Tűzfalszabály beállításai"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr "Firmware ellenőrzése"
@@ -4755,6 +4751,9 @@ msgstr "Importálás"
 msgid "Import Disks"
 msgstr "Lemezek importálása"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr "Szoftveres RAID lemezek importálása"
 
@@ -4763,9 +4762,6 @@ msgstr "Lemezek importálása"
 
 msgid "Import disks used in configuration."
 msgstr "Lemezek importálása a beállítások alapján."
-
-msgid "Import firewall rules."
-msgstr "Tűzfalszabályok importálása"
 
 msgid "Import on-disk ZFS config"
 msgstr "Lemezen levő ZFS beállítás importálása"
@@ -5859,6 +5855,10 @@ msgstr "Kölcsönös CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Kölcsönös CHAP felhasználók"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6816,6 +6816,9 @@ msgstr "Portálok"
 msgid "Ports"
 msgstr "Portok"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "Indítás után"
 
@@ -6906,9 +6909,6 @@ msgstr "Védelem"
 
 msgid "Protect Setting"
 msgstr "Védelem beállításai"
-
-msgid "Proto"
-msgstr "Proto"
 
 msgid "Protocol"
 msgstr "Protokoll"
@@ -7738,6 +7738,9 @@ msgstr "Válassz ki egy a S.M.A.R.T. által figyelendő lemezt."
 
 msgid "Select an encryption algorithm to use."
 msgstr "Válassz titkosítási algoritmust."
+
+msgid "Select at which stage the command should be executed."
+msgstr ""
 
 msgid "Select configuration file:"
 msgstr "Konfigurációs fájl kiválasztása:"
@@ -8697,6 +8700,11 @@ msgstr ""
 "rendelkezésre álló tartalék blokkhoz viszonyítva."
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -9077,6 +9085,9 @@ msgstr "A következő hibákat észleltük"
 
 msgid "The following input errors were detected"
 msgstr "A következő bemeneti hibák fordultak elő"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "A következő szolgáltatások használnak AD hitelesítést:"
@@ -11324,3 +11335,19 @@ msgstr "használatban"
 
 msgid "visible"
 msgstr "látható"
+
+#~ msgid "Proto"
+#~ msgstr "Proto"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr ""
+#~ "Parancs futtatása rendszerindítás (bootolás) előtt vagy után, vagy mielőtt a "
+#~ "rendszer leáll."
+
+#~ msgid "Import firewall rules."
+#~ msgstr "Tűzfalszabályok importálása"
+
+#~ msgid "Export firewall rules."
+#~ msgstr "Tűzfal-szabályok exportálása."

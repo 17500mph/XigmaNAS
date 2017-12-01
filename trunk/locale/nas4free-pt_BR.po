@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-06-21 15:36+0000\n"
 "Last-Translator: Almir <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:24+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -3787,13 +3787,6 @@ msgstr "Executar"
 msgid "Execute Command"
 msgstr ""
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr ""
-"Executar comando antes ou depois da inicialização (boot) ou antes do "
-"desligamento do sistema."
-
 msgid "Execute now"
 msgstr "Executar agora"
 
@@ -3809,14 +3802,14 @@ msgstr "Expirar"
 msgid "Export"
 msgstr "Exportar"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportar todos os diretórios do caminho especificado."
-
-msgid "Export firewall rules."
-msgstr ""
 
 msgid "Exported"
 msgstr ""
@@ -4044,6 +4037,9 @@ msgid "Firewall"
 msgstr "Firewall"
 
 msgid "Firewall Rule Settings"
+msgstr ""
+
+msgid "Firewall Rules"
 msgstr ""
 
 msgid "Firmware Check"
@@ -4613,6 +4609,9 @@ msgstr "Importar"
 msgid "Import Disks"
 msgstr ""
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr ""
 
@@ -4621,9 +4620,6 @@ msgstr "Importar discos"
 
 msgid "Import disks used in configuration."
 msgstr "Importar discos usados na configuração"
-
-msgid "Import firewall rules."
-msgstr "Importar regras de firewall."
 
 msgid "Import on-disk ZFS config"
 msgstr "Importar configuração ZFS em disco (on-disk)"
@@ -5674,6 +5670,10 @@ msgstr "CHAP mútuo"
 msgid "Mutual CHAP Users"
 msgstr "Usuários CHAP mútuos"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6609,6 +6609,9 @@ msgstr "Portais"
 msgid "Ports"
 msgstr "Portas"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "PostInit"
 
@@ -6698,9 +6701,6 @@ msgstr ""
 
 msgid "Protect Setting"
 msgstr ""
-
-msgid "Proto"
-msgstr "Proto"
 
 msgid "Protocol"
 msgstr "Protocolo"
@@ -7497,6 +7497,9 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Selecione disco com capacidade de monitoramento S.M.A.R.T."
 
 msgid "Select an encryption algorithm to use."
+msgstr ""
+
+msgid "Select at which stage the command should be executed."
 msgstr ""
 
 msgid "Select configuration file:"
@@ -8424,6 +8427,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -8791,6 +8799,9 @@ msgstr ""
 
 msgid "The following input errors were detected"
 msgstr "Foram detectados os seguintes erros"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr ""
@@ -10927,3 +10938,16 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "Import firewall rules."
+#~ msgstr "Importar regras de firewall."
+
+#~ msgid "Proto"
+#~ msgstr "Proto"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr ""
+#~ "Executar comando antes ou depois da inicialização (boot) ou antes do "
+#~ "desligamento do sistema."

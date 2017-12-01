@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-11-22 00:28+0000\n"
+"POT-Creation-Date: 2017-12-01 01:36+0000\n"
 "PO-Revision-Date: 2017-11-26 18:33+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-28 11:41+0000\n"
+"X-Launchpad-Export-Date: 2017-12-01 01:25+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -3938,13 +3938,6 @@ msgstr "Виконати"
 msgid "Execute Command"
 msgstr "Виконати команду"
 
-msgid ""
-"Execute command pre or post system initialization (booting) or before system "
-"shutdown."
-msgstr ""
-"Виконання команди до або після ініціалізації системи (завантаження) або "
-"перед вимиканням системи."
-
 msgid "Execute now"
 msgstr "Виконати зараз"
 
@@ -3960,14 +3953,14 @@ msgstr "Закінчення"
 msgid "Export"
 msgstr "Експорт"
 
+msgid "Export Rules"
+msgstr ""
+
 msgid "Export a pool from the system"
 msgstr "Експорт пулу з системи"
 
 msgid "Export all the directories in the specified path."
 msgstr "Експортувати всі каталоги за вказаним шляхом."
-
-msgid "Export firewall rules."
-msgstr "Експорт правил брандмауера."
 
 msgid "Exported"
 msgstr "Експортовано"
@@ -4202,6 +4195,9 @@ msgstr "Брандмауер"
 
 msgid "Firewall Rule Settings"
 msgstr "Налаштування правил фаєрвола"
+
+msgid "Firewall Rules"
+msgstr ""
 
 msgid "Firmware Check"
 msgstr "Перевірка прошивки"
@@ -4785,6 +4781,9 @@ msgstr "Імпортувати"
 msgid "Import Disks"
 msgstr "Імпортувати Диски"
 
+msgid "Import Rules"
+msgstr ""
+
 msgid "Import Software RAID Disks"
 msgstr "Імпортування дисків програмного RAID"
 
@@ -4793,9 +4792,6 @@ msgstr "Імпортування дисків"
 
 msgid "Import disks used in configuration."
 msgstr "Імпортувати диски, що використані в конфігурації."
-
-msgid "Import firewall rules."
-msgstr "Імпортувати правила брандмауера."
 
 msgid "Import on-disk ZFS config"
 msgstr "Імпортувати конфігурацію з дисків ZFS"
@@ -5893,6 +5889,10 @@ msgstr "Взаємна CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Користувачі взаємного CHAP"
 
+msgid ""
+"NAS4Free is based upon/includes various free software packages, listed below."
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6847,6 +6847,9 @@ msgstr "Портали"
 msgid "Ports"
 msgstr "Порти"
 
+msgid "Post Upgrade"
+msgstr ""
+
 msgid "PostInit"
 msgstr "Після ініціалізації"
 
@@ -6936,9 +6939,6 @@ msgstr "Захистити"
 
 msgid "Protect Setting"
 msgstr "Параметри захисту"
-
-msgid "Proto"
-msgstr "Протокол"
 
 msgid "Protocol"
 msgstr "Протокол"
@@ -7761,6 +7761,9 @@ msgstr "Виберіть диск для якого дозволено моні�
 
 msgid "Select an encryption algorithm to use."
 msgstr "Оберіть алгоритм шифрування."
+
+msgid "Select at which stage the command should be executed."
+msgstr ""
 
 msgid "Select configuration file:"
 msgstr "Оберіть файл конфігураціії:"
@@ -8718,6 +8721,11 @@ msgstr ""
 "відсотках) що залишилися від загальної кількості доступних запасних блоків."
 
 msgid ""
+"The NAS4Free Project would like to thank the authors of this software for "
+"their efforts."
+msgstr ""
+
+msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
@@ -9109,6 +9117,9 @@ msgstr "Були знайдені наступні помилки"
 
 msgid "The following input errors were detected"
 msgstr "Були виявлені наступні помилки вводу"
+
+msgid "The following persons have contributed to NAS4Free:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Наступні служби будуть використовувати аутентифікацію AD:"
@@ -11380,3 +11391,19 @@ msgstr "використано з"
 
 msgid "visible"
 msgstr "видимий"
+
+#~ msgid "Import firewall rules."
+#~ msgstr "Імпортувати правила брандмауера."
+
+#~ msgid "Proto"
+#~ msgstr "Протокол"
+
+#~ msgid ""
+#~ "Execute command pre or post system initialization (booting) or before system "
+#~ "shutdown."
+#~ msgstr ""
+#~ "Виконання команди до або після ініціалізації системи (завантаження) або "
+#~ "перед вимиканням системи."
+
+#~ msgid "Export firewall rules."
+#~ msgstr "Експорт правил брандмауера."
