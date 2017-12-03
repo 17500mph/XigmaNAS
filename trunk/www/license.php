@@ -122,7 +122,7 @@ not be interpreted as representing official policies, either expressed or implie
 		['Raul Fernandez Garcia','raulfg3@gmail.com','Spanish translator of the WebGUI'],
 		['Mucahid Zeyrek','mucahid.zeyrek@dhl.com','Turkish translator of the WebGUI'],
 		['Volker Theile','votdev@gmx.de','Developer 2006-2009'],
-		['Samuel Tunis','killermist@gmail.com','User guide and Live support on irc (killermist)']
+		['Samuel Tunis','killermist@gmail.com','User guide and Live support on irc 2012-2015']
 	];
 ?>
 	<table class="area_data_selection">
