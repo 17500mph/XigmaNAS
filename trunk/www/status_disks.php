@@ -92,7 +92,7 @@ function status_disks_ajax() {
 		if($temp_available):
 			if(!empty($pconfig['temp_crit']) && $temp_value >= $pconfig['temp_crit']):
 				$tr->addTDwC('lcell')->addDIV(['class'=> 'errortext'],$gt_temp);
-			elseif(!empty($pconfig['temp_info']) && $gt_temp >= $pconfig['temp_info']):
+			elseif(!empty($pconfig['temp_info']) && $temp_value >= $pconfig['temp_info']):
 				$tr->addTDwC('lcell')->addDIV(['class'=> 'warningtext'],$gt_temp);
 			else:
 				$tr->insTDwC('lcell',$gt_temp);
@@ -134,7 +134,7 @@ function status_disks_ajax() {
 		if($temp_available):
 			if(!empty($pconfig['temp_crit']) && $temp_value >= $pconfig['temp_crit']):
 				$tr->addTDwC('lcell')->addDIV(['class'=> 'errortext'],$gt_temp);
-			elseif(!empty($pconfig['temp_info']) && $gt_temp >= $pconfig['temp_info']):
+			elseif(!empty($pconfig['temp_info']) && $temp_value >= $pconfig['temp_info']):
 				$tr->addTDwC('lcell')->addDIV(['class'=> 'warningtext'],$gt_temp);
 			else:
 				$tr->insTDwC('lcell',$gt_temp);
