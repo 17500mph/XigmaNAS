@@ -40,9 +40,15 @@ function get_sphere_status_disks() {
 	$sphere = new co_sphere_row('status_disks','php');
 	return $sphere;
 }
-function status_disks_ajax() {
+function status_disks_render($root = NULL) {
 	global $config;
 
+	if(isset($root)):
+		$is_DOM = true;
+	else:
+		$is_DOM = false;
+		$root = new co_DOMDocument();
+	endif;
 	$pconfig = [];
 	$pconfig['temp_info'] = $config['smartd']['temp']['info'] ?? 0;
 	$pconfig['temp_crit'] = $config['smartd']['temp']['crit'] ?? 0;
@@ -53,7 +59,6 @@ function status_disks_ajax() {
 		array_sort_key($a_disk_conf,'name');
 	endif;
 	$raidstatus = get_sraid_disks_list();
-	$fragment = new co_DOMDocument();
 	foreach($a_disk_conf as $disk):
 		$iostat_value = system_get_device_iostat($disk['name']);
 		$iostat_available = (false !== $iostat_value);
@@ -80,7 +85,7 @@ function status_disks_ajax() {
 		$gt_description = empty($disk['desc']) ? gtext('n/a') : htmlspecialchars($disk['desc']);
 		$gt_serial = empty($disk['serial']) ? gtext('n/a') : htmlspecialchars($disk['serial']);
 		$gt_fstype = empty($disk['fstype']) ? gtext('Unknown or unformatted') : htmlspecialchars(get_fstype_shortdesc($disk['fstype']));
-		$tr = $fragment->addTR();
+		$tr = $root->addTR();
 		$tr->
 			insTDwC('lcell',$gt_name)->
 			insTDwC('lcell',$gt_size)->
@@ -122,7 +127,7 @@ function status_disks_ajax() {
 		$gt_serial = gtext('n/a');
 		$gt_fstype = empty($diskv['fstype']) ? gtext('UFS') : htmlspecialchars(get_fstype_shortdesc($diskv['fstype']));
 		$gt_status = htmlspecialchars($diskv['state']);
-		$tr = $fragment->addTR();
+		$tr = $root->addTR();
 		$tr->
 			insTDwC('lcell',$gt_name)->
 			insTDwC('lcell',$gt_size)->
@@ -143,17 +148,21 @@ function status_disks_ajax() {
 			$tr->insTDwC('lcell',gtext('n/a'));
 		endif;
 	endforeach;
-	return $fragment->get_html();
+	if($is_DOM):
+		return $root;
+	else:
+		return $root->get_html();
+	endif;
 }
 if(is_ajax()):
-	$status = status_disks_ajax();
+	$status = status_disks_render();
 	render_ajax($status);
 endif;
 $sphere = &get_sphere_status_disks();
 $jcode = <<<EOJ
 $(document).ready(function(){
 	var gui = new GUI;
-	gui.recall(30000, 30000, 'status_disks.php', null, function(data) {
+	gui.recall(15000, 15000, 'status_disks.php', null, function(data) {
 		if ($('#area_refresh').length > 0) {
 			$('#area_refresh').html(data.data);
 		}
@@ -167,7 +176,7 @@ $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
 $body->addJavaScript($jcode);
 $content = $pagecontent->add_area_data();
-$content->
+$tbody_inner = $content->
 	add_table_data_selection()->
 		ins_colgroup_with_styles('width',$a_colwidth)->
 		push()->addTHEAD()->
@@ -182,6 +191,7 @@ $content->
 				insTHwC('lhell',gtext('I/O Statistics'))->
 				insTHwC('lhell',gtext('Temperature'))->
 				insTHwC('lhebl',gtext('Status'))->
-		pop()->addTBODY(['id' => 'area_refresh'],status_disks_ajax());
+		pop()->addTBODY(['id' => 'area_refresh']);
+status_disks_render($tbody_inner);
 $document->render();
 ?>
