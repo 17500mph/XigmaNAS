@@ -755,7 +755,7 @@ pre.cmdoutput {
 
 .lhell, .lhebl, .lhelc, .lhebc, .lhelr, .lhebr {
 	margin: 0;
-	border-top-width: 0px;
+	border-top: 1px solid #999999;
 	border-bottom: 1px solid #999999;
 	padding: 0.3em 0.3em;
 	background: #BBBBBB;
@@ -886,4 +886,11 @@ span.cblot {
 }
 input[type="radio"].rblo.dimassoctable:not(:checked) + span + table {
 	opacity: 0.25;
+}
+.oneemhigh {
+/*
+	max-height: 1em;
+*/
+	vertical-align: middle;
+	margin: 0em;
 }
