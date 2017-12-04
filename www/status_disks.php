@@ -165,13 +165,14 @@ $(document).ready(function(){
 	gui.recall(15000, 15000, 'status_disks.php', null, function(data) {
 		if ($('#area_refresh').length > 0) {
 			$('#area_refresh').html(data.data);
+			$('.area_data_selection').trigger('update');
 		}
 	});
 });
 EOJ;
 $a_colwidth = ['5%','7%','15%','17%','13%','10%','18%','8%','7%'];
 $n_colwidth = count($a_colwidth);
-$document = new_page([gtext('Status'),gtext('Disks')]);
+$document = new_page([gtext('Status'),gtext('Disks')],NULL,'tablesort');
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
 $body->addJavaScript($jcode);
@@ -188,10 +189,9 @@ $tbody_inner = $content->
 				insTHwC('lhell',gtext('Description'))->
 				insTHwC('lhell',gtext('Serial Number'))->
 				insTHwC('lhell',gtext('Filesystem'))->
-				insTHwC('lhell',gtext('I/O Statistics'))->
+				insTHwC('lhell sorter-false',gtext('I/O Statistics'))->
 				insTHwC('lhell',gtext('Temperature'))->
 				insTHwC('lhebl',gtext('Status'))->
 		pop()->addTBODY(['id' => 'area_refresh']);
 status_disks_render($tbody_inner);
 $document->render();
-?>
