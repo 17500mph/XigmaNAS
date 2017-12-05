@@ -304,7 +304,7 @@ endif;
 				</tbody>
 			</table>
 <?php
-			echo '<div>','<pre class="celldata">';
+			echo '<div class="celldata">','<pre>';
 			echo "\$ ",htmlspecialchars($_POST['txtCommand']),"\n";
 			putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
 			putenv('COLUMNS=1024');
@@ -335,7 +335,7 @@ endif;
 				</tbody>
 			</table>
 <?php
-			echo '<div>','<pre class="celldata">';
+			echo '<div class="celldata">','<pre>';
 			require_once 'config.inc';
 			require_once 'functions.inc';
 			require_once 'util.inc';
