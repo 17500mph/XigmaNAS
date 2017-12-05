@@ -2494,13 +2494,13 @@ EOJ;
 		return $this;
 	}
 	public function clc_page_title(array $page_title = []) {
-		$output = implode(htmlspecialchars(' · '),$page_title);
+		$output = implode(htmlspecialchars(' > '),$page_title);
 		return $output;
 	}
 	public function clc_html_page_title(array $page_title = []) {
 		$output = htmlspecialchars(system_get_hostname());
 		if(!empty($page_title)):
-			$output .= htmlspecialchars(' - ');
+			$output .= htmlspecialchars(' > ');
 			$output .= $this->clc_page_title($page_title);
 		endif;
 		return $output;
