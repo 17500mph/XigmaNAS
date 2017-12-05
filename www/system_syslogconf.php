@@ -264,7 +264,11 @@ $a_col_width = ['5%','20%','20%','20%','10%','15','10%'];
 $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
-$document = new_page($pgtitle,$sphere->scriptname(),'tablesort');
+if($record_exists):
+	$document = new_page($pgtitle,$sphere->scriptname(),'tablesort');
+else:
+	$document = new_page($pgtitle,$sphere->scriptname());
+endif;
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -306,17 +310,27 @@ $thead = $table->addTHEAD();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
-	$tr->addTHwC('lhelc sorter-false')->ins_cbm_checkbox_toggle($sphere);
-else:
-	$tr->insTHwC('lhelc sorter-false');
+	$tr->
+		push()->
+		addTHwC('lhelc sorter-false parser-false')->
+			ins_cbm_checkbox_toggle($sphere)->
+		pop()->
+		insTHwC('lhell',$property->facility->get_title())->
+		insTHwC('lhell',$property->level->get_Title())->
+		insTHwC('lhell',$property->value->get_Title())->
+		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+		insTHwC('lhell',$property->comment->get_Title())->
+		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+else: 
+	$tr->
+		insTHwC('lhelc')->
+		insTHwC('lhell',$property->facility->get_title())->
+		insTHwC('lhell',$property->level->get_Title())->
+		insTHwC('lhell',$property->value->get_Title())->
+		insTHwC('lhelc',gtext('Status'))->
+		insTHwC('lhell',$property->comment->get_Title())->
+		insTHwC('lhebl',gtext('Toolbox'));
 endif;
-$tr->
-	insTHwC('lhell',$property->facility->get_title())->
-	insTHwC('lhell',$property->level->get_Title())->
-	insTHwC('lhell',$property->value->get_Title())->
-	insTHwC('lhelc sorter-false',gtext('Status'))->
-	insTHwC('lhell',$property->comment->get_Title())->
-	insTHwC('lhebl sorter-false',gtext('Toolbox'));
 $tbody = $table->addTBODY();
 if($record_exists):
 	foreach ($sphere->grid as $sphere->row):
@@ -351,4 +365,3 @@ endif;
 $table->ins_footerwa($sphere,$n_col_width);
 $document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
 $document->render();
-?>
