@@ -189,7 +189,7 @@ $tbody_inner = $content->
 				insTHwC('lhell',gtext('Description'))->
 				insTHwC('lhell',gtext('Serial Number'))->
 				insTHwC('lhell',gtext('Filesystem'))->
-				insTHwC('lhell sorter-false',gtext('I/O Statistics'))->
+				insTHwC('lhell sorter-false parser-false',gtext('I/O Statistics'))->
 				insTHwC('lhell',gtext('Temperature'))->
 				insTHwC('lhebl',gtext('Status'))->
 		pop()->addTBODY(['id' => 'area_refresh']);
