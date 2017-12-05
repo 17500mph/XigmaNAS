@@ -261,18 +261,20 @@ $table = $content->add_table_data_selection();
 $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
-$tr = $thead->addTR();
+
 if($record_exists):
-	$tr->addTHwC('lhelc sorter-false')->ins_cbm_checkbox_toggle($sphere);
+	$tr = $thead->addTR();
+	$tr->addTHwC('lhelc sorter-false parser-false')->ins_cbm_checkbox_toggle($sphere);
 else:
-	$tr->insTHwC('lhelc sorter-false');
+	$tr = $thead->addTR(['class' => 'tablesorter-ignoreRow']);
+	$tr->insTHwC('lhelc sorter-false parser-false');
 endif;
 $tr->
 	insTHwC('lhell',$property->name->get_title())->
 	insTHwC('lhell',$property->type->get_Title())->
-	insTHwC('lhelc sorter-false',gtext('Status'))->
+	insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
 	insTHwC('lhell',$property->description->get_Title())->
-	insTHwC('lhebl sorter-false',gtext('Toolbox'));
+	insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
 $tbody = $table->addTBODY();
 if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
