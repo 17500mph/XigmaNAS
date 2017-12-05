@@ -1818,7 +1818,7 @@ trait co_DOMTools {
 		endif;
 		$th_attributes['class'] = 'lhetop';
 		if($this->option_exists('tablesort')):
-			$th_attributes['class'] .= ' sorter-false';
+			$tr_attributes['class'] = 'tablesorter-ignoreRow';
 		endif;
 		if($colspan > 0):
 			$th_attributes['colspan'] = $colspan;
@@ -1833,7 +1833,7 @@ trait co_DOMTools {
 		$tr_attributes['id'] = sprintf('%s_tr',$p->get_id());
 		$th_attributes['class'] = 'lhetop';
 		if($this->option_exists('tablesort')):
-			$th_attributes['class'] .= ' sorter-false';
+			$tr_attributes['class'] = 'tablesorter-ignoreRow';
 		endif;
 		if($colspan > 0):
 			$th_attributes['colspan'] = $colspan;
