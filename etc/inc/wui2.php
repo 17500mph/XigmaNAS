@@ -233,21 +233,21 @@ class HTMLBaseControl2 {
 		$description = $this->GetDescriptionOutput();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$this->GetCtrlName())];
-		$tr = $anchor->addElement('tr',$attributes);
+		$tr = $anchor->addTR($attributes);
 		$attributes = ['class' => $this->GetClassOfTag()];
 //		if($this->GetReadOnly()):
-			$tr->addElement('td',$attributes,$this->GetTitle());
+			$tr->insTD($attributes,$this->GetTitle());
 //		else:
-//			$tdtag = $tr->addElement('td',$attributes);
+//			$tdtag = $tr->addTD($attributes);
 //			$attributes = ['for' => $ctrlname];
 //			$tdtag->addElement('label',$attributes,$this->GetTitle());
 //		endif;
 		$attributes = ['class' => $this->GetClassOfData()];
-		$tddata = $tr->addElement('td',$attributes);
+		$tddata = $tr->addTD($attributes);
 		$this->ComposeInner($tddata);
 		if(!empty($description)):
 			$attributes = ['class' => 'formfldadditionalinfo'];
-			$tddata->addElement('div',$attributes,$description);
+			$tddata->insDIV($attributes,$description);
 		endif;
 		return $anchor;
 	}
@@ -338,7 +338,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 			'value' => $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 	}
 }
 class HTMLPasswordBox2 extends HTMLEditBox2 {
@@ -365,7 +365,7 @@ class HTMLPasswordBox2 extends HTMLEditBox2 {
 			'value'=> $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 	}
 }
 class HTMLPasswordConfBox2 extends HTMLEditBox2 {
@@ -428,8 +428,8 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'value'=> $this->GetValue()
 		];
 		$this->GetAttributes($attributes);
-		$o_div1 = $anchor->addElement('div');
-		$o_div1->addElement('input',$attributes);
+		$o_div1 = $anchor->addDIV();
+		$o_div1->insINPUT($attributes);
 		$attributes = [
 			'type' => 'password',
 			'id' => $ctrlnameconf,
@@ -439,8 +439,8 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 			'value' => $this->GetValueConf()
 		];
 		$this->GetAttributesConfirm($attributes);
-		$o_div2 = $anchor->addElement('div');
-		$o_div2->addElement('input',$attributes);
+		$o_div2 = $anchor->addDIV();
+		$o_div2->insINPUT($attributes);
 	}
 }
 class HTMLTextArea2 extends HTMLEditBox2 {
@@ -540,7 +540,7 @@ class HTMLFileChooser2 extends HTMLEditBox2 {
 			'size' => $size
 		];
 		$this->GetAttributes($attributes);
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 		//	file chooser
 		$js = sprintf('%1$sifield = form.%1$s;',$ctrlname)
 			. 'filechooser = window.open("filechooser.php?p="+'
@@ -561,7 +561,7 @@ class HTMLFileChooser2 extends HTMLEditBox2 {
 			'value' => '...'
 		];
 		$this->GetAttributes($attributes);
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 	}
 }
 class HTMLIPAddressBox2 extends HTMLEditBox2 {
@@ -609,7 +609,7 @@ class HTMLIPv4AddressBox2 extends HTMLIPAddressBox2 {
 			'value' => $this->GetValue(),
 			'size' => $this->GetSize()
 		];
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 		$slash = $anchor->ownerDocument->createTextNode(' / ');
 		$anchor->appendChild($slash);
 		$attributes = ['id' => $ctrlnamenetmask,'name' => $ctrlnamenetmask,'class' => 'formfld'];
@@ -641,7 +641,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'value' => $this->GetValue(),
 			'size' => $this->GetSize()
 		];
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 		$slash = $anchor->ownerDocument->createTextNode(' / ');
 		$anchor->appendChild($slash);
 		$attributes = [
@@ -652,7 +652,7 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 			'value' => $this->GetValueNetmask(),
 			'size' => 2
 		];
-		$anchor->addElement('input',$attributes);
+		$anchor->insINPUT($attributes);
 	}
 }
 class HTMLCheckBox2 extends HTMLBaseControlJS2 {
@@ -710,10 +710,10 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 		//	helper variables
 		$ctrlname = $this->GetCtrlName();
 		//	compose
-		$div = $anchor->addElement('div',['class' => $this->GetClassOfCheckbox()]);
+		$div = $anchor->addDIV(['class' => $this->GetClassOfCheckbox()]);
 		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'value' => 'yes'];
 		$this->GetAttributes($attributes);
-		$div->addElement('input',$attributes);
+		$div->insINPUT($attributes);
 		$div->addElement('label',['for' => $ctrlname],$this->GetCaption());
 	}
 }
@@ -816,21 +816,21 @@ class HTMLRadioBox2 extends HTMLComboBox2 {
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
-		$table = $anchor->addElement('table',['class' => 'area_data_selection']);
-		$colgroup = $table->addElement('colgroup');
-		$colgroup->addElement('col',['style' => 'width:5%']);
-		$colgroup->addElement('col',['style' => 'width:95%']);
-		$thead = $table->addElement('thead');
-		$tr = $thead->addElement('tr');
-		$tr->addElement('th',['class' => 'lhelc']);
-		$tr->addElement('th',['class' => 'lhebl'],$this->GetTitle());
-		$tbody = $table->addElement('tbody');
+		$table = $anchor->addTABLE(['class' => 'area_data_selection']);
+		$colgroup = $table->addCOLGROUP();
+		$colgroup->insCOL(['style' => 'width:5%']);
+		$colgroup->insCOL(['style' => 'width:95%']);
+		$thead = $table->addTHEAD();
+		$tr = $thead->addTR();
+		$tr->insTHwC('lhelc');
+		$tr->insTHwC('lhebl',$this->GetTitle());
+		$tbody = $table->addTBODY();
 		foreach($options as $option_tag => $option_val):
 			//	create a unique identifier for each row.
 			//	use label tag for text column to allow enabling the radio button by clicking on the text
 			$uuid = sprintf('radio_%s',uuid());
-			$tr = $tbody->addElement('tr');
-			$tdl = $tr->addElement('td',['class' => 'lcelc']);
+			$tr = $tbody->addTR();
+			$tdl = $tr->addTDwC('lcelc');
 			$attributes = [
 				'name' => $ctrlname,
 				'value' => $option_tag,
@@ -840,8 +840,8 @@ class HTMLRadioBox2 extends HTMLComboBox2 {
 			if($value === $option_tag):
 				$attributes['checked'] = 'checked';
 			endif;
-			$tdl->addElement('input',$attributes);
-			$tdr = $tr->addElement('td',['class' => 'lcebl']);
+			$tdl->insINPUT($attributes);
+			$tdr = $tr->addTDwC('lcebl');
 			$tdr->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
@@ -919,21 +919,21 @@ class HTMLCheckboxBox2 extends HTMLListBox2 {
 		$ctrlname = $this->GetCtrlName();
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
-		$table = $anchor->addElement('table',['class' => 'area_data_selection']);
-		$colgroup = $table->addElement('colgroup');
-		$colgroup->addElement('col',['style' => 'width:5%']);
-		$colgroup->addElement('col',['style' => 'width:95%']);
-		$thead = $table->addElement('thead');
-		$tr = $thead->addElement('tr');
-		$tr->addElement('th',['class' => 'lhelc']);
-		$tr->addElement('th',['class' => 'lhebl'],$this->GetTitle());
-		$tbody = $table->addElement('tbody');
+		$table = $anchor->addTABLE(['class' => 'area_data_selection']);
+		$colgroup = $table->addCOLGROUP('colgroup');
+		$colgroup->insCOL(['style' => 'width:5%']);
+		$colgroup->insCOL(['style' => 'width:95%']);
+		$thead = $table->addTHEAD();
+		$tr = $thead->addTR();
+		$tr->insTHwC('lhelc');
+		$tr->insTHwC('lhebl',$this->GetTitle());
+		$tbody = $table->addTBODY();
 		foreach($options as $option_tag => $option_val):
 			//	create a unique identifier for each row.
 			//	use label tag for text column to allow toggling the checkbox button by clicking on the text
 			$uuid = sprintf('checkbox_%s',uuid());
-			$tr = $tbody->addElement('tr');
-			$tdl = $tr->addElement('td',['class' => 'lcelc']);
+			$tr = $tbody->addTR();
+			$tdl = $tr->addTDwC('lcelc');
 			$attributes = [
 				'name' => sprintf('%s[]',$ctrlname),
 				'value' => $option_tag,
@@ -943,8 +943,8 @@ class HTMLCheckboxBox2 extends HTMLListBox2 {
 			if(is_array($value) && in_array($option_tag,$value)):
 				$attributes['checked'] = 'checked';
 			endif;
-			$tdl->addElement('input',$attributes);
-			$tdr = $tr->addElement('td',['class' => 'lcebl']);
+			$tdl->insINPUT($attributes);
+			$tdr = $tr->addTDwC('lcebl');
 			$tdr->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
@@ -984,9 +984,9 @@ class HTMLSeparator2 extends HTMLBaseControl2 {
 		if(preg_match('/\S/',$ctrlname)):
 			$attributes['id'] = $ctrlname;
 		endif;
-		$o_tr = $anchor->addElement('tr',$attributes);
+		$o_tr = $anchor->addTR($attributes);
 		$attributes = ['class' => $this->GetClassOfSeparator(),'colspan' => $this->GetColSpan()];
-		$o_tr->addElement('td',$attributes);
+		$o_tr->addTD($attributes);
 		return $anchor;
 	}
 }
@@ -1022,9 +1022,9 @@ class HTMLTitleLine2 extends HTMLBaseControl2 {
 		if(preg_match('/\S/',$ctrlname)):
 			$attributes['id'] = $ctrlname;
 		endif;
-		$tr = $anchor->addElement('tr',$attributes);
+		$tr = $anchor->addTR($attributes);
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
-		$th = $tr->addElement('th',$attributes,$this->GetTitle());
+		$th = $tr->addTH($attributes,$this->GetTitle());
 		return $anchor;
 	}
 }
@@ -1061,19 +1061,19 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
-		$tr = $anchor->addElement('tr',$attributes);
+		$tr = $anchor->addTR($attributes);
 		$attributes = ['class' => $this->GetClassOfTopic(),'colspan' => $this->GetColSpan()];
-		$th = $tr->addElement('th',$attributes);
+		$th = $tr->addTH($attributes);
 		$attributes = ['style' => 'float:left'];
-		$spanleft = $th->addElement('span',$attributes,$this->GetTitle());
+		$spanleft = $th->addSPAN($attributes,$this->GetTitle());
 		$attributes = ['style' => 'float:right'];
-		$spanright = $th->addElement('span',$attributes);
+		$spanright = $th->addSPAN($attributes);
 		$label = $spanright->addElement('label');
 		$attributes = ['type' => 'checkbox','id' => $ctrlname,'name' => $ctrlname,'class' => 'formfld cblot','value' => 'yes'];
 		$this->getAttributes($attributes);
-		$label->addElement('input',$attributes);
+		$label->insINPUT($attributes);
 		$attributes = ['class' => 'cblot'];
-		$label->addElement('span',$attributes,$this->GetCaption());
+		$label->addSPAN($attributes,$this->GetCaption());
 		return $anchor;
 	}
 }
@@ -1089,7 +1089,7 @@ class HTMLText2 extends HTMLBaseControl2 {
 	//	support methods
 	function ComposeInner(&$anchor) {
 		//	compose
-		$anchor->addElement('span',[],$this->GetValue());
+		$anchor->addSPAN([],$this->GetValue());
 	}
 }
 class HTMLTextInfo2 extends HTMLBaseControl2 {
@@ -1107,13 +1107,13 @@ class HTMLTextInfo2 extends HTMLBaseControl2 {
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => sprintf('%s_tr',$ctrlname)];
-		$tr = $anchor->addElement('tr',$attributes);
+		$tr = $anchor->addTR($attributes);
 		$attributes = ['class' => $this->GetClassOfTag()];
-		$tdtag = $tr->addElement('td',$attributes,$this->GetTitle());
+		$tdtag = $tr->addTD($attributes,$this->GetTitle());
 		$attributes = ['class' => $this->GetClassOfData()];
-		$tddata = $tr->addElement('td',$attributes);
+		$tddata = $tr->addTD($attributes);
 		$attributes = ['id' => $ctrlname];
-		$tddata->addElement('span',$attributes,$this->getValue());
+		$tddata->addSPAN($attributes,$this->getValue());
 		return $anchor;
 	}
 }
@@ -1132,11 +1132,11 @@ class HTMLRemark2 extends HTMLBaseControl2 {
 		$ctrlname = $this->GetCtrlName();
 		//	compose
 		$attributes = ['id' => $ctrlname];
-		$div1 = $anchor->addElement('div',$attributes);
+		$div1 = $anchor->addDIV($attributes);
 		$attributes = ['class' => 'red'];
 		$div1->addElement('strong',$attributes,$this->GetTitle());
 		$attributes = [];
-		$div2 = $anchor->addElement('div',$attributes,$this->GetValue());
+		$div2 = $anchor->addDIV($attributes,$this->GetValue());
 		return $anchor;
 	}
 }
@@ -1208,7 +1208,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 		$t[] = '}';
 		$anchor->addJavaScript(implode(PHP_EOL,$t));
 		//	section 1: select + delete
-		$div1 = $anchor->addElement('div');
+		$div1 = $anchor->addDIV();
 		//	selected folder
 		$attributes = [
 			'id' => $ctrlname,
@@ -1233,9 +1233,9 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'value' => gtext('Delete'),
 			'onclick' => sprintf('onclick_delete_%s()',$ctrlname)
 		];
-		$div1->addElement('input',$attributes);
+		$div1->insINPUT($attributes);
 		//	section 2: choose, add + change
-		$div2 = $anchor->addElement('div');
+		$div2 = $anchor->addDIV();
 		//	path input field
 		$attributes = [
 			'type' => 'text',
@@ -1245,7 +1245,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'value' => '',
 			'size' => 60
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 		//	choose button
 		$js = sprintf('ifield = form.%s;',$ctrlnamedata)
 			. ' filechooser = window.open("filechooser.php'
@@ -1263,7 +1263,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'value' => '...',
 			'onclick' => $js
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 		//	add button
 		$attributes = [
 			'type' => 'button',
@@ -1273,7 +1273,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'value' => gtext('Add'),
 			'onclick' => sprintf('onclick_add_%s()',$ctrlname)
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 		//	change button
 		$attributes = [
 			'type' => 'button',
@@ -1283,7 +1283,7 @@ class HTMLFolderBox2 extends HTMLBaseControl2 {
 			'value' => gtext('Change'),
 			'onclick' => sprintf('onclick_change_%s()',$ctrlname)
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 	}
 }
 class HTMLFolderBox12 extends HTMLFolderBox2 {
@@ -1361,7 +1361,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		$t[] = '}';
 		$anchor->addJavaScript(implode(PHP_EOL,$t));
 		//	section 1: select + delete
-		$div1 = $anchor->addElement('div');
+		$div1 = $anchor->addDIV('div');
 		//	selected folder
 		$attributes = ['id' => $ctrlname,'name' => sprintf('%s[]',$ctrlname),'class' => 'formfld','multiple' => 'multiple','style' => 'width:350px','onchange' => sprintf('onchange_%s()',$ctrlname)];
 		$select = $div1->addElement('select',$attributes);
@@ -1378,9 +1378,9 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'value' => gtext('Delete'),
 			'onclick' => sprintf('onclick_delete_%s()',$ctrlname)
 		];
-		$div1->addElement('input',$attributes);
+		$div1->insINPUT($attributes);
 		//	section 2: choose, add + change
-		$div2 = $anchor->addElement('div');
+		$div2 = $anchor->addDIV();
 		//	media type
 		$attributes = ['id' => sprintf('%sfiletype',$ctrlname),'name' => sprintf('%sfiletype',$ctrlname),'class' => 'formfld'];
 		$select = $div2->addElement('select',$attributes);
@@ -1401,7 +1401,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'value' => '',
 			'size' => 60
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 		//	choose button
 		$js = sprintf('ifield = form.%s;',$ctrlnamedata)
 			. ' filechooser = window.open("filechooser.php'
@@ -1419,7 +1419,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'value' => '...',
 			'onclick' => $js
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 		//	add button
 		$attributes = [
 			'type' => 'button',
@@ -1429,7 +1429,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'value' => gtext('Add'),
 			'onclick' => sprintf('onclick_add_%s()',$ctrlname)
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 		//	change button
 		$attributes = [
 			'type' => 'button',
@@ -1439,7 +1439,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 			'value' => gtext('Change'),
 			'onclick' => sprintf('onclick_change_%s()',$ctrlname)
 		];
-		$div2->addElement('input',$attributes);
+		$div2->insINPUT($attributes);
 	}
 }
 trait co_DOMTools {
@@ -1865,7 +1865,7 @@ trait co_DOMTools {
 					insSPAN($spanleft_attributes,$title)->
 					addSPAN($spanright_attributes)->
 						addElement('label')->
-							insElement('input',$input_attributes)->
+							insINPUT($input_attributes)->
 							addSPAN($span_attributes,$p->get_caption());
 		return $this;
 	}
@@ -1981,7 +1981,7 @@ trait co_DOMTools {
 			$input_attributes['required'] = 'required';
 		endif;
 		$div = $this->addDIV(['class' => $class_checkbox]);
-		$div->addElement('input',$input_attributes);
+		$div->insINPUT($input_attributes);
 		$div->addElement('label',['for' => $p->get_id()],$p->get_caption());
 		return $this;
 	}
@@ -2020,10 +2020,10 @@ trait co_DOMTools {
 			$input_attributes['maxlength'] = $maxlength;
 		endif;
 		$div = $this->addDIV();
-		$div->addElement('input',$input_attributes);
+		$div->insINPUT($input_attributes);
 		if(isset($caption)):
 			if($is_readonly):
-				$div->addElement('span',['style' => 'margin-left: 0.7em;'],$caption);
+				$div->insSPAN(['style' => 'margin-left: 0.7em;'],$caption);
 			else:
 				$div->addElement('label',['style' => 'margin-left: 0.7em;','for' => $id],$caption);
 			endif;
@@ -2062,7 +2062,7 @@ trait co_DOMTools {
 				unset($input_attributes['checked']);
 			endif;
 			$tr = $tbody->addTR();
-			$tr->addTDwC('lcelc')->addElement('input',$input_attributes);
+			$tr->addTDwC('lcelc')->insINPUT($input_attributes);
 			$tr->addTDwC('lcebl')->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 	}
@@ -2102,7 +2102,7 @@ trait co_DOMTools {
 			$input_attributes['maxlength'] = $maxlength;
 		endif;
 		$div = $this->addDIV();
-		$div->addElement('input',$input_attributes);
+		$div->insINPUT($input_attributes);
 //	file chooser start
 		if(!$is_readonly):
 			$var = 'ifield';
@@ -2121,13 +2121,13 @@ EOJ;
 				'onclick' => $js,
 				'value' => '...'
 			];
-			$div->addElement('input',$button_attributes);
+			$div->insINPUT($button_attributes);
 		endif;
 //	file chooser end
 		$caption = $p->get_caption();
 		if(isset($caption)):
 			if($is_readonly):
-				$div->addElement('span',['style' => 'margin-left: 0.7em;'],$caption);
+				$div->insSPAN(['style' => 'margin-left: 0.7em;'],$caption);
 			else:
 				$div->addElement('label',['style' => 'margin-left: 0.7em;','for' => $p->get_id()],$p->get_caption());
 			endif;
@@ -2167,7 +2167,7 @@ EOJ;
 				unset($input_attributes['checked']);
 			endif;
 			$tr = $tbody->addTR();
-			$tr->addTDwC('lcelc')->addElement('input',$input_attributes);
+			$tr->addTDwC('lcelc')->insINPUT($input_attributes);
 			$tr->addTDwC('lcebl')->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 		return $this;
@@ -2195,7 +2195,7 @@ EOJ;
 			$select->addElement('option',$option_attributes,$option_val);
 		endforeach;
 		if(isset($caption)):
-			$this->addElement('span',['style' => 'margin-left: 0.7em;'],$caption);
+			$this->insSPAN(['style' => 'margin-left: 0.7em;'],$caption);
 		endif;
 		return $this;
 	}
@@ -2219,13 +2219,12 @@ EOJ;
 			if(isset($id)):
 				$span_attributes = ['id' => $id];
 			endif;
-			$this->addElement('span',$span_attributes,$value);
+			$this->insSPAN($span_attributes,$value);
 		endif;
 		return $this;
 	}
 	//	elements requiring sphere
 	public function ins_cbm_checkbox_toggle($sphere) {
-		$element = 'input';
 		$cbm_toggle_id = $sphere->get_cbm_checkbox_id_toggle();
 		$input_attributes = [
 			'type' => 'checkbox',
@@ -2234,11 +2233,10 @@ EOJ;
 			'title' => gtext('Invert Selection'),
 			'class' => 'oneemhigh'
 		];
-		$this->addElement($element,$input_attributes);
+		$this->insINPUT($input_attributes);
 		return $this;
 	}
 	public function ins_cbm_checkbox($sphere,bool $disabled = false) {
-		$element = 'input';
 		$identifier = $sphere->get_row_identifier_value();
 		$input_attributes = [
 			'type' => 'checkbox',
@@ -2250,7 +2248,7 @@ EOJ;
 		if($disabled):
 			$input_attributes['disabled'] = 'disabled';
 		endif;
-		$this->addElement($element,$input_attributes);
+		$this->insINPUT($input_attributes);
 		return $this;
 	}
 	public function add_toolbox_area() {
@@ -2276,14 +2274,14 @@ EOJ;
 		if($notdirty && $notprotected): // record is editable
 			$link = sprintf('%s?submit=edit&%s=%s',$sphere->modify->scriptname(),$sphere->row_identifier(),$sphere->get_row_identifier_value());
 			$this->addTD()->
-				addElement('a',['href' => $link])->
-					addElement('img', ['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin','class' => 'oneemhigh']);
+				addA(['href' => $link])->
+					insIMG(['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin','class' => 'oneemhigh']);
 		elseif($notprotected): //record is dirty
 			$this->addTD()->
-				addElement('img',['src' => $g_img['del'],'title' => $sphere->sym_del(),'alt' => $sphere->sym_del(),'class' => 'oneemhigh']);
+				insIMG(['src' => $g_img['del'],'title' => $sphere->sym_del(),'alt' => $sphere->sym_del(),'class' => 'oneemhigh']);
 		else: // record is protected
 			$this->addTD()->
-				addElement('img',['src' => $g_img['loc'],'title' => $sphere->sym_loc(),'alt' => $sphere->sym_loc(),'class' => 'oneemhigh']);
+				insIMG(['src' => $g_img['loc'],'title' => $sphere->sym_loc(),'alt' => $sphere->sym_loc(),'class' => 'oneemhigh']);
 		endif;
 		return $this;
 	}
@@ -2309,7 +2307,7 @@ EOJ;
 		$tr->
 			addTHwC('lceadd')->
 				addA(['href' => $link])->
-					addElement('img',['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin oneemhigh']);
+					insIMG(['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin oneemhigh']);
 		return $this;
 	}
 	public function ins_no_records_found(int $colspan = 0) {
@@ -2490,7 +2488,7 @@ EOJ;
 			'type' => 'hidden',
 			'value' => Session::getAuthToken()
 		];
-		$this->addElement('input',$input_attributes);
+		$this->insINPUT($input_attributes);
 		return $this;
 	}
 	public function clc_page_title(array $page_title = []) {
@@ -2786,4 +2784,3 @@ function new_page(array $page_title = [],string $action_url = NULL,string ...$op
 			ins_body($page_title,$action_url);
 	return $document;
 }
-?>
