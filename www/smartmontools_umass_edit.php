@@ -259,6 +259,5 @@ else:
 	$buttons->ins_button_save();
 endif;
 $buttons->ins_button_cancel();
-$buttons->addElement('input',['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+$buttons->insINPUT(['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
 $document->render();
-?>
