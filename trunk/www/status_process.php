@@ -69,14 +69,15 @@ $content = $pagecontent->add_area_data();
 $content->
 	add_table_data_settings()->
 		ins_colgroup_data_settings()->
+		push()->
 		addTHEAD()->
 			c2_titleline(gtext('Process State'))->
-			parentNode->
+		pop()->
 		addTBODY()->
 			addTR()->
 				insTDwC('celltag',gtext('Information'))->
 				addTDwC('celldata')->
 					addElement('pre')->
-						addElement('span',['id' => 'area_refresh'],status_process_ajax());
+						insSPAN(['id' => 'area_refresh'],status_process_ajax());
 $document->render();
-?>
+
