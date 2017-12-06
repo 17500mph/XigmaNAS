@@ -1452,18 +1452,13 @@ trait co_DOMTools {
  *	@return DOMNode $subnode
  */
 	public function addElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
-		$subnode->addAttributes($attributes);
-		if(preg_match('/\S/',$value)):
-			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
-			$document = $subnode->ownerDocument ?? $this;
-			$innerhtml = $document->createDocumentFragment(); // create fragment from $value
-			if($innerhtml->appendXML($value)):
-				$subnode->appendChild($innerhtml);
-			endif;
-			libxml_clear_errors();
-			libxml_use_internal_errors($saved_setting);
+		if(is_null($value) || (false === strpbrk($value,'&<>'))):
+			$subnode = $this->appendChild(new co_DOMElement($name,$value,$namespaceURI));
+		else:
+			$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
+			$this->import_soup($subnode,$value);
 		endif;
+		$subnode->addAttributes($attributes);
 		return $subnode;
 	}
 /**
@@ -1475,18 +1470,13 @@ trait co_DOMTools {
  *	@return DOMNode $this
  */
 	public function insElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
-		$subnode->addAttributes($attributes);
-		if(preg_match('/\S/',$value)):
-			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
-			$document = $subnode->ownerDocument ?? $this;
-			$innerhtml = $document->createDocumentFragment(); // create fragment from $value
-			if($innerhtml->appendXML($value)):
-				$subnode->appendChild($innerhtml);
-			endif;
-			libxml_clear_errors();
-			libxml_use_internal_errors($saved_setting);
+		if(is_null($value) || (false === strpbrk($value,'&<>'))):
+			$subnode = $this->appendChild(new co_DOMElement($name,$value,$namespaceURI));
+		else:
+			$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
+			$this->import_soup($subnode,$value);
 		endif;
+		$subnode->addAttributes($attributes);
 		return $this;
 	}
 /**
@@ -1498,22 +1488,42 @@ trait co_DOMTools {
  *	@return DOMNode $subnode
  */
 	public function prepend_element(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		if(is_null($this->firstChild)):
-			$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI));
+		if(is_null($value) || (false === strpbrk($value,'&<>'))):
+			if(is_null($this->firstChild)):
+				$subnode = $this->insertBefore(new co_DOMElement($name,$value,$namespaceURI));
+			else:
+				$subnode = $this->insertBefore(new co_DOMElement($name,$value,$namespaceURI),$this->firstChild);
+			endif;
 		else:
-			$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI),$this->firstChild);
+			if(is_null($this->firstChild)):
+				$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI));
+			else:
+				$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI),$this->firstChild);
+			endif;
+			$this->import_soup($subnode,$value);
 		endif;
 		$subnode->addAttributes($attributes);
-		if(preg_match('/\S/',$value)):
-			$saved_setting = libxml_use_internal_errors(true); // user cares about exceptions
-			$innerhtml = $subnode->ownerDocument->createDocumentFragment(); // create fragment from $value
-			if($innerhtml->appendXML($value)):
-				$subnode->appendChild($innerhtml);
-			endif;
-			libxml_clear_errors();
-			libxml_use_internal_errors($saved_setting);
-		endif;
 		return $subnode;
+	}
+	protected function import_soup($subnode,string $value = '') {
+		$backup_use_internal_errors = libxml_use_internal_errors(true); // user cares about exceptions
+		$backup_disable_entity_loader = libxml_disable_entity_loader(true);
+		$document = $subnode->ownerDocument ?? $this;
+		$htmldocument = new DOMDocument('1.0', 'UTF-8'); 
+		$successfully_loaded = $htmldocument->loadHTML('<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>' . $value . '</body></html>',LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+		libxml_clear_errors();
+		libxml_disable_entity_loader($backup_disable_entity_loader);
+		libxml_use_internal_errors($backup_use_internal_errors);
+		if($successfully_loaded):
+			$items = $htmldocument->getElementsByTagName('body');
+			foreach($items as $item):
+				foreach($item->childNodes as $childnode):
+					$newnode = $document->importNode($childnode,true);
+					$subnode->appendChild($newnode);
+				endforeach;
+			endforeach;
+		endif;
+		return $this;
 	}
 /**
  *	Appends a JavaScript node to the DOM
