@@ -1,6 +1,6 @@
 PORTNAME=	e2fsprogs
 PORTVERSION=	1.43.7
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
@@ -28,11 +28,8 @@ CONFIGURE_ARGS?=--disable-fsck \
 		--disable-uuidd \
 		--enable-libblkid \
 		--enable-elf-shlibs \
-		--libdir='${PREFIX}/lib/e2fsprogs/' \
-		--includedir='${PREFIX}/include/e2fsprogs/' \
 		--with-root-prefix='${PREFIX}' \
-		--without-included-gettext \
-		LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib -Wl,--rpath -Wl,${LOCALBASE}/lib/e2fsprogs'
+		LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib'
 CPPFLAGS+=	-I${WRKSRC}/lib -I${LOCALBASE}/include # -D_EXT2_USE_C_VERSIONS
 MAKE_ARGS+=	pkgconfigdir='${PREFIX}/libdata/pkgconfig'
 MAKE_ENV+=	CHECK_CMD=@true
@@ -237,5 +234,8 @@ do-install:
 
 	@${LN} -s -f -v /usr/local/sbin/e2fsck ${NAS4FREE_ROOTFS}/sbin/e2fsck
 	@${LN} -s -f -v /usr/local/sbin/fsck_ext2fs ${NAS4FREE_ROOTFS}/sbin/fsck_ext2fs
+# lib
+	@${CP} -Rpv ${WRKSRC}/lib/libext2fs.so.2 ${NAS4FREE_ROOTFS}/usr/local/lib
+	@${CP} -Rpv ${WRKSRC}/lib/libcom_err.so.2 ${NAS4FREE_ROOTFS}/usr/local/lib
 
 .include <bsd.port.post.mk>
