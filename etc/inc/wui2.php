@@ -920,7 +920,7 @@ class HTMLCheckboxBox2 extends HTMLListBox2 {
 		$value = $this->GetValue();
 		$options = $this->GetOptions();
 		$table = $anchor->addTABLE(['class' => 'area_data_selection']);
-		$colgroup = $table->addCOLGROUP('colgroup');
+		$colgroup = $table->addCOLGROUP();
 		$colgroup->insCOL(['style' => 'width:5%']);
 		$colgroup->insCOL(['style' => 'width:95%']);
 		$thead = $table->addTHEAD();
