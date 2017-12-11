@@ -1361,7 +1361,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		$t[] = '}';
 		$anchor->addJavaScript(implode(PHP_EOL,$t));
 		//	section 1: select + delete
-		$div1 = $anchor->addDIV('div');
+		$div1 = $anchor->addDIV();
 		//	selected folder
 		$attributes = ['id' => $ctrlname,'name' => sprintf('%s[]',$ctrlname),'class' => 'formfld','multiple' => 'multiple','style' => 'width:350px','onchange' => sprintf('onchange_%s()',$ctrlname)];
 		$select = $div1->addElement('select',$attributes);
