@@ -255,6 +255,8 @@ static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
 server.pid-file = "${pidfile}"
 #cgi.assign = (".php" => "/usr/local/bin/php-cgi")
 server.tag = "WebGUI"
+server.stream-response-body = 2
+ssl.read-ahead = "disable"
 
 # FastCGI
 fastcgi.server = ( ".php" =>
