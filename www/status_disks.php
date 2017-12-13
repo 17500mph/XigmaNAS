@@ -147,6 +147,7 @@ function status_disks_render($root = NULL) {
 		else:
 			$tr->insTDwC('lcell',gtext('n/a'));
 		endif;
+		$tr->insTDwC('lcebld',$gt_status);
 	endforeach;
 	if($is_DOM):
 		return $root;
