@@ -137,7 +137,7 @@ not be interpreted as representing official policies, either expressed or implie
 			html_titleline2(gtext('Credits'),3);
 ?>
 			<tr>
-				<th colspan="3" class="lcebld"><?=gtext('The following persons have contributed to NAS4Free:');?></th>
+				<th colspan="3" class="lcebld"><?=sprintf(gtext('The following persons have contributed to %s:'), get_product_name());?></th>
 			</tr>
 		</thead>
 		<tbody class="donothighlight">
@@ -368,7 +368,7 @@ not be interpreted as representing official policies, either expressed or implie
 ?>
 			<tr>
 				<th colspan="2" class="lcebld">
-<?=gtext('NAS4Free is based upon/includes various free software packages.');?><br /><?=gtext('The NAS4Free Project would like to thank the authors of this software for their efforts.');?>
+<?=sprintf(gtext('%s is based upon/includes various free software packages.'), get_product_name());?><br /><?=sprintf(gtext('The %s Project would like to thank the authors of this software for their efforts.'), get_product_name());?>
 				</th>
 			</tr>
 		</thead>
