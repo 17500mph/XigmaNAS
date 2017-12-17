@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-02 20:29+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:08+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -79,6 +79,10 @@ msgstr "%s je už používáno jako souborový systém."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s je už používáno jako svazek."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -944,6 +948,9 @@ msgstr "Připojit (přidat) uživatelsky definovaná sdílení"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Použít"
@@ -4349,6 +4356,18 @@ msgstr "GEOM VINUM softwarové RAID pole"
 msgid "GID"
 msgstr "Identifikátor skupiny (GID)"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "Oddíl typu GPT"
 
@@ -5932,6 +5951,9 @@ msgstr "Přesunout dolů"
 msgid "Move up"
 msgstr "Přesunout nahoru"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Hudba"
 
@@ -5946,10 +5968,6 @@ msgstr "Vzájemné ověření CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Uživatelé, ověřovaní vzájemně protokolem CHAP"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr ""
-"NAS4Free je založen na / obsahuje nejrůznější balíčky svobodného software."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6509,6 +6527,9 @@ msgstr "PHP příkaz"
 
 msgid "PHP Command Output"
 msgstr "Výstup z PHP příkazu"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8274,6 +8295,10 @@ msgstr "Softwarový RAID"
 msgid "Software Used"
 msgstr "Použitý software"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Seřadit"
 
@@ -8749,6 +8774,12 @@ msgstr ""
 "Předvolba odepřené určuje uživatele a skupiny, kterým není umožněn přístup k "
 "tomuto sdílení. Forma zápisu je stejná, jako v předvolbě povolené."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "Před zapnutím této funkce je třeba, aby COM port byl zapnut i v BIOS/(U)EFI "
@@ -8789,11 +8820,6 @@ msgstr ""
 "Atribut „Přinejmenším zbývajících náhradních“ značí počet zbývajících "
 "náhradních bloků vyjádřeno jako procento celkového počtu dostupných "
 "náhradních buněk flash paměti."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr "Projekt NAS4Free děkuje tvůrcům tohoto software za jejich snahy."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9205,8 +9231,9 @@ msgstr "Byly zjištěny následující chyby"
 msgid "The following input errors were detected"
 msgstr "V zadaných údajích byly zjištěny následující chyby"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "Následující lidé se podíleli na NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Tyto služby budou používat ověřování vůči Active Directory:"
@@ -11512,3 +11539,15 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr ""
+#~ "NAS4Free je založen na / obsahuje nejrůznější balíčky svobodného software."
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr "Projekt NAS4Free děkuje tvůrcům tohoto software za jejich snahy."
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "Následující lidé se podíleli na NAS4Free:"

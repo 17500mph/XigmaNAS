@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-04 13:44+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:08+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -81,6 +81,10 @@ msgstr "Το %s είναι ήδη ρυθμισμένο σαν σύστημα α�
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "Το %s είναι ήδη ρυθμισμένο σαν τόμος."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -961,6 +965,9 @@ msgstr "Προσάρτηση κοινόχρηστων φακέλων των χρ
 
 msgid "Apple Filing Protocol"
 msgstr "Πρωτοκόλλο Αρχειοθέτησης Apple"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Εφαρμογή"
@@ -4427,6 +4434,18 @@ msgstr "RAID μέσω λογισμικού GEOM VINUM"
 msgid "GID"
 msgstr "ID Ομάδας"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "Κατάτμηση GPT"
 
@@ -6017,6 +6036,9 @@ msgstr "Μετακίνηση κάτω"
 msgid "Move up"
 msgstr "Μετακίνηση πάνω"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Μουσική"
 
@@ -6031,10 +6053,6 @@ msgstr "Αμοιβαίο CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Χρήστες αμοιβαίου CHAP"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr ""
-"Το NAS4Free  είναι βασισμένο σε/περιλαμβάνει διάφορα πακέτα δωρεάν εφαρμογών."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6597,6 +6615,9 @@ msgstr "Εντολή PHP"
 
 msgid "PHP Command Output"
 msgstr "Έξοδος Εντολής PHP"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8383,6 +8404,10 @@ msgstr "RAID μέσω λογισμικού"
 msgid "Software Used"
 msgstr "Λογισμικό που χρησιμοποιείται"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Ταξινόμηση"
 
@@ -8865,6 +8890,12 @@ msgstr ""
 "απαγορεύεται η πρόσβαση στο κοινόχρηστο στοιχείο. Ακολουθεί την ίδια μορφή "
 "με την επιλογή που επιτρέπει την πρόσβαση."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "Πριν ενεργοποιήσετε αυτή την επιλογή θα πρέπει να είναι ενεργοποιημένη από "
@@ -8907,13 +8938,6 @@ msgstr ""
 "Το χαρακτηριστικό Minimum Spares Remaining δείχνει τον αριθμό των εφεδρικών "
 "μπλοκ που απομένουν, ως  ποσοστό του συνολικού αριθμού διαθέσιμων εφεδρικών "
 "μπλοκ."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
-"Το NAS4Free Project θα ήθελε να ευχαριστήσει τους συγγραφείς αυτού του "
-"προγράμματος για την προσπάθειά τους."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9331,8 +9355,9 @@ msgstr "Εντοπίστηκαν τα ακόλουθα σφάλματα"
 msgid "The following input errors were detected"
 msgstr "Εντοπίστηκαν τα ακόλουθα σφάλματα εισόδου"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "Οι ακόλουθοι άνθρωποι έχουν συνεισφέρει στο NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Οι ακόλουθες υπηρεσίες θα χρησιμοποιήσουν πιστοποίηση AD:"
@@ -11683,3 +11708,17 @@ msgstr "χρήση από"
 
 msgid "visible"
 msgstr "ορατό"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr ""
+#~ "Το NAS4Free  είναι βασισμένο σε/περιλαμβάνει διάφορα πακέτα δωρεάν εφαρμογών."
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr ""
+#~ "Το NAS4Free Project θα ήθελε να ευχαριστήσει τους συγγραφείς αυτού του "
+#~ "προγράμματος για την προσπάθειά τους."
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "Οι ακόλουθοι άνθρωποι έχουν συνεισφέρει στο NAS4Free:"

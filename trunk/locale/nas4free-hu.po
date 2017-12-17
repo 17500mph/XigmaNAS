@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-02 09:28+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:08+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -82,6 +82,10 @@ msgstr "%s már fájlrendszernek be lett állítva."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s már kötetnek be lett állítva."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -923,6 +927,9 @@ msgstr "Felhasználó által létrehozott megosztás hozzáfűzése"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protokoll"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Alkalmaz"
@@ -4289,6 +4296,18 @@ msgstr "GEOM VINUM szoftveres RAID"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "GPT partíció"
 
@@ -5840,6 +5859,9 @@ msgstr "Mozgatás le"
 msgid "Move up"
 msgstr "Mozgatás fel"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Zene"
 
@@ -5854,9 +5876,6 @@ msgstr "Kölcsönös CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Kölcsönös CHAP felhasználók"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr "A NAS4Free számos ingyenes szoftvercsomagra épül."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6415,6 +6434,9 @@ msgstr "PHP Parancs"
 
 msgid "PHP Command Output"
 msgstr "PHP parancskimenet"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8180,6 +8202,10 @@ msgstr "Szoftveres RAID"
 msgid "Software Used"
 msgstr "Felhasznált szoftver"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Rendezés"
 
@@ -8657,6 +8683,12 @@ msgstr ""
 "A tiltó opció esetén azon felhasználók és a csoportok akik nem kapnak "
 "hozzáférést a megosztáshoz."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "A COM portot engedélyezni kell a BIOS-ban mielőtt beállítaná ezt az opciót."
@@ -8697,12 +8729,6 @@ msgstr ""
 "A 'Minimum Spares Remaining' (Minimális Hátralévő Tartalékok) attribútum "
 "jelzi a fennmaradó tartalék blokkok számát százalékban az összes "
 "rendelkezésre álló tartalék blokkhoz viszonyítva."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
-"A NAS4Free projekt köszönetet mond a szoftver szerzőinek erőfeszítéseikért."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9086,8 +9112,9 @@ msgstr "A következő hibákat észleltük"
 msgid "The following input errors were detected"
 msgstr "A következő bemeneti hibák fordultak elő"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "Az alábbi felhasználók működtek közre a NAS4Free létrejöttéhez:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "A következő szolgáltatások használnak AD hitelesítést:"
@@ -11335,3 +11362,15 @@ msgstr "használatban"
 
 msgid "visible"
 msgstr "látható"
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "Az alábbi felhasználók működtek közre a NAS4Free létrejöttéhez:"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr "A NAS4Free számos ingyenes szoftvercsomagra épül."
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr ""
+#~ "A NAS4Free projekt köszönetet mond a szoftver szerzőinek erőfeszítéseikért."

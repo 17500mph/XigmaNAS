@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-02 15:36+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:09+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -80,6 +80,10 @@ msgstr "%s 已配置为文件系统。"
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s 已配置为卷。"
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -849,6 +853,9 @@ msgstr "追加用户自定义的用户共享"
 
 msgid "Apple Filing Protocol"
 msgstr "苹果文件协议（Apple Filing Protocol）"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "应用"
@@ -4034,6 +4041,18 @@ msgstr "GEOM VINUM软件RAID"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "GPT分区"
 
@@ -5484,6 +5503,9 @@ msgstr "下移"
 msgid "Move up"
 msgstr "上移"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "音乐"
 
@@ -5498,9 +5520,6 @@ msgstr "CHAP 相互验证"
 
 msgid "Mutual CHAP Users"
 msgstr "CHAP 相互验证用户"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr "NAS4Free基于/包含各种免费软件包。"
 
 msgid "NFS"
 msgstr "NFS"
@@ -6027,6 +6046,9 @@ msgstr "PHP 命令"
 
 msgid "PHP Command Output"
 msgstr "PHP命令输出"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -7703,6 +7725,10 @@ msgstr "软RAID"
 msgid "Software Used"
 msgstr "使用的软件"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "排序"
 
@@ -8154,6 +8180,12 @@ msgid ""
 "the share. It follows the same  format  as  the  allow option."
 msgstr "拒绝选项不允许指定用户和群组访问分享区。它与允许选项的格式是相同的。"
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "启用此选项之前必须在BIOS中启用COM端口。"
 
@@ -8187,11 +8219,6 @@ msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
 "spare blocks as a percentage of the total number of spare blocks available."
 msgstr "“Minimum Spares Remaining”属性指示剩余空闲块的数量占可用空闲块总数的百分比。"
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr "NAS4Free项目要感谢这个软件的作者的努力。"
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -8533,8 +8560,9 @@ msgstr "检测到以下错误"
 msgid "The following input errors were detected"
 msgstr "检测到以下的输入错误"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "以下人员为NAS4Free做出了贡献："
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "以下服务将使用AD身份验证："
@@ -10538,3 +10566,14 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可见"
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr "NAS4Free项目要感谢这个软件的作者的努力。"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr "NAS4Free基于/包含各种免费软件包。"
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "以下人员为NAS4Free做出了贡献："

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-08-13 16:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:45+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:09+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 
 msgid " interfaces:"
@@ -82,6 +82,10 @@ msgstr "%s is reeds gestel as 'n lêersisteem."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s is reeds as 'n volume opgestel."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -931,6 +935,9 @@ msgstr "Voeg gebruiker gediefinieerde gedeeldes"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Indiening Protokol"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Wend aan"
@@ -4281,6 +4288,18 @@ msgstr "GEOM VINUM Sagteware RAID"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "GPT Partisie"
 
@@ -5807,6 +5826,9 @@ msgstr "Skuif af"
 msgid "Move up"
 msgstr "Skuif op"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Musiek"
 
@@ -5821,9 +5843,6 @@ msgstr "Wedersydse CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Wedersydse CHAP gebruikers"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr ""
 
 msgid "NFS"
 msgstr "NFS"
@@ -6377,6 +6396,9 @@ msgstr "PHP bevel"
 
 msgid "PHP Command Output"
 msgstr "PHP bevel afvoer"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8116,6 +8138,10 @@ msgstr "Sagteware RAID"
 msgid "Software Used"
 msgstr "Sagteware Gebruik"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Sorteer"
 
@@ -8595,6 +8621,12 @@ msgstr ""
 "Die ontken opsie spesifiseer gebruikers en groepe wat nie toegelaat word tot "
 "die deel nie. Dit volg dieselfde formaat as die toelaat opsie."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "Die COM poort in die BIOS moet ontesper word voor hierdie opsie ontsper word."
@@ -8633,11 +8665,6 @@ msgstr ""
 "Die Minimum Reserwedele Oorblywend eienskap wys op die hoeveelheid "
 "oorblywende spaar blokke as 'n persenasie van die totale hoeveelheid "
 "beskikbare spaar blokke."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9033,7 +9060,8 @@ msgstr ""
 msgid "The following input errors were detected"
 msgstr "Die volgende inset foute is opgespoor."
 
-msgid "The following persons have contributed to NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
 msgstr ""
 
 msgid "The following services will use AD authentication:"

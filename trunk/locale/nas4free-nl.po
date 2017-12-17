@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
-"PO-Revision-Date: 2017-12-01 14:31+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
+"PO-Revision-Date: 2017-12-17 23:02+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:08+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -81,6 +81,10 @@ msgstr "%s is al geconfigureerd als bestandssysteem."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s is al geconfigureerd als volume."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr "%s is gebaseerd op/bevat verschillende gratis softwarepakketten."
 
 #, php-format
 msgid "%s is too long."
@@ -947,6 +951,9 @@ msgstr "Toevoegen gebruiker gedefinieerde delingen"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apple Public Source License"
+msgstr "Apple Publieke Bron Licentie"
 
 msgid "Apply"
 msgstr "Toepassen"
@@ -4388,6 +4395,18 @@ msgstr "GEOM VINUM Software RAID"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr "GNU Algemene Publieke Licentie"
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr "GNU Minder Algemene Publieke Licentie (LGPL)"
+
+msgid "GPLv2"
+msgstr "GPLv2"
+
+msgid "GPLv3"
+msgstr "GPLv3"
+
 msgid "GPT Partition"
 msgstr "GPT Partitie"
 
@@ -5955,6 +5974,9 @@ msgstr "Omlaag verplaatsen"
 msgid "Move up"
 msgstr "Omhoog verplaatsen"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr "Mozilla Publieke Licentie Versie 2.0 (MPLv2)"
+
 msgid "Music"
 msgstr "Muziek"
 
@@ -5969,10 +5991,6 @@ msgstr "Mutual CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Mutual CHAP Gebruikers"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr ""
-"NAS4Free is gebaseerd op/bevat verschillende gratis softwarepakketten."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6532,6 +6550,9 @@ msgstr "PHP Opdracht"
 
 msgid "PHP Command Output"
 msgstr "PHP Commando Uitvoerings Resultaat"
+
+msgid "PHP License"
+msgstr "PHP Licentie"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8298,6 +8319,12 @@ msgstr "Software RAID"
 msgid "Software Used"
 msgstr "Gebruikte Software"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+"Sommige van de software die wordt gebruikt voor %s zijn onder de volgende "
+"licenties:"
+
 msgid "Sort"
 msgstr "Sortering"
 
@@ -8779,6 +8806,14 @@ msgstr ""
 "is de deling te benaderen. Het volgt het zelfde formaat als de toestaan "
 "optie."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+"De %s Project wil de auteurs van deze software bedanken voor hun "
+"inspanningen."
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "De COM-poort in het BIOS moet ingeschakeld zijn vóór u deze optie inschakeld!"
@@ -8820,13 +8855,6 @@ msgstr ""
 "Het Minimum Reserve Overgebleven attribuut geeft het aantal resterende "
 "reserve blokken in een percentage van het totale aantal overgebleven reserve "
 "blokken."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
-"Het NAS4Free Project wilt graag de auteurs van deze software voor hun "
-"inspanningen bedanken."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9225,8 +9253,9 @@ msgstr "De volgende fouten zijn gedetecteerd"
 msgid "The following input errors were detected"
 msgstr "De volgende invoerfouten zijn gedetecteerd"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "De volgende personen hebben bijgedragen tot NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr "De volgende personen hebben bijgedragen aan %s:"
 
 msgid "The following services will use AD authentication:"
 msgstr "De onderstaande services gebruiken AD verificatie:"
@@ -11530,3 +11559,17 @@ msgstr "gebruikt van"
 
 msgid "visible"
 msgstr "zichtbaar"
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr ""
+#~ "Het NAS4Free Project wilt graag de auteurs van deze software voor hun "
+#~ "inspanningen bedanken."
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "De volgende personen hebben bijgedragen tot NAS4Free:"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr ""
+#~ "NAS4Free is gebaseerd op/bevat verschillende gratis softwarepakketten."
