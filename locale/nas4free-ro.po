@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-05 05:59+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:09+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -79,6 +79,10 @@ msgstr "%s este deja configurat ca sistem de fișiere."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s este deja configurat ca volum."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -933,6 +937,9 @@ msgstr "Adaugă partajările definite"
 
 msgid "Apple Filing Protocol"
 msgstr "Protocol Apple Filing"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Aplică"
@@ -4340,6 +4347,18 @@ msgstr "RADI software GEOM VINUM"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "Partiție GPT"
 
@@ -5902,6 +5921,9 @@ msgstr "Mută în jos"
 msgid "Move up"
 msgstr "Mută în sus"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Muzică"
 
@@ -5916,9 +5938,6 @@ msgstr "CHAP mutual"
 
 msgid "Mutual CHAP Users"
 msgstr "Utilizatori CHAP mutual"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr "NAS4Free se bazează/include o serie de pachete software gratuite."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6475,6 +6494,9 @@ msgstr "Comandă PHP"
 
 msgid "PHP Command Output"
 msgstr "Ieșire comandă PHP"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8237,6 +8259,10 @@ msgstr "RAID Software"
 msgid "Software Used"
 msgstr "Software utilizat"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Sortare"
 
@@ -8716,6 +8742,12 @@ msgstr ""
 "care nu au acces la partajare. Are același format ca opțiunea de permitere "
 "acces."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "Portul COM trebuie să fie mai întîi activat în BIOS."
 
@@ -8752,13 +8784,6 @@ msgid ""
 msgstr ""
 "Numărul minim de zone de rezervă pentru remapare rămase indicat ca procent "
 "raportat la numărul total de zone de rezervă."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
-"Echipa NAS4Free dorește să mulțumească autorilor acestor pachete software "
-"pentru efortul lor deosebit."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9151,8 +9176,9 @@ msgstr "Au fost detectate următoarele erori"
 msgid "The following input errors were detected"
 msgstr "Au fost detectate urmatoarele erori"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "Următoarele persoane au contribuit la NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Serviciile următoare folosesc autentificarea AD:"
@@ -11425,3 +11451,16 @@ msgstr "utilizat din"
 
 msgid "visible"
 msgstr "vizibil"
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr ""
+#~ "Echipa NAS4Free dorește să mulțumească autorilor acestor pachete software "
+#~ "pentru efortul lor deosebit."
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr "NAS4Free se bazează/include o serie de pachete software gratuite."
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "Următoarele persoane au contribuit la NAS4Free:"

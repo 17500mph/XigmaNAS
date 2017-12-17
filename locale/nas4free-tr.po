@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-04-06 18:11+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:45+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:09+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -80,6 +80,10 @@ msgstr "%s zaten dosya sistemi olarak ayarlandı."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s zaten bölüm olarak ayarlandı."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -868,6 +872,9 @@ msgid "Append user defined shares"
 msgstr ""
 
 msgid "Apple Filing Protocol"
+msgstr ""
+
+msgid "Apple Public Source License"
 msgstr ""
 
 msgid "Apply"
@@ -4044,6 +4051,18 @@ msgstr ""
 msgid "GID"
 msgstr ""
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr ""
 
@@ -5485,6 +5504,9 @@ msgstr ""
 msgid "Move up"
 msgstr ""
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr ""
 
@@ -5498,9 +5520,6 @@ msgid "Mutual CHAP"
 msgstr ""
 
 msgid "Mutual CHAP Users"
-msgstr ""
-
-msgid "NAS4Free is based upon/includes various free software packages."
 msgstr ""
 
 msgid "NFS"
@@ -6025,6 +6044,9 @@ msgid "PHP Command"
 msgstr "PHP komutu"
 
 msgid "PHP Command Output"
+msgstr ""
+
+msgid "PHP License"
 msgstr ""
 
 msgid "PPPoE"
@@ -7695,6 +7717,10 @@ msgstr "RAID programı"
 msgid "Software Used"
 msgstr ""
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr ""
 
@@ -8141,6 +8167,12 @@ msgid ""
 "the share. It follows the same  format  as  the  allow option."
 msgstr ""
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 
@@ -8173,11 +8205,6 @@ msgstr ""
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
 "spare blocks as a percentage of the total number of spare blocks available."
-msgstr ""
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
 msgstr ""
 
 msgid ""
@@ -8518,7 +8545,8 @@ msgstr ""
 msgid "The following input errors were detected"
 msgstr ""
 
-msgid "The following persons have contributed to NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
 msgstr ""
 
 msgid "The following services will use AD authentication:"

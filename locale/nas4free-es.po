@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-01 19:50+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:08+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -79,6 +79,10 @@ msgstr "%s Ya está configurado como un sistema de archivos."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s Ya está configurado como un volumen."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -932,6 +936,9 @@ msgstr "Añadir compartidos definidos por el usuario"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Aplicar"
@@ -4337,6 +4344,18 @@ msgstr "Software RAID GEOM VINUM"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "Partición GPT"
 
@@ -5904,6 +5923,9 @@ msgstr "Bajar"
 msgid "Move up"
 msgstr "Subir"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Música"
 
@@ -5918,9 +5940,6 @@ msgstr "CHAP mutuo"
 
 msgid "Mutual CHAP Users"
 msgstr "Usuarios CHAP mutuos"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr "Nas4Free está basado en/incluye varios paquetes de software libre."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6473,6 +6492,9 @@ msgstr "Orden PHP"
 
 msgid "PHP Command Output"
 msgstr "Salida del comando PHP"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8241,6 +8263,10 @@ msgstr "Software RAID"
 msgid "Software Used"
 msgstr "Software Usado"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Ordenar"
 
@@ -8720,6 +8746,12 @@ msgstr ""
 "acceder al recurso compartido. Sigue el mismo formato como la opción "
 "permitir."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "El puerto COM debe ser habilitado en la BIOS antes de habilitar esta funcion"
@@ -8760,13 +8792,6 @@ msgid ""
 msgstr ""
 "El valor mínimo de bloques libres que quedan indica el número de bloques "
 "libres como porcentaje del total delnúemro de bloques libres disponible."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
-"El proyectos Nas4free quiere dar las gracias a los autores de este software "
-"por sus esfuerzos."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9164,8 +9189,9 @@ msgstr "Se detectaron los siguientes errores"
 msgid "The following input errors were detected"
 msgstr "Se ha detectado los siguientes errores de entrada"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "Las siguientes personas han contribuido en Nas4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "El siguiente servicio usa autentificación AD:"
@@ -11435,3 +11461,16 @@ msgstr "usados de"
 
 msgid "visible"
 msgstr "Visible"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr "Nas4Free está basado en/incluye varios paquetes de software libre."
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr ""
+#~ "El proyectos Nas4free quiere dar las gracias a los autores de este software "
+#~ "por sus esfuerzos."
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "Las siguientes personas han contribuido en Nas4Free:"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-01 15:17+0000\n"
+"POT-Creation-Date: 2017-12-17 23:37+0000\n"
 "PO-Revision-Date: 2017-12-09 12:07+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-10 15:44+0000\n"
+"X-Launchpad-Export-Date: 2017-12-17 23:09+0000\n"
 "X-Generator: Launchpad (build 18511)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -81,6 +81,10 @@ msgstr "%s är redan konfigurerat som ett filsystem."
 #, php-format
 msgid "%s is already configured as a volume."
 msgstr "%s är redan konfigurerad som en volym."
+
+#, php-format
+msgid "%s is based upon/includes various free software packages."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -916,6 +920,9 @@ msgstr "Lägg till användardefinierade delningar"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filprotokoll"
+
+msgid "Apple Public Source License"
+msgstr ""
 
 msgid "Apply"
 msgstr "Verkställ"
@@ -4276,6 +4283,18 @@ msgstr "GEOM VINUM mjuvaru RAID"
 msgid "GID"
 msgstr "GID"
 
+msgid "GNU General Public License"
+msgstr ""
+
+msgid "GNU Lesser General Public License (LGPL)"
+msgstr ""
+
+msgid "GPLv2"
+msgstr ""
+
+msgid "GPLv3"
+msgstr ""
+
 msgid "GPT Partition"
 msgstr "GPT Partition"
 
@@ -5800,6 +5819,9 @@ msgstr "Flytta ner"
 msgid "Move up"
 msgstr "Flytta upp"
 
+msgid "Mozilla Public License Version 2.0 (MPLv2)"
+msgstr ""
+
 msgid "Music"
 msgstr "Musik"
 
@@ -5814,9 +5836,6 @@ msgstr "Gemensam CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Gemensamma CHAP-användare"
-
-msgid "NAS4Free is based upon/includes various free software packages."
-msgstr "NAS4Free baseras på/inkluderar olika fria mjukvarupaket."
 
 msgid "NFS"
 msgstr "NFS"
@@ -6368,6 +6387,9 @@ msgstr "PHP Kommando"
 
 msgid "PHP Command Output"
 msgstr "PHP Kommandoutmatning"
+
+msgid "PHP License"
+msgstr ""
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -8111,6 +8133,10 @@ msgstr "Mjukvaru-RAID"
 msgid "Software Used"
 msgstr "Använd programvara"
 
+#, php-format
+msgid "Some of the software used for %s are under the following licenses:"
+msgstr ""
+
 msgid "Sort"
 msgstr "Sortera"
 
@@ -8590,6 +8616,12 @@ msgstr ""
 "Optionen 'neka' specificerar användare och grupper som inte tillåts "
 "anslutning till delningen. Valet följer samma format som optionen 'tillåt'."
 
+#, php-format
+msgid ""
+"The %s Project would like to thank the authors of this software for their "
+"efforts."
+msgstr ""
+
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "COM-porten i BIOS behöver aktiveras innan aktivering av detta val."
 
@@ -8627,12 +8659,6 @@ msgid ""
 msgstr ""
 "Minsta kvarvarande reserv attributet visar antalet kvarvarande reservblock i "
 "procent av totala antalet reservblock."
-
-msgid ""
-"The NAS4Free Project would like to thank the authors of this software for "
-"their efforts."
-msgstr ""
-"NAS4Free projektet vill tacka upphovsmännen av mjukvara för deras insatser."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -9024,8 +9050,9 @@ msgstr "Följande fel upptäcktes"
 msgid "The following input errors were detected"
 msgstr "Följande felinmatningar upptäcktes"
 
-msgid "The following persons have contributed to NAS4Free:"
-msgstr "Följande personer har bidragit till NAS4Free:"
+#, php-format
+msgid "The following persons have contributed to %s:"
+msgstr ""
 
 msgid "The following services will use AD authentication:"
 msgstr "Följande tjänster kommer att använda AD autentisering:"
@@ -11271,3 +11298,15 @@ msgstr "använt av"
 
 msgid "visible"
 msgstr "synlig"
+
+#~ msgid ""
+#~ "The NAS4Free Project would like to thank the authors of this software for "
+#~ "their efforts."
+#~ msgstr ""
+#~ "NAS4Free projektet vill tacka upphovsmännen av mjukvara för deras insatser."
+
+#~ msgid "The following persons have contributed to NAS4Free:"
+#~ msgstr "Följande personer har bidragit till NAS4Free:"
+
+#~ msgid "NAS4Free is based upon/includes various free software packages."
+#~ msgstr "NAS4Free baseras på/inkluderar olika fria mjukvarupaket."
