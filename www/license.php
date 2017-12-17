@@ -368,7 +368,7 @@ not be interpreted as representing official policies, either expressed or implie
 ?>
 			<tr>
 				<th colspan="2" class="lcebld">
-<?=sprintf(gtext('%s is based upon/includes various free software packages.'), get_product_name());?><br /><?=sprintf(gtext('The %s Project would like to thank the authors of this software for their efforts.'), get_product_name());?>
+<?=sprintf(gtext('%s is based upon/includes various free software packages.'), get_product_name());?><br /><?=sprintf(gtext('The %s Project would like to thank the authors of this software for their efforts.'),get_product_name());?>
 				</th>
 			</tr>
 		</thead>
@@ -386,10 +386,23 @@ not be interpreted as representing official policies, either expressed or implie
 		<tfoot>
 			<tr>
 				<td colspan="2" class="lcebld">
-					<p>Some of the software used for NAS4Free are under the <a href="third-party_licenses/gpl-license.txt">GNU General Public License</a> (<a href="third-party_licenses/gpl-license.txt">GPLv2</a>, <a href="third-party_licenses/gpl3-license.txt">GPLv3</a>), <a href="third-party_licenses/lgpl-license.txt">GNU Lesser General Public License (LGPL)</a>, <a href="third-party_licenses/mpl2-license.txt">Mozilla Public License Version 2.0 (MPLv2)</a>, <a href="third-party_licenses/apple-license.txt">Apple Public Source License</a> and <a href="third-party_licenses/php-license.txt">PHP License</a>.</p>
+<?php
+$helpinghand = sprintf(gtext('Some of the software used for %s are under the following licenses:'),get_product_name())
+	. sprintf(' <a href="third-party_licenses/gpl-license.txt">%s</a>',gtext('GNU General Public License'))
+	. sprintf(' (<a href="third-party_licenses/gpl-license.txt">%s</a>',gtext('GPLv2'))
+	. sprintf(', <a href="third-party_licenses/gpl3-license.txt">%s</a>)',gtext('GPLv3'))
+	. sprintf(', <a href="third-party_licenses/lgpl-license.txt">%s</a>',gtext('GNU Lesser General Public License (LGPL)'))
+	. sprintf(', <a href="third-party_licenses/mpl2-license.txt">%s</a>',gtext('Mozilla Public License Version 2.0 (MPLv2)'))
+	. sprintf(', <a href="third-party_licenses/apple-license.txt">%s</a>',gtext('Apple Public Source License'))
+	. sprintf(' and <a href="third-party_licenses/php-license.txt">%s</a>.',gtext('PHP License'));
+?>
+					<p><?=$helpinghand;?></p>
 				</td>
 			</tr>
 		</tfoot>
 	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
+
