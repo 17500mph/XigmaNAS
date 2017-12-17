@@ -121,8 +121,8 @@ not be interpreted as representing official policies, either expressed or implie
 		['Laurentiu Bubuianu','laurfb@yahoo.com','Romanian translator of the WebGUI'],
 		['Raul Fernandez Garcia','raulfg3@gmail.com','Spanish translator of the WebGUI'],
 		['Mucahid Zeyrek','mucahid.zeyrek@dhl.com','Turkish translator of the WebGUI'],
-		['Volker Theile','votdev@gmx.de','Developer 2006-2009'],
-		['Samuel Tunis','killermist@gmail.com','User guide and Live support on irc 2012-2015']
+		['Volker Theile','votdev@gmx.de','Developer from 2006 till 2009'],
+		['Samuel Tunis','killermist@gmail.com','User guide and Live support on irc from 2012 till 2015']
 	];
 ?>
 	<table class="area_data_selection">
@@ -262,7 +262,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['Open Virtual Machine Tools',[
 			'Open Virtual Machine Tools - Virtualization utilities and drivers (<a href="http://sourceforge.net/projects/open-vm-tools/" target="_blank">http://sourceforge.net/projects/open-vm-tools</a>).',
-			'Copyright © 2007-2015 VMware Inc. All rights reserved.'
+			'Copyright © 2007-2017 VMware Inc. All rights reserved.'
 		]],
 		['OpenSSH',[
 			'OpenSSH (<a href="http://www.openssh.com" target="_blank">http://www.openssh.com</a>).',
@@ -278,7 +278,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['phpVirtualBox',[
 			'phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox</a>).',
-			'Copyright © 2011-2016 Ian Moore, Inc. All Rights Reserved.'
+			'Copyright © 2011-2017 Ian Moore, Inc. All Rights Reserved.'
 		]],
 		['ProFTPD',[
 			'A highly configurable FTP server (<a href="http://www.proftpd.org" target="_blank">http://www.proftpd.org</a>).',
@@ -306,7 +306,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['smartmontools',[
 			'Utility programs (smartctl, smartd) to control/monitor storage systems (<a href="http://sourceforge.net/projects/smartmontools/" target="_blank">http://sourceforge.net/projects/smartmontools</a>).',
-			'Copyright © 2002-2016 Bruce Allen, Christian Franke. All Rights Reserved.',
+			'Copyright © 2002-2017 Bruce Allen, Christian Franke. All Rights Reserved.',
 		]],
 		['Spinner.js',[
 			'A spinning activity indicator (<a href="https://github.com/fgnass/spin.js" target="_blank">https://github.com/fgnass/spin.js</a>).',
@@ -339,7 +339,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['Transmission',[
 			'A fast, easy, and free multi-platform BitTorrent client (<a href="http://www.transmissionbt.com" target="_blank">http://www.transmissionbt.com</a>).',
-			'Copyright © 2008-2016 Transmission Project. All Rights Reserved.'
+			'Copyright © 2008-2017 Transmission Project. All Rights Reserved.'
 		]],
 		['VirtualBox',[
 			'Open Source Edition (OSE) & (Guest Additions) (<a href="http://www.virtualbox.org" target="_blank">http://www.virtualbox.org</a>).',
