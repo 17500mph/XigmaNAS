@@ -101,6 +101,6 @@ echo <<<EOD
 EOD;
 
 	for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++)
-		echo "	Optional OPT{$i}:            {$esc("\33[1;33m")}{$config['interfaces']['opt' . $i]['if']}{$esc("\33[0;39m")} " .
+		echo "	LAN Interface OPT{$i}:       {$esc("\33[1;33m")}{$config['interfaces']['opt' . $i]['if']}{$esc("\33[0;39m")} " .
 			"({$esc("\33[1;33m")}{$config['interfaces']['opt' . $i]['descr']}{$esc("\33[0;39m")})\n";
 ?>
