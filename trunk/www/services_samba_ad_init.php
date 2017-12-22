@@ -135,7 +135,7 @@ if($_POST):
 		$path = $config['sambaad']['path'];
 		$cmsargs = [];
 		$cmdargs[] = escapeshellarg('--use-rfc2307');
-		$cmdargs[] = escapeshellarg('--function-level=2008_R2');
+		$cmdargs[] = escapeshellarg('--function-level=2012_R2');
 		$cmdargs[] = escapeshellarg(sprintf('--realm=%s',$realm));
 		$cmdargs[] = escapeshellarg(sprintf('--domain=%s',$domain));
 		$cmdargs[] = escapeshellarg('--server-role=dc');
