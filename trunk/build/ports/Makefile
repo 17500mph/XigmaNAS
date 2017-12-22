@@ -45,8 +45,9 @@
     SUBDIR += pam_ldap
     SUBDIR += pam_mkhomedir
     SUBDIR += php71
+    SUBDIR += php72
     SUBDIR += php71-APCu
-    SUBDIR += php71-intl
+    SUBDIR += php72-APCu
     SUBDIR += phpvirtualbox
     SUBDIR += proftpd
     SUBDIR += python2
