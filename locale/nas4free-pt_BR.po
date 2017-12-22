@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-12-17 23:37+0000\n"
-"PO-Revision-Date: 2017-06-21 15:36+0000\n"
-"Last-Translator: Almir <Unknown>\n"
+"PO-Revision-Date: 2017-12-22 11:38+0000\n"
+"Last-Translator: RD WebDesign <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-19 06:33+0000\n"
-"X-Generator: Launchpad (build 18511)\n"
+"X-Launchpad-Export-Date: 2017-12-22 12:01+0000\n"
+"X-Generator: Launchpad (build 18521)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
 "X-Poedit-Language: Brazilian Portuguese\n"
@@ -24,7 +24,7 @@ msgstr " foi atribuído a "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -52,7 +52,7 @@ msgstr "%d anos"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% de %s"
 
 #, php-format
 msgid "%dB / block"
@@ -72,7 +72,7 @@ msgstr "%s já existe."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s disponível de %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -84,7 +84,7 @@ msgstr "%s já está configurado como um volume."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s é baseado em/inclui vários pacotes de software livre."
 
 #, php-format
 msgid "%s is too long."
@@ -92,7 +92,7 @@ msgstr "%s é demasiadamente longo."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s de %s"
 
 #, php-format
 msgid "%s on %s"
@@ -100,7 +100,7 @@ msgstr "%s em %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s usado de %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -216,7 +216,7 @@ msgid "4KB wrapper"
 msgstr "4KB wrapper"
 
 msgid "514"
-msgstr ""
+msgstr "514"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Tag da VLAN 802.1Q (Entre 1 e 4094)."
@@ -225,6 +225,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Um nome de Servidor de horário NTP pode conter somente os seguintes "
+"caracteres: a-z, 0-9, '-' and '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -290,7 +292,7 @@ msgid "A route to this destination network already exists."
 msgstr "Já existe uma rota para esta rede de destino."
 
 msgid "A sysvol folder was found."
-msgstr ""
+msgstr "Uma pasta sysvol foi encontrada."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -752,16 +754,16 @@ msgid "Allow New Files"
 msgstr "Permitir novos arquivos"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Permitir portas seriais"
 
 msgid "Allow TLS connections only."
 msgstr "Permitir apenas conexões TLS."
 
 msgid "Allow USB"
-msgstr ""
+msgstr "Permitir USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Permitir portas seriais USB"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permitir acesso de clientes a contas sem senhas."
@@ -940,13 +942,13 @@ msgid "Apple Filing Protocol"
 msgstr "Protocolo de Arquivamento da Apple"
 
 msgid "Apple Public Source License"
-msgstr ""
+msgstr "Licença de fonte pública da Apple"
 
 msgid "Apply"
 msgstr "Aplicar"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Aplicar Alterações"
 
 msgid "Apply Filter"
 msgstr "Aplicar Filtro"
@@ -1055,10 +1057,14 @@ msgstr "Usuários Autenticados"
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Largura de banda de download para usuário autenticado em KB/s. Deixe em "
+"branco para infinito."
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Largura de banda de upload para usuário autenticado em KB/s. Deixe em branco "
+"para infinito."
 
 msgid "Authentication"
 msgstr "Autenticação"
@@ -1097,13 +1103,13 @@ msgid "AutoScale"
 msgstr "Escala automática"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Autodetectar"
 
 msgid "Autoscale"
-msgstr ""
+msgstr "Escala automática"
 
 msgid "Autoscale for graphs."
-msgstr ""
+msgstr "Escala automática para gráficos."
 
 msgid "Autoselect"
 msgstr "Seleção automática"
@@ -1112,7 +1118,7 @@ msgid "Auxiliary device firmware"
 msgstr "Firmware de disposivo auxiliar"
 
 msgid "Avail"
-msgstr ""
+msgstr "Dispon."
 
 msgid "Available"
 msgstr "Disponível"
@@ -1125,9 +1131,14 @@ msgid ""
 "attribute is decreasing, it is a sign of problems in the mechanical "
 "subsystem."
 msgstr ""
+"Performance média de operações de busca das cabeças magnéticas. Caso este "
+"atributo estiver diminuindo, pode ser um sinal de problemas no subsistema "
+"mecânico."
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
+"Tempo médio inicial de giro do spindle (de zero RPM até totalmente "
+"operacional)."
 
 msgid "Back"
 msgstr "Voltar"
@@ -1148,10 +1159,10 @@ msgid "Backup/Restore"
 msgstr "Salvar/Restaurar"
 
 msgid "Bad User - (Non Existing Users)"
-msgstr ""
+msgstr "Usuário inexistente"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Algorítmo de balanceamento"
 
 msgid "Ban List"
 msgstr "Lista de Banidos"
@@ -1222,23 +1233,26 @@ msgid "Battery voltage"
 msgstr "Tensão da bateria"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Tenha cuidado ao ativar estas opções."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
+"Antes - A exclusão de arquivos será efetuada ANTES da transferência iniciar."
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
+"Antes - A exclusão de arquivos será efetuada ANTES da transferência iniciar."
 
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
+"Antes de um Cliente Unison ser iniciado, você precisa fazer o seguinte:"
 
 msgid "Best available"
 msgstr "Melhor disponível"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "Prefixo Binário"
 
 msgid "Bind DN"
 msgstr "DN Associado"
@@ -1254,9 +1268,11 @@ msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
 msgstr ""
+"BitTorrent necessita ao menos as permissões de leitura e execução no ponto "
+"de montagem do diretório %s!"
 
 msgid "Blank Time"
-msgstr ""
+msgstr "Horário Vazio"
 
 msgid "Block Size"
 msgstr "Tamanho do Block"
@@ -1283,6 +1299,8 @@ msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"A partição de boot é muito pequena. Você precisa reinstalar através do "
+"LiveCD/LiveUSB ou redimensionar a partição de boot de %s.\n"
 
 msgid "Bootloader"
 msgstr "Carregador de boot"
@@ -1318,27 +1336,28 @@ msgid "Bring a device online"
 msgstr ""
 
 msgid "Broadcast Interval"
-msgstr ""
+msgstr "Intervalo de broadcast"
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
 msgstr ""
+"Anuncia sua disponibilidade a cada N segundos na rede. (Padrão: 300 segundos)"
 
 msgid "Browse Directory"
-msgstr ""
+msgstr "Navegar pelo Diretório"
 
 msgid "Browseable"
 msgstr "Navegável"
 
 msgid "Button Location"
-msgstr ""
+msgstr "Localização do botão"
 
 msgid "By default, only already existing files can be uploaded."
 msgstr "Por padrão, somente arquivos já existentes podem ser carregados."
 
 msgid "Bytes/sec"
-msgstr ""
+msgstr "Bytes/s"
 
 msgid "CACHE"
 msgstr "CACHE"
@@ -1349,6 +1368,7 @@ msgstr "CARP"
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"CARP não pode ser apagado porque ainda está sendo usado como uma interface."
 
 msgid "CARP is marked for deletion"
 msgstr "CARP marcado para exclusão"
@@ -1553,10 +1573,10 @@ msgid "Check the list of available drivers"
 msgstr "Verifique a lista dos drivers disponíveis"
 
 msgid "Checksum"
-msgstr ""
+msgstr "Checksum"
 
 msgid "Choose File"
-msgstr ""
+msgstr "Selecionar Arquivo"
 
 msgid "Choose UPS mode."
 msgstr "Escolha modo UPS."
@@ -1605,7 +1625,7 @@ msgid "Clone"
 msgstr "Replicar"
 
 msgid "Clone Configuration"
-msgstr ""
+msgstr "Clonar Configuração"
 
 msgid "Collecting initial data, please wait..."
 msgstr "Reunindo os dados iniciais, por favor aguarde..."
@@ -1620,6 +1640,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Lista separada por vírgulas dos nomes de grupos que têm permissão para se "
+"conectar ao servidor de FTP. (vazio = grupo ftp)."
 
 msgid "Command"
 msgstr "Comando"
@@ -1702,7 +1724,7 @@ msgid "Configuration"
 msgstr "Configuração"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Diretório de configuração"
 
 msgid ""
 "Configuration information about devices is different from physical devices. "
@@ -1757,7 +1779,7 @@ msgid "Content Locations"
 msgstr ""
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 msgid "Control"
 msgstr ""
@@ -1778,13 +1800,13 @@ msgid "Controller Authorised network"
 msgstr "Rede do controlador autorizado"
 
 msgid "Controller IP Address"
-msgstr ""
+msgstr "Endereço IP do controlador"
 
 msgid "Controller IP address"
 msgstr "Endereço IP do controlador"
 
 msgid "Controller Model"
-msgstr ""
+msgstr "Modelo do Controlador"
 
 msgid "Controller TCP Port"
 msgstr "Porta TCP do controlador"
@@ -1800,6 +1822,13 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
+"Controla o algoritmo de compressão usado para este conjunto de dados. 'LZ4' "
+"é atualmente o algoritmo de compressão recomendado. Configurando a "
+"compressão como 'Ligada' usará o algoritmo de compressão LZ4 se o flag "
+"lz4_compress estiver ativo, senão LZJB será usado. Você pode especificar o "
+"nível 'GZIP' usando um valor 'GZIP-N', onde N é um inteiro entre 1 (mais "
+"rápido) e 9 (melhor razão de compressão). Atualmente, 'GZIP' é equivalente a "
+"'GZIP-6'."
 
 msgid ""
 "Controls the compression algorithm. 'LZ4' is now the recommended compression "
@@ -1809,18 +1838,26 @@ msgid ""
 "from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is "
 "equivalent to 'GZIP-6'."
 msgstr ""
+"Controla o algoritmo de compressão. 'LZ4' é atualmente o algoritmo de "
+"compressão recomendado. Configurando a compressão como 'Ligada' usará o "
+"algoritmo de compressão LZ4 se o flag lz4_compress estiver ativo, senão LZJB "
+"será usado. Você pode especificar o nível 'GZIP' usando um valor 'GZIP-N', "
+"onde N é um inteiro entre 1 (mais rápido) e 9 (melhor razão de compressão). "
+"Atualmente, 'GZIP' é equivalente a 'GZIP-6'."
 
 msgid "Controls the dedup method."
 msgstr ""
 
 msgid "Controls the number of copies of data stored for this dataset."
 msgstr ""
+"Controla o número de cópias dos dados armazenados para este conjunto de "
+"dados."
 
 msgid "Controls the power consumption mode."
-msgstr ""
+msgstr "Controla o modo de consumo de energia."
 
 msgid "Controls the type of the ZFS dataset."
-msgstr ""
+msgstr "Controla o tipo de conjunto de dados ZFS."
 
 msgid "Controls what is cached in the primary cache (ARC)."
 msgstr ""
@@ -1829,32 +1866,42 @@ msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
 msgid "Controls what types of metadata are stored redundantly."
-msgstr ""
+msgstr "Controla quais tipos de metadados são armazenados com redundância."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
 msgstr ""
+"Controla quais processos podem ser executados de dentro deste sistema de "
+"arquivos."
 
 msgid ""
 "Controls whether the .zfs directory is hidden or visible in the root of the "
 "file system."
 msgstr ""
+"Controla se o diretório .zfs fica oculto ou visível na raiz do sistema de "
+"arquivos."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read."
 msgstr ""
+"Controla se a data de acesso dos arquivos será atualizada quando eles forem "
+"lidos."
 
 msgid ""
 "Controls whether the access time for files is updated when they are read. "
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
 msgstr ""
+"Controla se a data de acesso dos arquivos será atualizada quando eles forem "
+"lidos. Desligando esta opção evita a produção de tráfego de escrita durante "
+"a leitura de arquivos e pode resultar em ganho significante de performance"
 
 msgid "Controls whether the dataset is managed from a jail."
 msgstr ""
 
 msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr ""
+"Controla se o bit set-UID será respeitado para o sistema de arquivos."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controla se é possível modificar este conjunto de dados."
@@ -1863,6 +1910,8 @@ msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
 msgstr ""
+"Converte atributos DOS para bits de execução do UNIX quando a opção "
+"'Armazenar atributos do DOS' está desativada."
 
 msgid "Conveyance Self-Test"
 msgstr ""
@@ -3487,7 +3536,7 @@ msgid "Enable shadow copy."
 msgstr ""
 
 msgid "Enable store DOS attributes."
-msgstr ""
+msgstr "Habilitar armazenamento de atributos do DOS."
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Habilitar o protocolo de identificação (RFC1413)."
@@ -8108,7 +8157,7 @@ msgid "Storage"
 msgstr "Armazenamento"
 
 msgid "Store DOS Attributes"
-msgstr ""
+msgstr "Armazenar atributos do DOS"
 
 msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
