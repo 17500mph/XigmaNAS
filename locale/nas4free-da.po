@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-12-17 23:37+0000\n"
-"PO-Revision-Date: 2016-09-17 16:31+0000\n"
-"Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
+"PO-Revision-Date: 2017-12-23 02:13+0000\n"
+"Last-Translator: kasper <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-12-22 12:01+0000\n"
+"X-Launchpad-Export-Date: 2017-12-23 13:32+0000\n"
 "X-Generator: Launchpad (build 18521)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -76,23 +76,23 @@ msgstr ""
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s er allerede konfiguret som et filsystem"
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s allerede konfigureret som et drev"
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s er baseret på / indeholder forskellige gratis softwarepakker"
 
 #, php-format
 msgid "%s is too long."
-msgstr "%s er for lang."
+msgstr "%s er for lang"
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s af %s"
 
 #, php-format
 msgid "%s on %s"
@@ -100,7 +100,7 @@ msgstr "%s på %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s brugt af %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -108,7 +108,7 @@ msgstr "%s%d %s er allerede brugt af %s%d."
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' sletter alle statistiske data fra graferne!"
 
 msgid "(Change if needed)"
 msgstr "(Skift om nødvendigt)"
@@ -117,6 +117,8 @@ msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
+"(Standardlængder er: 128 for AES, 128 for Blowfish, 128 for Camellia og 192 "
+"for 3DES)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Fundet i en Maxtor 6B200M0 200 GB og Maxtor 2R015H1 15 GB diske)."
@@ -126,12 +128,18 @@ msgid ""
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
+"(Kingston)Tæller antallet af flashfejl. Denne egenskab returnerer det totale "
+"antal fejl i Flash-sletningsoperationer, siden drevet blev implementeret. "
+"Denne egenskab er identisk med attribut 182"
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
 "returns the total number of Flash program operation failures since the drive "
 "was deployed. This attribute is identical to attribute 181."
 msgstr ""
+"(Kingston)Tæller antallet af flashprogramfejl. Denne egenskab returnerer det "
+"totale antal funktionsfejl i Flash-programmet, siden drevet blev "
+"implementeret. Denne attribut er identisk med attributten 181."
 
 msgid ""
 "(Vendor specific raw value.) Rate of seek errors of the magnetic heads. If "
