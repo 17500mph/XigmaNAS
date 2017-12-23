@@ -1,5 +1,16 @@
---- endpoints/lib/vboxconnector.php.orig	2017-10-25 23:27:18.693234000 +0200
-+++ endpoints/lib/vboxconnector.php	2017-10-27 21:19:01.000000000 +0200
+--- endpoints/lib/vboxconnector.php.orig	2017-12-23 13:44:18.021205000 +0100
++++ endpoints/lib/vboxconnector.php	2017-12-23 13:42:28.000000000 +0100
+@@ -131,8 +131,8 @@
+ 		if(@$this->settings->warnDefault) {
+ 			throw new Exception("No configuration found. Rename the file <b>config.php-example</b> in phpVirtualBox's folder to ".
+ 					"<b>config.php</b> and edit as needed.<p>For more detailed instructions, please see the installation wiki on ".
+-					"phpVirtualBox's web site. <p><a href='http://sourceforge.net/p/phpvirtualbox/wiki/Home/' target=_blank>".
+-					"http://sourceforge.net/p/phpvirtualbox/wiki/Home/</a>.</p>",
++					"phpVirtualBox's web site. <p><a href='https://github.com/phpvirtualbox/phpvirtualbox/wiki' target=_blank>".
++					"https://github.com/phpvirtualbox/phpvirtualbox/wiki</a>.</p>",
+ 						(vboxconnector::PHPVB_ERRNO_FATAL + vboxconnector::PHPVB_ERRNO_HTML));
+ 		}
+ 
 @@ -1126,7 +1126,7 @@
  			// Try to register medium.
  			foreach($checks as $iso) {
@@ -27,15 +38,18 @@
  							}
  						} else {
  							$med = null;
-@@ -1591,7 +1591,7 @@
+@@ -1591,9 +1591,9 @@
  			if($state != 'Saved') {
  
  				// Network properties
 -				$eprops = $n->getProperties();
 +				$eprops = $n->getProperties(null);
  				$eprops = array_combine($eprops[1],$eprops[0]);
- 				$iprops = array_map(create_function('$a','$b=explode("=",$a); return array($b[0]=>$b[1]);'),preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
+-				$iprops = array_map(create_function('$a','$b=explode("=",$a); return array($b[0]=>$b[1]);'),preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
++				$iprops = array_map(function ($a) { $b=explode("=",$a); return array($b[0]=>$b[1]); },preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
  				$inprops = array();
+ 				foreach($iprops as $a) {
+ 					foreach($a as $k=>$v)
 @@ -1942,7 +1942,7 @@
  			if($args['bootOrder'][$i]) {
  				$m->setBootOrder(($i + 1),$args['bootOrder'][$i]);
@@ -54,15 +68,18 @@
  					}
  				} else {
  					$med = null;
-@@ -2111,7 +2111,7 @@
+@@ -2111,9 +2111,9 @@
  			*/
  
  			// Network properties
 -			$eprops = $n->getProperties();
 +			$eprops = $n->getProperties(null);
  			$eprops = array_combine($eprops[1],$eprops[0]);
- 			$iprops = array_map(create_function('$a','$b=explode("=",$a); return array($b[0]=>$b[1]);'),preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
+-			$iprops = array_map(create_function('$a','$b=explode("=",$a); return array($b[0]=>$b[1]);'),preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
++			$iprops = array_map(function ($a) { $b=explode("=",$a); return array($b[0]=>$b[1]); } ,preg_split('/[\r|\n]+/',$args['networkAdapters'][$i]['properties']));
  			$inprops = array();
+ 			foreach($iprops as $a) {
+ 				foreach($a as $k=>$v)
 @@ -2519,7 +2519,7 @@
  	 */
  	public function remote_vboxGetEnumerationMap($args) {
@@ -112,15 +129,17 @@
  
  				$this->session->machine->attachDevice(trans($HDbusType,'UIMachineSettingsStorage'),0,0,'HardDisk',$m->handle);
  
-@@ -3941,7 +3943,7 @@
+@@ -3941,8 +3943,8 @@
  			if($at == 'NAT') $nd = $n->NATEngine; /* @var $nd INATEngine */
  			else $nd = null;
  
 -			$props = $n->getProperties();
+-			$props = implode("\n",array_map(create_function('$a,$b','return "$a=$b";'),$props[1],$props[0]));
 +			$props = $n->getProperties(null);
- 			$props = implode("\n",array_map(create_function('$a,$b','return "$a=$b";'),$props[1],$props[0]));
++			$props = implode("\n",array_map(function ($a,$b) { return "$a=$b"; },$props[1],$props[0]));
  
  			$adapters[] = array(
+ 				'adapterType' => (string)$n->adapterType,
 @@ -4381,7 +4383,7 @@
  	        }
  
@@ -130,6 +149,15 @@
      	        $response['accepted'][] = $creds['id'];
      		} catch (Exception $e) {
      		    $response['failed'][] = $creds['id'];
+@@ -4498,7 +4500,7 @@
+ 		}
+ 
+ 		// sort by port then device
+-		usort($return,create_function('$a,$b', 'if($a["port"] == $b["port"]) { if($a["device"] < $b["device"]) { return -1; } if($a["device"] > $b["device"]) { return 1; } return 0; } if($a["port"] < $b["port"]) { return -1; } return 1;'));
++		usort($return,function ($a,$b) { if($a["port"] == $b["port"]) { if($a["device"] < $b["device"]) { return -1; } if($a["device"] > $b["device"]) { return 1; } return 0; } if($a["port"] < $b["port"]) { return -1; } return 1; }); 
+ 
+ 		return $return;
+ 	}
 @@ -4690,7 +4692,7 @@
  			$machine->lockMachine($this->session->handle, ((string)$machine->sessionState == 'Unlocked' ? 'Write' : 'Shared'));
  
