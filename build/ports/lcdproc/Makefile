@@ -45,9 +45,6 @@ SERDISP_CFLAGS=		-I${LOCALBASE}/include
 SERDISP_LDFLAGS=	-L${LOCALBASE}/lib
 SERDISP_CPPFLAGS=	-I${LOCALBASE}/include
 
-# Empty args to aclocal required!
-ACLOCAL_ARGS=
-
 LCDPROC_DRIVERS=	bayrad \
 					CFontz \
 					CFontzPacket \
