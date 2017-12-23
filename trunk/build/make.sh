@@ -1831,10 +1831,6 @@ copy_files() {
 			echo "----------------------------------------------------------";
 			echo ">>> Copy new files to ports directory FreeBSD usr/ports/*.";
 			echo "----------------------------------------------------------";
-			echo "===> Start copy new port php71-APCu files to ports/devel/"
-			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/php71-APCu /usr/ports/devel
-			echo "===> Copy new files to /usr/ports/devel/php71-APCu done!"
-			echo "----------------------------------------------------------";
 			echo "===> Start copy new port php72-APCu files to ports/devel/"
 			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/php72-APCu /usr/ports/devel
 			echo "===> Copy new files to /usr/ports/devel/php72-APCu done!"
