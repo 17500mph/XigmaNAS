@@ -3,7 +3,7 @@
 	license.php
 
 	Part of NAS4Free (http://www.nas4free.org).
-	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
+	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -58,7 +58,7 @@ include 'fbegin.inc';
 				<td class="lcebl">
 <p>
 <strong>
-NAS4Free is Copyright © 2012-2017 The NAS4Free Project (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
+NAS4Free is Copyright © 2012-2018 The NAS4Free Project (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
 All Rights Reserved.
 </strong>
 </p>

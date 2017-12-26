@@ -1,23 +1,24 @@
 /*
- * 
- * 	Part of NAS4Free (http://www.nas4free.org).
- * 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
- * 	All rights reserved.
- * 
- * 	Copyright (c) 2004 Baron Schwartz <baron at sequent dot org> 
- * 	http://www.xaprb.com/blog/2005/09/29/javascript-date-chooser
- *
- * 	This program is free software; you can redistribute it and/or modify it
- * 	under the terms of the GNU Lesser General Public License as published by the
- * 	Free Software Foundation, version 2.1.
- *
- * 	This program is distributed in the hope that it will be useful, but WITHOUT
- * 	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * 	FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
- * 	details.
- *
- * 	$Revision: 1.1 $
- */
+	datechooser.js
+
+	Part of NAS4Free (http://www.nas4free.org).
+	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+	All rights reserved.
+
+	Copyright (c) 2004 Baron Schwartz <baron at sequent dot org>
+	http://www.xaprb.com/blog/2005/09/29/javascript-date-chooser
+
+	This program is free software; you can redistribute it and/or modify it
+	under the terms of the GNU Lesser General Public License as published by the
+	Free Software Foundation, version 2.1.
+
+	This program is distributed in the hope that it will be useful, but WITHOUT
+	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+	FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+	details.
+
+	$Revision: 1.1 $
+*/
 
 Date.parseFunctions = {count:0};
 Date.parseRegexes = [];

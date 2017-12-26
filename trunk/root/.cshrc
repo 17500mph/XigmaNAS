@@ -1,6 +1,6 @@
 #
 # Part of NAS4Free (http://www.nas4free.org).
-# Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
+# Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
 # .cshrc - csh resource script, read at beginning of execution by each shell
