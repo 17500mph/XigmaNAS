@@ -3,7 +3,7 @@
 	tui.inc
 
 	Part of NAS4Free (http://www.nas4free.org).
-	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
+	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
 	Copyright (c) 2006-2008 Volker Theile (votdev@gmx.de)
