@@ -33,6 +33,7 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_geom_info.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_header = 'Location: '.$sphere_scriptname;
@@ -66,23 +67,23 @@ $img_path = [
 ];
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
-if (PAGE_MODE_POST == $mode_page) { // POST is Cancel
-	if ((isset($_POST['Cancel']) && $_POST['Cancel'])) {
+if(PAGE_MODE_POST == $mode_page): // POST is Cancel
+	if((isset($_POST['cancel']) && $_POST['cancel'])):
 		header($sphere_header_parent);
 		exit;
-	}
-}
+	endif;
+endif;
 
-if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
+if((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])):
 	$sphere_record['uuid'] = $_POST['uuid'];
-} else {
-	if ((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])) {
+else:
+	if((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])):
 		$sphere_record['uuid'] = $_GET['uuid'];
-	} else {
+	else:
 		$mode_page = PAGE_MODE_ADD; // Force ADD
 		$sphere_record['uuid'] = uuid();
-	}
-}
+	endif;
+endif;
 
 $sphere_array = &array_make_branch($config,'zfs','vdevices','vdevice');
 if(empty($sphere_array)):
@@ -90,12 +91,12 @@ else:
 	array_sort_key($sphere_array,'name');
 endif;
 
-$index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // find index of uuid
-$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
+$index = array_search_ex($sphere_record['uuid'],$sphere_array,'uuid'); // find index of uuid
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier,$sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
-if (false !== $index) { // uuid found
-	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))) { // POST or EDIT
-		switch ($mode_updatenotify) {
+if(false !== $index): // uuid found
+	if((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))): // POST or EDIT
+		switch ($mode_updatenotify):
 			case UPDATENOTIFY_MODE_NEW:
 				$mode_record = RECORD_NEW_MODIFY;
 				break;
@@ -103,21 +104,21 @@ if (false !== $index) { // uuid found
 			case UPDATENOTIFY_MODE_UNKNOWN:
 				$mode_record = RECORD_MODIFY;
 				break;
-		}
-	}
-} else { // uuid not found
-	if ((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page)) { // POST or ADD
-		switch ($mode_updatenotify) {
+		endswitch;
+	endif;
+else: // uuid not found
+	if((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page)): // POST or ADD
+		switch($mode_updatenotify):
 			case UPDATENOTIFY_MODE_UNKNOWN:
 				$mode_record = RECORD_NEW;
 				break;
-		}
-	}
-}
-if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and out
+		endswitch;
+	endif;
+endif;
+if(RECORD_ERROR == $mode_record): // oops, someone tries to cheat, over and out
 	header($sphere_header_parent);
 	exit;
-}
+endif;
 $isrecordnew = (RECORD_NEW === $mode_record);
 $isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
 $isrecordmodify = (RECORD_MODIFY === $mode_record);
@@ -125,159 +126,167 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 function strip_dev($device) {
 	// returns the device name that follows after '/dev/' , i.e. ada0, ada0p1 or otherwise returns an empty array 
-	if (preg_match('/^\/dev\/(.+)$/', $device, $m)) {
+	if(preg_match('#^/dev/(.+)$#',$device,$m)):
 		$device = $m[1];
-	}
+	endif;
 	return $device;
 }
 function strip_partition($device) {
 	// returns the device name without partition information, .e. /dev/ada0p1 -> /dev/ada0 or an empty array 
-	if (preg_match('/^(.*)p\d+$/', $device, $m)) {
+	if(preg_match('/^(.*)p\d+$/',$device,$m)):
 		$device = $m[1];
-	}
+	endif;
 	return $device;
 }
-function strip_exists($device, &$sphere_array) {
-	if (false !== array_search_ex($diskv['devicespecialfile'], $sphere_array, 'device')) { return true; }
-	foreach ($sphere_array as $vdevs) {
-		foreach ($vdevs['device'] as $dev) {
+function strip_exists($device,&$sphere_array) {
+	if(false !== array_search_ex($diskv['devicespecialfile'],$sphere_array,'device')):
+		return true;
+	endif;
+	foreach($sphere_array as $vdevs):
+		foreach($vdevs['device'] as $dev):
 			// label
 			$tmp = disks_label_to_device($dev);
-			if (strcmp($tmp, $device) == 0) { return true; }
+			if(strcmp($tmp,$device) == 0):
+				return true;
+			endif;
 			// label+partition
 			$tmp = strip_partition($tmp);
-			if (strcmp($tmp, $device) == 0) { return true; }
+			if(strcmp($tmp,$device) == 0):
+				return true;
+			endif;
 			// partition
 			$tmp = strip_partition($dev);
-			if (strcmp($tmp, $device) == 0) { return true; }
-		}
-	}
+			if(strcmp($tmp,$device) == 0):
+				return true;
+			endif;
+		endforeach;
+	endforeach;
 	return false;
 }
-
-$a_disk = get_conf_disks_filtered_ex('fstype', 'zfs');
-if ($isrecordnewornewmodify && (empty($a_disk)) && (empty($a_encrypteddisk))) {
+$a_disk = get_conf_disks_filtered_ex('fstype','zfs');
+if($isrecordnewornewmodify && (empty($a_disk)) && (empty($a_encrypteddisk))):
 	$errormsg = gtext('No disks available.')
 		. ' '
 		. '<a href="' . 'disks_manage.php' . '">'
 		. gtext('Please add a new disk first.')
 		. '</a>';
 	$prerequisites_ok = false;
-}
+endif;
 
 $a_device = [];
-foreach ($a_disk as $r_disk) {
+foreach($a_disk as $r_disk):
 	$helpinghand = $r_disk['devicespecialfile'] . (isset($r_disk['zfsgpt']) ? $r_disk['zfsgpt'] : '');
 	$a_device[$helpinghand] = [
-		'name' => htmlspecialchars($r_disk['name']),
+		'name' => $r_disk['name'],
 		'uuid' => $r_disk['uuid'],
-		'model' => htmlspecialchars($r_disk['model']),
-		'devicespecialfile' => htmlspecialchars($helpinghand),
+		'model' => $r_disk['model'],
+		'devicespecialfile' => $helpinghand,
 		'partition' => ((isset($r_disk['zfsgpt']) && (!empty($r_disk['zfsgpt'])))? $r_disk['zfsgpt'] : gtext('Entire Device')),
-		'controller' => $r_disk['controller'].$r_disk['controller_id'].' ('.$r_disk['controller_desc'].')',
+		'controller' => $r_disk['controller'] . $r_disk['controller_id'] . ' (' . $r_disk['controller_desc'].')',
 		'size' => $r_disk['size'],
 		'serial' => $r_disk['serial'],
-		'desc' => htmlspecialchars($r_disk['desc'])
+		'desc' => $r_disk['desc']
 	];
-}
+endforeach;
 
-if (PAGE_MODE_POST === $mode_page) { // at this point we know it's a POST but (except Cancel) we don't know which one
+$o_geom = new co_geom_info();
+$a_provider = $o_geom->get_provider();
+
+if(PAGE_MODE_POST === $mode_page): // at this point we know it's a POST but (except Cancel) we don't know which one
 	unset($input_errors);
-	if (isset($_POST['Submit']) && $_POST['Submit']) { // Submit is coming from Save button which is only shown when an existing vdevice is modified (RECORD_MODIFY)
+	if(isset($_POST['submit']) && $_POST['submit']): // Submit is coming from Save button which is only shown when an existing vdevice is modified (RECORD_MODIFY)
 		$sphere_record['name'] = $sphere_array[$index]['name'];
 		$sphere_record['type'] = $sphere_array[$index]['type'];
 		$sphere_record['device'] = $sphere_array[$index]['device'];
 		$sphere_record['aft4k'] = isset($sphere_array[$index]['aft4k']);
 		$sphere_record['desc'] = $_POST['desc'];
-	}
-	if (isset($_POST['Action']) && $_POST['Action']) { // RECORD_NEW or RECORD_NEW_MODIFY
-		if (!isset($_POST[$checkbox_member_name])) { $_POST[$checkbox_member_name] = []; }
+	elseif(isset($_POST['action']) && $_POST['action']): // RECORD_NEW or RECORD_NEW_MODIFY
 		$sphere_record['name'] = $_POST['name'];
-		$sphere_record['type'] = $_POST['Action'];
-		$sphere_record['device'] = $_POST[$checkbox_member_name];
+		$sphere_record['type'] = $_POST['action'];
+		$sphere_record['device'] = $_POST[$checkbox_member_name] ?? [];
 		$sphere_record['aft4k'] = isset($_POST['aft4k']);
 		$sphere_record['desc'] = $_POST['desc'];
-	}
+	endif;
 
 	// Input validation
-	$reqdfields = ['name', 'type'];
-	$reqdfieldsn = [gtext('Name'), gtext('Type')];
-	$reqdfieldst = ['string', 'string'];
+	$reqdfields = ['name','type'];
+	$reqdfieldsn = [gtext('Name'),gtext('Type')];
+	$reqdfieldst = ['string','string'];
 
-	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
+	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
 	// Check for duplicate name
-	if ($prerequisites_ok && empty($input_errors)) {
-		switch ($mode_record) {
+	if($prerequisites_ok && empty($input_errors)):
+		switch ($mode_record):
 			case RECORD_NEW: // Error if name is found in the list of vdevice names
-				if (false !== array_search_ex($sphere_record['name'], $sphere_array, 'name')) { 
+				if(false !== array_search_ex($sphere_record['name'],$sphere_array,'name')):
 					$input_errors[] = gtext('This virtual device name already exists.');
-				}
+				endif;
 				break;
 			case RECORD_NEW_MODIFY: // Error if modified name is found in the list of vdevice names
-				if ($sphere_record['name'] !== $sphere_array[$index]['name']) {
-					if (false !== array_search_ex($sphere_record['name'], $sphere_array, 'name')) {
+				if($sphere_record['name'] !== $sphere_array[$index]['name']):
+					if(false !== array_search_ex($sphere_record['name'],$sphere_array,'name')):
 						$input_errors[] = gtext('This virtual device name already exists.');
-					}
-				}
+					endif;
+				endif;
 				break;
 			case RECORD_MODIFY: // Error if name is changed, this error should never occur, just to cover all options
-				if ($sphere_record['name'] !== $sphere_array[$index]['name']) {
+				if($sphere_record['name'] !== $sphere_array[$index]['name']):
 					$input_errors[] = gtext('The name of this virtual device cannot be changed.');
-				}
+				endif;
 				break;
-		}
-	}
-	if ($prerequisites_ok && empty($input_errors)) {
-		if (isset($_POST['Action'])) { // RECORD_NEW or RECORD_NEW_MODIFY
-			switch ($_POST['Action']) {
+		endswitch;
+	endif;
+	if($prerequisites_ok && empty($input_errors)):
+		if(isset($_POST['action'])): // RECORD_NEW or RECORD_NEW_MODIFY
+			switch($_POST['action']):
 				case 'log-mirror':
 				case 'mirror':
-					if (count($sphere_record['device']) <  2) {
+					if(count($sphere_record['device']) <  2):
 						$input_errors[] = gtext('There must be at least 2 disks in a mirror.');
-					}
+					endif;
 					break;
 				case 'raidz':
 				case 'raidz1':
-					if (count($sphere_record['device']) <  2) {
+					if(count($sphere_record['device']) <  2):
 						$input_errors[] = gtext('There must be at least 2 disks in a raidz.');
-					}
+					endif;
 					break;
 				case 'raidz2':
-					if (count($sphere_record['device']) <  3) {
+					if(count($sphere_record['device']) <  3):
 						$input_errors[] = gtext('There must be at least 3 disks in a raidz2.');
-					}
+					endif;
 					break;
 				case 'raidz3':
-						if (count($sphere_record['device']) <  4) {
+					if(count($sphere_record['device']) <  4):
 							$input_errors[] = gtext('There must be at least 4 disks in a raidz3.');
-					}
+					endif;
 					break;
 				default:
-					if (count($sphere_record['device']) <  1) {
+					if(count($sphere_record['device']) <  1):
 						$input_errors[] = gtext('There must be at least 1 disks selected.');
-					}
+					endif;
 					break;
-			}
-		}
-	}
-	if ($prerequisites_ok && empty($input_errors)) {
-		if ($isrecordnew) {
+			endswitch;
+		endif;
+	endif;
+	if($prerequisites_ok && empty($input_errors)):
+		if($isrecordnew):
 			$sphere_array[] = $sphere_record;
-			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
-		} else {
+			updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_NEW,$sphere_record['uuid']);
+		else:
 			$sphere_array[$index] = $sphere_record;
-			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
-			}
-		}
+			if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+				updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_MODIFIED,$sphere_record['uuid']);
+			endif;
+		endif;
 		write_config();
 		header($sphere_header_parent);
 		exit;
-	}
-} else { // EDIT / ADD
-	switch ($mode_record) {
+	endif;
+else: // EDIT / ADD
+	switch ($mode_record):
 		case RECORD_NEW:
 			$sphere_record['name'] = '';
 			$sphere_record['type'] = 'stripe';
@@ -293,12 +302,11 @@ if (PAGE_MODE_POST === $mode_page) { // at this point we know it's a POST but (e
 			$sphere_record['aft4k'] = isset($sphere_array[$index]['aft4k']);
 			$sphere_record['desc'] = $sphere_array[$index]['desc'];
 			break;
-	}
-}
-
+	endswitch;
+endif;
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Virtual Device'),(!$isrecordnew) ? gtext('Edit') : gtext('Add')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -389,66 +397,84 @@ function toggleselection(ego, triggerbyname) {
 		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
 	</ul></td></tr>
 </table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
-	if (!empty($errormsg)) print_error_box($errormsg);
-	if (!empty($input_errors)) print_input_errors($input_errors);
-	if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));
-	?>
-	<?php if ($isrecordnewornewmodify):?>
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if ($isrecordnewornewmodify):
+?>
 		<div id="submit" style="margin-bottom:10px">
-			<button name="Action" id="button_stripe" type="submit" class="formbtn" value="stripe"><?=gtext('STRIPE');?></button>
-			<button name="Action" id="button_mirror" type="submit" class="formbtn" value="mirror"><?=gtext('MIRROR');?></button>
-			<button name="Action" id="button_raidz1" type="submit" class="formbtn" value="raidz1"><?=gtext('RAID-Z1');?></button>
-			<button name="Action" id="button_raidz2" type="submit" class="formbtn" value="raidz2"><?=gtext('RAID-Z2');?></button>
-			<button name="Action" id="button_raidz3" type="submit" class="formbtn" value="raidz3"><?=gtext('RAID-Z3');?></button>
-			<button name="Action" id="button_spare"  type="submit" class="formbtn" value="spare"><?=gtext('HOT SPARE');?></button>
-			<button name="Action" id="button_cache"  type="submit" class="formbtn" value="cache"><?=gtext('CACHE');?></button>
-			<button name="Action" id="button_log"    type="submit" class="formbtn" value="log"><?=gtext('LOG');?></button>
-			<button name="Action" id="button_logmir" type="submit" class="formbtn" value="log-mirror"><?=gtext('LOG (Mirror)');?></button>
+			<button name="action" id="button_stripe" type="submit" class="formbtn" value="stripe"><?=gtext('STRIPE');?></button>
+			<button name="action" id="button_mirror" type="submit" class="formbtn" value="mirror"><?=gtext('MIRROR');?></button>
+			<button name="action" id="button_raidz1" type="submit" class="formbtn" value="raidz1"><?=gtext('RAID-Z1');?></button>
+			<button name="action" id="button_raidz2" type="submit" class="formbtn" value="raidz2"><?=gtext('RAID-Z2');?></button>
+			<button name="action" id="button_raidz3" type="submit" class="formbtn" value="raidz3"><?=gtext('RAID-Z3');?></button>
+			<button name="action" id="button_spare"  type="submit" class="formbtn" value="spare"><?=gtext('HOT SPARE');?></button>
+			<button name="action" id="button_cache"  type="submit" class="formbtn" value="cache"><?=gtext('CACHE');?></button>
+			<button name="action" id="button_log"    type="submit" class="formbtn" value="log"><?=gtext('LOG');?></button>
+			<button name="action" id="button_logmir" type="submit" class="formbtn" value="log-mirror"><?=gtext('LOG (Mirror)');?></button>
 		</div>
-	<?php endif;?>
+<?php
+	endif;
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Settings'));?>
+<?php
+			html_titleline2(gtext('Settings'));
+?>
 		</thead>
 		<tbody>
-			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
-				if ($isrecordmodify) {
-					html_inputbox2('type', gtext('Type'), $sphere_record['type'], '', true, 20, true);
-				} 
-				html_checkbox2('aft4k', gtext('4KB wrapper'), !empty($sphere_record['aft4k']) ? true : false, gtext('Create 4KB wrapper (nop device).'), '', false, $isrecordmodify);
-				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);
-				html_separator2();
-			?>
+<?php
+			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,20,$isrecordmodify);
+			if($isrecordmodify):
+				html_inputbox2('type',gtext('Type'),$sphere_record['type'],'',true,20,$isrecordmodify);
+			endif;
+			html_checkbox2('aft4k',gtext('4KB wrapper'),!empty($sphere_record['aft4k']) ? true : false,gtext('Create 4KB wrapper (nop device).'),'',false,$isrecordmodify);
+			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40);
+			html_separator2();
+?>
 		</tbody>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
-			<col style="width:10%">
+			<col style="width:8%">
 			<col style="width:10%">
 			<col style="width:15%">
 			<col style="width:10%">
 			<col style="width:10%">
 			<col style="width:20%">
-			<col style="width:15%">
-			<col style="width:5%">
+			<col style="width:14%">
+			<col style="width:8%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Device List'), 9);?>
+<?php
+			html_titleline2(gtext('Device List'),9);
+?>
 			<tr>
 				<td class="lhelc">
-					<?php if ($isrecordnewornewmodify):?>
+<?php
+					if ($isrecordnewornewmodify):
+?>
 						<input type="checkbox" id="togglebox" name="togglebox" title="<?=gtext('Invert Selection');?>"/>
-					<?php else:?>
+<?php
+					else:
+?>
 						<input type="checkbox" id="togglebox" name="togglebox" disabled="disabled"/>
-					<?php endif;?>
+<?php
+					endif;
+?>
 				</td>
 				<td class="lhell"><?=gtext('Device');?></td>
 				<td class="lhell"><?=gtext('Partition');?></td>
@@ -457,24 +483,30 @@ function toggleselection(ego, triggerbyname) {
 				<td class="lhell"><?=gtext('Size');?></td>
 				<td class="lhell"><?=gtext('Controller');?></td>
 				<td class="lhell"><?=gtext('Name');?></td>
-				<td class="lhebl">&nbsp;</td>
+				<td class="lhebl"><?=gtext('Toolbox');?></td>
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach ($a_device as $r_device):?>
-				<?php
-					$isnotmemberofavdev = (false === array_search_ex($r_device['devicespecialfile'], $sphere_array, 'device'));
-					$ismemberofthisvdev = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'], $sphere_record['device']));
-				?>
-				<?php if ($isrecordnewornewmodify):?>
-					<?php if ($isnotmemberofavdev || $ismemberofthisvdev):?>
+<?php
+			if($isrecordnewornewmodify):
+				foreach($a_device as $r_device):
+					$isnotmemberofavdev = (false === array_search_ex($r_device['devicespecialfile'],$sphere_array,'device'));
+					$ismemberofthisvdev = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'],$sphere_record['device']));
+					if($isnotmemberofavdev || $ismemberofthisvdev):
+?>
 						<tr>
 							<td class="lcelc">
-								<?php if ($ismemberofthisvdev):?>
+<?php
+								if($ismemberofthisvdev):
+?>
 									<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked"/>
-								<?php else:?>
+<?php
+								else:
+?>
 									<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>"/>
-								<?php endif;?>	
+<?php
+								endif;
+?>
 							</td>
 							<td class="lcell"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
 							<td class="lcell"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
@@ -483,57 +515,105 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcell"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
 							<td class="lcell"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
 							<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-							<td class="lcebcd">
-								<?php if ($ismemberofthisvdev):?>
+							<td class="lcebld">
+<?php
+								if($ismemberofthisvdev):
+?>
 									<img src="<?=$img_path['unl'];?>" title="<?=$gt_record_opn;?>" alt="<?=$gt_record_opn;?>"/>
-								<?php else:?>
-									&nbsp;
-								<?php endif;?>
+<?php
+								endif;
+?>
 							</td>
 						</tr>
-					<?php endif;?>
-				<?php endif;?>
-				<?php if ($isrecordmodify):?>
-					<?php if ($ismemberofthisvdev):?>
-						<tr>
-							<td class="lcelcd">
-								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked" disabled="disabled"/>
-							</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-							<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-							<td class="lcebcd">
-								<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-							</td>
-						</tr>
-					<?php endif;?>
-				<?php endif;?>
-			<?php endforeach;?>
+<?php
+					endif;
+				endforeach;
+			elseif($isrecordmodify):
+				$use_si = is_sidisksizevalues();
+				foreach($sphere_record['device'] as $config_device):
+					$r_device = [];
+					//	strip /dev/ from $config_device
+					unset($matches);
+					if(preg_match('#^/dev/(.+)$#',$config_device,$matches)):
+						$r_device['name'] = $matches[1];
+					else:
+						$r_device['name'] = $config_device;
+					endif;
+					//	search disks
+					$index = array_search_ex($r_device['name'],$a_device,'name');
+					if(false !== $index):
+						$r_device = $a_device[$index];
+					else:
+						//	search geom provider
+						$index = array_search_ex($r_device['name'],$a_provider,'name');
+						if(false !== $index):
+							$r_device['devicespecialfile'] = $config_device;
+							$r_device['partition'] = '';
+							$r_device['model'] = '';
+							$r_device['serial'] = '';
+							$r_device['size'] = format_bytes($a_provider[$index]['mediasize'],2,false,$use_si);
+							$r_device['controller'] = '';
+							$r_device['desc'] = '';
+						else:
+							$r_device['devicespecialfile'] = $config_device;
+							$r_device['partition'] = '';
+							$r_device['model'] = '';
+							$r_device['serial'] = '';
+							$r_device['size'] = '';
+							$r_device['controller'] = '';
+							$r_device['desc'] = '';
+						endif;
+					endif;
+?>
+					<tr>
+						<td class="lcelcd">
+							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" checked="checked" disabled="disabled"/>
+						</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+						<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+						<td class="lcebld">
+							<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
+						</td>
+					</tr>
+<?php
+				endforeach;
+			endif;
+?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php if ($isrecordmodify):?>
-			<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>"/>
-		<?php endif;?>
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
+<?php
+		if($isrecordmodify):
+?>
+			<input name="submit" type="submit" class="formbtn" value="<?=gtext('Save');?>"/>
+<?php
+		endif;
+?>
+		<input name="cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
 	<div id="remarks">
-		<?php
-		$helpinghand = gtext('Make sure to select the optimal number of devices')
-			. ':'
-			. '<div id="enumeration">' . '<ul>'
-			. '<li>' . gtext('RAID-Z1 should have 3, 5, or 9 disks in each vdev.') . '</li>'
-			. '<li>' . gtext('RAID-Z2 should have 4, 6, or 10 disks in each vdev.') . '</li>'
-			. '<li>' . gtext('RAID-Z3 should have 5, 7, or 11 disks in each vdev.') . '</li>'
-			. '</ul></div>';
-		html_remark2('note', gtext('Note'), $helpinghand);
-		?>
+<?php
+		if($isrecordnewornewmodify):
+			$helpinghand = gtext('Make sure to select the optimal number of devices')
+				. ':'
+				. '<div id="enumeration">' . '<ul>'
+				. '<li>' . gtext('RAID-Z1 should have 3, 5, or 9 disks in each vdev.') . '</li>'
+				. '<li>' . gtext('RAID-Z2 should have 4, 6, or 10 disks in each vdev.') . '</li>'
+				. '<li>' . gtext('RAID-Z3 should have 5, 7, or 11 disks in each vdev.') . '</li>'
+				. '</ul></div>';
+			html_remark2('note',gtext('Note'),$helpinghand);
+		endif;
+?>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
