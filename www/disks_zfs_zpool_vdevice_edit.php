@@ -123,46 +123,6 @@ $isrecordnew = (RECORD_NEW === $mode_record);
 $isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
 $isrecordmodify = (RECORD_MODIFY === $mode_record);
 $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
-
-function strip_dev($device) {
-	// returns the device name that follows after '/dev/' , i.e. ada0, ada0p1 or otherwise returns an empty array 
-	if(preg_match('#^/dev/(.+)$#',$device,$m)):
-		$device = $m[1];
-	endif;
-	return $device;
-}
-function strip_partition($device) {
-	// returns the device name without partition information, .e. /dev/ada0p1 -> /dev/ada0 or an empty array 
-	if(preg_match('/^(.*)p\d+$/',$device,$m)):
-		$device = $m[1];
-	endif;
-	return $device;
-}
-function strip_exists($device,&$sphere_array) {
-	if(false !== array_search_ex($diskv['devicespecialfile'],$sphere_array,'device')):
-		return true;
-	endif;
-	foreach($sphere_array as $vdevs):
-		foreach($vdevs['device'] as $dev):
-			// label
-			$tmp = disks_label_to_device($dev);
-			if(strcmp($tmp,$device) == 0):
-				return true;
-			endif;
-			// label+partition
-			$tmp = strip_partition($tmp);
-			if(strcmp($tmp,$device) == 0):
-				return true;
-			endif;
-			// partition
-			$tmp = strip_partition($dev);
-			if(strcmp($tmp,$device) == 0):
-				return true;
-			endif;
-		endforeach;
-	endforeach;
-	return false;
-}
 $a_disk = get_conf_disks_filtered_ex('fstype','zfs');
 if($isrecordnewornewmodify && (empty($a_disk)) && (empty($a_encrypteddisk))):
 	$errormsg = gtext('No disks available.')
