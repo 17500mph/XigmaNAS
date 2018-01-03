@@ -1,15 +1,14 @@
 PORTNAME=		nano
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.2
 PORTREVISION?=  0
-CATEGORIES=		editors
-COMMENT=		Nano's ANOther editor, an enhanced free Pico clone
-MAINTAINER=		zoon1@nas4free.org
+CATEGORIES=	editors
+COMMENT=	Nano's ANOther editor, an enhanced free Pico clone
+MAINTAINER=	zoon1@nas4free.org
 
 MASTER_SITES=	http://www.nano-editor.org/dist/v${PORTVERSION:R}/ GNU
 
 LICENSE=	GPLv3
 CONFLICTS=	nano-devel-2*
-
 USES=		ncurses
 GNU_CONFIGURE=	yes
 
