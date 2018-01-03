@@ -1,6 +1,6 @@
 PORTNAME=	e2fsprogs
-PORTVERSION=	1.43.7
-PORTREVISION?=	1
+PORTVERSION=	1.43.8
+PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
@@ -20,8 +20,12 @@ BROKEN_aarch64=		fails to link: missing sbrk
 USES=		cpe gmake makeinfo pkgconfig tar:xz
 CPE_VENDOR=	e2fsprogs_project
 USE_CSTD=	gnu99
-USE_LDCONFIG=	yes
+# this seems a bit redundant to the --rpath below, but
+# the latter should be more robust in case someone needs
+# to deal with the file systems from a system not yet fully booted.
+USE_LDCONFIG=	${LOCALBASE}/lib/e2fsprogs
 GNU_CONFIGURE=	yes
+LLD_UNSAFE=	yes
 CONFIGURE_ARGS?=--disable-fsck \
 		--disable-e2initrd-helper \
 		--disable-libuuid \
