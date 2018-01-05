@@ -216,7 +216,7 @@ function is_subnet($subnet) {
 	if(is_string($subnet)):
 		list($hp,$np) = explode('/',$subnet);
 		// If it's an IPv4 address, but with a bitcount outise 1-32 range, there is a problem
-		if(is_ipv4addr($hp) && is_numeric($np) && ($np > 0) && (np <= 32)):
+		if(is_ipv4addr($hp) && is_numeric($np) && ($np > 0) && ($np <= 32)):
 			return true;
 		endif;
 		// If it's an IPv6 address, but with a bitcount outise 1-64 range, there is a problem
