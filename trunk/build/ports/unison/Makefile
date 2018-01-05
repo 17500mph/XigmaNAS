@@ -1,6 +1,6 @@
 PORTNAME=		unison
 PORTVERSION=	2.48.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net
 COMMENT=	A user-level file synchronization tool
 MAINTAINER=	zoon1@nas4free.org
