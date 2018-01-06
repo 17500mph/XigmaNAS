@@ -274,7 +274,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['PHP',[
 			'A server-side scripting language (<a href="http://www.php.net" target="_blank">http://www.php.net</a>).',
-			'Copyright © 1999-2017 The PHP Group. All Rights Reserved.'
+			'Copyright © 1999-2018 The PHP Group. All Rights Reserved.'
 		]],
 		['phpVirtualBox',[
 			'phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox</a>).',
