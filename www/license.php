@@ -226,7 +226,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['LCDproc',[
 			'A client/server suite for LCD devices (<a href="http://lcdproc.org" target="_blank">http://lcdproc.org</a>).',
-			'Copyright © 1998-2006 William Ferrell, Selene Scriven and many other contributors. All Rights Reserved.'
+			'Copyright © 1998-2017 William Ferrell, Selene Scriven and many other contributors. All Rights Reserved.'
 		]],
 		['Lighttpd',[
 			'A lighty fast webserver (<a href="http://www.lighttpd.net" target="_blank">http://www.lighttpd.net</a>).',
