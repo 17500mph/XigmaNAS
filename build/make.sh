@@ -1819,6 +1819,8 @@ copy_files() {
 			echo ">>> Copy needed sources to distfiles directory usr/ports/distfiles.";
 			echo "-------------------------------------------------------------------";
 			echo "===> Start copy sources"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/amd64-microcode_3.20171205.1.tar.xz /usr/ports/distfiles
+			echo "===> Copy amd64-microcode_3.20171205.1.tar.xz done!"
 			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/CLI_freebsd-from_the_10.2.2.1_9.5.5.1_codesets.zip /usr/ports/distfiles
 			echo "===> Copy CLI_freebsd-from_the_10.2.2.1_9.5.5.1_codesets.zip done!"
 			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/istgt-20150713.tar.gz /usr/ports/distfiles

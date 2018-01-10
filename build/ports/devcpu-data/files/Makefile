@@ -1,7 +1,8 @@
-AMD_UCODE_DIR=	amd-ucode
-AMD_UCODE=	$(AMD_UCODE_DIR)/microcode_amd.bin \
+AMD_UCODE_DIR=        amd64-microcode-3.20171205.1
+AMD_UCODE=        $(AMD_UCODE_DIR)/microcode_amd.bin \
 		$(AMD_UCODE_DIR)/microcode_amd_fam15h.bin \
-		$(AMD_UCODE_DIR)/microcode_amd_fam16h.bin
+		$(AMD_UCODE_DIR)/microcode_amd_fam16h.bin \
+		$(AMD_UCODE_DIR)/microcode_amd_fam17h.bin
 INTEL_UCODE=	microcode.dat
 OUTPUT_DIR=	mcodes
 all:	ucode
