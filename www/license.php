@@ -234,7 +234,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['MiniDLNA',[
 			'Media server software, with the aim of being fully compliant with DLNA/UPnP-AV clients. (<a href="https://sourceforge.net/projects/minidlna/" target="_blank">https://sourceforge.net/projects/minidlna</a>).',
-			'Copyright © 2008-2015  Justin Maggard. All Rights Reserved.'
+			'Copyright © 2008-2017  Justin Maggard. All Rights Reserved.'
 		]],
 		['m0n0wall',[
 			'm0n0wall (<a href="http://m0n0.ch/wall/index.php" target="_blank">http://m0n0.ch/wall/index.php</a>).',
