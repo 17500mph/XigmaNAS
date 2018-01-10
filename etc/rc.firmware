@@ -538,7 +538,7 @@ full_upgrade() {
 	fi
 
 	# Create and mount the new upgrade boot environment.
-	$msg="Creating and mounting new boot environment..."
+	msg="Creating and mounting new boot environment..."
 	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	DATE=`date +%Y-%m-%d-%H%M%S`
 	/usr/local/sbin/beadm create ${BENAME}-${DATE}
