@@ -34,13 +34,25 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 		-v "concat('user ',//system/email/username)" -n \
 		-v "concat('password ',//system/email/password)" -n \
 	-b \
-	-i "//system/email/security[. != 'none']" \
+	--if "//system/email/security[. != 'none']" \
 		-o "tls on" -n \
-		-i "count(//system/email/starttls) > 0" -o "tls_starttls on" -n -b \
-		-i "count(//system/email/starttls) = 0" -o "tls_starttls off" -n -b \
+		--if "count(//system/email/starttls) > 0" \
+			-o "tls_starttls on" -n \
+		--else \
+			-o "tls_starttls off" -n \
+		--break \
 		-i "string-length(//system/email/tls_certcheck) > 0" -v "concat('',//system/email/tls_certcheck)" -n -b \
 		-i "string-length(//system/email/tls_trust_file) > 0" -v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n -b \
-	-b \
+	--else \
+		-o "tls off" -n \
+		--if "count(//system/email/starttls) > 0" \
+			-o "tls_starttls on" -n \
+			-i "string-length(//system/email/tls_certcheck) > 0" -v "concat('',//system/email/tls_certcheck)" -n -b \
+			-i "string-length(//system/email/tls_trust_file) > 0" -v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n -b \
+		--else \
+			-o "tls_starttls off" -n \
+		--break \
+	--break \
 	-o "syslog LOG_MAIL" -n \
 	${configxml_file} | /usr/local/bin/xml unesc > ${msmtp_config}
 
