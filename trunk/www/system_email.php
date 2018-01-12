@@ -132,9 +132,10 @@ $l_tls_certcheck = [
 ];
 $l_authmethod = [
 	'plain' => gtext('Plain-text'),
-	'cram-md5' => 'Cram-MD5',
+	'scram-sha-1' => 'SCRAM-SHA-1',
+	'cram-md5' => 'CRAM-MD5',
 	'digest-md5' => 'Digest-MD5',
-	'gssapi' => 'GSSAPI',
+//	'gssapi' => 'GSSAPI',
 	'external' => 'External',
 	'login' => gtext('Login'),
 	'ntlm' => 'NTLM',
