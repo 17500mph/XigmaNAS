@@ -122,9 +122,8 @@ if($_POST):
 	endif;
 endif;
 $l_security = [
-	'none' => gtext('None'),
-	'ssl' => 'SSL',
-	'tls' => 'TLS'
+	'none' => gtext('Off'),
+	'tls' => gtext('On')
 ];
 $l_tls_certcheck = [
 	'tls_certcheck off' => gtext('Off'),
@@ -253,9 +252,9 @@ $document->render();
 		</thead>
 		<tbody>
 <?php
-			html_combobox2('security', gtext('Security'), $pconfig['security'], $l_security, '', true);
-			html_checkbox2('starttls', gtext('TLS Mode'), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext('This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS.'), false);
-			html_combobox2('tls_certcheck', gtext('TLS Server Certificate Check'), $pconfig['tls_certcheck'], $l_tls_certcheck, gtext('Enable or disable checks of the server certificate.'), '', false);
+			html_radiobox2('security', gtext('Use TLS'),$pconfig['security'],$l_security,gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),false);
+			html_checkbox2('starttls', gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Enable STARTTLS.'),'',false);
+			html_radiobox2('tls_certcheck',gtext('TLS Server Certificate Check'),$pconfig['tls_certcheck'],$l_tls_certcheck,gtext('Enable or disable checks of the server certificate.'),false);
 			html_inputbox2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('This command activates strict server certificate verification. The filename must be the absolute path name of a file in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),false,60);
 ?>
 		</tbody>
