@@ -36,10 +36,7 @@ require_once 'guiconfig.inc';
 require_once 'email.inc';
 
 $sphere_scriptname = basename(__FILE__);
-
 array_make_branch($config,'system','email');
-
-
 $pconfig['from'] = $config['system']['email']['from'];
 $pconfig['server'] = $config['system']['email']['server'];
 $pconfig['port'] = $config['system']['email']['port'];
@@ -101,19 +98,19 @@ if($_POST):
 		// Send test email.
 		if(isset($_POST['submit'])):
 			if($_POST['submit'] == 'sendtestemail'):
-				$subject = sprintf(gtext('Test email from host: %s'), system_get_hostname());
+				$subject = sprintf(gtext('Test email from host: %s'),system_get_hostname());
 				$message = gtext('This email has been sent to validate your email configuration.');
-				$retval = @email_send($config['system']['email']['sendto'], $subject, $message, $error);
+				$retval = @email_send($config['system']['email']['sendto'],$subject,$message,$error);
 				if(0 == $retval):
 					$savemsg = gtext('Test email successfully sent.');
-					write_log(sprintf('Test email successfully sent to: %s.', $config['system']['email']['sendto']));
+					write_log(sprintf('Test email successfully sent to: %s.',$config['system']['email']['sendto']));
 				else:
 					$failmsg = gtext('Failed to send test email.')
 						. ' '
 						. '<a href="' . 'diag_log.php' . '">'
 						. gtext('Please check the log files')
 						. '</a>.';
-					write_log(sprintf('Failed to send test email to: %s.', $config['system']['email']['sendto']));
+					write_log(sprintf('Failed to send test email to: %s.',$config['system']['email']['sendto']));
 				endif;
 			elseif($_POST['submit'] == 'save'):
 				$savemsg = get_std_save_message($retval);
@@ -165,9 +162,6 @@ function auth_change() {
 		break;
 	}
 }
-function enable_change(enable_change) {
-	document.iform.starttls.disabled = endis;
-}
 //]]>
 </script>
 <?php
@@ -212,10 +206,10 @@ $document->render();
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('from', gtext('From Email Address'), $pconfig['from'], gtext('From email address for sending system messages.'), true, 62);
-			html_inputbox2('sendto', gtext('To Email Address'), $pconfig['sendto'], gtext('Destination email address. Separate email addresses by semi-colon.'), true, 62);
-			html_inputbox2('server', gtext('SMTP Server'), $pconfig['server'], gtext('Outgoing SMTP mail server address.'), true, 62);
-			html_inputbox2('port', gtext('Port'), $pconfig['port'], gtext('The default SMTP mail server port, e.g. 25 or 587.'), true, 5);
+			html_inputbox2('from',gtext('From Email Address'),$pconfig['from'],gtext('From email address for sending system messages.'),true,62);
+			html_inputbox2('sendto',gtext('To Email Address'),$pconfig['sendto'],gtext('Destination email address. Separate email addresses by semi-colon.'),true,62);
+			html_inputbox2('server',gtext('SMTP Server'),$pconfig['server'],gtext('Outgoing SMTP mail server address.'),true,62);
+			html_inputbox2('port',gtext('Port'),$pconfig['port'],gtext('The default SMTP mail server port, e.g. 25 or 587.'),true,5);
 ?>
 		</tbody>
 	</table>
@@ -232,10 +226,10 @@ $document->render();
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('auth', gtext('Authentication'), !empty($pconfig['auth']) ? true : false, gtext("Enable SMTP authentication."), '', false, false, 'auth_change()');
-			html_inputbox2('username', gtext('Username'), $pconfig['username'], '', true, 40);
-			html_passwordconfbox2('password', 'passwordconf', gtext('Password'), $pconfig['password'], $pconfig['passwordconf'], '', true);
-			html_combobox2('authmethod', gtext('Authentication Method'), $pconfig['authmethod'], $l_authmethod, '', true);
+			html_checkbox2('auth',gtext('Authentication'),!empty($pconfig['auth']) ? true : false,gtext('Enable SMTP authentication.'),'',false,false,'auth_change()');
+			html_inputbox2('username',gtext('Username'),$pconfig['username'],'',true,40);
+			html_passwordconfbox2('password','passwordconf',gtext('Password'),$pconfig['password'],$pconfig['passwordconf'],'',true);
+			html_combobox2('authmethod',gtext('Authentication Method'),$pconfig['authmethod'],$l_authmethod,'',true);
 ?>
 		</tbody>
 	</table>
@@ -252,8 +246,8 @@ $document->render();
 		</thead>
 		<tbody>
 <?php
-			html_radiobox2('security', gtext('Use TLS'),$pconfig['security'],$l_security,gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),false);
-			html_checkbox2('starttls', gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Enable STARTTLS.'),'',false);
+			html_radiobox2('security',gtext('Use TLS'),$pconfig['security'],$l_security,gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),false);
+			html_checkbox2('starttls',gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Enable STARTTLS.'),'',false);
 			html_radiobox2('tls_certcheck',gtext('TLS Server Certificate Check'),$pconfig['tls_certcheck'],$l_tls_certcheck,gtext('Enable or disable checks of the server certificate.'),false);
 			html_inputbox2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('This command activates strict server certificate verification. The filename must be the absolute path name of a file in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),false,60);
 ?>
