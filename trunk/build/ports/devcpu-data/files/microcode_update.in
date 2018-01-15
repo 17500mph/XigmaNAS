@@ -70,7 +70,7 @@ microcode_update_start()
 			echo "Re-evalutation of CPU flags Failed."
 			exit 1
 	           fi
-	     done
+	     fi
 	fi
 	echo "Done."
 }
