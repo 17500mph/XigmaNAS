@@ -1,6 +1,6 @@
 PORTNAME=		php72
 PORTVERSION=	7.2.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=		lang
 COMMENT=		PHP7 Scripting Language
 MAINTAINER=		zoon1@nas4free.org
@@ -25,7 +25,7 @@ LIB_DEPENDS+=		libgmp.so:math/gmp
 LIB_DEPENDS+=		libc-client4.so.9:mail/cclient
 LIB_DEPENDS+=		libicui18n.so:devel/icu
 
-USE_AUTOTOOLS=	 autoconf
+USES+=          autoreconf:build
 AUTOTOOLSFILES=	 scripts/phpize.in
 USE_GNOME=	 libxml2
 USE_OPENLDAP=	 yes
@@ -107,12 +107,8 @@ post-patch:
 	@${TOUCH} ${WRKSRC}/ext/php_config.h
 	@${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
 
-# Work around issues with newer (>=2.64) autoconf
 pre-configure:
-	@${REINPLACE_CMD} -E 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
-		${WRKSRC}/configure.ac `${FIND} ${WRKSRC} -name '*.m4'`
-	@${RM} ${WRKSRC}/configure
-	@${CAT} ${WRKSRC}/acinclude.m4 ${WRKSRC}/build/libtool.m4 > ${WRKSRC}/aclocal.m4
+	@(cd ${WRKSRC} && ${SETENV} MAKE=${MAKE_CMD} ./buildconf --force)
 
 post-build:
 	@${ECHO_CMD} "PHP_VER=72" > ${WRKDIR}/php.conf
