@@ -395,7 +395,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			<tr>
 				<td class="lcenl" colspan="5"></td>
 				<td class="lceadd">
-					<a href="disks_zfs_snapshot_add.php"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add?>" border="0" alt="<?=$gt_record_add;?>" class="spin oneemhigh"/></a>
+					<a href="disks_zfs_snapshot_add.php"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" class="spin oneemhigh"/></a>
 				</td>
 			</tr>
 		</tfoot>
