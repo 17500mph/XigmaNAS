@@ -224,6 +224,9 @@ $(window).on("load", function() {
 	$("input[name='<?=$checkbox_member_name;?>[]']").click(function() {
 		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
 	});
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 function disableactionbuttons(ab_disable) {
 	$("#delete_selected_rows").prop("disabled", ab_disable);
@@ -264,27 +267,19 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Snapshot');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gtext('Clone');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext('Auto Snapshot');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext('Information');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Snapshots');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Snapshot');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gtext('Clone');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext('Auto Snapshot');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext('Information');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
@@ -310,7 +305,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		</thead>
 		<tbody>
 <?php
-				html_combobox2('filter_time', gtext('Age'), $filter_time, $l_filter_time, '');
+			html_combobox2('filter_time', gtext('Age'), $filter_time, $l_filter_time, '');
 ?>
 		</tbody>
 	</table>
@@ -328,8 +323,8 @@ function controlactionbuttons(ego, triggerbyname) {
 		</colgroup>
 		<thead>
 <?php
-				html_separator2();
-				html_titleline2(gtext('Overview'), 6);
+			html_separator2();
+			html_titleline2(gtext('Overview'), 6);
 ?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
@@ -372,7 +367,7 @@ function controlactionbuttons(ego, triggerbyname) {
 <?php
 								if($notdirty && $notprotected):
 ?>
-									<a href="<?=$sphere_scriptname_child;?>?snapshot=<?=urlencode($sphere_record['snapshot']);?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
+									<a href="<?=$sphere_scriptname_child;?>?snapshot=<?=urlencode($sphere_record['snapshot']);?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>"  class="spin oneemhigh"/></a>
 <?php
 								else:
 									if ($notprotected):
@@ -400,7 +395,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			<tr>
 				<td class="lcenl" colspan="5"></td>
 				<td class="lceadd">
-					<a href="disks_zfs_snapshot_add.php"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add?>" border="0" alt="<?=gt_record_add;?>"/></a>
+					<a href="disks_zfs_snapshot_add.php"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add?>" border="0" alt="<?=$gt_record_add;?>" class="spin oneemhigh"/></a>
 				</td>
 			</tr>
 		</tfoot>
