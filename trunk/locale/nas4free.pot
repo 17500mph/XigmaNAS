@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-12-17 23:37+0000\n"
+"POT-Creation-Date: 2018-01-24 19:11+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -2938,7 +2938,13 @@ msgstr ""
 msgid "Enable SMTP authentication."
 msgstr ""
 
-msgid "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."
+msgid "Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS."
+msgstr ""
+
+msgid "Enable STARTTLS"
+msgstr ""
+
+msgid "Enable STARTTLS."
 msgstr ""
 
 msgid "Enable Selected Commands"
@@ -6769,9 +6775,6 @@ msgstr ""
 msgid "Secure Shell"
 msgstr ""
 
-msgid "Security"
-msgstr ""
-
 msgid "Security Warning"
 msgstr ""
 
@@ -7523,9 +7526,6 @@ msgid "TKIP"
 msgstr ""
 
 msgid "TLS"
-msgstr ""
-
-msgid "TLS Mode"
 msgstr ""
 
 msgid "TLS Only"
@@ -8377,9 +8377,6 @@ msgstr ""
 msgid "This is a very powerful tool. Use at your own risk!"
 msgstr ""
 
-msgid "This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."
-msgstr ""
-
 msgid "This is both the name of the server as advertised via Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
 
@@ -9005,6 +9002,9 @@ msgid "Use Encryption"
 msgstr ""
 
 msgid "Use PAM for user authentication."
+msgstr ""
+
+msgid "Use TLS"
 msgstr ""
 
 msgid "Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"
