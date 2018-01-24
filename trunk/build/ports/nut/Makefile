@@ -9,10 +9,9 @@ MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_AUTOTOOLS=  autoconf
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=		yes
-USES=			gmake pkgconfig libtool
+USE_LDCONFIG=	yes
+USES=		autoreconf gmake pkgconfig libtool
 
 NUT_USER=		root
 NUT_GROUP=		wheel
