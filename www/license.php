@@ -222,7 +222,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['jQuery',[
 			'A fast, small, and feature-rich JavaScript library (<a href="http://jquery.com" target="_blank">http://jquery.com</a>).',
-			'Copyright © 2017 jQuery Foundation. All Rights Reserved.'
+			'Copyright © 2018 jQuery Foundation. All Rights Reserved.'
 		]],
 		['LCDproc',[
 			'A client/server suite for LCD devices (<a href="http://lcdproc.org" target="_blank">http://lcdproc.org</a>).',
@@ -343,7 +343,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['VirtualBox',[
 			'Open Source Edition (OSE) & (Guest Additions) (<a href="http://www.virtualbox.org" target="_blank">http://www.virtualbox.org</a>).',
-			'Copyright © 2010-2017, Oracle and/or its affiliates. All Rights Reserved.'
+			'Copyright © 2010-2018, Oracle and/or its affiliates. All Rights Reserved.'
 		]],
 		['VMXNET3',[
 			'A NIC driver for FreeBSD (<a href="http://www.vmware.com" target="_blank">http://www.vmware.com</a>).',
