@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-17 23:37+0000\n"
-"PO-Revision-Date: 2017-12-27 04:43+0000\n"
+"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"PO-Revision-Date: 2018-01-19 17:49+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-01 15:30+0000\n"
-"X-Generator: Launchpad (build 18521)\n"
+"X-Launchpad-Export-Date: 2018-01-26 22:42+0000\n"
+"X-Generator: Launchpad (build 18534)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -3240,10 +3240,15 @@ msgid "Enable SMTP authentication."
 msgstr "SMTP 인증 활성화"
 
 msgid ""
-"Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
-"use SSL."
+"Enable SSL/TLS for secured connections. You also need to configure the TLS "
+"trust file. For some servers you may need to disable STARTTLS."
 msgstr ""
-"STARTTLS 암호화를 사용합니다. 이것은 TLS를 사용해야한다는 것을 의미하지는 않습니다. SSL을 사용할 수 있습니다."
+
+msgid "Enable STARTTLS"
+msgstr ""
+
+msgid "Enable STARTTLS."
+msgstr ""
 
 msgid "Enable Selected Commands"
 msgstr "선택된 명령들 사용 함"
@@ -7323,9 +7328,6 @@ msgstr "비밀"
 msgid "Secure Shell"
 msgstr "보안 셸"
 
-msgid "Security"
-msgstr "보안"
-
 msgid "Security Warning"
 msgstr "보안 경고"
 
@@ -8144,9 +8146,6 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
-
-msgid "TLS Mode"
-msgstr "TLS 모드"
 
 msgid "TLS Only"
 msgstr "TLS 전용"
@@ -9178,11 +9177,6 @@ msgid "This is a very powerful tool. Use at your own risk!"
 msgstr "이 도구는 매우 강력한 도구입니다. 위험을 감수하고 사용하십시오."
 
 msgid ""
-"This is a way to take an existing insecure connection, and upgrade it to a "
-"secure connection using SSL/TLS."
-msgstr ""
-
-msgid ""
 "This is both the name of the server as advertised via "
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
@@ -9229,7 +9223,7 @@ msgid "This option applies to GEOM RAID-1 only."
 msgstr "이 옵션은 GEOM RAID-1에만 적용할 수 있습니다."
 
 msgid "This option causes rsync to copy the local data to the remote server."
-msgstr "이 옵션은 rsync가 로컬 자료를 원격 서버로 박사하게 합니다."
+msgstr "이 옵션은 rsync가 로컬 자료를 원격 서버로 복사하게 합니다."
 
 msgid ""
 "This option causes rsync to update the remote extended attributes to be the "
@@ -9935,6 +9929,9 @@ msgstr "암호화 사용"
 
 msgid "Use PAM for user authentication."
 msgstr "PAM 인증 사용"
+
+msgid "Use TLS"
+msgstr ""
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
