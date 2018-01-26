@@ -1,20 +1,20 @@
 PORTNAME=		transmission
-PORTVERSION=	2.92
-PORTREVISION=	1
-CATEGORIES?=		net-p2p
-COMMENT=		Fast and lightweight CLI BitTorrent client
-MAINTAINER=		zoon1@nas4free.org
+PORTVERSION=	2.93
+PORTREVISION=	0
+CATEGORIES?=	net-p2p
+COMMENT=	Fast and lightweight CLI BitTorrent client
+MAINTAINER=	zoon1@nas4free.org
 
-MASTER_SITES=   	http://download-origin.transmissionbt.com/files/ \
-			http://transmission.cachefly.net/
+MASTER_SITES=   https://github.com/transmission/transmission-releases/raw/master/ \
+		http://transmission.cachefly.net/
 
-LIB_DEPENDS=		libb64.so:converters/libb64 \
-					libcurl.so:ftp/curl \
-					libdht.so:devel/jech-dht \
-					libminiupnpc.so:net/miniupnpc \
-					libnatpmp.so:net/libnatpmp \
-					libutp.so:net/libutp \
-					libevent.so:devel/libevent
+LIB_DEPENDS=	libb64.so:converters/libb64 \
+				libcurl.so:ftp/curl \
+				libdht.so:devel/jech-dht \
+				libminiupnpc.so:net/miniupnpc \
+				libnatpmp.so:net/libnatpmp \
+				libutp.so:net/libutp \
+				libevent.so:devel/libevent
 
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:www/transmission-web
 
@@ -31,14 +31,14 @@ CONFIGURE_ENV=  ZLIB_CFLAGS=" " ZLIB_LIBS="-lz" \
 		${ICONV_LIB:C@.+@ac_cv_func_iconv=yes@}
 
 CONFIGURE_ARGS+=	--without-inotify \
-					--enable-largefile \
-					--enable-daemon \
-					--without-gtk \
-					--disable-mac \
-					--enable-external-b64 \
-					--enable-external-dht \
-					--enable-external-natpmp \
-		 			--disable-nls
+				--enable-largefile \
+				--enable-daemon \
+				--without-gtk \
+				--disable-mac \
+				--enable-external-b64 \
+				--enable-external-dht \
+				--enable-external-natpmp \
+		 		--disable-nls
 OPTIONS_DEFINE+=	DOCS LITE
 OPTIONS_DEFAULT+=	OPENSSL
 OPTIONS_SINGLE+=	SSL
@@ -97,6 +97,13 @@ do-install:
 	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
 	@${INSTALL_DATA} -v ${WRKSRC}/web/images/webclip-icon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
 
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.transmenu.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.ui-contextmenu.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-migrate.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-ui.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/json2.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+
 	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/common.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
 	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/dialog.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
 	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/file-row.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
@@ -108,13 +115,6 @@ do-install:
 	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/torrent.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
 	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/torrent-row.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
 	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/transmission.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.transmenu.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.ui-contextmenu.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-migrate.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-ui.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/json2.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
 
 	@${INSTALL_DATA} -v ${WRKSRC}/web/style/jqueryui/jquery-ui.min.css ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/jqueryui
 
