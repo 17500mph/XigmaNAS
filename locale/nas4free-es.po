@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-12-17 23:37+0000\n"
+"POT-Creation-Date: 2018-01-24 19:11+0000\n"
 "PO-Revision-Date: 2017-12-18 19:46+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-01 15:29+0000\n"
-"X-Generator: Launchpad (build 18521)\n"
+"X-Launchpad-Export-Date: 2018-01-26 22:41+0000\n"
+"X-Generator: Launchpad (build 18534)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -3440,11 +3440,15 @@ msgid "Enable SMTP authentication."
 msgstr "Activar autentificación SMTP."
 
 msgid ""
-"Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
-"use SSL."
+"Enable SSL/TLS for secured connections. You also need to configure the TLS "
+"trust file. For some servers you may need to disable STARTTLS."
 msgstr ""
-"Habilita la encriptación STARTTLS . eso no significa que deba usar TLS, "
-"puede seguir usando SSL."
+
+msgid "Enable STARTTLS"
+msgstr ""
+
+msgid "Enable STARTTLS."
+msgstr ""
 
 msgid "Enable Selected Commands"
 msgstr "Habilitar las ordenes seleccionadas"
@@ -7753,9 +7757,6 @@ msgstr "Secreto"
 msgid "Secure Shell"
 msgstr "Secure Shell"
 
-msgid "Security"
-msgstr "Seguridad"
-
 msgid "Security Warning"
 msgstr "Advertencia de Seguridad"
 
@@ -8621,9 +8622,6 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
-
-msgid "TLS Mode"
-msgstr "Modo TLS"
 
 msgid "TLS Only"
 msgstr "Solo TLS"
@@ -9805,13 +9803,6 @@ msgid "This is a very powerful tool. Use at your own risk!"
 msgstr "Esta es una herramienta muy potente, Usela con precaución."
 
 msgid ""
-"This is a way to take an existing insecure connection, and upgrade it to a "
-"secure connection using SSL/TLS."
-msgstr ""
-"Es una forma de tomar una conexión insegura y convertirla en segura usando "
-"SSL/TLS"
-
-msgid ""
 "This is both the name of the server as advertised via "
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
@@ -10649,6 +10640,9 @@ msgstr "Usar cifrado"
 
 msgid "Use PAM for user authentication."
 msgstr "Usar PAN para la autentificación de usuarios"
+
+msgid "Use TLS"
+msgstr ""
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "

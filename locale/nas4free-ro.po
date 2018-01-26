@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-17 23:37+0000\n"
-"PO-Revision-Date: 2017-12-05 05:59+0000\n"
+"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"PO-Revision-Date: 2018-01-19 08:01+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-01 15:30+0000\n"
-"X-Generator: Launchpad (build 18521)\n"
+"X-Launchpad-Export-Date: 2018-01-26 22:42+0000\n"
+"X-Generator: Launchpad (build 18534)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -82,7 +82,7 @@ msgstr "%s este deja configurat ca volum."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s se bazează/include numeroase pachete software gratuite."
 
 #, php-format
 msgid "%s is too long."
@@ -939,7 +939,7 @@ msgid "Apple Filing Protocol"
 msgstr "Protocol Apple Filing"
 
 msgid "Apple Public Source License"
-msgstr ""
+msgstr "Licență publică Apple"
 
 msgid "Apply"
 msgstr "Aplică"
@@ -3436,11 +3436,15 @@ msgid "Enable SMTP authentication."
 msgstr "Activare autentificare SMTP."
 
 msgid ""
-"Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
-"use SSL."
+"Enable SSL/TLS for secured connections. You also need to configure the TLS "
+"trust file. For some servers you may need to disable STARTTLS."
 msgstr ""
-"Activare criptare STARTTLS. Nu e obligatoriu să folosiți TLS, puteți folosi "
-"și SSL."
+
+msgid "Enable STARTTLS"
+msgstr ""
+
+msgid "Enable STARTTLS."
+msgstr ""
 
 msgid "Enable Selected Commands"
 msgstr "Activare comenzi selectate"
@@ -4348,16 +4352,16 @@ msgid "GID"
 msgstr "GID"
 
 msgid "GNU General Public License"
-msgstr ""
+msgstr "Licență publică generală GNU"
 
 msgid "GNU Lesser General Public License (LGPL)"
-msgstr ""
+msgstr "Licență publică restrânsă GNU (LGPL)"
 
 msgid "GPLv2"
-msgstr ""
+msgstr "GPLv2"
 
 msgid "GPLv3"
-msgstr ""
+msgstr "GPLv3"
 
 msgid "GPT Partition"
 msgstr "Partiție GPT"
@@ -5922,7 +5926,7 @@ msgid "Move up"
 msgstr "Mută în sus"
 
 msgid "Mozilla Public License Version 2.0 (MPLv2)"
-msgstr ""
+msgstr "Licență publică Mozilla v2.0 (MPLv2)"
 
 msgid "Music"
 msgstr "Muzică"
@@ -6496,7 +6500,7 @@ msgid "PHP Command Output"
 msgstr "Ieșire comandă PHP"
 
 msgid "PHP License"
-msgstr ""
+msgstr "Licență PHP"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -7749,9 +7753,6 @@ msgstr "Secret"
 msgid "Secure Shell"
 msgstr "Shell Securizat"
 
-msgid "Security"
-msgstr "Securitate"
-
 msgid "Security Warning"
 msgstr "Avertisment de securitate"
 
@@ -8262,6 +8263,8 @@ msgstr "Software utilizat"
 #, php-format
 msgid "Some of the software used for %s are under the following licenses:"
 msgstr ""
+"Unele dintre pachetele software utilizate pentru %s se supun prevederilor "
+"următoarelor licențe:"
 
 msgid "Sort"
 msgstr "Sortare"
@@ -8618,9 +8621,6 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
-msgid "TLS Mode"
-msgstr "Mod TLS"
-
 msgid "TLS Only"
 msgstr "Doar TLS"
 
@@ -8747,6 +8747,8 @@ msgid ""
 "The %s Project would like to thank the authors of this software for their "
 "efforts."
 msgstr ""
+"Echipa proiectul %s este recunoscătoare autorilor acestor pachete software "
+"pentru efortul depus."
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "Portul COM trebuie să fie mai întîi activat în BIOS."
@@ -9178,7 +9180,7 @@ msgstr "Au fost detectate urmatoarele erori"
 
 #, php-format
 msgid "The following persons have contributed to %s:"
-msgstr ""
+msgstr "Următoarele persoane au contribuit la proiectul %s:"
 
 msgid "The following services will use AD authentication:"
 msgstr "Serviciile următoare folosesc autentificarea AD:"
@@ -9781,13 +9783,6 @@ msgstr "Acest grup există deja în lista grupurilor."
 
 msgid "This is a very powerful tool. Use at your own risk!"
 msgstr "Această unealtă este foarte puternică. Utilizați-o cu grijă maximă!"
-
-msgid ""
-"This is a way to take an existing insecure connection, and upgrade it to a "
-"secure connection using SSL/TLS."
-msgstr ""
-"Se poate să securizați astfel o conexiune nesigură folosind ptotocoalele "
-"SSL/TLS."
 
 msgid ""
 "This is both the name of the server as advertised via "
@@ -10627,6 +10622,9 @@ msgstr "Utilizare criptare"
 
 msgid "Use PAM for user authentication."
 msgstr "Utilizare PAM pentru autentificare."
+
+msgid "Use TLS"
+msgstr ""
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
