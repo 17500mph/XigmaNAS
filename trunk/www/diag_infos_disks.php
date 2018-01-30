@@ -47,7 +47,7 @@ $pagecontent = $document->getElementById('pagecontent');
 //	add tab navigation
 $document->
 	add_area_tabnav()->
-		push()->add_tabnav_upper()->
+		add_tabnav_upper()->
 			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'),gtext('Reload page'),true)->
 			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
 			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
@@ -56,7 +56,6 @@ $document->
 			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
 			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
 			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
-		pop()->add_tabnav_lower()->
 			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
 			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
 			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
