@@ -40,31 +40,30 @@ if(file_exists($swapinfo)):
 	$swapdevice = trim(file_get_contents($swapinfo));
 endif;
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Swap')];
+include 'fbegin.inc';
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'))->
+			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'),gtext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
+			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+$document->render();
 ?>
-<?php include 'fbegin.inc';?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext('Disks');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_disks_info.php"><span><?=gtext('Disks (Info)');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext('Partitions');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext('Space Used');?></span></a></li>
-		<li class="tabact"><a href="diag_infos_swap.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext('Mounts');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext('Software RAID');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext('iSCSI Initiator');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext('MS Domain');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext('CIFS/SMB');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext('FTP');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext('RSYNC Client');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_netstat.php"><span><?=gtext('Netstat');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext('Sockets');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
-		<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext('UPS');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
 		<colgroup>
@@ -72,13 +71,15 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Swap')];
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Swap Information & Status'));?>
+<?php
+			html_titleline2(gtext('Swap Information & Status'));
+?>
 		</thead>
 		<tbody>
 			<tr>
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
-					<?php
+<?php
 					echo '<pre>';
 					if ($swapdevice == "NONE" && !isset($config['system']['swap']['enable'])):
 						echo gtext('Swap is disabled.');
@@ -88,10 +89,12 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Swap')];
 						echo htmlspecialchars(implode("\n",$rawdata));
 					endif;
 					echo '</pre>';
-					?>
+?>
 				</td>
 			</tr>
 		</tbody>
 	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
