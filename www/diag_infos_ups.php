@@ -126,13 +126,16 @@ include 'fbegin.inc';
 <script type="text/javascript">
 //<![CDATA[
 function upsc_enable_change() {
-	switch (document.getElementById('raw_upsc_enable').checked) {
-		case true:
-			showElementById('upsc_raw_command','show');
-			break;
-		case false:
-			showElementById('upsc_raw_command','hide');
-			break;
+	var element = document.getElementById('raw_upsc_enable');
+	if(element != null) {
+		switch(element.checked) {
+			case true:
+				showElementById('upsc_raw_command','show');
+				break;
+			case false:
+				showElementById('upsc_raw_command','hide');
+				break;
+		}
 	}
 }
 //]]>
@@ -238,7 +241,7 @@ $document->render();
 				if($handle):
 					$read = fread($handle, 4096);
 					pclose($handle);
-					$lines = explode("\n", $read);
+					$lines = explode(PHP_EOL,$read);
 					$ups = [];
 					foreach($lines as $line):
 						$line = explode(':', $line);
@@ -462,8 +465,8 @@ $document->render();
 					tblrow(gtext('Server information'), $ups['server.info']);
 					tblrow(gtext('Server version'), $ups['server.version']);
 					html_separator2();
-					html_titleline_checkbox2('raw_upsc_enable', 'NUT', $upsc_enable ? true : false, (gtext('Show RAW UPS Info')), 'upsc_enable_change()');
-					tblrow(gtext('RAW info'), htmlspecialchars($read), 'pre', 'upsc_raw_command');
+					html_titleline_checkbox2('raw_upsc_enable','NUT',$upsc_enable ? true : false,(gtext('Show RAW UPS Info')),'upsc_enable_change()');
+					tblrow(gtext('RAW info'),htmlspecialchars($read), 'pre', 'upsc_raw_command');
 					unset($handle);
 					unset($read);
 					unset($lines);
