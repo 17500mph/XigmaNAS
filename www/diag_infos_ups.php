@@ -43,10 +43,10 @@ function tblrow($name,$value,$symbol = null,$id = null) {
 		return;
 	endif;
 	if($symbol == '&deg;C'):
-		$value = sprintf("%.1f", $value);
+		$value = sprintf("%.1f",$value);
 	endif;
 	if($symbol == 'Hz'):
-		$value = sprintf("%d", $value);
+		$value = sprintf("%d",$value);
 	endif;
 	if($symbol == ' seconds' && $value > 60):
 		$minutes = (int) ($value / 60);
@@ -55,21 +55,20 @@ function tblrow($name,$value,$symbol = null,$id = null) {
 			$hours = (int) ($minutes / 60);
 			$minutes = $minutes % 60;
 			$value = $hours;
-			$symbol = ' hours '.$minutes.' minutes '.$seconds.$symbol;
+			$symbol = ' hours ' . $minutes . ' minutes ' . $seconds . $symbol;
 		else:
 			$value = $minutes;
-			$symbol = ' minutes '.$seconds.$symbol;
+			$symbol = ' minutes ' . $seconds . $symbol;
 		endif;
 	endif;
 	if($symbol == 'pre'):
-		$value = '<pre>'.$value;
+		$value = '<pre>' . $value;
 		$symbol = '</pre>';
 	endif;
 	print(<<<EOD
 <tr id='{$id}'>
-	<td width="25%" class="celltag">{$name}</td>
-	<td width="75%" class="celldata">{$value}{$symbol}</td>
-	<table width="100%" border="0" cellspacing="0" cellpadding="4">
+	<td class="celltag">{$name}</td>
+	<td class="celldata">{$value}{$symbol}</td>
 </tr>
 EOD
 	. PHP_EOL);
@@ -78,10 +77,10 @@ function tblrowbar($name,$value,$symbol,$red,$yellow,$green) {
 	if(!$value):
 		return;
 	endif;
-	$value = sprintf("%.1f", $value);
-	$red = explode('-', $red);
-	$yellow = explode('-', $yellow);
-	$green = explode('-', $green);
+	$value = sprintf("%.1f",$value);
+	$red = explode('-',$red);
+	$yellow = explode('-',$yellow);
+	$green = explode('-',$green);
 	sort($red);
 	sort($yellow);
 	sort($green);
@@ -108,7 +107,7 @@ function tblrowbar($name,$value,$symbol,$red,$yellow,$green) {
 	endif;
 	print(<<<EOD
 <tr>
-	<td class="celltag" width="100px">{$name}</td>
+	<td class="celltag">{$name}</td>
 	<td class="celldata">
 		<div style="width: 290px; height: 12px; border-top: thin solid gray; border-bottom: thin solid gray; border-left: thin solid gray; border-right: thin solid gray;">
 			<div style="width: {$value}{$symbol}; height: 12px; background-color: {$bgcolor};">
@@ -163,46 +162,73 @@ $document->
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table width="100%" border="0" cellspacing="0" cellpadding="6">
-		<thead>
 <?php
-			html_titleline2(gtext('UPS Information & Status'));
+	if(!isset($config['ups']['enable'])):
 ?>
-		</thead>
-		<tbody>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
 <?php
-			if(!isset($config['ups']['enable'])):
+				html_titleline2(gtext('UPS Information & Status'));
 ?>
+			</thead>
+			<tbody>
 				<tr>
-					<td>
-						<pre><?=gtext('UPS disabled');?></pre>
+					<td class="celltag"><?=gtext('Information');?></td>
+					<td class="celldata">
+<?php
+						echo '<pre>';
+						echo gtext('UPS is disabled.');
+						echo '</pre>';
+?>
 					</td>
 				</tr>
+			</tbody>
+		</table>
 <?php
-			else:
+	else:
+?>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
+<?php
+				html_titleline2(gtext('UPS Information & Status'));
+?>
+			</thead>
+			<tbody>
+<?php
 				if(isset($config['ups']['ups2'])):
-					echo(gtext('Selected UPS') . ":&nbsp;&nbsp;&nbsp");
 ?>
-					<form name="form2" action="diag_infos_ups.php" method="get">
-						<select name="if" class="formfld" onchange="submit()">
+					<tr>
+						<td class="celltag">gtext('Selected UPS')</td>
+						<td class="celldata">
+							<form name="form2" action="diag_infos_ups.php" method="get">
+								<select name="if" class="formfld" onchange="submit()">
 <?php
-							$curif = $config['ups']['upsname'];
-							if(isset($_GET['if']) && $_GET['if']):
-								$curif = $_GET['if'];
-							endif;
-							$ifnum = $curif;
-							$ifdescrs = [$config['ups']['upsname'] => $config['ups']['upsname'],$config['ups']['ups2_upsname'] => $config['ups']['ups2_upsname']];
-							foreach($ifdescrs as $ifn => $ifd):
-								echo "<option value=\"$ifn\"";
-								if($ifn == $curif):
-									echo " selected=\"selected\"";
-								endif;
-								echo ">" . htmlspecialchars($ifd) . "</option>\n";
-							endforeach;
+									$curif = $config['ups']['upsname'];
+									if(isset($_GET['if']) && $_GET['if']):
+										$curif = $_GET['if'];
+									endif;
+									$ifnum = $curif;
+									$ifdescrs = [$config['ups']['upsname'] => $config['ups']['upsname'],$config['ups']['ups2_upsname'] => $config['ups']['ups2_upsname']];
+									foreach($ifdescrs as $ifn => $ifd):
+										echo '<option value="',$ifn,'"';
+										if($ifn == $curif):
+											echo ' selected="selected"';
+										endif;
+										echo '>',htmlspecialchars($ifd),'</option>',PHP_EOL;
+									endforeach;
 ?>
-						</select>
-					</form>
-					<br><br>
+								</select>
+							</form>
+						</td>
+					</tr>
 <?php
 				else:
 					$ifnum = $config['ups']['upsname'];
@@ -446,10 +472,12 @@ $document->render();
 					unset($ups);
 				endif;
 				unset($cmd);
-			endif;
 ?>
-		</tbody>
-	</table>
+			</tbody>
+		</table>
+<?php
+	endif;
+?>
 </td></tr></tbody></table>
 <script type="text/javascript">
 //<![CDATA[
