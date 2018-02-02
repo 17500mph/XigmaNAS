@@ -57,26 +57,30 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 		-o "tls_starttls on" -n \
 		--if "string-length(//system/email/tls_certcheck) > 0" \
 			-v "concat('',//system/email/tls_certcheck)" -n \
+			--if "contains(//system/email/tls_certcheck,'tls_certcheck on')" \
+				--if "string-length(//system/email/tls_trust_file) > 0" \
+					-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
+				--else \
+					-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+				--break \
+			--break \
 		--else \
 			-o "tls_certcheck off" -n \
-		--break \
-		--if "string-length(//system/email/tls_trust_file) > 0" \
-			-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
-		--else \
-			-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
 		--break \
 	--elif "//system/email/security[. != 'none']" \
 		-o "tls on" -n \
 		-o "tls_starttls off" -n \
 		--if "string-length(//system/email/tls_certcheck) > 0" \
 			-v "concat('',//system/email/tls_certcheck)" -n \
+			--if "contains(//system/email/tls_certcheck,'tls_certcheck on')" \
+				--if "string-length(//system/email/tls_trust_file) > 0" \
+					-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
+				--else \
+					-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+				--break \
+			--break \
 		--else \
 			-o "tls_certcheck off" -n \
-		--break \
-		--if "string-length(//system/email/tls_trust_file) > 0" \
-			-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
-		--else \
-			-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
 		--break \
 	--else \
 		-o "tls off" -n \
