@@ -55,32 +55,50 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 	--if "count(//system/email/starttls) > 0" \
 		-o "tls on" -n \
 		-o "tls_starttls on" -n \
-		--if "string-length(//system/email/tls_certcheck) > 0" \
-			-v "concat('',//system/email/tls_certcheck)" -n \
-			--if "contains(//system/email/tls_certcheck,'tls_certcheck on')" \
-				--if "string-length(//system/email/tls_trust_file) > 0" \
-					-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
-				--else \
-					-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+		--if "contains(//system/email/tls_certcheck,'tls_certcheck off')" \
+			-o "tls_certcheck off" -n \
+		--else \
+			--if "count(//system/email/tls_use_default_trust_file) > 0" \
+				-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+				--if "string-length(//system/email/tls_crl_file) > 0" \
+					-v "concat('tls_crl_file ',//system/email/tls_crl_file)" -n \
+				--break \
+				--if "string-length(//system/email/tls_fingerprint) > 0" \
+					-v "concat('tls_fingerprint ',//system/email/tls_fingerprint)" -n \
+				--break \
+			--elif "string-length(//system/email/tls_trust_file) > 0" \
+				-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
+				--if "string-length(//system/email/tls_crl_file) > 0" \
+					-v "concat('tls_crl_file ',//system/email/tls_crl_file)" -n \
+				--break \
+				--if "string-length(//system/email/tls_fingerprint) > 0" \
+					-v "concat('tls_fingerprint ',//system/email/tls_fingerprint)" -n \
 				--break \
 			--break \
-		--else \
-			-o "tls_certcheck off" -n \
 		--break \
 	--elif "//system/email/security[. != 'none']" \
 		-o "tls on" -n \
 		-o "tls_starttls off" -n \
-		--if "string-length(//system/email/tls_certcheck) > 0" \
-			-v "concat('',//system/email/tls_certcheck)" -n \
-			--if "contains(//system/email/tls_certcheck,'tls_certcheck on')" \
-				--if "string-length(//system/email/tls_trust_file) > 0" \
-					-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
-				--else \
-					-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+		--if "contains(//system/email/tls_certcheck,'tls_certcheck off')" \
+			-o "tls_certcheck off" -n \
+		--else \
+			--if "count(//system/email/tls_use_default_trust_file) > 0" \
+				-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+				--if "string-length(//system/email/tls_crl_file) > 0" \
+					-v "concat('tls_crl_file ',//system/email/tls_crl_file)" -n \
+				--break \
+				--if "string-length(//system/email/tls_fingerprint) > 0" \
+					-v "concat('tls_fingerprint ',//system/email/tls_fingerprint)" -n \
+				--break \
+			--elif "string-length(//system/email/tls_trust_file) > 0" \
+				-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
+				--if "string-length(//system/email/tls_crl_file) > 0" \
+					-v "concat('tls_crl_file ',//system/email/tls_crl_file)" -n \
+				--break \
+				--if "string-length(//system/email/tls_fingerprint) > 0" \
+					-v "concat('tls_fingerprint ',//system/email/tls_fingerprint)" -n \
 				--break \
 			--break \
-		--else \
-			-o "tls_certcheck off" -n \
 		--break \
 	--else \
 		-o "tls off" -n \
