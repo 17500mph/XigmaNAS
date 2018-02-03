@@ -47,7 +47,7 @@ $pconfig['tls_certcheck'] = $config['system']['email']['tls_certcheck'];
 $pconfig['tls_use_default_trust_file'] = isset($config['system']['email']['tls_use_default_trust_file']);
 $pconfig['tls_trust_file'] = $config['system']['email']['tls_trust_file'] ?? '';
 $pconfig['tls_crl_file'] = $config['system']['email']['tls_crl_file'] ?? '';
-$pconfig['tls_fingerprint'] = $config['system']['email']['fingerprint'] ?? '';
+$pconfig['tls_fingerprint'] = $config['system']['email']['tls_fingerprint'] ?? '';
 $pconfig['security'] = $config['system']['email']['security'];
 $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
@@ -91,7 +91,7 @@ if($_POST):
 		$config['system']['email']['tls_use_default_trust_file'] = isset($_POST['tls_use_default_trust_file']) ? true : false;
 		$config['system']['email']['tls_trust_file'] = $_POST['tls_trust_file'] ?? '';
 		$config['system']['email']['tls_crl_file'] = $_POST['tls_crl_file'] ?? '';
-		$config['system']['email']['fingerprint'] = $_POST['tls_fingerprint'] ?? '';
+		$config['system']['email']['tls_fingerprint'] = $_POST['tls_fingerprint'] ?? '';
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
 		write_config();
