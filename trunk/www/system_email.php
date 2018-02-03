@@ -255,10 +255,10 @@ $document->render();
 			html_radiobox2('security',gtext('Use TLS'),$pconfig['security'],$l_security,gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),false);
 			html_checkbox2('starttls',gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Enable STARTTLS.'),'',false);
 			html_radiobox2('tls_certcheck',gtext('TLS Server Certificate Check'),$pconfig['tls_certcheck'],$l_tls_certcheck,gtext('Enable or disable checks of the server certificate.'),false);
-			html_checkbox2('tls_use_default_trust_file',gtext('Use Default Trust File'),!empty($pconfig['tls_use_default_trust_file']),gtext('Use default trust file /usr/local/etc/ssl/cert.pem.'),'',false);
-			html_inputbox2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('This command activates strict server certificate verification. The filename must be the absolute path name of a file in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),false,60);
+			html_checkbox2('tls_use_default_trust_file',gtext('Use Default Trust File'),!empty($pconfig['tls_use_default_trust_file']),gtext('Use default TLS trust file /usr/local/etc/ssl/cert.pem.'),'',false);
+			html_filechooser2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
 			html_inputbox2('tls_fingerprint',gtext('TLS Fingerprint'),$pconfig['tls_fingerprint'],gtext('Set the fingerprint of a single certificate to accept for TLS.'),false,60);
-			html_inputbox2('tls_crl_file',gtext('TLS CRL File'),$pconfig['tls_crl_file'],gtext('Set a certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),false,60);
+			html_filechooser2('tls_crl_file',gtext('TLS CRL File'),$pconfig['tls_crl_file'],gtext('Certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),$g['media_path'],false,60);
 ?>
 		</tbody>
 	</table>
