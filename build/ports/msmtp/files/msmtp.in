@@ -60,10 +60,10 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 			-o "tls_starttls off" -n \
 		--break \
 		--if "count(//system/email/tls_certcheck) > 0" \
-			--if "string-length(//system/email/tls_trust_file) > 0" \
-				-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
-			--else \
+			--if "count(//system/email/tls_use_default_trust_file) > 0" \
 				-o "tls_trust_file /usr/local/etc/ssl/cert.pem" -n \
+			--elif "string-length(//system/email/tls_trust_file) > 0" \
+				-v "concat('tls_trust_file ',//system/email/tls_trust_file)" -n \
 			--break \
 			--if "string-length(//system/email/tls_fingerprint) > 0" \
 				-v "concat('tls_fingerprint ',//system/email/tls_fingerprint)" -n \
@@ -71,14 +71,14 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 			--if "string-length(//system/email/tls_crl_file) > 0" \
 				-v "concat('tls_crl_file ',//system/email/tls_crl_file)" -n \
 			--break \
-			--if "string-length(//system/email/tls_cert_file) > 0" \
-				-v "concat('tls_cert_file ',//system/email/tls_cert_file)" -n \
-			--break \
-			--if "string-length(//system/email/tls_key_file) > 0" \
-				-v "concat('tls_key_file ',//system/email/tls_key_file)" -n \
-			--break \
 		--else \
 			-o "tls_certcheck off" -n \
+		--break \
+		--if "string-length(//system/email/tls_cert_file) > 0" \
+			-v "concat('tls_cert_file ',//system/email/tls_cert_file)" -n \
+		--break \
+		--if "string-length(//system/email/tls_key_file) > 0" \
+			-v "concat('tls_key_file ',//system/email/tls_key_file)" -n \
 		--break \
 	--else \
 		-o "tls off" -n \
