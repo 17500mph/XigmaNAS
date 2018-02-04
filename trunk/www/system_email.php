@@ -42,12 +42,14 @@ $pconfig['server'] = $config['system']['email']['server'];
 $pconfig['port'] = $config['system']['email']['port'];
 $pconfig['auth'] = isset($config['system']['email']['auth']);
 $pconfig['authmethod'] = $config['system']['email']['authmethod'];
+$pconfig['security'] = isset($config['system']['email']['security']);
 $pconfig['starttls'] = isset($config['system']['email']['starttls']);
 $pconfig['tls_certcheck'] = isset($config['system']['email']['tls_certcheck']);
 $pconfig['tls_trust_file'] = $config['system']['email']['tls_trust_file'] ?? '';
-$pconfig['tls_crl_file'] = $config['system']['email']['tls_crl_file'] ?? '';
 $pconfig['tls_fingerprint'] = $config['system']['email']['tls_fingerprint'] ?? '';
-$pconfig['security'] = isset($config['system']['email']['security']);
+$pconfig['tls_crl_file'] = $config['system']['email']['tls_crl_file'] ?? '';
+$pconfig['tls_cert_file'] = $config['system']['email']['tls_cert_file'] ?? '';
+$pconfig['tls_key_file'] = $config['system']['email']['tls_key_file'] ?? '';
 $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
 $pconfig['passwordconf'] = $pconfig['password'];
@@ -56,21 +58,17 @@ $pconfig['sendto'] = isset($config['system']['email']['sendto']) ? $config['syst
 if($_POST):
 	unset($input_errors);
 	$pconfig = $_POST;
-	$reqdfields = [];
-	$reqdfieldsn = [];
-	$reqdfieldst = [];
 	// Input validation.
-	if(isset($_POST['auth'])):
-		$reqdfields = ['username','password'];
-		$reqdfieldsn = [gtext('Username'),gtext('Password')];
-		$reqdfieldst = ['string','string'];
-	endif;
 	$reqdfields = ['from','sendto','server','port'];
-	$reqdfieldsn = [gtext('From Email Address'),
-		gtext('To Email Address'),
-		gtext('SMTP Server'),
-		gtext('Port')];
+	$reqdfieldsn = [gtext('From Email Address'),gtext('To Email Address'),gtext('SMTP Server'),gtext('Port')];
 	$reqdfieldst = ['string','string','string','string'];
+	if(isset($_POST['auth'])):
+		if(isset($_POST['authmethod']) && is_string($_POST['authmethod']) && ($_POST['authmethod'] !== 'external')):
+			$reqdfields = array_merge($reqdfields,['username','password']);
+			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Username'),gtext('Password')]);
+			$reqdfieldst = array_merge($reqdfieldst,['string','string']);
+		endif;
+	endif;
 	do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
 	do_input_validation_type($_POST,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 	// Check for a password mismatch.
@@ -88,8 +86,10 @@ if($_POST):
 		$config['system']['email']['starttls'] = isset($_POST['starttls']);
 		$config['system']['email']['tls_certcheck'] = isset($_POST['tls_certcheck']);
 		$config['system']['email']['tls_trust_file'] = $_POST['tls_trust_file'] ?? '';
-		$config['system']['email']['tls_crl_file'] = $_POST['tls_crl_file'] ?? '';
 		$config['system']['email']['tls_fingerprint'] = $_POST['tls_fingerprint'] ?? '';
+		$config['system']['email']['tls_crl_file'] = $_POST['tls_crl_file'] ?? '';
+		$config['system']['email']['tls_cert_file'] = $_POST['tls_cert_file'] ?? '';
+		$config['system']['email']['tls_key_file'] = $_POST['tls_key_file'] ?? '';
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
 		write_config();
@@ -175,6 +175,8 @@ function security_change() {
 			showElementById('tls_trust_file_tr','hide');
 			showElementById('tls_fingerprint_tr','hide');
 			showElementById('tls_crl_file_tr','hide');
+			showElementById('tls_cert_file_tr','hide');
+			showElementById('tls_key_file_tr','hide');
 			break;
 	}
 }
@@ -184,11 +186,15 @@ function tls_certcheck_change() {
 			showElementById('tls_trust_file_tr','show');
 			showElementById('tls_fingerprint_tr','show');
 			showElementById('tls_crl_file_tr','show');
+			showElementById('tls_cert_file_tr','show');
+			showElementById('tls_key_file_tr','show');
 			break;
 		case false:
 			showElementById('tls_trust_file_tr','hide');
 			showElementById('tls_fingerprint_tr','hide');
 			showElementById('tls_crl_file_tr','hide');
+			showElementById('tls_cert_file_tr','hide');
+			showElementById('tls_key_file_tr','hide');
 			break;
 	}
 }
@@ -282,6 +288,8 @@ $document->render();
 			html_filechooser2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('The name of the TLS trust file (default is /usr/local/etc/ssl/cert.pem). The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
 			html_inputbox2('tls_fingerprint',gtext('TLS Fingerprint'),$pconfig['tls_fingerprint'],gtext('Set the fingerprint of a single certificate to accept for TLS.'),false,60);
 			html_filechooser2('tls_crl_file',gtext('TLS CRL File'),$pconfig['tls_crl_file'],gtext('Certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),$g['media_path'],false,60);
+			html_filechooser2('tls_cert_file',gtext('TLS Cert File'),$pconfig['tls_cert_file'],gtext('Send a client certificate to the server (use this together with ‘tls_key_file’). The file must contain a certificate in PEM format.'),$g['media_path'],false,60);
+			html_filechooser2('tls_key_file',gtext('TLS Key File'),$pconfig['tls_key_file'],gtext('Send a client certificate to the server (use this together with ‘tls_cert_file’). The file must contain the private key of a certificate in PEM format.'),$g['media_path'],false,60);
 ?>
 		</tbody>
 	</table>
