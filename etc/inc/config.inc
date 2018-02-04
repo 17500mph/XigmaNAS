@@ -1316,7 +1316,31 @@ function config_upgrade() {
 		endif;
 		$config['version'] = '3.5';
 	endif;
-	
+	/*	Convert 3.5 -> 36 */
+	/* email parameter */
+	if($config['version'] === '3.5'):
+		array_make_branch($config['system']['email']);
+		$config['system']['email']['security'] = $config['system']['email']['security'] ?? true;
+		switch($config['system']['email']['security']):
+			default:
+				$config['system']['email']['security'] = true;
+				break;
+			case 'none':
+				$config['system']['email']['security'] = false;
+				break;
+		endswitch;
+		$config['system']['email']['tls_certcheck'] = $config['system']['email']['tls_certcheck'] ?? true;
+		switch($config['system']['email']['tls_certcheck']):
+			default:
+				$config['system']['email']['tls_certcheck'] = true;
+				break;
+			case 'tls_certcheck off':
+				$config['system']['email']['tls_certcheck'] = false;
+				break;
+		endswitch;
+		$config['version'] = '36';
+	endif;
+
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
 

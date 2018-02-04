@@ -43,12 +43,11 @@ $pconfig['port'] = $config['system']['email']['port'];
 $pconfig['auth'] = isset($config['system']['email']['auth']);
 $pconfig['authmethod'] = $config['system']['email']['authmethod'];
 $pconfig['starttls'] = isset($config['system']['email']['starttls']);
-$pconfig['tls_certcheck'] = $config['system']['email']['tls_certcheck'];
-$pconfig['tls_use_default_trust_file'] = isset($config['system']['email']['tls_use_default_trust_file']);
+$pconfig['tls_certcheck'] = isset($config['system']['email']['tls_certcheck']);
 $pconfig['tls_trust_file'] = $config['system']['email']['tls_trust_file'] ?? '';
 $pconfig['tls_crl_file'] = $config['system']['email']['tls_crl_file'] ?? '';
 $pconfig['tls_fingerprint'] = $config['system']['email']['tls_fingerprint'] ?? '';
-$pconfig['security'] = $config['system']['email']['security'];
+$pconfig['security'] = isset($config['system']['email']['security']);
 $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
 $pconfig['passwordconf'] = $pconfig['password'];
@@ -83,12 +82,11 @@ if($_POST):
 		$config['system']['email']['sendto'] = $_POST['sendto'];
 		$config['system']['email']['server'] = $_POST['server'];
 		$config['system']['email']['port'] = $_POST['port'];
-		$config['system']['email']['auth'] = isset($_POST['auth']) ? true : false;
+		$config['system']['email']['auth'] = isset($_POST['auth']);
 		$config['system']['email']['authmethod'] = $_POST['authmethod'];
-		$config['system']['email']['security'] = $_POST['security'];
-		$config['system']['email']['starttls'] = isset($_POST['starttls']) ? true : false;
-		$config['system']['email']['tls_certcheck'] = $_POST['tls_certcheck'];
-		$config['system']['email']['tls_use_default_trust_file'] = isset($_POST['tls_use_default_trust_file']) ? true : false;
+		$config['system']['email']['security'] = isset($_POST['security']);
+		$config['system']['email']['starttls'] = isset($_POST['starttls']);
+		$config['system']['email']['tls_certcheck'] = isset($_POST['tls_certcheck']);
 		$config['system']['email']['tls_trust_file'] = $_POST['tls_trust_file'] ?? '';
 		$config['system']['email']['tls_crl_file'] = $_POST['tls_crl_file'] ?? '';
 		$config['system']['email']['tls_fingerprint'] = $_POST['tls_fingerprint'] ?? '';
@@ -124,14 +122,6 @@ if($_POST):
 		endif;
 	endif;
 endif;
-$l_security = [
-	'none' => gtext('Off'),
-	'tls' => gtext('On')
-];
-$l_tls_certcheck = [
-	'tls_certcheck off' => gtext('Off'),
-	'tls_certcheck on' => gtext('On')
-];
 $l_authmethod = [
 	'plain' => gtext('Plain-text'),
 	'scram-sha-1' => 'SCRAM-SHA-1',
@@ -152,20 +142,54 @@ $(window).on("load", function() {
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
 	$(".spin").click(function() { spinner(); });
+	$('#auth').click(function() { auth_change(); });
+	$('#security').click(function() { security_change(); });
+	$('#tls_certcheck').click(function() { tls_certcheck_change(); });
 	auth_change();
+	security_change();
 });
 function auth_change() {
 	switch (document.iform.auth.checked) {
+		case true:
+			showElementById('username_tr','show');
+			showElementById('password_tr','show');
+			showElementById('authmethod_tr','show');
+			break;
 		case false:
 			showElementById('username_tr','hide');
 			showElementById('password_tr','hide');
 			showElementById('authmethod_tr','hide');
 			break;
+	}
+}
+function security_change() {
+	switch (document.iform.security.checked) {
 		case true:
-			showElementById('username_tr','show');
-			showElementById('password_tr','show');
-			showElementById('authmethod_tr','show');
-		break;
+			showElementById('starttls_tr','show');
+			showElementById('tls_certcheck_tr','show');
+			tls_certcheck_change();
+			break;
+		case false:
+			showElementById('starttls_tr','hide');
+			showElementById('tls_certcheck_tr','hide');
+			showElementById('tls_trust_file_tr','hide');
+			showElementById('tls_fingerprint_tr','hide');
+			showElementById('tls_crl_file_tr','hide');
+			break;
+	}
+}
+function tls_certcheck_change() {
+	switch (document.iform.tls_certcheck.checked) {
+		case true:
+			showElementById('tls_trust_file_tr','show');
+			showElementById('tls_fingerprint_tr','show');
+			showElementById('tls_crl_file_tr','show');
+			break;
+		case false:
+			showElementById('tls_trust_file_tr','hide');
+			showElementById('tls_fingerprint_tr','hide');
+			showElementById('tls_crl_file_tr','hide');
+			break;
 	}
 }
 //]]>
@@ -232,7 +256,7 @@ $document->render();
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('auth',gtext('Authentication'),!empty($pconfig['auth']) ? true : false,gtext('Enable SMTP authentication.'),'',false,false,'auth_change()');
+			html_checkbox2('auth',gtext('Authentication'),!empty($pconfig['auth']) ? true : false,gtext('Enable SMTP authentication.'));
 			html_inputbox2('username',gtext('Username'),$pconfig['username'],'',true,40);
 			html_passwordconfbox2('password','passwordconf',gtext('Password'),$pconfig['password'],$pconfig['passwordconf'],'',true);
 			html_combobox2('authmethod',gtext('Authentication Method'),$pconfig['authmethod'],$l_authmethod,'',true);
@@ -252,11 +276,10 @@ $document->render();
 		</thead>
 		<tbody>
 <?php
-			html_radiobox2('security',gtext('Use TLS'),$pconfig['security'],$l_security,gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),false);
-			html_checkbox2('starttls',gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Enable STARTTLS.'),'',false);
-			html_radiobox2('tls_certcheck',gtext('TLS Server Certificate Check'),$pconfig['tls_certcheck'],$l_tls_certcheck,gtext('Enable or disable checks of the server certificate.'),false);
-			html_checkbox2('tls_use_default_trust_file',gtext('Use Default Trust File'),!empty($pconfig['tls_use_default_trust_file']),gtext('Use default TLS trust file /usr/local/etc/ssl/cert.pem.'),'',false);
-			html_filechooser2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
+			html_checkbox2('security',gtext('Use TLS'),!empty($pconfig['security']),gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),'',false);
+			html_checkbox2('starttls',gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Start TLS from within the session.'),'',false);
+			html_checkbox2('tls_certcheck',gtext('TLS Server Certificate Check'),!empty($pconfig['tls_certcheck']),gtext('Enable checks of the server certificate.'),'',false);
+			html_filechooser2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('The name of the TLS trust file (default is /usr/local/etc/ssl/cert.pem). The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
 			html_inputbox2('tls_fingerprint',gtext('TLS Fingerprint'),$pconfig['tls_fingerprint'],gtext('Set the fingerprint of a single certificate to accept for TLS.'),false,60);
 			html_filechooser2('tls_crl_file',gtext('TLS CRL File'),$pconfig['tls_crl_file'],gtext('Certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),$g['media_path'],false,60);
 ?>
