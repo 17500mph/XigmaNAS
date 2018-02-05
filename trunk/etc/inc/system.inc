@@ -846,10 +846,14 @@ function get_pool_usage() {
 			$r_poolusage['percentage'] = $poolv['cap'];
 			$r_poolusage['size'] = format_bytes($poolv['size'],2,false,$use_si);
 			if(isset($config['zfs']['settings']['showusedavail'])):
+				$r_poolusage['gt_used'] = gtext('Used');
 				$r_poolusage['used'] = format_bytes($poolv['used'],2,false,$use_si);
+				$r_poolusage['gt_avail'] = gtext('Avail');
 				$r_poolusage['avail'] = format_bytes($poolv['avail'],2,false,$use_si);
 			else: // this is the default setting
+				$r_poolusage['gt_used'] = gtext('Alloc');
 				$r_poolusage['used'] = format_bytes($poolv['alloc'],2,false,$use_si);
+				$r_poolusage['gt_avail'] = gtext('Free');
 				$r_poolusage['avail'] = format_bytes($poolv['free'],2,false,$use_si);
 			endif;
 			$r_poolusage['health'] = $poolv['health'];

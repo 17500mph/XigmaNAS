@@ -51,7 +51,7 @@ $cpuinfo = system_get_cpu_info();
 function get_vip_status() {
 	global $config;
 
-	if (empty($config['vinterfaces']['carp'])):
+	if(empty($config['vinterfaces']['carp'])):
 		return '';
 	endif;
 	$a_vipaddrs = [];
@@ -63,7 +63,7 @@ function get_vip_status() {
 	return implode(', ',$a_vipaddrs);
 }
 function get_ups_disp_status($ups_status) {
-	if (empty($ups_status)):
+	if(empty($ups_status)):
 		return '';
 	endif;
 	$upstodisplay = [
@@ -193,7 +193,7 @@ function get_xen_console($domid) {
 	endforeach;
 	return $info;
 }
-if (is_ajax()) {
+if(is_ajax()) {
 	$sysinfo = system_get_sysinfo();
 	$vipstatus = get_vip_status();
 	$sysinfo['vipstatus'] = $vipstatus;
@@ -203,7 +203,7 @@ if (is_ajax()) {
 	$sysinfo['upsinfo2'] = $upsinfo2;
 	render_ajax($sysinfo);
 }
-function tblrow ($name,$value,$symbol = null,$id = null) {
+function tblrow($name,$value,$symbol = null,$id = null) {
 	if(!$value):
 		return;
 	endif;
@@ -213,7 +213,7 @@ function tblrow ($name,$value,$symbol = null,$id = null) {
 	if($symbol == 'Hz'):
 		$value = sprintf('%d',$value);
 	endif;
-	if ($symbol == 'pre'):
+	if($symbol == 'pre'):
 		$value = '<pre>'.$value;
 		$symbol = '</pre>';
 	endif;
@@ -229,7 +229,7 @@ function tblrow ($name,$value,$symbol = null,$id = null) {
 EOD
 	. PHP_EOL);
 }
-function tblrowbar ($id,$name,$value) {
+function tblrowbar($id,$name,$value) {
 	if(is_null($value)):
 		return;
 	endif;
@@ -351,7 +351,9 @@ $(document).ready(function(){
 					$('#poolusage_'+pu.id+'_capacity').text(pu.capacity);
 					$('#poolusage_'+pu.id+'_capofsize').text(pu.capofsize);
 					$('#poolusage_'+pu.id+'_size').text(pu.size);
+					$('#poolusage_'+pu.id+'_gt_used').text(pu.gt_used);
 					$('#poolusage_'+pu.id+'_used').text(pu.used);
+					$('#poolusage_'+pu.id+'_gt_avail').text(pu.gt_avail);
 					$('#poolusage_'+pu.id+'_avail').text(pu.avail);
 					$('#poolusage_'+pu.id+'_state').children().text(pu.health);
 				}
@@ -480,16 +482,16 @@ $(document).ready(function(){
 			endif;
 			html_textinfo2('system_datetime',gtext('System Time'),htmlspecialchars(get_datetime_locale()));
 			html_textinfo2('system_uptime',gtext('System Uptime'),htmlspecialchars(system_get_uptime()));
-			if (Session::isAdmin()):
-				if ($config['lastchange']):
+			if(Session::isAdmin()):
+				if($config['lastchange']):
 					html_textinfo2('last_config_change',gtext('System Config Change'),htmlspecialchars(get_datetime_locale($config['lastchange'])));
 				endif;
 				if(empty($cpuinfo['temperature2'])):
-					if (!empty($cpuinfo['temperature'])):
+					if(!empty($cpuinfo['temperature'])):
 						html_textinfo2('cputemp',gtext('CPU Temperature'),sprintf('%s°C',htmlspecialchars($cpuinfo['temperature'])));
 					endif;
 				endif;
-				if (!empty($cpuinfo['freq'])):
+				if(!empty($cpuinfo['freq'])):
 					html_textinfo2('cpufreq',gtext('CPU Frequency'),sprintf('%sMHz',htmlspecialchars($cpuinfo['freq'])));
 				endif;
 ?>
@@ -592,7 +594,7 @@ $(document).ready(function(){
 				</tr>
 <?php
 				$a_swapusage = get_swap_usage();
-				if (!empty($a_swapusage)):
+				if(!empty($a_swapusage)):
 ?>
 					<tr>
 						<td class="celltag"><?=gtext('Swap Usage');?></td>
@@ -600,7 +602,7 @@ $(document).ready(function(){
 							<table width="100%" border="0" cellspacing="0" cellpadding="1">
 <?php
 								$index = 0;
-								foreach ($a_swapusage as $r_swapusage):
+								foreach($a_swapusage as $r_swapusage):
 									$ctrlid = $r_swapusage['id'];
 									$percent_used = $r_swapusage['percentage'];
 									$tooltip_used = $r_swapusage['tooltip']['used'];
@@ -618,7 +620,7 @@ $(document).ready(function(){
 										"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$r_swapusage['used']}</span>",
 										"<span name='swapusage_{$ctrlid}_avail' id='swapusage_{$ctrlid}_avail' class='avail'>{$r_swapusage['avail']}</span>");
 									echo "</div></td></tr>";
-									if (++$index < count($a_swapusage)):
+									if(++$index < count($a_swapusage)):
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
@@ -646,9 +648,9 @@ $(document).ready(function(){
 						<table width="100%" border="0" cellspacing="0" cellpadding="1">
 <?php
 							$a_diskusage = get_disk_usage();
-							if (!empty($a_diskusage)):
+							if(!empty($a_diskusage)):
 								$index = 0;
-								foreach ($a_diskusage as $r_diskusage):
+								foreach($a_diskusage as $r_diskusage):
 									$ctrlid = $r_diskusage['id'];
 									$percent_used = $r_diskusage['percentage'];
 									$tooltip_used = $r_diskusage['tooltip']['used'];
@@ -666,18 +668,18 @@ $(document).ready(function(){
 										"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$r_diskusage['used']}</span>",
 										"<span name='diskusage_{$ctrlid}_avail' id='diskusage_{$ctrlid}_avail' class='avail'>{$r_diskusage['avail']}</span>");
 									echo "</div></td></tr>";
-									if (++$index < count($a_diskusage)):
+									if(++$index < count($a_diskusage)):
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
 							endif;
 							$a_poolusage = get_pool_usage();
-							if (!empty($a_poolusage)):
+							if(!empty($a_poolusage)):
 								$index = 0;
-								if (!empty($a_diskusage)):
+								if(!empty($a_diskusage)):
 									echo "<tr><td><hr size='1' /></td></tr>\n";
 								endif;
-								foreach ($a_poolusage as $r_poolusage):
+								foreach($a_poolusage as $r_poolusage):
 									$ctrlid = $r_poolusage['id'];
 									$percent_used = $r_poolusage['percentage'];
 									$tooltip_used = $r_poolusage['tooltip']['used'];
@@ -690,18 +692,20 @@ $(document).ready(function(){
 									echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
 									echo "<span name='poolusage_{$ctrlid}_capofsize' id='poolusage_{$ctrlid}_capofsize' class='capofsize'>{$r_poolusage['capofsize']}</span>";
 									echo "<br />";
-									echo sprintf(gtext("Total: %s | Alloc: %s | Free: %s | State: %s"),
+									echo sprintf(gtext("Total: %s | %s: %s | %s: %s | State: %s"),
 										"<span name='poolusage_{$ctrlid}_size' id='poolusage_{$ctrlid}_size' class='size'>{$r_poolusage['size']}</span>",
+										"<span name='poolusage_{$ctrlid}_gt_used' id='poolusage_{$ctrlid}_gt_used'>{$r_poolusage['gt_used']}</span>",
 										"<span name='poolusage_{$ctrlid}_used' id='poolusage_{$ctrlid}_used' class='used'>{$r_poolusage['used']}</span>",
+										"<span name='poolusage_{$ctrlid}_gt_avail' id='poolusage_{$ctrlid}_gt_avail'>{$r_poolusage['gt_avail']}</span>",
 										"<span name='poolusage_{$ctrlid}_avail' id='poolusage_{$ctrlid}_avail' class='avail'>{$r_poolusage['avail']}</span>",
 										"<span name='poolusage_{$ctrlid}_state' id='poolusage_{$ctrlid}_state' class='state'><a href='disks_zfs_zpool_info.php?pool={$r_poolusage['name']}'>{$r_poolusage['health']}</a></span>");
 									echo "</div></td></tr>";
-									if (++$index < count($a_poolusage)):
+									if(++$index < count($a_poolusage)):
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
 							endif;
-							if (empty($a_diskusage) && empty($a_poolusage)):
+							if(empty($a_diskusage) && empty($a_poolusage)):
 								echo "<tr><td>";
 								echo gtext("No disk configured");
 								echo "</td></tr>";
@@ -715,7 +719,7 @@ $(document).ready(function(){
 					<td class="celldata">
 						<table width="100%" border="0" cellspacing="0" cellpadding="2">
 <?php
-							if (!isset($config['ups']['enable'])):
+							if(!isset($config['ups']['enable'])):
 ?>
 								<tr>
 									<td>
@@ -726,7 +730,7 @@ $(document).ready(function(){
 							else:
 								$cmd = "/usr/local/bin/upsc {$config['ups']['upsname']}@{$config['ups']['ip']}";
 								$handle = popen($cmd, 'r');
-								if ($handle):
+								if($handle):
 									$read = fread($handle, 4096);
 									pclose($handle);
 									$lines = explode("\n", $read);
@@ -735,7 +739,7 @@ $(document).ready(function(){
 										$line = explode(':', $line);
 										$ups[$line[0]] = trim($line[1]);
 									endforeach;
-									if (count($lines) == 1):
+									if(count($lines) == 1):
 										tblrow('ERROR:', 'Data stale!');
 									endif;
 									$disp_status = get_ups_disp_status($ups['ups.status']);
@@ -756,7 +760,7 @@ $(document).ready(function(){
 					</td>
 				</tr>
 <?php
-				if (isset($config['ups']['enable']) && isset($config['ups']['ups2'])):
+				if(isset($config['ups']['enable']) && isset($config['ups']['ups2'])):
 ?>
 					<tr>
 						<td class="celltag"><?=gtext("UPS Status")." ".$config["ups"]["ups2_upsname"];?></td>
@@ -765,7 +769,7 @@ $(document).ready(function(){
 <?php
 								$cmd = "/usr/local/bin/upsc {$config['ups']['ups2_upsname']}@{$config['ups']['ip']}";
 								$handle = popen($cmd, 'r');
-								if ($handle):
+								if($handle):
 									$read = fread($handle, 4096);
 									pclose($handle);
 									$lines = explode("\n", $read);
@@ -774,7 +778,7 @@ $(document).ready(function(){
 										$line = explode(':', $line);
 										$ups[$line[0]] = trim($line[1]);
 									endforeach;
-									if (count($lines) == 1):
+									if(count($lines) == 1):
 										tblrow('ERROR:', 'Data stale!');
 									endif;
 									$disp_status = get_ups_disp_status($ups['ups.status']);
@@ -824,7 +828,7 @@ $(document).ready(function(){
 <?php
 								$vmtype = "BHyVe";
 								$index = 0;
-								foreach ($vmlist as $vmpath):
+								foreach($vmlist as $vmpath):
 									$vm = basename($vmpath);
 									unset($temp);
 									exec("/usr/sbin/bhyvectl ".escapeshellarg("--vm=$vm")." --get-lowmem | sed -e 's/.*\\///'", $temp);
@@ -832,26 +836,26 @@ $(document).ready(function(){
 									echo "<tr><td><div id='vminfo_$index'>";
 									echo htmlspecialchars("$vmtype: $vm ($vram MiB)");
 									echo "</div></td></tr>\n";
-									if (++$index < count($vmlist)):
+									if(++$index < count($vmlist)):
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
 								$vmtype = "VBox";
 								$index = 0;
-								foreach ($vmlist2 as $vmline):
+								foreach($vmlist2 as $vmline):
 									$vm = "";
-									if (preg_match("/^\"(.+)\"\s*\{(\S+)\}$/", $vmline, $match)):
+									if(preg_match("/^\"(.+)\"\s*\{(\S+)\}$/", $vmline, $match)):
 										$vm = $match[1];
 										$uuid = $match[2];
 									endif;
-									if ($vm == ""):
+									if($vm == ""):
 										continue;
 									endif;
 									$vminfo = get_vbox_vminfo($vbox_user, $uuid);
 									$vram = $vminfo['memory']['value'];
 									echo "<tr><td><div id='vminfo2_$index'>";
 									echo htmlspecialchars("$vmtype: $vm ($vram MiB)");
-									if (isset($vminfo['vrde']) && $vminfo['vrde']['value'] == "on"):
+									if(isset($vminfo['vrde']) && $vminfo['vrde']['value'] == "on"):
 										$vncport = $vminfo['vrdeport']['value'];
 										$url = htmlspecialchars("/novnc/vnc.html?host={$vbox_ipaddr}&port={$vncport}");
 										echo " <a href='{$url}' target=_blank>";
@@ -859,14 +863,14 @@ $(document).ready(function(){
 										echo "</a>";
 									endif;
 									echo "</div></td></tr>\n";
-									if (++$index < count($vmlist2)):
+									if(++$index < count($vmlist2)):
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
 								$vmtype = "Xen";
 								$index = 0;
 								$vncport_unused = 5900;
-								foreach ($vmlist3 as $k => $v):
+								foreach($vmlist3 as $k => $v):
 									$domid = $v['domid'];
 									$type = $v['config']['c_info']['type'];
 									$vm = $v['config']['c_info']['name'];
@@ -877,10 +881,10 @@ $(document).ready(function(){
 										$info = get_xen_info();
 										$cpus = $info['nr_cpus']['value'];
 										$th = $info['threads_per_core']['value'];
-										if (empty($th)) {
+										if(empty($th)) {
 											$th = 1;
 										}
-										$core = (int)($cpus / $th);
+										$core =(int)($cpus / $th);
 										$mem = $info['total_memory']['value'];
 										$ver = $info['xen_version']['value'];
 									elseif(!empty($v['config']['b_info']['max_vcpus'])):
@@ -888,7 +892,7 @@ $(document).ready(function(){
 									endif;
 									echo "<tr><td><div id='vminfo3_$index'>";
 									echo htmlspecialchars("$vmtype $type: $vm ($vram MiB / $vcpus VCPUs)");
-									if ($domid == 0):
+									if($domid == 0):
 										echo " ";
 										echo htmlspecialchars("Xen version {$ver} / {$mem} MiB / {$core} core".($th > 1 ? "/HT" : ""));
 									elseif($type == 'pv' && isset($v['config']['vfbs']) && isset($v['config']['vfbs'][0]['vnc'])):
@@ -904,7 +908,7 @@ $(document).ready(function(){
 										endif;
 										*/
 										$console = get_xen_console($domid);
-										if (!empty($console) && isset($console['vnc-port'])):
+										if(!empty($console) && isset($console['vnc-port'])):
 											$vncport = $console['vnc-port']['value'];
 										endif;
 										echo " ";
@@ -913,23 +917,23 @@ $(document).ready(function(){
 										$vnc = $v['config']['b_info']['type.hvm']['vnc'];
 										$vncport = "unknown";
 										/*
-										if (isset($vnc['display'])) {
+										if(isset($vnc['display'])) {
 											$vncdisplay = $vnc['display'];
 											$vncport = 5900 + $vncdisplay;
-										} else if (isset($vnc['findunused'])) {
+										} else if(isset($vnc['findunused'])) {
 											$vncport = $vncport_unused;
 											$vncport_unused++;
 										}
 										*/
 										$console = get_xen_console($domid);
-										if (!empty($console) && isset($console['vnc-port'])):
+										if(!empty($console) && isset($console['vnc-port'])):
 											$vncport = $console['vnc-port']['value'];
 										endif;
 										echo " ";
 										echo htmlspecialchars("vnc://{$xen_ipaddr}:{$vncport}/");
 									endif;
 									echo "</div></td></tr>\n";
-									if (++$index < count($vmlist3)):
+									if(++$index < count($vmlist3)):
 										echo "<tr><td><hr size='1' /></td></tr>\n";
 									endif;
 								endforeach;
