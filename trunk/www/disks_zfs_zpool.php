@@ -232,11 +232,15 @@ echo $sphere->doj();
 				endswitch;
 				if(is_array($sphere_addon_grid) && array_key_exists($sphere->row['name'],$sphere_addon_grid)):
 					$sphere_addon_row = $sphere_addon_grid[$sphere->row['name']];
-					$size = format_bytes($sphere_addon_row['size'],2,false,$use_si);
-					$used = format_bytes($sphere_addon_row['used'],2,false,$use_si);
-					$alloc = format_bytes($sphere_addon_row['alloc'],2,false,$use_si);
-					$avail = format_bytes($sphere_addon_row['avail'],2,false,$use_si);
-					$free = format_bytes($sphere_addon_row['free'],2,false,$use_si);
+					if($showusedavail):
+						$size = format_bytes($sphere_addon_row['used'] + $sphere_addon_row['avail'],2,false,$use_si);
+						$used = format_bytes($sphere_addon_row['used'],2,false,$use_si);
+						$avail = format_bytes($sphere_addon_row['avail'],2,false,$use_si);
+					else:	
+						$size = format_bytes($sphere_addon_row['size'],2,false,$use_si);
+						$used = format_bytes($sphere_addon_row['alloc'],2,false,$use_si);
+						$avail = format_bytes($sphere_addon_row['free'],2,false,$use_si);
+					endif;
 					$frag = $sphere_addon_row['frag'];
 					$cap = sprintf('%d%%',$sphere_addon_row['cap']);
 					$dedup = $sphere_addon_row['dedup'];
@@ -254,21 +258,10 @@ echo $sphere->doj();
 						endif;
 ?>
 					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?= (isset($sphere->row['name'])) ? htmlspecialchars($sphere->row['name']) : '' ;?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=isset($sphere->row['name']) ? htmlspecialchars($sphere->row['name']) : '';?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$size;?></td>
-<?php
-					if ($showusedavail):
-?>
-						<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$used;?></td>
-						<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$avail;?></td>
-<?php
-					else:
-?>
-						<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$alloc;?></td>
-						<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$free;?></td>
-<?php
-					endif;
-?>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$used;?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$avail;?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$frag;?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$cap;?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$dedup;?></td>
