@@ -221,13 +221,13 @@ echo $sphere->doj();
 				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
 				switch($notificationmode):
 					case UPDATENOTIFY_MODE_NEW:
-						$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gtext('Initializing');
+						$size = $used = $avail = $frag = $cap = $dedup = $health = $altroot = gtext('Initializing');
 						break;
 					case UPDATENOTIFY_MODE_MODIFIED:
-						$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gtext('Modifying');
+						$size = $used = $avail = $frag = $cap = $dedup = $health = $altroot = gtext('Modifying');
 						break;
 					default:
-						$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gtext('Unknown');
+						$size = $used = $avail = $frag = $cap = $dedup = $health = $altroot = gtext('Unknown');
 						break;
 				endswitch;
 				if(is_array($sphere_addon_grid) && array_key_exists($sphere->row['name'],$sphere_addon_grid)):
