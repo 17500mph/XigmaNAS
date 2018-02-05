@@ -844,7 +844,6 @@ function get_pool_usage() {
 			$r_poolusage['name'] = $poolv['name'];
 			$r_poolusage['capacity'] = sprintf('%d%%',$poolv['cap']);
 			$r_poolusage['percentage'] = $poolv['cap'];
-			$r_poolusage['size'] = format_bytes($poolv['size'],2,false,$use_si);
 			if(isset($config['zfs']['settings']['showusedavail'])):
 				$r_poolusage['size'] = format_bytes($poolv['used'] + $poolv['avail'],2,false,$use_si);
 				$r_poolusage['gt_used'] = gtext('Used');
