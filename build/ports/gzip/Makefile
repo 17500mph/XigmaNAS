@@ -1,9 +1,9 @@
 PORTNAME=		gzip
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 PORTREVISION?=  0
-CATEGORIES=		archivers
-COMMENT=		A compression utility designed to be a replacement for compress
-MAINTAINER=		zoon1@nas4free.org
+CATEGORIES=	archivers
+COMMENT=	A compression utility designed to be a replacement for compress
+MAINTAINER=	zoon1@nas4free.org
 
 MASTER_SITES=				${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
