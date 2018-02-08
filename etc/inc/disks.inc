@@ -95,11 +95,9 @@ function disks_umount_all() {
 	endforeach;
 	return 0;
 }
-
 // Mount using the configured mount given in parameter
 // Return 0 if successful, 1 if error
-function disks_mount($mount)
-{
+function disks_mount($mount) {
 	global $config, $g;
 
 	// Set mount name
@@ -165,44 +163,41 @@ function disks_mount($mount)
 	$readonly = (isset($mount['readonly'])) ? "-r" : "";
 	/* Check the fileystem only if there is a problem. */
 	/* This part is too stupid: I must read the FreeBSD start script for use the same intelligent method for checking hard drive */
-	switch ($mount['fstype']) {
+	switch($mount['fstype']):
 		case "ufs":
 			$result = mwexec("/sbin/mount -t ufs -o acls {$readonly} {$devicespecialfile} '{$mountname}'", true);
-			if (0 == $result) {
+			if(0 == $result):
 				write_log("Device {$devicespecialfile} mounted using UFS on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir($mountname);
 				write_log("Error: Failed to mount {$devicespecialfile} using UFS");
 				$result = 1;
-			}
+			endif;
 			break;
-
 		case "msdosfs":
 			$result = mwexec("/sbin/mount -t msdosfs -o large {$readonly} {$devicespecialfile} '{$mountname}'", true);
-			if (0 == $result) {
+			if(0 == $result):
 				write_log("Device {$devicespecialfile} mounted using FAT on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir($mountname);
 				write_log("Error: Failed to mount {$devicespecialfile} using FAT");
 				$result = 1;
-			}
+			endif;
 			break;
-
 		case "udf":
 		case "cd9660":
 			$result = mwexec("/sbin/mount -t {$mount['fstype']} {$devicespecialfile} '{$mountname}'", true);
-			if (0 == $result) {
+			if(0 == $result):
 				write_log("Device {$devicespecialfile} mounted as CD/DVD on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir($mountname);
 				write_log("Error: Failed to mount {$devicespecialfile} as CD/DVD (fstype={$mount['fstype']})");
 				$result = 1;
-			}
+			endif;
 			break;
-
 		case "ntfs":
 			// Load the kernel FUSE module
 			mwexec("/sbin/kldload /boot/kernel/fuse.ko");
@@ -210,65 +205,62 @@ function disks_mount($mount)
 			$mode = "777";
 			$owner = "root";
 			$group = "wheel";
-			if (is_array($mount['accessrestrictions'])) {
+			if(is_array($mount['accessrestrictions'])):
 				$mode = $mount['accessrestrictions']['mode'];
 				$owner = $mount['accessrestrictions']['owner'];
 				$group = $mount['accessrestrictions']['group'][0];
-			}
+			endif;
 			$pw = posix_getpwnam($owner);
 			$gr = posix_getgrnam($group);
-			if ($pw == FALSE || $gr == FALSE) {
+			if($pw == FALSE || $gr == false):
 				@rmdir($mountname);
 				write_log("Error: Failed to get uid/gid");
 				$result = 1;
 				break;
-			}
+			endif;
 			$uid = "-o uid={$pw['uid']}";
 			$gid = "-o gid={$gr['gid']}";
 			$mask = decoct(0777 ^ octdec($mode));
 			$umask = "-o umask={$mask}";
 			$osver = @exec("/usr/bin/uname -U");
-			if ($osver >= 1000000) {
+			if($osver >= 1000000):
 				$result = mwexec("/sbin/mount_ntfs {$readonly} {$uid} {$gid} {$umask} {$devicespecialfile} '{$mountname}'", true); // default options: silent,allow_other
-			} else {
+			else:
 				$result = mwexec("/sbin/mount -t ntfs {$readonly} {$uid} {$gid} {$umask} {$devicespecialfile} '{$mountname}'", true); // default options: silent,allow_other
-			}
-			if (0 == $result) {
+			endif;
+			if(0 == $result):
 				write_log("Disk {$devicespecialfile} mounted using NTFS on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir($mountname);
 				write_log("Error: Failed to mount {$devicespecialfile} using NTFS");
 				$result = 1;
-			}
+			endif;
 			break;
-
 		case "ext2fs":
 			$result = mwexec("/sbin/mount -t ext2fs {$readonly} {$devicespecialfile} '{$mountname}'", true);
-			if (0 == $result) {
+			if(0 == $result):
 				write_log("Disk {$devicespecialfile} mounted using EXT2 on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir("{$mountname}");
 				write_log("Error: Failed to mount {$devicespecialfile} using EXT2");
 				$result = 1;
-			}
-			break;
-			
+			endif;
+			break;	
 		case "ext4fuse":
 			// Load the kernel FUSE module
 			mwexec("/sbin/kldload /boot/kernel/fuse.ko");
 			$result = mwexec("/usr/local/bin/ext4fuse {$readonly} {$devicespecialfile} '{$mountname}'", true);
-			if (0 == $result) {
+			if(0 == $result):
 				write_log("Disk {$devicespecialfile} mounted using EXT4 on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir("{$mountname}");
 				write_log("Error: Failed to mount {$devicespecialfile} using EXT4");
 				$result = 1;
-			}
+			endif;
 			break;
-
 		case "exfat":
 			// Load the kernel FUSE module
 			mwexec("/sbin/kldload /boot/kernel/fuse.ko");
@@ -276,154 +268,135 @@ function disks_mount($mount)
 			$mode = "777";
 			$owner = "root";
 			$group = "wheel";
-			if (is_array($mount['accessrestrictions'])) {
+			if(is_array($mount['accessrestrictions'])):
 				$mode = $mount['accessrestrictions']['mode'];
 				$owner = $mount['accessrestrictions']['owner'];
 				$group = $mount['accessrestrictions']['group'][0];
-			}
+			endif;
 			$pw = posix_getpwnam($owner);
 			$gr = posix_getgrnam($group);
-			if ($pw == FALSE || $gr == FALSE) {
+			if($pw == FALSE || $gr == FALSE):
 				@rmdir($mountname);
 				write_log("Error: Failed to get uid/gid");
 				$result = 1;
 				break;
-			}
+			endif;
 			$uid = "-o uid={$pw['uid']}";
 			$gid = "-o gid={$gr['gid']}";
 			$mask = decoct(0777 ^ octdec($mode));
 			$umask = "-o umask={$mask}";
 			$result = mwexec("/usr/local/bin/mount.exfat {$readonly} {$uid} {$gid} {$umask} {$devicespecialfile} '{$mountname}'", true);
-			if (0 == $result) {
+			if(0 == $result):
 				write_log("Disk {$devicespecialfile} mounted using exFAT on '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				@rmdir($mountname);
 				write_log("Error: Failed to mount {$devicespecialfile} using exFAT");
 				$result = 1;
-			}
+			endif;
 			break;
-	}
-
+	endswitch;
 	// Set access restrictions. Use the following default values.
 	$mode = "777";
 	$owner = "root";
 	$group = "wheel";
-
-	if (is_array($mount['accessrestrictions'])) {
+	if(is_array($mount['accessrestrictions'])):
 		$mode = $mount['accessrestrictions']['mode'];
 		$owner = $mount['accessrestrictions']['owner'];
 		$group = $mount['accessrestrictions']['group'][0];
-	}
-
+	endif;
 	// Check if target directory is writable, otherwise we will get an error message.
 	// For ISO's this may be 'chmod: /mnt/xxx: Read-only file system)'
-	if (file_exists($mountname) && is_writable($mountname)) {
-		if (!@chmod($mountname, octdec($mode)) || !@chown($mountname, $owner) || !@chgrp($mountname, $group)) {
-			if ($mount['fstype'] != "ntfs" && $mount['fstype'] != "exfat" && $mount['fstype'] != "ext4fuse") {
+	if(file_exists($mountname) && is_writable($mountname)):
+		if(!@chmod($mountname, octdec($mode)) || !@chown($mountname, $owner) || !@chgrp($mountname, $group)):
+			if($mount['fstype'] != "ntfs" && $mount['fstype'] != "exfat" && $mount['fstype'] != "ext4fuse"):
 				write_log("Error: Failed to set access restrictions on directory '{$mountname}'");
-			}
-		}
-	}
-
+			endif;
+		endif;
+	endif;
 	return $result;
 }
-
 // Unmount the specified configured mount point.
 // Return 0 is successfull, 1 if error
-function disks_umount($mount)
-{
+function disks_umount($mount) {
 	global $g;
 
 	// Get memory disk unit for ISOs
-	if ("iso" === $mount['type']) {
+	if("iso" === $mount['type']):
 		// Get current mount list
 		$amountlist = get_mounts_list();
-
-		foreach ($amountlist as $amountk => $amountv) {
-			if (0 == strcmp($amountv['sharename'], $mount['sharename'])) {
+		foreach($amountlist as $amountk => $amountv):
+			if(0 == strcmp($amountv['sharename'], $mount['sharename'])):
 				// Extract memory disk unit id
 				preg_match("/^\/dev\/md(\d+)$/", $amountv['devicespecialfile'], $matches);
 				$mdunit = $matches[1];
 				break;
-			}
-		}
-	}
-
+			endif;
+		endforeach;
+	endif;
 	// Unmount mount point
 	$mountname = sprintf('%s/%s',$g['media_path'],$mount['sharename']);
-
-	if (mwexec("/sbin/umount -f '{$mountname}'") == 0) {
-		if(@rmdir("{$mountname}")) {
+	if(mwexec("/sbin/umount -f '{$mountname}'") == 0):
+		if(@rmdir("{$mountname}")):
 			write_log("Successfully unmounted '{$mountname}'");
 			$result = 0;
-		} else {
+		else:
 			write_log("Error: Failed to unmount '{$mountname}'");
 			$result = 1;
-		}
-	} else {
+		endif;
+	else:
 		write_log("Error: Failed to unmount '{$mountname}'");
 		$result = 1;
-	}
-
+	endif;
 	// Detach memory disk for ISOs
-	if (0 == $result && "iso" === $mount['type']) {
+	if(0 == $result && "iso" === $mount['type']):
 		$result = mwexec("/sbin/mdconfig -d -u {$mdunit}");
-	}
-
+	endif;
 	return $result;
 }
-
 // Advanced unmount the specified mount point without using the sharename,
 // e.g. used when the 'sharename' has been modified/changed. Use the device
 // special file (e.g. /dev/ad1p1) instead.
 // Return 0 if successful, 1 if error
-function disks_umount_ex($mount)
-{
+function disks_umount_ex($mount) {
 	// Get current mount list
 	$amountlist = get_mounts_list();
-
-	foreach ($amountlist as $amountk => $amountv) {
-		if (0 == strcmp($amountv['devicespecialfile'], $mount['devicespecialfile'])) {
+	foreach($amountlist as $amountk => $amountv):
+		if(0 == strcmp($amountv['devicespecialfile'], $mount['devicespecialfile'])):
 			$mountname = $amountv['mp'];
 			break;
-		}
-	}
-
+		endif;
+	endforeach;
 	$result = 0;
-	if (isset($mountname) && $mountname) {
-		if (mwexec("/sbin/umount -f '{$mountname}'") == 0) {
-			if(@rmdir("{$mountname}")) {
+	if(isset($mountname) && $mountname):
+		if(mwexec("/sbin/umount -f '{$mountname}'") == 0):
+			if(@rmdir("{$mountname}")):
 				write_log("Successfully unmounted '{$mountname}'");
 				$result = 0;
-			} else {
+			else:
 				write_log("Error: Failed to unmount '{$mountname}'");
 				$result = 1;
-			}
-		} else {
+			endif;
+		else:
 			write_log("Error: Failed to unmount '{$mountname}'");
 			$result = 1;
-		}
-	}
-
+		endif;
+	endif;
 	return $result;
 }
-
 // Check if mount point is mounted.
 // $mount - Mount point config array
 // Return 0 if not mounted, otherwise 1
-function disks_ismounted($mount)
-{
+function disks_ismounted($mount) {
 	// MUST CHECK IF IT'S NTFS filesystem
-	if (0 == strcmp($mount['fstype'],"ntfs")) {
+	if(0 == strcmp($mount['fstype'],"ntfs")):
 		return disks_ismounted_ex($mount['sharename'], "sharename");
-	} else if (0 == strcmp($mount['type'],"iso")) {
+	elseif(0 == strcmp($mount['type'],"iso")):
 		return disks_ismounted_ex($mount['sharename'], "sharename");
-	} else {
+	else:
 		return disks_ismounted_ex($mount['devicespecialfile'], "devicespecialfile");
-	}
+	endif;
 }
-
 // Check if mountpoint is mounted.
 // $var - The attribute value to search for
 // $key - The attribute name to search for
@@ -431,159 +404,148 @@ function disks_ismounted($mount)
 //        disks_ismounted_ex("data","sharename");
 //        disks_ismounted_ex("ad0","mdisk");
 // Return 0 if not mounted, otherwise 1
-function disks_ismounted_ex($var,$key)
-{
-	if (empty($var))
+function disks_ismounted_ex($var,$key) {
+	if(empty($var)):
 		return 0;
-
+	endif;
 	$result = 0;
-
 	// Get current mount list
 	$amountlist = get_mounts_list();
 
-	foreach ($amountlist as $amountk => $amountv) {
-		switch ($key) {
+	foreach($amountlist as $amountk => $amountv):
+		switch ($key):
 			case "mdisk":
 			case "devicespecialfile":
 				// Must find the $val (e.g. ad0) in 'mdisk' (e.g. ad0s1).
 				// Must find the $val (e.g. /dev/ad1) in 'devicespecialfile' (e.g. /dev/ad1s1).
-				if (0 == preg_match("/^\/dev\/gptid\//", $var) || 0 == preg_match("/^\/dev\/ufsid\//", $var)) {
+				if(0 == preg_match("/^\/dev\/gptid\//", $var) || 0 == preg_match("/^\/dev\/ufsid\//", $var)):
 					// complete path
-					if (0 == strcmp($amountv[$key], $var)) {
+					if(0 == strcmp($amountv[$key], $var)):
 						$result = 1;
 						break;
-					}
-				} else if (0 == preg_match("/^.+\/(\S{2,}\d+)([sp]\d+)$/", $var, $matches)) {
+					endif;
+				elseif (0 == preg_match("/^.+\/(\S{2,}\d+)([sp]\d+)$/", $var, $matches)):
 					// e.g. /dev/ad10, /dev/cd1
-					if (preg_match("/" . preg_quote($var, "/") . "\D+/", $amountv[$key])) {
+					if(preg_match("/" . preg_quote($var, "/") . "\D+/", $amountv[$key])):
 						$result = 1;
 						break;
-					}
-				} else {
+					endif;
+				else:
 					// e.g. /dev/da1p2
-					if (false !== strstr($amountv[$key], $var)) {
+					if(false !== strstr($amountv[$key], $var)):
 						$result = 1;
 						break;
-					}
-				}
+					endif;
+				endif;
 				break;
-
 			default:
-				if (0 == strcmp($amountv[$key], $var)) {
+				if(0 == strcmp($amountv[$key], $var)):
 					$result = 1;
 					break;
-				}
+				endif;
 				break;
-		}
-	}
-
+		endswitch;
+	endforeach;
 	return $result;
 }
-
 // Configure, create and start gvinum volume.
 // $uuid - UUID of the RAID to be configured.
 // Return 0 if successful, 1 if error
 function disks_raid_gvinum_configure($uuid) {
 	global $g, $config;
 
-	if (!is_array($config['gvinum']['vdisk']))
+	if(!is_array($config['gvinum']['vdisk'])):
 		return 1;
-
+	endif;
 	$index = array_search_ex($uuid, $config['gvinum']['vdisk'], "uuid");
-	if (false === $index)
+	if(false === $index):
 		return 1;
-
+	endif;
 	$vdisk = $config['gvinum']['vdisk'][$index];
-	if (!is_array($vdisk))
-		 return 1;
-
+	if(!is_array($vdisk)):
+		return 1;
+	endif;
 	// Generate the raid.conf file
 	$fd = fopen("{$g['varetc_path']}/raid-{$vdisk['name']}.conf", "w");
-	if (!$fd) {
+	if(!$fd):
 		write_console("Error: Failed to open raid.conf in services_raid_configure().\n");
 		return 1;
-	}
-
+	endif;
 	$raidconf="";
-	foreach ($vdisk['device'] as $devicek => $devicev) {
+	foreach($vdisk['device'] as $devicek => $devicev):
 		$raidconf .= <<<EOD
 drive disk_{$devicev} device {$devicev}
 
 EOD;
-	}
-
+	endforeach;
 	$raidconf .= <<<EOD
 volume {$vdisk['name']}
 
 EOD;
-	switch ($vdisk['type']) {
-			case "0":
-				$raidconf .= <<<EOD
+	switch($vdisk['type']):
+		case "0":
+			$raidconf .= <<<EOD
 plex org striped 256k
 
 EOD;
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					/* Get the disksize */
-					$diskinfo=disks_get_diskinfo($devicev);
-					/* $raidconf .= <<<EOD
+			foreach($vdisk['device'] as $devicek => $devicev):
+				/* Get the disksize */
+				$diskinfo=disks_get_diskinfo($devicev);
+				/* $raidconf .= <<<EOD
 sd length {$diskinfo['mediasize_mbytes']}M drive disk_{$devicev}
 
 EOD; */
-					$raidconf .= <<<EOD
+				$raidconf .= <<<EOD
 sd length 0 drive disk_{$devicev}
 
 EOD;
-				}
-				break;
-			case "1":
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					$raidconf .= <<<EOD
+			endforeach;
+			break;
+		case "1":
+			foreach($vdisk['device'] as $devicek => $devicev):
+				$raidconf .= <<<EOD
 plex org concat
 
 EOD;
-					/* Get the disksize */
-					$diskinfo=disks_get_diskinfo($devicev);
-					/* $raidconf .= <<<EOD
+				/* Get the disksize */
+				$diskinfo=disks_get_diskinfo($devicev);
+				/* $raidconf .= <<<EOD
 sd length {$diskinfo['mediasize_mbytes']}M drive disk_{$devicev}
 
 EOD; */
 
-					$raidconf .= <<<EOD
+				$raidconf .= <<<EOD
 sd length 0 drive disk_{$devicev}
 
 EOD;
-				}
-
-				break;
-			case "5":
+			endforeach;
+			break;
+		case "5":
 			$raidconf .= <<<EOD
 plex org raid5 256k
 
 EOD;
-				foreach ($vdisk['device'] as $devicek => $devicev) {
-					/* Get the disksize */
-					$diskinfo=disks_get_diskinfo($devicev);
-					/* $raidconf .= <<<EOD
+			foreach($vdisk['device'] as $devicek => $devicev):
+				/* Get the disksize */
+				$diskinfo=disks_get_diskinfo($devicev);
+				/* $raidconf .= <<<EOD
 sd length {$diskinfo['mediasize_mbytes']}M drive disk_{$devicev}
 
 EOD; */
 
-					$raidconf .= <<<EOD
+				$raidconf .= <<<EOD
 sd length 0 drive disk_{$devicev}
 
 EOD;
-				}
-				break;
-	}
+			endforeach;
+			break;
+	endswitch;
 	fwrite($fd, $raidconf);
 	fclose($fd);
-
 	// Create volume
 	mwexec("/sbin/gvinum create {$g['varetc_path']}/raid-{$vdisk['name']}.conf", true);
-
 	// Start volume
 	mwexec("/sbin/gvinum start {$vdisk['name']}", true);
-
 	return 0;
 }
 
@@ -798,14 +760,22 @@ function disks_raid_graid5_delete($uuid) {
 }
 // Initialize provider which needs to be encrypted.
 // Return 0 if successful, 1 if error
-function disks_geli_init($provider, $aalgo, $ealgo, $keylen, $passphrase, $verbose = false) {
+function disks_geli_init($provider,$aalgo,$ealgo,$keylen,$passphrase,$verbose = false) {
 	$param = "-J -";
 	$result = 1;
 	// Add additional parameters
-	if (true == $verbose) $param .= " -v";
-	if (0 !== strcmp($aalgo, "none")) $param .= " -a {$aalgo}";
-	if (!empty($ealgo)) $param .= " -e {$ealgo}";
-	if (!empty($keylen)) $param .= " -l {$keylen}";
+	if(true == $verbose):
+		$param .= " -v";
+	endif;
+	if(0 !== strcmp($aalgo, "none")):
+		$param .= " -a {$aalgo}";
+	endif;
+	if(!empty($ealgo)):
+		$param .= " -e {$ealgo}";
+	endif;
+	if(!empty($keylen)):
+		$param .= " -l {$keylen}";
+	endif;
 	// Init disk
 	$passphrase = escapeshellarg($passphrase);
 	system("/bin/echo {$passphrase} | /sbin/geli init {$param} {$provider} 2>&1", $result);
@@ -820,7 +790,9 @@ function disks_geli_attach($provider, $passphrase, $verbose = false) {
 	$param = "-j -";
 	$result = 1;
 	// Add additional parameters
-	if (true == $verbose) $param .= " -v";
+	if(true == $verbose):
+		$param .= " -v";
+	endif;
 	// Attach disk
 	$passphrase = escapeshellarg($passphrase);
 	system("/bin/echo {$passphrase} | /sbin/geli attach {$param} {$provider} 2>&1", $result);
@@ -830,18 +802,28 @@ function disks_geli_attach($provider, $passphrase, $verbose = false) {
 // and clear the keys from memory.
 // Return 0 if successful, 1 if error
 function disks_geli_detach($provider, $verbose = false) {
-	if (true == $verbose):
+	if(true == $verbose):
 		$result = system("/sbin/geli detach {$provider} 2>&1", $result);
 	else:
 		$result = mwexec("/sbin/geli detach {$provider}");
 	endif;
 	return $result;
 }
-// Kill (destroy) a geli encrypted volume.
-// Return 0 if successful, 1 if error
-function disks_geli_kill($provider)
-{
-	$result = mwexec("/sbin/geli kill {$provider}");
+/**
+ *	Kill (destroy) a geli encrypted volume.
+ *	Removes passphrase on boot flag.
+ *	Deactivates boot from geli encrypted device flag.
+ * @param string $provider The name of the provider, i.e. da5
+ * @return int Returns 0 if successful, 1 if error.
+ */
+function disks_geli_kill(string $provider = NULL) {
+	if(isset($provider)):
+		$esa_provider = escapeshellarg($provider);
+		mwexec(sprintf('/sbin/geli configure -B -G %s',$esa_provider));
+		$result = mwexec(sprintf('/sbin/geli kill %s',$esa_provider));
+	else:
+		$result = 0;
+	endif;
 	return $result;
 }
 // Detach all geli encrypted disks.
@@ -867,40 +849,41 @@ function disks_geli_detach_all() {
 // $verbose: Display additional information
 // Return 0 if successful, 1 if error
 function disks_geli_setkey($devicespecialfile, $oldpassphrase, $passphrase, $verbose = false) {
-	$param = "-J -";
+	$param = '-J -';
 	$result = 1;
 
 	// Extract provider data.
-	$provider = preg_replace('/(\S+)(\.eli)/', '${1}', $devicespecialfile);
+	$provider = preg_replace('/(\S+)(\.eli)/','${1}',$devicespecialfile);
 	// Add additional parameters
-	if (true == $verbose) $param .= " -v";
-	if (0 == disks_exists($devicespecialfile)) {
+	if(true == $verbose):
+		$param .= ' -v';
+	endif;
+	if(0 == disks_exists($devicespecialfile)):
 		// Provider is already attached
 		$passphrase = escapeshellarg($passphrase);
 		system("/bin/echo {$passphrase} | /sbin/geli setkey {$param} {$provider} 2>&1", $result);
-	} else {
+	else:
 		// Provider has not already been attached
 		$oldpassphrase = escapeshellarg($oldpassphrase);
 		system("/bin/echo {$oldpassphrase} | /sbin/geli attach -j - {$provider} 2>&1", $result0);
-		if ($result0 == 0) {
+		if($result0 == 0):
 			$passphrase = escapeshellarg($passphrase);
 			system("/bin/echo {$passphrase} | /sbin/geli setkey {$param} {$provider} 2>&1", $result);
 			system("/sbin/geli detach {$provider} 2>&1", $result0);
-		}
-	}
+		endif;
+	endif;
 
 	return $result;
 }
 // Format disk. Error and warning messages are redirected to stdout.
 // Return none
-function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k, $zfsgpt)
-{
+function disks_format($disk,$type,$notinitmbr,$minspace,$volumelabel,$aft4k,$zfsgpt) {
 	global $g;
 
 	// Get disk information
 	$diskinfo = disks_get_diskinfo($disk);
 	set_kern_geom_debugflags(0x10);
-	if (!$notinitmbr) {
+	if(!$notinitmbr):
 		echo gtext("Deleting MBR and partition table")."...\n";
 		$cmd =  sprintf('/sbin/gpart destroy -F %1$s 1>/dev/null 2>&1', $disk);
 		echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
@@ -913,8 +896,8 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 		$cmd = sprintf('/bin/dd if=/dev/zero of=%1$s bs=%2$d count=%3$d oseek=%4$d 2>&1', $disk, $block_size, $block_count, $diskinfo['mediasize_sectors'] - $block_count);
 		echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
 		system($cmd);
-	}
-	if ($aft4k) {
+	endif;
+	if($aft4k):
 		// Advanced Format 4KB (512 x 8)
 		// IDENTIFY = 6003
 		$aft_secs = (1 << 3);
@@ -931,9 +914,8 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 		$aft_counts -= 1 + ((1 + 32) * 2);
 		$aft_counts -= ($aft_aligned - $aft_gptstart);
 		$aft_counts = floor($aft_counts / $aft_align) * $aft_align;
-	}
-
-	switch ($type) {
+	endif;
+	switch($type):
 		case "ufsgpt":
 			echo gtext("Creating partition")."...\n";
 			// Destroy old GPT partition
@@ -942,103 +924,92 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			// Create new GPT partition
 			//system("/sbin/gpt create -f {$disk} 2>&1");
 			system("/sbin/gpart create -s gpt {$disk} 2>&1");
-			if ($aft4k) {
+			if($aft4k):
 				//system("/sbin/gpt add -b $aft_aligned -s $aft_counts -t ufs {$disk} 2>&1");
 				system("/sbin/gpart add -b $aft_aligned -s $aft_counts -t freebsd-ufs {$disk} 2>&1");
-			} else {
+			else:
 				//system("/sbin/gpt add -t ufs {$disk} 2>&1");
 				system("/sbin/gpart add -t freebsd-ufs {$disk} 2>&1");
-			}
-
+			endif;
 			// Create filesystem
 			echo gtext("Creating filesystem with 'Soft Updates'")."...\n";
 			$param = "-U -j";
-			if (!empty($volumelabel))
+			if(!empty($volumelabel)):
 				$param .= " -L " . escapeshellarg($volumelabel);
-			if (!empty($minspace))
+			endif;
+			if(!empty($minspace)):
 				$param .= " -m {$minspace}";
-			if ($aft4k) {
+			endif;
+			if($aft4k):
 				echo sprintf(gtext("Using %s bytes fragment size."), $aft_bytes)."\n";
 				$param .= " -S $aft_bytes -b $aft_blocksize -f $aft_bytes";
-			}
+			endif;
 			//echo "/sbin/newfs {$param} {$disk}p1\n";
 			system("/sbin/newfs {$param} {$disk}p1 2>&1");
-
-			echo "\n";
+			echo PHP_EOL;
 			echo gtext("Created UFS file system:")."\n";
 			system("/sbin/dumpfs -l {$disk}p1 2>&1");
-			echo "\n";
+			echo PHP_EOL;
 			break;
-
 		case "softraid":
 		case "zfs":
 			// Calculate last sector of disk containing GEOM metadata.
 			$oseek = $diskinfo['mediasize_sectors'] - 1;
-
 			// Destroy old GPT partition
 			system("/sbin/gpart destroy -F {$disk} 1>/dev/null 2>&1");
-
 			// Initialize disk
 			// Ensure that existing GEOM metadata is completely removed.
 			echo gtext("Deleting GEOM metadata")."...\n";
 			system("/bin/dd if=/dev/zero of={$disk} bs={$diskinfo['sectorsize']} oseek={$oseek} count=1 2>&1");
-			if ($zfsgpt) {
+			if($zfsgpt):
 				echo gtext("Creating partition")."...\n";
 				$param = ' -s gpt';
 				$cmd = sprintf('/sbin/gpart create %2$s %1$s 2>&1', $disk, $param);
 				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
 				system($cmd);
 				$param = ' -a 4m -t freebsd-zfs';
-				if (preg_match('/\S/', $volumelabel)) {
+				if(preg_match('/\S/', $volumelabel)):
 					$param .= ' -l ' . escapeshellarg(trim($volumelabel));
-				}
+				endif;
 				$cmd = sprintf('/sbin/gpart add %2$s %1$s 2>&1', $disk, $param);
 				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
 				system($cmd);
-			}
+			endif;
 			break;
-
 		case "msdos":
 			// Get valid CHS information. 'diskinfo' gets values from harddisk firmware that
 			// are maybe unusable by 'fdisk' (e.g. sectors = 255, fdisk requires <= 63).
 			disk_sanitize_bios_geom($diskinfo);
-
 			// Create fdisk config file (fdisk.conf)
-			if (1 == disks_create_fdisk_configfile(11, $diskinfo, "{$g['tmp_path']}/fdisk.conf")) {
+			if(1 == disks_create_fdisk_configfile(11, $diskinfo, "{$g['tmp_path']}/fdisk.conf")):
 				echo("Error: Failed to create '{$g['tmp_path']}/fdisk.conf'.\n");
 				break;
-			}
-
+			endif;
 			// Initialize disk
 			echo gtext("Creating partition")."...\n";
 			system("/sbin/fdisk -v -f {$g['tmp_path']}/fdisk.conf {$disk} 2>&1");
 			@unlink("{$g['tmp_path']}/fdisk.conf");
-
 			// Create filesystem
 			echo gtext("Creating filesystem")."...\n";
 			$param = "-F 32";
-			if (!empty($volumelabel))
+			if(!empty($volumelabel)):
 				$param .= " -L " . escapeshellarg($volumelabel);
+			endif;
 			system("/sbin/newfs_msdos {$param} {$disk}s1 2>&1");
-
 			break;
-
 		case "ext2":
 			// Get valid CHS information. 'diskinfo' gets values from harddisk firmware that
 			// are maybe unusable by 'fdisk' (e.g. sectors = 255, fdisk requires <= 63).
 			disk_sanitize_bios_geom($diskinfo);
-
 			// Create fdisk config file (fdisk.conf)
-			if (1 == disks_create_fdisk_configfile(131, $diskinfo, "{$g['tmp_path']}/fdisk.conf")) {
+			if(1 == disks_create_fdisk_configfile(131, $diskinfo, "{$g['tmp_path']}/fdisk.conf")):
 				echo("Error: Failed to create '{$g['tmp_path']}/fdisk.conf'.\n");
 				break;
-			}
-
+			endif;
 			// Initialize disk
 			echo gtext("Creating partition")."...\n";
 			system("/sbin/fdisk -v -f {$g['tmp_path']}/fdisk.conf {$disk} 2>&1");
 			@unlink("{$g['tmp_path']}/fdisk.conf");
-
 			// Create filesystem
 			// Note: Use revision 0 when formating EXT2 filesystems, otherwise
 			// mount_ext2fs fails because revision 1 uses a inode size of 256 bytes
@@ -1050,12 +1021,10 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			if (!empty($volumelabel))
 				$param .= " -L " . escapeshellarg($volumelabel);
 			system("/usr/local/sbin/mke2fs {$param} {$disk}s1 2>&1");
-
 			break;
-	}
+	endswitch;
 	set_kern_geom_debugflags(0);
-
-	echo gtext("Done")."!\n";
+	echo gtext('Done!'),PHP_EOL;
 }
 
 // File system consistency check and interactive repair.
@@ -1064,32 +1033,28 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 // device - Name of the device (e.g. /dev/ad1s1).
 // umount - Unmount disk if necessary.
 // Return 0 if successful, 1 if error
-function disks_fsck($device,$umount = false)
-{
+function disks_fsck($device,$umount = false) {
 	global $config;
 
 	// Check if there exits any mounts
-	if(!is_array($config['mounts']['mount']))
+	if(!is_array($config['mounts']['mount'])):
 		return 1;
-
+	endif;
 	// Get the id of the disk
 	$id = array_search_ex($device, $config['mounts']['mount'], "devicespecialfile");
-	if (false === $id)
+	if(false === $id):
 		return 1;
-
+	endif;
 	// Get the mount configuration
 	$mount = $config['mounts']['mount'][$id];
-
 	// Check if disk is mounted
 	$ismounted = disks_ismounted($mount);
-
 	// Unmount disk temporarily if necessary
-	if($umount && $ismounted) {
+	if($umount && $ismounted):
 		echo("<strong class='red'>" . gtext('Note') . ":</strong> " . gtext("The disk is currently mounted! The mount point will be removed temporarily to perform selected command.") . "<br /><br />");
 		disks_umount($mount);
-	}
-
-	switch($mount['fstype']) {
+	endif;
+	switch($mount['fstype']):
 		case "cd9660":
 		case "ntfs":
 		case "exfat":
@@ -1097,16 +1062,13 @@ function disks_fsck($device,$umount = false)
 		default:
 			system("/sbin/fsck -t {$mount['fstype']} -y -f " . escapeshellarg($device));
 			break;
-	}
-
+	endswitch;
 	// Remount disk again if necessary
-	if($umount && $ismounted) {
+	if($umount && $ismounted):
 		disks_mount($mount);
-	}
-
+	endif;
 	return 0;
 }
-
 // Get list of partition information from disk.
 // $disk - Name of the disk (e.g. ad0)
 // Result is in the form:
@@ -1121,113 +1083,106 @@ function disks_fsck($device,$umount = false)
 // Called in disks_manage_tools.php
 // Return array of partition info
 function disks_get_partition_info($disk) {
-  exec("/sbin/fdisk -s {$disk}", $rawdata);
-
-  array_shift($rawdata);
-  array_shift($rawdata);
-
-  $result = [];
-  foreach($rawdata as $partinfo)   {
-    $apartinfo = preg_split("/\s+/", $partinfo);
-    $partid = chop($apartinfo[1],":");
-    $result[$partid] = [];
+	exec("/sbin/fdisk -s {$disk}", $rawdata);
+	array_shift($rawdata);
+	array_shift($rawdata);
+	$result = [];
+	foreach($rawdata as $partinfo):
+		$apartinfo = preg_split("/\s+/", $partinfo);
+		$partid = chop($apartinfo[1],":");
+		$result[$partid] = [];
 		$result[$partid]['start'] = chop($apartinfo[2]);
 		$result[$partid]['size']  = chop($apartinfo[3]);
 		$result[$partid]['type']  = chop($apartinfo[4]);
 		$result[$partid]['flags'] = chop($apartinfo[5]);
-  }
-
-  return $result;
+	endforeach;
+	return $result;
 }
-
 // Get raw UUID from partition.
 function disks_get_rawuuid($partition, &$out = false) {
 	$rawuuid = "";
 	$devname = $partition;
-
-	if (preg_match("/^\/dev\/(.+)(p\d+|s\d)(\..+)?$/", $partition, $m)) {
+	if(preg_match("/^\/dev\/(.+)(p\d+|s\d)(\..+)?$/", $partition, $m)):
 		$devname = $m[1];
-	}
+	endif;
 	exec("/sbin/gpart list {$devname} 2>&1", $rawdata);
-	if ($out !== false && !empty($rawdata))
+	if($out !== false && !empty($rawdata)):
 		$out = $rawdata;
-	if (!empty($rawdata)) {
+	endif;
+	if(!empty($rawdata)):
 		$scheme = "";
 		$name = "";
 		$rawuuids = [];
 		$found_providers = 0;
-		foreach ($rawdata as $line) {
-			if (preg_match("/^scheme:\s+(.*)$/", $line, $m)) {
+		foreach($rawdata as $line):
+			if(preg_match("/^scheme:\s+(.*)$/", $line, $m)):
 				$scheme = $m[1];
-			}
-			if (preg_match("/^Providers:/", $line)) {
+			endif;
+			if(preg_match("/^Providers:/", $line)):
 				$found_providers = 1;
 				continue;
-			}
-			if (preg_match("/^Consumers:/", $line)) {
+			endif;
+			if(preg_match("/^Consumers:/", $line)):
 				break;
-			}
-			if ($found_providers && preg_match("/^.+\s+Name:\s+(.+)$/", $line, $m)) {
+			endif;
+			if($found_providers && preg_match("/^.+\s+Name:\s+(.+)$/", $line, $m)):
 				$name = "/dev/".$m[1];
 				continue;
-			}
-			if ($found_providers && !empty($name) && preg_match("/^\s+rawuuid:\s+(.+)$/", $line, $m)) {
+			endif;
+			if($found_providers && !empty($name) && preg_match("/^\s+rawuuid:\s+(.+)$/", $line, $m)):
 				$rawuuids[$name] = $m[1];
 				continue;
-			}
-		}
-		if (!empty($rawuuids)) {
-			foreach ($rawuuids as $k => $v) {
-				if ($partition == $k) {
+			endif;
+		endforeach;
+		if(!empty($rawuuids)):
+			foreach ($rawuuids as $k => $v):
+				if($partition == $k):
 					$rawuuid = $v;
 					break;
-				}
-			}
-		}
-	}
+				endif;
+			endforeach;
+		endif;
+	endif;
 	return $rawuuid;
 }
-
 // Get UFS ID from partition.
 // the partition (e.g. ada1p1)
 // Result is ufsid.
 function disks_get_ufsid($partition, &$out = false) {
 	$ufsid = "";
 	exec("/sbin/dumpfs -l ${partition} 2>&1", $rawdata);
-	if ($out !== false && !empty($rawdata))
+	if($out !== false && !empty($rawdata)):
 		$out = $rawdata;
-	if (!empty($rawdata)) {
+	endif;
+	if(!empty($rawdata)):
 		$info = preg_split("/\s+/", $rawdata[0]);
-		if (!empty($info[0]) && preg_match("/^\/dev\/ufsid\/(.*)$/", $info[0], $m)) {
+		if(!empty($info[0]) && preg_match("/^\/dev\/ufsid\/(.*)$/", $info[0], $m)):
 			$ufsid = $m[1];
-		}
-	}
+		endif;
+	endif;
 	return $ufsid;
 }
-
 // Get all disk labels.
 function disks_get_labels() {
 	$result = [];
 	exec("/sbin/geom label status -s", $rawdata);
-	foreach($rawdata as $line) {
-		if (preg_match("/^\s*(\S+)\s+.*?\s+(.+)$/", $line, $m)) {
+	foreach($rawdata as $line):
+		if(preg_match("/^\s*(\S+)\s+.*?\s+(.+)$/", $line, $m)):
 			$result[$m[1]] = $m[2];
-		}
-	}
+		endif;
+	endforeach;
 	return $result;
 }
-
 function disks_label_to_device($device) {
 	$labels = disks_get_labels();
-	foreach($labels as $key => $val) {
-		if (strcmp($device, "/dev/".$key) == 0) {
+	foreach($labels as $key => $val):
+		if(strcmp($device, "/dev/".$key) == 0):
 			// found label
 			return "/dev/".$val;
-		}
-	}
+		endif;
+	endforeach;
 	return $device;
 }
-
 // Get ad disk map.
 // Result is in the form:
 // Array
@@ -1239,20 +1194,21 @@ function disks_label_to_device($device) {
 function disks_get_admap() {
 	$result = [];
 	$dir = "/dev";
-	if (($dh = opendir($dir)) !== false) {
-		while (($file = readdir($dh)) !== false) {
-			if (!preg_match('/^ad[0-9]+.*/', $file)) continue;
+	if(($dh = opendir($dir)) !== false):
+		while(($file = readdir($dh)) !== false):
+			if(!preg_match('/^ad[0-9]+.*/', $file)):
+				continue;
+			endif;
 			// adXX -> adaYYY
-			if (is_link($dir."/".$file)) {
+			if(is_link($dir."/".$file)):
 				$link = readlink($dir."/".$file);
 				$result[$file] = $link;
-			}
-		}
+			endif;
+		endwhile;
 		closedir($dh);
-	}
+	endif;
 	return $result;
 }
-
 // Get disk information.
 // $disk - Name of the disk (e.g. ad0)
 // Result is in the form:
@@ -1270,13 +1226,11 @@ function disks_get_admap() {
 // 	[sectors] => 63
 // )
 // Return array containing diskinfo.
-function disks_get_diskinfo($disk)
-{
+function disks_get_diskinfo($disk) {
 	$result = [];
 	exec("/usr/sbin/diskinfo {$disk}", $rawdata);
-	if (isset($rawdata[0])) {
+	if(isset($rawdata[0])):
 		$diskinfo = preg_split("/\s+/", $rawdata[0]);
-
 		$result['name'] = chop($diskinfo[0]);
 		$result['sectorsize'] = chop($diskinfo[1]);
 		$result['mediasize_bytes'] = chop($diskinfo[2]);
@@ -1284,59 +1238,51 @@ function disks_get_diskinfo($disk)
 		$result['mediasize_sectors'] = chop($diskinfo[3]);
 		$result['stripesize'] = chop($diskinfo[4]);
 		$result['stripeoffset'] = chop($diskinfo[5]);
-		if (isset($diskinfo[6]) && isset($diskinfo[7]) && isset($diskinfo[8])) {
+		if(isset($diskinfo[6]) && isset($diskinfo[7]) && isset($diskinfo[8])):
 			$result['cylinders'] = chop($diskinfo[6]);
 			$result['heads'] = chop($diskinfo[7]);
 			$result['sectors'] = chop($diskinfo[8]);
-		} else {
+		else:
 			/* XXX
 			$result['heads'] = 16;
 			$result['sectors'] = 63;
 			$result['cylinders'] = ceil($result['mediasize_sectors'] / ($result['heads'] * $result['sectors']));
 			*/
-		}
-	}
+		endif;
+	endif;
 	return $result;
 }
-
 // Get cylinders/heads/sectors from disk.
 // $info - Array containing CHS information.
-//         [1] => Array
-//         (
-// 	          [cylinders] => 10158
-//            [heads] => 16
-//            [sectors] => 63
-//         )
+//		[1] => Array(
+//			[cylinders] => 10158
+//			[heads] => 16
+//			[sectors] => 63
+//		)
 // Return 0 if successful, 1 if error.
-function disks_get_chs_info($disk, &$info)
-{
-	if (!is_array($info))
+function disks_get_chs_info($disk, &$info) {
+	if (!is_array($info)):
 		return 1;
-
+	endif;
 	exec("/sbin/fdisk -t {$disk}", $rawdata);
-
 	// Parse string: cylinders=77826 heads=255 sectors/track=63 (16065 blks/cyl)
-	if (0 == preg_match("/.+cylinders=(\d+) heads=(\d+) sectors\/track=(\d+) .+/", implode($rawdata), $chs))
+	if(0 == preg_match("/.+cylinders=(\d+) heads=(\d+) sectors\/track=(\d+) .+/", implode($rawdata), $chs)):
 		return 1;
-
+	endif;
 	$info['cylinders'] = $chs[1];
 	$info['heads'] = $chs[2];
 	$info['sectors'] = $chs[3];
-
 	return 0;
 }
-
 // Check if given disk is available.
 // $disk - e.g. /dev/ad4, /dev/ad2.eli
 // Return 0 if yes, 1 if no.
-function disks_exists($disk)
-{
-	if (file_exists($disk)) {
+function disks_exists($disk) {
+	if(file_exists($disk)):
 		return 0;
-	}
+	endif;
 	return 1;
 }
-
 // Wrapper to execute geom commands.
 // $class   - Name of geom class (e.g. stripe, mirror, vinum, raid5, ...)
 // $command - Command to execute (e.g. list, status, load, activate, ...).
@@ -1346,74 +1292,70 @@ function disks_exists($disk)
 // $stderr  - Redirect stderr to stdout to display error messages too.
 // $output  - Output array filled with every line of output.
 // Return 0 if successful, 1 if error.
-function disks_geom_cmd($class, $command, $param, $verbose = false, $stderr = true, &$output = false)
-{
+function disks_geom_cmd($class, $command, $param, $verbose = false, $stderr = true, &$output = false) {
 	$result = 1;
-
-	if ("vinum" !== $class)
+	if("vinum" !== $class):
 		$cmd = "/sbin/geom {$class} {$command} {$param}";
-	else
+	else:
 		$cmd = "/sbin/gvinum {$command} {$param}"; // gvinum can't be executed via geom
-
-	if (true === $verbose) {
-		if (true === $stderr)
+	endif;
+	if(true === $verbose):
+		if(true === $stderr):
 			$cmd .= " 2>&1"; // Redirect error message to stdout
-
-		if (false !== $output) {
+		endif;
+		if(false !== $output):
 			exec($cmd, $output, $result);
-		} else {
+		else:
 			system($cmd, $result);
-		}
-	}	else {
+		endif;
+	else:
 		$result = mwexec($cmd);
-	}
-
+	endif;
 	return $result;
 }
-
-// Calculate valid cylinders/heads/sectors.
-// Code taken from FreeBSD kernel /src/lib/libdisk/change.c.
-// $info [in|out] - Array containing CHS information.
-//                 [1] => Array
-//                 (
-// 	                 [name] => ad0
-// 	                 [sectorsize]  => 512
-// 	                 [mediasize_bytes]  => 5242503168
-// 	                 [mediasize_mbytes]  => 4999
-// 	                 [mediasize_sectors]  => 10239264
-// 	                 [cylinders] => 10158
-// 	                 [heads] => 16
-// 	                 [sectors] => 63
-//                 )
+//	Calculate valid cylinders/heads/sectors.
+//	Code taken from FreeBSD kernel /src/lib/libdisk/change.c.
+//	$info [in|out] - Array containing CHS information.
+//		[1] => Array(
+//			[name] => ad0
+//			[sectorsize]  => 512
+//			[mediasize_bytes]  => 5242503168
+//			[mediasize_mbytes]  => 4999
+//			[mediasize_sectors]  => 10239264
+//			[cylinders] => 10158
+//			[heads] => 16
+//			[sectors] => 63
+//		)
 // Return: None
 function disk_sanitize_bios_geom(&$info) {
 	$sane = 1;
-
-	if ($info['cylinders'] > 1024)
+	if ($info['cylinders'] > 1024):
 		$sane = 0;
-	if ($info['heads'] > 16)
+	endif;
+	if($info['heads'] > 16):
 		$sane = 0;
-	if ($info['sectors'] > 63)
+	endif;
+	if($info['sectors'] > 63):
 		$sane = 0;
-	if ($info['cylinders'] * $info['heads'] * $info['sectors'] != $info['mediasize_sectors'])
+	endif;
+	if($info['cylinders'] * $info['heads'] * $info['sectors'] != $info['mediasize_sectors']):
 		$sane = 0;
-	if (0 != $sane)
+	endif;
+	if(0 != $sane):
 		return;
-
+	endif;
 	// First try something that IDE can handle
 	$info['sectors'] = 63;
 	$info['heads'] = 16;
 	$info['cylinders'] = intval($info['mediasize_sectors'] / ($info['sectors'] * $info['heads']));
-
-	if ($info['cylinders'] < 1024)
+	if ($info['cylinders'] < 1024):
 		return;
-
+	endif;
 	// Hmm, try harder...
 	// Assume standard SCSI parameter
 	$info['heads'] = 255;
 	$info['cylinders'] = intval($info['mediasize_sectors'] / ($info['sectors'] * $info['heads']));
 }
-
 // Create fdisk configuration file.
 // $type - File system identified (131 for EXT2, 11 for MSDOS)
 // $diskinfo - Array
@@ -1432,9 +1374,9 @@ function disk_sanitize_bios_geom(&$info) {
 function disks_create_fdisk_configfile($type, $diskinfo, $file) {
 	global $g;
 
-	if (!is_array($diskinfo))
+	if (!is_array($diskinfo)):
 		return 1;
-
+	endif;
 	$fdiskconf = <<<EOD
 g c{$diskinfo['cylinders']} h{$diskinfo['heads']} s{$diskinfo['sectors']}
 p 1 {$type} {$diskinfo['sectors']} {$diskinfo['mediasize_sectors']}
@@ -1444,90 +1386,74 @@ p 4 0 0 0
 a 1
 
 EOD;
-
-	if (false === file_put_contents($file, $fdiskconf)) {
+	if(false === file_put_contents($file, $fdiskconf)):
 		write_log("Error: Failed to create '{$file}'.");
 		return 1;
-	}
-
+	endif;
 	return 0;
 }
-
 /**
  * Rescan disks after a Hotswap has been performed
  */ 
 function disks_rescan() {
 	mwexec2("camcontrol rescan all");
 }
-
 // verify disks
 function disks_verify_all_disks($a_phy_disks) {
 	global $config;
 
 	$result = [];
-
 	array_make_branch($config,'disks','disk');
 	$conf_disks = $config['disks']['disk'];
 	if(empty($conf_disks)):
 		return $result;
 	endif;
-
-	foreach ($conf_disks as $conf_disk) {
-        $disk_exists =0;
-
-        foreach ($a_phy_disks as $phy_disk){
-            if ($phy_disk['name'] === $conf_disk['name']){
-                $disk_exists = 1;
-                $disk_error = 0;
-
-		if ($phy_disk['type'] === "HAST")
-			continue;
-
-		if (($phy_disk['serial'] == "n/a") || ($phy_disk['serial'] == gtext("n/a"))){
-			$phy_disk_serial = "";
-		} else{
-			$phy_disk_serial = $phy_disk['serial'];
-		}
-
-                if ($phy_disk_serial !== $conf_disk['serial']){
-                    // check if conf_disk is moved
-                    if( !empty($conf_disk['serial']) ){
-                        $a_phy_disks1 = $a_phy_disks;
-
-                        foreach($a_phy_disks1 as $disk1){
-                            if($disk1['serial'] === $conf_disk['serial']){
-                                $result[$conf_disk['name']]['new_devicespecialfile'] = '/dev/'.$disk1['name'];
-                                $disk_error += 1; // moved/shuffled
-                            }
-                        }
-                    }
-
-                    $result[$conf_disk['name']]['old_serial'] = $conf_disk['serial'];
-                    $result[$conf_disk['name']]['new_serial'] = $phy_disk_serial;
-                    $disk_error += 2; // disk changed
-                }
-
-                if ($phy_disk['controller'].$phy_disk['controller_id'] !== $conf_disk['controller'].$conf_disk['controller_id']){
-                    $result[$conf_disk['name']]['config_controller'] = $conf_disk['controller'].$conf_disk['controller_id'];
-                    $result[$conf_disk['name']]['new_controller'] = $phy_disk['controller'].$phy_disk['controller_id'];
-                    $disk_error += 4; // controller changed
-                }
-
-                if ($disk_error > 0){
-                    $result[$conf_disk['name']]['error'] = $disk_error;
-                }
-            }
-        }
-
-        if ($disk_exists == 0){
-            $result[$conf_disk['name']]['old_serial'] = $conf_disk['serial'];
-            $result[$conf_disk['name']]['error'] += 8; //disk removed
-        }
-    }
-
+	foreach($conf_disks as $conf_disk):
+		$disk_exists =0;
+		foreach($a_phy_disks as $phy_disk):
+			if($phy_disk['name'] === $conf_disk['name']):
+				$disk_exists = 1;
+				$disk_error = 0;
+				if($phy_disk['type'] === "HAST"):
+					continue;
+				endif;
+				if(($phy_disk['serial'] == "n/a") || ($phy_disk['serial'] == gtext("n/a"))):
+					$phy_disk_serial = "";
+				else:
+					$phy_disk_serial = $phy_disk['serial'];
+				endif;
+				if($phy_disk_serial !== $conf_disk['serial']):
+					// check if conf_disk is moved
+					if(!empty($conf_disk['serial']) ):
+						$a_phy_disks1 = $a_phy_disks;
+						foreach($a_phy_disks1 as $disk1):
+							if($disk1['serial'] === $conf_disk['serial']):
+								$result[$conf_disk['name']]['new_devicespecialfile'] = '/dev/'.$disk1['name'];
+								$disk_error += 1; // moved/shuffled
+							endif;
+						endforeach;
+					endif;
+					$result[$conf_disk['name']]['old_serial'] = $conf_disk['serial'];
+					$result[$conf_disk['name']]['new_serial'] = $phy_disk_serial;
+					$disk_error += 2; // disk changed
+				endif;
+				if($phy_disk['controller'].$phy_disk['controller_id'] !== $conf_disk['controller'].$conf_disk['controller_id']):
+					$result[$conf_disk['name']]['config_controller'] = $conf_disk['controller'].$conf_disk['controller_id'];
+					$result[$conf_disk['name']]['new_controller'] = $phy_disk['controller'].$phy_disk['controller_id'];
+					$disk_error += 4; // controller changed
+				endif;
+				if($disk_error > 0):
+					$result[$conf_disk['name']]['error'] = $disk_error;
+				endif;
+			endif;
+		endforeach;
+		if($disk_exists == 0):
+			$result[$conf_disk['name']]['old_serial'] = $conf_disk['serial'];
+			$result[$conf_disk['name']]['error'] += 8; //disk removed
+		endif;
+	endforeach;
 	return $result;
 }
-
 // update mount lists after import disks
 function disks_update_mounts() {
 	global $config;
@@ -1536,123 +1462,134 @@ function disks_update_mounts() {
 	array_make_branch($config,'disks','disk');
 	array_make_branch($config,'mounts','mount');
 	$disks = $config['disks']['disk'];
-	foreach ($disks as $diskv) {
-
+	foreach ($disks as $diskv):
 		$name = $diskv['name'];
 		$type = $diskv['type'];
 		$fstype = $diskv['fstype'];
 		$dev = $diskv['devicespecialfile'];
-		if ($fstype == 'ufs' || $fstype == 'ufsgpt' || $fstype == 'ufs_no_su'
-		    || $fstype == 'ufsgpt_no_su') {
-			foreach ($config['mounts']['mount'] as &$mountv) {
-				if ($mountv['fstype'] != "ufs")
+		if($fstype == 'ufs' || $fstype == 'ufsgpt' || $fstype == 'ufs_no_su' || $fstype == 'ufsgpt_no_su'):
+			foreach ($config['mounts']['mount'] as &$mountv):
+				if($mountv['fstype'] != "ufs"):
 					continue;
+				endif;
 				$mdisk = $mountv['mdisk'];
 				$partition = $mountv['partition'];
 				$file = $mountv['devicespecialfile'];
-				if (!file_exists("{$dev}{$partition}"))
+				if(!file_exists("{$dev}{$partition}")):
 					continue;
+				endif;
 				$ufsid = disks_get_ufsid("{$dev}{$partition}");
-				if (empty($ufsid))
+				if(empty($ufsid)):
 					continue;
-				if ($file != "/dev/ufsid/{$ufsid}")
+				endif;
+				if($file != "/dev/ufsid/{$ufsid}"):
 					continue;
+				endif;
 				// UFSID matched.
 				$mountv['mdisk'] = $dev;
 				//$mountv['devicespecialfile'] = "{$dev}{$partition}";
 				$mountv['devicespecialfile'] = "/dev/ufsid/{$ufsid}";
 				$need_write_config = true;
-			}
+			endforeach;
 			unset($mountv);
-		} else if ($fstype == 'ntfs') {
-			foreach ($config['mounts']['mount'] as &$mountv) {
-				if ($mountv['fstype'] != "ntfs")
+		elseif($fstype == 'ntfs'):
+			foreach ($config['mounts']['mount'] as &$mountv):
+				if($mountv['fstype'] != "ntfs"):
 					continue;
+				endif;
 				$mdisk = $mountv['mdisk'];
 				$partition = $mountv['partition'];
 				$file = $mountv['devicespecialfile'];
-				if (!file_exists("{$dev}{$partition}"))
+				if(!file_exists("{$dev}{$partition}")):
 					continue;
-				if (empty($mountv['rawuuid']))
+				endif;
+				if(empty($mountv['rawuuid'])):
 					continue;
+				endif;
 				$rawuuid = disks_get_rawuuid("{$dev}{$partition}");
-				if (empty($rawuuid))
+				if(empty($rawuuid)):
 					continue;
-				if ($rawuuid != $mountv['rawuuid'])
+				endif;
+				if($rawuuid != $mountv['rawuuid']):
 					continue;
+				endif;
 				// raw uuid matched.
 				$mountv['mdisk'] = $dev;
 				$mountv['devicespecialfile'] = "{$dev}{$partition}";
 				$need_write_config = true;
-			}
+			endforeach;
 			unset($mountv);
-		} else {
+		else:
 			// not supported
-		}
-	}
-	if ($need_write_config) {
+		endif;
+	endforeach;
+	if($need_write_config):
 		write_config();
-	}
+	endif;
 }
-
 // detect filesystem
 function disks_try_zfs($file) {
 	mwexec2("/usr/sbin/zdb -l {$file} | grep version 2>/dev/null", $rawdata);
-	if (empty($rawdata))
+	if(empty($rawdata)):
 		return false;
+	endif;
 	return "ZFS";
 }
-
 function disks_try_ntfs($file) {
 	$mntpath = "/tmp/disks_import";
-	if (0 != mwexec("/usr/local/bin/ntfs-3g -o ro {$file} {$mntpath} 2>/dev/null"))
+	if(0 != mwexec("/usr/local/bin/ntfs-3g -o ro {$file} {$mntpath} 2>/dev/null")):
 		return false;
-	if (1 == mwexec("/sbin/umount {$mntpath}"))
+	endif;
+	if(1 == mwexec("/sbin/umount {$mntpath}")):
 		return false;
+	endif;
 	return "NTFS";
 }
-
 function disks_try_ext2($file) {
-	if (0 != mwexec("/usr/local/sbin/tune2fs -l {$file} 2>/dev/null"))
+	if(0 != mwexec("/usr/local/sbin/tune2fs -l {$file} 2>/dev/null")):
 		return false;
+	endif;
 	return "EXT2";
 }
-
 function disks_try_exfat($file) {
 	$mntpath = "/tmp/disks_import";
-	if (0 != mwexec("/usr/local/bin/mount.exfat -o ro {$file} {$mntpath} 2>/dev/null"))
+	if(0 != mwexec("/usr/local/bin/mount.exfat -o ro {$file} {$mntpath} 2>/dev/null")):
 		return false;
-	if (1 == mwexec("/sbin/umount {$mntpath}"))
+	endif;
+	if(1 == mwexec("/sbin/umount {$mntpath}")):
 		return false;
+	endif;
 	return "EXFAT";
 }
-
 function disks_import_try_allfs($dev, &$additional_fs_info) {
 	$additional_fs_info = false;
 	$mntpath = "/tmp/disks_import";
-
 	// direct device
 	$devs = ["{$dev}"];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach ($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufs";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if(!empty($zfs)):
 				return "zfs";
+			endif;
 			$ntfs = disks_try_ntfs($file);
-			if (!empty($ntfs))
+			if(!empty($ntfs)):
 				return "ntfs";
+			endif;
 			$ext2 = disks_try_ext2($file);
-			if (!empty($ext2))
+			if(!empty($ext2)):
 				return "ext2";
+			endif;
 			$exfat = disks_try_exfat($file);
-			if (!empty($exfat))
+			if(!empty($exfat)):
 				return "exfat";
-		}
-	}
-
+			endif;
+		endif;
+	endforeach;
 	// GPT?
 	$devs = [
 		$dev . 'p1',
@@ -1662,28 +1599,31 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 'p5',
 		$dev . 'p6'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach ($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufsgpt";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs)) {
+			if(!empty($zfs)):
 				$additional_fs_info = ['tag' => 'zfsgpt', 'val' => str_replace($dev, '', $file)];
 				return "zfs";
-			}
+			endif;
 			$ntfs = disks_try_ntfs($file);
-			if (!empty($ntfs))
+			if(!empty($ntfs)):
 				return "ntfs";
+			endif;
 			$ext2 = disks_try_ext2($file);
-			if (!empty($ext2))
+			if(!empty($ext2)):
 				return "ext2";
+			endif;
 			$exfat = disks_try_exfat($file);
-			if (!empty($exfat))
+			if(!empty($exfat)):
 				return "exfat";
-		}
-	}
-
+			endif;
+		endif;
+	endforeach;
 	// MBR? with slise only
 	$devs = [
 		$dev . 's1',
@@ -1691,26 +1631,30 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 's3',
 		$dev . 's4'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufs";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if(!empty($zfs)):
 				return "zfs";
+			endif;
 			$ntfs = disks_try_ntfs($file);
-			if (!empty($ntfs))
+			if(!empty($ntfs)):
 				return "ntfs";
+			endif;
 			$ext2 = disks_try_ext2($file);
-			if (!empty($ext2))
+			if(!empty($ext2)):
 				return "ext2";
+			endif;
 			$exfat = disks_try_exfat($file);
-			if (!empty($exfat))
+			if(!empty($exfat)):
 				return "exfat";
-		}
-	}
-
+			endif;
+		endif;
+	endforeach;
 	// MBR/ZFS/UFS? without slice and with bsdlabel
 	$devs = [
 		$dev . 'a',
@@ -1720,17 +1664,18 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 'g',
 		$dev . 'h'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufs";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if(!empty($zfs)):
 				return "zfs";
-		}
-	}
-
+			endif;
+		endif;
+	endforeach;
 	// MBR/ZFS/UFS? with slice and bsdlabel
 	$devs = [
 		$dev . 's1a',
@@ -1740,16 +1685,18 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 's1g',
 		$dev . 's1h'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach ($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufs";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if(!empty($zfs)):
 				return "zfs";
-		}
-	}
+			endif;
+		endif;
+	endforeach;
 	$devs = [
 		$dev . 's2a',
 		$dev . 's2d',
@@ -1758,16 +1705,18 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 's2g',
 		$dev . 's2h'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufs";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if(!empty($zfs)):
 				return "zfs";
-		}
-	}
+			endif;
+		endif;
+	endforeach;
 	$devs = [
 		$dev . 's3a',
 		$dev . 's3d',
@@ -1776,16 +1725,18 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 's3g',
 		$dev . 's3h'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
+			if(!empty($ufsid)):
 				return "ufs";
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if(!empty($zfs)):
 				return "zfs";
-		}
-	}
+			endif;
+		endif;
+	endforeach;
 	$devs = [
 		$dev . 's4a',
 		$dev . 's4d',
@@ -1794,46 +1745,42 @@ function disks_import_try_allfs($dev, &$additional_fs_info) {
 		$dev . 's4g',
 		$dev . 's4h'
 	];
-	foreach ($devs as $file) {
-		if (file_exists($file)) {
+	foreach($devs as $file):
+		if(file_exists($file)):
 			$ufsid = disks_get_ufsid($file);
-			if (!empty($ufsid))
-				return "ufs";
+			if(!empty($ufsid)):
+				return 'ufs';
+			endif;
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
-				return "zfs";
-		}
-	}
-
+			if(!empty($zfs)):
+				return 'zfs';
+			endif;
+		endif;
+	endforeach;
 	// unknown
-	return "";
+	return '';
 }
-
 function disks_import_get_fstype($dev, &$additional_fs_info) {
 	global $config;
 
-	if (!preg_match("/^\/dev\//", $dev, $m))
+	if (!preg_match("/^\/dev\//", $dev, $m)):
 		$dev = "/dev/{$dev}";
-
+	endif;
 	// keep encrypted disks
-	if (!empty($config['geli']['vdisk'])) {
+	if(!empty($config['geli']['vdisk'])):
 		$index = array_search_ex($dev, $config['geli']['vdisk'], "device");
-		if (false !== $index) {
-			return "geli";
-		}
-	}
-
+		if(false !== $index):
+			return 'geli';
+		endif;
+	endif;
 	$mntpath = "/tmp/disks_import";
-	if (1 == mwexec("/bin/mkdir -p {$mntpath}"))
+	if(1 == mwexec("/bin/mkdir -p {$mntpath}")):
 		return "";
-
+	endif;
 	$fstype = disks_import_try_allfs($dev, $additional_fs_info);
-
 	@rmdir($mntpath);
-
 	return $fstype;
 }
-
 // Import action
 // 0: no found, n > 0: n disks imported, n < 0: error
 function disks_import_all_disks($clean_import) {
@@ -1841,28 +1788,25 @@ function disks_import_all_disks($clean_import) {
 
 	$need_write_config = false;
 	$num = $error = 0;
-
 	// FUSE for NTFS/exFAT
 	mwexec("/sbin/kldload /boot/kernel/fuse.ko");
-
 	$disks = get_all_disks_list();
 	$disks = array_merge((array)$disks, (array)get_hast_disks_list());
-	if (empty($disks))
+	if(empty($disks)):
 		return $num;
-
+	endif;
 	array_make_branch($config,'disks','disk');
 	if(!empty($clean_import)):
 		$config['disks']['disk'] = []; // OK
 	endif;
-	foreach ($disks as $diskv) {
+	foreach($disks as $diskv):
 		$type = $diskv['type'];
 		$dev = $diskv['devicespecialfile'];
-		if ($type == 'SCSI' || $type == 'RAID' || $type == 'HAST' || $type == 'IDE') {
+		if($type == 'SCSI' || $type == 'RAID' || $type == 'HAST' || $type == 'IDE'):
 			// disk exist in config?
 			$index = array_search_ex($dev, $config['disks']['disk'], "devicespecialfile");
-			if (false === $index) {
+			if(false === $index):
 				$num++; // detected
-
 				$pdisk = [];
 				$pdisk['uuid'] = uuid();
 				$pdisk['name'] = $diskv['name'];
@@ -1873,12 +1817,12 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['desc'] = $diskv['desc'] ?? '';
 				$pdisk['type'] = $diskv['type'];
 				$serial = "";
-				if (!empty($diskv['serial'])) {
+				if(!empty($diskv['serial'])):
 					$serial = $diskv['serial'];
-				}
-				if (($serial == "n/a") || ($serial == gtext("n/a"))) {
+				endif;
+				if(($serial == "n/a") || ($serial == gtext("n/a"))):
 					$serial = "";
-				}
+				endif;
 				$pdisk['serial'] = $serial;
 				$pdisk['size'] = $diskv['size'];
 				$pdisk['harddiskstandby'] = "0";
@@ -1887,9 +1831,9 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['transfermode'] = "auto";
 				$additional_fs_info = false;
 				$pdisk['fstype'] = disks_import_get_fstype($dev, $additional_fs_info);
-				if (false !== $additional_fs_info) {
+				if(false !== $additional_fs_info):
 					$pdisk[$additional_fs_info['tag']] = $additional_fs_info['val'];
-				}
+				endif;
 				$pdisk['controller'] = $diskv['controller'];
 				$pdisk['controller_id'] =  $diskv['controller_id'];
 				$pdisk['controller_desc'] = $diskv['controller_desc'];
@@ -1898,42 +1842,42 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['smart']['devicetypearg'] = $diskv['smart']['devicetypearg'];
 				// Enable S.M.A.R.T. Monitoring
 				$enablesmartmonondevice = true;
-				if ($enablesmartmonondevice) {
+				if($enablesmartmonondevice):
 					$enablesmartmonondevice = isset($config['smartd']['enablesmartmonondevice']);
-					if ($enablesmartmonondevice && is_bool($config['smartd']['enablesmartmonondevice'])) {
+					if($enablesmartmonondevice && is_bool($config['smartd']['enablesmartmonondevice'])):
 						$enablesmartmonondevice = $config['smartd']['enablesmartmonondevice'];
-					}
-				}
-				if ($enablesmartmonondevice) {
+					endif;
+				endif;
+				if($enablesmartmonondevice):
 					$enablesmartmonondevice = isset($diskv['smart']['isavailable']);
-					if ($enablesmartmonondevice && is_bool($diskv['smart']['isavailable'])) {
+					if($enablesmartmonondevice && is_bool($diskv['smart']['isavailable'])):
 						$enablesmartmonondevice = $diskv['smart']['isavailable'];
-					}
-				}
-				if ($enablesmartmonondevice) {
+					endif;
+				endif;
+				if($enablesmartmonondevice):
 					$enablesmartmonondevice = isset($diskv['smart']['isenabled']);
-					if ($enablesmartmonondevice && is_bool($diskv['smart']['isenabled'])) {
+					if($enablesmartmonondevice && is_bool($diskv['smart']['isenabled'])):
 						$enablesmartmonondevice = $diskv['smart']['isenabled'];
-					}
-				}
+					endif;
+				endif;
 				updatenotify_set("device", UPDATENOTIFY_MODE_MODIFIED, $pdisk['uuid']);
 				$pdisk['smart']['enable'] = $enablesmartmonondevice;					
 				$pdisk['smart']['extraoptions'] = "";
-
 				$config['disks']['disk'][] = $pdisk;
 				$need_write_config = true;
-			} else {
+			else:
 				// already exist in config
-			}
-		} else if ($type == "XXX") {
+			endif;
+		elseif($type == "XXX"):
 			// not supported
-		}
-	}
-	if ($need_write_config) {
+		endif;
+	endforeach;
+	if($need_write_config):
 		write_config();
-	}
-	if ($error != 0)
+	endif;
+	if($error != 0):
 		return -$error;
+	endif;
 	return $num;
 }
 
@@ -1942,46 +1886,45 @@ function disks_import_consumers($name, $type, $dev, $disks, $clean_import) {
 	global $config;
 
 	$consumers = [];
-
 	unset($rawdata);
 	mwexec2("/sbin/{$type} list {$name}", $rawdata);
-	if (empty($rawdata))
+	if(empty($rawdata)):
 		return $consumers;
+	endif;
 	$found_consumers = 0;
-	foreach ($rawdata as $line) {
-		if (preg_match("/^Consumers:/", $line)) {
+	foreach($rawdata as $line):
+		if(preg_match("/^Consumers:/", $line)):
 			$found_consumers = 1;
 			continue;
-		}
-		if ($found_consumers && preg_match("/^.+\s+Name:\s+(.+)$/", $line, $m)) {
+		endif;
+		if($found_consumers && preg_match("/^.+\s+Name:\s+(.+)$/", $line, $m)):
 			$consumers[] = "/dev/".$m[1];
 			continue;
-		}
-	}
-
+		endif;
+	endforeach;
 	// import consumers and mark as softraid
-	foreach ($consumers as $condev) {
+	foreach($consumers as $condev):
 		// encrypted?
-		if (preg_match("/.+\.eli$/", $condev, $m)) {
+		if(preg_match("/.+\.eli$/", $condev, $m)):
 			$index = array_search_ex($condev, $config['geli']['vdisk'], "devicespecialfile");
-			if (false === $index) {
+			if(false === $index):
 				// XXX not import encrypted consumer
-			} else {
+			else:
 				$config['geli']['vdisk'][$index]['fstype'] = "softraid";
-			}
-		} else {
+			endif;
+		else:
 			$index = array_search_ex($condev, $config['disks']['disk'], "devicespecialfile");
-			if ($clean_import && false !== $index) {
+			if($clean_import && false !== $index):
 				unset($config['disks']['disk'][$index]);
 				$index = false;
-			}
+			endif;
 			$index2 = array_search_ex($condev, $disks, "devicespecialfile");
-			if (false === $index && false === $index2) {
+			if(false === $index && false === $index2):
 				// not found both config and detect list
-			} else if (false === $index && false !== $index2) {
+			elseif(false === $index && false !== $index2):
 				// no config but detect
 				$diskv = $disks[$index2];
-				if ($diskv['type'] == 'SCSI' || $diskv['type'] == 'RAID' || $diskv['type'] == 'IDE') {
+				if($diskv['type'] == 'SCSI' || $diskv['type'] == 'RAID' || $diskv['type'] == 'IDE'):
 					$pdisk = [];
 					$pdisk['uuid'] = uuid();
 					$pdisk['name'] = $diskv['name'];
@@ -1991,12 +1934,12 @@ function disks_import_consumers($name, $type, $dev, $disks, $clean_import) {
 					$pdisk['desc'] = !empty($diskv['desc']) ? $diskv['desc'] : "";
 					$pdisk['type'] = $diskv['type'];
 					$serial = "";
-					if (!empty($diskv['serial'])) {
+					if(!empty($diskv['serial'])):
 						$serial = $diskv['serial'];
-					}
-					if (($serial == "n/a") || ($serial == gtext("n/a"))) {
+					endif;
+					if(($serial == "n/a") || ($serial == gtext("n/a"))):
 						$serial = "";
-					}
+					endif;
 					$pdisk['serial'] = $serial;
 					$pdisk['size'] = $diskv['size'];
 					$pdisk['harddiskstandby'] = "0";
@@ -2013,16 +1956,14 @@ function disks_import_consumers($name, $type, $dev, $disks, $clean_import) {
 					$pdisk['controller'] = $diskv['controller'];
 					$pdisk['smart']['enable'] = false;
 					$pdisk['smart']['extraoptions'] = "";
-				
 					$config['disks']['disk'][] = $pdisk;
-				}
-			} else if (false !== $index) {
+				endif;
+			elseif(false !== $index):
 				// found config
 				$config['disks']['disk'][$index]['fstype'] = "softraid";
-			}
-		}
-	}
-
+			endif;
+		endif;
+	endforeach;
 	return $consumers;
 }
 
@@ -2138,7 +2079,6 @@ function disks_import_all_swraid_disks($clean_import) {
 	endif;
 	return $num;
 }
-
 // 0: no found, n > 0: n disks imported, n < 0: error
 function disks_import_all_encrypted_disks(bool $clear_config_before_import = false) {
 	global $config;
@@ -2294,177 +2234,165 @@ function disks_import_all_encrypted_disks(bool $clear_config_before_import = fal
 function disks_convert_vdisk_to_ada($key, &$admap, &$raidmap) {
 	global $config;
 
-	if (!isset($config[$key]) || !isset($config[$key]['vdisk'])
-	    || !is_array($config[$key]['vdisk'])) {
+	if(!isset($config[$key]) || !isset($config[$key]['vdisk']) || !is_array($config[$key]['vdisk'])):
 		echo "$key: skip (not configured).\n";
 		return;
-	}
-
+	endif;
 	$tmp = [];
-	foreach ($config[$key]['vdisk'] as $a) {
+	foreach($config[$key]['vdisk'] as $a):
 		$ret = true;
-		foreach ($a['device'] as &$device) {
-			if (preg_match("/^\/dev\/(ad[0-9]+.*)$/", $device, $m)) {
+		foreach($a['device'] as &$device):
+			if(preg_match("/^\/dev\/(ad[0-9]+.*)$/", $device, $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					$device = "/dev/".$admap[$dev];
 					echo "$key: $dev -> ".$admap[$dev]."\n";
-				} else {
+				else:
 					echo "$key: $dev is not found (removed).\n";
 					$ret = false;
-				}
-			}
-		}
+				endif;
+			endif;
+		endforeach;
 		unset($device);
-		if ($ret !== false) {
+		if($ret !== false):
 			$tmp[] = $a;
 			echo "Add ".$a['devicespecialfile']." to RAID map.\n";
 			$raidmap[$a['devicespecialfile']] = true;
-		}
-	}
+		endif;
+	endforeach;
 	$config[$key]['vdisk'] = $tmp;
 }
 
 function disks_convert_to_ada() {
 	global $config;
+
 	$admap = disks_get_admap();
 	$raidmap = [];
-
-	echo "\n";
-	echo "Converting ad devices...\n";
+	echo PHP_EOL;
+	echo 'Converting ad devices...',PHP_EOL;
 
 	// Disks|Management
-	if (isset($config['disks']) && isset($config['disks']['disk'])
-	    && is_array($config['disks']['disk'])) {
+	if(isset($config['disks']) && isset($config['disks']['disk']) && is_array($config['disks']['disk'])):
 		$tmp = [];
-		foreach ($config['disks']['disk'] as $a) {
-			if (preg_match("/^(ad[0-9]+.*)$/", $a['name'], $m)) {
+		foreach($config['disks']['disk'] as $a):
+			if(preg_match("/^(ad[0-9]+.*)$/", $a['name'], $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					//$serial = system_get_volume_serial($admap[$dev]);
 					$a['name'] = $admap[$dev];
 					$a['devicespecialfile'] = "/dev/".$admap[$dev];
 					$a['type'] = "SCSI";
 					$tmp[] = $a;
 					echo "disks: $dev -> ".$admap[$dev]."\n";
-				} else {
+				else:
 					echo "disks: $dev is not found (removed).\n";
-				}
-			} else {
+				endif;
+			else:
 				$tmp[] = $a;
-			}
-		}
+			endif;
+		endforeach;
 		$config['disks']['disk'] = $tmp;
-	}
-
+	endif;
 	// Disks|Management|S.M.A.R.T.
-	if (isset($config['smartd']) && isset($config['smartd']['selftest'])
-	    && is_array($config['smartd']['selftest'])) {
+	if(isset($config['smartd']) && isset($config['smartd']['selftest']) && is_array($config['smartd']['selftest'])):
 		$tmp = [];
-		foreach ($config['smartd']['selftest'] as $a) {
-			if (preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['devicespecialfile'], $m)) {
+		foreach($config['smartd']['selftest'] as $a):
+			if(preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['devicespecialfile'], $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					$a['devicespecialfile'] = "/dev/".$admap[$dev];
 					$tmp[] = $a;
 					echo "smartd: $dev -> ".$admap[$dev]."\n";
-				} else {
+				else:
 					echo "smartd: $dev is not found (removed).\n";
-				}
-			} else {
+				endif;
+			else:
 				$tmp[] = $a;
-			}
-		}
+			endif;
+		endforeach;
 		$config['smartd']['selftest'] = $tmp;
-	}
-
+	endif;
 	// System|Advanced|Swap
-	if (isset($config['system']) && isset($config['system']['swap'])) {
+	if(isset($config['system']) && isset($config['system']['swap'])):
 		$tmp = [];
 		$a = $config['system']['swap'];
-		if ($a['type'] == "device") {
-			if (preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['devicespecialfile'], $m)) {
+		if($a['type'] == "device"):
+			if(preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['devicespecialfile'], $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					$a['devicespecialfile'] = "/dev/".$admap[$dev];
 					$tmp = $a;
 					echo "swap: $dev -> ".$admap[$dev]."\n";
-				} else {
+				else:
 					echo "swap: $dev is not found (removed).\n";
-				}
-			} else {
+				endif;
+			else:
 				$tmp = $a;
-			}
-		}
+			endif;
+		endif;
 		$config['system']['swap'] = $tmp;
-	}
-
+	endif;
 	// Disks|Software RAID
 	disks_convert_vdisk_to_ada("gmirror", $admap, $raidmap);
 	disks_convert_vdisk_to_ada("graid5", $admap, $raidmap);
 	disks_convert_vdisk_to_ada("gconcat", $admap, $raidmap);
 	disks_convert_vdisk_to_ada("gstripe", $admap, $raidmap);
 	disks_convert_vdisk_to_ada("gvinum", $admap, $raidmap);
-
 	// Disks|Encryption
-	if (isset($config['geli']) && isset($config['geli']['vdisk'])
-	    && is_array($config['geli']['vdisk'])) {
+	if(isset($config['geli']) && isset($config['geli']['vdisk']) && is_array($config['geli']['vdisk'])):
 		$tmp = [];
-		foreach ($config['geli']['vdisk'] as $a) {
-			if (preg_match("/^(ad[0-9]+.*)$/", $a['name'], $m)) {
+		foreach($config['geli']['vdisk'] as $a):
+			if(preg_match("/^(ad[0-9]+.*)$/", $a['name'], $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					$a['device'] = "/dev/".$admap[$dev];
 					$a['devicespecialfile']	= "/dev/".$admap[$dev].".eli";
 					$tmp[] = $a;
 					echo "geli: $dev -> ".$admap[$dev]."\n";
-				} else {
+				else:
 					echo "geli: $dev is not found (removed).\n";
-				}
-			} else {
+				endif;
+			else:
 				$tmp[] = $a;
-			}
-		}
+			endif;
+		endforeach;
 		$config['geli']['vdisk'] = $tmp;
-	}
-
+	endif;
 	// Disks|Mount Point|Management
-	if (isset($config['mounts']) && isset($config['mounts']['mount'])
-	    && is_array($config['mounts']['mount'])) {
+	if(isset($config['mounts']) && isset($config['mounts']['mount']) && is_array($config['mounts']['mount'])):
 		$tmp = [];
-		foreach ($config['mounts']['mount'] as $a) {
-			if (preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['mdisk'], $m)) {
+		foreach($config['mounts']['mount'] as $a):
+			if(preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['mdisk'], $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					$a['mdisk'] = "/dev/".$admap[$dev];
 					$p = $a['partition'];
-					if ($a['fstype'] == "ufs") {
+					if($a['fstype'] == "ufs"):
 						$ufsid = disks_get_ufsid($a['mdisk'].$p);
 						$a['devicespecialfile'] = "/dev/ufsid/".$ufsid;
-					} else {
+					else:
 						$a['devicespecialfile'] = $a['mdisk'].$p;
-					}
+					endif;
 					$tmp[] = $a;
 					echo "mounts: $dev -> ".$admap[$dev]."\n";
-				} else {
+				else:
 					echo "mounts: $dev is not found (removed).\n";
-				}
-			} else {
+				endif;
+			else:
 				// non ad devices
-				if (!empty($raidmap[$a['mdisk']])) {
+				if(!empty($raidmap[$a['mdisk']])):
 					$tmp[] = $a;
 					echo "mounts: ".$a['mdisk']." in RAID map.\n";
-				} else if (file_exists($a['mdisk'])) {
+				elseif(file_exists($a['mdisk'])):
 					$tmp[] = $a;
 					echo "mounts: ".$a['mdisk']." exists.\n";
-				} else {
+				else:
 					echo "mounts: ".$a['mdisk']." is not found (removed).\n";
-				}
-			}
-		}
+				endif;
+			endif;
+		endforeach;
 		$config['mounts']['mount'] = $tmp;
-	}
-
+	endif;
 	// Disks|ZFS
 	$config['zfs'] = [
 		'vdevices' => [],
@@ -2473,30 +2401,27 @@ function disks_convert_to_ada() {
 		'volumes' => [],
 		'autosnapshots' => [],
 	];
-	echo "ZFS: cleared.\n";
-	echo "You must import ZFS pool and synchronize the config by WebGUI.\n";
-
+	echo 'ZFS: cleared.',PHP_EOL;
+	echo 'You must import ZFS pool and synchronize the config by WebGUI.',PHP_EOL;
 	// Services|iSCSI Target|Extent
-	if (isset($config['iscsitarget']) && isset($config['iscsitarget']['extent'])
-	    && is_array($config['iscsitarget']['extent'])) {
+	if(isset($config['iscsitarget']) && isset($config['iscsitarget']['extent']) && is_array($config['iscsitarget']['extent'])):
 		$tmp = [];
-		foreach ($config['iscsitarget']['extent'] as $a) {
-			if (preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['path'], $m)) {
+		foreach($config['iscsitarget']['extent'] as $a):
+			if(preg_match("/^\/dev\/(ad[0-9]+.*)$/", $a['path'], $m)):
 				$dev = $m[1];
-				if (!empty($admap[$dev])) {
+				if(!empty($admap[$dev])):
 					$a['path'] = "/dev/".$admap[$dev];
 					$tmp[] = $a;
-					echo "iscsi: $dev -> ".$admap[$dev]."\n";
-				} else {
-					echo "iscsi: $dev is not found (removed).\n";
-				}
-			} else {
+					echo 'iscsi: ',htmlspecialchars($dev),' -> ',htmlspecialchars($admap[$dev]),PHP_EOL;
+				else:
+					echo 'iscsi: ',htmlspecialchars($dev),' not found (removed)',PHP_EOL;
+				endif;
+			else:
 				$tmp[] = $a;
-			}
-		}
+			endif;
+		endforeach;
 		$config['iscsitarget']['extent'] = $tmp;
-	}
-
+	endif;
 	// wait a moment to see the result.
 	sleep(10);
 }
