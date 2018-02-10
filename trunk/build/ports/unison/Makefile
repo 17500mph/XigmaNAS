@@ -1,31 +1,26 @@
 PORTNAME=		unison
-PORTVERSION=	2.48.4
-PORTREVISION=	1
+PORTVERSION=	2.48.15
+DISTVERSIONPREFIX=	v
+DISTVERSIONSUFFIX=	v4
 CATEGORIES=	net
 COMMENT=	A user-level file synchronization tool
 MAINTAINER=	zoon1@nas4free.org
-
-MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/
-DISTFILES=	${EXTRACT_ONLY}
-DIST_SUBDIR=	${DISTNAME}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 USES=		gmake
 NO_PKG_REGISTER=yes
 USE_OCAML=	yes
-WRKSRC=		${WRKDIR}/src
+WRKSRC_SUBDIR=	src
 NO_OCAML_RUNDEPENDS=yes
 WANT_GNOME=	yes
 MAKE_ARGS=	CFLAGS=""
 CONFLICTS?=	unison-devel-[0-9]* unison-nox11-[0-9]*
 
+USE_GITHUB=     yes
+GH_ACCOUNT=     bcpierce00
+
 MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	unison all
-
-DOCS=		BUGS.txt NEWS README
-EXTRA_DOCS=	${DISTNAME}-manual.html \
-		${DISTNAME}-manual.pdf ${DISTNAME}-manual.ps
 
 OPTIONS_DEFINE= DOCS X11
 OPTIONS_DEFAULT?=	X11
@@ -53,7 +48,7 @@ post-patch:
 post-build:
 	@${ECHO} Building text-only version
 	@${ECHO} ${WRKSRC}
-	${SETENV} ${MAKE_ENV} ${MAKE_CMD} -C ${WRKSRC} CFLAGS="" UISTYLE=text NAME=unison-text
+	${SETENV} ${MAKE_ENV} ${MAKE_CMD} -C ${WRKSRC} UISTYLE=text NAME=unison-text
 	@cd ${WRKSRC}/win32rc && ${LOCALBASE}/bin/icotool -x U.ico
 .endif
 
