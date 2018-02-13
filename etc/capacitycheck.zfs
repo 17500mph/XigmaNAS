@@ -1,0 +1,93 @@
+#!/usr/local/bin/php
+<?php
+/*
+	capacitycheck.zfs
+
+	Part of NAS4Free (http://www.nas4free.org).
+	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+	All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions are met:
+
+	1. Redistributions of source code must retain the above copyright notice, this
+	   list of conditions and the following disclaimer.
+
+	2. Redistributions in binary form must reproduce the above copyright notice,
+	   this list of conditions and the following disclaimer in the documentation
+	   and/or other materials provided with the distribution.
+
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	The views and conclusions contained in the software and documentation are those
+	of the authors and should not be interpreted as representing official policies,
+	either expressed or implied, of the NAS4Free Project.
+*/
+require_once 'config.inc';
+require_once 'functions.inc';
+require_once 'email.inc';
+
+$argv_options = getopt('hsm:');
+if(isset($argv_options['h'])):
+	$helptext = ''
+	. 'Name:' . PHP_EOL
+	. '  ' . basename(__FILE__) . PHP_EOL
+	. 'Description:' . PHP_EOL
+	. '  Checks and reports the capacity of all ZFS pools. If the capacity of a ZFS pool is higher than 80% an alert email is sent.' . PHP_EOL
+	. '  Sends an email report.' . PHP_EOL
+	. 'Options:' . PHP_EOL
+	. '  -h : print this help text and exit.' . PHP_EOL
+	. '  -s : send success email as well.' . PHP_EOL
+	. '  -m address : use alternative email address(es) instead of the email address(es) defined in the WebGUI' . PHP_EOL;
+	fwrite(STDOUT,$helptext);
+	exit(0);
+endif;
+//	showtime
+$body_rows = [];
+$issue_pool = false;
+$a_pool_info = [];
+$return_value = 0;
+//	collect pool capacity information
+$cmd = '/sbin/zpool list -Hp -o name,cap';
+mwexec2($cmd,$a_pool_info,$return_value);
+//	scan each pool
+foreach($a_pool_info as $r_pool_info):
+	list($pool_name,$pool_cap) = array_pad(explode("\t",$r_pool_info),2,'');
+	$pool_cap = (int)$pool_cap;
+	if($pool_cap >= 90):
+		$body_rows[] = sprintf('Critical: The capacity of pool <%s> is at %s%%.',$pool_name,$pool_cap);
+		$issue_pool = true;
+	elseif($pool_cap >= 80):
+		$body_rows[] = sprintf('Warning: The capacity of pool <%s> is at %s%%.',$pool_name,$pool_cap);
+		$issue_pool = true;
+	else:
+		$body_rows[] = sprintf('Information: The capacity of pool <%s> is at %s%%.',$pool_name,$pool_cap);
+	endif;
+endforeach;
+//	compile and send email if an issue was found or the force report option was set
+if($issue_pool): // send alert email
+	$subject = '[ALERT] %h: Pool capacity check detected one or more issues.';
+	$exit_code = 1;
+elseif(isset($argv_options['s'])): // send success email
+	$subject = '[SUCCESS] %h: Pool capacity check completed successfully.';
+	$exit_code = 0;
+else:
+	$subject = '';
+	$exit_code = 0;
+endif;
+if(!empty($subject)):
+	$body = implode(PHP_EOL,$body_rows);
+	$error = 0;
+	@email_send($argv_options['m'] ?? $config['system']['email']['sendto'] ?? $config['statusreport']['to'] ?? '',$subject,$body,$error);
+endif;
+exit($exit_code);
+?>
