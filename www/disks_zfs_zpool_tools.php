@@ -223,6 +223,7 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Tools'),sprintf('%
 $(window).on("load", function() {
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 	// Init toggle checkbox
 	$("#togglepool").click(function() { togglecheckboxesbyname(this, "pool[]"); });
 	$("#togglepooldev").click(function() { togglecheckboxesbyname(this, "pooldev[]"); });
@@ -244,24 +245,29 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext('Virtual Device');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Tools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'))->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+$document->render();
+?>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
-	<?php
+<?php
 	if(1 < $sphere_array['pageindex']):
 		if($sphere_array['submit']):
 			if(isset($l_command[$sphere_array['activity']])):
@@ -1553,15 +1559,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			endswitch;
 		endif;
 	endif;
-	?>
-	<?php
 	if(1 == $sphere_array['pageindex']):
 		render_set_start();
 		render_selector_radio(gtext('Activities'),$l_command,$sphere_array['activity']);
 		render_set_end();
 		render_submit(2,'',$sphere_array['option'],$sphere_array['pool'],$sphere_array['flag']);
 	endif;
-	?>
-	<?php include 'formend.inc';?>
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';
+<?php
+include 'fend.inc';
