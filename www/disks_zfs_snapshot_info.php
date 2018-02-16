@@ -35,44 +35,46 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 function zfs_snapshot_display_list() {
-	mwexec2("zfs list -t snapshot 2>&1", $rawdata);
-	return implode("\n", $rawdata);
+	$cmd = 'zfs list -t snapshot 2>&1';
+	unset($output);
+	mwexec2($cmd,$output);
+	return implode(PHP_EOL,$output);
 }
 function zfs_snapshot_display_properties() {
-	mwexec2("zfs list -H -o name -t snapshot 2>&1", $rawdata);
-	$snaps = implode(" ", $rawdata);
-	$rawdata2 = [];
-	if (!empty($snaps)) {
-		mwexec2("zfs get all $snaps 2>&1", $rawdata2);
-	}
-	return implode("\n", $rawdata2);
+	$cmd = 'zfs list -H -o name -t snapshot 2>&1';
+	unset($a_names);
+	mwexec2($cmd,$a_names);
+	if(is_array($a_names) && count($a_names) > 0):
+		$names = implode(' ',array_map('escapeshellarg',$a_names));
+		$cmd = sprintf('zfs get all %s 2>&1',$names);
+		unset($output);
+		mwexec2($cmd,$output);
+	else:
+		$output = [gtext('No snapshot information available.')];
+	endif;
+	return implode(PHP_EOL,$output);
 }
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')];
+include 'fbegin.inc';
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'))->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'),gtext('Reload page'),true);
+$document->render();
 ?>
-<?php include 'fbegin.inc';?>
-<table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshot');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gtext('Clone');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext('Auto Snapshot');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Information');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
 		<colgroup>
@@ -80,7 +82,9 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')]
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('ZFS Snapshot Information & Status'));?>
+<?php
+			html_titleline2(gtext('ZFS Snapshot Information & Status'));
+?>
 		</thead>
 		<tbody>
 			<tr>
@@ -91,7 +95,9 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')]
 			</tr>
 		</tbody>
 		<tfoot>
-			<?php html_separator2();?>
+<?php
+			html_separator2();
+?>
 		</tfoot>
 	</table>
 	<table class="area_data_settings">
@@ -100,7 +106,9 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')]
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('ZFS Snapshot Properties'));?>
+<?php
+			html_titleline2(gtext('ZFS Snapshot Properties'));
+?>
 		</thead>
 		<tbody>
 			<tr>
@@ -112,4 +120,6 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')]
 		<tbody>
 	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
