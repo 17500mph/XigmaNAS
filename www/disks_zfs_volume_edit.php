@@ -374,20 +374,23 @@ endswitch;
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Volumes'),gtext('Volume'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 include 'fbegin.inc';
 $sphere->doj();
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volume'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume_info.php',gtext('Information'));
+$document->render();
 ?>
-<table id="area_navigator">
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext('Information');?></span></a></li>
-	</ul></td></tr>
-</table>
 <form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
