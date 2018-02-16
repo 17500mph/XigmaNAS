@@ -152,7 +152,7 @@ else:
 	$exit_code = 0;
 endif;
 if(!empty($subject)):
-	$body = implode("\n",$body_rows);
+	$body = implode(PHP_EOL,$body_rows);
 	$error = 0;
 	@email_send($argv_options['m'] ?? $config['system']['email']['sendto'] ?? $config['statusreport']['to'] ?? '',$subject,$body,$error);
 endif;
