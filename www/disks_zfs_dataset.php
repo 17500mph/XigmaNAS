@@ -63,7 +63,7 @@ else:
 	array_sort_key($sphere_array,'name');
 endif;
 
-if ($_POST):
+if($_POST):
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 		if (!file_exists($d_sysrebootreqd_path)):
@@ -161,6 +161,7 @@ $(window).on("load", function() {
 	});
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 function disableactionbuttons(ab_disable) {
 	$("#delete_selected_rows").prop("disabled", ab_disable);
@@ -200,27 +201,24 @@ function controlactionbuttons(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Dataset');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset_info.php"><span><?=gtext('Information');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-</tbody></table>
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Dataset'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset_info.php',gtext('Information'));
+$document->render();
+?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if (!empty($savemsg)):
@@ -248,7 +246,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			html_titleline2(gtext('Overview'),6);
 ?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhelc"><input type="checkbox" class="oneemhigh" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=gtext('Pool');?></th>
 				<th class="lhell"><?=gtext('Name');?></th>
 				<th class="lhell"><?=gtext('Compression');?></th>
@@ -268,11 +266,11 @@ function controlactionbuttons(ego, triggerbyname) {
 <?php
 						if ($notdirty && $notprotected):
 ?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
+							<input type="checkbox" class="oneemhigh" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
 <?php
 						else:
 ?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+							<input type="checkbox" class="oneemhigh" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
 <?php
 						endif;
 ?>
@@ -303,7 +301,9 @@ function controlactionbuttons(ego, triggerbyname) {
 ?>
 							</td>
 							<td></td>
-							<td><a href="disks_zfs_dataset_info.php"><img src="<?=$g_img['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>"/></a></td>
+							<td>
+								<a href="disks_zfs_dataset_info.php?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$g_img['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>"/></a>
+							</td>
 						</tr></tbody></table>
 					</td>
 				</tr>
