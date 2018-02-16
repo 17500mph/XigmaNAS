@@ -40,15 +40,65 @@ function disks_zfs_zpool_info_ajax() {
 	else:
 		$cmd = 'zpool status -v 2>&1';
 	endif;
-	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode("\n",$rawdata));
+	unset($output);
+	mwexec2($cmd,$output);
+	$return = htmlspecialchars(implode(PHP_EOL,$output));
+	return $return;
 }
-if(is_ajax()):
-	$status = disks_zfs_zpool_info_ajax();
-	render_ajax($status);
+function zfs_get_pool_list(string $entity_name = NULL) {
+	if(isset($entity_name)):
+		$cmd = sprintf('zpool list -o name,size,alloc,free,expandsz,frag,cap,dedup,health,altroot %s 2>&1',escapeshellarg($entity_name));
+	else:
+		$cmd = 'zpool list -o name,size,alloc,free,expandsz,frag,cap,dedup,health,altroot 2>&1';
+	endif;
+	unset($output);
+	mwexec2($cmd,$output);
+	$return_data = htmlspecialchars(implode(PHP_EOL,$output));
+	return $return_data;
+}
+function zfs_get_pool_properties(string $entity_name = NULL) {
+	if(isset($entity_name)):
+		$cmd = sprintf('zpool list -H -o name %s 2>&1',escapeshellarg($entity_name));
+	else:
+		$cmd = 'zpool list -H -o name 2>&1';
+	endif;
+	unset($a_names);
+	mwexec2($cmd,$a_names);
+	if(is_array($a_names) && count($a_names) > 0):
+		$names = implode(' ',array_map('escapeshellarg',$a_names));
+		$cmd = sprintf('zpool get all %s 2>&1',$names);
+		unset($output);
+		mwexec2($cmd,$output);
+		$return_data = htmlspecialchars(implode(PHP_EOL,$output));
+	else:
+		$output = [gtext('No volume information available.')];
+		$return_data = implode(PHP_EOL,$output);
+	endif;
+	return $return_data;
+}
+$entity_name = NULL;
+if(isset($_GET['uuid']) && is_string($_GET['uuid']) && is_uuid_v4($_GET['uuid'])):
+	$sphere_array = &array_make_branch($config,'zfs','pools','pool');
+	if(false !== ($sphere_rowid = array_search_ex($_GET['uuid'],$sphere_array,'uuid'))):
+		$sphere_record = $sphere_array[$sphere_rowid];
+		$sr_name = $sphere_record['name'] ?? NULL;
+		if(isset($sr_name) && is_string($sr_name)):
+			$entity_name = sprintf('%s',$sr_name);
+		endif;
+	endif;
 endif;
 $pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Information')];
+if(isset($entity_name)):
+	$pgtitle[] = htmlspecialchars($entity_name);
+endif;
+if(!isset($entity_name)):
+	if(is_ajax()):
+		$status = disks_zfs_zpool_info_ajax();
+		render_ajax($status);
+	endif;
+endif;
 include 'fbegin.inc';
+if(!isset($entity_name)):
 ?>
 <script type="text/javascript">
 //<![CDATA[
@@ -60,23 +110,78 @@ $(document).ready(function(){
 });
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Pools");?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext('Virtual Device');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
-		<li class="tabact"><a href="disks_zfs_zpool_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Information');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
+<?php
+endif;
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'))->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+$document->render();
+?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+if(isset($entity_name)):
+?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('Pool Information & Status'));
+?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltag"><?=gtext('Information');?></td>
+				<td class="celldata">
+					<pre><span id="zfs_pool_list"><?=zfs_get_pool_list($entity_name);?></span></pre>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+<?php
+			html_separator2();
+?>
+		</tfoot>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('ZFS Pool Properties'));
+?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltag"><?=gtext('Properties');?></td>
+				<td class="celldata">
+					<pre><span id="zfs_get_pool_properties"><?=zfs_get_pool_properties($entity_name);?></span></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<?php
+else:
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
@@ -96,6 +201,9 @@ $(document).ready(function(){
 			</tr>
 		</tbody>
 	</table>
+<?php
+endif;
+?>
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
