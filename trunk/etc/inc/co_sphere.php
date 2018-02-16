@@ -639,7 +639,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_informbox() {
 		global $g_img;
 
-		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->get_row_identifier_value);
+		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
 		$img_attributes = [
 			'src' => $g_img['inf'],
 			'title' => $this->sym_inf(),
