@@ -69,26 +69,25 @@ if(empty($sphere_array)):
 else:
 	array_sort_key($sphere_array,'name');
 endif;
-
-if ($_POST) {
-	if (isset($_POST['apply']) && $_POST['apply']) {
+if($_POST):
+	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
-//		if (!file_exists($d_sysrebootreqd_path)) {
+//		if(!file_exists($d_sysrebootreqd_path)):
 			$retval |= updatenotify_process($sphere_notifier, $sphere_notifier_processor);
 			$savemsg = get_std_save_message($retval);
-			if ($retval === 0) {
+			if($retval === 0):
 				updatenotify_delete($sphere_notifier);
-			}
+			endif;
 			header($sphere_header);
 			exit;
-//		}
-	}
-	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
+//		endif;
+	endif;
+	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']):
 		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))):
 				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				switch ($mode_updatenotify) {
+				switch($mode_updatenotify):
 					case UPDATENOTIFY_MODE_NEW:
 						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
@@ -100,18 +99,18 @@ if ($_POST) {
 					case UPDATENOTIFY_MODE_UNKNOWN:
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
 						break;
-				}
-			}
-		}
+				endswitch;
+			endif;
+		endforeach;
 		header($sphere_header);
 		exit;
-	}
-}
-
+	endif;
+endif;
 function zfsvdev_process_updatenotification($mode, $data) {
 	global $config;
+
 	$retval = 0;
-	switch ($mode) {
+	switch($mode):
 		case UPDATENOTIFY_MODE_NEW:
 			break;
 		case UPDATENOTIFY_MODE_MODIFIED:
@@ -119,18 +118,18 @@ function zfsvdev_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 		case UPDATENOTIFY_MODE_DIRTY:
 			$index = array_search_ex($data, $config['zfs']['vdevices']['vdevice'], 'uuid');
-			if (false !== $index) {
+			if(false !== $index):
 				unset($config['zfs']['vdevices']['vdevice'][$index]);
 				write_config();
-			}
+			endif;
 			break;
-	}
+	endswitch;
 	return $retval;
 }
 $a_pool = &array_make_branch($config,'zfs','pools','pool');
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Virtual Device')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -150,6 +149,7 @@ $(window).on("load", function() {
 	});
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 function disableactionbuttons(ab_disable) {
 	$("#delete_selected_rows").prop("disabled", ab_disable);
@@ -189,24 +189,29 @@ function controlactionbuttons(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'))->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+$document->render();
+?>
+<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
@@ -216,7 +221,7 @@ function controlactionbuttons(ego, triggerbyname) {
 	if(updatenotify_exists($sphere_notifier)):
 		print_config_change_box();
 	endif;
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
@@ -226,53 +231,69 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'), 5);?>
+<?php
+			html_titleline2(gtext('Overview'), 5);
+?>
 			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
-				<td class="lhell"><?=gtext('Name');?></td>
-				<td class="lhell"><?=gtext('Type');?></td>
-				<td class="lhell"><?=gtext('Description');?></td>
-				<td class="lhebl"><?=gtext('Toolbox');?></td>
+				<th class="lhelc"><input type="checkbox" class="oneemhigh" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Type');?></th>
+				<th class="lhell"><?=gtext('Description');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach($sphere_array as $sphere_record):?>
-				<?php
+<?php
+			foreach($sphere_array as $sphere_record):
 				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$notprotected = !isset($sphere_record['protected']);
 				$isnotmemberofapool = (false === array_search_ex($sphere_record['name'], $a_pool, 'vdevice'));
-				?>
+?>
 				<tr>
 					<td class="lcelc">
-						<?php if ($notdirty && $notprotected && $isnotmemberofapool):?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						if($notdirty && $notprotected && $isnotmemberofapool):
+?>
+							<input type="checkbox" class="oneemhigh" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
+<?php
+						else:
+?>
+							<input type="checkbox" class="oneemhigh" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+<?php
+						endif;
+?>
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['type']);?></td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
 					<td class="lcebld">
-						<table class="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 							<td>
-								<?php if ($notdirty && $notprotected):?>
+<?php
+								if($notdirty && $notprotected):
+?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected && $isnotmemberofapool):?>
-										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+<?php
+								elseif($notprotected && $isnotmemberofapool):
+?>
+									<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
+<?php
+								else:
+?>
+									<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
+<?php
+								endif;
+?>
 							</td>
 							<td></td>
 							<td></td>
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -284,6 +305,10 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>

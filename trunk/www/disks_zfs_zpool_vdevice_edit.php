@@ -220,12 +220,12 @@ if(PAGE_MODE_POST === $mode_page): // at this point we know it's a POST but (exc
 					break;
 				case 'raidz3':
 					if(count($sphere_record['device']) <  4):
-							$input_errors[] = gtext('There must be at least 4 disks in a raidz3.');
+						$input_errors[] = gtext('There must be at least 4 disks in a raidz3.');
 					endif;
 					break;
 				default:
 					if(count($sphere_record['device']) <  1):
-						$input_errors[] = gtext('There must be at least 1 disks selected.');
+						$input_errors[] = gtext('At least one disk must be selected.');
 					endif;
 					break;
 			endswitch;
@@ -288,6 +288,7 @@ $(window).on("load", function() {
 	controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 function disableactionbuttons(n) {
 	var ab_element;
@@ -341,22 +342,27 @@ function toggleselection(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="area_navigator">
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabact"><a href="disks_zfs_zpool_vdevice.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
-	</ul></td></tr>
-</table>
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'))->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+$document->render();
+?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
@@ -371,15 +377,15 @@ function toggleselection(ego, triggerbyname) {
 	if ($isrecordnewornewmodify):
 ?>
 		<div id="submit" style="margin-bottom:10px">
-			<button name="action" id="button_stripe" type="submit" class="formbtn" value="stripe"><?=gtext('STRIPE');?></button>
-			<button name="action" id="button_mirror" type="submit" class="formbtn" value="mirror"><?=gtext('MIRROR');?></button>
-			<button name="action" id="button_raidz1" type="submit" class="formbtn" value="raidz1"><?=gtext('RAID-Z1');?></button>
-			<button name="action" id="button_raidz2" type="submit" class="formbtn" value="raidz2"><?=gtext('RAID-Z2');?></button>
-			<button name="action" id="button_raidz3" type="submit" class="formbtn" value="raidz3"><?=gtext('RAID-Z3');?></button>
-			<button name="action" id="button_spare"  type="submit" class="formbtn" value="spare"><?=gtext('HOT SPARE');?></button>
-			<button name="action" id="button_cache"  type="submit" class="formbtn" value="cache"><?=gtext('CACHE');?></button>
-			<button name="action" id="button_log"    type="submit" class="formbtn" value="log"><?=gtext('LOG');?></button>
-			<button name="action" id="button_logmir" type="submit" class="formbtn" value="log-mirror"><?=gtext('LOG (Mirror)');?></button>
+			<button name="action" id="button_stripe" type="submit" class="formbtn" value="stripe" title="<?=gtext('Create a virtual device containing a single device or concatenated devices');?>"><?=gtext('STRIPE');?></button>
+			<button name="action" id="button_mirror" type="submit" class="formbtn" value="mirror" title="<?=gtext('Create a virtual device containing mirrored devices');?>"><?=gtext('MIRROR');?></button>
+			<button name="action" id="button_raidz1" type="submit" class="formbtn" value="raidz1" title="<?=gtext('Create a virtual device which tolerates a single device failure');?>"><?=gtext('RAID-Z1');?></button>
+			<button name="action" id="button_raidz2" type="submit" class="formbtn" value="raidz2" title="<?=gtext('Create a virtual device which tolerates 2 device failures');?>"><?=gtext('RAID-Z2');?></button>
+			<button name="action" id="button_raidz3" type="submit" class="formbtn" value="raidz3" title="<?=gtext('Create a virtual device which tolerates 3 device failures');?>"><?=gtext('RAID-Z3');?></button>
+			<button name="action" id="button_spare"  type="submit" class="formbtn" value="spare" title="<?=gtext('Create a spare device');?>"><?=gtext('HOT SPARE');?></button>
+			<button name="action" id="button_cache"  type="submit" class="formbtn" value="cache" title="<?=gtext('Create a L2ARC device for ARC');?>"><?=gtext('CACHE');?></button>
+			<button name="action" id="button_log"    type="submit" class="formbtn" value="log" title="<?=gtext('Create a SLOG device for ZIL');?>"><?=gtext('LOG');?></button>
+			<button name="action" id="button_logmir" type="submit" class="formbtn" value="log-mirror" title="<?=gtext('Create a mirrored SLOG device for ZIL');?>"><?=gtext('LOG (Mirror)');?></button>
 		</div>
 <?php
 	endif;
@@ -402,9 +408,11 @@ function toggleselection(ego, triggerbyname) {
 			endif;
 			html_checkbox2('aft4k',gtext('4KB wrapper'),!empty($sphere_record['aft4k']) ? true : false,gtext('Create 4KB wrapper (nop device).'),'',false,$isrecordmodify);
 			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40);
-			html_separator2();
 ?>
 		</tbody>
+		<tfoot>
+			<th class="lcenl" colspan="2"></th>
+		</tfoot>
 	</table>
 	<table class="area_data_selection">
 		<colgroup>
@@ -427,11 +435,11 @@ function toggleselection(ego, triggerbyname) {
 <?php
 					if ($isrecordnewornewmodify):
 ?>
-						<input type="checkbox" id="togglebox" name="togglebox" title="<?=gtext('Invert Selection');?>"/>
+						<input type="checkbox" class="oneemhigh" id="togglebox" name="togglebox" title="<?=gtext('Invert Selection');?>"/>
 <?php
 					else:
 ?>
-						<input type="checkbox" id="togglebox" name="togglebox" disabled="disabled"/>
+						<input type="checkbox" class="oneemhigh" id="togglebox" name="togglebox" disabled="disabled"/>
 <?php
 					endif;
 ?>
