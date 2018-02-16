@@ -97,91 +97,124 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 	header("Location: disks_zfs_snapshot_clone.php");
 	exit;
 }
-
 function zfsclone_process_updatenotification($mode, $data) {
 	global $config;
 
 	$ret = ['output' => [],'retval' => 0];
-
-	switch ($mode) {
+	switch($mode):
 		case UPDATENOTIFY_MODE_NEW:
 			//$data = unserialize($data);
 			//$ret = zfs_clone_configure($data);
 			break;
-
 		case UPDATENOTIFY_MODE_MODIFIED:
 			//$data = unserialize($data);
 			//$ret = zfs_clone_properties($data);
 			break;
-
 		case UPDATENOTIFY_MODE_DIRTY:
 			$data = unserialize($data);
 			$ret = zfs_clone_destroy($data);
 			break;
-	}
-
+	endswitch;
 	return $ret;
 }
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Snapshots");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshot");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot_clone.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Clone");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext("Auto Snapshot");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext("Information");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="disks_zfs_snapshot_clone.php" method="post">
-				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<?php if (updatenotify_exists("zfsclone")) print_config_change_box();?>
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline2(gtext('Overview'), 4);?>
-					<tr>
-						<td width="30%" class="listhdrlr"><?=gtext("Path");?></td>
-						<td width="40%" class="listhdrr"><?=gtext("Origin");?></td>
-						<td width="20%" class="listhdrr"><?=gtext("Creation");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
-					<?php foreach ($a_clone as $clonev):?>
-					<?php $notificationmode = updatenotify_get_mode("zfsclone", serialize(['path' => $clonev['path']]));?>
-					<tr>
-						<td class="listlr"><?=htmlspecialchars($clonev['path']);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($clonev['origin']);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars(get_datetime_locale($clonev['creation']));?>&nbsp;</td>
-						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-						<td valign="middle" nowrap="nowrap" class="list">
-							&nbsp; &nbsp; &nbsp;
-							<a href="disks_zfs_snapshot_clone.php?act=del&amp;path=<?=urlencode($clonev['path']);?>" onclick="return confirm('<?=gtext("Do you really want to delete this clone?");?>')"><img src="images/delete.png" title="<?=gtext("Delete clone");?>" border="0" alt="<?=gtext("Delete clone");?>" /></a>
-						</td>
-						<?php else:?>
-						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="images/delete.png" border="0" alt="" />
-						</td>
-						<?php endif;?>
-					</tr>
-					<?php endforeach;?>
-				</table>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load",function() {
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+});
+//]]>
+</script>
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'));
+$document->render();
+?>
+<form action="disks_zfs_snapshot_clone.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<?php
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(updatenotify_exists('zfsclone')):
+		print_config_change_box();
+	endif;
+?>
+	<table class="area_data_selection">
+		<colgroup>
+			<col style="width:30%">
+			<col style="width:40%">
+			<col style="width:20%">
+			<col style="width:10%">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline2(gtext('Overview'),4);
+?>
+			<tr>
+				<th class="lhell"><?=gtext('Path');?></th>
+				<th class="lhell"><?=gtext('Origin');?></th>
+				<th class="lhell"><?=gtext('Creation');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
+			</tr>
+		</thead>
+		<tbody>
+<?php
+			foreach ($a_clone as $clonev):
+				$notificationmode = updatenotify_get_mode('zfsclone',serialize(['path' => $clonev['path']]));
+?>
+				<tr>
+					<td class="lcell"><?=htmlspecialchars($clonev['path']);?>&nbsp;</td>
+					<td class="lcell"><?=htmlspecialchars($clonev['origin']);?>&nbsp;</td>
+					<td class="lcell"><?=htmlspecialchars(get_datetime_locale($clonev['creation']));?>&nbsp;</td>
+					<td class="lcebld">
+						<table class="area_data_selection_toolbox"><tbody><tr>
+							<td>
+<?php
+								if(UPDATENOTIFY_MODE_DIRTY != $notificationmode):
+?>
+									<a href="disks_zfs_snapshot_clone.php?act=del&amp;path=<?=urlencode($clonev['path']);?>" onclick="return confirm('<?=gtext('Do you really want to delete this clone?');?>')"><img src="images/delete.png" title="<?=gtext('Delete clone');?>" border="0" alt="<?=gtext('Delete clone');?>" /></a>
+<?php
+								else:
+?>
+									<img src="images/delete.png" border="0" alt=""/>
+<?php
+								endif;
+?>
+							</td>
+							<td></td>
+							<td></td>
+						</tbody></table>
+					</td>
+				</tr>
+<?php
+			endforeach;
+?>
+		</tbody>
+	</table>
+<?php
+	include 'formend.inc';
+?>
+</td></tr></tbody></table></form>
+<?php
+include 'fend.inc';
+?>
