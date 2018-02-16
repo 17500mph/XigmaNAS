@@ -41,7 +41,7 @@ function disks_zfs_zpool_io_ajax() {
 		$cmd = 'zpool iostat -v 2>&1';
 	endif;
 	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode("\n",$rawdata));
+	return htmlspecialchars(implode(PHP_EOL,$rawdata));
 }
 if(is_ajax()):
 	$status = disks_zfs_zpool_io_ajax();
@@ -60,22 +60,27 @@ $(document).ready(function(){
 });
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext('Virtual Device');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
-		<li class="tabact"><a href="disks_zfs_zpool_io.php" title="<?=gtext('Reload page');?>"><span><?=gtext('I/O Statistics');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'))->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'),gtext('Reload page'),true);
+$document->render();
+?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
 		<colgroup>
