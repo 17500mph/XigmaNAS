@@ -36,20 +36,20 @@ require_once 'util.inc';
 
 function render_set_start() {
 	$gt_title = gtext('ZFS Pool Tools');
-	echo '<table class="area_data_settings">',"\n";
-		echo '<colgroup>',"\n";
-			echo '<col class="area_data_settings_col_tag">',"\n";
-			echo '<col class="area_data_settings_col_data">',"\n";
-		echo '</colgroup>',"\n";
-		echo '<thead>',html_titleline2($gt_title),'</thead>',"\n";
-		echo '<tbody>',"\n";
+	echo '<table class="area_data_settings">',PHP_EOL;
+		echo '<colgroup>',PHP_EOL;
+			echo '<col class="area_data_settings_col_tag">',PHP_EOL;
+			echo '<col class="area_data_settings_col_data">',PHP_EOL;
+		echo '</colgroup>',PHP_EOL;
+		echo '<thead>',html_titleline2($gt_title),'</thead>',PHP_EOL;
+		echo '<tbody>',PHP_EOL;
 	return true;
 }
 function render_command_and_execute($subcommand,$a_param = [],$b_exec = true) {
 	$param = implode(' ',$a_param);
 	$output = sprintf('%1$s %2$s %3$s','zpool',$subcommand,$param);
 	html_text2('syscommand',gtext('Command'),$output);
-	echo '<tr>',"\n",'<td class="celltag">',gtext('Output'),'</td><td class="celldata"><pre>';
+	echo '<tr>',PHP_EOL,'<td class="celltag">',gtext('Output'),'</td><td class="celldata"><pre>';
 	if($b_exec):
 		$result = zfs_zpool_cmd($subcommand,$param,true);
 	else:
@@ -59,7 +59,7 @@ function render_command_and_execute($subcommand,$a_param = [],$b_exec = true) {
 	return $result;
 }
 function render_zpool_status($param,$b_exec = true) {
-	echo '<tr>',"\n",'<td class="celltag">',gtext('Pool Status'),'</td><td class="celldata"><pre>';
+	echo '<tr>',PHP_EOL,'<td class="celltag">',gtext('Pool Status'),'</td><td class="celldata"><pre>';
 	if($b_exec):
 		$result = zfs_zpool_cmd('status',escapeshellarg($param),true);
 	else:
@@ -102,38 +102,38 @@ function render_set_end() {
 /*
  * End of setting table
  */
-		echo '</tbody>',"\n";
-	echo '</table>',"\n";
+		echo '</tbody>',PHP_EOL;
+	echo '</table>',PHP_EOL;
 	return true;
 }
 function render_submit($pageindex = 1,$activity = '',$option = '',$a_pool = [],$a_flag = []) {
 /*
  * Displays the submit area of the page
  */
-	echo '<div id="submit">',"\n";
+	echo '<div id="submit">',PHP_EOL;
 	if(1 === $pageindex):
-		echo '<input name="reload" type="submit" value="',gtext('Return to Command page'),'" class="formbtn"/>',"\n";
+		echo '<input name="reload" type="submit" value="',gtext('Return to Command page'),'" class="formbtn"/>',PHP_EOL;
 	else:
-		echo '<input type="submit" name="submit" value="',gtext('Next'),'" class="formbtn"/>',"\n";
+		echo '<input type="submit" name="submit" value="',gtext('Next'),'" class="formbtn"/>',PHP_EOL;
 	endif;
-	echo '<input type="hidden" name="pageindex" value="',$pageindex,'"/>',"\n";
+	echo '<input type="hidden" name="pageindex" value="',$pageindex,'"/>',PHP_EOL;
 	if(!empty($activity)):
-		echo '<input type="hidden" name="activity[]" value="',$activity,'"/>',"\n";
+		echo '<input type="hidden" name="activity[]" value="',$activity,'"/>',PHP_EOL;
 	endif;
 	if(!empty($option)):
-		echo '<input type="hidden" name="option[]" value="',$option,'"/>',"\n";
+		echo '<input type="hidden" name="option[]" value="',$option,'"/>',PHP_EOL;
 	endif;
 	if(is_array($a_flag) && (0 < count($a_flag))):
 		foreach($a_flag as $r_flag):
-			echo '<input type="hidden" name="flag[]" value="',$r_flag,'"/>',"\n";
+			echo '<input type="hidden" name="flag[]" value="',$r_flag,'"/>',PHP_EOL;
 		endforeach;
 	endif;
 	if(is_array($a_pool) && (0 < count($a_pool))):
 		foreach($a_pool as $r_pool):
-			echo '<input type="hidden" name="pool[]" value="',$r_pool,'"/>',"\n";
+			echo '<input type="hidden" name="pool[]" value="',$r_pool,'"/>',PHP_EOL;
 		endforeach;
 	endif;
-	echo '</div>',"\n";
+	echo '</div>',PHP_EOL;
 	return true;
 }
 function render_activity_view($gt_activity_longname) {
@@ -182,26 +182,26 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 	echo '<tr>';
 		echo '<td class="celltag">',gtext('Pools'),'</td>'; // left column
 		echo '<td class="celldata">'; // right column start
-			echo '<table class="area_data_selection">',"\n";
-				echo '<colgroup>',"\n";
-					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
-					echo '<col style="width:35%">',"\n"; // Name
-					echo '<col style="width:30%">',"\n"; // Version
-					echo '<col style="width:35%">',"\n"; // Pool Status Name
-				echo '</colgroup>',"\n";
-				echo '<thead>',"\n";
-					echo '<tr>',"\n";
+			echo '<table class="area_data_selection">',PHP_EOL;
+				echo '<colgroup>',PHP_EOL;
+					echo '<col style="width:5%">',PHP_EOL; // Checkbox or Radio
+					echo '<col style="width:35%">',PHP_EOL; // Name
+					echo '<col style="width:30%">',PHP_EOL; // Version
+					echo '<col style="width:35%">',PHP_EOL; // Pool Status Name
+				echo '</colgroup>',PHP_EOL;
+				echo '<thead>',PHP_EOL;
+					echo '<tr>',PHP_EOL;
 						if($is_checkbox):
-							echo '<th class="lhelc"><input type="checkbox" id="togglepool" name="togglepool" title="',gtext('Invert Selection'),'"/></th>',"\n";
+							echo '<th class="lhelc"><input type="checkbox" id="togglepool" name="togglepool" title="',gtext('Invert Selection'),'"/></th>',PHP_EOL;
 						else:
-							echo '<th class="lhelc"></th>',"\n";
+							echo '<th class="lhelc"></th>',PHP_EOL;
 						endif;
-						echo '<th class="lhell">',gtext('Pool'),'</th>',"\n";
-						echo '<th class="lhell">',gtext('Pool Version'),'</th>',"\n";
-						echo '<th class="lhebl">',gtext('Pool State'),'</th>',"\n";
-					echo '</tr>',"\n";
-				echo '</thead>',"\n";
-				echo '<tbody>',"\n";
+						echo '<th class="lhell">',gtext('Pool'),'</th>',PHP_EOL;
+						echo '<th class="lhell">',gtext('Pool Version'),'</th>',PHP_EOL;
+						echo '<th class="lhebl">',gtext('Pool State'),'</th>',PHP_EOL;
+					echo '</tr>',PHP_EOL;
+				echo '</thead>',PHP_EOL;
+				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
 							$value = $r_item['pool.name'];
@@ -212,25 +212,25 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 							echo '<tr>';
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
-								echo '</td>',"\n";
-								echo '<td class="lcell">',htmlspecialchars($value),'</td>',"\n";
-								echo '<td class="lcell">',htmlspecialchars($r_item['pool.version']),'</td>',"\n";
-								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.state_name']),'</td>',"\n";
+								echo '</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($value),'</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($r_item['pool.version']),'</td>',PHP_EOL;
+								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.state_name']),'</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
 						$value = gtext('No suitable pools found.');
 						echo '<tr>';
-							echo '<td class="lcelc"></td>',"\n";
-							echo '<td class="lcell">',$value,'</td>',"\n";
-							echo '<td class="lcell"></td>',"\n";
-							echo '<td class="lcebl"></td>',"\n";
+							echo '<td class="lcelc"></td>',PHP_EOL;
+							echo '<td class="lcell">',$value,'</td>',PHP_EOL;
+							echo '<td class="lcell"></td>',PHP_EOL;
+							echo '<td class="lcebl"></td>',PHP_EOL;
 						echo '</tr>';
 					endif;
-				echo '</tbody>',"\n";
-			echo '</table>',"\n";
-		echo '</td>',"\n"; // right hand column end
-	echo '</tr>',"\n";
+				echo '</tbody>',PHP_EOL;
+			echo '</table>',PHP_EOL;
+		echo '</td>',PHP_EOL; // right hand column end
+	echo '</tr>',PHP_EOL;
 	return $b_ret;
 }
 function render_pool_view($selected_items = []) { // $item can be an array or a string
@@ -292,28 +292,28 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 		echo gtext('Pool Devices');
 		echo '</td>'; // left hand column end
 		echo '<td class="celldata">'; // right hand column start
-			echo '<table class="area_data_selection">',"\n";
-				echo '<colgroup>',"\n";
-					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
-					echo '<col style="width:45%">',"\n"; // // Device Name
-					echo '<col style="width:10%">',"\n"; // // Device Type
-					echo '<col style="width:20%">',"\n"; // // Virtual Device
-					echo '<col style="width:20%">',"\n"; // // Pool
-				echo '</colgroup>',"\n";
-				echo '<thead>',"\n";
-					echo '<tr>',"\n";
+			echo '<table class="area_data_selection">',PHP_EOL;
+				echo '<colgroup>',PHP_EOL;
+					echo '<col style="width:5%">',PHP_EOL; // Checkbox or Radio
+					echo '<col style="width:45%">',PHP_EOL; // // Device Name
+					echo '<col style="width:10%">',PHP_EOL; // // Device Type
+					echo '<col style="width:20%">',PHP_EOL; // // Virtual Device
+					echo '<col style="width:20%">',PHP_EOL; // // Pool
+				echo '</colgroup>',PHP_EOL;
+				echo '<thead>',PHP_EOL;
+					echo '<tr>',PHP_EOL;
 						if($is_checkbox):
-							echo '<th class="lhelc"><input type="checkbox" id="togglepooldev" name="togglepooldev" title="',gtext('Invert Selection'),'"/></th>',"\n";
+							echo '<th class="lhelc"><input type="checkbox" id="togglepooldev" name="togglepooldev" title="',gtext('Invert Selection'),'"/></th>',PHP_EOL;
 						else:
-							echo '<th class="lhelc"></th>',"\n";
+							echo '<th class="lhelc"></th>',PHP_EOL;
 						endif;
-						echo '<th class="lhell">',gtext('Device'),'</th>',"\n";
-						echo '<th class="lhell">',gtext('Type'),'</th>',"\n";
-						echo '<th class="lhell">',gtext('Virtual Device'),'</th>',"\n";
-						echo '<th class="lhebl">',gtext('Pool'),'</th>',"\n";						
-					echo '</tr>',"\n";
-				echo '</thead>',"\n";
-				echo '<tbody>',"\n";
+						echo '<th class="lhell">',gtext('Device'),'</th>',PHP_EOL;
+						echo '<th class="lhell">',gtext('Type'),'</th>',PHP_EOL;
+						echo '<th class="lhell">',gtext('Virtual Device'),'</th>',PHP_EOL;
+						echo '<th class="lhebl">',gtext('Pool'),'</th>',PHP_EOL;						
+					echo '</tr>',PHP_EOL;
+				echo '</thead>',PHP_EOL;
+				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
 							$value = $r_item['device.path'];
@@ -331,27 +331,27 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 							echo '<tr>';
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
-								echo '</td>',"\n";
-								echo '<td class="lcell">',htmlspecialchars($value),'</td>',"\n";
-								echo '<td class="lcell">',htmlspecialchars($r_item['device.type']),'</td>',"\n";
-								echo '<td class="lcell">',htmlspecialchars($vdevice),'</td>',"\n";
-								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.name']),'</td>',"\n";
+								echo '</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($value),'</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($r_item['device.type']),'</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($vdevice),'</td>',PHP_EOL;
+								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.name']),'</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
 						$value = gtext('No suitable devices found.');
 						echo '<tr>';
-							echo '<td class="lcelc"></td>',"\n";
-							echo '<td class="lcell">',$value,'</td>',"\n";
-							echo '<td class="lcell"></td>',"\n";
-							echo '<td class="lcell"></td>',"\n";
-							echo '<td class="lcebl"></td>',"\n";
+							echo '<td class="lcelc"></td>',PHP_EOL;
+							echo '<td class="lcell">',$value,'</td>',PHP_EOL;
+							echo '<td class="lcell"></td>',PHP_EOL;
+							echo '<td class="lcell"></td>',PHP_EOL;
+							echo '<td class="lcebl"></td>',PHP_EOL;
 						echo '</tr>';
 					endif;
-				echo '</tbody>',"\n";
-			echo '</table>',"\n";
-		echo '</td>',"\n"; // right hand column end
-	echo '</tr>',"\n";
+				echo '</tbody>',PHP_EOL;
+			echo '</table>',PHP_EOL;
+		echo '</td>',PHP_EOL; // right hand column end
+	echo '</tr>',PHP_EOL;
 	return $b_ret;
 }
 function render_pooldev_view($items = []) { // $items can be an array or a string
@@ -413,22 +413,22 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 		echo gtext('Virtual Devices');
 		echo '</td>'; // left hand column end
 		echo '<td class="celldata">'; // right hand column start
-			echo '<table class="area_data_selection">',"\n";
-				echo '<colgroup>',"\n";
-					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
-					echo '<col style="width:95%">',"\n"; // Name
-				echo '</colgroup>',"\n";
-				echo '<thead>',"\n";
-					echo '<tr>',"\n";
+			echo '<table class="area_data_selection">',PHP_EOL;
+				echo '<colgroup>',PHP_EOL;
+					echo '<col style="width:5%">',PHP_EOL; // Checkbox or Radio
+					echo '<col style="width:95%">',PHP_EOL; // Name
+				echo '</colgroup>',PHP_EOL;
+				echo '<thead>',PHP_EOL;
+					echo '<tr>',PHP_EOL;
 						if($is_checkbox):
-							echo '<th class="lhelc"><input type="checkbox" id="togglenewvdev" name="togglenewvdev" title="',gtext('Invert Selection'),'"/></th>',"\n";
+							echo '<th class="lhelc"><input type="checkbox" id="togglenewvdev" name="togglenewvdev" title="',gtext('Invert Selection'),'"/></th>',PHP_EOL;
 						else:
-							echo '<th class="lhelc"></th>',"\n";
+							echo '<th class="lhelc"></th>',PHP_EOL;
 						endif;
-						echo '<th class="lhebl">',gtext('Virtual Device'),'</th>',"\n";
-					echo '</tr>',"\n";
-				echo '</thead>',"\n";
-				echo '<tbody>',"\n";
+						echo '<th class="lhebl">',gtext('Virtual Device'),'</th>',PHP_EOL;
+					echo '</tr>',PHP_EOL;
+				echo '</thead>',PHP_EOL;
+				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
 							$value = $r_item['name'];
@@ -439,21 +439,21 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 							echo '<tr>';
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
-								echo '</td>',"\n";
-								echo '<td class="lcebl">',htmlspecialchars($value),'</td>',"\n";
+								echo '</td>',PHP_EOL;
+								echo '<td class="lcebl">',htmlspecialchars($value),'</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
 						$value = gtext('No suitable virtual devices found.');
 						echo '<tr>';
-							echo '<td class="lcelc"></td>',"\n";
-							echo '<td class="lcebl">',$value,'</td>',"\n";
+							echo '<td class="lcelc"></td>',PHP_EOL;
+							echo '<td class="lcebl">',$value,'</td>',PHP_EOL;
 						echo '</tr>';
 					endif;
-				echo '</tbody>',"\n";
-			echo '</table>',"\n";
-		echo '</td>',"\n"; // right hand column end
-	echo '</tr>',"\n";
+				echo '</tbody>',PHP_EOL;
+			echo '</table>',PHP_EOL;
+		echo '</td>',PHP_EOL; // right hand column end
+	echo '</tr>',PHP_EOL;
 	return $b_ret;
 }
 function render_newvdev_view($items = []) { // $items can be an array or a string
@@ -515,22 +515,22 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 		echo gtext('Devices');
 		echo '</td>'; // left hand column end
 		echo '<td class="celldata">'; // right hand column start
-			echo '<table class="area_data_selection">',"\n";
-				echo '<colgroup>',"\n";
-					echo '<col style="width:5%">',"\n"; // Checkbox or Radio
-					echo '<col style="width:95%">',"\n"; // Device Name
-				echo '</colgroup>',"\n";
-				echo '<thead>',"\n";
-					echo '<tr>',"\n";
+			echo '<table class="area_data_selection">',PHP_EOL;
+				echo '<colgroup>',PHP_EOL;
+					echo '<col style="width:5%">',PHP_EOL; // Checkbox or Radio
+					echo '<col style="width:95%">',PHP_EOL; // Device Name
+				echo '</colgroup>',PHP_EOL;
+				echo '<thead>',PHP_EOL;
+					echo '<tr>',PHP_EOL;
 						if($is_checkbox):
-							echo '<th class="lhelc"><input type="checkbox" id="togglenewdev" name="togglenewdev" title="',gtext('Invert Selection'),'"/></th>',"\n";
+							echo '<th class="lhelc"><input type="checkbox" id="togglenewdev" name="togglenewdev" title="',gtext('Invert Selection'),'"/></th>',PHP_EOL;
 						else:
-							echo '<th class="lhelc"></th>',"\n";
+							echo '<th class="lhelc"></th>',PHP_EOL;
 						endif;
-						echo '<th class="lhebl">',gtext('Device'),'</th>',"\n";
-					echo '</tr>',"\n";
-				echo '</thead>',"\n";
-				echo '<tbody>',"\n";
+						echo '<th class="lhebl">',gtext('Device'),'</th>',PHP_EOL;
+					echo '</tr>',PHP_EOL;
+				echo '</thead>',PHP_EOL;
+				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
 							$value = $r_item['name'];
@@ -541,21 +541,21 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 							echo '<tr>';
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
-								echo '</td>',"\n";
-								echo '<td class="lcebl">',htmlspecialchars($value),'</td>',"\n";
+								echo '</td>',PHP_EOL;
+								echo '<td class="lcebl">',htmlspecialchars($value),'</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
 						$value = gtext('No suitable devices found.');
 						echo '<tr>';
-							echo '<td class="lcelc"></td>',"\n";
-							echo '<td class="lcebl">',$value,'</td>',"\n";
+							echo '<td class="lcelc"></td>',PHP_EOL;
+							echo '<td class="lcebl">',$value,'</td>',PHP_EOL;
 						echo '</tr>';
 					endif;
-				echo '</tbody>',"\n";
-			echo '</table>',"\n";
-		echo '</td>',"\n"; // right hand column end
-	echo '</tr>',"\n";
+				echo '</tbody>',PHP_EOL;
+			echo '</table>',PHP_EOL;
+		echo '</td>',PHP_EOL; // right hand column end
+	echo '</tr>',PHP_EOL;
 	return $b_ret;
 }
 function render_newdev_view($items = []) { // $items can be an array or a string
@@ -604,19 +604,19 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 				echo $gt_title;
 			echo '</td>'; // left hand column end
 			echo '<td class="celldata">'; // right hand column start
-				echo '<table class="area_data_selection">',"\n";
-					echo '<colgroup>',"\n";
-						echo '<col style="width:5%">',"\n"; // Radio
-						echo '<col style="width:95%">',"\n"; // // Name
-					echo '</colgroup>',"\n";
-					echo '<thead>',"\n";
+				echo '<table class="area_data_selection">',PHP_EOL;
+					echo '<colgroup>',PHP_EOL;
+						echo '<col style="width:5%">',PHP_EOL; // Radio
+						echo '<col style="width:95%">',PHP_EOL; // // Name
+					echo '</colgroup>',PHP_EOL;
+					echo '<thead>',PHP_EOL;
 //						html_titleline2($gt_title,2);
-						echo '<tr>',"\n";
-							echo '<th class="lhelc"></th>',"\n";
-							echo '<th class="lhebl">',$gt_title,'</th>',"\n";
-						echo '</tr>',"\n";
-					echo '</thead>',"\n";
-					echo '<tbody>',"\n";
+						echo '<tr>',PHP_EOL;
+							echo '<th class="lhelc"></th>',PHP_EOL;
+							echo '<th class="lhebl">',$gt_title,'</th>',PHP_EOL;
+						echo '</tr>',PHP_EOL;
+					echo '</thead>',PHP_EOL;
+					echo '<tbody>',PHP_EOL;
 						foreach($a_option as $r_option):
 							if($r_option['show']):
 								$attribute = [
@@ -638,15 +638,15 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 								echo '<tr>';
 									echo '<td class="lcelc">';
 										echo '<input',$attribute['type'],$attribute['name'],$attribute['value'],$attribute['checked'],'/>';
-									echo '</td>',"\n";
-									echo '<td class="lcebl">',$attribute['longname'],'</td>',"\n";
+									echo '</td>',PHP_EOL;
+									echo '<td class="lcebl">',$attribute['longname'],'</td>',PHP_EOL;
 								echo '</tr>';
 							endif;
 						endforeach;
-					echo '</tbody>',"\n";
-				echo '</table>',"\n";
-			echo '</td>',"\n"; // right hand column end
-		echo '</tr>',"\n";
+					echo '</tbody>',PHP_EOL;
+				echo '</table>',PHP_EOL;
+			echo '</td>',PHP_EOL; // right hand column end
+		echo '</tr>',PHP_EOL;
 	endif;
 	return true;
 }
@@ -766,20 +766,20 @@ class co_zpool_flags extends co_zpool_flag_base {
 		echo '<tr>';
 			echo '<td class="celltag">';  // left hand column start
 				echo $this->c_tag_header;
-			echo '</td>',"\n"; // left hand column end
-			echo '<td class="celldata">',"\n"; // right hand column start
-				echo '<table class="area_data_selection">',"\n";
-					echo '<colgroup>',"\n";
-						echo '<col style="width:5%">',"\n"; // Checkbox
-						echo '<col style="width:95%">',"\n"; // // Name
-					echo '</colgroup>',"\n";
-					echo '<thead>',"\n";
-						echo '<tr>',"\n";
-							echo '<th class="lhelc"></th>',"\n";
-							echo '<th class="lhebl">',$this->c_val_header_name,'</th>',"\n";
-						echo '</tr>',"\n";
-					echo '</thead>',"\n";
-					echo '<tbody>',"\n";
+			echo '</td>',PHP_EOL; // left hand column end
+			echo '<td class="celldata">',PHP_EOL; // right hand column start
+				echo '<table class="area_data_selection">',PHP_EOL;
+					echo '<colgroup>',PHP_EOL;
+						echo '<col style="width:5%">',PHP_EOL; // Checkbox
+						echo '<col style="width:95%">',PHP_EOL; // // Name
+					echo '</colgroup>',PHP_EOL;
+					echo '<thead>',PHP_EOL;
+						echo '<tr>',PHP_EOL;
+							echo '<th class="lhelc"></th>',PHP_EOL;
+							echo '<th class="lhebl">',$this->c_val_header_name,'</th>',PHP_EOL;
+						echo '</tr>',PHP_EOL;
+					echo '</thead>',PHP_EOL;
+					echo '<tbody>',PHP_EOL;
 						foreach($this->a_available_keys as $key):
 							if($this->a_pool_keys[$key]['show']):
 								$value = $this->a_pool_keys[$key]['longname'];
@@ -795,18 +795,18 @@ class co_zpool_flags extends co_zpool_flag_base {
 										$attribute['checked'] = 'checked="checked"';
 									endif;
 								endif;
-								echo '<tr>',"\n";
+								echo '<tr>',PHP_EOL;
 									echo '<td class="lcelc">';
 										echo '<input ',implode(' ',$attribute),'/>';
-									echo '</td>',"\n";
-									echo '<td class="lcebl">',$value,'</td>',"\n";
-								echo '</tr>',"\n";
+									echo '</td>',PHP_EOL;
+									echo '<td class="lcebl">',$value,'</td>',PHP_EOL;
+								echo '</tr>',PHP_EOL;
 							endif;
 						endforeach;
-					echo '</tbody>',"\n";
-				echo '</table>',"\n";
-			echo '</td>',"\n"; // right hand column end
-		echo '</tr>',"\n";
+					echo '</tbody>',PHP_EOL;
+				echo '</table>',PHP_EOL;
+			echo '</td>',PHP_EOL; // right hand column end
+		echo '</tr>',PHP_EOL;
 		return true;
 	}
 	public function init_selected_keys($a_keynames = []) {
