@@ -327,21 +327,24 @@ endif;
 $showusedavail = isset($config['zfs']['settings']['showusedavail']);
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')];
 include 'fbegin.inc';
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_config_current.php',gtext('Current'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Detected'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config_sync.php',gtext('Synchronize'));
+$document->render();
 ?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabact"><a href="disks_zfs_config.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_zfs_config_current.php"><span><?=gtext('Current');?></span></a></li>
-		<li class="tabact" title="<?=gtext('Reload page');?>"><a href="disks_zfs_config.php"><span><?=gtext('Detected');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config_sync.php"><span><?=gtext('Synchronize');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php 
 	if(!empty($message_box_text)):
