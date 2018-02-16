@@ -170,6 +170,7 @@ $(window).on("load", function() {
 	});
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 function disableactionbuttons(ab_disable) {
 	$("#delete_selected_rows").prop("disabled", ab_disable);
@@ -209,19 +210,24 @@ function controlactionbuttons(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext("Information");?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
+<?php
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volume'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume_info.php',gtext('Information'));
+$document->render();
+?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
@@ -253,15 +259,15 @@ function controlactionbuttons(ego, triggerbyname) {
 				html_titleline2(gtext('Overview'),9);
 ?>
 				<tr>
-					<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
-					<td class="lhell"><?=gtext('Pool');?></td>
-					<td class="lhell"><?=gtext('Name');?></td>
-					<td class="lhell"><?=gtext('Size');?></td>
-					<td class="lhell"><?=gtext('Compression');?></td>
-					<td class="lhell"><?=gtext('Sparse');?></td>
-					<td class="lhell"><?=gtext('Block Size');?></td>
-					<td class="lhell"><?=gtext('Description');?></td>
-					<td class="lhebl"><?=gtext('Toolbox');?></td>
+					<th class="lhelc"><input type="checkbox" class="oneemhigh" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+					<th class="lhell"><?=gtext('Pool');?></th>
+					<th class="lhell"><?=gtext('Name');?></th>
+					<th class="lhell"><?=gtext('Size');?></th>
+					<th class="lhell"><?=gtext('Compression');?></th>
+					<th class="lhell"><?=gtext('Sparse');?></th>
+					<th class="lhell"><?=gtext('Block Size');?></th>
+					<th class="lhell"><?=gtext('Description');?></th>
+					<th class="lhebl"><?=gtext('Toolbox');?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -276,11 +282,11 @@ function controlactionbuttons(ego, triggerbyname) {
 <?php
 							if($notdirty && $notprotected):
 ?>
-								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
+								<input type="checkbox" class="oneemhigh" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
 <?php
 							else:
 ?>
-								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+								<input type="checkbox" class="oneemhigh" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
 <?php
 							endif;
 ?>
@@ -327,7 +333,9 @@ function controlactionbuttons(ego, triggerbyname) {
 ?>
 								</td>
 								<td></td>
-								<td><a href="disks_zfs_volume_info.php"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a></td>
+								<td>
+									<a href="disks_zfs_volume_info.php?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a>
+								</td>
 							</tr></tbody></table>
 						</td>
 					</tr>
