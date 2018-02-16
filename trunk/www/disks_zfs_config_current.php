@@ -120,13 +120,16 @@ $pagecontent = $document->getElementById('pagecontent');
 //	add tab navigation
 $document->
 	add_area_tabnav()->
-		push()->add_tabnav_upper()->
+		push()->
+		add_tabnav_upper()->
 			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
 			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
 			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
 			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
 			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'),gtext('Reload page'),true)->
-		pop()->add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
 			ins_tabnav_record('disks_zfs_config_current.php',gtext('Current'),gtext('Reload page'),true)->
 			ins_tabnav_record('disks_zfs_config.php',gtext('Detected'))->
 			ins_tabnav_record('disks_zfs_config_sync.php',gtext('Synchronize'));
@@ -137,9 +140,13 @@ $content->ins_info_box($savemsg);
 $table = $content->add_table_data_selection();
 $a_col_width = ['16%','10%','9%','9%','9%','9%','9%','9%','10%','10%'];
 $n_col_width = count($a_col_width);
-$table->ins_colgroup_with_styles('width',$a_col_width);
+$table->
+	ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
-$thead->ins_titleline(sprintf('%s (%d)',gtext('Pools'),count($zfs['pools']['pool'])),$n_col_width);
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
+$thead->
+	ins_titleline(sprintf('%s (%d)',gtext('Pools'),count($zfs['pools']['pool'])),$n_col_width);
 $tr = $thead->addTR();
 $tr->
 	insTHwC('lhell',gtext('Name'))->
@@ -160,7 +167,6 @@ $tr->
 	insTHwC('lhell',gtext('Health'))->
 	insTHwC('lhell',gtext('Mount Point'))->
 	insTHwC('lhebl',gtext('AltRoot'));
-$tbody = $table->addTBODY();
 foreach($zfs['pools']['pool'] as $pool):
 	$tr = $tbody->addTR();
 	$tr->
@@ -183,13 +189,18 @@ foreach($zfs['pools']['pool'] as $pool):
 		insTDwC('lcell',empty($pool['mountpoint']) ? sprintf('/mnt/%s',$pool['name']) : $pool['mountpoint'])->
 		insTDwC('lcebl',empty($pool['root']) ? '-' : $pool['root']);
 endforeach;
+$tfoot->
+	addTR()->
+		addTD(['class' => 'lcenl','colspan' => $n_col_width]);
 $table = $content->add_table_data_selection();
 $a_col_width = ['16%','21%','21%','42%'];
 $n_col_width = count($a_col_width);
-$table->ins_colgroup_with_styles('width',$a_col_width);
+$table->
+	ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
 $thead->
-	ins_separator($n_col_width)->
 	ins_titleline(sprintf('%s (%d)',gtext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),$n_col_width);
 $thead->
 	addTR()->
@@ -197,7 +208,6 @@ $thead->
 		insTHwC('lhell',gtext('Type'))->
 		insTHwC('lhell',gtext('Pool'))->
 		insTHwC('lhebl',gtext('Devices'));
-$tbody = $table->addTBODY();
 foreach($zfs['vdevices']['vdevice'] as $vdevice):
 	$tbody->
 		addTR()->
@@ -206,13 +216,16 @@ foreach($zfs['vdevices']['vdevice'] as $vdevice):
 			insTDwC('lcell',!empty($vdevice['pool']) ? $vdevice['pool'] : '')->
 			insTDwC('lcebl',implode(',',$vdevice['device']));
 endforeach;
+$tfoot->
+	addTR()->
+		addTD(['class' => 'lcenl','colspan' => $n_col_width]);
 $table = $content->add_table_data_selection();
 $a_col_width = ['14%','14%','7%','7%','9%','9%','9%','7%','8%','7%','9%'];
 $n_col_width = count($a_col_width);
-$table->ins_colgroup_with_styles('width',$a_col_width);
+$table->
+	ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $thead->
-	ins_separator($n_col_width)->
 	ins_titleline(sprintf('%s (%d)',gtext('Datasets'),count($zfs['datasets']['dataset'])),$n_col_width);
 $thead->
 	addTR()->
@@ -243,13 +256,18 @@ foreach($zfs['datasets']['dataset'] as $dataset):
 			insTDwC('lcell',isset($dataset['readonly']) ? gtext('on') : gtext('off'))->
 			insTDwC('lcebl',isset($dataset['snapdir']) ? gtext('visible') : gtext('hidden'));
 endforeach;
+$tfoot = $table->addTFOOT();
+$tfoot->
+	addTR()->
+		addTD(['class' => 'lcenl','colspan' => $n_col_width]);
 $table = $content->add_table_data_selection();
 $a_col_width = ['16%','12%','12%','12%','12%','12%','12%','12%'];
 $n_col_width = count($a_col_width);
-$table->ins_colgroup_with_styles('width',$a_col_width);
+$table->
+	ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
 $thead->
-	ins_separator($n_col_width)->
 	ins_titleline(sprintf('%s (%d)',gtext('Volumes'),count($zfs['volumes']['volume'])),$n_col_width);
 $thead->
 	addTR()->
@@ -261,7 +279,6 @@ $thead->
 		insTHwC('lhell',gtext('Compression'))->
 		insTHwC('lhell',gtext('Dedup'))->
 		insTHwC('lhebl',gtext('Sync'));
-$tbody = $table->addTBODY();
 foreach($zfs['volumes']['volume'] as $volume):
 	$tbody->
 		addTR()->
