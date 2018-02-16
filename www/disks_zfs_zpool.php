@@ -73,12 +73,14 @@ function disks_zfs_zpool_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_zfs_zpool','php');
 	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->inform->basename($sphere->basename() . '_info');
 	$sphere->notifier('zfspool');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add Pool'));
 	$sphere->sym_mod(gtext('Edit Pool'));
+	$sphere->sym_inf(gtext('Pool Information'));
 	$sphere->sym_del(gtext('Pool is marked for deletion'));
 	$sphere->sym_loc(gtext('Pool is protected'));
 	$sphere->sym_unl(gtext('Pool is unlocked'));
@@ -139,23 +141,26 @@ $showusedavail = isset($config['zfs']['settings']['showusedavail']);
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Management')];
 include 'fbegin.inc';
 echo $sphere->doj();
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'),gtext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+$document->render();
 ?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext('Virtual Device');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
 <form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
@@ -187,28 +192,28 @@ echo $sphere->doj();
 			html_titleline2(gtext('Overview'),11);
 ?>
 			<tr>
-				<td class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></td>
-				<td class="lhell"><?=gtext('Name');?></td>
-				<td class="lhell"><?=gtext('Size');?></td>
+				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Size');?></th>
 <?php
 				if($showusedavail):
 ?>
-					<td class="lhell"><?=gtext('Used');?></td>
-					<td class="lhell"><?=gtext('Avail');?></td>
+					<th class="lhell"><?=gtext('Used');?></th>
+					<th class="lhell"><?=gtext('Avail');?></th>
 <?php
 				else:
 ?>
-					<td class="lhell"><?=gtext('Alloc');?></td>
-					<td class="lhell"><?=gtext('Free');?></td>
+					<th class="lhell"><?=gtext('Alloc');?></th>
+					<th class="lhell"><?=gtext('Free');?></th>
 <?php
 				endif;
 ?>
-				<td class="lhell"><?=gtext('Frag');?></td>
-				<td class="lhell"><?=gtext('Capacity');?></td>
-				<td class="lhell"><?=gtext('Dedup');?></td>
-				<td class="lhell"><?=gtext('Health');?></td>
-				<td class="lhell"><?=gtext('AltRoot');?></td>
-				<td class="lhebl"><?=gtext('Toolbox');?></td>
+				<th class="lhell"><?=gtext('Frag');?></th>
+				<th class="lhell"><?=gtext('Capacity');?></th>
+				<th class="lhell"><?=gtext('Dedup');?></th>
+				<th class="lhell"><?=gtext('Health');?></th>
+				<th class="lhell"><?=gtext('AltRoot');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -273,7 +278,9 @@ echo $sphere->doj();
 							echo $sphere->html_toolbox($notprotected,$notdirty);
 ?>
 							<td></td>
-							<td></td>
+<?php
+							echo $sphere->html_informbox();
+?>
 						</tr></tbody></table>
 					</td>
 				</tr>
