@@ -361,7 +361,7 @@ $(window).on("load", function() {
 		<tbody>
 <?php
 			html_checkbox2('clearimport',gtext('Clear Configuration'),false,gtext('Clear configuration information before importing disks.'));
-?>		
+?>
 		</tbody>
 		<tfoot><tr><td colspan="2" class="lcenl">&nbsp;</td></tr></tfoot>
 	</table>
@@ -377,11 +377,11 @@ $(window).on("load", function() {
 <?php
 			html_separator2();
 			html_titleline2(gtext('Import Software RAID Disks'));
-?>		
+?>
 		<tbody>
 <?php
 			html_checkbox2('clearimportswraid',gtext('Clear Configuration'),false,gtext('Clear configuration information before importing software RAID disks.'));
-?>		
+?>
 		</tbody>
 		<tfoot><tr><td colspan="2" class="lcenl">&nbsp;</td></tr></tfoot>
 	</table>
