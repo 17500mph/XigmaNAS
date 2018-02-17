@@ -1320,7 +1320,7 @@ function config_upgrade() {
 	/*	Convert 3.5 -> 36 */
 	/* email parameter */
 	if($config['version'] === '3.5'):
-		array_make_branch($config['system']['email']);
+		array_make_branch($config,'system','email');
 		$config['system']['email']['security'] = $config['system']['email']['security'] ?? true;
 		switch($config['system']['email']['security']):
 			default:
@@ -1345,7 +1345,7 @@ function config_upgrade() {
 	/*	ZFS Settings */
 	if($config['version'] === '36'):
 		unset($grid);
-		$grid = &array_make_branch($config['zfs']['settings']);
+		$grid = &array_make_branch($config,'zfs','settings');
 		if(!array_key_exists('showusedavail',$grid)):
 			$grid['showusedavail'] = false;
 		endif;
