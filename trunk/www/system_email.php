@@ -259,7 +259,7 @@ $document->render();
 			html_inputbox2('from',gtext('From Email Address'),$pconfig['from'],gtext('From email address for sending system messages.'),true,62);
 			html_inputbox2('sendto',gtext('To Email Address'),$pconfig['sendto'],gtext('Destination email address. Separate email addresses by semi-colon.'),true,62);
 			html_inputbox2('server',gtext('SMTP Server'),$pconfig['server'],gtext('Outgoing SMTP mail server address.'),true,62);
-			html_inputbox2('port',gtext('Port'),$pconfig['port'],gtext('The default SMTP mail server port, e.g. 25 or 587.'),true,5);
+			html_inputbox2('port',gtext('Port'),$pconfig['port'],gtext('The default SMTP mail server port, usually port 25 or port 587.'),true,5);
 ?>
 		</tbody>
 	</table>
@@ -303,8 +303,8 @@ $document->render();
 			html_filechooser2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('The name of the TLS trust file. The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
 			html_inputbox2('tls_fingerprint',gtext('TLS Fingerprint'),$pconfig['tls_fingerprint'],gtext('Set the fingerprint of a single certificate to accept for TLS.'),false,60);
 			html_filechooser2('tls_crl_file',gtext('TLS CRL File'),$pconfig['tls_crl_file'],gtext('Certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),$g['media_path'],false,60);
-			html_filechooser2('tls_cert_file',gtext('TLS Cert File'),$pconfig['tls_cert_file'],gtext('Send a client certificate to the server (use this together with ‘tls_key_file’). The file must contain a certificate in PEM format.'),$g['media_path'],false,60);
-			html_filechooser2('tls_key_file',gtext('TLS Key File'),$pconfig['tls_key_file'],gtext('Send a client certificate to the server (use this together with ‘tls_cert_file’). The file must contain the private key of a certificate in PEM format.'),$g['media_path'],false,60);
+			html_filechooser2('tls_cert_file',gtext('TLS Cert File'),$pconfig['tls_cert_file'],gtext('Send a client certificate to the server (use this together with option TLS Key File). The file must contain a certificate in PEM format.'),$g['media_path'],false,60);
+			html_filechooser2('tls_key_file',gtext('TLS Key File'),$pconfig['tls_key_file'],gtext('Send a client certificate to the server (use this together with option TLS Cert File). The file must contain the private key of a certificate in PEM format.'),$g['media_path'],false,60);
 ?>
 		</tbody>
 	</table>
