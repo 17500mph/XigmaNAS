@@ -34,14 +34,22 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
-function zfs_snapshot_display_list() {
-	$cmd = 'zfs list -t snapshot 2>&1';
+function zfs_get_snapshot_list(string $entity_name = NULL) {
+	if(isset($entity_name)):
+		$cmd = sprintf('zfs list -t snapshot %s 2>&1',escapeshellarg($entity_name));
+	else:
+		$cmd = 'zfs list -t snapshot 2>&1';
+	endif;
 	unset($output);
 	mwexec2($cmd,$output);
 	return implode(PHP_EOL,$output);
 }
-function zfs_snapshot_display_properties() {
-	$cmd = 'zfs list -H -o name -t snapshot 2>&1';
+function zfs_get_snapshot_properties(string $entity_name = NULL) {
+	if(isset($entity_name)):
+		$cmd = sprintf('zfs list -H -o name -t snapshot %s 2>&1',escapeshellarg($entity_name));
+	else:
+		$cmd = 'zfs list -H -o name -t snapshot 2>&1';
+	endif;
 	unset($a_names);
 	mwexec2($cmd,$a_names);
 	if(is_array($a_names) && count($a_names) > 0):
@@ -54,6 +62,10 @@ function zfs_snapshot_display_properties() {
 	endif;
 	return implode(PHP_EOL,$output);
 }
+$entity_name = NULL;
+if(isset($_GET['uuid']) && is_string($_GET['uuid'])):
+	$entity_name = sprintf('%s',$_GET['uuid']);
+endif;
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Information')];
 include 'fbegin.inc';
 $document = new co_DOMDocument();
@@ -90,7 +102,7 @@ $document->render();
 			<tr>
 				<td class="celltag"><?=gtext('Information & Status');?></td>
 				<td class="celldata">
-					<pre><span id="zfs_snapshot_list"><?=zfs_snapshot_display_list();?></span></pre>
+					<pre><span id="zfs_snapshot_list"><?=zfs_get_snapshot_list($entity_name);?></span></pre>
 				</td>
 			</tr>
 		</tbody>
@@ -114,7 +126,7 @@ $document->render();
 			<tr>
 				<td class="celltag"><?=gtext('Properties');?></td>
 				<td class="celldata">
-					<pre><span id="zfs_snapshot_properties"><?=zfs_snapshot_display_properties();?></span></pre>
+					<pre><span id="zfs_snapshot_properties"><?=zfs_get_snapshot_properties($entity_name);?></span></pre>
 				</td>
 			</tr>
 		<tbody>

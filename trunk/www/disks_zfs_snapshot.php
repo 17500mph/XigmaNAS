@@ -388,7 +388,9 @@ $document->render();
 ?>
 							</td>
 							<td></td>
-							<td></td>
+							<td>
+								<a href="disks_zfs_snapshot_info.php?uuid=<?=urlencode($sphere_record['snapshot']);?>"><img src="<?=$g_img['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>"/></a>
+							</td>
 						</tr></tbody></table>
 					</td>
 				</tr>
