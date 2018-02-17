@@ -1,15 +1,16 @@
 PORTNAME=		php72
 PORTVERSION=	7.2.2
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=		lang
 COMMENT=		PHP7 Scripting Language
 MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=		${MASTER_SITE_PHP:S,$,:release,}
 MASTER_SITE_SUBDIR=	distributions/:release
-DISTNAME=			php-${PORTVERSION:S/.r/RC/}
+DISTNAME=		php-${PORTVERSION:S/.r/RC/}
 DISTFILES=			${DISTNAME}${EXTRACT_SUFX}:release
-USES+=			tar:xz cpe iconv
+USES+=			compiler:c++11-lib tar:xz cpe iconv
+USE_CXXSTD=		gnu++11
 CPE_PRODUCT=		php
 NO_OPTIONS_SORT=	yes
 
