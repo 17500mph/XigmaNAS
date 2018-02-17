@@ -1346,9 +1346,15 @@ function config_upgrade() {
 	if($config['version'] === '36'):
 		unset($grid);
 		$grid = &array_make_branch($config['zfs']['settings']);
-		$grid['showusedavail'] = false;
-		$grid['capacity_warning'] = 80;
-		$grid['capacity_critical'] = 90;
+		if(!array_key_exists('showusedavail',$grid)):
+			$grid['showusedavail'] = false;
+		endif;
+		if(!array_key_exists('capacity_warning',$grid)):
+			$grid['capacity_warning'] = 80;
+		endif;
+		if(!array_key_exists('capacity_critical',$grid)):
+			$grid['capacity_critical'] = 90;
+		endif;
 		$config['version'] = '37';
 	endif;
 
