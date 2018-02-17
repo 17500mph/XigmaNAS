@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- NAS4Free default system configuration -->
 <nas4free>
-	<version>3.5</version>
+	<version>37</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>nas4free</hostname>
@@ -921,6 +921,10 @@
 			</dataset>
 			-->
 		</datasets>
+		<settings>
+			<capacity_warning>80</capacity_warning>
+			<capacity_critical>90</capacity_critical>
+		</settings>
 	</zfs>
 	<mounts>
 		<!--

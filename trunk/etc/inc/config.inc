@@ -1294,6 +1294,7 @@ function config_upgrade() {
 	if($config['version'] === '3.4'):
 		//	find existing console records, skip configuration when found
 		$record_not_found = true;
+		unset($grid);
 		$grid = &array_make_branch($config,'system','syslogconf','param');
 		foreach($grid as $row):
 			if(is_array($row)):
@@ -1339,6 +1340,16 @@ function config_upgrade() {
 				break;
 		endswitch;
 		$config['version'] = '36';
+	endif;
+	/*	Convert 36 -> 37 */
+	/*	ZFS Settings */
+	if($config['version'] === '36'):
+		unset($grid);
+		$grid = &array_make_branch($config['zfs']['settings']);
+		$grid['showusedavail'] = false;
+		$grid['capacity_warning'] = 80;
+		$grid['capacity_critical'] = 90;
+		$config['version'] = '37';
 	endif;
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
