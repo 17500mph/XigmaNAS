@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-01-25 08:36+0000\n"
+"PO-Revision-Date: 2018-02-18 04:59+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-18 00:50+0000\n"
+"X-Launchpad-Export-Date: 2018-02-18 11:21+0000\n"
 "X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -239,6 +239,8 @@ msgstr "VLAN с меткой %s уже определен на этом инте
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Задача cron должна быть настроена для планирования сценария "
+"/etc/capacitycheck.zfs."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -883,11 +885,15 @@ msgid ""
 "An alert email is sent when the capacity of a pool exceeds the critical "
 "threshold."
 msgstr ""
+"Электронное письмо - уведомление отправляется когда емкость пула превышает "
+"критический порог."
 
 msgid ""
 "An alert email is sent when the capacity of a pool exceeds the warning "
 "threshold."
 msgstr ""
+"Электронное письмо - уведомление отправляется когда емкость пула превышает "
+"порог предупреждения."
 
 msgid "An empty field is default."
 msgstr "Пустое поле по умолчанию."
@@ -989,7 +995,7 @@ msgid "Asynchronous I/O"
 msgstr "Асинхронный ввод/вывод"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Необходимо выбрать хотя бы один диск."
 
 msgid "At least one interface must be selected."
 msgstr "Должен быть выбран хотя бы один интерфейс."
@@ -1525,13 +1531,13 @@ msgid "Capacity"
 msgstr "Объем"
 
 msgid "Capacity Alert Thresholds"
-msgstr ""
+msgstr "Пороги предупреждений о емкости"
 
 msgid "Capacity Critical Threshold"
-msgstr ""
+msgstr "Критический порог емкости"
 
 msgid "Capacity Warning Threshold"
-msgstr ""
+msgstr "Порог предупреждения о емкости"
 
 msgid "Carp Settings"
 msgstr "Настройки Carp"
@@ -1556,6 +1562,8 @@ msgid ""
 "Certificate revocation list (CRL) file for TLS, to check for revoked "
 "certificates."
 msgstr ""
+"Файл списков аннулированных сертификатов (CRL) для TLS для проверки "
+"отозванных сертификатов."
 
 msgid "Change"
 msgstr "Изменить"
@@ -2119,38 +2127,43 @@ msgid "Create ZFS on a GPT partition."
 msgstr "Создание ZFS на раздел GPT."
 
 msgid "Create a L2ARC device for ARC"
-msgstr ""
+msgstr "Создать устройство L2ARC для ARC"
 
 msgid "Create a SLOG device for ZIL"
-msgstr ""
+msgstr "Создать устройство SLOG для ZIL"
 
 msgid "Create a mirrored SLOG device for ZIL"
-msgstr ""
+msgstr "Создание зеркального устройства SLOG для ZIL"
 
 msgid "Create a spare device"
-msgstr ""
+msgstr "Создание резервного устройства"
 
 msgid ""
 "Create a virtual device containing a single device or concatenated devices"
 msgstr ""
+"Создание виртуального устройства, содержащее одно устройство или связанные "
+"устройства"
 
 msgid "Create a virtual device containing mirrored devices"
-msgstr ""
+msgstr "Создание виртуального устройства, содержащего зеркальные устройства"
 
 msgid "Create a virtual device which tolerates 2 device failures"
 msgstr ""
+"Создание виртуального устройства, которое допускает отказ 2 устройств"
 
 msgid "Create a virtual device which tolerates 3 device failures"
 msgstr ""
+"Создание виртуального устройства, которое допускает отказ 3 устройств"
 
 msgid "Create a virtual device which tolerates a single device failure"
 msgstr ""
+"Создание виртуального устройства, которое допускает сбой одного устройства"
 
 msgid "Create and initialize RAID."
 msgstr "Создать и инициализировать RAID"
 
 msgid "Create recursive snapshot."
-msgstr ""
+msgstr "Создание рекурсивного снимка."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Создать рабочий каталог, если он не существует"
@@ -2876,6 +2889,8 @@ msgid ""
 "Display Used/Avail information from the filesystem instead of the Alloc/Free "
 "information from the pool."
 msgstr ""
+"Отображение информации о использованном/доступном пространстве из файловой "
+"системы, а не информации выделено/свободно из пула."
 
 msgid "Display ZFS command history"
 msgstr "Отображение истории команд ZFS (Display ZFS command history)"
@@ -3233,7 +3248,7 @@ msgid "Donate"
 msgstr "Пожертвования"
 
 msgid "Done!"
-msgstr ""
+msgstr "Выполнено!"
 
 msgid "Done."
 msgstr "Выполнено"
@@ -3550,7 +3565,7 @@ msgid "Enable authentication."
 msgstr "Включить аутентификацию."
 
 msgid "Enable checks of the server certificate."
-msgstr ""
+msgstr "Включить проверку сертификата сервера."
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Включение сбора статистики частоты процессора."
@@ -5998,10 +6013,10 @@ msgid "Must be a number between 5 and 1000."
 msgstr "Должно быть число от 5 до 1000."
 
 msgid "Must be a number between 80 and 89."
-msgstr ""
+msgstr "Должно быть число от 80 до 89."
 
 msgid "Must be a number between 90 and 95."
-msgstr ""
+msgstr "Должно быть число от 90 до 95."
 
 msgid "Must choose one"
 msgstr "Выберите..."
@@ -6218,7 +6233,7 @@ msgid "No configured virtual devices."
 msgstr "Нет конфигурированных виртуальных устройств."
 
 msgid "No dataset information available."
-msgstr ""
+msgstr "Информация о наборе данных отсутствует."
 
 msgid "No devices have been selected"
 msgstr "Не выбраны устройства"
@@ -6268,7 +6283,7 @@ msgid "No records found."
 msgstr "Записей не найдено."
 
 msgid "No snapshot information available."
-msgstr ""
+msgstr "Информация о снимке отсутствует."
 
 msgid "No softraid-formatted disks available."
 msgstr "Нет SoftRAID отформатированных доступных дисков."
@@ -6286,7 +6301,7 @@ msgid "No virtual devices have been selected"
 msgstr "Не выбраны виртуальные устройства"
 
 msgid "No volume information available."
-msgstr ""
+msgstr "Нет информации об объеме."
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Наследовать только запрет записи"
@@ -6883,7 +6898,7 @@ msgid "Pool Devices"
 msgstr "Устройства пула"
 
 msgid "Pool Information"
-msgstr ""
+msgstr "Информация о пуле"
 
 msgid "Pool Information & Status"
 msgstr "Информация и статус пулов"
@@ -8024,11 +8039,15 @@ msgid ""
 "Cert File). The file must contain the private key of a certificate in PEM "
 "format."
 msgstr ""
+"Отправлять сертификат клиента на сервер (используйте его вместе с опцией TLS "
+"Cert File). Файл должен содержать закрытый ключ сертификата в формате PEM."
 
 msgid ""
 "Send a client certificate to the server (use this together with option TLS "
 "Key File). The file must contain a certificate in PEM format."
 msgstr ""
+"Отправлять сертификат клиента на сервер (используйте его вместе с ключом "
+"ключа TLS). Файл должен содержать сертификат в формате PEM."
 
 msgid "Send daemon event messages."
 msgstr "Отправлять сообщения о событиях процессов."
@@ -8142,7 +8161,7 @@ msgstr ""
 "библиотеки."
 
 msgid "Set the critical threshold to a value between 90 and 95."
-msgstr ""
+msgstr "Установите критический порог значения от 90 до 95."
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
@@ -8150,7 +8169,7 @@ msgstr ""
 "имя сети)."
 
 msgid "Set the fingerprint of a single certificate to accept for TLS."
-msgstr ""
+msgstr "Установить отпечаток одного сертификата для приема TLS."
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8164,7 +8183,7 @@ msgstr ""
 "настройки параметра."
 
 msgid "Set the warning threshold to a value between 80 and 89."
-msgstr ""
+msgstr "Установите порог предупреждения в значение от 80 до 89."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
@@ -8252,7 +8271,7 @@ msgid "Show UPS Information"
 msgstr "Показать информацию ИБП"
 
 msgid "Show Used/Avail"
-msgstr ""
+msgstr "Показать Использовано/Доступно"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Показать записи журнала в обратном порядке (новые записи сверху)."
@@ -8501,7 +8520,7 @@ msgid "Start"
 msgstr "Старт"
 
 msgid "Start TLS from within the session."
-msgstr ""
+msgstr "Использовать TLS в сеансе."
 
 msgid "Static"
 msgstr "Static"
@@ -8724,16 +8743,16 @@ msgid "TLS"
 msgstr "TLS"
 
 msgid "TLS CRL File"
-msgstr ""
+msgstr "Файл TLS CRL"
 
 msgid "TLS Cert File"
-msgstr ""
+msgstr "Файл TLS Cert"
 
 msgid "TLS Fingerprint"
-msgstr ""
+msgstr "Отпечаток пальца TLS"
 
 msgid "TLS Key File"
-msgstr ""
+msgstr "Файл ключа TLS"
 
 msgid "TLS Only"
 msgstr "Только TLS"
@@ -9220,6 +9239,7 @@ msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
+"Порт почтового сервера SMTP по умолчанию, обычно порт 25 или порт 587."
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9476,6 +9496,8 @@ msgid ""
 "The name of the TLS trust file. The file must be in PEM format containing "
 "one or more certificates of trusted Certification Authorities (CAs)."
 msgstr ""
+"Имя файла доверия TLS. Файл должен быть в формате PEM, содержащем один или "
+"несколько сертификатов доверенных центров сертификации (ЦС)."
 
 msgid "The name of the interface is wrong."
 msgstr "Имя интерфейса неверно."
@@ -10403,7 +10425,7 @@ msgstr ""
 
 #, php-format
 msgid "Total: %s | %s: %s | %s: %s | State: %s"
-msgstr ""
+msgstr "Всего: %s | %s: %s | %s: %s | State: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10577,7 +10599,7 @@ msgid "UPS goes on battery"
 msgstr "Переключение UPS на работу от батареи"
 
 msgid "UPS is disabled."
-msgstr ""
+msgstr "ИБП отключен."
 
 msgid "UPS model"
 msgstr "Модель ИБП"
@@ -10742,7 +10764,7 @@ msgstr ""
 "сети."
 
 msgid "Use Default TLS Trust File"
-msgstr ""
+msgstr "Использовать файл доверия TLS по умолчанию"
 
 msgid "Use Encryption"
 msgstr "Использовать шифрование"
@@ -10766,6 +10788,7 @@ msgstr "Использовать как разреженный том (тонк�
 
 msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
 msgstr ""
+"Использовать файл доверия TLS по умолчанию /usr/local/etc/ssl/cert.pem."
 
 msgid "Use different container as root of the tree."
 msgstr "Используйте другой контейнер в качестве корня дерева."
@@ -11392,13 +11415,13 @@ msgid "ZFS Pool I/O Statistics"
 msgstr "Статистика ввода/вывода ZFS пула"
 
 msgid "ZFS Pool Properties"
-msgstr ""
+msgstr "Свойства пула ZFS"
 
 msgid "ZFS Pool Tools"
 msgstr "Инструменты ZFS пулов"
 
 msgid "ZFS Settings"
-msgstr ""
+msgstr "Настройки ZFS"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Информация и статус ZFS снимков"
@@ -11432,7 +11455,7 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "allocated of"
-msgstr ""
+msgstr "выделено из"
 
 msgid "and"
 msgstr "и"
@@ -11464,7 +11487,7 @@ msgid "filechooser"
 msgstr "Выбор файла"
 
 msgid "free of"
-msgstr ""
+msgstr "свободно из"
 
 msgid "get target info failed."
 msgstr "неудачное получение информации о цели."
