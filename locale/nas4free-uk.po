@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
-"PO-Revision-Date: 2018-01-25 11:38+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"PO-Revision-Date: 2018-02-02 15:00+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:42+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:51+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -236,6 +236,9 @@ msgstr ""
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "VLAN із тегом %s вже визначено для цього інтерфейсу."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -875,6 +878,16 @@ msgstr ""
 "Група ініціаторів ідентифікується номером мітки і визначає дозволені імена "
 "ініціатора і мереж."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Порожнє поле за замовчуванням."
 
@@ -973,6 +986,9 @@ msgstr "Ви впевнені, що хочете вимкнути сервер?"
 
 msgid "Asynchronous I/O"
 msgstr "Асінхроне введення/виведення"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "Щонайменше один інтерфейс потрібно обрати"
@@ -1503,6 +1519,15 @@ msgstr "Не можливо використати DHCP для інтерфей�
 msgid "Capacity"
 msgstr "Ємність"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Налаштування Carp"
 
@@ -1521,6 +1546,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Сертифікат"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Змінити"
@@ -2085,8 +2115,39 @@ msgstr "Створює PV Гістя"
 msgid "Create ZFS on a GPT partition."
 msgstr "Створює ZFS на GPT розділах."
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "Створити та ініціалізувати RAID."
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Створити робочий каталог, якщо він не існує."
@@ -2096,9 +2157,6 @@ msgstr "Створена файлова система UFS:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Створює пул з альтернативним коренем."
-
-msgid "Creates the recursive snapshot."
-msgstr "Створює рекурсивний знімок."
 
 msgid "Creating filesystem"
 msgstr "Створення файлової системи"
@@ -2386,7 +2444,7 @@ msgid "Delete Selected Datasets"
 msgstr "Видалити обраний набір даних"
 
 msgid "Delete Selected Disks"
-msgstr "Видалити обраны диски"
+msgstr "Видалити обрані диски"
 
 msgid "Delete Selected Encrypted Volumes"
 msgstr "Видалити обрані шифровані томи"
@@ -2812,6 +2870,11 @@ msgstr "Диски | Точка монтування | Управління"
 msgid "Display"
 msgstr "Дисплей"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "Відображення історії команд ZFS"
 
@@ -3162,8 +3225,8 @@ msgstr "Ім'я домена, напр. example.com"
 msgid "Donate"
 msgstr "Пожертва"
 
-msgid "Done"
-msgstr "Готово"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "Готово."
@@ -3433,9 +3496,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Дозволити STARTTLS"
 
-msgid "Enable STARTTLS."
-msgstr "Дозволяє STARTTLS."
-
 msgid "Enable Selected Commands"
 msgstr "Дозволити обрані команди"
 
@@ -3481,6 +3541,9 @@ msgstr "Дозволити анонімний доступ."
 
 msgid "Enable authentication."
 msgstr "Увімкнути автентифікацію."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Увімкнути збір статистики про частоту ЦП."
@@ -3573,9 +3636,6 @@ msgstr "Увімкнути список модулів"
 
 msgid "Enable nested virtualization"
 msgstr "Дозволити вкладену віртуалізацію"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "Включити або відключити перевірку сертифіката сервера."
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Увімкнути обмін списками учасників (PEX)"
@@ -5911,6 +5971,12 @@ msgstr "Музика"
 msgid "Must be a number between 5 and 1000."
 msgstr "Має бути числом від 5 до 1000."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "Треба вибрати один з варіантів"
 
@@ -6126,6 +6192,9 @@ msgstr "Немає налаштованих пулів."
 msgid "No configured virtual devices."
 msgstr "Немає налаштованих віртуальних пристроїв."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "Немає обраних пристроїв"
 
@@ -6173,6 +6242,9 @@ msgstr "Немає обраних пулів"
 msgid "No records found."
 msgstr "Не знайдено записів."
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Немає доступних відформатованих SoftRAID дисків."
 
@@ -6187,6 +6259,9 @@ msgstr "Відповідних віртуальних пристроїв не з
 
 msgid "No virtual devices have been selected"
 msgstr "Немає обраних віртуальних пристроїв"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Успадковувати тільки заборону запису"
@@ -6778,6 +6853,9 @@ msgstr "Список"
 
 msgid "Pool Devices"
 msgstr "Пристрої пулу"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "Статус та інформація про пул"
@@ -7867,9 +7945,6 @@ msgstr ""
 msgid "Selected"
 msgstr "Вибрано"
 
-msgid "Selected UPS"
-msgstr "Вибране ДБЖ"
-
 msgid "Selected device or label does not exist."
 msgstr "Вибраний пристрій або мітка не існує."
 
@@ -7917,6 +7992,17 @@ msgstr "Надіслати Тестовий Лист"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Надіслати тестовий лист-попередження при старті."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "Надсилати повідомлення про події демонів."
@@ -8029,10 +8115,16 @@ msgstr ""
 "Вкажіть розташування контенту або його розташування відносно медіа-"
 "бібліотеки."
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
 "Встановіть необхідний ідентифікатор сервісу (Service Set Identifier) (він же "
 "ім'я мережі)."
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8044,6 +8136,9 @@ msgstr ""
 "обмеження розміру пакетів на інтерфейсі. Не всі інтерфейси підтримують "
 "установку розміру MTU і деякі інтерфейси мають обмеження на інтервал "
 "настройки параметра."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Встановіть швидкість прокрутки заголовка 0-10 (10 за замовчуванням)."
@@ -8128,6 +8223,9 @@ msgstr "Показати необроблену інформацію БДЖ"
 
 msgid "Show UPS Information"
 msgstr "Показати інформацію про ДБЖ"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Показати записи журналу в зворотному порядку (нові записи зверху)."
@@ -8372,6 +8470,9 @@ msgstr ""
 msgid "Start"
 msgstr "Стартувати"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Статичний"
 
@@ -8592,6 +8693,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "Тільки TLS"
@@ -9068,8 +9181,8 @@ msgstr ""
 "Тут ви можете вказати формат знімків для служби тіньового копіювання. Формат "
 "за замовчуванням %s використовується для автоматичних знімків ZFS."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Порт SMTP сервера за замовчуванням, наприклад 25 або 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9325,6 +9438,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Ім'я RAID може складатися тільки з символів A-Z, A-Z, 0-9."
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Ім'я інтерфейсу помилкове."
 
@@ -9548,9 +9666,6 @@ msgid ""
 msgstr ""
 "Немає необхідності запускати том RAID тут (Він запускається автоматично)."
 
-msgid "There must be at least 1 disks selected."
-msgstr "Потрібно вибрати принаймні 1 диск."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Повинно бути принаймні 2 диски в \"зеркалі\"."
 
@@ -9700,15 +9815,6 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Це може викликати величезну затримку під час завантаження сторінки журналу!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Ця команда активізує строгу перевірку сертифіката сервера. Ім'я файлу має "
-"бути іменем абсолютного шляху до файлу у форматі PEM, який містить один або "
-"більше сертифікатів довірених органів сертифікації (CA)."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10261,8 +10367,8 @@ msgstr ""
 "робочу поверхню диска."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Всього: %s | Розподілено: %s | Вільно: %s | Стан: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10434,6 +10540,9 @@ msgstr "Прошивка ДБЖ"
 msgid "UPS goes on battery"
 msgstr "Перехід на батарею"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "Модель ДБЖ"
 
@@ -10591,6 +10700,9 @@ msgstr "Статистика часу роботи"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "Відображати пропускну здатність мережі у байт/с замість біт/с."
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "Використовувати шифрування"
 
@@ -10612,6 +10724,9 @@ msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "Використовувати як розріджений том (тонкий резерв)."
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr "Використовуйте інший контейнер як корень дерева."
@@ -11236,8 +11351,14 @@ msgstr "Властивості набору даних ZFS"
 msgid "ZFS Pool I/O Statistics"
 msgstr "Статистика введення/виведення для ZFS пулу"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "Інструменти ZFS пулів"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Інформація та Статус знімка ZFS"
@@ -11269,6 +11390,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "та"
 
@@ -11297,6 +11421,9 @@ msgstr "наприклад %s"
 
 msgid "filechooser"
 msgstr "Вибір файлу"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "збій отримання інформації про об'єкт."

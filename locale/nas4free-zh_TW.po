@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
-"PO-Revision-Date: 2017-12-22 17:46+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"PO-Revision-Date: 2018-02-02 02:19+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:42+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:50+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -213,6 +213,9 @@ msgstr "端口組由標記識別並定義IP地址和監聽的TCP端口"
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "已經有一個標記為 %s 的VLAN定義在此介面上。"
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -803,6 +806,16 @@ msgid ""
 "initiator names and networks."
 msgstr "啟動器組由標籤號標識並定義授權的啟動器名稱和網路。"
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "默認空白"
 
@@ -892,6 +905,9 @@ msgstr "是否確定關閉系統？"
 
 msgid "Asynchronous I/O"
 msgstr "非同步I/O"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "必須至少選擇一個接口。"
@@ -1393,6 +1409,15 @@ msgstr "LAN的介面不能使用DHCP"
 msgid "Capacity"
 msgstr "容量"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "CARP設置"
 
@@ -1408,6 +1433,11 @@ msgstr "假設IP地址或DNS主機是個NAT 網關或是端口轉發伺服器，
 
 msgid "Certificate"
 msgstr "證書"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "更改"
@@ -1902,8 +1932,39 @@ msgstr "創建PV客戶機"
 msgid "Create ZFS on a GPT partition."
 msgstr "在GPT分區上創建ZFS。"
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "建立並初始 RAID。"
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "如果工作目錄不存在，則創建目錄"
@@ -1913,9 +1974,6 @@ msgstr "建立 UFS 檔系統："
 
 msgid "Creates the pool with an alternate root."
 msgstr "建立備用根池。"
-
-msgid "Creates the recursive snapshot."
-msgstr "建立遞歸快照。"
 
 msgid "Creating filesystem"
 msgstr "建立檔系統"
@@ -2604,6 +2662,11 @@ msgstr "磁片| 掛載點| 管理"
 msgid "Display"
 msgstr "顯示"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "顯示ZFS命令歷史記錄"
 
@@ -2934,8 +2997,8 @@ msgstr "功能變數名稱，例如：domain.com"
 msgid "Donate"
 msgstr "捐贈"
 
-msgid "Done"
-msgstr "完成"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "完成。"
@@ -3193,13 +3256,10 @@ msgstr "啟用 SMTP 認證。"
 msgid ""
 "Enable SSL/TLS for secured connections. You also need to configure the TLS "
 "trust file. For some servers you may need to disable STARTTLS."
-msgstr ""
+msgstr "為安全連接啟用SSL / TLS。 您還需要配置TLS信任文件。 對於某些服務器，您可能需要禁用STARTTLS。"
 
 msgid "Enable STARTTLS"
-msgstr ""
-
-msgid "Enable STARTTLS."
-msgstr ""
+msgstr "啟用STARTTLS"
 
 msgid "Enable Selected Commands"
 msgstr "啟用選中的命令"
@@ -3245,6 +3305,9 @@ msgstr "啟用匿名綁定。"
 
 msgid "Enable authentication."
 msgstr "啟用認證。"
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "啟用收集CPU頻率統計資訊。"
@@ -3334,9 +3397,6 @@ msgstr "啟用模組列表。"
 
 msgid "Enable nested virtualization"
 msgstr "啟用嵌套虛擬化"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "啟用或禁用伺服器證書的檢查。"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "啟用對等交換(PEX)"
@@ -5518,6 +5578,12 @@ msgstr "音樂"
 msgid "Must be a number between 5 and 1000."
 msgstr "必須是5到1000之間的數字。"
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "必須選一"
 
@@ -5721,6 +5787,9 @@ msgstr "沒有配置池。"
 msgid "No configured virtual devices."
 msgstr "未配置虛擬設備。"
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "未選擇任何設備"
 
@@ -5766,6 +5835,9 @@ msgstr "未選擇池"
 msgid "No records found."
 msgstr "沒有找到記錄。"
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "沒有軟RAID格式的磁片可用。"
 
@@ -5780,6 +5852,9 @@ msgstr "未找到合適的虛擬設備。"
 
 msgid "No virtual devices have been selected"
 msgstr "未選擇任何虛擬設備"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "不允許 - 僅繼承拒絕條目"
@@ -6347,6 +6422,9 @@ msgstr "存儲池"
 
 msgid "Pool Devices"
 msgstr "池設備"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "存儲池資訊和狀態"
@@ -7379,9 +7457,6 @@ msgstr "選擇要用於給定加密演算法的密鑰長度。"
 msgid "Selected"
 msgstr "已選擇"
 
-msgid "Selected UPS"
-msgstr "選中的UPS"
-
 msgid "Selected device or label does not exist."
 msgstr "選定的設備或標籤不存在。"
 
@@ -7429,6 +7504,17 @@ msgstr "發送測試電子郵件"
 
 msgid "Send a TEST warning email on startup."
 msgstr "啟動時傳送測試警示電郵。"
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "發送守護進程事件消息。"
@@ -7534,8 +7620,14 @@ msgstr "設置帳號的主要群組。"
 msgid "Set the content location(s) to or from the media library."
 msgstr "設置從或到媒體庫的內容位置。"
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "設置所需的服務集識別字（Service Set Identifier）（也稱為網路名稱）。"
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -7544,6 +7636,9 @@ msgid ""
 "some interfaces have range restrictions."
 msgstr ""
 "設置介面的最大傳輸單位為n，默認為指定的介面。 MTU用於限制在介面上傳輸的數據包的大小。 並非所有介面都支持設置MTU，並且一些介面具有範圍限制。"
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "設置標題滾動速度 0-10（默認為10）。"
@@ -7624,6 +7719,9 @@ msgstr "顯示RAW UPS的資訊"
 
 msgid "Show UPS Information"
 msgstr "顯示UPS資訊"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "以相反的順序顯示日誌條目（新條目在最上面）。"
@@ -7847,6 +7945,9 @@ msgstr ""
 msgid "Start"
 msgstr "啟動"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "靜態"
 
@@ -8063,6 +8164,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "僅TLS"
@@ -8488,8 +8601,8 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr "可以指定陰影複製服務的快照的自定義格式。默認格式是用於ZFS自動快照的 %s。"
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "默認的 SMTP 郵件伺服器端口號，例：25 或 587。"
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -8702,6 +8815,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "RAID的名稱只能由字元a-z，A-Z，0-9組成。"
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "接口的名稱錯誤。"
 
@@ -8907,9 +9025,6 @@ msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr "不需要從這裏啟動RAID磁片區（它會自動啟動）。"
 
-msgid "There must be at least 1 disks selected."
-msgstr "至少要選擇 1 個硬碟。"
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "鏡像必須有至少 2 個硬碟。"
 
@@ -9033,12 +9148,6 @@ msgstr ""
 
 msgid "This can cause a huge delay in loading the log page!"
 msgstr "這可能導致加載日誌頁面的巨大延遲！"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr "該命令激活嚴格的服務器證書驗證。 文件名必須是包含一個或多個可信認證機構（CA）證書的PEM格式文件的絕對路徑名。"
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -9485,8 +9594,8 @@ msgid ""
 msgstr "磁頭致動器上的總加載時間（停止區域不花費時間）。"
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "總計：%s | 分配：%s | 空餘：%s | 狀態：%s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -9653,6 +9762,9 @@ msgstr "UPS 固件"
 msgid "UPS goes on battery"
 msgstr "UPS 轉用電池"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "UPS 型號"
 
@@ -9807,6 +9919,9 @@ msgstr "運行時間統計"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "使用位元組/秒而不是位/秒來進行網路吞吐量顯示。"
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "使用加密"
 
@@ -9814,7 +9929,7 @@ msgid "Use PAM for user authentication."
 msgstr "使用PAM進行用戶認證。"
 
 msgid "Use TLS"
-msgstr ""
+msgstr "使用安全傳輸層協議（TLS）"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9823,6 +9938,9 @@ msgstr "使用空白字元來分隔多個主機位置(一個空白即可)。如�
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "用作稀疏卷（精簡配置）。"
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr "使用不同的容器作為樹的根。"
@@ -10383,8 +10501,14 @@ msgstr "ZFS 數據集屬性"
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS池I/O統計"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS池工具"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS 快照資訊和狀態"
@@ -10414,6 +10538,9 @@ msgstr "ZFS卷大小。 你可以使用可讀的後綴，如K，KB，M，GB。"
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "and"
 
@@ -10440,6 +10567,9 @@ msgstr "例如：%s"
 
 msgid "filechooser"
 msgstr "filechooser"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "獲取目標資訊失敗。"

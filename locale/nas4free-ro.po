@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
 "PO-Revision-Date: 2018-01-19 08:01+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:41+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:50+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -238,6 +238,9 @@ msgstr ""
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr ""
 "Rețeaua VLAN cu eticheta %s este deja definită pentru această interfață."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -879,6 +882,16 @@ msgstr ""
 "Un Grup Inițiator este identificat printr-un tag și definește inițiatorii "
 "autorizați și rețelele."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Implicit - câmp necompletat."
 
@@ -976,6 +989,9 @@ msgstr "Opriți serverul?"
 
 msgid "Asynchronous I/O"
 msgstr "I/O asincrone"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "Trebuie să selectați cel puțin o interfață."
@@ -1505,6 +1521,15 @@ msgstr "Nu se poate utilza DHCP pentru interfața."
 msgid "Capacity"
 msgstr "Capacitate"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Setări CARP"
 
@@ -1524,6 +1549,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Certificat de securitate"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Modificare"
@@ -2103,8 +2133,39 @@ msgstr "Creare cont PV Guest"
 msgid "Create ZFS on a GPT partition."
 msgstr "Creare partiție ZFS sau GPT."
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "Creare și inițializare RAID."
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Creare folder de lucru (dacă acesta nu există deja)."
@@ -2114,9 +2175,6 @@ msgstr "Fișiere sistem UFS create:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Creare structură cu un alt root."
-
-msgid "Creates the recursive snapshot."
-msgstr "Crează imagini sistem (snapshit) recursive."
 
 msgid "Creating filesystem"
 msgstr "Creare sistem de fișiere"
@@ -2830,6 +2888,11 @@ msgstr "Discuri | Punct de montare | Management"
 msgid "Display"
 msgstr "Afișare"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "Afișare istoric comenzi ZFS"
 
@@ -3175,8 +3238,8 @@ msgstr "Nume domeniu, ex. exemplu.com."
 msgid "Donate"
 msgstr "Donează"
 
-msgid "Done"
-msgstr "Gata"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "Gata."
@@ -3443,9 +3506,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr ""
 
-msgid "Enable STARTTLS."
-msgstr ""
-
 msgid "Enable Selected Commands"
 msgstr "Activare comenzi selectate"
 
@@ -3490,6 +3550,9 @@ msgstr "Activare legătură anonimă."
 
 msgid "Enable authentication."
 msgstr "Activare autentificare."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Activare colectare date statistice frecvență CPU."
@@ -3581,9 +3644,6 @@ msgstr "Activare listare module."
 
 msgid "Enable nested virtualization"
 msgstr "Activare virtualizare imbricată"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "Activare - dezactivare verificare certificate server."
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Activare schimburi în grup (PEX)."
@@ -5934,6 +5994,12 @@ msgstr "Muzică"
 msgid "Must be a number between 5 and 1000."
 msgstr "Trebuie să fie un număr între 5 și 1000."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "trebuie să selectați un disc"
 
@@ -6148,6 +6214,9 @@ msgstr "Nu există nicio structură pool configurată."
 msgid "No configured virtual devices."
 msgstr "Niciun dispozitiv virtual configurat."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "Nu a fost selectat niciun dispozitiv"
 
@@ -6195,6 +6264,9 @@ msgstr "Niciun pool nu a fost selectat"
 msgid "No records found."
 msgstr "Nu a fost găsită nicio înregistrare."
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Niciun disc formatat soft-raid nu este disponibil."
 
@@ -6209,6 +6281,9 @@ msgstr "Niciun dispozitiv virtual corespunzător nu a fost găsit."
 
 msgid "No virtual devices have been selected"
 msgstr "Nu a fost selectat niciun dispozitiv virtual"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Doar intrări de refuz moștenite"
@@ -6803,6 +6878,9 @@ msgstr "Structură"
 
 msgid "Pool Devices"
 msgstr "Dispozitiv pool"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "Informații & Stare Pool"
@@ -7892,9 +7970,6 @@ msgstr ""
 msgid "Selected"
 msgstr "Selectat"
 
-msgid "Selected UPS"
-msgstr "UPS-uri selectate"
-
 msgid "Selected device or label does not exist."
 msgstr "Dispozitivele/etichetele specificate nu există."
 
@@ -7942,6 +8017,17 @@ msgstr "Trimitere email de test"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Trimitere email de avertizare TEST la pornire."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "Trimite mesaje pentru evenimente daemon."
@@ -8052,8 +8138,14 @@ msgstr "Setarea grupului de autorizare primar la grupul dat."
 msgid "Set the content location(s) to or from the media library."
 msgstr "Selectare locație(ii) bibliotecă media."
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "Definire Set Identificator Serviciu (adică nume rețea)"
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8067,6 +8159,9 @@ msgstr ""
 "transmise printr-o interfață. Nu toate interfețele permit modificarea "
 "valorii MTU, unele dintre ele putînd avea restricții privind valorile "
 "posibile."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Valoarea vitezei de scroll (între 0 și 10). Implicit este 10."
@@ -8151,6 +8246,9 @@ msgstr "Afișare informații (neprelucrate) UPS"
 
 msgid "Show UPS Information"
 msgstr "Afișare informații UPS"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
@@ -8403,6 +8501,9 @@ msgstr ""
 msgid "Start"
 msgstr "Start"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Static"
 
@@ -8620,6 +8721,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "Doar TLS"
@@ -9098,8 +9211,8 @@ msgstr ""
 "fi specificat aici. Formatul implicit este %s folosit pentru imaginile ZFS "
 "generate automat."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Portul implicit folosit de serverul SMTP, ex. 25 sau 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9346,6 +9459,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Numele pentru RAID poate conține doar caracterele a-z, A-Z, 0-9."
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Numele interfeței este greșit."
 
@@ -9574,9 +9692,6 @@ msgid ""
 msgstr ""
 "Nu e nevoie să porniți de aici, manual, volumul RAID (va porni automat)."
 
-msgid "There must be at least 1 disks selected."
-msgstr "Trebuie să selectați cel puțin un disc."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Trebuie să aveți cel puțin 2 discuri pentru un RAID1."
 
@@ -9728,16 +9843,6 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Poate determina o scădere importantă în viteza de încărcare a paginilor."
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Această comandă activează modul strict de verificare al certificatelor. "
-"Numele de fișier trebuie să reprezinte calea absolută în formatul PEM iar "
-"fișierul trebuie să conțină unul sau mai multe certificate CA (Certification "
-"Authorities)."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10288,8 +10393,8 @@ msgstr ""
 "parcare)."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Total: %s | Alocat: %s | Liber: %s | Stare: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10461,6 +10566,9 @@ msgstr "Firmware UPS"
 msgid "UPS goes on battery"
 msgstr "UPS trece pe baterii"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "Model UPS"
 
@@ -10617,6 +10725,9 @@ msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 "Folosiți Bytes/sec în loc de Bits/sec pentru graficul traficului în rețea."
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "Utilizare criptare"
 
@@ -10636,6 +10747,9 @@ msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "Utilizare ca volum rezervă (thin provisioning)."
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr ""
@@ -11262,8 +11376,14 @@ msgstr "Proprietăți sistem ZFS"
 msgid "ZFS Pool I/O Statistics"
 msgstr "Statistici ZFS Pool I/O"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "Unelte pool ZFS"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Informații & Stare imagine ZFS"
@@ -11296,6 +11416,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "și"
 
@@ -11324,6 +11447,9 @@ msgstr "ex. %s"
 
 msgid "filechooser"
 msgstr "selector fișiere"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "eșuare găsire info destinație."

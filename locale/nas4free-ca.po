@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
 "PO-Revision-Date: 2018-01-25 15:41+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:42+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:51+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -241,6 +241,9 @@ msgstr ""
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Una VLAN amb l'etiqueta%s ja está definida en aquesta interfície."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -885,6 +888,16 @@ msgstr ""
 "Un Grup d'iniciador s'identifica mitjançant un nombre d'etiqueta i defineix "
 "els noms d'iniciador autoritzats i xarxes."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Un camp buit és per defecte."
 
@@ -985,6 +998,9 @@ msgstr "Esteu segur que voleu apagar el servidor?"
 
 msgid "Asynchronous I/O"
 msgstr "E/S asíncrona"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "Com a mínim una interfície ha de ser seleccionat."
@@ -1520,6 +1536,15 @@ msgstr "No es pot fer servir DHCP per a la interfície LAN."
 msgid "Capacity"
 msgstr "Capacitat"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Configuració de CARP"
 
@@ -1538,6 +1563,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Certificat"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Canvia-ho"
@@ -2114,8 +2144,39 @@ msgstr "Crea un hoste PV"
 msgid "Create ZFS on a GPT partition."
 msgstr "Crear ZFS en una partició GPT."
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "Crea i inicialitza el RAID"
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Crea directori de treball si no existia."
@@ -2125,9 +2186,6 @@ msgstr "Crea sistema d'arxiu UFS:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Crea la piscina amb una rel alternativa."
-
-msgid "Creates the recursive snapshot."
-msgstr "Crea la visualitzacio recursiva"
 
 msgid "Creating filesystem"
 msgstr "Crea sistema d'arxius"
@@ -2842,6 +2900,11 @@ msgstr "Discs | Punt de muntatge | Gestió"
 msgid "Display"
 msgstr "Visualització"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "Mostra historial de comandament ZFS"
 
@@ -3198,8 +3261,8 @@ msgstr "Nom de domini, per exemple, example.com."
 msgid "Donate"
 msgstr "Donatiu"
 
-msgid "Done"
-msgstr "Fet"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "Fet."
@@ -3471,9 +3534,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Activa STARTTTLS"
 
-msgid "Enable STARTTLS."
-msgstr "Activa STARTTTLS"
-
 msgid "Enable Selected Commands"
 msgstr "Activa ordres seleccionats"
 
@@ -3518,6 +3578,9 @@ msgstr "Habilita enllaç anònim."
 
 msgid "Enable authentication."
 msgstr "Habilita l'autenticació."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Habilitar la recopilació d'estadístiques de freqüència de la CPU."
@@ -3610,10 +3673,6 @@ msgstr "Habilitar llista de mòduls."
 
 msgid "Enable nested virtualization"
 msgstr "Habilitar la virtualització imbricada"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr ""
-"Habilitar o deshabilitar les comprovacions del certificat del servidor."
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Activar l'intercanvi entre parells (PEX)."
@@ -5978,6 +6037,12 @@ msgstr "Música"
 msgid "Must be a number between 5 and 1000."
 msgstr "Ha de ser un número entre 5 i 1000."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "Ha de triar un"
 
@@ -6196,6 +6261,9 @@ msgstr "No s'han configurat les piscines."
 msgid "No configured virtual devices."
 msgstr "Dispositius virtuals no configurats."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "No s'han seleccionat dispositius"
 
@@ -6243,6 +6311,9 @@ msgstr "No s'han seleccionat piscines"
 msgid "No records found."
 msgstr "No s'ha trobat cap registre."
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "No hi ha discos SoftRAID amb format disponible."
 
@@ -6257,6 +6328,9 @@ msgstr "No s'han trobat dispositius virtuals adequats."
 
 msgid "No virtual devices have been selected"
 msgstr "No s'han seleccionat dispositius virtuals"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Només heretar entrades negades"
@@ -6855,6 +6929,9 @@ msgstr "Piscina"
 
 msgid "Pool Devices"
 msgstr "Dispositius de la piscina"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "Informació i estat de piscina"
@@ -7947,9 +8024,6 @@ msgstr ""
 msgid "Selected"
 msgstr "Seleccionat"
 
-msgid "Selected UPS"
-msgstr "SAI seleccionat"
-
 msgid "Selected device or label does not exist."
 msgstr "dispositiu seleccionat o etiqueta no existeix."
 
@@ -7997,6 +8071,17 @@ msgstr "Envia correu electrònic de prova"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Enviar un correu electrònic d'advertència de prova en l'inici."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "Enviar missatges d'esdeveniments del dimoni."
@@ -8108,10 +8193,16 @@ msgid "Set the content location(s) to or from the media library."
 msgstr ""
 "Establir la ubicació (s) continguts cap o des de la biblioteca de mitjans."
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
 "Establir l'identificador de servei desitjat (també conegut com a nom de "
 "xarxa)."
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8124,6 +8215,9 @@ msgstr ""
 "paquets que es transmeten en una interfície. No totes les interfícies "
 "admeten l'establiment de la MTU, i algunes interfícies tenen restriccions de "
 "rang."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
@@ -8209,6 +8303,9 @@ msgstr "Mostra l'informació plana del SAI"
 
 msgid "Show UPS Information"
 msgstr "Mostra l'informació del SAI"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
@@ -8460,6 +8557,9 @@ msgstr ""
 msgid "Start"
 msgstr "Inicia"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Estàtic"
 
@@ -8680,6 +8780,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "Xifrat TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "Nòmes TLS"
@@ -9163,9 +9275,8 @@ msgstr ""
 "pot especificar. El format per defecte és %s utilitzat per a la instantània "
 "automàtica de ZFS."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
-"El port del servidor de correu SMTP predeterminat, per exemple, 25 o 587."
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9420,6 +9531,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "El nom del RAID només pot constar dels caràcters a-z, A-Z, 0-9."
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "El nom de la interfície es erroni."
 
@@ -9650,9 +9766,6 @@ msgid ""
 msgstr ""
 "No hi ha necessitat d'iniciar un volum RAID d'aquí (S'inicia automàticament)."
 
-msgid "There must be at least 1 disks selected."
-msgstr "Hi ha d'haver almenys 1 discos seleccionats."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Hi ha d'haver almenys 2 discos al mirall."
 
@@ -9806,16 +9919,6 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Això pot causar un gran retard en la càrrega de la pàgina de registre!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Aquesta comanda activa la verificació estricta del certificat del servidor. "
-"El nom de fitxer ha de ser el nom de la ruta absoluta d'un fitxer en format "
-"PEM que contingui un o més certificats d'Autoritats de certificació de "
-"confiança (CA)."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10379,8 +10482,8 @@ msgstr ""
 "de l'àrea d'estacionament)."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Total: %s | Usat: %s | Lliure: %s | Estat: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10552,6 +10655,9 @@ msgstr "micro-programari de SAI"
 msgid "UPS goes on battery"
 msgstr "SAI va a bateria"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "Model de SAI"
 
@@ -10710,6 +10816,9 @@ msgstr ""
 "Utilitzeu Bytes/seg en lloc de bits/seg per a la visualització de rendiment "
 "de la xarxa."
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "Utilitza xifrat"
 
@@ -10729,6 +10838,9 @@ msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "Utilitzeu un volum reduït (aprovisionament fi)."
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr "Fes servir diferents contenidors per l'arrel de l'arbre."
@@ -11348,8 +11460,14 @@ msgstr "Propietats del conjunt de dades de ZFS"
 msgid "ZFS Pool I/O Statistics"
 msgstr "Estadístiques de E/S de la piscina ZFS"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "Eines de la piscina ZFS"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Informació instantània i estat de ZFS"
@@ -11381,6 +11499,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "i"
 
@@ -11409,6 +11530,9 @@ msgstr "e.x. %s"
 
 msgid "filechooser"
 msgstr "selector de fitxers"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "obtenir informació del objectiu ha fallat."

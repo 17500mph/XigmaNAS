@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
-"PO-Revision-Date: 2018-01-25 20:33+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"PO-Revision-Date: 2018-02-18 00:44+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:41+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:48+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -245,6 +245,11 @@ msgstr ""
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Een VLAN met de markering %s is al gedefineerd op deze netwerkkaart."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
+"Een cronjob moet worden ingesteld om script /etc/capacitycheck.zfs in te "
+"plannen."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -892,6 +897,20 @@ msgstr ""
 "Een Initiator Groep wordt geïdentificeerd door een tag-nummer en definieert "
 "geautoriseerde initiator namen en netwerken."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+"Een alert e-mail wordt verzonden wanneer de capaciteit van een pool de "
+"kritische drempel overschrijdt."
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+"Een alert e-mail wordt verzonden wanneer de capaciteit van een pool de "
+"waarschuwingsdrempel overschrijdt."
+
 msgid "An empty field is default."
 msgstr "Een leeg veld is standaard."
 
@@ -991,6 +1010,9 @@ msgstr "Weet u zeker dat u de server wilt uitschakelen?"
 
 msgid "Asynchronous I/O"
 msgstr "Asynchrone I/O"
+
+msgid "At least one disk must be selected."
+msgstr "Ten minste één schijf moet worden geselecteerd."
 
 msgid "At least one interface must be selected."
 msgstr "Ten minste één netwerk moet worden ingeschakeld."
@@ -1530,6 +1552,15 @@ msgstr "Kan DHCP niet gebruiken voor de LAN-interface."
 msgid "Capacity"
 msgstr "Capaciteit"
 
+msgid "Capacity Alert Thresholds"
+msgstr "Capaciteit Alarmdrempels"
+
+msgid "Capacity Critical Threshold"
+msgstr "Capaciteit Kritische Drempel"
+
+msgid "Capacity Warning Threshold"
+msgstr "Capaciteit Waarschuwingsdrempel"
+
 msgid "Carp Settings"
 msgstr "Carp Instellingen"
 
@@ -1549,6 +1580,13 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Certificaat"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
+"Certificaat intrekkingslijsten (CRL) bestand voor TLS, om te controleren op "
+"ingetrokken certificaten."
 
 msgid "Change"
 msgstr "Wijzigen"
@@ -2130,8 +2168,41 @@ msgstr "Creëer PV Gast"
 msgid "Create ZFS on a GPT partition."
 msgstr "Creëer ZFS op een GPT partitie."
 
+msgid "Create a L2ARC device for ARC"
+msgstr "Creëer een L2ARC schijf voor ARC"
+
+msgid "Create a SLOG device for ZIL"
+msgstr "Creëer een SLOG schijf voor ZIL"
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr "Creëer een gespiegelde SLOG schijf voor ZIL"
+
+msgid "Create a spare device"
+msgstr "Creëer een spare schijf"
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+"Creëer een virtuele schijf met een enkele schijf of aaneengeschakelde "
+"schijven"
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr "Creëer een virtuele schijf met gespiegelde schijven"
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr "Creëer een virtuele schijf dat 2 schijfstoringen verdraagt"
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr "Creëer een virtuele schijf dat 3 schijfstoringen verdraagt"
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr "Creëer een virtuele schijf dat één schijfstoring verdraagt"
+
 msgid "Create and initialize RAID."
 msgstr "Creëer en initialiseer de RAID."
+
+msgid "Create recursive snapshot."
+msgstr "Creëer recursieve snapshot."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Werkmap aanmaken als deze nog niet bestaat."
@@ -2141,9 +2212,6 @@ msgstr "UFS filesysteem aangemaakt"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Creëer de pool met een alternatieve root."
-
-msgid "Creates the recursive snapshot."
-msgstr "Creëer de recursieve snapshot."
 
 msgid "Creating filesystem"
 msgstr "Creëer bestandssysteem"
@@ -2860,6 +2928,13 @@ msgstr "Schijven | Koppelpunten | Management"
 msgid "Display"
 msgstr "Weergave"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+"Weergegeven Gebruikt/Beschikbaar informatie van het bestandssysteem in "
+"plaats van de Allocatie/Vrij informatie van de pool."
+
 msgid "Display ZFS command history"
 msgstr "ZFS opdrachtgeschiedenis weergeven"
 
@@ -3217,8 +3292,8 @@ msgstr "Domeinnaam, bijv. voorbeeld.com."
 msgid "Donate"
 msgstr "Donatie"
 
-msgid "Done"
-msgstr "Gereed"
+msgid "Done!"
+msgstr "Voltooid!"
 
 msgid "Done."
 msgstr "Gereed."
@@ -3490,9 +3565,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Inschakelen STARTTLS"
 
-msgid "Enable STARTTLS."
-msgstr "Inschakelen STARTTLS."
-
 msgid "Enable Selected Commands"
 msgstr "Geselecteerde Opdrachten Inschakelen"
 
@@ -3539,6 +3611,9 @@ msgstr "Inschakelen anonieme koppeling."
 
 msgid "Enable authentication."
 msgstr "Inschakelen verificatie."
+
+msgid "Enable checks of the server certificate."
+msgstr "Schakel controles van het servercertificaat in."
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Inschakelen verzamelen van CPU frequentie statistieken."
@@ -3631,9 +3706,6 @@ msgstr "Inschakelen modulenlijst."
 
 msgid "Enable nested virtualization"
 msgstr "Inschakelen geneste virtualisatie"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "In- of uitschakelen controles van de server-certificaat."
 
 msgid "Enable peer exchange (PEX)."
 msgstr ""
@@ -5990,6 +6062,12 @@ msgstr "Muziek"
 msgid "Must be a number between 5 and 1000."
 msgstr "Dient een nummer tussen 5 en 1000 te zijn."
 
+msgid "Must be a number between 80 and 89."
+msgstr "Dient een nummer tussen 80 en 89 te zijn."
+
+msgid "Must be a number between 90 and 95."
+msgstr "Dient een nummer tussen 90 en 95 te zijn."
+
 msgid "Must choose one"
 msgstr "Kies een schijf (verplicht)"
 
@@ -6205,6 +6283,9 @@ msgstr "Er zijn geen pools geconfigureerd."
 msgid "No configured virtual devices."
 msgstr "Er zijn geen virtuele schijven geconfigureerd."
 
+msgid "No dataset information available."
+msgstr "Geen dataset informatie beschikbaar."
+
 msgid "No devices have been selected"
 msgstr "Er zijn geen schijven geselecteerd"
 
@@ -6252,6 +6333,9 @@ msgstr "Er zijn geen pools geselecteerd"
 msgid "No records found."
 msgstr "Geen records gevonden."
 
+msgid "No snapshot information available."
+msgstr "Geen snapshot informatie beschikbaar."
+
 msgid "No softraid-formatted disks available."
 msgstr "Er zijn geen softraid-geformatteerde schijven beschikbaar."
 
@@ -6266,6 +6350,9 @@ msgstr "Er zijn geen geschikte virtuele schijven gevonden."
 
 msgid "No virtual devices have been selected"
 msgstr "Er zijn geen virtuele schijven geselecteerd"
+
+msgid "No volume information available."
+msgstr "Geen volume informatie beschikbaar."
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Alleen erven wijger entries"
@@ -6863,6 +6950,9 @@ msgstr "Pool"
 
 msgid "Pool Devices"
 msgstr "Pool Schijven"
+
+msgid "Pool Information"
+msgstr "Pool Informatie"
 
 msgid "Pool Information & Status"
 msgstr "Pool Informatie & Status"
@@ -7954,9 +8044,6 @@ msgstr ""
 msgid "Selected"
 msgstr "Geselecteerd"
 
-msgid "Selected UPS"
-msgstr "Geselecteerde UPS"
-
 msgid "Selected device or label does not exist."
 msgstr "Geselecteerde schijf of label bestaat niet."
 
@@ -8005,6 +8092,23 @@ msgstr "Test E-mail Verzenden"
 msgid "Send a TEST warning email on startup."
 msgstr ""
 "Verstuur TEST waarschuwingsmail tijdens het opstarten van het systeem."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+"Stuur een clientcertificaat naar de server (gebruik dit samen met de optie "
+"TLS Cert-bestand). Het bestand moet de privésleutel van een certificaat in "
+"PEM-indeling bevatten."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
+"Stuur een clientcertificaat naar de server (gebruik dit samen met de optie "
+"TLS-sleutelbestand). Het bestand moet een certificaat in PEM-indeling "
+"bevatten."
 
 msgid "Send daemon event messages."
 msgstr "Stuur daemon gebeurtenis berichten."
@@ -8116,8 +8220,15 @@ msgstr "Stel de account's primaire groep in naar de opgegeven groep."
 msgid "Set the content location(s) to or from the media library."
 msgstr "Zet de media locatie(s) in of uit de mediabibliotheek."
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr "Stel de kritieke drempel in op een waarde tussen 90 en 95."
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "Stel de gewenste Service Set Identificator in (aka netwerk naam)."
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
+"Stel de vingerafdruk in van één certificaat om te accepteren voor TLS."
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8130,6 +8241,9 @@ msgstr ""
 "de pakketten te beperken die via een netwerkkaart worden overgebracht. Niet "
 "alle netwerkkaarten ondersteunen het aanpassen van de MTU waarde, sommige "
 "netwerkkaarten hebben namelijk een te beperkt bereik."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr "Stel de waarschuwingsdrempel in op een waarde tussen 80 en 89."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Stel de regel scroll snelheid in tussen 0 en 10 (standaard 10)."
@@ -8213,6 +8327,9 @@ msgstr "Toon ruwe UPS Info"
 
 msgid "Show UPS Information"
 msgstr "UPS Informatie Weergeven"
+
+msgid "Show Used/Avail"
+msgstr "Gebruikt/Beschikbaar Weergeven"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
@@ -8466,6 +8583,9 @@ msgstr ""
 msgid "Start"
 msgstr "Start"
 
+msgid "Start TLS from within the session."
+msgstr "Start TLS vanuit de sessie."
+
 msgid "Static"
 msgstr "Statisch"
 
@@ -8685,6 +8805,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr "TLS CRL Bestand"
+
+msgid "TLS Cert File"
+msgstr "TLS Cert Bestand"
+
+msgid "TLS Fingerprint"
+msgstr "TLS-vingerafdruk"
+
+msgid "TLS Key File"
+msgstr "TLS Key Bestand"
 
 msgid "TLS Only"
 msgstr "Alleen TLS"
@@ -9174,8 +9306,8 @@ msgstr ""
 "gespecificeerd worden. Het standaard formaat, %s wordt gebruikt voor ZFS "
 "automatische snapshots."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "De standaard SMTP mailserver poort, bijv. 25 of 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr "De standaard SMTP mailserverpoort, meestal poort 25 of poort 587."
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9430,6 +9562,14 @@ msgid ""
 msgstr ""
 "De naam van de RAID mag alleen bestaan uit de karakters a-z, A-Z, 0-9."
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+"De naam van het TLS-vertrouwensbestand. Het bestand moet een PEM-indeling "
+"hebben die één of meer certificaten van vertrouwde certificeringsinstanties "
+"(CA's) bevat."
+
 msgid "The name of the interface is wrong."
 msgstr "De naam van het netwerk is verkeerd."
 
@@ -9662,9 +9802,6 @@ msgstr ""
 "Het is niet nodig om dit menu te gebruiken om een RAID volume te starten. "
 "(Het start automatisch)."
 
-msgid "There must be at least 1 disks selected."
-msgstr "Er moet tenminste 1 schijf geselecteerd zijn."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Er dienen minimaal 2 schijven in een spiegel te zijn."
 
@@ -9826,16 +9963,6 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Dit kan een grote vertraging opleveren om de logboek pagina te laden!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Deze opdracht activeerd strikte server certificaat voor verificatie. De "
-"bestandsnaam moet de naam zijn van het absolute pad van een bestand in PEM "
-"formaat met één of meer certificaten van vertrouwde certificeringsinstanties "
-"(CA's)."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10393,8 +10520,8 @@ msgstr ""
 "in het parkeer gebied)."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Totaal: %s | Allocatie: %s | Vrij: %s | Staat: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr "Totaal: %s | %s: %s | %s: %s | Staat: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10567,6 +10694,9 @@ msgstr "UPS firmware"
 msgid "UPS goes on battery"
 msgstr "UPS gaat over op batterij"
 
+msgid "UPS is disabled."
+msgstr "UPS is uitgeschakeld."
+
 msgid "UPS model"
 msgstr "UPS model"
 
@@ -10724,6 +10854,9 @@ msgstr ""
 "Gebruik Bytes/seconde in plaats van Bits/seconde voor netwerk doorvoer "
 "weergave."
 
+msgid "Use Default TLS Trust File"
+msgstr "Gebruik Standaard TLS-vertrouwensbestand"
+
 msgid "Use Encryption"
 msgstr "Encryptie Gebruiken"
 
@@ -10743,6 +10876,10 @@ msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "Gebruik als sparse volume (thin provisioning)."
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
+"Gebruik standaard TLS-vertrouwensbestand /usr/local/etc/ssl/cert.pem."
 
 msgid "Use different container as root of the tree."
 msgstr "Gebruik een andere container als root van de lijst."
@@ -11368,8 +11505,14 @@ msgstr "ZFS Dataset Eigenschappen"
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS Pool I/U  Statistieken"
 
+msgid "ZFS Pool Properties"
+msgstr "ZFS Pool Eigenschappen"
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS Pool Tools"
+
+msgid "ZFS Settings"
+msgstr "ZFS Instellingen"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS Snapshot Informatie & Status"
@@ -11403,6 +11546,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr "toegewezen van"
+
 msgid "and"
 msgstr "en"
 
@@ -11431,6 +11577,9 @@ msgstr "bijv. %s"
 
 msgid "filechooser"
 msgstr "bestandsselector"
+
+msgid "free of"
+msgstr "vrij van"
 
 msgid "get target info failed."
 msgstr "doel info opvragen is mislukt."

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
 "PO-Revision-Date: 2018-01-25 04:31+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:42+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:50+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -232,6 +232,9 @@ msgstr ""
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Ett VLAN med etiketten %s är redan definierat för detta gränssnitt."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -861,6 +864,16 @@ msgstr ""
 "En Initierargrupp identifieras av en nummer och definierar godkända "
 "initiatornamn och nätverk."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Ett tomt fält är standard."
 
@@ -960,6 +973,9 @@ msgstr "Är du säker att du vill stänga av servern?"
 
 msgid "Asynchronous I/O"
 msgstr "Asynkron I/O"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "Minst ett gränsnitt måste väljas."
@@ -1481,6 +1497,15 @@ msgstr "Kan inte använda DHCP för nätverksgränssnittet."
 msgid "Capacity"
 msgstr "Kapacitet"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Carp-inställningar"
 
@@ -1499,6 +1524,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Certifikat"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Ändra"
@@ -2048,8 +2078,39 @@ msgstr "Skapa PV gäst"
 msgid "Create ZFS on a GPT partition."
 msgstr "Skapa ZFS på en GPT partition"
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "Skapa och initialisera RAID."
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Skapa katalogen om den inte finns."
@@ -2059,9 +2120,6 @@ msgstr "Skapade UFS filsystem:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Skapar poolen med en alternativ root"
-
-msgid "Creates the recursive snapshot."
-msgstr "Skapar de rekursiva avbilderna."
 
 msgid "Creating filesystem"
 msgstr "Skapar filsystem"
@@ -2774,6 +2832,11 @@ msgstr "Diskar | Monteringspunkt | Hantering"
 msgid "Display"
 msgstr "Visa"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "Visa ZFS kommandohistoria"
 
@@ -3118,8 +3181,8 @@ msgstr "Domännamn, såsom exempel.com."
 msgid "Donate"
 msgstr "Donera"
 
-msgid "Done"
-msgstr "Färdig"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "Klart."
@@ -3387,9 +3450,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Aktivera STARTTLS"
 
-msgid "Enable STARTTLS."
-msgstr "Aktivera STARTTLS."
-
 msgid "Enable Selected Commands"
 msgstr "Aktivera valda kommandon"
 
@@ -3435,6 +3495,9 @@ msgstr "Aktivera anonym bindning."
 
 msgid "Enable authentication."
 msgstr "Aktivera autentisering."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Aktivera insamling av CPU-frekvensstatistik."
@@ -3526,9 +3589,6 @@ msgstr "Aktivera modullistning"
 
 msgid "Enable nested virtualization"
 msgstr "Aktivera inbäddad virtualisering"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "Aktivera eller inaktivera kontroll av servercertifikat."
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Aktivera peer exchange (PEX)."
@@ -5834,6 +5894,12 @@ msgstr "Musik"
 msgid "Must be a number between 5 and 1000."
 msgstr "Måste vara ett nummer mellan 5 och 1000."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "Måste välja en"
 
@@ -6046,6 +6112,9 @@ msgstr "Inga konfigurerade pooler."
 msgid "No configured virtual devices."
 msgstr "Inga konfigurerade virtuella enheter."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "Ingen enhet har valts"
 
@@ -6093,6 +6162,9 @@ msgstr "Inga pooler har valts"
 msgid "No records found."
 msgstr "Inga poster hittades."
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Inga mjukvaruraidformaterade diskar tillgängliga."
 
@@ -6107,6 +6179,9 @@ msgstr "Inga passande virtuella enheter hittades."
 
 msgid "No virtual devices have been selected"
 msgstr "Inga virtuella enheter har valts"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Ärv bara nekande egenskaper"
@@ -6695,6 +6770,9 @@ msgstr "Pool"
 
 msgid "Pool Devices"
 msgstr "Poolenheter"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "Pool Information & Status"
@@ -7772,9 +7850,6 @@ msgstr ""
 msgid "Selected"
 msgstr "Markerade"
 
-msgid "Selected UPS"
-msgstr "Vald UPS"
-
 msgid "Selected device or label does not exist."
 msgstr "Vald enhet eller etikett existerar inte."
 
@@ -7822,6 +7897,17 @@ msgstr "Skicka test e-post"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Skicka ett TEST e-brev under uppstarten."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "Skicka meddeladen om demonhändelser."
@@ -7931,8 +8017,14 @@ msgstr "Sätter kontots huvudgrupp till den angivna gruppen."
 msgid "Set the content location(s) to or from the media library."
 msgstr "Sätt innehållets placering till eller från mediabiblioteket."
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "Välj önskat SSID (Nätverksnamn)"
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -7944,6 +8036,9 @@ msgstr ""
 "är gränssnittsspecifikt. MTU används för att begränsa storleken på paket som "
 "sänds med ett gränssnitt. Inte alla gränssnitt har stöd för inställning av "
 "MTU, och vissa gränssnitt har olika begränsningar."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Ställ in rullhastiget mellan 0-10 (förval är 10)."
@@ -8027,6 +8122,9 @@ msgstr "Visa UPS-info i råformat"
 
 msgid "Show UPS Information"
 msgstr "Visa UPS information"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Visa loggposter i omvänd ordning (senaste högst upp)."
@@ -8277,6 +8375,9 @@ msgstr ""
 msgid "Start"
 msgstr "Starta"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Statisk"
 
@@ -8496,6 +8597,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "Endast TLS"
@@ -8968,8 +9081,8 @@ msgstr ""
 "Ett specifikt avbildsformat för skuggkopia kan anges. Grundinställningen är "
 "%s som anvnäds för ZFS automatisk avbildning."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Standardporten för SMTP e-postserver, t.ex. 25 eller 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9219,6 +9332,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Namnet på RAID enheten kan bestå av tecknen a-z, A-Z, 0-9."
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Namnet på gränssnittet är fel."
 
@@ -9444,9 +9562,6 @@ msgid ""
 msgstr ""
 "Du behöver inte starta RAID volymen härifrån (den startar automatiskt)"
 
-msgid "There must be at least 1 disks selected."
-msgstr "Åtminstone 1 disk måste vara vald."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Åtminstone 2 diskar krävs för 'mirror'."
 
@@ -9597,15 +9712,6 @@ msgstr ""
 
 msgid "This can cause a huge delay in loading the log page!"
 msgstr "Detta kan medföra en stor fördröjning vid öppning av logsidan!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Detta kommando aktiverar strikt servercertifikatverifiering. Filnamnet måste "
-"vara den fulla sökvägen till en fil i PEM-format innehållande ett eller "
-"flera certifikat från betrodda certifierings hanterare (CAs)."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10149,8 +10255,8 @@ msgid ""
 msgstr "Total tid när magnethuvudena inte varit i parkeringsarean."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Total: %s | Använd: %s | Ledig: %s | Status: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10322,6 +10428,9 @@ msgstr "UPS systemmjukvara"
 msgid "UPS goes on battery"
 msgstr "UPS-enhet på batteridrift"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "UPS modell"
 
@@ -10477,6 +10586,9 @@ msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 "Använd Bytes/sec i stället för Bits/sec för nätverksöverföringsvisningen."
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "Använd kryptering"
 
@@ -10495,6 +10607,9 @@ msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "Använd som reservvolym."
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr "Använd en annan plats som rot fär trädet."
@@ -11109,8 +11224,14 @@ msgstr "ZFS Dataset Egenskaper"
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS Pool I/O Statistik"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS Poolverktyg"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS Avbild Information & Status"
@@ -11142,6 +11263,9 @@ msgstr "ZFS volymstorlek. Du kan använda ändelser som K, KB, M, GB."
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "och"
 
@@ -11170,6 +11294,9 @@ msgstr "t.ex. %s"
 
 msgid "filechooser"
 msgstr "filväljare"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "hämtning av målinfo misslyckades."

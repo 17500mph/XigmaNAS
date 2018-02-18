@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
 "PO-Revision-Date: 2017-04-06 18:11+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:42+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:50+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -220,6 +220,9 @@ msgstr ""
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "etiketi %s olan VLAN zaten bu arabirimde tanımlanır."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -821,6 +824,16 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Varsayılan olarak boştur."
 
@@ -911,6 +924,9 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Sunucuyu kapatmak istediğinizden emin misiniz?"
 
 msgid "Asynchronous I/O"
+msgstr ""
+
+msgid "At least one disk must be selected."
 msgstr ""
 
 msgid "At least one interface must be selected."
@@ -1413,6 +1429,15 @@ msgstr ""
 msgid "Capacity"
 msgstr "Kapasite"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr ""
 
@@ -1428,6 +1453,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Sertifika"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Değiştir"
@@ -1907,8 +1937,39 @@ msgstr ""
 msgid "Create ZFS on a GPT partition."
 msgstr ""
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "RAID oluştur ve başlat"
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Çalışma dizini yoksa oluştur."
@@ -1917,9 +1978,6 @@ msgid "Created UFS file system:"
 msgstr ""
 
 msgid "Creates the pool with an alternate root."
-msgstr ""
-
-msgid "Creates the recursive snapshot."
 msgstr ""
 
 msgid "Creating filesystem"
@@ -2607,6 +2665,11 @@ msgstr ""
 msgid "Display"
 msgstr ""
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr ""
 
@@ -2940,7 +3003,7 @@ msgstr "Domain adı, örenğin mynet.com."
 msgid "Donate"
 msgstr "Bağış"
 
-msgid "Done"
+msgid "Done!"
 msgstr ""
 
 msgid "Done."
@@ -3204,9 +3267,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr ""
 
-msgid "Enable STARTTLS."
-msgstr ""
-
 msgid "Enable Selected Commands"
 msgstr ""
 
@@ -3251,6 +3311,9 @@ msgstr ""
 
 msgid "Enable authentication."
 msgstr "Kimlik doğrulamasını etkinleştir."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr ""
@@ -3341,9 +3404,6 @@ msgid "Enable module listing."
 msgstr "Modül listelemeyi Aktifleştir"
 
 msgid "Enable nested virtualization"
-msgstr ""
-
-msgid "Enable or disable checks of the server certificate."
 msgstr ""
 
 msgid "Enable peer exchange (PEX)."
@@ -5519,6 +5579,12 @@ msgstr ""
 msgid "Must be a number between 5 and 1000."
 msgstr ""
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "Birtane seçilmeli"
 
@@ -5722,6 +5788,9 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr ""
 
@@ -5767,6 +5836,9 @@ msgstr ""
 msgid "No records found."
 msgstr ""
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr ""
 
@@ -5780,6 +5852,9 @@ msgid "No suitable virtual devices found."
 msgstr ""
 
 msgid "No virtual devices have been selected"
+msgstr ""
+
+msgid "No volume information available."
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -6343,6 +6418,9 @@ msgid "Pool"
 msgstr ""
 
 msgid "Pool Devices"
+msgstr ""
+
+msgid "Pool Information"
 msgstr ""
 
 msgid "Pool Information & Status"
@@ -7372,9 +7450,6 @@ msgstr ""
 msgid "Selected"
 msgstr "Seçildi"
 
-msgid "Selected UPS"
-msgstr ""
-
 msgid "Selected device or label does not exist."
 msgstr ""
 
@@ -7421,6 +7496,17 @@ msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
 msgstr ""
 
 msgid "Send daemon event messages."
@@ -7527,7 +7613,13 @@ msgstr ""
 msgid "Set the content location(s) to or from the media library."
 msgstr ""
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
+msgstr ""
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
 msgstr ""
 
 msgid ""
@@ -7535,6 +7627,9 @@ msgid ""
 "interface specific. The MTU is used to limit the size of packets that are "
 "transmitted on an interface. Not all interfaces support setting the MTU, and "
 "some interfaces have range restrictions."
+msgstr ""
+
+msgid "Set the warning threshold to a value between 80 and 89."
 msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
@@ -7615,6 +7710,9 @@ msgid "Show RAW UPS Info"
 msgstr ""
 
 msgid "Show UPS Information"
+msgstr ""
+
+msgid "Show Used/Avail"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
@@ -7836,6 +7934,9 @@ msgstr ""
 msgid "Start"
 msgstr "Başlat"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Statik"
 
@@ -8049,6 +8150,18 @@ msgid "TKIP"
 msgstr "TKIP"
 
 msgid "TLS"
+msgstr ""
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
 msgstr ""
 
 msgid "TLS Only"
@@ -8473,8 +8586,8 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Varsayılan SMTP mail sunucu portu,  25 veya 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -8685,6 +8798,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr ""
 
@@ -8885,9 +9003,6 @@ msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
 
-msgid "There must be at least 1 disks selected."
-msgstr "Bir disk seçmelesin."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Yansıma için en az 2 disk seçmelesin."
 
@@ -9008,12 +9123,6 @@ msgid ""
 msgstr ""
 
 msgid "This can cause a huge delay in loading the log page!"
-msgstr ""
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
 msgstr ""
 
 msgid ""
@@ -9454,7 +9563,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
 msgstr ""
 
 #, php-format
@@ -9620,6 +9729,9 @@ msgstr ""
 msgid "UPS goes on battery"
 msgstr ""
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr ""
 
@@ -9774,6 +9886,9 @@ msgstr ""
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr ""
 
@@ -9789,6 +9904,9 @@ msgid ""
 msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
+msgstr ""
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
 msgstr ""
 
 msgid "Use different container as root of the tree."
@@ -10348,7 +10466,13 @@ msgstr ""
 msgid "ZFS Pool I/O Statistics"
 msgstr ""
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
+msgstr ""
+
+msgid "ZFS Settings"
 msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
@@ -10379,6 +10503,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr ""
 
@@ -10405,6 +10532,9 @@ msgstr ""
 
 msgid "filechooser"
 msgstr "filechooser"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr ""

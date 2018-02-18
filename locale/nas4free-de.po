@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
 "PO-Revision-Date: 2018-01-26 00:46+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:41+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -248,6 +248,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr ""
 "Ein VLAN mit der Markierung %s ist für diese Schnittstelle bereits "
 "festgelegt."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -902,6 +905,16 @@ msgstr ""
 "Eine Initiatorgruppe wird durch eine Tag Nummer identifiziert und definiert "
 "autorisierte Initiatornamen und Netzwerke."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Ein leeres feld ist standard."
 
@@ -1004,6 +1017,9 @@ msgstr "Sind Sie sicher, dass Sie den Server herunterfahren wollen?"
 
 msgid "Asynchronous I/O"
 msgstr "Asynchroner I/O"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "Wenigstens eine Schnittstelle muss ausgewählt werden."
@@ -1541,6 +1557,15 @@ msgstr "DHCP kann für die Netzwerkschnittstelle nicht genutzt werden"
 msgid "Capacity"
 msgstr "Kapazität"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Carp Einstellungen"
 
@@ -1560,6 +1585,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Zertifikat"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Ändern"
@@ -2096,8 +2126,39 @@ msgstr "PV-Gast erstellen"
 msgid "Create ZFS on a GPT partition."
 msgstr "ZFS-Dateisystem auf einer GPT-Partition erstellen"
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "RAID erstellen und initialisieren."
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Erzeuge Arbeitsverzeichnis, falls es noch nicht existiert."
@@ -2107,9 +2168,6 @@ msgstr "Erstellte UFS Dateisysteme"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Erstellt den Pool mit alternativem Root-Verzeichis."
-
-msgid "Creates the recursive snapshot."
-msgstr "Erstellt einen rekursiven Snapshot"
 
 msgid "Creating filesystem"
 msgstr "Dateisystem wird erstellt"
@@ -2823,6 +2881,11 @@ msgstr "Festplatten | Einhängepunkt | Management"
 msgid "Display"
 msgstr "Anzeige"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "Zeige die ZFS Befehlshistorie an"
 
@@ -3183,8 +3246,8 @@ msgstr "Domain-Name, z.B. beispiel.de."
 msgid "Donate"
 msgstr "Spenden"
 
-msgid "Done"
-msgstr "Fertig"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "Erledigt."
@@ -3454,9 +3517,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Erlaube STARTTLS"
 
-msgid "Enable STARTTLS."
-msgstr "Erlaube STARTTLS."
-
 msgid "Enable Selected Commands"
 msgstr "Ausgewählten Kommandos aktivieren"
 
@@ -3502,6 +3562,9 @@ msgstr "Anomymes Bind einschalten"
 
 msgid "Enable authentication."
 msgstr "Aktiviere SMTP Authentifizierung."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Aktiviere das Sammeln von CPU-Taktfrequenz-Werten"
@@ -3593,9 +3656,6 @@ msgstr "Modulauflistung aktivieren."
 
 msgid "Enable nested virtualization"
 msgstr "verschachtelte Virtualisierung aktivieren"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "Ein- oder Ausschalten der Überprüfung des Server-Zertifikats"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Peer-Austausch (PEX) aktivieren."
@@ -5952,6 +6012,12 @@ msgstr "Musik"
 msgid "Must be a number between 5 and 1000."
 msgstr "Muss eine Zahl zwischen 5 und 1000 sein."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "Es muss eine ausgewählt werden"
 
@@ -6163,6 +6229,9 @@ msgstr "Keine konfigurierten Pools"
 msgid "No configured virtual devices."
 msgstr "Keine virtuellen Geräte konfiguriert."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "Es wurden keine Geräte ausgewählt"
 
@@ -6210,6 +6279,9 @@ msgstr "Es wurden keine Pools ausgewählt"
 msgid "No records found."
 msgstr "Keine Einträge gefunden. (records)"
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Keine SoftRAID formatierte Festplatte vorhanden."
 
@@ -6224,6 +6296,9 @@ msgstr "Es wurden keine passenden virtuellen Geräte gefunden."
 
 msgid "No virtual devices have been selected"
 msgstr "Es wurden keine virtuellen Geräte ausgewählt"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Nur vererbte Verbotseinträge"
@@ -6817,6 +6892,9 @@ msgstr "Pool"
 
 msgid "Pool Devices"
 msgstr "Pool Geräte"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "Pool -Zustandsinformation"
@@ -7906,9 +7984,6 @@ msgstr "Wähle die Schlüssellänge"
 msgid "Selected"
 msgstr "Ausgewählt"
 
-msgid "Selected UPS"
-msgstr "Ausgewählte unabhängige Stromversorgung"
-
 msgid "Selected device or label does not exist."
 msgstr "Das ausgewählte Gerät oder die Bezeichnung existieren nicht."
 
@@ -7956,6 +8031,17 @@ msgstr "Sende eine Test E-Mail"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Sende eine TEST-Warnung als E-Mail nach dem Start."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "Sende Ereignismeldungen von Dienstprogrammen."
@@ -8066,8 +8152,14 @@ msgstr "Setzt die primäre Gruppe für das Konto in die vorhandene Gruppe."
 msgid "Set the content location(s) to or from the media library."
 msgstr "Legen Sie den Pfad der Medien-Bibliothek fest:"
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "Setze den gewünschten SSID Namen (Netzwrkname)"
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8080,6 +8172,9 @@ msgstr ""
 "Größe der Pakete zu begrenzen, die über eine Schnittstelle übertragen "
 "werden. Nicht alle Schnittstellen unterstützen MTU, und einige "
 "Schnittstellen haben Bereichsbegrenzungen."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Bildlaufgeschwindigkeit der Titel von 0-10 setzen (Standard: 10)."
@@ -8163,6 +8258,9 @@ msgstr "Zeige Rohdaten USV-Informationen"
 
 msgid "Show UPS Information"
 msgstr "UPS Informationen Anzeigen"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
@@ -8410,6 +8508,9 @@ msgstr ""
 msgid "Start"
 msgstr "Start"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Statisch"
 
@@ -8628,6 +8729,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "Nur TLS"
@@ -9115,8 +9228,8 @@ msgstr ""
 "Das  Format für das Abbild der Schattenkopie kann individuell konfiguriert "
 "werden. Voreinstellung ist %s ZFS Auto Snapshot."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Der Standardport für den SMTP-Mailserver, z.B. 25 oder 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9381,6 +9494,11 @@ msgid ""
 msgstr ""
 "Der Name des RAIDs darf nur aus den Zeichen a-z, A-Z und 0-9 bestehen."
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Der Name der Schnittstelle ist falsch"
 
@@ -9617,9 +9735,6 @@ msgstr ""
 "Es ist nicht notwendig das RAID Volume von hier zu starten (es startet "
 "automatisch)"
 
-msgid "There must be at least 1 disks selected."
-msgstr "Es muss mindestens 1 Festplatte ausgewählt sein."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Es müssen mindestens 2 Festplatten in einem Mirror sein."
 
@@ -9778,17 +9893,6 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Dies kann eine immense Verzögerung beim Laden der Log Seite mit sich bringen!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Dieses Kommando aktiviert die strenge Zertifikatsüberprüfung am Server "
-"(strict server certificate verification). Der Dateiname muss ein absoluter "
-"Verzeichnisname einer Datei im PEM Format sein, welche ein oder mehrere  "
-"Zertifikate von vertrauenswürdigen Zertifizierungsstellen (Certification "
-"Authorities CA) enthält."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10354,8 +10458,8 @@ msgstr ""
 "Köpfe außerhalb der Parkzone)."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Gesamt: %s | Benutzt: %s | Frei: %s | Status: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10528,6 +10632,9 @@ msgstr "UPS Firmwareversion"
 msgid "UPS goes on battery"
 msgstr "UPS geht in den Batterie-Modus"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "UPS Modellbezeichnung"
 
@@ -10685,6 +10792,9 @@ msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 "Verwende Bytes/sec statt Bits/sec für die Anzeige des Netzwerk-Durchsatzes"
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "Verschlüsselung verwenden"
 
@@ -10704,6 +10814,9 @@ msgstr ""
 
 msgid "Use as sparse volume (thin provisioning)."
 msgstr "Verwende als Sparse Volume (Thin Provisioning)"
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr "Verwenden Sie einen anderen Container als Wurzel des Baums."
@@ -11332,8 +11445,14 @@ msgstr "ZFS Dataset Eigenschaften"
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS Pool I/O Statistik"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS Pool Werkzeuge"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS-Schnappschuss-Informationen & -Status"
@@ -11367,6 +11486,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "und"
 
@@ -11395,6 +11517,9 @@ msgstr "z.B. %s"
 
 msgid "filechooser"
 msgstr "Dateiauswahlfenster"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "Keine Info über Ziel erhalten"
