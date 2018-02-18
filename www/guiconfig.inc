@@ -352,6 +352,8 @@ function get_std_save_message($ok) {
 	return $gt_ret;
 }
 function calc_skipviewmode($page_mode) : array {
+	global $config;
+	
 	switch($page_mode):
 		case PAGE_MODE_EDIT:
 			$new_page_mode = PAGE_MODE_EDIT;
