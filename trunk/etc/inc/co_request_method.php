@@ -71,7 +71,7 @@ class co_request_method {
 					endif;
 					break;
 				case 'GET': // Validate $_GET['submit']
-					$page_action = filter_input(INPUT_GET,'submit',FILTER_CALLBACK,['options' =>
+					$this->_action = filter_input(INPUT_GET,'submit',FILTER_CALLBACK,['options' =>
 						function(string $value) { return array_key_exists($value,$this->_activities[$this->_method]) ? $value : NULL; }
 					]);
 					if(isset($this->_action)):
