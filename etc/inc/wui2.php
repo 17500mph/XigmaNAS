@@ -2488,6 +2488,7 @@ EOJ;
 		else:
 			$this->ins_button_submit('disable',gtext('Disable'));
 		endif;
+		return $this;
 	}
 	//	remark area macros
 	public function add_area_remarks() {
