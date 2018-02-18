@@ -2482,6 +2482,13 @@ EOJ;
 		$this->ins_button_submit('save',gtext('Apply'));
 		return $this;
 	}
+	public function ins_button_enadis(bool $enable) {
+		if($enable):
+			$this->ins_button_submit('enable',gtext('Enable'));
+		else:
+			$this->ins_button_submit('disable',gtext('Disable'));
+		endif;
+	}
 	//	remark area macros
 	public function add_area_remarks() {
 		$subnode = $this->addDIV(['id' => 'remarks']);
