@@ -351,7 +351,21 @@ function get_std_save_message($ok) {
 	endif;
 	return $gt_ret;
 }
-
+function calc_skipviewmode($page_mode) : array {
+	switch($page_mode):
+		case PAGE_MODE_EDIT:
+			$new_page_mode = PAGE_MODE_EDIT;
+			break;
+		default:
+			if(isset($config['system']['skipviewmode']) && (is_bool($config['system']['skipviewmode']) ? $config['system']['skipviewmode'] : true)):
+				$new_page_mode = PAGE_MODE_EDIT;
+			else:
+				$new_page_mode = PAGE_MODE_VIEW;
+			endif;
+			break;
+	endswitch;
+	return [$new_page_mode,$new_page_mode === PAGE_MODE_VIEW];
+}
 function html_inputbox($ctrlname,$title,$value,$desc,$required = false,$size = 40,$readonly = false) {
 	$ctrl = new HTMLEditBox($ctrlname,$title,$value,$desc,$size);
 	$ctrl->SetRequired($required);
