@@ -43,11 +43,7 @@ class co_request_method {
 	}
 	public function add(string $method,string $submit,$value = NULL) {
 		if(array_key_exists($method,$this->_activities)):
-			if(array_key_exists($submit,$this->_activities[$method])):
-				$this->_activities[$method][$submit] = $value;
-			else:
-				$this->_activities[$method][] = [$submit => $value];
-			endif;
+			$this->_activities[$method][$submit] = $value;
 		else:
 			$this->_activities[$method] = [$submit => $value];
 		endif;
