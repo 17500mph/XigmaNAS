@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
-"PO-Revision-Date: 2018-01-19 17:49+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:41+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -82,7 +82,7 @@ msgstr "%s은(는) 이미 볼륨으로 설정되었습니다."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s는 여러 자유 소프트웨어 꾸러미를 포함 또는 기반하고 있습니다."
 
 #, php-format
 msgid "%s is too long."
@@ -218,6 +218,9 @@ msgstr "포털 그룹은 정의된 IP 주소와 TCP 수신 포트, 태그 번호
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "태그 %s을(를) 가진 VLAN이 이미 이 인터페이스에 정의되어 있습니다."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -822,6 +825,16 @@ msgid ""
 "initiator names and networks."
 msgstr "초기자 그룹은 태그 번호로 구분되며 인증된 초기자 이름과 네트워크를 정의합니다."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "빈 필드가 기본값입니다."
 
@@ -911,6 +924,9 @@ msgstr "서버를 종료하시겠습니까?"
 
 msgid "Asynchronous I/O"
 msgstr "비동기 입출력"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "적어도 하나의 인터페이스를 선택해야 합니다."
@@ -1415,6 +1431,15 @@ msgstr "LAN 인터페이스에 DHCP를 사용할 수 없습니다."
 msgid "Capacity"
 msgstr "용량"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "CARP 설정"
 
@@ -1432,6 +1457,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "인증서"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "변경"
@@ -1943,8 +1973,39 @@ msgstr "PV Guest 생성"
 msgid "Create ZFS on a GPT partition."
 msgstr "GPT 분할 영역 위에 ZFS 를 만듭니다."
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "RAID 생성 및 초기화."
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "작업 디렉터리가 존재하지 않으면 생성합니다."
@@ -1954,9 +2015,6 @@ msgstr "생성된 UFS 파일 시스템:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "풀을 다른 루트로 생성합니다."
-
-msgid "Creates the recursive snapshot."
-msgstr "재귀 스냅샷을 생성합니다."
 
 msgid "Creating filesystem"
 msgstr "파일 시스템 생성 중"
@@ -2551,7 +2609,7 @@ msgid "Disable Extension Menu"
 msgstr "확장 메뉴 사용 안 함"
 
 msgid "Disable Firmware Upgrade"
-msgstr "펌웨어 업그레이드 사용 안 함"
+msgstr "펌웨어 업그레이드 비활성화"
 
 msgid "Disable Selected Commands"
 msgstr "선택된 명령들 사용 안 함"
@@ -2652,6 +2710,11 @@ msgstr "디스크 | 탑제 지점 | 관리"
 
 msgid "Display"
 msgstr "표시"
+
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
 
 msgid "Display ZFS command history"
 msgstr "ZFS 명령 기록 보기"
@@ -2983,8 +3046,8 @@ msgstr "도메인 명. 예. example.com."
 msgid "Donate"
 msgstr "기증"
 
-msgid "Done"
-msgstr "완료"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "완료."
@@ -3223,7 +3286,7 @@ msgid "Enable FXP protocol."
 msgstr "FXP 프로토콜 활성화."
 
 msgid "Enable Firmware Upgrade"
-msgstr "펌웨어 업그레이드 사용 함"
+msgstr "펌웨어 업그레이드 활성화"
 
 msgid "Enable NFSv4 server."
 msgstr "NFSv4 서버 사용 함"
@@ -3243,12 +3306,11 @@ msgid ""
 "Enable SSL/TLS for secured connections. You also need to configure the TLS "
 "trust file. For some servers you may need to disable STARTTLS."
 msgstr ""
+"보안 연결용 SSL/TLS를 활성화 합니다. 또한 TLS 신뢰 파일 구성도 필요합니다. 일부 서버를 위해 STARTTLS를 비활성화해야 "
+"할 수도 있습니다."
 
 msgid "Enable STARTTLS"
-msgstr ""
-
-msgid "Enable STARTTLS."
-msgstr ""
+msgstr "STARTTLS 활성화"
 
 msgid "Enable Selected Commands"
 msgstr "선택된 명령들 사용 함"
@@ -3294,6 +3356,9 @@ msgstr "익명 bind 활성화."
 
 msgid "Enable authentication."
 msgstr "인증 활성화."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "CPU 주파수 통계 수집을 사용합니다."
@@ -3383,9 +3448,6 @@ msgstr "모듈 리스팅 활성화."
 
 msgid "Enable nested virtualization"
 msgstr "중첩 가상화를 사용합니다."
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "서버 인증서 확인을 사용 또는 사용하지 않습니다."
 
 msgid "Enable peer exchange (PEX)."
 msgstr "피어 간 교환(PEX) 활성화."
@@ -4500,7 +4562,7 @@ msgstr "이 메시지가 계속 표시되면 시스템 로그에서 더 많은 �
 
 msgid ""
 "If this message persists take a look at the system log for more information."
-msgstr ""
+msgstr "이 메시지가 계속 나타나면, 시스템 로그를 확인하여 추가 정보를 얻으십시오."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4803,7 +4865,7 @@ msgid "Invalid file format."
 msgstr "무효한 파일 포맷."
 
 msgid "Invalid login credentials."
-msgstr ""
+msgstr "로그인 정보가 올바르지 않습니다."
 
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
@@ -5585,6 +5647,12 @@ msgstr "음악"
 msgid "Must be a number between 5 and 1000."
 msgstr "5에서 1000 사이의 섯자여야 함."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "반드시 선택해야 함"
 
@@ -5789,6 +5857,9 @@ msgstr "풀이 구성되지 않았습니다."
 msgid "No configured virtual devices."
 msgstr "가상 장치가 구성되지 않았습니다."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "장치들이 선택되지 않음"
 
@@ -5834,6 +5905,9 @@ msgstr "풀 선택되지 않음"
 msgid "No records found."
 msgstr "항목을 찾을 수 없음."
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "사용 가능한 소프트웨어 RAID 포맷된 디스크가 없습니다."
 
@@ -5848,6 +5922,9 @@ msgstr "적절한 가상 장치를 찾을 수 없습니다."
 
 msgid "No virtual devices have been selected"
 msgstr "가상 장치 선택되지 않음"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "허용 없음 - 거부 항목만 상속"
@@ -6421,6 +6498,9 @@ msgstr "풀"
 msgid "Pool Devices"
 msgstr "풀 장치"
 
+msgid "Pool Information"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "풀 정보 및 상태"
 
@@ -6465,7 +6545,7 @@ msgid "Port Forwarding"
 msgstr "포트 포워딩"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
-msgstr ""
+msgstr "포트 번호는 514 또는 1024에서 49151 사이의 숫자여야 합니다."
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6473,7 +6553,7 @@ msgstr "포트 번호는 %d와 %d 범위 내에 있어야 합니다."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
-msgstr ""
+msgstr "원격 syslog 서버의 포트 입니다. 비워 두면 기본 포트를 사용합니다."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7030,7 +7110,7 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr "Restricted - '쓰기 ACL'과 '소유자 변경'을 제외하고 모두 상속"
 
 msgid "Results for net rpc testjoin"
-msgstr ""
+msgstr "net rpc testjoin 결과"
 
 msgid "Results of last self test"
 msgstr "마지막 자체 테스트 결과"
@@ -7454,9 +7534,6 @@ msgstr "주어진 암호화 알고리듬에서 사용할 키 길이를 선택하
 msgid "Selected"
 msgstr "선택됨"
 
-msgid "Selected UPS"
-msgstr "선택된 UPS"
-
 msgid "Selected device or label does not exist."
 msgstr "선택된 장치나 라벨이 존재하지 않습니다."
 
@@ -7476,7 +7553,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "자체 감시, 분석 및 보고 기술"
 
 msgid "Self-Test Schedules"
-msgstr ""
+msgstr "자체 테스트 일정"
 
 msgid "Send Buffer"
 msgstr "송신 버퍼"
@@ -7504,6 +7581,17 @@ msgstr "테스트 전자우편 보내기"
 
 msgid "Send a TEST warning email on startup."
 msgstr "기동 시 테스트 경보 전자우편 보내기."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "데몬 이벤트 메시지를 전송합니다."
@@ -7611,8 +7699,14 @@ msgstr "주어진 그룹으로 계정의 기본 그룹을 설정합니다."
 msgid "Set the content location(s) to or from the media library."
 msgstr "미디어 라이브러리에 내용물을 저장할 또는 저장한 위치를 설정"
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "원하는 서비스 셋 식별자(네트워크 이름으로도 알려짐)를 설정합니다."
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -7622,6 +7716,9 @@ msgid ""
 msgstr ""
 "인터페이스의 최대 전송 유닛을 n으로 설정합니다. 기본 값은 인터페이스에 따라 다릅니다. MTU는 인터페이스에 전송되는 패킷의 크기를 "
 "제한하는 데에 이용됩니다. 모든 인터페이스가 MTU 설정을 지원하지는 않으며 몇몇 인터페이스는 범위가 제한됩니다."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "제목 스크롤 속도를 0-10 사이에서 설정하십시오(기본 값은 10)."
@@ -7702,6 +7799,9 @@ msgstr "RAW UPS 정보 보기"
 
 msgid "Show UPS Information"
 msgstr "UPS 정보 보기"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "로그를 역순으로 보기(최근 것을 최상단에)"
@@ -7930,6 +8030,9 @@ msgstr ""
 msgid "Start"
 msgstr "시작"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "스태틱"
 
@@ -8146,6 +8249,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "TLS 전용"
@@ -8576,8 +8691,8 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr "쉐도 복사본 서비스용 스냅샷의 사용자 정의 형식을 명시할 수 있습니다. 기본 형식은 ZFS 스냅샷에 사용중인 %s 입니다."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "기본 SMTP 메일 서버 포트. 예 25나 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -8650,7 +8765,7 @@ msgstr "아래의 입력 에러가 탐지되었습니다"
 
 #, php-format
 msgid "The following persons have contributed to %s:"
-msgstr ""
+msgstr "다음 사람들이 %s에 공헌함:"
 
 msgid "The following services will use AD authentication:"
 msgstr "다음 서비스들은 AD 인증을 사용하게 됩니다:"
@@ -8792,6 +8907,11 @@ msgstr "RAID 이름은 이미 사용 중입니다."
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "RAID 이름은 a-z, A-Z, 0-9로만 구성되어야 합니다."
+
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
 
 msgid "The name of the interface is wrong."
 msgstr "인터페이스의 이름이 잘못되었습니다."
@@ -9000,9 +9120,6 @@ msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr "이 RAID 볼륨들은 여기서 시작시킬 핍요가 없습니다(자동으로 시작됨)."
 
-msgid "There must be at least 1 disks selected."
-msgstr "최소 1개 이상의 디스크가 선택되어야 합니다."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "미러에는 최소 2개의 디스크가 존재해야 합니다."
 
@@ -9132,12 +9249,6 @@ msgstr ""
 
 msgid "This can cause a huge delay in loading the log page!"
 msgstr "이것은 로그 페이지 불러오기를 엄청나게 지연시킬 수 있습니다!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -9482,7 +9593,7 @@ msgstr "드라이브 헤드가 위치하는데 걸리는 시간."
 
 msgid ""
 "Time spent operating under data load (movement of magnetic head armature)."
-msgstr ""
+msgstr "자료 로드 동작에 소요된 시간(자성 헤드 움직임)."
 
 msgid "Time update interval"
 msgstr "시간 갱신 간격"
@@ -9497,7 +9608,7 @@ msgid "Title Speed"
 msgstr "타이틀 속도"
 
 msgid "TitleSpeed"
-msgstr ""
+msgstr "제목 속도"
 
 msgid "To Email"
 msgstr "받는 전자우편"
@@ -9527,7 +9638,7 @@ msgid "To match any IP address leave this field empty."
 msgstr "모든 IP 주소로 설정하려면 이 난을 비워 두십시오."
 
 msgid "To use Active Directory the CIFS/SMB service will enabled as well."
-msgstr ""
+msgstr "Active Directory를 사용하기 위해 CIFS/SMB 서비스도 활성화 됩니다."
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -9602,8 +9713,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "전체: %s | 할당: %s | 여유: %s | 상태: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -9639,7 +9750,7 @@ msgid "Transfer mode"
 msgstr "전송 모드"
 
 msgid "Transport Layer Security (TLS)"
-msgstr ""
+msgstr "전송 계층 보안(TLS)"
 
 msgid "Trap Host"
 msgstr "Trap 호스트"
@@ -9711,7 +9822,7 @@ msgid ""
 msgstr "UFS와 변형은 FreeBSD(%s의 기본 OS)의 기본 파일 형식입니다."
 
 msgid "UFS with Soft Updates"
-msgstr ""
+msgstr "소프트 업데이트 지원 UFS"
 
 msgid "UID"
 msgstr "UID"
@@ -9770,6 +9881,9 @@ msgstr "UPS 펌웨어"
 msgid "UPS goes on battery"
 msgstr "UPS가 베터리 상태로 전환 됨"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "UPS 모델"
 
@@ -9807,7 +9921,7 @@ msgid "URL"
 msgstr "URL"
 
 msgid "USB Mass Storage Devices"
-msgstr ""
+msgstr "USB 대용량 저장소 장치"
 
 msgid "UTF-8 Only"
 msgstr "UTF-8 전용"
@@ -9843,7 +9957,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison 파일 동기화"
 
 msgid "Universally Unique Identifier"
-msgstr ""
+msgstr "범용 고유 식별자"
 
 msgid "Unix Charset"
 msgstr "Unix 문자셋"
@@ -9913,7 +10027,7 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr "웹서버의 업로드 디렉터리. 기본값은 %s 입니다."
 
 msgid "Upper"
-msgstr ""
+msgstr "상위"
 
 msgid "Uptime"
 msgstr "가동 시간"
@@ -9924,6 +10038,9 @@ msgstr "가동 시간 통계"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "네트워크 처리량 표시에서 bit/초 대신 byte/초를 사용합니다."
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "암호화 사용"
 
@@ -9931,7 +10048,7 @@ msgid "Use PAM for user authentication."
 msgstr "PAM 인증 사용"
 
 msgid "Use TLS"
-msgstr ""
+msgstr "TLS 사용"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9941,6 +10058,9 @@ msgstr ""
 "설정해야 한다는 것을 기억하시기 바랍니다!"
 
 msgid "Use as sparse volume (thin provisioning)."
+msgstr ""
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
 msgstr ""
 
 msgid "Use different container as root of the tree."
@@ -10506,8 +10626,14 @@ msgstr "ZFS 데이터셋 속성"
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS 풀 I/O 통계"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS 풀 도구"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS 스냅샷 정보 및 상태"
@@ -10537,11 +10663,14 @@ msgstr "ZFS 볼륨 크기. K, KB, M, GB와 같은 사람이 읽을 수 있는 �
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "그리고"
 
 msgid "available"
-msgstr ""
+msgstr "사용 가능"
 
 msgid "available of"
 msgstr ""
@@ -10564,6 +10693,9 @@ msgstr "예. %s"
 msgid "filechooser"
 msgstr "파일 선택기"
 
+msgid "free of"
+msgstr ""
+
 msgid "get target info failed."
 msgstr "타겟 정보 얻기가 실패했습니다."
 
@@ -10574,7 +10706,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr ""
 
 msgid "hidden"
-msgstr ""
+msgstr "숨김"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI 초기자"
@@ -10636,13 +10768,13 @@ msgid "none"
 msgstr "없음"
 
 msgid "of"
-msgstr ""
+msgstr "의"
 
 msgid "off"
-msgstr ""
+msgstr "끄기"
 
 msgid "on"
-msgstr ""
+msgstr "켜기"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

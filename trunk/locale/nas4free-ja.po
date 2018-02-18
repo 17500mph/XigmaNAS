@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
 "PO-Revision-Date: 2017-10-11 12:48+0000\n"
 "Last-Translator: Kenichi Yamada <yamaken_sapporo@me.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:41+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -218,6 +218,9 @@ msgstr "Portal Group はIPアドレス、TCPポート番号、タグ番号で識
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "VLAN タグ %s は既にこのインタフェースで使用されています。"
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -816,6 +819,16 @@ msgid ""
 "initiator names and networks."
 msgstr "イニシエータグループはタグ番号で識別され、ターゲットへの接続を許可されたイニシエータ名とネットワークの組を含みます。"
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "デフォルトは空欄です。"
 
@@ -906,6 +919,9 @@ msgstr "サーバをシャットダウンしてもよろしいですか？"
 
 msgid "Asynchronous I/O"
 msgstr "非同期の I/O"
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "少なくとも1つのインタフェースを選択する必要があります。"
@@ -1411,6 +1427,15 @@ msgstr "LANインタフェースに DHCP は利用できません。"
 msgid "Capacity"
 msgstr "容量"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Carp 設定"
 
@@ -1428,6 +1453,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "証明書"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "変更"
@@ -1925,8 +1955,39 @@ msgstr "PV ゲスト作成"
 msgid "Create ZFS on a GPT partition."
 msgstr "GPTパーティションにZFSを作成"
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "RAIDの作成と初期化"
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "作業用ディレクトリが存在しない場合は作成する。"
@@ -1936,9 +1997,6 @@ msgstr "作成されたUFSファイルシステム:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "プールと代替ルートを作成する。"
-
-msgid "Creates the recursive snapshot."
-msgstr "再帰的にスナップショットを作成する。"
 
 msgid "Creating filesystem"
 msgstr "ファイルシステムの作成"
@@ -2626,6 +2684,11 @@ msgstr ""
 msgid "Display"
 msgstr "表示"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "ZFS コマンド履歴の表示"
 
@@ -2956,8 +3019,8 @@ msgstr "ドメイン名 (例: example.com)"
 msgid "Donate"
 msgstr "寄附"
 
-msgid "Done"
-msgstr "完了"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "完了"
@@ -3220,9 +3283,6 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr ""
 
-msgid "Enable STARTTLS."
-msgstr ""
-
 msgid "Enable Selected Commands"
 msgstr ""
 
@@ -3267,6 +3327,9 @@ msgstr "匿名バインドを有効にします。"
 
 msgid "Enable authentication."
 msgstr "認証を有効にします。"
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr ""
@@ -3356,9 +3419,6 @@ msgstr "モジュールリストを有効にします。"
 
 msgid "Enable nested virtualization"
 msgstr "ネストされた仮想化を許可します。"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "ピアエクスチェンジ(PEX)を有効にする。"
@@ -5557,6 +5617,12 @@ msgstr "音楽"
 msgid "Must be a number between 5 and 1000."
 msgstr ""
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "必ず一つは選択して下さい"
 
@@ -5762,6 +5828,9 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr ""
 
@@ -5807,6 +5876,9 @@ msgstr ""
 msgid "No records found."
 msgstr ""
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr ""
 
@@ -5820,6 +5892,9 @@ msgid "No suitable virtual devices found."
 msgstr ""
 
 msgid "No virtual devices have been selected"
+msgstr ""
+
+msgid "No volume information available."
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -6389,6 +6464,9 @@ msgid "Pool"
 msgstr "プール"
 
 msgid "Pool Devices"
+msgstr ""
+
+msgid "Pool Information"
 msgstr ""
 
 msgid "Pool Information & Status"
@@ -7423,9 +7501,6 @@ msgstr ""
 msgid "Selected"
 msgstr "選択"
 
-msgid "Selected UPS"
-msgstr "選択されたUPS"
-
 msgid "Selected device or label does not exist."
 msgstr "選択したデバイスまたはラベルが存在しません。"
 
@@ -7473,6 +7548,17 @@ msgstr "テストメールの送信"
 
 msgid "Send a TEST warning email on startup."
 msgstr "起動時にテストとして警告メールを送信します。"
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr ""
@@ -7578,8 +7664,14 @@ msgstr "このアカウントのプライマリグループを設定して下さ
 msgid "Set the content location(s) to or from the media library."
 msgstr "メディアライブラリに使うコンテンツの場所(複数可)を設定します。"
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "SSID (サービスセット識別子。ネットワーク名)を設定して下さい。"
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -7590,6 +7682,9 @@ msgstr ""
 "インタフェースの最大転送ユニットサイズ (MTU) を指定して下さい。デフォルトはインタフェース固有の値です。MTU "
 "はインタフェース上に転送されるパケットのサイズを制限する為に使用されます。インタフェースによっては MTU "
 "の設定をサポートしないものや、指定可能な範囲に制限があるものがあります。"
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "タイトルのスクロールスピード 0～10 (初期値 10)"
@@ -7670,6 +7765,9 @@ msgstr "無加工UPS情報の表示"
 
 msgid "Show UPS Information"
 msgstr "UPS情報の表示"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "ログのエントリーを反転して表示。(新しいエントリーが上位に表示されます)"
@@ -7895,6 +7993,9 @@ msgstr ""
 msgid "Start"
 msgstr "開始"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "スタティック"
 
@@ -8111,6 +8212,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "TLSのみ"
@@ -8541,8 +8654,8 @@ msgid ""
 msgstr ""
 "シャドウコピーサービス用のスナップショットのカスタム書式を指定できます。デフォルト書式はZFS自動スナップショットで使用される %s です。"
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "SMTP サーバのポート番号。例) 25 又は 587"
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -8760,6 +8873,11 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "RAIDの名前は英字(大文字/小文字)と数字のみで指定してください。"
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "インタフェースの名前が間違っています。"
 
@@ -8968,9 +9086,6 @@ msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
 
-msgid "There must be at least 1 disks selected."
-msgstr "最低1個のディスクを選択する必要があります。"
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "ミラーを使用するには少なくともディスクが2個必要です。"
 
@@ -9098,12 +9213,6 @@ msgstr ""
 "ティエラーの数が含まれています。"
 
 msgid "This can cause a huge delay in loading the log page!"
-msgstr ""
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
 msgstr ""
 
 msgid ""
@@ -9563,8 +9672,8 @@ msgid ""
 msgstr "磁気ヘッドアクチュエータのローディング総時間（パーキングエリアで費やされた時間を除く）。"
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "合計: %s | 割当: %s | 未使用: %s | 状態: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -9731,6 +9840,9 @@ msgstr "UPSファームウェア"
 msgid "UPS goes on battery"
 msgstr "UPS はバッテリ駆動となりました"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "UPSモデル"
 
@@ -9885,6 +9997,9 @@ msgstr "稼働時間の統計"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "ネットワークスループットの表示に bits/秒 の代わりに bytes/秒 を使う"
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "暗号化する"
 
@@ -9901,6 +10016,9 @@ msgstr ""
 "スペース区切りで複数のホストを指定出来ます (1つは必須です)。ここでホスト名を入力する場合、少なくとも1つの DNS サーバを設定して下さい!"
 
 msgid "Use as sparse volume (thin provisioning)."
+msgstr ""
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
 msgstr ""
 
 msgid "Use different container as root of the tree."
@@ -10465,8 +10583,14 @@ msgstr "ZFS データセットプロパティ"
 msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS プール I/O 統計"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS プールツール"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS スナップショット情報と状態"
@@ -10496,6 +10620,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr ""
 
@@ -10522,6 +10649,9 @@ msgstr "例) %s"
 
 msgid "filechooser"
 msgstr "ファイル選択"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "ターゲット情報の取得に失敗しました。"

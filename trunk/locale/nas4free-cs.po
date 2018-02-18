@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-01-24 19:11+0000\n"
-"PO-Revision-Date: 2017-12-20 19:07+0000\n"
+"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"PO-Revision-Date: 2018-01-31 12:34+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-30 14:41+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-18 00:48+0000\n"
+"X-Generator: Launchpad (build 18553)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -241,6 +241,9 @@ msgstr ""
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr ""
 "Virtuální síť (VLAN) se značkou (tag) %s už na tomto rozhraní existuje."
+
+msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
+msgstr ""
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -889,6 +892,16 @@ msgstr ""
 "Skupina iniciátorů je identifikována číselnou značkou (tag) a určuje názvy a "
 "sítě pověřených iniciátorů."
 
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the critical "
+"threshold."
+msgstr ""
+
+msgid ""
+"An alert email is sent when the capacity of a pool exceeds the warning "
+"threshold."
+msgstr ""
+
 msgid "An empty field is default."
 msgstr "Nevyplněná kolonka znamená použití výchozích hodnot."
 
@@ -987,6 +1000,9 @@ msgstr "Opravdu chcete server vypnout?"
 
 msgid "Asynchronous I/O"
 msgstr "Asynchronní vst./výst."
+
+msgid "At least one disk must be selected."
+msgstr ""
 
 msgid "At least one interface must be selected."
 msgstr "Je třeba, aby bylo vybrané alespoň jedno rozhraní."
@@ -1521,6 +1537,15 @@ msgstr ""
 msgid "Capacity"
 msgstr "Kapacita"
 
+msgid "Capacity Alert Thresholds"
+msgstr ""
+
+msgid "Capacity Critical Threshold"
+msgstr ""
+
+msgid "Capacity Warning Threshold"
+msgstr ""
+
 msgid "Carp Settings"
 msgstr "Nastavení CARP"
 
@@ -1539,6 +1564,11 @@ msgstr ""
 
 msgid "Certificate"
 msgstr "Certifikát"
+
+msgid ""
+"Certificate revocation list (CRL) file for TLS, to check for revoked "
+"certificates."
+msgstr ""
 
 msgid "Change"
 msgstr "Změnit"
@@ -2109,8 +2139,39 @@ msgstr "Vytvořit virtualizační kontejner (PV)"
 msgid "Create ZFS on a GPT partition."
 msgstr "Vytvořit ZFS nad GPT oddílem."
 
+msgid "Create a L2ARC device for ARC"
+msgstr ""
+
+msgid "Create a SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a mirrored SLOG device for ZIL"
+msgstr ""
+
+msgid "Create a spare device"
+msgstr ""
+
+msgid ""
+"Create a virtual device containing a single device or concatenated devices"
+msgstr ""
+
+msgid "Create a virtual device containing mirrored devices"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 2 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates 3 device failures"
+msgstr ""
+
+msgid "Create a virtual device which tolerates a single device failure"
+msgstr ""
+
 msgid "Create and initialize RAID."
 msgstr "Vytvořit a inicializovat RAID pole."
+
+msgid "Create recursive snapshot."
+msgstr ""
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Pokud neexistuje, vytvořit pracovní složku."
@@ -2120,9 +2181,6 @@ msgstr "Vytvořený souborový systém UFS:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Vytvoří fond úložišť s alternativním kořenem."
-
-msgid "Creates the recursive snapshot."
-msgstr "Vytvoří vnořené zachycení stavu."
 
 msgid "Creating filesystem"
 msgstr "Vytváření souborového systému"
@@ -2840,6 +2898,11 @@ msgstr "Disky | Přípojný bod | Správa"
 msgid "Display"
 msgstr "Zobrazit"
 
+msgid ""
+"Display Used/Avail information from the filesystem instead of the Alloc/Free "
+"information from the pool."
+msgstr ""
+
 msgid "Display ZFS command history"
 msgstr "Zobrazit historii ZFS příkazů"
 
@@ -3191,8 +3254,8 @@ msgstr "Název domény, např.: example.com."
 msgid "Donate"
 msgstr "Podpořit vývoj darem"
 
-msgid "Done"
-msgstr "Dokončeno"
+msgid "Done!"
+msgstr ""
 
 msgid "Done."
 msgstr "Dokončeno."
@@ -3454,12 +3517,11 @@ msgid ""
 "Enable SSL/TLS for secured connections. You also need to configure the TLS "
 "trust file. For some servers you may need to disable STARTTLS."
 msgstr ""
+"Zapnout SSL/TLS pro zabezpečená spojení. Je třeba nastavit také soubor s TLS "
+"důvěrou. Pro některé servery může být třeba vypnout STARTTLS."
 
 msgid "Enable STARTTLS"
-msgstr ""
-
-msgid "Enable STARTTLS."
-msgstr ""
+msgstr "Zapnout STARTTLS"
 
 msgid "Enable Selected Commands"
 msgstr "Používat označené příkazy"
@@ -3506,6 +3568,9 @@ msgstr "Umožnit anonymní spojení."
 
 msgid "Enable authentication."
 msgstr "Zapnout ověřování."
+
+msgid "Enable checks of the server certificate."
+msgstr ""
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Shromažďovat statistiky frekvence procesoru."
@@ -3597,9 +3662,6 @@ msgstr "Umožnit výpisování modulů."
 
 msgid "Enable nested virtualization"
 msgstr "Zapnout vnořenou virtualizaci"
-
-msgid "Enable or disable checks of the server certificate."
-msgstr "Zapnout nebo vypnout kontrolování certifikátu serveru."
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Umožnit výměnu stran (PEX)."
@@ -5964,6 +6026,12 @@ msgstr "Hudba"
 msgid "Must be a number between 5 and 1000."
 msgstr "Je třeba, aby bylo číslo z rozmezí 5 až 1000."
 
+msgid "Must be a number between 80 and 89."
+msgstr ""
+
+msgid "Must be a number between 90 and 95."
+msgstr ""
+
 msgid "Must choose one"
 msgstr "Je třeba něco zvolit"
 
@@ -6178,6 +6246,9 @@ msgstr "Nejsou nastavené žádné fondy úložišť."
 msgid "No configured virtual devices."
 msgstr "Nejsou nastavená žádná virtuální zařízení."
 
+msgid "No dataset information available."
+msgstr ""
+
 msgid "No devices have been selected"
 msgstr "Nejsou označená žádná zařízení"
 
@@ -6226,6 +6297,9 @@ msgstr "Nebyly vybrány žádné fondy"
 msgid "No records found."
 msgstr "Nebyly nalezeny žádné záznamy."
 
+msgid "No snapshot information available."
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Nejsou k dispozici žádné disky, formátované na softraid"
 
@@ -6240,6 +6314,9 @@ msgstr "Nebyla nalezena žádná vhodná virtuální zařízení."
 
 msgid "No virtual devices have been selected"
 msgstr "Nebyla vybrána žádná virtuální zařízení"
+
+msgid "No volume information available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Neumožňovat – přebírat pouze položky odepření"
@@ -6834,6 +6911,9 @@ msgstr "Fond"
 
 msgid "Pool Devices"
 msgstr "Zařízení tvořící fond"
+
+msgid "Pool Information"
+msgstr ""
 
 msgid "Pool Information & Status"
 msgstr "Fond – informace a stav"
@@ -7931,9 +8011,6 @@ msgstr "Vyberte jakou délku klíče použít pro daný kryptografický algoritm
 msgid "Selected"
 msgstr "Vybráno"
 
-msgid "Selected UPS"
-msgstr "Vybraná UPS"
-
 msgid "Selected device or label does not exist."
 msgstr "Označené zařízení nebo štítek neexistuje."
 
@@ -7982,6 +8059,17 @@ msgstr "Odeslat testovací e-mail"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Při spouštění poslat ZKUŠEBNÍ varovný e-mail."
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Cert File). The file must contain the private key of a certificate in PEM "
+"format."
+msgstr ""
+
+msgid ""
+"Send a client certificate to the server (use this together with option TLS "
+"Key File). The file must contain a certificate in PEM format."
+msgstr ""
 
 msgid "Send daemon event messages."
 msgstr "Posílat zprávy o událostech v procesu služby."
@@ -8090,8 +8178,14 @@ msgstr "Danou skupinu nastavit tomuto účtu jako hlavní."
 msgid "Set the content location(s) to or from the media library."
 msgstr "Nastavte umístění obsahu do nebo z knihovny multimédií."
 
+msgid "Set the critical threshold to a value between 90 and 95."
+msgstr ""
+
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "Nastavte požadovaný název sítě (Service Set Identifier)."
+
+msgid "Set the fingerprint of a single certificate to accept for TLS."
+msgstr ""
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8103,6 +8197,9 @@ msgstr ""
 "hodnota je dle typu rozhraní. MTU slouží pro omezení velikosti paketů "
 "přenášených rozhraním. Ne všechna rozhraní umožňují změnu MTU a některá jen "
 "v určitém rozsahu."
+
+msgid "Set the warning threshold to a value between 80 and 89."
+msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Nastavte rychlost posouvání titulku v rozmezí 0-10 (výchozí je 10)."
@@ -8187,6 +8284,9 @@ msgstr "Zobrazit informace z UPS v nezpracované podobě"
 
 msgid "Show UPS Information"
 msgstr "Zobrazit informace o UPS zdroji"
+
+msgid "Show Used/Avail"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
@@ -8432,6 +8532,9 @@ msgstr ""
 msgid "Start"
 msgstr "Spustit"
 
+msgid "Start TLS from within the session."
+msgstr ""
+
 msgid "Static"
 msgstr "Statické"
 
@@ -8651,6 +8754,18 @@ msgstr "TKIP"
 
 msgid "TLS"
 msgstr "TLS"
+
+msgid "TLS CRL File"
+msgstr ""
+
+msgid "TLS Cert File"
+msgstr ""
+
+msgid "TLS Fingerprint"
+msgstr ""
+
+msgid "TLS Key File"
+msgstr ""
 
 msgid "TLS Only"
 msgstr "Pouze TLS"
@@ -9141,8 +9256,8 @@ msgstr ""
 "Výchozím formátem je %s, používaný automatickým pořizováním zachyceného "
 "stavu ZFS."
 
-msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Výchozí port SMTP e-mailového serveru, např. 25 nebo 587."
+msgid "The default SMTP mail server port, usually port 25 or port 587."
+msgstr ""
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9410,6 +9525,11 @@ msgstr ""
 "Název RAID pole může obsahovat pouze písmena a-z, A-Z (bez diakritiky) a "
 "číslice 0-9"
 
+msgid ""
+"The name of the TLS trust file. The file must be in PEM format containing "
+"one or more certificates of trusted Certification Authorities (CAs)."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Název rozhraní není správný."
 
@@ -9642,9 +9762,6 @@ msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr "RAID svazek není třeba spouštět odsud (děje se tak automaticky)."
 
-msgid "There must be at least 1 disks selected."
-msgstr "Je třeba vybrat alespoň jeden disk."
-
 msgid "There must be at least 2 disks in a mirror."
 msgstr "Pro zrcadlení jsou třeba alespoň dva disky."
 
@@ -9793,15 +9910,6 @@ msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 "Toto může způsobit obrovskou prodlevu při načítání stránky se záznamem "
 "událostí!"
-
-msgid ""
-"This command activates strict server certificate verification. The filename "
-"must be the absolute path name of a file in PEM format containing one or "
-"more certificates of trusted Certification Authorities (CAs)."
-msgstr ""
-"Tento příkaz zapne striktní ověřování certifikátu serveru. Je třeba zadat "
-"úplný popis umístění souboru (ve formátu PEM) obsahujícího jeden nebo více "
-"certifikátů cert. autorit, kterým věříte."
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -10357,8 +10465,8 @@ msgstr ""
 "mimo parkovací oblast)."
 
 #, php-format
-msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Celkem: %s | Přiřaz.: %s | Volno: %s | Stav: %s"
+msgid "Total: %s | %s: %s | %s: %s | State: %s"
+msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10532,6 +10640,9 @@ msgstr "Firmware UPS zdroje"
 msgid "UPS goes on battery"
 msgstr "UPS zdroj je nyní napájen z akumulátorů"
 
+msgid "UPS is disabled."
+msgstr ""
+
 msgid "UPS model"
 msgstr "Model UPS zdroje"
 
@@ -10690,6 +10801,9 @@ msgstr "Statistiky uptime"
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "Zobrazovat propustnost sítě v bajtech/sek namísto bitů/sek."
 
+msgid "Use Default TLS Trust File"
+msgstr ""
+
 msgid "Use Encryption"
 msgstr "Šifrovat"
 
@@ -10697,7 +10811,7 @@ msgid "Use PAM for user authentication."
 msgstr "Ověřovat uživatele pomocí PAM podsystému."
 
 msgid "Use TLS"
-msgstr ""
+msgstr "Použít TLS"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -10711,6 +10825,9 @@ msgid "Use as sparse volume (thin provisioning)."
 msgstr ""
 "Použít „řídký“ (thin) svazek (obsazování prostoru až skutečnými daty – thin "
 "provisioning)."
+
+msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
+msgstr ""
 
 msgid "Use different container as root of the tree."
 msgstr "Použít coby kořen stromu jiný kontejner."
@@ -11336,8 +11453,14 @@ msgstr "Vlastnosti ZFS datové sady"
 msgid "ZFS Pool I/O Statistics"
 msgstr "Vst./výst. statistiky ZFS fondu úložišť"
 
+msgid "ZFS Pool Properties"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "Nástroje pro ZFS fond úložišť"
+
+msgid "ZFS Settings"
+msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Stav a informace o ZFS zachyceném stavu"
@@ -11371,6 +11494,9 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
+msgid "allocated of"
+msgstr ""
+
 msgid "and"
 msgstr "a"
 
@@ -11400,6 +11526,9 @@ msgstr "např. %s"
 
 msgid "filechooser"
 msgstr "vyberte soubor"
+
+msgid "free of"
+msgstr ""
 
 msgid "get target info failed."
 msgstr "Nezdařilo se získat informace o cíli."
