@@ -40,7 +40,7 @@ function system_syslogconf_get_sphere() {
 	global $config;
 	
 	$sphere = new co_sphere_grid('system_syslogconf','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('syslogconf');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);
@@ -149,7 +149,7 @@ switch($method):
 				if($retval == 0):
 					updatenotify_delete($sphere->notifier());
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_enable():
@@ -175,7 +175,7 @@ switch($method):
 						$updateconfig = false;
 					endif;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_disable():
@@ -201,7 +201,7 @@ switch($method):
 						$updateconfig = false;
 					endif;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_toggle():
@@ -229,7 +229,7 @@ switch($method):
 						$updateconfig = false;
 					endif;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_delete():
@@ -252,7 +252,7 @@ switch($method):
 						endswitch;
 					endif;
 				endforeach;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 		endswitch;
