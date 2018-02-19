@@ -57,7 +57,7 @@ function services_afp_get_sphere() {
 	if(empty($sphere->grid)):
 		$sphere->grid = $sphere->row_default;
 		write_config();
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	return $sphere;
@@ -197,7 +197,7 @@ switch($page_action):
 			$retval |= rc_update_service('netatalk');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		else:
 			$mode_page = PAGE_MODE_EDIT;
@@ -214,7 +214,7 @@ switch($page_action):
 			$retval |= rc_update_service('netatalk');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
