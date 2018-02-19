@@ -65,7 +65,7 @@ function geli_process_updatenotification($mode, $data) {
 function disks_crypt_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_crypt','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('geli');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
@@ -94,7 +94,7 @@ if($_POST):
 		if($retval == 0):
 			updatenotify_delete($sphere->notifier());
 		endif;
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	if(isset($_POST['submit'])):
@@ -126,7 +126,7 @@ if($_POST):
 				
 				//	ensure at least an empty array is available
 				$sphere->grid = &array_make_branch($config,'geli','vdisk');
-//				header($sphere->header());
+//				header($sphere->get_location());
 //				exit;
 			case 'rows.delete':
 				$sphere->cbm_array = $_POST[$sphere->cbm_name] ?? [];
@@ -151,7 +151,7 @@ if($_POST):
 						endif;
 					endif;
 				endforeach;
-//				header($sphere->header());
+//				header($sphere->get_location());
 //				exit;
 				break;
 /*
@@ -174,7 +174,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.enable':
@@ -196,7 +196,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.toggle':
@@ -220,7 +220,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
  */
