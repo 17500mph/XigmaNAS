@@ -39,9 +39,9 @@ require_once 'co_sphere.php';
 function disks_zfs_dataset_edit_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_row('disks_zfs_dataset_edit','php');
-	$sphere->row_identifier('uuid');
+	$sphere->set_row_identifier('uuid');
 	$sphere->parent->set_basename('disks_zfs_dataset','php');
-	$sphere->notifier('zfsdataset');
+	$sphere->set_notifier('zfsdataset');
 	$sphere->row_default = [
 		'name' => '',
 		'pool' => '',
@@ -83,11 +83,11 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 			break;
 		case 'clone':
 			$id = uuid();
-			$sphere->row[$sphere->row_identifier()] = $id;
+			$sphere->row[$sphere->get_row_identifier()] = $id;
 			$mode_page = PAGE_MODE_CLONE;
 			break;
 		case 'save':
-			$id = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+			$id = filter_input(INPUT_POST,$sphere->get_row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 			if(false === $id):
 				header($sphere->parent->get_location());
 				exit;
@@ -96,7 +96,7 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 				header($sphere->parent->get_location());
 				exit;
 			endif;
-			$sphere->row[$sphere->row_identifier()] = $id;
+			$sphere->row[$sphere->get_row_identifier()] = $id;
 			$mode_page = PAGE_MODE_POST;
 			break;
 		default:
@@ -107,11 +107,11 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
 	switch($action):
 		case 'add':
-			$sphere->row[$sphere->row_identifier()] = uuid();
+			$sphere->row[$sphere->get_row_identifier()] = uuid();
 			$mode_page = PAGE_MODE_ADD;
 			break;
 		case 'edit':
-			$id = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+			$id = filter_input(INPUT_GET,$sphere->get_row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 			if(false === $id):
 				header($sphere->parent->get_location());
 				exit;
@@ -120,7 +120,7 @@ elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['
 				header($sphere->parent->get_location());
 				exit;
 			endif;
-			$sphere->row[$sphere->row_identifier()] = $id;
+			$sphere->row[$sphere->get_row_identifier()] = $id;
 			$mode_page = PAGE_MODE_EDIT;
 			break;
 		default:
@@ -144,9 +144,9 @@ if(empty($a_pool)):
 else:
 	array_sort_key($a_pool,'name');
 endif;
-$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+$sphere->row_id = array_search_ex($sphere->row[$sphere->get_row_identifier()],$sphere->grid,$sphere->get_row_identifier());
 //	determine record update mode
-$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]); // get updatenotify mode
+$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]); // get updatenotify mode
 $mode_record = RECORD_ERROR;
 if(false === $sphere->row_id): // record does not exist in config
 	if((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page || (PAGE_MODE_CLONE == $mode_page))): // POST, ADD or CLONE
@@ -380,12 +380,12 @@ switch($mode_page):
 			$sphere->row['accessrestrictions']['group'] = [$helpinghand];
 			if($isrecordnew):
 				$sphere->grid[] = $sphere->row;
-				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->row_identifier()]);
+				updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->get_row_identifier()]);
 			else:
 				$sphere->grid[$sphere->row_id] = $sphere->row;
 				//	avoid unnecessary notifications, avoid mode modify if mode new already exists
 				if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->row_identifier()]);
+					updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->get_row_identifier()]);
 				endif;
 			endif;
 			write_config();
@@ -490,7 +490,7 @@ $document->
 			ins_tabnav_record('disks_zfs_dataset_info.php',gtext('Information'));
 $document->render();
 ?>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
 		print_error_box($errormsg);
@@ -599,7 +599,7 @@ $document->render();
 		endif;
 		echo $sphere->html_button('cancel',gtext('Cancel'));
 ?>
-		<input name="<?=$sphere->row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->row_identifier()];?>"/>
+		<input name="<?=$sphere->get_row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->get_row_identifier()];?>"/>
 	</div>
 <?php
 	include 'formend.inc';
