@@ -74,7 +74,7 @@ include 'fbegin.inc';
 		<li class="tabact"><a href="diag_traceroute.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Traceroute');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
@@ -129,7 +129,7 @@ include 'fbegin.inc';
 <?php
 					echo '<pre class="cmdoutput">';
 					mwexec2($cmd,$rawdata);
-					echo htmlspecialchars(implode("\n",$rawdata));
+					echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 					unset($rawdata);
 					echo '</pre>';
 ?>
