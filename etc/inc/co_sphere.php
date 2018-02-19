@@ -42,36 +42,48 @@ class co_sphere_scriptname {
 	protected $_extension = NULL;
 //	methods	
 	public function __construct(string $basename = NULL,string $extension = NULL) {
-		if(isset($basename)):
-			$this->basename($basename);
-		endif;
-		if(isset($extension)):
-			$this->extension($extension);
-		endif;
+		$this->set_basename($basename);
+		$this->set_extension($extension);
 	}
 	public function basename(string $basename = NULL) {
-		if(isset($basename)):
+		if(isset($basename) && (1 === preg_match('/^[\w]+$/',$basename))):
 			//	allow [0..9A-Za-z_] for filename
-			if(1 === preg_match('/^[\w]+$/',$basename)):
-				$this->_basename = $basename;
-			endif;
+			$this->_basename = $basename;
 		endif;
 		return $this->_basename ?? false;
 	}
+	public function set_basename(string $basename = NULL) {
+		$this->_basename = $basename;
+		return $this->get_basename();
+	}
+	public function get_basename() {
+		return $this->_basename ?? false;
+	}
 	public function extension(string $extension = NULL) {
-		if(isset($extension)):
+		if(isset($extension) && (1 === preg_match('/^[\w]+$/',$extension))):
 			//	allow [0..9A-Za-z_] for extension
-			if(1 === preg_match('/^[\w]+$/',$extension)):
-				$this->_extension = $extension;
-			endif;
+			$this->_extension = $extension;
 		endif;
 		return $this->_extension ?? false;
 	}
+	public function set_extension(string $extension = NULL) {
+		$this->_extension = $extension;
+		return $this->get_extension();
+	}
+	public function get_extension() {
+		return $this->_extension ?? false;
+	}
 	public function scriptname() {
-		return sprintf('%s.%s',$this->basename(),$this->extension());
+		return sprintf('%s.%s',$this->get_basename(),$this->get_extension());
+	}
+	public function get_scriptname() {
+		return sprintf('%s.%s',$this->get_basename(),$this->get_extension());
 	}
 	public function header() {
-		return sprintf('Location: %s.%s',$this->basename(),$this->extension());
+		return sprintf('Location: %s.%s',$this->get_basename(),$this->get_extension());
+	}
+	public function get_location() {
+		return sprintf('Location: %s',$this->get_scriptname());
 	}
 }
 class co_sphere_level1 extends co_sphere_scriptname { // for settings, services, row and grid
