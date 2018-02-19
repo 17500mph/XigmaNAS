@@ -56,7 +56,7 @@ function userdb_group_process_updatenotification($mode,$data) {
 function access_users_groups_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('access_users_groups','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('userdb_group');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false); // internally managed
@@ -111,14 +111,14 @@ if($_POST):
 						endswitch;
 					endif;
 				endforeach;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'show':
 				if(!$showsystemgroups):
 					$access_settings['hidesystemgroups'] = false;
 					write_config();
-					header($sphere->header());
+					header($sphere->get_location());
 					exit;
 				endif;
 				break;
@@ -126,7 +126,7 @@ if($_POST):
 				if($showsystemgroups):
 					$access_settings['hidesystemgroups'] = true;
 					write_config();
-					header($sphere->header());
+					header($sphere->get_location());
 					exit;
 				endif;
 				break;
