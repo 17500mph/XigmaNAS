@@ -40,7 +40,7 @@ function disks_zfs_dataset_edit_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_row('disks_zfs_dataset_edit','php');
 	$sphere->row_identifier('uuid');
-	$sphere->parent->basename('disks_zfs_dataset','php');
+	$sphere->parent->set_basename('disks_zfs_dataset','php');
 	$sphere->notifier('zfsdataset');
 	$sphere->row_default = [
 		'name' => '',
@@ -78,7 +78,8 @@ $prerequisites_ok = true;
 if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
 	switch($action):
 		case 'cancel':
-			header($sphere->parent->header());exit;
+			header($sphere->parent->get_location());
+			exit;
 			break;
 		case 'clone':
 			$id = uuid();
@@ -88,16 +89,19 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 		case 'save':
 			$id = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 			if(false === $id):
-				header($sphere->parent->header());exit;
+				header($sphere->parent->get_location());
+				exit;
 			endif;
 			if(!is_uuid_v4($id)):
-				header($sphere->parent->header());exit;
+				header($sphere->parent->get_location());
+				exit;
 			endif;
 			$sphere->row[$sphere->row_identifier()] = $id;
 			$mode_page = PAGE_MODE_POST;
 			break;
 		default:
-			header($sphere->parent->header());exit;
+			header($sphere->parent->get_location());
+			exit;
 			break;
 	endswitch;
 elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
@@ -109,20 +113,24 @@ elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['
 		case 'edit':
 			$id = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 			if(false === $id):
-				header($sphere->parent->header());exit;
+				header($sphere->parent->get_location());
+				exit;
 			endif;
 			if(!is_uuid_v4($id)):
-				header($sphere->parent->header());exit;
+				header($sphere->parent->get_location());
+				exit;
 			endif;
 			$sphere->row[$sphere->row_identifier()] = $id;
 			$mode_page = PAGE_MODE_EDIT;
 			break;
 		default:
-			header($sphere->parent->header());exit;
+			header($sphere->parent->get_location());
+			exit;
 			break;
 	endswitch;
 else:
-	header($sphere->parent->header());exit;
+	header($sphere->parent->get_location());
+	exit;
 endif;
 $a_volume = &array_make_branch($config,'zfs','volumes','volume');
 if(empty($a_volume)):
@@ -162,7 +170,8 @@ else: // record found in config
 	endif;
 endif;
 if(RECORD_ERROR == $mode_record): // oops, someone tries to cheat, over and out
-	header($sphere->parent->header());exit;
+	header($sphere->parent->get_location());
+	exit;
 endif;
 $isrecordnew = (RECORD_NEW === $mode_record);
 $isrecordnewmodify = (RECORD_NEW_MODIFY === $mode_record);
@@ -380,7 +389,7 @@ switch($mode_page):
 				endif;
 			endif;
 			write_config();
-			header($sphere->parent->header());
+			header($sphere->parent->get_location());
 			exit;		
 		endif;
 		break;
