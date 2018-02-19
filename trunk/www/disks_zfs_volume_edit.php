@@ -49,9 +49,9 @@ function get_volblocksize($pool,$name) {
 function get_sphere_disks_zfs_volume_edit() {
 	global $config;
 	$sphere = new co_sphere_row('disks_zfs_volume_edit','php');
-	$sphere->row_identifier('uuid');
+	$sphere->set_row_identifier('uuid');
 	$sphere->parent->set_basename('disks_zfs_volume','php');
-	$sphere->notifier('zfsvolume');
+	$sphere->set_notifier('zfsvolume');
 	$sphere->grid = &array_make_branch($config,'zfs','volumes','volume');
 	if(!empty($sphere->grid)):
 		array_sort_key($sphere->grid,'name');
@@ -86,7 +86,7 @@ $resource_id_filter_options = [
 //	determine page mode and validate resource id
 switch($server_request_method):
 	default: // unsupported request method
-		$sphere->row[$sphere->row_identifier()] = NULL;
+		$sphere->row[$sphere->get_row_identifier()] = NULL;
 		break;
 	case 'GET':
 		$action = filter_input(
@@ -101,15 +101,15 @@ switch($server_request_method):
 		]]);
 		switch($action):
 			default: // unsupported action
-				$sphere->row[$sphere->row_identifier()] = NULL;
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->get_row_identifier()] = uuid();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				$sphere->row[$sphere->get_row_identifier()] = filter_input(INPUT_GET,$sphere->get_row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
 				break;
 		endswitch;
 		break;
@@ -126,26 +126,26 @@ switch($server_request_method):
 		]]);
 		switch($action):
 			default:  // unsupported action
-				$sphere->row[$sphere->row_identifier()] = NULL;
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->get_row_identifier()] = uuid();
 				break;
 			case 'cancel': // cancel - nothing to do
-				$sphere->row[$sphere->row_identifier()] = NULL;
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'clone': // clone requires a new resource id, get it from uuid() and validate
 				$page_mode = PAGE_MODE_CLONE;
-				$sphere->row[$sphere->row_identifier()] = uuid();
+				$sphere->row[$sphere->get_row_identifier()] = uuid();
 				break;
 			case 'edit': // edit requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				$sphere->row[$sphere->get_row_identifier()] = filter_input(INPUT_POST,$sphere->get_row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
 				break;
 			case 'save': // modify requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_POST;
-				$sphere->row[$sphere->row_identifier()] = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
+				$sphere->row[$sphere->get_row_identifier()] = filter_input(INPUT_POST,$sphere->get_row_identifier(),FILTER_VALIDATE_REGEXP,$resource_id_filter_options);
 				break;
 		endswitch;
 		break;
@@ -153,18 +153,18 @@ endswitch;
 /*
  *	exit if $sphere->row[$sphere->row_identifier()] is NULL
  */
-if(!isset($sphere->row[$sphere->row_identifier()])):
+if(!isset($sphere->row[$sphere->get_row_identifier()])):
 	header($sphere->parent->get_location());
 	exit;
 endif;
 /*
  *	search resource id in sphere
  */
-$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+$sphere->row_id = array_search_ex($sphere->row[$sphere->get_row_identifier()],$sphere->grid,$sphere->get_row_identifier());
 /*
  *	start determine record update mode
  */
-$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]); // get updatenotify mode
+$updatenotify_mode = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]); // get updatenotify mode
 $record_mode = RECORD_ERROR;
 if(false === $sphere->row_id): // record does not exist in config
 	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_CLONE,PAGE_MODE_POST],true)): // ADD or CLONE or POST
@@ -358,11 +358,11 @@ switch($page_mode):
 			$sphere->row['pool'] = [$helpinghand];
 			if($isrecordnew):
 				$sphere->grid[] = $sphere->row;
-				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->row_identifier()]);
+				updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_NEW,$sphere->row[$sphere->get_row_identifier()]);
 			else:
 				$sphere->grid[$sphere->row_id] = $sphere->row;
 				if(UPDATENOTIFY_MODE_UNKNOWN == $updatenotify_mode):
-					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->row_identifier()]);
+					updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$sphere->get_row_identifier()]);
 				endif;
 			endif;
 			write_config();
@@ -391,7 +391,7 @@ $document->
 			ins_tabnav_record('disks_zfs_volume_info.php',gtext('Information'));
 $document->render();
 ?>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($errormsg)):
 		print_error_box($errormsg);
@@ -448,7 +448,7 @@ $document->render();
 		endif;
 			echo $sphere->html_button('cancel',gtext('Cancel'));
 ?>
-		<input name="<?=$sphere->row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->row_identifier()];?>"/>
+		<input name="<?=$sphere->get_row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->get_row_identifier()];?>"/>
 	</div>
 <?php
 	include 'formend.inc';
@@ -456,4 +456,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
