@@ -72,8 +72,8 @@ function zfspool_process_updatenotification($mode,$data) {
 function disks_zfs_zpool_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_zfs_zpool','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
-	$sphere->inform->basename($sphere->basename() . '_info');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
+	$sphere->inform->set_basename($sphere->get_basename() . '_info');
 	$sphere->notifier('zfspool');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
@@ -104,7 +104,7 @@ if($_POST):
 			if($retval == 0):
 				updatenotify_delete($sphere->notifier());
 			endif;
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 //		endif;
 	endif;
@@ -130,7 +130,7 @@ if($_POST):
 						endswitch;
 					endif;
 				endforeach;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 		endswitch;
