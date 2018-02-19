@@ -57,7 +57,7 @@ function device_process_updatenotification($mode, $data) {
 function disks_manage_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_manage','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('device');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
@@ -90,7 +90,7 @@ if($_POST) {
 		if($retval == 0):
 			updatenotify_delete($sphere->notifier());
 		endif;
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	
@@ -110,7 +110,7 @@ if($_POST) {
 				if($retval >= 0):
 					disks_update_mounts();
 				endif;
-//				header("Location: disks_manage.php");
+//				header($sphere->get_location()));
 //				exit;
 				break;
 			case 'importswraid':
@@ -126,13 +126,13 @@ if($_POST) {
 				if($retval >= 0):
 					disks_update_mounts();
 				endif;
-				//header("Location: disks_manage.php");
-				//exit;
+//					header($sphere->get_location());
+//					exit;
 				break;
 			case 'rescanbusses':
 				$cmd = 'camcontrol rescan all';
 				mwexec2($cmd,$rawdata);
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.delete':
@@ -155,7 +155,7 @@ if($_POST) {
 						endswitch;
 					endif;
 				endforeach;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 		endswitch;
