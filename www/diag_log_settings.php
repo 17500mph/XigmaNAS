@@ -228,7 +228,7 @@ $jcode = [];
 $jcode[PAGE_MODE_EDIT] = NULL;
 $jcode[PAGE_MODE_VIEW] = NULL;
 //	create document
-$document = new_page([gtext('Diagnostics'),gtext('Log'),gtext('Settings')],$sphere->scriptname());
+$document = new_page([gtext('Diagnostics'),gtext('Log'),gtext('Settings')],$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
