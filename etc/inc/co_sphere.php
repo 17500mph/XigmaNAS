@@ -303,7 +303,6 @@ class co_sphere_grid extends co_sphere_level2 {
 		global $config;
 		return $this->enadis() && isset($config['system']['enabletogglemode']) && (is_bool($config['system']['enabletogglemode']) ? $config['system']['enabletogglemode'] : true);
 	}
-	
 	public function get_cbm_button_id_delete() {
 		return $this->_cbm_button_id_delete ?? 'delete_selected_rows';
 	}
@@ -620,7 +619,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$o_td = $root->addTD();
 		if($notdirty && $notprotected):
 			//	record is editable
-			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->get_scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->get_scriptname(),$this->get_row_identifier(),$this->get_row_identifier_value());
 			$img_attributes = [
 				'src' => $g_img['mod'],
 				'title' => $this->sym_mod(),
@@ -654,7 +653,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_maintainbox() {
 		global $g_img;
 
-		$link = sprintf('%s?%s=%s',$this->maintain->get_scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+		$link = sprintf('%s?%s=%s',$this->maintain->get_scriptname(),$this->get_row_identifier(),$this->get_row_identifier_value());
 		$img_attributes = [
 			'src' => $g_img['mai'],
 			'title' => $this->sym_mai(),
@@ -671,7 +670,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_informbox() {
 		global $g_img;
 
-		$link = sprintf('%s?%s=%s',$this->inform->get_scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+		$link = sprintf('%s?%s=%s',$this->inform->get_scriptname(),$this->get_row_identifier(),$this->get_row_identifier_value());
 		$img_attributes = [
 			'src' => $g_img['inf'],
 			'title' => $this->sym_inf(),
