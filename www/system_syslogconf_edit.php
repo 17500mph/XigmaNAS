@@ -42,8 +42,8 @@ function get_sphere_syslogconf_edit() {
 //	sphere structure
 	$sphere = new co_sphere_grid('system_syslogconf_edit','php');
 	$sphere->parent->set_basename('system_syslogconf');
-	$sphere->notifier('syslogconf');
-	$sphere->row_identifier('uuid');
+	$sphere->set_notifier('syslogconf');
+	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add Record'));
@@ -69,7 +69,7 @@ $method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['fl
 //	determine page mode and validate resource id
 switch($method):
 	default: // unsupported request method
-		$sphere->row[$sphere->row_identifier()] = NULL;
+		$sphere->row[$sphere->get_row_identifier()] = NULL;
 		break;
 	case 'GET':
 		$actions = ['add','edit'];
@@ -77,15 +77,15 @@ switch($method):
 		$action = filter_input(INPUT_GET,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
 			default: // unsupported action
-				$sphere->row[$sphere->row_identifier()] = NULL;
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
+				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->validate_input(INPUT_GET);
+				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
 				break;
 		endswitch;
 		break;
@@ -95,22 +95,22 @@ switch($method):
 		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
 		switch($action):
 			default:  // unsupported action
-				$sphere->row[$sphere->row_identifier()] = NULL;
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->get_defaultvalue();
+				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'cancel': // cancel - nothing to do
-				$sphere->row[$sphere->row_identifier()] = NULL;
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'edit': // edit requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->validate_input();
+				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input();
 				break;
 			case 'save': // modify requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_POST;
-				$sphere->row[$sphere->row_identifier()] = $property->{$sphere->row_identifier()}->validate_input();
+				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input();
 				break;
 		endswitch;
 		break;
@@ -125,11 +125,11 @@ endif;
 /*
  *	search resource id in sphere
  */
-$sphere->row_id = array_search_ex($sphere->get_row_identifier_value(),$sphere->grid,$sphere->row_identifier());
+$sphere->row_id = array_search_ex($sphere->get_row_identifier_value(),$sphere->grid,$sphere->get_row_identifier());
 /*
  *	start determine record update mode
  */
-$updatenotify_mode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value()); // get updatenotify mode
+$updatenotify_mode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value()); // get updatenotify mode
 $record_mode = RECORD_ERROR;
 if(false === $sphere->row_id): // record does not exist in config
 	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_POST],true)): // ADD or POST
@@ -199,13 +199,13 @@ switch($page_mode):
 		if($prerequisites_ok && empty($input_errors)):
 			if($isrecordnew):
 				$sphere->grid[] = $sphere->row;
-				updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_NEW,$sphere->get_row_identifier_value());
+				updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_NEW,$sphere->get_row_identifier_value());
 			else:
 				foreach($sphere->row as $key => $value):
 					$sphere->grid[$sphere->row_id][$key] = $value;
 				endforeach;
 				if(UPDATENOTIFY_MODE_UNKNOWN == $updatenotify_mode):
-					updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->get_row_identifier_value());
+					updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->get_row_identifier_value());
 				endif;
 			endif;
 			write_config();
@@ -216,7 +216,7 @@ switch($page_mode):
 endswitch;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('syslog.conf'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $jcode = $sphere->doj(false);
-$document = new_page($pgtitle,$sphere->scriptname());
+$document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -267,6 +267,5 @@ else:
 	$buttons->ins_button_save();
 endif;
 $buttons->ins_button_cancel();
-$buttons->addElement('input',['name' => $sphere->row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+$buttons->addElement('input',['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
 $document->render();
-?>
