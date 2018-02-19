@@ -57,6 +57,21 @@ class co_request_method {
 		return $this->_default;
 	}
 	public function validate() : array {
+		//	check $_SESSION settings first
+		$this->_method = 'SESSION';
+		if(array_key_exists($this->_method,$this->_activities) && array_key_exists('submit',$_SESSION)):
+//			switch($this->_method):
+//				case 'SESSION': // Validate $_SESSION['submit']
+					$this->_action = filter_var($_SESSION['submit'],FILTER_CALLBACK,['options' =>
+						function(string $value) { return array_key_exists($value,$this->_activities[$this->_method]) ? $value : NULL; }
+					]);
+					if(isset($this->_action)):
+						return [$this->_method,$this->_action,$this->_activities[$this->_method][$this->_action]];
+					endif;
+//					break;
+//			endswitch;
+		endif;
+		//	check inputs
 		$this->_method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_CALLBACK,['options' =>
 			function(string $value) { return array_key_exists($value,$this->_activities) ? $value : NULL; }
 		]);
