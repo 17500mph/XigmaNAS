@@ -34,6 +34,8 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
+require_once 'properties_services_tftp.php';
+require_once 'co_request_method.php';
 
 function services_tftp_get_sphere() {
 	global $config;
@@ -53,55 +55,38 @@ function services_tftp_get_sphere() {
 	if(empty($sphere->grid)):
 		$sphere->grid = $sphere->row_default;
 		write_config();
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	return $sphere;
 }
 $sphere = &services_tftp_get_sphere();
+$cop = new properties_tftp();			
 $gt_button_apply_confirm = gtext('Do you want to apply these settings?');
 $input_errors = [];
 $a_message = [];
-//	identify page mode
-$mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_VIEW;
-switch($mode_page):
-	case PAGE_MODE_POST:
-		if(isset($_POST['submit'])):
-			$page_action = $_POST['submit'];
-			switch($page_action):
-				case 'edit':
-					$mode_page = PAGE_MODE_EDIT;
-					break;
-				case 'save':
-					break;
-				case 'enable':
-					break;
-				case 'disable':
-					break;
-				default:
-					$mode_page = PAGE_MODE_VIEW;
-					$page_action = 'view';
-					break;
-			endswitch;
-		else:
-			$mode_page = PAGE_MODE_VIEW;
-			$page_action = 'view';
-		endif;
-		break;
-	case PAGE_MODE_VIEW:
-		$page_action = 'view';
-		break;
-endswitch;
+//	determine request method
+$rmo = new co_request_method();
+$rmo->add('GET','edit',PAGE_MODE_EDIT);
+$rmo->add('GET','view',PAGE_MODE_VIEW);
+$rmo->add('POST','edit',PAGE_MODE_EDIT);
+$rmo->add('POST','enable',PAGE_MODE_VIEW);
+$rmo->add('POST','disable',PAGE_MODE_VIEW);
+$rmo->add('POST','save',PAGE_MODE_POST);
+$rmo->add('POST','view',PAGE_MODE_VIEW);
+$rmo->add('SESSION',$sphere->get_basename(),PAGE_MODE_VIEW);
+$rmo->set_default('GET','view',PAGE_MODE_VIEW);
+list($page_method,$page_action,$page_mode) = $rmo->validate();
 //	get configuration data, depending on the source
-switch($page_action):
-	case 'save':
+switch($page_mode):
+	case PAGE_MODE_POST:
 		$source = $_POST;
 		break;
 	default:
 		$source = $sphere->grid;
 		break;
 endswitch;
-$sphere->row['enable'] = isset($source['enable']);
+$sphere->row['enable'] = isset($source['enable']) ? (is_bool($source['enable']) ? $source['enable'] : true) : false;
 $sphere->row['dir'] = $source['dir'] ?? $sphere->row_default['dir'];
 $sphere->row['allowfilecreation'] = isset($source['allowfilecreation']);
 $sphere->row['port'] = $source['port'] ?? $sphere->row_default['port'];
@@ -119,7 +104,7 @@ endif;
 switch($page_action):
 	case 'enable':
 		if($sphere->row['enable']):
-			$mode_page = PAGE_MODE_VIEW;
+			$page_mode = PAGE_MODE_VIEW;
 			$page_action = 'view';
 		else: // enable and run a full validation
 			$sphere->row['enable'] = true;
@@ -129,6 +114,14 @@ switch($page_action):
 endswitch;
 //	process save and disable
 switch($page_action):
+	case $sphere->get_basename():
+		$retval = filter_var($_SESSION[$sphere->get_basename()],FILTER_VALIDATE_INT,['options' => ['default' => 0]]);
+		unset($_SESSION['submit']);
+		unset($_SESSION[$sphere->get_basename()]);
+		$savemsg = get_std_save_message($retval);
+		$page_mode = PAGE_MODE_VIEW;
+//		$page_action = 'view';
+		break;
 	case 'save':
 		// Input validation.
 		$reqdfields = ['dir'];
@@ -149,11 +142,13 @@ switch($page_action):
 			config_lock();
 			$retval |= rc_update_service('tftpd');
 			config_unlock();
-			header($sphere->header());
+			$_SESSION['submit'] = $sphere->get_basename();
+			$_SESSION[$sphere->get_basename()] = $retval;
+			header($sphere->get_location());
 			exit;
 		else:
-			$mode_page = PAGE_MODE_EDIT;
-			$page_action = 'edit';
+			$page_mode = PAGE_MODE_EDIT;
+//			$page_action = 'edit';
 		endif;
 		break;
 	case 'disable':
@@ -165,151 +160,82 @@ switch($page_action):
 			config_lock();
 			$retval |= rc_update_service('tftpd');
 			config_unlock();
-			header($sphere->header());
+			$_SESSION['submit'] = $sphere->get_basename();
+			$_SESSION[$sphere->get_basename()] = $retval;
+			header($sphere->get_location());
 			exit;
 		endif;
-		$mode_page = PAGE_MODE_VIEW;
-		$page_action = 'view';
+		$page_mode = PAGE_MODE_VIEW;
+//		$page_action = 'view';
 		break;
 endswitch;
-//	determine final page mode
-switch($mode_page):
-	case PAGE_MODE_EDIT:
-		break;
-	default:
-		if(isset($config['system']['skipviewmode'])):
-			$mode_page = PAGE_MODE_EDIT;
-			$page_action = 'edit';
-		else:
-			$mode_page = PAGE_MODE_VIEW;
-			$page_action = 'view';
-		endif;
-		break;
-endswitch;
-//  prepare lookups
-switch($mode_page):
-	case PAGE_MODE_EDIT:
-		$l_user = [];
-		foreach(system_get_user_list() as $key => $val):
-			$l_user[$key] = htmlspecialchars($key);
-		endforeach;
-		break;
-endswitch;
-$pgtitle = [gtext('Services'),gtext('TFTP')];
-include 'fbegin.inc';
-switch($mode_page):
-	case PAGE_MODE_VIEW:
-?>
-<script type="text/javascript">
-//<![CDATA[
+//	determine final page mode and calculate readonly flag
+list($page_mode,$is_readonly) = calc_skipviewmode($page_mode);
+$l_user = [];
+foreach(system_get_user_list() as $key => $val):
+	$l_user[$key] = htmlspecialchars($key);
+endforeach;
+$cop->username->set_options($l_user);
+//	prepare additional javascript code
+$jcode = [];
+$jcode[PAGE_MODE_EDIT] = <<<EOJ
 $(window).on("load", function() {
-	$("#iform").submit(function() { spinner(); });
-	$(".spin").click(function() { spinner(); });
-});
-//]]>
-</script>
-<?php
-		break;
-	case PAGE_MODE_EDIT:
-?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-	$("#iform").submit(function() {	spinner(); });
-	$(".spin").click(function() { spinner(); });
 	$("#button_save").click(function () {
-		return confirm("<?=$gt_button_apply_confirm;?>");
+		return confirm("{$gt_button_apply_confirm}");
 	});
 });
-//]]>
-</script>
-<?php
+EOJ;
+$jcode[PAGE_MODE_VIEW] = NULL;
+$pgtitle = [gtext('Services'),gtext('TFTP')];
+$document = new_page($pgtitle,$sphere->get_scriptname());
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add additional javascript code
+if(isset($jcode[$page_mode])):
+	$body->addJavaScript($jcode[$page_mode]);
+endif;
+//	create data area
+$content = $pagecontent->add_area_data();
+//	display information, warnings and errors
+$content->
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg);
+//	add content
+$content->
+	add_table_data_settings()->
+		ins_colgroup_data_settings()->
+		push()->addTHEAD()->
+			c2_titleline_with_checkbox($cop->enable,$sphere->row['enable'],false,$is_readonly,gtext('Trivial File Transfer Protocol'))->
+		pop()->addTBODY()->
+			c2_filechooser($cop->dir,htmlspecialchars($sphere->row['dir']),true,$is_readonly)->
+			c2_checkbox($cop->allowfilecreation,$sphere->row['allowfilecreation'],false,$is_readonly);
+$content->
+	add_table_data_settings()->
+		ins_colgroup_data_settings()->
+		push()->addTHEAD()->
+			c2_separator()->
+			c2_titleline(gtext('Advanced Settings'))->
+		pop()->addTBODY()->
+			c2_input_text($cop->port,htmlspecialchars($sphere->row['port']),false,$is_readonly)->
+			c2_select($cop->username,htmlspecialchars($sphere->row['username']),false,$is_readonly)->
+			c2_input_text($cop->umask,htmlspecialchars($sphere->row['umask']),false,$is_readonly)->
+			c2_input_text($cop->timeout,htmlspecialchars($sphere->row['timeout']),false,$is_readonly)->
+			c2_input_text($cop->maxblocksize,htmlspecialchars($sphere->row['maxblocksize']),false,$is_readonly)->
+			c2_input_text($cop->extraoptions,htmlspecialchars($sphere->row['extraoptions']),false,$is_readonly);
+//	add buttons
+switch($page_mode):
+	case PAGE_MODE_VIEW:
+		$document->
+			add_area_buttons()->
+				ins_button_edit()->
+				ins_button_enadis(!$sphere->row['enable']);
 		break;
-endswitch;	
-?>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php
-	if(file_exists($d_sysrebootreqd_path)):
-		print_info_box(get_std_save_message(0));
-	endif;
-	if(!empty($input_errors)):
-		print_input_errors($input_errors);
-	endif;
-	foreach($a_message as $r_message):
-		print_info_box($r_message);
-	endforeach;
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			switch($mode_page):
-				case PAGE_MODE_VIEW:
-					html_titleline2(gtext('Trivial File Transfer Protocol'));
-					break;
-				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Trivial File Transfer Protocol'),$sphere->row['enable'],gtext('Enable'));
-					break;
-			endswitch;
-?>
-		</thead>
-		<tbody>
-<?php
-			switch($mode_page):
-				case PAGE_MODE_VIEW:
-					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_textinfo2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']));
-					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->row['allowfilecreation'],'','',false,true);
-					html_separator2();
-					html_titleline2(gtext('Advanced Settings'));
-					html_textinfo2('port',gtext('Port'),htmlspecialchars($sphere->row['port']));
-					html_textinfo2('username',gtext('Username'),htmlspecialchars($sphere->row['username']));
-					html_textinfo2('umask',gtext('Umask'),htmlspecialchars($sphere->row['umask']));
-					html_textinfo2('timeout',gtext('Timeout'),htmlspecialchars($sphere->row['timeout']));
-					html_textinfo2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->row['maxblocksize']));
-					html_textinfo2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->row['extraoptions']));
-					break;
-				case PAGE_MODE_EDIT:
-					html_filechooser2('dir',gtext('Directory'),htmlspecialchars($sphere->row['dir']),gtext('The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer.'),$g['media_path'],true,60);
-					html_checkbox2('allowfilecreation',gtext('Allow New Files'),$sphere->row['allowfilecreation'],gtext('Allow new files to be created.'),gtext('By default, only already existing files can be uploaded.'),false);
-					html_separator2();
-					html_titleline2(gtext('Advanced Settings'));
-					html_inputbox2('port',gtext('Port'),htmlspecialchars($sphere->row['port']),gtext('Enter a custom port number if you want to override the default port (default is 69).'),false,5);
-					html_combobox2('username',gtext('Username'),htmlspecialchars($sphere->row['username']),$l_user,gtext('Specifies the username which the service will run as.'),false);
-					html_inputbox2('umask',gtext('Umask'),htmlspecialchars($sphere->row['umask']),gtext('Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write).'),false,4);
-					html_inputbox2('timeout',gtext('Timeout'),htmlspecialchars($sphere->row['timeout']),gtext('Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second).'),false,10);
-					html_inputbox2('maxblocksize',gtext('Max. Block Size'),htmlspecialchars($sphere->row['maxblocksize']),gtext('Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464.'),false,5);
-					html_inputbox2('extraoptions',gtext('Extra Options'),htmlspecialchars($sphere->row['extraoptions']),gtext('Extra options (usually empty).'),false,40);
-					break;
-			endswitch;
-?>
-		</tbody>
-	</table>
-	<div id="submit">
-<?php
-		switch($mode_page):
-			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gtext('Edit'));
-				if($sphere->row['enable']):
-					echo $sphere->html_button('disable',gtext('Disable'));
-				else:
-					echo $sphere->html_button('enable',gtext('Enable'));
-				endif;
-				break;
-			case PAGE_MODE_EDIT:
-				echo $sphere->html_button('save',gtext('Apply'));
-				echo $sphere->html_button('cancel',gtext('Cancel'));
-				break;
-		endswitch;
-?>
-	</div>
-<?php
-	include 'formend.inc';
-?>
-</td></tr></table></form>
-<?php
-include 'fend.inc';
-?>
+	case PAGE_MODE_EDIT:
+		$document->
+			add_area_buttons()->
+				ins_button_save()->
+				ins_button_cancel();
+		break;
+endswitch;
+$document->render();
