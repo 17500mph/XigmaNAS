@@ -2282,7 +2282,7 @@ EOJ;
  *	</td>
  */
 		if($notdirty && $notprotected): // record is editable
-			$link = sprintf('%s?submit=edit&%s=%s',$sphere->modify->scriptname(),$sphere->row_identifier(),$sphere->get_row_identifier_value());
+			$link = sprintf('%s?submit=edit&%s=%s',$sphere->modify->get_scriptname(),$sphere->get_row_identifier(),$sphere->get_row_identifier_value());
 			$this->addTD()->
 				addA(['href' => $link])->
 					insIMG(['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin','class' => 'oneemhigh']);
@@ -2309,7 +2309,7 @@ EOJ;
  *		</tr>
  *	</tfoot>
  */
-		$link = sprintf('%s?submit=add',$sphere->modify->scriptname());
+		$link = sprintf('%s?submit=add',$sphere->modify->get_scriptname());
 		$tr = $this->addTFOOT()->addTR();
 		if($colspan > 1):
 			$tr->addTH(['class' => 'lcenl','colspan' => $colspan - 1]);
