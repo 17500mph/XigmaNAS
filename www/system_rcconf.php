@@ -38,7 +38,7 @@ require_once 'co_sphere.php';
 function system_rcconf_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('system_rcconf','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('rcconf');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);
@@ -98,7 +98,7 @@ if($_POST):
 		if($retval == 0):
 			updatenotify_delete($sphere->notifier());
 		endif;
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	if(isset($_POST['submit'])):
@@ -123,7 +123,7 @@ if($_POST):
 						endswitch;
 					endif;
 				endforeach;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.disable':
@@ -145,7 +145,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.enable':
@@ -167,7 +167,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.toggle':
@@ -191,7 +191,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 		endswitch;
