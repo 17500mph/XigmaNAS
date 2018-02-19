@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-01-24 20:40+0000\n"
+"PO-Revision-Date: 2018-02-19 10:47+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
+"X-Launchpad-Export-Date: 2018-02-19 23:16+0000\n"
 "X-Generator: Launchpad (build 18553)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -251,6 +251,8 @@ msgstr "Ένα VLAN με την ετικέτα %s είναι ήδη καθορι
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Μια εργασία cron πρέπει να ρυθμιστεί για χρονοπρογραμματισμό του script "
+"/etc/capacitycheck.zfs."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -912,11 +914,17 @@ msgid ""
 "An alert email is sent when the capacity of a pool exceeds the critical "
 "threshold."
 msgstr ""
+"Μια ειδοποίηση μέσω μηνύματος ηλεκτρονικού ταχυδρομείου στέλνεται όταν το "
+"υπολοιπόμενος ελεύθερος χώρος στο pool υπερβεί το όριο που χαρακτηρίζεται ως "
+"κρίσιμο."
 
 msgid ""
 "An alert email is sent when the capacity of a pool exceeds the warning "
 "threshold."
 msgstr ""
+"Μια ειδοποίηση μέσω μηνύματος ηλεκτρονικού ταχυδρομείου στέλνεται όταν το "
+"υπολοιπόμενος ελεύθερος χώρος στο pool υπερβεί το όριο που χαρακτηρίζεται ως "
+"προειδοποιητικό."
 
 msgid "An empty field is default."
 msgstr "Η προεπιλογή είναι κενό πεδίο."
@@ -1022,7 +1030,7 @@ msgid "Asynchronous I/O"
 msgstr "Ασύγχρονο I/O"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Πρέπει να επιλεγεί τουλάχιστον ένας δίσκος."
 
 msgid "At least one interface must be selected."
 msgstr "Πρέπει να επιλέξετε τουλάχιστον μία διασύνδεση."
@@ -1561,13 +1569,13 @@ msgid "Capacity"
 msgstr "Χωρητικότητα"
 
 msgid "Capacity Alert Thresholds"
-msgstr ""
+msgstr "Όρια Ειδοποιήσεων Χώρου"
 
 msgid "Capacity Critical Threshold"
-msgstr ""
+msgstr "Όριο Κρίσιμου Χώρου"
 
 msgid "Capacity Warning Threshold"
-msgstr ""
+msgstr "Προειδοποιητικό Όριο Χώρου"
 
 msgid "Carp Settings"
 msgstr "Ρυθμίσεις carp"
@@ -1593,6 +1601,8 @@ msgid ""
 "Certificate revocation list (CRL) file for TLS, to check for revoked "
 "certificates."
 msgstr ""
+"Αρχείο λίστας ανάκλησης πιστοποιητικών (CRL) για το TLS, για έλεγχο για "
+"πιστοποιητικά που έχουν ανακληθεί."
 
 msgid "Change"
 msgstr "Τροποποίηση"
@@ -2178,38 +2188,44 @@ msgid "Create ZFS on a GPT partition."
 msgstr "Δημιουργία ZFS σε κατάτμηση GPT."
 
 msgid "Create a L2ARC device for ARC"
-msgstr ""
+msgstr "Δημιουργία συσκευής L2ARC για ARC"
 
 msgid "Create a SLOG device for ZIL"
-msgstr ""
+msgstr "Δημιουργία συσκευής SLOG για ZIL"
 
 msgid "Create a mirrored SLOG device for ZIL"
-msgstr ""
+msgstr "Δημιουργία μιας συσκευής mirrored SLOG για ZIL"
 
 msgid "Create a spare device"
-msgstr ""
+msgstr "Δημιουργία μιας συσκευής spare"
 
 msgid ""
 "Create a virtual device containing a single device or concatenated devices"
 msgstr ""
+"Δημιουργία μιας εικονικής συσκευής που περιέχει μόνο μια ή πολλές "
+"ενοποιημένες φυσικές συσκευές"
 
 msgid "Create a virtual device containing mirrored devices"
 msgstr ""
+"Δημιουργία μιας εικονικής συσκευής που περιέχει φυσικές συσκευές σε mirror"
 
 msgid "Create a virtual device which tolerates 2 device failures"
 msgstr ""
+"Δημιουργία μιας εικονικής συσκευής που αντέχει βλάβη 2 φυσικών συσκευών"
 
 msgid "Create a virtual device which tolerates 3 device failures"
 msgstr ""
+"Δημιουργία μιας εικονικής συσκευής που αντέχει βλάβη 3 φυσικών συσκευών"
 
 msgid "Create a virtual device which tolerates a single device failure"
 msgstr ""
+"Δημιουργία μιας εικονικής συσκευής που αντέχει βλάβη μίας φυσικής συσκευής"
 
 msgid "Create and initialize RAID."
 msgstr "Δημιουργία και αρχικοποίηση RAID."
 
 msgid "Create recursive snapshot."
-msgstr ""
+msgstr "Δημιουργία αναδρομικού snapshot."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Δημιουργία φακέλου εργασίας εάν δεν υπάρχει."
@@ -2942,6 +2958,8 @@ msgid ""
 "Display Used/Avail information from the filesystem instead of the Alloc/Free "
 "information from the pool."
 msgstr ""
+"Προβολή της πληροφορίας Σε χρήση/Διαθέσιμο από το σύστημα αρχείων αντί για "
+"την πληροφορία Κατανεμηνένο/Ελεύθερο από το pool."
 
 msgid "Display ZFS command history"
 msgstr "Εμφάνιση ιστορικότητας των εντολών ZFS"
@@ -3305,7 +3323,7 @@ msgid "Donate"
 msgstr "Δωρεά"
 
 msgid "Done!"
-msgstr ""
+msgstr "Ολοκληρώθηκε!"
 
 msgid "Done."
 msgstr "Ολοκληρώθηκε."
@@ -3625,7 +3643,7 @@ msgid "Enable authentication."
 msgstr "Ενεργοποίηση πιστοποίησης."
 
 msgid "Enable checks of the server certificate."
-msgstr ""
+msgstr "Ενεργοποίηση ελέγχων για το πιστοποιητικό του διακομιστή."
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Ενεργοποίηση συλλογής στατιστικών για τη συχνότητα του επεξεργαστή."
@@ -6112,10 +6130,10 @@ msgid "Must be a number between 5 and 1000."
 msgstr "Πρέπει να είναι ένας αριθμός μεταξύ 5 και 1000."
 
 msgid "Must be a number between 80 and 89."
-msgstr ""
+msgstr "Πρέπει να είναι ένα νούμερο μεταξύ 80 και 89."
 
 msgid "Must be a number between 90 and 95."
-msgstr ""
+msgstr "Πρέπει να είναι ένα νούμερο μεταξύ 90 και 95."
 
 msgid "Must choose one"
 msgstr "Πρέπει να επιλέξετε έναν"
@@ -6334,7 +6352,7 @@ msgid "No configured virtual devices."
 msgstr "Δεν υπάρχουν ρυθμισμένες εικονικές συσκευές."
 
 msgid "No dataset information available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμες πληροφορίες για dataset."
 
 msgid "No devices have been selected"
 msgstr "Δεν επιλέχθηκαν συσκευές"
@@ -6384,7 +6402,7 @@ msgid "No records found."
 msgstr "Δεν βρέθηκαν εγγραφές."
 
 msgid "No snapshot information available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμες πληροφορίες για snapshot."
 
 msgid "No softraid-formatted disks available."
 msgstr "Δεν υπάρχουν διαθέσιμοι δίσκοι με διαμόρφωση raid μέσω λογισμικού."
@@ -6402,7 +6420,7 @@ msgid "No virtual devices have been selected"
 msgstr "Δεν επιλέχθηκαν εικονικές συσκευές"
 
 msgid "No volume information available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμες πληροφορίες για τόμο."
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Κληρονόμηση μόνο των καταχωρήσεων απαγόρευσης"
@@ -7006,7 +7024,7 @@ msgid "Pool Devices"
 msgstr "Συσκευές Pool"
 
 msgid "Pool Information"
-msgstr ""
+msgstr "Πληροφορίες Pool"
 
 msgid "Pool Information & Status"
 msgstr "Πληροφορίες και Κατάσταση του Pool"
@@ -8164,11 +8182,17 @@ msgid ""
 "Cert File). The file must contain the private key of a certificate in PEM "
 "format."
 msgstr ""
+"Αποστολή ενός πιστοποιητικού πελάτη στο διακομιστή (να χρησιμοποιείται μαζί "
+"με την επιλογή Αρχείο TLS Cert). Το αρχείο πρέπει να περιέχει το ιδιωτικό "
+"κλειδί ενός πιστοποιητικού σε μορφή PEM."
 
 msgid ""
 "Send a client certificate to the server (use this together with option TLS "
 "Key File). The file must contain a certificate in PEM format."
 msgstr ""
+"Αποστολή ενός πιστοποιητικού πελάτη στο διακομιστή (να χρησιμοποιείται μαζί "
+"με την επιλογή Αρχείο Κλειδιού TLS). Το αρχείο πρέπει να περιέχει ένα "
+"πιστοποιητικό σε μορφή PEM."
 
 msgid "Send daemon event messages."
 msgstr "Αποστολή μηνυμάτων συμβάντων δαίμονα."
@@ -8281,7 +8305,7 @@ msgstr ""
 "Ορίστε τις τοποθεσίες περιεχομένου προς ή από τη βιβλιοθήκη πολυμέσων"
 
 msgid "Set the critical threshold to a value between 90 and 95."
-msgstr ""
+msgstr "Ορίστε το κρίσιμο όριο σε μια τιμή μεταξύ 90 και 95."
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
@@ -8289,7 +8313,7 @@ msgstr ""
 "SSID)."
 
 msgid "Set the fingerprint of a single certificate to accept for TLS."
-msgstr ""
+msgstr "Ορίστε το αποτύπωμα ενός πιστοποιητικού για αποδοχή από το TLS."
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8304,7 +8328,7 @@ msgstr ""
 "περιορισμούς στο εύρος της ρύθμισης."
 
 msgid "Set the warning threshold to a value between 80 and 89."
-msgstr ""
+msgstr "Ορίστε το όριο προειδοποίησης σε μια τιμή μεταξύ 80 και 89."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Ορισμός ταχύτητας κύλισης τίτλου μεταξύ 0 και 10 (προεπιλογή 10)"
@@ -8393,7 +8417,7 @@ msgid "Show UPS Information"
 msgstr "Προβολή πληροφοριών UPS"
 
 msgid "Show Used/Avail"
-msgstr ""
+msgstr "Προβολή Σε χρήση/Διαθέσιμο"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
@@ -8647,7 +8671,7 @@ msgid "Start"
 msgstr "Έναρξη"
 
 msgid "Start TLS from within the session."
-msgstr ""
+msgstr "Εκκίνηση TLS από μέσα από τη συνεδρία."
 
 msgid "Static"
 msgstr "Στατική"
@@ -8871,16 +8895,16 @@ msgid "TLS"
 msgstr "TLS"
 
 msgid "TLS CRL File"
-msgstr ""
+msgstr "Αρχείο TLS CRL"
 
 msgid "TLS Cert File"
-msgstr ""
+msgstr "Αρχείο TLS Cert"
 
 msgid "TLS Fingerprint"
-msgstr ""
+msgstr "Αποτύπωμα TLS"
 
 msgid "TLS Key File"
-msgstr ""
+msgstr "Αρχείο Κλειδιού TLS"
 
 msgid "TLS Only"
 msgstr "Μόνο TLS"
@@ -9384,6 +9408,8 @@ msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
+"Η προεπιλεγμένη θύρα του διακομιστή αλληλογραφίας SMTP, συνήθως θύρα 25 ή "
+"θύρα 587."
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9657,6 +9683,9 @@ msgid ""
 "The name of the TLS trust file. The file must be in PEM format containing "
 "one or more certificates of trusted Certification Authorities (CAs)."
 msgstr ""
+"Το όνοαμ του αρχείου TLS trust. Το αρχείο πρέπει να είναι σε μορφή PEM και "
+"να περιέχει ένα ή περισσότερα πιστοποιητικά από αξιόπιστες Αρχές "
+"Πιστοποίησης (CAs)."
 
 msgid "The name of the interface is wrong."
 msgstr "Το όνομα της διασύνδεσης είναι λάθος."
@@ -10636,7 +10665,7 @@ msgstr ""
 
 #, php-format
 msgid "Total: %s | %s: %s | %s: %s | State: %s"
-msgstr ""
+msgstr "Σύνολο: %s | %s: %s | %s: %s | Κατάσταση: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10810,7 +10839,7 @@ msgid "UPS goes on battery"
 msgstr "Το UPS λειτουργεί με μπαταρία"
 
 msgid "UPS is disabled."
-msgstr ""
+msgstr "Το UPS είναι απενεργοποιημένο."
 
 msgid "UPS model"
 msgstr "Μοντέλο του UPS"
@@ -10974,7 +11003,7 @@ msgstr ""
 "δικτύου."
 
 msgid "Use Default TLS Trust File"
-msgstr ""
+msgstr "Χρήση προεπιλεγμένου αρχείου TLS Trust"
 
 msgid "Use Encryption"
 msgstr "Χρήση Κρυπτογράφησης"
@@ -10998,6 +11027,7 @@ msgstr "Χρήση ως sparse volume (thin provisioning)."
 
 msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
 msgstr ""
+"Χρήση του προεπιλεγμένου αρχείου TLS trust /usr/local/etc/ssl/cert.pem."
 
 msgid "Use different container as root of the tree."
 msgstr "Χρήση διαφορετικού container σαν ρίζα του δέντρου."
@@ -11634,13 +11664,13 @@ msgid "ZFS Pool I/O Statistics"
 msgstr "Στατιστικά I/O του ZFS Pool"
 
 msgid "ZFS Pool Properties"
-msgstr ""
+msgstr "Ιδιότητες ZFS Pool"
 
 msgid "ZFS Pool Tools"
 msgstr "Εργαλεία ZFS Pool"
 
 msgid "ZFS Settings"
-msgstr ""
+msgstr "Ρυθμίσεις ZFS"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Πληροφορίες και Κατάσταση στιγμιότυπου ZFS"
@@ -11675,7 +11705,7 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "allocated of"
-msgstr ""
+msgstr "κατανεμημένα από"
 
 msgid "and"
 msgstr "και"
@@ -11707,7 +11737,7 @@ msgid "filechooser"
 msgstr "ΕπιλογέαςΑρχείων"
 
 msgid "free of"
-msgstr ""
+msgstr "ελεύθερα από"
 
 msgid "get target info failed."
 msgstr "αποτυχία λήψης πληροφοριών προορισμού."
