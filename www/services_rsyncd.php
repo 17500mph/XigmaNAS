@@ -143,7 +143,7 @@ switch($page_action):
 			$retval |= rc_update_service('rsyncd');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		else:
 			$mode_page = PAGE_MODE_EDIT;
@@ -160,7 +160,7 @@ switch($page_action):
 			$retval |= rc_update_service('rsyncd');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
@@ -234,7 +234,7 @@ endswitch;
 		<li class="tabinact"><a href="services_rsyncd_module.php"><span><?=gtext('Modules');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
