@@ -164,12 +164,32 @@ class co_sphere_level2 extends co_sphere_level1 { // for row and grid
 		endif;
 		return $this->_notifier ?? false;
 	}
+	public function set_notifier(string $notifier = NULL) {
+		if(isset($notifier)):
+			$this->_notifier = $notifier;
+			$this->_notifier_processor = $notifier . '_process_updatenotification';
+		else:
+			$this->_notifier = $notifier;
+			$this->_notifier_processor = '_process_updatenotification';
+		endif;
+		return $this->get_notifier();
+	}
+	public function get_notifier() {
+		return $this->_notifier ?? false;
+	}
 	public function row_identifier(string $row_identifier = NULL) {
 		if(isset($row_identifier)):
 			if(1 === preg_match('/^[a-z]+$/',$row_identifier)):
 				$this->_row_identifier = $row_identifier;
 			endif;
 		endif;
+		return $this->_row_identifier ?? false;
+	}
+	public function set_row_identifier(string $row_identifier = NULL) {
+		$this->_row_identifier = $row_identifier;
+		return $this->get_row_identifier();
+	}
+	public function get_row_identifier() {
 		return $this->_row_identifier ?? false;
 	}
 	public function get_row_identifier_value() {
@@ -276,7 +296,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$this->inform = new co_sphere_scriptname($basename,$extension);
 	}
 //	methods
-	public function notifier_processor() {
+	public function get_notifier_processor() {
 		return $this->_notifier_processor ?? false;
 	}
 	public function toggle() {
@@ -600,7 +620,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$o_td = $root->addTD();
 		if($notdirty && $notprotected):
 			//	record is editable
-			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+			$link = sprintf('%s?submit=edit&%s=%s',$this->modify->get_scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
 			$img_attributes = [
 				'src' => $g_img['mod'],
 				'title' => $this->sym_mod(),
@@ -634,7 +654,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_maintainbox() {
 		global $g_img;
 
-		$link = sprintf('%s?%s=%s',$this->maintain->scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+		$link = sprintf('%s?%s=%s',$this->maintain->get_scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
 		$img_attributes = [
 			'src' => $g_img['mai'],
 			'title' => $this->sym_mai(),
@@ -651,7 +671,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public function html_informbox() {
 		global $g_img;
 
-		$link = sprintf('%s?%s=%s',$this->inform->scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
+		$link = sprintf('%s?%s=%s',$this->inform->get_scriptname(),$this->row_identifier(),$this->get_row_identifier_value());
 		$img_attributes = [
 			'src' => $g_img['inf'],
 			'title' => $this->sym_inf(),
@@ -683,7 +703,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			'alt' => $this->sym_add(),
 			'class' => 'spin oneemhigh'
 		];
-		$link = sprintf('%s?submit=add',$this->modify->scriptname());
+		$link = sprintf('%s?submit=add',$this->modify->get_scriptname());
 		$root = new co_DOMDocument();
 		$o_tr = $root->addTR();
 		if($colspan > 1):
