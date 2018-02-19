@@ -41,7 +41,7 @@ function get_sphere_smartmontools_umass() {
 	
 //	sphere structure
 	$sphere = new co_sphere_grid('smartmontools_umass','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('smartmontools_umass');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);
@@ -123,7 +123,7 @@ switch($method):
 				if($retval == 0):
 					updatenotify_delete($sphere->notifier());
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 			case $sphere->get_cbm_button_val_enable():
 				$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
@@ -144,7 +144,7 @@ switch($method):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_disable():
@@ -166,7 +166,7 @@ switch($method):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_toggle():
@@ -190,7 +190,7 @@ switch($method):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_delete():
@@ -213,7 +213,7 @@ switch($method):
 						endswitch;
 					endif;
 				endforeach;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 		endswitch;
@@ -273,50 +273,62 @@ if($record_exists):
 			ins_cbm_checkbox_toggle($sphere)->
 		pop()->
 		insTHwC('lhell',$property->name->get_title())->
-		insTHwC('lhell',$property->type->get_Title())->
+		insTHwC('lhell',$property->type->get_title())->
 		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
-		insTHwC('lhell',$property->description->get_Title())->
+		insTHwC('lhell',$property->description->get_title())->
 		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
 else:
 	$tr->
 		insTHwC('lhelc')->
 		insTHwC('lhell',$property->name->get_title())->
-		insTHwC('lhell',$property->type->get_Title())->
+		insTHwC('lhell',$property->type->get_title())->
 		insTHwC('lhelc',gtext('Status'))->
-		insTHwC('lhell',$property->description->get_Title())->
+		insTHwC('lhell',$property->description->get_title())->
 		insTHwC('lhebl',gtext('Toolbox'));
 endif;
 $tbody = $table->addTBODY();
 if($record_exists):
+	$gt_enabled = gtext('Enabled');
+	$gt_disabled = gtext('Disabled');
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 		$is_enabled = $sphere->enadis() ? isset($sphere->row[$property->enable->get_name()]) : true;
 		$is_notprotected = $sphere->lock() ? !$sphere->row[$property->protected->get_name()] : true;
-		$src = ($is_enabled) ? $g_img['ena'] : $g_img['dis'];
-		$title = ($is_enabled) ? gtext('Enabled') : gtext('Disabled');
+		if($is_enabled):
+			$src = $g_img['ena'];
+			$title = $gt_enabled;
+			$dc = '';
+		else:
+			$src = $g_img['dis'];
+			$title = $gt_disabled;
+			$dc = 'd';
+		endif;
 		$tbody->
 			addTR()->
 				push()->
-				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
+				addTDwC('lcelc' . $dc)->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''))->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->type->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$property->type->get_name()] ?? ''))->
 				push()->
-				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
-					addA(['title' => $title])->insIMG(['src' => $src,'alt' => ''])->
+				addTDwC('lcelc' . $dc)->
+					addA(['title' => $title])->
+						insIMG(['src' => $src,'alt' => ''])->
 				pop()->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->description->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$property->description->get_name()] ?? ''))->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					insTD()->
 					insTD();
 	endforeach;
 else:
-	$tbody->addTR()->addTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
+	$tbody->addTR()->insTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
 endif;
 $table->ins_footerwa($sphere,$n_col_width);
-$document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
+$document->
+	add_area_buttons()->
+		ins_cbm_button_enadis($sphere)->
+		ins_cbm_button_delete($sphere);
 $document->render();
-?>

@@ -41,7 +41,7 @@ function get_sphere_smartmontools_umass_edit() {
 	
 //	sphere structure
 	$sphere = new co_sphere_grid('smartmontools_umass_edit','php');
-	$sphere->parent->basename('smartmontools_umass');
+	$sphere->parent->set_basename('smartmontools_umass');
 	$sphere->notifier('smartmontools_umass');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(true);
@@ -120,7 +120,7 @@ endswitch;
  *	exit if $sphere->row[$sphere->row_identifier()] is NULL
  */
 if(is_null($sphere->get_row_identifier_value())):
-	header($sphere->parent->header());
+	header($sphere->parent->get_location());
 	exit;
 endif;
 /*
@@ -156,7 +156,7 @@ else: // record found in configuration
 	endif;
 endif;
 if(RECORD_ERROR === $record_mode): // oops, something went wrong
-	header($sphere->parent->header());
+	header($sphere->parent->get_location());
 	exit;
 endif;
 $isrecordnew = (RECORD_NEW === $record_mode);
@@ -204,7 +204,7 @@ switch($page_mode):
 				endif;
 			endif;
 			write_config();
-			header($sphere->parent->header()); // cleanup
+			header($sphere->parent->get_location()); // cleanup
 			exit;
 		endif;
 		break;
