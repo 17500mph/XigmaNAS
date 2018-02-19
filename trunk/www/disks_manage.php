@@ -46,7 +46,7 @@ function device_process_updatenotification($mode, $data) {
 			break;
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 		case UPDATENOTIFY_MODE_DIRTY:
-			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
 				unset($sphere->grid[$sphere->row_id]);
 				write_config();
 			endif;
@@ -58,8 +58,8 @@ function disks_manage_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_manage','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
-	$sphere->notifier('device');
-	$sphere->row_identifier('uuid');
+	$sphere->set_notifier('device');
+	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add Disk'));
@@ -80,7 +80,7 @@ if($_POST) {
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 		if(!file_exists($d_sysrebootreqd_path)):
-			$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+			$retval |= updatenotify_process($sphere->get_notifier(),$sphere->get_notifier_processor());
 			config_lock();
 			$retval |= rc_update_service('ataidle');
 			$retval |= rc_update_service('smartd');
@@ -88,7 +88,7 @@ if($_POST) {
 		endif;
 		$savemsg = get_std_save_message($retval);
 		if($retval == 0):
-			updatenotify_delete($sphere->notifier());
+			updatenotify_delete($sphere->get_notifier());
 		endif;
 		header($sphere->get_location());
 		exit;
@@ -138,19 +138,19 @@ if($_POST) {
 			case 'rows.delete':
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
-						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
+						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 						switch ($mode_updatenotify):
 							case UPDATENOTIFY_MODE_NEW:  
-								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
 							case UPDATENOTIFY_MODE_MODIFIED:
-								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
 							case UPDATENOTIFY_MODE_UNKNOWN:
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
 						endswitch;
 					endif;
@@ -193,7 +193,7 @@ $(window).on("load", function() {
 		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext('iSCSI Initiator');?></span></a></li>
   	</ul></td></tr>
 </tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
@@ -244,7 +244,7 @@ $(window).on("load", function() {
 		<tbody>
 <?php
 			foreach ($sphere->grid as $sphere->row):
-				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
+				$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
