@@ -48,7 +48,7 @@ function services_nfs_get_sphere() {
 	if(empty($sphere->grid)):
 		$sphere->grid = $sphere->row_default;
 		write_config();
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	array_make_branch($config,'nfsd','share');
@@ -151,7 +151,7 @@ switch($page_action):
 			$retval |= rc_update_service('lockd');   // !!! order
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		else:
 			$mode_page = PAGE_MODE_EDIT;
@@ -179,7 +179,7 @@ switch($page_action):
 			$retval |= rc_update_service('lockd');   // !!! order
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
@@ -236,11 +236,11 @@ endswitch;
 ?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Settings');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere->get_scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Settings');?></span></a></li>
 		<li class="tabinact"><a href="services_nfs_share.php"><span><?=gtext('Shares');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
