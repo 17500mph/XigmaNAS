@@ -49,13 +49,13 @@ function zfspool_process_updatenotification($mode,$data) {
 			$retval |= zfs_zpool_properties($data);
 			break;
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
 				unset($sphere->grid[$sphere->row_id]);
 				write_config();
 			endif;
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
 				$retval |= zfs_zpool_destroy($data);
 				if($retval === 0):
 					unset($sphere->grid[$sphere->row_id]);
@@ -74,8 +74,8 @@ function disks_zfs_zpool_get_sphere() {
 	$sphere = new co_sphere_grid('disks_zfs_zpool','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->inform->set_basename($sphere->get_basename() . '_info');
-	$sphere->notifier('zfspool');
-	$sphere->row_identifier('uuid');
+	$sphere->set_notifier('zfspool');
+	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add Pool'));
@@ -99,10 +99,10 @@ if($_POST):
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 //		if(!file_exists($d_sysrebootreqd_path)):
-			$retval |= updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+			$retval |= updatenotify_process($sphere->get_notifier(),$sphere->get_notifier_processor());
 			$savemsg = get_std_save_message($retval);
 			if($retval == 0):
-				updatenotify_delete($sphere->notifier());
+				updatenotify_delete($sphere->get_notifier());
 			endif;
 			header($sphere->get_location());
 			exit;
@@ -113,19 +113,19 @@ if($_POST):
 			case 'rows.delete':
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
-						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
+						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 						switch($mode_updatenotify):
 							case UPDATENOTIFY_MODE_NEW:
-								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
 							case UPDATENOTIFY_MODE_MODIFIED:
-								updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
 							case UPDATENOTIFY_MODE_UNKNOWN:
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
 						endswitch;
 					endif;
@@ -161,7 +161,7 @@ $document->
 			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
 $document->render();
 ?>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
@@ -169,7 +169,7 @@ $document->render();
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
-	if(updatenotify_exists($sphere->notifier())):
+	if(updatenotify_exists($sphere->get_notifier())):
 		print_config_change_box();
 	endif;
 ?>
@@ -220,7 +220,7 @@ $document->render();
 <?php
 			$use_si = is_sidisksizevalues();
 			foreach($sphere->grid as $sphere->row):
-				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
+				$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
