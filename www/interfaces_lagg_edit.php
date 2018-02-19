@@ -38,7 +38,7 @@ require_once 'co_sphere.php';
 function interfaces_lagg_edit_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_row('interfaces_lagg_edit','php');
-	$sphere->row_identifier('uuid');
+	$sphere->set_row_identifier('uuid');
 	$sphere->parent->set_basename('interfaces_lagg','php');
 	$sphere->row_default = [
 		'enable' => true,
@@ -70,11 +70,11 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 			exit;
 			break;
 		case 'clone':
-			$sphere->row[$sphere->row_identifier()] = uuid();
+			$sphere->row[$sphere->get_row_identifier()] = uuid();
 			$mode_page = PAGE_MODE_CLONE;
 			break;
 		case 'save':
-			$id = filter_input(INPUT_POST,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+			$id = filter_input(INPUT_POST,$sphere->get_row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 			if(false === $id):
 				header($sphere->parent->get_location());
 				exit;
@@ -83,7 +83,7 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 				header($sphere->parent->get_location());
 				exit;
 			endif;
-			$sphere->row[$sphere->row_identifier()] = $id;
+			$sphere->row[$sphere->get_row_identifier()] = $id;
 			$mode_page = PAGE_MODE_POST;
 			break;
 		default:
@@ -94,11 +94,11 @@ if(false !== ($action = filter_input(INPUT_POST,'submit',FILTER_UNSAFE_RAW,['fla
 elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]))):
 	switch($action):
 		case 'add':
-			$sphere->row[$sphere->row_identifier()] = uuid();
+			$sphere->row[$sphere->get_row_identifier()] = uuid();
 			$mode_page = PAGE_MODE_ADD;
 			break;
 		case 'edit':
-			$id = filter_input(INPUT_GET,$sphere->row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
+			$id = filter_input(INPUT_GET,$sphere->get_row_identifier(),FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => false]]);
 			if(false === $id):
 				header($sphere->parent->get_location());
 				exit;
@@ -107,7 +107,7 @@ elseif(false !== ($action = filter_input(INPUT_GET,'submit',FILTER_UNSAFE_RAW,['
 				header($sphere->parent->get_location());
 				exit;
 			endif;
-			$sphere->row[$sphere->row_identifier()] = $id;
+			$sphere->row[$sphere->get_row_identifier()] = $id;
 			$mode_page = PAGE_MODE_EDIT;
 			break;
 		default:
@@ -119,7 +119,7 @@ else:
 	header($sphere->parent->get_location());
 	exit;
 endif;
-$sphere->row_id = array_search_ex($sphere->row[$sphere->row_identifier()],$sphere->grid,$sphere->row_identifier());
+$sphere->row_id = array_search_ex($sphere->row[$sphere->get_row_identifier()],$sphere->grid,$sphere->get_row_identifier());
 $isrecordnew = (false === $sphere->row_id);
 switch($mode_page):
 	case PAGE_MODE_ADD:
@@ -299,7 +299,7 @@ $sphere->doj();
 ?>
 		<input name="enable" type="hidden" value="<?=$sphere->row['enable'];?>"/>
 		<input name="if" type="hidden" value="<?=$sphere->row['if'];?>"/>
-		<input name="<?=$sphere->row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->row_identifier()];?>"/>
+		<input name="<?=$sphere->get_row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->get_row_identifier()];?>"/>
 	</div>
 <?php
 	include 'formend.inc';
@@ -307,4 +307,3 @@ $sphere->doj();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
