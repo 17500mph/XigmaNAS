@@ -44,13 +44,13 @@ function geli_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
 				unset($sphere->grid[$sphere->row_id]);
 				write_config();
 			endif;
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->row_identifier()))):
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
 				//	Kill encrypted volume.
 				disks_geli_kill($sphere->grid[$sphere->row_id]['devicespecialfile']);
 				//	Reset disk file system type attribute ('fstype') in configuration.
@@ -66,8 +66,8 @@ function disks_crypt_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('disks_crypt','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
-	$sphere->notifier('geli');
-	$sphere->row_identifier('uuid');
+	$sphere->set_notifier('geli');
+	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add Encrypted Volume'));
@@ -88,11 +88,11 @@ if($_POST):
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
 		if(!file_exists($d_sysrebootreqd_path)):
-			$retval = updatenotify_process($sphere->notifier(),$sphere->notifier_processor());
+			$retval = updatenotify_process($sphere->get_notifier(),$sphere->get_notifier_processor());
 		endif;
 		$savemsg = get_std_save_message($retval);
 		if($retval == 0):
-			updatenotify_delete($sphere->notifier());
+			updatenotify_delete($sphere->get_notifier());
 		endif;
 		header($sphere->get_location());
 		exit;
@@ -131,21 +131,21 @@ if($_POST):
 			case 'rows.delete':
 				$sphere->cbm_array = $_POST[$sphere->cbm_name] ?? [];
 				foreach($sphere->cbm_array as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 						//	disks_exists: 0 = yes, 1 = no
 						if(disks_exists($sphere->grid[$sphere->row_id]['devicespecialfile'])):
-							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 							switch ($mode_updatenotify):
 								case UPDATENOTIFY_MODE_NEW:  
-									updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
-									updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+									updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
+									updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 									break;
 								case UPDATENOTIFY_MODE_MODIFIED:
-									updatenotify_clear($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
-									updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+									updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
+									updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 									break;
 								case UPDATENOTIFY_MODE_UNKNOWN:
-									updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+									updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 									break;
 							endswitch;
 						endif;
@@ -163,9 +163,9 @@ if($_POST):
 						if(isset($sphere->grid[$sphere->row_id]['enable'])):
 							unset($sphere->grid[$sphere->row_id]['enable']);
 							$updateconfig = true;
-							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							$mode_updatenotify = updatenotify_get_mode($sphere->set_notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 							endif;
 						endif;
 					endif;
@@ -185,9 +185,9 @@ if($_POST):
 						if(!(isset($sphere->grid[$sphere->row_id]['enable']))):
 							$sphere->grid[$sphere->row_id]['enable'] = true;
 							$updateconfig = true;
-							$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-								updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 							endif;
 						endif;
 					endif;
@@ -210,9 +210,9 @@ if($_POST):
 							$sphere->grid[$sphere->row_id]['enable'] = true;					
 						endif;
 						$updateconfig = true;
-						$mode_updatenotify = updatenotify_get_mode($sphere->notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 						if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-							updatenotify_set($sphere->notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
+							updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->row_identifier()]);
 						endif;
 					endif;
 				endforeach;
@@ -248,7 +248,7 @@ echo $sphere->doj();
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
-	if(updatenotify_exists($sphere->notifier())):
+	if(updatenotify_exists($sphere->get_notifier())):
 		print_config_change_box();
 	endif;
 	if(!empty($input_errors)):
@@ -280,7 +280,7 @@ echo $sphere->doj();
 		<tbody>
 <?php
 			foreach($sphere->grid as $sphere->row):
-				$notificationmode = updatenotify_get_mode($sphere->notifier(),$sphere->row[$sphere->row_identifier()]);
+				$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
 				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
 				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
