@@ -54,7 +54,7 @@ function interfaces_lagg_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('interfaces_lagg','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
-	$sphere->row_identifier('uuid');
+	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add LAGG'));
@@ -76,7 +76,7 @@ if($_POST):
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 						$sphere->row = $sphere->grid[$sphere->record_id];
 						//	Check if interface is still in use.
 						if(lagg_inuse($sphere->row['if'])):
@@ -238,4 +238,3 @@ echo $sphere->doj();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
