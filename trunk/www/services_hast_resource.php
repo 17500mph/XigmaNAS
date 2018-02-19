@@ -56,7 +56,7 @@ function hastresource_process_updatenotification($mode,$data) {
 function services_hast_resource_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('services_hast_resource','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('hastresource');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
@@ -108,7 +108,7 @@ if($_POST):
 						endswitch;
 					endif;
 				endforeach;
-//				header($sphere->header());
+//				header($sphere->get_location());
 //				exit;
 				break;
 			case 'rows.disable':
@@ -130,7 +130,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.enable':
@@ -152,7 +152,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 			case 'rows.toggle':
@@ -176,7 +176,7 @@ if($_POST):
 					write_config();
 					$updateconfig = false;
 				endif;
-				header($sphere->header());
+				header($sphere->get_location());
 				exit;
 				break;
 		endswitch;
@@ -193,11 +193,11 @@ echo $sphere->doj();
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="services_hast.php"><span><?=gtext('Settings');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Resources');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere->get_scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Resources');?></span></a></li>
 		<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext('Information');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
