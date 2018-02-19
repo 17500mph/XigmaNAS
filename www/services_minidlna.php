@@ -57,7 +57,7 @@ function services_minidlna_get_sphere() {
 	if(empty($sphere->grid)):
 		$sphere->grid = $sphere->row_default;
 		write_config();
-		header($sphere->header());
+		header($sphere->get_location());
 		exit;
 	endif;
 	array_make_branch($config,'minidlna','content');
@@ -236,7 +236,7 @@ switch($page_action):
 			$retval = $retval << 1;
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		else:
 			$mode_page = PAGE_MODE_EDIT;
@@ -253,7 +253,7 @@ switch($page_action):
 			$retval |= rc_update_service('minidlna');
 			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-			header($sphere->header());
+			header($sphere->get_location());
 			exit;
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
@@ -370,7 +370,7 @@ endswitch;
 		<li class="tabact"><a href="services_minidlna.php"><span><?=gtext('MiniDLNA');?></span></a></li>
 	</ul>
 </td></tr></tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php 
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
