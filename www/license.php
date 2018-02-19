@@ -206,7 +206,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['iperf3',[
 			'A tool to measure TCP and UDP bandwidth. (<a href="http://software.es.net/iperf/" target="_blank">http://software.es.net/iperf</a>).',
-			'Copyright © 2014-2017 ESnet. All Rights Reserved.'
+			'Copyright © 2014-2018 ESnet. All Rights Reserved.'
 		]],
 		['ipmitool',[
 			'IPMItool provides a simple command-line interface to v1.5 & v2.0 IPMI-enabled devices. (<a href="http://sourceforge.net/projects/ipmitool/" target="_blank">http://sourceforge.net/projects/ipmitool</a>).',
@@ -278,7 +278,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['phpVirtualBox',[
 			'phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox</a>).',
-			'Copyright © 2011-2017 Ian Moore, Inc. All Rights Reserved.'
+			'Copyright © 2011-2018 Ian Moore, Inc. All Rights Reserved.'
 		]],
 		['ProFTPD',[
 			'A highly configurable FTP server (<a href="http://www.proftpd.org" target="_blank">http://www.proftpd.org</a>).',
