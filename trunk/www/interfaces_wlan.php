@@ -53,7 +53,7 @@ function wlan_inuse($ifn) {
 function interfaces_wlan_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('interfaces_wlan','php');
-	$sphere->modify->basename($sphere->basename() . '_edit');
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->notifier('ifwlan');
 	$sphere->row_identifier('uuid');
 	$sphere->enadis(false);
@@ -93,7 +93,7 @@ if($_POST):
 				if($updateconfig):
 					write_config();
 					touch($d_sysrebootreqd_path);
-					header($sphere->header());
+					header($sphere->get_location());
 					exit;
 				endif;
 				break;
@@ -103,18 +103,20 @@ endif;
 $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('WLAN')];
 include 'fbegin.inc';
 echo $sphere->doj();
+//	add tab navigation
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			ins_tabnav_record('interfaces_assign.php',gtext('Management'))->
+			ins_tabnav_record('interfaces_wlan.php',gtext('WLAN'),gtext('Reload page'),true)->
+			ins_tabnav_record('interfaces_vlan.php',gtext('VLAN'))->
+			ins_tabnav_record('interfaces_lagg.php',gtext('LAGG'))->
+			ins_tabnav_record('interfaces_bridge.php',gtext('Bridge'))->
+			ins_tabnav_record('interfaces_carp.php',gtext('CARP'));
+$document->render();
 ?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere->scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('WLAN');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext('VLAN');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext('LAGG');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext('Bridge');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext('CARP');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
-<form action="<?=$sphere->scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
+<form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
