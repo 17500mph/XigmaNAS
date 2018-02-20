@@ -339,7 +339,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['Transmission',[
 			'A fast, easy, and free multi-platform BitTorrent client (<a href="http://www.transmissionbt.com" target="_blank">http://www.transmissionbt.com</a>).',
-			'Copyright © 2008-2017 Transmission Project. All Rights Reserved.'
+			'Copyright © 2008-2018 Transmission Project. All Rights Reserved.'
 		]],
 		['VirtualBox',[
 			'Open Source Edition (OSE) & (Guest Additions) (<a href="http://www.virtualbox.org" target="_blank">http://www.virtualbox.org</a>).',
