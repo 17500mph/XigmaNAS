@@ -2282,7 +2282,8 @@ EOJ;
  *	</td>
  */
 		if($notdirty && $notprotected): // record is editable
-			$link = sprintf('%s?submit=edit&%s=%s',$sphere->modify->get_scriptname(),$sphere->get_row_identifier(),$sphere->get_row_identifier_value());
+			$querystring = http_build_query(['submit' => 'edit',$sphere->get_row_identifier() => $sphere->get_row_identifier_value()],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
+			$link = sprintf('%s?%s',$sphere->modify->get_scriptname(),$querystring);
 			$this->addTD()->
 				addA(['href' => $link])->
 					insIMG(['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin','class' => 'oneemhigh']);
@@ -2292,6 +2293,37 @@ EOJ;
 		else: // record is protected
 			$this->addTD()->
 				insIMG(['src' => $g_img['loc'],'title' => $sphere->sym_loc(),'alt' => $sphere->sym_loc(),'class' => 'oneemhigh']);
+		endif;
+		return $this;
+	}
+	public function ins_maintainbox($sphere, bool $show_link = false) {
+		global $g_img;
+/*
+ *	<td>
+ *		<a href="scriptname_maintain.php?submit=maintain&uuid=12345678-1234-1234-1234-1234567890AB"><img="images/maintain.png" title="Maintenance" alt="Maintenance" class="spin oneemhigh"/></a>
+ *	</td>
+ */
+		$td = $this->addTD();
+		if($show_link): // show link
+			$querystring = http_build_query(['submit' => 'maintain',$sphere->get_row_identifier() => $sphere->get_row_identifier_value()],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
+			$link = sprintf('%s?%s',$sphere->maintain->get_scriptname(),$querystring);
+			$td->addA(['href' => $link])->insIMG(['src' => $g_img['mai'],'title' => $sphere->sym_mai(),'alt' => $sphere->sym_mai(),'class' => 'spin','class' => 'oneemhigh']);
+		endif;
+		return $this;
+		
+	}
+	public function ins_informbox($sphere, bool $show_link = false) {
+		global $g_img;
+/*
+ *	<td>
+ *		<a href="scriptname_inform.php?submit=inform&uuid=12345678-1234-1234-1234-1234567890AB"><img="images/info.png" title="Information" alt="Information" class="spin oneemhigh"/></a>
+ *	</td>
+ */
+		$td = $this->addTD();
+		if($show_link): // show link
+			$querystring = http_build_query(['submit' => 'inform',$sphere->get_row_identifier() => $sphere->get_row_identifier_value()],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
+			$link = sprintf('%s?%s',$sphere->inform->get_scriptname(),$querystring);
+			$td->addA(['href' => $link])->insIMG(['src' => $g_img['inf'],'title' => $sphere->sym_inf(),'alt' => $sphere->sym_inf(),'class' => 'spin','class' => 'oneemhigh']);
 		endif;
 		return $this;
 	}
