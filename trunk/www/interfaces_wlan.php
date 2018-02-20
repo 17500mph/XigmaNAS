@@ -54,8 +54,8 @@ function interfaces_wlan_get_sphere() {
 	global $config;
 	$sphere = new co_sphere_grid('interfaces_wlan','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
-	$sphere->notifier('ifwlan');
-	$sphere->row_identifier('uuid');
+	$sphere->set_notifier('ifwlan');
+	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
 	$sphere->sym_add(gtext('Add WLAN'));
@@ -77,7 +77,7 @@ if($_POST):
 				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->row_identifier()))):
+					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 						$sphere->row = $sphere->grid[$sphere->record_id];
 						//	Check if interface is still in use.
 						if(wlan_inuse($sphere->row['if'])):
@@ -205,4 +205,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
