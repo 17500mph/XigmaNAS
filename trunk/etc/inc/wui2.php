@@ -2286,7 +2286,7 @@ EOJ;
 			$link = sprintf('%s?%s',$sphere->modify->get_scriptname(),$querystring);
 			$this->addTD()->
 				addA(['href' => $link])->
-					insIMG(['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin','class' => 'oneemhigh']);
+					insIMG(['src' => $g_img['mod'],'title' => $sphere->sym_mod(),'alt' => $sphere->sym_mod(),'class' => 'spin oneemhigh']);
 		elseif($notprotected): //record is dirty
 			$this->addTD()->
 				insIMG(['src' => $g_img['del'],'title' => $sphere->sym_del(),'alt' => $sphere->sym_del(),'class' => 'oneemhigh']);
@@ -2307,7 +2307,7 @@ EOJ;
 		if($show_link): // show link
 			$querystring = http_build_query(['submit' => 'maintain',$sphere->get_row_identifier() => $sphere->get_row_identifier_value()],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
 			$link = sprintf('%s?%s',$sphere->maintain->get_scriptname(),$querystring);
-			$td->addA(['href' => $link])->insIMG(['src' => $g_img['mai'],'title' => $sphere->sym_mai(),'alt' => $sphere->sym_mai(),'class' => 'spin','class' => 'oneemhigh']);
+			$td->addA(['href' => $link])->insIMG(['src' => $g_img['mai'],'title' => $sphere->sym_mai(),'alt' => $sphere->sym_mai(),'class' => 'spin oneemhigh']);
 		endif;
 		return $this;
 		
@@ -2323,26 +2323,24 @@ EOJ;
 		if($show_link): // show link
 			$querystring = http_build_query(['submit' => 'inform',$sphere->get_row_identifier() => $sphere->get_row_identifier_value()],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
 			$link = sprintf('%s?%s',$sphere->inform->get_scriptname(),$querystring);
-			$td->addA(['href' => $link])->insIMG(['src' => $g_img['inf'],'title' => $sphere->sym_inf(),'alt' => $sphere->sym_inf(),'class' => 'spin','class' => 'oneemhigh']);
+			$td->addA(['href' => $link])->insIMG(['src' => $g_img['inf'],'title' => $sphere->sym_inf(),'alt' => $sphere->sym_inf(),'class' => 'spin oneemhigh']);
 		endif;
 		return $this;
 	}
-	public function ins_footerwa($sphere,int $colspan = 2) {
+	public function ins_record_add($sphere,int $colspan = 0) {
 		global $g_img;
 /*
- *	<tfoot>
- *		<tr>
- *			<th class="lcenl" colspan="1"></th>
- *			<th class="lceadd">
- *				<a href="scriptname_edit.php?submit=add">
- *					<img src="images/add.png" title="Add Record" alt="Add Record" class="spin"/>
- *				</a>
- *			</th>
- *		</tr>
- *	</tfoot>
+ *	<tr>
+ *		<th class="lcenl" colspan="1"></th>
+ *		<th class="lceadd">
+ *			<a href="scriptname_edit.php?submit=add">
+ *				<img src="images/add.png" title="Add Record" alt="Add Record" class="spin oneemhigh"/>
+ *			</a>
+ *		</th>
+ *	</tr>
  */
 		$link = sprintf('%s?submit=add',$sphere->modify->get_scriptname());
-		$tr = $this->addTFOOT()->addTR();
+		$tr = $this->addTR();
 		if($colspan > 1):
 			$tr->addTH(['class' => 'lcenl','colspan' => $colspan - 1]);
 		endif;
@@ -2352,12 +2350,15 @@ EOJ;
 					insIMG(['src' => $g_img['add'],'title' => $sphere->sym_add(),'alt' => $sphere->sym_add(),'class' => 'spin oneemhigh']);
 		return $this;
 	}
-	public function ins_no_records_found(int $colspan = 0) {
+	public function ins_no_records_found(int $colspan = 0,string $message = NULL) {
+		if(is_null($message)):
+			$message = gtext('No records found.');
+		endif;
 		$td_attributes = ['class' => 'lcebl'];
 		if($colspan > 0):
 			$td_attributes['colspan'] = $colspan;
 		endif;
-		$this->addTR()->addTD($td_attributes,gtext('No records found.'));
+		$this->addTR()->addTD($td_attributes,$message);
 		return $this;
 	}
 	public function ins_cbm_button_delete($sphere) {
@@ -2730,7 +2731,7 @@ EOJ;
 					'src' => '/images/notify_reboot.png',
 					'title' => gtext('A reboot is required'),
 					'alt' => gtext('Reboot Required'),
-					'class' => 'oneemhigh'
+					'class' => 'spin oneemhigh'
 				];
 				$g4fl->
 					addA(['class' => 'g4fi','href' => '/reboot.php'])->

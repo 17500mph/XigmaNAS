@@ -82,15 +82,15 @@ function syslogconf_process_updatenotification($mode,$data) {
 	return $retval;
 }
 //	init properties and sphere
-$property = new properties_syslogconf();
+$cop = new properties_syslogconf();
 $sphere = &system_syslogconf_get_sphere();
 //	silent fix identifier
 if(false !== $sphere->get_row_identifier()):
 	$updateconfig = false;
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		if(is_array($sphere->row)):
-			if(is_null($property->{$sphere->get_row_identifier()}->validate_array_element($sphere->row))):
-				$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
+			if(is_null($cop->{$sphere->get_row_identifier()}->validate_array_element($sphere->row))):
+				$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				$updateconfig = true;
 			endif;
 		else:
@@ -113,7 +113,7 @@ $action_pool = [
 		'view' => PAGE_MODE_VIEW
 	]
 ];
-if(property_exists($property,'enable')):
+if(property_exists($cop,'enable')):
 	if($sphere->toggle()):
 		$action_pool['POST'][] = $sphere->get_cbm_button_val_toggle();
 	else:
@@ -131,7 +131,7 @@ switch($method):
 			'apply',
 			$sphere->get_cbm_button_val_delete()
 		];
-		if($sphere->enadis() && property_exists($property,'enable')):
+		if($sphere->enadis() && property_exists($cop,'enable')):
 			$actions[] = $sphere->get_cbm_button_val_enable();
 			$actions[] = $sphere->get_cbm_button_val_disable();
 			$actions[] = $sphere->get_cbm_button_val_toggle();
@@ -153,15 +153,15 @@ switch($method):
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_enable():
-				if($sphere->enadis() && property_exists($property,'enable')):
+				if($sphere->enadis() && property_exists($cop,'enable')):
 					$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
 					$updateconfig = false;
 					foreach($sphere->cbm_grid as $sphere->cbm_row):
 						$sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier());
 						if($sphere->row_id  !== false):
-							if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()]) && (is_bool($sphere->grid[$sphere->row_id][$property->enable->get_name()]) ? $sphere->grid[$sphere->row_id][$property->enable->get_name()] : true)):
+							if(isset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]) && (is_bool($sphere->grid[$sphere->row_id][$cop->enable->get_name()]) ? $sphere->grid[$sphere->row_id][$cop->enable->get_name()] : true)):
 							else:
-								$sphere->grid[$sphere->row_id][$property->enable->get_name()] = true;
+								$sphere->grid[$sphere->row_id][$cop->enable->get_name()] = true;
 								$updateconfig = true;
 								$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
@@ -179,15 +179,15 @@ switch($method):
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_disable():
-				if($sphere->enadis() && property_exists($property,'enable')):
+				if($sphere->enadis() && property_exists($cop,'enable')):
 					$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
 					$updateconfig = false;
 					foreach($sphere->cbm_grid as $sphere->cbm_row):
 						$sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier());
 						if($sphere->row_id !== false):
-							if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()]) && (is_bool($sphere->grid[$sphere->row_id][$property->enable->get_name()]) ? $sphere->grid[$sphere->row_id][$property->enable->get_name()] : true)):
-								$sphere->grid[$sphere->row_id][$property->enable->get_name()] = false;
-								unset($sphere->grid[$sphere->row_id][$property->enable->get_name()]);
+							if(isset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]) && (is_bool($sphere->grid[$sphere->row_id][$cop->enable->get_name()]) ? $sphere->grid[$sphere->row_id][$cop->enable->get_name()] : true)):
+								$sphere->grid[$sphere->row_id][$cop->enable->get_name()] = false;
+								unset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]);
 								$updateconfig = true;
 								$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
@@ -205,17 +205,17 @@ switch($method):
 				exit;
 				break;
 			case $sphere->get_cbm_button_val_toggle():
-				if($sphere->enadis() && property_exists($property,'enable')):
+				if($sphere->enadis() && property_exists($cop,'enable')):
 					$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
 					$updateconfig = false;
 					foreach($sphere->cbm_grid as $sphere->cbm_row):
 						$sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier());
 						if($sphere->row_id !== false):
-							if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()]) && (is_bool($sphere->grid[$sphere->row_id][$property->enable->get_name()]) ? $sphere->grid[$sphere->row_id][$property->enable->get_name()] : true)):
-								$sphere->grid[$sphere->row_id][$property->enable->get_name()] = false;
-								unset($sphere->grid[$sphere->row_id][$property->enable->get_name()]);
+							if(isset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]) && (is_bool($sphere->grid[$sphere->row_id][$cop->enable->get_name()]) ? $sphere->grid[$sphere->row_id][$cop->enable->get_name()] : true)):
+								$sphere->grid[$sphere->row_id][$cop->enable->get_name()] = false;
+								unset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]);
 							else:
-								$sphere->grid[$sphere->row_id][$property->enable->get_name()] = true;					
+								$sphere->grid[$sphere->row_id][$cop->enable->get_name()] = true;					
 							endif;
 							$updateconfig = true;
 							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
@@ -307,6 +307,8 @@ endif;
 $table = $content->add_table_data_selection();
 $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
@@ -315,29 +317,28 @@ if($record_exists):
 		addTHwC('lhelc sorter-false parser-false')->
 			ins_cbm_checkbox_toggle($sphere)->
 		pop()->
-		insTHwC('lhell',$property->facility->get_title())->
-		insTHwC('lhell',$property->level->get_Title())->
-		insTHwC('lhell',$property->value->get_Title())->
+		insTHwC('lhell',$cop->facility->get_title())->
+		insTHwC('lhell',$cop->level->get_Title())->
+		insTHwC('lhell',$cop->value->get_Title())->
 		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
-		insTHwC('lhell',$property->comment->get_Title())->
+		insTHwC('lhell',$cop->comment->get_Title())->
 		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
 else: 
 	$tr->
 		insTHwC('lhelc')->
-		insTHwC('lhell',$property->facility->get_title())->
-		insTHwC('lhell',$property->level->get_Title())->
-		insTHwC('lhell',$property->value->get_Title())->
+		insTHwC('lhell',$cop->facility->get_title())->
+		insTHwC('lhell',$cop->level->get_Title())->
+		insTHwC('lhell',$cop->value->get_Title())->
 		insTHwC('lhelc',gtext('Status'))->
-		insTHwC('lhell',$property->comment->get_Title())->
+		insTHwC('lhell',$cop->comment->get_Title())->
 		insTHwC('lhebl',gtext('Toolbox'));
 endif;
-$tbody = $table->addTBODY();
 if($record_exists):
 	foreach ($sphere->grid as $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->enadis() ? isset($sphere->row[$property->enable->get_name()]) : true;
-		$is_notprotected = $sphere->lock() ? !isset($sphere->row[$property->protected->get_name()]) : true;
+		$is_enabled = $sphere->enadis() ? isset($sphere->row[$cop->enable->get_name()]) : true;
+		$is_notprotected = $sphere->lock() ? !isset($sphere->row[$cop->protected->get_name()]) : true;
 		$src = ($is_enabled) ? $g_img['ena'] : $g_img['dis'];
 		$title = ($is_enabled) ? gtext('Enabled') : gtext('Disabled');
 		$tbody->
@@ -346,14 +347,14 @@ if($record_exists):
 				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->facility->get_name()] ?? ''))->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->level->get_name()] ?? ''))->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->value->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$cop->facility->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$cop->level->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$cop->value->get_name()] ?? ''))->
 				push()->
 				addTDwC($is_enabled ? 'lcelc' : 'lcelcd')->
 					addA(['title' => $title])->insIMG(['src' => $src,'alt' => '','class' => 'oneemhigh'])->
 				pop()->
-				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$property->comment->get_name()] ?? ''))->
+				insTDwC($is_enabled ? 'lcell' : 'lcelld',htmlspecialchars($sphere->row[$cop->comment->get_name()] ?? ''))->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					insTD()->
@@ -362,6 +363,6 @@ if($record_exists):
 else:
 	$tbody->ins_no_records_found($n_col_width);
 endif;
-$table->ins_footerwa($sphere,$n_col_width);
+$foot->ins_record_add($sphere,$n_col_width);
 $document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
 $document->render();

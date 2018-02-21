@@ -79,7 +79,7 @@ function smartmontools_umass_process_updatenotification($mode,$data) {
 	return $retval;
 }
 //	get environment
-$property = new properties_smartmontools_umass();
+$cop = new properties_smartmontools_umass();
 $sphere = &get_sphere_smartmontools_umass();
 //	init indicators
 $input_errors = [];
@@ -90,8 +90,8 @@ if(false !== $sphere->get_row_identifier()):
 	$updateconfig = false;
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		if(is_array($sphere->row)):
-			if(is_null($property->{$sphere->get_row_identifier()}->validate_array_element($sphere->row))):
-				$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
+			if(is_null($cop->{$sphere->get_row_identifier()}->validate_array_element($sphere->row))):
+				$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				$updateconfig = true;
 			endif;
 		else:
@@ -130,8 +130,8 @@ switch($method):
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						if(!(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()]))):
-							$sphere->grid[$sphere->row_id][$property->enable->get_name()] = true;
+						if(!(isset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]))):
+							$sphere->grid[$sphere->row_id][$cop->enable->get_name()] = true;
 							$updateconfig = true;
 							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
@@ -152,8 +152,8 @@ switch($method):
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()])):
-							unset($sphere->grid[$sphere->row_id][$property->enable->get_name()]);
+						if(isset($sphere->grid[$sphere->row_id][$cop->enable->get_name()])):
+							unset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]);
 							$updateconfig = true;
 							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
@@ -174,10 +174,10 @@ switch($method):
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						if(isset($sphere->grid[$sphere->row_id][$property->enable->get_name()])):
-							unset($sphere->grid[$sphere->row_id][$property->enable->get_name()]);
+						if(isset($sphere->grid[$sphere->row_id][$cop->enable->get_name()])):
+							unset($sphere->grid[$sphere->row_id][$cop->enable->get_name()]);
 						else:
-							$sphere->grid[$sphere->row_id][$property->enable->get_name()] = true;					
+							$sphere->grid[$sphere->row_id][$cop->enable->get_name()] = true;					
 						endif;
 						$updateconfig = true;
 						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
@@ -264,6 +264,8 @@ endif;
 $table = $content->add_table_data_selection();
 $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
@@ -272,29 +274,28 @@ if($record_exists):
 		addTHwC('lhelc sorter-false parser-false')->
 			ins_cbm_checkbox_toggle($sphere)->
 		pop()->
-		insTHwC('lhell',$property->name->get_title())->
-		insTHwC('lhell',$property->type->get_title())->
+		insTHwC('lhell',$cop->name->get_title())->
+		insTHwC('lhell',$cop->type->get_title())->
 		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
-		insTHwC('lhell',$property->description->get_title())->
+		insTHwC('lhell',$cop->description->get_title())->
 		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
 else:
 	$tr->
 		insTHwC('lhelc')->
-		insTHwC('lhell',$property->name->get_title())->
-		insTHwC('lhell',$property->type->get_title())->
+		insTHwC('lhell',$cop->name->get_title())->
+		insTHwC('lhell',$cop->type->get_title())->
 		insTHwC('lhelc',gtext('Status'))->
-		insTHwC('lhell',$property->description->get_title())->
+		insTHwC('lhell',$cop->description->get_title())->
 		insTHwC('lhebl',gtext('Toolbox'));
 endif;
-$tbody = $table->addTBODY();
 if($record_exists):
 	$gt_enabled = gtext('Enabled');
 	$gt_disabled = gtext('Disabled');
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->enadis() ? isset($sphere->row[$property->enable->get_name()]) : true;
-		$is_notprotected = $sphere->lock() ? !$sphere->row[$property->protected->get_name()] : true;
+		$is_enabled = $sphere->enadis() ? isset($sphere->row[$cop->enable->get_name()]) : true;
+		$is_notprotected = $sphere->lock() ? !$sphere->row[$cop->protected->get_name()] : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
 			$title = $gt_enabled;
@@ -310,14 +311,14 @@ if($record_exists):
 				addTDwC('lcelc' . $dc)->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$property->name->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$property->type->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->name->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->type->get_name()] ?? ''))->
 				push()->
 				addTDwC('lcelc' . $dc)->
 					addA(['title' => $title])->
 						insIMG(['src' => $src,'alt' => ''])->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$property->description->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->description->get_name()] ?? ''))->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					insTD()->
@@ -326,7 +327,7 @@ if($record_exists):
 else:
 	$tbody->ins_no_records_found($n_col_width);
 endif;
-$table->ins_footerwa($sphere,$n_col_width);
+$tfoot->ins_record_add($sphere,$n_col_width);
 $document->
 	add_area_buttons()->
 		ins_cbm_button_enadis($sphere)->
