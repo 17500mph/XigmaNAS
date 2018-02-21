@@ -324,7 +324,7 @@ if($record_exists):
 					insTD();
 	endforeach;
 else:
-	$tbody->addTR()->insTD(['class' => 'lcebl','colspan' => $n_col_width],gtext('No records found.'));
+	$tbody->ins_no_records_found($n_col_width);
 endif;
 $table->ins_footerwa($sphere,$n_col_width);
 $document->
