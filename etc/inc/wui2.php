@@ -2625,7 +2625,8 @@ EOJ;
 EOJ;
 		if($is_tablesort):
 			$jdata .= <<<'EOJ'
-$(document).ready(function() { 
+$(document).ready(function() {
+	$.tablesorter.defaults.textSorter = $.tablesorter.sortText;
 	$(".area_data_selection").tablesorter({
 		emptyTo: 'none'
 	});
