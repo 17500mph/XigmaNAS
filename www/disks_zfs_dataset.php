@@ -33,68 +33,11 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
-require_once 'properties.php';
+require_once 'properties_disks_zfs_dataset.php';
 require_once 'co_sphere.php';
 require_once 'co_request_method.php';
 require_once 'zfs.inc';
 
-class properties_disks_zfs_dataset {
-	public $pool;
-	public $name;
-	public $compression;
-	public $description;
-	public $enabled;
-	public $protected;
-	
-	public function __construct() {
-		$this->load();
-	}
-	public function load() {
-		$this->pool = $this->prop_pool();
-		$this->name = $this->prop_name();
-		$this->compression = $this->prop_compression();
-		$this->description = $this->prop_description();
-		$this->enabled = $this->prop_enabled();
-		$this->protected = $this->prop_protected();
-		return $this;
-	}
-	public function prop_pool() : properties {
-		$o = new properties_text($this);
-		$o->set_name('pool');
-		$o->set_title(gtext('Pool'));
-		return $o;
-	}
-	private function prop_name() : properties {
-		$o = new properties_text($this);
-		$o->set_name('name');
-		$o->set_title(gtext('Name'));
-		return $o;
-	}
-	public function prop_compression() : properties {
-		$o = new properties_text($this);
-		$o->set_name('compression');
-		$o->set_title(gtext('Compression'));
-		return $o;
-	}
-	public function prop_description() : properties {
-		$o = new properties_text($this);
-		$o->set_name('desc');
-		$o->set_title(gtext('Description'));
-		return $o;
-	}
-	public function prop_enabled() : properties {
-		$o = new properties_text($this);
-		$o->set_name('enabled');
-		$o->set_title(gtext('Enabled'));
-		return $o;
-	}
-	public function prop_protected() : properties {
-		$o = new properties_text($this);
-		$o->set_name('protected');
-		$o->set_title(gtext('Protected'));
-		return $o;
-	}
-}
 function get_sphere_disks_zfs_dataset() {
 	global $config;
 	
@@ -184,7 +127,7 @@ switch($page_action):
 		foreach($sphere->cbm_grid as $sphere->cbm_row):
 			if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 				$sphere->row = $sphere->grid[$sphere->row_id];
-				$is_protected = is_bool($test = $sphere->row['protected'] ?? false) ? $test : true;
+				$is_protected = is_bool($test = $sphere->row[$cop->protected->name] ?? false) ? $test : true;
 				if($is_protected):
 					//	activity if record is protected
 				else:
@@ -267,27 +210,27 @@ if($record_exists):
 			addTHwC('lhelc sorter-false parser-false')->
 				ins_cbm_checkbox_toggle($sphere)->
 			pop()->
-			insTHwC('lhell',$cop->pool->get_title())->
-			insTHwC('lhell',$cop->name->get_title())->
-			insTHwC('lhell',$cop->compression->get_title())->
-			insTHwC('lhell',$cop->description->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhell',$cop->pool->title)->
+			insTHwC('lhell',$cop->name->title)->
+			insTHwC('lhell',$cop->compression->title)->
+			insTHwC('lhell',$cop->description->title)->
+			insTHwC('lhebl sorter-false parser-false',$cop->toolbox->title);
 else:
 	$thead->
 		addTR()->
 			insTHwC('lhelc')->
-			insTHwC('lhell',$cop->pool->get_title())->
-			insTHwC('lhell',$cop->name->get_title())->
-			insTHwC('lhell',$cop->compression->get_title())->
-			insTHwC('lhell',$cop->description->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhell',$cop->pool->title)->
+			insTHwC('lhell',$cop->name->title)->
+			insTHwC('lhell',$cop->compression->title)->
+			insTHwC('lhell',$cop->description->title)->
+			insTHwC('lhebl',$cop->toolbox->title);
 endif;
 if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->enadis() ? isset($sphere->row[$cop->enable->get_name()]) : true;
-		$is_notprotected = $sphere->lock() ? !$sphere->row[$cop->protected->get_name()] : true;
+		$is_enabled = $sphere->enadis() ? isset($sphere->row[$cop->enabled->name]) : true;
+		$is_notprotected = $sphere->lock() ? !$sphere->row[$cop->protected->name] : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
 			$title = $gt_enabled;
@@ -303,10 +246,10 @@ if($record_exists):
 				addTDwC('lcelc' . $dc)->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->pool->get_name()][0] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->name->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->compression->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->description->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->pool->name][0] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->name->name] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->compression->name] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->description->name] ?? ''))->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					ins_maintainbox($sphere,false)->
