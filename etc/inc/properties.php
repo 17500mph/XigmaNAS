@@ -34,110 +34,126 @@
 require_once 'util.inc';
 
 abstract class properties {
-	protected $owner = NULL;
-	protected $v_id = NULL;
-	protected $v_name = NULL;
-	protected $v_title = NULL;
-	protected $v_description = NULL;
-	protected $v_caption = NULL;
-	protected $v_defaultvalue = NULL;
-	protected $v_editableonadd = NULL;
-	protected $v_editableonmodify = NULL;
-	protected $v_filter = [];
-	protected $v_message_error = NULL;
-	protected $v_message_info = NULL;
-	protected $v_message_warning = NULL;
+	protected $x_owner = NULL;
+	protected $x_id = NULL;
+	protected $x_name = NULL;
+	protected $x_title = NULL;
+	protected $x_description = NULL;
+	protected $x_caption = NULL;
+	protected $x_defaultvalue = NULL;
+	protected $x_editableonadd = NULL;
+	protected $x_editableonmodify = NULL;
+	protected $x_filter = [];
+	protected $x_message_error = NULL;
+	protected $x_message_info = NULL;
+	protected $x_message_warning = NULL;
 
 	public function __construct($owner = NULL) {
-		$this->setOwner($owner);
+		$this->set_owner($owner);
 		return $this;
 	}
+/**
+ *	Lazy call via magic get
+ *	@param string $name the name of the property
+ *	@return value Returns the value of the property
+ *	@throws BadMethodCallException
+ */
+	public function &__get(string $name) {
+		$method_name = 'get_' . $name;
+		if(method_exists($this,$method_name)):
+			$return_data = $this->$method_name();
+		else:
+			$message = htmlspecialchars(sprintf("Method '%s' for '%s' not found",$method_name,$name));
+			throw new BadMethodCallException($message);
+		endif;
+		return $return_data;
+	}
 	abstract public function filter_use_default();
-	public function setOwner($owner = NULL) {
+	public function set_owner($owner = NULL) {
 		if(is_object($owner)):
-			$this->owner = $owner;
+			$this->x_owner = $owner;
 		endif;
 		return $this;
 	}
-	public function getOwner() {
-		return $this->owner;
+	public function get_owner() {
+		return $this->x_owner;
 	}
 	public function set_id(string $value = NULL) {
-		$this->v_id = $value;
+		$this->x_id = $value;
 		return $this;
 	}
 	public function get_id() {
-		return $this->v_id;
+		return $this->x_id;
 	}
 	public function set_name(string $value = NULL) {
-		$this->v_name = $value;
+		$this->x_name = $value;
 		return $this;
 	}
 	public function get_name() {
-		return $this->v_name;
+		return $this->x_name;
 	}
 	public function set_title(string $value = NULL) {
-		$this->v_title = $value;
+		$this->x_title = $value;
 		return $this;
 	}
 	public function get_title() {
-		return $this->v_title;
+		return $this->x_title;
 	}
 	public function set_description($value = NULL) {
-		$this->v_description = $value;
+		$this->x_description = $value;
 		return $this;
 	}
 	public function get_description() {
-		return $this->v_description;
+		return $this->x_description;
 	}
 	public function set_caption(string $value = NULL) {
-		$this->v_caption = $value;
+		$this->x_caption = $value;
 		return $this;
 	}
 	public function get_caption() {
-		return $this->v_caption;
+		return $this->x_caption;
 	}
 	public function set_defaultvalue($value = NULL) {
-		$this->v_defaultvalue = $value;
+		$this->x_defaultvalue = $value;
 		return $this;
 	}
 	public function get_defaultvalue() {
-		return $this->v_defaultvalue;
+		return $this->x_defaultvalue;
 	}
 	public function set_editableonadd(bool $value = NULL) {
-		$this->v_editableonadd = $value;
+		$this->x_editableonadd = $value;
 		return $this;
 	}
 	public function get_editableonadd() {
-		return $this->v_editableonadd;
+		return $this->x_editableonadd;
 	}
 	public function set_editableonmodify(bool $value = NULL) {
-		$this->v_editableonmodify = $value;
+		$this->x_editableonmodify = $value;
 		return $this;
 	}
 	public function get_editableonmodify() {
-		return $this->v_editableonmodify;
+		return $this->x_editableonmodify;
 	}
 	public function set_message_error(string $value = NULL) {
-		$this->v_message_error = $value;
+		$this->x_message_error = $value;
 		return $this;
 	}
 	public function get_message_error() {
-		return $this->v_message_error;
+		return $this->x_message_error;
 	}
 	public function set_message_info(string $value = NULL) {
-		$this->v_message_info = $value;
+		$this->x_message_info = $value;
 		return $this;
 	}
 	public function get_message_info() {
-		return $this->v_message_info;
+		return $this->x_message_info;
 	}
 	public function set_message_warning(string $value = NULL) {
-		$this->v_message_warning = $value;
+		$this->x_message_warning = $value;
 		return $this;
 	}
 	public function get_message_warning() {
-		return $this->v_message_warning;
+		return $this->x_message_warning;
 	}
 /**
  * Method to set filter type.
@@ -147,10 +163,10 @@ abstract class properties {
  */	
 	public function set_filter($value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
-		if(array_key_exists($filter_name,$this->v_filter)):
-			$this->v_filter[$filter_name]['filter'] = $value;
+		if(array_key_exists($filter_name,$this->x_filter)):
+			$this->x_filter[$filter_name]['filter'] = $value;
 		else:
-			$this->v_filter[$filter_name] = ['filter' => $value,'flags' => NULL,'options' => NULL];
+			$this->x_filter[$filter_name] = ['filter' => $value,'flags' => NULL,'options' => NULL];
 		endif;
 		return $this;
 	}
@@ -162,10 +178,10 @@ abstract class properties {
  */
 	public function set_filter_flags($value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
-		if(array_key_exists($filter_name,$this->v_filter)):
-			$this->v_filter[$filter_name]['flags'] = $value;
+		if(array_key_exists($filter_name,$this->x_filter)):
+			$this->x_filter[$filter_name]['flags'] = $value;
 		else:
-			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => $value,'options' => NULL];
+			$this->x_filter[$filter_name] = ['filter' => NULL,'flags' => $value,'options' => NULL];
 		endif;
 		return $this;
 	}
@@ -177,10 +193,10 @@ abstract class properties {
  */
 	public function set_filter_options(array $value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
-		if(array_key_exists($filter_name,$this->v_filter)):
-			$this->v_filter[$filter_name]['options'] = $value;
+		if(array_key_exists($filter_name,$this->x_filter)):
+			$this->x_filter[$filter_name]['options'] = $value;
 		else:
-			$this->v_filter[$filter_name] = ['filter' => NULL,'flags' => NULL,'options' => $value];
+			$this->x_filter[$filter_name] = ['filter' => NULL,'flags' => NULL,'options' => $value];
 		endif;
 		return $this;
 	}
@@ -190,8 +206,8 @@ abstract class properties {
  * @return array If $filter_name exists the filter configuration is returned, otherwise NULL is returned.
  */
 	public function get_filter(string $filter_name = 'ui') {
-		if(array_key_exists($filter_name,$this->v_filter)):
-			return $this->v_filter[$filter_name];
+		if(array_key_exists($filter_name,$this->x_filter)):
+			return $this->x_filter[$filter_name];
 		endif;
 		return NULL;
 	}
@@ -327,30 +343,30 @@ abstract class properties {
 	}
 }
 class properties_text extends properties {
-	public $v_maxlength = 0;
-	public $v_placeholder = NULL;
-	public $v_size = 40;
+	public $x_maxlength = 0;
+	public $x_placeholder = NULL;
+	public $x_size = 40;
 	
 	public function set_maxlength(int $value = 0) {
-		$this->v_maxlength = $value;
+		$this->x_maxlength = $value;
 		return $this;
 	}
 	public function get_maxlength() {
-		return $this->v_maxlength;
+		return $this->x_maxlength;
 	}
 	public function set_placeholder(string $value = NULL) {
-		$this->v_placeholder = $value;
+		$this->x_placeholder = $value;
 		return $this;
 	}
 	public function get_placeholder() {
-		return $this->v_placeholder;
+		return $this->x_placeholder;
 	}
 	public function set_size(int $value = 40) {
-		$this->v_size = $value;
+		$this->x_size = $value;
 		return $this;
 	}
 	public function get_size() {
-		return $this->v_size;
+		return $this->x_size;
 	}
 /**
  * Method to apply the default class filter to a filter name.
@@ -370,9 +386,10 @@ class properties_text extends properties {
 class properties_ipaddress extends properties_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_maxlength(45);
-		$this->set_placeholder(gtext('Enter IP Address'));
-		$this->set_size(60);
+		$this->
+			set_maxlength(45)->
+			set_placeholder(gtext('Enter IP Address'))->
+			set_size(60);
 		return $this;
 	}
 	public function filter_use_default() {
@@ -386,9 +403,10 @@ class properties_ipaddress extends properties_text {
 class properties_ipv4 extends properties_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_maxlength(15);
-		$this->set_placeholder(gtext('Enter IP Address'));
-		$this->set_size(20);
+		$this->
+			set_maxlength(15)->
+			set_placeholder(gtext('Enter IP Address'))->
+			set_size(20);
 		return $this;
 	}
 	public function filter_use_default() {
@@ -402,9 +420,10 @@ class properties_ipv4 extends properties_text {
 class properties_ipv6 extends properties_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_maxlength(45);
-		$this->set_placeholder(gtext('Enter IP Address'));
-		$this->set_size(60);
+		$this->
+			set_maxlength(45)->
+			set_placeholder(gtext('Enter IP Address'))->
+			set_size(60);
 		return $this;
 	}
 	public function filter_use_default() {
@@ -416,22 +435,22 @@ class properties_ipv6 extends properties_text {
 	}
 }
 class properties_int extends properties_text {
-	public $v_min = NULL;
-	public $v_max = NULL;
+	public $x_min = NULL;
+	public $x_max = NULL;
 
 	public function set_min(int $value = NULL) {
-		$this->v_min = $value;
+		$this->x_min = $value;
 		return $this;
 	}
 	public function get_min() {
-		return $this->v_min;
+		return $this->x_min;
 	}
 	public function set_max(int $value = NULL) {
-		$this->v_max = $value;
+		$this->x_max = $value;
 		return $this;
 	}
 	public function get_max() {
-		return $this->v_max;
+		return $this->x_max;
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
@@ -454,17 +473,18 @@ class properties_int extends properties_text {
 class property_uuid extends properties_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_id('uuid');
-		$this->set_name('uuid');
 		$this->set_title(gtext('Universally Unique Identifier'));
-		$this->set_description(gtext('The UUID of the record.'));
-		$this->set_size(45);
-		$this->set_maxlength(36);
-		$this->set_placeholder(gtext('Enter Universally Unique Identifier'));
-		$this->filter_use_default();
-		$this->set_editableonadd(false);
-		$this->set_editableonmodify(false);
-		$this->set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+		$this->
+			set_id('uuid')->
+			set_name('uuid')->
+			set_description(gtext('The UUID of the record.'))->
+			set_size(45)->
+			set_maxlength(36)->
+			set_placeholder(gtext('Enter Universally Unique Identifier'))->
+			filter_use_default()->
+			set_editableonadd(false)->
+			set_editableonmodify(false)->
+			set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
@@ -478,14 +498,14 @@ class property_uuid extends properties_text {
 	}
 }
 class properties_list extends properties {
-	public $v_options = NULL;
+	public $x_options = NULL;
 	
 	public function set_options(array $value = NULL) {
-		$this->v_options = $value;
+		$this->x_options = $value;
 		return $this;
 	}
 	public function get_options() {
-		return $this->v_options;
+		return $this->x_options;
 	}
 	public function validate_option($option) {
 		if(array_key_exists($option,$this->get_options())):
@@ -527,32 +547,98 @@ class properties_bool extends properties {
 class property_enable extends properties_bool {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_id('enable');
-		$this->set_name('enable');
 		$this->set_title(gtext('Enable Setting'));
-		$this->set_caption(gtext('Enable'));
-		$this->set_description('');
-		$this->set_defaultvalue(true);
-		$this->filter_use_default();
-		$this->set_editableonadd(true);
-		$this->set_editableonmodify(true);
-		$this->set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+		$this->
+			set_id('enable')->
+			set_name('enable')->
+			set_caption(gtext('Enable'))->
+			set_description('')->
+			set_defaultvalue(true)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
 		return $this;
 	}
 }
 class property_protected extends properties_bool {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_id('protected');
-		$this->set_name('protected');
 		$this->set_title(gtext('Protect Setting'));
-		$this->set_caption(gtext('Protect'));
-		$this->set_description('');
-		$this->set_defaultvalue(false);
-		$this->filter_use_default();
-		$this->set_editableonadd(true);
-		$this->set_editableonmodify(true);
-		$this->set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+		$this->
+			set_id('protected')->
+			set_name('protected')->
+			set_caption(gtext('Protect'))->
+			set_description('')->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
 		return $this;
 	}
+}
+abstract class co_property_container {
+/**
+ *	protected $x_propertyname; 
+ */
+	public function __construct() {
+		$this->reset();
+	}
+	public function __destruct() {
+		$this->reset();
+	}
+/**
+ *	Sets all 'x_*' properties to NULL
+ *	@return $this
+ */
+	public function reset() {
+		foreach($this as $key => $value):
+			if(strncmp($key,'x_',2) === 0):
+				$this->$key = NULL;
+			endif;
+		endforeach;
+		return $this;
+	}
+/**
+ *	Initializes all 'x_*' properties by calling their 'get_*' method.
+ *	The 'get_*' method itself calls the related 'init_*' method if necessary.
+ *	@return $this
+ */
+	public function init_all() {
+		foreach($this as $key => $value):
+			unset($matches);
+			if(1 === preg_match('/^x_(.+)/',$key,$matches)):
+				$method_name = 'get_' . $matches[1];
+				$this->$method_name();
+			endif;
+		endforeach;
+		return $this;
+ 	}
+/**
+ *	Lazy call via magic get
+ *	@param string $name the name of the property
+ *	@return properties Returns a properties object
+ *	@throws BadMethodCallException
+ */
+	public function &__get(string $name) {
+		$method_name = 'get_' . $name;
+		if(method_exists($this,$method_name)):
+			$return_data = $this->$method_name();
+		else:
+			$message = htmlspecialchars(sprintf("Method '%s' for '%s' not found",$method_name,$name));
+			throw new BadMethodCallException($message);
+		endif;
+		return $return_data;
+	}
+/*	
+ *	public function get_propertyname() {
+ *		return $this->x_propertyname ?? $this->init_propertyname();
+ *	}
+ *	public function init_propertyname() {
+ *		$this->x_propertyname = new properties_nnn($this);
+ *		...
+ *		return $this->x_propertyname;
+ *	}
+ */
 }
