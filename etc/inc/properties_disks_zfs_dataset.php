@@ -255,7 +255,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 		return $this->x_pool;
 	}
 	public function get_primarycache() {
-		return $this->$x_primarycache ?? $this->init_primarycache();
+		return $this->x_primarycache ?? $this->init_primarycache();
 	}
 	public function init_primarycache() {
 		$this->x_primarycache = new properties_list($this);
