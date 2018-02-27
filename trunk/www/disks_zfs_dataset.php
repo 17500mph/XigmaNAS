@@ -127,10 +127,8 @@ switch($page_action):
 		foreach($sphere->cbm_grid as $sphere->cbm_row):
 			if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 				$sphere->row = $sphere->grid[$sphere->row_id];
-				$is_protected = is_bool($test = $sphere->row[$cop->protected->name] ?? false) ? $test : true;
-				if($is_protected):
-					//	activity if record is protected
-				else:
+				$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->protected->name] ?? false) ? $test : true) : true;
+				if($is_notprotected):
 					$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
 					switch ($mode_updatenotify):
 						case UPDATENOTIFY_MODE_NEW:  
@@ -229,8 +227,8 @@ if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->enadis() ? isset($sphere->row[$cop->enabled->name]) : true;
-		$is_notprotected = $sphere->lock() ? !$sphere->row[$cop->protected->name] : true;
+		$is_enabled = $sphere->enadis() ? (is_bool($test = $sphere->row[$cop->enabled->name] ?? false) ? $test : true): true;
+		$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->protected->name] ?? false) ? $test : true) : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
 			$title = $gt_enabled;
