@@ -34,65 +34,69 @@
 require_once 'globals.inc';
 
 // Update notification constants
-define("UPDATENOTIFY_MODE_NEW", 0);
-define("UPDATENOTIFY_MODE_MODIFIED", 1);
-define("UPDATENOTIFY_MODE_DIRTY", 2);
-define("UPDATENOTIFY_MODE_DIRTY_CONFIG", 22);
-define("UPDATENOTIFY_MODE_UNKNOWN", 3);
+define('UPDATENOTIFY_MODE_NEW',0);
+define('UPDATENOTIFY_MODE_MODIFIED',1);
+define('UPDATENOTIFY_MODE_DIRTY',2);
+define('UPDATENOTIFY_MODE_DIRTY_CONFIG',22);
+define('UPDATENOTIFY_MODE_UNKNOWN',3);
 
-define("UPDATENOTIFY_DB", "{$g['vardb_path']}/updatenotify.db");
+define('UPDATENOTIFY_DB',sprintf('%s/updatenotify.db',$g['vardb_path']));
 
 // Config parameter constants to determine the mode of a parameter / array of parameters
-define("RECORD_ERROR", 0);
-define("RECORD_NEW", 1);
-define("RECORD_NEW_MODIFY", 12);
-define("RECORD_NEW_DELETE", 13);
-define("RECORD_MODIFY", 2);
-define("RECORD_MODIFY_MODIFY", 22);
-define("RECORD_MODIFY_DELETE", 23);
-define("RECORD_DELETE", 3);
-define("RECORD_DELETE_MODIFY", 32);
-define("RECORD_DELETE_DELETE", 33);
+define('RECORD_ERROR',0);
+define('RECORD_NEW',1);
+define('RECORD_NEW_MODIFY',12);
+define('RECORD_NEW_DELETE',13);
+define('RECORD_MODIFY',2);
+define('RECORD_MODIFY_MODIFY',22);
+define('RECORD_MODIFY_DELETE',23);
+define('RECORD_DELETE',3);
+define('RECORD_DELETE_MODIFY',32);
+define('RECORD_DELETE_DELETE',33);
 
 // Parameter to define the mode of a page
-define("PAGE_MODE_VIEW", 0);
-define("PAGE_MODE_ADD", 1);
-define("PAGE_MODE_EDIT", 2);
-define("PAGE_MODE_POST", 3);
-define('PAGE_MODE_CLONE', 4);
+define('PAGE_MODE_VIEW',0);
+define('PAGE_MODE_ADD',1);
+define('PAGE_MODE_EDIT',2);
+define('PAGE_MODE_POST',3);
+define('PAGE_MODE_CLONE',4);
 
 // Create database object and create tables if necessary.
 try {
 	$createdb = !file_exists(UPDATENOTIFY_DB);
 	$dbh = new PDO('sqlite:'.UPDATENOTIFY_DB);
-	if ($createdb) {
+	if($createdb):
 		updatenotify_initdb();
-	}
+	endif;
 } catch (PDOException $e) {
 	print $e->getMessage();
 }
-
-// Initialize the database by creating the tables.
-// Return TRUE if successful, otherwise FALSE.
+/**
+ *	Initialize the database by creating the tables.
+ *	@global PDO $dbh
+ *	@return boolean Return true if successful, otherwise false.
+ */
 function updatenotify_initdb() {
 	global $dbh;
 
 	try {
-		$dbh->exec("CREATE TABLE updatenotify (id INTEGER PRIMARY KEY, key TEXT, ts INTEGER, mode INTEGER, data TEXT)");
+		$sql = "CREATE TABLE updatenotify (id INTEGER PRIMARY KEY AUTOINCREMENT, key TEXT, ts INTEGER, mode INTEGER, data TEXT)";
+		$dbh->exec($sql);
 	} catch (PDOException $e) {
 		print $e->getMessage();
-		return FALSE;
+		return false;
 	}
-
-	return TRUE;
+	return true;
 }
-
-// Set a notification.
-// $key - Key to be used
-// $mode - Mode to be set
-// $data - Data to be set
-// Return TRUE if successful, otherwise FALSE.
-function updatenotify_set($key, $mode, $data) {
+/**
+ *	Set a notification.
+ *	@global PDO $dbh
+ *	@param string $key Key to be used
+ *	@param int $mode Mode to be set
+ *	@param string $data Data to be set
+ *	@return boolean Return true if successful, otherwise false.
+ */
+function updatenotify_set($key,$mode,$data) {
 	global $dbh;
 
 	try {
@@ -102,15 +106,16 @@ function updatenotify_set($key, $mode, $data) {
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
-		return FALSE;
+		return false;
 	}
-
-	return TRUE;
+	return true;
 }
-
-// Get all notifications for the given key.
-// $key - Key to be processed
-// Return array of notifications, otherwise FALSE.
+/**
+ *	Get all notifications for the given key.
+ *	@global PDO $dbh
+ *	@param string $key Key to be processed
+ *	@return mixed Return array of notifications, otherwise false.
+ */
 function updatenotify_get($key) {
 	global $dbh;
 
@@ -118,24 +123,42 @@ function updatenotify_get($key) {
 		$sql = "SELECT mode, data FROM updatenotify WHERE key = :key ORDER BY ts DESC";
 		$stmt = $dbh->prepare($sql);
 		$stmt->execute([':key' => $key]);
-
 		$result = [];
-		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)):
 			$result[] = $row;
-		}
-
+		endwhile;
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
-		return FALSE;
+		return false;
 	}
-
 	return $result;
 }
+/**
+ *	Get all notifications.
+ *	@global PDO $dbh
+ *	@return array Return array of notifications.
+ */
+function updatenotify_get_all() {
+	global $dbh;
 
-// Remove notifications with given key.
-// $key - Key to be removed
-// Return TRUE if successful, otherwise FALSE.
+	try {
+		$sql = "SELECT id, key, ts, mode, data FROM updatenotify";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		unset($stmt);
+	} catch (PDOException $e) {
+		return [];
+	}
+	return $result;
+}
+/**
+ *	Remove notifications with given key.
+ *	@global PDO $dbh
+ *	@param string $key Key to be removed.
+ *	@return boolean Return true if successful, otherwise false.
+ */
 function updatenotify_delete($key) {
 	global $dbh;
 
@@ -146,73 +169,95 @@ function updatenotify_delete($key) {
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
-		return FALSE;
+		return false;
 	}
-
-	return TRUE;
+	return true;
 }
-
-// Clear the notification.
-// $key - File to be used
-// $data - Data to clear
-// Return TRUE if successful, otherwise FALSE.
-function updatenotify_clear($key, $data, $matchwholeword = TRUE) {
+/**
+ *	Remove notification with given id.
+ *	@global PDO $dbh
+ *	@param string $id Id to be removed
+ *	@return boolean Return true if successful, otherwise false.
+ */
+function updatenotify_delete_id($id) {
 	global $dbh;
 
 	try {
-		if (true === $matchwholeword)
-			$ssql = "data = :data";
-		else
-			$ssql = "data LIKE '%:data%'";
-
-		$sql = "DELETE FROM updatenotify WHERE key = :key AND {$ssql}";
+		$sql = "DELETE FROM updatenotify WHERE id = :id";
 		$stmt = $dbh->prepare($sql);
-		$stmt->execute([':key' => $key, ':data' => $data]);
+		$stmt->execute([':id' => $id]);
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
-		return FALSE;
+		return false;
 	}
-
-	return TRUE;
+	return true;
 }
-
-// Get the notification mode.
-// $key - File to be used
-// $data - Data to searched for
-// Returns the notification mode, otherwise UPDATENOTIFY_MODE_UNKNOWN
-function updatenotify_get_mode($key, $data, $matchwholeword = TRUE) {
+/**
+ *	Clear the notification.
+ *	@global PDO $dbh
+ *	@param string $key File to be used.
+ *	@param string $data Data to clear.
+ *	@param boolean $matchwholeword
+ *	@return boolean Return true if successful, otherwise false.
+ */
+function updatenotify_clear($key,$data,$matchwholeword = true) {
 	global $dbh;
 
 	try {
-		if (true === $matchwholeword)
-			$ssql = "data = :data";
-		else
-			$ssql = "data LIKE '%:data%'";
-
-		// Remove duplicate entries. Last inserted notification wins (last in, first out).
-		$sql = "SELECT mode FROM updatenotify WHERE key = :key AND {$ssql} AND id IN (SELECT id FROM (SELECT id, MAX(ts) AS ts FROM updatenotify GROUP BY data))";
+		if(true === $matchwholeword):
+			$sql = "DELETE FROM updatenotify WHERE key = :key AND data = :data";
+		else:
+			$sql = "DELETE FROM updatenotify WHERE key = :key AND data LIKE '%:data%'";
+		endif;
 		$stmt = $dbh->prepare($sql);
-		$stmt->execute([':key' => $key, ':data' => $data]);
+		$stmt->execute([':key' => $key,':data' => $data]);
+		$stmt = null;
+	} catch (PDOException $e) {
+		print $e->getMessage();
+		return false;
+	}
+	return true;
+}
+/**
+ *	Get the notification mode.
+ *	@global PDO $dbh
+ *	@param string $key File to be used.
+ *	@param string $data Data to search for.
+ *	@param boolean $matchwholeword
+ *	@return int Returns the notification mode, otherwise UPDATENOTIFY_MODE_UNKNOWN
+ */
+function updatenotify_get_mode($key,$data,$matchwholeword = true) {
+	global $dbh;
 
+	try {
+		if(true === $matchwholeword):
+			$sql = "SELECT mode FROM updatenotify WHERE key = :key AND data = :data AND id IN (SELECT id FROM (SELECT id, MAX(ts) AS ts FROM updatenotify GROUP BY data))";
+		else:
+			$sql = "SELECT mode FROM updatenotify WHERE key = :key AND data LIKE '%:data%' AND id IN (SELECT id FROM (SELECT id, MAX(ts) AS ts FROM updatenotify GROUP BY data))";
+		endif;
+		// Remove duplicate entries. Last inserted notification wins (last in, first out).
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute([':key' => $key,':data' => $data]);
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
-		if (FALSE !== $result)
+		if(false !== $result):
 			$result = $result['mode'];
-		else
+		else:
 			$result = UPDATENOTIFY_MODE_UNKNOWN;
-
+		endif;
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
 		return UPDATENOTIFY_MODE_UNKNOWN;
 	}
-
 	return $result;
 }
-
-// Check if any notification is set for the given key.
-// $key - Key to be checked
-// Return true if successful, otherwise false.
+/**
+ *	Check if any notification is set for the given key.
+ *	@global PDO $dbh
+ *	@param string $key Key to be checked.
+ *	@return boolean Return true if successful, otherwise false.
+ */
 function updatenotify_exists($key) {
 	global $dbh;
 
@@ -220,24 +265,23 @@ function updatenotify_exists($key) {
 		$sql = "SELECT COUNT(*) FROM updatenotify WHERE key = :key";
 		$stmt = $dbh->prepare($sql);
 		$stmt->execute([':key' => $key]);
-
 		$result = $stmt->fetchColumn();
-		$result = (0 < $result) ? TRUE : FALSE;
-
+		$result = (0 < $result) ? true : false;
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
-		return FALSE;
+		return false;
 	}
-
 	return $result;
 }
-
-// Check if specified notification mode is set.
-// $key - Key to be checked
-// $mode - Mode to searched for
-// Return TRUE if successful, otherwise FALSE.
-function updatenotify_exists_mode($key, $mode) {
+/**
+ *	Check if specified notification mode is set.
+ *	@global PDO $dbh
+ *	@param string $key Key to be checked.
+ *	@param int $mode Mode to search for.
+ *	@return boolean Return true if successful, otherwise false.
+ */
+function updatenotify_exists_mode($key,$mode) {
 	global $dbh;
 
 	try {
@@ -245,33 +289,30 @@ function updatenotify_exists_mode($key, $mode) {
 		$sql = "SELECT COUNT(*) FROM updatenotify WHERE key = :key AND mode = :mode AND id IN (SELECT id FROM (SELECT id, MAX(ts) AS ts FROM updatenotify GROUP BY mode))";
 		$stmt = $dbh->prepare($sql);
 		$stmt->execute([':key' => $key,':mode' => $mode]);
-
 		$result = $stmt->fetchColumn();
 		$result = (0 < $result) ? TRUE : FALSE;
-
 		$stmt = null;
 	} catch (PDOException $e) {
 		print $e->getMessage();
 		return FALSE;
 	}
-
 	return $result;
 }
-
-// Process notifications.
-// $key - Key to be processed
-// $function - Name of callback function. Function syntax: xyz($mode, $data)
-// Return 0 if successful, otherwise 1.
-function updatenotify_process($key, $function) {
+/**
+ *	Process notifications.
+ *	@param string $key Key to be processed.
+ *	@param string $function Name of callback function. Function syntax: xyz($mode, $data).
+ *	@return int Return 0 if successful, otherwise 1.
+ */
+function updatenotify_process($key,$function) {
 	$a_notification = updatenotify_get($key);
-	if (!is_array($a_notification))
+	if(!is_array($a_notification)):
 		return 0;
-
-	foreach ($a_notification as $notificationv) {
-		if (0 != call_user_func($function, $notificationv['mode'], $notificationv['data'])) {
+	endif;
+	foreach($a_notification as $notificationv):
+		if(0 != call_user_func($function,$notificationv['mode'],$notificationv['data'])):
 			return 1;
-		}
-	}
+		endif;
+	endforeach;
 	return 0;
 }
-?>
