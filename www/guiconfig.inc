@@ -908,6 +908,7 @@ function get_headermenu(): array {
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Log'),'link' => '/diag_log.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Information'),'link' => '/diag_infos_disks.php'];
+		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Updatenotifier'),'link' => '/diag_updatenotifier.php'];
 		$menu_items[] = ['type' => 'separator','visible' => $isAdminSession,'description' => '','link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Ping/Traceroute'),'link' => '/diag_ping.php'];
 		$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('ARP Tables'),'link' => '/diag_arp.php'];
