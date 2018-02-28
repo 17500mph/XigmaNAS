@@ -37,9 +37,6 @@ require_once 'co_sphere.php';
 require_once 'co_request_method.php';
 
 function get_sphere_diag_updatenotifier() {
-	global $dbh;
-	global $config;
-	
 //	sphere structure
 	$sphere = new co_sphere_grid('diag_updatenotifier','php');
 	$sphere->set_row_identifier('id');
@@ -99,7 +96,6 @@ $table = $content->add_table_data_selection();
 $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $tbody = $table->addTBODY();
-$tfoot = $table->addTFOOT();
 $thead->ins_titleline(gtext('Overview'),$n_col_width);
 if($record_exists):
 	$thead->
