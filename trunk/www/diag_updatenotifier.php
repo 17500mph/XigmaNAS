@@ -65,7 +65,7 @@ switch($page_action):
 		exit;
 		break;
 endswitch;
-$pgtitle = [gtext('Diag'),gtext('Updatenotifier')];
+$pgtitle = [gtext('Diagnostics'),gtext('Updatenotifier')];
 $record_exists = count($sphere->grid) > 0;
 $a_col_width = ['5%','20%','20%','20%','35%'];
 $n_col_width = count($a_col_width);
