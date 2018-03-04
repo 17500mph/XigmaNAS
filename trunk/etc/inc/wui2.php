@@ -1962,7 +1962,7 @@ trait co_DOMTools {
 					endforeach;
 				endif;
 			endif;
-			if(!empty($description_output)):
+			if(preg_match('/\S/',$description_output)):
 				$this->addDIV(['class' => 'formfldadditionalinfo'],$description_output);
 			endif;
 		endif;
@@ -2223,6 +2223,54 @@ EOJ;
 		$this->addTR($tr_attributes)->addTD($td_attributes);
 		return $this;
 	}
+	public function ins_textarea(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$id = $p->get_id();
+		$caption = $p->get_caption();
+		$textarea_attributes = [
+			'id' => $id,
+			'name' => $p->get_name(),
+		];
+		if($is_readonly):
+			$textarea_attributes['class'] = 'formprero';
+			$textarea_attributes['disabled'] = 'disabled';
+			$is_required = false;
+			$maxlength = 0;
+			$placeholder = NULL;
+		else:
+			$textarea_attributes['class'] = 'formpre';
+			$maxlength = $p->get_maxlength();
+			$placeholder = $p->get_placeholder();
+		endif;
+		if($is_required):
+			$textarea_attributes['class'] = 'formpre';
+			$textarea_attributes['required'] = 'required';
+		endif;
+		if(isset($placeholder)):
+			$textarea_attributes['placeholder'] = $placeholder;
+		endif;
+		$n_cols = $p->get_cols();
+		if($n_cols > 0):
+			$textarea_attributes['cols'] = $n_cols;
+		endif;
+		$n_rows = $p->get_rows();
+		if($n_rows > 0):
+			$textarea_attributes['rows'] = $n_rows;
+		endif;
+		$textarea_attributes['wrap'] = $p->get_wrap() ? 'hard' : 'soft';
+		if($maxlength > 0):
+			$textarea_attributes['maxlength'] = $maxlength;
+		endif;
+		$div = $this->addDIV();
+		$div->addElement('textarea',$textarea_attributes,$value);
+		if(isset($caption)):
+			if($is_readonly):
+				$div->insSPAN(['style' => 'margin-left: 0.7em;'],$caption);
+			else:
+				$div->addElement('label',['style' => 'margin-left: 0.7em;','for' => $id],$caption);
+			endif;
+		endif;
+		return $this;
+	}
 	public function ins_textinfo(string $id = NULL,string $value = NULL) {
 		if(isset($value)):
 			$span_attributes  = [];
@@ -2400,15 +2448,24 @@ EOJ;
 		return $subnode;
 	}
 	public function c2_checkbox(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->ins_checkbox($p,$value,$is_required,$is_readonly)->ins_description($p);
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_checkbox($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->ins_checkbox_grid($p,$value,$is_required,$is_readonly)->ins_description($p);
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_checkbox_grid($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_filechooser(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->ins_filechooser($p,$value,$is_required,$is_readonly)->ins_description($p);
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_filechooser($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
@@ -2419,15 +2476,34 @@ EOJ;
 		return $this;
 	}
 	public function c2_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->ins_radio_grid($p,$value,$is_required,$is_readonly)->ins_description($p);
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_radio_grid($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_select(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
-		$this->c2_row($p,$is_required,$is_readonly,true)->ins_select($p,$value,$is_required,$is_readonly)->ins_description($p);
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_select($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_separator() {
 		$this->ins_separator(2);
+		return $this;
+	}
+	public function c2_textarea(properties $p,$value,bool $is_required = false,bool $is_readonly = false,int $n_cols = 0,int $n_rows = 0) {
+		if($n_cols > 0):
+			$p->set_cols($n_cols);
+		endif;
+		if($n_rows > 0):
+			$p->set_rows($n_rows);
+		endif;
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_textarea($p,$value,$is_required,$is_readonly)->
+				ins_description($p);
 		return $this;
 	}
 	public function c2_textinfo(string $id,string $title,$value) {
