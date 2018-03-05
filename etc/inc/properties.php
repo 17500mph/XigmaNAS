@@ -341,6 +341,14 @@ abstract class properties {
 		endforeach;
 		return $result;
 	}
+/**
+ *	Returns the value if key exists and is not null, otherwise an empty string is returned.
+ *	@param array $source
+ *	@return string
+ */
+	public function validate_config(array $source) {
+		return $source[$this->get_name()] ?? '';
+	}
 }
 class properties_text extends properties {
 	public $x_maxlength = 0;
@@ -368,18 +376,60 @@ class properties_text extends properties {
 	public function get_size() {
 		return $this->x_size;
 	}
-/**
- * Method to apply the default class filter to a filter name.
- * Filter expects a string containing at least one non-whitespace character.
- * @param string $filter_name Name of the filter, default = 'ui'.
- * @return object Returns $this.
- */
 	public function filter_use_default() {
-		//	not empty, does contain at least one printable character
+		//	not empty, must contain at least one printable character
 		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
 		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
 		$this->set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
+		return $this;
+	}
+}
+class properties_textarea extends properties {
+	public $x_cols = 65;
+	public $x_maxlength = 0;
+	public $x_placeholder = NULL;
+	public $x_rows = 5;
+	public $x_wrap = false;
+	
+	public function set_cols(int $n_cols = 65) {
+		$this->x_cols = $n_cols;
+		return $this;
+	}
+	public function get_cols() {
+		return $this->x_cols;
+	}
+	public function set_maxlength(int $value = 0) {
+		$this->x_maxlength = $value;
+		return $this;
+	}
+	public function get_maxlength() {
+		return $this->x_maxlength;
+	}
+	public function set_placeholder(string $value = NULL) {
+		$this->x_placeholder = $value;
+		return $this;
+	}
+	public function get_placeholder() {
+		return $this->x_placeholder;
+	}
+	public function set_rows(int $rows = 5) {
+		$this->x_rows = $rows;
+		return $this;
+	}
+	public function get_rows() {
+		return $this->x_rows;
+	}
+	public function set_wrap(bool $wrap = false) {
+		$this->x_wrap = $wrap;
+		return $this;
+	}
+	public function get_wrap() {
+		return $this->x_wrap;
+	}
+	public function filter_use_default() {
+		$filter_name = 'ui';
+		$this->set_filter(FILTER_DEFAULT,$filter_name);
 		return $this;
 	}
 }
@@ -514,6 +564,20 @@ class properties_list extends properties {
 			return NULL;
 		endif;
 	}
+	public function validate_config(array $source) {
+		$name = $this->get_name();
+		if(array_key_exists($name,$source)):
+			$option = $source[$name];
+			if(array_key_exists($option,$this->get_options())):
+				$return_data = $option;
+			else:
+				$return_data = '';
+			endif;
+		else:
+			$return_data = '';
+		endif;
+		return $return_data;
+	}
 /**
  * Method to apply the default class filter to a filter name.
  * The filter is a regex to match any of the option array keys.
@@ -535,13 +599,15 @@ class properties_bool extends properties {
 		$this->set_filter_options(['default' => false],$filter_name);
 		return $this;
 	}
-	public function validate_config(array $variable) {
-		if(array_key_exists($this->get_name(),$variable)):
-			$value = $variable[$this->get_name()];
-			return (is_bool($value) ? $value : true);
+	public function validate_config(array $source) {
+		$name = $this->get_name();
+		if(array_key_exists($name,$source)):
+			$value = $source[$name];
+			$return_data = is_bool($value) ? $value : true;
 		else:
-			return false;
+			$return_data = false;
 		endif;
+		return $return_data;
 	}
 }
 class property_enable extends properties_bool {
