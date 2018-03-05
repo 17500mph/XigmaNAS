@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2017-06-24 16:15+0000\n"
-"Last-Translator: Joao Saraiva <Unknown>\n"
+"PO-Revision-Date: 2018-03-04 14:59+0000\n"
+"Last-Translator: Joao Gerardo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
-"X-Generator: Launchpad (build 18553)\n"
+"X-Launchpad-Export-Date: 2018-03-05 22:45+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
 "X-Poedit-Language: Portuguese\n"
@@ -52,7 +52,7 @@ msgstr "%d anos"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% de %s"
 
 #, php-format
 msgid "%dB / block"
@@ -72,7 +72,7 @@ msgstr "%s já existe."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s disponível de %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -84,7 +84,7 @@ msgstr "%s já está configurado como um volume."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s é baseado/inclui vários pacotes de software livre."
 
 #, php-format
 msgid "%s is too long."
@@ -92,7 +92,7 @@ msgstr "%s é demasiado longo."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s de %s"
 
 #, php-format
 msgid "%s on %s"
@@ -100,7 +100,7 @@ msgstr "%s em %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s usado de %s"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -224,6 +224,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Um nome de servidor de horário NTP deve conter apenas os seguintes "
+"caracteres : a-z, 0-9, '-' e '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -238,6 +240,8 @@ msgstr "A VLAN com a tag %s já se encontra definida nesta interface."
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Uma tarefa na cron deve ser configrada para o script agendado "
+"/etc/capacitycheck.zfs."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -291,7 +295,7 @@ msgid "A route to this destination network already exists."
 msgstr "Já existe uma rota para esta rede de destino."
 
 msgid "A sysvol folder was found."
-msgstr ""
+msgstr "Um diretório sysvol foi encontrado."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -756,16 +760,16 @@ msgid "Allow New Files"
 msgstr "Permitir Arquivos Novos"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Permitir Portas Seriais"
 
 msgid "Allow TLS connections only."
 msgstr "Permitir apenas ligações TLS."
 
 msgid "Allow USB"
-msgstr ""
+msgstr "Permitir USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Permitir Portas Seriais USB"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permitir o acesso à clientes com senhas em branco."
@@ -889,6 +893,8 @@ msgid ""
 "An alert email is sent when the capacity of a pool exceeds the warning "
 "threshold."
 msgstr ""
+"Um alerta de email é enviado quando a capacidade de um pool (área) excede o "
+"limite de atenção."
 
 msgid "An empty field is default."
 msgstr "Por defeito é campo vazio."
@@ -951,13 +957,13 @@ msgid "Apple Filing Protocol"
 msgstr "Protocolo 'Apple Filing'"
 
 msgid "Apple Public Source License"
-msgstr ""
+msgstr "Licença de Fonte Pública Apple"
 
 msgid "Apply"
 msgstr "Aplicar"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Aplicar Alterações"
 
 msgid "Apply Filter"
 msgstr "Aplicar Filtro"

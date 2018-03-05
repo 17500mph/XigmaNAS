@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-02-18 04:59+0000\n"
+"PO-Revision-Date: 2018-02-18 18:14+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-18 11:21+0000\n"
-"X-Generator: Launchpad (build 18553)\n"
+"X-Launchpad-Export-Date: 2018-03-05 22:46+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -239,7 +239,7 @@ msgstr "VLAN с меткой %s уже определен на этом инте
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
-"Задача cron должна быть настроена для планирования сценария "
+"Задача cron должна быть настроена для запланированного сценария "
 "/etc/capacitycheck.zfs."
 
 msgid ""
@@ -2735,7 +2735,7 @@ msgstr ""
 
 #, php-format
 msgid "Device: %s | Total: %s | Used: %s | Free: %s"
-msgstr "Устройство: %s | Всего: %s | Занято: %s | Свободно: %s"
+msgstr "Устройство: %s | Всего: %s | Использовано: %s | Свободно: %s"
 
 msgid "Devices"
 msgstr "Устройства"
@@ -2890,7 +2890,7 @@ msgid ""
 "information from the pool."
 msgstr ""
 "Отображение информации о использованном/доступном пространстве из файловой "
-"системы, а не информации выделено/свободно из пула."
+"системы, а не информации распределено/свободно из пула."
 
 msgid "Display ZFS command history"
 msgstr "Отображение истории команд ZFS (Display ZFS command history)"
@@ -8161,7 +8161,7 @@ msgstr ""
 "библиотеки."
 
 msgid "Set the critical threshold to a value between 90 and 95."
-msgstr "Установите критический порог значения от 90 до 95."
+msgstr "Установите значение критического порога от 90 до 95."
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
@@ -8183,7 +8183,7 @@ msgstr ""
 "настройки параметра."
 
 msgid "Set the warning threshold to a value between 80 and 89."
-msgstr "Установите порог предупреждения в значение от 80 до 89."
+msgstr "Установите значение порога предупреждения от 80 до 89."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
@@ -8271,7 +8271,7 @@ msgid "Show UPS Information"
 msgstr "Показать информацию ИБП"
 
 msgid "Show Used/Avail"
-msgstr "Показать Использовано/Доступно"
+msgstr "Показывать Использовано/Доступно"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Показать записи журнала в обратном порядке (новые записи сверху)."
@@ -10429,7 +10429,7 @@ msgstr "Всего: %s | %s: %s | %s: %s | State: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
-msgstr "Всего: %s | Занято: %s | Свободно: %s"
+msgstr "Всего: %s | Использовано: %s | Свободно: %s"
 
 msgid "Traceroute"
 msgstr "Команда traceroute"
@@ -10869,7 +10869,7 @@ msgstr ""
 "Использовать одну кнопку для изменения состояния вместо кнопок вкл./откл."
 
 msgid "Used"
-msgstr "Занято"
+msgstr "Использовано"
 
 msgid "User"
 msgstr "Пользователь"
