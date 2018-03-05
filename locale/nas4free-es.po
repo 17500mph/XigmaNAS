@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-01-28 06:41+0000\n"
+"PO-Revision-Date: 2018-02-26 06:29+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
-"X-Generator: Launchpad (build 18553)\n"
+"X-Launchpad-Export-Date: 2018-03-05 22:45+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -238,6 +238,7 @@ msgstr "Una VLAN con etiqueta %s ya ha sido definida en ésta interface."
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Se ha creado un trabajo de cron para el script /etc/capacitycheck.zfs."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -883,11 +884,15 @@ msgid ""
 "An alert email is sent when the capacity of a pool exceeds the critical "
 "threshold."
 msgstr ""
+"Se enviará un e-mail de alerta cuando la capacidad del pool sobrepase la "
+"marca crítica."
 
 msgid ""
 "An alert email is sent when the capacity of a pool exceeds the warning "
 "threshold."
 msgstr ""
+"Se enviará un e-mail de alerta cuando la capacidad del pool sobrepase la "
+"marca de precaución."
 
 msgid "An empty field is default."
 msgstr "Vacio por defecto"
@@ -992,7 +997,7 @@ msgid "Asynchronous I/O"
 msgstr "I/O Asincrono"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Se debe seleccionar al menos un disco"
 
 msgid "At least one interface must be selected."
 msgstr "Al menos un interfaz debe ser seleccionada."
@@ -1529,13 +1534,13 @@ msgid "Capacity"
 msgstr "Capacidad"
 
 msgid "Capacity Alert Thresholds"
-msgstr ""
+msgstr "Alertas de capacidad"
 
 msgid "Capacity Critical Threshold"
-msgstr ""
+msgstr "Alerta crítica de capacidad"
 
 msgid "Capacity Warning Threshold"
-msgstr ""
+msgstr "Alerta de precaución de capacidad"
 
 msgid "Carp Settings"
 msgstr "Ajustes del CARP"
@@ -1561,6 +1566,8 @@ msgid ""
 "Certificate revocation list (CRL) file for TLS, to check for revoked "
 "certificates."
 msgstr ""
+"Lista de revocación de certificados (CRL), para TLS, revisar para "
+"certificados revocados."
 
 msgid "Change"
 msgstr "Modificar"
@@ -1855,10 +1862,10 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
-"Controla el algoritmo de compresión utilizado para este conjunto de datos. "
-"'LZ4' es ahora el algoritmo de compresión recomendado. Ajustar la compresión "
-"a 'On' utiliza el algoritmo de compresión LZ4 si el atributo lz4_compress "
-"está activo, de lo contrario usará LZJB. Puede especificar el nivel 'GZIP' "
+"Controla el algoritmo de compresión utilizado para este Dataset. 'LZ4' es "
+"ahora el algoritmo de compresión recomendado. Ajustar la compresión a 'On' "
+"utiliza el algoritmo de compresión LZ4 si el atributo lz4_compress está "
+"activo, de lo contrario usará LZJB. Puede especificar el nivel 'GZIP' "
 "utilizando el valor 'GZIP-N', donde N es un entero a partir de 1 (más "
 "rápido) a 9 (más comprimido). Actualmente, 'GZIP' es equivalente a 'GZIP-6'."
 
@@ -1932,7 +1939,7 @@ msgid "Controls whether the set-UID bit is respected for the file system."
 msgstr "Controla si se debe respetar el bit set-UID del sistema de archivos"
 
 msgid "Controls whether this dataset can be modified."
-msgstr "Controla si este conjunto de datos puede ser modificado."
+msgstr "Controla si este Dataset puede ser modificado."
 
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
@@ -2134,38 +2141,39 @@ msgid "Create ZFS on a GPT partition."
 msgstr "Crear ZFS en particiones GPT"
 
 msgid "Create a L2ARC device for ARC"
-msgstr ""
+msgstr "Crear un dispositivo L2ARC para ARC"
 
 msgid "Create a SLOG device for ZIL"
-msgstr ""
+msgstr "Crear un dispositivo SLOG para ZIL"
 
 msgid "Create a mirrored SLOG device for ZIL"
-msgstr ""
+msgstr "Crear un dispositivo en espejo SLOG para ZIL"
 
 msgid "Create a spare device"
-msgstr ""
+msgstr "Crear un dispositivo en \"espera\""
 
 msgid ""
 "Create a virtual device containing a single device or concatenated devices"
 msgstr ""
+"Crear un dispositivo virtual que contenga un unico HD, o varios concatenados"
 
 msgid "Create a virtual device containing mirrored devices"
-msgstr ""
+msgstr "Crear un dispositivo virtual que contenga HD en espejo (MIRROR)"
 
 msgid "Create a virtual device which tolerates 2 device failures"
-msgstr ""
+msgstr "Crear un dispositivo virtual tolerante a fallos de 2 HD (RAID-Z2)"
 
 msgid "Create a virtual device which tolerates 3 device failures"
-msgstr ""
+msgstr "Crear un dispositivo virtual tolerante a fallos de 3 HD (RAID-Z3)"
 
 msgid "Create a virtual device which tolerates a single device failure"
-msgstr ""
+msgstr "Crear un dispositivo virtual tolerante a fallos de 1 HD (RAID-Z1)"
 
 msgid "Create and initialize RAID."
 msgstr "Crear e inicializar RAID"
 
 msgid "Create recursive snapshot."
-msgstr ""
+msgstr "Crear una instantanea recursiva."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Crear directorio de trabajo, si no existe."
@@ -2315,7 +2323,7 @@ msgid "Database directory"
 msgstr "Directorio de la base de datos"
 
 msgid "Dataset"
-msgstr "Conjunto de datos"
+msgstr "Dataset"
 
 msgid "Dataset Type"
 msgstr "Tipo de dataset"
@@ -2330,7 +2338,7 @@ msgid "Dataset is unlocked"
 msgstr "El Dataset está desbloqueado"
 
 msgid "Datasets"
-msgstr "Conjuntos de datos"
+msgstr "Datasets"
 
 msgid "Date"
 msgstr "Fecha"
@@ -2888,7 +2896,7 @@ msgstr "Pantalla"
 msgid ""
 "Display Used/Avail information from the filesystem instead of the Alloc/Free "
 "information from the pool."
-msgstr ""
+msgstr "Mostrar Usado/Disponible en lugar de Alloc/Libre para el pool ZFS"
 
 msgid "Display ZFS command history"
 msgstr "Desplegar la historia de comandos ZFS"
@@ -3241,7 +3249,7 @@ msgid "Donate"
 msgstr "Contribuir con una donación"
 
 msgid "Done!"
-msgstr ""
+msgstr "¡Hecho!"
 
 msgid "Done."
 msgstr "Hecho."
@@ -3559,7 +3567,7 @@ msgid "Enable authentication."
 msgstr "Activar autentificacion."
 
 msgid "Enable checks of the server certificate."
-msgstr ""
+msgstr "Habilitar revisar el certificado del servidor"
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Habilita la estadistica de Frecuencia de CPU"
@@ -5430,12 +5438,12 @@ msgid ""
 "specify the size use the following human-readable suffixes (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
-"Limita la cantidad de espacio que un conjunto de datos y sus descendientes "
-"puede usar. Esta propiedad refuerza el límite en la cantidad de espacio "
-"usado. Este límite incluye todo el espacio utilizado por los descendientes, "
-"incluyendo el sistema de archivos y las instantáneas. Para especificar el "
-"tamaño utilice los siguientes sufijos reconocibles por humanos (por ejemplo, "
-"'k', 'KB', 'M', 'Gb', etc.)."
+"Limita la cantidad de espacio que un Dataset y sus descendientes puede usar. "
+"Esta propiedad refuerza el límite en la cantidad de espacio usado. Este "
+"límite incluye todo el espacio utilizado por los descendientes, incluyendo "
+"el sistema de archivos y las instantáneas. Para especificar el tamaño "
+"utilice los siguientes sufijos reconocibles por humanos (por ejemplo, 'k', "
+"'KB', 'M', 'Gb', etc.)."
 
 msgid "Limits the amount of space a dataset and its descendents can consume."
 msgstr ""
@@ -6000,10 +6008,10 @@ msgid "Must be a number between 5 and 1000."
 msgstr "Debe ser un número entre 5 y 1000."
 
 msgid "Must be a number between 80 and 89."
-msgstr ""
+msgstr "Debe ser un número entre 80 y 89"
 
 msgid "Must be a number between 90 and 95."
-msgstr ""
+msgstr "Debe ser un número entre 90 y 95"
 
 msgid "Must choose one"
 msgstr "Debe escoger uno"
@@ -6215,7 +6223,7 @@ msgid "No configured virtual devices."
 msgstr "No configurado dispositivos virtuales"
 
 msgid "No dataset information available."
-msgstr ""
+msgstr "No hay información disponible del Dataset"
 
 msgid "No devices have been selected"
 msgstr "Ningún dispositivo ha sido seleccionado"
@@ -6265,7 +6273,7 @@ msgid "No records found."
 msgstr "No se encontraron registros."
 
 msgid "No snapshot information available."
-msgstr ""
+msgstr "No hay información disponible de la instantanea"
 
 msgid "No softraid-formatted disks available."
 msgstr "No hay discos formateados-softraid"
@@ -6283,7 +6291,7 @@ msgid "No virtual devices have been selected"
 msgstr "Ningún dispositivo virtual ha sido seleccionado"
 
 msgid "No volume information available."
-msgstr ""
+msgstr "No hay información disponible del Volumen"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "No Permitir - Solo se heredan denegadas"
@@ -6884,7 +6892,7 @@ msgid "Pool Devices"
 msgstr "Dispositivos del Pool"
 
 msgid "Pool Information"
-msgstr ""
+msgstr "Información del Pool"
 
 msgid "Pool Information & Status"
 msgstr "Información y estado del Pool"
@@ -8028,11 +8036,15 @@ msgid ""
 "Cert File). The file must contain the private key of a certificate in PEM "
 "format."
 msgstr ""
+"Enviar certificado del cliente al servidor (Usar en conjunción con la opción "
+"certificado TLS). El archivo debe contener la clave privada en formato PEM."
 
 msgid ""
 "Send a client certificate to the server (use this together with option TLS "
 "Key File). The file must contain a certificate in PEM format."
 msgstr ""
+"Enviar certificado del cliente al servidor (Usar en conjunción con la opción "
+"Clave TLS). El archivo debe contener el certificado en formato PEM."
 
 msgid "Send daemon event messages."
 msgstr "Enviar eventos Demonios"
@@ -8143,14 +8155,14 @@ msgid "Set the content location(s) to or from the media library."
 msgstr "Localización del contenido de la librería de medios"
 
 msgid "Set the critical threshold to a value between 90 and 95."
-msgstr ""
+msgstr "Marcar la linea critica entre 90 y 95"
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
-"Asigne el conjunto de servicio Identificador deseado (alias: nombre de red)."
+"Asigne el nombre de servicio Identificador deseado (alias: nombre de red)."
 
 msgid "Set the fingerprint of a single certificate to accept for TLS."
-msgstr ""
+msgstr "Usar la huella de un certificadopara aceptar TLS"
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -8165,7 +8177,7 @@ msgstr ""
 "re(4)<=8000."
 
 msgid "Set the warning threshold to a value between 80 and 89."
-msgstr ""
+msgstr "Marcar el valor de precaución entre 80 y 89."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
@@ -8180,8 +8192,8 @@ msgstr "Definir Key"
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
-"Colocar un punto de montaje alterno para la raiz del conjunto de datos "
-"(root). El predeterminado es /mnt."
+"Definir un punto de montaje alternativo para la raiz del Dataset (root). El "
+"predeterminado es /mnt."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -8256,7 +8268,7 @@ msgid "Show UPS Information"
 msgstr "Mostrar info. dela SAI"
 
 msgid "Show Used/Avail"
-msgstr ""
+msgstr "Mostar Usado/Disponible"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Mostrar el log en orden inverso (entradas nuevas arriba)"
@@ -8506,7 +8518,7 @@ msgid "Start"
 msgstr "Iniciar"
 
 msgid "Start TLS from within the session."
-msgstr ""
+msgstr "Comenzar a usar TLS en esta sesión"
 
 msgid "Static"
 msgstr "Estático"
@@ -8728,16 +8740,16 @@ msgid "TLS"
 msgstr "TLS"
 
 msgid "TLS CRL File"
-msgstr ""
+msgstr "Archivo TLS CRL"
 
 msgid "TLS Cert File"
-msgstr ""
+msgstr "Archivo de certificado TLS"
 
 msgid "TLS Fingerprint"
-msgstr ""
+msgstr "Huella TLS"
 
 msgid "TLS Key File"
-msgstr ""
+msgstr "Clave TLS"
 
 msgid "TLS Only"
 msgstr "Solo TLS"
@@ -9226,6 +9238,7 @@ msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
+"Puerto SMTP de servidor de correo po rdefecto, usualmente el 25 o el 587"
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -9484,6 +9497,8 @@ msgid ""
 "The name of the TLS trust file. The file must be in PEM format containing "
 "one or more certificates of trusted Certification Authorities (CAs)."
 msgstr ""
+"El nombre del archivo TLS. El archivo debe estar en formato PEM y contener "
+"uno o más certificados de Autoridades de Certificación (CA's)"
 
 msgid "The name of the interface is wrong."
 msgstr "El nombre de la interfaz es incorrecto."
@@ -10414,7 +10429,7 @@ msgstr ""
 
 #, php-format
 msgid "Total: %s | %s: %s | %s: %s | State: %s"
-msgstr ""
+msgstr "Total: %s | %s: %s | %s: %s | Estado: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
@@ -10588,7 +10603,7 @@ msgid "UPS goes on battery"
 msgstr "UPS alimentado por la batería"
 
 msgid "UPS is disabled."
-msgstr ""
+msgstr "SAI deshabilitada"
 
 msgid "UPS model"
 msgstr "Modelo de SAI"
@@ -10747,7 +10762,7 @@ msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr "Usar Bytes/sec en lugar de Bits/sec en la gráfica de Red."
 
 msgid "Use Default TLS Trust File"
-msgstr ""
+msgstr "Usar el archivo TLS por defecto"
 
 msgid "Use Encryption"
 msgstr "Usar cifrado"
@@ -10769,7 +10784,7 @@ msgid "Use as sparse volume (thin provisioning)."
 msgstr "Usar como volumen de recambio (Aprovisionamiento)"
 
 msgid "Use default TLS trust file /usr/local/etc/ssl/cert.pem."
-msgstr ""
+msgstr "Usar el archivo TLS por defecto /usr/local/etc/ssl/cert.pem."
 
 msgid "Use different container as root of the tree."
 msgstr "Use un contenedor distinto como raíz del arbol"
@@ -11389,13 +11404,13 @@ msgid "ZFS Pool I/O Statistics"
 msgstr "ZFS Pool I/O Estadistica"
 
 msgid "ZFS Pool Properties"
-msgstr ""
+msgstr "Propiedades ZFS"
 
 msgid "ZFS Pool Tools"
 msgstr "Herramientas ZFS"
 
 msgid "ZFS Settings"
-msgstr ""
+msgstr "Opciones ZFS"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Info y estado de Snapshot ZFS"
@@ -11430,7 +11445,7 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "allocated of"
-msgstr ""
+msgstr "Asignado"
 
 msgid "and"
 msgstr "y"
@@ -11461,7 +11476,7 @@ msgid "filechooser"
 msgstr "Selector de ficheros"
 
 msgid "free of"
-msgstr ""
+msgstr "libre de"
 
 msgid "get target info failed."
 msgstr "Petición de informacion fallida"

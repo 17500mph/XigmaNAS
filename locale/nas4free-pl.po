@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2017-11-26 16:43+0000\n"
-"Last-Translator: Manveru <manveru@manveru.pl>\n"
+"PO-Revision-Date: 2018-03-04 22:41+0000\n"
+"Last-Translator: Slawomir Szymaniak <orionis_pm@yahoo.co.uk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-18 00:49+0000\n"
-"X-Generator: Launchpad (build 18553)\n"
+"X-Launchpad-Export-Date: 2018-03-05 22:45+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
 "X-Poedit-Language: Polish\n"
@@ -84,7 +84,7 @@ msgstr "%s jest już skonfigurowany jako partycja."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s jest bazowany lub też zawiera części różnych darmowych pakietów."
 
 #, php-format
 msgid "%s is too long."
@@ -857,6 +857,9 @@ msgid ""
 "does not use CHAP authentication it defines authorised users and secrets for "
 "additional security."
 msgstr ""
+"Grupa Auth jest identyfikowana przez numer taga i jest opcyjna. Jeśli Cel "
+"nie używa autentykacji CHAP, definiuje autoryzowanych użytkowników i haseł "
+"dla dodatkowego zabezpieczenia."
 
 msgid "An Extent defines the storage area of the Target."
 msgstr ""
@@ -978,7 +981,7 @@ msgid "Asynchronous I/O"
 msgstr "Asynchroniczne We/Wy"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Przynajmniej jeden dysk musi być zaznaczony."
 
 msgid "At least one interface must be selected."
 msgstr "Przynajmniej jeden interfejs musi być wybrany."
@@ -1031,7 +1034,7 @@ msgid "Auth Group"
 msgstr "Grupa zabezpieczeń"
 
 msgid "Auth Group Settings"
-msgstr ""
+msgstr "Ustawienia dla Grupy Auth"
 
 msgid "Auth Groups"
 msgstr "Grupy zabezpieczeń"
@@ -1229,7 +1232,7 @@ msgid "Battery voltage"
 msgstr "Napięcie baterii"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Ostrożnie przy włączaniu tych opcji."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1328,7 +1331,7 @@ msgid "Bridge is unlocked"
 msgstr "Most jest odblokowany"
 
 msgid "Bring a device online"
-msgstr ""
+msgstr "Wprowadź urządzenie w stan używania."
 
 msgid "Broadcast Interval"
 msgstr ""
@@ -1362,15 +1365,16 @@ msgstr "CARP"
 msgid ""
 "CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"CARP nie może być skasowany ponieważ jest wciąż w użytkowaniu jako interfejs."
 
 msgid "CARP is marked for deletion"
-msgstr ""
+msgstr "CARP jest zaznaczony do skasowania"
 
 msgid "CARP is protected"
-msgstr ""
+msgstr "CARP jest chroniony"
 
 msgid "CARP is unlocked"
-msgstr ""
+msgstr "CARP jest odblokowany"
 
 msgid "CARP only"
 msgstr "Tylko CARP"
@@ -1451,7 +1455,7 @@ msgid "CPU Maximum Frequency"
 msgstr "Maksymalna częstotliwość CPU"
 
 msgid "CPU Microcode Update"
-msgstr ""
+msgstr "Uaktualnienie mikrokodu dla CPU"
 
 msgid "CPU Minimum Frequency"
 msgstr "Minimalna częstotliwośc CPU"
@@ -1515,10 +1519,10 @@ msgid "Capacity Warning Threshold"
 msgstr ""
 
 msgid "Carp Settings"
-msgstr ""
+msgstr "Ustawienia CARP"
 
 msgid "Case Sensitivity"
-msgstr ""
+msgstr "Wyczulenie na wielkość znaków"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1580,7 +1584,7 @@ msgid "Checksum"
 msgstr "Suma kontrolna"
 
 msgid "Choose File"
-msgstr ""
+msgstr "Wybierz plik"
 
 msgid "Choose UPS mode."
 msgstr "Wybierz tryb UPS"
@@ -1621,10 +1625,10 @@ msgid "Client"
 msgstr "Klient"
 
 msgid "Client Max. Protocol"
-msgstr ""
+msgstr "Maks. Protokół dla Klienta"
 
 msgid "Client Min. Protocol"
-msgstr ""
+msgstr "Min. protokół dla Klienta"
 
 msgid "Clone"
 msgstr "Klon"
@@ -1664,7 +1668,7 @@ msgid "Command Scripts (Maintenance Only)"
 msgstr ""
 
 msgid "Command execution was successful"
-msgstr ""
+msgstr "Wykonanie polecenia zakończone pomyślnie"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1675,13 +1679,13 @@ msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Komenda dla wydarzenia LINK_UP (np. %s.)."
 
 msgid "Command is marked for removal"
-msgstr ""
+msgstr "Polecenie jest zaznaczone do usunięcia"
 
 msgid "Command is protected"
-msgstr ""
+msgstr "Polecenie jest chronione"
 
 msgid "Command is unlocked"
-msgstr ""
+msgstr "Polecenie jest odblokowane"
 
 msgid "Command output"
 msgstr "Wynik polecenia"
@@ -1729,19 +1733,22 @@ msgid "Configuration"
 msgstr "Konfiguracja"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Katalog konfiguracyjny"
 
 msgid ""
 "Configuration information about devices is different from physical devices. "
 "Please remove those devices and re-add them or run import disks with clear "
 "configuration option enabled."
 msgstr ""
+"Informacje o urządzeniach zawarte w konfiguracji są inne od urządzeń "
+"fizycznie podłączonych. Prosze je odłaczyć i podłączyć od nowa lub uruchomić "
+"z włączoną opcją importowanie dysków z pustą konfiguracją."
 
 msgid "Configuring"
 msgstr "Konfigurowanie"
 
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Potwierdź nowe hasło"
 
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
