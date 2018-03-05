@@ -345,10 +345,29 @@ samba_mkconf_cmd()
 				-o "veto files = /.zfs/" -n \
 			-b \
 			-i "count(afpcompat) > 0" \
-				-o "fruit:resource = file" -n \
-				-o "fruit:metadata = netatalk" -n \
-				-o "fruit:locking = netatalk" -n \
-				-o "fruit:encoding = native" -n \
+				--if "string-length(vfs_fruit_resource) > 0" \
+					-v "concat('fruit:resource = ',vfs_fruit_resource)" -n \
+				--else \
+					-o "fruit:resource = file" -n \
+				--break \
+				--if "string-length(vfs_fruit_metadata) > 0" \
+					-v "concat('fruit:metadata = ',vfs_fruit_metadata)" -n \
+				--else \
+					-o "fruit:metadata = netatalk" -n \
+				--break \
+				--if "string-length(vfs_fruit_locking) > 0" \
+					-v "concat('fruit:locking = ',vfs_fruit_locking)" -n \
+				--else \
+					-o "fruit:locking = netatalk" -n \
+				--break \
+				--if "string-length(vfs_fruit_encoding) > 0" \
+					-v "concat('fruit:encoding = ',vfs_fruit_encoding)" -n \
+				--else \
+					-o "fruit:encoding = native" -n \
+				--break \
+				--if "string-length(vfs_fruit_time_machine) > 0" \
+					-v "concat('fruit:time machine = ',vfs_fruit_time_machine)" -n \
+				--break \
 			-b \
 			-m "auxparam" \
 				-v "." -n \
@@ -496,10 +515,29 @@ sambaad_mkconf_cmd()
 					-o "veto files = /.zfs/" -n \
 				-b \
 				-i "count(afpcompat) > 0" \
-					-o "fruit:resource = file" -n \
-					-o "fruit:metadata = netatalk" -n \
-					-o "fruit:locking = netatalk" -n \
-					-o "fruit:encoding = native" -n \
+					--if "string-length(vfs_fruit_resource) > 0" \
+						-v "concat('fruit:resource = ',vfs_fruit_resource)" -n \
+					--else \
+						-o "fruit:resource = file" -n \
+					--break \
+					--if "string-length(vfs_fruit_metadata) > 0" \
+						-v "concat('fruit:metadata = ',vfs_fruit_metadata)" -n \
+					--else \
+						-o "fruit:metadata = netatalk" -n \
+					--break \
+					--if "string-length(vfs_fruit_locking) > 0" \
+						-v "concat('fruit:locking = ',vfs_fruit_locking)" -n \
+					--else \
+						-o "fruit:locking = netatalk" -n \
+					--break \
+					--if "string-length(vfs_fruit_encoding) > 0" \
+						-v "concat('fruit:encoding = ',vfs_fruit_encoding)" -n \
+					--else \
+						-o "fruit:encoding = native" -n \
+					--break \
+					--if "string-length(vfs_fruit_time_machine) > 0" \
+						-v "concat('fruit:time machine = ',vfs_fruit_time_machine)" -n \
+					--break \
 				-b \
 				-m "auxparam" \
 					-v "." -n \
