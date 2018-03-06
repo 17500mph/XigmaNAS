@@ -288,32 +288,44 @@ switch($page_mode):
 		break;
 endswitch;
 $pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'),$isrecordnew ? gtext('Add') : gtext('Edit')];
-$jcode = <<<EOJ
+if(is_bool($test = $config['system']['showdisabledsections'] ?? false) ? $test : true):
+	$jcode = NULL;
+else:
+	$jcode = <<<EOJ
 $(document).ready(function() {
-	$('#afpcompat').change(function() {
+	$('#{$cop->get_afpcompat()->get_id()}').change(function() {
 		switch(this.checked) {
 			case true:
-				$('tr[id^=vfs_fruit_]').show();
+				$('#{$cop->get_vfs_fruit_resource()->get_id()}_tr').show();
+				$('#{$cop->get_vfs_fruit_time_machine()->get_id()}_tr').show();
+				$('#{$cop->get_vfs_fruit_metadata()->get_id()}_tr').show();
+				$('#{$cop->get_vfs_fruit_locking()->get_id()}_tr').show();
+				$('#{$cop->get_vfs_fruit_encoding()->get_id()}_tr').show();
 				break;
 			case false:
-				$('tr[id^=vfs_fruit_]').hide();
+				$('#{$cop->get_vfs_fruit_encoding()->get_id()}_tr').hide();
+				$('#{$cop->get_vfs_fruit_locking()->get_id()}_tr').hide();
+				$('#{$cop->get_vfs_fruit_metadata()->get_id()}_tr').hide();
+				$('#{$cop->get_vfs_fruit_time_machine()->get_id()}_tr').hide();
+				$('#{$cop->get_vfs_fruit_resource()->get_id()}_tr').hide();
 				break;
         }
     });
-	$('#afpcompat').change();
-	$('#shadowcopy').change(function() {
+	$('#{$cop->get_afpcompat()->get_id()}').change();
+	$('#{$cop->get_shadowcopy()->get_id()}').change(function() {
 		switch(this.checked) {
 			case true:
-				$('tr[id^=shadowformat]').show();
+				$('#{$cop->get_shadowformat()->get_id()}').show();
 				break;
 			case false:
-				$('tr[id^=shadowformat]').hide();
+				$('#{$cop->get_shadowformat()->get_id()}').hide();
 				break;
         }
 	});
-	$('#shadowcopy').change();
+	$('#{$cop->get_shadowcopy()->get_id()}').change();
 });
 EOJ;
+endif;
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
