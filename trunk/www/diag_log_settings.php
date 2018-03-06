@@ -45,7 +45,7 @@ function get_sphere_diag_log_settings() {
 	return $sphere;
 }
 //	init properties and sphere
-$property = new properties_diag_log_settings();
+$cop = new properties_diag_log_settings();
 $sphere = &get_sphere_diag_log_settings();
 $input_errors = [];
 $savemsg = '';
@@ -74,122 +74,122 @@ switch($page_mode):
 	case PAGE_MODE_VIEW:
 	case PAGE_MODE_EDIT:
 		$a_referrer = [
-			$property->disablecomp->get_name(),
-			$property->disablesecure->get_name(),
-			$property->resolve->get_name(),
-			$property->reverse->get_name(),
+			$cop->get_disablecomp()->get_name(),
+			$cop->get_disablesecure()->get_name(),
+			$cop->get_resolve()->get_name(),
+			$cop->get_reverse()->get_name(),
 		];
 		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_config($sphere->grid);
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_config($sphere->grid);
 		endforeach;
 		$a_referrer = [
-			$property->daemon->get_name(),
-			$property->enable->get_name(),
-			$property->ftp->get_name(),
-			$property->rsyncd->get_name(),
-			$property->smartd->get_name(),
-			$property->sshd->get_name(),
-			$property->system->get_name(),
+			$cop->get_daemon()->get_name(),
+			$cop->get_enable()->get_name(),
+			$cop->get_ftp()->get_name(),
+			$cop->get_rsyncd()->get_name(),
+			$cop->get_smartd()->get_name(),
+			$cop->get_sshd()->get_name(),
+			$cop->get_system()->get_name(),
 		];
 		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_config($sphere->grid['remote']);
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_config($sphere->grid['remote']);
 		endforeach;
-		$referrer = $property->nentries->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid);
+		$referrer = $cop->get_nentries()->get_name();
+		$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid);
 		if(is_null($sphere->row[$referrer])):
-			$input_errors[] = $property->{$referrer}->get_message_error();
+			$input_errors[] = $cop->{$referrer}->get_message_error();
 			if(array_key_exists($referrer,$sphere->grid) && is_scalar($sphere->grid[$referrer])): 
 				$sphere->row[$referrer] = $sphere->grid[$referrer];
 			else:
-				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
+				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
 			endif;
 		endif;
-		$referrer = $property->ipaddr->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote']);
+		$referrer = $cop->get_ipaddr()->get_name();
+		$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid['remote']);
 		if(is_null($sphere->row[$referrer])):
-			$throw_error = $sphere->row[$property->enable->get_name()];
+			$throw_error = $sphere->row[$cop->get_enable()->get_name()];
 			if(array_key_exists($referrer,$sphere->grid['remote']) && is_string($sphere->grid['remote'][$referrer]) && preg_match('/\S/',$sphere->grid['remote'][$referrer])):
 				$throw_error = true;
 				$sphere->row[$referrer] = $sphere->grid['remote'][$referrer];
 			else:
-				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
+				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
 			endif;
 			if($throw_error):
-				$input_errors[] = $property->{$referrer}->get_message_error();
+				$input_errors[] = $cop->{$referrer}->get_message_error();
 			endif;
 		endif;
-		$referrer = $property->port->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],['ui','514','empty']);
+		$referrer = $cop->get_port()->get_name();
+		$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid['remote'],['ui','514','empty']);
 		if(is_null($sphere->row[$referrer])):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid['remote'],'scalar');
-			$input_errors[] = $property->{$referrer}->get_message_error();
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid['remote'],'scalar');
+			$input_errors[] = $cop->{$referrer}->get_message_error();
 		endif;
 		break;
 	case PAGE_MODE_POST:
 		$a_referrer = [
-			$property->disablecomp->get_name(),
-			$property->disablesecure->get_name(),
-			$property->resolve->get_name(),
-			$property->reverse->get_name(),
-			$property->daemon->get_name(),
-			$property->enable->get_name(),
-			$property->ftp->get_name(),
-			$property->rsyncd->get_name(),
-			$property->smartd->get_name(),
-			$property->sshd->get_name(),
-			$property->system->get_name(),
+			$cop->get_disablecomp()->get_name(),
+			$cop->get_disablesecure()->get_name(),
+			$cop->get_resolve()->get_name(),
+			$cop->get_reverse()->get_name(),
+			$cop->get_daemon()->get_name(),
+			$cop->get_enable()->get_name(),
+			$cop->get_ftp()->get_name(),
+			$cop->get_rsyncd()->get_name(),
+			$cop->get_smartd()->get_name(),
+			$cop->get_sshd()->get_name(),
+			$cop->get_system()->get_name(),
 		];
 		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
 		endforeach;
-		$referrer = $property->nentries->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		$referrer = $cop->get_nentries()->get_name();
+		$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
 		if(is_null($sphere->row[$referrer])):
-			$input_errors[] = $property->{$referrer}->get_message_error();
+			$input_errors[] = $cop->{$referrer}->get_message_error();
 			if(array_key_exists($referrer,$_POST) && is_scalar($_POST[$referrer])): 
 				$sphere->row[$referrer] = $_POST[$referrer];
 			else:
-				$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
+				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
 			endif;
 		endif;
 		//	IP address must be valid when remote syslog is enabled
 		//	IP address can be empty or must be valid when remote syslog is disabled
-		$referrer = $property->ipaddr->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+		$referrer = $cop->get_ipaddr()->get_name();
+		$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
 		if(is_null($sphere->row[$referrer])):
 			$sphere->row[$referrer] = filter_input(INPUT_POST,$referrer,FILTER_UNSAFE_RAW,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '']]);
-			if($sphere->row[$property->enable->get_name()] || preg_match('/\S/',$sphere->row[$referrer])):
-				$input_errors[] = $property->{$referrer}->get_message_error();
+			if($sphere->row[$cop->get_enable()->get_name()] || preg_match('/\S/',$sphere->row[$referrer])):
+				$input_errors[] = $cop->{$referrer}->get_message_error();
 			endif;
 		endif;
 		//	Port must be empty or a valid port number
-		$referrer = $property->port->get_name();
-		$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,['ui','514','empty']);
+		$referrer = $cop->get_port()->get_name();
+		$sphere->row[$referrer] = $cop->{$referrer}->validate_input(INPUT_POST,['ui','514','empty']);
 		if(is_null($sphere->row[$referrer])):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_input(INPUT_POST,'scalar');
-			$input_errors[] = $property->{$referrer}->get_message_error();
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_input(INPUT_POST,'scalar');
+			$input_errors[] = $cop->{$referrer}->get_message_error();
 		endif;
 		if(empty($input_errors)):
 			$a_referrer = [
-				$property->disablecomp->get_name(),
-				$property->disablesecure->get_name(),
-				$property->nentries->get_name(),
-				$property->resolve->get_name(),
-				$property->reverse->get_name()
+				$cop->get_disablecomp()->get_name(),
+				$cop->get_disablesecure()->get_name(),
+				$cop->get_nentries()->get_name(),
+				$cop->get_resolve()->get_name(),
+				$cop->get_reverse()->get_name()
 			];
 			foreach($a_referrer as $referrer):
 				$sphere->grid[$referrer] = $sphere->row[$referrer];
 			endforeach;
 			$a_referrer = [
-				$property->daemon->get_name(),
-				$property->enable->get_name(),
-				$property->ftp->get_name(),
-				$property->ipaddr->get_name(),
-				$property->port->get_name(),
-				$property->rsyncd->get_name(),
-				$property->smartd->get_name(),
-				$property->sshd->get_name(),
-				$property->system->get_name()
+				$cop->get_daemon()->get_name(),
+				$cop->get_enable()->get_name(),
+				$cop->get_ftp()->get_name(),
+				$cop->get_ipaddr()->get_name(),
+				$cop->get_port()->get_name(),
+				$cop->get_rsyncd()->get_name(),
+				$cop->get_smartd()->get_name(),
+				$cop->get_sshd()->get_name(),
+				$cop->get_system()->get_name()
 			];
 			foreach($a_referrer as $referrer):
 				$sphere->grid['remote'][$referrer] = $sphere->row[$referrer];
@@ -214,7 +214,7 @@ switch($page_mode):
 		$is_readonly = false;
 		break;
 	default:
-		if(isset($config['system']['skipviewmode']) && (is_bool($config['system']['skipviewmode']) ? $config['system']['skipviewmode'] : true)):
+		if(is_bool($test = $config['system']['skipviewmode'] ?? false) ? $test : true):
 			$page_mode = PAGE_MODE_EDIT;
 			$is_readonly = false;
 		else:
@@ -225,8 +225,41 @@ switch($page_mode):
 endswitch;
 //	prepare additional javascript code
 $jcode = [];
-$jcode[PAGE_MODE_EDIT] = NULL;
-$jcode[PAGE_MODE_VIEW] = NULL;
+if(is_bool($test = $config['system']['showdisabledsections'] ?? false) ? $test : true):
+	$jcode[PAGE_MODE_EDIT] = NULL;
+	$jcode[PAGE_MODE_VIEW] = NULL;
+else:
+	$jcode[PAGE_MODE_EDIT] = <<<EOJ
+$(document).ready(function() {
+	$('#{$cop->get_enable()->get_id()}').change(function() {
+		switch(this.checked) {
+			case true:
+				$('#{$cop->get_ipaddr()->get_id()}_tr').show();
+				$('#{$cop->get_port()->get_id()}_tr').show();
+				$('#{$cop->get_system()->get_id()}_tr').show();
+				$('#{$cop->get_ftp()->get_id()}_tr').show();
+				$('#{$cop->get_rsyncd()->get_id()}_tr').show();
+				$('#{$cop->get_sshd()->get_id()}_tr').show();
+				$('#{$cop->get_smartd()->get_id()}_tr').show();
+				$('#{$cop->get_daemon()->get_id()}_tr').show();
+				break;
+			case false:
+				$('#{$cop->get_daemon()->get_id()}_tr').hide();
+				$('#{$cop->get_smartd()->get_id()}_tr').hide();
+				$('#{$cop->get_sshd()->get_id()}_tr').hide();
+				$('#{$cop->get_rsyncd()->get_id()}_tr').hide();
+				$('#{$cop->get_ftp()->get_id()}_tr').hide();
+				$('#{$cop->get_system()->get_id()}_tr').hide();
+				$('#{$cop->get_port()->get_id()}_tr').hide();
+				$('#{$cop->get_ipaddr()->get_id()}_tr').hide();
+				break;
+        }
+    });
+	$('#{$cop->get_enable()->get_id()}').change();
+});
+EOJ;
+	$jcode[PAGE_MODE_VIEW] = $jcode[PAGE_MODE_EDIT];
+endif;
 //	create document
 $document = new_page([gtext('Diagnostics'),gtext('Log'),gtext('Settings')],$sphere->get_scriptname());
 //	get areas
@@ -256,27 +289,27 @@ $content->
 			c2_titleline(gtext('Log Settings'))->
 			parentNode->
 		addTBODY()->
-			c2_checkbox($property->reverse,$sphere->row[$property->reverse->get_name()],false,$is_readonly)->
-			c2_input_text($property->nentries,htmlspecialchars($sphere->row[$property->nentries->get_name()]),false,$is_readonly)->
-			c2_checkbox($property->resolve,$sphere->row[$property->resolve->get_name()],false,$is_readonly)->
-			c2_checkbox($property->disablecomp,$sphere->row[$property->disablecomp->get_name()],false,$is_readonly)->
-			c2_checkbox($property->disablesecure,$sphere->row[$property->disablesecure->get_name()],false,$is_readonly);
+			c2_checkbox($cop->get_reverse(),$sphere->row[$cop->get_reverse()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_nentries(),htmlspecialchars($sphere->row[$cop->get_nentries()->get_name()]),false,$is_readonly)->
+			c2_checkbox($cop->get_resolve(),$sphere->row[$cop->get_resolve()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_disablecomp(),$sphere->row[$cop->get_disablecomp()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_disablesecure(),$sphere->row[$cop->get_disablesecure()->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,$is_readonly,gtext('Remote Syslog Server'))->
+			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gtext('Remote Syslog Server'))->
 			parentNode->
 		addTBODY()->
-			c2_input_text($property->ipaddr,htmlspecialchars($sphere->row[$property->ipaddr->get_name()]),false,$is_readonly)->
-			c2_input_text($property->port,htmlspecialchars($sphere->row[$property->port->get_name()]),false,$is_readonly)->
-			c2_checkbox($property->system,$sphere->row[$property->system->get_name()],false,$is_readonly)->
-			c2_checkbox($property->ftp,$sphere->row[$property->ftp->get_name()],false,$is_readonly)->
-			c2_checkbox($property->rsyncd,$sphere->row[$property->rsyncd->get_name()],false,$is_readonly)->
-			c2_checkbox($property->sshd,$sphere->row[$property->sshd->get_name()],false,$is_readonly)->
-			c2_checkbox($property->smartd,$sphere->row[$property->smartd->get_name()],false,$is_readonly)->
-			c2_checkbox($property->daemon,$sphere->row[$property->daemon->get_name()],false,$is_readonly);
+			c2_input_text($cop->get_ipaddr(),htmlspecialchars($sphere->row[$cop->get_ipaddr()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_port(),htmlspecialchars($sphere->row[$cop->get_port()->get_name()]),false,$is_readonly)->
+			c2_checkbox($cop->get_system(),$sphere->row[$cop->get_system()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_ftp(),$sphere->row[$cop->get_ftp()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_rsyncd(),$sphere->row[$cop->get_rsyncd()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_sshd(),$sphere->row[$cop->get_sshd()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_smartd(),$sphere->row[$cop->get_smartd()->get_name()],false,$is_readonly)->
+			c2_checkbox($cop->get_daemon(),$sphere->row[$cop->get_daemon()->get_name()],false,$is_readonly);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
@@ -288,4 +321,3 @@ switch($page_mode):
 endswitch;
 //	done
 $document->render();
-?>
