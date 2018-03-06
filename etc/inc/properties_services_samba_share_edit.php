@@ -81,7 +81,7 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 	}
 	public function init_vfs_fruit_encoding() {
 		$property = parent::init_vfs_fruit_encoding();
-		$description = gtext('Controls how the set of illegal NTFS ASCII character, commonly used by OS X clients, are stored in the filesystem.');
+		$description = gtext('Controls how the set of illegal NTFS ASCII character are stored in the filesystem, commonly used by OS X clients.');
 		$options = [
 			'native' => gtext('Native - store characters with their native ASCII value.'),
 			'private' => gtext('Private (default) - store characters as encoded by the OS X client: mapped to the Unicode private range.')
@@ -101,7 +101,7 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 		$property = parent::init_vfs_fruit_locking();
 		$description = '';
 		$options = [
-			'netatalk' => gtext('Netatalk - use cross protocol locking with Netatalk'),
+			'netatalk' => gtext('Netatalk - use cross protocol locking with Netatalk.'),
 			'none' => gtext('None (default) - no cross protocol locking.')
 		];
 		$property->
