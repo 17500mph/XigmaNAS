@@ -1994,6 +1994,7 @@ ${NAS4FREE_PRODUCTNAME} Build Environment
 21 - Create 'RPI2 SD (IMG) File."
 	fi
 	echo -n "
+15 - Create 'nas4free.pot' file from Source files.
 *  - Exit.
 
 Press # "
@@ -2006,6 +2007,7 @@ Press # "
 		12)	create_iso;;
 		13)	create_iso_tiny;;
 		14)	create_full;;
+		15)	$NAS4FREE_SVNDIR/build/nas4free-create-pot.sh;;
 		20)	if [ "arm" = ${NAS4FREE_ARCH} ]; then create_rpisd; fi;;
 		21)	if [ "arm" = ${NAS4FREE_ARCH} ]; then create_rpi2sd; fi;;
 		*)	exit 0;;
