@@ -2703,7 +2703,7 @@ EOJ;
 EOJ;
 		$jdata .= <<<'EOJ'
 $(document).ready(function() {
-	$('html').removeClass('avoid-fouc');
+	$('.avoid-fouc').removeClass('avoid-fouc');
 	
 EOJ;
 		if($is_tablesort):
