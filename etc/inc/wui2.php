@@ -2645,19 +2645,23 @@ EOJ;
 				insElement('link',['href' => '/css/login.css','rel' => 'stylesheet','type' => 'text/css']);
 		endif;
 		$head->
-			insElement('script',['type' => 'text/javascript','src' => '/js/jquery.min.js'])->
-			insElement('script',['type' => 'text/javascript','src' => '/js/gui.js'])->
-			insElement('script',['type' => 'text/javascript','src' => '/js/spinner.js'])->
-			insElement('script',['type' => 'text/javascript','src' => '/js/spin.min.js']);
+			insElement('style',[],'.avoid-fouc { display:none; }');
+		$head->
+			addJavaScript("document.documentElement.className = 'avoid-fouc';");
+		$head->
+			insElement('script',['src' => '/js/jquery.min.js'])->
+			insElement('script',['src' => '/js/gui.js'])->
+			insElement('script',['src' => '/js/spinner.js'])->
+			insElement('script',['src' => '/js/spin.min.js']);
 		if($is_tablesort):
 			$head->
-				insElement('script',['type' => 'text/javascript','src' => '/js/jquery.tablesorter.min.js']);
-//				insElement('script',['type' => 'text/javascript','src' => '/js/jquery.tablesorter.widgets.min.js']);
+				insElement('script',['src' => '/js/jquery.tablesorter.min.js']);
+//				insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
 		endif;
 		if($is_datechooser):
 			$head->
 				insElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css'])->
-				insElement('script',['type' => 'text/javascript','src' => 'js/datechooser.js']);
+				insElement('script',['src' => 'js/datechooser.js']);
 		endif;
 		return $this;
 	}
@@ -2695,17 +2699,26 @@ EOJ;
 		endif;
 		$jdata .= <<<'EOJ'
 });
+
+EOJ;
+		$jdata .= <<<'EOJ'
+$(document).ready(function() {
+	$('html').removeClass('avoid-fouc');
+	
 EOJ;
 		if($is_tablesort):
 			$jdata .= <<<'EOJ'
-$(document).ready(function() {
 	$.tablesorter.defaults.textSorter = $.tablesorter.sortText;
 	$(".area_data_selection").tablesorter({
 		emptyTo: 'none'
 	});
-});
+	
 EOJ;
 		endif;
+		$jdata .= <<<'EOJ'
+});
+	
+EOJ;
 		$body = $this->addElement('body',['id' => 'main']);
 		if($is_form):
 			$form_attributes = [
@@ -2734,7 +2747,7 @@ EOJ;
 		endif;
 		$flexcontainer->ins_main();
 		$flexcontainer->ins_footer();
-		$body->addJavascript($jdata);
+		$body->addJavaScript($jdata);
 		return $this;
 	}
 	public function ins_header_logo() {
