@@ -241,7 +241,7 @@ switch($page_mode):
 				$input_errors[] = $referer->get_message_error();
 			endif;
 		endforeach;
-		// Check for duplicates.
+		//	check for duplicate name.
 		$name = $cop->get_name()->get_name();
 		$index = array_search_ex($sphere->row[$name],$sphere->grid,$name);
 		if(false !== $index):
@@ -251,7 +251,7 @@ switch($page_mode):
 				$input_errors[] = gtext('The share name is already used.');
 			endif;
 		endif;
-		//	Enable ZFS ACL on ZFS mount point
+		//	enable ZFS ACL on ZFS mount point
 		$mntinfo = get_mount_info($sphere->row[$cop->get_path()->get_name()]);
 		if($mntinfo !== false && $mntinfo['fs'] === 'zfs'):
 			if($isrecordnew):
@@ -325,7 +325,6 @@ endif;
 //	add tab navigation
 $document->
 	add_area_tabnav()->
-		push()->
 		add_tabnav_upper()->
 			ins_tabnav_record('services_samba.php',gtext('Settings'))->
 			ins_tabnav_record('services_samba_share.php',gtext('Shares'),gtext('Reload page'),true);
