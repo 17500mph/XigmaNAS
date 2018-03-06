@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-02-22 06:59+0000\n"
+"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"PO-Revision-Date: 2018-03-06 04:24+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-05 22:46+0000\n"
+"X-Launchpad-Export-Date: 2018-03-06 19:53+0000\n"
 "X-Generator: Launchpad (build 18566)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -197,6 +197,9 @@ msgstr "4KB封套"
 msgid "514"
 msgstr "514"
 
+msgid "69"
+msgstr "69"
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 标签 （介于1和4094之间）。"
 
@@ -340,9 +343,6 @@ msgstr "AD或PDC 的名称。"
 
 msgid "AFP"
 msgstr "AFP"
-
-msgid "AFP Compatibility"
-msgstr "AFP兼容性"
 
 msgid "AG"
 msgstr "AG"
@@ -570,6 +570,9 @@ msgstr "附加组"
 
 msgid "Additional Network"
 msgstr "附加网络"
+
+msgid "Additional Parameter"
+msgstr "附加参数"
 
 msgid "Additional Parameters"
 msgstr "附加参数"
@@ -866,6 +869,9 @@ msgstr "追加用户自定义的用户共享"
 
 msgid "Apple Filing Protocol"
 msgstr "苹果文件协议（Apple Filing Protocol）"
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
+msgstr "Apple归档协议（AFP）兼容性设置"
 
 msgid "Apple Public Source License"
 msgstr "Apple公共源代码许可证"
@@ -1707,6 +1713,16 @@ msgstr "控制器型号"
 msgid "Controller TCP Port"
 msgstr "控制器的TCP端口"
 
+msgid ""
+"Controls how the set of illegal NTFS ASCII character are stored in the "
+"filesystem, commonly used by OS X clients."
+msgstr ""
+
+msgid ""
+"Controls if Time Machine support via the FULLSYNC volume capability is "
+"advertised to clients."
+msgstr "控制是否通过FULLSYNC卷功能支持Time Machine支持客户端。"
+
 msgid "Controls the behavior of synchronous requests."
 msgstr "控制同步请求。"
 
@@ -1754,6 +1770,12 @@ msgstr "控制缓存在二级缓存（L2ARC）中的内容。"
 
 msgid "Controls what types of metadata are stored redundantly."
 msgstr "控制冗余存储哪些类型的元数据。"
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr "控制OS X元数据流的存储位置。"
+
+msgid "Controls where the OS X resource fork is stored."
+msgstr "控制OS X资源分叉的存储位置。"
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2100,6 +2122,9 @@ msgstr "守护进程事件"
 msgid "Daemon log"
 msgstr "守护进程记录"
 
+msgid "Data"
+msgstr "数据"
+
 msgid "Data Integrity"
 msgstr "数据的完整性"
 
@@ -2118,11 +2143,11 @@ msgstr "数据集"
 msgid "Dataset Type"
 msgstr "数据集类型"
 
+msgid "Dataset is locked"
+msgstr "数据集被锁定"
+
 msgid "Dataset is marked for deletion"
 msgstr "数据集已标记为删除"
-
-msgid "Dataset is protected"
-msgstr "数据集已保护"
 
 msgid "Dataset is unlocked"
 msgstr "数据集已解锁"
@@ -2264,6 +2289,9 @@ msgstr "删除选中的LAGGs"
 
 msgid "Delete Selected NFS Shares"
 msgstr "删除选中的NFS共享"
+
+msgid "Delete Selected Notifier"
+msgstr "删除选定的通知"
 
 msgid "Delete Selected Options"
 msgstr "删除选中的选项"
@@ -2856,6 +2884,9 @@ msgstr "要删除选中的群组吗？"
 msgid "Do you want to delete selected jobs?"
 msgstr "要删除选中的任务吗？"
 
+msgid "Do you want to delete selected notifier?"
+msgstr "你想删除选定的通知？"
+
 msgid "Do you want to delete selected options?"
 msgstr "要删除选中的选项吗？"
 
@@ -3224,6 +3255,9 @@ msgstr "启用“大型读/写”开关"
 msgid "Enable ACL inheritance."
 msgstr "启用ACL继承"
 
+msgid "Enable AFP"
+msgstr "启用AFP"
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "启用高级格式（4KB扇区大小）"
 
@@ -3542,9 +3576,6 @@ msgstr "加密工具"
 msgid "Encryption algorithm"
 msgstr "加密演算法"
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr "增强与Netatalk AFP服务器的兼容性。"
-
 msgid "Enter Command"
 msgstr "输入命令"
 
@@ -3574,10 +3605,8 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "如果要覆盖默认值（HTTP为80，HTTPS为443），请输入WebGUI的自定义端口号。"
 
-msgid ""
-"Enter a custom port number if you want to override the default port (default "
-"is 69)."
-msgstr "如果要覆盖默认端口，请输入自定义端口号（默认值为69）。"
+msgid "Enter a custom port number if you do not want to use default port 69."
+msgstr "如果您不想使用默认端口69，请输入自定义端口号。"
 
 #, php-format
 msgid ""
@@ -3598,6 +3627,9 @@ msgstr "输入说明以供参考"
 
 msgid "Enter a description for your reference."
 msgstr "输入说明以供参考。"
+
+msgid "Enter a directory"
+msgstr "输入一个目录"
 
 msgid "Enter a group description."
 msgstr "输入群组描述。"
@@ -3625,6 +3657,9 @@ msgstr "输入空格分隔的点设备列表。 设备将被创建并自动添�
 msgid "Enter a valid sysctl MIB name."
 msgstr "请输入有效的 sysctl MIB 名称。"
 
+msgid "Enter comment for the share"
+msgstr "输入对该共享的评论"
+
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
@@ -3632,6 +3667,9 @@ msgstr "请输入系统时间（格式为 MM/DD/YYYY hh:mm），或点选图标�
 
 msgid "Enter destination"
 msgstr "输入目的地"
+
+msgid "Enter extra options"
+msgstr "输入额外的选项"
 
 msgid "Enter facility name"
 msgstr "输入设备名称"
@@ -3667,6 +3705,12 @@ msgstr "输入UPS所连接的机器的UPS标识符和主机IP地址。 （这也
 
 msgid "Enter the command"
 msgstr "输入命令"
+
+msgid "Enter the location of the share"
+msgstr "输入共享的位置"
+
+msgid "Enter the name of the share"
+msgstr "输入共享的名字"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3766,6 +3810,9 @@ msgstr "已导出"
 
 msgid "Extended Attributes"
 msgstr "扩展属性"
+
+msgid "Extended Attributes - use a xattr."
+msgstr "Extended Attributes - use a xattr."
 
 msgid "Extended attributes"
 msgstr "扩展属性"
@@ -3917,6 +3964,10 @@ msgstr "2月"
 
 msgid "File"
 msgstr "文件"
+
+msgid ""
+"File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
+msgstr "文件（默认） - 使用与OS X和Netatalk兼容的._ AppleDouble文件。"
 
 msgid "File Editor"
 msgstr "文件编辑器"
@@ -5587,6 +5638,9 @@ msgstr "必须是90到95之间的数字。"
 msgid "Must choose one"
 msgstr "必选栏位。"
 
+msgid "Must not be empty."
+msgstr "不可以为空。"
+
 msgid "Mutual CHAP"
 msgstr "CHAP 相互验证"
 
@@ -5664,6 +5718,9 @@ msgstr "这台服务器的名称。如果留空则会使用默认的服务器名
 msgid "Name of the variable."
 msgstr "改名名称。"
 
+msgid "Native - store characters with their native ASCII value."
+msgstr "原生 - 使用其原生ASCII值存储字符。"
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "用户数据和元数据都不会缓存在ARC中。"
 
@@ -5678,6 +5735,12 @@ msgstr "NetBIO域"
 
 msgid "NetBIOS Name"
 msgstr "NetBIOS名"
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr "Netatalk（默认） - 使用Netatalk兼容的xattr。"
+
+msgid "Netatalk - use cross protocol locking with Netatalk."
+msgstr ""
 
 msgid "Netgraph"
 msgstr "网络图"
@@ -5725,6 +5788,9 @@ msgid ""
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr "永不 - 任何电源模式都轮询（检查）设备。这可能会导致降速中的磁盘增速。"
 
+msgid "New"
+msgstr "新增"
+
 msgid "New Password"
 msgstr "新密码"
 
@@ -5741,6 +5807,9 @@ msgstr "下一步"
 
 msgid "No"
 msgstr "否"
+
+msgid "No (default) - Disables advertising Time Machine support."
+msgstr "否（默认） - 禁用广播Time Machine支持。"
 
 msgid "No DNS server have been configured."
 msgstr "未配置DNS服务器。"
@@ -5918,6 +5987,9 @@ msgstr "不可恢复"
 
 msgid "None"
 msgstr "无"
+
+msgid "None (default) - no cross protocol locking."
+msgstr "无（默认） - 无交叉协议锁定。"
 
 msgid "Normal"
 msgstr "正常"
@@ -6472,9 +6544,15 @@ msgstr "端口转发"
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "端口号必须是514或1024到49151之间的数字。"
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr "端口号必须是69或1024到49151之间的数字。"
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "端口号必须在%d和%d之间的范围内。"
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
+msgstr "TFTP服务的端口。 留空以使用默认端口。"
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -6583,6 +6661,11 @@ msgstr "主要群组"
 msgid "Primary group is also selected in additional group."
 msgstr "主要群组也会被加入到附加群组中。"
 
+msgid ""
+"Private (default) - store characters as encoded by the OS X client: mapped "
+"to the Unicode private range."
+msgstr "私有（默认） - 存储由OS X客户端编码的字符：映射到Unicode专用范围。"
+
 msgid "Private Key"
 msgstr "私钥"
 
@@ -6609,6 +6692,9 @@ msgstr "保护"
 
 msgid "Protect Setting"
 msgstr "保护设置"
+
+msgid "Protected"
+msgstr "受保护的"
 
 msgid "Protocol"
 msgstr "协议"
@@ -6932,6 +7018,9 @@ msgstr "已配置远程共享名"
 
 msgid "Removable"
 msgstr "可移除"
+
+msgid "Remove"
+msgstr "移除"
 
 msgid "Remove ZFS label information from a device"
 msgstr "从设备中删除ZFS标签信息"
@@ -7910,8 +7999,8 @@ msgstr "添加禁令前在指定时间发生次数的间隔（hh:mm:ss）。"
 msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr "指定质询 - 响应认证的使用"
 
-msgid "Specifies the username which the service will run as."
-msgstr "指定执行服务的用户。"
+msgid "Specifies the username under which the TFTP service should run."
+msgstr "指定TFTP服务应运行的用户名。"
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -7989,6 +8078,14 @@ msgstr "将NTFS ACL存储在扩展属性中。"
 
 msgid "Store alternate data streams in Extended Attributes."
 msgstr "在扩展属性中存储备用数据流。"
+
+msgid ""
+"Stream (experimental) - pass the stream on to the next module in the VFS "
+"stack."
+msgstr "流（实验） - 将流传递到VFS堆栈中的下一个模块。"
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
+msgstr "流 - 将流传递到VFS堆栈中的下一个模块。"
 
 msgid "Strict DLNA"
 msgstr "严格DLNA"
@@ -9454,6 +9551,9 @@ msgstr "Time Machine"
 msgid "Time Server"
 msgstr "时间服务器"
 
+msgid "Time Stamp"
+msgstr "时间戳"
+
 msgid "Time Synchronization"
 msgstr "时间同步"
 
@@ -9481,6 +9581,9 @@ msgstr "时间同步间隔"
 
 msgid "Timeout"
 msgstr "失效时间"
+
+msgid "Timeout must be a number between 10 and 255000000."
+msgstr "超时值必须是10到255000000之间的数字。"
 
 msgid "Times"
 msgstr "次数"
@@ -9888,6 +9991,9 @@ msgstr "更新周期"
 msgid "Update period"
 msgstr "更新间隔"
 
+msgid "Updatenotifier"
+msgstr "更新通知程序"
+
 msgid "Upgrade Firmware"
 msgstr "升级固件"
 
@@ -10003,6 +10109,9 @@ msgstr "使用切换按钮而不是启用/禁用按钮。"
 msgid "Used"
 msgstr "已用空间"
 
+msgid "Used Space"
+msgstr "已用空间"
+
 msgid "User"
 msgstr "用户"
 
@@ -10062,6 +10171,21 @@ msgstr "%s 字节的片段大小（fragment size）。"
 
 msgid "VCPUs"
 msgstr "VCPUs"
+
+msgid "VFS fruit:encoding"
+msgstr "VFS fruit：编码"
+
+msgid "VFS fruit:locking"
+msgstr "VFS fruit：锁定"
+
+msgid "VFS fruit:metadata"
+msgstr "VFS fruit：元数据"
+
+msgid "VFS fruit:resource"
+msgstr "VFS fruit：资源"
+
+msgid "VFS fruit:time machine"
+msgstr "VFS fruit:time machine"
 
 msgid "VHID"
 msgstr "VHID"
@@ -10198,11 +10322,11 @@ msgstr "卷大小"
 msgid "Volume Size Limit"
 msgstr "卷大小限制"
 
+msgid "Volume is locked"
+msgstr "卷被锁定"
+
 msgid "Volume is marked for deletion"
 msgstr "卷被标记为删除"
-
-msgid "Volume is protected"
-msgstr "卷被保护"
 
 msgid "Volume is unlocked"
 msgstr "卷已解锁"
@@ -10388,6 +10512,9 @@ msgstr "Y轴范围"
 
 msgid "Yes"
 msgstr "是"
+
+msgid "Yes - Enables Time Machine support for this share."
+msgstr "是 - 启用Time Machine支持此共享。"
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -10694,3 +10821,31 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可见"
+
+#~ msgid "Specifies the username which the service will run as."
+#~ msgstr "指定执行服务的用户。"
+
+#~ msgid "Dataset is protected"
+#~ msgstr "数据集已保护"
+
+#~ msgid "AFP Compatibility"
+#~ msgstr "AFP兼容性"
+
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port (default "
+#~ "is 69)."
+#~ msgstr "如果要覆盖默认端口，请输入自定义端口号（默认值为69）。"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server."
+#~ msgstr "增强与Netatalk AFP服务器的兼容性。"
+
+#~ msgid "Volume is protected"
+#~ msgstr "卷被保护"
+
+#~ msgid ""
+#~ "Controls how the set of illegal NTFS ASCII character, commonly used by OS X "
+#~ "clients, are stored in the filesystem."
+#~ msgstr "控制OS X客户端常用的一组非法NTFS ASCII字符如何存储在文件系统中。"
+
+#~ msgid "Netatalk - use cross protocol locking with Netatalk"
+#~ msgstr "Netatalk - 使用Netatalk进行交叉协议锁定"

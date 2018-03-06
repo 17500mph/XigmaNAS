@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"POT-Creation-Date: 2018-03-06 14:30+0000\n"
 "PO-Revision-Date: 2018-02-24 11:25+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-05 22:46+0000\n"
+"X-Launchpad-Export-Date: 2018-03-06 19:53+0000\n"
 "X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -216,6 +216,9 @@ msgstr "4KB оболонка"
 msgid "514"
 msgstr "514"
 
+msgid "69"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN тег (між 1 і 4094)."
 
@@ -380,9 +383,6 @@ msgstr "Ім'я AD або PDC."
 
 msgid "AFP"
 msgstr "AFP"
-
-msgid "AFP Compatibility"
-msgstr "AFP сумісність"
 
 msgid "AG"
 msgstr "AG"
@@ -612,6 +612,9 @@ msgstr "Додаткова Група"
 
 msgid "Additional Network"
 msgstr "Додаткова мережа"
+
+msgid "Additional Parameter"
+msgstr ""
 
 msgid "Additional Parameters"
 msgstr "Додаткові параметри"
@@ -953,6 +956,9 @@ msgstr "Додати визначені користувачем спільні 
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
+msgstr ""
 
 msgid "Apple Public Source License"
 msgstr "Apple Public Source License"
@@ -1842,6 +1848,16 @@ msgstr "Модель контролера"
 msgid "Controller TCP Port"
 msgstr "TCP порт контролера"
 
+msgid ""
+"Controls how the set of illegal NTFS ASCII character are stored in the "
+"filesystem, commonly used by OS X clients."
+msgstr ""
+
+msgid ""
+"Controls if Time Machine support via the FULLSYNC volume capability is "
+"advertised to clients."
+msgstr ""
+
 msgid "Controls the behavior of synchronous requests."
 msgstr "Управляє поведінкою синхронних запитів."
 
@@ -1898,6 +1914,12 @@ msgstr "Управляє тим, що саме буде кешуватися в 
 
 msgid "Controls what types of metadata are stored redundantly."
 msgstr "Управляє тим, які типи метаданих зберігатимуться надлишково."
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr ""
+
+msgid "Controls where the OS X resource fork is stored."
+msgstr ""
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2295,6 +2317,9 @@ msgstr "Події демону"
 msgid "Daemon log"
 msgstr "Журнал демона"
 
+msgid "Data"
+msgstr ""
+
 msgid "Data Integrity"
 msgstr "Целістність даних"
 
@@ -2313,11 +2338,11 @@ msgstr "Набір даних"
 msgid "Dataset Type"
 msgstr "Тип набору даних"
 
+msgid "Dataset is locked"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr "Набір даних позначений для видалення"
-
-msgid "Dataset is protected"
-msgstr "Набір даних захищений"
 
 msgid "Dataset is unlocked"
 msgstr "Набір даних розблоковано"
@@ -2470,6 +2495,9 @@ msgstr "Видалити обрані LAGG"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Видалити обрані загальні ресурси NFS"
+
+msgid "Delete Selected Notifier"
+msgstr ""
 
 msgid "Delete Selected Options"
 msgstr "Видалити вибрані опції"
@@ -3095,6 +3123,9 @@ msgstr "Ви бажаєте видалити обрані групи"
 msgid "Do you want to delete selected jobs?"
 msgstr "Видалити вибрані завдання?"
 
+msgid "Do you want to delete selected notifier?"
+msgstr ""
+
 msgid "Do you want to delete selected options?"
 msgstr "Ви хочете видалити обрані опції?"
 
@@ -3466,6 +3497,9 @@ msgstr "Увімкнути \"Велике читання/запис\""
 msgid "Enable ACL inheritance."
 msgstr "Дозволити успадкування ACL."
 
+msgid "Enable AFP"
+msgstr ""
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Дозволити Advanced Forma (розмір сектора 4КБ)"
 
@@ -3806,9 +3840,6 @@ msgstr "Інструмент шифрування"
 msgid "Encryption algorithm"
 msgstr "Алгоритм шифрування"
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr "Розширена сумісність з сервером Netatalk AFP."
-
 msgid "Enter Command"
 msgstr "Уведіть команду"
 
@@ -3840,12 +3871,8 @@ msgstr ""
 "Введіть номер порта для веб інтерфейсу, якщо ви хочете змінити значення за "
 "замовчуванням (80 для HTTP, 443 для HTTPS)."
 
-msgid ""
-"Enter a custom port number if you want to override the default port (default "
-"is 69)."
+msgid "Enter a custom port number if you do not want to use default port 69."
 msgstr ""
-"Введіть будь-який номер порту якщо ви бажаєте замінити порт за замовчуванням "
-"(порт 69)."
 
 #, php-format
 msgid ""
@@ -3870,6 +3897,9 @@ msgstr "Введіть опис собі на згадку"
 
 msgid "Enter a description for your reference."
 msgstr "Введіть опис для вашого посилання."
+
+msgid "Enter a directory"
+msgstr ""
 
 msgid "Enter a group description."
 msgstr "Введіть опис групи."
@@ -3899,6 +3929,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Введіть правильне ім'я sysctl MIB."
 
+msgid "Enter comment for the share"
+msgstr ""
+
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
@@ -3908,6 +3941,9 @@ msgstr ""
 
 msgid "Enter destination"
 msgstr "Введіть місце призначення"
+
+msgid "Enter extra options"
+msgstr ""
 
 msgid "Enter facility name"
 msgstr "Введіть назву обладнання"
@@ -3945,6 +3981,12 @@ msgstr ""
 
 msgid "Enter the command"
 msgstr "Введіть команду"
+
+msgid "Enter the location of the share"
+msgstr ""
+
+msgid "Enter the name of the share"
+msgstr ""
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -4055,6 +4097,9 @@ msgstr "Експортовано"
 
 msgid "Extended Attributes"
 msgstr "Додаткові атрибути"
+
+msgid "Extended Attributes - use a xattr."
+msgstr ""
 
 msgid "Extended attributes"
 msgstr "Розширені атрибути"
@@ -4213,6 +4258,10 @@ msgstr "Лютий"
 
 msgid "File"
 msgstr "Файл"
+
+msgid ""
+"File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
+msgstr ""
 
 msgid "File Editor"
 msgstr "Редактор файлів"
@@ -5992,6 +6041,9 @@ msgstr "Має бути число від 90 до 95."
 msgid "Must choose one"
 msgstr "Треба вибрати один з варіантів"
 
+msgid "Must not be empty."
+msgstr ""
+
 msgid "Mutual CHAP"
 msgstr "Взаємна CHAP"
 
@@ -6073,6 +6125,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Ім'я змінної."
 
+msgid "Native - store characters with their native ASCII value."
+msgstr ""
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "Ні користувацькі дані, ні метадані не будуть кешуватися в ARC."
 
@@ -6087,6 +6142,12 @@ msgstr "Домен NetBIOS"
 
 msgid "NetBIOS Name"
 msgstr "Ім'я NetBIOS"
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr ""
+
+msgid "Netatalk - use cross protocol locking with Netatalk."
+msgstr ""
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -6140,6 +6201,9 @@ msgstr ""
 "енергоспоживання. Це може спричинити повторну розкрутку шпинделя диска, який "
 "зупинився."
 
+msgid "New"
+msgstr ""
+
 msgid "New Password"
 msgstr "Новий пароль"
 
@@ -6158,6 +6222,9 @@ msgstr "Наступне"
 
 msgid "No"
 msgstr "Ні"
+
+msgid "No (default) - Disables advertising Time Machine support."
+msgstr ""
 
 msgid "No DNS server have been configured."
 msgstr "Немає сконфігурованих DNS серверів."
@@ -6337,6 +6404,9 @@ msgstr "Непоправне"
 
 msgid "None"
 msgstr "Немає"
+
+msgid "None (default) - no cross protocol locking."
+msgstr ""
 
 msgid "Normal"
 msgstr "Нормальний"
@@ -6915,9 +6985,15 @@ msgstr "Переадресування портів"
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Номер порту повинен бути 514 або числом між 1024 та 49151."
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr ""
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "Номер порту повинен бути у діапазоні між %d та %d."
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
+msgstr ""
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -7033,6 +7109,11 @@ msgstr "Основна група"
 msgid "Primary group is also selected in additional group."
 msgstr "Первинна група також вибирається в додатковій групі."
 
+msgid ""
+"Private (default) - store characters as encoded by the OS X client: mapped "
+"to the Unicode private range."
+msgstr ""
+
 msgid "Private Key"
 msgstr "Приватний ключ"
 
@@ -7059,6 +7140,9 @@ msgstr "Захистити"
 
 msgid "Protect Setting"
 msgstr "Параметри захисту"
+
+msgid "Protected"
+msgstr ""
 
 msgid "Protocol"
 msgstr "Протокол"
@@ -7395,6 +7479,9 @@ msgstr "Ім'я віддаленого загального ресурсу ск�
 
 msgid "Removable"
 msgstr "Змінний пристрій"
+
+msgid "Remove"
+msgstr ""
 
 msgid "Remove ZFS label information from a device"
 msgstr "Видалити інформацію про мітки ZFS з пристрою"
@@ -8447,8 +8534,8 @@ msgstr ""
 msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr "Визначає використання перевірки автентичності Challenge-Response."
 
-msgid "Specifies the username which the service will run as."
-msgstr "Визначає від імені якого користувача буде запущено сервіс."
+msgid "Specifies the username under which the TFTP service should run."
+msgstr ""
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8531,6 +8618,14 @@ msgstr "Зберігати списки контролю доступу NTFS в 
 
 msgid "Store alternate data streams in Extended Attributes."
 msgstr "Зберігати альтернативні потоки даних в розширених атрибутах."
+
+msgid ""
+"Stream (experimental) - pass the stream on to the next module in the VFS "
+"stack."
+msgstr ""
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
+msgstr ""
 
 msgid "Strict DLNA"
 msgstr "Строгий DLNA"
@@ -10223,6 +10318,9 @@ msgstr "Time Machine"
 msgid "Time Server"
 msgstr "Сервер служби часу"
 
+msgid "Time Stamp"
+msgstr ""
+
 msgid "Time Synchronization"
 msgstr "Синхронізація часу"
 
@@ -10252,6 +10350,9 @@ msgstr "Інтервал оновлення часу"
 
 msgid "Timeout"
 msgstr "Тайм-аут"
+
+msgid "Timeout must be a number between 10 and 255000000."
+msgstr ""
 
 msgid "Times"
 msgstr "Час"
@@ -10689,6 +10790,9 @@ msgstr "Період Оновлення"
 msgid "Update period"
 msgstr "Період оновлення"
 
+msgid "Updatenotifier"
+msgstr ""
+
 msgid "Upgrade Firmware"
 msgstr "Оновлення прошивки"
 
@@ -10831,6 +10935,9 @@ msgstr ""
 msgid "Used"
 msgstr "Використано"
 
+msgid "Used Space"
+msgstr ""
+
 msgid "User"
 msgstr "Користувач"
 
@@ -10893,6 +11000,21 @@ msgstr "Використовується розмір фрагмента в %s �
 
 msgid "VCPUs"
 msgstr "VCPUs"
+
+msgid "VFS fruit:encoding"
+msgstr ""
+
+msgid "VFS fruit:locking"
+msgstr ""
+
+msgid "VFS fruit:metadata"
+msgstr ""
+
+msgid "VFS fruit:resource"
+msgstr ""
+
+msgid "VFS fruit:time machine"
+msgstr ""
 
 msgid "VHID"
 msgstr "VHID"
@@ -11034,11 +11156,11 @@ msgstr "Розмір тому"
 msgid "Volume Size Limit"
 msgstr "Граничний розмір тома"
 
+msgid "Volume is locked"
+msgstr ""
+
 msgid "Volume is marked for deletion"
 msgstr "Том позначений для видалення"
-
-msgid "Volume is protected"
-msgstr "Том захищений"
 
 msgid "Volume is unlocked"
 msgstr "Том разблокований"
@@ -11241,6 +11363,9 @@ msgstr "Діапазон значень на осі Y"
 
 msgid "Yes"
 msgstr "Так"
+
+msgid "Yes - Enables Time Machine support for this share."
+msgstr ""
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -11570,3 +11695,25 @@ msgstr "використано з"
 
 msgid "visible"
 msgstr "видимий"
+
+#~ msgid "Specifies the username which the service will run as."
+#~ msgstr "Визначає від імені якого користувача буде запущено сервіс."
+
+#~ msgid "Volume is protected"
+#~ msgstr "Том захищений"
+
+#~ msgid "AFP Compatibility"
+#~ msgstr "AFP сумісність"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server."
+#~ msgstr "Розширена сумісність з сервером Netatalk AFP."
+
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port (default "
+#~ "is 69)."
+#~ msgstr ""
+#~ "Введіть будь-який номер порту якщо ви бажаєте замінити порт за замовчуванням "
+#~ "(порт 69)."
+
+#~ msgid "Dataset is protected"
+#~ msgstr "Набір даних захищений"
