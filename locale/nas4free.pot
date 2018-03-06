@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"POT-Creation-Date: 2018-03-06 01:58+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -170,6 +170,9 @@ msgstr ""
 msgid "514"
 msgstr ""
 
+msgid "69"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
 
@@ -292,9 +295,6 @@ msgid "AD or PDC name."
 msgstr ""
 
 msgid "AFP"
-msgstr ""
-
-msgid "AFP Compatibility"
 msgstr ""
 
 msgid "AG"
@@ -520,6 +520,9 @@ msgid "Additional Group"
 msgstr ""
 
 msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Parameter"
 msgstr ""
 
 msgid "Additional Parameters"
@@ -776,6 +779,9 @@ msgid "Append user defined shares"
 msgstr ""
 
 msgid "Apple Filing Protocol"
+msgstr ""
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
 msgstr ""
 
 msgid "Apple Public Source License"
@@ -1577,6 +1583,12 @@ msgstr ""
 msgid "Controller TCP Port"
 msgstr ""
 
+msgid "Controls how the set of illegal NTFS ASCII character, commonly used by OS X clients, are stored in the filesystem."
+msgstr ""
+
+msgid "Controls if Time Machine support via the FULLSYNC volume capability is advertised to clients."
+msgstr ""
+
 msgid "Controls the behavior of synchronous requests."
 msgstr ""
 
@@ -1605,6 +1617,12 @@ msgid "Controls what is cached in the secondary cache (L2ARC)."
 msgstr ""
 
 msgid "Controls what types of metadata are stored redundantly."
+msgstr ""
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr ""
+
+msgid "Controls where the OS X resource fork is stored."
 msgstr ""
 
 msgid "Controls whether processes can be executed from within this file system."
@@ -1883,6 +1901,9 @@ msgstr ""
 msgid "Daemon log"
 msgstr ""
 
+msgid "Data"
+msgstr ""
+
 msgid "Data Integrity"
 msgstr ""
 
@@ -1901,10 +1922,10 @@ msgstr ""
 msgid "Dataset Type"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is locked"
 msgstr ""
 
-msgid "Dataset is protected"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
 msgid "Dataset is unlocked"
@@ -2034,6 +2055,9 @@ msgid "Delete Selected LAGGs"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
+msgstr ""
+
+msgid "Delete Selected Notifier"
 msgstr ""
 
 msgid "Delete Selected Options"
@@ -2599,6 +2623,9 @@ msgstr ""
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
+msgid "Do you want to delete selected notifier?"
+msgstr ""
+
 msgid "Do you want to delete selected options?"
 msgstr ""
 
@@ -2965,6 +2992,9 @@ msgstr ""
 msgid "Enable ACL inheritance."
 msgstr ""
 
+msgid "Enable AFP"
+msgstr ""
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
@@ -3269,9 +3299,6 @@ msgstr ""
 msgid "Encryption algorithm"
 msgstr ""
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr ""
-
 msgid "Enter Command"
 msgstr ""
 
@@ -3299,7 +3326,7 @@ msgstr ""
 msgid "Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
-msgid "Enter a custom port number if you want to override the default port (default is 69)."
+msgid "Enter a custom port number if you do not want to use default port 69."
 msgstr ""
 
 #, php-format
@@ -3316,6 +3343,9 @@ msgid "Enter a description for your reference"
 msgstr ""
 
 msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a directory"
 msgstr ""
 
 msgid "Enter a group description."
@@ -3342,10 +3372,16 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr ""
 
+msgid "Enter comment for the share"
+msgstr ""
+
 msgid "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to select it."
 msgstr ""
 
 msgid "Enter destination"
+msgstr ""
+
+msgid "Enter extra options"
 msgstr ""
 
 msgid "Enter facility name"
@@ -3379,6 +3415,12 @@ msgid "Enter the UPS identifier and host IP address of the machine where the UPS
 msgstr ""
 
 msgid "Enter the command"
+msgstr ""
+
+msgid "Enter the location of the share"
+msgstr ""
+
+msgid "Enter the name of the share"
 msgstr ""
 
 msgid "Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."
@@ -3466,6 +3508,9 @@ msgid "Exported"
 msgstr ""
 
 msgid "Extended Attributes"
+msgstr ""
+
+msgid "Extended Attributes - use a xattr."
 msgstr ""
 
 msgid "Extended attributes"
@@ -3611,6 +3656,9 @@ msgid "February"
 msgstr ""
 
 msgid "File"
+msgstr ""
+
+msgid "File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
 msgstr ""
 
 msgid "File Editor"
@@ -5168,6 +5216,9 @@ msgstr ""
 msgid "Must choose one"
 msgstr ""
 
+msgid "Must not be empty."
+msgstr ""
+
 msgid "Mutual CHAP"
 msgstr ""
 
@@ -5243,6 +5294,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr ""
 
+msgid "Native - store characters with their native ASCII value."
+msgstr ""
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr ""
 
@@ -5256,6 +5310,12 @@ msgid "NetBIOS Domain"
 msgstr ""
 
 msgid "NetBIOS Name"
+msgstr ""
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr ""
+
+msgid "Netatalk - use cross protocol locking with Netatalk"
 msgstr ""
 
 msgid "Netgraph"
@@ -5300,6 +5360,9 @@ msgstr ""
 msgid "Never - Poll (check) the device regardless of its power mode. This may cause a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
 
+msgid "New"
+msgstr ""
+
 msgid "New Password"
 msgstr ""
 
@@ -5313,6 +5376,9 @@ msgid "Next"
 msgstr ""
 
 msgid "No"
+msgstr ""
+
+msgid "No (default) - Disables advertising Time Machine support."
 msgstr ""
 
 msgid "No DNS server have been configured."
@@ -5490,6 +5556,9 @@ msgid "Non-Recoverable"
 msgstr ""
 
 msgid "None"
+msgstr ""
+
+msgid "None (default) - no cross protocol locking."
 msgstr ""
 
 msgid "Normal"
@@ -6017,8 +6086,14 @@ msgstr ""
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr ""
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr ""
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
 
 msgid "Port of the remote syslog server. Leave blank to use the default port."
@@ -6123,6 +6198,9 @@ msgstr ""
 msgid "Primary group is also selected in additional group."
 msgstr ""
 
+msgid "Private (default) - store characters as encoded by the OS X client: mapped to the Unicode private range."
+msgstr ""
+
 msgid "Private Key"
 msgstr ""
 
@@ -6148,6 +6226,9 @@ msgid "Protect"
 msgstr ""
 
 msgid "Protect Setting"
+msgstr ""
+
+msgid "Protected"
 msgstr ""
 
 msgid "Protocol"
@@ -6455,6 +6536,9 @@ msgid "Remote share name configured"
 msgstr ""
 
 msgid "Removable"
+msgstr ""
+
+msgid "Remove"
 msgstr ""
 
 msgid "Remove ZFS label information from a device"
@@ -7374,7 +7458,7 @@ msgstr ""
 msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr ""
 
-msgid "Specifies the username which the service will run as."
+msgid "Specifies the username under which the TFTP service should run."
 msgstr ""
 
 msgid "Specifies whether it is allowed to login as superuser (root) directly."
@@ -7444,6 +7528,12 @@ msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
 
 msgid "Store alternate data streams in Extended Attributes."
+msgstr ""
+
+msgid "Stream (experimental) - pass the stream on to the next module in the VFS stack."
+msgstr ""
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -8662,6 +8752,9 @@ msgstr ""
 msgid "Time Server"
 msgstr ""
 
+msgid "Time Stamp"
+msgstr ""
+
 msgid "Time Synchronization"
 msgstr ""
 
@@ -8687,6 +8780,9 @@ msgid "Time update interval"
 msgstr ""
 
 msgid "Timeout"
+msgstr ""
+
+msgid "Timeout must be a number between 10 and 255000000."
 msgstr ""
 
 msgid "Times"
@@ -9066,6 +9162,9 @@ msgstr ""
 msgid "Update period"
 msgstr ""
 
+msgid "Updatenotifier"
+msgstr ""
+
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9165,6 +9264,9 @@ msgstr ""
 msgid "Used"
 msgstr ""
 
+msgid "Used Space"
+msgstr ""
+
 msgid "User"
 msgstr ""
 
@@ -9221,6 +9323,21 @@ msgid "Using %s bytes fragment size."
 msgstr ""
 
 msgid "VCPUs"
+msgstr ""
+
+msgid "VFS fruit:encoding"
+msgstr ""
+
+msgid "VFS fruit:locking"
+msgstr ""
+
+msgid "VFS fruit:metadata"
+msgstr ""
+
+msgid "VFS fruit:resource"
+msgstr ""
+
+msgid "VFS fruit:time machine"
 msgstr ""
 
 msgid "VHID"
@@ -9355,10 +9472,10 @@ msgstr ""
 msgid "Volume Size Limit"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is locked"
 msgstr ""
 
-msgid "Volume is protected"
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume is unlocked"
@@ -9531,6 +9648,9 @@ msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
+msgstr ""
+
+msgid "Yes - Enables Time Machine support for this share."
 msgstr ""
 
 msgid "You can also install a package via SSH or console using the pkg install command."
