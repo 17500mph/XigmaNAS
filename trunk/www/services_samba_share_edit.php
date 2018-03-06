@@ -33,81 +33,34 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
+require_once 'properties_services_samba_share_edit.php';
+require_once 'co_request_method.php';
 
-if (isset($_GET['uuid']))
-	$uuid = $_GET['uuid'];
-if (isset($_POST['uuid']))
-	$uuid = $_POST['uuid'];
-
-array_make_branch($config,'mounts','mount');
-array_make_branch($config,'samba','share');
-
-array_sort_key($config['mounts']['mount'],'devicespecialfile');
-array_sort_key($config['samba']['share'],'name');
-
-$a_mount = &$config['mounts']['mount'];
-$a_share = &$config['samba']['share'];
-$default_shadowformat = "auto-%Y%m%d-%H%M%S";
-
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_share, "uuid")))) {
-	$pconfig['uuid'] = $a_share[$cnid]['uuid'];
-	$pconfig['name'] = $a_share[$cnid]['name'];
-	$pconfig['path'] = $a_share[$cnid]['path'];
-	$pconfig['comment'] = $a_share[$cnid]['comment'];
-	$pconfig['readonly'] = isset($a_share[$cnid]['readonly']);
-	$pconfig['browseable'] = isset($a_share[$cnid]['browseable']);
-	$pconfig['guest'] = isset($a_share[$cnid]['guest']);
-	$pconfig['inheritpermissions'] = isset($a_share[$cnid]['inheritpermissions']);
-	$pconfig['inheritacls'] = isset($a_share[$cnid]['inheritacls']);
-	$pconfig['recyclebin'] = isset($a_share[$cnid]['recyclebin']);
-	$pconfig['hidedotfiles'] = isset($a_share[$cnid]['hidedotfiles']);
-	$pconfig['shadowcopy'] = isset($a_share[$cnid]['shadowcopy']);
-	$pconfig['shadowformat'] = !empty($a_share[$cnid]['shadowformat']) ? $a_share[$cnid]['shadowformat'] : "";
-	$pconfig['zfsacl'] = isset($a_share[$cnid]['zfsacl']);
-	$pconfig['storealternatedatastreams'] = isset($a_share[$cnid]['storealternatedatastreams']);
-	$pconfig['storentfsacls'] = isset($a_share[$cnid]['storentfsacls']);
-	$pconfig['afpcompat'] = isset($a_share[$cnid]['afpcompat']);
-	$pconfig['hostsallow'] = $a_share[$cnid]['hostsallow'];
-	$pconfig['hostsdeny'] = $a_share[$cnid]['hostsdeny'];
-	$pconfig['auxparam'] = "";
-	if (isset($a_share[$cnid]['auxparam']) && is_array($a_share[$cnid]['auxparam']))
-		$pconfig['auxparam'] = implode("\n", $a_share[$cnid]['auxparam']);
-} else {
-	$pconfig['uuid'] = uuid();
-	$pconfig['name'] = "";
-	$pconfig['path'] = "";
-	$pconfig['comment'] = "";
-	$pconfig['readonly'] = false;
-	$pconfig['browseable'] = true;
-	$pconfig['guest'] = true;
-	$pconfig['inheritpermissions'] = true;
-	$pconfig['inheritacls'] = true;
-	$pconfig['recyclebin'] = true;
-	$pconfig['hidedotfiles'] = true;
-	$pconfig['shadowcopy'] = true;
-	$pconfig['shadowformat'] = $default_shadowformat;
-	$pconfig['zfsacl'] = false;
-	$pconfig['storealternatedatastreams'] = false;
-	$pconfig['storentfsacls'] = false;
-	$pconfig['afpcompat'] = false;
-	$pconfig['hostsallow'] = "";
-	$pconfig['hostsdeny'] = "";
-	$pconfig['auxparam'] = "";
+function get_sphere_services_samba_share_edit() {
+	global $config;
+	
+//	sphere structure
+	$sphere = new co_sphere_row('services_samba_share_edit','php');
+	$sphere->parent->set_basename('services_samba_share');
+	$sphere->set_notifier('smbshare');
+	$sphere->set_row_identifier('uuid');
+	$sphere->grid = &array_make_branch($config,'samba','share');
+	if(!empty($sphere->grid)):
+		array_sort_key($sphere->grid,'name');
+	endif;
+	return $sphere;
 }
-if ($pconfig['shadowformat'] == "") {
-	$pconfig['shadowformat'] = $default_shadowformat;
-}
-
 // get mount info specified path
 function get_mount_info($path){
-	if (file_exists($path) === FALSE)
-		return FALSE;
-
-// get all mount points
+	if(file_exists($path) === false):
+		return false;
+	endif;
+	//	get all mount points
 	$a_mounts = [];
-	mwexec2('/sbin/mount -p', $rawdata);
-	foreach($rawdata as $line) {
-		list($dev,$dir,$fs,$opt,$dump,$pass) = preg_split('/\s+/', $line);
+	mwexec2('/sbin/mount -p',$rawdata);
+	foreach($rawdata as $line):
+		list($dev,$dir,$fs,$opt,$dump,$pass) = preg_split('/\s+/',$line);
 		$a_mounts[] = [
 			'dev' => $dev,
 			'dir' => $dir,
@@ -116,254 +69,332 @@ function get_mount_info($path){
 			'dump' => $dump,
 			'pass' => $pass,
 		];
-	}
-	if (empty($a_mounts))
-		return FALSE;
-
+	endforeach;
+	if(empty($a_mounts)):
+		return false;
+	endif;
 	// check path with mount list
 	do {
-		foreach ($a_mounts as $mountv) {
-			if (strcmp($mountv['dir'], $path) == 0) {
+		foreach($a_mounts as $mountv):
+			if(strcmp($mountv['dir'],$path) == 0):
 				// found mount point
 				return $mountv;
-			}
-		}
+			endif;
+		endforeach;
 		// path don't have parent?
-		if (strpos($path, '/') === FALSE)
+		if(strpos($path,'/') === false):
 			break;
+		endif;
 		// retry with parent
 		$pathinfo = pathinfo($path);
 		$path = $pathinfo['dirname'];
 	} while (1);
-	return FALSE;
+	return false;
 }
-
-if ($_POST) {
-	unset($input_errors);
-	$pconfig = $_POST;
-
-	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
-		header("Location: services_samba_share.php");
-		exit;
-	}
-
-	// Input validation.
-	$reqdfields = ['name','comment'];
-	$reqdfieldsn = [gtext('Name'),gtext('Comment')];
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-
-	$reqdfieldst = ['string','string'];
-	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
-	// Check for duplicates.
-	$index = array_search_ex($_POST['name'], $a_share, "name");
-	if (FALSE !== $index) {
-		if (!((FALSE !== $cnid) && ($a_share[$cnid]['uuid'] === $a_share[$index]['uuid']))) {
-			$input_errors[] = gtext("The share name is already used.");
-		}
-	}
-
-	// Enable ZFS ACL on ZFS mount point
-	$zfsacl = isset($_POST['zfsacl']) ? true : false;
-	$mntinfo = get_mount_info($_POST['path']);
-	if ($mntinfo !== FALSE && $mntinfo['fs'] === "zfs") {
-		if ($cnid === FALSE) {
-			// first creation
-			$zfsacl = true;
-		}
-	}
-
-	if (empty($input_errors)) {
-		$share = [];
-		$share['uuid'] = $_POST['uuid'];
-		$share['name'] = $_POST['name'];
-		$share['path'] = $_POST['path'];
-		$share['comment'] = $_POST['comment'];
-		$share['readonly'] = isset($_POST['readonly']) ? true : false;
-		$share['browseable'] = isset($_POST['browseable']) ? true : false;
-		$share['guest'] = isset($_POST['guest']) ? true : false;
-		$share['inheritpermissions'] = isset($_POST['inheritpermissions']) ? true : false;
-		$share['inheritacls'] = isset($_POST['inheritacls']) ? true : false;
-		$share['recyclebin'] = isset($_POST['recyclebin']) ? true : false;
-		$share['hidedotfiles'] = isset($_POST['hidedotfiles']) ? true : false;
-		$share['shadowcopy'] = isset($_POST['shadowcopy']) ? true : false;
-		$share['shadowformat'] = $_POST['shadowformat'];
-		//$share['zfsacl'] = isset($_POST['zfsacl']) ? true : false;
-		$share['zfsacl'] = $zfsacl;
-		$share['storealternatedatastreams'] = isset($_POST['storealternatedatastreams']) ? true : false;
-		$share['storentfsacls'] = isset($_POST['storentfsacls']) ? true : false;
-		$share['afpcompat'] = isset($_POST['afpcompat']) ? true : false;
-		$share['hostsallow'] = $_POST['hostsallow'];
-		$share['hostsdeny'] = $_POST['hostsdeny'];
-
-		# Write additional parameters.
-		unset($share['auxparam']);
-		foreach (explode("\n", $_POST['auxparam']) as $auxparam) {
-			$auxparam = trim($auxparam, "\t\n\r");
-			if (!empty($auxparam))
-				$share['auxparam'][] = $auxparam;
-		}
-
-		if (isset($uuid) && (FALSE !== $cnid)) {
-			$a_share[$cnid] = $share;
-			$mode = UPDATENOTIFY_MODE_MODIFIED;
-		} else {
-			$a_share[] = $share;
-			$mode = UPDATENOTIFY_MODE_NEW;
-		}
-
-		updatenotify_set("smbshare", $mode, $share['uuid']);
-		write_config();
-
-		header("Location: services_samba_share.php");
-		exit;
-	}
-}
-$pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'),isset($uuid) ? gtext('Edit') : gtext('Add')];
-?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="services_samba.php"><span><?=gtext("Settings");?></span></a></li>
-		<li class="tabact"><a href="services_samba_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
-	</ul></td></tr>
-	<tr>
-		<td class="tabcont">
-			<form action="services_samba_share_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline(gtext("Share Settings"));?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Name");?></td>
-						<td width="78%" class="vtable">
-							<input name="name" type="text" class="formfld" id="name" size="30" value="<?=htmlspecialchars($pconfig['name']);?>" />
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Comment");?></td>
-						<td width="78%" class="vtable">
-							<input name="comment" type="text" class="formfld" id="comment" size="30" value="<?=htmlspecialchars($pconfig['comment']);?>" />
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Path"); ?></td>
-						<td width="78%" class="vtable">
-							<input name="path" type="text" class="formfld" id="path" size="60" value="<?=htmlspecialchars($pconfig['path']);?>" />
-							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.path; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." /><br />
-							<span class="vexpl"><?=gtext("Path to be shared.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Read Only");?></td>
-						<td width="78%" class="vtable">
-							<input name="readonly" type="checkbox" id="readonly" value="yes" <?php if (isset($pconfig['readonly']) && $pconfig['readonly']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Set read only.");?><br />
-							<span class="vexpl"><?=gtext("If this parameter is set, then users may not create or modify files in the share.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Browseable");?></td>
-						<td width="78%" class="vtable">
-							<input name="browseable" type="checkbox" id="browseable" value="yes" <?php if (isset($pconfig['browseable']) && $pconfig['browseable']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Set browseable.");?><br />
-							<span class="vexpl"><?=gtext("This controls whether this share is seen in the list of available shares in a net view and in the browse list.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Guest");?></td>
-						<td width="78%" class="vtable">
-							<input name="guest" type="checkbox" id="guest" value="yes" <?php if (isset($pconfig['guest']) && $pconfig['guest']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable guest access.");?><br />
-							<span class="vexpl"><?=gtext("This controls whether this share is accessible by guest account.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Inherit Permissions");?></td>
-						<td width="78%" class="vtable">
-							<input name="inheritpermissions" type="checkbox" id="inheritpermissions" value="yes" <?php if (isset($pconfig['inheritpermissions']) && $pconfig['inheritpermissions']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable permission inheritance.");?><br />
-							<span class="vexpl"><?=gtext("The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Recycle Bin");?></td>
-						<td width="78%" class="vtable">
-							<input name="recyclebin" type="checkbox" id="recyclebin" value="yes" <?php if (isset($pconfig['recyclebin']) && $pconfig['recyclebin']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable recycle bin.");?><br />
-							<span class="vexpl"><?=gtext("This will create a recycle bin on the share.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hide Dot Files");?></td>
-						<td width="78%" class="vtable">
-							<input name="hidedotfiles" type="checkbox" id="hidedotfiles" value="yes" <?php if (isset($pconfig['hidedotfiles']) && $pconfig['hidedotfiles']) echo "checked=\"checked\"";?> />
-							<span class="vexpl"><?=gtext("This parameter controls whether files starting with a dot appear as hidden files.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Shadow Copy");?></td>
-						<td width="78%" class="vtable">
-							<input name="shadowcopy" type="checkbox" id="shadowcopy" value="yes" <?php if (isset($pconfig['shadowcopy']) && $pconfig['shadowcopy']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable shadow copy.");?><br />
-							<span class="vexpl"><?=gtext("This will provide shadow copy created by auto snapshot. (ZFS only).");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Shadow Copy Format");?></td>
-						<td width="78%" class="vtable">
-							<input name="shadowformat" type="text" class="formfld" id="shadowformat" size="60" value="<?=htmlspecialchars($pconfig['shadowformat']);?>" /><br />
-							<span class="vexpl"><?=sprintf(gtext("The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot."), $default_shadowformat);?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("ZFS ACL");?></td>
-						<td width="78%" class="vtable">
-							<input name="zfsacl" type="checkbox" id="zfsacl" value="yes" <?php if (isset($pconfig['zfsacl']) && $pconfig['zfsacl']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable ZFS ACL.");?><br />
-							<span class="vexpl"><?=gtext("This will provide ZFS ACL support. (ZFS only).");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Inherit ACL");?></td>
-						<td width="78%" class="vtable">
-							<input name="inheritacls" type="checkbox" id="inheritacls" value="yes" <?php if (isset($pconfig['inheritacls']) && $pconfig['inheritacls']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable ACL inheritance.");?>
-						</td>
-					</tr>
-					<?php html_checkbox("storealternatedatastreams", gtext("Alternate Data Streams"), !empty($pconfig['storealternatedatastreams']) ? true : false, gtext("Store alternate data streams in Extended Attributes."), "", false);?>
-					<?php html_checkbox("storentfsacls", gtext("NTFS ACLs"), !empty($pconfig['storentfsacls']) ? true : false, gtext("Store NTFS ACLs in Extended Attributes."), gtext("This will provide NTFS ACLs without ZFS ACL support such as UFS."), false);?>
-					<?php html_checkbox("afpcompat", gtext("AFP Compatibility"), !empty($pconfig['afpcompat']) ? true : false, gtext("Enhanced compatibility with Netatalk AFP server."), "", false);?>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hosts Allow");?></td>
-						<td width="78%" class="vtable">
-							<input name="hostsallow" type="text" class="formfld" id="hostsallow" size="60" value="<?=htmlspecialchars($pconfig['hostsallow']);?>" /><br />
-							<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of hosts which are permitted to access this share. You can specify the hosts by name or IP number. Leave this field empty to use default settings.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hosts Deny");?></td>
-						<td width="78%" class="vtable">
-							<input name="hostsdeny" type="text" class="formfld" id="hostsdeny" size="60" value="<?=htmlspecialchars($pconfig['hostsdeny']);?>" /><br />
-							<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of host which are NOT permitted to access this share. Where the lists conflict, the allow list takes precedence. In the event that it is necessary to deny all by default, use the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify to the hosts allow parameter those hosts that should be permitted access. Leave this field empty to use default settings.");?></span>
-						</td>
-					</tr>
-					<?php
-					$helpinghand =  '<a href="' .
-							'http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html' .
-							'" target="_blank">' .
-							gtext('Please check the documentation') .
-							'</a>.';
-					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters are added to [Share] section of %s."), "smb4.conf") . " " . $helpinghand, false, 65, 5, false, false);
-					?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
+$cop = new properties_services_samba_share_edit();
+$sphere = get_sphere_services_samba_share_edit();
+$rmo = new co_request_method();
+$rmo->add('GET','add',PAGE_MODE_ADD);
+$rmo->add('GET','edit',PAGE_MODE_EDIT);
+$rmo->add('POST','add',PAGE_MODE_ADD);
+$rmo->add('POST','cancel',PAGE_MODE_POST);
+$rmo->add('POST','edit',PAGE_MODE_EDIT);
+$rmo->add('POST','save',PAGE_MODE_POST);
+$rmo->set_default('POST','cancel',PAGE_MODE_POST);
+list($page_method,$page_action,$page_mode) = $rmo->validate();
+switch($page_method):
+	case 'GET':
+		switch($page_action):
+			case 'add':
+				//	bring up a form with default values and let the user modify it
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
+				break;
+			case 'edit':
+				//	modify the data of the provided resource id and let the user modify it
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
+				break;
+		endswitch;
+		break;
+	case 'POST':
+		switch($page_action):
+			case 'add':
+				//	bring up a form with default values and let the user modify it
+				$sphere->row[$sphere->get_row_identifier()] =  $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
+				break;
+			case 'cancel':
+				//	cancel - nothing to do
+				$sphere->row[$sphere->get_row_identifier()] = NULL;
+				break;
+			case 'edit':
+				//	edit requires a resource id, get it from input and validate
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
+				break;
+			case 'save':
+				//	modify requires a resource id, get it from input and validate
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
+				break;
+		endswitch;
+		break;
+endswitch;
+/*
+ *	exit if $sphere->row[$sphere->row_identifier()] is NULL
+ */
+if(is_null($sphere->get_row_identifier_value())):
+	header($sphere->parent->get_location());
+	exit;
+endif;
+/*
+ *	search resource id in sphere
+ */
+$sphere->row_id = array_search_ex($sphere->get_row_identifier_value(),$sphere->grid,$sphere->get_row_identifier());
+/*
+ *	start determine record update mode
+ */
+$updatenotify_mode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value()); // get updatenotify mode
+$record_mode = RECORD_ERROR;
+if(false === $sphere->row_id):
+	//	record does not exist in config
+	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_POST],true)): // ADD or POST
+		switch($updatenotify_mode):
+			case UPDATENOTIFY_MODE_UNKNOWN:
+				$record_mode = RECORD_NEW;
+				break;
+		endswitch;
+	endif;
+else:
+	//	record found in configuration
+	if(in_array($page_mode,[PAGE_MODE_EDIT,PAGE_MODE_POST,PAGE_MODE_VIEW],true)): // EDIT or POST or VIEW
+		switch($updatenotify_mode):
+			case UPDATENOTIFY_MODE_NEW:
+				$record_mode = RECORD_NEW_MODIFY;
+				break;
+			case UPDATENOTIFY_MODE_MODIFIED:
+				$record_mode = RECORD_MODIFY;
+				break;
+			case UPDATENOTIFY_MODE_UNKNOWN:
+				$record_mode = RECORD_MODIFY;
+				break;
+		endswitch;
+	endif;
+endif;
+if(RECORD_ERROR === $record_mode):
+	//	oops, something went wrong
+	header($sphere->parent->get_location());
+	exit;
+endif;
+$isrecordnew = (RECORD_NEW === $record_mode);
+$isrecordnewmodify = (RECORD_NEW_MODIFY === $record_mode);
+$isrecordmodify = (RECORD_MODIFY === $record_mode);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
+/*
+ *	end determine record update mode
+ */
+$input_errors = [];
+$a_referer = [
+	$cop->get_name(),
+	$cop->get_path(),
+	$cop->get_comment(),
+	$cop->get_readonly(),
+	$cop->get_browseable(),
+	$cop->get_guest(),
+	$cop->get_inheritpermissions(),
+	$cop->get_inheritacls(),
+	$cop->get_recyclebin(),
+	$cop->get_hidedotfiles(),
+	$cop->get_shadowcopy(),
+	$cop->get_shadowformat(),
+	$cop->get_zfsacl(),
+	$cop->get_storealternatedatastreams(),
+	$cop->get_storentfsacls(),
+	$cop->get_afpcompat(),
+	$cop->get_vfs_fruit_resource(),
+	$cop->get_vfs_fruit_time_machine(),
+	$cop->get_vfs_fruit_metadata(),
+	$cop->get_vfs_fruit_locking(),
+	$cop->get_vfs_fruit_encoding(),
+	$cop->get_hostsallow(),
+	$cop->get_hostsdeny(),
+	$cop->get_auxparam()
+];
+switch($page_mode):
+	case PAGE_MODE_ADD:
+		foreach($a_referer as $referer):
+			$sphere->row[$referer->get_name()] = $referer->get_defaultvalue();
+		endforeach;
+		break;
+	case PAGE_MODE_EDIT:
+		$source = $sphere->grid[$sphere->row_id];
+		foreach($a_referer as $referer):
+			$sphere->row[$referer->get_name()] = $referer->validate_config($source);
+		endforeach;
+		//	special treatment for auxparam
+		$name = $cop->get_auxparam()->get_name();
+		if(is_array($sphere->row[$name])):
+			$sphere->row[$name] = implode(PHP_EOL,$sphere->row[$name]);
+		endif;
+		break;
+	case PAGE_MODE_POST:
+		foreach($a_referer as $referer):
+			$sphere->row[$referer->get_name()] = $referer->validate_input();
+			if(is_null($sphere->row[$referer->get_name()])):
+				$sphere->row[$referer->get_name()] = $_POST[$referer->get_name()] ?? '';
+				$input_errors[] = $referer->get_message_error();
+			endif;
+		endforeach;
+		// Check for duplicates.
+		$name = $cop->get_name()->get_name();
+		$index = array_search_ex($sphere->row[$name],$sphere->grid,$name);
+		if(false !== $index):
+			if($isrecordnew):
+				$input_errors[] = gtext('The share name is already used.');
+			elseif($index !== $sphere->row_id):
+				$input_errors[] = gtext('The share name is already used.');
+			endif;
+		endif;
+		//	Enable ZFS ACL on ZFS mount point
+		$mntinfo = get_mount_info($sphere->row[$cop->get_path()->get_name()]);
+		if($mntinfo !== false && $mntinfo['fs'] === 'zfs'):
+			if($isrecordnew):
+				// first time creation
+				$sphere->row[$cop->get_zfsacl()->get_name()] = true;
+			endif;
+		endif;
+		if(empty($input_errors)):
+			//	special treatment for auxparam
+			$name = $cop->get_auxparam()->get_name();
+			$a_test = explode(PHP_EOL,$sphere->row[$name]);
+			$sphere->row[$name] = [];
+			foreach($a_test as $r_test):
+				$row = trim($r_test,"\t\n\r");
+				if(preg_match('/\S/',$row)):
+					$sphere->row[$name][] = $row;
+				endif;
+			endforeach;
+			if($isrecordnew):
+				$sphere->grid[] = $sphere->row;
+				updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_NEW,$sphere->get_row_identifier_value());
+			else:
+				foreach($sphere->row as $key => $value):
+					$sphere->grid[$sphere->row_id][$key] = $value;
+				endforeach;
+				if(UPDATENOTIFY_MODE_UNKNOWN == $updatenotify_mode):
+					updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->get_row_identifier_value());
+				endif;
+			endif;
+			write_config();
+			header($sphere->parent->get_location()); // cleanup
+			exit;
+		endif;
+		break;
+endswitch;
+$pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'),$isrecordnew ? gtext('Add') : gtext('Edit')];
+$jcode = <<<EOJ
+$(document).ready(function() {
+	$('#afpcompat').change(function() {
+		switch(this.checked) {
+			case true:
+				$('tr[id^=vfs_fruit_]').show();
+				break;
+			case false:
+				$('tr[id^=vfs_fruit_]').hide();
+				break;
+        }
+    });
+	$('#afpcompat').change();
+	$('#shadowcopy').change(function() {
+		switch(this.checked) {
+			case true:
+				$('tr[id^=shadowformat]').show();
+				break;
+			case false:
+				$('tr[id^=shadowformat]').hide();
+				break;
+        }
+	});
+	$('#shadowcopy').change();
+});
+EOJ;
+$document = new_page($pgtitle,$sphere->get_scriptname());
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add additional javascript code
+if(isset($jcode)):
+	$body->addJavaScript($jcode);
+endif;
+//	add tab navigation
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('services_samba.php',gtext('Settings'))->
+			ins_tabnav_record('services_samba_share.php',gtext('Shares'),gtext('Reload page'),true);
+//	create data area
+$content = $pagecontent->add_area_data();
+//	display information, warnings and errors
+$content->
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg)->
+	ins_error_box($errormsg);
+if(file_exists($d_sysrebootreqd_path)):
+	$content->ins_info_box(get_std_save_message(0));
+endif;
+$content->
+	add_table_data_settings()->
+		ins_colgroup_data_settings()->
+		push()->
+		addTHEAD()->
+			c2_titleline(gtext('Share Settings'))->
+		pop()->
+		addTBODY()->
+			c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true)->
+			c2_input_text($cop->get_comment(),htmlspecialchars($sphere->row[$cop->get_comment()->get_name()]),true)->
+			c2_filechooser($cop->get_path(),htmlspecialchars($sphere->row[$cop->get_path()->get_name()]),true)->
+			c2_checkbox($cop->get_readonly(),$sphere->row[$cop->get_readonly()->get_name()])->
+			c2_checkbox($cop->get_browseable(),$sphere->row[$cop->get_browseable()->get_name()])->
+			c2_checkbox($cop->get_guest(),$sphere->row[$cop->get_guest()->get_name()])->
+			c2_checkbox($cop->get_inheritpermissions(),$sphere->row[$cop->get_inheritpermissions()->get_name()])->
+			c2_checkbox($cop->get_recyclebin(),$sphere->row[$cop->get_recyclebin()->get_name()])->
+			c2_checkbox($cop->get_hidedotfiles(),$sphere->row[$cop->get_hidedotfiles()->get_name()])->
+			c2_checkbox($cop->get_shadowcopy(),$sphere->row[$cop->get_shadowcopy()->get_name()])->
+			c2_input_text($cop->get_shadowformat(),htmlspecialchars($sphere->row[$cop->get_shadowformat()->get_name()]))->
+			c2_checkbox($cop->get_zfsacl(),$sphere->row[$cop->get_zfsacl()->get_name()])->
+			c2_checkbox($cop->get_inheritacls(),$sphere->row[$cop->get_inheritacls()->get_name()])->
+			c2_checkbox($cop->get_storealternatedatastreams(),$sphere->row[$cop->get_storealternatedatastreams()->get_name()])->
+			c2_checkbox($cop->get_storentfsacls(),$sphere->row[$cop->get_storentfsacls()->get_name()])->
+			c2_input_text($cop->get_hostsallow(),htmlspecialchars($sphere->row[$cop->get_hostsallow()->get_name()]))->
+			c2_input_text($cop->get_hostsdeny(),htmlspecialchars($sphere->row[$cop->get_hostsdeny()->get_name()]));
+$n_auxparam_rows = min(64,max(5,1 + substr_count($sphere->row[$cop->get_auxparam()->get_name()],PHP_EOL)));
+$content->
+	add_table_data_settings()->
+		push()->
+		ins_colgroup_data_settings()->
+		addTHEAD()->
+			c2_separator()->
+			c2_titleline_with_checkbox($cop->get_afpcompat(),$sphere->row['afpcompat'],false,false,gtext('Apple Filing Protocol (AFP) Compatibility Settings'))->
+		pop()->
+		addTBODY()->
+			c2_radio_grid($cop->get_vfs_fruit_resource(),htmlspecialchars($sphere->row['vfs_fruit_resource']))->
+			c2_radio_grid($cop->get_vfs_fruit_time_machine(),htmlspecialchars($sphere->row['vfs_fruit_time_machine']))->
+			c2_radio_grid($cop->get_vfs_fruit_metadata(),htmlspecialchars($sphere->row['vfs_fruit_metadata']))->
+			c2_radio_grid($cop->get_vfs_fruit_locking(),htmlspecialchars($sphere->row['vfs_fruit_locking']))->
+			c2_radio_grid($cop->get_vfs_fruit_encoding(),htmlspecialchars($sphere->row['vfs_fruit_encoding']));
+$content->
+	add_table_data_settings()->
+		push()->
+		ins_colgroup_data_settings()->
+		addTHEAD()->
+			c2_separator()->
+			c2_titleline(gtext('Additional Parameter'))->
+		pop()->
+		addTBODY()->
+			c2_textarea($cop->get_auxparam(),$sphere->row['auxparam'],false,false,65,$n_auxparam_rows);
+$buttons = $document->add_area_buttons();
+if($isrecordnew):
+	$buttons->ins_button_add();
+else:
+	$buttons->ins_button_save();
+endif;
+$buttons->ins_button_cancel();
+$buttons->insINPUT(['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+$document->render();
