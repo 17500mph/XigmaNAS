@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-02-19 10:47+0000\n"
+"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"PO-Revision-Date: 2018-03-06 10:50+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-05 22:45+0000\n"
+"X-Launchpad-Export-Date: 2018-03-06 19:52+0000\n"
 "X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -228,6 +228,9 @@ msgstr "4KB wrapper"
 msgid "514"
 msgstr "514"
 
+msgid "69"
+msgstr "69"
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "ετικέτα 802.1Q VLAN  (μεταξύ  1 και 4094)."
 
@@ -400,9 +403,6 @@ msgstr "όνομα AD ή PCD."
 
 msgid "AFP"
 msgstr "AFP"
-
-msgid "AFP Compatibility"
-msgstr "Συμβατότητα AFP"
 
 msgid "AG"
 msgstr "AG"
@@ -633,6 +633,9 @@ msgstr "Πρόσθετη Ομάδα"
 
 msgid "Additional Network"
 msgstr "Πρόσθετο Δίκτυο"
+
+msgid "Additional Parameter"
+msgstr "Πρόσθετη Παράμετρος"
 
 msgid "Additional Parameters"
 msgstr "Βοηθητικές Παράμετροι"
@@ -986,6 +989,9 @@ msgstr "Προσάρτηση κοινόχρηστων φακέλων των χρ
 
 msgid "Apple Filing Protocol"
 msgstr "Πρωτοκόλλο Αρχειοθέτησης Apple"
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
+msgstr "Ρυθμίσεις Συμβατότητας Πρωτοκόλλου Αρχείων Apple (AFP)"
 
 msgid "Apple Public Source License"
 msgstr "Άδεια Δημόσιου Κώδικα Apple"
@@ -1890,6 +1896,18 @@ msgstr "Μοντέλο Ελεγκτή"
 msgid "Controller TCP Port"
 msgstr "Θύρα TCP του Ελεγκτή"
 
+msgid ""
+"Controls how the set of illegal NTFS ASCII character are stored in the "
+"filesystem, commonly used by OS X clients."
+msgstr ""
+
+msgid ""
+"Controls if Time Machine support via the FULLSYNC volume capability is "
+"advertised to clients."
+msgstr ""
+"Ελέγχει αν θα διαφημίζεται στους πελάτες η υποστήριξη Time Machine μέσω της "
+"δυνατότητας FULLSYNC  του τόμου."
+
 msgid "Controls the behavior of synchronous requests."
 msgstr "Ρυθμίζει τη συμπεριφορά των σύγχρονων αιτήσεων"
 
@@ -1946,6 +1964,12 @@ msgstr "Ελέγχει τι μπαίνει στην δευτερεύουσα κ�
 
 msgid "Controls what types of metadata are stored redundantly."
 msgstr "Ελέγχει τι τύποι μεταδεδομένων αποθηκεύονται με επάρκεια."
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr "Ελέγχει που θα αποθηκεύεται το κύμα μεταδεδομένων του OS X."
+
+msgid "Controls where the OS X resource fork is stored."
+msgstr "Ελέγχει που θα αποθηκεύεται το πλέγμα πόρων του OS X."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2364,6 +2388,9 @@ msgstr "Συμβάντα Δαίμονα"
 msgid "Daemon log"
 msgstr "Καταγραφή Δαίμονα"
 
+msgid "Data"
+msgstr "Δεδομένα"
+
 msgid "Data Integrity"
 msgstr "Ακεραιότητα Δεδομένων"
 
@@ -2382,11 +2409,11 @@ msgstr "Dataset"
 msgid "Dataset Type"
 msgstr "Τύπος Dataset"
 
+msgid "Dataset is locked"
+msgstr "Το dataset είναι κλειδωμένο"
+
 msgid "Dataset is marked for deletion"
 msgstr "Το dataset έχει σημειωθεί προς διαγραφή"
-
-msgid "Dataset is protected"
-msgstr "Το Dataset είναι προστατευμένο"
 
 msgid "Dataset is unlocked"
 msgstr "Το dataset είναι ξεκλείδωτο"
@@ -2538,6 +2565,9 @@ msgstr "Διαγραφή Επιλεγμένων LAGG"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Διαγραφή Επιλεγμένων Κοινόχρηστων NFS"
+
+msgid "Delete Selected Notifier"
+msgstr "Διαγραφή Επιλεγμένου Ειδοποιητή"
 
 msgid "Delete Selected Options"
 msgstr "Διαγραφή Επιλεγμένων Επιλογών"
@@ -3179,6 +3209,9 @@ msgstr "Θέλετε να διαγράψετε τις επιλεγμένες ο�
 msgid "Do you want to delete selected jobs?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εργασίες;"
 
+msgid "Do you want to delete selected notifier?"
+msgstr "Θέλετε να διαγράψετε τον επιλεγμένο ειδοποιητή;"
+
 msgid "Do you want to delete selected options?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες επιλογές;"
 
@@ -3553,6 +3586,9 @@ msgstr "Ενεργοποίηση του διακόπτη 'Μεγάλη ανάγ�
 msgid "Enable ACL inheritance."
 msgstr "Ενεργοποίηση κληρονόμησης ACL."
 
+msgid "Enable AFP"
+msgstr "Ενεργοποίηση AFP"
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Ενεργοποίηση Προχωρημένης Διαμόρφωσης. (Τομέας 4KB)."
 
@@ -3904,9 +3940,6 @@ msgstr "Εργαλεία Κρυπτογράφησης"
 msgid "Encryption algorithm"
 msgstr "Αλγόριθμος κρυπτογράφησης"
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr "Βελτιστοποιημένη συμβατότητα με διακομιστή Netatalk AFP."
-
 msgid "Enter Command"
 msgstr "Εισαγωγή Εντολής"
 
@@ -3938,12 +3971,10 @@ msgstr ""
 "Εισάγετε έναν προσαρμοσμένο αριθμό θύρας για το web περιβάλλον διαχείρισης "
 "αν θέλετε να υπερισχύσει του προεπιλεγμένου (80 για HTTP, 443 για HTTPS)."
 
-msgid ""
-"Enter a custom port number if you want to override the default port (default "
-"is 69)."
+msgid "Enter a custom port number if you do not want to use default port 69."
 msgstr ""
-"Εισάγετε ένα προσαρμοσμένο νούμερο θύρας αν θέλετε να χρησιμοποιήσετε "
-"διαφορετική θύρα από την προεπιλεγμένη (η προεπιλεγμένη είναι η 69)."
+"Εισάγετε έναν προσαρμοσμένο αριθμό θύρας αν δεν θέλετε να χρησιμοποιήσετε "
+"την προεπιλεγμένη θύρα 69."
 
 #, php-format
 msgid ""
@@ -3968,6 +3999,9 @@ msgstr "Εισαγωγή μιας περιγραφής για τη δική σα
 
 msgid "Enter a description for your reference."
 msgstr "Εισάγετε μια περιγραφή για δική σας εξυπηρέτηση."
+
+msgid "Enter a directory"
+msgstr "Εισάγετε ένα φάκελο"
 
 msgid "Enter a group description."
 msgstr "Εισάγετε μια περιγραφή ομάδας."
@@ -3997,6 +4031,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Εισάγετε ένα έγκυρο όνομα sysctl MIB."
 
+msgid "Enter comment for the share"
+msgstr "Εισάγετε σχόλιο για το κοινόχρηστο"
+
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
@@ -4006,6 +4043,9 @@ msgstr ""
 
 msgid "Enter destination"
 msgstr "Εισαγωγή προορισμού"
+
+msgid "Enter extra options"
+msgstr "Εισάγετε επιπλέον επιλογές"
 
 msgid "Enter facility name"
 msgstr "Εισαγωγή ονόματος διευκόλυνσης"
@@ -4044,6 +4084,12 @@ msgstr ""
 
 msgid "Enter the command"
 msgstr "Εισάγετε μια εντολή"
+
+msgid "Enter the location of the share"
+msgstr "Εισάγετε την τοποθεσία του κοινόχρηστου"
+
+msgid "Enter the name of the share"
+msgstr "Εισάγετε το όνομα του κοινόχρηστου"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -4157,6 +4203,9 @@ msgstr "Εξήχθη"
 
 msgid "Extended Attributes"
 msgstr "Πρόσθετα Χαρακτηριστικά"
+
+msgid "Extended Attributes - use a xattr."
+msgstr "Εκτεταμένα χαρακτηριστικά - χρήση ενός xattr."
 
 msgid "Extended attributes"
 msgstr "Πρόσθετες ιδιότητες"
@@ -4317,6 +4366,12 @@ msgstr "Φεβρουάριος"
 
 msgid "File"
 msgstr "Αρχείο"
+
+msgid ""
+"File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
+msgstr ""
+"Αρχείο (προεπιλογή) - χρησιμοποιήστε ένα αρχείο  ._ AppleDouble συμβατό με "
+"OS X και Netatalk."
 
 msgid "File Editor"
 msgstr "Επεξεργαστής αρχείων"
@@ -6138,6 +6193,9 @@ msgstr "Πρέπει να είναι ένα νούμερο μεταξύ 90 κα�
 msgid "Must choose one"
 msgstr "Πρέπει να επιλέξετε έναν"
 
+msgid "Must not be empty."
+msgstr "Δεν πρέπει να είναι άδειο."
+
 msgid "Mutual CHAP"
 msgstr "Αμοιβαίο CHAP"
 
@@ -6217,6 +6275,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Το όνομα της μεταβλητής."
 
+msgid "Native - store characters with their native ASCII value."
+msgstr "Ατόφιο - αποθήκευση χαρακτήρων με την ατόφια τιμή ASCII."
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr ""
 "Ούτε τα δεδομένα χρήστη ούτε τα μεταδεδομένα δε θα μπουν στην κρυφή μνήμη "
@@ -6235,6 +6296,12 @@ msgstr "Τομέας NetBIOS"
 
 msgid "NetBIOS Name"
 msgstr "Όνομα NetBIOS"
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr "Netatalk (προεπιλογή) - χρήση xattr συμβατού με Netatalk."
+
+msgid "Netatalk - use cross protocol locking with Netatalk."
+msgstr ""
 
 msgid "Netgraph"
 msgstr "Γράφημα κίνησης δικτύου"
@@ -6287,6 +6354,9 @@ msgstr ""
 "Αυτό, όταν είναι επιλεγμένο, μπορεί να προκαλέσει την έναρξη περιστροφής σε "
 "ένα δίσκο που έχει σταματήσει να περιστρέφεται."
 
+msgid "New"
+msgstr "Νέο..."
+
 msgid "New Password"
 msgstr "Νέος Κωδικός"
 
@@ -6305,6 +6375,10 @@ msgstr "Επόμενο"
 
 msgid "No"
 msgstr "Όχι"
+
+msgid "No (default) - Disables advertising Time Machine support."
+msgstr ""
+"Όχι (προεπιλογή) - Απενεργοποιεί τη διαφήμιση υποστήριξης Time Machine."
 
 msgid "No DNS server have been configured."
 msgstr "Δεν έχει ρυθμιστεί διακομιστής DNS."
@@ -6484,6 +6558,9 @@ msgstr "Μη-Ανακτήσιμο"
 
 msgid "None"
 msgstr "Κανένα"
+
+msgid "None (default) - no cross protocol locking."
+msgstr "Κανένα (προεπιλογή) - όχι κλείδωμα πρωτοκόλλων."
 
 msgid "Normal"
 msgstr "Κανονικό"
@@ -7073,9 +7150,18 @@ msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr ""
 "Το νούμερο της θύρας πρέπει να είναι 514 ή ένα νούμερο μεταξύ 1024 και 49151."
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr ""
+"Το νούμερο της θύρας πρέπει να είναι 69 ή κάποιο νούμερο μεταξύ 1024 και "
+"49151."
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "Το νούμερο της θύρας πρέπει να είναι σε ένα εύρος μεταξύ %d και %d."
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
+msgstr ""
+"Θύρα γι ατην υπηρεσία TFTP. Αφήστε κενό για χρήση της προεπιλεγμένης θύρας."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -7195,6 +7281,13 @@ msgstr "Πρωτεύουσα Ομάδα"
 msgid "Primary group is also selected in additional group."
 msgstr "Η κύρια ομάδα έχει επίσης επιλεγεί ως επιπλέον ομάδα."
 
+msgid ""
+"Private (default) - store characters as encoded by the OS X client: mapped "
+"to the Unicode private range."
+msgstr ""
+"Ιδιωτικό (προεπιλογή) - αποθήκευση χαρακτήρων όπως κωδικοποιούνται από τον "
+"πελάτη OS X: χαρτογραφημένο στο ιδιωτικό εύρος Unicode."
+
 msgid "Private Key"
 msgstr "Ιδιωτικό Κλειδί"
 
@@ -7221,6 +7314,9 @@ msgstr "Προστασία"
 
 msgid "Protect Setting"
 msgstr "Ρύθμιση Προστασίας"
+
+msgid "Protected"
+msgstr "Προστατευμένο"
 
 msgid "Protocol"
 msgstr "Πρωτόκολλο"
@@ -7560,6 +7656,9 @@ msgstr "Ρυθμισμένο όνομα απομακρυσμένου κοινό�
 
 msgid "Removable"
 msgstr "Αφαιρούμενο μέσο"
+
+msgid "Remove"
+msgstr "Αφαίρεση"
 
 msgid "Remove ZFS label information from a device"
 msgstr "Αφαίρεση της πληροφορίας ετικέτας ZFS από τη συσκευή"
@@ -8628,8 +8727,8 @@ msgstr ""
 msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr "Ορίζει τη χρήση της Πιστοποίησης Challenge-Response."
 
-msgid "Specifies the username which the service will run as."
-msgstr "Καθορίζει τον χρήστη που η υπηρεσία θα λειτουργεί στο όνομά του."
+msgid "Specifies the username under which the TFTP service should run."
+msgstr "Καθορίζει το όνομα χρήστη με το οποίο θα εκτελείται η υπηρεσία TFTP."
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8715,6 +8814,17 @@ msgstr "Αποθήκευση των NTFS ACLs στα Εκτεταμένα Χαρ
 msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 "Αποθήκευση εναλλακτικών ροών δεδομένων στα Εκτεταμένα Χαρακτηριστικά."
+
+msgid ""
+"Stream (experimental) - pass the stream on to the next module in the VFS "
+"stack."
+msgstr ""
+"Stream (πειραματικό) - πέρασμα του κύματος δεδομένων στο επόμενο άρθρωμα του "
+"VFS stack."
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
+msgstr ""
+"Stream πέρασμα του κύματος δεδομένων στο επόμενο άρθρωμα του VFS stack."
 
 msgid "Strict DLNA"
 msgstr "Αυστηρό DLNA"
@@ -10496,6 +10606,9 @@ msgstr "Time Machine"
 msgid "Time Server"
 msgstr "Διακομιστής Ώρας"
 
+msgid "Time Stamp"
+msgstr "Χρονοσφραγίδα"
+
 msgid "Time Synchronization"
 msgstr "Συγχρονισμός Ώρας"
 
@@ -10525,6 +10638,9 @@ msgstr "Μεσοδιάστημα ανανέωσης ώρας"
 
 msgid "Timeout"
 msgstr "Χρονικό όριο"
+
+msgid "Timeout must be a number between 10 and 255000000."
+msgstr "Το χρονικό όριο πρέπει να είναι ένα νούμερο μεταξύ 10 και 255000000."
 
 msgid "Times"
 msgstr "Ημερομηνίες"
@@ -10965,6 +11081,9 @@ msgstr "Περίοδος Ενημέρωσης"
 msgid "Update period"
 msgstr "Περίοδος ανανέωσης"
 
+msgid "Updatenotifier"
+msgstr "Ειδοποιητής Ενημέρωσης"
+
 msgid "Upgrade Firmware"
 msgstr "Αναβάθμιση Υλικολογισμικού"
 
@@ -11112,6 +11231,9 @@ msgstr ""
 msgid "Used"
 msgstr "Χρησιμοποιείται"
 
+msgid "Used Space"
+msgstr "Χρησιμοποιημένος χώρος"
+
 msgid "User"
 msgstr "Χρήστης"
 
@@ -11173,6 +11295,21 @@ msgstr "Χρήση %s bytes για μέγεθος κατακερματισμού
 
 msgid "VCPUs"
 msgstr "VCPUs"
+
+msgid "VFS fruit:encoding"
+msgstr "VFS fruit:κωδικοποίηση"
+
+msgid "VFS fruit:locking"
+msgstr "VFS fruit:κλείδωμα"
+
+msgid "VFS fruit:metadata"
+msgstr "VFS fruit:μεταδεδομένα"
+
+msgid "VFS fruit:resource"
+msgstr "VFS fruit:πόρος"
+
+msgid "VFS fruit:time machine"
+msgstr "VFS fruit:time machine"
 
 msgid "VHID"
 msgstr "VHID"
@@ -11314,11 +11451,11 @@ msgstr "Μέγεθος Τόμου"
 msgid "Volume Size Limit"
 msgstr "Όριο μεγέθους τόμου"
 
+msgid "Volume is locked"
+msgstr "Ο τόμος είναι κλειδωμένος"
+
 msgid "Volume is marked for deletion"
 msgstr "Ο τόμος έχει σημειωθεί προς διαγραφή"
-
-msgid "Volume is protected"
-msgstr "Ο Τόμος είναι προστατευμένος"
 
 msgid "Volume is unlocked"
 msgstr "Ο Τόμος είναι ξεκλείδωτος"
@@ -11527,6 +11664,10 @@ msgstr "Εύρος άξονα Υ"
 
 msgid "Yes"
 msgstr "Ναι"
+
+msgid "Yes - Enables Time Machine support for this share."
+msgstr ""
+"Ναι - Ενεργοποιεί την υποστήριξη Time Machine για αυτό το κοινόχρηστο."
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -11863,3 +12004,36 @@ msgstr "χρήση από"
 
 msgid "visible"
 msgstr "ορατό"
+
+#~ msgid "Specifies the username which the service will run as."
+#~ msgstr "Καθορίζει τον χρήστη που η υπηρεσία θα λειτουργεί στο όνομά του."
+
+#~ msgid "Dataset is protected"
+#~ msgstr "Το Dataset είναι προστατευμένο"
+
+#~ msgid "Volume is protected"
+#~ msgstr "Ο Τόμος είναι προστατευμένος"
+
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port (default "
+#~ "is 69)."
+#~ msgstr ""
+#~ "Εισάγετε ένα προσαρμοσμένο νούμερο θύρας αν θέλετε να χρησιμοποιήσετε "
+#~ "διαφορετική θύρα από την προεπιλεγμένη (η προεπιλεγμένη είναι η 69)."
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server."
+#~ msgstr "Βελτιστοποιημένη συμβατότητα με διακομιστή Netatalk AFP."
+
+#~ msgid "AFP Compatibility"
+#~ msgstr "Συμβατότητα AFP"
+
+#~ msgid ""
+#~ "Controls how the set of illegal NTFS ASCII character, commonly used by OS X "
+#~ "clients, are stored in the filesystem."
+#~ msgstr ""
+#~ "Ελέγχει πως θα αποθηκεύεται στο σύστημα αρχείων το σύνολο των μη έγκυρων "
+#~ "NTFS ASCII χαρακτήρων που χρησιμοποιούνται συχνά από υπολογιστές-πελάτες OS "
+#~ "X."
+
+#~ msgid "Netatalk - use cross protocol locking with Netatalk"
+#~ msgstr "Netatalk - χρήση κλειδώματος των προτοκόλλων με Netatalk"

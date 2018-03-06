@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-02-18 05:44+0000\n"
+"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"PO-Revision-Date: 2018-03-06 17:33+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-05 22:46+0000\n"
+"X-Launchpad-Export-Date: 2018-03-06 19:53+0000\n"
 "X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -212,6 +212,9 @@ msgstr "4KB paket"
 msgid "514"
 msgstr "514"
 
+msgid "69"
+msgstr "69"
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etikett (mellan 1 och 4094)."
 
@@ -371,9 +374,6 @@ msgstr "AD eller PDC-namn."
 
 msgid "AFP"
 msgstr "AFP"
-
-msgid "AFP Compatibility"
-msgstr "AFP kompabilitiet"
 
 msgid "AG"
 msgstr "AG"
@@ -604,6 +604,9 @@ msgstr "Extra grupp"
 
 msgid "Additional Network"
 msgstr "Extra nätverk"
+
+msgid "Additional Parameter"
+msgstr "Extra parametrar"
 
 msgid "Additional Parameters"
 msgstr "Extra parametrar"
@@ -938,6 +941,9 @@ msgstr "Lägg till användardefinierade delningar"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filprotokoll"
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
+msgstr "Apple filprotokoll (AFP) kampabiltetsinställningar"
 
 msgid "Apple Public Source License"
 msgstr "Apple Public Source License"
@@ -1818,6 +1824,20 @@ msgstr "Diskkontrollermodell"
 msgid "Controller TCP Port"
 msgstr "TCP Port för hanterare"
 
+msgid ""
+"Controls how the set of illegal NTFS ASCII character are stored in the "
+"filesystem, commonly used by OS X clients."
+msgstr ""
+"Kontrollerar hur uppsättningen av otillåtna NTFS ASCII tecken lagras i "
+"filsystemet, vanligtvis använda av OS X klienter."
+
+msgid ""
+"Controls if Time Machine support via the FULLSYNC volume capability is "
+"advertised to clients."
+msgstr ""
+"Kontrollerar om Time Machine stöd via FULLSYNC volymmöjlighet annonseras "
+"till klienter."
+
 msgid "Controls the behavior of synchronous requests."
 msgstr "Styr uppförandet för synkroniseringsbegäran"
 
@@ -1873,6 +1893,12 @@ msgstr ""
 
 msgid "Controls what types of metadata are stored redundantly."
 msgstr "Styr vilka typer av metadata som sparas redundant."
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr "Kontrollerar var OS X metadataströmmen sparas."
+
+msgid "Controls where the OS X resource fork is stored."
+msgstr "Kontrollerar var OS X resursträd sparas."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2257,6 +2283,9 @@ msgstr "Demonhändelser"
 msgid "Daemon log"
 msgstr "Daemon logg"
 
+msgid "Data"
+msgstr "Data"
+
 msgid "Data Integrity"
 msgstr "Dataintegritet"
 
@@ -2275,11 +2304,11 @@ msgstr "Dataset"
 msgid "Dataset Type"
 msgstr "Datasettyp"
 
+msgid "Dataset is locked"
+msgstr "Datasetet är låst"
+
 msgid "Dataset is marked for deletion"
 msgstr "Datasetet är markerat för borttagning"
-
-msgid "Dataset is protected"
-msgstr "Datasetet är skyddat"
 
 msgid "Dataset is unlocked"
 msgstr "Datasetet är olåst"
@@ -2431,6 +2460,9 @@ msgstr "Ta bort valda LAGG:ar"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Ta bort valda NFS utdelningar"
+
+msgid "Delete Selected Notifier"
+msgstr "Ta bort vald meddelare"
 
 msgid "Delete Selected Options"
 msgstr "Ta bort valda optioner"
@@ -3051,6 +3083,9 @@ msgstr "Vill du ta bort valda grupper?"
 msgid "Do you want to delete selected jobs?"
 msgstr "Vill du radera valda jobb?"
 
+msgid "Do you want to delete selected notifier?"
+msgstr "Vill du ta bort vald meddelare?"
+
 msgid "Do you want to delete selected options?"
 msgstr "Vill du ta bort valda optioner?"
 
@@ -3420,6 +3455,9 @@ msgstr "Aktivera 'Stor läs/skriv' val."
 msgid "Enable ACL inheritance."
 msgstr "Aktiera ACL arv. (åtkomsträttogheter)"
 
+msgid "Enable AFP"
+msgstr "Aktivera AFP"
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Aktivera avancerat format (4KB sektorstorlek)"
 
@@ -3761,9 +3799,6 @@ msgstr "Krypteringsverktyg"
 msgid "Encryption algorithm"
 msgstr "Krypteringsalgoritm"
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr "Utökad kompatibilitet med Netatalk AFP server."
-
 msgid "Enter Command"
 msgstr "Mata in kommando"
 
@@ -3795,11 +3830,9 @@ msgstr ""
 "Mata in ett portnummer för webgränssnittet om du vill ändra "
 "standardinställningen (80 för HTTP, 443 för HTTPS)"
 
-msgid ""
-"Enter a custom port number if you want to override the default port (default "
-"is 69)."
+msgid "Enter a custom port number if you do not want to use default port 69."
 msgstr ""
-"Mata in ett portnummer om du vill frångå standardporten (standard är 69)."
+"Mata in ett användarvalt portnummer  om du inte vill använda standardport 69."
 
 #, php-format
 msgid ""
@@ -3822,6 +3855,9 @@ msgstr "Mata in en beskrivning"
 
 msgid "Enter a description for your reference."
 msgstr "Mata in en beskrivning för din referens."
+
+msgid "Enter a directory"
+msgstr "Mata in en katalog"
 
 msgid "Enter a group description."
 msgstr "Mata in en beskrivning av gruppen"
@@ -3851,6 +3887,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Mata in ett giltigt sysctl MIB namn."
 
+msgid "Enter comment for the share"
+msgstr "Mata in en kommentar för utdelningen"
+
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
@@ -3860,6 +3899,9 @@ msgstr ""
 
 msgid "Enter destination"
 msgstr "Mata in mål"
+
+msgid "Enter extra options"
+msgstr "Mata in extra parametrar"
 
 msgid "Enter facility name"
 msgstr "Mata in anläggningsnamn"
@@ -3897,6 +3939,12 @@ msgstr ""
 
 msgid "Enter the command"
 msgstr "Mata in komandot"
+
+msgid "Enter the location of the share"
+msgstr "Mata in utdeliningens plats"
+
+msgid "Enter the name of the share"
+msgstr "Mata in utdelningens namn"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -4008,6 +4056,9 @@ msgstr "Exprterad"
 
 msgid "Extended Attributes"
 msgstr "Utökade attribut"
+
+msgid "Extended Attributes - use a xattr."
+msgstr "Utökade attribut - använd ett xattr."
 
 msgid "Extended attributes"
 msgstr "Utökade attribut"
@@ -4165,6 +4216,12 @@ msgstr "februari"
 
 msgid "File"
 msgstr "Fil"
+
+msgid ""
+"File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
+msgstr ""
+"Fil (standard) - använd en ._AppleDouble fil kompatibel med OS X och "
+"Netatalk."
 
 msgid "File Editor"
 msgstr "Filredigerare"
@@ -5914,6 +5971,9 @@ msgstr "Måste vara ett nummer mellan 90 och 95."
 msgid "Must choose one"
 msgstr "Måste välja en"
 
+msgid "Must not be empty."
+msgstr "Får inte vara tomt."
+
 msgid "Mutual CHAP"
 msgstr "Gemensam CHAP"
 
@@ -5993,6 +6053,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Namn på variabeln."
 
+msgid "Native - store characters with their native ASCII value."
+msgstr "Native - spara tecken med deras ursprungliga ASCII värde."
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "Varken användardata eller metadata kommer att mellanlagras i ARC."
 
@@ -6007,6 +6070,12 @@ msgstr "NetBios Domän"
 
 msgid "NetBIOS Name"
 msgstr "NetBIOS Namn"
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr "Netatalk (standard) - använd Netatalk kompatibla xattr."
+
+msgid "Netatalk - use cross protocol locking with Netatalk."
+msgstr "Netatalk - använd korsvis protokollåsning med Netatalk."
 
 msgid "Netgraph"
 msgstr "Nätverksgraf"
@@ -6059,6 +6128,9 @@ msgstr ""
 "strömförbrukningsinställning. Detta kan komma att medföra att en disk i "
 "vilolåge spinner igång när den blir kontrollerad."
 
+msgid "New"
+msgstr "Ny"
+
 msgid "New Password"
 msgstr "Nytt lösenord"
 
@@ -6077,6 +6149,9 @@ msgstr "Nästa"
 
 msgid "No"
 msgstr "Nej"
+
+msgid "No (default) - Disables advertising Time Machine support."
+msgstr "Nej (standard) - Inaktiverar annonsering av Time Machine stöd."
 
 msgid "No DNS server have been configured."
 msgstr "Ingen DNS server har konfigurerats."
@@ -6256,6 +6331,9 @@ msgstr "Inte återskapbar"
 
 msgid "None"
 msgstr "Inget"
+
+msgid "None (default) - no cross protocol locking."
+msgstr "Ingen (standard) - ingen korsvis protokolllåsning."
 
 msgid "Normal"
 msgstr "Normal"
@@ -6831,9 +6909,15 @@ msgstr "Vidarebefordring av portar"
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Portnummer måste vara 514 eller ett nummer mellan 1024 och 49151."
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr "Portnummret måste vara 69 eller ett nummer mellan 1024 och 49151."
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "Portnummer måste vara mellan %d och %d."
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
+msgstr "Port för TFTP tjänsten. Lämna tomt för att använda standardporten."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -6949,6 +7033,13 @@ msgstr "Huvudgrupp"
 msgid "Primary group is also selected in additional group."
 msgstr "Primärgruppen är också markerad i ytterligare en grupp."
 
+msgid ""
+"Private (default) - store characters as encoded by the OS X client: mapped "
+"to the Unicode private range."
+msgstr ""
+"Privat (standard) - spara tecken som hos OS X klienten: mappade till det "
+"privata Unicodeområdet."
+
 msgid "Private Key"
 msgstr "Privat nyckel"
 
@@ -6975,6 +7066,9 @@ msgstr "Skydda"
 
 msgid "Protect Setting"
 msgstr "Skydda inställning"
+
+msgid "Protected"
+msgstr "Skyddad"
 
 msgid "Protocol"
 msgstr "Protokoll"
@@ -7309,6 +7403,9 @@ msgstr "Fjärrutdelningsnamn som konfigurerats"
 
 msgid "Removable"
 msgstr "Flyttbar"
+
+msgid "Remove"
+msgstr "Ta bort"
 
 msgid "Remove ZFS label information from a device"
 msgstr "Ta bort ZFS-etikettinformation från en enhet"
@@ -8348,8 +8445,8 @@ msgstr ""
 msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr "Anger användningen av Challenge-Respons (fråga-svar) autentisering."
 
-msgid "Specifies the username which the service will run as."
-msgstr "Specificerar användarnamnet som tjänsten kommer köras som."
+msgid "Specifies the username under which the TFTP service should run."
+msgstr "Specificerar användarnamnet under vilket TFTP tjänsten skall köras."
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8435,6 +8532,16 @@ msgstr "Lagra NTFS ACL:er i utökade attribut."
 
 msgid "Store alternate data streams in Extended Attributes."
 msgstr "Lagra alternativa dataströmmar i utökade attribut."
+
+msgid ""
+"Stream (experimental) - pass the stream on to the next module in the VFS "
+"stack."
+msgstr ""
+"Stream ( experimentell) - skickar strömmen vidare till nästa modul i VFS-"
+"stacken."
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
+msgstr "Stream - skickar strömmen vidare till nästa modul i VFS-stacken."
 
 msgid "Strict DLNA"
 msgstr "Strikt DLNA"
@@ -10113,6 +10220,9 @@ msgstr "Time Machine"
 msgid "Time Server"
 msgstr "Tidserver"
 
+msgid "Time Stamp"
+msgstr "Tidsstämpel"
+
 msgid "Time Synchronization"
 msgstr "Tidssynkronisering"
 
@@ -10141,6 +10251,9 @@ msgstr "Intervall för tidsuppdatering"
 
 msgid "Timeout"
 msgstr "Tidsgräns"
+
+msgid "Timeout must be a number between 10 and 255000000."
+msgstr "Timeout måste vara ett nummer mellan 10 och 255000000."
 
 msgid "Times"
 msgstr "Tider"
@@ -10572,6 +10685,9 @@ msgstr "Uppdateringsperiod"
 msgid "Update period"
 msgstr "Uppdateringsperiod"
 
+msgid "Updatenotifier"
+msgstr "Uppdateringsindikering"
+
 msgid "Upgrade Firmware"
 msgstr "Uppgradera systemmjukvara"
 
@@ -10710,6 +10826,9 @@ msgstr "Använd växlade knappar i stället för aktivera-/inaktiveraknappar."
 msgid "Used"
 msgstr "Använt"
 
+msgid "Used Space"
+msgstr "Använt utrymme"
+
 msgid "User"
 msgstr "Användare"
 
@@ -10771,6 +10890,21 @@ msgstr "Använder %s bytes fragmentstorlek."
 
 msgid "VCPUs"
 msgstr "VCPUer"
+
+msgid "VFS fruit:encoding"
+msgstr "VFS fruit:encoding"
+
+msgid "VFS fruit:locking"
+msgstr "VFS fruit:locking"
+
+msgid "VFS fruit:metadata"
+msgstr "VFS fruit:metadata"
+
+msgid "VFS fruit:resource"
+msgstr "VFS fruit:resource"
+
+msgid "VFS fruit:time machine"
+msgstr "VFS fruit:time machine"
 
 msgid "VHID"
 msgstr "VHID"
@@ -10910,11 +11044,11 @@ msgstr "Volymstorlek"
 msgid "Volume Size Limit"
 msgstr "Storleksgräns för volym"
 
+msgid "Volume is locked"
+msgstr "Volymen är låst"
+
 msgid "Volume is marked for deletion"
 msgstr "Volymen är markerad för borttagning."
-
-msgid "Volume is protected"
-msgstr "Volymen ör skyddad"
 
 msgid "Volume is unlocked"
 msgstr "Volymen är olåst"
@@ -11114,6 +11248,9 @@ msgstr "Y-axelns intervall"
 
 msgid "Yes"
 msgstr "Ja"
+
+msgid "Yes - Enables Time Machine support for this share."
+msgstr "Ja - Aktiverar Time Machine stöd för denna utdelning."
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -11440,3 +11577,34 @@ msgstr "använt av"
 
 msgid "visible"
 msgstr "synlig"
+
+#~ msgid "Specifies the username which the service will run as."
+#~ msgstr "Specificerar användarnamnet som tjänsten kommer köras som."
+
+#~ msgid "Dataset is protected"
+#~ msgstr "Datasetet är skyddat"
+
+#~ msgid "Volume is protected"
+#~ msgstr "Volymen ör skyddad"
+
+#~ msgid "AFP Compatibility"
+#~ msgstr "AFP kompabilitiet"
+
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port (default "
+#~ "is 69)."
+#~ msgstr ""
+#~ "Mata in ett portnummer om du vill frångå standardporten (standard är 69)."
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server."
+#~ msgstr "Utökad kompatibilitet med Netatalk AFP server."
+
+#~ msgid ""
+#~ "Controls how the set of illegal NTFS ASCII character, commonly used by OS X "
+#~ "clients, are stored in the filesystem."
+#~ msgstr ""
+#~ "Kontrollerar hur uppsättningen av illegala NTFS ASCII tecken, vanligtvis "
+#~ "använda av OS X klienter, sparas i filsystemet."
+
+#~ msgid "Netatalk - use cross protocol locking with Netatalk"
+#~ msgstr "Netatalk - använd korsvis protokolllåsning med Netatalk"

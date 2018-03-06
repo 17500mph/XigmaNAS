@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
-"PO-Revision-Date: 2018-02-18 00:44+0000\n"
+"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"PO-Revision-Date: 2018-03-06 13:51+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-05 22:44+0000\n"
+"X-Launchpad-Export-Date: 2018-03-06 19:52+0000\n"
 "X-Generator: Launchpad (build 18566)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -225,6 +225,9 @@ msgstr "4KB wrapper"
 msgid "514"
 msgstr "514"
 
+msgid "69"
+msgstr "69"
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN markering (tussen 1 en 4094)."
 
@@ -395,9 +398,6 @@ msgstr "AD of PDC naam."
 
 msgid "AFP"
 msgstr "AFP"
-
-msgid "AFP Compatibility"
-msgstr "AFP Compatibiliteit"
 
 msgid "AG"
 msgstr "AG"
@@ -628,6 +628,9 @@ msgstr "Extra Groep"
 
 msgid "Additional Network"
 msgstr "Bijkomend Netwerk"
+
+msgid "Additional Parameter"
+msgstr "Extra Parameter"
 
 msgid "Additional Parameters"
 msgstr "Extra Parameters"
@@ -970,6 +973,9 @@ msgstr "Toevoegen gebruiker gedefinieerde delingen"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
+msgstr "Apple Filing Protocol (AFP) Compatibiliteitsinstellingen"
 
 msgid "Apple Public Source License"
 msgstr "Apple Publieke Bron Licentie"
@@ -1874,6 +1880,20 @@ msgstr "Controller Model"
 msgid "Controller TCP Port"
 msgstr "TCP-poort Controller"
 
+msgid ""
+"Controls how the set of illegal NTFS ASCII character are stored in the "
+"filesystem, commonly used by OS X clients."
+msgstr ""
+"Bepaalt hoe de set van illegale NTFS ASCII tekens worden opgeslagen in het "
+"bestandssysteem, veel gebruikt door OS X cliënten."
+
+msgid ""
+"Controls if Time Machine support via the FULLSYNC volume capability is "
+"advertised to clients."
+msgstr ""
+"Bepaalt of Time Machine ondersteuning via de FULLSYNC volume geschiktheid "
+"wordt geadverteerd naar cliënten."
+
 msgid "Controls the behavior of synchronous requests."
 msgstr "Bepaalt het gedrag van synchrone aanvragen."
 
@@ -1932,6 +1952,12 @@ msgstr ""
 
 msgid "Controls what types of metadata are stored redundantly."
 msgstr "Bepaalt welke typen metadata redundant worden opgeslagen."
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr "Bepaal waar de OS X metagegevensstroom wordt opgeslagen."
+
+msgid "Controls where the OS X resource fork is stored."
+msgstr "Bepaal waar de OS X resourcevork wordt opgeslagen."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2340,6 +2366,9 @@ msgstr "Daemon Gebeurtenissen"
 msgid "Daemon log"
 msgstr "Daemon log"
 
+msgid "Data"
+msgstr "Data"
+
 msgid "Data Integrity"
 msgstr "Integriteit Data"
 
@@ -2350,7 +2379,7 @@ msgid "Database Directory"
 msgstr "Database Gegevensmap"
 
 msgid "Database directory"
-msgstr "Locatie database"
+msgstr "Database gegevensmap"
 
 msgid "Dataset"
 msgstr "Dataset"
@@ -2358,11 +2387,11 @@ msgstr "Dataset"
 msgid "Dataset Type"
 msgstr "Dataset Type"
 
+msgid "Dataset is locked"
+msgstr "Dataset is vergrendeld"
+
 msgid "Dataset is marked for deletion"
 msgstr "Dataset is gemarkeerd voor verwijdering"
-
-msgid "Dataset is protected"
-msgstr "Dataset is beschermd"
 
 msgid "Dataset is unlocked"
 msgstr "Dataset is ontgrendeld"
@@ -2514,6 +2543,9 @@ msgstr "Verwijder Geselecteerde LAGGs"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Verwijder Geselecteerde NFS Delingen"
+
+msgid "Delete Selected Notifier"
+msgstr "Verwijder  Geselecteerd Kennisgeving"
 
 msgid "Delete Selected Options"
 msgstr "Verwijder Geselecteerde Opties"
@@ -3149,6 +3181,9 @@ msgstr "Wilt u de geselecteerde groepen verwijderen?"
 msgid "Do you want to delete selected jobs?"
 msgstr "Wilt u de geselecteerde taken verwijderen?"
 
+msgid "Do you want to delete selected notifier?"
+msgstr "Wilt u de geselecteerde kennisgeving verwijderen?"
+
 msgid "Do you want to delete selected options?"
 msgstr "Wilt u de geselecteerde opties verwijderen?"
 
@@ -3523,6 +3558,9 @@ msgstr "Inschakelen 'Groot lezen/schrijven."
 msgid "Enable ACL inheritance."
 msgstr "Inschakelen ACL overnemen."
 
+msgid "Enable AFP"
+msgstr "Inschakelen AFP"
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Inschakelen Geavanceerd Formatteren (4KB sector grootte)."
 
@@ -3869,9 +3907,6 @@ msgstr "Encryptie Hulpmiddelen"
 msgid "Encryption algorithm"
 msgstr "Encryptie algoritme"
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr "Verbeterde compatibiliteit met Netatalk AFP server."
-
 msgid "Enter Command"
 msgstr "Geef Commando"
 
@@ -3903,12 +3938,10 @@ msgstr ""
 "Vul een aangepast poortnummer in voor de WebGUI als u de standaard poort (80 "
 "voor HTTP, 443 voor HTTPS) niet wilt gebruiken."
 
-msgid ""
-"Enter a custom port number if you want to override the default port (default "
-"is 69)."
+msgid "Enter a custom port number if you do not want to use default port 69."
 msgstr ""
-"Vul een aangepast poortnummer in als u de standaard poort niet wilt "
-"gebruiken. (Standaard is 69)."
+"Een aangepaste poortnummer opgeven als u niet de standaardpoort 69 wilt "
+"gebruiken."
 
 #, php-format
 msgid ""
@@ -3933,6 +3966,9 @@ msgstr "Geef een beschrijving op"
 
 msgid "Enter a description for your reference."
 msgstr "Geef een beschrijving op voor uw referentie."
+
+msgid "Enter a directory"
+msgstr "Geef de gegevensmap op"
 
 msgid "Enter a group description."
 msgstr "Geef een groepsnaam op."
@@ -3962,6 +3998,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Vul een geldig sysctl MIB naam in."
 
+msgid "Enter comment for the share"
+msgstr "Opmerking opgeven voor de deling"
+
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
@@ -3971,6 +4010,9 @@ msgstr ""
 
 msgid "Enter destination"
 msgstr "Geef bestemming"
+
+msgid "Enter extra options"
+msgstr "Geef extra opties"
 
 msgid "Enter facility name"
 msgstr "Geef faciliteit naam"
@@ -4008,6 +4050,12 @@ msgstr ""
 
 msgid "Enter the command"
 msgstr "Geef een opdracht op"
+
+msgid "Enter the location of the share"
+msgstr "Geef de locatie op van de deling"
+
+msgid "Enter the name of the share"
+msgstr "Geef de naam op voor de deling"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -4120,6 +4168,9 @@ msgstr "Geëxporteerd"
 
 msgid "Extended Attributes"
 msgstr "Uitgebreide Attributen"
+
+msgid "Extended Attributes - use a xattr."
+msgstr "Uitgebreide Attributen - gebruik een xattr."
 
 msgid "Extended attributes"
 msgstr "Uitgebreide attributen"
@@ -4278,6 +4329,12 @@ msgstr "Februari"
 
 msgid "File"
 msgstr "Bestand"
+
+msgid ""
+"File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
+msgstr ""
+"Bestand (standaard) - gebruik een ._ AppleDouble bestand compatibel met OS X "
+"en Netatalk."
 
 msgid "File Editor"
 msgstr "Bestand Bewerker"
@@ -6071,6 +6128,9 @@ msgstr "Dient een nummer tussen 90 en 95 te zijn."
 msgid "Must choose one"
 msgstr "Kies een schijf (verplicht)"
 
+msgid "Must not be empty."
+msgstr "Mag niet leeg gelaten zijn."
+
 msgid "Mutual CHAP"
 msgstr "Mutual CHAP"
 
@@ -6152,6 +6212,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Naam van de variable."
 
+msgid "Native - store characters with their native ASCII value."
+msgstr "Native - sla karakters op met hun native ASCII waarde."
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "Gebruikers-gegevens noch metadata wordt gecached in ARC."
 
@@ -6167,6 +6230,12 @@ msgstr "NetBIOS Domein"
 
 msgid "NetBIOS Name"
 msgstr "NetBIOS Naam"
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr "Netatalk (standaard) - gebruik Netatalk compatibele xattr."
+
+msgid "Netatalk - use cross protocol locking with Netatalk."
+msgstr "Netatalk - gebruik kruis protocol vergrendeling met Netatalk."
 
 msgid "Netgraph"
 msgstr "Netgrafiek"
@@ -6219,6 +6288,9 @@ msgstr ""
 "kan een schijf die een spin-down heeft opnieuw een spin-up geven wanneer "
 "deze keuze geselecteerd is."
 
+msgid "New"
+msgstr "Nieuw"
+
 msgid "New Password"
 msgstr "Nieuw Wachtwoord"
 
@@ -6237,6 +6309,10 @@ msgstr "Volgende"
 
 msgid "No"
 msgstr "Nee"
+
+msgid "No (default) - Disables advertising Time Machine support."
+msgstr ""
+"Nee (standaard) - Uitschakelen kenbaar maken Time Machine ondersteuning."
 
 msgid "No DNS server have been configured."
 msgstr "Er zijn geen DNS-server geconfigureerd."
@@ -6416,6 +6492,9 @@ msgstr "Niet-Herstelbaar"
 
 msgid "None"
 msgstr "Geen"
+
+msgid "None (default) - no cross protocol locking."
+msgstr "Geen (standaard) - geen kruis protocol vergrendeling."
 
 msgid "Normal"
 msgstr "Normaal"
@@ -7000,9 +7079,16 @@ msgstr "Poort Doorsturen"
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Poortnummer moet 514 zijn of een getal tussen 1024 en 49151."
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr "Poortnummer moet 69 zijn of een getal tussen 1024 en 49151."
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "Poortnummer moet in het gebied tussen %d en %d zijn."
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
+msgstr ""
+"Poort van de TFTP service. leeg laten als u de standaardpoort wilt gebruiken."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -7118,6 +7204,13 @@ msgstr "Primaire Groep"
 msgid "Primary group is also selected in additional group."
 msgstr "Primaire groep is ook geselecteerd in een extra groep."
 
+msgid ""
+"Private (default) - store characters as encoded by the OS X client: mapped "
+"to the Unicode private range."
+msgstr ""
+"Privé (standaard) - tekens opslaan zoals gecodeerd door de OS X client: "
+"toegewezen aan het privé bereik van Unicode"
+
 msgid "Private Key"
 msgstr "Privé Sleutel"
 
@@ -7144,6 +7237,9 @@ msgstr "Beschermen"
 
 msgid "Protect Setting"
 msgstr "Beschermen Instellingen"
+
+msgid "Protected"
+msgstr "Beschermd"
 
 msgid "Protocol"
 msgstr "Protocol"
@@ -7482,6 +7578,9 @@ msgstr "Geconfigureerd externe deelnaam"
 
 msgid "Removable"
 msgstr "Verwijderbaar"
+
+msgid "Remove"
+msgstr "Verwijderen"
 
 msgid "Remove ZFS label information from a device"
 msgstr "Verwijder ZFS label informatie van een schijf"
@@ -8541,8 +8640,10 @@ msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr ""
 "Hiermee kunt u het gebruik van Challenge-Response Authenticatie bedienen."
 
-msgid "Specifies the username which the service will run as."
-msgstr "Geef de gebruikersnaam op waaronder deze service gaat draaien."
+msgid "Specifies the username under which the TFTP service should run."
+msgstr ""
+"Hier geeft u de gebruikersnaam waaronder de TFTP service moet worden "
+"uitgevoerd."
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8627,6 +8728,16 @@ msgstr "Opslaan NTFS ACLs  in Uitgebreide Attributen."
 
 msgid "Store alternate data streams in Extended Attributes."
 msgstr "Opslaan alternatieve gegevensstromen in Uitgebreide Attributen."
+
+msgid ""
+"Stream (experimental) - pass the stream on to the next module in the VFS "
+"stack."
+msgstr ""
+"Stream (experimenteel) - geef de stoom door aan de volgende module in de VFS-"
+"stack"
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
+msgstr "Stream - geef de stroom door aan de volgende module in de VFS-stack."
 
 msgid "Strict DLNA"
 msgstr "Strikte DLNA"
@@ -10357,6 +10468,9 @@ msgstr "Time Machine"
 msgid "Time Server"
 msgstr "Tijdserver"
 
+msgid "Time Stamp"
+msgstr "Tijdstempel"
+
 msgid "Time Synchronization"
 msgstr "Tijdsynchronisatie"
 
@@ -10385,6 +10499,9 @@ msgstr "Interval bijwerken tijd"
 
 msgid "Timeout"
 msgstr "Tijdsoverschrijding"
+
+msgid "Timeout must be a number between 10 and 255000000."
+msgstr "Timeout moet een nummer zijn tussen 10 en 255000000."
 
 msgid "Times"
 msgstr "Aantal keer"
@@ -10820,6 +10937,9 @@ msgstr "Update Periode"
 msgid "Update period"
 msgstr "Update periode"
 
+msgid "Updatenotifier"
+msgstr "Updatenotifier"
+
 msgid "Upgrade Firmware"
 msgstr "Update Firmware"
 
@@ -10960,6 +11080,9 @@ msgstr "Gebruik een schakel knop in plaats van in/uitschakel knoppen."
 msgid "Used"
 msgstr "Gebruikt"
 
+msgid "Used Space"
+msgstr "Gebruikte Ruimte"
+
 msgid "User"
 msgstr "Gebruiker"
 
@@ -11022,6 +11145,21 @@ msgstr "%s fragment groote gebruiken"
 
 msgid "VCPUs"
 msgstr "VCPUs"
+
+msgid "VFS fruit:encoding"
+msgstr "VFS fruit:encoding"
+
+msgid "VFS fruit:locking"
+msgstr "VFS fruit:locking"
+
+msgid "VFS fruit:metadata"
+msgstr "VFS fruit:metadata"
+
+msgid "VFS fruit:resource"
+msgstr "VFS fruit:resource"
+
+msgid "VFS fruit:time machine"
+msgstr "VFS fruit:time machine"
 
 msgid "VHID"
 msgstr "VHID"
@@ -11164,11 +11302,11 @@ msgstr "Volume Grootte"
 msgid "Volume Size Limit"
 msgstr "Volume grootte Limiet"
 
+msgid "Volume is locked"
+msgstr "Volume is vergrendeld"
+
 msgid "Volume is marked for deletion"
 msgstr "Volume is gemarkeerd voor verwijdering"
-
-msgid "Volume is protected"
-msgstr "Volume is beveiligd"
 
 msgid "Volume is unlocked"
 msgstr "Volume is ontgrendeld"
@@ -11372,6 +11510,9 @@ msgstr "Y-as Bereik"
 
 msgid "Yes"
 msgstr "Ja"
+
+msgid "Yes - Enables Time Machine support for this share."
+msgstr "Ja - Inschakelen Time Machine ondersteuning voor deze deling."
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -11705,3 +11846,28 @@ msgstr "gebruikt van"
 
 msgid "visible"
 msgstr "zichtbaar"
+
+#~ msgid "Specifies the username which the service will run as."
+#~ msgstr "Geef de gebruikersnaam op waaronder deze service gaat draaien."
+
+#~ msgid "Volume is protected"
+#~ msgstr "Volume is beveiligd"
+
+#~ msgid "AFP Compatibility"
+#~ msgstr "AFP Compatibiliteit"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server."
+#~ msgstr "Verbeterde compatibiliteit met Netatalk AFP server."
+
+#~ msgid "Dataset is protected"
+#~ msgstr "Dataset is beschermd"
+
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port (default "
+#~ "is 69)."
+#~ msgstr ""
+#~ "Vul een aangepast poortnummer in als u de standaard poort niet wilt "
+#~ "gebruiken. (Standaard is 69)."
+
+#~ msgid "Netatalk - use cross protocol locking with Netatalk"
+#~ msgstr "Netatalk - gebruik kruis protocol vergrendeling met Netatalk"

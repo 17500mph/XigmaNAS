@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-02-17 23:21+0000\n"
+"POT-Creation-Date: 2018-03-06 14:30+0000\n"
 "PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-05 22:45+0000\n"
+"X-Launchpad-Export-Date: 2018-03-06 19:52+0000\n"
 "X-Generator: Launchpad (build 18566)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -202,6 +202,9 @@ msgstr "4KB 보정"
 msgid "514"
 msgstr ""
 
+msgid "69"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 태그(1에서 4094까지)."
 
@@ -351,9 +354,6 @@ msgstr "AD 또는 PDC 이름."
 
 msgid "AFP"
 msgstr "AFP"
-
-msgid "AFP Compatibility"
-msgstr "AFP 호환성"
 
 msgid "AG"
 msgstr "AG"
@@ -583,6 +583,9 @@ msgstr "추가 그룹"
 
 msgid "Additional Network"
 msgstr "추가 네트워크"
+
+msgid "Additional Parameter"
+msgstr ""
 
 msgid "Additional Parameters"
 msgstr "추가 매개 변수"
@@ -885,6 +888,9 @@ msgstr "사용자 정의 공유 추가"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apple Filing Protocol (AFP) Compatibility Settings"
+msgstr ""
 
 msgid "Apple Public Source License"
 msgstr ""
@@ -1734,6 +1740,16 @@ msgstr "컨트롤러 모델"
 msgid "Controller TCP Port"
 msgstr "컨트롤러 TCP 포트"
 
+msgid ""
+"Controls how the set of illegal NTFS ASCII character are stored in the "
+"filesystem, commonly used by OS X clients."
+msgstr ""
+
+msgid ""
+"Controls if Time Machine support via the FULLSYNC volume capability is "
+"advertised to clients."
+msgstr ""
+
 msgid "Controls the behavior of synchronous requests."
 msgstr "동기 요청에 대한 동작을 제어합니다."
 
@@ -1783,6 +1799,12 @@ msgstr "보조 캐시(L2ARC)에 무엇을 캐시할 지 제어합니다."
 
 msgid "Controls what types of metadata are stored redundantly."
 msgstr "어떤 메타데이터를 중복 저장할 지 제어합니다."
+
+msgid "Controls where the OS X metadata stream is stored."
+msgstr ""
+
+msgid "Controls where the OS X resource fork is stored."
+msgstr ""
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2141,6 +2163,9 @@ msgstr "데몬 이벤트"
 msgid "Daemon log"
 msgstr "데몬 로그"
 
+msgid "Data"
+msgstr ""
+
 msgid "Data Integrity"
 msgstr "데이터 무결성"
 
@@ -2159,11 +2184,11 @@ msgstr "데이터셋"
 msgid "Dataset Type"
 msgstr "데이터셋 형태"
 
+msgid "Dataset is locked"
+msgstr ""
+
 msgid "Dataset is marked for deletion"
 msgstr "데이터셋 삭제 표시됨"
-
-msgid "Dataset is protected"
-msgstr "데이터셋 보호됨"
 
 msgid "Dataset is unlocked"
 msgstr "데이터셋 잠금 해제됨"
@@ -2308,6 +2333,9 @@ msgstr "선택된 LAG 그룹들 삭제"
 
 msgid "Delete Selected NFS Shares"
 msgstr "선택된 NFS 공유 삭제"
+
+msgid "Delete Selected Notifier"
+msgstr ""
 
 msgid "Delete Selected Options"
 msgstr "선택된 옵션들 삭제"
@@ -2905,6 +2933,9 @@ msgstr "선택된 그룹들을 삭제하시겠습니까?"
 msgid "Do you want to delete selected jobs?"
 msgstr "선택된 작업들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected notifier?"
+msgstr ""
+
 msgid "Do you want to delete selected options?"
 msgstr "선택된 옵션들을 삭제하시겠습니까?"
 
@@ -3273,6 +3304,9 @@ msgstr "'대량 읽기/쓰기' 스위치 사용 함"
 msgid "Enable ACL inheritance."
 msgstr "ACL 상속 사용 함"
 
+msgid "Enable AFP"
+msgstr ""
+
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "고급 포맷 사용 함(4KB 섹터 크기)"
 
@@ -3594,9 +3628,6 @@ msgstr "암호화 도구"
 msgid "Encryption algorithm"
 msgstr "암호화 알고리즘"
 
-msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr "netatalk AFP 서버와의 호환성을 향상 시킵니다."
-
 msgid "Enter Command"
 msgstr "명령어 입력"
 
@@ -3626,10 +3657,8 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "기본값을 사용하지 않으려는 경우 사용자 정의 WebGUI 포트 번호를 입력하십시오(HTTP는 80, HTTPS는 443)."
 
-msgid ""
-"Enter a custom port number if you want to override the default port (default "
-"is 69)."
-msgstr "기본 포트를 사용하지 않으려는 경우 사용자 정의 포트 번호를 입력하십시오(기본 값은 69입니다)."
+msgid "Enter a custom port number if you do not want to use default port 69."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3650,6 +3679,9 @@ msgstr "참조하기 위한 설명 입력"
 
 msgid "Enter a description for your reference."
 msgstr "참고하기 위한 설명 입력"
+
+msgid "Enter a directory"
+msgstr ""
 
 msgid "Enter a group description."
 msgstr "그룹 설명을 입력하십시오."
@@ -3677,6 +3709,9 @@ msgstr "공백으로 구분되는 tap 장치들을 입력하십시오. 이 장�
 msgid "Enter a valid sysctl MIB name."
 msgstr "유효한 sysctl MIB 이름을 입력하십시오."
 
+msgid "Enter comment for the share"
+msgstr ""
+
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
@@ -3684,6 +3719,9 @@ msgstr "사용될 시스템 시간을 직접 입력(mm/dd/yyyy hh:mm 포맷)하�
 
 msgid "Enter destination"
 msgstr "대상 입력"
+
+msgid "Enter extra options"
+msgstr ""
 
 msgid "Enter facility name"
 msgstr ""
@@ -3719,6 +3757,12 @@ msgstr "UPS의 식별자와 UPS가 연결된 장치의 IP 주소를 입력하십
 
 msgid "Enter the command"
 msgstr "명령 입력"
+
+msgid "Enter the location of the share"
+msgstr ""
+
+msgid "Enter the name of the share"
+msgstr ""
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3818,6 +3862,9 @@ msgstr "내보내기 됨"
 
 msgid "Extended Attributes"
 msgstr "확장 속성"
+
+msgid "Extended Attributes - use a xattr."
+msgstr ""
 
 msgid "Extended attributes"
 msgstr "확장 속성"
@@ -3973,6 +4020,10 @@ msgstr "2월"
 
 msgid "File"
 msgstr "파일"
+
+msgid ""
+"File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
+msgstr ""
 
 msgid "File Editor"
 msgstr "파일 편집기"
@@ -5656,6 +5707,9 @@ msgstr ""
 msgid "Must choose one"
 msgstr "반드시 선택해야 함"
 
+msgid "Must not be empty."
+msgstr ""
+
 msgid "Mutual CHAP"
 msgstr "상호 CHAP"
 
@@ -5733,6 +5787,9 @@ msgstr "서버의 이름. 이 난이 비어 있으면 기본 서버가 명세 �
 msgid "Name of the variable."
 msgstr "변수의 이름."
 
+msgid "Native - store characters with their native ASCII value."
+msgstr ""
+
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "사용자 데이터나 메타데이터는 ARC에 캐시되지 않습니다."
 
@@ -5747,6 +5804,12 @@ msgstr "NetBIOS 도메인"
 
 msgid "NetBIOS Name"
 msgstr "NetBIOS 이름"
+
+msgid "Netatalk (default) - use Netatalk compatible xattr."
+msgstr ""
+
+msgid "Netatalk - use cross protocol locking with Netatalk."
+msgstr ""
 
 msgid "Netgraph"
 msgstr "네트 그래프"
@@ -5795,6 +5858,9 @@ msgid ""
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr "전혀 - 전원 모드와 관계 없이 장치를 검사합니다. 검사될 때 디스크가 회전 중이 아니라면 다시 회전하도록 할 것입니다."
 
+msgid "New"
+msgstr ""
+
 msgid "New Password"
 msgstr "새 암호"
 
@@ -5811,6 +5877,9 @@ msgstr "다음"
 
 msgid "No"
 msgstr "아니오"
+
+msgid "No (default) - Disables advertising Time Machine support."
+msgstr ""
 
 msgid "No DNS server have been configured."
 msgstr "DNS 서버가 구성되지 않았습니다."
@@ -5988,6 +6057,9 @@ msgstr "복구 불가능한"
 
 msgid "None"
 msgstr "없음"
+
+msgid "None (default) - no cross protocol locking."
+msgstr ""
 
 msgid "Normal"
 msgstr "일반"
@@ -6547,9 +6619,15 @@ msgstr "포트 포워딩"
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "포트 번호는 514 또는 1024에서 49151 사이의 숫자여야 합니다."
 
+msgid "Port number must be 69 or a number between 1024 and 49151."
+msgstr ""
+
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "포트 번호는 %d와 %d 범위 내에 있어야 합니다."
+
+msgid "Port of the TFTP service. Leave blank to use the default port."
+msgstr ""
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -6658,6 +6736,11 @@ msgstr "기본 그룹"
 msgid "Primary group is also selected in additional group."
 msgstr "기본 그룹이 추가 그룹에서도 선택되었습니다."
 
+msgid ""
+"Private (default) - store characters as encoded by the OS X client: mapped "
+"to the Unicode private range."
+msgstr ""
+
 msgid "Private Key"
 msgstr "개인 키"
 
@@ -6684,6 +6767,9 @@ msgstr "보호"
 
 msgid "Protect Setting"
 msgstr "보호 설정"
+
+msgid "Protected"
+msgstr ""
 
 msgid "Protocol"
 msgstr "프로토콜"
@@ -7004,6 +7090,9 @@ msgstr "원격 공유 이름 설정됨"
 
 msgid "Removable"
 msgstr "이동식"
+
+msgid "Remove"
+msgstr ""
 
 msgid "Remove ZFS label information from a device"
 msgstr "장치에서 ZFS 라벨 정보 제거"
@@ -7992,8 +8081,8 @@ msgstr "발생 횟수가 설정 횟수를 넘어 추방에 추가하게 될 시�
 msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr "시도 응답 인증을 지정하십시오."
 
-msgid "Specifies the username which the service will run as."
-msgstr "서비스를 실행할 사용자 이름을 지정 합니다."
+msgid "Specifies the username under which the TFTP service should run."
+msgstr ""
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8074,6 +8163,14 @@ msgstr "확장 속성에 NTFS ACL 저장"
 
 msgid "Store alternate data streams in Extended Attributes."
 msgstr "확장 속성에 대체 스트림 저장"
+
+msgid ""
+"Stream (experimental) - pass the stream on to the next module in the VFS "
+"stack."
+msgstr ""
+
+msgid "Stream - pass the stream on to the next module in the VFS stack."
+msgstr ""
 
 msgid "Strict DLNA"
 msgstr "DLNA 제한"
@@ -9573,6 +9670,9 @@ msgstr "Time Machine"
 msgid "Time Server"
 msgstr "시간 서버"
 
+msgid "Time Stamp"
+msgstr ""
+
 msgid "Time Synchronization"
 msgstr "시간 동기화"
 
@@ -9600,6 +9700,9 @@ msgstr "시간 갱신 간격"
 
 msgid "Timeout"
 msgstr "시간 초과"
+
+msgid "Timeout must be a number between 10 and 255000000."
+msgstr ""
 
 msgid "Times"
 msgstr "시간"
@@ -10007,6 +10110,9 @@ msgstr "갱신 주기"
 msgid "Update period"
 msgstr "갱신 간격"
 
+msgid "Updatenotifier"
+msgstr ""
+
 msgid "Upgrade Firmware"
 msgstr "펌웨어 업그레이드"
 
@@ -10126,6 +10232,9 @@ msgstr "사용/사용 안함 버튼 대신 전환 버튼을 사용합니다."
 msgid "Used"
 msgstr "사용량"
 
+msgid "Used Space"
+msgstr ""
+
 msgid "User"
 msgstr "사용자"
 
@@ -10185,6 +10294,21 @@ msgstr "%s 바이트 조각 크기 사용."
 
 msgid "VCPUs"
 msgstr "VCPU"
+
+msgid "VFS fruit:encoding"
+msgstr ""
+
+msgid "VFS fruit:locking"
+msgstr ""
+
+msgid "VFS fruit:metadata"
+msgstr ""
+
+msgid "VFS fruit:resource"
+msgstr ""
+
+msgid "VFS fruit:time machine"
+msgstr ""
 
 msgid "VHID"
 msgstr "VHID"
@@ -10321,11 +10445,11 @@ msgstr "볼륨 크기"
 msgid "Volume Size Limit"
 msgstr "볼륨 크기 제한"
 
+msgid "Volume is locked"
+msgstr ""
+
 msgid "Volume is marked for deletion"
 msgstr "볼륨 삭제 표시됨"
-
-msgid "Volume is protected"
-msgstr "볼륨 보호됨"
 
 msgid "Volume is unlocked"
 msgstr "볼륨 잠금 해제됨"
@@ -10514,6 +10638,9 @@ msgstr "Y 축 범위"
 
 msgid "Yes"
 msgstr "예"
+
+msgid "Yes - Enables Time Machine support for this share."
+msgstr ""
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -10820,3 +10947,23 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "AFP Compatibility"
+#~ msgstr "AFP 호환성"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server."
+#~ msgstr "netatalk AFP 서버와의 호환성을 향상 시킵니다."
+
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port (default "
+#~ "is 69)."
+#~ msgstr "기본 포트를 사용하지 않으려는 경우 사용자 정의 포트 번호를 입력하십시오(기본 값은 69입니다)."
+
+#~ msgid "Volume is protected"
+#~ msgstr "볼륨 보호됨"
+
+#~ msgid "Specifies the username which the service will run as."
+#~ msgstr "서비스를 실행할 사용자 이름을 지정 합니다."
+
+#~ msgid "Dataset is protected"
+#~ msgstr "데이터셋 보호됨"
