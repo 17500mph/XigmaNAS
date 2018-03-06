@@ -33,175 +33,209 @@
  */
 require_once 'properties.php';
 
-class properties_diag_log_settings {
-	public $daemon;
-	public $disablecomp;
-	public $disablesecure;
-	public $enable;
-	public $ftp;
-	public $ipaddr;
-	public $nentries;
-	public $port;
-	public $resolve;
-	public $reverse;
-	public $rsyncd;
-	public $smartd;
-	public $sshd;
-	public $system;
+class properties_diag_log_settings extends co_property_container {
+	protected $x_daemon;
+	protected $x_disablecomp;
+	protected $x_disablesecure;
+	protected $x_enable;
+	protected $x_ftp;
+	protected $x_ipaddr;
+	protected $x_nentries;
+	protected $x_port;
+	protected $x_resolve;
+	protected $x_reverse;
+	protected $x_rsyncd;
+	protected $x_smartd;
+	protected $x_sshd;
+	protected $x_system;
 	
-	public function __construct() {
-		$this->load();
+	public function get_daemon() {
+		return $this->x_daemon ?? $this->init_daemon();
 	}
-	public function load() {
-		$this->daemon = $this->prop_daemon();
-		$this->disablecomp = $this->prop_disablecomp();
-		$this->disablesecure = $this->prop_disablesecure();
-		$this->enable = $this->prop_enable();
-		$this->ftp = $this->prop_ftp();
-		$this->ipaddr = $this->prop_ipaddr();
-		$this->nentries = $this->prop_nentries();
-		$this->port = $this->prop_port();
-		$this->resolve = $this->prop_resolve();
-		$this->reverse = $this->prop_reverse();
-		$this->rsyncd = $this->prop_rsyncd();
-		$this->smartd = $this->prop_smartd();
-		$this->sshd = $this->prop_sshd();
-		$this->system = $this->prop_system();
-		return $this;
+	public function init_daemon() {
+		$property = $this->x_daemon = new properties_bool($this);
+		$caption = gtext('Send daemon event messages.');
+		$description = '';
+		$property->
+			set_name('daemon')->
+			set_title(gtext('Daemon Events'));
+		$property->
+			set_id('daemon')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_daemon(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('daemon');
-		$o->set_name('daemon');
-		$o->set_title(gtext('Daemon Events'));
-		$o->set_caption(gtext('Send daemon event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_disablecomp() {
+		return $this->x_disablecomp ?? $this->init_disablecomp();
 	}
-	private function prop_disablecomp(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('disablecomp');
-		$o->set_name('disablecomp');
-		$o->set_title(gtext('Compression'));
-		$o->set_caption(gtext('Disable the compression of repeating lines.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function init_disablecomp() {
+		$property = $this->x_disablecomp = new properties_bool($this);
+		$caption = gtext('Disable the compression of repeating lines.');
+		$description = '';
+		$property->
+			set_name('disablecomp')->
+			set_title(gtext('Compression'));
+		$property->
+			set_id('disablecomp')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_disablesecure(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('disablesecure');
-		$o->set_name('disablesecure');
-		$o->set_title(gtext('Remote Syslog Messages'));
-		$o->set_caption(gtext('Accept remote syslog messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_disablesecure() {
+		return $this->x_disablesecure ?? $this->init_disablesecure();
 	}
-	private function prop_enable(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('enable');
-		$o->set_name('enable');
-		$o->set_title(gtext('Enable Server'));
-		$o->set_caption(gtext('Enable'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function init_disablesecure() {
+		$property = $this->x_disablesecure = new properties_bool($this);
+		$caption = gtext('Accept remote syslog messages.');
+		$description = '';
+		$property->
+			set_name('disablesecure')->
+			set_title(gtext('Remote Syslog Messages'));
+		$property->
+			set_id('disablesecure')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_ftp(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('ftp');
-		$o->set_name('ftp');
-		$o->set_title(gtext('FTP Events'));
-		$o->set_caption(gtext('Send FTP event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_enable() {
+		return $this->x_enable ?? $this->init_enable();
 	}
-	private function prop_ipaddr(): properties_ipaddress {
-		$o = new properties_ipaddress($this);
-		$o->set_id('ipaddr');
-		$o->set_name('ipaddr');
-		$o->set_title(gtext('IP Address'));
-		$o->set_description(gtext('IP address of the remote syslog server.'));
-		$o->set_defaultvalue('');
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('This is not a valid IP Address.')));
-		return $o;
+	public function init_enable() {
+		$property = $this->x_enable = new properties_bool($this);
+		$caption = gtext('Enable');
+		$description = '';
+		$property->
+			set_name('enable')->
+			set_title(gtext('Enable Server'));
+		$property->
+			set_id('enable')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_nentries(): properties_int {
-		$o = new properties_int($this);
-		$o->set_id('nentries');
-		$o->set_name('nentries');
-		$o->set_title(gtext('Show Log Entries'));
-		$o->set_description('');
-		$o->set_defaultvalue(50);
-		$o->set_size(5);
-		$o->set_maxlength(4);
-		$o->set_min(5)->set_max(1000);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Must be a number between 5 and 1000.')));
-		return $o;
+	public function get_ftp() {
+		return $this->x_ftp ?? $this->init_ftp();
 	}
-	private function prop_port(): properties_int {
-		$o = new properties_int($this);
-		$o->set_id('port');
-		$o->set_name('port');
-		$o->set_title(gtext('Port'));
-		$o->set_caption(gtext('Port of the remote syslog server. Leave blank to use the default port.'));
-		$o->set_description(gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.'));
-		$o->set_defaultvalue('');
-		$o->set_size(6);
-		$o->set_maxlength(5);
-		$o->set_min(1024)->set_max(49151);
-		$o->set_placeholder(gtext('514'));
-		$o->filter_use_default();
-		$o->set_filter(FILTER_VALIDATE_INT,'514');
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR,'514');
-		$o->set_filter_options(['default' => NULL,'min_range' => 514,'max_range' => 514],'514');
-		$o->set_filter(FILTER_VALIDATE_REGEXP,'empty');
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR,'empty');
-		$o->set_filter_options(['default' => NULL,'regexp' => '/^$/'],'empty');
-		$o->set_filter(FILTER_UNSAFE_RAW,'scalar');
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR,'scalar');
-		$o->set_filter_options(['default' => ''],'scalar');
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Port number must be 514 or a number between 1024 and 49151.')));
-		return $o;
+	public function init_ftp() {
+		$property = $this->x_ftp = new properties_bool($this);
+		$caption = gtext('Send FTP event messages.');
+		$description = '';
+		$property->
+			set_name('ftp')->
+			set_title(gtext('FTP Events'));
+		$property->
+			set_id('ftp')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_resolve(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('resolve');
-		$o->set_name('resolve');
-		$o->set_title(gtext('Resolve IP'));
-		$o->set_caption(gtext('Resolve IP addresses to hostnames.'));
-		$helpinghand = [
+	public function get_ipaddr() {
+		return $this->x_ipaddr ?? $this->init_ipaddr();
+	}
+	public function init_ipaddr() {
+		$property = $this->x_ipaddr = new properties_ipaddress($this);
+		$description = gtext('IP address of the remote syslog server.');
+		$property->
+			set_name('ipaddr')->
+			set_title(gtext('IP Address'));
+		$property->
+			set_id('ipaddr')->
+			set_description($description)->
+			set_defaultvalue('')->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('This is not a valid IP Address.')));
+		return $property;
+	}
+	public function get_nentries() {
+		return $this->x_nentries ?? $this->init_nentries();
+	}
+	public function init_nentries() {
+		$property = $this->x_nentries = new properties_int($this);
+		$description = '';
+		$property->
+			set_name('nentries')->
+			set_title(gtext('Show Log Entries'));
+		$property->
+			set_id('nentries')->
+			set_description($description)->
+			set_defaultvalue(50)->
+			set_size(5)->
+			set_maxlength(4)->
+			set_min(5)->set_max(1000)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must be a number between 5 and 1000.')));
+		return $property;
+	}
+	public function get_port() {
+		return $this->x_port ?? $this->init_port();
+	}
+	public function init_port() {
+		$property = $this->x_port = new properties_int($this);
+		$caption = gtext('Port of the remote syslog server. Leave blank to use the default port.');
+		$description = gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.');
+		$property->
+			set_name('port')->
+			set_title(gtext('Port'));
+		$property->
+			set_id('port')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_size(6)->
+			set_maxlength(5)->
+			set_min(1024)->set_max(49151)->
+			set_placeholder(gtext('514'))->
+			filter_use_default()->
+			set_filter(FILTER_VALIDATE_INT,'514')->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,'514')->
+			set_filter_options(['default' => NULL,'min_range' => 514,'max_range' => 514],'514')->
+			set_filter(FILTER_VALIDATE_REGEXP,'empty')->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,'empty')->
+			set_filter_options(['default' => NULL,'regexp' => '/^$/'],'empty')->
+			set_filter(FILTER_UNSAFE_RAW,'scalar')->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,'scalar')->
+			set_filter_options(['default' => ''],'scalar')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Port number must be 514 or a number between 1024 and 49151.')));
+		return $property;
+	}
+	public function get_resolve() {
+		return $this->x_resolve ?? $this->init_resolve();
+	}
+	public function init_resolve() {
+		$property = $this->x_resolve = new properties_bool($this);
+		$caption = gtext('Resolve IP addresses to hostnames.');
+		$description = [
 			gtext('Hint'),
 			[': ',true],
 			[gtext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'),true],
@@ -209,82 +243,125 @@ class properties_diag_log_settings {
 			[': ',true],
 			[gtext('This can cause a huge delay in loading the log page!'),true]
 		];
-		$o->set_description($helpinghand);
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+		$property->
+			set_name('resolve')->
+			set_title(gtext('Resolve IP'));
+		$property->
+			set_id('resolve')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_reverse(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('reverse');
-		$o->set_name('reverse');
-		$o->set_title(gtext('Log Order'));
-		$o->set_caption(gtext('Show log entries in reverse order (newest entries on top).'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_reverse() {
+		return $this->x_reverse ?? $this->init_reverse();
 	}
-	private function prop_rsyncd(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('rsyncd');
-		$o->set_name('rsyncd');
-		$o->set_title(gtext('RSYNC Events'));
-		$o->set_caption(gtext('Send RSYNC event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function init_reverse() {
+		$property = $this->x_reverse = new properties_bool($this);
+		$caption = gtext('Show log entries in reverse order (newest entries on top).');
+		$description = '';
+		$property->
+			set_name('reverse')->
+			set_title(gtext('Log Order'));
+		$property->
+			set_id('reverse')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_smartd(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('smartd');
-		$o->set_name('smartd');
-		$o->set_title(gtext('S.M.A.R.T. Events'));
-		$o->set_caption(gtext('Send S.M.A.R.T. event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_rsyncd() {
+		return $this->x_rsyncd ?? $this->init_rsyncd();
 	}
-	private function prop_sshd(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('sshd');
-		$o->set_name('sshd');
-		$o->set_title(gtext('SSH Events'));
-		$o->set_caption(gtext('Send SSH event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function init_rsyncd() {
+		$property = $this->x_rsyncd = new properties_bool($this);
+		$caption = gtext('Send RSYNC event messages.');
+		$description = '';
+		$property->
+			set_name('rsyncd')->
+			set_title(gtext('RSYNC Events'));
+		$property->
+			set_id('rsyncd')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_system(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('system');
-		$o->set_name('system');
-		$o->set_title(gtext('System Events'));
-		$o->set_caption(gtext('Send system event messages.'));
-		$o->set_description('');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_smartd() {
+		return $this->x_smartd ?? $this->init_smartd();
+	}
+	public function init_smartd() {
+		$property = $this->x_smartd = new properties_bool($this);
+		$caption = gtext('Send S.M.A.R.T. event messages.');
+		$description = '';
+		$property->
+			set_name('smartd')->
+			set_title(gtext('S.M.A.R.T. Events'));
+		$property->
+			set_id('smartd')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function get_sshd() {
+		return $this->x_sshd ?? $this->init_sshd();
+	}
+	public function init_sshd() {
+		$this->x_sshd = new properties_bool($this);
+		$property = $this->x_sshd;
+		$caption = gtext('Send SSH event messages.');
+		$description = '';
+		$property->
+			set_name('sshd')->
+			set_title(gtext('SSH Events'));
+		$property->
+			set_id('sshd')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function get_system() {
+		return $this->x_system ?? $this->init_system();
+	}
+	public function init_system() {
+		$this->x_system = new properties_bool($this);
+		$property = $this->x_system;
+		$caption = gtext('Send system event messages.');
+		$description = '';
+		$property->
+			set_name('system')->
+			set_title(gtext('System Events'));
+		$property->
+			set_id('system')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
 }
