@@ -1509,7 +1509,7 @@ trait co_DOMTools {
 		$backup_use_internal_errors = libxml_use_internal_errors(true); // user cares about exceptions
 		$backup_disable_entity_loader = libxml_disable_entity_loader(true);
 		$document = $subnode->ownerDocument ?? $this;
-		$htmldocument = new DOMDocument('1.0', 'UTF-8'); 
+		$htmldocument = new DOMDocument('1.0', 'UTF-8');
 		$successfully_loaded = $htmldocument->loadHTML('<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>' . $value . '</body></html>',LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 		libxml_clear_errors();
 		libxml_disable_entity_loader($backup_disable_entity_loader);
@@ -2166,11 +2166,9 @@ EOJ;
 			$input_attributes['required'] = 'required';
 		endif;
 		foreach($p->get_options() as $option_tag => $option_val):
-			//	create a unique identifier for each row.
-			$uuid = uuid();
 			//	use label tag for text column to allow enabling the radio button by clicking on the text
 			$input_attributes['value'] = $option_tag;
-			$input_attributes['id'] = sprintf('radio_%s',$uuid);
+			$input_attributes['id'] = sprintf('radio_%s',uuid());
 			if($value === $option_tag):
 				$input_attributes['checked'] = 'checked';
 			elseif(array_key_exists('checked',$input_attributes)):
@@ -2178,7 +2176,7 @@ EOJ;
 			endif;
 			$tr = $tbody->addTR();
 			$tr->addTDwC('lcelc')->insINPUT($input_attributes);
-			$tr->addTDwC('lcebl')->addElement('label',['for' => $uuid,'style' => 'white-space:pre-wrap;'],$option_val);
+			$tr->addTDwC('lcebl')->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
 		return $this;
 	}
@@ -2358,7 +2356,6 @@ EOJ;
 			$td->addA(['href' => $link])->insIMG(['src' => $g_img['mai'],'title' => $sphere->sym_mai(),'alt' => $sphere->sym_mai(),'class' => 'spin oneemhigh']);
 		endif;
 		return $this;
-		
 	}
 	public function ins_informbox($sphere, bool $show_link = false) {
 		global $g_img;
@@ -2456,7 +2453,7 @@ EOJ;
 	}
 	public function c2_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
-			c2_row($p,$is_required,$is_readonly,true)->
+			c2_row($p,$is_required,$is_readonly,false)->
 				ins_checkbox_grid($p,$value,$is_required,$is_readonly)->
 				ins_description($p);
 		return $this;
@@ -2477,7 +2474,7 @@ EOJ;
 	}
 	public function c2_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
-			c2_row($p,$is_required,$is_readonly,true)->
+			c2_row($p,$is_required,$is_readonly,false)->
 				ins_radio_grid($p,$value,$is_required,$is_readonly)->
 				ins_description($p);
 		return $this;
@@ -2706,7 +2703,7 @@ $(document).ready(function() {
 	$(".area_data_selection").tablesorter({
 		emptyTo: 'none'
 	});
-}); 
+});
 EOJ;
 		endif;
 		$body = $this->addElement('body',['id' => 'main']);
@@ -2737,7 +2734,7 @@ EOJ;
 		endif;
 		$flexcontainer->ins_main();
 		$flexcontainer->ins_footer();
-		$flexcontainer->addJavascript($jdata);
+		$body->addJavascript($jdata);
 		return $this;
 	}
 	public function ins_header_logo() {
@@ -2848,7 +2845,7 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 
 	protected $stack = [];
 	protected $options = [];
-	
+
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
 		$this->preserveWhiteSpace = false;
@@ -2887,7 +2884,7 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 interface ci_DOM {
 }
 /**
- * 
+ *
  * @param array $page_title
  * @param string $action_url
  * @param string ...$options
