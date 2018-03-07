@@ -363,6 +363,6 @@ if($record_exists):
 else:
 	$tbody->ins_no_records_found($n_col_width);
 endif;
-$foot->ins_record_add($sphere,$n_col_width);
+$tfoot->ins_record_add($sphere,$n_col_width);
 $document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
 $document->render();
