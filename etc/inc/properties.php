@@ -347,7 +347,13 @@ abstract class properties {
  *	@return string
  */
 	public function validate_config(array $source) {
-		return $source[$this->get_name()] ?? '';
+		$name = $this->get_name();
+		if(array_key_exists($name,$source)):
+			$return_data = $source[$name];
+		else:
+			$return_data = $this->get_defaultvalue();
+		endif;
+		return $return_data;
 	}
 }
 class properties_text extends properties {
@@ -574,7 +580,7 @@ class properties_list extends properties {
 				$return_data = '';
 			endif;
 		else:
-			$return_data = '';
+			$return_data = $this->get_defaultvalue();
 		endif;
 		return $return_data;
 	}
