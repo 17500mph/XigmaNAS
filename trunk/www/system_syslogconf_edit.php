@@ -34,83 +34,62 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
-require_once 'properties_syslogconf.php';
+require_once 'properties_syslogconf_edit.php';
+require_once 'co_request_method.php';
 
 function get_sphere_syslogconf_edit() {
 	global $config;
 	
 //	sphere structure
-	$sphere = new co_sphere_grid('system_syslogconf_edit','php');
+	$sphere = new co_sphere_row('system_syslogconf_edit','php');
 	$sphere->parent->set_basename('system_syslogconf');
 	$sphere->set_notifier('syslogconf');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Record'));
-	$sphere->sym_mod(gtext('Edit Record'));
-	$sphere->sym_del(gtext('Record is marked for deletion'));
-	$sphere->sym_loc(gtext('Record is locked'));
-	$sphere->sym_unl(gtext('Record is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Records'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected records?'));
 	$sphere->grid = &array_make_branch($config,'system','syslogconf','param');
 	return $sphere;
 }
 //	init properties and sphere
-$property = new properties_syslogconf();
+$cop = new properties_syslogconf_edit();
 $sphere = &get_sphere_syslogconf_edit();
+$rmo = new co_request_method();
+$rmo->add('GET','add',PAGE_MODE_ADD);
+$rmo->add('GET','edit',PAGE_MODE_EDIT);
+$rmo->add('POST','add',PAGE_MODE_ADD);
+$rmo->add('POST','cancel',PAGE_MODE_POST);
+$rmo->add('POST','edit',PAGE_MODE_EDIT);
+$rmo->add('POST','save',PAGE_MODE_POST);
+$rmo->set_default('POST','cancel',PAGE_MODE_POST);
+list($page_method,$page_action,$page_mode) = $rmo->validate();
 //	init indicators
 $input_errors = [];
 $prerequisites_ok = true;
-//	request method
-$methods = ['GET','POST'];
-$methods_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$methods)));
-$method = filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => $methods_regexp]]);
 //	determine page mode and validate resource id
-switch($method):
-	default: // unsupported request method
-		$sphere->row[$sphere->get_row_identifier()] = NULL;
-		break;
+switch($page_method):
 	case 'GET':
-		$actions = ['add','edit'];
-		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
-		$action = filter_input(INPUT_GET,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
-		switch($action):
-			default: // unsupported action
-				$sphere->row[$sphere->get_row_identifier()] = NULL;
-				break;
+		switch($page_action):
 			case 'add': // bring up a form with default values and let the user modify it
-				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
-				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
 				break;
 		endswitch;
 		break;
 	case 'POST':
-		$actions = ['add','cancel','edit','save'];
-		$actions_regexp = sprintf('/^(%s)$/',implode('|',array_map(function($element) { return preg_quote($element,'/'); },$actions)));
-		$action = filter_input(INPUT_POST,'submit',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => '','regexp' => $actions_regexp]]);
-		switch($action):
-			default:  // unsupported action
-				$sphere->row[$sphere->get_row_identifier()] = NULL;
-				break;
+		switch($page_action):
 			case 'add': // bring up a form with default values and let the user modify it
-				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'cancel': // cancel - nothing to do
 				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'edit': // edit requires a resource id, get it from input and validate
-				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
 				break;
 			case 'save': // modify requires a resource id, get it from input and validate
-				$page_mode = PAGE_MODE_POST;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
 				break;
 		endswitch;
 		break;
@@ -165,35 +144,33 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 /*
  *	end determine record update mode
  */
-$a_referrer = [
-	$property->enable->get_name(),
-	$property->facility->get_name(),
-	$property->level->get_name(),
-	$property->value->get_name(),
-	$property->comment->get_name()
+$a_referer = [
+	$cop->get_enable(),
+	$cop->get_facility(),
+	$cop->get_level(),
+	$cop->get_value(),
+	$cop->get_comment()
 ];
 switch($page_mode):
 	case PAGE_MODE_ADD:
-		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
+		foreach($a_referer as $referer):
+			$sphere->row[$referer->get_name()] = $referer->get_defaultvalue();
 		endforeach;
 		break;
 	case PAGE_MODE_EDIT:
-		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid[$sphere->row_id]);
-			if(!isset($sphere->row[$referrer])):
-				$sphere->row[$referrer] = $sphere->grid[$sphere->row_id][$referrer] ?? $property->{$referrer}->get_defaultvalue();
-				$input_errors[] = $property->{$referrer}->get_message_error();
-			endif;
+		$source = $sphere->grid[$sphere->row_id];
+		foreach($a_referer as $referer):
+			$sphere->row[$referer->get_name()] = $referer->validate_config($source);
 		endforeach;
 		break;
 	case PAGE_MODE_POST:
 		// apply post values that are applicable for all record modes
-		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_input();
-			if(!isset($sphere->row[$referrer])):
-				$sphere->row[$referrer] = $_POST[$referrer] ?? $property->{$referrer}->get_defaultvalue();
-				$input_errors[] = $property->{$referrer}->get_message_error();
+		foreach($a_referer as $referer):
+			$name = $referer->get_name();
+			$sphere->row[$name] = $referer->validate_input();
+			if(!isset($sphere->row[$name])):
+				$sphere->row[$name] = $_POST[$name] ?? '';
+				$input_errors[] = $referer->get_message_error();
 			endif;
 		endforeach;
 		if($prerequisites_ok && empty($input_errors)):
@@ -215,7 +192,7 @@ switch($page_mode):
 		break;
 endswitch;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('syslog.conf'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
-$jcode = $sphere->doj(false);
+$jcode = NULL;
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -253,13 +230,13 @@ $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
-		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false,gtext('Configuration'))->
+		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gtext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($property->facility,htmlspecialchars($sphere->row[$property->facility->get_name()]),true,false)->
-		c2_input_text($property->level,htmlspecialchars($sphere->row[$property->level->get_name()]),false,false)->
-		c2_input_text($property->value,htmlspecialchars($sphere->row[$property->value->get_name()]),false,false)->
-		c2_input_text($property->comment,htmlspecialchars($sphere->row[$property->comment->get_name()]),false,false);
+		c2_input_text($cop->get_facility(),htmlspecialchars($sphere->row[$cop->get_facility()->get_name()]),true,false)->
+		c2_input_text($cop->get_level(),htmlspecialchars($sphere->row[$cop->get_level()->get_name()]),false,false)->
+		c2_input_text($cop->get_value(),htmlspecialchars($sphere->row[$cop->get_value()->get_name()]),false,false)->
+		c2_input_text($cop->get_comment(),htmlspecialchars($sphere->row[$cop->get_comment()->get_name()]),false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->ins_button_add();

@@ -32,110 +32,75 @@
 	either expressed or implied, of the NAS4Free Project.
  */
 require_once 'properties.php';
-/*
- * To activate a property:
- * - Enable property variable.
- * - Enable init call in method load.
- * - Enable property method.
- */
-class properties_syslogconf {
-	public $comment;
-	public $enable;
-	public $facility;
-	public $level;
-	public $protected;
-	public $uuid;
-	public $value;
 
-	public function __construct() {
-		$this->load();
+class properties_syslogconf extends co_property_container {
+	protected $x_comment;
+	protected $x_enable;
+	protected $x_facility;
+	protected $x_level;
+	protected $x_protected;
+	protected $x_uuid;
+	protected $x_value;
+
+	public function get_comment() {
+		return $this->x_comment ?? $this->init_comment();
 	}
-	public function load() {
-		$this->comment = $this->prop_comment();
-		$this->enable = $this->prop_enable();
-		$this->facility = $this->prop_facility();
-		$this->level = $this->prop_level();
-		$this->protected = $this->prop_protected();
-		$this->uuid = $this->prop_uuid();
-		$this->value = $this->prop_value();
-		return $this;
+	public function init_comment() {
+		$property = $this->x_comment = new properties_text($this);
+		$property->
+			set_name('comment')->
+			set_title(gtext('Description'));
+		return $property;
 	}
-	private function prop_comment(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('comment');
-		$o->set_name('comment');
-		$o->set_title(gtext('Description'));
-		$o->set_description('');
-		$o->set_placeholder(gtext('Enter a description'));
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(80);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_filter(FILTER_UNSAFE_RAW);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => '']);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_enable() {
+		return $this->x_enable ?? $this->init_enable();
 	}
-	private function prop_enable(): property_enable {
-		$o = new property_enable($this);
-		return $o;
+	public function init_enable() {
+		$property = $this->x_enable = new property_enable($this);
+		return $property;
 	}
-	private function prop_facility(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('facility');
-		$o->set_name('facility');
-		$o->set_title(gtext('Facility'));
-		$o->set_description('');
-		$o->set_placeholder(gtext('Enter facility name'));
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(80);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->filter_use_default();
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_facility() {
+		return $this->x_facility ?? $this->init_facility();
 	}
-	private function prop_level(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('level');
-		$o->set_name('level');
-		$o->set_title(gtext('Level'));
-		$o->set_description('');
-		$o->set_placeholder(gtext('Enter level name'));
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(80);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->filter_use_default();
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function init_facility() {
+		$property = $this->x_facility= new properties_text($this);
+		$property->
+			set_name('facility')->
+			set_title(gtext('Facility'));
+		return $property;
 	}
-	private function prop_protected(): property_protected {
-		$o = new property_protected($this);
-		return $o;
+	public function get_level() {
+		return $this->x_level ?? $this->init_level();
 	}
-	private function prop_uuid(): property_uuid {
-		$o = new property_uuid($this);
-		return $o;
+	public function init_level() {
+		$property = $this->x_level = new properties_text($this);
+		$property->
+			set_name('level')->
+			set_title(gtext('Level'));
+		return $property;
 	}
-	private function prop_value(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('value');
-		$o->set_name('value');
-		$o->set_title(gtext('Destination'));
-		$o->set_description('');
-		$o->set_placeholder(gtext('Enter destination'));
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(80);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->filter_use_default();
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_protected() {
+		return $this->x_protected ?? $this->init_protected();
+	}
+	public function init_protected() {
+		$property = $this->x_protected = new property_protected($this);
+		return $property;
+	}
+	public function get_uuid() {
+		return $this->x_uuid ?? $this->init_uuid();
+	}
+	public function init_uuid() {
+		$property = $this->x_uuid = new property_uuid($this);
+		return $property;
+	}
+	public function get_value() {
+		return $this->x_value ?? $this->init_value();
+	}
+	public function init_value() {
+		$property = $this->x_value = new properties_text($this);
+		$property->
+			set_name('value')->
+			set_title(gtext('Destination'));
+		return $property;
 	}
 }
