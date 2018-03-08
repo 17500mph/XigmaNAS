@@ -2704,7 +2704,7 @@ EOJ;
 		$jdata .= <<<'EOJ'
 $(document).ready(function() {
 	$('.avoid-fouc').removeClass('avoid-fouc');
-	
+
 EOJ;
 		if($is_tablesort):
 			$jdata .= <<<'EOJ'
@@ -2712,12 +2712,12 @@ EOJ;
 	$(".area_data_selection").tablesorter({
 		emptyTo: 'none'
 	});
-	
+
 EOJ;
 		endif;
 		$jdata .= <<<'EOJ'
 });
-	
+
 EOJ;
 		$body = $this->addElement('body',['id' => 'main']);
 		if($is_form):
