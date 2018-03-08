@@ -237,7 +237,7 @@ switch($page_method):
 endswitch;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('syslog.conf')];
 $record_exists = count($sphere->grid) > 0;
-$a_col_width = ['5%','20%','20%','20%','10%','15','10%'];
+$a_col_width = ['5%','20%','20%','20%','10%','15%','10%'];
 $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
