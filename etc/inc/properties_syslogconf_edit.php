@@ -71,7 +71,7 @@ class properties_syslogconf_edit extends properties_syslogconf {
 		return $property;
 	}
 	public function init_level() {
-		$property = parent::init_facility();
+		$property = parent::init_level();
 		$description = '';
 		$placeholder = gtext('Enter level name');
 		$property->
