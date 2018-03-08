@@ -37,9 +37,9 @@ require_once 'co_sphere.php';
 require_once 'properties_syslogconf_edit.php';
 require_once 'co_request_method.php';
 
-function get_sphere_syslogconf_edit() {
+function system_syslogconf_edit_get_sphere() {
 	global $config;
-	
+
 //	sphere structure
 	$sphere = new co_sphere_row('system_syslogconf_edit','php');
 	$sphere->parent->set_basename('system_syslogconf');
@@ -52,7 +52,7 @@ function get_sphere_syslogconf_edit() {
 }
 //	init properties and sphere
 $cop = new properties_syslogconf_edit();
-$sphere = &get_sphere_syslogconf_edit();
+$sphere = &system_syslogconf_edit_get_sphere();
 $rmo = new co_request_method();
 $rmo->add('GET','add',PAGE_MODE_ADD);
 $rmo->add('GET','edit',PAGE_MODE_EDIT);

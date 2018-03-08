@@ -39,7 +39,7 @@ require_once 'co_request_method.php';
 
 function system_syslogconf_get_sphere() {
 	global $config;
-	
+
 	$sphere = new co_sphere_grid('system_syslogconf','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->set_notifier('syslogconf');
@@ -64,7 +64,7 @@ function system_syslogconf_get_sphere() {
 }
 function syslogconf_process_updatenotification($mode,$data) {
 	global $config;
-	
+
 	$retval = 0;
 	$sphere = &system_syslogconf_get_sphere();
 	switch($mode):
@@ -138,7 +138,7 @@ switch($page_method):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 						switch ($mode_updatenotify):
-							case UPDATENOTIFY_MODE_NEW:  
+							case UPDATENOTIFY_MODE_NEW:
 								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
 								break;
@@ -166,7 +166,7 @@ switch($page_method):
 							$sphere->grid[$sphere->row_id][$name] = false;
 							unset($sphere->grid[$sphere->row_id][$name]);
 						else:
-							$sphere->grid[$sphere->row_id][$name] = true;					
+							$sphere->grid[$sphere->row_id][$name] = true;
 						endif;
 						$updateconfig = true;
 						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
@@ -300,7 +300,7 @@ if($record_exists):
 		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
 		insTHwC('lhell',$cop->get_comment()->get_title())->
 		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
-else: 
+else:
 	$tr->
 		insTHwC('lhelc')->
 		insTHwC('lhell',$cop->get_facility()->get_title())->
@@ -325,7 +325,6 @@ if($record_exists):
 			$title = gtext('Disabled');
 			$dc = 'd';
 		endif;
-
 		$tbody->
 			addTR()->
 				push()->
