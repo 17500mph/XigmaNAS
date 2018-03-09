@@ -34,27 +34,12 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
+require_once 'properties_sysctl.php';
+require_once 'co_request_method.php';
 
-function sysctl_process_updatenotification($mode,$data) {
-	global $config;
-	$retval = 0;
-	$sphere = &system_sysctl_get_sphere();
-	switch ($mode):
-		case UPDATENOTIFY_MODE_NEW:
-		case UPDATENOTIFY_MODE_MODIFIED:
-			break;
-		case UPDATENOTIFY_MODE_DIRTY:
-		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
-				unset($sphere->grid[$sphere->row_id]);
-				write_config();
-			endif;
-			break;
-	endswitch;
-	return $retval;
-}
 function system_sysctl_get_sphere() {
 	global $config;
+
 	$sphere = new co_sphere_grid('system_sysctl','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->set_notifier('sysctl');
@@ -77,129 +62,112 @@ function system_sysctl_get_sphere() {
 	$sphere->grid = &array_make_branch($config,'system','sysctl','param');
 	return $sphere;
 }
+function sysctl_process_updatenotification($mode,$data) {
+	global $config;
+
+	$retval = 0;
+	$sphere = &system_sysctl_get_sphere();
+	switch ($mode):
+		case UPDATENOTIFY_MODE_NEW:
+		case UPDATENOTIFY_MODE_MODIFIED:
+			break;
+		case UPDATENOTIFY_MODE_DIRTY:
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+			if(false !== ($sphere->row_id = array_search_ex($data,$sphere->grid,$sphere->get_row_identifier()))):
+				unset($sphere->grid[$sphere->row_id]);
+				write_config();
+			endif;
+			break;
+	endswitch;
+	return $retval;
+}
+//	init properties and sphere
+$cop = new properties_sysctl();
 $sphere = &system_sysctl_get_sphere();
-// sunrise: verify if setting exists, otherwise run init tasks
+$rmo = new co_request_method();
+$rmo->add('POST','apply',PAGE_MODE_POST);
+$rmo->add('POST',$sphere->get_cbm_button_val_delete(),PAGE_MODE_POST);
+if($sphere->enadis() && method_exists($cop,'get_enable')):
+	if($sphere->toggle()):
+		$rmo->add('POST',$sphere->get_cbm_button_val_toggle(),PAGE_MODE_POST);
+	else:
+		$rmo->add('POST',$sphere->get_cbm_button_val_enable(),PAGE_MODE_POST);
+		$rmo->add('POST',$sphere->get_cbm_button_val_disable(),PAGE_MODE_POST);
+	endif;
+endif;
+$rmo->set_default('GET','view',PAGE_MODE_VIEW);
+list($page_method,$page_action,$page_mode) = $rmo->validate();
+switch($page_method):
+	case 'POST':
+		switch($page_action):
+			case 'apply':
+				$retval = 0;
+				if(!file_exists($d_sysrebootreqd_path)):
+					$retval |= updatenotify_process($sphere->get_notifier(),$sphere->get_notifier_processor());
+					config_lock();
+					$retval |= rc_update_service($sphere->get_notifier());
+					config_unlock();
+				endif;
+				$savemsg = get_std_save_message($retval);
+				if($retval == 0):
+					updatenotify_delete($sphere->get_notifier());
+				endif;
+				header($sphere->get_location());
+				exit;
+			case $sphere->get_cbm_button_val_delete():
+				updatenotify_cbm_delete($sphere,$cop);
+				header($sphere->get_location());
+				exit;
+				break;
+			case $sphere->get_cbm_button_val_toggle():
+				if(updatenotify_cbm_toggle($sphere,$cop)):
+					write_config();
+				endif;
+				header($sphere->get_location());
+				exit;
+				break;
+			case $sphere->get_cbm_button_val_enable():
+				if(updatenotify_cbm_enable($sphere,$cop)):
+					write_config();
+				endif;
+				header($sphere->get_location());
+				exit;
+				break;
+			case $sphere->get_cbm_button_val_disable():
+				if(updatenotify_cbm_disable($sphere,$cop)):
+					write_config();
+				endif;
+				header($sphere->get_location());
+				exit;
+				break;
+		endswitch;
+		break;
+endswitch;
+//	sunrise: verify if setting exists, otherwise run init tasks
 if(!empty($sphere->grid)):
 	$key1 = array_column($sphere->grid,'name');
 	$key2 = array_column($sphere->grid,'uuid');
 	array_multisort($key1,SORT_ASC,SORT_NATURAL | SORT_FLAG_CASE,$key2,SORT_ASC,SORT_STRING | SORT_FLAG_CASE,$sphere->grid);
 endif;
-if($_POST):
-	if(isset($_POST['apply']) && $_POST['apply']):
-		$retval = 0;
-		if(!file_exists($d_sysrebootreqd_path)):
-			$retval |= updatenotify_process($sphere->get_notifier(),$sphere->get_notifier_processor());
-			config_lock();
-			$retval |= rc_update_service($sphere->get_notifier());
-			config_unlock();
-		endif;
-		$savemsg = get_std_save_message($retval);
-		if($retval == 0):
-			updatenotify_delete($sphere->get_notifier());
-		endif;
-		header($sphere->get_location());
-		exit;
-	endif;
-	if(isset($_POST['submit'])):
-		switch($_POST['submit']):
-			case 'rows.enable':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
-				$updateconfig = false;
-				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						if(!(isset($sphere->grid[$sphere->row_id]['enable']))):
-							$sphere->grid[$sphere->row_id]['enable'] = true;
-							$updateconfig = true;
-							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-							endif;
-						endif;
-					endif;
-				endforeach;
-				if($updateconfig):
-					write_config();
-					$updateconfig = false;
-				endif;
-				header($sphere->get_location());
-				exit;
-				break;
-			case 'rows.disable':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
-				$updateconfig = false;
-				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						if(isset($sphere->grid[$sphere->row_id]['enable'])):
-							unset($sphere->grid[$sphere->row_id]['enable']);
-							$updateconfig = true;
-							$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-							if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-							endif;
-						endif;
-					endif;
-				endforeach;
-				if($updateconfig):
-					write_config();
-					$updateconfig = false;
-				endif;
-				header($sphere->get_location());
-				exit;
-				break;
-			case 'rows.toggle':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
-				$updateconfig = false;
-				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						if(isset($sphere->grid[$sphere->row_id]['enable'])):
-							unset($sphere->grid[$sphere->row_id]['enable']);
-						else:
-							$sphere->grid[$sphere->row_id]['enable'] = true;					
-						endif;
-						$updateconfig = true;
-						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-						if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-							updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_MODIFIED,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-						endif;
-					endif;
-				endforeach;
-				if($updateconfig):
-					write_config();
-					$updateconfig = false;
-				endif;
-				header($sphere->get_location());
-				exit;
-				break;
-			case 'rows.delete':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
-				foreach($sphere->cbm_grid as $sphere->cbm_row):
-					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-						switch ($mode_updatenotify):
-							case UPDATENOTIFY_MODE_NEW:  
-								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-								break;
-							case UPDATENOTIFY_MODE_MODIFIED:
-								updatenotify_clear($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-								break;
-							case UPDATENOTIFY_MODE_UNKNOWN:
-								updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
-								break;
-						endswitch;
-					endif;
-				endforeach;
-				header($sphere->get_location());
-				exit;
-				break;
-		endswitch;
-	endif;
-endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf')];
-include 'fbegin.inc';
-echo $sphere->doj();
-$document = new co_DOMDocument();
+$record_exists = count($sphere->grid) > 0;
+$a_col_width = ['5%','30%','20%','10%','25%','10%'];
+$n_col_width = count($a_col_width);
+//	prepare additional javascript code
+$jcode = $sphere->doj(false);
+if($record_exists):
+	$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
+else:
+	$document = new_page($pgtitle,$sphere->get_scriptname());
+endif;
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add additional javascript code
+if(isset($jcode)):
+	$body->addJavaScript($jcode);
+endif;
+//	add tab navigation
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
@@ -214,118 +182,82 @@ $document->
 			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
 			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'),gtext('Reload page'),true)->
 			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
-$document->render();
-?>
-<form action="<?=$sphere->get_scriptname();?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php
-	if(file_exists($d_sysrebootreqd_path)):
-		print_info_box(get_std_save_message(0));
-	endif;
-	if(!empty($savemsg)):
-		print_info_box($savemsg);
-	endif;
-	if(updatenotify_exists($sphere->get_notifier())):
-		print_config_change_box();
-	endif;
-?>
-	<table class="area_data_selection">
-		<colgroup>
-			<col style="width:5%">
-			<col style="width:30%">
-			<col style="width:20%">
-			<col style="width:10%">
-			<col style="width:25%">
-			<col style="width:10%">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gtext('Overview'),6);
-?>
-			<tr>
-				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
-				<th class="lhell"><?=gtext('MIB');?></th>
-				<th class="lhell"><?=gtext('Value');?></th>
-				<th class="lhell"><?=gtext('Status');?></th>
-				<th class="lhell"><?=gtext('Comment');?></th>
-				<th class="lhebl"><?=gtext('Toolbox');?></th>
-			</tr>
-		</thead>
-		<tbody>
-<?php
-			foreach($sphere->grid as $sphere->row):
-				$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
-				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-				$enabled = $sphere->enadis() ? isset($sphere->row['enable']) : true;
-				$notprotected = $sphere->lock() ? !isset($sphere->row['protected']) : true;
-?>
-				<tr>
-					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-<?php
-						if($notdirty && $notprotected):
-							echo $sphere->html_checkbox_cbm(false);
-						else:
-							echo $sphere->html_checkbox_cbm(true);
-						endif;
-?>
-					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['name']);?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['value']);?></td>
-					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-<?php
-						if($enabled):
-?>
-							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt="" class="oneemhigh"/></a>
-<?php
-						else:
-?>
-							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt="" class="oneemhigh"/></a>
-<?php
-						endif;
-?>
-					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['comment']);?></td>
-					<td class="lcebld">
-						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
-<?php
-							echo $sphere->html_toolbox($notprotected,$notdirty);
-?>
-							<td></td>
-							<td></td>
-						</tr></tbody></table>
-					</td>
-				</tr>
-<?php
-			endforeach;
-?>
-		</tbody>
-		<tfoot>
-<?php
-			echo $sphere->html_footer_add(6);
-?>
-		</tfoot>
-	</table>
-	<div id="submit">
-<?php
-		if($sphere->enadis()):
-			if($sphere->toggle()):
-				echo $sphere->html_button_toggle_rows();
-			else:
-				echo $sphere->html_button_enable_rows();
-				echo $sphere->html_button_disable_rows();
-			endif;
+//	create data area
+$content = $pagecontent->add_area_data();
+//	display information, warnings and errors
+$content->
+	ins_input_errors($input_errors)->
+	ins_info_box($savemsg)->
+	ins_error_box($errormsg);
+if(file_exists($d_sysrebootreqd_path)):
+	$content->ins_info_box(get_std_save_message(0));
+endif;
+if(updatenotify_exists($sphere->get_notifier())):
+	$content->ins_config_has_changed_box();
+endif;
+$table = $content->add_table_data_selection();
+$table->ins_colgroup_with_styles('width',$a_col_width);
+$thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
+$thead->ins_titleline(gtext('Overview'),$n_col_width);
+$tr = $thead->addTR();
+if($record_exists):
+	$tr->
+		push()->
+		addTHwC('lhelc sorter-false parser-false')->
+			ins_cbm_checkbox_toggle($sphere)->
+		pop()->
+		insTHwC('lhell',$cop->get_name()->get_title())->
+		insTHwC('lhell',$cop->get_value()->get_title())->
+		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+		insTHwC('lhell',$cop->get_comment()->get_title())->
+		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+else:
+	$tr->
+		insTHwC('lhelc')->
+		insTHwC('lhell',$cop->get_name()->get_title())->
+		insTHwC('lhell',$cop->get_value()->get_title())->
+		insTHwC('lhelc',gtext('Status'))->
+		insTHwC('lhell',$cop->get_comment()->get_title())->
+		insTHwC('lhebl',gtext('Toolbox'));
+endif;
+if($record_exists):
+	foreach($sphere->grid as $sphere->row):
+		$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
+		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+		$is_enabled = $sphere->enadis() ? (is_bool($test = $sphere->row[$cop->get_enable()->get_name()] ?? false) ? $test : true) : true;
+		$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->get_protected()->get_name()] ?? false) ? $test : true) : true;
+		if($is_enabled):
+			$src = $g_img['ena'];
+			$title = gtext('Enabled');
+			$dc = '';
+		else:
+			$src = $g_img['dis'];
+			$title = gtext('Disabled');
+			$dc = 'd';
 		endif;
-		echo $sphere->html_button_delete_rows();
-?>
-	</div>
-	<div id="remarks">
-<?php
-		html_remark2('note',gtext('Note'),gtext('These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));
-?>
-	</div>
-<?php
-	include 'formend.inc';
-?>
-</td></tr></tbody></table></form>
-<?php
-include 'fend.inc';
-?>
+		$tbody->
+			addTR()->
+				push()->
+				addTDwC('lcelc' . $dc)->
+					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
+				last()->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_name()->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_value()->get_name()] ?? ''))->
+				addTDwC('lcelc' . $dc)->
+					addA(['title' => $title])->insIMG(['src' => $src,'alt' => '','class' => 'oneemhigh'])->
+				pop()->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_comment()->get_name()] ?? ''))->
+				add_toolbox_area()->
+					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
+					insTD()->
+					insTD();
+	endforeach;
+else:
+	$tbody->ins_no_records_found($n_col_width);
+endif;
+$tfoot->ins_record_add($sphere,$n_col_width);
+$document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
+$content->add_area_remarks()->ins_remark('note',gtext('Note'),gtext('These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));
+$document->render();
