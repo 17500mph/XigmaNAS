@@ -2602,8 +2602,8 @@ EOJ;
 		return $subnode;
 	}
 	public function ins_remark($ctrlname,$title,$text) {
-		$ctrl = new HTMLRemark2($ctrlname,$title,$text);
-		$ctrl->Compose($this);
+		$this->addDIV(['id' => $ctrlname])->addElement('strong',['class' => 'red'],$title);
+		$this->addDIV([],$text);
 		return $this;
 	}
 	public function ins_authtoken() {
