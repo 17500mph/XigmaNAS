@@ -316,3 +316,126 @@ function updatenotify_process($key,$function) {
 	endforeach;
 	return 0;
 }
+/**
+ *	Send a delete message to updatenotify for a list of ID's sent via POST
+ *	@param co_sphere $sphere
+ *	@param co_property_container $cop
+ *	@return boolean true indicates that the configuration has changed.
+ */
+function updatenotify_cbm_delete(&$sphere,&$cop) {
+	$update_config = false;
+	$id_name = $sphere->get_row_identifier();
+	$notifier_name = $sphere->get_notifier();
+	$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
+	foreach($sphere->cbm_grid as $sphere->cbm_row):
+		if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$id_name))):
+			$sphere->row = &$sphere->grid[$sphere->row_id];
+			$mode_updatenotify = updatenotify_get_mode($notifier_name,$sphere->row[$id_name]);
+			switch($mode_updatenotify):
+				case UPDATENOTIFY_MODE_NEW:
+					updatenotify_clear($notifier_name,$sphere->row[$id_name]);
+					updatenotify_set($notifier_name,UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->row[$id_name]);
+					$update_config = true;
+					break;
+				case UPDATENOTIFY_MODE_MODIFIED:
+					updatenotify_clear($notifier_name,$sphere->row[$id_name]);
+					updatenotify_set($notifier_name,UPDATENOTIFY_MODE_DIRTY,$sphere->row[$id_name]);
+					$update_config = true;
+					break;
+				case UPDATENOTIFY_MODE_UNKNOWN:
+					updatenotify_set($notifier_name,UPDATENOTIFY_MODE_DIRTY,$sphere->row[$id_name]);
+					$update_config = true;
+					break;
+			endswitch;
+		endif;
+	endforeach;
+	return $update_config;
+}
+/**
+ *	Toggles the enable flag of a setting for a list of ID's sent via POST
+ *	and sends a modified message to updatenotify.
+ *	@param co_sphere $sphere
+ *	@param co_property_container $cop
+ *	@return boolean true indicates that the configuration has changed.
+ */
+function updatenotify_cbm_toggle(&$sphere,&$cop) {
+	$update_config = false;
+	$enable_name = $cop->get_enable()->get_name();
+	$id_name = $sphere->get_row_identifier();
+	$notifier_name = $sphere->get_notifier();
+	$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
+	foreach($sphere->cbm_grid as $sphere->cbm_row):
+		if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$id_name))):
+			$sphere->row = &$sphere->grid[$sphere->row_id];
+			if(is_bool($test = $sphere->row[$enable_name] ?? false) ? $test : true):
+				$sphere->row[$enable_name] = false;
+				unset($sphere->row[$enable_name]);
+			else:
+				$sphere->row[$enable_name] = true;
+			endif;
+			$update_config = true;
+			$mode_updatenotify = updatenotify_get_mode($notifier_name,$sphere->row[$id_name]);
+			if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+				updatenotify_set($notifier_name,UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$id_name]);
+			endif;
+		endif;
+	endforeach;
+	return $update_config;
+}
+/**
+ *	Sets the enable flag of a setting to true for a list of ID's sent via POST
+ *	and sends a modify message to updatenotify.
+ *	@param co_sphere $sphere
+ *	@param co_property_container $cop
+ *	@return boolean true indicates that the configuration array was updated
+ */
+function updatenotify_cbm_enable(&$sphere,&$cop) {
+	$update_config = false;
+	$enable_name = $cop->get_enable()->get_name();
+	$id_name = $sphere->get_row_identifier();
+	$notifier_name = $sphere->get_notifier();
+	$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
+	foreach($sphere->cbm_grid as $sphere->cbm_row):
+		if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$id_name))):
+			$sphere->row = &$sphere->grid[$sphere->row_id];
+			if(is_bool($test = $sphere->row[$enable_name] ?? false) ? $test : true):
+			else:
+				$sphere->row[$enable_name] = true;
+				$update_config = true;
+				$mode_updatenotify = updatenotify_get_mode($notifier_name,$sphere->row[$id_name]);
+				if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+					updatenotify_set($notifier_name,UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$id_name]);
+				endif;
+			endif;
+		endif;
+	endforeach;
+	return $update_config;
+}
+/**
+ *	Sets the enable flag of a setting to false for a list of ID's sent via POST
+ *	and sends a modify message to updatenotify.
+ *	@param co_sphere $sphere
+ *	@param co_property_container $cop
+ *	@return boolean true indicates that the configuration array was updated
+ */
+function updatenotify_cbm_disable(&$sphere,&$cop) {
+	$update_config = false;
+	$enable_name = $cop->get_enable()->get_name();
+	$id_name = $sphere->get_row_identifier();
+	$notifier_name = $sphere->get_notifier();
+	$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
+	foreach($sphere->cbm_grid as $sphere->cbm_row):
+		if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$id_name))):
+			$sphere->row = &$sphere->grid[$sphere->row_id];
+			if(is_bool($test = $sphere->row[$enable_name] ?? false) ? $test : true):
+				$sphere->row[$enable_name] = false;
+				$update_config = true;
+				$mode_updatenotify = updatenotify_get_mode($notifier_name,$sphere->row[$id_name]);
+				if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
+					updatenotify_set($notifier_name,UPDATENOTIFY_MODE_MODIFIED,$sphere->row[$id_name]);
+				endif;
+			endif;
+		endif;
+	endforeach;
+	return $update_config;
+}
