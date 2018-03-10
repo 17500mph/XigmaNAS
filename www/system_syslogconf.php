@@ -262,7 +262,7 @@ if($record_exists):
 				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_value()->get_name()] ?? ''))->
 				push()->
 				addTDwC('lcelc' . $dc)->
-					addA(['title' => $title])->insIMG(['src' => $src,'alt' => '','class' => 'oneemhigh'])->
+					addA(['title' => $title])->insIMG(['src' => $src,'alt' => $title,'class' => 'oneemhigh'])->
 				pop()->
 				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_comment()->get_name()] ?? ''))->
 				add_toolbox_area()->
