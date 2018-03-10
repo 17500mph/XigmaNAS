@@ -210,7 +210,7 @@ if($record_exists):
 		pop()->
 		insTHwC('lhell',$cop->get_name()->get_title())->
 		insTHwC('lhell',$cop->get_value()->get_title())->
-		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+		insTHwC('lhelc sorter-image',gtext('Status'))->
 		insTHwC('lhell',$cop->get_comment()->get_title())->
 		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
 else:
