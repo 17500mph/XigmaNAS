@@ -2655,7 +2655,8 @@ EOJ;
 			insElement('script',['src' => '/js/spin.min.js']);
 		if($is_tablesort):
 			$head->
-				insElement('script',['src' => '/js/jquery.tablesorter.min.js']);
+				insElement('script',['src' => '/js/jquery.tablesorter.min.js'])->
+				insElement('script',['src' => '/js/parser-bytestring.js']);
 //				insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
 		endif;
 		if($is_datechooser):
