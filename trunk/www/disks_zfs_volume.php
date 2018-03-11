@@ -124,30 +124,8 @@ switch($page_action):
 		header($sphere->get_location());
 		exit;
 		break;
-	case $sphere->get_cbm_button_val_delete(): // rows.delete
-		$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
-		foreach($sphere->cbm_grid as $sphere->cbm_row):
-			if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
-				$sphere->row = $sphere->grid[$sphere->row_id];
-				$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->protected->name] ?? false) ? $test : true) : true;
-				if($is_notprotected):
-					$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
-					switch ($mode_updatenotify):
-						case UPDATENOTIFY_MODE_NEW:  
-							updatenotify_clear($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
-							updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY_CONFIG,$sphere->row[$sphere->get_row_identifier()]);
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							updatenotify_clear($sphere->get_notifier(),$sphere->row[$sphere->get_row_identifier()]);
-							updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->row[$sphere->get_row_identifier()]);
-							break;
-						case UPDATENOTIFY_MODE_UNKNOWN:
-							updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_DIRTY,$sphere->row[$sphere->get_row_identifier()]);
-							break;
-					endswitch;
-				endif;
-			endif;
-		endforeach;
+	case $sphere->get_cbm_button_val_delete():
+		updatenotify_cbm_delete($sphere,$cop);
 		header($sphere->get_location());
 		exit;
 		break;
@@ -210,49 +188,49 @@ if($record_exists):
 			addTHwC('lhelc sorter-false parser-false')->
 				ins_cbm_checkbox_toggle($sphere)->
 			pop()->
-			insTHwC('lhell',$cop->pool->title)->
-			insTHwC('lhell',$cop->name->title)->
-			insTHwC('lhell',$cop->volsize->title)->
-			insTHwC('lhell',$cop->compression->title)->
-			insTHwC('lhell',$cop->sparse->title)->
-			insTHwC('lhell',$cop->volblocksize->title)->
-			insTHwC('lhell',$cop->description->title)->
-			insTHwC('lhebl sorter-false parser-false',$cop->toolbox->title);
+			insTHwC('lhell',$cop->get_pool()->get_title())->
+			insTHwC('lhell',$cop->get_name()->get_title())->
+			insTHwC('lhell sorter-bytestring',$cop->get_volsize()->get_title())->
+			insTHwC('lhell',$cop->get_compression()->get_title())->
+			insTHwC('lhell sorter-bytestring',$cop->get_sparse()->get_title())->
+			insTHwC('lhell sorter-bytestring',$cop->get_volblocksize()->get_title())->
+			insTHwC('lhell',$cop->get_description()->get_title())->
+			insTHwC('lhebl sorter-false parser-false',$cop->get_toolbox()->get_title());
 else:
 	$thead->
 		addTR()->
 			insTHwC('lhelc')->
-			insTHwC('lhell',$cop->pool->title)->
-			insTHwC('lhell',$cop->name->title)->
-			insTHwC('lhell',$cop->volsize->title)->
-			insTHwC('lhell',$cop->compression->title)->
-			insTHwC('lhell',$cop->sparse->title)->
-			insTHwC('lhell',$cop->volblocksize->title)->
-			insTHwC('lhell',$cop->description->title)->
-			insTHwC('lhebl',$cop->toolbox->title);
+			insTHwC('lhell',$cop->get_pool()->get_title()->
+			insTHwC('lhell',$cop->get_name()->get_title()))->
+			insTHwC('lhell',$cop->get_volsize()->get_title())->
+			insTHwC('lhell',$cop->get_compression()->get_title())->
+			insTHwC('lhell',$cop->get_sparse()->get_title())->
+			insTHwC('lhell',$cop->get_volblocksize()->get_title())->
+			insTHwC('lhell',$cop->get_description()->get_title())->
+			insTHwC('lhebl',$cop->get_toolbox()->get_title());
 endif;
 if($record_exists):
 	foreach($sphere->grid as $sphere->row_id => $sphere->row):
 		$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
 		$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-		$is_enabled = $sphere->enadis() ? (is_bool($test = $sphere->row[$cop->enabled->name] ?? false) ? $test : true): true;
-		$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->protected->name] ?? false) ? $test : true) : true;
-		$is_sparse = is_bool($test = $sphere->row[$cop->sparse->name] ?? false) ? $test : true;
+		$is_enabled = $sphere->enadis() ? (is_bool($test = $sphere->row[$cop->get_enabled()->get_name()] ?? false) ? $test : true): true;
+		$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->get_protected()->get_name()] ?? false) ? $test : true) : true;
+		$is_sparse = is_bool($test = $sphere->row[$cop->get_sparse()->get_name()] ?? false) ? $test : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
-			$title = $gt_enabled;
+			$title = gtext('Enabled');
 			$dc = '';
 		else:
 			$src = $g_img['dis'];
-			$title = $gt_disabled;
+			$title = gtext('Disabled');
 			$dc = 'd';
 		endif;
 		if(UPDATENOTIFY_MODE_MODIFIED == $notificationmode || UPDATENOTIFY_MODE_NEW == $notificationmode || UPDATENOTIFY_MODE_DIRTY_CONFIG == $notificationmode):
-			$volsize = $sphere->row[$cop->volsize->name] ?? '';
+			$volsize = $sphere->row[$cop->get_volsize()->get_name()] ?? '';
 			$sparse = $is_sparse ? gtext('on') : '-';
-			$volblocksize = $sphere->row[$cop->volblocksize->name] ?? '';
+			$volblocksize = $sphere->row[$cop->get_volblocksize()->get_name()] ?? '';
 		else:
-			list($volsize,$sparse,$volblocksize) = get_zfs_volume_info($sphere->row[$cop->pool->name][0],$sphere->row[$cop->name->name]);
+			list($volsize,$sparse,$volblocksize) = get_zfs_volume_info($sphere->row[$cop->get_pool()->get_name()][0],$sphere->row[$cop->get_name()->get_name()]);
 			if($is_sparse):
 			else:
 				$sparse = '-';
@@ -264,13 +242,13 @@ if($record_exists):
 				addTDwC('lcelc' . $dc)->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->pool->name][0] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->name->name] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_pool()->get_name()][0] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_name()->get_name()] ?? ''))->
 				insTDwC('lcell' . $dc,htmlspecialchars($volsize))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->compression->name] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_compression()->get_name()] ?? ''))->
 				insTDwC('lcell' . $dc,htmlspecialchars($sparse))->
 				insTDwC('lcell' . $dc,htmlspecialchars($volblocksize))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->description->name] ?? ''))->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_description()->get_name()] ?? ''))->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					ins_maintainbox($sphere,false)->
