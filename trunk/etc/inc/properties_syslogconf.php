@@ -41,6 +41,7 @@ class properties_syslogconf extends co_property_container {
 	protected $x_protected;
 	protected $x_uuid;
 	protected $x_value;
+	protected $x_toolbox;
 
 	public function get_comment() {
 		return $this->x_comment ?? $this->init_comment();
@@ -84,6 +85,13 @@ class properties_syslogconf extends co_property_container {
 	}
 	public function init_protected() {
 		$property = $this->x_protected = new property_protected($this);
+		return $property;
+	}
+	public function get_toolbox() {
+		return $this->x_toolbox ?? $this->init_toolbox();
+	}
+	public function init_toolbox() {
+		$property = $this->x_toolbox = new property_toolbox($this);
 		return $property;
 	}
 	public function get_uuid() {

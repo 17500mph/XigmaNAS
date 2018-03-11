@@ -225,7 +225,7 @@ if($record_exists):
 		insTHwC('lhell',$cop->get_value()->get_title())->
 		insTHwC('lhelc sorter-image',gtext('Status'))->
 		insTHwC('lhell',$cop->get_comment()->get_title())->
-		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+		insTHwC('lhebl sorter-false parser-false',$cop->get_toolbox()->get_name());
 else:
 	$tr->
 		insTHwC('lhelc')->
@@ -234,7 +234,7 @@ else:
 		insTHwC('lhell',$cop->get_value()->get_title())->
 		insTHwC('lhelc',gtext('Status'))->
 		insTHwC('lhell',$cop->get_comment()->get_title())->
-		insTHwC('lhebl',gtext('Toolbox'));
+		insTHwC('lhebl',$cop->get_toolbox()->get_name());
 endif;
 if($record_exists):
 	foreach ($sphere->grid as $sphere->row):
