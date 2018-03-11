@@ -38,6 +38,7 @@ class properties_sysctl extends co_property_container {
 	protected $x_enable;
 	protected $x_name;
 	protected $x_protected;
+	protected $x_toolbox;
 	protected $x_uuid;
 	protected $x_value;
 	
@@ -73,6 +74,13 @@ class properties_sysctl extends co_property_container {
 	}
 	public function init_protected() {
 		$property = $this->x_protected = new property_protected($this);
+		return $property;
+	}
+	public function get_toolbox() {
+		return $this->x_toolbox ?? $this->init_toolbox();
+	}
+	public function init_toolbox() {
+		$property = $this->x_toolbox = new property_toolbox($this);
 		return $property;
 	}
 	public function get_uuid() {
