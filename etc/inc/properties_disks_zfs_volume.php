@@ -91,10 +91,8 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_toolbox ?? $this->init_toolbox();
 	}
 	public function init_toolbox() {
-		$this->x_toolbox = new properties_text($this);
-		$this->x_toolbox->
-			set_title(gtext('Toolbox'));
-		return $this->x_toolbox;
+		$property = $this->x_toolbox = new property_toolbox($this);
+		return $property;
 	}
 	public function get_available() {
 		return $this->x_available ?? $this->init_available();
