@@ -526,6 +526,12 @@ class properties_int extends properties_text {
 		return $this;
 	}
 }
+class property_toolbox extends properties_text {
+	public function __construct($owner = NULL) {
+		parent::__construct($owner);
+		$this->set_title(gtext('Toolbox'));
+	}
+}
 class property_uuid extends properties_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
