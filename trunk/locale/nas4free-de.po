@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-03-06 14:30+0000\n"
-"PO-Revision-Date: 2018-03-07 06:01+0000\n"
-"Last-Translator: Tomfro <Unknown>\n"
+"PO-Revision-Date: 2018-03-13 14:15+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-07 12:57+0000\n"
-"X-Generator: Launchpad (build 18566)\n"
+"X-Launchpad-Export-Date: 2018-03-13 15:24+0000\n"
+"X-Generator: Launchpad (build 18571)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -83,7 +83,7 @@ msgstr "%s ist bereits als Dateisystem konfiguriert."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr "%s ist bereits als Volume konfiguriert."
+msgstr "%s ist bereits als Datenträger konfiguriert."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
@@ -595,7 +595,7 @@ msgid "Add auth group"
 msgstr "Authentifizierungsgruppe hinzufügen"
 
 msgid "Add auto snapshot"
-msgstr "Automatischen Snapshot hinzufügen"
+msgstr "Automatischen Schnappschuss hinzufügen"
 
 msgid "Add command"
 msgstr "Befehl hinzufügen"
@@ -1141,16 +1141,16 @@ msgid "Auto"
 msgstr "Auto"
 
 msgid "Auto Snapshot"
-msgstr "Automatischer Snapshot"
+msgstr "Automatischer Schnappschuss"
 
 msgid "Auto Snapshot Settings"
-msgstr "Einstellungen für Auto Snapshot"
+msgstr "Schnappschusseinstellungen"
 
 msgid "Auto page refresh."
-msgstr "Automatische Seiten Aktualisierung."
+msgstr "Automatische Seitenaktualisierung."
 
 msgid "Auto size"
-msgstr "Automatisches Größe"
+msgstr "Automatische Größe"
 
 msgid "AutoScale"
 msgstr "Autom. Skalierung"
@@ -1201,7 +1201,7 @@ msgid "Backup"
 msgstr "Sicherung"
 
 msgid "Backup Configuration"
-msgstr "Einstellungen für die Sicherung"
+msgstr "Sicherungskonfiguration"
 
 msgid "Backup File"
 msgstr "Sicherungsdatei"
@@ -1695,10 +1695,10 @@ msgid "Client Min. Protocol"
 msgstr "Client Min. Protokoll"
 
 msgid "Clone"
-msgstr "Duplizieren"
+msgstr "Klonen"
 
 msgid "Clone Configuration"
-msgstr "Konfiguration klonen"
+msgstr "Klonkonfiguration"
 
 msgid "Collecting initial data, please wait..."
 msgstr "Anfangsdaten werden gesammelt, bitte warten …"
@@ -1898,6 +1898,8 @@ msgid ""
 "Controls if Time Machine support via the FULLSYNC volume capability is "
 "advertised to clients."
 msgstr ""
+"Steuert, ob die Unterstützung von Time Machine über die FULLSYNC Eigenschaft "
+"des Volumens den Clienten angeboten wird."
 
 msgid "Controls the behavior of synchronous requests."
 msgstr "Steuert das Verhalten von synchronen Anfragen."
@@ -2194,7 +2196,7 @@ msgid "Create and initialize RAID."
 msgstr "RAID erstellen und initialisieren."
 
 msgid "Create recursive snapshot."
-msgstr "Erzeuge rekursiven Schnappschuss."
+msgstr "Erzeuge rekursiven Snapshot."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Erzeuge Arbeitsverzeichnis, falls es noch nicht existiert."
@@ -2577,10 +2579,10 @@ msgid "Delete auth group"
 msgstr "Authetifikationsgruppe löschen"
 
 msgid "Delete auto snapshot"
-msgstr "Automatischen Snapshot löschen"
+msgstr "Automatischen Schnappschuss löschen"
 
 msgid "Delete clone"
-msgstr "Clone löschen"
+msgstr "Klon löschen"
 
 msgid "Delete command"
 msgstr "Lösche Kommando"
@@ -2617,16 +2619,16 @@ msgid "Delete target"
 msgstr "Lösche Target"
 
 msgid "Deletes the recursive snapshot."
-msgstr "Rekursiven Snapshot löschen"
+msgstr "Rekursiven Schnappschuss löschen"
 
 msgid "Deleting"
-msgstr "Lösche"
+msgstr "Löschvorgang"
 
 msgid "Deleting GEOM metadata"
-msgstr "Lösche GEOM Metadaten"
+msgstr "GEOM-Metadaten werden gelöscht"
 
 msgid "Deleting MBR and partition table"
-msgstr "Lösche MBR (Master Boot Record) und die Partitionstabelle"
+msgstr "MBR und Partitionstabelle wird gelöscht"
 
 msgid ""
 "Delta between most-worn and least-worn Flash blocks. It describes how "
@@ -3003,10 +3005,10 @@ msgid "Do you really want to delete this auth group?"
 msgstr "Möchten sie diese Authentifikationsgruppe wirklich löschen?"
 
 msgid "Do you really want to delete this auto snapshot?"
-msgstr "Wollen sie diesen automatischen Snapshot wirklich löschen?"
+msgstr "Wollen sie diesen automatischen Schnappschuss wirklich löschen?"
 
 msgid "Do you really want to delete this clone?"
-msgstr "Möchten Sie diesen Clone wirklich löschen"
+msgstr "Möchten Sie diesen Klon wirklich löschen?"
 
 msgid "Do you really want to delete this extent?"
 msgstr "Wollen Sie diesen Extent wirklich löschen?"
@@ -3457,7 +3459,7 @@ msgid "Edit auth group"
 msgstr "Editiere Authentifikationsgruppe"
 
 msgid "Edit auto snapshot"
-msgstr "Auto-Snapshot bearbeiten"
+msgstr "Automatischen Schnappschuss bearbeiten"
 
 msgid "Edit command"
 msgstr "Befehl bearbeiten"
@@ -4130,7 +4132,7 @@ msgid "Extended Attributes"
 msgstr "Erweiterte Attribute"
 
 msgid "Extended Attributes - use a xattr."
-msgstr ""
+msgstr "Erweiterte Atribute - verwende ein xattr."
 
 msgid "Extended attributes"
 msgstr "Erweiterte Attribute"
@@ -4292,6 +4294,8 @@ msgstr "Datei"
 msgid ""
 "File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
 msgstr ""
+"Datei (standardmäßig) - verwende ein ._  AppleDouble File, das kompatibel "
+"mit OS X und Netatalk ist."
 
 msgid "File Editor"
 msgstr "Dateieditor"
@@ -6089,7 +6093,7 @@ msgid "Must choose one"
 msgstr "Es muss eine ausgewählt werden"
 
 msgid "Must not be empty."
-msgstr ""
+msgstr "Darf nicht leer sein."
 
 msgid "Mutual CHAP"
 msgstr "Gegenseitiges CHAP"
@@ -6171,7 +6175,7 @@ msgid "Name of the variable."
 msgstr "Name der Variablen."
 
 msgid "Native - store characters with their native ASCII value."
-msgstr ""
+msgstr "Native - speichere Zeichen mit ihren ursprünglichen ASCII-werten."
 
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "Weder Benutzerdaten noch Metadaten werden gecached im ARC ."
@@ -6189,10 +6193,10 @@ msgid "NetBIOS Name"
 msgstr "NetBIOS Name"
 
 msgid "Netatalk (default) - use Netatalk compatible xattr."
-msgstr ""
+msgstr "Netatalk (standardmäßig) - verwende Netatalk kompatible xattr."
 
 msgid "Netatalk - use cross protocol locking with Netatalk."
-msgstr ""
+msgstr "Netatalk - verwende \"cross protocol locking\" mit Netatalk."
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -6245,7 +6249,7 @@ msgstr ""
 "Eine abgeschaltete Festplatte wird dann für die Überprüfung hochgefahren."
 
 msgid "New"
-msgstr ""
+msgstr "Neu"
 
 msgid "New Password"
 msgstr "Neues Passwort"
@@ -6268,6 +6272,8 @@ msgstr "Nein"
 
 msgid "No (default) - Disables advertising Time Machine support."
 msgstr ""
+"Nein (standardmäßig) - Schaltet das Anbieten der Unterstützung von Time "
+"Machine ab."
 
 msgid "No DNS server have been configured."
 msgstr "Es wurde kein DNS Server eingetragen."
@@ -6365,7 +6371,7 @@ msgid "No records found."
 msgstr "Keine Einträge gefunden. (records)"
 
 msgid "No snapshot information available."
-msgstr "Keine Information über den Schnappschuss verfügbar."
+msgstr "Keine Information über den Snapshot verfügbar."
 
 msgid "No softraid-formatted disks available."
 msgstr "Keine SoftRAID formatierte Festplatte vorhanden."
@@ -6449,7 +6455,7 @@ msgid "None"
 msgstr "Keine"
 
 msgid "None (default) - no cross protocol locking."
-msgstr ""
+msgstr "Kein (standardmäßig) - kein \"cross protocol locking\"."
 
 msgid "Normal"
 msgstr "Normal"
@@ -7032,6 +7038,7 @@ msgstr "Die Portnummer muss 514 oder eine Zahl zwischen 1024 und 49151 sein."
 
 msgid "Port number must be 69 or a number between 1024 and 49151."
 msgstr ""
+"Portnummer muss gleich 69 sein oder eine Zahl zwischen 1024 und 49151."
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -7039,6 +7046,7 @@ msgstr "Portnummer muss zwischen %d und %d liegen."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
+"Portnummer des TFTP Service. Freilassen für standardmäßige Portnummer."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -7156,6 +7164,8 @@ msgid ""
 "Private (default) - store characters as encoded by the OS X client: mapped "
 "to the Unicode private range."
 msgstr ""
+"Privat (standardmäßig) - speichere Zeichen wie durch den OS X Clienten "
+"kodiert: abgebildet auf den privaten Unicode-Bereich."
 
 msgid "Private Key"
 msgstr "Privater Schlüssel"
@@ -7185,7 +7195,7 @@ msgid "Protect Setting"
 msgstr "Einstellung schützen"
 
 msgid "Protected"
-msgstr ""
+msgstr "Geschützt"
 
 msgid "Protocol"
 msgstr "Protokoll"
@@ -7525,7 +7535,7 @@ msgid "Removable"
 msgstr "Wechselbar"
 
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 msgid "Remove ZFS label information from a device"
 msgstr "Entferne ZFS Label Informationen von einem Gerät"
@@ -8455,16 +8465,16 @@ msgid "Snapshot"
 msgstr "Snapshot"
 
 msgid "Snapshot Visibility"
-msgstr "Snapshot Sichtbarkeit"
+msgstr "Schnappschusssichtbarkeit"
 
 msgid "Snapshot is locked"
-msgstr "Snapshot ist gesperrt"
+msgstr "Schnappschuss ist gesperrt"
 
 msgid "Snapshot is marked for deletion"
-msgstr "Snapshot wurde zum Löschen markiert"
+msgstr "Schnappschuss wurde zum Löschen markiert"
 
 msgid "Snapshot is unlocked"
-msgstr "Der Snapshot ist entsperrt"
+msgstr "Schnappschuss ist entsperrt"
 
 msgid "Snapshots"
 msgstr "Schnappschüsse"
@@ -8578,7 +8588,7 @@ msgid "Specifies the usage of Challenge-Response Authentication."
 msgstr "Legt die Verwendung der Challenge-Response Authentifizierung fest."
 
 msgid "Specifies the username under which the TFTP service should run."
-msgstr ""
+msgstr "Gibt den Nutzernamen an, unter dem der TFTP Service laufen soll."
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8669,9 +8679,13 @@ msgid ""
 "Stream (experimental) - pass the stream on to the next module in the VFS "
 "stack."
 msgstr ""
+"Stream (experimentell) - Übergebe den Datenstrom (Stream) an das nächste "
+"Modul im VFS Stapel (Stack)."
 
 msgid "Stream - pass the stream on to the next module in the VFS stack."
 msgstr ""
+"Stream - Übergebe den Datenstrom (Stream) an das nächste Modul im VFS Stapel "
+"(Stack)."
 
 msgid "Strict DLNA"
 msgstr "strenge DLNA Spezifikation"
@@ -9345,8 +9359,8 @@ msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
-"Das  Format für das Abbild der Schattenkopie kann individuell konfiguriert "
-"werden. Voreinstellung ist %s ZFS Auto Snapshot."
+"Das Format für das Abbild der Schattenkopie kann individuelle konfiguriert "
+"werden. Das vorgegebene Format für ZFS-automatischen-Schnappschuss ist %s."
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -10423,7 +10437,7 @@ msgid "Time Server"
 msgstr "Zeitserver"
 
 msgid "Time Stamp"
-msgstr ""
+msgstr "Zeitstempel"
 
 msgid "Time Synchronization"
 msgstr "Zeit-Abgleich"
@@ -10455,6 +10469,7 @@ msgstr "Zeitüberschreitung"
 
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr ""
+"Zeitüberschreitung (Timeout) muss eine Zahl zwischen 10 und 255000000 sein."
 
 msgid "Times"
 msgstr "Zeiten"
@@ -10843,10 +10858,10 @@ msgid "Universally Unique Identifier"
 msgstr "Eindeutiger Bezeichner UUID"
 
 msgid "Unix Charset"
-msgstr "Unix Zeichensatz"
+msgstr "Unix-Zeichensatz"
 
 msgid "Unix Command"
-msgstr "Unix Kommando"
+msgstr "Unix-Befehl"
 
 msgid "Unknown"
 msgstr "Unbekannt"
@@ -10891,7 +10906,7 @@ msgid "Update period"
 msgstr "Aktualisierungszeitraum"
 
 msgid "Updatenotifier"
-msgstr ""
+msgstr "Updatebenachrichtigung"
 
 msgid "Upgrade Firmware"
 msgstr "Upgrade Firmware"
@@ -11034,7 +11049,7 @@ msgid "Used"
 msgstr "Benutzt"
 
 msgid "Used Space"
-msgstr ""
+msgstr "Belegter Platz"
 
 msgid "User"
 msgstr "Benutzer"
@@ -11099,19 +11114,19 @@ msgid "VCPUs"
 msgstr "VCPUs"
 
 msgid "VFS fruit:encoding"
-msgstr ""
+msgstr "VFS fruit:encoding"
 
 msgid "VFS fruit:locking"
-msgstr ""
+msgstr "VFS fruit:locking"
 
 msgid "VFS fruit:metadata"
-msgstr ""
+msgstr "VFS fruit:metadata"
 
 msgid "VFS fruit:resource"
-msgstr ""
+msgstr "VFS fruit:resource"
 
 msgid "VFS fruit:time machine"
-msgstr ""
+msgstr "VFS fruit:time machine"
 
 msgid "VHID"
 msgstr "VHID"
@@ -11231,7 +11246,7 @@ msgid "Visible"
 msgstr "Sichtbar"
 
 msgid "Volume"
-msgstr "Volume"
+msgstr "Datenträger"
 
 msgid "Volume - A logical volume. Can be exported as a raw or block device."
 msgstr ""
@@ -11242,25 +11257,25 @@ msgid "Volume Label"
 msgstr "Datenträgerbezeichnung"
 
 msgid "Volume Mode"
-msgstr "Volume Modus"
+msgstr "Datenträgermodus"
 
 msgid "Volume Name"
-msgstr "Volume Name"
+msgstr "Datenträgername"
 
 msgid "Volume Size"
-msgstr "Volume Größe"
+msgstr "Datenträgergröße"
 
 msgid "Volume Size Limit"
-msgstr "Volume Größenbegrenzung"
+msgstr "Datenträger-Größenbegrenzung"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Datenträger ist gesperrt"
 
 msgid "Volume is marked for deletion"
-msgstr "Volume ist zum Löschen markiert"
+msgstr "Datenträger wurde zum Löschen markiert"
 
 msgid "Volume is unlocked"
-msgstr "Volume ist freigegeben"
+msgstr "Datenträger ist nicht gesperrt"
 
 msgid ""
 "Volume label of the new file system. Use % for a counter or %n for a counter "
@@ -11272,19 +11287,19 @@ msgstr ""
 "Zeichen der Seriennummer des Geräts."
 
 msgid "Volumes"
-msgstr "Volumes"
+msgstr "Datenträger"
 
 msgid "WAN address"
-msgstr "WAN Adresse"
+msgstr "WAN-Adresse"
 
 msgid "WARNING"
-msgstr "WARNUNG"
+msgstr "ACHTUNG"
 
 msgid "WEP"
 msgstr "WEP"
 
 msgid "WINS Server"
-msgstr "WINS Server"
+msgstr "WINS-Server"
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS Server IP-Adresse (z.B. vom MS Active Directory Server)."
@@ -11293,7 +11308,7 @@ msgid "WLAN"
 msgstr "WLAN"
 
 msgid "WLAN Settings"
-msgstr "WLAN Einstellungen"
+msgstr "WLAN-Einstellungen"
 
 msgid ""
 "WLAN cannot be deleted because it is still being used as an interface."
@@ -11464,6 +11479,7 @@ msgstr "Ja"
 
 msgid "Yes - Enables Time Machine support for this share."
 msgstr ""
+"Ja - Schaltet die Unterstützung für Time Machine für diese Freigabe an."
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
@@ -11607,25 +11623,25 @@ msgid "ZFS Pool Tools"
 msgstr "ZFS Pool Werkzeuge"
 
 msgid "ZFS Settings"
-msgstr "ZFS Einstellungen"
+msgstr "ZFS-Einstellungen"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS-Schnappschuss-Informationen & -Status"
 
 msgid "ZFS Snapshot Properties"
-msgstr "ZFS-Snapshot Eigenschaften"
+msgstr "ZFS-Schnappschusseigenschaften"
 
 msgid "ZFS Storage Pool"
 msgstr "ZFS Speicher Pool"
 
 msgid "ZFS Volume Information & Status"
-msgstr "ZFS Volume Informationen und -status"
+msgstr "ZFS-Datenträger-Informationen und -Status"
 
 msgid "ZFS Volume Properties"
-msgstr "ZFS Volume Eigenschaften"
+msgstr "ZFS-Datenträgereigenschaften"
 
 msgid "ZFS volume"
-msgstr "ZFS Volume"
+msgstr "ZFS-Datenträger"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""

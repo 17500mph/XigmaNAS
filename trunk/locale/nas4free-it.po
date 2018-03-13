@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-03-06 14:30+0000\n"
-"PO-Revision-Date: 2018-02-07 10:28+0000\n"
-"Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
+"PO-Revision-Date: 2018-03-12 16:18+0000\n"
+"Last-Translator: Alessandro Lion <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-07 12:57+0000\n"
-"X-Generator: Launchpad (build 18566)\n"
+"X-Launchpad-Export-Date: 2018-03-13 15:24+0000\n"
+"X-Generator: Launchpad (build 18571)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -220,7 +220,7 @@ msgid "514"
 msgstr "514"
 
 msgid "69"
-msgstr ""
+msgstr "69"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tag (tra 1 e 4094)"
@@ -245,6 +245,8 @@ msgstr "Una VLAN con l'etichetta %s è già definita in questa interfaccia."
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Un job di cron deve essere creato per schedulare lo script  "
+"/etc/capacitycheck.zfs."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -620,7 +622,7 @@ msgid "Additional Network"
 msgstr "Reti aggiuntive"
 
 msgid "Additional Parameter"
-msgstr ""
+msgstr "Parametri Aggiuntivi"
 
 msgid "Additional Parameters"
 msgstr "Parametri Addizionali"
@@ -892,11 +894,15 @@ msgid ""
 "An alert email is sent when the capacity of a pool exceeds the critical "
 "threshold."
 msgstr ""
+"Un email di allerta è inviata quando la capacità di un pool eccede la soglia "
+"critica."
 
 msgid ""
 "An alert email is sent when the capacity of a pool exceeds the warning "
 "threshold."
 msgstr ""
+"Un email di allerta è inviata quando la capacità di un pool eccede la soglia "
+"di avvertimento."
 
 msgid "An empty field is default."
 msgstr "Di default un campo vuoto."
@@ -960,7 +966,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apple Filing Protocol (AFP) Compatibility Settings"
-msgstr ""
+msgstr "Impostazioni di compatibilità Apple Filing Protocol (AFP)"
 
 msgid "Apple Public Source License"
 msgstr "Licenza pubblica Apple"
@@ -1002,7 +1008,7 @@ msgid "Asynchronous I/O"
 msgstr "I/O asincrono"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Almeno un disco deve essere selezionato."
 
 msgid "At least one interface must be selected."
 msgstr "Almeno un'interfaccia deve essere selezionata"
@@ -1541,13 +1547,13 @@ msgid "Capacity"
 msgstr "Capacità"
 
 msgid "Capacity Alert Thresholds"
-msgstr ""
+msgstr "Soglia di allerta della capacità."
 
 msgid "Capacity Critical Threshold"
-msgstr ""
+msgstr "Soglia critica della capacità."
 
 msgid "Capacity Warning Threshold"
-msgstr ""
+msgstr "Soglia di avviso della capacità."
 
 msgid "Carp Settings"
 msgstr "Settaggi CARP"
@@ -1868,6 +1874,8 @@ msgid ""
 "Controls if Time Machine support via the FULLSYNC volume capability is "
 "advertised to clients."
 msgstr ""
+"Controlla se il supporto di Time Machine a mezzo funzioni di volume FULLSYNC "
+"è annunciato ai client."
 
 msgid "Controls the behavior of synchronous requests."
 msgstr "Controlla il comportamento delle richieste sincrone"
@@ -2167,38 +2175,39 @@ msgid "Create ZFS on a GPT partition."
 msgstr "Crea ZFS su una partizione GPT"
 
 msgid "Create a L2ARC device for ARC"
-msgstr ""
+msgstr "Crea un device L2ARC per ARC"
 
 msgid "Create a SLOG device for ZIL"
-msgstr ""
+msgstr "Crea un device SLOG per ZIL"
 
 msgid "Create a mirrored SLOG device for ZIL"
 msgstr ""
 
 msgid "Create a spare device"
-msgstr ""
+msgstr "Crea un device di riserva"
 
 msgid ""
 "Create a virtual device containing a single device or concatenated devices"
 msgstr ""
+"Crea un device virtuale contenente un singolo device o  device concatenati."
 
 msgid "Create a virtual device containing mirrored devices"
-msgstr ""
+msgstr "Crea un device virtuale contenente device in mirroring"
 
 msgid "Create a virtual device which tolerates 2 device failures"
-msgstr ""
+msgstr "Crea un virtual device che accetta il guasto di 2 device."
 
 msgid "Create a virtual device which tolerates 3 device failures"
-msgstr ""
+msgstr "Crea un virtual device che accetta il guasto di 3 device."
 
 msgid "Create a virtual device which tolerates a single device failure"
-msgstr ""
+msgstr "Crea un device virtuale che tollera la rottura di un singolo device."
 
 msgid "Create and initialize RAID."
 msgstr "Crea e inizializza un RAID"
 
 msgid "Create recursive snapshot."
-msgstr ""
+msgstr "Crea snapshot ricorsivi."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Crea la directory di lavoro se questa non esiste"
@@ -2338,7 +2347,7 @@ msgid "Daemon log"
 msgstr "Log del Daemon"
 
 msgid "Data"
-msgstr ""
+msgstr "Dati"
 
 msgid "Data Integrity"
 msgstr "Integrità dei dati"
@@ -2359,7 +2368,7 @@ msgid "Dataset Type"
 msgstr "Tipologia del Dataset"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "Il Dataset è bloccato"
 
 msgid "Dataset is marked for deletion"
 msgstr "Insieme di dati è contrassegnato per l'eliminazione"
@@ -2936,6 +2945,8 @@ msgid ""
 "Display Used/Avail information from the filesystem instead of the Alloc/Free "
 "information from the pool."
 msgstr ""
+"Mostra informazioni Usata/Disponibile dal filesystem invece delle "
+"informazioni Allocata/Libera dal pool."
 
 msgid "Display ZFS command history"
 msgstr "Mostra la history del comando ZFS"
@@ -3149,7 +3160,7 @@ msgid "Do you want to delete selected jobs?"
 msgstr "Vuoi cancellare le attività selezionate?"
 
 msgid "Do you want to delete selected notifier?"
-msgstr ""
+msgstr "Desideri eliminare il notificatore selezionato?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Vuoi cancellare le opzioni selezionate?"
@@ -3295,7 +3306,7 @@ msgid "Donate"
 msgstr "Fai una donazione"
 
 msgid "Done!"
-msgstr ""
+msgstr "Fatto!"
 
 msgid "Done."
 msgstr "Finito."
@@ -3525,7 +3536,7 @@ msgid "Enable ACL inheritance."
 msgstr "Abilita ereditarietà ACL"
 
 msgid "Enable AFP"
-msgstr ""
+msgstr "Abilita AFP"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Attiva Advanced Format (Settori da 4KB)."
@@ -3616,7 +3627,7 @@ msgid "Enable authentication."
 msgstr "Attiva autenticazione."
 
 msgid "Enable checks of the server certificate."
-msgstr ""
+msgstr "Abilita la verifica del certificato del server."
 
 msgid "Enable collecting CPU frequency statistics."
 msgstr "Attiva raccolta della statistica della frequenza della CPU."
@@ -3927,7 +3938,7 @@ msgid "Enter a description for your reference."
 msgstr "Inserisci una descrizione per propria referenza."
 
 msgid "Enter a directory"
-msgstr ""
+msgstr "Inserire una directory"
 
 msgid "Enter a group description."
 msgstr "Inserisci una descrizione di gruppo"
@@ -3958,7 +3969,7 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Inserire un nome sysctl MIB valido."
 
 msgid "Enter comment for the share"
-msgstr ""
+msgstr "Inserire un commento per la condivisione"
 
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
@@ -3971,7 +3982,7 @@ msgid "Enter destination"
 msgstr "Inserisci destinazione"
 
 msgid "Enter extra options"
-msgstr ""
+msgstr "Inserire le opzioni aggiuntive"
 
 msgid "Enter facility name"
 msgstr "Inserire il nome della struttura"
@@ -4011,10 +4022,10 @@ msgid "Enter the command"
 msgstr "Inserisci il comando"
 
 msgid "Enter the location of the share"
-msgstr ""
+msgstr "Inserire la posizione della condivisione"
 
 msgid "Enter the name of the share"
-msgstr ""
+msgstr "Inserire il nome della condivisione"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -6064,10 +6075,10 @@ msgid "Must be a number between 5 and 1000."
 msgstr "Deve essere un numero tra 5 e 1000."
 
 msgid "Must be a number between 80 and 89."
-msgstr ""
+msgstr "Deve essere un numero tra 80 e 89."
 
 msgid "Must be a number between 90 and 95."
-msgstr ""
+msgstr "Deve essere un numero tra 90 e 95."
 
 msgid "Must choose one"
 msgstr "Bisogna sceglierne uno"
@@ -6155,7 +6166,7 @@ msgid "Name of the variable."
 msgstr "Nome della variabile"
 
 msgid "Native - store characters with their native ASCII value."
-msgstr ""
+msgstr "Nativo - memorizza i caratteri con il loro valore ASCII originario."
 
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "Dati utente e metadati non saranno salvati in ARC."
@@ -6229,7 +6240,7 @@ msgstr ""
 "alimentazione. Ciò può causare la riattivazione di un disco in spin-down."
 
 msgid "New"
-msgstr ""
+msgstr "Nuovo"
 
 msgid "New Password"
 msgstr "Nuova Password"
@@ -6251,7 +6262,7 @@ msgid "No"
 msgstr "No"
 
 msgid "No (default) - Disables advertising Time Machine support."
-msgstr ""
+msgstr "No (default) - Disabilita il supporto annunciazione di Time Machine."
 
 msgid "No DNS server have been configured."
 msgstr "Nessun server NDS configurato"
