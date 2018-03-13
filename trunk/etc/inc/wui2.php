@@ -2195,6 +2195,9 @@ EOJ;
 			$select_attributes['required'] = 'required';
 		endif;
 		$select = $this->addElement('select',$select_attributes);
+		if($is_required):
+			$select->addElement('option',['value' => ''],gtext('Choose...'));
+		endif;
 		foreach($p->get_options() as $option_tag => $option_val):
 			$option_attributes = ['value' => $option_tag];
 			if($value == $option_tag):
@@ -2680,46 +2683,6 @@ EOJ;
 		$is_form = (isset($action_url) && preg_match('/^\S+$/',$action_url));
 		$is_spinonsubmit = $is_form && !$this->option_exists('nospinonsubmit');
 		$is_tabnav = !($is_login || $this->option_exists('notabnav'));
-		$jdata = <<<'EOJ'
-$(window).on("load", function() {
-	$(".spin").click(function() { spinner(); });
-
-EOJ;
-		if($is_spinonsubmit):
-			$jdata .= <<<'EOJ'
-	$("#iform").submit(function() { spinner(); });
-
-EOJ;
-		endif;
-		if($is_tabnav):
-			$jdata .= <<<'EOJ'
-	$("#tabnav").on('click', function() { spinner(); });
-	$("#tabnav2").on('click', function() { spinner(); });
-
-EOJ;
-		endif;
-		$jdata .= <<<'EOJ'
-});
-
-EOJ;
-		$jdata .= <<<'EOJ'
-$(document).ready(function() {
-	$('.avoid-fouc').removeClass('avoid-fouc');
-
-EOJ;
-		if($is_tablesort):
-			$jdata .= <<<'EOJ'
-	$.tablesorter.defaults.textSorter = $.tablesorter.sortText;
-	$(".area_data_selection").tablesorter({
-		emptyTo: 'none'
-	});
-
-EOJ;
-		endif;
-		$jdata .= <<<'EOJ'
-});
-
-EOJ;
 		$body = $this->addElement('body',['id' => 'main']);
 		if($is_form):
 			$form_attributes = [
@@ -2748,7 +2711,41 @@ EOJ;
 		endif;
 		$flexcontainer->ins_main();
 		$flexcontainer->ins_footer();
-		$body->addJavaScript($jdata);
+		if(true):
+			$jdata = <<<'EOJ'
+	$(".spin").click(function() { spinner(); });
+EOJ;
+			$this->add_js_on_load($jdata);
+		endif;
+		if($is_spinonsubmit):
+			$jdata = <<<'EOJ'
+	$("#iform").submit(function() { spinner(); });
+EOJ;
+			$this->add_js_on_load($jdata);
+		endif;
+		if($is_tabnav):
+			$jdata = <<<'EOJ'
+	$("#tabnav").on('click', function() { spinner(); });
+	$("#tabnav2").on('click', function() { spinner(); });
+EOJ;
+			$this->add_js_on_load($jdata);
+		endif;
+
+		if(true):
+			$jdata = <<<'EOJ'
+	$('.avoid-fouc').removeClass('avoid-fouc');
+EOJ;
+			$this->add_js_document_ready($jdata);
+		endif;
+		if($is_tablesort):
+			$jdata = <<<'EOJ'
+	$.tablesorter.defaults.textSorter = $.tablesorter.sortText;
+	$(".area_data_selection").tablesorter({
+		emptyTo: 'none'
+	});
+EOJ;
+			$this->add_js_document_ready($jdata);
+		endif;
 		return $this;
 	}
 	public function ins_header_logo() {
@@ -2853,12 +2850,20 @@ class co_DOMElement extends \DOMElement implements ci_DOM {
 	public function last() {
 		return $this->ownerDocument->last();
 	}
+	public function add_js_on_load(string $jcode = '',string $key = NULL) {
+		return $this->ownerDocument->add_js_on_load($jcode,$key);
+	}
+	public function add_js_document_ready(string $jcode = '',string $key = NULL) {
+		return $this->ownerDocument->add_js_document_ready($jcode,$key);
+	}
 }
 class co_DOMDocument extends \DOMDocument implements ci_DOM {
 	use co_DOMTools;
 
 	protected $stack = [];
 	protected $options = [];
+	protected $js_on_load = [];
+	protected $js_document_ready = [];
 
 	public function __construct(string $version = '1.0',string $encoding = 'UTF-8') {
 		parent::__construct($version,$encoding);
@@ -2887,11 +2892,51 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 		reset($this->stack);
 		return $element;
 	}
+	public function add_js_on_load(string $jcode = '',string $key = NULL) {
+		if(isset($key)):
+			$this->js_on_load[$key] = $jcode;
+		else:
+			$this->js_on_load[] = $jcode;
+		endif;
+		return $this;
+	}
+	public function add_js_document_ready(string $jcode = '',string $key = NULL) {
+		if(isset($key)):
+			$this->js_document_ready[$key] = $jcode;
+		else:
+			$this->js_document_ready[] = $jcode;
+		endif;
+		return $this;
+	}
+	protected function clc_javascript() {
+		$body = $this->getElementById('main');
+		if(isset($body)):
+			if(!empty($this->js_on_load)):
+				$jdata = implode(PHP_EOL,[
+					'$(window).on("load", function() {',
+					implode(PHP_EOL,$this->js_on_load),
+					'});'
+				]);
+				$body->addJavaScript($jdata);
+			endif;
+			if(!empty($this->js_document_ready)):
+				$jdata = implode(PHP_EOL,[
+					'$(document).ready(function() {',
+					implode(PHP_EOL,$this->js_document_ready),
+					'});'
+				]);
+				$body->addJavaScript($jdata);
+			endif;
+		endif;
+		return $this;
+	}
 	public function render() {
+		$this->clc_javascript();
 		echo $this->saveHTML();
 		return $this;
 	}
 	public function get_html() {
+		$this->clc_javascript();
 		return $this->saveHTML();
 	}
 }
