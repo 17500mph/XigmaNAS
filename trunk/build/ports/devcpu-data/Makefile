@@ -1,11 +1,11 @@
 PORTNAME=	devcpu-data
-PORTVERSION=	1.15
-PORTREVISION=   1
+PORTVERSION=	1.16
+PORTREVISION=   0
 CATEGORIES=	sysutils
-MASTER_SITES=   https://downloadmirror.intel.com/27337/eng/:intel \
+MASTER_SITES=   https://downloadmirror.intel.com/27591/eng/:intel \
 		http://www.amd64.org/microcode/:amd
 PKGNAMEPREFIX=	devcpu-
-DISTFILES=	microcode-20171117.tgz:intel \
+DISTFILES=	microcode-20180312.tgz:intel \
 		amd64-microcode_3.20171205.1.tar.xz:amd
 
 MAINTAINER=	zoon1@nas4free.org
