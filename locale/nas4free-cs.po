@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-03-06 14:30+0000\n"
-"PO-Revision-Date: 2018-02-19 15:37+0000\n"
+"PO-Revision-Date: 2018-03-13 17:20+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-13 15:24+0000\n"
+"X-Launchpad-Export-Date: 2018-03-13 17:48+0000\n"
 "X-Generator: Launchpad (build 18571)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -220,7 +220,7 @@ msgid "514"
 msgstr "514"
 
 msgid "69"
-msgstr ""
+msgstr "69"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
@@ -625,7 +625,7 @@ msgid "Additional Network"
 msgstr "Další síť"
 
 msgid "Additional Parameter"
-msgstr ""
+msgstr "Další parametr"
 
 msgid "Additional Parameters"
 msgstr "Dodatečné parametry"
@@ -972,7 +972,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apple Filing Protocol (AFP) Compatibility Settings"
-msgstr ""
+msgstr "Nastavení kompatibility Apple Filing protokolu (AFP)"
 
 msgid "Apple Public Source License"
 msgstr "Apple Public Source License"
@@ -1876,11 +1876,15 @@ msgid ""
 "Controls how the set of illegal NTFS ASCII character are stored in the "
 "filesystem, commonly used by OS X clients."
 msgstr ""
+"Řídí jak jsou na souborovém systému ukládány sady neplatných NTFS ASCII "
+"znaků, běžně používané OS X klienty."
 
 msgid ""
 "Controls if Time Machine support via the FULLSYNC volume capability is "
 "advertised to clients."
 msgstr ""
+"Řídí zda je klientům propagována podpora Time Machine prostřednictvím "
+"FULLSYNC schopnosti svazku"
 
 msgid "Controls the behavior of synchronous requests."
 msgstr "Určuje chování synchronních požadavků."
@@ -1937,10 +1941,10 @@ msgid "Controls what types of metadata are stored redundantly."
 msgstr "Řídí které typy metadat jsou ukládány dvojitě."
 
 msgid "Controls where the OS X metadata stream is stored."
-msgstr ""
+msgstr "Řídí zda je ukládán proud metadat OS X."
 
 msgid "Controls where the OS X resource fork is stored."
-msgstr ""
+msgstr "Řídí kam je ukládán fork OS X prostředku."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2348,7 +2352,7 @@ msgid "Daemon log"
 msgstr "Záznam událostí na straně procesu služby"
 
 msgid "Data"
-msgstr ""
+msgstr "Data"
 
 msgid "Data Integrity"
 msgstr "Neporušenost dat"
@@ -2369,7 +2373,7 @@ msgid "Dataset Type"
 msgstr "Typ datové sady"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "Datová sada je uzamčena"
 
 msgid "Dataset is marked for deletion"
 msgstr "Datová sada je označena ke smazání"
@@ -2524,7 +2528,7 @@ msgid "Delete Selected NFS Shares"
 msgstr "Smazat označená NFS sdílení"
 
 msgid "Delete Selected Notifier"
-msgstr ""
+msgstr "Smazat označené oznamování"
 
 msgid "Delete Selected Options"
 msgstr "Smazat označené předvolby"
@@ -3153,7 +3157,7 @@ msgid "Do you want to delete selected jobs?"
 msgstr "Opravdu smazat označené úlohy?"
 
 msgid "Do you want to delete selected notifier?"
-msgstr ""
+msgstr "Chcete označené oznamování smazat?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Opravdu smazat označené předvolby?"
@@ -3527,7 +3531,7 @@ msgid "Enable ACL inheritance."
 msgstr "Zapnout přebírání ACL seznamů."
 
 msgid "Enable AFP"
-msgstr ""
+msgstr "Zapnout AFP"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Použít tzv. pokročilý formát (velikost sektoru 4KB)."
@@ -3899,7 +3903,7 @@ msgstr ""
 "namísto standardních 80 pro HTTP a 443 pro HTTPS."
 
 msgid "Enter a custom port number if you do not want to use default port 69."
-msgstr ""
+msgstr "Pokud nechcete používat výchozí port 69, určete si jiné číslo portu"
 
 #, php-format
 msgid ""
@@ -3922,7 +3926,7 @@ msgid "Enter a description for your reference."
 msgstr "Zadejte popis své předvolby."
 
 msgid "Enter a directory"
-msgstr ""
+msgstr "Zadejte složku"
 
 msgid "Enter a group description."
 msgstr "Zadejte popis skupiny."
@@ -3953,7 +3957,7 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Zadejte platný název sysctl MIB."
 
 msgid "Enter comment for the share"
-msgstr ""
+msgstr "Zadejte komentář pro sdílení"
 
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
@@ -3966,7 +3970,7 @@ msgid "Enter destination"
 msgstr "Zadejte cíl"
 
 msgid "Enter extra options"
-msgstr ""
+msgstr "Zadejte další předvolby"
 
 msgid "Enter facility name"
 msgstr "Zadejte název zařízení (facility)"
@@ -4006,10 +4010,10 @@ msgid "Enter the command"
 msgstr "Zadejte příkaz"
 
 msgid "Enter the location of the share"
-msgstr ""
+msgstr "Zadejte umístění sdílení"
 
 msgid "Enter the name of the share"
-msgstr ""
+msgstr "Zadejte název sdílení"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -4124,7 +4128,7 @@ msgid "Extended Attributes"
 msgstr "Rozšířené atributy"
 
 msgid "Extended Attributes - use a xattr."
-msgstr ""
+msgstr "Rozšířené atributy – použít xattr."
 
 msgid "Extended attributes"
 msgstr "Rozšířené atributy"
@@ -4286,6 +4290,8 @@ msgstr "Soubor"
 msgid ""
 "File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk."
 msgstr ""
+"Soubor (výchozí) – použít ._ AppleDouble soubor kompatibilní s OS X a "
+"Netatalk."
 
 msgid "File Editor"
 msgstr "Editor souborů"
@@ -6098,7 +6104,7 @@ msgid "Must choose one"
 msgstr "Je třeba něco zvolit"
 
 msgid "Must not be empty."
-msgstr ""
+msgstr "Nemůže zůstat prázdné"
 
 msgid "Mutual CHAP"
 msgstr "Vzájemné ověření CHAP"
@@ -6182,7 +6188,7 @@ msgid "Name of the variable."
 msgstr "Název proměnné"
 
 msgid "Native - store characters with their native ASCII value."
-msgstr ""
+msgstr "Nativní – ukládat znaky s jejich nativní ASCII hodnotou."
 
 msgid "Neither user data nor metadata will be cached in ARC."
 msgstr "V ARC mezipaměti nebudou uchovávána ani data, ani metadata."
@@ -6200,10 +6206,10 @@ msgid "NetBIOS Name"
 msgstr "NetBIOS název"
 
 msgid "Netatalk (default) - use Netatalk compatible xattr."
-msgstr ""
+msgstr "Netatalk (výchozí) – použít xattr kompatibilní s Netatalk."
 
 msgid "Netatalk - use cross protocol locking with Netatalk."
-msgstr ""
+msgstr "Netatalk – použít zamykání napříč protokoly s Netatalk."
 
 msgid "Netgraph"
 msgstr "Síťový graf"
@@ -6257,7 +6263,7 @@ msgstr ""
 "napájení se nachází Tato volba může způsobovat roztáčení zastavených disků."
 
 msgid "New"
-msgstr ""
+msgstr "Nové"
 
 msgid "New Password"
 msgstr "Nové heslo"
@@ -6278,7 +6284,7 @@ msgid "No"
 msgstr "Ne"
 
 msgid "No (default) - Disables advertising Time Machine support."
-msgstr ""
+msgstr "Ne (výchozí) – vypne propagování podporu Time Machine."
 
 msgid "No DNS server have been configured."
 msgstr "Není nastavený žádný DNS server."
@@ -6462,7 +6468,7 @@ msgid "None"
 msgstr "Žádné"
 
 msgid "None (default) - no cross protocol locking."
-msgstr ""
+msgstr "Ne (výchozí) – žádné zamykání napříč protokoly."
 
 msgid "Normal"
 msgstr "Nejrychleji, ale nepříliš podrobně"
@@ -7045,14 +7051,14 @@ msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Je třeba, aby číslo portu bylo 514 nebo z rozmezí 1024 až 49151."
 
 msgid "Port number must be 69 or a number between 1024 and 49151."
-msgstr ""
+msgstr "Je třeba aby číslo portu bylo 69 nebo číslo zrrozmezí 1024 až 49151."
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
 msgstr "Je třeba, aby číslo portu bylo z rozahu %d až %d."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
-msgstr ""
+msgstr "Port TFTP služby. Pokud chcete použít výchozí port, nevyplňujte."
 
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
@@ -7175,6 +7181,8 @@ msgid ""
 "Private (default) - store characters as encoded by the OS X client: mapped "
 "to the Unicode private range."
 msgstr ""
+"Soukromé (výchozí) – ukládat znaky jako enkódované OS X klientem: mapované "
+"do soukromého rozsahu Unicode."
 
 msgid "Private Key"
 msgstr "Soukromá část klíče"
@@ -7204,7 +7212,7 @@ msgid "Protect Setting"
 msgstr "Nastaení ochrany"
 
 msgid "Protected"
-msgstr ""
+msgstr "Chráněno"
 
 msgid "Protocol"
 msgstr "Protokol"
@@ -7551,7 +7559,7 @@ msgid "Removable"
 msgstr "Vyjímatelné"
 
 msgid "Remove"
-msgstr ""
+msgstr "Odebrat"
 
 msgid "Remove ZFS label information from a device"
 msgstr "Odebrat ze zařízení informaci o ZFS štítku"
@@ -8598,6 +8606,7 @@ msgstr "Určuje použití ověření typu výzva-odpověď."
 
 msgid "Specifies the username under which the TFTP service should run."
 msgstr ""
+"Určuje uživatelské jméno pod kterým by měla TFTP služba být spuštěná."
 
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
@@ -8686,9 +8695,10 @@ msgid ""
 "Stream (experimental) - pass the stream on to the next module in the VFS "
 "stack."
 msgstr ""
+"Proud (experimentální) ‒ předávat proud na další modul ve VFS vrstvách."
 
 msgid "Stream - pass the stream on to the next module in the VFS stack."
-msgstr ""
+msgstr "Proud ‒ předávat proud na další modul ve VFS vrstvách."
 
 msgid "Strict DLNA"
 msgstr "Striktní DLNA"
@@ -10418,7 +10428,7 @@ msgid "Time Server"
 msgstr "Časový server"
 
 msgid "Time Stamp"
-msgstr ""
+msgstr "Časové razítko"
 
 msgid "Time Synchronization"
 msgstr "Synchronizace času"
@@ -10449,7 +10459,7 @@ msgid "Timeout"
 msgstr "Časový limit prodlevy"
 
 msgid "Timeout must be a number between 10 and 255000000."
-msgstr ""
+msgstr "Je třeba, aby časový limit bylo číslo z rozmezí 10 až 255000000."
 
 msgid "Times"
 msgstr "Časy"
@@ -10891,7 +10901,7 @@ msgid "Update period"
 msgstr "Interval aktualizace"
 
 msgid "Updatenotifier"
-msgstr ""
+msgstr "Oznámení o aktualizaci"
 
 msgid "Upgrade Firmware"
 msgstr "Přejít na novější verzi základního systému"
@@ -11038,7 +11048,7 @@ msgid "Used"
 msgstr "Použito"
 
 msgid "Used Space"
-msgstr ""
+msgstr "Využité místo"
 
 msgid "User"
 msgstr "Uživatel"
@@ -11103,19 +11113,19 @@ msgid "VCPUs"
 msgstr "Virt. procesory"
 
 msgid "VFS fruit:encoding"
-msgstr ""
+msgstr "VFS fruit:enkódování"
 
 msgid "VFS fruit:locking"
-msgstr ""
+msgstr "VFS fruit:zamykání"
 
 msgid "VFS fruit:metadata"
-msgstr ""
+msgstr "VFS fruit:metadata"
 
 msgid "VFS fruit:resource"
-msgstr ""
+msgstr "VFS fruit:prostředek"
 
 msgid "VFS fruit:time machine"
-msgstr ""
+msgstr "VFS fruit:time machine"
 
 msgid "VHID"
 msgstr "VHID"
@@ -11258,7 +11268,7 @@ msgid "Volume Size Limit"
 msgstr "Omezení velikosti svazku"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Svazek je uzamčen"
 
 msgid "Volume is marked for deletion"
 msgstr "Svazek je označen ke smazání"
@@ -11468,7 +11478,7 @@ msgid "Yes"
 msgstr "Ano"
 
 msgid "Yes - Enables Time Machine support for this share."
-msgstr ""
+msgstr "Ano – zapíná pro toto sdílení podporu Time Machine"
 
 msgid ""
 "You can also install a package via SSH or console using the pkg install "
