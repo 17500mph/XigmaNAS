@@ -837,7 +837,7 @@ class HTMLRadioBox2 extends HTMLComboBox2 {
 				'type' => 'radio',
 				'id' => $uuid
 			];
-			if($value === $option_tag):
+			if($value === (string)$option_tag):
 				$attributes['checked'] = 'checked';
 			endif;
 			$tdl->insINPUT($attributes);
@@ -2169,7 +2169,7 @@ EOJ;
 			//	use label tag for text column to allow enabling the radio button by clicking on the text
 			$input_attributes['value'] = $option_tag;
 			$input_attributes['id'] = sprintf('radio_%s',uuid());
-			if($value === $option_tag):
+			if($value === (string)$option_tag):
 				$input_attributes['checked'] = 'checked';
 			elseif(array_key_exists('checked',$input_attributes)):
 				unset($input_attributes['checked']);
@@ -2730,7 +2730,6 @@ EOJ;
 EOJ;
 			$this->add_js_on_load($jdata);
 		endif;
-
 		if(true):
 			$jdata = <<<'EOJ'
 	$('.avoid-fouc').removeClass('avoid-fouc');
