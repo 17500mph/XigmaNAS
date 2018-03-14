@@ -1,5 +1,5 @@
 PORTNAME=	php72-APCu
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	zoon1@nas4free.org
@@ -10,8 +10,7 @@ NO_BUILD?=	         yes
 NO_PKG_REGISTER?=	 yes
 DEPENDS_TARGET=	clean build stage
 
-DEP_STAGEDIR=	${PORTSDIR}/devel/php72-APCu/work/stage
-
+DEP_STAGEDIR=	${PORTSDIR}/devel/php72-APCu/work-php72/stage
 BUILD_DEPENDS=	${NONEXISTENT}:devel/php72-APCu
 
 do-install:
