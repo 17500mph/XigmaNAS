@@ -137,7 +137,7 @@ $n_col_width = count($a_col_width);
 //	prepare additional javascript code
 $jcode = $sphere->doj(false);
 if($record_exists):
-	$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
+	$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort','sorter-bytestring');
 else:
 	$document = new_page($pgtitle,$sphere->get_scriptname());
 endif;
@@ -200,8 +200,8 @@ else:
 	$thead->
 		addTR()->
 			insTHwC('lhelc')->
-			insTHwC('lhell',$cop->get_pool()->get_title()->
-			insTHwC('lhell',$cop->get_name()->get_title()))->
+			insTHwC('lhell',$cop->get_pool()->get_title())->
+			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhell',$cop->get_volsize()->get_title())->
 			insTHwC('lhell',$cop->get_compression()->get_title())->
 			insTHwC('lhell',$cop->get_sparse()->get_title())->
