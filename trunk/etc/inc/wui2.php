@@ -2631,9 +2631,6 @@ EOJ;
 		return $output;
 	}
 	public function ins_head(array $page_title = []) {
-		$is_login = $this->option_exists('login');
-		$is_tablesort = $this->option_exists('tablesort');
-		$is_datechooser = $this->option_exists('datechooser');
 		$head = $this->addElement('head',['id' => 'head']);
 		$head->
 			insElement('meta',['charset' => system_get_language_codeset()])->
@@ -2643,7 +2640,7 @@ EOJ;
 			insElement('link',['href' => '/css/gui.css','rel' => 'stylesheet','type' => 'text/css'])->
 			insElement('link',['href' => '/css/navbar.css','rel' => 'stylesheet','type' => 'text/css'])->
 			insElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);
-		if($is_login):
+		if($this->option_exists('login')):
 			$head->
 				insElement('link',['href' => '/css/login.css','rel' => 'stylesheet','type' => 'text/css']);
 		endif;
@@ -2656,13 +2653,19 @@ EOJ;
 			insElement('script',['src' => '/js/gui.js'])->
 			insElement('script',['src' => '/js/spinner.js'])->
 			insElement('script',['src' => '/js/spin.min.js']);
-		if($is_tablesort):
+		if($this->option_exists('tablesort')):
 			$head->
-				insElement('script',['src' => '/js/jquery.tablesorter.min.js'])->
-				insElement('script',['src' => '/js/parser-bytestring.js']);
-//				insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
+				insElement('script',['src' => '/js/jquery.tablesorter.min.js']);
+/*
+			$head->
+				insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
+ */
+			if($this->option_exists('sorter-bytestring')):
+				$head->
+					insElement('script',['src' => '/js/parser-bytestring.js']);
+			endif;
 		endif;
-		if($is_datechooser):
+		if($this->option_exists('datechooser')):
 			$head->
 				insElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css'])->
 				insElement('script',['src' => 'js/datechooser.js']);
