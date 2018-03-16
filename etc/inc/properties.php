@@ -191,7 +191,7 @@ abstract class properties {
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return object Returns $this.
  */
-	public function set_filter_options(array $value = NULL,string $filter_name = 'ui') {
+	public function set_filter_options($value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
 		if(array_key_exists($filter_name,$this->x_filter)):
 			$this->x_filter[$filter_name]['options'] = $value;
