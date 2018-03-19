@@ -152,7 +152,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_pool ?? $this->init_pool();
 	}
 	public function init_pool() {
-		$property = $this->x_pool = new properties_text($this);
+		$property = $this->x_pool = new properties_list($this);
 		$property->
 			set_title(gtext('Pool'))->
 			set_name('pool');
