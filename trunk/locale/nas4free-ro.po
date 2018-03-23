@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 14:30+0000\n"
-"PO-Revision-Date: 2018-01-19 08:01+0000\n"
+"PO-Revision-Date: 2018-03-21 16:59+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-13 15:25+0000\n"
-"X-Generator: Launchpad (build 18571)\n"
+"X-Launchpad-Export-Date: 2018-03-23 16:33+0000\n"
+"X-Generator: Launchpad (build 18573)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -218,7 +218,7 @@ msgid "514"
 msgstr "514"
 
 msgid "69"
-msgstr ""
+msgstr "69"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Etichetă VLAN 802.1Q (între 1 și 4094)."
@@ -244,6 +244,8 @@ msgstr ""
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Trebuie stabilit un eveniment tip cron job pentru a programa scriptul "
+"/etc/capacitycheck.zfs."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
@@ -620,7 +622,7 @@ msgid "Additional Network"
 msgstr "Rețele adiționale"
 
 msgid "Additional Parameter"
-msgstr ""
+msgstr "Parametri suplimentari"
 
 msgid "Additional Parameters"
 msgstr "Parametri adiționali"
@@ -889,11 +891,15 @@ msgid ""
 "An alert email is sent when the capacity of a pool exceeds the critical "
 "threshold."
 msgstr ""
+"Un email de atențíonare este trimis atunci când capacitatea structurii pool "
+"depășește pragul critic stabilit."
 
 msgid ""
 "An alert email is sent when the capacity of a pool exceeds the warning "
 "threshold."
 msgstr ""
+"Un email de informare este trimis atunci când capacitatea structurii pool "
+"depășește pragul de avertizare stabilit."
 
 msgid "An empty field is default."
 msgstr "Implicit - câmp necompletat."
@@ -955,7 +961,7 @@ msgid "Apple Filing Protocol"
 msgstr "Protocol Apple Filing"
 
 msgid "Apple Filing Protocol (AFP) Compatibility Settings"
-msgstr ""
+msgstr "Setări compatibile Apple Filing Protocol (AFP)"
 
 msgid "Apple Public Source License"
 msgstr "Licență publică Apple"
@@ -997,7 +1003,7 @@ msgid "Asynchronous I/O"
 msgstr "I/O asincrone"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Trebuie să selectți cel puțin un disc."
 
 msgid "At least one interface must be selected."
 msgstr "Trebuie să selectați cel puțin o interfață."
@@ -1528,13 +1534,13 @@ msgid "Capacity"
 msgstr "Capacitate"
 
 msgid "Capacity Alert Thresholds"
-msgstr ""
+msgstr "Nivel de alertă capacitate"
 
 msgid "Capacity Critical Threshold"
-msgstr ""
+msgstr "Nivel critic capacitate"
 
 msgid "Capacity Warning Threshold"
-msgstr ""
+msgstr "Nivel de atenționare capacitate"
 
 msgid "Carp Settings"
 msgstr "Setări CARP"
@@ -1560,6 +1566,8 @@ msgid ""
 "Certificate revocation list (CRL) file for TLS, to check for revoked "
 "certificates."
 msgstr ""
+"Fiíer lista revocare certificate (CRL) pentru TLS, de verificat pentru "
+"certificatele revocate."
 
 msgid "Change"
 msgstr "Modificare"
@@ -1848,11 +1856,15 @@ msgid ""
 "Controls how the set of illegal NTFS ASCII character are stored in the "
 "filesystem, commonly used by OS X clients."
 msgstr ""
+"Controlează cum sunt stocate caracterele ilegale NTFS ASCII în filesystem, "
+"în mod normal utilizat de clienții OSX."
 
 msgid ""
 "Controls if Time Machine support via the FULLSYNC volume capability is "
 "advertised to clients."
 msgstr ""
+"Controlează dacă suportul pentru Time Machine via cappabilitatea FULLSYNC a "
+"volumului este anunțat clienților."
 
 msgid "Controls the behavior of synchronous requests."
 msgstr "Controlează comportamentul la cereri sincrone."
@@ -1913,9 +1925,10 @@ msgstr "Controlează tipul de date stocate în mod redundant."
 
 msgid "Controls where the OS X metadata stream is stored."
 msgstr ""
+"Controlează locul unde este stocat streamul metadata OSX este stocat."
 
 msgid "Controls where the OS X resource fork is stored."
-msgstr ""
+msgstr "Controlează locul unde copia resurselor OSX sunt stocate."
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2156,38 +2169,40 @@ msgid "Create ZFS on a GPT partition."
 msgstr "Creare partiție ZFS sau GPT."
 
 msgid "Create a L2ARC device for ARC"
-msgstr ""
+msgstr "Creare dispozitiv L2ARC pentru ARC"
 
 msgid "Create a SLOG device for ZIL"
-msgstr ""
+msgstr "Creare dispozitiv SLOG pentru ZIL"
 
 msgid "Create a mirrored SLOG device for ZIL"
-msgstr ""
+msgstr "Creare dispozitiv oglindă SLOG pentru ZIL"
 
 msgid "Create a spare device"
-msgstr ""
+msgstr "CReare dispozitiv rezervă"
 
 msgid ""
 "Create a virtual device containing a single device or concatenated devices"
 msgstr ""
+"Crează un dispozitiv virtual conținând un singur sau mai multe dispozitive "
+"concatenate."
 
 msgid "Create a virtual device containing mirrored devices"
-msgstr ""
+msgstr "Crează un dispozitiv virtual conținând dispozitive oglindite"
 
 msgid "Create a virtual device which tolerates 2 device failures"
-msgstr ""
+msgstr "Crează un dispozitiv virtual care acceptă 2 dispozitive defecte"
 
 msgid "Create a virtual device which tolerates 3 device failures"
-msgstr ""
+msgstr "Crează un dispozitiv virtual care acceptă 3 dispozitive defecte"
 
 msgid "Create a virtual device which tolerates a single device failure"
-msgstr ""
+msgstr "Crează un dispozitiv virtual care acceptă 1 dispozitiv defect"
 
 msgid "Create and initialize RAID."
 msgstr "Creare și inițializare RAID."
 
 msgid "Create recursive snapshot."
-msgstr ""
+msgstr "Crează snapshot-uri recursive."
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Creare folder de lucru (dacă acesta nu există deja)."
@@ -2326,7 +2341,7 @@ msgid "Daemon log"
 msgstr "Jurnal daemon"
 
 msgid "Data"
-msgstr ""
+msgstr "Date"
 
 msgid "Data Integrity"
 msgstr "Integritate date"
@@ -2347,7 +2362,7 @@ msgid "Dataset Type"
 msgstr "Tip set de date"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "Setul de date este blocat"
 
 msgid "Dataset is marked for deletion"
 msgstr "Setul de date este marcat pentru ștergere"
@@ -2504,7 +2519,7 @@ msgid "Delete Selected NFS Shares"
 msgstr "Ștergere partajări NFS selectate"
 
 msgid "Delete Selected Notifier"
-msgstr ""
+msgstr "Ștergere notificatoare selectate"
 
 msgid "Delete Selected Options"
 msgstr "Ștergere opțiuni selectate"
@@ -3538,7 +3553,7 @@ msgid ""
 msgstr ""
 
 msgid "Enable STARTTLS"
-msgstr ""
+msgstr "Activare STARTLS"
 
 msgid "Enable Selected Commands"
 msgstr "Activare comenzi selectate"
@@ -3932,7 +3947,7 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Introduceți un nume MIB valid."
 
 msgid "Enter comment for the share"
-msgstr ""
+msgstr "Introduceți comentariul pentru partajare"
 
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
@@ -3945,7 +3960,7 @@ msgid "Enter destination"
 msgstr "Introducere destinații"
 
 msgid "Enter extra options"
-msgstr ""
+msgstr "Introduceți extra opțiunile"
 
 msgid "Enter facility name"
 msgstr "Introducere nume facilitate"
@@ -3985,10 +4000,10 @@ msgid "Enter the command"
 msgstr "Introduceți comanda"
 
 msgid "Enter the location of the share"
-msgstr ""
+msgstr "Introduceți locația partajării"
 
 msgid "Enter the name of the share"
-msgstr ""
+msgstr "Introduceți numele partajării"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -4102,7 +4117,7 @@ msgid "Extended Attributes"
 msgstr "Atribute extinse"
 
 msgid "Extended Attributes - use a xattr."
-msgstr ""
+msgstr "Atribute extinse - utilizare xattr."
 
 msgid "Extended attributes"
 msgstr "Atribute extinse"
@@ -6044,7 +6059,7 @@ msgid "Must be a number between 5 and 1000."
 msgstr "Trebuie să fie un număr între 5 și 1000."
 
 msgid "Must be a number between 80 and 89."
-msgstr ""
+msgstr "Trebuie sa fie un număr între 80 și 89."
 
 msgid "Must be a number between 90 and 95."
 msgstr ""
