@@ -2583,12 +2583,12 @@ EOJ;
 		$this->ins_button_submit('cancel',gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
 		return $this;
 	}
-	public function ins_button_edit() {
-		$this->ins_button_submit('edit',gtext('Edit'));
+	public function ins_button_clone() {
+		$this->ins_button_submit('clone',gtext('Clone Configuration'));
 		return $this;
 	}
-	public function ins_button_save() {
-		$this->ins_button_submit('save',gtext('Apply'));
+	public function ins_button_edit() {
+		$this->ins_button_submit('edit',gtext('Edit'));
 		return $this;
 	}
 	public function ins_button_enadis(bool $enable) {
@@ -2597,6 +2597,10 @@ EOJ;
 		else:
 			$this->ins_button_submit('disable',gtext('Disable'));
 		endif;
+		return $this;
+	}
+	public function ins_button_save() {
+		$this->ins_button_submit('save',gtext('Apply'));
 		return $this;
 	}
 	//	remark area macros
