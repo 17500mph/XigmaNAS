@@ -2211,7 +2211,9 @@ EOJ;
 		return $this;
 	}
 	public function ins_separator(int $colspan = 0,string $id = NULL) {
-		$tr_attributes = [];
+		$tr_attributes = [
+			'class' => 'tablesorter-ignoreRow'
+		];
 		if(isset($id) && preg_match('/\S/',$id)):
 			$tr_attributes['id'] = sprintf('%s_tr',$id);
 		endif;
