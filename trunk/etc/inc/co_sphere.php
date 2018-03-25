@@ -114,6 +114,15 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 		$output[] = '';
 		return implode(PHP_EOL,$output);
 	}
+	public function get_js_on_load() {
+		return '';
+	}
+	public function get_js_document_ready() {
+		return '';
+	}
+	public function get_js() {
+		return '';
+	}
 	public function html_button(string $value = NULL,string $content = NULL,string $id = NULL) {
 		$element = 'button';
 		if(is_null($value)):
@@ -596,6 +605,63 @@ class co_sphere_grid extends co_sphere_level2 {
 			$output[] = '</script>';
 			$output[] = '';
 		endif;
+		return implode(PHP_EOL,$output);
+	}
+	public function get_js_on_load() {
+		$output = [];
+		//	Init action buttons.
+		if($this->enadis()):
+			if($this->toggle()):
+				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_toggle() . '").click(function () {';
+				$output[] = "\t\t" . 'return confirm("' . $this->cbm_toggle_confirm() . '");';
+				$output[] = "\t" . '});';
+			else:
+				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_enable() . '").click(function () {';
+				$output[] = "\t\t" . 'return confirm("' . $this->cbm_enable_confirm() . '");';
+				$output[] = "\t" . '});';
+				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_disable() . '").click(function () {';
+				$output[] = "\t\t" . 'return confirm("' . $this->cbm_disable_confirm() . '");';
+				$output[] = "\t" . '});';
+			endif;
+		endif;
+		$output[] = "\t" . '$("#' . $this->get_cbm_button_id_delete() . '").click(function () {';
+		$output[] = "\t\t" . 'return confirm("' . $this->cbm_delete_confirm() . '");';
+		$output[] = "\t" . '});';
+		//	Disable action buttons.
+		$output[] = "\t" . 'ab_disable' . $this->get_cbm_suffix() . '(true);';
+		//	Init toggle checkbox.
+		$output[] = "\t" . '$("#' . $this->get_cbm_checkbox_id_toggle() . '").click(function() {';
+		$output[] = "\t\t" . 'cb_tbn' . $this->get_cbm_suffix() . '(this,"' . $this->get_cbm_name() . '[]");';
+		$output[] = "\t" . '});';
+		//	Init member checkboxes.
+		$output[] = "\t" . '$("input[name=\'' . $this->get_cbm_name() . '[]\']").click(function() {';
+		$output[] = "\t\t" . 'ab_control' . $this->get_cbm_suffix() . '(this,"' . $this->get_cbm_name() . '[]");';
+		$output[] = "\t" . '});';
+		return implode(PHP_EOL,$output);
+	}
+	public function get_js() {
+		$output = [];
+		$output[] = 'function ab_disable' . $this->get_cbm_suffix() . '(flag) {';
+		if($this->enadis()):
+			if($this->toggle()):
+				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_toggle() . '").prop("disabled",flag);';
+			else:
+				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_enable() . '").prop("disabled",flag);';
+				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_disable() . '").prop("disabled",flag);';
+			endif;
+		endif;
+		$output[] = "\t" . '$("#' . $this->get_cbm_button_id_delete() . '").prop("disabled",flag);';
+		$output[] = '}';
+		$output[] = 'function cb_tbn' . $this->get_cbm_suffix() . '(ego,tbn) {';
+		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
+		$output[] = "\t" . 'cba.prop("checked", function(_, checked) { return !checked; });';
+		$output[] = "\t" . 'ab_disable' . $this->get_cbm_suffix() . '(1 > cba.filter(":checked").length);';
+		$output[] = "\t" . 'ego.checked = false;';
+		$output[] = '}';
+		$output[] = 'function ab_control' . $this->get_cbm_suffix() . '(ego,tbn) {';
+		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
+		$output[] = "\t" . 'ab_disable' . $this->get_cbm_suffix() . '(1 > cba.filter(":checked").length);';
+		$output[] = '}';
 		return implode(PHP_EOL,$output);
 	}
 	public function html_button_delete_rows() {
