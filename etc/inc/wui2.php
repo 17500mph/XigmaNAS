@@ -2301,7 +2301,7 @@ EOJ;
 		$identifier = $sphere->get_row_identifier_value();
 		$input_attributes = [
 			'type' => 'checkbox',
-			'name' => $sphere->cbm_name . '[]',
+			'name' => $sphere->get_cbm_name() . '[]',
 			'value' => $identifier,
 			'id' => $identifier,
 			'class' => 'oneemhigh'
