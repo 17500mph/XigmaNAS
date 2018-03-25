@@ -251,6 +251,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	public $inform = NULL; // information
 //	transaction manager
 	protected $_notifier_processor = NULL;
+	protected $_cbm_suffix = '';
 //	checkbox member array
 	public $cbm_name = 'cbm_grid';
 	public $cbm_grid = [];
@@ -278,16 +279,16 @@ class co_sphere_grid extends co_sphere_level2 {
 	protected $_sym_mup = NULL;
 	protected $_sym_mdn = NULL;
 //	html id tags
-	protected $_cbm_button_id_delete = NULL;
-	protected $_cbm_button_id_disable = NULL;
-	protected $_cbm_button_id_enable = NULL;
-	protected $_cbm_button_id_toggle = NULL;
-	protected $_cbm_checkbox_id_toggle = NULL;
+	protected $_cbm_button_id_delete = 'delete_selected_rows';
+	protected $_cbm_button_id_disable = 'disable_selected_rows';
+	protected $_cbm_button_id_enable = 'enable_selected_rows';
+	protected $_cbm_button_id_toggle = 'toggle_selected_rows';
+	protected $_cbm_checkbox_id_toggle = 'togglemembers';
 //	html value tags
-	protected $_cbm_button_val_delete = NULL;
-	protected $_cbm_button_val_disable = NULL;
-	protected $_cbm_button_val_enable = NULL;
-	protected $_cbm_button_val_toggle = NULL;
+	protected $_cbm_button_val_delete = 'rows.delete';
+	protected $_cbm_button_val_disable = 'rows.disable';
+	protected $_cbm_button_val_enable = 'rows.enable';
+	protected $_cbm_button_val_toggle = 'rows.toggle';
 //	constructor
 	public function __construct(string $basename = NULL,string $extension = NULL) {
 		parent::__construct($basename,$extension);
@@ -303,68 +304,104 @@ class co_sphere_grid extends co_sphere_level2 {
 		global $config;
 		return $this->enadis() && isset($config['system']['enabletogglemode']) && (is_bool($config['system']['enabletogglemode']) ? $config['system']['enabletogglemode'] : true);
 	}
-	public function get_cbm_button_id_delete() {
-		return $this->_cbm_button_id_delete ?? 'delete_selected_rows';
+	public function get_cbm_suffix() {
+		return $this->_cbm_suffix;
 	}
-	public function set_cbm_button_id_delete(string $id = NULL) {
-		$this->_cbm_button_id_delete = $id;
+	public function set_cbm_suffix(string $value) {
+		if(preg_match('/^[a-z\d_]+$/i',$value)):
+			$this->_cbm_suffix = $value;
+		endif;
 		return $this;
 	}
-	public function get_cbm_button_id_enable() {
-		return $this->_cbm_button_id_enable ?? 'enable_selected_rows';
+	public function get_cbm_name() {
+		return $this->cbm_name . $this->get_cbm_suffix();
 	}
-	public function set_cbm_button_id_enable(string $id = NULL) {
-		$this->_cbm_button_id_enable = $id;
+	public function set_cbm_name(string $value) {
+		if(preg_match('/^\S+$/i',$value)):
+			$this->cbm_name = $value;
+		endif;
+		return $this;
+	}
+	public function get_cbm_button_id_delete() {
+		return $this->_cbm_button_id_delete . $this->get_cbm_suffix();
+	}
+	public function set_cbm_button_id_delete(string $id) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_id_delete = $id;
+		endif;
 		return $this;
 	}
 	public function get_cbm_button_id_disable() {
-		return $this->_cbm_button_id_disable ?? 'disable_selected_rows';
+		return $this->_cbm_button_id_disable . $this->get_cbm_suffix();
 	}
-	public function set_cbm_button_id_disable(string $id = NULL) {
-		$this->_cbm_button_id_disable = $id;
+	public function set_cbm_button_id_disable(string $id) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_id_disable = $id;
+		endif;
+		return $this;
+	}
+	public function get_cbm_button_id_enable() {
+		return $this->_cbm_button_id_enable . $this->get_cbm_suffix();
+	}
+	public function set_cbm_button_id_enable(string $id) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_id_enable = $id;
+		endif;
 		return $this;
 	}
 	public function get_cbm_button_id_toggle() {
-		return $this->_cbm_button_id_toggle ?? 'toggle_selected_rows';
+		return $this->_cbm_button_id_toggle . $this->get_cbm_suffix();
 	}
-	public function set_cbm_button_id_toggle(string $id = NULL) {
-		$this->_cbm_button_id_toggle = $id;
+	public function set_cbm_button_id_toggle(string $id) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_id_toggle = $id;
+		endif;
 		return $this;
 	}
 	public function get_cbm_checkbox_id_toggle() {
-		return $this->_cbm_checkbox_id_toggle ?? 'togglemembers';
+		return $this->_cbm_checkbox_id_toggle . $this->get_cbm_suffix();
 	}
-	public function set_cbm_checkbox_id_toggle(string $id = NULL) {
-		$this->_cbm_checkbox_id_toggle = $id;
-		return $this;
-	}
-	public function set_cbm_button_val_delete(string $value = NULL) {
-		$this->_cbm_button_val_delete = $value;
-		return $this;
-	}
-	public function set_cbm_button_val_enable(string $value = NULL) {
-		$this->_cbm_button_val_enable = $value;
-		return $this;
-	}
-	public function set_cbm_button_val_disable(string $value = NULL) {
-		$this->_cbm_button_val_disable = $value;
-		return $this;
-	}
-	public function set_cbm_button_val_toggle(string $value = NULL) {
-		$this->_cbm_button_val_toggle = $value;
+	public function set_cbm_checkbox_id_toggle(string $id) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_checkbox_id_toggle = $id;
+		endif;
 		return $this;
 	}
 	public function get_cbm_button_val_delete() {
-		return $this->_cbm_button_val_delete ?? 'rows.delete';
+		return $this->_cbm_button_val_delete . $this->get_cbm_suffix();
 	}
-	public function get_cbm_button_val_enable() {
-		return $this->_cbm_button_val_enable ?? 'rows.enable';
+	public function set_cbm_button_val_delete(string $value) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_val_delete = $value;
+		endif;
+		return $this;
 	}
 	public function get_cbm_button_val_disable() {
-		return $this->_cbm_button_val_disable ?? 'rows.disable';
+		return $this->_cbm_button_val_disable . $this->get_cbm_suffix();
+	}
+	public function set_cbm_button_val_disable(string $value) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_val_disable = $value;
+		endif;
+		return $this;
+	}
+	public function get_cbm_button_val_enable() {
+		return $this->_cbm_button_val_enable . $this->get_cbm_suffix();
+	}
+	public function set_cbm_button_val_enable(string $value) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_val_enable = $value;
+		endif;
+		return $this;
 	}
 	public function get_cbm_button_val_toggle() {
-		return $this->_cbm_button_val_toggle ?? 'rows.toggle';
+		return $this->_cbm_button_val_toggle . $this->get_cbm_suffix();
+	}
+	public function set_cbm_button_val_toggle(string $value) {
+		if(preg_match('/^\S+$/',$id)):
+			$this->_cbm_button_val_toggle = $value;
+		endif;
+		return $this;
 	}
 	public function cbm_delete(string $message = NULL) {
 		if(isset($message)):
@@ -518,14 +555,14 @@ class co_sphere_grid extends co_sphere_level2 {
 		$output[] = "\t\t" . 'return confirm("' . $this->cbm_delete_confirm() . '");';
 		$output[] = "\t" . '});';
 		//	Disable action buttons.
-		$output[] = "\t" . 'ab_disable(true);';
+		$output[] = "\t" . 'ab_disable' . $this->get_cbm_suffix() . '(true);';
 		//	Init toggle checkbox.
 		$output[] = "\t" . '$("#' . $this->get_cbm_checkbox_id_toggle() . '").click(function() {';
-		$output[] = "\t\t" . 'cb_tbn(this,"' . $this->cbm_name . '[]");';
+		$output[] = "\t\t" . 'cb_tbn' . $this->get_cbm_suffix() . '(this,"' . $this->get_cbm_name() . '[]");';
 		$output[] = "\t" . '});';
 		//	Init member checkboxes.
-		$output[] = "\t" . '$("input[name=\'' . $this->cbm_name . '[]\']").click(function() {';
-		$output[] = "\t\t" . 'ab_control(this,"' . $this->cbm_name . '[]");';
+		$output[] = "\t" . '$("input[name=\'' . $this->get_cbm_name() . '[]\']").click(function() {';
+		$output[] = "\t\t" . 'ab_control' . $this->get_cbm_suffix() . '(this,"' . $this->get_cbm_name() . '[]");';
 		$output[] = "\t" . '});';
 		//	Init spinner.
 		if($with_envelope):
@@ -533,7 +570,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			$output[] = "\t" . '$(".spin").click(function() { spinner(); });';
 		endif;
 		$output[] = '});';
-		$output[] = 'function ab_disable(flag) {';
+		$output[] = 'function ab_disable' . $this->get_cbm_suffix() . '(flag) {';
 		if($this->enadis()):
 			if($this->toggle()):
 				$output[] = "\t" . '$("#' . $this->get_cbm_button_id_toggle() . '").prop("disabled",flag);';
@@ -544,15 +581,15 @@ class co_sphere_grid extends co_sphere_level2 {
 		endif;
 		$output[] = "\t" . '$("#' . $this->get_cbm_button_id_delete() . '").prop("disabled",flag);';
 		$output[] = '}';
-		$output[] = 'function cb_tbn(ego,tbn) {';
+		$output[] = 'function cb_tbn' . $this->get_cbm_suffix() . '(ego,tbn) {';
 		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
 		$output[] = "\t" . 'cba.prop("checked", function(_, checked) { return !checked; });';
-		$output[] = "\t" . 'ab_disable(1 > cba.filter(":checked").length);';
+		$output[] = "\t" . 'ab_disable' . $this->get_cbm_suffix() . '(1 > cba.filter(":checked").length);';
 		$output[] = "\t" . 'ego.checked = false;';
 		$output[] = '}';
-		$output[] = 'function ab_control(ego,tbn) {';
+		$output[] = 'function ab_control' . $this->get_cbm_suffix() . '(ego,tbn) {';
 		$output[] = "\t" . 'var cba = $("input[name=\'"+tbn+"\']").filter(":enabled");';
-		$output[] = "\t" . 'ab_disable(1 > cba.filter(":checked").length);';
+		$output[] = "\t" . 'ab_disable' . $this->get_cbm_suffix() . '(1 > cba.filter(":checked").length);';
 		$output[] = '}';
 		if($with_envelope):
 			$output[] = '//]]>';
@@ -578,7 +615,7 @@ class co_sphere_grid extends co_sphere_level2 {
 		$identifier = $this->get_row_identifier_value();
 		$input_attributes = [
 			'type' => 'checkbox',
-			'name' => $this->cbm_name . '[]',
+			'name' => $this->get_cbm_name() . '[]',
 			'value' => $identifier,
 			'id' => $identifier,
 			'class' => 'oneemhigh'
