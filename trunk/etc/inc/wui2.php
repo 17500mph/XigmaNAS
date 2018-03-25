@@ -2902,18 +2902,22 @@ class co_DOMDocument extends \DOMDocument implements ci_DOM {
 		return $element;
 	}
 	public function add_js_on_load(string $jcode = '',string $key = NULL) {
-		if(isset($key)):
-			$this->js_on_load[$key] = $jcode;
-		else:
-			$this->js_on_load[] = $jcode;
+		if(preg_match('/\S/',$jcode)):
+			if(isset($key)):
+				$this->js_on_load[$key] = $jcode;
+			else:
+				$this->js_on_load[] = $jcode;
+			endif;
 		endif;
 		return $this;
 	}
 	public function add_js_document_ready(string $jcode = '',string $key = NULL) {
-		if(isset($key)):
-			$this->js_document_ready[$key] = $jcode;
-		else:
-			$this->js_document_ready[] = $jcode;
+		if(preg_match('/\S/',$jcode)):
+			if(isset($key)):
+				$this->js_document_ready[$key] = $jcode;
+			else:
+				$this->js_document_ready[] = $jcode;
+			endif;
 		endif;
 		return $this;
 	}
