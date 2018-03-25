@@ -2211,9 +2211,10 @@ EOJ;
 		return $this;
 	}
 	public function ins_separator(int $colspan = 0,string $id = NULL) {
-		$tr_attributes = [
-			'class' => 'tablesorter-ignoreRow'
-		];
+		$tr_attributes = [];
+		if($this->option_exists('tablesort')):
+			$tr_attributes = ['class' => 'tablesorter-ignoreRow'];
+		endif;
 		if(isset($id) && preg_match('/\S/',$id)):
 			$tr_attributes['id'] = sprintf('%s_tr',$id);
 		endif;
@@ -2662,10 +2663,10 @@ EOJ;
 		if($this->option_exists('tablesort')):
 			$head->
 				insElement('script',['src' => '/js/jquery.tablesorter.min.js']);
-/*
-			$head->
-				insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
- */
+			if($this->option_exists('tablesort-widgets')):
+				$head->
+					insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
+			endif;
 			if($this->option_exists('sorter-bytestring')):
 				$head->
 					insElement('script',['src' => '/js/parser-bytestring.js']);
@@ -2964,6 +2965,8 @@ interface ci_DOM {
  *	nospinonsubmit
  *	notabnav
  *	tablesort
+ *		tablesort-widgets
+ *		parser-bytestring
  */
 function new_page(array $page_title = [],string $action_url = NULL,string ...$options) {
 	$document = new co_DOMDocument();
