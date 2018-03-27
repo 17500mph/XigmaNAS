@@ -13,6 +13,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 export PATH
 
 # Global variables.
+PRODUCT=`cat /etc/prd.name`
 PLATFORM=`uname -m`
 CDPATH="/mnt/cdrom"
 SYSBACKUP="/tmp/sysbackup"
@@ -20,7 +21,7 @@ PRDNAME=`cat /etc/prd.name`
 APPNAME="RootOnZFS"
 ZROOT="zroot"
 
-tmpfile=`tmpfile 2>/dev/null` || tmpfile=/tmp/tui$$
+tmpfile=2>/dev/null || tmpfile=/tmp/tui$$
 trap "rm -f $tmpfile" 0 1 2 5 15
 
 # Mount CD/USB drive.
@@ -95,7 +96,7 @@ cleandisk_init()
 	# Destroy any existing swap gmirror.
 	gmirror destroy -f gswap > /dev/null 2>&1
 
-	DISKS="${DISK1} ${DISK2}"
+	DISKS=${DEVICE_LIST}
 	NUM="0"
 	for DISK in ${DISKS}
 	do
@@ -108,18 +109,20 @@ cleandisk_init()
 		diskinfo ${DISK} | while read DISK sectorsize size sectors other
 			do
 				# Delete MBR, GPT Primary, ZFS(L0L1)/other partition table.
-				/bin/dd if=/dev/zero of=/dev/${DISK} bs=${sectorsize} count=8192 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=${DISK} bs=${sectorsize} count=8192 > /dev/null 2>&1
 				# Delete GEOM metadata, GPT Secondary(L2L3).
-				/bin/dd if=/dev/zero of=/dev/${DISK} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=${DISK} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
 			done
 			NUM=`expr $NUM + 1`
 	done
 }
 
-# Create GPT/Partition on disks.
+# Create GPT/Partition on disk.
 gptpart_init()
 {
-	DISKS="${DISK1} ${DISK2}"
+	DISKS=${DEVICE_LIST}
+	tmplist=/tmp/tui$$
+	cat /dev/null > ${tmpfile}
 	NUM="0"
 	for DISK in ${DISKS}
 	do
@@ -131,19 +134,26 @@ gptpart_init()
 		#gpart add -a 4k -s 800K -t efi -l efiboot${NUM} ${DISK} > /dev/null
 
 		if [ ! -z "${SWAP}" ]; then
+			# Add swap partition to selected drives.
 			gpart add -a 4m -s ${SWAP} -t freebsd-swap -l swap${NUM} ${DISK} > /dev/null
+			# Generate explicit swap device list.
+			echo "/dev/gpt/swap${NUM}" >> ${tmplist}
 		fi
-		gpart add -a 4m ${ZROOTSIZE} -t freebsd-zfs -l sysdisk${NUM} ${DISK} > /dev/null
+		gpart add -a 4m ${ZROOT_SIZE} -t freebsd-zfs -l sysdisk${NUM} ${DISK} > /dev/null
+		# Generate the glabel device list.
+		echo "/dev/gpt/sysdisk${NUM}" >> ${tmpfile}
 		NUM=`expr $NUM + 1`
 	done
+
+	export GLABEL_DEVLIST=`cat ${tmpfile}`
+	export SWAP_DEVLIST=`cat ${tmplist}`
+	rm -f $tmplist
 }
 
-# Install NAS4Free on single zfs disk.
-zdisk_init()
+# Install NAS4Free.
+zroot_init()
 {
-	# Install confirmation.
-	install_yesno
-
+	# Begin NAS4Free RootOnZFS installation.
 	printf '\033[1;37;44m RootOnZFS Working... \033[0m\033[1;37m\033[0m\n'
 
 	# Mount cd-rom.
@@ -158,13 +168,27 @@ zdisk_init()
 	# Create GPT/Partition on disk.
 	gptpart_init
 
-	# Create bootable zfs disk with boot environments support.
-	echo "Creating bootable ${ZROOT} Disk"
+	# Set required variables.
 	export ALTROOT="/mnt/sys_install"
 	export DATASET="/ROOT"
 	export BOOTENV="/default-install"
 
-	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} /dev/gpt/sysdisk0
+	# Set the raid type.
+	if [ "${STRIPE}" == 0 ]; then
+		RAID=""
+	elif [ "${MIRROR}" == 0 ]; then
+		RAID="mirror"
+	elif [ "${RAIDZ1}" == 0 ]; then
+		RAID="raidz1"
+	elif [ "${RAIDZ2}" == 0 ]; then
+		RAID="raidz2"
+	elif [ "${RAIDZ3}" == 0 ]; then
+		RAID="raidz3"
+	fi
+
+	# Create bootable zroot pool with boot environments support.
+	echo "Creating bootable ${ZROOT} pool"
+	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} ${RAID} ${GLABEL_DEVLIST}
 	zfs set canmount=off ${ZROOT}
 	zfs create -o canmount=off ${ZROOT}${DATASET}
 	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
@@ -180,104 +204,32 @@ zdisk_init()
 
 	# Write bootcode.
 	echo "Writing bootcode..."
-	gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK1}
-	#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK1}"p2" > /dev/null 2>&1
+	DISKS=${DEVICE_LIST}
+	for DISK in ${DISKS}
+	do
+		gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK}
+		#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK}"p2" > /dev/null 2>&1
+	done
 
 	sysctl kern.geom.debugflags=0
 	sleep 1
 
-	# Add swap device to fstab.
-	if [ ! -z "${SWAP}" ]; then
-		echo "Adding swap device to fstab..."
-		echo "/dev/gpt/swap0 none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
-	fi
-
-	# Unmount cd-rom.
-	umount_cdrom
-
-	# Creates system default snapshot after install.
-	create_default_snapshot
-
-	# Flush disk cache and wait 1 second.
-	sync; sleep 1
-	zpool export ${ZROOT}
-	rm -Rf ${ALTROOT}
-
-	# Final message.
-	if [ $? -eq 0 ]; then
-		cdialog --msgbox "$PRDNAME $APPNAME Disk Successfully Installed!" 6 60
-	else
-		echo "An error has occurred during the installation."
-		exit 1
-	fi
-	exit 0
-}
-
-# Install NAS4Free RootOnZFS on zfs mirror.
-zmirror_init()
-{
-	# Install confirmation.
-	install_yesno
-
-	printf '\033[1;37;44m RootOnZFS Working... \033[0m\033[1;37m\033[0m\n'
-
-	# Mount cd-rom.
-	mount_cdrom
-
-	# Check for existing zroot pool.
-	zpool_check
-
-	# Get rid of any metadata on selected disk.
-	cleandisk_init
-
-	# Create GPT/Partition on disk.
-	gptpart_init
-
-	# Create bootable zfs mirror with boot environments support.
-	echo "Creating bootable ${ZROOT} Mirror"
-	export ALTROOT="/mnt/sys_install"
-	export DATASET="/ROOT"
-	export BOOTENV="/default-install"
-
-	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} mirror /dev/gpt/sysdisk0 /dev/gpt/sysdisk1
-	zfs set canmount=off ${ZROOT}
-	zfs create -o canmount=off ${ZROOT}${DATASET}
-	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
-	zfs set freebsd:boot-environment=1 ${ZROOT}${DATASET}${BOOTENV}
-	zpool set bootfs=${ZROOT}${DATASET}${BOOTENV} ${ZROOT}
-	if [ $? -eq 1 ]; then
-		echo "An error has occurred while creating ${ZROOT} pool."
-		exit 1
-	fi
-
-	# Install system files.
-	install_sys_files
-
-	# Write bootcode.
-	echo "Writing bootcode..."
-	gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK1}
-	gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK2}
-	#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK1}"p2" > /dev/null 2>&1
-	#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK2}"p2" > /dev/null 2>&1
-
-	sysctl kern.geom.debugflags=0
-	sleep 1
-
-	# Creating/adding the swap device.
+	# Creating/adding the fixed swap devices.
 	if [ ! -z "${SWAP}" ]; then
 		if [ "${SWAPMODE}" == 1 ]; then
-			echo "Creating swap Mirror..."
+			echo "Creating/adding swap Mirror..."
 			if ! kldstat | grep -q geom_mirror; then
 				kldload /boot/kernel/geom_mirror.ko
 			fi
-			gmirror label -b prefer gswap /dev/gpt/swap0 /dev/gpt/swap1
+			gmirror label -b prefer swap ${SWAP_DEVLIST}
 			# Add swap device to fstab.
-			echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
-		elif [ "${SWAPMODE}" == 2 ]; then
+			echo "/dev/mirror/swap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+		else
 			# Add swap device to fstab.
 			echo "Adding swap devices to fstab..."
-			echo "/dev/gpt/swap0 none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
-			echo "/dev/gpt/swap1 none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+			for swapdev in ${SWAP_DEVLIST}; do
+				echo "${swapdev} none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+			done
 		fi
 	fi
 
@@ -294,7 +246,7 @@ zmirror_init()
 
 	# Final message.
 	if [ $? -eq 0 ]; then
-		cdialog --msgbox "$PRDNAME $APPNAME Mirror Successfully Installed!" 6 60
+		cdialog --msgbox "$PRDNAME $APPNAME Successfully Installed!" 6 60
 	else
 		echo "An error has occurred during the installation."
 		exit 1
@@ -328,7 +280,7 @@ install_sys_files()
 	cd ${ALTROOT}/${ZROOT}/boot/kernel
 	for FILE in *.gz
 	do
-		if [ -f ${FILE} ]; then
+		if [ -f "${FILE}" ]; then
 			/usr/bin/gzip -d -f ${FILE}
 		fi
 	done
@@ -403,16 +355,9 @@ EOF
 	# This file is used by the firmware and mount check and is normally
 	# generated with 'liveCD' and 'embedded' during startup, but need to be
 	# created during install of 'full'.
-	if [ ! -z "${DISK1}" ]; then
+	if [ ! -z "${disklist}" ]; then
 		cat << EOF > ${ALTROOT}/${ZROOT}/etc/cfdevice
-${DISK1}
-EOF
-	fi
-
-	if [ ! -z "${DISK2}" ]; then
-		cat << EOF > ${ALTROOT}/${ZROOT}/etc/cfdevice
-${DISK1}
-${DISK2}
+${disklist}
 EOF
 	fi
 
@@ -468,12 +413,11 @@ upgrade_sys_files()
 	cd ${ALTROOT}/${ZROOT}/boot/kernel
 	for FILE in *.gz
 	do
-		if [ -f ${FILE} ]; then
+		if [ -f "${FILE}" ]; then
 			/usr/bin/gzip -d -f ${FILE}
 		fi
 	done
 	cd
-
 	echo "Done!"
 }
 
@@ -542,8 +486,8 @@ upgrade_system()
 	# Check if NAS4Free exist on specified zroot pool, otherwise exit.
 	if [ -f "${ALTROOT}/${ZROOT}/etc/prd.name" ]; then
 		PRD=`cat ${ALTROOT}/${ZROOT}/etc/prd.name`
-		if [ "${PRD}" != "NAS4Free" ]; then
-			echo "NAS4Free product not detected."
+		if [ "${PRD}" != "${PRODUCT}" ]; then
+			echo "${PRODUCT} product not detected."
 			zpool export ${ZROOT}
 			exit 1
 		fi
@@ -612,7 +556,7 @@ zpool_check()
 {
 	# Check if a zroot pool already exist and/or mounted.
 	echo "Check for existing ${ZROOT} pool..."
-	if zpool import | grep -q ${ZROOT} || zpool status | grep -q ${ZROOT}; then
+	if zpool import | grep -qw ${ZROOT} || zpool status | grep -qw ${ZROOT}; then
 		printf '\033[1;37;43m WARNING \033[0m\033[1;37m A pool called '${ZROOT}' already exist.\033[0m\n'
 		while true
 			do
@@ -639,25 +583,6 @@ upgrade_yesno()
 	fi
 }
 
-global_calls()
-{
-	menu_install
-	menu_swap
-	menu_zrootsize
-}
-
-menu_zdisk()
-{
-	global_calls
-	zdisk_init
-}
-
-menu_zmirror()
-{
-	global_calls
-	zmirror_init
-}
-
 menu_reboot()
 {
 	echo "System Rebooting..."
@@ -667,10 +592,10 @@ menu_reboot()
 
 install_yesno()
 {
-	DISKS=`echo ${DISK1} ${DISK2}`
+	DISKS=`echo ${disklist}`
 	cdialog --title "Proceed with $PRDNAME $APPNAME Install" \
 	--backtitle "$PRDNAME $APPNAME Installer" \
-	--yesno "Continuing with the installation will destroy all data on <${DISKS}> device(s), do you really want to continue?" 6 62
+	--yesno "Continuing with the installation will destroy all data on <${DISKS}> device(s), do you really want to continue?" 0 0
 	if [ 0 -ne $? ]; then
 		exit 0
 	fi
@@ -686,11 +611,20 @@ menu_swap()
 		exit 0
 	fi
 
-	export SWAP=`awk '{ print $1; }' ${tmpfile} | tr -d '"'`
+	export SWAP=`cat ${tmpfile} | tr -d '"'`
 	
 	if [ ! -z "${SWAP}" ]; then
-		if [ "${choise}" == 2 ]; then
-			swap_mode
+		if [ "${choice}" == 2 ]; then
+			cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
+			--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
+			1 "Mirrored System Swap" on \
+			2 "Multiple System Swap" off \
+			2>${tmpfile}
+			if [ 0 -ne $? ]; then
+				exit 0;
+			fi
+
+			export SWAPMODE=`cat ${tmpfile}`
 		fi
 	fi
 }
@@ -714,8 +648,8 @@ menu_zrootsize()
 	cdialog --title "Customize zroot pool partition size?" \
 	--backtitle "$PRDNAME $APPNAME Installer" \
 	--yesno "Would you like to customize the ${ZROOT} partition size?" 5 60
-	choise=$?
-	case "${choise}" in
+	choice=$?
+	case "${choice}" in
 		0) true;;
 		1) return 0;;
 		255) exit 0;;
@@ -729,11 +663,20 @@ menu_zrootsize()
 		exit 0
 	fi
 
-	ZRSIZE=`awk '{ print $1; }' ${tmpfile} | tr -d '"'`
+	rootsize=`cat ${tmpfile}`
 
-	if [ ! -z "${ZRSIZE}" ]; then
-		export ZROOTSIZE="-s ${ZRSIZE}"
+	if [ ! -z "${rootsize}" ]; then
+		export ZROOT_SIZE="-s ${rootsize}"
 	fi
+}
+
+menu_zroot_create()
+{
+	menu_install
+	menu_swap
+	menu_zrootsize
+	install_yesno
+	zroot_init
 }
 
 sort_disklist()
@@ -790,6 +733,7 @@ get_media_desc()
 
 menu_install()
 {
+	device_id=2>/dev/null
 	get_disklist
 	disklist="${VAL}"
 	list=""
@@ -823,62 +767,83 @@ menu_install()
 		exit 0
 	fi
 
-	if [ -f "${tmpfile}" ]; then
-		disklist=$(eval "echo `cat "${tmpfile}"`")
+	if [ ! -z "${tmpfile}" ]; then
+		export disklist=$(eval "echo `cat ${tmpfile}`")
 	fi
 
-	# Check user input specified disks.
+	count="1"
+	for item in ${disklist}
+	do
+		DEV_COUNT=`echo $count`
+		count=`expr $count + 1`
+	done
+
+	# Check for empty user input.
 	if [ -z "${disklist}" ]; then
-		if [ ${choise} == 1 ]; then
-			cdialog --msgbox "Notice: You need to select at least one disk!" 6 50; exit 1
-		elif [ ${choise} == 2 ]; then
-			cdialog --msgbox "Notice: You need to select at least two disk!" 6 50; exit 1
+		if [ "${choice}" == 1 ]; then
+			cdialog --msgbox "Notice: You need to select at least one disk!" 6 55; exit 1
+		elif [ "${choice}" == 2 ]; then
+			cdialog --msgbox "Notice: You need to select at least two disks!" 6 55; exit 1
+		elif [ "${choice}" == 3 ]; then
+			cdialog --msgbox "Notice: You need to select at least two disks!" 6 55; exit 1
+		elif [ "${choice}" == 4 ]; then
+			cdialog --msgbox "Notice: You need to select at least three disks!" 6 55; exit 1
+		elif [ "${choice}" == 5 ]; then
+			cdialog --msgbox "Notice: You need to select at least four disks!" 6 55; exit 1
 		fi
 	fi
 
-	export DISK1=`awk '{ print $1; }' ${tmpfile} | tr -d '"'`
-	export DISK2=`awk '{ print $2; }' ${tmpfile} | tr -d '"'`
-	export DISKX=`awk '{ print $3; }' ${tmpfile} | tr -d '"'`
-
-	if [ ${choise} == 1 ]; then
-		# Check if more than one drive has been specified.
-		if [ ! -z "${DISK2}" ]; then
-			cdialog --msgbox "Notice: You should select a maximum of one drive for ZFS Disk Install!" 6 50; exit 1
-		fi
-		# Check if one disk has been specified.
-		if [ -z "${DISK1}" ]; then
-			cdialog --msgbox "Notice: You should select at least one drive for ZFS Disk Install!" 6 50; exit 1
-		fi
-
-	elif [ ${choise} == 2 ]; then
-		# Check if more than one drive has been specified.
-		if [ ! -z "${DISKX}" ]; then
-			cdialog --msgbox "Notice: You should select a maximum of two drive for ZFS Mirror Install!" 6 50; exit 1
-		fi
-		# Check if two disk has been specified.
-		if [ -z "${DISK2}" ]; then
-			cdialog --msgbox "Notice: You should select a minimum of two drives for ZFS Mirror Install!" 6 50; exit 1
+	# Check for absolute minimum disks selection.
+	if [ -n "${disklist}" ]; then
+		if [ "${choice}" == 2 ]; then
+			if [ "${DEV_COUNT}" -le 1 ]; then
+				cdialog --msgbox "Notice: You need to select a minimum of two disks!" 6 60; exit 1
+			fi
+		elif [ "${choice}" == 3 ]; then
+			if [ "${DEV_COUNT}" -le 1 ]; then
+				cdialog --msgbox "Notice: You need to select a minimum of two disks!" 6 60; exit 1
+			fi
+		elif [ "${choice}" == 4 ]; then
+			if [ "${DEV_COUNT}" -le 2 ]; then
+				cdialog --msgbox "Notice: You need to select a minimum of three disks!" 6 60; exit 1
+			fi
+		elif [ "${choice}" == 5 ]; then
+			if [ "${DEV_COUNT}" -le 3 ]; then
+				cdialog --msgbox "Notice: You need to select a minimum of four disks!" 6 60; exit 1
+			fi
 		fi
 	fi
+	cat /dev/null > $device_id
+	for disk in $disklist; do
+		echo "/dev/$disk" >> $device_id
+	done
+
+	export DEVICE_LIST=`cat $device_id`
 }
 
 menu_main()
 {
 	while :
 		do
-			cdialog --backtitle "$PRDNAME $APPNAME Installer" --clear --title "$PRDNAME Installer Options" --cancel-label "Exit" --menu "" 9 50 10 \
-			"1" "Install $PRDNAME $APPNAME Disk" \
-			"2" "Install $PRDNAME $APPNAME Mirror" \
-			"3" "Upgrade $PRDNAME $APPNAME System" \
+			cdialog --backtitle "$PRDNAME $APPNAME Installer" --clear --title "$PRDNAME Installer Options" --cancel-label "Exit" --menu "" 12 50 10 \
+			"1" "Install $PRDNAME $APPNAME on Stripe" \
+			"2" "Install $PRDNAME $APPNAME on Mirror" \
+			"3" "Install $PRDNAME $APPNAME on RAIDZ1" \
+			"4" "Install $PRDNAME $APPNAME on RAIDZ2" \
+			"5" "Install $PRDNAME $APPNAME on RAIDZ3" \
+			"6" "Upgrade $PRDNAME $APPNAME System" \
 			2>${tmpfile}
 			if [ 0 -ne $? ]; then
 				exit 0
 			fi
-			choise=`cat "${tmpfile}"`
-			case "${choise}" in
-				1) menu_zdisk ;;
-				2) menu_zmirror ;;
-				3) upgrade_system ;;
+			choice=`cat "${tmpfile}"`
+			case "${choice}" in
+				1) export STRIPE="0" && menu_zroot_create ;;
+				2) export MIRROR="0" && menu_zroot_create ;;
+				3) export RAIDZ1="0" && menu_zroot_create ;;
+				4) export RAIDZ2="0" && menu_zroot_create ;;
+				5) export RAIDZ3="0" && menu_zroot_create ;;
+				6) upgrade_system ;;
 			esac
 		done
 }
