@@ -326,7 +326,7 @@ function updatenotify_cbm_delete(&$sphere,&$cop) {
 	$update_config = false;
 	$id_name = $sphere->get_row_identifier();
 	$notifier_name = $sphere->get_notifier();
-	$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
+	$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->get_cbm_name(),FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
 	foreach($sphere->cbm_grid as $sphere->cbm_row):
 		if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$id_name))):
 			$sphere->row = &$sphere->grid[$sphere->row_id];
