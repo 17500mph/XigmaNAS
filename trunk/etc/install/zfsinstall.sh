@@ -13,7 +13,6 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 export PATH
 
 # Global variables.
-PRODUCT=`cat /etc/prd.name`
 PLATFORM=`uname -m`
 CDPATH="/mnt/cdrom"
 SYSBACKUP="/tmp/sysbackup"
@@ -150,10 +149,10 @@ gptpart_init()
 	rm -f $tmplist
 }
 
-# Install NAS4Free.
+# Install RootOnZFS.
 zroot_init()
 {
-	# Begin NAS4Free RootOnZFS installation.
+	# Begin installation.
 	printf '\033[1;37;44m RootOnZFS Working... \033[0m\033[1;37m\033[0m\n'
 
 	# Mount cd-rom.
@@ -483,16 +482,16 @@ upgrade_system()
 		fi
 	fi
 
-	# Check if NAS4Free exist on specified zroot pool, otherwise exit.
+	# Check if os exists on specified zroot pool, otherwise exit.
 	if [ -f "${ALTROOT}/${ZROOT}/etc/prd.name" ]; then
 		PRD=`cat ${ALTROOT}/${ZROOT}/etc/prd.name`
-		if [ "${PRD}" != "${PRODUCT}" ]; then
-			echo "${PRODUCT} product not detected."
+		if [ "${PRD}" != "${PRDNAME}" ]; then
+			echo "${PRDNAME} product not detected."
 			zpool export ${ZROOT}
 			exit 1
 		fi
 	else
-		echo "NAS4Free product not detected."
+		echo "${PRDNAME} installation not found."
 		zpool export ${ZROOT}
 		exit 1
 	fi
@@ -514,7 +513,7 @@ upgrade_system()
 	# Start upgrade script to remove obsolete files. This should be done
 	# before system is updated because it may happen that some files
 	# may be reintroduced in the system.
-	echo "Remove obsolete files..."
+	echo "Removing obsolete files..."
 	/etc/install/upgrade.sh clean ${ALTROOT}/${ZROOT}
 
 	# Upgrade system files.
@@ -547,7 +546,7 @@ upgrade_system()
 	if [ $? -eq 0 ]; then
 		cdialog --msgbox "$PRDNAME $APPNAME System Successfully Upgraded!" 6 62
 	else
-		echo "An error has occurred during installation."
+		echo "An error has occurred during the installation."
 	fi
 	exit 0
 }
@@ -560,7 +559,7 @@ zpool_check()
 		printf '\033[1;37;43m WARNING \033[0m\033[1;37m A pool called '${ZROOT}' already exist.\033[0m\n'
 		while true
 			do
-				read -p "Do you wish to proceed with the install anyway? [y/N]:" yn
+				read -p "Do you wish to proceed with the installation anyway? [y/N]:" yn
 				case ${yn} in
 				[Yy]) break;;
 				[Nn]) exit 0;;
@@ -576,7 +575,7 @@ upgrade_yesno()
 {
 	cdialog --title "Proceed with $PRDNAME $APPNAME Upgrade" \
 	--backtitle "$PRDNAME $APPNAME Installer" \
-	--yesno "NAS4Free has been detected and will be upgraded on <${ZROOT}> pool, do you really want to continue?" 6 70
+	--yesno "${PRDNAME} has been detected and will be upgraded on <${ZROOT}> pool, do you really want to continue?" 6 70
 	if [ 0 -ne $? ]; then
 		zpool export ${ZROOT}
 		exit 0
@@ -604,7 +603,7 @@ install_yesno()
 menu_swap()
 {
 	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "Enter a desired Swap size" \
-	--form "\nPlease enter a valid swap size, default 2G, leave empty for none." 0 0 0 \
+	--form "\nPlease enter a valid swap size, default size is 2G, leave empty for none." 0 0 0 \
 	"Enter swap size:" 1 1 "2G" 1 25 25 25 \
 	2>${tmpfile}
 	if [ 0 -ne $? ]; then
@@ -615,32 +614,19 @@ menu_swap()
 	
 	if [ ! -z "${SWAP}" ]; then
 		if [ "${choice}" == 2 ]; then
-			cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
-			--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
-			1 "Mirrored System Swap" on \
-			2 "Multiple System Swap" off \
-			2>${tmpfile}
-			if [ 0 -ne $? ]; then
-				exit 0;
+			if [ "${NWAY_MIRROR}" != 0 ]; then
+				cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
+				--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
+				1 "Mirrored System Swap" on \
+				2 "Multiple System Swap" off \
+				2>${tmpfile}
+				if [ 0 -ne $? ]; then
+					exit 0;
+				fi
+				export SWAPMODE=`cat ${tmpfile}`
 			fi
-
-			export SWAPMODE=`cat ${tmpfile}`
 		fi
 	fi
-}
-
-swap_mode()
-{
-	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "System Swap mode selection" \
-	--radiolist "Select system Swap mode, (default mirrored)." 10 50 4 \
-	1 "Mirrored System Swap" on \
-	2 "Multiple System Swap" off \
-	2>${tmpfile}
-	if [ 0 -ne $? ]; then
-		exit 0;
-	fi
-
-	export SWAPMODE=`cat ${tmpfile}`
 }
 
 menu_zrootsize()
@@ -798,6 +784,10 @@ menu_install()
 		if [ "${choice}" == 2 ]; then
 			if [ "${DEV_COUNT}" -le 1 ]; then
 				cdialog --msgbox "Notice: You need to select a minimum of two disks!" 6 60; exit 1
+			else
+				if [ "${DEV_COUNT}" -ge 3 ]; then
+					export NWAY_MIRROR="0"
+				fi
 			fi
 		elif [ "${choice}" == 3 ]; then
 			if [ "${DEV_COUNT}" -le 1 ]; then
