@@ -20,7 +20,7 @@ PRDNAME=`cat /etc/prd.name`
 APPNAME="RootOnZFS"
 ZROOT="zroot"
 
-tmpfile=2>/dev/null || tmpfile=/tmp/tui$$
+tmpfile=`tmpfile 2>/dev/null` || tmpfile=/tmp/tui$$
 trap "rm -f $tmpfile" 0 1 2 5 15
 
 # Mount CD/USB drive.
@@ -145,8 +145,10 @@ gptpart_init()
 	done
 
 	export GLABEL_DEVLIST=`cat ${tmpfile}`
-	export SWAP_DEVLIST=`cat ${tmplist}`
-	rm -f $tmplist
+	if [ ! -z "${SWAP}" ]; then
+		export SWAP_DEVLIST=`cat ${tmplist}`
+		rm -f ${tmplist}
+	fi
 }
 
 # Install RootOnZFS.
@@ -719,7 +721,7 @@ get_media_desc()
 
 menu_install()
 {
-	device_id=2>/dev/null
+	tmplist=/tmp/tui$$
 	get_disklist
 	disklist="${VAL}"
 	list=""
@@ -803,12 +805,13 @@ menu_install()
 			fi
 		fi
 	fi
-	cat /dev/null > $device_id
+	cat /dev/null > ${tmplist}
 	for disk in $disklist; do
-		echo "/dev/$disk" >> $device_id
+		echo "/dev/$disk" >> ${tmplist}
 	done
 
-	export DEVICE_LIST=`cat $device_id`
+	export DEVICE_LIST=`cat ${tmplist}`
+	rm -f ${tmplist}
 }
 
 menu_main()
