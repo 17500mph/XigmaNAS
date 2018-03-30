@@ -40,7 +40,7 @@ require_once 'co_request_method.php';
 function get_sphere_disks_zfs_settings() {
 	global $config;
 	
-	$sphere = new co_sphere_row('disks_zfs_settings','php');
+	$sphere = new co_sphere_settings('disks_zfs_settings','php');
 	$sphere->grid = &array_make_branch($config,'zfs','settings');
 	return $sphere;
 }
@@ -59,6 +59,11 @@ $rmo->add('POST','view',PAGE_MODE_VIEW);
 $rmo->add('SESSION',$sphere->get_basename(),PAGE_MODE_VIEW);
 $rmo->set_default('GET','view',PAGE_MODE_VIEW);
 list($page_method,$page_action,$page_mode) = $rmo->validate();
+$a_referer = [
+	$cop->get_showusedavail(),
+	$cop->get_capacity_warning(),
+	$cop->get_capacity_critical()
+];
 switch($page_action):
 	case $sphere->get_basename():
 		$retval = filter_var($_SESSION[$sphere->get_basename()],FILTER_VALIDATE_INT,['options' => ['default' => 0]]);
@@ -70,69 +75,34 @@ endswitch;
 switch($page_mode):
 	case PAGE_MODE_VIEW:
 	case PAGE_MODE_EDIT:
-		$a_referrer = [
-			$cop->showusedavail->get_name(),
-		];
-		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $cop->{$referrer}->validate_config($sphere->grid);
+		foreach($a_referer as $referer):
+			$name = $referer->get_name();
+			$sphere->row[$name] = $referer->validate_array_element($sphere->grid);
+			if(is_null($sphere->row[$name])):
+				$input_errors[] = $referer->get_message_error();
+				if(array_key_exists($name,$sphere->grid) && is_scalar($sphere->grid[$name])): 
+					$sphere->row[$name] = $sphere->grid[$name];
+				else:
+					$sphere->row[$name] = $referer->get_defaultvalue();
+				endif;
+			endif;
 		endforeach;
-		$referrer = $cop->capacity_warning->get_name();
-		$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid);
-		if(is_null($sphere->row[$referrer])):
-			$input_errors[] = $cop->{$referrer}->get_message_error();
-			if(array_key_exists($referrer,$sphere->grid) && is_scalar($sphere->grid[$referrer])): 
-				$sphere->row[$referrer] = $sphere->grid[$referrer];
-			else:
-				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
-			endif;
-		endif;
-		$referrer = $cop->capacity_critical->get_name();
-		$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid);
-		if(is_null($sphere->row[$referrer])):
-			$input_errors[] = $cop->{$referrer}->get_message_error();
-			if(array_key_exists($referrer,$sphere->grid) && is_scalar($sphere->grid[$referrer])): 
-				$sphere->row[$referrer] = $sphere->grid[$referrer];
-			else:
-				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
-			endif;
-		endif;
 		break;
 	case PAGE_MODE_POST:
-		$a_referrer = [
-			$cop->showusedavail->get_name(),
-		];
-		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
+		foreach($a_referer as $referer):
+			$name = $referer->get_name();
+			$sphere->row[$name] = $referer->validate_input();
+			if(is_null($sphere->row[$name])):
+				$input_errors[] = $referer->get_message_error();
+				if(array_key_exists($name,$_POST) && is_scalar($_POST[$name])): 
+					$sphere->row[$name] = $_POST[$name];
+				else:
+					$sphere->row[$name] = $referer->get_defaultvalue();
+				endif;
+			endif;
 		endforeach;
-		$referrer = $cop->capacity_warning->get_name();
-		$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
-		if(is_null($sphere->row[$referrer])):
-			$input_errors[] = $cop->{$referrer}->get_message_error();
-			if(array_key_exists($referrer,$_POST) && is_scalar($_POST[$referrer])): 
-				$sphere->row[$referrer] = $_POST[$referrer];
-			else:
-				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
-			endif;
-		endif;
-		$referrer = $cop->capacity_critical->get_name();
-		$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
-		if(is_null($sphere->row[$referrer])):
-			$input_errors[] = $cop->{$referrer}->get_message_error();
-			if(array_key_exists($referrer,$_POST) && is_scalar($_POST[$referrer])): 
-				$sphere->row[$referrer] = $_POST[$referrer];
-			else:
-				$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
-			endif;
-		endif;
 		if(empty($input_errors)):
-			$a_referrer = [
-				$cop->showusedavail->get_name(),
-				$cop->capacity_warning->get_name(),
-				$cop->capacity_critical->get_name(),
-			];
-			foreach($a_referrer as $referrer):
-				$sphere->grid[$referrer] = $sphere->row[$referrer];
-			endforeach;
+			$sphere->copyrowtogrid();
 			write_config();
 			$retval = 0;
 			$_SESSION['submit'] = $sphere->get_basename();
@@ -146,19 +116,11 @@ switch($page_mode):
 endswitch;
 //	determine final page mode and calculate readonly flag
 list($page_mode,$is_readonly) = calc_skipviewmode($page_mode);
-//	prepare additional javascript code
-$jcode = [];
-$jcode[PAGE_MODE_EDIT] = NULL;
-$jcode[PAGE_MODE_VIEW] = NULL;
 //	create document
 $document = new_page([gtext('Disks'),gtext('ZFS'),gtext('Settings')],$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
-//	add additional javascript code
-if(isset($jcode[$page_mode])):
-	$body->addJavaScript($jcode[$page_mode]);
-endif;
 //	add tab navigation
 $document->
 	add_area_tabnav()->
@@ -184,7 +146,7 @@ $content->
 			c2_titleline(gtext('ZFS Settings'))->
 		pop()->
 		addTBODY()->
-			c2_checkbox($cop->showusedavail,$sphere->row[$cop->showusedavail->get_name()],false,$is_readonly);
+			c2_checkbox($cop->get_showusedavail(),$sphere->row[$cop->get_showusedavail()->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
 		push()->
@@ -194,8 +156,8 @@ $content->
 			c2_titleline(gtext('Capacity Alert Thresholds'))->
 		pop()->
 		addTBODY()->
-			c2_input_text($cop->capacity_warning,htmlspecialchars($sphere->row[$cop->capacity_warning->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->capacity_critical,htmlspecialchars($sphere->row[$cop->capacity_critical->get_name()]),false,$is_readonly);
+			c2_input_text($cop->get_capacity_warning(),htmlspecialchars($sphere->row[$cop->get_capacity_warning()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_capacity_critical(),htmlspecialchars($sphere->row[$cop->get_capacity_critical()->get_name()]),false,$is_readonly);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
@@ -205,5 +167,9 @@ switch($page_mode):
 		$document->add_area_buttons()->ins_button_save()->ins_button_cancel();
 		break;
 endswitch;
-//	done
+//	add additional javascript code
+$body->add_js_on_load($sphere->get_js_on_load(),'grid');
+$body->add_js_document_ready($sphere->get_js_document_ready(),'grid');
+$body->addJavaScript($sphere->get_js(),'grid');
+//	showtime
 $document->render();
