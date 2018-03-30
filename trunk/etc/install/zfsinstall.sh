@@ -120,7 +120,7 @@ cleandisk_init()
 gptpart_init()
 {
 	DISKS=${DEVICE_LIST}
-	tmplist=/tmp/tui$$
+	tmplist=/tmp/swap$$
 	cat /dev/null > ${tmpfile}
 	NUM="0"
 	for DISK in ${DISKS}
