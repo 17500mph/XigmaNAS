@@ -72,8 +72,8 @@ array_sort_key($sphere->grid,'if');
 if($_POST):
 	if(isset($_POST['submit'])):
 		switch($_POST['submit']):
-			case 'rows.delete':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+			case $sphere->get_cbm_button_val_delete():
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
