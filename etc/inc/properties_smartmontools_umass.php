@@ -33,88 +33,99 @@
  */
 require_once 'properties.php';
 
-class properties_smartmontools_umass {
-	public $description;
-	public $enable;
-	public $name;
-	public $protected;
-	public $type;
-	public $uuid;
+class properties_smartmontools_umass extends co_property_container {
+	protected $x_description;
+	protected $x_enable;
+	protected $x_name;
+	protected $x_protected;
+	protected $x_type;
+	protected $x_uuid;
 
-	public function __construct() {
-		$this->load();
+	public function get_description() {
+		return $this->x_description ?? $this->init_description();
 	}
-	public function load() {
-		$this->description = $this->prop_description();
-		$this->enable = $this->prop_enable();
-		$this->name = $this->prop_name();
-		$this->protected = $this->prop_protected();
-		$this->type = $this->prop_type();
-		$this->uuid = $this->prop_uuid();
-		return $this;
+	public function init_description() {
+		$property = $this->x_description = new property_text($this);
+		$property->
+			set_name('description')->
+			set_title(gtext('Description'));
+		$property->
+			set_id('description')->
+			set_description('')->
+			set_defaultvalue('')->set_size(60)->
+			set_maxlength(256)->
+			set_placeholder(gtext('Enter a description for your reference'))->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => '/.*/'])->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_description(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('description');
-		$o->set_name('description');
-		$o->set_title(gtext('Description'));
-//		$o->set_description('');
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(256);
-		$o->set_placeholder(gtext('Enter a description for your reference'));
-		$o->set_filter(FILTER_VALIDATE_REGEXP);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => NULL,'regexp' => '/.*/']);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_enable() {
+		return $this->x_enable ?? $this->init_enable();
 	}
-	private function prop_enable(): property_enable {
-		$o = new property_enable($this);
-		return $o;
+	public function init_enable() {
+		$property = $this->x_enable = new property_enable($this);
+		return $property;
 	}
-	private function prop_name(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('name');
-		$o->set_name('name');
-		$o->set_title(gtext('Identifier'));
-		$o->set_description(gtext('The identifier reported as unknown by smartctl including brackets.'));
-		$o->set_defaultvalue('');
-		$o->set_size(60);
-		$o->set_maxlength(64);
-		$o->set_placeholder(gtext('Enter Identifier'));
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_name() {
+		return $this->x_name ?? $this->init_name();
 	}
-	private function prop_protected(): property_protected {
-		$o = new property_protected($this);
-		return $o;
+	public function init_name() {
+		$property = $this->x_name = new property_text($this);
+		$property->
+			set_name('name')->
+			set_title(gtext('Identifier'));
+		$property->
+			set_id('name')->
+			set_description(gtext('The identifier reported as unknown by smartctl including brackets.'))->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(64)->
+			set_placeholder(gtext('Enter Identifier'))->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_type(): properties_text {
-		$o = new properties_text($this);
-		$o->set_id('type');
-		$o->set_name('type');
-		$o->set_title(gtext('Type'));
-//		$o->set_description('');
-		$o->set_defaultvalue('sat');
-		$o->set_size(60);
-		$o->set_maxlength(64);
-		$o->set_placeholder(gtext('Enter smartctl pass-through type.'));
-		$o->set_filter(FILTER_VALIDATE_REGEXP);
-		$o->set_filter_flags(FILTER_REQUIRE_SCALAR);
-		$o->set_filter_options(['default' => NULL,'regexp' => '/.*/']);
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_protected() {
+		return $this->x_protected ?? $this->init_protected();
 	}
-	private function prop_uuid(): property_uuid {
-		$o = new property_uuid($this);
-		return $o;
+	public function init_protected() {
+		$property = $this->x_protected = new property_protected($this);
+		return $property;
+	}
+	public function get_type() {
+		return $this->x_type ?? $this->init_type();
+	}
+	public function init_type() {
+		$property = $this->x_type = new property_text($this);
+		$property->
+			set_name('type')->
+			set_title(gtext('Type'));
+		$property->
+			set_id('type')->
+			set_description('')->
+			set_defaultvalue('sat')->
+			set_size(60)->
+			set_maxlength(64)->
+			set_placeholder(gtext('Enter smartctl pass-through type.'))->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => '/.*/'])->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function get_uuid() {
+		return $this->x_uuid ?? $this->init_uuid();
+	}
+	public function init_uuid() {
+		$property = $this->x_uuid = new property_uuid($this);
+		return $property;
 	}
 }
