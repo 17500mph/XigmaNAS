@@ -92,7 +92,7 @@ if($_POST):
 	if(isset($_POST['submit'])):
 		switch($_POST['submit']):
 			case 'rows.delete':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($index_uuid = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$index_uuid][$sphere->get_row_identifier()]);
