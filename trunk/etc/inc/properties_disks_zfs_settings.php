@@ -42,7 +42,7 @@ class properties_disks_zfs_settings extends co_property_container {
 		return $this->x_showusedavail ?? $this->init_showusedavail();
 	}
 	public function init_showusedavail() {
-		$property = $this->x_showusedavail = new properties_bool($this);
+		$property = $this->x_showusedavail = new property_bool($this);
 		$property->
 			set_name('showusedavail')->
 			set_title(gtext('Show Used/Avail'));
@@ -69,7 +69,7 @@ class properties_disks_zfs_settings extends co_property_container {
 		return NULL;
 	}
 	public function init_capacity_warning() {
-		$property = $this->x_capacity_warning = new properties_int($this);
+		$property = $this->x_capacity_warning = new property_int($this);
 		$property->
 			set_name('capacity_warning')->
 			set_title(gtext('Capacity Warning Threshold'));
@@ -103,7 +103,7 @@ class properties_disks_zfs_settings extends co_property_container {
 		return NULL;
 	}
 	public function init_capacity_critical() {
-		$property = $this->x_capacity_critical = new properties_int($this);
+		$property = $this->x_capacity_critical = new property_int($this);
 		$property->
 			set_name('capacity_critical')->
 			set_title(gtext('Capacity Critical Threshold'));
