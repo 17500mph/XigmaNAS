@@ -64,247 +64,247 @@ class properties_services_samba_share extends co_property_container {
 		return $this->x_afpcompat ?? $this->init_afpcompat();
 	}
 	public function init_afpcompat() {
-		$this->x_afpcompat = new properties_bool($this);
-		$this->x_afpcompat->
+		$property = $this->x_afpcompat = new property_bool($this);
+		$property->
 			set_title(gtext('Enable AFP'))->
 			set_name('afpcompat');
-		return $this->x_afpcompat;
+		return $property;
 	}
 	public function get_auxparam() {
 		return $this->x_auxparam ?? $this->init_auxparam();
 	}
 	public function init_auxparam() {
-		$this->x_auxparam = new properties_textarea($this);
-		$this->x_auxparam->
+		$property = $this->x_auxparam = new property_textarea($this);
+		$property->
 			set_title(gtext('Additional Parameter'))->
 			set_name('auxparam');
-		return $this->x_auxparam;
+		return $property;
 	}
 	public function get_shadowformat() {
 		return $this->x_shadowformat ?? $this->init_shadowformat();
 	}
 	public function init_shadowformat() {
-		$this->x_shadowformat = new properties_text($this);
-		$this->x_shadowformat->
+		$property = $this->x_shadowformat = new property_text($this);
+		$property->
 			set_title(gtext('Shadow Copy Format'))->
 			set_name('shadowformat');
-		return $this->x_shadowformat;
+		return $property;
 	}
 	public function get_vfs_fruit_encoding() {
 		return $this->x_vfs_fruit_encoding ?? $this->init_vfs_fruit_encoding();
 	}
 	public function init_vfs_fruit_encoding() {
-		$this->x_vfs_fruit_encoding = new properties_list($this);
-		$this->x_vfs_fruit_encoding->
+		$property = $this->x_vfs_fruit_encoding = new property_list($this);
+		$property->
 			set_title(gtext('VFS fruit:encoding'))->
 			set_name('vfs_fruit_encoding');
-		return $this->x_vfs_fruit_encoding;
+		return $property;
 	}
 	public function get_vfs_fruit_locking() {
 		return $this->x_vfs_fruit_locking ?? $this->init_vfs_fruit_locking();
 	}
 	public function init_vfs_fruit_locking() {
-		$this->x_vfs_fruit_locking = new properties_list($this);
-		$this->x_vfs_fruit_locking->
+		$property = $this->x_vfs_fruit_locking = new property_list($this);
+		$property->
 			set_title(gtext('VFS fruit:locking'))->
 			set_name('vfs_fruit_locking');
-		return $this->x_vfs_fruit_locking;
+		return $property;
 	}
 	public function get_vfs_fruit_metadata() {
 		return $this->x_vfs_fruit_metadata ?? $this->init_vfs_fruit_metadata();
 	}
 	public function init_vfs_fruit_metadata() {
-		$this->x_vfs_fruit_metadata = new properties_list($this);
-		$this->x_vfs_fruit_metadata->
+		$property = $this->x_vfs_fruit_metadata = new property_list($this);
+		$property->
 			set_title(gtext('VFS fruit:metadata'))->
 			set_name('vfs_fruit_metadata');
-		return $this->x_vfs_fruit_metadata;
+		return $property;
 	}
 	public function get_vfs_fruit_resource() {
 		return $this->x_vfs_fruit_resource ?? $this->init_vfs_fruit_resource();
 	}
 	public function init_vfs_fruit_resource() {
-		$this->x_vfs_fruit_resource = new properties_list($this);
-		$this->x_vfs_fruit_resource->
+		$property = $this->x_vfs_fruit_resource = new property_list($this);
+		$property->
 			set_title(gtext('VFS fruit:resource'))->
 			set_name('vfs_fruit_resource');
-		return $this->x_vfs_fruit_resource;
+		return $property;
 	}
 	public function get_vfs_fruit_time_machine() {
 		return $this->x_vfs_fruit_time_machine ?? $this->init_vfs_fruit_time_machine();
 	}
 	public function init_vfs_fruit_time_machine() {
-		$this->x_vfs_fruit_time_machine = new properties_list($this);
-		$this->x_vfs_fruit_time_machine->
+		$property = $this->x_vfs_fruit_time_machine = new property_list($this);
+		$property->
 			set_title(gtext('VFS fruit:time machine'))->
 			set_name('vfs_fruit_time_machine');
-		return $this->x_vfs_fruit_time_machine;
+		return $property;
 	}
 	public function get_zfsacl() {
 		return $this->x_zfsacl ?? $this->init_zfsacl();
 	}
 	public function init_zfsacl() {
-		$this->x_zfsacl = new properties_bool($this);
-		$this->x_zfsacl->
+		$property = $this->x_zfsacl = new property_bool($this);
+		$property->
 			set_title(gtext('ZFS ACL'))->
 			set_name('zfsacl');
-		return $this->x_zfsacl;
+		return $property;
 	}
 	public function get_inheritacls() {
 		return $this->x_inheritacls ?? $this->init_inheritacls();
 	}
 	public function init_inheritacls() {
-		$this->x_inheritacls = new properties_bool($this);
-		$this->x_inheritacls->
+		$property = $this->x_inheritacls = new property_bool($this);
+		$property->
 			set_title(gtext('Inherit ACL'))->
 			set_name('inheritacls');
-		return $this->x_inheritacls;
+		return $property;
 	}
 	public function get_storealternatedatastreams() {
 		return $this->x_storealternatedatastreams ?? $this->init_storealternatedatastreams();
 	}
 	public function init_storealternatedatastreams() {
-		$this->x_storealternatedatastreams = new properties_bool($this);
-		$this->x_storealternatedatastreams->
+		$property = $this->x_storealternatedatastreams = new property_bool($this);
+		$property->
 			set_title(gtext('Alternate Data Streams'))->
 			set_name('storealternatedatastreams');
-		return $this->x_storealternatedatastreams;
+		return $property;
 	}
 	public function get_storentfsacls() {
 		return $this->x_storentfsacls ?? $this->init_storentfsacls();
 	}
 	public function init_storentfsacls() {
-		$this->x_storentfsacls = new properties_bool($this);
-		$this->x_storentfsacls->
+		$property = $this->x_storentfsacls = new property_bool($this);
+		$property->
 			set_title(gtext('NTFS ACLs'))->
 			set_name('storentfsacls');
-		return $this->x_storentfsacls;
+		return $property;
 	}
 	public function get_hostsallow() {
 		return $this->x_hostsallow ?? $this->init_hostsallow();
 	}
 	public function init_hostsallow() {
-		$this->x_hostsallow = new properties_text($this);
-		$this->x_hostsallow->
+		$property = $this->x_hostsallow = new property_text($this);
+		$property->
 			set_title(gtext('Hosts Allow'))->
 			set_name('hostsallow');
-		return $this->x_hostsallow;
+		return $property;
 	}
 	public function get_hostsdeny() {
 		return $this->x_hostsdeny ?? $this->init_hostsdeny();
 	}
 	public function init_hostsdeny() {
-		$this->x_hostsdeny = new properties_text($this);
-		$this->x_hostsdeny->
+		$property = $this->x_hostsdeny = new property_text($this);
+		$property->
 			set_title(gtext('Hosts Deny'))->
 			set_name('hostsdeny');
-		return $this->x_hostsdeny;
+		return $property;
 	}
 	public function get_shadowcopy() {
 		return $this->x_shadowcopy ?? $this->init_shadowcopy();
 	}
 	public function init_shadowcopy() {
-		$this->x_shadowcopy = new properties_bool($this);
-		$this->x_shadowcopy->
+		$property = $this->x_shadowcopy = new property_bool($this);
+		$property->
 			set_title(gtext('Shadow Copy'))->
 			set_name('shadowcopy');
-		return $this->x_shadowcopy;
+		return $property;
 	}
 	public function get_readonly() {
 		return $this->x_readonly ?? $this->init_readonly();
 	}
 	public function init_readonly() {
-		$this->x_readonly = new properties_bool($this);
-		$this->x_readonly->
+		$property = $this->x_readonly = new property_bool($this);
+		$property->
 			set_title(gtext('Read Only'))->
 			set_name('readonly');
-		return $this->x_readonly;
+		return $property;
 	}
 	public function get_browseable() {
 		return $this->x_browseable ?? $this->init_browseable();
 	}
 	public function init_browseable() {
-		$this->x_browseable = new properties_bool($this);
-		$this->x_browseable->
+		$property = $this->x_browseable = new property_bool($this);
+		$property->
 			set_title(gtext('Browseable'))->
 			set_name('browseable');
-		return $this->x_browseable;
+		return $property;
 	}
 	public function get_guest() {
 		return $this->x_guest ?? $this->init_guest();
 	}
 	public function init_guest() {
-		$this->x_guest = new properties_bool($this);
-		$this->x_guest->
+		$property = $this->x_guest = new property_bool($this);
+		$property->
 			set_title(gtext('Guest'))->
 			set_name('guest');
-		return $this->x_guest;
+		return $property;
 	}
 	public function get_inheritpermissions() {
 		return $this->x_inheritpermissions ?? $this->init_inheritpermissions();
 	}
 	public function init_inheritpermissions() {
-		$this->x_inheritpermissions = new properties_bool($this);
-		$this->x_inheritpermissions->
+		$property = $this->x_inheritpermissions = new property_bool($this);
+		$property->
 			set_title(gtext('Inherit Permissions'))->
 			set_name('inheritpermissions');
-		return $this->x_inheritpermissions;
+		return $property;
 	}
 	public function get_recyclebin() {
 		return $this->x_recyclebin ?? $this->init_recyclebin();
 	}
 	public function init_recyclebin() {
-		$this->x_recyclebin = new properties_bool($this);
-		$this->x_recyclebin->
+		$property = $this->x_recyclebin = new property_bool($this);
+		$property->
 			set_title(gtext('Recycle Bin'))->
 			set_name('recyclebin');
-		return $this->x_recyclebin;
+		return $property;
 	}
 	public function get_hidedotfiles() {
 		return $this->x_hidedotfiles ?? $this->init_hidedotfiles();
 	}
 	public function init_hidedotfiles() {
-		$this->x_hidedotfiles = new properties_bool($this);
-		$this->x_hidedotfiles->
+		$property = $this->x_hidedotfiles = new property_bool($this);
+		$property->
 			set_title(gtext('Hide Dot Files'))->
 			set_name('hidedotfiles');
-		return $this->x_hidedotfiles;
+		return $property;
 	}
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$this->x_name = new properties_text($this);
-		$this->x_name->
+		$property = $this->x_name = new property_text($this);
+		$property->
 			set_title(gtext('Name'))->
 			set_name('name');
-		return $this->x_name;
+		return $property;
 	}
 	public function get_comment() {
 		return $this->x_comment ?? $this->init_comment();
 	}
 	public function init_comment() {
-		$this->x_comment = new properties_text($this);
-		$this->x_comment->
+		$property = $this->x_comment = new property_text($this);
+		$property->
 			set_title(gtext('Comment'))->
 			set_name('comment');
-		return $this->x_comment;
+		return $property;
 	}
 	public function get_path() {
 		return $this->x_path ?? $this->init_path();
 	}
 	public function init_path() {
-		$this->x_path = new properties_text($this);
-		$this->x_path->
+		$property = $this->x_path = new property_text($this);
+		$property->
 			set_title(gtext('Path'))->
 			set_name('path');
-		return $this->x_path;
+		return $property;
 	}
 	public function get_uuid() {
 		return $this->x_uuid ?? $this->init_uuid();
 	}
 	public function init_uuid() {
-		$this->x_uuid = new property_uuid($this);
-		return $this->x_uuid;
+		$property = $this->x_uuid = new property_uuid($this);
+		return $property;
 	}
 }
