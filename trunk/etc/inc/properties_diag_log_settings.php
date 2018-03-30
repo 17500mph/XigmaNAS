@@ -53,7 +53,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_daemon ?? $this->init_daemon();
 	}
 	public function init_daemon() {
-		$property = $this->x_daemon = new properties_bool($this);
+		$property = $this->x_daemon = new property_bool($this);
 		$caption = gtext('Send daemon event messages.');
 		$description = '';
 		$property->
@@ -74,7 +74,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_disablecomp ?? $this->init_disablecomp();
 	}
 	public function init_disablecomp() {
-		$property = $this->x_disablecomp = new properties_bool($this);
+		$property = $this->x_disablecomp = new property_bool($this);
 		$caption = gtext('Disable the compression of repeating lines.');
 		$description = '';
 		$property->
@@ -95,7 +95,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_disablesecure ?? $this->init_disablesecure();
 	}
 	public function init_disablesecure() {
-		$property = $this->x_disablesecure = new properties_bool($this);
+		$property = $this->x_disablesecure = new property_bool($this);
 		$caption = gtext('Accept remote syslog messages.');
 		$description = '';
 		$property->
@@ -116,7 +116,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_enable ?? $this->init_enable();
 	}
 	public function init_enable() {
-		$property = $this->x_enable = new properties_bool($this);
+		$property = $this->x_enable = new property_bool($this);
 		$caption = gtext('Enable');
 		$description = '';
 		$property->
@@ -137,7 +137,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_ftp ?? $this->init_ftp();
 	}
 	public function init_ftp() {
-		$property = $this->x_ftp = new properties_bool($this);
+		$property = $this->x_ftp = new property_bool($this);
 		$caption = gtext('Send FTP event messages.');
 		$description = '';
 		$property->
@@ -158,7 +158,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_ipaddr ?? $this->init_ipaddr();
 	}
 	public function init_ipaddr() {
-		$property = $this->x_ipaddr = new properties_ipaddress($this);
+		$property = $this->x_ipaddr = new property_ipaddress($this);
 		$description = gtext('IP address of the remote syslog server.');
 		$property->
 			set_name('ipaddr')->
@@ -177,7 +177,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_nentries ?? $this->init_nentries();
 	}
 	public function init_nentries() {
-		$property = $this->x_nentries = new properties_int($this);
+		$property = $this->x_nentries = new property_int($this);
 		$description = '';
 		$property->
 			set_name('nentries')->
@@ -199,7 +199,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_port ?? $this->init_port();
 	}
 	public function init_port() {
-		$property = $this->x_port = new properties_int($this);
+		$property = $this->x_port = new property_int($this);
 		$caption = gtext('Port of the remote syslog server. Leave blank to use the default port.');
 		$description = gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.');
 		$property->
@@ -233,7 +233,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_resolve ?? $this->init_resolve();
 	}
 	public function init_resolve() {
-		$property = $this->x_resolve = new properties_bool($this);
+		$property = $this->x_resolve = new property_bool($this);
 		$caption = gtext('Resolve IP addresses to hostnames.');
 		$description = [
 			gtext('Hint'),
@@ -261,7 +261,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_reverse ?? $this->init_reverse();
 	}
 	public function init_reverse() {
-		$property = $this->x_reverse = new properties_bool($this);
+		$property = $this->x_reverse = new property_bool($this);
 		$caption = gtext('Show log entries in reverse order (newest entries on top).');
 		$description = '';
 		$property->
@@ -282,7 +282,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_rsyncd ?? $this->init_rsyncd();
 	}
 	public function init_rsyncd() {
-		$property = $this->x_rsyncd = new properties_bool($this);
+		$property = $this->x_rsyncd = new property_bool($this);
 		$caption = gtext('Send RSYNC event messages.');
 		$description = '';
 		$property->
@@ -303,7 +303,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_smartd ?? $this->init_smartd();
 	}
 	public function init_smartd() {
-		$property = $this->x_smartd = new properties_bool($this);
+		$property = $this->x_smartd = new property_bool($this);
 		$caption = gtext('Send S.M.A.R.T. event messages.');
 		$description = '';
 		$property->
@@ -324,8 +324,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_sshd ?? $this->init_sshd();
 	}
 	public function init_sshd() {
-		$this->x_sshd = new properties_bool($this);
-		$property = $this->x_sshd;
+		$property = $this->x_sshd = new property_bool($this);
 		$caption = gtext('Send SSH event messages.');
 		$description = '';
 		$property->
@@ -346,8 +345,7 @@ class properties_diag_log_settings extends co_property_container {
 		return $this->x_system ?? $this->init_system();
 	}
 	public function init_system() {
-		$this->x_system = new properties_bool($this);
-		$property = $this->x_system;
+		$property = $this->x_system = new property_bool($this);
 		$caption = gtext('Send system event messages.');
 		$description = '';
 		$property->
