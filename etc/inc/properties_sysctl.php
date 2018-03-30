@@ -46,7 +46,7 @@ class properties_sysctl extends co_property_container {
 		return $this->x_comment ?? $this->init_comment();
 	}
 	public function init_comment() {
-		$property = $this->x_comment = new properties_text($this);
+		$property = $this->x_comment = new property_text($this);
 		$property->
 			set_name('comment')->
 			set_title(gtext('Description'));
@@ -63,7 +63,7 @@ class properties_sysctl extends co_property_container {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$property = $this->x_name = new properties_text();
+		$property = $this->x_name = new property_text();
 		$property->
 			set_name('name')->
 			set_title(gtext('MIB'));
@@ -94,7 +94,7 @@ class properties_sysctl extends co_property_container {
 		return $this->x_value ?? $this->init_value();
 	}
 	public function init_value() {
-		$property = $this->x_value = new properties_text($this);
+		$property = $this->x_value = new property_text($this);
 		$property->
 			set_name('value')->
 			set_title(gtext('Value'));
