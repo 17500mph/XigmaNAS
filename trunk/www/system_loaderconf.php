@@ -104,7 +104,7 @@ if($_POST):
 	if(isset($_POST['submit'])):
 		switch($_POST['submit']):
 			case 'rows.enable':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
@@ -126,7 +126,7 @@ if($_POST):
 				exit;
 				break;
 			case 'rows.disable':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
@@ -148,7 +148,7 @@ if($_POST):
 				exit;
 				break;
 			case 'rows.toggle':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
@@ -172,7 +172,7 @@ if($_POST):
 				exit;
 				break;
 			case 'rows.delete':
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
 						$mode_updatenotify = updatenotify_get_mode($sphere->get_notifier(),$sphere->grid[$sphere->row_id][$sphere->get_row_identifier()]);
