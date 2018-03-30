@@ -103,7 +103,7 @@ if($_POST):
 	endif;
 	if(isset($_POST['submit'])):
 		switch($_POST['submit']):
-			case 'rows.enable':
+			case $sphere->get_cbm_button_val_enable():
 				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
@@ -125,7 +125,7 @@ if($_POST):
 				header($sphere->get_location());
 				exit;
 				break;
-			case 'rows.disable':
+			case $sphere->get_cbm_button_val_disable():
 				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
@@ -147,7 +147,7 @@ if($_POST):
 				header($sphere->get_location());
 				exit;
 				break;
-			case 'rows.toggle':
+			case $sphere->get_cbm_button_val_toggle():
 				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
@@ -171,7 +171,7 @@ if($_POST):
 				header($sphere->get_location());
 				exit;
 				break;
-			case 'rows.delete':
+			case $sphere->get_cbm_button_val_delete():
 				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
