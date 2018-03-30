@@ -135,7 +135,7 @@ if($_POST) {
 				header($sphere->get_location());
 				exit;
 				break;
-			case 'rows.delete':
+			case $sphere->get_cbm_button_val_delete():
 				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
