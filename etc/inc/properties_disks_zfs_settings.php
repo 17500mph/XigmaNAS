@@ -33,68 +33,98 @@
  */
 require_once 'properties.php';
 
-class properties_disks_zfs_settings {
-	public $showusedavail;
-	public $capacity_warning;
-	public $capacity_critical;
+class properties_disks_zfs_settings extends co_property_container {
+	protected $x_showusedavail;
+	protected $x_capacity_warning;
+	protected $x_capacity_critical;
 	
-	public function __construct() {
-		$this->load();
+	public function get_showusedavail() {
+		return $this->x_showusedavail ?? $this->init_showusedavail();
 	}
-	public function load() {
-		$this->showusedavail = $this->prop_showusedavail();
-		$this->capacity_warning = $this->prop_capacity_warning();
-		$this->capacity_critical = $this->prop_capacity_critical();
-		return $this;
+	public function init_showusedavail() {
+		$property = $this->x_showusedavail = new properties_bool($this);
+		$property->
+			set_name('showusedavail')->
+			set_title(gtext('Show Used/Avail'));
+		$caption = gtext('Display Used/Avail information from the filesystem instead of the Alloc/Free information from the pool.');
+		$description = gtext('Used/Avail lists storage information after all redundancy is taken into account but is impacted by compression, deduplication and quotas. Alloc/Free lists the raw storage information of a pool.');
+		$property->
+			set_id('showusedavail')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
 	}
-	private function prop_showusedavail(): properties_bool {
-		$o = new properties_bool($this);
-		$o->set_id('showusedavail');
-		$o->set_name('showusedavail');
-		$o->set_title(gtext('Show Used/Avail'));
-		$o->set_caption(gtext('Display Used/Avail information from the filesystem instead of the Alloc/Free information from the pool.'));
-		$o->set_description('Used/Avail lists storage information after all redundancy is taken into account but is impacted by compression, deduplication and quotas. Alloc/Free lists the raw storage information of a pool.');
-		$o->set_defaultvalue(false);
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('The value is invalid.')));
-		return $o;
+	public function get_capacity_warning() {
+		return $this->x_capacity_warning ?? $this->init_capacity_warning();
 	}
-	private function prop_capacity_warning(): properties_int {
-		$o = new properties_int($this);
-		$o->set_id('capacity_warning');
-		$o->set_name('capacity_warning');
-		$o->set_title(gtext('Capacity Warning Threshold'));
-		$o->set_caption(gtext('Set the warning threshold to a value between 80 and 89.'));
-		$o->set_description(gtext('An alert email is sent when the capacity of a pool exceeds the warning threshold.') . ' ' . gtext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.'));
-		$o->set_defaultvalue('');
-		$o->set_size(3);
-		$o->set_maxlength(4);
-		$o->set_min(80)->set_max(89);
-		$o->set_placeholder('80');
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Must be a number between 80 and 89.')));
-		return $o;
+	public function test_capacity_warning($value = '') {
+		if(is_string($value) && preg_match('/^(8\d)?$/',$value)):
+			return $value;
+		endif;
+		return NULL;
 	}
-	private function prop_capacity_critical(): properties_int {
-		$o = new properties_int($this);
-		$o->set_id('capacity_critical');
-		$o->set_name('capacity_critical');
-		$o->set_title(gtext('Capacity Critical Threshold'));
-		$o->set_caption(gtext('Set the critical threshold to a value between 90 and 95.'));
-		$o->set_description(gtext('An alert email is sent when the capacity of a pool exceeds the critical threshold.') . ' ' . gtext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.'));
-		$o->set_defaultvalue('');
-		$o->set_size(3);
-		$o->set_maxlength(4);
-		$o->set_min(90)->set_max(95);
-		$o->set_placeholder('90');
-		$o->filter_use_default();
-		$o->set_editableonadd(true);
-		$o->set_editableonmodify(true);
-		$o->set_message_error(sprintf('%s: %s',$o->get_title(),gtext('Must be a number between 90 and 95.')));
-		return $o;
+	public function init_capacity_warning() {
+		$property = $this->x_capacity_warning = new properties_int($this);
+		$property->
+			set_name('capacity_warning')->
+			set_title(gtext('Capacity Warning Threshold'));
+		$caption = gtext('Set the warning threshold to a value between 80 and 89.');
+		$description =
+			gtext('An alert email is sent when the capacity of a pool exceeds the warning threshold.') .
+			' ' .
+			gtext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.');
+		$property->
+			set_id('capacity_warning')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_size(3)->
+			set_maxlength(4)->
+			set_placeholder('80')->
+			set_filter(FILTER_CALLBACK)->
+			set_filter_options([$this,'test_capacity_warning'])->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must be a number between 80 and 89.')));
+		return $property;
+	}
+	public function get_capacity_critical() {
+		return $this->x_capacity_critical ?? $this->init_capacity_critical();
+	}
+	public function test_capacity_critical($value = '') {
+		if(is_string($value) && preg_match('/^(9[0-5])?$/',$value)):
+			return $value;
+		endif;
+		return NULL;
+	}
+	public function init_capacity_critical() {
+		$property = $this->x_capacity_critical = new properties_int($this);
+		$property->
+			set_name('capacity_critical')->
+			set_title(gtext('Capacity Critical Threshold'));
+		$caption = gtext('Set the critical threshold to a value between 90 and 95.');
+		$description =
+			gtext('An alert email is sent when the capacity of a pool exceeds the critical threshold.') .
+			' ' .
+			gtext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.');
+		$property->
+			set_id('capacity_critical')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_size(3)->
+			set_maxlength(4)->
+			set_placeholder('90')->
+			set_filter(FILTER_CALLBACK)->
+			set_filter_options([$this,'test_capacity_critical'])->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must be a number between 90 and 95.')));
+		return $property;
 	}
 }
