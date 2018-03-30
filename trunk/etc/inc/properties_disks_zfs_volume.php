@@ -65,7 +65,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_enabled ?? $this->init_enabled();
 	}
 	public function init_enabled() {
-		$property = $this->x_enabled = new properties_bool($this);
+		$property = $this->x_enabled = new property_bool($this);
 		$property->
 			set_title(gtext('Enabled'))->
 			set_name('enabled');
@@ -75,7 +75,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_protected ?? $this->init_protected();
 	}
 	public function init_protected() {
-		$property = $this->x_protected = new properties_bool($this);
+		$property = $this->x_protected = new property_bool($this);
 		$property->
 			set_title(gtext('Protected'))->
 			set_name('protected');
@@ -85,7 +85,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_description ?? $this->init_description();
 	}
 	public function init_description() {
-		$property = $this->x_description = new properties_text($this);
+		$property = $this->x_description = new property_text($this);
 		$property->
 			set_title(gtext('Description'))->
 			set_name('desc');
@@ -102,7 +102,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_checksum ?? $this->init_checksum();
 	}
 	public function init_checksum() {
-		$property = $this->x_checksum = new properties_list($this);
+		$property = $this->x_checksum = new property_list($this);
 		$property->
 			set_title(gtext('Checksum'))->
 			set_name('checksum');
@@ -112,7 +112,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_compression ?? $this->init_compression();
 	}
 	public function init_compression() {
-		$property = $this->x_compression = new properties_list($this);
+		$property = $this->x_compression = new property_list($this);
 		$property->
 			set_title(gtext('Compression'))->
 			set_name('compression');
@@ -122,7 +122,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_dedup ?? $this->init_dedup();
 	}
 	public function init_dedup() {
-		$property = $this->x_dedup = new properties_list($this);
+		$property = $this->x_dedup = new property_list($this);
 		$property->
 			set_title(gtext('Dedup Method'))->
 			set_name('dedup');
@@ -132,7 +132,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_logbias ?? $this->init_logbias();
 	}
 	public function init_logbias() {
-		$property = $this->x_logbias = new properties_list($this);
+		$property = $this->x_logbias = new property_list($this);
 		$property->
 			set_title(gtext('Logbias'))->
 			set_name('logbias');
@@ -142,7 +142,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$property = $this->x_name = new properties_text($this);
+		$property = $this->x_name = new property_text($this);
 		$property->
 			set_title(gtext('Name'))->
 			set_name('name');
@@ -152,7 +152,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_pool ?? $this->init_pool();
 	}
 	public function init_pool() {
-		$property = $this->x_pool = new properties_list($this);
+		$property = $this->x_pool = new property_list($this);
 		$property->
 			set_title(gtext('Pool'))->
 			set_name('pool');
@@ -162,7 +162,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_primarycache ?? $this->init_primarycache();
 	}
 	public function init_primarycache() {
-		$property = $this->x_primarycache = new properties_list($this);
+		$property = $this->x_primarycache = new property_list($this);
 		$property->
 			set_title(gtext('Primary Cache'))->
 			set_name('primarycache');
@@ -172,7 +172,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_secondarycache ?? $this->init_secondarycache();
 	}
 	public function init_secondarycache() {
-		$property = $this->x_secondarycache = new properties_list($this);
+		$property = $this->x_secondarycache = new property_list($this);
 		$property->
 			set_title(gtext('Secondary Cache'))->
 			set_name('secondarycache');
@@ -182,7 +182,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_sparse ?? $this->init_sparse();
 	}
 	public function init_sparse() {
-		$property = $this->x_sparse = new properties_bool();
+		$property = $this->x_sparse = new property_bool();
 		$property->
 			set_title(gtext('Sparse'))->
 			set_name('sparse');
@@ -192,7 +192,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_sync ?? $this->init_sync();
 	}
 	public function init_sync() {
-		$property = $this->x_sync = new properties_list($this);
+		$property = $this->x_sync = new property_list($this);
 		$property->
 			set_title(gtext('Sync'))->
 			set_name('sync');
@@ -202,7 +202,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_volblocksize ?? $this->init_volblocksize();
 	}
 	public function init_volblocksize() {
-		$property = $this->x_volblocksize = new properties_list($this);
+		$property = $this->x_volblocksize = new property_list($this);
 		$property->
 			set_title(gtext('Block Size'))->
 			set_name('volblocksize');
@@ -212,7 +212,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_volmode ?? $this->init_volmode($this);
 	}
 	public function init_volmode() {
-		$property = $this->x_volmode = new properties_list($this);
+		$property = $this->x_volmode = new property_list($this);
 		$property->
 			set_title(gtext('Volume Mode'))->
 			set_name('volmode');
@@ -222,7 +222,7 @@ class properties_disks_zfs_volume extends co_property_container {
 		return $this->x_volsize ?? $this->init_volsize();
 	}
 	public function init_volsize() {
-		$property = $this->x_volsize = new properties_text($this);
+		$property = $this->x_volsize = new property_text($this);
 		$property->
 			set_title(gtext('Size'))->
 			set_name('volsize');
