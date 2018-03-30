@@ -47,7 +47,7 @@ class properties_syslogconf extends co_property_container {
 		return $this->x_comment ?? $this->init_comment();
 	}
 	public function init_comment() {
-		$property = $this->x_comment = new properties_text($this);
+		$property = $this->x_comment = new property_text($this);
 		$property->
 			set_name('comment')->
 			set_title(gtext('Description'));
@@ -64,7 +64,7 @@ class properties_syslogconf extends co_property_container {
 		return $this->x_facility ?? $this->init_facility();
 	}
 	public function init_facility() {
-		$property = $this->x_facility= new properties_text($this);
+		$property = $this->x_facility= new property_text($this);
 		$property->
 			set_name('facility')->
 			set_title(gtext('Facility'));
@@ -74,7 +74,7 @@ class properties_syslogconf extends co_property_container {
 		return $this->x_level ?? $this->init_level();
 	}
 	public function init_level() {
-		$property = $this->x_level = new properties_text($this);
+		$property = $this->x_level = new property_text($this);
 		$property->
 			set_name('level')->
 			set_title(gtext('Level'));
@@ -105,7 +105,7 @@ class properties_syslogconf extends co_property_container {
 		return $this->x_value ?? $this->init_value();
 	}
 	public function init_value() {
-		$property = $this->x_value = new properties_text($this);
+		$property = $this->x_value = new property_text($this);
 		$property->
 			set_name('value')->
 			set_title(gtext('Destination'));
