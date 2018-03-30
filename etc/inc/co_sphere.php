@@ -262,7 +262,7 @@ class co_sphere_grid extends co_sphere_level2 {
 	protected $_notifier_processor = NULL;
 	protected $_cbm_suffix = '';
 //	checkbox member array
-	public $cbm_name = 'cbm_grid';
+	protected $_cbm_name = 'cbm_grid';
 	public $cbm_grid = [];
 	public $cbm_row = [];
 //	gtext
@@ -323,11 +323,11 @@ class co_sphere_grid extends co_sphere_level2 {
 		return $this;
 	}
 	public function get_cbm_name() {
-		return $this->cbm_name . $this->get_cbm_suffix();
+		return $this->_cbm_name . $this->get_cbm_suffix();
 	}
 	public function set_cbm_name(string $value) {
 		if(preg_match('/^\S+$/i',$value)):
-			$this->cbm_name = $value;
+			$this->_cbm_name = $value;
 		endif;
 		return $this;
 	}
