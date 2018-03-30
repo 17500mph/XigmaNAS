@@ -55,7 +55,7 @@ $rmo->set_default('GET','view',PAGE_MODE_VIEW);
 list($page_method,$page_action,$page_mode) = $rmo->validate();
 switch($page_action):
 	case $sphere->get_cbm_button_val_delete(): // rows.delete
-		$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->cbm_name,FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
+		$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->get_cbm_name(),FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
 		foreach($sphere->cbm_grid as $sphere->cbm_row):
 			if(false !== array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier())):
 				updatenotify_delete_id($sphere->cbm_row);
