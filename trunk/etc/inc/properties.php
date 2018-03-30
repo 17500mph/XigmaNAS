@@ -212,20 +212,15 @@ abstract class properties {
 		return NULL;
 	}
 /**
- * Method to apply filter to an input element.
- * A list of filters will be processed until a filter does not return NULL.
- * @param int $input_type Input type. Check the PHP manual for supported input types.
- * @param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
- * @return mixed Filter result.
+ *	Method to apply filter to an input element.
+ *	A list of filters will be processed until a filter does not return NULL.
+ *	@param int $input_type Input type. Check the PHP manual for supported input types.
+ *	@param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
+ *	@return mixed Filter result.
  */
 	public function validate_input(int $input_type = INPUT_POST,$filter = ['ui']) {
 		$result = NULL;
-		$filter_names = [];
-		if(is_array($filter)):
-			$filter_names = $filter;
-		elseif(is_string($filter)):
-			$filter_names = [$filter];
-		endif;
+		$filter_names = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
 		foreach($filter_names as $filter_name):
 			if(is_string($filter_name)):
 				$filter_parameter = $this->get_filter($filter_name);
@@ -254,91 +249,193 @@ abstract class properties {
 		return $result;
 	}
 /**
- * Method to validate a value.
- * A list of filters will be processed until a filter does not return NULL.
- * @param mixed $value The value to be tested.
- * @param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
- * @return mixed Filter result.
+ *	Method to validate a value.
+ *	A list of filters will be processed until a filter does not return NULL.
+ *	If an array of values is provided all values must pass validation.
+ *	@param mixed $value The value to be tested.
+ *	@param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
+ *	@return mixed Filter result.
  */
-	public function validate_value($value,$filter = ['ui']) {
+	public function validate_value($content,$filter = ['ui']) {
 		$result = NULL;
-		$filter_names = [];
-		if(is_array($filter)):
-			$filter_names = $filter;
-		elseif(is_string($filter)):
-			$filter_names = [$filter];
-		endif;
-		foreach($filter_names as $filter_name):
-			if(is_string($filter_name)):
-				$filter_parameter = $this->get_filter($filter_name);
-				if(isset($filter_parameter)):
-					$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
-					switch($action):
-						case 3:
-							$result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
-							break;
-						case 2:
-							$result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
-							break;
-						case 1:
-							$result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
-							break;
-						case 0:
-							$result = filter_var($value,$filter_parameter['filter']);
-							break;
-					endswitch;
+		$filter_names = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
+		switch(true):
+			case is_scalar($content):
+				$value = $content;
+				$row_results = NULL;
+				foreach($filter_names as $filter_name):
+					$filter_result = NULL;
+					if(is_string($filter_name)):
+						$filter_parameter = $this->get_filter($filter_name);
+						if(isset($filter_parameter)):
+							$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+							switch($action):
+								case 3:
+									$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+									break;
+								case 2:
+									$filter_result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+									break;
+								case 1:
+									$filter_result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+									break;
+								case 0:
+									$filter_result = filter_var($value,$filter_parameter['filter']);
+									break;
+							endswitch;
+						endif;
+					endif;
+					if(isset($filter_result)):
+						$row_results = $filter_result;
+						break;
+					endif;
+				endforeach;
+				if(isset($row_results)):
+					$result = $row_results;
 				endif;
-				if(isset($result)):
-					break; // foreach
+				break;
+			case is_array($content):
+				$row_results = [];
+				foreach($content as $value):
+					$row_results[] = NULL;
+					end($row_results);
+					$row_results_key = key($row_results);
+					if(is_scalar($value)):
+						foreach($filter_names as $filter_name):
+							$filter_result = NULL;
+							if(is_string($filter_name)):
+								$filter_parameter = $this->get_filter($filter_name);
+								if(isset($filter_parameter)):
+									$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+									switch($action):
+										case 3:
+											$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+											break;
+										case 2:
+											$filter_result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+											break;
+										case 1:
+											$filter_result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+											break;
+										case 0:
+											$filter_result = filter_var($value,$filter_parameter['filter']);
+											break;
+									endswitch;
+								endif;
+							endif;
+							if(isset($filter_result)):
+								$row_results[$row_results_key] = $filter_result;
+								break;
+							endif;
+						endforeach;
+					endif;
+					if(is_null($row_results[$row_results_key])):
+						$row_results = [];
+						break;
+					endif;
+				endforeach;
+				if(count($row_results) > 0):
+					$result = $row_results;
 				endif;
-			endif;
-		endforeach;
+				break;
+		endswitch;
 		return $result;
 	}
 /**
- * Method to validate an array value. Index is the name property of $this.
- * @param array $variable The variable to be tested.
- * @param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
- * @return mixed Filter result.
+ *	Method to validate an array value. Key/Index is the name property of $this.
+ *	A list of filters will be processed until a filter does not return NULL.
+ *	If an array of values is provided all values must pass validation.
+ *	@param array $variable The variable to be tested.
+ *	@param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
+ *	@return mixed Filter result.
  */
 	public function validate_array_element(array $variable,$filter = ['ui']) {
 		$result = NULL;
-		$filter_names = [];
-		if(is_array($filter)):
-			$filter_names = $filter;
-		elseif(is_string($filter)):
-			$filter_names = [$filter];
+		$filter_names = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
+		$key = $this->get_name();
+		if(array_key_exists($key,$variable)):
+			$content = $variable[$key];
+			switch(true):
+				case is_scalar($content):
+					$value = $content;
+					$row_results = NULL;
+					foreach($filter_names as $filter_name): //	loop through filters
+						$filter_result = NULL;
+						if(is_string($filter_name)):
+							$filter_parameter = $this->get_filter($filter_name);
+							if(isset($filter_parameter)):
+								$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+								switch($action):
+									case 3:
+										$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+										break;
+									case 2:
+										$filter_result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+										break;
+									case 1:
+										$filter_result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+										break;
+									case 0:
+										$filter_result = filter_var($value,$filter_parameter['filter']);
+										break;
+								endswitch;
+							endif;
+						endif;
+						if(isset($filter_result)):
+							$row_results = $filter_result;
+							break;
+						endif;
+					endforeach;
+					if(isset($row_results)):
+						$result = $row_results;
+					endif;
+					break;
+				case is_array($content):
+					$row_results = [];
+					foreach($content as $value): // loop through array elements
+						$row_results[] = NULL;
+						end($row_results);
+						$row_results_key = key($row_results);
+						if(is_scalar($value)):
+							foreach($filter_names as $filter_name): //	loop through filters
+								$filter_result = NULL;
+								if(is_string($filter_name)):
+									$filter_parameter = $this->get_filter($filter_name);
+									if(isset($filter_parameter)):
+										$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+										switch($action):
+											case 3:
+												$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
+												break;
+											case 2:
+												$filter_result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
+												break;
+											case 1:
+												$filter_result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
+												break;
+											case 0:
+												$filter_result = filter_var($value,$filter_parameter['filter']);
+												break;
+										endswitch;
+									endif;
+								endif;
+								if(isset($filter_result)):
+									$row_results[$row_results_key] = $filter_result;
+									break;
+								endif;
+							endforeach;
+						endif;
+						if(is_null($row_results[$row_results_key])):
+							$row_results = [];
+							break;
+						endif;
+					endforeach;
+					if(count($row_results) > 0):
+						$result = $row_results;
+					endif;
+					break;
+			endswitch;
 		endif;
-		if(array_key_exists($this->get_name(),$variable)):
-			$value = $variable[$this->get_name()];
-		else:
-			$value = NULL;
-		endif;
-		foreach($filter_names as $filter_name):
-			if(is_string($filter_name)):
-				$filter_parameter = $this->get_filter($filter_name);
-				if(isset($filter_parameter)):
-					$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
-					switch($action):
-						case 3:
-							$result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
-							break;
-						case 2:
-							$result = filter_var($value,$filter_parameter['filter'],['options' => $filter_parameter['options']]);
-							break;
-						case 1:
-							$result = filter_var($value,$filter_parameter['filter'],$filter_parameter['flags']);
-							break;
-						case 0:
-							$result = filter_var($value,$filter_parameter['filter']);
-							break;
-					endswitch;
-				endif;
-				if(isset($result)):
-					break; // foreach
-				endif;
-			endif;
-		endforeach;
 		return $result;
 	}
 /**
@@ -356,7 +453,7 @@ abstract class properties {
 		return $return_data;
 	}
 }
-class properties_text extends properties {
+class property_text extends properties {
 	public $x_maxlength = 0;
 	public $x_placeholder = NULL;
 	public $x_size = 40;
@@ -391,7 +488,10 @@ class properties_text extends properties {
 		return $this;
 	}
 }
-class properties_textarea extends properties {
+class properties_text extends property_text {
+	//	kept for compatibility
+}
+class property_textarea extends properties {
 	public $x_cols = 65;
 	public $x_maxlength = 0;
 	public $x_placeholder = NULL;
@@ -439,7 +539,10 @@ class properties_textarea extends properties {
 		return $this;
 	}
 }
-class properties_ipaddress extends properties_text {
+class properties_textarea extends property_textarea {
+	//	kept for compatibility
+}
+class property_ipaddress extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->
@@ -456,7 +559,10 @@ class properties_ipaddress extends properties_text {
 		return $this;
 	}
 }
-class properties_ipv4 extends properties_text {
+class properties_ipaddress extends property_ipaddress {
+	//	kept for compatibility
+}
+class property_ipv4 extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->
@@ -473,7 +579,10 @@ class properties_ipv4 extends properties_text {
 		return $this;
 	}
 }
-class properties_ipv6 extends properties_text {
+class properties_ipv4 extends property_ipv4 {
+	//	kept for compatibility
+}
+class property_ipv6 extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->
@@ -490,7 +599,10 @@ class properties_ipv6 extends properties_text {
 		return $this;
 	}
 }
-class properties_int extends properties_text {
+class properties_ipv6 extends property_ipv6 {
+	//	kept for compatibility
+}
+class property_int extends property_text {
 	public $x_min = NULL;
 	public $x_max = NULL;
 
@@ -526,13 +638,16 @@ class properties_int extends properties_text {
 		return $this;
 	}
 }
-class property_toolbox extends properties_text {
+class properties_int extends property_int {
+	//	kept for compatibility
+}
+class property_toolbox extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->set_title(gtext('Toolbox'));
 	}
 }
-class property_uuid extends properties_text {
+class property_uuid extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->set_title(gtext('Universally Unique Identifier'));
@@ -559,7 +674,7 @@ class property_uuid extends properties_text {
 		return uuid();
 	}
 }
-class properties_list extends properties {
+class property_list extends properties {
 	public $x_options = NULL;
 	
 	public function set_options(array $value = NULL) {
@@ -603,7 +718,10 @@ class properties_list extends properties {
 		return $this;
 	}
 }
-class properties_bool extends properties {
+class properties_list extends property_list {
+	//	kept for compatibility
+}
+class property_bool extends properties {
 	public function filter_use_default() {
 		$filter_name = 'ui';
 		$this->set_filter(FILTER_VALIDATE_BOOLEAN,$filter_name);
@@ -622,7 +740,10 @@ class properties_bool extends properties {
 		return $return_data;
 	}
 }
-class property_enable extends properties_bool {
+class properties_bool extends property_bool {
+	//	kept for compatibility
+}
+class property_enable extends property_bool {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->set_title(gtext('Enable Setting'));
@@ -639,7 +760,7 @@ class property_enable extends properties_bool {
 		return $this;
 	}
 }
-class property_protected extends properties_bool {
+class property_protected extends property_bool {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
 		$this->set_title(gtext('Protect Setting'));
@@ -696,7 +817,7 @@ abstract class co_property_container {
 /**
  *	Lazy call via magic get
  *	@param string $name the name of the property
- *	@return properties Returns a properties object
+ *	@return property Returns a property object
  *	@throws BadMethodCallException
  */
 	public function &__get(string $name) {
@@ -714,7 +835,7 @@ abstract class co_property_container {
  *		return $this->x_propertyname ?? $this->init_propertyname();
  *	}
  *	public function init_propertyname() {
- *		$this->x_propertyname = new properties_nnn($this);
+ *		$this->x_propertyname = new property_nnn($this);
  *		...
  *		return $this->x_propertyname;
  *	}
