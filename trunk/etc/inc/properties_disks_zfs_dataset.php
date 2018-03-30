@@ -72,28 +72,28 @@ class properties_disks_zfs_dataset extends co_property_container {
 		return $this->x_uuid ?? $this->init_uuid();
 	}
 	public function init_uuid() {
-		$this->x_uuid = new property_uuid($this);
-		return $this->x_uuid;
+		$property = $this->x_uuid = new property_uuid($this);
+		return $property;
 	}
-		public function get_enabled() {
+	public function get_enabled() {
 		return $this->x_enabled ?? $this->init_enabled();
 	}
 	public function init_enabled() {
-		$this->x_enabled = new properties_bool($this);
-		$this->x_enabled->
+		$property = $this->x_enabled = new property_bool($this);
+		$property->
 			set_title(gtext('Enabled'))->
 			set_name('enabled');
-		return $this->x_enabled;
+		return $property;
 	}
 	public function get_protected() {
 		return $this->x_protected ?? $this->init_protected();
 	}
 	public function init_protected() {
-		$this->x_protected = new properties_bool($this);
-		$this->x_protected->
+		$property = $this->x_protected = new property_bool($this);
+		$property->
 			set_title(gtext('Protected'))->
 			set_name('protected');
-		return $this->x_protected;
+		return $property;
 	}
 	public function get_toolbox() {
 		return $this->x_toolbox ?? $this->init_toolbox();
@@ -106,280 +106,280 @@ class properties_disks_zfs_dataset extends co_property_container {
 		return $this->x_aclinherit ?? $this->init_aclinherit();
 	}
 	public function init_aclinherit() {
-		$this->x_aclinherit = new properties_list($this);
-		$this->x_aclinherit->
+		$property = $this->x_aclinherit = new property_list($this);
+		$property->
 			set_title(gtext('ACL Inherit'))->
 			set_name('aclinherit');
-		return $this->x_aclinherit;
+		return $property;
 	}
 	public function get_aclmode() {
 		return $this->x_aclmode ?? $this->init_aclmode();
 	}
 	public function init_aclmode() {
-		$this->x_aclmode = new properties_list($this);
-		$this->x_aclmode->
+		$property = $this->x_aclmode = new property_list($this);
+		$property->
 			set_title(gtext('ACL Mode'))->
 			set_name('aclmode');
-		return $this->x_aclmode;
+		return $property;
 	}
 	public function get_atime() {
 		return $this->x_atime ?? $this->init_atime();
 	}
 	public function init_atime() {
-		$this->x_atime = new properties_list($this);
-		$this->x_atime->
+		$property = $this->x_atime = new property_list($this);
+		$property->
 			set_title(gtext('Access Time'))->
 			set_name('atime');
-		return $this->x_atime;
+		return $property;
 	}
 	public function get_available() {
 		return $this->x_available ?? $this->init_available();
 	}
 	public function init_available() {
-		$this->x_available = new properties_text($this);
-		$this->x_available->
+		$property = $this->x_available = new property_text($this);
+		$property->
 			set_title(gtext('Available'))->
 			set_name('avail');
-		return $this->x_available;
+		return $property;
 	}
 	public function get_canmount() {
 		return $this->x_canmount ?? $this->init_canmount();
 	}
 	public function init_canmount() {
-		$this->x_canmount = new properties_list($this);
-		$this->x_canmount->
+		$property = $this->x_canmount = new property_list($this);
+		$property->
 			set_title(gtext('Can Mount'))->
 			set_name('canmount');
-		return $this->x_canmount;
+		return $property;
 	}
 	public function get_casesensitivity() {
 		return $this->x_casesensitivity ?? $this->init_casesensitivity();
 	}
 	public function init_casesensitivity() {
-		$this->x_casesensitivity = new properties_list($this);
-		$this->x_casesensitivity->
+		$property = $this->x_casesensitivity = new property_list($this);
+		$property->
 			set_title(gtext('Case Sensitivity'))->
 			set_name('casesensitivity');
-		return $this->x_casesensitivity;
+		return $property;
 	}
 	public function get_checksum() {
 		return $this->x_checksum ?? $this->init_checksum();
 	}
 	public function init_checksum() {
-		$this->x_checksum = new properties_list($this);
-		$this->x_checksum->
+		$property = $this->x_checksum = new property_list($this);
+		$property->
 			set_title(gtext('Checksum'))->
 			set_name('checksum');
-		return $this->x_checksum;
+		return $property;
 	}
 	public function get_compression() {
 		return $this->x_compression ?? $this->init_compression();
 	}
 	public function init_compression() {
-		$this->x_compression = new properties_list($this);
-		$this->x_compression->
+		$property = $this->x_compression = new property_list($this);
+		$property->
 			set_title(gtext('Compression'))->
 			set_name('compression');
-		return $this->x_compression;
+		return $property;
 	}
 	public function get_copies() {
 		return $this->x_copies ?? $this->init_copies();
 	}
 	public function init_copies() {
-		$this->x_copies = new properties_list($this);
-		$this->x_copies->
+		$property = $this->x_copies = new property_list($this);
+		$property->
 			set_title(gtext('Copies'))->
 			set_name('copies');
-		return $this->x_copies;
+		return $property;
 	}
 	public function get_dedup() {
 		return $this->x_dedup ?? $this->init_dedup();
 	}
 	public function init_dedup() {
-		$this->x_dedup = new properties_list($this);
-		$this->x_dedup->
+		$property = $this->x_dedup = new property_list($this);
+		$property->
 			set_title(gtext('Dedup Method'))->
 			set_name('dedup');
-		return $this->x_dedup;
+		return $property;
 	}
 	public function get_description() {
 		return $this->x_description ?? $this->init_description();
 	}
 	public function init_description() {
-		$this->x_description = new properties_text($this);
-		$this->x_description->
+		$property = $this->x_description = new property_text($this);
+		$property->
 			set_title(gtext('Description'))->
 			set_name('desc');
-		return $this->x_description;
+		return $property;
 	}
 	public function get_logbias() {
 		return $this->x_logbias ?? $this->init_logbias();
 	}
 	public function init_logbias() {
-		$this->x_logbias = new properties_list($this);
-		$this->x_logbias->
+		$property = $this->x_logbias = new property_list($this);
+		$property->
 			set_title(gtext('Logbias'))->
 			set_name('logbias');
-		return $this->x_logbias;
+		return $property;
 	}
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$this->x_name = new properties_text($this);
-		$this->x_name->
+		$property = $this->x_name = new property_text($this);
+		$property->
 			set_title(gtext('Name'))->
 			set_name('name');
-		return $this->x_name;
+		return $property;
 	}
 	public function get_normalization() {
 		return $this->x_normalization ?? $this->init_normalization();
 	}
 	public function init_normalization() {
-		$this->x_normalization = new properties_list($this);
-		$this->x_normalization->
+		$property = $this->x_normalization = new property_list($this);
+		$property->
 			set_title(gtext('Normalization'))->
 			set_name('normalization');
-		return $this->x_normalization;
+		return $property;
 	}
 	public function get_pool() {
 		return $this->x_pool ?? $this->init_pool();
 	}
 	public function init_pool() {
-		$this->x_pool = new properties_text($this);
-		$this->x_pool->
+		$property = $this->x_pool = new property_text($this);
+		$property->
 			set_title(gtext('Pool'))->
 			set_name('pool');
-		return $this->x_pool;
+		return $property;
 	}
 	public function get_primarycache() {
 		return $this->x_primarycache ?? $this->init_primarycache();
 	}
 	public function init_primarycache() {
-		$this->x_primarycache = new properties_list($this);
-		$this->x_primarycache->
+		$property = $this->x_primarycache = new property_list($this);
+		$property->
 			set_title(gtext('Primary Cache'))->
 			set_name('primarycache');
-		return $this->x_primarycache;
+		return $property;
 	}
 	public function get_quota() {
 		return $this->x_quota ?? $this->init_quota();
 	}
 	public function init_quota() {
-		$this->x_quota = new properties_text($this);
-		$this->x_quota->
+		$property = $this->x_quota = new property_text($this);
+		$property->
 			set_title(gtext('Quota'))->
 			set_name('quota');
-		return $this->x_quota;
+		return $property;
 	}
 	public function get_readonly() {
 		return $this->x_readonly ?? $this->init_readonly();
 	}
 	public function init_readonly() {
-		$this->x_readonly = new properties_list($this);
-		$this->x_readonly->
+		$property = $this->x_readonly = new property_list($this);
+		$property->
 			set_title(gtext('Read Only'))->
 			set_name('readonly');
-		return $this->x_readonly;
+		return $property;
 	}
 	public function get_redundant_metadata() {
 		return $this->x_redundant_metadata ?? $this->init_redundant_metadata();
 	}
 	public function init_redundant_metadata() {
-		$this->x_redundant_metadata = new properties_list($this);
-		$this->x_redundant_metadata->
+		$property = $this->x_redundant_metadata = new property_list($this);
+		$property->
 			set_title(gtext('Redundant Metadata'))->
 			set_name('redundant_metadata');
-		return $this->x_redundant_metadata;
+		return $property;
 	}
 	public function get_refquota() {
 		return $this->x_refquota ?? $this->init_refquota();
 	}
 	public function init_refquota() {
-		$this->x_refquota = new properties_text($this);
-		$this->x_refquota->
+		$property = $this->x_refquota = new property_text($this);
+		$property->
 			set_title(gtext('Refquota'))->
 			set_name('refquota');
-		return $this->x_refquota;
+		return $property;
 	}
 	public function get_refreservation() {
 		return $this->x_refreservation ?? $this->init_refreservation();
 	}
 	public function init_refreservation() {
-		$this->x_refreservation = new properties_text($this);
-		$this->x_refreservation->
+		$property = $this->x_refreservation = new property_text($this);
+		$property->
 			set_title(gtext('Refreservation'))->
 			set_name('refreservation');
-		return $this->x_refreservation;
+		return $property;
 	}
 	public function get_reservation() {
 		return $this->x_reservation ?? $this->init_reservation();
 	}
 	public function init_reservation() {
-		$this->x_reservation = new properties_text($this);
-		$this->x_reservation->
+		$property = $this->x_reservation = new property_text($this);
+		$property->
 			set_title(gtext('Reservation'))->
 			set_name('reservation');
-		return $this->x_reservation;
+		return $property;
 	}
 	public function get_secondarycache() {
 		return $this->x_secondarycache ?? $this->init_secondarycache();
 	}
 	public function init_secondarycache() {
-		$this->x_secondarycache = new properties_list($this);
-		$this->x_secondarycache->
+		$property = $this->x_secondarycache = new property_list($this);
+		$property->
 			set_title(gtext('Secondary Cache'))->
 			set_name('secondarycache');
-		return $this->x_secondarycache;
+		return $property;
 	}
 	public function get_setuid() {
 		return $this->x_setuid ?? $this->init_setuid();
 	}
 	public function init_setuid() {
-		$this->x_setuid = new properties_list($this);
-		$this->x_setuid->
+		$property = $this->x_setuid = new property_list($this);
+		$property->
 			set_title(gtext('Set UID'))->
 			set_name('setuid');
-		return $this->x_setuid;
+		return $property;
 	}
 	public function get_snapdir() {
 		return $this->x_snapdir ?? $this->init_snapdir();
 	}
 	public function init_snapdir() {
-		$this->x_snapdir = new properties_list($this);
-		$this->x_snapdir->
+		$property = $this->x_snapdir = new property_list($this);
+		$property->
 			set_title(gtext('Snapdir'))->
 			set_name('snapdir');
-		return $this->x_snapdir;
+		return $property;
 	}
 	public function get_sync() {
 		return $this->x_sync ?? $this->init_sync();
 	}
 	public function init_sync() {
-		$this->x_sync = new properties_list($this);
-		$this->x_sync->
+		$property = $this->x_sync = new property_list($this);
+		$property->
 			set_title(gtext('Sync'))->
 			set_name('sync');
-		return $this->x_sync;
+		return $property;
 	}
 	public function get_type() {
 		return $this->x_type ?? $this->init_type();
 	}
 	public function init_type() {
-		$this->x_type = new properties_list($this);
-		$this->x_type->
+		$property = $this->x_type = new property_list($this);
+		$property->
 			set_title(gtext('Dataset Type'))->
 			set_name('type');
-		return $this->x_type;
+		return $property;
 	}
 	public function get_utf8only() {
 		return $this->x_utf8only ?? $this->init_utf8only();
 	}
 	public function init_utf8only() {
-		$this->x_utf8only = new properties_list($this);
-		$this->x_utf8only->
+		$property = $this->x_utf8only = new property_list($this);
+		$property->
 			set_title(gtext('UTF-8 Only'))->
 			set_name('utf8only');
-		return $this->x_utf8only;
+		return $property;
 	}
 }
