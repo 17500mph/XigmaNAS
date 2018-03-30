@@ -117,7 +117,7 @@ if($_POST):
 //				exit;
 				break;
 			case $sphere->get_cbm_button_val_disable():
-				$sphere->cbm_grid = $_POST[$sphere->cbm_name] ?? [];
+				$sphere->cbm_grid = $_POST[$sphere->get_cbm_name()] ?? [];
 				$updateconfig = false;
 				foreach($sphere->cbm_grid as $sphere->cbm_row):
 					if(false !== ($sphere->row_id = array_search_ex($sphere->cbm_row,$sphere->grid,$sphere->get_row_identifier()))):
