@@ -488,9 +488,6 @@ class property_text extends properties {
 		return $this;
 	}
 }
-class properties_text extends property_text {
-	//	kept for compatibility
-}
 class property_textarea extends properties {
 	public $x_cols = 65;
 	public $x_maxlength = 0;
@@ -539,9 +536,6 @@ class property_textarea extends properties {
 		return $this;
 	}
 }
-class properties_textarea extends property_textarea {
-	//	kept for compatibility
-}
 class property_ipaddress extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
@@ -558,9 +552,6 @@ class property_ipaddress extends property_text {
 		$this->set_filter_options(['default' => NULL],$filter_name);
 		return $this;
 	}
-}
-class properties_ipaddress extends property_ipaddress {
-	//	kept for compatibility
 }
 class property_ipv4 extends property_text {
 	public function __construct($owner = NULL) {
@@ -579,9 +570,6 @@ class property_ipv4 extends property_text {
 		return $this;
 	}
 }
-class properties_ipv4 extends property_ipv4 {
-	//	kept for compatibility
-}
 class property_ipv6 extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
@@ -598,9 +586,6 @@ class property_ipv6 extends property_text {
 		$this->set_filter_options(['default' => NULL],$filter_name);
 		return $this;
 	}
-}
-class properties_ipv6 extends property_ipv6 {
-	//	kept for compatibility
 }
 class property_int extends property_text {
 	public $x_min = NULL;
@@ -637,9 +622,6 @@ class property_int extends property_text {
 		$this->set_filter_options($options,$filter_name);
 		return $this;
 	}
-}
-class properties_int extends property_int {
-	//	kept for compatibility
 }
 class property_toolbox extends property_text {
 	public function __construct($owner = NULL) {
@@ -718,9 +700,6 @@ class property_list extends properties {
 		return $this;
 	}
 }
-class properties_list extends property_list {
-	//	kept for compatibility
-}
 class property_bool extends properties {
 	public function filter_use_default() {
 		$filter_name = 'ui';
@@ -739,9 +718,6 @@ class property_bool extends properties {
 		endif;
 		return $return_data;
 	}
-}
-class properties_bool extends property_bool {
-	//	kept for compatibility
 }
 class property_enable extends property_bool {
 	public function __construct($owner = NULL) {
@@ -763,10 +739,11 @@ class property_enable extends property_bool {
 class property_protected extends property_bool {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_title(gtext('Protect Setting'));
+		$this->
+			set_name('protected')->
+			set_title(gtext('Protect Setting'));
 		$this->
 			set_id('protected')->
-			set_name('protected')->
 			set_caption(gtext('Protect'))->
 			set_description('')->
 			set_defaultvalue(false)->
