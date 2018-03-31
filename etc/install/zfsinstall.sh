@@ -16,6 +16,7 @@ export PATH
 PLATFORM=`uname -m`
 CDPATH="/mnt/cdrom"
 SYSBACKUP="/tmp/sysbackup"
+INCLUDE="/etc/install/include/boot"
 PRDNAME=`cat /etc/prd.name`
 APPNAME="RootOnZFS"
 ZROOT="zroot"
@@ -90,10 +91,12 @@ cleandisk_init()
 	# Load geom_mirror kernel module.
 	if ! kldstat | grep -q geom_mirror; then
 		kldload /boot/kernel/geom_mirror.ko
+		# Destroy existing geom swap mirror.
+		if gmirror status | grep -q gswap; then
+			gmirror forget gswap
+			gmirror destroy gswap
+		fi
 	fi
-
-	# Destroy any existing swap gmirror.
-	gmirror destroy -f gswap > /dev/null 2>&1
 
 	DISKS=${DEVICE_LIST}
 	NUM="0"
@@ -222,9 +225,9 @@ zroot_init()
 			if ! kldstat | grep -q geom_mirror; then
 				kldload /boot/kernel/geom_mirror.ko
 			fi
-			gmirror label -b prefer swap ${SWAP_DEVLIST}
-			# Add swap device to fstab.
-			echo "/dev/mirror/swap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+			gmirror label -b prefer gswap ${SWAP_DEVLIST}
+			# Add swap mirror to fstab.
+			echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
 		else
 			# Add swap device to fstab.
 			echo "Adding swap devices to fstab..."
@@ -274,6 +277,24 @@ install_sys_files()
 	/bin/cp -r /mnt/cdrom/boot/defaults/* ${ALTROOT}/${ZROOT}/boot/defaults
 	/bin/cp -r /mnt/cdrom/boot/kernel/* ${ALTROOT}/${ZROOT}/boot/kernel
 
+	# Copy our boot loader menu files to /boot.
+	if [ -d "${INCLUDE}" ]; then
+		chmod 444 ${INCLUDE}/*
+		cp -pf ${INCLUDE}/* ${ALTROOT}/${ZROOT}/boot
+	fi
+
+	# Generate/update our loader.rc
+	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.rc
+\ Loader.rc
+include /boot/loader.4th
+start
+initialize
+check-password
+include /boot/beastie.4th
+beastie-start
+EOF
+	chmod 444 ${ALTROOT}/${ZROOT}/boot/loader.rc
+
 	# Decompress kernel.
 	/usr/bin/gzip -d -f ${ALTROOT}/${ZROOT}/boot/kernel/kernel.gz
 
@@ -317,7 +338,7 @@ EOF
 		echo 'mlxen_load="YES"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
 	fi
 
-	if [ ! -z "${DISK2}" ]; then
+	if [ "${SWAPMODE}" == 1 ]; then
 		if [ ! -z "${SWAP}" ]; then
 			echo 'geom_mirror_load="YES"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
 		fi
@@ -406,6 +427,24 @@ upgrade_sys_files()
 	/bin/cp -r /mnt/cdrom/boot/* ${ALTROOT}/${ZROOT}/boot
 	/bin/cp -r /mnt/cdrom/boot/defaults/* ${ALTROOT}/${ZROOT}/boot/defaults
 	/bin/cp -r /mnt/cdrom/boot/kernel/* ${ALTROOT}/${ZROOT}/boot/kernel
+
+	# Copy our boot loader menu files to /boot.
+	if [ -d "${INCLUDE}" ]; then
+		chmod 444 ${INCLUDE}/*
+		cp -pf ${INCLUDE}/* ${ALTROOT}/${ZROOT}/boot
+	fi
+
+	# Generate/update our loader.rc
+	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.rc
+\ Loader.rc
+include /boot/loader.4th
+start
+initialize
+check-password
+include /boot/beastie.4th
+beastie-start
+EOF
+	chmod 444 ${ALTROOT}/${ZROOT}/boot/loader.rc
 
 	# Decompress kernel.
 	/usr/bin/gzip -d -f ${ALTROOT}/${ZROOT}/boot/kernel/kernel.gz
