@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"POT-Creation-Date: 2018-03-31 16:29+0000\n"
 "PO-Revision-Date: 2018-03-18 06:04+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-23 16:34+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-03-31 15:49+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -1599,6 +1599,9 @@ msgstr "Välj vilket IP Protokoll denna regel skall matcha"
 
 msgid "Choose which interface this route applies to."
 msgstr "Välj det gränssnitt som denna väg gäller."
+
+msgid "Choose..."
+msgstr ""
 
 msgid "Clear"
 msgstr "Rensa"
@@ -3820,6 +3823,9 @@ msgstr "Ange ämne"
 msgid "Enter Universally Unique Identifier"
 msgstr "Mata in en universellt unik identifierare (UUID)"
 
+msgid "Enter Volume Name"
+msgstr ""
+
 msgid "Enter a comment"
 msgstr "Skriv en kommentar"
 
@@ -3877,6 +3883,9 @@ msgstr "Mata in ett namn på datasetet"
 msgid "Enter a name for this volume"
 msgstr "Ange ett namn för denna volym"
 
+msgid "Enter a name for this volume."
+msgstr ""
+
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
@@ -3923,6 +3932,9 @@ msgstr "Mata in inloggningsnamn"
 
 msgid "Enter login name of the user."
 msgstr "Mata in inloggningsnamnet för användaren."
+
+msgid "Enter name"
+msgstr ""
 
 msgid "Enter smartctl pass-through type."
 msgstr "Mata in smartctr vidarebefodranstyp."
@@ -3986,6 +3998,9 @@ msgstr "Ange port att sända fällor (traps) (standard 162)."
 
 msgid "Enter trap host name."
 msgstr "Skriv in \"fällans\" värdnamn."
+
+msgid "Enter value"
+msgstr ""
 
 msgid "Entire Device"
 msgstr "Hela enheten"
@@ -9462,6 +9477,9 @@ msgstr ""
 "Namnet på TLS trust filen. Filen måste vara i PEM format och innehålla ett "
 "eller flera certifikat från betrodda Certifikatutgivare (CAs)."
 
+msgid "The name of the ZFS pool."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Namnet på gränssnittet är fel."
 
@@ -10826,8 +10844,11 @@ msgstr "Använd växlade knappar i stället för aktivera-/inaktiveraknappar."
 msgid "Used"
 msgstr "Använt"
 
-msgid "Used Space"
-msgstr "Använt utrymme"
+msgid ""
+"Used/Avail lists storage information after all redundancy is taken into "
+"account but is impacted by compression, deduplication and quotas. Alloc/Free "
+"lists the raw storage information of a pool."
+msgstr ""
 
 msgid "User"
 msgstr "Användare"
@@ -11295,6 +11316,9 @@ msgstr ""
 "Du kan också behöva göra ett eller flera av följande steg innan du kan nå "
 "din server igen:"
 
+msgid "You may enter a description for your reference."
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "Du kan ange en beskrivning här som referens."
 
@@ -11577,3 +11601,6 @@ msgstr "använt av"
 
 msgid "visible"
 msgstr "synlig"
+
+#~ msgid "Used Space"
+#~ msgstr "Använt utrymme"

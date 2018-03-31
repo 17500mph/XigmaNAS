@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-06 14:30+0000\n"
-"PO-Revision-Date: 2018-03-06 18:55+0000\n"
+"POT-Creation-Date: 2018-03-31 16:29+0000\n"
+"PO-Revision-Date: 2018-03-24 06:34+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-23 16:33+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-03-31 15:48+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -1650,6 +1650,9 @@ msgstr "Choisir le protocole IP sur lequel appliquer cette règle."
 
 msgid "Choose which interface this route applies to."
 msgstr "Sélectionnez à quelle interface cette route s'applique."
+
+msgid "Choose..."
+msgstr ""
 
 msgid "Clear"
 msgstr "Effacer"
@@ -3926,6 +3929,9 @@ msgstr "Saisissez un sujet"
 msgid "Enter Universally Unique Identifier"
 msgstr "Entrer un identifiant unique universel"
 
+msgid "Enter Volume Name"
+msgstr ""
+
 msgid "Enter a comment"
 msgstr "Entrez un commentaire"
 
@@ -3986,6 +3992,9 @@ msgstr "Entrez un nom pour ce jeu de données"
 msgid "Enter a name for this volume"
 msgstr "Saisissez un nom pour ce volume"
 
+msgid "Enter a name for this volume."
+msgstr ""
+
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
@@ -4032,6 +4041,9 @@ msgstr "Entrez le nom pour la connexion"
 
 msgid "Enter login name of the user."
 msgstr "Entrez le nom de connexion de l'utilisateur."
+
+msgid "Enter name"
+msgstr ""
 
 msgid "Enter smartctl pass-through type."
 msgstr "Entrez le type de transfert smartctl."
@@ -4095,6 +4107,9 @@ msgstr "Port sur lequel envoyer les traps SNMP (162 par défaut)."
 
 msgid "Enter trap host name."
 msgstr "Nom du hôte vers lequel envoyer les traps SNMP"
+
+msgid "Enter value"
+msgstr ""
 
 msgid "Entire Device"
 msgstr "Totalité du périphérique"
@@ -8588,7 +8603,7 @@ msgid "Spare"
 msgstr "Disque de rechange (spare)"
 
 msgid "Sparse"
-msgstr "Creux ou Creuse"
+msgstr "Réservation partielle"
 
 msgid "Sparse Volume"
 msgstr "Volume vide."
@@ -9698,6 +9713,9 @@ msgstr ""
 "Le nom du fichier de confiance TLS. Le fichier doit être au format PEM et "
 "contenir un ou plusieurs certificats d'autorités de certification (AC) de "
 "confiance."
+
+msgid "The name of the ZFS pool."
+msgstr ""
 
 msgid "The name of the interface is wrong."
 msgstr "Le nom de l'interface est incorrect."
@@ -11095,8 +11113,11 @@ msgstr ""
 msgid "Used"
 msgstr "Utilisé"
 
-msgid "Used Space"
-msgstr "Espace utilisé"
+msgid ""
+"Used/Avail lists storage information after all redundancy is taken into "
+"account but is impacted by compression, deduplication and quotas. Alloc/Free "
+"lists the raw storage information of a pool."
+msgstr ""
 
 msgid "User"
 msgstr "Utilisateur"
@@ -11575,6 +11596,9 @@ msgstr ""
 "Vous pouvez également avoir à faire une ou plusieurs des étapes suivantes "
 "avant de pouvoir accéder à nouveau votre serveur:"
 
+msgid "You may enter a description for your reference."
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "Vous pouvez saisir ici une description pour votre référence."
 
@@ -11863,3 +11887,6 @@ msgstr "utilisé de"
 
 msgid "visible"
 msgstr "visible"
+
+#~ msgid "Used Space"
+#~ msgstr "Espace utilisé"

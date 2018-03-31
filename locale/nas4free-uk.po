@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"POT-Creation-Date: 2018-03-31 16:29+0000\n"
 "PO-Revision-Date: 2018-03-22 18:10+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-23 16:34+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-03-31 15:49+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -1623,6 +1623,9 @@ msgstr "Виберіть, який IP протокол відповідатим�
 
 msgid "Choose which interface this route applies to."
 msgstr "Виберіть інтерфейси до яких застосувати дане правило"
+
+msgid "Choose..."
+msgstr ""
 
 msgid "Clear"
 msgstr "Очистити"
@@ -3865,6 +3868,9 @@ msgstr "Вкажіть тему"
 msgid "Enter Universally Unique Identifier"
 msgstr "Введіть Універсальний Унікальний Ідентифікатор (UUI)"
 
+msgid "Enter Volume Name"
+msgstr ""
+
 msgid "Enter a comment"
 msgstr "Введіть коментар"
 
@@ -3925,6 +3931,9 @@ msgstr "Введіть ім'я для цього набору даних"
 msgid "Enter a name for this volume"
 msgstr "Введіть ім'я цього тому"
 
+msgid "Enter a name for this volume."
+msgstr ""
+
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
@@ -3971,6 +3980,9 @@ msgstr "Введіть логін користувача"
 
 msgid "Enter login name of the user."
 msgstr "Введіть логін користувача."
+
+msgid "Enter name"
+msgstr ""
 
 msgid "Enter smartctl pass-through type."
 msgstr "Вкажіть тип проходження smartctl."
@@ -4033,6 +4045,9 @@ msgstr ""
 
 msgid "Enter trap host name."
 msgstr "Ім'я хоста, що прослуховує повідомлення (traps)."
+
+msgid "Enter value"
+msgstr ""
 
 msgid "Entire Device"
 msgstr "Весь пристрій"
@@ -9574,6 +9589,9 @@ msgstr ""
 "Ім'я файлу довіри TLS. Файл повинен бути у форматі PEM,  що містить один або "
 "декілька сертифікатів довірених центрів сертифікації (CAs)."
 
+msgid "The name of the ZFS pool."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "Ім'я інтерфейсу помилкове."
 
@@ -10951,8 +10969,11 @@ msgstr ""
 msgid "Used"
 msgstr "Використано"
 
-msgid "Used Space"
-msgstr "Використане місце"
+msgid ""
+"Used/Avail lists storage information after all redundancy is taken into "
+"account but is impacted by compression, deduplication and quotas. Alloc/Free "
+"lists the raw storage information of a pool."
+msgstr ""
 
 msgid "User"
 msgstr "Користувач"
@@ -11426,6 +11447,9 @@ msgstr ""
 "Вам також, можливо, доведеться виконати один або кілька з наступних кроків, "
 "перш ніж ви зможете отримати доступ до вашого сервера знову:"
 
+msgid "You may enter a description for your reference."
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "Тут можна ввести опис для зручності."
 
@@ -11711,3 +11735,6 @@ msgstr "використано з"
 
 msgid "visible"
 msgstr "видимий"
+
+#~ msgid "Used Space"
+#~ msgstr "Використане місце"

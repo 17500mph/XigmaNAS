@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"POT-Creation-Date: 2018-03-31 16:29+0000\n"
 "PO-Revision-Date: 2018-03-07 06:29+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-23 16:34+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-03-31 15:49+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1499,6 +1499,9 @@ msgstr "選擇此規則將會匹配的 IP 協議。"
 
 msgid "Choose which interface this route applies to."
 msgstr "選擇此路由應用於哪個介面。"
+
+msgid "Choose..."
+msgstr ""
 
 msgid "Clear"
 msgstr "清除"
@@ -3597,6 +3600,9 @@ msgstr "輸入主題"
 msgid "Enter Universally Unique Identifier"
 msgstr "輸入通用唯一標識符"
 
+msgid "Enter Volume Name"
+msgstr ""
+
 msgid "Enter a comment"
 msgstr "輸入注釋"
 
@@ -3649,6 +3655,9 @@ msgstr "輸入此數據集的名稱"
 msgid "Enter a name for this volume"
 msgstr "輸入此卷的名稱"
 
+msgid "Enter a name for this volume."
+msgstr ""
+
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
@@ -3691,6 +3700,9 @@ msgstr "輸入登錄名"
 
 msgid "Enter login name of the user."
 msgstr "輸入用戶的登錄名。"
+
+msgid "Enter name"
+msgstr ""
 
 msgid "Enter smartctl pass-through type."
 msgstr "輸入說明供您參考"
@@ -3742,6 +3754,9 @@ msgstr "請輸入 Traps 傳輸端口（默認為 162）"
 
 msgid "Enter trap host name."
 msgstr "請輸入 Trap 主機名。"
+
+msgid "Enter value"
+msgstr ""
 
 msgid "Entire Device"
 msgstr "整個設備"
@@ -8917,6 +8932,9 @@ msgid ""
 "one or more certificates of trusted Certification Authorities (CAs)."
 msgstr "TLS信任文件的名稱。 該文件必須是包含一個或多個可信認證機構（CA）證書的PEM格式。"
 
+msgid "The name of the ZFS pool."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "接口的名稱錯誤。"
 
@@ -10110,8 +10128,11 @@ msgstr "使用切換按鈕而不是啟用/禁用按鈕。"
 msgid "Used"
 msgstr "已用空間"
 
-msgid "Used Space"
-msgstr "已使用空間"
+msgid ""
+"Used/Avail lists storage information after all redundancy is taken into "
+"account but is impacted by compression, deduplication and quotas. Alloc/Free "
+"lists the raw storage information of a pool."
+msgstr ""
 
 msgid "User"
 msgstr "用戶"
@@ -10553,6 +10574,9 @@ msgid ""
 "access your server again:"
 msgstr "您可能還必須執行一個或多個以下步驟，才能再次訪問您的伺服器："
 
+msgid "You may enter a description for your reference."
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "您可以在此輸入說明，以供參考。"
 
@@ -10822,3 +10846,6 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可見"
+
+#~ msgid "Used Space"
+#~ msgstr "已使用空間"
