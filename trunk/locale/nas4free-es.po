@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-06 14:30+0000\n"
+"POT-Creation-Date: 2018-03-31 16:29+0000\n"
 "PO-Revision-Date: 2018-03-06 18:53+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-23 16:33+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-03-31 15:48+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -1632,6 +1632,9 @@ msgstr "Elija con qué protocolo IP se emparejará esta regla."
 
 msgid "Choose which interface this route applies to."
 msgstr "Elija el interfaz al que aplicar esta ruta."
+
+msgid "Choose..."
+msgstr ""
 
 msgid "Clear"
 msgstr "Limpiar"
@@ -3873,6 +3876,9 @@ msgstr "Escriba el asunto"
 msgid "Enter Universally Unique Identifier"
 msgstr "Ingrese el identificador único universal"
 
+msgid "Enter Volume Name"
+msgstr ""
+
 msgid "Enter a comment"
 msgstr "Introduzca un comentario"
 
@@ -3932,6 +3938,9 @@ msgstr "Nombre del Dataset"
 msgid "Enter a name for this volume"
 msgstr "Introduca un nombre para este volumen"
 
+msgid "Enter a name for this volume."
+msgstr ""
+
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
@@ -3980,6 +3989,9 @@ msgstr "Nombre para el login"
 
 msgid "Enter login name of the user."
 msgstr "Nombre para logarse"
+
+msgid "Enter name"
+msgstr ""
 
 msgid "Enter smartctl pass-through type."
 msgstr "Ingrese el tipo de paso a través de smartctl."
@@ -4044,6 +4056,9 @@ msgstr ""
 
 msgid "Enter trap host name."
 msgstr "Ingrese el nombre de equipo trampa."
+
+msgid "Enter value"
+msgstr ""
 
 msgid "Entire Device"
 msgstr "Todo el dispositivo"
@@ -9606,6 +9621,9 @@ msgstr ""
 "El nombre del archivo TLS. El archivo debe estar en formato PEM y contener "
 "uno o más certificados de Autoridades de Certificación (CA's)"
 
+msgid "The name of the ZFS pool."
+msgstr ""
+
 msgid "The name of the interface is wrong."
 msgstr "El nombre de la interfaz es incorrecto."
 
@@ -10982,8 +11000,11 @@ msgstr ""
 msgid "Used"
 msgstr "Utilizado"
 
-msgid "Used Space"
-msgstr "Espacio usado"
+msgid ""
+"Used/Avail lists storage information after all redundancy is taken into "
+"account but is impacted by compression, deduplication and quotas. Alloc/Free "
+"lists the raw storage information of a pool."
+msgstr ""
 
 msgid "User"
 msgstr "Usuario"
@@ -11457,6 +11478,9 @@ msgstr ""
 "Debe realizar alguno de los siguientes pasos antes de poder acceder de nuevo "
 "a su servidor:"
 
+msgid "You may enter a description for your reference."
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "Puede introducir una descripción aquí para su referencia."
 
@@ -11738,3 +11762,6 @@ msgstr "usados de"
 
 msgid "visible"
 msgstr "Visible"
+
+#~ msgid "Used Space"
+#~ msgstr "Espacio usado"

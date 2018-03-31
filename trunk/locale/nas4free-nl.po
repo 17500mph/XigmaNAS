@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-06 14:30+0000\n"
-"PO-Revision-Date: 2018-03-07 20:14+0000\n"
+"POT-Creation-Date: 2018-03-31 16:29+0000\n"
+"PO-Revision-Date: 2018-03-31 15:43+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-23 16:32+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-03-31 15:48+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -1653,6 +1653,9 @@ msgstr "Kies het IP protocol waarop deze regel van toepassing is."
 
 msgid "Choose which interface this route applies to."
 msgstr "Selecteer het netwerk waarop deze route van toepassing is."
+
+msgid "Choose..."
+msgstr "Kiezen..."
 
 msgid "Clear"
 msgstr "Wissen"
@@ -3928,6 +3931,9 @@ msgstr "Vul het onderwerp in"
 msgid "Enter Universally Unique Identifier"
 msgstr "Geef Universeel Unieke Identificator op"
 
+msgid "Enter Volume Name"
+msgstr "Geef Volume Naam op"
+
 msgid "Enter a comment"
 msgstr "Geef een beschrijving op"
 
@@ -3988,6 +3994,9 @@ msgstr "Geef een naam op voor deze dataset"
 msgid "Enter a name for this volume"
 msgstr "Geef een naam op voor dit volume"
 
+msgid "Enter a name for this volume."
+msgstr "Geef een naam op voor dit volume."
+
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
@@ -4034,6 +4043,9 @@ msgstr "Geef login naam"
 
 msgid "Enter login name of the user."
 msgstr "Geef de login naam op van deze gebruiker."
+
+msgid "Enter name"
+msgstr "Geef naam op"
 
 msgid "Enter smartctl pass-through type."
 msgstr "Geef smartctl pass-through type."
@@ -4098,6 +4110,9 @@ msgstr ""
 
 msgid "Enter trap host name."
 msgstr "Geef de trap hostnaam op."
+
+msgid "Enter value"
+msgstr "Geef waarde op"
 
 msgid "Entire Device"
 msgstr "Volledige Schijf"
@@ -9681,6 +9696,9 @@ msgstr ""
 "hebben die één of meer certificaten van vertrouwde certificeringsinstanties "
 "(CA's) bevat."
 
+msgid "The name of the ZFS pool."
+msgstr "De naam van de ZFS pool."
+
 msgid "The name of the interface is wrong."
 msgstr "De naam van het netwerk is verkeerd."
 
@@ -11080,8 +11098,14 @@ msgstr "Gebruik een schakel knop in plaats van in/uitschakel knoppen."
 msgid "Used"
 msgstr "Gebruikt"
 
-msgid "Used Space"
-msgstr "Gebruikte Ruimte"
+msgid ""
+"Used/Avail lists storage information after all redundancy is taken into "
+"account but is impacted by compression, deduplication and quotas. Alloc/Free "
+"lists the raw storage information of a pool."
+msgstr ""
+"Gebruikt/beschikbaar bevat opslaginformatie nadat alle redundantie in "
+"aanmerking is genomen maar wordt beïnvloed door compressie, deduplication en "
+"quota's. Alloc/Vrij bevat de ruwe opslaginformatie van een pool."
 
 msgid "User"
 msgstr "Gebruiker"
@@ -11561,6 +11585,9 @@ msgstr ""
 "U moet mogelijk ook één van de volgende stappen uitvoeren om opnieuw toegang "
 "tot uw server te krijgen:"
 
+msgid "You may enter a description for your reference."
+msgstr "U kunt een beschrijving invoeren voor uw referentie."
+
 msgid "You may enter a description here for your reference."
 msgstr "U kunt hier een beschrijving invullen als referentie."
 
@@ -11846,3 +11873,6 @@ msgstr "gebruikt van"
 
 msgid "visible"
 msgstr "zichtbaar"
+
+#~ msgid "Used Space"
+#~ msgstr "Gebruikte Ruimte"
