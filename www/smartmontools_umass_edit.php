@@ -57,7 +57,7 @@ function get_sphere_smartmontools_umass_edit() {
 	return $sphere;
 }
 //	init properties and sphere
-$property = new properties_smartmontools_umass();
+$cop = new properties_smartmontools_umass();
 $sphere = &get_sphere_smartmontools_umass_edit();
 $prerequisites_ok = true;
 //	init indicators
@@ -82,11 +82,11 @@ switch($method):
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->get_defaultvalue();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
 				break;
 		endswitch;
 		break;
@@ -100,18 +100,18 @@ switch($method):
 				break;
 			case 'add': // bring up a form with default values and let the user modify it
 				$page_mode = PAGE_MODE_ADD;
-				$sphere->row[$sphere->get_row_identifier()] =  $property->{$sphere->get_row_identifier()}->get_defaultvalue();
+				$sphere->row[$sphere->get_row_identifier()] =  $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'cancel': // cancel - nothing to do
 				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
 			case 'edit': // edit requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_EDIT;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
 				break;
 			case 'save': // modify requires a resource id, get it from input and validate
 				$page_mode = PAGE_MODE_POST;
-				$sphere->row[$sphere->get_row_identifier()] = $property->{$sphere->get_row_identifier()}->validate_input();
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
 				break;
 		endswitch;
 		break;
@@ -170,25 +170,25 @@ $a_referrer = ['description','enable','name','type'];
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->get_defaultvalue();
+			$sphere->row[$referrer] = $cop->{$referrer}->get_defaultvalue();
 		endforeach;
 		break;
 	case PAGE_MODE_EDIT:
 		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_array_element($sphere->grid[$sphere->row_id]);
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_array_element($sphere->grid[$sphere->row_id]);
 			if(!isset($sphere->row[$referrer])):
-				$sphere->row[$referrer] = $sphere->grid[$sphere->row_id][$referrer] ?? $property->{$referrer}->get_defaultvalue();
-				$input_errors[] = $property->{$referrer}->get_message_error();
+				$sphere->row[$referrer] = $sphere->grid[$sphere->row_id][$referrer] ?? $cop->{$referrer}->get_defaultvalue();
+				$input_errors[] = $cop->{$referrer}->get_message_error();
 			endif;
 		endforeach;
 		break;
 	case PAGE_MODE_POST:
 		// apply post values that are applicable for all record modes
 		foreach($a_referrer as $referrer):
-			$sphere->row[$referrer] = $property->{$referrer}->validate_input();
+			$sphere->row[$referrer] = $cop->{$referrer}->validate_input();
 			if(!isset($sphere->row[$referrer])):
-				$sphere->row[$referrer] = $_POST[$referrer] ?? $property->{$referrer}->get_defaultvalue();
-				$input_errors[] = $property->{$referrer}->get_message_error();
+				$sphere->row[$referrer] = $_POST[$referrer] ?? $cop->{$referrer}->get_defaultvalue();
+				$input_errors[] = $cop->{$referrer}->get_message_error();
 			endif;
 		endforeach;
 		if($prerequisites_ok && empty($input_errors)):
@@ -246,12 +246,12 @@ $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
-		c2_titleline_with_checkbox($property->enable,$sphere->row[$property->enable->get_name()],false,false,gtext('Settings'))->
+		c2_titleline_with_checkbox($cop->enable,$sphere->row[$cop->enable->get_name()],false,false,gtext('Settings'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($property->name,htmlspecialchars($sphere->row[$property->name->get_name()]),true,false)->
-		c2_input_text($property->type,htmlspecialchars($sphere->row[$property->type->get_name()]),false,false)->
-		c2_input_text($property->description,htmlspecialchars($sphere->row[$property->description->get_name()]),false,false);
+		c2_input_text($cop->name,htmlspecialchars($sphere->row[$cop->name->get_name()]),true,false)->
+		c2_input_text($cop->type,htmlspecialchars($sphere->row[$cop->type->get_name()]),false,false)->
+		c2_input_text($cop->description,htmlspecialchars($sphere->row[$cop->description->get_name()]),false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->ins_button_add();
