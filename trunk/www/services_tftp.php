@@ -62,7 +62,6 @@ function services_tftp_get_sphere() {
 }
 $sphere = &services_tftp_get_sphere();
 $cop = new properties_tftp();			
-$gt_button_apply_confirm = gtext('Do you want to apply these settings?');
 $input_errors = [];
 $a_message = [];
 //	determine request method
@@ -175,26 +174,12 @@ $l_user = [];
 foreach(system_get_user_list() as $key => $val):
 	$l_user[$key] = htmlspecialchars($key);
 endforeach;
-$cop->username->set_options($l_user);
-//	prepare additional javascript code
-$jcode = [];
-$jcode[PAGE_MODE_EDIT] = <<<EOJ
-$(window).on("load", function() {
-	$("#button_save").click(function () {
-		return confirm("{$gt_button_apply_confirm}");
-	});
-});
-EOJ;
-$jcode[PAGE_MODE_VIEW] = NULL;
+$cop->get_username()->set_options($l_user);
 $pgtitle = [gtext('Services'),gtext('TFTP')];
-$document = new_page($pgtitle,$sphere->get_scriptname());
+$document = new_page($pgtitle,$sphere->get_scriptname(),'notabnav');
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
-//	add additional javascript code
-if(isset($jcode[$page_mode])):
-	$body->addJavaScript($jcode[$page_mode]);
-endif;
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -205,31 +190,35 @@ $content->
 $content->
 	add_table_data_settings()->
 		ins_colgroup_data_settings()->
-		push()->addTHEAD()->
-			c2_titleline_with_checkbox($cop->enable,$sphere->row['enable'],false,$is_readonly,gtext('Trivial File Transfer Protocol'))->
-		pop()->addTBODY()->
-			c2_filechooser($cop->dir,htmlspecialchars($sphere->row['dir']),true,$is_readonly)->
-			c2_checkbox($cop->allowfilecreation,$sphere->row['allowfilecreation'],false,$is_readonly);
+		push()->
+		addTHEAD()->
+			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gtext('Trivial File Transfer Protocol'))->
+		pop()->
+		addTBODY()->
+			c2_filechooser($cop->get_dir(),htmlspecialchars($sphere->row[$cop->get_dir()->get_name()]),true,$is_readonly)->
+			c2_checkbox($cop->get_allowfilecreation(),$sphere->row[$cop->get_allowfilecreation()->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
 		ins_colgroup_data_settings()->
-		push()->addTHEAD()->
+		push()->
+		addTHEAD()->
 			c2_separator()->
 			c2_titleline(gtext('Advanced Settings'))->
-		pop()->addTBODY()->
-			c2_input_text($cop->port,htmlspecialchars($sphere->row['port']),false,$is_readonly)->
-			c2_select($cop->username,htmlspecialchars($sphere->row['username']),false,$is_readonly)->
-			c2_input_text($cop->umask,htmlspecialchars($sphere->row['umask']),false,$is_readonly)->
-			c2_input_text($cop->timeout,htmlspecialchars($sphere->row['timeout']),false,$is_readonly)->
-			c2_input_text($cop->maxblocksize,htmlspecialchars($sphere->row['maxblocksize']),false,$is_readonly)->
-			c2_input_text($cop->extraoptions,htmlspecialchars($sphere->row['extraoptions']),false,$is_readonly);
+		pop()->
+		addTBODY()->
+			c2_input_text($cop->get_port(),htmlspecialchars($sphere->row[$cop->get_port()->get_name()]),false,$is_readonly)->
+			c2_select($cop->get_username(),htmlspecialchars($sphere->row[$cop->get_username()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_umask(),htmlspecialchars($sphere->row[$cop->get_umask()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_timeout(),htmlspecialchars($sphere->row[$cop->get_timeout()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_maxblocksize(),htmlspecialchars($sphere->row[$cop->get_maxblocksize()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_extraoptions(),htmlspecialchars($sphere->row[$cop->get_extraoptions()->get_name()]),false,$is_readonly);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
 		$document->
 			add_area_buttons()->
 				ins_button_edit()->
-				ins_button_enadis(!$sphere->row['enable']);
+				ins_button_enadis(!$sphere->row[$cop->get_enable()->get_name()]);
 		break;
 	case PAGE_MODE_EDIT:
 		$document->
