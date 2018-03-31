@@ -2735,8 +2735,7 @@ EOJ;
 		endif;
 		if($is_tabnav):
 			$jdata = <<<'EOJ'
-	$("#tabnav").click(function() { spinner(); });
-	$("#tabnav2").click(function() { spinner(); });
+	$("#tabnav,#tabnav2").click(function() { spinner(); });
 EOJ;
 			$this->add_js_on_load($jdata);
 		endif;
