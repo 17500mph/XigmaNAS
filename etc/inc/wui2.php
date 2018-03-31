@@ -1531,18 +1531,20 @@ trait co_DOMTools {
  *	@return DOMNode $this
  */
 	public function addJavaScript(string $text = '') {
-		$node = $this->addElement('script');
-		if(false !== $node):
-			$opening = $node->ownerDocument->createTextNode(PHP_EOL . '//![CDATA[' . PHP_EOL);
-			if(false !== $opening):
-				$node->appendChild($opening);
-				$cdata = $node->ownerDocument->createCDATASection($text);
-				if(false !== $cdata):
-					$node->appendChild($cdata);
-				endif;
-				$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
-				if(false !== $ending):
-					$node->appendChild($ending);
+		if(preg_match('/\S/',$text)):
+			$node = $this->addElement('script');
+			if(false !== $node):
+				$opening = $node->ownerDocument->createTextNode(PHP_EOL . '//![CDATA[' . PHP_EOL);
+				if(false !== $opening):
+					$node->appendChild($opening);
+					$cdata = $node->ownerDocument->createCDATASection($text);
+					if(false !== $cdata):
+						$node->appendChild($cdata);
+					endif;
+					$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
+					if(false !== $ending):
+						$node->appendChild($ending);
+					endif;
 				endif;
 			endif;
 		endif;
