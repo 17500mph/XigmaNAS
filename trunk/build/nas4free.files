@@ -1040,14 +1040,21 @@ boot/pmbr
 boot/gptboot
 #
 boot/userboot.so
-# EFI
+
+####### EFI boot
 #boot/boot1.efi
 #boot/boot1.efifat
 #boot/loader.efi
-# ZFS
+
+####### ZFS bootstrap
 boot/gptzfsboot
 boot/zfsboot
 boot/zfsloader
+
+####### ZFS Boot Environments loader required
+boot/beastie.4th
+boot/menu.rc
+boot/menusets.4th
 
 ####### contents of /etc
 etc/rc.shutdown

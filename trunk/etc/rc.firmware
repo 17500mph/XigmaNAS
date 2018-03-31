@@ -579,7 +579,7 @@ full_upgrade() {
 	msg="Upgrading system on new boot environment..."
 	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	RESULT=1
-	EXCLUDED="--exclude=cf --exclude=conf --exclude=tmp --exclude=var --exclude=version"
+	EXCLUDED="--exclude=cf --exclude=conf --exclude=loader.rc --exclude=menu.4th --exclude=tmp --exclude=var --exclude=version"
 	/usr/bin/tar ${EXCLUDED} --keep-newer-files -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
 	RESULT=$?
 	if [ 0 != ${RESULT} ]; then
