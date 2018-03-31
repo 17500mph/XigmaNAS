@@ -79,8 +79,7 @@ switch($page_mode):
 			$name = $referer->get_name();
 			$sphere->row[$name] = $referer->validate_array_element($sphere->grid);
 			if(is_null($sphere->row[$name])):
-				$input_errors[] = $referer->get_message_error();
-				if(array_key_exists($name,$sphere->grid) && is_scalar($sphere->grid[$name])): 
+				if(array_key_exists($name,$sphere->grid)): 
 					$sphere->row[$name] = $sphere->grid[$name];
 				else:
 					$sphere->row[$name] = $referer->get_defaultvalue();
@@ -94,7 +93,7 @@ switch($page_mode):
 			$sphere->row[$name] = $referer->validate_input();
 			if(is_null($sphere->row[$name])):
 				$input_errors[] = $referer->get_message_error();
-				if(array_key_exists($name,$_POST) && is_scalar($_POST[$name])): 
+				if(array_key_exists($name,$_POST)): 
 					$sphere->row[$name] = $_POST[$name];
 				else:
 					$sphere->row[$name] = $referer->get_defaultvalue();
