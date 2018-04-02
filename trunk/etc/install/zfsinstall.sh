@@ -755,7 +755,7 @@ get_media_desc()
 		}}'`
 		VAL="${description} -- ${cap}"
 	fi
-	export VAL
+	export ${VAL}
 }
 
 menu_install()
