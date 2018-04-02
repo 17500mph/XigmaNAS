@@ -83,7 +83,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disableconsolemenu = new property_bool($this);
 		$property->
 			set_name('disableconsolemenu')->
-			set_title(gtext('Console Menu'))->
+			set_title(gtext('Console Menu'));
 		$caption = gtext('Disable console menu.');
 		$description = gtext('Changes to this option will take effect after a reboot.');
 		$property->
@@ -104,7 +104,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disablefm = new property_bool($this);
 		$property->
 			set_name('disablefm')->
-			set_title(gtext('File Manager'))->
+			set_title(gtext('File Manager'));
 		$property->
 			set_id('disablefm')->
 			set_caption(gtext('Disable file manager.'))->
@@ -123,7 +123,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disablefirmwarecheck = new property_bool($this);
 		$property->
 			set_name('disablefirmwarecheck')->
-			set_title(gtext('Firmware Check'))->
+			set_title(gtext('Firmware Check'));
 		$link = '<a href="system_firmware.php">' . gtext('System') . ': ' . gtext('Firmware Update') . '</a>';
 		$description = sprintf(gtext('Do not let the server check for newer firmware versions when the %s page gets loaded.'),$link);		
 		$property->
@@ -144,7 +144,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disablebeep = new property_bool($this);
 		$property->
 			set_name('disablebeep')->
-			set_title(gtext('Internal Speaker'))->
+			set_title(gtext('Internal Speaker'));
 		$property->
 			set_id('disablebeep')->
 			set_caption(gtext('Disable speaker beep on startup and shutdown.'))->
@@ -163,7 +163,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_microcode_update = new property_bool($this);
 		$property->
 			set_name('microcode_update')->
-			set_title(gtext('CPU Microcode Update'))->
+			set_title(gtext('CPU Microcode Update'));
 		$property->
 			set_id('microcode_update')->
 			set_caption(gtext('Enable this option to update the CPU microcode on startup.'))->
@@ -182,7 +182,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_enabletogglemode = new property_bool($this);
 		$property->
 			set_name('enabletogglemode')->
-			set_title(gtext('Toggle Mode'))->
+			set_title(gtext('Toggle Mode'));
 		$property->
 			set_id('enabletogglemode')->
 			set_caption(gtext('Use toggle button instead of enable/disable buttons.'))->
@@ -201,7 +201,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_nonsidisksizevalues = new property_bool($this);
 		$property->
 			set_name('nonsidisksizevalues')->
-			set_title(gtext('Binary Prefix'))->
+			set_title(gtext('Binary Prefix'));
 		$property->
 			set_id('nonsidisksizevalues')->
 			set_caption(gtext('Display disk size values using binary prefixes instead of decimal prefixes.'))->
@@ -220,7 +220,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_skipviewmode = new property_bool($this);
 		$property->
 			set_name('skipviewmode')->
-			set_title(gtext('Skip View Mode'))->
+			set_title(gtext('Skip View Mode'));
 		$property->
 			set_id('skipviewmode')->
 			set_caption(gtext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'))->
@@ -239,7 +239,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disableextensionmenu = new property_bool($this);
 		$property->
 			set_name('disableextensionmenu')->
-			set_title(gtext('Disable Extension Menu'))->
+			set_title(gtext('Disable Extension Menu'));
 		$property->
 			set_id('disableextensionmenu')->
 			set_caption(gtext('Disable scanning of folders for existing extension menus.'))->
@@ -258,7 +258,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_tune_enable = new property_bool($this);
 		$property->
 			set_name('tune_enable')->
-			set_title(gtext('Tuning'))->
+			set_title(gtext('Tuning'));
 		$property->
 			set_id('tune_enable')->
 			set_caption(gtext('Enable tuning of some kernel variables.'))->
@@ -277,7 +277,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_zeroconf = new property_bool($this);
 		$property->
 			set_name('zeroconf')->
-			set_title(gtext('Zeroconf/Bonjour'))->
+			set_title(gtext('Zeroconf/Bonjour'));
 		$property->
 			set_id('zeroconf')->
 			set_caption(gtext('Enable Zeroconf/Bonjour to advertise services of this device.'))->
@@ -296,7 +296,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_powerd = new property_bool($this);
 		$property->
 			set_name('powerd')->
-			set_title(gtext('Power Daemon'))->
+			set_title(gtext('Power Daemon'));
 		$property->
 			set_id('powerd')->
 			set_caption(gtext('Enable the server power control utility.'))->
@@ -315,7 +315,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_pwmode = new property_list($this);
 		$property->
 			set_name('pwmode')->
-			set_title(gtext('Power Mode'))->
+			set_title(gtext('Power Mode'));
 		$options = [
 			'maximum' => gtext('Maximum (Highest Performance)'),
 			'hiadaptive' => gtext('Hiadaptive (High Performance)'),
@@ -377,7 +377,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_shrinkpageheader = new property_bool($this);
 		$property->
 			set_name('shrinkpageheader')->
-			set_title(gtext('Shrink Page Header'))->
+			set_title(gtext('Shrink Page Header'));
 		$property->
 			set_id('shrinkpageheader')->
 			set_caption(gtext('Enable this option to reduce the height of the page header to a minimum.'))->
@@ -396,7 +396,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_sysconsaver = new property_bool($this);
 		$property->
 			set_name('sysconsaver')->
-			set_title(gtext('Console Screensaver'))->
+			set_title(gtext('Console Screensaver'));
 		$property->
 			set_id('sysconsaver')->
 			set_caption(gtext('Enable console screensaver.'))->
@@ -423,7 +423,7 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_enableserialconsole = new property_bool($this);
 		$property->
 			set_name('enableserialconsole')->
-			set_title(gtext('Serial Console'))->
+			set_title(gtext('Serial Console'));
 		$property->
 			set_id('enableserialconsole')->
 			set_caption(gtext('Enable serial console.'))->
