@@ -195,7 +195,7 @@ zroot_init()
 	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} ${RAID} ${GLABEL_DEVLIST}
 	zfs set canmount=off ${ZROOT}
 	zfs create -o canmount=off ${ZROOT}${DATASET}
-	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
+	zfs create -o compression=lz4 -o atime=off -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
 	zfs set freebsd:boot-environment=1 ${ZROOT}${DATASET}${BOOTENV}
 	zpool set bootfs=${ZROOT}${DATASET}${BOOTENV} ${ZROOT}
 	if [ $? -eq 1 ]; then
@@ -755,7 +755,7 @@ get_media_desc()
 		}}'`
 		VAL="${description} -- ${cap}"
 	fi
-	export ${VAL}
+	export VAL
 }
 
 menu_install()
