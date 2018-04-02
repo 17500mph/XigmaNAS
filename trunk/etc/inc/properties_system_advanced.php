@@ -72,7 +72,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -93,7 +93,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -112,7 +112,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -133,7 +133,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -152,7 +152,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -171,7 +171,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -190,7 +190,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -209,7 +209,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -228,7 +228,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -247,7 +247,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -266,7 +266,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -285,7 +285,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -304,7 +304,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -329,7 +329,7 @@ class properties_system_advanced extends co_property_container {
 			set_options($options)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -385,7 +385,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$this->x_shrinkpageheader->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -404,7 +404,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$this->x_sysconsaver->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -431,7 +431,7 @@ class properties_system_advanced extends co_property_container {
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
-			set_editableonmodify(true);
+			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$this->x_enableserialconsole->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
