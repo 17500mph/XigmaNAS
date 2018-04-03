@@ -386,7 +386,7 @@ class properties_system_advanced extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$this->x_shrinkpageheader->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
 	public function get_sysconsaver() {
@@ -405,7 +405,7 @@ class properties_system_advanced extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$this->x_sysconsaver->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
 	public function get_sysconsaverblanktime() {
@@ -432,7 +432,7 @@ class properties_system_advanced extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$this->x_enableserialconsole->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
 }
