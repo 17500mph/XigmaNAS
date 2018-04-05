@@ -77,7 +77,7 @@ switch($page_mode):
 	case PAGE_MODE_EDIT:
 		foreach($a_referer as $referer):
 			$name = $referer->get_name();
-			$sphere->row[$name] = $referer->validate_array_element($sphere->grid);
+			$sphere->row[$name] = $referer->validate_config($sphere->grid);
 			if(is_null($sphere->row[$name])):
 				if(array_key_exists($name,$sphere->grid)): 
 					$sphere->row[$name] = $sphere->grid[$name];
