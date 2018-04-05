@@ -2723,21 +2723,19 @@ EOJ;
 		endif;
 		$flexcontainer->ins_main();
 		$flexcontainer->ins_footer();
-		if(true):
+		if($is_tabnav):
+			$jdata = <<<'EOJ'
+	$(".spin,#tabnav,#tabnav2").click(function() { spinner(); });
+EOJ;
+		else:
 			$jdata = <<<'EOJ'
 	$(".spin").click(function() { spinner(); });
 EOJ;
-			$this->add_js_on_load($jdata);
 		endif;
+		$this->add_js_on_load($jdata);
 		if($is_spinonsubmit):
 			$jdata = <<<'EOJ'
 	$("#iform").submit(function() { spinner(); });
-EOJ;
-			$this->add_js_on_load($jdata);
-		endif;
-		if($is_tabnav):
-			$jdata = <<<'EOJ'
-	$("#tabnav,#tabnav2").click(function() { spinner(); });
 EOJ;
 			$this->add_js_on_load($jdata);
 		endif;
