@@ -439,7 +439,7 @@ abstract class properties {
 		return $result;
 	}
 /**
- *	Returns the value if key exists and is not null, otherwise an empty string is returned.
+ *	Returns the value if key exists and is not null, otherwise the default value is returned.
  *	@param array $source
  *	@return string
  */
@@ -482,9 +482,10 @@ class property_text extends properties {
 	public function filter_use_default() {
 		//	not empty, must contain at least one printable character
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_REGEXP,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name)->
+			set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
 		return $this;
 	}
 }
@@ -547,9 +548,10 @@ class property_ipaddress extends property_text {
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->set_filter_options(['default' => NULL],$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_IP,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name)->
+			set_filter_options(['default' => NULL],$filter_name);
 		return $this;
 	}
 }
@@ -564,9 +566,10 @@ class property_ipv4 extends property_text {
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV4,$filter_name);
-		$this->set_filter_options(['default' => NULL],$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_IP,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV4,$filter_name)->
+			set_filter_options(['default' => NULL],$filter_name);
 		return $this;
 	}
 }
@@ -581,9 +584,10 @@ class property_ipv6 extends property_text {
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_VALIDATE_IP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV6,$filter_name);
-		$this->set_filter_options(['default' => NULL],$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_IP,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR | FILTER_FLAG_IPV6,$filter_name)->
+			set_filter_options(['default' => NULL],$filter_name);
 		return $this;
 	}
 }
@@ -617,9 +621,10 @@ class property_int extends property_text {
 		if(isset($max)):
 			$options['max_range'] = $max;
 		endif;
-		$this->set_filter(FILTER_VALIDATE_INT,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->set_filter_options($options,$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_INT,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name)->
+			set_filter_options($options,$filter_name);
 		return $this;
 	}
 }
@@ -632,10 +637,11 @@ class property_toolbox extends property_text {
 class property_uuid extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_title(gtext('Universally Unique Identifier'));
+		$this->
+			set_name('uuid')->
+			set_title(gtext('Universally Unique Identifier'));
 		$this->
 			set_id('uuid')->
-			set_name('uuid')->
 			set_description(gtext('The UUID of the record.'))->
 			set_size(45)->
 			set_maxlength(36)->
@@ -647,9 +653,10 @@ class property_uuid extends property_text {
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_VALIDATE_REGEXP,$filter_name);
-		$this->set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name);
-		$this->set_filter_options(['default' => NULL,'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i'],$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_REGEXP,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name)->
+			set_filter_options(['default' => NULL,'regexp' => '/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i'],$filter_name);
 		return $this;
 	}
 	public function get_defaultvalue() {
@@ -674,9 +681,9 @@ class property_list extends properties {
 		endif;
 	}
 	public function validate_config(array $source) {
-		$name = $this->get_name();
-		if(array_key_exists($name,$source)):
-			$option = $source[$name];
+		$key = $this->get_name();
+		if(array_key_exists($key,$source)):
+			$option = $source[$key];
 			if(array_key_exists($option,$this->get_options())):
 				$return_data = $option;
 			else:
@@ -695,23 +702,25 @@ class property_list extends properties {
  */
 	public function filter_use_default() {
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_CALLBACK,$filter_name);
-		$this->set_filter_options([$this,'validate_option'],$filter_name);
+		$this->
+			set_filter(FILTER_CALLBACK,$filter_name)->
+			set_filter_options([$this,'validate_option'],$filter_name);
 		return $this;
 	}
 }
 class property_bool extends properties {
 	public function filter_use_default() {
 		$filter_name = 'ui';
-		$this->set_filter(FILTER_VALIDATE_BOOLEAN,$filter_name);
-		$this->set_filter_flags(FILTER_NULL_ON_FAILURE,$filter_name);
-		$this->set_filter_options(['default' => false],$filter_name);
+		$this->
+			set_filter(FILTER_VALIDATE_BOOLEAN,$filter_name)->
+			set_filter_flags(FILTER_NULL_ON_FAILURE,$filter_name)->
+			set_filter_options(['default' => false],$filter_name);
 		return $this;
 	}
 	public function validate_config(array $source) {
-		$name = $this->get_name();
-		if(array_key_exists($name,$source)):
-			$value = $source[$name];
+		$key = $this->get_name();
+		if(array_key_exists($key,$source)):
+			$value = $source[$key];
 			$return_data = is_bool($value) ? $value : true;
 		else:
 			$return_data = false;
@@ -722,10 +731,11 @@ class property_bool extends properties {
 class property_enable extends property_bool {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_title(gtext('Enable Setting'));
+		$this->
+			set_name('enable')->
+			set_title(gtext('Enable Setting'));
 		$this->
 			set_id('enable')->
-			set_name('enable')->
 			set_caption(gtext('Enable'))->
 			set_description('')->
 			set_defaultvalue(true)->
