@@ -40,7 +40,7 @@ function diag_infos_space_ajax() {
 	return implode(PHP_EOL,$rawdata);
 }
 if(is_ajax()):
-	$status = diag_infos_space_ajax();
+	$status['area_refresh'] = diag_infos_space_ajax();
 	render_ajax($status);
 endif;
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Space Used')];
@@ -86,8 +86,10 @@ $pagecontent->
 //	add additional javascript code
 $js_document_ready = <<<'EOJ'
 	var gui = new GUI;
-	gui.recall(5000, 5000, 'diag_infos_space.php', null, function(data) {
-		$('#area_refresh').text(data.data);
+	gui.recall(5000,5000,'diag_infos_space.php',null,function(data) {
+		if($('#area_refresh').length > 0) {
+			$('#area_refresh').text(data.area_refresh);
+		}
 	});
 EOJ;
 $body->
