@@ -35,19 +35,37 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 function diag_infos_samba_1_ajax() {
-	$cmd = "/usr/bin/env LC_ALL=en_US.UTF-8 smbstatus -b | grep -v 'Samba version'";
-	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode(PHP_EOL,$rawdata));
+	global $config;
+	
+	if(is_bool($test = $config['samba']['enable'] ?? false) ? $test : true):
+		$cmd = "/usr/bin/env LC_ALL=en_US.UTF-8 smbstatus -b | grep -v 'Samba version'";
+		mwexec2($cmd,$rawdata);
+		return implode(PHP_EOL,$rawdata);
+	else:
+		return gettext('CIFS/SMB is disabled.');
+	endif;
 }
 function diag_infos_samba_2_ajax() {
-	$cmd = "/usr/bin/env LC_ALL=en_US.UTF-8 smbstatus -S";
-	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode(PHP_EOL,$rawdata));
+	global $config;
+	
+	if(is_bool($test = $config['samba']['enable'] ?? false) ? $test : true):
+		$cmd = "/usr/bin/env LC_ALL=en_US.UTF-8 smbstatus -S";
+		mwexec2($cmd,$rawdata);
+		return implode(PHP_EOL,$rawdata);
+	else:
+		return gettext('No information available.');
+	endif;
 }
 function diag_infos_samba_3_ajax() {
-	$cmd = "/usr/bin/env LC_ALL=en_US.UTF-8 smbstatus -L | grep -v 'Locked files'";
-	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode(PHP_EOL,$rawdata));
+	global $config;
+	
+	if(is_bool($test = $config['samba']['enable'] ?? false) ? $test : true):
+		$cmd = "/usr/bin/env LC_ALL=en_US.UTF-8 smbstatus -L | grep -v 'Locked files'";
+		mwexec2($cmd,$rawdata);
+		return implode(PHP_EOL,$rawdata);
+	else:
+		return gettext('No information available.');
+	endif;
 }
 if(is_ajax()):
 	$status['area_refresh_1'] = diag_infos_samba_1_ajax();
@@ -56,28 +74,11 @@ if(is_ajax()):
 	render_ajax($status);
 endif;
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('CIFS/SMB')];
-include 'fbegin.inc';
-?>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
-	var gui = new GUI;
-	gui.recall(5000, 5000, 'diag_infos_samba.php', null, function(data) {
-		if ($('#area_refresh_1').length > 0) {
-			$('#area_refresh_1').text(data.area_refresh_1);
-		}
-		if ($('#area_refresh_2').length > 0) {
-			$('#area_refresh_2').text(data.area_refresh_2);
-		}
-		if ($('#area_refresh_3').length > 0) {
-			$('#area_refresh_3').text(data.area_refresh_3);
-		}
-	});
-});
-//]]>
-</script>
-<?php
-$document = new co_DOMDocument();
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
@@ -98,93 +99,65 @@ $document->
 			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
 			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
 			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
-$document->render();
-?>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php 
-if (!isset($config['samba']['enable'])):
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>			
-		<thead>
-<?php
-			html_titleline2(gtext('CIFS/SMB Information'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-<?php
-				echo '<pre>';
-				echo gtext('CIFS/SMB is disabled.');
-				echo '</pre>';
-?>
-			</td>
-		</tr></tbody>
-	</table>
-<?php 
-else:
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gtext('Active Users'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-				<pre><span id="area_refresh_1"><?=diag_infos_samba_1_ajax();?></span></pre>
-			</td>
-		</tr></tbody>
-	</table>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_separator2();
-			html_titleline2(gtext('Active Shares'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-				<pre><span id="area_refresh_2"><?=diag_infos_samba_2_ajax();?></span></pre>
-			</td>
-		</tr></tbody>
-	</table>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_separator2();
-			html_titleline2(gtext('Locked Files'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-				<pre><span id="area_refresh_3"><?=diag_infos_samba_3_ajax();?></span></pre>
-			</td>
-		</tr></tbody>
-	</table>
-<?php
-endif;
-?>
-</td></tr></tbody></table>
-<?php
-include 'fend.inc';
-?>
+$pagecontent->
+	add_area_data()->
+		push()->
+		add_table_data_settings()->
+			push()->
+			ins_colgroup_data_settings()->
+			addTHEAD()->
+				c2_titleline(gtext('Active Users'))->
+			pop()->
+			addTBODY()->
+				addTR()->
+					insTDwC('celltag',gtext('Information'))->
+					addTDwC('celldata')->
+						addElement('pre',['class' => 'cmdoutput'])->
+							addElement('span',['id' => 'area_refresh_1'],htmlspecialchars(diag_infos_samba_1_ajax()))->
+		last()->
+		add_table_data_settings()->
+			push()->
+			ins_colgroup_data_settings()->
+			addTHEAD()->
+				c2_separator()->
+				c2_titleline(gtext('Active Shares'))->
+			pop()->
+			addTBODY()->
+				addTR()->
+					insTDwC('celltag',gtext('Information'))->
+					addTDwC('celldata')->
+						addElement('pre',['class' => 'cmdoutput'])->
+							addElement('span',['id' => 'area_refresh_2'],htmlspecialchars(diag_infos_samba_2_ajax()))->
+		pop()->
+		add_table_data_settings()->
+			push()->
+			ins_colgroup_data_settings()->
+			addTHEAD()->
+				c2_separator()->
+				c2_titleline(gtext('Locked Files'))->
+			pop()->
+			addTBODY()->
+				addTR()->
+					insTDwC('celltag',gtext('Information'))->
+					addTDwC('celldata')->
+						addElement('pre',['class' => 'cmdoutput'])->
+							addElement('span',['id' => 'area_refresh_3'],htmlspecialchars(diag_infos_samba_3_ajax()));
+//	add additional javascript code
+$js_document_ready = <<<'EOJ'
+	var gui = new GUI;
+	gui.recall(5000,5000,'diag_infos_samba.php',null,function(data) {
+		if($('#area_refresh_1').length) {
+			$('#area_refresh_1').text(data.area_refresh_1);
+		}
+		if($('#area_refresh_2').length) {
+			$('#area_refresh_2').text(data.area_refresh_2);
+		}
+		if($('#area_refresh_3').length) {
+			$('#area_refresh_3').text(data.area_refresh_3);
+		}
+	});
+EOJ;
+	$body->
+		add_js_document_ready($js_document_ready);
+$document->
+	render();
