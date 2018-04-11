@@ -74,6 +74,9 @@ if($_POST):
 		if(!$valid_config):
 			$errormsg = gtext('The configuration could not be restored.') . ' ' . gtext('Invalid file format or incorrect password.');
 		else:
+			//	void loaderconf section to force read $config
+			$loaderconf = &array_make_branch($config,'system','loaderconf');
+			unset($loaderconf);
 			// Install configuration backup
 			if($encrypted):
 				$ret = config_install($tempfile);
