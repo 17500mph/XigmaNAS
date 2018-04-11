@@ -690,7 +690,7 @@ class co_zpool_info {
 					$b_val = false;
 //					if(!$b_tag): // check for tag:
 /*
- *	Tag detection seaches for a string that matches the following criteria:
+ *	Tag detection searches for a string that matches the following criteria:
  *	- starts with one or more blank characters
  *	. followed by a sequence of non-blank characters except colon (:)
  *	- ends with a colon (:)
