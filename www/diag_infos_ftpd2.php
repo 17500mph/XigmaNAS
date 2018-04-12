@@ -43,7 +43,7 @@ function diag_infos_ftpd_ajax() {
 		$rawdata = array_slice($rawdata,1);
 		return implode(PHP_EOL,$rawdata);
 	else:
-		return gtext('FTP service is disabled.');
+		return gettext('FTP service is disabled.');
 	endif;
 }
 if(is_ajax()):
@@ -89,7 +89,7 @@ $pagecontent->
 					insTDwC('celltag',gtext('Information'))->
 					addTDwC('celldata')->
 						addElement('pre',['class' => 'cmdoutput'])->
-							addElement('span',['id' => 'area_refresh'],diag_infos_ftpd_ajax());
+							addElement('span',['id' => 'area_refresh'],htmlspecialchars(diag_infos_ftpd_ajax()));
 //	add additional javascript code
 $js_document_ready = <<<'EOJ'
 	var gui = new GUI;
