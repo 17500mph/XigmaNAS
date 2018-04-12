@@ -76,7 +76,7 @@ if($_POST):
 		else:
 			//	void loaderconf section to force read $config
 			$loaderconf = &array_make_branch($config,'system','loaderconf');
-			unset($loaderconf);
+			$loaderconf = [];
 			// Install configuration backup
 			if($encrypted):
 				$ret = config_install($tempfile);
@@ -155,6 +155,6 @@ if($cmd_system_reboot):
 	ob_flush();
 	flush();
 	sleep(5);
-	system_reboot();
+//	system_reboot();
 endif;
 ?>
