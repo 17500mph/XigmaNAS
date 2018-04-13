@@ -132,8 +132,10 @@ gptpart_init()
 		gpart create -s gpt ${DISK} > /dev/null
 
 		# Create boot partition.
+		if [ "${BOOT_MODE}" == 2 ]; then
+			gpart add -a 4k -s 200M -t efi -l efiboot${NUM} ${DISK} > /dev/null
+		fi
 		gpart add -a 4k -s 512K -t freebsd-boot -l sysboot${NUM} ${DISK} > /dev/null
-		#gpart add -a 4k -s 800K -t efi -l efiboot${NUM} ${DISK} > /dev/null
 
 		if [ ! -z "${SWAP}" ]; then
 			# Add swap partition to selected drives.
@@ -192,10 +194,10 @@ zroot_init()
 
 	# Create bootable zroot pool with boot environments support.
 	echo "Creating bootable ${ZROOT} pool"
-	zpool create -f -R ${ALTROOT}/${ZROOT} ${ZROOT} ${RAID} ${GLABEL_DEVLIST}
+	zpool create -O compress=lz4 -O atime=off -f -R ${ALTROOT}/${ZROOT} ${ZROOT} ${RAID} ${GLABEL_DEVLIST}
 	zfs set canmount=off ${ZROOT}
 	zfs create -o canmount=off ${ZROOT}${DATASET}
-	zfs create -o compression=lz4 -o atime=off -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
+	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
 	zfs set freebsd:boot-environment=1 ${ZROOT}${DATASET}${BOOTENV}
 	zpool set bootfs=${ZROOT}${DATASET}${BOOTENV} ${ZROOT}
 	if [ $? -eq 1 ]; then
@@ -211,8 +213,12 @@ zroot_init()
 	DISKS=${DEVICE_LIST}
 	for DISK in ${DISKS}
 	do
-		gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK}
-		#/bin/dd if=/boot/boot1.efifat of=/dev/${DISK}"p2" > /dev/null 2>&1
+		if [ "${BOOT_MODE}" == 2 ]; then
+			gpart bootcode -p /boot/boot1.efifat -i 1 ${DISK}
+			gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 2 ${DISK}
+		else
+			gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 ${DISK}
+		fi
 	done
 
 	sysctl kern.geom.debugflags=0
@@ -325,7 +331,6 @@ kern.cam.boot_delay="12000"
 kern.cam.ada.legacy_aliases="0"
 kern.geom.label.disk_ident.enable="0"
 kern.geom.label.gptid.enable="0"
-kern.vty="sc"
 hint.acpi_throttle.0.disabled="0"
 hint.p4tcc.0.disabled="0"
 autoboot_delay="3"
@@ -333,6 +338,10 @@ isboot_load="YES"
 vfs.root.mountfrom="zfs:${ZROOT}${DATASET}${BOOTENV}"
 zfs_load="YES"
 EOF
+
+	if [ "${BOOT_MODE}" == 1  ]; then
+		echo 'kern.vty="sc"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
+	fi
 
 	if [ "${PLATFORM}" == "amd64" ]; then
 		echo 'mlxen_load="YES"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
@@ -697,11 +706,28 @@ menu_zrootsize()
 	fi
 }
 
+menu_bootmode()
+{
+	cdialog --backtitle "$PRDNAME $APPNAME Installer" --title "Boot mode selection menu" \
+	--radiolist "Select system boot mode, default is GPT BIOS." 10 50 4 \
+	1 "GPT BIOS System Boot" on \
+	2 "GPT BIOS+UEFI System Boot" off \
+	2>${tmpfile}
+	if [ 0 -ne $? ]; then
+		exit 0
+	fi
+
+	bootmode=`cat ${tmpfile}`
+
+	export BOOT_MODE=${bootmode}
+}
+
 menu_zroot_create()
 {
 	menu_install
 	menu_swap
 	menu_zrootsize
+	menu_bootmode
 	install_yesno
 	zroot_init
 }
