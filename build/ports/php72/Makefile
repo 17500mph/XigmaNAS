@@ -26,6 +26,7 @@ LIB_DEPENDS+=		libgmp.so:math/gmp
 LIB_DEPENDS+=		libc-client4.so.9:mail/cclient
 LIB_DEPENDS+=		libicui18n.so:devel/icu
 
+CPPFLAGS+=	-DU_USING_ICU_NAMESPACE=1
 USES+=          autoreconf:build
 AUTOTOOLSFILES=	 scripts/phpize.in
 USE_GNOME=	 libxml2
