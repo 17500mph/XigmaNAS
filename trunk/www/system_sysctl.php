@@ -114,6 +114,7 @@ switch($page_method):
 				endif;
 				header($sphere->get_location());
 				exit;
+				break;
 			case $sphere->get_cbm_button_val_delete():
 				updatenotify_cbm_delete($sphere,$cop);
 				header($sphere->get_location());
