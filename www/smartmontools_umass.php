@@ -125,6 +125,7 @@ switch($method):
 				endif;
 				header($sphere->get_location());
 				exit;
+				break;
 			case $sphere->get_cbm_button_val_enable():
 				$sphere->cbm_grid = filter_input(INPUT_POST,$sphere->get_cbm_name(),FILTER_DEFAULT,['flags' => FILTER_REQUIRE_ARRAY,'options' => ['default' => []]]);
 				$updateconfig = false;
