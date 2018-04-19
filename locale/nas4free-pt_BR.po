@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-03-31 16:29+0000\n"
-"PO-Revision-Date: 2018-04-08 15:52+0000\n"
+"POT-Creation-Date: 2018-04-19 22:35+0000\n"
+"PO-Revision-Date: 2018-04-19 20:34+0000\n"
 "Last-Translator: Henrique Corrêa <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-09 23:53+0000\n"
-"X-Generator: Launchpad (build 18599)\n"
+"X-Launchpad-Export-Date: 2018-04-19 22:13+0000\n"
+"X-Generator: Launchpad (build 18617)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
 "X-Poedit-Language: Brazilian Portuguese\n"
@@ -1436,9 +1436,6 @@ msgstr "Usuários CHAP"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
-msgid "CIFS/SMB Information"
-msgstr "Informação sobre CIFS/SMB"
-
 msgid "CIFS/SMB is disabled."
 msgstr "CIFS/SMB desabilitado"
 
@@ -2022,9 +2019,12 @@ msgstr ""
 
 msgid "Count of Data Address Mark errors (or vendor-specific)."
 msgstr ""
+"Contagem de erros de marca de endereço de dados (ou específicos do "
+"fornecedor)."
 
 msgid "Count of attempts to compensate for platter speed variations."
 msgstr ""
+"Contagem de tentativas para compensar as variações de velocidade do disco."
 
 msgid ""
 "Count of buzz routines needed to spin up the drive due to insufficient power."
@@ -2098,6 +2098,8 @@ msgid ""
 "Count of times the heads are loaded off the media. Heads can be unloaded "
 "without actually powering off."
 msgstr ""
+"Contagem de vezes que as cabeças são carregadas da mídia. Cabeças podem ser "
+"descarregadas sem realmente desligar."
 
 msgid "Count of times the link is reset during a data transfer."
 msgstr ""
@@ -2393,6 +2395,8 @@ msgid ""
 "Default - Rsync will choose the 'during' algorithm when talking to rsync "
 "3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
 msgstr ""
+"Padrão - O Rsync escolherá o algoritmo 'durante' ao falar com um Rsync 3.0.0 "
+"ou mais recente e o algoritmo 'antes' ao falar com um Rsync mais antigo."
 
 msgid "Default Device Settings"
 msgstr "Configurações Padrão do Dispositivo"
@@ -2490,7 +2494,7 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Excluir volumes RAID selecionados"
 
 msgid "Delete Selected Records"
-msgstr ""
+msgstr "Excluir Registros Selecionados"
 
 msgid "Delete Selected Resources"
 msgstr "Excluir recursos selecionados"
@@ -3232,7 +3236,7 @@ msgid "Domain"
 msgstr "Domínio"
 
 msgid "Domain Controller Name"
-msgstr ""
+msgstr "Nome do Controlador de Domínio"
 
 msgid "Domain Name"
 msgstr "Nome do Domínio"
@@ -3409,7 +3413,7 @@ msgid "Edit Virtual Device"
 msgstr "Editar Dispositivo Virtual"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Editar Volume"
 
 msgid "Edit WLAN"
 msgstr "Editar WLAN"
@@ -3468,40 +3472,40 @@ msgid "Email Reports Setup"
 msgstr "Configuração de Relatórios por E-mail"
 
 msgid "Email Setup"
-msgstr ""
+msgstr "Configuração de E-mail"
 
 msgid "Emergency Level"
-msgstr ""
+msgstr "Nível de Emergência"
 
 msgid "Enable"
 msgstr "Habilitar"
 
 msgid "Enable 'Asynchronous I/O (AIO).' switch."
-msgstr ""
+msgstr "Ativar o interruptor 'I/O Assíncrona (AIO)'."
 
 msgid "Enable 'Large read/write' switch."
-msgstr ""
+msgstr "Ative a opção 'Large read / write'."
 
 msgid "Enable ACL inheritance."
-msgstr ""
+msgstr "Ativar herança ACL."
 
 msgid "Enable AFP"
-msgstr ""
+msgstr "Habilitar AFP"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Ativar Formato Avançado (tamanho do setor de 4 KB)."
 
 msgid "Enable Asynchronous I/O. (AIO)."
-msgstr ""
+msgstr "Ativar I/O Assíncrona (AIO)."
 
 msgid "Enable Challenge-Response Authentication"
-msgstr ""
+msgstr "Ativar autenticação de resposta de desafio"
 
 msgid "Enable FXP protocol."
 msgstr "Habilitar o protocolo FXP."
 
 msgid "Enable Firmware Upgrade"
-msgstr ""
+msgstr "Ativar Atualização de Firmware"
 
 msgid "Enable NFSv4 server."
 msgstr "habilitar servidor NFSv4"
@@ -3513,6 +3517,8 @@ msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
 msgstr ""
+"Ativar o monitoramento S.M.A.R.T. em dispositivos compatíveis com S.M.A.R.T. "
+"ao serem adicionados à configuração."
 
 msgid "Enable SMTP authentication."
 msgstr "Habilitar autenticação SMTP."
@@ -3521,48 +3527,51 @@ msgid ""
 "Enable SSL/TLS for secured connections. You also need to configure the TLS "
 "trust file. For some servers you may need to disable STARTTLS."
 msgstr ""
+"Ative o SSL/TLS para conexões seguras. Você também precisa configurar o "
+"arquivo de confiança TLS. Para alguns servidores, você pode precisar "
+"desativar o STARTTLS."
 
 msgid "Enable STARTTLS"
-msgstr ""
+msgstr "Ativar STARTTLS"
 
 msgid "Enable Selected Commands"
-msgstr ""
+msgstr "Ativar os Comandos Selecionados"
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Ativar Tarefas Selecionadas"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Ativar as Opções Selecionadas"
 
 msgid "Enable Selected Records"
-msgstr ""
+msgstr "Ativar os Registros Selecionados"
 
 msgid "Enable Selected Rsync Jobs"
-msgstr ""
+msgstr "Ativar as Tarefas Rsync Selecionadas"
 
 msgid "Enable Selected Rsync Modules"
-msgstr ""
+msgstr "Ativar os Módulos Rsync Selecionados"
 
 msgid "Enable Server"
-msgstr ""
+msgstr "Ativar Servidor"
 
 msgid "Enable Setting"
-msgstr ""
+msgstr "Ativar Configuração"
 
 msgid "Enable TLS connections."
-msgstr ""
+msgstr "Ativar conexões TLS."
 
 msgid "Enable TiVo support."
-msgstr ""
+msgstr "Ativar o suporte ao TiVo."
 
 msgid "Enable Time Machine support"
 msgstr "habilitar suporte Time Machine"
 
 msgid "Enable ZFS ACL."
-msgstr ""
+msgstr "Ativar a ACL do ZFS."
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
-msgstr ""
+msgstr "Ativar o Zeroconf/Bonjour para anunciar serviços deste dispositivo."
 
 msgid "Enable anonymous bind."
 msgstr "Habilitar associação anônima."
@@ -3571,49 +3580,49 @@ msgid "Enable authentication."
 msgstr "Habilitar autenticação."
 
 msgid "Enable checks of the server certificate."
-msgstr ""
+msgstr "Ativar verificações do certificado do servidor."
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de frequência da CPU."
 
 msgid "Enable collecting CPU temperature statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de temperatura da CPU."
 
 msgid "Enable collecting CPU usage statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de uso da CPU."
 
 msgid "Enable collecting UPS statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas do UPS."
 
 msgid "Enable collecting ZFS ARC usage statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de uso do ZFS ARC."
 
 msgid "Enable collecting average system load statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas médias de carregamento do sistema."
 
 msgid "Enable collecting disk space usage statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de uso de espaço em disco."
 
 msgid "Enable collecting memory usage statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de uso de memória."
 
 msgid "Enable collecting network latency statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de latência de rede."
 
 msgid "Enable collecting network traffic statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de tráfego de rede."
 
 msgid "Enable collecting system process statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas do processo do sistema."
 
 msgid "Enable collecting uptime statistics."
-msgstr ""
+msgstr "Ativar a coleta de estatísticas de tempo de atividade."
 
 msgid "Enable compression."
 msgstr "Habilitar compressão."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Ative o protetor de tela do console."
 
 msgid "Enable device polling"
 msgstr "Habilitar interrogação de dispositivo"
@@ -3631,7 +3640,7 @@ msgid "Enable encryption."
 msgstr "Ative criptografia."
 
 msgid "Enable extended attribute support."
-msgstr ""
+msgstr "Ativar o suporte de atributo estendido."
 
 msgid "Enable extended attributes for this file system."
 msgstr "Habilitar atributos extendidos para este sistema de arquivos."
@@ -3647,37 +3656,37 @@ msgid "Enable guest access."
 msgstr "Habilitar o acesso a convidados."
 
 msgid "Enable inotify."
-msgstr ""
+msgstr "Ativar inotify."
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Habilitar autenticação interativa por teclado."
 
 msgid "Enable large read/write."
-msgstr ""
+msgstr "Ativar leitura/gravação grande."
 
 msgid "Enable mapping DOS attributes."
-msgstr ""
+msgstr "Ativar o mapeamento de atributos DOS."
 
 msgid "Enable module listing."
 msgstr "Habilitar a listagem de módulos."
 
 msgid "Enable nested virtualization"
-msgstr ""
+msgstr "Ativar virtualização aninhada"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Habilitar a troca com associado (PEX)."
 
 msgid "Enable permission inheritance."
-msgstr ""
+msgstr "Ativar herança de permissões."
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Habilitar o encaminhamento de porta via NAT-PMP ou UPnP."
 
 msgid "Enable proxy authentication."
-msgstr ""
+msgstr "Habilitar autenticação de proxy."
 
 msgid "Enable recycle bin."
-msgstr ""
+msgstr "Ativar a lixeira."
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Habilitar monitoramento remoto da UPS conectada localmente."
@@ -3694,16 +3703,16 @@ msgid "Enable reverse DNS lookup."
 msgstr "Habilitar pesquisa por DNS reverso."
 
 msgid "Enable second local connected UPS."
-msgstr ""
+msgstr "Ativar o segundo UPS local conectado."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Ativar o console serial."
 
 msgid "Enable service SSH when disabled"
-msgstr ""
+msgstr "Ativar o serviço SSH quando desativado"
 
 msgid "Enable shadow copy."
-msgstr ""
+msgstr "Ativar cópia de sombra."
 
 msgid "Enable store DOS attributes."
 msgstr "Habilitar armazenamento de atributos do DOS."
@@ -3712,29 +3721,37 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Habilitar o protocolo de identificação (RFC1413)."
 
 msgid "Enable the server power control utility."
-msgstr ""
+msgstr "Ativar o utilitário de controle de energia do servidor."
 
 msgid ""
 "Enable this option if you want to edit configuration pages directly without "
 "the need to switch to edit mode."
 msgstr ""
+"Ative esta opção se desejar editar diretamente as páginas de configuração "
+"sem a necessidade de alternar para o modo de edição."
 
 msgid "Enable this option to allow any IP address to access the WebGUI."
 msgstr ""
+"Ative esta opção para permitir que qualquer endereço IP acesse o WebGUI."
 
 msgid "Enable this option to make host USB available to clients."
-msgstr ""
+msgstr "Ative esta opção para disponibilizar o USB do host para os clientes."
 
 msgid ""
 "Enable this option to make host USB serial ports available to clients."
 msgstr ""
+"Ative esta opção para disponibilizar portas seriais USB do host para os "
+"clientes."
 
 msgid "Enable this option to make host serial ports available to clients."
 msgstr ""
+"Ative esta opção para disponibilizar as portas seriais do host para os "
+"clientes."
 
 msgid ""
 "Enable this option to reduce the height of the page header to a minimum."
 msgstr ""
+"Ative esta opção para reduzir a altura do cabeçalho da página ao mínimo."
 
 msgid "Enable this option to update the CPU microcode on startup."
 msgstr ""
@@ -6188,6 +6205,9 @@ msgstr ""
 
 msgid "No file was uploaded."
 msgstr "Nenhum arquivo foi enviado."
+
+msgid "No information available."
+msgstr ""
 
 msgid "No new disk found."
 msgstr "Novo disco não foi encontrado."
@@ -11358,3 +11378,6 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "CIFS/SMB Information"
+#~ msgstr "Informação sobre CIFS/SMB"
