@@ -850,6 +850,8 @@ abstract class co_property_container_param extends co_property_container {
 			set_description($description)->
 			set_placeholder($placeholder)->
 			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(256)->
 			set_filter(FILTER_UNSAFE_RAW)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => ''])->
