@@ -828,3 +828,53 @@ abstract class co_property_container {
  *	}
  */
 }
+abstract class co_property_container_param extends co_property_container {
+	protected $x_uuid;
+	public function init_uuid() {
+		$property = $this->x_uuid = new property_uuid($this);
+		return $property;
+	}
+	public function get_uuid() {
+		return $this->x_uuid ?? $this->init_uuid();
+	}
+	protected $x_description;
+	public function init_description() {
+		$property = new property_text($this);
+		$property->
+			set_name('description')->
+			set_title(gtext('Description'));
+		$description = gtext('Enter a description for your reference');
+		$placeholder = gtext('Enter a description');
+		$property->
+			set_id('description')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_filter(FILTER_UNSAFE_RAW)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => ''])->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function get_description() {
+		return $this->x_description ?? $this->init_description();
+	}
+	protected $x_enable;
+	public function init_enable() {
+		$property = $this->x_enable = new property_enable($this);
+		return $property;
+	}
+	public function get_enable() {
+		return $this->x_enable ?? $this->init_enable();
+	}
+	protected $x_protected;
+	public function init_protected() {
+		$property = $this->x_protected = new property_protected($this);
+		return $property;
+	}
+	public function get_protected() {
+		return $this->x_protected ?? $this->init_protected();
+	}
+}
