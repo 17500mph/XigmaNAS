@@ -6,7 +6,7 @@
 #
 # Run file system checks
 #
-# $FreeBSD: /etc/rc.d/fsck	Revision 298514
+# $FreeBSD: /etc/rc.d/fsck	Revision 331216
 #
 # NAS4Free Changes: - Refactor fsck_start to process configured disks only.
 # 	   	    - Add fsck_start_root to check root file system on 'full' installations.
@@ -70,21 +70,21 @@ fsck_start()
 				fsck -p -t ${_fstype} ${_devicespecialfile}
 			fi
 
-		err=$?
-		if [ ${err} -eq 3 ]; then
-			echo "Warning! Some of the devices might not be" \
-			    "available; retrying"
-			root_hold_wait
-			check_startmsgs && echo "Restarting file system checks:"
-			if checkyesno background_fsck; then
-				fsck -F -p
-			else
-				fsck -p
-			fi
 			err=$?
-		fi
+			if [ ${err} -eq 3 ]; then
+				echo "Warning! Some of the devices might not be" \
+				    "available; retrying"
+				root_hold_wait
+				check_startmsgs && echo "Restarting file system checks:"
+				if checkyesno background_fsck; then
+					fsck -F -p
+				else
+					fsck -p
+				fi
+				err=$?
+			fi
 
-		case ${err} in
+			case ${err} in
 			0)
 				;;
 			2)
@@ -96,7 +96,7 @@ fsck_start()
 				echo "Reboot failed; help!"
 				stop_boot
 				;;
-			8)
+			8|16)
 				if checkyesno fsck_y_enable; then
 					echo "File system preen failed, trying fsck -y."
 					fsck -y -t ${_fstype} ${_devicespecialfile}
@@ -151,7 +151,7 @@ fsck_start_root()
 		echo "Reboot failed; help!"
 		stop_boot
 		;;
-	8)
+	8|16)
 		if checkyesno fsck_y_enable; then
 			echo "File system preen failed, trying fsck -y."
 			fsck -y
