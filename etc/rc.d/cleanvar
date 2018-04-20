@@ -1,12 +1,14 @@
 #!/bin/sh
 #
+# $FreeBSD$
+#
 # Part of NAS4Free (http://www.nas4free.org).
 # Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
 # Purge /var directory
-# $FreeBSD: /etc/rc.d/cleanvar	Revision 298514
-# ---> Change: Skip over *.hints files, otherwise 'xml' cmd fails!
+# $FreeBSD: /etc/rc.d/cleanvar	Revision 332038
+# ---> Change: Skip over *.hints files, otherwise 'xml' cmd will fail!
 #
 
 # PROVIDE: cleanvar
@@ -25,36 +27,6 @@ stop_cmd=":"
 extra_commands="reload"
 reload_cmd="${name}_start"
 
-purgedir()
-{
-	local dir file
-
-	if [ $# -eq 0 ]; then
-		purgedir .
-	else
-		for dir
-		do
-		(
-			cd "$dir" && for file in .* *
-			do
-				# Skip over logging sockets
-				[ -S "$file" -a "$file" = "log" ] && continue
-				[ -S "$file" -a "$file" = "logpriv" ] && continue
-				[ ."$file" = .. -o ."$file" = ... ] && continue
-				# Skip over *.hints files
-				[ `expr \"$file\" : \".*.hints\"` -gt 0 ] && continue
-				if [ -d "$file" -a ! -L "$file" ]
-				then
-					purgedir "$file"
-				else
-					rm -f -- "$file"
-				fi
-			done
-		)
-		done
-	fi
-}
-
 cleanvar_prestart()
 {
 	# These files must be removed only the first time this script is run
@@ -63,19 +35,20 @@ cleanvar_prestart()
 	rm -f /var/run/clean_var /var/spool/lock/clean_var
 }
 
-cleanvar_start ()
+cleanvar_start()
 {
 	if [ -d /var/run -a ! -f /var/run/clean_var ]; then
-		purgedir /var/run
-		# And an initial utmpx active session file
-		(cd /var/run && cp /dev/null utx.active && chmod 644 utx.active)
+		# Skip over logging sockets and .hints regular files
+		find /var/run \( -type f ! -name "*.hints" -or -type s ! -name log -and ! -name logpriv \) -delete
 		>/var/run/clean_var
 	fi
 	if [ -d /var/spool/lock -a ! -f /var/spool/lock/clean_var ]; then
-		purgedir /var/spool/lock
+		find /var/spool/lock -type f -delete
 		>/var/spool/lock/clean_var
 	fi
-	rm -rf /var/spool/uucp/.Temp/*
+	if [ -d /var/spool/uucp/.Temp ]; then
+		find /var/spool/uucp/.Temp -delete
+	fi
 }
 
 load_rc_config $name
