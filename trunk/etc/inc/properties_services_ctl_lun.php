@@ -1294,7 +1294,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 	}
 	public function init_opt_num_threads() {
 		$property = parent::init_opt_num_threads();
-		$description = gtext('');
+		$description = gtext('Specifies number of backend threads to use for this LUN.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,8})$/';
 		$property->
 			set_id('opt_num_threads')->
