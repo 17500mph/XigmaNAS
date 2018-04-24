@@ -1,0 +1,345 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+# Part of NAS4Free (http://www.nas4free.org).
+# Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+# All rights reserved.
+
+# PROVIDE: ctld
+# REQUIRE: FILESYSTEMS
+# BEFORE: DAEMON
+# KEYWORD: nojail
+
+. /etc/rc.subr
+. /etc/configxml.subr
+
+name="ctld"
+desc="CAM Target Layer / iSCSI target daemon"
+rcvar="ctld_enable"
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/${name}"
+required_files="/etc/ctl.conf"
+required_modules="ctl"
+extra_commands="reload mkconf"
+
+load_rc_config $name
+
+# Custom commands
+mkconf_cmd="${name}_mkconf"
+start_precmd="${name}_prestart"
+#start_cmd="${name}_start"
+reload_precmd="${name}_prereload"
+#reload_cmd="${name}_reload"
+#stop_cmd="${name}_stop"
+
+# Defaults
+ctld_enable="${ctld_enable:=NO}"
+ctld_conf="/etc/ctl.conf"
+
+ctld_mkconf()
+{
+	echo "# global settings" > ${ctld_conf}
+	/usr/local/bin/xml sel --template \
+		--match "//ctld/settings" \
+			--if "string-length(debug) > 0" \
+				--value-of "concat('debug',' ',debug)" --nl \
+			--break \
+			--if "string-length(maxproc) > 0" \
+				--value-of "concat('maxproc',' ',maxproc)" --nl \
+			--break \
+			--if "string-length(timeout) > 0" \
+				--value-of "concat('timeout',' ',timeout)" --nl \
+			--break \
+			--if "string-length(isns_server) > 0" \
+				--value-of "concat('isns-server',' ',isns_server)" \
+				--if "string-length(isns_server_port) > 0" \
+					--value-of "concat(':',isns_server_port)" \
+				--break \
+				--nl \
+			--break \
+			--if "string-length(isns_period) > 0" \
+				--value-of "concat('isns-period',' ',isns_period)" --nl \
+			--break \
+			--if "string-length(isns_timeout) > 0" \
+				--value-of "concat('isns-timeout',' ',isns_timeout)" --nl \
+			--break \
+			--match "auxparam" \
+				--value-of "." --nl \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
+	echo "# auth-group configuration" >> ${ctld_conf}
+	/usr/local/bin/xml sel --template \
+		--match "//ctld/ctl_auth_group/param[enable]" \
+			--if "string-length(name) > 0" \
+				--if "string-length(description) > 0" \
+					--value-of "concat('# ',description)" --nl \
+				--break \
+				--value-of "concat('auth-group',' ',name,' {')" --nl \
+				--if "string-length(auth_type) > 0" \
+					--value-of "concat('auth-type',' ',auth_type)" --nl \
+				--break \
+				--match "chap/param[enable]" \
+					--if "string-length(user) > 0 and string-length(secret) > 0" \
+						--value-of "concat('chap',' \"',user,'\" \"',secret,'\"')" --nl \
+					--break \
+				--break \
+				--match "chap_mutual/param[enable]" \
+					--if "string-length(user) > 0 and string-length(secret) > 0 and string-length(mutual_user) > 0 and string-length(mutual_secret) > 0" \
+						--value-of "concat('chap-mutual',' \"',user,'\" \"',secret,'\" \"',mutual_user,'\" \"',mutual_secret,'\"')" --nl \
+					--break \
+				--break \
+				--match "initiator_name/param[enable]" \
+					--if "string-length(name) > 0" \
+						--value-of "concat('initiator-name',' \"',name,'\"')" --nl \
+					--break \
+				--break \
+				--match "initiator_portal/param[enable]" \
+					--if "string-length(address) > 0" \
+						--value-of "concat('initiator-portal','\"',address)" \
+						--if "string-length(prefixlen) > 0" \
+							--value-of "concat('/',prefixlen)" \
+						--break \
+						--output '"' --nl \
+					--break \
+				--break \
+				--match "auxparam" \
+					--value-of "." --nl \
+				--break \
+				--output '}' --nl \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
+	echo "# portal-group configuration" >> ${ctld_conf}
+	/usr/local/bin/xml sel --template \
+		--match "//ctld/ctl_portal_group/param[enable]" \
+			--if "string-length(name) > 0" \
+				--if "string-length(description) > 0" \
+					--value-of "concat('# ',description)" --nl \
+				--break \
+				--value-of "concat('portal-group',' ',name,' {')" --nl \
+				--if "string-length(discovery_auth_group) > 0" \
+					--value-of "concat('discovery-auth-group',' ',discovery_auth_group)" --nl \
+				--break \
+				--if "string-length(discovery_auth_filter) > 0" \
+					--value-of "concat('discovery-auth-filter',' ',discovery_auth_filter)" --nl \
+				--break \
+				--if "string-length(offload) > 0" \
+					--value-of "concat('offload',' ',offload)" --nl \
+				--break \
+				--if "string-length(redirect) > 0" \
+					--value-of "concat('redirect',' ',redirect)" --nl \
+				--break \
+				--if "string-length(tag) > 0" \
+					--value-of "concat('tag',' ',tag)" --nl \
+				--break \
+				--if "count(foreign) > 0" \
+					--output "foreign" --nl \
+				--break \
+				--match "listen/param[enable]" \
+					--if "string-length(address) > 0" \
+						--value-of "concat('listen',' ',address)" \
+						--if "string-length(port) > 0" \
+							--value-of "concat(':',port)" \
+						--break \
+						--nl \
+					--break \
+				--break \
+				--match "option/param[enable]" \
+					--if "string-length(name) > 0 and string-length(value) > 0" \
+						--value-of "concat('option',' ',name,' ',value)" --nl \
+					--break \
+				--break \
+				--match "auxparam" \
+					--value-of "." --nl \
+				--break \
+				--output "}" --nl \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
+	echo "# lun configuration" >> ${ctld_conf}
+	/usr/local/bin/xml sel --template \
+		--match "//ctld/ctl_lun/param[enable]" \
+			--if "string-length(name) > 0" \
+				--if "string-length(description) > 0" \
+					--value-of "concat('# ',description)" --nl \
+				--break \
+				--value-of "concat('lun',' ',name,' {')" --nl \
+				--if "string-length(backend) > 0" \
+					--value-of "concat('backend',' ',backend)" --nl \
+				--break \
+				--if "string-length(blocksize) > 0" \
+					--value-of "concat('blocksize',' ',blocksize)" --nl \
+				--break \
+				--if "string-length(ctl_lun) > 0" \
+					--value-of "concat('ctl_lun',' ',ctl_lun)" --nl \
+				--break \
+				--if "string-length(device_id) > 0" \
+					--value-of "concat('device_id',' ',device_id)" --nl \
+				--break \
+				--if "string-length(device_type) > 0" \
+					--value-of "concat('device_type',' ',device_type)" --nl \
+				--break \
+				--if "string-length(path) > 0" \
+					--value-of "concat('path',' ',path)" --nl \
+				--break \
+				--if "string-length(serial) > 0" \
+					--value-of "concat('serial',' ',serial)" --nl \
+				--break \
+				--if "string-length(size) > 0" \
+					--value-of "concat('size',' \"',size,'\"')" --nl \
+				--break \
+				--if "string-length(opt_vendor) > 0" \
+					--value-of "concat('vendor',' \"',opt_vendor,'\"')" --nl \
+				--break \
+				--if "string-length(opt_product) > 0" \
+					--value-of "concat('product',' ',opt_product)" --nl \
+				--break \
+				--if "string-length(opt_revision) > 0" \
+					--value-of "concat('revision',' ',opt_revision)" --nl \
+				--break \
+				--if "string-length(opt_scsiname) > 0" \
+					--value-of "concat('scsiname',' ',opt_scsiname)" --nl \
+				--break \
+				--if "string-length(opt_eui) > 0" \
+					--value-of "concat('eui',' ',opt_eui)" --nl \
+				--break \
+				--if "string-length(opt_naa) > 0" \
+					--value-of "concat('naa',' 0x',opt_naa)" --nl \
+				--break \
+				--if "string-length(opt_uuid) > 0" \
+					--value-of "concat('uuid',' ',opt_uuid)" --nl \
+				--break \
+				--if "string-length(opt_ha_role) > 0" \
+					--value-of "concat('ha_role',' ',opt_ha_role)" --nl \
+				--break \
+				--if "string-length(opt_insecure_tpc) > 0" \
+					--value-of "concat('insecure_tpc',' ',opt_insecure_tpc)" --nl \
+				--break \
+				--if "string-length(opt_readcache) > 0" \
+					--value-of "concat('readcache',' ',opt_readcache)" --nl \
+				--break \
+				--if "string-length(opt_readonly) > 0" \
+					--value-of "concat('readonly',' ',opt_readonly)" --nl \
+				--break \
+				--if "string-length(opt_removable) > 0" \
+					--value-of "concat('removable',' ',opt_removable)" --nl \
+				--break \
+				--if "string-length(opt_reordering) > 0" \
+					--value-of "concat('reordering',' ',opt_reordering)" --nl \
+				--break \
+				--if "string-length(opt_serseq) > 0" \
+					--value-of "concat('serseq',' ',opt_serseq)" --nl \
+				--break \
+				--if "string-length(opt_pblocksize) > 0" \
+					--value-of "concat('pblocksize',' ',opt_pblocksize)" --nl \
+				--break \
+				--if "string-length(opt_pblockoffset) > 0" \
+					--value-of "concat('pblockoffset',' ',opt_pblockoffset)" --nl \
+				--break \
+				--if "string-length(opt_ublocksize) > 0" \
+					--value-of "concat('ublocksize',' ',opt_ublocksize)" --nl \
+				--break \
+				--if "string-length(opt_ublockoffset) > 0" \
+					--value-of "concat('ublockoffset',' ',opt_ublockoffset)" --nl \
+				--break \
+				--if "string-length(opt_rpm) > 0" \
+					--value-of "concat('rpm',' ',opt_rpm)" --nl \
+				--break \
+				--if "string-length(opt_formfactor) > 0" \
+					--value-of "concat('formfactor',' ',opt_formfactor)" --nl \
+				--break \
+				--if "string-length(opt_provisioning_type) > 0" \
+					--value-of "concat('provisioning_type',' ',opt_provisioning_type)" --nl \
+				--break \
+				--if "string-length(opt_unmap) > 0" \
+					--value-of "concat('unmap',' ',opt_unmap)" --nl \
+				--break \
+				--if "string-length(opt_unmap_max_lba) > 0" \
+					--value-of "concat('unmap_max_lba',' ',opt_unmap_max_lba)" --nl \
+				--break \
+				--if "string-length(opt_unmap_max_descr) > 0" \
+					--value-of "concat('unmap_max_descr',' ',opt_unmap_max_descr)" --nl \
+				--break \
+				--if "string-length(opt_write_same_max_lba) > 0" \
+					--value-of "concat('write_same_max_lba',' ',opt_write_same_max_lba)" --nl \
+				--break \
+				--if "string-length(opt_avail_threshold) > 0" \
+					--value-of "concat('avail-threshold',' ',opt_avail_threshold)" --nl \
+				--break \
+				--if "string-length(opt_used_threshold) > 0" \
+					--value-of "concat('used-threshold',' ',opt_used_threshold)" --nl \
+				--break \
+				--if "string-length(opt_pool_avail_threshold) > 0" \
+					--value-of "concat('pool-avail-threshold',' ',opt_pool_avail_threshold)" --nl \
+				--break \
+				--if "string-length(opt_pool_used_threshold) > 0" \
+					--value-of "concat('pool-used-threshold',' ',opt_pool_used_threshold)" --nl \
+				--break \
+				--if "string-length(opt_writecache) > 0" \
+					--value-of "concat('writecache',' ',opt_writecache)" --nl \
+				--break \
+				--if "string-length(opt_file) > 0" \
+					--value-of "concat('file',' ',opt_file)" --nl \
+				--break \
+				--if "string-length(opt_num_threads) > 0" \
+					--value-of "concat('num_threads',' ',opt_num_threads)" --nl \
+				--break \
+				--if "string-length(opt_capacity) > 0" \
+					--value-of "concat('capacity',' ',opt_capacity)" --nl \
+				--break \
+				--match "auxparam" \
+					--value-of "." --nl \
+				--break \
+				--output '}' --nl \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
+	echo "# target configuration" >> ${ctld_conf}
+	/usr/local/bin/xml sel --template \
+		--match "//ctld/ctl_target/param[enable]" \
+			--if "string-length(name) > 0" \
+				--if "string-length(description) > 0" \
+					--value-of "concat('# ',description)" --nl \
+				--break \
+				--value-of "concat('target',' ',name,' {')" --nl \
+				--if "string-length(alias) > 0" \
+					--value-of "concat('alias',' \"',alias,'\"')" --nl \
+				--break \
+				--if "string-length(auth_group) > 0" \
+					--value-of "concat('auth-group',' ',auth_group)" --nl \
+				--break \
+				--if "string-length(portal_group) > 0" \
+					--value-of "concat('portal-group',' ',portal_group)" --nl \
+				--break \
+				--match "port[enable]" \
+					--if "string-length(name) > 0" \
+						--value-of "concat('port',' ',name)" --nl \
+					--break \
+				--break \
+				--if "string-length(redirect) > 0" \
+					--value-of "concat('redirect',' ',redirect)" --nl \
+				--break \
+				--match "lun[enable]" \
+					--if "string-length(number) > 0 and string-length(name) > 0" \
+						--value-of "concat('lun',' ',number,' \"',name,'\"')" --nl \
+					 --break \
+				--break \
+				--match "auxparam" \
+					--value-of "." --nl \
+				--break \
+				--output '}' --nl \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
+}
+ctld_prestart()
+{
+	ctld_mkconf
+}
+ctl_prereload()
+{
+	ctld_mkconf
+}
+run_rc_command "$1"
