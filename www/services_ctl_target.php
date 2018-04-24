@@ -58,7 +58,7 @@ function ctl_target_sphere() {
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected targets?'));
 	$sphere->cbm_disable(gtext('Do you want to disable selected targets?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected targets?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to enable selected targets?'));
+	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected targets?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'ctld','ctl_target','param');
 	if(!empty($sphere->grid)):
