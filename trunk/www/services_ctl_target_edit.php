@@ -58,6 +58,7 @@ $rmo->add('GET','add',PAGE_MODE_ADD);
 $rmo->add('GET','edit',PAGE_MODE_EDIT);
 $rmo->add('POST','add',PAGE_MODE_ADD);
 $rmo->add('POST','cancel',PAGE_MODE_POST);
+$rmo->add('POST','clone',PAGE_MODE_CLONE);
 $rmo->add('POST','edit',PAGE_MODE_EDIT);
 $rmo->add('POST','save',PAGE_MODE_POST);
 $rmo->set_default('POST','cancel',PAGE_MODE_POST);
@@ -85,6 +86,9 @@ switch($page_method):
 			case 'cancel': // cancel - nothing to do
 				$sphere->row[$sphere->get_row_identifier()] = NULL;
 				break;
+			case 'clone':
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
+				break;
 			case 'edit': // edit requires a resource id, get it from input and validate
 				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input();
 				break;
@@ -111,7 +115,7 @@ $sphere->row_id = array_search_ex($sphere->get_row_identifier_value(),$sphere->g
 $updatenotify_mode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value()); // get updatenotify mode
 $record_mode = RECORD_ERROR;
 if(false === $sphere->row_id): // record does not exist in config
-	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_POST],true)): // ADD or POST
+	if(in_array($page_mode,[PAGE_MODE_ADD,PAGE_MODE_CLONE,PAGE_MODE_POST],true)): // ADD or CLONE or POST
 		switch($updatenotify_mode):
 			case UPDATENOTIFY_MODE_UNKNOWN:
 				$record_mode = RECORD_NEW;
@@ -155,6 +159,14 @@ switch($page_mode):
 		foreach($a_referer as $referer):
 			$sphere->row[$referer->get_name()] = $referer->get_defaultvalue();
 		endforeach;
+		break;
+	case PAGE_MODE_CLONE:
+		foreach($a_referer as $referer):
+			$name = $referer->get_name();
+			$sphere->row[$name] = $referer->validate_input() ?? $referer->get_defaultvalue();
+		endforeach;
+		//	adjust page mode
+		$page_mode = PAGE_MODE_ADD;
 		break;
 	case PAGE_MODE_EDIT:
 		$source = $sphere->grid[$sphere->row_id];
@@ -209,15 +221,10 @@ switch($page_mode):
 		break;
 endswitch;
 $pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
-$jcode = NULL;
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
-//	add additional javascript code
-if(isset($jcode)):
-	$body->addJavaScript($jcode);
-endif;
 //	add tab navigation
 $document->
 	add_area_tabnav()->
@@ -255,10 +262,20 @@ if($isrecordnew):
 else:
 	$buttons->
 		ins_button_save();
+	if($prerequisites_ok && empty($input_errors)):
+		$buttons->ins_button_clone();
+	endif;
 endif;
 $buttons->
 	ins_button_cancel();
 $buttons->
 	addElement('input',['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+//	additional javascript code
+$body->
+	addJavaScript($sphere->get_js());
+$body->
+	add_js_on_load($sphere->get_js_on_load());
+$body->
+	add_js_document_ready($sphere->get_js_document_ready());
 $document->
 	render();
