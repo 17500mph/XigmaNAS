@@ -18,28 +18,28 @@ name="ctld"
 desc="CAM Target Layer / iSCSI target daemon"
 rcvar="ctld_enable"
 pidfile="/var/run/${name}.pid"
+ctld_config="/var/etc/ctl.conf"
+
 command="/usr/sbin/${name}"
-required_files="/etc/ctl.conf"
+command_args="-f ${ctld_config}"
 required_modules="ctl"
-extra_commands="reload mkconf"
 
 load_rc_config $name
 
 # Custom commands
-mkconf_cmd="${name}_mkconf"
-start_precmd="${name}_prestart"
-#start_cmd="${name}_start"
-reload_precmd="${name}_prereload"
-#reload_cmd="${name}_reload"
-#stop_cmd="${name}_stop"
+mkconf_cmd="ctld_mkconf"
+reload_precmd="ctld_prereload"
+start_precmd="ctld_prestart"
+extra_commands="reload mkconf"
 
 # Defaults
 ctld_enable="${ctld_enable:=NO}"
-ctld_conf="/etc/ctl.conf"
 
 ctld_mkconf()
 {
-	echo "# global settings" > ${ctld_conf}
+	cat /dev/null > ${ctld_config}
+	chmod 600 ${ctld_config}
+	echo "# global settings" > ${ctld_config}
 	/usr/local/bin/xml sel --template \
 		--match "//ctld/settings" \
 			--if "string-length(debug) > 0" \
@@ -68,8 +68,8 @@ ctld_mkconf()
 				--value-of "." --nl \
 			--break \
 		--break \
-		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
-	echo "# auth-group configuration" >> ${ctld_conf}
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_config}
+	echo "# auth-group configuration" >> ${ctld_config}
 	/usr/local/bin/xml sel --template \
 		--match "//ctld/ctl_auth_group/param[enable]" \
 			--if "string-length(name) > 0" \
@@ -110,8 +110,8 @@ ctld_mkconf()
 				--output '}' --nl \
 			--break \
 		--break \
-		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
-	echo "# portal-group configuration" >> ${ctld_conf}
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_config}
+	echo "# portal-group configuration" >> ${ctld_config}
 	/usr/local/bin/xml sel --template \
 		--match "//ctld/ctl_portal_group/param[enable]" \
 			--if "string-length(name) > 0" \
@@ -157,8 +157,8 @@ ctld_mkconf()
 				--output "}" --nl \
 			--break \
 		--break \
-		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
-	echo "# lun configuration" >> ${ctld_conf}
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_config}
+	echo "# lun configuration" >> ${ctld_config}
 	/usr/local/bin/xml sel --template \
 		--match "//ctld/ctl_lun/param[enable]" \
 			--if "string-length(name) > 0" \
@@ -295,8 +295,8 @@ ctld_mkconf()
 				--output '}' --nl \
 			--break \
 		--break \
-		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
-	echo "# target configuration" >> ${ctld_conf}
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_config}
+	echo "# target configuration" >> ${ctld_config}
 	/usr/local/bin/xml sel --template \
 		--match "//ctld/ctl_target/param[enable]" \
 			--if "string-length(name) > 0" \
@@ -332,13 +332,13 @@ ctld_mkconf()
 				--output '}' --nl \
 			--break \
 		--break \
-		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_conf}
+		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_config}
 }
-ctld_prestart()
+ctld_prereload()
 {
 	ctld_mkconf
 }
-ctld_prereload()
+ctld_prestart()
 {
 	ctld_mkconf
 }
