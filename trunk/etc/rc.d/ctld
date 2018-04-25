@@ -10,6 +10,7 @@
 # REQUIRE: FILESYSTEMS
 # BEFORE: DAEMON
 # KEYWORD: nojail
+# XQUERY: --if "count(//ctld/enable) > 0" --output "0" --else --output "1" --break
 
 . /etc/rc.subr
 . /etc/configxml.subr
