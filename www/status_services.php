@@ -53,6 +53,7 @@ if('dom0' !== $g['arch']):
 	$a_service[] = ['desc' => gtext('Syncthing'),'link' => 'services_syncthing.php','config' => 'syncthing','scriptname' => 'syncthing'];
 	$a_service[] = ['desc' => gtext('Unison'),'link' => 'services_unison.php','config' => 'unison','scriptname' => 'unison'];
 	$a_service[] = ['desc' => gtext('iSCSI Target'),'link' => 'services_iscsitarget.php','config' => 'iscsitarget','scriptname' => 'iscsi_target'];
+	$a_service[] = ['desc' => gtext('CAM Target Layer / iSCSI Target'),'link' => 'services_ctl.php','config' => 'ctld','scriptname' => 'ctld'];
 	$a_service[] = ['desc' => gtext('DLNA/UPnP Fuppes'),'link' => 'services_fuppes.php','config' => 'upnp','scriptname' => 'fuppes'];
 	$a_service[] = ['desc' => gtext('DLNA/UPnP MiniDLNA'),'link' => 'services_minidlna.php','config' => 'minidlna','scriptname' => 'minidlna'];
 	$a_service[] = ['desc' => gtext('iTunes/DAAP'),'link' => 'services_daap.php','config' => 'daap','scriptname' => 'mt-daapd'];
@@ -66,6 +67,7 @@ else:
 	$a_service[] = ['desc' => gtext('SSH'),'link' => 'services_sshd.php','config' => 'sshd','scriptname' => 'sshd'];
 	$a_service[] = ['desc' => gtext('NFS'),'link' => 'services_nfs.php','config' => 'nfsd','scriptname' => 'nfsd'];
 	$a_service[] = ['desc' => gtext('iSCSI Target'),'link' => 'services_iscsitarget.php','config' => 'iscsitarget','scriptname' => 'iscsi_target'];
+	$a_service[] = ['desc' => gtext('CAM Target Layer / iSCSI Target'),'link' => 'services_ctl.php','config' => 'ctld','scriptname' => 'ctld'];
 	$a_service[] = ['desc' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
 endif;
 $pgtitle = [gtext('Status'),gtext('Services')];

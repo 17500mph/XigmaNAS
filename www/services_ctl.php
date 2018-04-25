@@ -42,7 +42,7 @@ function ctl_sphere() {
 	
 	$sphere = new co_sphere_row('services_ctl','php');
 	$sphere->enadis(true);
-	$sphere->grid = &array_make_branch($config,'ctld','settings');
+	$sphere->grid = &array_make_branch($config,'ctld');
 	return $sphere;
 }
 //	init properties and sphere
