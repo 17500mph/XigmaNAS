@@ -338,7 +338,7 @@ ctld_prestart()
 {
 	ctld_mkconf
 }
-ctl_prereload()
+ctld_prereload()
 {
 	ctld_mkconf
 }
