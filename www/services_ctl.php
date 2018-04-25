@@ -185,7 +185,7 @@ switch($page_action):
 			write_config();
 			$retval = 0;
 			config_lock();
-			$retval |= rc_update_service('ctld');
+			$retval |= rc_update_reload_service('ctld');
 			config_unlock();
 			$_SESSION['submit'] = $sphere->get_basename();
 			$_SESSION[$sphere->get_basename()] = $retval;
