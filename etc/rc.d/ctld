@@ -22,7 +22,7 @@ ctld_config="/var/etc/ctl.conf"
 
 command="/usr/sbin/${name}"
 command_args="-f ${ctld_config}"
-required_modules="ctl"
+required_modules="ctl iscsi cfiscsi"
 
 load_rc_config $name
 
