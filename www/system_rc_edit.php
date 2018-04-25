@@ -206,7 +206,7 @@ $document->render();
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a name for the command.'),false, 40,false,false,40,gtext('Enter a name'));
 			html_inputbox2('value',gtext('Command'),$sphere_record['value'],gtext('The command to be executed.'),true,60,false,false,1024,gtext('Enter the command'));
 			html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('Enter a description for your reference.'),false,60,false,false,60,gtext('Enter a comment'));
-			html_combobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Select at which stage the command should be executed.'),true,false);
+			html_radiobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Select at which stage the command should be executed.'),true,false);
 ?>
 		</tbody>
 	</table>
