@@ -107,6 +107,9 @@ switch($page_method):
 				$retval = 0;
 				if(!file_exists($d_sysrebootreqd_path)):
 					$retval |= updatenotify_process($sphere->get_notifier(),$sphere->get_notifier_processor());
+					config_lock();
+					$retval |= rc_update_reload_service('ctld');
+					config_unlock();
 				endif;
 				$savemsg = get_std_save_message($retval);
 				if($retval == 0):
