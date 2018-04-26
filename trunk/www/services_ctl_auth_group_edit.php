@@ -245,6 +245,7 @@ $content->
 if(file_exists($d_sysrebootreqd_path)):
 	$content->ins_info_box(get_std_save_message(0));
 endif;
+$n_auxparam_rows = min(64,max(5,1 + substr_count($sphere->row[$cop->get_auxparam()->get_name()],PHP_EOL)));
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
@@ -255,7 +256,7 @@ $content->add_table_data_settings()->
 		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
 		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
 		c2_radio_grid($cop->get_auth_type(),htmlspecialchars($sphere->row[$cop->get_auth_type()->get_name()]),false,false)->
-		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false);
+		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
 $buttons = $document->
 	add_area_buttons();
 if($isrecordnew):
