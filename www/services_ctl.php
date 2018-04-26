@@ -220,6 +220,7 @@ $content->
 	ins_input_errors($input_errors)->
 	ins_info_box($savemsg);
 //	add content
+$n_auxparam_rows = min(64,max(5,1 + substr_count($sphere->row[$cop->get_auxparam()->get_name()],PHP_EOL)));
 $content->
 	add_table_data_settings()->
 		ins_colgroup_data_settings()->
@@ -235,7 +236,7 @@ $content->
 			c2_input_text($cop->get_isns_server_port(),htmlspecialchars($sphere->row[$cop->get_isns_server_port()->get_name()]),false,$is_readonly)->
 			c2_input_text($cop->get_isns_period(),htmlspecialchars($sphere->row[$cop->get_isns_period()->get_name()]),false,$is_readonly)->
 			c2_input_text($cop->get_isns_timeout(),htmlspecialchars($sphere->row[$cop->get_isns_timeout()->get_name()]),false,$is_readonly)->
-			c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,$is_readonly);
+			c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,$is_readonly,60,$n_auxparam_rows);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
