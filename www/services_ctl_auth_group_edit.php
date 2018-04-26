@@ -152,6 +152,7 @@ $a_referer = [
 	$cop->get_enable(),
 	$cop->get_name(),
 	$cop->get_description(),
+	$cop->get_auth_type(),
 	$cop->get_auxparam()
 ];
 switch($page_mode):
@@ -253,6 +254,7 @@ $content->add_table_data_settings()->
 	addTBODY()->
 		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
 		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
+		c2_radio_grid($cop->get_auth_type(),htmlspecialchars($sphere->row[$cop->get_auth_type()->get_name()]),false,false)->
 		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false);
 $buttons = $document->
 	add_area_buttons();
@@ -279,4 +281,3 @@ $body->
 	add_js_document_ready($sphere->get_js_document_ready());
 $document->
 	render();
-

@@ -128,6 +128,7 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 		$property = parent::init_name();
 		$description = gtext('Name of the Portal Group.');
 		$placeholder = gtext('Portal Group Name');
+		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('name')->
 			set_description($description)->
@@ -139,7 +140,7 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_editableonmodify(true)->
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => '/^\S{1,223}$/'])->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
