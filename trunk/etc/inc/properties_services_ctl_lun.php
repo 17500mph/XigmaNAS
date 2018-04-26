@@ -572,7 +572,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 	public function init_ctl_lun() {
 		$property = parent::init_ctl_lun();
 		$description = gtext('Global numeric identifier to use for a given LUN inside CTL.');
-		$regexp = '/^(?:|^[0-9]|^[1-9][0-9]{1,2}|^10[01][0-9]|^102[0-3])$/';
+		$regexp = '/^(?:|[0-9]|[1-9][0-9]{1,2}|10[01][0-9]|102[0-3])$/';
 		$property->
 			set_id('ctl_lun')->
 			set_description($description)->
@@ -832,6 +832,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$property = parent::init_opt_uuid();
 		$description = gtext('Specifies LUN locally assigned RFC 4122 UUID.');
 		$placeholder = gtext('UUID');
+		$regexp = '/^(?:|[0-9a-f]{4}(?:[0-9a-f]{4}-){4}[0-9a-f]{12})$/i';
 		$property->
 			set_id('opt_uuid')->
 			set_description($description)->
@@ -841,7 +842,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_maxlength(36)->
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => '/^(?:|[0-9a-f]{4}(?:[0-9a-f]{4}-){4}[0-9a-f]{12})$/i'])->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_editableonadd(false)->
 			set_editableonmodify(false)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
