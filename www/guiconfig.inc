@@ -843,6 +843,7 @@ function get_headermenu(): array {
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Syncthing'),'link' => '/services_syncthing.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Unison'),'link' => '/services_unison.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('iSCSI Target'),'link' => '/services_iscsitarget.php'];
+			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('CAM Target Layer'),'link' => '/services_ctl.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('DLNA/UPnP'),'link' => '/services_fuppes.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('iTunes/DAAP'),'link' => '/services_daap.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gtext('Dynamic DNS'),'link' => '/services_dynamicdns.php'];
