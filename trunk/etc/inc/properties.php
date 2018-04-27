@@ -44,6 +44,7 @@ abstract class properties {
 	protected $x_editableonadd = NULL;
 	protected $x_editableonmodify = NULL;
 	protected $x_filter = [];
+	protected $x_filter_group = [];
 	protected $x_message_error = NULL;
 	protected $x_message_info = NULL;
 	protected $x_message_warning = NULL;
@@ -211,6 +212,36 @@ abstract class properties {
 		endif;
 		return NULL;
 	}
+	public function set_filter_group(string $root_filter_name = 'ui', array $filter_names) {
+		$this->x_filter_group[$root_filter_name] = $filter_names;
+		return $this;
+	}
+/**
+ * 
+ * @param string $root_filter_name Name of the filter group
+ * @return array Array with group members
+ */
+	public function get_filter_group(string $root_filter_name = 'ui') {
+		return array_key_exists($root_filter_name,$this->x_filter_group) ? $this->x_filter_group[$root_filter_name] : [$root_filter_name];
+	}
+/**
+ * 
+ * @param type $filter
+ * @return array Array of filter names
+ */
+	public function get_filter_names($filter = 'ui') {
+		$filter_names = [];
+		$filter_groups = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
+		foreach($filter_groups as $filter_group):
+			if(is_string($filter_group)):
+				$filter_group_members = $this->get_filter_group($filter_group);
+				foreach($filter_group_members as $filter_group_member):
+					$filter_names[] = $filter_group_member;
+				endforeach;
+			endif;
+		endforeach;
+		return $filter_names;
+	}
 /**
  *	Method to apply filter to an input element.
  *	A list of filters will be processed until a filter does not return NULL.
@@ -218,9 +249,9 @@ abstract class properties {
  *	@param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
  *	@return mixed Filter result.
  */
-	public function validate_input(int $input_type = INPUT_POST,$filter = ['ui']) {
+	public function validate_input(int $input_type = INPUT_POST,$filter = 'ui') {
 		$result = NULL;
-		$filter_names = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
+		$filter_names = $this->get_filter_names($filter);
 		foreach($filter_names as $filter_name):
 			if(is_string($filter_name)):
 				$filter_parameter = $this->get_filter($filter_name);
@@ -256,9 +287,9 @@ abstract class properties {
  *	@param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
  *	@return mixed Filter result.
  */
-	public function validate_value($content,$filter = ['ui']) {
+	public function validate_value($content,$filter = 'ui') {
 		$result = NULL;
-		$filter_names = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
+		$filter_names = $this->get_filter_names($filter);
 		switch(true):
 			case is_scalar($content):
 				$value = $content;
@@ -349,9 +380,9 @@ abstract class properties {
  *	@param mixed $filter Single filter name or list of filters names to validate, default is ['ui'].
  *	@return mixed Filter result.
  */
-	public function validate_array_element(array $variable,$filter = ['ui']) {
+	public function validate_array_element(array $variable,$filter = 'ui') {
 		$result = NULL;
-		$filter_names = is_array($filter) ? $filter : (is_string($filter) ? [$filter] : []);
+		$filter_names = $this->get_filter_names($filter);
 		$key = $this->get_name();
 		if(array_key_exists($key,$variable)):
 			$content = $variable[$key];
@@ -486,6 +517,15 @@ class property_text extends properties {
 			set_filter(FILTER_VALIDATE_REGEXP,$filter_name)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name)->
 			set_filter_options(['default' => NULL,'regexp' => '/\S/'],$filter_name);
+		return $this;
+	}
+	public function filter_use_empty() {
+		$filter_name = 'empty';
+		$regexp = '/^$/';
+		$this->
+			set_filter(FILTER_VALIDATE_REGEXP,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR,$filter_name)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp],$filter_name);
 		return $this;
 	}
 }
