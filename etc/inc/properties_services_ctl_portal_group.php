@@ -94,7 +94,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		return $this->x_tag ?? $this->init_tag();
 	}
 	public function init_tag() {
-		$property = $this->x_tag = new property_text($this);
+		$property = $this->x_tag = new property_int($this);
 		$property->
 			set_name('tag')->
 			set_title(gtext('Tag'));
@@ -156,6 +156,113 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
 			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_discovery_auth_group() {
+		$property = parent::init_discovery_auth_group();
+		$description = gtext('Assign a previously defined authentication group to the portal group, to be used for target discovery.');
+		$options = [
+			'' => gtext('Deny discovery'),
+			'no-authentication' => gtext('Permit discovery without authentication')
+		];
+		$property->
+			set_id('discovery_auth_group')->
+			set_description($description)->
+			set_options($options)->
+			set_defaultvalue('')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_discovery_filter() {
+		$property = parent::init_discovery_filter();
+		$description = gtext('Determines which targets are returned during discovery.');
+		$options = [
+			'' => gtext('Discovery will return all targets assigned to this portal group.'),
+			'portal' => gtext('Discovery will not return targets that cannot be accessed by the initiator because of their initiator-portal.'),
+			'portal-name' => gtext('The check will include both initiator-portal and initiator-name.'),
+			'portal-name-auth' => gtext('The check will include initiator-portal, initiator-name, and authentication credentials. The target is returned if it does not require CHAP authentication, or if the CHAP user and secret used during discovery match those used by the target.')
+		];
+		$property->
+			set_id('discovery_filter')->
+			set_description($description)->
+			set_options($options)->
+			set_defaultvalue('')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_foreign() {
+		$property = parent::init_foreign();
+		$caption = gtext('Specifies that this portal-group is listened by some other host. This host will announce it on discovery stage, but won\'t listen.');
+		$property->
+			set_id('foreign')->
+			set_caption($caption)->
+			set_defaultvalue(false)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_offload() {
+		$property = parent::init_offload();
+		$description = gtext('Define iSCSI hardware offload driver to use for this portal-group. The default is "none".');
+		$placeholder = gtext('Driver');
+		$regexp = '/^\S{0,60}$/';
+		$property->
+			set_id('offload')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(60)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		
+		return $property;
+	}
+	public function init_redirect() {
+		$property = parent::init_redirect();
+		$description = gtext('IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to portal belonging to this portal-group will get redirected using "Target moved temporarily" login response.');
+		$property->
+			set_id('redirect')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_tag() {
+		$property = parent::init_tag();
+		$description = gtext('Unique 16-bit tag value of this portal-group. If not specified, the value is generated automatically.');
+		$placeholder = gtext('Tag');
+		$property->
+			set_id('tag')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_size(20)->
+			set_maxlength(20)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_min(0)->
+			set_max(65535)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
