@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-19 22:35+0000\n"
+"POT-Creation-Date: 2018-04-28 16:02+0000\n"
 "PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-20 15:32+0000\n"
-"X-Generator: Launchpad (build 18617)\n"
+"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Generator: Launchpad (build 18623)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -181,6 +181,9 @@ msgstr "JBOD 볼륨을 만들기 위해서는 1개 이상의 디스크가 필요
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1 볼륨을 만들기 위해서는 1개 이상의 디스크가 필요합니다."
 
+msgid "1.8\""
+msgstr ""
+
 msgid "2"
 msgstr "2"
 
@@ -190,14 +193,32 @@ msgstr "RAID-0 볼륨을 만들기 위해서는 2개 이상의 디스크가 필�
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1 볼륨을 만들기 위해서는 2개 이상의 디스크가 필요합니다."
 
+msgid "2.5\""
+msgstr ""
+
+msgid "2048"
+msgstr ""
+
 msgid "3"
 msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "RAID-5 볼륨을 만들기 위해서는 3개 이상의 디스크가 필요합니다."
 
+msgid "3.5\""
+msgstr ""
+
+msgid "4096"
+msgstr ""
+
 msgid "4KB wrapper"
 msgstr "4KB 보정"
+
+msgid "5.25\""
+msgstr ""
+
+msgid "512"
+msgstr ""
 
 msgid "514"
 msgstr ""
@@ -207,6 +228,9 @@ msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 태그(1에서 4094까지)."
+
+msgid "8192"
+msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -440,6 +464,9 @@ msgstr "상황에 적응적(낮은 전력 소비)"
 msgid "Add"
 msgstr "추가"
 
+msgid "Add Auth Group"
+msgstr ""
+
 msgid "Add Bridge"
 msgstr "브릿지 추가"
 
@@ -464,6 +491,9 @@ msgstr "호스트 추가"
 msgid "Add LAGG"
 msgstr "LAG 그룹 추가"
 
+msgid "Add LUN"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "MIB 추가"
 
@@ -475,6 +505,9 @@ msgstr "옵션 추가"
 
 msgid "Add Pool"
 msgstr "풀 추가"
+
+msgid "Add Portal Group"
+msgstr ""
 
 msgid "Add RAID"
 msgstr "RAID 추가"
@@ -502,6 +535,9 @@ msgstr "공유 추가"
 
 msgid "Add Snapshot"
 msgstr "스냅샷 추가"
+
+msgid "Add Target"
+msgstr ""
 
 msgid "Add URL"
 msgstr "URL 추가"
@@ -583,6 +619,12 @@ msgstr "추가 그룹"
 
 msgid "Additional Network"
 msgstr "추가 네트워크"
+
+msgid "Additional Options for Block Backend"
+msgstr ""
+
+msgid "Additional Options for RAM Disk Backend"
+msgstr ""
 
 msgid "Additional Parameter"
 msgstr ""
@@ -669,6 +711,9 @@ msgstr "알림 수준"
 msgid "Algorithm"
 msgstr "알고리듬"
 
+msgid "Alias"
+msgstr ""
+
 msgid "All"
 msgstr "모두"
 
@@ -737,6 +782,9 @@ msgstr "클라이언트가 공유에 OS/2 스타일의 확장된 속성을 저�
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "클라이언트가 중단된 업로드와 다운로드를 계속 진행하는 것 허용."
+
+msgid "Allow consecutive read/writes to be issued in parallel"
+msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "새 파일 생성 허용."
@@ -822,6 +870,9 @@ msgstr ""
 
 msgid "An Extent defines the storage area of the Target."
 msgstr "범위는 타겟의 저장소 영역을 정의합니다."
+
+msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -928,6 +979,11 @@ msgstr "서버를 공장 초기값으로 설정하시겠습니까?"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "서버를 종료하시겠습니까?"
 
+msgid ""
+"Assign a previously defined authentication group to the portal group, to be "
+"used for target discovery."
+msgstr ""
+
 msgid "Asynchronous I/O"
 msgstr "비동기 입출력"
 
@@ -981,8 +1037,20 @@ msgstr "8월"
 msgid "Auth Group"
 msgstr "인증 그룹"
 
+msgid "Auth Group Name"
+msgstr ""
+
 msgid "Auth Group Settings"
 msgstr "인증 그룹 설정"
+
+msgid "Auth Group is locked"
+msgstr ""
+
+msgid "Auth Group is marked for deletion"
+msgstr ""
+
+msgid "Auth Group is unlocked"
+msgstr ""
 
 msgid "Auth Groups"
 msgstr "인증 그룹들"
@@ -993,6 +1061,9 @@ msgstr "인증 그룹은 추가 보안을 위한 인증 사용자 및 암호를 
 
 msgid "Auth Method"
 msgstr "인증 방법"
+
+msgid "Auth Type"
+msgstr ""
 
 msgid "Authenticate Path & Realm"
 msgstr "경로와 영역으로 인증하기"
@@ -1065,6 +1136,9 @@ msgstr "보조 장치 펌웨어"
 msgid "Avail"
 msgstr "사용 가능"
 
+msgid "Avail Threshold"
+msgstr ""
+
 msgid "Available"
 msgstr "사용 가능"
 
@@ -1082,6 +1156,9 @@ msgstr "평균 스핀들 스핀 업 시간(0RPM에서 최고 운영 속도에 �
 
 msgid "Back"
 msgstr "뒤로"
+
+msgid "Backend"
+msgstr ""
 
 msgid "Background"
 msgstr "배경색"
@@ -1206,6 +1283,9 @@ msgstr "BitTorrent는 탑제 지점 디렉터리 %s에 적어도 읽기 및 실�
 msgid "Blank Time"
 msgstr "반응불가시간"
 
+msgid "Block"
+msgstr ""
+
 msgid "Block Size"
 msgstr "블록 크기"
 
@@ -1290,6 +1370,12 @@ msgstr "바이트/초"
 msgid "CACHE"
 msgstr "캐시"
 
+msgid "CAM Target Layer"
+msgstr ""
+
+msgid "CAM Target Layer / iSCSI Target"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1315,6 +1401,12 @@ msgstr "CCMP"
 msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
+msgid "CD"
+msgstr ""
+
+msgid "CD-ROM"
+msgstr ""
+
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
@@ -1329,6 +1421,9 @@ msgstr "CHAP"
 
 msgid "CHAP Users"
 msgstr "CHAP 사용자"
+
+msgid "CHAP-Mutual"
+msgstr ""
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1403,6 +1498,9 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr "CRC 오류 개수. CRC 오류의 개수(자료 읽기/쓰기 FIS CRC 오류)."
+
+msgid "CTL LUN"
+msgstr ""
 
 msgid "Calibration Battery"
 msgstr "베터리 초기화"
@@ -2154,6 +2252,9 @@ msgstr "DNS 서버가 비어 있습니다."
 msgid "DVD"
 msgstr "DVD"
 
+msgid "DVD-ROM"
+msgstr ""
+
 msgid "Daemon"
 msgstr "데몬"
 
@@ -2273,6 +2374,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "인증을 필요로 하는 디렉터리/URL을 정의합니다."
 
+msgid ""
+"Define iSCSI hardware offload driver to use for this portal-group. The "
+"default is \"none\"."
+msgstr ""
+
 msgid "Defines the checksum algorithm."
 msgstr "검사합 알고리듬을 정의합니다."
 
@@ -2304,6 +2410,9 @@ msgstr "호스트 삭제"
 msgid "Delete Login Info"
 msgstr "로그인 정보 삭제"
 
+msgid "Delete Selected Auth Groups"
+msgstr ""
+
 msgid "Delete Selected Bridges"
 msgstr "선택된 브릿지들 삭제"
 
@@ -2331,6 +2440,9 @@ msgstr "선택된 작업들 삭제"
 msgid "Delete Selected LAGGs"
 msgstr "선택된 LAG 그룹들 삭제"
 
+msgid "Delete Selected LUNs"
+msgstr ""
+
 msgid "Delete Selected NFS Shares"
 msgstr "선택된 NFS 공유 삭제"
 
@@ -2342,6 +2454,9 @@ msgstr "선택된 옵션들 삭제"
 
 msgid "Delete Selected Pools"
 msgstr "선택된 풀들 삭제"
+
+msgid "Delete Selected Portal Groups"
+msgstr ""
 
 msgid "Delete Selected RAID Volumes"
 msgstr "선택된 RAID 볼륨들 삭제"
@@ -2369,6 +2484,9 @@ msgstr "선택된 공유 삭제"
 
 msgid "Delete Selected Snapshots"
 msgstr "선택된 스냅샷 삭제"
+
+msgid "Delete Selected Targets"
+msgstr ""
 
 msgid "Delete Selected User Accounts"
 msgstr "선택된 사용자 계정 삭제"
@@ -2461,6 +2579,9 @@ msgstr ""
 msgid "Deny"
 msgstr "거부"
 
+msgid "Deny discovery"
+msgstr ""
+
 msgid "Description"
 msgstr "설명"
 
@@ -2538,6 +2659,9 @@ msgstr ""
 "첫 번째 패킷이 재전송되기 전에 기다릴 기본 시간 초과 값을 microsecond 단위로 결정합니다. 기본 값은 "
 "1000000(1초)입니다."
 
+msgid "Determines which targets are returned during discovery."
+msgstr ""
+
 msgid "Device"
 msgstr "장치"
 
@@ -2547,6 +2671,9 @@ msgstr "장치 / 라벨"
 #, php-format
 msgid "Device /dev/%s - %s"
 msgstr "장치 /dev/%s - %s"
+
+msgid "Device ID"
+msgstr ""
 
 msgid "Device IP"
 msgstr "장치 IP"
@@ -2565,6 +2692,9 @@ msgstr "장치 폴링"
 
 msgid "Device Serial"
 msgstr "장치 일련번호"
+
+msgid "Device Type"
+msgstr ""
 
 msgid "Device contains boot partition"
 msgstr "장치 시동 분할 영역 포함"
@@ -2605,6 +2735,9 @@ msgstr "차이"
 msgid "Digital Audio Access Protocol"
 msgstr "디지털 오디오 접근 프로토콜"
 
+msgid "Direct"
+msgstr ""
+
 msgid "Direction"
 msgstr "방향"
 
@@ -2639,14 +2772,23 @@ msgstr "확장 메뉴 사용 안 함"
 msgid "Disable Firmware Upgrade"
 msgstr "펌웨어 업그레이드 비활성화"
 
+msgid "Disable Selected Auth Groups"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "선택된 명령들 사용 안 함"
 
 msgid "Disable Selected Jobs"
 msgstr "선택된 작업 사용 안 함"
 
+msgid "Disable Selected LUNs"
+msgstr ""
+
 msgid "Disable Selected Options"
 msgstr "선택된 옵션 사용 안 함"
+
+msgid "Disable Selected Portal Groups"
+msgstr ""
 
 msgid "Disable Selected Records"
 msgstr "선택된 항목 사용 안 함"
@@ -2656,6 +2798,9 @@ msgstr "선택된 rsync 작업들 사용 안 함"
 
 msgid "Disable Selected Rsync Modules"
 msgstr "선택된 rsync 모듈들 사용 안 함"
+
+msgid "Disable Selected Targets"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper 사용 안 함(mod_wrap 모듈)"
@@ -2696,6 +2841,17 @@ msgstr "발견(Discovery) 인증 그룹"
 
 msgid "Discovery Auth Method"
 msgstr "발견(Discovery) 인증 방법"
+
+msgid "Discovery Filter"
+msgstr ""
+
+msgid ""
+"Discovery will not return targets that cannot be accessed by the initiator "
+"because of their initiator-portal."
+msgstr ""
+
+msgid "Discovery will return all targets assigned to this portal group."
+msgstr ""
 
 msgid "Disk"
 msgstr "디스크"
@@ -2897,6 +3053,9 @@ msgstr "선택된 복본들을 삭제하시겠습니까?"
 msgid "Do you want to delete selected LAGGs?"
 msgstr "선택된 LAG 그룹들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr "선택된 NFS 공유를 삭제하시겠습니까?"
 
@@ -2911,6 +3070,9 @@ msgstr "선택된 VLAN을 삭제하시겠습니까?"
 
 msgid "Do you want to delete selected WLANs?"
 msgstr "선택된 무선 LAN을 삭제하시겠습니까?"
+
+msgid "Do you want to delete selected auth groups?"
+msgstr ""
 
 msgid "Do you want to delete selected bridges?"
 msgstr "선택된 브릿지들을 삭제하시겠습니까?"
@@ -2942,6 +3104,9 @@ msgstr "선택된 옵션들을 삭제하시겠습니까?"
 msgid "Do you want to delete selected pools?"
 msgstr "선택된 풀을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected portal groups?"
+msgstr ""
+
 msgid "Do you want to delete selected records?"
 msgstr "선택된 항목을 삭제하시겠습니까?"
 
@@ -2963,6 +3128,9 @@ msgstr "선택된 공유를 삭제하시겠습니까?"
 msgid "Do you want to delete selected snapshots?"
 msgstr "선택된 스냅샷들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected targets?"
+msgstr ""
+
 msgid "Do you want to delete selected user accounts?"
 msgstr "선택된 사용자 계정들을 삭제하시겠습니까?"
 
@@ -2975,6 +3143,12 @@ msgstr "선택된 볼륨들을 삭제하시겠습니까?"
 msgid "Do you want to delete this command?"
 msgstr "이 명령을 삭제하시겠습니까?"
 
+msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to disable selected commands?"
 msgstr "선택된 명령들을 사용하지 않으시겠습니까?"
 
@@ -2983,6 +3157,9 @@ msgstr "선택된 작업들을 사용하지 않으시겠습니까?"
 
 msgid "Do you want to disable selected options?"
 msgstr "선택된 옵션들을 사용하지 않으시겠습니까?"
+
+msgid "Do you want to disable selected portal groups?"
+msgstr ""
 
 msgid "Do you want to disable selected records?"
 msgstr "선택된 항목을 사용하지 않으시겠습니까?"
@@ -2993,6 +3170,15 @@ msgstr "선택된 rsync 작업들을 사용하지 않으시겠습니까?"
 msgid "Do you want to disable selected rsync modules?"
 msgstr "선택된 rsync 모듈들을 사용하지 않으시겠습니까?"
 
+msgid "Do you want to disable selected targets?"
+msgstr ""
+
+msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "선택된 명령들을 사용하시겠습니까?"
 
@@ -3001,6 +3187,9 @@ msgstr "선택된 작업들을 사용하시겠습니까?"
 
 msgid "Do you want to enable selected options?"
 msgstr "선택된 옵션들을 사용하시겠습니까?"
+
+msgid "Do you want to enable selected portal groups?"
+msgstr ""
 
 msgid "Do you want to enable selected records?"
 msgstr "선택된 항목을 사용하시겠습니까?"
@@ -3011,6 +3200,9 @@ msgstr "선택된 rsync 작업들을 사용하시겠습니까?"
 msgid "Do you want to enable selected rsync modules?"
 msgstr "선택된 rsync 모듈들을 사용하시겠습니까?"
 
+msgid "Do you want to enable selected targets?"
+msgstr ""
+
 msgid "Do you want to import disks?"
 msgstr "디스크를 불러오시겠습니까?"
 
@@ -3019,6 +3211,12 @@ msgstr "소프트웨어 RAID 디스크를 불러오시겠습니까?"
 
 msgid "Do you want to lock selected records?"
 msgstr "선택된 항목을 잠그시겠습니까?"
+
+msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected auth groups?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "선택된 명령들을 전환하시겠습니까?"
@@ -3029,6 +3227,9 @@ msgstr "선택된 작업들을 전환하시겠습니까?"
 msgid "Do you want to toggle selected options?"
 msgstr "선택된 옵션들을 전환하시겠습니까?"
 
+msgid "Do you want to toggle selected portal groups?"
+msgstr ""
+
 msgid "Do you want to toggle selected records?"
 msgstr "선택된 항목의 상태를 전환하시겠습니까?"
 
@@ -3037,6 +3238,9 @@ msgstr "선택된 rsync 작업들을 전환하시겠습니까?"
 
 msgid "Do you want to toggle selected rsync modules?"
 msgstr "선택된 rsync 모듈들을 전환하시겠습니까?"
+
+msgid "Do you want to toggle selected targets?"
+msgstr ""
 
 msgid "Do you want to unlock selected records?"
 msgstr "선택된 항목을 잠금 해제하시겠습니까?"
@@ -3147,8 +3351,14 @@ msgstr "EFI/GPT 분할 영역은 UFS에서만 이용할 수 있습니다."
 msgid "ERROR:"
 msgstr "오류:"
 
+msgid "EUI-64"
+msgstr ""
+
 msgid "Edit"
 msgstr "편집"
+
+msgid "Edit Auth Group"
+msgstr ""
 
 msgid "Edit Bridge"
 msgstr "브릿지 수정"
@@ -3174,6 +3384,9 @@ msgstr "호스트 편집"
 msgid "Edit LAGG"
 msgstr "LAG 그룹 수정"
 
+msgid "Edit LUN"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "MIB 편집"
 
@@ -3185,6 +3398,9 @@ msgstr "옵션 수정"
 
 msgid "Edit Pool"
 msgstr "풀 수정"
+
+msgid "Edit Portal Group"
+msgstr ""
 
 msgid "Edit RAID"
 msgstr "RAID 편집"
@@ -3212,6 +3428,9 @@ msgstr "공유 수정"
 
 msgid "Edit Snapshot"
 msgstr "스냅샷 수정"
+
+msgid "Edit Target"
+msgstr ""
 
 msgid "Edit URL"
 msgstr "URL 편집"
@@ -3346,14 +3565,23 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "STARTTLS 활성화"
 
+msgid "Enable Selected Auth Groups"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "선택된 명령들 사용 함"
 
 msgid "Enable Selected Jobs"
 msgstr "선택된 작업들 사용 함"
 
+msgid "Enable Selected LUNs"
+msgstr ""
+
 msgid "Enable Selected Options"
 msgstr "선택된 옵션들 사용 함"
+
+msgid "Enable Selected Portal Groups"
+msgstr ""
 
 msgid "Enable Selected Records"
 msgstr "선택된 항목 사용"
@@ -3363,6 +3591,9 @@ msgstr "선택된 rsync 작업들 사용 함"
 
 msgid "Enable Selected Rsync Modules"
 msgstr "선택된 rsync 모듈들 사용 함"
+
+msgid "Enable Selected Targets"
+msgstr ""
 
 msgid "Enable Server"
 msgstr "서버 사용"
@@ -3715,6 +3946,9 @@ msgstr "공백으로 구분되는 tap 장치들을 입력하십시오. 이 장�
 msgid "Enter a valid sysctl MIB name."
 msgstr "유효한 sysctl MIB 이름을 입력하십시오."
 
+msgid "Enter additional parameter"
+msgstr ""
+
 msgid "Enter comment for the share"
 msgstr ""
 
@@ -3751,6 +3985,9 @@ msgid "Enter login name of the user."
 msgstr "사용자의 로그인 이름을 입력하십시오."
 
 msgid "Enter name"
+msgstr ""
+
+msgid "Enter secret"
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -3803,6 +4040,9 @@ msgstr "트랩을 전송할 포트를 입력하십시오(기본 값은 162)."
 
 msgid "Enter trap host name."
 msgstr "트랩 호스트 이름을 입력하십시오."
+
+msgid "Enter user name"
+msgstr ""
 
 msgid "Enter value"
 msgstr ""
@@ -4160,6 +4400,12 @@ msgid ""
 "(This is not recommended.)"
 msgstr "vdev가 사용 중이거나 다른 크기를 지정하는 경우에도 강제로 사용하도록 합니다. (권장하지 않습니다.)"
 
+msgid "Foreign"
+msgstr ""
+
+msgid "Form Factor"
+msgstr ""
+
 msgid "Format"
 msgstr "포맷"
 
@@ -4277,6 +4523,12 @@ msgstr "로컬 사용자만 웹 페이지에 접근할 수 있게 합니다."
 msgid "Give your media library a friendly name."
 msgstr "친숙한 라이브러리 이름을 입력하십시오."
 
+msgid "Global Settings"
+msgstr ""
+
+msgid "Global numeric identifier to use for a given LUN inside CTL."
+msgstr ""
+
 msgid "Grant access to the user portal."
 msgstr "사용자 포털에 대해 접근 권한 부여."
 
@@ -4337,6 +4589,9 @@ msgstr "손님 계정"
 
 msgid "Guest Authentication"
 msgstr "손님 인증"
+
+msgid "HA Role"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -4545,6 +4800,12 @@ msgstr "IPv4 설정"
 
 msgid "IPv4 addresses"
 msgstr "IPv4 주소"
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to portal belonging to this portal-group "
+"will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
 
 msgid "IPv6 Address"
 msgstr "IPv6 주소"
@@ -4854,6 +5115,9 @@ msgstr "일련번호 조회"
 msgid "Inquiry Vendor"
 msgstr "벤더 조회"
 
+msgid "Insecure TPC"
+msgstr ""
+
 msgid "Insensitive"
 msgstr "민감하지 않음"
 
@@ -5075,6 +5339,36 @@ msgstr "LOG(복제)"
 
 msgid "LUN"
 msgstr "LUN"
+
+msgid "LUN EUI-64\tidentifier"
+msgstr ""
+
+msgid "LUN NAA Identifier"
+msgstr ""
+
+msgid "LUN Name"
+msgstr ""
+
+msgid "LUN Product"
+msgstr ""
+
+msgid "LUN Revision"
+msgstr ""
+
+msgid "LUN SCSI Name"
+msgstr ""
+
+msgid "LUN Vendor"
+msgstr ""
+
+msgid "LUN is locked"
+msgstr ""
+
+msgid "LUN is marked for deletion"
+msgstr ""
+
+msgid "LUN is unlocked"
+msgstr ""
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5431,6 +5725,9 @@ msgstr "데이터 읽을 시의 채널 마진. 이 속성의 기능은 정해지
 msgid "Masquerade Address"
 msgstr "Masquerade 주소"
 
+msgid "Max Processes"
+msgstr ""
+
 msgid "Max. Block Size"
 msgstr "최대 블록 크기"
 
@@ -5728,6 +6025,9 @@ msgstr "상호 CHAP"
 msgid "Mutual CHAP Users"
 msgstr "상호 CHAP 사용자"
 
+msgid "NAA Identifier"
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -5783,9 +6083,18 @@ msgstr "NUT 내부 드라이버 정보"
 msgid "Name"
 msgstr "이름"
 
+msgid "Name of the Auth Group."
+msgstr ""
+
+msgid "Name of the LUN."
+msgstr ""
+
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "도메인 부분을 제외한 NAS 호스트의 이름. 예. %s."
+
+msgid "Name of the Portal Group."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -5795,6 +6104,9 @@ msgid ""
 "Name of the server. If this field is left empty the default server is "
 "specified."
 msgstr "서버의 이름. 이 난이 비어 있으면 기본 서버가 명세 됩니다."
+
+msgid "Name of the target."
+msgstr ""
 
 msgid "Name of the variable."
 msgstr "변수의 이름."
@@ -6089,6 +6401,9 @@ msgstr ""
 "SMB 프로토콜의 경우 일반적으로 이 옵션은 자동 조정 모드로 설정하면 안 됩니다. 왜냐하면 SMB 프로토콜이 적절한 프로토콜을 선택하는 "
 "것을 관리하고 있기 때문입니다."
 
+msgid "Not Reported"
+msgstr ""
+
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6177,6 +6492,9 @@ msgstr "끔"
 
 msgid "Offline Immediate Test"
 msgstr "즉각적 오프라인 테스트"
+
+msgid "Offload"
+msgstr ""
 
 msgid "Old Passphrase"
 msgstr "이전 암호문"
@@ -6481,8 +6799,17 @@ msgstr "권한"
 msgid "Permit Root Login"
 msgstr "root 로그인 허용"
 
+msgid "Permit discovery without authentication"
+msgstr ""
+
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH 터널링 허용."
+
+msgid "Physical Block Offset"
+msgstr ""
+
+msgid "Physical Block Size"
+msgstr ""
 
 msgid "Physical Interface"
 msgstr "물리 인터페이스"
@@ -6582,6 +6909,9 @@ msgstr "폴링 시간"
 msgid "Pool"
 msgstr "풀"
 
+msgid "Pool Avail Threshold"
+msgstr ""
+
 msgid "Pool Devices"
 msgstr "풀 장치"
 
@@ -6596,6 +6926,9 @@ msgstr "풀 상태"
 
 msgid "Pool Status"
 msgstr "풀 상태"
+
+msgid "Pool Used Threshold"
+msgstr ""
 
 msgid "Pool Version"
 msgstr "풀 버전"
@@ -6641,6 +6974,9 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr "포트 번호는 %d와 %d 범위 내에 있어야 합니다."
 
+msgid "Port number of iSNS server to register on."
+msgstr ""
+
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
 
@@ -6668,8 +7004,20 @@ msgstr "listen 할 포트. 동적 포트나 개인 포트들만 이용할 수 �
 msgid "Portal Group"
 msgstr "포털 그룹"
 
+msgid "Portal Group Name"
+msgstr ""
+
 msgid "Portal Group Settings"
 msgstr "포털 그룹 설정"
+
+msgid "Portal Group is locked"
+msgstr ""
+
+msgid "Portal Group is marked for deletion"
+msgstr ""
+
+msgid "Portal Group is unlocked"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "포털 그룹"
@@ -6768,6 +7116,9 @@ msgstr "프로세스 상태"
 msgid "Processes"
 msgstr "프로세스"
 
+msgid "Processor"
+msgstr ""
+
 msgid "Product ID"
 msgstr "제품 ID"
 
@@ -6795,6 +7146,9 @@ msgstr "이 데이터셋에서 동기 요청을 어떻게 처리할 것인가에
 
 msgid "Provider"
 msgstr "공급자"
+
+msgid "Provisioning Type"
+msgstr ""
 
 msgid "Proxy"
 msgstr "프록시"
@@ -6900,8 +7254,14 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
+msgid "RAM Disk"
+msgstr ""
+
 msgid "RAW info"
 msgstr "RAW 정보"
+
+msgid "RPM"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -6947,6 +7307,9 @@ msgstr "RAW 값"
 
 msgid "Read"
 msgstr "읽기"
+
+msgid "Read Cache"
+msgstr ""
 
 msgid "Read Only"
 msgstr "읽기 전용"
@@ -7034,6 +7397,9 @@ msgstr "재귀적"
 
 msgid "Recycle Bin"
 msgstr "휴지통"
+
+msgid "Redirect"
+msgstr ""
 
 msgid "Redundant Metadata"
 msgstr "중복 메타데이터"
@@ -7131,6 +7497,9 @@ msgstr "처리하기 전에 먼저 %s를 제거하십시오."
 msgid "Reorder Commands"
 msgstr "명령어 재정렬"
 
+msgid "Reordering"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "UPS 베터리 교체"
 
@@ -7185,6 +7554,9 @@ msgstr "자원"
 
 msgid "Resource Name"
 msgstr "자원 이름"
+
+msgid "Resource Provisioning"
+msgstr ""
 
 msgid "Resource is marked for deletion"
 msgstr "자원 삭제 표시됨"
@@ -7337,6 +7709,9 @@ msgstr "S.M.A.R.T. 추가 옵션"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. 로그"
+
+msgid "SCSI Name"
+msgstr ""
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, 검증"
@@ -7505,6 +7880,9 @@ msgstr "보조 캐시"
 
 msgid "Seconds"
 msgstr "초"
+
+msgid "Seconfary"
+msgstr ""
 
 msgid "Secret"
 msgstr "비밀"
@@ -7733,6 +8111,15 @@ msgstr "일련번호"
 msgid "Serial number"
 msgstr "일련 번호"
 
+msgid "Serialize Sequence"
+msgstr ""
+
+msgid "Serialize consecutive reads"
+msgstr ""
+
+msgid "Serialize consecutive reads/writes"
+msgstr ""
+
 msgid "Server"
 msgstr "서버"
 
@@ -7783,6 +8170,9 @@ msgstr "디스크 검사 사이의 간격을 N으로 설정합니다. 허용되�
 msgid "Set or reset user password."
 msgstr "사용자 암호 설정/재설정"
 
+msgid "Set per-LUN/per-pool thin provisioning soft threshold."
+msgstr ""
+
 msgid "Set read only."
 msgstr "읽기 전용 설정."
 
@@ -7827,6 +8217,29 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "제목 스크롤 속도를 0-10 사이에서 설정하십시오(기본 값은 10)."
 
+msgid ""
+"Set to \"off\", disables read caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid ""
+"Set to \"off\", disables write caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid "Set to \"on\" makes LUN removable."
+msgstr ""
+
+msgid ""
+"Set to \"on\", blocks all media write operations to the LUN reporting it as "
+"write protected."
+msgstr ""
+
+msgid ""
+"Set to \"unrestricted\", allows target to process commands with SIMPLE task "
+"attribute in arbitrary order."
+msgstr ""
+
 msgid "Set user login shell."
 msgstr "사용자 로그인 쉘 설정."
 
@@ -7836,10 +8249,30 @@ msgstr "Setkey"
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "최상위 데이터 셋을 위한 다른 탑재 지점을 설정합니다. 기본 값은 /mnt입니다."
 
+msgid "Sets the authentication type."
+msgstr ""
+
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
 "is zero (anyone can read or write)."
 msgstr "새로 생성된 파일들을 위한 umask를 특정 값으로 설정합니다. 기본 값은 0입니다(누구나 읽고 쓸 수 있습니다)."
+
+msgid ""
+"Setting to \"on\" allows EXTENDED COPY command sent to this LUN access other "
+"LUNs on this host, not accessible otherwise. This allows to offload copying "
+"between different iSCSI targets residing on the same host in trusted "
+"environments."
+msgstr ""
+
+msgid ""
+"Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
+"Default value is \"on\" if supported by the backend."
+msgstr ""
+
+msgid ""
+"Setting to \"primary\" or \"secondary\" overrides default role of the node "
+"in HA cluster."
+msgstr ""
 
 msgid "Settings"
 msgstr "설정"
@@ -8063,14 +8496,58 @@ msgstr ""
 msgid "Specified path is NFSv4 root directory."
 msgstr "명시된 경로는 NFSv4 최상위 디렉터리입니다."
 
+msgid "Specifies LUN EUI-64 identifier."
+msgstr ""
+
+msgid "Specifies LUN NAA identifier."
+msgstr ""
+
+msgid "Specifies LUN SCSI name string."
+msgstr ""
+
+msgid "Specifies LUN locally assigned RFC 4122 UUID."
+msgstr ""
+
+msgid "Specifies LUN product string up to 16 chars."
+msgstr ""
+
+msgid "Specifies LUN revision string up to 4 chars."
+msgstr ""
+
+msgid "Specifies LUN vendor string up to 8 chars."
+msgstr ""
+
+msgid ""
+"Specifies capacity of backing store (maximum RAM for data). The default "
+"value is zero, that disables backing store completely, making all writes go "
+"to nowhere, while all reads return zeroes."
+msgstr ""
+
+msgid "Specifies file or device name to use for backing store."
+msgstr ""
+
 msgid "Specifies how many servers to create."
 msgstr "몇 개의 서버를 생성할 지를 명세 합니다."
 
 msgid "Specifies how the volume should be exposed to the OS."
 msgstr "볼륨을 어떻게 OS에 알릴지 설정합니다."
 
+msgid "Specifies medium rotation rate of the device."
+msgstr ""
+
+msgid "Specifies nominal form factor of the device."
+msgstr ""
+
+msgid "Specifies number of backend threads to use for this LUN."
+msgstr ""
+
 msgid "Specifies that the file system should be exported read-only."
 msgstr "파일 시스템이 읽기 전용으로 export 되어야 하는 지를 명세 합니다."
+
+msgid ""
+"Specifies that this portal-group is listened by some other host. This host "
+"will announce it on discovery stage, but won't listen."
+msgstr ""
 
 msgid "Specifies the command to be run."
 msgstr "실행될 명령을 지정 합니다."
@@ -8110,6 +8587,36 @@ msgid ""
 msgstr ""
 "일반적인 사용에서 되돌릴 디스크 공간을 백분율로 지정하십시오. 이 임계 값을 낮추면 성능 및 자동 조각 모음에 나쁜 영향을 줄 수 "
 "있습니다!"
+
+msgid "Specify UNMAP block offset of the device."
+msgstr ""
+
+msgid "Specify UNMAP block size of the device."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per UNMAP command to report in Block "
+"Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per WRITE SAME command to report in "
+"Block Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of block descriptors per UNMAP command to "
+"report in Block Limits VPD page."
+msgstr ""
+
+msgid "Specify physical block offset of the device."
+msgstr ""
+
+msgid "Specify physical block size of the device."
+msgstr ""
+
+msgid "Specify the SCSI device type to use when creating the LUN."
+msgstr ""
 
 msgid "Split request"
 msgstr "분할 요청"
@@ -8427,8 +8934,17 @@ msgstr "타겟 디렉터리."
 msgid "Target information"
 msgstr "타겟 정보"
 
+msgid "Target is locked"
+msgstr ""
+
+msgid "Target is marked for deletion"
+msgstr ""
+
 msgid "Target is not selected."
 msgstr "타겟이 선택되지 않았습니다."
+
+msgid "Target is unlocked"
+msgstr ""
 
 msgid "Target list"
 msgstr "타겟 목록"
@@ -8499,6 +9015,9 @@ msgstr ""
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "이 옵션을 활성화하기 전에 바이오스에서 COM 포트가 활성화되어야 합니다."
 
+msgid "The CTL backend to use for a given LUN."
+msgstr ""
+
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr "HAST 볼륨은 HAST 노드가 Primary가 되기 전까지는 접근할 수 없습니다."
 
@@ -8521,6 +9040,9 @@ msgstr "LAG 그룹 프로토콜이 올바르지 않습니다."
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP 주소가 다음으로 설정됩니다"
 
+msgid "The LUN size, in bytes."
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "이 MIB '%s'은(는) sysctl에 존재하지 않습니다."
@@ -8535,6 +9057,12 @@ msgid ""
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
 msgstr "새로 추가된 불량 플래시 블록 속성은 드라이브가 제조시 첫 초기화 된 이후 발견된 총 불량 플래시 블록의 수를 나타냅니다."
+
+msgid "The SCSI Device Identification string presented to the initiator."
+msgstr ""
+
+msgid "The SCSI serial number presented to the initiator."
+msgstr ""
 
 msgid "The TCP Port must be a valid port number."
 msgstr "TCP 포트는 올바른 포트 번호여야 합니다."
@@ -8720,6 +9248,9 @@ msgstr ""
 "이용할 수 있습니다. 설정은 첫 번째 일치하는 규칙이 의미를 가지므로 일치하는 규칙을 찾아서 설정 파일이 오름차순으로 검사된다는 것을 "
 "기억하시기 바랍니다. 일치하는 것이 발견되면 그 규칙이 적용되고 검색 과정은 정지될 것입니다."
 
+msgid "The blocksize visible to the initiator."
+msgstr ""
+
 msgid "The changes could not be applied"
 msgstr "변경 내용을 적용할 수 없음"
 
@@ -8728,6 +9259,16 @@ msgstr "변경 내용들이 성공적으로 적용되었습니다."
 
 msgid "The changes have been saved."
 msgstr "변경 사항이 저장되었습니다."
+
+msgid "The check will include both initiator-portal and initiator-name."
+msgstr ""
+
+msgid ""
+"The check will include initiator-portal, initiator-name, and authentication "
+"credentials. The target is returned if it does not require CHAP "
+"authentication, or if the CHAP user and secret used during discovery match "
+"those used by the target."
+msgstr ""
 
 msgid "The cleartext credentials with which to bind."
 msgstr "bind 할 때 이용할 평문의 자격 증명서."
@@ -8802,6 +9343,9 @@ msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
 msgstr "쉐도 복사본 서비스용 스냅샷의 사용자 정의 형식을 명시할 수 있습니다. 기본 형식은 ZFS 스냅샷에 사용중인 %s 입니다."
+
+msgid "The debug verbosity level. The default is 0."
+msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -8931,6 +9475,11 @@ msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr "istgtcontrol은 특정 인증 그룹의 올바른 사용자와 암호를 가지고 타겟에 접근할 수 있습니다."
+
+msgid ""
+"The limit for concurrently running child processes handling incoming "
+"connections. The default is 30. A setting of 0 disables the limit."
+msgstr ""
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "\"데이터베이스 디렉터리\" 위치는 올바른 위치가 아닙니다."
@@ -9079,6 +9628,10 @@ msgstr "경로 '%s'은(는) 디렉터리입니다."
 msgid "The path '%s' is not a directory."
 msgstr "경로 '%s'은(는) 디렉터리가 아닙니다."
 
+msgid ""
+"The path to the file, device node, or zfs volume used to back the LUN."
+msgstr ""
+
 msgid "The peer connection encryption mode."
 msgstr "피어 연결 암호화 모드."
 
@@ -9179,6 +9732,11 @@ msgstr "시스템 종료가 시작될 때까지의 초 단위의 시간. 시간�
 msgid "The time update interval must be between 6 and 1440."
 msgstr "시간 갱신 간격은 6과 1440 사이여야 합니다."
 
+msgid ""
+"The timeout for login sessions, after which the connection will be forcibly "
+"terminated. The default is 60. A setting of 0 disables the timeout."
+msgstr ""
+
 msgid "The total count of errors when writing a sector."
 msgstr "섹터 기록 중 오류의 총 개수."
 
@@ -9277,6 +9835,21 @@ msgstr ""
 "이 옵션들은 /etc/rc.conf에 추가될 것입니다. 이것은 다양한 일반 스타트업 스크립트에 의해 이용되는 옵션들을 덮어쓸 수 있게 "
 "해줍니다."
 
+msgid "These parameter will be added to the global section of ctl.conf"
+msgstr ""
+
+msgid "These parameter will be added to this auth-group."
+msgstr ""
+
+msgid "These parameter will be added to this lun."
+msgstr ""
+
+msgid "These parameter will be added to this portal-group."
+msgstr ""
+
+msgid "These parameter will be added to this target."
+msgstr ""
+
 #, php-format
 msgid "These parameters are added to %s."
 msgstr "이 매개 변수들이 %s에 추가됩니다."
@@ -9316,6 +9889,9 @@ msgstr "이 매개 변수들이 rsyncd.conf의 모듈 설정에 추가될 것입
 
 msgid "These parameters will be added to the ping command."
 msgstr "이 개개 변수들은 ping 명령에 추가됩니다."
+
+msgid "Thin Provisioning"
+msgstr ""
 
 msgid "This URL is already configured."
 msgstr "이 URL은 이미 설정되었습니다."
@@ -9661,6 +10237,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Threads"
+msgstr ""
+
 msgid "Throughput"
 msgstr "처리량"
 
@@ -9719,6 +10298,9 @@ msgstr "시간 갱신 간격"
 msgid "Timeout"
 msgstr "시간 초과"
 
+msgid "Timeout for iSNS requests. The default is 5."
+msgstr ""
+
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr ""
 
@@ -9768,14 +10350,23 @@ msgstr "하위 디렉터리를 사용하려면 각 디렉터리를 탑제해야 
 msgid "Toggle Mode"
 msgstr "모드 전환"
 
+msgid "Toggle Selected Auth Groups"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "선택된 명령들 전환"
 
 msgid "Toggle Selected Jobs"
 msgstr "선택된 작업들 전환"
 
+msgid "Toggle Selected LUNs"
+msgstr ""
+
 msgid "Toggle Selected Options"
 msgstr "선택된 옵션들 전환"
+
+msgid "Toggle Selected Portal Groups"
+msgstr ""
 
 msgid "Toggle Selected Records"
 msgstr "선택된 항목 상태 전환"
@@ -9785,6 +10376,9 @@ msgstr "선택된 rsync 작업 전환"
 
 msgid "Toggle Selected Rsync Modules"
 msgstr "선택된 rsync 모듈들 전환"
+
+msgid "Toggle Selected Targets"
+msgstr ""
 
 msgid "Tolerated"
 msgstr "용인됨"
@@ -9948,6 +10542,21 @@ msgstr "소프트 업데이트 지원 UFS"
 msgid "UID"
 msgstr "UID"
 
+msgid "UNMAP"
+msgstr ""
+
+msgid "UNMAP Block Offset"
+msgstr ""
+
+msgid "UNMAP Block Size"
+msgstr ""
+
+msgid "UNMAP Maximum Descriptors"
+msgstr ""
+
+msgid "UNMAP Maximum LBA"
+msgstr ""
+
 msgid "UPS"
 msgstr "UPS"
 
@@ -10047,6 +10656,9 @@ msgstr "USB 대용량 저장소 장치"
 msgid "UTF-8 Only"
 msgstr "UTF-8 전용"
 
+msgid "UUID"
+msgstr ""
+
 msgid "Umask"
 msgstr "Umask"
 
@@ -10055,6 +10667,9 @@ msgstr "사용할 수 없음"
 
 msgid "Uncorrected read errors reported to the operating system."
 msgstr "교정 불가 읽기 오류가 운영체제에 보고 되었습니다."
+
+msgid "Undefined"
+msgstr ""
 
 msgid "Unformated"
 msgstr "포맷 되지 않음"
@@ -10070,6 +10685,11 @@ msgstr "패키지 설치 해제"
 
 msgid "Uninterruptible Power Supply"
 msgstr "무 정전 전원 공급"
+
+msgid ""
+"Unique 16-bit tag value of this portal-group. If not specified, the value is "
+"generated automatically."
+msgstr ""
 
 msgid "Unison"
 msgstr "Unison"
@@ -10118,6 +10738,9 @@ msgstr "처리하기 전에 이 디스크를 탑제 해제 하십시오."
 
 msgid "Unmounting..."
 msgstr "탑재 해제 중..."
+
+msgid "Unrestricted"
+msgstr ""
 
 msgid "Up"
 msgstr "Up"
@@ -10249,6 +10872,9 @@ msgstr "사용/사용 안함 버튼 대신 전환 버튼을 사용합니다."
 
 msgid "Used"
 msgstr "사용량"
+
+msgid "Used Threshold"
+msgstr ""
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -10594,6 +11220,10 @@ msgid ""
 "When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."
 msgstr "Samba AD를 사용하게 되면, 독립적인 CIFS/SMB 파일 공유는 사용할 수 없게 됩니다."
 
+msgid ""
+"When UNMAP support is enabled, this option specifies provisioning type."
+msgstr ""
+
 msgid "When UPS switches to Low Battery"
 msgstr "UPS를 언제 베터리 부족 상태로 전환할 지 지정"
 
@@ -10637,6 +11267,9 @@ msgstr "쓰기"
 
 msgid "Write Cache"
 msgstr "쓰기 캐시"
+
+msgid "Write Same Maximum LBA"
+msgstr ""
 
 msgid "Write only"
 msgstr "쓰기 전용"
@@ -10881,11 +11514,31 @@ msgstr "iSCSI 초기 인자(기본 값은 %d)."
 msgid "iSCSI initiator disabled."
 msgstr "iSCSI 초기자 비활성화됨"
 
+msgid "iSNS Period"
+msgstr ""
+
+msgid "iSNS Server"
+msgstr ""
+
+msgid "iSNS Server Port"
+msgstr ""
+
+msgid "iSNS Timeout"
+msgstr ""
+
+msgid ""
+"iSNS registration period. Registered Network Entity not updated during this "
+"period will be unregistered. The default is 900."
+msgstr ""
+
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "무한"
+
+msgid "less then 1.8\"."
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "로드/언로드가 실패했습니다."

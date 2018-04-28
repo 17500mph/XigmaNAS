@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-19 22:35+0000\n"
-"PO-Revision-Date: 2018-04-01 21:06+0000\n"
+"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"PO-Revision-Date: 2018-04-22 11:44+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-20 15:33+0000\n"
-"X-Generator: Launchpad (build 18617)\n"
+"X-Launchpad-Export-Date: 2018-04-28 14:26+0000\n"
+"X-Generator: Launchpad (build 18623)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -200,6 +200,9 @@ msgstr "Es requereix 1 o més discos per crear un volum JBOD."
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Es requereix 1 o més discos per crear un volum RAID-1."
 
+msgid "1.8\""
+msgstr ""
+
 msgid "2"
 msgstr "2"
 
@@ -209,14 +212,32 @@ msgstr "Es requereix 2 o més discos per crear un volum RAID-0."
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Es requereix 2 o més discos per crear un volum RAID-1."
 
+msgid "2.5\""
+msgstr ""
+
+msgid "2048"
+msgstr ""
+
 msgid "3"
 msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Es requereix 3 o més discos per crear un volum RAID-5."
 
+msgid "3.5\""
+msgstr ""
+
+msgid "4096"
+msgstr ""
+
 msgid "4KB wrapper"
 msgstr "Embolcall 4KB"
+
+msgid "5.25\""
+msgstr ""
+
+msgid "512"
+msgstr ""
 
 msgid "514"
 msgstr "514"
@@ -226,6 +247,9 @@ msgstr "69"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q etiqueta VLAN (des 1 fins a 4094)."
+
+msgid "8192"
+msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -476,6 +500,9 @@ msgstr "Adaptativa (baix consum d'energia)"
 msgid "Add"
 msgstr "Afegeix"
 
+msgid "Add Auth Group"
+msgstr ""
+
 msgid "Add Bridge"
 msgstr "Afegir pont"
 
@@ -500,6 +527,9 @@ msgstr "Afegeix una màquina"
 msgid "Add LAGG"
 msgstr "Afegir LAGG"
 
+msgid "Add LUN"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "Afegir MIB"
 
@@ -511,6 +541,9 @@ msgstr "Afegir Opció"
 
 msgid "Add Pool"
 msgstr "Afegir piscina"
+
+msgid "Add Portal Group"
+msgstr ""
 
 msgid "Add RAID"
 msgstr "Afegir RAID"
@@ -538,6 +571,9 @@ msgstr "Afegeix recurs"
 
 msgid "Add Snapshot"
 msgstr "Afegir instantània"
+
+msgid "Add Target"
+msgstr ""
 
 msgid "Add URL"
 msgstr "Afegeix URL"
@@ -619,6 +655,12 @@ msgstr "Grup addicional"
 
 msgid "Additional Network"
 msgstr "Xarxa adicional"
+
+msgid "Additional Options for Block Backend"
+msgstr ""
+
+msgid "Additional Options for RAM Disk Backend"
+msgstr ""
 
 msgid "Additional Parameter"
 msgstr "Paràmetre addicional"
@@ -714,6 +756,9 @@ msgstr "Nivell d'alerta"
 msgid "Algorithm"
 msgstr "Algoritme"
 
+msgid "Alias"
+msgstr ""
+
 msgid "All"
 msgstr "Tot"
 
@@ -789,6 +834,9 @@ msgstr ""
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 "Permet de reprendre pujades interrompudes i descàrregues als clients."
+
+msgid "Allow consecutive read/writes to be issued in parallel"
+msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Permet que nous arxius pugin ser creats"
@@ -884,6 +932,9 @@ msgstr ""
 
 msgid "An Extent defines the storage area of the Target."
 msgstr "Una extensió defineix l'àrea d'emmagatzematge de l'objectiu."
+
+msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -1007,6 +1058,11 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Esteu segur que voleu apagar el servidor?"
 
+msgid ""
+"Assign a previously defined authentication group to the portal group, to be "
+"used for target discovery."
+msgstr ""
+
 msgid "Asynchronous I/O"
 msgstr "E/S asíncrona"
 
@@ -1063,8 +1119,20 @@ msgstr "Agost"
 msgid "Auth Group"
 msgstr "Grup autenticat"
 
+msgid "Auth Group Name"
+msgstr ""
+
 msgid "Auth Group Settings"
 msgstr "Configuració del grup d'autenticació"
+
+msgid "Auth Group is locked"
+msgstr ""
+
+msgid "Auth Group is marked for deletion"
+msgstr ""
+
+msgid "Auth Group is unlocked"
+msgstr ""
 
 msgid "Auth Groups"
 msgstr "Grups autenticats"
@@ -1077,6 +1145,9 @@ msgstr ""
 
 msgid "Auth Method"
 msgstr "Mètode de autenticació"
+
+msgid "Auth Type"
+msgstr ""
 
 msgid "Authenticate Path & Realm"
 msgstr "Autenticar senda i área"
@@ -1153,6 +1224,9 @@ msgstr "Microprogamari de dispositiu auxiliar"
 msgid "Avail"
 msgstr "Disp"
 
+msgid "Avail Threshold"
+msgstr ""
+
 msgid "Available"
 msgstr "Disponible"
 
@@ -1172,6 +1246,9 @@ msgstr "Temps mitjà de arrencada (de zero RPM a plenament operatiu)."
 
 msgid "Back"
 msgstr "Enrera"
+
+msgid "Backend"
+msgstr ""
 
 msgid "Background"
 msgstr "Segon pla"
@@ -1304,6 +1381,9 @@ msgstr ""
 msgid "Blank Time"
 msgstr "Temps en blanc"
 
+msgid "Block"
+msgstr ""
+
 msgid "Block Size"
 msgstr "Mida de bloc"
 
@@ -1396,6 +1476,12 @@ msgstr "Bytes/sec"
 msgid "CACHE"
 msgstr "CACHE"
 
+msgid "CAM Target Layer"
+msgstr ""
+
+msgid "CAM Target Layer / iSCSI Target"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1422,6 +1508,12 @@ msgstr "CCMP"
 msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
+msgid "CD"
+msgstr ""
+
+msgid "CD-ROM"
+msgstr ""
+
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
@@ -1436,6 +1528,9 @@ msgstr "CHAP"
 
 msgid "CHAP Users"
 msgstr "Usuaris CHAP"
+
+msgid "CHAP-Mutual"
+msgstr ""
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1512,6 +1607,9 @@ msgid ""
 msgstr ""
 "CRC Error Count. Compta el nombre d'errors de CRC (lectura/escriptura de "
 "dades d'error FIS CRC)."
+
+msgid "CTL LUN"
+msgstr ""
 
 msgid "Calibration Battery"
 msgstr "Calibra-cio bateria"
@@ -2343,6 +2441,9 @@ msgstr "Servidor DNS està buida."
 msgid "DVD"
 msgstr "DVD"
 
+msgid "DVD-ROM"
+msgstr ""
+
 msgid "Daemon"
 msgstr "Dimoni"
 
@@ -2463,6 +2564,11 @@ msgstr "Temps per defecte d'espera"
 msgid "Define directories/URL's that require authentication."
 msgstr "Definir directoris/URL que requereixen autenticació"
 
+msgid ""
+"Define iSCSI hardware offload driver to use for this portal-group. The "
+"default is \"none\"."
+msgstr ""
+
 msgid "Defines the checksum algorithm."
 msgstr "Defineix l'algoritme de control."
 
@@ -2498,6 +2604,9 @@ msgstr "Suprimeix servidor"
 msgid "Delete Login Info"
 msgstr "Suprimeix informació d'inici"
 
+msgid "Delete Selected Auth Groups"
+msgstr ""
+
 msgid "Delete Selected Bridges"
 msgstr "Suprimeix els ponts seleccionats"
 
@@ -2525,6 +2634,9 @@ msgstr "Suprimeix feines seleccionats"
 msgid "Delete Selected LAGGs"
 msgstr "Suprimeix LAGG's seleccionats"
 
+msgid "Delete Selected LUNs"
+msgstr ""
+
 msgid "Delete Selected NFS Shares"
 msgstr "Suprimeix els recursos NFS seleccionats"
 
@@ -2536,6 +2648,9 @@ msgstr "Suprimeix opcions seleccionades"
 
 msgid "Delete Selected Pools"
 msgstr "Suprimeix piscines seleccionats"
+
+msgid "Delete Selected Portal Groups"
+msgstr ""
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Suprimeix volums RAID seleccionats"
@@ -2563,6 +2678,9 @@ msgstr "Suprimeix recursos seleccionats"
 
 msgid "Delete Selected Snapshots"
 msgstr "Suprimeix instantànies seleccionats"
+
+msgid "Delete Selected Targets"
+msgstr ""
 
 msgid "Delete Selected User Accounts"
 msgstr "Suprimeix comptes d'usuari seleccionades"
@@ -2656,6 +2774,9 @@ msgstr ""
 msgid "Deny"
 msgstr "Denegar"
 
+msgid "Deny discovery"
+msgstr ""
+
 msgid "Description"
 msgstr "Descripció"
 
@@ -2737,6 +2858,9 @@ msgstr ""
 "Determinar la temporització per defecte, en microsegons, abans del primer "
 "paquet és retransmes. L'omissió és 1000000 (1 segon)."
 
+msgid "Determines which targets are returned during discovery."
+msgstr ""
+
 msgid "Device"
 msgstr "Dispositiu"
 
@@ -2746,6 +2870,9 @@ msgstr "Dispositiu / Etiqueta"
 #, php-format
 msgid "Device /dev/%s - %s"
 msgstr "Dispositiu /dev/%s - %s"
+
+msgid "Device ID"
+msgstr ""
 
 msgid "Device IP"
 msgstr "Adreça IP de dispositiu"
@@ -2764,6 +2891,9 @@ msgstr "Sondeig dispositiu"
 
 msgid "Device Serial"
 msgstr "Dispositiu serie"
+
+msgid "Device Type"
+msgstr ""
 
 msgid "Device contains boot partition"
 msgstr "Dispositiu conté la partició d'inici"
@@ -2807,6 +2937,9 @@ msgstr "Diferència"
 msgid "Digital Audio Access Protocol"
 msgstr "Protocol Access Audio Digital"
 
+msgid "Direct"
+msgstr ""
+
 msgid "Direction"
 msgstr "Direcció"
 
@@ -2842,14 +2975,23 @@ msgstr "Desactivar menú estès"
 msgid "Disable Firmware Upgrade"
 msgstr "Desactivar l'actualització de firmware"
 
+msgid "Disable Selected Auth Groups"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "Desactivar les ordres seleccionats"
 
 msgid "Disable Selected Jobs"
 msgstr "Desactivar les feines seleccionades"
 
+msgid "Disable Selected LUNs"
+msgstr ""
+
 msgid "Disable Selected Options"
 msgstr "Desactivar lles opcions seleccionades"
+
+msgid "Disable Selected Portal Groups"
+msgstr ""
 
 msgid "Disable Selected Records"
 msgstr "Desactivar registres seleccionats"
@@ -2859,6 +3001,9 @@ msgstr "Eliminar treballs seleccionats Rsync"
 
 msgid "Disable Selected Rsync Modules"
 msgstr "Eliminar mòduls seleccionats Rsync"
+
+msgid "Disable Selected Targets"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Desactivar embolcall TCP (mòdul mod_wrap)."
@@ -2900,6 +3045,17 @@ msgstr "Descobriment Grup d'autenticació"
 
 msgid "Discovery Auth Method"
 msgstr "Descobriment Mètode d'autenticació"
+
+msgid "Discovery Filter"
+msgstr ""
+
+msgid ""
+"Discovery will not return targets that cannot be accessed by the initiator "
+"because of their initiator-portal."
+msgstr ""
+
+msgid "Discovery will return all targets assigned to this portal group."
+msgstr ""
 
 msgid "Disk"
 msgstr "Disc"
@@ -3128,6 +3284,9 @@ msgstr "Vols eliminar els CARP's seleccionats?"
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Voleu eliminar les LAGG's seleccionats?"
 
+msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Vols eliminar els recursos NFS seleccionats?"
 
@@ -3142,6 +3301,9 @@ msgstr "Voleu eliminar les VLAN's seleccionats?"
 
 msgid "Do you want to delete selected WLANs?"
 msgstr "Voleu eliminar les WLAN's seleccionats?"
+
+msgid "Do you want to delete selected auth groups?"
+msgstr ""
 
 msgid "Do you want to delete selected bridges?"
 msgstr "Vols eliminar els ponts seleccionats?"
@@ -3173,6 +3335,9 @@ msgstr "Vols esborrar les opcions seleccionadess?"
 msgid "Do you want to delete selected pools?"
 msgstr "Vols eliminar les piscines seleccionades?"
 
+msgid "Do you want to delete selected portal groups?"
+msgstr ""
+
 msgid "Do you want to delete selected records?"
 msgstr "Voleu eliminar els registres seleccionats?"
 
@@ -3194,6 +3359,9 @@ msgstr "Voleu eliminar els recursos seleccionats?"
 msgid "Do you want to delete selected snapshots?"
 msgstr "Vols esborrar els instantanis seleccionats?"
 
+msgid "Do you want to delete selected targets?"
+msgstr ""
+
 msgid "Do you want to delete selected user accounts?"
 msgstr "Vols eliminar comptes d'usuari seleccionades?"
 
@@ -3206,6 +3374,12 @@ msgstr "Vols esborrar els volums seleccionats?"
 msgid "Do you want to delete this command?"
 msgstr "Vols eliminar aquesta ordre?"
 
+msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to disable selected commands?"
 msgstr "Vols desactivar les ordres seleccionades?"
 
@@ -3214,6 +3388,9 @@ msgstr "Vols desactivar els treballs seleccionats?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Vols desactivar les opcions seleccionades?"
+
+msgid "Do you want to disable selected portal groups?"
+msgstr ""
 
 msgid "Do you want to disable selected records?"
 msgstr "Voleu desactivar els registres seleccionats?"
@@ -3224,6 +3401,15 @@ msgstr "Vols desactivar els treballs Rsync seleccionats?"
 msgid "Do you want to disable selected rsync modules?"
 msgstr "Vols desactivar els mòduls Rsync seleccionats?"
 
+msgid "Do you want to disable selected targets?"
+msgstr ""
+
+msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Vols activar les ordres seleccionades?"
 
@@ -3232,6 +3418,9 @@ msgstr "Vols permetre els treballs seleccionats?"
 
 msgid "Do you want to enable selected options?"
 msgstr "Vols activar les opcions seleccionades?"
+
+msgid "Do you want to enable selected portal groups?"
+msgstr ""
 
 msgid "Do you want to enable selected records?"
 msgstr "Voleu activar els registres seleccionats?"
@@ -3242,6 +3431,9 @@ msgstr "Vols activar els treballs Rsync seleccionats"
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Vols activar els mòduls Rsync seleccionats?"
 
+msgid "Do you want to enable selected targets?"
+msgstr ""
+
 msgid "Do you want to import disks?"
 msgstr "Vols importar els discs?"
 
@@ -3250,6 +3442,12 @@ msgstr "Vols importar el discs de programari RAID?"
 
 msgid "Do you want to lock selected records?"
 msgstr "Voleu bloquejar els registres seleccionats?"
+
+msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected auth groups?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Vols canviar les ordres seleccionats?"
@@ -3260,6 +3458,9 @@ msgstr "Vols mostrar els treballs seleccionats?"
 msgid "Do you want to toggle selected options?"
 msgstr "Vols mostrar les opcions seleccionats?"
 
+msgid "Do you want to toggle selected portal groups?"
+msgstr ""
+
 msgid "Do you want to toggle selected records?"
 msgstr "Voleu conmutar els registres seleccionats?"
 
@@ -3268,6 +3469,9 @@ msgstr "Voleu mostrar els treballs seleccionats Rsync?"
 
 msgid "Do you want to toggle selected rsync modules?"
 msgstr "Voleu mostrar els mòduls seleccionats Rsync?"
+
+msgid "Do you want to toggle selected targets?"
+msgstr ""
 
 msgid "Do you want to unlock selected records?"
 msgstr "Voleu desbloquejar els registres seleccionats?"
@@ -3381,8 +3585,14 @@ msgstr "Partició EFI/GPT es pot utilitzar només amb UFS."
 msgid "ERROR:"
 msgstr "ERROR:"
 
+msgid "EUI-64"
+msgstr ""
+
 msgid "Edit"
 msgstr "Editar"
+
+msgid "Edit Auth Group"
+msgstr ""
 
 msgid "Edit Bridge"
 msgstr "Edita pont"
@@ -3408,6 +3618,9 @@ msgstr "Editar amfitrió"
 msgid "Edit LAGG"
 msgstr "Edita LAGG"
 
+msgid "Edit LUN"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Editar MIB"
 
@@ -3419,6 +3632,9 @@ msgstr "Editar opció"
 
 msgid "Edit Pool"
 msgstr "Edita piscina"
+
+msgid "Edit Portal Group"
+msgstr ""
 
 msgid "Edit RAID"
 msgstr "Editar RAID"
@@ -3446,6 +3662,9 @@ msgstr "Edita recurs"
 
 msgid "Edit Snapshot"
 msgstr "Editar instantani"
+
+msgid "Edit Target"
+msgstr ""
 
 msgid "Edit URL"
 msgstr "Editar URL"
@@ -3585,14 +3804,23 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Activa STARTTTLS"
 
+msgid "Enable Selected Auth Groups"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "Activa ordres seleccionats"
 
 msgid "Enable Selected Jobs"
 msgstr "Habilitar treballs seleccionats"
 
+msgid "Enable Selected LUNs"
+msgstr ""
+
 msgid "Enable Selected Options"
 msgstr "Habilitar opcions seleccionats"
+
+msgid "Enable Selected Portal Groups"
+msgstr ""
 
 msgid "Enable Selected Records"
 msgstr "Activa els registres seleccionats"
@@ -3602,6 +3830,9 @@ msgstr "Activar els treballs Rsync seleccionats"
 
 msgid "Enable Selected Rsync Modules"
 msgstr "Activar els mòduls Rsync seleccionats"
+
+msgid "Enable Selected Targets"
+msgstr ""
 
 msgid "Enable Server"
 msgstr "Activa el servidor"
@@ -3984,6 +4215,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Introduïu un nom sysctl MIB vàlida."
 
+msgid "Enter additional parameter"
+msgstr ""
+
 msgid "Enter comment for the share"
 msgstr "Introduïu el comentari per el compartit"
 
@@ -4023,6 +4257,9 @@ msgstr "Introdueix el nom d'inici de sessió de l'usuari."
 
 msgid "Enter name"
 msgstr "Introduïu un nom"
+
+msgid "Enter secret"
+msgstr ""
 
 msgid "Enter smartctl pass-through type."
 msgstr "Introduïu el tipus de passarel·la smartctl."
@@ -4087,6 +4324,9 @@ msgstr "Introduïu el port per enviar les trampes (per defecte 162)."
 
 msgid "Enter trap host name."
 msgstr "Introduïu trampa nom d'amfitrió."
+
+msgid "Enter user name"
+msgstr ""
 
 msgid "Enter value"
 msgstr "Introduïu un valor"
@@ -4462,6 +4702,12 @@ msgstr ""
 "Força l'ús de vdevs, fins i tot si apareixen en ús o diferents mides "
 "especifiques. (Això no és recomanable.)"
 
+msgid "Foreign"
+msgstr ""
+
+msgid "Form Factor"
+msgstr ""
+
 msgid "Format"
 msgstr "Format"
 
@@ -4581,6 +4827,12 @@ msgstr "Donar accés només als usuaris locals a la pàgina web."
 msgid "Give your media library a friendly name."
 msgstr "Dóna-li a la teva biblioteca de mitjans un nom descriptiu."
 
+msgid "Global Settings"
+msgstr ""
+
+msgid "Global numeric identifier to use for a given LUN inside CTL."
+msgstr ""
+
 msgid "Grant access to the user portal."
 msgstr "Concedir accés al portal d'usuari."
 
@@ -4643,6 +4895,9 @@ msgstr "Compte de convidat"
 
 msgid "Guest Authentication"
 msgstr "Autenticació de convidat"
+
+msgid "HA Role"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -4864,6 +5119,12 @@ msgstr "Paràmetres IPv4"
 
 msgid "IPv4 addresses"
 msgstr "Adreças IPv4"
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to portal belonging to this portal-group "
+"will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
 
 msgid "IPv6 Address"
 msgstr "Adreça IPv6"
@@ -5211,6 +5472,9 @@ msgstr "Pregunta nº de serie"
 msgid "Inquiry Vendor"
 msgstr "Pregunta venedor"
 
+msgid "Insecure TPC"
+msgstr ""
+
 msgid "Insensitive"
 msgstr "Insensible"
 
@@ -5447,6 +5711,36 @@ msgstr "LOG (Mirall)"
 
 msgid "LUN"
 msgstr "LUN"
+
+msgid "LUN EUI-64\tidentifier"
+msgstr ""
+
+msgid "LUN NAA Identifier"
+msgstr ""
+
+msgid "LUN Name"
+msgstr ""
+
+msgid "LUN Product"
+msgstr ""
+
+msgid "LUN Revision"
+msgstr ""
+
+msgid "LUN SCSI Name"
+msgstr ""
+
+msgid "LUN Vendor"
+msgstr ""
+
+msgid "LUN is locked"
+msgstr ""
+
+msgid "LUN is marked for deletion"
+msgstr ""
+
+msgid "LUN is unlocked"
+msgstr ""
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5829,6 +6123,9 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr "Adreça de màscara"
 
+msgid "Max Processes"
+msgstr ""
+
 msgid "Max. Block Size"
 msgstr "Mida del bloc max."
 
@@ -6137,6 +6434,9 @@ msgstr "CHAP Mutu"
 msgid "Mutual CHAP Users"
 msgstr "Usuaris CHAP Mutu"
 
+msgid "NAA Identifier"
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6192,9 +6492,18 @@ msgstr "Informació del controlador NUT intern"
 msgid "Name"
 msgstr "Nom"
 
+msgid "Name of the Auth Group."
+msgstr ""
+
+msgid "Name of the LUN."
+msgstr ""
+
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "Nom del host NAS, sense part de domini, per exemple, %s."
+
+msgid "Name of the Portal Group."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -6208,6 +6517,9 @@ msgid ""
 msgstr ""
 "Nom del servidor. Si aquest camp es deixa buit s'especifica el servidor "
 "predeterminat."
+
+msgid "Name of the target."
+msgstr ""
 
 msgid "Name of the variable."
 msgstr "Nom de la variable."
@@ -6389,7 +6701,7 @@ msgid "No file was uploaded."
 msgstr "No s'ha pujat cap fitxer."
 
 msgid "No information available."
-msgstr ""
+msgstr "No hi ha informació disponible."
 
 msgid "No new disk found."
 msgstr "Sense disc nou trobat."
@@ -6515,6 +6827,9 @@ msgstr ""
 "Normalment, aquesta opció no s'ha d'establir ja que a la fase de negociació "
 "automàtica el protocol SMB s'encarrega de triar el protocol adequat."
 
+msgid "Not Reported"
+msgstr ""
+
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6610,6 +6925,9 @@ msgstr "OFF"
 
 msgid "Offline Immediate Test"
 msgstr "Prova immediata de desconexió"
+
+msgid "Offload"
+msgstr ""
 
 msgid "Old Passphrase"
 msgstr "Contrasenya antiga"
@@ -6931,8 +7249,17 @@ msgstr "Permís"
 msgid "Permit Root Login"
 msgstr "Permís l'accés del Root"
 
+msgid "Permit discovery without authentication"
+msgstr ""
+
 msgid "Permit to do SSH Tunneling."
 msgstr "Permetre fer túnel SSH."
+
+msgid "Physical Block Offset"
+msgstr ""
+
+msgid "Physical Block Size"
+msgstr ""
 
 msgid "Physical Interface"
 msgstr "Interfície física"
@@ -7034,6 +7361,9 @@ msgstr "Temps de cicle"
 msgid "Pool"
 msgstr "Piscina"
 
+msgid "Pool Avail Threshold"
+msgstr ""
+
 msgid "Pool Devices"
 msgstr "Dispositius de la piscina"
 
@@ -7048,6 +7378,9 @@ msgstr "Estat de la piscina"
 
 msgid "Pool Status"
 msgstr "Estat de la piscina"
+
+msgid "Pool Used Threshold"
+msgstr ""
 
 msgid "Pool Version"
 msgstr "Versió piscina"
@@ -7093,6 +7426,9 @@ msgstr "El número de port ha de ser de 69 o un número entre 1024 i 49151."
 msgid "Port number must be in the range between %d and %d."
 msgstr "El número de port ha d'estar en el rang entre %d i %d."
 
+msgid "Port number of iSNS server to register on."
+msgstr ""
+
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
 "Port del servei TFTP. Deixeu-vos en blanc per utilitzar el port "
@@ -7127,8 +7463,20 @@ msgstr ""
 msgid "Portal Group"
 msgstr "Grup de Portal"
 
+msgid "Portal Group Name"
+msgstr ""
+
 msgid "Portal Group Settings"
 msgstr "Ajustos grup portal"
+
+msgid "Portal Group is locked"
+msgstr ""
+
+msgid "Portal Group is marked for deletion"
+msgstr ""
+
+msgid "Portal Group is unlocked"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Grups de Portal"
@@ -7232,6 +7580,9 @@ msgstr "Estat del procés"
 msgid "Processes"
 msgstr "Processos"
 
+msgid "Processor"
+msgstr ""
+
 msgid "Product ID"
 msgstr "ID del producte"
 
@@ -7261,6 +7612,9 @@ msgstr ""
 
 msgid "Provider"
 msgstr "Proveïdor"
+
+msgid "Provisioning Type"
+msgstr ""
 
 msgid "Proxy"
 msgstr "Proxy"
@@ -7368,8 +7722,14 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
+msgid "RAM Disk"
+msgstr ""
+
 msgid "RAW info"
 msgstr "Informació RAW"
+
+msgid "RPM"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -7421,6 +7781,9 @@ msgstr "Valor en brut"
 
 msgid "Read"
 msgstr "Llegir"
+
+msgid "Read Cache"
+msgstr ""
 
 msgid "Read Only"
 msgstr "Només lectura"
@@ -7513,6 +7876,9 @@ msgstr "Recursiu"
 
 msgid "Recycle Bin"
 msgstr "Paperera de reciclatge"
+
+msgid "Redirect"
+msgstr ""
 
 msgid "Redundant Metadata"
 msgstr "Metadades redundants"
@@ -7614,6 +7980,9 @@ msgstr "Elimina el primer %s abans de continuar."
 msgid "Reorder Commands"
 msgstr "Re-ordena les ordres"
 
+msgid "Reordering"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "Remplazar Bateria del SAI"
 
@@ -7674,6 +8043,9 @@ msgstr "Recurs"
 
 msgid "Resource Name"
 msgstr "Nom del recurs"
+
+msgid "Resource Provisioning"
+msgstr ""
 
 msgid "Resource is marked for deletion"
 msgstr "El recurs està marcat per ser esborrat"
@@ -7830,6 +8202,9 @@ msgstr "S.M.A.R.T. opcions adicionals"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. registre"
+
+msgid "SCSI Name"
+msgstr ""
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, Verifica"
@@ -8005,6 +8380,9 @@ msgstr "Memòria cau secundària"
 
 msgid "Seconds"
 msgstr "Segons"
+
+msgid "Seconfary"
+msgstr ""
 
 msgid "Secret"
 msgstr "Secret"
@@ -8253,6 +8631,15 @@ msgstr "Número de sèrie"
 msgid "Serial number"
 msgstr "Número de sèrie"
 
+msgid "Serialize Sequence"
+msgstr ""
+
+msgid "Serialize consecutive reads"
+msgstr ""
+
+msgid "Serialize consecutive reads/writes"
+msgstr ""
+
 msgid "Server"
 msgstr "Servidor"
 
@@ -8304,6 +8691,9 @@ msgstr ""
 
 msgid "Set or reset user password."
 msgstr "Estableix o reinicia la contrasenya de l'usuari."
+
+msgid "Set per-LUN/per-pool thin provisioning soft threshold."
+msgstr ""
 
 msgid "Set read only."
 msgstr "Fes-ho només lectura."
@@ -8358,6 +8748,29 @@ msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 "Ajustar la velocitat de desplaçament del títol entre 0-10 (per defecte 10)."
 
+msgid ""
+"Set to \"off\", disables read caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid ""
+"Set to \"off\", disables write caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid "Set to \"on\" makes LUN removable."
+msgstr ""
+
+msgid ""
+"Set to \"on\", blocks all media write operations to the LUN reporting it as "
+"write protected."
+msgstr ""
+
+msgid ""
+"Set to \"unrestricted\", allows target to process commands with SIMPLE task "
+"attribute in arbitrary order."
+msgstr ""
+
 msgid "Set user login shell."
 msgstr "Configurar el usuari d'inici de consola."
 
@@ -8369,12 +8782,32 @@ msgstr ""
 "Estableix un punt de muntatge alternatiu per al conjunt de dades arrel. El "
 "valor per omissió és / mnt."
 
+msgid "Sets the authentication type."
+msgstr ""
+
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
 "is zero (anyone can read or write)."
 msgstr ""
 "Estableix la màscara d'usuari per als arxius acabats de crear al valor "
 "especificat. Per omissió és zero (qualsevol pot llegir o escriure)."
+
+msgid ""
+"Setting to \"on\" allows EXTENDED COPY command sent to this LUN access other "
+"LUNs on this host, not accessible otherwise. This allows to offload copying "
+"between different iSCSI targets residing on the same host in trusted "
+"environments."
+msgstr ""
+
+msgid ""
+"Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
+"Default value is \"on\" if supported by the backend."
+msgstr ""
+
+msgid ""
+"Setting to \"primary\" or \"secondary\" overrides default role of the node "
+"in HA cluster."
+msgstr ""
 
 msgid "Settings"
 msgstr "Configuracions"
@@ -8608,15 +9041,59 @@ msgstr ""
 msgid "Specified path is NFSv4 root directory."
 msgstr "La ruta especificada és arrel NFSv4."
 
+msgid "Specifies LUN EUI-64 identifier."
+msgstr ""
+
+msgid "Specifies LUN NAA identifier."
+msgstr ""
+
+msgid "Specifies LUN SCSI name string."
+msgstr ""
+
+msgid "Specifies LUN locally assigned RFC 4122 UUID."
+msgstr ""
+
+msgid "Specifies LUN product string up to 16 chars."
+msgstr ""
+
+msgid "Specifies LUN revision string up to 4 chars."
+msgstr ""
+
+msgid "Specifies LUN vendor string up to 8 chars."
+msgstr ""
+
+msgid ""
+"Specifies capacity of backing store (maximum RAM for data). The default "
+"value is zero, that disables backing store completely, making all writes go "
+"to nowhere, while all reads return zeroes."
+msgstr ""
+
+msgid "Specifies file or device name to use for backing store."
+msgstr ""
+
 msgid "Specifies how many servers to create."
 msgstr "Especifica el nombre de servidors per crear."
 
 msgid "Specifies how the volume should be exposed to the OS."
 msgstr "Especifica com el volum s'ha d'exposar al sistema operatiu."
 
+msgid "Specifies medium rotation rate of the device."
+msgstr ""
+
+msgid "Specifies nominal form factor of the device."
+msgstr ""
+
+msgid "Specifies number of backend threads to use for this LUN."
+msgstr ""
+
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
 "Especifica que el sistema d'arxius ha de ser exportada de només lectura."
+
+msgid ""
+"Specifies that this portal-group is listened by some other host. This host "
+"will announce it on discovery stage, but won't listen."
+msgstr ""
 
 msgid "Specifies the command to be run."
 msgstr "Especifica la comanda a executar."
@@ -8668,6 +9145,36 @@ msgstr ""
 "Especifica el percentatge d'espai en disc que es tornarà en un ús normal. La "
 "reducció d'aquest llindar pot afectar negativament el rendiment i auto-des-"
 "fragmentació!"
+
+msgid "Specify UNMAP block offset of the device."
+msgstr ""
+
+msgid "Specify UNMAP block size of the device."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per UNMAP command to report in Block "
+"Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per WRITE SAME command to report in "
+"Block Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of block descriptors per UNMAP command to "
+"report in Block Limits VPD page."
+msgstr ""
+
+msgid "Specify physical block offset of the device."
+msgstr ""
+
+msgid "Specify physical block size of the device."
+msgstr ""
+
+msgid "Specify the SCSI device type to use when creating the LUN."
+msgstr ""
 
 msgid "Split request"
 msgstr "Sol·licitud de divisiò"
@@ -8992,8 +9499,17 @@ msgstr "Directori de destí"
 msgid "Target information"
 msgstr "Informació de destí"
 
+msgid "Target is locked"
+msgstr ""
+
+msgid "Target is marked for deletion"
+msgstr ""
+
 msgid "Target is not selected."
 msgstr "El destí no s'ha seleccionat"
+
+msgid "Target is unlocked"
+msgstr ""
 
 msgid "Target list"
 msgstr "Llista de destins"
@@ -9070,6 +9586,9 @@ msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 "El port COM a la BIOS ha de ser activat abans d'activar aquesta opció."
 
+msgid "The CTL backend to use for a given LUN."
+msgstr ""
+
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
 "Els volums HAST no es poden accedir fins que el node HAST es converteix en "
@@ -9096,6 +9615,9 @@ msgstr "El protocol Lagg no és vàlid."
 msgid "The LAN IP address will be reset to"
 msgstr "L'adreça IP de la LAN es restablirà a"
 
+msgid "The LUN size, in bytes."
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "El MIB '% s' no existeix en sysctl."
@@ -9115,6 +9637,12 @@ msgstr ""
 "L'atribut de Bloc Flash dolent recentment agregat indica el nombre total de "
 "blocs defectuosos en el flash del dispositiu des de que es va inicialitzar "
 "per primera vegada a la fabricació."
+
+msgid "The SCSI Device Identification string presented to the initiator."
+msgstr ""
+
+msgid "The SCSI serial number presented to the initiator."
+msgstr ""
 
 msgid "The TCP Port must be a valid port number."
 msgstr "El port TCP ha de ser un número de port vàlid."
@@ -9319,6 +9847,9 @@ msgstr ""
 "es llegeix en ordre ascendent per una regla de coincidència. Quan es troba "
 "una coincidència s'aplica la regla i el procés de recerca s'aturarà."
 
+msgid "The blocksize visible to the initiator."
+msgstr ""
+
 msgid "The changes could not be applied"
 msgstr "Els canvis no es poden aplicar"
 
@@ -9327,6 +9858,16 @@ msgstr "S'han aplicat els canvis satisfactòriament."
 
 msgid "The changes have been saved."
 msgstr "S'han desat els canvis."
+
+msgid "The check will include both initiator-portal and initiator-name."
+msgstr ""
+
+msgid ""
+"The check will include initiator-portal, initiator-name, and authentication "
+"credentials. The target is returned if it does not require CHAP "
+"authentication, or if the CHAP user and secret used during discovery match "
+"those used by the target."
+msgstr ""
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Les credencials en text pla amb els quals s'uneixen."
@@ -9420,6 +9961,9 @@ msgstr ""
 "El format personalitzat de la instantània per al servei d'instantànies es "
 "pot especificar. El format per defecte és %s utilitzat per a la instantània "
 "automàtica de ZFS."
+
+msgid "The debug verbosity level. The default is 0."
+msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -9570,6 +10114,11 @@ msgid ""
 msgstr ""
 "El istgtcontrol pot accedir als objectius amb l'usuari correcte i secret en "
 "el Grup específic d'autenticació."
+
+msgid ""
+"The limit for concurrently running child processes handling incoming "
+"connections. The default is 30. A setting of 0 disables the limit."
+msgstr ""
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr ""
@@ -9743,6 +10292,10 @@ msgstr "La ruta '%s' es un directori."
 msgid "The path '%s' is not a directory."
 msgstr "La ruta '%s' no és un directori."
 
+msgid ""
+"The path to the file, device node, or zfs volume used to back the LUN."
+msgstr ""
+
 msgid "The peer connection encryption mode."
 msgstr "La manera de xifrat de connexió entre peers."
 
@@ -9857,6 +10410,11 @@ msgstr ""
 msgid "The time update interval must be between 6 and 1440."
 msgstr "L'interval d'actualització del temps ha de ser entre 6 i 1440."
 
+msgid ""
+"The timeout for login sessions, after which the connection will be forcibly "
+"terminated. The default is 60. A setting of 0 disables the timeout."
+msgstr ""
+
 msgid "The total count of errors when writing a sector."
 msgstr "El recompte total d'errors a l'escriure un sector."
 
@@ -9969,6 +10527,21 @@ msgstr ""
 "Aquests s'afegirà l'opció (s) en /etc/rc.conf. Això li permet sobreescriure "
 "les opcions utilitzades per diversos scripts d'inici genèrics."
 
+msgid "These parameter will be added to the global section of ctl.conf"
+msgstr ""
+
+msgid "These parameter will be added to this auth-group."
+msgstr ""
+
+msgid "These parameter will be added to this lun."
+msgstr ""
+
+msgid "These parameter will be added to this portal-group."
+msgstr ""
+
+msgid "These parameter will be added to this target."
+msgstr ""
+
 #, php-format
 msgid "These parameters are added to %s."
 msgstr "Aquests paràmetres s'afegeixen a %s."
@@ -10013,6 +10586,9 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Aquests paràmetres s'afegiran a la ordre ping."
+
+msgid "Thin Provisioning"
+msgstr ""
 
 msgid "This URL is already configured."
 msgstr "Aquesta URL ja està configurada."
@@ -10443,6 +11019,9 @@ msgstr ""
 "Això donarà suport .jpg transmissió i arxius .mp3 a una receptor suportant "
 "TiVo."
 
+msgid "Threads"
+msgstr ""
+
 msgid "Throughput"
 msgstr "Rendiment"
 
@@ -10503,6 +11082,9 @@ msgstr "Interval de temps d'actualització"
 msgid "Timeout"
 msgstr "Temps esgotat"
 
+msgid "Timeout for iSNS requests. The default is 5."
+msgstr ""
+
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr "El temps d'espera ha de ser un número entre 10 i 255000000."
 
@@ -10561,14 +11143,23 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Mode de commutació"
 
+msgid "Toggle Selected Auth Groups"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "Commuta els comandos seleccionats"
 
 msgid "Toggle Selected Jobs"
 msgstr "Commuta les feines seleccionades"
 
+msgid "Toggle Selected LUNs"
+msgstr ""
+
 msgid "Toggle Selected Options"
 msgstr "Commuta les opcions seleccionades"
+
+msgid "Toggle Selected Portal Groups"
+msgstr ""
 
 msgid "Toggle Selected Records"
 msgstr "Activa registres seleccionats"
@@ -10578,6 +11169,9 @@ msgstr "Alternar treballs Rsync seleccionats"
 
 msgid "Toggle Selected Rsync Modules"
 msgstr "Alternar mòduls Rsync seleccionats"
+
+msgid "Toggle Selected Targets"
+msgstr ""
 
 msgid "Tolerated"
 msgstr "Tolerat"
@@ -10761,6 +11355,21 @@ msgstr "UFS amb actualitzacions de programari"
 msgid "UID"
 msgstr "UID"
 
+msgid "UNMAP"
+msgstr ""
+
+msgid "UNMAP Block Offset"
+msgstr ""
+
+msgid "UNMAP Block Size"
+msgstr ""
+
+msgid "UNMAP Maximum Descriptors"
+msgstr ""
+
+msgid "UNMAP Maximum LBA"
+msgstr ""
+
 msgid "UPS"
 msgstr "SAI"
 
@@ -10860,6 +11469,9 @@ msgstr "Dispositius d'emmagatzematge massiu USB"
 msgid "UTF-8 Only"
 msgstr "UTF-8 només"
 
+msgid "UUID"
+msgstr ""
+
 msgid "Umask"
 msgstr "Umask"
 
@@ -10868,6 +11480,9 @@ msgstr "No disponible"
 
 msgid "Uncorrected read errors reported to the operating system."
 msgstr "Errors de lectura no corregits notifiquen al sistema operatiu."
+
+msgid "Undefined"
+msgstr ""
 
 msgid "Unformated"
 msgstr "Sense formatar"
@@ -10883,6 +11498,11 @@ msgstr "Paquet desinstal-lat"
 
 msgid "Uninterruptible Power Supply"
 msgstr "Sistema d'alimentació ininterrompuda"
+
+msgid ""
+"Unique 16-bit tag value of this portal-group. If not specified, the value is "
+"generated automatically."
+msgstr ""
 
 msgid "Unison"
 msgstr "Unison"
@@ -10931,6 +11551,9 @@ msgstr "Desmuntar el disc abans de continuar."
 
 msgid "Unmounting..."
 msgstr "S'està desmuntant..."
+
+msgid "Unrestricted"
+msgstr ""
 
 msgid "Up"
 msgstr "Amunt"
@@ -11086,6 +11709,9 @@ msgstr ""
 
 msgid "Used"
 msgstr "Utilitzat"
+
+msgid "Used Threshold"
+msgstr ""
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -11454,6 +12080,10 @@ msgstr ""
 "Quan està habilitada Samba AD, el intercanvi d'arxius CIFS/SMB no es pot "
 "utilitzar."
 
+msgid ""
+"When UNMAP support is enabled, this option specifies provisioning type."
+msgstr ""
+
 msgid "When UPS switches to Low Battery"
 msgstr "Quan el SAI canvia a bateria baixa"
 
@@ -11500,6 +12130,9 @@ msgstr "Escriure"
 
 msgid "Write Cache"
 msgstr "Memòria cau d'escriptura"
+
+msgid "Write Same Maximum LBA"
+msgstr ""
 
 msgid "Write only"
 msgstr "Només escriptura"
@@ -11763,11 +12396,31 @@ msgstr "iSCSI paràmetre inicial (% d per defecte)."
 msgid "iSCSI initiator disabled."
 msgstr "Iniciador iSCSI deshabilitat."
 
+msgid "iSNS Period"
+msgstr ""
+
+msgid "iSNS Server"
+msgstr ""
+
+msgid "iSNS Server Port"
+msgstr ""
+
+msgid "iSNS Timeout"
+msgstr ""
+
+msgid ""
+"iSNS registration period. Registered Network Entity not updated during this "
+"period will be unregistered. The default is 900."
+msgstr ""
+
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "infinit"
+
+msgid "less then 1.8\"."
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "carga/descarga fallida"
