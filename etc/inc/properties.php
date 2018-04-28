@@ -710,6 +710,9 @@ class property_list extends properties {
 		$this->x_options = $value;
 		return $this;
 	}
+	public function upsert_option(string $key = '',string $value = '') {
+		$this->x_options[$key] = isset($this->x_options) ? $value : [$key => $value];
+	}
 	public function get_options() {
 		return $this->x_options;
 	}
