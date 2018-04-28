@@ -160,6 +160,20 @@ $a_referer = [
 	$cop->get_tag(),
 	$cop->get_auxparam()
 ];
+//	Add options for discovery auth group from auth groups, ignore enable flag
+$ctl_auth_groups = &array_make_branch($config,'ctld','ctl_auth_group','param');
+foreach($ctl_auth_groups as $ctl_auth_group):
+	$key = $ctl_auth_group['name'] ?? NULL;
+	if(isset($key)):
+		$description = $ctl_auth_group['description'] ?? '';
+		if(preg_match('/\S/',$description)):
+			$value = sprintf('%s - %s',$key,$description);
+		else:
+			$value = $key;
+		endif;
+		$cop->get_discovery_auth_group()->upsert_option($key,$value);
+	endif;
+endforeach;
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		foreach($a_referer as $referer):
