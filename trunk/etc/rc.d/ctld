@@ -192,103 +192,103 @@ ctld_mkconf()
 					--value-of "concat('size',' \"',size,'\"')" --nl \
 				--break \
 				--if "string-length(opt_vendor) > 0" \
-					--value-of "concat('vendor',' \"',opt_vendor,'\"')" --nl \
+					--value-of "concat('option vendor',' \"',opt_vendor,'\"')" --nl \
 				--break \
 				--if "string-length(opt_product) > 0" \
-					--value-of "concat('product',' ',opt_product)" --nl \
+					--value-of "concat('option product',' ',opt_product)" --nl \
 				--break \
 				--if "string-length(opt_revision) > 0" \
-					--value-of "concat('revision',' ',opt_revision)" --nl \
+					--value-of "concat('option revision',' ',opt_revision)" --nl \
 				--break \
 				--if "string-length(opt_scsiname) > 0" \
-					--value-of "concat('scsiname',' ',opt_scsiname)" --nl \
+					--value-of "concat('option scsiname',' ',opt_scsiname)" --nl \
 				--break \
 				--if "string-length(opt_eui) > 0" \
-					--value-of "concat('eui',' ',opt_eui)" --nl \
+					--value-of "concat('option eui',' ',opt_eui)" --nl \
 				--break \
 				--if "string-length(opt_naa) > 0" \
-					--value-of "concat('naa',' 0x',opt_naa)" --nl \
+					--value-of "concat('option naa',' 0x',opt_naa)" --nl \
 				--break \
 				--if "string-length(opt_uuid) > 0" \
-					--value-of "concat('uuid',' ',opt_uuid)" --nl \
+					--value-of "concat('option uuid',' ',opt_uuid)" --nl \
 				--break \
 				--if "string-length(opt_ha_role) > 0" \
-					--value-of "concat('ha_role',' ',opt_ha_role)" --nl \
+					--value-of "concat('option ha_role',' ',opt_ha_role)" --nl \
 				--break \
 				--if "string-length(opt_insecure_tpc) > 0" \
-					--value-of "concat('insecure_tpc',' ',opt_insecure_tpc)" --nl \
+					--value-of "concat('option insecure_tpc',' ',opt_insecure_tpc)" --nl \
 				--break \
 				--if "string-length(opt_readcache) > 0" \
-					--value-of "concat('readcache',' ',opt_readcache)" --nl \
+					--value-of "concat('option readcache',' ',opt_readcache)" --nl \
 				--break \
 				--if "string-length(opt_readonly) > 0" \
-					--value-of "concat('readonly',' ',opt_readonly)" --nl \
+					--value-of "concat('option readonly',' ',opt_readonly)" --nl \
 				--break \
 				--if "string-length(opt_removable) > 0" \
-					--value-of "concat('removable',' ',opt_removable)" --nl \
+					--value-of "concat('option removable',' ',opt_removable)" --nl \
 				--break \
 				--if "string-length(opt_reordering) > 0" \
-					--value-of "concat('reordering',' ',opt_reordering)" --nl \
+					--value-of "concat('option reordering',' ',opt_reordering)" --nl \
 				--break \
 				--if "string-length(opt_serseq) > 0" \
-					--value-of "concat('serseq',' ',opt_serseq)" --nl \
+					--value-of "concat('option serseq',' ',opt_serseq)" --nl \
 				--break \
 				--if "string-length(opt_pblocksize) > 0" \
-					--value-of "concat('pblocksize',' ',opt_pblocksize)" --nl \
+					--value-of "concat('option pblocksize',' ',opt_pblocksize)" --nl \
 				--break \
 				--if "string-length(opt_pblockoffset) > 0" \
-					--value-of "concat('pblockoffset',' ',opt_pblockoffset)" --nl \
+					--value-of "concat('option pblockoffset',' ',opt_pblockoffset)" --nl \
 				--break \
 				--if "string-length(opt_ublocksize) > 0" \
-					--value-of "concat('ublocksize',' ',opt_ublocksize)" --nl \
+					--value-of "concat('option ublocksize',' ',opt_ublocksize)" --nl \
 				--break \
 				--if "string-length(opt_ublockoffset) > 0" \
-					--value-of "concat('ublockoffset',' ',opt_ublockoffset)" --nl \
+					--value-of "concat('option ublockoffset',' ',opt_ublockoffset)" --nl \
 				--break \
 				--if "string-length(opt_rpm) > 0" \
-					--value-of "concat('rpm',' ',opt_rpm)" --nl \
+					--value-of "concat('option rpm',' ',opt_rpm)" --nl \
 				--break \
 				--if "string-length(opt_formfactor) > 0" \
-					--value-of "concat('formfactor',' ',opt_formfactor)" --nl \
+					--value-of "concat('option formfactor',' ',opt_formfactor)" --nl \
 				--break \
 				--if "string-length(opt_provisioning_type) > 0" \
-					--value-of "concat('provisioning_type',' ',opt_provisioning_type)" --nl \
+					--value-of "concat('option provisioning_type',' ',opt_provisioning_type)" --nl \
 				--break \
 				--if "string-length(opt_unmap) > 0" \
-					--value-of "concat('unmap',' ',opt_unmap)" --nl \
+					--value-of "concat('option unmap',' ',opt_unmap)" --nl \
 				--break \
 				--if "string-length(opt_unmap_max_lba) > 0" \
-					--value-of "concat('unmap_max_lba',' ',opt_unmap_max_lba)" --nl \
+					--value-of "concat('option unmap_max_lba',' ',opt_unmap_max_lba)" --nl \
 				--break \
 				--if "string-length(opt_unmap_max_descr) > 0" \
-					--value-of "concat('unmap_max_descr',' ',opt_unmap_max_descr)" --nl \
+					--value-of "concat('option unmap_max_descr',' ',opt_unmap_max_descr)" --nl \
 				--break \
 				--if "string-length(opt_write_same_max_lba) > 0" \
-					--value-of "concat('write_same_max_lba',' ',opt_write_same_max_lba)" --nl \
+					--value-of "concat('option write_same_max_lba',' ',opt_write_same_max_lba)" --nl \
 				--break \
 				--if "string-length(opt_avail_threshold) > 0" \
-					--value-of "concat('avail-threshold',' ',opt_avail_threshold)" --nl \
+					--value-of "concat('option avail-threshold',' ',opt_avail_threshold)" --nl \
 				--break \
 				--if "string-length(opt_used_threshold) > 0" \
-					--value-of "concat('used-threshold',' ',opt_used_threshold)" --nl \
+					--value-of "concat('option used-threshold',' ',opt_used_threshold)" --nl \
 				--break \
 				--if "string-length(opt_pool_avail_threshold) > 0" \
-					--value-of "concat('pool-avail-threshold',' ',opt_pool_avail_threshold)" --nl \
+					--value-of "concat('option pool-avail-threshold',' ',opt_pool_avail_threshold)" --nl \
 				--break \
 				--if "string-length(opt_pool_used_threshold) > 0" \
-					--value-of "concat('pool-used-threshold',' ',opt_pool_used_threshold)" --nl \
+					--value-of "concat('option pool-used-threshold',' ',opt_pool_used_threshold)" --nl \
 				--break \
 				--if "string-length(opt_writecache) > 0" \
-					--value-of "concat('writecache',' ',opt_writecache)" --nl \
+					--value-of "concat('option writecache',' ',opt_writecache)" --nl \
 				--break \
 				--if "string-length(opt_file) > 0" \
-					--value-of "concat('file',' ',opt_file)" --nl \
+					--value-of "concat('option file',' ',opt_file)" --nl \
 				--break \
 				--if "string-length(opt_num_threads) > 0" \
-					--value-of "concat('num_threads',' ',opt_num_threads)" --nl \
+					--value-of "concat('option num_threads',' ',opt_num_threads)" --nl \
 				--break \
 				--if "string-length(opt_capacity) > 0" \
-					--value-of "concat('capacity',' ',opt_capacity)" --nl \
+					--value-of "concat('option capacity',' ',opt_capacity)" --nl \
 				--break \
 				--match "auxparam" \
 					--value-of "." --nl \
