@@ -189,10 +189,10 @@ ctld_mkconf()
 					--value-of "concat('device_type',' ',device_type)" --nl \
 				--break \
 				--if "string-length(path) > 0" \
-					--value-of "concat('path',' ',path)" --nl \
+					--value-of "concat('path',' \"',path,'\"')" --nl \
 				--break \
 				--if "string-length(serial) > 0" \
-					--value-of "concat('serial',' ',serial)" --nl \
+					--value-of "concat('serial',' \"',serial,'\"')" --nl \
 				--break \
 				--if "string-length(size) > 0" \
 					--value-of "concat('size',' \"',size,'\"')" --nl \
@@ -288,7 +288,7 @@ ctld_mkconf()
 					--value-of "concat('option writecache',' ',opt_writecache)" --nl \
 				--break \
 				--if "string-length(opt_file) > 0" \
-					--value-of "concat('option file',' ',opt_file)" --nl \
+					--value-of "concat('option file',' \"',opt_file,'\"')" --nl \
 				--break \
 				--if "string-length(opt_num_threads) > 0" \
 					--value-of "concat('option num_threads',' ',opt_num_threads)" --nl \
