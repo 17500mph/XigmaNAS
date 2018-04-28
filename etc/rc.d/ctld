@@ -195,13 +195,13 @@ ctld_mkconf()
 					--value-of "concat('option vendor',' \"',opt_vendor,'\"')" --nl \
 				--break \
 				--if "string-length(opt_product) > 0" \
-					--value-of "concat('option product',' ',opt_product)" --nl \
+					--value-of "concat('option product',' \"',opt_product,'\"')" --nl \
 				--break \
 				--if "string-length(opt_revision) > 0" \
-					--value-of "concat('option revision',' ',opt_revision)" --nl \
+					--value-of "concat('option revision',' \"',opt_revision,'\"')" --nl \
 				--break \
 				--if "string-length(opt_scsiname) > 0" \
-					--value-of "concat('option scsiname',' ',opt_scsiname)" --nl \
+					--value-of "concat('option scsiname',' \"',opt_scsiname,'\"')" --nl \
 				--break \
 				--if "string-length(opt_eui) > 0" \
 					--value-of "concat('option eui',' ',opt_eui)" --nl \

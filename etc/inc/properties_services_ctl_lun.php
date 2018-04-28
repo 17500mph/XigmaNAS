@@ -709,7 +709,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$property = parent::init_opt_vendor();
 		$description = gtext('Specifies LUN vendor string up to 8 chars.');
 		$placeholder = 'FreeBSD';
-		$regexp = '/^\S{0,8}$/';
+		$regexp = '/^.{0,8}$/';
 		$property->
 			set_id('opt_vendor')->
 			set_description($description)->
@@ -730,7 +730,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$property = parent::init_opt_product();
 		$description = gtext('Specifies LUN product string up to 16 chars.');
 		$placeholder = 'iSCSI Disk';
-		$regexp = '/^\S{0,16}$/';
+		$regexp = '/^.{0,16}$/';
 		$property->
 			set_id('opt_product')->
 			set_description($description)->
@@ -751,7 +751,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$property = parent::init_opt_revision();
 		$description = gtext('Specifies LUN revision string up to 4 chars.');
 		$placeholder = '0123';
-		$regexp = '/^\S{0,4}$/';
+		$regexp = '/^.{0,4}$/';
 		$property->
 			set_id('opt_revision')->
 			set_description($description)->
