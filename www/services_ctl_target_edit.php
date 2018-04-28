@@ -152,8 +152,39 @@ $a_referer = [
 	$cop->get_enable(),
 	$cop->get_name(),
 	$cop->get_description(),
+	$cop->get_alias(),
+	$cop->get_auth_group(),
+	$cop->get_portal_group(),
 	$cop->get_auxparam()
 ];
+//	Add options for target auth group from auth groups, ignore enable flag
+$ctl_auth_groups = &array_make_branch($config,'ctld','ctl_auth_group','param');
+foreach($ctl_auth_groups as $ctl_auth_group):
+	$key = $ctl_auth_group['name'] ?? NULL;
+	if(isset($key)):
+		$description = $ctl_auth_group['description'] ?? '';
+		if(preg_match('/\S/',$description)):
+			$value = sprintf('%s - %s',$key,$description);
+		else:
+			$value = $key;
+		endif;
+		$cop->get_auth_group()->upsert_option($key,$value);
+	endif;
+endforeach;
+//	Add options for target portal group from portal groups, ignore enable flag
+$ctl_portal_groups = &array_make_branch($config,'ctld','ctl_portal_group','param');
+foreach($ctl_portal_groups as $ctl_portal_group):
+	$key = $ctl_portal_group['name'] ?? NULL;
+	if(isset($key)):
+		$description = $ctl_portal_group['description'] ?? '';
+		if(preg_match('/\S/',$description)):
+			$value = sprintf('%s - %s',$key,$description);
+		else:
+			$value = $key;
+		endif;
+		$cop->get_portal_group()->upsert_option($key,$value);
+	endif;
+endforeach;
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		foreach($a_referer as $referer):
@@ -254,6 +285,9 @@ $content->add_table_data_settings()->
 	addTBODY()->
 		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
 		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
+		c2_input_text($cop->get_alias(),htmlspecialchars($sphere->row[$cop->get_alias()->get_name()]),false,false)->
+		c2_select($cop->get_auth_group(),htmlspecialchars($sphere->row[$cop->get_auth_group()->get_name()]),false,false)->
+		c2_select($cop->get_portal_group(),htmlspecialchars($sphere->row[$cop->get_portal_group()->get_name()]),false,false)->
 		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
 $buttons = $document->
 	add_area_buttons();

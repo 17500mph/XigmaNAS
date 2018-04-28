@@ -137,4 +137,63 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	public function init_alias() {
+		$property = parent::init_alias();
+		$description = gtext('Assign a human-readable description to the target.');
+		$placeholder = gtext('Alias');
+		$regexp = '/^.{0,128}$/';
+		$property->
+			set_id('alias')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(128)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_auth_group() {
+		$property = parent::init_auth_group();
+		$description = gtext('Assign a previously defined authentication group to the target.');
+		$options = [
+			'' => gtext('Deny discovery'),
+			'no-authentication' => gtext('Permit access without authentication')
+		];
+		$property->
+			set_id('auth_group')->
+			set_description($description)->
+			set_options($options)->
+			set_defaultvalue('')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_portal_group() {
+		$property = parent::init_portal_group();
+		$description = gtext('Assign a previously defined portal group to the target.');
+		$options = [
+			'' => gtext('Default')
+		];
+		$property->
+			set_id('portal_group')->
+			set_description($description)->
+			set_options($options)->
+			set_defaultvalue('')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_redirect() {
+		$property = parent::init_redirect();
+		return $property;
+	}
 }
