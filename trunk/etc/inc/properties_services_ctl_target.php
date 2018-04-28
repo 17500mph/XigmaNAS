@@ -194,6 +194,17 @@ class ctl_target_edit_properties extends ctl_target_properties {
 	}
 	public function init_redirect() {
 		$property = parent::init_redirect();
+		$description = gtext('IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to this target will get redirected using "Target moved temporarily" login response.');
+		$property->
+			set_id('redirect')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
 }

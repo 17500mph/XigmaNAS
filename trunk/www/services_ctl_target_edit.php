@@ -155,6 +155,7 @@ $a_referer = [
 	$cop->get_alias(),
 	$cop->get_auth_group(),
 	$cop->get_portal_group(),
+	$cop->get_redirect(),
 	$cop->get_auxparam()
 ];
 //	Add options for target auth group from auth groups, ignore enable flag
@@ -288,6 +289,7 @@ $content->add_table_data_settings()->
 		c2_input_text($cop->get_alias(),htmlspecialchars($sphere->row[$cop->get_alias()->get_name()]),false,false)->
 		c2_select($cop->get_auth_group(),htmlspecialchars($sphere->row[$cop->get_auth_group()->get_name()]),false,false)->
 		c2_select($cop->get_portal_group(),htmlspecialchars($sphere->row[$cop->get_portal_group()->get_name()]),false,false)->
+		c2_input_text($cop->get_redirect(),htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()]),false,false)->
 		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
 $buttons = $document->
 	add_area_buttons();

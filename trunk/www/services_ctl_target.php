@@ -152,7 +152,7 @@ $prerequisites_ok = true;
 $errormsg = '';
 $pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets')];
 $record_exists = count($sphere->grid) > 0;
-$a_col_width = ['5%','25%','10%','15%','35%','10%'];
+$a_col_width = ['5%','25%','10%','15%','10%','25%','10%'];
 $n_col_width = count($a_col_width);
 if($record_exists):
 	$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
@@ -201,6 +201,7 @@ if($record_exists):
 		pop()->
 		insTHwC('lhell',$cop->get_name()->get_title())->
 		insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+		insTHwC('lhell',$cop->get_redirect()->get_title())->
 		insTHwC('lhell',$cop->get_alias()->get_title())->
 		insTHwC('lhell',$cop->get_description()->get_title())->
 		insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
@@ -209,6 +210,7 @@ else:
 		insTHwC('lhelc')->
 		insTHwC('lhell',$cop->get_name()->get_title())->
 		insTHwC('lhelc',gtext('Status'))->
+		insTHwC('lhell',$cop->get_redirect()->get_title())->
 		insTHwC('lhell',$cop->get_alias()->get_title())->
 		insTHwC('lhell',$cop->get_description()->get_title())->
 		insTHwC('lhebl',gtext('Toolbox'));
@@ -242,6 +244,7 @@ if($record_exists):
 					addA(['title' => $title])->
 						insIMG(['src' => $src,'alt' => ''])->
 				pop()->
+				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()] ?? ''))->
 				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_alias()->get_name()] ?? ''))->
 				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_description()->get_name()] ?? ''))->
 				add_toolbox_area()->
