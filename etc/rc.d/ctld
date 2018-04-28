@@ -66,7 +66,9 @@ ctld_mkconf()
 				--value-of "concat('isns-timeout',' ',isns_timeout)" --nl \
 			--break \
 			--match "auxparam" \
-				--value-of "." --nl \
+				--if "position() < last() or string-length(.) > 0" \
+					--value-of "." --nl \
+				--break \
 			--break \
 		--break \
 		${configxml_file} | /usr/local/bin/xml unesc >> ${ctld_config}
@@ -106,7 +108,9 @@ ctld_mkconf()
 					--break \
 				--break \
 				--match "auxparam" \
-					--value-of "." --nl \
+					--if "position() < last() or string-length(.) > 0" \
+						--value-of "." --nl \
+					--break \
 				--break \
 				--output '}' --nl \
 			--break \
@@ -153,7 +157,9 @@ ctld_mkconf()
 					--break \
 				--break \
 				--match "auxparam" \
-					--value-of "." --nl \
+					--if "position() < last() or string-length(.) > 0" \
+						--value-of "." --nl \
+					--break \
 				--break \
 				--output "}" --nl \
 			--break \
@@ -291,7 +297,9 @@ ctld_mkconf()
 					--value-of "concat('option capacity',' ',opt_capacity)" --nl \
 				--break \
 				--match "auxparam" \
-					--value-of "." --nl \
+					--if "position() < last() or string-length(.) > 0" \
+						--value-of "." --nl \
+					--break \
 				--break \
 				--output '}' --nl \
 			--break \
@@ -328,7 +336,9 @@ ctld_mkconf()
 					 --break \
 				--break \
 				--match "auxparam" \
-					--value-of "." --nl \
+					--if "position() < last() or string-length(.) > 0" \
+						--value-of "." --nl \
+					--break \
 				--break \
 				--output '}' --nl \
 			--break \
