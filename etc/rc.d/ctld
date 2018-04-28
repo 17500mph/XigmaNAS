@@ -42,7 +42,7 @@ ctld_mkconf()
 	chmod 600 ${ctld_config}
 	echo "# global settings" > ${ctld_config}
 	/usr/local/bin/xml sel --template \
-		--match "//ctld/settings" \
+		--match "//ctld" \
 			--if "string-length(debug) > 0" \
 				--value-of "concat('debug',' ',debug)" --nl \
 			--break \
