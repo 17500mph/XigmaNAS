@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-19 22:35+0000\n"
+"POT-Creation-Date: 2018-04-28 16:02+0000\n"
 "PO-Revision-Date: 2017-10-11 12:48+0000\n"
 "Last-Translator: Kenichi Yamada <yamaken_sapporo@me.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-20 15:32+0000\n"
-"X-Generator: Launchpad (build 18617)\n"
+"X-Launchpad-Export-Date: 2018-04-28 14:24+0000\n"
+"X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -181,6 +181,9 @@ msgstr "JBODボリュームを作成するには1個以上のディスクが必�
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1ボリュームを作成するには1個以上のディスクが必要です。"
 
+msgid "1.8\""
+msgstr ""
+
 msgid "2"
 msgstr "2"
 
@@ -190,14 +193,32 @@ msgstr "RAID-0のボリュームを構成するには、2台かそれ以上の�
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1のボリュームを構成するには、2台かそれ以上の台数のハードディスクが必要です。"
 
+msgid "2.5\""
+msgstr ""
+
+msgid "2048"
+msgstr ""
+
 msgid "3"
 msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "RAID-5のボリュームを構成するには、3台かそれ以上の台数のハードディスクが必要です。"
 
+msgid "3.5\""
+msgstr ""
+
+msgid "4096"
+msgstr ""
+
 msgid "4KB wrapper"
 msgstr "4KBラッパー"
+
+msgid "5.25\""
+msgstr ""
+
+msgid "512"
+msgstr ""
 
 msgid "514"
 msgstr ""
@@ -207,6 +228,9 @@ msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN タグ (1 から 4094 まで)。"
+
+msgid "8192"
+msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -439,6 +463,9 @@ msgstr "Adaptive (低消費電力)"
 msgid "Add"
 msgstr "追加"
 
+msgid "Add Auth Group"
+msgstr ""
+
 msgid "Add Bridge"
 msgstr "ブリッジを追加"
 
@@ -463,6 +490,9 @@ msgstr "ホストを追加"
 msgid "Add LAGG"
 msgstr "LAGG追加"
 
+msgid "Add LUN"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "MIB を追加"
 
@@ -474,6 +504,9 @@ msgstr "オプションを追加"
 
 msgid "Add Pool"
 msgstr "プール追加"
+
+msgid "Add Portal Group"
+msgstr ""
 
 msgid "Add RAID"
 msgstr "RAID の追加"
@@ -501,6 +534,9 @@ msgstr "共有を追加"
 
 msgid "Add Snapshot"
 msgstr "スナップショットを追加"
+
+msgid "Add Target"
+msgstr ""
 
 msgid "Add URL"
 msgstr "URLを追加"
@@ -582,6 +618,12 @@ msgstr "追加のグループ"
 
 msgid "Additional Network"
 msgstr "追加のネットワーク"
+
+msgid "Additional Options for Block Backend"
+msgstr ""
+
+msgid "Additional Options for RAM Disk Backend"
+msgstr ""
 
 msgid "Additional Parameter"
 msgstr ""
@@ -667,6 +709,9 @@ msgstr "アラートレベル"
 msgid "Algorithm"
 msgstr "アルゴリズム"
 
+msgid "Alias"
+msgstr ""
+
 msgid "All"
 msgstr "全て"
 
@@ -733,6 +778,9 @@ msgstr "クライアントが、OS/2 スタイルの拡張属性の保存を試�
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "クライアントが、中断されたアップロード及びダウンロードの再開 (リジューム) を許可します。"
+
+msgid "Allow consecutive read/writes to be issued in parallel"
+msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "新しいファイルの作成を許可します。"
@@ -816,6 +864,9 @@ msgstr "認証グループはタグ番号で識別されるオプションです
 
 msgid "An Extent defines the storage area of the Target."
 msgstr "エクステントはターゲットのストレージ領域を定義します。"
+
+msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -923,6 +974,11 @@ msgstr "工場出荷設定にリセットしてもよろしいですか？"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "サーバをシャットダウンしてもよろしいですか？"
 
+msgid ""
+"Assign a previously defined authentication group to the portal group, to be "
+"used for target discovery."
+msgstr ""
+
 msgid "Asynchronous I/O"
 msgstr "非同期の I/O"
 
@@ -976,8 +1032,20 @@ msgstr "8月"
 msgid "Auth Group"
 msgstr "認証グループ"
 
+msgid "Auth Group Name"
+msgstr ""
+
 msgid "Auth Group Settings"
 msgstr "認証グループの設定"
+
+msgid "Auth Group is locked"
+msgstr ""
+
+msgid "Auth Group is marked for deletion"
+msgstr ""
+
+msgid "Auth Group is unlocked"
+msgstr ""
 
 msgid "Auth Groups"
 msgstr "認証グループ"
@@ -988,6 +1056,9 @@ msgstr "認証グループは、追加のセキュリティの為に認証用ユ
 
 msgid "Auth Method"
 msgstr "認証方法"
+
+msgid "Auth Type"
+msgstr ""
 
 msgid "Authenticate Path & Realm"
 msgstr "認証パスとレルム"
@@ -1060,6 +1131,9 @@ msgstr "予備デバイスファームウェア"
 msgid "Avail"
 msgstr "利用可能"
 
+msgid "Avail Threshold"
+msgstr ""
+
 msgid "Available"
 msgstr "利用可能"
 
@@ -1077,6 +1151,9 @@ msgstr "スピンドルが停止状態から既定の回転数になるまでに
 
 msgid "Back"
 msgstr "戻る"
+
+msgid "Backend"
+msgstr ""
 
 msgid "Background"
 msgstr "バックグラウンド"
@@ -1201,6 +1278,9 @@ msgstr "BitTorrent はディレクトリ %s に少なくとも読み込みと実
 msgid "Blank Time"
 msgstr "待機時間"
 
+msgid "Block"
+msgstr ""
+
 msgid "Block Size"
 msgstr "ブロックサイズ"
 
@@ -1286,6 +1366,12 @@ msgstr "バイト/毎秒"
 msgid "CACHE"
 msgstr "CACHE"
 
+msgid "CAM Target Layer"
+msgstr ""
+
+msgid "CAM Target Layer / iSCSI Target"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1311,6 +1397,12 @@ msgstr "CCMP"
 msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
+msgid "CD"
+msgstr ""
+
+msgid "CD-ROM"
+msgstr ""
+
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
@@ -1325,6 +1417,9 @@ msgstr "CHAP"
 
 msgid "CHAP Users"
 msgstr "CHAP ユーザ"
+
+msgid "CHAP-Mutual"
+msgstr ""
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1399,6 +1494,9 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr "CRC エラー数。CRCエラーのカウント数。 (読込/書込データ FIS CRC エラー)"
+
+msgid "CTL LUN"
+msgstr ""
 
 msgid "Calibration Battery"
 msgstr "バッテリーキャリブレーション"
@@ -2136,6 +2234,9 @@ msgstr "DNS サーバが空欄です。"
 msgid "DVD"
 msgstr "DVD"
 
+msgid "DVD-ROM"
+msgstr ""
+
 msgid "Daemon"
 msgstr "デーモン"
 
@@ -2250,6 +2351,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "認証が必要なディレクトリ/URLを指定して下さい。"
 
+msgid ""
+"Define iSCSI hardware offload driver to use for this portal-group. The "
+"default is \"none\"."
+msgstr ""
+
 msgid "Defines the checksum algorithm."
 msgstr ""
 
@@ -2281,6 +2387,9 @@ msgstr "ホストを削除"
 msgid "Delete Login Info"
 msgstr "ログイン情報の削除"
 
+msgid "Delete Selected Auth Groups"
+msgstr ""
+
 msgid "Delete Selected Bridges"
 msgstr "選択したブリッジの削除"
 
@@ -2308,6 +2417,9 @@ msgstr "選択したジョブの削除"
 msgid "Delete Selected LAGGs"
 msgstr "選択したLAGGの削除"
 
+msgid "Delete Selected LUNs"
+msgstr ""
+
 msgid "Delete Selected NFS Shares"
 msgstr "選択したNFS共有の削除"
 
@@ -2319,6 +2431,9 @@ msgstr "選択したオプションの削除"
 
 msgid "Delete Selected Pools"
 msgstr "選択したプールの削除"
+
+msgid "Delete Selected Portal Groups"
+msgstr ""
 
 msgid "Delete Selected RAID Volumes"
 msgstr "選択したRAIDボリュームの削除"
@@ -2346,6 +2461,9 @@ msgstr "選択した共有の削除"
 
 msgid "Delete Selected Snapshots"
 msgstr "選択したスナップショットの削除"
+
+msgid "Delete Selected Targets"
+msgstr ""
 
 msgid "Delete Selected User Accounts"
 msgstr "選択したユーザアカウントの削除"
@@ -2436,6 +2554,9 @@ msgstr "最大摩耗と最少摩耗フラッシュブロックの差分。これ
 msgid "Deny"
 msgstr "拒否"
 
+msgid "Deny discovery"
+msgstr ""
+
 msgid "Description"
 msgstr "概要"
 
@@ -2511,6 +2632,9 @@ msgid ""
 "retransmitted. The default is 1000000 (1 second)."
 msgstr "パケットが再送されるまでのデフォルトタイムアウトをマイクロ秒で指定して下さい。デフォルトは 1000000 (1秒) です。"
 
+msgid "Determines which targets are returned during discovery."
+msgstr ""
+
 msgid "Device"
 msgstr "デバイス"
 
@@ -2520,6 +2644,9 @@ msgstr "デバイス / ラベル"
 #, php-format
 msgid "Device /dev/%s - %s"
 msgstr "デバイス /dev/%s - %s"
+
+msgid "Device ID"
+msgstr ""
 
 msgid "Device IP"
 msgstr "デバイスのIP"
@@ -2538,6 +2665,9 @@ msgstr "デバイスのポーリング"
 
 msgid "Device Serial"
 msgstr "デバイスシリアル"
+
+msgid "Device Type"
+msgstr ""
 
 msgid "Device contains boot partition"
 msgstr ""
@@ -2578,6 +2708,9 @@ msgstr "差分"
 msgid "Digital Audio Access Protocol"
 msgstr "DAAP(Digital Audio Access Protocol)"
 
+msgid "Direct"
+msgstr ""
+
 msgid "Direction"
 msgstr "方向"
 
@@ -2612,14 +2745,23 @@ msgstr ""
 msgid "Disable Firmware Upgrade"
 msgstr "ファームウェアのアップグレードを無効"
 
+msgid "Disable Selected Auth Groups"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "選択したコマンドを無効"
 
 msgid "Disable Selected Jobs"
 msgstr "選択したジョブを無効"
 
+msgid "Disable Selected LUNs"
+msgstr ""
+
 msgid "Disable Selected Options"
 msgstr "選択したオプションを無効"
+
+msgid "Disable Selected Portal Groups"
+msgstr ""
 
 msgid "Disable Selected Records"
 msgstr "選択したレコードを無効"
@@ -2628,6 +2770,9 @@ msgid "Disable Selected Rsync Jobs"
 msgstr ""
 
 msgid "Disable Selected Rsync Modules"
+msgstr ""
+
+msgid "Disable Selected Targets"
 msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
@@ -2669,6 +2814,17 @@ msgstr "探索 認証グループ"
 
 msgid "Discovery Auth Method"
 msgstr "探索 認証方法"
+
+msgid "Discovery Filter"
+msgstr ""
+
+msgid ""
+"Discovery will not return targets that cannot be accessed by the initiator "
+"because of their initiator-portal."
+msgstr ""
+
+msgid "Discovery will return all targets assigned to this portal group."
+msgstr ""
 
 msgid "Disk"
 msgstr "ディスク"
@@ -2870,6 +3026,9 @@ msgstr ""
 msgid "Do you want to delete selected LAGGs?"
 msgstr ""
 
+msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2883,6 +3042,9 @@ msgid "Do you want to delete selected VLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected WLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected auth groups?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -2915,6 +3077,9 @@ msgstr ""
 msgid "Do you want to delete selected pools?"
 msgstr ""
 
+msgid "Do you want to delete selected portal groups?"
+msgstr ""
+
 msgid "Do you want to delete selected records?"
 msgstr ""
 
@@ -2936,6 +3101,9 @@ msgstr ""
 msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
+msgid "Do you want to delete selected targets?"
+msgstr ""
+
 msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
@@ -2948,6 +3116,12 @@ msgstr ""
 msgid "Do you want to delete this command?"
 msgstr ""
 
+msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to disable selected commands?"
 msgstr ""
 
@@ -2955,6 +3129,9 @@ msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to disable selected portal groups?"
 msgstr ""
 
 msgid "Do you want to disable selected records?"
@@ -2966,6 +3143,15 @@ msgstr ""
 msgid "Do you want to disable selected rsync modules?"
 msgstr ""
 
+msgid "Do you want to disable selected targets?"
+msgstr ""
+
+msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2973,6 +3159,9 @@ msgid "Do you want to enable selected jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected portal groups?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
@@ -2984,6 +3173,9 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
+msgid "Do you want to enable selected targets?"
+msgstr ""
+
 msgid "Do you want to import disks?"
 msgstr ""
 
@@ -2991,6 +3183,12 @@ msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected auth groups?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
@@ -3002,6 +3200,9 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
+msgid "Do you want to toggle selected portal groups?"
+msgstr ""
+
 msgid "Do you want to toggle selected records?"
 msgstr ""
 
@@ -3009,6 +3210,9 @@ msgid "Do you want to toggle selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to toggle selected targets?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -3120,8 +3324,14 @@ msgstr "EFI/GPT パーティションは UFS 専用です。"
 msgid "ERROR:"
 msgstr "エラー:"
 
+msgid "EUI-64"
+msgstr ""
+
 msgid "Edit"
 msgstr "編集"
+
+msgid "Edit Auth Group"
+msgstr ""
 
 msgid "Edit Bridge"
 msgstr ""
@@ -3147,6 +3357,9 @@ msgstr "ホストを編集"
 msgid "Edit LAGG"
 msgstr ""
 
+msgid "Edit LUN"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "MIB を編集"
 
@@ -3157,6 +3370,9 @@ msgid "Edit Option"
 msgstr ""
 
 msgid "Edit Pool"
+msgstr ""
+
+msgid "Edit Portal Group"
 msgstr ""
 
 msgid "Edit RAID"
@@ -3184,6 +3400,9 @@ msgid "Edit Share"
 msgstr ""
 
 msgid "Edit Snapshot"
+msgstr ""
+
+msgid "Edit Target"
 msgstr ""
 
 msgid "Edit URL"
@@ -3317,13 +3536,22 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr ""
 
+msgid "Enable Selected Auth Groups"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr ""
 
+msgid "Enable Selected LUNs"
+msgstr ""
+
 msgid "Enable Selected Options"
+msgstr ""
+
+msgid "Enable Selected Portal Groups"
 msgstr ""
 
 msgid "Enable Selected Records"
@@ -3333,6 +3561,9 @@ msgid "Enable Selected Rsync Jobs"
 msgstr ""
 
 msgid "Enable Selected Rsync Modules"
+msgstr ""
+
+msgid "Enable Selected Targets"
 msgstr ""
 
 msgid "Enable Server"
@@ -3686,6 +3917,9 @@ msgstr "スペース区切りのtapデバイスのリストを入力してくだ
 msgid "Enter a valid sysctl MIB name."
 msgstr "有効な sysctl MIB 名を入力して下さい。"
 
+msgid "Enter additional parameter"
+msgstr ""
+
 msgid "Enter comment for the share"
 msgstr ""
 
@@ -3722,6 +3956,9 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter name"
+msgstr ""
+
+msgid "Enter secret"
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -3774,6 +4011,9 @@ msgstr "SNMPトラップの送信に利用するポート番号を入力して�
 
 msgid "Enter trap host name."
 msgstr "トラップホストを入力して下さい。"
+
+msgid "Enter user name"
+msgstr ""
 
 msgid "Enter value"
 msgstr ""
@@ -4130,6 +4370,12 @@ msgid ""
 "(This is not recommended.)"
 msgstr "仮想デバイスが使用中でも異なるサイズを指定しても強制的にプールを作成します。（推奨されません）"
 
+msgid "Foreign"
+msgstr ""
+
+msgid "Form Factor"
+msgstr ""
+
 msgid "Format"
 msgstr "フォーマット"
 
@@ -4247,6 +4493,12 @@ msgstr "ローカルユーザのみにウェブページのアクセスを許可
 msgid "Give your media library a friendly name."
 msgstr "メディアライブラリの名称を指定してください。"
 
+msgid "Global Settings"
+msgstr ""
+
+msgid "Global numeric identifier to use for a given LUN inside CTL."
+msgstr ""
+
 msgid "Grant access to the user portal."
 msgstr "ユーザポータルへのアクセスを許可します。"
 
@@ -4306,6 +4558,9 @@ msgid "Guest Account"
 msgstr ""
 
 msgid "Guest Authentication"
+msgstr ""
+
+msgid "HA Role"
 msgstr ""
 
 msgid "HAST"
@@ -4512,6 +4767,12 @@ msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 アドレス"
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to portal belonging to this portal-group "
+"will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
 
 msgid "IPv6 Address"
 msgstr ""
@@ -4818,6 +5079,9 @@ msgstr "シリアルの照会"
 msgid "Inquiry Vendor"
 msgstr "ベンダの照会"
 
+msgid "Insecure TPC"
+msgstr ""
+
 msgid "Insensitive"
 msgstr ""
 
@@ -5039,6 +5303,36 @@ msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
+
+msgid "LUN EUI-64\tidentifier"
+msgstr ""
+
+msgid "LUN NAA Identifier"
+msgstr ""
+
+msgid "LUN Name"
+msgstr ""
+
+msgid "LUN Product"
+msgstr ""
+
+msgid "LUN Revision"
+msgstr ""
+
+msgid "LUN SCSI Name"
+msgstr ""
+
+msgid "LUN Vendor"
+msgstr ""
+
+msgid "LUN is locked"
+msgstr ""
+
+msgid "LUN is marked for deletion"
+msgstr ""
+
+msgid "LUN is unlocked"
+msgstr ""
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5401,6 +5695,9 @@ msgstr "データ読み取り中のチャンネルのマージン。この属性
 msgid "Masquerade Address"
 msgstr ""
 
+msgid "Max Processes"
+msgstr ""
+
 msgid "Max. Block Size"
 msgstr ""
 
@@ -5698,6 +5995,9 @@ msgstr "双方向 CHAP"
 msgid "Mutual CHAP Users"
 msgstr "双方向 CHAP ユーザ"
 
+msgid "NAA Identifier"
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -5753,9 +6053,18 @@ msgstr "NUT 内部ドライバ情報"
 msgid "Name"
 msgstr "名前"
 
+msgid "Name of the Auth Group."
+msgstr ""
+
+msgid "Name of the LUN."
+msgstr ""
+
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "ドメイン名を除いた NAS のホスト名。 例) %s"
+
+msgid "Name of the Portal Group."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -5765,6 +6074,9 @@ msgid ""
 "Name of the server. If this field is left empty the default server is "
 "specified."
 msgstr "サーバ名。フィールドが空の場合はデフォルトのサーバ名が使用されます。"
+
+msgid "Name of the target."
+msgstr ""
 
 msgid "Name of the variable."
 msgstr "変数の名前"
@@ -6058,6 +6370,9 @@ msgid ""
 "the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
 
+msgid "Not Reported"
+msgstr ""
+
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6144,6 +6459,9 @@ msgid "Off"
 msgstr "Off"
 
 msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Offload"
 msgstr ""
 
 msgid "Old Passphrase"
@@ -6449,8 +6767,17 @@ msgstr ""
 msgid "Permit Root Login"
 msgstr ""
 
+msgid "Permit discovery without authentication"
+msgstr ""
+
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH トンネリングを許可します。"
+
+msgid "Physical Block Offset"
+msgstr ""
+
+msgid "Physical Block Size"
+msgstr ""
 
 msgid "Physical Interface"
 msgstr "物理インタフェース"
@@ -6550,6 +6877,9 @@ msgstr ""
 msgid "Pool"
 msgstr "プール"
 
+msgid "Pool Avail Threshold"
+msgstr ""
+
 msgid "Pool Devices"
 msgstr ""
 
@@ -6563,6 +6893,9 @@ msgid "Pool State"
 msgstr ""
 
 msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Used Threshold"
 msgstr ""
 
 msgid "Pool Version"
@@ -6609,6 +6942,9 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
+msgid "Port number of iSNS server to register on."
+msgstr ""
+
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
 
@@ -6636,7 +6972,19 @@ msgstr "待ち受けるポート番号。専用もしくは動的な範囲 (%d �
 msgid "Portal Group"
 msgstr "ポータルグループ"
 
+msgid "Portal Group Name"
+msgstr ""
+
 msgid "Portal Group Settings"
+msgstr ""
+
+msgid "Portal Group is locked"
+msgstr ""
+
+msgid "Portal Group is marked for deletion"
+msgstr ""
+
+msgid "Portal Group is unlocked"
 msgstr ""
 
 msgid "Portal Groups"
@@ -6736,6 +7084,9 @@ msgstr ""
 msgid "Processes"
 msgstr "プロセス"
 
+msgid "Processor"
+msgstr ""
+
 msgid "Product ID"
 msgstr "製品ID"
 
@@ -6763,6 +7114,9 @@ msgstr ""
 
 msgid "Provider"
 msgstr "プロバイダ"
+
+msgid "Provisioning Type"
+msgstr ""
 
 msgid "Proxy"
 msgstr "プロキシ"
@@ -6868,8 +7222,14 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
+msgid "RAM Disk"
+msgstr ""
+
 msgid "RAW info"
 msgstr "RAW情報"
+
+msgid "RPM"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -6915,6 +7275,9 @@ msgstr ""
 
 msgid "Read"
 msgstr "読込み"
+
+msgid "Read Cache"
+msgstr ""
 
 msgid "Read Only"
 msgstr ""
@@ -7001,6 +7364,9 @@ msgid "Recursive"
 msgstr "再帰"
 
 msgid "Recycle Bin"
+msgstr ""
+
+msgid "Redirect"
 msgstr ""
 
 msgid "Redundant Metadata"
@@ -7099,6 +7465,9 @@ msgstr ""
 msgid "Reorder Commands"
 msgstr ""
 
+msgid "Reordering"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "UPSバッテリーを交換してください"
 
@@ -7152,6 +7521,9 @@ msgid "Resource"
 msgstr "リソース"
 
 msgid "Resource Name"
+msgstr ""
+
+msgid "Resource Provisioning"
 msgstr ""
 
 msgid "Resource is marked for deletion"
@@ -7305,6 +7677,9 @@ msgstr "S.M.A.R.T. 拡張オプション"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. ログ"
+
+msgid "SCSI Name"
+msgstr ""
 
 msgid "SHA-256, Verify"
 msgstr ""
@@ -7473,6 +7848,9 @@ msgid "Secondary Cache"
 msgstr ""
 
 msgid "Seconds"
+msgstr ""
+
+msgid "Seconfary"
 msgstr ""
 
 msgid "Secret"
@@ -7700,6 +8078,15 @@ msgstr "シリアル番号"
 msgid "Serial number"
 msgstr "シリアル番号"
 
+msgid "Serialize Sequence"
+msgstr ""
+
+msgid "Serialize consecutive reads"
+msgstr ""
+
+msgid "Serialize consecutive reads/writes"
+msgstr ""
+
 msgid "Server"
 msgstr "サーバ"
 
@@ -7750,6 +8137,9 @@ msgstr ""
 msgid "Set or reset user password."
 msgstr ""
 
+msgid "Set per-LUN/per-pool thin provisioning soft threshold."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -7793,6 +8183,29 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "タイトルのスクロールスピード 0～10 (初期値 10)"
 
+msgid ""
+"Set to \"off\", disables read caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid ""
+"Set to \"off\", disables write caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid "Set to \"on\" makes LUN removable."
+msgstr ""
+
+msgid ""
+"Set to \"on\", blocks all media write operations to the LUN reporting it as "
+"write protected."
+msgstr ""
+
+msgid ""
+"Set to \"unrestricted\", allows target to process commands with SIMPLE task "
+"attribute in arbitrary order."
+msgstr ""
+
 msgid "Set user login shell."
 msgstr ""
 
@@ -7802,10 +8215,30 @@ msgstr ""
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "ルートデータセット用に別のマウントポイントを設定します。デフォルトは /mnt です。"
 
+msgid "Sets the authentication type."
+msgstr ""
+
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
 "is zero (anyone can read or write)."
 msgstr "新しく作成されるファイルの umsk 値を指定出来ます。デフォルトは 0 (全てのユーザが読み書き可能) です。"
+
+msgid ""
+"Setting to \"on\" allows EXTENDED COPY command sent to this LUN access other "
+"LUNs on this host, not accessible otherwise. This allows to offload copying "
+"between different iSCSI targets residing on the same host in trusted "
+"environments."
+msgstr ""
+
+msgid ""
+"Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
+"Default value is \"on\" if supported by the backend."
+msgstr ""
+
+msgid ""
+"Setting to \"primary\" or \"secondary\" overrides default role of the node "
+"in HA cluster."
+msgstr ""
 
 msgid "Settings"
 msgstr "設定"
@@ -8027,14 +8460,58 @@ msgstr ""
 msgid "Specified path is NFSv4 root directory."
 msgstr "指定されたパスはNFSv4のルートディレクトリです。"
 
+msgid "Specifies LUN EUI-64 identifier."
+msgstr ""
+
+msgid "Specifies LUN NAA identifier."
+msgstr ""
+
+msgid "Specifies LUN SCSI name string."
+msgstr ""
+
+msgid "Specifies LUN locally assigned RFC 4122 UUID."
+msgstr ""
+
+msgid "Specifies LUN product string up to 16 chars."
+msgstr ""
+
+msgid "Specifies LUN revision string up to 4 chars."
+msgstr ""
+
+msgid "Specifies LUN vendor string up to 8 chars."
+msgstr ""
+
+msgid ""
+"Specifies capacity of backing store (maximum RAM for data). The default "
+"value is zero, that disables backing store completely, making all writes go "
+"to nowhere, while all reads return zeroes."
+msgstr ""
+
+msgid "Specifies file or device name to use for backing store."
+msgstr ""
+
 msgid "Specifies how many servers to create."
 msgstr "作成するサーバ数を指定します。"
 
 msgid "Specifies how the volume should be exposed to the OS."
 msgstr "ボリュームがOSに扱われる方法を指定します。"
 
+msgid "Specifies medium rotation rate of the device."
+msgstr ""
+
+msgid "Specifies nominal form factor of the device."
+msgstr ""
+
+msgid "Specifies number of backend threads to use for this LUN."
+msgstr ""
+
 msgid "Specifies that the file system should be exported read-only."
 msgstr "エクスポートされるファイルシステムを読み取り専用とします。"
+
+msgid ""
+"Specifies that this portal-group is listened by some other host. This host "
+"will announce it on discovery stage, but won't listen."
+msgstr ""
 
 msgid "Specifies the command to be run."
 msgstr "実行するコマンドを指定します。"
@@ -8071,6 +8548,36 @@ msgid ""
 "Specifiy the percentage of disk space to be held back from normal usage. "
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
+msgstr ""
+
+msgid "Specify UNMAP block offset of the device."
+msgstr ""
+
+msgid "Specify UNMAP block size of the device."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per UNMAP command to report in Block "
+"Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per WRITE SAME command to report in "
+"Block Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of block descriptors per UNMAP command to "
+"report in Block Limits VPD page."
+msgstr ""
+
+msgid "Specify physical block offset of the device."
+msgstr ""
+
+msgid "Specify physical block size of the device."
+msgstr ""
+
+msgid "Specify the SCSI device type to use when creating the LUN."
 msgstr ""
 
 msgid "Split request"
@@ -8390,8 +8897,17 @@ msgstr "ターゲットディレクトリ"
 msgid "Target information"
 msgstr "ターゲット情報"
 
+msgid "Target is locked"
+msgstr ""
+
+msgid "Target is marked for deletion"
+msgstr ""
+
 msgid "Target is not selected."
 msgstr "ターゲットが選択されていません。"
+
+msgid "Target is unlocked"
+msgstr ""
 
 msgid "Target list"
 msgstr "ターゲットリスト"
@@ -8462,6 +8978,9 @@ msgstr ""
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "このオプションを有効にする前にBIOSでCOMポートを有効にする必要があります。"
 
+msgid "The CTL backend to use for a given LUN."
+msgstr ""
+
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr "HASTノードがプライマリになるまでHASTボリュームにはアクセスできません。"
 
@@ -8484,6 +9003,9 @@ msgstr "LAGGプロトコルが無効です。"
 msgid "The LAN IP address will be reset to"
 msgstr ""
 
+msgid "The LUN size, in bytes."
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' は sysctl 内に存在しません。"
@@ -8498,6 +9020,12 @@ msgid ""
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
 msgstr "新しく追加された不良フラッシュブロック属性は、製造時の初期化以降にドライブが検出した不良フラッシュブロックの合計数を示します。"
+
+msgid "The SCSI Device Identification string presented to the initiator."
+msgstr ""
+
+msgid "The SCSI serial number presented to the initiator."
+msgstr ""
 
 msgid "The TCP Port must be a valid port number."
 msgstr "TCP ポートは有効なポート番号を指定する必要があります。"
@@ -8683,6 +9211,9 @@ msgstr ""
 "のいずれかが記述可能で、許可または拒否のアクションをとる事が可能です。設定ファイルの照合規則は最初にルールがマッチした物を扱い、それ以降に意味論的に一致し"
 "たルールは取り除く事に注意して下さい。ルールがマッチした場合はその場で適用され、以降の検索プロセスは停止します。"
 
+msgid "The blocksize visible to the initiator."
+msgstr ""
+
 msgid "The changes could not be applied"
 msgstr "変更を適用できませんでした。"
 
@@ -8691,6 +9222,16 @@ msgstr "変更は問題なく成功しました。"
 
 msgid "The changes have been saved."
 msgstr "変更内容が保存されました。"
+
+msgid "The check will include both initiator-portal and initiator-name."
+msgstr ""
+
+msgid ""
+"The check will include initiator-portal, initiator-name, and authentication "
+"credentials. The target is returned if it does not require CHAP "
+"authentication, or if the CHAP user and secret used during discovery match "
+"those used by the target."
+msgstr ""
 
 msgid "The cleartext credentials with which to bind."
 msgstr "クリアテキスト証明書をを使用してバインドします。"
@@ -8765,6 +9306,9 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 "シャドウコピーサービス用のスナップショットのカスタム書式を指定できます。デフォルト書式はZFS自動スナップショットで使用される %s です。"
+
+msgid "The debug verbosity level. The default is 0."
+msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -8896,6 +9440,11 @@ msgid ""
 "specific Auth Group."
 msgstr ""
 "istgtcontrol(論理装置制御プログラム)は指定された認証グループの正しいユーザ名とシークレットでターゲットにアクセスすることが出来ます。"
+
+msgid ""
+"The limit for concurrently running child processes handling incoming "
+"connections. The default is 30. A setting of 0 disables the limit."
+msgstr ""
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr ""
@@ -9044,6 +9593,10 @@ msgstr "指定された '%s' はディレクトリです。"
 msgid "The path '%s' is not a directory."
 msgstr "指定されたパス '%s'  はディレクトリではありません。"
 
+msgid ""
+"The path to the file, device node, or zfs volume used to back the LUN."
+msgstr ""
+
 msgid "The peer connection encryption mode."
 msgstr "ピア接続時の暗号化モード"
 
@@ -9147,6 +9700,11 @@ msgstr ""
 msgid "The time update interval must be between 6 and 1440."
 msgstr ""
 
+msgid ""
+"The timeout for login sessions, after which the connection will be forcibly "
+"terminated. The default is 60. A setting of 0 disables the timeout."
+msgstr ""
+
 msgid "The total count of errors when writing a sector."
 msgstr "ディスクに書き込む際に発生したエラーの数。"
 
@@ -9242,6 +9800,21 @@ msgstr ""
 "これらのオプションは /etc/rc.conf "
 "に追加されます。これは、様々な一般的なスタートアップスクリプトによって使われるオプションを上書きすることを可能にします。"
 
+msgid "These parameter will be added to the global section of ctl.conf"
+msgstr ""
+
+msgid "These parameter will be added to this auth-group."
+msgstr ""
+
+msgid "These parameter will be added to this lun."
+msgstr ""
+
+msgid "These parameter will be added to this portal-group."
+msgstr ""
+
+msgid "These parameter will be added to this target."
+msgstr ""
+
 #, php-format
 msgid "These parameters are added to %s."
 msgstr "ここで指定したパラメータは %s に追加されます。"
@@ -9281,6 +9854,9 @@ msgstr "ここで指定したパラメータは rsyncd.conf のモジュール�
 
 msgid "These parameters will be added to the ping command."
 msgstr "これらのパラメータは ping コマンドに追加されます。"
+
+msgid "Thin Provisioning"
+msgstr ""
 
 msgid "This URL is already configured."
 msgstr "この URL は既に設定されています。"
@@ -9620,6 +10196,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr "TiVoサポートHMOでストリーミング .jpg と .mp3 ファイルをサポートします。"
 
+msgid "Threads"
+msgstr ""
+
 msgid "Throughput"
 msgstr ""
 
@@ -9678,6 +10257,9 @@ msgstr "時間更新間隔"
 msgid "Timeout"
 msgstr "タイムアウト"
 
+msgid "Timeout for iSNS requests. The default is 5."
+msgstr ""
+
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr ""
 
@@ -9727,13 +10309,22 @@ msgstr "サブディレクトリを使用するには、各ディレクトリー
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Auth Groups"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr ""
 
+msgid "Toggle Selected LUNs"
+msgstr ""
+
 msgid "Toggle Selected Options"
+msgstr ""
+
+msgid "Toggle Selected Portal Groups"
 msgstr ""
 
 msgid "Toggle Selected Records"
@@ -9743,6 +10334,9 @@ msgid "Toggle Selected Rsync Jobs"
 msgstr ""
 
 msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
+msgid "Toggle Selected Targets"
 msgstr ""
 
 msgid "Tolerated"
@@ -9907,6 +10501,21 @@ msgstr ""
 msgid "UID"
 msgstr "UID"
 
+msgid "UNMAP"
+msgstr ""
+
+msgid "UNMAP Block Offset"
+msgstr ""
+
+msgid "UNMAP Block Size"
+msgstr ""
+
+msgid "UNMAP Maximum Descriptors"
+msgstr ""
+
+msgid "UNMAP Maximum LBA"
+msgstr ""
+
 msgid "UPS"
 msgstr "UPS"
 
@@ -10006,6 +10615,9 @@ msgstr ""
 msgid "UTF-8 Only"
 msgstr ""
 
+msgid "UUID"
+msgstr ""
+
 msgid "Umask"
 msgstr ""
 
@@ -10014,6 +10626,9 @@ msgstr "利用不可"
 
 msgid "Uncorrected read errors reported to the operating system."
 msgstr "オペレーティングシステムに報告された未修正の読み取りエラー。"
+
+msgid "Undefined"
+msgstr ""
 
 msgid "Unformated"
 msgstr "フォーマットしない"
@@ -10029,6 +10644,11 @@ msgstr "パッケージのアンインストール"
 
 msgid "Uninterruptible Power Supply"
 msgstr "UPS (無停電電源装置)"
+
+msgid ""
+"Unique 16-bit tag value of this portal-group. If not specified, the value is "
+"generated automatically."
+msgstr ""
 
 msgid "Unison"
 msgstr "Unison"
@@ -10077,6 +10697,9 @@ msgstr ""
 
 msgid "Unmounting..."
 msgstr "アンマウント中..."
+
+msgid "Unrestricted"
+msgstr ""
 
 msgid "Up"
 msgstr "Up"
@@ -10207,6 +10830,9 @@ msgstr "有効/無効ボタンの代わりにトグルボタンを使用して�
 
 msgid "Used"
 msgstr "使用量"
+
+msgid "Used Threshold"
+msgstr ""
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -10551,6 +11177,10 @@ msgid ""
 "When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."
 msgstr "Samba ADを有効にすると、スタンドアローンのCIFS/ SMBファイル共有を一緒に使用することはできません。"
 
+msgid ""
+"When UNMAP support is enabled, this option specifies provisioning type."
+msgstr ""
+
 msgid "When UPS switches to Low Battery"
 msgstr "バッテリー切れになるまでの残り時間"
 
@@ -10594,6 +11224,9 @@ msgstr "書込み"
 
 msgid "Write Cache"
 msgstr "書き込みキャッシュ"
+
+msgid "Write Same Maximum LBA"
+msgstr ""
 
 msgid "Write only"
 msgstr "書込みのみ"
@@ -10838,11 +11471,31 @@ msgstr "iSCSI 初期パラメータ(初期値:%d)"
 msgid "iSCSI initiator disabled."
 msgstr "iSCSIイニシエータが無効になりました。"
 
+msgid "iSNS Period"
+msgstr ""
+
+msgid "iSNS Server"
+msgstr ""
+
+msgid "iSNS Server Port"
+msgstr ""
+
+msgid "iSNS Timeout"
+msgstr ""
+
+msgid ""
+"iSNS registration period. Registered Network Entity not updated during this "
+"period will be unregistered. The default is 900."
+msgstr ""
+
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "無限"
+
+msgid "less then 1.8\"."
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "ロード/アンロードに失敗しました。"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 22:35+0000\n"
+"POT-Creation-Date: 2018-04-28 16:02+0000\n"
 "PO-Revision-Date: 2018-04-16 20:03+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-20 15:32+0000\n"
-"X-Generator: Launchpad (build 18617)\n"
+"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Generator: Launchpad (build 18623)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -196,6 +196,9 @@ msgstr "Este nevoie de cel puțin un disc pentru a crea un volum JBOD."
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Este nevoie de cel puțin un disc pentru a crea un volum RAID-1."
 
+msgid "1.8\""
+msgstr ""
+
 msgid "2"
 msgstr "2"
 
@@ -205,14 +208,32 @@ msgstr "Este nevoie de cel puțin două discuri pentru a crea un volum RAID-0."
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Este nevoie de cel puțin două discuri pentru a crea un volum RAID-1."
 
+msgid "2.5\""
+msgstr ""
+
+msgid "2048"
+msgstr ""
+
 msgid "3"
 msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Este nevoie de cel puțin trei discuri pentru a crea un volum RAID-5."
 
+msgid "3.5\""
+msgstr ""
+
+msgid "4096"
+msgstr ""
+
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
+
+msgid "5.25\""
+msgstr ""
+
+msgid "512"
+msgstr ""
 
 msgid "514"
 msgstr "514"
@@ -222,6 +243,9 @@ msgstr "69"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Etichetă VLAN 802.1Q (între 1 și 4094)."
+
+msgid "8192"
+msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -477,6 +501,9 @@ msgstr "Adaptiv (Consum redus de energie)"
 msgid "Add"
 msgstr "Adăugare"
 
+msgid "Add Auth Group"
+msgstr ""
+
 msgid "Add Bridge"
 msgstr "Adăugare Bridge"
 
@@ -501,6 +528,9 @@ msgstr "Adăugare sistem"
 msgid "Add LAGG"
 msgstr "Adăugare LAGG"
 
+msgid "Add LUN"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "Adăugare MIB"
 
@@ -512,6 +542,9 @@ msgstr "Adăugare opțiuni"
 
 msgid "Add Pool"
 msgstr "Adăugare Pool"
+
+msgid "Add Portal Group"
+msgstr ""
 
 msgid "Add RAID"
 msgstr "Adăugare RAID"
@@ -539,6 +572,9 @@ msgstr "Adăugare partajare"
 
 msgid "Add Snapshot"
 msgstr "Adăugare Snapshot"
+
+msgid "Add Target"
+msgstr ""
 
 msgid "Add URL"
 msgstr "Adăugare URL"
@@ -620,6 +656,12 @@ msgstr "Grup adițional"
 
 msgid "Additional Network"
 msgstr "Rețele adiționale"
+
+msgid "Additional Options for Block Backend"
+msgstr ""
+
+msgid "Additional Options for RAM Disk Backend"
+msgstr ""
 
 msgid "Additional Parameter"
 msgstr "Parametri suplimentari"
@@ -713,6 +755,9 @@ msgstr "Nivel alertă"
 msgid "Algorithm"
 msgstr "Algoritm"
 
+msgid "Alias"
+msgstr ""
+
 msgid "All"
 msgstr "Toate"
 
@@ -784,6 +829,9 @@ msgstr "Permite clienților să utilizeze atribute extinse tip OS/2"
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 "Permite clienților să continue încărcările și descărcările întrerupte."
+
+msgid "Allow consecutive read/writes to be issued in parallel"
+msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Permite crearea de fișiere noi."
@@ -879,6 +927,9 @@ msgstr ""
 
 msgid "An Extent defines the storage area of the Target."
 msgstr "O Extensie definește o zonă de stocare a Destinației."
+
+msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -999,6 +1050,11 @@ msgstr "Resetați serverul la setările inițiale?"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Opriți serverul?"
 
+msgid ""
+"Assign a previously defined authentication group to the portal group, to be "
+"used for target discovery."
+msgstr ""
+
 msgid "Asynchronous I/O"
 msgstr "I/O asincrone"
 
@@ -1055,8 +1111,20 @@ msgstr "August"
 msgid "Auth Group"
 msgstr "Grup Auth"
 
+msgid "Auth Group Name"
+msgstr ""
+
 msgid "Auth Group Settings"
 msgstr "Setări Grup autorizat"
+
+msgid "Auth Group is locked"
+msgstr ""
+
+msgid "Auth Group is marked for deletion"
+msgstr ""
+
+msgid "Auth Group is unlocked"
+msgstr ""
 
 msgid "Auth Groups"
 msgstr "Grupuri Auth"
@@ -1069,6 +1137,9 @@ msgstr ""
 
 msgid "Auth Method"
 msgstr "Metodă Autentificare"
+
+msgid "Auth Type"
+msgstr ""
 
 msgid "Authenticate Path & Realm"
 msgstr "Autentificare Path & Realm"
@@ -1145,6 +1216,9 @@ msgstr "Firmware dispozitiv auxiliar"
 msgid "Avail"
 msgstr "Disponibil"
 
+msgid "Avail Threshold"
+msgstr ""
+
 msgid "Available"
 msgstr "Disponibil"
 
@@ -1166,6 +1240,9 @@ msgstr ""
 
 msgid "Back"
 msgstr "Înapoi"
+
+msgid "Backend"
+msgstr ""
 
 msgid "Background"
 msgstr "Fundal"
@@ -1296,6 +1373,9 @@ msgstr ""
 msgid "Blank Time"
 msgstr "Blank Time"
 
+msgid "Block"
+msgstr ""
+
 msgid "Block Size"
 msgstr "Dimensiune bloc"
 
@@ -1383,6 +1463,12 @@ msgstr "Bytes/sec"
 msgid "CACHE"
 msgstr "CACHE"
 
+msgid "CAM Target Layer"
+msgstr ""
+
+msgid "CAM Target Layer / iSCSI Target"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1408,6 +1494,12 @@ msgstr "CCMP"
 msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
+msgid "CD"
+msgstr ""
+
+msgid "CD-ROM"
+msgstr ""
+
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
@@ -1422,6 +1514,9 @@ msgstr "CHAP"
 
 msgid "CHAP Users"
 msgstr "Utilizator CHAP"
+
+msgid "CHAP-Mutual"
+msgstr ""
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1498,6 +1593,9 @@ msgid ""
 msgstr ""
 "Număr erori CRC. Contorizează numărul erorilor CRC (erori FIS CRC la "
 "citire/scriere)."
+
+msgid "CTL LUN"
+msgstr ""
 
 msgid "Calibration Battery"
 msgstr "Calibrare acumulator"
@@ -2331,6 +2429,9 @@ msgstr "Serverul DNS este nul."
 msgid "DVD"
 msgstr "DVD"
 
+msgid "DVD-ROM"
+msgstr ""
+
 msgid "Daemon"
 msgstr "Daemon"
 
@@ -2453,6 +2554,11 @@ msgstr "DefaultTime2Wait"
 msgid "Define directories/URL's that require authentication."
 msgstr "Definiți directoarele/URL-urile care necesită autentificare"
 
+msgid ""
+"Define iSCSI hardware offload driver to use for this portal-group. The "
+"default is \"none\"."
+msgstr ""
+
 msgid "Defines the checksum algorithm."
 msgstr "Definește algoritmul sumei de control."
 
@@ -2488,6 +2594,9 @@ msgstr "Ștergere Sistem"
 msgid "Delete Login Info"
 msgstr "Ștergere date de autentificare"
 
+msgid "Delete Selected Auth Groups"
+msgstr ""
+
 msgid "Delete Selected Bridges"
 msgstr "Ștergere conexiuni bridge selectate"
 
@@ -2515,6 +2624,9 @@ msgstr "Ștergere activități selectate"
 msgid "Delete Selected LAGGs"
 msgstr "Ștergere conexiuni LAGG selectate"
 
+msgid "Delete Selected LUNs"
+msgstr ""
+
 msgid "Delete Selected NFS Shares"
 msgstr "Ștergere partajări NFS selectate"
 
@@ -2526,6 +2638,9 @@ msgstr "Ștergere opțiuni selectate"
 
 msgid "Delete Selected Pools"
 msgstr "Ștergere Structuri pool selectate"
+
+msgid "Delete Selected Portal Groups"
+msgstr ""
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Ștergere volume RAID selectate"
@@ -2553,6 +2668,9 @@ msgstr "Ștergere partajări selectate"
 
 msgid "Delete Selected Snapshots"
 msgstr "Ștergere Snapshot-uri selectate"
+
+msgid "Delete Selected Targets"
+msgstr ""
 
 msgid "Delete Selected User Accounts"
 msgstr "Ștergere conturi utilizator selectate"
@@ -2646,6 +2764,9 @@ msgstr ""
 msgid "Deny"
 msgstr "Respinge"
 
+msgid "Deny discovery"
+msgstr ""
+
 msgid "Description"
 msgstr "Descriere"
 
@@ -2725,6 +2846,9 @@ msgstr ""
 "Stabilește timpul implicit, în microsecunde, pînă la retransmiterea "
 "pachetului de date. Valoarea implicită este 1000000 (1 secundă)."
 
+msgid "Determines which targets are returned during discovery."
+msgstr ""
+
 msgid "Device"
 msgstr "Dispozitiv"
 
@@ -2734,6 +2858,9 @@ msgstr "Dispozitiv / Etichetă"
 #, php-format
 msgid "Device /dev/%s - %s"
 msgstr "Dispozitiv /dev/%s - %s"
+
+msgid "Device ID"
+msgstr ""
 
 msgid "Device IP"
 msgstr "Dispozitiv IP"
@@ -2752,6 +2879,9 @@ msgstr "Device Polling"
 
 msgid "Device Serial"
 msgstr "Serial dispozitiv"
+
+msgid "Device Type"
+msgstr ""
 
 msgid "Device contains boot partition"
 msgstr "Dispozitivul conține partiția de boot"
@@ -2795,6 +2925,9 @@ msgstr "Diferență"
 msgid "Digital Audio Access Protocol"
 msgstr "Protocol Acces Audio Digital"
 
+msgid "Direct"
+msgstr ""
+
 msgid "Direction"
 msgstr "Direcție"
 
@@ -2831,14 +2964,23 @@ msgstr "Dezactivare Meniu extensie"
 msgid "Disable Firmware Upgrade"
 msgstr "Dezactivare actualizare firmware"
 
+msgid "Disable Selected Auth Groups"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "Dezactivare comenzi selectate"
 
 msgid "Disable Selected Jobs"
 msgstr "Dezactivare activitîți selectate"
 
+msgid "Disable Selected LUNs"
+msgstr ""
+
 msgid "Disable Selected Options"
 msgstr "Dezactivare opțiuni selectate"
+
+msgid "Disable Selected Portal Groups"
+msgstr ""
 
 msgid "Disable Selected Records"
 msgstr "Dezactivare înregistrări selectate"
@@ -2848,6 +2990,9 @@ msgstr "Dezactivare joburi Rsync selectate"
 
 msgid "Disable Selected Rsync Modules"
 msgstr "Dezactivare module Rsync selectate"
+
+msgid "Disable Selected Targets"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Dezactivare wrapper TCP (modul mod_wrap)."
@@ -2888,6 +3033,17 @@ msgstr "Descoperire Grup Autorizat"
 
 msgid "Discovery Auth Method"
 msgstr "Descoperire Metodă Autentificare"
+
+msgid "Discovery Filter"
+msgstr ""
+
+msgid ""
+"Discovery will not return targets that cannot be accessed by the initiator "
+"because of their initiator-portal."
+msgstr ""
+
+msgid "Discovery will return all targets assigned to this portal group."
+msgstr ""
 
 msgid "Disk"
 msgstr "Disc"
@@ -3104,6 +3260,9 @@ msgstr "Ștergeți protocoalele CARP selectate?"
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Ștergeți conexiunile LAGG selectate?"
 
+msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Ștergeți partajările NFS selectate?"
 
@@ -3118,6 +3277,9 @@ msgstr "Ștergeți rețelele VLAN selectate?"
 
 msgid "Do you want to delete selected WLANs?"
 msgstr "Ștergeți rețelele WVLAN selectate?"
+
+msgid "Do you want to delete selected auth groups?"
+msgstr ""
 
 msgid "Do you want to delete selected bridges?"
 msgstr "Ștergeți conexiunile bridge selectate?"
@@ -3149,6 +3311,9 @@ msgstr "Ștergeți opțiunile selectate?"
 msgid "Do you want to delete selected pools?"
 msgstr "Ștergeți structurile pool selectate?"
 
+msgid "Do you want to delete selected portal groups?"
+msgstr ""
+
 msgid "Do you want to delete selected records?"
 msgstr "Ștergeți înregistrările selectate?"
 
@@ -3170,6 +3335,9 @@ msgstr "Ștergeți partajările selectate?"
 msgid "Do you want to delete selected snapshots?"
 msgstr "Ștergeți snapshot-urile selectate?"
 
+msgid "Do you want to delete selected targets?"
+msgstr ""
+
 msgid "Do you want to delete selected user accounts?"
 msgstr "Ștergeți conturile de utilizator selectate?"
 
@@ -3182,6 +3350,12 @@ msgstr "Ștergeți volumele selectate?"
 msgid "Do you want to delete this command?"
 msgstr "Ștergeți această comandă?"
 
+msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to disable selected commands?"
 msgstr "Dezactivați comenzile selectate?"
 
@@ -3190,6 +3364,9 @@ msgstr "Dezactivați activitățile selectate?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Dezactivați opțiunile selectate?"
+
+msgid "Do you want to disable selected portal groups?"
+msgstr ""
 
 msgid "Do you want to disable selected records?"
 msgstr "Dezactivați înregistrările selectate?"
@@ -3200,6 +3377,15 @@ msgstr "Dezactivați joburile rsync selectate?"
 msgid "Do you want to disable selected rsync modules?"
 msgstr "Dezactivați modulele rsync selectate?"
 
+msgid "Do you want to disable selected targets?"
+msgstr ""
+
+msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr "Activați comenzile selectate?"
 
@@ -3208,6 +3394,9 @@ msgstr "Activați activitățile selectate?"
 
 msgid "Do you want to enable selected options?"
 msgstr "Activați opțiunile selectate?"
+
+msgid "Do you want to enable selected portal groups?"
+msgstr ""
 
 msgid "Do you want to enable selected records?"
 msgstr "Activați înregistrările selectate?"
@@ -3218,6 +3407,9 @@ msgstr "Activați joburile rsync selectate?"
 msgid "Do you want to enable selected rsync modules?"
 msgstr "Activați modulele rsync selectate?"
 
+msgid "Do you want to enable selected targets?"
+msgstr ""
+
 msgid "Do you want to import disks?"
 msgstr "Importați discurile?"
 
@@ -3226,6 +3418,12 @@ msgstr "Importați discurile RAID software?"
 
 msgid "Do you want to lock selected records?"
 msgstr "Blocați înregistrările selectate?"
+
+msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected auth groups?"
+msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Schimbați starea comenzilor selectate?"
@@ -3236,6 +3434,9 @@ msgstr "Inversați activitățile selectate?"
 msgid "Do you want to toggle selected options?"
 msgstr "Inversați opțiunile selectate?"
 
+msgid "Do you want to toggle selected portal groups?"
+msgstr ""
+
 msgid "Do you want to toggle selected records?"
 msgstr "Inversați starea înregistrărilor selectate?"
 
@@ -3244,6 +3445,9 @@ msgstr "Inversați starea joburilor rsync selectate?"
 
 msgid "Do you want to toggle selected rsync modules?"
 msgstr "Inversați starea modulelo rsync selectate?"
+
+msgid "Do you want to toggle selected targets?"
+msgstr ""
 
 msgid "Do you want to unlock selected records?"
 msgstr "Deblocați înregistrările selectate?"
@@ -3356,8 +3560,14 @@ msgstr "Partitiile EFI/GPT pot fi folosite doar cu UFS."
 msgid "ERROR:"
 msgstr "EROARE:"
 
+msgid "EUI-64"
+msgstr ""
+
 msgid "Edit"
 msgstr "Editare"
+
+msgid "Edit Auth Group"
+msgstr ""
 
 msgid "Edit Bridge"
 msgstr "Editare conexiune bridge"
@@ -3383,6 +3593,9 @@ msgstr "Editare sistem"
 msgid "Edit LAGG"
 msgstr "Editare conexiune LAGG"
 
+msgid "Edit LUN"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Editare MIB"
 
@@ -3394,6 +3607,9 @@ msgstr "Modificare opțiune"
 
 msgid "Edit Pool"
 msgstr "Editare Pool"
+
+msgid "Edit Portal Group"
+msgstr ""
 
 msgid "Edit RAID"
 msgstr "Editare RAID"
@@ -3421,6 +3637,9 @@ msgstr "Editare partajare"
 
 msgid "Edit Snapshot"
 msgstr "Editare snapshot"
+
+msgid "Edit Target"
+msgstr ""
 
 msgid "Edit URL"
 msgstr "Editare URL"
@@ -3555,14 +3774,23 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr "Activare STARTLS"
 
+msgid "Enable Selected Auth Groups"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "Activare comenzi selectate"
 
 msgid "Enable Selected Jobs"
 msgstr "Activare activități selectate"
 
+msgid "Enable Selected LUNs"
+msgstr ""
+
 msgid "Enable Selected Options"
 msgstr "Activare opțiuni selectate"
+
+msgid "Enable Selected Portal Groups"
+msgstr ""
 
 msgid "Enable Selected Records"
 msgstr "Activare înregistrări selectate"
@@ -3572,6 +3800,9 @@ msgstr "Activare joburi Rsync selectate"
 
 msgid "Enable Selected Rsync Modules"
 msgstr "Activare module Rsync selectate"
+
+msgid "Enable Selected Targets"
+msgstr ""
 
 msgid "Enable Server"
 msgstr "Activare server"
@@ -3952,6 +4183,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Introduceți un nume MIB valid."
 
+msgid "Enter additional parameter"
+msgstr ""
+
 msgid "Enter comment for the share"
 msgstr "Introduceți comentariul pentru partajare"
 
@@ -3990,6 +4224,9 @@ msgid "Enter login name of the user."
 msgstr "Introducere nume de autentidicare utilizator."
 
 msgid "Enter name"
+msgstr ""
+
+msgid "Enter secret"
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4054,6 +4291,9 @@ msgstr "Introduceți portul pentru capcane software (implicit 162)."
 
 msgid "Enter trap host name."
 msgstr "Introduceți numele sistemului pentru capcane software"
+
+msgid "Enter user name"
+msgstr ""
 
 msgid "Enter value"
 msgstr ""
@@ -4421,6 +4661,12 @@ msgstr ""
 "Forțare utilizare vdefs, chiar dacă modul apare ca fiind utilizat deja sau "
 "dacă specificați o mărime diferită (nerecomandat)."
 
+msgid "Foreign"
+msgstr ""
+
+msgid "Form Factor"
+msgstr ""
+
 msgid "Format"
 msgstr "Formatare"
 
@@ -4539,6 +4785,12 @@ msgstr "Permite doar utilizatorilor locali să acceseze pagina web."
 msgid "Give your media library a friendly name."
 msgstr "Introduceți o denumire pentru biblioteca media."
 
+msgid "Global Settings"
+msgstr ""
+
+msgid "Global numeric identifier to use for a given LUN inside CTL."
+msgstr ""
+
 msgid "Grant access to the user portal."
 msgstr "Permite accesul utilizatorilor locali la portal."
 
@@ -4599,6 +4851,9 @@ msgstr "Cont vizitator"
 
 msgid "Guest Authentication"
 msgstr "Autentificare vizitator"
+
+msgid "HA Role"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -4821,6 +5076,12 @@ msgstr "Setări IPv4"
 
 msgid "IPv4 addresses"
 msgstr "Adrese IPv4"
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to portal belonging to this portal-group "
+"will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
 
 msgid "IPv6 Address"
 msgstr "Adresă IPv6"
@@ -5168,6 +5429,9 @@ msgstr "Informații Serial"
 msgid "Inquiry Vendor"
 msgstr "Informații Vînzător"
 
+msgid "Insecure TPC"
+msgstr ""
+
 msgid "Insensitive"
 msgstr "Insenzitiv"
 
@@ -5406,6 +5670,36 @@ msgstr "LOG (Mirror)"
 
 msgid "LUN"
 msgstr "LUN"
+
+msgid "LUN EUI-64\tidentifier"
+msgstr ""
+
+msgid "LUN NAA Identifier"
+msgstr ""
+
+msgid "LUN Name"
+msgstr ""
+
+msgid "LUN Product"
+msgstr ""
+
+msgid "LUN Revision"
+msgstr ""
+
+msgid "LUN SCSI Name"
+msgstr ""
+
+msgid "LUN Vendor"
+msgstr ""
+
+msgid "LUN is locked"
+msgstr ""
+
+msgid "LUN is marked for deletion"
+msgstr ""
+
+msgid "LUN is unlocked"
+msgstr ""
 
 msgid "LUNs"
 msgstr "Numere Unităţi Logice (LUNs)"
@@ -5784,6 +6078,9 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr "Adrese Masquerade"
 
+msgid "Max Processes"
+msgstr ""
+
 msgid "Max. Block Size"
 msgstr "Dimensiune max. bloc"
 
@@ -6088,6 +6385,9 @@ msgstr "CHAP mutual"
 msgid "Mutual CHAP Users"
 msgstr "Utilizatori CHAP mutual"
 
+msgid "NAA Identifier"
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -6144,9 +6444,18 @@ msgstr "Informații driver intern NUT"
 msgid "Name"
 msgstr "Nume"
 
+msgid "Name of the Auth Group."
+msgstr ""
+
+msgid "Name of the LUN."
+msgstr ""
+
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "Numele sistemului fără domeniu (ex. %s)."
+
+msgid "Name of the Portal Group."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -6158,6 +6467,9 @@ msgid ""
 msgstr ""
 "Numele serverului. Dacă acest cîmp este lasat necompletat se va folosi "
 "serverul implicit."
+
+msgid "Name of the target."
+msgstr ""
 
 msgid "Name of the variable."
 msgstr "Numele variabilei."
@@ -6461,6 +6773,9 @@ msgstr ""
 "În mod normal această opțiune nu trebuie setată având în vedere ca în faza "
 "de negociere protocolul SMB o stabilește în mod automat."
 
+msgid "Not Reported"
+msgstr ""
+
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6555,6 +6870,9 @@ msgstr "Oprit"
 
 msgid "Offline Immediate Test"
 msgstr "Test offline imediat"
+
+msgid "Offload"
+msgstr ""
 
 msgid "Old Passphrase"
 msgstr "Frază-parolă veche"
@@ -6874,8 +7192,17 @@ msgstr "Permisiune"
 msgid "Permit Root Login"
 msgstr "Permisiune de login ca root"
 
+msgid "Permit discovery without authentication"
+msgstr ""
+
 msgid "Permit to do SSH Tunneling."
 msgstr "Permite SSH Tunneling."
+
+msgid "Physical Block Offset"
+msgstr ""
+
+msgid "Physical Block Size"
+msgstr ""
 
 msgid "Physical Interface"
 msgstr "Interfață fizică"
@@ -6976,6 +7303,9 @@ msgstr "Timp verificare"
 msgid "Pool"
 msgstr "Structură"
 
+msgid "Pool Avail Threshold"
+msgstr ""
+
 msgid "Pool Devices"
 msgstr "Dispozitiv pool"
 
@@ -6990,6 +7320,9 @@ msgstr "Stare pool"
 
 msgid "Pool Status"
 msgstr "Stare pool"
+
+msgid "Pool Used Threshold"
+msgstr ""
 
 msgid "Pool Version"
 msgstr "Versiune pool"
@@ -7035,6 +7368,9 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr "Portul trebuie să fie în intervalul %d - %d."
 
+msgid "Port number of iSNS server to register on."
+msgstr ""
+
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
 
@@ -7066,8 +7402,20 @@ msgstr ""
 msgid "Portal Group"
 msgstr "Grup Portal"
 
+msgid "Portal Group Name"
+msgstr ""
+
 msgid "Portal Group Settings"
 msgstr "Setări grup portal"
+
+msgid "Portal Group is locked"
+msgstr ""
+
+msgid "Portal Group is marked for deletion"
+msgstr ""
+
+msgid "Portal Group is unlocked"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Grupuri Portal"
@@ -7172,6 +7520,9 @@ msgstr "Stare procesare"
 msgid "Processes"
 msgstr "Procese"
 
+msgid "Processor"
+msgstr ""
+
 msgid "Product ID"
 msgstr "ID produs"
 
@@ -7201,6 +7552,9 @@ msgstr ""
 
 msgid "Provider"
 msgstr "Furnizor"
+
+msgid "Provisioning Type"
+msgstr ""
 
 msgid "Proxy"
 msgstr "Proxy"
@@ -7306,8 +7660,14 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
+msgid "RAM Disk"
+msgstr ""
+
 msgid "RAW info"
 msgstr "Informații brute"
+
+msgid "RPM"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -7360,6 +7720,9 @@ msgstr "Valoare brută"
 
 msgid "Read"
 msgstr "Citire"
+
+msgid "Read Cache"
+msgstr ""
 
 msgid "Read Only"
 msgstr "Doar citire"
@@ -7451,6 +7814,9 @@ msgstr "Recursiv"
 
 msgid "Recycle Bin"
 msgstr "Recycle Bin"
+
+msgid "Redirect"
+msgstr ""
 
 msgid "Redundant Metadata"
 msgstr "Metadate redundante"
@@ -7552,6 +7918,9 @@ msgstr "Ștergeți %s înainte de a merge mai departe."
 msgid "Reorder Commands"
 msgstr "Ordonare comenzi"
 
+msgid "Reordering"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "Înlocuiți acumulatorul"
 
@@ -7611,6 +7980,9 @@ msgstr "Resursă"
 
 msgid "Resource Name"
 msgstr "Nume resursă"
+
+msgid "Resource Provisioning"
+msgstr ""
 
 msgid "Resource is marked for deletion"
 msgstr "Resursa este marcată pentru ștergere"
@@ -7767,6 +8139,9 @@ msgstr "Extra opțiuni S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Jurnal S.M.A.R.T."
+
+msgid "SCSI Name"
+msgstr ""
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, Verificare"
@@ -7941,6 +8316,9 @@ msgstr "Cache secundar"
 
 msgid "Seconds"
 msgstr "Secunde"
+
+msgid "Seconfary"
+msgstr ""
 
 msgid "Secret"
 msgstr "Secret"
@@ -8182,6 +8560,15 @@ msgstr "Număr serial"
 msgid "Serial number"
 msgstr "Număr de serie"
 
+msgid "Serialize Sequence"
+msgstr ""
+
+msgid "Serialize consecutive reads"
+msgstr ""
+
+msgid "Serialize consecutive reads/writes"
+msgstr ""
+
 msgid "Server"
 msgstr "Server"
 
@@ -8234,6 +8621,9 @@ msgstr ""
 msgid "Set or reset user password."
 msgstr "Setare sau resetare parolă utilizator."
 
+msgid "Set per-LUN/per-pool thin provisioning soft threshold."
+msgstr ""
+
 msgid "Set read only."
 msgstr "Setare doar citire."
 
@@ -8283,6 +8673,29 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Valoarea vitezei de scroll (între 0 și 10). Implicit este 10."
 
+msgid ""
+"Set to \"off\", disables read caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid ""
+"Set to \"off\", disables write caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid "Set to \"on\" makes LUN removable."
+msgstr ""
+
+msgid ""
+"Set to \"on\", blocks all media write operations to the LUN reporting it as "
+"write protected."
+msgstr ""
+
+msgid ""
+"Set to \"unrestricted\", allows target to process commands with SIMPLE task "
+"attribute in arbitrary order."
+msgstr ""
+
 msgid "Set user login shell."
 msgstr "Setare shell autentificare utilizator."
 
@@ -8294,12 +8707,32 @@ msgstr ""
 "Definire punct alternativ de montare pentru rădăcina bazei de date. Implicit "
 "este /mnt."
 
+msgid "Sets the authentication type."
+msgstr ""
+
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
 "is zero (anyone can read or write)."
 msgstr ""
 "Stabilire mască utilizator (umask) pentru crearea de fișiere. Valoarea "
 "implicită este zero (oricine poate citi sau scrie)."
+
+msgid ""
+"Setting to \"on\" allows EXTENDED COPY command sent to this LUN access other "
+"LUNs on this host, not accessible otherwise. This allows to offload copying "
+"between different iSCSI targets residing on the same host in trusted "
+"environments."
+msgstr ""
+
+msgid ""
+"Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
+"Default value is \"on\" if supported by the backend."
+msgstr ""
+
+msgid ""
+"Setting to \"primary\" or \"secondary\" overrides default role of the node "
+"in HA cluster."
+msgstr ""
 
 msgid "Settings"
 msgstr "Setări"
@@ -8535,6 +8968,36 @@ msgstr ""
 msgid "Specified path is NFSv4 root directory."
 msgstr "Ruta specificata este directorul root"
 
+msgid "Specifies LUN EUI-64 identifier."
+msgstr ""
+
+msgid "Specifies LUN NAA identifier."
+msgstr ""
+
+msgid "Specifies LUN SCSI name string."
+msgstr ""
+
+msgid "Specifies LUN locally assigned RFC 4122 UUID."
+msgstr ""
+
+msgid "Specifies LUN product string up to 16 chars."
+msgstr ""
+
+msgid "Specifies LUN revision string up to 4 chars."
+msgstr ""
+
+msgid "Specifies LUN vendor string up to 8 chars."
+msgstr ""
+
+msgid ""
+"Specifies capacity of backing store (maximum RAM for data). The default "
+"value is zero, that disables backing store completely, making all writes go "
+"to nowhere, while all reads return zeroes."
+msgstr ""
+
+msgid "Specifies file or device name to use for backing store."
+msgstr ""
+
 msgid "Specifies how many servers to create."
 msgstr "Specifică câte servere vor fi create."
 
@@ -8542,10 +9005,24 @@ msgid "Specifies how the volume should be exposed to the OS."
 msgstr ""
 "Specifică modul în care volumul este prezentat sistemului de operare."
 
+msgid "Specifies medium rotation rate of the device."
+msgstr ""
+
+msgid "Specifies nominal form factor of the device."
+msgstr ""
+
+msgid "Specifies number of backend threads to use for this LUN."
+msgstr ""
+
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
 "Specifică faptul că sistemul de fișiere trebuie exportat în modul doar-"
 "citire."
+
+msgid ""
+"Specifies that this portal-group is listened by some other host. This host "
+"will announce it on discovery stage, but won't listen."
+msgstr ""
 
 msgid "Specifies the command to be run."
 msgstr "Introduceți aici comanda de executat."
@@ -8592,6 +9069,36 @@ msgid ""
 msgstr ""
 "Arată procentual spațiul din disc rezervat. Micșorarea acestui spațiu poate "
 "afecta performanța și auto-defragmentarea!"
+
+msgid "Specify UNMAP block offset of the device."
+msgstr ""
+
+msgid "Specify UNMAP block size of the device."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per UNMAP command to report in Block "
+"Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per WRITE SAME command to report in "
+"Block Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of block descriptors per UNMAP command to "
+"report in Block Limits VPD page."
+msgstr ""
+
+msgid "Specify physical block offset of the device."
+msgstr ""
+
+msgid "Specify physical block size of the device."
+msgstr ""
+
+msgid "Specify the SCSI device type to use when creating the LUN."
+msgstr ""
 
 msgid "Split request"
 msgstr "Cerere splitare"
@@ -8912,8 +9419,17 @@ msgstr "Folderul destinație."
 msgid "Target information"
 msgstr "Informație Destinație"
 
+msgid "Target is locked"
+msgstr ""
+
+msgid "Target is marked for deletion"
+msgstr ""
+
 msgid "Target is not selected."
 msgstr "Destinația nu este selectată."
+
+msgid "Target is unlocked"
+msgstr ""
 
 msgid "Target list"
 msgstr "Lista Destinații"
@@ -8991,6 +9507,9 @@ msgstr ""
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "Portul COM trebuie să fie mai întîi activat în BIOS."
 
+msgid "The CTL backend to use for a given LUN."
+msgstr ""
+
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr "Volumul HAST nu poate fi accesat înainte de a deveni nod Primar."
 
@@ -9014,6 +9533,9 @@ msgstr "Protocolul LAGG este invalid."
 msgid "The LAN IP address will be reset to"
 msgstr "Adresa LAN va fi resetată la"
 
+msgid "The LUN size, in bytes."
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB-ul '%s' nu există în sysctl."
@@ -9032,6 +9554,12 @@ msgid ""
 msgstr ""
 "Noul contor Bad Flash Block indică numărul total e blocuri defecte ale "
 "memoriei flash apărute din m omentul fabricației."
+
+msgid "The SCSI Device Identification string presented to the initiator."
+msgstr ""
+
+msgid "The SCSI serial number presented to the initiator."
+msgstr ""
 
 msgid "The TCP Port must be a valid port number."
 msgstr "Numărul trebuie să reprezinte un număr de port valid."
@@ -9236,6 +9764,9 @@ msgstr ""
 "(permite) sau 'deny' (refuză). Aveți în vedere faptul că sistemul va aplica "
 "prima regulă găsită în listă, cu ignorarea tuturor intrărilor ulterioare."
 
+msgid "The blocksize visible to the initiator."
+msgstr ""
+
 msgid "The changes could not be applied"
 msgstr "Modificările nu au putut fi aplicate"
 
@@ -9244,6 +9775,16 @@ msgstr "Modificările au fost aplicate cu succes."
 
 msgid "The changes have been saved."
 msgstr "Modificările au fost salvate."
+
+msgid "The check will include both initiator-portal and initiator-name."
+msgstr ""
+
+msgid ""
+"The check will include initiator-portal, initiator-name, and authentication "
+"credentials. The target is returned if it does not require CHAP "
+"authentication, or if the CHAP user and secret used during discovery match "
+"those used by the target."
+msgstr ""
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Creditele afișate în clar folosite la legare (bind)."
@@ -9335,6 +9876,9 @@ msgstr ""
 "Formatul utilizator al imaginii sistemului pentru copia de siguranță poate "
 "fi specificat aici. Formatul implicit este %s folosit pentru imaginile ZFS "
 "generate automat."
+
+msgid "The debug verbosity level. The default is 0."
+msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -9484,6 +10028,11 @@ msgid ""
 msgstr ""
 "Controlul istgtcontrol poate accesa destinația, pe baza utilizatorului și a "
 "secretului, în Grupul Autorizat specificat."
+
+msgid ""
+"The limit for concurrently running child processes handling incoming "
+"connections. The default is 30. A setting of 0 disables the limit."
+msgstr ""
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "Locația pentru baza de date Directory nu este validă."
@@ -9645,6 +10194,10 @@ msgstr "Calea '%s' reprezintă un folder."
 msgid "The path '%s' is not a directory."
 msgstr "Calea '%s' nu reprezintă calea către un folder."
 
+msgid ""
+"The path to the file, device node, or zfs volume used to back the LUN."
+msgstr ""
+
 msgid "The peer connection encryption mode."
 msgstr "Mod criptare conexiune în grup."
 
@@ -9755,6 +10308,11 @@ msgstr ""
 msgid "The time update interval must be between 6 and 1440."
 msgstr ""
 "Intervalul de timp pentru actualizare trebuie să fie între 6 și 1440."
+
+msgid ""
+"The timeout for login sessions, after which the connection will be forcibly "
+"terminated. The default is 60. A setting of 0 disables the timeout."
+msgstr ""
 
 msgid "The total count of errors when writing a sector."
 msgstr "Numărul total de erori apărute la scrierea unui sector."
@@ -9869,6 +10427,21 @@ msgstr ""
 "Aceaste opțiuni vor fi adăugate în  /etc/sysctl.conf. Acest lucru vă permite "
 "să suprascrieți diferite variabile folosite de diverse scripturi la pornire."
 
+msgid "These parameter will be added to the global section of ctl.conf"
+msgstr ""
+
+msgid "These parameter will be added to this auth-group."
+msgstr ""
+
+msgid "These parameter will be added to this lun."
+msgstr ""
+
+msgid "These parameter will be added to this portal-group."
+msgstr ""
+
+msgid "These parameter will be added to this target."
+msgstr ""
+
 #, php-format
 msgid "These parameters are added to %s."
 msgstr "Acești parametri sînt adăugați la %s."
@@ -9911,6 +10484,9 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Acești parametri vor fi adăugați la comanda ping."
+
+msgid "Thin Provisioning"
+msgstr ""
 
 msgid "This URL is already configured."
 msgstr "URL-ul este deja configurat."
@@ -10332,6 +10908,9 @@ msgstr ""
 "Activează suportul pentru streaming-ul fișierelor .jpg și .mp3 către sisteme "
 "TiVo care au suport HMO."
 
+msgid "Threads"
+msgstr ""
+
 msgid "Throughput"
 msgstr "Rată transfer"
 
@@ -10392,6 +10971,9 @@ msgstr "Interval actualizare"
 msgid "Timeout"
 msgstr "Timeout"
 
+msgid "Timeout for iSNS requests. The default is 5."
+msgstr ""
+
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr ""
 
@@ -10450,14 +11032,23 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Inversare selecție"
 
+msgid "Toggle Selected Auth Groups"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "Inversare stare selecție comenzi"
 
 msgid "Toggle Selected Jobs"
 msgstr "Inversare stare activități selectate"
 
+msgid "Toggle Selected LUNs"
+msgstr ""
+
 msgid "Toggle Selected Options"
 msgstr "Inversare stare opțiuni selectate"
+
+msgid "Toggle Selected Portal Groups"
+msgstr ""
 
 msgid "Toggle Selected Records"
 msgstr "Inversare stare selecție înregistrări"
@@ -10467,6 +11058,9 @@ msgstr "Inversare stare selecție joburi Rsync"
 
 msgid "Toggle Selected Rsync Modules"
 msgstr "Inversare stare selecție module Rsync"
+
+msgid "Toggle Selected Targets"
+msgstr ""
 
 msgid "Tolerated"
 msgstr "Tolerat"
@@ -10646,6 +11240,21 @@ msgstr "UFS cu Soft Updates"
 msgid "UID"
 msgstr "UID"
 
+msgid "UNMAP"
+msgstr ""
+
+msgid "UNMAP Block Offset"
+msgstr ""
+
+msgid "UNMAP Block Size"
+msgstr ""
+
+msgid "UNMAP Maximum Descriptors"
+msgstr ""
+
+msgid "UNMAP Maximum LBA"
+msgstr ""
+
 msgid "UPS"
 msgstr "UPS"
 
@@ -10745,6 +11354,9 @@ msgstr "Dispozitiv de stocare USB"
 msgid "UTF-8 Only"
 msgstr "Doar UTF-8"
 
+msgid "UUID"
+msgstr ""
+
 msgid "Umask"
 msgstr "Umask"
 
@@ -10753,6 +11365,9 @@ msgstr "Indisponibil"
 
 msgid "Uncorrected read errors reported to the operating system."
 msgstr "Numărul de erori necorectate raportate de sistemul de operare."
+
+msgid "Undefined"
+msgstr ""
 
 msgid "Unformated"
 msgstr "Neformatat"
@@ -10768,6 +11383,11 @@ msgstr "Dezinstalare pachet"
 
 msgid "Uninterruptible Power Supply"
 msgstr "Sursă de Tensiune Neîntreuptibilă"
+
+msgid ""
+"Unique 16-bit tag value of this portal-group. If not specified, the value is "
+"generated automatically."
+msgstr ""
 
 msgid "Unison"
 msgstr "Unison"
@@ -10816,6 +11436,9 @@ msgstr "Demontați mai întâi discul."
 
 msgid "Unmounting..."
 msgstr "Demontare..."
+
+msgid "Unrestricted"
+msgstr ""
 
 msgid "Up"
 msgstr "Activ"
@@ -10971,6 +11594,9 @@ msgstr ""
 
 msgid "Used"
 msgstr "Utilizat"
+
+msgid "Used Threshold"
+msgstr ""
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -11330,6 +11956,10 @@ msgstr ""
 "Când se activează modul Samba AD partajările de sine-stătătoare CIFS/SMB nu "
 "pot fi utilizate."
 
+msgid ""
+"When UNMAP support is enabled, this option specifies provisioning type."
+msgstr ""
+
 msgid "When UPS switches to Low Battery"
 msgstr "Cînd comută UPS-ul pe Acumulator Descărcat"
 
@@ -11376,6 +12006,9 @@ msgstr "Scriere"
 
 msgid "Write Cache"
 msgstr "Cache Scriere"
+
+msgid "Write Same Maximum LBA"
+msgstr ""
 
 msgid "Write only"
 msgstr "Doar scriere"
@@ -11649,11 +12282,31 @@ msgstr "Parametru inițial iSCSI (iniţial %d)."
 msgid "iSCSI initiator disabled."
 msgstr "Inițiatorul iSCSI este dezactivat."
 
+msgid "iSNS Period"
+msgstr ""
+
+msgid "iSNS Server"
+msgstr ""
+
+msgid "iSNS Server Port"
+msgstr ""
+
+msgid "iSNS Timeout"
+msgstr ""
+
+msgid ""
+"iSNS registration period. Registered Network Entity not updated during this "
+"period will be unregistered. The default is 900."
+msgstr ""
+
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "infinit"
+
+msgid "less then 1.8\"."
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "eroare încărcare/descărcare."

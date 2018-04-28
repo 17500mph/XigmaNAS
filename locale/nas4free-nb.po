@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-19 22:35+0000\n"
+"POT-Creation-Date: 2018-04-28 16:02+0000\n"
 "PO-Revision-Date: 2017-03-09 19:22+0000\n"
 "Last-Translator: vmwarewolf <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-20 15:32+0000\n"
-"X-Generator: Launchpad (build 18617)\n"
+"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
 "X-Poedit-Language: Norwegian Bokmal\n"
@@ -177,6 +177,9 @@ msgstr "1 eller flere disker trengs for å lage et JBOD volum."
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 eller flere disker trengs for å lage et RAID-1 volum."
 
+msgid "1.8\""
+msgstr ""
+
 msgid "2"
 msgstr ""
 
@@ -186,13 +189,31 @@ msgstr "2  eller flere disker trengs for å lage et RAID-0 volum."
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2  eller flere disker trengs for å lage et RAID-1 volum."
 
+msgid "2.5\""
+msgstr ""
+
+msgid "2048"
+msgstr ""
+
 msgid "3"
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3  eller flere disker trengs for å lage et RAID-5 volum."
 
+msgid "3.5\""
+msgstr ""
+
+msgid "4096"
+msgstr ""
+
 msgid "4KB wrapper"
+msgstr ""
+
+msgid "5.25\""
+msgstr ""
+
+msgid "512"
 msgstr ""
 
 msgid "514"
@@ -203,6 +224,9 @@ msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tagg (mellom 1 og 4094)"
+
+msgid "8192"
+msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -437,6 +461,9 @@ msgstr "Adaptiv (Lavt strømforbruk)"
 msgid "Add"
 msgstr "Tilføy"
 
+msgid "Add Auth Group"
+msgstr ""
+
 msgid "Add Bridge"
 msgstr "Legg til Bridge"
 
@@ -461,6 +488,9 @@ msgstr "Legg til vert"
 msgid "Add LAGG"
 msgstr "Legg til LAGG"
 
+msgid "Add LUN"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "Legg til MIB"
 
@@ -472,6 +502,9 @@ msgstr "Legg til opsjon"
 
 msgid "Add Pool"
 msgstr "Legg til pool"
+
+msgid "Add Portal Group"
+msgstr ""
 
 msgid "Add RAID"
 msgstr "Legg til RAID"
@@ -498,6 +531,9 @@ msgid "Add Share"
 msgstr ""
 
 msgid "Add Snapshot"
+msgstr ""
+
+msgid "Add Target"
 msgstr ""
 
 msgid "Add URL"
@@ -580,6 +616,12 @@ msgstr "Ny gruppe"
 
 msgid "Additional Network"
 msgstr "Nytt nettverk"
+
+msgid "Additional Options for Block Backend"
+msgstr ""
+
+msgid "Additional Options for RAM Disk Backend"
+msgstr ""
 
 msgid "Additional Parameter"
 msgstr ""
@@ -665,6 +707,9 @@ msgstr ""
 msgid "Algorithm"
 msgstr ""
 
+msgid "Alias"
+msgstr ""
+
 msgid "All"
 msgstr "Alle"
 
@@ -734,6 +779,9 @@ msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Tillat klienter å fortsette stoppede opplastinger og nedlastinger."
+
+msgid "Allow consecutive read/writes to be issued in parallel"
+msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Tillatt nye filer å bli laget"
@@ -817,6 +865,9 @@ msgid ""
 msgstr ""
 
 msgid "An Extent defines the storage area of the Target."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid ""
@@ -924,6 +975,11 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
+msgid ""
+"Assign a previously defined authentication group to the portal group, to be "
+"used for target discovery."
+msgstr ""
+
 msgid "Asynchronous I/O"
 msgstr ""
 
@@ -977,7 +1033,19 @@ msgstr ""
 msgid "Auth Group"
 msgstr "Auth gruppe"
 
+msgid "Auth Group Name"
+msgstr ""
+
 msgid "Auth Group Settings"
+msgstr ""
+
+msgid "Auth Group is locked"
+msgstr ""
+
+msgid "Auth Group is marked for deletion"
+msgstr ""
+
+msgid "Auth Group is unlocked"
 msgstr ""
 
 msgid "Auth Groups"
@@ -989,6 +1057,9 @@ msgstr ""
 
 msgid "Auth Method"
 msgstr "Auth metode"
+
+msgid "Auth Type"
+msgstr ""
 
 msgid "Authenticate Path & Realm"
 msgstr ""
@@ -1061,6 +1132,9 @@ msgstr ""
 msgid "Avail"
 msgstr ""
 
+msgid "Avail Threshold"
+msgstr ""
+
 msgid "Available"
 msgstr ""
 
@@ -1077,6 +1151,9 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Back"
+msgstr ""
+
+msgid "Backend"
 msgstr ""
 
 msgid "Background"
@@ -1202,6 +1279,9 @@ msgstr ""
 msgid "Blank Time"
 msgstr ""
 
+msgid "Block"
+msgstr ""
+
 msgid "Block Size"
 msgstr ""
 
@@ -1285,6 +1365,12 @@ msgstr ""
 msgid "CACHE"
 msgstr ""
 
+msgid "CAM Target Layer"
+msgstr ""
+
+msgid "CAM Target Layer / iSCSI Target"
+msgstr ""
+
 msgid "CARP"
 msgstr ""
 
@@ -1310,6 +1396,12 @@ msgstr "CCMP"
 msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
+msgid "CD"
+msgstr ""
+
+msgid "CD-ROM"
+msgstr ""
+
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
@@ -1324,6 +1416,9 @@ msgstr "CHAP"
 
 msgid "CHAP Users"
 msgstr "CHAP brukere"
+
+msgid "CHAP-Mutual"
+msgstr ""
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1397,6 +1492,9 @@ msgstr "CPU belastning"
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
+msgstr ""
+
+msgid "CTL LUN"
 msgstr ""
 
 msgid "Calibration Battery"
@@ -2123,6 +2221,9 @@ msgstr ""
 msgid "DVD"
 msgstr "DVD"
 
+msgid "DVD-ROM"
+msgstr ""
+
 msgid "Daemon"
 msgstr "Tjeneste"
 
@@ -2237,6 +2338,11 @@ msgstr ""
 msgid "Define directories/URL's that require authentication."
 msgstr "Definer kataloger/URL'er som krever autentisering."
 
+msgid ""
+"Define iSCSI hardware offload driver to use for this portal-group. The "
+"default is \"none\"."
+msgstr ""
+
 msgid "Defines the checksum algorithm."
 msgstr ""
 
@@ -2268,6 +2374,9 @@ msgstr "Slett vert"
 msgid "Delete Login Info"
 msgstr "Slett innlogginsinformasjon"
 
+msgid "Delete Selected Auth Groups"
+msgstr ""
+
 msgid "Delete Selected Bridges"
 msgstr ""
 
@@ -2295,6 +2404,9 @@ msgstr ""
 msgid "Delete Selected LAGGs"
 msgstr ""
 
+msgid "Delete Selected LUNs"
+msgstr ""
+
 msgid "Delete Selected NFS Shares"
 msgstr ""
 
@@ -2305,6 +2417,9 @@ msgid "Delete Selected Options"
 msgstr ""
 
 msgid "Delete Selected Pools"
+msgstr ""
+
+msgid "Delete Selected Portal Groups"
 msgstr ""
 
 msgid "Delete Selected RAID Volumes"
@@ -2332,6 +2447,9 @@ msgid "Delete Selected Shares"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected Targets"
 msgstr ""
 
 msgid "Delete Selected User Accounts"
@@ -2423,6 +2541,9 @@ msgstr ""
 msgid "Deny"
 msgstr "Nekt"
 
+msgid "Deny discovery"
+msgstr ""
+
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -2500,6 +2621,9 @@ msgstr ""
 "Sett standard tidsavbrudd i mikrosekunder, før første pakke blir sendt på "
 "nytt. Standard er 1000000 (1 sekund)."
 
+msgid "Determines which targets are returned during discovery."
+msgstr ""
+
 msgid "Device"
 msgstr "Enhet"
 
@@ -2509,6 +2633,9 @@ msgstr ""
 #, php-format
 msgid "Device /dev/%s - %s"
 msgstr "Enhet /dev/%s - %s"
+
+msgid "Device ID"
+msgstr ""
 
 msgid "Device IP"
 msgstr "Enhets IP"
@@ -2526,6 +2653,9 @@ msgid "Device Polling"
 msgstr ""
 
 msgid "Device Serial"
+msgstr ""
+
+msgid "Device Type"
 msgstr ""
 
 msgid "Device contains boot partition"
@@ -2570,6 +2700,9 @@ msgstr "Forskjell"
 msgid "Digital Audio Access Protocol"
 msgstr "Digital Audio Access Protocol"
 
+msgid "Direct"
+msgstr ""
+
 msgid "Direction"
 msgstr "Retning"
 
@@ -2604,13 +2737,22 @@ msgstr ""
 msgid "Disable Firmware Upgrade"
 msgstr ""
 
+msgid "Disable Selected Auth Groups"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr ""
 
 msgid "Disable Selected Jobs"
 msgstr ""
 
+msgid "Disable Selected LUNs"
+msgstr ""
+
 msgid "Disable Selected Options"
+msgstr ""
+
+msgid "Disable Selected Portal Groups"
 msgstr ""
 
 msgid "Disable Selected Records"
@@ -2620,6 +2762,9 @@ msgid "Disable Selected Rsync Jobs"
 msgstr ""
 
 msgid "Disable Selected Rsync Modules"
+msgstr ""
+
+msgid "Disable Selected Targets"
 msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
@@ -2661,6 +2806,17 @@ msgstr "Oppdag Auth gruppe"
 
 msgid "Discovery Auth Method"
 msgstr "Oppdag Auth metode"
+
+msgid "Discovery Filter"
+msgstr ""
+
+msgid ""
+"Discovery will not return targets that cannot be accessed by the initiator "
+"because of their initiator-portal."
+msgstr ""
+
+msgid "Discovery will return all targets assigned to this portal group."
+msgstr ""
 
 msgid "Disk"
 msgstr "Disk"
@@ -2866,6 +3022,9 @@ msgstr ""
 msgid "Do you want to delete selected LAGGs?"
 msgstr ""
 
+msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
 msgid "Do you want to delete selected NFS shares?"
 msgstr ""
 
@@ -2879,6 +3038,9 @@ msgid "Do you want to delete selected VLANs?"
 msgstr ""
 
 msgid "Do you want to delete selected WLANs?"
+msgstr ""
+
+msgid "Do you want to delete selected auth groups?"
 msgstr ""
 
 msgid "Do you want to delete selected bridges?"
@@ -2911,6 +3073,9 @@ msgstr ""
 msgid "Do you want to delete selected pools?"
 msgstr ""
 
+msgid "Do you want to delete selected portal groups?"
+msgstr ""
+
 msgid "Do you want to delete selected records?"
 msgstr ""
 
@@ -2932,6 +3097,9 @@ msgstr ""
 msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
+msgid "Do you want to delete selected targets?"
+msgstr ""
+
 msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
@@ -2944,6 +3112,12 @@ msgstr ""
 msgid "Do you want to delete this command?"
 msgstr ""
 
+msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to disable selected commands?"
 msgstr ""
 
@@ -2951,6 +3125,9 @@ msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to disable selected portal groups?"
 msgstr ""
 
 msgid "Do you want to disable selected records?"
@@ -2962,6 +3139,15 @@ msgstr ""
 msgid "Do you want to disable selected rsync modules?"
 msgstr ""
 
+msgid "Do you want to disable selected targets?"
+msgstr ""
+
+msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected auth groups?"
+msgstr ""
+
 msgid "Do you want to enable selected commands?"
 msgstr ""
 
@@ -2969,6 +3155,9 @@ msgid "Do you want to enable selected jobs?"
 msgstr ""
 
 msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected portal groups?"
 msgstr ""
 
 msgid "Do you want to enable selected records?"
@@ -2980,6 +3169,9 @@ msgstr ""
 msgid "Do you want to enable selected rsync modules?"
 msgstr ""
 
+msgid "Do you want to enable selected targets?"
+msgstr ""
+
 msgid "Do you want to import disks?"
 msgstr ""
 
@@ -2987,6 +3179,12 @@ msgid "Do you want to import software RAID disks?"
 msgstr ""
 
 msgid "Do you want to lock selected records?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected auth groups?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
@@ -2998,6 +3196,9 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
+msgid "Do you want to toggle selected portal groups?"
+msgstr ""
+
 msgid "Do you want to toggle selected records?"
 msgstr ""
 
@@ -3005,6 +3206,9 @@ msgid "Do you want to toggle selected rsync jobs?"
 msgstr ""
 
 msgid "Do you want to toggle selected rsync modules?"
+msgstr ""
+
+msgid "Do you want to toggle selected targets?"
 msgstr ""
 
 msgid "Do you want to unlock selected records?"
@@ -3116,8 +3320,14 @@ msgstr "EFI/GPT kan kun brukes med UFS."
 msgid "ERROR:"
 msgstr ""
 
+msgid "EUI-64"
+msgstr ""
+
 msgid "Edit"
 msgstr "Rediger"
+
+msgid "Edit Auth Group"
+msgstr ""
 
 msgid "Edit Bridge"
 msgstr ""
@@ -3143,6 +3353,9 @@ msgstr "Endre vert"
 msgid "Edit LAGG"
 msgstr ""
 
+msgid "Edit LUN"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Endre MIB"
 
@@ -3153,6 +3366,9 @@ msgid "Edit Option"
 msgstr ""
 
 msgid "Edit Pool"
+msgstr ""
+
+msgid "Edit Portal Group"
 msgstr ""
 
 msgid "Edit RAID"
@@ -3180,6 +3396,9 @@ msgid "Edit Share"
 msgstr ""
 
 msgid "Edit Snapshot"
+msgstr ""
+
+msgid "Edit Target"
 msgstr ""
 
 msgid "Edit URL"
@@ -3313,13 +3532,22 @@ msgstr ""
 msgid "Enable STARTTLS"
 msgstr ""
 
+msgid "Enable Selected Auth Groups"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr ""
 
+msgid "Enable Selected LUNs"
+msgstr ""
+
 msgid "Enable Selected Options"
+msgstr ""
+
+msgid "Enable Selected Portal Groups"
 msgstr ""
 
 msgid "Enable Selected Records"
@@ -3329,6 +3557,9 @@ msgid "Enable Selected Rsync Jobs"
 msgstr ""
 
 msgid "Enable Selected Rsync Modules"
+msgstr ""
+
+msgid "Enable Selected Targets"
 msgstr ""
 
 msgid "Enable Server"
@@ -3686,6 +3917,9 @@ msgstr ""
 msgid "Enter a valid sysctl MIB name."
 msgstr "Skriv inn et gyldig sysctl MIB navn."
 
+msgid "Enter additional parameter"
+msgstr ""
+
 msgid "Enter comment for the share"
 msgstr ""
 
@@ -3724,6 +3958,9 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter name"
+msgstr ""
+
+msgid "Enter secret"
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -3780,6 +4017,9 @@ msgstr "Angi portnummeret som fellene skal sende til (standard 162)."
 
 msgid "Enter trap host name."
 msgstr "Angi vertsnavnet på fellen."
+
+msgid "Enter user name"
+msgstr ""
 
 msgid "Enter value"
 msgstr ""
@@ -4138,6 +4378,12 @@ msgid ""
 "(This is not recommended.)"
 msgstr ""
 
+msgid "Foreign"
+msgstr ""
+
+msgid "Form Factor"
+msgstr ""
+
 msgid "Format"
 msgstr "Format"
 
@@ -4255,6 +4501,12 @@ msgstr "Gi kun lokale brukere tilgang til nettsiden."
 msgid "Give your media library a friendly name."
 msgstr ""
 
+msgid "Global Settings"
+msgstr ""
+
+msgid "Global numeric identifier to use for a given LUN inside CTL."
+msgstr ""
+
 msgid "Grant access to the user portal."
 msgstr "Gi tilgang til bruker portalen."
 
@@ -4314,6 +4566,9 @@ msgid "Guest Account"
 msgstr ""
 
 msgid "Guest Authentication"
+msgstr ""
+
+msgid "HA Role"
 msgstr ""
 
 msgid "HAST"
@@ -4520,6 +4775,12 @@ msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 adresser"
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to portal belonging to this portal-group "
+"will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
 
 msgid "IPv6 Address"
 msgstr ""
@@ -4825,6 +5086,9 @@ msgstr "Spør om serienummer"
 msgid "Inquiry Vendor"
 msgstr "Spør om forhandler"
 
+msgid "Insecure TPC"
+msgstr ""
+
 msgid "Insensitive"
 msgstr ""
 
@@ -5044,6 +5308,36 @@ msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
+
+msgid "LUN EUI-64\tidentifier"
+msgstr ""
+
+msgid "LUN NAA Identifier"
+msgstr ""
+
+msgid "LUN Name"
+msgstr ""
+
+msgid "LUN Product"
+msgstr ""
+
+msgid "LUN Revision"
+msgstr ""
+
+msgid "LUN SCSI Name"
+msgstr ""
+
+msgid "LUN Vendor"
+msgstr ""
+
+msgid "LUN is locked"
+msgstr ""
+
+msgid "LUN is marked for deletion"
+msgstr ""
+
+msgid "LUN is unlocked"
+msgstr ""
 
 msgid "LUNs"
 msgstr "LUNer"
@@ -5393,6 +5687,9 @@ msgstr ""
 msgid "Masquerade Address"
 msgstr ""
 
+msgid "Max Processes"
+msgstr ""
+
 msgid "Max. Block Size"
 msgstr ""
 
@@ -5692,6 +5989,9 @@ msgstr ""
 msgid "Mutual CHAP Users"
 msgstr ""
 
+msgid "NAA Identifier"
+msgstr ""
+
 msgid "NFS"
 msgstr "NFS"
 
@@ -5747,9 +6047,18 @@ msgstr ""
 msgid "Name"
 msgstr "Navn"
 
+msgid "Name of the Auth Group."
+msgstr ""
+
+msgid "Name of the LUN."
+msgstr ""
+
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "Navnet til NAS verten, uten domene delen. F.eks. %s."
+
+msgid "Name of the Portal Group."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -5761,6 +6070,9 @@ msgid ""
 msgstr ""
 "Navnet på tjeneren. Hvis dette feltet er tomt vil standard tjener bli "
 "spesifisert."
+
+msgid "Name of the target."
+msgstr ""
 
 msgid "Name of the variable."
 msgstr "Variabelens navn"
@@ -6052,6 +6364,9 @@ msgid ""
 "the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
 
+msgid "Not Reported"
+msgstr ""
+
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
@@ -6141,6 +6456,9 @@ msgid "Off"
 msgstr "Av"
 
 msgid "Offline Immediate Test"
+msgstr ""
+
+msgid "Offload"
 msgstr ""
 
 msgid "Old Passphrase"
@@ -6450,8 +6768,17 @@ msgstr ""
 msgid "Permit Root Login"
 msgstr ""
 
+msgid "Permit discovery without authentication"
+msgstr ""
+
 msgid "Permit to do SSH Tunneling."
 msgstr "Tilatt SSH tunneler."
+
+msgid "Physical Block Offset"
+msgstr ""
+
+msgid "Physical Block Size"
+msgstr ""
 
 msgid "Physical Interface"
 msgstr ""
@@ -6551,6 +6878,9 @@ msgstr ""
 msgid "Pool"
 msgstr ""
 
+msgid "Pool Avail Threshold"
+msgstr ""
+
 msgid "Pool Devices"
 msgstr ""
 
@@ -6564,6 +6894,9 @@ msgid "Pool State"
 msgstr ""
 
 msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Used Threshold"
 msgstr ""
 
 msgid "Pool Version"
@@ -6610,6 +6943,9 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
+msgid "Port number of iSNS server to register on."
+msgstr ""
+
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
 
@@ -6639,7 +6975,19 @@ msgstr ""
 msgid "Portal Group"
 msgstr "Portal gruppe"
 
+msgid "Portal Group Name"
+msgstr ""
+
 msgid "Portal Group Settings"
+msgstr ""
+
+msgid "Portal Group is locked"
+msgstr ""
+
+msgid "Portal Group is marked for deletion"
+msgstr ""
+
+msgid "Portal Group is unlocked"
 msgstr ""
 
 msgid "Portal Groups"
@@ -6739,6 +7087,9 @@ msgstr ""
 msgid "Processes"
 msgstr "Prosesser"
 
+msgid "Processor"
+msgstr ""
+
 msgid "Product ID"
 msgstr ""
 
@@ -6766,6 +7117,9 @@ msgstr ""
 
 msgid "Provider"
 msgstr "Tilbyder"
+
+msgid "Provisioning Type"
+msgstr ""
 
 msgid "Proxy"
 msgstr "Proxy"
@@ -6871,7 +7225,13 @@ msgstr "RAID1"
 msgid "RAID5"
 msgstr "RAID5"
 
+msgid "RAM Disk"
+msgstr ""
+
 msgid "RAW info"
+msgstr ""
+
+msgid "RPM"
 msgstr ""
 
 #, php-format
@@ -6918,6 +7278,9 @@ msgstr ""
 
 msgid "Read"
 msgstr "Les"
+
+msgid "Read Cache"
+msgstr ""
 
 msgid "Read Only"
 msgstr ""
@@ -7004,6 +7367,9 @@ msgid "Recursive"
 msgstr "Rekursivt"
 
 msgid "Recycle Bin"
+msgstr ""
+
+msgid "Redirect"
 msgstr ""
 
 msgid "Redundant Metadata"
@@ -7102,6 +7468,9 @@ msgstr ""
 msgid "Reorder Commands"
 msgstr ""
 
+msgid "Reordering"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr ""
 
@@ -7159,6 +7528,9 @@ msgid "Resource"
 msgstr ""
 
 msgid "Resource Name"
+msgstr ""
+
+msgid "Resource Provisioning"
 msgstr ""
 
 msgid "Resource is marked for deletion"
@@ -7312,6 +7684,9 @@ msgstr "S.M.A.R.T. ekstra alternativer"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. logg"
+
+msgid "SCSI Name"
+msgstr ""
 
 msgid "SHA-256, Verify"
 msgstr ""
@@ -7477,6 +7852,9 @@ msgid "Secondary Cache"
 msgstr ""
 
 msgid "Seconds"
+msgstr ""
+
+msgid "Seconfary"
 msgstr ""
 
 msgid "Secret"
@@ -7702,6 +8080,15 @@ msgstr ""
 msgid "Serial number"
 msgstr ""
 
+msgid "Serialize Sequence"
+msgstr ""
+
+msgid "Serialize consecutive reads"
+msgstr ""
+
+msgid "Serialize consecutive reads/writes"
+msgstr ""
+
 msgid "Server"
 msgstr "Tjener"
 
@@ -7752,6 +8139,9 @@ msgstr ""
 msgid "Set or reset user password."
 msgstr ""
 
+msgid "Set per-LUN/per-pool thin provisioning soft threshold."
+msgstr ""
+
 msgid "Set read only."
 msgstr ""
 
@@ -7792,6 +8182,29 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
+msgid ""
+"Set to \"off\", disables read caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid ""
+"Set to \"off\", disables write caching for the LUN, if supported by the "
+"backend."
+msgstr ""
+
+msgid "Set to \"on\" makes LUN removable."
+msgstr ""
+
+msgid ""
+"Set to \"on\", blocks all media write operations to the LUN reporting it as "
+"write protected."
+msgstr ""
+
+msgid ""
+"Set to \"unrestricted\", allows target to process commands with SIMPLE task "
+"attribute in arbitrary order."
+msgstr ""
+
 msgid "Set user login shell."
 msgstr ""
 
@@ -7801,9 +8214,29 @@ msgstr ""
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
+msgid "Sets the authentication type."
+msgstr ""
+
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
 "is zero (anyone can read or write)."
+msgstr ""
+
+msgid ""
+"Setting to \"on\" allows EXTENDED COPY command sent to this LUN access other "
+"LUNs on this host, not accessible otherwise. This allows to offload copying "
+"between different iSCSI targets residing on the same host in trusted "
+"environments."
+msgstr ""
+
+msgid ""
+"Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
+"Default value is \"on\" if supported by the backend."
+msgstr ""
+
+msgid ""
+"Setting to \"primary\" or \"secondary\" overrides default role of the node "
+"in HA cluster."
 msgstr ""
 
 msgid "Settings"
@@ -8024,14 +8457,58 @@ msgstr ""
 msgid "Specified path is NFSv4 root directory."
 msgstr ""
 
+msgid "Specifies LUN EUI-64 identifier."
+msgstr ""
+
+msgid "Specifies LUN NAA identifier."
+msgstr ""
+
+msgid "Specifies LUN SCSI name string."
+msgstr ""
+
+msgid "Specifies LUN locally assigned RFC 4122 UUID."
+msgstr ""
+
+msgid "Specifies LUN product string up to 16 chars."
+msgstr ""
+
+msgid "Specifies LUN revision string up to 4 chars."
+msgstr ""
+
+msgid "Specifies LUN vendor string up to 8 chars."
+msgstr ""
+
+msgid ""
+"Specifies capacity of backing store (maximum RAM for data). The default "
+"value is zero, that disables backing store completely, making all writes go "
+"to nowhere, while all reads return zeroes."
+msgstr ""
+
+msgid "Specifies file or device name to use for backing store."
+msgstr ""
+
 msgid "Specifies how many servers to create."
 msgstr "Spesifiserer hvor mange tjenere som skal lages."
 
 msgid "Specifies how the volume should be exposed to the OS."
 msgstr ""
 
+msgid "Specifies medium rotation rate of the device."
+msgstr ""
+
+msgid "Specifies nominal form factor of the device."
+msgstr ""
+
+msgid "Specifies number of backend threads to use for this LUN."
+msgstr ""
+
 msgid "Specifies that the file system should be exported read-only."
 msgstr "Spesifiserer at filsystemet kun skal eksporteres med lese-tilgang."
+
+msgid ""
+"Specifies that this portal-group is listened by some other host. This host "
+"will announce it on discovery stage, but won't listen."
+msgstr ""
 
 msgid "Specifies the command to be run."
 msgstr "Spesifiserer kommandoen som skal kjøres."
@@ -8072,6 +8549,36 @@ msgid ""
 "Specifiy the percentage of disk space to be held back from normal usage. "
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
+msgstr ""
+
+msgid "Specify UNMAP block offset of the device."
+msgstr ""
+
+msgid "Specify UNMAP block size of the device."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per UNMAP command to report in Block "
+"Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of LBAs per WRITE SAME command to report in "
+"Block Limits VPD page."
+msgstr ""
+
+msgid ""
+"Specify maximum allowed number of block descriptors per UNMAP command to "
+"report in Block Limits VPD page."
+msgstr ""
+
+msgid "Specify physical block offset of the device."
+msgstr ""
+
+msgid "Specify physical block size of the device."
+msgstr ""
+
+msgid "Specify the SCSI device type to use when creating the LUN."
 msgstr ""
 
 msgid "Split request"
@@ -8386,7 +8893,16 @@ msgstr "Målkatalog"
 msgid "Target information"
 msgstr ""
 
+msgid "Target is locked"
+msgstr ""
+
+msgid "Target is marked for deletion"
+msgstr ""
+
 msgid "Target is not selected."
+msgstr ""
+
+msgid "Target is unlocked"
 msgstr ""
 
 msgid "Target list"
@@ -8458,6 +8974,9 @@ msgstr ""
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
 
+msgid "The CTL backend to use for a given LUN."
+msgstr ""
+
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
 
@@ -8480,6 +8999,9 @@ msgstr ""
 msgid "The LAN IP address will be reset to"
 msgstr ""
 
+msgid "The LUN size, in bytes."
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' finnes ikke i sysctl."
@@ -8493,6 +9015,12 @@ msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
+msgstr ""
+
+msgid "The SCSI Device Identification string presented to the initiator."
+msgstr ""
+
+msgid "The SCSI serial number presented to the initiator."
 msgstr ""
 
 msgid "The TCP Port must be a valid port number."
@@ -8674,6 +9202,9 @@ msgid ""
 "search process will halt."
 msgstr ""
 
+msgid "The blocksize visible to the initiator."
+msgstr ""
+
 msgid "The changes could not be applied"
 msgstr ""
 
@@ -8681,6 +9212,16 @@ msgid "The changes have been applied successfully."
 msgstr "Endringene er tatt i bruk"
 
 msgid "The changes have been saved."
+msgstr ""
+
+msgid "The check will include both initiator-portal and initiator-name."
+msgstr ""
+
+msgid ""
+"The check will include initiator-portal, initiator-name, and authentication "
+"credentials. The target is returned if it does not require CHAP "
+"authentication, or if the CHAP user and secret used during discovery match "
+"those used by the target."
 msgstr ""
 
 msgid "The cleartext credentials with which to bind."
@@ -8752,6 +9293,9 @@ msgstr ""
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
+msgstr ""
+
+msgid "The debug verbosity level. The default is 0."
 msgstr ""
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
@@ -8880,6 +9424,11 @@ msgstr ""
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
+msgstr ""
+
+msgid ""
+"The limit for concurrently running child processes handling incoming "
+"connections. The default is 30. A setting of 0 disables the limit."
 msgstr ""
 
 msgid "The location of the \"Database Directory\" is not a valid location."
@@ -9025,6 +9574,10 @@ msgstr ""
 msgid "The path '%s' is not a directory."
 msgstr ""
 
+msgid ""
+"The path to the file, device node, or zfs volume used to back the LUN."
+msgstr ""
+
 msgid "The peer connection encryption mode."
 msgstr ""
 
@@ -9118,6 +9671,11 @@ msgid ""
 msgstr ""
 
 msgid "The time update interval must be between 6 and 1440."
+msgstr ""
+
+msgid ""
+"The timeout for login sessions, after which the connection will be forcibly "
+"terminated. The default is 60. A setting of 0 disables the timeout."
 msgstr ""
 
 msgid "The total count of errors when writing a sector."
@@ -9216,6 +9774,21 @@ msgstr ""
 "Alternativene vil bli lagt til i /etc/rc.conf. Dette lar deg overskrive "
 "alternativer satt av forskjellige generiske oppstarts-skript."
 
+msgid "These parameter will be added to the global section of ctl.conf"
+msgstr ""
+
+msgid "These parameter will be added to this auth-group."
+msgstr ""
+
+msgid "These parameter will be added to this lun."
+msgstr ""
+
+msgid "These parameter will be added to this portal-group."
+msgstr ""
+
+msgid "These parameter will be added to this target."
+msgstr ""
+
 #, php-format
 msgid "These parameters are added to %s."
 msgstr ""
@@ -9254,6 +9827,9 @@ msgid ""
 msgstr ""
 
 msgid "These parameters will be added to the ping command."
+msgstr ""
+
+msgid "Thin Provisioning"
 msgstr ""
 
 msgid "This URL is already configured."
@@ -9576,6 +10152,9 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Threads"
+msgstr ""
+
 msgid "Throughput"
 msgstr ""
 
@@ -9634,6 +10213,9 @@ msgstr "Tids-oppdaterings intervall"
 msgid "Timeout"
 msgstr "Tidsbrudd"
 
+msgid "Timeout for iSNS requests. The default is 5."
+msgstr ""
+
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr ""
 
@@ -9683,13 +10265,22 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Auth Groups"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr ""
 
+msgid "Toggle Selected LUNs"
+msgstr ""
+
 msgid "Toggle Selected Options"
+msgstr ""
+
+msgid "Toggle Selected Portal Groups"
 msgstr ""
 
 msgid "Toggle Selected Records"
@@ -9699,6 +10290,9 @@ msgid "Toggle Selected Rsync Jobs"
 msgstr ""
 
 msgid "Toggle Selected Rsync Modules"
+msgstr ""
+
+msgid "Toggle Selected Targets"
 msgstr ""
 
 msgid "Tolerated"
@@ -9861,6 +10455,21 @@ msgstr ""
 msgid "UID"
 msgstr "UID"
 
+msgid "UNMAP"
+msgstr ""
+
+msgid "UNMAP Block Offset"
+msgstr ""
+
+msgid "UNMAP Block Size"
+msgstr ""
+
+msgid "UNMAP Maximum Descriptors"
+msgstr ""
+
+msgid "UNMAP Maximum LBA"
+msgstr ""
+
 msgid "UPS"
 msgstr "UPS"
 
@@ -9960,6 +10569,9 @@ msgstr ""
 msgid "UTF-8 Only"
 msgstr ""
 
+msgid "UUID"
+msgstr ""
+
 msgid "Umask"
 msgstr ""
 
@@ -9967,6 +10579,9 @@ msgid "Unavailable"
 msgstr ""
 
 msgid "Uncorrected read errors reported to the operating system."
+msgstr ""
+
+msgid "Undefined"
 msgstr ""
 
 msgid "Unformated"
@@ -9982,6 +10597,11 @@ msgid "Uninstall package"
 msgstr "Fjern pakke."
 
 msgid "Uninterruptible Power Supply"
+msgstr ""
+
+msgid ""
+"Unique 16-bit tag value of this portal-group. If not specified, the value is "
+"generated automatically."
 msgstr ""
 
 msgid "Unison"
@@ -10031,6 +10651,9 @@ msgstr ""
 
 msgid "Unmounting..."
 msgstr "Avmonterer..."
+
+msgid "Unrestricted"
+msgstr ""
 
 msgid "Up"
 msgstr "Opp"
@@ -10158,6 +10781,9 @@ msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
+msgstr ""
+
+msgid "Used Threshold"
 msgstr ""
 
 msgid ""
@@ -10502,6 +11128,10 @@ msgid ""
 "When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."
 msgstr ""
 
+msgid ""
+"When UNMAP support is enabled, this option specifies provisioning type."
+msgstr ""
+
 msgid "When UPS switches to Low Battery"
 msgstr ""
 
@@ -10545,6 +11175,9 @@ msgid "Write"
 msgstr "Skriv"
 
 msgid "Write Cache"
+msgstr ""
+
+msgid "Write Same Maximum LBA"
 msgstr ""
 
 msgid "Write only"
@@ -10792,10 +11425,30 @@ msgstr ""
 msgid "iSCSI initiator disabled."
 msgstr ""
 
+msgid "iSNS Period"
+msgstr ""
+
+msgid "iSNS Server"
+msgstr ""
+
+msgid "iSNS Server Port"
+msgstr ""
+
+msgid "iSNS Timeout"
+msgstr ""
+
+msgid ""
+"iSNS registration period. Registered Network Entity not updated during this "
+"period will be unregistered. The default is 900."
+msgstr ""
+
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
+msgstr ""
+
+msgid "less then 1.8\"."
 msgstr ""
 
 msgid "load/unload failed."
