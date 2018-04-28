@@ -106,7 +106,7 @@ class ctl_target_edit_properties extends ctl_target_properties {
 		$property = parent::init_name();
 		$description = gtext('Name of the target.');
 		$placeholder = gtext('Name');
-		$regexp = '/^\S{1,223}$/';
+		$regexp = '/^(?:iqn|eui|naa)\.\S{1,219}$/';
 		$property->
 			set_id('name')->
 			set_description($description)->
