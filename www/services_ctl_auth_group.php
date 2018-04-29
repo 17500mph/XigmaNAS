@@ -85,7 +85,7 @@ function ctl_auth_group_process_updatenotification($mode,$data) {
 }
 function ctl_auth_group_selection($cop,$sphere) {
 	global $d_sysrebootreqd_path;
-	
+
 	$input_errors = [];
 	$errormsg = '';
 	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Auth Groups')];
