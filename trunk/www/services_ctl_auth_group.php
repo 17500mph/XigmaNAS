@@ -84,10 +84,9 @@ function ctl_auth_group_process_updatenotification($mode,$data) {
 	return $retval;
 }
 function ctl_auth_group_selection($cop,$sphere) {
-	global $g_img;
+	global $d_sysrebootreqd_path;
 	
 	$input_errors = [];
-	$prerequisites_ok = true;
 	$errormsg = '';
 	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Auth Groups')];
 	$record_exists = count($sphere->grid) > 0;
@@ -131,7 +130,7 @@ function ctl_auth_group_selection($cop,$sphere) {
 	$tfoot = $table->addTFOOT();
 	$thead->ins_titleline(gtext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
-	if($use_tablesort):
+	if($record_exists):
 		$tr->
 			push()->
 			addTHwC('lhelc sorter-false parser-false')->
