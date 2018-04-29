@@ -85,7 +85,7 @@ function ctl_lun_process_updatenotification($mode,$data) {
 }
 function ctl_lun_selection($cop,$sphere) {
 	global $d_sysrebootreqd_path;
-	
+
 	$input_errors = [];
 	$errormsg = '';
 	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('LUNs')];
