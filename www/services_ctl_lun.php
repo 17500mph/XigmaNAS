@@ -85,6 +85,7 @@ function ctl_lun_process_updatenotification($mode,$data) {
 }
 function ctl_lun_selection($cop,$sphere) {
 	global $d_sysrebootreqd_path;
+	global $savemsg;
 
 	$input_errors = [];
 	$errormsg = '';
@@ -115,6 +116,7 @@ function ctl_lun_selection($cop,$sphere) {
 	//	display information, warnings and errors
 	$content->
 		ins_input_errors($input_errors)->
+		ins_info_box($savemsg)->
 		ins_error_box($errormsg);
 	if(file_exists($d_sysrebootreqd_path)):
 		$content->ins_info_box(get_std_save_message(0));
@@ -218,6 +220,7 @@ switch($page_method):
 					$retval |= rc_update_reload_service('ctld');
 					config_unlock();
 				endif;
+				$savemsg = get_std_save_message($retval);
 				if($retval == 0):
 					updatenotify_delete($sphere->get_notifier());
 				endif;
