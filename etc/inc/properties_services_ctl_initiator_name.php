@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_auth_group_chap.php
+	properties_services_ctl_initiator_name.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -31,78 +31,37 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-class ctl_auth_group_chap_properties extends co_property_container_param {
-	protected $x_user;
-	public function init_user() {
-		$property = new property_text($this);
+class ctl_initiator_name_properties extends co_property_container_param {
+	protected $x_name;
+	public function get_name() {
+		return $this->x_name ?? $this->init_name();
+	}
+	public function init_name() {
+		$property = $this->x_name = new property_text($this);
 		$property->
-			set_name('user')->
-			set_title(gtext('User'));
+			set_name('name')->
+			set_title(gtext('Initiator Name'));
 		return $property;
-	}
-	public function get_user() {
-		return $this->x_user ?? $this->init_user();
-	}
-	protected $x_secret;
-	public function init_secret() {
-		$property = new property_text($this);
-		$property->
-			set_name('secret')->
-			set_title(gtext('Secret'));
-		return $property;
-	}
-	public function get_secret() {
-		return $this->x_secret ?? $this->init_secret();
 	}
 }
-class ctl_ag_chap_edit_properties extends ctl_ag_chap_properties {
-	public function test_user($value) {
-		if(1 === preg_match('/^\S[1,16}$/',$value)):
-			return $value;
-		else:
-			return NULL;
-		endif;
-	}
-	public function get_user() {
-		$property = parent::get_user();
-		$description = gtext('Enter user name');
-		$placeholder = gtext('User');
+class ctl_initiator_name_edit_properties extends ctl_initiator_name_properties {
+	public function init_name() {
+		$property = parent::init_name();
+		$description = gtext('An iSCSI initiator name.');
+		$placeholder = gtext('Name');
+		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('user')->
 			set_description($description)->
-			set_placeholder($placeholder)->
 			set_defaultvalue('')->
-			set_size(20)->
-			set_maxlength(16)->
+			set_placeholder($placeholder)->
+			set_size(60)->
+			set_maxlength(223)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_CALLBACK)->
-			set_filter_options([$this,'test_user'])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
-		return $property;
-	}
-	public function test_secret($value) {
-		if(1 === preg_match('/^\S[1,16}$/',$value)):
-			return $value;
-		else:
-			return NULL;
-		endif;
-	}
-	public function get_secret() {
-		$property = parent::get_secret();
-		$description = gtext('Enter secret');
-		$placeholder = gtext('Secret');
-		$property->
-			set_id('secret')->
-			set_description($description)->
-			set_placeholder($placeholder)->
-			set_defaultvalue('')->
-			set_size(20)->
-			set_maxlength(16)->
-			set_editableonadd(true)->
-			set_editableonmodify(true)->
-			set_filter(FILTER_CALLBACK)->
-			set_filter_options([$this,'test_secret'])->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
