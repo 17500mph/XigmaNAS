@@ -2315,6 +2315,24 @@ EOJ;
 		$this->insINPUT($input_attributes);
 		return $this;
 	}
+	public function ins_enadis_icon(bool $is_enabled = false) {
+		global $g_img;
+		
+		if($is_enabled):
+			$gt = gtext('Enabled');
+			$this->
+				addTDwC('lcelc')->
+					addA(['title' => $gt])->
+						insIMG(['src' => $g_img['ena'],'alt' => $gt]);
+		else:
+			$gt = gtext('Disabled');
+			$this->
+				addTDwC('lcelcd')->
+					addA(['title' => $gt])->
+						insIMG(['src' => $g_img['dis'],'alt' => $gt]);
+		endif;
+		return $this;
+	}
 	public function add_toolbox_area() {
 		$subnode = $this->
 			addTDwC('lcebld')->
