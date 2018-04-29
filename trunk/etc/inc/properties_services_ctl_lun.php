@@ -553,10 +553,13 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$description = gtext('The blocksize visible to the initiator.');
 		$options = [
 			'' => gtext('Default'),
-			'512' => gtext('512'),
-			'2048' => gtext('2048'),
-			'4096' => gtext('4096'),
-			'8192' => gtext('8192')
+			'512' => gtext('512 Bytes'),
+			'2048' => gtext('2 KiB'),
+			'4096' => gtext('4 KiB'),
+			'8192' => gtext('8 KiB'),
+			'16384' => gtext('16 KiB'),
+			'32738' => gtext('32 KiB'),
+			'65536' => gtext('64 KiB')
 		];
 		$property->
 			set_id('blocksize')->
