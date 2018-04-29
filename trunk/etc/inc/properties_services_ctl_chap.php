@@ -1,0 +1,99 @@
+<?php
+/*
+	properties_services_ctl_auth_group_chap.php
+
+	Part of NAS4Free (http://www.nas4free.org).
+	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+	All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions are met:
+
+	1. Redistributions of source code must retain the above copyright notice, this
+	   list of conditions and the following disclaimer.
+
+	2. Redistributions in binary form must reproduce the above copyright notice,
+	   this list of conditions and the following disclaimer in the documentation
+	   and/or other materials provided with the distribution.
+
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	The views and conclusions contained in the software and documentation are those
+	of the authors and should not be interpreted as representing official policies,
+	either expressed or implied, of the NAS4Free Project.
+*/
+class ctl_chap_properties extends co_property_container_param {
+	protected $x_user;
+	public function get_user() {
+		return $this->x_user ?? $this->init_user();
+	}
+	public function init_user() {
+		$property = $this->x_user = new property_text($this);
+		$property->
+			set_name('user')->
+			set_title(gtext('User'));
+		return $property;
+	}
+	protected $x_secret;
+	public function get_secret() {
+		return $this->x_secret ?? $this->init_secret();
+	}
+	public function init_secret() {
+		$property = $this->x_secret = new property_text($this);
+		$property->
+			set_name('secret')->
+			set_title(gtext('Secret'));
+		return $property;
+	}
+}
+class ctl_chap_edit_properties extends ctl_chap_properties {
+	public function init_user() {
+		$property = parent::init_user();
+		$description = gtext('Enter user name.');
+		$placeholder = gtext('User');
+		$regexp = '/^\S{1,32}$/';
+		$property->
+			set_id('user')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_placeholder($placeholder)->
+			set_size(40)->
+			set_maxlength(32)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_secret() {
+		$property = parent::init_secret();
+		$description = gtext('Enter secret.');
+		$placeholder = gtext('Secret');
+		$regexp = '/^\S{1,32}$/';
+		$property->
+			set_id('secret')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_placeholder($placeholder)->
+			set_size(40)->
+			set_maxlength(32)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+}
