@@ -64,9 +64,7 @@ class ctl_properties extends co_property_container {
 			set_defaultvalue('')->
 			set_min(0)->
 			set_max(99)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -90,9 +88,7 @@ class ctl_properties extends co_property_container {
 			set_defaultvalue('')->
 			set_min(0)->
 			set_max(65535)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -116,9 +112,7 @@ class ctl_properties extends co_property_container {
 			set_defaultvalue('')->
 			set_min(0)->
 			set_max(65535)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -138,9 +132,7 @@ class ctl_properties extends co_property_container {
 			set_description($description)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -164,9 +156,7 @@ class ctl_properties extends co_property_container {
 			set_defaultvalue('')->
 			set_min(1024)->
 			set_max(65464)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -190,9 +180,7 @@ class ctl_properties extends co_property_container {
 			set_defaultvalue('')->
 			set_min(0)->
 			set_max(65535)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -216,9 +204,7 @@ class ctl_properties extends co_property_container {
 			set_defaultvalue('')->
 			set_min(0)->
 			set_max(65535)->
-			filter_use_default()->
-			filter_use_empty()->
-			set_filter_group('ui',['empty','ui'])->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
