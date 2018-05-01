@@ -31,7 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once 'properties';
+require_once 'properties.php';
 
 class ctl_chap_properties extends co_property_container_param {
 	protected $x_user;
