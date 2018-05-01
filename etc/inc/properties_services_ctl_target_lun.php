@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_initiator_name.php
+	properties_services_ctl_target_lun.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,37 +33,59 @@
 */
 require_once 'properties.php';
 
-class ctl_initiator_name_properties extends co_property_container_param {
+class ctl_target_lun_properties extends co_property_container_param {
+	protected $x_number;
+	public function get_number() {
+		return $this->x_number ?? $this->init_number();
+	}
+	public function init_number() {
+		$property = $this->x_number = new property_int($this);
+		$property->
+			set_name('number')->
+			set_title(gtext('LUN Number'));
+		return $property;
+	}
 	protected $x_name;
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$property = $this->x_name = new property_text($this);
+		$property = $this->x_name = new property_list($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Initiator Name'));
+			set_title(gtext('Target Name'));
 		return $property;
 	}
 }
-class ctl_initiator_name_edit_properties extends ctl_initiator_name_properties {
-	public function init_name() {
-		$property = parent::init_name();
-		$description = gtext('An iSCSI initiator name.');
-		$placeholder = gtext('Name');
-		$regexp = '/^\S{1,223}$/';
+class ctl_target_lun_edit_properties extends ctl_target_lun_properties {
+	public function init_number() {
+		$property = parent::init_number();
+		$description = gtext('LUN number');
 		$property->
-			set_id('user')->
+			set_id('number')->
 			set_description($description)->
-			set_defaultvalue('')->
-			set_placeholder($placeholder)->
-			set_size(60)->
-			set_maxlength(223)->
+			set_size(10)->
+			set_maxlength(4)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_defaultvalue('')->
+			set_min(0)->
+			set_max(1023)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_name() {
+		$property = parent::init_name();
+		$description = gtext('Name of the target.');
+		$options = [];
+		$property->
+			set_id('name')->
+			set_description($description)->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}

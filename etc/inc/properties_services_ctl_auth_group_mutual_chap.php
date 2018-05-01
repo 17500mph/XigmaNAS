@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_mutual_chap.php
+	properties_services_ctl_auth_group_mutual_chap.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
