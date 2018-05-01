@@ -528,6 +528,12 @@ class property_text extends properties {
 			set_filter_options(['default' => NULL,'regexp' => $regexp],$filter_name);
 		return $this;
 	}
+	public function filter_use_default_or_empty() {
+		$this->filter_use_default();
+		$this->filter_use_empty();
+		$this->set_filter_group('ui',['empty','ui']);
+		return $this;
+	}
 }
 class property_textarea extends properties {
 	public $x_cols = 65;
