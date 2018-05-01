@@ -43,7 +43,7 @@ LCDd_mkconf()
 		-o 'DriverPath=/usr/local/lib/lcdproc/' -n \
 		-v "concat('Driver=', //lcdproc/driver)" -n \
 		--if 'string-length(//lcdproc/bind) > 0' \
-			-v 'concat("Bind", //lcdproc/bind)' -n \
+			-v 'concat("Bind=", //lcdproc/bind)' -n \
 		--else \
 			-o 'Bind=127.0.0.1' -n \
 		--break \
