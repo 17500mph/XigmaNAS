@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_auth_group_chap.php
+	properties_services_ctl_initiator_portal.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -31,70 +31,64 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require_once 'properties';
+require_once 'properties.php';
 
-class ctl_chap_properties extends co_property_container_param {
-	protected $x_user;
-	public function get_user() {
-		return $this->x_user ?? $this->init_user();
+class ctl_initiator_portal_properties extends co_property_container_param {
+	protected $x_ipaddress;
+	public function get_ipaddress() {
+		return $this->x_ipaddress ?? $this->init_ipaddress();
 	}
-	public function init_user() {
-		$property = $this->x_user = new property_text($this);
+	public function init_ipaddress() {
+		$property = $this->x_ipaddress = new property_ipaddress($this);
 		$property->
-			set_name('user')->
-			set_title(gtext('User'));
+			set_name('ipaddress')->
+			set_title(gtext('IP Address'));
 		return $property;
 	}
-	protected $x_secret;
-	public function get_secret() {
-		return $this->x_secret ?? $this->init_secret();
+	protected $x_prefixlen;
+	public function get_prefixlen() {
+		return $this->x_prefixlen ?? $this->init_prefixlen();
 	}
-	public function init_secret() {
-		$property = $this->x_secret = new property_text($this);
+	public function init_prefixlen() {
+		$property = $this->x_prefixlen = new property_int($this);
 		$property->
-			set_name('secret')->
-			set_title(gtext('Secret'));
+			set_name('prefixlen')->
+			set_title(gtext('IP Address Prefix'));
 		return $property;
 	}
 }
-class ctl_chap_edit_properties extends ctl_chap_properties {
-	public function init_user() {
-		$property = parent::init_user();
-		$description = gtext('Enter user name.');
-		$placeholder = gtext('User');
-		$regexp = '/^\S{1,32}$/';
+class ctl_initiator_portal_edit_properties extends ctl_initiator_portal_properties {
+	public function init_ipaddress() {
+		$property = parent::init_ipaddress();
+		$description = gtext('An IPv4 or IPv6 address of an iSCSI initiator portal.');
+		$placeholder = gtext('IP Address');
 		$property->
-			set_id('user')->
+			set_id('ipaddress')->
 			set_description($description)->
 			set_defaultvalue('')->
 			set_placeholder($placeholder)->
-			set_size(40)->
-			set_maxlength(32)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	public function init_secret() {
-		$property = parent::init_secret();
-		$description = gtext('Enter secret.');
-		$placeholder = gtext('Secret');
-		$regexp = '/^\S{1,32}$/';
+	public function init_prefixlen() {
+		$property = parent::init_prefixlen();
+		$description = gtext('Enter IP address prefix length.');
+		$placeholder = '';
 		$property->
-			set_id('secret')->
+			set_id('prefixlen')->
 			set_description($description)->
 			set_defaultvalue('')->
 			set_placeholder($placeholder)->
-			set_size(40)->
-			set_maxlength(32)->
+			set_size(10)->
+			set_maxlength(3)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_min(0)->
+			set_max(128)->
+			filter_use_default_or_empty()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
