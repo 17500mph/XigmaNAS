@@ -48,17 +48,9 @@ class ctl_properties extends co_property_container {
 	public function get_debug() {
 		return $this->x_debug ?? $this->init_debug();	
 	}
-	public function test_debug($value) {
-		if(1 === preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 0,'max_range' => 9]]);
-		endif;
-	}
 	public function init_debug() {
-		$property = $this->x_debug = new property_text($this);
+		$property = $this->x_debug = new property_int($this);
 		$description = gtext('The debug verbosity level. The default is 0.');
-		$regexp = '/^(?:|0|[1-9][0-9]?)$/';
 		$property->
 			set_name('debug')->
 			set_title(gtext('Debug Level'));
@@ -70,20 +62,17 @@ class ctl_properties extends co_property_container {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_debug'])->
+			set_min(0)->
+			set_max(99)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_maxproc;
 	public function get_maxproc() {
 		return $this->x_maxproc ?? $this->init_maxproc();
-	}
-	public function test_maxproc($value) {
-		if(preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 0,'max_range' => 65535]]);
-		endif;
 	}
 	public function init_maxproc() {
 		$property = $this->x_maxproc = new property_int($this);
@@ -94,12 +83,16 @@ class ctl_properties extends co_property_container {
 		$property->
 			set_id('maxproc')->
 			set_description($description)->
-			set_maxlength(5)->
 			set_size(10)->
+			set_maxlength(5)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_maxproc'])->
+			set_min(0)->
+			set_max(65535)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -107,15 +100,8 @@ class ctl_properties extends co_property_container {
 	public function get_timeout() {
 		return $this->x_timeout ?? $this->init_timeout();
 	}
-	public function test_timeout($value) {
-		if(preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 0,'max_range' => 65535]]);
-		endif;
-	}
 	public function init_timeout() {
-		$property = $this->x_timeout = new property_text($this);
+		$property = $this->x_timeout = new property_int($this);
 		$description = gtext('The timeout for login sessions, after which the connection will be forcibly terminated. The default is 60. A setting of 0 disables the timeout.');
 		$property->
 			set_name('timeout')->
@@ -123,12 +109,16 @@ class ctl_properties extends co_property_container {
 		$property->
 			set_id('timeout')->
 			set_description($description)->
-			set_maxlength(5)->
 			set_size(10)->
+			set_maxlength(5)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_timeout'])->
+			set_min(0)->
+			set_max(65535)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -136,16 +126,10 @@ class ctl_properties extends co_property_container {
 	public function get_isns_server() {
 		return $this->x_isns_server ?? $this->init_isns_server();
 	}
-	public function test_isns_server($value) {
-		if(preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_IP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL]]);
-		endif;
-	}
 	public function init_isns_server() {
 		$property = $this->x_isns_server = new property_ipaddress($this);
 		$description = gtext('An IPv4 or IPv6 address of iSNS server to register on.');
+		$regexp = '/^$/';
 		$property->
 			set_name('isns_server')->
 			set_title(gtext('iSNS Server'));
@@ -154,7 +138,9 @@ class ctl_properties extends co_property_container {
 			set_description($description)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_isns_server'])->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -162,15 +148,8 @@ class ctl_properties extends co_property_container {
 	public function get_isns_server_port() {
 		return $this->x_isns_server_port ?? $this->init_isns_server_port();
 	}
-	public function test_isns_server_port($value) {
-		if(preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 1024,'max_range' => 65464]]);
-		endif;
-	}
 	public function init_isns_server_port() {
-		$property = $this->x_isns_server_port = new property_text($this);
+		$property = $this->x_isns_server_port = new property_int($this);
 		$description = gtext('Port number of iSNS server to register on.');
 		$property->
 			set_name('isns_server_port')->
@@ -183,7 +162,11 @@ class ctl_properties extends co_property_container {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_isns_server_port'])->
+			set_min(1024)->
+			set_max(65464)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -191,15 +174,8 @@ class ctl_properties extends co_property_container {
 	public function get_isns_period() {
 		return $this->x_isns_period ?? $this->init_isns_period();
 	}
-	public function test_isns_period($value) {
-		if(preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 0,'max_range' => 65535]]);
-		endif;
-	}
 	public function init_isns_period() {
-		$property = $this->x_isns_period = new property_text($this);
+		$property = $this->x_isns_period = new property_int($this);
 		$description = gtext('iSNS registration period. Registered Network Entity not updated during this period will be unregistered. The default is 900.');
 		$property->
 			set_name('isns_period')->
@@ -212,7 +188,11 @@ class ctl_properties extends co_property_container {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_isns_period'])->
+			set_min(0)->
+			set_max(65535)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
@@ -220,15 +200,8 @@ class ctl_properties extends co_property_container {
 	public function get_isns_timeout() {
 		return $this->x_isns_timeout ?? $this->init_isns_timeout();
 	}
-	public function test_isns_timeout($value) {
-		if(preg_match('/^$/',$value)):
-			return $value;
-		else:
-			return filter_var($value,FILTER_VALIDATE_INT,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'min_range' => 0,'max_range' => 65535]]);
-		endif;
-	}
 	public function init_isns_timeout() {
-		$property = $this->x_isns_timeout = new property_text($this);
+		$property = $this->x_isns_timeout = new property_int($this);
 		$description = gtext('Timeout for iSNS requests. The default is 5.');
 		$property->
 			set_name('isns_timeout')->
@@ -241,7 +214,11 @@ class ctl_properties extends co_property_container {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
-			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_isns_timeout'])->
+			set_min(0)->
+			set_max(65535)->
+			filter_use_default()->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
