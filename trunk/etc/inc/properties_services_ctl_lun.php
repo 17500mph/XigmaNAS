@@ -857,7 +857,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$options = [
 			'' => gtext('Default'),
 			'primary' => gtext('Primary'),
-			'secondary' => gtext('Seconfary')
+			'secondary' => gtext('Secondary')
 		];
 		$property->
 			set_id('opt_ha_role')->
