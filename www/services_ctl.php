@@ -60,7 +60,6 @@ $a_referer = [
 	$cop->get_auxparam()
 ];
 $input_errors = [];
-$savemsg = '';
 //	determine request method
 $rmo = new co_request_method();
 $rmo->add('GET','edit',PAGE_MODE_EDIT);
@@ -265,12 +264,8 @@ $js_document_ready = [];
 $js_document_ready[PAGE_MODE_EDIT] = '';
 $js_document_ready[PAGE_MODE_VIEW] = '';
 //	add additional javascript code
-$body->
-	addJavaScript($js_code[$page_mode]);
-$body->
-	add_js_on_load($js_on_load[$page_mode]);
-$body->
-	add_js_document_ready($js_document_ready[$page_mode]);
+$body->addJavaScript($js_code[$page_mode]);
+$body->add_js_on_load($js_on_load[$page_mode]);
+$body->add_js_document_ready($js_document_ready[$page_mode]);
 //	showtime
-$document->
-	render();
+$document->render();
