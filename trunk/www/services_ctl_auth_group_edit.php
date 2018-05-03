@@ -257,28 +257,19 @@ $content->add_table_data_settings()->
 		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
 		c2_radio_grid($cop->get_auth_type(),htmlspecialchars($sphere->row[$cop->get_auth_type()->get_name()]),false,false)->
 		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
-$buttons = $document->
-	add_area_buttons();
+$buttons = $document->add_area_buttons();
 if($isrecordnew):
-	$buttons->
-		ins_button_add();
+	$buttons->ins_button_add();
 else:
-	$buttons->
-		ins_button_save();
+	$buttons->ins_button_save();
 	if($prerequisites_ok && empty($input_errors)):
 		$buttons->ins_button_clone();
 	endif;
 endif;
-$buttons->
-	ins_button_cancel();
-$buttons->
-	addElement('input',['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+$buttons->ins_button_cancel();
+$buttons->ins_input_hidden($sphere->get_row_identifier(),$sphere->get_row_identifier_value());
 //	additional javascript code
-$body->
-	addJavaScript($sphere->get_js());
-$body->
-	add_js_on_load($sphere->get_js_on_load());
-$body->
-	add_js_document_ready($sphere->get_js_document_ready());
-$document->
-	render();
+$body->addJavaScript($sphere->get_js());
+$body->add_js_on_load($sphere->get_js_on_load());
+$body->add_js_document_ready($sphere->get_js_document_ready());
+$document->render();
