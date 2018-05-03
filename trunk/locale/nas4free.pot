@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -152,7 +152,13 @@ msgstr ""
 msgid "1.8\""
 msgstr ""
 
+msgid "16 KiB"
+msgstr ""
+
 msgid "2"
+msgstr ""
+
+msgid "2 KiB"
 msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
@@ -164,9 +170,6 @@ msgstr ""
 msgid "2.5\""
 msgstr ""
 
-msgid "2048"
-msgstr ""
-
 msgid "3"
 msgstr ""
 
@@ -176,7 +179,10 @@ msgstr ""
 msgid "3.5\""
 msgstr ""
 
-msgid "4096"
+msgid "32 KiB"
+msgstr ""
+
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
@@ -185,19 +191,22 @@ msgstr ""
 msgid "5.25\""
 msgstr ""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr ""
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr ""
 
-msgid "802.1Q VLAN tag (between 1 and 4094)."
+msgid "8 KiB"
 msgstr ""
 
-msgid "8192"
+msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
 
 msgid "A NTP time server name may only contain the following characters: a-z, 0-9, '-' and '.'."
@@ -775,7 +784,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr ""
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid "An Initiator Group is identified by a tag number and defines authorised initiator names and networks."
@@ -794,6 +809,9 @@ msgid "An error occured."
 msgstr ""
 
 msgid "An host with this name already exists."
+msgstr ""
+
+msgid "An iSCSI initiator name."
 msgstr ""
 
 msgid "An interface with the specified description already exists."
@@ -871,7 +889,16 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid "Assign a previously defined authentication group to the portal group, to be used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -3533,6 +3560,9 @@ msgstr ""
 msgid "Enter IP Address"
 msgstr ""
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr ""
 
@@ -3639,10 +3669,13 @@ msgstr ""
 msgid "Enter login name of the user."
 msgstr ""
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr ""
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -3684,7 +3717,7 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr ""
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4380,6 +4413,9 @@ msgstr ""
 msgid "IP Address"
 msgstr ""
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr ""
 
@@ -4408,6 +4444,9 @@ msgid "IPv4 addresses"
 msgstr ""
 
 msgid "IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to portal belonging to this portal-group will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid "IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to this target will get redirected using \"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -4886,6 +4925,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -4905,6 +4947,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -5525,6 +5570,12 @@ msgstr ""
 msgid "Mutual CHAP Users"
 msgstr ""
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -5598,6 +5649,12 @@ msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
+msgstr ""
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
 msgstr ""
 
 msgid "Name of the server. If this field is left empty the default server is specified."
@@ -5997,6 +6054,12 @@ msgstr ""
 msgid "Option"
 msgstr ""
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr ""
 
@@ -6257,6 +6320,9 @@ msgstr ""
 msgid "Permit Root Login"
 msgstr ""
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -6420,6 +6486,9 @@ msgid "Port %ld is already used by another service."
 msgstr ""
 
 msgid "Port Forwarding"
+msgstr ""
+
+msgid "Port Name"
 msgstr ""
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
@@ -7301,9 +7370,6 @@ msgid "Secondary Cache"
 msgstr ""
 
 msgid "Seconds"
-msgstr ""
-
-msgid "Seconfary"
 msgstr ""
 
 msgid "Secret"
@@ -8844,6 +8910,9 @@ msgstr ""
 msgid "The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user."
 msgstr ""
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr ""
@@ -9974,6 +10043,9 @@ msgid "Value"
 msgstr ""
 
 msgid "Value is equal to (100-temp. Celsius), allowing manufacturer to set a minimum threshold which corresponds to a maximum temperature."
+msgstr ""
+
+msgid "Value of the option."
 msgstr ""
 
 msgid "Variable"
