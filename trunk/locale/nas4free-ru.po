@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
-"PO-Revision-Date: 2018-04-19 21:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
+"PO-Revision-Date: 2018-04-29 16:38+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -196,10 +196,16 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 или более дисков требуется для создания тома RAID-1."
 
 msgid "1.8\""
+msgstr "1.8\""
+
+msgid "16 KiB"
 msgstr ""
 
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 или более дисков требуется для создания тома RAID-0."
@@ -208,10 +214,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 или более дисков требуется для создания RAID-1 тома."
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -220,31 +223,37 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 или более дисков, необходимых для создания тома RAID-5."
 
 msgid "3.5\""
+msgstr "3.5\""
+
+msgid "32 KiB"
 msgstr ""
 
-msgid "4096"
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper (оболочка)"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr "514"
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr "69"
 
+msgid "8 KiB"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Метка 802.1Q VLAN (между 1 и 4094)."
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -497,7 +506,7 @@ msgid "Add"
 msgstr "Добавить"
 
 msgid "Add Auth Group"
-msgstr ""
+msgstr "Добавить группу"
 
 msgid "Add Bridge"
 msgstr "Добавить мост"
@@ -524,7 +533,7 @@ msgid "Add LAGG"
 msgstr "Добавить LAGG"
 
 msgid "Add LUN"
-msgstr ""
+msgstr "Добавить LUN"
 
 msgid "Add MIB"
 msgstr "Добавить MIB"
@@ -539,7 +548,7 @@ msgid "Add Pool"
 msgstr "Добавить пул"
 
 msgid "Add Portal Group"
-msgstr ""
+msgstr "Добавить группу портала"
 
 msgid "Add RAID"
 msgstr "Добавить RAID-массив"
@@ -569,7 +578,7 @@ msgid "Add Snapshot"
 msgstr "Добавить снимок"
 
 msgid "Add Target"
-msgstr ""
+msgstr "Добавить цель"
 
 msgid "Add URL"
 msgstr "Добавить URL"
@@ -653,7 +662,7 @@ msgid "Additional Network"
 msgstr "Дополнительная сеть"
 
 msgid "Additional Options for Block Backend"
-msgstr ""
+msgstr "Дополнительные параметры для блокировки"
 
 msgid "Additional Options for RAM Disk Backend"
 msgstr ""
@@ -752,7 +761,7 @@ msgid "Algorithm"
 msgstr "Алгоритм"
 
 msgid "Alias"
-msgstr ""
+msgstr "Алиас"
 
 msgid "All"
 msgstr "Все"
@@ -827,7 +836,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Разрешить клиентам возобновление прерванных закачек и загрузок"
 
 msgid "Allow consecutive read/writes to be issued in parallel"
-msgstr ""
+msgstr "Разрешить параллельное чтение/запись"
 
 msgid "Allow new files to be created."
 msgstr "Позволять создание новых файлов"
@@ -925,7 +934,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "Экстент определяет область хранения цели."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr "Адрес IPv4 или IPv6 сервера iSNS для регистрации."
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -957,6 +972,9 @@ msgstr "Произошла ошибка."
 
 msgid "An host with this name already exists."
 msgstr "Хост с таким именем уже существует."
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Интерфейс с таким описанием уже существует."
@@ -1048,9 +1066,20 @@ msgstr "Вы уверены, что хотите сбросить сервер �
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Вы уверены, что хотите выключить сервер?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+"Назначьте ранее определенную группу аутентификации группе портала, которая "
+"будет использоваться для обнаружения цели."
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -1110,19 +1139,19 @@ msgid "Auth Group"
 msgstr "Группа аутентификации"
 
 msgid "Auth Group Name"
-msgstr ""
+msgstr "Название группы аутентификации"
 
 msgid "Auth Group Settings"
 msgstr "Настройки аутентификации группы"
 
 msgid "Auth Group is locked"
-msgstr ""
+msgstr "Группа аутентификации заблокирована"
 
 msgid "Auth Group is marked for deletion"
-msgstr ""
+msgstr "Группа аутентификации отмечена для удаления"
 
 msgid "Auth Group is unlocked"
-msgstr ""
+msgstr "Группа аутентификации разблокирована"
 
 msgid "Auth Groups"
 msgstr "Группы аутентификации (AG)"
@@ -1137,7 +1166,7 @@ msgid "Auth Method"
 msgstr "Способ аутентификации"
 
 msgid "Auth Type"
-msgstr ""
+msgstr "Тип аутентификации"
 
 msgid "Authenticate Path & Realm"
 msgstr "Аутентификация пути и области"
@@ -1215,7 +1244,7 @@ msgid "Avail"
 msgstr "Доступно"
 
 msgid "Avail Threshold"
-msgstr ""
+msgstr "Свободный порог"
 
 msgid "Available"
 msgstr "Доступно"
@@ -1374,7 +1403,7 @@ msgid "Blank Time"
 msgstr "Время простоя"
 
 msgid "Block"
-msgstr ""
+msgstr "Блокировать"
 
 msgid "Block Size"
 msgstr "Размер блока"
@@ -1499,10 +1528,10 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD"
-msgstr ""
+msgstr "CD"
 
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
@@ -1520,7 +1549,7 @@ msgid "CHAP Users"
 msgstr "Пользователи CHAP"
 
 msgid "CHAP-Mutual"
-msgstr ""
+msgstr "CHAP-Mutual"
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1599,7 +1628,7 @@ msgstr ""
 "error)."
 
 msgid "CTL LUN"
-msgstr ""
+msgstr "CTL LUN"
 
 msgid "Calibration Battery"
 msgstr "Калибровка батареи"
@@ -2417,7 +2446,7 @@ msgid "DVD"
 msgstr "DVD"
 
 msgid "DVD-ROM"
-msgstr ""
+msgstr "DVD-ROM"
 
 msgid "Daemon"
 msgstr "Процесс"
@@ -2545,6 +2574,8 @@ msgid ""
 "Define iSCSI hardware offload driver to use for this portal-group. The "
 "default is \"none\"."
 msgstr ""
+"Определите драйвер для разгрузки аппаратного обеспечения iSCSI для этой "
+"группы портала. По умолчанию используется значение «none»."
 
 msgid "Defines the checksum algorithm."
 msgstr "Определяет алгоритм контрольной суммы."
@@ -2582,7 +2613,7 @@ msgid "Delete Login Info"
 msgstr "Удалить сведения входа"
 
 msgid "Delete Selected Auth Groups"
-msgstr ""
+msgstr "Удалить выбранные группы аутентификации"
 
 msgid "Delete Selected Bridges"
 msgstr "Удалить выбранные мосты"
@@ -2612,7 +2643,7 @@ msgid "Delete Selected LAGGs"
 msgstr "Удалить выбранные LAGG"
 
 msgid "Delete Selected LUNs"
-msgstr ""
+msgstr "Удалить выбранные LUN"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Удалить выбранные общие ресурсы NFS"
@@ -2627,7 +2658,7 @@ msgid "Delete Selected Pools"
 msgstr "Удалить Выбранные Пулы"
 
 msgid "Delete Selected Portal Groups"
-msgstr ""
+msgstr "Удалить выбранные группы портала"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Удалить выбранные RAID тома"
@@ -2657,7 +2688,7 @@ msgid "Delete Selected Snapshots"
 msgstr "Удалить выбранные снимки"
 
 msgid "Delete Selected Targets"
-msgstr ""
+msgstr "Удалить выбранные цели"
 
 msgid "Delete Selected User Accounts"
 msgstr "Удалить выбранные учетные записи пользователей"
@@ -2753,7 +2784,7 @@ msgid "Deny"
 msgstr "Запретить"
 
 msgid "Deny discovery"
-msgstr ""
+msgstr "Отклонить обнаружение"
 
 msgid "Description"
 msgstr "Описание"
@@ -2833,7 +2864,7 @@ msgstr ""
 "повторно. По умолчанию 1.000.000 (1 секунда)."
 
 msgid "Determines which targets are returned during discovery."
-msgstr ""
+msgstr "Определяет, какие цели определяются во время обнаружения."
 
 msgid "Device"
 msgstr "Устройство"
@@ -2846,7 +2877,7 @@ msgid "Device /dev/%s - %s"
 msgstr "Устройство /dev/%s - %s"
 
 msgid "Device ID"
-msgstr ""
+msgstr "ID устройства"
 
 msgid "Device IP"
 msgstr "IP-адрес устройства"
@@ -2867,7 +2898,7 @@ msgid "Device Serial"
 msgstr "Серийный номер устройства"
 
 msgid "Device Type"
-msgstr ""
+msgstr "Тип устройства"
 
 msgid "Device contains boot partition"
 msgstr "Устройство содержит загрузочный раздел"
@@ -2912,7 +2943,7 @@ msgid "Digital Audio Access Protocol"
 msgstr "iTunes/Digital Audio Access Protocol (DAAP)"
 
 msgid "Direct"
-msgstr ""
+msgstr "Прямой"
 
 msgid "Direction"
 msgstr "Направление"
@@ -2951,7 +2982,7 @@ msgid "Disable Firmware Upgrade"
 msgstr "Отключение обновления прошивки"
 
 msgid "Disable Selected Auth Groups"
-msgstr ""
+msgstr "Отключить выбранные группы аутентификации"
 
 msgid "Disable Selected Commands"
 msgstr "Отключить выбранные команды"
@@ -2960,13 +2991,13 @@ msgid "Disable Selected Jobs"
 msgstr "Отключить выбранные задания"
 
 msgid "Disable Selected LUNs"
-msgstr ""
+msgstr "Отключить выбранные LUN"
 
 msgid "Disable Selected Options"
 msgstr "Отключить выбранные опции"
 
 msgid "Disable Selected Portal Groups"
-msgstr ""
+msgstr "Отключить выбранные группы портала"
 
 msgid "Disable Selected Records"
 msgstr "Отключить выбранные записи"
@@ -2978,7 +3009,7 @@ msgid "Disable Selected Rsync Modules"
 msgstr "Отключить выбранные модули RSYNC"
 
 msgid "Disable Selected Targets"
-msgstr ""
+msgstr "Отключить выбранные цели"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Отключить TCP wrapper (mod_wrap module)."
@@ -3021,15 +3052,17 @@ msgid "Discovery Auth Method"
 msgstr "Способ аутентификации при обнаружении"
 
 msgid "Discovery Filter"
-msgstr ""
+msgstr "Фильтр обнаружения"
 
 msgid ""
 "Discovery will not return targets that cannot be accessed by the initiator "
 "because of their initiator-portal."
 msgstr ""
+"Обнаружение не будет возвращать цели, к которым инициатор не может получить "
+"доступ, из-за своего инициатора-портала."
 
 msgid "Discovery will return all targets assigned to this portal group."
-msgstr ""
+msgstr "Обнаружение вернет все цели, назначенные этой группе портала."
 
 msgid "Disk"
 msgstr "Диск"
@@ -3256,7 +3289,7 @@ msgid "Do you want to delete selected LAGGs?"
 msgstr "Вы хотите удалить выбранные LAGG"
 
 msgid "Do you want to delete selected LUNs?"
-msgstr ""
+msgstr "Вы хотите удалить выбранные LUN?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Вы хотите удалить выбранные общие ресурсы NFS?"
@@ -3274,7 +3307,7 @@ msgid "Do you want to delete selected WLANs?"
 msgstr "Вы хотите удалить выбранные WLAN"
 
 msgid "Do you want to delete selected auth groups?"
-msgstr ""
+msgstr "Вы хотите удалить выбранные группы аутентификации?"
 
 msgid "Do you want to delete selected bridges?"
 msgstr "Вы хотите удалить выбранные мосты?"
@@ -3307,7 +3340,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Хотите ли вы удалить выбранные пулы?"
 
 msgid "Do you want to delete selected portal groups?"
-msgstr ""
+msgstr "Вы хотите удалить выбранные группы портала?"
 
 msgid "Do you want to delete selected records?"
 msgstr "Вы хотите удалить выбранные записи?"
@@ -3331,7 +3364,7 @@ msgid "Do you want to delete selected snapshots?"
 msgstr "Вы хотите удалить выбранные снимки?"
 
 msgid "Do you want to delete selected targets?"
-msgstr ""
+msgstr "Вы хотите удалить выбранные цели?"
 
 msgid "Do you want to delete selected user accounts?"
 msgstr ""
@@ -3347,10 +3380,10 @@ msgid "Do you want to delete this command?"
 msgstr "Вы уверены, что хотите удалить эту команду?"
 
 msgid "Do you want to disable selected LUNs?"
-msgstr ""
+msgstr "Вы хотите отключить выбранные LUN?"
 
 msgid "Do you want to disable selected auth groups?"
-msgstr ""
+msgstr "Вы хотите отключить выбранные группы аутентификации?"
 
 msgid "Do you want to disable selected commands?"
 msgstr "Вы уверены, что хотите отключить выбранные команды?"
@@ -3362,7 +3395,7 @@ msgid "Do you want to disable selected options?"
 msgstr "Вы действительно желаете отключить выбранные опции?"
 
 msgid "Do you want to disable selected portal groups?"
-msgstr ""
+msgstr "Вы хотите отключить выбранные группы портала?"
 
 msgid "Do you want to disable selected records?"
 msgstr "Вы хотите отключить выбранные записи?"
@@ -3374,13 +3407,13 @@ msgid "Do you want to disable selected rsync modules?"
 msgstr "Вы хотите отключить выбранные модули rsync?"
 
 msgid "Do you want to disable selected targets?"
-msgstr ""
+msgstr "Вы хотите отключить выбранные цели?"
 
 msgid "Do you want to enable selected LUNs?"
-msgstr ""
+msgstr "Вы хотите включить выбранные LUN?"
 
 msgid "Do you want to enable selected auth groups?"
-msgstr ""
+msgstr "Вы хотите включить выбранные группы аутентификации?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Вы уверены, что желаете включить выбранные команды?"
@@ -3392,7 +3425,7 @@ msgid "Do you want to enable selected options?"
 msgstr "Вы действительно желаете включить выбранные опции?"
 
 msgid "Do you want to enable selected portal groups?"
-msgstr ""
+msgstr "Вы хотите включить выбранные группы портала?"
 
 msgid "Do you want to enable selected records?"
 msgstr "Вы хотите включить выбранные записи?"
@@ -3404,7 +3437,7 @@ msgid "Do you want to enable selected rsync modules?"
 msgstr "Вы хотите включить выбранные модули rsync?"
 
 msgid "Do you want to enable selected targets?"
-msgstr ""
+msgstr "Вы хотите включить выбранные цели?"
 
 msgid "Do you want to import disks?"
 msgstr "Вы хотите импортировать диски?"
@@ -3416,10 +3449,10 @@ msgid "Do you want to lock selected records?"
 msgstr "Вы хотите заблокировать выбранные записи?"
 
 msgid "Do you want to toggle selected LUNs?"
-msgstr ""
+msgstr "Вы хотите переключить выбранные LUN?"
 
 msgid "Do you want to toggle selected auth groups?"
-msgstr ""
+msgstr "Вы хотите переключить выбранные группы аутентификации?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Вы уверены, что желаете переключить выбранные команды?"
@@ -3431,7 +3464,7 @@ msgid "Do you want to toggle selected options?"
 msgstr "Вы действительно желаете изменить состояние выбранных опций?"
 
 msgid "Do you want to toggle selected portal groups?"
-msgstr ""
+msgstr "Вы хотите переключать выбранные группы портала?"
 
 msgid "Do you want to toggle selected records?"
 msgstr "Вы хотите инвертировать выбранные записи?"
@@ -3443,7 +3476,7 @@ msgid "Do you want to toggle selected rsync modules?"
 msgstr "Вы хотите переключить выбранные модули rsync?"
 
 msgid "Do you want to toggle selected targets?"
-msgstr ""
+msgstr "Вы хотите переключать выбранные цели?"
 
 msgid "Do you want to unlock selected records?"
 msgstr "Вы хотите разблокировать выбранные записи?"
@@ -3560,13 +3593,13 @@ msgid "ERROR:"
 msgstr "ОШИБКА:"
 
 msgid "EUI-64"
-msgstr ""
+msgstr "EUI-64"
 
 msgid "Edit"
 msgstr "Редактировать"
 
 msgid "Edit Auth Group"
-msgstr ""
+msgstr "Изменить группу аутентификации"
 
 msgid "Edit Bridge"
 msgstr "Редактировать мост"
@@ -3593,7 +3626,7 @@ msgid "Edit LAGG"
 msgstr "Редактировать LAGG"
 
 msgid "Edit LUN"
-msgstr ""
+msgstr "Изменить LUN"
 
 msgid "Edit MIB"
 msgstr "Редактировать MIB"
@@ -3608,7 +3641,7 @@ msgid "Edit Pool"
 msgstr "Редактировать пул"
 
 msgid "Edit Portal Group"
-msgstr ""
+msgstr "Изменить группу портала"
 
 msgid "Edit RAID"
 msgstr "Изменить RAID-массив"
@@ -3638,7 +3671,7 @@ msgid "Edit Snapshot"
 msgstr "Редактировать снимок"
 
 msgid "Edit Target"
-msgstr ""
+msgstr "Изменить цель"
 
 msgid "Edit URL"
 msgstr "Редактировать URL"
@@ -3777,7 +3810,7 @@ msgid "Enable STARTTLS"
 msgstr "Включить STARTTLS"
 
 msgid "Enable Selected Auth Groups"
-msgstr ""
+msgstr "Включить выбранные группы аутентификации"
 
 msgid "Enable Selected Commands"
 msgstr "Включить выбранные команды"
@@ -3786,13 +3819,13 @@ msgid "Enable Selected Jobs"
 msgstr "Включить выбранные задания"
 
 msgid "Enable Selected LUNs"
-msgstr ""
+msgstr "Включить выбранные LUN"
 
 msgid "Enable Selected Options"
 msgstr "Включить выбранные опции"
 
 msgid "Enable Selected Portal Groups"
-msgstr ""
+msgstr "Включить выбранные группы портала"
 
 msgid "Enable Selected Records"
 msgstr "Включить выбранные записи"
@@ -3804,7 +3837,7 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Включить выбранные модули Rsync"
 
 msgid "Enable Selected Targets"
-msgstr ""
+msgstr "Включить выбранные цели"
 
 msgid "Enable Server"
 msgstr "Включить сервер"
@@ -4094,6 +4127,9 @@ msgstr "Введите адрес электронной почты"
 msgid "Enter IP Address"
 msgstr "Введите IP-адрес"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "Введите идентификатор"
 
@@ -4183,7 +4219,7 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Введите рабочее имя sysctl MIB."
 
 msgid "Enter additional parameter"
-msgstr ""
+msgstr "Введите дополнительный параметр"
 
 msgid "Enter comment for the share"
 msgstr "Введите комментарий для этого ресурса общего доступа."
@@ -4222,10 +4258,13 @@ msgstr "Введите имя пользователя"
 msgid "Enter login name of the user."
 msgstr "Введите имя пользователя для входа."
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr "Введите имя"
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4291,7 +4330,7 @@ msgstr "Порт, на который будут отправляться соо
 msgid "Enter trap host name."
 msgstr "Имя сервера, ведущего мониторинг и прием сообщений."
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4793,10 +4832,11 @@ msgid "Give your media library a friendly name."
 msgstr "Дайте вашей медиа-библиотеке понятное имя"
 
 msgid "Global Settings"
-msgstr ""
+msgstr "Общие параметры"
 
 msgid "Global numeric identifier to use for a given LUN inside CTL."
 msgstr ""
+"Глобальный числовой идентификатор для использования данного LUN внутри CTL."
 
 msgid "Grant access to the user portal."
 msgstr "Предоставить доступ к порталу пользователя"
@@ -4861,7 +4901,7 @@ msgid "Guest Authentication"
 msgstr "Гостевая аутентификация"
 
 msgid "HA Role"
-msgstr ""
+msgstr "Роль HA"
 
 msgid "HAST"
 msgstr "HAST"
@@ -5050,6 +5090,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP-адрес"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP-адрес"
 
@@ -5084,6 +5127,16 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+"IPv4 или IPv6 для перенаправления инициаторов. Когда сконфигурировано, все "
+"инициаторы, пытающиеся подключиться к порталу, принадлежащему этой группе "
+"портала, перенаправляются с помощью реакции «Направление временно "
+"перемещено»."
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5429,7 +5482,7 @@ msgid "Inquiry Vendor"
 msgstr "Запрос вендора"
 
 msgid "Insecure TPC"
-msgstr ""
+msgstr "Небезопасный TPC"
 
 msgid "Insensitive"
 msgstr "Не учитывать регистр"
@@ -5671,33 +5724,39 @@ msgid "LUN"
 msgstr "Логический номер устройства LUN"
 
 msgid "LUN EUI-64\tidentifier"
-msgstr ""
+msgstr "LUN EUI-64\tидентификатор"
 
 msgid "LUN NAA Identifier"
-msgstr ""
+msgstr "LUN NAA идентификатор"
 
 msgid "LUN Name"
+msgstr "Название LUN"
+
+msgid "LUN Number"
 msgstr ""
 
 msgid "LUN Product"
-msgstr ""
+msgstr "Продукт LUN"
 
 msgid "LUN Revision"
-msgstr ""
+msgstr "Ревизия LUN"
 
 msgid "LUN SCSI Name"
-msgstr ""
+msgstr "Имя LUN SCSI"
 
 msgid "LUN Vendor"
-msgstr ""
+msgstr "Поставщик LUN"
 
 msgid "LUN is locked"
-msgstr ""
+msgstr "LUN заблокирован"
 
 msgid "LUN is marked for deletion"
-msgstr ""
+msgstr "LUN отмечен для удаления"
 
 msgid "LUN is unlocked"
+msgstr "LUN разблокирован"
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6083,7 +6142,7 @@ msgid "Masquerade Address"
 msgstr "Маскарадный адрес"
 
 msgid "Max Processes"
-msgstr ""
+msgstr "Макс. процессов"
 
 msgid "Max. Block Size"
 msgstr "Макс. размер блока"
@@ -6396,8 +6455,14 @@ msgstr "Взаимный CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Пользователи взаимного CHAP"
 
-msgid "NAA Identifier"
+msgid "Mutual Secret"
 msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
+msgid "NAA Identifier"
+msgstr "NAA идентификатор"
 
 msgid "NFS"
 msgstr "NFS"
@@ -6455,22 +6520,28 @@ msgid "Name"
 msgstr "Имя"
 
 msgid "Name of the Auth Group."
-msgstr ""
+msgstr "Имя группы аутентификации."
 
 msgid "Name of the LUN."
-msgstr ""
+msgstr "Имя LUN."
 
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "Имя хоста NAS без доменной части (например, %s)."
 
 msgid "Name of the Portal Group."
-msgstr ""
+msgstr "Имя группы портала."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr ""
 "Имя устройства, используемого как устройство подкачки (например, %s)."
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6480,7 +6551,7 @@ msgstr ""
 "умолчанию."
 
 msgid "Name of the target."
-msgstr ""
+msgstr "Имя цели."
 
 msgid "Name of the variable."
 msgstr "Имя переменной."
@@ -6786,7 +6857,7 @@ msgstr ""
 "соответствующего протокола."
 
 msgid "Not Reported"
-msgstr ""
+msgstr "Нет сообщений"
 
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
@@ -6914,6 +6985,12 @@ msgstr "В L2ARC будут кешироваться только метадан
 
 msgid "Option"
 msgstr "Параметр"
+
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
 
 msgid "Option is locked"
 msgstr "Опция заблокирована"
@@ -7204,17 +7281,20 @@ msgstr "Права доступа"
 msgid "Permit Root Login"
 msgstr "Разрешен вход от имени root"
 
-msgid "Permit discovery without authentication"
+msgid "Permit access without authentication"
 msgstr ""
+
+msgid "Permit discovery without authentication"
+msgstr "Разрешить обнаружение без аутентификации"
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Разрешать SSH-туннелирование"
 
 msgid "Physical Block Offset"
-msgstr ""
+msgstr "Смещение физического блока"
 
 msgid "Physical Block Size"
-msgstr ""
+msgstr "Размер физического блока"
 
 msgid "Physical Interface"
 msgstr "Физический интерфейс"
@@ -7315,7 +7395,7 @@ msgid "Pool"
 msgstr "Пул"
 
 msgid "Pool Avail Threshold"
-msgstr ""
+msgstr "Порог свободного места в пуле"
 
 msgid "Pool Devices"
 msgstr "Устройства пула"
@@ -7333,7 +7413,7 @@ msgid "Pool Status"
 msgstr "Статус пула"
 
 msgid "Pool Used Threshold"
-msgstr ""
+msgstr "Порог пула"
 
 msgid "Pool Version"
 msgstr "Версия пула"
@@ -7369,6 +7449,9 @@ msgstr "Порт %ld уже используется другой службой
 msgid "Port Forwarding"
 msgstr "Перенаправление портов"
 
+msgid "Port Name"
+msgstr ""
+
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Номер порта должен быть 514 или числом от 1024 до 49151."
 
@@ -7380,7 +7463,7 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Номер порта должен находиться в диапазоне между %d и %d."
 
 msgid "Port number of iSNS server to register on."
-msgstr ""
+msgstr "Номер порта сервера iSNS для регистрации."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
@@ -7415,19 +7498,19 @@ msgid "Portal Group"
 msgstr "Группа порталов"
 
 msgid "Portal Group Name"
-msgstr ""
+msgstr "Имя группы портала"
 
 msgid "Portal Group Settings"
 msgstr "Настройки группы портала"
 
 msgid "Portal Group is locked"
-msgstr ""
+msgstr "Группа портала заблокирована"
 
 msgid "Portal Group is marked for deletion"
-msgstr ""
+msgstr "Группа портала отмечена для удаления"
 
 msgid "Portal Group is unlocked"
-msgstr ""
+msgstr "Группа портала разблокирована"
 
 msgid "Portal Groups"
 msgstr "Группы порталов (PG)"
@@ -7531,7 +7614,7 @@ msgid "Processes"
 msgstr "Процессы"
 
 msgid "Processor"
-msgstr ""
+msgstr "Процессор"
 
 msgid "Product ID"
 msgstr "ID продукта"
@@ -7564,7 +7647,7 @@ msgid "Provider"
 msgstr "Провайдер"
 
 msgid "Provisioning Type"
-msgstr ""
+msgstr "Тип предоставления"
 
 msgid "Proxy"
 msgstr "Настройки прокси"
@@ -7676,13 +7759,13 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAM Disk"
-msgstr ""
+msgstr "Диск RAM"
 
 msgid "RAW info"
 msgstr "RAW информация"
 
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #, php-format
 msgid ""
@@ -7736,7 +7819,7 @@ msgid "Read"
 msgstr "Чтение"
 
 msgid "Read Cache"
-msgstr ""
+msgstr "Чтение кеша"
 
 msgid "Read Only"
 msgstr "Только чтение"
@@ -7830,7 +7913,7 @@ msgid "Recycle Bin"
 msgstr "Корзина"
 
 msgid "Redirect"
-msgstr ""
+msgstr "Перенаправление"
 
 msgid "Redundant Metadata"
 msgstr "Резервные метаданные"
@@ -7933,7 +8016,7 @@ msgid "Reorder Commands"
 msgstr "Упорядочить команды"
 
 msgid "Reordering"
-msgstr ""
+msgstr "Изменение порядка"
 
 msgid "Replace Battery UPS"
 msgstr "Замените батарею ИБП (UPS)"
@@ -7995,7 +8078,7 @@ msgid "Resource Name"
 msgstr "Имя ресурса"
 
 msgid "Resource Provisioning"
-msgstr ""
+msgstr "Предоставление ресурсов"
 
 msgid "Resource is marked for deletion"
 msgstr "Ресурс помечен для удаления"
@@ -8153,7 +8236,7 @@ msgid "S.M.A.R.T. log"
 msgstr "Журнал S.M.A.R.T."
 
 msgid "SCSI Name"
-msgstr ""
+msgstr "Имя SCSI"
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, сравнение"
@@ -8327,9 +8410,6 @@ msgstr "Вторичный кеш"
 
 msgid "Seconds"
 msgstr "сек."
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "Ключ безопасности"
@@ -8638,7 +8718,7 @@ msgid "Set or reset user password."
 msgstr "Установить или сбросить пароль пользователя."
 
 msgid "Set per-LUN/per-pool thin provisioning soft threshold."
-msgstr ""
+msgstr "Устанавливает мягкий порог для минимальной настройки LUN/пула."
 
 msgid "Set read only."
 msgstr "Установить только для чтения"
@@ -8696,24 +8776,32 @@ msgid ""
 "Set to \"off\", disables read caching for the LUN, if supported by the "
 "backend."
 msgstr ""
+"Установленное значение «выключено», отключает кеширование чтения для LUN, "
+"если поддерживается бэкэнд."
 
 msgid ""
 "Set to \"off\", disables write caching for the LUN, if supported by the "
 "backend."
 msgstr ""
+"Установленное значение «выключено», отключает кэширование записи для LUN, "
+"если поддерживается бэкэнд."
 
 msgid "Set to \"on\" makes LUN removable."
-msgstr ""
+msgstr "Установленное в положение «on» делает LUN съемным."
 
 msgid ""
 "Set to \"on\", blocks all media write operations to the LUN reporting it as "
 "write protected."
 msgstr ""
+"Установленное значение «on», блокирует все операции записи медиа в LUN, "
+"сообщая об этом как защищенный от записи."
 
 msgid ""
 "Set to \"unrestricted\", allows target to process commands with SIMPLE task "
 "attribute in arbitrary order."
 msgstr ""
+"Установленное на «неограниченный», позволяет цели обрабатывать команды с "
+"помощью атрибута задачи SIMPLE в произвольном порядке."
 
 msgid "Set user login shell."
 msgstr "Установите командную оболочку пользователя."
@@ -8727,7 +8815,7 @@ msgstr ""
 "умолчанию /mnt)."
 
 msgid "Sets the authentication type."
-msgstr ""
+msgstr "Устанавливает тип аутентификации."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -8742,16 +8830,24 @@ msgid ""
 "between different iSCSI targets residing on the same host in trusted "
 "environments."
 msgstr ""
+"При установке на «включено» команда EXTENDED COPY, отправленная на этот LUN, "
+"получает доступ к другим LUN на этом хосте, недоступно иначе. Это позволяет "
+"отключить копирование между различными объектами iSCSI, находящимися на "
+"одном и том же хосте в надежных средах."
 
 msgid ""
 "Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
 "Default value is \"on\" if supported by the backend."
 msgstr ""
+"Установка на «on» или «off» контролирует поддержку UNMAP для логического "
+"блока. Значение по умолчанию «включено», если поддерживается бэкэнд."
 
 msgid ""
 "Setting to \"primary\" or \"secondary\" overrides default role of the node "
 "in HA cluster."
 msgstr ""
+"Установка на «primary» или «secondary» переопределяет роль узла в кластере "
+"HA по умолчанию."
 
 msgid "Settings"
 msgstr "Параметры"
@@ -8986,34 +9082,40 @@ msgid "Specified path is NFSv4 root directory."
 msgstr "Указанный путь является корневым каталогом NFSv4."
 
 msgid "Specifies LUN EUI-64 identifier."
-msgstr ""
+msgstr "Указывает идентификатор LUN EUI-64."
 
 msgid "Specifies LUN NAA identifier."
-msgstr ""
+msgstr "Указывает идентификацию LUN NAA."
 
 msgid "Specifies LUN SCSI name string."
-msgstr ""
+msgstr "Указывает строку имени LUN SCSI."
 
 msgid "Specifies LUN locally assigned RFC 4122 UUID."
-msgstr ""
+msgstr "Задает локально назначенный LUN RFC 4122 UUID."
 
 msgid "Specifies LUN product string up to 16 chars."
-msgstr ""
+msgstr "Указывает строку продукта LUN до 16 символов."
 
 msgid "Specifies LUN revision string up to 4 chars."
-msgstr ""
+msgstr "Указывает строку ревизии LUN до 4 символов."
 
 msgid "Specifies LUN vendor string up to 8 chars."
-msgstr ""
+msgstr "Указывает строку поставщика LUN длиной до 8 символов."
 
 msgid ""
 "Specifies capacity of backing store (maximum RAM for data). The default "
 "value is zero, that disables backing store completely, making all writes go "
 "to nowhere, while all reads return zeroes."
 msgstr ""
+"Указывает емкость хранилища резервных копий (максимальная ОЗУ для данных). "
+"Значение по умолчанию равно нулю, что полностью отключает резервное "
+"хранилище, в результате чего все записи идут в никуда, в то время как чтение "
+"возвращают нули."
 
 msgid "Specifies file or device name to use for backing store."
 msgstr ""
+"Указывает имя файла или устройства, которое будет использоваться для "
+"резервного хранилища."
 
 msgid "Specifies how many servers to create."
 msgstr "Укажите число создаваемых серверов."
@@ -9022,13 +9124,13 @@ msgid "Specifies how the volume should be exposed to the OS."
 msgstr "Определяет, как объем должен быть выделен для ОС."
 
 msgid "Specifies medium rotation rate of the device."
-msgstr ""
+msgstr "Определяет скорость вращения устройства."
 
 msgid "Specifies nominal form factor of the device."
-msgstr ""
+msgstr "Определяет номинальный форм-фактор устройства."
 
 msgid "Specifies number of backend threads to use for this LUN."
-msgstr ""
+msgstr "Определяет количество обратных потоков, используемых для этого LUN."
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr "Укажите, если файловая система будет в режиме только-для-чтения"
@@ -9037,6 +9139,8 @@ msgid ""
 "Specifies that this portal-group is listened by some other host. This host "
 "will announce it on discovery stage, but won't listen."
 msgstr ""
+"Указывает, что эта группа портала прослушивается другим хостом. Этот хост "
+"объявит об этом на стадии обнаружения, но не будет слушать."
 
 msgid "Specifies the command to be run."
 msgstr "Задайте выполняемую команду здесь."
@@ -9087,34 +9191,41 @@ msgstr ""
 "производительность и автоматическую дефрагментацию!"
 
 msgid "Specify UNMAP block offset of the device."
-msgstr ""
+msgstr "Укажите смещение блока UNMAP устройства."
 
 msgid "Specify UNMAP block size of the device."
-msgstr ""
+msgstr "Укажите размер блока UNMAP устройства."
 
 msgid ""
 "Specify maximum allowed number of LBAs per UNMAP command to report in Block "
 "Limits VPD page."
 msgstr ""
+"Укажите максимальное разрешенное количество LBA для каждой команды UNMAP для "
+"отчета на странице VPD Block Limits."
 
 msgid ""
 "Specify maximum allowed number of LBAs per WRITE SAME command to report in "
 "Block Limits VPD page."
 msgstr ""
+"Укажите максимальное разрешенное количество LBA для команды WRITE SAME для "
+"отчета на странице VPD Block Limits."
 
 msgid ""
 "Specify maximum allowed number of block descriptors per UNMAP command to "
 "report in Block Limits VPD page."
 msgstr ""
+"Укажите максимально допустимое количество дескрипторов блоков в команде "
+"UNMAP для отчета на странице VPD Block Limits."
 
 msgid "Specify physical block offset of the device."
-msgstr ""
+msgstr "Укажите физическое смещение блока устройства."
 
 msgid "Specify physical block size of the device."
-msgstr ""
+msgstr "Укажите размер физического блока устройства."
 
 msgid "Specify the SCSI device type to use when creating the LUN."
 msgstr ""
+"Укажите тип устройства SCSI, который будет использоваться при создании LUN."
 
 msgid "Split request"
 msgstr "Разделение запросов (split request)"
@@ -9438,16 +9549,16 @@ msgid "Target information"
 msgstr "Сведения о целях"
 
 msgid "Target is locked"
-msgstr ""
+msgstr "Цель заблокирована"
 
 msgid "Target is marked for deletion"
-msgstr ""
+msgstr "Цель отмечена для удаления"
 
 msgid "Target is not selected."
 msgstr "Цель не выбрана."
 
 msgid "Target is unlocked"
-msgstr ""
+msgstr "Цель разблокирована"
 
 msgid "Target list"
 msgstr "Список целей"
@@ -9524,7 +9635,7 @@ msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "COM-порт должен быть включен в BIOS до разрешения этой опции."
 
 msgid "The CTL backend to use for a given LUN."
-msgstr ""
+msgstr "Бэкэнд CTL для использования для данного LUN."
 
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
@@ -9553,7 +9664,7 @@ msgid "The LAN IP address will be reset to"
 msgstr "LAN IP-адрес будет сброшен в"
 
 msgid "The LUN size, in bytes."
-msgstr ""
+msgstr "Размер LUN в байтах."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -9575,10 +9686,10 @@ msgstr ""
 "флэш диска, обнаруженных с момента его первой инициализации в производстве."
 
 msgid "The SCSI Device Identification string presented to the initiator."
-msgstr ""
+msgstr "Строка идентификации устройства SCSI представляемая ​​инициатору."
 
 msgid "The SCSI serial number presented to the initiator."
-msgstr ""
+msgstr "Серийный номер SCSI представляемый инициатору."
 
 msgid "The TCP Port must be a valid port number."
 msgstr "TCP-порт должен быть допустимым номером порта."
@@ -9784,7 +9895,7 @@ msgstr ""
 "найденное правило и процесс поиска останавливается."
 
 msgid "The blocksize visible to the initiator."
-msgstr ""
+msgstr "Размер блока видимый инициатору."
 
 msgid "The changes could not be applied"
 msgstr "Изменения не могут быть применены"
@@ -9796,7 +9907,7 @@ msgid "The changes have been saved."
 msgstr "Изменения были сохранены."
 
 msgid "The check will include both initiator-portal and initiator-name."
-msgstr ""
+msgstr "Проверка будет включать как инициатор-портал, так и имя инициатора."
 
 msgid ""
 "The check will include initiator-portal, initiator-name, and authentication "
@@ -9804,6 +9915,11 @@ msgid ""
 "authentication, or if the CHAP user and secret used during discovery match "
 "those used by the target."
 msgstr ""
+"Проверка будет включать инициатор-портал, имя инициатора и учетные данные "
+"для проверки подлинности. Цель возвращается, если для нее не требуется "
+"аутентификация CHAP, или если пользователь и секретный код CHAP, "
+"используемые во время обнаружения, соответствуют тем, которые используются "
+"целевым объектом."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Незашифрованный пароль DN для связи с сервером каталогов."
@@ -9902,7 +10018,7 @@ msgstr ""
 "Формат по умолчанию % s используется для автоматических снимков ZFS."
 
 msgid "The debug verbosity level. The default is 0."
-msgstr ""
+msgstr "Уровень детализации отладки. По умолчанию используется значение 0."
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -10057,6 +10173,8 @@ msgid ""
 "The limit for concurrently running child processes handling incoming "
 "connections. The default is 30. A setting of 0 disables the limit."
 msgstr ""
+"Предел одновременного запуска дочерних процессов, обрабатывающих входящие "
+"соединения. Значение по умолчанию - 30. Значение 0 отключает ограничение."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "Расположение \"Каталог базы данных\" не является допустимым."
@@ -10228,6 +10346,7 @@ msgstr "Путь '%s' не является каталогом."
 msgid ""
 "The path to the file, device node, or zfs volume used to back the LUN."
 msgstr ""
+"Путь к файлу, узлу устройства или тому zfs используемого для поддержки LUN."
 
 msgid "The peer connection encryption mode."
 msgstr "Режим шифрования соединений."
@@ -10242,6 +10361,9 @@ msgstr ""
 "файлов и каталогов, но параметр \"Наследование прав доступа\" отменяет это, "
 "что в многопользовательских системах может быть полезно для более гибкого "
 "использования одного общего ресурса."
+
+msgid "The port to listen on."
+msgstr ""
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10341,6 +10463,9 @@ msgid ""
 "The timeout for login sessions, after which the connection will be forcibly "
 "terminated. The default is 60. A setting of 0 disables the timeout."
 msgstr ""
+"Таймаут для сеансов входа в систему, после чего соединение будет "
+"принудительно завершено. Значение по умолчанию - 60. Значение 0 отключает "
+"таймаут."
 
 msgid "The total count of errors when writing a sector."
 msgstr ""
@@ -10459,19 +10584,19 @@ msgstr ""
 "переменные, используемые основными скриптами про запуске."
 
 msgid "These parameter will be added to the global section of ctl.conf"
-msgstr ""
+msgstr "Этот параметр будет добавлен в глобальный раздел ctl.conf"
 
 msgid "These parameter will be added to this auth-group."
-msgstr ""
+msgstr "Этот параметр будет добавлен в эту группу аутентификации."
 
 msgid "These parameter will be added to this lun."
-msgstr ""
+msgstr "Этот параметр будет добавлен в этот LUN."
 
 msgid "These parameter will be added to this portal-group."
-msgstr ""
+msgstr "Этот параметр будет добавлен в эту группу портала."
 
 msgid "These parameter will be added to this target."
-msgstr ""
+msgstr "Этот параметр будет добавлен к этой цели."
 
 #, php-format
 msgid "These parameters are added to %s."
@@ -10999,7 +11124,7 @@ msgid "Timeout"
 msgstr "Таймаут"
 
 msgid "Timeout for iSNS requests. The default is 5."
-msgstr ""
+msgstr "Таймаут для запросов iSNS. По умолчанию используется значение 5."
 
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr "Время ожидания должно быть от 10 до 255000000."
@@ -11061,7 +11186,7 @@ msgid "Toggle Mode"
 msgstr "Режим переключения"
 
 msgid "Toggle Selected Auth Groups"
-msgstr ""
+msgstr "Переключить выбранные группы аутентификации"
 
 msgid "Toggle Selected Commands"
 msgstr "Переключить выбранные команды"
@@ -11070,13 +11195,13 @@ msgid "Toggle Selected Jobs"
 msgstr "Вкл./откл. выбранные задания"
 
 msgid "Toggle Selected LUNs"
-msgstr ""
+msgstr "Переключить выбранные LUN"
 
 msgid "Toggle Selected Options"
 msgstr "Вкл./откл. выбранные опции"
 
 msgid "Toggle Selected Portal Groups"
-msgstr ""
+msgstr "Переключить выбранные группы портала"
 
 msgid "Toggle Selected Records"
 msgstr "Переключение выбранных записей"
@@ -11088,7 +11213,7 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Переключить выбранные модули Rsync"
 
 msgid "Toggle Selected Targets"
-msgstr ""
+msgstr "Переключить выбранные цели"
 
 msgid "Tolerated"
 msgstr "Допускается"
@@ -11271,19 +11396,19 @@ msgid "UID"
 msgstr "UID"
 
 msgid "UNMAP"
-msgstr ""
+msgstr "UNMAP"
 
 msgid "UNMAP Block Offset"
-msgstr ""
+msgstr "Смещение блока UNMAP"
 
 msgid "UNMAP Block Size"
-msgstr ""
+msgstr "Размер блока UNMAP"
 
 msgid "UNMAP Maximum Descriptors"
-msgstr ""
+msgstr "Максимальные дескрипторы UNMAP"
 
 msgid "UNMAP Maximum LBA"
-msgstr ""
+msgstr "Максимальный LBA UNMAP"
 
 msgid "UPS"
 msgstr "UPS"
@@ -11385,7 +11510,7 @@ msgid "UTF-8 Only"
 msgstr "Только UTF-8"
 
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11401,7 +11526,7 @@ msgstr ""
 "операционной системы."
 
 msgid "Undefined"
-msgstr ""
+msgstr "Неопределённый"
 
 msgid "Unformated"
 msgstr "Unformated"
@@ -11422,6 +11547,8 @@ msgid ""
 "Unique 16-bit tag value of this portal-group. If not specified, the value is "
 "generated automatically."
 msgstr ""
+"Уникальное 16-битное значение тега этой группы портала. Если не указано, "
+"значение генерируется автоматически."
 
 msgid "Unison"
 msgstr "Unison"
@@ -11472,7 +11599,7 @@ msgid "Unmounting..."
 msgstr "Размонтируется..."
 
 msgid "Unrestricted"
-msgstr ""
+msgstr "Неограниченный"
 
 msgid "Up"
 msgstr "Вверх"
@@ -11630,7 +11757,7 @@ msgid "Used"
 msgstr "Использовано"
 
 msgid "Used Threshold"
-msgstr ""
+msgstr "Использованный порог"
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -11763,6 +11890,9 @@ msgid ""
 msgstr ""
 "Значение равно (100-temp Цельсия), что позволяет производителю установить "
 "минимальный порог, который соответствует максимальной температуре."
+
+msgid "Value of the option."
+msgstr ""
 
 msgid "Variable"
 msgstr "Переменная"
@@ -12001,6 +12131,7 @@ msgstr ""
 msgid ""
 "When UNMAP support is enabled, this option specifies provisioning type."
 msgstr ""
+"Когда включена поддержка UNMAP, этот параметр указывает тип реззервирования."
 
 msgid "When UPS switches to Low Battery"
 msgstr "Когда ИБП переключается в режим \"Низкий заряд батареи\""
@@ -12051,7 +12182,7 @@ msgid "Write Cache"
 msgstr "Кэширование записи"
 
 msgid "Write Same Maximum LBA"
-msgstr ""
+msgstr "Запись того же самого максимального значения LBA"
 
 msgid "Write only"
 msgstr "Только запись"
@@ -12324,21 +12455,24 @@ msgid "iSCSI initiator disabled."
 msgstr "iSCSI инициатор отключен"
 
 msgid "iSNS Period"
-msgstr ""
+msgstr "Период iSNS"
 
 msgid "iSNS Server"
-msgstr ""
+msgstr "Сервер iSNS"
 
 msgid "iSNS Server Port"
-msgstr ""
+msgstr "Порт сервера iSNS"
 
 msgid "iSNS Timeout"
-msgstr ""
+msgstr "Таймаут iSNS"
 
 msgid ""
 "iSNS registration period. Registered Network Entity not updated during this "
 "period will be unregistered. The default is 900."
 msgstr ""
+"Период регистрации iSNS. Зарегистрированное сетевое устройство, не "
+"обновленное в течение этого периода, будет незарегистрировано. Значение по "
+"умолчанию - 900."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -12435,3 +12569,24 @@ msgstr "использовано из"
 
 msgid "visible"
 msgstr "показать"
+
+#~ msgid "2048"
+#~ msgstr "2048"
+
+#~ msgid "4096"
+#~ msgstr "4096"
+
+#~ msgid "512"
+#~ msgstr "512"
+
+#~ msgid "8192"
+#~ msgstr "8192"
+
+#~ msgid "Enter user name"
+#~ msgstr "Введите имя пользователя"
+
+#~ msgid "Enter secret"
+#~ msgstr "Введите секретную фразу"
+
+#~ msgid "Seconfary"
+#~ msgstr "Дополнительно"

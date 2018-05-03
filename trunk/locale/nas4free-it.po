@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
 "PO-Revision-Date: 2018-04-19 15:11+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:24+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -201,8 +201,14 @@ msgstr "1 o più dischi sono richiesti per costruire un volume RAID-1"
 msgid "1.8\""
 msgstr ""
 
+msgid "16 KiB"
+msgstr ""
+
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 o più dischi sono richiesti per costruire un volume RAID-0"
@@ -211,9 +217,6 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 o più dischi sono richiesti per costruire un volume RAID-1"
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
 msgstr ""
 
 msgid "3"
@@ -225,7 +228,10 @@ msgstr "3 o più dischi sono richiesti per costruire un volume RAID-5"
 msgid "3.5\""
 msgstr ""
 
-msgid "4096"
+msgid "32 KiB"
+msgstr ""
+
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
@@ -234,20 +240,23 @@ msgstr "4KB wrapper"
 msgid "5.25\""
 msgstr ""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr "514"
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr "69"
 
+msgid "8 KiB"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tag (tra 1 e 4094)"
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -931,7 +940,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "Un Extent definisce l'are di immagazzinamento del Target."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -963,6 +978,9 @@ msgstr "Si è verificato un errore."
 
 msgid "An host with this name already exists."
 msgstr "Esiste gia' un host con questo nome."
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Un'interfaccia con la descrizione specificata esiste già."
@@ -1055,9 +1073,18 @@ msgstr "Sei sicuro di voler ripristinare il server ai valori di fabbrica?"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Sei sicuro di voler spegnere il server?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -4119,6 +4146,9 @@ msgstr "Inserire l'(gli) indirizzo(i) Email"
 msgid "Enter IP Address"
 msgstr "Inserire l'indirizzo IP"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "Inserire l'identificativo"
 
@@ -4245,10 +4275,13 @@ msgstr "Inserire nome utente"
 msgid "Enter login name of the user."
 msgstr "Inserisci il nome di login dell'utente."
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr "Inserire il nome"
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4314,7 +4347,7 @@ msgstr "Inserire la porta alla quale inviare le trap (default 162)."
 msgid "Enter trap host name."
 msgstr "Inserire un nome di host per le trap"
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -5067,6 +5100,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "Indirizzo IP"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "Indirizzo IP"
 
@@ -5101,6 +5137,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5696,6 +5738,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5715,6 +5760,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6401,6 +6449,12 @@ msgstr "CHAP reciproco"
 msgid "Mutual CHAP Users"
 msgstr "Utenti CHAP reciproco"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6475,6 +6529,12 @@ msgstr ""
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "Nome della periferica usata per lo swap, ad es. %s."
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6916,6 +6976,12 @@ msgstr "Solo i metadati saranno salvati in L2ARC."
 msgid "Option"
 msgstr "Opzione"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr "L'opzione è bloccata"
 
@@ -7205,6 +7271,9 @@ msgstr "Permesso"
 msgid "Permit Root Login"
 msgstr "Consenti login come Root"
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -7370,6 +7439,9 @@ msgstr "La porta %ld è attualmente usata da un altro servizio."
 
 msgid "Port Forwarding"
 msgstr "Inoltro porta"
+
+msgid "Port Name"
+msgstr ""
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr ""
@@ -8328,9 +8400,6 @@ msgstr "Cache secondaria"
 
 msgid "Seconds"
 msgstr "Secondi"
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "Segreto"
@@ -10250,6 +10319,9 @@ msgstr ""
 "sistemi con molti utenti per consentire a una singola condivisione di essere "
 "utilizzata in modo flessibile da ogni utente."
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "Il portale '%s' non è valido."
@@ -11767,6 +11839,9 @@ msgid ""
 msgstr ""
 "Questo valore è uguale a 100-temp. celsius, consentendo ai produttori di "
 "settare una soglia minima che corrisponde ad una temperatura massima"
+
+msgid "Value of the option."
+msgstr ""
 
 msgid "Variable"
 msgstr "Variabile"

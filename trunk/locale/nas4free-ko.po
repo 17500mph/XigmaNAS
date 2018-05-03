@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
 "PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -184,8 +184,14 @@ msgstr "RAID-1 볼륨을 만들기 위해서는 1개 이상의 디스크가 필�
 msgid "1.8\""
 msgstr ""
 
+msgid "16 KiB"
+msgstr ""
+
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "RAID-0 볼륨을 만들기 위해서는 2개 이상의 디스크가 필요합니다."
@@ -194,9 +200,6 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1 볼륨을 만들기 위해서는 2개 이상의 디스크가 필요합니다."
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
 msgstr ""
 
 msgid "3"
@@ -208,7 +211,10 @@ msgstr "RAID-5 볼륨을 만들기 위해서는 3개 이상의 디스크가 필�
 msgid "3.5\""
 msgstr ""
 
-msgid "4096"
+msgid "32 KiB"
+msgstr ""
+
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
@@ -217,20 +223,23 @@ msgstr "4KB 보정"
 msgid "5.25\""
 msgstr ""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr ""
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
+msgstr ""
+
+msgid "8 KiB"
 msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 태그(1에서 4094까지)."
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -871,7 +880,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "범위는 타겟의 저장소 영역을 정의합니다."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -897,6 +912,9 @@ msgstr "오류가 발생했습니다."
 
 msgid "An host with this name already exists."
 msgstr "해당 이름의 호스트가 존재합니다."
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "명시 된 설명의 인터페이스가 이미 존재합니다"
@@ -979,9 +997,18 @@ msgstr "서버를 공장 초기값으로 설정하시겠습니까?"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "서버를 종료하시겠습니까?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -3868,6 +3895,9 @@ msgstr "전자우편 주소(들) 입력"
 msgid "Enter IP Address"
 msgstr "IP 주소 입력"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "식별자 입력"
 
@@ -3984,10 +4014,13 @@ msgstr "로그인 이름 입력"
 msgid "Enter login name of the user."
 msgstr "사용자의 로그인 이름을 입력하십시오."
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr ""
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4041,7 +4074,7 @@ msgstr "트랩을 전송할 포트를 입력하십시오(기본 값은 162)."
 msgid "Enter trap host name."
 msgstr "트랩 호스트 이름을 입력하십시오."
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4773,6 +4806,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP 주소"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP 주소"
 
@@ -4805,6 +4841,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5349,6 +5391,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5368,6 +5413,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6025,6 +6073,12 @@ msgstr "상호 CHAP"
 msgid "Mutual CHAP Users"
 msgstr "상호 CHAP 사용자"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6099,6 +6153,12 @@ msgstr ""
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "스왑 장치로 이용할 장치의 이름. 예컨대 %s."
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6522,6 +6582,12 @@ msgstr "메타데이터만 L2ARC에 캐시됩니다."
 msgid "Option"
 msgstr "옵션"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr "옵션 잠김"
 
@@ -6799,6 +6865,9 @@ msgstr "권한"
 msgid "Permit Root Login"
 msgstr "root 로그인 허용"
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -6963,6 +7032,9 @@ msgstr "포트 %ld은(는) 다른 서비스에 의해 이미 이용되고 있습
 
 msgid "Port Forwarding"
 msgstr "포트 포워딩"
+
+msgid "Port Name"
+msgstr ""
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "포트 번호는 514 또는 1024에서 49151 사이의 숫자여야 합니다."
@@ -7880,9 +7952,6 @@ msgstr "보조 캐시"
 
 msgid "Seconds"
 msgstr "초"
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "비밀"
@@ -9644,6 +9713,9 @@ msgstr ""
 "새 파일과 디렉터리에 관한 권한은 보통 생성 마스크와 디렉터리 마스크에 의해 통제되지만 권한 상속 인자는 이것에 우선합니다. 이것은 많은 "
 "사용자를 가진 시스템에서 하나의 공유가 각 사용자에게 유연성 있게 이용되도록 허용하려고 할 때 특히 유용할 수 있습니다."
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "포털 '%s'는 무효합니다."
@@ -10997,6 +11069,9 @@ msgstr "값"
 msgid ""
 "Value is equal to (100-temp. Celsius), allowing manufacturer to set a "
 "minimum threshold which corresponds to a maximum temperature."
+msgstr ""
+
+msgid "Value of the option."
 msgstr ""
 
 msgid "Variable"
