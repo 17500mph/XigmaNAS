@@ -359,7 +359,7 @@ function calc_skipviewmode($page_mode) : array {
 			$new_page_mode = PAGE_MODE_EDIT;
 			break;
 		default:
-			if(isset($config['system']['skipviewmode']) && (is_bool($config['system']['skipviewmode']) ? $config['system']['skipviewmode'] : true)):
+			if(is_bool($test = $config['system']['skipviewmode'] ?? false) ? $test : true):
 				$new_page_mode = PAGE_MODE_EDIT;
 			else:
 				$new_page_mode = PAGE_MODE_VIEW;
