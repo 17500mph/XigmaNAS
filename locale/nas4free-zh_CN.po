@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
 "PO-Revision-Date: 2018-04-20 09:39+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -179,8 +179,14 @@ msgstr "一个或更多磁盘需要建立为RAID-1卷"
 msgid "1.8\""
 msgstr ""
 
+msgid "16 KiB"
+msgstr ""
+
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "创建一个Raid-0 卷需要2个或更多的磁盘。"
@@ -189,9 +195,6 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "创建一个Raid-1 卷需要2个或更多的磁盘。"
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
 msgstr ""
 
 msgid "3"
@@ -203,7 +206,10 @@ msgstr "创建一个Raid-5 卷需要3个或更多的磁盘。"
 msgid "3.5\""
 msgstr ""
 
-msgid "4096"
+msgid "32 KiB"
+msgstr ""
+
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
@@ -212,20 +218,23 @@ msgstr "4KB封套"
 msgid "5.25\""
 msgstr ""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr "514"
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr "69"
 
+msgid "8 KiB"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 标签 （介于1和4094之间）。"
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -852,7 +861,13 @@ msgstr "认证组由标签号标识，并且是可选的。 如果目标不使�
 msgid "An Extent defines the storage area of the Target."
 msgstr "Extent定义目标的存储区域。"
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -878,6 +893,9 @@ msgstr "发生错误。"
 
 msgid "An host with this name already exists."
 msgstr "已经有一个相同的主机名称存在了。"
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "具有相同描述的接口已经存在。"
@@ -960,9 +978,18 @@ msgstr "你确定要重置服务器到出厂设置？"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "是否确定关闭系统？"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -3816,6 +3843,9 @@ msgstr "输入Email地址"
 msgid "Enter IP Address"
 msgstr "输入IP地址"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "输入标识符"
 
@@ -3932,10 +3962,13 @@ msgstr "输入登录名"
 msgid "Enter login name of the user."
 msgstr "输入用户的登录名。"
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr "输入名称"
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -3989,7 +4022,7 @@ msgstr "请输入 Traps 传输端口（默认为 162）"
 msgid "Enter trap host name."
 msgstr "请输入 Trap 主机名。"
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4714,6 +4747,9 @@ msgstr "IP 地址"
 msgid "IP Address"
 msgstr "IP 地址"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP 地址"
 
@@ -4746,6 +4782,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5280,6 +5322,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5299,6 +5344,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -5956,6 +6004,12 @@ msgstr "CHAP 相互验证"
 msgid "Mutual CHAP Users"
 msgstr "CHAP 相互验证用户"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6030,6 +6084,12 @@ msgstr ""
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "交换（swap）装置名称，例如：%s。"
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6449,6 +6509,12 @@ msgstr "只有元数据将被缓存在L2ARC中。"
 msgid "Option"
 msgstr "选项"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr "选项被锁定"
 
@@ -6724,6 +6790,9 @@ msgstr "权限"
 msgid "Permit Root Login"
 msgstr "允许Root登录"
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -6888,6 +6957,9 @@ msgstr "端口 %ld 已被其他服务使用。"
 
 msgid "Port Forwarding"
 msgstr "端口转发"
+
+msgid "Port Name"
+msgstr ""
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "端口号必须是514或1024到49151之间的数字。"
@@ -7807,9 +7879,6 @@ msgstr "二级缓存"
 
 msgid "Seconds"
 msgstr "秒"
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "密钥"
@@ -9551,6 +9620,9 @@ msgstr ""
 "新文件和目录的权限通常由创建掩码（create mask）和目录掩码（directory mask）参数管理，但继承权限参数覆盖这些参数。\r\n"
 "这在多用户的系统上特别有用，让每个用户灵活地使用共享区。"
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "门户网站 '%s' 无效。"
@@ -10875,6 +10947,9 @@ msgid ""
 "Value is equal to (100-temp. Celsius), allowing manufacturer to set a "
 "minimum threshold which corresponds to a maximum temperature."
 msgstr "值等于（100摄氏度），允许制造商设置对应于最大温度的最小阈值。"
+
+msgid "Value of the option."
+msgstr ""
 
 msgid "Variable"
 msgstr "变量"

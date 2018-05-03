@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
-"PO-Revision-Date: 2018-04-22 08:03+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
+"PO-Revision-Date: 2018-04-30 06:45+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:25+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:30+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -196,10 +196,16 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Для побудови RAID-1 потрібно 1 чи більше дисків."
 
 msgid "1.8\""
+msgstr "1.8\""
+
+msgid "16 KiB"
 msgstr ""
 
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Для побудови RAID-0 потрібно 2 чи більше дисків."
@@ -208,10 +214,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Для побудови RAID-1 потрібно 2 чи більше дисків."
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -220,31 +223,37 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Для побудови RAID-5 потрібно 3 чи більше дисків."
 
 msgid "3.5\""
+msgstr "3.5\""
+
+msgid "32 KiB"
 msgstr ""
 
-msgid "4096"
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB оболонка"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr "514"
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr "69"
 
+msgid "8 KiB"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN тег (між 1 і 4094)."
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -749,7 +758,7 @@ msgid "Algorithm"
 msgstr "Алгоритм"
 
 msgid "Alias"
-msgstr ""
+msgstr "Псевдонім"
 
 msgid "All"
 msgstr "Всі"
@@ -924,7 +933,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "Екстент визначає область зберігання цілі."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -956,6 +971,9 @@ msgstr "Сталася помилка."
 
 msgid "An host with this name already exists."
 msgstr "Хост із таким іменем вже існує"
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Інтерфейс із вказаним описом вже існує."
@@ -1047,9 +1065,18 @@ msgstr "Ви впевнені, що хочете скинути сервер д�
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Ви впевнені, що хочете вимкнути сервер?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -1369,7 +1396,7 @@ msgid "Blank Time"
 msgstr "Пусте значення часу"
 
 msgid "Block"
-msgstr ""
+msgstr "Блок"
 
 msgid "Block Size"
 msgstr "Розмір блоку"
@@ -1494,10 +1521,10 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD"
-msgstr ""
+msgstr "CD"
 
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
@@ -2411,7 +2438,7 @@ msgid "DVD"
 msgstr "DVD"
 
 msgid "DVD-ROM"
-msgstr ""
+msgstr "DVD-ROM"
 
 msgid "Daemon"
 msgstr "Демон"
@@ -2843,7 +2870,7 @@ msgid "Device /dev/%s - %s"
 msgstr "Пристрій /dev/%s - %s"
 
 msgid "Device ID"
-msgstr ""
+msgstr "ID пристрою"
 
 msgid "Device IP"
 msgstr "IP адреса пристрою"
@@ -2864,7 +2891,7 @@ msgid "Device Serial"
 msgstr "Серійний номер пристрою"
 
 msgid "Device Type"
-msgstr ""
+msgstr "Тип пристрою"
 
 msgid "Device contains boot partition"
 msgstr "Пристрій містить завантажувальний розділ"
@@ -3549,7 +3576,7 @@ msgid "ERROR:"
 msgstr "ПОМИЛКА:"
 
 msgid "EUI-64"
-msgstr ""
+msgstr "EUI-64"
 
 msgid "Edit"
 msgstr "Редагувати"
@@ -4084,6 +4111,9 @@ msgstr "Додавання адреси(-ів) емайл."
 msgid "Enter IP Address"
 msgstr "Введіть IP адресу"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "Введіть ідентифікатор"
 
@@ -4212,10 +4242,13 @@ msgstr "Введіть логін користувача"
 msgid "Enter login name of the user."
 msgstr "Введіть логін користувача."
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr "Введіть ім'я"
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4280,7 +4313,7 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr "Ім'я хоста, що прослуховує повідомлення (traps)."
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4778,7 +4811,7 @@ msgid "Give your media library a friendly name."
 msgstr "Вкажіть зручне ім'я для медіа бібліотеки."
 
 msgid "Global Settings"
-msgstr ""
+msgstr "Загальні налаштування"
 
 msgid "Global numeric identifier to use for a given LUN inside CTL."
 msgstr ""
@@ -5034,6 +5067,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP адреса"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP адреса"
 
@@ -5066,6 +5102,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5660,6 +5702,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5679,6 +5724,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6367,6 +6415,12 @@ msgstr "Взаємна CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Користувачі взаємного CHAP"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6444,6 +6498,12 @@ msgstr ""
 "Назва пристрою для Swap, наприклад \"%s\". Якщо Ви маєте достатній об'єм "
 "оперативної пам'яті і при цьому не бажаєте використовувати Swap файл, "
 "вкажіть назву не існуючого в вашій системі пристрою для Swap."
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6889,6 +6949,12 @@ msgstr "Тільки метадані будуть кешуватися в L2ARC
 msgid "Option"
 msgstr "Опція"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr "Опція заблокована"
 
@@ -7176,6 +7242,9 @@ msgstr "Дозвіл"
 msgid "Permit Root Login"
 msgstr "Дозволений вхід як root"
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -7341,6 +7410,9 @@ msgstr "Порт %ld вже використовується іншим серв
 msgid "Port Forwarding"
 msgstr "Переадресування портів"
 
+msgid "Port Name"
+msgstr ""
+
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Номер порту повинен бути 514 або числом між 1024 та 49151."
 
@@ -7505,7 +7577,7 @@ msgid "Processes"
 msgstr "Процеси"
 
 msgid "Processor"
-msgstr ""
+msgstr "Процесор"
 
 msgid "Product ID"
 msgstr "Ідентифікатор продукту"
@@ -7644,13 +7716,13 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAM Disk"
-msgstr ""
+msgstr "RAM диск"
 
 msgid "RAW info"
 msgstr "Необроблена інформація"
 
 msgid "RPM"
-msgstr ""
+msgstr "об/хв"
 
 #, php-format
 msgid ""
@@ -8125,7 +8197,7 @@ msgid "S.M.A.R.T. log"
 msgstr "Журнал S.M.A.R.T."
 
 msgid "SCSI Name"
-msgstr ""
+msgstr "Ім'я SCSI"
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, з перевіркою"
@@ -8300,9 +8372,6 @@ msgstr "Вторинний кеш"
 
 msgid "Seconds"
 msgstr "сек."
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "Таємна фраза"
@@ -10212,6 +10281,9 @@ msgstr ""
 "що в багатокористувацьких системах може бути корисно для більш гнучкого "
 "використання одного загального ресурсу."
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "Портал '%s' є неприпустимим."
@@ -10902,7 +10974,7 @@ msgstr ""
 "HMO."
 
 msgid "Threads"
-msgstr ""
+msgstr "Потоки"
 
 msgid "Throughput"
 msgstr "Пропускна здатність"
@@ -11236,7 +11308,7 @@ msgid "UID"
 msgstr "UID"
 
 msgid "UNMAP"
-msgstr ""
+msgstr "UNMAP"
 
 msgid "UNMAP Block Offset"
 msgstr ""
@@ -11350,7 +11422,7 @@ msgid "UTF-8 Only"
 msgstr "тільки UTF-8"
 
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11726,6 +11798,9 @@ msgid ""
 msgstr ""
 "Значення дорівнює '100 мінус температура за Цельсієм', дозволяє виробнику "
 "встановити мінімальний поріг, який відповідає максимальній температурі."
+
+msgid "Value of the option."
+msgstr ""
 
 msgid "Variable"
 msgstr "Змінна"
@@ -12305,7 +12380,7 @@ msgid "infinity"
 msgstr "безкінечно"
 
 msgid "less then 1.8\"."
-msgstr ""
+msgstr "менш ніж 1.8\"."
 
 msgid "load/unload failed."
 msgstr "збій завантаження / розвантаження."
@@ -12391,3 +12466,15 @@ msgstr "використано з"
 
 msgid "visible"
 msgstr "видимий"
+
+#~ msgid "4096"
+#~ msgstr "4096"
+
+#~ msgid "512"
+#~ msgstr "512"
+
+#~ msgid "8192"
+#~ msgstr "8192"
+
+#~ msgid "2048"
+#~ msgstr "2048"

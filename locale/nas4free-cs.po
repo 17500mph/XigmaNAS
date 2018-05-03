@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
-"PO-Revision-Date: 2018-04-20 09:38+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
+"PO-Revision-Date: 2018-04-30 08:37+0000\n"
+"Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:24+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:28+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -199,10 +199,16 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Pro vytvoření svazku typu RAID-1 je zapotřebí jednoho a více disků."
 
 msgid "1.8\""
+msgstr "1.8\""
+
+msgid "16 KiB"
 msgstr ""
 
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Pro vytvoření svazku typu RAID-0 je zapotřebí dvou a více disků."
@@ -211,10 +217,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Pro vytvoření svazku typu RAID-1 je zapotřebí dvou a více disků."
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -223,32 +226,38 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Pro vytvoření svazku typu RAID-5 je zapotřebí třech a více disků."
 
 msgid "3.5\""
+msgstr "3.5\""
+
+msgid "32 KiB"
 msgstr ""
 
-msgid "4096"
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB mezivrstva (wrapper)"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr "514"
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr "69"
+
+msgid "8 KiB"
+msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
 "Značka virtuální sítě (VLAN) dle normy 802.1Q – číslo z rozsahu 1 až 4094."
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -505,7 +514,7 @@ msgid "Add"
 msgstr "Přidat"
 
 msgid "Add Auth Group"
-msgstr ""
+msgstr "Přidat ověřovací skupinu"
 
 msgid "Add Bridge"
 msgstr "Přidat síťový most"
@@ -532,7 +541,7 @@ msgid "Add LAGG"
 msgstr "Přidat LAGG"
 
 msgid "Add LUN"
-msgstr ""
+msgstr "Přidat LUN"
 
 msgid "Add MIB"
 msgstr "Přidat MIB"
@@ -547,7 +556,7 @@ msgid "Add Pool"
 msgstr "Přidat fond"
 
 msgid "Add Portal Group"
-msgstr ""
+msgstr "Přidat skupinu portálu"
 
 msgid "Add RAID"
 msgstr "Přidat RAID pole"
@@ -577,7 +586,7 @@ msgid "Add Snapshot"
 msgstr "Přidat zachycený stav"
 
 msgid "Add Target"
-msgstr ""
+msgstr "Přidat cíl"
 
 msgid "Add URL"
 msgstr "Přidat URL adresu"
@@ -661,10 +670,10 @@ msgid "Additional Network"
 msgstr "Další síť"
 
 msgid "Additional Options for Block Backend"
-msgstr ""
+msgstr "Další předvolby pro blokovou podpůrnou vrstvu"
 
 msgid "Additional Options for RAM Disk Backend"
-msgstr ""
+msgstr "Další předvolby pro podpůrnou vrstvu úložiště v operační paměti"
 
 msgid "Additional Parameter"
 msgstr "Další parametr"
@@ -762,7 +771,7 @@ msgid "Algorithm"
 msgstr "Algoritmus"
 
 msgid "Alias"
-msgstr ""
+msgstr "Alternativní název"
 
 msgid "All"
 msgstr "Vše"
@@ -839,7 +848,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Umožnit klientům navazovat přerušená odesílání a stahovaní souborů."
 
 msgid "Allow consecutive read/writes to be issued in parallel"
-msgstr ""
+msgstr "Umožnit souběh vyřízení po sobě jdoucích požadavků na čtení/zápis"
 
 msgid "Allow new files to be created."
 msgstr "Umožnit vytváření nových souborů."
@@ -938,7 +947,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "Úložná jednotka určuje úložnou oblast na cíli."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr "IPv4 nebo IPv6 adresa iSNS serveru na kterém zaregistrovat."
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -970,6 +985,9 @@ msgstr "Vyskytla se chyba."
 
 msgid "An host with this name already exists."
 msgstr "Tento název je už používán pro jiný stroj."
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Rozhraní s tímto popisem už v systému existuje."
@@ -1061,9 +1079,18 @@ msgstr "Opravdu chcete vrátit veškerá nastavení serveru do výchozího stavu
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Opravdu chcete server vypnout?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -1123,13 +1150,13 @@ msgid "Auth Group"
 msgstr "Skupina pověřených"
 
 msgid "Auth Group Name"
-msgstr ""
+msgstr "Název ověřovací skupiny"
 
 msgid "Auth Group Settings"
 msgstr "Nastavení skupiny pověřených"
 
 msgid "Auth Group is locked"
-msgstr ""
+msgstr "Ověřovací skupina je uzamčena"
 
 msgid "Auth Group is marked for deletion"
 msgstr ""
@@ -1150,7 +1177,7 @@ msgid "Auth Method"
 msgstr "Způsob ověř."
 
 msgid "Auth Type"
-msgstr ""
+msgstr "Typ ověřování"
 
 msgid "Authenticate Path & Realm"
 msgstr "Popis umístění ověřování a oblast (realm)"
@@ -1253,7 +1280,7 @@ msgid "Back"
 msgstr "Zpět"
 
 msgid "Backend"
-msgstr ""
+msgstr "Podpůrná vrstva (backend)"
 
 msgid "Background"
 msgstr "Pozadí"
@@ -1384,7 +1411,7 @@ msgid "Blank Time"
 msgstr "Zatmívací čas"
 
 msgid "Block"
-msgstr ""
+msgstr "Bloková"
 
 msgid "Block Size"
 msgstr "Velikost bloku"
@@ -2604,7 +2631,7 @@ msgid "Delete Login Info"
 msgstr "Smazat údaje o přihlášení"
 
 msgid "Delete Selected Auth Groups"
-msgstr ""
+msgstr "Smazat označené ověřovací skupiny"
 
 msgid "Delete Selected Bridges"
 msgstr "Smazat označené síťové mosty"
@@ -2649,7 +2676,7 @@ msgid "Delete Selected Pools"
 msgstr "Smazat označené fondy úložišť"
 
 msgid "Delete Selected Portal Groups"
-msgstr ""
+msgstr "Smazat označené skupiny portálu"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Smazat označené RAID svazky"
@@ -2679,7 +2706,7 @@ msgid "Delete Selected Snapshots"
 msgstr "Smazat označené zachycené stavy"
 
 msgid "Delete Selected Targets"
-msgstr ""
+msgstr "Smazat označené cíle"
 
 msgid "Delete Selected User Accounts"
 msgstr "Smazat označené uživatelské účty"
@@ -2872,7 +2899,7 @@ msgid "Device /dev/%s - %s"
 msgstr "Zařízení /dev/%s – %s"
 
 msgid "Device ID"
-msgstr ""
+msgstr "Identifikátor zařízení"
 
 msgid "Device IP"
 msgstr "IP adresa zařízení"
@@ -2893,7 +2920,7 @@ msgid "Device Serial"
 msgstr "Sériové číslo zařízení"
 
 msgid "Device Type"
-msgstr ""
+msgstr "Typ zařízení"
 
 msgid "Device contains boot partition"
 msgstr "Zařízení obsahuje zaváděcí oddíl"
@@ -3578,7 +3605,7 @@ msgid "ERROR:"
 msgstr "CHYBA:"
 
 msgid "EUI-64"
-msgstr ""
+msgstr "EUI-64"
 
 msgid "Edit"
 msgstr "Upravit"
@@ -3626,7 +3653,7 @@ msgid "Edit Pool"
 msgstr "Upravit fond"
 
 msgid "Edit Portal Group"
-msgstr ""
+msgstr "Upravit skupinu portálu"
 
 msgid "Edit RAID"
 msgstr "Upravit RAID pole"
@@ -3656,7 +3683,7 @@ msgid "Edit Snapshot"
 msgstr "Upravit zachycený stav"
 
 msgid "Edit Target"
-msgstr ""
+msgstr "Upravit cíl"
 
 msgid "Edit URL"
 msgstr "Upravit URL adresu"
@@ -4111,6 +4138,9 @@ msgstr "Zadejte e-mailové adresy"
 msgid "Enter IP Address"
 msgstr "Zadejte IP adresu"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "Zadejte identifikátor"
 
@@ -4233,10 +4263,13 @@ msgstr "Zadejte uživatelské jméno"
 msgid "Enter login name of the user."
 msgstr "Zadejte přihlašovací jméno uživatele."
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr "Zadejte název"
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4303,7 +4336,7 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr "Zadejte název stroje, na který budou SNMP upozornění zasílána."
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4802,7 +4835,7 @@ msgid "Give your media library a friendly name."
 msgstr "Dejte své knihovně médií nějaký praktický název."
 
 msgid "Global Settings"
-msgstr ""
+msgstr "Globální nastavení"
 
 msgid "Global numeric identifier to use for a given LUN inside CTL."
 msgstr ""
@@ -5063,6 +5096,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP adresa"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP adresa"
 
@@ -5097,6 +5133,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5441,7 +5483,7 @@ msgid "Inquiry Vendor"
 msgstr "Zjistit výrobce"
 
 msgid "Insecure TPC"
-msgstr ""
+msgstr "Nezabezpečené TPC"
 
 msgid "Insensitive"
 msgstr "Nerozlišovat"
@@ -5693,6 +5735,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5712,6 +5757,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6421,6 +6469,12 @@ msgstr "Vzájemné ověření CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Uživatelé, ověřovaní vzájemně protokolem CHAP"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6492,7 +6546,7 @@ msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "Název NAS stroje, bez doménové části, např.: %s."
 
 msgid "Name of the Portal Group."
-msgstr ""
+msgstr "Název skupiny portálu."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -6500,13 +6554,19 @@ msgstr ""
 "Název zařízení, které bude používáno pro odkládání paměťových stránek "
 "(„swap“), např. %s."
 
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
+
 msgid ""
 "Name of the server. If this field is left empty the default server is "
 "specified."
 msgstr "Název serveru. Pokud není vyplněno, je použit výchozí „server“."
 
 msgid "Name of the target."
-msgstr ""
+msgstr "Název cíle."
 
 msgid "Name of the variable."
 msgstr "Název proměnné"
@@ -6944,6 +7004,12 @@ msgstr "V L2ARC mezipaměti budou uchovávána pouze metadata."
 msgid "Option"
 msgstr "Předvolba"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr "Předvolba je uzamčena"
 
@@ -7228,6 +7294,9 @@ msgstr "Oprávnění"
 msgid "Permit Root Login"
 msgstr "Umožnit přihlášení správce systému (root)"
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -7238,7 +7307,7 @@ msgid "Physical Block Offset"
 msgstr ""
 
 msgid "Physical Block Size"
-msgstr ""
+msgstr "Velikost fyzického bloku"
 
 msgid "Physical Interface"
 msgstr "Fyzické rozhraní"
@@ -7395,6 +7464,9 @@ msgstr "Port %ld je už využíván jinou službou."
 msgid "Port Forwarding"
 msgstr "Přeposílání portů"
 
+msgid "Port Name"
+msgstr ""
+
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Je třeba, aby číslo portu bylo 514 nebo z rozmezí 1024 až 49151."
 
@@ -7440,19 +7512,19 @@ msgid "Portal Group"
 msgstr "Skupina portálu"
 
 msgid "Portal Group Name"
-msgstr ""
+msgstr "Název skupiny portálu"
 
 msgid "Portal Group Settings"
 msgstr "Nastavení skupiny portálu"
 
 msgid "Portal Group is locked"
-msgstr ""
+msgstr "Skupina portálu je uzamčena"
 
 msgid "Portal Group is marked for deletion"
-msgstr ""
+msgstr "Skupina portálu je označena ke smazání"
 
 msgid "Portal Group is unlocked"
-msgstr ""
+msgstr "Skupina portálu je odemčena"
 
 msgid "Portal Groups"
 msgstr "Skupiny portálu"
@@ -7560,7 +7632,7 @@ msgid "Processes"
 msgstr "Procesy"
 
 msgid "Processor"
-msgstr ""
+msgstr "Procesor"
 
 msgid "Product ID"
 msgstr "Identifikátor produktu"
@@ -7767,7 +7839,7 @@ msgid "Read"
 msgstr "Čtení"
 
 msgid "Read Cache"
-msgstr ""
+msgstr "Mezipaměť čtení"
 
 msgid "Read Only"
 msgstr "Pouze číst"
@@ -7861,7 +7933,7 @@ msgid "Recycle Bin"
 msgstr "Koš"
 
 msgid "Redirect"
-msgstr ""
+msgstr "Přesměrovat"
 
 msgid "Redundant Metadata"
 msgstr "Záložní kopie metadat"
@@ -7965,7 +8037,7 @@ msgid "Reorder Commands"
 msgstr "Přeuspořádat příkazy"
 
 msgid "Reordering"
-msgstr ""
+msgstr "Přeuspořádat"
 
 msgid "Replace Battery UPS"
 msgstr "Vyměňte akumulátory v UPS zdroji"
@@ -8362,9 +8434,6 @@ msgstr "Pomocná mezipaměť"
 
 msgid "Seconds"
 msgstr "Sekund"
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "Heslo"
@@ -9050,7 +9119,7 @@ msgid "Specifies how the volume should be exposed to the OS."
 msgstr "Určuje, jak má být svazek zpřístupněn operačnímu systému."
 
 msgid "Specifies medium rotation rate of the device."
-msgstr ""
+msgstr "Popisuje otáčky média v zařízení."
 
 msgid "Specifies nominal form factor of the device."
 msgstr ""
@@ -9466,16 +9535,16 @@ msgid "Target information"
 msgstr "Informace o cíli"
 
 msgid "Target is locked"
-msgstr ""
+msgstr "Cíl je uzamčen"
 
 msgid "Target is marked for deletion"
-msgstr ""
+msgstr "Cíl je označen pro smazání"
 
 msgid "Target is not selected."
 msgstr "Není vybrán cíl."
 
 msgid "Target is unlocked"
-msgstr ""
+msgstr "Cíl je odemčen"
 
 msgid "Target list"
 msgstr "Seznam cílů"
@@ -10293,6 +10362,9 @@ msgstr ""
 "maskou vytváření a složek, ale parametr „přebírat oprávnění“ toto přebíjí. "
 "Může být užitečné zejména na systémech s mnoha uživateli, kdy umožní "
 "bezproblémové používání sdílení každým z uživatelů."
+
+msgid "The port to listen on."
+msgstr ""
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -11445,7 +11517,7 @@ msgid "UTF-8 Only"
 msgstr "Pouze UTF-8"
 
 msgid "UUID"
-msgstr ""
+msgstr "Nikde se neopakující identifikátor (UUID)"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11457,7 +11529,7 @@ msgid "Uncorrected read errors reported to the operating system."
 msgstr "Neopravené chyby čtení, nahlášené operačnímu systému."
 
 msgid "Undefined"
-msgstr ""
+msgstr "Neurčeno"
 
 msgid "Unformated"
 msgstr "Bez souborového systému"
@@ -11530,7 +11602,7 @@ msgid "Unmounting..."
 msgstr "Odpojování…"
 
 msgid "Unrestricted"
-msgstr ""
+msgstr "Neomezeno"
 
 msgid "Up"
 msgstr "Funkční"
@@ -11689,7 +11761,7 @@ msgid "Used"
 msgstr "Použito"
 
 msgid "Used Threshold"
-msgstr ""
+msgstr "Použitá hranice"
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -11821,6 +11893,9 @@ msgid ""
 msgstr ""
 "Hodnota se rovná 100 - teplota ve stupních Celsia – umožňuje výrobci "
 "nastavit spodní hranici která odpovídá nejvyšší teplotě."
+
+msgid "Value of the option."
+msgstr ""
 
 msgid "Variable"
 msgstr "Proměnná"
@@ -12389,13 +12464,13 @@ msgid "iSNS Period"
 msgstr ""
 
 msgid "iSNS Server"
-msgstr ""
+msgstr "iSNS server"
 
 msgid "iSNS Server Port"
-msgstr ""
+msgstr "Port na iSNS serveru"
 
 msgid "iSNS Timeout"
-msgstr ""
+msgstr "Časový limit iSNS"
 
 msgid ""
 "iSNS registration period. Registered Network Entity not updated during this "
@@ -12409,7 +12484,7 @@ msgid "infinity"
 msgstr "nekonečno"
 
 msgid "less then 1.8\"."
-msgstr ""
+msgstr "méně než 1,8\"."
 
 msgid "load/unload failed."
 msgstr "načtení/uvolnění se nezdařilo."
@@ -12499,3 +12574,21 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
+
+#~ msgid "2048"
+#~ msgstr "2048"
+
+#~ msgid "4096"
+#~ msgstr "4096"
+
+#~ msgid "512"
+#~ msgstr "512"
+
+#~ msgid "8192"
+#~ msgstr "8192"
+
+#~ msgid "Enter user name"
+#~ msgstr "Zadejte uživatelské jméno"
+
+#~ msgid "Enter secret"
+#~ msgstr "Zadejte heslo"

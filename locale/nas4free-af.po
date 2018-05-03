@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
 "PO-Revision-Date: 2018-03-07 00:06+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:26+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:31+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 
 msgid " interfaces:"
@@ -200,8 +200,14 @@ msgstr "1 of meer skywe word benodig om 'n RAID-1 volume te bou."
 msgid "1.8\""
 msgstr ""
 
+msgid "16 KiB"
+msgstr ""
+
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 of meer skywe word benodig om 'n RAID-0 volume te bou."
@@ -210,9 +216,6 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 of meer skywe word benodig om 'n RAID-1 volume te bou."
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
 msgstr ""
 
 msgid "3"
@@ -224,7 +227,10 @@ msgstr "3 of meer skywe word benodig om 'n RAID-5 volume te bou."
 msgid "3.5\""
 msgstr ""
 
-msgid "4096"
+msgid "32 KiB"
+msgstr ""
+
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
@@ -233,20 +239,23 @@ msgstr "4KG omhulsel"
 msgid "5.25\""
 msgstr ""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr ""
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
+msgstr ""
+
+msgid "8 KiB"
 msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiket (tussen 1 en 4094)."
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -926,7 +935,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "'n Omvang definieer die stoor area van die Teiken."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -954,6 +969,9 @@ msgstr "'n Fout het voorgekom."
 
 msgid "An host with this name already exists."
 msgstr "Daar bestaan reeds 'n bediener met hierdie naam."
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Daar bestaan reeds 'n koppelvlak met die gespesifiseerde beskrywing."
@@ -1043,9 +1061,18 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Is jy seker dat jy die bediener wil afsit?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -4032,6 +4059,9 @@ msgstr ""
 msgid "Enter IP Address"
 msgstr ""
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr ""
 
@@ -4154,10 +4184,13 @@ msgstr ""
 msgid "Enter login name of the user."
 msgstr ""
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr ""
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4222,7 +4255,7 @@ msgstr "Sleutel die poort waarheen lokvalle gestuur word (standaard 162) in."
 msgid "Enter trap host name."
 msgstr "Insleutel val / \"trap\" gasheer naam"
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4971,6 +5004,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP Adres"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP adres"
 
@@ -5005,6 +5041,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5585,6 +5627,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5604,6 +5649,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6277,6 +6325,12 @@ msgstr "Wedersydse CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Wedersydse CHAP gebruikers"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6351,6 +6405,12 @@ msgstr ""
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "Naam van die uitruil toestel om te gebruik, bv. %s"
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6792,6 +6852,12 @@ msgstr ""
 msgid "Option"
 msgstr "Opsie"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr "Opsie is gesluit"
 
@@ -7080,6 +7146,9 @@ msgstr ""
 msgid "Permit Root Login"
 msgstr ""
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -7244,6 +7313,9 @@ msgid "Port %ld is already used by another service."
 msgstr "Poort %ld woord reeds deur 'n ander toestel gebruik."
 
 msgid "Port Forwarding"
+msgstr ""
+
+msgid "Port Name"
 msgstr ""
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
@@ -8190,9 +8262,6 @@ msgstr ""
 
 msgid "Seconds"
 msgstr "Sekondes"
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "Geheim"
@@ -10080,6 +10149,9 @@ msgstr ""
 "oorheers dit. Dit kan baie behulpsaam wees op stelsels met baie gebruikers "
 "sodat 'n enkele deel buigbaar gebruik kan word deur elke gebruiker."
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "Die portaal '%s' is ongeldig."
@@ -11499,6 +11571,9 @@ msgstr "Waarde"
 msgid ""
 "Value is equal to (100-temp. Celsius), allowing manufacturer to set a "
 "minimum threshold which corresponds to a maximum temperature."
+msgstr ""
+
+msgid "Value of the option."
 msgstr ""
 
 msgid "Variable"

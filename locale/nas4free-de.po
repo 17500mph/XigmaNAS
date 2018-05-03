@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
-"PO-Revision-Date: 2018-04-20 07:28+0000\n"
-"Last-Translator: Tomfro <Unknown>\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
+"PO-Revision-Date: 2018-05-02 10:41+0000\n"
+"Last-Translator: ms49434 <ms49434@nas4free.org>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:24+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:28+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -203,10 +203,16 @@ msgstr ""
 "Mindestens zwei Festplatten werden für eine RAID-1 Konfiguration benötigt."
 
 msgid "1.8\""
+msgstr "1.8\""
+
+msgid "16 KiB"
 msgstr ""
 
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
@@ -217,10 +223,7 @@ msgstr ""
 "Mindestens zwei Festplatten werden für eine RAID-1 Konfiguration benötigt."
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -230,31 +233,37 @@ msgstr ""
 "Mindestens drei Festplatten werden für eine RAID-5 Konfiguration benötigt."
 
 msgid "3.5\""
+msgstr "3.5\""
+
+msgid "32 KiB"
 msgstr ""
 
-msgid "4096"
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4k Anpassung"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr "514"
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
 msgstr "69"
 
+msgid "8 KiB"
+msgstr ""
+
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN-Markierung (zwischen 1 und 4094)."
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -517,7 +526,7 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 msgid "Add Auth Group"
-msgstr ""
+msgstr "Füge Auth Group hinzu"
 
 msgid "Add Bridge"
 msgstr "Brücke Hinzufügen"
@@ -544,7 +553,7 @@ msgid "Add LAGG"
 msgstr "LAGG Hinzufügen"
 
 msgid "Add LUN"
-msgstr ""
+msgstr "Füge LUN hinzu"
 
 msgid "Add MIB"
 msgstr "MIB Hinzufügen"
@@ -559,7 +568,7 @@ msgid "Add Pool"
 msgstr "Pool Hinzufügen"
 
 msgid "Add Portal Group"
-msgstr ""
+msgstr "Portal Group hinzufügen"
 
 msgid "Add RAID"
 msgstr "RAID Hinzufügen"
@@ -589,7 +598,7 @@ msgid "Add Snapshot"
 msgstr "Snapshot hinzufügen"
 
 msgid "Add Target"
-msgstr ""
+msgstr "Ziel hinzufügen"
 
 msgid "Add URL"
 msgstr "URL Hinzufügen"
@@ -774,7 +783,7 @@ msgid "Algorithm"
 msgstr "Algorithmus"
 
 msgid "Alias"
-msgstr ""
+msgstr "Pseudonym"
 
 msgid "All"
 msgstr "Alle"
@@ -951,7 +960,13 @@ msgstr ""
 msgid "An Extent defines the storage area of the Target."
 msgstr "Ein Extent definiert den Speicherbereich des Ziels."
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -983,6 +998,9 @@ msgstr "Ein fehler ist aufgetreten."
 
 msgid "An host with this name already exists."
 msgstr "Ein Host mit diesem Namen existiert bereits."
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr ""
@@ -1078,9 +1096,18 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Sind Sie sicher, dass Sie den Server herunterfahren wollen?"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -1529,10 +1556,10 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD"
-msgstr ""
+msgstr "CD"
 
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
@@ -1892,7 +1919,7 @@ msgstr ""
 "Empfehlenswert ausschließlich beim Internettransfer."
 
 msgid "Configuration"
-msgstr "Einstellungen"
+msgstr "Konfiguration"
 
 msgid "Configuration Directory"
 msgstr "Konfigurationsverzeichnis"
@@ -2424,7 +2451,7 @@ msgid "DVD"
 msgstr "DVD"
 
 msgid "DVD-ROM"
-msgstr ""
+msgstr "DVD-ROM"
 
 msgid "Daemon"
 msgstr "Dienst"
@@ -2619,7 +2646,7 @@ msgid "Delete Selected LAGGs"
 msgstr "Ausgewählte LAGG Konfigurationen Löschen"
 
 msgid "Delete Selected LUNs"
-msgstr ""
+msgstr "Löschen ausgewählter LUNs"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Ausgewählte NFS Freigaben Löschen"
@@ -2855,7 +2882,7 @@ msgid "Device /dev/%s - %s"
 msgstr "Gerät /dev/%s - %s"
 
 msgid "Device ID"
-msgstr ""
+msgstr "Gerätekennung (Device ID)"
 
 msgid "Device IP"
 msgstr "IP des Geräts"
@@ -2876,7 +2903,7 @@ msgid "Device Serial"
 msgstr "Seriennummer"
 
 msgid "Device Type"
-msgstr ""
+msgstr "Gerätetyp"
 
 msgid "Device contains boot partition"
 msgstr "Gerät enthält die Boot-Partition"
@@ -2921,7 +2948,7 @@ msgid "Digital Audio Access Protocol"
 msgstr "Digital Audio Access Protocol"
 
 msgid "Direct"
-msgstr ""
+msgstr "Direkt"
 
 msgid "Direction"
 msgstr "Richtung"
@@ -4110,6 +4137,9 @@ msgstr "Geben Sie die Email-Adresse ein:"
 msgid "Enter IP Address"
 msgstr "IP Adresse eingeben"
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr "Identifier eingeben"
 
@@ -4238,10 +4268,13 @@ msgstr "Geben Sie den Login-Namen ein"
 msgid "Enter login name of the user."
 msgstr "Bitte Benutzernamen eingeben."
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr "Name eingeben"
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4309,7 +4342,7 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr "Geben Sie den Trap Hostnamen an."
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4803,7 +4836,7 @@ msgstr ""
 "Vergeben Sie einen benutzerfreundlichen Namen für ihre Mediendatenbank"
 
 msgid "Global Settings"
-msgstr ""
+msgstr "Globale Einstellungen"
 
 msgid "Global numeric identifier to use for a given LUN inside CTL."
 msgstr ""
@@ -5060,6 +5093,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP Adresse"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP-Adresse"
 
@@ -5094,6 +5130,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5692,6 +5734,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5711,6 +5756,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -6410,6 +6458,12 @@ msgstr "Gegenseitiges CHAP"
 msgid "Mutual CHAP Users"
 msgstr "Benutzer für Gegenseitiges CHAP"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6486,6 +6540,12 @@ msgid "Name of the device to use as swap device, e.g. %s."
 msgstr ""
 "Name des Gerätes welches als Swap-Bereich verwendet werden soll, z.B. %s."
 
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
+
 msgid ""
 "Name of the server. If this field is left empty the default server is "
 "specified."
@@ -6493,7 +6553,7 @@ msgstr ""
 "Name des Servers. Wenn das Feld leer ist, wird der Standardserver angegeben."
 
 msgid "Name of the target."
-msgstr ""
+msgstr "Name des Ziels."
 
 msgid "Name of the variable."
 msgstr "Name der Variablen."
@@ -6799,7 +6859,7 @@ msgstr ""
 "des Protokolls kümmert."
 
 msgid "Not Reported"
-msgstr ""
+msgstr "Nicht berichtet"
 
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
@@ -6928,6 +6988,12 @@ msgstr "Nur Metadaten werden gecached im L2ARC."
 
 msgid "Option"
 msgstr "Einstellung"
+
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
 
 msgid "Option is locked"
 msgstr "Einstellung ist gesperrt"
@@ -7216,6 +7282,9 @@ msgstr "Berechtigung"
 msgid "Permit Root Login"
 msgstr "Root-Login zulassen"
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -7381,6 +7450,9 @@ msgstr "Port %ld wird bereits von einem anderen Dienst verwendet."
 msgid "Port Forwarding"
 msgstr "Port-Weiterleitung"
 
+msgid "Port Name"
+msgstr ""
+
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Die Portnummer muss 514 oder eine Zahl zwischen 1024 und 49151 sein."
 
@@ -7543,7 +7615,7 @@ msgid "Processes"
 msgstr "Prozesse"
 
 msgid "Processor"
-msgstr ""
+msgstr "Prozessor"
 
 msgid "Product ID"
 msgstr "Produkt-ID"
@@ -7684,13 +7756,13 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAM Disk"
-msgstr ""
+msgstr "RAM Disk"
 
 msgid "RAW info"
 msgstr "RAW Informationen"
 
 msgid "RPM"
-msgstr ""
+msgstr "U/min (RPM)"
 
 #, php-format
 msgid ""
@@ -7838,7 +7910,7 @@ msgid "Recycle Bin"
 msgstr "Papierkorb"
 
 msgid "Redirect"
-msgstr ""
+msgstr "Umleiten"
 
 msgid "Redundant Metadata"
 msgstr "Redundante Metadaten"
@@ -8338,9 +8410,6 @@ msgstr "Sekundärer Cache"
 
 msgid "Seconds"
 msgstr "Sekunden"
-
-msgid "Seconfary"
-msgstr ""
 
 msgid "Secret"
 msgstr "Geheimnis"
@@ -9452,16 +9521,16 @@ msgid "Target information"
 msgstr "Informationen über das iSCSI Ziel"
 
 msgid "Target is locked"
-msgstr ""
+msgstr "Ziel ist gesperrt"
 
 msgid "Target is marked for deletion"
-msgstr ""
+msgstr "Ziel ist zum Löschen vorgemerkt"
 
 msgid "Target is not selected."
 msgstr "Ziel ist nicht selektiert."
 
 msgid "Target is unlocked"
-msgstr ""
+msgstr "Ziel ist entsperrt"
 
 msgid "Target list"
 msgstr "Zielliste"
@@ -10276,6 +10345,9 @@ msgstr ""
 "Systemen sinnvoll sein, auf denen viele Benutzer auf eine einzelne Freigabe "
 "flexibel zugreifen wollen."
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "Das Portal '%s' ist ungültig."
@@ -10502,6 +10574,7 @@ msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
+"Diese Parameter werden zum globalen Abschnitt von ctl.conf hinzugefügt"
 
 msgid "These parameter will be added to this auth-group."
 msgstr ""
@@ -11004,7 +11077,7 @@ msgstr ""
 "(Festplattenrekorder) mit HMO (Home Media Option) ermöglicht."
 
 msgid "Threads"
-msgstr ""
+msgstr "Threads"
 
 msgid "Throughput"
 msgstr "Durchsatz"
@@ -11337,19 +11410,19 @@ msgid "UID"
 msgstr "UID"
 
 msgid "UNMAP"
-msgstr ""
+msgstr "UNMAP"
 
 msgid "UNMAP Block Offset"
-msgstr ""
+msgstr "UNMAP Block Offset"
 
 msgid "UNMAP Block Size"
-msgstr ""
+msgstr "UNMAP Block Größe"
 
 msgid "UNMAP Maximum Descriptors"
-msgstr ""
+msgstr "UNMAP Maximum Deskriptoren"
 
 msgid "UNMAP Maximum LBA"
-msgstr ""
+msgstr "UNMAP Maximum LBA"
 
 msgid "UPS"
 msgstr "USV"
@@ -11452,7 +11525,7 @@ msgid "UTF-8 Only"
 msgstr "Nur UTF-8"
 
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 msgid "Umask"
 msgstr "Unmaskieren (Unix)"
@@ -11464,7 +11537,7 @@ msgid "Uncorrected read errors reported to the operating system."
 msgstr "Nichtbehobende Lesefehler lt. Betriebssystem."
 
 msgid "Undefined"
-msgstr ""
+msgstr "Nicht festgelegt"
 
 msgid "Unformated"
 msgstr "Unformatiert"
@@ -11535,7 +11608,7 @@ msgid "Unmounting..."
 msgstr "Aushängen läuft …"
 
 msgid "Unrestricted"
-msgstr ""
+msgstr "Unbegrenzt"
 
 msgid "Up"
 msgstr "Auf"
@@ -11690,7 +11763,7 @@ msgid "Used"
 msgstr "Benutzt"
 
 msgid "Used Threshold"
-msgstr ""
+msgstr "Verwendeter Schwellwert"
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -11823,6 +11896,9 @@ msgid ""
 msgstr ""
 "Der Wert ist gleich 100°C, dies erlaubt den Hersteller eine minimale "
 "Schwelle zu setzen, welche vergleichbar mit der maximalen Temperatur ist."
+
+msgid "Value of the option."
+msgstr ""
 
 msgid "Variable"
 msgstr "Variable"
@@ -12388,16 +12464,16 @@ msgid "iSCSI initiator disabled."
 msgstr "iSCSI Initiator deaktiviert."
 
 msgid "iSNS Period"
-msgstr ""
+msgstr "iSNS Periode"
 
 msgid "iSNS Server"
-msgstr ""
+msgstr "iSNS Server"
 
 msgid "iSNS Server Port"
-msgstr ""
+msgstr "iSNS Server Port"
 
 msgid "iSNS Timeout"
-msgstr ""
+msgstr "iSNS Zeitüberschreitung (Timeout)"
 
 msgid ""
 "iSNS registration period. Registered Network Entity not updated during this "
@@ -12497,3 +12573,21 @@ msgstr "benutzt von"
 
 msgid "visible"
 msgstr "sichtbar"
+
+#~ msgid "8192"
+#~ msgstr "8192"
+
+#~ msgid "2048"
+#~ msgstr "2048"
+
+#~ msgid "4096"
+#~ msgstr "4096"
+
+#~ msgid "512"
+#~ msgstr "512"
+
+#~ msgid "Enter user name"
+#~ msgstr "Benutzernamen eingeben"
+
+#~ msgid "Enter secret"
+#~ msgstr "Geheimnis eingeben"

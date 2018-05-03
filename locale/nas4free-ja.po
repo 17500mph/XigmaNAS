@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-04-28 16:02+0000\n"
+"POT-Creation-Date: 2018-05-03 23:00+0000\n"
 "PO-Revision-Date: 2017-10-11 12:48+0000\n"
 "Last-Translator: Kenichi Yamada <yamaken_sapporo@me.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-28 14:24+0000\n"
+"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -184,8 +184,14 @@ msgstr "RAID-1ボリュームを作成するには1個以上のディスクが�
 msgid "1.8\""
 msgstr ""
 
+msgid "16 KiB"
+msgstr ""
+
 msgid "2"
 msgstr "2"
+
+msgid "2 KiB"
+msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "RAID-0のボリュームを構成するには、2台かそれ以上の台数のハードディスクが必要です。"
@@ -194,9 +200,6 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "RAID-1のボリュームを構成するには、2台かそれ以上の台数のハードディスクが必要です。"
 
 msgid "2.5\""
-msgstr ""
-
-msgid "2048"
 msgstr ""
 
 msgid "3"
@@ -208,7 +211,10 @@ msgstr "RAID-5のボリュームを構成するには、3台かそれ以上の�
 msgid "3.5\""
 msgstr ""
 
-msgid "4096"
+msgid "32 KiB"
+msgstr ""
+
+msgid "4 KiB"
 msgstr ""
 
 msgid "4KB wrapper"
@@ -217,20 +223,23 @@ msgstr "4KBラッパー"
 msgid "5.25\""
 msgstr ""
 
-msgid "512"
+msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
 msgstr ""
 
+msgid "64 KiB"
+msgstr ""
+
 msgid "69"
+msgstr ""
+
+msgid "8 KiB"
 msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN タグ (1 から 4094 まで)。"
-
-msgid "8192"
-msgstr ""
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
@@ -865,7 +874,13 @@ msgstr "認証グループはタグ番号で識別されるオプションです
 msgid "An Extent defines the storage area of the Target."
 msgstr "エクステントはターゲットのストレージ領域を定義します。"
 
+msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
+msgstr ""
+
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
+msgstr ""
+
+msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
 
 msgid ""
@@ -891,6 +906,9 @@ msgstr "エラーが発生しました。"
 
 msgid "An host with this name already exists."
 msgstr "この名前がつけられたホストは既に存在しています。"
+
+msgid "An iSCSI initiator name."
+msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "指定された説明がつけられたインタフェースは既に存在しています。"
@@ -974,9 +992,18 @@ msgstr "工場出荷設定にリセットしてもよろしいですか？"
 msgid "Are you sure you want to shutdown the server?"
 msgstr "サーバをシャットダウンしてもよろしいですか？"
 
+msgid "Assign a human-readable description to the target."
+msgstr ""
+
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
+msgstr ""
+
+msgid "Assign a previously defined authentication group to the target."
+msgstr ""
+
+msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
@@ -3839,6 +3866,9 @@ msgstr ""
 msgid "Enter IP Address"
 msgstr ""
 
+msgid "Enter IP address prefix length."
+msgstr ""
+
 msgid "Enter Identifier"
 msgstr ""
 
@@ -3955,10 +3985,13 @@ msgstr ""
 msgid "Enter login name of the user."
 msgstr ""
 
+msgid "Enter mutual user name."
+msgstr ""
+
 msgid "Enter name"
 msgstr ""
 
-msgid "Enter secret"
+msgid "Enter secret."
 msgstr ""
 
 msgid "Enter smartctl pass-through type."
@@ -4012,7 +4045,7 @@ msgstr "SNMPトラップの送信に利用するポート番号を入力して�
 msgid "Enter trap host name."
 msgstr "トラップホストを入力して下さい。"
 
-msgid "Enter user name"
+msgid "Enter user name."
 msgstr ""
 
 msgid "Enter value"
@@ -4740,6 +4773,9 @@ msgstr "IP"
 msgid "IP Address"
 msgstr "IP アドレス"
 
+msgid "IP Address Prefix"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP アドレス"
 
@@ -4772,6 +4808,12 @@ msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
+msgstr ""
+
+msgid ""
+"IPv4 or IPv6 address to redirect initiators to. When configured, all "
+"initiators attempting to connect to this target will get redirected using "
+"\"Target moved temporarily\" login response."
 msgstr ""
 
 msgid "IPv6 Address"
@@ -5313,6 +5355,9 @@ msgstr ""
 msgid "LUN Name"
 msgstr ""
 
+msgid "LUN Number"
+msgstr ""
+
 msgid "LUN Product"
 msgstr ""
 
@@ -5332,6 +5377,9 @@ msgid "LUN is marked for deletion"
 msgstr ""
 
 msgid "LUN is unlocked"
+msgstr ""
+
+msgid "LUN number"
 msgstr ""
 
 msgid "LUNs"
@@ -5995,6 +6043,12 @@ msgstr "双方向 CHAP"
 msgid "Mutual CHAP Users"
 msgstr "双方向 CHAP ユーザ"
 
+msgid "Mutual Secret"
+msgstr ""
+
+msgid "Mutual User"
+msgstr ""
+
 msgid "NAA Identifier"
 msgstr ""
 
@@ -6069,6 +6123,12 @@ msgstr ""
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "スワップデバイスとして使用するデバイスの名前。例) %s"
+
+msgid "Name of the option."
+msgstr ""
+
+msgid "Name of the port."
+msgstr ""
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6490,6 +6550,12 @@ msgstr ""
 msgid "Option"
 msgstr "オプション"
 
+msgid "Option Name"
+msgstr ""
+
+msgid "Option Value"
+msgstr ""
+
 msgid "Option is locked"
 msgstr ""
 
@@ -6767,6 +6833,9 @@ msgstr ""
 msgid "Permit Root Login"
 msgstr ""
 
+msgid "Permit access without authentication"
+msgstr ""
+
 msgid "Permit discovery without authentication"
 msgstr ""
 
@@ -6930,6 +6999,9 @@ msgid "Port %ld is already used by another service."
 msgstr "ポート番号 %ld は既に他のサービスで使用されています。"
 
 msgid "Port Forwarding"
+msgstr ""
+
+msgid "Port Name"
 msgstr ""
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
@@ -7848,9 +7920,6 @@ msgid "Secondary Cache"
 msgstr ""
 
 msgid "Seconds"
-msgstr ""
-
-msgid "Seconfary"
 msgstr ""
 
 msgid "Secret"
@@ -9610,6 +9679,9 @@ msgstr ""
 "によって制御されていますが、継承許可パラメータはこれを無効にします。これは、1つの共有が各ユーザによって柔軟に利用される事を可能にし、多くのユーザとシステ"
 "ムにで有益です。"
 
+msgid "The port to listen on."
+msgstr ""
+
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "ポータル '%s' は無効です。"
@@ -10955,6 +11027,9 @@ msgstr "値"
 msgid ""
 "Value is equal to (100-temp. Celsius), allowing manufacturer to set a "
 "minimum threshold which corresponds to a maximum temperature."
+msgstr ""
+
+msgid "Value of the option."
 msgstr ""
 
 msgid "Variable"
