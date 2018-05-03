@@ -2042,6 +2042,19 @@ trait co_DOMTools {
 		endif;
 		return $this;
 	}
+	public function ins_input_hidden(string $name = NULL,$value = '') {
+		if(isset($name) && preg_match('/\S/',$name) && is_scalar($value)):
+			$input_attributes = ['type' => 'hidden'];
+			if(preg_match('/\S/',$name)):
+				$input_attributes['name'] = $name;
+			endif;
+			if(is_scalar($value)):
+				$input_attributes['value'] = $value;
+			endif;
+			$this->addDIV()->insINPUT($input_attributes);
+		endif;
+		return $this;
+	}
 	public function ins_checkbox_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$input_attributes = [
 			'name' => sprintf('%s[]',$p->get_name()),
