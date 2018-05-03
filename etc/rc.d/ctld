@@ -209,9 +209,6 @@ ctld_mkconf()
 				--if "string-length(device_type) > 0" \
 					--value-of "concat('device_type ',device_type)" --nl \
 				--break \
-				--if "string-length(path) > 0" \
-					--value-of "concat('path \"',path,'\"')" --nl \
-				--break \
 				--if "string-length(serial) > 0" \
 					--value-of "concat('serial \"',serial,'\"')" --nl \
 				--break \
@@ -309,6 +306,9 @@ ctld_mkconf()
 					--value-of "concat('option writecache ',opt_writecache)" --nl \
 				--break \
 				--if "string-length(backend) = 0 or backend = 'block'" \
+					--if "string-length(path) > 0" \
+						--value-of "concat('path \"',path,'\"')" --nl \
+					--break \
 					--if "string-length(opt_file) > 0" \
 						--value-of "concat('option file \"',opt_file,'\"')" --nl \
 					--break \
