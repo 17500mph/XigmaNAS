@@ -308,14 +308,18 @@ ctld_mkconf()
 				--if "string-length(opt_writecache) > 0" \
 					--value-of "concat('option writecache ',opt_writecache)" --nl \
 				--break \
-				--if "string-length(opt_file) > 0" \
-					--value-of "concat('option file \"',opt_file,'\"')" --nl \
+				--if "string-length(backend) = 0 or backend = 'block'" \
+					--if "string-length(opt_file) > 0" \
+						--value-of "concat('option file \"',opt_file,'\"')" --nl \
+					--break \
+					--if "string-length(opt_num_threads) > 0" \
+						--value-of "concat('option num_threads ',opt_num_threads)" --nl \
+					--break \
 				--break \
-				--if "string-length(opt_num_threads) > 0" \
-					--value-of "concat('option num_threads ',opt_num_threads)" --nl \
-				--break \
-				--if "string-length(opt_capacity) > 0" \
-					--value-of "concat('option capacity ',opt_capacity)" --nl \
+				--if "backend = 'ramdisk'" \
+					--if "string-length(opt_capacity) > 0" \
+						--value-of "concat('option capacity ',opt_capacity)" --nl \
+					--break \
 				--break \
 				--match "auxparam" \
 					--if "position() < last() or string-length(.) > 0" \
