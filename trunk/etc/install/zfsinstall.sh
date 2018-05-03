@@ -100,6 +100,7 @@ cleandisk_init()
 
 	DISKS=${DEVICE_LIST}
 	NUM="0"
+	WIPESECTORCOUNT=16384
 	for DISK in ${DISKS}
 	do
 		echo "Cleaning disk ${DISK}"
@@ -110,10 +111,15 @@ cleandisk_init()
 
 		diskinfo ${DISK} | while read DISK sectorsize size sectors other
 			do
+				if [ ${WIPESECTORCOUNT} -gt ${sectors} ]; then
+					sectorstowipe=${sectors}
+				else
+					sectorstowipe=${WIPESECTORCOUNT}
+				fi
 				# Delete MBR, GPT Primary, ZFS(L0L1)/other partition table.
-				/bin/dd if=/dev/zero of=${DISK} bs=${sectorsize} count=8192 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=${DISK} bs=${sectorsize} count=${sectorstowipe} > /dev/null 2>&1
 				# Delete GEOM metadata, GPT Secondary(L2L3).
-				/bin/dd if=/dev/zero of=${DISK} bs=${sectorsize} oseek=`expr ${sectors} - 8192` count=8192 > /dev/null 2>&1
+				/bin/dd if=/dev/zero of=${DISK} bs=${sectorsize} oseek=`expr ${sectors} - ${sectorstowipe}` count=${sectorstowipe} > /dev/null 2>&1
 			done
 			NUM=`expr $NUM + 1`
 	done
@@ -814,7 +820,7 @@ menu_install()
 	fi
 
 	eval "cdialog --backtitle '$PRDNAME $APPNAME Installer'   --title 'Choose destination drive' \
-		--checklist 'Select (one) or (two) drives where $PRDNAME should be installed, use arrow keys to navigate to the drive(s) for installation then select a drive with the spacebar.' \
+		--checklist 'Select (one) or (more) drives where $PRDNAME should be installed, use arrow keys to navigate to the drive(s) for installation then select a drive with the spacebar.' \
 		${menuheight} 60 ${items} ${list}" 2>${tmpfile}
 	if [ 0 -ne $? ]; then
 		exit 0
