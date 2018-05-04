@@ -2423,7 +2423,9 @@ EOJ;
  *		</th>
  *	</tr>
  */
-		$link = sprintf('%s?submit=add',$sphere->modify->get_scriptname());
+		$querystring = http_build_query(['submit' => 'add'],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
+		$link = sprintf('%s?%s',$sphere->modify->get_scriptname(),$querystring);
+		//	PHP_QUERY_RFC3986
 		$tr = $this->addTR();
 		if($colspan > 1):
 			$tr->addTH(['class' => 'lcenl','colspan' => $colspan - 1]);
@@ -2566,9 +2568,8 @@ EOJ;
 
 		$div_attributes = ['id' => 'submit'];
 		if($use_config_setting):
-			$referrer = 'adddivsubmittodataframe';
 			$root = $this->ownerDocument ?? $this;
-			if(isset($config['system'][$referrer]) && (is_bool($config['system'][$referrer]) ? $config['system'][$referrer] : true)):
+			if(is_bool($test = $config['system']['adddivsubmittodataframe'] ?? false) ? $test : true):
 				$target = $root->getElementById('area_data_frame') ?? $this;
 				$subnode = $target->addDIV($div_attributes);
 			else:
