@@ -321,6 +321,11 @@ ctld_mkconf()
 						--value-of "concat('option capacity ',opt_capacity)" --nl \
 					--break \
 				--break \
+				--if "backend = 'passthrough'" \
+					--if "string-length(passthrough_address) > 0" \
+						--value-of "concat('passthrough-address ',passthrough_address)" --nl \
+					--break \
+				--break \
 				--match "auxparam" \
 					--if "position() < last() or string-length(.) > 0" \
 						--value-of "." --nl \
