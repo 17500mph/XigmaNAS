@@ -156,7 +156,8 @@ $a_referer = [
 	$cop->get_blocksize(),
 	$cop->get_ctl_lun(),
 	$cop->get_device_id(),
-	$cop->get_device_type(),	
+	$cop->get_device_type(),
+	$cop->get_passthrough_address(),
 	$cop->get_path(),
 	$cop->get_serial(),
 	$cop->get_size(),
@@ -364,6 +365,17 @@ $content->add_table_data_settings()->
 	pop()->
 	addTBODY()->
 		c2_input_text($cop->get_opt_capacity(),htmlspecialchars($sphere->row[$cop->get_opt_capacity()->get_name()]),false,false);
+/*
+$content->add_table_data_settings()->
+	ins_colgroup_data_settings()->
+	push()->
+	addTHEAD()->
+		c2_separator()->
+		c2_titleline(gtext('Additional Options for Passthrough Backend'))->
+	pop()->
+	addTBODY()->
+		c2_input_text($cop->get_passthrough_address(),htmlspecialchars($sphere->row[$cop->get_passthrough_address()->get_name()]),false,false);
+ */
 //	add buttons
 $buttons = $document->
 	add_area_buttons();

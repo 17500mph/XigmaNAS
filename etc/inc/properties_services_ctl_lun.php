@@ -100,6 +100,17 @@ class ctl_lun_properties extends co_property_container_param {
 			set_title(gtext('Device Type'));
 		return $property;
 	}
+	protected $x_passthrough_address;
+	public function get_passthrough_address() {
+		return $this->x_passthrough_address ?? $this->init_passthrough_address();
+	}
+	public function init_passthrough_address() {
+		$property = $this->x_passthrough_address = new property_text($this);
+		$property->
+			set_name('passthrough_address')->
+			set_title(gtext('Passthrough Address'));
+		return $property;
+	}
 	protected $x_path;
 	public function get_path() {
 		return $this->x_path ?? $this->init_path();
@@ -535,6 +546,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$options = [
 			'' => gtext('Default'),
 			'block' => gtext('Block'),
+//			'passthrough' => gtext('Passthrough'),
 			'ramdisk' => gtext('RAM Disk')
 		];
 		$property->
@@ -651,6 +663,24 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_passthrough_address() {
+		$property = parent::init_passthrough_address();
+		$description = gtext('Enter passthrough device address bus:path:lun');
+		$regexp = '/^(?:|[0-9]+:[0-9]+:[0-9]+)$/';
+		$property->
+			set_id('passthrough_address')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_size(20)->
+			set_maxlength(18)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
