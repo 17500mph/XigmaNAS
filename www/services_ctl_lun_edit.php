@@ -157,7 +157,7 @@ $a_referer = [
 	$cop->get_ctl_lun(),
 	$cop->get_device_id(),
 	$cop->get_device_type(),
-	$cop->get_passthrough_address(),
+//	$cop->get_passthrough_address(),
 	$cop->get_path(),
 	$cop->get_serial(),
 	$cop->get_size(),
