@@ -2090,6 +2090,7 @@ trait co_DOMTools {
 			$tr->addTDwC('lcelc')->insINPUT($input_attributes);
 			$tr->addTDwC('lcebl')->addElement('label',['for' => $input_attributes['id'],'style' => 'white-space:pre-wrap;'],$option_val);
 		endforeach;
+		return $this;
 	}
 
 	public function ins_filechooser($p,$value,bool $is_required = false,bool $is_readonly = false) {
