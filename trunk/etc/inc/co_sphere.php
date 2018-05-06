@@ -102,7 +102,10 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 		parent::__construct($basename,$extension);
 		$this->parent = new co_sphere_scriptname($basename,$extension);
 	}
-//	methods	
+//	methods
+	public function get_parent() {
+		return $this->parent;
+	}
 	public function enadis(bool $flag = NULL) {
 		if(isset($flag)):
 			$this->_enadis = $flag;
@@ -306,6 +309,15 @@ class co_sphere_grid extends co_sphere_level2 {
 		$this->inform = new co_sphere_scriptname($basename,$extension);
 	}
 //	methods
+	public function get_modify() {
+		return $this->modify;
+	}
+	public function get_maintain() {
+		return $this->maintain;
+	}
+	public function get_inform() {
+		return $this->inform;
+	}
 	public function get_notifier_processor() {
 		return $this->_notifier_processor ?? false;
 	}
