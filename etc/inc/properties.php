@@ -746,7 +746,6 @@ class property_list extends properties {
 /**
  * Method to apply the default class filter to a filter name.
  * The filter is a regex to match any of the option array keys.
- * @param string $filter_name Name of the filter, default = 'ui'.
  * @return object Returns $this.
  */
 	public function filter_use_default() {
