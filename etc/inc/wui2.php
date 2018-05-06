@@ -1997,15 +1997,22 @@ trait co_DOMTools {
 		$div->addElement('label',['for' => $p->get_id()],$p->get_caption());
 		return $this;
 	}
-	public function ins_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+	public function ins_input(properties $p,$value,bool $is_required = false,bool $is_readonly = false,int $type = 0) {
 		$id = $p->get_id();
 		$caption = $p->get_caption();
 		$input_attributes = [
-			'type' => 'text',
 			'id' => $id,
 			'name' => $p->get_name(),
 			'value' => $value
 		];
+		switch($type):
+			case 0:
+				$input_attributes['type'] = 'text';
+				break;
+			case 1:
+				$input_attributes['type'] = 'password';
+				break;
+		endswitch;
 		if($is_readonly):
 			$input_attributes['class'] = 'formfldro';
 			$input_attributes['disabled'] = 'disabled';
@@ -2510,7 +2517,14 @@ EOJ;
 	public function c2_input_text(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$this->
 			c2_row($p,$is_required,$is_readonly,true)->
-				ins_input_text($p,$value,$is_required,$is_readonly)->
+				ins_input($p,$value,$is_required,$is_readonly,0)->
+				ins_description($p);
+		return $this;
+	}
+	public function c2_input_password(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
+		$this->
+			c2_row($p,$is_required,$is_readonly,true)->
+				ins_input($p,$value,$is_required,$is_readonly,1)->
 				ins_description($p);
 		return $this;
 	}
