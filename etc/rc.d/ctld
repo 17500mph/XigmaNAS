@@ -88,22 +88,22 @@ ctld_mkconf()
 				--if "string-length(auth_type) > 0" \
 					--value-of "concat('auth-type ',auth_type)" --nl \
 				--break \
-				--match "chap/param[enable]" \
-					--if "string-length(user) > 0 and string-length(secret) > 0" \
-						--value-of "concat('chap \"',user,'\" \"',secret,'\"')" --nl \
+				--match "ctl_chap/param[enable]" \
+					--if "string-length(name) > 0 and string-length(secret) > 0" \
+						--value-of "concat('chap \"',name,'\" \"',secret,'\"')" --nl \
 					--break \
 				--break \
-				--match "chap_mutual/param[enable]" \
-					--if "string-length(user) > 0 and string-length(secret) > 0 and string-length(mutual_user) > 0 and string-length(mutual_secret) > 0" \
-						--value-of "concat('chap-mutual \"',user,'\" \"',secret,'\" \"',mutual_user,'\" \"',mutual_secret,'\"')" --nl \
+				--match "ctl_chap_mutual/param[enable]" \
+					--if "string-length(name) > 0 and string-length(secret) > 0 and string-length(mutual_name) > 0 and string-length(mutual_secret) > 0" \
+						--value-of "concat('chap-mutual \"',name,'\" \"',secret,'\" \"',mutual_name,'\" \"',mutual_secret,'\"')" --nl \
 					--break \
 				--break \
-				--match "initiator_name/param[enable]" \
+				--match "ctl_initiator_name/param[enable]" \
 					--if "string-length(name) > 0" \
 						--value-of "concat('initiator-name \"',name,'\"')" --nl \
 					--break \
 				--break \
-				--match "initiator_portal/param[enable]" \
+				--match "ctl_initiator_portal/param[enable]" \
 					--if "string-length(address) > 0" \
 						--output 'initiator-portal "' \
 						--if "contains(address,':')" \
@@ -158,7 +158,7 @@ ctld_mkconf()
 				--if "count(foreign) > 0" \
 					--output 'foreign' --nl \
 				--break \
-				--match "listen/param[enable]" \
+				--match "ctl_listen/param[enable]" \
 					--if "string-length(address) > 0" \
 						--output 'listen "' \
 						--if "contains(address,':')" \
@@ -172,7 +172,7 @@ ctld_mkconf()
 						--output '"' --nl \
 					--break \
 				--break \
-				--match "option/param[enable]" \
+				--match "ctl_option/param[enable]" \
 					--if "string-length(name) > 0 and string-length(value) > 0" \
 						--value-of "concat('option ',name,' ',value)" --nl \
 					--break \
@@ -352,7 +352,7 @@ ctld_mkconf()
 				--if "string-length(portal_group) > 0" \
 					--value-of "concat('portal-group ',portal_group)" --nl \
 				--break \
-				--match "port[enable]" \
+				--match "ctl_port[enable]" \
 					--if "string-length(name) > 0" \
 						--value-of "concat('port ',name)" --nl \
 					--break \
@@ -366,7 +366,7 @@ ctld_mkconf()
 					--break \
 					--output '"' --nl \
 				--break \
-				--match "lun[enable]" \
+				--match "ctl_lun[enable]" \
 					--if "string-length(number) > 0 and string-length(name) > 0" \
 						--value-of "concat('lun ',number,' \"',name,'\"')" --nl \
 					 --break \
