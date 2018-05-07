@@ -90,7 +90,7 @@ function ctl_sub_option_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Option')];
+	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Portal Groups'),gtext('Option')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','25%','10%','25%','10%'];
@@ -115,7 +115,7 @@ function ctl_sub_option_selection($cop,$sphere) {
 				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Group'))->
+				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
 				ins_tabnav_record('services_ctl_sub_listen.php',gtext('Listen'))->
 				ins_tabnav_record('services_ctl_sub_option.php',gtext('Option'),gtext('Reload page'),true);
 	//	create data area

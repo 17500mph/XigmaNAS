@@ -226,7 +226,7 @@ foreach($linked_parents as $linked_parent):
 	endif;
 endforeach;
 $cop->get_group()->set_options($all_parents);
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Option'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Portal Groups'),gtext('Option'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -243,7 +243,7 @@ $document->
 			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Group'))->
+			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
 			ins_tabnav_record('services_ctl_sub_listen.php',gtext('Listen'))->
 			ins_tabnav_record('services_ctl_sub_option.php',gtext('Option'),gtext('Reload page'),true);
 //	create data area
