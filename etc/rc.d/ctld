@@ -205,13 +205,13 @@ ctld_mkconf()
 					--value-of 'concat("blocksize ",blocksize)' --nl \
 				--break \
 				--if 'string-length(ctl_lun) > 0' \
-					--value-of 'concat("ctl_lun ",ctl_lun)' --nl \
+					--value-of 'concat("ctl-lun ",ctl_lun)' --nl \
 				--break \
 				--if 'string-length(device_id) > 0' \
-					--value-of 'concat("device_id ",device_id)' --nl \
+					--value-of 'concat("device-id ",device_id)' --nl \
 				--break \
 				--if 'string-length(device_type) > 0' \
-					--value-of "concat('device_type ',device_type)" --nl \
+					--value-of "concat('device-type ',device_type)" --nl \
 				--break \
 				--if 'string-length(serial) > 0' \
 					--value-of "concat('serial \"',serial,'\"')" --nl \
