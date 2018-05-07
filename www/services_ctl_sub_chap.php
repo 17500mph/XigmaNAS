@@ -1,6 +1,6 @@
 <?php
 /*
-	services_ctl_portal_group.php
+	services_ctl_sub_chap.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -34,41 +34,42 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
-require_once 'properties_services_ctl_portal_group.php';
+require_once 'properties_services_ctl_sub_chap.php';
 require_once 'co_request_method.php';
 
-function ctl_portal_group_sphere() {
+function ctl_sub_chap_sphere() {
 	global $config;
 
-	$sphere = new co_sphere_grid('services_ctl_portal_group','php');
-	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
-	$sphere->set_notifier('ctl_portal_group');
+	$sphere = new co_sphere_grid('services_ctl_sub_chap','php');
+	$sphere->get_modify()->set_basename('services_ctl_sub_chap_edit');
+	$sphere->get_parent()->set_basename('services_ctl_auth_group');
+	$sphere->set_notifier('ctl_sub_chap');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Portal Group'));
-	$sphere->sym_mod(gtext('Edit Portal Group'));
-	$sphere->sym_del(gtext('Portal Group is marked for deletion'));
-	$sphere->sym_loc(gtext('Portal Group is locked'));
-	$sphere->sym_unl(gtext('Portal Group is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Portal Groups'));
-	$sphere->cbm_disable(gtext('Disable Selected Portal Groups'));
-	$sphere->cbm_enable(gtext('Enable Selected Portal Groups'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Portal Groups'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected portal groups?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected portal groups?'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected portal groups?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected portal groups?'));
+	$sphere->sym_add(gtext('Add CHAP User'));
+	$sphere->sym_mod(gtext('Edit CHAP User'));
+	$sphere->sym_del(gtext('CHAP User is marked for deletion'));
+	$sphere->sym_loc(gtext('CHAP User is locked'));
+	$sphere->sym_unl(gtext('CHAP User is unlocked'));
+	$sphere->cbm_delete(gtext('Delete Selected CHAP Users'));
+	$sphere->cbm_disable(gtext('Disable Selected CHAP Users'));
+	$sphere->cbm_enable(gtext('Enable Selected CHAP Users'));
+	$sphere->cbm_toggle(gtext('Toggle Selected CHAP Users'));
+	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected CHAP users?'));
+	$sphere->cbm_disable(gtext('Do you want to disable selected CHAP users?'));
+	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected CHAP users?'));
+	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected CHAP users?'));
 //	sphere external content
-	$sphere->grid = &array_make_branch($config,'ctld','ctl_portal_group','param');
+	$sphere->grid = &array_make_branch($config,'ctld','ctl_sub_chap','param');
 	if(!empty($sphere->grid)):
 		array_sort_key($sphere->grid,'name');
 	endif;
 	return $sphere;
 }
-function ctl_portal_group_process_updatenotification($mode,$data) {
+function ctl_sub_chap_process_updatenotification($mode,$data) {
 	$retval = 0;
-	$sphere = &ctl_portal_group_sphere();
+	$sphere = &ctl_sub_chap_sphere();
 	switch($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
@@ -83,16 +84,16 @@ function ctl_portal_group_process_updatenotification($mode,$data) {
 	endswitch;
 	return $retval;
 }
-function ctl_portal_group_selection($cop,$sphere) {
+function ctl_sub_chap_selection($cop,$sphere) {
 	global $d_sysrebootreqd_path;
 	global $savemsg;
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Portal Groups')];
+	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('CHAP')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
-	$a_col_width = ['5%','25%','10%','15%','35%','10%'];
+	$a_col_width = ['5%','25%','10%','50%','10%'];
 	$n_col_width = count($a_col_width);
 	if($use_tablesort):
 		$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
@@ -110,13 +111,15 @@ function ctl_portal_group_selection($cop,$sphere) {
 				ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
 				ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
 				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
+				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'),gtext('Reload page'),true)->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_sub_listen.php',gtext('Listen'))->
-				ins_tabnav_record('services_ctl_sub_option.php',gtext('Option'));
+				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Group'))->
+				ins_tabnav_record('services_ctl_sub_chap.php',gtext('CHAP'),gtext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_sub_chap_mutual.php',gtext('Mutual CHAP'))->
+				ins_tabnav_record('services_ctl_sub_initiator_name.php',gtext('Initiator Name'))->
+				ins_tabnav_record('services_ctl_sub_initiator_portal.php',gtext('Initiator Portal'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -146,7 +149,6 @@ function ctl_portal_group_selection($cop,$sphere) {
 			pop()->
 			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
-			insTHwC('lhell',$cop->get_redirect()->get_title())->
 			insTHwC('lhell',$cop->get_description()->get_title())->
 			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
 	else:
@@ -154,7 +156,6 @@ function ctl_portal_group_selection($cop,$sphere) {
 			insTHwC('lhelc')->
 			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhelc',gtext('Status'))->
-			insTHwC('lhell',$cop->get_redirect()->get_title())->
 			insTHwC('lhell',$cop->get_description()->get_title())->
 			insTHwC('lhebl',gtext('Toolbox'));
 	endif;
@@ -173,7 +174,6 @@ function ctl_portal_group_selection($cop,$sphere) {
 					pop()->
 					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_name()->get_name()] ?? ''))->
 					ins_enadis_icon($is_enabled)->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()] ?? ''))->
 					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_description()->get_name()] ?? ''))->
 					add_toolbox_area()->
 						ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
@@ -195,10 +195,11 @@ function ctl_portal_group_selection($cop,$sphere) {
 	$document->render();
 }
 //	init properties and sphere
-$cop = new ctl_portal_group_properties();
-$sphere = &ctl_portal_group_sphere();
+$cop = new ctl_sub_chap_properties();
+$sphere = &ctl_sub_chap_sphere();
 //	determine request method
 $rmo = new co_request_method();
+$rmo->add('GET','view',PAGE_MODE_VIEW);
 $rmo->add('POST','apply',PAGE_MODE_VIEW);
 $rmo->add('POST',$sphere->get_cbm_button_val_delete(),PAGE_MODE_POST);
 if($sphere->enadis() && method_exists($cop,'get_enable')):
@@ -215,7 +216,7 @@ switch($page_method):
 	case 'GET':
 		switch($page_action):
 			case 'view':
-				ctl_portal_group_selection($cop,$sphere);
+				ctl_sub_chap_selection($cop,$sphere);
 				break;
 		endswitch;
 		break;

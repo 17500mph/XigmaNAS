@@ -1,6 +1,6 @@
 <?php
 /*
-	services_ctl_target_edit.php
+	services_ctl_auth_group_maintain.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -34,34 +34,32 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
-require_once 'properties_services_ctl_target.php';
+require_once 'properties_services_ctl_auth_group.php';
 require_once 'co_request_method.php';
 
-function ctl_target_edit_sphere() {
+function ctl_auth_group_edit_sphere() {
 	global $config;
 
 //	sphere structure
-	$sphere = new co_sphere_row('services_ctl_target_edit','php');
-	$sphere->parent->set_basename('services_ctl_target');
-	$sphere->set_notifier('ctl_target');
+	$sphere = new co_sphere_row('services_ctl_auth_maintain','php');
+	$sphere->parent->set_basename('services_ctl_auth_group');
+	$sphere->set_notifier('ctl_auth_group');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->grid = &array_make_branch($config,'ctld','ctl_target','param');
+	$sphere->grid = &array_make_branch($config,'ctld','ctl_auth_group','param');
 	return $sphere;
 }
 //	init properties and sphere
-$cop = new ctl_target_edit_properties();
-$sphere = &ctl_target_edit_sphere();
+$cop = new ctl_auth_group_edit_properties();
+$sphere = &ctl_auth_group_edit_sphere();
 $rmo = new co_request_method();
-$rmo->add('GET','add',PAGE_MODE_ADD);
 $rmo->add('GET','edit',PAGE_MODE_EDIT);
-$rmo->add('POST','add',PAGE_MODE_ADD);
-$rmo->add('POST','cancel',PAGE_MODE_POST);
-$rmo->add('POST','clone',PAGE_MODE_CLONE);
+$rmo->add('GET','view',PAGE_MODE_VIEW);
 $rmo->add('POST','edit',PAGE_MODE_EDIT);
-$rmo->add('POST','save',PAGE_MODE_POST);
-$rmo->set_default('POST','cancel',PAGE_MODE_POST);
+$rmo->add('POST','view',PAGE_MODE_VIEW);
+$rmo->add('POST','cancel',PAGE_MODE_POST);
+$rmo->set_default('GET','view',PAGE_MODE_POST);
 list($page_method,$page_action,$page_mode) = $rmo->validate();
 //	init indicators
 $input_errors = [];
@@ -74,6 +72,9 @@ switch($page_method):
 				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->get_defaultvalue();
 				break;
 			case 'edit': // modify the data of the provided resource id and let the user modify it
+				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
+				break;
+			case 'view':
 				$sphere->row[$sphere->get_row_identifier()] = $cop->{$sphere->get_row_identifier()}->validate_input(INPUT_GET);
 				break;
 		endswitch;
@@ -152,40 +153,9 @@ $a_referer = [
 	$cop->get_enable(),
 	$cop->get_name(),
 	$cop->get_description(),
-	$cop->get_alias(),
-	$cop->get_auth_group(),
-	$cop->get_portal_group(),
-	$cop->get_redirect(),
+	$cop->get_auth_type(),
 	$cop->get_auxparam()
 ];
-//	Add options for target auth group from auth groups, ignore enable flag
-$ctl_auth_groups = &array_make_branch($config,'ctld','ctl_auth_group','param');
-foreach($ctl_auth_groups as $ctl_auth_group):
-	$key = $ctl_auth_group['name'] ?? NULL;
-	if(isset($key)):
-		$description = $ctl_auth_group['description'] ?? '';
-		if(preg_match('/\S/',$description)):
-			$value = sprintf('%s - %s',$key,$description);
-		else:
-			$value = $key;
-		endif;
-		$cop->get_auth_group()->upsert_option($key,$value);
-	endif;
-endforeach;
-//	Add options for target portal group from portal groups, ignore enable flag
-$ctl_portal_groups = &array_make_branch($config,'ctld','ctl_portal_group','param');
-foreach($ctl_portal_groups as $ctl_portal_group):
-	$key = $ctl_portal_group['name'] ?? NULL;
-	if(isset($key)):
-		$description = $ctl_portal_group['description'] ?? '';
-		if(preg_match('/\S/',$description)):
-			$value = sprintf('%s - %s',$key,$description);
-		else:
-			$value = $key;
-		endif;
-		$cop->get_portal_group()->upsert_option($key,$value);
-	endif;
-endforeach;
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		foreach($a_referer as $referer):
@@ -201,6 +171,7 @@ switch($page_mode):
 		$page_mode = PAGE_MODE_ADD;
 		break;
 	case PAGE_MODE_EDIT:
+	case PAGE_MODE_VIEW:
 		$source = $sphere->grid[$sphere->row_id];
 		foreach($a_referer as $referer):
 			$name = $referer->get_name();
@@ -251,8 +222,9 @@ switch($page_mode):
 			exit;
 		endif;
 		break;
+		break;
 endswitch;
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Auth Groups'),gtext('Maintain')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -260,18 +232,12 @@ $pagecontent = $document->getElementById('pagecontent');
 //	add tab navigation
 $document->
 	add_area_tabnav()->
-		push()->
 		add_tabnav_upper()->
 			ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
-			ins_tabnav_record('services_ctl_target.php',gtext('Targets'),gtext('Reload page'),true)->
+			ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
 			ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
 			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
-		pop()->
-		add_tabnav_lower()->
-			ins_tabnav_record('services_ctl_target.php',gtext('Target'),gtext('Reload page'),true)->
-			ins_tabnav_record('services_ctl_sub_port.php',gtext('Ports'))->
-			ins_tabnav_record('services_ctl_sub_lun.php',gtext('LUNs'));
+			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'),gtext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -283,6 +249,7 @@ if(file_exists($d_sysrebootreqd_path)):
 	$content->ins_info_box(get_std_save_message(0));
 endif;
 $n_auxparam_rows = min(64,max(5,1 + substr_count($sphere->row[$cop->get_auxparam()->get_name()],PHP_EOL)));
+$is_readonly = true;
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
@@ -290,35 +257,17 @@ $content->add_table_data_settings()->
 		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gtext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
-		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
-		c2_input_text($cop->get_alias(),htmlspecialchars($sphere->row[$cop->get_alias()->get_name()]),false,false)->
-		c2_select($cop->get_auth_group(),htmlspecialchars($sphere->row[$cop->get_auth_group()->get_name()]),false,false)->
-		c2_select($cop->get_portal_group(),htmlspecialchars($sphere->row[$cop->get_portal_group()->get_name()]),false,false)->
-		c2_input_text($cop->get_redirect(),htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()]),false,false)->
-		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
-$buttons = $document->
-	add_area_buttons();
-if($isrecordnew):
-	$buttons->
-		ins_button_add();
-else:
-	$buttons->
-		ins_button_save();
-	if($prerequisites_ok && empty($input_errors)):
-		$buttons->ins_button_clone();
-	endif;
-endif;
-$buttons->
-	ins_button_cancel();
-$buttons->
-	addElement('input',['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),false,$is_readonly)->
+		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,$is_readonly)->
+		c2_radio_grid($cop->get_auth_type(),htmlspecialchars($sphere->row[$cop->get_auth_type()->get_name()]),false,$is_readonly)->
+		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,$is_readonly,60,$n_auxparam_rows);
+$buttons = $document->add_area_buttons();
+$buttons->ins_button_edit();
+$buttons->ins_button_cancel();
+$buttons->ins_input_hidden($sphere->get_row_identifier(),$sphere->get_row_identifier_value());
+//	$buttons->addElement('input',['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
 //	additional javascript code
-$body->
-	addJavaScript($sphere->get_js());
-$body->
-	add_js_on_load($sphere->get_js_on_load());
-$body->
-	add_js_document_ready($sphere->get_js_document_ready());
-$document->
-	render();
+$body->addJavaScript($sphere->get_js());
+$body->add_js_on_load($sphere->get_js_on_load());
+$body->add_js_document_ready($sphere->get_js_document_ready());
+$document->render();

@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_auth_group_initiator_name.php
+	properties_services_ctl_sub_option.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,7 +33,7 @@
 */
 require_once 'properties.php';
 
-class ctl_initiator_name_properties extends co_property_container_param {
+class ctl_sub_option_properties extends co_property_container_param {
 	protected $x_name;
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
@@ -42,21 +42,41 @@ class ctl_initiator_name_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Initiator Name'));
+			set_title(gtext('Option Name'));
+		return $property;
+	}
+	protected $x_value;
+	public function get_value() {
+		return $this->x_value ?? $this->init_value();
+	}
+	public function init_value() {
+		$property = $this->x_value = new property_text($this);
+		$property->
+			set_name('value')->
+			set_title(gtext('Option Value'));
+		return $property;
+	}
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
+	}
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
+		$property->
+			set_name('group')->
+			set_title(gtext('Portal Group'));
 		return $property;
 	}
 }
-class ctl_initiator_name_edit_properties extends ctl_initiator_name_properties {
+class ctl_sub_option_edit_properties extends ctl_sub_option_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('An iSCSI initiator name.');
-		$placeholder = gtext('Name');
+		$description = gtext('Name of the option.');
 		$regexp = '/^\S{1,223}$/';
 		$property->
-			set_id('user')->
+			set_id('name')->
 			set_description($description)->
 			set_defaultvalue('')->
-			set_placeholder($placeholder)->
 			set_size(60)->
 			set_maxlength(223)->
 			set_editableonadd(true)->
@@ -64,6 +84,39 @@ class ctl_initiator_name_edit_properties extends ctl_initiator_name_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_value() {
+		$property = parent::init_value();
+		$description = gtext('Value of the option.');
+		$regexp = '/^.{1,223}$/';
+		$property->
+			set_id('value')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(223)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select portal groups.');
+		$options = [];
+		$property->
+			set_id('group')->
+			set_description($description)->
+			set_defaultvalue([])->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}

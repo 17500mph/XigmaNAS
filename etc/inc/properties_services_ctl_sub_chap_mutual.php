@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_auth_group_mutual_chap.php
+	properties_services_ctl_sub_chap_mutual.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,15 +33,15 @@
 */
 require_once 'properties.php';
 
-class ctl_mutual_chap_properties extends co_property_container_param {
-	protected $x_user;
-	public function get_user() {
-		return $this->x_user ?? $this->init_user();
+class ctl_sub_chap_mutual_properties extends co_property_container_param {
+	protected $x_name;
+	public function get_name() {
+		return $this->x_name ?? $this->init_name();
 	}
-	public function init_user() {
-		$property = $this->x_user = new property_text($this);
+	public function init_name() {
+		$property = $this->x_name = new property_text($this);
 		$property->
-			set_name('user')->
+			set_name('name')->
 			set_title(gtext('User'));
 		return $property;
 	}
@@ -56,14 +56,25 @@ class ctl_mutual_chap_properties extends co_property_container_param {
 			set_title(gtext('Secret'));
 		return $property;
 	}
-	protected $x_mutual_user;
-	public function get_mutual_user() {
-		return $this->x_mutual_user ?? $this->init_mutual_user();
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
 	}
-	public function init_mutual_user() {
-		$property = $this->x_mutual_user = new property_text($this);
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
 		$property->
-			set_name('mutual_user')->
+			set_name('group')->
+			set_title(gtext('Auth Group'));
+		return $property;
+	}
+	protected $x_mutual_name;
+	public function get_mutual_name() {
+		return $this->x_mutual_name ?? $this->init_mutual_name();
+	}
+	public function init_mutual_name() {
+		$property = $this->x_mutual_name = new property_text($this);
+		$property->
+			set_name('mutual_name')->
 			set_title(gtext('Mutual User'));
 		return $property;
 	}
@@ -79,14 +90,14 @@ class ctl_mutual_chap_properties extends co_property_container_param {
 		return $property;
 	}
 }
-class ctl_mutual_chap_edit_properties extends ctl_mutual_chap_properties {
-	public function init_user() {
-		$property = parent::init_user();
+class ctl_sub_chap_mutual_edit_properties extends ctl_sub_chap_mutual_properties {
+	public function init_name() {
+		$property = parent::init_name();
 		$description = gtext('Enter user name.');
 		$placeholder = gtext('User');
 		$regexp = '/^\S{1,32}$/';
 		$property->
-			set_id('user')->
+			set_id('name')->
 			set_description($description)->
 			set_defaultvalue('')->
 			set_placeholder($placeholder)->
@@ -104,7 +115,7 @@ class ctl_mutual_chap_edit_properties extends ctl_mutual_chap_properties {
 		$property = parent::init_secret();
 		$description = gtext('Enter secret.');
 		$placeholder = gtext('Secret');
-		$regexp = '/^\S{1,32}$/';
+		$regexp = '/^.{1,32}$/';
 		$property->
 			set_id('secret')->
 			set_description($description)->
@@ -117,16 +128,33 @@ class ctl_mutual_chap_edit_properties extends ctl_mutual_chap_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	public function init_mutual_user() {
-		$property = parent::init_mutual_user();
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select auth groups.');
+		$options = [];
+		$property->
+			set_id('group')->
+			set_description($description)->
+			set_defaultvalue([])->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_mutual_name() {
+		$property = parent::init_mutual_name();
 		$description = gtext('Enter mutual user name.');
-		$placeholder = gtext('User');
+		$placeholder = gtext('Mutual User');
 		$regexp = '/^\S{1,32}$/';
 		$property->
-			set_id('mutual_user')->
+			set_id('mutual_name')->
 			set_description($description)->
 			set_defaultvalue('')->
 			set_placeholder($placeholder)->
@@ -137,14 +165,16 @@ class ctl_mutual_chap_edit_properties extends ctl_mutual_chap_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
 	public function init_mutual_secret() {
 		$property = parent::init_mutual_secret();
 		$description = 'Enter mutual secret';
-		$placeholder = gtext('Secret');
-		$regexp = '/^\S{1,32}$/';
+		$placeholder = gtext('Mutual Secret');
+		$regexp = '/^.{1,32}$/';
 		$property->
 			set_id('secret')->
 			set_description($description)->

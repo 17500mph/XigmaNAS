@@ -228,7 +228,6 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
-		
 		return $property;
 	}
 	public function init_redirect() {

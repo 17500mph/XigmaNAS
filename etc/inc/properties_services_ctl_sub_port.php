@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_auth_group_chap.php
+	properties_services_ctl_sub_port.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,43 +33,41 @@
 */
 require_once 'properties.php';
 
-class ctl_chap_properties extends co_property_container_param {
-	protected $x_user;
-	public function get_user() {
-		return $this->x_user ?? $this->init_user();
+class ctl_sub_port_properties extends co_property_container_param {
+	protected $x_name;
+	public function get_name() {
+		return $this->x_name ?? $this->init_name();
 	}
-	public function init_user() {
-		$property = $this->x_user = new property_text($this);
+	public function init_name() {
+		$property = $this->x_name = new property_text($this);
 		$property->
-			set_name('user')->
-			set_title(gtext('User'));
+			set_name('name')->
+			set_title(gtext('Port Name'));
 		return $property;
 	}
-	protected $x_secret;
-	public function get_secret() {
-		return $this->x_secret ?? $this->init_secret();
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
 	}
-	public function init_secret() {
-		$property = $this->x_secret = new property_text($this);
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
 		$property->
-			set_name('secret')->
-			set_title(gtext('Secret'));
+			set_name('group')->
+			set_title(gtext('Target'));
 		return $property;
 	}
 }
-class ctl_chap_edit_properties extends ctl_chap_properties {
-	public function init_user() {
-		$property = parent::init_user();
-		$description = gtext('Enter user name.');
-		$placeholder = gtext('User');
-		$regexp = '/^\S{1,32}$/';
+class ctl_sub_port_edit_properties extends ctl_sub_port_properties {
+	public function init_name() {
+		$property = parent::init_name();
+		$description = gtext('Name of the port.');
+		$regexp = '/^\S{1,223}$/';
 		$property->
-			set_id('user')->
+			set_id('name')->
 			set_description($description)->
 			set_defaultvalue('')->
-			set_placeholder($placeholder)->
-			set_size(40)->
-			set_maxlength(32)->
+			set_size(60)->
+			set_maxlength(223)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_filter(FILTER_VALIDATE_REGEXP)->
@@ -78,23 +76,18 @@ class ctl_chap_edit_properties extends ctl_chap_properties {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	public function init_secret() {
-		$property = parent::init_secret();
-		$description = gtext('Enter secret.');
-		$placeholder = gtext('Secret');
-		$regexp = '/^\S{1,32}$/';
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select targets.');
+		$options = [];
 		$property->
-			set_id('secret')->
+			set_id('group')->
 			set_description($description)->
-			set_defaultvalue('')->
-			set_placeholder($placeholder)->
-			set_size(40)->
-			set_maxlength(32)->
+			set_defaultvalue([])->
+			set_options($options)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
