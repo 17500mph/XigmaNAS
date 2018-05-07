@@ -11,6 +11,7 @@
 # BEFORE: DAEMON
 # KEYWORD: nojail
 # XQUERY: --if 'count(//ctld/enable) > 0' --output '0' --else --output '1' --break
+# RCVAR: ctld
 
 . /etc/rc.subr
 . /etc/configxml.subr
@@ -89,28 +90,28 @@ ctld_mkconf()
 				--if 'string-length(auth_type) > 0' \
 					--value-of 'concat("auth-type ",auth_type)' --nl \
 				--break \
-				--match '//ctld/ctl_chap/param[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_chap/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0 and string-length(secret) > 0' \
 						--value-of "concat('chap \"',name,'\" \"',secret,'\"')" --nl \
 					--break \
 				--break \
-				--match '//ctld/ctl_chap_mutual/param[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_chap_mutual/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0 and string-length(secret) > 0 and string-length(mutual_name) > 0 and string-length(mutual_secret) > 0' \
 						--value-of "concat('chap-mutual \"',name,'\" \"',secret,'\" \"',mutual_name,'\" \"',mutual_secret,'\"')" --nl \
 					--break \
 				--break \
-				--match '//ctld/ctl_initiator_name/param[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_initiator_name/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0' \
 						--value-of "concat('initiator-name \"',name,'\"')" --nl \
 					--break \
 				--break \
-				--match '//ctld/ctl_initiator_portal/param[enable and group=$filtergroup/name]' \
-					--if 'string-length(address) > 0' \
+				--match '//ctld/ctl_sub_initiator_portal/param[enable and group=$filtergroup/name]' \
+					--if 'string-length(ipaddress) > 0' \
 						--output 'initiator-portal "' \
-						--if 'contains(address,":")' \
-							--value-of 'concat("[",address,"]")' \
+						--if 'contains(ipaddress,":")' \
+							--value-of 'concat("[",ipaddress,"]")' \
 						--else \
-							--value-of 'address' \
+							--value-of 'ipaddress' \
 						--break \
 						--if 'string-length(prefixlen) > 0' \
 							--value-of 'concat("/",prefixlen)' \
@@ -160,13 +161,13 @@ ctld_mkconf()
 				--if 'count(foreign) > 0' \
 					--output 'foreign' --nl \
 				--break \
-				--match '//ctld/ctl_listen/param[enable and group=$filtergroup/name]' \
-					--if 'string-length(address) > 0' \
+				--match '//ctld/ctl_sub_listen/param[enable and group=$filtergroup/name]' \
+					--if 'string-length(ipaddress) > 0' \
 						--output 'listen "' \
-						--if 'contains(address,":")' \
-							--value-of 'concat("[",address,"]")' \
+						--if 'contains(ipaddress,":")' \
+							--value-of 'concat("[",ipaddress,"]")' \
 						--else \
-							--value-of address \
+							--value-of ipaddress \
 						--break \
 						--if 'string-length(port) > 0' \
 							--value-of 'concat(":",port)' \
@@ -174,7 +175,7 @@ ctld_mkconf()
 						--output '"' --nl \
 					--break \
 				--break \
-				--match '//ctld/ctl_option/param[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_option/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0 and string-length(value) > 0' \
 						--value-of 'concat("option ",name," ",value)' --nl \
 					--break \
@@ -356,7 +357,7 @@ ctld_mkconf()
 				--if 'string-length(portal_group) > 0' \
 					--value-of 'concat("portal-group ",portal_group)' --nl \
 				--break \
-				--match '//ctld/ctl_port[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_port[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0' \
 						--value-of 'concat("port ",name)' --nl \
 					--break \
@@ -370,7 +371,7 @@ ctld_mkconf()
 					--break \
 					--output '"' --nl \
 				--break \
-				--match '//ctld/ctl_lun[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_lun[enable and group=$filtergroup/name]' \
 					--if 'string-length(number) > 0 and string-length(name) > 0' \
 						--value-of "concat('lun ',number,' \"',name,'\"')" --nl \
 					 --break \
