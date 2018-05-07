@@ -42,7 +42,7 @@ function ctl_sub_lun_edit_sphere() {
 
 //	sphere structure
 	$sphere = new co_sphere_row('services_ctl_sub_lun_edit','php');
-	$sphere->parent->set_basename('services_ctl_sub_lun');
+	$sphere->get_parent()->set_basename('services_ctl_sub_lun');
 	$sphere->set_notifier('ctl_sub_lun');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
@@ -53,18 +53,18 @@ function ctl_sub_lun_edit_sphere() {
 //	init properties and sphere
 $cop = new ctl_sub_lun_edit_properties();
 $sphere = &ctl_sub_lun_edit_sphere();
-//	part 1: collect all defined target groups
-$all_targets = [];
-$defined_groups = &array_make_branch($config,'ctld','ctl_target','param');
-foreach($defined_groups as $defined_group):
-	if(array_key_exists('name',$defined_group) && is_scalar($defined_group['name'])):
-		$all_targets[$defined_group['name']] = $defined_group['name'];
-		if(array_key_exists('description',$defined_group) && is_string($defined_group['description']) && preg_match('/\S/',$defined_group['description'])):
-			$all_targets[$defined_group['name']] .= sprintf(' - %s',$defined_group['description'] ?? '');
+//	part 1: collect all defined targets
+$all_parents = [];
+$known_parents = &array_make_branch($config,'ctld','ctl_target','param');
+foreach($known_parents as $known_parent):
+	if(array_key_exists('name',$known_parent) && is_scalar($known_parent['name'])):
+		$all_parents[$known_parent['name']] = $known_parent['name'];
+		if(array_key_exists('description',$known_parent) && is_string($known_parent['description']) && preg_match('/\S/',$known_parent['description'])):
+			$all_parents[$known_parent['name']] .= sprintf(' - %s',$known_parent['description'] ?? '');
 		endif;
 	endif;
 endforeach;
-$cop->get_group()->set_options($all_targets);
+$cop->get_group()->set_options($all_parents);
 $all_luns = [];
 $defined_luns = &array_make_branch($config,'ctld','ctl_lun','param');
 foreach($defined_luns as $defined_lun):
@@ -125,7 +125,7 @@ endswitch;
  *	exit if $sphere->row[$sphere->row_identifier()] is NULL
  */
 if(is_null($sphere->get_row_identifier_value())):
-	header($sphere->parent->get_location());
+	header($sphere->get_parent()->get_location());
 	exit;
 endif;
 /*
@@ -161,7 +161,7 @@ else: // record found in configuration
 	endif;
 endif;
 if(RECORD_ERROR === $record_mode): // oops, something went wrong
-	header($sphere->parent->get_location());
+	header($sphere->get_parent()->get_location());
 	exit;
 endif;
 $isrecordnew = (RECORD_NEW === $record_mode);
@@ -222,21 +222,21 @@ switch($page_mode):
 				endif;
 			endif;
 			write_config();
-			header($sphere->parent->get_location()); // cleanup
+			header($sphere->get_parent()->get_location()); // cleanup
 			exit;
 		endif;
 		break;
 endswitch;
-//	part 2: collect all assigned target groups, including orphaned groups
-$assigned_groups = &array_make_branch($sphere->row,$cop->get_group()->get_name());
-foreach($assigned_groups as $assigned_groupname):
-	if(is_scalar($assigned_groupname)):
-		if(!array_key_exists($assigned_groupname,$all_targets)):
-			$all_targets_groups[$assigned_groupname] = sprintf('%s - %s',$assigned_groupname,gtext('Orphaned'));
+//	part 2: collect all linked targets, including orphaned
+$linked_parents = &array_make_branch($sphere->row,$cop->get_group()->get_name());
+foreach($linked_parents as $linked_parent):
+	if(is_scalar($linked_parent)):
+		if(!array_key_exists($linked_parent,$all_parents)):
+			$all_parents[$linked_parent] = sprintf('%s - %s',$linked_parent,gtext('Orphaned'));
 		endif;
 	endif;
 endforeach;
-$cop->get_group()->set_options($all_targets);
+$cop->get_group()->set_options($all_parents);
 $pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Target'),gtext('LUN'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas

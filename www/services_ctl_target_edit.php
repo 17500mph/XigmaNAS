@@ -42,7 +42,7 @@ function ctl_target_edit_sphere() {
 
 //	sphere structure
 	$sphere = new co_sphere_row('services_ctl_target_edit','php');
-	$sphere->parent->set_basename('services_ctl_target');
+	$sphere->get_parent()->set_basename('services_ctl_target');
 	$sphere->set_notifier('ctl_target');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
@@ -102,7 +102,7 @@ endswitch;
  *	exit if $sphere->row[$sphere->row_identifier()] is NULL
  */
 if(is_null($sphere->get_row_identifier_value())):
-	header($sphere->parent->get_location());
+	header($sphere->get_parent()->get_location());
 	exit;
 endif;
 /*
@@ -138,7 +138,7 @@ else: // record found in configuration
 	endif;
 endif;
 if(RECORD_ERROR === $record_mode): // oops, something went wrong
-	header($sphere->parent->get_location());
+	header($sphere->get_parent()->get_location());
 	exit;
 endif;
 $isrecordnew = (RECORD_NEW === $record_mode);
@@ -247,7 +247,7 @@ switch($page_mode):
 				endif;
 			endif;
 			write_config();
-			header($sphere->parent->get_location()); // cleanup
+			header($sphere->get_parent()->get_location()); // cleanup
 			exit;
 		endif;
 		break;
