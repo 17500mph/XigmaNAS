@@ -117,8 +117,8 @@ function ctl_auth_group_selection($cop,$sphere) {
 				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'),gtext('Reload page'),true)->
 				ins_tabnav_record('services_ctl_sub_chap.php',gtext('CHAP'))->
 				ins_tabnav_record('services_ctl_sub_chap_mutual.php',gtext('Mutual CHAP'))->
-				ins_tabnav_record('services_ctl_sub_initiator_name.php',gtext('Initiator Name'))->
-				ins_tabnav_record('services_ctl_sub_initiator_portal.php',gtext('Initiator Portal'));
+				ins_tabnav_record('services_ctl_sub_initiator_name.php',gtext('Initiator Names'))->
+				ins_tabnav_record('services_ctl_sub_initiator_portal.php',gtext('Initiator Portals'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
