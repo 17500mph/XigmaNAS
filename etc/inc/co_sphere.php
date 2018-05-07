@@ -40,7 +40,7 @@
 class co_sphere_scriptname {
 	protected $_basename = NULL;
 	protected $_extension = NULL;
-//	methods	
+//	methods
 	public function __construct(string $basename = NULL,string $extension = NULL) {
 		$this->set_basename($basename);
 		$this->set_extension($extension);
@@ -160,7 +160,7 @@ class co_sphere_level2 extends co_sphere_level1 { // for row and grid
 	protected $_row_identifier = NULL;
 //	modes
 	protected $_lock = NULL;
-//	methods	
+//	methods
 	public function lock(bool $flag = NULL) {
 		if(isset($flag)):
 			$this->_lock = $flag;
