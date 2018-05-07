@@ -2300,7 +2300,7 @@ EOJ;
 	}
 	public function ins_textinfo(string $id = NULL,string $value = NULL) {
 		if(isset($value)):
-			$span_attributes  = [];
+			$span_attributes = [];
 			if(isset($id)):
 				$span_attributes = ['id' => $id];
 			endif;
@@ -2338,7 +2338,7 @@ EOJ;
 	}
 	public function ins_enadis_icon(bool $is_enabled = false) {
 		global $g_img;
-		
+
 		if($is_enabled):
 			$gt = gtext('Enabled');
 			$this->
@@ -2598,12 +2598,12 @@ EOJ;
 		return $subnode;
 	}
 	public function ins_button_submit(string $value = NULL,string $content = NULL,$attributes = [],string $id = NULL) {
-		$element      = 'button';
+		$element = 'button';
 		$class_button = 'formbtn';
-		$value        = $value ?? 'cancel';
-		$id           = $id ?? sprintf('%1$s_%2$s',$element,$value);
-		$content      = $content ?? gtext('Cancel');
-		$button_attributes   = [
+		$value = $value ?? 'cancel';
+		$id  = $id ?? sprintf('%1$s_%2$s',$element,$value);
+		$content = $content ?? gtext('Cancel');
+		$button_attributes  = [
 			'name' => 'submit',
 			'type' => 'submit',
 			'class' => $class_button,
