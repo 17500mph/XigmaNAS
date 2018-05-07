@@ -237,7 +237,7 @@ foreach($linked_parents as $linked_parent):
 	endif;
 endforeach;
 $cop->get_group()->set_options($all_parents);
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Target'),gtext('LUN'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),gtext('LUN'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -255,8 +255,8 @@ $document->
 		pop()->
 		add_tabnav_lower()->
 			ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
-			ins_tabnav_record('services_ctl_sub_port.php',gtext('Port'))->
-			ins_tabnav_record('services_ctl_sub_lun.php',gtext('LUNs'),gtext('Reload page'),true);
+			ins_tabnav_record('services_ctl_sub_port.php',gtext('Ports'))->
+			ins_tabnav_record('services_ctl_sub_lun.php',gtext('LUN'),gtext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
