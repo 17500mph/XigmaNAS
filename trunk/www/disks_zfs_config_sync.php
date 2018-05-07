@@ -469,7 +469,10 @@ if(isset($_POST['import_config'])):
 		if(isset($_POST['leave_autosnapshots'])):
 			$cfg['zfs']['autosnapshots'] = !empty($config['zfs']['autosnapshots']) ? $config['zfs']['autosnapshots'] : [];
 		endif;
-		$config['zfs'] = $cfg['zfs'];
+		//	use below to keep other subnodes, $config['zfs'] = $cfg['zfs']; will not keep them
+		foreach($cfg['zfs'] as $zfs_key => $zfs_value):
+			$config['zfs'][$zfs_key] = $zfs_value;
+		endforeach;
 		$config['disks'] = $cfg['disks'];
 		$config['geli'] = $cfg['geli'];
 		updatenotify_set('zfs_import_config',UPDATENOTIFY_MODE_UNKNOWN,true);
