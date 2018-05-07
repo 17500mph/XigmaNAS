@@ -225,7 +225,7 @@ foreach($linked_parents as $linked_parent):
 	endif;
 endforeach;
 $cop->get_group()->set_options($all_parents);
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Port'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),gtext('Port'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
