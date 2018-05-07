@@ -1092,7 +1092,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 		$regexp = '/^(?:|[01]|102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4})$/';
 		$property->
 			set_id('opt_rpm')->
-			set_defaultvalue('0')->
+			set_defaultvalue('')->
 			set_description($description)->
 			set_size(7)->
 			set_maxlength(5)->
