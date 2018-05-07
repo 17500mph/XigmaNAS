@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_target_port.php
+	properties_services_ctl_sub_lun.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,35 +33,85 @@
 */
 require_once 'properties.php';
 
-class ctl_target_port_properties extends co_property_container_param {
+class ctl_sub_lun_properties extends co_property_container_param {
+	protected $x_number;
+	public function get_number() {
+		return $this->x_number ?? $this->init_number();
+	}
+	public function init_number() {
+		$property = $this->x_number = new property_int($this);
+		$property->
+			set_name('number')->
+			set_title(gtext('LUN Number'));
+		return $property;
+	}
 	protected $x_name;
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$property = $this->x_name = new property_text($this);
+		$property = $this->x_name = new property_list($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Port Name'));
+			set_title(gtext('LUN Name'));
+		return $property;
+	}
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
+	}
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
+		$property->
+			set_name('group')->
+			set_title(gtext('Target Group'));
 		return $property;
 	}
 }
-class ctl_target_port_edit_properties extends ctl_target_port_properties {
+class ctl_sub_lun_edit_properties extends ctl_sub_lun_properties {
+	public function init_number() {
+		$property = parent::init_number();
+		$description = gtext('LUN number');
+		$property->
+			set_id('number')->
+			set_description($description)->
+			set_size(10)->
+			set_maxlength(4)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_defaultvalue('')->
+			set_min(0)->
+			set_max(1023)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the port.');
-		$regexp = '/^\S{1,223}$/';
+		$description = gtext('Name of the target.');
+		$options = [];
 		$property->
 			set_id('name')->
 			set_description($description)->
-			set_defaultvalue('')->
-			set_size(60)->
-			set_maxlength(223)->
+			set_options($options)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select target groups.');
+		$options = [];
+		$property->
+			set_id('group')->
+			set_description($description)->
+			set_defaultvalue([])->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}

@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_target_lun.php
+	properties_services_ctl_portal_group_listen.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,55 +33,84 @@
 */
 require_once 'properties.php';
 
-class ctl_target_lun_properties extends co_property_container_param {
-	protected $x_number;
-	public function get_number() {
-		return $this->x_number ?? $this->init_number();
+class ctl_sub_listen_properties extends co_property_container_param {
+	protected $x_ipaddress;
+	public function get_ipaddress() {
+		return $this->x_ipaddress ?? $this->init_ipaddress();
 	}
-	public function init_number() {
-		$property = $this->x_number = new property_int($this);
+	public function init_ipaddress() {
+		$property = $this->x_ipaddress = new property_ipaddress($this);
 		$property->
-			set_name('number')->
-			set_title(gtext('LUN Number'));
+			set_name('ipaddress')->
+			set_title(gtext('IP Address'));
 		return $property;
 	}
-	protected $x_name;
-	public function get_name() {
-		return $this->x_name ?? $this->init_name();
+	protected $x_port;
+	public function get_port() {
+		return $this->x_port ?? $this->init_port();
 	}
-	public function init_name() {
-		$property = $this->x_name = new property_list($this);
+	public function init_port() {
+		$property = $this->x_port = new property_int($this);
 		$property->
-			set_name('name')->
-			set_title(gtext('Target Name'));
+			set_name('port')->
+			set_title(gtext('Port'));
+		return $property;
+	}
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
+	}
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
+		$property->
+			set_name('group')->
+			set_title(gtext('Portal Group'));
 		return $property;
 	}
 }
-class ctl_target_lun_edit_properties extends ctl_target_lun_properties {
-	public function init_number() {
-		$property = parent::init_number();
-		$description = gtext('LUN number');
+class ctl_sub_listen_edit_properties extends ctl_sub_listen_properties {
+	public function init_ipaddress() {
+		$property = parent::init_ipaddress();
+		$description = gtext('An IPv4 or IPv6 address to listen	on for incoming	connections.');
+		$placeholder = gtext('IP Address');
 		$property->
-			set_id('number')->
+			set_id('ipaddress')->
 			set_description($description)->
-			set_size(10)->
-			set_maxlength(4)->
+			set_defaultvalue('')->
+			set_placeholder($placeholder)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_defaultvalue('')->
-			set_min(0)->
-			set_max(1023)->
 			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	public function init_name() {
-		$property = parent::init_name();
-		$description = gtext('Name of the target.');
+	public function init_port() {
+		$property = parent::init_port();
+		$description = gtext('The port to listen on.');
+		$placeholder = '';
+		$property->
+			set_id('port')->
+			set_description($description)->
+			set_defaultvalue('')->
+			set_placeholder($placeholder)->
+			set_size(10)->
+			set_maxlength(5)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_min(1024)->
+			set_max(65535)->
+			filter_use_default_or_empty()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select portal groups.');
 		$options = [];
 		$property->
-			set_id('name')->
+			set_id('group')->
 			set_description($description)->
+			set_defaultvalue([])->
 			set_options($options)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->

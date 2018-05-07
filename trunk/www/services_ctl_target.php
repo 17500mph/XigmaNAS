@@ -39,7 +39,7 @@ require_once 'co_request_method.php';
 
 function ctl_target_sphere() {
 	global $config;
-	
+
 	$sphere = new co_sphere_grid('services_ctl_target','php');
 	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
 	$sphere->set_notifier('ctl_target');
@@ -105,12 +105,18 @@ function ctl_target_selection($cop,$sphere) {
 	//	add tab navigation
 	$document->
 		add_area_tabnav()->
+			push()->
 			add_tabnav_upper()->
 				ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
 				ins_tabnav_record('services_ctl_target.php',gtext('Targets'),gtext('Reload page'),true)->
 				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
 				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'));
+				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+			pop()->
+			add_tabnav_lower()->
+				ins_tabnav_record('services_ctl_target.php',gtext('Targets'),gtext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_sub_port.php',gtext('Ports'))->
+				ins_tabnav_record('services_ctl_sub_lun.php',gtext('LUNs'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors

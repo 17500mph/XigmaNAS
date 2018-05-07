@@ -33,7 +33,7 @@
 */
 require_once 'properties.php';
 
-class ctl_initiator_portal_properties extends co_property_container_param {
+class ctl_sub_initiator_portal_properties extends co_property_container_param {
 	protected $x_ipaddress;
 	public function get_ipaddress() {
 		return $this->x_ipaddress ?? $this->init_ipaddress();
@@ -56,8 +56,19 @@ class ctl_initiator_portal_properties extends co_property_container_param {
 			set_title(gtext('IP Address Prefix'));
 		return $property;
 	}
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
+	}
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
+		$property->
+			set_name('group')->
+			set_title(gtext('Auth Group'));
+		return $property;
+	}
 }
-class ctl_initiator_portal_edit_properties extends ctl_initiator_portal_properties {
+class ctl_sub_initiator_portal_edit_properties extends ctl_sub_initiator_portal_properties {
 	public function init_ipaddress() {
 		$property = parent::init_ipaddress();
 		$description = gtext('An IPv4 or IPv6 address of an iSCSI initiator portal.');
@@ -89,6 +100,21 @@ class ctl_initiator_portal_edit_properties extends ctl_initiator_portal_properti
 			set_min(0)->
 			set_max(128)->
 			filter_use_default_or_empty()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select auth groups.');
+		$options = [];
+		$property->
+			set_id('group')->
+			set_description($description)->
+			set_defaultvalue([])->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}

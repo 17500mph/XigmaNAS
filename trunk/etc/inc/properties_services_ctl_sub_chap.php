@@ -1,6 +1,6 @@
 <?php
 /*
-	properties_services_ctl_portal_group_listen.php
+	properties_services_ctl_sub_chap.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -33,62 +33,96 @@
 */
 require_once 'properties.php';
 
-class ctl_listen_properties extends co_property_container_param {
-	protected $x_ipaddress;
-	public function get_ipaddress() {
-		return $this->x_ipaddress ?? $this->init_ipaddress();
+class ctl_sub_chap_properties extends co_property_container_param {
+	protected $x_name;
+	public function get_name() {
+		return $this->x_name ?? $this->init_name();
 	}
-	public function init_ipaddress() {
-		$property = $this->x_ipaddress = new property_ipaddress($this);
+	public function init_name() {
+		$property = $this->x_name = new property_text($this);
 		$property->
-			set_name('ipaddress')->
-			set_title(gtext('IP Address'));
+			set_name('name')->
+			set_title(gtext('User'));
 		return $property;
 	}
-	protected $x_port;
-	public function get_port() {
-		return $this->x_port ?? $this->init_port();
+	protected $x_secret;
+	public function get_secret() {
+		return $this->x_secret ?? $this->init_secret();
 	}
-	public function init_port() {
-		$property = $this->x_port = new property_int($this);
+	public function init_secret() {
+		$property = $this->x_secret = new property_text($this);
 		$property->
-			set_name('port')->
-			set_title(gtext('Port'));
+			set_name('secret')->
+			set_title(gtext('Secret'));
+		return $property;
+	}
+	protected $x_group;
+	public function get_group() {
+		return $this->x_group ?? $this->init_group();
+	}
+	public function init_group() {
+		$property = $this->x_group = new property_list_multi($this);
+		$property->
+			set_name('group')->
+			set_title(gtext('Auth Group'));
 		return $property;
 	}
 }
-class ctl_listen_edit_properties extends ctl_listen_properties {
-	public function init_ipaddress() {
-		$property = parent::init_ipaddress();
-		$description = gtext('An IPv4 or IPv6 address to listen	on for incoming	connections.');
-		$placeholder = gtext('IP Address');
+class ctl_sub_chap_edit_properties extends ctl_sub_chap_properties {
+	public function init_name() {
+		$property = parent::init_name();
+		$description = gtext('Enter user name.');
+		$placeholder = gtext('User');
+		$regexp = '/^\S{1,32}$/';
 		$property->
-			set_id('ipaddress')->
+			set_id('name')->
 			set_description($description)->
 			set_defaultvalue('')->
 			set_placeholder($placeholder)->
+			set_size(40)->
+			set_maxlength(32)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			filter_use_default()->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	public function init_port() {
-		$property = parent::init_port();
-		$description = gtext('The port to listen on.');
-		$placeholder = '';
+	public function init_secret() {
+		$property = parent::init_secret();
+		$description = gtext('Enter secret.');
+		$placeholder = gtext('Secret');
+		$regexp = '/^.{1,32}$/';
 		$property->
-			set_id('port')->
+			set_id('secret')->
 			set_description($description)->
 			set_defaultvalue('')->
 			set_placeholder($placeholder)->
-			set_size(10)->
-			set_maxlength(5)->
+			set_size(40)->
+			set_maxlength(32)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_min(1024)->
-			set_max(65535)->
-			filter_use_default_or_empty()->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			filter_use_empty()->
+			set_filter_group('ui',['empty','ui'])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	public function init_group() {
+		$property = parent::init_group();
+		$description = gtext('Select auth groups.');
+		$options = [];
+		$property->
+			set_id('group')->
+			set_description($description)->
+			set_defaultvalue([])->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}

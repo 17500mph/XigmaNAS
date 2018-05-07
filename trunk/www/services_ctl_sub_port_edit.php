@@ -1,6 +1,6 @@
 <?php
 /*
-	services_ctl_target_edit.php
+	services_ctl_sub_port_edit.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
@@ -34,25 +34,37 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
-require_once 'properties_services_ctl_target.php';
+require_once 'properties_services_ctl_sub_port.php';
 require_once 'co_request_method.php';
 
-function ctl_target_edit_sphere() {
+function ctl_sub_port_edit_sphere() {
 	global $config;
 
 //	sphere structure
-	$sphere = new co_sphere_row('services_ctl_target_edit','php');
-	$sphere->parent->set_basename('services_ctl_target');
-	$sphere->set_notifier('ctl_target');
+	$sphere = new co_sphere_row('services_ctl_sub_port_edit','php');
+	$sphere->parent->set_basename('services_ctl_sub_port');
+	$sphere->set_notifier('ctl_sub_port');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->grid = &array_make_branch($config,'ctld','ctl_target','param');
+	$sphere->grid = &array_make_branch($config,'ctld','ctl_sub_port','param');
 	return $sphere;
 }
 //	init properties and sphere
-$cop = new ctl_target_edit_properties();
-$sphere = &ctl_target_edit_sphere();
+$cop = new ctl_sub_port_edit_properties();
+$sphere = &ctl_sub_port_edit_sphere();
+//	part 1: collect all defined target groups
+$all_targets = [];
+$defined_groups = &array_make_branch($config,'ctld','ctl_target','param');
+foreach($defined_groups as $defined_group):
+	if(array_key_exists('name',$defined_group) && is_scalar($defined_group['name'])):
+		$all_targets[$defined_group['name']] = $defined_group['name'];
+		if(array_key_exists('description',$defined_group) && is_string($defined_group['description']) && preg_match('/\S/',$defined_group['description'])):
+			$all_targets[$defined_group['name']] .= sprintf(' - %s',$defined_group['description'] ?? '');
+		endif;
+	endif;
+endforeach;
+$cop->get_group()->set_options($all_targets);
 $rmo = new co_request_method();
 $rmo->add('GET','add',PAGE_MODE_ADD);
 $rmo->add('GET','edit',PAGE_MODE_EDIT);
@@ -152,40 +164,8 @@ $a_referer = [
 	$cop->get_enable(),
 	$cop->get_name(),
 	$cop->get_description(),
-	$cop->get_alias(),
-	$cop->get_auth_group(),
-	$cop->get_portal_group(),
-	$cop->get_redirect(),
-	$cop->get_auxparam()
+	$cop->get_group()
 ];
-//	Add options for target auth group from auth groups, ignore enable flag
-$ctl_auth_groups = &array_make_branch($config,'ctld','ctl_auth_group','param');
-foreach($ctl_auth_groups as $ctl_auth_group):
-	$key = $ctl_auth_group['name'] ?? NULL;
-	if(isset($key)):
-		$description = $ctl_auth_group['description'] ?? '';
-		if(preg_match('/\S/',$description)):
-			$value = sprintf('%s - %s',$key,$description);
-		else:
-			$value = $key;
-		endif;
-		$cop->get_auth_group()->upsert_option($key,$value);
-	endif;
-endforeach;
-//	Add options for target portal group from portal groups, ignore enable flag
-$ctl_portal_groups = &array_make_branch($config,'ctld','ctl_portal_group','param');
-foreach($ctl_portal_groups as $ctl_portal_group):
-	$key = $ctl_portal_group['name'] ?? NULL;
-	if(isset($key)):
-		$description = $ctl_portal_group['description'] ?? '';
-		if(preg_match('/\S/',$description)):
-			$value = sprintf('%s - %s',$key,$description);
-		else:
-			$value = $key;
-		endif;
-		$cop->get_portal_group()->upsert_option($key,$value);
-	endif;
-endforeach;
 switch($page_mode):
 	case PAGE_MODE_ADD:
 		foreach($a_referer as $referer):
@@ -204,15 +184,6 @@ switch($page_mode):
 		$source = $sphere->grid[$sphere->row_id];
 		foreach($a_referer as $referer):
 			$name = $referer->get_name();
-			switch($name):
-				case $cop->get_auxparam()->get_name():
-					if(array_key_exists($name,$source)):
-						if(is_array($source[$name])):
-							$source[$name] = implode(PHP_EOL,$source[$name]);
-						endif;
-					endif;
-					break;
-			endswitch;
 			$sphere->row[$name] = $referer->validate_config($source);
 		endforeach;
 		break;
@@ -227,14 +198,6 @@ switch($page_mode):
 			endif;
 		endforeach;
 		if($prerequisites_ok && empty($input_errors)):
-			$name = $cop->get_auxparam()->get_name();
-			$auxparam_grid = [];
-			if(array_key_exists($name,$sphere->row)):
-				foreach(explode(PHP_EOL,$sphere->row[$name]) as $auxparam_row):
-					$auxparam_grid[] = trim($auxparam_row,"\t\n\r");
-				endforeach;
-				$sphere->row[$name] = $auxparam_grid;
-			endif;
 			if($isrecordnew):
 				$sphere->grid[] = $sphere->row;
 				updatenotify_set($sphere->get_notifier(),UPDATENOTIFY_MODE_NEW,$sphere->get_row_identifier_value());
@@ -252,7 +215,17 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+//	part 2: collect all assigned target groups, including orphaned groups
+$assigned_groups = &array_make_branch($sphere->row,$cop->get_group()->get_name());
+foreach($assigned_groups as $assigned_groupname):
+	if(is_scalar($assigned_groupname)):
+		if(!array_key_exists($assigned_groupname,$all_targets)):
+			$all_targets_groups[$assigned_groupname] = sprintf('%s - %s',$assigned_groupname,gtext('Orphaned'));
+		endif;
+	endif;
+endforeach;
+$cop->get_group()->set_options($all_targets);
+$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Port'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -269,8 +242,8 @@ $document->
 			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('services_ctl_target.php',gtext('Target'),gtext('Reload page'),true)->
-			ins_tabnav_record('services_ctl_sub_port.php',gtext('Ports'))->
+			ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
+			ins_tabnav_record('services_ctl_sub_port.php',gtext('Port'),gtext('Reload page'),true)->
 			ins_tabnav_record('services_ctl_sub_lun.php',gtext('LUNs'));
 //	create data area
 $content = $pagecontent->add_area_data();
@@ -282,7 +255,6 @@ $content->
 if(file_exists($d_sysrebootreqd_path)):
 	$content->ins_info_box(get_std_save_message(0));
 endif;
-$n_auxparam_rows = min(64,max(5,1 + substr_count($sphere->row[$cop->get_auxparam()->get_name()],PHP_EOL)));
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
@@ -292,33 +264,20 @@ $content->add_table_data_settings()->
 	addTBODY()->
 		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
 		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
-		c2_input_text($cop->get_alias(),htmlspecialchars($sphere->row[$cop->get_alias()->get_name()]),false,false)->
-		c2_select($cop->get_auth_group(),htmlspecialchars($sphere->row[$cop->get_auth_group()->get_name()]),false,false)->
-		c2_select($cop->get_portal_group(),htmlspecialchars($sphere->row[$cop->get_portal_group()->get_name()]),false,false)->
-		c2_input_text($cop->get_redirect(),htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()]),false,false)->
-		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
-$buttons = $document->
-	add_area_buttons();
+		c2_checkbox_grid($cop->get_group(),$sphere->row[$cop->get_group()->get_name()],false,false);
+$buttons = $document->add_area_buttons();
 if($isrecordnew):
-	$buttons->
-		ins_button_add();
+	$buttons->ins_button_add();
 else:
-	$buttons->
-		ins_button_save();
+	$buttons->ins_button_save();
 	if($prerequisites_ok && empty($input_errors)):
 		$buttons->ins_button_clone();
 	endif;
 endif;
-$buttons->
-	ins_button_cancel();
-$buttons->
-	addElement('input',['name' => $sphere->get_row_identifier(),'type' => 'hidden','value' => $sphere->get_row_identifier_value()]);
+$buttons->ins_button_cancel();
+$buttons->ins_input_hidden($sphere->get_row_identifier(),$sphere->get_row_identifier_value());
 //	additional javascript code
-$body->
-	addJavaScript($sphere->get_js());
-$body->
-	add_js_on_load($sphere->get_js_on_load());
-$body->
-	add_js_document_ready($sphere->get_js_document_ready());
-$document->
-	render();
+$body->addJavaScript($sphere->get_js());
+$body->add_js_on_load($sphere->get_js_on_load());
+$body->add_js_document_ready($sphere->get_js_document_ready());
+$document->render();

@@ -39,7 +39,7 @@ require_once 'co_request_method.php';
 
 function ctl_sphere() {
 	global $config;
-	
+
 	$sphere = new co_sphere_row('services_ctl','php');
 	$sphere->enadis(true);
 	$sphere->grid = &array_make_branch($config,'ctld');
