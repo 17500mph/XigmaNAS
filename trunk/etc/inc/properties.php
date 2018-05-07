@@ -161,7 +161,7 @@ abstract class properties {
  * @param int $value Filter type.
  * @param string $filter_name Name of the filter, default is 'ui'.
  * @return object Returns $this.
- */	
+ */
 	public function set_filter($value = NULL,string $filter_name = 'ui') {
 //		create array element if it doesn't exist.
 		if(array_key_exists($filter_name,$this->x_filter)):
@@ -217,7 +217,7 @@ abstract class properties {
 		return $this;
 	}
 /**
- * 
+ *
  * @param string $root_filter_name Name of the filter group
  * @return array Array with group members
  */
@@ -225,7 +225,7 @@ abstract class properties {
 		return array_key_exists($root_filter_name,$this->x_filter_group) ? $this->x_filter_group[$root_filter_name] : [$root_filter_name];
 	}
 /**
- * 
+ *
  * @param type $filter
  * @return array Array of filter names
  */
@@ -256,7 +256,7 @@ abstract class properties {
 			if(is_string($filter_name)):
 				$filter_parameter = $this->get_filter($filter_name);
 				if(isset($filter_parameter)):
-					$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+					$action = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 					switch($action):
 						case 3:
 							$result = filter_input($input_type,$this->get_name(),$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
@@ -299,7 +299,7 @@ abstract class properties {
 					if(is_string($filter_name)):
 						$filter_parameter = $this->get_filter($filter_name);
 						if(isset($filter_parameter)):
-							$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+							$action = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 							switch($action):
 								case 3:
 									$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
@@ -337,7 +337,7 @@ abstract class properties {
 							if(is_string($filter_name)):
 								$filter_parameter = $this->get_filter($filter_name);
 								if(isset($filter_parameter)):
-									$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+									$action = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 									switch($action):
 										case 3:
 											$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
@@ -395,7 +395,7 @@ abstract class properties {
 						if(is_string($filter_name)):
 							$filter_parameter = $this->get_filter($filter_name);
 							if(isset($filter_parameter)):
-								$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+								$action = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 								switch($action):
 									case 3:
 										$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
@@ -433,7 +433,7 @@ abstract class properties {
 								if(is_string($filter_name)):
 									$filter_parameter = $this->get_filter($filter_name);
 									if(isset($filter_parameter)):
-										$action  = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
+										$action = (isset($filter_parameter['flags']) ? 1 : 0) + (isset($filter_parameter['options']) ? 2 : 0);
 										switch($action):
 											case 3:
 												$filter_result = filter_var($value,$filter_parameter['filter'],['flags' => $filter_parameter['flags'],'options' => $filter_parameter['options']]);
@@ -488,7 +488,7 @@ class property_text extends properties {
 	public $x_maxlength = 0;
 	public $x_placeholder = NULL;
 	public $x_size = 40;
-	
+
 	public function set_maxlength(int $value = 0) {
 		$this->x_maxlength = $value;
 		return $this;
@@ -541,7 +541,7 @@ class property_textarea extends properties {
 	public $x_placeholder = NULL;
 	public $x_rows = 5;
 	public $x_wrap = false;
-	
+
 	public function set_cols(int $n_cols = 65) {
 		$this->x_cols = $n_cols;
 		return $this;
@@ -711,7 +711,7 @@ class property_uuid extends property_text {
 }
 class property_list extends properties {
 	public $x_options = NULL;
-	
+
 	public function set_options(array $value = NULL) {
 		$this->x_options = $value;
 		return $this;
@@ -730,13 +730,12 @@ class property_list extends properties {
 		endif;
 	}
 	public function validate_config(array $source) {
+		$return_data = '';
 		$key = $this->get_name();
 		if(array_key_exists($key,$source)):
 			$option = $source[$key];
 			if(array_key_exists($option,$this->get_options())):
 				$return_data = $option;
-			else:
-				$return_data = '';
 			endif;
 		else:
 			$return_data = $this->get_defaultvalue();
@@ -753,6 +752,31 @@ class property_list extends properties {
 		$this->
 			set_filter(FILTER_CALLBACK,$filter_name)->
 			set_filter_options([$this,'validate_option'],$filter_name);
+		return $this;
+	}
+}
+class property_list_multi extends property_list {
+	public function validate_config(array $source) {
+		$return_data = [];
+		$key = $this->get_name();
+		if(array_key_exists($key,$source)):
+			$a_option = $source[$key];
+			foreach($a_option as $option):
+				if(is_scalar($option)):
+					$return_data[] = $option;
+				endif;
+			endforeach;
+		else:
+			$return_data = $this->get_defaultvalue();
+		endif;
+		return $return_data;
+	}
+	public function filter_use_default() {
+		$filter_name = 'ui';
+		$this->
+			set_filter(FILTER_DEFAULT,$filter_name)->
+			set_filter_flags(FILTER_REQUIRE_ARRAY)->
+			set_filter_options(['default' => []],$filter_name);
 		return $this;
 	}
 }
@@ -814,7 +838,7 @@ class property_protected extends property_bool {
 }
 abstract class co_property_container {
 /**
- *	protected $x_propertyname; 
+ *	protected $x_propertyname;
  */
 	public function __construct() {
 		$this->reset();
@@ -865,7 +889,7 @@ abstract class co_property_container {
 		endif;
 		return $return_data;
 	}
-/*	
+/*
  *	public function get_propertyname() {
  *		return $this->x_propertyname ?? $this->init_propertyname();
  *	}
