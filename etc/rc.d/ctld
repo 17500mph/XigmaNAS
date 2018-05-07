@@ -357,7 +357,7 @@ ctld_mkconf()
 				--if 'string-length(portal_group) > 0' \
 					--value-of 'concat("portal-group ",portal_group)' --nl \
 				--break \
-				--match '//ctld/ctl_sub_port[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_port/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0' \
 						--value-of 'concat("port ",name)' --nl \
 					--break \
@@ -371,7 +371,7 @@ ctld_mkconf()
 					--break \
 					--output '"' --nl \
 				--break \
-				--match '//ctld/ctl_sub_lun[enable and group=$filtergroup/name]' \
+				--match '//ctld/ctl_sub_lun/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(number) > 0 and string-length(name) > 0' \
 						--value-of "concat('lun ',number,' \"',name,'\"')" --nl \
 					 --break \
