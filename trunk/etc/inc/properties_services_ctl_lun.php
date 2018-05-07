@@ -722,8 +722,8 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 	}
 	public function init_size() {
 		$property = parent::init_size();
-		$description = gtext('The LUN size, in bytes.');
-		$regexp = '/^(?:|0|[1-9][0-9]{0,16})$/';
+		$description = gtext('The size of the LUN.');
+		$regexp = '/^(?:|0|[1-9][0-9]{1,16}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('size')->
 			set_description($description)->
