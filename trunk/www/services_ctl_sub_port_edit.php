@@ -225,7 +225,13 @@ foreach($linked_parents as $linked_parent):
 	endif;
 endforeach;
 $cop->get_group()->set_options($all_parents);
+$use_tablesort = count($all_parents) > 1;
 $pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),gtext('Port'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+if($use_tablesort):
+	$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
+else:
+	$document = new_page($pgtitle,$sphere->get_scriptname());
+endif;
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
