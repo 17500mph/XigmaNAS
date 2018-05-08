@@ -88,7 +88,7 @@ class ctl_sub_lun_edit_properties extends ctl_sub_lun_properties {
 	}
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the target.');
+		$description = gtext('Name of the LUN.');
 		$options = [];
 		$property->
 			set_id('name')->
