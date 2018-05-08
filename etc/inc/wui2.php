@@ -2077,15 +2077,17 @@ trait co_DOMTools {
 		endif;
 		$table = $this->add_table_data_selection();
 		$table->ins_colgroup_with_styles('width',['5%','95%']);
+		$cb_class = 'lhelc';
 		if($this->option_exists('tablesort')):
-			$table->addTHEAD()->addTR()->
-				insTHwC('lhelc sorter-false parser-false')->
-				insTHwC('lhebl',$p->get_title());
-		else:
-			$table->addTHEAD()->addTR()->
-				insTHwC('lhelc')->
-				insTHwC('lhebl',$p->get_title());
+			if($this->option_exists('sorter-checkbox')):
+				$cb_class .= ' sorter-checkbox';
+			else:
+				$cb_class .= ' sorter-false parser-false';
+			endif;
 		endif;
+		$table->addTHEAD()->addTR()->
+			insTHwC($cb_class)->
+			insTHwC('lhebl',$p->get_title());
 		$tbody = $table->addTBODY();
 		foreach($p->get_options() as $option_tag => $option_val):
 			//	create a unique identifier for each row and use label tag for text
