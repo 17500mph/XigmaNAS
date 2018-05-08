@@ -915,7 +915,7 @@ abstract class co_property_container_param extends co_property_container {
 		$property->
 			set_name('description')->
 			set_title(gtext('Description'));
-		$description = gtext('Enter a description for your reference');
+		$description = gtext('Enter a description for your reference.');
 		$placeholder = gtext('Enter a description');
 		$property->
 			set_id('description')->
