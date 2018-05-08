@@ -90,7 +90,7 @@ function ctl_sub_lun_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),gtext('LUN')];
+	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),gtext('LUNs')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','25%','10%','25%','10%'];
