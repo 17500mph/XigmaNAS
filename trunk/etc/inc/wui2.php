@@ -2717,15 +2717,15 @@ EOJ;
 			insElement('script',['src' => '/js/spinner.js'])->
 			insElement('script',['src' => '/js/spin.min.js']);
 		if($this->option_exists('tablesort')):
-			$head->
-				insElement('script',['src' => '/js/jquery.tablesorter.min.js']);
+			$head->insElement('script',['src' => '/js/jquery.tablesorter.min.js']);
 			if($this->option_exists('tablesort-widgets')):
-				$head->
-					insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
+				$head->insElement('script',['src' => '/js/jquery.tablesorter.widgets.min.js']);
 			endif;
 			if($this->option_exists('sorter-bytestring')):
-				$head->
-					insElement('script',['src' => '/js/parser-bytestring.js']);
+				$head->insElement('script',['src' => '/js/parser-bytestring.js']);
+			endif;
+			if($this->option_exists('sorter-checkbox')):
+				$head->insElement('script',['src' => '/js/parser-checkbox.js']);
 			endif;
 		endif;
 		if($this->option_exists('datechooser')):
@@ -3023,7 +3023,8 @@ interface ci_DOM {
  *	notabnav
  *	tablesort
  *		tablesort-widgets
- *		parser-bytestring
+ *		sorter-bytestring
+ *		sorter-checkbox
  */
 function new_page(array $page_title = [],string $action_url = NULL,string ...$options) {
 	$document = new co_DOMDocument();
