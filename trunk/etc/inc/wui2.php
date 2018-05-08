@@ -2077,11 +2077,15 @@ trait co_DOMTools {
 		endif;
 		$table = $this->add_table_data_selection();
 		$table->ins_colgroup_with_styles('width',['5%','95%']);
-		$table->
-			addTHEAD()->
-				addTR()->
-					insTHwC('lhelc')->
-					insTHwC('lhebl',$p->get_title());
+		if($this->option_exists('tablesort')):
+			$table->addTHEAD()->addTR()->
+				insTHwC('lhelc sorter-false parser-false')->
+				insTHwC('lhebl',$p->get_title());
+		else:
+			$table->addTHEAD()->addTR()->
+				insTHwC('lhelc')->
+				insTHwC('lhebl',$p->get_title());
+		endif;
 		$tbody = $table->addTBODY();
 		foreach($p->get_options() as $option_tag => $option_val):
 			//	create a unique identifier for each row and use label tag for text
@@ -2099,7 +2103,6 @@ trait co_DOMTools {
 		endforeach;
 		return $this;
 	}
-
 	public function ins_filechooser($p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$id = $p->get_id();
 		$name = $p->get_name();
@@ -2170,11 +2173,15 @@ EOJ;
 	public function ins_radio_grid(properties $p,$value,bool $is_required = false,bool $is_readonly = false) {
 		$table = $this->add_table_data_selection();
 		$table->ins_colgroup_with_styles('width',['5%','95%']);
-		$table->
-			addTHEAD()->
-				addTR()->
-					insTHwC('lhelc')->
-					insTHwC('lhebl',$p->get_title());
+		if($this->option_exists('tablesort')):
+			$table->addTHEAD()->addTR()->
+				insTHwC('lhelc sorter-false parser-false')->
+				insTHwC('lhebl',$p->get_title());
+		else:
+			$table->addTHEAD()->addTR()->
+				insTHwC('lhelc')->
+				insTHwC('lhebl',$p->get_title());
+		endif;
 		$tbody = $table->addTBODY();
 		$input_attributes = [
 			'name' => $p->get_name(),
