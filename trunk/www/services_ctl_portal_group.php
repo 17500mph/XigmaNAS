@@ -209,9 +209,22 @@ if($sphere->enadis() && method_exists($cop,'get_enable')):
 		$rmo->add('POST',$sphere->get_cbm_button_val_disable(),PAGE_MODE_POST);
 	endif;
 endif;
+$rmo->add('SESSION',$sphere->get_basename(),PAGE_MODE_VIEW);
 $rmo->set_default('GET','view',PAGE_MODE_VIEW);
 list($page_method,$page_action,$page_mode) = $rmo->validate();
 switch($page_method):
+	case 'SESSION':
+		switch($page_action):
+			case $sphere->get_basename():
+				//	catch error code
+				$retval = filter_var($_SESSION[$sphere->get_basename()],FILTER_VALIDATE_INT,['options' => ['default' => 0]]);
+				unset($_SESSION['submit']);
+				unset($_SESSION[$sphere->get_basename()]);
+				$savemsg = get_std_save_message($retval);
+				ctl_portal_group_selection($cop,$sphere);
+				break;
+		endswitch;
+		break;
 	case 'GET':
 		switch($page_action):
 			case 'view':
@@ -228,8 +241,9 @@ switch($page_method):
 					config_lock();
 					$retval |= rc_update_reload_service('ctld');
 					config_unlock();
+					$_SESSION['submit'] = $sphere->get_basename();
+					$_SESSION[$sphere->get_basename()] = $retval;
 				endif;
-				$savemsg = get_std_save_message($retval);
 				if($retval == 0):
 					updatenotify_delete($sphere->get_notifier());
 				endif;
