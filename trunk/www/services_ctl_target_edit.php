@@ -252,7 +252,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Targets'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Target'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
