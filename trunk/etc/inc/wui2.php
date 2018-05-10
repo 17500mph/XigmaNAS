@@ -2606,62 +2606,82 @@ EOJ;
 		endif;
 		return $subnode;
 	}
-	public function ins_button_submit(string $value = NULL,string $content = NULL,$attributes = [],string $id = NULL) {
+	public function ins_button_submit(string $value = NULL,string $content = NULL,array $attributes = NULL,string $id = NULL) {
 		$element = 'button';
 		$class_button = 'formbtn';
-		$value = $value ?? 'cancel';
-		$id  = $id ?? sprintf('%1$s_%2$s',$element,$value);
-		$content = $content ?? gtext('Cancel');
+		$sp_value = $value ?? 'cancel';
+		$sp_content = $content ?? gtext('Cancel');
+		$sp_attributes = $attributes ?? [];
+		$sp_id  = $id ?? sprintf('%1$s_%2$s',$element,$sp_value);
 		$button_attributes  = [
 			'name' => 'submit',
 			'type' => 'submit',
 			'class' => $class_button,
-			'value' => $value,
-			'id' => $id
+			'value' => $sp_value,
+			'id' => $sp_id,
+			'title' => $sp_content
 		];
-		foreach($attributes as $key => $value):
-			switch($key):
+		foreach($sp_attributes as $key_attribute => $val_attribute):
+			switch($key_attribute):
 				case 'class+':
-					$button_attributes['class'] += ' ' . $value;
+					$button_attributes['class'] += ' ' . $val_attribute;
 					break;
 				default:
-					$button_attributes[$key] = $value;
+					$button_attributes[$key_attribute] = $val_attribute;
 					break;
 			endswitch;
 		endforeach;
-		$this->addElement($element,$button_attributes,$content);
+		$this->addElement($element,$button_attributes,$sp_content);
 		return $this;
 	}
-	public function ins_button_add() {
-		$this->ins_button_submit('save',gtext('Add'));
+	public function ins_button_add(string $content = NULL) {
+		$this->ins_button_submit('save',$content ?? gtext('Add'));
 		return $this;
 	}
-	public function ins_button_apply() {
-		$this->ins_button_submit('apply',gtext('Apply Changes'));
+	public function ins_button_apply(string $content = NULL) {
+		$this->ins_button_submit('apply',$content ?? gtext('Apply Changes'));
 		return $this;
 	}
-	public function ins_button_cancel() {
-		$this->ins_button_submit('cancel',gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
+	public function ins_button_cancel(string $content = NULL) {
+		$this->ins_button_submit('cancel',$content ?? gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
 		return $this;
 	}
-	public function ins_button_clone() {
-		$this->ins_button_submit('clone',gtext('Clone Configuration'));
+	public function ins_button_clone(string $content = NULL) {
+		$this->ins_button_submit('clone',$content ?? gtext('Clone Configuration'));
 		return $this;
 	}
-	public function ins_button_edit() {
-		$this->ins_button_submit('edit',gtext('Edit'));
+	public function ins_button_edit(string $content = NULL) {
+		$this->ins_button_submit('edit',$content ?? gtext('Edit'));
 		return $this;
 	}
-	public function ins_button_enadis(bool $enable) {
+	public function ins_button_enadis(bool $enable = false,string $content_on = NULL,string $content_off = NULL) {
 		if($enable):
-			$this->ins_button_submit('enable',gtext('Enable'));
+			$this->ins_button_submit('enable',$content_on ?? gtext('Enable'));
 		else:
-			$this->ins_button_submit('disable',gtext('Disable'));
+			$this->ins_button_submit('disable',$content_off ?? gtext('Disable'));
 		endif;
 		return $this;
 	}
-	public function ins_button_save() {
-		$this->ins_button_submit('save',gtext('Apply'));
+	public function ins_button_reload(bool $enable = false,string $content = NULL) {
+		if($enable):
+			$this->ins_button_submit('reload',$content ?? gtext('Reload'));
+		endif;
+		return $this;
+	}
+	public function ins_button_rescan(bool $enable = false,string $content = NULL) {
+		if($enabled):
+			$this->ins_button_submit('rescan',$content ?? gtext('Rescan'));
+		endif;
+		return $this;
+	}
+	public function ins_button_restart(bool $enable = false,string $content = NULL) {
+		if($enable):
+			$this->ins_button_submit('restart',$content ?? gtext('Restart'));
+		endif;
+		return $this;
+	}
+	public function ins_button_save(string $content = NULL) {
+		$this->ins_button_submit('save',$content ?? gtext('Apply'));
 		return $this;
 	}
 	//	remark area macros
