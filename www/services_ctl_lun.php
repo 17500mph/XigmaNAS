@@ -56,7 +56,7 @@ function ctl_lun_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected LUNs'));
 	$sphere->cbm_toggle(gtext('Toggle Selected LUNs'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected LUNs?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected LUNs?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected LUNs?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected LUNs?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected LUNs?'));
 //	sphere external content

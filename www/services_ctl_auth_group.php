@@ -56,7 +56,7 @@ function ctl_auth_group_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Auth Groups'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Auth Groups'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected auth groups?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected auth groups?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected auth groups?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected auth groups?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected auth groups?'));
 //	sphere external content

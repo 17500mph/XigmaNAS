@@ -57,7 +57,7 @@ function ctl_sub_option_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Option Records'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Option Records'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected option records?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected option records?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected option records?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected option records?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected option records?'));
 //	sphere external content

@@ -57,7 +57,7 @@ function ctl_sub_lun_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected LUN Records'));
 	$sphere->cbm_toggle(gtext('Toggle Selected LUN Records'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected LUN records?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected LUN records?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected LUN records?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected LUN records?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected LUN records?'));
 //	sphere external content

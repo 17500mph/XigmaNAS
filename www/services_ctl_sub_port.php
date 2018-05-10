@@ -57,7 +57,7 @@ function ctl_sub_port_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Port Records'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Port Records'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected port records?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected port records?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected port records?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected port records?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected port records?'));
 //	sphere external content
