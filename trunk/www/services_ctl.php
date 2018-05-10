@@ -69,6 +69,8 @@ if($sphere->enadis()):
 	$rmo->add('POST','enable',PAGE_MODE_VIEW);
 	$rmo->add('POST','disable',PAGE_MODE_VIEW);
 endif;
+$rmo->add('POST','reload',PAGE_MODE_VIEW);
+$rmo->add('POST','restart',PAGE_MODE_VIEW);
 $rmo->add('POST','save',PAGE_MODE_POST);
 $rmo->add('POST','view',PAGE_MODE_VIEW);
 $rmo->add('SESSION',$sphere->get_basename(),PAGE_MODE_VIEW);
@@ -96,6 +98,8 @@ switch($page_action):
 	case 'view':
 	case 'disable':
 	case 'enable':
+	case 'reload':
+	case 'restart':
 		$source = $sphere->grid;
 		foreach($a_referer as $referer):
 			$name = $referer->get_name();
@@ -166,6 +170,26 @@ switch($page_action):
 endswitch;
 //	save configuration
 switch($page_action):
+	case 'reload':
+		$retval = 0;
+		config_lock();
+		$retval |= rc_reload_service_if_running_and_enabled('ctld');
+		config_unlock();
+		$_SESSION['submit'] = $sphere->get_basename();
+		$_SESSION[$sphere->get_basename()] = $retval;
+		header($sphere->get_location());
+		exit;
+		break;
+	case 'restart':
+		$retval = 0;
+		config_lock();
+		$retval |= rc_restart_service_if_running_and_enabled('ctld');
+		config_unlock();
+		$_SESSION['submit'] = $sphere->get_basename();
+		$_SESSION[$sphere->get_basename()] = $retval;
+		header($sphere->get_location());
+		exit;
+		break;
 	case 'save':
 		if(empty($input_errors)):
 			foreach($a_referer as $referer):
@@ -197,6 +221,7 @@ switch($page_action):
 endswitch;
 //	determine final page mode and calculate readonly flag
 list($page_mode,$is_readonly) = calc_skipviewmode($page_mode);
+$is_enabled = $sphere->row[$cop->get_enable()->get_name()];
 //	create document
 $pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Settings')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
@@ -225,7 +250,7 @@ $content->
 		ins_colgroup_data_settings()->
 		push()->
 		addTHEAD()->
-			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gtext('CAM Target Layer'))->
+			c2_titleline_with_checkbox($cop->get_enable(),$is_enabled,false,$is_readonly,gtext('CAM Target Layer'))->
 		pop()->
 		addTBODY()->
 			c2_input_text($cop->get_debug(),htmlspecialchars($sphere->row[$cop->get_debug()->get_name()]),false,$is_readonly)->
@@ -242,7 +267,9 @@ switch($page_mode):
 		$document->
 			add_area_buttons()->
 				ins_button_edit()->
-				ins_button_enadis(!$sphere->row[$cop->get_enable()->get_name()]);
+				ins_button_enadis(!$is_enabled)->
+				ins_button_restart($is_enabled)->
+				ins_button_reload($is_enabled);
 		break;
 	case PAGE_MODE_EDIT:
 		$document->
