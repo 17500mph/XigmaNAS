@@ -33,43 +33,8 @@
  */
 require_once 'properties.php';
 
-class properties_smartmontools_umass extends co_property_container {
-	protected $x_description;
-	protected $x_enable;
+class smartmontools_umass_properties extends co_property_container_param {
 	protected $x_name;
-	protected $x_protected;
-	protected $x_type;
-	protected $x_uuid;
-
-	public function get_description() {
-		return $this->x_description ?? $this->init_description();
-	}
-	public function init_description() {
-		$property = $this->x_description = new property_text($this);
-		$property->
-			set_name('description')->
-			set_title(gtext('Description'));
-		$property->
-			set_id('description')->
-			set_description('')->
-			set_defaultvalue('')->set_size(60)->
-			set_maxlength(256)->
-			set_placeholder(gtext('Enter a description for your reference'))->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => '/.*/'])->
-			set_editableonadd(true)->
-			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
-		return $property;
-	}
-	public function get_enable() {
-		return $this->x_enable ?? $this->init_enable();
-	}
-	public function init_enable() {
-		$property = $this->x_enable = new property_enable($this);
-		return $property;
-	}
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
 	}
@@ -78,6 +43,23 @@ class properties_smartmontools_umass extends co_property_container {
 		$property->
 			set_name('name')->
 			set_title(gtext('Identifier'));
+		return $property;
+	}
+	protected $x_type;
+	public function get_type() {
+		return $this->x_type ?? $this->init_type();
+	}
+	public function init_type() {
+		$property = $this->x_type = new property_text($this);
+		$property->
+			set_name('type')->
+			set_title(gtext('Type'));
+		return $property;
+	}
+}
+class smartmontools_umass_edit_properties extends smartmontools_umass_properties {
+	public function init_name() {
+		$property = parent::init_name();
 		$property->
 			set_id('name')->
 			set_description(gtext('The identifier reported as unknown by smartctl including brackets.'))->
@@ -91,21 +73,8 @@ class properties_smartmontools_umass extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	public function get_protected() {
-		return $this->x_protected ?? $this->init_protected();
-	}
-	public function init_protected() {
-		$property = $this->x_protected = new property_protected($this);
-		return $property;
-	}
-	public function get_type() {
-		return $this->x_type ?? $this->init_type();
-	}
 	public function init_type() {
-		$property = $this->x_type = new property_text($this);
-		$property->
-			set_name('type')->
-			set_title(gtext('Type'));
+		$property = parent::init_type();
 		$property->
 			set_id('type')->
 			set_description('')->
@@ -119,13 +88,6 @@ class properties_smartmontools_umass extends co_property_container {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
-		return $property;
-	}
-	public function get_uuid() {
-		return $this->x_uuid ?? $this->init_uuid();
-	}
-	public function init_uuid() {
-		$property = $this->x_uuid = new property_uuid($this);
 		return $property;
 	}
 }
