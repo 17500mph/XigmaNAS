@@ -34,83 +34,153 @@
 require_once 'globals.inc';
 require_once 'util.inc';
 
-// Execute rc script.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Updates /etc/rc.conf file.
+ *	Check if KEYWORD 'RCVAR' is defined (e.g. '# RCVAR: xxxx').
+ *	@param string $name The name of the service.
+ *	@param string $state The state of the service (enable / disable)
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
+function rc_update_rcconf($name,$state) {
+	$retval = 0;
+	$fullpathname = sprintf('/etc/rc.d/%s',$name);
+	if(file_exists($fullpathname)):
+		$data = @file_get_contents($fullpathname);
+		$regexp = '/RCVAR: (.*)/';
+		if(preg_match($regexp,$data,$result)):
+			//	Update /etc/rc.conf
+			$cmd = sprintf('/usr/local/sbin/rconf service %s %s',$state,$result[1]);
+			$retval = mwexec($cmd);
+		endif;
+	endif;
+	return $retval;
+}
+/**
+ *	Checks if service is enabled.
+ *	The KEYWORD 'XQUERY' is used to determine if service is enabled or not.
+ *	@global array $g Global settings
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if service is enabled (default), otherwise 1.
+ */
+function rc_is_service_enabled($name) {
+	global $g;
+	
+	$retval = 0;
+	$fullpathname = sprintf('/etc/rc.d/%s',$name);
+	if(file_exists($fullpathname)):
+		$data = @file_get_contents($fullpathname);
+		$regexp = '/XQUERY: (.*)/';
+		if(preg_match($regexp,$data,$result)):
+			// Execute query
+			$fullpathconfig = sprintf('%s/config.xml',$g['conf_path']);
+			$cmd = sprintf('/usr/local/bin/xml sel -t %s %s',$result[1],$fullpathconfig);
+			mwexec2($cmd,$output);
+			if(!empty($output) && '0' === $output[0]):
+			else:
+				$retval = 1;
+			endif;
+		endif;
+	endif;
+	return $retval;
+}
+/**
+ *	Execute rc script.
+ *	@param string $scriptname The name of the script.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_exec_script($scriptname) {
-	mwexec2("{$scriptname} >/dev/null 2>&1 </dev/null", $output, $retval);
+	$cmd = sprintf('%s >/dev/null 2>&1 </dev/null',$scriptname);
+	mwexec2($cmd,$output,$retval);
 	return $retval;
 }
-
-// Execute rc script asynchronuously.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Execute rc script asynchronuously.
+ *	@param string $scriptname The name of the script.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_exec_script_async($scriptname) {
-	mwexec2("nohup {$scriptname} >/dev/null 2>&1 &", $output, $retval);
+	$cmd = sprintf('nohup %s >/dev/null 2>&1 &',$scriptname);
+	mwexec2($cmd,$output,$retval);
 	return $retval;
 }
-
-// Check if service is running.
-// Return 0 if service is running, otherwise 1.
+/**
+ *	Check if service is running.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 ifservice is running, otherwise 1.
+ */
 function rc_is_service_running($name) {
-	$retval = rc_exec_script("/etc/rc.d/{$name} onestatus");
+	$cmd = sprintf('/etc/rc.d/%s onestatus',$name);
+	$retval = rc_exec_script($cmd);
 	return $retval;
 }
-
-// Execute service.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Execute a service.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_exec_service($name) {
-	$retval = rc_exec_script("/etc/rc.d/{$name}");
-	if (0 == $retval) {
-		write_log("{$name} service executed");
-	}	else {
-		write_log("Failed to execute service {$name}");
-	}
+	$cmd = sprintf('/etc/rc.d/%s',$name);
+	$retval = rc_exec_script($cmd);
+	if(0 == $retval):
+		write_log(sprintf('%s service executed',$name));
+	else:
+		write_log(sprintf('Failed to execute service %s',$name));
+	endif;
 	return $retval;
 }
-
-// Start service.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Send start command to a service.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_start_service($name) {
-	// Execute script.
-	$retval = rc_exec_script("/etc/rc.d/{$name} start");
-	if (0 == $retval) {
-		write_log("{$name} service started");
-	}	else {
-		write_log("Failed to start service {$name}");
-	}
+	$cmd = sprintf('/etc/rc.d/%s start',$name);
+	$retval = rc_exec_script($cmd);
+	if(0 == $retval):
+		write_log(sprintf('%s service started',$name));
+	else:
+		write_log(sprintf('Failed to start service %s',$name));
+	endif;
 	return $retval;
 }
-
-// Restart service.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Send restart command to a service.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_restart_service($name) {
-	// Execute script.
-	$retval = rc_exec_script("/etc/rc.d/{$name} restart");
-	if (0 == $retval) {
-		write_log("{$name} service restarted");
-	}	else {
-		write_log("Failed to restart service {$name}");
-	}
+	$cmd = sprintf('/etc/rc.d/%s restart',$name);
+	$retval = rc_exec_script($cmd);
+	if(0 == $retval):
+		write_log(sprintf('%s service restarted',$name));
+	else:
+		write_log(sprintf('Failed to restart service %s',$name));
+	endif;
 	return $retval;
 }
-
-// Reload service.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Send reload command to a service.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_reload_service($name) {
-	// Execute script.
-	$retval = rc_exec_script("/etc/rc.d/{$name} reload");
-	if (0 == $retval) {
-		write_log("{$name} service reload");
-	}	else {
-		write_log("Failed to reload service {$name}");
-	}
+	$cmd = sprintf('/etc/rc.d/%s reload',$name);
+	$retval = rc_exec_script($cmd);
+	if(0 == $retval):
+		write_log(sprintf('%s service reloaded',$name));
+	else:
+		write_log(sprintf('Failed to reload service %s',$name));
+	endif;
 	return $retval;
 }
-
-// Rescan service.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Send rescan command to service.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_rescan_service($name) {
-	// Execute script.
-	$retval = rc_exec_script(sprintf('/etc/rc.d/%s rescan',$name));
+	$cmd = sprintf('/etc/rc.d/%s rescan',$name);
+	$retval = rc_exec_script($cmd);
 	if(0 == $retval):
 		write_log(sprintf('%s: rescan command issued',$name));
 	else:
@@ -118,125 +188,128 @@ function rc_rescan_service($name) {
 	endif;
 	return $retval;
 }
-
-// Stop service.
-// Return 0 if successful, otherwise 1.
+/**
+ *	Send stop command to service.
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
 function rc_stop_service($name) {
-	// Execute script
-	$retval = rc_exec_script("/etc/rc.d/{$name} stop");
-	if (0 == $retval) {
-		write_log("{$name} service stopped");
-	}	else {
-		write_log("Failed to stop service {$name}");
-	}
+	$cmd = sprintf('/etc/rc.d/%s stop',$name);
+	$retval = rc_exec_script($cmd);
+	if(0 == $retval):
+		write_log(sprintf('%s service stopped',$name));
+	else:
+		write_log(sprintf('Failed to stop service %s',$name));
+	endif;
 	return $retval;
 }
-
-// Update service (Modify rc.conf and execute rc script).
-// Return 0 if successful, otherwise 1.
-function rc_update_service_ex($name, $reload) {
+/**
+ *	Update service - modify rc.conf and execute rc script.
+ *	@param string $name The name of the service.
+ *	@param bool $reload Flag to reload (true) the service instead of restarting (false) it. 
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
+function rc_update_service_ex($name,bool $reload = false) {
 	$retval = 0;
-
-	// Check if service is running
+	//	Check if service is running
 	$running = rc_is_service_running($name);
-
-	// Check if service is enabled
+	//	Check if service is enabled
 	$enabled = rc_is_service_enabled($name);
-
-	// Update rc.conf and execute rc script
-	if (0 == $enabled) {
-		rc_update_rcconf($name, "enable");
-
-		switch ($running) {
+	//	Update rc.conf and execute rc script
+	if(0 == $enabled):
+		rc_update_rcconf($name,'enable');
+		switch ($running):
 			case 0:
-				if ($reload) {
+				if($reload):
 					$retval = rc_reload_service($name);
-				} else {
+				else:
 					$retval = rc_restart_service($name);
-				}
+				endif;
 				break;
 			case 1:
 				$retval = rc_start_service($name);
 				break;
-		}
-	} else {
-		// Stop service if necessary
-		if (0 == $running) {
+		endswitch;
+	else:
+		//	Stop service if necessary
+		if(0 == $running):
 			$retval = rc_stop_service($name);
-		}
-
-		rc_update_rcconf($name, "disable");
-	}
-
+		endif;
+		rc_update_rcconf($name,'disable');
+	endif;
 	return $retval;
 }
-
-function rc_update_service($name) {
-	 return rc_update_service_ex($name, /* reload */0);
-}
-function rc_update_reload_service($name) {
-	 return rc_update_service_ex($name, /* reload */1);
-}
-
-// Update /etc/rc.conf file.
-// Check if KEYWORD 'RCVAR' is defined (e.g. '# RCVAR: xxxx').
-function rc_update_rcconf($name,$state) {
-	$data = @file_get_contents("/etc/rc.d/$name");
-	$search = "/RCVAR: (.*)/";
-	if (!preg_match($search, $data, $rcvar)) {
-		return 0;
-	}
-
-	// Update /etc/rc.conf
-	$retval = mwexec("/usr/local/sbin/rconf service {$state} {$rcvar[1]}");
-
-	return $retval;
-}
-
-// Check if service is enabled.
-// Use the KEYWORD 'XQUERY' to determine if service is enabled or not.
-// Return 0 if service is enabled (default), otherwise 1.
-function rc_is_service_enabled($name) {
-	global $g;
-
-	$data = @file_get_contents("/etc/rc.d/$name");
-	$search = "/XQUERY: (.*)/";
-	if (!preg_match($search, $data, $xquery)) {
-		return 0;
-	}
-
-	// Execute query
-	mwexec2("/usr/local/bin/xml sel -t {$xquery[1]} {$g['conf_path']}/config.xml", $output);
-
-	return (!empty($output) && "0" === $output[0]) ? 0 : 1;
-}
-
 /**
- * Gets the value of an /etc/rc.conf environment variable.
- * @param[in] $varname	The variable name
- * @return	Returns the value of the environment variable varname,
- *					or FALSE on an error.
+ *	Update rc.conf and restart service
+ *	@param string $name The name of the service.
+ *	@return int Returns 0 if successful, otherwise 1.
+ */
+function rc_update_service($name) {
+	 return rc_update_service_ex($name,false);
+}
+/**
+ *	Update rc.conf and reload service
+ *	@param	string $name The name of the service.
+ *	@return	int Returns 0 if successful, otherwise 1.
+ */
+function rc_update_reload_service($name) {
+	 return rc_update_service_ex($name,true);
+}
+/**
+ *	Gets the value of an /etc/rc.conf environment variable.
+ *	@param $varname The variable name
+ *	@return string Returns the value of the environment variable varname, or false on error.
  */
 function rc_getenv($varname) {
-	$data = @file_get_contents("/etc/rc.conf");
-	if (!preg_match("/{$varname}=\"(.*)\"/", $data, $matches)) {
-		return FALSE;
-	}
-	return $matches[1];
+	$data = @file_get_contents('/etc/rc.conf');
+	$regexp = sprintf('/%s="(.*)"/',$varname);
+	if(preg_match($regexp,$data,$result)):
+		return $result[1];
+	endif;
+	return false;
 }
-
 /**
- * Gets the value of an /etc/rc.conf environment variable. If the variable
- * is not defined in rc.conf the default value will be used instead.
- * @param[in] $varname	The variable name
- * @param[in] $default	The default variable value
- * @return	Returns the value of the environment variable varname in rc.conf
- *					or the default one.
+ *	Gets the value of an /etc/rc.conf environment variable. If the variable
+ *	is not defined in rc.conf the default value will be used instead.
+ *	@param[in] $varname	The variable name
+ *	@param string $default The default variable value
+ *	@return string Returns the value of the environment variable varname in rc.conf or the default value.
  */
-function rc_getenv_ex($varname, $default) {
-	if (FALSE === ($retval = rc_getenv($varname))) {
+function rc_getenv_ex($varname,$default) {
+	if(false === ($retval = rc_getenv($varname))):
 		return $default;
-	}
+	endif;
 	return $retval;
 }
-?>
+/**
+ *	Restarts a service when it is enabled and running.
+ *	@param string $name The name ofd the service to be restarted
+ *	@return int Returns the exit code of the restart command 
+ */
+function rc_restart_service_if_running_and_enabled(string $name) {
+	$retval = 0;
+	$regexp = '/^\S+$/';
+	if(preg_match($regexp,$name)):
+		//	process if service is enabled and running
+		if(0 == rc_is_service_running($name) && 0 == rc_is_service_enabled($name)):
+			$retval = rc_restart_service($name);
+		endif;
+	endif;
+	return $retval;
+}
+/**
+ *	Reloads a service when it is enabled and running.
+ *	@param string $name The name ofd the service to be reloaded
+ *	@return int Returns the exit code of the reload command 
+ */
+function rc_reload_service_if_running_and_enabled(string $name) {
+	$retval = 0;
+	$regexp = '/^\S+$/';
+	if(preg_match($regexp,$name)):
+		//	process if service is enabled and running
+		if(0 == rc_is_service_running($name) && 0 == rc_is_service_enabled($name)):
+			$retval = rc_reload_service($name);
+		endif;
+	endif;
+	return $retval;
+}
