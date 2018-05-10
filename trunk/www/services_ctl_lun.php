@@ -41,7 +41,7 @@ function ctl_lun_sphere() {
 	global $config;
 
 	$sphere = new co_sphere_grid('services_ctl_lun','php');
-	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
+	$sphere->get_modify()->set_basename($sphere->get_basename() . '_edit');
 	$sphere->set_notifier('ctl_lun');
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
