@@ -427,13 +427,6 @@ function html_timezonecombobox($ctrlname,$title,$value,$desc,$required = false,$
 	$ctrl->Render();
 }
 
-function html_interfacecombobox($ctrlname,$title,$value,$desc,$required = false,$readonly = false) {
-	$ctrl = new HTMLInterfaceComboBox($ctrlname,$title,$value,$desc);
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->Render();
-}
-
 function html_checkbox($ctrlname,$title,$checked,$caption = "",$desc = "",$required = false,$onclick = "") {
 	$ctrl = new HTMLCheckBox($ctrlname,$title,$checked,$caption,$desc);
 	$ctrl->SetRequired($required);
@@ -501,14 +494,6 @@ function html_ipv6addrbox($ctrlname,$ctrlnamenetmask,$title,$value,$valuenetmask
 
 function html_folderbox($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
 	$ctrl = new HTMLFolderBox($ctrlname,$title,$value,$desc);
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->SetPath($path);
-	$ctrl->Render();
-}
-
-function html_minidlnabox($ctrlname,$title,$value,$desc,$path,$required = false,$readonly = false) {
-	$ctrl = new HTMLFolderBox1($ctrlname,$title,$value,$desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
