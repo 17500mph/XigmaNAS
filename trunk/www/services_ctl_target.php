@@ -56,7 +56,7 @@ function ctl_target_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Targets'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Targets'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected targets?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected targets?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected targets?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected targets?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected targets?'));
 //	sphere external content

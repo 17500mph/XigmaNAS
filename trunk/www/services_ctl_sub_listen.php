@@ -57,7 +57,7 @@ function ctl_sub_listen_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Listen Records'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Listen Records'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected listen records?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected listen records?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected listen records?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected listen records?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected listen records?'));
 //	sphere external content

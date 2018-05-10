@@ -57,7 +57,7 @@ function ctl_sub_initiator_name_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Initiator Names'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Initiator Names'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected initiator names?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected initiator names?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected initiator names?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected initiator names?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected initiator names?'));
 //	sphere external content

@@ -57,7 +57,7 @@ function ctl_sub_initiator_portal_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Initiator Portals'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Initiator Portals'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected initiator portals?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected initiator portals?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected initiator portals?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected initiator portals?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected initiator portals?'));
 //	sphere external content

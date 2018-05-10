@@ -57,7 +57,7 @@ function ctl_sub_chap_mutual_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Mutual CHAP Users'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Mutual CHAP Users'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected Mutual CHAP users?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected Mutual CHAP users?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected Mutual CHAP users?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected Mutual CHAP users?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected Mutual CHAP users?'));
 //	sphere external content

@@ -57,7 +57,7 @@ function ctl_sub_chap_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected CHAP Users'));
 	$sphere->cbm_toggle(gtext('Toggle Selected CHAP Users'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected CHAP users?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected CHAP users?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected CHAP users?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected CHAP users?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected CHAP users?'));
 //	sphere external content

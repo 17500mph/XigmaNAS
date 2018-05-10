@@ -56,7 +56,7 @@ function ctl_portal_group_sphere() {
 	$sphere->cbm_enable(gtext('Enable Selected Portal Groups'));
 	$sphere->cbm_toggle(gtext('Toggle Selected Portal Groups'));
 	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected portal groups?'));
-	$sphere->cbm_disable(gtext('Do you want to disable selected portal groups?'));
+	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected portal groups?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected portal groups?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected portal groups?'));
 //	sphere external content
