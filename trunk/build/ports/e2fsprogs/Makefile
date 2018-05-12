@@ -25,7 +25,8 @@ USE_CSTD=	gnu99
 # to deal with the file systems from a system not yet fully booted.
 .if !defined(PKGNAMESUFFIX)
 USE_LDCONFIG=	${PREFIX}/lib/e2fsprogs
-.endifGNU_CONFIGURE=	yes
+.endif
+GNU_CONFIGURE=	yes
 LLD_UNSAFE=	yes
 CONFIGURE_ARGS?=--disable-fsck \
 		--disable-e2initrd-helper \
