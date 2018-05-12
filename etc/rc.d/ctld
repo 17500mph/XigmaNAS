@@ -92,12 +92,18 @@ ctld_mkconf()
 				--break \
 				--match '//ctld/ctl_sub_chap/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0 and string-length(secret) > 0' \
-						--value-of "concat('chap \"',name,'\" \"',secret,'\"')" --nl \
+						--if "contains(secret,'\"')" \
+							--output '# invalid character(s) were removed from chap secret:' --nl \
+						--break \
+						--value-of "concat('chap \"',name,'\" \"',str:replace(secret,'\"',''),'\"')" --nl \
 					--break \
 				--break \
 				--match '//ctld/ctl_sub_chap_mutual/param[enable and group=$filtergroup/name]' \
 					--if 'string-length(name) > 0 and string-length(secret) > 0 and string-length(mutual_name) > 0 and string-length(mutual_secret) > 0' \
-						--value-of "concat('chap-mutual \"',name,'\" \"',secret,'\" \"',mutual_name,'\" \"',mutual_secret,'\"')" --nl \
+						--if "contains(secret,'\"') or contains(mutual_secret,'\"')" \
+							--output '# invalid character(s) were removed from chap secret or mutual chap secret:' --nl \
+						--break \
+						--value-of "concat('chap-mutual \"',name,'\" \"',str:replace(secret,'\"',''),'\" \"',mutual_name,'\" \"',str:replace(mutual_secret,'\"',''),'\"')" --nl \
 					--break \
 				--break \
 				--match '//ctld/ctl_sub_initiator_name/param[enable and group=$filtergroup/name]' \
