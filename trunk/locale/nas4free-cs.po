@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-04-30 08:37+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-10 05:04+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:28+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -202,7 +202,7 @@ msgid "1.8\""
 msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
@@ -229,10 +229,10 @@ msgid "3.5\""
 msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KB mezivrstva (wrapper)"
@@ -241,19 +241,19 @@ msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 bajtů"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
@@ -522,6 +522,9 @@ msgstr "Přidat síťový most"
 msgid "Add CARP"
 msgstr "Přidat CARP"
 
+msgid "Add CHAP User"
+msgstr "Přidat CHAP uživatele"
+
 msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
 
@@ -537,14 +540,29 @@ msgstr "Přidat skupinu"
 msgid "Add Host"
 msgstr "Přidat stroj"
 
+msgid "Add Initiator Name"
+msgstr "Přidat název iniciátoru"
+
+msgid "Add Initiator Portal"
+msgstr "Přidat portál iniciátoru"
+
 msgid "Add LAGG"
 msgstr "Přidat LAGG"
 
 msgid "Add LUN"
 msgstr "Přidat LUN"
 
+msgid "Add LUN Record"
+msgstr "Přidat LUN záznam"
+
+msgid "Add Listen Record"
+msgstr "Přidat Listen záznam"
+
 msgid "Add MIB"
 msgstr "Přidat MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr "Přidat uživatele protokolu vzájemný CHAP"
 
 msgid "Add NFS Share"
 msgstr "Přidat NFS sdílení"
@@ -552,8 +570,14 @@ msgstr "Přidat NFS sdílení"
 msgid "Add Option"
 msgstr "Přidat předvolbu"
 
+msgid "Add Option Record"
+msgstr "Přidat záznam pro volbu"
+
 msgid "Add Pool"
 msgstr "Přidat fond"
+
+msgid "Add Port Record"
+msgstr "Přidat záznam pro port"
 
 msgid "Add Portal Group"
 msgstr "Přidat skupinu portálu"
@@ -948,7 +972,7 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Úložná jednotka určuje úložnou oblast na cíli."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "IPv4 nebo IPv6 adresa portálu iSCSI iniciátoru."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr "IPv4 nebo IPv6 adresa iSNS serveru na kterém zaregistrovat."
@@ -985,9 +1009,6 @@ msgstr "Vyskytla se chyba."
 
 msgid "An host with this name already exists."
 msgstr "Tento název je už používán pro jiný stroj."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Rozhraní s tímto popisem už v systému existuje."
@@ -1080,7 +1101,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Opravdu chcete server vypnout?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Přiřadit cíli člověku srozumitelný popis."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1088,10 +1109,10 @@ msgid ""
 msgstr ""
 
 msgid "Assign a previously defined authentication group to the target."
-msgstr ""
+msgstr "Přiřadit cíli dříve určenou skupinu ověřování."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Přiřadit cíli předtím vytvořenou skupinu portálu."
 
 msgid "Asynchronous I/O"
 msgstr "Asynchronní vst./výst."
@@ -1159,10 +1180,10 @@ msgid "Auth Group is locked"
 msgstr "Ověřovací skupina je uzamčena"
 
 msgid "Auth Group is marked for deletion"
-msgstr ""
+msgstr "Ověřovací skupina je označena ke smazání"
 
 msgid "Auth Group is unlocked"
-msgstr ""
+msgstr "Ověřovací skupina je odemčena"
 
 msgid "Auth Groups"
 msgstr "Skupiny pověřených"
@@ -1504,10 +1525,10 @@ msgid "CACHE"
 msgstr "MEZIPAMĚŤ"
 
 msgid "CAM Target Layer"
-msgstr ""
+msgstr "Vrstva CAM cíle"
 
 msgid "CAM Target Layer / iSCSI Target"
-msgstr ""
+msgstr "Vrstva CAM cíle / iSCSI cíl"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1535,10 +1556,10 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD"
-msgstr ""
+msgstr "CD"
 
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 msgid "CD/DVD"
 msgstr "CD/DVD/BD"
@@ -1551,6 +1572,15 @@ msgstr "ZMĚNĚNO"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr "Uživatel CHAP protokolu je uzamčen"
+
+msgid "CHAP User is marked for deletion"
+msgstr "Uživatel CHAP protokolu je označen pro smazání"
+
+msgid "CHAP User is unlocked"
+msgstr "Uživatel CHAP protokolu je odemčen"
 
 msgid "CHAP Users"
 msgstr "CHAP uživatelé"
@@ -2468,7 +2498,7 @@ msgid "DVD"
 msgstr "DVD"
 
 msgid "DVD-ROM"
-msgstr ""
+msgstr "DVD-ROM"
 
 msgid "Daemon"
 msgstr "Proces služby"
@@ -2639,6 +2669,9 @@ msgstr "Smazat označené síťové mosty"
 msgid "Delete Selected CARPs"
 msgstr "Smazat označené CARP"
 
+msgid "Delete Selected CHAP Users"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Smazat označené příkazy"
 
@@ -2654,13 +2687,28 @@ msgstr "Smazat označené šifrované svazky"
 msgid "Delete Selected Groups"
 msgstr "Smazat označené skupiny"
 
+msgid "Delete Selected Initiator Names"
+msgstr ""
+
+msgid "Delete Selected Initiator Portals"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Smazat označené úlohy"
 
 msgid "Delete Selected LAGGs"
 msgstr "Smazat označené LAGG"
 
+msgid "Delete Selected LUN Records"
+msgstr ""
+
 msgid "Delete Selected LUNs"
+msgstr "Smazat označená čísla logických jednotek"
+
+msgid "Delete Selected Listen Records"
+msgstr ""
+
+msgid "Delete Selected Mutual CHAP Users"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
@@ -2669,11 +2717,17 @@ msgstr "Smazat označená NFS sdílení"
 msgid "Delete Selected Notifier"
 msgstr "Smazat označené oznamování"
 
+msgid "Delete Selected Option Records"
+msgstr ""
+
 msgid "Delete Selected Options"
 msgstr "Smazat označené předvolby"
 
 msgid "Delete Selected Pools"
 msgstr "Smazat označené fondy úložišť"
+
+msgid "Delete Selected Port Records"
+msgstr ""
 
 msgid "Delete Selected Portal Groups"
 msgstr "Smazat označené skupiny portálu"
@@ -2803,7 +2857,7 @@ msgid "Deny"
 msgstr "Odepřít"
 
 msgid "Deny discovery"
-msgstr ""
+msgstr "Odepřít zjišťování"
 
 msgid "Description"
 msgstr "Popis"
@@ -2965,7 +3019,7 @@ msgstr ""
 "Digital Audio Access Protocol (protokol pro přístup k digitálnímu zvuku)"
 
 msgid "Direct"
-msgstr ""
+msgstr "Přímé"
 
 msgid "Direction"
 msgstr "Směr"
@@ -3004,17 +3058,41 @@ msgstr "Neumožnit přechod na novější verzi základního systému"
 msgid "Disable Selected Auth Groups"
 msgstr ""
 
+msgid "Disable Selected CHAP Users"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "Vypnout označené příkazy"
+
+msgid "Disable Selected Initiator Names"
+msgstr ""
+
+msgid "Disable Selected Initiator Portals"
+msgstr ""
 
 msgid "Disable Selected Jobs"
 msgstr "Smazat označené úlohy"
 
+msgid "Disable Selected LUN Records"
+msgstr ""
+
 msgid "Disable Selected LUNs"
+msgstr ""
+
+msgid "Disable Selected Listen Records"
+msgstr ""
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Disable Selected Option Records"
 msgstr ""
 
 msgid "Disable Selected Options"
 msgstr "Vypnout označené předvolby"
+
+msgid "Disable Selected Port Records"
+msgstr ""
 
 msgid "Disable Selected Portal Groups"
 msgstr ""
@@ -3029,7 +3107,7 @@ msgid "Disable Selected Rsync Modules"
 msgstr "Vypnout označené Rsync moduly"
 
 msgid "Disable Selected Targets"
-msgstr ""
+msgstr "Vypnout označené cíle"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
@@ -3072,7 +3150,7 @@ msgid "Discovery Auth Method"
 msgstr "Ověřovací metoda pro zjišťování"
 
 msgid "Discovery Filter"
-msgstr ""
+msgstr "Filtr zjištování"
 
 msgid ""
 "Discovery will not return targets that cannot be accessed by the initiator "
@@ -3300,10 +3378,19 @@ msgstr ""
 msgid "Do you want to delete selected CARPs?"
 msgstr "Opravdu smazat označené CARP?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr ""
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Opravdu smazat označené LAGGs?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr ""
+
 msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
+msgid "Do you want to delete selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to delete selected NFS shares?"
@@ -3342,17 +3429,32 @@ msgstr "Opravdu smazat označené šifrované svazky?"
 msgid "Do you want to delete selected groups?"
 msgstr "Opravdu smazat označené skupiny?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr ""
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Opravdu smazat označené úlohy?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr ""
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Chcete označené oznamování smazat?"
+
+msgid "Do you want to delete selected option records?"
+msgstr ""
 
 msgid "Do you want to delete selected options?"
 msgstr "Opravdu smazat označené předvolby?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Opravdu smazat označené fondy úložišť?"
+
+msgid "Do you want to delete selected port records?"
+msgstr ""
 
 msgid "Do you want to delete selected portal groups?"
 msgstr ""
@@ -3379,7 +3481,7 @@ msgid "Do you want to delete selected snapshots?"
 msgstr "Opravdu smazat označené zachycené stavy?"
 
 msgid "Do you want to delete selected targets?"
-msgstr ""
+msgstr "Opravdu chcete smazat označené portály?"
 
 msgid "Do you want to delete selected user accounts?"
 msgstr "Opravdu smazat označené uživatelské účty?"
@@ -3393,7 +3495,16 @@ msgstr "Opravdu smazat označené svazky?"
 msgid "Do you want to delete this command?"
 msgstr "Opravdu smazat tento příkaz?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to disable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to disable selected auth groups?"
@@ -3402,11 +3513,26 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "Opravdu vypnout označené příkazy?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Opravdu vypnout označené úlohy?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr ""
+
+msgid "Do you want to disable selected option records?"
+msgstr ""
+
 msgid "Do you want to disable selected options?"
 msgstr "Opravdu vypnout označené předvolby?"
+
+msgid "Do you want to disable selected port records?"
+msgstr ""
 
 msgid "Do you want to disable selected portal groups?"
 msgstr ""
@@ -3421,9 +3547,18 @@ msgid "Do you want to disable selected rsync modules?"
 msgstr "Opravdu vypnout označené rsync moduly?"
 
 msgid "Do you want to disable selected targets?"
+msgstr "Opravdu chcete vypnout označené cíle?"
+
+msgid "Do you want to enable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected LUN records?"
 msgstr ""
 
 msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3432,11 +3567,26 @@ msgstr ""
 msgid "Do you want to enable selected commands?"
 msgstr "Opravdu zapnout označené příkazy?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr "Opravdu chcete zapnout označené názvy iniciátorů?"
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Opravdu zapnout označené úlohy?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr ""
+
+msgid "Do you want to enable selected option records?"
+msgstr ""
+
 msgid "Do you want to enable selected options?"
 msgstr "Opravdu zapnout označené předvolby?"
+
+msgid "Do you want to enable selected port records?"
+msgstr ""
 
 msgid "Do you want to enable selected portal groups?"
 msgstr ""
@@ -3463,7 +3613,16 @@ msgstr ""
 msgid "Do you want to lock selected records?"
 msgstr "Opravdu uzamknout označené záznamy?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+
 msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3472,11 +3631,26 @@ msgstr ""
 msgid "Do you want to toggle selected commands?"
 msgstr "Opravdu přepnout označené příkazy?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Opravdu přepnout označené úlohy?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+
 msgid "Do you want to toggle selected options?"
 msgstr "Opravdu přepnout označené předvolby?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr ""
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr ""
@@ -3619,6 +3793,9 @@ msgstr "Upravit síťový most"
 msgid "Edit CARP"
 msgstr "Upravit CARP"
 
+msgid "Edit CHAP User"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Upravit datovou sadu"
 
@@ -3634,14 +3811,29 @@ msgstr "Upravit skupinu"
 msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
 
+msgid "Edit Initiator Name"
+msgstr ""
+
+msgid "Edit Initiator Portal"
+msgstr ""
+
 msgid "Edit LAGG"
 msgstr "Upravit LAGG"
 
 msgid "Edit LUN"
 msgstr ""
 
+msgid "Edit LUN Record"
+msgstr ""
+
+msgid "Edit Listen Record"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Upravit MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr ""
 
 msgid "Edit NFS Share"
 msgstr "Upravit NFS sdílení"
@@ -3649,8 +3841,14 @@ msgstr "Upravit NFS sdílení"
 msgid "Edit Option"
 msgstr "Upravit předvolbu"
 
+msgid "Edit Option Record"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Upravit fond"
+
+msgid "Edit Port Record"
+msgstr "Upravit záznam pro port"
 
 msgid "Edit Portal Group"
 msgstr "Upravit skupinu portálu"
@@ -3823,17 +4021,41 @@ msgstr "Zapnout STARTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr ""
 
+msgid "Enable Selected CHAP Users"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "Používat označené příkazy"
+
+msgid "Enable Selected Initiator Names"
+msgstr ""
+
+msgid "Enable Selected Initiator Portals"
+msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr "Vykonávat označené úlohy"
 
+msgid "Enable Selected LUN Records"
+msgstr ""
+
 msgid "Enable Selected LUNs"
+msgstr ""
+
+msgid "Enable Selected Listen Records"
+msgstr ""
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Enable Selected Option Records"
 msgstr ""
 
 msgid "Enable Selected Options"
 msgstr "Zapnout označené předvolby"
+
+msgid "Enable Selected Port Records"
+msgstr ""
 
 msgid "Enable Selected Portal Groups"
 msgstr ""
@@ -4139,7 +4361,7 @@ msgid "Enter IP Address"
 msgstr "Zadejte IP adresu"
 
 msgid "Enter IP address prefix length."
-msgstr ""
+msgstr "Zadejte délku předpony IP adresy"
 
 msgid "Enter Identifier"
 msgstr "Zadejte identifikátor"
@@ -4183,9 +4405,6 @@ msgstr "Zadejte vlastní číslo portu pokud chcete přepsat výchozí port (22)
 msgid "Enter a description"
 msgstr "Zadejte popis"
 
-msgid "Enter a description for your reference"
-msgstr "Zadejte popis podle kterého se zorientujete"
-
 msgid "Enter a description for your reference."
 msgstr "Zadejte popis své předvolby."
 
@@ -4224,7 +4443,10 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Zadejte platný název sysctl MIB."
 
 msgid "Enter additional parameter"
-msgstr ""
+msgstr "Zadejte další parametr"
+
+msgid "Enter an iSCSI initiator name."
+msgstr "Zadejte název iSCSI iniciátoru."
 
 msgid "Enter comment for the share"
 msgstr "Zadejte komentář pro sdílení"
@@ -4268,6 +4490,9 @@ msgstr ""
 
 msgid "Enter name"
 msgstr "Zadejte název"
+
+msgid "Enter passthrough device address bus:path:lun"
+msgstr ""
 
 msgid "Enter secret."
 msgstr ""
@@ -4337,7 +4562,7 @@ msgid "Enter trap host name."
 msgstr "Zadejte název stroje, na který budou SNMP upozornění zasílána."
 
 msgid "Enter user name."
-msgstr ""
+msgstr "Zadejte uživatelské jméno"
 
 msgid "Enter value"
 msgstr "Zadejte hodnotu"
@@ -4710,7 +4935,7 @@ msgstr ""
 "používány nebo mají odlišnou velikost (toto není doporučeno)."
 
 msgid "Foreign"
-msgstr ""
+msgstr "Cizí"
 
 msgid "Form Factor"
 msgstr ""
@@ -5097,7 +5322,7 @@ msgid "IP Address"
 msgstr "IP adresa"
 
 msgid "IP Address Prefix"
-msgstr ""
+msgstr "Předpona IP adresy"
 
 msgid "IP address"
 msgstr "IP adresa"
@@ -5425,6 +5650,33 @@ msgstr ""
 
 msgid "Initiator Name"
 msgstr "Název iniciátoru"
+
+msgid "Initiator Name is locked"
+msgstr "Název iniciátoru je uzamčen"
+
+msgid "Initiator Name is marked for deletion"
+msgstr "Název iniciátoru je označen ke smazání"
+
+msgid "Initiator Name is unlocked"
+msgstr "Název iniciátoru je odemčen"
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr "Portál iniciátoru"
+
+msgid "Initiator Portal is locked"
+msgstr "Portál iniciátoru je uzamčen"
+
+msgid "Initiator Portal is marked for deletion"
+msgstr "Portál iniciátoru je označen pro smazání"
+
+msgid "Initiator Portal is unlocked"
+msgstr "Portál iniciátoru je odemčen"
+
+msgid "Initiator Portals"
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -5762,6 +6014,15 @@ msgstr ""
 msgid "LUN number"
 msgstr ""
 
+msgid "LUN record is locked"
+msgstr ""
+
+msgid "LUN record is marked for deletion"
+msgstr ""
+
+msgid "LUN record is unlocked"
+msgstr ""
+
 msgid "LUNs"
 msgstr "Čísla logických jednotek"
 
@@ -5905,6 +6166,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Vypsat nebo importovat fondy úložišť"
+
+msgid "Listen"
+msgstr "Očekávat spojení"
+
+msgid "Listen record is locked"
+msgstr "Záznam očekávání spojení je uzamčen"
+
+msgid "Listen record is marked for deletion"
+msgstr ""
+
+msgid "Listen record is unlocked"
+msgstr ""
 
 msgid "Load"
 msgstr "Vytížení"
@@ -6466,6 +6739,15 @@ msgstr "Nemůže zůstat prázdné"
 msgid "Mutual CHAP"
 msgstr "Vzájemné ověření CHAP"
 
+msgid "Mutual CHAP User is locked"
+msgstr ""
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr ""
+
+msgid "Mutual CHAP User is unlocked"
+msgstr ""
+
 msgid "Mutual CHAP Users"
 msgstr "Uživatelé, ověřovaní vzájemně protokolem CHAP"
 
@@ -6476,7 +6758,7 @@ msgid "Mutual User"
 msgstr ""
 
 msgid "NAA Identifier"
-msgstr ""
+msgstr "NAA identifikátor"
 
 msgid "NFS"
 msgstr "NFS"
@@ -6555,10 +6837,10 @@ msgstr ""
 "(„swap“), např. %s."
 
 msgid "Name of the option."
-msgstr ""
+msgstr "Název volby."
 
 msgid "Name of the port."
-msgstr ""
+msgstr "Název portu."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6871,7 +7153,7 @@ msgstr ""
 "dohadování v SMB protokolu se postará o volbu příslušného protokolu."
 
 msgid "Not Reported"
-msgstr ""
+msgstr "Neoznámeno"
 
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
@@ -7005,10 +7287,10 @@ msgid "Option"
 msgstr "Předvolba"
 
 msgid "Option Name"
-msgstr ""
+msgstr "Název volby"
 
 msgid "Option Value"
-msgstr ""
+msgstr "Hodnota volby"
 
 msgid "Option is locked"
 msgstr "Předvolba je uzamčena"
@@ -7022,6 +7304,15 @@ msgstr "Předvolba je chráněna"
 msgid "Option is unlocked"
 msgstr "Předvolba je odemčena"
 
+msgid "Option record is locked"
+msgstr ""
+
+msgid "Option record is marked for deletion"
+msgstr ""
+
+msgid "Option record is unlocked"
+msgstr ""
+
 msgid "Optional"
 msgstr "Volitelné"
 
@@ -7033,6 +7324,9 @@ msgstr "Možnosti"
 
 msgid "Origin"
 msgstr "Původ"
+
+msgid "Orphaned"
+msgstr ""
 
 msgid "Others"
 msgstr "Ostatní"
@@ -7196,6 +7490,9 @@ msgstr "Předat – ponechat ACL seznamy beze změny"
 msgid "Passthrough - Inherit all entries"
 msgstr "Průchod – převzít všechny položky"
 
+msgid "Passthrough Address"
+msgstr ""
+
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 "Předat mimo spouštění – převzít vše kromě „spouštět“, pokud není určeno"
@@ -7304,7 +7601,7 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Umožnit tunelování SSH"
 
 msgid "Physical Block Offset"
-msgstr ""
+msgstr "Posun fyzického bloku"
 
 msgid "Physical Block Size"
 msgstr "Velikost fyzického bloku"
@@ -7465,7 +7762,7 @@ msgid "Port Forwarding"
 msgstr "Přeposílání portů"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Název portu"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Je třeba, aby číslo portu bylo 514 nebo z rozmezí 1024 až 49151."
@@ -7487,6 +7784,15 @@ msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
 msgstr ""
 "Port vzdáleného syslog serveru. Pro použití výchozího portu nevyplňujte."
+
+msgid "Port record is locked"
+msgstr "Záznam portu je uzamčen"
+
+msgid "Port record is marked for deletion"
+msgstr ""
+
+msgid "Port record is unlocked"
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7785,7 +8091,7 @@ msgid "RAW info"
 msgstr "Informace v nezpracovaném stavu"
 
 msgid "RPM"
-msgstr ""
+msgstr "Otáčky média"
 
 #, php-format
 msgid ""
@@ -7960,6 +8266,9 @@ msgstr ""
 msgid "Release Notes"
 msgstr "Poznámky k vydání"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Načíst stránku znovu"
 
@@ -8113,6 +8422,9 @@ msgstr "Prostředek je odemknut"
 msgid "Resources"
 msgstr "Prostředky"
 
+msgid "Restart"
+msgstr ""
+
 msgid "Restore"
 msgstr "Obnovit"
 
@@ -8258,7 +8570,7 @@ msgid "S.M.A.R.T. log"
 msgstr "Záznam událostí SMART diagnostiky"
 
 msgid "SCSI Name"
-msgstr ""
+msgstr "SCSI název"
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, ověřit"
@@ -8511,6 +8823,9 @@ msgstr "Vyberte který šifrovací algoritmus používat."
 msgid "Select at which stage the command should be executed."
 msgstr "Vyberte která fáze příkazu má být vykonána."
 
+msgid "Select auth groups."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "Vyberte soubor s nastaveními:"
 
@@ -8538,11 +8853,20 @@ msgstr ""
 "V případě předem nepřipravených disků vyberte možnost „nenaformátovaný“ a "
 "připravte je tak pomocí"
 
+msgid "Select portal groups."
+msgstr ""
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "Vyberte řežim předpřidělení pro soubory (výchozí je Rychlé)."
 
 msgid "Select read balance algorithm."
 msgstr "Vyberte vyvažovací algoritmus pro čtení."
+
+msgid "Select target groups."
+msgstr ""
+
+msgid "Select targets."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Zvolte FreeBSD balíček, který má být nainstalován."
@@ -8826,7 +9150,7 @@ msgstr ""
 "/mnt."
 
 msgid "Sets the authentication type."
-msgstr ""
+msgstr "Nastaví typ ověřování."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -9204,10 +9528,10 @@ msgid ""
 msgstr ""
 
 msgid "Specify physical block offset of the device."
-msgstr ""
+msgstr "Zadejte posun fyzického bloku zařízení."
 
 msgid "Specify physical block size of the device."
-msgstr ""
+msgstr "Zadejte velikost fyzického bloku zařízení."
 
 msgid "Specify the SCSI device type to use when creating the LUN."
 msgstr ""
@@ -9525,6 +9849,9 @@ msgstr "Cílová adresa"
 msgid "Target Alias"
 msgstr "Alternativní název cíle"
 
+msgid "Target Group"
+msgstr "Skupina cíle"
+
 msgid "Target Name"
 msgstr "Název cíle"
 
@@ -9647,9 +9974,6 @@ msgstr "LAGG protokol není platný."
 
 msgid "The LAN IP address will be reset to"
 msgstr "IP adresa rozhraní do místní sítě bude resetována na"
-
-msgid "The LUN size, in bytes."
-msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -9888,7 +10212,7 @@ msgstr ""
 "další výskyty už nebudou brány v potaz."
 
 msgid "The blocksize visible to the initiator."
-msgstr ""
+msgstr "Velikost bloku viditelná iniciátoru."
 
 msgid "The changes could not be applied"
 msgstr "Změny se nepodařilo aplikovat"
@@ -10364,7 +10688,7 @@ msgstr ""
 "bezproblémové používání sdílení každým z uživatelů."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "Port na kterém očekávat spojení."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10430,6 +10754,9 @@ msgstr "Po úspěšném obnovení nastavení bude server restartován."
 
 msgid "The share name is already used."
 msgstr "Tento název sdílené složky je už použit."
+
+msgid "The size of the LUN."
+msgstr ""
 
 msgid "The size of the swap file in MB."
 msgstr "Velikost odkládacího souboru v MB."
@@ -10585,10 +10912,10 @@ msgstr ""
 "předvolby použité různými obecnými zaváděcími skripty."
 
 msgid "These parameter will be added to the global section of ctl.conf"
-msgstr ""
+msgstr "Tyto parametry budu přidány do globální sekce ctl.conf"
 
 msgid "These parameter will be added to this auth-group."
-msgstr ""
+msgstr "Tyto parametry budou přidány do této ověřovací skupiny."
 
 msgid "These parameter will be added to this lun."
 msgstr ""
@@ -11067,7 +11394,7 @@ msgstr ""
 "Umožní vysílání .jpg a .mp3 souborů na TiVo zařízení, podporující HMO."
 
 msgid "Threads"
-msgstr ""
+msgstr "Vlákna"
 
 msgid "Throughput"
 msgstr "Propustnost"
@@ -11191,17 +11518,41 @@ msgstr "Přepnout režim"
 msgid "Toggle Selected Auth Groups"
 msgstr ""
 
+msgid "Toggle Selected CHAP Users"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "Přepnout označené příkazy"
+
+msgid "Toggle Selected Initiator Names"
+msgstr ""
+
+msgid "Toggle Selected Initiator Portals"
+msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr "Přepnout označené úlohy"
 
+msgid "Toggle Selected LUN Records"
+msgstr ""
+
 msgid "Toggle Selected LUNs"
+msgstr ""
+
+msgid "Toggle Selected Listen Records"
+msgstr ""
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Toggle Selected Option Records"
 msgstr ""
 
 msgid "Toggle Selected Options"
 msgstr "Přepnout označené předvolby"
+
+msgid "Toggle Selected Port Records"
+msgstr ""
 
 msgid "Toggle Selected Portal Groups"
 msgstr ""
@@ -11895,7 +12246,7 @@ msgstr ""
 "nastavit spodní hranici která odpovídá nejvyšší teplotě."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "Hodnota volby."
 
 msgid "Variable"
 msgstr "Proměnná"
@@ -12575,20 +12926,5 @@ msgstr "využito z"
 msgid "visible"
 msgstr "viditelné"
 
-#~ msgid "2048"
-#~ msgstr "2048"
-
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "8192"
-#~ msgstr "8192"
-
-#~ msgid "Enter user name"
-#~ msgstr "Zadejte uživatelské jméno"
-
-#~ msgid "Enter secret"
-#~ msgstr "Zadejte heslo"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Zadejte popis podle kterého se zorientujete"

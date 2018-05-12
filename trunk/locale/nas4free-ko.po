@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
 "PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -482,6 +482,9 @@ msgstr "브릿지 추가"
 msgid "Add CARP"
 msgstr "CARP 추가"
 
+msgid "Add CHAP User"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "데이터셋 추가"
 
@@ -497,14 +500,29 @@ msgstr "그룹 추가"
 msgid "Add Host"
 msgstr "호스트 추가"
 
+msgid "Add Initiator Name"
+msgstr ""
+
+msgid "Add Initiator Portal"
+msgstr ""
+
 msgid "Add LAGG"
 msgstr "LAG 그룹 추가"
 
 msgid "Add LUN"
 msgstr ""
 
+msgid "Add LUN Record"
+msgstr ""
+
+msgid "Add Listen Record"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "MIB 추가"
+
+msgid "Add Mutual CHAP User"
+msgstr ""
 
 msgid "Add NFS Share"
 msgstr "NFS 공유 추가"
@@ -512,8 +530,14 @@ msgstr "NFS 공유 추가"
 msgid "Add Option"
 msgstr "옵션 추가"
 
+msgid "Add Option Record"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "풀 추가"
+
+msgid "Add Port Record"
+msgstr ""
 
 msgid "Add Portal Group"
 msgstr ""
@@ -912,9 +936,6 @@ msgstr "오류가 발생했습니다."
 
 msgid "An host with this name already exists."
 msgstr "해당 이름의 호스트가 존재합니다."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "명시 된 설명의 인터페이스가 이미 존재합니다"
@@ -1445,6 +1466,15 @@ msgstr "변경됨"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr ""
+
+msgid "CHAP User is marked for deletion"
+msgstr ""
+
+msgid "CHAP User is unlocked"
+msgstr ""
 
 msgid "CHAP Users"
 msgstr "CHAP 사용자"
@@ -2446,6 +2476,9 @@ msgstr "선택된 브릿지들 삭제"
 msgid "Delete Selected CARPs"
 msgstr "선택된 복본들 삭제"
 
+msgid "Delete Selected CHAP Users"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "선택된 명령들 삭제"
 
@@ -2461,13 +2494,28 @@ msgstr "선택된 암호화 볼륨들 삭제"
 msgid "Delete Selected Groups"
 msgstr "선택된 그룹들 삭제"
 
+msgid "Delete Selected Initiator Names"
+msgstr ""
+
+msgid "Delete Selected Initiator Portals"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "선택된 작업들 삭제"
 
 msgid "Delete Selected LAGGs"
 msgstr "선택된 LAG 그룹들 삭제"
 
+msgid "Delete Selected LUN Records"
+msgstr ""
+
 msgid "Delete Selected LUNs"
+msgstr ""
+
+msgid "Delete Selected Listen Records"
+msgstr ""
+
+msgid "Delete Selected Mutual CHAP Users"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
@@ -2476,11 +2524,17 @@ msgstr "선택된 NFS 공유 삭제"
 msgid "Delete Selected Notifier"
 msgstr ""
 
+msgid "Delete Selected Option Records"
+msgstr ""
+
 msgid "Delete Selected Options"
 msgstr "선택된 옵션들 삭제"
 
 msgid "Delete Selected Pools"
 msgstr "선택된 풀들 삭제"
+
+msgid "Delete Selected Port Records"
+msgstr ""
 
 msgid "Delete Selected Portal Groups"
 msgstr ""
@@ -2802,17 +2856,41 @@ msgstr "펌웨어 업그레이드 비활성화"
 msgid "Disable Selected Auth Groups"
 msgstr ""
 
+msgid "Disable Selected CHAP Users"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "선택된 명령들 사용 안 함"
+
+msgid "Disable Selected Initiator Names"
+msgstr ""
+
+msgid "Disable Selected Initiator Portals"
+msgstr ""
 
 msgid "Disable Selected Jobs"
 msgstr "선택된 작업 사용 안 함"
 
+msgid "Disable Selected LUN Records"
+msgstr ""
+
 msgid "Disable Selected LUNs"
+msgstr ""
+
+msgid "Disable Selected Listen Records"
+msgstr ""
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Disable Selected Option Records"
 msgstr ""
 
 msgid "Disable Selected Options"
 msgstr "선택된 옵션 사용 안 함"
+
+msgid "Disable Selected Port Records"
+msgstr ""
 
 msgid "Disable Selected Portal Groups"
 msgstr ""
@@ -3077,10 +3155,19 @@ msgstr "선택된 디스크들로 연결 가상 장치를 생성하시겠습니�
 msgid "Do you want to delete selected CARPs?"
 msgstr "선택된 복본들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr ""
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "선택된 LAG 그룹들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr ""
+
 msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
+msgid "Do you want to delete selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to delete selected NFS shares?"
@@ -3119,10 +3206,22 @@ msgstr "선택된 암호화 볼륨들을 삭제하시겠습니까?"
 msgid "Do you want to delete selected groups?"
 msgstr "선택된 그룹들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr ""
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "선택된 작업들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr ""
+
 msgid "Do you want to delete selected notifier?"
+msgstr ""
+
+msgid "Do you want to delete selected option records?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
@@ -3130,6 +3229,9 @@ msgstr "선택된 옵션들을 삭제하시겠습니까?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "선택된 풀을 삭제하시겠습니까?"
+
+msgid "Do you want to delete selected port records?"
+msgstr ""
 
 msgid "Do you want to delete selected portal groups?"
 msgstr ""
@@ -3170,7 +3272,16 @@ msgstr "선택된 볼륨들을 삭제하시겠습니까?"
 msgid "Do you want to delete this command?"
 msgstr "이 명령을 삭제하시겠습니까?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to disable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to disable selected auth groups?"
@@ -3179,11 +3290,26 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "선택된 명령들을 사용하지 않으시겠습니까?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "선택된 작업들을 사용하지 않으시겠습니까?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr ""
+
+msgid "Do you want to disable selected option records?"
+msgstr ""
+
 msgid "Do you want to disable selected options?"
 msgstr "선택된 옵션들을 사용하지 않으시겠습니까?"
+
+msgid "Do you want to disable selected port records?"
+msgstr ""
 
 msgid "Do you want to disable selected portal groups?"
 msgstr ""
@@ -3200,7 +3326,16 @@ msgstr "선택된 rsync 모듈들을 사용하지 않으시겠습니까?"
 msgid "Do you want to disable selected targets?"
 msgstr ""
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3209,11 +3344,26 @@ msgstr ""
 msgid "Do you want to enable selected commands?"
 msgstr "선택된 명령들을 사용하시겠습니까?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to enable selected jobs?"
 msgstr "선택된 작업들을 사용하시겠습니까?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr ""
+
+msgid "Do you want to enable selected option records?"
+msgstr ""
+
 msgid "Do you want to enable selected options?"
 msgstr "선택된 옵션들을 사용하시겠습니까?"
+
+msgid "Do you want to enable selected port records?"
+msgstr ""
 
 msgid "Do you want to enable selected portal groups?"
 msgstr ""
@@ -3239,7 +3389,16 @@ msgstr "소프트웨어 RAID 디스크를 불러오시겠습니까?"
 msgid "Do you want to lock selected records?"
 msgstr "선택된 항목을 잠그시겠습니까?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+
 msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3248,11 +3407,26 @@ msgstr ""
 msgid "Do you want to toggle selected commands?"
 msgstr "선택된 명령들을 전환하시겠습니까?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "선택된 작업들을 전환하시겠습니까?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+
 msgid "Do you want to toggle selected options?"
 msgstr "선택된 옵션들을 전환하시겠습니까?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr ""
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr ""
@@ -3393,6 +3567,9 @@ msgstr "브릿지 수정"
 msgid "Edit CARP"
 msgstr "CARP 수정"
 
+msgid "Edit CHAP User"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "데이터셋 수정"
 
@@ -3408,14 +3585,29 @@ msgstr "그룹 수정"
 msgid "Edit Host"
 msgstr "호스트 편집"
 
+msgid "Edit Initiator Name"
+msgstr ""
+
+msgid "Edit Initiator Portal"
+msgstr ""
+
 msgid "Edit LAGG"
 msgstr "LAG 그룹 수정"
 
 msgid "Edit LUN"
 msgstr ""
 
+msgid "Edit LUN Record"
+msgstr ""
+
+msgid "Edit Listen Record"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "MIB 편집"
+
+msgid "Edit Mutual CHAP User"
+msgstr ""
 
 msgid "Edit NFS Share"
 msgstr "NFS 공유 수정"
@@ -3423,8 +3615,14 @@ msgstr "NFS 공유 수정"
 msgid "Edit Option"
 msgstr "옵션 수정"
 
+msgid "Edit Option Record"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "풀 수정"
+
+msgid "Edit Port Record"
+msgstr ""
 
 msgid "Edit Portal Group"
 msgstr ""
@@ -3595,17 +3793,41 @@ msgstr "STARTTLS 활성화"
 msgid "Enable Selected Auth Groups"
 msgstr ""
 
+msgid "Enable Selected CHAP Users"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "선택된 명령들 사용 함"
+
+msgid "Enable Selected Initiator Names"
+msgstr ""
+
+msgid "Enable Selected Initiator Portals"
+msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr "선택된 작업들 사용 함"
 
+msgid "Enable Selected LUN Records"
+msgstr ""
+
 msgid "Enable Selected LUNs"
+msgstr ""
+
+msgid "Enable Selected Listen Records"
+msgstr ""
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Enable Selected Option Records"
 msgstr ""
 
 msgid "Enable Selected Options"
 msgstr "선택된 옵션들 사용 함"
+
+msgid "Enable Selected Port Records"
+msgstr ""
 
 msgid "Enable Selected Portal Groups"
 msgstr ""
@@ -3938,9 +4160,6 @@ msgstr "기본 포트를 사용하지 않으려는 경우 사용자 정의 포�
 msgid "Enter a description"
 msgstr "설명 입력"
 
-msgid "Enter a description for your reference"
-msgstr "참조하기 위한 설명 입력"
-
 msgid "Enter a description for your reference."
 msgstr "참고하기 위한 설명 입력"
 
@@ -3977,6 +4196,9 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "유효한 sysctl MIB 이름을 입력하십시오."
 
 msgid "Enter additional parameter"
+msgstr ""
+
+msgid "Enter an iSCSI initiator name."
 msgstr ""
 
 msgid "Enter comment for the share"
@@ -4018,6 +4240,9 @@ msgid "Enter mutual user name."
 msgstr ""
 
 msgid "Enter name"
+msgstr ""
+
+msgid "Enter passthrough device address bus:path:lun"
 msgstr ""
 
 msgid "Enter secret."
@@ -5104,6 +5329,33 @@ msgstr "초기자 그룹은 타겟에 접근할 수 있는 인증된 초기자 �
 msgid "Initiator Name"
 msgstr "초기자 이름"
 
+msgid "Initiator Name is locked"
+msgstr ""
+
+msgid "Initiator Name is marked for deletion"
+msgstr ""
+
+msgid "Initiator Name is unlocked"
+msgstr ""
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr ""
+
+msgid "Initiator Portal is locked"
+msgstr ""
+
+msgid "Initiator Portal is marked for deletion"
+msgstr ""
+
+msgid "Initiator Portal is unlocked"
+msgstr ""
+
+msgid "Initiator Portals"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
@@ -5418,6 +5670,15 @@ msgstr ""
 msgid "LUN number"
 msgstr ""
 
+msgid "LUN record is locked"
+msgstr ""
+
+msgid "LUN record is marked for deletion"
+msgstr ""
+
+msgid "LUN record is unlocked"
+msgstr ""
+
 msgid "LUNs"
 msgstr "LUNs"
 
@@ -5538,6 +5799,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "풀 목록 보기 또는 가져오기"
+
+msgid "Listen"
+msgstr ""
+
+msgid "Listen record is locked"
+msgstr ""
+
+msgid "Listen record is marked for deletion"
+msgstr ""
+
+msgid "Listen record is unlocked"
+msgstr ""
 
 msgid "Load"
 msgstr "로드"
@@ -6070,6 +6343,15 @@ msgstr ""
 msgid "Mutual CHAP"
 msgstr "상호 CHAP"
 
+msgid "Mutual CHAP User is locked"
+msgstr ""
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr ""
+
+msgid "Mutual CHAP User is unlocked"
+msgstr ""
+
 msgid "Mutual CHAP Users"
 msgstr "상호 CHAP 사용자"
 
@@ -6600,6 +6882,15 @@ msgstr "옵션 보호됨"
 msgid "Option is unlocked"
 msgstr "옵션 잠금 해제됨"
 
+msgid "Option record is locked"
+msgstr ""
+
+msgid "Option record is marked for deletion"
+msgstr ""
+
+msgid "Option record is unlocked"
+msgstr ""
+
 msgid "Optional"
 msgstr "선택적"
 
@@ -6611,6 +6902,9 @@ msgstr "옵션"
 
 msgid "Origin"
 msgstr "출발지"
+
+msgid "Orphaned"
+msgstr ""
 
 msgid "Others"
 msgstr "기타"
@@ -6769,6 +7063,9 @@ msgstr "Passthrough - ACL 변경 하지 않음"
 
 msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - 모든 항목 상속"
+
+msgid "Passthrough Address"
+msgstr ""
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr "Passthrough-X - 특별한 지시사항이 없을 경우 \"실행 (execute)\" 외의 모든 것을 상속받는다."
@@ -7055,6 +7352,15 @@ msgstr ""
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
 msgstr "원격 syslog 서버의 포트 입니다. 비워 두면 기본 포트를 사용합니다."
+
+msgid "Port record is locked"
+msgstr ""
+
+msgid "Port record is marked for deletion"
+msgstr ""
+
+msgid "Port record is unlocked"
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7497,6 +7803,9 @@ msgstr "높은 상대 습도 임계치(퍼센트)"
 msgid "Release Notes"
 msgstr "배포 정보"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "페이지 다시 로드"
 
@@ -7641,6 +7950,9 @@ msgstr "자원 잠금 해제됨"
 
 msgid "Resources"
 msgstr "자원"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "복원"
@@ -8024,6 +8336,9 @@ msgstr "사용할 암호화 알고리듬을 선택하십시오."
 msgid "Select at which stage the command should be executed."
 msgstr ""
 
+msgid "Select auth groups."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "설정 파일 선택:"
 
@@ -8047,11 +8362,20 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr "포맷하지 않은 디스크의 경우 '포맷되지 않음' 옵션을 선택하고 다음 방식으로 포맷:"
 
+msgid "Select portal groups."
+msgstr ""
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "파일 선할당 모드를 선택하십시오(기본 값은 빠름)"
 
 msgid "Select read balance algorithm."
 msgstr "읽기 균형 알고리듬을 선택하십시오."
+
+msgid "Select target groups."
+msgstr ""
+
+msgid "Select targets."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "설치할 FreeBSD 패키지를 선택하십시오."
@@ -8994,6 +9318,9 @@ msgstr "대상 주소"
 msgid "Target Alias"
 msgstr "타겟 별칭"
 
+msgid "Target Group"
+msgstr ""
+
 msgid "Target Name"
 msgstr "타겟 이름"
 
@@ -9108,9 +9435,6 @@ msgstr "LAG 그룹 프로토콜이 올바르지 않습니다."
 
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP 주소가 다음으로 설정됩니다"
-
-msgid "The LUN size, in bytes."
-msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -9777,6 +10101,9 @@ msgstr "설정이 정상적으로 복원된 후 서버가 재시동됩니다."
 msgid "The share name is already used."
 msgstr "이 공유 명이 이미 이용되고 있습니다."
 
+msgid "The size of the LUN."
+msgstr ""
+
 msgid "The size of the swap file in MB."
 msgstr "MB 단위의 스왑 파일의 크기."
 
@@ -10425,17 +10752,41 @@ msgstr "모드 전환"
 msgid "Toggle Selected Auth Groups"
 msgstr ""
 
+msgid "Toggle Selected CHAP Users"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "선택된 명령들 전환"
+
+msgid "Toggle Selected Initiator Names"
+msgstr ""
+
+msgid "Toggle Selected Initiator Portals"
+msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr "선택된 작업들 전환"
 
+msgid "Toggle Selected LUN Records"
+msgstr ""
+
 msgid "Toggle Selected LUNs"
+msgstr ""
+
+msgid "Toggle Selected Listen Records"
+msgstr ""
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Toggle Selected Option Records"
 msgstr ""
 
 msgid "Toggle Selected Options"
 msgstr "선택된 옵션들 전환"
+
+msgid "Toggle Selected Port Records"
+msgstr ""
 
 msgid "Toggle Selected Portal Groups"
 msgstr ""
@@ -11699,3 +12050,6 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "Enter a description for your reference"
+#~ msgstr "참조하기 위한 설명 입력"

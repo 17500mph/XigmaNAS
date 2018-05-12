@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-04-28 18:22+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-08 05:45+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -203,13 +203,13 @@ msgid "1.8\""
 msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 Kio"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 Kio"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
@@ -233,10 +233,10 @@ msgid "3.5\""
 msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 Kio"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 Kio"
 
 msgid "4KB wrapper"
 msgstr "wrapper de 4 Ko"
@@ -245,19 +245,19 @@ msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Octets"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 Kio"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 Kio"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tag (entre 1 et 4094)."
@@ -524,6 +524,9 @@ msgstr "Ajouter un Pont (Bridge)"
 msgid "Add CARP"
 msgstr "Ajouter CARP"
 
+msgid "Add CHAP User"
+msgstr "Ajouter un utilisateur CHAP"
+
 msgid "Add Dataset"
 msgstr "Ajouter un jeu de données"
 
@@ -539,14 +542,29 @@ msgstr "Ajouter un Groupe"
 msgid "Add Host"
 msgstr "Ajouter un hôte"
 
+msgid "Add Initiator Name"
+msgstr "Ajouter le nom de l'initiateur"
+
+msgid "Add Initiator Portal"
+msgstr "Ajouter un portail d'initiateur"
+
 msgid "Add LAGG"
 msgstr "Ajouter LAGG"
 
 msgid "Add LUN"
 msgstr "Ajouter un LUN"
 
+msgid "Add LUN Record"
+msgstr "Ajouter un enregistrement LUN"
+
+msgid "Add Listen Record"
+msgstr "Ajouter un enregistrement d'écoute"
+
 msgid "Add MIB"
 msgstr "Ajouter une MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr "Ajouter un Utilisateur CHAP Mutuel"
 
 msgid "Add NFS Share"
 msgstr "Ajouter NFS Partage"
@@ -554,8 +572,14 @@ msgstr "Ajouter NFS Partage"
 msgid "Add Option"
 msgstr "Ajouter une option"
 
+msgid "Add Option Record"
+msgstr "Ajouter un enregistrement d'option"
+
 msgid "Add Pool"
 msgstr "Ajouter un pool"
+
+msgid "Add Port Record"
+msgstr "Ajouter un enregistrement de port"
 
 msgid "Add Portal Group"
 msgstr "Ajouter un groupe  portail"
@@ -947,13 +971,14 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Une Extension definit la zone de stockage de la Cible."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "Adresse IPv4 ou IPv6 d'un portail initiateur iSCSI."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr "Une adresse IPv4 ou IPv6 du serveur iSNS à enregistrer."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
+"Une adresse IPv4 ou IPv6 à écouter \t pour les connexions \t entrantes."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -984,9 +1009,6 @@ msgstr "Une erreur s'est produite."
 
 msgid "An host with this name already exists."
 msgstr "Une hôte portant ce nom existe déjà."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Il existe déjà une interface ayant cette description."
@@ -1080,7 +1102,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Êtes-vous sûr de vouloir arrêter le serveur?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Attribuez une description de la cible lisible par l'utilisateur ."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1090,10 +1112,10 @@ msgstr ""
 "portail, à utiliser pour la découverte de la cible."
 
 msgid "Assign a previously defined authentication group to the target."
-msgstr ""
+msgstr "Attribuez une description de la cible lisible par l'utilisateur ."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Affectez un groupe  portail défini précédemment à la cible."
 
 msgid "Asynchronous I/O"
 msgstr "E / S Asynchrones"
@@ -1563,6 +1585,15 @@ msgstr "MODIFIÉ"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr "L'utilisateur CHAP est verrouillé"
+
+msgid "CHAP User is marked for deletion"
+msgstr "L'utilisateur CHAP est marqué pour la suppression"
+
+msgid "CHAP User is unlocked"
+msgstr "L'utilisateur CHAP est déverrouillé"
 
 msgid "CHAP Users"
 msgstr "Utilisateurs CHAP"
@@ -2652,6 +2683,9 @@ msgstr "Supprimer les ponts sélectionnés"
 msgid "Delete Selected CARPs"
 msgstr "CARP est déverrouillé"
 
+msgid "Delete Selected CHAP Users"
+msgstr "Supprimer les utilisateurs CHAP sélectionnés"
+
 msgid "Delete Selected Commands"
 msgstr "Supprimer les commandes sélectionnées"
 
@@ -2667,14 +2701,29 @@ msgstr "Supprimer les volumes cryptés sélectionnés"
 msgid "Delete Selected Groups"
 msgstr "Supprimer les groupes sélectionnés"
 
+msgid "Delete Selected Initiator Names"
+msgstr "Supprimer les noms d'initiateurs sélectionnés"
+
+msgid "Delete Selected Initiator Portals"
+msgstr "Supprimer les portails d'initiateurs sélectionnés"
+
 msgid "Delete Selected Jobs"
 msgstr "Supprimer les tâches sélectionnées"
 
 msgid "Delete Selected LAGGs"
 msgstr "Supprimer les LAGGs sélectionnés"
 
+msgid "Delete Selected LUN Records"
+msgstr "Supprimer les enregistrements de LUN sélectionnés"
+
 msgid "Delete Selected LUNs"
 msgstr "Supprimer les LUN sélectionnés"
+
+msgid "Delete Selected Listen Records"
+msgstr "Supprimer les enregistrements sélectionnés"
+
+msgid "Delete Selected Mutual CHAP Users"
+msgstr "Supprimer les Utilisateurs CHAP Mutuels sélectionnés"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Supprimer les Partages NFS sélectionnés"
@@ -2682,11 +2731,17 @@ msgstr "Supprimer les Partages NFS sélectionnés"
 msgid "Delete Selected Notifier"
 msgstr "Supprimer le Notificateur Sélectionné"
 
+msgid "Delete Selected Option Records"
+msgstr "Supprimer les enregistrements d'options sélectionnés"
+
 msgid "Delete Selected Options"
 msgstr "Supprimer les options sélectionnées"
 
 msgid "Delete Selected Pools"
 msgstr "Effacer le(s) pool(s) sélectionné(s)"
+
+msgid "Delete Selected Port Records"
+msgstr "Supprimer les enregistrements de ports sélectionnés"
 
 msgid "Delete Selected Portal Groups"
 msgstr "Supprimer les groupes de portails sélectionnés"
@@ -3019,17 +3074,41 @@ msgstr "Désactiver la mise à niveau du micrologiciel"
 msgid "Disable Selected Auth Groups"
 msgstr "Désactiver les groupes d'authentification sélectionnés"
 
+msgid "Disable Selected CHAP Users"
+msgstr "Désactiver les utilisateurs CHAP sélectionnés"
+
 msgid "Disable Selected Commands"
 msgstr "Désactiver les commandes sélectionnées"
+
+msgid "Disable Selected Initiator Names"
+msgstr "Désactiver les noms d'initiateurs sélectionnés"
+
+msgid "Disable Selected Initiator Portals"
+msgstr "Désactiver les portails d'initiateurs sélectionnés"
 
 msgid "Disable Selected Jobs"
 msgstr "Désactiver les tâches sélectionnées"
 
+msgid "Disable Selected LUN Records"
+msgstr "Désactiver les enregistrements de LUNs sélectionnés"
+
 msgid "Disable Selected LUNs"
 msgstr "Désactiver les LUN sélectionnés"
 
+msgid "Disable Selected Listen Records"
+msgstr "Désactiver les enregistrements d'écoutes sélectionnés"
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr "Désactiver les Utilisateurs CHAP Mutuels Sélectionnés"
+
+msgid "Disable Selected Option Records"
+msgstr "Désactiver les Enregistrements d'Options Sélectionnés"
+
 msgid "Disable Selected Options"
 msgstr "Désactiver les options sélectionnées"
+
+msgid "Disable Selected Port Records"
+msgstr "Désactiver les Enregistrements de Ports Sélectionnés"
 
 msgid "Disable Selected Portal Groups"
 msgstr "Désactiver les groupes portail sélectionnés"
@@ -3333,11 +3412,20 @@ msgstr ""
 msgid "Do you want to delete selected CARPs?"
 msgstr "Voulez-vous supprimer les CARP sélectionnés?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr "Voulez-vous supprimer les utilisateurs CHAP sélectionnés?"
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Voulez-vous supprimer les LAGGs sélectionnés?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr "Voulez-vous supprimer les enregistrements de LUNs sélectionnés?"
+
 msgid "Do you want to delete selected LUNs?"
 msgstr "Voulez-vous supprimer les LUN sélectionnés?"
+
+msgid "Do you want to delete selected Mutual CHAP users?"
+msgstr "Voulez-vous supprimer les utilisateurs CHAP Mutuel sélectionnés?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Voulez-vous supprimer des partages NFS sélectionnés?"
@@ -3375,17 +3463,32 @@ msgstr "Voulez-vous supprimer des volumes cryptés sélectionnés?"
 msgid "Do you want to delete selected groups?"
 msgstr "Voulez-vous supprimer les comptes d'utilisateurs sélectionnés"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr "Voulez-vous supprimer les noms d'initiateurs sélectionnés?"
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr "Voulez-vous supprimer les portails initiateurs sélectionnés?"
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Voulez-vous effacer les tâches sélectionnées"
 
+msgid "Do you want to delete selected listen records?"
+msgstr "Voulez-vous supprimer les enregistrements d'écoutes sélectionnés?"
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Voulez-vous supprimer le notificateur sélectionné?"
+
+msgid "Do you want to delete selected option records?"
+msgstr "Voulez-vous supprimer les enregistrements d'options sélectionnés?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Voulez-vous effacer les optionss sélectionnées"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Voulez-vous supprimer le(s) pool(s)  sélectionné(s)"
+
+msgid "Do you want to delete selected port records?"
+msgstr "Voulez-vous supprimer les enregistrements de ports sélectionnés?"
 
 msgid "Do you want to delete selected portal groups?"
 msgstr "Voulez-vous supprimer les groupes de portails sélectionnés?"
@@ -3427,8 +3530,18 @@ msgstr "Voulez-vous effacer les volumes sélectionnés"
 msgid "Do you want to delete this command?"
 msgstr "Voulez-vous supprimer cette commande?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr "Voulez-vous désactiver les utilisateurs CHAP sélectionnés?"
+
+msgid "Do you want to disable selected LUN records?"
+msgstr "Voulez-vous désactiver les enregistrements de LUNs sélectionnés?"
+
 msgid "Do you want to disable selected LUNs?"
 msgstr "Voulez-vous désactiver les LUN sélectionnés?"
+
+msgid "Do you want to disable selected Mutual CHAP users?"
+msgstr ""
+"o vous voulez désactiver les utilisateurs de CHAP Mutuel sélectionnés?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Voulez-vous désactiver les groupes d'authentification sélectionnés?"
@@ -3436,11 +3549,26 @@ msgstr "Voulez-vous désactiver les groupes d'authentification sélectionnés?"
 msgid "Do you want to disable selected commands?"
 msgstr "Voulez-vous désactiver les commandes sélectionnées?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr "Voulez-vous désactiver les noms d'initiateurs sélectionnés?"
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr "Voulez-vous désactiver les portails initiateurs sélectionnés?"
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Voulez-vous désactiver les tâches sélectionnées"
 
+msgid "Do you want to disable selected listen records?"
+msgstr "Voulez-vous désactiver les enregistrements d'écoutes sélectionnés?"
+
+msgid "Do you want to disable selected option records?"
+msgstr "Voulez-vous désactiver les enregistrements d'options sélectionnés?"
+
 msgid "Do you want to disable selected options?"
 msgstr "Voulez-vous désactiver les options sélectionnées"
+
+msgid "Do you want to disable selected port records?"
+msgstr "Voulez-vous désactiver les enregistrements de ports sélectionnés?"
 
 msgid "Do you want to disable selected portal groups?"
 msgstr "Voulez-vous désactiver les groupes de portails sélectionnés?"
@@ -3457,8 +3585,18 @@ msgstr "Voulez-vous désactiver les modules rsync sélectionnés?"
 msgid "Do you want to disable selected targets?"
 msgstr "Voulez-vous désactiver les cibles sélectionnées?"
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr "Voulez-vous activer les utilisateurs CHAP sélectionnés?"
+
+msgid "Do you want to enable selected LUN records?"
+msgstr "Voulez-vous activer les enregistrements de LUNs sélectionnés?"
+
 msgid "Do you want to enable selected LUNs?"
 msgstr "Voulez-vous activer les LUN sélectionnés?"
+
+msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr ""
+"Voulez-vous activer les utilisateurs Mutuel CHAP Mutuel sélectionnés?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Voulez-vous activer les groupes d'authentification sélectionnés?"
@@ -3466,11 +3604,26 @@ msgstr "Voulez-vous activer les groupes d'authentification sélectionnés?"
 msgid "Do you want to enable selected commands?"
 msgstr "Voulez-vous activer les commandes sélectionnées?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr "Voulez-vous activer les noms d'initiateurs sélectionnés?"
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr "Voulez-vous activer les portails initiateurs sélectionnés?"
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Voulez-vous activer les tâches sélectionnées"
 
+msgid "Do you want to enable selected listen records?"
+msgstr "Voulez-vous activer les enregistrements d'écoutes sélectionnés?"
+
+msgid "Do you want to enable selected option records?"
+msgstr "Voulez-vous activer les enregistrements d'options sélectionnés?"
+
 msgid "Do you want to enable selected options?"
 msgstr "Voulez-vous activer les options sélectionnées"
+
+msgid "Do you want to enable selected port records?"
+msgstr "Voulez-vous activer les enregistrements de ports sélectionnés?"
 
 msgid "Do you want to enable selected portal groups?"
 msgstr "Voulez-vous activer les groupes de portails sélectionnés?"
@@ -3496,23 +3649,56 @@ msgstr "Voulez-vous importer des disques RAID logiciels?"
 msgid "Do you want to lock selected records?"
 msgstr "Voulez-vous activer les enregistrements sélectionnés?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr "Voulez-vous activer / désactiver les utilisateurs CHAP sélectionnés?"
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+"Voulez-vous activer / désactiver les enregistrements de LUN sélectionnés?"
+
 msgid "Do you want to toggle selected LUNs?"
-msgstr "Voulez-vous basculer les LUN sélectionnés?"
+msgstr "Voulez-vous activer / désactiver les LUN sélectionnés?"
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr ""
+"Voulez-vous activer / désactiver les utilisateurs CHAP Mutuel  sélectionnés?"
 
 msgid "Do you want to toggle selected auth groups?"
-msgstr "Voulez-vous basculer les groupes d'authentification sélectionnés?"
+msgstr ""
+"Voulez-vous activer / désactiver les groupes d'authentification sélectionnés?"
 
 msgid "Do you want to toggle selected commands?"
-msgstr "Voulez-vous basculer l'état des commandes sélectionnées?"
+msgstr "Voulez-vous activer / désactiver l'état des commandes sélectionnées?"
+
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+"Voulez-vous activer / désactiver les noms d'initiateurs sélectionnés?"
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+"Voulez-vous activer / désactiver les portails initiateurs sélectionnés?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Voulez-vous inverser les tâches sélectionnées"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+"Voulez-vous activer / désactiver les enregistrements d'écoutes sélectionnés?"
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+"Voulez-vous activer / désactiver les enregistrements d'options sélectionnés?"
+
 msgid "Do you want to toggle selected options?"
 msgstr "Voulez-vous inverser les options sélectionnées"
 
+msgid "Do you want to toggle selected port records?"
+msgstr ""
+"Voulez-vous activer / désactiver les enregistrements de ports sélectionnés?"
+
 msgid "Do you want to toggle selected portal groups?"
-msgstr "Voulez-vous basculer les groupes de portail sélectionnés?"
+msgstr ""
+"Voulez-vous activer / désactiver les groupes de portail sélectionnés?"
 
 msgid "Do you want to toggle selected records?"
 msgstr "Voulez-vouschanger d'état les enregistrements sélectionnés?"
@@ -3524,7 +3710,7 @@ msgid "Do you want to toggle selected rsync modules?"
 msgstr "Voulez-vous changer d'état les modules rsync sélectionnés?"
 
 msgid "Do you want to toggle selected targets?"
-msgstr "Voulez-vous basculer les cibles sélectionnées?"
+msgstr "Voulez-vous activer / désactiver les cibles sélectionnées?"
 
 msgid "Do you want to unlock selected records?"
 msgstr "Voulez-vous déverrouiller les enregistrements sélectionnés?"
@@ -3652,6 +3838,9 @@ msgstr "Modifier le pont"
 msgid "Edit CARP"
 msgstr "Modifier CARP"
 
+msgid "Edit CHAP User"
+msgstr "Modifier l'utilisateur CHAP"
+
 msgid "Edit Dataset"
 msgstr "Modifier le jeu de données"
 
@@ -3667,14 +3856,29 @@ msgstr "Modifier le groupe"
 msgid "Edit Host"
 msgstr "Edition de l'hôte"
 
+msgid "Edit Initiator Name"
+msgstr "Modifier le nom de l'initiateur"
+
+msgid "Edit Initiator Portal"
+msgstr "Modifier le portail des initiateurs"
+
 msgid "Edit LAGG"
 msgstr "Modifier LAGG"
 
 msgid "Edit LUN"
 msgstr "Modifier le LUN"
 
+msgid "Edit LUN Record"
+msgstr "Modifier l'Enregistrement LUN"
+
+msgid "Edit Listen Record"
+msgstr "Modifier l'Enregistrement d'écoute"
+
 msgid "Edit MIB"
 msgstr "Editer MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr "Modifier l'Utilisateur CHAP Mutuel"
 
 msgid "Edit NFS Share"
 msgstr "Modifier le partage NFS"
@@ -3682,8 +3886,14 @@ msgstr "Modifier le partage NFS"
 msgid "Edit Option"
 msgstr "Modifier l'option"
 
+msgid "Edit Option Record"
+msgstr "Modifier l'enregistrement d'options"
+
 msgid "Edit Pool"
 msgstr "Modifier le Pool"
+
+msgid "Edit Port Record"
+msgstr "Modifier l'nrgistrement du port"
 
 msgid "Edit Portal Group"
 msgstr "Modifier le groupe  portail"
@@ -3858,17 +4068,41 @@ msgstr "Activer STARTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr "Activer les groupes d'authentification sélectionnés"
 
+msgid "Enable Selected CHAP Users"
+msgstr "Activer les utilisateurs CHAP sélectionnés"
+
 msgid "Enable Selected Commands"
 msgstr "Activer les commandes sélectionnées"
+
+msgid "Enable Selected Initiator Names"
+msgstr "Activer les noms d'initiateurs sélectionnés"
+
+msgid "Enable Selected Initiator Portals"
+msgstr "Activer les portails d'initiateurs sélectionnés"
 
 msgid "Enable Selected Jobs"
 msgstr "Activer les tâches sélectionnées"
 
+msgid "Enable Selected LUN Records"
+msgstr "Activer les Enregistrements de LUNs Sélectionnés"
+
 msgid "Enable Selected LUNs"
 msgstr "Activer les LUN sélectionnés"
 
+msgid "Enable Selected Listen Records"
+msgstr "Activer les enregistrements d'écoutes sélectionnés"
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr "Activer les utilisateurs CHAP Mutuel sélectionnés"
+
+msgid "Enable Selected Option Records"
+msgstr "Activer les enregistrements d'options sélectionnés"
+
 msgid "Enable Selected Options"
 msgstr "Activer les options sélectionnées"
+
+msgid "Enable Selected Port Records"
+msgstr "Activer les enregistrements de ports sélectionnés"
 
 msgid "Enable Selected Portal Groups"
 msgstr "Activer les groupes de portails sélectionnés"
@@ -4180,7 +4414,7 @@ msgid "Enter IP Address"
 msgstr "Entrez l'adresse IP"
 
 msgid "Enter IP address prefix length."
-msgstr ""
+msgstr "Entrez la longueur du préfixe d'adresse IP."
 
 msgid "Enter Identifier"
 msgstr "Entrer l'identifiant"
@@ -4230,9 +4464,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Entrez une description"
 
-msgid "Enter a description for your reference"
-msgstr "Entrez une description pour votre référence"
-
 msgid "Enter a description for your reference."
 msgstr "Entrez une description pour votre référence."
 
@@ -4273,6 +4504,9 @@ msgstr "Entrer un nom sysctl MIB valide"
 msgid "Enter additional parameter"
 msgstr "Entrez un paramètre supplémentaire"
 
+msgid "Enter an iSCSI initiator name."
+msgstr "Entrez un nom d'initiateur iSCSI."
+
 msgid "Enter comment for the share"
 msgstr "Entrez un commentaire pour le partage"
 
@@ -4311,13 +4545,16 @@ msgid "Enter login name of the user."
 msgstr "Entrez le nom de connexion de l'utilisateur."
 
 msgid "Enter mutual user name."
-msgstr ""
+msgstr "Entrez le nom d'utilisateur mutuel ."
 
 msgid "Enter name"
 msgstr "Entrez le nom"
 
+msgid "Enter passthrough device address bus:path:lun"
+msgstr "Entrer l'adresse du dispositif relais: chemin: lun"
+
 msgid "Enter secret."
-msgstr ""
+msgstr "Entrer le secret"
 
 msgid "Enter smartctl pass-through type."
 msgstr "Entrez le type de transfert smartctl."
@@ -4383,7 +4620,7 @@ msgid "Enter trap host name."
 msgstr "Nom du hôte vers lequel envoyer les traps SNMP"
 
 msgid "Enter user name."
-msgstr ""
+msgstr "Saisissez votre nom d'utilisateur."
 
 msgid "Enter value"
 msgstr "Entrez une valeur"
@@ -5142,7 +5379,7 @@ msgid "IP Address"
 msgstr "Adresse IP"
 
 msgid "IP Address Prefix"
-msgstr ""
+msgstr "Préfixe d'adresse IP"
 
 msgid "IP address"
 msgstr "Adresse IP"
@@ -5188,6 +5425,9 @@ msgid ""
 "initiators attempting to connect to this target will get redirected using "
 "\"Target moved temporarily\" login response."
 msgstr ""
+"Adresse IPv4 ou IPv6 pour rediriger les initiateurs. Une fois configuré, "
+"tous les initiateurs tentant de se connecter à cette cible seront redirigés "
+"à l'aide de la réponse de connexion \"Cible déplacée temporairement\"."
 
 msgid "IPv6 Address"
 msgstr "Adresse IPv6"
@@ -5481,6 +5721,33 @@ msgstr ""
 
 msgid "Initiator Name"
 msgstr "Nom de l'initiateur"
+
+msgid "Initiator Name is locked"
+msgstr "Le nom de l'initiateur est verrouillé"
+
+msgid "Initiator Name is marked for deletion"
+msgstr "Le nom de l'initiateur est marqué pour suppression"
+
+msgid "Initiator Name is unlocked"
+msgstr "Le nom de l'initiateur est déverrouillé"
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr "Portail initiateur"
+
+msgid "Initiator Portal is locked"
+msgstr "Le portail de l'initiateur est verrouillé"
+
+msgid "Initiator Portal is marked for deletion"
+msgstr "Le portail de l'initiateur est marqué pour suppression"
+
+msgid "Initiator Portal is unlocked"
+msgstr "Le portail de l'initiateur est déverrouillé"
+
+msgid "Initiator Portals"
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -5795,7 +6062,7 @@ msgid "LUN Name"
 msgstr "Nom du LUN"
 
 msgid "LUN Number"
-msgstr ""
+msgstr "Numéro  de LUN"
 
 msgid "LUN Product"
 msgstr "LUN Production"
@@ -5819,7 +6086,16 @@ msgid "LUN is unlocked"
 msgstr "Le LUN est déverrouillé"
 
 msgid "LUN number"
-msgstr ""
+msgstr "Numéro LUN"
+
+msgid "LUN record is locked"
+msgstr "L'enregistrement LUN est verrouillé"
+
+msgid "LUN record is marked for deletion"
+msgstr "L'enregistrement de LUN est marqué pour suppression"
+
+msgid "LUN record is unlocked"
+msgstr "L'enregistrement de LUN est déverrouillé"
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5957,6 +6233,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Lister ou  importer des pools"
+
+msgid "Listen"
+msgstr "Ecoute"
+
+msgid "Listen record is locked"
+msgstr "L'enregistrement d'écoute est verrouillé"
+
+msgid "Listen record is marked for deletion"
+msgstr "L'enregistrement d'écoute est marqué pour suppression"
+
+msgid "Listen record is unlocked"
+msgstr "L'enregistrement d'écoute est déverrouillé"
 
 msgid "Load"
 msgstr "Charge"
@@ -6509,14 +6797,23 @@ msgstr "Ne doit pas être vide."
 msgid "Mutual CHAP"
 msgstr "CHAP mutuel"
 
+msgid "Mutual CHAP User is locked"
+msgstr "L'Utilisateur CHAP Mutuel est verrouillé"
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr "L'utilisateur CHAP Mutuel est marqué pour la suppression"
+
+msgid "Mutual CHAP User is unlocked"
+msgstr "L'utilisateur CHAP Mutuel est déverrouillé"
+
 msgid "Mutual CHAP Users"
 msgstr "Utilisateurs de CHAP mutuel"
 
 msgid "Mutual Secret"
-msgstr ""
+msgstr "Secret Mutuel"
 
 msgid "Mutual User"
-msgstr ""
+msgstr "Utilisateur mutuel"
 
 msgid "NAA Identifier"
 msgstr "Identifiant NAA"
@@ -6594,10 +6891,10 @@ msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "Nom du périphérique à utiliser pour la pagination, e.g. %s."
 
 msgid "Name of the option."
-msgstr ""
+msgstr "Nom de l'option"
 
 msgid "Name of the port."
-msgstr ""
+msgstr "Nom du port."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -7048,10 +7345,10 @@ msgid "Option"
 msgstr "Option"
 
 msgid "Option Name"
-msgstr ""
+msgstr "Nom de l'option"
 
 msgid "Option Value"
-msgstr ""
+msgstr "Valeur de l’option"
 
 msgid "Option is locked"
 msgstr "L'option est verrouillée"
@@ -7065,6 +7362,15 @@ msgstr "L'option est protégée"
 msgid "Option is unlocked"
 msgstr "L'option est déverrouillée"
 
+msgid "Option record is locked"
+msgstr "L'enregistrement d'option est verrouillé"
+
+msgid "Option record is marked for deletion"
+msgstr "L'enregistrement d'option est marqué pour suppression"
+
+msgid "Option record is unlocked"
+msgstr "L'enregistrement d'option est déverrouillé"
+
 msgid "Optional"
 msgstr "Facultatif"
 
@@ -7076,6 +7382,9 @@ msgstr "Options"
 
 msgid "Origin"
 msgstr "Origine"
+
+msgid "Orphaned"
+msgstr "Orphelin"
 
 msgid "Others"
 msgstr "Autres"
@@ -7242,6 +7551,9 @@ msgstr "Passthrough - Ne pas changer la liste de contrôle d'accès (ACL)"
 msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - Hériter de toutes les entrées"
 
+msgid "Passthrough Address"
+msgstr "Adresse du Relais"
+
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr "Passthrough-X - Hériter tout mais \"exécuter\" lorsque non spécifié"
 
@@ -7342,7 +7654,7 @@ msgid "Permit Root Login"
 msgstr "Autoriser la connexion Root"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Autoriser l'accès sans authentification"
 
 msgid "Permit discovery without authentication"
 msgstr "Permettre la découverte sans authentification"
@@ -7512,7 +7824,7 @@ msgid "Port Forwarding"
 msgstr "Redirection du port"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Nom du Port"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Le numéro de port doit être 514 ou un numéro entre 1024 et 49151."
@@ -7535,6 +7847,15 @@ msgid ""
 msgstr ""
 "Port du serveur syslog distant. Laissez vide pour utiliser le port par "
 "défaut."
+
+msgid "Port record is locked"
+msgstr "L'enregistrement du port est verrouillé"
+
+msgid "Port record is marked for deletion"
+msgstr "L'enregistrement de port est marqué pour suppression"
+
+msgid "Port record is unlocked"
+msgstr "L'enregistrement de port est déverrouillé"
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -8004,6 +8325,9 @@ msgstr "Seuil haut de l'humidité relative (pourcent)"
 msgid "Release Notes"
 msgstr "Notes de Version"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Rafraîchir la page"
 
@@ -8156,6 +8480,9 @@ msgstr "La ressource est déverrouillée"
 
 msgid "Resources"
 msgstr "Ressources"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "Restaurer"
@@ -8557,6 +8884,9 @@ msgstr "Sélectionnez un algorithme de cryptage à utiliser."
 msgid "Select at which stage the command should be executed."
 msgstr "Sélectionnez à quel stade la commande doit être exécutée."
 
+msgid "Select auth groups."
+msgstr "Sélectionnez les groupes d'authentification."
+
 msgid "Select configuration file:"
 msgstr "Sélectionnez le fichier de configuration:"
 
@@ -8584,6 +8914,9 @@ msgstr ""
 "Sélectionnez l'option 'Unformatted' pour des disques non formatés et les "
 "formater avec Disques|Gestion|Format de Disque Dur|."
 
+msgid "Select portal groups."
+msgstr "Sélectionnez des groupes de portails."
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr ""
 "Sélectionnez le mode de pré-allocation des fichiers. (La valeur par défaut "
@@ -8591,6 +8924,12 @@ msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Sélectionnez l'algorithme d'équilibrage de lecture."
+
+msgid "Select target groups."
+msgstr "Sélectionnez les groupes cibles."
+
+msgid "Select targets."
+msgstr "Sélectionnez des cibles."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Sélectionner le paquet FreeBSD à installer"
@@ -9618,6 +9957,9 @@ msgstr "Adresse Cible"
 msgid "Target Alias"
 msgstr "Alias de cible"
 
+msgid "Target Group"
+msgstr "Groupe Cible"
+
 msgid "Target Name"
 msgstr "Nom cible"
 
@@ -9744,9 +10086,6 @@ msgstr "Le protocole LAGG n'est pas valide."
 
 msgid "The LAN IP address will be reset to"
 msgstr "L'adresse IP du LAN sera réinitialisée à"
-
-msgid "The LUN size, in bytes."
-msgstr "La taille du LUN, en octets."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -10465,7 +10804,7 @@ msgstr ""
 "utilisateur."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "Le port à écouter."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10534,6 +10873,9 @@ msgstr ""
 
 msgid "The share name is already used."
 msgstr "Le nom de partage est déjà utilisé."
+
+msgid "The size of the LUN."
+msgstr ""
 
 msgid "The size of the swap file in MB."
 msgstr "La taille du fichier de pagination en MB."
@@ -11302,22 +11644,46 @@ msgid "Toggle Mode"
 msgstr "Bascule de mode"
 
 msgid "Toggle Selected Auth Groups"
-msgstr "Basculer les groupes d'authentification sélectionnés"
+msgstr "Activer / Désactiver les groupes d'authentification sélectionnés"
+
+msgid "Toggle Selected CHAP Users"
+msgstr "Activer / Désactiver les utilisateurs CHAP sélectionnés"
 
 msgid "Toggle Selected Commands"
 msgstr "Changer l'état des commandes sélectionnées"
 
+msgid "Toggle Selected Initiator Names"
+msgstr "Activer / Désactiver les noms des initiateurs sélectionnés"
+
+msgid "Toggle Selected Initiator Portals"
+msgstr "Activer / Désactiver les portails d'initiateur sélectionnés"
+
 msgid "Toggle Selected Jobs"
 msgstr "Inverse l'état des tâches sélectionnées"
 
+msgid "Toggle Selected LUN Records"
+msgstr "Activer / Désactiver les enregistrements LUN sélectionnés"
+
 msgid "Toggle Selected LUNs"
-msgstr "Basculer les LUN sélectionnés"
+msgstr "Activer / Désactiver les LUN sélectionnés"
+
+msgid "Toggle Selected Listen Records"
+msgstr "Activer / Désactiver les Enregistrements d'écoute Sélectionnés"
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr "Activer / Désactiver les enregistrements d'écoute sélectionnés"
+
+msgid "Toggle Selected Option Records"
+msgstr "Activer / Désactiver les enregistrements d'option sélectionnés"
 
 msgid "Toggle Selected Options"
 msgstr "Inverse l'état des options sélectionnées"
 
+msgid "Toggle Selected Port Records"
+msgstr "Activer / Désactiver les enregistrements de port sélectionnés"
+
 msgid "Toggle Selected Portal Groups"
-msgstr "Basculer les groupes portail sélectionnés"
+msgstr "Activer / Désactiver les groupes portail sélectionnés"
 
 msgid "Toggle Selected Records"
 msgstr "Changer d'état les enregistrements sélectionnés"
@@ -11329,7 +11695,7 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Changer d'état les Modules Rsync Sélectionnés"
 
 msgid "Toggle Selected Targets"
-msgstr "Basculer les cibles sélectionnées"
+msgstr "Activer / Désactiver les cibles sélectionnées"
 
 msgid "Tolerated"
 msgstr "Toléré"
@@ -12007,7 +12373,7 @@ msgstr ""
 "fixer un seuil minimal qui correspond à une température maximale."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "Valeur de l'option"
 
 msgid "Variable"
 msgstr "Variable"
@@ -12686,23 +13052,8 @@ msgstr "utilisé de"
 msgid "visible"
 msgstr "visible"
 
-#~ msgid "2048"
-#~ msgstr "2048"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Entrez une description pour votre référence"
 
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "8192"
-#~ msgstr "8192"
-
-#~ msgid "Enter user name"
-#~ msgstr "Saisissez votre nom d'utilisateur"
-
-#~ msgid "Enter secret"
-#~ msgstr "Saisissez votre secret"
-
-#~ msgid "Seconfary"
-#~ msgstr "Secondaire"
+#~ msgid "The LUN size, in bytes."
+#~ msgstr "La taille du LUN, en octets."

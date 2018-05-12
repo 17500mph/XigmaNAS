@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-04-16 20:03+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-05 05:22+0000\n"
+"Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -197,16 +197,16 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Este nevoie de cel puțin un disc pentru a crea un volum RAID-1."
 
 msgid "1.8\""
-msgstr ""
+msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Este nevoie de cel puțin două discuri pentru a crea un volum RAID-0."
@@ -215,7 +215,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "Este nevoie de cel puțin două discuri pentru a crea un volum RAID-1."
 
 msgid "2.5\""
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -224,34 +224,34 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "Este nevoie de cel puțin trei discuri pentru a crea un volum RAID-5."
 
 msgid "3.5\""
-msgstr ""
+msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Bytes"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Etichetă VLAN 802.1Q (între 1 și 4094)."
@@ -511,13 +511,16 @@ msgid "Add"
 msgstr "Adăugare"
 
 msgid "Add Auth Group"
-msgstr ""
+msgstr "Adăugare Auth Group"
 
 msgid "Add Bridge"
 msgstr "Adăugare Bridge"
 
 msgid "Add CARP"
 msgstr "Adăugare CARP"
+
+msgid "Add CHAP User"
+msgstr ""
 
 msgid "Add Dataset"
 msgstr "Adăugare set date"
@@ -534,14 +537,29 @@ msgstr "Adăugare grup"
 msgid "Add Host"
 msgstr "Adăugare sistem"
 
+msgid "Add Initiator Name"
+msgstr ""
+
+msgid "Add Initiator Portal"
+msgstr ""
+
 msgid "Add LAGG"
 msgstr "Adăugare LAGG"
 
 msgid "Add LUN"
+msgstr "Adăugare LUN"
+
+msgid "Add LUN Record"
+msgstr ""
+
+msgid "Add Listen Record"
 msgstr ""
 
 msgid "Add MIB"
 msgstr "Adăugare MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr ""
 
 msgid "Add NFS Share"
 msgstr "Adăugare partajare NFS"
@@ -549,11 +567,17 @@ msgstr "Adăugare partajare NFS"
 msgid "Add Option"
 msgstr "Adăugare opțiuni"
 
+msgid "Add Option Record"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Adăugare Pool"
 
-msgid "Add Portal Group"
+msgid "Add Port Record"
 msgstr ""
+
+msgid "Add Portal Group"
+msgstr "Adăugare Grup Portal"
 
 msgid "Add RAID"
 msgstr "Adăugare RAID"
@@ -583,7 +607,7 @@ msgid "Add Snapshot"
 msgstr "Adăugare Snapshot"
 
 msgid "Add Target"
-msgstr ""
+msgstr "Adăugare Destinație"
 
 msgid "Add URL"
 msgstr "Adăugare URL"
@@ -667,10 +691,10 @@ msgid "Additional Network"
 msgstr "Rețele adiționale"
 
 msgid "Additional Options for Block Backend"
-msgstr ""
+msgstr "Opțiuni suplimentare pentru Block Backend"
 
 msgid "Additional Options for RAM Disk Backend"
-msgstr ""
+msgstr "Opțiuni suplimentare pentru RAM Disk Backend"
 
 msgid "Additional Parameter"
 msgstr "Parametri suplimentari"
@@ -765,7 +789,7 @@ msgid "Algorithm"
 msgstr "Algoritm"
 
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 msgid "All"
 msgstr "Toate"
@@ -840,7 +864,7 @@ msgstr ""
 "Permite clienților să continue încărcările și descărcările întrerupte."
 
 msgid "Allow consecutive read/writes to be issued in parallel"
-msgstr ""
+msgstr "Permisiune citiri/scrieri consecutive în paralel"
 
 msgid "Allow new files to be created."
 msgstr "Permite crearea de fișiere noi."
@@ -938,13 +962,14 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "O Extensie definește o zonă de stocare a Destinației."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "Adresă IPv4 sau IPv6 pentru un inițiator portal iSCSI"
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
-msgstr ""
+msgstr "O adresă Ipv4 sau IPv6 a serverului iSNS pentru înregistrare."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
+"O adresă Ipv4 sau IPv6 de monitorizat pentru conexiunile de \tintrare\t."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -975,9 +1000,6 @@ msgstr "A apărut o eroare."
 
 msgid "An host with this name already exists."
 msgstr "Un sistem cu acest nume există deja."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "O interfață cu această descriere există deja."
@@ -1069,18 +1091,20 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Opriți serverul?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Asignare descriere inteligibilă pentru destinație"
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
 "used for target discovery."
 msgstr ""
+"Alocă un grup de autentificare definit anterior pentru a fi utilizat la "
+"identificarea destinațiilor."
 
 msgid "Assign a previously defined authentication group to the target."
-msgstr ""
+msgstr "Alocă un grup de autentificare definit anterior pentru destinație."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Alocă un grup portal definit anterior pentru destinație."
 
 msgid "Asynchronous I/O"
 msgstr "I/O asincrone"
@@ -1139,19 +1163,19 @@ msgid "Auth Group"
 msgstr "Grup Auth"
 
 msgid "Auth Group Name"
-msgstr ""
+msgstr "Nume Grup Autorizat"
 
 msgid "Auth Group Settings"
 msgstr "Setări Grup autorizat"
 
 msgid "Auth Group is locked"
-msgstr ""
+msgstr "Grup Autorizat blocat"
 
 msgid "Auth Group is marked for deletion"
-msgstr ""
+msgstr "Grup Autorizat marcat pentru ștergere"
 
 msgid "Auth Group is unlocked"
-msgstr ""
+msgstr "Grupul de autentificare este deblocat"
 
 msgid "Auth Groups"
 msgstr "Grupuri Auth"
@@ -1166,7 +1190,7 @@ msgid "Auth Method"
 msgstr "Metodă Autentificare"
 
 msgid "Auth Type"
-msgstr ""
+msgstr "Tip autorizare"
 
 msgid "Authenticate Path & Realm"
 msgstr "Autentificare Path & Realm"
@@ -1244,7 +1268,7 @@ msgid "Avail"
 msgstr "Disponibil"
 
 msgid "Avail Threshold"
-msgstr ""
+msgstr "NIvel disponibil"
 
 msgid "Available"
 msgstr "Disponibil"
@@ -1269,7 +1293,7 @@ msgid "Back"
 msgstr "Înapoi"
 
 msgid "Backend"
-msgstr ""
+msgstr "Suport"
 
 msgid "Background"
 msgstr "Fundal"
@@ -1401,7 +1425,7 @@ msgid "Blank Time"
 msgstr "Blank Time"
 
 msgid "Block"
-msgstr ""
+msgstr "Blocare"
 
 msgid "Block Size"
 msgstr "Dimensiune bloc"
@@ -1491,10 +1515,10 @@ msgid "CACHE"
 msgstr "CACHE"
 
 msgid "CAM Target Layer"
-msgstr ""
+msgstr "Layer CAM Target"
 
 msgid "CAM Target Layer / iSCSI Target"
-msgstr ""
+msgstr "Layer CAM Target / Destinație iSCSI"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1522,10 +1546,10 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD"
-msgstr ""
+msgstr "CD"
 
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
@@ -1539,11 +1563,20 @@ msgstr "MODIFICAT"
 msgid "CHAP"
 msgstr "CHAP"
 
+msgid "CHAP User is locked"
+msgstr ""
+
+msgid "CHAP User is marked for deletion"
+msgstr ""
+
+msgid "CHAP User is unlocked"
+msgstr ""
+
 msgid "CHAP Users"
 msgstr "Utilizator CHAP"
 
 msgid "CHAP-Mutual"
-msgstr ""
+msgstr "CHAP-Mutual"
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -1622,7 +1655,7 @@ msgstr ""
 "citire/scriere)."
 
 msgid "CTL LUN"
-msgstr ""
+msgstr "CTL LUN"
 
 msgid "Calibration Battery"
 msgstr "Calibrare acumulator"
@@ -2457,7 +2490,7 @@ msgid "DVD"
 msgstr "DVD"
 
 msgid "DVD-ROM"
-msgstr ""
+msgstr "DVD-ROM"
 
 msgid "Daemon"
 msgstr "Daemon"
@@ -2585,6 +2618,8 @@ msgid ""
 "Define iSCSI hardware offload driver to use for this portal-group. The "
 "default is \"none\"."
 msgstr ""
+"Definește driverul hardware iSCSI de utilizat cu acest grup portal. Valoarea "
+"implicită este \"none\"."
 
 msgid "Defines the checksum algorithm."
 msgstr "Definește algoritmul sumei de control."
@@ -2622,13 +2657,16 @@ msgid "Delete Login Info"
 msgstr "Ștergere date de autentificare"
 
 msgid "Delete Selected Auth Groups"
-msgstr ""
+msgstr "Ștergere Grupuri autorizate selectate"
 
 msgid "Delete Selected Bridges"
 msgstr "Ștergere conexiuni bridge selectate"
 
 msgid "Delete Selected CARPs"
 msgstr "Ștergere protocoale CARP selectate"
+
+msgid "Delete Selected CHAP Users"
+msgstr ""
 
 msgid "Delete Selected Commands"
 msgstr "Ștergere comenzi selectate"
@@ -2645,13 +2683,28 @@ msgstr "Ștergere volume criptate selectate"
 msgid "Delete Selected Groups"
 msgstr "Ștergere grupuri selectate"
 
+msgid "Delete Selected Initiator Names"
+msgstr ""
+
+msgid "Delete Selected Initiator Portals"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Ștergere activități selectate"
 
 msgid "Delete Selected LAGGs"
 msgstr "Ștergere conexiuni LAGG selectate"
 
+msgid "Delete Selected LUN Records"
+msgstr ""
+
 msgid "Delete Selected LUNs"
+msgstr "Ștergere grup elemente LUN selectate"
+
+msgid "Delete Selected Listen Records"
+msgstr ""
+
+msgid "Delete Selected Mutual CHAP Users"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
@@ -2660,14 +2713,20 @@ msgstr "Ștergere partajări NFS selectate"
 msgid "Delete Selected Notifier"
 msgstr "Ștergere notificatoare selectate"
 
+msgid "Delete Selected Option Records"
+msgstr ""
+
 msgid "Delete Selected Options"
 msgstr "Ștergere opțiuni selectate"
 
 msgid "Delete Selected Pools"
 msgstr "Ștergere Structuri pool selectate"
 
-msgid "Delete Selected Portal Groups"
+msgid "Delete Selected Port Records"
 msgstr ""
+
+msgid "Delete Selected Portal Groups"
+msgstr "Ștergere Gruprui portal selectate"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Ștergere volume RAID selectate"
@@ -2697,7 +2756,7 @@ msgid "Delete Selected Snapshots"
 msgstr "Ștergere Snapshot-uri selectate"
 
 msgid "Delete Selected Targets"
-msgstr ""
+msgstr "Ștergere Destinații selectate"
 
 msgid "Delete Selected User Accounts"
 msgstr "Ștergere conturi utilizator selectate"
@@ -2792,7 +2851,7 @@ msgid "Deny"
 msgstr "Respinge"
 
 msgid "Deny discovery"
-msgstr ""
+msgstr "Blocare identificare"
 
 msgid "Description"
 msgstr "Descriere"
@@ -2887,7 +2946,7 @@ msgid "Device /dev/%s - %s"
 msgstr "Dispozitiv /dev/%s - %s"
 
 msgid "Device ID"
-msgstr ""
+msgstr "ID dispozitiv"
 
 msgid "Device IP"
 msgstr "Dispozitiv IP"
@@ -2908,7 +2967,7 @@ msgid "Device Serial"
 msgstr "Serial dispozitiv"
 
 msgid "Device Type"
-msgstr ""
+msgstr "Tip dispozitiv"
 
 msgid "Device contains boot partition"
 msgstr "Dispozitivul conține partiția de boot"
@@ -2953,7 +3012,7 @@ msgid "Digital Audio Access Protocol"
 msgstr "Protocol Acces Audio Digital"
 
 msgid "Direct"
-msgstr ""
+msgstr "Direct"
 
 msgid "Direction"
 msgstr "Direcție"
@@ -2992,22 +3051,46 @@ msgid "Disable Firmware Upgrade"
 msgstr "Dezactivare actualizare firmware"
 
 msgid "Disable Selected Auth Groups"
+msgstr "Dezactivare Grupuri autorizate selectate"
+
+msgid "Disable Selected CHAP Users"
 msgstr ""
 
 msgid "Disable Selected Commands"
 msgstr "Dezactivare comenzi selectate"
 
+msgid "Disable Selected Initiator Names"
+msgstr ""
+
+msgid "Disable Selected Initiator Portals"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr "Dezactivare activitîți selectate"
 
+msgid "Disable Selected LUN Records"
+msgstr ""
+
 msgid "Disable Selected LUNs"
+msgstr ""
+
+msgid "Disable Selected Listen Records"
+msgstr ""
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Disable Selected Option Records"
 msgstr ""
 
 msgid "Disable Selected Options"
 msgstr "Dezactivare opțiuni selectate"
 
-msgid "Disable Selected Portal Groups"
+msgid "Disable Selected Port Records"
 msgstr ""
+
+msgid "Disable Selected Portal Groups"
+msgstr "Dezactivare Grupuri portal selectate"
 
 msgid "Disable Selected Records"
 msgstr "Dezactivare înregistrări selectate"
@@ -3019,7 +3102,7 @@ msgid "Disable Selected Rsync Modules"
 msgstr "Dezactivare module Rsync selectate"
 
 msgid "Disable Selected Targets"
-msgstr ""
+msgstr "Dezactivare Destinații selectate"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Dezactivare wrapper TCP (modul mod_wrap)."
@@ -3062,7 +3145,7 @@ msgid "Discovery Auth Method"
 msgstr "Descoperire Metodă Autentificare"
 
 msgid "Discovery Filter"
-msgstr ""
+msgstr "Filtru identificare"
 
 msgid ""
 "Discovery will not return targets that cannot be accessed by the initiator "
@@ -3284,10 +3367,19 @@ msgstr "Creați un dispozitiv virtual tip strip folosind discurile selectate?"
 msgid "Do you want to delete selected CARPs?"
 msgstr "Ștergeți protocoalele CARP selectate?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr ""
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Ștergeți conexiunile LAGG selectate?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr ""
+
 msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
+msgid "Do you want to delete selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to delete selected NFS shares?"
@@ -3326,10 +3418,22 @@ msgstr "Ștergeți volumele criptate selectate?"
 msgid "Do you want to delete selected groups?"
 msgstr "Ștergeți grupurile selectate?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr ""
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Ștergeți activitățile selectate?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr ""
+
 msgid "Do you want to delete selected notifier?"
+msgstr ""
+
+msgid "Do you want to delete selected option records?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
@@ -3337,6 +3441,9 @@ msgstr "Ștergeți opțiunile selectate?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Ștergeți structurile pool selectate?"
+
+msgid "Do you want to delete selected port records?"
+msgstr ""
 
 msgid "Do you want to delete selected portal groups?"
 msgstr ""
@@ -3377,7 +3484,16 @@ msgstr "Ștergeți volumele selectate?"
 msgid "Do you want to delete this command?"
 msgstr "Ștergeți această comandă?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to disable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to disable selected auth groups?"
@@ -3386,11 +3502,26 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "Dezactivați comenzile selectate?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Dezactivați activitățile selectate?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr ""
+
+msgid "Do you want to disable selected option records?"
+msgstr ""
+
 msgid "Do you want to disable selected options?"
 msgstr "Dezactivați opțiunile selectate?"
+
+msgid "Do you want to disable selected port records?"
+msgstr ""
 
 msgid "Do you want to disable selected portal groups?"
 msgstr ""
@@ -3407,7 +3538,16 @@ msgstr "Dezactivați modulele rsync selectate?"
 msgid "Do you want to disable selected targets?"
 msgstr ""
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3416,11 +3556,26 @@ msgstr ""
 msgid "Do you want to enable selected commands?"
 msgstr "Activați comenzile selectate?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Activați activitățile selectate?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr ""
+
+msgid "Do you want to enable selected option records?"
+msgstr ""
+
 msgid "Do you want to enable selected options?"
 msgstr "Activați opțiunile selectate?"
+
+msgid "Do you want to enable selected port records?"
+msgstr ""
 
 msgid "Do you want to enable selected portal groups?"
 msgstr ""
@@ -3446,7 +3601,16 @@ msgstr "Importați discurile RAID software?"
 msgid "Do you want to lock selected records?"
 msgstr "Blocați înregistrările selectate?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+
 msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3455,11 +3619,26 @@ msgstr ""
 msgid "Do you want to toggle selected commands?"
 msgstr "Schimbați starea comenzilor selectate?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Inversați activitățile selectate?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+
 msgid "Do you want to toggle selected options?"
 msgstr "Inversați opțiunile selectate?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr ""
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr ""
@@ -3602,6 +3781,9 @@ msgstr "Editare conexiune bridge"
 msgid "Edit CARP"
 msgstr "Editare conexiune CARP"
 
+msgid "Edit CHAP User"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Editare set de date"
 
@@ -3617,14 +3799,29 @@ msgstr "Editare grup"
 msgid "Edit Host"
 msgstr "Editare sistem"
 
+msgid "Edit Initiator Name"
+msgstr ""
+
+msgid "Edit Initiator Portal"
+msgstr ""
+
 msgid "Edit LAGG"
 msgstr "Editare conexiune LAGG"
 
 msgid "Edit LUN"
 msgstr ""
 
+msgid "Edit LUN Record"
+msgstr ""
+
+msgid "Edit Listen Record"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Editare MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr ""
 
 msgid "Edit NFS Share"
 msgstr "Editare partajare NFS"
@@ -3632,8 +3829,14 @@ msgstr "Editare partajare NFS"
 msgid "Edit Option"
 msgstr "Modificare opțiune"
 
+msgid "Edit Option Record"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Editare Pool"
+
+msgid "Edit Port Record"
+msgstr ""
 
 msgid "Edit Portal Group"
 msgstr ""
@@ -3804,17 +4007,41 @@ msgstr "Activare STARTLS"
 msgid "Enable Selected Auth Groups"
 msgstr ""
 
+msgid "Enable Selected CHAP Users"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "Activare comenzi selectate"
+
+msgid "Enable Selected Initiator Names"
+msgstr ""
+
+msgid "Enable Selected Initiator Portals"
+msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr "Activare activități selectate"
 
+msgid "Enable Selected LUN Records"
+msgstr ""
+
 msgid "Enable Selected LUNs"
+msgstr ""
+
+msgid "Enable Selected Listen Records"
+msgstr ""
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Enable Selected Option Records"
 msgstr ""
 
 msgid "Enable Selected Options"
 msgstr "Activare opțiuni selectate"
+
+msgid "Enable Selected Port Records"
+msgstr ""
 
 msgid "Enable Selected Portal Groups"
 msgstr ""
@@ -4172,9 +4399,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Introducere descriere"
 
-msgid "Enter a description for your reference"
-msgstr "Introducere descriere pentru referință"
-
 msgid "Enter a description for your reference."
 msgstr "Introduceți o scurtă descriere"
 
@@ -4214,6 +4438,9 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Introduceți un nume MIB valid."
 
 msgid "Enter additional parameter"
+msgstr ""
+
+msgid "Enter an iSCSI initiator name."
 msgstr ""
 
 msgid "Enter comment for the share"
@@ -4257,6 +4484,9 @@ msgid "Enter mutual user name."
 msgstr ""
 
 msgid "Enter name"
+msgstr ""
+
+msgid "Enter passthrough device address bus:path:lun"
 msgstr ""
 
 msgid "Enter secret."
@@ -5414,6 +5644,33 @@ msgstr ""
 msgid "Initiator Name"
 msgstr "Nume inițiator"
 
+msgid "Initiator Name is locked"
+msgstr ""
+
+msgid "Initiator Name is marked for deletion"
+msgstr ""
+
+msgid "Initiator Name is unlocked"
+msgstr ""
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr ""
+
+msgid "Initiator Portal is locked"
+msgstr ""
+
+msgid "Initiator Portal is marked for deletion"
+msgstr ""
+
+msgid "Initiator Portal is unlocked"
+msgstr ""
+
+msgid "Initiator Portals"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
@@ -5552,7 +5809,7 @@ msgid "Invalid file format."
 msgstr "Format invalid fișier."
 
 msgid "Invalid login credentials."
-msgstr "Date de conectare inocrecte."
+msgstr "Nume de utilizator/parolă incorecte"
 
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
@@ -5749,6 +6006,15 @@ msgstr ""
 msgid "LUN number"
 msgstr ""
 
+msgid "LUN record is locked"
+msgstr ""
+
+msgid "LUN record is marked for deletion"
+msgstr ""
+
+msgid "LUN record is unlocked"
+msgstr ""
+
 msgid "LUNs"
 msgstr "Numere Unităţi Logice (LUNs)"
 
@@ -5883,6 +6149,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Listare sau import pool"
+
+msgid "Listen"
+msgstr ""
+
+msgid "Listen record is locked"
+msgstr ""
+
+msgid "Listen record is marked for deletion"
+msgstr ""
+
+msgid "Listen record is unlocked"
+msgstr ""
 
 msgid "Load"
 msgstr "Încărcare"
@@ -6429,6 +6707,15 @@ msgstr ""
 
 msgid "Mutual CHAP"
 msgstr "CHAP mutual"
+
+msgid "Mutual CHAP User is locked"
+msgstr ""
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr ""
+
+msgid "Mutual CHAP User is unlocked"
+msgstr ""
 
 msgid "Mutual CHAP Users"
 msgstr "Utilizatori CHAP mutual"
@@ -6982,6 +7269,15 @@ msgstr "Opțiunea este protejată"
 msgid "Option is unlocked"
 msgstr "Opțiunea este deblocată"
 
+msgid "Option record is locked"
+msgstr ""
+
+msgid "Option record is marked for deletion"
+msgstr ""
+
+msgid "Option record is unlocked"
+msgstr ""
+
 msgid "Optional"
 msgstr "Opţional"
 
@@ -6993,6 +7289,9 @@ msgstr "Opțiuni"
 
 msgid "Origin"
 msgstr "Origine"
+
+msgid "Orphaned"
+msgstr ""
 
 msgid "Others"
 msgstr "Altele"
@@ -7158,6 +7457,9 @@ msgstr "Passthrough - Fără modificare ACL"
 
 msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - Moștenește toate intrările"
+
+msgid "Passthrough Address"
+msgstr ""
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
@@ -7451,6 +7753,15 @@ msgid ""
 msgstr ""
 "Portul pentru serverul syslog. Lăsați câmpul necompletat pentru valoarea "
 "implicită."
+
+msgid "Port record is locked"
+msgstr ""
+
+msgid "Port record is marked for deletion"
+msgstr ""
+
+msgid "Port record is unlocked"
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7914,6 +8225,9 @@ msgstr "Prag superior umiditate relativă (procent)"
 msgid "Release Notes"
 msgstr "Notă Ediție"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Reâncărcare pagină"
 
@@ -8067,6 +8381,9 @@ msgstr "Resursa este deblocată"
 
 msgid "Resources"
 msgstr "Resurse"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "Restaurare"
@@ -8466,6 +8783,9 @@ msgstr "Selectați algortimul de criptare de utilizat."
 msgid "Select at which stage the command should be executed."
 msgstr "Selectați momentul în care va fi executată comanda."
 
+msgid "Select auth groups."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "Selectare fișier configurare:"
 
@@ -8493,11 +8813,20 @@ msgstr ""
 "Selectați opțiunea 'Neformatat' pentru discuri neformatate și formatați-le "
 "folosind"
 
+msgid "Select portal groups."
+msgstr ""
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "Selectare mod prealocare pentru fișiere (implicit rapid)."
 
 msgid "Select read balance algorithm."
 msgstr "Selectați algoritmul de balans."
+
+msgid "Select target groups."
+msgstr ""
+
+msgid "Select targets."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Selectați pachetul FreeBSD de instalat."
@@ -9479,6 +9808,9 @@ msgstr "Adresă țintă"
 msgid "Target Alias"
 msgstr "Alias Destinație"
 
+msgid "Target Group"
+msgstr ""
+
 msgid "Target Name"
 msgstr "Nume Destinație"
 
@@ -9601,9 +9933,6 @@ msgstr "Protocolul LAGG este invalid."
 
 msgid "The LAN IP address will be reset to"
 msgstr "Adresa LAN va fi resetată la"
-
-msgid "The LUN size, in bytes."
-msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -10349,6 +10678,9 @@ msgstr "Serverul va reporni după ce configurația va fi restaurată cu succes."
 
 msgid "The share name is already used."
 msgstr "Numele partajării este deja utilizat."
+
+msgid "The size of the LUN."
+msgstr ""
 
 msgid "The size of the swap file in MB."
 msgstr "Dimensiunea fișierului swap în MB."
@@ -11107,17 +11439,41 @@ msgstr "Inversare selecție"
 msgid "Toggle Selected Auth Groups"
 msgstr ""
 
+msgid "Toggle Selected CHAP Users"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "Inversare stare selecție comenzi"
+
+msgid "Toggle Selected Initiator Names"
+msgstr ""
+
+msgid "Toggle Selected Initiator Portals"
+msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr "Inversare stare activități selectate"
 
+msgid "Toggle Selected LUN Records"
+msgstr ""
+
 msgid "Toggle Selected LUNs"
+msgstr ""
+
+msgid "Toggle Selected Listen Records"
+msgstr ""
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Toggle Selected Option Records"
 msgstr ""
 
 msgid "Toggle Selected Options"
 msgstr "Inversare stare opțiuni selectate"
+
+msgid "Toggle Selected Port Records"
+msgstr ""
 
 msgid "Toggle Selected Portal Groups"
 msgstr ""
@@ -12467,3 +12823,6 @@ msgstr "utilizat din"
 
 msgid "visible"
 msgstr "vizibil"
+
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Introducere descriere pentru referință"

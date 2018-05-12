@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-05-02 05:54+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-09 18:38+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:30+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -204,13 +204,13 @@ msgid "1.8\""
 msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Es requereix 2 o més discos per crear un volum RAID-0."
@@ -231,10 +231,10 @@ msgid "3.5\""
 msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "Embolcall 4KB"
@@ -243,19 +243,19 @@ msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Bytes"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q etiqueta VLAN (des 1 fins a 4094)."
@@ -518,6 +518,9 @@ msgstr "Afegir pont"
 msgid "Add CARP"
 msgstr "Afegir CARP"
 
+msgid "Add CHAP User"
+msgstr "Afegeix l'usuari CHAP"
+
 msgid "Add Dataset"
 msgstr "Afegir conjunt de dades"
 
@@ -533,14 +536,29 @@ msgstr "Afegeix grup"
 msgid "Add Host"
 msgstr "Afegeix una màquina"
 
+msgid "Add Initiator Name"
+msgstr "Afegeix el nom de l'iniciador"
+
+msgid "Add Initiator Portal"
+msgstr "Afegeix Portal iniciador"
+
 msgid "Add LAGG"
 msgstr "Afegir LAGG"
 
 msgid "Add LUN"
 msgstr "Afegir LUN"
 
+msgid "Add LUN Record"
+msgstr "Afegeix registre LUN"
+
+msgid "Add Listen Record"
+msgstr "Afegeix registre d'escolta"
+
 msgid "Add MIB"
 msgstr "Afegir MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr "Afegeix un usuari de CHAP mutu"
 
 msgid "Add NFS Share"
 msgstr "Afegir recurs NFS"
@@ -548,8 +566,14 @@ msgstr "Afegir recurs NFS"
 msgid "Add Option"
 msgstr "Afegir Opció"
 
+msgid "Add Option Record"
+msgstr "Afegeix opció de registre"
+
 msgid "Add Pool"
 msgstr "Afegir piscina"
+
+msgid "Add Port Record"
+msgstr "Afegeix port de registre"
 
 msgid "Add Portal Group"
 msgstr "Afegeix grup de Portal"
@@ -943,13 +967,14 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Una extensió defineix l'àrea d'emmagatzematge de l'objectiu."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "Una adreça IPv4 o IPv6 d'un portal iniciador iSCSI."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr "Una adreça IPv4 o IPv6 del servidor iSNS per registrar-se."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
+"Una adreça IPv4 o IPv6 per escoltar \t per a les connexions entrants \t."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -980,9 +1005,6 @@ msgstr "S'ha produït un error."
 
 msgid "An host with this name already exists."
 msgstr "Ja existeix un amfitrió amb aquest nom."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Ja existeix una interfície amb la descripció especificada."
@@ -1077,7 +1099,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Esteu segur que voleu apagar el servidor?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Assigneu una descripció llegible per humans a l'objectiu."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1087,10 +1109,10 @@ msgstr ""
 "s'utilitzarà per al descobriment d'objectius."
 
 msgid "Assign a previously defined authentication group to the target."
-msgstr ""
+msgstr "Assigneu un grup d'autenticació prèviament definit a l'objectiu."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Assigneu un grup de portal definit prèviament a l'objectiu."
 
 msgid "Asynchronous I/O"
 msgstr "E/S asíncrona"
@@ -1554,6 +1576,15 @@ msgstr "Canviat"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr "L'usuari CHAP està bloquejat"
+
+msgid "CHAP User is marked for deletion"
+msgstr "L'usuari CHAP està marcat per esborrar"
+
+msgid "CHAP User is unlocked"
+msgstr "L'usuari CHAP està desbloquejat"
 
 msgid "CHAP Users"
 msgstr "Usuaris CHAP"
@@ -2644,6 +2675,9 @@ msgstr "Suprimeix els ponts seleccionats"
 msgid "Delete Selected CARPs"
 msgstr "Suprimeix CARP's seleccionats"
 
+msgid "Delete Selected CHAP Users"
+msgstr "Suprimeix els usuaris CHAP seleccionats"
+
 msgid "Delete Selected Commands"
 msgstr "Suprimeix comandos seleccionats"
 
@@ -2659,14 +2693,29 @@ msgstr "Eliminar volums xifrats seleccionats"
 msgid "Delete Selected Groups"
 msgstr "Suprimeix grups seleccionats"
 
+msgid "Delete Selected Initiator Names"
+msgstr "Elimineu els noms dels iniciadors seleccionats"
+
+msgid "Delete Selected Initiator Portals"
+msgstr "Elimineu els iniciadors de portals seleccionats"
+
 msgid "Delete Selected Jobs"
 msgstr "Suprimeix feines seleccionats"
 
 msgid "Delete Selected LAGGs"
 msgstr "Suprimeix LAGG's seleccionats"
 
+msgid "Delete Selected LUN Records"
+msgstr "Elimineu els registres LUN seleccionats"
+
 msgid "Delete Selected LUNs"
 msgstr "Suprimeix els LUN seleccionats"
+
+msgid "Delete Selected Listen Records"
+msgstr "Elimineu els registres d'escolta seleccionats"
+
+msgid "Delete Selected Mutual CHAP Users"
+msgstr "Elimineu els usuaris CHAP seleccionats"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Suprimeix els recursos NFS seleccionats"
@@ -2674,11 +2723,17 @@ msgstr "Suprimeix els recursos NFS seleccionats"
 msgid "Delete Selected Notifier"
 msgstr "Suprimeix el notificador seleccionat"
 
+msgid "Delete Selected Option Records"
+msgstr "Elimineu els registres d'opcions seleccionats"
+
 msgid "Delete Selected Options"
 msgstr "Suprimeix opcions seleccionades"
 
 msgid "Delete Selected Pools"
 msgstr "Suprimeix piscines seleccionats"
+
+msgid "Delete Selected Port Records"
+msgstr "Elimineu els registres de ports seleccionats"
 
 msgid "Delete Selected Portal Groups"
 msgstr "Suprimeix grups de Portal seleccionats"
@@ -3009,17 +3064,41 @@ msgstr "Desactivar l'actualització de firmware"
 msgid "Disable Selected Auth Groups"
 msgstr "Desactiveu els grups d'autenticació seleccionats"
 
+msgid "Disable Selected CHAP Users"
+msgstr "Desactiva els usuaris CHAP seleccionats"
+
 msgid "Disable Selected Commands"
 msgstr "Desactivar les ordres seleccionats"
+
+msgid "Disable Selected Initiator Names"
+msgstr "Desactiveu els noms dels iniciadors seleccionats"
+
+msgid "Disable Selected Initiator Portals"
+msgstr "Desactiveu els iniciadors de portal seleccionats"
 
 msgid "Disable Selected Jobs"
 msgstr "Desactivar les feines seleccionades"
 
+msgid "Disable Selected LUN Records"
+msgstr "Desactiveu els registres LUN seleccionats"
+
 msgid "Disable Selected LUNs"
 msgstr "Desactiveu LUN's seleccionats"
 
+msgid "Disable Selected Listen Records"
+msgstr "Desactiveu els registres d'escolta seleccionats"
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr "Desactiveu els usuaris seleccionats de CHAP mútua"
+
+msgid "Disable Selected Option Records"
+msgstr "Desactiva els registres opcionals seleccionats"
+
 msgid "Disable Selected Options"
 msgstr "Desactivar lles opcions seleccionades"
+
+msgid "Disable Selected Port Records"
+msgstr "Desactiva els registres de ports seleccionats"
 
 msgid "Disable Selected Portal Groups"
 msgstr "Desactiveu els grups de portal seleccionats"
@@ -3315,11 +3394,20 @@ msgstr ""
 msgid "Do you want to delete selected CARPs?"
 msgstr "Vols eliminar els CARP's seleccionats?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr "Voleu eliminar usuaris CHAP seleccionats?"
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Voleu eliminar les LAGG's seleccionats?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr "Voleu eliminar els registres LUN seleccionats?"
+
 msgid "Do you want to delete selected LUNs?"
 msgstr "Voleu eliminar LUN seleccionats?"
+
+msgid "Do you want to delete selected Mutual CHAP users?"
+msgstr "Voleu eliminar usuaris seleccionats de CHAP mútua?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Vols eliminar els recursos NFS seleccionats?"
@@ -3357,17 +3445,32 @@ msgstr "Voleu eliminar els volums xifrats seleccionats?"
 msgid "Do you want to delete selected groups?"
 msgstr "Vols eliminar grups seleccionats?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr "Voleu eliminar els noms d'iniciador seleccionats?"
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr "Voleu eliminar els iniciadors de portal  seleccionats?"
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Vols eliminar els treballs seleccionats?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr "Voleu eliminar els registres d'escolta seleccionats?"
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Voleu eliminar el notificador seleccionat?"
+
+msgid "Do you want to delete selected option records?"
+msgstr "Voleu eliminar els registres d'opcions seleccionats?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Vols esborrar les opcions seleccionadess?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Vols eliminar les piscines seleccionades?"
+
+msgid "Do you want to delete selected port records?"
+msgstr "Voleu eliminar els registres de ports seleccionats?"
 
 msgid "Do you want to delete selected portal groups?"
 msgstr "Voleu eliminar els grups de portal seleccionats?"
@@ -3408,8 +3511,17 @@ msgstr "Vols esborrar els volums seleccionats?"
 msgid "Do you want to delete this command?"
 msgstr "Vols eliminar aquesta ordre?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr "Vols desactivar els usuaris CHAP seleccionats?"
+
+msgid "Do you want to disable selected LUN records?"
+msgstr "Voleu desactivar els registres LUN seleccionats?"
+
 msgid "Do you want to disable selected LUNs?"
 msgstr "Voleu desactivar LUN seleccionats?"
+
+msgid "Do you want to disable selected Mutual CHAP users?"
+msgstr "Voleu desactivar els usuaris seleccionats de CHAP mútua?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Voleu desactivar els grups de autenticació seleccionats?"
@@ -3417,11 +3529,26 @@ msgstr "Voleu desactivar els grups de autenticació seleccionats?"
 msgid "Do you want to disable selected commands?"
 msgstr "Vols desactivar les ordres seleccionades?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr "Voleu desactivar els noms d'iniciador seleccionats?"
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr "Vols desactivar els portals d'iniciador seleccionats?"
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Vols desactivar els treballs seleccionats?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr "Voleu desactivar els registres d'escolta seleccionats?"
+
+msgid "Do you want to disable selected option records?"
+msgstr "Voleu desactivar els registres d'opcions seleccionats?"
+
 msgid "Do you want to disable selected options?"
 msgstr "Vols desactivar les opcions seleccionades?"
+
+msgid "Do you want to disable selected port records?"
+msgstr "Voleu desactivar els registres de ports seleccionats?"
 
 msgid "Do you want to disable selected portal groups?"
 msgstr "Voleu desactivar els grups de portal seleccionats?"
@@ -3438,8 +3565,17 @@ msgstr "Vols desactivar els mòduls Rsync seleccionats?"
 msgid "Do you want to disable selected targets?"
 msgstr "Voleu desactivar els objectius seleccionats?"
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr "Voleu habilitar els usuaris CHAP seleccionats?"
+
+msgid "Do you want to enable selected LUN records?"
+msgstr "Voleu activar els registres LUN seleccionats?"
+
 msgid "Do you want to enable selected LUNs?"
 msgstr "Voleu activar LUN seleccionats?"
+
+msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr "Voleu activar els usuaris seleccionats de CHAP mútua?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Voleu activar els grups de autenticació seleccionats?"
@@ -3447,11 +3583,26 @@ msgstr "Voleu activar els grups de autenticació seleccionats?"
 msgid "Do you want to enable selected commands?"
 msgstr "Vols activar les ordres seleccionades?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr "Voleu activar els noms d'iniciador seleccionats?"
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr "Voleu activar els portals d'iniciador seleccionats?"
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Vols permetre els treballs seleccionats?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr "Voleu activar els registres d'escolta seleccionats?"
+
+msgid "Do you want to enable selected option records?"
+msgstr "Voleu activar els registres d'opcions seleccionats?"
+
 msgid "Do you want to enable selected options?"
 msgstr "Vols activar les opcions seleccionades?"
+
+msgid "Do you want to enable selected port records?"
+msgstr "Voleu activar els registres de ports seleccionats?"
 
 msgid "Do you want to enable selected portal groups?"
 msgstr "Voleu activar els grups de portal seleccionats?"
@@ -3477,8 +3628,17 @@ msgstr "Vols importar el discs de programari RAID?"
 msgid "Do you want to lock selected records?"
 msgstr "Voleu bloquejar els registres seleccionats?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr "Voleu canviar els usuaris CHAP seleccionats?"
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr "Voleu canviar els registres LUN seleccionats?"
+
 msgid "Do you want to toggle selected LUNs?"
 msgstr "Voleu canviar els LUN seleccionats?"
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr "Voleu canviar els usuaris CHAP mútus seleccionats?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Voleu canviar els grups d'autenticació seleccionats?"
@@ -3486,11 +3646,26 @@ msgstr "Voleu canviar els grups d'autenticació seleccionats?"
 msgid "Do you want to toggle selected commands?"
 msgstr "Vols canviar les ordres seleccionats?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr "Voleu canviar els noms d'iniciador seleccionats?"
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr "Voleu canviar els noms d'iniciador de portals seleccionats?"
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Vols mostrar els treballs seleccionats?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr "Voleu canviar els registres d'escolta seleccionats?"
+
+msgid "Do you want to toggle selected option records?"
+msgstr "Voleu canviar els registres d'opcions seleccionats?"
+
 msgid "Do you want to toggle selected options?"
 msgstr "Vols mostrar les opcions seleccionats?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr "Voleu canviar els registres de ports seleccionats?"
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr "Voleu canviar els grups de portal seleccionats?"
@@ -3634,6 +3809,9 @@ msgstr "Edita pont"
 msgid "Edit CARP"
 msgstr "Edita CARP"
 
+msgid "Edit CHAP User"
+msgstr "Editar usuari CHAP"
+
 msgid "Edit Dataset"
 msgstr "Editar conjunt de dades"
 
@@ -3649,14 +3827,29 @@ msgstr "Edita grup"
 msgid "Edit Host"
 msgstr "Editar amfitrió"
 
+msgid "Edit Initiator Name"
+msgstr "Edita el nom de l'iniciador"
+
+msgid "Edit Initiator Portal"
+msgstr "Edita Portal iniciador"
+
 msgid "Edit LAGG"
 msgstr "Edita LAGG"
 
 msgid "Edit LUN"
 msgstr "Editar LUN"
 
+msgid "Edit LUN Record"
+msgstr "Edita registre LUN"
+
+msgid "Edit Listen Record"
+msgstr "Edita regsitre d'escolta"
+
 msgid "Edit MIB"
 msgstr "Editar MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr "Editeu l'usuari CHAP mutu"
 
 msgid "Edit NFS Share"
 msgstr "Editar recursos NFS"
@@ -3664,8 +3857,14 @@ msgstr "Editar recursos NFS"
 msgid "Edit Option"
 msgstr "Editar opció"
 
+msgid "Edit Option Record"
+msgstr "Edita el registre de l'opció"
+
 msgid "Edit Pool"
 msgstr "Edita piscina"
+
+msgid "Edit Port Record"
+msgstr "Edita el registre del port"
 
 msgid "Edit Portal Group"
 msgstr "Editar Grup de portal"
@@ -3841,17 +4040,41 @@ msgstr "Activa STARTTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr "Activar els grups d'autenticació seleccionats?"
 
+msgid "Enable Selected CHAP Users"
+msgstr "Activa els usuaris CHAP seleccionats"
+
 msgid "Enable Selected Commands"
 msgstr "Activa ordres seleccionats"
+
+msgid "Enable Selected Initiator Names"
+msgstr "Activa els noms d'iniciadors seleccionats"
+
+msgid "Enable Selected Initiator Portals"
+msgstr "Activa els portals seleccionats de l'iniciador"
 
 msgid "Enable Selected Jobs"
 msgstr "Habilitar treballs seleccionats"
 
+msgid "Enable Selected LUN Records"
+msgstr "Activa els registres seleccionats de LUN"
+
 msgid "Enable Selected LUNs"
 msgstr "Activar els LUN's seleccionats?"
 
+msgid "Enable Selected Listen Records"
+msgstr "Activa els registres d'escolta seleccionats"
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr "Habilita els usuaris seleccionats de CHAP mútua"
+
+msgid "Enable Selected Option Records"
+msgstr "Activa els registres d'opcions seleccionats"
+
 msgid "Enable Selected Options"
 msgstr "Habilitar opcions seleccionats"
+
+msgid "Enable Selected Port Records"
+msgstr "Activa els registres de ports seleccionats"
 
 msgid "Enable Selected Portal Groups"
 msgstr "Activar els grups de portal seleccionats?"
@@ -4162,7 +4385,7 @@ msgid "Enter IP Address"
 msgstr "Introduïu l'adreça IP"
 
 msgid "Enter IP address prefix length."
-msgstr ""
+msgstr "Introduïu la longitud de prefix de l'adreça IP."
 
 msgid "Enter Identifier"
 msgstr "Introduïu l'identificador"
@@ -4212,9 +4435,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Introduïu una descripció"
 
-msgid "Enter a description for your reference"
-msgstr "Introduïu una descripció per a la vostra referència"
-
 msgid "Enter a description for your reference."
 msgstr "Introduïu una descripció per la teva referència."
 
@@ -4255,6 +4475,9 @@ msgstr "Introduïu un nom sysctl MIB vàlida."
 msgid "Enter additional parameter"
 msgstr "Afegir paràmetre adicional"
 
+msgid "Enter an iSCSI initiator name."
+msgstr "Introduïu un nom de iniciador iSCSI."
+
 msgid "Enter comment for the share"
 msgstr "Introduïu el comentari per el compartit"
 
@@ -4293,13 +4516,16 @@ msgid "Enter login name of the user."
 msgstr "Introdueix el nom d'inici de sessió de l'usuari."
 
 msgid "Enter mutual user name."
-msgstr ""
+msgstr "Introduïu el nom d'usuari mutu."
 
 msgid "Enter name"
 msgstr "Introduïu un nom"
 
+msgid "Enter passthrough device address bus:path:lun"
+msgstr "Introduïu el bus d'adreça del dispositiu de pas:ruta d'accés:lun"
+
 msgid "Enter secret."
-msgstr ""
+msgstr "Introduïu el secret"
 
 msgid "Enter smartctl pass-through type."
 msgstr "Introduïu el tipus de passarel·la smartctl."
@@ -4366,7 +4592,7 @@ msgid "Enter trap host name."
 msgstr "Introduïu trampa nom d'amfitrió."
 
 msgid "Enter user name."
-msgstr ""
+msgstr "Introduïu el nom d'usuari."
 
 msgid "Enter value"
 msgstr "Introduïu un valor"
@@ -5133,7 +5359,7 @@ msgid "IP Address"
 msgstr "Adreça IP"
 
 msgid "IP Address Prefix"
-msgstr ""
+msgstr "Prefix d'adreça IP"
 
 msgid "IP address"
 msgstr "Adreça IP"
@@ -5180,6 +5406,10 @@ msgid ""
 "initiators attempting to connect to this target will get redirected using "
 "\"Target moved temporarily\" login response."
 msgstr ""
+"Adreça IPv4 o IPv6 per redirigir els iniciadors envers. Quan estigui "
+"configurat, tots els iniciadors que intenten connectar-se a aquest objectiu "
+"seran redirigits mitjançant la resposta a l'inici de sessió \"Objectiu mogut "
+"temporalment\"."
 
 msgid "IPv6 Address"
 msgstr "Adreça IPv6"
@@ -5471,6 +5701,33 @@ msgstr ""
 
 msgid "Initiator Name"
 msgstr "Nom d'iniciador"
+
+msgid "Initiator Name is locked"
+msgstr "El nom de l'iniciador està bloquejat"
+
+msgid "Initiator Name is marked for deletion"
+msgstr "El nom de l'iniciador està marcat per esborrar"
+
+msgid "Initiator Name is unlocked"
+msgstr "El nom de l'iniciador està desbloquejat"
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr "Portal iniciador"
+
+msgid "Initiator Portal is locked"
+msgstr "El portal iniciador està bloquejat"
+
+msgid "Initiator Portal is marked for deletion"
+msgstr "El portal iniciador està marcat per suprimir-lo"
+
+msgid "Initiator Portal is unlocked"
+msgstr "El portal iniciador està desbloquejat"
+
+msgid "Initiator Portals"
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -5777,7 +6034,7 @@ msgid "LUN Name"
 msgstr "Nom LUN"
 
 msgid "LUN Number"
-msgstr ""
+msgstr "Número de LUN"
 
 msgid "LUN Product"
 msgstr "Producte LUN"
@@ -5801,7 +6058,16 @@ msgid "LUN is unlocked"
 msgstr "LUN està desbloquejat"
 
 msgid "LUN number"
-msgstr ""
+msgstr "Número de LUN"
+
+msgid "LUN record is locked"
+msgstr "El registre de LUN està bloquejat"
+
+msgid "LUN record is marked for deletion"
+msgstr "El registre de LUN està marcat per esborrar"
+
+msgid "LUN record is unlocked"
+msgstr "El registre de LUN està desbloquejat"
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5939,6 +6205,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Llista o importa piscines"
+
+msgid "Listen"
+msgstr "Escolta"
+
+msgid "Listen record is locked"
+msgstr "El registre d'escolta està bloquejat"
+
+msgid "Listen record is marked for deletion"
+msgstr "El registre d'escolta està marcat per esborrar"
+
+msgid "Listen record is unlocked"
+msgstr "El registre d'escolta està desbloquejat"
 
 msgid "Load"
 msgstr "Carga"
@@ -6492,14 +6770,23 @@ msgstr "No ha d'estar buit."
 msgid "Mutual CHAP"
 msgstr "CHAP Mutu"
 
+msgid "Mutual CHAP User is locked"
+msgstr "El CHAP mútu està bloquejat"
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr "L'usuari CHAP mutu està marcat per suprimir-lo"
+
+msgid "Mutual CHAP User is unlocked"
+msgstr "L'usuari CHAP mutu està desbloquejat"
+
 msgid "Mutual CHAP Users"
 msgstr "Usuaris CHAP Mutu"
 
 msgid "Mutual Secret"
-msgstr ""
+msgstr "Secret mutu"
 
 msgid "Mutual User"
-msgstr ""
+msgstr "Usuari mutu"
 
 msgid "NAA Identifier"
 msgstr "Identificador NAA"
@@ -6579,10 +6866,10 @@ msgstr ""
 "exemple, %s."
 
 msgid "Name of the option."
-msgstr ""
+msgstr "Nom de l'opció."
 
 msgid "Name of the port."
-msgstr ""
+msgstr "Nom del port."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -7033,10 +7320,10 @@ msgid "Option"
 msgstr "Opció"
 
 msgid "Option Name"
-msgstr ""
+msgstr "Nom de l'opció."
 
 msgid "Option Value"
-msgstr ""
+msgstr "Valor de l'opció"
 
 msgid "Option is locked"
 msgstr "Opció està bloquejat"
@@ -7050,6 +7337,15 @@ msgstr "Opció protegida"
 msgid "Option is unlocked"
 msgstr "Opció desbloquejada"
 
+msgid "Option record is locked"
+msgstr "El registre d'opcions està bloquejat"
+
+msgid "Option record is marked for deletion"
+msgstr "El registre d'opcions està marcat per suprimir-lo"
+
+msgid "Option record is unlocked"
+msgstr "El registre d'opcions està desbloquejat"
+
 msgid "Optional"
 msgstr "Opcional"
 
@@ -7061,6 +7357,9 @@ msgstr "Opcions"
 
 msgid "Origin"
 msgstr "Origen"
+
+msgid "Orphaned"
+msgstr "Orfe"
 
 msgid "Others"
 msgstr "Altres"
@@ -7229,6 +7528,9 @@ msgstr "Pass directe - No canvieu ACL"
 msgid "Passthrough - Inherit all entries"
 msgstr "Pass directe - Heretarà totes les entrades"
 
+msgid "Passthrough Address"
+msgstr "Adreça de pas"
+
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr "Pass directe - Hereta tots menys \"executar\" quan no s'especifica"
 
@@ -7329,7 +7631,7 @@ msgid "Permit Root Login"
 msgstr "Permís l'accés del Root"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Permet l'accés sense autenticació"
 
 msgid "Permit discovery without authentication"
 msgstr "Permet el descobriment sense autenticació"
@@ -7499,7 +7801,7 @@ msgid "Port Forwarding"
 msgstr "Redireccionament de ports"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Nom del port"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "El número de port ha de ser 514 o un número entre 1024 i 49151."
@@ -7524,6 +7826,15 @@ msgid ""
 msgstr ""
 "Port del servidor de syslog remot. Deixeu-vos en blanc per utilitzar el port "
 "predeterminat."
+
+msgid "Port record is locked"
+msgstr "El registre del port està bloquejat"
+
+msgid "Port record is marked for deletion"
+msgstr "El registre del port està marcat per suprimir-lo"
+
+msgid "Port record is unlocked"
+msgstr "El registre del port està desbloquejat"
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7989,6 +8300,9 @@ msgstr "Alarma d'humitat relativa max. (%)"
 msgid "Release Notes"
 msgstr "Notes de publicació"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Recarregar pàgina"
 
@@ -8143,6 +8457,9 @@ msgstr "El recurs està desbloquejat"
 
 msgid "Resources"
 msgstr "Recursos"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "Restablir"
@@ -8540,6 +8857,9 @@ msgstr "Seleccionar el algoritme de xifrat a utilitzar."
 msgid "Select at which stage the command should be executed."
 msgstr "Selecciona en quina etapa s'ha d'executar l'ordre."
 
+msgid "Select auth groups."
+msgstr "Seleccioneu grups d'auttenticació."
+
 msgid "Select configuration file:"
 msgstr "Selecciona arxiu de configuració:"
 
@@ -8567,12 +8887,21 @@ msgstr ""
 "Seleccionar l'opció \"sense format\" per als discos sense format i donar-los "
 "format amb el"
 
+msgid "Select portal groups."
+msgstr "Seleccioneu grups de portal."
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr ""
 "Seleccioneu el mode de pre-assignació d'arxius. (Per defecte és ràpid)."
 
 msgid "Select read balance algorithm."
 msgstr "Seleccionar algoritme d'equilibri de lectura."
+
+msgid "Select target groups."
+msgstr "Seleccioneu grups objectius."
+
+msgid "Select targets."
+msgstr "Seleccioneu objectius."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Seleccioneu el paquet de FreeBSD que s'instal·larà."
@@ -9604,6 +9933,9 @@ msgstr "Adreça destí"
 msgid "Target Alias"
 msgstr "Àlies TCP"
 
+msgid "Target Group"
+msgstr "Grup objectiu"
+
 msgid "Target Name"
 msgstr "Nom de destinació"
 
@@ -9728,9 +10060,6 @@ msgstr "El protocol Lagg no és vàlid."
 
 msgid "The LAN IP address will be reset to"
 msgstr "L'adreça IP de la LAN es restablirà a"
-
-msgid "The LUN size, in bytes."
-msgstr "La mida LUN, en bytes."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -10436,7 +10765,7 @@ msgstr ""
 "flexible per cada usuari."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "Port per escoltar."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10507,6 +10836,9 @@ msgstr ""
 
 msgid "The share name is already used."
 msgstr "El nom del recurs ja s'utilitza."
+
+msgid "The size of the LUN."
+msgstr ""
 
 msgid "The size of the swap file in MB."
 msgstr "La mida del fitxer d'intercanvi en MB."
@@ -11277,17 +11609,41 @@ msgstr "Mode de commutació"
 msgid "Toggle Selected Auth Groups"
 msgstr "Commuta els grups d'autenticació seleccionats"
 
+msgid "Toggle Selected CHAP Users"
+msgstr "Commuta els usuaris CHAP seleccionats"
+
 msgid "Toggle Selected Commands"
 msgstr "Commuta els comandos seleccionats"
+
+msgid "Toggle Selected Initiator Names"
+msgstr "Commuta els noms d'iniciadors seleccionats"
+
+msgid "Toggle Selected Initiator Portals"
+msgstr "Commuta els portals d'iniciador seleccionats"
 
 msgid "Toggle Selected Jobs"
 msgstr "Commuta les feines seleccionades"
 
+msgid "Toggle Selected LUN Records"
+msgstr "Commuta els registres LUN seleccionats"
+
 msgid "Toggle Selected LUNs"
 msgstr "Commuta els LUNs seleccionats"
 
+msgid "Toggle Selected Listen Records"
+msgstr "Commuta els registres d'escolta seleccionats"
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr "Commuta els usuaris mutus CHAP seleccionats"
+
+msgid "Toggle Selected Option Records"
+msgstr "Commuta els registres d'opcions seleccionats"
+
 msgid "Toggle Selected Options"
 msgstr "Commuta les opcions seleccionades"
+
+msgid "Toggle Selected Port Records"
+msgstr "Commuta els registres de ports seleccionats"
 
 msgid "Toggle Selected Portal Groups"
 msgstr "Commuta els grups de portal seleccionats"
@@ -11980,7 +12336,7 @@ msgstr ""
 "llindar mínim que es correspon amb una temperatura màxima."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "Valor de l'opció."
 
 msgid "Variable"
 msgstr "Variable"
@@ -12647,23 +13003,8 @@ msgstr "usat de"
 msgid "visible"
 msgstr "visible"
 
-#~ msgid "2048"
-#~ msgstr "2048"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Introduïu una descripció per a la vostra referència"
 
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "8192"
-#~ msgstr "8192"
-
-#~ msgid "Enter user name"
-#~ msgstr "Afegir nom d'usuari"
-
-#~ msgid "Enter secret"
-#~ msgstr "Afegir secret"
-
-#~ msgid "Seconfary"
-#~ msgstr "Secundària"
+#~ msgid "The LUN size, in bytes."
+#~ msgstr "La mida LUN, en bytes."
