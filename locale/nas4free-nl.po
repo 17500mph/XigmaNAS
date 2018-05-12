@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-05-03 21:07+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-12 13:24+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:28+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -205,13 +205,13 @@ msgid "1.8\""
 msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
@@ -235,10 +235,10 @@ msgid "3.5\""
 msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -247,19 +247,19 @@ msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Bytes"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN markering (tussen 1 en 4094)."
@@ -527,6 +527,9 @@ msgstr "Bridge Toevoegen"
 msgid "Add CARP"
 msgstr "CARP Toevoegen"
 
+msgid "Add CHAP User"
+msgstr "Voeg CHAP gebruiker toe"
+
 msgid "Add Dataset"
 msgstr "Dataset Toevoegen"
 
@@ -542,14 +545,29 @@ msgstr "Groep Toevoegen"
 msgid "Add Host"
 msgstr "Host Toevoegen"
 
+msgid "Add Initiator Name"
+msgstr "Voeg Initiator naam toe"
+
+msgid "Add Initiator Portal"
+msgstr "Voeg Initiator portaal toe"
+
 msgid "Add LAGG"
 msgstr "LAGG Toevoegen"
 
 msgid "Add LUN"
 msgstr "LUN Toevoegen"
 
+msgid "Add LUN Record"
+msgstr "Voeg LUN record toe"
+
+msgid "Add Listen Record"
+msgstr "Toevoegen Luister Record"
+
 msgid "Add MIB"
 msgstr "MIB toevoegen"
+
+msgid "Add Mutual CHAP User"
+msgstr "Voeg wederzijdse CHAP gebruiker toe"
 
 msgid "Add NFS Share"
 msgstr "NFS Deling Toevoegen"
@@ -557,8 +575,14 @@ msgstr "NFS Deling Toevoegen"
 msgid "Add Option"
 msgstr "Optie Toevoegen"
 
+msgid "Add Option Record"
+msgstr "Voeg opties record toe"
+
 msgid "Add Pool"
 msgstr "Pool Toevoegen"
+
+msgid "Add Port Record"
+msgstr "Voeg poort record toe"
 
 msgid "Add Portal Group"
 msgstr "Portaal Groep Toevoegen"
@@ -952,13 +976,14 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Een Extent definieërt het opslaggebied van de Doel."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "Een IPv4- of IPv6-adres van een iSCSI initiator portaal."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr "Een IPv4 of IPv6 adres van de iSNS server waarop aan te melden"
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
+"Een IPv4 of IPv6 adres voor het luisteren\tnaar binnenkomende\tverbindingen"
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -989,9 +1014,6 @@ msgstr "Er is een fout opgetreden."
 
 msgid "An host with this name already exists."
 msgstr "Een host met deze naam bestaat reeds."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Een netwerk met deze gespecificeerde omschrijving bestaat reeds."
@@ -1085,7 +1107,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Weet u zeker dat u de server wilt uitschakelen?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Toewijzen van een leesbare beschrijving naar de doel."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1095,10 +1117,10 @@ msgstr ""
 "die moet worden gebruikt voor het opsporen van doelen."
 
 msgid "Assign a previously defined authentication group to the target."
-msgstr ""
+msgstr "Een eerder gedefinieerde verificatie groep toewijzen aan de doel."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Een eerder gedefinieerde portaal groep toewijzen aan de doel."
 
 msgid "Asynchronous I/O"
 msgstr "Asynchrone I/O"
@@ -1169,7 +1191,7 @@ msgid "Auth Group is marked for deletion"
 msgstr "Auth Groep is gemarkeerd voor verwijdering"
 
 msgid "Auth Group is unlocked"
-msgstr "Auth Groepis ontgrendeld"
+msgstr "Auth Groep is ontgrendeld"
 
 msgid "Auth Groups"
 msgstr "Auth Groepen"
@@ -1520,7 +1542,7 @@ msgid "CAM Target Layer"
 msgstr "CAM Target Layer"
 
 msgid "CAM Target Layer / iSCSI Target"
-msgstr ""
+msgstr "CAM Target Layer / iSCSI Target"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1566,6 +1588,15 @@ msgstr "VERANDERD"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr "CHAP gebruiker is geblokkeerd"
+
+msgid "CHAP User is marked for deletion"
+msgstr "CHAP gebruiker is geselecteerd om verwijderd te worden"
+
+msgid "CHAP User is unlocked"
+msgstr "CHAP gebruiker is vrijgegeven"
 
 msgid "CHAP Users"
 msgstr "CHAP Gebruikers"
@@ -1748,7 +1779,7 @@ msgid "Check and replace cable"
 msgstr "Controleer en vervang de kabel"
 
 msgid "Check shared secret"
-msgstr "Controleer gedeelde sleutel"
+msgstr "Controleer gedeelde wachtwoord"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
@@ -2614,6 +2645,8 @@ msgid ""
 "Define iSCSI hardware offload driver to use for this portal-group. The "
 "default is \"none\"."
 msgstr ""
+"Specificeer de iSCSI hardware driver welke gebruikt mag worden voor deze "
+"portaalgroep. Standaard is \"geen\"."
 
 msgid "Defines the checksum algorithm."
 msgstr "Definieert het controlesom algoritme"
@@ -2659,6 +2692,9 @@ msgstr "Verwijder Geselecteerde Bridges"
 msgid "Delete Selected CARPs"
 msgstr "Verwijder Geselecteerde CARPs"
 
+msgid "Delete Selected CHAP Users"
+msgstr "Verwijder geselecteerde CHAP gebruikers"
+
 msgid "Delete Selected Commands"
 msgstr "Verwijder Geselecteerde Opdrachten"
 
@@ -2674,14 +2710,29 @@ msgstr "Verwijder Geselecteerde Gecodeerde Volumes"
 msgid "Delete Selected Groups"
 msgstr "Verwijder Geselecteerde Groepen"
 
+msgid "Delete Selected Initiator Names"
+msgstr "Verwijder geselecteerde Initiator namen"
+
+msgid "Delete Selected Initiator Portals"
+msgstr "Verwijder geselecteerde Initiator portalen"
+
 msgid "Delete Selected Jobs"
 msgstr "Verwijder Geselecteerde Taken"
 
 msgid "Delete Selected LAGGs"
 msgstr "Verwijder Geselecteerde LAGGs"
 
+msgid "Delete Selected LUN Records"
+msgstr "Verwijder geselecteerde LUN records"
+
 msgid "Delete Selected LUNs"
 msgstr "Verwijder Geselecteerde LUNs"
+
+msgid "Delete Selected Listen Records"
+msgstr "Verwijder Geselecteerde Luister Records"
+
+msgid "Delete Selected Mutual CHAP Users"
+msgstr "Verwijder geselecteerde wederzijdse CHAP gebruikers"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Verwijder Geselecteerde NFS Delingen"
@@ -2689,11 +2740,17 @@ msgstr "Verwijder Geselecteerde NFS Delingen"
 msgid "Delete Selected Notifier"
 msgstr "Verwijder  Geselecteerd Kennisgeving"
 
+msgid "Delete Selected Option Records"
+msgstr "Verwijder geselecteerde optie records"
+
 msgid "Delete Selected Options"
 msgstr "Verwijder Geselecteerde Opties"
 
 msgid "Delete Selected Pools"
 msgstr "Verwijder Geselecteerde Pools"
+
+msgid "Delete Selected Port Records"
+msgstr "Verwijder geselecteerde poort records"
 
 msgid "Delete Selected Portal Groups"
 msgstr "Verwijder Geselecteerde Portaal Groepen"
@@ -2984,7 +3041,7 @@ msgid "Digital Audio Access Protocol"
 msgstr "Digitaal Audio Toegangs Protocol"
 
 msgid "Direct"
-msgstr ""
+msgstr "Direct"
 
 msgid "Direction"
 msgstr "Richting"
@@ -3025,17 +3082,41 @@ msgstr "Uitschakelen Firmware Upgrade"
 msgid "Disable Selected Auth Groups"
 msgstr "Geselecteerde Auth Groepen Uitschakelen"
 
+msgid "Disable Selected CHAP Users"
+msgstr "De-activeer geselecteerde CHAP gebruikers"
+
 msgid "Disable Selected Commands"
 msgstr "Geselecteerde Opdrachten Uitschakelen"
+
+msgid "Disable Selected Initiator Names"
+msgstr "De-activeer geselecteerde initiator namen"
+
+msgid "Disable Selected Initiator Portals"
+msgstr "De-activeer geselecteerde initiator portalen"
 
 msgid "Disable Selected Jobs"
 msgstr "Geselecteerde Taken Uitschakelen"
 
+msgid "Disable Selected LUN Records"
+msgstr "De-activeer geselecteerde LUN records"
+
 msgid "Disable Selected LUNs"
 msgstr "Geselecteerde LUNs Uitschakelen"
 
+msgid "Disable Selected Listen Records"
+msgstr "Uitschakelen Geselecteerde Luister Records"
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr "De-activeer geselecteerde wederzijdse CHAP gebruikers"
+
+msgid "Disable Selected Option Records"
+msgstr "De-activeer geselecteerde optie records"
+
 msgid "Disable Selected Options"
 msgstr "Geselecteerde Opties Uitschakelen"
+
+msgid "Disable Selected Port Records"
+msgstr "De-activeer geselecteerde poort records"
 
 msgid "Disable Selected Portal Groups"
 msgstr "Geselecteerde  Portaal Groepen Uitschakelen"
@@ -3100,9 +3181,12 @@ msgid ""
 "Discovery will not return targets that cannot be accessed by the initiator "
 "because of their initiator-portal."
 msgstr ""
+"Ontdekking retourneert geen doelen waartoe de initiator geen toegang heeft "
+"vanwege hun initiator-portaal."
 
 msgid "Discovery will return all targets assigned to this portal group."
 msgstr ""
+"Ontdekking levert alle doelen die zijn toegewezen aan deze portaal groep."
 
 msgid "Disk"
 msgstr "Schijf"
@@ -3328,11 +3412,20 @@ msgstr ""
 msgid "Do you want to delete selected CARPs?"
 msgstr "Wilt u de geselecteerde CARPs verwijderen?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr "Wilt u de geselecteerde CHAP gebruikers verwijderen?"
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Wilt u de geselecteerde LAGGs verwijderen?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr "Wilt u de geselecteerde LUN records verwijderen?"
+
 msgid "Do you want to delete selected LUNs?"
 msgstr "Wilt u de geselecteerde LUNs verwijderen"
+
+msgid "Do you want to delete selected Mutual CHAP users?"
+msgstr "Wilt u de geselecteerde wederzijdse CHAP gebruikers verwijderen?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Wilt u de geselecteerde NFS delingen verwijderen?"
@@ -3370,17 +3463,32 @@ msgstr "Wilt u de geselecteerde gecodeerde volumes verwijderen?"
 msgid "Do you want to delete selected groups?"
 msgstr "Wilt u de geselecteerde groepen verwijderen?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr "Wilt u de geselecteerde initiator namen verwijderen?"
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr "Wilt u de geselecteerde initiator portalen verwijderen?"
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Wilt u de geselecteerde taken verwijderen?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr "Wilt u geselecteerde luister records verwijderen?"
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Wilt u de geselecteerde kennisgeving verwijderen?"
+
+msgid "Do you want to delete selected option records?"
+msgstr "Wilt u de geselecteerde optie records verwijderen?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Wilt u de geselecteerde opties verwijderen?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Wilt u de geselecteerde pools verwijderen?"
+
+msgid "Do you want to delete selected port records?"
+msgstr "Wilt u de geselecteerde poort records verwijderen?"
 
 msgid "Do you want to delete selected portal groups?"
 msgstr "Wilt u de geselecteerde portaalgroepen verwijderen?"
@@ -3421,8 +3529,17 @@ msgstr "Wilt u de geselecteerde volumes verwijderen?"
 msgid "Do you want to delete this command?"
 msgstr "Wilt u deze opdracht wilt verwijderen?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr "Wilt u de geselecteerde CHAP gebruikers de-activeren?"
+
+msgid "Do you want to disable selected LUN records?"
+msgstr "Wilt u de geselecteerde LUN records de-activeren?"
+
 msgid "Do you want to disable selected LUNs?"
 msgstr "Wilt u de geselecteerde LUNs deactiveren?"
+
+msgid "Do you want to disable selected Mutual CHAP users?"
+msgstr "Wilt u de geselecteerde wederzijdse CHAP gebruikers de-activeren?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Wilt u de geselecteerde autorisatiegroepen deactiveren?"
@@ -3430,11 +3547,26 @@ msgstr "Wilt u de geselecteerde autorisatiegroepen deactiveren?"
 msgid "Do you want to disable selected commands?"
 msgstr "Wilt u geselecteerde opdrachten uitschakelen?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr "Wilt u de geselecteerde initiator namen de-activeren?"
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr "Wilt u de geselecteerde initiator portalen de-activeren?"
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Wilt u de geselecteerde taken uitschakelen?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr "Wilt u geselecteerde luister records uitschakelen?"
+
+msgid "Do you want to disable selected option records?"
+msgstr "Wilt u de geselecteerde optie records de-activeren?"
+
 msgid "Do you want to disable selected options?"
 msgstr "Wilt u de geselecteerde opties uitschakelen?"
+
+msgid "Do you want to disable selected port records?"
+msgstr "Wilt u de geselecteerde poort records de-activeren?"
 
 msgid "Do you want to disable selected portal groups?"
 msgstr "Wilt u de geselecteerde portaalgroepen deactiveren?"
@@ -3451,8 +3583,17 @@ msgstr "Wilt u de geselecteerde rsync modules uitschakelen?"
 msgid "Do you want to disable selected targets?"
 msgstr "Wilt u de geselecteerde doelen deactiveren?"
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr "Wilt u de geselecteerde CHAP gebruikers activeren?"
+
+msgid "Do you want to enable selected LUN records?"
+msgstr "Wilt u de geselecteerde LUN records activeren?"
+
 msgid "Do you want to enable selected LUNs?"
 msgstr "Wilt u de geselecteerde LUNs activeren?"
+
+msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr "Wilt u de geselecteerde wederzijdse CHAP gebruikers activeren?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Wilt u de geselecteerde autorisatiegroepen activeren?"
@@ -3460,11 +3601,26 @@ msgstr "Wilt u de geselecteerde autorisatiegroepen activeren?"
 msgid "Do you want to enable selected commands?"
 msgstr "Wilt u de geselecteerde opdrachten inschakelen?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr "Wilt u de geselecteerde initiator namen activeren?"
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr "Wilt u de geselecteerde initiator portalen activeren?"
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Wilt u de geselecteerde taken inschakelen?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr "Wilt u geselecteerde luister records inschakelen?"
+
+msgid "Do you want to enable selected option records?"
+msgstr "Wilt u de geselecteerde optie records activeren?"
+
 msgid "Do you want to enable selected options?"
 msgstr "Wilt u de geselecteerde opties inschakelen?"
+
+msgid "Do you want to enable selected port records?"
+msgstr "Wilt u de geselecteerde poort records activeren?"
 
 msgid "Do you want to enable selected portal groups?"
 msgstr "Wilt u de geselecteerde portaalgroepen activeren?"
@@ -3490,8 +3646,17 @@ msgstr "Wilt u software RAID schijven importeren?"
 msgid "Do you want to lock selected records?"
 msgstr "Wilt u de geselecteerde items vergrendelen?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr "Wilt u de geselecteerde CHAP gebruikers omkeren?"
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr "Wilt u de geselecteerde LUN records omkeren?"
+
 msgid "Do you want to toggle selected LUNs?"
 msgstr "Wilt u de geselecteerde LUNs omkeren?"
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr "Wilt u de geselecteerde wederzijdse CHAP gebruikers omkeren?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Wilt u de geselecteerde autorisatiegroepen omkeren?"
@@ -3499,11 +3664,26 @@ msgstr "Wilt u de geselecteerde autorisatiegroepen omkeren?"
 msgid "Do you want to toggle selected commands?"
 msgstr "Wilt u de geselecteerde opdrachten omschakelen?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr "Wilt u de geselecteerde initiator namen omkeren?"
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr "Wilt u de geselecteerde initiator portalen omkeren?"
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Wilt u de geselecteerde taken omschakelen?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr "Wilt u de geselecteerde luister records omkeren?"
+
+msgid "Do you want to toggle selected option records?"
+msgstr "Wilt u de geselecteerde optie records omkeren?"
+
 msgid "Do you want to toggle selected options?"
 msgstr "Wilt u de geselecteerde opties omschakelen?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr "Wilt u de geselecteerde poort records omkeren?"
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr "Wilt u de geselecteerde portaalgroepen omkeren?"
@@ -3649,6 +3829,9 @@ msgstr "Bridge Bewerken"
 msgid "Edit CARP"
 msgstr "CARP Bewerken"
 
+msgid "Edit CHAP User"
+msgstr "Wijzig CHAP gebruiker"
+
 msgid "Edit Dataset"
 msgstr "Dataset Bewerken"
 
@@ -3664,14 +3847,29 @@ msgstr "Groep Bewerken"
 msgid "Edit Host"
 msgstr "Bewerk Host"
 
+msgid "Edit Initiator Name"
+msgstr "Wijzig initiator naam"
+
+msgid "Edit Initiator Portal"
+msgstr "Wijzig initiator portaal"
+
 msgid "Edit LAGG"
 msgstr "LAGG Bewerken"
 
 msgid "Edit LUN"
 msgstr "LUN Bewerken"
 
+msgid "Edit LUN Record"
+msgstr "Wijzig LUN record"
+
+msgid "Edit Listen Record"
+msgstr "Luister Record Bewerken"
+
 msgid "Edit MIB"
 msgstr "Bewerk MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr "Wijzig wederzijdse CHAP gebruiker"
 
 msgid "Edit NFS Share"
 msgstr "NFS Deling Bewerken"
@@ -3679,8 +3877,14 @@ msgstr "NFS Deling Bewerken"
 msgid "Edit Option"
 msgstr "Optie Bewerken"
 
+msgid "Edit Option Record"
+msgstr "Wijzig optie record"
+
 msgid "Edit Pool"
 msgstr "Pool Bewerken"
+
+msgid "Edit Port Record"
+msgstr "Wijzig poort record"
 
 msgid "Edit Portal Group"
 msgstr "Portaal Groep Bewerken"
@@ -3855,17 +4059,41 @@ msgstr "Inschakelen STARTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr "Activeer de geselecteerde autorisatiegroepen"
 
+msgid "Enable Selected CHAP Users"
+msgstr "Activeer geselecteerde CHAP gebruikers"
+
 msgid "Enable Selected Commands"
 msgstr "Geselecteerde Opdrachten Inschakelen"
+
+msgid "Enable Selected Initiator Names"
+msgstr "Activeer geselecteerde initiator namen"
+
+msgid "Enable Selected Initiator Portals"
+msgstr "Activeer geselecteerde initiator portalen"
 
 msgid "Enable Selected Jobs"
 msgstr "Geselecteerde Taken Inschakelen"
 
+msgid "Enable Selected LUN Records"
+msgstr "Activeer geselecteerde LUN records"
+
 msgid "Enable Selected LUNs"
 msgstr "Activeer de geselecteerde LUNs"
 
+msgid "Enable Selected Listen Records"
+msgstr "Inschakelen Geselecteerde Luister Records"
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr "Activeer geselecteerde wederzijdse CHAP gebruikers"
+
+msgid "Enable Selected Option Records"
+msgstr "Activeer geselecteerde optie record"
+
 msgid "Enable Selected Options"
 msgstr "Geselecteerde Opties Inschakelen"
+
+msgid "Enable Selected Port Records"
+msgstr "Activeer geselecteerde poort records"
 
 msgid "Enable Selected Portal Groups"
 msgstr "Activeer de geselecteerde portaalgroepen"
@@ -4178,7 +4406,7 @@ msgid "Enter IP Address"
 msgstr "Geef IP-Adres"
 
 msgid "Enter IP address prefix length."
-msgstr ""
+msgstr "Geef de prefixlengte van het IP-adres op."
 
 msgid "Enter Identifier"
 msgstr "Geef identificator"
@@ -4228,9 +4456,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Geef een beschrijving op"
 
-msgid "Enter a description for your reference"
-msgstr "Geef een beschrijving op"
-
 msgid "Enter a description for your reference."
 msgstr "Geef een beschrijving op voor uw referentie."
 
@@ -4271,6 +4496,9 @@ msgstr "Vul een geldig sysctl MIB naam in."
 msgid "Enter additional parameter"
 msgstr "Voer optionele parameter in"
 
+msgid "Enter an iSCSI initiator name."
+msgstr "Voeg een iSCSI initiator naam toe"
+
 msgid "Enter comment for the share"
 msgstr "Opmerking opgeven voor de deling"
 
@@ -4309,13 +4537,16 @@ msgid "Enter login name of the user."
 msgstr "Geef de login naam op van deze gebruiker."
 
 msgid "Enter mutual user name."
-msgstr ""
+msgstr "Voeg een wederzijdse gebruikersnaam toe"
 
 msgid "Enter name"
 msgstr "Geef naam op"
 
+msgid "Enter passthrough device address bus:path:lun"
+msgstr "Geef het doorvoer schijf adres bus op:pad:lun"
+
 msgid "Enter secret."
-msgstr ""
+msgstr "Geef  wachtwoord."
 
 msgid "Enter smartctl pass-through type."
 msgstr "Geef smartctl pass-through type."
@@ -4382,7 +4613,7 @@ msgid "Enter trap host name."
 msgstr "Geef de trap hostnaam op."
 
 msgid "Enter user name."
-msgstr ""
+msgstr "Geef gebruikersnaam."
 
 msgid "Enter value"
 msgstr "Geef waarde op"
@@ -4881,6 +5112,8 @@ msgstr "Algemene Instellingen"
 
 msgid "Global numeric identifier to use for a given LUN inside CTL."
 msgstr ""
+"Globaal numerieke identificatie te gebruiken voor een bepaalde LUN binnen "
+"CTL."
 
 msgid "Grant access to the user portal."
 msgstr "Verleen toegang tot de gebruikers portaal."
@@ -5138,7 +5371,7 @@ msgid "IP Address"
 msgstr "IP Adres"
 
 msgid "IP Address Prefix"
-msgstr ""
+msgstr "IP-adres Voorvoegsel"
 
 msgid "IP address"
 msgstr "IP-adres"
@@ -5175,12 +5408,20 @@ msgid ""
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
 msgstr ""
+"IPv4 of IPv6 adres om initiators naar toe te leiden. Indien geconfigureerd, "
+"zullen alle initiators die proberen verbinding te maken met het portaal dat "
+"tot deze portaalgroep behoort, worden omgeleid met behulp van het \"Doel "
+"tijdelijk verplaatst\" inlog antwoord."
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to this target will get redirected using "
 "\"Target moved temporarily\" login response."
 msgstr ""
+"IPv4 of IPv6 adres om initiators naar toe te leiden. Indien geconfigureerd, "
+"zullen alle initiators die proberen om verbinding te maken met dit doel "
+"worden omgeleid met behulp van het \"Doel tijdelijk verplaatst\" inlog "
+"antwoord."
 
 msgid "IPv6 Address"
 msgstr "IPv6 Adres"
@@ -5467,6 +5708,33 @@ msgstr ""
 
 msgid "Initiator Name"
 msgstr "Initiator Naam"
+
+msgid "Initiator Name is locked"
+msgstr "Initiator Naam is vergrendeld"
+
+msgid "Initiator Name is marked for deletion"
+msgstr "Initiator Naam is gemarkeerd voor verwijdering"
+
+msgid "Initiator Name is unlocked"
+msgstr "Initiator Naam is ontgrendeld"
+
+msgid "Initiator Names"
+msgstr "Initiator Namen"
+
+msgid "Initiator Portal"
+msgstr "Initiator Portaal"
+
+msgid "Initiator Portal is locked"
+msgstr "Initiator Portaal is vergrendeld"
+
+msgid "Initiator Portal is marked for deletion"
+msgstr "Initiator Portaal is gemarkeerd voor verwijdering"
+
+msgid "Initiator Portal is unlocked"
+msgstr "Initiator Portaal is ontgrendeld"
+
+msgid "Initiator Portals"
+msgstr "Initiator Portalen"
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -5776,7 +6044,7 @@ msgid "LUN Name"
 msgstr "LUN Naam"
 
 msgid "LUN Number"
-msgstr ""
+msgstr "LUN Nummer"
 
 msgid "LUN Product"
 msgstr "LUN Produkt"
@@ -5800,7 +6068,16 @@ msgid "LUN is unlocked"
 msgstr "LUN is vrijgegeven"
 
 msgid "LUN number"
-msgstr ""
+msgstr "LUN nummer"
+
+msgid "LUN record is locked"
+msgstr "LUN record  is vergrendeld"
+
+msgid "LUN record is marked for deletion"
+msgstr "LUN record is gemarkeerd voor verwijdering"
+
+msgid "LUN record is unlocked"
+msgstr "LUN record is ontgrendeld"
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5938,6 +6215,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Lijst of importeer pools"
+
+msgid "Listen"
+msgstr "Luister"
+
+msgid "Listen record is locked"
+msgstr "Luister record is vergrendeld"
+
+msgid "Listen record is marked for deletion"
+msgstr "Luister record is gemarkeerd voor verwijdering"
+
+msgid "Listen record is unlocked"
+msgstr "Luister record is ontgrendeld"
 
 msgid "Load"
 msgstr "Belasting"
@@ -6494,14 +6783,23 @@ msgstr "Mag niet leeg gelaten zijn."
 msgid "Mutual CHAP"
 msgstr "Mutual CHAP"
 
+msgid "Mutual CHAP User is locked"
+msgstr "Mutual CHAP Gebruiker is vergrendeld"
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr "Mutual CHAP Gebruiker is gemarkeerd voor verwijdering"
+
+msgid "Mutual CHAP User is unlocked"
+msgstr "Mutual CHAP Gebruiker is ontgrendeld"
+
 msgid "Mutual CHAP Users"
 msgstr "Mutual CHAP Gebruikers"
 
 msgid "Mutual Secret"
-msgstr ""
+msgstr "Wederzijds Wachtwoord"
 
 msgid "Mutual User"
-msgstr ""
+msgstr "Wederzijds Gebruiker"
 
 msgid "NAA Identifier"
 msgstr "NAA identificatie"
@@ -6581,10 +6879,10 @@ msgstr ""
 "geheugen, bijv. %s."
 
 msgid "Name of the option."
-msgstr ""
+msgstr "Naam van de optie."
 
 msgid "Name of the port."
-msgstr ""
+msgstr "Naam van de poort."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -7033,10 +7331,10 @@ msgid "Option"
 msgstr "Optie"
 
 msgid "Option Name"
-msgstr ""
+msgstr "Optienaam"
 
 msgid "Option Value"
-msgstr ""
+msgstr "Optiewaarde"
 
 msgid "Option is locked"
 msgstr "Optie is vergrendeld"
@@ -7050,6 +7348,15 @@ msgstr "Optie is beschermd"
 msgid "Option is unlocked"
 msgstr "Optie is ontgrendeld"
 
+msgid "Option record is locked"
+msgstr "Optie record is vergrendeld"
+
+msgid "Option record is marked for deletion"
+msgstr "Optie record is gemarkeerd voor verwijdering"
+
+msgid "Option record is unlocked"
+msgstr "Optie record is ontgrendeld"
+
 msgid "Optional"
 msgstr "Optioneel"
 
@@ -7061,6 +7368,9 @@ msgstr "Opties"
 
 msgid "Origin"
 msgstr "Afkomst"
+
+msgid "Orphaned"
+msgstr "Orphaned"
 
 msgid "Others"
 msgstr "Overige"
@@ -7228,6 +7538,9 @@ msgstr "Passthrough - ACL niet wijzigen"
 msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - Overnemen van alle entries"
 
+msgid "Passthrough Address"
+msgstr "Passthrough adres"
+
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 "Passthrough-X - Alles overnemen behalve \"uitvoeren\" wanneer niet "
@@ -7329,7 +7642,7 @@ msgid "Permit Root Login"
 msgstr "Inloggen Root Toestaan"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Toegang zonder verificatie toestaan"
 
 msgid "Permit discovery without authentication"
 msgstr "Sta zoekfunctie toe zonder authenticatie"
@@ -7497,7 +7810,7 @@ msgid "Port Forwarding"
 msgstr "Poort Doorsturen"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Poort Naam"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Poortnummer moet 514 zijn of een getal tussen 1024 en 49151."
@@ -7521,6 +7834,15 @@ msgid ""
 msgstr ""
 "Poort van de externe syslog server. Laat dit leeg om de standaardpoort te "
 "gebruiken."
+
+msgid "Port record is locked"
+msgstr "Poort record is vergrendeld"
+
+msgid "Port record is marked for deletion"
+msgstr "Poort record is gemarkeerd voor verwijdering"
+
+msgid "Port record is unlocked"
+msgstr "Poort record is ontgrendeld"
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7984,6 +8306,9 @@ msgstr "Relatieve vochtigheid drempel hoog (procent)"
 msgid "Release Notes"
 msgstr "Release Notes"
 
+msgid "Reload"
+msgstr "Herladen"
+
 msgid "Reload Page"
 msgstr "Pagina Herladen"
 
@@ -8137,6 +8462,9 @@ msgstr "Bron is ontgrendeld"
 
 msgid "Resources"
 msgstr "Bronnen"
+
+msgid "Restart"
+msgstr "Herstarten"
 
 msgid "Restore"
 msgstr "Herstellen"
@@ -8537,6 +8865,9 @@ msgstr "Selecteer een encryptiealgoritme om te gebruiken."
 msgid "Select at which stage the command should be executed."
 msgstr "Selecteer in welk stadium de opdracht moet worden uitgevoerd."
 
+msgid "Select auth groups."
+msgstr "Selecteer auth groepen."
+
 msgid "Select configuration file:"
 msgstr "Selecteer configuratiebestand:"
 
@@ -8565,11 +8896,20 @@ msgstr ""
 "Selecteer de optie 'Ongeformatteerd' voor  ongeformatteerde schijven en "
 "formatteer deze met de"
 
+msgid "Select portal groups."
+msgstr "Selecteer portaal groepen."
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "Selecteer pre-allocation mode voor bestanden. (Standaard is Snel)."
 
 msgid "Select read balance algorithm."
 msgstr "Selecteer lees balans algoritme."
+
+msgid "Select target groups."
+msgstr "Selecteer doel groepen."
+
+msgid "Select targets."
+msgstr "Selecteer doelen."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Selecteer het FreeBSD pakket om te installeren."
@@ -8712,7 +9052,7 @@ msgid "Serial number"
 msgstr "Serienummer"
 
 msgid "Serialize Sequence"
-msgstr ""
+msgstr "Serialize Sequence"
 
 msgid "Serialize consecutive reads"
 msgstr "Serialiseren opeenvolgend leesvolgordes"
@@ -8773,7 +9113,7 @@ msgid "Set or reset user password."
 msgstr "Geef of reset het gebruikerswachtwoord."
 
 msgid "Set per-LUN/per-pool thin provisioning soft threshold."
-msgstr ""
+msgstr "Instellen Per-LUN/per-pool thin provisioning zachte drempel."
 
 msgid "Set read only."
 msgstr "Alleen-lezen activeren."
@@ -8852,6 +9192,8 @@ msgid ""
 "Set to \"unrestricted\", allows target to process commands with SIMPLE task "
 "attribute in arbitrary order."
 msgstr ""
+"Stel in als \"onbeperkt\", staat het doel toe opdrachten te verwerken met "
+"SIMPLE taakattribuut in een willekeurige volgorde."
 
 msgid "Set user login shell."
 msgstr "Instellen login-shell gebruiker."
@@ -8879,6 +9221,11 @@ msgid ""
 "between different iSCSI targets residing on the same host in trusted "
 "environments."
 msgstr ""
+"Als u op \"aan\" instelt, kan het EXTENDED COPY opdracht dat naar deze LUN "
+"wordt verzonden toegang geven tot andere LUN's op deze host, die anders niet "
+"toegankelijk zijn. Dit maakt het mogelijk om het kopiëren tussen "
+"verschillende iSCSI doelen die zich op dezelfde host bevinden in vertrouwde "
+"omgevingen uit te schakelen."
 
 msgid ""
 "Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
@@ -9155,9 +9502,15 @@ msgid ""
 "value is zero, that disables backing store completely, making all writes go "
 "to nowhere, while all reads return zeroes."
 msgstr ""
+"Geef de capaciteit van de back-up opslag op (maximaal RAM voor data). De "
+"standaardwaarde is nul, waardoor de back-up opslag volledig wordt "
+"uitgeschakeld, waardoor alle schrijfopdrachten nergens naartoe gaan, terwijl "
+"alle leesbewerkingen nullen retourneren."
 
 msgid "Specifies file or device name to use for backing store."
 msgstr ""
+"Hiermee geeft u de bestands of schijf naam op die moet worden gebruikt voor "
+"back-up opslag"
 
 msgid "Specifies how many servers to create."
 msgstr "Vul het aantal servers in die je wil creëren."
@@ -9183,6 +9536,8 @@ msgid ""
 "Specifies that this portal-group is listened by some other host. This host "
 "will announce it on discovery stage, but won't listen."
 msgstr ""
+"Geeft aan dat deze portaalgroep door een andere host wordt beluisterd. Deze "
+"host zal het aankondigen tijdens de ontdekkingsfase, maar zal niet luisteren."
 
 msgid "Specifies the command to be run."
 msgstr "Specificeer de opdracht die uitgevoerd moet worden."
@@ -9237,34 +9592,41 @@ msgstr ""
 "op de prestaties en auto-defragmentatie!"
 
 msgid "Specify UNMAP block offset of the device."
-msgstr ""
+msgstr "Opgeven UNMAP blok offset van de schijf."
 
 msgid "Specify UNMAP block size of the device."
-msgstr ""
+msgstr "Opgeven UNMAP blok grootte van de schijf."
 
 msgid ""
 "Specify maximum allowed number of LBAs per UNMAP command to report in Block "
 "Limits VPD page."
 msgstr ""
+"Geef het maximaal toegestane aantal LBA's per UNMAP opdracht op om te "
+"rapporteren op de Block Limits VPD pagina."
 
 msgid ""
 "Specify maximum allowed number of LBAs per WRITE SAME command to report in "
 "Block Limits VPD page."
 msgstr ""
+"Geef het maximum toegestane aantal LBAs per SCHRIJVEN DEZELFDE opdracht op "
+"om te rapporteren op de Block Limits VPD pagina."
 
 msgid ""
 "Specify maximum allowed number of block descriptors per UNMAP command to "
 "report in Block Limits VPD page."
 msgstr ""
+"Geef het maximum toegestane aantal blok descriptoren per UNMAP opdracht op "
+"om te rapporteren op de Block Limits VPD pagina."
 
 msgid "Specify physical block offset of the device."
-msgstr ""
+msgstr "Fysieke blok offset van de schijf opgeven."
 
 msgid "Specify physical block size of the device."
-msgstr ""
+msgstr "Fysieke blokgrootte van de schijf opgeven."
 
 msgid "Specify the SCSI device type to use when creating the LUN."
 msgstr ""
+"Geef het SCSI schijf type op te gebruiken bij het aanmaken van de LUN."
 
 msgid "Split request"
 msgstr "Aanvragen opsplitsen"
@@ -9580,6 +9942,9 @@ msgstr "Doel Adres"
 msgid "Target Alias"
 msgstr "Doel Alias"
 
+msgid "Target Group"
+msgstr "Doel Groep"
+
 msgid "Target Name"
 msgstr "Doelnaam"
 
@@ -9590,16 +9955,16 @@ msgid "Target information"
 msgstr "Doel informatie"
 
 msgid "Target is locked"
-msgstr ""
+msgstr "Doel is vergrendeld"
 
 msgid "Target is marked for deletion"
-msgstr ""
+msgstr "Doel is gemarkeerd voor verwijdering"
 
 msgid "Target is not selected."
 msgstr "Het doel is niet geselecteerd."
 
 msgid "Target is unlocked"
-msgstr ""
+msgstr "Doel is ontgrendeld"
 
 msgid "Target list"
 msgstr "Doel lijst"
@@ -9707,9 +10072,6 @@ msgstr "Het LAGG protocol is ongeldig."
 msgid "The LAN IP address will be reset to"
 msgstr "De LAN IP-adres wordt teruggezet naar"
 
-msgid "The LUN size, in bytes."
-msgstr ""
-
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "De MIB '%s' bestaat niet in sysctl."
@@ -9732,10 +10094,10 @@ msgstr ""
 "geïnitialiseerd tijdens de productie."
 
 msgid "The SCSI Device Identification string presented to the initiator."
-msgstr ""
+msgstr "Het SCSI Schijf Identificatie reeks gepresenteerd aan de initiator."
 
 msgid "The SCSI serial number presented to the initiator."
-msgstr ""
+msgstr "Het SCSI serienummer gepresenteerd aan de initiator."
 
 msgid "The TCP Port must be a valid port number."
 msgstr "De TCP Poort moet een geldig poortnummer zijn."
@@ -9946,7 +10308,7 @@ msgstr ""
 "het zoek proces zal worden beëindigd."
 
 msgid "The blocksize visible to the initiator."
-msgstr ""
+msgstr "De blokgrootte zichtbaar aan de initiator."
 
 msgid "The changes could not be applied"
 msgstr "De wijzigingen kunnen niet worden toegepast"
@@ -9958,7 +10320,7 @@ msgid "The changes have been saved."
 msgstr "De veranderingen zijn opgeslagen."
 
 msgid "The check will include both initiator-portal and initiator-name."
-msgstr ""
+msgstr "De controle omvat zowel de initiator-portaal en initiator-naam."
 
 msgid ""
 "The check will include initiator-portal, initiator-name, and authentication "
@@ -9966,6 +10328,11 @@ msgid ""
 "authentication, or if the CHAP user and secret used during discovery match "
 "those used by the target."
 msgstr ""
+"De controle zal omvatten de initiator-portaal, initiator-naam en "
+"authenticatie gegevens. Het doel wordt geretourneerd als het CHAP "
+"verificatie niet vereist is, of als de CHAP gebruiker en wachtwoord gebruikt "
+"tijdens de ontdekking overeenkomen met die welke worden gebruikt door het "
+"doel."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "De cleartext credentials om mee te koppelen."
@@ -10059,7 +10426,7 @@ msgstr ""
 "automatische snapshots."
 
 msgid "The debug verbosity level. The default is 0."
-msgstr ""
+msgstr "Het debug verbosity niveau. De standaardwaarde is 0."
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr "De standaard SMTP mailserverpoort, meestal poort 25 of poort 587."
@@ -10212,6 +10579,9 @@ msgid ""
 "The limit for concurrently running child processes handling incoming "
 "connections. The default is 30. A setting of 0 disables the limit."
 msgstr ""
+"De limiet voor gelijktijdig uitvoerende onderliggende processen voor het "
+"afhandelen van inkomende verbindingen. De standaardinstelling is 30. Een "
+"instelling van 0 schakelt de limiet uit."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
 msgstr "De locatie van de \"Database Gegevensmap\" is geen geldige locatie."
@@ -10389,6 +10759,8 @@ msgstr "De locatie '%s' is geen map."
 msgid ""
 "The path to the file, device node, or zfs volume used to back the LUN."
 msgstr ""
+"Het pad naar het bestand, schijfknooppunt of zfs volume gebruikt terug naar "
+"de LUN."
 
 msgid "The peer connection encryption mode."
 msgstr "Encryptie mode voor peer-to-peer verbindingen."
@@ -10406,7 +10778,7 @@ msgstr ""
 "gebruiker kan worden gebruikt."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "De poort om op te luisteren."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10477,6 +10849,9 @@ msgstr ""
 msgid "The share name is already used."
 msgstr "De deling naam is reeds gebruikt."
 
+msgid "The size of the LUN."
+msgstr "De grootte van de LUN."
+
 msgid "The size of the swap file in MB."
 msgstr "De grootte van het swap bestand in MB."
 
@@ -10511,6 +10886,9 @@ msgid ""
 "The timeout for login sessions, after which the connection will be forcibly "
 "terminated. The default is 60. A setting of 0 disables the timeout."
 msgstr ""
+"De timeout voor login sessies, waarna de verbinding gedwongen wordt "
+"beëindigd. De standaardwaarde is 60. Bij een instelling van 0 wordt de "
+"timeout uitgeschakeld."
 
 msgid "The total count of errors when writing a sector."
 msgstr "Totaal aantal fouten bij het schrijven van een sector."
@@ -10632,16 +11010,16 @@ msgstr ""
 "Deze parameters worden toegevoegd aan de algemene instellingen van ctl.conf"
 
 msgid "These parameter will be added to this auth-group."
-msgstr ""
+msgstr "Deze parameters worden toegevoegd aan deze auth-groep."
 
 msgid "These parameter will be added to this lun."
-msgstr ""
+msgstr "Deze parameters worden toegevoegd aan deze lun."
 
 msgid "These parameter will be added to this portal-group."
-msgstr ""
+msgstr "Deze parameters worden toegevoegd aan deze portaal-groep."
 
 msgid "These parameter will be added to this target."
-msgstr ""
+msgstr "Deze parameters worden toegevoegd aan deze doel."
 
 #, php-format
 msgid "These parameters are added to %s."
@@ -10693,7 +11071,7 @@ msgid "These parameters will be added to the ping command."
 msgstr "Deze parameters worden aan het commando ping toegevoegd."
 
 msgid "Thin Provisioning"
-msgstr ""
+msgstr "Thin Provisioning"
 
 msgid "This URL is already configured."
 msgstr "Deze URL is reeds geconfigureerd."
@@ -11126,7 +11504,7 @@ msgstr ""
 "ondersteunende HMO."
 
 msgid "Threads"
-msgstr ""
+msgstr "Threads"
 
 msgid "Throughput"
 msgstr "Doorvoer"
@@ -11188,7 +11566,7 @@ msgid "Timeout"
 msgstr "Tijdsoverschrijding"
 
 msgid "Timeout for iSNS requests. The default is 5."
-msgstr ""
+msgstr "Timeout voor iSNS aanvragen. De standaardwaarde is 5."
 
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr "Timeout moet een nummer zijn tussen 10 en 255000000."
@@ -11249,22 +11627,46 @@ msgid "Toggle Mode"
 msgstr "Schakel Modus"
 
 msgid "Toggle Selected Auth Groups"
-msgstr ""
+msgstr "Geselecteerde Auth Groepen Omschakelen"
+
+msgid "Toggle Selected CHAP Users"
+msgstr "Geselecteerde CHAP Gebruikers Omschakelen"
 
 msgid "Toggle Selected Commands"
 msgstr "Geselecteerde Opdrachten Omschakelen"
 
+msgid "Toggle Selected Initiator Names"
+msgstr "Geselecteerde Initiator Namen Omschakelen"
+
+msgid "Toggle Selected Initiator Portals"
+msgstr "Geselecteerde Initiator Portalen Omschakelen"
+
 msgid "Toggle Selected Jobs"
 msgstr "Geselecteerde Taken Omschakelen"
 
+msgid "Toggle Selected LUN Records"
+msgstr "Geselecteerde LUN Records Omschakelen"
+
 msgid "Toggle Selected LUNs"
-msgstr ""
+msgstr "Geselecteerde LUNs Omschakelen"
+
+msgid "Toggle Selected Listen Records"
+msgstr "Geselecteerde Luister Records Omschakelen"
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr "Geselecteerde Wederzijdse CHAP Gebruikers Omschakelen"
+
+msgid "Toggle Selected Option Records"
+msgstr "Geselecteerde Optie Records Omschakelen"
 
 msgid "Toggle Selected Options"
 msgstr "Geselecteerde Opties Omschakelen"
 
+msgid "Toggle Selected Port Records"
+msgstr "Geselecteerde Poort Records Omschakelen"
+
 msgid "Toggle Selected Portal Groups"
-msgstr ""
+msgstr "Geselecteerde Portaal Groepen Omschakelen"
 
 msgid "Toggle Selected Records"
 msgstr "Geselecteerde Items Omschakelen"
@@ -11276,7 +11678,7 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Geselecteerde Rsync Modules Omschakelen"
 
 msgid "Toggle Selected Targets"
-msgstr ""
+msgstr "Geselecteerde Doelen Omschakelen"
 
 msgid "Tolerated"
 msgstr "Toelaten"
@@ -11460,19 +11862,19 @@ msgid "UID"
 msgstr "UID"
 
 msgid "UNMAP"
-msgstr ""
+msgstr "UNMAP"
 
 msgid "UNMAP Block Offset"
-msgstr ""
+msgstr "UNMAP Blok Offset"
 
 msgid "UNMAP Block Size"
-msgstr ""
+msgstr "UNMAP Blok Grootte"
 
 msgid "UNMAP Maximum Descriptors"
-msgstr ""
+msgstr "UNMAP Maximale Descriptoren"
 
 msgid "UNMAP Maximum LBA"
-msgstr ""
+msgstr "UNMAP Maximale LBA"
 
 msgid "UPS"
 msgstr "UPS"
@@ -11574,7 +11976,7 @@ msgid "UTF-8 Only"
 msgstr "Alleen UTF-8"
 
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 msgid "Umask"
 msgstr "Umask"
@@ -11586,7 +11988,7 @@ msgid "Uncorrected read errors reported to the operating system."
 msgstr "Niet-gecorrigeerde leesfouten gemeld aan het besturingssysteem."
 
 msgid "Undefined"
-msgstr ""
+msgstr "Ongedefinieerd"
 
 msgid "Unformated"
 msgstr "Niet geformatteerd"
@@ -11607,6 +12009,8 @@ msgid ""
 "Unique 16-bit tag value of this portal-group. If not specified, the value is "
 "generated automatically."
 msgstr ""
+"Unieke 16-bits code waarde van deze portaal groep. Indien niet opgegeven, "
+"wordt de waarde automatisch gegenereerd."
 
 msgid "Unison"
 msgstr "Unison"
@@ -11657,7 +12061,7 @@ msgid "Unmounting..."
 msgstr "Bezig met loskoppelen..."
 
 msgid "Unrestricted"
-msgstr ""
+msgstr "Onbeperkt"
 
 msgid "Up"
 msgstr "Boven"
@@ -11812,7 +12216,7 @@ msgid "Used"
 msgstr "Gebruikt"
 
 msgid "Used Threshold"
-msgstr ""
+msgstr "Gebruikte Drempel"
 
 msgid ""
 "Used/Avail lists storage information after all redundancy is taken into "
@@ -11948,7 +12352,7 @@ msgstr ""
 "minimumdrempel in te stellen die overeenkomt met een maximale temperatuur."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "Waarde van de optie."
 
 msgid "Variable"
 msgstr "Variabele"
@@ -12187,6 +12591,8 @@ msgstr ""
 msgid ""
 "When UNMAP support is enabled, this option specifies provisioning type."
 msgstr ""
+"Wanneer UNMAP ondersteuning is ingeschakeld, deze optie geeft provisioning "
+"type."
 
 msgid "When UPS switches to Low Battery"
 msgstr "Tijd overschakelen naar Laag Batterij Niveau"
@@ -12237,7 +12643,7 @@ msgid "Write Cache"
 msgstr "Schrijf Cache"
 
 msgid "Write Same Maximum LBA"
-msgstr ""
+msgstr "Schrijven van dezelfde maximale LBA"
 
 msgid "Write only"
 msgstr "Alleen schrijven"
@@ -12325,8 +12731,8 @@ msgid ""
 "You may specify as SCSI INQUIRY data. Empty as default. (up to %d ASCII "
 "chars)"
 msgstr ""
-"U kunt specificeren als SCSI INSTRUCTIE gegevens. Standaard leeg gelaten. "
-"(maximaal %d ASCII tekens)"
+"U kunt als SCSI INQUIRY data opgeven. Standaard leeg gelaten. (maximaal tot "
+"%d ASCII tekens)"
 
 #, php-format
 msgid ""
@@ -12510,21 +12916,23 @@ msgid "iSCSI initiator disabled."
 msgstr "iSCSI initiator is uitgeschakeld"
 
 msgid "iSNS Period"
-msgstr ""
+msgstr "iSNS Periode"
 
 msgid "iSNS Server"
-msgstr ""
+msgstr "iSNS Server"
 
 msgid "iSNS Server Port"
-msgstr ""
+msgstr "iSNS Server Poort"
 
 msgid "iSNS Timeout"
-msgstr ""
+msgstr "iSNS Timeout"
 
 msgid ""
 "iSNS registration period. Registered Network Entity not updated during this "
 "period will be unregistered. The default is 900."
 msgstr ""
+"iSNS registratieperiode. Geregistreerde Netwerk Entiteit niet bijgewerkt "
+"tijdens deze periode wordt ongeregistreerd. De standaardwaarde is 900."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -12533,7 +12941,7 @@ msgid "infinity"
 msgstr "oneindig"
 
 msgid "less then 1.8\"."
-msgstr ""
+msgstr "minder dan 1.8\"."
 
 msgid "load/unload failed."
 msgstr "load/unload mislukt."
@@ -12620,20 +13028,8 @@ msgstr "gebruikt van"
 msgid "visible"
 msgstr "zichtbaar"
 
-#~ msgid "8192"
-#~ msgstr "8192"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Geef een beschrijving op"
 
-#~ msgid "2048"
-#~ msgstr "2048"
-
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "Enter user name"
-#~ msgstr "Voer gebruikersnaam in"
-
-#~ msgid "Enter secret"
-#~ msgstr "Voer wachtwoord in"
+#~ msgid "The LUN size, in bytes."
+#~ msgstr "De LUN grootte, in bytes."

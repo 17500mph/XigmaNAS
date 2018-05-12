@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-04-30 07:01+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-07 13:58+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:28+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -205,13 +205,13 @@ msgid "1.8\""
 msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
@@ -238,10 +238,10 @@ msgid "3.5\""
 msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -250,19 +250,19 @@ msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Bytes"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "ετικέτα 802.1Q VLAN  (μεταξύ  1 και 4094)."
@@ -532,6 +532,9 @@ msgstr "Προσθήκη Bridge"
 msgid "Add CARP"
 msgstr "Προσθήκη CARP"
 
+msgid "Add CHAP User"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "Προσθήκη Dataset"
 
@@ -547,14 +550,29 @@ msgstr "Προσθήκη Ομάδας"
 msgid "Add Host"
 msgstr "Προσθήκη Υπολογιστή"
 
+msgid "Add Initiator Name"
+msgstr ""
+
+msgid "Add Initiator Portal"
+msgstr ""
+
 msgid "Add LAGG"
 msgstr "Προσθήκη LAGG"
 
 msgid "Add LUN"
 msgstr "Προσθήκη LUN"
 
+msgid "Add LUN Record"
+msgstr ""
+
+msgid "Add Listen Record"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "Προσθήκη MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr ""
 
 msgid "Add NFS Share"
 msgstr "Προσθήκη Κοινόχρηστου NFS"
@@ -562,8 +580,14 @@ msgstr "Προσθήκη Κοινόχρηστου NFS"
 msgid "Add Option"
 msgstr "Προσθήκη Επιλογής"
 
+msgid "Add Option Record"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Προσθήκη Pool"
+
+msgid "Add Port Record"
+msgstr ""
 
 msgid "Add Portal Group"
 msgstr "Προσθήκη Ομάδας Portal"
@@ -965,7 +989,7 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Η Επέκταση καθορίζει την περιοχή αποθήκευσης του Προορισμού."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "Μια διεύθυνση IPv4 ή IPv6 από ένα portal εκκινητή iSCSI."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
@@ -973,6 +997,7 @@ msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
+"Μία IPv4 ή IPv6 διεύθυνση ατην οποία θα ακούει\t για εισερχόμενες\tσυνδέσεις."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -1005,9 +1030,6 @@ msgstr "Προέκυψε ένα σφάλμα."
 
 msgid "An host with this name already exists."
 msgstr "Ένας υπολογιστής με αυτό το όνομα υπάρχει ήδη."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Υπάρχει ήδη μια διασύνδεση με την συγκεκριμένη περιγραφή."
@@ -1104,7 +1126,7 @@ msgstr ""
 "Είσαστε σίγουροι ότι θέλετε να τερματίσετε τη λειτουργία του διακομιστή;"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Ορίστε στον προορισμό μια περιγραφή αναγνώσιμη από τον άνθρωπο."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1581,6 +1603,15 @@ msgstr "ΑΛΛΑΧΤΗΚΕ"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr ""
+
+msgid "CHAP User is marked for deletion"
+msgstr ""
+
+msgid "CHAP User is unlocked"
+msgstr ""
 
 msgid "CHAP Users"
 msgstr "Χρήστες CHAP"
@@ -2682,6 +2713,9 @@ msgstr "Διαγραφή Επιλεγμένων Bridge"
 msgid "Delete Selected CARPs"
 msgstr "Διαγραφή Επιλεγμένων CARP"
 
+msgid "Delete Selected CHAP Users"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Διαγραφή Επιλεγμένων Εντολών"
 
@@ -2697,14 +2731,29 @@ msgstr "Διαγραφή Επιλεγμένων Κρυπτογραφημένων
 msgid "Delete Selected Groups"
 msgstr "Διαγραφή Επιλεγμένων Ομάδων"
 
+msgid "Delete Selected Initiator Names"
+msgstr ""
+
+msgid "Delete Selected Initiator Portals"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Διαγραφή Επιλεγμένων Εργασιών"
 
 msgid "Delete Selected LAGGs"
 msgstr "Διαγραφή Επιλεγμένων LAGG"
 
+msgid "Delete Selected LUN Records"
+msgstr ""
+
 msgid "Delete Selected LUNs"
 msgstr "Διαγραφή Επιλεγμένων LUN"
+
+msgid "Delete Selected Listen Records"
+msgstr ""
+
+msgid "Delete Selected Mutual CHAP Users"
+msgstr ""
 
 msgid "Delete Selected NFS Shares"
 msgstr "Διαγραφή Επιλεγμένων Κοινόχρηστων NFS"
@@ -2712,11 +2761,17 @@ msgstr "Διαγραφή Επιλεγμένων Κοινόχρηστων NFS"
 msgid "Delete Selected Notifier"
 msgstr "Διαγραφή Επιλεγμένου Ειδοποιητή"
 
+msgid "Delete Selected Option Records"
+msgstr ""
+
 msgid "Delete Selected Options"
 msgstr "Διαγραφή Επιλεγμένων Επιλογών"
 
 msgid "Delete Selected Pools"
 msgstr "Διαγραφή Επιλεγμένων Pool"
+
+msgid "Delete Selected Port Records"
+msgstr ""
 
 msgid "Delete Selected Portal Groups"
 msgstr "Διαγραφή Επιλεγμένων Ομάδων Portal"
@@ -3049,17 +3104,41 @@ msgstr "Απενεργοποίηση Ενημέρωσης Υλικολογισμ
 msgid "Disable Selected Auth Groups"
 msgstr ""
 
+msgid "Disable Selected CHAP Users"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "Απενεργοποίηση Επιλεγμένων Εντολών"
+
+msgid "Disable Selected Initiator Names"
+msgstr ""
+
+msgid "Disable Selected Initiator Portals"
+msgstr ""
 
 msgid "Disable Selected Jobs"
 msgstr "Απενεργοποίηση Επιλεγμένων Εργασιών"
 
+msgid "Disable Selected LUN Records"
+msgstr ""
+
 msgid "Disable Selected LUNs"
+msgstr ""
+
+msgid "Disable Selected Listen Records"
+msgstr ""
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Disable Selected Option Records"
 msgstr ""
 
 msgid "Disable Selected Options"
 msgstr "Απενεργοποίηση Επιλεγμένων Επιλογών"
+
+msgid "Disable Selected Port Records"
+msgstr ""
 
 msgid "Disable Selected Portal Groups"
 msgstr ""
@@ -3357,10 +3436,19 @@ msgstr ""
 msgid "Do you want to delete selected CARPs?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα CARP;"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr ""
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα LAGG;"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr ""
+
 msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
+msgid "Do you want to delete selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to delete selected NFS shares?"
@@ -3399,17 +3487,32 @@ msgstr "Θέλετε να διαγράψετε τους επιλεγμένους
 msgid "Do you want to delete selected groups?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες ομάδες;"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr ""
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εργασίες;"
 
+msgid "Do you want to delete selected listen records?"
+msgstr ""
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Θέλετε να διαγράψετε τον επιλεγμένο ειδοποιητή;"
+
+msgid "Do you want to delete selected option records?"
+msgstr ""
 
 msgid "Do you want to delete selected options?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες επιλογές;"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα pool;"
+
+msgid "Do you want to delete selected port records?"
+msgstr ""
 
 msgid "Do you want to delete selected portal groups?"
 msgstr ""
@@ -3450,7 +3553,16 @@ msgstr "Θέλετε να διαγράψετε τους επιλεγμένους
 msgid "Do you want to delete this command?"
 msgstr "Θέλετε να διαγράψετε αυτή την εντολή;"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to disable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to disable selected auth groups?"
@@ -3459,11 +3571,26 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εντολές;"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εργασίες;"
 
+msgid "Do you want to disable selected listen records?"
+msgstr ""
+
+msgid "Do you want to disable selected option records?"
+msgstr ""
+
 msgid "Do you want to disable selected options?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to disable selected port records?"
+msgstr ""
 
 msgid "Do you want to disable selected portal groups?"
 msgstr ""
@@ -3480,7 +3607,16 @@ msgstr "Θέλετε να απενεργοποιήσετε τα επιλεγμέ
 msgid "Do you want to disable selected targets?"
 msgstr ""
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3489,11 +3625,26 @@ msgstr ""
 msgid "Do you want to enable selected commands?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εντολές;"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εργασίες;"
 
+msgid "Do you want to enable selected listen records?"
+msgstr ""
+
+msgid "Do you want to enable selected option records?"
+msgstr ""
+
 msgid "Do you want to enable selected options?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to enable selected port records?"
+msgstr ""
 
 msgid "Do you want to enable selected portal groups?"
 msgstr ""
@@ -3519,7 +3670,16 @@ msgstr "Θέλετε να εισάγετε τους δίσκους με RAID μ�
 msgid "Do you want to lock selected records?"
 msgstr "Θέλετε να κλειδώσετε τις επιλεγμένες εγγραφές;"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+
 msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3528,11 +3688,26 @@ msgstr ""
 msgid "Do you want to toggle selected commands?"
 msgstr "Θέλετε να γίνει εναλλαγή των επιλεγμένων εντολών;"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες εργασίες;"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+
 msgid "Do you want to toggle selected options?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to toggle selected port records?"
+msgstr ""
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr ""
@@ -3679,6 +3854,9 @@ msgstr "Επεξεργασία Bridge"
 msgid "Edit CARP"
 msgstr "Επεξεργασία CARP"
 
+msgid "Edit CHAP User"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Επεξεργασία dataset"
 
@@ -3694,14 +3872,29 @@ msgstr "Επεξεργασία Ομάδας"
 msgid "Edit Host"
 msgstr "Επεξεργασία Υπολογιστή"
 
+msgid "Edit Initiator Name"
+msgstr ""
+
+msgid "Edit Initiator Portal"
+msgstr ""
+
 msgid "Edit LAGG"
 msgstr "Επεξεργασία LAGG"
 
 msgid "Edit LUN"
 msgstr ""
 
+msgid "Edit LUN Record"
+msgstr ""
+
+msgid "Edit Listen Record"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "Επεξεργασία MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr ""
 
 msgid "Edit NFS Share"
 msgstr "Επεξεργασία Κοινόχρηστου NFS"
@@ -3709,8 +3902,14 @@ msgstr "Επεξεργασία Κοινόχρηστου NFS"
 msgid "Edit Option"
 msgstr "Επεξεργασία Επιλογής"
 
+msgid "Edit Option Record"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Επεξεργασία Pool"
+
+msgid "Edit Port Record"
+msgstr ""
 
 msgid "Edit Portal Group"
 msgstr ""
@@ -3884,17 +4083,41 @@ msgstr "Ενεργοποίηση STARTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr ""
 
+msgid "Enable Selected CHAP Users"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "Ενεργοποίηση Επιλεγμένων Εντολών"
+
+msgid "Enable Selected Initiator Names"
+msgstr ""
+
+msgid "Enable Selected Initiator Portals"
+msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr "Ενεργοποίηση Επιλεγμένων Εργασιών"
 
+msgid "Enable Selected LUN Records"
+msgstr ""
+
 msgid "Enable Selected LUNs"
+msgstr ""
+
+msgid "Enable Selected Listen Records"
+msgstr ""
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Enable Selected Option Records"
 msgstr ""
 
 msgid "Enable Selected Options"
 msgstr "Ενεργοποίηση Επιλεγμένων Επιλογών"
+
+msgid "Enable Selected Port Records"
+msgstr ""
 
 msgid "Enable Selected Portal Groups"
 msgstr ""
@@ -4262,9 +4485,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Εισάγετε μια περιγραφή"
 
-msgid "Enter a description for your reference"
-msgstr "Εισαγωγή μιας περιγραφής για τη δική σας διευκόλυνση"
-
 msgid "Enter a description for your reference."
 msgstr "Εισάγετε μια περιγραφή για δική σας εξυπηρέτηση."
 
@@ -4303,6 +4523,9 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Εισάγετε ένα έγκυρο όνομα sysctl MIB."
 
 msgid "Enter additional parameter"
+msgstr ""
+
+msgid "Enter an iSCSI initiator name."
 msgstr ""
 
 msgid "Enter comment for the share"
@@ -4347,6 +4570,9 @@ msgstr ""
 
 msgid "Enter name"
 msgstr "Εισάγετε όνομα"
+
+msgid "Enter passthrough device address bus:path:lun"
+msgstr ""
 
 msgid "Enter secret."
 msgstr ""
@@ -5524,6 +5750,33 @@ msgstr ""
 msgid "Initiator Name"
 msgstr "Όνομα Εκκινητή"
 
+msgid "Initiator Name is locked"
+msgstr ""
+
+msgid "Initiator Name is marked for deletion"
+msgstr ""
+
+msgid "Initiator Name is unlocked"
+msgstr ""
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr ""
+
+msgid "Initiator Portal is locked"
+msgstr ""
+
+msgid "Initiator Portal is marked for deletion"
+msgstr ""
+
+msgid "Initiator Portal is unlocked"
+msgstr ""
+
+msgid "Initiator Portals"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
@@ -5862,6 +6115,15 @@ msgstr ""
 msgid "LUN number"
 msgstr ""
 
+msgid "LUN record is locked"
+msgstr ""
+
+msgid "LUN record is marked for deletion"
+msgstr ""
+
+msgid "LUN record is unlocked"
+msgstr ""
+
 msgid "LUNs"
 msgstr "LUNs"
 
@@ -6002,6 +6264,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Λίστα ή εισαγωγή pools"
+
+msgid "Listen"
+msgstr ""
+
+msgid "Listen record is locked"
+msgstr ""
+
+msgid "Listen record is marked for deletion"
+msgstr ""
+
+msgid "Listen record is unlocked"
+msgstr ""
 
 msgid "Load"
 msgstr "Φόρτωση"
@@ -6559,6 +6833,15 @@ msgstr "Δεν πρέπει να είναι άδειο."
 
 msgid "Mutual CHAP"
 msgstr "Αμοιβαίο CHAP"
+
+msgid "Mutual CHAP User is locked"
+msgstr ""
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr ""
+
+msgid "Mutual CHAP User is unlocked"
+msgstr ""
 
 msgid "Mutual CHAP Users"
 msgstr "Χρήστες αμοιβαίου CHAP"
@@ -7118,6 +7401,15 @@ msgstr "Η επιλογή είναι προστατευμένη"
 msgid "Option is unlocked"
 msgstr "Η επιλογή είναι ξεκλείδωτη"
 
+msgid "Option record is locked"
+msgstr ""
+
+msgid "Option record is marked for deletion"
+msgstr ""
+
+msgid "Option record is unlocked"
+msgstr ""
+
 msgid "Optional"
 msgstr "Προαιρετικό"
 
@@ -7129,6 +7421,9 @@ msgstr "Επιλογές"
 
 msgid "Origin"
 msgstr "Προέλευση"
+
+msgid "Orphaned"
+msgstr ""
 
 msgid "Others"
 msgstr "Άλλοι"
@@ -7296,6 +7591,9 @@ msgstr "Passthrough - Μην αλλάζεις το ACL"
 
 msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - Κληρονόμηση όλων των καταχωρήσεων"
+
+msgid "Passthrough Address"
+msgstr ""
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
@@ -7595,6 +7893,15 @@ msgid ""
 msgstr ""
 "Θύρα του απομακρυσμένου διακομιστή syslog. Αφήστε το κενό για να "
 "χρησιμοποιήσετε την προεπιλεγμένη θύρα."
+
+msgid "Port record is locked"
+msgstr ""
+
+msgid "Port record is marked for deletion"
+msgstr ""
+
+msgid "Port record is unlocked"
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -8063,6 +8370,9 @@ msgstr "Όριο υψηλής σχετικής υγρασίας (ποσοστό)
 msgid "Release Notes"
 msgstr "Σημειώσεις έκδοσης"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Επαναφόρτωση Σελίδας"
 
@@ -8217,6 +8527,9 @@ msgstr "Ο πόρος είναι ξεκλείδωτος"
 
 msgid "Resources"
 msgstr "Πόροι"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "Επαναφορά"
@@ -8620,6 +8933,9 @@ msgstr "Επιλέξτε έναν αλγόριθμο κρυπτογράφηση�
 msgid "Select at which stage the command should be executed."
 msgstr "Επιλέξτε σε ποιο στάδιο θα πρέπει να εκτελείται η εντολή."
 
+msgid "Select auth groups."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "Επιλογή αρχείου ρυθμίσεων:"
 
@@ -8648,6 +8964,9 @@ msgstr ""
 "Διαλέξτε την επιλογή 'Αδιαμόρφωτο' για αδιαμόρφωτους δίσκους και διαμορφώστε "
 "τους με"
 
+msgid "Select portal groups."
+msgstr ""
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr ""
 "Επιλέξτε τη λειτουργία προκατανομής για τα αρχεία. (Η προεπιλογή είναι "
@@ -8655,6 +8974,12 @@ msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Επιλογή αλγόριθμου ισορροπίας ανάγνωσης."
+
+msgid "Select target groups."
+msgstr ""
+
+msgid "Select targets."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Επιλέξτε το πακέτο FreeBSD που θα εγκατασταθεί."
@@ -9655,6 +9980,9 @@ msgstr "Διεύθυνση Προορισμού"
 msgid "Target Alias"
 msgstr "Ψευδώνυμο προορισμού"
 
+msgid "Target Group"
+msgstr ""
+
 msgid "Target Name"
 msgstr "Όνομα Προορισμού"
 
@@ -9784,9 +10112,6 @@ msgstr "Το πρωτόκολλο LAGG είναι μη έγκυρο."
 
 msgid "The LAN IP address will be reset to"
 msgstr "Η διέυθυνση IP του δικτύου θα επαναφερθεί σε"
-
-msgid "The LUN size, in bytes."
-msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -10584,6 +10909,9 @@ msgstr ""
 msgid "The share name is already used."
 msgstr "Το όνομα του κοινόχρηστου χρησιμοποιείται ήδη."
 
+msgid "The size of the LUN."
+msgstr ""
+
 msgid "The size of the swap file in MB."
 msgstr "Το μέγεθος του αρχείου swap σε MB."
 
@@ -11378,17 +11706,41 @@ msgstr "Λειτουργία Εναλλαγής"
 msgid "Toggle Selected Auth Groups"
 msgstr ""
 
+msgid "Toggle Selected CHAP Users"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "Εναλλαγή Επιλεγμένων Εντολών"
+
+msgid "Toggle Selected Initiator Names"
+msgstr ""
+
+msgid "Toggle Selected Initiator Portals"
+msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr "Εναλλαγή Επιλεγμένων Εργασιών"
 
+msgid "Toggle Selected LUN Records"
+msgstr ""
+
 msgid "Toggle Selected LUNs"
+msgstr ""
+
+msgid "Toggle Selected Listen Records"
+msgstr ""
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Toggle Selected Option Records"
 msgstr ""
 
 msgid "Toggle Selected Options"
 msgstr "Εναλλαγή Επιλεγμένων Επιλογών"
+
+msgid "Toggle Selected Port Records"
+msgstr ""
 
 msgid "Toggle Selected Portal Groups"
 msgstr ""
@@ -12765,14 +13117,5 @@ msgstr "χρήση από"
 msgid "visible"
 msgstr "ορατό"
 
-#~ msgid "2048"
-#~ msgstr "2048"
-
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "8192"
-#~ msgstr "8192"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Εισαγωγή μιας περιγραφής για τη δική σας διευκόλυνση"

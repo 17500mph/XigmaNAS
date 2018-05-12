@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-05-03 19:55+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-06 17:14+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -198,13 +198,13 @@ msgid "1.8\""
 msgstr "1,8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 vagy több lemez szükséges RAID-0 kötet létrehozásához."
@@ -225,10 +225,10 @@ msgid "3.5\""
 msgstr "3,5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KB csomagoló"
@@ -237,19 +237,19 @@ msgid "5.25\""
 msgstr "5,25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 bájt"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN címke (1 és 4094 közötti érték)."
@@ -508,6 +508,9 @@ msgstr "Híd hozzáadása"
 msgid "Add CARP"
 msgstr "CARP hozzáadása"
 
+msgid "Add CHAP User"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
 
@@ -523,14 +526,29 @@ msgstr "Csoport hozzáadása"
 msgid "Add Host"
 msgstr "Állomás hozzáadása"
 
+msgid "Add Initiator Name"
+msgstr ""
+
+msgid "Add Initiator Portal"
+msgstr ""
+
 msgid "Add LAGG"
 msgstr "LAGG hozzáadása"
 
 msgid "Add LUN"
 msgstr "LUN hozzáadása"
 
+msgid "Add LUN Record"
+msgstr ""
+
+msgid "Add Listen Record"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "MIB hozzáadása"
+
+msgid "Add Mutual CHAP User"
+msgstr ""
 
 msgid "Add NFS Share"
 msgstr "NFS megosztás hozzáadása"
@@ -538,8 +556,14 @@ msgstr "NFS megosztás hozzáadása"
 msgid "Add Option"
 msgstr "Opció hozzáadása"
 
+msgid "Add Option Record"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "Tároló hozzáadása"
+
+msgid "Add Port Record"
+msgstr ""
 
 msgid "Add Portal Group"
 msgstr "Portál csoport hozzáadása"
@@ -927,13 +951,13 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Egy Extent a Cél tároló területét határozza meg."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "Az iSCSI kezdeményező portál IPv4 vagy IPv6 címe."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr "iSNS szerver regisztrálandó IPV4 vagy IPv6 címe."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
-msgstr ""
+msgstr "IPv4 vagy IPv6 cím, melyen figyeli a \t bejövő\t kapcsolatokat."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -964,9 +988,6 @@ msgstr "Hiba történt."
 
 msgid "An host with this name already exists."
 msgstr "Egy állomás ugyanezzel a névvel létezik már."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Ilyen leírású interfész már létezik."
@@ -1060,7 +1081,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Biztos, hogy kikapcsolod a szervert?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Ember által olvasható leírás hozzárendelése a célhoz."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1071,9 +1092,10 @@ msgstr ""
 
 msgid "Assign a previously defined authentication group to the target."
 msgstr ""
+"Egy korábban létrehozott hitelesítési csoport hozzárendelése a célhoz."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Egy korábban létrehozott portál csoport hozzárendelése a célhoz."
 
 msgid "Asynchronous I/O"
 msgstr "Aszinkron I/O"
@@ -1528,6 +1550,15 @@ msgstr "MEGVÁLTOZOTT"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr ""
+
+msgid "CHAP User is marked for deletion"
+msgstr ""
+
+msgid "CHAP User is unlocked"
+msgstr ""
 
 msgid "CHAP Users"
 msgstr "CHAP Felhasználók"
@@ -2586,6 +2617,9 @@ msgstr "Kiválasztott híd törlése"
 msgid "Delete Selected CARPs"
 msgstr "Kiválasztott CARP-ok törlése"
 
+msgid "Delete Selected CHAP Users"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "Kijelölt parancsok törlése"
 
@@ -2601,14 +2635,29 @@ msgstr "Kijelölt titkosított kötetek törlése"
 msgid "Delete Selected Groups"
 msgstr "Kiválasztott csoportok törlése"
 
+msgid "Delete Selected Initiator Names"
+msgstr ""
+
+msgid "Delete Selected Initiator Portals"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Kiválasztott feladatok törlése"
 
 msgid "Delete Selected LAGGs"
 msgstr "Kiválasztott LAGG-ok törlése"
 
+msgid "Delete Selected LUN Records"
+msgstr ""
+
 msgid "Delete Selected LUNs"
 msgstr "Kiválasztott LUN-ok törlése"
+
+msgid "Delete Selected Listen Records"
+msgstr ""
+
+msgid "Delete Selected Mutual CHAP Users"
+msgstr ""
 
 msgid "Delete Selected NFS Shares"
 msgstr "Kiválasztott NFS megosztások törlése"
@@ -2616,11 +2665,17 @@ msgstr "Kiválasztott NFS megosztások törlése"
 msgid "Delete Selected Notifier"
 msgstr "Kijelölt értesítő törlése"
 
+msgid "Delete Selected Option Records"
+msgstr ""
+
 msgid "Delete Selected Options"
 msgstr "Kiválasztott beállítások törlése"
 
 msgid "Delete Selected Pools"
 msgstr "Kiválasztott tárolók törlése"
+
+msgid "Delete Selected Port Records"
+msgstr ""
 
 msgid "Delete Selected Portal Groups"
 msgstr "Kiválasztott Portál csoportok törlése"
@@ -2948,17 +3003,41 @@ msgstr "Firmware-frissítés kikapcsolása"
 msgid "Disable Selected Auth Groups"
 msgstr "Kiválasztott Hitelesítési csoport tiltása"
 
+msgid "Disable Selected CHAP Users"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "Kijelölt parancsok tiltása"
+
+msgid "Disable Selected Initiator Names"
+msgstr ""
+
+msgid "Disable Selected Initiator Portals"
+msgstr ""
 
 msgid "Disable Selected Jobs"
 msgstr "Kiválasztott feladatok tiltása"
 
+msgid "Disable Selected LUN Records"
+msgstr ""
+
 msgid "Disable Selected LUNs"
 msgstr "Kiválasztott LUN-ok tiltása"
 
+msgid "Disable Selected Listen Records"
+msgstr ""
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Disable Selected Option Records"
+msgstr ""
+
 msgid "Disable Selected Options"
 msgstr "Kiválasztott beállítások tiltása"
+
+msgid "Disable Selected Port Records"
+msgstr ""
 
 msgid "Disable Selected Portal Groups"
 msgstr "Kiválasztott Portál csoportok tiltása"
@@ -3254,11 +3333,20 @@ msgstr ""
 msgid "Do you want to delete selected CARPs?"
 msgstr "Biztos, hogy törlöd a kijelölt CARP-okat?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr ""
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Biztos, hogy törlöd a kijelölt LAGG-okat?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr ""
+
 msgid "Do you want to delete selected LUNs?"
 msgstr "Biztos, hogy törli a kiválasztott LUN-okat?"
+
+msgid "Do you want to delete selected Mutual CHAP users?"
+msgstr ""
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Biztos, hogy törlöd a kijelölt NFS megosztásokat?"
@@ -3296,17 +3384,32 @@ msgstr "Biztos, hogy törlöd a kiválasztott titkosított köteteket?"
 msgid "Do you want to delete selected groups?"
 msgstr "Biztos, hogy törli a kiválasztott csoportokat?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr ""
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Biztos, hogy törlöd a kiválasztott feladatokat?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr ""
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Biztos, hogy törlöd ez az értesítőt?"
+
+msgid "Do you want to delete selected option records?"
+msgstr ""
 
 msgid "Do you want to delete selected options?"
 msgstr "Biztos, hogy törlöd a kiválasztott beállításokat?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Biztos, hogy törlöd a kiválasztott tárolókat?"
+
+msgid "Do you want to delete selected port records?"
+msgstr ""
 
 msgid "Do you want to delete selected portal groups?"
 msgstr "Biztos, hogy törli a kiválasztott Portál csoportokat?"
@@ -3347,8 +3450,17 @@ msgstr "Biztos, hogy törli a kiválasztott köteteket?"
 msgid "Do you want to delete this command?"
 msgstr "Biztos, hogy törlöd ezt a parancsot?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to disable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to disable selected LUNs?"
 msgstr "Biztos, hogy kikapcsolja a kiválasztott LUN-okat?"
+
+msgid "Do you want to disable selected Mutual CHAP users?"
+msgstr ""
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Biztos, hogy kikapcsolja a kiválasztott Hitelesítési csoportokat?"
@@ -3356,11 +3468,26 @@ msgstr "Biztos, hogy kikapcsolja a kiválasztott Hitelesítési csoportokat?"
 msgid "Do you want to disable selected commands?"
 msgstr "Biztos, hogy kikapcsolod a kijelölt parancsokat?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Biztos, hogy kikapcsolod a kiválasztott feladatokat?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr ""
+
+msgid "Do you want to disable selected option records?"
+msgstr ""
+
 msgid "Do you want to disable selected options?"
 msgstr "Biztos, hogy kikapcsolod a kiválasztott beállításokat?"
+
+msgid "Do you want to disable selected port records?"
+msgstr ""
 
 msgid "Do you want to disable selected portal groups?"
 msgstr "Biztos, hogy kikapcsolja a kiválasztott Portál csoportokat?"
@@ -3377,8 +3504,17 @@ msgstr "Biztos, hogy kikapcsolod a kijelölt rsync feladatokat?"
 msgid "Do you want to disable selected targets?"
 msgstr "Biztos, hogy kikapcsolja a kiválasztott célokat?"
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to enable selected LUNs?"
 msgstr "Biztos, hogy bekapcsolja kiválasztott LUN-okat?"
+
+msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Biztos, hogy bekapcsolja kiválasztott Hitelesítési csoportokat?"
@@ -3386,11 +3522,26 @@ msgstr "Biztos, hogy bekapcsolja kiválasztott Hitelesítési csoportokat?"
 msgid "Do you want to enable selected commands?"
 msgstr "Biztos, hogy engedélyezed a kijelölt parancsokat?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Biztos, hogy engedélyezed a kiválasztott feladatokat?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr ""
+
+msgid "Do you want to enable selected option records?"
+msgstr ""
+
 msgid "Do you want to enable selected options?"
 msgstr "Biztos, hogy engedélyezed a kiválasztott beállításokat?"
+
+msgid "Do you want to enable selected port records?"
+msgstr ""
 
 msgid "Do you want to enable selected portal groups?"
 msgstr "Biztos, hogy bekapcsolja kiválasztott Portál csoportokat?"
@@ -3416,8 +3567,17 @@ msgstr "Biztos, hogy importálod a szoftveres RAID lemezeket?"
 msgid "Do you want to lock selected records?"
 msgstr "Biztos, hogy zárolod a kijelölt rekordokat?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+
 msgid "Do you want to toggle selected LUNs?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott LUN-okat?"
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott hitelesítési csoportokat?"
@@ -3425,11 +3585,26 @@ msgstr "Biztos, hogy átkapcsolod a kiválasztott hitelesítési csoportokat?"
 msgid "Do you want to toggle selected commands?"
 msgstr "Biztos, hogy engedélyezed a kijelölt parancsokat?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott feladatokat?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+
 msgid "Do you want to toggle selected options?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott beállításokat?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr ""
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott portál csoportokat?"
@@ -3571,6 +3746,9 @@ msgstr "Híd módosítása"
 msgid "Edit CARP"
 msgstr "CARP módosítása"
 
+msgid "Edit CHAP User"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "Adattár módosítása"
 
@@ -3586,14 +3764,29 @@ msgstr "Csoport módosítása"
 msgid "Edit Host"
 msgstr "Állomásnév módosítása"
 
+msgid "Edit Initiator Name"
+msgstr ""
+
+msgid "Edit Initiator Portal"
+msgstr ""
+
 msgid "Edit LAGG"
 msgstr "LAGG módosítása"
 
 msgid "Edit LUN"
 msgstr "LUN módosítása"
 
+msgid "Edit LUN Record"
+msgstr ""
+
+msgid "Edit Listen Record"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "MIB szerkesztése"
+
+msgid "Edit Mutual CHAP User"
+msgstr ""
 
 msgid "Edit NFS Share"
 msgstr "NFS megosztás módosítása"
@@ -3601,8 +3794,14 @@ msgstr "NFS megosztás módosítása"
 msgid "Edit Option"
 msgstr "Opciók módosítása"
 
+msgid "Edit Option Record"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "Tároló módosítása"
+
+msgid "Edit Port Record"
+msgstr ""
 
 msgid "Edit Portal Group"
 msgstr "Portál csoport módosítása"
@@ -3776,17 +3975,41 @@ msgstr "STARTTLS engedélyezése"
 msgid "Enable Selected Auth Groups"
 msgstr "Kiválasztott hitelesítési csoportok engedélyezése"
 
+msgid "Enable Selected CHAP Users"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "Kijelölt parancsok engedélyezése"
+
+msgid "Enable Selected Initiator Names"
+msgstr ""
+
+msgid "Enable Selected Initiator Portals"
+msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr "Kiválasztott feladatok engedélyezése"
 
+msgid "Enable Selected LUN Records"
+msgstr ""
+
 msgid "Enable Selected LUNs"
 msgstr "Kiválasztott LUN-ok engedélyezése"
 
+msgid "Enable Selected Listen Records"
+msgstr ""
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Enable Selected Option Records"
+msgstr ""
+
 msgid "Enable Selected Options"
 msgstr "Kiválasztott beállítások engedélyezése"
+
+msgid "Enable Selected Port Records"
+msgstr ""
 
 msgid "Enable Selected Portal Groups"
 msgstr "Kiválasztott portál csoportok engedélyezése"
@@ -4090,7 +4313,7 @@ msgid "Enter IP Address"
 msgstr "Adja meg az IP címet"
 
 msgid "Enter IP address prefix length."
-msgstr ""
+msgstr "Add meg az IP cím előtagjának a hosszát."
 
 msgid "Enter Identifier"
 msgstr "Adja meg az azonosítót"
@@ -4139,9 +4362,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Adj meg egy leírást"
 
-msgid "Enter a description for your reference"
-msgstr "Adja meg hivatkozása leírását"
-
 msgid "Enter a description for your reference."
 msgstr "Add meg a hivatkozás leírását."
 
@@ -4182,6 +4402,9 @@ msgstr "Valós sysctl MIB nevet adj meg."
 msgid "Enter additional parameter"
 msgstr "További paraméterek megadása"
 
+msgid "Enter an iSCSI initiator name."
+msgstr ""
+
 msgid "Enter comment for the share"
 msgstr "Adj leírást a megosztáshoz"
 
@@ -4220,13 +4443,16 @@ msgid "Enter login name of the user."
 msgstr "Add meg a felhasználó bejelentkezési nevét."
 
 msgid "Enter mutual user name."
-msgstr ""
+msgstr "Add meg a kölcsönös felhasználónevet."
 
 msgid "Enter name"
 msgstr "Add meg a nevét"
 
+msgid "Enter passthrough device address bus:path:lun"
+msgstr "Add meg az átmenő eszközcímet busz:útvonal:lun"
+
 msgid "Enter secret."
-msgstr ""
+msgstr "Add meg a titkot."
 
 msgid "Enter smartctl pass-through type."
 msgstr "Adja meg a smartctlpass-through típusát."
@@ -4292,7 +4518,7 @@ msgid "Enter trap host name."
 msgstr "Add meg a csapda állomás nevét."
 
 msgid "Enter user name."
-msgstr ""
+msgstr "Add meg a felhasználónevet."
 
 msgid "Enter value"
 msgstr "Add meg az értéket"
@@ -5045,7 +5271,7 @@ msgid "IP Address"
 msgstr "IP-cím"
 
 msgid "IP Address Prefix"
-msgstr ""
+msgstr "IP cím előtag"
 
 msgid "IP address"
 msgstr "IP-cím"
@@ -5092,6 +5318,9 @@ msgid ""
 "initiators attempting to connect to this target will get redirected using "
 "\"Target moved temporarily\" login response."
 msgstr ""
+"IPv4 vagy IPV6 cím, melyre a kezdeményezőt átirányítjuk. Ha beállítjuk, "
+"akkor az összes kezdeményezőt, aki a célhoz próbál csatlakozni, átirányítjuk "
+"az \"A cél ideiglenesen elköltözött\" bejelentkezési válasszal."
 
 msgid "IPv6 Address"
 msgstr "IPv6 cím"
@@ -5374,6 +5603,33 @@ msgstr ""
 
 msgid "Initiator Name"
 msgstr "Kezdeményező neve"
+
+msgid "Initiator Name is locked"
+msgstr ""
+
+msgid "Initiator Name is marked for deletion"
+msgstr ""
+
+msgid "Initiator Name is unlocked"
+msgstr ""
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr ""
+
+msgid "Initiator Portal is locked"
+msgstr ""
+
+msgid "Initiator Portal is marked for deletion"
+msgstr ""
+
+msgid "Initiator Portal is unlocked"
+msgstr ""
+
+msgid "Initiator Portals"
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -5667,7 +5923,7 @@ msgid "LOG (Mirror)"
 msgstr "NAPLÓZÁS (tükör)"
 
 msgid "LUN"
-msgstr "LUN"
+msgstr "Logikai egységszám (LUN)"
 
 msgid "LUN EUI-64\tidentifier"
 msgstr "LUN EUI-64\tazonosító"
@@ -5679,7 +5935,7 @@ msgid "LUN Name"
 msgstr "LUN neve"
 
 msgid "LUN Number"
-msgstr ""
+msgstr "LUN szám"
 
 msgid "LUN Product"
 msgstr "LUN termék"
@@ -5703,6 +5959,15 @@ msgid "LUN is unlocked"
 msgstr "LUN zárolása feloldva"
 
 msgid "LUN number"
+msgstr "LUN szám"
+
+msgid "LUN record is locked"
+msgstr ""
+
+msgid "LUN record is marked for deletion"
+msgstr ""
+
+msgid "LUN record is unlocked"
 msgstr ""
 
 msgid "LUNs"
@@ -5843,6 +6108,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Tárolók felsorolása vagy importálása"
+
+msgid "Listen"
+msgstr ""
+
+msgid "Listen record is locked"
+msgstr ""
+
+msgid "Listen record is marked for deletion"
+msgstr ""
+
+msgid "Listen record is unlocked"
+msgstr ""
 
 msgid "Load"
 msgstr "Terhelés"
@@ -6391,14 +6668,23 @@ msgstr "Nem lehet üres."
 msgid "Mutual CHAP"
 msgstr "Kölcsönös CHAP"
 
+msgid "Mutual CHAP User is locked"
+msgstr ""
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr ""
+
+msgid "Mutual CHAP User is unlocked"
+msgstr ""
+
 msgid "Mutual CHAP Users"
 msgstr "Kölcsönös CHAP felhasználók"
 
 msgid "Mutual Secret"
-msgstr ""
+msgstr "Kölcsönös titok"
 
 msgid "Mutual User"
-msgstr ""
+msgstr "Kölcsönös felhasználó"
 
 msgid "NAA Identifier"
 msgstr "NAA azonosító"
@@ -6476,10 +6762,10 @@ msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "A cserehelyként (swap) használandó eszköz neve, pl.: %s."
 
 msgid "Name of the option."
-msgstr ""
+msgstr "A lehetőség neve."
 
 msgid "Name of the port."
-msgstr ""
+msgstr "A port neve."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6929,10 +7215,10 @@ msgid "Option"
 msgstr "Beállítás"
 
 msgid "Option Name"
-msgstr ""
+msgstr "Lehetőség neve"
 
 msgid "Option Value"
-msgstr ""
+msgstr "Lehetőség értéke"
 
 msgid "Option is locked"
 msgstr "Beállítás zárolva"
@@ -6946,6 +7232,15 @@ msgstr "Opció védett"
 msgid "Option is unlocked"
 msgstr "Opció zárolása feloldva"
 
+msgid "Option record is locked"
+msgstr ""
+
+msgid "Option record is marked for deletion"
+msgstr ""
+
+msgid "Option record is unlocked"
+msgstr ""
+
 msgid "Optional"
 msgstr "Nem kötelező"
 
@@ -6957,6 +7252,9 @@ msgstr "Beállítások"
 
 msgid "Origin"
 msgstr "Eredet"
+
+msgid "Orphaned"
+msgstr ""
 
 msgid "Others"
 msgstr "Egyebek"
@@ -7123,6 +7421,9 @@ msgstr "Átmenő - ACL ne módosuljon"
 msgid "Passthrough - Inherit all entries"
 msgstr "Átmenő - Összes bejegyzés örökítése"
 
+msgid "Passthrough Address"
+msgstr "Átmenő cím"
+
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 "Átmenő-X - Összes örökítése, kivéve 'Futtatás', ha nincs meghatározva"
@@ -7222,7 +7523,7 @@ msgid "Permit Root Login"
 msgstr "Root bejelentkezés engedélyezése"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Hitelesítés nélküli elérés tiltása"
 
 msgid "Permit discovery without authentication"
 msgstr "Hitelesítés nélküli felderítés tiltása"
@@ -7392,7 +7693,7 @@ msgid "Port Forwarding"
 msgstr "Portátirányítás"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Port neve"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "A port értéke 514 vagy 1024 és 49151 közötti szám kell, hogy legyen."
@@ -7414,6 +7715,15 @@ msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
 msgstr ""
 "A távoli rendszernapló-szerver portja. Alapértelmezett port esetén üres."
+
+msgid "Port record is locked"
+msgstr ""
+
+msgid "Port record is marked for deletion"
+msgstr ""
+
+msgid "Port record is unlocked"
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7877,6 +8187,9 @@ msgstr "Relatív páratartalom küszöb magas (százalék)"
 msgid "Release Notes"
 msgstr "Kiadási megjegyzések"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Oldal újratöltése"
 
@@ -8031,6 +8344,9 @@ msgstr "Az erőforrás zárolását feloldottad"
 
 msgid "Resources"
 msgstr "Erőforrások"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "Visszaállítás"
@@ -8431,6 +8747,9 @@ msgstr "Válassz titkosítási algoritmust."
 msgid "Select at which stage the command should be executed."
 msgstr "Válaszd ki, hogy a parancs melyik szakaszon fusson."
 
+msgid "Select auth groups."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "Konfigurációs fájl kiválasztása:"
 
@@ -8458,11 +8777,20 @@ msgstr ""
 "Válaszd a 'Formázatlan' beállítást a nem formázott lemezekhez, majd formázd "
 "meg őket"
 
+msgid "Select portal groups."
+msgstr ""
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "Válassz ki az előre lefoglalás módját (alapértelmezett: Gyors)."
 
 msgid "Select read balance algorithm."
 msgstr "Olvasó egyensúly algoritmus kiválasztása"
+
+msgid "Select target groups."
+msgstr ""
+
+msgid "Select targets."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Válaszd ki a telepítendő FreeBSD csomagot."
@@ -9485,6 +9813,9 @@ msgstr "Cél cím"
 msgid "Target Alias"
 msgstr "Cél álnév"
 
+msgid "Target Group"
+msgstr ""
+
 msgid "Target Name"
 msgstr "Célnév"
 
@@ -9605,9 +9936,6 @@ msgstr "A LAGG protokoll érvénytelen."
 
 msgid "The LAN IP address will be reset to"
 msgstr "A LAN IP címét visszaállítjuk erre:"
-
-msgid "The LUN size, in bytes."
-msgstr "A LUN mérete bájtokban."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -10298,7 +10626,7 @@ msgstr ""
 "válik, hogy egy megosztást rugalmasan használhasson több felhasználó."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "A figyelendő port."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10368,6 +10696,9 @@ msgstr "A szerver újraindul a konfiguráció sikeres visszaállítása után."
 
 msgid "The share name is already used."
 msgstr "A megosztási név már használatban van."
+
+msgid "The size of the LUN."
+msgstr ""
 
 msgid "The size of the swap file in MB."
 msgstr "A cserefájl mérete MB-ban."
@@ -11117,17 +11448,41 @@ msgstr "Átkapcsolási mód"
 msgid "Toggle Selected Auth Groups"
 msgstr "Kiválasztott hitelesítési csoportok átkapcsolása"
 
+msgid "Toggle Selected CHAP Users"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "Kijelölt parancsok felcserélése"
+
+msgid "Toggle Selected Initiator Names"
+msgstr ""
+
+msgid "Toggle Selected Initiator Portals"
+msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr "Kiválasztott feladatok átkapcsolása"
 
+msgid "Toggle Selected LUN Records"
+msgstr ""
+
 msgid "Toggle Selected LUNs"
 msgstr "Kiválasztott LUN-ok átkapcsolása"
 
+msgid "Toggle Selected Listen Records"
+msgstr ""
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Toggle Selected Option Records"
+msgstr ""
+
 msgid "Toggle Selected Options"
 msgstr "Kiválasztott beállítások átkapcsolása"
+
+msgid "Toggle Selected Port Records"
+msgstr ""
 
 msgid "Toggle Selected Portal Groups"
 msgstr "Kiválasztott portál csoportok átkapcsolása"
@@ -11805,7 +12160,7 @@ msgstr ""
 "legkisebb korlát beállítását teszi lehetővé a gyártó számára."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "A lehetőség értéke."
 
 msgid "Variable"
 msgstr "Változó"
@@ -12467,23 +12822,8 @@ msgstr "használatban"
 msgid "visible"
 msgstr "látható"
 
-#~ msgid "2048"
-#~ msgstr "2048"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Adja meg hivatkozása leírását"
 
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "8192"
-#~ msgstr "8192"
-
-#~ msgid "Enter secret"
-#~ msgstr "Titok megadása"
-
-#~ msgid "Enter user name"
-#~ msgstr "Felhasználónév megadása"
-
-#~ msgid "Seconfary"
-#~ msgstr "Másodlagos"
+#~ msgid "The LUN size, in bytes."
+#~ msgstr "A LUN mérete bájtokban."

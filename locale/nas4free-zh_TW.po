@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
 "PO-Revision-Date: 2018-04-20 09:39+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:30+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -469,6 +469,9 @@ msgstr "添加網橋"
 msgid "Add CARP"
 msgstr "添加CARP"
 
+msgid "Add CHAP User"
+msgstr ""
+
 msgid "Add Dataset"
 msgstr "添加數據集"
 
@@ -484,14 +487,29 @@ msgstr "新增群組"
 msgid "Add Host"
 msgstr "添加主機"
 
+msgid "Add Initiator Name"
+msgstr ""
+
+msgid "Add Initiator Portal"
+msgstr ""
+
 msgid "Add LAGG"
 msgstr "添加LAGG"
 
 msgid "Add LUN"
 msgstr ""
 
+msgid "Add LUN Record"
+msgstr ""
+
+msgid "Add Listen Record"
+msgstr ""
+
 msgid "Add MIB"
 msgstr "添加MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr ""
 
 msgid "Add NFS Share"
 msgstr "添加NFS共用"
@@ -499,8 +517,14 @@ msgstr "添加NFS共用"
 msgid "Add Option"
 msgstr "添加選項"
 
+msgid "Add Option Record"
+msgstr ""
+
 msgid "Add Pool"
 msgstr "添加池"
+
+msgid "Add Port Record"
+msgstr ""
 
 msgid "Add Portal Group"
 msgstr ""
@@ -893,9 +917,6 @@ msgstr "發生錯誤。"
 
 msgid "An host with this name already exists."
 msgstr "已經有一個相同的主機名稱存在了。"
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "具有相同描述的介面已經存在。"
@@ -1423,6 +1444,15 @@ msgstr "已更改"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr ""
+
+msgid "CHAP User is marked for deletion"
+msgstr ""
+
+msgid "CHAP User is unlocked"
+msgstr ""
 
 msgid "CHAP Users"
 msgstr "CHAP 用戶"
@@ -2402,6 +2432,9 @@ msgstr "刪除選中的網橋"
 msgid "Delete Selected CARPs"
 msgstr "刪除選中的CARPs"
 
+msgid "Delete Selected CHAP Users"
+msgstr ""
+
 msgid "Delete Selected Commands"
 msgstr "刪除選中的命令"
 
@@ -2417,13 +2450,28 @@ msgstr "刪除選中的加密卷"
 msgid "Delete Selected Groups"
 msgstr "刪除選中的組"
 
+msgid "Delete Selected Initiator Names"
+msgstr ""
+
+msgid "Delete Selected Initiator Portals"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "刪除選中的任務"
 
 msgid "Delete Selected LAGGs"
 msgstr "刪除選中的LAGGs"
 
+msgid "Delete Selected LUN Records"
+msgstr ""
+
 msgid "Delete Selected LUNs"
+msgstr ""
+
+msgid "Delete Selected Listen Records"
+msgstr ""
+
+msgid "Delete Selected Mutual CHAP Users"
 msgstr ""
 
 msgid "Delete Selected NFS Shares"
@@ -2432,11 +2480,17 @@ msgstr "刪除選中的NFS共用"
 msgid "Delete Selected Notifier"
 msgstr "刪除選定的通知"
 
+msgid "Delete Selected Option Records"
+msgstr ""
+
 msgid "Delete Selected Options"
 msgstr "刪除選中的選項"
 
 msgid "Delete Selected Pools"
 msgstr "刪除選中的池"
+
+msgid "Delete Selected Port Records"
+msgstr ""
 
 msgid "Delete Selected Portal Groups"
 msgstr ""
@@ -2753,17 +2807,41 @@ msgstr "禁止固件升級"
 msgid "Disable Selected Auth Groups"
 msgstr ""
 
+msgid "Disable Selected CHAP Users"
+msgstr ""
+
 msgid "Disable Selected Commands"
 msgstr "禁用選中的命令"
+
+msgid "Disable Selected Initiator Names"
+msgstr ""
+
+msgid "Disable Selected Initiator Portals"
+msgstr ""
 
 msgid "Disable Selected Jobs"
 msgstr "禁止選中的任務"
 
+msgid "Disable Selected LUN Records"
+msgstr ""
+
 msgid "Disable Selected LUNs"
+msgstr ""
+
+msgid "Disable Selected Listen Records"
+msgstr ""
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Disable Selected Option Records"
 msgstr ""
 
 msgid "Disable Selected Options"
 msgstr "禁止選中的選項"
+
+msgid "Disable Selected Port Records"
+msgstr ""
 
 msgid "Disable Selected Portal Groups"
 msgstr ""
@@ -3028,10 +3106,19 @@ msgstr "是否要從選中的磁片創建條帶化虛擬設備？"
 msgid "Do you want to delete selected CARPs?"
 msgstr "您要刪除選中的CARP嗎？"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr ""
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "要刪除選中的LAGGs嗎？"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr ""
+
 msgid "Do you want to delete selected LUNs?"
+msgstr ""
+
+msgid "Do you want to delete selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to delete selected NFS shares?"
@@ -3070,17 +3157,32 @@ msgstr "是否要刪除所選的加密卷？"
 msgid "Do you want to delete selected groups?"
 msgstr "您要刪除所選的群組嗎？"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr ""
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "您要刪除所選的任務嗎？"
 
+msgid "Do you want to delete selected listen records?"
+msgstr ""
+
 msgid "Do you want to delete selected notifier?"
 msgstr "你想刪除選定的通知？"
+
+msgid "Do you want to delete selected option records?"
+msgstr ""
 
 msgid "Do you want to delete selected options?"
 msgstr "要刪除所選選項嗎？"
 
 msgid "Do you want to delete selected pools?"
 msgstr "要刪除所選池嗎？"
+
+msgid "Do you want to delete selected port records?"
+msgstr ""
 
 msgid "Do you want to delete selected portal groups?"
 msgstr ""
@@ -3121,7 +3223,16 @@ msgstr "要刪除所選卷嗎？"
 msgid "Do you want to delete this command?"
 msgstr "是否要刪除此命令？"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to disable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to disable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to disable selected auth groups?"
@@ -3130,11 +3241,26 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "您要禁用所選命令嗎？"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "您要禁用所選任務嗎？"
 
+msgid "Do you want to disable selected listen records?"
+msgstr ""
+
+msgid "Do you want to disable selected option records?"
+msgstr ""
+
 msgid "Do you want to disable selected options?"
 msgstr "要禁用所選選項嗎？"
+
+msgid "Do you want to disable selected port records?"
+msgstr ""
 
 msgid "Do you want to disable selected portal groups?"
 msgstr ""
@@ -3151,7 +3277,16 @@ msgstr "是否要禁用所選的rsync模組？"
 msgid "Do you want to disable selected targets?"
 msgstr ""
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected LUN records?"
+msgstr ""
+
 msgid "Do you want to enable selected LUNs?"
+msgstr ""
+
+msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3160,11 +3295,26 @@ msgstr ""
 msgid "Do you want to enable selected commands?"
 msgstr "是否要啟用所選命令？"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr ""
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to enable selected jobs?"
 msgstr "您要啟用所選任務嗎？"
 
+msgid "Do you want to enable selected listen records?"
+msgstr ""
+
+msgid "Do you want to enable selected option records?"
+msgstr ""
+
 msgid "Do you want to enable selected options?"
 msgstr "您要啟用所選選項嗎？"
+
+msgid "Do you want to enable selected port records?"
+msgstr ""
 
 msgid "Do you want to enable selected portal groups?"
 msgstr ""
@@ -3190,7 +3340,16 @@ msgstr "您要導入軟體RAID磁碟嗎？"
 msgid "Do you want to lock selected records?"
 msgstr "您要鎖定所選記錄嗎？"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr ""
+
 msgid "Do you want to toggle selected LUNs?"
+msgstr ""
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3199,11 +3358,26 @@ msgstr ""
 msgid "Do you want to toggle selected commands?"
 msgstr "是否要切換所選命令？"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr ""
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "要切換所選任務嗎？"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr ""
+
+msgid "Do you want to toggle selected option records?"
+msgstr ""
+
 msgid "Do you want to toggle selected options?"
 msgstr "要切換所選選項嗎？"
+
+msgid "Do you want to toggle selected port records?"
+msgstr ""
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr ""
@@ -3344,6 +3518,9 @@ msgstr "編輯網橋"
 msgid "Edit CARP"
 msgstr "編輯CARP"
 
+msgid "Edit CHAP User"
+msgstr ""
+
 msgid "Edit Dataset"
 msgstr "編輯數據集"
 
@@ -3359,14 +3536,29 @@ msgstr "編輯群組"
 msgid "Edit Host"
 msgstr "編輯主機資訊"
 
+msgid "Edit Initiator Name"
+msgstr ""
+
+msgid "Edit Initiator Portal"
+msgstr ""
+
 msgid "Edit LAGG"
 msgstr "編輯LAGG"
 
 msgid "Edit LUN"
 msgstr ""
 
+msgid "Edit LUN Record"
+msgstr ""
+
+msgid "Edit Listen Record"
+msgstr ""
+
 msgid "Edit MIB"
 msgstr "編輯MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr ""
 
 msgid "Edit NFS Share"
 msgstr "編輯NFS共用"
@@ -3374,8 +3566,14 @@ msgstr "編輯NFS共用"
 msgid "Edit Option"
 msgstr "編輯選項"
 
+msgid "Edit Option Record"
+msgstr ""
+
 msgid "Edit Pool"
 msgstr "編輯池"
+
+msgid "Edit Port Record"
+msgstr ""
 
 msgid "Edit Portal Group"
 msgstr ""
@@ -3544,17 +3742,41 @@ msgstr "啟用STARTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr ""
 
+msgid "Enable Selected CHAP Users"
+msgstr ""
+
 msgid "Enable Selected Commands"
 msgstr "啟用選中的命令"
+
+msgid "Enable Selected Initiator Names"
+msgstr ""
+
+msgid "Enable Selected Initiator Portals"
+msgstr ""
 
 msgid "Enable Selected Jobs"
 msgstr "啟用選中的任務"
 
+msgid "Enable Selected LUN Records"
+msgstr ""
+
 msgid "Enable Selected LUNs"
+msgstr ""
+
+msgid "Enable Selected Listen Records"
+msgstr ""
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Enable Selected Option Records"
 msgstr ""
 
 msgid "Enable Selected Options"
 msgstr "啟用選中的選項"
+
+msgid "Enable Selected Port Records"
+msgstr ""
 
 msgid "Enable Selected Portal Groups"
 msgstr ""
@@ -3886,9 +4108,6 @@ msgstr "如果要覆蓋默認端口，請輸入自定義端口號。 （默認�
 msgid "Enter a description"
 msgstr "輸入描述"
 
-msgid "Enter a description for your reference"
-msgstr "輸入說明供您參考"
-
 msgid "Enter a description for your reference."
 msgstr "輸入說明以供參考。"
 
@@ -3925,6 +4144,9 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "請輸入有效的 sysctl MIB 名稱。"
 
 msgid "Enter additional parameter"
+msgstr ""
+
+msgid "Enter an iSCSI initiator name."
 msgstr ""
 
 msgid "Enter comment for the share"
@@ -3967,6 +4189,9 @@ msgstr ""
 
 msgid "Enter name"
 msgstr "請輸入名稱"
+
+msgid "Enter passthrough device address bus:path:lun"
+msgstr ""
 
 msgid "Enter secret."
 msgstr ""
@@ -5037,6 +5262,33 @@ msgstr "啟動器組包含用於訪問目標的已授權啟動器名稱和網路
 msgid "Initiator Name"
 msgstr "啟動器名稱"
 
+msgid "Initiator Name is locked"
+msgstr ""
+
+msgid "Initiator Name is marked for deletion"
+msgstr ""
+
+msgid "Initiator Name is unlocked"
+msgstr ""
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr ""
+
+msgid "Initiator Portal is locked"
+msgstr ""
+
+msgid "Initiator Portal is marked for deletion"
+msgstr ""
+
+msgid "Initiator Portal is unlocked"
+msgstr ""
+
+msgid "Initiator Portals"
+msgstr ""
+
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
@@ -5349,6 +5601,15 @@ msgstr ""
 msgid "LUN number"
 msgstr ""
 
+msgid "LUN record is locked"
+msgstr ""
+
+msgid "LUN record is marked for deletion"
+msgstr ""
+
+msgid "LUN record is unlocked"
+msgstr ""
+
 msgid "LUNs"
 msgstr "LUNs"
 
@@ -5471,6 +5732,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "列出或導入池"
+
+msgid "Listen"
+msgstr ""
+
+msgid "Listen record is locked"
+msgstr ""
+
+msgid "Listen record is marked for deletion"
+msgstr ""
+
+msgid "Listen record is unlocked"
+msgstr ""
 
 msgid "Load"
 msgstr "載入"
@@ -6001,6 +6274,15 @@ msgstr "不可為空。"
 msgid "Mutual CHAP"
 msgstr "CHAP 相互驗證"
 
+msgid "Mutual CHAP User is locked"
+msgstr ""
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr ""
+
+msgid "Mutual CHAP User is unlocked"
+msgstr ""
+
 msgid "Mutual CHAP Users"
 msgstr "CHAP 相互驗證用戶"
 
@@ -6527,6 +6809,15 @@ msgstr "選項被保護"
 msgid "Option is unlocked"
 msgstr "選項被解鎖"
 
+msgid "Option record is locked"
+msgstr ""
+
+msgid "Option record is marked for deletion"
+msgstr ""
+
+msgid "Option record is unlocked"
+msgstr ""
+
 msgid "Optional"
 msgstr "可選的"
 
@@ -6538,6 +6829,9 @@ msgstr "選項"
 
 msgid "Origin"
 msgstr "來源"
+
+msgid "Orphaned"
+msgstr ""
 
 msgid "Others"
 msgstr "其他"
@@ -6694,6 +6988,9 @@ msgstr "直通- 不要更改ACL"
 
 msgid "Passthrough - Inherit all entries"
 msgstr "直通 - 繼承所有條目"
+
+msgid "Passthrough Address"
+msgstr ""
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr "直通-X - 在未指定情況下繼承除了“執行”以外的所有"
@@ -6980,6 +7277,15 @@ msgstr "TFTP服務的端口。 留空以使用默認端口。"
 msgid ""
 "Port of the remote syslog server. Leave blank to use the default port."
 msgstr "遠程系統日誌服務器的端口。 留空以使用默認端口。"
+
+msgid "Port record is locked"
+msgstr ""
+
+msgid "Port record is marked for deletion"
+msgstr ""
+
+msgid "Port record is unlocked"
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7425,6 +7731,9 @@ msgstr "相對濕度高閾值（百分比）"
 msgid "Release Notes"
 msgstr "發行說明"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "重新加載頁面"
 
@@ -7569,6 +7878,9 @@ msgstr "資源被解鎖"
 
 msgid "Resources"
 msgstr "資源"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "恢復"
@@ -7948,6 +8260,9 @@ msgstr "選擇要使用的加密演算法。"
 msgid "Select at which stage the command should be executed."
 msgstr "選擇命令應在哪個階段執行。"
 
+msgid "Select auth groups."
+msgstr ""
+
 msgid "Select configuration file:"
 msgstr "選擇配置文件："
 
@@ -7971,11 +8286,20 @@ msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr "為未格式化的磁片選擇“未格式化”選項，並用右邊的工具格式化它們:"
 
+msgid "Select portal groups."
+msgstr ""
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "選擇檔的預分配模式。 （默認為快速）。"
 
 msgid "Select read balance algorithm."
 msgstr "選擇讀取平衡演算法。"
+
+msgid "Select target groups."
+msgstr ""
+
+msgid "Select targets."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "請選擇要安裝的 FreeBSD 套件。"
@@ -8909,6 +9233,9 @@ msgstr "目標地址"
 msgid "Target Alias"
 msgstr "目標別名"
 
+msgid "Target Group"
+msgstr ""
+
 msgid "Target Name"
 msgstr "目標名稱"
 
@@ -9023,9 +9350,6 @@ msgstr "LAGG協議無效。"
 
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP地址將被重置為"
-
-msgid "The LUN size, in bytes."
-msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -9684,6 +10008,9 @@ msgstr "配置成功恢復後，服務器將重新啟動。"
 msgid "The share name is already used."
 msgstr "此分享區名稱已被使用。"
 
+msgid "The size of the LUN."
+msgstr ""
+
 msgid "The size of the swap file in MB."
 msgstr "交換檔的大小（MB）。"
 
@@ -10306,17 +10633,41 @@ msgstr "切換模式"
 msgid "Toggle Selected Auth Groups"
 msgstr ""
 
+msgid "Toggle Selected CHAP Users"
+msgstr ""
+
 msgid "Toggle Selected Commands"
 msgstr "切換所選命令"
+
+msgid "Toggle Selected Initiator Names"
+msgstr ""
+
+msgid "Toggle Selected Initiator Portals"
+msgstr ""
 
 msgid "Toggle Selected Jobs"
 msgstr "切換所選任務"
 
+msgid "Toggle Selected LUN Records"
+msgstr ""
+
 msgid "Toggle Selected LUNs"
+msgstr ""
+
+msgid "Toggle Selected Listen Records"
+msgstr ""
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr ""
+
+msgid "Toggle Selected Option Records"
 msgstr ""
 
 msgid "Toggle Selected Options"
 msgstr "切換所選選項"
+
+msgid "Toggle Selected Port Records"
+msgstr ""
 
 msgid "Toggle Selected Portal Groups"
 msgstr ""
@@ -11574,3 +11925,6 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可見"
+
+#~ msgid "Enter a description for your reference"
+#~ msgstr "輸入說明供您參考"

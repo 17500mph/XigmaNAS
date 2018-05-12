@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-03 23:00+0000\n"
-"PO-Revision-Date: 2018-04-29 08:10+0000\n"
+"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"PO-Revision-Date: 2018-05-08 03:58+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-03 21:29+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -195,13 +195,13 @@ msgid "1.8\""
 msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 eller fler diskar behövs för att skapa en RAID-0 volym."
@@ -222,10 +222,10 @@ msgid "3.5\""
 msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KB paket"
@@ -234,19 +234,19 @@ msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Byte"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etikett (mellan 1 och 4094)."
@@ -503,6 +503,9 @@ msgstr "Lägg till brygga"
 msgid "Add CARP"
 msgstr "Lägg till CARP"
 
+msgid "Add CHAP User"
+msgstr "Lägg till CHAP användare"
+
 msgid "Add Dataset"
 msgstr "Lägg till Dataset"
 
@@ -518,14 +521,29 @@ msgstr "Lägg till grupp"
 msgid "Add Host"
 msgstr "Lägg till värd"
 
+msgid "Add Initiator Name"
+msgstr "Lägg till Initierarnamn"
+
+msgid "Add Initiator Portal"
+msgstr "Lägg till Initierarportal"
+
 msgid "Add LAGG"
 msgstr "Lägg till LAGG"
 
 msgid "Add LUN"
 msgstr "Lägg till LUN"
 
+msgid "Add LUN Record"
+msgstr "Lägg till LUN post"
+
+msgid "Add Listen Record"
+msgstr "Lägg till Lyssnarpost"
+
 msgid "Add MIB"
 msgstr "Lägg till MIB"
+
+msgid "Add Mutual CHAP User"
+msgstr "Lägg till gemensam CHAP användare"
 
 msgid "Add NFS Share"
 msgstr "Lägg till NFS utdelning"
@@ -533,8 +551,14 @@ msgstr "Lägg till NFS utdelning"
 msgid "Add Option"
 msgstr "Lägg till Alternativ"
 
+msgid "Add Option Record"
+msgstr "Lägg till Optionspost"
+
 msgid "Add Pool"
 msgstr "Lägg till pool"
+
+msgid "Add Port Record"
+msgstr "Lägg till Portalpost"
 
 msgid "Add Portal Group"
 msgstr "Lägg till portalgrupp"
@@ -920,13 +944,14 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "En utökning definierar lagringsarean på målet."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
+msgstr "En IPv4 eller IPv6 adress till en iSCSI initierarportal."
 
 msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr "En IPv4 eller IPv6 adress till iSNS servern att registrera på."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
+"En IPv4 eller IPv6 adress att lyssna \tpå efter inkommande\tanslutningar."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -957,9 +982,6 @@ msgstr "Ett fel inträffade."
 
 msgid "An host with this name already exists."
 msgstr "En värd med det här namnet finns redan."
-
-msgid "An iSCSI initiator name."
-msgstr ""
 
 msgid "An interface with the specified description already exists."
 msgstr "Ett gränssnitt med den angivna beskrivningen finns redan."
@@ -1053,7 +1075,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Är du säker att du vill stänga av servern?"
 
 msgid "Assign a human-readable description to the target."
-msgstr ""
+msgstr "Sätt en lättförståelig beskrivning för målet."
 
 msgid ""
 "Assign a previously defined authentication group to the portal group, to be "
@@ -1063,10 +1085,10 @@ msgstr ""
 "användas för målsökning."
 
 msgid "Assign a previously defined authentication group to the target."
-msgstr ""
+msgstr "Knyt en tidigare definierad autentiseringsgrupp till målet."
 
 msgid "Assign a previously defined portal group to the target."
-msgstr ""
+msgstr "Knyt en tidigare definierad portalgrupp till målet."
 
 msgid "Asynchronous I/O"
 msgstr "Asynkron I/O"
@@ -1519,6 +1541,15 @@ msgstr "ÄNDRAD"
 
 msgid "CHAP"
 msgstr "CHAP"
+
+msgid "CHAP User is locked"
+msgstr "CHAP användare är blockerad"
+
+msgid "CHAP User is marked for deletion"
+msgstr "CHAP användare är markerad för borttagning"
+
+msgid "CHAP User is unlocked"
+msgstr "CHAP användare är olåst"
 
 msgid "CHAP Users"
 msgstr "CHAP Användare"
@@ -2578,6 +2609,9 @@ msgstr "Ta bort valda Bryggor"
 msgid "Delete Selected CARPs"
 msgstr "Ta bort valda CARP:ar"
 
+msgid "Delete Selected CHAP Users"
+msgstr "Ta bort valda CHAP användare"
+
 msgid "Delete Selected Commands"
 msgstr "Ta bort valda kommandon"
 
@@ -2593,14 +2627,29 @@ msgstr "Ta bort valda krypterade volymer"
 msgid "Delete Selected Groups"
 msgstr "Ta bort valda grupper"
 
+msgid "Delete Selected Initiator Names"
+msgstr "Ta bort valda Initiatornamn"
+
+msgid "Delete Selected Initiator Portals"
+msgstr "Ta bort valda Intierarportaler"
+
 msgid "Delete Selected Jobs"
 msgstr "Ta bort valda jobb"
 
 msgid "Delete Selected LAGGs"
 msgstr "Ta bort valda LAGG:ar"
 
+msgid "Delete Selected LUN Records"
+msgstr "Ta bort valda LUN poster"
+
 msgid "Delete Selected LUNs"
 msgstr "Ta bort valda LUN"
+
+msgid "Delete Selected Listen Records"
+msgstr "Ta bort valda lyssnarposter"
+
+msgid "Delete Selected Mutual CHAP Users"
+msgstr "Ta bort valda gemensamma CHAP användare"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Ta bort valda NFS utdelningar"
@@ -2608,11 +2657,17 @@ msgstr "Ta bort valda NFS utdelningar"
 msgid "Delete Selected Notifier"
 msgstr "Ta bort vald meddelare"
 
+msgid "Delete Selected Option Records"
+msgstr "Ta bort valda Optionsposter"
+
 msgid "Delete Selected Options"
 msgstr "Ta bort valda optioner"
 
 msgid "Delete Selected Pools"
 msgstr "Ta bort valda Pooler"
+
+msgid "Delete Selected Port Records"
+msgstr "Ta bort valda Portposter"
 
 msgid "Delete Selected Portal Groups"
 msgstr "Ta bort valda portalgrupper"
@@ -2940,17 +2995,41 @@ msgstr "Inaktivera uppgradering av systemmjukvaran"
 msgid "Disable Selected Auth Groups"
 msgstr "Inaktivera valdaautentiseringsgrupper"
 
+msgid "Disable Selected CHAP Users"
+msgstr "Inaktivera valda CHAP användare"
+
 msgid "Disable Selected Commands"
 msgstr "Inaktivera valda kommandon"
+
+msgid "Disable Selected Initiator Names"
+msgstr "Inaktivera valda Initierarnamn"
+
+msgid "Disable Selected Initiator Portals"
+msgstr "Inaktivera valda Initierarportaler"
 
 msgid "Disable Selected Jobs"
 msgstr "Inaktivera valda jobb"
 
+msgid "Disable Selected LUN Records"
+msgstr "Inaktivera valda LUN poster"
+
 msgid "Disable Selected LUNs"
 msgstr "Inaktivera valda LUN"
 
+msgid "Disable Selected Listen Records"
+msgstr "Inaktivera valda lyssnarposter"
+
+msgid "Disable Selected Mutual CHAP Users"
+msgstr "Inaktivera valda gemensamma CHAP användare"
+
+msgid "Disable Selected Option Records"
+msgstr "Inaktivera valda optionsposter"
+
 msgid "Disable Selected Options"
 msgstr "Inaktivera valda optioner"
+
+msgid "Disable Selected Port Records"
+msgstr "Inaktivera valda Portposter"
 
 msgid "Disable Selected Portal Groups"
 msgstr "Inaktivera valda portalgrupper"
@@ -3235,11 +3314,20 @@ msgstr "Vill du skapa en strimlad virtuell enhet från valda diskar?"
 msgid "Do you want to delete selected CARPs?"
 msgstr "Vill du ta bort valda CARP:ar?"
 
+msgid "Do you want to delete selected CHAP users?"
+msgstr "Vill du ta bort valda CHAP användare?"
+
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Vill du ta bort valda LAGG:ar?"
 
+msgid "Do you want to delete selected LUN records?"
+msgstr "Vill du ta bort valda LUN poster?"
+
 msgid "Do you want to delete selected LUNs?"
 msgstr "Vill du ta bort valda LUN?"
+
+msgid "Do you want to delete selected Mutual CHAP users?"
+msgstr "Vill du ta bort valda gemensamma CHAP användare?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Vill du ta bort valda NFS utdelningar?"
@@ -3277,17 +3365,32 @@ msgstr "Vill du ta bort valda krypterade volymer?"
 msgid "Do you want to delete selected groups?"
 msgstr "Vill du ta bort valda grupper?"
 
+msgid "Do you want to delete selected initiator names?"
+msgstr "Vill du ta bort valda Initierarnamn?"
+
+msgid "Do you want to delete selected initiator portals?"
+msgstr "Vill du ta bort valda Initierarportaler?"
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Vill du radera valda jobb?"
 
+msgid "Do you want to delete selected listen records?"
+msgstr "Vill du ta bort valda lyssnarposter?"
+
 msgid "Do you want to delete selected notifier?"
 msgstr "Vill du ta bort vald meddelare?"
+
+msgid "Do you want to delete selected option records?"
+msgstr "Vill du ta bort valda optionsposter?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Vill du ta bort valda optioner?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Vill du ta bort valda pooler?"
+
+msgid "Do you want to delete selected port records?"
+msgstr "Vill du ta bort valda portposter?"
 
 msgid "Do you want to delete selected portal groups?"
 msgstr "Vill du ta bort valda portalgrupper?"
@@ -3328,8 +3431,17 @@ msgstr "Vill du ta bort valda volymer?"
 msgid "Do you want to delete this command?"
 msgstr "Vill du ta bort detta kommando?"
 
+msgid "Do you want to disable selected CHAP users?"
+msgstr "Vill du inaktivera valda CHAP användare?"
+
+msgid "Do you want to disable selected LUN records?"
+msgstr "Vill du inaktivera valda LUN poster?"
+
 msgid "Do you want to disable selected LUNs?"
 msgstr "Vill du ta bort valda LUN?"
+
+msgid "Do you want to disable selected Mutual CHAP users?"
+msgstr "Vill du inaktivera valda gemensamma CHAP användare?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Vill du inaktivera valda autentiseringsgrupper?"
@@ -3337,11 +3449,26 @@ msgstr "Vill du inaktivera valda autentiseringsgrupper?"
 msgid "Do you want to disable selected commands?"
 msgstr "Vill du inaktivera valda kommandon?"
 
+msgid "Do you want to disable selected initiator names?"
+msgstr "Vill du inaktivera valda Initierarnamn?"
+
+msgid "Do you want to disable selected initiator portals?"
+msgstr "Vill du inaktivera valda Initierarportaler?"
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Vill du inaktivera valda jobb?"
 
+msgid "Do you want to disable selected listen records?"
+msgstr "Vill du inaktivera valda lyssnarposter?"
+
+msgid "Do you want to disable selected option records?"
+msgstr "Vill du inaktivera valda optionsposter?"
+
 msgid "Do you want to disable selected options?"
 msgstr "Vill du inaktivera valda optioner?"
+
+msgid "Do you want to disable selected port records?"
+msgstr "Vill du inaktivera valda portalposter?"
 
 msgid "Do you want to disable selected portal groups?"
 msgstr "Vill du inaktivera valda portalgrupper?"
@@ -3358,8 +3485,17 @@ msgstr "Vill du inaktivera valda rsync moduler?"
 msgid "Do you want to disable selected targets?"
 msgstr "Vill du inaktivera valda mål?"
 
+msgid "Do you want to enable selected CHAP users?"
+msgstr "Vill du aktivera valda CHAP användare?"
+
+msgid "Do you want to enable selected LUN records?"
+msgstr "Vill du aktivera valda LUN poster?"
+
 msgid "Do you want to enable selected LUNs?"
 msgstr "Vill du inaktivera valda LUN?"
+
+msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr "Vill du aktivera valda gemensamma CHAP användare?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Vill du aktivera valda autentiseringsgrupper?"
@@ -3367,11 +3503,26 @@ msgstr "Vill du aktivera valda autentiseringsgrupper?"
 msgid "Do you want to enable selected commands?"
 msgstr "Vill du aktivera valda kommandon?"
 
+msgid "Do you want to enable selected initiator names?"
+msgstr "Vill du aktivera valda Initerarnamn?"
+
+msgid "Do you want to enable selected initiator portals?"
+msgstr "Vill du aktivera valda Initierarportaler?"
+
 msgid "Do you want to enable selected jobs?"
 msgstr "Vill du aktivera valda jobb?"
 
+msgid "Do you want to enable selected listen records?"
+msgstr "Vill du aktivera valda lyssnarposter?"
+
+msgid "Do you want to enable selected option records?"
+msgstr "Vill du aktivera valda optionsposter?"
+
 msgid "Do you want to enable selected options?"
 msgstr "Vill du aktivera valda optioner?"
+
+msgid "Do you want to enable selected port records?"
+msgstr "Vill du aktivera valda portposter?"
 
 msgid "Do you want to enable selected portal groups?"
 msgstr "Vill du aktivera valda portalgrupper?"
@@ -3397,8 +3548,17 @@ msgstr "Vill du importera mjukvaru RAID diskar?"
 msgid "Do you want to lock selected records?"
 msgstr "Vill du låsa valda poster?"
 
+msgid "Do you want to toggle selected CHAP users?"
+msgstr "Vill du växla valda CHAP användare?"
+
+msgid "Do you want to toggle selected LUN records?"
+msgstr "Vill du växla valda LUN poster?"
+
 msgid "Do you want to toggle selected LUNs?"
 msgstr "Vill du växla valda LUN?"
+
+msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr "Vill du växla valda gemensamma CHAP användare?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Vill du växla valda autentiseringsgrupper?"
@@ -3406,11 +3566,26 @@ msgstr "Vill du växla valda autentiseringsgrupper?"
 msgid "Do you want to toggle selected commands?"
 msgstr "Vill du växla valda kommandon?"
 
+msgid "Do you want to toggle selected initiator names?"
+msgstr "Vill du växla valda Initierarnamn?"
+
+msgid "Do you want to toggle selected initiator portals?"
+msgstr "Vill du växla valda Initierarportaler?"
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Vill du ändra status på valda jobb?"
 
+msgid "Do you want to toggle selected listen records?"
+msgstr "Vill du växla valda lyssnarposter?"
+
+msgid "Do you want to toggle selected option records?"
+msgstr "Vill du växla valda optionsposter?"
+
 msgid "Do you want to toggle selected options?"
 msgstr "Vill du ändra status på valda optioner?"
+
+msgid "Do you want to toggle selected port records?"
+msgstr "Vill du växla valda portposter?"
 
 msgid "Do you want to toggle selected portal groups?"
 msgstr "Vill du växla valda portalgrupper?"
@@ -3552,6 +3727,9 @@ msgstr "Ändra Brygga"
 msgid "Edit CARP"
 msgstr "Ändra CARP"
 
+msgid "Edit CHAP User"
+msgstr "Redigera CHAP användare"
+
 msgid "Edit Dataset"
 msgstr "Ändra Dataset"
 
@@ -3567,14 +3745,29 @@ msgstr "Redigera grupp"
 msgid "Edit Host"
 msgstr "Redigera värd"
 
+msgid "Edit Initiator Name"
+msgstr "Redigera Initierarnamn"
+
+msgid "Edit Initiator Portal"
+msgstr "Redigera Initierarportal"
+
 msgid "Edit LAGG"
 msgstr "Ändra LAGG"
 
 msgid "Edit LUN"
 msgstr "Editera LUN"
 
+msgid "Edit LUN Record"
+msgstr "Redigera LUN post"
+
+msgid "Edit Listen Record"
+msgstr "Redigera lyssnarpost"
+
 msgid "Edit MIB"
 msgstr "Redigera MIB"
+
+msgid "Edit Mutual CHAP User"
+msgstr "Redigera gemensamma CHAP användare"
 
 msgid "Edit NFS Share"
 msgstr "Ändra NFS utdelning"
@@ -3582,8 +3775,14 @@ msgstr "Ändra NFS utdelning"
 msgid "Edit Option"
 msgstr "Redigera Alternativ"
 
+msgid "Edit Option Record"
+msgstr "Redigera optionspost"
+
 msgid "Edit Pool"
 msgstr "Ändra Pool"
+
+msgid "Edit Port Record"
+msgstr "Redigera portpost"
 
 msgid "Edit Portal Group"
 msgstr "Editera Portalgruppen"
@@ -3756,17 +3955,41 @@ msgstr "Aktivera STARTTLS"
 msgid "Enable Selected Auth Groups"
 msgstr "Aktivera valda autentiseringsgrupper"
 
+msgid "Enable Selected CHAP Users"
+msgstr "Aktivera valda CHAP användare"
+
 msgid "Enable Selected Commands"
 msgstr "Aktivera valda kommandon"
+
+msgid "Enable Selected Initiator Names"
+msgstr "Aktivera valda Initierarnamn"
+
+msgid "Enable Selected Initiator Portals"
+msgstr "Aktivera valda Initierarportaler"
 
 msgid "Enable Selected Jobs"
 msgstr "Aktivera valda jobb"
 
+msgid "Enable Selected LUN Records"
+msgstr "Aktivera valda LUN poster"
+
 msgid "Enable Selected LUNs"
 msgstr "Aktivera valda LUN"
 
+msgid "Enable Selected Listen Records"
+msgstr "Aktivera valda lyssnarposter"
+
+msgid "Enable Selected Mutual CHAP Users"
+msgstr "Aktivera valda gemensamma CHAP användare"
+
+msgid "Enable Selected Option Records"
+msgstr "Aktivera valda optionsposter"
+
 msgid "Enable Selected Options"
 msgstr "Aktivera valda optioner"
+
+msgid "Enable Selected Port Records"
+msgstr "Aktivera valda portposter"
 
 msgid "Enable Selected Portal Groups"
 msgstr "Aktivera valda portalgrupper"
@@ -4075,7 +4298,7 @@ msgid "Enter IP Address"
 msgstr "Mata in IP adress"
 
 msgid "Enter IP address prefix length."
-msgstr ""
+msgstr "Mata in IP adress förledslängd."
 
 msgid "Enter Identifier"
 msgstr "Mata in identifierare"
@@ -4122,9 +4345,6 @@ msgstr ""
 msgid "Enter a description"
 msgstr "Ange en beskrivning"
 
-msgid "Enter a description for your reference"
-msgstr "Mata in en beskrivning"
-
 msgid "Enter a description for your reference."
 msgstr "Mata in en beskrivning för din referens."
 
@@ -4165,6 +4385,9 @@ msgstr "Mata in ett giltigt sysctl MIB namn."
 msgid "Enter additional parameter"
 msgstr "Mata in extra parametrar"
 
+msgid "Enter an iSCSI initiator name."
+msgstr "Mata in ett iSCSI initierarnamn."
+
 msgid "Enter comment for the share"
 msgstr "Mata in en kommentar för utdelningen"
 
@@ -4203,13 +4426,16 @@ msgid "Enter login name of the user."
 msgstr "Mata in inloggningsnamnet för användaren."
 
 msgid "Enter mutual user name."
-msgstr ""
+msgstr "Mata in ett ömsesidigt användarnamn."
 
 msgid "Enter name"
 msgstr "Ange namn"
 
+msgid "Enter passthrough device address bus:path:lun"
+msgstr "Mata in \"passthrough\"-enhetens adress bus:path:lun"
+
 msgid "Enter secret."
-msgstr ""
+msgstr "Mata in hemlighet."
 
 msgid "Enter smartctl pass-through type."
 msgstr "Mata in smartctr vidarebefodranstyp."
@@ -4275,7 +4501,7 @@ msgid "Enter trap host name."
 msgstr "Skriv in \"fällans\" värdnamn."
 
 msgid "Enter user name."
-msgstr ""
+msgstr "Mata in användarnamn."
 
 msgid "Enter value"
 msgstr "Ange värde"
@@ -5024,7 +5250,7 @@ msgid "IP Address"
 msgstr "IP adress"
 
 msgid "IP Address Prefix"
-msgstr ""
+msgstr "IP adressförled."
 
 msgid "IP address"
 msgstr "IP-adress"
@@ -5069,6 +5295,9 @@ msgid ""
 "initiators attempting to connect to this target will get redirected using "
 "\"Target moved temporarily\" login response."
 msgstr ""
+"IPv4 eller IPv6 adress att omdirigera initierare till. När denna är satt "
+"kommer alla initerares försök att ansluta till detta mål omdirigeras med "
+"\"Target moved temporarily\" inloggningshantering."
 
 msgid "IPv6 Address"
 msgstr "IPv6-adress"
@@ -5350,6 +5579,33 @@ msgstr ""
 
 msgid "Initiator Name"
 msgstr "Initiatornamn"
+
+msgid "Initiator Name is locked"
+msgstr "Initierarnamnet är låst"
+
+msgid "Initiator Name is marked for deletion"
+msgstr "Initierarnamnet är markerat för borttagning"
+
+msgid "Initiator Name is unlocked"
+msgstr "Initierarnamnet är olåst"
+
+msgid "Initiator Names"
+msgstr ""
+
+msgid "Initiator Portal"
+msgstr "Initierarportal"
+
+msgid "Initiator Portal is locked"
+msgstr "Intierarportalen är låst"
+
+msgid "Initiator Portal is marked for deletion"
+msgstr "Initierarportalen är markerad för borttagning"
+
+msgid "Initiator Portal is unlocked"
+msgstr "Initieraportalen äe olåst"
+
+msgid "Initiator Portals"
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -5657,7 +5913,7 @@ msgid "LUN Name"
 msgstr "LUN Namn"
 
 msgid "LUN Number"
-msgstr ""
+msgstr "LUN nummer"
 
 msgid "LUN Product"
 msgstr "LUN Produkt"
@@ -5681,7 +5937,16 @@ msgid "LUN is unlocked"
 msgstr "LUN är olåst"
 
 msgid "LUN number"
-msgstr ""
+msgstr "LUN nummer"
+
+msgid "LUN record is locked"
+msgstr "LUN posten är låst"
+
+msgid "LUN record is marked for deletion"
+msgstr "LUN posten är markerad för borttagning"
+
+msgid "LUN record is unlocked"
+msgstr "LUN posten är olåst"
 
 msgid "LUNs"
 msgstr "LUNs"
@@ -5805,6 +6070,18 @@ msgstr ""
 
 msgid "List or import pools"
 msgstr "Lista eller importera pooler"
+
+msgid "Listen"
+msgstr "Lyssna"
+
+msgid "Listen record is locked"
+msgstr "Lyssnarposten är låst"
+
+msgid "Listen record is marked for deletion"
+msgstr "Lyssnarposten är markerad för borttagning"
+
+msgid "Listen record is unlocked"
+msgstr "Lyssnarposten är olåst"
 
 msgid "Load"
 msgstr "Belastning"
@@ -6346,14 +6623,23 @@ msgstr "Får inte vara tomt."
 msgid "Mutual CHAP"
 msgstr "Gemensam CHAP"
 
+msgid "Mutual CHAP User is locked"
+msgstr "Gemensam VHAP användare är låst"
+
+msgid "Mutual CHAP User is marked for deletion"
+msgstr "Gemensam VHAP användare markerad för borttagning"
+
+msgid "Mutual CHAP User is unlocked"
+msgstr "Gemensam VHAP användare är olåst"
+
 msgid "Mutual CHAP Users"
 msgstr "Gemensamma CHAP-användare"
 
 msgid "Mutual Secret"
-msgstr ""
+msgstr "Gemensam hemlighet"
 
 msgid "Mutual User"
-msgstr ""
+msgstr "Gemensam användare"
 
 msgid "NAA Identifier"
 msgstr "NAA Identifierare"
@@ -6431,10 +6717,10 @@ msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "Namn på enheten som ska användas som växlingsenhet, t.ex. %s."
 
 msgid "Name of the option."
-msgstr ""
+msgstr "Namn på optionen."
 
 msgid "Name of the port."
-msgstr ""
+msgstr "Namn på porten."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
@@ -6877,10 +7163,10 @@ msgid "Option"
 msgstr "Alternativ"
 
 msgid "Option Name"
-msgstr ""
+msgstr "Optionsnamn"
 
 msgid "Option Value"
-msgstr ""
+msgstr "Värde på optionen"
 
 msgid "Option is locked"
 msgstr "Optionen är låst"
@@ -6894,6 +7180,15 @@ msgstr "Alternativet är skyddat"
 msgid "Option is unlocked"
 msgstr "Alternativet är olåst"
 
+msgid "Option record is locked"
+msgstr "Optionspost är låst"
+
+msgid "Option record is marked for deletion"
+msgstr "Optionspost är markerad för borttagning"
+
+msgid "Option record is unlocked"
+msgstr "Optionspost är olåst"
+
 msgid "Optional"
 msgstr "Valfri"
 
@@ -6905,6 +7200,9 @@ msgstr "Alternativ"
 
 msgid "Origin"
 msgstr "Ursprung"
+
+msgid "Orphaned"
+msgstr "Föräldralös"
 
 msgid "Others"
 msgstr "Övriga"
@@ -7070,6 +7368,9 @@ msgstr "Passthrough - Ändra inte ACL"
 msgid "Passthrough - Inherit all entries"
 msgstr "Passthrougth - Ärv alla egenskaper"
 
+msgid "Passthrough Address"
+msgstr "\"passthrough\"-adress"
+
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 "Passthrougth - Ärv alla egenskaper utom \"kör\" när inget annat anges"
@@ -7168,7 +7469,7 @@ msgid "Permit Root Login"
 msgstr "Tillåt rootinloggning"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Tillåt åtkomt utan autentisering"
 
 msgid "Permit discovery without authentication"
 msgstr "Tillåt sökning utan autentisering"
@@ -7336,7 +7637,7 @@ msgid "Port Forwarding"
 msgstr "Vidarebefordring av portar"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Portnamn"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Portnummer måste vara 514 eller ett nummer mellan 1024 och 49151."
@@ -7359,6 +7660,15 @@ msgid ""
 msgstr ""
 "Port på den externa syslogservern. Lämna blankt för att använda "
 "standardporten."
+
+msgid "Port record is locked"
+msgstr "Portpost är låst"
+
+msgid "Port record is marked for deletion"
+msgstr "Portpost är markerad för borttagning"
+
+msgid "Port record is unlocked"
+msgstr "Portpost är olåst"
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7820,6 +8130,9 @@ msgstr "Gränsvärde relativ luftfuktighet (%)"
 msgid "Release Notes"
 msgstr "Versionsinformation"
 
+msgid "Reload"
+msgstr ""
+
 msgid "Reload Page"
 msgstr "Ladda om sidan"
 
@@ -7970,6 +8283,9 @@ msgstr "Resursen är olåst"
 
 msgid "Resources"
 msgstr "Resurser"
+
+msgid "Restart"
+msgstr ""
 
 msgid "Restore"
 msgstr "Återskapa"
@@ -8365,6 +8681,9 @@ msgstr "Välj en krypteringsalgoritm att använda."
 msgid "Select at which stage the command should be executed."
 msgstr "Välj i vilket steg kommandot skall köras."
 
+msgid "Select auth groups."
+msgstr "Välj autentiseringsgrupper."
+
 msgid "Select configuration file:"
 msgstr "Välj konfigurationsfil:"
 
@@ -8390,11 +8709,20 @@ msgid ""
 msgstr ""
 "Välj alternativet 'Oformaterad' för oformaterade diskar och formatera dem med"
 
+msgid "Select portal groups."
+msgstr "Välj portalgrupper."
+
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr "Välj förallokeringsläge för filer. (Standard är Snabb)."
 
 msgid "Select read balance algorithm."
 msgstr "Välj läsbalanseringsalgoritm"
+
+msgid "Select target groups."
+msgstr "Välj målgrupper."
+
+msgid "Select targets."
+msgstr "Välj mål."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Välj FreeBSD-paket som ska installeras."
@@ -9408,6 +9736,9 @@ msgstr "Måladress"
 msgid "Target Alias"
 msgstr "Målalias"
 
+msgid "Target Group"
+msgstr "Målgrupp"
+
 msgid "Target Name"
 msgstr "Målnamn"
 
@@ -9528,9 +9859,6 @@ msgstr "LAGG protokollet är felaktigt."
 
 msgid "The LAN IP address will be reset to"
 msgstr "Nätverkets IP-adress kommer också återställas"
-
-msgid "The LUN size, in bytes."
-msgstr "LUN storleken i byte."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -10216,7 +10544,7 @@ msgstr ""
 "delning som kan användas flexibelt av varje användare."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "Port att lyssna på."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10284,6 +10612,9 @@ msgstr "Servern kommer startas om efter att konfigurationen återställts."
 
 msgid "The share name is already used."
 msgstr "Namnet på delningen är redan använt."
+
+msgid "The size of the LUN."
+msgstr ""
 
 msgid "The size of the swap file in MB."
 msgstr "Storleken på växlingsfilen i MB."
@@ -11034,17 +11365,41 @@ msgstr "Växla läge"
 msgid "Toggle Selected Auth Groups"
 msgstr "Växla valda autentiseringsgrupper"
 
+msgid "Toggle Selected CHAP Users"
+msgstr "Växla valda CHAP användare"
+
 msgid "Toggle Selected Commands"
 msgstr "Växla valda kommandon"
+
+msgid "Toggle Selected Initiator Names"
+msgstr "Växla valda Initerarnamn"
+
+msgid "Toggle Selected Initiator Portals"
+msgstr "Växla valda Initierarportaler"
 
 msgid "Toggle Selected Jobs"
 msgstr "Ändra status på valda jobb"
 
+msgid "Toggle Selected LUN Records"
+msgstr "Växla valda LUN poster"
+
 msgid "Toggle Selected LUNs"
 msgstr "Växla valda LUN"
 
+msgid "Toggle Selected Listen Records"
+msgstr "Växla valda lyssnarposter"
+
+msgid "Toggle Selected Mutual CHAP Users"
+msgstr "Växla valda gemensamma CHAP användare"
+
+msgid "Toggle Selected Option Records"
+msgstr "Växla valda Optionsposter"
+
 msgid "Toggle Selected Options"
 msgstr "Ändra status på valda optioner"
+
+msgid "Toggle Selected Port Records"
+msgstr "Växla valda portposter"
 
 msgid "Toggle Selected Portal Groups"
 msgstr "Växla valda portalgrupper"
@@ -11727,7 +12082,7 @@ msgstr ""
 "minimigräns som motsvarar en maximal temperatur."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "Värde på optionen."
 
 msgid "Variable"
 msgstr "Variabel"
@@ -12388,23 +12743,8 @@ msgstr "använt av"
 msgid "visible"
 msgstr "synlig"
 
-#~ msgid "2048"
-#~ msgstr "2048"
+#~ msgid "Enter a description for your reference"
+#~ msgstr "Mata in en beskrivning"
 
-#~ msgid "4096"
-#~ msgstr "4096"
-
-#~ msgid "512"
-#~ msgstr "512"
-
-#~ msgid "8192"
-#~ msgstr "8192"
-
-#~ msgid "Enter user name"
-#~ msgstr "Mata in användarnamn"
-
-#~ msgid "Enter secret"
-#~ msgstr "Mata in hemlighet"
-
-#~ msgid "Seconfary"
-#~ msgstr "Sekundär"
+#~ msgid "The LUN size, in bytes."
+#~ msgstr "LUN storleken i byte."
