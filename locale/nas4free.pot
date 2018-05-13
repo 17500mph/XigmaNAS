@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"POT-Creation-Date: 2018-05-14 00:12+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -558,6 +558,9 @@ msgstr ""
 msgid "Add extent"
 msgstr ""
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr ""
 
@@ -809,9 +812,6 @@ msgid "An Extent defines the storage area of the Target."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
@@ -2303,6 +2303,9 @@ msgstr ""
 msgid "Delete Selected WLANs"
 msgstr ""
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr ""
 
@@ -2609,6 +2612,9 @@ msgstr ""
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2890,6 +2896,9 @@ msgstr ""
 msgid "Do you want to delete selected groups?"
 msgstr ""
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -2974,6 +2983,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr ""
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3026,6 +3038,9 @@ msgid "Do you want to enable selected auth groups?"
 msgstr ""
 
 msgid "Do you want to enable selected commands?"
+msgstr ""
+
+msgid "Do you want to enable selected iSNS servers?"
 msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
@@ -3089,6 +3104,9 @@ msgid "Do you want to toggle selected auth groups?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
+msgstr ""
+
+msgid "Do you want to toggle selected iSNS servers?"
 msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
@@ -3373,6 +3391,9 @@ msgstr ""
 msgid "Edit extent"
 msgstr ""
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr ""
 
@@ -3518,6 +3539,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -4666,6 +4690,9 @@ msgid "IPv4 Settings"
 msgstr ""
 
 msgid "IPv4 addresses"
+msgstr ""
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
 msgstr ""
 
 msgid "IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to portal belonging to this portal-group will get redirected using \"Target moved temporarily\" login response."
@@ -6798,7 +6825,7 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -9830,6 +9857,9 @@ msgstr ""
 msgid "Toggle Selected Targets"
 msgstr ""
 
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -10888,7 +10918,16 @@ msgstr ""
 msgid "iSNS Server"
 msgstr ""
 
-msgid "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
 msgstr ""
 
 msgid "iSNS Timeout"
