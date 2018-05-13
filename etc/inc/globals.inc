@@ -55,7 +55,7 @@ $g = [
 	'default_ip' => '192.168.1.250'
 ];
 //	directory of images.
-$g_img= [
+$g_img = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
 	'del' => 'images/delete.png',
