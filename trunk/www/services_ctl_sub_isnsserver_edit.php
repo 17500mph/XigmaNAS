@@ -203,7 +203,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$use_tablesort = count($all_parents) > 1;
+$use_tablesort = false;
 $pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Settings'),gtext('iSNS Server'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 if($use_tablesort):
 	$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
