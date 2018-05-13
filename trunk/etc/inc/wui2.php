@@ -2398,7 +2398,7 @@ EOJ;
 		endif;
 		return $this;
 	}
-	public function ins_maintainbox($sphere, bool $show_link = false) {
+	public function ins_maintainbox($sphere,bool $show_link = false) {
 		global $g_img;
 /*
  *	<td>
@@ -2413,7 +2413,7 @@ EOJ;
 		endif;
 		return $this;
 	}
-	public function ins_informbox($sphere, bool $show_link = false) {
+	public function ins_informbox($sphere,bool $show_link = false) {
 		global $g_img;
 /*
  *	<td>
@@ -2425,6 +2425,27 @@ EOJ;
 			$querystring = http_build_query(['submit' => 'inform',$sphere->get_row_identifier() => $sphere->get_row_identifier_value()],NULL,ini_get('arg_separator.output'),PHP_QUERY_RFC3986);
 			$link = sprintf('%s?%s',$sphere->inform->get_scriptname(),$querystring);
 			$td->addA(['href' => $link])->insIMG(['src' => $g_img['inf'],'title' => $sphere->sym_inf(),'alt' => $sphere->sym_inf(),'class' => 'spin oneemhigh']);
+		endif;
+		return $this;
+	}
+	public function ins_updownbox($sphere,bool $show_arrows = false) {
+		global $g_img;
+
+		$td = $this->addTD();
+		if($show_arrows): // show up and down arrows
+			$image_attribute_mup = [
+				'src' => $g_img['mup'],
+				'title' => $sphere->sym_mup(),
+				'alt' => $sphere->sym_mup(),
+				'class' => 'oneemhigh move up'
+			];
+			$image_attribute_mdn = [
+				'src' => $g_img['mdn'],
+				'title' => $sphere->sym_mdn(),
+				'alt' => $sphere->sym_mdn(),
+				'class' => 'oneemhigh move down'
+			];
+			$td->insIMG($image_attribute_mup)->insIMG($image_attribute_mdn);
 		endif;
 		return $this;
 	}
