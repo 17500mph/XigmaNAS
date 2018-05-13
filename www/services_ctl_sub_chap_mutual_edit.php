@@ -196,7 +196,17 @@ switch($page_mode):
 			$name = $referer->get_name();
 			$sphere->row[$name] = $referer->validate_input();
 			if(!isset($sphere->row[$name])):
-				$sphere->row[$name] = $_POST[$name] ?? '';
+				switch($name):
+					case $cop->get_secret()->get_name():
+						$sphere->row[$name] = $cop->get_secret()->get_defaultvalue();
+						break;
+					case $cop->get_mutual_secret()->get_name():
+						$sphere->row[$name] = $cop->get_mutual_secret()->get_defaultvalue();
+						break;
+					default:
+						$sphere->row[$name] = $_POST[$name] ?? '';
+						break;
+				endswitch;
 				$input_errors[] = $referer->get_message_error();
 			endif;
 		endforeach;
