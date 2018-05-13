@@ -93,7 +93,7 @@ class ctl_sub_chap_edit_properties extends ctl_sub_chap_properties {
 		$property = parent::init_secret();
 		$description = gtext('Enter secret.');
 		$placeholder = gtext('Secret');
-		$regexp = '/^.{1,32}$/';
+		$regexp = '/^[^"]{1,32}$/';
 		$property->
 			set_id('secret')->
 			set_description($description)->
