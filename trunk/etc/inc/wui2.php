@@ -2689,6 +2689,12 @@ EOJ;
 		endif;
 		return $this;
 	}
+	public function ins_button_reorder(bool $enable = false,string $content = NULL) {
+		if($enable):
+			$this->ins_button_submit('reorder',$content ?? gtext('Reorder'));
+		endif;
+		return $this;
+	}
 	public function ins_button_rescan(bool $enable = false,string $content = NULL) {
 		if($enabled):
 			$this->ins_button_submit('rescan',$content ?? gtext('Rescan'));
