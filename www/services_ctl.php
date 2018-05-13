@@ -53,8 +53,6 @@ $a_referer = [
 	$cop->get_debug(),
 	$cop->get_maxproc(),
 	$cop->get_timeout(),
-	$cop->get_isns_server(),
-	$cop->get_isns_server_port(),
 	$cop->get_isns_period(),
 	$cop->get_isns_timeout(),
 	$cop->get_auxparam()
@@ -231,12 +229,17 @@ $pagecontent = $document->getElementById('pagecontent');
 //	add tab navigation
 $document->
 	add_area_tabnav()->
+		push()->
 		add_tabnav_upper()->
 			ins_tabnav_record('services_ctl.php',gtext('Global Settings'),gtext('Reload page'),true)->
 			ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
 			ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
 			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'));
+			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('services_ctl.php',gtext('Settings'),gtext('Reload page'),true)->
+			ins_tabnav_record('services_ctl_sub_isnsserver.php',gtext('iSNS Servers'));
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -256,8 +259,6 @@ $content->
 			c2_input_text($cop->get_debug(),htmlspecialchars($sphere->row[$cop->get_debug()->get_name()]),false,$is_readonly)->
 			c2_input_text($cop->get_maxproc(),htmlspecialchars($sphere->row[$cop->get_maxproc()->get_name()]),false,$is_readonly)->
 			c2_input_text($cop->get_timeout(),htmlspecialchars($sphere->row[$cop->get_timeout()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_isns_server(),htmlspecialchars($sphere->row[$cop->get_isns_server()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_isns_server_port(),htmlspecialchars($sphere->row[$cop->get_isns_server_port()->get_name()]),false,$is_readonly)->
 			c2_input_text($cop->get_isns_period(),htmlspecialchars($sphere->row[$cop->get_isns_period()->get_name()]),false,$is_readonly)->
 			c2_input_text($cop->get_isns_timeout(),htmlspecialchars($sphere->row[$cop->get_isns_timeout()->get_name()]),false,$is_readonly)->
 			c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,$is_readonly,60,$n_auxparam_rows);

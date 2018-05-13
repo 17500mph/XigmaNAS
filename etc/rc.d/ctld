@@ -53,17 +53,19 @@ ctld_mkconf()
 			--if 'string-length(timeout) > 0' \
 				--value-of 'concat("timeout ",timeout)' --nl \
 			--break \
-			--if 'string-length(isns_server) > 0' \
-				--output 'isns-server "' \
-				--if 'contains(isns_server,":")' \
-					--value-of 'concat("[",isns_server,"]")' \
-				--else \
-					--value-of 'isns_server' \
+			--match '//ctld/ctl_sub_isnsserver/param[enable]' \
+				--if 'string-length(ipaddress) > 0' \
+					--output 'isns-server "' \
+					--if 'contains(ipaddress,":")' \
+						--value-of 'concat("[",ipaddress,"]")' \
+					--else \
+						--value-of 'ipaddress' \
+					--break \
+					--if 'string-length(port) > 0' \
+						--value-of 'concat(":",port)' \
+					--break \
+					--output '"' --nl \
 				--break \
-				--if 'string-length(isns_server_port) > 0' \
-					--value-of 'concat(":",isns_server_port)' \
-				--break \
-				--output '"' --nl \
 			--break \
 			--if 'string-length(isns_period) > 0' \
 				--value-of 'concat("isns-period ",isns_period)' --nl \

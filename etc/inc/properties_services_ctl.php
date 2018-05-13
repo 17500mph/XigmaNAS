@@ -116,50 +116,6 @@ class ctl_properties extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
-	protected $x_isns_server;
-	public function get_isns_server() {
-		return $this->x_isns_server ?? $this->init_isns_server();
-	}
-	public function init_isns_server() {
-		$property = $this->x_isns_server = new property_ipaddress($this);
-		$description = gtext('An IPv4 or IPv6 address of iSNS server to register on.');
-		$regexp = '/^$/';
-		$property->
-			set_name('isns_server')->
-			set_title(gtext('iSNS Server'));
-		$property->
-			set_id('isns_server')->
-			set_description($description)->
-			set_editableonadd(true)->
-			set_editableonmodify(true)->
-			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
-		return $property;
-	}
-	protected $x_isns_server_port;
-	public function get_isns_server_port() {
-		return $this->x_isns_server_port ?? $this->init_isns_server_port();
-	}
-	public function init_isns_server_port() {
-		$property = $this->x_isns_server_port = new property_int($this);
-		$description = gtext('Port number of iSNS server to register on.');
-		$property->
-			set_name('isns_server_port')->
-			set_title(gtext('iSNS Server Port'));
-		$property->
-			set_id('isns_server_port')->
-			set_description($description)->
-			set_maxlength(5)->
-			set_size(10)->
-			set_editableonadd(true)->
-			set_editableonmodify(true)->
-			set_defaultvalue('')->
-			set_min(1024)->
-			set_max(65464)->
-			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
-		return $property;
-	}
 	protected $x_isns_period;
 	public function get_isns_period() {
 		return $this->x_isns_period ?? $this->init_isns_period();
