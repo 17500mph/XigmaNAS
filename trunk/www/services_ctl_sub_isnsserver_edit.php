@@ -218,7 +218,7 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('services_ctl.php',gtext('Settings'),gtext('Reload page'),true)->
+			ins_tabnav_record('services_ctl.php',gtext('Global Settings'),gtext('Reload page'),true)->
 			ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
 			ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
 			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->

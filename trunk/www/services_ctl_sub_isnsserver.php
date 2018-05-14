@@ -56,7 +56,7 @@ function ctl_sub_isnsserver_sphere() {
 	$sphere->cbm_disable(gtext('Disable Selected iSNS Servers'));
 	$sphere->cbm_enable(gtext('Enable Selected iSNS Servers'));
 	$sphere->cbm_toggle(gtext('Toggle Selected iSNS Servers'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected iSNS serverss?'));
+	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected iSNS servers?'));
 	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected iSNS servers?'));
 	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected iSNS servers?'));
 	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected iSNS servers?'));
@@ -108,7 +108,7 @@ function ctl_sub_isnsserver_selection($cop,$sphere) {
 		add_area_tabnav()->
 			push()->
 			add_tabnav_upper()->
-				ins_tabnav_record('services_ctl.php',gtext('Settings'),gtext('Reload page'),true)->
+				ins_tabnav_record('services_ctl.php',gtext('Global Settings'),gtext('Reload page'),true)->
 				ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
 				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
 				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
