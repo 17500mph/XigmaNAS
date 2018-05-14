@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
-"PO-Revision-Date: 2018-05-12 14:10+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
+"PO-Revision-Date: 2018-05-14 03:48+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 15:32+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -662,6 +662,9 @@ msgstr "Ajouter une commande"
 msgid "Add extent"
 msgstr "Ajouter une extension"
 
+msgid "Add iSNS Server"
+msgstr "Ajouter un Serveur iSNS"
+
 msgid "Add initiator"
 msgstr "Ajouter un initiateur"
 
@@ -972,9 +975,6 @@ msgstr "Une Extension definit la zone de stockage de la Cible."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "Adresse IPv4 ou IPv6 d'un portail initiateur iSCSI."
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
-msgstr "Une adresse IPv4 ou IPv6 du serveur iSNS à enregistrer."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
@@ -2791,6 +2791,9 @@ msgstr "Supprimer les volumes sélectionnés"
 msgid "Delete Selected WLANs"
 msgstr "Supprimer les WLAN sélectionnés"
 
+msgid "Delete Selected iSNS Servers"
+msgstr "Supprimer les Serveurs iSNS Sélectionnés"
+
 msgid "Delete URL"
 msgstr "Effacer l'URL"
 
@@ -3124,6 +3127,9 @@ msgstr "Désactiver les modules Rsync sélectionnés"
 
 msgid "Disable Selected Targets"
 msgstr "Désactiver les groupes de portails sélectionnés"
+
+msgid "Disable Selected iSNS Servers"
+msgstr "Désactiver les Serveurs iSNS Sélectionnés"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Désactiver le wrapper TCP (module mod_wrap)."
@@ -3463,6 +3469,9 @@ msgstr "Voulez-vous supprimer des volumes cryptés sélectionnés?"
 msgid "Do you want to delete selected groups?"
 msgstr "Voulez-vous supprimer les comptes d'utilisateurs sélectionnés"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr "Voulez-vous supprimer les serveurs iSNS sélectionnés?"
+
 msgid "Do you want to delete selected initiator names?"
 msgstr "Voulez-vous supprimer les noms d'initiateurs sélectionnés?"
 
@@ -3549,6 +3558,9 @@ msgstr "Voulez-vous désactiver les groupes d'authentification sélectionnés?"
 msgid "Do you want to disable selected commands?"
 msgstr "Voulez-vous désactiver les commandes sélectionnées?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr "Voulez-vous désactiver les serveurs iSNS sélectionnés?"
+
 msgid "Do you want to disable selected initiator names?"
 msgstr "Voulez-vous désactiver les noms d'initiateurs sélectionnés?"
 
@@ -3604,6 +3616,9 @@ msgstr "Voulez-vous activer les groupes d'authentification sélectionnés?"
 msgid "Do you want to enable selected commands?"
 msgstr "Voulez-vous activer les commandes sélectionnées?"
 
+msgid "Do you want to enable selected iSNS servers?"
+msgstr "Voulez-vous activer les serveurs iSNS sélectionnés?"
+
 msgid "Do you want to enable selected initiator names?"
 msgstr "Voulez-vous activer les noms d'initiateurs sélectionnés?"
 
@@ -3650,55 +3665,54 @@ msgid "Do you want to lock selected records?"
 msgstr "Voulez-vous activer les enregistrements sélectionnés?"
 
 msgid "Do you want to toggle selected CHAP users?"
-msgstr "Voulez-vous activer / désactiver les utilisateurs CHAP sélectionnés?"
+msgstr "Voulez-vous changer d'état les utilisateurs CHAP sélectionnés?"
 
 msgid "Do you want to toggle selected LUN records?"
-msgstr ""
-"Voulez-vous activer / désactiver les enregistrements de LUN sélectionnés?"
+msgstr "Voulez-vous changer d'état les enregistrements de LUN sélectionnés?"
 
 msgid "Do you want to toggle selected LUNs?"
-msgstr "Voulez-vous activer / désactiver les LUN sélectionnés?"
+msgstr "Voulez-vous changer d'état les LUN sélectionnés?"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
-"Voulez-vous activer / désactiver les utilisateurs CHAP Mutuel  sélectionnés?"
+"Voulez-vous changer d'état les utilisateurs CHAP Mutuel  sélectionnés?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr ""
-"Voulez-vous activer / désactiver les groupes d'authentification sélectionnés?"
+"Voulez-vous changer d'état les groupes d'authentification sélectionnés?"
 
 msgid "Do you want to toggle selected commands?"
-msgstr "Voulez-vous activer / désactiver l'état des commandes sélectionnées?"
+msgstr "Voulez-vous changer d'état les commandes sélectionnées?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr "Voulez-vous basculer les serveurs iSNS sélectionnés?"
 
 msgid "Do you want to toggle selected initiator names?"
-msgstr ""
-"Voulez-vous activer / désactiver les noms d'initiateurs sélectionnés?"
+msgstr "Voulez-vous changer d'état les noms d'initiateurs sélectionnés?"
 
 msgid "Do you want to toggle selected initiator portals?"
-msgstr ""
-"Voulez-vous activer / désactiver les portails initiateurs sélectionnés?"
+msgstr "Voulez-vous changer d'état les portails initiateurs sélectionnés?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Voulez-vous inverser les tâches sélectionnées"
 
 msgid "Do you want to toggle selected listen records?"
 msgstr ""
-"Voulez-vous activer / désactiver les enregistrements d'écoutes sélectionnés?"
+"Voulez-vous changer d'état les enregistrements d'écoutes sélectionnés?"
 
 msgid "Do you want to toggle selected option records?"
 msgstr ""
-"Voulez-vous activer / désactiver les enregistrements d'options sélectionnés?"
+"Voulez-vous changer d'état les enregistrements d'options sélectionnés?"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Voulez-vous inverser les options sélectionnées"
 
 msgid "Do you want to toggle selected port records?"
 msgstr ""
-"Voulez-vous activer / désactiver les enregistrements de ports sélectionnés?"
+"Voulez-vous changer d'état les enregistrements de ports sélectionnés?"
 
 msgid "Do you want to toggle selected portal groups?"
-msgstr ""
-"Voulez-vous activer / désactiver les groupes de portail sélectionnés?"
+msgstr "Voulez-vous changer d'état les groupes  portail sélectionnés?"
 
 msgid "Do you want to toggle selected records?"
 msgstr "Voulez-vouschanger d'état les enregistrements sélectionnés?"
@@ -3710,7 +3724,7 @@ msgid "Do you want to toggle selected rsync modules?"
 msgstr "Voulez-vous changer d'état les modules rsync sélectionnés?"
 
 msgid "Do you want to toggle selected targets?"
-msgstr "Voulez-vous activer / désactiver les cibles sélectionnées?"
+msgstr "Voulez-vous changer d'état les cibles sélectionnées?"
 
 msgid "Do you want to unlock selected records?"
 msgstr "Voulez-vous déverrouiller les enregistrements sélectionnés?"
@@ -3961,6 +3975,9 @@ msgstr "Modifier la commande"
 msgid "Edit extent"
 msgstr "Editer l'extension"
 
+msgid "Edit iSNS Server"
+msgstr "Modifier le Serveur iSNS"
+
 msgid "Edit initiator"
 msgstr "Modifier l'initiateur"
 
@@ -4118,6 +4135,9 @@ msgstr "Activer les modules Rsync sélectionnés"
 
 msgid "Enable Selected Targets"
 msgstr "Activer les cibles sélectionnées"
+
+msgid "Enable Selected iSNS Servers"
+msgstr "Activer les Serveurs iSNS Sélectionnés"
 
 msgid "Enable Server"
 msgstr "Activer le serveur"
@@ -5409,6 +5429,9 @@ msgstr "Paramètres IPv4"
 
 msgid "IPv4 addresses"
 msgstr "Adresses IPv4"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr "Adresse IPv4 ou IPv6 d'un serveur iSNS à enregistrer."
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7836,8 +7859,8 @@ msgstr "Le numéro de port doit être 69 ou un nombre entre 1024 et 49151."
 msgid "Port number must be in the range between %d and %d."
 msgstr "Le numéro de port doit être compris entre %d et %d."
 
-msgid "Port number of iSNS server to register on."
-msgstr "Numéro de port du serveur iSNS sur lequel s'enregistrer."
+msgid "Port number of the iSNS server."
+msgstr "Numéro de port du serveur iSNS."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr "Port du service TFTP. Laissez vide pour utiliser le port par défaut."
@@ -8400,6 +8423,9 @@ msgstr "Supprimer toutes les entrées de la table ARP"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Démontez le %s avant de continuer."
+
+msgid "Reorder"
+msgstr "Réorganiser"
 
 msgid "Reorder Commands"
 msgstr "Réorganiser les commandes"
@@ -11644,46 +11670,46 @@ msgid "Toggle Mode"
 msgstr "Bascule de mode"
 
 msgid "Toggle Selected Auth Groups"
-msgstr "Activer / Désactiver les groupes d'authentification sélectionnés"
+msgstr "Changer d'état les Groupes d'Authentification Sélectionnés"
 
 msgid "Toggle Selected CHAP Users"
-msgstr "Activer / Désactiver les utilisateurs CHAP sélectionnés"
+msgstr "Changer d'état les Utilisateurs CHAP Sélectionnés"
 
 msgid "Toggle Selected Commands"
 msgstr "Changer l'état des commandes sélectionnées"
 
 msgid "Toggle Selected Initiator Names"
-msgstr "Activer / Désactiver les noms des initiateurs sélectionnés"
+msgstr "Changer d'état les Noms des Initiateurs Sélectionnés"
 
 msgid "Toggle Selected Initiator Portals"
-msgstr "Activer / Désactiver les portails d'initiateur sélectionnés"
+msgstr "Changer d'état les Portails d'Initiateur Sélectionnés"
 
 msgid "Toggle Selected Jobs"
 msgstr "Inverse l'état des tâches sélectionnées"
 
 msgid "Toggle Selected LUN Records"
-msgstr "Activer / Désactiver les enregistrements LUN sélectionnés"
+msgstr "Changer d'état les Enregistrements LUN Sélectionnés"
 
 msgid "Toggle Selected LUNs"
-msgstr "Activer / Désactiver les LUN sélectionnés"
+msgstr "Changer d'état les LUN Sélectionnés"
 
 msgid "Toggle Selected Listen Records"
-msgstr "Activer / Désactiver les Enregistrements d'écoute Sélectionnés"
+msgstr "Changer d'état les Enregistrements d'écoute Sélectionnés"
 
 msgid "Toggle Selected Mutual CHAP Users"
-msgstr "Activer / Désactiver les enregistrements d'écoute sélectionnés"
+msgstr "Changer d'état les Enregistrements d'écoute Sélectionnés"
 
 msgid "Toggle Selected Option Records"
-msgstr "Activer / Désactiver les enregistrements d'option sélectionnés"
+msgstr "Changer d'état les Enregistrements d'Option Sélectionnés"
 
 msgid "Toggle Selected Options"
 msgstr "Inverse l'état des options sélectionnées"
 
 msgid "Toggle Selected Port Records"
-msgstr "Activer / Désactiver les enregistrements de port sélectionnés"
+msgstr "Changer d'état les Enregistrements de Port Sélectionnés"
 
 msgid "Toggle Selected Portal Groups"
-msgstr "Activer / Désactiver les groupes portail sélectionnés"
+msgstr "Changer d'état les Groupes Portail Sélectionnés"
 
 msgid "Toggle Selected Records"
 msgstr "Changer d'état les enregistrements sélectionnés"
@@ -11695,7 +11721,10 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Changer d'état les Modules Rsync Sélectionnés"
 
 msgid "Toggle Selected Targets"
-msgstr "Activer / Désactiver les cibles sélectionnées"
+msgstr "Changer d'état les Cibles Sélectionnées"
+
+msgid "Toggle Selected iSNS Servers"
+msgstr "Changer d'état les Serveurs iSNS Sélectionnés"
 
 msgid "Tolerated"
 msgstr "Toléré"
@@ -11839,7 +11868,7 @@ msgid "Tuning"
 msgstr "Paramétrage"
 
 msgid "Turn the monitor to standby after N seconds."
-msgstr "Basculer le moniteur en mode veille après N secondes."
+msgstr "Mettre le moniteur en mode veille après N secondes."
 
 msgid "Type"
 msgstr "Type"
@@ -12942,8 +12971,17 @@ msgstr "Période ISNS"
 msgid "iSNS Server"
 msgstr "serveur iSNS"
 
-msgid "iSNS Server Port"
-msgstr "Port du serveur iSNS"
+msgid "iSNS Server is locked"
+msgstr "Le Serveur iSNS est Verrouillé"
+
+msgid "iSNS Server is marked for deletion"
+msgstr "Le serveur iSNS est marqué pour la suppression"
+
+msgid "iSNS Server is unlocked"
+msgstr "Le Serveur iSNS est déverrouillé"
+
+msgid "iSNS Servers"
+msgstr "Serveurs iSNS"
 
 msgid "iSNS Timeout"
 msgstr "Délai d'attente iSNS"
@@ -13051,9 +13089,3 @@ msgstr "utilisé de"
 
 msgid "visible"
 msgstr "visible"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Entrez une description pour votre référence"
-
-#~ msgid "The LUN size, in bytes."
-#~ msgstr "La taille du LUN, en octets."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
-"PO-Revision-Date: 2018-05-12 11:57+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
+"PO-Revision-Date: 2018-05-12 22:14+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -672,6 +672,9 @@ msgstr "Befehl hinzufügen"
 msgid "Add extent"
 msgstr "Extent hinzufügen"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "Initiator hinzufügen"
 
@@ -987,9 +990,6 @@ msgstr "Ein Extent definiert den Speicherbereich des Ziels."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "Eine IPv4 oder IPv6 Adresse eines ISCSI Initiator Portals."
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
-msgstr "Eine IPv4 oder IPv6 Adresse eines iSNS Servers zum Anmelden."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
@@ -2766,6 +2766,9 @@ msgstr "Ausgewählte Volumes löschen"
 msgid "Delete Selected WLANs"
 msgstr "Gewählte WLANs löschen"
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL löschen"
 
@@ -3096,6 +3099,9 @@ msgstr "Ausgewählte Rsync Module deaktivieren"
 
 msgid "Disable Selected Targets"
 msgstr "Ausgewählte Ziele deaktivieren"
+
+msgid "Disable Selected iSNS Servers"
+msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP Wrapper (mod_wrap Modul) deaktivieren"
@@ -3429,6 +3435,9 @@ msgstr "Möchten Sie die ausgewählten verschlüsselten Datenträger löschen?"
 msgid "Do you want to delete selected groups?"
 msgstr "Möchten Sie die ausgewählten Gruppen löschen?"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr "Möchten Sie die ausgewählten Initiatornamen löschen?"
 
@@ -3514,6 +3523,9 @@ msgstr "Möchten Sie die ausgewählten Authentifizierungsgruppen deaktivieren?"
 msgid "Do you want to disable selected commands?"
 msgstr "Möchten Sie die ausgewählten Kommandos deaktivieren?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr "Möchten Sie die ausgewählten Initiatornamen deaktivieren?"
 
@@ -3567,6 +3579,9 @@ msgstr "Möchten Sie die ausgewählten Authentifizierungsgruppen aktivieren?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Möchten Sie die ausgewählten Kommandos aktivieren?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
 msgstr "Möchten Sie die ausgewählten Initiatornamen aktivieren?"
@@ -3630,6 +3645,9 @@ msgstr "Möchten Sie die ausgewählten Authentifizierungsgruppen umschalten?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Möchten Sie die ausgewählten Kommandos umschalten?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr "Möchten Sie die ausgewählten Initiatornamen umschalten?"
@@ -3918,6 +3936,9 @@ msgstr "Befehl bearbeiten"
 msgid "Edit extent"
 msgstr "Extent bearbeiten"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "Initiator bearbeiten"
 
@@ -4073,6 +4094,9 @@ msgstr "Ausgewählte RSYNC-Module aktivieren"
 
 msgid "Enable Selected Targets"
 msgstr "Ausgewählte Ziele aktivieren"
+
+msgid "Enable Selected iSNS Servers"
+msgstr ""
 
 msgid "Enable Server"
 msgstr "Server aktivieren"
@@ -5360,6 +5384,9 @@ msgstr "IPv4 Einstellungen"
 msgid "IPv4 addresses"
 msgstr "IPv4 Adressen"
 
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
+
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
@@ -5671,7 +5698,7 @@ msgid "Initiator Name is unlocked"
 msgstr "Initiatorname ist entsperrt"
 
 msgid "Initiator Names"
-msgstr ""
+msgstr "Initiatornamen"
 
 msgid "Initiator Portal"
 msgstr "Initiatorportal"
@@ -5686,7 +5713,7 @@ msgid "Initiator Portal is unlocked"
 msgstr "Initiatorportal ist entsperrt"
 
 msgid "Initiator Portals"
-msgstr ""
+msgstr "Initiatorportale"
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -6430,7 +6457,7 @@ msgid "Masquerade Address"
 msgstr "Adresse Maskieren"
 
 msgid "Max Processes"
-msgstr ""
+msgstr "Maximale Prozesse"
 
 msgid "Max. Block Size"
 msgstr "Max. Blockgröße"
@@ -7702,7 +7729,7 @@ msgid "Pool"
 msgstr "Pool"
 
 msgid "Pool Avail Threshold"
-msgstr ""
+msgstr "Pool Schwellwert verfügbar"
 
 msgid "Pool Devices"
 msgstr "Pool Geräte"
@@ -7720,7 +7747,7 @@ msgid "Pool Status"
 msgstr "Pool Status"
 
 msgid "Pool Used Threshold"
-msgstr ""
+msgstr "Pool Schwellwert verwendet"
 
 msgid "Pool Version"
 msgstr "Pool Version"
@@ -7757,7 +7784,7 @@ msgid "Port Forwarding"
 msgstr "Port-Weiterleitung"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Port Name"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr "Die Portnummer muss 514 oder eine Zahl zwischen 1024 und 49151 sein."
@@ -7770,7 +7797,7 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr "Portnummer muss zwischen %d und %d liegen."
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -7963,7 +7990,7 @@ msgid "Provider"
 msgstr "Provider"
 
 msgid "Provisioning Type"
-msgstr ""
+msgstr "Bevorratungstyp"
 
 msgid "Proxy"
 msgstr "Vermittlungsserver"
@@ -8131,7 +8158,7 @@ msgid "Read"
 msgstr "Lesen"
 
 msgid "Read Cache"
-msgstr ""
+msgstr "Lese-Zwischenspeicher"
 
 msgid "Read Only"
 msgstr "Nur Lesen"
@@ -8252,7 +8279,7 @@ msgid "Release Notes"
 msgstr "Versionshinweise"
 
 msgid "Reload"
-msgstr ""
+msgstr "Neu laden"
 
 msgid "Reload Page"
 msgstr "Seite nochmal laden"
@@ -8326,6 +8353,9 @@ msgstr "Lösch alle Einträge aus ARP Tabelle"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Entfernen Sie das %s bevor Sie fortfahren."
+
+msgid "Reorder"
+msgstr ""
 
 msgid "Reorder Commands"
 msgstr "Kommandos umsortieren"
@@ -8409,7 +8439,7 @@ msgid "Resources"
 msgstr "Ressourcen"
 
 msgid "Restart"
-msgstr ""
+msgstr "Neustart"
 
 msgid "Restore"
 msgstr "Wiederherstellen"
@@ -10780,7 +10810,7 @@ msgid "The share name is already used."
 msgstr "Der Freigabenamen ist bereits vergeben."
 
 msgid "The size of the LUN."
-msgstr ""
+msgstr "Die Größe der LUN."
 
 msgid "The size of the swap file in MB."
 msgstr "Die Größe der Swap-Datei in MB."
@@ -10819,6 +10849,9 @@ msgid ""
 "The timeout for login sessions, after which the connection will be forcibly "
 "terminated. The default is 60. A setting of 0 disables the timeout."
 msgstr ""
+"Die Zeitbeschränkung für Sitzungen nach der die Verbindung zwangsgetrennt "
+"wird. Voreingestellt ist 60. Die Verwendung von 0 verhindert die "
+"Zeitbeschränkung."
 
 msgid "The total count of errors when writing a sector."
 msgstr "gesamte Fehlerzahl während des Schreibens eines Sektors."
@@ -11618,6 +11651,9 @@ msgstr "Ausgewählte Rsync Jobs umschalten"
 
 msgid "Toggle Selected Targets"
 msgstr "Ausgewählte Ziele umschalten"
+
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
 
 msgid "Tolerated"
 msgstr "Toleriert"
@@ -12862,8 +12898,17 @@ msgstr "iSNS Periode"
 msgid "iSNS Server"
 msgstr "iSNS Server"
 
-msgid "iSNS Server Port"
-msgstr "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
+msgstr ""
 
 msgid "iSNS Timeout"
 msgstr "iSNS Zeitüberschreitung (Timeout)"
@@ -12969,9 +13014,3 @@ msgstr "benutzt von"
 
 msgid "visible"
 msgstr "sichtbar"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Eine Beschreibung zu Ihrer eigenen Information"
-
-#~ msgid "The LUN size, in bytes."
-#~ msgstr "Die Größe der LUN in Byte."

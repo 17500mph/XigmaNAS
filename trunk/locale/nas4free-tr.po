@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
 "PO-Revision-Date: 2017-04-06 18:11+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:53+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -617,6 +617,9 @@ msgstr "Komut Ekle"
 msgid "Add extent"
 msgstr "Uzantı Ekle"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "Initiator Ekle"
 
@@ -904,9 +907,6 @@ msgid "An Extent defines the storage area of the Target."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
@@ -2543,6 +2543,9 @@ msgstr ""
 msgid "Delete Selected WLANs"
 msgstr ""
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL sil"
 
@@ -2861,6 +2864,9 @@ msgstr ""
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -3163,6 +3169,9 @@ msgstr ""
 msgid "Do you want to delete selected groups?"
 msgstr ""
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -3247,6 +3256,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr ""
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3299,6 +3311,9 @@ msgid "Do you want to enable selected auth groups?"
 msgstr ""
 
 msgid "Do you want to enable selected commands?"
+msgstr ""
+
+msgid "Do you want to enable selected iSNS servers?"
 msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
@@ -3362,6 +3377,9 @@ msgid "Do you want to toggle selected auth groups?"
 msgstr ""
 
 msgid "Do you want to toggle selected commands?"
+msgstr ""
+
+msgid "Do you want to toggle selected iSNS servers?"
 msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
@@ -3647,6 +3665,9 @@ msgstr "Komutu düzenle"
 msgid "Edit extent"
 msgstr "Uzantı Düzenle"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "Initiotr'u düzenle"
 
@@ -3797,6 +3818,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -5010,6 +5034,9 @@ msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 adresleri"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7265,7 +7292,7 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr ""
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -7795,6 +7822,9 @@ msgstr ""
 
 #, php-format
 msgid "Remove the %s first before proceeding."
+msgstr ""
+
+msgid "Reorder"
 msgstr ""
 
 msgid "Reorder Commands"
@@ -10653,6 +10683,9 @@ msgstr ""
 msgid "Toggle Selected Targets"
 msgstr ""
 
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -11786,7 +11819,16 @@ msgstr ""
 msgid "iSNS Server"
 msgstr ""
 
-msgid "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
 msgstr ""
 
 msgid "iSNS Timeout"

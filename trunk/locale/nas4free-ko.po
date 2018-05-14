@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
 "PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -620,6 +620,9 @@ msgstr "명령어 추가"
 msgid "Add extent"
 msgstr "범위 추가"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "초기자 추가"
 
@@ -905,9 +908,6 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "범위는 타겟의 저장소 영역을 정의합니다."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
@@ -2584,6 +2584,9 @@ msgstr "선택된 볼륨들 삭제"
 msgid "Delete Selected WLANs"
 msgstr "선택된 무선 LAN 삭제"
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL 삭제"
 
@@ -2907,6 +2910,9 @@ msgstr "선택된 rsync 모듈들 사용 안 함"
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper 사용 안 함(mod_wrap 모듈)"
 
@@ -3206,6 +3212,9 @@ msgstr "선택된 암호화 볼륨들을 삭제하시겠습니까?"
 msgid "Do you want to delete selected groups?"
 msgstr "선택된 그룹들을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -3290,6 +3299,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "선택된 명령들을 사용하지 않으시겠습니까?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3343,6 +3355,9 @@ msgstr ""
 
 msgid "Do you want to enable selected commands?"
 msgstr "선택된 명령들을 사용하시겠습니까?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
 msgstr ""
@@ -3406,6 +3421,9 @@ msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "선택된 명령들을 전환하시겠습니까?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr ""
@@ -3690,6 +3708,9 @@ msgstr "명령 수정"
 msgid "Edit extent"
 msgstr "범위 편집"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "초기자 편집"
 
@@ -3842,6 +3863,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "선택된 rsync 모듈들 사용 함"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -5061,6 +5085,9 @@ msgstr "IPv4 설정"
 
 msgid "IPv4 addresses"
 msgstr "IPv4 주소"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7343,7 +7370,7 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr "포트 번호는 %d와 %d 범위 내에 있어야 합니다."
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -7874,6 +7901,9 @@ msgstr "ARP 테이블에서 모든 엔트리 제거"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "처리하기 전에 먼저 %s를 제거하십시오."
+
+msgid "Reorder"
+msgstr ""
 
 msgid "Reorder Commands"
 msgstr "명령어 재정렬"
@@ -10803,6 +10833,9 @@ msgstr "선택된 rsync 모듈들 전환"
 msgid "Toggle Selected Targets"
 msgstr ""
 
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "용인됨"
 
@@ -11946,7 +11979,16 @@ msgstr ""
 msgid "iSNS Server"
 msgstr ""
 
-msgid "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
 msgstr ""
 
 msgid "iSNS Timeout"
@@ -12050,6 +12092,3 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "참조하기 위한 설명 입력"
