@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
-"PO-Revision-Date: 2018-05-06 12:42+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
+"PO-Revision-Date: 2018-05-13 14:14+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:53+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -649,6 +649,9 @@ msgstr "Додати команду"
 msgid "Add extent"
 msgstr "Додати розширення"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "Додати ініціатора"
 
@@ -958,9 +961,6 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Екстент визначає область зберігання цілі."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
@@ -2750,6 +2750,9 @@ msgstr "Видалити вибрані диски"
 msgid "Delete Selected WLANs"
 msgstr "Видалити обрані WLAN"
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Видалити URL"
 
@@ -3080,6 +3083,9 @@ msgstr "Заборонити обрані модулі Rsync"
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Заборонити обгортку TCP (модуль mod_wrap)."
 
@@ -3400,6 +3406,9 @@ msgstr "Ви бажаєте видалити обрані шифровані т�
 msgid "Do you want to delete selected groups?"
 msgstr "Ви бажаєте видалити обрані групи"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -3484,6 +3493,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "Ви впевнені, що хочете заборонити обрані команди?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3537,6 +3549,9 @@ msgstr ""
 
 msgid "Do you want to enable selected commands?"
 msgstr "Ви хочете дозволити обрані команди?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
 msgstr ""
@@ -3600,6 +3615,9 @@ msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Ви хочете переключити обрані команди?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr ""
@@ -3887,6 +3905,9 @@ msgstr "Редагувати команду"
 msgid "Edit extent"
 msgstr "Редагувати розділ"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "Редагувати ініціатора"
 
@@ -4042,6 +4063,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Дозволити Обрані Модулі Rsync"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -4265,7 +4289,7 @@ msgid "Enable tuning of some kernel variables."
 msgstr "Увімкнути налаштування деяких змінних ядра."
 
 msgid "Enable tuning switch"
-msgstr "Увімкнути перемикач налаштування"
+msgstr "Дозволити налаштування перемикача"
 
 msgid "Enable white background graphs. (black as default)"
 msgstr "Увімкнути білий фон графіків. (Чорний за замовчуванням)"
@@ -5322,6 +5346,9 @@ msgstr "Налаштування IPv4"
 
 msgid "IPv4 addresses"
 msgstr "Адреси IPv4"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7720,7 +7747,7 @@ msgstr "Номер порта повинен бути 69 або числом м�
 msgid "Port number must be in the range between %d and %d."
 msgstr "Номер порту повинен бути у діапазоні між %d та %d."
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -8278,6 +8305,9 @@ msgstr "Видалити усі записи з таблиці ARP"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Видаліть %s, перш ніж продовжити."
+
+msgid "Reorder"
+msgstr ""
 
 msgid "Reorder Commands"
 msgstr "Змінити порядок команд"
@@ -11422,7 +11452,7 @@ msgstr ""
 "(напр. %s)"
 
 msgid "Toggle Mode"
-msgstr "Переключити режим"
+msgstr "Режим перемикача"
 
 msgid "Toggle Selected Auth Groups"
 msgstr ""
@@ -11476,6 +11506,9 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Перемикання Обраних Модулів Rsync"
 
 msgid "Toggle Selected Targets"
+msgstr ""
+
+msgid "Toggle Selected iSNS Servers"
 msgstr ""
 
 msgid "Tolerated"
@@ -12010,7 +12043,7 @@ msgstr ""
 
 msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
-"Використовуйте кнопку-перемикач замість кнопок включити / відключити."
+"Використовувати кнопку-перемикач замість кнопок включити / відключити."
 
 msgid "Used"
 msgstr "Використано"
@@ -12713,7 +12746,16 @@ msgstr ""
 msgid "iSNS Server"
 msgstr ""
 
-msgid "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
 msgstr ""
 
 msgid "iSNS Timeout"
@@ -12817,6 +12859,3 @@ msgstr "використано з"
 
 msgid "visible"
 msgstr "видимий"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Введіть опис собі на згадку"

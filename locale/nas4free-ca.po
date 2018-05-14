@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
-"PO-Revision-Date: 2018-05-09 18:38+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
+"PO-Revision-Date: 2018-05-14 05:15+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:53+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "Language: ca_ES\n"
 
@@ -656,6 +656,9 @@ msgstr "Afegeix comanda"
 msgid "Add extent"
 msgstr "Afegeix extensió"
 
+msgid "Add iSNS Server"
+msgstr "Afegeix servidor iSNS"
+
 msgid "Add initiator"
 msgstr "Afegeix iniciador"
 
@@ -968,9 +971,6 @@ msgstr "Una extensió defineix l'àrea d'emmagatzematge de l'objectiu."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "Una adreça IPv4 o IPv6 d'un portal iniciador iSCSI."
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
-msgstr "Una adreça IPv4 o IPv6 del servidor iSNS per registrar-se."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
@@ -2783,6 +2783,9 @@ msgstr "Suprimeix volums seleccionats"
 msgid "Delete Selected WLANs"
 msgstr "Suprimeix WLAN's seleccionats"
 
+msgid "Delete Selected iSNS Servers"
+msgstr "Elimineu els servidors iSNS seleccionats"
+
 msgid "Delete URL"
 msgstr "Suprimeix URL"
 
@@ -3115,6 +3118,9 @@ msgstr "Eliminar mòduls seleccionats Rsync"
 msgid "Disable Selected Targets"
 msgstr "Desactiveu els objectius seleccionats"
 
+msgid "Disable Selected iSNS Servers"
+msgstr "Desactiveu els servidors iSNS seleccionats"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Desactivar embolcall TCP (mòdul mod_wrap)."
 
@@ -3445,6 +3451,9 @@ msgstr "Voleu eliminar els volums xifrats seleccionats?"
 msgid "Do you want to delete selected groups?"
 msgstr "Vols eliminar grups seleccionats?"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr "Voleu eliminar els servidors iSNS seleccionats?"
+
 msgid "Do you want to delete selected initiator names?"
 msgstr "Voleu eliminar els noms d'iniciador seleccionats?"
 
@@ -3529,6 +3538,9 @@ msgstr "Voleu desactivar els grups de autenticació seleccionats?"
 msgid "Do you want to disable selected commands?"
 msgstr "Vols desactivar les ordres seleccionades?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr "Voleu desactivar els servidors iSNS seleccionats?"
+
 msgid "Do you want to disable selected initiator names?"
 msgstr "Voleu desactivar els noms d'iniciador seleccionats?"
 
@@ -3582,6 +3594,9 @@ msgstr "Voleu activar els grups de autenticació seleccionats?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Vols activar les ordres seleccionades?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr "Voleu  activar els servidors iSNS seleccionats?"
 
 msgid "Do you want to enable selected initiator names?"
 msgstr "Voleu activar els noms d'iniciador seleccionats?"
@@ -3645,6 +3660,9 @@ msgstr "Voleu canviar els grups d'autenticació seleccionats?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Vols canviar les ordres seleccionats?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr "Voleu canviar els servidors iSNS seleccionats?"
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr "Voleu canviar els noms d'iniciador seleccionats?"
@@ -3932,6 +3950,9 @@ msgstr "Editar ordre"
 msgid "Edit extent"
 msgstr "Editar extensió"
 
+msgid "Edit iSNS Server"
+msgstr "Editar servidor iSNS"
+
 msgid "Edit initiator"
 msgstr "Editar iniciador"
 
@@ -4090,6 +4111,9 @@ msgstr "Activar els mòduls Rsync seleccionats"
 
 msgid "Enable Selected Targets"
 msgstr "Activar els objectius seleccionats?"
+
+msgid "Enable Selected iSNS Servers"
+msgstr "Activar els servidors iSNS seleccionats"
 
 msgid "Enable Server"
 msgstr "Activa el servidor"
@@ -5391,6 +5415,9 @@ msgstr "Paràmetres IPv4"
 msgid "IPv4 addresses"
 msgstr "Adreças IPv4"
 
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr "Adreça IPv4 o IPv6 d'un servidor iSNS per registrar-se."
+
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
@@ -5712,7 +5739,7 @@ msgid "Initiator Name is unlocked"
 msgstr "El nom de l'iniciador està desbloquejat"
 
 msgid "Initiator Names"
-msgstr ""
+msgstr "Noms d'iniciadors"
 
 msgid "Initiator Portal"
 msgstr "Portal iniciador"
@@ -5727,7 +5754,7 @@ msgid "Initiator Portal is unlocked"
 msgstr "El portal iniciador està desbloquejat"
 
 msgid "Initiator Portals"
-msgstr ""
+msgstr "Portals iniciadors"
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -7813,8 +7840,8 @@ msgstr "El número de port ha de ser de 69 o un número entre 1024 i 49151."
 msgid "Port number must be in the range between %d and %d."
 msgstr "El número de port ha d'estar en el rang entre %d i %d."
 
-msgid "Port number of iSNS server to register on."
-msgstr "Número de port del servidor iSNS per registrar-se."
+msgid "Port number of the iSNS server."
+msgstr "Número del port del servidor iSNS."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
@@ -8301,7 +8328,7 @@ msgid "Release Notes"
 msgstr "Notes de publicació"
 
 msgid "Reload"
-msgstr ""
+msgstr "Recarrega"
 
 msgid "Reload Page"
 msgstr "Recarregar pàgina"
@@ -8375,6 +8402,9 @@ msgstr "Esborrar totes les entrades de la taula ARP"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Elimina el primer %s abans de continuar."
+
+msgid "Reorder"
+msgstr "Torna a ordenar"
 
 msgid "Reorder Commands"
 msgstr "Re-ordena les ordres"
@@ -8459,7 +8489,7 @@ msgid "Resources"
 msgstr "Recursos"
 
 msgid "Restart"
-msgstr ""
+msgstr "Reinicia"
 
 msgid "Restore"
 msgstr "Restablir"
@@ -10838,7 +10868,7 @@ msgid "The share name is already used."
 msgstr "El nom del recurs ja s'utilitza."
 
 msgid "The size of the LUN."
-msgstr ""
+msgstr "La mida del LUN."
 
 msgid "The size of the swap file in MB."
 msgstr "La mida del fitxer d'intercanvi en MB."
@@ -11659,6 +11689,9 @@ msgstr "Alternar mòduls Rsync seleccionats"
 
 msgid "Toggle Selected Targets"
 msgstr "Commuta els objectius seleccionats"
+
+msgid "Toggle Selected iSNS Servers"
+msgstr "Commuta els servidors iSNS seleccionats"
 
 msgid "Tolerated"
 msgstr "Tolerat"
@@ -12896,8 +12929,17 @@ msgstr "Periode iSNS"
 msgid "iSNS Server"
 msgstr "Servidor iSNS"
 
-msgid "iSNS Server Port"
-msgstr "Port del servidor iSNS"
+msgid "iSNS Server is locked"
+msgstr "El servidor iSNS està bloquejat"
+
+msgid "iSNS Server is marked for deletion"
+msgstr "El servidor iSNS està marcat per a l'eliminació"
+
+msgid "iSNS Server is unlocked"
+msgstr "El servidor iSNS està desbloquejat"
+
+msgid "iSNS Servers"
+msgstr "Servidors iSNS"
 
 msgid "iSNS Timeout"
 msgstr "Temps d'espera de l'iSNS"
@@ -13002,9 +13044,3 @@ msgstr "usat de"
 
 msgid "visible"
 msgstr "visible"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Introduïu una descripció per a la vostra referència"
-
-#~ msgid "The LUN size, in bytes."
-#~ msgstr "La mida LUN, en bytes."

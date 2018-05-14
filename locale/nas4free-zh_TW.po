@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
 "PO-Revision-Date: 2018-04-20 09:39+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:37+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:53+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -607,6 +607,9 @@ msgstr "添加命令"
 msgid "Add extent"
 msgstr "添加 extent"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "添加啟動器"
 
@@ -886,9 +889,6 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "範圍定義目標的存儲區域。"
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
@@ -2540,6 +2540,9 @@ msgstr "刪除選中的卷"
 msgid "Delete Selected WLANs"
 msgstr "刪除選中的WLANs"
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "刪除 URL"
 
@@ -2858,6 +2861,9 @@ msgstr "禁用選中的Rsync模組"
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "關閉 TCP Wrapper（mod_wrap 模組）。"
 
@@ -3157,6 +3163,9 @@ msgstr "是否要刪除所選的加密卷？"
 msgid "Do you want to delete selected groups?"
 msgstr "您要刪除所選的群組嗎？"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -3241,6 +3250,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "您要禁用所選命令嗎？"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3294,6 +3306,9 @@ msgstr ""
 
 msgid "Do you want to enable selected commands?"
 msgstr "是否要啟用所選命令？"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
 msgstr ""
@@ -3357,6 +3372,9 @@ msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "是否要切換所選命令？"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr ""
@@ -3641,6 +3659,9 @@ msgstr "編輯命令"
 msgid "Edit extent"
 msgstr "編輯 extent"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "編輯啟動器"
 
@@ -3791,6 +3812,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "啟用選中的Rsync模組"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -5002,6 +5026,9 @@ msgstr "IPv4 設置"
 
 msgid "IPv4 addresses"
 msgstr "IPv4 地址"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7268,7 +7295,7 @@ msgstr "端口號必須是69或1024到49151之間的數字。"
 msgid "Port number must be in the range between %d and %d."
 msgstr "端口號必須在%d和%d之間的範圍內。"
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -7802,6 +7829,9 @@ msgstr "移除所有ARP table內的專案"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "先刪除%s，然後再繼續。"
+
+msgid "Reorder"
+msgstr ""
 
 msgid "Reorder Commands"
 msgstr "記錄命令"
@@ -10684,6 +10714,9 @@ msgstr "切換所選Rsync模組"
 msgid "Toggle Selected Targets"
 msgstr ""
 
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "容許"
 
@@ -11821,7 +11854,16 @@ msgstr ""
 msgid "iSNS Server"
 msgstr ""
 
-msgid "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
 msgstr ""
 
 msgid "iSNS Timeout"
@@ -11925,6 +11967,3 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可見"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "輸入說明供您參考"

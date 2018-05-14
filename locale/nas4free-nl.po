@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
-"PO-Revision-Date: 2018-05-12 13:24+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
+"PO-Revision-Date: 2018-05-14 08:49+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -354,13 +354,13 @@ msgstr ""
 "slaap mode was gebracht."
 
 msgid "A valid IP address must be specified."
-msgstr "Een geldig IP-adres moet worden gespecificeerd."
+msgstr "Een geldig IP-adres moet worden opgegeven."
 
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
-"Een geldig IP-adres of CIDR notatie moet worden opgegeven voor de host die "
-"is toegestaan."
+"Een geldig IP-adres of CIDR notatie moet worden opgegeven voor de hosts die "
+"zijn toegestaan."
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
@@ -371,13 +371,13 @@ msgstr ""
 "Een geldig IPv4-adres moet worden opgegeven voor de secundaire DNS-server."
 
 msgid "A valid IPv4 address must be specified."
-msgstr "Een geldig IPv4 adres moet worden gespecificeerd."
+msgstr "Een geldig IPv4 adres moet worden opgegeven."
 
 msgid "A valid IPv4 network bit count must be specified."
-msgstr "Een geldige IPv4 netwerk bit aantal moet worden gespecificeerd."
+msgstr "Een geldige IPv4 netwerk bit aantal moet worden opgegeven."
 
 msgid "A valid IPv6 Gateway address must be specified."
-msgstr "Een geldig IPv6 Gateway adres moet worden gespecificeerd."
+msgstr "Een geldig IPv6 Gateway adres moet worden opgegeven."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
@@ -388,16 +388,16 @@ msgstr ""
 "Een geldig IPv6-adres moet worden opgegeven voor de secundaire DNS-server."
 
 msgid "A valid IPv6 address must be specified."
-msgstr "Een geldig IPv6 adres moet worden gespecificeerd."
+msgstr "Een geldig IPv6 adres moet worden opgegeven."
 
 msgid "A valid IPv6 prefix must be specified."
-msgstr "Een geldige IPv6 voorvoegsel moet worden gespecificeerd."
+msgstr "Een geldige IPv6 voorvoegsel moet worden opgegeven."
 
 msgid "A valid destination network must be specified."
-msgstr "Een geldig bestemmingsnetwerk moet worden gespecificeerd."
+msgstr "Een geldig bestemmingsnetwerk moet worden opgegeven."
 
 msgid "A valid gateway IP address must be specified."
-msgstr "Een geldig gateway IP-adres moet worden gespecificeerd."
+msgstr "Een geldig gateway IP-adres moet worden opgegeven."
 
 msgid "A valid mtu size must be specified."
 msgstr "Een geldige mtu grootte moet worden opgegeven."
@@ -406,7 +406,7 @@ msgid "A valid network bit count (1-32) must be specified."
 msgstr "Een geldig netwerk bit aantal (1-32) moet worden opgegeven."
 
 msgid "A valid prefix (1-128) must be specified."
-msgstr "Een geldig voorvoegsel (1-128) moet worden gespecificeerd."
+msgstr "Een geldig voorvoegsel (1-128) moet worden opgegeven."
 
 msgid "A valid systctl MIB value."
 msgstr "Een geldige systctl MIB waarde."
@@ -665,6 +665,9 @@ msgstr "Opdracht toevoegen"
 msgid "Add extent"
 msgstr "Extent toevoegen"
 
+msgid "Add iSNS Server"
+msgstr "iSNS Server Toevoegen"
+
 msgid "Add initiator"
 msgstr "Initiator toevoegen"
 
@@ -814,8 +817,9 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
-"Alle data op de locatie wordt overschreven. Om ongeldige data/machtigingen "
-"te vermijden wordt een lege UFS folder ten sterkste aanbevolen."
+"Alle gegevens op de locatie wordt overschreven. Om ongeldige "
+"data/machtigingen te vermijden wordt een lege UFS folder ten sterkste "
+"aanbevolen."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Alle gegevens zullen verloren gaan wanneer u deze optie activeert!"
@@ -977,9 +981,6 @@ msgstr "Een Extent definieërt het opslaggebied van de Doel."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "Een IPv4- of IPv6-adres van een iSCSI initiator portaal."
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
-msgstr "Een IPv4 of IPv6 adres van de iSNS server waarop aan te melden"
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
@@ -2800,6 +2801,9 @@ msgstr "Verwijder Geselecteerde Volumes"
 msgid "Delete Selected WLANs"
 msgstr "Verwijder Geselecteerde WLANs"
 
+msgid "Delete Selected iSNS Servers"
+msgstr "Verwijder Geselecteerde iSNS Servers"
+
 msgid "Delete URL"
 msgstr "URL verwijderen"
 
@@ -3133,6 +3137,9 @@ msgstr "Geselecteerde Rsync Modules Uitschakelen"
 msgid "Disable Selected Targets"
 msgstr "Geselecteerde  Doelen Uitschakelen"
 
+msgid "Disable Selected iSNS Servers"
+msgstr "Geselecteerde iSNS Servers Uitschakelen"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Uitschakelen TCP wrapper (mod_wrap module)."
 
@@ -3463,6 +3470,9 @@ msgstr "Wilt u de geselecteerde gecodeerde volumes verwijderen?"
 msgid "Do you want to delete selected groups?"
 msgstr "Wilt u de geselecteerde groepen verwijderen?"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr "Wilt u de geselecteerde iSNS servers verwijderen?"
+
 msgid "Do you want to delete selected initiator names?"
 msgstr "Wilt u de geselecteerde initiator namen verwijderen?"
 
@@ -3547,6 +3557,9 @@ msgstr "Wilt u de geselecteerde autorisatiegroepen deactiveren?"
 msgid "Do you want to disable selected commands?"
 msgstr "Wilt u geselecteerde opdrachten uitschakelen?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr "Wilt u de geselecteerde iSNS servers uitschakelen?"
+
 msgid "Do you want to disable selected initiator names?"
 msgstr "Wilt u de geselecteerde initiator namen de-activeren?"
 
@@ -3600,6 +3613,9 @@ msgstr "Wilt u de geselecteerde autorisatiegroepen activeren?"
 
 msgid "Do you want to enable selected commands?"
 msgstr "Wilt u de geselecteerde opdrachten inschakelen?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr "Wilt u de geselecteerde iSNS servers inschakelen?"
 
 msgid "Do you want to enable selected initiator names?"
 msgstr "Wilt u de geselecteerde initiator namen activeren?"
@@ -3663,6 +3679,9 @@ msgstr "Wilt u de geselecteerde autorisatiegroepen omkeren?"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Wilt u de geselecteerde opdrachten omschakelen?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr "Wilt u de geselecteerde iSNS servers omschakelen?"
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr "Wilt u de geselecteerde initiator namen omkeren?"
@@ -3952,6 +3971,9 @@ msgstr "Bewerk Opdracht"
 msgid "Edit extent"
 msgstr "Extent bewerken"
 
+msgid "Edit iSNS Server"
+msgstr "iSNS Server Bewerken"
+
 msgid "Edit initiator"
 msgstr "Initiator bewerken"
 
@@ -4109,6 +4131,9 @@ msgstr "Geselecteerde Rsync Modules Inschakelen"
 
 msgid "Enable Selected Targets"
 msgstr "Activeer de geselecteerde doelen"
+
+msgid "Enable Selected iSNS Servers"
+msgstr "Inschakelen Geselecteerde iSNS Servers"
 
 msgid "Enable Server"
 msgstr "Inschakelen Server"
@@ -5403,6 +5428,9 @@ msgstr "IPv4 Instellingen"
 msgid "IPv4 addresses"
 msgstr "IPv4-adressen"
 
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr "IPv4 of IPv6 adres van een iSNS server waarop aan te melden."
+
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
@@ -6477,7 +6505,7 @@ msgid "Masquerade Address"
 msgstr "Masquerade Adres"
 
 msgid "Max Processes"
-msgstr "Maximaal aantal Processen"
+msgstr "Max Processen"
 
 msgid "Max. Block Size"
 msgstr "Max. Blokgrootte"
@@ -7822,8 +7850,8 @@ msgstr "Poortnummer moet 69 zijn of een getal tussen 1024 en 49151."
 msgid "Port number must be in the range between %d and %d."
 msgstr "Poortnummer moet in het gebied tussen %d en %d zijn."
 
-msgid "Port number of iSNS server to register on."
-msgstr "Poortnummer van iSNS server waarop aan te melden."
+msgid "Port number of the iSNS server."
+msgstr "Poortnummer van de iSNS server."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
@@ -8381,6 +8409,9 @@ msgstr "Alle ARP regels verwijderen uit de tabel"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Verwijder de %s eerst voor u verder gaat."
+
+msgid "Reorder"
+msgstr "Herschikken"
 
 msgid "Reorder Commands"
 msgstr "Herindelen Opdrachten"
@@ -11680,6 +11711,9 @@ msgstr "Geselecteerde Rsync Modules Omschakelen"
 msgid "Toggle Selected Targets"
 msgstr "Geselecteerde Doelen Omschakelen"
 
+msgid "Toggle Selected iSNS Servers"
+msgstr "Geselecteerde iSNS Servers omschakelen?"
+
 msgid "Tolerated"
 msgstr "Toelaten"
 
@@ -12921,8 +12955,17 @@ msgstr "iSNS Periode"
 msgid "iSNS Server"
 msgstr "iSNS Server"
 
-msgid "iSNS Server Port"
-msgstr "iSNS Server Poort"
+msgid "iSNS Server is locked"
+msgstr "iSNS Server is vergrendeld"
+
+msgid "iSNS Server is marked for deletion"
+msgstr "iSNS Server  is gemarkeerd voor verwijdering"
+
+msgid "iSNS Server is unlocked"
+msgstr "iSNS Server is ontgrendeld"
+
+msgid "iSNS Servers"
+msgstr "iSNS Servers"
 
 msgid "iSNS Timeout"
 msgstr "iSNS Timeout"
@@ -13027,9 +13070,3 @@ msgstr "gebruikt van"
 
 msgid "visible"
 msgstr "zichtbaar"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Geef een beschrijving op"
-
-#~ msgid "The LUN size, in bytes."
-#~ msgstr "De LUN grootte, in bytes."

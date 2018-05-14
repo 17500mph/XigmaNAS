@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
 "PO-Revision-Date: 2018-04-19 15:11+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -657,6 +657,9 @@ msgstr "Aggiungi comando"
 msgid "Add extent"
 msgstr "Aggiungere limite"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "Aggiungere iniziatore"
 
@@ -965,9 +968,6 @@ msgid "An Extent defines the storage area of the Target."
 msgstr "Un Extent definisce l'are di immagazzinamento del Target."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
-msgstr ""
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
 msgstr ""
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
@@ -2774,6 +2774,9 @@ msgstr "Cancella i Volumi Selezionati"
 msgid "Delete Selected WLANs"
 msgstr "Cancella le WLAN selezionate"
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Elimina URL"
 
@@ -3107,6 +3110,9 @@ msgstr "Disattiva i moduli Rsync selezionati"
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "DIsabilita il wrapper TCP (modulo mod_wrap)."
 
@@ -3432,6 +3438,9 @@ msgstr ""
 msgid "Do you want to delete selected groups?"
 msgstr "Vuoi eliminare i gruppi selezionati?"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -3516,6 +3525,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "Vuoi disabilitare i comandi selezionati?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3569,6 +3581,9 @@ msgstr ""
 
 msgid "Do you want to enable selected commands?"
 msgstr "Vuoi attivare i comandi selezionati?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
 msgstr ""
@@ -3632,6 +3647,9 @@ msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Vuoi deselezionare i comandi selezionati?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr ""
@@ -3920,6 +3938,9 @@ msgstr "Modifica comando"
 msgid "Edit extent"
 msgstr "Modifica limite"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "Modifica iniziatore"
 
@@ -4076,6 +4097,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Attiva moduli rsync selezionati"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -5357,6 +5381,9 @@ msgstr "Impostazioni IPv4"
 
 msgid "IPv4 addresses"
 msgstr "Indirizzi IPv4"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7751,7 +7778,7 @@ msgstr ""
 msgid "Port number must be in the range between %d and %d."
 msgstr "Il numero della porta deve essere tra %d e %d."
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -8305,6 +8332,9 @@ msgstr "Cancella tutte le voci dalla tabella ARP"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Rimuovere il %s prima di procedere."
+
+msgid "Reorder"
+msgstr ""
 
 msgid "Reorder Commands"
 msgstr "Comandi di riordino"
@@ -11533,6 +11563,9 @@ msgstr "Attiva i moduli Rsync selezionati"
 msgid "Toggle Selected Targets"
 msgstr ""
 
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tollerato"
 
@@ -12759,7 +12792,16 @@ msgstr ""
 msgid "iSNS Server"
 msgstr ""
 
-msgid "iSNS Server Port"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
 msgstr ""
 
 msgid "iSNS Timeout"
@@ -12863,6 +12905,3 @@ msgstr "utilizzo di"
 
 msgid "visible"
 msgstr "visibile"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Inserire una descrizione per il riferimento"

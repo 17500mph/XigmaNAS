@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-12 15:06+0000\n"
+"POT-Creation-Date: 2018-05-14 01:49+0000\n"
 "PO-Revision-Date: 2018-05-10 05:04+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-12 13:36+0000\n"
+"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -660,6 +660,9 @@ msgstr "Přidat příkaz"
 msgid "Add extent"
 msgstr "Přidat úložnou jednotku"
 
+msgid "Add iSNS Server"
+msgstr ""
+
 msgid "Add initiator"
 msgstr "Přidat iniciátor"
 
@@ -973,9 +976,6 @@ msgstr "Úložná jednotka určuje úložnou oblast na cíli."
 
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "IPv4 nebo IPv6 adresa portálu iSCSI iniciátoru."
-
-msgid "An IPv4 or IPv6 address of iSNS server to register on."
-msgstr "IPv4 nebo IPv6 adresa iSNS serveru na kterém zaregistrovat."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
 msgstr ""
@@ -2777,6 +2777,9 @@ msgstr "Smazat označené svazky"
 msgid "Delete Selected WLANs"
 msgstr "Smazat označená Wifi rozhraní"
 
+msgid "Delete Selected iSNS Servers"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Odstranit URL adresu"
 
@@ -3109,6 +3112,9 @@ msgstr "Vypnout označené Rsync moduly"
 msgid "Disable Selected Targets"
 msgstr "Vypnout označené cíle"
 
+msgid "Disable Selected iSNS Servers"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
 
@@ -3429,6 +3435,9 @@ msgstr "Opravdu smazat označené šifrované svazky?"
 msgid "Do you want to delete selected groups?"
 msgstr "Opravdu smazat označené skupiny?"
 
+msgid "Do you want to delete selected iSNS serverss?"
+msgstr ""
+
 msgid "Do you want to delete selected initiator names?"
 msgstr ""
 
@@ -3513,6 +3522,9 @@ msgstr ""
 msgid "Do you want to disable selected commands?"
 msgstr "Opravdu vypnout označené příkazy?"
 
+msgid "Do you want to disable selected iSNS servers?"
+msgstr ""
+
 msgid "Do you want to disable selected initiator names?"
 msgstr ""
 
@@ -3566,6 +3578,9 @@ msgstr ""
 
 msgid "Do you want to enable selected commands?"
 msgstr "Opravdu zapnout označené příkazy?"
+
+msgid "Do you want to enable selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to enable selected initiator names?"
 msgstr "Opravdu chcete zapnout označené názvy iniciátorů?"
@@ -3630,6 +3645,9 @@ msgstr ""
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Opravdu přepnout označené příkazy?"
+
+msgid "Do you want to toggle selected iSNS servers?"
+msgstr ""
 
 msgid "Do you want to toggle selected initiator names?"
 msgstr ""
@@ -3916,6 +3934,9 @@ msgstr "Upravit příkaz"
 msgid "Edit extent"
 msgstr "Upravit úložnou jednotku"
 
+msgid "Edit iSNS Server"
+msgstr ""
+
 msgid "Edit initiator"
 msgstr "Upravit iniciátor"
 
@@ -4070,6 +4091,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Používat označené Rsync moduly"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected iSNS Servers"
 msgstr ""
 
 msgid "Enable Server"
@@ -5353,6 +5377,9 @@ msgstr "IPv4 nastavení"
 
 msgid "IPv4 addresses"
 msgstr "IPv4 adresy"
+
+msgid "IPv4 or IPv6 address of an iSNS server to register on."
+msgstr ""
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -7774,7 +7801,7 @@ msgstr "Je třeba aby číslo portu bylo 69 nebo číslo zrrozmezí 1024 až 491
 msgid "Port number must be in the range between %d and %d."
 msgstr "Je třeba, aby číslo portu bylo z rozahu %d až %d."
 
-msgid "Port number of iSNS server to register on."
+msgid "Port number of the iSNS server."
 msgstr ""
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
@@ -8341,6 +8368,9 @@ msgstr "Odstranit všechny záznamy z ARP tabulky"
 #, php-format
 msgid "Remove the %s first before proceeding."
 msgstr "Pokračovat bude možné až po odebrání %s."
+
+msgid "Reorder"
+msgstr ""
 
 msgid "Reorder Commands"
 msgstr "Přeuspořádat příkazy"
@@ -11569,6 +11599,9 @@ msgstr "Přepnout označené Rsync moduly"
 msgid "Toggle Selected Targets"
 msgstr ""
 
+msgid "Toggle Selected iSNS Servers"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerováno"
 
@@ -12817,8 +12850,17 @@ msgstr ""
 msgid "iSNS Server"
 msgstr "iSNS server"
 
-msgid "iSNS Server Port"
-msgstr "Port na iSNS serveru"
+msgid "iSNS Server is locked"
+msgstr ""
+
+msgid "iSNS Server is marked for deletion"
+msgstr ""
+
+msgid "iSNS Server is unlocked"
+msgstr ""
+
+msgid "iSNS Servers"
+msgstr ""
 
 msgid "iSNS Timeout"
 msgstr "Časový limit iSNS"
@@ -12925,6 +12967,3 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
-
-#~ msgid "Enter a description for your reference"
-#~ msgstr "Zadejte popis podle kterého se zorientujete"
