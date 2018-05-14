@@ -286,7 +286,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['Python',[
 			'A programming language (<a href="http://www.python.org" target="_blank">http://www.python.org</a>).',
-			'Copyright © 2001-2017 Python Software Foundation. All Rights Reserved.'
+			'Copyright © 2001-2018 Python Software Foundation. All Rights Reserved.'
 		]],
 		['QuiXplorer',[
 			'A Web-based file-management browser (<a href="https://github.com/realtimeprojects/quixplorer" target="_blank">https://github.com/realtimeprojects/quixplorer</a>).',
@@ -314,7 +314,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['sudo',[
 			'A tool to allow a sysadmin to give limited root privileges. (<a href="http://www.sudo.ws" target="_blank">http://www.sudo.ws</a>).',
-			'Copyright © 1994-1996, 1998-2017 Todd C. Miller. All Rights Reserved.'
+			'Copyright © 1994-1996, 1998-2018 Todd C. Miller. All Rights Reserved.'
 		]],
 		['Syncthing',[
 			'Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. (<a href="https://syncthing.net" target="_blank">https://syncthing.net</a>).',
