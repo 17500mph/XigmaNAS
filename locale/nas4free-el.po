@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-14 01:49+0000\n"
-"PO-Revision-Date: 2018-05-07 13:58+0000\n"
+"POT-Creation-Date: 2018-05-14 22:20+0000\n"
+"PO-Revision-Date: 2018-05-14 09:26+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-14 08:52+0000\n"
+"X-Launchpad-Export-Date: 2018-05-15 07:24+0000\n"
 "X-Generator: Launchpad (build 18640)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -533,7 +533,7 @@ msgid "Add CARP"
 msgstr "Προσθήκη CARP"
 
 msgid "Add CHAP User"
-msgstr ""
+msgstr "Προσθήκη Χρήστη CHAP"
 
 msgid "Add Dataset"
 msgstr "Προσθήκη Dataset"
@@ -551,10 +551,10 @@ msgid "Add Host"
 msgstr "Προσθήκη Υπολογιστή"
 
 msgid "Add Initiator Name"
-msgstr ""
+msgstr "Προσθήκη Ονόματος Εκκινητή"
 
 msgid "Add Initiator Portal"
-msgstr ""
+msgstr "Προσθήκη Portal Εκκινητή"
 
 msgid "Add LAGG"
 msgstr "Προσθήκη LAGG"
@@ -563,7 +563,7 @@ msgid "Add LUN"
 msgstr "Προσθήκη LUN"
 
 msgid "Add LUN Record"
-msgstr ""
+msgstr "Προσθήκη Εγγραφής LUN"
 
 msgid "Add Listen Record"
 msgstr ""
@@ -587,7 +587,7 @@ msgid "Add Pool"
 msgstr "Προσθήκη Pool"
 
 msgid "Add Port Record"
-msgstr ""
+msgstr "Προσθήκη Εγγραφής Θύρας"
 
 msgid "Add Portal Group"
 msgstr "Προσθήκη Ομάδας Portal"
@@ -671,7 +671,7 @@ msgid "Add extent"
 msgstr "Προσθήκη επέκτασης"
 
 msgid "Add iSNS Server"
-msgstr ""
+msgstr "Προσθήκη Διακομιστή iSNS"
 
 msgid "Add initiator"
 msgstr "Προθήκη εκκινητή"
@@ -1204,7 +1204,7 @@ msgid "Auth Group is locked"
 msgstr "Ομάδα Πιστοποίησης κλειδωμένη"
 
 msgid "Auth Group is marked for deletion"
-msgstr ""
+msgstr "Η ομάδα πιστοποίησης έχει σημειωθεί προς διαγραφή."
 
 msgid "Auth Group is unlocked"
 msgstr "Ομάδα Πιστοποίησης ξεκλείδωτη"
@@ -1604,13 +1604,13 @@ msgid "CHAP"
 msgstr "CHAP"
 
 msgid "CHAP User is locked"
-msgstr ""
+msgstr "Ο χρήστης CHAP είναι κλειδωμένος"
 
 msgid "CHAP User is marked for deletion"
-msgstr ""
+msgstr "Ο χρήστης CHAP έχει σημειωθεί προς διαγραφή."
 
 msgid "CHAP User is unlocked"
-msgstr ""
+msgstr "Ο χρήστης CHAP είναι ξεκλείδωτος."
 
 msgid "CHAP Users"
 msgstr "Χρήστες CHAP"
@@ -2713,7 +2713,7 @@ msgid "Delete Selected CARPs"
 msgstr "Διαγραφή Επιλεγμένων CARP"
 
 msgid "Delete Selected CHAP Users"
-msgstr ""
+msgstr "Διαγραφή επιλεγμένων χρηστών CHAP"
 
 msgid "Delete Selected Commands"
 msgstr "Διαγραφή Επιλεγμένων Εντολών"
@@ -2731,10 +2731,10 @@ msgid "Delete Selected Groups"
 msgstr "Διαγραφή Επιλεγμένων Ομάδων"
 
 msgid "Delete Selected Initiator Names"
-msgstr ""
+msgstr "Διαγραφή επιλεγμένων ονομάτων εκκινητών"
 
 msgid "Delete Selected Initiator Portals"
-msgstr ""
+msgstr "Διαγραφή επιλεγμένων portal εκκινητών"
 
 msgid "Delete Selected Jobs"
 msgstr "Διαγραφή Επιλεγμένων Εργασιών"
@@ -3104,16 +3104,16 @@ msgid "Disable Firmware Upgrade"
 msgstr "Απενεργοποίηση Ενημέρωσης Υλικολογισμικού"
 
 msgid "Disable Selected Auth Groups"
-msgstr ""
+msgstr "Απενεργοποίηση Επιλεγμένων Ομάδων Πιστοποίησης"
 
 msgid "Disable Selected CHAP Users"
-msgstr ""
+msgstr "Απενεργοποίηση Επιλεγμένων Χρηστών CHAP"
 
 msgid "Disable Selected Commands"
 msgstr "Απενεργοποίηση Επιλεγμένων Εντολών"
 
 msgid "Disable Selected Initiator Names"
-msgstr ""
+msgstr "Απενεργοποίηση Επιλεγμένων Ονομάτων Εκκινητών"
 
 msgid "Disable Selected Initiator Portals"
 msgstr ""
@@ -3492,7 +3492,7 @@ msgstr "Θέλετε να διαγράψετε τους επιλεγμένους
 msgid "Do you want to delete selected groups?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες ομάδες;"
 
-msgid "Do you want to delete selected iSNS serverss?"
+msgid "Do you want to delete selected iSNS servers?"
 msgstr ""
 
 msgid "Do you want to delete selected initiator names?"
