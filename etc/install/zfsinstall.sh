@@ -296,6 +296,7 @@ install_sys_files()
 	fi
 
 	# Generate/update our loader.rc
+	if [ -f "${INCLUDE}/menu.4th" ]; then
 	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.rc
 \ Loader.rc
 include /boot/loader.4th
@@ -305,6 +306,7 @@ check-password
 include /boot/beastie.4th
 beastie-start
 EOF
+	fi
 	chmod 444 ${ALTROOT}/${ZROOT}/boot/loader.rc
 
 	# Decompress kernel.
@@ -450,6 +452,7 @@ upgrade_sys_files()
 	fi
 
 	# Generate/update our loader.rc
+	if [ -f "${INCLUDE}/menu.4th" ]; then
 	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.rc
 \ Loader.rc
 include /boot/loader.4th
@@ -459,6 +462,7 @@ check-password
 include /boot/beastie.4th
 beastie-start
 EOF
+	fi
 	chmod 444 ${ALTROOT}/${ZROOT}/boot/loader.rc
 
 	# Decompress kernel.
@@ -689,7 +693,7 @@ menu_zrootsize()
 {
 	cdialog --title "Customize zroot pool partition size?" \
 	--backtitle "$PRDNAME $APPNAME Installer" \
-	--yesno "Would you like to customize the ${ZROOT} partition size?" 5 60
+	--default-button no --yesno "Would you like to customize the ${ZROOT} partition size?" 5 60
 	choice=$?
 	case "${choice}" in
 		0) true;;
