@@ -1,6 +1,6 @@
 PORTNAME=	devcpu-data
 PORTVERSION=	1.16
-PORTREVISION=   0
+PORTREVISION=   1
 CATEGORIES=	sysutils
 MASTER_SITES=   https://downloadmirror.intel.com/27591/eng/:intel \
 		http://www.amd64.org/microcode/:amd
@@ -24,8 +24,8 @@ DATADIR=	${PREFIX}/share/cpucontrol
 
 USE_RC_SUBR=	microcode_update
 
-post-extract: 
-	${CP} -p ${FILESDIR}/Makefile ${FILESDIR}/ucode-tool.c ${WRKSRC} 
+post-extract:
+	${CP} -p ${FILESDIR}/Makefile ${FILESDIR}/ucode-split.c ${WRKSRC}
 
 do-install:
 # NAS4Free install
