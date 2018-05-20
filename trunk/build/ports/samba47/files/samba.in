@@ -11,7 +11,7 @@
 # REQUIRE: NETWORKING SERVERS DAEMON resolv
 # BEFORE: LOGIN
 # KEYWORD: shutdown
-# XQUERY: -i "count(//samba/enable) > 0" -o "0" -b
+# XQUERY: --if "count(//samba/enable) > 0" --output "0" --else --output "1" --break
 # RCVAR: samba
 
 . /etc/rc.subr
@@ -112,275 +112,361 @@ winbindd_flags="${winbindd_flags=''}"
 required_files="${samba_config}"
 required_dirs="${samba_lockdir}"
 
+samba_mkconf_user_shares()
+{
+	/usr/local/bin/xml sel --template \
+		--match '//samba/share' \
+			--if 'string-length(name) > 0' \
+				--value-of 'concat("[",name,"]")' --nl \
+				--if 'string-length(comment) > 0' \
+					--value-of 'concat("comment = ",comment)' --nl \
+				--break \
+				--if 'string-length(path) > 0' \
+					--value-of 'concat("path = ",path)' --nl \
+				--break \
+				--if 'count(readonly) = 0' \
+					--output 'writeable = yes' --nl \
+				--break \
+				--output 'printable = no' --nl \
+				--output 'veto files = /.snap/.sujournal/' --nl \
+				--if 'count(hidedotfiles) > 0' \
+					--output 'hide dot files = yes' --nl \
+				--else \
+					--output 'hide dot files = no' --nl \
+				--break \
+				--if '//samba/security[. = "share"]' \
+					--output 'guest ok = yes' --nl \
+				--elif 'count(guest) > 0' \
+					--output 'guest ok = yes' --nl \
+				--else \
+					--output 'guest ok = no' --nl \
+				--break \
+				--if 'count(browseable) = 0' \
+					--output 'browseable = no' --nl \
+				--break \
+				--if 'count(inheritpermissions) > 0' \
+					--output 'inherit permissions = yes' --nl \
+				--break \
+				--if 'count(inheritacls) > 0' \
+					--output 'inherit acls = yes' --nl \
+				--break \
+				--output 'vfs objects =' \
+					--if 'count(shadowcopy) > 0' \
+						--output ' shadow_copy2' \
+					--break \
+					--if 'count(zfs_space) > 0' \
+						--output ' zfs_space' \
+					--else \
+						--output ' zfs_space' \
+					--break \
+					--if 'count(zfsacl) > 0' \
+						--output ' zfsacl' \
+					--break \
+					--if 'count(afpcompat) > 0' \
+						--output ' catia' \
+					--break \
+					--if 'count(afpcompat) > 0' \
+						--output ' fruit' \
+					--break \
+					--if 'count(storealternatedatastreams) > 0 or count(afpcompat) > 0' \
+						--output ' streams_xattr' \
+					--break \
+					--if 'count(storentfsacls) > 0' \
+						--output ' acl_xattr' \
+					--break \
+					--if 'count(recyclebin) > 0' \
+						--output ' recycle' \
+					--break \
+					--if 'count(//samba/aio) > 0' \
+						--output ' aio_pthread' \
+					--break \
+				--nl \
+				--if 'count(zfsacl) > 0' \
+					--output 'nfs4:mode = special' --nl \
+					--output 'nfs4:acedup = merge' --nl \
+					--output 'nfs4:chown = yes' --nl \
+				--break \
+				--if 'count(recyclebin) > 0' \
+					--output "recycle:repository = ${samba_recycle_repository}" --nl \
+					--output 'recycle:keeptree = yes' --nl \
+					--output 'recycle:versions = yes' --nl \
+					--output 'recycle:touch = yes' --nl \
+					--output "recycle:directory_mode = ${samba_recycle_directory_mode}" --nl \
+					--output "recycle:subdir_mode = ${samba_recycle_subdir_mode}" --nl \
+				--break \
+				--if 'count(shadowcopy) > 0' \
+					--if 'string-length(shadowformat) > 0' \
+						--value-of 'concat("shadow:format = ", shadowformat)' --nl \
+					--break \
+					--output 'shadow:snapdir = .zfs/snapshot' --nl \
+					--output 'shadow:snapdirseverywhere = yes' --nl \
+					--output 'shadow:sort = desc' --nl \
+					--output 'shadow:localtime = yes' --nl \
+				--break \
+				--if 'count(zfsacl) > 0' \
+					--output 'veto files = /.zfs/' --nl \
+				--break \
+				--if 'count(afpcompat) > 0' \
+					--if 'string-length(vfs_fruit_resource) > 0' \
+						--value-of 'concat("fruit:resource = ",vfs_fruit_resource)' --nl \
+					--else \
+						--output 'fruit:resource = file' --nl \
+					--break \
+					--if 'string-length(vfs_fruit_metadata) > 0' \
+						--value-of 'concat("fruit:metadata = ",vfs_fruit_metadata)' --nl \
+					--else \
+						--output 'fruit:metadata = netatalk' --nl \
+					--break \
+					--if 'string-length(vfs_fruit_locking) > 0' \
+						--value-of 'concat("fruit:locking = ",vfs_fruit_locking)' --nl \
+					--else \
+						--output 'fruit:locking = netatalk' --nl \
+					--break \
+					--if 'string-length(vfs_fruit_encoding) > 0' \
+						--value-of 'concat("fruit:encoding = ",vfs_fruit_encoding)' --nl \
+					--else \
+						--output 'fruit:encoding = native' --nl \
+					--break \
+					--if 'string-length(vfs_fruit_time_machine) > 0' \
+						--value-of 'concat("fruit:time machine = ",vfs_fruit_time_machine)' --nl \
+					--break \
+				--break \
+				--if 'string-length(hostsallow) > 0' \
+					--value-of 'concat("hosts allow = ",hostsallow)' --nl \
+				--break \
+				--if 'string-length(hostsdeny) > 0' \
+					--value-of 'concat("hosts deny = ",hostsdeny)' --nl \
+				--break \
+				--match 'auxparam' \
+					--value-of '.' --nl \
+				--break \
+				--nl \
+			--break \
+		--break \
+	${configxml_file} | /usr/local/bin/xml unesc >> ${samba_config}
+}
+
 samba_mkconf_cmd()
 {
 	# Create smb4.conf file
-	/usr/local/bin/xml sel -t \
-		-o "[global]" -n \
-		-o "server role = standalone" -n \
-		-o "encrypt passwords = yes" -n \
-		-v "concat('netbios name = ',//samba/netbiosname)" -n \
-		-v "concat('workgroup = ',//samba/workgroup)" -n \
-		-v "concat('server string = ',//samba/serverdesc)" -n \
-		-v "concat('security = ',//samba/security)" -n \
-		-i "string-length(//samba/maxprotocol) > 0" -v "concat('server max protocol = ',//samba/maxprotocol)" -n -b \
-		-i "string-length(//samba/minprotocol) > 0" -v "concat('server min protocol = ',//samba/minprotocol)" -n -b \
-		-i "string-length(//samba/clientmaxprotocol) > 0" -v "concat('client max protocol = ',//samba/clientmaxprotocol)" -n -b \
-		-i "string-length(//samba/clientminprotocol) > 0" -v "concat('client min protocol = ',//samba/clientminprotocol)" -n -b \
-		-o "dns proxy = no" -n \
-		-o "# Settings to enhance performance:" -n \
-		-o "strict locking = no" -n \
-		-o "read raw = yes" -n \
-		-o "write raw = yes" -n \
-		-o "oplocks = yes" -n \
-		-o "max xmit = 65535" -n \
-		-o "deadtime = 15" -n \
-		-o "getwd cache = yes" -n \
-		-o "socket options = ${samba_socket_options} " \
-		-i "string-length(//samba/sndbuf) > 0" \
-			-v "concat('SO_SNDBUF=',//samba/sndbuf,' ')" \
-		-b \
-		-i "string-length(//samba/sndbuf) = 0" \
-			-o "SO_SNDBUF=65536 " \
-		-b \
-		-i "string-length(//samba/rcvbuf) > 0" \
-			-v "concat('SO_RCVBUF=',//samba/rcvbuf,' ')" \
-		-b \
-		-i "string-length(//samba/rcvbuf) = 0" \
-			-o "SO_RCVBUF=65536 " \
-		-b \
-		-n -o "# End of performance section" -n \
-		-i "string-length(//samba/pwdsrv) > 0" \
-			-v "concat('password server = ',//samba/pwdsrv)" -n \
-		-b \
-		-i "string-length(//samba/winssrv) > 0" \
-			-v "concat('wins server = ',//samba/winssrv)" -n \
-		-b \
-		-i "string-length(//samba/unixcharset) > 0" \
-			-v "concat('unix charset = ',//samba/unixcharset)" -n \
-		-b \
-		-i "string-length(//samba/unixcharset) = 0" \
-			-o "unix charset = UTF-8" -n \
-		-b \
-		-i "count(//samba/largereadwrite) = 0" \
-			-o "large readwrite = no" -n \
-		-b \
-		-i "count(//samba/easupport) > 0" \
-			-o "ea support = yes" -n \
-		-b \
-		-i "count(//samba/storedosattributes) > 0" \
-			-o "store dos attributes = yes" -n \
-		-b \
-		-i "count(//samba/storedosattributes) = 0 and count(//samba/mapdosattributes) > 0" \
-			-o "create mask = 0755" -n \
-			-o "map hidden = yes" -n \
-			-o "map system = yes" -n \
-		-b \
-		-i "//samba/localmaster[. = 'yes']" \
-			-v "concat('local master = ',//samba/localmaster)" -n \
-			-o "domain master = yes" -n \
-			-o "preferred master = yes" -n \
-			-o "os level = 35" -n \
-		-b \
-		-i "//samba/localmaster[. = 'no']" \
-			-v "concat('local master = ',//samba/localmaster)" -n \
-			-o "domain master = no" -n \
-			-o "preferred master = no" -n \
-			-o "os level = 0" -n \
-		-b \
-		-i "string-length(//samba/timesrv) > 0" \
-			-v "concat('time server = ',//samba/timesrv)" -n \
-		-b \
-		-i "string-length(//samba/guestaccount) > 0" -v "concat('guest account = ',//samba/guestaccount)" -n -b \
-		-i "string-length(//samba/guestaccount) = 0" -o "guest account = ftp" -n -b \
-		-v "concat('map to guest = ',//samba/maptoguest)" -n \
-		-i "count(nullpasswords) > 0" -o "null passwords = yes" -n -b \
-		-o "max log size = 100" -n \
-		-o "logging = syslog" -n \
-		-v "concat('loglevel = ',//samba/loglevel)" -n \
-		-o "load printers = no" -n \
-		-o "printing = bsd" -n \
-		-o "printcap cache time = 0" -n \
-		-o "printcap name = /dev/null" -n \
-		-o "disable spoolss = yes" -n \
-		-v "concat('dos charset = ',//samba/doscharset)" -n \
-		-o "smb passwd file = /var/etc/private/smbpasswd" -n \
-		-o "private dir = /var/etc/private" -n \
-		-i "//samba/security[. = 'ads']" \
-			-o "passdb backend = tdbsam" -n \
-			-i "count(//samba/trusteddomains) > 0" \
-				-o "allow trusted domains = yes" -n \
-			-b \
-			-i "count(//samba/trusteddomains) = 0" \
-				-o "allow trusted domains = no" -n \
-			-b \
-			-o "idmap config * : backend = tdb" -n \
-			-o "idmap config * : range = ${samba_idmap_range}" -n \
-			-v "concat('idmap config ',//ad/domainname_netbios,' : backend = rid')" -n \
-			-v "concat('idmap config ',//ad/domainname_netbios,' : range = ${samba_idmap_range}')" -n \
-			-v "concat('realm = ',//ad/domainname_dns)" -n \
-			-o "winbind enum users = yes" -n \
-			-o "winbind enum groups = yes" -n \
-			-o "winbind use default domain = yes" -n \
-			-o "winbind normalize names = yes" -n \
-			-o "template homedir = /mnt" -n \
-			-o "template shell = /bin/sh" -n \
-		-b \
-		-i "//samba/security[. = 'user']" \
-			-i "count(//ldap/enable) = 0" \
-				-o "passdb backend = tdbsam" -n \
-				-o "idmap config * : backend = tdb" -n \
-				-o "idmap config * : range = ${samba_idmap_range}" -n \
-			-b \
-			-i "count(//ldap/enable) > 0" \
-				-v "concat('passdb backend = ldapsam:\"',//ldap/hostname,'\"')" -n \
-				-v "concat('ldap admin dn = ',//ldap/rootbinddn)" -n \
-				-v "concat('ldap suffix = ',//ldap/base)" -n \
-				-v "concat('ldap user suffix = ',//ldap/user_suffix)" -n \
-				-v "concat('ldap group suffix = ',//ldap/group_suffix)" -n \
-				-v "concat('ldap machine suffix = ',//ldap/machine_suffix)" -n \
-				-o "ldap replication sleep = 1000" -n \
-				-o "ldap passwd sync = yes" -n \
-				-o "ldap ssl = no" -n \
-				-o "ldapsam:trusted = yes" -n \
-				-o "idmap config * : backend = tdb" -n \
-				-o "idmap config * : range = ${samba_idmap_range}" -n \
-			-b \
-		-b \
-		-i "count(//samba/aio) > 0" \
-			-v "concat('aio read size = ',//samba/aiorsize)" -n \
-			-v "concat('aio write size = ',//samba/aiowsize)" -n \
-		-b \
-		-i "//samba/if[. = 'lan']" \
-			-o "bind interfaces only = yes" -n \
-				-v "concat('interfaces = ', //interfaces/lan/if)" -n \
-		-b \
-		-i "//samba/if[. = 'opt']" \
-			-o "bind interfaces only = yes" -n \
-				-o "interfaces = " \
-			-m "//interfaces/*[contains(name(),'opt')]/if" \
-				-v "concat(.,' ')" \
-			-b -n \
-		-b \
-		-i "//samba/if[. = 'carp']" \
-			-o "bind interfaces only = yes" -n \
-				-o "interfaces = " \
-			-m "//vinterfaces/carp/if" \
-				-v "concat(.,' ')" \
-			-b -n \
-		-b \
-		-m "//samba/auxparam" \
-			-v "." -n \
-		-b \
-		-n \
-		-m "//samba/share" \
-			-v "concat('[',name,']')" -n \
-			-v "concat('comment = ',comment)" -n \
-			-v "concat('path = ',path)" -n \
-			-i "count(readonly) = 0" \
-				-o "writeable = yes" -n \
-			-b \
-			-o "printable = no" -n \
-			-o "veto files = /.snap/.sujournal/" -n \
-			-i "count(hidedotfiles) > 0" \
-				-o "hide dot files = yes" -n \
-			-b \
-			-i "count(hidedotfiles) = 0" \
-				-o "hide dot files = no" -n \
-			-b \
-			-i "//samba/security[. = 'share']" \
-				-o "guest ok = yes" -n \
-			-b \
-			-i "//samba/security[. != 'share']" \
-				-i "count(guest) = 0" \
-					-o "guest ok = no" -n \
-				-b \
-				-i "count(guest) > 0" \
-					-o "guest ok = yes" -n \
-				-b \
-			-b \
-			-i "count(browseable) = 0" \
-				-o "browseable = no" -n \
-			-b \
-			-i "count(inheritpermissions) > 0" \
-				-o "inherit permissions = yes" -n \
-			-b \
-			-i "count(inheritacls) > 0" \
-				-o "inherit acls = yes" -n \
-			-b \
-			-o "vfs objects =" \
-			-i "count(shadowcopy) > 0" -o " shadow_copy2" -b \
-			-i "count(zfs_space) > 0" -o " zfs_space" -b \
-			-i "count(zfsacl) > 0" -o " zfsacl" -b \
-			-i "count(afpcompat) > 0" -o " catia" -b \
-			-i "count(afpcompat) > 0" -o " fruit" -b \
-			-i "count(storealternatedatastreams) > 0 or count(afpcompat) > 0" -o " streams_xattr" -b \
-			-i "count(storentfsacls) > 0" -o " acl_xattr" -b \
-			-i "count(recyclebin) > 0" -o " recycle" -b \
-			-i "count(//samba/aio) > 0" -o " aio_pthread" -b \
-			-n \
-			-i "count(zfsacl) > 0" \
-				-o "nfs4:mode = special" -n \
-				-o "nfs4:acedup = merge" -n \
-				-o "nfs4:chown = yes" -n \
-			-b \
-			-i "count(recyclebin) > 0" \
-				-o "recycle:repository = ${samba_recycle_repository}" -n \
-				-o "recycle:keeptree = yes" -n \
-				-o "recycle:versions = yes" -n \
-				-o "recycle:touch = yes" -n \
-				-o "recycle:directory_mode = ${samba_recycle_directory_mode}" -n \
-				-o "recycle:subdir_mode = ${samba_recycle_subdir_mode}" -n \
-			-b \
-			-i "count(shadowcopy) > 0" \
-				-i "string-length(shadowformat) > 0" \
-					-v "concat('shadow:format = ', shadowformat)" -n \
-				-b \
-				-o "shadow:snapdir = .zfs/snapshot" -n \
-				-o "shadow:snapdirseverywhere = yes" -n \
-				-o "shadow:sort = desc" -n \
-				-o "shadow:localtime = yes" -n \
-			-b \
-			-i "count(zfsacl) > 0" \
-				-o "veto files = /.zfs/" -n \
-			-b \
-			-i "count(afpcompat) > 0" \
-				--if "string-length(vfs_fruit_resource) > 0" \
-					-v "concat('fruit:resource = ',vfs_fruit_resource)" -n \
-				--else \
-					-o "fruit:resource = file" -n \
+	/usr/local/bin/xml sel --template \
+		--output "[global]" --nl \
+		--output "server role = standalone" --nl \
+		--output "encrypt passwords = yes" --nl \
+		--if 'string-length(//samba/netbiosname) > 0' \
+			--value-of "concat('netbios name = ',//samba/netbiosname)" --nl \
+		--break \
+		--if 'string-length(//samba/workgroup) > 0' \
+			--value-of "concat('workgroup = ',//samba/workgroup)" --nl \
+		--break \
+		--if 'string-length(//samba/serverdesc) > 0' \
+			--value-of "concat('server string = ',//samba/serverdesc)" --nl \
+		--break \
+		--if 'string-length(//samba/security) > 0' \
+			--value-of "concat('security = ',//samba/security)" --nl \
+		--break \
+		--if "string-length(//samba/maxprotocol) > 0" \
+			--value-of "concat('server max protocol = ',//samba/maxprotocol)" --nl \
+		--break \
+		--if "string-length(//samba/minprotocol) > 0" \
+			--value-of "concat('server min protocol = ',//samba/minprotocol)" --nl \
+		--break \
+		--if "string-length(//samba/clientmaxprotocol) > 0" \
+			--value-of "concat('client max protocol = ',//samba/clientmaxprotocol)" --nl \
+		--break \
+		--if "string-length(//samba/clientminprotocol) > 0" \
+			--value-of "concat('client min protocol = ',//samba/clientminprotocol)" --nl \
+		--break \
+		--output 'dns proxy = no' --nl \
+		--output '# Settings to enhance performance:' --nl \
+		--output 'strict locking = no' --nl \
+		--output 'read raw = yes' --nl \
+		--output 'write raw = yes' --nl \
+		--output 'oplocks = yes' --nl \
+		--output 'max xmit = 65536' --nl \
+		--output 'deadtime = 15' --nl \
+		--output 'getwd cache = yes' --nl \
+		--output "socket options = ${samba_socket_options}" \
+			--output ' SO_SNDBUF=' \
+			--if 'string-length(//samba/sndbuf) > 0' \
+				--value-of '//samba/sndbuf' \
+			--else \
+				--output '65536' \
+			--break \
+			--output ' SO_RCVBUF=' \
+			--if 'string-length(//samba/rcvbuf) > 0' \
+				--value-of '//samba/rcvbuf' \
+			--else \
+				--output '65536' \
+			--break \
+		--nl \
+		--output '# End of performance section' --nl \
+		--if 'string-length(//samba/pwdsrv) > 0' \
+			--value-of "concat('password server = ',//samba/pwdsrv)" --nl \
+		--break \
+		--if 'string-length(//samba/winssrv) > 0' \
+			--value-of "concat('wins server = ',//samba/winssrv)" --nl \
+		--break \
+		--if 'string-length(//samba/unixcharset) > 0' \
+			--value-of "concat('unix charset = ',//samba/unixcharset)" --nl \
+		--break \
+		--if "string-length(//samba/unixcharset) = 0" \
+			--output "unix charset = UTF-8" --nl \
+		--break \
+		--if "count(//samba/largereadwrite) = 0" \
+			--output "large readwrite = no" --nl \
+		--break \
+		--if "count(//samba/easupport) > 0" \
+			--output "ea support = yes" --nl \
+		--break \
+		--if "count(//samba/storedosattributes) > 0" \
+			--output "store dos attributes = yes" --nl \
+		--break \
+		--if "count(//samba/storedosattributes) = 0 and count(//samba/mapdosattributes) > 0" \
+			--output 'create mask = 0755' --nl \
+			--output 'map hidden = yes' --nl \
+			--output 'map system = yes' --nl \
+		--break \
+		--if '//samba/localmaster[. = "yes"]' \
+			--output 'local master = yes' --nl \
+			--output 'domain master = yes' --nl \
+			--output 'preferred master = yes' --nl \
+			--output 'os level = 35' --nl \
+		--elif '//samba/localmaster[. = "no"]' \
+			--output 'local master = no' --nl \
+			--output 'domain master = no' --nl \
+			--output 'preferred master = no' --nl \
+			--output 'os level = 0' --nl \
+		--break \
+		--if 'string-length(//samba/timesrv) > 0' \
+			--value-of "concat('time server = ',//samba/timesrv)" --nl \
+		--break \
+		--if 'string-length(//samba/guestaccount) > 0' \
+			--value-of 'concat("guest account = ",//samba/guestaccount)' --nl \
+		--else \
+			--output 'guest account = ftp' --nl \
+		--break \
+		--if 'string-length(//samba/maptoguest) > 0' \
+			--value-of "concat('map to guest = ',//samba/maptoguest)" --nl \
+		--break \
+		--if 'count(//samba/nullpasswords) > 0' \
+			--output 'null passwords = yes' --nl \
+		--break \
+		--output 'max log size = 100' --nl \
+		--output 'logging = syslog' --nl \
+		--if 'string-length(//samba/loglevel) > 0' \
+			--value-of 'concat("loglevel = ",//samba/loglevel)' --nl \
+		--break \
+		--output 'load printers = no' --nl \
+		--output 'printing = bsd' --nl \
+		--output 'printcap cache time = 0' --nl \
+		--output 'printcap name = /dev/null' --nl \
+		--output 'disable spoolss = yes' --nl \
+		--if 'string-length(//samba/doscharset) > 0' \
+			--value-of "concat('dos charset = ',//samba/doscharset)" --nl \
+		--break \
+		--output "smb passwd file = /var/etc/private/smbpasswd" --nl \
+		--output "private dir = /var/etc/private" --nl \
+		--if '//samba/security[. = "ads"]' \
+			--output "passdb backend = tdbsam" --nl \
+			--if "count(//samba/trusteddomains) > 0" \
+				--output "allow trusted domains = yes" --nl \
+			--break \
+			--if "count(//samba/trusteddomains) = 0" \
+				--output "allow trusted domains = no" --nl \
+			--break \
+			--output "idmap config * : backend = tdb" --nl \
+			--output "idmap config * : range = ${samba_idmap_range}" --nl \
+			--if 'string-length(//ad/domainname_netbios) > 0' \
+				--value-of "concat('idmap config ',//ad/domainname_netbios,' : backend = rid')" --nl \
+				--value-of "concat('idmap config ',//ad/domainname_netbios,' : range = ${samba_idmap_range}')" --nl \
+			--break \
+			--if 'string-length(//ad/domainname_dns) > 0' \
+				--value-of "concat('realm = ',//ad/domainname_dns)" --nl \
+			--break \
+			--output 'winbind enum users = yes' --nl \
+			--output 'winbind enum groups = yes' --nl \
+			--output 'winbind use default domain = yes' --nl \
+			--output 'winbind normalize names = yes' --nl \
+			--output 'template homedir = /mnt' --nl \
+			--output 'template shell = /bin/sh' --nl \
+		--elif '//samba/security[. = "user"]' \
+			--if 'count(//ldap/enable) > 0' \
+				--if 'string-length(//ldap/hostname) > 0' \
+					--value-of "concat('passdb backend = ldapsam:\"',//ldap/hostname,'\"')" --nl \
 				--break \
-				--if "string-length(vfs_fruit_metadata) > 0" \
-					-v "concat('fruit:metadata = ',vfs_fruit_metadata)" -n \
-				--else \
-					-o "fruit:metadata = netatalk" -n \
+				--if 'string-length(//ldap/rootbinddn) > 0' \
+					--value-of "concat('ldap admin dn = ',//ldap/rootbinddn)" --nl \
 				--break \
-				--if "string-length(vfs_fruit_locking) > 0" \
-					-v "concat('fruit:locking = ',vfs_fruit_locking)" -n \
-				--else \
-					-o "fruit:locking = netatalk" -n \
+				--if 'string-length(//ldap/base) > 0' \
+					--value-of "concat('ldap suffix = ',//ldap/base)" --nl \
 				--break \
-				--if "string-length(vfs_fruit_encoding) > 0" \
-					-v "concat('fruit:encoding = ',vfs_fruit_encoding)" -n \
-				--else \
-					-o "fruit:encoding = native" -n \
+				--if 'string-length(//ldap/user_suffix) > 0' \
+					--value-of "concat('ldap user suffix = ',//ldap/user_suffix)" --nl \
 				--break \
-				--if "string-length(vfs_fruit_time_machine) > 0" \
-					-v "concat('fruit:time machine = ',vfs_fruit_time_machine)" -n \
+				--if 'string-length(//ldap/group_suffix) > 0' \
+					--value-of "concat('ldap group suffix = ',//ldap/group_suffix)" --nl \
 				--break \
-			-b \
-			-m "auxparam" \
-				-v "." -n \
-			-b \
-			-i "string-length(hostsallow) > 0" \
-				-v "concat('hosts allow = ',hostsallow)" -n \
-			-b \
-			-i "string-length(hostsdeny) > 0" \
-				-v "concat('hosts deny = ',hostsdeny)" -n \
-			-b \
-			-n \
-		-b \
+				--if 'string-length(//ldap/machine_suffix) > 0 ' \
+					--value-of "concat('ldap machine suffix = ',//ldap/machine_suffix)" --nl \
+				--break \
+				--output 'ldap replication sleep = 1000' --nl \
+				--output 'ldap passwd sync = yes' --nl \
+				--output 'ldap ssl = no' --nl \
+				--output 'ldapsam:trusted = yes' --nl \
+				--output 'idmap config * : backend = tdb' --nl \
+				--output "idmap config * : range = ${samba_idmap_range}" --nl \
+			--else \
+				--output 'passdb backend = tdbsam' --nl \
+				--output 'idmap config * : backend = tdb' --nl \
+				--output "idmap config * : range = ${samba_idmap_range}" --nl \
+			--break \
+		--break \
+		--if 'count(//samba/aio) > 0' \
+			--if 'string-length(//samba/aiorsize) > 0' \
+				--value-of "concat('aio read size = ',//samba/aiorsize)" --nl \
+			--break \
+			--if 'string-length(//samba/aiowsize) > 0' \
+				--value-of "concat('aio write size = ',//samba/aiowsize)" --nl \
+			--break \
+		--break \
+		--if "//samba/if[. = 'lan']" \
+			--output 'bind interfaces only = yes' --nl \
+			--output 'interfaces =' \
+				--match '//interfaces/lan/if' \
+					--if 'string-length() > 0' \
+						--output ' ' \
+						--value-of '.' \
+					--break \
+				--break \
+			--nl \
+		--elif "//samba/if[. = 'opt']" \
+			--output 'bind interfaces only = yes' --nl \
+			--output 'interfaces =' \
+				--match "//interfaces/*[contains(name(),'opt')]/if" \
+					--if 'string-length() > 0' \
+						--output ' ' \
+						--value-of '.' \
+					--break \
+				--break \
+			--nl \
+		--elif "//samba/if[. = 'carp']" \
+			--output 'bind interfaces only = yes' --nl \
+			--output 'interfaces =' \
+				--match '//vinterfaces/carp/if' \
+					--if 'string-length() > 0' \
+						--output ' ' \
+						--value-of '.' \
+					--break \
+				--break \
+			--nl \
+		--break \
+		--match '//samba/auxparam' \
+			--value-of '.' --nl \
+		--break \
+		--nl \
 		${configxml_file} | /usr/local/bin/xml unesc > ${samba_config}
+	samba_mkconf_user_shares
 }
 
 sambaad_mkconf_cmd()
@@ -397,160 +483,41 @@ sambaad_mkconf_cmd()
 
 	# Create smb4.conf file
 	/usr/local/bin/xml sel -t \
-		-o "[global]" -n \
-		-o "server role = active directory domain controller" -n \
-		-o "workgroup = ${_domain}" -n \
-		-o "realm = ${_realm}" -n \
-		-o "netbios name = ${_name}" -n \
-		-o "cache directory = ${_path}" -n \
-		-o "lock directory = ${_path}" -n \
-		-o "state directory = ${_path}" -n \
-		-o "private dir = ${_path}/private" -n \
-		-o "smb passwd file = ${_path}/private/smbpasswd" -n \
-		-o "usershare path = ${_path}/usershares" -n \
-		-v "concat('dns forwarder = ',//sambaad/dns_forwarder)" -n \
-		-o "idmap_ldb:use rfc2307 = yes" -n \
-		-o "nsupdate command = /usr/local/bin/samba-nsupdate -g" -n \
-		-n \
-		-m "//sambaad/auxparam" \
-			-v "." -n \
-		-b \
-		-n \
-		-o "[netlogon]" -n \
-		-o "path = ${_path}/sysvol/${_dns_domain}/scripts" -n \
-		-o "read only = No" -n \
-		-n \
-		-o "[sysvol]" -n \
-		-o "path = ${_path}/sysvol" -n \
-		-o "read only = No" -n \
+		--output "[global]" --nl \
+		--output "server role = active directory domain controller" --nl \
+		--output "workgroup = ${_domain}" --nl \
+		--output "realm = ${_realm}" --nl \
+		--output "netbios name = ${_name}" --nl \
+		--output "cache directory = ${_path}" --nl \
+		--output "lock directory = ${_path}" --nl \
+		--output "state directory = ${_path}" --nl \
+		--output "private dir = ${_path}/private" --nl \
+		--output "smb passwd file = ${_path}/private/smbpasswd" --nl \
+		--output "usershare path = ${_path}/usershares" --nl \
+		--if 'string-length(//sambaad/dns_forwarder) > 0' \
+			--value-of "concat('dns forwarder = ',//sambaad/dns_forwarder)" --nl \
+		--break \
+		--output "idmap_ldb:use rfc2307 = yes" --nl \
+		--output "nsupdate command = /usr/local/bin/samba-nsupdate -g" --nl \
+		--nl \
+		--match "//sambaad/auxparam" \
+			--value-of '.' --nl \
+		--break \
+		--nl \
+		--output "[netlogon]" --nl \
+		--output "path = ${_path}/sysvol/${_dns_domain}/scripts" --nl \
+		--output "read only = No" --nl \
+		--nl \
+		--output '[sysvol]' --nl \
+		--output "path = ${_path}/sysvol" --nl \
+		--output 'read only = No' --nl \
 		${configxml_file} | /usr/local/bin/xml unesc > ${samba_config}
 
 	# Append shares to smb4.conf
 	configxml_isset //sambaad/user_shares
 	user_share=$?
 	if [ 0 -eq $user_share ]; then
-		/usr/local/bin/xml sel -t \
-			-n \
-			-m "//samba/share" \
-				-v "concat('[',name,']')" -n \
-				-v "concat('comment = ',comment)" -n \
-				-v "concat('path = ',path)" -n \
-				-i "count(readonly) = 0" \
-					-o "writeable = yes" -n \
-				-b \
-				-o "printable = no" -n \
-				-o "veto files = /.snap/.sujournal/" -n \
-				-i "count(hidedotfiles) > 0" \
-					-o "hide dot files = yes" -n \
-				-b \
-				-i "count(hidedotfiles) = 0" \
-					-o "hide dot files = no" -n \
-				-b \
-				-i "//samba/security[. = 'share']" \
-					-o "guest ok = yes" -n \
-				-b \
-				-i "//samba/security[. != 'share']" \
-					-i "count(guest) = 0" \
-						-o "guest ok = no" -n \
-					-b \
-					-i "count(guest) > 0" \
-						-o "guest ok = yes" -n \
-					-b \
-				-b \
-				-i "count(browseable) = 0" \
-					-o "browseable = no" -n \
-				-b \
-				-i "count(inheritpermissions) > 0" \
-					-o "inherit permissions = yes" -n \
-				-b \
-				-i "count(inheritacls) > 0" \
-					-o "inherit acls = yes" -n \
-				-b \
-				-o "vfs objects = " \
-				-i "count(shadowcopy) > 0" \
-					-o "shadow_copy2 " \
-				-b \
-				-i "count(zfsacl) > 0" \
-					-o "zfsacl " \
-				-b \
-				-i "count(recyclebin) > 0" \
-					-o "recycle " \
-				-b \
-				-i "count(//samba/aio) > 0" \
-					-o "aio_pthread " \
-				-b \
-				-i "count(afpcompat) > 0" \
-					-o "catia fruit " \
-				-b \
-				-i "count(storealternatedatastreams) > 0 or count(afpcompat) > 0" \
-					-o "streams_xattr " \
-				-b \
-				-i "count(storentfsacls) > 0" \
-					-o "acl_xattr " \
-				-b \
-				-n \
-				-i "count(zfsacl) > 0" \
-					-o "nfs4:mode = special" -n \
-					-o "nfs4:acedup = merge" -n \
-					-o "nfs4:chown = yes" -n \
-				-b \
-				-i "count(recyclebin) > 0" \
-					-o "recycle:repository = ${samba_recycle_repository}" -n \
-					-o "recycle:keeptree = yes" -n \
-					-o "recycle:versions = yes" -n \
-					-o "recycle:touch = yes" -n \
-					-o "recycle:directory_mode = ${samba_recycle_directory_mode}" -n \
-					-o "recycle:subdir_mode = ${samba_recycle_subdir_mode}" -n \
-				-b \
-				-i "count(shadowcopy) > 0" \
-					-i "string-length(shadowformat) > 0" \
-						-v "concat('shadow:format = ', shadowformat)" -n \
-					-b \
-					-o "shadow:snapdir = .zfs/snapshot" -n \
-					-o "shadow:snapdirseverywhere = yes" -n \
-					-o "shadow:sort = desc" -n \
-					-o "shadow:localtime = yes" -n \
-				-b \
-				-i "count(zfsacl) > 0" \
-					-o "veto files = /.zfs/" -n \
-				-b \
-				-i "count(afpcompat) > 0" \
-					--if "string-length(vfs_fruit_resource) > 0" \
-						-v "concat('fruit:resource = ',vfs_fruit_resource)" -n \
-					--else \
-						-o "fruit:resource = file" -n \
-					--break \
-					--if "string-length(vfs_fruit_metadata) > 0" \
-						-v "concat('fruit:metadata = ',vfs_fruit_metadata)" -n \
-					--else \
-						-o "fruit:metadata = netatalk" -n \
-					--break \
-					--if "string-length(vfs_fruit_locking) > 0" \
-						-v "concat('fruit:locking = ',vfs_fruit_locking)" -n \
-					--else \
-						-o "fruit:locking = netatalk" -n \
-					--break \
-					--if "string-length(vfs_fruit_encoding) > 0" \
-						-v "concat('fruit:encoding = ',vfs_fruit_encoding)" -n \
-					--else \
-						-o "fruit:encoding = native" -n \
-					--break \
-					--if "string-length(vfs_fruit_time_machine) > 0" \
-						-v "concat('fruit:time machine = ',vfs_fruit_time_machine)" -n \
-					--break \
-				-b \
-				-m "auxparam" \
-					-v "." -n \
-				-b \
-				-i "string-length(hostsallow) > 0" \
-					-v "concat('hosts allow = ',hostsallow)" -n \
-				-b \
-				-i "string-length(hostsdeny) > 0" \
-					-v "concat('hosts deny = ',hostsdeny)" -n \
-				-b \
-				-n \
-			-b \
-			${configxml_file} | /usr/local/bin/xml unesc >> ${samba_config}
+		samba_mkconf_user_shares
 	fi
 }
 
@@ -560,15 +527,26 @@ sambaad_resolv() {
 	if [ "dhcp" != "${_ipaddress}" ]; then
 		#echo "Updating resolv.conf."
 		# Set the domain, IP4 and IP6 DNS servers.
-		/usr/local/bin/xml sel -t -o "domain " -v "//system/domain" -n \
-			-m "//system/dnsserver" \
-				-i "string-length() > 0" -o "nameserver " -v "." -n -b \
-			-b \
-			-i "count(//interfaces/*[enable]/ipv6_enable) > 0" \
-				-m "//system/ipv6dnsserver" \
-					-i "string-length() > 0" -o "nameserver " -v "." -n -b \
-				-b \
-			-b \
+		/usr/local/bin/xml sel --template \
+			--output 'domain ' \
+			--value-of '//system/domain' \
+			--nl \
+			--match "//system/dnsserver" \
+				--if "string-length() > 0" \
+					--output 'nameserver ' \
+					--value-of '.' \
+					--nl \
+				--break \
+			--break \
+			--if "count(//interfaces/*[enable]/ipv6_enable) > 0" \
+				--match "//system/ipv6dnsserver" \
+					--if "string-length() > 0" \
+						--output 'nameserver ' \
+						--value-of '.' \
+						--nl \
+					--break \
+				--break \
+			--break \
 			${configxml_file} | /usr/local/bin/xml unesc > /etc/resolv.conf
 	fi
 }
@@ -622,7 +600,6 @@ samba_reload_cmd() {
 	if [ "$_enable" != "0" -a "$_role" != "primary" -a "$_rc_prefix" != "force" ]; then
 		return 0;
 	fi
-
 	# Prevent recursive calling
 	unset "${rc_arg}_cmd" "${rc_arg}_precmd" "${rc_arg}_postcmd"
 	# Apply to all daemons
@@ -663,14 +640,12 @@ samba_cmd() {
 	if [ "${rc_arg}" != "status" -a "$_enable" != "0" -a "$_role" != "primary" -a "$_rc_prefix" != "force" ]; then
  		return 0;
 	fi
-
 	# Prevent recursive calling
 	unset "${rc_arg}_cmd" "${rc_arg}_precmd" "${rc_arg}_postcmd"
 	# Stop processes in the reverse to order
 	if [ "${rc_arg}" = "stop" ]; then
 		samba_daemons=$(reverse_list ${samba_daemons})
 	fi
-
 	# Start additional processes when starting
 	if [ "${rc_arg}" = "start" ]; then
 		if [ 0 -eq ${samba_idmap} ]; then
@@ -686,12 +661,10 @@ samba_cmd() {
 			/usr/local/bin/smbpasswd -w "${_p}"
 		fi
 	fi
-
 	# Create local userdb
 	if [ "${rc_arg}" = "start" ]; then
 		/etc/rc.d/passdb
 	fi
-
 	# Apply to all daemons
 	all_status=0
 	for name in ${samba_daemons}; do
