@@ -156,8 +156,6 @@ samba_mkconf_user_shares()
 					--break \
 					--if 'count(zfs_space) > 0' \
 						--output ' zfs_space' \
-					--else \
-						--output ' zfs_space' \
 					--break \
 					--if 'count(zfsacl) > 0' \
 						--output ' zfsacl' \
