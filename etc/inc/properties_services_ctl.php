@@ -51,12 +51,14 @@ class ctl_properties extends co_property_container {
 	public function init_debug() {
 		$property = $this->x_debug = new property_int($this);
 		$description = gtext('The debug verbosity level. The default is 0.');
+		$placeholder = '0';
 		$property->
 			set_name('debug')->
 			set_title(gtext('Debug Level'));
 		$property->
 			set_id('debug')->
 			set_description($description)->
+			set_placeholder($placeholder)->
 			set_maxlength(5)->
 			set_size(4)->
 			set_editableonadd(true)->
@@ -75,12 +77,14 @@ class ctl_properties extends co_property_container {
 	public function init_maxproc() {
 		$property = $this->x_maxproc = new property_int($this);
 		$description = gtext('The limit for concurrently running child processes handling incoming connections. The default is 30. A setting of 0 disables the limit.');
+		$placeholder = '30';
 		$property->
 			set_name('maxproc')->
 			set_title(gtext('Max Processes'));
 		$property->
 			set_id('maxproc')->
 			set_description($description)->
+			set_placeholder($placeholder)->
 			set_size(10)->
 			set_maxlength(5)->
 			set_editableonadd(true)->
@@ -99,12 +103,14 @@ class ctl_properties extends co_property_container {
 	public function init_timeout() {
 		$property = $this->x_timeout = new property_int($this);
 		$description = gtext('The timeout for login sessions, after which the connection will be forcibly terminated. The default is 60. A setting of 0 disables the timeout.');
+		$placeholder = '60';
 		$property->
 			set_name('timeout')->
 			set_title(gtext('Timeout'));
 		$property->
 			set_id('timeout')->
 			set_description($description)->
+			set_placeholder($placeholder)->
 			set_size(10)->
 			set_maxlength(5)->
 			set_editableonadd(true)->
@@ -123,12 +129,14 @@ class ctl_properties extends co_property_container {
 	public function init_isns_period() {
 		$property = $this->x_isns_period = new property_int($this);
 		$description = gtext('iSNS registration period. Registered Network Entity not updated during this period will be unregistered. The default is 900.');
+		$placeholder = '900';
 		$property->
 			set_name('isns_period')->
 			set_title(gtext('iSNS Period'));
 		$property->
 			set_id('isns_period')->
 			set_description($description)->
+			set_placeholder($placeholder)->
 			set_maxlength(5)->
 			set_size(10)->
 			set_editableonadd(true)->
@@ -147,12 +155,14 @@ class ctl_properties extends co_property_container {
 	public function init_isns_timeout() {
 		$property = $this->x_isns_timeout = new property_int($this);
 		$description = gtext('Timeout for iSNS requests. The default is 5.');
+		$placeholder = '5';
 		$property->
 			set_name('isns_timeout')->
 			set_title(gtext('iSNS Timeout'));
 		$property->
 			set_id('isns_timeout')->
 			set_description($description)->
+			set_placeholder($placeholder)->
 			set_maxlength(5)->
 			set_size(10)->
 			set_editableonadd(true)->
