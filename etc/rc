@@ -238,6 +238,9 @@ chmod 1777 /var/tmp
 
 # Configure the shared library cache
 /sbin/ldconfig -elf /usr/lib /usr/local/lib /lib
+
+# Add the path of full boot disk
+/sbin/kldconfig -m /boot/kernel
 # Add the path of embedded boot disk
 /sbin/kldconfig -m /cf/boot/kernel
 
