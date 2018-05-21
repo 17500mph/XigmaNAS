@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-05-14 22:20+0000\n"
-"PO-Revision-Date: 2018-05-17 14:30+0000\n"
+"PO-Revision-Date: 2018-05-21 11:25+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-17 15:52+0000\n"
+"X-Launchpad-Export-Date: 2018-05-21 22:04+0000\n"
 "X-Generator: Launchpad (build 18658)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -3213,9 +3213,13 @@ msgid ""
 "Discovery will not return targets that cannot be accessed by the initiator "
 "because of their initiator-portal."
 msgstr ""
+"Η ανεύρεση δεν θα επιστρέφει προορισμούς οι οποίοι δεν μπορούν να "
+"προσπελαστούν από τον εκκινητή εξαιτίας του portal του εκκινητή τους."
 
 msgid "Discovery will return all targets assigned to this portal group."
 msgstr ""
+"Η ανεύρεση θα επιστρέφει όλους τους προορισμούς που έχουν οριστεί σε αυτή "
+"την ομάδα portal."
 
 msgid "Disk"
 msgstr "Δίσκος"
@@ -4550,10 +4554,10 @@ msgid "Enter a valid sysctl MIB name."
 msgstr "Εισάγετε ένα έγκυρο όνομα sysctl MIB."
 
 msgid "Enter additional parameter"
-msgstr ""
+msgstr "Εισάγετε πρόσθετη παράμετρο"
 
 msgid "Enter an iSCSI initiator name."
-msgstr ""
+msgstr "Εισάγετε ένα όνομα εκκινητή iSCSI."
 
 msgid "Enter comment for the share"
 msgstr "Εισάγετε σχόλιο για το κοινόχρηστο"
@@ -4593,16 +4597,16 @@ msgid "Enter login name of the user."
 msgstr "Εισάγετε το όνομα χρήστη."
 
 msgid "Enter mutual user name."
-msgstr ""
+msgstr "Εισάγετε όνομα αμοιβαίου χρήστη"
 
 msgid "Enter name"
 msgstr "Εισάγετε όνομα"
 
 msgid "Enter passthrough device address bus:path:lun"
-msgstr ""
+msgstr "Εισάγετε τη διεύθυνση της συσκευής passthrough bus:path:lun"
 
 msgid "Enter secret."
-msgstr ""
+msgstr "Εισάγετε μυστικό."
 
 msgid "Enter smartctl pass-through type."
 msgstr "Εισάγετε τύπο pass-through του smartctl."
@@ -5048,10 +5052,10 @@ msgstr ""
 "προσδιορίζουν διαφορετικό μέγεθος. (Αυτό δεν συνιστάται.)"
 
 msgid "Foreign"
-msgstr ""
+msgstr "Ξένο"
 
 msgid "Form Factor"
-msgstr ""
+msgstr "Τύπος Μορφής"
 
 msgid "Format"
 msgstr "Διαμόρφωση"
@@ -5176,7 +5180,7 @@ msgid "Global Settings"
 msgstr "Γενικές ρυθμίσεις"
 
 msgid "Global numeric identifier to use for a given LUN inside CTL."
-msgstr ""
+msgstr "Γενικό αριθμητικό αναγνωριστικό για χρήση σε κάθε LUN μέσα στο CTL."
 
 msgid "Grant access to the user portal."
 msgstr "Παραχώρηση πρόσβασης στην πύλη των χρήστών."
@@ -5241,7 +5245,7 @@ msgid "Guest Authentication"
 msgstr "Πιστοποίηση Επισκέπτη"
 
 msgid "HA Role"
-msgstr ""
+msgstr "Ρόλος HA"
 
 msgid "HAST"
 msgstr "HAST"
@@ -5470,18 +5474,27 @@ msgstr "Διευθύνσεις IPv4"
 
 msgid "IPv4 or IPv6 address of an iSNS server to register on."
 msgstr ""
+"Διεύθυνση IPv4 ή IPv6 ενός διακομιστή iSNS στον οποίο να γίνει εγγραφή."
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to portal belonging to this portal-group "
 "will get redirected using \"Target moved temporarily\" login response."
 msgstr ""
+"Διεύθυνση IPv4 ή IPv6 για ανακατέυθυνση των εκκινητών. Όταν ρυθμιστεί, όλοι "
+"οι εκκινητές που θα προσπαθούν να συνδεθούν σε ένα portal που ανήκει σε αυτή "
+"την ομάδα portal θα ανακατευθύνονται με απάντηση κατά τη σύνδεση \"Ο "
+"προορισμός προσωρινά μετακινήθηκε\"."
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
 "initiators attempting to connect to this target will get redirected using "
 "\"Target moved temporarily\" login response."
 msgstr ""
+"Διεύθυνση IPv4 ή IPv6 για ανακατεύθυνση των εκκινητών. Όταν ρυθμιστεί, όλοι "
+"οι εκκινητές που θα προσπαθούν να συνδεθούν σε αυτόν τον προορισμό, θα "
+"ανακατευθύνονται με απάντηση σύνδεσης \"Ο προορισμός μετακινήθηκε "
+"προσωρινά\"."
 
 msgid "IPv6 Address"
 msgstr "Διεύθυνση IPv6"
@@ -5864,7 +5877,7 @@ msgid "Inquiry Vendor"
 msgstr "Εξέταση Κατασκευαστή"
 
 msgid "Insecure TPC"
-msgstr ""
+msgstr "Μη ασφαλές TPC"
 
 msgid "Insensitive"
 msgstr "Όχι διαχωρισμός"
@@ -6110,10 +6123,10 @@ msgid "LUN"
 msgstr "LUN"
 
 msgid "LUN EUI-64\tidentifier"
-msgstr ""
+msgstr "LUN EUI-64\tαναγνωριστικό"
 
 msgid "LUN NAA Identifier"
-msgstr ""
+msgstr "Αναγνωριστικό LUN NAA"
 
 msgid "LUN Name"
 msgstr "Όνομα LUN"
@@ -6125,25 +6138,25 @@ msgid "LUN Product"
 msgstr "Προϊόν LUN"
 
 msgid "LUN Revision"
-msgstr ""
+msgstr "Έκδοση LUN"
 
 msgid "LUN SCSI Name"
-msgstr ""
+msgstr "Όνομα SCSI του LUN"
 
 msgid "LUN Vendor"
-msgstr ""
+msgstr "Προμηθευτής LUN"
 
 msgid "LUN is locked"
-msgstr ""
+msgstr "Το LUN είναι κλειδωμένο"
 
 msgid "LUN is marked for deletion"
-msgstr ""
+msgstr "Το LUN είναι σημειωμένο προς διαγραφή"
 
 msgid "LUN is unlocked"
-msgstr ""
+msgstr "Το LUN είναι ξεκλείδωτο"
 
 msgid "LUN number"
-msgstr ""
+msgstr "Αριθμός LUN"
 
 msgid "LUN record is locked"
 msgstr "Η εγγραφή LUN είναι κλειδωμένη"
@@ -6871,19 +6884,19 @@ msgid "Mutual CHAP User is marked for deletion"
 msgstr "Ο χρήστης αμοιβαίου CHAP είναι σημειωμένος προς διαγραφή"
 
 msgid "Mutual CHAP User is unlocked"
-msgstr ""
+msgstr "Ο Αμοιβαίος Χρήστης CHAP είναι ξεκλείδωτος"
 
 msgid "Mutual CHAP Users"
 msgstr "Χρήστες αμοιβαίου CHAP"
 
 msgid "Mutual Secret"
-msgstr ""
+msgstr "Αμοιβαίο Μυστικό"
 
 msgid "Mutual User"
-msgstr ""
+msgstr "Αμοιβαίος Χρήστης"
 
 msgid "NAA Identifier"
-msgstr ""
+msgstr "Αναγνωριστικό NAA"
 
 msgid "NFS"
 msgstr "NFS"
@@ -6941,17 +6954,17 @@ msgid "Name"
 msgstr "Όνομα"
 
 msgid "Name of the Auth Group."
-msgstr ""
+msgstr "Όνομα της Ομάδας Πιστοποίησης"
 
 msgid "Name of the LUN."
-msgstr ""
+msgstr "Όνομα του LUN."
 
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
 msgstr "Το όνομα της συσκευής NAS, χωρίς το όνομα του τομέα π.χ. %s."
 
 msgid "Name of the Portal Group."
-msgstr ""
+msgstr "Όνομα της Ομάδας Portal."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -7623,7 +7636,7 @@ msgid "Passthrough - Inherit all entries"
 msgstr "Passthrough - Κληρονόμηση όλων των καταχωρήσεων"
 
 msgid "Passthrough Address"
-msgstr ""
+msgstr "Διεύθυνση Passthrough"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
@@ -7727,10 +7740,10 @@ msgid "Permit Root Login"
 msgstr "Επιτρέπεται Σύνδεση Root"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Επιτρέπεται πρόσβαση χωρίς πιστοποίηση"
 
 msgid "Permit discovery without authentication"
-msgstr ""
+msgstr "Επιτρέπεται ανεύρεση χωρίς πιστοποίηση"
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Να επιτρέπεται το SSH Tunneling."
@@ -7739,7 +7752,7 @@ msgid "Physical Block Offset"
 msgstr ""
 
 msgid "Physical Block Size"
-msgstr ""
+msgstr "Μέγεθος Φυσικού Μπλοκ"
 
 msgid "Physical Interface"
 msgstr "Φυσική διασύνδεση"
@@ -7896,7 +7909,7 @@ msgid "Port Forwarding"
 msgstr "Προώθηση Θύρας"
 
 msgid "Port Name"
-msgstr ""
+msgstr "Όνομα Θύρας"
 
 msgid "Port number must be 514 or a number between 1024 and 49151."
 msgstr ""
@@ -7912,7 +7925,7 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Το νούμερο της θύρας πρέπει να είναι σε ένα εύρος μεταξύ %d και %d."
 
 msgid "Port number of the iSNS server."
-msgstr ""
+msgstr "Αριθμός θύρας του διακομιστή iSNS."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr ""
@@ -7925,13 +7938,13 @@ msgstr ""
 "χρησιμοποιήσετε την προεπιλεγμένη θύρα."
 
 msgid "Port record is locked"
-msgstr ""
+msgstr "Η εγγραφή θύρας είναι κλειδωμένη"
 
 msgid "Port record is marked for deletion"
-msgstr ""
+msgstr "Η εγγραφή θύρας είναι σημειωμένη προς διαγραφή"
 
 msgid "Port record is unlocked"
-msgstr ""
+msgstr "Η εγγραφή θύρας είναι ξεκλείδωτη"
 
 #, php-format
 msgid "Port to listen for incoming peer connections. (Default is %d)."
@@ -7958,19 +7971,19 @@ msgid "Portal Group"
 msgstr "Ομάδα Portal"
 
 msgid "Portal Group Name"
-msgstr ""
+msgstr "Όνομα Ομάδας Portal"
 
 msgid "Portal Group Settings"
 msgstr "Ρυθμίσεις Ομάδας Portal"
 
 msgid "Portal Group is locked"
-msgstr ""
+msgstr "Η Ομάδα Portal είναι κλειδωμένη"
 
 msgid "Portal Group is marked for deletion"
-msgstr ""
+msgstr "Η Ομάδα Portal είναι σημειωμένη προς διαγραφή"
 
 msgid "Portal Group is unlocked"
-msgstr ""
+msgstr "Η Ομάδα Portal είναι ξεκλείδωτη"
 
 msgid "Portal Groups"
 msgstr "Ομάδες Portal"
@@ -8110,7 +8123,7 @@ msgid "Provider"
 msgstr "Πάροχος"
 
 msgid "Provisioning Type"
-msgstr ""
+msgstr "Τύπος Provisioning"
 
 msgid "Proxy"
 msgstr "Διακομιστής μεσολάβησης"
@@ -8279,7 +8292,7 @@ msgid "Read"
 msgstr "Ανάγνωση"
 
 msgid "Read Cache"
-msgstr ""
+msgstr "Κρυφή Μνήμη Ανάγνωσης"
 
 msgid "Read Only"
 msgstr "Μόνο για Ανάγνωση"
@@ -8374,7 +8387,7 @@ msgid "Recycle Bin"
 msgstr "Κάδος Ανακύκλωσης"
 
 msgid "Redirect"
-msgstr ""
+msgstr "Ανακατεύθυνση"
 
 msgid "Redundant Metadata"
 msgstr "Επαρκή Μεταδεδομένα"
@@ -8401,7 +8414,7 @@ msgid "Release Notes"
 msgstr "Σημειώσεις έκδοσης"
 
 msgid "Reload"
-msgstr ""
+msgstr "Επαναφόρτωση"
 
 msgid "Reload Page"
 msgstr "Επαναφόρτωση Σελίδας"
@@ -8477,13 +8490,13 @@ msgid "Remove the %s first before proceeding."
 msgstr "Αφαιρέστε πρώτα το %s πριν συνεχίσετε"
 
 msgid "Reorder"
-msgstr ""
+msgstr "Αναδιάταξη"
 
 msgid "Reorder Commands"
 msgstr "Αναδιάταξη Εντολών"
 
 msgid "Reordering"
-msgstr ""
+msgstr "Αναδιάταξη"
 
 msgid "Replace Battery UPS"
 msgstr "Αντικαταστήστε τη μπαταρία του UPS"
@@ -8562,7 +8575,7 @@ msgid "Resources"
 msgstr "Πόροι"
 
 msgid "Restart"
-msgstr ""
+msgstr "Επανεκκίνηση"
 
 msgid "Restore"
 msgstr "Επαναφορά"
@@ -8711,7 +8724,7 @@ msgid "S.M.A.R.T. log"
 msgstr "Αρχείο καταγραφής S.M.A.R.T."
 
 msgid "SCSI Name"
-msgstr ""
+msgstr "Όνομα SCSI"
 
 msgid "SHA-256, Verify"
 msgstr "SHA-256, Verify"
@@ -8967,7 +8980,7 @@ msgid "Select at which stage the command should be executed."
 msgstr "Επιλέξτε σε ποιο στάδιο θα πρέπει να εκτελείται η εντολή."
 
 msgid "Select auth groups."
-msgstr ""
+msgstr "Επιλογή ομάδων πιστοποίησης."
 
 msgid "Select configuration file:"
 msgstr "Επιλογή αρχείου ρυθμίσεων:"
@@ -8998,7 +9011,7 @@ msgstr ""
 "τους με"
 
 msgid "Select portal groups."
-msgstr ""
+msgstr "Επιλογή ομάδων portal."
 
 msgid "Select pre-allocation mode for files. (Default is Fast)."
 msgstr ""
@@ -9009,10 +9022,10 @@ msgid "Select read balance algorithm."
 msgstr "Επιλογή αλγόριθμου ισορροπίας ανάγνωσης."
 
 msgid "Select target groups."
-msgstr ""
+msgstr "Επιλογή ομάδων προορισμού."
 
 msgid "Select targets."
-msgstr ""
+msgstr "Επιλογή προορισμών."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Επιλέξτε το πακέτο FreeBSD που θα εγκατασταθεί."
@@ -9303,7 +9316,7 @@ msgstr ""
 "είναι /mnt."
 
 msgid "Sets the authentication type."
-msgstr ""
+msgstr "Ορίζει τον τύπο πιστοποίησης"
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -9328,6 +9341,8 @@ msgid ""
 "Setting to \"primary\" or \"secondary\" overrides default role of the node "
 "in HA cluster."
 msgstr ""
+"Ορίζοντάς το σε \"πρωτεύον\" ή \"δευτερεύον\" υπερισχύει του προεπιλεγμένου "
+"ρόλου του κόμβου στο HA cluster."
 
 msgid "Settings"
 msgstr "Ρυθμίσεις"
@@ -9567,10 +9582,10 @@ msgid "Specified path is NFSv4 root directory."
 msgstr "Η διαδρομή που ορίστηκε είναι ο ριζικός φάκελος του NFSv4."
 
 msgid "Specifies LUN EUI-64 identifier."
-msgstr ""
+msgstr "Ορίζει αναγνωριστικό LUN EUI-64."
 
 msgid "Specifies LUN NAA identifier."
-msgstr ""
+msgstr "Ορίζει αναγνωριστικό LUN NAA."
 
 msgid "Specifies LUN SCSI name string."
 msgstr ""
@@ -9603,7 +9618,7 @@ msgid "Specifies how the volume should be exposed to the OS."
 msgstr "Ορίζει πως θα παρουσιάζεται ο τόμοε στο Λειτουργικό Σύστημα."
 
 msgid "Specifies medium rotation rate of the device."
-msgstr ""
+msgstr "Ορίζει το μέσο ρυθμό περιστροφής της συσκευής."
 
 msgid "Specifies nominal form factor of the device."
 msgstr ""
@@ -10014,7 +10029,7 @@ msgid "Target Alias"
 msgstr "Ψευδώνυμο προορισμού"
 
 msgid "Target Group"
-msgstr ""
+msgstr "Ομάδα Προορισμού"
 
 msgid "Target Name"
 msgstr "Όνομα Προορισμού"
@@ -10026,16 +10041,16 @@ msgid "Target information"
 msgstr "Πληροφορίες προορισμού"
 
 msgid "Target is locked"
-msgstr ""
+msgstr "Ο προορισμός είναι κλειδωμένος"
 
 msgid "Target is marked for deletion"
-msgstr ""
+msgstr "Ο προορισμός έχει σημειωθεί προς διαγραφή."
 
 msgid "Target is not selected."
 msgstr "Δεν επιλέχθηκε προορισμός."
 
 msgid "Target is unlocked"
-msgstr ""
+msgstr "Ο προορισμός είναι ξεκλείδωτος"
 
 msgid "Target list"
 msgstr "Λίστα προορισμών"
@@ -10171,7 +10186,7 @@ msgid "The SCSI Device Identification string presented to the initiator."
 msgstr ""
 
 msgid "The SCSI serial number presented to the initiator."
-msgstr ""
+msgstr "Ο σειριακός αριθμός SCSI που παρουσιάζεται στον εκκινητή."
 
 msgid "The TCP Port must be a valid port number."
 msgstr "Η θύρα TCP πρέπει να είναι έγκυρος αριθμός θύρας."
@@ -10387,7 +10402,7 @@ msgstr ""
 "σταματάει."
 
 msgid "The blocksize visible to the initiator."
-msgstr ""
+msgstr "Το μέγεθος μπλοκ που είναι ορατό στον εκκινητή."
 
 msgid "The changes could not be applied"
 msgstr "Οι αλλαγές δεν μπόρεσαν να εφαρμοστούν"
@@ -10504,7 +10519,7 @@ msgstr ""
 "στηγμιοτύπων του ZFS."
 
 msgid "The debug verbosity level. The default is 0."
-msgstr ""
+msgstr "Το επίπεδο ανάλυσης της αποσφαλμάτωσης. Η προεπιλογή είναι 0."
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr ""
@@ -10868,7 +10883,7 @@ msgstr ""
 "να μπορεί να χρησιμοποιηθεί με ευελιξία από κάθε χρήστη."
 
 msgid "The port to listen on."
-msgstr ""
+msgstr "Η θύρα για αναμονή συνδέσεων."
 
 #, php-format
 msgid "The portal '%s' is invalid."
@@ -10943,7 +10958,7 @@ msgid "The share name is already used."
 msgstr "Το όνομα του κοινόχρηστου χρησιμοποιείται ήδη."
 
 msgid "The size of the LUN."
-msgstr ""
+msgstr "Το μέγεθος του LUN."
 
 msgid "The size of the swap file in MB."
 msgstr "Το μέγεθος του αρχείου swap σε MB."
@@ -11098,19 +11113,19 @@ msgstr ""
 "αρχεία εντολών γενικής χρήσης."
 
 msgid "These parameter will be added to the global section of ctl.conf"
-msgstr ""
+msgstr "Αυτοί οι παράμετροι θα προστεθούν στο τμήμα global του ctl.conf"
 
 msgid "These parameter will be added to this auth-group."
-msgstr ""
+msgstr "Αυτές οι παράμετροι θα προστεθούν σε αυτή την ομάδα πιστοποίησης."
 
 msgid "These parameter will be added to this lun."
-msgstr ""
+msgstr "Αυτές οι παράμετροι θα προστεθούν σε αυτό το LUN"
 
 msgid "These parameter will be added to this portal-group."
-msgstr ""
+msgstr "Αυτές οι παράμετροι θα προστεθούν σε αυτή την ομάδα portal."
 
 msgid "These parameter will be added to this target."
-msgstr ""
+msgstr "Αυτές οι παράμετροι θα προστεθούν σε αυτόν τον προορισμό."
 
 #, php-format
 msgid "These parameters are added to %s."
@@ -11159,7 +11174,7 @@ msgid "These parameters will be added to the ping command."
 msgstr "Αυτοί οι παράμετροι θα προστεθούν στην εντολή ping."
 
 msgid "Thin Provisioning"
-msgstr ""
+msgstr "Thin Provisioning"
 
 msgid "This URL is already configured."
 msgstr "Αυτό το URL έχει ήδη ρυθμιστεί."
@@ -11674,7 +11689,7 @@ msgid "Timeout"
 msgstr "Χρονικό όριο"
 
 msgid "Timeout for iSNS requests. The default is 5."
-msgstr ""
+msgstr "Χρονικό όριο λήξης για αιτήματα iSNS. Η προεπιλογή είναι 5."
 
 msgid "Timeout must be a number between 10 and 255000000."
 msgstr "Το χρονικό όριο πρέπει να είναι ένα νούμερο μεταξύ 10 και 255000000."
@@ -11977,19 +11992,19 @@ msgid "UID"
 msgstr "UID"
 
 msgid "UNMAP"
-msgstr ""
+msgstr "UNMAP"
 
 msgid "UNMAP Block Offset"
 msgstr ""
 
 msgid "UNMAP Block Size"
-msgstr ""
+msgstr "Μέγεθος μπλοκ UNMAP"
 
 msgid "UNMAP Maximum Descriptors"
 msgstr ""
 
 msgid "UNMAP Maximum LBA"
-msgstr ""
+msgstr "Μέγιστο LBA UNMAP"
 
 msgid "UPS"
 msgstr "UPS"
@@ -12473,7 +12488,7 @@ msgstr ""
 "θέσει ένα ελάχιστο όριο το οποίο αντιστοιχεί σε μια μέγιστη θερμοκρασία."
 
 msgid "Value of the option."
-msgstr ""
+msgstr "Τιμή της επιλογής."
 
 msgid "Variable"
 msgstr "Μεταβλητή"
@@ -12713,6 +12728,8 @@ msgstr ""
 msgid ""
 "When UNMAP support is enabled, this option specifies provisioning type."
 msgstr ""
+"Όταν είναι ενεργή η υποστήριξη UNMAP, αυτή η επιλογή καθορίζει τον τύπο "
+"provisioning."
 
 msgid "When UPS switches to Low Battery"
 msgstr "Πότε το UPS θα μεταπέφτει σε Χαμηλή Μπαταρία"
@@ -12766,7 +12783,7 @@ msgid "Write Cache"
 msgstr "Προσωρινή μνήμη εγγραφής"
 
 msgid "Write Same Maximum LBA"
-msgstr ""
+msgstr "Εγγραφή του ίδιου Maximum LBA"
 
 msgid "Write only"
 msgstr "Μόνο εγγραφή"
@@ -13043,30 +13060,32 @@ msgid "iSCSI initiator disabled."
 msgstr "Ο εκκινητής iSCI είναι απενεργοποιημένος."
 
 msgid "iSNS Period"
-msgstr ""
+msgstr "Περίοδος iSNS"
 
 msgid "iSNS Server"
-msgstr ""
+msgstr "Διακομιστής iSNS"
 
 msgid "iSNS Server is locked"
-msgstr ""
+msgstr "Ο διακομιστής iSNS είναι κλειδωμένος"
 
 msgid "iSNS Server is marked for deletion"
-msgstr ""
+msgstr "Ο διακομιστής iSNS είναι σημειωμένος προς διαγραφή"
 
 msgid "iSNS Server is unlocked"
-msgstr ""
+msgstr "Ο διακομιστής iSNS είναι ξεκλείδωτος"
 
 msgid "iSNS Servers"
-msgstr ""
+msgstr "Διακομιστές iSNS"
 
 msgid "iSNS Timeout"
-msgstr ""
+msgstr "Χρόνος λήξης iSNS"
 
 msgid ""
 "iSNS registration period. Registered Network Entity not updated during this "
 "period will be unregistered. The default is 900."
 msgstr ""
+"Περίοδος εγγραφής iSNS. Η εγγεγραμμένη οντότητα Δικτύου η οποία δεν θα "
+"ενημερωθεί κατά αυτή την περίοδο θα απεγγραφεί. Η προεπιλογή είναι 900."
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -13075,7 +13094,7 @@ msgid "infinity"
 msgstr "άπειρο"
 
 msgid "less then 1.8\"."
-msgstr ""
+msgstr "λιγότερο από 1.8\"."
 
 msgid "load/unload failed."
 msgstr "αποτυχία από/φόρτωσης"
