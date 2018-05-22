@@ -325,7 +325,7 @@ $document->render();
 					tblrow(gtext('UPS firmware'), $ups['ups.firmware']);
 					tblrow(gtext('Auxiliary device firmware'), $ups['ups.firmware.aux']);
 					tblrow(gtext('UPS temperature'), $ups['ups.temperature'], ' &deg;C');
-					tblrow(gtext('Load on UPS'), $ups['ups.load'], '%');
+					tblrow(gtext('UPS load'), $ups['ups.load'], '%');
 					tblrow(gtext('Load when UPS switches to overload condition ("OVER")'), $ups['ups.load.high'], '%');
 					tblrow(gtext('UPS system identifier'), $ups['ups.id']);
 					tblrow(gtext('Interval to wait before restarting the load'), $ups['ups.delay.start'], ' seconds');
