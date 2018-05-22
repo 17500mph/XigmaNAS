@@ -38,7 +38,7 @@
  *	Replacement for gettext, converts html characters <>"' into their character codes 
  */
 function gtext(string $data = '') {
-	return htmlspecialchars(gettext($data),ENT_QUOTES|ENT_HTML401,'UTF-8',false);
+	return htmlspecialchars(gettext($data),ENT_QUOTES|ENT_HTML5,'UTF-8',false);
 }
 function gxmltext(string $data = '') {
 	return xmlspecialchars(gettext($data));
