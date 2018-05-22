@@ -218,7 +218,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['istgt',[
 			'iSCSI target for FreeBSD (<a href="http://shell.peach.ne.jp/aoyama" target="_blank">http://shell.peach.ne.jp/aoyama</a>).',
-			'Copyright © 2008-2016 Daisuke Aoyama (<a href="mailto:aoyama@peach.ne.jp">aoyama@peach.ne.jp</a>). All Rights Reserved.'
+			'Copyright © 2008-2018 Daisuke Aoyama (<a href="mailto:aoyama@peach.ne.jp">aoyama@peach.ne.jp</a>). All Rights Reserved.'
 		]],
 		['jQuery',[
 			'A fast, small, and feature-rich JavaScript library (<a href="http://jquery.com" target="_blank">http://jquery.com</a>).',
