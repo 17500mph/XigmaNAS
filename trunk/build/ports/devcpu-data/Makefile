@@ -1,12 +1,12 @@
 PORTNAME=	devcpu-data
-PORTVERSION=	1.16
-PORTREVISION=   1
+PORTVERSION=	1.17
+PORTREVISION=   0
 CATEGORIES=	sysutils
 MASTER_SITES=   https://downloadmirror.intel.com/27591/eng/:intel \
-		http://www.amd64.org/microcode/:amd
+		LOCAL/sbruno:amd
 PKGNAMEPREFIX=	devcpu-
 DISTFILES=	microcode-20180312.tgz:intel \
-		amd64-microcode_3.20171205.1.tar.xz:amd
+		amd64-microcode.20180518.tar.xz:amd
 
 MAINTAINER=	zoon1@nas4free.org
 COMMENT=	Intel and AMD CPUs microcode updates
@@ -33,9 +33,9 @@ do-install:
 	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/cpucontrol
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/microcode_update.in ${NAS4FREE_ROOTFS}/etc/rc.d/microcode_update
 # mcodes
-	${INSTALL_DATA} ${WRKSRC}/amd64-microcode-3.20171205.1/microcode_amd.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/amd64-microcode-3.20171205.1/microcode_amd_fam15h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/amd64-microcode-3.20171205.1/microcode_amd_fam16h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/amd64-microcode-3.20171205.1/microcode_amd_fam17h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam15h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam16h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam17h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
 	${INSTALL_DATA} ${WRKSRC}/mcodes/* ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
 .include <bsd.port.mk>
