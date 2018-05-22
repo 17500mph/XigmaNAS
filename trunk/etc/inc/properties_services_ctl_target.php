@@ -86,7 +86,7 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_redirect = new property_ipaddress($this);
 		$property->
 			set_name('redirect')->
-			set_title('Redirect');
+			set_title(gtext('Redirect'));
 		return $property;
 	}
 	protected $x_auxparam;
