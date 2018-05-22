@@ -2944,7 +2944,9 @@ class co_DOMElement extends \DOMElement implements ci_DOM {
 
 	public function addAttributes($attributes = []) {
 		foreach($attributes as $key => $value):
-			$this->setAttribute($key,$value);
+			//	avoid double encoding, setAttribute seems to force-encode the value
+			$decoded_value = htmlspecialchars_decode($value,ENT_QUOTES|ENT_HTML5);
+			$this->setAttribute($key,$decoded_value);
 		endforeach;
 		return $this;
 	}
