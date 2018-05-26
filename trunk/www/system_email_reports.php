@@ -160,7 +160,7 @@ $document->render();
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(0 !== email_validate_settings()):
-		$helpinghand = '<a href="system_email.php">' . gtext('Make sure you have already configured your email settings') . '.</a>';
+		$helpinghand = '<a href="system_email.php">' . gtext('Your current email settings are either incomplete or insecure.') . '</a>';
 		print_error_box($helpinghand);
 	endif;
 	if(!empty($input_errors)):
