@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-22 17:29+0000\n"
-"PO-Revision-Date: 2018-05-18 09:31+0000\n"
-"Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
+"POT-Creation-Date: 2018-05-27 04:36+0000\n"
+"PO-Revision-Date: 2018-05-25 10:15+0000\n"
+"Last-Translator: Alessandro Lion <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-22 17:02+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
+"X-Launchpad-Export-Date: 2018-05-27 20:24+0000\n"
+"X-Generator: Launchpad (build 18667)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -2099,7 +2099,7 @@ msgid "Controls where the OS X metadata stream is stored."
 msgstr "Controllare dove i metadati per i flussi OS X sono salvati."
 
 msgid "Controls where the OS X resource fork is stored."
-msgstr ""
+msgstr "Controlla dove sono memorizzate le risorse di fork in OS X"
 
 msgid ""
 "Controls whether processes can be executed from within this file system."
@@ -2343,7 +2343,7 @@ msgid "Create a SLOG device for ZIL"
 msgstr "Crea un device SLOG per ZIL"
 
 msgid "Create a mirrored SLOG device for ZIL"
-msgstr ""
+msgstr "Crea un'unità replicata SLOG per lo ZIL"
 
 msgid "Create a spare device"
 msgstr "Crea un device di riserva"
@@ -2628,6 +2628,8 @@ msgid ""
 "Define iSCSI hardware offload driver to use for this portal-group. The "
 "default is \"none\"."
 msgstr ""
+"Selezionare il driver dell'hardware Offload iSCSI da utilizzare per questo "
+"gruppo di portali. L'impostazione predefinita è \"nessuno\""
 
 msgid "Defines the checksum algorithm."
 msgstr "Indica l'algoritmo del checksum"
@@ -2665,7 +2667,7 @@ msgid "Delete Login Info"
 msgstr "Elimina le informazioni di login"
 
 msgid "Delete Selected Auth Groups"
-msgstr ""
+msgstr "Elimina i gruppi Auth selezionati"
 
 msgid "Delete Selected Bridges"
 msgstr "Cancella Bridges selezionati"
@@ -2674,7 +2676,7 @@ msgid "Delete Selected CARPs"
 msgstr "Cancella CARP selezionati"
 
 msgid "Delete Selected CHAP Users"
-msgstr ""
+msgstr "Elimina gli utenti CHAP selezionati"
 
 msgid "Delete Selected Commands"
 msgstr "Cancella i comandi selezionati"
@@ -2692,10 +2694,10 @@ msgid "Delete Selected Groups"
 msgstr "Cancella i Gruppi selezionati"
 
 msgid "Delete Selected Initiator Names"
-msgstr ""
+msgstr "Elimina i nomi Inizializzatori selezionati"
 
 msgid "Delete Selected Initiator Portals"
-msgstr ""
+msgstr "Elimina i portali Inizializzatori selezionati"
 
 msgid "Delete Selected Jobs"
 msgstr "Cancella l'attività selezionata"
@@ -2704,25 +2706,25 @@ msgid "Delete Selected LAGGs"
 msgstr "Cancella LAGG selezionati"
 
 msgid "Delete Selected LUN Records"
-msgstr ""
+msgstr "Elimina i record LUN selezionati"
 
 msgid "Delete Selected LUNs"
-msgstr ""
+msgstr "Elimina i LUN selezionati"
 
 msgid "Delete Selected Listen Records"
-msgstr ""
+msgstr "Elimina i record di ascolto selezionati"
 
 msgid "Delete Selected Mutual CHAP Users"
-msgstr ""
+msgstr "Cancella gli utenti Mutual CHAP selezionati"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Cancella le condivisioni NFS selezionate"
 
 msgid "Delete Selected Notifier"
-msgstr ""
+msgstr "Cancella il Notificatore selezionato"
 
 msgid "Delete Selected Option Records"
-msgstr ""
+msgstr "Cancella le Opzioni di Registrazione selezionata"
 
 msgid "Delete Selected Options"
 msgstr "Cancella le opzioni selezionate"
@@ -2731,10 +2733,10 @@ msgid "Delete Selected Pools"
 msgstr "Cancella i Pools selezionati"
 
 msgid "Delete Selected Port Records"
-msgstr ""
+msgstr "Cancella le Porte di Registrazione selezionate"
 
 msgid "Delete Selected Portal Groups"
-msgstr ""
+msgstr "Elimina i gruppi portale selezionati"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Cancella i Volumi RAID selezionati"
@@ -2764,7 +2766,7 @@ msgid "Delete Selected Snapshots"
 msgstr "Cancella gli Snapshot selezionati"
 
 msgid "Delete Selected Targets"
-msgstr ""
+msgstr "Elimina i Target selezionati"
 
 msgid "Delete Selected User Accounts"
 msgstr "Cancella gli account utente selezionati"
@@ -2782,7 +2784,7 @@ msgid "Delete Selected WLANs"
 msgstr "Cancella le WLAN selezionate"
 
 msgid "Delete Selected iSNS Servers"
-msgstr ""
+msgstr "Cancella i Server iSNS selezionati"
 
 msgid "Delete URL"
 msgstr "Elimina URL"
@@ -2864,7 +2866,7 @@ msgid "Deny"
 msgstr "Nega"
 
 msgid "Deny discovery"
-msgstr ""
+msgstr "Impedisci il discovery"
 
 msgid "Description"
 msgstr "Descrizione"
@@ -2947,7 +2949,7 @@ msgstr ""
 "secondo)."
 
 msgid "Determines which targets are returned during discovery."
-msgstr ""
+msgstr "Determina quali target sono riportati durante la ricerca."
 
 msgid "Device"
 msgstr "Dispositivo"
@@ -2960,7 +2962,7 @@ msgid "Device /dev/%s - %s"
 msgstr "Dispositivo /dev/%s - %s"
 
 msgid "Device ID"
-msgstr ""
+msgstr "ID dispositivo"
 
 msgid "Device IP"
 msgstr "Dispositivo IP"
@@ -3064,46 +3066,46 @@ msgid "Disable Firmware Upgrade"
 msgstr "DIsattiva l'aggiornamento del Firmware"
 
 msgid "Disable Selected Auth Groups"
-msgstr ""
+msgstr "Disabilita i gruppi Auth selezionati"
 
 msgid "Disable Selected CHAP Users"
-msgstr ""
+msgstr "Disabilita gli utenti CHAP selezionati"
 
 msgid "Disable Selected Commands"
 msgstr "Disabilita i comandi selezionati"
 
 msgid "Disable Selected Initiator Names"
-msgstr ""
+msgstr "Disabilita i nomi Inizializzatori selezionati"
 
 msgid "Disable Selected Initiator Portals"
-msgstr ""
+msgstr "Disabilita i portati inizializzatori selezionati"
 
 msgid "Disable Selected Jobs"
 msgstr "Disabilita le attività selezionate"
 
 msgid "Disable Selected LUN Records"
-msgstr ""
+msgstr "Disabilita i record LUN selezionati"
 
 msgid "Disable Selected LUNs"
-msgstr ""
+msgstr "Disabilita i LUN selezionati"
 
 msgid "Disable Selected Listen Records"
-msgstr ""
+msgstr "Disabilita i record di ascolto selezionati"
 
 msgid "Disable Selected Mutual CHAP Users"
-msgstr ""
+msgstr "Disabilita gli utenti Mutual CHAP selezionati"
 
 msgid "Disable Selected Option Records"
-msgstr ""
+msgstr "Disabilita le Opzioni di Registrazione selezionata"
 
 msgid "Disable Selected Options"
 msgstr "Disabilita le opzioni selezionate"
 
 msgid "Disable Selected Port Records"
-msgstr ""
+msgstr "Disabilita i record Port selezionati"
 
 msgid "Disable Selected Portal Groups"
-msgstr ""
+msgstr "Disabilita i gruppi Portal selezionati"
 
 msgid "Disable Selected Records"
 msgstr "Disattiva i record selezionati"
@@ -3115,10 +3117,10 @@ msgid "Disable Selected Rsync Modules"
 msgstr "Disattiva i moduli Rsync selezionati"
 
 msgid "Disable Selected Targets"
-msgstr ""
+msgstr "Disabilita i Target selezionati"
 
 msgid "Disable Selected iSNS Servers"
-msgstr ""
+msgstr "Disabilita i server iSNS selezionati"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "DIsabilita il wrapper TCP (modulo mod_wrap)."
@@ -3163,15 +3165,18 @@ msgid "Discovery Auth Method"
 msgstr "Metodo di autenticazione per la scoperta"
 
 msgid "Discovery Filter"
-msgstr ""
+msgstr "Filtro ricerca"
 
 msgid ""
 "Discovery will not return targets that cannot be accessed by the initiator "
 "because of their initiator-portal."
 msgstr ""
+"La ricerca non evidenza i target a cui l'inizializzatore non può accedere a "
+"causa del proprio portale di iniziatore."
 
 msgid "Discovery will return all targets assigned to this portal group."
 msgstr ""
+"La ricerca evidenza tutti i target assegnati a questo gruppo portale."
 
 msgid "Disk"
 msgstr "Disco"
@@ -3394,19 +3399,19 @@ msgid "Do you want to delete selected CARPs?"
 msgstr "Desideri cancellare i CARP selezionati?"
 
 msgid "Do you want to delete selected CHAP users?"
-msgstr ""
+msgstr "Vuoi cancellare gli utenti CHAP selezionati?"
 
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Desideri cancella i LAGG selezionati?"
 
 msgid "Do you want to delete selected LUN records?"
-msgstr ""
+msgstr "Vuoi cancellare i record LUN selezionati?"
 
 msgid "Do you want to delete selected LUNs?"
-msgstr ""
+msgstr "Vuoi cancellare i LUN selezionati?"
 
 msgid "Do you want to delete selected Mutual CHAP users?"
-msgstr ""
+msgstr "Desideri cancellare gli utenti Mutual CHAP selezionati?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Desideri cancellare le condivisioni NFS selezionate?"
@@ -3424,7 +3429,7 @@ msgid "Do you want to delete selected WLANs?"
 msgstr "Desideri cancellare le WLAN selezionate?"
 
 msgid "Do you want to delete selected auth groups?"
-msgstr ""
+msgstr "Desideri cancellare  i gruppi di autenticazione selezionati?"
 
 msgid "Do you want to delete selected bridges?"
 msgstr "Desideri cancellare i bridges selezionati?"
@@ -3446,13 +3451,13 @@ msgid "Do you want to delete selected groups?"
 msgstr "Vuoi eliminare i gruppi selezionati?"
 
 msgid "Do you want to delete selected iSNS servers?"
-msgstr ""
+msgstr "Desideri cancellare i server ISNS selezionati?"
 
 msgid "Do you want to delete selected initiator names?"
-msgstr ""
+msgstr "Desideri cancellare i nomi degli iniziatori selezionati?"
 
 msgid "Do you want to delete selected initiator portals?"
-msgstr ""
+msgstr "Desideri cancellare i portali degli iniziatori selezionati?"
 
 msgid "Do you want to delete selected jobs?"
 msgstr "Vuoi cancellare le attività selezionate?"
@@ -3464,7 +3469,7 @@ msgid "Do you want to delete selected notifier?"
 msgstr "Desideri eliminare il notificatore selezionato?"
 
 msgid "Do you want to delete selected option records?"
-msgstr ""
+msgstr "Desideri cancellare le opzioni di registrazione selezionate?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Vuoi cancellare le opzioni selezionate?"
@@ -3473,10 +3478,10 @@ msgid "Do you want to delete selected pools?"
 msgstr "Vuoi cancellare i Pools selezionati?"
 
 msgid "Do you want to delete selected port records?"
-msgstr ""
+msgstr "Desideri cancellare le porte di registrazione selezionate?"
 
 msgid "Do you want to delete selected portal groups?"
-msgstr ""
+msgstr "Desideri cancellare i gruppi di portali selezionati?"
 
 msgid "Do you want to delete selected records?"
 msgstr "Desideri cancellare i record selezionati?"
@@ -3500,7 +3505,7 @@ msgid "Do you want to delete selected snapshots?"
 msgstr "Vuoi cancellare gli Snapshots selezionati?"
 
 msgid "Do you want to delete selected targets?"
-msgstr ""
+msgstr "Desideri cancellare i target selezionati?"
 
 msgid "Do you want to delete selected user accounts?"
 msgstr "Vuoi eliminare gli account selezionati?"
@@ -3515,13 +3520,13 @@ msgid "Do you want to delete this command?"
 msgstr "Vuoi eliminare questo comando?"
 
 msgid "Do you want to disable selected CHAP users?"
-msgstr ""
+msgstr "Desideri disabilitare gli utenti CHAP selezionati?"
 
 msgid "Do you want to disable selected LUN records?"
-msgstr ""
+msgstr "Desideri disabilitare i registri LUN selezionati?"
 
 msgid "Do you want to disable selected LUNs?"
-msgstr ""
+msgstr "Desideri disabilitare i LUNs selezionati?"
 
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
@@ -3569,7 +3574,7 @@ msgid "Do you want to disable selected rsync modules?"
 msgstr "Vuoi disattivarei moduli rsync selezionati?"
 
 msgid "Do you want to disable selected targets?"
-msgstr ""
+msgstr "Desideri disabilitare i target selezionati?"
 
 msgid "Do you want to enable selected CHAP users?"
 msgstr ""
@@ -12663,6 +12668,9 @@ msgstr "C'è un problema con il tuo sistema ZFS."
 msgid "Your browser does not support this svg object type."
 msgstr "Il browser non supporta gli oggetti di tipo SVG"
 
+msgid "Your current email settings are either incomplete or insecure."
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -12685,13 +12693,13 @@ msgid "ZFS Pool I/O Statistics"
 msgstr "Statistiche del ZFS Pool I/O"
 
 msgid "ZFS Pool Properties"
-msgstr ""
+msgstr "Proprietà del Pool ZFS"
 
 msgid "ZFS Pool Tools"
 msgstr "Strumenti del ZFS Pool"
 
 msgid "ZFS Settings"
-msgstr ""
+msgstr "Impostazioni ZFS"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS snapshot Informazioni e Stato"
@@ -12725,7 +12733,7 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "allocated of"
-msgstr ""
+msgstr "allocato di"
 
 msgid "and"
 msgstr "e"
@@ -12757,7 +12765,7 @@ msgid "filechooser"
 msgstr "Selezionatore dei file"
 
 msgid "free of"
-msgstr ""
+msgstr "libero di"
 
 msgid "get target info failed."
 msgstr "Recupero informazioni del target fallito."
@@ -12794,22 +12802,22 @@ msgid "iSCSI initiator disabled."
 msgstr "Inizializzatore iSCSI disabilitato"
 
 msgid "iSNS Period"
-msgstr ""
+msgstr "Periodo iSNS"
 
 msgid "iSNS Server"
-msgstr ""
+msgstr "Server SNS"
 
 msgid "iSNS Server is locked"
-msgstr ""
+msgstr "Il server iSNS è bloccato"
 
 msgid "iSNS Server is marked for deletion"
-msgstr ""
+msgstr "Il server iSNS è selezionato per cancellazione"
 
 msgid "iSNS Server is unlocked"
-msgstr ""
+msgstr "Il server iSNS è sbloccato"
 
 msgid "iSNS Servers"
-msgstr ""
+msgstr "Server iSNS"
 
 msgid "iSNS Timeout"
 msgstr ""
@@ -12826,7 +12834,7 @@ msgid "infinity"
 msgstr "infinito"
 
 msgid "less then 1.8\"."
-msgstr ""
+msgstr "meno di 1,8\"."
 
 msgid "load/unload failed."
 msgstr "Caricamento/scaricamento falliti."
@@ -12912,6 +12920,3 @@ msgstr "utilizzo di"
 
 msgid "visible"
 msgstr "visibile"
-
-#~ msgid "Load on UPS"
-#~ msgstr "Carico UPS"

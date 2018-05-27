@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-05-22 17:29+0000\n"
-"PO-Revision-Date: 2017-04-06 18:11+0000\n"
-"Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
+"POT-Creation-Date: 2018-05-27 04:36+0000\n"
+"PO-Revision-Date: 2018-05-25 12:09+0000\n"
+"Last-Translator: Burak Sarı <Unknown>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-22 17:01+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
+"X-Launchpad-Export-Date: 2018-05-27 20:25+0000\n"
+"X-Generator: Launchpad (build 18667)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -83,7 +83,7 @@ msgstr "%s zaten bölüm olarak ayarlandı."
 
 #, php-format
 msgid "%s is based upon/includes various free software packages."
-msgstr ""
+msgstr "%s çeşitli ücretsiz yazılım paketleri içerir."
 
 #, php-format
 msgid "%s is too long."
@@ -99,7 +99,7 @@ msgstr "%s üzerinde %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s, %s kullanır."
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -110,18 +110,17 @@ msgid "'%s' deletes all statistical data from the graphs!"
 msgstr "'%s' grafikteki tüm istatiksiksel verileri siler!"
 
 msgid "(Change if needed)"
-msgstr "(Eğer gerekli ise değiştir)"
+msgstr "(Gerekli ise değiştir)"
 
 msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
 "(Varsayılan uzunluklar: AES için 128, Blowfish için 128, Camellia için 128 "
-"ve 3DES için 192 dir)"
+"ve 3DES için 192)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr ""
-"(Maxtor 6B200M0 200GB ve Maxtor 2R015H1 15GB diskerde bulunanlardan)."
+msgstr "(Maxtor 6B200M0 200GB ve Maxtor 2R015H1 15GB içinde bulunan)"
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
@@ -149,6 +148,12 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
+"(Satıcıya özgü ham değer.) Manyetik kafaların hata bulma oranı. Mekanik "
+"konumlandırma sisteminde kısmi bir arıza varsa, hata arama arızası ortaya "
+"çıkar. Böyle bir arıza, bir servo hasarı veya sabit diskin termal olarak "
+"genişlemesi gibi çeşitli faktörlerden kaynaklanabilir. Ham değer farklı "
+"satıcılar için farklı bir yapıya sahiptir ve genellikle ondalık sayı olarak "
+"anlamlı değildir."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -156,122 +161,137 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
+"(Satıcıya özgü ham değer.) Bir disk yüzeyinden veri okurken meydana gelen "
+"donanım okuma hatalarının oranıyla ilgili verileri depolar. Ham değer farklı "
+"satıcılar için farklı bir yapıya sahiptir ve genellikle ondalık sayı olarak "
+"anlamlı değildir."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
+"(Satıcıya özgü ham değer.) Ham değerin farklı satıcılar için farklı yapısı "
+"vardır ve genellikle ondalık sayı olarak anlamlı değildir."
 
 #, php-format
 msgid "(default %s %s"
 msgstr "(Varsayılan %s %s"
 
 msgid "*** Imported duplicate ***"
-msgstr "*** Tekrarlanan işlem ***"
+msgstr "*** İçe aktarılan kopya ***"
 
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
-msgstr "0=devre dışı, 1-255=komutu belirtilen derinliği ile kuyruk etkin"
+msgstr "0=devre dışı, 1-255=belirtilen derinlikte komut kuyruğu etkin."
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr "Bir JBOD alanı oluşturmak için 1 veya daha fazla disk gereklidir."
+msgstr "JBOD birimi oluşturmak için 1 veya daha fazla disk gerekir."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr "Bir RAID-1 alanı oluşturmak için 1 veya daha fazla disk gereklidir."
+msgstr "RAID-1 birimi oluşturmak için 1 veya daha fazla disk gerekir."
 
 msgid "1.8\""
-msgstr ""
+msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr "RAID-0 oluşturmak için 2 veya daha fazla disk gereklidir."
+msgstr "RAID-0 birimi oluşturmak için 2 veya daha fazla disk gerekir."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr "RAID-1 oluşturmak için 2 veya daha fazla disk gereklidir."
+msgstr "Bir RAID-1 birimi oluşturmak için 2 veya daha fazla disk gerekir."
 
 msgid "2.5\""
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr "RAID-5 oluşturmak için 3 veya daha fazla disk gereklidir."
+msgstr "RAID-5 birimi oluşturmak için 3 veya daha fazla disk gerekir."
 
 msgid "3.5\""
-msgstr ""
+msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
-msgstr "4KB yaması"
+msgstr "4KB sarıcı"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Bytes"
 
 msgid "514"
-msgstr ""
+msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
-msgstr ""
+msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr "802.1Q VLAN etiketi (1 ve 4094 arası)."
+msgstr "802.1Q VLAN etiketi (1 ile 4094 arasında)."
 
 msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"Bir NTP saat sunucusu adı yalnızca şu karakterleri içerebilir: a-z, 0-9, '-' "
+"ve '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
-"Portal Gurubu, Etiket numarası ile belirlenir ve IP adreslerini, dinleyen "
-"TCP portlarını içerir."
+"Bir Portal Grubu bir etiket numarasıyla tanımlanır ve IP adreslerini "
+"tanımlar ve TCP bağlantı noktalarını dinler."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
-msgstr "etiketi %s olan VLAN zaten bu arabirimde tanımlanır."
+msgstr "Bu arayüzde %s etiketli bir VLAN zaten tanımlanmıştır."
 
 msgid "A cron job must be setup to schedule script /etc/capacitycheck.zfs."
 msgstr ""
+"Bir cron işi, /etc/capacitycheck.zfs komut dosyasını programlamak için "
+"ayarlanmalıdır."
 
 msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Dizin dosyaları (index.php, index.html, index.htm veya default.htm) bir "
+"dizinde bulunamadığı zaman bir dizin listesi oluşturulur."
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "Bir firmware güncellemesi devam ediyor."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
 "that has the same IP. Use a space to separate multiple alias names."
 msgstr ""
+"Bir ana bilgisayar adı. Bu seçenek, aynı IP'ye sahip olan her alan için "
+"birden çok kez görünebilir. Birden çok takma ada adını ayırmak için boşluk "
+"kullanın."
 
 msgid ""
 "A key will be either 5 or 13 characters (40 or 104 bits) depending of the "
@@ -279,28 +299,31 @@ msgid ""
 "either as a plain string or as a string of hexadecimal digits preceded by "
 "'0x'."
 msgstr ""
+"Bir anahtar, yerel ağa ve bağdaştırıcının yeteneklerine bağlı olarak 5 veya "
+"13 karakter (40 veya 104 bit) olacaktır. Düz bir dize olarak veya '0x' ile "
+"öncelenen onaltılık bir basamak dizesi olarak belirtilebilir."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "Monte edilmiş bir RAID birimi silinemez."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
-"Seçilen işlemi yapabilmek için bağlı bir disk veya bölüm geçici olarak "
-"çıkartılacaktır."
+"İstenen eylemi gerçekleştirmek için takılı disk veya bölüm geçici olarak "
+"ayrılacaktır."
 
 msgid "A reboot is required"
-msgstr ""
+msgstr "Yeniden başlatma gerekli"
 
 msgid "A reload request has been sent to the daemon."
-msgstr "Yürütücüye yenileme isteği gönderildi."
+msgstr "Sunuma bir yeniden yükleme isteği gönderildi."
 
 msgid "A rescan has been issued."
-msgstr "Yeniden tarama istenildi."
+msgstr "Bir yeniden tarama yayınlandı."
 
 msgid "A route to this destination network already exists."
-msgstr "Hedef ağ'a bir yönlendirme bulunuyor."
+msgstr "Bu hedef ağın bir yolu zaten var."
 
 msgid "A sysvol folder was found."
 msgstr ""
@@ -11686,6 +11709,9 @@ msgid "Your ZFS system is not healthy."
 msgstr ""
 
 msgid "Your browser does not support this svg object type."
+msgstr ""
+
+msgid "Your current email settings are either incomplete or insecure."
 msgstr ""
 
 msgid "ZFS"

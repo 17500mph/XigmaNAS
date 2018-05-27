@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-22 17:29+0000\n"
-"PO-Revision-Date: 2017-12-23 02:13+0000\n"
-"Last-Translator: kasper <Unknown>\n"
+"POT-Creation-Date: 2018-05-27 04:36+0000\n"
+"PO-Revision-Date: 2018-05-23 21:00+0000\n"
+"Last-Translator: Kim Bjoern Nielsen <launchpad.net@pjat.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-22 17:02+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
+"X-Launchpad-Export-Date: 2018-05-27 20:24+0000\n"
+"X-Generator: Launchpad (build 18667)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
 "X-Poedit-Language: Danish\n"
@@ -24,11 +24,11 @@ msgstr " var tildelt til "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s bruges til at danne %2$s volumes."
 
 #, php-format
 msgid "%d days"
@@ -52,7 +52,7 @@ msgstr "%d år"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% af %s"
 
 #, php-format
 msgid "%dB / block"
@@ -60,19 +60,19 @@ msgstr "%dB / blok"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "%s grænsesnit"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s eksisterer allerede som en %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s eksisterer allerede"
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s til rådighed af %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -149,6 +149,11 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
+"(Leverandørspecifik angivelse.) Angiver søgefejl fra læsehovedet. Hvis der "
+"er en delvis fejl i det mekaniske positioneringssystem, vil der opstå "
+"søgefejl. Fejlen kan skyldes mange faktorer, såsom skade på aktuatorer eller "
+"udvidelse af harddisken på grund af varme. Værdien har forskellig struktur "
+"fra forskellige leverandører, og er ofte ikke meningsfuld som et decimaltal."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -156,15 +161,21 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
+"(Leverandørspecifik angivelse.) Gemmer data relateret til fejlrate under "
+"læsning der skyldes hardware under indlæsning fra overfladen på diske. "
+"Værdien har forskellig struktur fra forskellige leverandører, og er ofte "
+"ikke meningsfuld som et decimaltal."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
+"(Leverandørspecifik angivelse.) Værdien har forskellig struktur fra "
+"forskellige leverandører, og er ofte ikke meningsfuld som et decimaltal."
 
 #, php-format
 msgid "(default %s %s"
-msgstr ""
+msgstr "(standard %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importeret dublet ***"
@@ -176,13 +187,13 @@ msgid "1"
 msgstr ""
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 eller flere diske kræves for at danne JBOD volume"
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 eller flere diske kræves for at danne RAID-1 volume"
 
 msgid "1.8\""
-msgstr ""
+msgstr "1.8 tomme"
 
 msgid "16 KiB"
 msgstr ""
@@ -194,19 +205,19 @@ msgid "2 KiB"
 msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2 eller flere diske kræves for at danne RAID-0 volume"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 eller flere diske kræves for at danne RAID-1 volume"
 
 msgid "2.5\""
-msgstr ""
+msgstr "2.5 tomme"
 
 msgid "3"
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 eller flere diske kræves for at danne RAID-5 volume"
 
 msgid "3.5\""
 msgstr ""
@@ -233,10 +244,10 @@ msgid "64 KiB"
 msgstr ""
 
 msgid "69"
-msgstr ""
+msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN mærkat (mellem 1 og 4094)."
@@ -245,6 +256,8 @@ msgid ""
 "A NTP time server name may only contain the following characters: a-z, 0-9, "
 "'-' and '.'."
 msgstr ""
+"En NTP (tids)servers navn må kun bestå af følgende karakterer: a-z, 0-9, '-' "
+"og '.'."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -264,7 +277,7 @@ msgid ""
 msgstr ""
 
 msgid "A firmware upgrade is in progress."
-msgstr ""
+msgstr "Firmware opdatering pågår."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -293,7 +306,7 @@ msgid ""
 msgstr ""
 
 msgid "A reboot is required"
-msgstr ""
+msgstr "Genstart er påkrævet"
 
 msgid "A reload request has been sent to the daemon."
 msgstr ""
@@ -324,10 +337,10 @@ msgstr ""
 "værter."
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "En valid IPv4 adresse må angives for primær DNS server."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "En valid IPv4 adresse må angives for sekundær DNS server."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "En gyldig IPv4 addresse skal angives."
@@ -339,10 +352,10 @@ msgid "A valid IPv6 Gateway address must be specified."
 msgstr "En gyldig IPv6 Gateway adresse skal angives."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "En valid IPv6 adresse må angives for primær DNS server."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "En valid IPv6 adresse må angives for sekundær DNS server."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "En gyldig IPv6 addresse skal angives."
@@ -381,7 +394,7 @@ msgid "ACL mode"
 msgstr ""
 
 msgid "AD authentication is disabled."
-msgstr ""
+msgstr "AD godkendelse er slået fra."
 
 msgid "AD or PDC name."
 msgstr "AD eller PDC navn."
@@ -399,7 +412,7 @@ msgid "AIO Write Size"
 msgstr ""
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "Alle grænseflader"
 
 msgid "AP mode"
 msgstr "AP tilstand"
@@ -423,7 +436,7 @@ msgid "Access Restrictions"
 msgstr "Adgangsbegrænsninger"
 
 msgid "Access Time"
-msgstr ""
+msgstr "Tilgangstid"
 
 msgid "Access Time (atime)"
 msgstr "Access tid (atime)"
@@ -451,7 +464,7 @@ msgstr ""
 "ny fejl opdages, eller hvis en S.M.A.R.T. kommando til en disk fejler."
 
 msgid "Active"
-msgstr ""
+msgstr "Aktive"
 
 msgid "Active Directory"
 msgstr "Active Directory"
@@ -463,13 +476,13 @@ msgid "Active Users"
 msgstr "Aktive brugere"
 
 msgid "Activities"
-msgstr ""
+msgstr "Aktiviteter"
 
 msgid "Activity"
-msgstr ""
+msgstr "Aktivitet"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Tilpasset (lavt strøm forbrug)"
 
 msgid "Add"
 msgstr "Tilføj"
@@ -490,13 +503,13 @@ msgid "Add Dataset"
 msgstr ""
 
 msgid "Add Disk"
-msgstr ""
+msgstr "Tilføj disk"
 
 msgid "Add Encrypted Volume"
 msgstr ""
 
 msgid "Add Group"
-msgstr ""
+msgstr "Tilføj gruppe"
 
 msgid "Add Host"
 msgstr "Tilføj vært"
@@ -523,7 +536,7 @@ msgid "Add MIB"
 msgstr "Tilføj MIB"
 
 msgid "Add Mutual CHAP User"
-msgstr ""
+msgstr "Tilføj fælles CHAP bruger"
 
 msgid "Add NFS Share"
 msgstr ""
@@ -577,19 +590,19 @@ msgid "Add URL"
 msgstr "Tilføj URL"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Tilføj brugerkonti"
 
 msgid "Add VLAN"
-msgstr ""
+msgstr "Tilføj VLAN"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Tilføj virtuel enhed"
 
 msgid "Add Volume"
 msgstr ""
 
 msgid "Add WLAN"
-msgstr ""
+msgstr "Tilføj WLAN"
 
 msgid "Add a cache device to a pool"
 msgstr ""
@@ -652,10 +665,10 @@ msgid "Add target"
 msgstr "Tilføj mål"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Ekstra gruppe"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Ekstra netværk"
 
 msgid "Additional Options for Block Backend"
 msgstr ""
@@ -667,10 +680,10 @@ msgid "Additional Parameter"
 msgstr ""
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Yderligere parametre"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Ekstra lagring"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Ekstra parametre til den hardware-specifikke del af driveren."
@@ -682,31 +695,31 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adresse på remote hastd daemon. Det skal være en fast IP adresse."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Administrator kodeord"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Administration kodeord"
 
 msgid "Administrative WebGUI"
 msgstr "Administrativ WebGUI"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Administrator navn"
 
 msgid "Advanced"
 msgstr "Avanceret"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Avanceret formatering"
 
 msgid "Advanced Options"
 msgstr "Advancerede valgmuligheder"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Avancerede indstillinger"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Avancerede indstillinger"
 
 msgid "Advanced settings"
 msgstr "Advancerede indstillinger"
@@ -721,14 +734,18 @@ msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Efter du har trykket \"Gem\" skal du måske gennemgå et eller flere af "
+"følgende skridt før du igen kan tilgå serveren:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Efter du har trykket \"Gem\" skal serveren genstartes før ændringer træder i "
+"kraft."
 
 msgid "Age"
-msgstr ""
+msgstr "Alder"
 
 msgid "Aggregation Protocol"
 msgstr ""
@@ -745,10 +762,10 @@ msgid "Alert Level"
 msgstr ""
 
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritme"
 
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 msgid "All"
 msgstr "Alle"
@@ -757,7 +774,7 @@ msgid "All Dirs"
 msgstr ""
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "Alle data fra følgende statistikker er nu slettet:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
@@ -765,7 +782,7 @@ msgid ""
 msgstr ""
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Alle data vil være tabt når du aktiverer denne mulighed!"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -775,7 +792,7 @@ msgid "All disks are imported."
 msgstr "Alle diske er importeret."
 
 msgid "All encrypted disks have been imported."
-msgstr ""
+msgstr "Alle krypterede diske er importeret."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -785,7 +802,7 @@ msgstr ""
 "og alt hvad der begynder med .Apple ulovlige."
 
 msgid "All software RAID disks are imported."
-msgstr ""
+msgstr "Alle software RAID diske er importeret."
 
 msgid "Alloc"
 msgstr ""
@@ -794,19 +811,19 @@ msgid "Allow"
 msgstr "Tillad"
 
 msgid "Allow New Files"
-msgstr ""
+msgstr "Tillad nye filer"
 
 msgid "Allow Serial Ports"
-msgstr ""
+msgstr "Tillad serielle porte"
 
 msgid "Allow TLS connections only."
-msgstr ""
+msgstr "Tillad kun TLS forbindelse."
 
 msgid "Allow USB"
-msgstr ""
+msgstr "Tillad USB"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "Tillad serielle USB porte"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Tillad klient adgang til konti der har tomme kodeord."
@@ -820,7 +837,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Tillad kilenter at genoptage afbrudte uploads og downloads."
 
 msgid "Allow consecutive read/writes to be issued in parallel"
-msgstr ""
+msgstr "Tillad fortløbende læse/skrivning gjort parallelt"
 
 msgid "Allow new files to be created."
 msgstr "Tillad oprettelse af nye filer."
@@ -849,7 +866,7 @@ msgid "Allows the server to try and become a local master browser."
 msgstr "Tilladder serveren at forsøge at blive local master browser"
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Tillad forbindelse til skjult netværk"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -866,16 +883,16 @@ msgid "Alternate Data Streams"
 msgstr ""
 
 msgid "Alternate TCP port. (Default is 873)."
-msgstr ""
+msgstr "Alternativ TCP port (standard er 873)."
 
 msgid "Alternative configuration directory."
 msgstr ""
 
 msgid "Always"
-msgstr ""
+msgstr "Altid"
 
 msgid "Always On"
-msgstr ""
+msgstr "Altid tændt"
 
 msgid "Always Scan"
 msgstr ""
@@ -931,7 +948,7 @@ msgid "An empty field is default."
 msgstr ""
 
 msgid "An error occured."
-msgstr ""
+msgstr "Der opstod en fejl."
 
 msgid "An host with this name already exists."
 msgstr "En vært med dette navn eksisterer allerede."
@@ -943,10 +960,10 @@ msgid "Anonymous Bind"
 msgstr ""
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Anonyme brugere"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
-msgstr ""
+msgstr "Anonym adgang er ikke tilgængelig siden SMB2."
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -981,28 +998,28 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protokol"
 
 msgid "Apple Filing Protocol (AFP) Compatibility Settings"
-msgstr ""
+msgstr "Apple Filing Protocol (AFP) kompatibilitets indstillinger"
 
 msgid "Apple Public Source License"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "Anvend"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Anvend ændringer"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Anvend filter"
 
 msgid "Apply changes"
 msgstr "Anvend ændringer"
 
 msgid "Apr"
-msgstr ""
+msgstr "apr."
 
 msgid "April"
-msgstr ""
+msgstr "April"
 
 msgid "Archive"
 msgstr "Arkiv"
@@ -1011,13 +1028,13 @@ msgid "Archive mode."
 msgstr "Arkiverings tilstand."
 
 msgid "Are you sure you want to reboot the server?"
-msgstr ""
+msgstr "Er du sikker på at du vil genstarte serveren?"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
 msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
-msgstr ""
+msgstr "Er du sikker på at du vil slukke serveren?"
 
 msgid "Assign a human-readable description to the target."
 msgstr ""
@@ -1034,10 +1051,10 @@ msgid "Assign a previously defined portal group to the target."
 msgstr ""
 
 msgid "Asynchronous I/O"
-msgstr ""
+msgstr "Asynkront I/O"
 
 msgid "At least one disk must be selected."
-msgstr ""
+msgstr "Mindst en disk skal vælges."
 
 msgid "At least one interface must be selected."
 msgstr ""
@@ -1050,13 +1067,13 @@ msgstr ""
 "indholder en eller flere extents."
 
 msgid "Attach"
-msgstr ""
+msgstr "Tilføj"
 
 msgid "Attach a data device"
-msgstr ""
+msgstr "Tilføj en data enhed"
 
 msgid "Attach a log device"
-msgstr ""
+msgstr "Tilføj en log enhed"
 
 msgid "Attached"
 msgstr "Vedhæftet"
@@ -1072,16 +1089,16 @@ msgid ""
 msgstr ""
 
 msgid "Attribute Name"
-msgstr ""
+msgstr "Attribut navn"
 
 msgid "Audio"
-msgstr ""
+msgstr "Lyd"
 
 msgid "Aug"
-msgstr ""
+msgstr "aug."
 
 msgid "August"
-msgstr ""
+msgstr "August"
 
 msgid "Auth Group"
 msgstr "Auth gruppe"
@@ -1121,27 +1138,29 @@ msgid "Authenticate URL"
 msgstr "Godkend URL"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Godkendte brugere"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Godkendte brugeres download begrænsning i KB/s. Tomt betyder ubegrænset."
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Godkendte brugeres upload begrænsning i KB/s. Tomt betyder ubegrænset."
 
 msgid "Authentication"
 msgstr "Godkendelse"
 
 msgid "Authentication Method"
-msgstr ""
+msgstr "Godkendelsesmetode"
 
 msgid "Authentification method is disabled."
-msgstr ""
+msgstr "Godkendelse er slået fra."
 
 msgid "Authorised Network"
-msgstr ""
+msgstr "Autoriseret netværk"
 
 msgid "Authorised network"
 msgstr "Godkendt netværk"
@@ -1168,7 +1187,7 @@ msgid "AutoScale"
 msgstr "AutoScale"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Autodetektér"
 
 msgid "Autoscale"
 msgstr ""
@@ -1204,22 +1223,22 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Tilbage"
 
 msgid "Backend"
-msgstr ""
+msgstr "Backend"
 
 msgid "Background"
-msgstr ""
+msgstr "Baggrund"
 
 msgid "Backup"
-msgstr ""
+msgstr "Sikkerhedskopi"
 
 msgid "Backup Configuration"
 msgstr ""
 
 msgid "Backup File"
-msgstr ""
+msgstr "Sikkerhedskopi fil"
 
 msgid "Backup/Restore"
 msgstr "Backup/Gendan"
@@ -1228,10 +1247,10 @@ msgid "Bad User - (Non Existing Users)"
 msgstr ""
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Balanceringsalgoritme"
 
 msgid "Ban List"
-msgstr ""
+msgstr "Sortliste"
 
 msgid "Ban List Rule"
 msgstr ""
@@ -1297,7 +1316,7 @@ msgid "Battery voltage"
 msgstr "Battery spænding"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Vær forsigtig med at benytte disse muligheder."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -11975,6 +11994,9 @@ msgstr "Dit ZFS system er ikke sundt."
 msgid "Your browser does not support this svg object type."
 msgstr ""
 
+msgid "Your current email settings are either incomplete or insecure."
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -12219,6 +12241,3 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
-
-#~ msgid "Load on UPS"
-#~ msgstr "Belastning på UPS"
