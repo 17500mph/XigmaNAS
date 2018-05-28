@@ -418,6 +418,13 @@ EOF
 		if [ "${_ipaddr}" != "auto" -a -n "${_gateway}" ]; then
 			eval /usr/local/sbin/rconf attribute set "ipv6_defaultrouter" "${_gateway}"
 		fi
+
+		# IPv6 Privacy Extensions.
+		if configxml_isset "//interfaces/lan/ipv6privacy"; then
+			eval /usr/local/sbin/rconf attribute set "ipv6_privacy" "YES"
+		else
+			eval /usr/local/sbin/rconf attribute remove "ipv6_privacy"
+		fi
 	fi
 
 	# OPT interfaces:
