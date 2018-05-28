@@ -60,6 +60,7 @@ if (strcmp($lancfg['ipv6addr'], "auto") == 0) {
 }
 $pconfig['gateway'] = get_defaultgateway();
 $pconfig['ipv6gateway'] = get_ipv6defaultgateway();
+$pconfig['ipv6privacy'] = isset($lancfg['ipv6privacy']);
 $pconfig['mtu'] = !empty($lancfg['mtu']) ? $lancfg['mtu'] : "";
 $pconfig['media'] = !empty($lancfg['media']) ? $lancfg['media'] : "autoselect";
 $pconfig['mediaopt'] = !empty($lancfg['mediaopt']) ? $lancfg['mediaopt'] : "";
@@ -134,6 +135,7 @@ if ($_POST) {
 			$lancfg['ipv6gateway'] = $_POST['ipv6gateway'];
 		} else if (0 == strcmp($_POST['ipv6type'],"Auto")) {
 			$lancfg['ipv6addr'] = "auto";
+			$lancfg['ipv6privacy'] = isset($_POST['ipv6privacy']) ? true : false;
 		}
 
 		$lancfg['mtu'] = $_POST['mtu'];
@@ -197,12 +199,14 @@ function ipv6_type_change() {
 			document.iform.ipv6addr.disabled = endis;
 			document.iform.ipv6subnet.disabled = endis;
 			document.iform.ipv6gateway.disabled = endis;
+			document.iform.ipv6privacy.disabled = 1;
 			break;
 
 		case 1: /* Autoconfigure */
 			document.iform.ipv6addr.disabled = 1;
 			document.iform.ipv6subnet.disabled = 1;
 			document.iform.ipv6gateway.disabled = 1;
+			document.iform.ipv6privacy.disabled = endis;
 			break;
 	}
 }
@@ -270,6 +274,7 @@ function encryption_change() {
 					html_combobox("ipv6type", gtext("Type"), $pconfig['ipv6type'], ['Static' => gtext('Static'),'Auto' => gtext('Auto')], "", true, false, "ipv6_type_change()");
 					html_ipv6addrbox("ipv6addr", "ipv6subnet", gtext("IP Address"), !empty($pconfig['ipv6addr']) ? $pconfig['ipv6addr'] : "", !empty($pconfig['ipv6subnet']) ? $pconfig['ipv6subnet'] : "", "", true);
 					html_inputbox("ipv6gateway", gtext("Gateway"), !empty($pconfig['ipv6gateway']) ? $pconfig['ipv6gateway'] : "", "", true, 20);
+					html_checkbox("ipv6privacy", gtext("Privacy Extension"), !empty($pconfig['ipv6privacy']) ? true : false, gtext("Enable IPv6 privacy extensions."), "", true);
 					html_separator();
 					html_titleline(gtext("Advanced Settings"));
 					html_inputbox("mtu", gtext("MTU"), $pconfig['mtu'], gtext("Set the maximum transmission unit of the interface to n, default is interface specific. The MTU is used to limit the size of packets that are transmitted on an interface. Not all interfaces support setting the MTU, and some interfaces have range restrictions."), false, 5);
