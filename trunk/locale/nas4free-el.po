@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-05-27 04:36+0000\n"
-"PO-Revision-Date: 2018-05-23 12:47+0000\n"
+"PO-Revision-Date: 2018-05-28 08:31+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-27 20:24+0000\n"
+"X-Launchpad-Export-Date: 2018-05-28 09:12+0000\n"
 "X-Generator: Launchpad (build 18667)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -566,7 +566,7 @@ msgid "Add LUN Record"
 msgstr "Προσθήκη Εγγραφής LUN"
 
 msgid "Add Listen Record"
-msgstr "Προσθήκη Εγγραφής Αναμονής"
+msgstr "Προσθήκη Εγγραφής Αναμονής Σύνδεσης"
 
 msgid "Add MIB"
 msgstr "Προσθήκη MIB"
@@ -2754,7 +2754,7 @@ msgid "Delete Selected LUNs"
 msgstr "Διαγραφή Επιλεγμένων LUN"
 
 msgid "Delete Selected Listen Records"
-msgstr "Διαγραφή Επιλεγμένων Εγγραφών Αναμονής"
+msgstr "Διαγραφή Επιλεγμένων Εγγραφών Αναμονής Σύνδεσης"
 
 msgid "Delete Selected Mutual CHAP Users"
 msgstr "Διαγραφή Επιλεγμένων Χρηστών Αμοιβαίου CHAP"
@@ -3134,7 +3134,7 @@ msgid "Disable Selected LUNs"
 msgstr "Απενεργοποίηση Επιλεγμένων LUN"
 
 msgid "Disable Selected Listen Records"
-msgstr "Απενεργοποίηση Επιλεγμένων Εγγραφών Αναμονής"
+msgstr "Απενεργοποίηση Επιλεγμένων Εγγραφών Αναμονής Σύνδεσης"
 
 msgid "Disable Selected Mutual CHAP Users"
 msgstr "Απενεργοποίηση Επιλεγμένων Χρηστών CHAP"
@@ -3515,7 +3515,7 @@ msgid "Do you want to delete selected jobs?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εργασίες;"
 
 msgid "Do you want to delete selected listen records?"
-msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εγγραφές αναμονής;"
+msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εγγραφές αναμονής σύνδεσης;"
 
 msgid "Do you want to delete selected notifier?"
 msgstr "Θέλετε να διαγράψετε τον επιλεγμένο ειδοποιητή;"
@@ -3602,7 +3602,8 @@ msgid "Do you want to disable selected jobs?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εργασίες;"
 
 msgid "Do you want to disable selected listen records?"
-msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εγγραφές αναμονής;"
+msgstr ""
+"Θέλετε να απενεργοποιήσετε τις επιλεγμένες εγγραφές αναμονής σύνδεσης;"
 
 msgid "Do you want to disable selected option records?"
 msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εγγραφές επιλογής;"
@@ -3659,7 +3660,7 @@ msgid "Do you want to enable selected jobs?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εργασίες;"
 
 msgid "Do you want to enable selected listen records?"
-msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εγγραφές εκκινητών;"
+msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εγγραφές αναμονής σύνδεσης;"
 
 msgid "Do you want to enable selected option records?"
 msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εγγραφές επιλογών;"
@@ -3695,49 +3696,51 @@ msgid "Do you want to lock selected records?"
 msgstr "Θέλετε να κλειδώσετε τις επιλεγμένες εγγραφές;"
 
 msgid "Do you want to toggle selected CHAP users?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων χρηστών CHAP;"
 
 msgid "Do you want to toggle selected LUN records?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων εγγραφών LUN;"
 
 msgid "Do you want to toggle selected LUNs?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων LUN;"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr ""
+"Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων χρηστών αμοιβαίου CHAP;"
 
 msgid "Do you want to toggle selected auth groups?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων ομάδων πιστοποίησης;"
 
 msgid "Do you want to toggle selected commands?"
 msgstr "Θέλετε να γίνει εναλλαγή των επιλεγμένων εντολών;"
 
 msgid "Do you want to toggle selected iSNS servers?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων διακομιστών iSNS;"
 
 msgid "Do you want to toggle selected initiator names?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων ονομάτων εκκινητών;"
 
 msgid "Do you want to toggle selected initiator portals?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων portal εκκινητών;"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες εργασίες;"
 
 msgid "Do you want to toggle selected listen records?"
 msgstr ""
+"Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων εγγραφών αναμονής σύνδεσης;"
 
 msgid "Do you want to toggle selected option records?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων εγγραφών επιλογής;"
 
 msgid "Do you want to toggle selected options?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες επιλογές;"
 
 msgid "Do you want to toggle selected port records?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων εγγραφών θυρών;"
 
 msgid "Do you want to toggle selected portal groups?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων ομάδων portal;"
 
 msgid "Do you want to toggle selected records?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες εγγραφές;"
@@ -3749,7 +3752,7 @@ msgid "Do you want to toggle selected rsync modules?"
 msgstr "Θέλετε να εναλλάξετε τα επιλεγμένα αρθρώματα rsync;"
 
 msgid "Do you want to toggle selected targets?"
-msgstr ""
+msgstr "Θέλετε να αντιστραφεί η επιλογή των επιλεγμένων προορισμών;"
 
 msgid "Do you want to unlock selected records?"
 msgstr "Θέλετε να ξεκλειδώσετε τις επιλεγμένες εγγραφές;"
@@ -3915,7 +3918,7 @@ msgid "Edit LUN Record"
 msgstr "Επεξεργασία Εγγραφής LUN"
 
 msgid "Edit Listen Record"
-msgstr "Επεξεργασία Εγγραφής Αναμονής"
+msgstr "Επεξεργασία Εγγραφής Αναμονής Σύνδεσης"
 
 msgid "Edit MIB"
 msgstr "Επεξεργασία MIB"
@@ -4135,7 +4138,7 @@ msgid "Enable Selected LUNs"
 msgstr "Ενεργοποίηση Επιλεγμένων LUN"
 
 msgid "Enable Selected Listen Records"
-msgstr "Ενεργοποίηση Επιλεγμένων Εγγραφών Αναμονής"
+msgstr "Ενεργοποίηση Επιλεγμένων Εγγραφών Αναμονής Σύνδεσης"
 
 msgid "Enable Selected Mutual CHAP Users"
 msgstr "Ενεργοποίηση Επιλεγμένων Χρηστών Αμοιβαίου CHAP"
@@ -6314,13 +6317,13 @@ msgid "Listen"
 msgstr "Αναμονή"
 
 msgid "Listen record is locked"
-msgstr "Η εγγραφή αναμονής είανι κλειδωμένη"
+msgstr "Η εγγραφή αναμονής σύνδεσης είναι κλειδωμένη"
 
 msgid "Listen record is marked for deletion"
-msgstr "Η εγγραφή αναμονής είναι σημειωμένη προς διαγραφή"
+msgstr "Η εγγραφή αναμονής σύνδεσης είναι σημειωμένη προς διαγραφή"
 
 msgid "Listen record is unlocked"
-msgstr "Η εγγραφή αναμονής είναι ξεκλείδωτη"
+msgstr "Η εγγραφή αναμονής σύνδεσης είναι ξεκλείδωτη"
 
 msgid "Load"
 msgstr "Φόρτωση"
@@ -7748,7 +7751,7 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Να επιτρέπεται το SSH Tunneling."
 
 msgid "Physical Block Offset"
-msgstr ""
+msgstr "Όφσετ Φυσικού Μπλοκ"
 
 msgid "Physical Block Size"
 msgstr "Μέγεθος Φυσικού Μπλοκ"
@@ -9284,14 +9287,18 @@ msgid ""
 "Set to \"off\", disables read caching for the LUN, if supported by the "
 "backend."
 msgstr ""
+"Ορισμός σε \"ανενεργό\", απενεργοποιεί την cache ανάγνωσης για το LUN, αν "
+"υποστηρίζεται από το backend."
 
 msgid ""
 "Set to \"off\", disables write caching for the LUN, if supported by the "
 "backend."
 msgstr ""
+"Ορισμός σε \"ανενεργό\", απενεργοποιεί την cache εγγραφής για το LUN, αν "
+"υποστηρίζεται από το backend."
 
 msgid "Set to \"on\" makes LUN removable."
-msgstr ""
+msgstr "Ορισμός σε \"ενεργό\" καθιστά το LUN αφαιρέσιμο."
 
 msgid ""
 "Set to \"on\", blocks all media write operations to the LUN reporting it as "
@@ -9335,6 +9342,9 @@ msgid ""
 "Setting to \"on\" or \"off\" controls UNMAP support for the logical unit. "
 "Default value is \"on\" if supported by the backend."
 msgstr ""
+"Ορισμός σε \"ενεργό\" ή \"ανενεργό\" ελέγχει την υποστήριξη UNMAP για τη "
+"λογική μονάδα. Η προεπιλεγμένη τιμή είναι \"ενεργό\" αν υποστηρίζεται από το "
+"backend."
 
 msgid ""
 "Setting to \"primary\" or \"secondary\" overrides default role of the node "
@@ -9606,9 +9616,14 @@ msgid ""
 "value is zero, that disables backing store completely, making all writes go "
 "to nowhere, while all reads return zeroes."
 msgstr ""
+"Καθορίζει το μέγεθος της βοηθητικής αποθήκευσης (μέγιστη RAM για δεδομένα). "
+"Η προεπιλεγμένη τιμή είναι μηδέν, το οποίο απενεργοποεί εντελώς τη βοηθητική "
+"αποθήκευση, έχοντας σαν αποτέλεσμα οι εγγραφές να μην πηγαίνουν πουθενά, ενώ "
+"οι αναγνώσεις επιστρέφουν μηδενικά."
 
 msgid "Specifies file or device name to use for backing store."
 msgstr ""
+"Καθορίζει το όνομα αρχείου ή συσκευής για χρήση ως βοηθητική αποθήκευση."
 
 msgid "Specifies how many servers to create."
 msgstr "Καθορίζει πόσοι διακομιστές θα δημιουργηθούν."
@@ -9703,13 +9718,15 @@ msgid ""
 msgstr ""
 
 msgid "Specify physical block offset of the device."
-msgstr ""
+msgstr "Καθορισμός όφσετ του φυσικού μπλοκ της συσκευής."
 
 msgid "Specify physical block size of the device."
-msgstr ""
+msgstr "Καθορίστε το μέγεθος του φυσικού μπλοκ της συσκευής."
 
 msgid "Specify the SCSI device type to use when creating the LUN."
 msgstr ""
+"Καθορίστε τον τύπο συσκευής SCSI που θα χρησιμοποιείται κατά τη δημιουργία "
+"του LUN."
 
 msgid "Split request"
 msgstr "Αίτημα διαχωρισμού"
@@ -10132,7 +10149,7 @@ msgstr ""
 "το BIOS η θύρα COM."
 
 msgid "The CTL backend to use for a given LUN."
-msgstr ""
+msgstr "Το CTL backend που θα χρησιμοποιείται για ένα δεδομένο LUN."
 
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
@@ -10994,6 +11011,9 @@ msgid ""
 "The timeout for login sessions, after which the connection will be forcibly "
 "terminated. The default is 60. A setting of 0 disables the timeout."
 msgstr ""
+"Το χρονικό όριο λήξης για συνδέσεις, μετά από το οποίο η σύνδεση θα "
+"τερματίζεται αναγκαστικά. Η προεπιλογή είναι 60. Ορισμός σε 0 απενεργοποιεί "
+"το χρονικό όριο λήξης."
 
 msgid "The total count of errors when writing a sector."
 msgstr "Ο συνολικός αριθμός σφαλμάτων κατά την εγγραφή ενός sector."
@@ -11751,46 +11771,46 @@ msgid "Toggle Mode"
 msgstr "Λειτουργία Εναλλαγής"
 
 msgid "Toggle Selected Auth Groups"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Ομάδων Πιστοποίησης"
 
 msgid "Toggle Selected CHAP Users"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Χρηστών CHAP"
 
 msgid "Toggle Selected Commands"
 msgstr "Εναλλαγή Επιλεγμένων Εντολών"
 
 msgid "Toggle Selected Initiator Names"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Ονομάτων Εκκινητών"
 
 msgid "Toggle Selected Initiator Portals"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Portal Εκκινητών"
 
 msgid "Toggle Selected Jobs"
 msgstr "Εναλλαγή Επιλεγμένων Εργασιών"
 
 msgid "Toggle Selected LUN Records"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Εγγραφών LUN"
 
 msgid "Toggle Selected LUNs"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων LUN"
 
 msgid "Toggle Selected Listen Records"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Εγγραφών Αναμονής Σύνδεσης"
 
 msgid "Toggle Selected Mutual CHAP Users"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Χρηστών Αμοιβαίου CHAP"
 
 msgid "Toggle Selected Option Records"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Εγγραφών Επιλογής"
 
 msgid "Toggle Selected Options"
 msgstr "Εναλλαγή Επιλεγμένων Επιλογών"
 
 msgid "Toggle Selected Port Records"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Εγγραφών Θυρών"
 
 msgid "Toggle Selected Portal Groups"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Ομάδων Portal"
 
 msgid "Toggle Selected Records"
 msgstr "Εναλλαγή Επιλεγμένων Εγγραφών"
@@ -11802,10 +11822,10 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Εναλλαγή Επιλεγμένων Αρθρωμάτων rsync"
 
 msgid "Toggle Selected Targets"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Προορισμών"
 
 msgid "Toggle Selected iSNS Servers"
-msgstr ""
+msgstr "Αντιστροφή Επιλογής Επιλεγμένων Διακομιστών iSNS"
 
 msgid "Tolerated"
 msgstr "Ανεκτή"
@@ -12063,7 +12083,7 @@ msgid "UPS is disabled."
 msgstr "Το UPS είναι απενεργοποιημένο."
 
 msgid "UPS load"
-msgstr ""
+msgstr "Φόρτος UPS"
 
 msgid "UPS model"
 msgstr "Μοντέλο του UPS"
@@ -12932,6 +12952,8 @@ msgstr "Ο περιηγητής σας δεν υποστηρίζει αυτό τ
 
 msgid "Your current email settings are either incomplete or insecure."
 msgstr ""
+"Οι τρέχουσες ρυθμίσεις ηλεκτρονικού ταχυδρομείου είναι είτε ημιτελείς είτε "
+"μη ασφαλείς."
 
 msgid "ZFS"
 msgstr "ZFS"
