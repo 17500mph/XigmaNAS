@@ -33,128 +33,93 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
+require_once 'properties_status_services.php';
 
-$sphere_scriptname = basename(__FILE__);
+function status_services_sphere() {
+	global $g,$config;
 
-$ups_script = 'nut';
-if(isset($config['ups']['mode']) && ($config['ups']['mode'] == 'slave')):
-	$ups_script = 'nut_upsmon';
-endif;
-
-if('dom0' !== $g['arch']):
-	$a_service[] = ['desc' => gtext('HAST'),'link' => 'services_hast.php','config' => 'hast','scriptname' => 'hastd'];
-	$a_service[] = ['desc' => gtext('CIFS/SMB'),'link' => 'services_samba.php','config' => 'samba','scriptname' => 'samba'];
-	$a_service[] = ['desc' => gtext('FTP'),'link' => 'services_ftp.php','config' => 'ftpd','scriptname' => 'proftpd'];
-	$a_service[] = ['desc' => gtext('TFTP'),'link' => 'services_tftp.php','config' => 'tftpd','scriptname' => 'tftpd'];
-	$a_service[] = ['desc' => gtext('SSH'),'link' => 'services_sshd.php','config' => 'sshd','scriptname' => 'sshd'];
-	$a_service[] = ['desc' => gtext('NFS'),'link' => 'services_nfs.php','config' => 'nfsd','scriptname' => 'nfsd'];
-	$a_service[] = ['desc' => gtext('AFP'),'link' => 'services_afp.php','config' => 'afp','scriptname' => 'netatalk'];
-	$a_service[] = ['desc' => gtext('RSYNC'),'link' => 'services_rsyncd.php','config' => 'rsyncd','scriptname' => 'rsyncd'];
-	$a_service[] = ['desc' => gtext('Syncthing'),'link' => 'services_syncthing.php','config' => 'syncthing','scriptname' => 'syncthing'];
-	$a_service[] = ['desc' => gtext('Unison'),'link' => 'services_unison.php','config' => 'unison','scriptname' => 'unison'];
-	$a_service[] = ['desc' => gtext('iSCSI Target'),'link' => 'services_iscsitarget.php','config' => 'iscsitarget','scriptname' => 'iscsi_target'];
-	$a_service[] = ['desc' => gtext('CAM Target Layer / iSCSI Target'),'link' => 'services_ctl.php','config' => 'ctld','scriptname' => 'ctld'];
-	$a_service[] = ['desc' => gtext('DLNA/UPnP Fuppes'),'link' => 'services_fuppes.php','config' => 'upnp','scriptname' => 'fuppes'];
-	$a_service[] = ['desc' => gtext('DLNA/UPnP MiniDLNA'),'link' => 'services_minidlna.php','config' => 'minidlna','scriptname' => 'minidlna'];
-	$a_service[] = ['desc' => gtext('iTunes/DAAP'),'link' => 'services_daap.php','config' => 'daap','scriptname' => 'mt-daapd'];
-	$a_service[] = ['desc' => gtext('Dynamic DNS'),'link' => 'services_dynamicdns.php','config' => 'dynamicdns','scriptname' => 'inadyn'];
-	$a_service[] = ['desc' => gtext('SNMP'),'link' => 'services_snmp.php','config' => 'snmpd','scriptname' => 'bsnmpd'];
-	$a_service[] = ['desc' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
-	$a_service[] = ['desc' => gtext('Webserver'),'link' => 'services_websrv.php','config' => 'websrv','scriptname' => 'websrv'];
-	$a_service[] = ['desc' => gtext('BitTorrent'),'link' => 'services_bittorrent.php','config' => 'bittorrent','scriptname' => 'transmission'];
-	$a_service[] = ['desc' => gtext('LCDproc'),'link' => 'services_lcdproc.php','config' => 'lcdproc','scriptname' => 'LCDd'];
-else:
-	$a_service[] = ['desc' => gtext('SSH'),'link' => 'services_sshd.php','config' => 'sshd','scriptname' => 'sshd'];
-	$a_service[] = ['desc' => gtext('NFS'),'link' => 'services_nfs.php','config' => 'nfsd','scriptname' => 'nfsd'];
-	$a_service[] = ['desc' => gtext('iSCSI Target'),'link' => 'services_iscsitarget.php','config' => 'iscsitarget','scriptname' => 'iscsi_target'];
-	$a_service[] = ['desc' => gtext('CAM Target Layer / iSCSI Target'),'link' => 'services_ctl.php','config' => 'ctld','scriptname' => 'ctld'];
-	$a_service[] = ['desc' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
-endif;
+	$sphere = new co_sphere_grid('status_services','php');
+//	sphere external content
+	$sphere->grid = [];
+	$ups_script = 'nut';
+	if(isset($config['ups']['mode']) && ($config['ups']['mode'] == 'slave')):
+		$ups_script = 'nut_upsmon';
+	endif;
+	if('dom0' !== $g['arch']):
+		$sphere->grid[] = ['name' => gtext('HAST'),'link' => 'services_hast.php','config' => 'hast','scriptname' => 'hastd'];
+		$sphere->grid[] = ['name' => gtext('CIFS/SMB'),'link' => 'services_samba.php','config' => 'samba','scriptname' => 'samba'];
+		$sphere->grid[] = ['name' => gtext('FTP'),'link' => 'services_ftp.php','config' => 'ftpd','scriptname' => 'proftpd'];
+		$sphere->grid[] = ['name' => gtext('TFTP'),'link' => 'services_tftp.php','config' => 'tftpd','scriptname' => 'tftpd'];
+		$sphere->grid[] = ['name' => gtext('SSH'),'link' => 'services_sshd.php','config' => 'sshd','scriptname' => 'sshd'];
+		$sphere->grid[] = ['name' => gtext('NFS'),'link' => 'services_nfs.php','config' => 'nfsd','scriptname' => 'nfsd'];
+		$sphere->grid[] = ['name' => gtext('AFP'),'link' => 'services_afp.php','config' => 'afp','scriptname' => 'netatalk'];
+		$sphere->grid[] = ['name' => gtext('RSYNC'),'link' => 'services_rsyncd.php','config' => 'rsyncd','scriptname' => 'rsyncd'];
+		$sphere->grid[] = ['name' => gtext('Syncthing'),'link' => 'services_syncthing.php','config' => 'syncthing','scriptname' => 'syncthing'];
+		$sphere->grid[] = ['name' => gtext('Unison'),'link' => 'services_unison.php','config' => 'unison','scriptname' => 'unison'];
+		$sphere->grid[] = ['name' => gtext('iSCSI Target'),'link' => 'services_iscsitarget.php','config' => 'iscsitarget','scriptname' => 'iscsi_target'];
+		$sphere->grid[] = ['name' => gtext('CAM Target Layer / iSCSI Target'),'link' => 'services_ctl.php','config' => 'ctld','scriptname' => 'ctld'];
+		$sphere->grid[] = ['name' => gtext('DLNA/UPnP Fuppes'),'link' => 'services_fuppes.php','config' => 'upnp','scriptname' => 'fuppes'];
+		$sphere->grid[] = ['name' => gtext('DLNA/UPnP MiniDLNA'),'link' => 'services_minidlna.php','config' => 'minidlna','scriptname' => 'minidlna'];
+		$sphere->grid[] = ['name' => gtext('iTunes/DAAP'),'link' => 'services_daap.php','config' => 'daap','scriptname' => 'mt-daapd'];
+		$sphere->grid[] = ['name' => gtext('Dynamic DNS'),'link' => 'services_dynamicdns.php','config' => 'dynamicdns','scriptname' => 'inadyn'];
+		$sphere->grid[] = ['name' => gtext('SNMP'),'link' => 'services_snmp.php','config' => 'snmpd','scriptname' => 'bsnmpd'];
+		$sphere->grid[] = ['name' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
+		$sphere->grid[] = ['name' => gtext('Webserver'),'link' => 'services_websrv.php','config' => 'websrv','scriptname' => 'websrv'];
+		$sphere->grid[] = ['name' => gtext('BitTorrent'),'link' => 'services_bittorrent.php','config' => 'bittorrent','scriptname' => 'transmission'];
+		$sphere->grid[] = ['name' => gtext('LCDproc'),'link' => 'services_lcdproc.php','config' => 'lcdproc','scriptname' => 'LCDd'];
+	else:
+		$sphere->grid[] = ['name' => gtext('SSH'),'link' => 'services_sshd.php','config' => 'sshd','scriptname' => 'sshd'];
+		$sphere->grid[] = ['name' => gtext('NFS'),'link' => 'services_nfs.php','config' => 'nfsd','scriptname' => 'nfsd'];
+		$sphere->grid[] = ['name' => gtext('iSCSI Target'),'link' => 'services_iscsitarget.php','config' => 'iscsitarget','scriptname' => 'iscsi_target'];
+		$sphere->grid[] = ['name' => gtext('CAM Target Layer / iSCSI Target'),'link' => 'services_ctl.php','config' => 'ctld','scriptname' => 'ctld'];
+		$sphere->grid[] = ['name' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
+	endif;
+	return $sphere;
+}
+$cop = new status_services_properties();
+$sphere = status_services_sphere();
 $pgtitle = [gtext('Status'),gtext('Services')];
-include 'fbegin.inc';
-?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-	$("#iform").submit(function() { spinner(); });
-	$(".spin").click(function() { spinner(); });
-}); 
-//]]>
-</script>
-<form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_selection">
-		<colgroup>
-			<col style="width:70%">
-			<col style="width:10%">
-			<col style="width:10%">
-			<col style="width:10%">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gtext('Overview'),4);
-?>
-			<tr>
-				<th class="lhell"><?=gtext('Service');?></th>
-				<th class="lhell"><?=gtext('Enabled');?></th>
-				<th class="lhell"><?=gtext('Status');?></th>
-				<th class="lhebl"><?=gtext('Toolbox');?></th>
-			</tr>
-		</thead>
-		<tbody>
-<?php
-			foreach($a_service as $r_service):
-?>
-				<tr>
-<?php
-					$enable = isset($config[$r_service['config']]['enable']);
-					$status = rc_is_service_running($r_service['scriptname']);
-?>
-					<td class="<?=$enable ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($r_service['desc']);?>&nbsp;</td>
-					<td class="<?=$enable ? 'lcelc' : 'lcelcd';?>">
-<?php
-						if($enable):
-?>
-							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
-<?php
-						else:
-?>
-							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
-<?php
-						endif;
-?>
-					</td>
-					<td class="<?=$enable ? 'lcelc' : 'lcelcd';?>">
-<?php
-						if(0 === $status):
-?>
-							<a title="<?=gtext('Running');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
-<?php
-						else:
-?>
-							<a title="<?=gtext('Stopped');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
-<?php
-						endif;
-?>
-					</td>
-					<td class="<?=$enable ? 'lcebl' : 'lcebld';?>">
-						<table class="area_data_selection_toolbox"><tbody><tr>
-<?php
-							echo html_row_toolbox($r_service['link'],gtext('Modify Service'),'','',true,true);
-?>
-							<td></td>
-							<td></td>
-						</tr></tbody></table>
-					</td>
-					
-				</tr>
-<?php
-			endforeach;
-?>
-		</tbody>
-	</table>
-<?php
-include 'formend.inc';
-?>
-</td></tr></tbody></table></form>
-<?php
-include 'fend.inc';
+$a_col_width = ['70%','10%','10%','10%'];
+$n_col_width = count($a_col_width);
+$document = new_page($pgtitle,$sphere->get_scriptname(),'tablesort');
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	create data area
+$content = $pagecontent->add_area_data();
+//	display information, warnings and errors
+if(file_exists($d_sysrebootreqd_path)):
+	$content->ins_info_box(get_std_save_message(0));
+endif;
+//	add content
+$table = $content->add_table_data_selection();
+$table->ins_colgroup_with_styles('width',$a_col_width);
+$thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
+$thead->ins_titleline(gtext('Overview'),$n_col_width);
+$thead->addTR()->
+	insTHwC('lhell',$cop->get_name()->get_title())->
+	insTHwC('lhelc sorter-false parser-false',$cop->get_enabled()->get_title())->
+	insTHwC('lhelc sorter-false parser-false',$cop->get_status()->get_title())->
+	insTHwC('lhebl sorter-false parser-false',$cop->get_toolbox()->get_title());
+foreach($sphere->grid as $sphere->row_id => $sphere->row):
+	$is_enabled = is_bool($test = $config[$sphere->row['config']]['enable'] ?? false) ? $test : true;
+	$is_running = (0 == rc_is_service_running($sphere->row['scriptname']));
+	$dc = $is_enabled ? '' : 'd';
+	$tba = $tbody->
+		addTR()->
+			insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_name()->get_name()] ?? ''))->
+			ins_enadis_icon($is_enabled)->
+			ins_enadis_icon($is_running)->
+			add_toolbox_area()->
+				push()->
+				addTD()->
+					addA(['href' => $sphere->row['link']])->
+						insIMG(['src' => $g_img['mod'],'title' => gtext('Modify Service'),'alt' => gtext('Modify Service'),'class' => 'spin oneemhigh'])->
+				pop()->
+				ins_maintainbox($sphere,false)->
+				ins_informbox($sphere,false);
+endforeach;
+$document->render();
