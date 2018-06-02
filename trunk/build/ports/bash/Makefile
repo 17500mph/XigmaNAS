@@ -1,5 +1,5 @@
 PORTNAME=			bash
-PATCHLEVEL=	19
+PATCHLEVEL=	23
 PORTVERSION=            4.4.${PATCHLEVEL:S/^0//g}
 PORTREVISION?=	0
 CATEGORIES=		shells
@@ -27,7 +27,7 @@ GNU_CONFIGURE=  yes
 NO_PKG_REGISTER=yes
 USES=		  bison
 USE_GETTEXT=	  yes
-CONFIGURE_ARGS=	--without-bash-malloc \
+CONFIGURE_ARGS=			--without-bash-malloc \
 					--disable-rpath \
 					--enable-disabled-builtins \
 					--with-libiconv-prefix=${ICONV_PREFIX} \
