@@ -53,6 +53,7 @@
     SUBDIR += rrdtool
     SUBDIR += rsync
     SUBDIR += samba47
+    SUBDIR += samba48
     SUBDIR += scponly
     SUBDIR += sipcalc
     SUBDIR += smartmontools
