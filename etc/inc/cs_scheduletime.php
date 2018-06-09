@@ -70,7 +70,7 @@
 						$i_outer_max = ceil($val_count / $val_break) - 1;
 						$i_inner_max = $val_min + $val_break - 1;
 						for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
-							echo '<td class="lcefl">',"\n";
+							echo '<td class="lcefl">',PHP_EOL;
 							for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
 								if($key <= $val_max):
 									echo '<div class="cblo"><label>';
@@ -79,13 +79,13 @@
 										echo ' checked="checked"';
 									endif;
 									echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
-									echo '</label></div>',"\n";
+									echo '</label></div>',PHP_EOL;
 								else:
 									break;
 								endif;
 								$key++;
 							endfor;
-							echo '</td>',"\n";
+							echo '</td>',PHP_EOL;
 						endfor;
 ?>
 					</tr></tbody></table>
@@ -112,7 +112,7 @@
 						$i_outer_max = ceil($val_count / $val_break) - 1;
 						$i_inner_max = $val_min + $val_break - 1;
 						for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
-							echo '<td class="lcefl">',"\n";
+							echo '<td class="lcefl">',PHP_EOL;
 							for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
 								if($key <= $val_max):
 									echo '<div class="cblo"><label>';
@@ -121,13 +121,13 @@
 										echo ' checked="checked"';
 									endif;
 									echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
-									echo '</label></div>',"\n";
+									echo '</label></div>',PHP_EOL;
 								else:
 									break;
 								endif;
 								$key++;
 							endfor;
-							echo '</td>',"\n";
+							echo '</td>',PHP_EOL;
 						endfor;
 ?>
 					</tr></tbody></table>
@@ -154,7 +154,7 @@
 						$i_outer_max = ceil($val_count / $val_break) - 1;
 						$i_inner_max = $val_min + $val_break - 1;
 						for($i_outer = 0;$i_outer <= $i_outer_max;$i_outer++):
-							echo '<td class="lcefl">',"\n";
+							echo '<td class="lcefl">',PHP_EOL;
 							for($i_inner = $val_min;$i_inner <= $i_inner_max;$i_inner++):
 								if($key <= $val_max):
 									echo '<div class="cblo"><label>';
@@ -163,13 +163,13 @@
 										echo ' checked="checked"';
 									endif;
 									echo '/><span class="cblo">',sprintf('%02d',$key),'</span>';
-									echo '</label></div>',"\n";
+									echo '</label></div>',PHP_EOL;
 								else:
 									break;
 								endif;
 								$key++;
 							endfor;
-							echo '</td>',"\n";
+							echo '</td>',PHP_EOL;
 						endfor;
 ?>
 					</tr></tbody></table>
@@ -189,7 +189,7 @@
 					<span class="rblo"><?=gtext('Selected');?> ..</span>
 					<table><tbody class="donothighlight"><tr>
 <?php
-						echo '<td class="lcefl">',"\n";
+						echo '<td class="lcefl">',PHP_EOL;
 						foreach($g_months as $key => $val):
 							echo '<div class="cblo"><label>';
 							echo '<input type="checkbox" class="cblo" name="month[]" onchange="set_selected(\'all_months\')" value="',$key,'"';
@@ -197,9 +197,9 @@
 								echo ' checked="checked"';
 							endif;
 							echo '/><span class="cblo">',$val,'</span>';
-							echo '</label></div>',"\n";
+							echo '</label></div>',PHP_EOL;
 						endforeach;
-						echo '</td>',"\n";
+						echo '</td>',PHP_EOL;
 ?>
 					</tr></tbody></table>
 				</label>
@@ -218,7 +218,7 @@
 					<span class="rblo"><?=gtext('Selected');?> ..</span>
 					<table><tbody class="donothighlight"><tr>
 <?php
-						echo '<td class="lcefl">',"\n";
+						echo '<td class="lcefl">',PHP_EOL;
 						foreach($g_weekdays as $key => $val):
 							echo '<div class="cblo"><label>';
 							echo '<input type="checkbox" class="cblo" name="weekday[]" onchange="set_selected(\'all_weekdays\')" value="',$key,'"';
@@ -233,9 +233,9 @@
 								endif;
 							endif;
 							echo '/><span class="cblo">',$val,'</span>';
-							echo '</label></div>',"\n";
+							echo '</label></div>',PHP_EOL;
 						endforeach;
-						echo '</td>',"\n";
+						echo '</td>',PHP_EOL;
 ?>
 					</tr></tbody></table>
 				</label>
