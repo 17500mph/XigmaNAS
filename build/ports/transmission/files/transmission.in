@@ -10,7 +10,7 @@
 # PROVIDE: transmission
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
-# XQUERY: -i "count(//bittorrent/enable) > 0" -o "0" -b
+# XQUERY: --if "count(//bittorrent/enable) > 0" --output "0" --else --output "1" --break
 # RCVAR: transmission
 
 . /etc/rc.subr
@@ -39,7 +39,7 @@ transmission_umask=${transmission_umask:-"0002"}
 transmission_preallocation=${transmission_preallocation:-"1"}
 
 command="/usr/local/bin/${name}-daemon"
-command_args="--allowed ${transmission_allowed}"
+command_args="-a ${transmission_allowed}"
 
 safe_shellquote()
 {
@@ -101,13 +101,6 @@ transmission_prestart()
 	fi
 	_incompletedir=`safe_shellquote "${_incompletedir}"`
 
-	debug "homedir      : $_homedir"
-	debug "password     : $_password"
-	debug "downloaddir  : $_downloaddir"
-	debug "configdir    : $_configdir"
-	debug "watchdir     : $_watchdir"
-	debug "incompletedir: $_incompletedir"
-
 	# escape XML/XSLT/XPath special
 	_password=`safe_xmlescape "${_password}"`
 	_downloaddir=`safe_xmlescape "${_downloaddir}"`
@@ -115,35 +108,54 @@ transmission_prestart()
 	_watchdir=`safe_xmlescape "${_watchdir}"`
 	_incompletedir=`safe_xmlescape "${_incompletedir}"`
 
-	debug "password     : $_password"
-	debug "downloaddir  : $_downloaddir"
-	debug "configdir    : $_configdir"
-	debug "watchdir     : $_watchdir"
-	debug "incompletedir: $_incompletedir"
-
 	# Create command args line.
-	_command_args=`/usr/local/bin/xml sel -t -m "//bittorrent" \
-		-i "count(authrequired) > 0" \
-			-o " --auth" \
-			-v "concat(' --username ',username)" \
-			-v "concat(' --password ${_password}','')" \
-		-b \
-		-i "count(authrequired) = 0" -o " --no-auth" -b \
-		-v "concat(' --download-dir ${_downloaddir}',' --port ',port)" \
-		-v "concat(' --config-dir ${_configdir}','')" \
-		-v "concat(' --peerport=',peerport)" \
-		-i "count(portforwarding) > 0" -o " --portmap" -b \
-		-i "count(portforwarding) = 0" -o " --no-portmap" -b \
-		-i "string-length(watchdir) > 0" -v "concat(' --watch-dir ${_watchdir}','')" -b \
-		-i "string-length(watchdir) = 0" -o " --no-watch-dir" -b \
-		-i "string-length(incompletedir) > 0" -v "concat(' --incomplete-dir ${_incompletedir}','')" -b \
-		-i "string-length(incompletedir) = 0" -o " --no-incomplete-dir" -b \
+	_command_args=`/usr/local/bin/xml sel --template \
+		--match "//bittorrent" \
+			--if "count(authrequired) > 0" \
+				--output " -t" \
+				--if "string-length(username) > 0" \
+					--value-of "concat(' -u ',username)" \
+				--break \
+				--if "string-length(password) > 0" \
+					--output " -v ${_password}" \
+				--break \
+			--else \
+				--output " -T" \
+			--break \
+			--if "string-length(downloaddir) > 0" \
+				--output " -w ${_downloaddir}" \
+			--break \
+			--if "string-length(port) > 0" \
+				--value-of "concat(' -p ',port)" \
+			--break \
+			--if "string-length(configdir) > 0" \
+				--output " -g ${_configdir}" \
+			--break \
+			--if "string-length(peerport) > 0" \
+				--value-of "concat(' -P ',peerport)" \
+			--break \
+			--if "count(portforwarding) > 0" \
+				--output " -m" \
+			--else \
+				--output " -M" \
+			--break \
+			--if "string-length(watchdir) > 0" \
+				--output " -c ${_watchdir}" \
+			--else \
+				--output " -C" \
+			--break \
+			--if "string-length(incompletedir) > 0" \
+				--output " --incomplete-dir ${_incompletedir}" \
+			--else \
+				--output " --no-incomplete-dir" \
+			--break \
+		--break \
 		${configxml_file} | /usr/local/bin/xml unesc`
 
 	if checkyesno transmission_blocklist; then
-		_command_args="${_command_args} --blocklist"
+		_command_args="${_command_args} -b"
 	else
-		_command_args="${_command_args} --no-blocklist"
+		_command_args="${_command_args} -B"
 	fi
 
 	# Check the effective user.
@@ -178,17 +190,17 @@ transmission_prestart()
 	if [ ! -f "${_configfile}" ]; then
 	    # create default settings
 	    if [ "${transmission_user}" = "`/usr/bin/id -un`" ]; then
-		eval 'sh -c "${command} -d ${command_args} > "${_configfile}.new" 2>&1"'
+			eval 'sh -c "${command} -d ${command_args} > "${_configfile}.new" 2>&1"'
 	    else
-		eval "su -m \"${transmission_user}\" -c 'sh -c \"${command} -d ${command_args} > `safe_shellquote "${_configfile}.new"` 2>&1\"'"
+			eval "su -m \"${transmission_user}\" -c 'sh -c \"${command} -d ${command_args} > `safe_shellquote "${_configfile}.new"` 2>&1\"'"
 	    fi
 	    if [ ! -f "${_configfile}" ]; then
-		# copy config
-		chmod 600 "${_configfile}.new"
-		mv "${_configfile}.new" ${_configfile}
+			# copy config
+			chmod 600 "${_configfile}.new"
+			mv "${_configfile}.new" ${_configfile}
 	    else
-		# use new created file
-		rm -f "${_configfile}.new"
+			# use new created file
+			rm -f "${_configfile}.new"
 	    fi
 	fi
 	if [ -f "${_configfile}" ]; then
@@ -210,24 +222,56 @@ transmission_prestart()
 transmission_poststart()
 {
 	local _command_args
+	local _password
 
-	_command_args=`/usr/local/bin/xml sel -t -m "//bittorrent" \
-		-v "concat(' ',port)" \
-		-i "count(pex) > 0" -o " --pex" -b \
-		-i "count(pex) = 0" -o " --no-pex" -b \
-		-i "count(dht) > 0" -o " --dht" -b \
-		-i "count(dht) = 0" -o " --no-dht" -b \
-		-i "encryption[. = '0']" -o " --encryption-tolerated" -b \
-		-i "encryption[. = '1']" -o " --encryption-preferred" -b \
-		-i "encryption[. = '2']" -o " --encryption-required" -b \
-		-i "string-length(uplimit) > 0" -v "concat(' --uplimit=',uplimit)" -b \
-		-i "string-length(uplimit) = 0" -o " --no-uplimit" -b \
-		-i "string-length(downlimit) > 0" -v "concat(' --downlimit=',downlimit)" -b \
-		-i "string-length(downlimit) = 0" -o " --no-downlimit" -b \
-		-i "count(authrequired) > 0" \
-			-v "concat(' --auth=',username,':',password)" \
-		-b \
-		-i "string-length(extraoptions) > 0" -v "concat(' ',extraoptions)" -b \
+	# save quotes in rc script and login shell and sh
+	_password=`configxml_get "//bittorrent/password"`
+	_password=`safe_shellquote "${_password}"`
+
+	# escape XML/XSLT/XPath special
+	_password=`safe_xmlescape "${_password}"`
+
+	_command_args=`/usr/local/bin/xml sel --template \
+		--match "//bittorrent" \
+			--if "string-length(port) > 0" \
+				--value-of "concat(' ',port)" \
+			--break \
+			--if "count(pex) > 0" \
+				--output " -x" \
+			--else \
+				--output " -X" \
+			--break \
+			--if "count(dht) > 0" \
+				--output " -o" \
+			--else \
+				--output " -O" \
+			--break \
+			--if "encryption[. = '0']" \
+				--output " -et" \
+			--elif "encryption[. = '1']" \
+				--output " -ep" \
+			--elif "encryption[. = '2']" \
+				--output " -er" \
+			--break \
+			--if "string-length(uplimit) > 0" \
+				--value-of "concat(' -u ',uplimit)" \
+			--else
+				--output " -U" \
+			--break \
+			--if "string-length(downlimit) > 0" \
+				--value-of "concat(' -d ',downlimit)" \
+			--else \
+				--output " -D" \
+			--break \
+			--if "count(authrequired) > 0" \
+				--if "string-length(username) > 0 and string-length(password) > 0" \
+					--value-of "concat(' -n ',username,':${_password}')" \
+				--break \
+			--break \
+			--if "string-length(extraoptions) > 0" \
+				--value-of "concat(' ',extraoptions)" \
+			--break \
+		--break \
 		${configxml_file} | /usr/local/bin/xml unesc`
 
 	sleep 1; transmission-remote ${_command_args} >/dev/null 2>&1
