@@ -891,10 +891,10 @@ function disks_format($disk,$type,$notinitmbr,$minspace,$volumelabel,$aft4k,$zfs
 		$block_size = $diskinfo['sectorsize'];
 		$block_count = min(8192,$diskinfo['mediasize_sectors']); // delete 8192 blocks but prevent overflow. (8192 * 4K = 32MB)
 		$cmd = sprintf('/bin/dd if=/dev/zero of=%1$s bs=%2$d count=%3$d 2>&1',$disk,$block_size,$block_count);
-		echo htmlspecialchars('#'),htmlspecialchars($cmd),"\n";
+		echo htmlspecialchars('#'),htmlspecialchars($cmd),PHP_EOL;
 		system($cmd);
 		$cmd = sprintf('/bin/dd if=/dev/zero of=%1$s bs=%2$d count=%3$d oseek=%4$d 2>&1',$disk,$block_size,$block_count,$diskinfo['mediasize_sectors'] - $block_count);
-		echo htmlspecialchars('#'),htmlspecialchars($cmd),"\n";
+		echo htmlspecialchars('#'),htmlspecialchars($cmd),PHP_EOL;
 		system($cmd);
 	endif;
 	if($aft4k):
@@ -947,7 +947,7 @@ function disks_format($disk,$type,$notinitmbr,$minspace,$volumelabel,$aft4k,$zfs
 			//echo "/sbin/newfs {$param} {$disk}p1\n";
 			system("/sbin/newfs {$param} {$disk}p1 2>&1");
 			echo PHP_EOL;
-			echo gtext("Created UFS file system:")."\n";
+			echo gtext("Created UFS file system:"),PHP_EOL;
 			system("/sbin/dumpfs -l {$disk}p1 2>&1");
 			echo PHP_EOL;
 			break;
@@ -965,7 +965,7 @@ function disks_format($disk,$type,$notinitmbr,$minspace,$volumelabel,$aft4k,$zfs
 				echo gtext("Creating partition")."...\n";
 				$param = ' -s gpt';
 				$cmd = sprintf('/sbin/gpart create %2$s %1$s 2>&1',$disk,$param);
-				echo htmlspecialchars('#'),htmlspecialchars($cmd),"\n";
+				echo htmlspecialchars('#'),htmlspecialchars($cmd),PHP_EOL;
 				system($cmd);
 				$param = ' -a 4m -t freebsd-zfs';
 				if(preg_match('/\S/',$volumelabel)):
@@ -2247,7 +2247,7 @@ function disks_convert_vdisk_to_ada($key,&$admap,&$raidmap) {
 				$dev = $m[1];
 				if(!empty($admap[$dev])):
 					$device = "/dev/".$admap[$dev];
-					echo "$key: $dev -> ".$admap[$dev]."\n";
+					echo "$key: $dev -> ",$admap[$dev],PHP_EOL;
 				else:
 					echo "$key: $dev is not found (removed).\n";
 					$ret = false;
@@ -2284,7 +2284,7 @@ function disks_convert_to_ada() {
 					$a['devicespecialfile'] = "/dev/".$admap[$dev];
 					$a['type'] = "SCSI";
 					$tmp[] = $a;
-					echo "disks: $dev -> ".$admap[$dev]."\n";
+					echo "disks: $dev -> ",$admap[$dev],PHP_EOL;
 				else:
 					echo "disks: $dev is not found (removed).\n";
 				endif;
@@ -2303,7 +2303,7 @@ function disks_convert_to_ada() {
 				if(!empty($admap[$dev])):
 					$a['devicespecialfile'] = "/dev/".$admap[$dev];
 					$tmp[] = $a;
-					echo "smartd: $dev -> ".$admap[$dev]."\n";
+					echo "smartd: $dev -> ",$admap[$dev],PHP_EOL;
 				else:
 					echo "smartd: $dev is not found (removed).\n";
 				endif;
@@ -2323,7 +2323,7 @@ function disks_convert_to_ada() {
 				if(!empty($admap[$dev])):
 					$a['devicespecialfile'] = "/dev/".$admap[$dev];
 					$tmp = $a;
-					echo "swap: $dev -> ".$admap[$dev]."\n";
+					echo "swap: $dev -> ",$admap[$dev],PHP_EOL;
 				else:
 					echo "swap: $dev is not found (removed).\n";
 				endif;
@@ -2349,7 +2349,7 @@ function disks_convert_to_ada() {
 					$a['device'] = "/dev/".$admap[$dev];
 					$a['devicespecialfile']	= "/dev/".$admap[$dev].".eli";
 					$tmp[] = $a;
-					echo "geli: $dev -> ".$admap[$dev]."\n";
+					echo "geli: $dev -> ",$admap[$dev],PHP_EOL;
 				else:
 					echo "geli: $dev is not found (removed).\n";
 				endif;
@@ -2375,7 +2375,7 @@ function disks_convert_to_ada() {
 						$a['devicespecialfile'] = $a['mdisk'].$p;
 					endif;
 					$tmp[] = $a;
-					echo "mounts: $dev -> ".$admap[$dev]."\n";
+					echo "mounts: $dev -> ",$admap[$dev],PHP_EOL;
 				else:
 					echo "mounts: $dev is not found (removed).\n";
 				endif;
