@@ -35,27 +35,6 @@ require_once 'properties.php';
 
 class properties_system_advanced extends co_property_container {
 	protected $x_adddivsubmittodataframe;
-	protected $x_disableconsolemenu;
-	protected $x_disablefm;
-	protected $x_disablefirmwarecheck;
-	protected $x_disablebeep;
-	protected $x_microcode_update;
-	protected $x_enabletogglemode;
-	protected $x_nonsidisksizevalues;
-	protected $x_skipviewmode;
-	protected $x_disableextensionmenu;
-	protected $x_tune_enable;
-	protected $x_zeroconf;
-	protected $x_powerd;
-	protected $x_pwmode;
-	protected $x_pwmax;
-	protected $x_pwmin;
-	protected $x_motd;
-	protected $x_shrinkpageheader;
-	protected $x_sysconsaver;
-	protected $x_sysconsaverblanktime;
-	protected $x_enableserialconsole;
-
 	public function get_adddivsubmittodataframe() {
 		return $this->x_adddivsubmittodataframe ?? $this->init_adddivsubmittodataframe();
 	}
@@ -76,6 +55,33 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_aesni;
+	public function get_aesni() {
+		return $this->x_aesni ?? $this->init_aesni();
+	}
+	public function init_aesni() {
+		$property = $this->x_aesni = new property_list($this);
+		$property->
+			set_name('aesni')->
+			set_title(gtext('Hardware AES'));
+		$description = gtext('AES-NI (Advanced Encryption Standard New Instructions) is an extension to the x86 instruction set architecture for microprocessors.');
+		$options = [
+			'auto' => gtext('Load driver automatically when GELI devices have been defined in the configuration file and the instruction set is supported.'),
+			'yes' => gtext('Load driver during boot when the instruction set is supported.'),
+			'no' => gtext('Do not load driver.')
+		];
+		$property->
+			set_id('aesni')->
+			set_description($description)->
+			set_defaultvalue('auto')->
+			set_options($options)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+		return $property;
+	}
+	protected $x_disableconsolemenu;
 	public function get_disableconsolemenu() {
 		return $this->x_disableconsolemenu ?? $this->init_disableconsolemenu();
 	}
@@ -97,6 +103,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_disablefm;
 	public function get_disablefm() {
 		return $this->x_disablefm ?? $this->init_disablefm();
 	}
@@ -116,6 +123,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_disablefirmwarecheck;
 	public function get_disablefirmwarecheck() {
 		return $this->x_disablefirmwarecheck ?? $this->init_disablefirmwarecheck();
 	}
@@ -137,6 +145,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_disablebeep;
 	public function get_disablebeep() {
 		return $this->x_disablebeep ?? $this->init_disablebeep();
 	}
@@ -156,6 +165,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_microcode_update;
 	public function get_microcode_update() {
 		return $this->x_microcode_update ?? $this->init_microcode_update();
 	}
@@ -175,6 +185,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_enabletogglemode;
 	public function get_enabletogglemode() {
 		return $this->x_enabletogglemode ?? $this->init_enabletogglemode();
 	}
@@ -194,6 +205,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_nonsidisksizevalues;
 	public function get_nonsidisksizevalues() {
 		return $this->x_nonsidisksizevalues ?? $this->init_nonsidisksizevalues();
 	}
@@ -213,6 +225,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_skipviewmode;
 	public function get_skipviewmode() {
 		return $this->x_skipviewmode ?? $this->init_skipviewmode();
 	}
@@ -232,6 +245,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_disableextensionmenu;
 	public function get_disableextensionmenu() {
 		return $this->x_disableextensionmenu ?? $this->init_disableextensionmenu();
 	}
@@ -251,6 +265,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_tune_enable;
 	public function get_tune_enable() {
 		return $this->x_tune_enable ?? $this->init_tune_enable();
 	}
@@ -270,6 +285,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_zeroconf;
 	public function get_zeroconf() {
 		return $this->x_zeroconf ?? $this->init_zeroconf();
 	}
@@ -289,6 +305,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_powerd;
 	public function get_powerd() {
 		return $this->x_powerd ?? $this->init_powerd();
 	}
@@ -308,6 +325,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_pwmode;
 	public function get_pwmode() {
 		return $this->x_pwmode ?? $this->init_pwmode();
 	}
@@ -333,6 +351,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_pwmax;
 	public function get_pwmax() {
 		return $this->x_pwmax ?? $this->init_pwmax();
 	}
@@ -354,6 +373,7 @@ class properties_system_advanced extends co_property_container {
 		html_inputbox2('pwmax',gtext('CPU Maximum Frequency'),$pconfig['pwmax'],sprintf('%s %s',gtext('CPU frequencies:'),join(', ',$a_freq)) . '.<br />' . gtext('An empty field is default.'),false,5);
 */
 	}
+	protected $x_pwmin;
 	public function get_pwmin() {
 		return $this->x_pwmin ?? $this->init_pwmin();
 	}
@@ -362,6 +382,7 @@ class properties_system_advanced extends co_property_container {
 		return $property;
 //		html_inputbox2('pwmin',gtext('CPU Minimum Frequency'),$pconfig['pwmin'],gtext('An empty field is default.'),false,5);
 	}
+	protected $x_motd;
 	public function get_motd() {
 		return $this->x_motd ?? $this->init_motd();
 	}
@@ -370,6 +391,7 @@ class properties_system_advanced extends co_property_container {
 		return $property;
 //		html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,7,false,false);
 	}
+	protected $x_shrinkpageheader;
 	public function get_shrinkpageheader() {
 		return $this->x_shrinkpageheader ?? $this->init_shrinkpageheader();
 	}
@@ -389,6 +411,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_sysconsaver;
 	public function get_sysconsaver() {
 		return $this->x_sysconsaver ?? $this->init_sysconsaver();
 	}
@@ -408,6 +431,7 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_sysconsaverblanktime;
 	public function get_sysconsaverblanktime() {
 		return $this->x_sysconsaverblanktime ?? $this->init_sysconsaverblanktime();
 	}
@@ -416,6 +440,7 @@ class properties_system_advanced extends co_property_container {
 		return $property;
 //		html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
 	}
+	protected $x_enableserialconsole;
 	public function get_enableserialconsole() {
 		return $this->x_enableserialconsole ?? $this->init_enableserialconsole();
 	}
