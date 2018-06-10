@@ -64,8 +64,7 @@ safe_xmlescape()
 
 transmission_prestart()
 {
-	local _command_args _umask
-	local _command_args _preallocation
+	local _command_args _umask _preallocation
 	local _homedir _password _configfile
 	local _downloaddir _configdir _watchdir _incompletedir
 
@@ -255,7 +254,7 @@ transmission_poststart()
 			--break \
 			--if "string-length(uplimit) > 0" \
 				--value-of "concat(' -u ',uplimit)" \
-			--else
+			--else \
 				--output " -U" \
 			--break \
 			--if "string-length(downlimit) > 0" \
