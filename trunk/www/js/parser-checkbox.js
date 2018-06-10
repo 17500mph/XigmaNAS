@@ -31,18 +31,18 @@
 	either expressed or implied, of the NAS4Free Project.
  */
 ( function( $ ) {
-	$.tablesorter.addParser({ 
-		// set a unique id 
-		id: 'checkbox', 
-		is: function( s ) { 
-			// return false so this parser is not auto detected 
-			return false; 
-		}, 
-		format: function( s , table , cell ) { 
-			//	return 1 if checked, otherwise return 0
-			return $(cell).children(":checkbox").get(0).checked ? 1 : 0; 
-		}, 
-		// set type, either numeric or text 
-		type: 'numeric' 
-	}); 
+	$.tablesorter.addParser({
+		//	set a unique id
+		id: 'checkbox',
+		is: function( s ) {
+			//	return false so this parser is not auto detected
+			return false;
+		},
+		format: function( s , table , cell ) {
+			//	return 1 if checked, otherwise return 2
+			return $(cell).children(":checkbox").get(0).checked ? 1 : 2;
+		},
+		//	set type, either numeric or text
+		type: 'numeric'
+	});
 })( jQuery ) ;
