@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2018-06-04 08:19+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:17+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:33+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -373,6 +373,11 @@ msgstr "AD身份验证被禁用。"
 
 msgid "AD or PDC name."
 msgstr "AD或PDC 的名称。"
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -2997,6 +3002,9 @@ msgid ""
 "gets loaded."
 msgstr "在加载 %s 页面时，不要让服务器检查较新的固件版本。"
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -4877,6 +4885,9 @@ msgstr "HVM Guest"
 msgid "Hard Disk"
 msgstr "硬盘"
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr "头摘要和数据摘要"
 
@@ -5783,6 +5794,14 @@ msgstr "平均负载"
 
 msgid "Load averages"
 msgstr "系统负载"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr "UPS切换到超载的情况时的加载（“OVER”）"
@@ -8031,9 +8050,6 @@ msgstr "立刻运行"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "运行而不需要远程rsync进程。 （默认禁用）"
-
-msgid "Running"
-msgstr "执行中"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -11979,3 +11995,6 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可见"
+
+#~ msgid "Running"
+#~ msgstr "执行中"

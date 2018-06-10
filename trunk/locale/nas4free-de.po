@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2018-05-28 15:37+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:16+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:32+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -435,6 +435,11 @@ msgstr "Authentifizierung ist deaktiviert."
 
 msgid "AD or PDC name."
 msgstr "AD oder PDC-Name."
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -3254,6 +3259,9 @@ msgstr ""
 "Den Server nicht nach neuen Firmware Versionen suchen lassen wenn die %s "
 "Seite geladen wird."
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -5228,6 +5236,9 @@ msgstr "HVM Gast"
 msgid "Hard Disk"
 msgstr "Festplatte"
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr "Header- und Datenübersicht"
 
@@ -6234,6 +6245,14 @@ msgstr "Durchschnittliche Last"
 
 msgid "Load averages"
 msgstr "Durchschnittliche Last"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr "Last, bei der die USV zur Überlast Bedingung schaltet (\"OVER\")"
@@ -8574,9 +8593,6 @@ msgstr "Jetzt starten"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "Ohne Remote-rsync-Daemon ausführen. (Voreinstellung: ausgeschaltet)."
-
-msgid "Running"
-msgstr "Läuft"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -13064,3 +13080,6 @@ msgstr "benutzt von"
 
 msgid "visible"
 msgstr "sichtbar"
+
+#~ msgid "Running"
+#~ msgstr "Läuft"

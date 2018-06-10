@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2018-05-28 17:26+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:16+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:32+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -423,6 +423,11 @@ msgstr "Ověřování vůči Active Directory je vypnuté."
 
 msgid "AD or PDC name."
 msgstr "Název řadiče domény AD nebo hlavního řadiče NT domény (PDC)."
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -3258,6 +3263,9 @@ msgstr ""
 "Když je načítána stránka %s, neumožnit serveru zjišťovat dostupnost nových "
 "verzí systému."
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -5215,6 +5223,9 @@ msgstr "HVM virt. stroj"
 msgid "Hard Disk"
 msgstr "Pevný disk"
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr "Kontrolní otisk (digest) hlavičky a dat"
 
@@ -6217,6 +6228,14 @@ msgstr "Průměrné vytížení"
 
 msgid "Load averages"
 msgstr "Průměrné vytížení"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr "Odběr, při kterém se UPS zdroj přepne do stavu přetíženo („OVER“)"
@@ -8576,9 +8595,6 @@ msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
 "Spustit i bez požadavku na službu rsync na protějšku. (Ve výchozím stavu "
 "vypnuto)"
-
-msgid "Running"
-msgstr "Spuštěno"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -12976,3 +12992,6 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
+
+#~ msgid "Running"
+#~ msgstr "Spuštěno"
