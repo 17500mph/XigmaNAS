@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2017-02-04 20:56+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:17+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:33+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -405,6 +405,11 @@ msgstr ""
 
 msgid "AD or PDC name."
 msgstr "Názov AD alebo PDC."
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -3064,6 +3069,9 @@ msgid ""
 "gets loaded."
 msgstr ""
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -4962,6 +4970,9 @@ msgstr ""
 msgid "Hard Disk"
 msgstr ""
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr ""
 
@@ -5877,6 +5888,14 @@ msgstr ""
 
 msgid "Load averages"
 msgstr "Priemerná záťaž"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr ""
@@ -8150,9 +8169,6 @@ msgstr ""
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
-
-msgid "Running"
-msgstr "Beží"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -12199,3 +12215,6 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "Running"
+#~ msgstr "Beží"

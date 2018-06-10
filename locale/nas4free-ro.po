@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2018-06-07 15:59+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:17+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:33+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -421,6 +421,11 @@ msgstr "Autentificarea AD este dezactivat."
 
 msgid "AD or PDC name."
 msgstr "Nume AD sau PDC."
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -3255,6 +3260,9 @@ msgstr ""
 "Nu lăsați serverul să verifice existența unei noi versiuni de firmware la "
 "încărcarea paginii %s."
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -5210,6 +5218,9 @@ msgstr "Guest HVM"
 msgid "Hard Disk"
 msgstr "Hard disc"
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr "Rezumat Header și Data"
 
@@ -6204,6 +6215,14 @@ msgstr "Încărcare medie"
 
 msgid "Load averages"
 msgstr "Încărcare medie"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr ""
@@ -8540,9 +8559,6 @@ msgstr "Rulează acum"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "Rulare fără activare daemon remote sync. (Implicit dezactivat)"
-
-msgid "Running"
-msgstr "În execuție"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -12880,3 +12896,6 @@ msgstr "utilizat din"
 
 msgid "visible"
 msgstr "vizibil"
+
+#~ msgid "Running"
+#~ msgstr "În execuție"

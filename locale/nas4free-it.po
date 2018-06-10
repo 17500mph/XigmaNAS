@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2018-06-07 09:46+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:17+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:32+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -421,6 +421,11 @@ msgstr "L'autenticazione al AD è disattivata"
 
 msgid "AD or PDC name."
 msgstr "Nome AD o PDC."
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -3274,6 +3279,9 @@ msgstr ""
 "Non permettere al server di controllare nuove versioni di firmware quando la "
 "%s pagina viene caricata"
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -5238,6 +5246,9 @@ msgstr "HVM Guest"
 msgid "Hard Disk"
 msgstr "Disco fisso"
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr "Digest dell'intestazione e dei dati"
 
@@ -6224,6 +6235,14 @@ msgstr "Carichi medi"
 
 msgid "Load averages"
 msgstr "Carico medio"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr ""
@@ -8556,9 +8575,6 @@ msgstr "Esegui ora"
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
 "Esegui senza richiedere il daemon rsync remoto. (Disattivato per default)"
-
-msgid "Running"
-msgstr "In Esecuzione"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -12930,3 +12946,6 @@ msgstr "utilizzo di"
 
 msgid "visible"
 msgstr "visibile"
+
+#~ msgid "Running"
+#~ msgstr "In Esecuzione"

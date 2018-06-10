@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2018-05-28 15:04+0000\n"
+"POT-Creation-Date: 2018-06-10 17:54+0000\n"
 "PO-Revision-Date: 2018-02-12 16:14+0000\n"
 "Last-Translator: LoveAngel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-08 21:17+0000\n"
+"X-Launchpad-Export-Date: 2018-06-10 19:33+0000\n"
 "X-Generator: Launchpad (build 18684)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -384,6 +384,11 @@ msgstr "AD 인증 비활성화됨."
 
 msgid "AD or PDC name."
 msgstr "AD 또는 PDC 이름."
+
+msgid ""
+"AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
+"the x86 instruction set architecture for microprocessors."
+msgstr ""
 
 msgid "AFP"
 msgstr "AFP"
@@ -3046,6 +3051,9 @@ msgid ""
 "gets loaded."
 msgstr "%s 페이지가 로드되었을 때 서버가 새 버전의 펌웨어를 확인하지 않습니다."
 
+msgid "Do not load driver."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -4934,6 +4942,9 @@ msgstr "HVM Guest"
 msgid "Hard Disk"
 msgstr "하드 디스크"
 
+msgid "Hardware AES"
+msgstr ""
+
 msgid "Header and Data digest"
 msgstr "헤더와 데이터 digest"
 
@@ -5850,6 +5861,14 @@ msgstr "부하 평균"
 
 msgid "Load averages"
 msgstr "부하 평균"
+
+msgid ""
+"Load driver automatically when GELI devices have been defined in the "
+"configuration file and the instruction set is supported."
+msgstr ""
+
+msgid "Load driver during boot when the instruction set is supported."
+msgstr ""
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr "UPS 스위치의 과부하 조건이 (\"OVER\")로 되었을 경우 로드"
@@ -8103,9 +8122,6 @@ msgstr "지금 실행"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr "원격지 rsync 데몬 재질의 없이 실행. (기본 값은 사용 안 함)"
-
-msgid "Running"
-msgstr "실행 중"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -12101,3 +12117,6 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "Running"
+#~ msgstr "실행 중"
