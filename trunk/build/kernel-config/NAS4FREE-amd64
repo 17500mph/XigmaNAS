@@ -1,7 +1,7 @@
 include         GENERIC
 ident		NAS4FREE-x64
 
-makeoptions	MODULES_EXTRA="mlx4 mlxen mlx5 mlx5en"
+makeoptions	MODULES_EXTRA="mlx4 mlx4en mlx5 mlx5en"
 
 #####################################################################
 # NAS4FREE
