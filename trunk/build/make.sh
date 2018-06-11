@@ -751,7 +751,7 @@ create_image() {
 
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
-		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+		echo 'mlx4en_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	fi
 
 	# Xen
@@ -884,7 +884,7 @@ create_iso () {
 
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
-		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+		echo 'mlx4en_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	fi
 
 	# Xen
@@ -998,7 +998,7 @@ create_usb () {
 	MDLSIZE2=$(stat -f "%z" ${NAS4FREE_WORKINGDIR}/mdlocal-mini.xz)
 	#IMGSIZEM=$(expr \( $IMGSIZE + $MFSSIZE + $MFS2SIZE + $MDLSIZE + $MDLSIZE2 - 1 + 1024 \* 1024 \) / 1024 / 1024)
 	IMGSIZEM=$(expr \( $IMGSIZE + $MFSSIZE + $MDLSIZE + $MDLSIZE2 - 1 + 1024 \* 1024 \) / 1024 / 1024)
-	USBROOTM=448
+	USBROOTM=460
 	USBSWAPM=512
 	USBDATAM=12
 	#USB_SECTS=64
@@ -1128,7 +1128,7 @@ create_usb () {
 
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
-		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+		echo 'mlx4en_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	fi
 
 	# Xen
@@ -1261,7 +1261,7 @@ create_full() {
 
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
-		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+		echo 'mlx4en_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	fi
 
 	# Xen
