@@ -1,66 +1,12 @@
-NAS4Free 11.1.0.4 - Atomics
+NAS4Free 11.2.0.4 - BETA1
 ---------------------------
 Changes:
-- Upgrade to FreeBSD 11.1-RELEASE-P10.
-- Update translations.
-- Add option to make USB devices available in virtualbox-ose.
-- Add webgui code improvements.
-- Add Swap mode option for zroot.
-- Add CPU microcode update feature option.
-- Add handling instructions for smartmontools for unkown USB mass storage devices.
-- Add syslog.conf configuration page.
-- Add syslog remote server port.
-- Add zfs snapshot creation date using system date format.
-- Add ZFS configuration page.
-- Add script to report pool capacity.
-- Add pool properties information.
-- Add diagnose page for updatenotifier.
-- Add motd escape character can be entered as &#27;.
-- Add more detailed vfs_fruit settings for AFP.
-- Add UEFI option to zroot.
-- Add CAM Target Layer (EXPERIMENTAL).
-- Add IPv6 privacy extensions option.
-- Upgrade lcdproc to 0.5.9.
-- Upgrade proftpd to 1.3.6.
-- Upgrade rrdtool to 1.7.0.
-- Upgrade smartmontools to 6.6.
-- Upgrade minidlna to 1.2.1.
-- Upgrade dmidecode to 3.1.
-- Upgrade cdialog to 1.3-20171209.
-- Upgrade rsync to 3.1.3.
-- Upgrade gzip to 1.9.
-- Upgrade mDNSResponder to 878.30.4.
-- Upgrade phpvirtualbox to 5.2.0.
-- Upgrade iperf3 to 3.5.
-- Upgrade lighttpd to 1.4.49.
-- Upgrade unison to 2.51.2.
-- Upgrade tmux to 2.7.
-- Upgrade zoneinfo to 2018e.
-- Upgrade sudo to 1.8.23.
-- Upgrade virtualbox-ose to 5.2.12.
-- Upgrade transmission to 2.94.
-- Upgrade samba to 4.7.7.
-- Upgrade e2fsprogs to 1.44.2.
-- Upgrade istgt to 20180521.
-- Upgrade devcpu-data to 1.70.
-- Upgrade php to 7.2.6.
-- Upgrade bash to 4.4 patch 23.
-- Upgrade nano to 2.9.8.
-- Upgrade syncthing to 0.14.48.
-- Upgrade arcconf to 2_06_23164.
-- Upgrade beadm to 1.2.7.
-- Upgrade fusefs-exfat to 1.2.8.
+- Upgrade to FreeBSD 11.2-RC2.
+-
 
 
 Fixes:
-- Fix snmp start, hrPrinterTable: printcap entry for <noname?> has errors.
-- Fix rc.conf: disabled settings are removed from rc.conf.
-- Fix shifting parameters in smartd extra parameters.
-- Fix samba order of vfs module.
-- fix filemanager extended privileges.
-- Fix bug in email setup.
-- Fix remove geli flags before deleting a geli device.
-- Fix loader.conf.local not created when restoring config.
+-
 
 Permanent restrictions:
 - It is not possible to format a SoftRAID disk with MSDOS FAT16/32.

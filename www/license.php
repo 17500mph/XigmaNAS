@@ -176,7 +176,7 @@ not be interpreted as representing official policies, either expressed or implie
 		]],
 		['FreeBSD',[
 			'The FreeBSD Project (<a href="http://www.freebsd.org" target="_blank">http://www.freebsd.org</a>).',
-			'Copyright © 1995-2017 The FreeBSD Project. All Rights Reserved.'
+			'Copyright © 1995-2018 The FreeBSD Project. All Rights Reserved.'
 		]],
 		['Freenas 7',[
 			'Freenas 7 (<a href="https://github.com/freenas/freenas7" target="_blank">https://github.com/freenas/freenas7</a>).',
