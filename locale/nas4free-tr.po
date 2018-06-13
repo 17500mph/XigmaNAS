@@ -3,23 +3,23 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-06-10 17:54+0000\n"
-"PO-Revision-Date: 2018-05-25 12:09+0000\n"
-"Last-Translator: Burak Sarı <Unknown>\n"
+"PO-Revision-Date: 2018-06-13 21:25+0000\n"
+"Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-10 19:33+0000\n"
-"X-Generator: Launchpad (build 18684)\n"
+"X-Launchpad-Export-Date: 2018-06-13 21:30+0000\n"
+"X-Generator: Launchpad (build 18688)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid " interfaces:"
-msgstr " Arayüzler"
+msgstr " Arayuzler:"
 
 msgid " was assigned to "
-msgstr " ayrılmıştır. "
+msgstr " için ayrılmıştır "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
@@ -55,7 +55,7 @@ msgstr ""
 
 #, php-format
 msgid "%dB / block"
-msgstr "%dB / bloğu"
+msgstr "Blok başına %dB"
 
 #, php-format
 msgid "%s Interface"
@@ -63,7 +63,7 @@ msgstr "%s Arayüzü"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr "%s, şu şekilde zaten var %s."
+msgstr "%s, %s olarak zaten var."
 
 #, php-format
 msgid "%s already exists."
@@ -71,7 +71,7 @@ msgstr "%s zaten var."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s, %s de var"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -91,11 +91,11 @@ msgstr "%s çok uzun."
 
 #, php-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s / %s"
 
 #, php-format
 msgid "%s on %s"
-msgstr "%s üzerinde %s"
+msgstr "%s, %s üzerinde"
 
 #, php-format
 msgid "%s used of %s"
@@ -110,14 +110,13 @@ msgid "'%s' deletes all statistical data from the graphs!"
 msgstr "'%s' grafikteki tüm istatiksiksel verileri siler!"
 
 msgid "(Change if needed)"
-msgstr "(Gerekli ise değiştir)"
+msgstr "(Gerekirse değiştirin)"
 
 msgid ""
 "(Default lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and "
 "192 for 3DES)."
 msgstr ""
-"(Varsayılan uzunluklar: AES için 128, Blowfish için 128, Camellia için 128 "
-"ve 3DES için 192)"
+"(Varsayılan uzunluklar: AES, Blowfish ve Camelia için 128, 3DES için 192)."
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Maxtor 6B200M0 200GB ve Maxtor 2R015H1 15GB içinde bulunan)"
@@ -229,13 +228,13 @@ msgid "4 KiB"
 msgstr "4 KiB"
 
 msgid "4KB wrapper"
-msgstr "4KB sarıcı"
+msgstr "4KB çevirici (wrapper)"
 
 msgid "5.25\""
 msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr "512 Bytes"
+msgstr "512 Bit"
 
 msgid "514"
 msgstr "514"
@@ -263,8 +262,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
-"Bir Portal Grubu bir etiket numarasıyla tanımlanır ve IP adreslerini "
-"tanımlar ve TCP bağlantı noktalarını dinler."
+"Bir Portal Grubu etiket numarasıyla tanımlanır, IP adreslerini tanımlar ve "
+"TCP bağlantı noktalarını dinler."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -304,29 +303,29 @@ msgstr ""
 "öncelenen onaltılık bir basamak dizesi olarak belirtilebilir."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr "Monte edilmiş bir RAID birimi silinemez."
+msgstr "Bağlanmış bir RAID birimi silinemez."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
-"İstenen eylemi gerçekleştirmek için takılı disk veya bölüm geçici olarak "
+"İstenen eylemi gerçekleştirmek için bağlı disk veya bölüm geçici olarak "
 "ayrılacaktır."
 
 msgid "A reboot is required"
 msgstr "Yeniden başlatma gerekli"
 
 msgid "A reload request has been sent to the daemon."
-msgstr "Sunuma bir yeniden yükleme isteği gönderildi."
+msgstr "Yeniden yükleme isteği sisteme gönderildi."
 
 msgid "A rescan has been issued."
-msgstr "Bir yeniden tarama yayınlandı."
+msgstr "Bir yeniden tarama isteği oluşturuldu."
 
 msgid "A route to this destination network already exists."
 msgstr "Bu hedef ağın bir yolu zaten var."
 
 msgid "A sysvol folder was found."
-msgstr ""
+msgstr "Bir sysvol klasörü bulundu."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -336,11 +335,12 @@ msgid ""
 msgstr ""
 
 msgid "A valid IP address must be specified."
-msgstr "Geçerli bir İP adresinin belirtilmiş olması gerekir."
+msgstr "Geçerli bir IP adresinin belirtilmiş olması gerekir."
 
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
+"Ana makineler için geçerli bir IP adresi veya CIDR notasyonu belirtilmelidir."
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr "Varsayılan DNS server'ının IPv4 adresi tanımlanmak zorundadır."
@@ -352,7 +352,7 @@ msgid "A valid IPv4 address must be specified."
 msgstr "Geçerli bir IPv4 adresinin belirtilmiş olması gerekir."
 
 msgid "A valid IPv4 network bit count must be specified."
-msgstr "Geçerli bir IPv4 network bit hesaplaması belirtilmiş olması gerekir."
+msgstr "Geçerli bir IPv4 network bit sayısı belirtilmiş olması gerekir."
 
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Geçerli bir IPv6 Ağ Geçidi adresi belirtilmiş olması gerekir."
@@ -379,7 +379,7 @@ msgid "A valid mtu size must be specified."
 msgstr "Geçerli bir MTU boyutu belirtilmelidir."
 
 msgid "A valid network bit count (1-32) must be specified."
-msgstr "Geçerli bir ağ bit sayımı belirtilmelidir. (1-32 arasında)"
+msgstr "Geçerli bir ağ bit sayısı belirtilmelidir. (1-32 arasında)"
 
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Geçerli bir ön ek (1-128) belirtilmiş olması gerekir."
@@ -447,7 +447,7 @@ msgid "Access Restrictions"
 msgstr "Erişim Kısıtlamaları"
 
 msgid "Access Time"
-msgstr ""
+msgstr "Erişim Zamanı"
 
 msgid "Access Time (atime)"
 msgstr "Erişim Zamanı"
@@ -499,7 +499,7 @@ msgid "Add"
 msgstr "Ekle"
 
 msgid "Add Auth Group"
-msgstr ""
+msgstr "Yetki Groubu ekle"
 
 msgid "Add Bridge"
 msgstr "Köprü Ekle"
@@ -508,7 +508,7 @@ msgid "Add CARP"
 msgstr "CARP Ekle"
 
 msgid "Add CHAP User"
-msgstr ""
+msgstr "CHAP Kullanıcısı ekle"
 
 msgid "Add Dataset"
 msgstr "Veri kümesi Ekle"
@@ -526,22 +526,22 @@ msgid "Add Host"
 msgstr "Bilgisayar Ekle"
 
 msgid "Add Initiator Name"
-msgstr ""
+msgstr "Başlatıcı Adı ekle"
 
 msgid "Add Initiator Portal"
-msgstr ""
+msgstr "Başlatıcı Portalı ekle"
 
 msgid "Add LAGG"
 msgstr "LAGG ekle"
 
 msgid "Add LUN"
-msgstr ""
+msgstr "LUN Ekle"
 
 msgid "Add LUN Record"
-msgstr ""
+msgstr "LUN Kaydı Ekle"
 
 msgid "Add Listen Record"
-msgstr ""
+msgstr "Dinleme Kaydı Ekle"
 
 msgid "Add MIB"
 msgstr "MIB Ekle"
@@ -556,16 +556,16 @@ msgid "Add Option"
 msgstr "Seçenek ekle"
 
 msgid "Add Option Record"
-msgstr ""
+msgstr "Opsiyonel Kayıt Ekle"
 
 msgid "Add Pool"
 msgstr "Havuz Ekle"
 
 msgid "Add Port Record"
-msgstr ""
+msgstr "Portal Kaydı Ekle"
 
 msgid "Add Portal Group"
-msgstr ""
+msgstr "Portal Groubu Ekle"
 
 msgid "Add RAID"
 msgstr "RAID Ekle"
@@ -595,7 +595,7 @@ msgid "Add Snapshot"
 msgstr "Ani görüntü ekle"
 
 msgid "Add Target"
-msgstr ""
+msgstr "Hedef Ekle"
 
 msgid "Add URL"
 msgstr "URL ekle"
@@ -646,7 +646,7 @@ msgid "Add extent"
 msgstr "Uzantı Ekle"
 
 msgid "Add iSNS Server"
-msgstr ""
+msgstr "iSNS Sunucusu Ekle"
 
 msgid "Add initiator"
 msgstr "Initiator Ekle"
@@ -688,7 +688,7 @@ msgid "Additional Options for RAM Disk Backend"
 msgstr ""
 
 msgid "Additional Parameter"
-msgstr ""
+msgstr "Ek Parametre"
 
 msgid "Additional Parameters"
 msgstr "Ek Parametre"
@@ -697,7 +697,7 @@ msgid "Additional Storage"
 msgstr "Ek Depolama"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
-msgstr ""
+msgstr "Sürücünün Donanıma Özel bölümüne parametreler ekle."
 
 msgid "Address"
 msgstr "Adres"
@@ -706,13 +706,13 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Yönetici Şifresi"
 
 msgid "Administration Password"
-msgstr ""
+msgstr "Yönetim Şifresi"
 
 msgid "Administrative WebGUI"
-msgstr ""
+msgstr "Yönetim WebGUI"
 
 msgid "Administrator Name"
 msgstr ""
@@ -721,7 +721,7 @@ msgid "Advanced"
 msgstr "Gelişmiş"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Gelişmiş Format"
 
 msgid "Advanced Options"
 msgstr "Gelişmiş Seçenekler"
@@ -778,7 +778,7 @@ msgid "Algorithm"
 msgstr "Algoritma"
 
 msgid "Alias"
-msgstr ""
+msgstr "Takma ad"
 
 msgid "All"
 msgstr "Tümü"
@@ -814,7 +814,7 @@ msgid ""
 msgstr ""
 
 msgid "All software RAID disks are imported."
-msgstr ""
+msgstr "Tüm yazılımsal RAID diskleri içeri aktarıldı."
 
 msgid "Alloc"
 msgstr ""
@@ -832,10 +832,10 @@ msgid "Allow TLS connections only."
 msgstr ""
 
 msgid "Allow USB"
-msgstr ""
+msgstr "USB'ye izin ver"
 
 msgid "Allow USB Serial Ports"
-msgstr ""
+msgstr "USB Seri Portlarına izin ver"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Parolası boş olan hesaplara istemci erişim izni ver."
@@ -11980,6 +11980,3 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
-
-#~ msgid "Running"
-#~ msgstr "Çalışıyor"
