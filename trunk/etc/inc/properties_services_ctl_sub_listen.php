@@ -71,7 +71,7 @@ class ctl_sub_listen_properties extends co_property_container_param {
 class ctl_sub_listen_edit_properties extends ctl_sub_listen_properties {
 	public function init_ipaddress() {
 		$property = parent::init_ipaddress();
-		$description = gtext('An IPv4 or IPv6 address to listen	on for incoming	connections.');
+		$description = gtext('An IPv4 or IPv6 address to listen on for incoming connections.');
 		$placeholder = gtext('IP Address');
 		$property->
 			set_id('ipaddress')->
