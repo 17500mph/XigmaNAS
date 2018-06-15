@@ -2,7 +2,7 @@ PORTNAME=		clog
 PORTVERSION=	1.0
 CATEGORIES=		sysutils
 COMMENT=		Circular log file tool
-MAINTAINER=		aoyama@peach.ne.jp
+MAINTAINER=		zoon1@nas4free.org
 
 DISTFILES?=
 
@@ -10,7 +10,10 @@ NO_PKG_REGISTER=yes
 
 .include <bsd.port.pre.mk>
 do-build:
-.if ${OSVERSION} >= 1101000
+.if ${OSVERSION} >= 1102000
+	@${TAR} -zxvf ${FILESDIR}/syslogd-clog-11.2.tar.gz -C /usr/src/usr.bin
+	@${TAR} -zxvf ${FILESDIR}/clog-1.0.1-11.1.tar.gz -C /usr/src/usr.bin
+.elif ${OSVERSION} >= 1101000
 	@${TAR} -zxvf ${FILESDIR}/syslogd-clog-11.1.tar.gz -C /usr/src/usr.bin
 	@${TAR} -zxvf ${FILESDIR}/clog-1.0.1-11.1.tar.gz -C /usr/src/usr.bin
 .elif ${OSVERSION} >= 1100000
