@@ -1,6 +1,6 @@
---- src/Makefile.am.orig	2011-11-13 04:25:59.000000000 +0900
-+++ src/Makefile.am	2011-11-14 02:54:53.000000000 +0900
-@@ -14,7 +14,7 @@
+--- /usr/local/nas4free/svn/build/ports/fuppes/work/fuppes-0.692/src/Makefile.am.orig	2011-09-22 10:45:44.000000000 +0200
++++ /usr/local/nas4free/svn/build/ports/fuppes/work/fuppes-0.692/src/Makefile.am	2018-06-17 05:12:45.000000000 +0200
+@@ -14,15 +14,15 @@
    ${PCRE_CFLAGS}\
  	-DFUPPES_DATADIR=\"$(datadir)/fuppes\" \
  	-DFUPPES_PLUGINDIR=\"$(libdir)/fuppes\" \
@@ -9,3 +9,13 @@
  
  lib_LTLIBRARIES = libfuppes.la
  
+ bin_PROGRAMS = fuppes
+ 
+ fuppes_SOURCES = console_main.cpp
+-fuppes_LDADD = ./libfuppes.la $(LIBADD_DL)
+-fuppes_DEPENDENCIES = ./libfuppes.la
++fuppes_LDADD = libfuppes.la $(LIBADD_DL)
++fuppes_DEPENDENCIES = libfuppes.la
+ fuppes_LDFLAGS = \
+ 	$(FUPPES_LIBS)\
+ 	${UUID_LIBS}\
