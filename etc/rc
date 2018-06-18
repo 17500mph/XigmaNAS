@@ -28,6 +28,8 @@ export HOME PATH
 PLATFORM=`/bin/cat /etc/platform`
 XARCH=`/bin/echo ${PLATFORM} | /usr/bin/sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
+ROOTFS=`mount | awk '/ \/ / {print $1}'`
+ZROOT="zroot"
 
 # Fixed values requested by build/make.sh
 MDLOCALSIZE=768m
@@ -72,11 +74,17 @@ if [ "${PLATFORM}" = "bpi-embedded" ]; then
 fi
 case ${PLATFORM} in
 	*-full)
-		# Do a fsck on root file system.
-		/etc/rc.d/fsck root;
-
+		# Mount required zfs datasets if system boots from zfs.
+		if zpool list -H -o bootfs | grep -qw "${ZROOT}/ROOT"; then
+			echo "Mounting ZFS datasets for RootOnZFS platform..."
+			zfs mount ${ZROOT}/tmp
+			zfs mount ${ZROOT}/var
+		else
+			# Do a fsck on root file system.
+			/etc/rc.d/fsck root;
+		fi
 		# If running from full, mount the root (/) in read-write.
-		/sbin/mount -u -o rw /;
+			/sbin/mount -u -o rw /;
 		;;
 	*)
 		# If running from liveCD or embedded, mount the root (ramdisk) in read-write.
