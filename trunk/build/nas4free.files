@@ -907,6 +907,9 @@ usr/sbin/gpioctl
 ## hv_kvp_daemon -- Hyper-V Key Value Pair Daemon
 usr/sbin/hv_kvp_daemon
 
+## hv_vss_daemon -- Hyper-V Volume Shadow Copy Service Daemon
+usr/sbin/hv_vss_daemon
+
 ## newsyslog -- maintain system log files to manageable sizes
 usr/sbin/newsyslog
 
@@ -959,6 +962,13 @@ usr/libexec/make_index
 
 ## phttpget
 usr/libexec/phttpget
+
+####### contents of usr/libexec/hyperv
+usr/libexec/hyperv/hv_get_dhcp_info
+usr/libexec/hyperv/hv_get_dns_info
+usr/libexec/hyperv/hv_set_ifconfig
+usr/libexec/hyperv/hyperv_vfattach
+usr/libexec/hyperv/hyperv_vfup
 
 ## sysrc
 usr/libexec/bsdconfig/include/messages.subr

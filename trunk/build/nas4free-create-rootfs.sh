@@ -96,6 +96,7 @@ mkdir usr/lib/engines ;
 mkdir usr/libexec ;
 mkdir usr/libexec/bsdconfig ;
 mkdir usr/libexec/bsdconfig/include ;
+mkdir usr/libexec/hyperv ;
 mkdir usr/local ;
 mkdir usr/local/bin;
 mkdir usr/local/lib ;
