@@ -14,11 +14,14 @@ export PATH
 
 # Global variables.
 PLATFORM=`uname -m`
-CDPATH="/mnt/cdrom"
+CDPATH="/media/cdrom"
 SYSBACKUP="/tmp/sysbackup"
 INCLUDE="/etc/install/include/boot"
 PRDNAME=`cat /etc/prd.name`
 APPNAME="RootOnZFS"
+ALTROOT="/mnt"
+DATASET="/ROOT"
+BOOTENV="/default-install"
 ZROOT="zroot"
 
 tmpfile=`tmpfile 2>/dev/null` || tmpfile=/tmp/tui$$
@@ -27,8 +30,9 @@ trap "rm -f $tmpfile" 0 1 2 5 15
 # Mount CD/USB drive.
 mount_cdrom()
 {
-	LIVECD=`glabel list | grep -q iso9660/${PRDNAME}; echo $?`
-	LIVEUSB=`glabel list | grep -q ufs/liveboot; echo $?`
+	umount -f ${CDPATH} > /dev/null 2>&1
+	LIVECD=`glabel status | grep -q iso9660/${PRDNAME}; echo $?`
+	LIVEUSB=`glabel status | grep -q ufs/liveboot; echo $?`
 	if [ "${LIVECD}" == 0 ]; then
 		# Check if cd-rom is mounted else auto mount cd-rom.
 		if [ ! -f "${CDPATH}/version" ]; then
@@ -180,11 +184,6 @@ zroot_init()
 	# Create GPT/Partition on disk.
 	gptpart_init
 
-	# Set required variables.
-	export ALTROOT="/mnt/sys_install"
-	export DATASET="/ROOT"
-	export BOOTENV="/default-install"
-
 	# Set the raid type.
 	if [ "${STRIPE}" == 0 ]; then
 		RAID=""
@@ -200,12 +199,16 @@ zroot_init()
 
 	# Create bootable zroot pool with boot environments support.
 	echo "Creating bootable ${ZROOT} pool"
-	zpool create -O compress=lz4 -O atime=off -f -R ${ALTROOT}/${ZROOT} ${ZROOT} ${RAID} ${GLABEL_DEVLIST}
-	zfs set canmount=off ${ZROOT}
-	zfs create -o canmount=off ${ZROOT}${DATASET}
+	zpool create -o altroot=${ALTROOT} -O compress=lz4 -O atime=off -m none -f ${ZROOT} ${RAID} ${GLABEL_DEVLIST}
+
+	# Create ZFS filesystem hierarchy.
+	zfs create -o mountpoint=none ${ZROOT}${DATASET}
 	zfs create -o mountpoint=/ ${ZROOT}${DATASET}${BOOTENV}
-	zfs set freebsd:boot-environment=1 ${ZROOT}${DATASET}${BOOTENV}
+	zfs create -o mountpoint=/tmp -o exec=on -o setuid=off ${ZROOT}/tmp
+	zfs create -o mountpoint=/var ${ZROOT}/var
+	zfs set mountpoint=/${ZROOT} ${ZROOT}
 	zpool set bootfs=${ZROOT}${DATASET}${BOOTENV} ${ZROOT}
+	zfs set canmount=noauto ${ZROOT}${DATASET}${BOOTENV}
 	if [ $? -eq 1 ]; then
 		echo "An error has occurred while creating ${ZROOT} pool."
 		exit 1
@@ -213,6 +216,9 @@ zroot_init()
 
 	# Install system files.
 	install_sys_files
+
+	# Set the zpool.cache file.
+	zpool set cachefile=${ALTROOT}/boot/zfs/zpool.cache ${ZROOT}
 
 	# Write bootcode.
 	echo "Writing bootcode..."
@@ -230,6 +236,10 @@ zroot_init()
 	sysctl kern.geom.debugflags=0
 	sleep 1
 
+	# Add required ZFS mount points to fstab(legacy mountpoints only).
+	#echo "${ZROOT}/tmp /tmp zfs rw,noatime 0 0" >> ${ALTROOT}/etc/fstab
+	#echo "${ZROOT}/var /var zfs rw,noatime 0 0" >> ${ALTROOT}/etc/fstab
+
 	# Creating/adding the fixed swap devices.
 	if [ ! -z "${SWAP}" ]; then
 		if [ "${SWAPMODE}" == 1 ]; then
@@ -239,12 +249,12 @@ zroot_init()
 			fi
 			gmirror label -b prefer gswap ${SWAP_DEVLIST}
 			# Add swap mirror to fstab.
-			echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+			echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/etc/fstab
 		else
 			# Add swap device to fstab.
 			echo "Adding swap devices to fstab..."
 			for swapdev in ${SWAP_DEVLIST}; do
-				echo "${swapdev} none swap sw 0 0" >> ${ALTROOT}/${ZROOT}/etc/fstab
+				echo "${swapdev} none swap sw 0 0" >> ${ALTROOT}/etc/fstab
 			done
 		fi
 	fi
@@ -258,7 +268,7 @@ zroot_init()
 	# Flush disk cache and wait 1 second.
 	sync; sleep 1
 	zpool export ${ZROOT}
-	rm -Rf ${ALTROOT}
+	#rm -Rf ${ALTROOT}
 
 	# Final message.
 	if [ $? -eq 0 ]; then
@@ -275,29 +285,29 @@ install_sys_files()
 	echo "Installing system files on ${ZROOT}..."
 
 	# Install system files and discard unwanted folders.
-	EXCLUDEDIRS="--exclude .snap/ --exclude resources/ --exclude zinstall.sh/ --exclude ${ZROOT}/ --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude cf/"
-	/usr/bin/tar ${EXCLUDEDIRS} -c -f - -C / . | tar -xpf - -C ${ALTROOT}/${ZROOT}
+	EXCLUDEDIRS="--exclude .snap/ --exclude resources/ --exclude zinstall.sh/ --exclude media/ --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude cf/"
+	/usr/bin/tar ${EXCLUDEDIRS} -c -f - -C / . | tar -xpf - -C ${ALTROOT}
 
 	# Copy files from live media source.
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/var
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/dev
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/mnt
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/tmp
-	/bin/chmod 1777 ${ALTROOT}/${ZROOT}/tmp
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/boot/defaults
-	/bin/cp -r /mnt/cdrom/boot/* ${ALTROOT}/${ZROOT}/boot
-	/bin/cp -r /mnt/cdrom/boot/defaults/* ${ALTROOT}/${ZROOT}/boot/defaults
-	/bin/cp -r /mnt/cdrom/boot/kernel/* ${ALTROOT}/${ZROOT}/boot/kernel
+	/bin/mkdir -p ${ALTROOT}/dev
+	/bin/mkdir -p ${ALTROOT}/mnt
+	/bin/mkdir -p ${ALTROOT}/tmp
+	/bin/mkdir -p ${ALTROOT}/var
+	/bin/chmod 1777 ${ALTROOT}/tmp
+	/bin/mkdir -p ${ALTROOT}/boot/defaults
+	/bin/cp -r ${CDPATH}/boot/* ${ALTROOT}/boot
+	/bin/cp -r ${CDPATH}/boot/defaults/* ${ALTROOT}/boot/defaults
+	/bin/cp -r ${CDPATH}/boot/kernel/* ${ALTROOT}/boot/kernel
 
 	# Copy our boot loader menu files to /boot.
-	if [ -d "${INCLUDE}" ]; then
-		chmod 444 ${INCLUDE}/*
-		cp -pf ${INCLUDE}/* ${ALTROOT}/${ZROOT}/boot
+	if [ -f "${INCLUDE}/menu.4th" ]; then
+		chmod 444 ${INCLUDE}/menu.4th
+		cp -pf ${INCLUDE}/menu.4th ${ALTROOT}/boot
 	fi
 
 	# Generate/update our loader.rc
 	if [ -f "${INCLUDE}/menu.4th" ]; then
-	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.rc
+	cat << EOF > ${ALTROOT}/boot/loader.rc
 \ Loader.rc
 include /boot/loader.4th
 start
@@ -307,13 +317,13 @@ include /boot/beastie.4th
 beastie-start
 EOF
 	fi
-	chmod 444 ${ALTROOT}/${ZROOT}/boot/loader.rc
+	chmod 444 ${ALTROOT}/boot/loader.rc
 
 	# Decompress kernel.
-	/usr/bin/gzip -d -f ${ALTROOT}/${ZROOT}/boot/kernel/kernel.gz
+	/usr/bin/gzip -d -f ${ALTROOT}/boot/kernel/kernel.gz
 
 	# Decompress modules (legacy versions).
-	cd ${ALTROOT}/${ZROOT}/boot/kernel
+	cd ${ALTROOT}/boot/kernel
 	for FILE in *.gz
 	do
 		if [ -f "${FILE}" ]; then
@@ -323,11 +333,11 @@ EOF
 	cd
 
 	# Install configuration file.
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/cf/conf
-	/bin/cp /conf.default/config.xml ${ALTROOT}/${ZROOT}/cf/conf
+	/bin/mkdir -p ${ALTROOT}/cf/conf
+	/bin/cp /conf.default/config.xml ${ALTROOT}/cf/conf
 
 	# Generate new loader.conf file.
-	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.conf
+	cat << EOF > ${ALTROOT}/boot/loader.conf
 kernel="kernel"
 bootfile="kernel"
 kernel_options=""
@@ -339,6 +349,7 @@ kern.cam.boot_delay="12000"
 kern.cam.ada.legacy_aliases="0"
 kern.geom.label.disk_ident.enable="0"
 kern.geom.label.gptid.enable="0"
+kern.vty="vt"
 hint.acpi_throttle.0.disabled="0"
 hint.p4tcc.0.disabled="0"
 autoboot_delay="3"
@@ -347,45 +358,45 @@ vfs.root.mountfrom="zfs:${ZROOT}${DATASET}${BOOTENV}"
 zfs_load="YES"
 EOF
 
-	if [ "${BOOT_MODE}" == 1  ]; then
-		echo 'kern.vty="sc"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
-	fi
+	#if [ "${BOOT_MODE}" == 1  ]; then
+	#	echo 'kern.vty="sc"' >> ${ALTROOT}/boot/loader.conf
+	#fi
 
 	if [ "${PLATFORM}" == "amd64" ]; then
-		echo 'mlxen_load="YES"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
+		echo 'mlxen_load="YES"' >> ${ALTROOT}/boot/loader.conf
 	fi
 
 	if [ "${SWAPMODE}" == 1 ]; then
 		if [ ! -z "${SWAP}" ]; then
-			echo 'geom_mirror_load="YES"' >> ${ALTROOT}/${ZROOT}/boot/loader.conf
+			echo 'geom_mirror_load="YES"' >> ${ALTROOT}/boot/loader.conf
 		fi
 	fi
 
 	# Generate new rc.conf file.
-	#cat << EOF > ${ALTROOT}/${ZROOT}/etc/rc.conf
+	#cat << EOF > ${ALTROOT}/etc/rc.conf
 
 #EOF
 
 	# Clear default router and netwait ip on new installs.
-	sysrc -f ${ALTROOT}/${ZROOT}/etc/rc.conf defaultrouter="" > /dev/null 2>&1
-	sysrc -f ${ALTROOT}/${ZROOT}/etc/rc.conf netwait_ip="" > /dev/null 2>&1
+	sysrc -f ${ALTROOT}/etc/rc.conf defaultrouter="" > /dev/null 2>&1
+	sysrc -f ${ALTROOT}/etc/rc.conf netwait_ip="" > /dev/null 2>&1
 
 	# Set the release type.
 	if [ "${PLATFORM}" == "amd64" ]; then
-		echo "x64-full" > ${ALTROOT}/${ZROOT}/etc/platform
+		echo "x64-full" > ${ALTROOT}/etc/platform
 	elif [ "${PLATFORM}" == "i386" ]; then
-		echo "x86-full" > ${ALTROOT}/${ZROOT}/etc/platform
+		echo "x86-full" > ${ALTROOT}/etc/platform
 	fi
 
 	# Generate /etc/fstab.
-	cat << EOF > ${ALTROOT}/${ZROOT}/etc/fstab
+	cat << EOF > ${ALTROOT}/etc/fstab
 # Device    Mountpoint    FStype    Options    Dump    Pass#
 #
 EOF
 
 	# Generate /etc/swapdevice.
 	if [ ! -z "${SWAP}" ]; then
-		cat << EOF > ${ALTROOT}/${ZROOT}/etc/swapdevice
+		cat << EOF > ${ALTROOT}/etc/swapdevice
 swapinfo
 EOF
 	fi
@@ -395,7 +406,7 @@ EOF
 	# generated with 'liveCD' and 'embedded' during startup, but need to be
 	# created during install of 'full'.
 	if [ ! -z "${disklist}" ]; then
-		cat << EOF > ${ALTROOT}/${ZROOT}/etc/cfdevice
+		cat << EOF > ${ALTROOT}/etc/cfdevice
 ${disklist}
 EOF
 	fi
@@ -426,34 +437,34 @@ upgrade_sys_files()
 
 	# Remove chflags for protected files before upgrade to prevent errors
 	# chflags will be restored after upgrade completion by default.
-	if [ -f ${ALTROOT}/${ZROOT}/usr/lib/librt.so.1 ]; then
-		chflags 0 ${ALTROOT}/${ZROOT}/usr/lib/librt.so.1
+	if [ -f ${ALTROOT}/usr/lib/librt.so.1 ]; then
+		chflags 0 ${ALTROOT}/usr/lib/librt.so.1
 	fi
 
 	# Install system files and discard unwanted folders.
 	EXCLUDEDIRS="--exclude .snap/ --exclude resources/ --exclude zinstall.sh/ --exclude ${ZROOT}/ --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude cf/"
-	/usr/bin/tar ${EXCLUDEDIRS} -c -f - -C / . | tar -xpf - -C ${ALTROOT}/${ZROOT}
+	/usr/bin/tar ${EXCLUDEDIRS} -c -f - -C / . | tar -xpf - -C ${ALTROOT}
 
 	# Copy files from live media source.
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/var
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/dev
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/mnt
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/tmp
-	/bin/chmod 1777 ${ALTROOT}/${ZROOT}/tmp
-	/bin/mkdir -p ${ALTROOT}/${ZROOT}/boot/defaults
-	/bin/cp -r /mnt/cdrom/boot/* ${ALTROOT}/${ZROOT}/boot
-	/bin/cp -r /mnt/cdrom/boot/defaults/* ${ALTROOT}/${ZROOT}/boot/defaults
-	/bin/cp -r /mnt/cdrom/boot/kernel/* ${ALTROOT}/${ZROOT}/boot/kernel
+	/bin/mkdir -p ${ALTROOT}/dev
+	/bin/mkdir -p ${ALTROOT}/mnt
+	/bin/mkdir -p ${ALTROOT}/tmp
+	/bin/mkdir -p ${ALTROOT}/var
+	/bin/chmod 1777 ${ALTROOT}/tmp
+	/bin/mkdir -p ${ALTROOT}/boot/defaults
+	/bin/cp -r ${CDPATH}/boot/* ${ALTROOT}/boot
+	/bin/cp -r ${CDPATH}/boot/defaults/* ${ALTROOT}/boot/defaults
+	/bin/cp -r ${CDPATH}/boot/kernel/* ${ALTROOT}/boot/kernel
 
 	# Copy our boot loader menu files to /boot.
-	if [ -d "${INCLUDE}" ]; then
-		chmod 444 ${INCLUDE}/*
-		cp -pf ${INCLUDE}/* ${ALTROOT}/${ZROOT}/boot
+	if [ -f "${INCLUDE}/menu.4th" ]; then
+		chmod 444 ${INCLUDE}/menu.4th
+		cp -pf ${INCLUDE}/menu.4th ${ALTROOT}/boot
 	fi
 
 	# Generate/update our loader.rc
 	if [ -f "${INCLUDE}/menu.4th" ]; then
-	cat << EOF > ${ALTROOT}/${ZROOT}/boot/loader.rc
+	cat << EOF > ${ALTROOT}/boot/loader.rc
 \ Loader.rc
 include /boot/loader.4th
 start
@@ -463,13 +474,13 @@ include /boot/beastie.4th
 beastie-start
 EOF
 	fi
-	chmod 444 ${ALTROOT}/${ZROOT}/boot/loader.rc
+	chmod 444 ${ALTROOT}/boot/loader.rc
 
 	# Decompress kernel.
-	/usr/bin/gzip -d -f ${ALTROOT}/${ZROOT}/boot/kernel/kernel.gz
+	/usr/bin/gzip -d -f ${ALTROOT}/boot/kernel/kernel.gz
 
 	# Decompress modules (legacy versions).
-	cd ${ALTROOT}/${ZROOT}/boot/kernel
+	cd ${ALTROOT}/boot/kernel
 	for FILE in *.gz
 	do
 		if [ -f "${FILE}" ]; then
@@ -484,44 +495,44 @@ backup_sys_files()
 {
 	# Backup system configuration.
 	echo "Backup system configuration..."
-	cp -p ${ALTROOT}/${ZROOT}/boot/loader.conf ${SYSBACKUP}
+	cp -p ${ALTROOT}/boot/loader.conf ${SYSBACKUP}
 
-	if [ -f "/${ZROOT}/boot.config" ]; then
-		cp -p ${ALTROOT}/${ZROOT}/boot.config ${SYSBACKUP}
+	if [ -f "/${ALTROOT}/boot.config" ]; then
+		cp -p ${ALTROOT}/boot.config ${SYSBACKUP}
 	fi
-	if [ -f "/${ZROOT}/boot/loader.conf.local" ]; then
-		cp -p ${ALTROOT}/${ZROOT}/boot/loader.conf.local ${SYSBACKUP}
+	if [ -f "/${ALTROOT}/boot/loader.conf.local" ]; then
+		cp -p ${ALTROOT}/boot/loader.conf.local ${SYSBACKUP}
 	fi
-	if [ -f "/${ZROOT}/boot/zfs/zpool.cache" ]; then
-		cp -p ${ALTROOT}/${ZROOT}/boot/zfs/zpool.cache ${SYSBACKUP}
+	if [ -f "/${ALTROOT}/boot/zfs/zpool.cache" ]; then
+		cp -p ${ALTROOT}/boot/zfs/zpool.cache ${SYSBACKUP}
 	fi
 
-	#cp -p /${ZROOT}/etc/platform ${SYSBACKUP}
-	cp -p ${ALTROOT}/${ZROOT}/etc/fstab ${SYSBACKUP}
-	cp -p ${ALTROOT}/${ZROOT}/etc/cfdevice ${SYSBACKUP}
+	#cp -p /${ALTROOT}/etc/platform ${SYSBACKUP}
+	cp -p ${ALTROOT}/etc/fstab ${SYSBACKUP}
+	cp -p ${ALTROOT}/etc/cfdevice ${SYSBACKUP}
 }
 
 restore_sys_files()
 {
 	# Restore previous backup files to upgraded system.
 	echo "Restore system configuration..."
-	cp -pf ${SYSBACKUP}/loader.conf ${ALTROOT}/${ZROOT}/boot
+	cp -pf ${SYSBACKUP}/loader.conf ${ALTROOT}/boot
 
 	if [ -f "${SYSBACKUP}/boot.config" ]; then
-		cp -pf ${SYSBACKUP}/boot.config ${ALTROOT}/${ZROOT}
+		cp -pf ${SYSBACKUP}/boot.config ${ALTROOT}
 	else
-		rm -f ${ALTROOT}/${ZROOT}/boot.config
+		rm -f ${ALTROOT}/boot.config
 	fi
 	if [ -f "${SYSBACKUP}/loader.conf.local" ]; then
-		cp -pf ${SYSBACKUP}/loader.conf.local ${ALTROOT}/${ZROOT}/boot
+		cp -pf ${SYSBACKUP}/loader.conf.local ${ALTROOT}/boot
 	fi
 	if [ -f "${SYSBACKUP}/zpool.cache" ]; then
-		cp -pf ${SYSBACKUP}/zpool.cache ${ALTROOT}/${ZROOT}/boot/zfs
+		cp -pf ${SYSBACKUP}/zpool.cache ${ALTROOT}/boot/zfs
 	fi
 
-	#cp -pf ${SYSBACKUP}/platform /${ZROOT}/etc
-	cp -pf ${SYSBACKUP}/fstab ${ALTROOT}/${ZROOT}/etc
-	cp -pf ${SYSBACKUP}/cfdevice ${ALTROOT}/${ZROOT}/etc
+	#cp -pf ${SYSBACKUP}/platform /etc
+	cp -pf ${SYSBACKUP}/fstab ${ALTROOT}/etc
+	cp -pf ${SYSBACKUP}/cfdevice ${ALTROOT}/etc
 }
 
 # Legacy upgrade on default install.
@@ -530,12 +541,8 @@ upgrade_system()
 	# Import current zroot pool to be upgrade, otherwise exit.
 	echo "Trying to import ${ZROOT} pool..."
 
-	export ALTROOT="/mnt/sys_install"
-	export DATASET="/ROOT"
-	export BOOTENV="/default-install"
-
-	if [ ! -f "${ALTROOT}/${ZROOT}/etc/prd.name" ]; then
-		zpool import -R ${ALTROOT}/${ZROOT} ${ZROOT} > /dev/null 2>&1 || zpool import -f -R ${ALTROOT}/${ZROOT} ${ZROOT} > /dev/null 2>&1
+	if [ ! -f "${ALTROOT}/etc/prd.name" ]; then
+		zpool import -R ${ALTROOT} ${ZROOT} > /dev/null 2>&1 || zpool import -f -R ${ALTROOT} ${ZROOT} > /dev/null 2>&1
 		if [ $? -eq 1 ]; then
 			echo "Unable to detect/import ${ZROOT} pool."
 			exit 1
@@ -543,8 +550,8 @@ upgrade_system()
 	fi
 
 	# Check if os exists on specified zroot pool, otherwise exit.
-	if [ -f "${ALTROOT}/${ZROOT}/etc/prd.name" ]; then
-		PRD=`cat ${ALTROOT}/${ZROOT}/etc/prd.name`
+	if [ -f "${ALTROOT}/etc/prd.name" ]; then
+		PRD=`cat ${ALTROOT}/etc/prd.name`
 		if [ "${PRD}" != "${PRDNAME}" ]; then
 			echo "${PRDNAME} product not detected."
 			zpool export ${ZROOT}
@@ -574,7 +581,7 @@ upgrade_system()
 	# before system is updated because it may happen that some files
 	# may be reintroduced in the system.
 	echo "Removing obsolete files..."
-	/etc/install/upgrade.sh clean ${ALTROOT}/${ZROOT}
+	/etc/install/upgrade.sh clean ${ALTROOT}
 
 	# Upgrade system files.
 	upgrade_sys_files
@@ -584,9 +591,9 @@ upgrade_system()
 
 	# Set the release type.
 	if [ "${PLATFORM}" == "amd64" ]; then
-		echo "x64-full" > ${ALTROOT}/${ZROOT}/etc/platform
+		echo "x64-full" > ${ALTROOT}/etc/platform
 	elif [ "${PLATFORM}" == "i386" ]; then
-		echo "x86-full" > ${ALTROOT}/${ZROOT}/etc/platform
+		echo "x86-full" > ${ALTROOT}/etc/platform
 	fi
 
 	# Cleanup system backup files.
