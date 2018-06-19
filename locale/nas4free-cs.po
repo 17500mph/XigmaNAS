@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2018-06-10 17:54+0000\n"
-"PO-Revision-Date: 2018-05-28 17:26+0000\n"
+"PO-Revision-Date: 2018-06-14 04:46+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-13 21:28+0000\n"
+"X-Launchpad-Export-Date: 2018-06-19 10:09+0000\n"
 "X-Generator: Launchpad (build 18688)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -428,6 +428,9 @@ msgid ""
 "AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
 "the x86 instruction set architecture for microprocessors."
 msgstr ""
+"AES-NI (Advanced Encryption Standard New Instructions – nové instrukce "
+"pokročilého šifrovacího standardu) je rozšíření instrukční sady pro "
+"procesory architektury x86."
 
 msgid "AFP"
 msgstr "AFP"
@@ -983,7 +986,7 @@ msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "IPv4 nebo IPv6 adresa portálu iSCSI iniciátoru."
 
 msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
-msgstr ""
+msgstr "IPv4 nebo IPv6 adresa na které očekávat \tpříchozí\tspojení."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -1591,7 +1594,7 @@ msgid "CHAP Users"
 msgstr "CHAP uživatelé"
 
 msgid "CHAP-Mutual"
-msgstr ""
+msgstr "Vzájemný CHAP"
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
@@ -2629,6 +2632,8 @@ msgid ""
 "Define iSCSI hardware offload driver to use for this portal-group. The "
 "default is \"none\"."
 msgstr ""
+"Určit ovladač přenášející iSCSI výpočetní zátěž na specializovaný hardware, "
+"který má být použit pro tuto skupinu portálu. Výchozí je „žádný“."
 
 msgid "Defines the checksum algorithm."
 msgstr "Určuje algoritmus vytváření kontrolních součtů."
@@ -2675,7 +2680,7 @@ msgid "Delete Selected CARPs"
 msgstr "Smazat označené CARP"
 
 msgid "Delete Selected CHAP Users"
-msgstr ""
+msgstr "Smazat označené CHAP uživatele"
 
 msgid "Delete Selected Commands"
 msgstr "Smazat označené příkazy"
@@ -2714,7 +2719,7 @@ msgid "Delete Selected Listen Records"
 msgstr ""
 
 msgid "Delete Selected Mutual CHAP Users"
-msgstr ""
+msgstr "Smazat označené uživatele vzájemného CHAP"
 
 msgid "Delete Selected NFS Shares"
 msgstr "Smazat označená NFS sdílení"
@@ -3264,7 +3269,7 @@ msgstr ""
 "verzí systému."
 
 msgid "Do not load driver."
-msgstr ""
+msgstr "Nanačítat ovladač."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -3393,7 +3398,7 @@ msgid "Do you want to delete selected CARPs?"
 msgstr "Opravdu smazat označené CARP?"
 
 msgid "Do you want to delete selected CHAP users?"
-msgstr ""
+msgstr "Opravdu chcete smazat označené CHAP uživatele?"
 
 msgid "Do you want to delete selected LAGGs?"
 msgstr "Opravdu smazat označené LAGGs?"
@@ -3405,7 +3410,7 @@ msgid "Do you want to delete selected LUNs?"
 msgstr "Opravdu chcete smazat označené LUN?"
 
 msgid "Do you want to delete selected Mutual CHAP users?"
-msgstr ""
+msgstr "Opravdu chcete smazat označené uživatele vzájemného CHAP?"
 
 msgid "Do you want to delete selected NFS shares?"
 msgstr "Opravdu smazat označená NFS sdílení?"
@@ -3450,7 +3455,7 @@ msgid "Do you want to delete selected initiator names?"
 msgstr "Opravdu chcete smazat vyznačené názvy iniciátoru?"
 
 msgid "Do you want to delete selected initiator portals?"
-msgstr ""
+msgstr "Opravdu chcete smazat označené portály iniciátoru?"
 
 msgid "Do you want to delete selected jobs?"
 msgstr "Opravdu smazat označené úlohy?"
@@ -3811,7 +3816,7 @@ msgid "Edit"
 msgstr "Upravit"
 
 msgid "Edit Auth Group"
-msgstr ""
+msgstr "Upravit přihlašovací skupinu"
 
 msgid "Edit Bridge"
 msgstr "Upravit síťový most"
@@ -3820,7 +3825,7 @@ msgid "Edit CARP"
 msgstr "Upravit CARP"
 
 msgid "Edit CHAP User"
-msgstr ""
+msgstr "Upravit CHAP uživatele"
 
 msgid "Edit Dataset"
 msgstr "Upravit datovou sadu"
@@ -3838,7 +3843,7 @@ msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
 
 msgid "Edit Initiator Name"
-msgstr ""
+msgstr "Upravit název iniciátoru"
 
 msgid "Edit Initiator Portal"
 msgstr ""
@@ -3943,7 +3948,7 @@ msgid "Edit extent"
 msgstr "Upravit úložnou jednotku"
 
 msgid "Edit iSNS Server"
-msgstr ""
+msgstr "Upravit iSNS server"
 
 msgid "Edit initiator"
 msgstr "Upravit iniciátor"
@@ -4102,7 +4107,7 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Používat označené Rsync moduly"
 
 msgid "Enable Selected Targets"
-msgstr ""
+msgstr "Zapnout označené cíle"
 
 msgid "Enable Selected iSNS Servers"
 msgstr ""
@@ -5162,7 +5167,7 @@ msgid "Guest Authentication"
 msgstr "Ověřování hosta"
 
 msgid "HA Role"
-msgstr ""
+msgstr "Role v rámci vysoké dostupnosti"
 
 msgid "HAST"
 msgstr "HAST"
@@ -5393,7 +5398,7 @@ msgid "IPv4 addresses"
 msgstr "IPv4 adresy"
 
 msgid "IPv4 or IPv6 address of an iSNS server to register on."
-msgstr ""
+msgstr "IPv4 nebo IPv6 adresa iSNS serveru na kterém zaregistrovat."
 
 msgid ""
 "IPv4 or IPv6 address to redirect initiators to. When configured, all "
@@ -6236,6 +6241,7 @@ msgstr ""
 
 msgid "Load driver during boot when the instruction set is supported."
 msgstr ""
+"Pokud je instrukční sada podporována, načíst ovladač při zavádění systému."
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr "Odběr, při kterém se UPS zdroj přepne do stavu přetíženo („OVER“)"
@@ -7638,7 +7644,7 @@ msgid "Permit Root Login"
 msgstr "Umožnit přihlášení správce systému (root)"
 
 msgid "Permit access without authentication"
-msgstr ""
+msgstr "Umožnit přístup bez přihlášení"
 
 msgid "Permit discovery without authentication"
 msgstr ""
@@ -7821,7 +7827,7 @@ msgid "Port number must be in the range between %d and %d."
 msgstr "Je třeba, aby číslo portu bylo z rozahu %d až %d."
 
 msgid "Port number of the iSNS server."
-msgstr ""
+msgstr "Číslo portu iSNS serveru."
 
 msgid "Port of the TFTP service. Leave blank to use the default port."
 msgstr "Port TFTP služby. Pokud chcete použít výchozí port, nevyplňujte."
@@ -8134,7 +8140,7 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAM Disk"
-msgstr ""
+msgstr "Úložiště v operační paměti"
 
 msgid "RAW info"
 msgstr "Informace v nezpracovaném stavu"
@@ -8316,7 +8322,7 @@ msgid "Release Notes"
 msgstr "Poznámky k vydání"
 
 msgid "Reload"
-msgstr ""
+msgstr "Načíst znovu"
 
 msgid "Reload Page"
 msgstr "Načíst stránku znovu"
@@ -8392,7 +8398,7 @@ msgid "Remove the %s first before proceeding."
 msgstr "Pokračovat bude možné až po odebrání %s."
 
 msgid "Reorder"
-msgstr ""
+msgstr "Přeuspořádat"
 
 msgid "Reorder Commands"
 msgstr "Přeuspořádat příkazy"
@@ -8915,7 +8921,7 @@ msgid "Select target groups."
 msgstr ""
 
 msgid "Select targets."
-msgstr ""
+msgstr "Vybrat cíle."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Zvolte FreeBSD balíček, který má být nainstalován."
@@ -9224,6 +9230,8 @@ msgid ""
 "Setting to \"primary\" or \"secondary\" overrides default role of the node "
 "in HA cluster."
 msgstr ""
+"Nastavení na „hlavní“ nebo „záložní“ přepíše výchozí roli uzlu v klastru pro "
+"vysokou dostupnost."
 
 msgid "Settings"
 msgstr "Nastavení"
@@ -9456,7 +9464,7 @@ msgid "Specified path is NFSv4 root directory."
 msgstr "Zadané umístění je NFSv4 kořenová složka."
 
 msgid "Specifies LUN EUI-64 identifier."
-msgstr ""
+msgstr "Určuje LUN EUI-64 identifikátor."
 
 msgid "Specifies LUN NAA identifier."
 msgstr ""
@@ -10378,7 +10386,7 @@ msgstr ""
 "stavu ZFS."
 
 msgid "The debug verbosity level. The default is 0."
-msgstr ""
+msgstr "Stupeň podrobnosti ladících informací. Výchozí je 0 (nula)."
 
 msgid "The default SMTP mail server port, usually port 25 or port 587."
 msgstr "Výchozí port SMTP serveru, obvykle 25 nebo 587."
@@ -10973,7 +10981,7 @@ msgid "These parameter will be added to this portal-group."
 msgstr ""
 
 msgid "These parameter will be added to this target."
-msgstr ""
+msgstr "Tyto parametry budou přidány tomuto cíli."
 
 #, php-format
 msgid "These parameters are added to %s."
@@ -11812,7 +11820,7 @@ msgid "UNMAP Block Offset"
 msgstr ""
 
 msgid "UNMAP Block Size"
-msgstr ""
+msgstr "Velikost UNMAP bloku"
 
 msgid "UNMAP Maximum Descriptors"
 msgstr ""
@@ -12879,13 +12887,13 @@ msgid "iSNS Server is locked"
 msgstr ""
 
 msgid "iSNS Server is marked for deletion"
-msgstr ""
+msgstr "iSNS server je označen pro smazání"
 
 msgid "iSNS Server is unlocked"
 msgstr ""
 
 msgid "iSNS Servers"
-msgstr ""
+msgstr "iSNS servery"
 
 msgid "iSNS Timeout"
 msgstr "Časový limit iSNS"
