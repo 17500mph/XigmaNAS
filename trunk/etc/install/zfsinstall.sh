@@ -357,10 +357,6 @@ vfs.root.mountfrom="zfs:${ZROOT}${DATASET}${BOOTENV}"
 zfs_load="YES"
 EOF
 
-	#if [ "${BOOT_MODE}" == 1  ]; then
-	#	echo 'kern.vty="sc"' >> ${ALTROOT}/boot/loader.conf
-	#fi
-
 	if [ "${PLATFORM}" == "amd64" ]; then
 		echo 'mlxen_load="YES"' >> ${ALTROOT}/boot/loader.conf
 	fi
