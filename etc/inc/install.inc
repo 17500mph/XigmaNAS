@@ -254,7 +254,7 @@ kern.maxfiles="6289573"
 kern.cam.boot_delay="12000"
 kern.geom.label.disk_ident.enable="0"
 kern.geom.label.gptid.enable="0"
-kern.vty="sc"
+kern.vty="vt"
 hint.acpi_throttle.0.disabled="0"
 hint.p4tcc.0.disabled="0"
 autoboot_delay="3"
@@ -781,6 +781,8 @@ function install_init_gptdisk($disk, $partlayout) {
 		// Create GPT partition with alignment (UFS or swap)
 		if($partlayoutv['fstype'] === "boot"):
 			$flags = "-a 4k -t freebsd-boot -l gptboot";
+		elseif($partlayoutv['fstype'] === "efi"):
+			$flags = "-a 4k -t efi -l efiboot";
 		elseif ($partlayoutv['fstype'] === "swap"):
 			$flags = "-a 4m -t freebsd-swap -l gptswap";
 		else:
@@ -805,14 +807,21 @@ function install_init_gptdisk($disk, $partlayout) {
 				write_console("Error: Failed to install gptboot on {$diskdevicename}!\n");
 				return 1;
 			endif;
+		elseif($partlayoutv['fstype'] === "efi"):
+			// Install efi code
+			if(mwexec("/sbin/gpart bootcode -p /boot/boot1.efifat -i {$partlayoutv['partition']} {$disk}")):
+				set_kern_geom_debugflags(0);
+				write_console("Error: Failed to install efi on {$diskdevicename}!\n");
+				return 1;
+			endif;
 		endif;
 	endforeach;
 
 	// Create file systems and set volume label.
 	write_console("Create file system on partition:\n");
 	foreach($partlayout as $partlayoutv):
-		// Do not create a file system for swap/unused partitions.
-		if("boot" === $partlayoutv['fstype'] || "swap" === $partlayoutv['fstype'] || "unused" === $partlayoutv['fstype']):
+		// Do not create a file system for efi swap or unused partitions.
+		if("boot" === $partlayoutv['fstype'] || "swap" === $partlayoutv['fstype'] || "unused" === $partlayoutv['fstype'] || "efi" === $partlayoutv['fstype']):
 			continue;
 		endif;
 
