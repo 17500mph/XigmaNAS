@@ -43,9 +43,11 @@ $productname = get_product_name();
 $amenuitem['1']['tag'] = "1";
 $amenuitem['1']['item'] = "Install 'Full' OS/GPT on HDD/SSD + DATA/SWAP (For Expert)";
 $amenuitem['2']['tag'] = "2";
-$amenuitem['2']['item'] = "Install 'Full' OS/MBR on HDD/SSD + DATA/SWAP (For Expert)";
+$amenuitem['2']['item'] = "Install 'Full' OS/EFI on HDD/SSD + DATA/SWAP (For Expert)";
+$amenuitem['3']['tag'] = "3";
+$amenuitem['3']['item'] = "Install 'Full' OS/MBR on HDD/SSD + DATA/SWAP (For Expert)";
 
-$result = tui_display_menu("{$productname} Full Install Options Menu", "", 67, 8, 4, $amenuitem, $installopt);
+$result = tui_display_menu("{$productname} Full Install Options Menu", "", 68, 9, 5, $amenuitem, $installopt);
 if (0 != $result)
 	exit(0);
 
@@ -55,6 +57,10 @@ if ( $installopt == 1 ) {
 }
 
 if ( $installopt == 2 ) { 
+	require_once ("/etc/rc.initial.install3efi");
+}
+
+if ( $installopt == 3 ) { 
 	require_once ("/etc/rc.initial.install3");
 }
 ?>

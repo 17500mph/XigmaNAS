@@ -719,6 +719,7 @@ create_image() {
 	cp $NAS4FREE_BOOTDIR/device.hints $NAS4FREE_TMPDIR/boot
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $NAS4FREE_SVNDIR/boot/menu.4th $NAS4FREE_TMPDIR/boot
+		cp $NAS4FREE_SVNDIR/boot/loader.efi $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/beastie.4th $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menu.rc $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menusets.4th $NAS4FREE_TMPDIR/boot
@@ -852,6 +853,7 @@ create_iso () {
 	cp $NAS4FREE_BOOTDIR/device.hints $NAS4FREE_TMPDIR/boot
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $NAS4FREE_SVNDIR/boot/menu.4th $NAS4FREE_TMPDIR/boot
+		cp $NAS4FREE_SVNDIR/boot/loader.efi $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/beastie.4th $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menu.rc $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menusets.4th $NAS4FREE_TMPDIR/boot
@@ -1096,6 +1098,7 @@ create_usb () {
 	cp $NAS4FREE_BOOTDIR/device.hints $NAS4FREE_TMPDIR/boot
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $NAS4FREE_SVNDIR/boot/menu.4th $NAS4FREE_TMPDIR/boot
+		cp $NAS4FREE_SVNDIR/boot/loader.efi $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/beastie.4th $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menu.rc $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menusets.4th $NAS4FREE_TMPDIR/boot
@@ -1208,6 +1211,7 @@ create_full() {
 	cp $NAS4FREE_BOOTDIR/device.hints $NAS4FREE_TMPDIR/boot
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $NAS4FREE_SVNDIR/boot/menu.4th $NAS4FREE_TMPDIR/boot
+		cp $NAS4FREE_SVNDIR/boot/loader.efi $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/beastie.4th $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menu.rc $NAS4FREE_TMPDIR/boot
 		cp $NAS4FREE_BOOTDIR/boot/menusets.4th $NAS4FREE_TMPDIR/boot
