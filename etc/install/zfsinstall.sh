@@ -358,7 +358,7 @@ zfs_load="YES"
 EOF
 
 	if [ "${PLATFORM}" == "amd64" ]; then
-		echo 'mlxen_load="YES"' >> ${ALTROOT}/boot/loader.conf
+		echo 'mlx4en_load="YES"' >> ${ALTROOT}/boot/loader.conf
 	fi
 
 	if [ "${SWAPMODE}" == 1 ]; then
