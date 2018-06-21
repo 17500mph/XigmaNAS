@@ -462,15 +462,17 @@ backup_sys_files() {
 	# Backup common system configuration files.
 	msg="Backup system configuration..."
 	/usr/bin/logger -p console.info "UPGRADE: ${msg}"
-	cp -p ${BEPATH}/boot/loader.conf ${SYSBACKUP}
 
-	if [ -f "/${ZROOT}/boot.config" ]; then
+	if [ -f "${BEPATH}/boot/loader.conf" ]; then
+		cp -p ${BEPATH}/boot/loader.conf ${SYSBACKUP}
+	fi
+	if [ -f "/${BEPATH}/boot.config" ]; then
 		cp -p ${BEPATH}/boot.config ${SYSBACKUP}
 	fi
-	if [ -f "/${ZROOT}/boot/loader.conf.local" ]; then
+	if [ -f "/${BEPATH}/boot/loader.conf.local" ]; then
 		cp -p ${BEPATH}/boot/loader.conf.local ${SYSBACKUP}
 	fi
-	if [ -f "/${ZROOT}/boot/zfs/zpool.cache" ]; then
+	if [ -f "/${BEPATH}/boot/zfs/zpool.cache" ]; then
 		cp -p ${BEPATH}/boot/zfs/zpool.cache ${SYSBACKUP}
 	fi
 
@@ -483,8 +485,10 @@ restore_sys_files() {
 	# Restore previous backup files on the boot environment.
 	msg="Restore system configuration..."
 	/usr/bin/logger -p console.info "UPGRADE: ${msg}"
-	cp -pf ${SYSBACKUP}/loader.conf ${BEPATH}/boot
 
+	if [ -f "${SYSBACKUP}/loader.conf" ]; then
+		cp -pf ${SYSBACKUP}/loader.conf ${BEPATH}/boot
+	fi
 	if [ -f "${SYSBACKUP}/boot.config" ]; then
 		cp -pf ${SYSBACKUP}/boot.config ${BEPATH}
 	else

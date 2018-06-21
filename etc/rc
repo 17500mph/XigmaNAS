@@ -28,7 +28,6 @@ export HOME PATH
 PLATFORM=`/bin/cat /etc/platform`
 XARCH=`/bin/echo ${PLATFORM} | /usr/bin/sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
-ROOTFS=`mount | awk '/ \/ / {print $1}'`
 ZROOT="zroot"
 
 # Fixed values requested by build/make.sh
@@ -76,9 +75,15 @@ case ${PLATFORM} in
 	*-full)
 		# Mount required zfs datasets if system boots from zfs.
 		if zpool list -H -o bootfs | grep -qw "${ZROOT}/ROOT"; then
+			ZFSTMP=`zfs list ${ZROOT}/tmp 2> /dev/null`
+			ZFSVAR=`zfs list ${ZROOT}/var 2> /dev/null`
 			echo "Mounting ZFS datasets for RootOnZFS platform..."
-			zfs mount ${ZROOT}/tmp
-			zfs mount ${ZROOT}/var
+			if [ "${ZFSTMP}" ]; then
+				zfs mount ${ZROOT}/tmp
+			fi
+			if [ "${ZFSVAR}" ]; then
+				zfs mount ${ZROOT}/var
+			fi
 		else
 			# Do a fsck on root file system.
 			/etc/rc.d/fsck root;
