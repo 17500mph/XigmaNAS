@@ -86,8 +86,8 @@ transmission_prestart()
 	    # create config directory
 	    eval "su -m \"${transmission_user}\" -c 'sh -c \"mkdir -p `safe_shellquote "${_configdir}"`\"'"
 	    if [ ! -d "${_configdir}" ]; then
-		echo "configdir fail: ${_configdir}" 1>&2
-		exit 1
+			echo "configdir fail: ${_configdir}" 1>&2
+			exit 1
 	    fi
 	fi
 	_configdir=`safe_shellquote "${_configdir}"`
@@ -127,9 +127,7 @@ transmission_prestart()
 			--if "string-length(port) > 0" \
 				--value-of "concat(' -p ',port)" \
 			--break \
-			--if "string-length(configdir) > 0" \
-				--output " -g ${_configdir}" \
-			--break \
+			--output " -g ${_configdir}" \
 			--if "string-length(peerport) > 0" \
 				--value-of "concat(' -P ',peerport)" \
 			--break \
@@ -143,11 +141,7 @@ transmission_prestart()
 			--else \
 				--output " -C" \
 			--break \
-			--if "string-length(incompletedir) > 0" \
-				--output " --incomplete-dir ${_incompletedir}" \
-			--else \
-				--output " --no-incomplete-dir" \
-			--break \
+			--output " --incomplete-dir ${_incompletedir}" \
 		--break \
 		${configxml_file} | /usr/local/bin/xml unesc`
 
