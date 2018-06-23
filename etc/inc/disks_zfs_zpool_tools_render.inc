@@ -160,6 +160,7 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 	$b_ret = (0 < count($a_items));
 	$attribute = [
 		'name' => 'name="pool[]"',
+		'id' => NULL,
 		'value' => NULL,
 		'checked' => '',
 		'required' => ''
@@ -204,6 +205,8 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
+							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
+							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['pool.name'];
 							$attribute['value'] = sprintf(' value="%s"',$value);
 							if(0 < count($a_selected_items)):
@@ -213,7 +216,9 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
-								echo '<td class="lcell">',htmlspecialchars($value),'</td>',PHP_EOL;
+								echo '<td class="lcell">';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+								echo '</td>',PHP_EOL;
 								echo '<td class="lcell">',htmlspecialchars($r_item['pool.version']),'</td>',PHP_EOL;
 								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.state_name']),'</td>',PHP_EOL;
 							echo '</tr>';
@@ -268,6 +273,7 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 	$b_ret = (0 < count($a_items));
 	$attribute = [
 		'name' => 'name="pooldev[]"',
+		'id' => NULL,
 		'value' => NULL,
 		'checked' => '',
 		'required' => ''
@@ -316,6 +322,8 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
+							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
+							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['device.path'];
 							$attribute['value'] = sprintf('value="%s"',$value);
 							if(0 < count($a_selected_items)):
@@ -332,7 +340,9 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
-								echo '<td class="lcell">',htmlspecialchars($value),'</td>',PHP_EOL;
+								echo '<td class="lcell">';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+								echo '</td>',PHP_EOL;
 								echo '<td class="lcell">',htmlspecialchars($r_item['device.type']),'</td>',PHP_EOL;
 								echo '<td class="lcell">',htmlspecialchars($vdevice),'</td>',PHP_EOL;
 								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.name']),'</td>',PHP_EOL;
@@ -389,6 +399,7 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 	$b_ret = (0 < count($a_items));
 	$attribute = [
 		'name' => 'name="newvdev[]"',
+		'id' => NULL,
 		'value' => NULL,
 		'checked' => '',
 		'required' => ''
@@ -431,6 +442,8 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
+							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
+							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['name'];
 							$attribute['value'] = sprintf(' value="%s"',$value);
 							if(0 < count($a_selected_items)):
@@ -440,7 +453,9 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
-								echo '<td class="lcebl">',htmlspecialchars($value),'</td>',PHP_EOL;
+								echo '<td class="lcebl">';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+								echo '</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
@@ -491,6 +506,7 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 	$b_ret = (0 < count($a_items));
 	$attribute = [
 		'name' => 'name="newdev[]"',
+		'id' => NULL,
 		'value' => NULL,
 		'checked' => '',
 		'required' => ''
@@ -533,6 +549,8 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 				echo '<tbody>',PHP_EOL;
 					if($b_ret):
 						foreach($a_items as $r_item):
+							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
+							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['name'];
 							$attribute['value'] = sprintf(' value="%s"',$value);
 							if(0 < count($a_selected_items)):
@@ -542,7 +560,9 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 								echo '<td class="lcelc">';
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
-								echo '<td class="lcebl">',htmlspecialchars($value),'</td>',PHP_EOL;
+								echo '<td class="lcebl">';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+								echo '</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
@@ -619,10 +639,12 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 					echo '<tbody>',PHP_EOL;
 						foreach($a_option as $r_option):
 							if($r_option['show']):
+								$id = sprintf('radio_%s',uuid());
 								$attribute = [
 									'name' => sprintf(' name="%s[]"',$r_option['name']),
 									'value' => sprintf(' value="%s"',$r_option['value']),
 									'type' => ' type="radio"',
+									'id' => sprintf(' id="%s"',$id),
 									'checked' => '',
 									'longname' => $r_option['longname']
 								];
@@ -637,9 +659,9 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 								endif;
 								echo '<tr>';
 									echo '<td class="lcelc">';
-										echo '<input',$attribute['type'],$attribute['name'],$attribute['value'],$attribute['checked'],'/>';
+										echo '<input',$attribute['type'],$attribute['name'],$attribute['id'],$attribute['value'],$attribute['checked'],'/>';
 									echo '</td>',PHP_EOL;
-									echo '<td class="lcebl">',$attribute['longname'],'</td>',PHP_EOL;
+									echo '<td class="lcebl">','<label for="',$id,'">',$attribute['longname'],'</label>','</td>',PHP_EOL;
 								echo '</tr>';
 							endif;
 						endforeach;
@@ -759,6 +781,7 @@ class co_zpool_flags extends co_zpool_flag_base {
 		$b_use_default = (0 === count(array_intersect_key($this->a_available_keys,$this->a_selected_keys)));
 		$attribute = [
 			'name' => '',
+			'id' => NULL,
 			'value' => '',
 			'type' => 'type="checkbox"',
 			'checked' => ''
@@ -782,6 +805,8 @@ class co_zpool_flags extends co_zpool_flag_base {
 					echo '<tbody>',PHP_EOL;
 						foreach($this->a_available_keys as $key):
 							if($this->a_pool_keys[$key]['show']):
+								$id = sprintf('checkbox_%s',uuid());
+								$attribute['id'] = sprintf('id="%s"',$id);
 								$value = $this->a_pool_keys[$key]['longname'];
 								$attribute['name'] = sprintf('name="%s[]"',$this->a_pool_keys[$key]['name']);
 								$attribute['value'] = sprintf('value="%s"',$this->a_pool_keys[$key]['value']);
@@ -799,7 +824,9 @@ class co_zpool_flags extends co_zpool_flag_base {
 									echo '<td class="lcelc">';
 										echo '<input ',implode(' ',$attribute),'/>';
 									echo '</td>',PHP_EOL;
-									echo '<td class="lcebl">',$value,'</td>',PHP_EOL;
+									echo '<td class="lcebl">';
+										echo sprintf('<label for="%s">',$id),$value,'</label>';
+									echo '</td>',PHP_EOL;
 								echo '</tr>',PHP_EOL;
 							endif;
 						endforeach;
