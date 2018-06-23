@@ -94,10 +94,6 @@ transmission_prestart()
 	_watchdir=`configxml_get "//bittorrent/watchdir"`
 	_watchdir=`safe_shellquote "${_watchdir}"`
 	_incompletedir=`configxml_get "//bittorrent/incompletedir"`
-	if [ -z "${_incompletedir}" ]; then
-	    # use default directory
-	    _incompletedir="${_homedir}/.config/${name}-daemon/Incomplete"
-	fi
 	_incompletedir=`safe_shellquote "${_incompletedir}"`
 
 	# escape XML/XSLT/XPath special
@@ -141,7 +137,11 @@ transmission_prestart()
 			--else \
 				--output " -C" \
 			--break \
-			--output " --incomplete-dir ${_incompletedir}" \
+			--if "string-length(incompletedir) > 0" \
+				--output " --incomplete-dir ${_incompletedir}" \
+			--else \
+				--output " --no-incomplete-dir" \
+			--break \
 		--break \
 		${configxml_file} | /usr/local/bin/xml unesc`
 
