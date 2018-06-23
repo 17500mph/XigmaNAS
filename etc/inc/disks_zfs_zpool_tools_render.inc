@@ -208,7 +208,7 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
 							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['pool.name'];
-							$attribute['value'] = sprintf(' value="%s"',$value);
+							$attribute['value'] = sprintf('value="%s"',$value);
 							if(0 < count($a_selected_items)):
 								$attribute['checked'] = (false === array_search($value,$a_selected_items) ? '' : 'checked="checked"');
 							endif;
@@ -445,7 +445,7 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
 							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['name'];
-							$attribute['value'] = sprintf(' value="%s"',$value);
+							$attribute['value'] = sprintf('value="%s"',$value);
 							if(0 < count($a_selected_items)):
 								$attribute['checked'] = (false === array_search($value,$a_selected_items) ? '' : 'checked="checked"');
 							endif;
@@ -552,7 +552,7 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 							$id = sprintf($is_checkbox ? 'checkbox_%s' : 'radio_%s',uuid());
 							$attribute['id'] = sprintf('id="%s"',$id);
 							$value = $r_item['name'];
-							$attribute['value'] = sprintf(' value="%s"',$value);
+							$attribute['value'] = sprintf('value="%s"',$value);
 							if(0 < count($a_selected_items)):
 								$attribute['checked'] = (false === array_search($value,$a_selected_items) ? '' : 'checked="checked"');
 							endif;
