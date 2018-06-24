@@ -44,6 +44,7 @@ command_args="-a ${transmission_allowed}"
 safe_shellquote()
 {
 	local _result
+
 	# replace inside quote " => "\\\"", ' => '\''
 	_result=`echo "$@" | sed -e 's/"/"\\\\\\\\\\\\""/g' -e "s/'/'\\\\\\''/g"`
 	# return quoted string
@@ -53,6 +54,7 @@ safe_shellquote()
 safe_xmlescape()
 {
 	local _result
+
 	_result="$@"
 	# replace < > & => &lt;&gt;&amp;
 	#_result=`echo "${_result}" | sed -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/\&/\&amp;/g'`
@@ -215,14 +217,6 @@ transmission_prestart()
 transmission_poststart()
 {
 	local _command_args
-	local _password
-
-	# save quotes in rc script and login shell and sh
-	_password=`configxml_get "//bittorrent/password"`
-	_password=`safe_shellquote "${_password}"`
-
-	# escape XML/XSLT/XPath special
-	_password=`safe_xmlescape "${_password}"`
 
 	_command_args=`/usr/local/bin/xml sel --template \
 		--match "//bittorrent" \
@@ -258,7 +252,7 @@ transmission_poststart()
 			--break \
 			--if "count(authrequired) > 0" \
 				--if "string-length(username) > 0 and string-length(password) > 0" \
-					--value-of "concat(' -n ',username,':${_password}')" \
+					--value-of "concat(' -n ',username,':',password)" \
 				--break \
 			--break \
 			--if "string-length(extraoptions) > 0" \
