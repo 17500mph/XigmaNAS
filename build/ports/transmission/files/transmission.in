@@ -267,7 +267,7 @@ transmission_poststart()
 		--break \
 		${configxml_file} | /usr/local/bin/xml unesc`
 
-	sleep 1; transmission-remote ${_command_args} >/dev/null 2>&1
+	sleep 1; /usr/local/bin/transmission-remote ${_command_args} >/dev/null 2>&1
 }
 
 transmission_updateblocklist()
