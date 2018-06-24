@@ -1,0 +1,11 @@
+--- mps/mps_pci.c.orig	2018-06-18 15:35:21.000026000 +0200
++++ mps/mps_pci.c	2018-06-24 23:41:54.000000000 +0200
+@@ -244,7 +244,7 @@
+ 	int error, msgs;
+ 
+ 	dev = sc->mps_dev;
+-	error = 0;
++	error = ENXIO;
+ 	msgs = 0;
+ 
+ 	if ((sc->disable_msix == 0) &&

@@ -1,0 +1,11 @@
+--- mpr/mpr_pci.c.orig	2018-06-18 15:35:19.409933000 +0200
++++ mpr/mpr_pci.c	2018-06-24 23:58:57.000000000 +0200
+@@ -259,7 +259,7 @@
+ 	int error, msgs;
+ 
+ 	dev = sc->mpr_dev;
+-	error = 0;
++	error = ENXIO;
+ 	msgs = 0;
+ 
+ 	if ((sc->disable_msix == 0) &&
