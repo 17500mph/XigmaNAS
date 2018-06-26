@@ -36,13 +36,13 @@ require_once 'guiconfig.inc';
 
 function disks_zfs_zpool_info_ajax() {
 	if(isset($_GET['pool']) && is_string($_GET['pool'])):
-		$cmd = sprintf('zpool status -v %s 2>&1',escapeshellarg($_GET['pool']));
+		$cmd = sprintf('zpool status -v -T d %s 2>&1',escapeshellarg($_GET['pool']));
 	else:
-		$cmd = 'zpool status -v 2>&1';
+		$cmd = 'zpool status -v -T d 2>&1';
 	endif;
 	unset($output);
 	mwexec2($cmd,$output);
-	$return = htmlspecialchars(implode(PHP_EOL,$output));
+	$return = implode(PHP_EOL,$output);
 	return $return;
 }
 function zfs_get_pool_list(string $entity_name = NULL) {
@@ -53,7 +53,7 @@ function zfs_get_pool_list(string $entity_name = NULL) {
 	endif;
 	unset($output);
 	mwexec2($cmd,$output);
-	$return_data = htmlspecialchars(implode(PHP_EOL,$output));
+	$return_data = implode(PHP_EOL,$output);
 	return $return_data;
 }
 function zfs_get_pool_properties(string $entity_name = NULL) {
@@ -69,7 +69,7 @@ function zfs_get_pool_properties(string $entity_name = NULL) {
 		$cmd = sprintf('zpool get all %s 2>&1',$names);
 		unset($output);
 		mwexec2($cmd,$output);
-		$return_data = htmlspecialchars(implode(PHP_EOL,$output));
+		$return_data = implode(PHP_EOL,$output);
 	else:
 		$output = [gtext('No volume information available.')];
 		$return_data = implode(PHP_EOL,$output);
@@ -150,7 +150,7 @@ if(isset($entity_name)):
 			<tr>
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
-					<pre><span id="zfs_pool_list"><?=zfs_get_pool_list($entity_name);?></span></pre>
+					<pre><span id="zfs_pool_list"><?=htmlspecialchars(zfs_get_pool_list($entity_name),ENT_QUOTES | ENT_HTML5,NULL,false);?></span></pre>
 				</td>
 			</tr>
 		</tbody>
@@ -174,7 +174,7 @@ if(isset($entity_name)):
 			<tr>
 				<td class="celltag"><?=gtext('Properties');?></td>
 				<td class="celldata">
-					<pre><span id="zfs_get_pool_properties"><?=zfs_get_pool_properties($entity_name);?></span></pre>
+					<pre><span id="zfs_get_pool_properties"><?=htmlspecialchars(zfs_get_pool_properties($entity_name),ENT_QUOTES | ENT_HTML5,NULL,false);?></span></pre>
 				</td>
 			</tr>
 		</tbody>
@@ -196,7 +196,7 @@ else:
 			<tr>
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
-					<pre><span id="area_refresh"><?=disks_zfs_zpool_info_ajax();?></span></pre>
+					<pre><span id="area_refresh"><?=htmlspecialchars(disks_zfs_zpool_info_ajax(),ENT_QUOTES | ENT_HTML5,NULL,false);?></span></pre>
 				</td>
 			</tr>
 		</tbody>
@@ -207,4 +207,3 @@ endif;
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
