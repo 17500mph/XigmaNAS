@@ -155,6 +155,6 @@ if($cmd_system_reboot):
 	ob_flush();
 	flush();
 	sleep(5);
-//	system_reboot();
+	system_reboot();
 endif;
 ?>
