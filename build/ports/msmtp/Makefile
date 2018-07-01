@@ -1,11 +1,11 @@
 PORTNAME=		msmtp
-PORTVERSION=	1.6.6
+PORTVERSION=	1.6.8
 PORTREVISION=	0
 CATEGORIES=		mail ipv6
 COMMENT=		SMTP client
 MAINTAINER=		zoon1@nas4free.org
 
-MASTER_SITES=	SF
+MASTER_SITES=   https://marlam.de/msmtp/releases/
 
 GNU_CONFIGURE=	yes
 USES=		gmake makeinfo pkgconfig tar:xz
