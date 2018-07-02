@@ -135,7 +135,11 @@ function ctl_sub_port_selection($cop,$sphere) {
 	$table = $content->add_table_data_selection();
 	$table->ins_colgroup_with_styles('width',$a_col_width);
 	$thead = $table->addTHEAD();
-	$tbody = $table->addTBODY();
+	if($record_exists):
+		$tbody = $table->addTBODY();
+	else:
+		$tbody = $table->addTBODY(['class' => 'donothighlight']);
+	endif;
 	$tfoot = $table->addTFOOT();
 	$thead->ins_titleline(gtext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
