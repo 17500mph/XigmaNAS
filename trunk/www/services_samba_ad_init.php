@@ -83,7 +83,7 @@ foreach($config['system']['ipv6dnsserver'] as $dnsserver):
 		break; // break loop
 	endif;
 endforeach;
-if(!dns_configured):
+if(!$dns_configured):
 	$errormsg .= gtext('No DNS server have been configured.');
 	$errormsg .= '<br/>';
 endif;
