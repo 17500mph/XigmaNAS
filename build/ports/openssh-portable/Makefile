@@ -1,6 +1,6 @@
 PORTNAME=		openssh-portable
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=		security
 COMMENT=		The portable version of OpenBSD's OpenSSH
 MAINTAINER=		zoon1@nas4free.org
@@ -19,10 +19,10 @@ DISABLE_VULNERABILITIES=yes
 BUILD_DEPENDS=	${NONEXISTENT}:security/openssh-portable
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work/openssh-*/sshd ${NAS4FREE_ROOTFS}/usr/sbin
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work/openssh-*/ssh ${NAS4FREE_ROOTFS}/usr/bin
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work/openssh-*/sftp-server ${NAS4FREE_ROOTFS}/usr/libexec
-	@${CP} -pv ${PORTSDIR}/security/openssh-portable/work/openssh-*/moduli ${NAS4FREE_ROOTFS}/etc/ssh
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/sshd ${NAS4FREE_ROOTFS}/usr/sbin
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/ssh ${NAS4FREE_ROOTFS}/usr/bin
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/sftp-server ${NAS4FREE_ROOTFS}/usr/libexec
+	@${CP} -pv ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/moduli ${NAS4FREE_ROOTFS}/etc/ssh
 
 # Create link to moduli file to prevent log entry:
 # WARNING: /usr/local/etc/ssh/moduli does not exist, using fixed modulus
