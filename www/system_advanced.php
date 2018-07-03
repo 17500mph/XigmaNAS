@@ -109,6 +109,9 @@ function sysctl_tune($mode) {
 			break;
 	endswitch;
 }
+function get_sysctl_kern_vty() {
+	return trim(`/sbin/sysctl -n kern.vty`);
+}
 function get_sphere_system_advanced() {
 	global $config;
 	
@@ -119,6 +122,7 @@ function get_sphere_system_advanced() {
 //	init properties and sphere
 $cop = new properties_system_advanced();
 $sphere = &get_sphere_system_advanced();
+$is_sc = 'sc' == get_sysctl_kern_vty();
 //	ensure boolean parameter are set properly
 //	take the value of the parameter if its type is bool
 //	set value to true if the parameter exists and is not NULL
@@ -140,8 +144,10 @@ $pconfig['pwmode'] = $config['system']['pwmode'];
 $pconfig['pwmax'] = !empty($config['system']['pwmax']) ? $config['system']['pwmax'] : "";
 $pconfig['pwmin'] = !empty($config['system']['pwmin']) ? $config['system']['pwmin'] : "";
 $pconfig['motd'] = str_replace(chr(27),'&#27;',base64_decode($config['system']['motd'] ?? ''));
-$pconfig['sysconsaver'] = isset($config['system']['sysconsaver']['enable']);
-$pconfig['sysconsaverblanktime'] = $config['system']['sysconsaver']['blanktime'];
+if($is_sc):
+	$pconfig['sysconsaver'] = isset($config['system']['sysconsaver']['enable']);
+	$pconfig['sysconsaverblanktime'] = $config['system']['sysconsaver']['blanktime'];
+endif;
 $pconfig['enableserialconsole'] = isset($config['system']['enableserialconsole']);
 
 if($_POST):
@@ -154,12 +160,14 @@ if($_POST):
 		$pconfig['pwmin'] = '';
 	endif;
 	// Input validation.
-	if(isset($_POST['sysconsaver'])):
-		$reqdfields = ['sysconsaverblanktime'];
-		$reqdfieldsn = [gtext('Blank Time')];
-		$reqdfieldst = ['numeric'];
-		do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
-		do_input_validation_type($_POST,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+	if($is_sc):
+		if(isset($_POST['sysconsaver'])):
+			$reqdfields = ['sysconsaverblanktime'];
+			$reqdfieldsn = [gtext('Blank Time')];
+			$reqdfieldst = ['numeric'];
+			do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
+			do_input_validation_type($_POST,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
+		endif;
 	endif;
 	if(isset($_POST['powerd'])):
 		$reqdfields = ['pwmax','pwmin'];
@@ -248,8 +256,10 @@ if($_POST):
 		$config['system']['pwmax'] = $_POST['pwmax'];
 		$config['system']['pwmin'] = $_POST['pwmin'];
 		$config['system']['motd'] = base64_encode(str_replace('&#27;',chr(27),$_POST['motd'] ?? '')); // Encode string, otherwise line breaks will get lost
-		$config['system']['sysconsaver']['enable'] = $cop->sysconsaver->validate_input();
-		$config['system']['sysconsaver']['blanktime'] = $_POST['sysconsaverblanktime'];
+		if($is_sc):
+			$config['system']['sysconsaver']['enable'] = $cop->sysconsaver->validate_input();
+			$config['system']['sysconsaver']['blanktime'] = $_POST['sysconsaverblanktime'];
+		endif;
 		$config['system']['enableserialconsole'] = $cop->enableserialconsole->validate_input();
 		//	adjust power mode
 		$pwmode = $config['system']['pwmode'];
@@ -303,13 +313,25 @@ $(window).on("load", function() {
 	$("#iform").submit(function() { spinner(); });
 <?php	// Init click events?>
 	$("#powerd").on("click",function(){ powerd_change(); });
+<?php
+if($is_sc):
+?>
 	$("#sysconsaver").on("click",function(){ sysconsaver_change() });
+<?php
+endif;
+?>
 });
 function enable_change(enable_change) {
 	var endis = !(enable_change);
 	document.iform.pwmax.disabled = endis;
 	document.iform.pwmin.disabled = endis;
+<?php
+if($is_sc):
+?>
 	document.iform.sysconsaverblanktime.disabled = endis;
+<?php
+endif;
+?>
 }
 function powerd_change() {
 	switch (document.iform.powerd.checked) {
@@ -325,6 +347,9 @@ function powerd_change() {
 			break;
 	}
 }
+<?php
+if($is_sc):
+?>
 function sysconsaver_change() {
 	switch (document.iform.sysconsaver.checked) {
 		case true:
@@ -335,6 +360,9 @@ function sysconsaver_change() {
 			break;
 	}
 }
+<?php
+endif;
+?>
 //]]>
 </script>
 <?php
@@ -444,9 +472,13 @@ $document->render();
 			$node = new co_DOMDocument();
 			$node->c2_checkbox($cop->disableconsolemenu,!empty($pconfig['disableconsolemenu']));
 			$node->c2_checkbox($cop->enableserialconsole,!empty($pconfig['enableserialconsole']));
-			$node->c2_checkbox($cop->sysconsaver,!empty($pconfig['sysconsaver']));
+			if($is_sc):
+				$node->c2_checkbox($cop->sysconsaver,!empty($pconfig['sysconsaver']));
+			endif;
 			$node->render();
-			html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
+			if($is_sc):
+				html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
+			endif;
 			$n_rows = min(64,max(8,1 + substr_count($pconfig['motd'],PHP_EOL)));
 			html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,$n_rows,false,false);
 ?>
@@ -461,7 +493,13 @@ $document->render();
 </td></tr></tbody></table></form>
 <script type="text/javascript">
 //<![CDATA[
+<?php
+if($is_sc):
+?>
 sysconsaver_change();
+<?php
+endif;
+?>
 powerd_change();
 //]]>
 </script>
