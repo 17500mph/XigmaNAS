@@ -270,7 +270,7 @@ if(isset($config['rrdgraphs']['enable'])):
 			" -s 300" .
 			" 'DS:charge:GAUGE:600:U:U'" .
 			" 'DS:load:GAUGE:600:U:U'" .
-			" 'DS:bvoltage:GAUGE:600:U:U'" .
+			" 'DS:ovoltage:GAUGE:600:U:U'" .
 			" 'DS:ivoltage:GAUGE:600:U:U'" .
 			" 'DS:runtime:GAUGE:600:U:U'" .
 			" 'DS:OL:GAUGE:600:U:U'" .
