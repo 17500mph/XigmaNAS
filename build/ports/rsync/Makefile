@@ -5,11 +5,9 @@ CATEGORIES=		net
 COMMENT=		A network file distribution/sync utility
 MAINTAINER=		zoon1@nas4free.org
 
-MASTER_SITES=		http://rsync.samba.org/ftp/%SUBDIR%/ \
-							ftp://ftp.samba.org/pub/%SUBDIR%/ \
-							ftp://ftp.sunet.se/pub/unix/admin/%SUBDIR%/  \
+MASTER_SITES=		https://rsync.samba.org/ftp/%SUBDIR%/ \
 							ftp://ftp.fu-berlin.de/pub/unix/network/%SUBDIR%/ \
-							http://www.mirrorservice.org/sites/rsync.samba.org/ \
+							https://www.mirrorservice.org/sites/rsync.samba.org/ \
 							CRITICAL
 MASTER_SITE_SUBDIR=	rsync
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
