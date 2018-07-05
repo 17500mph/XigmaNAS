@@ -193,7 +193,7 @@ function install_dd_image($harddrive) {
 	return 0;
 }
 
-//	Install NAS4Free on the destination harddrive.
+//	Install XigmaNAS on the destination harddrive.
 //	Return 0 if successful, otherwise 1
 function install_harddrive_image($harddrive) {
 	global $g;
@@ -331,7 +331,7 @@ EOD;
 	return 0;
 }
 
-//	Upgrade a NAS4Free 'full' release on the destination harddrive.
+//	Upgrade a XigmaNAS 'full' release on the destination harddrive.
 //	Return 0 if successful, otherwise 1
 function install_upgrade_full($harddrive) {
 	global $g;

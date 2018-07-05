@@ -18,7 +18,7 @@ NO_PKG_REGISTER=	yes
 WWWDIR=${PREFIX}/www/novnc
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${MKDIR} -p ${XIGMANAS_ROOTFS}${WWWDIR}
 	@${CP} -Rpv ${WRKSRC}/app ${XIGMANAS_ROOTFS}${WWWDIR}

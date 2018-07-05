@@ -12,7 +12,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/go:lang/go
 USE_GITHUB=	yes
 GH_SUBDIR=      src/github.com/${PORTNAME}/${PORTNAME}
 USE_RC_SUBR=	syncthing
-# NAS4Free
+# XigmaNAS
 #PLIST_FILES=	bin/syncthing
 PORTDOCS=	*
 
@@ -21,7 +21,7 @@ GROUPS=		syncthing
 
 STRIP=		# stripping can break go binaries
 
-# NAS4Free
+# XigmaNAS
 NO_PKG_REGISTER= yes
 
 .include <bsd.port.pre.mk>
@@ -31,7 +31,7 @@ do-build:
 		${SETENV} go run build.go -no-upgrade=true -version v${PORTVERSION}
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/github.com/${PORTNAME}/${PORTNAME}/bin/syncthing \
 		${XIGMANAS_ROOTFS}${PREFIX}/bin/

@@ -17,7 +17,7 @@ BUILD_DEPENDS=		${NONEXISTENT}:${PORTSDIR}/security/ca_root_nss
 DEP_STAGEDIR=		${PORTSDIR}/security/ca_root_nss/work/stage
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${MKDIR} -p ${XIGMANAS_ROOTFS}/usr/local/etc/ssl
 	@${INSTALL_DATA} -v ${DEP_STAGEDIR}${PREFIX}/etc/ssl/cert.pem.sample ${XIGMANAS_ROOTFS}/usr/local/etc/ssl/cert.pem

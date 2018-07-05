@@ -35,7 +35,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the XigmaNAS Project.
 */
-// NAS4Free Code
+// XigmaNAS Code
 // footer for html-page
 function show_footer() {
 	global $d_sysrebootreqd_path;

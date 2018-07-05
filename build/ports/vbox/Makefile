@@ -19,7 +19,7 @@ DEP_STAGEDIR=	${PORTSDIR}/emulators/virtualbox-ose/work/stage
 KMOD_STAGEDIR=	${PORTSDIR}/emulators/virtualbox-ose-kmod/work/stage
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 # kmod
 .for file in vboxdrv.ko vboxnetadp.ko vboxnetflt.ko

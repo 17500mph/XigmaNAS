@@ -6,8 +6,8 @@
 ============== SUMMARY =========
 
 1. Files and directories listing
-2. Generate an NAS4Free ISO or IMG  file
-3. Building NAS4Free from the latest sources
+2. Generate an XigmaNAS ISO or IMG  file
+3. Building XigmaNAS from the latest sources
 4. Building the kernel
 
 ================================
@@ -18,7 +18,7 @@
 - /nas4free/svn: Contains all released files and scripts
 
 ================================
-2. Generate an NAS4Free ISO or IMG file
+2. Generate an XigmaNAS ISO or IMG file
 
 Copy make.conf to /etc.
 
@@ -48,13 +48,13 @@ Now install the following ports:
 Start /nas4free/svn/build/make.sh and follow the steps.
 
 =================================
-3. Building NAS4Free from the latest sources (normally possible with make.sh)
+3. Building XigmaNAS from the latest sources (normally possible with make.sh)
 
-Here is how to build NAS4Free from the latest sources:
+Here is how to build XigmaNAS from the latest sources:
 
 - It's really important to use only root user-account on your FreeBSD installed development system!
 
-3.1 Update your NAS4Free scripts/WebGUI code with the SVN:
+3.1 Update your XigmaNAS scripts/WebGUI code with the SVN:
 (this creates the svn directory)
 
 - cd /usr/local/nas4free
@@ -76,7 +76,7 @@ portsnap fetch update
 
 svn/build/make.sh
 
-Execute all menus in '2' - Compile NAS4Free from Scratch' to compile your NAS4Free sources from scratch.
+Execute all menus in '2' - Compile XigmaNAS from Scratch' to compile your XigmaNAS sources from scratch.
 When all is done, use one of the following options:
 
 10 - Create 'Embedded.img.xz' File. (Firmware Update)

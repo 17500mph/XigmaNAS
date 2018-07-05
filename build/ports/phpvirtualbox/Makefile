@@ -10,7 +10,7 @@ LICENSE=	GPLv3
 NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		dos2unix php
-# NAS4Free
+# XigmaNAS
 #USE_PHP=	json session soap simplexml xml
 
 USE_GITHUB=	yes
@@ -28,7 +28,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config.php-example \
 	    ${STAGEDIR}${WWWDIR}/config.php.sample
 
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${RM} -f ${STAGEDIR}${WWWDIR}/*.txt
 	#@${MKDIR} -p ${XIGMANAS_ROOTFS}${WWWDIR}

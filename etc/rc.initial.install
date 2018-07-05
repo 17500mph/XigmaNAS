@@ -17,7 +17,7 @@ trap "rm -f $tmpfile" 0 1 2 5 15
 # Endless loop
 while : ; do
     if [ "${XARCH}" != "dom0" ]; then
-	cdialog --clear --title "NAS4Free Install & Upgrade Menu" --cancel-label "Exit" --menu "" 13 67 10 \
+	cdialog --clear --title "XigmaNAS Install & Upgrade Menu" --cancel-label "Exit" --menu "" 13 67 10 \
 		"1" "Install 'Embedded' OS on HDD/SSD/CF/USB (Preferred)" \
 		"2" "Upgrade 'Embedded' OS from LiveCD/LiveUSB" \
 		"-" "----------------------------------------------------------" \
@@ -26,7 +26,7 @@ while : ; do
 		"5" "Upgrade & Convert 'Full' OS to 'Embedded' installation" \
 		"6" "Launch Advanced ZFS Installer Options (For Expert)" 2> $tmpfile
     else
-	cdialog --clear --title "NAS4Free Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 8 67 3 \
+	cdialog --clear --title "XigmaNAS Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 8 67 3 \
 		"1" "Install 'Embedded' OS on HDD/SSD/CF/USB (Preferred)" \
 		"2" "Upgrade 'Embedded' OS from LiveCD/LiveUSB" 2> $tmpfile
     fi

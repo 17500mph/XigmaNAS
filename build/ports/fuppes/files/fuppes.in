@@ -50,7 +50,7 @@ fuppes_template_vfolder_dir=${fuppes_template_vfolder_dir:-"/usr/local/share/${n
 fuppes_device_dir=${fuppes_device_dir:-"/var/db/${name}/devices"}
 fuppes_vfolder_dir=${fuppes_vfolder_dir:-"/var/db/${name}/vfolders"}
 fuppes_custom_config=${fuppes_custom_config:-"/usr/local/share/${name}/${name}-custom.cfg"}
-fuppes_friendly_name=${fuppes_friendly_name:-"NAS4Free (%h)"}
+fuppes_friendly_name=${fuppes_friendly_name:-"XigmaNAS (%h)"}
 
 command="/usr/local/bin/${name}d"
 command_args="--config-file ${fuppes_config} --log-level ${fuppes_loglevel} --log-file ${fuppes_logfile} --plugin-dir ${fuppes_plugin_dir} --friendly-name \"${fuppes_friendly_name}\""

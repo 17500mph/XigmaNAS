@@ -36,7 +36,7 @@
 	either expressed or implied, of the XigmaNAS Project.
 */
 /*------------------------------------------------------------------------------
-			QuiXplorer v2.5.8 Modified for NAS4Free
+			QuiXplorer v2.5.8 Modified for XigmaNAS
 ------------------------------------------------------------------------------*/
 
 umask(002); // Added to make created files/dirs group writable

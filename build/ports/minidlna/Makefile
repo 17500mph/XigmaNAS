@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-db-path=/var/db/minidlna \
 		--with-os-url="https://www.nas4free.org"
 CPPFLAGS+=	-I${LOCALBASE}/include
-CFLAGS+=	-DNAS4Free
+CFLAGS+=	-DXigmaNAS
 LIBS+=		-L${LOCALBASE}/lib
 USES=		autoreconf gettext-tools iconv jpeg
 
@@ -45,7 +45,7 @@ NLS_USES=	gettext-runtime
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue-n4f
 .endif
 
-# NAS4Free
+# XigmaNAS
 NO_PKG_REGISTER=	yes
 ICONSDIR=${MASTERDIR}/icons
 N4F_ICONS=${WRKSRC}/nas4free-icons.c
@@ -59,7 +59,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/*.8 ${STAGEDIR}${MANPREFIX}/man/man8/
 	${INSTALL_DATA} ${WRKSRC}/minidlna.conf ${STAGEDIR}${PREFIX}/etc/minidlna.conf.sample
 
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/minidlnad ${XIGMANAS_ROOTFS}/usr/local/sbin
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/minidlna.in ${XIGMANAS_ROOTFS}/etc/rc.d/minidlna

@@ -17,7 +17,7 @@ BUILD_DEPENDS=		${NONEXISTENT}:security/sudo
 DEP_STAGEDIR=		${PORTSDIR}/security/sudo/work/stage
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_PROGRAM} -m 4755 -v ${DEP_STAGEDIR}${PREFIX}/bin/sudo ${XIGMANAS_ROOTFS}/usr/local/bin
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/sudoreplay ${XIGMANAS_ROOTFS}/usr/local/bin

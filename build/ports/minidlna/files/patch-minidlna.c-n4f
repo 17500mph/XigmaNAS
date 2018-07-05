@@ -4,7 +4,7 @@
  		}
  	}
  	fclose(info);
-+#elif defined(NAS4Free)
++#elif defined(XigmaNAS)
 +	FILE *fp_name, *fp_platform;
 +	char tmpbuf[64], tmpbuf2[64], *name, *platform;
 +	name = platform = NULL;

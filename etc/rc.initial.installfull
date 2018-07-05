@@ -51,7 +51,7 @@ $result = tui_display_menu("{$productname} Full Install Options Menu", "", 68, 9
 if (0 != $result)
 	exit(0);
 
-// NAS4Free Full install options.
+// XigmaNAS Full install options.
 if ( $installopt == 1 ) { 
 	require_once ("/etc/rc.initial.install3gpt");
 }

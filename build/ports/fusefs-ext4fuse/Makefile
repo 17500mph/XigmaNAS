@@ -25,7 +25,7 @@ PLIST_FILES=	bin/ext4fuse
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/ext4fuse ${XIGMANAS_ROOTFS}/usr/local/bin
 

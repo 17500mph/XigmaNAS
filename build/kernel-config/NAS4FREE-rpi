@@ -114,7 +114,7 @@ options 	FDT			# Configure using FDT/DTB data
 #makeoptions	FDT_DTS_FILE=rpi.dts
 #makeoptions	MODULES_EXTRA="dtb/rpi rpi_ft5406"
 
-# NAS4Free
+# XigmaNAS
 device		vlan			# 802.1Q VLAN support
 device		tun			# Packet tunnel.
 device		gif			# IPv6 and IPv4 tunneling

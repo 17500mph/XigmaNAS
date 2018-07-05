@@ -55,7 +55,7 @@ $result = tui_display_menu("{$productname} Embedded Install Options Menu", "", 6
 if (0 != $result)
 	exit(0);
 
-// NAS4Free Embedded install options.
+// XigmaNAS Embedded install options.
 if ( $installopt == 1 ) { 
 	require_once ("/etc/rc.initial.install2gpt");
 }
