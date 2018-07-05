@@ -3,7 +3,7 @@ PORTVERSION=		0.5.2
 CATEGORIES=		sysutils
 COMMENT=		Memory Disk driver by Daisuke Aoyama (aoyama@peach.ne.jp)
 
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 MASTER_SITES=		http://www.peach.ne.jp/archives/nas4free/xmd/
 
 #NO_BUILD=		yes

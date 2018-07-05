@@ -2,7 +2,7 @@ PORTNAME=		tftp-hpa
 PORTVERSION=	5.2
 CATEGORIES=		ftp
 COMMENT=		An advanced tftp server
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=	ftp://ftp.kernel.org/pub/software/network/tftp/tftp-hpa/
 

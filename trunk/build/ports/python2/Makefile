@@ -4,7 +4,7 @@ PORTREVISION=		5
 CATEGORIES=		lang python
 
 COMMENT=		Interpreted object-oriented programming language
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 USES=			python:run
 

@@ -4,7 +4,7 @@ PORTREVISION?=	0
 CATEGORIES=	sysutils
 MASTER_SITES=	SAVANNAH
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	A tool for dumping DMI (SMBIOS) contents in human-readable format
 
 EXTRACT_SUFX= .tar.xz

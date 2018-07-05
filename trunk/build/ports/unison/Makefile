@@ -3,7 +3,7 @@ PORTVERSION=	2.51.2
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
 COMMENT=	A user-level file synchronization tool
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 USES=		gmake

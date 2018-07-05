@@ -3,7 +3,7 @@ PORTVERSION=	1.4.49
 PORTREVISION=	0
 CATEGORIES=		www
 COMMENT=		A secure, fast, compliant, and very flexible Web Server
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 

@@ -2,7 +2,7 @@ PORTNAME=	php72-APCu
 PORTREVISION=	1
 CATEGORIES=	devel
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	APC User Caching
 
 DISTFILES?=

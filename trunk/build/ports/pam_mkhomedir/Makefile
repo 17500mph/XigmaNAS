@@ -3,7 +3,7 @@ PORTVERSION=	1.0
 PORTREVISION=	1
 CATEGORIES=		security
 COMMENT=		Create HOME with a PAM module on demand
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 # No files are needed to be fetched.
 DISTFILES?=

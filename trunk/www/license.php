@@ -58,7 +58,7 @@ include 'fbegin.inc';
 				<td class="lcebl">
 <p>
 <strong>
-XigmaNAS is Copyright © 2018 The XigmaNAS Project (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
+XigmaNAS is Copyright © 2018 The XigmaNAS Project (<a href="mailto:info@xigmanas.com">info@xigmanas.com</a>).<br />
 All Rights Reserved.
 </strong>
 </p>
@@ -98,13 +98,13 @@ not be interpreted as representing official policies, either expressed or implie
 	</table>
 <?php
 	$grid = [
-		['Daisuke Aoyama','aoyama@nas4free.org','Developer'],
-		['Michael Schneider','ms49434@nas4free.org','Developer'],
-		['Michael Zoon','zoon1@nas4free.org','Developer & Project Lead'],
+		['Daisuke Aoyama','aoyama@xigmanas.com','Developer'],
+		['Michael Schneider','ms49434@xigmanas.com','Developer'],
+		['Michael Zoon','zoon01@xigmanas.com','Developer & Project Lead'],
 		['José Rivera','joserprg@gmail.com','Contributor'],
 		['Andreas Schmidhuber','a.schmidhuber@gmail.com','Contributor'],
-		['Tony Cat','tony1@nas4free.org','User guide and Live support on irc #nas4free (tony1)'],
-		['Rhett Hillary','siftu@nas4free.org','User guide and Live support on irc #nas4free (siftu)'],
+		['Tony Cat','tony1@xigmanas.com','User guide and Live support on irc #nas4free (tony1)'],
+		['Rhett Hillary','siftu@xigmanas.com','User guide and Live support on irc #nas4free (siftu)'],
 		['Vicente Soriano Navarro','victek@gmail.com','Catalan translator of the WebGUI'],
 		['Alex Lin','linuxant@gmail.com','Chinese translator of the WebGUI'],
 		['Zhu Yan','tianmotrue@163.com','Chinese translator of the WebGUI'],

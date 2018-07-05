@@ -4,7 +4,7 @@ PORTREVISION=		1
 CATEGORIES=		sysutils
 
 COMMENT=		Enable shell scripts to monitor directories for new files
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

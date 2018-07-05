@@ -3,7 +3,7 @@ PORTVERSION=	878.30.4
 PORTREVISION=	0
 CATEGORIES=	net dns
 COMMENT=	Apple's mDNSResponder
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 
 MASTER_SITES=	http://www.opensource.apple.com/tarballs/mDNSResponder/
 DISTNAME=	${PORTNAME}-${PORTVERSION}

@@ -3,7 +3,7 @@ PORTVERSION=	2.94
 PORTREVISION=	0
 CATEGORIES?=	net-p2p
 COMMENT=	Fast and lightweight CLI BitTorrent client
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 
 MASTER_SITES=   https://github.com/transmission/transmission-releases/raw/master/ \
 		http://transmission.cachefly.net/

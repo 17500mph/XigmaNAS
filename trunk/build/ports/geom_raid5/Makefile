@@ -4,7 +4,7 @@ PORTVERSION=	1.3
 PORTREVISION?=  1
 CATEGORIES=		sysutils
 COMMENT=		GEOM RAID5 filesystem
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 DISTFILES?=
 NO_BUILD?=	yes

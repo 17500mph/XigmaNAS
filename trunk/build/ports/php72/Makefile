@@ -3,7 +3,7 @@ PORTVERSION=	7.2.7
 PORTREVISION=	0
 CATEGORIES=		lang
 COMMENT=		PHP7 Scripting Language
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=		${MASTER_SITE_PHP:S,$,:release,}
 MASTER_SITE_SUBDIR=	distributions/:release

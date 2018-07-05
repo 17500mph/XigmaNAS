@@ -4,7 +4,7 @@ PORTREVISION=		1
 CATEGORIES=		sysutils
 
 COMMENT=		SCSI/firewire harddrive spindown daemon
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

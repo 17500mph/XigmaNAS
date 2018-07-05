@@ -5,7 +5,7 @@ CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
 
-MAINTAINER?=			zoon1@nas4free.org
+MAINTAINER?=			zoon01@xigmanas.com
 COMMENT?=			Free SMB/CIFS and AD/DC server and client for Unix
 
 # XigmaNAS contains license files

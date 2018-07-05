@@ -2,7 +2,7 @@ PORTNAME=		zoneinfo
 DISTVERSION=	2018e
 CATEGORIES=		misc
 COMMENT=		Updated timezone definitions
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=   	ftp://ftp.iana.org/tz/releases/ \
 					ftp://munnari.oz.au/pub/

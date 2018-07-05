@@ -2,7 +2,7 @@ PORTNAME=		istgt
 PORTVERSION=		20180521
 CATEGORIES=		net
 COMMENT=		Implementation of userland ISCSI target
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 MASTER_SITES=		http://www.peach.ne.jp/archives/istgt/
 

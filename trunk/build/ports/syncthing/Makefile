@@ -4,7 +4,7 @@ PORTREVISION=	0
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	Encrypted file sync tool
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/go:lang/go

@@ -4,7 +4,7 @@ PORTVERSION=            4.4.${PATCHLEVEL:S/^0//g}
 PORTREVISION?=	0
 CATEGORIES=		shells
 COMMENT=		GNU Project's Bourne Again SHell
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=		GNU/${PORTNAME}
 DISTNAME=		${PORTNAME}-${PORTVERSION:R}
