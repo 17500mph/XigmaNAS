@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Part of XigmaNAS (http://www.xigmanas.com).
-# Copyright (c) 2012-2015 The XigmaNAS Project <info@xigmanas.com>.
+# Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
 # All rights reserved.
 
 PNG_S="xigmanas_icon_s.png"
