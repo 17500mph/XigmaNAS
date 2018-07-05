@@ -2,7 +2,7 @@
 /*
 	header.php
 
-	Part of XigmaNAS (https://www.nas4free.org).
+	Part of XigmaNAS (https://www.xigmanas.com).
 	Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
 	All rights reserved.
 

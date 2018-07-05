@@ -17,7 +17,7 @@ LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-db-path=/var/db/minidlna \
-		--with-os-url="https://www.nas4free.org"
+		--with-os-url="https://www.xigmanas.com"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-DXigmaNAS
 LIBS+=		-L${LOCALBASE}/lib
