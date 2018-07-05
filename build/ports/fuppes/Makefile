@@ -55,7 +55,7 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src__lib__Common__Common.cpp \
 
 pre-patch:
 .if ${ARCH} == "amd64" || ${ARCH} == "i386"
-	${CP} ${FILESDIR}/extra-patch-ffmpeg-configure-n4f ${PORTSDIR}/multimedia/ffmpeg/files/patch-configure-n4f
+	${CP} ${FILESDIR}/extra-patch-ffmpeg-configure-xigmanas ${PORTSDIR}/multimedia/ffmpeg/files/patch-configure-xigmanas
 .endif
 
 pre-configure:

@@ -42,17 +42,17 @@ NLS_USES=	gettext-runtime
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKQUEUE}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue-n4f
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue-xigmanas
 .endif
 
 # XigmaNAS
 NO_PKG_REGISTER=	yes
 ICONSDIR=${MASTERDIR}/icons
-N4F_ICONS=${WRKSRC}/xigmanas-icons.c
+XIGMANAS_ICONS=${WRKSRC}/xigmanas-icons.c
 
 post-configure:
 	@echo "creating icon file..."
-	@(cd ${ICONSDIR}; sh mkicons.sh > ${N4F_ICONS})
+	@(cd ${ICONSDIR}; sh mkicons.sh > ${XIGMANAS_ICONS})
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/*.5 ${STAGEDIR}${MANPREFIX}/man/man5/

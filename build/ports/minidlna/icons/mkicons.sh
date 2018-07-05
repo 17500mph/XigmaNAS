@@ -4,10 +4,10 @@
 # Copyright (c) 2012-2015 The XigmaNAS Project <info@xigmanas.com>.
 # All rights reserved.
 
-PNG_S="n4f_icon_s.png"
-PNG_L="n4f_icon_l.png"
-JPG_S="n4f_icon_s.jpg"
-JPG_L="n4f_icon_l.jpg"
+PNG_S="xigmanas_icon_s.png"
+PNG_L="xigmanas_icon_l.png"
+JPG_S="xigmanas_icon_s.jpg"
+JPG_L="xigmanas_icon_l.jpg"
 
 bin2chex()
 {
