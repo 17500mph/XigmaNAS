@@ -64,7 +64,7 @@ post-stage:
 .endif
 
 post-install:
-# NAS4Free install
+# XigmaNAS install
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${XIGMANAS_ROOTFS}/etc/rc.d/${PORTNAME}
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/msmtp ${XIGMANAS_ROOTFS}/usr/local/bin
 

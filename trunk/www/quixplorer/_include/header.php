@@ -2,7 +2,7 @@
 /*
 	header.php
 
-	Part of NAS4Free (https://www.nas4free.org).
+	Part of XigmaNAS (https://www.nas4free.org).
 	Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
 	All rights reserved.
 
@@ -86,7 +86,7 @@ function show_header($title, $additional_header_content = null) {
 		endif;
 	endif;
 	echo '</head>',PHP_EOL;
-	// NAS4Free Header
+	// XigmaNAS Header
 	echo '<body id="main">',PHP_EOL;
 	echo '<div id="spinner_main"></div>',PHP_EOL;
 	echo '<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>',PHP_EOL;

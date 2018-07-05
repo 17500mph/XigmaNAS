@@ -16,10 +16,10 @@
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
 
-	THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT ``AS IS'' AND ANY
+	THIS SOFTWARE IS PROVIDED BY THE XigmaNAS PROJECT ``AS IS'' AND ANY
 	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-	IN NO EVENT SHALL THE NAS4Free PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR
+	IN NO EVENT SHALL THE XigmaNAS PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR
 	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
 	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
@@ -58,12 +58,12 @@ include 'fbegin.inc';
 				<td class="lcebl">
 <p>
 <strong>
-NAS4Free is Copyright © 2012-2018 The NAS4Free Project (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
+XigmaNAS is Copyright © 2018 The XigmaNAS Project (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
 All Rights Reserved.
 </strong>
 </p>
 <p>
-The compilation of software, code and documentation known as NAS4Free is distributed under the following terms:
+The compilation of software, code and documentation known as XigmaNAS is distributed under the following terms:
 </p>
 <p>
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -77,10 +77,10 @@ Redistributions in binary form must reproduce the above copyright notice, this l
 </li>
 </ol>
 <p>
-THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT "AS IS" AND ANY 
+THIS SOFTWARE IS PROVIDED BY THE XigmaNAS PROJECT "AS IS" AND ANY 
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br />
-IN NO EVENT SHALL THE NAS4Free PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR 
+IN NO EVENT SHALL THE XigmaNAS PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR 
 ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
 (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 

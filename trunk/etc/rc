@@ -34,7 +34,7 @@ ZROOT="zroot"
 MDLOCALSIZE=768m
 SWAPSIZE=512m
 
-# NAS4Free request 2GB for swapless running
+# XigmaNAS request 2GB for swapless running
 mem=`/sbin/sysctl -n hw.physmem`
 mem=`/bin/expr ${mem} / 1024 / 1024`
 BOOT_LOWMEM=0

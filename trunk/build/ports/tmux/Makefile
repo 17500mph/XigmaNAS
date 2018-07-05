@@ -46,7 +46,7 @@ post-configure-LIBEVENT_STATIC-on:
 	${REINPLACE_CMD} -e '/LIBS/s|-levent[^[:blank:]]*|${LESTATIC}|' \
 		${WRKSRC}/${MAKEFILE}
 
-# NAS4Free install
+# XigmaNAS install
 do-install:
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/tmux ${XIGMANAS_ROOTFS}/bin
 

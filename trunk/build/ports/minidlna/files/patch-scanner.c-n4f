@@ -4,7 +4,7 @@
  	if( flag )
  		fclose(flag);
  #endif
-+#ifdef NAS4Free
++#ifdef XigmaNAS
 +#ifndef SCAN_NOTIFY_FILE
 +#define	SCAN_NOTIFY_FILE "/var/run/minidlna/upnp-av.scan"
 +#endif
@@ -19,7 +19,7 @@
  		system("/bin/sh /ramfs/.rescan_done");
  	unlink("/ramfs/.upnp-av_scan");
  #endif
-+#ifdef NAS4Free
++#ifdef XigmaNAS
 +	unlink(SCAN_NOTIFY_FILE);
 +#endif
  }

@@ -7,7 +7,7 @@ MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 MAINTAINER?=	zoon1@nas4free.org
 COMMENT?=	Utilities & library to manipulate ext2/3/4 filesystems
 
-# NAS4Free contains license files
+# XigmaNAS contains license files
 NO_LICENSES_INSTALL=	yes
 NO_LICENSES_DIALOGS=	yes
 
@@ -229,7 +229,7 @@ post-install:
 # the next line closes .if ${MASTERDIR} == ${.CURDIR}
 .endif
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/fsck_ext2fs ${XIGMANAS_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/e2fsck/e2fsck ${XIGMANAS_ROOTFS}/usr/local/sbin

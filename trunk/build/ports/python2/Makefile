@@ -17,10 +17,10 @@ DEPENDS_TARGET=	clean build stage
 BUILD_DEPENDS=		${NONEXISTENT}:lang/python27
 DEP_STAGEDIR=		${PORTSDIR}/lang/python27/work/stage
 
-# To test python, run samba-tool in NAS4Free
+# To test python, run samba-tool in XigmaNAS
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 # bin
 .for file in python2.7

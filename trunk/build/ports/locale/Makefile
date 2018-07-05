@@ -1,7 +1,7 @@
 PORTNAME=		locale
 PORTVERSION=	1.0
 CATEGORIES=		lang
-COMMENT=		Language packages for NAS4Free
+COMMENT=		Language packages for XigmaNAS
 MAINTAINER=		zoon1@nas4free.org
 
 DISTFILES?=

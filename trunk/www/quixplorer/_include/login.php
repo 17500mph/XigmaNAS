@@ -107,11 +107,11 @@ function login ()
             echo "<INPUT name=\"p_user\" type=\"text\" size=\"25\"></TD></TR>\n";
             echo "<TR><TD>".$GLOBALS["messages"]["miscpassword"].":</TD><TD align=\"right\">";
             echo "<INPUT name=\"p_pass\" type=\"password\" size=\"25\"></TD></TR>\n";
-            // NAS4Free Code
+            // XigmaNAS Code
             //Select box and auto language detection array
             echo "<TR><TD>", gtext("Detected Language:"), "<br />", gtext("(Change if needed)"), "</TD><TD align=\"right\">";
             @include "./_lang/_info.php";
-            // End NAS4Free Code
+            // End XigmaNAS Code
             echo "<TR><TD colspan=\"2\" align=\"right\"><INPUT type=\"submit\" value=\"";
             echo $GLOBALS["messages"]["btnlogin"]."\"></TD></TR>\n</FORM></TABLE><BR></CENTER>\n";
             ?><script language="JavaScript1.2" type="text/javascript">

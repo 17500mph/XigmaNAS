@@ -1,4 +1,4 @@
-    COMMENT = NAS4Free ports
+    COMMENT = XigmaNAS ports
 
     SUBDIR += arcconf
     SUBDIR += ataidle

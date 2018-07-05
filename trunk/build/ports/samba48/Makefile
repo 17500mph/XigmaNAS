@@ -8,7 +8,7 @@ DISTNAME=			${SAMBA4_DISTNAME}
 MAINTAINER?=			zoon1@nas4free.org
 COMMENT?=			Free SMB/CIFS and AD/DC server and client for Unix
 
-# NAS4Free contains license files
+# XigmaNAS contains license files
 NO_LICENSES_INSTALL=		yes
 NO_LICENSES_DIALOGS=		yes
 LICENSE=			GPLv3
@@ -91,7 +91,7 @@ OPTIONS_DEFINE=			AD_DC ADS DEBUG DOCS FAM LDAP \
 # Make those default options
 OPTIONS_DEFAULT:=               ${OPTIONS_DEFINE} GSSAPI_BUILTIN
 
-# NAS4Free
+# XigmaNAS
 OPTIONS_DEFAULT+=		NSUPDATE
 
 # This shouldn't be default in the release
@@ -496,7 +496,7 @@ CFLAGS+=			-fno-color-diagnostics
 #.if ${readline_ARGS} == port
 #CFLAGS+=			-D_FUNCTION_DEF
 #.endif
-# NAS4Free
+# XigmaNAS
 .if ${OSVERSION} >= 1100000
 LDFLAGS+=			-lncurses -lmenu -lpanel -lform
 .endif
@@ -516,10 +516,10 @@ SAMBA4_SUB=			SAMBA4_LOGDIR="${SAMBA4_LOGDIR}" \
 PLIST_SUB+=			${SAMBA4_SUB}
 SUB_LIST+=			${SAMBA4_SUB}
 
-# NAS4Free
+# XigmaNAS
 #USE_RC_SUBR=			samba_server
 SUB_FILES=			pkg-message README.FreeBSD
-# NAS4Free
+# XigmaNAS
 #PORTDOCS=			README.FreeBSD
 
 post-extract:
@@ -591,7 +591,7 @@ pre-build-MANDOC-off:
 .	endfor
 .endif
 post-install:
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 # rc/link
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/samba.in ${XIGMANAS_ROOTFS}/etc/rc.d/samba

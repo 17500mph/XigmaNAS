@@ -47,7 +47,7 @@
 
 	Todo:
 	* 	Arguably, a full client install could be done too to
-	allow NAS4Free to NAS4Free syncing.
+	allow XigmaNAS to XigmaNAS syncing.
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';

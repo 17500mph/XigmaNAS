@@ -14,7 +14,7 @@ DEP_STAGEDIR=	${PORTSDIR}/devel/php72-APCu/work-php72/stage
 BUILD_DEPENDS=	${NONEXISTENT}:devel/php72-APCu
 
 do-install:
-# NAS4Free install
+# XigmaNAS install
 	@${CP} -pv ${FILESDIR}/apcu.ini ${XIGMANAS_ROOTFS}/${PREFIX}/etc/php
 	@${MKDIR} ${XIGMANAS_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
 	${INSTALL_DATA} ${DEP_STAGEDIR}/usr/local/lib/php/20170718/apcu.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718

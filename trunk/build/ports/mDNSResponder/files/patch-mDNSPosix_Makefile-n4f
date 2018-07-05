@@ -5,7 +5,7 @@
  	$(FLEX) $(FLEXFLAGS_OS) -i             -o$(OBJDIR)/$*.l.c $<
  	$(CC) $(CFLAGS) -Wno-error -c -o $@ $(OBJDIR)/$*.l.c
 +
-+# NAS4Free
++# XigmaNAS
 +$(OBJDIR)/mDNSPosix.c.o: mDNSPosix.c
 +	$(CC) $(CFLAGS_COMMON) $(CFLAGS_OS) -O0 -DMDNS_DEBUGMSGS=0 -c -o $@ $<
 +

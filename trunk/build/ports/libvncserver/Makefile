@@ -48,7 +48,7 @@ VAAPI_CONFIGURE_WITH=	libva
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/rfb/default8x16.h ${STAGEDIR}${PREFIX}/include/rfb
 
-# NAS4Free install
+# XigmaNAS install
 	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/lib/libvncserver.so.1 ${XIGMANAS_ROOTFS}/usr/local/lib
 # XXX

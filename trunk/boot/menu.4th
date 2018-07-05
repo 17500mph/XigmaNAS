@@ -121,11 +121,11 @@ variable vmguest
 	clear
 	77 20 2 2 box
 	45 3 display-logo
-	5 7 at-xy ." Welcome to NAS4Free!"
-	printmenuitem ."  Boot NAS4Free in Normal Mode" bootkey !
+	5 7 at-xy ." Welcome to XigmaNAS!"
+	printmenuitem ."  Boot XigmaNAS in Normal Mode" bootkey !
 	s" arch-i386" environment? if
 		drop
-		printmenuitem ."  Boot NAS4Free with ACPI " bootacpikey !
+		printmenuitem ."  Boot XigmaNAS with ACPI " bootacpikey !
 		acpienabled? if
 			." disabled"
 		else
@@ -134,8 +134,8 @@ variable vmguest
 	else
 		-2 bootacpikey !
 	then
-	printmenuitem ."  Boot NAS4Free in Safe Mode" bootsafekey !
-	printmenuitem ."  Boot NAS4Free with verbose logging" bootverbosekey !
+	printmenuitem ."  Boot XigmaNAS in Safe Mode" bootsafekey !
+	printmenuitem ."  Boot XigmaNAS with verbose logging" bootverbosekey !
 	printmenuitem ."  Escape to loader prompt" escapekey !
 	printmenuitem ."  Reboot system" rebootkey !
 	menuX @ 20 at-xy

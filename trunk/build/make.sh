@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# This script is designed to automate the assembly of NAS4Free builds.
+# This script is designed to automate the assembly of XigmaNAS builds.
 #
 # Part of XigmaNAS (http://www.xigmanas.com).
 # Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
@@ -1997,7 +1997,7 @@ ${XIGMANAS_PRODUCTNAME} Build Environment
 --------------------------
 
 1  - Update NAS4FREE Source Files to CURRENT.
-2  - NAS4Free Compile Menu.
+2  - XigmaNAS Compile Menu.
 10 - Create 'Embedded.img.xz' File. (Firmware Update)
 11 - Create 'LiveUSB.img.gz' File. (Rawrite to USB Key)
 12 - Create 'LiveCD' (ISO) File.

@@ -4,7 +4,7 @@
    string lsData;
    string lsConfig;
    
-+  // for NAS4Free
++  // for XigmaNAS
 +  env = getenv("HOME");
 +  if(env == NULL || strlen(env) == 0)
 +    setenv("HOME", "/root", 0);

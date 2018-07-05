@@ -37,7 +37,7 @@ require_once 'guiconfig.inc';
 array_make_branch($config,'ldap');
 array_make_branch($config,'samba');
 
-//LDAP take priority over MS ActiveDirectory (NAS4Free choicee), then disable AD:
+//LDAP take priority over MS ActiveDirectory (XigmaNAS choicee), then disable AD:
 array_make_branch($config,'ad');
 
 $pconfig['enable'] = isset($config['ldap']['enable']);
