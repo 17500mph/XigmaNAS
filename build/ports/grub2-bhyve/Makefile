@@ -4,7 +4,7 @@ PORTREVISION=		1
 CATEGORIES=		sysutils
 
 COMMENT=		Grub-emu loader for bhyve
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

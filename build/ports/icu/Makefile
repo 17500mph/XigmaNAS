@@ -4,7 +4,7 @@ PORTREVISION=		0
 CATEGORIES=		devel
 
 COMMENT=		International Components for Unicode (from IBM)
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

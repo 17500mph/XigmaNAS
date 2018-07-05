@@ -3,7 +3,7 @@ PORTVERSION=	3.1.3
 PORTREVISION=	0
 CATEGORIES=		net
 COMMENT=		A network file distribution/sync utility
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=		https://rsync.samba.org/ftp/%SUBDIR%/ \
 							ftp://ftp.fu-berlin.de/pub/unix/network/%SUBDIR%/ \

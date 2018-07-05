@@ -4,7 +4,7 @@ PORTEPOCH=	0
 CATEGORIES=	net multimedia www
 MASTER_SITES=	SF
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	Media-server compatible with "Digital Life Network Alliance"
 
 LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \

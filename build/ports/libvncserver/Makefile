@@ -4,7 +4,7 @@ PORTREVISION=	1
 DISTVERSIONPREFIX=	LibVNCServer-
 CATEGORIES=	net devel
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	Provide an easy API to a custom vnc server
 
 LICENSE=	GPLv2

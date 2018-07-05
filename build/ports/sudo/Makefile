@@ -4,7 +4,7 @@ PORTREVISION=		0
 CATEGORIES=		security
 
 COMMENT=		Allow others to run commands as root
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

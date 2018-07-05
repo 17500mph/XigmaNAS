@@ -3,7 +3,7 @@ PORTVERSION=	1696
 PORTREVISION=	1
 CATEGORIES=			audio
 COMMENT=			Multithread daapd yet another server for Apple iTunes
-MAINTAINER=			zoon1@nas4free.org
+MAINTAINER=			zoon01@xigmanas.com
 
 MASTER_SITES=			http://nightlies.fireflymediaserver.org/nightlies/svn-${PORTVERSION}/ \
 									http://www.magnesium.net/~mdf/distfiles/

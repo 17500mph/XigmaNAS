@@ -3,7 +3,7 @@ PORTVERSION=    20171120
 PORTREVISION=   2
 CATEGORIES=     net
 
-MAINTAINER=     zoon1@nas4free.org
+MAINTAINER=     zoon01@xigmanas.com
 COMMENT=        HTML5 VNC Client
 
 LICENSE=	MPL20

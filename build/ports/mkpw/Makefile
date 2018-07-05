@@ -2,7 +2,7 @@ PORTNAME=		mkpw
 PORTVERSION=		1.1
 CATEGORIES=		sysutils
 COMMENT=		Password generation tool
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 DISTFILES?=
 NO_PKG_REGISTER=	yes

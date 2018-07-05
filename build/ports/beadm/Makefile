@@ -6,7 +6,7 @@ MASTER_SITES=	GH \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
 		LOCAL/bdrewery/${PORTNAME}
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	Solaris-like utility to manage Boot Environments on ZFS
 
 USE_GITHUB=	yes

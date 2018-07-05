@@ -4,7 +4,7 @@ PORTREVISION=		1
 CATEGORIES=		security
 
 COMMENT=		The root certificate bundle from the Mozilla Project
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

@@ -3,7 +3,7 @@ PORTVERSION=	1.6.8
 PORTREVISION=	0
 CATEGORIES=		mail ipv6
 COMMENT=		SMTP client
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=   https://marlam.de/msmtp/releases/
 

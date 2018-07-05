@@ -8,7 +8,7 @@ PKGNAMEPREFIX=	devcpu-
 DISTFILES=	microcode-20180425.tgz:intel \
 		amd64-microcode.20180518.tar.xz:amd
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	Intel and AMD CPUs microcode updates
 
 LICENSE=	EULA

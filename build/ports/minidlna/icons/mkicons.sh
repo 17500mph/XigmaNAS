@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Part of XigmaNAS (http://www.xigmanas.com).
-# Copyright (c) 2012-2015 The XigmaNAS Project <info@nas4free.org>.
+# Copyright (c) 2012-2015 The XigmaNAS Project <info@xigmanas.com>.
 # All rights reserved.
 
 PNG_S="n4f_icon_s.png"

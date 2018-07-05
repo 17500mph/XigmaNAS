@@ -4,7 +4,7 @@ PORTREVISION=	0
 CATEGORIES=		sysutils
 
 COMMENT=		CLI tool for IPMI-enabled devices
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

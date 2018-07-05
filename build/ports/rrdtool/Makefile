@@ -4,7 +4,7 @@ PORTREVISION=		1
 CATEGORIES=		databases graphics
 
 COMMENT=		Round Robin Database Tools
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 USES=			perl5 python
 

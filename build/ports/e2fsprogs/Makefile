@@ -4,7 +4,7 @@ PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
-MAINTAINER?=	zoon1@nas4free.org
+MAINTAINER?=	zoon01@xigmanas.com
 COMMENT?=	Utilities & library to manipulate ext2/3/4 filesystems
 
 # XigmaNAS contains license files

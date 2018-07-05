@@ -4,7 +4,7 @@ PORTREVISION=		1
 CATEGORIES=		emulators
 
 COMMENT=		VirtualBox
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 
 DISTFILES=
 NO_BUILD=		yes

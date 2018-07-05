@@ -3,7 +3,7 @@ PORTVERSION=	1.0.0
 PORTREVISION=	0
 CATEGORIES=		sysutils
 COMMENT=		Command-line tool to manage content of rc.conf
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 # No files are needed to be fetched.
 DISTFILES?=

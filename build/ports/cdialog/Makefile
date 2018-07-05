@@ -3,7 +3,7 @@ PORTVERSION=	1.3.20180621
 PORTEPOCH=	0
 CATEGORIES=			devel
 COMMENT=			An enhanced version of 'dialog' to work with ncurses
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME:S|^c||}/
 DISTNAME=			${PORTNAME:S|^c||}-${PORTVERSION:R}-${PORTVERSION:E}

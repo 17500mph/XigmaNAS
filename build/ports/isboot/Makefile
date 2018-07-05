@@ -4,7 +4,7 @@ PORTREVISION=   1
 CATEGORIES=		net
 COMMENT=		iSCSI boot driver by Daisuke Aoyama (aoyama@peach.ne.jp)
 
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		aoyama@xigmanas.com
 MASTER_SITES=		http://www.peach.ne.jp/archives/isboot/
 
 WRKSRC=                 ${WRKDIR}/${DISTNAME}/src

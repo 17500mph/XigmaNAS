@@ -2,7 +2,7 @@ PORTNAME=		nas4free-open-vm-tools
 PORTVERSION=	1.0
 PORTREVISION=	3
 CATEGORIES=		emulators
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 COMMENT=		Open VMware tools for FreeBSD VMware guests
 
 DISTFILES=

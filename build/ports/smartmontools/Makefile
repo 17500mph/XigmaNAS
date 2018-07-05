@@ -3,7 +3,7 @@ PORTVERSION=	6.6
 PORTREVISION?=	1
 CATEGORIES=		sysutils
 COMMENT=		S.M.A.R.T. disk monitoring tools
-MAINTAINER=		zoon1@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 MASTER_SITES=		SF
 CONFLICTS=		smartmontools-devel-[0-9]*

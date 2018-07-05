@@ -3,7 +3,7 @@ DISTVERSION=	5.2-0
 PORTREVISION=	0
 CATEGORIES=	www
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	Web Interface for VirtualBox
 
 LICENSE=	GPLv3

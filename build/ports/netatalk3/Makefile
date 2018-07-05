@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	SF
 PKGNAMESUFFIX=  3
 
-MAINTAINER=	zoon1@nas4free.org
+MAINTAINER=	zoon01@xigmanas.com
 COMMENT=	File server for Mac OS X
 
 LICENSE=	GPLv2

@@ -1,7 +1,7 @@
 COMMENT=	Ports options (located in /var/db/ports) used \
 					by ports build system
 
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon01@xigmanas.com
 
 ARCH!=		uname -p
 
