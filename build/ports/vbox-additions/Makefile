@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${NONEXISTENT}:emulators/virtualbox-ose-additions:build
 BLDSRC=${PORTSDIR}/emulators/virtualbox-ose-additions/work/VirtualBox-*/
 WRKSRC=${WRKDIR}/virtualbox-ose-additions
 
-.include <../nas4free.mk>
+.include <../xigmanas.mk>
 .if ${XIGMANAS_ARCH} == amd64
 ARCH_DIR=	freebsd.amd64
 .else

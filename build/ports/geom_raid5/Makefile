@@ -14,7 +14,7 @@ DEPENDS_TARGET=	clean build
 
 BUILD_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/sysutils/graid5
 
-.include <../nas4free.mk>
+.include <../xigmanas.mk>
 .if ${XIGMANAS_XARCH} == "rpi2" || ${XIGMANAS_XARCH} == "oc1"
 export CONF_CFLAGS=-march=armv7a -mtune=cortex-a7 -mcpu=cortex-a7
 .elif ${XIGMANAS_XARCH} == "rpi"

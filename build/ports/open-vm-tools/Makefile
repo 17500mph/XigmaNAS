@@ -55,4 +55,4 @@ do-install:
 	@${INSTALL_SCRIPT} -v ${BLDSRC}/open-vm-tools/scripts/freebsd/network ${XIGMANAS_ROOTFS}/${PREFIX}/share/vmware-tools/scripts/vmware
 
 .include <bsd.port.mk>
-.include <../nas4free.mk>
+.include <../xigmanas.mk>

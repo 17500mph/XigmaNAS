@@ -61,7 +61,7 @@ LCDd_mkconf()
 		-o '#ScrollDownKey=Down' -n \
 		-o 'GoodBye=" Thanks for using"' -n \
 		-o 'GoodBye=" XigmaNAS LCDproc!"' -n \
-		-m "//nas4free/lcdproc/auxparam" \
+		-m "//xigmanas/lcdproc/auxparam" \
 			-v "." -n \
 		-b \
 		-n \
@@ -74,7 +74,7 @@ LCDd_mkconf()
 		-o '#RightKey=Right' -n \
 		-n \
 		-v "concat('[', //lcdproc/driver,']')" -n \
-		-m "//nas4free/lcdproc/param" \
+		-m "//xigmanas/lcdproc/param" \
 			-v "." -n \
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc > ${LCDd_conf}

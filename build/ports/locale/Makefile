@@ -6,7 +6,7 @@ MAINTAINER=		zoon01@xigmanas.com
 
 DISTFILES?=
 
-.include <../nas4free.mk>
+.include <../xigmanas.mk>
 
 do-build:
 # Translate *.po files to *.mo.
