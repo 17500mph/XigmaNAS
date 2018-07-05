@@ -47,11 +47,11 @@ $g = [
 	'cf_path' => '/cf',
 	'cf_conf_path' => '/cf/conf',
 	'www_path' => '/usr/local/www',
-	'xml_rootobj' => 'nas4free',
+	'xml_rootobj' => 'xigmanas',
 	'debug' => false,
 	'latest_config' => '37',
 	'wireless_regex' => '/^(ndis|wlan|an|ath|bwi|bwn|ipw|iwi|iwn|malo|mwl|ral|wi|wpi|rsu|rum|run|uath|upgt|ural|urtw|urtwn|usie|zyd)/',
-	'default_passwd' => 'nas4free',
+	'default_passwd' => 'xigmanas',
 	'default_ip' => '192.168.1.250'
 ];
 //	directory of images.

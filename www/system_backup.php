@@ -38,7 +38,7 @@ require_once 'guiconfig.inc';
 $omit_nocacheheaders = true;
 
 $current_password = $config['system']['password'];
-$old_default_password = decrypt_aes256cbc('nas4free','U2FsdGVkX1/Sq3ZsgO/H88X9ItjefBcv5eJxCjvOqwg=');
+$old_default_password = decrypt_aes256cbc('xigmanas','U2FsdGVkX1/Sq3ZsgO/H88X9ItjefBcv5eJxCjvOqwg=');
 $new_default_password = $g['default_passwd'];
 if(password_verify($new_default_password,$current_password) || password_verify($old_default_password,$current_password)):
 	$errormsg = gtext('Current system password is using the default password. You should choose a different password.');

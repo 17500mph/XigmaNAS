@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- XigmaNAS default system configuration -->
-<nas4free>
+<xigmanas>
 	<version>37</version>
 	<lastchange></lastchange>
 	<system>
-		<hostname>nas4free</hostname>
+		<hostname>xigmanas</hostname>
 		<domain>local</domain>
 		<dnsserver></dnsserver>
 		<ipv6dnsserver></ipv6dnsserver>
@@ -953,7 +953,7 @@
 	</mounts>
 	<samba>
 		<!-- <enable/> -->
-		<netbiosname>nas4free</netbiosname>
+		<netbiosname>xigmanas</netbiosname>
 		<workgroup>WORKGROUP</workgroup>
 		<serverdesc>XigmaNAS Server</serverdesc>
 		<security>user</security>
@@ -1222,7 +1222,7 @@
 		<rescaninterval>3600</rescaninterval>
 		<scantype>0</scantype>
 		<dbdir></dbdir>
-		<admin_pw>nas4free</admin_pw>
+		<admin_pw>xigmanas</admin_pw>
 	</daap>
 	<bittorrent>
 		<!--
@@ -1238,7 +1238,7 @@
 		<configdir></configdir>
 		<authrequired/>
 		<username>admin</username>
-		<password>nas4free</password>
+		<password>xigmanas</password>
 		<pex/>
 		<dht/>
 		<preallocation>1</preallocation>

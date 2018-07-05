@@ -679,8 +679,8 @@ function config_upgrade() {
 	/* Convert from older config */
 	if ($config['version'] === "0.9") {
 		// XXX password is not changed now.
-		$config['system']['hostname'] = 'nas4free';
-		$config['samba']['netbiosname'] = 'nas4free';
+		$config['system']['hostname'] = 'xigmanas';
+		$config['samba']['netbiosname'] = 'xigmanas';
 		$config['samba']['serverdesc'] = 'XigmaNAS Server';
 		$config['version'] = "1.0";
 	}

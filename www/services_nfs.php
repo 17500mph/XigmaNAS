@@ -160,10 +160,10 @@ switch($page_action):
 		break;
 	case 'disable':
 /*
-	Feb 17 10:25:29	nas4free	root: Failed to stop service nfsd
-	Feb 17 10:25:29	nas4free	nfsd[2856]: rpcb_unset failed
-	Feb 17 10:25:28	nas4free	root: mountd service stopped
-	Feb 17 10:25:28	nas4free	root: rpcbind service stopped
+	Feb 17 10:25:29	xigmanas	root: Failed to stop service nfsd
+	Feb 17 10:25:29	xigmanas	nfsd[2856]: rpcb_unset failed
+	Feb 17 10:25:28	xigmanas	root: mountd service stopped
+	Feb 17 10:25:28	xigmanas	root: rpcbind service stopped
  */
 		if($sphere->row['enable']): // if enabled, disable it
 			$sphere->row['enable'] = false;

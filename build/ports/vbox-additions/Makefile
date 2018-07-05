@@ -1,4 +1,4 @@
-PORTNAME=		nas4free-virtualbox-ose-additions
+PORTNAME=		xigmanas-virtualbox-ose-additions
 PORTVERSION=	1.0
 #PORTREVISION=	1
 CATEGORIES=		emulators

@@ -1,4 +1,4 @@
-PORTNAME=		nas4free-icu
+PORTNAME=		xigmanas-icu
 PORTVERSION=		1.0
 PORTREVISION=		0
 CATEGORIES=		devel

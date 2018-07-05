@@ -35,7 +35,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the XigmaNAS Project.
 */
-/* NAS4FREE CODE */
+/* XIGMANAS CODE */
 require_once 'guiconfig.inc';
 require_once 'session.inc';
 
@@ -59,7 +59,7 @@ function show_header($title, $additional_header_content = null) {
 	header("Cache-Control: no-cache, must-revalidate");
 	header("Pragma: no-cache");
 	header("Content-Type: text/html; charset=".$GLOBALS["charset"]);
-/* NAS4FREE & QUIXPLORER CODE*/
+/* XIGMANAS & QUIXPLORER CODE*/
 	// Html & Page Headers
 	echo '<!DOCTYPE html>',PHP_EOL;
 	echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="',system_get_language_code(),'" lang="',system_get_language_code(),'" dir="',$GLOBALS['text_dir'],'">',PHP_EOL;

@@ -67,7 +67,7 @@ variable vmguest
 		drop
 	then
 	vmguest @ 0 <> if
-		s" 1" s" nas4free.vmguest" setenv
+		s" 1" s" xigmanas.vmguest" setenv
 		s" kern.hz" getenv dup -1 <> if
 			?number if
 				100 > if
@@ -79,7 +79,7 @@ variable vmguest
 			s" 100" s" kern.hz" setenv
 		then
 	else
-		s" 0" s" nas4free.vmguest" setenv
+		s" 0" s" xigmanas.vmguest" setenv
 	then
 ;
 

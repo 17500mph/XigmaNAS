@@ -62,7 +62,7 @@ $GLOBALS['order'] = filter_input(INPUT_GET,'order',FILTER_VALIDATE_REGEXP,['flag
 $GLOBALS['srt'] = filter_input(INPUT_GET,'srt',FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => 'yes','regexp' => '/^(yes|no)$/']]);
 // Necessary files
 ob_start(); // prevent unwanted output
-/* NAS4FREE CODE*/
+/* XIGMANAS CODE*/
 if(function_exists('date_default_timezone_set')):
 	if(function_exists('date_default_timezone_get')):
 		@date_default_timezone_set(@date_default_timezone_get());
@@ -70,7 +70,7 @@ if(function_exists('date_default_timezone_set')):
 		@date_default_timezone_set('UTC');
 	endif;
 endif;
-/* END NAS4FREE CODE*/
+/* END XIGMANAS CODE*/
 /* ORIGINAL CODE
 date_default_timezone_set ( "UTC" );
  */
@@ -82,7 +82,7 @@ require './_config/conf.php';
 require './_config/configs.php';
 
 _load_language($GLOBALS['language']);
-/* NAS4FREE CODE*/
+/* XIGMANAS CODE*/
 if(isset($GLOBALS['lang'])):
 	$GLOBALS['language'] = $GLOBALS['lang'];
 endif;
@@ -91,7 +91,7 @@ if(file_exists('./_lang/' . $GLOBALS['language'] . '.php')):
 else:
 	require './_lang/en_US.php';
 endif;
-/* END NAS4FREE CODE*/
+/* END XIGMANAS CODE*/
 
 require './_config/mimes.php';
 require './_include/extra.php';

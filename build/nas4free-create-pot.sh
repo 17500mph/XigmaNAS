@@ -19,7 +19,7 @@ PARAMETERS="--output-dir=${OUTPUTDIR} --output=${OUTPUT} --language=PHP \
 
 echo "==> Delete current pot file..."
 cd ${XIGMANAS_SVNDIR}/locale
-rm -f nas4free.pot
+rm -f xigmanas.pot
 echo "==> Delete current pot file completed!"
 echo "==> Start building new translations pot file..."
 sleep 3
