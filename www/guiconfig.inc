@@ -905,7 +905,7 @@ function get_headermenu(): array {
 		$menu[$menu_name] = ['type' => 'nolink','visible' => true,'img' => '','description' => gtext('Help'),'link' => ''];
 		$menu_items = &$menu[$menu_name]['menuitem'];
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Forum'),'link' => 'https://xigmanas.org/forums/'];
-		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Information & Manual'),'link' => 'https://www.nas4free.org/wiki/doku.php'];
+		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Information & Manual'),'link' => 'https://www.xigmanas.com/wiki/doku.php'];
 		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('IRC Live Support'),'link' => 'https://webchat.freenode.net/?channels=#nas4free'];
 		$menu_items[] = ['type' => 'separator','visible' => true,'description' => '','link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => true,'description' => gtext('Release Notes'),'link' => '/changes.php'];

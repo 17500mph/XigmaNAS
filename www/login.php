@@ -178,9 +178,9 @@ $loginpagedata->
 	addElement('footer',['class' => 'lpf'])->
 		addUL()->
 			push()->addLI(['style' => 'padding-right: 4px;'])->
-				insA(['target' => '_blank','href' => 'https://www.nas4free.org/forums/'],gtext('Forum'))->
+				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/forums/'],gtext('Forum'))->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
-				insA(['target' => '_blank','href' => 'https://www.nas4free.org/wiki/doku.php'],gtext('Information & Manuals'))->
+				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/wiki/doku.php'],gtext('Information & Manuals'))->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
 				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#nas4free'],gtext('IRC XigmaNAS'))->
 			pop()->addLI(['style' => 'padding-left: 4px;'])->

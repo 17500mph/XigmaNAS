@@ -119,7 +119,7 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			sprintf('<div>%s</div>',gtext('Controls the dedup method.')) .
 			'<div style="font-weight: bold;">' .
 			sprintf('<span style="color: red;">%s</span>: ',gtext('WARNING')) .
-			'<a href="https://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">' .
+			'<a href="https://wiki.xigmanas.com/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">' .
 			gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.') .
 			'</a>' .
 			'</div>';
