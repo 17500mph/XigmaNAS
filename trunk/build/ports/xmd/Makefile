@@ -4,7 +4,7 @@ CATEGORIES=		sysutils
 COMMENT=		Memory Disk driver by Daisuke Aoyama (aoyama@peach.ne.jp)
 
 MAINTAINER=		aoyama@xigmanas.com
-MASTER_SITES=		http://www.peach.ne.jp/archives/nas4free/xmd/
+MASTER_SITES=		http://www.peach.ne.jp/archives/xigmanas/xmd/
 
 #NO_BUILD=		yes
 NO_PKG_REGISTER=	yes
@@ -22,7 +22,7 @@ BASEDIR=armv6
 IGNORE=unsupported on ${ARCH}
 .endif
 
-.include <../nas4free.mk>
+.include <../xigmanas.mk>
 .if ${XIGMANAS_XARCH} == "rpi2" || ${XIGMANAS_XARCH} == "oc1"
 export CONF_CFLAGS=-march=armv7a -mtune=cortex-a7 -mcpu=cortex-a7
 .elif ${XIGMANAS_XARCH} == "rpi"

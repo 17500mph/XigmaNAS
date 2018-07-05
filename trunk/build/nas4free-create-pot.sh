@@ -8,7 +8,7 @@
 #
 
 # Global variables
-XIGMANAS_ROOTDIR="/usr/local/nas4free"
+XIGMANAS_ROOTDIR="/usr/local/xigmanas"
 XIGMANAS_SVNDIR="$XIGMANAS_ROOTDIR/svn"
 XIGMANAS_PRODUCTNAME=$(cat ${XIGMANAS_SVNDIR}/etc/prd.name)
 

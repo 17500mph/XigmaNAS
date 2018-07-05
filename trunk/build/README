@@ -13,22 +13,22 @@
 ================================
 1. Files and directories listing
 
-- /nas4free/bootloader:  This contains the FreeBSD boot loader files
-- /nas4free/rootfs: Minimum FreeBSD root filesystem and NAS4FREE script/WebGUI
-- /nas4free/svn: Contains all released files and scripts
+- /xigmanas/bootloader:  This contains the FreeBSD boot loader files
+- /xigmanas/rootfs: Minimum FreeBSD root filesystem and NAS4FREE script/WebGUI
+- /xigmanas/svn: Contains all released files and scripts
 
 ================================
 2. Generate an XigmaNAS ISO or IMG file
 
 Copy make.conf to /etc.
 
-#cp /nas4free/svn/build/make.conf /etc
+#cp /xigmanas/svn/build/make.conf /etc
 
 Delete all ports built without make.conf.
 
 #pkg delete -f \*
 
-Edit the script '/nas4free/svn/build/make.sh' and adapt the directory
+Edit the script '/xigmanas/svn/build/make.sh' and adapt the directory
 variables with your local ones.
 
 Now install the following ports:
@@ -45,7 +45,7 @@ Now install the following ports:
 #cd /usr/ports/devel/subversion
 #make install clean
 
-Start /nas4free/svn/build/make.sh and follow the steps.
+Start /xigmanas/svn/build/make.sh and follow the steps.
 
 =================================
 3. Building XigmaNAS from the latest sources (normally possible with make.sh)
@@ -57,12 +57,12 @@ Here is how to build XigmaNAS from the latest sources:
 3.1 Update your XigmaNAS scripts/WebGUI code with the SVN:
 (this creates the svn directory)
 
-- cd /usr/local/nas4free
-- svn co https://svn.code.sf.net/p/nas4free/code/trunk svn
+- cd /usr/local/xigmanas
+- svn co https://svn.code.sf.net/p/xigmanas/code/trunk svn
 
 You should now have these directories:
-/usr/local/nas4free
-/usr/local/nas4free/svn
+/usr/local/xigmanas
+/usr/local/xigmanas/svn
 
 3.2 Update your ports collection:
 

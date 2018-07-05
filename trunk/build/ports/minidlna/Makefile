@@ -48,7 +48,7 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue-n4f
 # XigmaNAS
 NO_PKG_REGISTER=	yes
 ICONSDIR=${MASTERDIR}/icons
-N4F_ICONS=${WRKSRC}/nas4free-icons.c
+N4F_ICONS=${WRKSRC}/xigmanas-icons.c
 
 post-configure:
 	@echo "creating icon file..."

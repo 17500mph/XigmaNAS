@@ -15,7 +15,7 @@
 ################################################################################
 
 # Global variables
-XIGMANAS_ROOTDIR="/usr/local/nas4free"
+XIGMANAS_ROOTDIR="/usr/local/xigmanas"
 XIGMANAS_WORKINGDIR="$XIGMANAS_ROOTDIR/work"
 XIGMANAS_ROOTFS="$XIGMANAS_ROOTDIR/rootfs"
 XIGMANAS_SVNDIR="$XIGMANAS_ROOTDIR/svn"
@@ -59,7 +59,7 @@ else
 fi
 XIGMANAS_OBJDIRPREFIX="/usr/obj/$(echo ${XIGMANAS_PRODUCTNAME} | tr '[:upper:]' '[:lower:]')"
 XIGMANAS_BOOTDIR="$XIGMANAS_ROOTDIR/bootloader"
-XIGMANAS_TMPDIR="/tmp/nas4freetmp"
+XIGMANAS_TMPDIR="/tmp/xigmanastmp"
 
 export XIGMANAS_ROOTDIR
 export XIGMANAS_WORKINGDIR
@@ -77,7 +77,7 @@ export XIGMANAS_REVISION
 export XIGMANAS_TMPDIR
 #export XIGMANAS_BUILD_DOM0
 
-XIGMANAS_MK=${XIGMANAS_SVNDIR}/build/ports/nas4free.mk
+XIGMANAS_MK=${XIGMANAS_SVNDIR}/build/ports/xigmanas.mk
 rm -rf ${XIGMANAS_MK}
 echo "XIGMANAS_ROOTDIR=${XIGMANAS_ROOTDIR}" >> ${XIGMANAS_MK}
 echo "XIGMANAS_WORKINGDIR=${XIGMANAS_WORKINGDIR}" >> ${XIGMANAS_MK}
@@ -97,7 +97,7 @@ echo "XIGMANAS_TMPDIR=${XIGMANAS_TMPDIR}" >> ${XIGMANAS_MK}
 
 # Local variables
 XIGMANAS_URL=$(cat $XIGMANAS_SVNDIR/etc/prd.url)
-XIGMANAS_SVNURL="https://svn.code.sf.net/p/nas4free/code/trunk"
+XIGMANAS_SVNURL="https://svn.code.sf.net/p/xigmanas/code/trunk"
 XIGMANAS_SVN_SRCTREE="svn://svn.FreeBSD.org/base/releng/11.2"
 
 # Size in MB of the MFS Root filesystem that will include all FreeBSD binary
@@ -227,7 +227,7 @@ update_sources() {
 	return $?
 }
 
-# Build world. Copying required files defined in 'build/nas4free.files'.
+# Build world. Copying required files defined in 'build/xigmanas.files'.
 build_world() {
 	# Make a pseudo 'chroot' to NAS4FREE root.
   cd $XIGMANAS_ROOTFS
@@ -235,15 +235,15 @@ build_world() {
 	echo
 	echo "Building World:"
 
-	[ -f $XIGMANAS_WORKINGDIR/nas4free.files ] && rm -f $XIGMANAS_WORKINGDIR/nas4free.files
-	cp $XIGMANAS_SVNDIR/build/nas4free.files $XIGMANAS_WORKINGDIR
+	[ -f $XIGMANAS_WORKINGDIR/xigmanas.files ] && rm -f $XIGMANAS_WORKINGDIR/xigmanas.files
+	cp $XIGMANAS_SVNDIR/build/xigmanas.files $XIGMANAS_WORKINGDIR
 
 	# Add custom binaries
-	if [ -f $XIGMANAS_WORKINGDIR/nas4free.custfiles ]; then
-		cat $XIGMANAS_WORKINGDIR/nas4free.custfiles >> $XIGMANAS_WORKINGDIR/nas4free.files
+	if [ -f $XIGMANAS_WORKINGDIR/xigmanas.custfiles ]; then
+		cat $XIGMANAS_WORKINGDIR/xigmanas.custfiles >> $XIGMANAS_WORKINGDIR/xigmanas.files
 	fi
 
-	for i in $(cat $XIGMANAS_WORKINGDIR/nas4free.files | grep -v "^#"); do
+	for i in $(cat $XIGMANAS_WORKINGDIR/xigmanas.files | grep -v "^#"); do
 		file=$(echo "$i" | cut -d ":" -f 1)
 
 		# Deal with directories
@@ -278,7 +278,7 @@ build_world() {
 	# Cleanup
 	chflags -R noschg $XIGMANAS_TMPDIR
 	chflags -R noschg $XIGMANAS_ROOTFS
-	[ -d $XIGMANAS_TMPDIR ] && rm -f $XIGMANAS_WORKINGDIR/nas4free.files
+	[ -d $XIGMANAS_TMPDIR ] && rm -f $XIGMANAS_WORKINGDIR/xigmanas.files
 	[ -f $XIGMANAS_WORKINGDIR/mfsroot.gz ] && rm -f $XIGMANAS_WORKINGDIR/mfsroot.gz
 
 	return 0
@@ -286,7 +286,7 @@ build_world() {
 
 # Create rootfs
 create_rootfs() {
-	$XIGMANAS_SVNDIR/build/nas4free-create-rootfs.sh -f $XIGMANAS_ROOTFS
+	$XIGMANAS_SVNDIR/build/xigmanas-create-rootfs.sh -f $XIGMANAS_ROOTFS
 
 	# Configuring platform variable
 	echo ${XIGMANAS_VERSION} > ${XIGMANAS_ROOTFS}/etc/prd.version
@@ -460,7 +460,7 @@ create_mdlocal_mini() {
 	[ -f $XIGMANAS_WORKINGDIR/mdlocal-mini ] && rm -f $XIGMANAS_WORKINGDIR/mdlocal-mini
 	[ -f $XIGMANAS_WORKINGDIR/mdlocal-mini.xz ] && rm -f $XIGMANAS_WORKINGDIR/mdlocal-mini.xz
 	[ -f $XIGMANAS_WORKINGDIR/mdlocal-mini.files ] && rm -f $XIGMANAS_WORKINGDIR/mdlocal-mini.files
-	cp $XIGMANAS_SVNDIR/build/nas4free-mdlocal-mini.files $XIGMANAS_WORKINGDIR/mdlocal-mini.files
+	cp $XIGMANAS_SVNDIR/build/xigmanas-mdlocal-mini.files $XIGMANAS_WORKINGDIR/mdlocal-mini.files
 
 	# Make mfsroot to have the size of the XIGMANAS_MFSROOT_SIZE variable
 	#dd if=/dev/zero of=$XIGMANAS_WORKINGDIR/mdlocal-mini bs=1k count=$(expr ${XIGMANAS_MDLOCAL_MINI_SIZE} \* 1024)
@@ -626,7 +626,7 @@ copy_kmod() {
 	echo "Copy kmod to $XIGMANAS_TMPDIR/boot/kernel"
 	kmodlist=`(cd ${XIGMANAS_OBJDIRPREFIX}/usr/src/sys/${XIGMANAS_KERNCONF}/modules/usr/src/sys/modules; find . -name '*.ko' | sed -e 's/\.\///')`
 	for f in $kmodlist; do
-		if grep -q "^${f}" $XIGMANAS_SVNDIR/build/nas4free.kmod.exclude > /dev/null; then
+		if grep -q "^${f}" $XIGMANAS_SVNDIR/build/xigmanas.kmod.exclude > /dev/null; then
 			echo "skip: $f"
 			continue;
 		fi
@@ -1817,9 +1817,9 @@ Press # '
 					if [ 0 != $OPT_SERIALCONSOLE ]; then
 						opt="$opt -s"
 					fi;
-					$XIGMANAS_SVNDIR/build/nas4free-create-bootdir.sh $opt $XIGMANAS_BOOTDIR;;
+					$XIGMANAS_SVNDIR/build/xigmanas-create-bootdir.sh $opt $XIGMANAS_BOOTDIR;;
 			8)	add_libs;;
-			9)	$XIGMANAS_SVNDIR/build/nas4free-modify-permissions.sh $XIGMANAS_ROOTFS;;
+			9)	$XIGMANAS_SVNDIR/build/xigmanas-modify-permissions.sh $XIGMANAS_ROOTFS;;
 			*)	main; return $?;;
 		esac
 		[ 0 == $? ] && echo "=> Successfully done <=" || echo "=> Failed!"
@@ -2022,7 +2022,7 @@ Press # "
 		12)	create_iso;;
 		13)	create_iso_tiny;;
 		14)	create_full;;
-		15)	$XIGMANAS_SVNDIR/build/nas4free-create-pot.sh;;
+		15)	$XIGMANAS_SVNDIR/build/xigmanas-create-pot.sh;;
 		20)	if [ "arm" = ${XIGMANAS_ARCH} ]; then create_rpisd; fi;;
 		21)	if [ "arm" = ${XIGMANAS_ARCH} ]; then create_rpi2sd; fi;;
 		*)	exit 0;;

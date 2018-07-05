@@ -9,7 +9,7 @@
 
 # PROVIDE: lcdproc
 # REQUIRE: LCDd
-# XQUERY: -i "count(//nas4free/lcdproc/lcdproc/enable) > 0" -o "0" -b
+# XQUERY: -i "count(//xigmanas/lcdproc/lcdproc/enable) > 0" -o "0" -b
 # RCVAR: lcdproc
 
 . /etc/rc.subr
@@ -49,11 +49,11 @@ lcdproc_mkconf()
 		-o 'ReportLevel=2' -n \
 		-o 'ReportToSyslog=false' -n \
 		-o 'PidFile=/var/run/lcdproc.pid' -n \
-		-m "//nas4free/lcdproc/lcdproc/auxparam" \
+		-m "//xigmanas/lcdproc/lcdproc/auxparam" \
 			-v "." -n \
 		-b \
 		-n \
-		-m "//nas4free/lcdproc/lcdproc/param" \
+		-m "//xigmanas/lcdproc/lcdproc/param" \
 			-v "." -n \
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc > ${lcdproc_conf}
