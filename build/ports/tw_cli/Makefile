@@ -24,6 +24,6 @@ NO_PKG_REGISTER=yes
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_PROGRAM} -v ${WRKSRC}/${BINSUFFIX}/tw_cli ${NAS4FREE_ROOTFS}/${PREFIX}/sbin/
+	${INSTALL_PROGRAM} -v ${WRKSRC}/${BINSUFFIX}/tw_cli ${XIGMANAS_ROOTFS}/${PREFIX}/sbin/
 
 .include <bsd.port.mk>

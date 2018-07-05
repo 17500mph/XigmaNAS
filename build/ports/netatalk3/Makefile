@@ -68,28 +68,28 @@ post-install:
 		${INSTALL_DATA} -c ${STAGEDIR}${PREFIX}/etc/extmap.conf.dist ${STAGEDIR}${PREFIX}/etc/extmap.conf
 
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
+	@echo "install for ${XIGMANAS_ROOTFS}"
 
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/dbd ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/afpd ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_metad ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_dbd ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/netatalk ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_LIB} -v ${STAGEDIR}${PREFIX}/lib/libatalk.so.18 ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/etc/extmap.conf.dist ${NAS4FREE_ROOTFS}/usr/local/etc/extmap.conf
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/dbd ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/afpd ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_metad ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_dbd ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/netatalk ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_LIB} -v ${STAGEDIR}${PREFIX}/lib/libatalk.so.18 ${XIGMANAS_ROOTFS}/usr/local/lib
+	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/etc/extmap.conf.dist ${XIGMANAS_ROOTFS}/usr/local/etc/extmap.conf
 
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx_pam.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx_passwd.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx2_pam.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx2_passwd.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_guest.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_pam.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_passwd.so ${NAS4FREE_ROOTFS}/etc/uams
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_randnum.so ${NAS4FREE_ROOTFS}/etc/uams
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx_pam.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx_passwd.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx2_pam.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_dhx2_passwd.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_guest.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_pam.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_passwd.so ${XIGMANAS_ROOTFS}/etc/uams
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}/etc/uams/uams_randnum.so ${XIGMANAS_ROOTFS}/etc/uams
 
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/netatalk.in ${NAS4FREE_ROOTFS}/etc/rc.d/netatalk
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/netatalk.in ${XIGMANAS_ROOTFS}/etc/rc.d/netatalk
 
-	@cd ${NAS4FREE_ROOTFS}/etc/uams && ${LN} -fsv uams_passwd.so uams_clrtxt.so && ${LN} -fsv uams_dhx_passwd.so uams_dhx.so && ${LN} -fsv uams_dhx2_passwd.so uams_dhx2.so
+	@cd ${XIGMANAS_ROOTFS}/etc/uams && ${LN} -fsv uams_passwd.so uams_clrtxt.so && ${LN} -fsv uams_dhx_passwd.so uams_dhx.so && ${LN} -fsv uams_dhx2_passwd.so uams_dhx2.so
 
 .include <bsd.port.mk>

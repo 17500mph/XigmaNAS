@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-sound
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/inadyn-mt ${NAS4FREE_ROOTFS}/usr/local/bin/inadyn
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/inadyn.in ${NAS4FREE_ROOTFS}/etc/rc.d/inadyn
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/inadyn-mt ${XIGMANAS_ROOTFS}/usr/local/bin/inadyn
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/inadyn.in ${XIGMANAS_ROOTFS}/etc/rc.d/inadyn
 
 .include <bsd.port.mk>

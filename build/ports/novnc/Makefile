@@ -19,12 +19,12 @@ WWWDIR=${PREFIX}/www/novnc
 
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${MKDIR} -p ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -Rpv ${WRKSRC}/app ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -Rpv ${WRKSRC}/core ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -Rpv ${WRKSRC}/vendor ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -pv ${WRKSRC}/vnc.html ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -pv ${WRKSRC}/vnc_lite.html ${NAS4FREE_ROOTFS}${WWWDIR}
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${MKDIR} -p ${XIGMANAS_ROOTFS}${WWWDIR}
+	@${CP} -Rpv ${WRKSRC}/app ${XIGMANAS_ROOTFS}${WWWDIR}
+	@${CP} -Rpv ${WRKSRC}/core ${XIGMANAS_ROOTFS}${WWWDIR}
+	@${CP} -Rpv ${WRKSRC}/vendor ${XIGMANAS_ROOTFS}${WWWDIR}
+	@${CP} -pv ${WRKSRC}/vnc.html ${XIGMANAS_ROOTFS}${WWWDIR}
+	@${CP} -pv ${WRKSRC}/vnc_lite.html ${XIGMANAS_ROOTFS}${WWWDIR}
 
 .include <bsd.port.mk>

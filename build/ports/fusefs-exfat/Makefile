@@ -27,9 +27,9 @@ do-install:
 	${LN} -fs ${PREFIX}/bin/mount.exfat-fuse ${STAGEDIR}${PREFIX}/bin/mount.exfat
 
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/mount.exfat-fuse ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/exfatfsck ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${LN} -fsv ${PREFIX}/bin/mount.exfat-fuse ${NAS4FREE_ROOTFS}/usr/local/bin/mount.exfat
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/mount.exfat-fuse ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/exfatfsck ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${LN} -fsv ${PREFIX}/bin/mount.exfat-fuse ${XIGMANAS_ROOTFS}/usr/local/bin/mount.exfat
 
 .include <bsd.port.mk>

@@ -15,8 +15,8 @@ BUILD_DEPENDS=	${NONEXISTENT}:devel/php72-APCu
 
 do-install:
 # NAS4Free install
-	@${CP} -pv ${FILESDIR}/apcu.ini ${NAS4FREE_ROOTFS}/${PREFIX}/etc/php
-	@${MKDIR} ${NAS4FREE_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
-	${INSTALL_DATA} ${DEP_STAGEDIR}/usr/local/lib/php/20170718/apcu.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
+	@${CP} -pv ${FILESDIR}/apcu.ini ${XIGMANAS_ROOTFS}/${PREFIX}/etc/php
+	@${MKDIR} ${XIGMANAS_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
+	${INSTALL_DATA} ${DEP_STAGEDIR}/usr/local/lib/php/20170718/apcu.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
 
 .include <bsd.port.mk>

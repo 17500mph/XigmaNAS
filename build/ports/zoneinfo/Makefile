@@ -48,7 +48,7 @@ do-install:
 	@${ECHO_CMD} "posixrules" >> ${WRKSRC}/zoneinfo.exlude
 	@${ECHO_CMD} "zone.tab" >> ${WRKSRC}/zoneinfo.exlude
 
-	@${MKDIR} -p ${NAS4FREE_ROOTFS}/usr/share
-	${TAR} -c -v -f - -X ${WRKSRC}/zoneinfo.exlude -C ${WRKSRC}/zoneinfo/ . | ${XZ_CMD} -cv > ${NAS4FREE_ROOTFS}/usr/share/zoneinfo.txz
+	@${MKDIR} -p ${XIGMANAS_ROOTFS}/usr/share
+	${TAR} -c -v -f - -X ${WRKSRC}/zoneinfo.exlude -C ${WRKSRC}/zoneinfo/ . | ${XZ_CMD} -cv > ${XIGMANAS_ROOTFS}/usr/share/zoneinfo.txz
 
 .include <bsd.port.post.mk>

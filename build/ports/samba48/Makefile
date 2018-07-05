@@ -592,58 +592,58 @@ pre-build-MANDOC-off:
 .endif
 post-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
+	@echo "install for ${XIGMANAS_ROOTFS}"
 # rc/link
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/samba.in ${NAS4FREE_ROOTFS}/etc/rc.d/samba
-	@${LN} -fsv /var/etc/smb4.conf ${NAS4FREE_ROOTFS}/usr/local/etc/smb4.conf
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/samba.in ${XIGMANAS_ROOTFS}/etc/rc.d/samba
+	@${LN} -fsv /var/etc/smb4.conf ${XIGMANAS_ROOTFS}/usr/local/etc/smb4.conf
 
 # sbin
 .for file in nmbd samba smbd winbindd
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/${file} ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/${file} ${XIGMANAS_ROOTFS}/usr/local/sbin
 .endfor
 .for file in samba_dnsupdate samba_kcc samba_spnupdate samba_upgradedns
-	@${INSTALL_SCRIPT} -v ${STAGEDIR}${PREFIX}/sbin/${file} ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_SCRIPT} -v ${STAGEDIR}${PREFIX}/sbin/${file} ${XIGMANAS_ROOTFS}/usr/local/sbin
 .endfor
 
 # bin
 .for file in cifsdd dbwrap_tool eventlogadm gentest locktest masktest mvxattr ndrdump net nmblookup ntlm_auth oLschema2ldif pdbedit profiles regdiff regpatch regshell regtree rpcclient samba-regedit sharesec smbcacls smbclient smbcontrol smbcquotas smbget smbpasswd smbspool smbstatus smbtorture smbtree testparm wbinfo
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/${file} ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/${file} ${XIGMANAS_ROOTFS}/usr/local/bin
 .endfor
 .for file in findsmb pidl samba-tool smbtar
-	@${INSTALL_SCRIPT} -v ${STAGEDIR}${PREFIX}/bin/${file} ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_SCRIPT} -v ${STAGEDIR}${PREFIX}/bin/${file} ${XIGMANAS_ROOTFS}/usr/local/bin
 .endfor
 
 # lib
 	for file in ${STAGEDIR}${PREFIX}/lib/*; do \
 		[ -h "$${file}" ] && continue; \
-		[ -d "$${file}" ] && ${CP} -Rpv $${file} ${NAS4FREE_ROOTFS}/usr/local/lib; \
-		[ -f "$${file}" ] && ${CP} -pv $${file} ${NAS4FREE_ROOTFS}/usr/local/lib; \
+		[ -d "$${file}" ] && ${CP} -Rpv $${file} ${XIGMANAS_ROOTFS}/usr/local/lib; \
+		[ -f "$${file}" ] && ${CP} -pv $${file} ${XIGMANAS_ROOTFS}/usr/local/lib; \
 	done
 
 # share
-	@${CP} -Rpv ${STAGEDIR}${PREFIX}/share/samba48 ${NAS4FREE_ROOTFS}/usr/local/share
+	@${CP} -Rpv ${STAGEDIR}${PREFIX}/share/samba48 ${XIGMANAS_ROOTFS}/usr/local/share
 
 # misc
-	@${MKDIR} -p ${NAS4FREE_ROOTFS}/usr/local/lib/python2.7/site-packages
+	@${MKDIR} -p ${XIGMANAS_ROOTFS}/usr/local/lib/python2.7/site-packages
 	for file in ldb.so talloc.so tdb.so; do \
-		${CP} -pv ${PREFIX}/lib/python2.7/site-packages/$${file} ${NAS4FREE_ROOTFS}/usr/local/lib/python2.7/site-packages; \
+		${CP} -pv ${PREFIX}/lib/python2.7/site-packages/$${file} ${XIGMANAS_ROOTFS}/usr/local/lib/python2.7/site-packages; \
 	done
-	@${CP} -Rpv ${PREFIX}/lib/python2.7/site-packages/dns ${NAS4FREE_ROOTFS}/usr/local/lib/python2.7/site-packages
-	@${CP} -pv ${PREFIX}/bin/samba-nsupdate ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${CP} -Rpv ${PREFIX}/lib/python2.7/site-packages/dns ${XIGMANAS_ROOTFS}/usr/local/lib/python2.7/site-packages
+	@${CP} -pv ${PREFIX}/bin/samba-nsupdate ${XIGMANAS_ROOTFS}/usr/local/bin
 
 # ldb/tdb
 	for file in ldbadd ldbdel ldbedit ldbmodify ldbrename ldbsearch; do \
-		${CP} -pv ${PREFIX}/bin/$${file} ${NAS4FREE_ROOTFS}/usr/local/bin; \
+		${CP} -pv ${PREFIX}/bin/$${file} ${XIGMANAS_ROOTFS}/usr/local/bin; \
 	done
-	@${MKDIR} -p ${NAS4FREE_ROOTFS}/usr/local/lib/shared-modules/ldb
+	@${MKDIR} -p ${XIGMANAS_ROOTFS}/usr/local/lib/shared-modules/ldb
 	for file in ${PREFIX}/lib/shared-modules/ldb/*; do \
-		${CP} -pv $${file} ${NAS4FREE_ROOTFS}/usr/local/lib/shared-modules/ldb; \
+		${CP} -pv $${file} ${XIGMANAS_ROOTFS}/usr/local/lib/shared-modules/ldb; \
 	done
-	@${MKDIR} -p ${NAS4FREE_ROOTFS}/usr/local/lib/ldb
-	@${CP} -Rpv ${PREFIX}/lib/ldb/libldb-cmdline.so ${NAS4FREE_ROOTFS}/usr/local/lib/ldb
+	@${MKDIR} -p ${XIGMANAS_ROOTFS}/usr/local/lib/ldb
+	@${CP} -Rpv ${PREFIX}/lib/ldb/libldb-cmdline.so ${XIGMANAS_ROOTFS}/usr/local/lib/ldb
 
 	for file in tdbbackup tdbdump tdbrestore tdbtool; do \
-		${CP} -pv ${PREFIX}/bin/$${file} ${NAS4FREE_ROOTFS}/usr/local/bin; \
+		${CP} -pv ${PREFIX}/bin/$${file} ${XIGMANAS_ROOTFS}/usr/local/bin; \
 	done
 
 # !SAMBA4_SUBPORT

@@ -17,7 +17,7 @@ DEP_STAGEDIR=		${PORTSDIR}/sysutils/ipmitool/work/stage
 
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/ipmitool ${NAS4FREE_ROOTFS}/usr/local/bin
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/ipmitool ${XIGMANAS_ROOTFS}/usr/local/bin
 
 .include <bsd.port.mk>

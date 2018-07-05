@@ -230,18 +230,18 @@ post-install:
 .endif
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/fsck_ext2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/e2fsck/e2fsck ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/badblocks ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/dumpe2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/mke2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/tune2fs ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/fsck_ext2fs ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/e2fsck/e2fsck ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/badblocks ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/dumpe2fs ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/mke2fs ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/misc/tune2fs ${XIGMANAS_ROOTFS}/usr/local/sbin
 
-	@${LN} -s -f -v /usr/local/sbin/e2fsck ${NAS4FREE_ROOTFS}/sbin/e2fsck
-	@${LN} -s -f -v /usr/local/sbin/fsck_ext2fs ${NAS4FREE_ROOTFS}/sbin/fsck_ext2fs
+	@${LN} -s -f -v /usr/local/sbin/e2fsck ${XIGMANAS_ROOTFS}/sbin/e2fsck
+	@${LN} -s -f -v /usr/local/sbin/fsck_ext2fs ${XIGMANAS_ROOTFS}/sbin/fsck_ext2fs
 # lib
-	@${CP} -Rpv ${WRKSRC}/lib/libext2fs.so.2 ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${CP} -Rpv ${WRKSRC}/lib/libcom_err.so.2 ${NAS4FREE_ROOTFS}/usr/local/lib
+	@${CP} -Rpv ${WRKSRC}/lib/libext2fs.so.2 ${XIGMANAS_ROOTFS}/usr/local/lib
+	@${CP} -Rpv ${WRKSRC}/lib/libcom_err.so.2 ${XIGMANAS_ROOTFS}/usr/local/lib
 
 .include <bsd.port.post.mk>

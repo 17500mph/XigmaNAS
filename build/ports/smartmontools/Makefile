@@ -21,8 +21,8 @@ CFLAGS:=		${CFLAGS:S/-O2/-O/} -Wno-write-strings
 
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/smartctl ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/smartd ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${CP} -pv ${WRKSRC}/smartd_warning.sh ${NAS4FREE_ROOTFS}/${PREFIX}/etc
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/smartctl ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/smartd ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${CP} -pv ${WRKSRC}/smartd_warning.sh ${XIGMANAS_ROOTFS}/${PREFIX}/etc
 
 .include <bsd.port.mk>

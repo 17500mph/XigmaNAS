@@ -15,6 +15,6 @@ do-build:
 	@${MAKE} -C ${WRKSRC}
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/fdisk ${NAS4FREE_ROOTFS}/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/fdisk ${XIGMANAS_ROOTFS}/sbin
 
 .include <bsd.port.mk>

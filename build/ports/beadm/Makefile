@@ -18,6 +18,6 @@ CONFLICTS_INSTALL=	beadm-devel-*
 
 do-install:
 # NAS4Free install
-	${INSTALL_SCRIPT} -v ${WRKSRC}/beadm ${NAS4FREE_ROOTFS}/usr/local/sbin
+	${INSTALL_SCRIPT} -v ${WRKSRC}/beadm ${XIGMANAS_ROOTFS}/usr/local/sbin
 
 .include <bsd.port.mk>

@@ -19,14 +19,14 @@ DISABLE_VULNERABILITIES=yes
 BUILD_DEPENDS=	${NONEXISTENT}:security/openssh-portable
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/sshd ${NAS4FREE_ROOTFS}/usr/sbin
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/ssh ${NAS4FREE_ROOTFS}/usr/bin
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/sftp-server ${NAS4FREE_ROOTFS}/usr/libexec
-	@${CP} -pv ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/moduli ${NAS4FREE_ROOTFS}/etc/ssh
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/sshd ${XIGMANAS_ROOTFS}/usr/sbin
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/ssh ${XIGMANAS_ROOTFS}/usr/bin
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/sftp-server ${XIGMANAS_ROOTFS}/usr/libexec
+	@${CP} -pv ${PORTSDIR}/security/openssh-portable/work-default/openssh-*/moduli ${XIGMANAS_ROOTFS}/etc/ssh
 
 # Create link to moduli file to prevent log entry:
 # WARNING: /usr/local/etc/ssh/moduli does not exist, using fixed modulus
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/etc/ssh
-	@${LN} -fsv /etc/ssh/moduli ${NAS4FREE_ROOTFS}/usr/local/etc/ssh/moduli
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/usr/local/etc/ssh
+	@${LN} -fsv /etc/ssh/moduli ${XIGMANAS_ROOTFS}/usr/local/etc/ssh/moduli
 
 .include <bsd.port.mk>

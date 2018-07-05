@@ -8,38 +8,38 @@
 #
 
 # Global variables
-NAS4FREE_ROOTDIR="/usr/local/nas4free"
-NAS4FREE_SVNDIR="$NAS4FREE_ROOTDIR/svn"
-NAS4FREE_PRODUCTNAME=$(cat ${NAS4FREE_SVNDIR}/etc/prd.name)
+XIGMANAS_ROOTDIR="/usr/local/nas4free"
+XIGMANAS_SVNDIR="$XIGMANAS_ROOTDIR/svn"
+XIGMANAS_PRODUCTNAME=$(cat ${XIGMANAS_SVNDIR}/etc/prd.name)
 
-OUTPUT="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:upper:]' '[:lower:]').pot"
-OUTPUTDIR="${NAS4FREE_SVNDIR}/locale"
+OUTPUT="$(echo ${XIGMANAS_PRODUCTNAME} | tr '[:upper:]' '[:lower:]').pot"
+OUTPUTDIR="${XIGMANAS_SVNDIR}/locale"
 PARAMETERS="--output-dir=${OUTPUTDIR} --output=${OUTPUT} --language=PHP \
 --force-po --no-location --no-wrap --sort-output --omit-header --keyword="gtext""
 
 echo "==> Delete current pot file..."
-cd ${NAS4FREE_SVNDIR}/locale
+cd ${XIGMANAS_SVNDIR}/locale
 rm -f nas4free.pot
 echo "==> Delete current pot file completed!"
 echo "==> Start building new translations pot file..."
 sleep 3
 
-cd ${NAS4FREE_SVNDIR}/www
+cd ${XIGMANAS_SVNDIR}/www
 xgettext ${PARAMETERS} *.*
 
-cd ${NAS4FREE_SVNDIR}/www
+cd ${XIGMANAS_SVNDIR}/www
 xgettext ${PARAMETERS} --join-existing *.*
 
-cd ${NAS4FREE_SVNDIR}/www/quixplorer/_include
+cd ${XIGMANAS_SVNDIR}/www/quixplorer/_include
 xgettext ${PARAMETERS} --join-existing *.*
 
-cd ${NAS4FREE_SVNDIR}/etc/inc
+cd ${XIGMANAS_SVNDIR}/etc/inc
 xgettext ${PARAMETERS} --join-existing *.*
 
 DATE="$(date "+%Y-%m-%d %H:%M")+0000"
 echo "msgid \"\"
 msgstr \"\"
-\"Project-Id-Version: ${NAS4FREE_PRODUCTNAME}\\n\"
+\"Project-Id-Version: ${XIGMANAS_PRODUCTNAME}\\n\"
 \"POT-Creation-Date: ${DATE}\\n\"
 \"PO-Revision-Date: \\n\"
 \"Last-Translator: \\n\"

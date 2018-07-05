@@ -31,6 +31,6 @@ CONFIGURE_ARGS+=	--enable-scp-compat
 CONFIGURE_ARGS+=	--enable-winscp-compat
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/scponly ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/scponly ${XIGMANAS_ROOTFS}/usr/local/bin
 
 .include <bsd.port.mk>

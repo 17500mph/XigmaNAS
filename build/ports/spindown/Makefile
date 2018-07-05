@@ -18,7 +18,7 @@ DEP_STAGEDIR=		${PORTSDIR}/sysutils/spindown/work/stage
 
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/sbin/spindown ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/sbin/spindown ${XIGMANAS_ROOTFS}/usr/local/sbin
 
 .include <bsd.port.mk>

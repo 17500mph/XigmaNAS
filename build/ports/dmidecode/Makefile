@@ -14,11 +14,11 @@ LICENSE=	GPLv2
 .include <bsd.port.pre.mk>
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/dmidecode ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/dmidecode ${XIGMANAS_ROOTFS}/usr/local/sbin
 .if (${ARCH} == "amd64" || ${ARCH} == "i386")
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/biosdecode ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/ownership ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/vpddecode ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/biosdecode ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/ownership ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/vpddecode ${XIGMANAS_ROOTFS}/usr/local/sbin
 .endif
 
 .include <bsd.port.post.mk>

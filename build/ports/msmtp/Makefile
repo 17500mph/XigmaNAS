@@ -65,7 +65,7 @@ post-stage:
 
 post-install:
 # NAS4Free install
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${NAS4FREE_ROOTFS}/etc/rc.d/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/msmtp ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${XIGMANAS_ROOTFS}/etc/rc.d/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/msmtp ${XIGMANAS_ROOTFS}/usr/local/bin
 
 .include <bsd.port.mk>

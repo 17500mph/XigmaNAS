@@ -49,8 +49,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/rfb/default8x16.h ${STAGEDIR}${PREFIX}/include/rfb
 
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/lib/libvncserver.so.1 ${NAS4FREE_ROOTFS}/usr/local/lib
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/lib/libvncserver.so.1 ${XIGMANAS_ROOTFS}/usr/local/lib
 # XXX
 	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/lib/libvncserver.so.1 /usr/local/lib
 

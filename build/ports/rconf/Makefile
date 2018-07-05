@@ -15,6 +15,6 @@ NO_WRKSUBDIR=	yes
 NO_PKG_REGISTER=yes
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME} ${NAS4FREE_ROOTFS}/usr/local/sbin/
+	${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME} ${XIGMANAS_ROOTFS}/usr/local/sbin/
 
 .include <bsd.port.mk>

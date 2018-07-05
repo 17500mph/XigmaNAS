@@ -29,9 +29,9 @@ do-install:
 	    ${STAGEDIR}${WWWDIR}/config.php.sample
 
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
+	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${RM} -f ${STAGEDIR}${WWWDIR}/*.txt
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${WWWDIR}
-	@${CP} -Rpv ${STAGEDIR}${WWWDIR} ${NAS4FREE_ROOTFS}${PREFIX}/www
+	#@${MKDIR} -p ${XIGMANAS_ROOTFS}${WWWDIR}
+	@${CP} -Rpv ${STAGEDIR}${WWWDIR} ${XIGMANAS_ROOTFS}${PREFIX}/www
 
 .include <bsd.port.mk>

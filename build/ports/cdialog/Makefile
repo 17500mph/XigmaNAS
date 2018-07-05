@@ -24,7 +24,7 @@ post-patch:
 	@${FIND} ${WRKSRC}/samples/ -type f -exec ${REINPLACE_CMD} -i "" "s|dialog|cdialog|g" {} \;
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/.libs/cdialog ${NAS4FREE_ROOTFS}/${PREFIX}/bin/cdialog
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/.libs/libcdialog.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/.libs/cdialog ${XIGMANAS_ROOTFS}/${PREFIX}/bin/cdialog
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/.libs/libcdialog.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib
 
 .include <bsd.port.mk>

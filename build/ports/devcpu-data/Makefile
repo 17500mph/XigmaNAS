@@ -29,13 +29,13 @@ post-extract:
 
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/cpucontrol
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/microcode_update.in ${NAS4FREE_ROOTFS}/etc/rc.d/microcode_update
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/usr/local/share/cpucontrol
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/microcode_update.in ${XIGMANAS_ROOTFS}/etc/rc.d/microcode_update
 # mcodes
-	${INSTALL_DATA} ${WRKSRC}/microcode_amd.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam15h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam16h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam17h.bin ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
-	${INSTALL_DATA} ${WRKSRC}/mcodes/* ${NAS4FREE_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd.bin ${XIGMANAS_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam15h.bin ${XIGMANAS_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam16h.bin ${XIGMANAS_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/microcode_amd_fam17h.bin ${XIGMANAS_ROOTFS}/${PREFIX}/share/cpucontrol/
+	${INSTALL_DATA} ${WRKSRC}/mcodes/* ${XIGMANAS_ROOTFS}/${PREFIX}/share/cpucontrol/
 .include <bsd.port.mk>

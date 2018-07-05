@@ -15,6 +15,6 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=		--disable-nls
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/wol ${NAS4FREE_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/wol ${XIGMANAS_ROOTFS}/${PREFIX}/bin
 
 .include <bsd.port.mk>
