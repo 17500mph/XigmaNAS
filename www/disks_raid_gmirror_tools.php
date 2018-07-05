@@ -2,8 +2,8 @@
 /*
 	disks_raid_gmirror_tools.php
 
-	Part of NAS4Free (http://www.nas4free.org).
-	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+	Part of XigmaNAS (http://www.xigmanas.com).
+	Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
-	either expressed or implied, of the NAS4Free Project.
+	either expressed or implied, of the XigmaNAS Project.
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';

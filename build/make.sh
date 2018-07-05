@@ -2,8 +2,8 @@
 #
 # This script is designed to automate the assembly of NAS4Free builds.
 #
-# Part of NAS4Free (http://www.nas4free.org).
-# Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+# Part of XigmaNAS (http://www.xigmanas.com).
+# Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
 # All rights reserved.
 #
 # Debug script
