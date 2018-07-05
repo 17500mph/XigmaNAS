@@ -3,7 +3,7 @@
 	header.php
 
 	Part of NAS4Free (https://www.nas4free.org).
-	Copyright (c) 2012-2018 The NAS4Free Project <info@nas4free.org>.
+	Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
 	All rights reserved.
 
 	Portions of Quixplorer (http://quixplorer.sourceforge.net).
@@ -33,7 +33,7 @@
 
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
-	either expressed or implied, of the NAS4Free Project.
+	either expressed or implied, of the XigmaNAS Project.
 */
 /* NAS4FREE CODE */
 require_once 'guiconfig.inc';
