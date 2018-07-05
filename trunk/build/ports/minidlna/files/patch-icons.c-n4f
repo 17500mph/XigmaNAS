@@ -5,7 +5,7 @@
               "\x14\x51\xa2\x8a\x34\x51\x46\x8a\x28\xd1\x45\x1a\x28\xa3\x45\x14\x68\xa2\x8d\x14\x51\xa2\x8a\xff"
               "\xd9";
 +#elif defined(XigmaNAS)
-+#include "nas4free-icons.c"
++#include "xigmanas-icons.c"
  #elif __FreeBSD__
  /* Small Daemon PNG image */
  unsigned char

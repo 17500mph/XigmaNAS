@@ -57,7 +57,7 @@ else:
 	$pconfig['name'] = '';
 	$pconfig['targetname'] = '';
 	$pconfig['targetaddress'] = '';
-	$pconfig['initiatorname'] = 'iqn.2018-02.org.nas4free:nas4free';
+	$pconfig['initiatorname'] = 'iqn.2018-02.org.xigmanas:xigmanas';
 endif;
 if(isset($config['iscsitarget']['nodebase']) && !empty($config['iscsitarget']['nodebase'])):
 	$ex_nodebase = $config['iscsitarget']['nodebase'];

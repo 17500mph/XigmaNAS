@@ -101,8 +101,8 @@ XIGMANAS_SVNURL="https://svn.code.sf.net/p/xigmanas/code/trunk"
 XIGMANAS_SVN_SRCTREE="svn://svn.FreeBSD.org/base/releng/11.2"
 
 # Size in MB of the MFS Root filesystem that will include all FreeBSD binary
-# and NAS4FREE WEbGUI/Scripts. Keep this file very small! This file is unzipped
-# to a RAM disk at NAS4FREE startup.
+# and XIGMANAS WEbGUI/Scripts. Keep this file very small! This file is unzipped
+# to a RAM disk at XIGMANAS startup.
 # The image must fit on 2GB CF/USB.
 # Actual size of MDLOCAL is defined in /etc/rc.
 XIGMANAS_MFSROOT_SIZE=128
@@ -229,7 +229,7 @@ update_sources() {
 
 # Build world. Copying required files defined in 'build/xigmanas.files'.
 build_world() {
-	# Make a pseudo 'chroot' to NAS4FREE root.
+	# Make a pseudo 'chroot' to XIGMANAS root.
   cd $XIGMANAS_ROOTFS
 
 	echo
@@ -1190,7 +1190,7 @@ create_full() {
 	[ -d $XIGMANAS_TMPDIR ] && rm -rf $XIGMANAS_TMPDIR
 	mkdir $XIGMANAS_TMPDIR
 
-	#Copying all NAS4FREE rootfilesystem (including symlink) on this folder
+	#Copying all XIGMANAS rootfilesystem (including symlink) on this folder
 	cd $XIGMANAS_TMPDIR
 	tar -cf - -C $XIGMANAS_ROOTFS ./ | tar -xvpf -
 	#tar -cf - -C $XIGMANAS_ROOTFS ./ | tar -xvpf - -C $XIGMANAS_TMPDIR
@@ -1782,7 +1782,7 @@ build_system() {
   while true; do
 echo -n '
 -----------------------------
-Compile NAS4FREE from Scratch
+Compile XIGMANAS from Scratch
 -----------------------------
 
 	Menu Options:
@@ -1996,7 +1996,7 @@ main() {
 ${XIGMANAS_PRODUCTNAME} Build Environment
 --------------------------
 
-1  - Update NAS4FREE Source Files to CURRENT.
+1  - Update XIGMANAS Source Files to CURRENT.
 2  - XigmaNAS Compile Menu.
 10 - Create 'Embedded.img.xz' File. (Firmware Update)
 11 - Create 'LiveUSB.img.gz' File. (Rawrite to USB Key)
@@ -2009,7 +2009,7 @@ ${XIGMANAS_PRODUCTNAME} Build Environment
 21 - Create 'RPI2 SD (IMG) File."
 	fi
 	echo -n "
-15 - Create 'nas4free.pot' file from Source files.
+15 - Create 'xigmanas.pot' file from Source files.
 *  - Exit.
 
 Press # "

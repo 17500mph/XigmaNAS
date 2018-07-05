@@ -1,4 +1,4 @@
-PORTNAME=		nas4free-open-vm-tools
+PORTNAME=		xigmanas-open-vm-tools
 PORTVERSION=	1.0
 PORTREVISION=	3
 CATEGORIES=		emulators
