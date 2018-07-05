@@ -48,6 +48,6 @@ post-configure-LIBEVENT_STATIC-on:
 
 # NAS4Free install
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/tmux ${NAS4FREE_ROOTFS}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/tmux ${XIGMANAS_ROOTFS}/bin
 
 .include <bsd.port.mk>

@@ -31,7 +31,7 @@ do-build:
 	@${MAKE} -C /usr/src/usr.bin/clog
 
 do-install:
-	@${INSTALL_PROGRAM} -v /usr/src/usr.bin/syslogd/syslogd ${NAS4FREE_ROOTFS}/usr/sbin
-	@${INSTALL_PROGRAM} -v /usr/src/usr.bin/clog/clog ${NAS4FREE_ROOTFS}/usr/sbin
+	@${INSTALL_PROGRAM} -v /usr/src/usr.bin/syslogd/syslogd ${XIGMANAS_ROOTFS}/usr/sbin
+	@${INSTALL_PROGRAM} -v /usr/src/usr.bin/clog/clog ${XIGMANAS_ROOTFS}/usr/sbin
 
 .include <bsd.port.post.mk>

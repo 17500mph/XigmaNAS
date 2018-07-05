@@ -15,19 +15,19 @@ DEPENDS_TARGET=	clean build
 BUILD_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/sysutils/graid5
 
 .include <../nas4free.mk>
-.if ${NAS4FREE_XARCH} == "rpi2" || ${NAS4FREE_XARCH} == "oc1"
+.if ${XIGMANAS_XARCH} == "rpi2" || ${XIGMANAS_XARCH} == "oc1"
 export CONF_CFLAGS=-march=armv7a -mtune=cortex-a7 -mcpu=cortex-a7
-.elif ${NAS4FREE_XARCH} == "rpi"
+.elif ${XIGMANAS_XARCH} == "rpi"
 export CONF_CFLAGS=-march=armv6z -mtune=arm1176jzf-s -mcpu=arm1176jzf-s -DCPU_ARM1176
 .endif
 
 do-install:
 	# Install kernel module.
-	@${INSTALL_KLD} -v ${PORTSDIR}/sysutils/graid5/work/graid5-1.3.20140711.62/sys/geom_raid5.ko ${NAS4FREE_ROOTFS}/boot/kernel
+	@${INSTALL_KLD} -v ${PORTSDIR}/sysutils/graid5/work/graid5-1.3.20140711.62/sys/geom_raid5.ko ${XIGMANAS_ROOTFS}/boot/kernel
 
 	# Install application.
-	@${LN} -f -v -s /sbin/geom ${NAS4FREE_ROOTFS}/sbin/graid5
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/graid5/work/graid5-1.3.20140711.62/lib/geom_raid5.so ${NAS4FREE_ROOTFS}/lib/geom
+	@${LN} -f -v -s /sbin/geom ${XIGMANAS_ROOTFS}/sbin/graid5
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/graid5/work/graid5-1.3.20140711.62/lib/geom_raid5.so ${XIGMANAS_ROOTFS}/lib/geom
 
 
 .include <bsd.port.mk>

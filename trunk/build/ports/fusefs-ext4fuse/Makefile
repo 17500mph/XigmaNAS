@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/ext4fuse ${NAS4FREE_ROOTFS}/usr/local/bin
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/ext4fuse ${XIGMANAS_ROOTFS}/usr/local/bin
 
 .include <bsd.port.mk>

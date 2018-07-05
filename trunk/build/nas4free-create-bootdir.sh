@@ -5,7 +5,7 @@
 # All rights reserved.
 #
 
-MINIBSD_DIR=${NAS4FREE_ROOTDIR}/bootloader;
+MINIBSD_DIR=${XIGMANAS_ROOTDIR}/bootloader;
 
 # Initialize variables.
 opt_a=0
@@ -67,29 +67,29 @@ mkdir $MINIBSD_DIR/modules
 mkdir $MINIBSD_DIR/zfs
 
 # Copy required files
-cp -v ${NAS4FREE_WORLD}/boot/defaults/loader.conf $MINIBSD_DIR/defaults
-cp -v ${NAS4FREE_WORLD}/boot/loader $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/boot $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/mbr $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/gptboot $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/pmbr $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/cdboot $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/loader.4th $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/support.4th $MINIBSD_DIR
-cp -v ${NAS4FREE_WORLD}/boot/device.hints $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/defaults/loader.conf $MINIBSD_DIR/defaults
+cp -v ${XIGMANAS_WORLD}/boot/loader $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/boot $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/mbr $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/gptboot $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/pmbr $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/cdboot $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/loader.4th $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/support.4th $MINIBSD_DIR
+cp -v ${XIGMANAS_WORLD}/boot/device.hints $MINIBSD_DIR
 # Copy files required by bootmenu
 if [ 0 != $opt_m ]; then
-#	cp -v ${NAS4FREE_WORLD}/boot/screen.4th $MINIBSD_DIR
-#	cp -v ${NAS4FREE_WORLD}/boot/frames.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/brand.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/check-password.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/color.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/delay.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/frames.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/menu-commands.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/screen.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/shortcuts.4th $MINIBSD_DIR
-	cp -v ${NAS4FREE_WORLD}/boot/version.4th $MINIBSD_DIR
+#	cp -v ${XIGMANAS_WORLD}/boot/screen.4th $MINIBSD_DIR
+#	cp -v ${XIGMANAS_WORLD}/boot/frames.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/brand.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/check-password.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/color.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/delay.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/frames.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/menu-commands.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/screen.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/shortcuts.4th $MINIBSD_DIR
+	cp -v ${XIGMANAS_WORLD}/boot/version.4th $MINIBSD_DIR
 fi
 
 # Generate the loader.rc file used by bootloader
@@ -149,7 +149,7 @@ echo 'isboot_load="YES"' >> $MINIBSD_DIR/loader.conf
 echo 'zfs_load="YES"' >> $MINIBSD_DIR/loader.conf
 
 # Xen
-if [ "dom0" == ${NAS4FREE_XARCH} ]; then
+if [ "dom0" == ${XIGMANAS_XARCH} ]; then
     echo 'xen_kernel="/boot/xen"' >> $MINIBSD_DIR/loader.conf
     echo 'xen_cmdline="dom0_mem=4096M dom0_max_vcpus=4 dom0pvh=1 com1=115200,8n1 guest_loglvl=all loglvl=all console=com1,vga"' >> $MINIBSD_DIR/loader.conf
     echo 'vfs.zfs.arc_max="2G"' >> $MINIBSD_DIR/loader.conf
@@ -157,8 +157,8 @@ if [ "dom0" == ${NAS4FREE_XARCH} ]; then
 fi
 
 # Copy kernel.
-if [ -e "${NAS4FREE_WORKINGDIR}/kernel.gz" ] ; then
-  cp ${NAS4FREE_WORKINGDIR}/kernel.gz $MINIBSD_DIR/kernel
+if [ -e "${XIGMANAS_WORKINGDIR}/kernel.gz" ] ; then
+  cp ${XIGMANAS_WORKINGDIR}/kernel.gz $MINIBSD_DIR/kernel
 else
   echo "=> ERROR: File kernel.gz does not exist!";
   exit 1;

@@ -38,6 +38,6 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/compat/libstdc++.so.6:misc/compat9x
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} -v ${WRKSRC}/freebsd${DIST_OSVER}${DIST_EXT}/cmdline/arcconf ${NAS4FREE_ROOTFS}/${PREFIX}/sbin
+	${INSTALL_PROGRAM} -v ${WRKSRC}/freebsd${DIST_OSVER}${DIST_EXT}/cmdline/arcconf ${XIGMANAS_ROOTFS}/${PREFIX}/sbin
 
 .include <bsd.port.post.mk>

@@ -55,7 +55,7 @@ post-build:
 FORCE_PKG_REGISTER=	yes
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/unison ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/unison ${XIGMANAS_ROOTFS}/usr/local/bin
 # Install on host system too, otherwise depending ports fail during ./configure process (e.g. scponly). 
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/unison ${PREFIX}/bin
 

@@ -20,6 +20,6 @@ post-patch:
 		${WRKSRC}/configure
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/xml ${NAS4FREE_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/xml ${XIGMANAS_ROOTFS}/${PREFIX}/bin
 
 .include <bsd.port.mk>

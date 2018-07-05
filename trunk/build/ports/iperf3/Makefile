@@ -15,7 +15,7 @@ USE_LDCONFIG=	yes
 .include <bsd.port.options.mk>
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/iperf3 ${NAS4FREE_ROOTFS}/${PREFIX}/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/libiperf.so.0 ${NAS4FREE_ROOTFS}/${PREFIX}/lib
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/iperf3 ${XIGMANAS_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/libiperf.so.0 ${XIGMANAS_ROOTFS}/${PREFIX}/lib
 
 .include <bsd.port.mk>

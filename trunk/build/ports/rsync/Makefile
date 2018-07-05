@@ -47,7 +47,7 @@ pre-configure:
 		${WRKSRC}/rsync.h ${WRKSRC}/zlib/zutil.h
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/rsync ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/rsync ${XIGMANAS_ROOTFS}/usr/local/bin
 # Install on host system too, otherwise depending ports fail during ./configure process (e.g. scponly). 
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/rsync ${PREFIX}/bin
 

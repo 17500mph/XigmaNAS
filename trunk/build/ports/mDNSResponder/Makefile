@@ -32,12 +32,12 @@ pre-build:
 		${WRKSRC}/mDNSPosix/mDNSUNP.h
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSClientPosix ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSIdentify ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSNetMonitor ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSProxyResponderPosix ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSResponderPosix ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/libdns_sd.so ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/mdnsresponder.in ${NAS4FREE_ROOTFS}/etc/rc.d/mdnsresponder
+	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSClientPosix ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSIdentify ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSNetMonitor ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSProxyResponderPosix ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/mDNSResponderPosix ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${BUILD_WRKSRC}/build/prod/libdns_sd.so ${XIGMANAS_ROOTFS}/usr/local/lib
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/mdnsresponder.in ${XIGMANAS_ROOTFS}/etc/rc.d/mdnsresponder
 
 .include <bsd.port.post.mk>

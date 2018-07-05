@@ -53,9 +53,9 @@ pre-build:
 	@${ECHO_CMD} $$((${PORTREVISION}-1)) > ${WRKSRC}/.build
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/bash ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${LN} -fsv /usr/local/bin/bash ${NAS4FREE_ROOTFS}/usr/local/bin/rbash
-	@${LN} -fsv /usr/local/bin/bash ${NAS4FREE_ROOTFS}/bin/bash
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/bash ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${LN} -fsv /usr/local/bin/bash ${XIGMANAS_ROOTFS}/usr/local/bin/rbash
+	@${LN} -fsv /usr/local/bin/bash ${XIGMANAS_ROOTFS}/bin/bash
 
 regress: build
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} test

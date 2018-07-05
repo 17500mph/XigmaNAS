@@ -17,6 +17,6 @@ CFLAGS+=	-DVIMAGE
 .endif
 
 do-install:
-	@${INSTALL_KLD} -v ${WRKSRC}/isboot.ko ${NAS4FREE_ROOTFS}/boot/kernel
+	@${INSTALL_KLD} -v ${WRKSRC}/isboot.ko ${XIGMANAS_ROOTFS}/boot/kernel
 
 .include <bsd.port.post.mk>

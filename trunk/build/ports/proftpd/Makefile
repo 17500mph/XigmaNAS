@@ -62,11 +62,11 @@ post-configure:
 		${WRKSRC}/utils/ftpcount.1
 
 do-install:
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${NAS4FREE_ROOTFS}/etc/rc.d/${PORTNAME}
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${XIGMANAS_ROOTFS}/etc/rc.d/${PORTNAME}
 
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/ftpwho ${NAS4FREE_ROOTFS}/${PREFIX}/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/ftptop ${NAS4FREE_ROOTFS}/${PREFIX}/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/ftpdctl ${NAS4FREE_ROOTFS}/${PREFIX}/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/${PORTNAME} ${NAS4FREE_ROOTFS}/${PREFIX}/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/ftpwho ${XIGMANAS_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/ftptop ${XIGMANAS_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/ftpdctl ${XIGMANAS_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/${PORTNAME} ${XIGMANAS_ROOTFS}/${PREFIX}/sbin
 
 .include <bsd.port.post.mk>

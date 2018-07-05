@@ -124,13 +124,13 @@ test: build
 	@(cd ${WRKSRC} && ${MAKE} test)
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/sapi/cgi/php-cgi ${NAS4FREE_ROOTFS}/${PREFIX}/bin/
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/sapi/cli/php ${NAS4FREE_ROOTFS}/${PREFIX}/bin/
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/php-cgi-websrv ${NAS4FREE_ROOTFS}/${PREFIX}/bin/
-	@${CP} -pv ${FILESDIR}/php.ini ${NAS4FREE_ROOTFS}/${PREFIX}/etc
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/sapi/cgi/php-cgi ${XIGMANAS_ROOTFS}/${PREFIX}/bin/
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/sapi/cli/php ${XIGMANAS_ROOTFS}/${PREFIX}/bin/
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/php-cgi-websrv ${XIGMANAS_ROOTFS}/${PREFIX}/bin/
+	@${CP} -pv ${FILESDIR}/php.ini ${XIGMANAS_ROOTFS}/${PREFIX}/etc
 
-	@${MKDIR} ${NAS4FREE_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
-	${INSTALL_DATA} ${WRKSRC}/ext/opcache/.libs/opcache.so ${NAS4FREE_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
-	@${CP} -pv ${FILESDIR}/opcache.ini ${NAS4FREE_ROOTFS}/${PREFIX}/etc/php
+	@${MKDIR} ${XIGMANAS_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
+	${INSTALL_DATA} ${WRKSRC}/ext/opcache/.libs/opcache.so ${XIGMANAS_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20170718
+	@${CP} -pv ${FILESDIR}/opcache.ini ${XIGMANAS_ROOTFS}/${PREFIX}/etc/php
 
 .include <bsd.port.mk>

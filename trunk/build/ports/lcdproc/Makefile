@@ -129,16 +129,16 @@ PLIST_SUB+=		USB="@comment " FTDI="@comment " HID="@comment "
 
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/LCDd ${NAS4FREE_ROOTFS}/${PREFIX}/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/lcdexec/lcdexec ${NAS4FREE_ROOTFS}/${PREFIX}/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/lcdproc/lcdproc ${NAS4FREE_ROOTFS}/${PREFIX}/bin
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/${PREFIX}/lib/lcdproc
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/drivers/*.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/lcdproc
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/${PREFIX}/share/lcdproc
-	@${INSTALL_DATA} -v ${WRKSRC}/LCDd.conf ${NAS4FREE_ROOTFS}/${PREFIX}/share/lcdproc
-	@${INSTALL_DATA} -v ${WRKSRC}/clients/lcdexec/lcdexec.conf ${NAS4FREE_ROOTFS}/${PREFIX}/share/lcdproc
-	@${INSTALL_DATA} -v ${WRKSRC}/clients/lcdproc/lcdproc.conf ${NAS4FREE_ROOTFS}/${PREFIX}/share/lcdproc
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/LCDd.in ${NAS4FREE_ROOTFS}/etc/rc.d/LCDd
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/lcdproc.in ${NAS4FREE_ROOTFS}/etc/rc.d/lcdproc
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/LCDd ${XIGMANAS_ROOTFS}/${PREFIX}/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/lcdexec/lcdexec ${XIGMANAS_ROOTFS}/${PREFIX}/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/lcdproc/lcdproc ${XIGMANAS_ROOTFS}/${PREFIX}/bin
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/${PREFIX}/lib/lcdproc
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/drivers/*.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/lcdproc
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/${PREFIX}/share/lcdproc
+	@${INSTALL_DATA} -v ${WRKSRC}/LCDd.conf ${XIGMANAS_ROOTFS}/${PREFIX}/share/lcdproc
+	@${INSTALL_DATA} -v ${WRKSRC}/clients/lcdexec/lcdexec.conf ${XIGMANAS_ROOTFS}/${PREFIX}/share/lcdproc
+	@${INSTALL_DATA} -v ${WRKSRC}/clients/lcdproc/lcdproc.conf ${XIGMANAS_ROOTFS}/${PREFIX}/share/lcdproc
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/LCDd.in ${XIGMANAS_ROOTFS}/etc/rc.d/LCDd
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/lcdproc.in ${XIGMANAS_ROOTFS}/etc/rc.d/lcdproc
 
 .include <bsd.port.post.mk>

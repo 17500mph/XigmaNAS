@@ -47,42 +47,42 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/lighttpd --enable-static \
 			--with-webdav-locks
 
 do-install:
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/lighttpd ${NAS4FREE_ROOTFS}/usr/local/sbin
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/lighttpd ${XIGMANAS_ROOTFS}/usr/local/sbin
 
-		@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_access.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_accesslog.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_alias.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_auth.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_authn_file.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_cgi.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_compress.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_deflate.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_dirlisting.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_evasive.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_evhost.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_expire.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_extforward.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_fastcgi.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_flv_streaming.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_indexfile.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_openssl.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_proxy.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_redirect.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_rewrite.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_rrdtool.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_scgi.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_secdownload.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_setenv.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_simple_vhost.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_ssi.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_staticfile.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_status.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_uploadprogress.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_userdir.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_usertrack.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_vhostdb.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_webdav.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
-		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_wstunnel.so ${NAS4FREE_ROOTFS}/usr/local/lib/lighttpd
+		@${MKDIR} -v ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_access.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_accesslog.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_alias.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_auth.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_authn_file.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_cgi.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_compress.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_deflate.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_dirlisting.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_evasive.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_evhost.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_expire.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_extforward.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_fastcgi.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_flv_streaming.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_indexfile.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_openssl.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_proxy.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_redirect.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_rewrite.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_rrdtool.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_scgi.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_secdownload.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_setenv.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_simple_vhost.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_ssi.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_staticfile.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_status.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_uploadprogress.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_userdir.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_usertrack.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_vhostdb.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_webdav.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
+		@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/mod_wstunnel.so ${XIGMANAS_ROOTFS}/usr/local/lib/lighttpd
 
 .include <bsd.port.mk>

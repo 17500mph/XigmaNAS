@@ -57,87 +57,87 @@ pre-install:
 	@${REINPLACE_CMD} -e 's/device-name\*/cdev/g' ${WRKSRC}/scripts/devd/nut-usb.conf
 
 do-install:
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}${PREFIX}/etc/devd
-	@${INSTALL_SCRIPT} -v ${WRKSRC}/scripts/devd/nut-usb.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/devd/nut-usb.conf
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}${PREFIX}/etc/devd
+	@${INSTALL_SCRIPT} -v ${WRKSRC}/scripts/devd/nut-usb.conf ${XIGMANAS_ROOTFS}${PREFIX}/etc/devd/nut-usb.conf
 
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/${NUT_DATADIR}
-	@${INSTALL_DATA} -v ${WRKSRC}/data/cmdvartab ${NAS4FREE_ROOTFS}/${NUT_DATADIR}
-	@${INSTALL_DATA} -v ${WRKSRC}/data/driver.list ${NAS4FREE_ROOTFS}/${NUT_DATADIR}
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/${NUT_DATADIR}
+	@${INSTALL_DATA} -v ${WRKSRC}/data/cmdvartab ${XIGMANAS_ROOTFS}/${NUT_DATADIR}
+	@${INSTALL_DATA} -v ${WRKSRC}/data/driver.list ${XIGMANAS_ROOTFS}/${NUT_DATADIR}
 
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/al175 ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/apcsmart ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/apcsmart-old ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/apcupsd-ups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bcmxcp ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bcmxcp_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/belkin ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/belkinunv ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestfcom ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestfortress ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestuferrups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/blazer_ser ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/blazer_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/clone ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/clone-outlet ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/.libs/dummy-ups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/etapro ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/everups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/gamatronic ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/genericups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/isbmex ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/ivtscd ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/liebert ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/liebert-esp2 ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/masterguard ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/metasys ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/mge-shut ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/mge-utalk ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/microdowell ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/netxml-ups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/nutdrv_atcl_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/nutdrv_qx ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/al175 ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/apcsmart ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/apcsmart-old ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/apcupsd-ups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bcmxcp ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bcmxcp_usb ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/belkin ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/belkinunv ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestfcom ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestfortress ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestuferrups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/bestups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/blazer_ser ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/blazer_usb ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/clone ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/clone-outlet ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/.libs/dummy-ups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/etapro ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/everups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/gamatronic ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/genericups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/isbmex ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/ivtscd ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/liebert ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/liebert-esp2 ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/masterguard ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/metasys ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/mge-shut ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/mge-utalk ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/microdowell ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/netxml-ups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/nutdrv_atcl_usb ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/nutdrv_qx ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
 .if (${ARCH} == "amd64" || ${ARCH} == "i386")
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/nut-ipmipsu ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/nut-ipmipsu ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
 .endif
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/oldmge-shut ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/oneac ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/optiups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/powercom ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/powerman-pdu ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/powerpanel ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/rhino ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/richcomm_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/riello_ser ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/riello_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/safenet ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/skel ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/snmp-ups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/solis ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplite ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplite_usb ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplitesu ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upscode2 ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/usbhid-ups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/victronups ${NAS4FREE_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/oldmge-shut ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/oneac ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/optiups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/powercom ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/powerman-pdu ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/powerpanel ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/rhino ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/richcomm_usb ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/riello_ser ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/riello_usb ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/safenet ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/skel ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/snmp-ups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/solis ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplite ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplite_usb ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/tripplitesu ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upscode2 ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/usbhid-ups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/victronups ${XIGMANAS_ROOTFS}/${NUT_DRVDIR}
 
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/libupsclient.so.4 ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${LN} -f -v -s /usr/local/lib/libupsclient.so.4 ${NAS4FREE_ROOTFS}/usr/local/lib/libupsclient.so
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/libupsclient.so.4 ${XIGMANAS_ROOTFS}/usr/local/lib
+	@${LN} -f -v -s /usr/local/lib/libupsclient.so.4 ${XIGMANAS_ROOTFS}/usr/local/lib/libupsclient.so
 
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsc ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upscmd ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upslog ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsmon ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsrw ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsc ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upscmd ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upslog ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsmon ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/.libs/upsrw ${XIGMANAS_ROOTFS}/usr/local/bin
 
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/upsd ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upsdrvctl ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/upssched ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/server/upsd ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/drivers/upsdrvctl ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/clients/upssched ${XIGMANAS_ROOTFS}/usr/local/sbin
 
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upslog.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut_upslog
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upsmon.in ${NAS4FREE_ROOTFS}/etc/rc.d/nut_upsmon
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/upssched-cmd.in ${NAS4FREE_ROOTFS}/usr/local/bin/upssched-cmd
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut.in ${XIGMANAS_ROOTFS}/etc/rc.d/nut
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upslog.in ${XIGMANAS_ROOTFS}/etc/rc.d/nut_upslog
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/nut_upsmon.in ${XIGMANAS_ROOTFS}/etc/rc.d/nut_upsmon
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/upssched-cmd.in ${XIGMANAS_ROOTFS}/usr/local/bin/upssched-cmd
 
 .include <bsd.port.post.mk>

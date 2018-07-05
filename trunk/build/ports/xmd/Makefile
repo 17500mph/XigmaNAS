@@ -23,9 +23,9 @@ IGNORE=unsupported on ${ARCH}
 .endif
 
 .include <../nas4free.mk>
-.if ${NAS4FREE_XARCH} == "rpi2" || ${NAS4FREE_XARCH} == "oc1"
+.if ${XIGMANAS_XARCH} == "rpi2" || ${XIGMANAS_XARCH} == "oc1"
 export CONF_CFLAGS=-march=armv7a -mtune=cortex-a7 -mcpu=cortex-a7
-.elif ${NAS4FREE_XARCH} == "rpi"
+.elif ${XIGMANAS_XARCH} == "rpi"
 export CONF_CFLAGS=-march=armv6z -mtune=arm1176jzf-s -mcpu=arm1176jzf-s -DCPU_ARM1176
 .endif
 
@@ -34,10 +34,10 @@ post-build:
 	cd ${WRKSRC}/../uncloop && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS}
 
 do-install:
-	@${MKDIR} -p ${NAS4FREE_BOOTDIR}/kernel
-	@${INSTALL_KLD} -v ${WRKSRC}/geom_xmd.ko ${NAS4FREE_BOOTDIR}/kernel
-	@${INSTALL_KLD} -v ${WRKSRC}/geom_xmd.ko ${NAS4FREE_ROOTFS}/boot/kernel
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/../xmdconfig/xmdconfig ${NAS4FREE_ROOTFS}/sbin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/../uncloop/uncloop ${NAS4FREE_ROOTFS}/usr/bin
+	@${MKDIR} -p ${XIGMANAS_BOOTDIR}/kernel
+	@${INSTALL_KLD} -v ${WRKSRC}/geom_xmd.ko ${XIGMANAS_BOOTDIR}/kernel
+	@${INSTALL_KLD} -v ${WRKSRC}/geom_xmd.ko ${XIGMANAS_ROOTFS}/boot/kernel
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/../xmdconfig/xmdconfig ${XIGMANAS_ROOTFS}/sbin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/../uncloop/uncloop ${XIGMANAS_ROOTFS}/usr/bin
 
 .include <bsd.port.post.mk>

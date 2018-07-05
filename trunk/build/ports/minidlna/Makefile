@@ -60,8 +60,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/minidlna.conf ${STAGEDIR}${PREFIX}/etc/minidlna.conf.sample
 
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/minidlnad ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/minidlna.in ${NAS4FREE_ROOTFS}/etc/rc.d/minidlna
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/minidlnad ${XIGMANAS_ROOTFS}/usr/local/sbin
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/minidlna.in ${XIGMANAS_ROOTFS}/etc/rc.d/minidlna
 
 .include <bsd.port.mk>

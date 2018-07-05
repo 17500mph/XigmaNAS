@@ -65,45 +65,45 @@ pre-configure:
 	@(cd ${WRKDIR}/${DISTNAME}; autoreconf -vfi)
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/${PORTNAME}d ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/libfuppes.so.* ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${NAS4FREE_ROOTFS}/etc/rc.d/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/${PORTNAME}d ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/.libs/libfuppes.so.* ${XIGMANAS_ROOTFS}/usr/local/lib
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${XIGMANAS_ROOTFS}/etc/rc.d/${PORTNAME}
 
 	# Presentation
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}
-	@${INSTALL_DATA} -v ${WRKSRC}/resources/*.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}
-	@${INSTALL_DATA} -v ${WRKSRC}/resources/*.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}
-	@${INSTALL_DATA} -v ${WRKSRC}/resources/*.jpg ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}
-	@${INSTALL_DATA} -v ${WRKSRC}/resources/style.css ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}
+	@${INSTALL_DATA} -v ${WRKSRC}/resources/*.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}
+	@${INSTALL_DATA} -v ${WRKSRC}/resources/*.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}
+	@${INSTALL_DATA} -v ${WRKSRC}/resources/*.jpg ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}
+	@${INSTALL_DATA} -v ${WRKSRC}/resources/style.css ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}
 
 	# Configs
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/devices
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/vfolders
-	@${INSTALL_DATA} -v ${WRKSRC}/config/devices/*.cfg ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/devices
-	@${INSTALL_DATA} -v ${WRKSRC}/config/vfolders/*.cfg ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/vfolders
-	@${INSTALL_DATA} -v ${FILESDIR}/devices/*.cfg ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/devices
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/devices
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/vfolders
+	@${INSTALL_DATA} -v ${WRKSRC}/config/devices/*.cfg ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/devices
+	@${INSTALL_DATA} -v ${WRKSRC}/config/vfolders/*.cfg ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/vfolders
+	@${INSTALL_DATA} -v ${FILESDIR}/devices/*.cfg ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/devices
 
 	# Install plugins
-	@${MKDIR} -v ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libdatabase_sqlite3.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libdatabase_sqlite3.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libdecoder_flac.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libdecoder_flac.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libdecoder_vorbis.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libdecoder_vorbis.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libencoder_pcm.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libencoder_pcm.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libencoder_wav.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libencoder_wav.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libmetadata_libavformat.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libmetadata_libavformat.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libmetadata_libmp4v2.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libmetadata_libmp4v2.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libmetadata_taglib.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libmetadata_taglib.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libsource_bliptv.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libsource_bliptv.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libsource_itunes.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libsource_itunes.so.* ${NAS4FREE_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${MKDIR} -v ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libdatabase_sqlite3.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libdatabase_sqlite3.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libdecoder_flac.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libdecoder_flac.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libdecoder_vorbis.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libdecoder_vorbis.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libencoder_pcm.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libencoder_pcm.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libencoder_wav.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libencoder_wav.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libmetadata_libavformat.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libmetadata_libavformat.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libmetadata_libmp4v2.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libmetadata_libmp4v2.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libmetadata_taglib.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libmetadata_taglib.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libsource_bliptv.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libsource_bliptv.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${CP} -Rpv ${WRKSRC}/src/plugins/.libs/libsource_itunes.so ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/plugins/.libs/libsource_itunes.so.* ${XIGMANAS_ROOTFS}/${PREFIX}/lib/${PORTNAME}
 
 .include <bsd.port.mk>

@@ -18,7 +18,7 @@ DEP_STAGEDIR=		${PORTSDIR}/sysutils/wait_on/work/stage
 
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/wait_on ${NAS4FREE_ROOTFS}/usr/local/bin
+	@echo "install for ${XIGMANAS_ROOTFS}"
+	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/wait_on ${XIGMANAS_ROOTFS}/usr/local/bin
 
 .include <bsd.port.mk>

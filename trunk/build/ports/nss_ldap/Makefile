@@ -18,8 +18,8 @@ DEPENDS_TARGET=	clean build
 BUILD_DEPENDS=	${NONEXISTENT}:net/nss_ldap
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/net/nss_ldap/work/nss_ldap-*/nss_ldap.so ${NAS4FREE_ROOTFS}/usr/local/lib/nss_ldap.so.1
-	@${LN} -fsv /var/etc/ldap.conf ${NAS4FREE_ROOTFS}/usr/local/etc/nss_ldap.conf
-	@${LN} -fsv /var/etc/ldap.secret ${NAS4FREE_ROOTFS}/usr/local/etc/nss_ldap.secret
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/net/nss_ldap/work/nss_ldap-*/nss_ldap.so ${XIGMANAS_ROOTFS}/usr/local/lib/nss_ldap.so.1
+	@${LN} -fsv /var/etc/ldap.conf ${XIGMANAS_ROOTFS}/usr/local/etc/nss_ldap.conf
+	@${LN} -fsv /var/etc/ldap.secret ${XIGMANAS_ROOTFS}/usr/local/etc/nss_ldap.secret
 
 .include <bsd.port.mk>

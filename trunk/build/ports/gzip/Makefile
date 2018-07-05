@@ -14,8 +14,8 @@ post-configure:
 	@${REINPLACE_CMD} -e 's|^SHELL =.*|SHELL=/bin/sh|' ${WRKSRC}/Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/gzip ${NAS4FREE_ROOTFS}/usr/bin
-	@${INSTALL_SCRIPT} -v ${WRKSRC}/gunzip ${NAS4FREE_ROOTFS}/usr/bin
-	@${INSTALL_SCRIPT} -v ${WRKSRC}/zcat ${NAS4FREE_ROOTFS}/usr/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/gzip ${XIGMANAS_ROOTFS}/usr/bin
+	@${INSTALL_SCRIPT} -v ${WRKSRC}/gunzip ${XIGMANAS_ROOTFS}/usr/bin
+	@${INSTALL_SCRIPT} -v ${WRKSRC}/zcat ${XIGMANAS_ROOTFS}/usr/bin
 
 .include <bsd.port.mk>

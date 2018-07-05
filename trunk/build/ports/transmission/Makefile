@@ -80,75 +80,75 @@ post-patch: general-patch
 
 do-install:
 
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${NAS4FREE_ROOTFS}/etc/rc.d/${PORTNAME}
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/${PORTNAME}.in ${XIGMANAS_ROOTFS}/etc/rc.d/${PORTNAME}
 
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/daemon/transmission-daemon ${NAS4FREE_ROOTFS}/usr/local/bin
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/daemon/transmission-remote ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/daemon/transmission-daemon ${XIGMANAS_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/daemon/transmission-remote ${XIGMANAS_ROOTFS}/usr/local/bin
 
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images/
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/jqueryui
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images/buttons
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/images/
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/jqueryui
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${MKDIR} -pv ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images/buttons
 
-	@${INSTALL_DATA} -v ${WRKSRC}/web/index.html ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web
-	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.ico ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/images/webclip-icon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/index.html ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web
+	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.ico ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/images/webclip-icon.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/images
 
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.transmenu.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.ui-contextmenu.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-migrate.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-ui.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/json2.min.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.min.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.transmenu.min.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery.ui-contextmenu.min.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-migrate.min.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/jquery-ui.min.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/jquery/json2.min.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
 
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/common.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/dialog.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/file-row.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/formatter.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/inspector.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/notifications.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/prefs-dialog.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/remote.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/torrent.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/torrent-row.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
-	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/transmission.js ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/common.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/dialog.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/file-row.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/formatter.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/inspector.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/notifications.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/prefs-dialog.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/remote.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/torrent.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/torrent-row.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
+	@${INSTALL_DATA} -v ${WRKSRC}/web/javascript/transmission.js ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript
 
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/jqueryui/jquery-ui.min.css ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/jqueryui
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/jqueryui/jquery-ui.min.css ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/jqueryui
 
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/common.css ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/common.scss ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/mobile.css ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/mobile.scss ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/common.css ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/common.scss ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/mobile.css ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/mobile.scss ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
 
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/arrow-down.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/arrow-up.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/blue-turtle.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/compact.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/file-priority-high.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/file-priority-low.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/file-priority-normal.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/filter_bar.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/filter_icon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-files.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-info.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-peers.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-trackers.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/lock_icon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/logo.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/progress.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/settings.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-close.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-folder.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-info.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-pause.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-pause-all.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-start.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-start-all.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/turtle.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/wrench.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
-	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/buttons/torrent_buttons.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images/buttons
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/arrow-down.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/arrow-up.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/blue-turtle.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/compact.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/file-priority-high.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/file-priority-low.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/file-priority-normal.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/filter_bar.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/filter_icon.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-files.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-info.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-peers.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/inspector-trackers.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/lock_icon.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/logo.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/progress.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/settings.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-close.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-folder.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-info.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-pause.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-pause-all.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-start.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/toolbar-start-all.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/turtle.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/wrench.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
+	@${INSTALL_DATA} -v ${WRKSRC}/web/style/transmission/images/buttons/torrent_buttons.png ${XIGMANAS_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images/buttons
 
 .include <bsd.port.mk>

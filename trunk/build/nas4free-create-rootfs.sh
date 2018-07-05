@@ -8,7 +8,7 @@
 #
 
 
-MINIBSD_DIR=${NAS4FREE_ROOTFS};
+MINIBSD_DIR=${XIGMANAS_ROOTFS};
 
 # Initialize variables.
 opt_f=0

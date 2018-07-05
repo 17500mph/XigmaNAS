@@ -11,6 +11,6 @@ GNU_CONFIGURE=	yes
 NO_PKG_REGISTER=	yes
 
 do-install:
-	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/sipcalc ${NAS4FREE_ROOTFS}/usr/local/bin
+	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/sipcalc ${XIGMANAS_ROOTFS}/usr/local/bin
 
 .include <bsd.port.mk>

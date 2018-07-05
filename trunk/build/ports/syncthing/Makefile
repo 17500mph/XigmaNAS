@@ -32,9 +32,9 @@ do-build:
 
 do-install:
 # NAS4Free install
-	@echo "install for ${NAS4FREE_ROOTFS}"
+	@echo "install for ${XIGMANAS_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${WRKSRC}/src/github.com/${PORTNAME}/${PORTNAME}/bin/syncthing \
-		${NAS4FREE_ROOTFS}${PREFIX}/bin/
-	@${INSTALL_SCRIPT} -v ${WRKDIR}/syncthing ${NAS4FREE_ROOTFS}/etc/rc.d
+		${XIGMANAS_ROOTFS}${PREFIX}/bin/
+	@${INSTALL_SCRIPT} -v ${WRKDIR}/syncthing ${XIGMANAS_ROOTFS}/etc/rc.d
 
 .include <bsd.port.post.mk>
