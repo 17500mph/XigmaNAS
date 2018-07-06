@@ -3,7 +3,7 @@
 	license.php
 
 	Part of XigmaNAS (http://www.xigmanas.com).
-	Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
+	Copyright (c) 2018 by XigmaNAS <info@xigmanas.com>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -58,7 +58,7 @@ include 'fbegin.inc';
 				<td class="lcebl">
 <p>
 <strong>
-XigmaNAS is Copyright © 2018 The XigmaNAS Project (<a href="mailto:info@xigmanas.com">info@xigmanas.com</a>).<br />
+XigmaNAS is Copyright © 2018 by XigmaNAS (<a href="mailto:info@xigmanas.com">info@xigmanas.com</a>).<br />
 All Rights Reserved.
 </strong>
 </p>
