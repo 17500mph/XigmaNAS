@@ -85,6 +85,7 @@ td.tabnavtbl li.tabact a:hover span {
 }
 /*	background default */
 td.tabnavtbl span, td.tabnavtbl li.tabact span {
+	background: darkgray;
 	background: -webkit-linear-gradient(#9c9c9c, #000000); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(#9c9c9c, #000000); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(#9c9c9c, #000000); /* For Firefox 3.6 to 15 */
@@ -92,6 +93,7 @@ td.tabnavtbl span, td.tabnavtbl li.tabact span {
 }
 /*	background active element*/
 td.tabnavtbl a:hover span{
+	background: lightgray;
 	background: -webkit-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(#ffffff 34%, #cccccc 78%, #e1e1e1); /* For Firefox 3.6 to 15 */
