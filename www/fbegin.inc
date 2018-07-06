@@ -46,9 +46,9 @@ echo '<!DOCTYPE html>',"\n";
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?=genhtmltitle($pgtitle ?? []);?></title>
-	<link href="/css/gui.css" rel="stylesheet" type="text/css">
-	<link href="/css/navbar.css" rel="stylesheet" type="text/css">
-	<link href="/css/tabs.css" rel="stylesheet" type="text/css">	
+	<link href="/css/gui.css.php" rel="stylesheet" type="text/css">
+	<link href="/css/navbar.css.php" rel="stylesheet" type="text/css">
+	<link href="/css/tabs.css.php" rel="stylesheet" type="text/css">	
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/gui.js"></script>
 	<script type="text/javascript" src="/js/spinner.js"></script>
@@ -57,10 +57,10 @@ echo '<!DOCTYPE html>',"\n";
 	if(isset($pglocalheader) && !empty($pglocalheader)):
 		if(is_array($pglocalheader)):
 			foreach($pglocalheader as $pglocalheaderv):
-		 		echo $pglocalheaderv,"\n";
+		 		echo $pglocalheaderv,PHP_EOL;
 			endforeach;
 		else:
-			echo $pglocalheader,"\n";
+			echo $pglocalheader,PHP_EOL;
 		endif;
 	endif;
 ?>

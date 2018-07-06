@@ -2749,12 +2749,12 @@ EOJ;
 			insElement('meta',['name' => 'format-detection','content' => 'telephone=no'])->
 			insElement('meta',['name' => 'viewport','content' => 'width=device-width, initial-scale=1.0'])->
 			insElement('title',[],$this->clc_html_page_title($page_title))->
-			insElement('link',['href' => '/css/gui.css','rel' => 'stylesheet','type' => 'text/css'])->
-			insElement('link',['href' => '/css/navbar.css','rel' => 'stylesheet','type' => 'text/css'])->
-			insElement('link',['href' => '/css/tabs.css','rel' => 'stylesheet','type' => 'text/css']);
+			insElement('link',['href' => '/css/gui.css.php','rel' => 'stylesheet','type' => 'text/css'])->
+			insElement('link',['href' => '/css/navbar.css.php','rel' => 'stylesheet','type' => 'text/css'])->
+			insElement('link',['href' => '/css/tabs.css.php','rel' => 'stylesheet','type' => 'text/css']);
 		if($this->option_exists('login')):
 			$head->
-				insElement('link',['href' => '/css/login.css','rel' => 'stylesheet','type' => 'text/css']);
+				insElement('link',['href' => '/css/login.css.php','rel' => 'stylesheet','type' => 'text/css']);
 		endif;
 		$head->
 			insElement('style',[],'.avoid-fouc { display:none; }');

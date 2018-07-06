@@ -69,9 +69,9 @@ function show_header($title, $additional_header_content = null) {
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">',PHP_EOL;
 	echo '<title>',genhtmltitle($pgtitle ?? []),'</title>',PHP_EOL;
 	echo '<link href="./_style/style.css" rel="stylesheet" type="text/css">',PHP_EOL;
-	echo '<link href="../css/gui.css" rel="stylesheet" type="text/css">',PHP_EOL;
-	echo '<link href="../css/navbar.css" rel="stylesheet" type="text/css">',PHP_EOL;
-	echo '<link href="../css/tabs.css" rel="stylesheet" type="text/css">',PHP_EOL;	
+	echo '<link href="../css/gui.css.php" rel="stylesheet" type="text/css">',PHP_EOL;
+	echo '<link href="../css/navbar.css.php" rel="stylesheet" type="text/css">',PHP_EOL;
+	echo '<link href="../css/tabs.css.php" rel="stylesheet" type="text/css">',PHP_EOL;	
 	echo '<script type="text/javascript" src="../js/jquery.min.js"></script>',PHP_EOL;
 	echo '<script type="text/javascript" src="../js/gui.js"></script>',PHP_EOL;
 	echo '<script type="text/javascript" src="../js/spinner.js"></script>',PHP_EOL;
