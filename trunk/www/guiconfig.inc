@@ -910,7 +910,7 @@ function get_headermenu(): array {
 		$menu_items[] = ['type' => 'separator','visible' => true,'description' => '','link' => '/index.php'];
 		$menu_items[] = ['type' => 'internal','visible' => true,'description' => gtext('Release Notes'),'link' => '/changes.php'];
 		$menu_items[] = ['type' => 'internal','visible' => true,'description' => gtext('License & Credits'),'link' => '/license.php'];
-		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Donate'),'link' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest'];
+		$menu_items[] = ['type' => 'external','visible' => true,'description' => gtext('Donate'),'link' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40xigmanas%2ecom&lc=US&item_name=XigmaNAS&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'];
 		unset($menu_items);
  		$_SESSION['g']['headermenu'] = $menu;
 	endif;
