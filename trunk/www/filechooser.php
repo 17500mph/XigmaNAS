@@ -408,8 +408,8 @@ header("Content-Type: text/html; charset=" . system_get_language_codeset());
 	<head>
 		<meta charset="<?=system_get_language_codeset();?>"/>
 		<title><?=gtext("filechooser");?></title>
-		<link href="css/gui.css" rel="stylesheet" type="text/css">
-		<link href="css/fc.css" rel="stylesheet" type="text/css">
+		<link href="css/gui.css.php" rel="stylesheet" type="text/css">
+		<link href="css/fc.css.php" rel="stylesheet" type="text/css">
 		<script type="text/javascript">
 //![CDATA[
 			function onSubmit() {

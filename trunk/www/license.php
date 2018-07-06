@@ -77,10 +77,10 @@ Redistributions in binary form must reproduce the above copyright notice, this l
 </li>
 </ol>
 <p>
-THIS SOFTWARE IS PROVIDED BY THE XigmaNAS PROJECT "AS IS" AND ANY 
+THIS SOFTWARE IS PROVIDED BY THE XIGMANAS PROJECT "AS IS" AND ANY 
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br />
-IN NO EVENT SHALL THE XigmaNAS PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR 
+IN NO EVENT SHALL THE XIGMANAS PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR 
 ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
 (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
@@ -121,8 +121,8 @@ not be interpreted as representing official policies, either expressed or implie
 		['Laurentiu Bubuianu','laurfb@yahoo.com','Romanian translator of the WebGUI'],
 		['Raul Fernandez Garcia','raulfg3@gmail.com','Spanish translator of the WebGUI'],
 		['Mucahid Zeyrek','mucahid.zeyrek@dhl.com','Turkish translator of the WebGUI'],
-		['Volker Theile','votdev@gmx.de','Developer from 2006 till 2009'],
-		['Samuel Tunis','killermist@gmail.com','User guide and Live support on irc from 2012 till 2015']
+		['Volker Theile','votdev@gmx.de','Developer between 2006 and 2009'],
+		['Samuel Tunis','killermist@gmail.com','User guide and Live support on irc between 2012 and 2015']
 	];
 ?>
 	<table class="area_data_selection">
@@ -404,5 +404,3 @@ $helpinghand = sprintf(gtext('Some of the software used for %s are under the fol
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
-
