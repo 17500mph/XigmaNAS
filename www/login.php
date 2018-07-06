@@ -184,7 +184,7 @@ $loginpagedata->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
 				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#xigmanas'],gtext('IRC XigmaNAS'))->
 			pop()->addLI(['style' => 'padding-left: 4px;'])->
-				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest'],gtext('Donate'));
+				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40xigmanas%2ecom&lc=US&item_name=XigmaNAS&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'],gtext('Donate'));
 if(!empty($input_errors)):
 	$loginpagedata->
 		insDIV(['class' => 'lpe'],$input_errors);
