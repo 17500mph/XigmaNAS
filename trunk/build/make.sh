@@ -1996,7 +1996,7 @@ main() {
 ${XIGMANAS_PRODUCTNAME} Build Environment
 --------------------------
 
-1  - Update XIGMANAS Source Files to CURRENT.
+1  - Update XigmaNAS Source Files to CURRENT.
 2  - XigmaNAS Compile Menu.
 10 - Create 'Embedded.img.xz' File. (Firmware Update)
 11 - Create 'LiveUSB.img.gz' File. (Rawrite to USB Key)
