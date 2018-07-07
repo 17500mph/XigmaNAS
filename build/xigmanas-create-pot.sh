@@ -3,7 +3,7 @@
 # Extract gettext and gtext strings from source files and create new pot file.
 #
 # Part of XigmaNAS (http://www.xigmanas.com).
-# Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
+# Copyright (c) 2018 by XigmaNAS <info@xigmanas.com>.
 # All rights reserved.
 #
 
