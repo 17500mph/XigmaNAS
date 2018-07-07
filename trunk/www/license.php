@@ -369,7 +369,7 @@ of XigmaNAS, either expressed or implied.
 ?>
 			<tr>
 				<th colspan="2" class="lcebld">
-<?=sprintf(gtext('%s is based upon/includes various free software packages.'), get_product_name());?><br /><?=sprintf(gtext('The %s Project would like to thank the authors of this software for their efforts.'),get_product_name());?>
+<?=sprintf(gtext('%s is based upon/includes various free software packages.'), get_product_name());?><br /><?=sprintf(gtext('%s would like to thank the authors of this software for their efforts.'),get_product_name());?>
 				</th>
 			</tr>
 		</thead>
