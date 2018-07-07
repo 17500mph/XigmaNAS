@@ -28,8 +28,8 @@
 	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 	The views and conclusions contained in the software and documentation are those
-	of the authors and should not be interpreted as representing official policies,
-	either expressed or implied, of the XigmaNAS Project.
+	of the authors and should not be interpreted as representing official policies
+	of XigmaNAS, either expressed or implied.
 */
 $d_isfwfile = 1; //	for guiconfig.inc, set means do not execute header('system_firmware.php') when file_exists($d_firmwarelock_path);
 
