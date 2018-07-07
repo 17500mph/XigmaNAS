@@ -1,6 +1,6 @@
 #
 # Part of XigmaNAS (http://www.xigmanas.com).
-# Copyright (c) 2018 The XigmaNAS Project <info@xigmanas.com>.
+# Copyright (c) 2018 XigmaNAS <info@xigmanas.com>.
 # All rights reserved.
 #
 # .cshrc - csh resource script, read at beginning of execution by each shell
