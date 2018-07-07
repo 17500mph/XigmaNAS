@@ -1352,6 +1352,18 @@ function config_upgrade() {
 		endif;
 		$config['version'] = '37';
 	endif;
+	/*	Convert 37 -> 38 */
+	if($config['version'] === '37'):
+		unset($grid);
+		$grid = &array_make_branch($config,'system');
+		if(array_key_exists('motd',$grid) and is_string($grid['motd'])):
+			$helpinghand = base64_decode($grid['motd']);
+		else:
+			$helpinghand = 'Welcome to XigmaNAS!';
+		endif;
+		$grid['motd'] = base64_encode(str_ireplace('NAS4Free','XigmaNAS',$helpinghand));
+		$config['version'] = '38';
+	endif;
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 	write_config();
