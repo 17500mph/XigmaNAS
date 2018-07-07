@@ -3,7 +3,7 @@
 #This script does create the rootfs.
 #
 # Part of XigmaNAS (http://www.xigmanas.com).
-# Copyright (c) 2018 by XigmaNAS <info@xigmanas.com>.
+# Copyright (c) 2018 XigmaNAS <info@xigmanas.com>.
 # All rights reserved.
 #
 
