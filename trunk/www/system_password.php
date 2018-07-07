@@ -66,9 +66,9 @@ switch($mode_page):
 		$sphere_record['password_old'] = $_POST['password_old'] ?? '';
 		$sphere_record['password_new'] = $_POST['password_new'] ?? '';
 		$sphere_record['password_confirm'] = $_POST['password_confirm'] ?? '';
-		$reqdfields = ['password_old','password_new','password_confirm'];
-		$reqdfieldsn = [gtext('Current Password'),gtext('New Password'),gtext('Confirm New Password')];
-		$reqdfieldst = ['password','password','password'];
+		$reqdfields = ['password_new','password_confirm'];
+		$reqdfieldsn = [gtext('New Password'),gtext('Confirm New Password')];
+		$reqdfieldst = ['password','password'];
 		do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		//	Validate current password.
@@ -142,7 +142,7 @@ $(window).on("load",function() {
 		</thead>
 		<tbody>
 			<?php
-			html_passwordbox2('password_old', gtext('Current Password'),'','',true);
+			html_passwordbox2('password_old', gtext('Current Password'),'','',false);
 			html_passwordbox2('password_new', gtext('New Password'),'','',true);
 			html_passwordbox2('password_confirm', gtext('Confirm New Password'),'','',true);
 			?>
