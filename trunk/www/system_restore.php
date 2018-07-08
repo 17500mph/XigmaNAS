@@ -63,13 +63,19 @@ if($_POST):
 			if($data !== false):
 				$tempfile = tempnam(sys_get_temp_dir(),'cnf');
 				file_put_contents($tempfile, $data);
-				$valid_config = validate_xml_config($tempfile, $g['xml_rootobj']);
+				$valid_config = validate_xml_config($tempfile,$g['xml_rootobj']);
 				if(!$valid_config):
-					unlink($tempfile);
+					$valid_config = validate_xml_config($tempfile,'nas4free');
+					if(!$valid_config):
+						unlink($tempfile);
+					endif;
 				endif;
 			endif;
 		else:
 			$valid_config = validate_xml_config($_FILES['conffile']['tmp_name'],$g['xml_rootobj']);
+			if(!$valid_config):
+				$valid_config = validate_xml_config($tempfile,'nas4free');
+			endif;
 		endif;
 		if(!$valid_config):
 			$errormsg = gtext('The configuration could not be restored.') . ' ' . gtext('Invalid file format or incorrect password.');
