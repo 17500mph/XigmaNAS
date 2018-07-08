@@ -504,6 +504,11 @@ restore_sys_files() {
 	cp -pf ${SYSBACKUP}/fstab ${BEPATH}/etc
 	cp -pf ${SYSBACKUP}/cfdevice ${BEPATH}/etc
 	cp -pf ${SYSBACKUP}/rc.conf ${BEPATH}/etc
+
+	# Include latest boot files.
+	if [ -d "${BEPATH}/etc/install/include/boot" ]; then
+		cp -pf ${BEPATH}/etc/install/include/boot/* ${BEPATH}/boot
+	fi
 }
 
 full_upgrade() {
@@ -583,8 +588,8 @@ full_upgrade() {
 	msg="Upgrading system on new boot environment..."
 	/usr/bin/logger -p console.debug "UPGRADE: ${msg}"
 	RESULT=1
-	EXCLUDED="--exclude=cf --exclude=conf --exclude=loader.rc --exclude=menu.4th --exclude=tmp --exclude=var --exclude=version"
-	/usr/bin/tar ${EXCLUDED} --keep-newer-files -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
+	EXCLUDED="--exclude=cf --exclude=conf --exclude=loader.rc --exclude=tmp --exclude=var --exclude=version"
+	/usr/bin/tar ${EXCLUDED} --keep-newer-files -v -x -U -P -f ${ARG} -C ${BEPATH} > /dev/null 2>&1
 	RESULT=$?
 	if [ 0 != ${RESULT} ]; then
 		msg="ERROR: Failed to upgrade system."
