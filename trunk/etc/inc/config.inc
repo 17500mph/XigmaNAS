@@ -1258,10 +1258,11 @@ function config_upgrade() {
 	/*	Convert 3.2 -> 3.3 */
 	/*	Add min_auto_ashift for zfs because of code changes */
 	if($config['version'] === '3.2'):
-		array_make_branch($config,'system','sysctl','param');
+		unset($grid);
+		$grid = &array_make_branch($config,'system','sysctl','param');
 		$param_name = 'vfs.zfs.min_auto_ashift';
-		if(false === ($index = array_search_ex($param_name,$config,'name'))):
-			$config['system']['sysctl']['param'][] = [
+		if(false === ($index = array_search_ex($param_name,$grid,'name'))):
+			$grid[] = [
 				'uuid' => uuid(),
 				'enable' => true,
 				'name' => $param_name,
