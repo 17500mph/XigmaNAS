@@ -272,71 +272,66 @@ EOD;
 	mwexec("/sbin/mount -a");
 }
 
-/* parse configuration */
-if (!isset($noparseconfig) || !$noparseconfig) {
+//	parse configuration
+if(!isset($noparseconfig) || !$noparseconfig):
 	config_lock();
-
-	/* see if there's a newer cache file */
-	if (file_exists("{$g['tmp_path']}/config.cache") &&
+	//	see if there's a newer cache file
+	if(file_exists("{$g['tmp_path']}/config.cache") &&
 		(@filemtime("{$g['tmp_path']}/config.cache") >=
 		 @filemtime("{$g['conf_path']}/config.xml")) &&
-		!is_booting()) {
-
-		/* read cache */
+		!is_booting()):
+		//	read cache
 		$config = unserialize(file_get_contents("{$g['tmp_path']}/config.cache"));
-	} else {
-		if (!file_exists("{$g['conf_path']}/config.xml")) {
-			if (is_booting()) {
-				if (stristr($g['platform'], "livecd") || stristr($g['platform'], "liveusb")) {
-					// Try copying the default config.xml to the floppy disk/USB stick media
-					config_unlock();
-					reset_factory_defaults();
-					config_lock();
-
-					echo "\n";
-					echo "*******************************************************************************\n";
-					echo "No XML configuration file found - using factory defaults.\n";
-					echo "Make sure that the media for holding the configuration is MSDOS FAT formatted\n";
-					echo "and that the config.xml file is inserted. If it isn't, your configuration changes\n";
-					echo "will be lost on reboot.\n";
-					echo "*******************************************************************************\n";
-					echo "\n";
-				} else {
-					echo "\n";
-					echo "*******************************************************************************\n";
-					echo "XML configuration file not found. {$productname} cannot continue booting.\n";
-					echo "*******************************************************************************\n";
-					echo "\n";
-
-					mwexec("/sbin/halt");
-					exit;
-				}
-			} else {
+	elseif(!file_exists("{$g['conf_path']}/config.xml")):
+		if (is_booting()):
+			if (stristr($g['platform'],'livecd') || stristr($g['platform'],'liveusb')):
+				//	Try copying the default config.xml to the floppy disk/USB stick media
 				config_unlock();
-				exit(0);
-			}
-		}
-
-		if (isset($load_raw_config) && $load_raw_config != 0) {
-			// Load any root object, but never write to cache
-			$config = parse_xml_config_raw("{$g['conf_path']}/config.xml", "");
-
-			if (false === $config) {
-				echo "Error: Failed to load '{$g['conf_path']}/config.xml' file. {$productname} cannot continue booting.\n";
-				mwexec("/sbin/halt");
+				reset_factory_defaults();
+				config_lock();
+				echo PHP_EOL;
+				echo '*******************************************************************************',PHP_EOL;
+				echo 'No XML configuration file found - using factory defaults.',PHP_EOL;
+				echo 'Make sure that the media for holding the configuration is MSDOS FAT formatted',PHP_EOL;
+				echo "and that the config.xml file is inserted. If it isn't, your configuration changes",PHP_EOL;
+				echo 'will be lost on reboot.',PHP_EOL;
+				echo "*******************************************************************************\n";
+				echo PHP_EOL;
+			else:
+				echo PHP_EOL;
+				echo '*******************************************************************************',PHP_EOL;
+				echo "XML configuration file not found. {$productname} cannot continue booting.",PHP_EOL;
+				echo '*******************************************************************************',PHP_EOL;
+				echo PHP_EOL;
+				mwexec('/sbin/halt');
 				exit;
-			}
-		} else {
-			/* Load configuration file into array. */
-			$config = parse_xml_config("{$g['conf_path']}/config.xml", $g['xml_rootobj']);
-			if (false === $config) {
-				echo "Error: Failed to load '{$g['conf_path']}/config.xml' file. {$productname} cannot continue booting.\n";
-				mwexec("/sbin/halt");
+			endif;
+		else:
+			config_unlock();
+			exit(0);
+		endif;
+		$config_file = sprintf('%s/config.xml',$g['conf_path']);
+		if(isset($load_raw_config) && $load_raw_config != 0):
+			//	Load any root object, but never write to cache
+			$config = parse_xml_config_raw($config_file,'');
+			if(false === $config):
+				echo 'Error: Failed to load ',$config_file,' file. ',$productname,' cannot continue booting.',PHP_EOL;
+				mwexec('/sbin/halt');
 				exit;
-			}
-
-			if ((float)$config['version'] > (float)$g['latest_config']) {
-				if (is_booting()) {
+			endif;
+		else:
+			//	Load configuration file into array.
+			$config = parse_xml_config($config_file,$g['xml_rootobj']);
+			if(false === $config):
+				$config = parse_xml_config($config_file,'nas4free');
+				if(false === $config):
+					echo 'Error: Failed to load ',$config_file,' file. ',$productname,' cannot continue booting.',PHP_EOL;
+					mwexec('/sbin/halt');
+					exit;
+				endif;
+			endif;
+			if((float)$config['version'] > (float)$g['latest_config']):
+				if(is_booting()):
 					echo <<<EOD
 
 *******************************************************************************
@@ -348,36 +343,33 @@ even security holes! You are urged to either upgrade to a newer version of
 *******************************************************************************
 
 EOD;
-				}
-			}
-
-			// Write configuration cache file
+				endif;
+			endif;
+			//	Write configuration cache file
 			config_write_cache($config);
-		}
-	}
-
+		endif;
+	endif;
 	config_unlock();
 	global $config_disks;
-	// get S.M.A.R.T. arguments from config and store it in a hash to get better performance:
-        if (is_array($config['disks']) && is_array($config['disks']['disk'])) {
-                foreach ($config['disks']['disk'] as $disk) {
+	//	get S.M.A.R.T. arguments from config and store it in a hash to get better performance:
+	if (is_array($config['disks']) && is_array($config['disks']['disk'])):
+		foreach ($config['disks']['disk'] as $disk):
 			$config_disks[$disk['devicespecialfile']]['smart']['devicefilepath'] = $disk['smart']['devicefilepath'];
 			$config_disks[$disk['devicespecialfile']]['smart']['devicetypearg'] = $disk['smart']['devicetypearg'];
 			$config_disks[$disk['devicespecialfile']]['desc'] = $disk['desc'];
-		}
-	}
-}
+		endforeach;
+	endif;
+endif;
 
 /* mount flash card read/write */
 function conf_mount_rw() {
 	global $g;
 
-	if ($g['platform'] != "full") {
-		/* don't use mount -u anymore
-		(doesn't sync the files properly and /bin/sync won't help either) */
+	if($g['platform'] != 'full'):
+		//	don't use mount -u anymore (doesn't sync the files properly and /bin/sync won't help either)
 		mwexec("/sbin/umount -f {$g['cf_path']}");
 		mwexec("/sbin/mount -w -o noatime {$g['cf_path']}");
-	}
+	endif;
 }
 
 /* mount flash card read only */
