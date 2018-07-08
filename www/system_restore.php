@@ -74,7 +74,7 @@ if($_POST):
 		else:
 			$valid_config = validate_xml_config($_FILES['conffile']['tmp_name'],$g['xml_rootobj']);
 			if(!$valid_config):
-				$valid_config = validate_xml_config($tempfile,'nas4free');
+				$valid_config = validate_xml_config($_FILES['conffile']['tmp_name'],'nas4free');
 			endif;
 		endif;
 		if(!$valid_config):
