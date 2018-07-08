@@ -321,10 +321,14 @@ if(!isset($noparseconfig) || !$noparseconfig):
 			endif;
 		else:
 			//	Load configuration file into array.
-			$config = parse_xml_config($config_file,$g['xml_rootobj']);
-			if(false === $config):
-				$config = parse_xml_config($config_file,'nas4free');
-				if(false === $config):
+			$valid_config = validate_xml_config($config_file,$g['xml_rootobj']);
+			if($valid_config):
+				$config = parse_xml_config($config_file,$g['xml_rootobj']);
+			else:
+				$valid_config = validate_xml_config($config_file,'nas4free');
+				if($valid_config):
+					$config = parse_xml_config($config_file,'nas4free');
+				else:
 					echo 'Error: Failed to load ',$config_file,' file. ',$productname,' cannot continue booting.',PHP_EOL;
 					mwexec('/sbin/halt');
 					exit;
