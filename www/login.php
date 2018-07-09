@@ -158,7 +158,7 @@ $loginpagedata->
 				insIMG(['src' => '/images/lock.png','alt' => ''])->
 			pop()->
 			addDIV(['class' => 'lphlr'])->
-				addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
+				addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('http://www.%s',get_product_url()),'target' => '_blank'])->
 					insIMG(['src' => '/images/login_logo.png','alt' => 'logo'])->
 		pop()->
 		addDIV(['class' => 'lphh'])->
