@@ -158,7 +158,7 @@ $loginpagedata->
 				insIMG(['src' => '/images/lock.png','alt' => ''])->
 			pop()->
 			addDIV(['class' => 'lphlr'])->
-				addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('http://www.%s',get_product_url()),'target' => '_blank'])->
+				addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank'])->
 					insIMG(['src' => '/images/login_logo.png','alt' => 'logo'])->
 		pop()->
 		addDIV(['class' => 'lphh'])->
@@ -178,9 +178,9 @@ $loginpagedata->
 	addElement('footer',['class' => 'lpf'])->
 		addUL()->
 			push()->addLI(['style' => 'padding-right: 4px;'])->
-				insA(['target' => '_blank','href' => 'http://www.xigmanas.com/forums/'],gtext('Forum'))->
+				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/forums/'],gtext('Forum'))->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
-				insA(['target' => '_blank','href' => 'http://www.xigmanas.com/wiki/doku.php'],gtext('Information & Manuals'))->
+				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/wiki/doku.php'],gtext('Information & Manuals'))->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
 				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#xigmanas'],gtext('IRC XigmaNAS'))->
 			pop()->addLI(['style' => 'padding-left: 4px;'])->
