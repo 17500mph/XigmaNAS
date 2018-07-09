@@ -504,10 +504,28 @@ restore_sys_files() {
 	cp -pf ${SYSBACKUP}/fstab ${BEPATH}/etc
 	cp -pf ${SYSBACKUP}/cfdevice ${BEPATH}/etc
 	cp -pf ${SYSBACKUP}/rc.conf ${BEPATH}/etc
+}
 
-	# Include latest boot files.
+upgrade_menuforth()
+{
+	# Update to latest loader manu files.
 	if [ -d "${BEPATH}/etc/install/include/boot" ]; then
 		cp -pf ${BEPATH}/etc/install/include/boot/* ${BEPATH}/boot
+		chmod 444 ${BEPATH}/boot/menu.4th
+	fi
+
+	if ! grep -q "beastie-start" ${BEPATH}/boot/loader.rc; then
+	# Generate/update our loader.rc if missing.
+	cat << EOF > ${BEPATH}/boot/loader.rc
+\ Loader.rc
+include /boot/loader.4th
+start
+initialize
+check-password
+include /boot/beastie.4th
+beastie-start
+EOF
+	chmod 444 ${BEPATH}/boot/loader.rc
 	fi
 }
 
@@ -601,6 +619,10 @@ full_upgrade() {
 	else
 		# Restore system configuration.
 		restore_sys_files
+
+		# Include latest loader menu files.
+		upgrade_menuforth
+
 		if [ 0 != $? ]; then
 			msg="ERROR: Failed restoring configuration."
 			/usr/bin/logger -p console.err "UPGRADE ${msg}"
