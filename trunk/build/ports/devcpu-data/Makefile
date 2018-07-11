@@ -1,11 +1,11 @@
 PORTNAME=	devcpu-data
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 PORTREVISION=   0
 CATEGORIES=	sysutils
-MASTER_SITES=   https://downloadmirror.intel.com/27776/eng/:intel \
+MASTER_SITES=   https://downloadmirror.intel.com/27945/eng/:intel \
 		LOCAL/sbruno:amd
 PKGNAMEPREFIX=	devcpu-
-DISTFILES=	microcode-20180425.tgz:intel \
+DISTFILES=	microcode-20180703.tgz:intel \
 		amd64-microcode.20180518.tar.xz:amd
 
 MAINTAINER=	zoon01@xigmanas.com
