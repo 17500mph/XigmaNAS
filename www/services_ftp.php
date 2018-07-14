@@ -71,7 +71,7 @@ if (!empty($config['ftpd']['directorymask'])) {
 } else {
 	$pconfig['directorymask'] = "022";
 }
-$pconfig['banner'] = $config['ftpd']['banner'];
+$pconfig['banner'] = str_replace(chr(27),'&#27;',base64_decode($config['ftpd']['banner'] ?? ''));
 $pconfig['fxp'] = isset($config['ftpd']['fxp']);
 $pconfig['allowrestart'] = isset($config['ftpd']['allowrestart']);
 $pconfig['permitrootlogin'] = isset($config['ftpd']['permitrootlogin']);
@@ -155,7 +155,7 @@ if ($_POST) {
 		$config['ftpd']['pasv_max_port'] = $_POST['pasv_max_port'];
 		$config['ftpd']['pasv_min_port'] = $_POST['pasv_min_port'];
 		$config['ftpd']['pasv_address'] = $_POST['pasv_address'];
-		$config['ftpd']['banner'] = $_POST['banner'];
+		$config['ftpd']['banner'] = base64_encode(str_replace('&#27;',chr(27),$_POST['banner'] ?? '')); // Encode string, otherwise line breaks will get lost
 		$config['ftpd']['filemask'] = $_POST['filemask'];
 		$config['ftpd']['directorymask'] = $_POST['directorymask'];
 		$config['ftpd']['fxp'] = isset($_POST['fxp']) ? true : false;
@@ -314,7 +314,8 @@ function anonymousonly_change() {
 					html_checkbox("anonymousonly", gtext("Anonymous Users"), !empty($pconfig['anonymousonly']) ? true : false, gtext("Only allow anonymous users. Use this on a public FTP site with no remote FTP access to real accounts."), "", false, "anonymousonly_change()");
 					html_checkbox("localusersonly", gtext("Authenticated Users"), !empty($pconfig['localusersonly']) ? true : false, gtext("Only allow authenticated users. Anonymous logins are prohibited."), "", false, "localusersonly_change()");
 					html_inputbox("allowgroup", gtext("Group Allow"), $pconfig['allowgroup'], gtext("Comma-separated list of group names that are permitted to login to the FTP server. (empty = ftp group)."), false, 40);
-					html_textarea("banner", gtext("Banner"), $pconfig['banner'], gtext("Greeting banner displayed to client when firts connection comes in."), false, 65, 7, false, false);
+					$n_rows = min(64,max(8,1 + substr_count($pconfig['motd'],PHP_EOL)));
+					html_textarea('banner',gtext('Banner'),$pconfig['banner'],gtext('Greeting banner displayed to client when first connection comes in.'),false,65,$n_rows,false,false);
 					html_separator();
 					html_titleline(gtext("Advanced Settings"));
 					html_inputbox("filemask", gtext("File Mask"), $pconfig['filemask'], gtext("Use this option to override the file creation mask (077 by default)."), false, 3);
