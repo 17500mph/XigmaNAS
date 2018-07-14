@@ -97,7 +97,7 @@ proftpd_mkconf()
 		_productname=`get_product_name`
 		echo "Welcome to ${_productname} FTP Server" > ${proftpd_displaylogin}
 	else
-		echo ${_welcomemsg} > ${proftpd_displaylogin}
+		echo ${_welcomemsg} | /usr/bin/uudecode -m -r > ${proftpd_displaylogin}
 	fi
 
 	# Create SSL/TLS certificate
