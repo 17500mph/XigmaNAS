@@ -127,8 +127,8 @@ $is_sc = 'sc' == get_sysctl_kern_vty();
 //	take the value of the parameter if its type is bool
 //	set value to true if the parameter exists and is not NULL
 //	set value to false if the parameter doesn't exist or is NULL
-$pconfig['adddivsubmittodataframe'] = $cop->adddivsubmittodataframe->validate_config($config['system']);
-$pconfig['disableconsolemenu'] = $cop->disableconsolemenu->validate_config($config['system']);
+$pconfig['adddivsubmittodataframe'] = $cop->get_adddivsubmittodataframe()->validate_config($config['system']);
+$pconfig['disableconsolemenu'] = $cop->get_disableconsolemenu()->validate_config($config['system']);
 $pconfig['disablefm'] = isset($config['system']['disablefm']);
 $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck']);
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
@@ -217,50 +217,50 @@ if($_POST):
 				config_unlock();
 			endif;
 		endif;
-		$config['system']['adddivsubmittodataframe'] = $cop->adddivsubmittodataframe->validate_input();
-		$helpinghand = $cop->disableconsolemenu->validate_input();
+		$config['system']['adddivsubmittodataframe'] = $cop->get_adddivsubmittodataframe()->validate_input();
+		$helpinghand = $cop->get_disableconsolemenu()->validate_input();
 		if(isset($config['system']['disableconsolemenu']) !== $helpinghand):
 			//	server needs to be restarted to activate setting.
 			touch($d_sysrebootreqd_path);
 		endif;
 		$config['system']['disableconsolemenu'] = $helpinghand;
-		$helpinghand = $cop->disablefm->validate_input();
+		$helpinghand = $cop->get_disablefm()->validate_input();
 		if(isset($config['system']['disablefm']) !== $helpinghand):
 			//	server needs to be restarted to export/clear .htusers.php by fmperm.
 			touch($d_sysrebootreqd_path);
 			$_SESSION['g']['headermenu'] = []; // reset header menu
 		endif;
 		$config['system']['disablefm'] = $helpinghand;
-		$config['system']['disablefirmwarecheck'] = $cop->disablefirmwarecheck->validate_input();
-		$config['system']['enabletogglemode'] = $cop->enabletogglemode->validate_input();
-		$config['system']['nonsidisksizevalues'] = $cop->nonsidisksizevalues->validate_input();
-		$config['system']['skipviewmode'] = $cop->skipviewmode->validate_input();
-		$_SESSION['g']['shrinkpageheader'] = $cop->shrinkpageheader->validate_input();
-		$helpinghand = $cop->disableextensionmenu->validate_input();
+		$config['system']['disablefirmwarecheck'] = $cop->get_disablefirmwarecheck()->validate_input();
+		$config['system']['enabletogglemode'] = $cop->get_enabletogglemode()->validate_input();
+		$config['system']['nonsidisksizevalues'] = $cop->get_nonsidisksizevalues()->validate_input();
+		$config['system']['skipviewmode'] = $cop->get_skipviewmode()->validate_input();
+		$_SESSION['g']['shrinkpageheader'] = $cop->get_shrinkpageheader()->validate_input();
+		$helpinghand = $cop->get_disableextensionmenu()->validate_input();
 		if(isset($config['system']['disableextensionmenu']) !== $helpinghand):
 			//	reset header menu
 			$_SESSION['g']['headermenu'] = [];
 		endif;
 		$config['system']['disableextensionmenu'] = $helpinghand;
-		$config['system']['disablebeep'] = $cop->disablebeep->validate_input();
-		$helpinghand = $cop->microcode_update->validate_input();
+		$config['system']['disablebeep'] = $cop->get_disablebeep()->validate_input();
+		$helpinghand = $cop->get_microcode_update()->validate_input();
 		if(isset($config['system']['microcode_update']) !== $helpinghand):
 			//	microcode update flag has changed, server must be restarted.
 			touch($d_sysrebootreqd_path);
 		endif;
 		$config['system']['microcode_update'] = $helpinghand;
-		$config['system']['tune'] = $cop->tune_enable->validate_input();
-		$config['system']['zeroconf'] = $cop->zeroconf->validate_input();
-		$config['system']['powerd'] = $cop->powerd->validate_input();
-		$config['system']['pwmode'] = $cop->pwmode->validate_input() ?? $cop->pwmode->get_defaultvalue();
+		$config['system']['tune'] = $cop->get_tune_enable()->validate_input();
+		$config['system']['zeroconf'] = $cop->get_zeroconf()->validate_input();
+		$config['system']['powerd'] = $cop->get_powerd()->validate_input();
+		$config['system']['pwmode'] = $cop->get_pwmode()->validate_input() ?? $cop->get_pwmode()->get_defaultvalue();
 		$config['system']['pwmax'] = $_POST['pwmax'];
 		$config['system']['pwmin'] = $_POST['pwmin'];
 		$config['system']['motd'] = base64_encode(str_replace('&#27;',chr(27),$_POST['motd'] ?? '')); // Encode string, otherwise line breaks will get lost
 		if($is_sc):
-			$config['system']['sysconsaver']['enable'] = $cop->sysconsaver->validate_input();
+			$config['system']['sysconsaver']['enable'] = $cop->get_sysconsaver()->validate_input();
 			$config['system']['sysconsaver']['blanktime'] = $_POST['sysconsaverblanktime'];
 		endif;
-		$config['system']['enableserialconsole'] = $cop->enableserialconsole->validate_input();
+		$config['system']['enableserialconsole'] = $cop->get_enableserialconsole()->validate_input();
 		//	adjust power mode
 		$pwmode = $config['system']['pwmode'];
 		$pwmax = $config['system']['pwmax'];
@@ -405,17 +405,17 @@ $document->render();
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->c2_checkbox($cop->zeroconf,!empty($pconfig['zeroconf']));
-			$node->c2_checkbox($cop->disablefm,!empty($pconfig['disablefm']));
+			$node->c2_checkbox($cop->get_zeroconf(),!empty($pconfig['zeroconf']));
+			$node->c2_checkbox($cop->get_disablefm(),!empty($pconfig['disablefm']));
 			if(('true' == $g['zroot']) || ('full' !== $g['platform'])):
-				$node->c2_checkbox($cop->disablefirmwarecheck,!empty($pconfig['disablefirmwarecheck']));
+				$node->c2_checkbox($cop->get_disablefirmwarecheck(),!empty($pconfig['disablefirmwarecheck']));
 			endif;
-			$node->c2_checkbox($cop->enabletogglemode,!empty($pconfig['enabletogglemode']));
-			$node->c2_checkbox($cop->skipviewmode,!empty($pconfig['skipviewmode']));
-			$node->c2_checkbox($cop->adddivsubmittodataframe,!empty($pconfig['adddivsubmittodataframe']));
-			$node->c2_checkbox($cop->shrinkpageheader,$_SESSION['g']['shrinkpageheader']);
-			$node->c2_checkbox($cop->disableextensionmenu,!empty($pconfig['disableextensionmenu']));
-			$node->c2_checkbox($cop->nonsidisksizevalues,!empty($pconfig['nonsidisksizevalues']));
+			$node->c2_checkbox($cop->get_enabletogglemode(),!empty($pconfig['enabletogglemode']));
+			$node->c2_checkbox($cop->get_skipviewmode(),!empty($pconfig['skipviewmode']));
+			$node->c2_checkbox($cop->get_adddivsubmittodataframe(),!empty($pconfig['adddivsubmittodataframe']));
+			$node->c2_checkbox($cop->get_shrinkpageheader(),$_SESSION['g']['shrinkpageheader']);
+			$node->c2_checkbox($cop->get_disableextensionmenu(),!empty($pconfig['disableextensionmenu']));
+			$node->c2_checkbox($cop->get_nonsidisksizevalues(),!empty($pconfig['nonsidisksizevalues']));
 			$node->render();
 ?>
 		</tbody>
@@ -434,11 +434,11 @@ $document->render();
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->c2_checkbox($cop->disablebeep,!empty($pconfig['disablebeep']));
-			$node->c2_checkbox($cop->microcode_update,!empty($pconfig['microcode_update']));
-			$node->c2_checkbox($cop->tune_enable,!empty($pconfig['tune_enable']));
-			$node->c2_checkbox($cop->powerd,!empty($pconfig['powerd']));
-			$node->c2_radio_grid($cop->pwmode,$pconfig['pwmode']);
+			$node->c2_checkbox($cop->get_disablebeep(),!empty($pconfig['disablebeep']));
+			$node->c2_checkbox($cop->get_microcode_update(),!empty($pconfig['microcode_update']));
+			$node->c2_checkbox($cop->get_tune_enable(),!empty($pconfig['tune_enable']));
+			$node->c2_checkbox($cop->get_powerd(),!empty($pconfig['powerd']));
+			$node->c2_radio_grid($cop->get_pwmode(),$pconfig['pwmode']);
 			$node->render();
 			$clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
 			$a_freq = [];
@@ -470,10 +470,10 @@ $document->render();
 		<tbody>
 <?php
 			$node = new co_DOMDocument();
-			$node->c2_checkbox($cop->disableconsolemenu,!empty($pconfig['disableconsolemenu']));
-			$node->c2_checkbox($cop->enableserialconsole,!empty($pconfig['enableserialconsole']));
+			$node->c2_checkbox($cop->get_disableconsolemenu(),!empty($pconfig['disableconsolemenu']));
+			$node->c2_checkbox($cop->get_enableserialconsole(),!empty($pconfig['enableserialconsole']));
 			if($is_sc):
-				$node->c2_checkbox($cop->sysconsaver,!empty($pconfig['sysconsaver']));
+				$node->c2_checkbox($cop->get_sysconsaver(),!empty($pconfig['sysconsaver']));
 			endif;
 			$node->render();
 			if($is_sc):
