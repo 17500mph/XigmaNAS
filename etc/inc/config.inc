@@ -1270,7 +1270,7 @@ function config_upgrade_2dot6() {
 function config_upgrade_2dot7() {
 	global $config;
 	
-	// convert command scripts
+	//	convert command scripts
 	array_make_branch($config,'rc','param');
 	array_make_branch($config,'rc','preinit','cmd');
 	foreach($config['rc']['preinit']['cmd'] as $cmd):
@@ -1349,7 +1349,7 @@ function config_upgrade_3dot0() {
 function config_upgrade_3dot1() {
 	global $config;
 
-	/*	Encrypt user passwords */
+	//	Encrypt user passwords
 	$grid = &array_make_branch($config,'access','user');
 	foreach($grid as $k_user => $r_user):
 		if(isset($grid[$k_user]['password'])):
@@ -1368,7 +1368,7 @@ function config_upgrade_3dot1() {
 function config_upgrade_3dot2() {
 	global $config;
 
-	//	Add min_auto_ashift for zfs because of code changes */
+	//	Add min_auto_ashift for zfs because of code changes
 	$grid = &array_make_branch($config,'system','sysctl','param');
 	$param_name = 'vfs.zfs.min_auto_ashift';
 	if(false === ($index = array_search_ex($param_name,$grid,'name'))):
@@ -1388,7 +1388,7 @@ function config_upgrade_3dot2() {
 function config_upgrade_3dot3() {
 	global $config;
 	
-	//	netatalk authentication methods */
+	//	netatalk authentication methods
 	$grid = &array_make_branch($config,'afp');
 	array_make_branch($grid,'auxparam');
 	if(isset($grid['guest'])):
@@ -1524,6 +1524,7 @@ function config_upgrade() {
 	$kf = 0;
 	$kv = 1;
 	$config_upgrade_matrix = [
+		'9.6' => [$kf => 'config_upgrade_blacklisted',$kv => '9.6'], // blacklisted
 		'0.9' => [$kf => 'config_upgrade_0dot9',$kv => '1.0'],
 		'1.0' => [$kf => 'config_upgrade_1dot0',$kv => '1.1'],
 		'1.1' => [$kf => 'config_upgrade_1dot1',$kv => '1.2'],
@@ -1551,7 +1552,6 @@ function config_upgrade() {
 		'3.3' => [$kf => 'config_upgrade_3dot3',$kv => '3.4'],
 		'3.4' => [$kf => 'config_upgrade_3dot4',$kv => '3.5'],
 		'3.5' => [$kf => 'config_upgrade_3dot5',$kv => '36'],
-		'9.6' => [$kf => 'config_upgrade_blacklisted',$kv => '9.6'], // blacklisted
 		'36' => [$kf => 'config_upgrade_36',$kv => '37'],
 		'37' => [$kf => 'config_upgrade_37',$kv => '38'],
 		'38' => [$kf => NULL,$kv => NULL]
