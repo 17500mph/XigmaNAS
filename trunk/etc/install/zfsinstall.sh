@@ -436,78 +436,6 @@ create_default_snapshot()
 	sleep 1
 }
 
-create_upgrade_snapshot()
-{
-	echo "Creating system upgrade snapshot..."
-	DATE=`date +%Y-%m-%d-%H%M%S`
-	zfs snapshot ${ZROOT}${DATASET}${BOOTENV}@upgrade-${DATE}
-	echo "Done!"
-	sleep 1
-}
-
-upgrade_sys_files()
-{
-	echo "Upgrading system files on ${ZROOT}..."
-
-	# Remove chflags for protected files before upgrade to prevent errors
-	# chflags will be restored after upgrade completion by default.
-	if [ -f ${ALTROOT}/usr/lib/librt.so.1 ]; then
-		chflags 0 ${ALTROOT}/usr/lib/librt.so.1
-	fi
-
-	# Install system files and discard unwanted folders.
-	EXCLUDEDIRS="--exclude .snap/ --exclude resources/ --exclude zinstall.sh/ --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude cf/"
-	tar ${EXCLUDEDIRS} -c -f - -C / . | tar -xpf - -C ${ALTROOT}
-
-	# Copy files from live media source.
-	live_media_files
-	echo "Done!"
-}
-
-backup_sys_files()
-{
-	# Backup system configuration.
-	echo "Backup system configuration..."
-	cp -p ${ALTROOT}/boot/loader.conf ${SYSBACKUP}/
-
-	if [ -f "/${ALTROOT}/boot.config" ]; then
-		cp -p ${ALTROOT}/boot.config ${SYSBACKUP}/
-	fi
-	if [ -f "/${ALTROOT}/boot/loader.conf.local" ]; then
-		cp -p ${ALTROOT}/boot/loader.conf.local ${SYSBACKUP}/
-	fi
-	if [ -f "/${ALTROOT}/boot/zfs/zpool.cache" ]; then
-		cp -p ${ALTROOT}/boot/zfs/zpool.cache ${SYSBACKUP}/
-	fi
-
-	#cp -p /${ALTROOT}/etc/platform ${SYSBACKUP}
-	cp -p ${ALTROOT}/etc/fstab ${SYSBACKUP}/
-	cp -p ${ALTROOT}/etc/cfdevice ${SYSBACKUP}/
-}
-
-restore_sys_files()
-{
-	# Restore previous backup files to upgraded system.
-	echo "Restore system configuration..."
-	cp -pf ${SYSBACKUP}/loader.conf ${ALTROOT}/boot/
-
-	if [ -f "${SYSBACKUP}/boot.config" ]; then
-		cp -pf ${SYSBACKUP}/boot.config ${ALTROOT}/
-	else
-		rm -f ${ALTROOT}/boot.config
-	fi
-	if [ -f "${SYSBACKUP}/loader.conf.local" ]; then
-		cp -pf ${SYSBACKUP}/loader.conf.local ${ALTROOT}/boot/
-	fi
-	if [ -f "${SYSBACKUP}/zpool.cache" ]; then
-		cp -pf ${SYSBACKUP}/zpool.cache ${ALTROOT}/boot/zfs/
-	fi
-
-	#cp -pf ${SYSBACKUP}/platform /etc
-	cp -pf ${SYSBACKUP}/fstab ${ALTROOT}/etc/
-	cp -pf ${SYSBACKUP}/cfdevice ${ALTROOT}/etc/
-}
-
 zpool_check()
 {
 	# Check if a zroot pool already exist and/or mounted.
@@ -527,19 +455,6 @@ zpool_check()
 		if zpool status | grep -q ${ZROOT}; then
 			zpool export -f ${ZROOT} > /dev/null 2>&1
 		fi
-	fi
-}
-
-upgrade_yesno()
-{
-	cdialog --title "Proceed with $PRDNAME $APPNAME Upgrade" \
-	--backtitle "$PRDNAME $APPNAME Installer" \
-	--yesno "${PRDNAME} has been detected and will be upgraded on <${ZROOT}> pool, do you really want to continue?" 6 70
-	if [ 0 -ne $? ]; then
-		if zpool status | grep -q ${ZROOT}; then
-			zpool export ${ZROOT}
-		fi
-		exit 0
 	fi
 }
 
