@@ -674,10 +674,13 @@ function config_upgrade_0dot9() {
  *	@global array $config
  */
 function config_upgrade_1dot0() {
+/*
+ * 	superseeded by config_upgrade_37
 	global $config;
 	
 	array_make_branch($config,'system');
 	$config['system']['motd'] = 'V2VsY29tZSB0byBOQVM0RnJlZSE=';
+ */
 }
 /**
  *	Convert configuration from version 1.1
@@ -714,10 +717,13 @@ function convert_config_1dot2() {
 	global $config;
 	
 	//	modify existing key
+/*
+ *	superseeded by config_upgrade_37
 	array_make_branch($config,'system');
 	if($config['system']['motd'] === 'V2VsY29tZSB0byBOQVM0RnJlZSE='):
 		$config['system']['motd'] = 'V2VsY29tZSB0byBOQVM0RnJlZSENCg==';
 	endif;
+ */
 	array_make_branch($config,'samba');
 	if($config['samba']['aiorsize'] < 4096):
 		$config['samba']['aiorsize'] = 4096;
@@ -809,9 +815,10 @@ function config_upgrade_1dot4() {
 	global $config;
 	
 	// add missing values
-	array_make_branch($config,'zfs','datasets','dataset','accessrestrictions');
+	array_make_branch($config,'zfs','datasets','dataset');
 	foreach($config['zfs']['datasets']['dataset'] as &$dataset):
 		$dataset['reservation'] = $dataset['reservation'] ?? '';
+		array_make_branch($dataset,'accessrestrictions');
 		$dataset['accessrestrictions']['owner'] = $dataset['accessrestrictions']['owner'] ?? 'root';
 		$dataset['accessrestrictions']['group'] = $dataset['accessrestrictions']['group'] ?? 'wheel';
 		$dataset['accessrestrictions']['mode'] = $dataset['accessrestrictions']['mode'] ?? '0777';
