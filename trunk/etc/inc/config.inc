@@ -1137,20 +1137,24 @@ function config_upgrade_2dot3() {
 	$user_syncthing_found = false;
 	array_make_branch($config,'system','usermanagement','user');
 	foreach($config['system']['usermanagement']['user'] as $user):
-		if($user['name'] == 'syncthing' && $user_syncthing_found):
-		else:
+		if($user['name'] != 'syncthing'):
+			$user_tmp[] = $user;
+		elseif(!$user_syncthing_found):
 			$user_tmp[] = $user;
 			$user_syncthing_found = true;
+		else:
+			$user_tmp[] = $user;
 		endif;
 	endforeach;
 	$config['system']['usermanagement']['user'] = $user_tmp;
 	$group_tmp = [];
 	$group_syncthing_found = false;
 	foreach($config['system']['usermanagement']['group'] as $group):
-		if($group['name'] == 'syncthing' && $group_syncthing_found):
-		else:
-			$group_syncthing_found = true;
+		if($group['name'] != 'syncthing'):
 			$group_tmp[] = $group;
+		elseif(!$group_syncthing_found):
+			$group_tmp[] = $group;
+			$group_syncthing_found = true;
 		endif;
 	endforeach;
 	$config['system']['usermanagement']['group'] = $group_tmp;
