@@ -1149,6 +1149,7 @@ function config_upgrade_2dot3() {
 	$config['system']['usermanagement']['user'] = $user_tmp;
 	$group_tmp = [];
 	$group_syncthing_found = false;
+	array_make_branch($config,'system','usermanagement','group');
 	foreach($config['system']['usermanagement']['group'] as $group):
 		if($group['name'] != 'syncthing'):
 			$group_tmp[] = $group;
@@ -1505,12 +1506,51 @@ function config_upgrade_37() {
 	endif;
 	//	Update motd
 	$grid_system = &array_make_branch($config,'system');
-	if(array_key_exists('motd',$grid_system) and is_string($grid_system['motd'])):
+	if(array_key_exists('motd',$grid_system) && is_string($grid_system['motd'])):
 		$helpinghand = base64_decode($grid_system['motd']);
 	else:
 		$helpinghand = 'Welcome to XigmaNAS!';
 	endif;
 	$grid_system['motd'] = base64_encode(str_ireplace('NAS4Free','XigmaNAS',$helpinghand));
+}
+/**
+ *	Convert configuration from version 38
+ *	@global array $config
+ */
+function config_upgrade_38() {
+	global $config;
+	
+	//	Encode ftp welcome message
+	array_make_branch($config,'ftpd');
+	$banner = $config['ftpd']['banner'] ?? '';
+	if(false === base64_decode($banner)):
+		$encoded_banner = base64_encode($banner);
+	else:
+		$encoded_banner = $banner;
+	endif;
+	$config['ftpd']['banner'] = $encoded_banner;
+	//	remove duplicate users
+	$user_tmp = [];
+	$user_as_key = [];
+	array_make_branch($config,'system','usermanagement','user');
+	foreach($config['system']['usermanagement']['user'] as $user):
+		if(array_key_exists('name',$user) && is_string($user['name']) && !array_key_exists($user['name'],$user_as_key)):
+			$user_tmp[] = $user;
+			$user_as_key[$user['name']] = $user['name'];
+		endif;
+	endforeach;
+	$config['system']['usermanagement']['user'] = $user_tmp;
+	//	remove duplicate groups
+	$group_tmp = [];
+	$group_as_key = [];
+	array_make_branch($config,'system','usermanagement','group');
+	foreach($config['system']['usermanagement']['group'] as $group):
+		if(array_key_exists('name',$group) && is_string($group['name']) && !array_key_exists($group['name'],$group_as_key)):
+			$group_tmp[] = $group;
+			$group_as_key[$group['name']] = $group['name'];
+		endif;
+	endforeach;
+	$config['system']['usermanagement']['group'] = $group_tmp;
 }
 /**
  *	Convert the configuration file to the latest version.
@@ -1554,7 +1594,8 @@ function config_upgrade() {
 		'3.5' => [$kf => 'config_upgrade_3dot5',$kv => '36'],
 		'36' => [$kf => 'config_upgrade_36',$kv => '37'],
 		'37' => [$kf => 'config_upgrade_37',$kv => '38'],
-		'38' => [$kf => NULL,$kv => NULL]
+		'38' => [$kf => 'config_upgrade_38',$kv => '39'],
+		'39' => [$kf => NULL,$kv => NULL]
 	];
 	$version = $config['version'] ?? 'notset';
 	$config_has_been_updated = false;
@@ -1623,8 +1664,12 @@ function config_postinit() {
 		write_config();
 	endif;
 }
-
-// encrypt and gzcompress
+/**
+ *	encrypt and gzcompress
+ *	@global array $g
+ *	@param string $password
+ *	@return mixed The encrypted string is returned or false on failure.
+ */
 function config_encrypt($password) {
 	global $g;
 	
@@ -1646,7 +1691,7 @@ function config_encrypt($password) {
  *	gzdecompress and decrypt
  *	@param string $password
  *	@param string $gz_config
- *	@return boolean
+ *	@return mixed The decryted string is returned or false on failure.
  */
 function config_decrypt($password,$gz_config) {
 	$b64enc_data = gzdecode($gz_config);
