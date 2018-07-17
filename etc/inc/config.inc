@@ -1523,10 +1523,11 @@ function config_upgrade_38() {
 	//	Encode ftp welcome message
 	array_make_branch($config,'ftpd');
 	$banner = $config['ftpd']['banner'] ?? '';
-	if(false === base64_decode($banner)):
-		$encoded_banner = base64_encode($banner);
-	else:
+	//	Detect base64 string.
+	if(preg_match('~^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$~',$banner)):
 		$encoded_banner = $banner;
+	else:
+		$encoded_banner = base64_encode($banner);
 	endif;
 	$config['ftpd']['banner'] = $encoded_banner;
 	//	remove duplicate users
@@ -1605,7 +1606,7 @@ function config_upgrade() {
 			if(array_key_exists($kf,$config_upgrade_matrix[$version]) && array_key_exists($kv,$config_upgrade_matrix[$version])): // check existing fields
 				$function_name = $config_upgrade_matrix[$version][$kf];
 				$new_version = $config_upgrade_matrix[$version][$kv];
-				if(isset($function_name) && isset($next_version) && function_exists($function_name)): // handler and next version set?
+				if(isset($function_name) && isset($new_version) && function_exists($function_name)): // handler and new version set?
 					if(is_booting()):
 						echo 'Configuration upgrading from version ',$version,' to version ',$new_version,':';
 						call_user_func($function_name); // call conversion
