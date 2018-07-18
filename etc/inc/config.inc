@@ -657,7 +657,7 @@ function config_upgrade_blacklisted() {
 	exit;
 }
 /**
- *	Convert configuration from version 0.9
+ *	Upgrade configuration from version 0.9
  *	@global array $config
  */
 function config_upgrade_0dot9() {
@@ -670,7 +670,7 @@ function config_upgrade_0dot9() {
 	$config['samba']['serverdesc'] = 'XigmaNAS Server';
 }
 /**
- *	Convert configuration from version 1.0
+ *	Upgrade configuration from version 1.0
  *	@global array $config
  */
 function config_upgrade_1dot0() {
@@ -683,7 +683,7 @@ function config_upgrade_1dot0() {
  */
 }
 /**
- *	Convert configuration from version 1.1
+ *	Upgrade configuration from version 1.1
  *	@global array $config
  */
 function config_upgrade_1dot1() {
@@ -710,10 +710,10 @@ function config_upgrade_1dot1() {
 	$config['lcdproc']['titlespeed'] = 10;
 }
 /**
- *	Convert configuration from version 1.2
+ *	Upgrade configuration from version 1.2
  *	@global array $config
  */
-function convert_config_1dot2() {
+function config_upgrade_1dot2() {
 	global $config;
 	
 	//	modify existing key
@@ -789,10 +789,10 @@ function convert_config_1dot2() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 1.3
+ *	Upgrade configuration from version 1.3
  *	@global array $config
  */
-function convert_config_1dot3() {
+function config_upgrade_1dot3() {
 	global $config;
 	
 	//	add missing values
@@ -808,7 +808,7 @@ function convert_config_1dot3() {
 	endforeach;
 }
 /**
- *	Convert convfiguration from version 1.4
+ *	Upgrade configuration from version 1.4
  *	@global array $config
  */
 function config_upgrade_1dot4() {
@@ -825,7 +825,7 @@ function config_upgrade_1dot4() {
 	endforeach;
 }
 /**
- *	Convert convfiguration from version 1.5
+ *	Upgrade configuration from version 1.5
  *	@global array $config
  */
 function config_upgrade_1dot5() {
@@ -851,7 +851,7 @@ function config_upgrade_1dot5() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 1.6
+ *	Upgrade configuration from version 1.6
  *	@global array $config
  */
 function config_upgrade_1dot6() {
@@ -870,7 +870,7 @@ function config_upgrade_1dot6() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 1.7
+ *	Upgrade configuration from version 1.7
  *	@global array $config
  */
 function config_upgrade_1dot7() {
@@ -925,7 +925,7 @@ function config_upgrade_1dot7() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 1.8
+ *	Upgrade configuration from version 1.8
  *	@global array $config
  */
 function config_upgrade_1dot8() {
@@ -971,7 +971,7 @@ function config_upgrade_1dot8() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 1.9
+ *	Upgrade configuration from version 1.9
  *	@global array $config
  */
 function config_upgrade_1dot9() {
@@ -1010,7 +1010,7 @@ function config_upgrade_1dot9() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 2.0
+ *	Upgrade configuration from version 2.0
  *	@global array $config
  */
 function config_upgrade_2dot0() {
@@ -1046,7 +1046,7 @@ function config_upgrade_2dot0() {
 	unset($config['samba']['usesendfile']);
 }
 /**
- *	Convert convfiguration from version 2.1
+ *	Upgrade configuration from version 2.1
  *	@global array $config
  */
 function config_upgrade_2dot1() {
@@ -1082,7 +1082,7 @@ function config_upgrade_2dot1() {
 	$config['vbox']['homedir'] = $config['vbox']['homedir'] ?? '';
 }
 /**
- *	Convert convfiguration from version 2.2
+ *	Upgrade configuration from version 2.2
  *	@global array $config
  */
 function config_upgrade_2dot2() {
@@ -1127,7 +1127,7 @@ function config_upgrade_2dot2() {
 	$config['samba']['loglevel'] = $config['samba']['loglevel'] ?? '1';
 }
 /**
- *	Convert convfiguration from version 2.3
+ *	Upgrade configuration from version 2.3
  *	@global array $config
  */
 function config_upgrade_2dot3() {
@@ -1202,7 +1202,7 @@ function config_upgrade_2dot3() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 2.4
+ *	Upgrade configuration from version 2.4
  *	@global array $config
  */
 function config_upgrade_2dot4() {
@@ -1235,7 +1235,7 @@ function config_upgrade_2dot4() {
 	endif;
 }
 /**
- *	Convert convfiguration from version 2.5
+ *	Upgrade configuration from version 2.5
  *	@global array $config
  */
 function config_upgrade_2dot5() {
@@ -1252,7 +1252,7 @@ function config_upgrade_2dot5() {
 	endif;
 }
 /**
- *	Convert configuration from version 2.6
+ *	Upgrade configuration from version 2.6
  *	@global array $config
  */
 function config_upgrade_2dot6() {
@@ -1265,7 +1265,7 @@ function config_upgrade_2dot6() {
 	endif;
 }
 /**
- *	Convert configuration from version 2.7
+ *	Upgrade configuration from version 2.7
  *	@global array $config
  */
 function config_upgrade_2dot7() {
@@ -1314,7 +1314,7 @@ function config_upgrade_2dot7() {
 	unset($config['rc']['shutdown']);
 }
 /**
- *	Convert configuration from version 2.8
+ *	Upgrade configuration from version 2.8
  *	@global array $config
  */
 function config_upgrade_2dot8() {
@@ -1326,12 +1326,12 @@ function config_upgrade_2dot8() {
 	endif;
 }
 /**
- *	Convert configuration from version 2.9
+ *	Upgrade configuration from version 2.9
  */
 function config_upgrade_2dot9() {
 }
 /**
- *	Convert configuration from version 3.0
+ *	Upgrade configuration from version 3.0
  *	@global array $config
  */
 function config_upgrade_3dot0() {
@@ -1344,7 +1344,7 @@ function config_upgrade_3dot0() {
 	endif;
 }
 /**
- *	Convert configuration from version 3.1
+ *	Upgrade configuration from version 3.1
  *	@global array $config
  */
 function config_upgrade_3dot1() {
@@ -1363,7 +1363,7 @@ function config_upgrade_3dot1() {
 	endforeach;
 }
 /**
- *	Convert configuration from version 3.2
+ *	Upgrade configuration from version 3.2
  *	@global array $config
  */
 function config_upgrade_3dot2() {
@@ -1383,7 +1383,7 @@ function config_upgrade_3dot2() {
 	endif;
 }
 /**
- *	Convert configuration from version 3.3
+ *	Upgrade configuration from version 3.3
  *	@global array $config
  */
 function config_upgrade_3dot3() {
@@ -1406,7 +1406,7 @@ function config_upgrade_3dot3() {
 	endif;
 }
 /**
- *	Convert configuration from version 3.4
+ *	Upgrade configuration from version 3.4
  *	@global array $config
  */
 function config_upgrade_3dot4() {
@@ -1437,7 +1437,7 @@ function config_upgrade_3dot4() {
 	endif;
 }
 /**
- *	Convert configuration from version 3.5
+ *	Upgrade configuration from version 3.5
  *	@global array $config
  */
 function config_upgrade_3dot5() {
@@ -1465,7 +1465,7 @@ function config_upgrade_3dot5() {
 	endswitch;
 }
 /**
- *	Convert configuration from version 36
+ *	Upgrade configuration from version 36
  *	@global array $config
  */
 function config_upgrade_36() {
@@ -1484,7 +1484,7 @@ function config_upgrade_36() {
 	endif;
 }
 /**
- *	Convert configuration from version 37
+ *	Upgrade configuration from version 37
  *	@global array $config
  */
 function config_upgrade_37() {
@@ -1514,7 +1514,7 @@ function config_upgrade_37() {
 	$grid_system['motd'] = base64_encode(str_ireplace('NAS4Free','XigmaNAS',$helpinghand));
 }
 /**
- *	Convert configuration from version 38
+ *	Upgrade configuration from version 38
  *	@global array $config
  */
 function config_upgrade_38() {
@@ -1554,7 +1554,7 @@ function config_upgrade_38() {
 	$config['system']['usermanagement']['group'] = $group_tmp;
 }
 /**
- *	Convert the configuration file to the latest version.
+ *	Upgrade the configuration file to the latest version.
  *	@global array $g
  *	@global array $config
  *	@return int Returns 0 if successful, otherwise 1
