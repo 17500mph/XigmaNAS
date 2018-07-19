@@ -495,7 +495,7 @@ function write_loader_config(){
 				$name = is_string($test = $param['name'] ?? '') ? $test : '';
 				$value = is_string($test = $param['value'] ?? '') ? $test : '';
 				if(preg_match('/\S/',$name)):
-					$lines .= sprintf('%s = "%s"',trim($name),trim($value)) . PHP_EOL;
+					$lines .= sprintf('%s="%s"',trim($name),trim($value)) . PHP_EOL;
 				endif;
 			endif;
 		endforeach;
