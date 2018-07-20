@@ -2,7 +2,7 @@
 /*
 	disks_zfs_zpool_tools_render.inc
 
-	Part of XigmaNAS (http://www.xigmanas.com).
+	Part of XigmaNAS (https://www.xigmanas.com).
 	Copyright (c) 2018 XigmaNAS <info@xigmanas.com>.
 	All rights reserved.
 

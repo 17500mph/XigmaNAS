@@ -2,7 +2,7 @@
 /*
 	disks_zfs_config_sync.php
 
-	Part of XigmaNAS (http://www.xigmanas.com).
+	Part of XigmaNAS (https://www.xigmanas.com).
 	Copyright (c) 2018 XigmaNAS <info@xigmanas.com>.
 	All rights reserved.
 
