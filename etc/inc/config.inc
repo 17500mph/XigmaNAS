@@ -674,13 +674,6 @@ function config_upgrade_0dot9() {
  *	@global array $config
  */
 function config_upgrade_1dot0() {
-/*
- * 	superseeded by config_upgrade_37
-	global $config;
-	
-	array_make_branch($config,'system');
-	$config['system']['motd'] = 'V2VsY29tZSB0byBOQVM0RnJlZSE=';
- */
 }
 /**
  *	Upgrade configuration from version 1.1
@@ -716,14 +709,6 @@ function config_upgrade_1dot1() {
 function config_upgrade_1dot2() {
 	global $config;
 	
-	//	modify existing key
-/*
- *	superseeded by config_upgrade_37
-	array_make_branch($config,'system');
-	if($config['system']['motd'] === 'V2VsY29tZSB0byBOQVM0RnJlZSE='):
-		$config['system']['motd'] = 'V2VsY29tZSB0byBOQVM0RnJlZSENCg==';
-	endif;
- */
 	array_make_branch($config,'samba');
 	if($config['samba']['aiorsize'] < 4096):
 		$config['samba']['aiorsize'] = 4096;
@@ -1509,7 +1494,7 @@ function config_upgrade_37() {
 	if(array_key_exists('motd',$grid_system) && is_string($grid_system['motd'])):
 		$helpinghand = base64_decode($grid_system['motd']);
 	else:
-		$helpinghand = 'Welcome to XigmaNAS!';
+		$helpinghand = 'Welcome to XigmaNAS!' . PHP_EOL;
 	endif;
 	$grid_system['motd'] = base64_encode(str_ireplace('NAS4Free','XigmaNAS',$helpinghand));
 }
