@@ -33,36 +33,50 @@
 */
 require_once 'config.inc';
 
-// Check if the given port is already used by another service.
-// @param port		The port to be checked.
-// @param except	The key to be ignored.
-// @result true if the port is already used by another service, otherwise false.
-function services_is_port_used($port, $except = "") {
+/**
+ *	Check if the given port is already used by another service.
+ *	@global array $config
+ *	@param int $port The port to be checked.
+ *	@param string $except The key to be ignored.
+ *	@return bool True is returned if the port is already used by another service, otherwise false.
+ */
+function services_is_port_used($port,string $except = '') {
 	global $config;
 
-	$a_port = array(
-		"sysgui" => !empty($config['system']['webgui']['port']) ? $config['system']['webgui']['port'] : "",
-		"daap" => $config['daap']['port'],
-		"websrv" => $config['websrv']['port'],
-		"upnp" => $config['upnp']['port'],
-		"minidlna" => $config['minidlna']['port'],
-		"rsyncd" => $config['rsyncd']['port'],
-		"bittorrent" => $config['bittorrent']['port']
-	);
-
-	// Special handling for webgui port.
-	if (!isset($config['system']['webgui']['port'])
-            || $config['system']['webgui']['port'] == '') {
-		if ($config['system']['webgui']['protocol'] == 'https') {
-			$a_port['sysgui'] = 443;
-		} else {
-			$a_port['sysgui'] = 80;
-		}
-	}
-
-	if (0 < strlen($except))
+	//	integer between 0 and 65535
+	$regex_port = '/^(?:6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[1-9][0-9]{0,3}|0)$/';
+	//	services and their default ports
+	$services = [
+		['name' => 'daap','default_port' => '3689'],
+		['name' => 'websrv','default_port' => ''],
+		['name' => 'upnp','default_port' => '49152'],
+		['name' => 'minidlna','default_port' => '8200'],
+		['name' => 'rsyncd','default_port' => '873'],
+		['name' => 'bittorrent','default_port' => '9091']
+	];
+	//	list of ports
+	$a_port = [];
+	//	webgui port
+	$test_port = is_string($test = $config['system']['webgui']['port'] ?? '') ? $test : '';
+	if(1 === preg_match($regex_port,$test_port)):
+		$a_port['webguiport'] = $test_port;
+	else:
+		$webgui_protocol = is_string($test = $config['system']['webgui']['protocol'] ?? '') ? $test : '';
+		switch($webgui_protocol):
+			case 'https':
+				$a_port['webguiport'] = '443';
+				break;
+			default:
+				$a_port['webguiport'] = '80';
+				break;
+		endswitch;
+	endif;
+	foreach($services as $service):
+		$test_port = is_string($test = $config[$service['name']]['port'] ?? '') ? $test : '';
+		$a_port[$service['name']] = (1 === preg_match($regex_port,$test_port)) ? $test_port : $service['default_port'];
+	endforeach;
+	if(0 < strlen($except)):
 		unset($a_port[$except]);
-
-	return in_array($port, $a_port);
+	endif;
+	return in_array($port,$a_port);
 }
-?>

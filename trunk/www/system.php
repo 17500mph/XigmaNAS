@@ -147,7 +147,7 @@ if($_POST) {
 		endforeach;
 	endif;
 	// Check if port is already used.
-	if(services_is_port_used(!empty($_POST['webguiport']) ? $_POST['webguiport'] : 80, "sysgui")):
+	if(services_is_port_used(!empty($_POST['webguiport']) ? $_POST['webguiport'] : 80,'webguiport')):
 		$input_errors[] = sprintf(gtext("Port %ld is already used by another service."), (!empty($_POST['webguiport']) ? $_POST['webguiport'] : 80));
 	endif;
 	// Check Webserver document root if auth is required
