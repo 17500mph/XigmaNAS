@@ -178,7 +178,7 @@ if ("https" === $config['system']['webgui']['protocol']) {
 			if ("" === $port) {
 				break;
 			}
-		} while (!is_port($port) && services_is_port_used($port, "sysgui"));
+		} while (!is_port($port) && services_is_port_used($port,'webguiport'));
 
 		$config['system']['webgui']['protocol'] = "http";
 		$config['system']['webgui']['port'] = $port;
