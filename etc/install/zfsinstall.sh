@@ -104,9 +104,9 @@ cleandisk_init()
 	if ! kldstat | grep -q geom_mirror; then
 		kldload /boot/kernel/geom_mirror.ko
 		# Destroy existing geom swap mirror.
-		if gmirror status | grep -q gswap; then
-			gmirror forget gswap
-			gmirror destroy gswap
+		if gmirror status | grep -q swap; then
+			gmirror forget swap
+			gmirror destroy swap
 		fi
 	fi
 
@@ -261,7 +261,7 @@ zroot_init()
 			fi
 			gmirror label -b prefer swap ${SWAP_DEVLIST}
 			# Add swap mirror to fstab.
-			echo "/dev/mirror/gswap none swap sw 0 0" >> ${ALTROOT}/etc/fstab
+			echo "/dev/mirror/swap none swap sw 0 0" >> ${ALTROOT}/etc/fstab
 		else
 			# Add swap device to fstab.
 			echo "Adding swap devices to fstab..."
