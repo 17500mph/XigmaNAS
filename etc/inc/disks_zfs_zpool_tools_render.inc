@@ -112,7 +112,7 @@ function render_submit($pageindex = 1,$activity = '',$option = '',$a_pool = [],$
  */
 	echo '<div id="submit">',PHP_EOL;
 	if(1 === $pageindex):
-		echo '<input name="reload" type="submit" value="',gtext('Return to Command page'),'" class="formbtn"/>',PHP_EOL;
+		echo '<input name="reload" type="submit" value="',gtext('Return to Command Page'),'" class="formbtn"/>',PHP_EOL;
 	else:
 		echo '<input type="submit" name="submit" value="',gtext('Next'),'" class="formbtn"/>',PHP_EOL;
 	endif;
