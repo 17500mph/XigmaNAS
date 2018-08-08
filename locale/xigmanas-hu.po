@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-06-10 17:54+0000\n"
-"PO-Revision-Date: 2018-07-08 19:50+0000\n"
+"POT-Creation-Date: 2018-08-08 13:24+0000\n"
+"PO-Revision-Date: 2018-08-08 11:39+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-07-29 22:57+0000\n"
-"X-Generator: Launchpad (build 18737)\n"
+"X-Launchpad-Export-Date: 2018-08-08 16:25+0000\n"
+"X-Generator: Launchpad (build 18739)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -99,6 +99,11 @@ msgstr "%s ezen: %s"
 #, php-format
 msgid "%s used of %s"
 msgstr "%s / %s van használatban"
+
+#, php-format
+msgid ""
+"%s would like to thank the authors of this software for their efforts."
+msgstr "%s köszönetet mond a szoftver készítőinek az erőfeszítéseikért."
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -961,8 +966,8 @@ msgstr "Egy Extent a Cél tároló területét határozza meg."
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "Az iSCSI kezdeményező portál IPv4 vagy IPv6 címe."
 
-msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
-msgstr "Egy IPv4 vagy IPv6 cím, amin\tfigyeljük a bejövő\tkapcsolatokat."
+msgid "An IPv4 or IPv6 address to listen on for incoming connections."
+msgstr "A bejövő kapcsolatokat figyelő IPv4 vagy IPv6 cím."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -5066,8 +5071,8 @@ msgstr "Grafikon frissítése %d másodpercenként."
 msgid "Graphs Height"
 msgstr "Diagramok magassága"
 
-msgid "Greeting banner displayed to client when firts connection comes in."
-msgstr "Az üdvözlő szalaghirdetés a kliens első kapcsolódásakor jelenik meg."
+msgid "Greeting banner displayed to client when first connection comes in."
+msgstr "Az első bejövő kapcsolatnál megjelenő üdvözlő banner."
 
 msgid "Group"
 msgstr "Csoport"
@@ -5388,8 +5393,8 @@ msgstr "IPv6 címek"
 msgid "IRC Live Support"
 msgstr "IRC elő támogatás"
 
-msgid "IRC NAS4Free"
-msgstr "IRC NAS4Free"
+msgid "IRC XigmaNAS"
+msgstr "IRC XigmaNAS"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -8437,8 +8442,8 @@ msgstr "Folytatás"
 msgid "Retry"
 msgstr "Ismét"
 
-msgid "Return to Command page"
-msgstr "Vissza a parancssorhoz."
+msgid "Return to Command Page"
+msgstr "Visszatérés a parancsoldalhoz"
 
 msgid "Reverse DNS lookup"
 msgstr "Fordított DNS keresés"
@@ -9955,12 +9960,6 @@ msgid ""
 msgstr ""
 "A tiltó opció esetén azon felhasználók és a csoportok akik nem kapnak "
 "hozzáférést a megosztáshoz."
-
-#, php-format
-msgid ""
-"The %s Project would like to thank the authors of this software for their "
-"efforts."
-msgstr "%s projekt köszönetet mond a szoftver szerzőinek erőfeszítéseikért."
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
@@ -12896,3 +12895,21 @@ msgstr "használatban"
 
 msgid "visible"
 msgstr "látható"
+
+#~ msgid "Greeting banner displayed to client when firts connection comes in."
+#~ msgstr "Az üdvözlő szalaghirdetés a kliens első kapcsolódásakor jelenik meg."
+
+#~ msgid "Return to Command page"
+#~ msgstr "Vissza a parancssorhoz."
+
+#, php-format
+#~ msgid ""
+#~ "The %s Project would like to thank the authors of this software for their "
+#~ "efforts."
+#~ msgstr "%s projekt köszönetet mond a szoftver szerzőinek erőfeszítéseikért."
+
+#~ msgid "IRC NAS4Free"
+#~ msgstr "IRC NAS4Free"
+
+#~ msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
+#~ msgstr "Egy IPv4 vagy IPv6 cím, amin\tfigyeljük a bejövő\tkapcsolatokat."
