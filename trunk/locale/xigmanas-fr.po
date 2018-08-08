@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-06-10 17:54+0000\n"
-"PO-Revision-Date: 2018-07-29 11:24+0000\n"
+"POT-Creation-Date: 2018-08-08 13:24+0000\n"
+"PO-Revision-Date: 2018-08-08 14:09+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-07-29 22:57+0000\n"
-"X-Generator: Launchpad (build 18737)\n"
+"X-Launchpad-Export-Date: 2018-08-08 16:25+0000\n"
+"X-Generator: Launchpad (build 18739)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -102,6 +102,11 @@ msgstr "%s sur %s"
 #, php-format
 msgid "%s used of %s"
 msgstr "%s utilisé sur %s"
+
+#, php-format
+msgid ""
+"%s would like to thank the authors of this software for their efforts."
+msgstr "%s aimerait remercier les auteurs de ce logiciel pour leurs efforts."
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -983,8 +988,8 @@ msgstr "Une Extension definit la zone de stockage de la Cible."
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "Adresse IPv4 ou IPv6 d'un portail initiateur iSCSI."
 
-msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
-msgstr "Une adresse IPv4 ou IPv6 à écouter\tpour les connexions\tentrantes."
+msgid "An IPv4 or IPv6 address to listen on for incoming connections."
+msgstr "Une adresse IPv4 ou IPv6 à écouter pour les connexions entrantes."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -5170,7 +5175,7 @@ msgstr "Le graphique est mis à jour tous les %d secondes."
 msgid "Graphs Height"
 msgstr "Hauteur des Graphiques"
 
-msgid "Greeting banner displayed to client when firts connection comes in."
+msgid "Greeting banner displayed to client when first connection comes in."
 msgstr "Bannière d'accueil affichée au client lors de la première connexion."
 
 msgid "Group"
@@ -5491,8 +5496,8 @@ msgstr "Adresses IPv6"
 msgid "IRC Live Support"
 msgstr "Aide en ligne via IRC"
 
-msgid "IRC NAS4Free"
-msgstr "IRC NAS4Free"
+msgid "IRC XigmaNAS"
+msgstr "IRC XigmaNAS"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -8568,8 +8573,8 @@ msgstr "Reprise"
 msgid "Retry"
 msgstr "Réessayer"
 
-msgid "Return to Command page"
-msgstr "Retour à la page de commandes"
+msgid "Return to Command Page"
+msgstr "Retour à la Page de Commandes"
 
 msgid "Reverse DNS lookup"
 msgstr "Recherche DNS inversée"
@@ -10096,14 +10101,6 @@ msgstr ""
 "Cette option spécifie les utilisateurs et les groupes qui ne sont pas "
 "autorisés à avoir accès au partage. Elle suit le même format que l'option "
 "Autoriser."
-
-#, php-format
-msgid ""
-"The %s Project would like to thank the authors of this software for their "
-"efforts."
-msgstr ""
-"Le projet %s aimerait remercier les auteurs de ce logiciel pour leurs "
-"efforts."
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
@@ -13121,3 +13118,23 @@ msgstr "utilisé de"
 
 msgid "visible"
 msgstr "visible"
+
+#~ msgid "Greeting banner displayed to client when firts connection comes in."
+#~ msgstr "Bannière d'accueil affichée au client lors de la première connexion."
+
+#, php-format
+#~ msgid ""
+#~ "The %s Project would like to thank the authors of this software for their "
+#~ "efforts."
+#~ msgstr ""
+#~ "Le projet %s aimerait remercier les auteurs de ce logiciel pour leurs "
+#~ "efforts."
+
+#~ msgid "IRC NAS4Free"
+#~ msgstr "IRC NAS4Free"
+
+#~ msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
+#~ msgstr "Une adresse IPv4 ou IPv6 à écouter\tpour les connexions\tentrantes."
+
+#~ msgid "Return to Command page"
+#~ msgstr "Retour à la Page de Commandes"

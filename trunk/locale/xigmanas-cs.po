@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-06-10 17:54+0000\n"
+"POT-Creation-Date: 2018-08-08 13:24+0000\n"
 "PO-Revision-Date: 2018-07-10 10:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-07-29 22:57+0000\n"
-"X-Generator: Launchpad (build 18737)\n"
+"X-Launchpad-Export-Date: 2018-08-08 16:25+0000\n"
+"X-Generator: Launchpad (build 18739)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -99,6 +99,11 @@ msgstr "%s na %s"
 #, php-format
 msgid "%s used of %s"
 msgstr "využito %s z %s"
+
+#, php-format
+msgid ""
+"%s would like to thank the authors of this software for their efforts."
+msgstr ""
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -985,8 +990,8 @@ msgstr "Úložná jednotka určuje úložnou oblast na cíli."
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr "IPv4 nebo IPv6 adresa portálu iSCSI iniciátoru."
 
-msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
-msgstr "IPv4 nebo IPv6 adresa na které očekávat\tpříchozí\tspojení."
+msgid "An IPv4 or IPv6 address to listen on for incoming connections."
+msgstr ""
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -5120,8 +5125,8 @@ msgstr "Graf je aktualizován každých %d sekund."
 msgid "Graphs Height"
 msgstr "Výška grafu"
 
-msgid "Greeting banner displayed to client when firts connection comes in."
-msgstr "Uvítací pruh zobrazovaný klientovi při prvním přihlášení."
+msgid "Greeting banner displayed to client when first connection comes in."
+msgstr ""
 
 msgid "Group"
 msgstr "Skupina"
@@ -5438,7 +5443,7 @@ msgstr "IPv6 adresy"
 msgid "IRC Live Support"
 msgstr "Bezprostřední podpora prostřednictvím IRC"
 
-msgid "IRC NAS4Free"
+msgid "IRC XigmaNAS"
 msgstr ""
 
 #, php-format
@@ -8512,8 +8517,8 @@ msgstr "Pokračovat"
 msgid "Retry"
 msgstr "Znovu"
 
-msgid "Return to Command page"
-msgstr "Vrátit na stránku příkazů"
+msgid "Return to Command Page"
+msgstr ""
 
 msgid "Reverse DNS lookup"
 msgstr "Zpětné DNS vyhledání"
@@ -9995,12 +10000,6 @@ msgid ""
 msgstr ""
 "Předvolba odepřené určuje uživatele a skupiny, kterým není umožněn přístup k "
 "tomuto sdílení. Forma zápisu je stejná, jako v předvolbě povolené."
-
-#, php-format
-msgid ""
-"The %s Project would like to thank the authors of this software for their "
-"efforts."
-msgstr "Projekt %s by rád poděkoval autorům tohoto software za jejich snahy."
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr ""
@@ -13002,3 +13001,18 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
+
+#~ msgid "Greeting banner displayed to client when firts connection comes in."
+#~ msgstr "Uvítací pruh zobrazovaný klientovi při prvním přihlášení."
+
+#~ msgid "Return to Command page"
+#~ msgstr "Vrátit na stránku příkazů"
+
+#, php-format
+#~ msgid ""
+#~ "The %s Project would like to thank the authors of this software for their "
+#~ "efforts."
+#~ msgstr "Projekt %s by rád poděkoval autorům tohoto software za jejich snahy."
+
+#~ msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
+#~ msgstr "IPv4 nebo IPv6 adresa na které očekávat\tpříchozí\tspojení."

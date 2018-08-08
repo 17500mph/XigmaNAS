@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-06-10 17:54+0000\n"
-"PO-Revision-Date: 2018-07-06 10:35+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2018-08-08 13:24+0000\n"
+"PO-Revision-Date: 2018-08-06 20:24+0000\n"
+"Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-07-29 22:56+0000\n"
-"X-Generator: Launchpad (build 18737)\n"
+"X-Launchpad-Export-Date: 2018-08-08 16:24+0000\n"
+"X-Generator: Launchpad (build 18739)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
 "X-Poedit-Language: Portuguese\n"
@@ -101,6 +101,11 @@ msgstr "%s em %s"
 #, php-format
 msgid "%s used of %s"
 msgstr "%s usado de %s"
+
+#, php-format
+msgid ""
+"%s would like to thank the authors of this software for their efforts."
+msgstr ""
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -195,16 +200,16 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 ou mais discos são necessários para fazer um volume RAID-1."
 
 msgid "1.8\""
-msgstr ""
+msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 ou mais discos são necessários para fazer um volume RAID-0."
@@ -213,7 +218,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 ou mais discos necessários para montar um volume RAID-1"
 
 msgid "2.5\""
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -222,34 +227,34 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 ou mais discos necessários para montar um volume RAID-5."
 
 msgid "3.5\""
-msgstr ""
+msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "wrapper 4KB"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
 msgid "512 Bytes"
-msgstr ""
+msgstr "512 Bytes"
 
 msgid "514"
 msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
 msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tag (entre 1 e 4094)."
@@ -794,7 +799,7 @@ msgid "Algorithm"
 msgstr "Algoritmo"
 
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 msgid "All"
 msgstr "Todos"
@@ -970,7 +975,7 @@ msgstr "Uma Extensão define a área de armazenamento do Destino."
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr ""
 
-msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
+msgid "An IPv4 or IPv6 address to listen on for incoming connections."
 msgstr ""
 
 msgid ""
@@ -1295,7 +1300,7 @@ msgid "Back"
 msgstr "Retroceder"
 
 msgid "Backend"
-msgstr ""
+msgstr "Backend"
 
 msgid "Background"
 msgstr "Plano de fundo"
@@ -1426,13 +1431,13 @@ msgid "Blank Time"
 msgstr ""
 
 msgid "Block"
-msgstr ""
+msgstr "Bloco"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Tamanho do Bloco"
 
 msgid "Blocksize"
-msgstr ""
+msgstr "Tamanho do Bloco"
 
 msgid "Boot Arguments"
 msgstr ""
@@ -1455,7 +1460,7 @@ msgid ""
 msgstr ""
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Bootloader"
 
 msgid "Both user data and metadata will be cached in ARC."
 msgstr ""
@@ -1547,10 +1552,10 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD"
-msgstr ""
+msgstr "CD"
 
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
@@ -1654,7 +1659,7 @@ msgid ""
 msgstr ""
 
 msgid "CTL LUN"
-msgstr ""
+msgstr "CTL LUN"
 
 msgid "Calibration Battery"
 msgstr "Calibramento da bateria"
@@ -1759,7 +1764,7 @@ msgid "Check the list of available drivers"
 msgstr ""
 
 msgid "Checksum"
-msgstr ""
+msgstr "Soma de Verificação"
 
 msgid "Choose File"
 msgstr "Escolher Ficheiro"
@@ -1839,10 +1844,10 @@ msgid "Command"
 msgstr "Executar comandos"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Resultado do Comando"
 
 msgid "Command Output:"
-msgstr ""
+msgstr "Resultado do Comando"
 
 msgid "Command Scripts"
 msgstr ""
@@ -4927,7 +4932,7 @@ msgstr ""
 msgid "Graphs Height"
 msgstr ""
 
-msgid "Greeting banner displayed to client when firts connection comes in."
+msgid "Greeting banner displayed to client when first connection comes in."
 msgstr ""
 
 msgid "Group"
@@ -5229,7 +5234,7 @@ msgstr "Endereços IPv6"
 msgid "IRC Live Support"
 msgstr "IRC Suporte ao vivo"
 
-msgid "IRC NAS4Free"
+msgid "IRC XigmaNAS"
 msgstr ""
 
 #, php-format
@@ -8167,7 +8172,7 @@ msgstr "Continuar"
 msgid "Retry"
 msgstr "Tentar Novamente"
 
-msgid "Return to Command page"
+msgid "Return to Command Page"
 msgstr ""
 
 msgid "Reverse DNS lookup"
@@ -9599,12 +9604,6 @@ msgid ""
 msgstr ""
 "A opção de negação especifica utilizadores e grupos que não estão autorizado "
 "a aceder à partilha. Possui o mesmo formato que a opção de aceitação."
-
-#, php-format
-msgid ""
-"The %s Project would like to thank the authors of this software for their "
-"efforts."
-msgstr ""
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "A porta COM na BIOS tem de ser activada antes de activar esta opção"

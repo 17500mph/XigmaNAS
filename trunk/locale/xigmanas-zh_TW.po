@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-06-10 17:54+0000\n"
+"POT-Creation-Date: 2018-08-08 13:24+0000\n"
 "PO-Revision-Date: 2018-07-17 02:47+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-07-29 22:56+0000\n"
-"X-Generator: Launchpad (build 18737)\n"
+"X-Launchpad-Export-Date: 2018-08-08 16:24+0000\n"
+"X-Generator: Launchpad (build 18739)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -100,6 +100,11 @@ msgstr "%s 於 %s"
 #, php-format
 msgid "%s used of %s"
 msgstr "%s已用，共%s"
+
+#, php-format
+msgid ""
+"%s would like to thank the authors of this software for their efforts."
+msgstr ""
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -896,7 +901,7 @@ msgstr "範圍定義目標的存儲區域。"
 msgid "An IPv4 or IPv6 address of an iSCSI initiator portal."
 msgstr ""
 
-msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
+msgid "An IPv4 or IPv6 address to listen on for incoming connections."
 msgstr ""
 
 msgid ""
@@ -4779,8 +4784,8 @@ msgstr "圖表每隔%d秒更新一次"
 msgid "Graphs Height"
 msgstr "圖表高度"
 
-msgid "Greeting banner displayed to client when firts connection comes in."
-msgstr "第一個連接進來時向客戶端顯示問候橫幅。"
+msgid "Greeting banner displayed to client when first connection comes in."
+msgstr ""
 
 msgid "Group"
 msgstr "群組"
@@ -5080,7 +5085,7 @@ msgstr "IPv6 地址"
 msgid "IRC Live Support"
 msgstr "IRC 線上支援"
 
-msgid "IRC NAS4Free"
+msgid "IRC XigmaNAS"
 msgstr ""
 
 #, php-format
@@ -7961,8 +7966,8 @@ msgstr "繼續"
 msgid "Retry"
 msgstr "重試"
 
-msgid "Return to Command page"
-msgstr "返回到命令網頁"
+msgid "Return to Command Page"
+msgstr ""
 
 msgid "Reverse DNS lookup"
 msgstr "反向DNS查找"
@@ -9365,12 +9370,6 @@ msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
 "the share. It follows the same  format  as  the  allow option."
 msgstr "拒絕選項不允許指定用戶和群組訪問分享區。它與允許選項的格式是相同的。"
-
-#, php-format
-msgid ""
-"The %s Project would like to thank the authors of this software for their "
-"efforts."
-msgstr "%s項目想感謝這個軟件的作者的努力。"
 
 msgid "The COM port in BIOS has to be enabled before enabling this option."
 msgstr "啟用此選項之前必須在BIOS中啟用COM端口。"
@@ -11992,3 +11991,15 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可見"
+
+#~ msgid "Greeting banner displayed to client when firts connection comes in."
+#~ msgstr "第一個連接進來時向客戶端顯示問候橫幅。"
+
+#~ msgid "Return to Command page"
+#~ msgstr "返回到命令網頁"
+
+#, php-format
+#~ msgid ""
+#~ "The %s Project would like to thank the authors of this software for their "
+#~ "efforts."
+#~ msgstr "%s項目想感謝這個軟件的作者的努力。"
