@@ -135,7 +135,7 @@ class co_sphere_level1 extends co_sphere_scriptname { // for settings, services,
 			$id = sprintf('%1$s_%2$s',$element,$value);
 		endif;
 		if(is_null($content)):
-			$content = gtext('Cancel');
+			$content = gettext('Cancel');
 		endif;
 		$button_attributes = [
 			'name' => 'submit',
@@ -428,127 +428,127 @@ class co_sphere_grid extends co_sphere_level2 {
 		if(isset($message)):
 			$this->_cbm_delete = $message;
 		endif;
-		return $this->_cbm_delete ?? gtext('Delete Selected Records');
+		return $this->_cbm_delete ?? gettext('Delete Selected Records');
 	}
 	public function cbm_disable(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_disable = $message;
 		endif;
-		return $this->_cbm_disable ?? gtext('Disable Selected Records');
+		return $this->_cbm_disable ?? gettext('Disable Selected Records');
 	}
 	public function cbm_enable(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_enable = $message;
 		endif;
-		return $this->_cbm_enable ?? gtext('Enable Selected Records');
+		return $this->_cbm_enable ?? gettext('Enable Selected Records');
 	}
 	public function cbm_lock(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_lock = $message;
 		endif;
-		return $this->_cbm_lock ?? gtext('Lock Selected Records');
+		return $this->_cbm_lock ?? gettext('Lock Selected Records');
 	}
 	public function cbm_toggle(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_toggle = $message;
 		endif;
-		return $this->_cbm_toggle ?? gtext('Toggle Selected Records');
+		return $this->_cbm_toggle ?? gettext('Toggle Selected Records');
 	}
 	public function cbm_unlock(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_unlock = $message;
 		endif;
-		return $this->_cbm_unlock ?? gtext('Unlock Selected Records');
+		return $this->_cbm_unlock ?? gettext('Unlock Selected Records');
 	}
 	public function cbm_delete_confirm(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_delete_confirm = $message;
 		endif;
-		return $this->_cbm_delete_confirm ?? gtext('Do you want to delete selected records?');
+		return $this->_cbm_delete_confirm ?? gettext('Do you want to delete selected records?');
 	}
 	public function cbm_disable_confirm(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_disable_confirm = $message;
 		endif;
-		return $this->_cbm_disable_confirm ?? gtext('Do you want to disable selected records?');
+		return $this->_cbm_disable_confirm ?? gettext('Do you want to disable selected records?');
 	}
 	public function cbm_enable_confirm(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_enable_confirm = $message;
 		endif;
-		return $this->_cbm_enable_confirm ?? gtext('Do you want to enable selected records?');
+		return $this->_cbm_enable_confirm ?? gettext('Do you want to enable selected records?');
 	}
 	public function cbm_lock_confirm(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_lock_confirm = $message;
 		endif;
-		return $this->_cbm_lock_confirm ?? gtext('Do you want to lock selected records?');
+		return $this->_cbm_lock_confirm ?? gettext('Do you want to lock selected records?');
 	}
 	public function cbm_toggle_confirm(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_toggle_confirm = $message;
 		endif;
-		return $this->_cbm_toggle_confirm ?? gtext('Do you want to toggle selected records?');
+		return $this->_cbm_toggle_confirm ?? gettext('Do you want to toggle selected records?');
 	}
 	public function cbm_unlock_confirm(string $message = NULL) {
 		if(isset($message)):
 			$this->_cbm_unlock_confirm = $message;
 		endif;
-		return $this->_cbm_unlock_confirm ?? gtext('Do you want to unlock selected records?');
+		return $this->_cbm_unlock_confirm ?? gettext('Do you want to unlock selected records?');
 	}
 	public function sym_add(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_add = $message;
 		endif;
-		return $this->_sym_add ?? gtext('Add Record');
+		return $this->_sym_add ?? gettext('Add Record');
 	}
 	public function sym_mod(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_mod = $message;
 		endif;
-		return $this->_sym_mod ?? gtext('Edit Record');
+		return $this->_sym_mod ?? gettext('Edit Record');
 	}
 	public function sym_del(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_del = $message;
 		endif;
-		return $this->_sym_del ?? gtext('Record is marked for deletion');
+		return $this->_sym_del ?? gettext('Record is marked for deletion');
 	}
 	public function sym_loc(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_loc = $message;
 		endif;
-		return $this->_sym_loc ?? gtext('Record is protected');
+		return $this->_sym_loc ?? gettext('Record is protected');
 	}
 	public function sym_unl(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_unl = $message;
 		endif;
-		return $this->_sym_unl ?? gtext('Record is unlocked');
+		return $this->_sym_unl ?? gettext('Record is unlocked');
 	}
 	public function sym_mai(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_mai = $message;
 		endif;
-		return $this->_sym_mai ?? gtext('Record Maintenance');
+		return $this->_sym_mai ?? gettext('Record Maintenance');
 	}
 	public function sym_inf(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_inf = $message;
 		endif;
-		return $this->_sym_inf ?? gtext('Record Information');
+		return $this->_sym_inf ?? gettext('Record Information');
 	}
 	public function sym_mup(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_mup = $message;
 		endif;
-		return $this->_sym_mup ?? gtext('Move up');
+		return $this->_sym_mup ?? gettext('Move up');
 	}
 	public function sym_mdn(string $message = NULL) {
 		if(isset($message)):
 			$this->_sym_mdn = $message;
 		endif;
-		return $this->_sym_mdn ?? gtext('Move down');
+		return $this->_sym_mdn ?? gettext('Move down');
 	}
 	public function doj(bool $with_envelope = true) {
 		$output = [];
@@ -711,7 +711,7 @@ class co_sphere_grid extends co_sphere_level2 {
 			'type' => 'checkbox',
 			'name' => $this->get_cbm_checkbox_id_toggle(),
 			'id' => $this->get_cbm_checkbox_id_toggle(),
-			'title' => gtext('Invert Selection'),
+			'title' => gettext('Invert Selection'),
 			'class' => 'oneemhigh'
 		];
 		$root = new co_DOMDocument();
