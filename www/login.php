@@ -135,10 +135,10 @@ if(filter_input(INPUT_SERVER,'REQUEST_METHOD',FILTER_CALLBACK,['options' =>	func
 				endif;
 			endif;
 		endif;
-		$input_errors = gtext('Invalid login credentials.');
+		$input_errors = gettext('Invalid login credentials.');
 	else:
 		write_log(sprintf('AUTH: Username contains invalid character(s): %s from %s',$username,$remote_addr));
-		$input_errors = gtext('Invalid username or password.');
+		$input_errors = gettext('Invalid username or password.');
 	endif;
 endif;
 $document = new_page([],'login.php','login');
@@ -167,24 +167,24 @@ $loginpagedata->
 	addDIV(['class' => 'lpm'])->
 		push()->
 		addDIV(['class' => 'lpmi'])->
-			insINPUT(['type' => 'text','id' => 'username','name' => 'username','placeholder' => gtext('Username'),'autofocus' => 'autofocus'])->
+			insINPUT(['type' => 'text','id' => 'username','name' => 'username','placeholder' => gettext('Username'),'autofocus' => 'autofocus'])->
 		last()->
 		addDIV(['class' => 'lpmi'])->
-			insINPUT(['type' => 'password','id' => 'password','name' => 'password','placeholder' => gtext('Password')])->
+			insINPUT(['type' => 'password','id' => 'password','name' => 'password','placeholder' => gettext('Password')])->
 		pop()->
 		addDIV(['class' => 'lpmi'])->
-			insINPUT(['class' => 'formbtn','type' => 'submit','value' => gtext('Login')]);
+			insINPUT(['class' => 'formbtn','type' => 'submit','value' => gettext('Login')]);
 $loginpagedata->
 	addElement('footer',['class' => 'lpf'])->
 		addUL()->
 			push()->addLI(['style' => 'padding-right: 4px;'])->
-				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/forums/'],gtext('Forum'))->
+				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/forums/'],gettext('Forum'))->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
-				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/wiki/doku.php'],gtext('Information & Manuals'))->
+				insA(['target' => '_blank','href' => 'https://www.xigmanas.com/wiki/doku.php'],gettext('Information & Manuals'))->
 			last()->addLI(['style' => 'padding: 0 4px;'])->
-				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#xigmanas'],gtext('IRC XigmaNAS'))->
+				insA(['target' => '_blank','href' => 'https://webchat.freenode.net/?channels=#xigmanas'],gettext('IRC XigmaNAS'))->
 			pop()->addLI(['style' => 'padding-left: 4px;'])->
-				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40xigmanas%2ecom&lc=US&item_name=XigmaNAS&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'],gtext('Donate'));
+				insA(['target' => '_blank','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40xigmanas%2ecom&lc=US&item_name=XigmaNAS&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'],gettext('Donate'));
 if(!empty($input_errors)):
 	$loginpagedata->
 		insDIV(['class' => 'lpe'],$input_errors);
