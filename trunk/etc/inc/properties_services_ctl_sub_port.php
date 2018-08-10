@@ -42,7 +42,7 @@ class ctl_sub_port_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Port Name'));
+			set_title(gettext('Port Name'));
 		return $property;
 	}
 	protected $x_group;
@@ -53,14 +53,14 @@ class ctl_sub_port_properties extends co_property_container_param {
 		$property = $this->x_group = new property_list_multi($this);
 		$property->
 			set_name('group')->
-			set_title(gtext('Target'));
+			set_title(gettext('Target'));
 		return $property;
 	}
 }
 class ctl_sub_port_edit_properties extends ctl_sub_port_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the port.');
+		$description = gettext('Name of the port.');
 		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('name')->
@@ -73,12 +73,12 @@ class ctl_sub_port_edit_properties extends ctl_sub_port_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_group() {
 		$property = parent::init_group();
-		$description = gtext('Select targets.');
+		$description = gettext('Select targets.');
 		$options = [];
 		$property->
 			set_id('group')->
@@ -88,7 +88,7 @@ class ctl_sub_port_edit_properties extends ctl_sub_port_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

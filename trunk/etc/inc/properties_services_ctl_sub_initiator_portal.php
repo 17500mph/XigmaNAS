@@ -42,7 +42,7 @@ class ctl_sub_initiator_portal_properties extends co_property_container_param {
 		$property = $this->x_ipaddress = new property_ipaddress($this);
 		$property->
 			set_name('ipaddress')->
-			set_title(gtext('IP Address'));
+			set_title(gettext('IP Address'));
 		return $property;
 	}
 	protected $x_prefixlen;
@@ -53,7 +53,7 @@ class ctl_sub_initiator_portal_properties extends co_property_container_param {
 		$property = $this->x_prefixlen = new property_int($this);
 		$property->
 			set_name('prefixlen')->
-			set_title(gtext('IP Address Prefix'));
+			set_title(gettext('IP Address Prefix'));
 		return $property;
 	}
 	protected $x_group;
@@ -64,15 +64,15 @@ class ctl_sub_initiator_portal_properties extends co_property_container_param {
 		$property = $this->x_group = new property_list_multi($this);
 		$property->
 			set_name('group')->
-			set_title(gtext('Auth Group'));
+			set_title(gettext('Auth Group'));
 		return $property;
 	}
 }
 class ctl_sub_initiator_portal_edit_properties extends ctl_sub_initiator_portal_properties {
 	public function init_ipaddress() {
 		$property = parent::init_ipaddress();
-		$description = gtext('An IPv4 or IPv6 address of an iSCSI initiator portal.');
-		$placeholder = gtext('IP Address');
+		$description = gettext('An IPv4 or IPv6 address of an iSCSI initiator portal.');
+		$placeholder = gettext('IP Address');
 		$property->
 			set_id('ipaddress')->
 			set_description($description)->
@@ -81,12 +81,12 @@ class ctl_sub_initiator_portal_edit_properties extends ctl_sub_initiator_portal_
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_prefixlen() {
 		$property = parent::init_prefixlen();
-		$description = gtext('Enter IP address prefix length.');
+		$description = gettext('Enter IP address prefix length.');
 		$placeholder = '';
 		$property->
 			set_id('prefixlen')->
@@ -100,12 +100,12 @@ class ctl_sub_initiator_portal_edit_properties extends ctl_sub_initiator_portal_
 			set_min(0)->
 			set_max(128)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_group() {
 		$property = parent::init_group();
-		$description = gtext('Select auth groups.');
+		$description = gettext('Select auth groups.');
 		$options = [];
 		$property->
 			set_id('group')->
@@ -115,7 +115,7 @@ class ctl_sub_initiator_portal_edit_properties extends ctl_sub_initiator_portal_
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

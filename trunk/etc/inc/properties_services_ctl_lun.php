@@ -42,7 +42,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('LUN Name'));
+			set_title(gettext('LUN Name'));
 		return $property;
 	}
 	protected $x_backend;
@@ -53,7 +53,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_backend = new property_list($this);
 		$property->
 			set_name('backend')->
-			set_title(gtext('Backend'));
+			set_title(gettext('Backend'));
 		return $property;
 	}
 	protected $x_blocksize;
@@ -64,7 +64,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_blocksize = new property_list($this);
 		$property->
 			set_name('blocksize')->
-			set_title(gtext('Block Size'));
+			set_title(gettext('Block Size'));
 		return $property;
 	}
 	protected $x_ctl_lun;
@@ -75,7 +75,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_ctl_lun = new property_text($this);
 		$property->
 			set_name('ctl_lun')->
-			set_title(gtext('CTL LUN'));
+			set_title(gettext('CTL LUN'));
 		return $property;
 	}
 	protected $x_device_id;
@@ -86,7 +86,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_device_id = new property_text($this);
 		$property->
 			set_name('device_id')->
-			set_title(gtext('Device ID'));
+			set_title(gettext('Device ID'));
 		return $property;
 	}
 	protected $x_device_type;
@@ -97,7 +97,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_device_type = new property_list($this);
 		$property->
 			set_name('device_type')->
-			set_title(gtext('Device Type'));
+			set_title(gettext('Device Type'));
 		return $property;
 	}
 	protected $x_passthrough_address;
@@ -108,7 +108,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_passthrough_address = new property_text($this);
 		$property->
 			set_name('passthrough_address')->
-			set_title(gtext('Passthrough Address'));
+			set_title(gettext('Passthrough Address'));
 		return $property;
 	}
 	protected $x_path;
@@ -119,7 +119,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_path = new property_text($this);
 		$property->
 			set_name('path')->
-			set_title(gtext('Path'));
+			set_title(gettext('Path'));
 		return $property;
 	}
 	protected $x_serial;
@@ -130,7 +130,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_ = new property_text($this);
 		$property->
 			set_name('serial')->
-			set_title(gtext('Serial Number'));
+			set_title(gettext('Serial Number'));
 		return $property;
 	}
 	protected $x_size;
@@ -141,7 +141,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_size = new property_text($this);
 		$property->
 			set_name('size')->
-			set_title(gtext('Size'));
+			set_title(gettext('Size'));
 		return $property;
 	}
 	protected $x_opt_vendor;
@@ -152,7 +152,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_vendor = new property_text($this);
 		$property->
 			set_name('opt_vendor')->
-			set_title(gtext('LUN Vendor'));
+			set_title(gettext('LUN Vendor'));
 		return $property;
 	}
 	protected $x_opt_product;
@@ -163,7 +163,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_product = new property_text($this);
 		$property->
 			set_name('opt_product')->
-			set_title(gtext('LUN Product'));
+			set_title(gettext('LUN Product'));
 		return $property;
 	}
 	protected $x_opt_revision;
@@ -174,7 +174,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_revision = new property_text($this);
 		$property->
 			set_name('opt_revision')->
-			set_title(gtext('LUN Revision'));
+			set_title(gettext('LUN Revision'));
 		return $property;
 	}
 	protected $x_opt_scsiname;
@@ -185,7 +185,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_scsiname = new property_text($this);
 		$property->
 			set_name('opt_scsiname')->
-			set_title(gtext('LUN SCSI Name'));
+			set_title(gettext('LUN SCSI Name'));
 		return $property;
 	}
 	protected $x_opt_eui;
@@ -196,7 +196,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_eui = new property_text($this);
 		$property->
 			set_name('opt_eui')->
-			set_title(gtext('LUN EUI-64	identifier'));
+			set_title(gettext('LUN EUI-64	identifier'));
 		return $property;
 	}
 	protected $x_opt_naa;
@@ -207,7 +207,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_naa = new property_text($this);
 		$property->
 			set_name('opt_naa')->
-			set_title(gtext('LUN NAA Identifier'));
+			set_title(gettext('LUN NAA Identifier'));
 		return $property;
 	}
 	protected $x_opt_uuid;
@@ -218,7 +218,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_uuid = new property_text($this);
 		$property->
 			set_name('opt_uuid')->
-			set_title(gtext('UUID'));
+			set_title(gettext('UUID'));
 		return $property;
 	}
 	protected $x_opt_ha_role;
@@ -229,7 +229,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_ha_role = new property_list($this);
 		$property->
 			set_name('opt_ha_role')->
-			set_title(gtext('HA Role'));
+			set_title(gettext('HA Role'));
 		return $property;
 	}
 	protected $x_opt_insecure_tpc;
@@ -240,7 +240,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_insecure_tpc = new property_list($this);
 		$property->
 			set_name('opt_insecure_tpc')->
-			set_title(gtext('Insecure TPC'));
+			set_title(gettext('Insecure TPC'));
 		return $property;
 	}
 	protected $x_opt_readcache;
@@ -251,7 +251,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_readcache = new property_list($this);
 		$property->
 			set_name('opt_readcache')->
-			set_title(gtext('Read Cache'));
+			set_title(gettext('Read Cache'));
 		return $property;
 	}
 	protected $x_opt_readonly;
@@ -262,7 +262,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_readonly = new property_list($this);
 		$property->
 			set_name('opt_readonly')->
-			set_title(gtext('Read Only'));
+			set_title(gettext('Read Only'));
 		return $property;
 	}
 	protected $x_opt_removable;
@@ -273,7 +273,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_removable = new property_list($this);
 		$property->
 			set_name('opt_removable')->
-			set_title(gtext('Removable'));
+			set_title(gettext('Removable'));
 		return $property;
 	}
 	protected $x_opt_reordering;
@@ -284,7 +284,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_reordering = new property_list($this);
 		$property->
 			set_name('opt_reordering')->
-			set_title(gtext('Reordering'));
+			set_title(gettext('Reordering'));
 		return $property;
 	}
 	protected $x_opt_serseq;
@@ -295,7 +295,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_serseq = new property_list($this);
 		$property->
 			set_name('opt_serseq')->
-			set_title(gtext('Serialize Sequence'));
+			set_title(gettext('Serialize Sequence'));
 		return $property;
 	}
 	protected $x_opt_pblocksize;
@@ -306,7 +306,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_pblocksize = new property_text($this);
 		$property->
 			set_name('opt_pblocksize')->
-			set_title(gtext('Physical Block Size'));
+			set_title(gettext('Physical Block Size'));
 		return $property;
 	}
 	protected $x_opt_pblockoffset;
@@ -317,7 +317,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_pblockoffset = new property_text($this);
 		$property->
 			set_name('opt_pblockoffset')->
-			set_title(gtext('Physical Block Offset'));
+			set_title(gettext('Physical Block Offset'));
 		return $property;
 	}
 	protected $x_opt_ublocksize;
@@ -328,7 +328,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_ublocksize = new property_text($this);
 		$property->
 			set_name('opt_ublocksize')->
-			set_title(gtext('UNMAP Block Size'));
+			set_title(gettext('UNMAP Block Size'));
 		return $property;
 	}
 	protected $x_opt_ublockoffset;
@@ -339,7 +339,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_ublockoffset = new property_text($this);
 		$property->
 			set_name('opt_ublockoffset')->
-			set_title(gtext('UNMAP Block Offset'));
+			set_title(gettext('UNMAP Block Offset'));
 		return $property;
 	}
 	protected $x_opt_rpm;
@@ -350,7 +350,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_rpm = new property_text($this);
 		$property->
 			set_name('opt_rpm')->
-			set_title(gtext('RPM'));
+			set_title(gettext('RPM'));
 		return $property;
 	}
 	protected $x_opt_formfactor;
@@ -361,7 +361,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_formfactor = new property_list($this);
 		$property->
 			set_name('opt_formfactor')->
-			set_title(gtext('Form Factor'));
+			set_title(gettext('Form Factor'));
 		return $property;
 	}
 	protected $x_opt_provisioning_type;
@@ -372,7 +372,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_provisioning_type = new property_list($this);
 		$property->
 			set_name('opt_provisioning_type')->
-			set_title(gtext('Provisioning Type'));
+			set_title(gettext('Provisioning Type'));
 		return $property;
 	}
 	protected $x_opt_unmap;
@@ -383,7 +383,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_unmap = new property_list($this);
 		$property->
 			set_name('opt_unmap')->
-			set_title(gtext('UNMAP'));
+			set_title(gettext('UNMAP'));
 		return $property;
 	}
 	protected $x_opt_unmap_max_lba;
@@ -394,7 +394,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_unmap_max_lba = new property_text($this);
 		$property->
 			set_name('opt_unmap_max_lba')->
-			set_title(gtext('UNMAP Maximum LBA'));
+			set_title(gettext('UNMAP Maximum LBA'));
 		return $property;
 	}
 	protected $x_opt_unmap_max_descr;
@@ -405,7 +405,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_unmap_max_descr = new property_text($this);
 		$property->
 			set_name('opt_unmap_max_descr')->
-			set_title(gtext('UNMAP Maximum Descriptors'));
+			set_title(gettext('UNMAP Maximum Descriptors'));
 		return $property;
 	}
 	protected $x_opt_write_same_max_lba;
@@ -416,7 +416,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_write_same_max_lba = new property_text($this);
 		$property->
 			set_name('opt_write_same_max_lba')->
-			set_title(gtext('Write Same Maximum LBA'));
+			set_title(gettext('Write Same Maximum LBA'));
 		return $property;
 	}
 	protected $x_opt_avail_threshold;
@@ -427,7 +427,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_avail_threshold = new property_text($this);
 		$property->
 			set_name('opt_avail_threshold')->
-			set_title(gtext('Avail Threshold'));
+			set_title(gettext('Avail Threshold'));
 		return $property;
 	}
 	protected $x_opt_used_threshold;
@@ -438,7 +438,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_used_threshold = new property_text($this);
 		$property->
 			set_name('opt_used_threshold')->
-			set_title(gtext('Used Threshold'));
+			set_title(gettext('Used Threshold'));
 		return $property;
 	}
 	protected $x_opt_pool_avail_threshold;
@@ -449,7 +449,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_pool_avail_threshold = new property_text($this);
 		$property->
 			set_name('opt_pool_avail_threshold')->
-			set_title(gtext('Pool Avail Threshold'));
+			set_title(gettext('Pool Avail Threshold'));
 		return $property;
 	}
 	protected $x_opt_pool_used_threshold;
@@ -460,7 +460,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_pool_used_threshold = new property_text($this);
 		$property->
 			set_name('opt_pool_used_threshold')->
-			set_title(gtext('Pool Used Threshold'));
+			set_title(gettext('Pool Used Threshold'));
 		return $property;
 	}
 	protected $x_opt_writecache;
@@ -471,7 +471,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_writecache = new property_list($this);
 		$property->
 			set_name('opt_writecache')->
-			set_title(gtext('Write Cache'));
+			set_title(gettext('Write Cache'));
 		return $property;
 	}
 	protected $x_opt_file;
@@ -482,7 +482,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_file = new property_text($this);
 		$property->
 			set_name('opt_file')->
-			set_title(gtext('File'));
+			set_title(gettext('File'));
 		return $property;
 	}
 	protected $x_opt_num_threads;
@@ -493,7 +493,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_num_threads = new property_text($this);
 		$property->
 			set_name('opt_num_threads')->
-			set_title(gtext('Threads'));
+			set_title(gettext('Threads'));
 		return $property;
 	}
 	protected $x_opt_capacity;
@@ -504,7 +504,7 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_opt_capacity = new property_text($this);
 		$property->
 			set_name('opt_capacity')->
-			set_title(gtext('Capacity'));
+			set_title(gettext('Capacity'));
 		return $property;
 	}
 	protected $x_auxparam;
@@ -515,15 +515,15 @@ class ctl_lun_properties extends co_property_container_param {
 		$property = $this->x_auxparam = new property_textarea($this);
 		$property->
 			set_name('auxparam')->
-			set_title(gtext('Additional Parameter'));
+			set_title(gettext('Additional Parameter'));
 		return $property;
 	}
 }
 class ctl_lun_edit_properties extends ctl_lun_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the LUN.');
-		$placeholder = gtext('LUN Name');
+		$description = gettext('Name of the LUN.');
+		$placeholder = gettext('LUN Name');
 		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('name')->
@@ -537,17 +537,17 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_backend() {
 		$property = parent::init_backend();
-		$description = gtext('The CTL backend to use for a given LUN.');
+		$description = gettext('The CTL backend to use for a given LUN.');
 		$options = [
-			'' => gtext('Default'),
-			'block' => gtext('Block'),
-//			'passthrough' => gtext('Passthrough'),
-			'ramdisk' => gtext('RAM Disk')
+			'' => gettext('Default'),
+			'block' => gettext('Block'),
+//			'passthrough' => gettext('Passthrough'),
+			'ramdisk' => gettext('RAM Disk')
 		];
 		$property->
 			set_id('backend')->
@@ -557,21 +557,21 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_blocksize() {
 		$property = $property = parent::init_blocksize();
-		$description = gtext('The blocksize visible to the initiator.');
+		$description = gettext('The blocksize visible to the initiator.');
 		$options = [
-			'' => gtext('Default'),
-			'512' => gtext('512 Bytes'),
-			'2048' => gtext('2 KiB'),
-			'4096' => gtext('4 KiB'),
-			'8192' => gtext('8 KiB'),
-			'16384' => gtext('16 KiB'),
-			'32738' => gtext('32 KiB'),
-			'65536' => gtext('64 KiB')
+			'' => gettext('Default'),
+			'512' => gettext('512 Bytes'),
+			'2048' => gettext('2 KiB'),
+			'4096' => gettext('4 KiB'),
+			'8192' => gettext('8 KiB'),
+			'16384' => gettext('16 KiB'),
+			'32738' => gettext('32 KiB'),
+			'65536' => gettext('64 KiB')
 		];
 		$property->
 			set_id('blocksize')->
@@ -581,12 +581,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_ctl_lun() {
 		$property = parent::init_ctl_lun();
-		$description = gtext('Global numeric identifier to use for a given LUN inside CTL.');
+		$description = gettext('Global numeric identifier to use for a given LUN inside CTL.');
 		$regexp = '/^(?:|[0-9]|[1-9][0-9]{1,2}|10[01][0-9]|102[0-3])$/';
 		$property->
 			set_id('ctl_lun')->
@@ -599,15 +599,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_device_id() {
 		//	The device-id shall be 48 characters width,
 		//	Compatibility istgt: 16 bytes "iSCSI Disk     " + 32 bytes aligned serial number
 		$property = parent::init_device_id();
-		$description = gtext('The SCSI Device Identification string presented to the initiator.');
-		$placeholder = gtext('Device ID');
+		$description = gettext('The SCSI Device Identification string presented to the initiator.');
+		$placeholder = gettext('Device ID');
 		$regexp = '/^\S{0,48}$/';
 		$property->
 			set_id('device_id')->
@@ -621,38 +621,38 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_device_type() {
 		$property = parent::init_device_type();
-		$description = gtext('Specify the SCSI device type to use when creating the LUN.');
+		$description = gettext('Specify the SCSI device type to use when creating the LUN.');
 		$options = [
-			'' => gtext('Undefined'),
-			'disk' => gtext('Disk'),
-			'direct' => gtext('Direct'),
-			'processor' => gtext('Processor'),
-			'cd' => gtext('CD'),
-			'cdrom' => gtext('CD-ROM'),
-			'dvd' => gtext('DVD'),
-			'dvdrom' => gtext('DVD-ROM'),
+			'' => gettext('Undefined'),
+			'disk' => gettext('Disk'),
+			'direct' => gettext('Direct'),
+			'processor' => gettext('Processor'),
+			'cd' => gettext('CD'),
+			'cdrom' => gettext('CD-ROM'),
+			'dvd' => gettext('DVD'),
+			'dvdrom' => gettext('DVD-ROM'),
 /*
-			'0' => gtext('0'),
-			'1' => gtext('1'),
-			'2' => gtext('2'),
-			'3' => gtext('3'),
-			'4' => gtext('4'),
-			'5' => gtext('5'),
-			'6' => gtext('6'),
-			'7' => gtext('7'),
-			'8' => gtext('8'),
-			'9' => gtext('9'),
-			'10' => gtext('10'),
-			'11' => gtext('11'),
-			'12' => gtext('12'),
-			'13' => gtext('13'),
-			'14' => gtext('14'),
-			'15' => gtext('15'),
+			'0' => gettext('0'),
+			'1' => gettext('1'),
+			'2' => gettext('2'),
+			'3' => gettext('3'),
+			'4' => gettext('4'),
+			'5' => gettext('5'),
+			'6' => gettext('6'),
+			'7' => gettext('7'),
+			'8' => gettext('8'),
+			'9' => gettext('9'),
+			'10' => gettext('10'),
+			'11' => gettext('11'),
+			'12' => gettext('12'),
+			'13' => gettext('13'),
+			'14' => gettext('14'),
+			'15' => gettext('15'),
  */
 		];
 		$property->
@@ -663,12 +663,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_passthrough_address() {
 		$property = parent::init_passthrough_address();
-		$description = gtext('Enter passthrough device address bus:path:lun');
+		$description = gettext('Enter passthrough device address bus:path:lun');
 		$regexp = '/^(?:|[0-9]+:[0-9]+:[0-9]+)$/';
 		$property->
 			set_id('passthrough_address')->
@@ -681,12 +681,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_path() {
 		$property = parent::init_path();
-		$description = gtext('The path to the file, device node, or zfs volume used to back the LUN.');
+		$description = gettext('The path to the file, device node, or zfs volume used to back the LUN.');
 		$regexp = '/^(?:|.{1,223})$/';
 		$property->
 			set_id('path')->
@@ -699,12 +699,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_serial() {
 		$property = parent::init_serial();
-		$description = gtext('The SCSI serial number presented to the initiator.');
+		$description = gettext('The SCSI serial number presented to the initiator.');
 		$regexp = '/^(?:|.{1,40})$/';
 		$property->
 			set_id('serial')->
@@ -717,12 +717,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_size() {
 		$property = parent::init_size();
-		$description = gtext('The size of the LUN.');
+		$description = gettext('The size of the LUN.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,16}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('size')->
@@ -735,12 +735,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_vendor() {
 		$property = parent::init_opt_vendor();
-		$description = gtext('Specifies LUN vendor string up to 8 chars.');
+		$description = gettext('Specifies LUN vendor string up to 8 chars.');
 		$placeholder = 'FreeBSD';
 		$regexp = '/^.{0,8}$/';
 		$property->
@@ -756,12 +756,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_product() {
 		$property = parent::init_opt_product();
-		$description = gtext('Specifies LUN product string up to 16 chars.');
+		$description = gettext('Specifies LUN product string up to 16 chars.');
 		$placeholder = 'iSCSI Disk';
 		$regexp = '/^.{0,16}$/';
 		$property->
@@ -777,12 +777,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_revision() {
 		$property = parent::init_opt_revision();
-		$description = gtext('Specifies LUN revision string up to 4 chars.');
+		$description = gettext('Specifies LUN revision string up to 4 chars.');
 		$placeholder = '0123';
 		$regexp = '/^.{0,4}$/';
 		$property->
@@ -798,13 +798,13 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_scsiname() {
 		$property = parent::init_opt_scsiname();
-		$description = gtext('Specifies LUN SCSI name string.');
-		$placeholder = gtext('SCSI Name');
+		$description = gettext('Specifies LUN SCSI name string.');
+		$placeholder = gettext('SCSI Name');
 		$regexp = '/^\S{0,223}$/';
 		$property->
 			set_id('opt_scsiname')->
@@ -818,13 +818,13 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_eui() {
 		$property = parent::init_opt_eui();
-		$description = gtext('Specifies LUN EUI-64 identifier.');
-		$placeholder = gtext('EUI-64');
+		$description = gettext('Specifies LUN EUI-64 identifier.');
+		$placeholder = gettext('EUI-64');
 		$regexp = '/^(?:|[0-9a-f]{16})$/i';
 		$property->
 			set_id('opt_eui')->
@@ -838,13 +838,13 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_naa() {
 		$property = parent::init_opt_naa();
-		$description = gtext('Specifies LUN NAA identifier.');
-		$placeholder = gtext('NAA Identifier');
+		$description = gettext('Specifies LUN NAA identifier.');
+		$placeholder = gettext('NAA Identifier');
 		$regexp = '/^(?:|[0-9a-f]{32})$/i';
 		$property->
 			set_id('opt_naa')->
@@ -858,13 +858,13 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_uuid() {
 		$property = parent::init_opt_uuid();
-		$description = gtext('Specifies LUN locally assigned RFC 4122 UUID.');
-		$placeholder = gtext('UUID');
+		$description = gettext('Specifies LUN locally assigned RFC 4122 UUID.');
+		$placeholder = gettext('UUID');
 		$regexp = '/^(?:|[0-9a-f]{4}(?:[0-9a-f]{4}-){4}[0-9a-f]{12})$/i';
 		$property->
 			set_id('opt_uuid')->
@@ -878,16 +878,16 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
 			set_editableonadd(false)->
 			set_editableonmodify(false)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_ha_role() {
 		$property = parent::init_opt_ha_role();
-		$description = gtext('Setting to "primary" or "secondary" overrides default role of the node in HA cluster.');
+		$description = gettext('Setting to "primary" or "secondary" overrides default role of the node in HA cluster.');
 		$options = [
-			'' => gtext('Default'),
-			'primary' => gtext('Primary'),
-			'secondary' => gtext('Secondary')
+			'' => gettext('Default'),
+			'primary' => gettext('Primary'),
+			'secondary' => gettext('Secondary')
 		];
 		$property->
 			set_id('opt_ha_role')->
@@ -897,15 +897,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_insecure_tpc() {
 		$property = parent::init_opt_insecure_tpc();
-		$description = gtext('Setting to "on" allows EXTENDED COPY command sent to this LUN access other LUNs on this host, not accessible otherwise. This allows to offload copying between different iSCSI targets residing on the same host in trusted environments.');
+		$description = gettext('Setting to "on" allows EXTENDED COPY command sent to this LUN access other LUNs on this host, not accessible otherwise. This allows to offload copying between different iSCSI targets residing on the same host in trusted environments.');
 		$options = [
-			'' => gtext('Off'),
-			'on' => gtext('On')
+			'' => gettext('Off'),
+			'on' => gettext('On')
 		];
 		$property->
 			set_id('opt_insecure_tpc')->
@@ -915,15 +915,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_readcache() {
 		$property = parent::init_opt_readcache();
-		$description = gtext('Set to "off", disables read caching for the LUN, if supported by the backend.');
+		$description = gettext('Set to "off", disables read caching for the LUN, if supported by the backend.');
 		$options = [
-			'' => gtext('On'),
-			'off' => gtext('Off')
+			'' => gettext('On'),
+			'off' => gettext('Off')
 		];
 		$property->
 			set_id('opt_readcache')->
@@ -933,15 +933,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_readonly() {
 		$property = parent::init_opt_readonly();
-		$description = gtext('Set to "on", blocks all media write operations to the LUN reporting it as write protected.');
+		$description = gettext('Set to "on", blocks all media write operations to the LUN reporting it as write protected.');
 		$options = [
-			'' => gtext('Off'),
-			'on' => gtext('On')
+			'' => gettext('Off'),
+			'on' => gettext('On')
 		];
 		$property->
 			set_id('opt_readonly')->
@@ -951,15 +951,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_removable() {
 		$property = parent::init_opt_removable();
-		$description = gtext('Set to "on" makes LUN removable.');
+		$description = gettext('Set to "on" makes LUN removable.');
 		$options = [
-			'' => gtext('Off'),
-			'on' => gtext('On')
+			'' => gettext('Off'),
+			'on' => gettext('On')
 		];
 		$property->
 			set_id('opt_removable')->
@@ -969,15 +969,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_reordering() {
 		$property = parent::init_opt_reordering();
-		$description = gtext('Set to "unrestricted", allows target to process commands with SIMPLE task attribute in arbitrary order.');
+		$description = gettext('Set to "unrestricted", allows target to process commands with SIMPLE task attribute in arbitrary order.');
 		$options = [
-			'' => gtext('Restricted'),
-			'unrestricted' => gtext('Unrestricted')
+			'' => gettext('Restricted'),
+			'unrestricted' => gettext('Unrestricted')
 		];
 		$property->
 			set_id('opt_reordering')->
@@ -987,17 +987,17 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_serseq() {
 		$property = parent::init_opt_serseq();
 		$description = '';
 		$options = [
-			'' => gtext('Default'),
-			'off' => gtext('Allow consecutive read/writes to be issued in parallel'),
-			'on' => gtext('Serialize consecutive reads/writes'),
-			'read' => gtext('Serialize consecutive reads')
+			'' => gettext('Default'),
+			'off' => gettext('Allow consecutive read/writes to be issued in parallel'),
+			'on' => gettext('Serialize consecutive reads/writes'),
+			'read' => gettext('Serialize consecutive reads')
 		];
 		$property->
 			set_id('opt_serseq')->
@@ -1007,12 +1007,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_pblocksize() {
 		$property = parent::init_opt_pblocksize();
-		$description = gtext('Specify physical block size of the device.');
+		$description = gettext('Specify physical block size of the device.');
 		$regexp = '/^(?:|[1-9][0-9]{0,8}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('opt_pblocksize')->
@@ -1025,12 +1025,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_pblockoffset() {
 		$property = parent::init_opt_pblockoffset();
-		$description = gtext('Specify physical block offset of the device.');
+		$description = gettext('Specify physical block offset of the device.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,8}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('opt_pblockoffset')->
@@ -1043,12 +1043,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_ublocksize() {
 		$property = parent::init_opt_ublocksize();
-		$description = gtext('Specify UNMAP block size of the device.');
+		$description = gettext('Specify UNMAP block size of the device.');
 		$regexp = '/^(?:|[1-9][0-9]{0,8}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('opt_ublocksize')->
@@ -1061,12 +1061,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_ublockoffset() {
 		$property = parent::init_opt_ublockoffset();
-		$description = gtext('Specify UNMAP block offset of the device.');
+		$description = gettext('Specify UNMAP block offset of the device.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,8}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('opt_ublockoffset')->
@@ -1079,12 +1079,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_rpm() {
 		$property = parent::init_opt_rpm();
-		$description = gtext('Specifies medium rotation rate of the device.');
+		$description = gettext('Specifies medium rotation rate of the device.');
 		//	0: not reported
 		//	1: non-rotating (SSD)
 		//	>1024: value in	revolutions per minute
@@ -1101,20 +1101,20 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_formfactor() {
 		$property = parent::init_opt_formfactor();
-		$description = gtext('Specifies nominal form factor of the device.');
+		$description = gettext('Specifies nominal form factor of the device.');
 		$options = [
-			'' => gtext('Undefined'),
-			'0' => gtext('Not Reported'),
-			'1' => gtext('5.25"'),
-			'2' => gtext('3.5"'),
-			'3' => gtext('2.5"'),
-			'4' => gtext('1.8"'),
-			'5' => gtext('less then 1.8".')
+			'' => gettext('Undefined'),
+			'0' => gettext('Not Reported'),
+			'1' => gettext('5.25"'),
+			'2' => gettext('3.5"'),
+			'3' => gettext('2.5"'),
+			'4' => gettext('1.8"'),
+			'5' => gettext('less then 1.8".')
 		];
 		$property->
 			set_id('opt_formfactor')->
@@ -1124,17 +1124,17 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_provisioning_type() {
 		$property = parent::init_opt_provisioning_type();
-		$description = gtext('When UNMAP support is enabled, this option specifies provisioning type.');
+		$description = gettext('When UNMAP support is enabled, this option specifies provisioning type.');
 		$options = [
-			'' => gtext('Default'),
-			'resource' => gtext('Resource Provisioning'),
-			'thin' => gtext('Thin Provisioning'),
-			'unknown' => gtext('Unknown')
+			'' => gettext('Default'),
+			'resource' => gettext('Resource Provisioning'),
+			'thin' => gettext('Thin Provisioning'),
+			'unknown' => gettext('Unknown')
 		];
 		$property->
 			set_id('opt_provisioning_type')->
@@ -1144,16 +1144,16 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_unmap() {
 		$property = parent::init_opt_unmap();
-		$description = gtext('Setting to "on" or "off" controls UNMAP support for the logical unit. Default value is "on" if supported by the backend.');
+		$description = gettext('Setting to "on" or "off" controls UNMAP support for the logical unit. Default value is "on" if supported by the backend.');
 		$options = [
-			'' => gtext('Default'),
-			'on' => gtext('On'),
-			'off' => gtext('Off')
+			'' => gettext('Default'),
+			'on' => gettext('On'),
+			'off' => gettext('Off')
 		];
 		$property->
 			set_id('opt_unmap')->
@@ -1163,12 +1163,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_unmap_max_lba() {
 		$property = parent::init_opt_unmap_max_lba();
-		$description = gtext('Specify maximum allowed number of LBAs per UNMAP command to report in Block Limits VPD page.');
+		$description = gettext('Specify maximum allowed number of LBAs per UNMAP command to report in Block Limits VPD page.');
 		$regexp = '/^(?:|0|[1-9][0-9]*)$/';
 		$property->
 			set_id('opt_unmap_max_lba')->
@@ -1181,12 +1181,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_unmap_max_descr() {
 		$property = parent::init_opt_unmap_max_descr();
-		$description = gtext('Specify maximum allowed number of block descriptors per UNMAP command to report in Block Limits VPD page.');
+		$description = gettext('Specify maximum allowed number of block descriptors per UNMAP command to report in Block Limits VPD page.');
 		$regexp = '/^(?:|0|[1-9][0-9]*)$/';
 		$property->
 			set_id('opt_unmap_max_descr')->
@@ -1199,12 +1199,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_write_same_max_lba() {
 		$property = parent::init_opt_write_same_max_lba();
-		$description = gtext('Specify maximum allowed number of LBAs per WRITE SAME command to report in Block Limits VPD page.');
+		$description = gettext('Specify maximum allowed number of LBAs per WRITE SAME command to report in Block Limits VPD page.');
 		$regexp = '/^(?:|0|[1-9][0-9]*)$/';
 		$property->
 			set_id('opt_write_same_max_lba')->
@@ -1217,12 +1217,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_avail_threshold() {
 		$property = parent::init_opt_avail_threshold();
-		$description = gtext('Set per-LUN/per-pool thin provisioning soft threshold.');
+		$description = gettext('Set per-LUN/per-pool thin provisioning soft threshold.');
 		$regexp = '/^(?:|0|[1-9][0-9]*)$/';
 		$property->
 			set_id('opt_avail_threshold')->
@@ -1235,12 +1235,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_used_threshold() {
 		$property = parent::init_opt_used_threshold();
-		$description = gtext('Set per-LUN/per-pool thin provisioning soft threshold.');
+		$description = gettext('Set per-LUN/per-pool thin provisioning soft threshold.');
 		$regexp = '/^(?:|0|[1-9][0-9]*)$/';
 		$property->
 			set_id('opt_used_threshold')->
@@ -1253,12 +1253,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_pool_avail_threshold() {
 		$property = parent::init_opt_pool_avail_threshold();
-		$description = gtext('Set per-LUN/per-pool thin provisioning soft threshold.');
+		$description = gettext('Set per-LUN/per-pool thin provisioning soft threshold.');
 		$regexp = '/^(?:|0|[1-9][0-9]*)$/';
 		$property->
 			set_id('opt_pool_avail_threshold')->
@@ -1271,12 +1271,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_pool_used_threshold() {
 		$property = parent::init_opt_pool_used_threshold();
-		$description = gtext('Set per-LUN/per-pool thin provisioning soft threshold.');
+		$description = gettext('Set per-LUN/per-pool thin provisioning soft threshold.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,8})$/';
 		$property->
 			set_id('opt_pool_used_threshold')->
@@ -1289,15 +1289,15 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_writecache() {
 		$property = parent::init_opt_writecache();
-		$description = gtext('Set to "off", disables write caching for the LUN, if supported by the backend.');
+		$description = gettext('Set to "off", disables write caching for the LUN, if supported by the backend.');
 		$options = [
-			'' => gtext('On'),
-			'off' => gtext('Off')
+			'' => gettext('On'),
+			'off' => gettext('Off')
 		];
 		$property->
 			set_id('opt_writecache')->
@@ -1307,12 +1307,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_file() {
 		$property = parent::init_opt_file();
-		$description = gtext('Specifies file or device name to use for backing store.');
+		$description = gettext('Specifies file or device name to use for backing store.');
 		$regexp = '/^\S{0,223}$/';
 		$property->
 			set_id('opt_file')->
@@ -1323,12 +1323,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_num_threads() {
 		$property = parent::init_opt_num_threads();
-		$description = gtext('Specifies number of backend threads to use for this LUN.');
+		$description = gettext('Specifies number of backend threads to use for this LUN.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,8})$/';
 		$property->
 			set_id('opt_num_threads')->
@@ -1341,12 +1341,12 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_opt_capacity() {
 		$property = parent::init_opt_capacity();
-		$description = gtext('Specifies capacity of backing store (maximum RAM for data). The default value is zero, that disables backing store completely, making all writes go to nowhere, while all reads return zeroes.');
+		$description = gettext('Specifies capacity of backing store (maximum RAM for data). The default value is zero, that disables backing store completely, making all writes go to nowhere, while all reads return zeroes.');
 		$regexp = '/^(?:|0|[1-9][0-9]{0,8}[kmgtpezy]b?)$/i';
 		$property->
 			set_id('opt_capacity')->
@@ -1359,13 +1359,13 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auxparam() {
 		$property = parent::init_auxparam();
-		$description = gtext('These parameter will be added to this lun.');
-		$placeholder = gtext('Enter additional parameter');
+		$description = gettext('These parameter will be added to this lun.');
+		$placeholder = gettext('Enter additional parameter');
 		$property->
 			set_id('auxparam')->
 			set_description($description)->
@@ -1374,7 +1374,7 @@ class ctl_lun_edit_properties extends ctl_lun_properties {
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

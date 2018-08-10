@@ -42,7 +42,7 @@ class ctl_auth_group_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Auth Group Name'));
+			set_title(gettext('Auth Group Name'));
 		return $property;
 	}
 	protected $x_auth_type;
@@ -53,7 +53,7 @@ class ctl_auth_group_properties extends co_property_container_param {
 		$property = $this->x_auth_type = new property_list($this);
 		$property->
 			set_name('auth_type')->
-			set_title(gtext('Auth Type'));
+			set_title(gettext('Auth Type'));
 		return $property;
 	}
 	protected $x_auxparam;
@@ -64,15 +64,15 @@ class ctl_auth_group_properties extends co_property_container_param {
 		$property = $this->x_auxparam = new property_textarea($this);
 		$property->
 			set_name('auxparam')->
-			set_title(gtext('Additional Parameter'));
+			set_title(gettext('Additional Parameter'));
 		return $property;
 	}
 }
 class ctl_auth_group_edit_properties extends ctl_auth_group_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the Auth Group.');
-		$placeholder = gtext('Auth Group Name');
+		$description = gettext('Name of the Auth Group.');
+		$placeholder = gettext('Auth Group Name');
 		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('name')->
@@ -86,18 +86,18 @@ class ctl_auth_group_edit_properties extends ctl_auth_group_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auth_type() {
 		$property = parent::init_auth_type();
-		$description = gtext('Sets the authentication type.');
+		$description = gettext('Sets the authentication type.');
 		$options = [
-			'' => gtext('Undefined'),
-			'none' => gtext('None'),
-			'deny' => gtext('Deny'),
-			'chap' => gtext('CHAP'),
-			'chap-mutual' => gtext('CHAP-Mutual')
+			'' => gettext('Undefined'),
+			'none' => gettext('None'),
+			'deny' => gettext('Deny'),
+			'chap' => gettext('CHAP'),
+			'chap-mutual' => gettext('CHAP-Mutual')
 		];
 		$property->
 			set_id('auth_type')->
@@ -107,13 +107,13 @@ class ctl_auth_group_edit_properties extends ctl_auth_group_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auxparam() {
 		$property = parent::init_auxparam();
-		$description = gtext('These parameter will be added to this auth-group.');
-		$placeholder = gtext('Enter additional parameter');
+		$description = gettext('These parameter will be added to this auth-group.');
+		$placeholder = gettext('Enter additional parameter');
 		$property->
 			set_id('auxparam')->
 			set_description($description)->
@@ -122,7 +122,7 @@ class ctl_auth_group_edit_properties extends ctl_auth_group_properties {
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

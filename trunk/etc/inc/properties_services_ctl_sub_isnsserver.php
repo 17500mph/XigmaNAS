@@ -42,7 +42,7 @@ class ctl_sub_isnsserver_properties extends co_property_container_param {
 		$property = $this->x_ipaddress = new property_ipaddress($this);
 		$property->
 			set_name('ipaddress')->
-			set_title(gtext('IP Address'));
+			set_title(gettext('IP Address'));
 		return $property;
 	}
 	protected $x_port;
@@ -53,15 +53,15 @@ class ctl_sub_isnsserver_properties extends co_property_container_param {
 		$property = $this->x_port = new property_int($this);
 		$property->
 			set_name('port')->
-			set_title(gtext('Port'));
+			set_title(gettext('Port'));
 		return $property;
 	}
 }
 class ctl_sub_isnsserver_edit_properties extends ctl_sub_isnsserver_properties {
 	public function init_ipaddress() {
 		$property = parent::init_ipaddress();
-		$description = gtext('IPv4 or IPv6 address of an iSNS server to register on.');
-		$placeholder = gtext('IP Address');
+		$description = gettext('IPv4 or IPv6 address of an iSNS server to register on.');
+		$placeholder = gettext('IP Address');
 		$property->
 			set_id('ipaddress')->
 			set_description($description)->
@@ -70,12 +70,12 @@ class ctl_sub_isnsserver_edit_properties extends ctl_sub_isnsserver_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_port() {
 		$property = parent::init_port();
-		$description = gtext('Port number of the iSNS server.');
+		$description = gettext('Port number of the iSNS server.');
 		$placeholder = '';
 		$property->
 			set_id('port')->
@@ -89,7 +89,7 @@ class ctl_sub_isnsserver_edit_properties extends ctl_sub_isnsserver_properties {
 			set_min(1024)->
 			set_max(65464)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }
