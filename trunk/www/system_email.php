@@ -219,17 +219,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -251,15 +251,15 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('System Email Settings'));
+			html_titleline2(gettext('System Email Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('from',gtext('From Email Address'),$pconfig['from'],gtext('From email address for sending system messages.'),true,62);
-			html_inputbox2('sendto',gtext('To Email Address'),$pconfig['sendto'],gtext('Destination email address. Separate email addresses by semi-colon.'),true,62);
-			html_inputbox2('server',gtext('SMTP Server'),$pconfig['server'],gtext('Outgoing SMTP mail server address.'),true,62);
-			html_inputbox2('port',gtext('Port'),$pconfig['port'],gtext('The default SMTP mail server port, usually port 25 or port 587.'),true,5);
+			html_inputbox2('from',gettext('From Email Address'),$pconfig['from'],gettext('From email address for sending system messages.'),true,62);
+			html_inputbox2('sendto',gettext('To Email Address'),$pconfig['sendto'],gettext('Destination email address. Separate email addresses by semi-colon.'),true,62);
+			html_inputbox2('server',gettext('SMTP Server'),$pconfig['server'],gettext('Outgoing SMTP mail server address.'),true,62);
+			html_inputbox2('port',gettext('Port'),$pconfig['port'],gettext('The default SMTP mail server port, usually port 25 or port 587.'),true,5);
 ?>
 		</tbody>
 	</table>
@@ -271,15 +271,15 @@ $document->render();
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('SMTP Authentication'));
+			html_titleline2(gettext('SMTP Authentication'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('auth',gtext('Authentication'),!empty($pconfig['auth']) ? true : false,gtext('Enable SMTP authentication.'));
-			html_inputbox2('username',gtext('Username'),$pconfig['username'],'',true,40);
-			html_passwordconfbox2('password','passwordconf',gtext('Password'),$pconfig['password'],$pconfig['passwordconf'],'',true);
-			html_combobox2('authmethod',gtext('Authentication Method'),$pconfig['authmethod'],$l_authmethod,'',true);
+			html_checkbox2('auth',gettext('Authentication'),!empty($pconfig['auth']) ? true : false,gettext('Enable SMTP authentication.'));
+			html_inputbox2('username',gettext('Username'),$pconfig['username'],'',true,40);
+			html_passwordconfbox2('password','passwordconf',gettext('Password'),$pconfig['password'],$pconfig['passwordconf'],'',true);
+			html_combobox2('authmethod',gettext('Authentication Method'),$pconfig['authmethod'],$l_authmethod,'',true);
 ?>
 		</tbody>
 	</table>
@@ -291,27 +291,27 @@ $document->render();
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Transport Layer Security (TLS)'));
+			html_titleline2(gettext('Transport Layer Security (TLS)'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('security',gtext('Use TLS'),!empty($pconfig['security']),gtext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),'',false);
-			html_checkbox2('starttls',gtext('Enable STARTTLS'),!empty($pconfig['starttls']),gtext('Start TLS from within the session.'),'',false);
-			html_checkbox2('tls_certcheck',gtext('TLS Server Certificate Check'),!empty($pconfig['tls_certcheck']),gtext('Enable checks of the server certificate.'),'',false);
-			html_checkbox2('tls_use_default_trust_file',gtext('Use Default TLS Trust File'),!empty($pconfig['tls_use_default_trust_file']),gtext('Use default TLS trust file /usr/local/etc/ssl/cert.pem.'),'',false);
-			html_filechooser2('tls_trust_file',gtext('TLS Trust File'),$pconfig['tls_trust_file'],gtext('The name of the TLS trust file. The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
-			html_inputbox2('tls_fingerprint',gtext('TLS Fingerprint'),$pconfig['tls_fingerprint'],gtext('Set the fingerprint of a single certificate to accept for TLS.'),false,60);
-			html_filechooser2('tls_crl_file',gtext('TLS CRL File'),$pconfig['tls_crl_file'],gtext('Certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),$g['media_path'],false,60);
-			html_filechooser2('tls_cert_file',gtext('TLS Cert File'),$pconfig['tls_cert_file'],gtext('Send a client certificate to the server (use this together with option TLS Key File). The file must contain a certificate in PEM format.'),$g['media_path'],false,60);
-			html_filechooser2('tls_key_file',gtext('TLS Key File'),$pconfig['tls_key_file'],gtext('Send a client certificate to the server (use this together with option TLS Cert File). The file must contain the private key of a certificate in PEM format.'),$g['media_path'],false,60);
+			html_checkbox2('security',gettext('Use TLS'),!empty($pconfig['security']),gettext('Enable SSL/TLS for secured connections. You also need to configure the TLS trust file. For some servers you may need to disable STARTTLS.'),'',false);
+			html_checkbox2('starttls',gettext('Enable STARTTLS'),!empty($pconfig['starttls']),gettext('Start TLS from within the session.'),'',false);
+			html_checkbox2('tls_certcheck',gettext('TLS Server Certificate Check'),!empty($pconfig['tls_certcheck']),gettext('Enable checks of the server certificate.'),'',false);
+			html_checkbox2('tls_use_default_trust_file',gettext('Use Default TLS Trust File'),!empty($pconfig['tls_use_default_trust_file']),gettext('Use default TLS trust file /usr/local/etc/ssl/cert.pem.'),'',false);
+			html_filechooser2('tls_trust_file',gettext('TLS Trust File'),$pconfig['tls_trust_file'],gettext('The name of the TLS trust file. The file must be in PEM format containing one or more certificates of trusted Certification Authorities (CAs).'),$g['media_path'],false,60);
+			html_inputbox2('tls_fingerprint',gettext('TLS Fingerprint'),$pconfig['tls_fingerprint'],gettext('Set the fingerprint of a single certificate to accept for TLS.'),false,60);
+			html_filechooser2('tls_crl_file',gettext('TLS CRL File'),$pconfig['tls_crl_file'],gettext('Certificate revocation list (CRL) file for TLS, to check for revoked certificates.'),$g['media_path'],false,60);
+			html_filechooser2('tls_cert_file',gettext('TLS Cert File'),$pconfig['tls_cert_file'],gettext('Send a client certificate to the server (use this together with option TLS Key File). The file must contain a certificate in PEM format.'),$g['media_path'],false,60);
+			html_filechooser2('tls_key_file',gettext('TLS Key File'),$pconfig['tls_key_file'],gettext('Send a client certificate to the server (use this together with option TLS Cert File). The file must contain the private key of a certificate in PEM format.'),$g['media_path'],false,60);
 ?>
 		</tbody>
 	</table>
 	<div id="submit">
 <?php
-		echo html_button('save',gtext('Save'));
-		echo html_button('sendtestemail',gtext('Send Test Email'));
+		echo html_button('save',gettext('Save'));
+		echo html_button('sendtestemail',gettext('Send Test Email'));
 ?>
 	</div>
 <?php
@@ -320,4 +320,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
