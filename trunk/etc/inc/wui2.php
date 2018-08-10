@@ -1510,7 +1510,7 @@ trait co_DOMTools {
 		$subnode->addAttributes($attributes);
 		return $subnode;
 	}
-	protected function import_soup(string $value = '') {
+	public function import_soup(string $value = '') {
 		$backup_use_internal_errors = libxml_use_internal_errors(true);
 		$backup_disable_entity_loader = libxml_disable_entity_loader(true);
 		$document = $this->ownerDocument ?? $this;
