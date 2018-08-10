@@ -221,7 +221,7 @@ endswitch;
 list($page_mode,$is_readonly) = calc_skipviewmode($page_mode);
 $is_enabled = $sphere->row[$cop->get_enable()->get_name()];
 //	create document
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Settings')];
+$pgtitle = [gettext('Services'),gettext('CAM Target Layer'),gettext('Settings')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -231,15 +231,15 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('services_ctl.php',gtext('Global Settings'),gtext('Reload page'),true)->
-			ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
-			ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+			ins_tabnav_record('services_ctl.php',gettext('Global Settings'),gettext('Reload page'),true)->
+			ins_tabnav_record('services_ctl_target.php',gettext('Targets'))->
+			ins_tabnav_record('services_ctl_lun.php',gettext('LUNs'))->
+			ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'))->
+			ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('services_ctl.php',gtext('Settings'),gtext('Reload page'),true)->
-			ins_tabnav_record('services_ctl_sub_isnsserver.php',gtext('iSNS Servers'));
+			ins_tabnav_record('services_ctl.php',gettext('Settings'),gettext('Reload page'),true)->
+			ins_tabnav_record('services_ctl_sub_isnsserver.php',gettext('iSNS Servers'));
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -253,7 +253,7 @@ $content->
 		ins_colgroup_data_settings()->
 		push()->
 		addTHEAD()->
-			c2_titleline_with_checkbox($cop->get_enable(),$is_enabled,false,$is_readonly,gtext('CAM Target Layer'))->
+			c2_titleline_with_checkbox($cop->get_enable(),$is_enabled,false,$is_readonly,gettext('CAM Target Layer'))->
 		pop()->
 		addTBODY()->
 			c2_input_text($cop->get_debug(),htmlspecialchars($sphere->row[$cop->get_debug()->get_name()]),false,$is_readonly)->
