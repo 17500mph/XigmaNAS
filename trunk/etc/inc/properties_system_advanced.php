@@ -42,8 +42,8 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_adddivsubmittodataframe = new property_bool($this);
 		$property->
 			set_name('adddivsubmittodataframe')->
-			set_title(gtext('Button Location'));
-		$caption = gtext('Display action buttons in the scrollable area instead of the footer area.');
+			set_title(gettext('Button Location'));
+		$caption = gettext('Display action buttons in the scrollable area instead of the footer area.');
 		$property->
 			set_id('adddivsubmittodataframe')->
 			set_caption($caption)->
@@ -52,7 +52,7 @@ class properties_system_advanced extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_aesni;
@@ -63,12 +63,12 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_aesni = new property_list($this);
 		$property->
 			set_name('aesni')->
-			set_title(gtext('Hardware AES'));
-		$description = gtext('AES-NI (Advanced Encryption Standard New Instructions) is an extension to the x86 instruction set architecture for microprocessors.');
+			set_title(gettext('Hardware AES'));
+		$description = gettext('AES-NI (Advanced Encryption Standard New Instructions) is an extension to the x86 instruction set architecture for microprocessors.');
 		$options = [
-			'auto' => gtext('Load driver automatically when GELI devices have been defined in the configuration file and the instruction set is supported.'),
-			'yes' => gtext('Load driver during boot when the instruction set is supported.'),
-			'no' => gtext('Do not load driver.')
+			'auto' => gettext('Load driver automatically when GELI devices have been defined in the configuration file and the instruction set is supported.'),
+			'yes' => gettext('Load driver during boot when the instruction set is supported.'),
+			'no' => gettext('Do not load driver.')
 		];
 		$property->
 			set_id('aesni')->
@@ -78,7 +78,7 @@ class properties_system_advanced extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_disableconsolemenu;
@@ -89,9 +89,9 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disableconsolemenu = new property_bool($this);
 		$property->
 			set_name('disableconsolemenu')->
-			set_title(gtext('Console Menu'));
-		$caption = gtext('Disable console menu.');
-		$description = gtext('Changes to this option will take effect after a reboot.');
+			set_title(gettext('Console Menu'));
+		$caption = gettext('Disable console menu.');
+		$description = gettext('Changes to this option will take effect after a reboot.');
 		$property->
 			set_id('disableconsolemenu')->
 			set_caption($caption)->
@@ -100,7 +100,7 @@ class properties_system_advanced extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_disablefm;
@@ -111,16 +111,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disablefm = new property_bool($this);
 		$property->
 			set_name('disablefm')->
-			set_title(gtext('File Manager'));
+			set_title(gettext('File Manager'));
 		$property->
 			set_id('disablefm')->
-			set_caption(gtext('Disable file manager.'))->
+			set_caption(gettext('Disable file manager.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_disablefirmwarecheck;
@@ -131,18 +131,18 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disablefirmwarecheck = new property_bool($this);
 		$property->
 			set_name('disablefirmwarecheck')->
-			set_title(gtext('Firmware Check'));
-		$link = '<a href="system_firmware.php">' . gtext('System') . ': ' . gtext('Firmware Update') . '</a>';
-		$description = sprintf(gtext('Do not let the server check for newer firmware versions when the %s page gets loaded.'),$link);		
+			set_title(gettext('Firmware Check'));
+		$link = '<a href="system_firmware.php">' . gettext('System') . ': ' . gettext('Firmware Update') . '</a>';
+		$description = sprintf(gettext('Do not let the server check for newer firmware versions when the %s page gets loaded.'),$link);		
 		$property->
 			set_id('disablefirmwarecheck')->
-			set_caption(gtext('Disable firmware version check.'))->
+			set_caption(gettext('Disable firmware version check.'))->
 			set_description($description)->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_disablebeep;
@@ -153,16 +153,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disablebeep = new property_bool($this);
 		$property->
 			set_name('disablebeep')->
-			set_title(gtext('Internal Speaker'));
+			set_title(gettext('Internal Speaker'));
 		$property->
 			set_id('disablebeep')->
-			set_caption(gtext('Disable speaker beep on startup and shutdown.'))->
+			set_caption(gettext('Disable speaker beep on startup and shutdown.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_microcode_update;
@@ -173,16 +173,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_microcode_update = new property_bool($this);
 		$property->
 			set_name('microcode_update')->
-			set_title(gtext('CPU Microcode Update'));
+			set_title(gettext('CPU Microcode Update'));
 		$property->
 			set_id('microcode_update')->
-			set_caption(gtext('Enable this option to update the CPU microcode on startup.'))->
+			set_caption(gettext('Enable this option to update the CPU microcode on startup.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_enabletogglemode;
@@ -193,16 +193,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_enabletogglemode = new property_bool($this);
 		$property->
 			set_name('enabletogglemode')->
-			set_title(gtext('Toggle Mode'));
+			set_title(gettext('Toggle Mode'));
 		$property->
 			set_id('enabletogglemode')->
-			set_caption(gtext('Use toggle button instead of enable/disable buttons.'))->
+			set_caption(gettext('Use toggle button instead of enable/disable buttons.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_nonsidisksizevalues;
@@ -213,16 +213,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_nonsidisksizevalues = new property_bool($this);
 		$property->
 			set_name('nonsidisksizevalues')->
-			set_title(gtext('Binary Prefix'));
+			set_title(gettext('Binary Prefix'));
 		$property->
 			set_id('nonsidisksizevalues')->
-			set_caption(gtext('Display disk size values using binary prefixes instead of decimal prefixes.'))->
+			set_caption(gettext('Display disk size values using binary prefixes instead of decimal prefixes.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_skipviewmode;
@@ -233,16 +233,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_skipviewmode = new property_bool($this);
 		$property->
 			set_name('skipviewmode')->
-			set_title(gtext('Skip View Mode'));
+			set_title(gettext('Skip View Mode'));
 		$property->
 			set_id('skipviewmode')->
-			set_caption(gtext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'))->
+			set_caption(gettext('Enable this option if you want to edit configuration pages directly without the need to switch to edit mode.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_disableextensionmenu;
@@ -253,16 +253,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_disableextensionmenu = new property_bool($this);
 		$property->
 			set_name('disableextensionmenu')->
-			set_title(gtext('Disable Extension Menu'));
+			set_title(gettext('Disable Extension Menu'));
 		$property->
 			set_id('disableextensionmenu')->
-			set_caption(gtext('Disable scanning of folders for existing extension menus.'))->
+			set_caption(gettext('Disable scanning of folders for existing extension menus.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_tune_enable;
@@ -273,16 +273,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_tune_enable = new property_bool($this);
 		$property->
 			set_name('tune_enable')->
-			set_title(gtext('Tuning'));
+			set_title(gettext('Tuning'));
 		$property->
 			set_id('tune_enable')->
-			set_caption(gtext('Enable tuning of some kernel variables.'))->
+			set_caption(gettext('Enable tuning of some kernel variables.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_zeroconf;
@@ -293,16 +293,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_zeroconf = new property_bool($this);
 		$property->
 			set_name('zeroconf')->
-			set_title(gtext('Zeroconf/Bonjour'));
+			set_title(gettext('Zeroconf/Bonjour'));
 		$property->
 			set_id('zeroconf')->
-			set_caption(gtext('Enable Zeroconf/Bonjour to advertise services of this device.'))->
+			set_caption(gettext('Enable Zeroconf/Bonjour to advertise services of this device.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_powerd;
@@ -313,16 +313,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_powerd = new property_bool($this);
 		$property->
 			set_name('powerd')->
-			set_title(gtext('Power Daemon'));
+			set_title(gettext('Power Daemon'));
 		$property->
 			set_id('powerd')->
-			set_caption(gtext('Enable the server power control utility.'))->
-			set_description(gtext('The powerd utility monitors the server state and sets various power control options accordingly.'))->
+			set_caption(gettext('Enable the server power control utility.'))->
+			set_description(gettext('The powerd utility monitors the server state and sets various power control options accordingly.'))->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_pwmode;
@@ -333,22 +333,22 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_pwmode = new property_list($this);
 		$property->
 			set_name('pwmode')->
-			set_title(gtext('Power Mode'));
+			set_title(gettext('Power Mode'));
 		$options = [
-			'maximum' => gtext('Maximum (Highest Performance)'),
-			'hiadaptive' => gtext('Hiadaptive (High Performance)'),
-			'adaptive' => gtext('Adaptive (Low Power Consumption)'),
-			'minimum' => gtext('Minimum (Lowest Performance)')
+			'maximum' => gettext('Maximum (Highest Performance)'),
+			'hiadaptive' => gettext('Hiadaptive (High Performance)'),
+			'adaptive' => gettext('Adaptive (Low Power Consumption)'),
+			'minimum' => gettext('Minimum (Lowest Performance)')
 		];
 		$property->
 			set_id('pwmode')->
-			set_description(gtext('Controls the power consumption mode.'))->
+			set_description(gettext('Controls the power consumption mode.'))->
 			set_defaultvalue('hiadaptive')->
 			set_options($options)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_pwmax;
@@ -370,7 +370,7 @@ class properties_system_advanced extends co_property_container {
 				endif;
 			endforeach;
 		endif;
-		html_inputbox2('pwmax',gtext('CPU Maximum Frequency'),$pconfig['pwmax'],sprintf('%s %s',gtext('CPU frequencies:'),join(', ',$a_freq)) . '.<br />' . gtext('An empty field is default.'),false,5);
+		html_inputbox2('pwmax',gettext('CPU Maximum Frequency'),$pconfig['pwmax'],sprintf('%s %s',gettext('CPU frequencies:'),join(', ',$a_freq)) . '.<br />' . gettext('An empty field is default.'),false,5);
 */
 	}
 	protected $x_pwmin;
@@ -380,7 +380,7 @@ class properties_system_advanced extends co_property_container {
 	public function init_pwmin() {
 		$property = $this->x_pwmin = new property_text($this);
 		return $property;
-//		html_inputbox2('pwmin',gtext('CPU Minimum Frequency'),$pconfig['pwmin'],gtext('An empty field is default.'),false,5);
+//		html_inputbox2('pwmin',gettext('CPU Minimum Frequency'),$pconfig['pwmin'],gettext('An empty field is default.'),false,5);
 	}
 	protected $x_motd;
 	public function get_motd() {
@@ -389,7 +389,7 @@ class properties_system_advanced extends co_property_container {
 	public function init_motd() {
 		$property = $this->x_motd = new property_text($this);
 		return $property;
-//		html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,7,false,false);
+//		html_textarea2('motd',gettext('MOTD'),$pconfig['motd'],gettext('Message of the day.'),false,65,7,false,false);
 	}
 	protected $x_shrinkpageheader;
 	public function get_shrinkpageheader() {
@@ -399,16 +399,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_shrinkpageheader = new property_bool($this);
 		$property->
 			set_name('shrinkpageheader')->
-			set_title(gtext('Shrink Page Header'));
+			set_title(gettext('Shrink Page Header'));
 		$property->
 			set_id('shrinkpageheader')->
-			set_caption(gtext('Enable this option to reduce the height of the page header to a minimum.'))->
+			set_caption(gettext('Enable this option to reduce the height of the page header to a minimum.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_sysconsaver;
@@ -419,16 +419,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_sysconsaver = new property_bool($this);
 		$property->
 			set_name('sysconsaver')->
-			set_title(gtext('Console Screensaver'));
+			set_title(gettext('Console Screensaver'));
 		$property->
 			set_id('sysconsaver')->
-			set_caption(gtext('Enable console screensaver.'))->
+			set_caption(gettext('Enable console screensaver.'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_sysconsaverblanktime;
@@ -438,7 +438,7 @@ class properties_system_advanced extends co_property_container {
 	public function init_sysconsaverblanktime() {
 		$property = $this->x_sysconsaverblanktime = new property_text($this);
 		return $property;
-//		html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
+//		html_inputbox2('sysconsaverblanktime',gettext('Blank Time'),$pconfig['sysconsaverblanktime'],gettext('Turn the monitor to standby after N seconds.'),true,5);
 	}
 	protected $x_enableserialconsole;
 	public function get_enableserialconsole() {
@@ -448,16 +448,16 @@ class properties_system_advanced extends co_property_container {
 		$property = $this->x_enableserialconsole = new property_bool($this);
 		$property->
 			set_name('enableserialconsole')->
-			set_title(gtext('Serial Console'));
+			set_title(gettext('Serial Console'));
 		$property->
 			set_id('enableserialconsole')->
-			set_caption(gtext('Enable serial console.'))->
-			set_description(sprintf('<span class="red"><strong>%s</strong></span><br />%s',gtext('The COM port in BIOS has to be enabled before enabling this option.'), gtext('Changes to this option will take effect after a reboot.')))->
+			set_caption(gettext('Enable serial console.'))->
+			set_description(sprintf('<span class="red"><strong>%s</strong></span><br />%s',gettext('The COM port in BIOS has to be enabled before enabling this option.'), gettext('Changes to this option will take effect after a reboot.')))->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

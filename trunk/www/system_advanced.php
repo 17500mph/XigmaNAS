@@ -370,17 +370,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <form action="system_advanced.php" method="post" id="iform" name="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -399,7 +399,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('System Settings'));
+			html_titleline2(gettext('System Settings'));
 ?>
 		</thead>
 		<tbody>
@@ -428,7 +428,7 @@ $document->render();
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Platform and Performance Settings'));
+			html_titleline2(gettext('Platform and Performance Settings'));
 ?>
 		</thead>
 		<tbody>
@@ -451,8 +451,8 @@ $document->render();
 					endif;
 				endforeach;
 			endif;
-			html_inputbox2('pwmax',gtext('CPU Maximum Frequency'),$pconfig['pwmax'],sprintf('%s %s',gtext('CPU frequencies:'),join(', ',$a_freq)) . '.<br />' . gtext('An empty field is default.'),false,5);
-			html_inputbox2('pwmin',gtext('CPU Minimum Frequency'),$pconfig['pwmin'],gtext('An empty field is default.'),false,5);
+			html_inputbox2('pwmax',gettext('CPU Maximum Frequency'),$pconfig['pwmax'],sprintf('%s %s',gettext('CPU frequencies:'),join(', ',$a_freq)) . '.<br />' . gettext('An empty field is default.'),false,5);
+			html_inputbox2('pwmin',gettext('CPU Minimum Frequency'),$pconfig['pwmin'],gettext('An empty field is default.'),false,5);
 ?>
 		</tbody>
 	</table>
@@ -464,7 +464,7 @@ $document->render();
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Console Settings'));
+			html_titleline2(gettext('Console Settings'));
 ?>
 		</thead>
 		<tbody>
@@ -477,10 +477,10 @@ $document->render();
 			endif;
 			$node->render();
 			if($is_sc):
-				html_inputbox2('sysconsaverblanktime',gtext('Blank Time'),$pconfig['sysconsaverblanktime'],gtext('Turn the monitor to standby after N seconds.'),true,5);
+				html_inputbox2('sysconsaverblanktime',gettext('Blank Time'),$pconfig['sysconsaverblanktime'],gettext('Turn the monitor to standby after N seconds.'),true,5);
 			endif;
 			$n_rows = min(64,max(8,1 + substr_count($pconfig['motd'],PHP_EOL)));
-			html_textarea2('motd',gtext('MOTD'),$pconfig['motd'],gtext('Message of the day.'),false,65,$n_rows,false,false);
+			html_textarea2('motd',gettext('MOTD'),$pconfig['motd'],gettext('Message of the day.'),false,65,$n_rows,false,false);
 ?>
 		</tbody>
 	</table>
@@ -505,4 +505,3 @@ powerd_change();
 </script>
 <?php
 include 'fend.inc';
-?>
