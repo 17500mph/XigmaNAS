@@ -50,11 +50,11 @@ class ctl_properties extends co_property_container {
 	}
 	public function init_debug() {
 		$property = $this->x_debug = new property_int($this);
-		$description = gtext('The debug verbosity level. The default is 0.');
+		$description = gettext('The debug verbosity level. The default is 0.');
 		$placeholder = '0';
 		$property->
 			set_name('debug')->
-			set_title(gtext('Debug Level'));
+			set_title(gettext('Debug Level'));
 		$property->
 			set_id('debug')->
 			set_description($description)->
@@ -67,7 +67,7 @@ class ctl_properties extends co_property_container {
 			set_min(0)->
 			set_max(99)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_maxproc;
@@ -76,11 +76,11 @@ class ctl_properties extends co_property_container {
 	}
 	public function init_maxproc() {
 		$property = $this->x_maxproc = new property_int($this);
-		$description = gtext('The limit for concurrently running child processes handling incoming connections. The default is 30. A setting of 0 disables the limit.');
+		$description = gettext('The limit for concurrently running child processes handling incoming connections. The default is 30. A setting of 0 disables the limit.');
 		$placeholder = '30';
 		$property->
 			set_name('maxproc')->
-			set_title(gtext('Max Processes'));
+			set_title(gettext('Max Processes'));
 		$property->
 			set_id('maxproc')->
 			set_description($description)->
@@ -93,7 +93,7 @@ class ctl_properties extends co_property_container {
 			set_min(0)->
 			set_max(65535)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_timeout;
@@ -102,11 +102,11 @@ class ctl_properties extends co_property_container {
 	}
 	public function init_timeout() {
 		$property = $this->x_timeout = new property_int($this);
-		$description = gtext('The timeout for login sessions, after which the connection will be forcibly terminated. The default is 60. A setting of 0 disables the timeout.');
+		$description = gettext('The timeout for login sessions, after which the connection will be forcibly terminated. The default is 60. A setting of 0 disables the timeout.');
 		$placeholder = '60';
 		$property->
 			set_name('timeout')->
-			set_title(gtext('Timeout'));
+			set_title(gettext('Timeout'));
 		$property->
 			set_id('timeout')->
 			set_description($description)->
@@ -119,7 +119,7 @@ class ctl_properties extends co_property_container {
 			set_min(0)->
 			set_max(65535)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_isns_period;
@@ -128,11 +128,11 @@ class ctl_properties extends co_property_container {
 	}
 	public function init_isns_period() {
 		$property = $this->x_isns_period = new property_int($this);
-		$description = gtext('iSNS registration period. Registered Network Entity not updated during this period will be unregistered. The default is 900.');
+		$description = gettext('iSNS registration period. Registered Network Entity not updated during this period will be unregistered. The default is 900.');
 		$placeholder = '900';
 		$property->
 			set_name('isns_period')->
-			set_title(gtext('iSNS Period'));
+			set_title(gettext('iSNS Period'));
 		$property->
 			set_id('isns_period')->
 			set_description($description)->
@@ -145,7 +145,7 @@ class ctl_properties extends co_property_container {
 			set_min(0)->
 			set_max(65535)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_isns_timeout;
@@ -154,11 +154,11 @@ class ctl_properties extends co_property_container {
 	}
 	public function init_isns_timeout() {
 		$property = $this->x_isns_timeout = new property_int($this);
-		$description = gtext('Timeout for iSNS requests. The default is 5.');
+		$description = gettext('Timeout for iSNS requests. The default is 5.');
 		$placeholder = '5';
 		$property->
 			set_name('isns_timeout')->
-			set_title(gtext('iSNS Timeout'));
+			set_title(gettext('iSNS Timeout'));
 		$property->
 			set_id('isns_timeout')->
 			set_description($description)->
@@ -171,7 +171,7 @@ class ctl_properties extends co_property_container {
 			set_min(0)->
 			set_max(65535)->
 			filter_use_default_or_empty()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	protected $x_auxparam;
@@ -180,11 +180,11 @@ class ctl_properties extends co_property_container {
 	}
 	public function init_auxparam() {
 		$property = $this->x_auxparam = new property_textarea($this);
-		$description = gtext('These parameter will be added to the global section of ctl.conf');
-		$placeholder = gtext('Enter additional parameter');
+		$description = gettext('These parameter will be added to the global section of ctl.conf');
+		$placeholder = gettext('Enter additional parameter');
 		$property->
 			set_name('auxparam')->
-			set_title(gtext('Additional Parameter'));
+			set_title(gettext('Additional Parameter'));
 		$property->
 			set_id('auxparam')->
 			set_description($description)->
@@ -193,7 +193,7 @@ class ctl_properties extends co_property_container {
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

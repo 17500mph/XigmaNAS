@@ -42,7 +42,7 @@ class ctl_sub_lun_properties extends co_property_container_param {
 		$property = $this->x_number = new property_int($this);
 		$property->
 			set_name('number')->
-			set_title(gtext('LUN Number'));
+			set_title(gettext('LUN Number'));
 		return $property;
 	}
 	protected $x_name;
@@ -53,7 +53,7 @@ class ctl_sub_lun_properties extends co_property_container_param {
 		$property = $this->x_name = new property_list($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('LUN Name'));
+			set_title(gettext('LUN Name'));
 		return $property;
 	}
 	protected $x_group;
@@ -64,14 +64,14 @@ class ctl_sub_lun_properties extends co_property_container_param {
 		$property = $this->x_group = new property_list_multi($this);
 		$property->
 			set_name('group')->
-			set_title(gtext('Target Group'));
+			set_title(gettext('Target Group'));
 		return $property;
 	}
 }
 class ctl_sub_lun_edit_properties extends ctl_sub_lun_properties {
 	public function init_number() {
 		$property = parent::init_number();
-		$description = gtext('LUN number');
+		$description = gettext('LUN number');
 		$property->
 			set_id('number')->
 			set_description($description)->
@@ -83,12 +83,12 @@ class ctl_sub_lun_edit_properties extends ctl_sub_lun_properties {
 			set_min(0)->
 			set_max(1023)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the LUN.');
+		$description = gettext('Name of the LUN.');
 		$options = [];
 		$property->
 			set_id('name')->
@@ -97,12 +97,12 @@ class ctl_sub_lun_edit_properties extends ctl_sub_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_group() {
 		$property = parent::init_group();
-		$description = gtext('Select target groups.');
+		$description = gettext('Select target groups.');
 		$options = [];
 		$property->
 			set_id('group')->
@@ -112,7 +112,7 @@ class ctl_sub_lun_edit_properties extends ctl_sub_lun_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

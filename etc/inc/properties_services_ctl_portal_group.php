@@ -42,7 +42,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Portal Group Name'));
+			set_title(gettext('Portal Group Name'));
 		return $property;
 	}
 	protected $x_discovery_auth_group;
@@ -53,7 +53,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_discovery_auth_group = new property_list($this);
 		$property->
 			set_name('discovery_auth_group')->
-			set_title(gtext('Discovery Auth Group'));
+			set_title(gettext('Discovery Auth Group'));
 		return $property;
 	}
 	protected $x_discovery_filter;
@@ -64,7 +64,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_discovery_filter = new property_list($this);
 		$property->
 			set_name('discovery_filter')->
-			set_title(gtext('Discovery Filter'));
+			set_title(gettext('Discovery Filter'));
 		return $property;
 	}
 	protected $x_offload;
@@ -75,7 +75,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_offload = new property_text($this);
 		$property->
 			set_name('offload')->
-			set_title(gtext('Offload'));
+			set_title(gettext('Offload'));
 		return $property;
 	}
 	protected $x_redirect;
@@ -86,7 +86,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_redirect = new property_ipaddress($this);
 		$property->
 			set_name('redirect')->
-			set_title(gtext('Redirect'));
+			set_title(gettext('Redirect'));
 		return $property;
 	}
 	protected $x_tag;
@@ -97,7 +97,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_tag = new property_int($this);
 		$property->
 			set_name('tag')->
-			set_title(gtext('Tag'));
+			set_title(gettext('Tag'));
 		return $property;
 	}
 	protected $x_foreign;
@@ -108,7 +108,7 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_foreign = new property_bool($this);
 		$property->
 			set_name('foreign')->
-			set_title(gtext('Foreign'));
+			set_title(gettext('Foreign'));
 		return $property;
 	}
 	protected $x_auxparam;
@@ -119,15 +119,15 @@ class ctl_portal_group_properties extends co_property_container_param {
 		$property = $this->x_auxparam = new property_textarea($this);
 		$property->
 			set_name('auxparam')->
-			set_title(gtext('Additional Parameter'));
+			set_title(gettext('Additional Parameter'));
 		return $property;
 	}
 }
 class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the Portal Group.');
-		$placeholder = gtext('Portal Group Name');
+		$description = gettext('Name of the Portal Group.');
+		$placeholder = gettext('Portal Group Name');
 		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('name')->
@@ -141,13 +141,13 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auxparam() {
 		$property = parent::init_auxparam();
-		$description = gtext('These parameter will be added to this portal-group.');
-		$placeholder = gtext('Enter additional parameter');
+		$description = gettext('These parameter will be added to this portal-group.');
+		$placeholder = gettext('Enter additional parameter');
 		$property->
 			set_id('auxparam')->
 			set_description($description)->
@@ -156,15 +156,15 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_discovery_auth_group() {
 		$property = parent::init_discovery_auth_group();
-		$description = gtext('Assign a previously defined authentication group to the portal group, to be used for target discovery.');
+		$description = gettext('Assign a previously defined authentication group to the portal group, to be used for target discovery.');
 		$options = [
-			'' => gtext('Deny discovery'),
-			'no-authentication' => gtext('Permit discovery without authentication')
+			'' => gettext('Deny discovery'),
+			'no-authentication' => gettext('Permit discovery without authentication')
 		];
 		$property->
 			set_id('discovery_auth_group')->
@@ -174,17 +174,17 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_discovery_filter() {
 		$property = parent::init_discovery_filter();
-		$description = gtext('Determines which targets are returned during discovery.');
+		$description = gettext('Determines which targets are returned during discovery.');
 		$options = [
-			'' => gtext('Discovery will return all targets assigned to this portal group.'),
-			'portal' => gtext('Discovery will not return targets that cannot be accessed by the initiator because of their initiator-portal.'),
-			'portal-name' => gtext('The check will include both initiator-portal and initiator-name.'),
-			'portal-name-auth' => gtext('The check will include initiator-portal, initiator-name, and authentication credentials. The target is returned if it does not require CHAP authentication, or if the CHAP user and secret used during discovery match those used by the target.')
+			'' => gettext('Discovery will return all targets assigned to this portal group.'),
+			'portal' => gettext('Discovery will not return targets that cannot be accessed by the initiator because of their initiator-portal.'),
+			'portal-name' => gettext('The check will include both initiator-portal and initiator-name.'),
+			'portal-name-auth' => gettext('The check will include initiator-portal, initiator-name, and authentication credentials. The target is returned if it does not require CHAP authentication, or if the CHAP user and secret used during discovery match those used by the target.')
 		];
 		$property->
 			set_id('discovery_filter')->
@@ -194,12 +194,12 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_foreign() {
 		$property = parent::init_foreign();
-		$caption = gtext('Specifies that this portal-group is listened by some other host. This host will announce it on discovery stage, but won\'t listen.');
+		$caption = gettext('Specifies that this portal-group is listened by some other host. This host will announce it on discovery stage, but won\'t listen.');
 		$property->
 			set_id('foreign')->
 			set_caption($caption)->
@@ -207,13 +207,13 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_offload() {
 		$property = parent::init_offload();
-		$description = gtext('Define iSCSI hardware offload driver to use for this portal-group. The default is "none".');
-		$placeholder = gtext('Driver');
+		$description = gettext('Define iSCSI hardware offload driver to use for this portal-group. The default is "none".');
+		$placeholder = gettext('Driver');
 		$regexp = '/^\S{0,60}$/';
 		$property->
 			set_id('offload')->
@@ -227,12 +227,12 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_redirect() {
 		$property = parent::init_redirect();
-		$description = gtext('IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to portal belonging to this portal-group will get redirected using "Target moved temporarily" login response.');
+		$description = gettext('IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to portal belonging to this portal-group will get redirected using "Target moved temporarily" login response.');
 		$property->
 			set_id('redirect')->
 			set_description($description)->
@@ -242,13 +242,13 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			filter_use_default()->
 			filter_use_empty()->
 			set_filter_group('ui',['empty','ui'])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_tag() {
 		$property = parent::init_tag();
-		$description = gtext('Unique 16-bit tag value of this portal-group. If not specified, the value is generated automatically.');
-		$placeholder = gtext('Tag');
+		$description = gettext('Unique 16-bit tag value of this portal-group. If not specified, the value is generated automatically.');
+		$placeholder = gettext('Tag');
 		$property->
 			set_id('tag')->
 			set_description($description)->
@@ -262,7 +262,7 @@ class ctl_portal_group_edit_properties extends ctl_portal_group_properties {
 			filter_use_default()->
 			filter_use_empty()->
 			set_filter_group('ui',['empty','ui'])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

@@ -42,7 +42,7 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Target Name'));
+			set_title(gettext('Target Name'));
 		return $property;
 	}
 	protected $x_alias;
@@ -53,7 +53,7 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_alias = new property_text($this);
 		$property->
 			set_name('alias')->
-			set_title(gtext('Alias'));
+			set_title(gettext('Alias'));
 		return $property;
 	}
 	protected $x_auth_group;
@@ -64,7 +64,7 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_auth_group = new property_list($this);
 		$property->
 			set_name('auth_group')->
-			set_title(gtext('Auth Group'));
+			set_title(gettext('Auth Group'));
 		return $property;
 	}
 	protected $x_portal_group;
@@ -75,7 +75,7 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_portal_group = new property_list($this);
 		$property->
 			set_name('portal_group')->
-			set_title(gtext('Portal Group'));
+			set_title(gettext('Portal Group'));
 		return $property;
 	}
 	protected $x_redirect;
@@ -86,7 +86,7 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_redirect = new property_ipaddress($this);
 		$property->
 			set_name('redirect')->
-			set_title(gtext('Redirect'));
+			set_title(gettext('Redirect'));
 		return $property;
 	}
 	protected $x_auxparam;
@@ -97,15 +97,15 @@ class ctl_target_properties extends co_property_container_param {
 		$property = $this->x_auxparam = new property_textarea($this);
 		$property->
 			set_name('auxparam')->
-			set_title(gtext('Additional Parameter'));
+			set_title(gettext('Additional Parameter'));
 		return $property;
 	}
 }
 class ctl_target_edit_properties extends ctl_target_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the target.');
-		$placeholder = gtext('Name');
+		$description = gettext('Name of the target.');
+		$placeholder = gettext('Name');
 		$regexp = '/^(?:iqn|eui|naa)\.\S{1,219}$/';
 		$property->
 			set_id('name')->
@@ -119,13 +119,13 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auxparam() {
 		$property = parent::init_auxparam();
-		$description = gtext('These parameter will be added to this target.');
-		$placeholder = gtext('Enter additional parameter');
+		$description = gettext('These parameter will be added to this target.');
+		$placeholder = gettext('Enter additional parameter');
 		$property->
 			set_id('auxparam')->
 			set_description($description)->
@@ -134,13 +134,13 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			set_editableonmodify(true)->
 			set_defaultvalue('')->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_alias() {
 		$property = parent::init_alias();
-		$description = gtext('Assign a human-readable description to the target.');
-		$placeholder = gtext('Alias');
+		$description = gettext('Assign a human-readable description to the target.');
+		$placeholder = gettext('Alias');
 		$regexp = '/^.{0,128}$/';
 		$property->
 			set_id('alias')->
@@ -154,15 +154,15 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auth_group() {
 		$property = parent::init_auth_group();
-		$description = gtext('Assign a previously defined authentication group to the target.');
+		$description = gettext('Assign a previously defined authentication group to the target.');
 		$options = [
-			'' => gtext('Deny discovery'),
-			'no-authentication' => gtext('Permit access without authentication')
+			'' => gettext('Deny discovery'),
+			'no-authentication' => gettext('Permit access without authentication')
 		];
 		$property->
 			set_id('auth_group')->
@@ -172,14 +172,14 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_portal_group() {
 		$property = parent::init_portal_group();
-		$description = gtext('Assign a previously defined portal group to the target.');
+		$description = gettext('Assign a previously defined portal group to the target.');
 		$options = [
-			'' => gtext('Default')
+			'' => gettext('Default')
 		];
 		$property->
 			set_id('portal_group')->
@@ -189,12 +189,12 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_redirect() {
 		$property = parent::init_redirect();
-		$description = gtext('IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to this target will get redirected using "Target moved temporarily" login response.');
+		$description = gettext('IPv4 or IPv6 address to redirect initiators to. When configured, all initiators attempting to connect to this target will get redirected using "Target moved temporarily" login response.');
 		$property->
 			set_id('redirect')->
 			set_description($description)->
@@ -204,7 +204,7 @@ class ctl_target_edit_properties extends ctl_target_properties {
 			filter_use_default()->
 			filter_use_empty()->
 			set_filter_group('ui',['empty','ui'])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

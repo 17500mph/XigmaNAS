@@ -42,7 +42,7 @@ class ctl_sub_initiator_name_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Initiator Name'));
+			set_title(gettext('Initiator Name'));
 		return $property;
 	}
 	protected $x_group;
@@ -53,15 +53,15 @@ class ctl_sub_initiator_name_properties extends co_property_container_param {
 		$property = $this->x_group = new property_list_multi($this);
 		$property->
 			set_name('group')->
-			set_title(gtext('Auth Group'));
+			set_title(gettext('Auth Group'));
 		return $property;
 	}
 }
 class ctl_sub_initiator_name_edit_properties extends ctl_sub_initiator_name_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Enter an iSCSI initiator name.');
-		$placeholder = gtext('Name');
+		$description = gettext('Enter an iSCSI initiator name.');
+		$placeholder = gettext('Name');
 		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('user')->
@@ -75,12 +75,12 @@ class ctl_sub_initiator_name_edit_properties extends ctl_sub_initiator_name_prop
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_group() {
 		$property = parent::init_group();
-		$description = gtext('Select auth groups.');
+		$description = gettext('Select auth groups.');
 		$options = [];
 		$property->
 			set_id('group')->
@@ -90,7 +90,7 @@ class ctl_sub_initiator_name_edit_properties extends ctl_sub_initiator_name_prop
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

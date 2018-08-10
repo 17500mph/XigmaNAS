@@ -42,7 +42,7 @@ class ctl_sub_option_properties extends co_property_container_param {
 		$property = $this->x_name = new property_text($this);
 		$property->
 			set_name('name')->
-			set_title(gtext('Option Name'));
+			set_title(gettext('Option Name'));
 		return $property;
 	}
 	protected $x_value;
@@ -53,7 +53,7 @@ class ctl_sub_option_properties extends co_property_container_param {
 		$property = $this->x_value = new property_text($this);
 		$property->
 			set_name('value')->
-			set_title(gtext('Option Value'));
+			set_title(gettext('Option Value'));
 		return $property;
 	}
 	protected $x_group;
@@ -64,14 +64,14 @@ class ctl_sub_option_properties extends co_property_container_param {
 		$property = $this->x_group = new property_list_multi($this);
 		$property->
 			set_name('group')->
-			set_title(gtext('Portal Group'));
+			set_title(gettext('Portal Group'));
 		return $property;
 	}
 }
 class ctl_sub_option_edit_properties extends ctl_sub_option_properties {
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Name of the option.');
+		$description = gettext('Name of the option.');
 		$regexp = '/^\S{1,223}$/';
 		$property->
 			set_id('name')->
@@ -84,12 +84,12 @@ class ctl_sub_option_edit_properties extends ctl_sub_option_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_value() {
 		$property = parent::init_value();
-		$description = gtext('Value of the option.');
+		$description = gettext('Value of the option.');
 		$regexp = '/^.{1,223}$/';
 		$property->
 			set_id('value')->
@@ -102,12 +102,12 @@ class ctl_sub_option_edit_properties extends ctl_sub_option_properties {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_group() {
 		$property = parent::init_group();
-		$description = gtext('Select portal groups.');
+		$description = gettext('Select portal groups.');
 		$options = [];
 		$property->
 			set_id('group')->
@@ -117,7 +117,7 @@ class ctl_sub_option_edit_properties extends ctl_sub_option_properties {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }
