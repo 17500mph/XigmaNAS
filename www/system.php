@@ -348,25 +348,25 @@ function webguiproto_change() {
 		</colgroup>
 		<thead>
 <?php 
-			html_titleline(gtext('WebGUI'));
+			html_titleline2(gettext('WebGUI'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('username',gtext('Username'),$pconfig['username'],gtext("It's recommended to change the default username and password for accessing the WebGUI, enter the username here."),true,21);
-			html_combobox2('webguiproto',gtext('Protocol'),$pconfig['webguiproto'],['http' => 'HTTP','https' => 'HTTPS'],gtext('Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI.'),true,false,'webguiproto_change()');
-			html_inputbox2('webguiport',gtext('Port'),$pconfig['webguiport'],gtext('Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS).'),true,6);
-			html_inputbox2('webguihostsallow',gtext('Hosts Allow'),$pconfig['webguihostsallow'],gtext('Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)'),false,60);
-			$caption = gtext('Enable this option to allow any IP address to access the WebGUI.');
-			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Enabling this option may expose your system to additional security risk!') . '</strong>';
-			html_checkbox2('webguihostsallow_disable',gtext('Ignore Hosts Allow'),$pconfig['webguihostsallow_disable'],$caption,$desc);
-			html_textarea2('certificate',gtext('Certificate'),$pconfig['certificate'],gtext('Paste a signed certificate in X.509 PEM format here.'),true,65,7,false,false);
-			html_textarea2('privatekey',gtext('Private Key'),$pconfig['privatekey'],gtext('Paste a private key in PEM format here.'),true,65,7,false,false);
-			html_languagecombobox2('language',gtext('Language'),$pconfig['language'],gtext('Select the language of the WebGUI.'),'',false);
+			html_inputbox2('username',gettext('Username'),$pconfig['username'],gettext("It's recommended to change the default username and password for accessing the WebGUI, enter the username here."),true,21);
+			html_combobox2('webguiproto',gettext('Protocol'),$pconfig['webguiproto'],['http' => 'HTTP','https' => 'HTTPS'],gettext('Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI.'),true,false,'webguiproto_change()');
+			html_inputbox2('webguiport',gettext('Port'),$pconfig['webguiport'],gettext('Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS).'),true,6);
+			html_inputbox2('webguihostsallow',gettext('Hosts Allow'),$pconfig['webguihostsallow'],gettext('Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)'),false,60);
+			$caption = gettext('Enable this option to allow any IP address to access the WebGUI.');
+			$desc = '<strong><font color="red">' . gettext('Security Warning') . '!</font> ' . gettext('Enabling this option may expose your system to additional security risk!') . '</strong>';
+			html_checkbox2('webguihostsallow_disable',gettext('Ignore Hosts Allow'),$pconfig['webguihostsallow_disable'],$caption,$desc);
+			html_textarea2('certificate',gettext('Certificate'),$pconfig['certificate'],gettext('Paste a signed certificate in X.509 PEM format here.'),true,65,7,false,false);
+			html_textarea2('privatekey',gettext('Private Key'),$pconfig['privatekey'],gettext('Paste a private key in PEM format here.'),true,65,7,false,false);
+			html_languagecombobox2('language',gettext('Language'),$pconfig['language'],gettext('Select the language of the WebGUI.'),'',false);
 			$helpinghand = '<a href="http://redmine.lighttpd.net/projects/lighttpd/wiki" target="_blank">'
-				. gtext('Please check the documentation')
+				. gettext('Please check the documentation')
 				. '</a>.';
-			html_textarea2('auxparam',gtext('Additional Parameters'),!empty($pconfig['auxparam']) ? $pconfig['auxparam'] : '',sprintf(gtext('These parameters will be added to %s.'),'lighttpd.conf')  . ' ' . $helpinghand,false,85,7,false,false);
+			html_textarea2('auxparam',gettext('Additional Parameters'),!empty($pconfig['auxparam']) ? $pconfig['auxparam'] : '',sprintf(gettext('These parameters will be added to %s.'),'lighttpd.conf')  . ' ' . $helpinghand,false,85,7,false,false);
 ?>
 		</tbody>
 	</table>
@@ -377,14 +377,14 @@ function webguiproto_change() {
 		</colgroup>
 		<thead>
 <?php
-			html_separator();
-			html_titleline(gtext('Time'));
+			html_separator2();
+			html_titleline2(gettext('Time'));
 ?>
 		</thead>
 		<tbody>
 <?php			
-			html_timezonecombobox2('timezone',gtext('Time Zone'),$pconfig['timezone'],gtext('Select the location closest to you.'),false);
-			html_combobox2('datetimeformat',gtext('Date Format'),$pconfig['datetimeformat'],get_datetime_locale_samples(),gtext('Select a date format.'),false);
+			html_timezonecombobox2('timezone',gettext('Time Zone'),$pconfig['timezone'],gettext('Select the location closest to you.'),false);
+			html_combobox2('datetimeformat',gettext('Date Format'),$pconfig['datetimeformat'],get_datetime_locale_samples(),gettext('Select a date format.'),false);
 ?>
 			<tr>
 				<td class="celltag"><?=gtext('System Time');?></td>
@@ -396,9 +396,9 @@ function webguiproto_change() {
 				</td>
 			</tr>
 <?php
-			html_checkbox2('ntp_enable',gtext('Enable NTP'),!empty($pconfig['ntp_enable']) ? true : false,gtext('Use the specified NTP server.'),'',false);
-			html_inputbox2('ntp_timeservers',gtext('NTP Time Server'),$pconfig['ntp_timeservers'],gtext('Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!'),true,40);
-			html_inputbox2('ntp_updateinterval',gtext('Time Synchronization'),$pconfig['ntp_updateinterval'],gtext('Minutes between the next network time synchronization.'),true,20);
+			html_checkbox2('ntp_enable',gettext('Enable NTP'),!empty($pconfig['ntp_enable']) ? true : false,gettext('Use the specified NTP server.'),'',false);
+			html_inputbox2('ntp_timeservers',gettext('NTP Time Server'),$pconfig['ntp_timeservers'],gettext('Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!'),true,40);
+			html_inputbox2('ntp_updateinterval',gettext('Time Synchronization'),$pconfig['ntp_updateinterval'],gettext('Minutes between the next network time synchronization.'),true,20);
 ?>
 		</tbody>
 	</table>
@@ -409,15 +409,15 @@ function webguiproto_change() {
 		</colgroup>
 		<thead>
 <?php
-			html_separator();
-			html_titleline(gtext('Hostname'));
+			html_separator2();
+			html_titleline2(gettext('Hostname'));
 ?>
 		</thead>
 		<tbody>
 <?php			
 			
-			html_inputbox2('hostname',gtext('Hostname'),$pconfig['hostname'],sprintf(gtext('Name of the NAS host, without domain part e.g. %s.'),'<em>' . strtolower(get_product_name()) .'</em>'),true,40);
-			html_inputbox2('domain',gtext('Domain'),$pconfig['domain'],sprintf(gtext('e.g. %s'),'<em>com, local</em>'),false,40);
+			html_inputbox2('hostname',gettext('Hostname'),$pconfig['hostname'],sprintf(gettext('Name of the NAS host, without domain part e.g. %s.'),'<em>' . strtolower(get_product_name()) .'</em>'),true,40);
+			html_inputbox2('domain',gettext('Domain'),$pconfig['domain'],sprintf(gettext('e.g. %s'),'<em>com, local</em>'),false,40);
 ?>
 		</tbody>
 	</table>
@@ -428,8 +428,8 @@ function webguiproto_change() {
 		</colgroup>
 		<thead>
 <?php
-			html_separator();
-			html_titleline(gtext('DNS'));
+			html_separator2();
+			html_titleline2(gettext('DNS'));
 ?>
 		</thead>
 		<tbody>
@@ -472,4 +472,3 @@ webguiproto_change();
 </script>
 <?php
 include 'fend.inc';
-?>
