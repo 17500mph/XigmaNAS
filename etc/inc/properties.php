@@ -588,7 +588,7 @@ class property_ipaddress extends property_text {
 		parent::__construct($owner);
 		$this->
 			set_maxlength(45)->
-			set_placeholder(gtext('Enter IP Address'))->
+			set_placeholder(gettext('Enter IP Address'))->
 			set_size(60);
 		return $this;
 	}
@@ -606,7 +606,7 @@ class property_ipv4 extends property_text {
 		parent::__construct($owner);
 		$this->
 			set_maxlength(15)->
-			set_placeholder(gtext('Enter IP Address'))->
+			set_placeholder(gettext('Enter IP Address'))->
 			set_size(20);
 		return $this;
 	}
@@ -624,7 +624,7 @@ class property_ipv6 extends property_text {
 		parent::__construct($owner);
 		$this->
 			set_maxlength(45)->
-			set_placeholder(gtext('Enter IP Address'))->
+			set_placeholder(gettext('Enter IP Address'))->
 			set_size(60);
 		return $this;
 	}
@@ -677,7 +677,7 @@ class property_int extends property_text {
 class property_toolbox extends property_text {
 	public function __construct($owner = NULL) {
 		parent::__construct($owner);
-		$this->set_title(gtext('Toolbox'));
+		$this->set_title(gettext('Toolbox'));
 	}
 }
 class property_uuid extends property_text {
@@ -685,17 +685,17 @@ class property_uuid extends property_text {
 		parent::__construct($owner);
 		$this->
 			set_name('uuid')->
-			set_title(gtext('Universally Unique Identifier'));
+			set_title(gettext('Universally Unique Identifier'));
 		$this->
 			set_id('uuid')->
-			set_description(gtext('The UUID of the record.'))->
+			set_description(gettext('The UUID of the record.'))->
 			set_size(45)->
 			set_maxlength(36)->
-			set_placeholder(gtext('Enter Universally Unique Identifier'))->
+			set_placeholder(gettext('Enter Universally Unique Identifier'))->
 			filter_use_default()->
 			set_editableonadd(false)->
 			set_editableonmodify(false)->
-			set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$this->get_title(),gettext('The value is invalid.')));
 	}
 	public function filter_use_default() {
 		$filter_name = 'ui';
@@ -805,16 +805,16 @@ class property_enable extends property_bool {
 		parent::__construct($owner);
 		$this->
 			set_name('enable')->
-			set_title(gtext('Enable Setting'));
+			set_title(gettext('Enable Setting'));
 		$this->
 			set_id('enable')->
-			set_caption(gtext('Enable'))->
+			set_caption(gettext('Enable'))->
 			set_description('')->
 			set_defaultvalue(true)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$this->get_title(),gettext('The value is invalid.')));
 		return $this;
 	}
 }
@@ -823,16 +823,16 @@ class property_protected extends property_bool {
 		parent::__construct($owner);
 		$this->
 			set_name('protected')->
-			set_title(gtext('Protect Setting'));
+			set_title(gettext('Protect Setting'));
 		$this->
 			set_id('protected')->
-			set_caption(gtext('Protect'))->
+			set_caption(gettext('Protect'))->
 			set_description('')->
 			set_defaultvalue(false)->
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$this->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$this->get_title(),gettext('The value is invalid.')));
 		return $this;
 	}
 }
@@ -914,9 +914,9 @@ abstract class co_property_container_param extends co_property_container {
 		$property = new property_text($this);
 		$property->
 			set_name('description')->
-			set_title(gtext('Description'));
-		$description = gtext('Enter a description for your reference.');
-		$placeholder = gtext('Enter a description');
+			set_title(gettext('Description'));
+		$description = gettext('Enter a description for your reference.');
+		$placeholder = gettext('Enter a description');
 		$property->
 			set_id('description')->
 			set_description($description)->
@@ -929,7 +929,7 @@ abstract class co_property_container_param extends co_property_container {
 			set_filter_options(['default' => ''])->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_description() {
