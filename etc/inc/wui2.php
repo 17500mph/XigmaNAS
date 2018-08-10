@@ -1445,6 +1445,7 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 trait co_DOMTools {
 /**
  *	Appends a child node to an element and returns $subnode
+ *	LoadHTML is called when $value contains sequence /> or /[letters]>
  *	@param string $name
  *	@param array $attributes
  *	@param string $value
@@ -1452,17 +1453,20 @@ trait co_DOMTools {
  *	@return DOMNode $subnode
  */
 	public function addElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		if(is_null($value) || (false === strpbrk($value,'&<>'))):
-			$subnode = $this->appendChild(new co_DOMElement($name,$value,$namespaceURI));
-		else:
-			$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
-			$this->import_soup($subnode,$value);
+		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
+		if(!is_null($value)):
+			//	rough check if value contains html code, if found try to import as HTML, otherwise add as text
+			if(!(preg_match('~/[a-z]*>~i',$value) && $subnode->import_soup($value))):
+				$document = $this->ownerDocument ?? $this;
+				$subnode->appendChild($document->createTextNode($value));
+			endif;
 		endif;
 		$subnode->addAttributes($attributes);
 		return $subnode;
 	}
 /**
  *	Appends a child node to an element and returns $this
+ *	LoadHTML is called when $value contains sequence /> or /[letters]>
  *	@param string $name
  *	@param array $attributes
  *	@param string $value
@@ -1470,17 +1474,20 @@ trait co_DOMTools {
  *	@return DOMNode $this
  */
 	public function insElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		if(is_null($value) || (false === strpbrk($value,'&<>'))):
-			$subnode = $this->appendChild(new co_DOMElement($name,$value,$namespaceURI));
-		else:
-			$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
-			$this->import_soup($subnode,$value);
+		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
+		if(!is_null($value)):
+			//	rough check if value contains html code, if found try to import as HTML, otherwise add as text
+			if(!(preg_match('~/[a-z]*>~i',$value) && $subnode->import_soup($value))):
+				$document = $this->ownerDocument ?? $this;
+				$subnode->appendChild($document->createTextNode($value));
+			endif;
 		endif;
 		$subnode->addAttributes($attributes);
 		return $this;
 	}
 /**
  *	Inserts a child node on top of the children
+ *	LoadHTML is called when $value contains sequence /> or /[letters]>
  *	@param string $name
  *	@param array $attributes
  *	@param string $value
@@ -1488,27 +1495,25 @@ trait co_DOMTools {
  *	@return DOMNode $subnode
  */
 	public function prepend_element(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		if(is_null($value) || (false === strpbrk($value,'&<>'))):
-			if(is_null($this->firstChild)):
-				$subnode = $this->insertBefore(new co_DOMElement($name,$value,$namespaceURI));
-			else:
-				$subnode = $this->insertBefore(new co_DOMElement($name,$value,$namespaceURI),$this->firstChild);
-			endif;
+		if(is_null($this->firstChild)):
+			$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
 		else:
-			if(is_null($this->firstChild)):
-				$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI));
-			else:
-				$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI),$this->firstChild);
+			$subnode = $this->insertBefore(new co_DOMElement($name,NULL,$namespaceURI),$this->firstChild);
+		endif;
+		if(!is_null($value)):
+			//	rough check if value contains html code, if found try to import as HTML, otherwise add as text
+			if(!(preg_match('~/[a-z]*>~i',$value) && $subnode->import_soup($value))):
+				$document = $this->ownerDocument ?? $this;
+				$subnode->appendChild($document->createTextNode($value));
 			endif;
-			$this->import_soup($subnode,$value);
 		endif;
 		$subnode->addAttributes($attributes);
 		return $subnode;
 	}
-	protected function import_soup($subnode,string $value = '') {
-		$backup_use_internal_errors = libxml_use_internal_errors(true); // user cares about exceptions
+	protected function import_soup(string $value = '') {
+		$backup_use_internal_errors = libxml_use_internal_errors(true);
 		$backup_disable_entity_loader = libxml_disable_entity_loader(true);
-		$document = $subnode->ownerDocument ?? $this;
+		$document = $this->ownerDocument ?? $this;
 		$htmldocument = new DOMDocument('1.0', 'UTF-8');
 		$successfully_loaded = $htmldocument->loadHTML('<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>' . $value . '</body></html>',LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 		libxml_clear_errors();
@@ -1519,11 +1524,11 @@ trait co_DOMTools {
 			foreach($items as $item):
 				foreach($item->childNodes as $childnode):
 					$newnode = $document->importNode($childnode,true);
-					$subnode->appendChild($newnode);
+					$this->appendChild($newnode);
 				endforeach;
 			endforeach;
 		endif;
-		return $this;
+		return $successfully_loaded;
 	}
 /**
  *	Appends a JavaScript node to the DOM
@@ -1535,16 +1540,14 @@ trait co_DOMTools {
 			$node = $this->addElement('script');
 			if(false !== $node):
 				$opening = $node->ownerDocument->createTextNode(PHP_EOL . '//![CDATA[' . PHP_EOL);
-				if(false !== $opening):
+				$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
+				if((false !== $opening) && (false !== $ending)):
 					$node->appendChild($opening);
 					$cdata = $node->ownerDocument->createCDATASection($text);
 					if(false !== $cdata):
 						$node->appendChild($cdata);
 					endif;
-					$ending = $node->ownerDocument->createTextNode(PHP_EOL . '//]]>' . PHP_EOL);
-					if(false !== $ending):
-						$node->appendChild($ending);
-					endif;
+					$node->appendChild($ending);
 				endif;
 			endif;
 		endif;
@@ -1739,7 +1742,7 @@ trait co_DOMTools {
 							push()->addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
 								insIMG(['src' => 'images/error_box.png','alt' => ''])->
 							pop()->addTDwC('message')->
-								addDIV([],sprintf('%s:',gtext('The following errors were detected'),':'))->
+								addDIV([],sprintf('%s:',gettext('The following errors were detected'),':'))->
 									addUL();
 			foreach($messages as $message):
 				$ul->addLI([],$message);
@@ -1783,9 +1786,9 @@ trait co_DOMTools {
 	public function ins_config_has_changed_box() {
 		$gt_info = sprintf(
 			'%s<br />%s<br /><b><a href="diag_log.php">%s</a></b>',
-			gtext('The configuration has been changed.'),
-			gtext('You must apply the changes in order for them to take effect.'),
-			gtext('If this message persists take a look at the system log for more information.')
+			gettext('The configuration has been changed.'),
+			gettext('You must apply the changes in order for them to take effect.'),
+			gettext('If this message persists take a look at the system log for more information.')
 		);
 		$this->
 			addDIV(['id' => 'applybox'])->
@@ -1809,15 +1812,14 @@ trait co_DOMTools {
 	public function ins_colgroup_with_classes(array $data = []) {
 		$colgroup = $this->addCOLGROUP();
 		foreach($data as $value):
-			$colgroup->insCOL(['class' => htmlspecialchars($value)]);
+			$colgroup->insCOL(['class' => $value]);
 		endforeach;
 		return $this;
 	}
 	public function ins_colgroup_with_styles(string $tag,array $data = []) {
 		$colgroup = $this->addCOLGROUP();
-		$tag = htmlspecialchars($tag);
 		foreach($data as $value):
-			$colgroup->insCOL(['style' => sprintf('%s:%s;',$tag,htmlspecialchars($value))]);
+			$colgroup->insCOL(['style' => sprintf('%s:%s;',$tag,$value)]);
 		endforeach;
 		return $this;
 	}
@@ -2228,7 +2230,7 @@ EOJ;
 		endif;
 		$select = $this->addElement('select',$select_attributes);
 		if($is_required):
-			$select->addElement('option',['value' => ''],gtext('Choose...'));
+			$select->addElement('option',['value' => ''],gettext('Choose...'));
 		endif;
 		foreach($p->get_options() as $option_tag => $option_val):
 			$option_attributes = ['value' => $option_tag];
@@ -2324,7 +2326,7 @@ EOJ;
 			'type' => 'checkbox',
 			'name' => $cbm_toggle_id,
 			'id' => $cbm_toggle_id,
-			'title' => gtext('Invert Selection'),
+			'title' => gettext('Invert Selection'),
 			'class' => 'oneemhigh'
 		];
 		$this->insINPUT($input_attributes);
@@ -2349,13 +2351,13 @@ EOJ;
 		global $g_img;
 
 		if($is_enabled):
-			$gt = gtext('Enabled');
+			$gt = gettext('Enabled');
 			$this->
 				addTDwC('lcelc')->
 					addA(['title' => $gt])->
 						insIMG(['src' => $g_img['ena'],'alt' => $gt]);
 		else:
-			$gt = gtext('Disabled');
+			$gt = gettext('Disabled');
 			$this->
 				addTDwC('lcelcd')->
 					addA(['title' => $gt])->
@@ -2476,7 +2478,7 @@ EOJ;
 	}
 	public function ins_no_records_found(int $colspan = 0,string $message = NULL) {
 		if(is_null($message)):
-			$message = gtext('No records found.');
+			$message = gettext('No records found.');
 		endif;
 		$td_attributes = ['class' => 'lcebl'];
 		if($colspan > 0):
@@ -2631,7 +2633,7 @@ EOJ;
 		$element = 'button';
 		$class_button = 'formbtn';
 		$sp_value = $value ?? 'cancel';
-		$sp_content = $content ?? gtext('Cancel');
+		$sp_content = $content ?? gettext('Cancel');
 		$sp_attributes = $attributes ?? [];
 		$sp_id  = $id ?? sprintf('%1$s_%2$s',$element,$sp_value);
 		$button_attributes  = [
@@ -2656,59 +2658,59 @@ EOJ;
 		return $this;
 	}
 	public function ins_button_add(string $content = NULL) {
-		$this->ins_button_submit('save',$content ?? gtext('Add'));
+		$this->ins_button_submit('save',$content ?? gettext('Add'));
 		return $this;
 	}
 	public function ins_button_apply(string $content = NULL) {
-		$this->ins_button_submit('apply',$content ?? gtext('Apply Changes'));
+		$this->ins_button_submit('apply',$content ?? gettext('Apply Changes'));
 		return $this;
 	}
 	public function ins_button_cancel(string $content = NULL) {
-		$this->ins_button_submit('cancel',$content ?? gtext('Cancel'),['formnovalidate' => 'formnovalidate']);
+		$this->ins_button_submit('cancel',$content ?? gettext('Cancel'),['formnovalidate' => 'formnovalidate']);
 		return $this;
 	}
 	public function ins_button_clone(string $content = NULL) {
-		$this->ins_button_submit('clone',$content ?? gtext('Clone Configuration'));
+		$this->ins_button_submit('clone',$content ?? gettext('Clone Configuration'));
 		return $this;
 	}
 	public function ins_button_edit(string $content = NULL) {
-		$this->ins_button_submit('edit',$content ?? gtext('Edit'));
+		$this->ins_button_submit('edit',$content ?? gettext('Edit'));
 		return $this;
 	}
 	public function ins_button_enadis(bool $enable = false,string $content_on = NULL,string $content_off = NULL) {
 		if($enable):
-			$this->ins_button_submit('enable',$content_on ?? gtext('Enable'));
+			$this->ins_button_submit('enable',$content_on ?? gettext('Enable'));
 		else:
-			$this->ins_button_submit('disable',$content_off ?? gtext('Disable'));
+			$this->ins_button_submit('disable',$content_off ?? gettext('Disable'));
 		endif;
 		return $this;
 	}
 	public function ins_button_reload(bool $enable = false,string $content = NULL) {
 		if($enable):
-			$this->ins_button_submit('reload',$content ?? gtext('Reload'));
+			$this->ins_button_submit('reload',$content ?? gettext('Reload'));
 		endif;
 		return $this;
 	}
 	public function ins_button_reorder(bool $enable = false,string $content = NULL) {
 		if($enable):
-			$this->ins_button_submit('reorder',$content ?? gtext('Reorder'));
+			$this->ins_button_submit('reorder',$content ?? gettext('Reorder'));
 		endif;
 		return $this;
 	}
 	public function ins_button_rescan(bool $enable = false,string $content = NULL) {
 		if($enabled):
-			$this->ins_button_submit('rescan',$content ?? gtext('Rescan'));
+			$this->ins_button_submit('rescan',$content ?? gettext('Rescan'));
 		endif;
 		return $this;
 	}
 	public function ins_button_restart(bool $enable = false,string $content = NULL) {
 		if($enable):
-			$this->ins_button_submit('restart',$content ?? gtext('Restart'));
+			$this->ins_button_submit('restart',$content ?? gettext('Restart'));
 		endif;
 		return $this;
 	}
 	public function ins_button_save(string $content = NULL) {
-		$this->ins_button_submit('save',$content ?? gtext('Apply'));
+		$this->ins_button_submit('save',$content ?? gettext('Apply'));
 		return $this;
 	}
 	//	remark area macros
@@ -2731,21 +2733,23 @@ EOJ;
 		return $this;
 	}
 	public function clc_page_title(array $page_title = []) {
-		$output = implode(htmlspecialchars(' > '),$page_title);
+		$output = implode(' > ',$page_title);
 		return $output;
 	}
 	public function clc_html_page_title(array $page_title = []) {
-		$output = htmlspecialchars(system_get_hostname());
+		$output = system_get_hostname();
 		if(!empty($page_title)):
-			$output .= htmlspecialchars(' > ');
+			$output .= ' > ';
 			$output .= $this->clc_page_title($page_title);
 		endif;
 		return $output;
 	}
 	public function ins_head(array $page_title = []) {
+		$codeset = system_get_language_codeset();
 		$head = $this->addElement('head',['id' => 'head']);
 		$head->
-			insElement('meta',['charset' => system_get_language_codeset()])->
+			insElement('meta',['charset' => $codeset])->
+			insElement('meta',['http-equiv' => 'Content-Type','content' => sprintf('text/html; charset=%s',$codeset)])->
 			insElement('meta',['name' => 'format-detection','content' => 'telephone=no'])->
 			insElement('meta',['name' => 'viewport','content' => 'width=device-width, initial-scale=1.0'])->
 			insElement('title',[],$this->clc_html_page_title($page_title))->
@@ -2889,9 +2893,64 @@ EOJ;
 				addDIV(['id' => 'gapheader']);
 		return $this;
 	}
+	public function ins_header_menu() {
+		$hard_link_regex = '~^[a-z]+://~';
+		$menu = get_headermenu();
+		make_headermenu_extensions($menu); // function cares about access rights itself
+		$menu_list = ['home','system','network','disks','access','services','vm','status','diagnostics','extensions','tools','help'];	
+		$ul_h = $this->addDIV(['id' => 'area_navhdr'])->addElement('nav',['id' => 'navhdr'])->addUL();
+		foreach($menu_list as $menuid):
+			if($menu[$menuid]['visible']): // render menu when visible
+				$li_h = $ul_h->addLI();
+				$attributes = [];
+				switch($menu[$menuid]['type']):
+					case 'external':
+						$attributes['href'] = $menu[$menuid]['link'];
+						$attributes['target'] = '_blank';
+						break;
+					case 'internal':
+						$attributes['href'] = $menu[$menuid]['link'];
+						$attributes['onclick'] = 'spinner()';
+						break;
+					case 'nolink':
+						$attributes['onclick'] = '';
+						break;
+				endswitch;
+//				$tags = implode(' ',$a_tag);
+				if(empty($menu[$menuid]['img'])):
+					$li_h->
+						addA($attributes,$menu[$menuid]['description']);
+				else:
+					$li_h->
+						addA($attributes)->insIMG(['src' => $menu[$menuid]['img'],'title' => $menu[$menuid]['description'],'alt' => $menu[$menuid]['description']]);
+				endif;
+				if(!empty($menu[$menuid]['menuitem'])):
+					$ul_v = $li_h->addUL();
+					// Display menu items.
+					foreach($menu[$menuid]['menuitem'] as $menu_item):
+						if($menu_item['visible']): // render menuitem when visible
+							$li_v = $ul_v->addLI();
+							$target = ('internal' === $menu_item['type']) ? '_self' : '_blank';
+							if('separator' === $menu_item['type']):
+								$li_v->insSPAN(['class' => 'tabseparator']);
+							else:
+								$link = $menu_item['link'];
+								if(preg_match($hard_link_regex,$link)): // hard link = no spinner
+									$li_v->insA(['href' => $link,'target' => $target,'onclick' => ''],$menu_item['description']);
+								else: // local link = spinner
+									$li_v->insA(['href' => $link,'target' => $target,'onclick' => 'spinner()'],$menu_item['description']);
+								endif;
+							endif;
+						endif;
+					endforeach;
+				endif;
+			endif;
+		endforeach;
+		return $this;
+	}
 	public function ins_header(array $page_title = []) {
 		$header = $this->addElement('header',['id' => 'g4h']);
-		$header->addDIV(['id' => 'area_navhdr'],make_headermenu());
+		$header->ins_header_menu();
 		$header->addDIV(['id' => 'gapheader']);
 		if(!empty($page_title)):
 			$header->addP(['class' => 'pgtitle','style' => 'padding:0em 2em;' ],$this->clc_page_title($page_title));
@@ -2925,8 +2984,8 @@ EOJ;
 			if(file_exists(sprintf('%s/sysreboot.reqd',$g['varrun_path']))):
 				$img_attributes = [
 					'src' => '/images/notify_reboot.png',
-					'title' => gtext('A reboot is required'),
-					'alt' => gtext('Reboot Required'),
+					'title' => gettext('A reboot is required'),
+					'alt' => gettext('Reboot Required'),
 					'class' => 'spin oneemhigh'
 				];
 				$g4fl->
@@ -2934,7 +2993,7 @@ EOJ;
 						insIMG($img_attributes);
 			endif;
 		endif;
-		$g4fx->addTDwC('g4fc',htmlspecialchars(get_product_copyright()));
+		$g4fx->addTDwC('g4fc',get_product_copyright());
 		$g4fx->addTDwC('g4fr');
 		return $this;
 	}
@@ -2944,9 +3003,7 @@ class co_DOMElement extends \DOMElement implements ci_DOM {
 
 	public function addAttributes($attributes = []) {
 		foreach($attributes as $key => $value):
-			//	avoid double encoding, setAttribute seems to force-encode the value
-			$decoded_value = htmlspecialchars_decode($value,ENT_QUOTES|ENT_HTML5);
-			$this->setAttribute($key,$decoded_value);
+			$this->setAttribute($key,$value);
 		endforeach;
 		return $this;
 	}
@@ -3080,7 +3137,7 @@ interface ci_DOM {
 function new_page(array $page_title = [],string $action_url = NULL,string ...$options) {
 	$document = new co_DOMDocument();
 	$document->
-		loadHTML('<!DOCTYPE html>',LIBXML_HTML_NOIMPLIED);
+		loadHTML('<!DOCTYPE html>',LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 	$document->
 		set_options(...$options)->
 		addElement('html',['lang' => system_get_language_code()])->
