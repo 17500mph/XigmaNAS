@@ -46,19 +46,19 @@ function ctl_portal_group_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Portal Group'));
-	$sphere->sym_mod(gtext('Edit Portal Group'));
-	$sphere->sym_del(gtext('Portal Group is marked for deletion'));
-	$sphere->sym_loc(gtext('Portal Group is locked'));
-	$sphere->sym_unl(gtext('Portal Group is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Portal Groups'));
-	$sphere->cbm_disable(gtext('Disable Selected Portal Groups'));
-	$sphere->cbm_enable(gtext('Enable Selected Portal Groups'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Portal Groups'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected portal groups?'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected portal groups?'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected portal groups?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected portal groups?'));
+	$sphere->sym_add(gettext('Add Portal Group'));
+	$sphere->sym_mod(gettext('Edit Portal Group'));
+	$sphere->sym_del(gettext('Portal Group is marked for deletion'));
+	$sphere->sym_loc(gettext('Portal Group is locked'));
+	$sphere->sym_unl(gettext('Portal Group is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Portal Groups'));
+	$sphere->cbm_disable(gettext('Disable Selected Portal Groups'));
+	$sphere->cbm_enable(gettext('Enable Selected Portal Groups'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Portal Groups'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected portal groups?'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected portal groups?'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected portal groups?'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected portal groups?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'ctld','ctl_portal_group','param');
 	if(!empty($sphere->grid)):
@@ -89,7 +89,7 @@ function ctl_portal_group_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Portal Groups')];
+	$pgtitle = [gettext('Services'),gettext('CAM Target Layer'),gettext('Portal Groups')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','10%','15%','35%','10%'];
@@ -107,16 +107,16 @@ function ctl_portal_group_selection($cop,$sphere) {
 		add_area_tabnav()->
 			push()->
 			add_tabnav_upper()->
-				ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
-				ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
-				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+				ins_tabnav_record('services_ctl.php',gettext('Global Settings'))->
+				ins_tabnav_record('services_ctl_target.php',gettext('Targets'))->
+				ins_tabnav_record('services_ctl_lun.php',gettext('LUNs'))->
+				ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'),gettext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'))->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_sub_listen.php',gtext('Listen'))->
-				ins_tabnav_record('services_ctl_sub_option.php',gtext('Option'));
+				ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'),gettext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_sub_listen.php',gettext('Listen'))->
+				ins_tabnav_record('services_ctl_sub_option.php',gettext('Option'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -140,7 +140,7 @@ function ctl_portal_group_selection($cop,$sphere) {
 		$tbody = $table->addTBODY(['class' => 'donothighlight']);
 	endif;
 	$tfoot = $table->addTFOOT();
-	$thead->ins_titleline(gtext('Overview'),$n_col_width);
+	$thead->ins_titleline(gettext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
 	if($record_exists):
 		$tr->
@@ -149,18 +149,18 @@ function ctl_portal_group_selection($cop,$sphere) {
 				ins_cbm_checkbox_toggle($sphere)->
 			pop()->
 			insTHwC('lhell',$cop->get_name()->get_title())->
-			insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+			insTHwC('lhelc sorter-false parser-false',gettext('Status'))->
 			insTHwC('lhell',$cop->get_redirect()->get_title())->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
 	else:
 		$tr->
 			insTHwC('lhelc')->
 			insTHwC('lhell',$cop->get_name()->get_title())->
-			insTHwC('lhelc',gtext('Status'))->
+			insTHwC('lhelc',gettext('Status'))->
 			insTHwC('lhell',$cop->get_redirect()->get_title())->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhebl',gettext('Toolbox'));
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):

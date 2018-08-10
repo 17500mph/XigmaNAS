@@ -46,19 +46,19 @@ function ctl_auth_group_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Auth Group'));
-	$sphere->sym_mod(gtext('Edit Auth Group'));
-	$sphere->sym_del(gtext('Auth Group is marked for deletion'));
-	$sphere->sym_loc(gtext('Auth Group is locked'));
-	$sphere->sym_unl(gtext('Auth Group is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Auth Groups'));
-	$sphere->cbm_disable(gtext('Disable Selected Auth Groups'));
-	$sphere->cbm_enable(gtext('Enable Selected Auth Groups'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Auth Groups'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected auth groups?'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected auth groups?'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected auth groups?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected auth groups?'));
+	$sphere->sym_add(gettext('Add Auth Group'));
+	$sphere->sym_mod(gettext('Edit Auth Group'));
+	$sphere->sym_del(gettext('Auth Group is marked for deletion'));
+	$sphere->sym_loc(gettext('Auth Group is locked'));
+	$sphere->sym_unl(gettext('Auth Group is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Auth Groups'));
+	$sphere->cbm_disable(gettext('Disable Selected Auth Groups'));
+	$sphere->cbm_enable(gettext('Enable Selected Auth Groups'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Auth Groups'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected auth groups?'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected auth groups?'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected auth groups?'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected auth groups?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'ctld','ctl_auth_group','param');
 	if(!empty($sphere->grid)):
@@ -89,7 +89,7 @@ function ctl_auth_group_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Auth Groups')];
+	$pgtitle = [gettext('Services'),gettext('CAM Target Layer'),gettext('Auth Groups')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','10%','50%','10%'];
@@ -107,18 +107,18 @@ function ctl_auth_group_selection($cop,$sphere) {
 		add_area_tabnav()->
 			push()->
 			add_tabnav_upper()->
-				ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
-				ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
-				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'),gtext('Reload page'),true)->
+				ins_tabnav_record('services_ctl.php',gettext('Global Settings'))->
+				ins_tabnav_record('services_ctl_target.php',gettext('Targets'))->
+				ins_tabnav_record('services_ctl_lun.php',gettext('LUNs'))->
+				ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'))->
+				ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'),gettext('Reload page'),true)->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_sub_chap.php',gtext('CHAP'))->
-				ins_tabnav_record('services_ctl_sub_chap_mutual.php',gtext('Mutual CHAP'))->
-				ins_tabnav_record('services_ctl_sub_initiator_name.php',gtext('Initiator Names'))->
-				ins_tabnav_record('services_ctl_sub_initiator_portal.php',gtext('Initiator Portals'));
+				ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'),gettext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_sub_chap.php',gettext('CHAP'))->
+				ins_tabnav_record('services_ctl_sub_chap_mutual.php',gettext('Mutual CHAP'))->
+				ins_tabnav_record('services_ctl_sub_initiator_name.php',gettext('Initiator Names'))->
+				ins_tabnav_record('services_ctl_sub_initiator_portal.php',gettext('Initiator Portals'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -142,7 +142,7 @@ function ctl_auth_group_selection($cop,$sphere) {
 		$tbody = $table->addTBODY(['class' => 'donothighlight']);
 	endif;
 	$tfoot = $table->addTFOOT();
-	$thead->ins_titleline(gtext('Overview'),$n_col_width);
+	$thead->ins_titleline(gettext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
 	if($record_exists):
 		$tr->
@@ -151,16 +151,16 @@ function ctl_auth_group_selection($cop,$sphere) {
 				ins_cbm_checkbox_toggle($sphere)->
 			pop()->
 			insTHwC('lhell',$cop->get_name()->get_title())->
-			insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+			insTHwC('lhelc sorter-false parser-false',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
 	else:
 		$tr->
 			insTHwC('lhelc')->
 			insTHwC('lhell',$cop->get_name()->get_title())->
-			insTHwC('lhelc',gtext('Status'))->
+			insTHwC('lhelc',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhebl',gettext('Toolbox'));
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):

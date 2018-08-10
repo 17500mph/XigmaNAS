@@ -47,19 +47,19 @@ function ctl_sub_isnsserver_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add iSNS Server'));
-	$sphere->sym_mod(gtext('Edit iSNS Server'));
-	$sphere->sym_del(gtext('iSNS Server is marked for deletion'));
-	$sphere->sym_loc(gtext('iSNS Server is locked'));
-	$sphere->sym_unl(gtext('iSNS Server is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected iSNS Servers'));
-	$sphere->cbm_disable(gtext('Disable Selected iSNS Servers'));
-	$sphere->cbm_enable(gtext('Enable Selected iSNS Servers'));
-	$sphere->cbm_toggle(gtext('Toggle Selected iSNS Servers'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected iSNS servers?'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected iSNS servers?'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected iSNS servers?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected iSNS servers?'));
+	$sphere->sym_add(gettext('Add iSNS Server'));
+	$sphere->sym_mod(gettext('Edit iSNS Server'));
+	$sphere->sym_del(gettext('iSNS Server is marked for deletion'));
+	$sphere->sym_loc(gettext('iSNS Server is locked'));
+	$sphere->sym_unl(gettext('iSNS Server is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected iSNS Servers'));
+	$sphere->cbm_disable(gettext('Disable Selected iSNS Servers'));
+	$sphere->cbm_enable(gettext('Enable Selected iSNS Servers'));
+	$sphere->cbm_toggle(gettext('Toggle Selected iSNS Servers'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected iSNS servers?'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected iSNS servers?'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected iSNS servers?'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected iSNS servers?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'ctld','ctl_sub_isnsserver','param');
 	if(!empty($sphere->grid)):
@@ -90,7 +90,7 @@ function ctl_sub_isnsserver_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Settings'),gtext('iSNS Servers')];
+	$pgtitle = [gettext('Services'),gettext('CAM Target Layer'),gettext('Settings'),gettext('iSNS Servers')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','10%','10%','40%','10%'];
@@ -108,15 +108,15 @@ function ctl_sub_isnsserver_selection($cop,$sphere) {
 		add_area_tabnav()->
 			push()->
 			add_tabnav_upper()->
-				ins_tabnav_record('services_ctl.php',gtext('Global Settings'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
-				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+				ins_tabnav_record('services_ctl.php',gettext('Global Settings'),gettext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_target.php',gettext('Targets'))->
+				ins_tabnav_record('services_ctl_lun.php',gettext('LUNs'))->
+				ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'))->
+				ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'))->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('services_ctl.php',gtext('Settings'))->
-				ins_tabnav_record('services_ctl_sub_isnsserver.php',gtext('iSNS Servers'),gtext('Reload page'),true);
+				ins_tabnav_record('services_ctl.php',gettext('Settings'))->
+				ins_tabnav_record('services_ctl_sub_isnsserver.php',gettext('iSNS Servers'),gettext('Reload page'),true);
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -140,7 +140,7 @@ function ctl_sub_isnsserver_selection($cop,$sphere) {
 		$tbody = $table->addTBODY(['class' => 'donothighlight']);
 	endif;
 	$tfoot = $table->addTFOOT();
-	$thead->ins_titleline(gtext('Overview'),$n_col_width);
+	$thead->ins_titleline(gettext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
 	if($record_exists):
 		$tr->
@@ -150,17 +150,17 @@ function ctl_sub_isnsserver_selection($cop,$sphere) {
 			pop()->
 			insTHwC('lhell',$cop->get_ipaddress()->get_title())->
 			insTHwC('lhell',$cop->get_port()->get_title())->
-			insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+			insTHwC('lhelc sorter-false parser-false',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
 	else:
 		$tr->
 			insTHwC('lhelc')->
 			insTHwC('lhell',$cop->get_ipaddress()->get_title())->
 			insTHwC('lhell',$cop->get_port()->get_title())->
-			insTHwC('lhelc',gtext('Status'))->
+			insTHwC('lhelc',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhebl',gettext('Toolbox'));
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):

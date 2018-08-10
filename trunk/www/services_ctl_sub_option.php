@@ -47,19 +47,19 @@ function ctl_sub_option_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Option Record'));
-	$sphere->sym_mod(gtext('Edit Option Record'));
-	$sphere->sym_del(gtext('Option record is marked for deletion'));
-	$sphere->sym_loc(gtext('Option record is locked'));
-	$sphere->sym_unl(gtext('Option record is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Option Records'));
-	$sphere->cbm_disable(gtext('Disable Selected Option Records'));
-	$sphere->cbm_enable(gtext('Enable Selected Option Records'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Option Records'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected option records?'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected option records?'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected option records?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected option records?'));
+	$sphere->sym_add(gettext('Add Option Record'));
+	$sphere->sym_mod(gettext('Edit Option Record'));
+	$sphere->sym_del(gettext('Option record is marked for deletion'));
+	$sphere->sym_loc(gettext('Option record is locked'));
+	$sphere->sym_unl(gettext('Option record is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Option Records'));
+	$sphere->cbm_disable(gettext('Disable Selected Option Records'));
+	$sphere->cbm_enable(gettext('Enable Selected Option Records'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Option Records'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected option records?'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected option records?'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected option records?'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected option records?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'ctld','ctl_sub_option','param');
 	if(!empty($sphere->grid)):
@@ -90,7 +90,7 @@ function ctl_sub_option_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Portal Groups'),gtext('Option')];
+	$pgtitle = [gettext('Services'),gettext('CAM Target Layer'),gettext('Portal Groups'),gettext('Option')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','25%','10%','25%','10%'];
@@ -108,16 +108,16 @@ function ctl_sub_option_selection($cop,$sphere) {
 		add_area_tabnav()->
 			push()->
 			add_tabnav_upper()->
-				ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
-				ins_tabnav_record('services_ctl_target.php',gtext('Targets'))->
-				ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'),gtext('Reload page'),true)->
-				ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+				ins_tabnav_record('services_ctl.php',gettext('Global Settings'))->
+				ins_tabnav_record('services_ctl_target.php',gettext('Targets'))->
+				ins_tabnav_record('services_ctl_lun.php',gettext('LUNs'))->
+				ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'),gettext('Reload page'),true)->
+				ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'))->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-				ins_tabnav_record('services_ctl_sub_listen.php',gtext('Listen'))->
-				ins_tabnav_record('services_ctl_sub_option.php',gtext('Option'),gtext('Reload page'),true);
+				ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'))->
+				ins_tabnav_record('services_ctl_sub_listen.php',gettext('Listen'))->
+				ins_tabnav_record('services_ctl_sub_option.php',gettext('Option'),gettext('Reload page'),true);
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -141,7 +141,7 @@ function ctl_sub_option_selection($cop,$sphere) {
 		$tbody = $table->addTBODY(['class' => 'donothighlight']);
 	endif;
 	$tfoot = $table->addTFOOT();
-	$thead->ins_titleline(gtext('Overview'),$n_col_width);
+	$thead->ins_titleline(gettext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
 	if($record_exists):
 		$tr->
@@ -151,17 +151,17 @@ function ctl_sub_option_selection($cop,$sphere) {
 			pop()->
 			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhell',$cop->get_value()->get_title())->
-			insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+			insTHwC('lhelc sorter-false parser-false',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
 	else:
 		$tr->
 			insTHwC('lhelc')->
 			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhell',$cop->get_value()->get_title())->
-			insTHwC('lhelc',gtext('Status'))->
+			insTHwC('lhelc',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhebl',gettext('Toolbox'));
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):

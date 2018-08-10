@@ -252,7 +252,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$pgtitle = [gtext('Services'),gtext('CAM Target Layer'),gtext('Target'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gettext('Services'),gettext('CAM Target Layer'),gettext('Target'),($isrecordnew) ? gettext('Add') : gettext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -262,16 +262,16 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('services_ctl.php',gtext('Global Settings'))->
-			ins_tabnav_record('services_ctl_target.php',gtext('Targets'),gtext('Reload page'),true)->
-			ins_tabnav_record('services_ctl_lun.php',gtext('LUNs'))->
-			ins_tabnav_record('services_ctl_portal_group.php',gtext('Portal Groups'))->
-			ins_tabnav_record('services_ctl_auth_group.php',gtext('Auth Groups'))->
+			ins_tabnav_record('services_ctl.php',gettext('Global Settings'))->
+			ins_tabnav_record('services_ctl_target.php',gettext('Targets'),gettext('Reload page'),true)->
+			ins_tabnav_record('services_ctl_lun.php',gettext('LUNs'))->
+			ins_tabnav_record('services_ctl_portal_group.php',gettext('Portal Groups'))->
+			ins_tabnav_record('services_ctl_auth_group.php',gettext('Auth Groups'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('services_ctl_target.php',gtext('Target'),gtext('Reload page'),true)->
-			ins_tabnav_record('services_ctl_sub_port.php',gtext('Ports'))->
-			ins_tabnav_record('services_ctl_sub_lun.php',gtext('LUNs'));
+			ins_tabnav_record('services_ctl_target.php',gettext('Target'),gettext('Reload page'),true)->
+			ins_tabnav_record('services_ctl_sub_port.php',gettext('Ports'))->
+			ins_tabnav_record('services_ctl_sub_lun.php',gettext('LUNs'));
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -287,7 +287,7 @@ $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
-		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gtext('Configuration'))->
+		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
 	pop()->
 	addTBODY()->
 		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
