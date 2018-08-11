@@ -379,21 +379,21 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
-	<?php
+<?php
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
 	endif;
@@ -406,32 +406,34 @@ $document->render();
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
 	endif;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable', gtext('System Monitoring Settings'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");?>
+<?php
+			html_titleline_checkbox2('enable', gettext('System Monitoring Settings'), $pconfig['enable'], gettext('Enable'), "enable_change(false)");
+?>
 		</thead>
 		<tbody>
-			<?php
-			html_filechooser2('storage_path', gtext('Home Directory'), $pconfig['storage_path'], gtext('Enter the path to the home directory. This directory will store the statistical data and gets updated every 5 minutes!'), $g['media_path'], true, 60);
-			html_inputbox2('refresh_time', gtext('Page Refresh'), $pconfig['refresh_time'], gtext('Auto page refresh.')." ".sprintf(gtext('(default %s %s'), 300, gtext('seconds)')), false, 5);
-			html_inputbox2('graph_h', gtext('Graphs Height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. (default %s pixels)'), 200), false, 5);
-			html_checkbox2('autoscale', gtext('Autoscale'), $pconfig['autoscale'], gtext('Autoscale for graphs.'), "", false);
+<?php
+			html_filechooser2('storage_path', gettext('Home Directory'), $pconfig['storage_path'], gettext('Enter the path to the home directory. This directory will store the statistical data and gets updated every 5 minutes!'), $g['media_path'], true, 60);
+			html_inputbox2('refresh_time', gettext('Page Refresh'), $pconfig['refresh_time'], gettext('Auto page refresh.')." ".sprintf(gettext('(default %s %s'), 300, gettext('seconds)')), false, 5);
+			html_inputbox2('graph_h', gettext('Graphs Height'), $pconfig['graph_h'], sprintf(gettext('Height of the graphs. (default %s pixels)'), 200), false, 5);
+			html_checkbox2('autoscale', gettext('Autoscale'), $pconfig['autoscale'], gettext('Autoscale for graphs.'), "", false);
 			html_checkbox2('background_white', gettext('Background'), $pconfig['background_white'], gettext('Enable white background graphs. (black as default)'), '', false);
 			html_separator2();
-			html_titleline2(gtext('Available Graphs'));
-			html_checkbox2('cpu_frequency', gtext('CPU Frequency'), $pconfig['cpu_frequency'], gtext('Enable collecting CPU frequency statistics.'), '', false);
-			html_checkbox2('cpu_temperature', gtext('CPU Temperature'), $pconfig['cpu_temperature'], gtext('Enable collecting CPU temperature statistics.'), '', false);
-			html_checkbox2('cpu', gtext('CPU Usage'), $pconfig['cpu'], gtext('Enable collecting CPU usage statistics.'), '', false);
-			html_checkbox2('disk_usage', gtext('Disk Usage'), $pconfig['disk_usage'], gtext('Enable collecting disk space usage statistics.'), '', false);
-			html_checkbox2('load_averages', gtext('Load Averages'), $pconfig['load_averages'], gtext('Enable collecting average system load statistics.'), '', false);
-			html_checkbox2('memory_usage', gtext('Memory Usage'), $pconfig['memory_usage'], gtext('Enable collecting memory usage statistics.'), '', false);
-			html_checkbox2('latency', gtext('Network Latency'), $pconfig['latency'], gtext('Enable collecting network latency statistics.'), '', false, false, 'latency_change()');
-			html_inputbox2('latency_host', gtext('Host'), $pconfig['latency_host'], gtext('Destination host name or IP address.'), false, 20);
+			html_titleline2(gettext('Available Graphs'));
+			html_checkbox2('cpu_frequency', gettext('CPU Frequency'), $pconfig['cpu_frequency'], gettext('Enable collecting CPU frequency statistics.'), '', false);
+			html_checkbox2('cpu_temperature', gettext('CPU Temperature'), $pconfig['cpu_temperature'], gettext('Enable collecting CPU temperature statistics.'), '', false);
+			html_checkbox2('cpu', gettext('CPU Usage'), $pconfig['cpu'], gettext('Enable collecting CPU usage statistics.'), '', false);
+			html_checkbox2('disk_usage', gettext('Disk Usage'), $pconfig['disk_usage'], gettext('Enable collecting disk space usage statistics.'), '', false);
+			html_checkbox2('load_averages', gettext('Load Averages'), $pconfig['load_averages'], gettext('Enable collecting average system load statistics.'), '', false);
+			html_checkbox2('memory_usage', gettext('Memory Usage'), $pconfig['memory_usage'], gettext('Enable collecting memory usage statistics.'), '', false);
+			html_checkbox2('latency', gettext('Network Latency'), $pconfig['latency'], gettext('Enable collecting network latency statistics.'), '', false, false, 'latency_change()');
+			html_inputbox2('latency_host', gettext('Host'), $pconfig['latency_host'], gettext('Destination host name or IP address.'), false, 20);
 			$a_option = [];
 			foreach($a_interface as $if => $ifinfo) {
 				$ifinfo = get_interface_info($if);
@@ -442,31 +444,31 @@ $document->render();
 					}
 				}
 			}
-			html_combobox2('latency_interface', gtext('Interface Selection'), $s_option, $a_option, gtext('Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.'));
+			html_combobox2('latency_interface', gettext('Interface Selection'), $s_option, $a_option, gettext('Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.'));
 			$latency_a_count = [];
 			for ($i = 1; $i <= 20; $i++) {
 				$latency_a_count[$i] = $i;
 			}
-			html_combobox2('latency_count', gtext('Count'), $pconfig['latency_count'], $latency_a_count, gtext('Stop after sending (and receiving) N packets.'), false);
-			$helpinghand = gtext('These parameters will be added to the ping command.')
+			html_combobox2('latency_count', gettext('Count'), $pconfig['latency_count'], $latency_a_count, gettext('Stop after sending (and receiving) N packets.'), false);
+			$helpinghand = gettext('These parameters will be added to the ping command.')
 				. ' '
-				. sprintf(gtext('Please check the %sdocumentation%s.'),'<a href="http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html" target="_blank">','</a>');
-			html_inputbox2('latency_parameters',gtext('Additional Parameters'),$pconfig['latency_parameters'],$helpinghand,false,60);
-			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Enable collecting network traffic statistics.'), '', false, false, 'lan_change()');
-			html_checkbox2('bytes_per_second', gtext('Bytes/sec'), $pconfig['bytes_per_second'], gtext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
-			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
-			html_checkbox2('axis', gtext('Y-axis Range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gtext('network traffic')), '', false, false, 'axis_change()');
-			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
-			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
-			$helpinghand =  gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')
+				. sprintf(gettext('Please check the %sdocumentation%s.'),'<a href="http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html" target="_blank">','</a>');
+			html_inputbox2('latency_parameters',gettext('Additional Parameters'),$pconfig['latency_parameters'],$helpinghand,false,60);
+			html_checkbox2('lan_load', gettext('Network Traffic'), $pconfig['lan_load'], gettext('Enable collecting network traffic statistics.'), '', false, false, 'lan_change()');
+			html_checkbox2('bytes_per_second', gettext('Bytes/sec'), $pconfig['bytes_per_second'], gettext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
+			html_checkbox2('logarithmic', gettext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gettext('Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)'), gettext('network traffic')), "", false, false, 'logarithmic_change()');
+			html_checkbox2('axis', gettext('Y-axis Range'), $pconfig['axis'], sprintf(gettext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gettext('network traffic')), '', false, false, 'axis_change()');
+			html_checkbox2('no_processes', gettext('System Processes'), $pconfig['no_processes'], gettext('Enable collecting system process statistics.'), '', false);
+			html_checkbox2('ups', gettext('UPS Statistics'), $pconfig['ups'], gettext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
+			$helpinghand =  gettext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')
 				. '<br /> '
-				. gtext('The UPS identifier and IP address')
+				. gettext('The UPS identifier and IP address')
 				.	' '
-				. sprintf(gtext('must be in the format: %s.'),'identifier@host-ip-address or identifier@localhost');
-			html_inputbox2('ups_at',gtext('UPS Identifier'),$pconfig['ups_at'],$helpinghand,false,60);
-			html_checkbox2('uptime', gtext('Uptime Statistics'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
-			html_checkbox2('arc_usage', gtext('ZFS ARC Usage'), $pconfig['arc_usage'], gtext('Enable collecting ZFS ARC usage statistics.'), '', false);
-			?>
+				. sprintf(gettext('must be in the format: %s.'),'identifier@host-ip-address or identifier@localhost');
+			html_inputbox2('ups_at',gettext('UPS Identifier'),$pconfig['ups_at'],$helpinghand,false,60);
+			html_checkbox2('uptime', gettext('Uptime Statistics'), $pconfig['uptime'], gettext('Enable collecting uptime statistics.'), '', false);
+			html_checkbox2('arc_usage', gettext('ZFS ARC Usage'), $pconfig['arc_usage'], gettext('Enable collecting ZFS ARC usage statistics.'), '', false);
+?>
 		</tbody>
 	</table>
 	<div id="submit">
@@ -474,13 +476,13 @@ $document->render();
 		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext('Reset Graphs');?>" onclick="return confirm('<?=gtext('Do you really want to delete all data from the selected statistics?');?>')" />
 	</div>
 	<div id="remarks">
-		<?php
+<?php
 		$helpinghand = sprintf(gtext("'%s' deletes all statistical data from the graphs!"), gtext('Reset Graphs'))
 			. '<div id="enumeration"><ul>'
 			. '<li>' . sprintf(gtext("If only specific statistics needs to be reset, clear all other check boxes before performing '%s'."), gtext('Reset Graphs')) . '</li>'
 			. '</ul></div>';
 		html_remark("warning", gtext('Warning'), $helpinghand );
-		?>
+?>
 	</div>
 <?php
 	include 'formend.inc';
@@ -494,4 +496,5 @@ ups_change();
 enable_change(false);
 //]]>
 </script>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
