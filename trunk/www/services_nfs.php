@@ -62,7 +62,7 @@ else:
 	array_sort_key($a_share,'path');
 endif;
 */
-$gt_button_apply_confirm = gtext('Do you want to apply these settings?');
+$gt_button_apply_confirm = gettext('Do you want to apply these settings?');
 $input_errors = [];
 $a_message = [];
 //	identify page mode
@@ -261,10 +261,10 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_titleline2(gtext('Network File System'));
+					html_titleline2(gettext('Network File System'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Network File System'),$sphere->row['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gettext('Network File System'),$sphere->row['enable'],gettext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -273,13 +273,13 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_textinfo2('numproc',gtext('Servers'), htmlspecialchars($sphere->row['numproc']));
-					html_checkbox2('v4enable',gtext('NFSv4'),$sphere->row['v4enable'],'','',false,true);
+					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
+					html_textinfo2('numproc',gettext('Servers'), htmlspecialchars($sphere->row['numproc']));
+					html_checkbox2('v4enable',gettext('NFSv4'),$sphere->row['v4enable'],'','',false,true);
 					break;
 				case PAGE_MODE_EDIT:
-					html_inputbox2('numproc',gtext('Servers'),$sphere->row['numproc'],gtext('Specifies how many servers to create.') . ' ' . gtext('There should be enough to handle the maximum level of concurrency from its clients, typically four to six.'),false,2);
-					html_checkbox2('v4enable',gtext('NFSv4'),$sphere->row['v4enable'],gtext('Enable NFSv4 server.'),'',false);
+					html_inputbox2('numproc',gettext('Servers'),$sphere->row['numproc'],gettext('Specifies how many servers to create.') . ' ' . gettext('There should be enough to handle the maximum level of concurrency from its clients, typically four to six.'),false,2);
+					html_checkbox2('v4enable',gettext('NFSv4'),$sphere->row['v4enable'],gettext('Enable NFSv4 server.'),'',false);
 					break;
 			endswitch;
 ?>
@@ -289,16 +289,16 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gtext('Edit'));
+				echo $sphere->html_button('edit',gettext('Edit'));
 				if($sphere->row['enable']):
-					echo $sphere->html_button('disable',gtext('Disable'));
+					echo $sphere->html_button('disable',gettext('Disable'));
 				else:
-					echo $sphere->html_button('enable',gtext('Enable'));
+					echo $sphere->html_button('enable',gettext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo $sphere->html_button('save',gtext('Apply'));
-				echo $sphere->html_button('cancel',gtext('Cancel'));
+				echo $sphere->html_button('save',gettext('Apply'));
+				echo $sphere->html_button('cancel',gettext('Cancel'));
 				break;
 		endswitch;
 ?>
