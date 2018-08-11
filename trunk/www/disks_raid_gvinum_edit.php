@@ -398,22 +398,22 @@ function toggleselection(ego, triggerbyname) {
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Settings'));?>
+			<?php html_titleline2(gettext('Settings'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gtext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly when in mode modify
+				html_inputbox2('name', gettext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly when in mode modify
 				if ($isrecordmodify) {
-					html_inputbox2('type', gtext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, $isrecordmodify);
+					html_inputbox2('type', gettext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, $isrecordmodify);
 				}
 			?>
 			<?php
 				$helpinghand = [
-					[gtext('Do not activate this option if you want to add an existing RAID.')],
-					[gtext('All data will be lost when you activate this option!'), 'red']
+					[gettext('Do not activate this option if you want to add an existing RAID.')],
+					[gettext('All data will be lost when you activate this option!'), 'red']
 				];
-				html_checkbox2('init', gtext('Initialize'), !empty($sphere_record['init']) ? true : false, gtext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
-				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 48);
+				html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
+				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 48);
 				html_separator2();
 			?>
 		</tbody>
@@ -431,7 +431,7 @@ function toggleselection(ego, triggerbyname) {
 			<col style="width:5%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Device List'), 9);?>
+			<?php html_titleline2(gettext('Device List'), 9);?>
 			<tr>
 				<td class="lhelc">
 					<?php if ($isrecordnewornewmodify):?>

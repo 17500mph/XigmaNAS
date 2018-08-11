@@ -207,7 +207,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'), 7);
+			html_titleline2(gettext('Overview'), 7);
 ?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
@@ -315,16 +315,16 @@ function controlactionbuttons(ego, triggerbyname) {
 		<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('Message Board'));
+				html_titleline2(gettext('Message Board'));
 ?>
 		</thead>
 		<tbody>
 <?php
-				html_textinfo2("info", gtext('Info'), sprintf(gtext('%1$s is used to create %2$s volumes.'), 'GEOM Vinum', 'RAID'));
-				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gtext('mount point'));
-				$helpinghand = gtext('A mounted RAID volume cannot be deleted.') . ' ' . gtext('Remove the %s first before proceeding.');
+				html_textinfo2("info", gettext('Info'), sprintf(gettext('%1$s is used to create %2$s volumes.'), 'GEOM Vinum', 'RAID'));
+				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gettext('mount point'));
+				$helpinghand = gettext('A mounted RAID volume cannot be deleted.') . ' ' . gettext('Remove the %s first before proceeding.');
 				$helpinghand = sprintf($helpinghand, $link);
-				html_textinfo2("warning", gtext('Warning'), $helpinghand);
+				html_textinfo2("warning", gettext('Warning'), $helpinghand);
 ?>
 		</tbody>
 	</table>
