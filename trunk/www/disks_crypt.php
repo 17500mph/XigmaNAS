@@ -266,7 +266,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Encryption Management'),6);
+			html_titleline2(gettext('Encryption Management'),6);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
