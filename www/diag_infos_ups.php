@@ -145,23 +145,23 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'))->
-			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
-			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
-			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
-			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
-			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'),gtext('Reload page'),true);
+			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
+			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
+			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'),gettext('Reload page'),true);
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -175,7 +175,7 @@ $document->render();
 			</colgroup>
 			<thead>
 <?php
-				html_titleline2(gtext('UPS Information & Status'));
+				html_titleline2(gettext('UPS Information & Status'));
 ?>
 			</thead>
 			<tbody>
@@ -201,7 +201,7 @@ $document->render();
 			</colgroup>
 			<thead>
 <?php
-				html_titleline2(gtext('UPS Information & Status'));
+				html_titleline2(gettext('UPS Information & Status'));
 ?>
 			</thead>
 			<tbody>
@@ -350,7 +350,7 @@ $document->render();
 					tblrow(gtext('Allow to start UPS from battery'), $ups['ups.start.battery']);
 					tblrow(gtext('UPS coldstarts from battery'), $ups['ups.start.reboot']);
 					html_separator2();
-					html_titleline2(gtext('Incoming Line/Power Information'));
+					html_titleline2(gettext('Incoming Line/Power Information'));
 					tblrow(gtext('Input voltage'), $ups['input.voltage'], 'V');
 					tblrow(gtext('Maximum incoming voltage seen'), $ups['input.voltage.maximum'], 'V');
 					tblrow(gtext('Minimum incoming voltage seen'), $ups['input.voltage.minimum'], 'V');
@@ -377,7 +377,7 @@ $document->render();
 					tblrow(gtext('Low voltage trimming transfer point'), $ups['input.transfer.trim.low'], 'V');
 					tblrow(gtext('High voltage trimming transfer point'), $ups['input.transfer.trim.high'], 'V');
 					html_separator2();
-					html_titleline2(gtext('Outgoing Power/Inverter Information'));
+					html_titleline2(gettext('Outgoing Power/Inverter Information'));
 					tblrow(gtext('Output voltage (V)'), $ups['output.voltage'], 'V');
 					tblrow(gtext('Nominal output voltage (V)'), $ups['output.voltage.nominal'], 'V');
 					tblrow(gtext('Output frequency (Hz)'), $ups['output.frequency'], 'Hz');
@@ -385,7 +385,7 @@ $document->render();
 					tblrow(gtext('Output current (A)'), $ups['output.current'], 'A');
 					tblrow(gtext('Nominal output current (A)'), $ups['output.current.nominal'], 'A');
 					html_separator2();
-					html_titleline2(gtext('Battery Details'));
+					html_titleline2(gettext('Battery Details'));
 					tblrow(gtext('Battery level'), $ups['battery.charge'], '%');
 					tblrow(gtext('Battery Remaining level when UPS switches to Shutdown mode (Low Battery)'), $ups['battery.charge.low'], '%');
 					tblrow(gtext('Minimum battery level for UPS restart after power-off'), $ups['battery.charge.restart'], '%');
@@ -406,7 +406,7 @@ $document->render();
 					tblrow(gtext('Prevent deep discharge of battery'), $ups['battery.protection']);
 					tblrow(gtext('Switch off when running on battery and no/low load'), $ups['battery.energysave']);
 					html_separator2();
-					html_titleline2(gtext('Ambient Conditions From External Probe Equipment'));
+					html_titleline2(gettext('Ambient Conditions From External Probe Equipment'));
 					tblrow(gtext('Ambient temperature (degrees C)'), $ups['ambient.temperature'], ' &deg;C');
 					tblrow(gtext('Temperature alarm (enabled/disabled)'), $ups['ambient.temperature.alarm']);
 					tblrow(gtext('Temperature threshold high (degrees C)'), $ups['ambient.temperature.high'], ' &deg;C');
@@ -420,7 +420,7 @@ $document->render();
 					tblrow(gtext('Maximum relative humidity seen (percent)'), $ups['ambient.humidity.maximum'], '%');
 					tblrow(gtext('Minimum relative humidity seen (percent)'), $ups['ambient.humidity.minimum'], '%');
 					html_separator2();
-					html_titleline2(gtext('Smart Outlet Management'));
+					html_titleline2(gettext('Smart Outlet Management'));
 					tblrow('[Main] Outlet system identifier', $ups['outlet.id']);
 					tblrow('[Main] Outlet description', $ups['outlet.desc']);
 					tblrow('[Main] Outlet switch control (on/off)', $ups['outlet.switch']);
@@ -454,18 +454,18 @@ $document->render();
 						tblrow('['.$i.'] Apparent power (VA)', $ups['outlet.'.$i.'.power'], 'VA');
 					endfor;
 					html_separator2();
-					html_titleline2(gtext('NUT Internal Driver Information'));
+					html_titleline2(gettext('NUT Internal Driver Information'));
 					tblrow(gtext('Driver used'), $ups['driver.name']);
 					tblrow(gtext('Driver version'), $ups['driver.version']);
 					tblrow(gtext('Driver version internal'), $ups['driver.version.internal']);
 					tblrow(gtext('Parameter xxx (ups.conf or cmdline -x) setting'), $ups['driver.parameter.xxx']);
 					tblrow(gtext('Flag xxx (ups.conf or cmdline -x) status'), $ups['driver.flag.xxx']);
 					html_separator2();
-					html_titleline2(gtext('Internal Server Information'));
+					html_titleline2(gettext('Internal Server Information'));
 					tblrow(gtext('Server information'), $ups['server.info']);
 					tblrow(gtext('Server version'), $ups['server.version']);
 					html_separator2();
-					html_titleline_checkbox2('raw_upsc_enable','NUT',$upsc_enable ? true : false,(gtext('Show RAW UPS Info')),'upsc_enable_change()');
+					html_titleline_checkbox2('raw_upsc_enable','NUT',$upsc_enable ? true : false,(gettext('Show RAW UPS Info')),'upsc_enable_change()');
 					tblrow(gtext('RAW info'),htmlspecialchars($read), 'pre', 'upsc_raw_command');
 					unset($handle);
 					unset($read);
