@@ -72,7 +72,7 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('RAID 0/1/5 Information & Status'));
+			html_titleline2(gettext('RAID 0/1/5 Information & Status'));
 ?>
 		</thead>
 		<tbody>
