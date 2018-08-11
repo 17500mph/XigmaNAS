@@ -31,36 +31,33 @@
 	of the authors and should not be interpreted as representing official policies
 	of XigmaNAS, either expressed or implied.
 */
-// Configure page permission
+//	Configure page permission
 $pgperm['allowuser'] = true;
 
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
-$pgtitle = [gtext('Help'),gtext('Release Notes')];
-?>
-<?php include 'fbegin.inc';?>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-			<?php html_titleline2(gtext('Release Notes'));?>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="celltag"><?=gtext('Information');?></td>
-				<td class="celldata">
-					<?php 
-					unset($rawdata);
-					exec("/bin/cat {$g['www_path']}/CHANGES", $rawdata);
-					?>
-					<pre><?php echo htmlspecialchars(implode("\n", $rawdata));?></pre>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</td></tr></tbody></table>
-<?php include 'fend.inc';?>
+$cmd = sprintf('/bin/cat %s/CHANGES',$g['www_path']);
+unset($rawdata);
+exec($cmd,$rawdata);
+$pgtitle = [gettext('Help'),gettext('Release Notes')];
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	create data area
+$pagecontent->
+	add_area_data()->
+		add_table_data_settings()->
+			push()->
+			ins_colgroup_data_settings()->
+			addTHEAD()->
+				c2_titleline(gettext('Release Notes'))->
+			pop()->
+			addTBODY()->
+				addTR()->
+					insTDwC('celltag',gettext('Information'))->
+					addTDwC('celldata')->
+						addElement('pre',['class' => 'cmdoutput'])->
+							addElement('span',[],implode(PHP_EOL,$rawdata));
+$document->render();
