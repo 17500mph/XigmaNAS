@@ -43,8 +43,6 @@ if(is_ajax()):
 	render_ajax($status);
 endif;
 $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID1'),gtext('Information')];
-?>
-<?php
 include 'fbegin.inc';
 ?>
 <script type="text/javascript">
@@ -76,7 +74,7 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('RAID 1 Information & Status'));
+			html_titleline2(gettext('RAID 1 Information & Status'));
 ?>
 		</thead>
 		<tbody>
@@ -91,4 +89,3 @@ $(document).ready(function(){
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
