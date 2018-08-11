@@ -196,9 +196,8 @@ function get_HostName($mac, $ip) {
 		return "";
 }
 $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
-
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_selection">
 		<colgroup>
@@ -209,7 +208,9 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('ARP Tables List'),5);?>
+<?php
+			html_titleline2(gettext('ARP Tables List'),5);
+?>
 			<tr>
 				<th class="lhell"><?=gtext('IP Address');?></th>
 				<th class="lhell"><?=gtext('MAC Address');?></th>
@@ -219,7 +220,10 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 			</tr>
 		</thead>
 		<tbody>
-			<?php $i = 0; foreach ($data as $entry): ?>
+<?php
+			$i = 0;
+			foreach ($data as $entry):
+?>
 				<tr>
 					<td class="lcell"><?=htmlspecialchars($entry['ip']);?></td>
 					<td class="lcell"><?=htmlspecialchars($entry['mac']);?></td>
@@ -235,7 +239,10 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php $i++; endforeach; ?>
+<?php
+				$i++;
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -245,13 +252,14 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 		</tfoot>
 	</table>
 	<div id="remarks">
-		<?php
+<?php
 		$helpinghand =  
 			gtext('IP addresses are resolved to hostnames when the following option is enabled:') .
 			' ' .
 			'<a href="' . 'diag_log_settings.php' . '">' . gtext('Resolve IP addresses to hostnames.') . '</a>';
 		html_remark("hint", gtext('Hint'), $helpinghand);
-		?>
+?>
 	</div>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
