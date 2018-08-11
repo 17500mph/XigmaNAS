@@ -172,13 +172,13 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		push()->add_tabnav_upper()->
-			ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('disks_manage.php',gettext('HDD Management'))->
+			ins_tabnav_record('disks_init.php',gettext('HDD Format'))->
+			ins_tabnav_record('disks_manage_smart.php',gettext('S.M.A.R.T.'),gettext('Reload Page'),true)->
+			ins_tabnav_record('disks_manage_iscsi.php',gettext('iSCSI Initiator'))->
 		pop()->add_tabnav_lower()->
-			ins_tabnav_record('disks_manage_smart.php',gtext('Settings'),gtext('Reload Page'),true)->
-			ins_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'));
+			ins_tabnav_record('disks_manage_smart.php',gettext('Settings'),gettext('Reload Page'),true)->
+			ins_tabnav_record('smartmontools_umass.php',gettext('USB Mass Storage Devices'));
 $document->render();
 ?>
 <form action="disks_manage_smart.php" method="post" name="iform" id="iform" onsubmit="spinner()"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -218,30 +218,30 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('Self-Monitoring, Analysis & Reporting Technology'),!empty($pconfig['enable']) ? true : false,gtext('Enable'),'enable_change(this)');
+			html_titleline_checkbox2('enable',gettext('Self-Monitoring, Analysis & Reporting Technology'),!empty($pconfig['enable']) ? true : false,gettext('Enable'),'enable_change(this)');
 ?>
 		</thead>
 		<tbody>
 <?php
 
-			html_inputbox2('interval',gtext('Interval'),$pconfig['interval'],gtext('Set interval between disk checks to N seconds. The minimum allowed value is 10.'),true,5);
+			html_inputbox2('interval',gettext('Interval'),$pconfig['interval'],gettext('Set interval between disk checks to N seconds. The minimum allowed value is 10.'),true,5);
 			$l_powermode = [
-				'never' => gtext('Never - Poll (check) the device regardless of its power mode. This may cause a disk which is spun-down to be spun-up when it is checked.'),
-				'sleep' => gtext('Sleep - Check the device unless it is in SLEEP mode.'),
-				'standby' => gtext('Standby - Check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a laptop disk from spinning up each poll, this is probably what you want.'),
-				'idle' => gtext('Idle - Check the device unless it is in SLEEP, STANDBY or IDLE mode. In the IDLE state, most disks are still spinning, so this is probably not what you want.')
+				'never' => gettext('Never - Poll (check) the device regardless of its power mode. This may cause a disk which is spun-down to be spun-up when it is checked.'),
+				'sleep' => gettext('Sleep - Check the device unless it is in SLEEP mode.'),
+				'standby' => gettext('Standby - Check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a laptop disk from spinning up each poll, this is probably what you want.'),
+				'idle' => gettext('Idle - Check the device unless it is in SLEEP, STANDBY or IDLE mode. In the IDLE state, most disks are still spinning, so this is probably not what you want.')
 			];
-			html_radiobox2('powermode',gtext('Power Mode'),$pconfig['powermode'],$l_powermode,'',false,false);
+			html_radiobox2('powermode',gettext('Power Mode'),$pconfig['powermode'],$l_powermode,'',false,false);
 			html_separator2();
-			html_titleline2(gtext('Default Device Settings'));
-			html_checkbox2('enablesmartmonondevice',gtext('S.M.A.R.T. Monitoring'),!empty($pconfig['enablesmartmonondevice']) ? true : false,gtext('Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are added to the configuration.'));
+			html_titleline2(gettext('Default Device Settings'));
+			html_checkbox2('enablesmartmonondevice',gettext('S.M.A.R.T. Monitoring'),!empty($pconfig['enablesmartmonondevice']) ? true : false,gettext('Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are added to the configuration.'));
 			html_separator2();
-			html_titleline2(gtext('Temperature Monitoring'));
-			html_inputbox2('temp_diff',gtext('Difference'),htmlspecialchars($pconfig['temp_diff']),gtext('Report if the temperature had changed by at least N degrees Celsius since last report. Set to 0 to disable this report.'),true,5);
-			html_inputbox2('temp_info',gtext('Informal'),htmlspecialchars($pconfig['temp_info']),gtext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
-			html_inputbox2('temp_crit',gtext('Critical'),htmlspecialchars($pconfig['temp_crit']),gtext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
+			html_titleline2(gettext('Temperature Monitoring'));
+			html_inputbox2('temp_diff',gettext('Difference'),htmlspecialchars($pconfig['temp_diff']),gettext('Report if the temperature had changed by at least N degrees Celsius since last report. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_info',gettext('Informal'),htmlspecialchars($pconfig['temp_info']),gettext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_crit',gettext('Critical'),htmlspecialchars($pconfig['temp_crit']),gettext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
 			html_separator2();
-			html_titleline2(gtext('Self-Test Schedules'));
+			html_titleline2(gettext('Self-Test Schedules'));
 ?>
 			<tr>
 				<td class="celltag"><?=gtext('Scheduled Tests');?></td>
@@ -312,9 +312,9 @@ $document->render();
 			</tr>
 <?php
 			html_separator2();
-			html_titleline_checkbox2('email_enable',gtext('Email Report'),!empty($pconfig['email_enable']) ? true : false,gtext('Activate'),'enable_change(this)');
-			html_inputbox2('email_to',gtext('To Email Address'),!empty($pconfig['email_to']) ? $pconfig['email_to'] : '',sprintf('%s %s',gtext('Destination email address.'),gtext('Separate email addresses by semi-colon.')),true,60);
-			html_checkbox2('email_testemail',gtext('Test Email'),!empty($pconfig['email_testemail']) ? true : false,gtext('Send a TEST warning email on startup.'));
+			html_titleline_checkbox2('email_enable',gettext('Email Report'),!empty($pconfig['email_enable']) ? true : false,gettext('Activate'),'enable_change(this)');
+			html_inputbox2('email_to',gettext('To Email Address'),!empty($pconfig['email_to']) ? $pconfig['email_to'] : '',sprintf('%s %s',gettext('Destination email address.'),gettext('Separate email addresses by semi-colon.')),true,60);
+			html_checkbox2('email_testemail',gettext('Test Email'),!empty($pconfig['email_testemail']) ? true : false,gettext('Send a TEST warning email on startup.'));
 ?>
 		</tbody>		
 	</table>
@@ -323,7 +323,7 @@ $document->render();
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext('Activate email report if you want to be notified if a failure or a new error has been detected, or if a S.M.A.R.T. command to a disk fails.'));
+		html_remark2('note',gettext('Note'),gettext('Activate email report if you want to be notified if a failure or a new error has been detected, or if a S.M.A.R.T. command to a disk fails.'));
 ?>
 	</div>
 <?php
