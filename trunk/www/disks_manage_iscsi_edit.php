@@ -131,10 +131,10 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'),gtext('Reload page'),true);
+			ins_tabnav_record('disks_manage.php',gettext('HDD Management'))->
+			ins_tabnav_record('disks_init.php',gettext('HDD Format'))->
+			ins_tabnav_record('disks_manage_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('disks_manage_iscsi.php',gettext('iSCSI Initiator'),gtext('Reload page'),true);
 $document->
 	render();
 ?>
@@ -151,15 +151,15 @@ $document->
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('iSCSI Initiator Settings'));
+			html_titleline2(gettext('iSCSI Initiator Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-		html_inputbox2('name',gtext('Name'),$pconfig['name'],gtext('This is for information only. (not used during iSCSI negotiation).'),true,20);
-		html_inputbox2('initiatorname',gtext('Initiator Name'),$pconfig['initiatorname'],gtext('This name is for example: iqn.2005-01.il.ac.huji.cs:somebody.'),true,60);
-		html_inputbox2('targetname',gtext('Target Name'),$pconfig['targetname'],sprintf(gtext('This name is for example: %s.'),$ex_iscsitarget),true,60);
-		html_inputbox2('targetaddress',gtext('Target Address'),$pconfig['targetaddress'],gtext('Enter the IP address or DNS name of the iSCSI target.'),true,20);
+		html_inputbox2('name',gettext('Name'),$pconfig['name'],gettext('This is for information only. (not used during iSCSI negotiation).'),true,20);
+		html_inputbox2('initiatorname',gettext('Initiator Name'),$pconfig['initiatorname'],gettext('This name is for example: iqn.2005-01.il.ac.huji.cs:somebody.'),true,60);
+		html_inputbox2('targetname',gettext('Target Name'),$pconfig['targetname'],sprintf(gettext('This name is for example: %s.'),$ex_iscsitarget),true,60);
+		html_inputbox2('targetaddress',gettext('Target Address'),$pconfig['targetaddress'],gettext('Enter the IP address or DNS name of the iSCSI target.'),true,20);
 ?>
 		</tbody>
 	</table>
