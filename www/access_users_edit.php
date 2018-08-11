@@ -223,16 +223,16 @@ $(window).on("load",function() {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('User Settings'));
+			html_titleline2(gettext('User Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
 
-			html_inputbox2('login',gtext('Name'),$pconfig['login'],gtext('Enter login name of the user.'),true,28,isset($uuid) && (false !== $cnid),false,0,gtext('Enter login name'));
-			html_inputbox2('fullname',gtext('Full Name'),$pconfig['fullname'],gtext('Enter full name of the user.'),true,28,false,false,0,gtext('Enter full user name'));
-			html_passwordconfbox2('password','passwordconf',gtext('Password'),'','',gtext('Set or reset user password.'),($mode_page === PAGE_MODE_ADD));
-			html_inputbox2('userid',gtext('User ID'),$pconfig['userid'],gtext('User numeric id.'),true,12,isset($uuid) && (false !== $cnid));
+			html_inputbox2('login',gettext('Name'),$pconfig['login'],gettext('Enter login name of the user.'),true,28,isset($uuid) && (false !== $cnid),false,0,gettext('Enter login name'));
+			html_inputbox2('fullname',gettext('Full Name'),$pconfig['fullname'],gettext('Enter full name of the user.'),true,28,false,false,0,gettext('Enter full user name'));
+			html_passwordconfbox2('password','passwordconf',gettext('Password'),'','',gettext('Set or reset user password.'),($mode_page === PAGE_MODE_ADD));
+			html_inputbox2('userid',gettext('User ID'),$pconfig['userid'],gettext('User numeric id.'),true,12,isset($uuid) && (false !== $cnid));
 			$l_shell = [
 				'nologin' => 'nologin',
 				'scponly' => 'scponly',
@@ -241,15 +241,15 @@ $(window).on("load",function() {
 				'csh' => 'csh',
 				'tcsh' => 'tcsh'
 			];
-			html_radiobox2('shell',gtext('Shell'),$pconfig['shell'],$l_shell,gtext('Set user login shell.'),true);
+			html_radiobox2('shell',gettext('Shell'),$pconfig['shell'],$l_shell,gettext('Set user login shell.'),true);
 			$l_grouplist = [];
 			foreach($a_group as $groupk => $groupv):
 				$l_grouplist[$groupv] = $groupk;
 			endforeach;
-			html_combobox2('primarygroup',gtext('Primary Group'),$pconfig['primarygroup'],$l_grouplist,gtext("Set the account's primary group to the given group."),true);
-			html_listbox2('group',gtext('Additional Group'),!empty($pconfig['group']) ? $pconfig['group'] : [],$l_grouplist,gtext('Set additional group memberships for this account.')."<br />".gtext('Note: Ctrl-click (or command-click on the Mac) to select and deselect groups.'));
-			html_filechooser2('homedir',gtext('Home Directory'),$pconfig['homedir'],gtext('Enter the path to the home directory of that user. Leave this field empty to use default path /mnt.'),$g['media_path'],false,60);
-			html_checkbox2('userportal',gtext('User Portal'),!empty($pconfig['userportal']) ? true : false,gtext('Grant access to the user portal.'),'',false);
+			html_combobox2('primarygroup',gettext('Primary Group'),$pconfig['primarygroup'],$l_grouplist,gettext("Set the account's primary group to the given group."),true);
+			html_listbox2('group',gettext('Additional Group'),!empty($pconfig['group']) ? $pconfig['group'] : [],$l_grouplist,gettext('Set additional group memberships for this account.')."<br />".gettext('Note: Ctrl-click (or command-click on the Mac) to select and deselect groups.'));
+			html_filechooser2('homedir',gettext('Home Directory'),$pconfig['homedir'],gettext('Enter the path to the home directory of that user. Leave this field empty to use default path /mnt.'),$g['media_path'],false,60);
+			html_checkbox2('userportal',gettext('User Portal'),!empty($pconfig['userportal']) ? true : false,gettext('Grant access to the user portal.'),'',false);
 ?>
 		</tbody>
 	</table>
@@ -264,4 +264,3 @@ $(window).on("load",function() {
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
