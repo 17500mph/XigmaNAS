@@ -48,7 +48,7 @@ function render_set_start() {
 function render_command_and_execute($subcommand,$a_param = [],$b_exec = true) {
 	$param = implode(' ',$a_param);
 	$output = sprintf('%1$s %2$s %3$s','zpool',$subcommand,$param);
-	html_text2('syscommand',gtext('Command'),$output);
+	html_text2('syscommand',gettext('Command'),$output);
 	echo '<tr>',PHP_EOL,'<td class="celltag">',gtext('Output'),'</td><td class="celldata"><pre>';
 	if($b_exec):
 		$result = zfs_zpool_cmd($subcommand,$param,true);
@@ -72,28 +72,28 @@ function render_command_result($result = 0,$render_success = true,$render_error 
 	switch($result):
 		case 0:
 			if($render_success):
-				html_text2('success',gtext('Success'),gtext('Command execution was successful'));
+				html_text2('success',gettext('Success'),gettext('Command execution was successful'));
 			endif;
 			break;
 		case 2:
 			if($render_error):
-				html_text2('error',gtext('Error'),gtext('Invalid command line option'));
+				html_text2('error',gettext('Error'),gettext('Invalid command line option'));
 			endif;
 			break;
 		case 7: // test mode
 			if($render_success):
-				html_text2('success',gtext('Success'),gtext('Test mode, no command execution'));
+				html_text2('success',gettext('Success'),gettext('Test mode, no command execution'));
 			endif;
 			break;
 		case 15: // rendering problem, rendering function reported no items
 			if($render_error):
-				html_text2('error',gtext('Error'),gtext('Missing parameter'));
+				html_text2('error',gettext('Error'),gettext('Missing parameter'));
 			endif;
 			break;
 //		case 1:
 		default:
 			if($render_error):
-				html_text2('error',gtext('Error'),gtext('An error occured.'));
+				html_text2('error',gettext('Error'),gettext('An error occured.'));
 			endif;
 			break;
 	endswitch;
@@ -141,7 +141,7 @@ function render_activity_view($gt_activity_longname) {
  * Displays the activity
  * Embedded in the body of a table with 2 columns
  */
-	html_text2('sysactivity',gtext('Activity'),$gt_activity_longname);
+	html_text2('sysactivity',gettext('Activity'),$gt_activity_longname);
 	return true;
 }
 function render_option_view($gt_option_name) {
@@ -149,7 +149,7 @@ function render_option_view($gt_option_name) {
  * Displays the name of the selected option
  * Embedded in the body of a table with 2 columns
  */
-	html_text2('sysoption',gtext('Option'),$gt_option_name);
+	html_text2('sysoption',gettext('Option'),$gt_option_name);
 	return true;
 }
 function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
@@ -247,7 +247,7 @@ function render_pool_view($selected_items = []) { // $item can be an array or a 
 	if(is_array($selected_items)):
 		if(1 < count($selected_items)):
 			$last = array_pop($selected_items);
-			$content = sprintf('%s %s %s',implode(', ',$selected_items),gtext('and'),$last);
+			$content = sprintf('%s %s %s',implode(', ',$selected_items),gettext('and'),$last);
 		else:
 			$content = implode(' ',$selected_items);
 		endif;
@@ -257,12 +257,12 @@ function render_pool_view($selected_items = []) { // $item can be an array or a 
 		$content = '';
 	endif;
 	if(preg_match('/\S/',$content)):
-		$output = htmlspecialchars($content);
+		$output = $content;
 	else:
 		$b_ret = false;
-		$output = gtext('No pools have been selected');
+		$output = gettext('No pools have been selected');
 	endif;
-	html_text2('syspool',gtext('Pools'),$output);
+	html_text2('syspool',gettext('Pools'),$output);
 	return $b_ret;
 }
 function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = []) {
@@ -373,7 +373,7 @@ function render_pooldev_view($items = []) { // $items can be an array or a strin
 	if(is_array($items)):
 		if(1 < count($items)):
 			$last = array_pop($items);
-			$content = sprintf('%s %s %s',implode(', ',$items),gtext('and'),$last);
+			$content = sprintf('%s %s %s',implode(', ',$items),gettext('and'),$last);
 		else:
 			$content = implode(' ',$items);
 		endif;
@@ -383,12 +383,12 @@ function render_pooldev_view($items = []) { // $items can be an array or a strin
 		$content = '';
 	endif;
 	if(preg_match('/\S/',$content)):
-		$output = htmlspecialchars($content);
+		$output = $content;
 	else:
 		$b_ret = false;
-		$output = gtext('No pool devices have been selected');
+		$output = gettext('No pool devices have been selected');
 	endif;
-	html_text2('syspooldev',gtext('Pool Devices'),$output);
+	html_text2('syspooldev',gettext('Pool Devices'),$output);
 	return $b_ret;
 }
 function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []) {
@@ -480,7 +480,7 @@ function render_newvdev_view($items = []) { // $items can be an array or a strin
 	if(is_array($items)):
 		if(1 < count($items)):
 			$last = array_pop($items);
-			$content = sprintf('%s %s %s',implode(', ',$items),gtext('and'),$last);
+			$content = sprintf('%s %s %s',implode(', ',$items),gettext('and'),$last);
 		else:
 			$content = implode(' ',$items);
 		endif;
@@ -490,12 +490,12 @@ function render_newvdev_view($items = []) { // $items can be an array or a strin
 		$content = '';
 	endif;
 	if(preg_match('/\S/',$content)):
-		$output = htmlspecialchars($content);
+		$output = $content;
 	else:
 		$b_ret = false;
-		$output = gtext('No virtual devices have been selected');
+		$output = gettext('No virtual devices have been selected');
 	endif;
-	html_text2('sysvdev',gtext('Virtual Devices'),$output);
+	html_text2('sysvdev',gettext('Virtual Devices'),$output);
 	return $b_ret;
 }
 function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) {
@@ -587,7 +587,7 @@ function render_newdev_view($items = []) { // $items can be an array or a string
 	if(is_array($items)):
 		if(1 < count($items)):
 			$last = array_pop($items);
-			$content = sprintf('%s %s %s',implode(', ',$items),gtext('and'),$last);
+			$content = sprintf('%s %s %s',implode(', ',$items),gettext('and'),$last);
 		else:
 			$content = implode(' ',$items);
 		endif;
@@ -597,12 +597,12 @@ function render_newdev_view($items = []) { // $items can be an array or a string
 		$content = '';
 	endif;
 	if(preg_match('/\S/',$content)):
-		$output = htmlspecialchars($content);
+		$output = $content;
 	else:
 		$b_ret = false;
-		$output = gtext('No devices have been selected');
+		$output = gettext('No devices have been selected');
 	endif;
-	html_text2('sysvdevice',gtext('Devices'),$output);
+	html_text2('sysvdevice',gettext('Devices'),$output);
 	return $b_ret;
 }
 function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
@@ -873,7 +873,7 @@ class co_zpool_flags extends co_zpool_flag_base {
 		endif;
 		if(1 < count($a_output)):
 			$last = array_pop($a_output);
-			$output = sprintf('%s %s %s',implode(', ',$a_output),gtext('and'),$last);
+			$output = sprintf('%s %s %s',implode(', ',$a_output),gettext('and'),$last);
 		else:
 			$output = implode(', ',$a_output);
 		endif;
