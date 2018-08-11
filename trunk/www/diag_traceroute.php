@@ -87,18 +87,18 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Traceroute Host'));
+			html_titleline2(gettext('Traceroute Host'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('target',gtext('Target'),$target,gtext('Enter hostname or IP address.'),true,32);
-			html_checkbox2('resolve',gtext('Resolve IP'),$resolve ? true : false,gtext('Resolve IP addresses to hostnames.'),'',false);
+			html_inputbox2('target',gettext('Target'),$target,gettext('Enter hostname or IP address.'),true,32);
+			html_checkbox2('resolve',gettext('Resolve IP'),$resolve ? true : false,gettext('Resolve IP addresses to hostnames.'),'',false);
 			$a_max_ttl = [];
 			for($i = 1;$i <= 64;$i++):
 				$a_max_ttl[$i] = $i;
 			endfor;
-			html_combobox2('max_ttl',gtext('Count'),$max_ttl,$a_max_ttl,gtext('Select max time-to-live (max number of hops) used in outgoing probe packets.'),true);
+			html_combobox2('max_ttl',gettext('Count'),$max_ttl,$a_max_ttl,gettext('Select max time-to-live (max number of hops) used in outgoing probe packets.'),true);
 ?>
 		</tbody>
 	</table>
@@ -107,7 +107,7 @@ include 'fbegin.inc';
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext('Traceroute may take a while, please be patient.'));
+		html_remark2('note',gettext('Note'),gettext('Traceroute may take a while, please be patient.'));
 ?>
 	</div>
 <?php
@@ -120,7 +120,7 @@ include 'fbegin.inc';
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('Traceroute Output'));
+				html_titleline2(gettext('Traceroute Output'));
 ?>
 			</thead>
 			<tbody><tr>
