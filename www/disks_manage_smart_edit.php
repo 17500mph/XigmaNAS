@@ -108,7 +108,7 @@ if($_POST):
 	endif;
 endif;
 $l_devicespecialfiles = [];
-$l_devicespecialfiles[''] = gtext('Must choose one');
+$l_devicespecialfiles[''] = gettext('Must choose one');
 $use_si = is_sidisksizevalues();
 foreach($a_disk as $r_disk):
 	if(0 == strcmp($r_disk['size'],'NA')):
@@ -122,13 +122,13 @@ foreach($a_disk as $r_disk):
 	endif;
 	$diskinfo = disks_get_diskinfo($r_disk['devicespecialfile']);
 	$helpinghand = format_bytes($diskinfo['mediasize_bytes'],2,true,$use_si);
-	$l_devicespecialfiles[$r_disk['devicespecialfile']] = htmlspecialchars(sprintf('%s: %s (%s)',$r_disk['name'],$helpinghand,$r_disk['desc']));
+	$l_devicespecialfiles[$r_disk['devicespecialfile']] = sprintf('%s: %s (%s)',$r_disk['name'],$helpinghand,$r_disk['desc']);
 endforeach;
 $l_types = [
-	'S' => gtext('Short Self-Test'),
-	'L' => gtext('Long Self-Test'),
-	'C' => gtext('Conveyance Self-Test'),
-	'O' => gtext('Offline Immediate Test')
+	'S' => gettext('Short Self-Test'),
+	'L' => gettext('Long Self-Test'),
+	'C' => gettext('Conveyance Self-Test'),
+	'O' => gettext('Offline Immediate Test')
 ];
 $pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('Scheduled Self-Test'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 include 'fbegin.inc';
@@ -166,13 +166,13 @@ function set_selected(name) {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Scheduled Self-Test Settings'));
+			html_titleline2(gettext('Scheduled Self-Test Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_combobox2('devicespecialfile',gtext('Disk'),$pconfig['devicespecialfile'],$l_devicespecialfiles,gtext('Select a disk that is enabled for S.M.A.R.T. monitoring.'),true);
-			html_radiobox2('type',gtext('Type'),$pconfig['type'],$l_types,'',true);
+			html_combobox2('devicespecialfile',gettext('Disk'),$pconfig['devicespecialfile'],$l_devicespecialfiles,gettext('Select a disk that is enabled for S.M.A.R.T. monitoring.'),true);
+			html_radiobox2('type',gettext('Type'),$pconfig['type'],$l_types,'',true);
 ?>
 			<tr>
 				<td class="celltagreq"><?=gtext('Schedule Time');?></td>
@@ -348,7 +348,7 @@ function set_selected(name) {
 				</td>
 			</tr>
 <?php
-			html_inputbox2('desc',gtext('Description'),htmlspecialchars($pconfig['desc']),'',false,40);
+			html_inputbox2('desc',gettext('Description'),htmlspecialchars($pconfig['desc']),'',false,40);
 ?>
 		</tbody>
 	</table>
