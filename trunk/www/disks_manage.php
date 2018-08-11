@@ -225,7 +225,7 @@ $(window).on("load", function() {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('HDD Management'),11);
+			html_titleline2(gettext('HDD Management'),11);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
@@ -345,7 +345,7 @@ $(window).on("load", function() {
 	</table>
 	<div id="submit">
 		<?=$sphere->html_button_delete_rows();?>
-		<?=html_button('rescanbusses',gtext('Rescan Busses'));?>
+		<?=html_button('rescanbusses',gettext('Rescan Busses'));?>
 	</div>
 	<table class="area_data_settings">
 		<colgroup>
