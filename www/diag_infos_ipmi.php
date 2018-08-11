@@ -110,23 +110,23 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'))->
-			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
-			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
-			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
-			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'),gtext('Reload page'),true)->
-			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
+			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
+			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'),gettext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -140,12 +140,12 @@ $document->render();
 			</colgroup>
 			<thead>
 <?php
-				html_titleline2(gtext('Sensor Information'),9);
+				html_titleline2(gettext('Sensor Information'),9);
 ?>
 			</thead>
 			<tbody>
 <?php
-				html_text2('sensor',gtext('System Message'),gtext('No IPMI Sensor data available.'));
+				html_text2('sensor',gettext('System Message'),gettext('No IPMI Sensor data available.'));
 ?>
 			</tbody>
 		</table>
@@ -166,7 +166,7 @@ $document->render();
 			</colgroup>
 			<thead>
 <?php
-				html_titleline2(gtext('Sensor Information'),9);
+				html_titleline2(gettext('Sensor Information'),9);
 ?>
 				<tr>
 					<td class="lhelc" colspan="3"><?=gtext('Sensor List');?></td>
@@ -202,12 +202,12 @@ $document->render();
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('FRU Information'),2);
+				html_titleline2(gettext('FRU Information'),2);
 ?>
 			</thead>
 			<tbody>
 <?php
-				html_text2('sensor',gtext('System Message'),gtext('No IPMI FRU data available.'));
+				html_text2('sensor',gettext('System Message'),gettext('No IPMI FRU data available.'));
 ?>
 			</tbody>
 		</table>
@@ -222,7 +222,7 @@ $document->render();
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('FRU Information'),2);
+				html_titleline2(gettext('FRU Information'),2);
 ?>
 				<tr>
 					<td class="lhell"><?=gtext('Tag');?></td>
