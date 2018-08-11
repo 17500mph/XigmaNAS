@@ -291,20 +291,20 @@ foreach($a_interface as $k_interface => $ifinfo):
 endforeach;
 //	list of container types
 $l_container = [
-	'.' => gtext('Standard'),
-	'B' => gtext('Browse Directory'),
-	'M' => gtext('Music'),
-	'V' => gtext('Video'),
-	'P' => gtext('Pictures')
+	'.' => gettext('Standard'),
+	'B' => gettext('Browse Directory'),
+	'M' => gettext('Music'),
+	'V' => gettext('Video'),
+	'P' => gettext('Pictures')
 ];
 //	list of log levels
 $l_loglevel = [
-	'off' => gtext('Off'),
-	'fatal' => gtext('Fatal'),
-	'error' => gtext('Error'),
-	'warn' => gtext('Warning'),
-	'info' => gtext('Info'),
-	'debug' => gtext('Debug')
+	'off' => gettext('Off'),
+	'fatal' => gettext('Fatal'),
+	'error' => gettext('Error'),
+	'warn' => gettext('Warning'),
+	'info' => gettext('Info'),
+	'debug' => gettext('Debug')
 ];
 //	identifiy enabled DLNA services
 $dlna_count = 0;
@@ -388,10 +388,10 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_titleline2(gtext('MiniDLNA A/V Media Server'));
+					html_titleline2(gettext('MiniDLNA A/V Media Server'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('MiniDLNA A/V Media Server'),$sphere->row['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gettext('MiniDLNA A/V Media Server'),$sphere->row['enable'],gettext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -400,42 +400,42 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_textinfo2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
-					html_textinfo2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
-					html_textinfo2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
-					html_textinfo2('notify_int',gtext('Broadcast Interval'), htmlspecialchars($sphere->row['notify_int']));
-					html_textinfo2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
-					$helpinghand = implode("\n",$sphere->row['content']);
-					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
-					html_checkbox2('inotify',gtext('Inotify'),$sphere->row['inotify'],'','',false,true);
-					html_textinfo2('container',gtext('Container'),$l_container[$sphere->row['container']] ?? '');
-					html_checkbox2('strict',gtext('Strict DLNA'),$sphere->row['strict'],'','',false,true);
-					html_checkbox2('tivo',gtext('TiVo Support'),$sphere->row['tivo'],'','',false,true);
-					html_textinfo2('loglevel',gtext('Log Level'),$l_loglevel[$sphere->row['loglevel']] ?? '');
+					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
+					html_textinfo2('name',gettext('Name'),$sphere->row['name']);
+					html_textinfo2('if',gettext('Interface Selection'),$sphere->row['if']);
+					html_textinfo2('port',gettext('Port'),$sphere->row['port']);
+					html_textinfo2('notify_int',gettext('Broadcast Interval'),$sphere->row['notify_int']);
+					html_textinfo2('home',gettext('Database Directory'),$sphere->row['home']);
+					$helpinghand = implode(PHP_EOL,$sphere->row['content']);
+					html_textarea2('content',gettext('Content Locations'),$helpinghand,'',false,67,5,true,false);
+					html_checkbox2('inotify',gettext('Inotify'),$sphere->row['inotify'],'','',false,true);
+					html_textinfo2('container',gettext('Container'),$l_container[$sphere->row['container']] ?? '');
+					html_checkbox2('strict',gettext('Strict DLNA'),$sphere->row['strict'],'','',false,true);
+					html_checkbox2('tivo',gettext('TiVo Support'),$sphere->row['tivo'],'','',false,true);
+					html_textinfo2('loglevel',gettext('Log Level'),$l_loglevel[$sphere->row['loglevel']] ?? '');
 					break;
 				case PAGE_MODE_EDIT:
-					html_inputbox2('name',gtext('Name'),$sphere->row['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
-					html_combobox2('if',gtext('Interface Selection'),$sphere->row['if'],$l_interfaces,gtext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
-					html_inputbox2('port',gtext('Port'),$sphere->row['port'],sprintf(gtext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535, 8200),true,5);
-					html_inputbox2('notify_int',gtext('Broadcast Interval'),$sphere->row['notify_int'],gtext('Broadcasts its availability every N seconds on the network. (Default 300 seconds)'),true,5);
-					html_filechooser2('home',gtext('Database Directory'),$sphere->row['home'],gtext('Location of the media content database.'),$g['media_path'],true,67);
-					html_minidlnabox2('content',gtext('Content Locations'),$sphere->row['content'],gtext('Manage content locations.'),$g['media_path'],true);
-					html_checkbox2('inotify',gtext('Inotify'),$sphere->row['inotify'],gtext('Enable inotify.'),gtext('Use inotify monitoring to automatically discover new files.'),false);
-					html_combobox2('container',gtext('Container'),$sphere->row['container'],$l_container,gtext('Use different container as root of the tree.'),false,false,'');
-					html_checkbox2('strict',gtext('Strict DLNA'),$sphere->row['strict'],gtext('Enable to strictly adhere to DLNA standards.'),gtext('This will allow server-side downscaling of very large JPEG images, it can impact JPEG serving performance on some DLNA products.'),false);
-					html_checkbox2('tivo',gtext('TiVo Support'),$sphere->row['tivo'],gtext('Enable TiVo support.'),gtext('This will support streaming .jpg and .mp3 files to a TiVo supporting HMO.'),false);
-					html_combobox2('loglevel',gtext('Log Level'),$sphere->row['loglevel'],$l_loglevel,'',false,false,'');
+					html_inputbox2('name',gettext('Name'),$sphere->row['name'],gettext('Give your media library a friendly name.'),true,35,false,false,35,gettext('Media server name'));
+					html_combobox2('if',gettext('Interface Selection'),$sphere->row['if'],$l_interfaces,gettext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
+					html_inputbox2('port',gettext('Port'),$sphere->row['port'],sprintf(gettext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535, 8200),true,5);
+					html_inputbox2('notify_int',gettext('Broadcast Interval'),$sphere->row['notify_int'],gettext('Broadcasts its availability every N seconds on the network. (Default 300 seconds)'),true,5);
+					html_filechooser2('home',gettext('Database Directory'),$sphere->row['home'],gettext('Location of the media content database.'),$g['media_path'],true,67);
+					html_minidlnabox2('content',gettext('Content Locations'),$sphere->row['content'],gettext('Manage content locations.'),$g['media_path'],true);
+					html_checkbox2('inotify',gettext('Inotify'),$sphere->row['inotify'],gettext('Enable inotify.'),gettext('Use inotify monitoring to automatically discover new files.'),false);
+					html_combobox2('container',gettext('Container'),$sphere->row['container'],$l_container,gettext('Use different container as root of the tree.'),false,false,'');
+					html_checkbox2('strict',gettext('Strict DLNA'),$sphere->row['strict'],gettext('Enable to strictly adhere to DLNA standards.'),gettext('This will allow server-side downscaling of very large JPEG images, it can impact JPEG serving performance on some DLNA products.'),false);
+					html_checkbox2('tivo',gettext('TiVo Support'),$sphere->row['tivo'],gettext('Enable TiVo support.'),gettext('This will support streaming .jpg and .mp3 files to a TiVo supporting HMO.'),false);
+					html_combobox2('loglevel',gettext('Log Level'),$sphere->row['loglevel'],$l_loglevel,'',false,false,'');
 					break;
 			endswitch;
 			if($dlna_option & 1):
 				html_separator2();
-				html_titleline2(gtext('MiniDLNA Media Server WebGUI'));
+				html_titleline2(gettext('MiniDLNA Media Server WebGUI'));
 				$if = get_ifname($sphere->row['if']);
 				$ipaddr = get_ipaddr($if);
 				$url = sprintf('http://%s:%s/status',htmlspecialchars($ipaddr),htmlspecialchars($sphere->row['port']));
 				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
-				html_textinfo2('url',gtext('URL'),$text);
+				html_textinfo2('url',gettext('URL'),$text);
 			endif;
 ?>
 		</tbody>
@@ -444,19 +444,19 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gtext('Edit'));
+				echo $sphere->html_button('edit',gettext('Edit'));
 				if($dlna_option & 1):
-					echo $sphere->html_button('rescan',gtext('Rescan'));
+					echo $sphere->html_button('rescan',gettext('Rescan'));
 				endif;
 				if($sphere->row['enable']):
-					echo $sphere->html_button('disable',gtext('Disable'));
+					echo $sphere->html_button('disable',gettext('Disable'));
 				else:
-					echo $sphere->html_button('enable',gtext('Enable'));
+					echo $sphere->html_button('enable',gettext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo $sphere->html_button('save',gtext('Apply'));
-				echo $sphere->html_button('cancel',gtext('Cancel'));
+				echo $sphere->html_button('save',gettext('Apply'));
+				echo $sphere->html_button('cancel',gettext('Cancel'));
 				break;
 		endswitch;
 ?>
@@ -467,4 +467,3 @@ include 'formend.inc';
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
