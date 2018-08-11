@@ -151,28 +151,26 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	}
 }
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('loader.conf'),$isrecordnew ? gtext('Add') : gtext('Edit')];
-?>
-<?php
 include 'fbegin.inc';
 $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php
+<?php
 	if (!empty($errormsg)) {
 		print_error_box($errormsg);
 	}
@@ -182,21 +180,23 @@ $document->render();
 	if (file_exists($d_sysrebootreqd_path)) {
 		print_info_box(get_std_save_message(0));
 	}
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable', gtext('Configuration'), $sphere_record['enable'], gtext('Enable'));?>
+<?php
+			html_titleline_checkbox2('enable', gettext('Configuration'), $sphere_record['enable'], gettext('Enable'));
+?>
 		</thead>
 		<tbody>
-			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Name of the variable.'), true, 67);
-				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('The value of the variable.'), true, 67);
-				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 67);
-			?>
+<?php
+				html_inputbox2('name', gettext('Name'), $sphere_record['name'], gettext('Name of the variable.'), true, 67);
+				html_inputbox2('value', gettext('Value'), $sphere_record['value'], gettext('The value of the variable.'), true, 67);
+				html_inputbox2('comment', gettext('Comment'), $sphere_record['comment'], gettext('You may enter a description here for your reference.'), false, 67);
+?>
 		</tbody>
 	</table>
 	<div id="submit">
@@ -208,4 +208,5 @@ $document->render();
 	include 'formend.inc';
 ?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';

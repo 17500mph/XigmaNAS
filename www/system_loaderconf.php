@@ -64,19 +64,19 @@ function system_loaderconf_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(true);
-	$sphere->sym_add(gtext('Add Option'));
-	$sphere->sym_mod(gtext('Edit Option'));
-	$sphere->sym_del(gtext('Option is marked for deletion'));
-	$sphere->sym_loc(gtext('Option is locked'));
-	$sphere->sym_unl(gtext('Option is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Options'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected options?'));
-	$sphere->cbm_disable(gtext('Disable Selected Options'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected options?'));
-	$sphere->cbm_enable(gtext('Enable Selected Options'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected options?'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Options'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected options?'));
+	$sphere->sym_add(gettext('Add Option'));
+	$sphere->sym_mod(gettext('Edit Option'));
+	$sphere->sym_del(gettext('Option is marked for deletion'));
+	$sphere->sym_loc(gettext('Option is locked'));
+	$sphere->sym_unl(gettext('Option is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Options'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected options?'));
+	$sphere->cbm_disable(gettext('Disable Selected Options'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected options?'));
+	$sphere->cbm_enable(gettext('Enable Selected Options'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected options?'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Options'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected options?'));
 	$sphere->grid = &array_make_branch($config,'system','loaderconf','param');
 	return $sphere;
 }
@@ -204,17 +204,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <form action="<?=$sphere->get_scriptname();?>" method="post" id="iframe" name="iframe"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -240,7 +240,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),6);
+			html_titleline2(gettext('Overview'),6);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
@@ -320,7 +320,7 @@ $document->render();
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note', gtext('Note'), gtext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));
+		html_remark2('note', gettext('Note'), gettext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));
 ?>
 	</div>
 <?php
