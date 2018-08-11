@@ -61,13 +61,13 @@ function access_users_groups_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false); // internally managed
 	$sphere->lock(true); // internally managed
-	$sphere->sym_add(gtext('Add Group'));
-	$sphere->sym_mod(gtext('Edit Group'));
-	$sphere->sym_del(gtext('Group is marked for deletion'));
-	$sphere->sym_loc(gtext('Group is protected'));
-	$sphere->sym_unl(gtext('Group is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Groups'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected groups?'));
+	$sphere->sym_add(gettext('Add Group'));
+	$sphere->sym_mod(gettext('Edit Group'));
+	$sphere->sym_del(gettext('Group is marked for deletion'));
+	$sphere->sym_loc(gettext('Group is protected'));
+	$sphere->sym_unl(gettext('Group is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Groups'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected groups?'));
 	$sphere->grid = &array_make_branch($config,'access','group');
 	return $sphere;
 }
@@ -195,7 +195,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),5);
+			html_titleline2(gettext('Overview'),5);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
@@ -259,9 +259,9 @@ echo $sphere->doj();
 		endif;
 		echo $sphere->html_button_delete_rows();
 		if($showsystemgroups):
-			echo html_button('hide',gtext('Hide Default Groups'));
+			echo html_button('hide',gettext('Hide Default Groups'));
 		else:
-			echo html_button('show',gtext('Show Default Groups'));
+			echo html_button('show',gettext('Show Default Groups'));
 		endif;
 ?>
 	</div>

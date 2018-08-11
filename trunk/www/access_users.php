@@ -46,13 +46,13 @@ function access_users_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add User Account'));
-	$sphere->sym_mod(gtext('Edit User Account'));
-	$sphere->sym_del(gtext('User account is marked for deletion'));
-	$sphere->sym_loc(gtext('User account is protected'));
-	$sphere->sym_unl(gtext('User account is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected User Accounts'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected user accounts?'));
+	$sphere->sym_add(gettext('Add User Account'));
+	$sphere->sym_mod(gettext('Edit User Account'));
+	$sphere->sym_del(gettext('User account is marked for deletion'));
+	$sphere->sym_loc(gettext('User account is protected'));
+	$sphere->sym_unl(gettext('User account is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected User Accounts'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected user accounts?'));
 	$sphere->grid = &array_make_branch($config,'access','user');
 	return $sphere;
 }
@@ -82,7 +82,7 @@ function access_users_selection($cop,$sphere) {
 	$a_group = system_get_group_list();
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Access'),gtext('Users')];
+	$pgtitle = [gettext('Access'),gettext('Users')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','25%','10%','25%','10%'];
@@ -99,8 +99,8 @@ function access_users_selection($cop,$sphere) {
 	$document->
 		add_area_tabnav()->
 			add_tabnav_upper()->
-				ins_tabnav_record('access_users.php',gtext('Users'),gtext('Reload page'),true)->
-				ins_tabnav_record('access_users_groups.php',gtext('Groups'));
+				ins_tabnav_record('access_users.php',gettext('Users'),gettext('Reload page'),true)->
+				ins_tabnav_record('access_users_groups.php',gettext('Groups'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -120,7 +120,7 @@ function access_users_selection($cop,$sphere) {
 	$thead = $table->addTHEAD();
 	$tbody = $table->addTBODY();
 	$tfoot = $table->addTFOOT();
-	$thead->ins_titleline(gtext('Overview'),$n_col_width);
+	$thead->ins_titleline(gettext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
 	if($record_exists):
 		$tr->
@@ -132,7 +132,7 @@ function access_users_selection($cop,$sphere) {
 			insTHwC('lhell',$cop->get_fullname()->get_title())->
 			insTHwC('lhell',$cop->get_uid()->get_title())->
 			insTHwC('lhell',$cop->get_group()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
 	else:
 		$tr->
 			insTHwC('lhelc')->
@@ -140,7 +140,7 @@ function access_users_selection($cop,$sphere) {
 			insTHwC('lhell',$cop->get_fullname()->get_title())->
 			insTHwC('lhell',$cop->get_uid()->get_title())->
 			insTHwC('lhell',$cop->get_group()->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhebl',gettext('Toolbox'));
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):
@@ -172,10 +172,10 @@ function access_users_selection($cop,$sphere) {
 					addTDwC('lcelc' . $dc)->
 						ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 					pop()->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_user()->get_name()] ?? ''))->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_fullname()->get_name()] ?? ''))->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_uid()->get_name()] ?? ''))->
-					insTDwC('lcell' . $dc,htmlspecialchars($groups))->
+					insTDwC('lcell' . $dc,$sphere->row[$cop->get_user()->get_name()] ?? '')->
+					insTDwC('lcell' . $dc,$sphere->row[$cop->get_fullname()->get_name()] ?? '')->
+					insTDwC('lcell' . $dc,$sphere->row[$cop->get_uid()->get_name()] ?? '')->
+					insTDwC('lcell' . $dc,$groups)->
 					add_toolbox_area()->
 						ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 						ins_maintainbox($sphere,false)->

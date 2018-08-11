@@ -42,7 +42,7 @@ class access_users_properties extends co_property_container_param {
 		$property = $this->x_user = new property_text($this);
 		$property->
 			set_name('login')->
-			set_title(gtext('User'));
+			set_title(gettext('User'));
 		return $property;
 	}
 	protected $x_fullname;
@@ -53,7 +53,7 @@ class access_users_properties extends co_property_container_param {
 		$property = $this->x_fullname = new property_text($this);
 		$property->
 			set_name('fullname')->
-			set_title(gtext('Full Name'));
+			set_title(gettext('Full Name'));
 		return $property;
 	}
 	protected $x_uid;
@@ -64,7 +64,7 @@ class access_users_properties extends co_property_container_param {
 		$property = $this->x_uid = new property_text($this);
 		$property->
 			set_name('id')->
-			set_title(gtext('UID'));
+			set_title(gettext('UID'));
 		return $property;
 	}
 	protected $x_group;
@@ -75,7 +75,7 @@ class access_users_properties extends co_property_container_param {
 		$property = $this->x_group = new property_text($this);
 		$property->
 			set_name('group')->
-			set_title(gtext('Group'));
+			set_title(gettext('Group'));
 		return $property;
 	}
 	protected $x_primary_group;
@@ -86,7 +86,7 @@ class access_users_properties extends co_property_container_param {
 		$property = $this->x_primary_group = new property_text($this);
 		$property->
 			set_name('primarygroup')->
-			set_title(gtext('Primary Group'));
+			set_title(gettext('Primary Group'));
 		return $property;
 	}
 }
