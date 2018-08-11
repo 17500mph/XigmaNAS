@@ -533,27 +533,27 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Format Options'));
+			html_titleline2(gettext('Format Options'));
 ?>
 		</thead>
 		<tbody>
 <?php
 			switch($a_control['filesystem']):
 				case 2:
-					html_combobox2('filesystem',gtext('File System'),$a_option['filesystem'],$l_filesystem,gtext('Select file system format.'),true,false);
+					html_combobox2('filesystem',gettext('File System'),$a_option['filesystem'],$l_filesystem,gettext('Select file system format.'),true,false);
 					break;
 				case 1:
-					html_combobox2('filesystem',gtext('File System'),$a_option['filesystem'],$l_filesystem,'',false,true);
+					html_combobox2('filesystem',gettext('File System'),$a_option['filesystem'],$l_filesystem,'',false,true);
 				case 0:
 					echo '<tr><td></td><td><input name="filesystem" type="hidden" value="',$a_option['filesystem'],'"/></td></tr>',"\n";
 					break;
 			endswitch;
 			switch($a_control['volumelabel']):
 				case 2:
-					html_inputbox2('volumelabel',gtext('Volume Label'),$a_option['volumelabel'],gtext('Volume label of the new file system. Use % for a counter or %n for a counter starting at number n, Use [n for the rightmost n characters of the device serial number.'),false,40,false);
+					html_inputbox2('volumelabel',gettext('Volume Label'),$a_option['volumelabel'],gettext('Volume label of the new file system. Use % for a counter or %n for a counter starting at number n, Use [n for the rightmost n characters of the device serial number.'),false,40,false);
 					break;
 				case 1:
-					html_inputbox2('volumelabel',gtext('Volume Label'),$a_option['volumelabel'],'',false,100,true);
+					html_inputbox2('volumelabel',gettext('Volume Label'),$a_option['volumelabel'],'',false,100,true);
 					break;
 				case 0:
 					echo '<tr><td></td><td><input name="volumelabel" type="hidden" value="',$a_option['volumelabel'],'"/></td></tr>',"\n";
@@ -561,20 +561,20 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			endswitch;
 			switch($a_control['minspace']):
 				case 2:
-					html_combobox2('minspace',gtext('Minimum Free Space'),$a_option['minspace'],$l_minspace,gtext('Specifiy the percentage of disk space to be held back from normal usage. Lowering this threshold can adversely affect performance and auto-defragmentation!'),true,false);
+					html_combobox2('minspace',gettext('Minimum Free Space'),$a_option['minspace'],$l_minspace,gettext('Specifiy the percentage of disk space to be held back from normal usage. Lowering this threshold can adversely affect performance and auto-defragmentation!'),true,false);
 					break;
 				case 1:
-					html_combobox2('minspace',gtext('Minimum Free Space'),$a_option['minspace'],$l_minspace,'',false,true);
+					html_combobox2('minspace',gettext('Minimum Free Space'),$a_option['minspace'],$l_minspace,'',false,true);
 				case 0:
 					echo '<tr><td></td><td><input name="minspace" type="hidden" value="',$a_option['minspace'],'"/></td></tr>',"\n";
 					break;
 			endswitch;
 			switch($a_control['aft4k']):
 				case 2:
-					html_checkbox2('aft4k',gtext('Advanced Format'),$a_option['aft4k'],gtext('Enable Advanced Format (4KB Sector Size).'),'',false,false);
+					html_checkbox2('aft4k',gettext('Advanced Format'),$a_option['aft4k'],gettext('Enable Advanced Format (4KB Sector Size).'),'',false,false);
 					break;
 				case 1:
-					html_checkbox2('aft4k',gtext('Advanced Format'),$a_option['aft4k'],gtext('Enable Advanced Format (4KB Sector Size).'),'',false,true);
+					html_checkbox2('aft4k',gettext('Advanced Format'),$a_option['aft4k'],gettext('Enable Advanced Format (4KB Sector Size).'),'',false,true);
 				case 0:
 					if(true === $a_option['aft4k']):
 						echo '<tr><td></td><td><input name="aft4k" type="hidden" value="yes"/></td></tr>',"\n";
@@ -583,10 +583,10 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			endswitch;
 			switch($a_control['zfsgpt']):
 				case 2:
-					html_checkbox2('zfsgpt',gtext('GPT Partition'),$a_option['zfsgpt'],gtext('Create ZFS on a GPT partition.'),'',false,false);
+					html_checkbox2('zfsgpt',gettext('GPT Partition'),$a_option['zfsgpt'],gettext('Create ZFS on a GPT partition.'),'',false,false);
 					break;
 				case 1:
-					html_checkbox2('zfsgpt',gtext('GPT Partition'),$a_option['zfsgpt'],gtext('Create ZFS on a GPT partition.'),'',false,true);
+					html_checkbox2('zfsgpt',gettext('GPT Partition'),$a_option['zfsgpt'],gettext('Create ZFS on a GPT partition.'),'',false,true);
 				case 0:
 					if(true === $a_option['zfsgpt']):
 						echo '<tr><td></td><td><input name="zfsgpt" type="hidden" value="yes"/></td></tr>',"\n";
@@ -595,10 +595,10 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			endswitch;
 			switch($a_control['notinitmbr']):
 				case 2:
-					html_checkbox2('notinitmbr',gtext('Erase MBR'),$a_option['notinitmbr'],gtext('Do not erase the Master Boot Record (useful for some RAID controller cards).'),'',false,false);
+					html_checkbox2('notinitmbr',gettext('Erase MBR'),$a_option['notinitmbr'],gettext('Do not erase the Master Boot Record (useful for some RAID controller cards).'),'',false,false);
 					break;
 				case 1:
-					html_checkbox2('notinitmbr',gtext('Erase MBR'),$a_option['notinitmbr'],gtext('Do not erase the Master Boot Record (useful for some RAID controller cards).'),'',false,true);
+					html_checkbox2('notinitmbr',gettext('Erase MBR'),$a_option['notinitmbr'],gettext('Do not erase the Master Boot Record (useful for some RAID controller cards).'),'',false,true);
 				case 0:
 					if(true === $a_option['notinitmbr']):
 						echo '<tr><td></td><td><input name="notinitmbr" type="hidden" value="yes"/></td></tr>',"\n";
@@ -626,7 +626,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Disk Selection'),8);
+			html_titleline2(gettext('Disk Selection'),8);
 ?>
 			<tr>
 <?php
