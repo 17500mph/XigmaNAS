@@ -125,8 +125,8 @@ if ($_POST) {
 }
 
 $pgtitle = [gtext('Disks'), gtext('Software RAID'), gtext('GEOM'), gtext('Management')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -186,17 +186,13 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('GEOM');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('GEOM');?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<?php
 		if (!empty($errormsg)) { print_error_box($errormsg); }
 		if (!empty($savemsg)) { print_info_box($savemsg); }
 		foreach ($a_process as $r_process) {
@@ -205,7 +201,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				break;
 			}
 		}
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
@@ -217,7 +213,9 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'), 7);?>
+<?php
+			html_titleline2(gettext('Overview'), 7);
+?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=gtext('Volume Name');?></th>
@@ -229,47 +227,53 @@ function controlactionbuttons(ego, triggerbyname) {
 			</tr>
 		</thead>
 		<tbody>
-			<?php foreach ($sphere_array as $sphere_record): ?>
-				<?php
-					$size = gtext('Unknown');
-					$status = gtext('Stopped');
-					if (is_array($a_system_sraid) && (false !== ($index = array_search_ex($sphere_record['name'], $a_system_sraid, 'name')))) {
-						$size = $a_system_sraid[$index]['size'];
-						$status = $a_system_sraid[$index]['state'];
-					}
-					$notificationmode = UPDATENOTIFY_MODE_UNKNOWN;
-					foreach($a_process as $r_process) {
-						if (UPDATENOTIFY_MODE_UNKNOWN === $notificationmode) {
-							$notificationmode = updatenotify_get_mode($r_process['x-notifier'], $sphere_record['uuid']);
-						} else {
-							break;
-						}
-					}
-					switch ($notificationmode) {
-						case UPDATENOTIFY_MODE_NEW:
-							$status = $size = gtext('Initializing');
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							$status = $size = gtext('Modifying');
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-						case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-							$status = gtext('Deleting');
-							break;
-					}
-					$status = strtoupper($status);
-					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-					$notprotected = !isset($sphere_record['protected']);
-					$notmounted = !is_geomraid_mounted($sphere_record['devicespecialfile'], $a_config_mount);
-					$normaloperation = $notprotected && $notmounted;
-				?>
+<?php
+			foreach ($sphere_array as $sphere_record):
+				$size = gtext('Unknown');
+				$status = gtext('Stopped');
+				if(is_array($a_system_sraid) && (false !== ($index = array_search_ex($sphere_record['name'], $a_system_sraid, 'name')))):
+					$size = $a_system_sraid[$index]['size'];
+					$status = $a_system_sraid[$index]['state'];
+				endif;
+				$notificationmode = UPDATENOTIFY_MODE_UNKNOWN;
+				foreach($a_process as $r_process):
+					if(UPDATENOTIFY_MODE_UNKNOWN === $notificationmode):
+						$notificationmode = updatenotify_get_mode($r_process['x-notifier'], $sphere_record['uuid']);
+					else:
+						break;
+					endif;
+				endforeach;
+				switch($notificationmode):
+					case UPDATENOTIFY_MODE_NEW:
+						$status = $size = gtext('Initializing');
+						break;
+					case UPDATENOTIFY_MODE_MODIFIED:
+						$status = $size = gtext('Modifying');
+						break;
+					case UPDATENOTIFY_MODE_DIRTY:
+					case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+						$status = gtext('Deleting');
+						break;
+				endswitch;
+				$status = strtoupper($status);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$notprotected = !isset($sphere_record['protected']);
+				$notmounted = !is_geomraid_mounted($sphere_record['devicespecialfile'], $a_config_mount);
+				$normaloperation = $notprotected && $notmounted;
+?>
 				<tr>
 					<td class="<?=$normaloperation ? "lcelc" : "lcelcd";?>">
-						<?php if ($notdirty && $notprotected && $notmounted):?>
+<?php
+						if($notdirty && $notprotected && $notmounted):
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
+<?php
+						else:
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($a_process[$sphere_record['type']]['gt-type']);?></td>
@@ -279,22 +283,30 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
-								<?php if ($notdirty && $notprotected):?>
+<?php
+								if($notdirty && $notprotected):
+?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected && $notmounted):?>
-										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+<?php
+								elseif($notprotected && $notmounted):
+?>
+									<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
+<?php
+								else:
+?>
+									<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
+<?php
+								endif;
+?>
 							</td>
 							<td><a href="<?=$a_process[$sphere_record['type']]['x-page-maintenance'];?>"><img src="<?=$img_path['mai'];?>" title="<?=$gt_record_mai;?>" alt="<?=$gt_record_mai;?>" /></a></td>
 							<td><a href="<?=$a_process[$sphere_record['type']]['x-page-information'];?>"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a></td>
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach; ?>
+<?php
+			endforeach;
+?>
 		</tbody>
 		<tfoot>
 			<tr>
@@ -312,21 +324,24 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col class="area_data_messages_col_data">
 		</colgroup>
 		<thead>
-			<?php
+<?php
 				html_separator2();
-				html_titleline2(gtext('Message Board'));
-			?>
+				html_titleline2(gettext('Message Board'));
+?>
 		</thead>
 		<tbody>
-			<?php
-				html_textinfo2("info", gtext('Info'), sprintf(gtext('%1$s is used to create %2$s volumes.'), 'GEOM', 'RAID'));
-				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gtext('mount point'));
-				$helpinghand = gtext('A mounted RAID volume cannot be deleted.') . ' ' . gtext('Remove the %s first before proceeding.');
+<?php
+				html_textinfo2("info", gettext('Info'), sprintf(gettext('%1$s is used to create %2$s volumes.'), 'GEOM', 'RAID'));
+				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gettext('mount point'));
+				$helpinghand = gettext('A mounted RAID volume cannot be deleted.') . ' ' . gettext('Remove the %s first before proceeding.');
 				$helpinghand = sprintf($helpinghand, $link);
-				html_textinfo2("warning", gtext('Warning'), $helpinghand);
-			?>
+				html_textinfo2("warning", gettext('Warning'), $helpinghand);
+?>
 		</tbody>
 	</table>
-	<?php include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
