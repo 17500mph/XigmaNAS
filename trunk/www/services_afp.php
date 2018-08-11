@@ -291,10 +291,10 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_titleline2(gtext('Apple Filing Protocol'));
+					html_titleline2(gettext('Apple Filing Protocol'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Apple Filing Protocol'),$sphere->row['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gettext('Apple Filing Protocol'),$sphere->row['enable'],gettext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -303,33 +303,33 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_textinfo2('afpname',gtext('Server Name'),htmlspecialchars($sphere->row['afpname']));
-					html_checkbox2('uams_guest',gtext('Guest Authentication'),$sphere->row['uams_guest'],'','',false,true);
-//					html_checkbox2('uams_randum',gtext('Random Authentication'),$sphere->row['uams_randum'],'','',false,true);
-//					html_checkbox2('uam_gss',gtext('Kerberos Authentication'),$sphere->row['uam_gss'],'','',false,true);
+					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
+					html_textinfo2('afpname',gettext('Server Name'),htmlspecialchars($sphere->row['afpname']));
+					html_checkbox2('uams_guest',gettext('Guest Authentication'),$sphere->row['uams_guest'],'','',false,true);
+//					html_checkbox2('uams_randum',gettext('Random Authentication'),$sphere->row['uams_randum'],'','',false,true);
+//					html_checkbox2('uam_gss',gettext('Kerberos Authentication'),$sphere->row['uam_gss'],'','',false,true);
 					if($sphere->row['uams_pam']):
-						html_textinfo2('clrtxt',gtext('Clear Text Authentication'),gtext('PAM authentication is selected.'));
+						html_textinfo2('clrtxt',gettext('Clear Text Authentication'),gettext('PAM authentication is selected.'));
 					elseif($sphere->row['uams_passwd']):
-						html_textinfo2('clrtxt',gtext('Clear Text Authentication'),gtext('Local user authentication is selected.'));
+						html_textinfo2('clrtxt',gettext('Clear Text Authentication'),gettext('Local user authentication is selected.'));
 					endif;
 					if($sphere->row['uams_dhx_pam']):
-						html_textinfo2('dhx',gtext('DHX Authentication'),gtext('PAM authentication is selected.'));
+						html_textinfo2('dhx',gettext('DHX Authentication'),gettext('PAM authentication is selected.'));
 					elseif($sphere->row['uams_dhx_passwd']):
-						html_textinfo2('dhx',gtext('DHX Authentication'),gtext('Local user authentication is selected.'));
+						html_textinfo2('dhx',gettext('DHX Authentication'),gettext('Local user authentication is selected.'));
 					endif;
 					if($sphere->row['uams_dhx2_pam']):
-						html_textinfo2('dhx2',gtext('DHX2 Authentication'),gtext('PAM authentication is selected.'));
+						html_textinfo2('dhx2',gettext('DHX2 Authentication'),gettext('PAM authentication is selected.'));
 					elseif($sphere->row['uams_dhx2_passwd']):
-						html_textinfo2('dhx2',gtext('DHX2 Authentication'),gtext('Local user authentication is selected.'));
+						html_textinfo2('dhx2',gettext('DHX2 Authentication'),gettext('Local user authentication is selected.'));
 					endif;
-					html_textarea2('auxparam',gtext('Additional Parameters'),$sphere->row['auxparam'],'',false,65,5,true,false);
+					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],'',false,65,5,true,false);
 					break;
 				case PAGE_MODE_EDIT:
-					html_inputbox2('afpname',gtext('Server Name'),htmlspecialchars($sphere->row['afpname']),gtext('Name of the server. If this field is left empty the default server is specified.'),false,30,false,false,30);
-					html_checkbox2('uams_guest',gtext('Guest Authentication'),$sphere->row['uams_guest'],gtext('Enable guest access.'));
-//					html_checkbox2('uams_randum',gtext('Random Authentication'),$sphere->row['uams_randum'],gtext('Allow random number and two-way random number exchange for authentication.'));
-//					html_checkbox2('uam_gss',gtext('Kerberos Authentication'),$sphere->row['uam_gss'],gtext('Allow Kerberos V for authentication.'));
+					html_inputbox2('afpname',gettext('Server Name'),htmlspecialchars($sphere->row['afpname']),gettext('Name of the server. If this field is left empty the default server is specified.'),false,30,false,false,30);
+					html_checkbox2('uams_guest',gettext('Guest Authentication'),$sphere->row['uams_guest'],gettext('Enable guest access.'));
+//					html_checkbox2('uams_randum',gettext('Random Authentication'),$sphere->row['uams_randum'],gettext('Allow random number and two-way random number exchange for authentication.'));
+//					html_checkbox2('uam_gss',gettext('Kerberos Authentication'),$sphere->row['uam_gss'],gettext('Allow Kerberos V for authentication.'));
 ?>
 					<tr id="clrtxt_tr">
 						<td class="celltag"><?=gtext('Clear Text Authentication');?></td>
@@ -426,9 +426,9 @@ endswitch;
 					</tr>
 <?php
 					$helpinghand = '<a href="http://netatalk.sourceforge.net/3.1/htmldocs/afp.conf.5.html" target="_blank">'
-						. gtext('Please check the documentation')
+						. gettext('Please check the documentation')
 						. '</a>.';
-					html_textarea2('auxparam',gtext('Additional Parameters'),$sphere->row['auxparam'],gtext('Add any supplemental parameters.') . ' ' . $helpinghand,false,65,5,false,false);
+					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],gettext('Add any supplemental parameters.') . ' ' . $helpinghand,false,65,5,false,false);
 					break;
 			endswitch;
 ?>
@@ -438,16 +438,16 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gtext('Edit'));
+				echo $sphere->html_button('edit',gettext('Edit'));
 				if($sphere->row['enable']):
-					echo $sphere->html_button('disable',gtext('Disable'));
+					echo $sphere->html_button('disable',gettext('Disable'));
 				else:
-					echo $sphere->html_button('enable',gtext('Enable'));
+					echo $sphere->html_button('enable',gettext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo $sphere->html_button('save',gtext('Apply'));
-				echo $sphere->html_button('cancel',gtext('Cancel'));
+				echo $sphere->html_button('save',gettext('Apply'));
+				echo $sphere->html_button('cancel',gettext('Cancel'));
 				break;
 		endswitch;
 ?>
@@ -455,9 +455,9 @@ endswitch;
 	<div id="remarks">
 <?php
 		$link = '<a href="system_advanced.php">'
-			. gtext('Zeroconf/Bonjour')
+			. gettext('Zeroconf/Bonjour')
 			. '</a>';
-		html_remark2('note',gtext('Note'),sprintf(gtext('You have to activate %s to advertise this service to clients.'),$link));
+		html_remark2('note',gettext('Note'),sprintf(gettext('You have to activate %s to advertise this service to clients.'),$link));
 ?>
 	</div>
 <?php

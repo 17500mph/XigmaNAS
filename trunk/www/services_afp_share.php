@@ -61,13 +61,13 @@ function services_afp_share_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Share'));
-	$sphere->sym_mod(gtext('Edit Share'));
-	$sphere->sym_del(gtext('Share is marked for deletion'));
-	$sphere->sym_loc(gtext('Share is protected'));
-	$sphere->sym_unl(gtext('Share is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Shares'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected shares?'));
+	$sphere->sym_add(gettext('Add Share'));
+	$sphere->sym_mod(gettext('Edit Share'));
+	$sphere->sym_del(gettext('Share is marked for deletion'));
+	$sphere->sym_loc(gettext('Share is protected'));
+	$sphere->sym_unl(gettext('Share is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Shares'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected shares?'));
 	$sphere->grid = &array_make_branch($config,'afp','share');
 	return $sphere;
 }
@@ -218,7 +218,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),5);
+			html_titleline2(gettext('Overview'),5);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
@@ -284,7 +284,7 @@ echo $sphere->doj();
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext("All shares use the option 'usedots' thus making the filenames .Parent and anything beginning with .Apple illegal."));
+		html_remark2('note',gettext('Note'),gettext("All shares use the option 'usedots' thus making the filenames .Parent and anything beginning with .Apple illegal."));
 ?>
 	</div>
 <?php
