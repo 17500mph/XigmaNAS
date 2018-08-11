@@ -134,7 +134,7 @@ $document->
 			ins_tabnav_record('disks_manage.php',gettext('HDD Management'))->
 			ins_tabnav_record('disks_init.php',gettext('HDD Format'))->
 			ins_tabnav_record('disks_manage_smart.php',gettext('S.M.A.R.T.'))->
-			ins_tabnav_record('disks_manage_iscsi.php',gettext('iSCSI Initiator'),gtext('Reload page'),true);
+			ins_tabnav_record('disks_manage_iscsi.php',gettext('iSCSI Initiator'),gettext('Reload page'),true);
 $document->
 	render();
 ?>
