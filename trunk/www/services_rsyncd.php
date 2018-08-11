@@ -182,14 +182,14 @@ switch($mode_page):
 		break;
 endswitch;
 //  prepare lookups
-$l_user = ['ftp' => gtext('Guest')];
+$l_user = ['ftp' => gettext('Guest')];
 foreach ($a_user as $r_user):
-	$l_user[$r_user['login']] = htmlspecialchars($r_user['login']);
+	$l_user[$r_user['login']] = $r_user['login'];
 endforeach;
-$gt_auxparam = sprintf(gtext('These parameters will be added to [global] settings in %s.'),'rsyncd.conf')
+$gt_auxparam = sprintf(gettext('These parameters will be added to [global] settings in %s.'),'rsyncd.conf')
 	. ' '
 	. '<a href="http://rsync.samba.org/ftp/rsync/rsyncd.conf.html" target="_blank">'
-	. gtext('Please check the documentation')
+	. gettext('Please check the documentation')
 	. '</a>.';
 $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Settings')];
 include 'fbegin.inc';
@@ -255,10 +255,10 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_titleline2(gtext('Network File System'));
+					html_titleline2(gettext('Network File System'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Rsync'),$sphere->row['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gettext('Rsync'),$sphere->row['enable'],gettext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -267,22 +267,22 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
+					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
 					if(isset($l_user[$sphere->row['rsyncd_user']])):
 						$helpinghand = htmlspecialchars($l_user[$sphere->row['rsyncd_user']]);
 					else:
 						$helpinghand = '';
 					endif;
-					html_textinfo2('rsyncd_user',gtext('Map to User'),$helpinghand);
-					html_textinfo2('port',gtext('TCP Port'),htmlspecialchars($sphere->row['port']));
-					html_textarea2('motd',gtext('MOTD'),$sphere->row['motd'],gtext('Message of the day.'),false,65,7,true,false);
-					html_textarea2('auxparam',gtext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,true,false);
+					html_textinfo2('rsyncd_user',gettext('Map to User'),$helpinghand);
+					html_textinfo2('port',gettext('TCP Port'),htmlspecialchars($sphere->row['port']));
+					html_textarea2('motd',gettext('MOTD'),$sphere->row['motd'],gettext('Message of the day.'),false,65,7,true,false);
+					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,true,false);
 					break;
 				case PAGE_MODE_EDIT:
-					html_combobox2('rsyncd_user',gtext('Map to User'),$sphere->row['rsyncd_user'],$l_user,'',true);
-					html_inputbox2('port',gtext('TCP Port'),htmlspecialchars($sphere->row['port']),gtext('Alternate TCP port. (Default is 873).'),true,20);
-					html_textarea2('motd',gtext('MOTD'),$sphere->row['motd'],gtext('Message of the day.'),false,65,7,false,false);
-					html_textarea2('auxparam',gtext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,false,false);
+					html_combobox2('rsyncd_user',gettext('Map to User'),$sphere->row['rsyncd_user'],$l_user,'',true);
+					html_inputbox2('port',gettext('TCP Port'),htmlspecialchars($sphere->row['port']),gettext('Alternate TCP port. (Default is 873).'),true,20);
+					html_textarea2('motd',gettext('MOTD'),$sphere->row['motd'],gettext('Message of the day.'),false,65,7,false,false);
+					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,false,false);
 					break;
 			endswitch;
 ?>
@@ -292,16 +292,16 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gtext('Edit'));
+				echo $sphere->html_button('edit',gettext('Edit'));
 				if($sphere->row['enable']):
-					echo $sphere->html_button('disable',gtext('Disable'));
+					echo $sphere->html_button('disable',gettext('Disable'));
 				else:
-					echo $sphere->html_button('enable',gtext('Enable'));
+					echo $sphere->html_button('enable',gettext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo $sphere->html_button('save',gtext('Apply'));
-				echo $sphere->html_button('cancel',gtext('Cancel'));
+				echo $sphere->html_button('save',gettext('Apply'));
+				echo $sphere->html_button('cancel',gettext('Cancel'));
 				break;
 		endswitch;
 ?>
