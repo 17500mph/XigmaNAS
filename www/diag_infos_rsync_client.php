@@ -40,23 +40,23 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'))->
-			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
-			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'),gtext('Reload page'),true)->
-			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
-			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
-			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
+			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
+			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'),gettext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -70,7 +70,7 @@ if(!is_array($config['rsync']) || !is_array($config['rsync']['rsyncclient'])):
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('RSYNC Client Information & Status'));
+			html_titleline2(gettext('RSYNC Client Information & Status'));
 ?>
 		</thead>
 		<tbody><tr>
@@ -93,7 +93,7 @@ else:
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('RSYNC Client Information & Status'));
+			html_titleline2(gettext('RSYNC Client Information & Status'));
 ?>
 		</thead>
 		<tbody><tr>
@@ -111,7 +111,7 @@ else:
 					echo '- ',gtext('Detected shares on this server'),': ','<br />';
 					$cmd = sprintf('/usr/local/bin/rsync %s::',$rsyncclient['rsyncserverip']);
 					exec($cmd,$rawdata);
-					echo htmlspecialchars(implode("\n",$rawdata));
+					echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 					unset($rawdata);
 				endforeach;
 				echo '</pre>';
