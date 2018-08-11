@@ -356,10 +356,10 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_titleline2(gtext('Fuppes Media Server'));
+					html_titleline2(gettext('Fuppes Media Server'));
 					break;
 				case PAGE_MODE_EDIT:
-					html_titleline_checkbox2('enable',gtext('Fuppes Media Server'),$sphere->row['enable'],gtext('Enable'));
+					html_titleline_checkbox2('enable',gettext('Fuppes Media Server'),$sphere->row['enable'],gettext('Enable'));
 					break;
 			endswitch;
 ?>
@@ -368,44 +368,44 @@ endswitch;
 <?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_textinfo2('enable',gtext('Service Enabled'),$sphere->row['enable'] ? gtext('Yes') : gtext('No'));
-					html_textinfo2('name',gtext('Name'), htmlspecialchars($sphere->row['name']));
-					html_textinfo2('if',gtext('Interface Selection'), htmlspecialchars($sphere->row['if']));
-					html_textinfo2('port',gtext('Port'), htmlspecialchars($sphere->row['port']));
-					html_textinfo2('home',gtext('Database Directory'), htmlspecialchars($sphere->row['home']));
-					$helpinghand = implode("\n",$sphere->row['content']);
-					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
-					html_textinfo2('profile',gtext('Profile'),$l_dlna[$sphere->row['profile']] ?? '');
+					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
+					html_textinfo2('name',gettext('Name'),$sphere->row['name']);
+					html_textinfo2('if',gettext('Interface Selection'),$sphere->row['if']);
+					html_textinfo2('port',gettext('Port'),$sphere->row['port']);
+					html_textinfo2('home',gettext('Database Directory'),$sphere->row['home']);
+					$helpinghand = implode(PHP_EOL,$sphere->row['content']);
+					html_textarea2('content',gettext('Content Locations'),$helpinghand,'',false,67,5,true,false);
+					html_textinfo2('profile',gettext('Profile'),$l_dlna[$sphere->row['profile']] ?? '');
 					switch($sphere->row['profile']):
 						case 'Terratec_Noxon_iRadio':
-							html_textinfo2('deviceip',gtext('Device IP'), htmlspecialchars($sphere->row['deviceip']));
+							html_textinfo2('deviceip',gettext('Device IP'),$sphere->row['deviceip']);
 							break;
 					endswitch;
-					html_checkbox2('transcoding',gtext('Transcoding'),$sphere->row['transcoding'],'','',false,true);
+					html_checkbox2('transcoding',gettext('Transcoding'),$sphere->row['transcoding'],'','',false,true);
 					if($sphere->row['transcoding']):
-						html_textinfo2('tempdir',gtext('Transcoding Directory'),htmlspecialchars($sphere->row['tempdir']));
+						html_textinfo2('tempdir',gettext('Transcoding Directory'),$sphere->row['tempdir']);
 					endif;
 					break;
 				case PAGE_MODE_EDIT:
-					html_inputbox2('name',gtext('Name'),$sphere->row['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
-					html_combobox2('if',gtext('Interface Selection'),$sphere->row['if'],$l_interfaces,gtext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
-					html_inputbox2('port',gtext('Port'),$sphere->row['port'],sprintf(gtext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535,49152),true,5);
-					html_filechooser2('home',gtext('Database Directory'),$sphere->row['home'],gtext('Location of the media content database.'), $g['media_path'],true,67);
-					html_folderbox2('content',gtext('Media Library'),$sphere->row['content'],gtext("Set the content location(s) to or from the media library."),$g['media_path'],true);
-					html_combobox2('profile',gtext('Profile'), $sphere->row['profile'],$l_dlna,gtext('Compliant profile to be used.'),true,false,'profile_change()');
-					html_inputbox2('deviceip',gtext('Device IP'),$sphere->row['deviceip'], gtext('The IP address of the device.'),true,20);
-					html_checkbox2('transcoding',gtext('Transcoding'),$sphere->row['transcoding'],gtext('Enable transcoding.'),'',false,false,'transcoding_change()');
-					html_filechooser2('tempdir',gtext('Transcoding Directory'),$sphere->row['tempdir'],gtext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
+					html_inputbox2('name',gettext('Name'),$sphere->row['name'],gettext('Give your media library a friendly name.'),true,35,false,false,35,gettext('Media server name'));
+					html_combobox2('if',gettext('Interface Selection'),$sphere->row['if'],$l_interfaces,gettext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
+					html_inputbox2('port',gettext('Port'),$sphere->row['port'],sprintf(gettext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535,49152),true,5);
+					html_filechooser2('home',gettext('Database Directory'),$sphere->row['home'],gettext('Location of the media content database.'), $g['media_path'],true,67);
+					html_folderbox2('content',gettext('Media Library'),$sphere->row['content'],gettext("Set the content location(s) to or from the media library."),$g['media_path'],true);
+					html_combobox2('profile',gettext('Profile'), $sphere->row['profile'],$l_dlna,gettext('Compliant profile to be used.'),true,false,'profile_change()');
+					html_inputbox2('deviceip',gettext('Device IP'),$sphere->row['deviceip'], gettext('The IP address of the device.'),true,20);
+					html_checkbox2('transcoding',gettext('Transcoding'),$sphere->row['transcoding'],gettext('Enable transcoding.'),'',false,false,'transcoding_change()');
+					html_filechooser2('tempdir',gettext('Transcoding Directory'),$sphere->row['tempdir'],gettext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
 				break;
 			endswitch;
 			if($dlna_option & 1):
 				html_separator2();
-				html_titleline2(gtext('Fuppes Media Server Administration'));
+				html_titleline2(gettext('Fuppes Media Server Administration'));
 				$if = get_ifname($sphere->row['if']);
 				$ipaddr = get_ipaddr($if);
 				$url = sprintf('http://%s:%s',htmlspecialchars($ipaddr),htmlspecialchars($sphere->row['port']));
 				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
-				html_textinfo2('url',gtext('URL'),$text);
+				html_textinfo2('url',gettext('URL'),$text);
 			endif;
 ?>
 		</tbody>
@@ -414,16 +414,16 @@ endswitch;
 <?php
 		switch($mode_page):
 			case PAGE_MODE_VIEW:
-				echo $sphere->html_button('edit',gtext('Edit'));
+				echo $sphere->html_button('edit',gettext('Edit'));
 				if($sphere->row['enable']):
-					echo $sphere->html_button('disable',gtext('Disable'));
+					echo $sphere->html_button('disable',gettext('Disable'));
 				else:
-					echo $sphere->html_button('enable',gtext('Enable'));
+					echo $sphere->html_button('enable',gettext('Enable'));
 				endif;
 				break;
 			case PAGE_MODE_EDIT:
-				echo $sphere->html_button('save',gtext('Apply'));
-				echo $sphere->html_button('cancel',gtext('Cancel'));
+				echo $sphere->html_button('save',gettext('Apply'));
+				echo $sphere->html_button('cancel',gettext('Cancel'));
 				break;
 		endswitch;
 ?>
