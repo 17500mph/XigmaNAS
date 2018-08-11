@@ -106,7 +106,7 @@ $(window).on("load",function() {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Log Filter'),1);
+			html_titleline2(gettext('Log Filter'),1);
 			html_separator2(1);
 ?>
 		</thead>
@@ -125,14 +125,14 @@ $(window).on("load",function() {
 ?>
 			</select>
 <?php
-			echo html_button('clear',gtext('Clear'));
-			echo html_button('download',gtext('Download'));
-			echo html_button('refresh',gtext('Refresh'));
+			echo html_button('clear',gettext('Clear'));
+			echo html_button('download',gettext('Download'));
+			echo html_button('refresh',gettext('Refresh'));
 ?>
 			<span class="label">&nbsp;&nbsp;&nbsp;<?=gtext('Search event');?></span>
 			<input size="30" id="searchlog" name="searchlog" value="<?=htmlspecialchars($searchlog);?>"/>
 <?php
-			echo html_button('search',gtext('Search'));
+			echo html_button('search',gettext('Search'));
 ?>
 		</td></tr></tbody>
 	</table>
@@ -154,7 +154,7 @@ $(window).on("load",function() {
 			if(is_array($loginfo[$log])):
 				$columns = count($loginfo[$log]['columns']);
 				echo '<tr><th class="gap" colspan="',$columns,'"></th></tr>',PHP_EOL;
-				html_titleline2(gtext('Log'),$columns);
+				html_titleline2(gettext('Log'),$columns);
 				echo '<tr>',PHP_EOL;
 				foreach($loginfo[$log]['columns'] as $column_key => $column_val):
 					echo sprintf('<th class="%1$s" %2$s>%3$s</th>',$column_val['hdrclass'],$column_val['param'],$column_val['title']),PHP_EOL;
@@ -162,7 +162,7 @@ $(window).on("load",function() {
 				echo '</tr>',PHP_EOL;
 			else:
 				echo '<th class="gap"></th>',PHP_EOL;
-				html_titleline2(gtext('Log'),1);
+				html_titleline2(gettext('Log'),1);
 			endif;
 ?>
 		</thead>
