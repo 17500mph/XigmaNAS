@@ -261,7 +261,7 @@ EOJ;
 	$jcode[PAGE_MODE_VIEW] = $jcode[PAGE_MODE_EDIT];
 endif;
 //	create document
-$document = new_page([gtext('Diagnostics'),gtext('Log'),gtext('Settings')],$sphere->get_scriptname());
+$document = new_page([gettext('Diagnostics'),gettext('Log'),gettext('Settings')],$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -273,8 +273,8 @@ endif;
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_log.php',gtext('Log'))->
-			ins_tabnav_record('diag_log_settings.php',gtext('Settings'),gtext('Reload page'),true);
+			ins_tabnav_record('diag_log.php',gettext('Log'))->
+			ins_tabnav_record('diag_log_settings.php',gettext('Settings'),gettext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -286,7 +286,7 @@ $content->
 	add_table_data_settings()->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
-			c2_titleline(gtext('Log Settings'))->
+			c2_titleline(gettext('Log Settings'))->
 			parentNode->
 		addTBODY()->
 			c2_checkbox($cop->get_reverse(),$sphere->row[$cop->get_reverse()->get_name()],false,$is_readonly)->
@@ -299,7 +299,7 @@ $content->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gtext('Remote Syslog Server'))->
+			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gettext('Remote Syslog Server'))->
 			parentNode->
 		addTBODY()->
 			c2_input_text($cop->get_ipaddr(),htmlspecialchars($sphere->row[$cop->get_ipaddr()->get_name()]),false,$is_readonly)->

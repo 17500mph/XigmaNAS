@@ -54,11 +54,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_daemon() {
 		$property = $this->x_daemon = new property_bool($this);
-		$caption = gtext('Send daemon event messages.');
+		$caption = gettext('Send daemon event messages.');
 		$description = '';
 		$property->
 			set_name('daemon')->
-			set_title(gtext('Daemon Events'));
+			set_title(gettext('Daemon Events'));
 		$property->
 			set_id('daemon')->
 			set_caption($caption)->
@@ -67,7 +67,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_disablecomp() {
@@ -75,11 +75,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_disablecomp() {
 		$property = $this->x_disablecomp = new property_bool($this);
-		$caption = gtext('Disable the compression of repeating lines.');
+		$caption = gettext('Disable the compression of repeating lines.');
 		$description = '';
 		$property->
 			set_name('disablecomp')->
-			set_title(gtext('Compression'));
+			set_title(gettext('Compression'));
 		$property->
 			set_id('disablecomp')->
 			set_caption($caption)->
@@ -88,7 +88,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_disablesecure() {
@@ -96,11 +96,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_disablesecure() {
 		$property = $this->x_disablesecure = new property_bool($this);
-		$caption = gtext('Accept remote syslog messages.');
+		$caption = gettext('Accept remote syslog messages.');
 		$description = '';
 		$property->
 			set_name('disablesecure')->
-			set_title(gtext('Remote Syslog Messages'));
+			set_title(gettext('Remote Syslog Messages'));
 		$property->
 			set_id('disablesecure')->
 			set_caption($caption)->
@@ -109,7 +109,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_enable() {
@@ -117,11 +117,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_enable() {
 		$property = $this->x_enable = new property_bool($this);
-		$caption = gtext('Enable');
+		$caption = gettext('Enable');
 		$description = '';
 		$property->
 			set_name('enable')->
-			set_title(gtext('Enable Server'));
+			set_title(gettext('Enable Server'));
 		$property->
 			set_id('enable')->
 			set_caption($caption)->
@@ -130,7 +130,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_ftp() {
@@ -138,11 +138,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_ftp() {
 		$property = $this->x_ftp = new property_bool($this);
-		$caption = gtext('Send FTP event messages.');
+		$caption = gettext('Send FTP event messages.');
 		$description = '';
 		$property->
 			set_name('ftp')->
-			set_title(gtext('FTP Events'));
+			set_title(gettext('FTP Events'));
 		$property->
 			set_id('ftp')->
 			set_caption($caption)->
@@ -151,7 +151,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_ipaddr() {
@@ -159,10 +159,10 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_ipaddr() {
 		$property = $this->x_ipaddr = new property_ipaddress($this);
-		$description = gtext('IP address of the remote syslog server.');
+		$description = gettext('IP address of the remote syslog server.');
 		$property->
 			set_name('ipaddr')->
-			set_title(gtext('IP Address'));
+			set_title(gettext('IP Address'));
 		$property->
 			set_id('ipaddr')->
 			set_description($description)->
@@ -170,7 +170,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('This is not a valid IP Address.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('This is not a valid IP Address.')));
 		return $property;
 	}
 	public function get_nentries() {
@@ -181,7 +181,7 @@ class properties_diag_log_settings extends co_property_container {
 		$description = '';
 		$property->
 			set_name('nentries')->
-			set_title(gtext('Show Log Entries'));
+			set_title(gettext('Show Log Entries'));
 		$property->
 			set_id('nentries')->
 			set_description($description)->
@@ -192,7 +192,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must be a number between 5 and 1000.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must be a number between 5 and 1000.')));
 		return $property;
 	}
 	public function get_port() {
@@ -200,11 +200,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_port() {
 		$property = $this->x_port = new property_int($this);
-		$caption = gtext('Port of the remote syslog server. Leave blank to use the default port.');
-		$description = gtext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.');
+		$caption = gettext('Port of the remote syslog server. Leave blank to use the default port.');
+		$description = gettext('Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.');
 		$property->
 			set_name('port')->
-			set_title(gtext('Port'));
+			set_title(gettext('Port'));
 		$property->
 			set_id('port')->
 			set_caption($caption)->
@@ -213,7 +213,7 @@ class properties_diag_log_settings extends co_property_container {
 			set_size(6)->
 			set_maxlength(5)->
 			set_min(1024)->set_max(49151)->
-			set_placeholder(gtext('514'))->
+			set_placeholder(gettext('514'))->
 			filter_use_default()->
 			set_filter(FILTER_VALIDATE_INT,'514')->
 			set_filter_flags(FILTER_REQUIRE_SCALAR,'514')->
@@ -226,7 +226,7 @@ class properties_diag_log_settings extends co_property_container {
 			set_filter_options(['default' => ''],'scalar')->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Port number must be 514 or a number between 1024 and 49151.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Port number must be 514 or a number between 1024 and 49151.')));
 		return $property;
 	}
 	public function get_resolve() {
@@ -234,18 +234,18 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_resolve() {
 		$property = $this->x_resolve = new property_bool($this);
-		$caption = gtext('Resolve IP addresses to hostnames.');
+		$caption = gettext('Resolve IP addresses to hostnames.');
 		$description = [
-			gtext('Hint'),
+			gettext('Hint'),
 			[': ',true],
-			[gtext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'),true],
-			[gtext('Warning'),'red'],
+			[gettext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'),true],
+			[gettext('Warning'),'red'],
 			[': ',true],
-			[gtext('This can cause a huge delay in loading the log page!'),true]
+			[gettext('This can cause a huge delay in loading the log page!'),true]
 		];
 		$property->
 			set_name('resolve')->
-			set_title(gtext('Resolve IP'));
+			set_title(gettext('Resolve IP'));
 		$property->
 			set_id('resolve')->
 			set_caption($caption)->
@@ -254,7 +254,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_reverse() {
@@ -262,11 +262,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_reverse() {
 		$property = $this->x_reverse = new property_bool($this);
-		$caption = gtext('Show log entries in reverse order (newest entries on top).');
+		$caption = gettext('Show log entries in reverse order (newest entries on top).');
 		$description = '';
 		$property->
 			set_name('reverse')->
-			set_title(gtext('Log Order'));
+			set_title(gettext('Log Order'));
 		$property->
 			set_id('reverse')->
 			set_caption($caption)->
@@ -275,7 +275,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_rsyncd() {
@@ -283,11 +283,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_rsyncd() {
 		$property = $this->x_rsyncd = new property_bool($this);
-		$caption = gtext('Send RSYNC event messages.');
+		$caption = gettext('Send RSYNC event messages.');
 		$description = '';
 		$property->
 			set_name('rsyncd')->
-			set_title(gtext('RSYNC Events'));
+			set_title(gettext('RSYNC Events'));
 		$property->
 			set_id('rsyncd')->
 			set_caption($caption)->
@@ -296,7 +296,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_smartd() {
@@ -304,11 +304,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_smartd() {
 		$property = $this->x_smartd = new property_bool($this);
-		$caption = gtext('Send S.M.A.R.T. event messages.');
+		$caption = gettext('Send S.M.A.R.T. event messages.');
 		$description = '';
 		$property->
 			set_name('smartd')->
-			set_title(gtext('S.M.A.R.T. Events'));
+			set_title(gettext('S.M.A.R.T. Events'));
 		$property->
 			set_id('smartd')->
 			set_caption($caption)->
@@ -317,7 +317,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_sshd() {
@@ -325,11 +325,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_sshd() {
 		$property = $this->x_sshd = new property_bool($this);
-		$caption = gtext('Send SSH event messages.');
+		$caption = gettext('Send SSH event messages.');
 		$description = '';
 		$property->
 			set_name('sshd')->
-			set_title(gtext('SSH Events'));
+			set_title(gettext('SSH Events'));
 		$property->
 			set_id('sshd')->
 			set_caption($caption)->
@@ -338,7 +338,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_system() {
@@ -346,11 +346,11 @@ class properties_diag_log_settings extends co_property_container {
 	}
 	public function init_system() {
 		$property = $this->x_system = new property_bool($this);
-		$caption = gtext('Send system event messages.');
+		$caption = gettext('Send system event messages.');
 		$description = '';
 		$property->
 			set_name('system')->
-			set_title(gtext('System Events'));
+			set_title(gettext('System Events'));
 		$property->
 			set_id('system')->
 			set_caption($caption)->
@@ -359,7 +359,7 @@ class properties_diag_log_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }
