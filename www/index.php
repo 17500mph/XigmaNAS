@@ -458,41 +458,41 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('System Information'));
+			html_titleline2(gettext('System Information'));
 ?>
 		</thead>
 		<tbody>
 <?php
 			if(!empty($config['vinterfaces']['carp'])):
-				html_textinfo2('vipstatus',gtext('Virtual IP address'),htmlspecialchars(get_vip_status()));
+				html_textinfo2('vipstatus',gettext('Virtual IP address'),htmlspecialchars(get_vip_status()));
 			endif;
-			html_textinfo2('hostname',gtext('Hostname'),system_get_hostname());
-			html_textinfo2('version',gtext('Version'),sprintf('<strong>%s %s</strong> (%s %s)',get_product_version(),get_product_versionname(),gtext('revision'),get_product_revision()));
-			html_textinfo2('builddate',gtext('Compiled'),htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));
+			html_textinfo2('hostname',gettext('Hostname'),system_get_hostname());
+			html_textinfo2('version',gettext('Version'),sprintf('<strong>%s %s</strong> (%s %s)',get_product_version(),get_product_versionname(),gettext('revision'),get_product_revision()));
+			html_textinfo2('builddate',gettext('Compiled'),htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));
 			exec('/sbin/sysctl -n kern.version',$osversion);
-			html_textinfo2('platform_os',gtext('Platform OS'),sprintf('%s', $osversion[0]));
-			html_textinfo2('platform',gtext('Platform'),sprintf(gtext('%s on %s'),$g['fullplatform'],$cpuinfo['model']));
+			html_textinfo2('platform_os',gettext('Platform OS'),sprintf('%s', $osversion[0]));
+			html_textinfo2('platform',gettext('Platform'),sprintf(gettext('%s on %s'),$g['fullplatform'],$cpuinfo['model']));
 			if(isset($smbios['planar']) && is_array($smbios['planar'])):
-				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['planar']['maker'] ?? ''),htmlspecialchars($smbios['planar']['product'] ?? '')));
+				html_textinfo2('system',gettext('System'),sprintf('%s %s',htmlspecialchars($smbios['planar']['maker'] ?? ''),htmlspecialchars($smbios['planar']['product'] ?? '')));
 			elseif(isset($smbios['system']) && is_array($smbios['system'])):
-				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['system']['maker'] ?? ''),htmlspecialchars($smbios['system']['product'] ?? '')));
+				html_textinfo2('system',gettext('System'),sprintf('%s %s',htmlspecialchars($smbios['system']['maker'] ?? ''),htmlspecialchars($smbios['system']['product'] ?? '')));
 			endif;
 			if(isset($smbios['bios']) && is_array($smbios['bios'])):
-				html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',xmlspecialchars($smbios['bios']['vendor'] ?? ''),gtext('Version:'),xmlspecialchars($smbios['bios']['version'] ?? ''),xmlspecialchars($smbios['bios']['reldate'] ?? '')));
+				html_textinfo2('system_bios',gettext('System BIOS'),sprintf('%s %s %s %s',xmlspecialchars($smbios['bios']['vendor'] ?? ''),gettext('Version:'),xmlspecialchars($smbios['bios']['version'] ?? ''),xmlspecialchars($smbios['bios']['reldate'] ?? '')));
 			endif;
-			html_textinfo2('system_datetime',gtext('System Time'),htmlspecialchars(get_datetime_locale()));
-			html_textinfo2('system_uptime',gtext('System Uptime'),htmlspecialchars(system_get_uptime()));
+			html_textinfo2('system_datetime',gettext('System Time'),htmlspecialchars(get_datetime_locale()));
+			html_textinfo2('system_uptime',gettext('System Uptime'),htmlspecialchars(system_get_uptime()));
 			if(Session::isAdmin()):
 				if($config['lastchange']):
-					html_textinfo2('last_config_change',gtext('System Config Change'),htmlspecialchars(get_datetime_locale($config['lastchange'])));
+					html_textinfo2('last_config_change',gettext('System Config Change'),htmlspecialchars(get_datetime_locale($config['lastchange'])));
 				endif;
 				if(empty($cpuinfo['temperature2'])):
 					if(!empty($cpuinfo['temperature'])):
-						html_textinfo2('cputemp',gtext('CPU Temperature'),sprintf('%s°C',htmlspecialchars($cpuinfo['temperature'])));
+						html_textinfo2('cputemp',gettext('CPU Temperature'),sprintf('%s°C',htmlspecialchars($cpuinfo['temperature'])));
 					endif;
 				endif;
 				if(!empty($cpuinfo['freq'])):
-					html_textinfo2('cpufreq',gtext('CPU Frequency'),sprintf('%sMHz',htmlspecialchars($cpuinfo['freq'])));
+					html_textinfo2('cpufreq',gettext('CPU Frequency'),sprintf('%sMHz',htmlspecialchars($cpuinfo['freq'])));
 				endif;
 ?>
 				<tr>
