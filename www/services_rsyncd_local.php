@@ -68,19 +68,19 @@ function services_rsyncd_local_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Rsync Job'));
-	$sphere->sym_mod(gtext('Edit Rsync Job'));
-	$sphere->sym_del(gtext('Rsync job is marked for deletion'));
-	$sphere->sym_loc(gtext('Rsync job is protected'));
-	$sphere->sym_unl(gtext('Rsync job is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Rsync Jobs'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected rsync jobs?'));
-	$sphere->cbm_disable(gtext('Disable Selected Rsync Jobs'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected rsync jobs?'));
-	$sphere->cbm_enable(gtext('Enable Selected Rsync Jobs'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected rsync jobs?'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Rsync Jobs'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected rsync jobs?'));
+	$sphere->sym_add(gettext('Add Rsync Job'));
+	$sphere->sym_mod(gettext('Edit Rsync Job'));
+	$sphere->sym_del(gettext('Rsync job is marked for deletion'));
+	$sphere->sym_loc(gettext('Rsync job is protected'));
+	$sphere->sym_unl(gettext('Rsync job is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Rsync Jobs'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected rsync jobs?'));
+	$sphere->cbm_disable(gettext('Disable Selected Rsync Jobs'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected rsync jobs?'));
+	$sphere->cbm_enable(gettext('Enable Selected Rsync Jobs'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected rsync jobs?'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Rsync Jobs'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected rsync jobs?'));
 	$sphere->grid = &array_make_branch($config,'rsync','rsynclocal');
 	return $sphere;
 }
@@ -230,7 +230,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),6);
+			html_titleline2(gettext('Overview'),6);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
