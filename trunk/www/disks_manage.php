@@ -62,20 +62,20 @@ function disks_manage_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Disk'));
-	$sphere->sym_mod(gtext('Edit Disk'));
-	$sphere->sym_del(gtext('Disk is marked for deletion'));
-	$sphere->sym_loc(gtext('Disk is locked'));
-	$sphere->sym_unl(gtext('Disk is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Disks'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected disks?') . '\\n' . gtext('Any service using these disks might become invalid or inaccessible!'));
+	$sphere->sym_add(gettext('Add Disk'));
+	$sphere->sym_mod(gettext('Edit Disk'));
+	$sphere->sym_del(gettext('Disk is marked for deletion'));
+	$sphere->sym_loc(gettext('Disk is locked'));
+	$sphere->sym_unl(gettext('Disk is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Disks'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected disks?') . '<br />' . gettext('Any service using these disks might become invalid or inaccessible!'));
 	$sphere->grid = &array_make_branch($config,'disks','disk');
 	return $sphere;
 }
 $sphere = &disks_manage_get_sphere();
 array_sort_key($sphere->grid,'name');
-$gt_import_confirm = gtext('Do you want to import disks?') . '\\n' . gtext('The existing configuration may be overwritten.');
-$gt_importswraid_confirm = gtext('Do you want to import software RAID disks?') . '\\n' . gtext('The existing configuration may be overwritten.');
+$gt_import_confirm = gettext('Do you want to import disks?') . '<br />' . gettext('The existing configuration may be overwritten.');
+$gt_importswraid_confirm = gettext('Do you want to import software RAID disks?') . '<br />' . gettext('The existing configuration may be overwritten.');
 if($_POST) {
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
@@ -216,7 +216,7 @@ $(window).on("load", function() {
 			<col style="width:7%">
 			<col style="width:13%">
 			<col style="width:5%">
-			<col style="width:16">
+			<col style="width:16%">
 			<col style="width:9%">
 			<col style="width:9%">
 			<col style="width:8%">
@@ -355,18 +355,18 @@ $(window).on("load", function() {
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Import Disks'));
+			html_titleline2(gettext('Import Disks'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('clearimport',gtext('Clear Configuration'),false,gtext('Clear configuration information before importing disks.'));
+			html_checkbox2('clearimport',gettext('Clear Configuration'),false,gettext('Clear configuration information before importing disks.'));
 ?>
 		</tbody>
 		<tfoot><tr><td colspan="2" class="lcenl">&nbsp;</td></tr></tfoot>
 	</table>
-	<div id=""submit>
-		<?=html_button('import',gtext('Import'));?>
+	<div id="submit">
+		<?=html_button('import',gettext('Import'));?>
 	</div>
 	<table class="area_data_settings">
 		<colgroup>
@@ -376,17 +376,17 @@ $(window).on("load", function() {
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Import Software RAID Disks'));
+			html_titleline2(gettext('Import Software RAID Disks'));
 ?>
 		<tbody>
 <?php
-			html_checkbox2('clearimportswraid',gtext('Clear Configuration'),false,gtext('Clear configuration information before importing software RAID disks.'));
+			html_checkbox2('clearimportswraid',gettext('Clear Configuration'),false,gettext('Clear configuration information before importing software RAID disks.'));
 ?>
 		</tbody>
 		<tfoot><tr><td colspan="2" class="lcenl">&nbsp;</td></tr></tfoot>
 	</table>
-	<div id=""submit>
-		<?=html_button('importswraid',gtext('Import'));?>
+	<div id="submit">
+		<?=html_button('importswraid',gettext('Import'));?>
 	</div>
 <?php
 	include 'formend.inc';
