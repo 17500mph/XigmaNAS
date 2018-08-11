@@ -95,18 +95,18 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Ping Host'));
+			html_titleline2(gettext('Ping Host'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('target',gtext('Target'),$target,gtext('Enter hostname or IP address.'),true,32);
-			html_interfacecombobox2('interface',gtext('Interface'),!empty($interface) ? $interface : '',gtext('Select which interface to use.'),true);
+			html_inputbox2('target',gettext('Target'),$target,gettext('Enter hostname or IP address.'),true,32);
+			html_interfacecombobox2('interface',gettext('Interface'),!empty($interface) ? $interface : '',gettext('Select which interface to use.'),true);
 			$a_count = [];
 			for($i = 1;$i <= 15; $i++):
 				$a_count[$i] = $i;
 			endfor;
-			html_combobox2('count',gtext('Count'),$count,$a_count,gtext('Select number of ICMP ECHO REQUEST packets.'),true);
+			html_combobox2('count',gettext('Count'),$count,$a_count,gettext('Select number of ICMP ECHO REQUEST packets.'),true);
 ?>
 		</tbody>
 	</table>
@@ -129,7 +129,7 @@ include 'fbegin.inc';
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('Ping Output'));
+				html_titleline2(gettext('Ping Output'));
 ?>
 			</thead>
 			<tbody><tr>
