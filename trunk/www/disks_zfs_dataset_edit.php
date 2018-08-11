@@ -406,8 +406,8 @@ foreach($a_pool as $r_pool):
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 endforeach;
 $l_compressionmode = [
-	'on' => gtext('On'),
-	'off' => gtext('Off'),
+	'on' => gettext('On'),
+	'off' => gettext('Off'),
 	'lz4' => 'LZ4',
 	'lzjb' => 'LZJB',
 	'gzip' => 'GZIP',
@@ -423,38 +423,38 @@ $l_compressionmode = [
 	'zle' => 'ZLE'
 ];
 $l_dedup = [
-	'on' => gtext('On'),
-	'off' => gtext('Off'),
-	'verify' => gtext('Verify'),
+	'on' => gettext('On'),
+	'off' => gettext('Off'),
+	'verify' => gettext('Verify'),
 	'sha256' => 'SHA256',
-	'sha256,verify' => gtext('SHA256, Verify')
+	'sha256,verify' => gettext('SHA256, Verify')
 ];		
 $l_sync = [
-	'standard' => gtext('Standard'),
-	'always' => gtext('Always'),
-	'disabled' => gtext('Disabled')
+	'standard' => gettext('Standard'),
+	'always' => gettext('Always'),
+	'disabled' => gettext('Disabled')
 ];
 $l_atime = [
-	'on' => gtext('On'),
-	'off' => gtext('Off')
+	'on' => gettext('On'),
+	'off' => gettext('Off')
 ];
 $l_aclinherit = [
-	'discard' => gtext('Discard - Do not inherit entries'),
-	'noallow' => gtext('Noallow - Only inherit deny entries'),
-	'restricted' => gtext('Restricted - Inherit all but "write ACL" and "change owner"'),
-	'passthrough' => gtext('Passthrough - Inherit all entries'),
-	'passthrough-x' => gtext('Passthrough-X - Inherit all but "execute" when not specified')
+	'discard' => gettext('Discard - Do not inherit entries'),
+	'noallow' => gettext('Noallow - Only inherit deny entries'),
+	'restricted' => gettext('Restricted - Inherit all but "write ACL" and "change owner"'),
+	'passthrough' => gettext('Passthrough - Inherit all entries'),
+	'passthrough-x' => gettext('Passthrough-X - Inherit all but "execute" when not specified')
 ];
 $l_aclmode = [
-	'discard' => gtext('Discard - Discard ACL'),
-	'groupmask' => gtext('Groupmask - Mask ACL with mode'),
-	'passthrough' => gtext('Passthrough - Do not change ACL'),
-	'restricted' => gtext('Restricted')
+	'discard' => gettext('Discard - Discard ACL'),
+	'groupmask' => gettext('Groupmask - Mask ACL with mode'),
+	'passthrough' => gettext('Passthrough - Do not change ACL'),
+	'restricted' => gettext('Restricted')
 ];
 $l_casesensitivity = [
-	'sensitive' => gtext('Sensitive'),
-	'insensitive' => gtext('Insensitive'),
-	'mixed' => gtext('Mixed')
+	'sensitive' => gettext('Sensitive'),
+	'insensitive' => gettext('Insensitive'),
+	'mixed' => gettext('Mixed')
 ];
 $l_users = [];
 foreach(system_get_user_list() as $r_key => $r_value):
@@ -478,16 +478,16 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Dataset'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_dataset_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Dataset'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -509,44 +509,44 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Settings'));
+			html_titleline2(gettext('Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name',gtext('Name'),$sphere->row['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this dataset'));
+			html_inputbox2('name',gettext('Name'),$sphere->row['name'],'',true,60,$isrecordmodify,false,128,gettext('Enter a name for this dataset'));
 			if($isrecordmodify):
-				html_inputbox2('pool',gtext('Pool'),$sphere->row['pool'],'',true,60,true);
+				html_inputbox2('pool',gettext('Pool'),$sphere->row['pool'],'',true,60,true);
 			else:
-				html_combobox2('pool',gtext('Pool'),$sphere->row['pool'],$l_poollist,'',true,$isrecordmodify);
+				html_combobox2('pool',gettext('Pool'),$sphere->row['pool'],$l_poollist,'',true,$isrecordmodify);
 			endif;
-			html_combobox2('compression',gtext('Compression'),$sphere->row['compression'],$l_compressionmode,gtext("Controls the compression algorithm used for this dataset. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."),true);
-			$helpinghand = '<div>' . gtext('Controls the dedup method.') . '</div>'
+			html_combobox2('compression',gettext('Compression'),$sphere->row['compression'],$l_compressionmode,gettext("Controls the compression algorithm used for this dataset. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."),true);
+			$helpinghand = '<div>' . gettext('Controls the dedup method.') . '</div>'
 				. '<div><b>'
-				. '<font color="red">' . gtext('WARNING') . '</font>' . ': '
+				. '<font color="red">' . gettext('WARNING') . '</font>' . ': '
 				. '<a href="https://wiki.xigmanas.com/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
-				. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
+				. gettext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
 				. '</a>'
 				. '</b></div>';
-			html_combobox2('dedup',gtext('Dedup'),$sphere->row['dedup'],$l_dedup,$helpinghand,true);
-			html_radiobox2('sync',gtext('Sync'),$sphere->row['sync'],$l_sync,gtext('Controls the behavior of synchronous requests.'),true);
-			html_combobox2('atime',gtext('Access Time (atime)'),$sphere->row['atime'],$l_atime,gtext('Controls whether the access time for files is updated when they are read. Turning this Off avoids producing write traffic when reading files and can result in significant performance gains.'),true);
-			html_radiobox2('aclinherit',gtext('ACL inherit'),$sphere->row['aclinherit'],$l_aclinherit,gtext('This attribute determines the behavior of Access Control List inheritance.'),true);
-			html_radiobox2('aclmode',gtext('ACL mode'),$sphere->row['aclmode'],$l_aclmode,gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'),true);
+			html_combobox2('dedup',gettext('Dedup'),$sphere->row['dedup'],$l_dedup,$helpinghand,true);
+			html_radiobox2('sync',gettext('Sync'),$sphere->row['sync'],$l_sync,gettext('Controls the behavior of synchronous requests.'),true);
+			html_combobox2('atime',gettext('Access Time (atime)'),$sphere->row['atime'],$l_atime,gettext('Controls whether the access time for files is updated when they are read. Turning this Off avoids producing write traffic when reading files and can result in significant performance gains.'),true);
+			html_radiobox2('aclinherit',gettext('ACL inherit'),$sphere->row['aclinherit'],$l_aclinherit,gettext('This attribute determines the behavior of Access Control List inheritance.'),true);
+			html_radiobox2('aclmode',gettext('ACL mode'),$sphere->row['aclmode'],$l_aclmode,gettext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'),true);
 			if($isrecordnewornewmodify):
-				html_radiobox2('casesensitivity',gtext('Case Sensitivity'),$sphere->row['casesensitivity'],$l_casesensitivity,gtext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'),false);
+				html_radiobox2('casesensitivity',gettext('Case Sensitivity'),$sphere->row['casesensitivity'],$l_casesensitivity,gettext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'),false);
 			endif;
-			html_checkbox2('canmount',gtext('Canmount'),!empty($sphere->row['canmount']) ? true : false,gtext('If this property is disabled, the file system cannot be mounted.'),'',false);
-			html_checkbox2('readonly',gtext('Readonly'),!empty($sphere->row['readonly']) ? true : false,gtext('Controls whether this dataset can be modified.'),'',false);
-			html_checkbox2('xattr',gtext('Extended attributes'),!empty($sphere->row['xattr']) ? true : false,gtext('Enable extended attributes for this file system.'),'',false);
-			html_checkbox2('snapdir',gtext('Snapshot Visibility'),!empty($sphere->row['snapdir']) ? true : false,gtext('If this property is enabled, the snapshots are displayed into .zfs directory.'),'',false);
-			html_inputbox2('reservation',gtext('Reservation'),$sphere->row['reservation'],gtext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),false,10);
-			html_inputbox2('quota',gtext('Quota'),$sphere->row['quota'],gtext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),false,10);
-			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
+			html_checkbox2('canmount',gettext('Canmount'),!empty($sphere->row['canmount']) ? true : false,gettext('If this property is disabled, the file system cannot be mounted.'),'',false);
+			html_checkbox2('readonly',gettext('Readonly'),!empty($sphere->row['readonly']) ? true : false,gettext('Controls whether this dataset can be modified.'),'',false);
+			html_checkbox2('xattr',gettext('Extended attributes'),!empty($sphere->row['xattr']) ? true : false,gettext('Enable extended attributes for this file system.'),'',false);
+			html_checkbox2('snapdir',gettext('Snapshot Visibility'),!empty($sphere->row['snapdir']) ? true : false,gettext('If this property is enabled, the snapshots are displayed into .zfs directory.'),'',false);
+			html_inputbox2('reservation',gettext('Reservation'),$sphere->row['reservation'],gettext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),false,10);
+			html_inputbox2('quota',gettext('Quota'),$sphere->row['quota'],gettext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),false,10);
+			html_inputbox2('desc',gettext('Description'),$sphere->row['desc'],gettext('You may enter a description here for your reference.'),false,40,false,false,40,gettext('Enter a description'));
 			html_separator2();
-			html_titleline2(gtext('Access Restrictions'));
-			html_combobox2('owner',gtext('Owner'),$sphere->row['accessrestrictions']['owner'],$l_users,'',false);
-			html_combobox2('group',gtext('Group'),$sphere->row['accessrestrictions']['group'],$l_groups,'',false);
+			html_titleline2(gettext('Access Restrictions'));
+			html_combobox2('owner',gettext('Owner'),$sphere->row['accessrestrictions']['owner'],$l_users,'',false);
+			html_combobox2('group',gettext('Group'),$sphere->row['accessrestrictions']['group'],$l_groups,'',false);
 ?>
 			<tr>
 				<td class="celltag"><?=gtext('Mode');?></td>
@@ -593,11 +593,11 @@ $document->render();
 	</table>
 	<div id="submit">
 <?php
-		echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
+		echo $sphere->html_button('save',$isrecordnew ? gettext('Add') : gettext('Save'));
 		if($prerequisites_ok && empty($input_errors) && !$isrecordnew):
-			echo $sphere->html_button('clone',gtext('Clone Configuration'));
+			echo $sphere->html_button('clone',gettext('Clone Configuration'));
 		endif;
-		echo $sphere->html_button('cancel',gtext('Cancel'));
+		echo $sphere->html_button('cancel',gettext('Cancel'));
 ?>
 		<input name="<?=$sphere->get_row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->get_row_identifier()];?>"/>
 	</div>
@@ -607,4 +607,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
