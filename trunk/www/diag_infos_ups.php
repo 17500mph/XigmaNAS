@@ -311,7 +311,7 @@ $document->render();
 					tblrow(gtext('Remaining battery runtime'), $ups['battery.runtime'], ' seconds');
 					html_separator2();
 					// output						
-					html_titleline2(gtext('UPS Unit General Information'));
+					html_titleline2(gettext('UPS Unit General Information'));
 					tblrow(gtext('UPS status'), $ups['ups.status']);
 					tblrow(gtext('UPS alarms'), $ups['ups.alarm']);
 					tblrow(gtext('Internal UPS clock time'), $ups['ups.time']);
