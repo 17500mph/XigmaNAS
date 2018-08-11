@@ -41,9 +41,8 @@ $cmd = sprintf('/bin/cat %s/CHANGES',$g['www_path']);
 unset($rawdata);
 exec($cmd,$rawdata);
 $pgtitle = [gettext('Help'),gettext('Release Notes')];
-$document = new_page($pgtitle);
+$document = new_page($pgtitle,NULL,'notabnav');
 //	get areas
-$body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
 //	create data area
 $pagecontent->
