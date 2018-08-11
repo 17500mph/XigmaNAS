@@ -311,10 +311,10 @@ foreach($a_sdisk as $r_sdisk):
 endforeach;
 // prepare comboboxes
 $l_balance = [
-	'round-robin' => gtext('Round-robin read'),
-	'split' => gtext('Split request'),
-	'load' => gtext('Read from lowest load'),
-	'prefer' => gtext('Read from biggest priority')
+	'round-robin' => gettext('Round-robin read'),
+	'split' => gettext('Split request'),
+	'load' => gettext('Read from lowest load'),
+	'prefer' => gettext('Read from biggest priority')
 ];
 // give it a title
 $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('GEOM'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
@@ -428,26 +428,26 @@ endif;
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Settings'));
+			html_titleline2(gettext('Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name', gtext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly if not new and not new-modify
+			html_inputbox2('name', gettext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly if not new and not new-modify
 			if($isrecordmodify):
-				html_inputbox2('type', gtext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, true);
+				html_inputbox2('type', gettext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, true);
 			endif;
 			$helpinghand = [
-				[gtext('Select read balance algorithm.')],
-				[gtext('This option applies to GEOM RAID-1 only.')]
+				[gettext('Select read balance algorithm.')],
+				[gettext('This option applies to GEOM RAID-1 only.')]
 			];
-			html_combobox2('balance', gtext('Balance Algorithm'), $sphere_record['balance'], $l_balance, $helpinghand, false, $isrecordmodify);
+			html_combobox2('balance', gettext('Balance Algorithm'), $sphere_record['balance'], $l_balance, $helpinghand, false, $isrecordmodify);
 			$helpinghand = [
-				[gtext('Do not activate this option if you want to add an existing RAID.')],
-				[gtext('All data will be lost when you activate this option!'), 'red']
+				[gettext('Do not activate this option if you want to add an existing RAID.')],
+				[gettext('All data will be lost when you activate this option!'), 'red']
 			];
-			html_checkbox2('init', gtext('Initialize'), !empty($sphere_record['init']) ? true : false, gtext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
-			html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 48);
+			html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
+			html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 48);
 			html_separator2();
 ?>
 		</tbody>
@@ -466,7 +466,7 @@ endif;
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Device List'),9);
+			html_titleline2(gettext('Device List'),9);
 ?>
 			<tr>
 				<th class="lhelc">
