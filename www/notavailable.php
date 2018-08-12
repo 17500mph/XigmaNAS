@@ -33,8 +33,34 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
+require_once 'co_request_method.php';
 
-$document = new_page([gettext('NOT YET AVAILABLE')],NULL,'notabnav');
+function notavailable_sphere() {
+	global $config;
+
+//	sphere structure
+	$sphere = new co_sphere_row('notavailable','php');
+	$sphere->get_parent()->set_basename('index');
+	return $sphere;
+}
+//	init sphere
+$sphere = &notavailable_sphere();
+$rmo = new co_request_method();
+$rmo->add('POST','cancel',PAGE_MODE_POST);
+$rmo->set_default('GET','view',PAGE_MODE_VIEW);
+list($page_method,$page_action,$page_mode) = $rmo->validate();
+switch($page_method):
+	case 'POST':
+		switch($page_action):
+			case 'cancel': // cancel - nothing to do
+				header($sphere->get_parent()->get_location());
+				exit;
+		endswitch;
+		break;
+endswitch;
+$pgtitle = [gettext('NOT YET AVAILABLE')];
+$document = new_page($pgtitle,$sphere->get_scriptname(),'notabnav');
 $pagecontent = $document->getElementById('pagecontent');
 $content = $pagecontent->add_area_data();
 $content->
@@ -42,5 +68,8 @@ $content->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_titleline(gettext('NOT YET AVAILABLE'));
+$document->
+	add_area_buttons()->
+	ins_button_cancel();
 //	showtime
 $document->render();
