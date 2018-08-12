@@ -84,16 +84,16 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volume'))->
-			ins_tabnav_record('disks_zfs_volume_info.php',gtext('Information'),gtext('Reload page'),true);
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volume'))->
+			ins_tabnav_record('disks_zfs_volume_info.php',gettext('Information'),gettext('Reload page'),true);
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -104,7 +104,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('ZFS Volume Information & Status'));
+			html_titleline2(gettext('ZFS Volume Information & Status'));
 ?>
 		</thead>
 		<tbody>
@@ -128,7 +128,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('ZFS Volume Properties'));
+			html_titleline2(gettext('ZFS Volume Properties'));
 ?>
 		</thead>
 		<tbody>
@@ -143,4 +143,3 @@ $document->render();
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>

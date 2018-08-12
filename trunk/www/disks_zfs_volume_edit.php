@@ -379,16 +379,16 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volume'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_volume_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volume'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -410,18 +410,18 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Settings'));
+			html_titleline2(gettext('Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name',gtext('Name'),$sphere->row['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
-			html_combobox2('pool',gtext('Pool'),$sphere->row['pool'],$l_poollist,'',true,$isrecordmodify);
-			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40,false,false,40,gtext('Enter a description'));
+			html_inputbox2('name',gettext('Name'),$sphere->row['name'],'',true,60,$isrecordmodify,false,128,gettext('Enter a name for this volume'));
+			html_combobox2('pool',gettext('Pool'),$sphere->row['pool'],$l_poollist,'',true,$isrecordmodify);
+			html_inputbox2('desc',gettext('Description'),$sphere->row['desc'],gettext('You may enter a description here for your reference.'),false,40,false,false,40,gettext('Enter a description'));
 			$node = new co_DOMDocument();
 			$node->c2_input_text($property->volsize,$sphere->row['volsize'],true,false);
 			$node->render();
-			html_checkbox2('sparse',gtext('Sparse Volume'),!empty($sphere->row['sparse']) ? true : false,gtext('Use as sparse volume (thin provisioning).'),'',false);
+			html_checkbox2('sparse',gettext('Sparse Volume'),!empty($sphere->row['sparse']) ? true : false,gettext('Use as sparse volume (thin provisioning).'),'',false);
 			$node = new co_DOMDocument();
 			$node->c2_radio_grid($property->volmode,$sphere->row['volmode'],true);
 			$node->c2_select($property->compression,$sphere->row['compression'],true);
@@ -439,14 +439,14 @@ $document->render();
 	<div id="submit">
 <?php
 		if($isrecordnew):
-			echo $sphere->html_button('save',gtext('Add'));
+			echo $sphere->html_button('save',gettext('Add'));
 		else:
-			echo $sphere->html_button('save',gtext('Apply'));
+			echo $sphere->html_button('save',gettext('Apply'));
 			if($prerequisites_ok && empty($input_errors)):
-				echo $sphere->html_button('clone',gtext('Clone Configuration'));
+				echo $sphere->html_button('clone',gettext('Clone Configuration'));
 			endif;
 		endif;
-			echo $sphere->html_button('cancel',gtext('Cancel'));
+			echo $sphere->html_button('cancel',gettext('Cancel'));
 ?>
 		<input name="<?=$sphere->get_row_identifier();?>" type="hidden" value="<?=$sphere->row[$sphere->get_row_identifier()];?>"/>
 	</div>
