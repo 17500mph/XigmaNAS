@@ -137,41 +137,58 @@ if ($_POST) {
 		exit;
 	}
 }
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabcont">
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td class="tabcont">
 	<form action="system_routes_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline2(gtext('Static Routes Settings'), 2);?>
-	<?php $interfaces = ['lan' => 'LAN']; for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) { $interfaces['opt' . $i] = $config['interfaces']['opt' . $i]['descr']; }?>
-	<?php html_combobox("interface", gtext("Interface"), !empty($pconfig['interface']) ? $pconfig['interface'] : "", $interfaces, gtext("Choose which interface this route applies to."), true);?>
-	<tr>
-	<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination Network");?></td>
-	<td width="78%" class="vtable"> 
-	<input name="network" type="text" class="formfld" id="network" size="20" value="<?=htmlspecialchars(!empty($pconfig['network']) ? $pconfig['network'] : "");?>" /> 
-	/
-	<select name="network_subnet" class="formfld" id="network_subnet">
-	<?php for ($i = 32; $i > 0; $i--):?>
-	<option value="<?=$i;?>" <?php if ($i == $pconfig['network_subnet']) echo "selected=\"selected\"";?>><?=$i;?></option>
-	<?php endfor;?>
-	</select>
-	<br /><span class="vexpl"><?=gtext("Destination network for this static route.");?></span>
-	</td>
-	</tr>
-	<?php html_inputbox("gateway", gtext("Gateway"), $pconfig['gateway'], gtext("Gateway to be used to reach the destination network."), true, 40);?>
-	<?php html_inputbox("descr", gtext("Description"), $pconfig['descr'], gtext("You may enter a description here for your reference."), false, 40);?>
-	</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-			  </div>
-			  <?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include 'fend.inc';?>
+<?php
+		if(!empty($input_errors)):
+			print_input_errors($input_errors); 
+		endif;
+?>
+		<table width="100%" border="0" cellpadding="6" cellspacing="0">
+<?php
+			html_titleline2(gettext('Static Routes Settings'), 2);
+			$interfaces = ['lan' => 'LAN'];
+			for($i = 1;isset($config['interfaces']['opt' . $i]);$i++):
+				$interfaces['opt' . $i] = $config['interfaces']['opt' . $i]['descr'];
+			endfor;
+			html_combobox("interface", gtext("Interface"), !empty($pconfig['interface']) ? $pconfig['interface'] : "", $interfaces, gtext("Choose which interface this route applies to."), true);
+?>
+			<tr>
+				<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination Network");?></td>
+				<td width="78%" class="vtable"> 
+					<input name="network" type="text" class="formfld" id="network" size="20" value="<?=htmlspecialchars(!empty($pconfig['network']) ? $pconfig['network'] : "");?>" />
+<?php
+					echo ' / ';
+?>
+					<select name="network_subnet" class="formfld" id="network_subnet">
+<?php
+						for($i = 32; $i > 0; $i--):
+?>
+							<option value="<?=$i;?>" <?php if($i == $pconfig['network_subnet']) echo 'selected="selected"';?>><?=$i;?></option>
+<?php
+						endfor;
+?>
+					</select>
+					<br />
+					<span class="vexpl"><?=gtext("Destination network for this static route.");?></span>
+				</td>
+			</tr>
+<?php
+			html_inputbox("gateway", gtext("Gateway"), $pconfig['gateway'], gtext("Gateway to be used to reach the destination network."), true, 40);
+			html_inputbox("descr", gtext("Description"), $pconfig['descr'], gtext("You may enter a description here for your reference."), false, 40);
+?>
+		</table>
+		<div id="submit">
+			<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
+			<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
+			<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+		</div>
+<?php
+		include 'formend.inc';
+?>
+	</form>
+</td></tr></table>
+<?php
+include 'fend.inc';
