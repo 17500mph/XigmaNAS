@@ -77,15 +77,15 @@ foreach(range(0, 23) as $hour):
 	$a_timehour[sprintf("%02.2d%02.2d", $hour, $min)] = sprintf("%02.2d:%02.2d", $hour, $min);
 endforeach;
 $a_lifetime = [
-	'0' => gtext('infinity'),
-	'1w' => sprintf(gtext('%d week'),1),
-	'2w' => sprintf(gtext('%d weeks'),2),
-	'30d' => sprintf(gtext('%d days'),30),
-	'60d' => sprintf(gtext('%d days'),60),
-	'90d' => sprintf(gtext('%d days'),90),
-	'180d' => sprintf(gtext('%d days'),180),
-	'1y' => sprintf(gtext('%d year'),1),
-	'2y' => sprintf(gtext('%d years'),2)
+	'0' => gettext('infinity'),
+	'1w' => sprintf(gettext('%d week'),1),
+	'2w' => sprintf(gettext('%d weeks'),2),
+	'30d' => sprintf(gettext('%d days'),30),
+	'60d' => sprintf(gettext('%d days'),60),
+	'90d' => sprintf(gettext('%d days'),90),
+	'180d' => sprintf(gettext('%d days'),180),
+	'1y' => sprintf(gettext('%d year'),1),
+	'2y' => sprintf(gettext('%d years'),2)
 ];
 
 if(!isset($uuid) && (!sizeof($a_pool))):
@@ -185,18 +185,18 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'))->
-			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'))->
-			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gettext('Clone'))->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gettext('Auto Snapshot'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="disks_zfs_snapshot_auto_edit.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -218,7 +218,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Auto Snapshot Settings'));
+			html_titleline2(gettext('Auto Snapshot Settings'));
 ?>
 		</thead>
 		<tbody>
@@ -227,12 +227,12 @@ $document->render();
 			foreach($a_path as $pathv):
 				$a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']);
 			endforeach;
-			html_combobox2('path',gtext('Path'),$pconfig['path'],$a_pathlist,'',true);
-			html_inputbox2('name',gtext('Name'),$pconfig['name'],'',true,40);
-			html_checkbox2('recursive',gtext('Recursive'),!empty($pconfig['recursive']) ? true : false,gtext('Create recursive snapshot.'),'',false);
-			html_text2('type',gtext('Type'),htmlspecialchars($pconfig['type']));
-			html_combobox2('timehour',gtext('Schedule time'),$pconfig['timehour'],$a_timehour,'',true);
-			html_combobox2('lifetime',gtext('Life time'),$pconfig['lifetime'],$a_lifetime,'',true);
+			html_combobox2('path',gettext('Path'),$pconfig['path'],$a_pathlist,'',true);
+			html_inputbox2('name',gettext('Name'),$pconfig['name'],'',true,40);
+			html_checkbox2('recursive',gettext('Recursive'),!empty($pconfig['recursive']) ? true : false,gettext('Create recursive snapshot.'),'',false);
+			html_text2('type',gettext('Type'),htmlspecialchars($pconfig['type']));
+			html_combobox2('timehour',gettext('Schedule time'),$pconfig['timehour'],$a_timehour,'',true);
+			html_combobox2('lifetime',gettext('Life time'),$pconfig['lifetime'],$a_lifetime,'',true);
 ?>
 		</tbody>
 	</table>
@@ -264,4 +264,3 @@ enable_change(false);
 </script>
 <?php
 include 'fend.inc';
-?>

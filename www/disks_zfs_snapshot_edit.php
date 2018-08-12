@@ -216,18 +216,18 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'))->
-			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'))->
-			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshot'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gettext('Clone'))->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gettext('Auto Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="disks_zfs_snapshot_edit.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -249,21 +249,21 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Edit Snapshot'));
+			html_titleline2(gettext('Edit Snapshot'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_text2('snapshot',gtext('Snapshot'),htmlspecialchars($pconfig['snapshot']));
+			html_text2('snapshot',gettext('Snapshot'),htmlspecialchars($pconfig['snapshot']));
 			$a_action = [
-				'clone' => gtext('Clone'),
-				'delete' => gtext('Delete'),
-				'rollback' => gtext('Rollback')
+				'clone' => gettext('Clone'),
+				'delete' => gettext('Delete'),
+				'rollback' => gettext('Rollback')
 			];
-			html_combobox2('action',gtext('Action'),$pconfig['action'],$a_action,'',true,false,'action_change()');
-			html_inputbox2('newpath',gtext('Path'),$pconfig['newpath'],'',true,30);
-			html_checkbox2('recursive',gtext('Recursive'),!empty($pconfig['recursive']) ? true : false,gtext('Deletes the recursive snapshot.'),'',false);
-			html_checkbox2('force_delete',gtext('Force Delete'),!empty($pconfig['force_delete']) ? true : false,gtext('Destroy any snapshots and bookmarks more recent than the one specified.'),'',false);
+			html_combobox2('action',gettext('Action'),$pconfig['action'],$a_action,'',true,false,'action_change()');
+			html_inputbox2('newpath',gettext('Path'),$pconfig['newpath'],'',true,30);
+			html_checkbox2('recursive',gettext('Recursive'),!empty($pconfig['recursive']) ? true : false,gettext('Deletes the recursive snapshot.'),'',false);
+			html_checkbox2('force_delete',gettext('Force Delete'),!empty($pconfig['force_delete']) ? true : false,gettext('Destroy any snapshots and bookmarks more recent than the one specified.'),'',false);
 ?>
 		</tbody>
 	</table>
