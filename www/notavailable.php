@@ -70,6 +70,6 @@ $content->
 			c2_titleline(gettext('NOT YET AVAILABLE'));
 $document->
 	add_area_buttons()->
-	ins_button_cancel();
+		ins_button_cancel();
 //	showtime
 $document->render();
