@@ -214,7 +214,7 @@ function set_selected(name) {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('Rsync Job'),!empty($pconfig['enable']) ? true : false,gtext('Enable'));
+			html_titleline_checkbox2('enable',gettext('Rsync Job'),!empty($pconfig['enable']) ? true : false,gettext('Enable'));
 ?>
 		</thead>
 		<tbody>
@@ -237,9 +237,9 @@ function set_selected(name) {
 <?php
 			$a_user = [];
 			foreach(system_get_user_list() as $userk => $userv):
-				 $a_user[$userk] = htmlspecialchars($userk);
+				 $a_user[$userk] = $userk;
 			endforeach;
-			html_combobox2('who',gtext('Who'),$pconfig['who'],$a_user,'',true);
+			html_combobox2('who',gettext('Who'),$pconfig['who'],$a_user,'',true);
 ?>
 			<tr>
 				<td class="celltagreq"><?=gtext('Synchronization Time');?></td>
@@ -250,7 +250,7 @@ function set_selected(name) {
 				</td>
 			</tr>
 <?php
-			html_inputbox2('description',gtext('Description'),htmlspecialchars($pconfig['description']),'',false,40);
+			html_inputbox2('description',gettext('Description'),htmlspecialchars($pconfig['description']),'',false,40);
 ?>
 		</tbody>
 	</table>
@@ -262,29 +262,29 @@ function set_selected(name) {
 		<thead>
 <?php
 			html_separator(2);
-			html_titleline2(gtext('Advanced Options'));
+			html_titleline2(gettext('Advanced Options'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('recursive',gtext('Recursive'),!empty($pconfig['recursive']) ? true : false,gtext('Recurse into directories.'),'',false);
-			html_checkbox2('times',gtext('Times'),!empty($pconfig['times']) ? true : false,gtext('Preserve modification times.'),'',false);
-			html_checkbox2('compress',gtext('Compress'),!empty($pconfig['compress']) ? true : false,gtext('Compress file data during the transfer.'),'',false);
-			html_checkbox2('archive',gtext('Archive'),!empty($pconfig['archive']) ? true : false,gtext('Archive mode.'),'',false);
-			html_checkbox2('delete',gtext('Delete'),!empty($pconfig['delete']) ? true : false,gtext("Delete files on the receiving side that don't exist on sender."),'',false);
+			html_checkbox2('recursive',gettext('Recursive'),!empty($pconfig['recursive']) ? true : false,gettext('Recurse into directories.'),'',false);
+			html_checkbox2('times',gettext('Times'),!empty($pconfig['times']) ? true : false,gettext('Preserve modification times.'),'',false);
+			html_checkbox2('compress',gettext('Compress'),!empty($pconfig['compress']) ? true : false,gettext('Compress file data during the transfer.'),'',false);
+			html_checkbox2('archive',gettext('Archive'),!empty($pconfig['archive']) ? true : false,gettext('Archive mode.'),'',false);
+			html_checkbox2('delete',gettext('Delete'),!empty($pconfig['delete']) ? true : false,gettext("Delete files on the receiving side that don't exist on sender."),'',false);
 			$l_delalgo = [
-				'default' => gtext("Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer and the 'before' algorithm when talking to an older rsync."),
-				'before' => gtext('Before - File-deletions will be performed before the transfer starts.'),
-				'during' => gtext('During - File-deletions will be done incrementally as the transfer happens.'),
-				'delay' => gtext('Delay - File-deletions will be computed during the transfer and will be done after the transfer.'),
-				'after' => gtext('After - File-deletions will be done after the transfer has completed.')
+				'default' => gettext("Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer and the 'before' algorithm when talking to an older rsync."),
+				'before' => gettext('Before - File-deletions will be performed before the transfer starts.'),
+				'during' => gettext('During - File-deletions will be done incrementally as the transfer happens.'),
+				'delay' => gettext('Delay - File-deletions will be computed during the transfer and will be done after the transfer.'),
+				'after' => gettext('After - File-deletions will be done after the transfer has completed.')
 			];
-			html_radiobox2('delete_algorithm',gtext('Delete Algorithm'),$pconfig['delete_algorithm'],$l_delalgo,'',false);
-			html_checkbox2('quiet',gtext('Quiet'),!empty($pconfig['quiet']),gtext('Suppress non-error messages.'),'',false);
-			html_checkbox2('perms',gtext('Preserve Permissions'),!empty($pconfig['perms']) ? true : false,gtext('This option causes the receiving rsync to set the destination permissions to be the same as the source permissions.'),'',false);
-			html_checkbox2('xattrs',gtext('Preserve Extended attributes'),!empty($pconfig['xattrs']) ? true : false,gtext('This option causes rsync to update the remote extended attributes to be the same as the local ones.'),'',false);
-			$helpinghand = '<a href="http://rsync.samba.org/ftp/rsync/rsync.html" target="_blank">' . gtext('Please check the documentation') . '.</a>';
-			html_inputbox2('extraoptions',gtext('Extra Options'),!empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : '',gtext('Extra options to rsync (usually empty).') . ' ' . $helpinghand,false,40);
+			html_radiobox2('delete_algorithm',gettext('Delete Algorithm'),$pconfig['delete_algorithm'],$l_delalgo,'',false);
+			html_checkbox2('quiet',gettext('Quiet'),!empty($pconfig['quiet']),gettext('Suppress non-error messages.'),'',false);
+			html_checkbox2('perms',gettext('Preserve Permissions'),!empty($pconfig['perms']) ? true : false,gettext('This option causes the receiving rsync to set the destination permissions to be the same as the source permissions.'),'',false);
+			html_checkbox2('xattrs',gettext('Preserve Extended attributes'),!empty($pconfig['xattrs']) ? true : false,gettext('This option causes rsync to update the remote extended attributes to be the same as the local ones.'),'',false);
+			$helpinghand = '<a href="http://rsync.samba.org/ftp/rsync/rsync.html" target="_blank">' . gettext('Please check the documentation') . '.</a>';
+			html_inputbox2('extraoptions',gettext('Extra Options'),!empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : '',gettext('Extra options to rsync (usually empty).') . ' ' . $helpinghand,false,40);
 ?>
 		</tbody>
 	</table>

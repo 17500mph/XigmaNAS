@@ -61,19 +61,19 @@ function services_rsyncd_module_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Rsync Module'));
-	$sphere->sym_mod(gtext('Edit Rsync Module'));
-	$sphere->sym_del(gtext('Rsync Module is marked for deletion'));
-	$sphere->sym_loc(gtext('Rsync Module is protected'));
-	$sphere->sym_unl(gtext('Rsync Module is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Rsync Modules'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected rsync modules?'));
-	$sphere->cbm_disable(gtext('Disable Selected Rsync Modules'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected rsync modules?'));
-	$sphere->cbm_enable(gtext('Enable Selected Rsync Modules'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected rsync modules?'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Rsync Modules'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected rsync modules?'));
+	$sphere->sym_add(gettext('Add Rsync Module'));
+	$sphere->sym_mod(gettext('Edit Rsync Module'));
+	$sphere->sym_del(gettext('Rsync Module is marked for deletion'));
+	$sphere->sym_loc(gettext('Rsync Module is protected'));
+	$sphere->sym_unl(gettext('Rsync Module is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Rsync Modules'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected rsync modules?'));
+	$sphere->cbm_disable(gettext('Disable Selected Rsync Modules'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected rsync modules?'));
+	$sphere->cbm_enable(gettext('Enable Selected Rsync Modules'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected rsync modules?'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Rsync Modules'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected rsync modules?'));
 	$sphere->grid = &array_make_branch($config,'rsyncd','module');
 	return $sphere;
 }
@@ -229,7 +229,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),7);
+			html_titleline2(gettext('Overview'),7);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
