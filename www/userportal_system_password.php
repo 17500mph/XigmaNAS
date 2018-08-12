@@ -97,13 +97,13 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('User Password Settings'));
+			html_titleline2(gettext('User Password Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_passwordbox2('password_old',gtext('Current Password'),'','',true);
-			html_passwordconfbox2('password_new','password_confirm',gtext('New Password'),'','','',true);
+			html_passwordbox2('password_old',gettext('Current Password'),'','',true);
+			html_passwordconfbox2('password_new','password_confirm',gettext('New Password'),'','','',true);
 ?>
 		</tbody>
 	</table>
@@ -116,4 +116,3 @@ include 'fbegin.inc';
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
