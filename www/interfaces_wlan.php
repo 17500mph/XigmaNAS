@@ -58,13 +58,13 @@ function interfaces_wlan_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add WLAN'));
-	$sphere->sym_mod(gtext('Edit WLAN'));
-	$sphere->sym_del(gtext('WLAN is marked for deletion'));
-	$sphere->sym_loc(gtext('WLAN is protected'));
-	$sphere->sym_unl(gtext('WLAN is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected WLANs'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected WLANs?'));
+	$sphere->sym_add(gettext('Add WLAN'));
+	$sphere->sym_mod(gettext('Edit WLAN'));
+	$sphere->sym_del(gettext('WLAN is marked for deletion'));
+	$sphere->sym_loc(gettext('WLAN is protected'));
+	$sphere->sym_unl(gettext('WLAN is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected WLANs'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected WLANs?'));
 	$sphere->grid = &array_make_branch($config,'vinterfaces','wlan');
 	return $sphere;
 }
@@ -108,12 +108,12 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('interfaces_assign.php',gtext('Management'))->
-			ins_tabnav_record('interfaces_wlan.php',gtext('WLAN'),gtext('Reload page'),true)->
-			ins_tabnav_record('interfaces_vlan.php',gtext('VLAN'))->
-			ins_tabnav_record('interfaces_lagg.php',gtext('LAGG'))->
-			ins_tabnav_record('interfaces_bridge.php',gtext('Bridge'))->
-			ins_tabnav_record('interfaces_carp.php',gtext('CARP'));
+			ins_tabnav_record('interfaces_assign.php',gettext('Management'))->
+			ins_tabnav_record('interfaces_wlan.php',gettext('WLAN'),gettext('Reload page'),true)->
+			ins_tabnav_record('interfaces_vlan.php',gettext('VLAN'))->
+			ins_tabnav_record('interfaces_lagg.php',gettext('LAGG'))->
+			ins_tabnav_record('interfaces_bridge.php',gettext('Bridge'))->
+			ins_tabnav_record('interfaces_carp.php',gettext('CARP'));
 $document->render();
 ?>
 <form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -135,7 +135,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),5);
+			html_titleline2(gettext('Overview'),5);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
