@@ -131,12 +131,12 @@ $(window).on("load", function() {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('VirtualBox'),!empty($pconfig['enable']) ? true : false,gtext('Enable'),'');
+			html_titleline_checkbox2('enable',gettext('VirtualBox'),!empty($pconfig['enable']) ? true : false,gettext('Enable'),'');
 ?>
 		</thead>
 		<tbody>
 <?php			
-			html_filechooser2('homedir',gtext('Home Directory'),$pconfig['homedir'],gtext('Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory.'),$g['media_path'],false,60);
+			html_filechooser2('homedir',gettext('Home Directory'),$pconfig['homedir'],gettext('Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory.'),$g['media_path'],false,60);
 ?>
 		</tbody>
 	</table>
@@ -148,16 +148,16 @@ $(window).on("load", function() {
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Host Resources'));
+			html_titleline2(gettext('Host Resources'));
 ?>
 		</thead>
 		<tbody>
 <?php			
-			html_checkbox2('allowusb',gtext('Allow USB'),!empty($pconfig['allowusb']),gtext('Enable this option to make host USB available to clients.'));
-			html_checkbox2('allowserial',gtext('Allow Serial Ports'),!empty($pconfig['allowserial']),gtext('Enable this option to make host serial ports available to clients.'));
-			html_checkbox2('allowusbserial',gtext('Allow USB Serial Ports'),!empty($pconfig['allowusbserial']),gtext('Enable this option to make host USB serial ports available to clients.'));
+			html_checkbox2('allowusb',gettext('Allow USB'),!empty($pconfig['allowusb']),gettext('Enable this option to make host USB available to clients.'));
+			html_checkbox2('allowserial',gettext('Allow Serial Ports'),!empty($pconfig['allowserial']),gettext('Enable this option to make host serial ports available to clients.'));
+			html_checkbox2('allowusbserial',gettext('Allow USB Serial Ports'),!empty($pconfig['allowusbserial']),gettext('Enable this option to make host USB serial ports available to clients.'));
 			$desc = '<strong><font color="red">' . gtext('Security Warning') . '!</font> ' . gtext('Be careful with turning on these options.') . '</strong>';
-			html_text2('warning',gtext('Warning'),$desc);
+			html_text2('warning',gettext('Warning'),$desc);
 ?>
 		</tbody>
 	</table>
@@ -172,14 +172,14 @@ $(window).on("load", function() {
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(sprintf('%s (%s)',gtext('Administrative WebGUI'),gtext('phpVirtualBox')));
+				html_titleline2(sprintf('%s (%s)',gettext('Administrative WebGUI'),gettext('phpVirtualBox')));
 ?>
 			</thead>
 			<tbody>
 <?php
-				$url = htmlspecialchars('/phpvirtualbox/index.html');
+				$url = '/phpvirtualbox/index.html';
 				$link = sprintf('<a href="%1$s" id="a_url1" target="_blank">%1$s</a>',$url);
-				html_text2('url1',gtext('URL'),$link);
+				html_text2('url1',gettext('URL'),$link);
 ?>
 			</tbody>
 		</table>
@@ -191,16 +191,16 @@ $(window).on("load", function() {
 			<thead>
 <?php			
 				html_separator2();
-				html_titleline2(sprintf('%s (%s)',gtext('Administrative WebGUI'),gtext('noVNC')));
+				html_titleline2(sprintf('%s (%s)',gettext('Administrative WebGUI'),gettext('noVNC')));
 ?>
 			</thead>
 			<tbody>
 <?php
 				$if = get_ifname($config['interfaces']['lan']['if']);
 				$ipaddr = get_ipaddr($if);
-				$url = htmlspecialchars('/novnc/vnc.html');
+				$url = '/novnc/vnc.html';
 				$link = sprintf('<a href="%1$s?host=%2$s" id="a_url2" target="_blank">%1$s</a>',$url,$ipaddr);
-				html_text2('url2',gtext('URL'),$link);
+				html_text2('url2',gettext('URL'),$link);
 ?>
 			</tbody>
 		</table>
@@ -215,4 +215,3 @@ $(window).on("load", function() {
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
