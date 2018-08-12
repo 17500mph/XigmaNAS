@@ -38,8 +38,6 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 $pgtitle = [gtext('Help'), gtext('License & Credits')];
-?>
-<?php
 include 'fbegin.inc';
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -50,7 +48,7 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php 
-			html_titleline2(gtext('License'),1);
+			html_titleline2(gettext('License'),1);
 ?>
 		</thead>
 		<tbody class="donothighlight">
@@ -135,7 +133,7 @@ of XigmaNAS, either expressed or implied.
 		<thead>
 <?php
 			html_separator2(3);
-			html_titleline2(gtext('Credits'),3);
+			html_titleline2(gettext('Credits'),3);
 ?>
 			<tr>
 				<th colspan="3" class="lcebld"><?=sprintf(gtext('The following persons have contributed to %s:'), get_product_name());?></th>
@@ -364,7 +362,7 @@ of XigmaNAS, either expressed or implied.
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Software Used'),2);
+			html_titleline2(gettext('Software Used'),2);
 			
 ?>
 			<tr>
