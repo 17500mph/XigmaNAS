@@ -103,8 +103,8 @@ switch($mode_page):
 		break;
 endswitch;
 $pgtitle = [gtext('System'),gtext('General'),gtext('Password')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load",function() {
@@ -121,7 +121,7 @@ $(window).on("load",function() {
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<?php
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;
@@ -131,38 +131,43 @@ $(window).on("load",function() {
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
 	endif;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('WebGUI and Root Password'));?>
+<?php
+			html_titleline2(gettext('WebGUI and Root Password'));
+?>
 		</thead>
 		<tbody>
-			<?php
-			html_passwordbox2('password_old', gtext('Current Password'),'','',false);
-			html_passwordbox2('password_new', gtext('New Password'),'','',true);
-			html_passwordbox2('password_confirm', gtext('Confirm New Password'),'','',true);
-			?>
+<?php
+			html_passwordbox2('password_old', gettext('Current Password'),'','',false);
+			html_passwordbox2('password_new', gettext('New Password'),'','',true);
+			html_passwordbox2('password_confirm', gettext('Confirm New Password'),'','',true);
+?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php
-		echo html_button('save',gtext('Save'));
-		echo html_button('cancel',gtext('Cancel'));
-		?>
+<?php
+		echo html_button('save',gettext('Save'));
+		echo html_button('cancel',gettext('Cancel'));
+?>
 	</div>
 	<div id="remarks">
-		<?php
+<?php
 		$helpinghand = '<div id="enumeration"><ul>' .
 				'<li>' . gtext('This password is required to access the admin web interface.') . '</li>' .
 				'<li>' . gtext('This password is the root password of the system.') . '</li>' .
 				'</ul></div>';
 		html_remark2('note',gtext('Note'),$helpinghand);
-		?>
+?>
 	</div>
-	<?php include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
