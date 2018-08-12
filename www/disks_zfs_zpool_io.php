@@ -66,19 +66,19 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'))->
-			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
-			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
-			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'),gtext('Reload page'),true);
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gettext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Management'))->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gettext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gettext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gettext('I/O Statistics'),gettext('Reload page'),true);
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -89,7 +89,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('ZFS Pool I/O Statistics'));
+			html_titleline2(gettext('ZFS Pool I/O Statistics'));
 ?>
 		</thead>
 		<tbody>
@@ -104,4 +104,3 @@ $document->render();
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>

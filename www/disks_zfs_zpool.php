@@ -78,14 +78,14 @@ function disks_zfs_zpool_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Pool'));
-	$sphere->sym_mod(gtext('Edit Pool'));
-	$sphere->sym_inf(gtext('Pool Information'));
-	$sphere->sym_del(gtext('Pool is marked for deletion'));
-	$sphere->sym_loc(gtext('Pool is protected'));
-	$sphere->sym_unl(gtext('Pool is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Pools'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected pools?'));
+	$sphere->sym_add(gettext('Add Pool'));
+	$sphere->sym_mod(gettext('Edit Pool'));
+	$sphere->sym_inf(gettext('Pool Information'));
+	$sphere->sym_del(gettext('Pool is marked for deletion'));
+	$sphere->sym_loc(gettext('Pool is protected'));
+	$sphere->sym_unl(gettext('Pool is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Pools'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected pools?'));
 	$sphere->grid = &array_make_branch($config,'zfs','pools','pool');
 	return $sphere;
 }
@@ -146,19 +146,19 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
-			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
-			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gettext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Management'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gettext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gettext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gettext('I/O Statistics'));
 $document->render();
 ?>
 <form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -189,7 +189,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),11);
+			html_titleline2(gettext('Overview'),11);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
@@ -313,4 +313,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>

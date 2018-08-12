@@ -278,19 +278,19 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gtext('Virtual Device'))->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Management'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_zpool_tools.php',gtext('Tools'))->
-			ins_tabnav_record('disks_zfs_zpool_info.php',gtext('Information'))->
-			ins_tabnav_record('disks_zfs_zpool_io.php',gtext('I/O Statistics'));
+			ins_tabnav_record('disks_zfs_zpool_vdevice.php',gettext('Virtual Device'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Management'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_zpool_tools.php',gettext('Tools'))->
+			ins_tabnav_record('disks_zfs_zpool_info.php',gettext('Information'))->
+			ins_tabnav_record('disks_zfs_zpool_io.php',gettext('I/O Statistics'));
 $document->render();
 ?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -312,16 +312,16 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Settings'));
+			html_titleline2(gettext('Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', false, 20, $isrecordmodify);
-			html_inputbox2('root', gtext('Root'), $sphere_record['root'], gtext('Creates the pool with an alternate root.'), false, 40, $isrecordmodify);
-			html_inputbox2('mountpoint', gtext('Mount Point'), $sphere_record['mountpoint'], gtext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
-			html_checkbox2('force', gtext('Force Use'), $sphere_record['force'], gtext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
-			html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);
+			html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', false, 20, $isrecordmodify);
+			html_inputbox2('root', gettext('Root'), $sphere_record['root'], gettext('Creates the pool with an alternate root.'), false, 40, $isrecordmodify);
+			html_inputbox2('mountpoint', gettext('Mount Point'), $sphere_record['mountpoint'], gettext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
+			html_checkbox2('force', gettext('Force Use'), $sphere_record['force'], gettext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
+			html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
 ?>
 		</tbody>
 	</table>
@@ -336,7 +336,7 @@ $document->render();
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Virtual Device List'), 5);
+			html_titleline2(gettext('Virtual Device List'), 5);
 ?>
 			<tr>
 				<td class="lhelc"><input type="checkbox" class="oneemhigh" name="togglemembers" disabled="disabled"/></td>
