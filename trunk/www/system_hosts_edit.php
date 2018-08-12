@@ -110,27 +110,34 @@ if ($_POST) {
 		exit;
 	}
 }
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-	<td class="tabcont">
-	<form action="system_hosts_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline2(gtext('Hosts Setup'), 2);?>
-		<?php html_inputbox("name", gtext("Hostname"), $pconfig['name'], gtext("The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and ."), true, 40);?>
-		<?php html_inputbox("address", gtext("IP Address"), $pconfig['address'], gtext("The IP address that this hostname represents."), true, 20);?>
-		<?php html_inputbox("descr", gtext("Description"), $pconfig['descr'], gtext("You may enter a description here for your reference."), false, 20);?>
-		</table>
-		<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-		<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-		</div>
-		<?php include 'formend.inc';?>
-	</form>
-</td>
-</tr>
+	<tr><td class="tabcont">
+		<form action="system_hosts_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+<?php
+			if(!empty($input_errors)):
+				print_input_errors($input_errors);
+			endif;
+?>
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+<?php
+				html_titleline2(gtext('Hosts Setup'), 2);
+				html_inputbox("name", gtext("Hostname"), $pconfig['name'], gtext("The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and ."), true, 40);
+				html_inputbox("address", gtext("IP Address"), $pconfig['address'], gtext("The IP address that this hostname represents."), true, 20);
+				html_inputbox("descr", gtext("Description"), $pconfig['descr'], gtext("You may enter a description here for your reference."), false, 20);
+?>
+			</table>
+			<div id="submit">
+				<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
+				<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
+				<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+			</div>
+<?php
+			include 'formend.inc';
+?>
+		</form>
+	</td></tr>
 </table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
