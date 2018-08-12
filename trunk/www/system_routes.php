@@ -67,13 +67,13 @@ function system_routes_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Route'));
-	$sphere->sym_mod(gtext('Edit Route'));
-	$sphere->sym_del(gtext('Route is marked for deletion'));
-	$sphere->sym_loc(gtext('Route is protected'));
-	$sphere->sym_unl(gtext('Route is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Routes'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected routes?'));
+	$sphere->sym_add(gettext('Add Route'));
+	$sphere->sym_mod(gettext('Edit Route'));
+	$sphere->sym_del(gettext('Route is marked for deletion'));
+	$sphere->sym_loc(gettext('Route is protected'));
+	$sphere->sym_unl(gettext('Route is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Routes'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected routes?'));
 	$sphere->grid = &array_make_branch($config,'staticroutes','route');
 	return $sphere;
 }
@@ -225,7 +225,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),6);
+			html_titleline2(gettext('Overview'),6);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
