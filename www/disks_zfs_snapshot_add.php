@@ -141,18 +141,18 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'))->
-			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'))->
-			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshot'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gettext('Clone'))->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gettext('Auto Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="disks_zfs_snapshot_add.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -174,18 +174,18 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Snapshot'));
+			html_titleline2(gettext('Snapshot'));
 ?>
 		</thead>
 		<tbody>
 <?php
 			$a_pathlist = [];
 			foreach($a_path as $pathv):
-				$a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']);
+				$a_pathlist[$pathv['path']] = $pathv['path'];
 			endforeach;
-			html_combobox2('path',gtext('Path'),$pconfig['path'],$a_pathlist,'',true);
-			html_inputbox2('name',gtext('Name'),$pconfig['name'],'',true,20);
-			html_checkbox2('recursive',gtext('Recursive'),!empty($pconfig['recursive']) ? true : false,gtext('Create recursive snapshot.'),'',false);
+			html_combobox2('path',gettext('Path'),$pconfig['path'],$a_pathlist,'',true);
+			html_inputbox2('name',gettext('Name'),$pconfig['name'],'',true,20);
+			html_checkbox2('recursive',gettext('Recursive'),!empty($pconfig['recursive']) ? true : false,gettext('Create recursive snapshot.'),'',false);
 ?>
 		</tbody>
 	</table>

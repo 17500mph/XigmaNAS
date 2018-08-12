@@ -332,17 +332,17 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_config_current.php',gtext('Current'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Detected'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_config_sync.php',gtext('Synchronize'));
+			ins_tabnav_record('disks_zfs_config_current.php',gettext('Current'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Detected'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config_sync.php',gettext('Synchronize'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -366,7 +366,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Pools'),count($zfs['pools']['pool'])),10);
+			html_titleline2(sprintf('%s (%d)',gettext('Pools'),count($zfs['pools']['pool'])),10);
 ?>
 			<tr>
 				<th class="lhell"><?=gtext('Name');?></th>
@@ -438,7 +438,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),4);
+			html_titleline2(sprintf('%s (%d)',gettext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),4);
 ?>
 			<tr>
 				<th class="lhell"><?=gtext('Name');?></th>
@@ -486,7 +486,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Datasets'),count($zfs['datasets']['dataset'])),11);
+			html_titleline2(sprintf('%s (%d)',gettext('Datasets'),count($zfs['datasets']['dataset'])),11);
 ?>
 			<tr>
 				<th class="lhell"><?=gtext('Name');?></th>
@@ -548,7 +548,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Volumes'),count($zfs['volumes']['volume'])),8);
+			html_titleline2(sprintf('%s (%d)',gettext('Volumes'),count($zfs['volumes']['volume'])),8);
 ?>
 			<tr>
 				<th class="lhell"><?=gtext('Name');?></th>
@@ -582,10 +582,9 @@ $document->render();
 	</table>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext('This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line'));
+		html_remark2('note',gettext('Note'),gettext('This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line'));
 ?>
 	</div>
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>

@@ -136,18 +136,18 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'))->
-			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'))->
-			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gettext('Clone'))->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gettext('Auto Snapshot'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="disks_zfs_snapshot_auto.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -174,7 +174,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'), 7);
+			html_titleline2(gettext('Overview'), 7);
 ?>
 			<tr>
 				<th class="lhell"><?=gtext('Path');?></th>
@@ -204,10 +204,14 @@ $document->render();
 							if(UPDATENOTIFY_MODE_DIRTY != $notificationmode):
 ?>
 								<td>
-									<a href="disks_zfs_snapshot_auto_edit.php?uuid=<?=$autosnapshotv['uuid'];?>"><img src="images/edit.png" title="<?=gtext('Edit auto snapshot');?>" border="0" alt="<?=gtext('Edit auto snapshot');?>" /></a>&nbsp;
+									<a href="disks_zfs_snapshot_auto_edit.php?uuid=<?=$autosnapshotv['uuid'];?>">
+										<img src="images/edit.png" title="<?=gtext('Edit auto snapshot');?>" border="0" alt="<?=gtext('Edit auto snapshot');?>" />
+									</a>
 								</td>
 								<td>
-									<a href="disks_zfs_snapshot_auto.php?act=del&amp;uuid=<?=$autosnapshotv['uuid'];?>" onclick="return confirm('<?=gtext('Do you really want to delete this auto snapshot?');?>')"><img src="images/delete.png" title="<?=gtext("Delete auto snapshot");?>" border="0" alt="<?=gtext('Delete auto snapshot');?>" /></a>
+									<a href="disks_zfs_snapshot_auto.php?act=del&amp;uuid=<?=$autosnapshotv['uuid'];?>" onclick="return confirm('<?=gtext('Do you really want to delete this auto snapshot?');?>')">
+										<img src="images/delete.png" title="<?=gtext("Delete auto snapshot");?>" border="0" alt="<?=gtext('Delete auto snapshot');?>" />
+									</a>
 								</td>
 								<td></td>
 <?php
@@ -231,7 +235,11 @@ $document->render();
 		<tfoot>
 			<tr>
 				<th class="lcenl" colspan="6"></th>
-				<th class="lceadd"><a href="disks_zfs_snapshot_auto_edit.php"><img src="images/add.png" title="<?=gtext("Add auto snapshot");?>" alt="<?=gtext("Add auto snapshot");?>"/></a></th>
+				<th class="lceadd">
+					<a href="disks_zfs_snapshot_auto_edit.php">
+						<img src="images/add.png" title="<?=gtext("Add auto snapshot");?>" alt="<?=gtext("Add auto snapshot");?>"/>
+					</a>
+				</th>
 			</tr>
 		</tfoot>
 	</table>
@@ -241,4 +249,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>

@@ -513,17 +513,17 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_config_current.php',gtext('Current'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Detected'))->
-			ins_tabnav_record('disks_zfs_config_sync.php',gtext('Synchronize'),gtext('Reload page'),true);
+			ins_tabnav_record('disks_zfs_config_current.php',gettext('Current'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Detected'))->
+			ins_tabnav_record('disks_zfs_config_sync.php',gettext('Synchronize'),gettext('Reload page'),true);
 $document->render();
 ?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -551,7 +551,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Pools'),count($zfs['pools']['pool'])),11);
+			html_titleline2(sprintf('%s (%d)',gettext('Pools'),count($zfs['pools']['pool'])),11);
 ?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
@@ -604,7 +604,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),5);
+			html_titleline2(sprintf('%s (%d)',gettext('Virtual Devices'),count($zfs['vdevices']['vdevice'])),5);
 ?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
@@ -655,7 +655,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Datasets'),count($zfs['datasets']['dataset'])),12);
+			html_titleline2(sprintf('%s (%d)',gettext('Datasets'),count($zfs['datasets']['dataset'])),12);
 ?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
@@ -720,7 +720,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(sprintf('%s (%d)',gtext('Volumes'),count($zfs['volumes']['volume'])),9);
+			html_titleline2(sprintf('%s (%d)',gettext('Volumes'),count($zfs['volumes']['volume'])),9);
 ?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
@@ -766,14 +766,14 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Options'));
+			html_titleline2(gettext('Options'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('leave_autosnapshots',gtext('Leave auto snapshot configuration'),true,gtext('Leave already configured auto snapshots.'),'',false);
-			html_checkbox2('import_disks',gtext('Import disks'),true,gtext('Import disks used in configuration.'),'',false);
-			html_checkbox2('import_disks_overwrite',gtext('Overwrite disks configuration'),false,gtext('Overwrite already configured disks (only affects filesystem value).'),'',false);
+			html_checkbox2('leave_autosnapshots',gettext('Leave auto snapshot configuration'),true,gettext('Leave already configured auto snapshots.'),'',false);
+			html_checkbox2('import_disks',gettext('Import disks'),true,gettext('Import disks used in configuration.'),'',false);
+			html_checkbox2('import_disks_overwrite',gettext('Overwrite disks configuration'),false,gettext('Overwrite already configured disks (only affects filesystem value).'),'',false);
 ?>
 		</tbody>
 	</table>
@@ -786,4 +786,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
