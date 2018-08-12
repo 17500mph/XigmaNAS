@@ -55,11 +55,11 @@ function interfaces_lagg_edit_get_sphere() {
 }
 $sphere = &interfaces_lagg_edit_get_sphere();
 $l_lagg_protocol = [
-	'failover' => gtext('Failover'),
-	'lacp' => gtext('LACP (Link Aggregation Control Protocol)'),
-	'loadbalance' => gtext('Loadbalance'),
-	'roundrobin' => gtext('Roundrobin'),
-	'none' => gtext('None')
+	'failover' => gettext('Failover'),
+	'lacp' => gettext('LACP (Link Aggregation Control Protocol)'),
+	'loadbalance' => gettext('Loadbalance'),
+	'roundrobin' => gettext('Roundrobin'),
+	'none' => gettext('None')
 ];
 $input_errors = [];
 $hide_button_save = false;
@@ -250,17 +250,19 @@ endforeach;
 $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('LAGG'),$isrecordnew ? gtext('Add') : gtext('Modify')];
 include 'fbegin.inc';
 $sphere->doj();
+//	add tab navigation
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			ins_tabnav_record('interfaces_assign.php',gettext('Management'))->
+			ins_tabnav_record('interfaces_wlan.php',gettext('WLAN'))->
+			ins_tabnav_record('interfaces_vlan.php',gettext('VLAN'))->
+			ins_tabnav_record('interfaces_lagg.php',gettext('LAGG'),gettext('Reload page'),true)->
+			ins_tabnav_record('interfaces_bridge.php',gettext('Bridge'))->
+			ins_tabnav_record('interfaces_carp.php',gettext('CARP'));
+$document->render();
 ?>
-<table id="area_navigator">
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext('WLAN');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext('VLAN');?></span></a></li>
-		<li class="tabact"><a href="interfaces_lagg.php" title="<?=gtext('Reload page');?>"><span><?=gtext('LAGG');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext('Bridge');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext('CARP');?></span></a></li>
-	</ul></td></tr>
-</table>
 <form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(!empty($input_errors)):
@@ -274,28 +276,28 @@ $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('LAGG Settings'));
+			html_titleline2(gettext('LAGG Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('if',gtext('Interface'),$sphere->row['if'],'',true,5,true);
-			html_radiobox2('laggproto',gtext('Aggregation Protocol'),$sphere->row['laggproto'],$l_lagg_protocol,'',true);
-			html_checkboxbox2('laggport',gtext('Ports'),$sphere->row['laggport'],$l_selectable_ports,'',true);
-			html_inputbox2('desc',gtext('Description'),$sphere->row['desc'],gtext('You may enter a description here for your reference.'),false,40);
+			html_inputbox2('if',gettext('Interface'),$sphere->row['if'],'',true,5,true);
+			html_radiobox2('laggproto',gettext('Aggregation Protocol'),$sphere->row['laggproto'],$l_lagg_protocol,'',true);
+			html_checkboxbox2('laggport',gettext('Ports'),$sphere->row['laggport'],$l_selectable_ports,'',true);
+			html_inputbox2('desc',gettext('Description'),$sphere->row['desc'],gettext('You may enter a description here for your reference.'),false,40);
 ?>
 		</tbody>
 	</table>
 	<div id="submit">
 <?php
 		if(!$hide_button_save):
-			echo $sphere->html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
+			echo $sphere->html_button('save',$isrecordnew ? gettext('Add') : gettext('Save'));
 		endif;
 		
 		if(empty($input_errors) && !$isrecordnew && !empty($l_available_ports)):
-			echo $sphere->html_button('clone',gtext('Clone'));
+			echo $sphere->html_button('clone',gettext('Clone'));
 		endif;
-		echo $sphere->html_button('cancel',gtext('Cancel'));
+		echo $sphere->html_button('cancel',gettext('Cancel'));
 ?>
 		<input name="enable" type="hidden" value="<?=$sphere->row['enable'];?>"/>
 		<input name="if" type="hidden" value="<?=$sphere->row['if'];?>"/>

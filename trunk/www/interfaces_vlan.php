@@ -58,13 +58,13 @@ function interfaces_vlan_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add VLAN'));
-	$sphere->sym_mod(gtext('Edit VLAN'));
-	$sphere->sym_del(gtext('VLAN is marked for deletion'));
-	$sphere->sym_loc(gtext('VLAN is protected'));
-	$sphere->sym_unl(gtext('VLAN is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected VLANs'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected VLANs?'));
+	$sphere->sym_add(gettext('Add VLAN'));
+	$sphere->sym_mod(gettext('Edit VLAN'));
+	$sphere->sym_del(gettext('VLAN is marked for deletion'));
+	$sphere->sym_loc(gettext('VLAN is protected'));
+	$sphere->sym_unl(gettext('VLAN is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected VLANs'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected VLANs?'));
 	$sphere->grid = &array_make_branch($config,'vinterfaces','vlan');
 	return $sphere;
 }
@@ -103,17 +103,19 @@ endif;
 $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('VLAN')];
 include 'fbegin.inc';
 echo $sphere->doj();
+//	add tab navigation
+$document = new co_DOMDocument();
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			ins_tabnav_record('interfaces_assign.php',gettext('Management'))->
+			ins_tabnav_record('interfaces_wlan.php',gettext('WLAN'))->
+			ins_tabnav_record('interfaces_vlan.php',gettext('VLAN'),gettext('Reload page'),true)->
+			ins_tabnav_record('interfaces_lagg.php',gettext('LAGG'))->
+			ins_tabnav_record('interfaces_bridge.php',gettext('Bridge'))->
+			ins_tabnav_record('interfaces_carp.php',gettext('CARP'));
+$document->render();
 ?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"> <ul id="tabnav">
-		<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext('WLAN');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere->get_scriptname();?>" title="<?=gtext('Reload page');?>"><span><?=gtext('VLAN');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext('LAGG');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext('Bridge');?></span></a></li>
-		<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext('CARP');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
 <form action="<?=$sphere->get_scriptname();?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
 <?php
 	if(file_exists($d_sysrebootreqd_path)):
@@ -134,7 +136,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),6);
+			html_titleline2(gettext('Overview'),6);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
@@ -202,7 +204,7 @@ echo $sphere->doj();
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext('Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do not explicitly support it, VLAN tagging will still work, but the reduced MTU may cause problems.'));
+		html_remark2('note',gettext('Note'),gettext('Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do not explicitly support it, VLAN tagging will still work, but the reduced MTU may cause problems.'));
 ?>
 	</div>
 <?php
