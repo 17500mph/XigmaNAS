@@ -34,45 +34,13 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
-$sphere_scriptname = 'notavailable-php';
-$sphere_header = 'Location: ' + $sphere_scriptname;
-if($_POST):
-	header($sphere_header);
-	exit;
-endif;
-$pgtitle = [gtext('NOT YET AVAILABLE')];
-?>
-<?php
-include 'fbegin.inc';
-?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-	$("#iform").submit(function() { spinner(); });
-	$(".spin").click(function() { spinner(); });
-});
-//]]>
-</script>
-<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_selection">
-		<colgroup>
-			<col style="width:100%">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gtext('NOT YET AVAILABLE'),1);
-?>
-		</thead>
-	</table>
-	<div id="submit">
-<?php
-		echo html_button('cancel',gtext('Continue'));
-?>
-	</div>
-<?php
-	include 'formend.inc';
-?>
-</td></tr></tbody></table></form>
-<?php
-include 'fend.inc';
-?>
+$document = new_page([gettext('NOT YET AVAILABLE')],NULL,'notabnav');
+$pagecontent = $document->getElementById('pagecontent');
+$content = $pagecontent->add_area_data();
+$content->
+	add_table_data_settings()->
+		ins_colgroup_data_settings()->
+		addTHEAD()->
+			c2_titleline(gettext('NOT YET AVAILABLE'));
+//	showtime
+$document->render();
