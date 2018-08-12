@@ -176,53 +176,56 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
+<?php
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;
 	if(file_exists($d_sysrebootreqd_path)):
 		print_info_box(get_std_save_message(0));
 	endif;
-	?>
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable',gtext('Configuration'),$sphere_record['enable'],gtext('Enable'));?>
+<?php
+			html_titleline_checkbox2('enable',gettext('Configuration'),$sphere_record['enable'],gettext('Enable'));
+?>
 		</thead>
 		<tbody>
-			<?php
-			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a valid sysctl MIB name.'),true,60,false,false,60,gtext('Name'));
-			html_inputbox2('value',gtext('Value'),$sphere_record['value'],gtext('A valid systctl MIB value.'),true,60,false,false,60,gtext('Value'));
-			html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('You may enter a description here for your reference.'),false,60,false,false,60,gtext('Description'));
-			?>
+<?php
+			html_inputbox2('name',gettext('Name'),$sphere_record['name'],gettext('Enter a valid sysctl MIB name.'),true,60,false,false,60,gettext('Name'));
+			html_inputbox2('value',gettext('Value'),$sphere_record['value'],gettext('A valid systctl MIB value.'),true,60,false,false,60,gettext('Value'));
+			html_inputbox2('comment',gettext('Comment'),$sphere_record['comment'],gettext('You may enter a description here for your reference.'),false,60,false,false,60,gettext('Description'));
+?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php
-		echo html_button('save',$isrecordnew ? gtext('Add') : gtext('Save'));
-		echo html_button('cancel',gtext('Cancel'));
-		?>
+<?php
+		echo html_button('save',$isrecordnew ? gettext('Add') : gettext('Save'));
+		echo html_button('cancel',gettext('Cancel'));
+?>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
 <?php
 	include 'formend.inc';
 ?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';

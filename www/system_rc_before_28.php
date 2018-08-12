@@ -128,7 +128,7 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts')];
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'), 3);?>
+			<?php html_titleline2(gettext('Overview'), 3);?>
 			<tr>
 				<td class="lhell"><?=gtext("Command");?></td>
 				<td class="lhell"><?=gtext("Type");?></td>
