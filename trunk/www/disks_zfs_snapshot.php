@@ -106,13 +106,13 @@ else:
 	$filter_time = '1week';
 endif;
 $l_filter_time = [
-    '1week' => sprintf(gtext('%d week'),1),
-    '2weeks' => sprintf(gtext('%d weeks'),2),
-    '30days' => sprintf(gtext('%d days'),30),
-    '60days' => sprintf(gtext('%d days'),60),
-    '90days' => sprintf(gtext('%d days'),90),
-    '180days' => sprintf(gtext('%d days'),180),
-    '0' => gtext('All')
+    '1week' => sprintf(gettext('%d week'),1),
+    '2weeks' => sprintf(gettext('%d weeks'),2),
+    '30days' => sprintf(gettext('%d days'),30),
+    '60days' => sprintf(gettext('%d days'),60),
+    '90days' => sprintf(gettext('%d days'),90),
+    '180days' => sprintf(gettext('%d days'),180),
+    '0' => gettext('All')
 ];
 
 function get_zfs_snapshots_filter($snapshots,$filter) {
@@ -272,18 +272,18 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshot'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot_clone.php',gtext('Clone'))->
-			ins_tabnav_record('disks_zfs_snapshot_auto.php',gtext('Auto Snapshot'))->
-			ins_tabnav_record('disks_zfs_snapshot_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshot'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot_clone.php',gettext('Clone'))->
+			ins_tabnav_record('disks_zfs_snapshot_auto.php',gettext('Auto Snapshot'))->
+			ins_tabnav_record('disks_zfs_snapshot_info.php',gettext('Information'));
 $document->render();
 ?>
 <form action="disks_zfs_snapshot.php" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -305,12 +305,12 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Filter'));
+			html_titleline2(gettext('Filter'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_combobox2('filter_time', gtext('Age'), $filter_time, $l_filter_time, '');
+			html_combobox2('filter_time', gettext('Age'), $filter_time, $l_filter_time, '');
 ?>
 		</tbody>
 	</table>
@@ -329,7 +329,7 @@ $document->render();
 		<thead>
 <?php
 			html_separator2();
-			html_titleline2(gtext('Overview'), 6);
+			html_titleline2(gettext('Overview'), 6);
 ?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
@@ -416,4 +416,3 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
