@@ -144,10 +144,10 @@ else: // EDIT / ADD
 	endswitch;
 endif;
 $l_type = [
-	'1' => gtext('PreInit'),
-	'2' => gtext('PostInit'),
-	'3' => gtext('Shutdown'),
-	'971' => gtext('Post Upgrade')
+	'1' => gettext('PreInit'),
+	'2' => gettext('PostInit'),
+	'3' => gettext('Shutdown'),
+	'971' => gettext('Post Upgrade')
 ];
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'),(RECORD_NEW !== $mode_record) ? gtext('Edit') : gtext('Add')];
 include 'fbegin.inc';
@@ -166,17 +166,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -198,15 +198,15 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable', gtext('Settings'), $sphere_record['enable'], gtext('Enable'));
+			html_titleline_checkbox2('enable', gettext('Settings'), $sphere_record['enable'], gettext('Enable'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a name for the command.'),false, 40,false,false,40,gtext('Enter a name'));
-			html_inputbox2('value',gtext('Command'),$sphere_record['value'],gtext('The command to be executed.'),true,60,false,false,1024,gtext('Enter the command'));
-			html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('Enter a description for your reference.'),false,60,false,false,60,gtext('Enter a comment'));
-			html_radiobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Select at which stage the command should be executed.'),true,false);
+			html_inputbox2('name',gettext('Name'),$sphere_record['name'],gettext('Enter a name for the command.'),false, 40,false,false,40,gettext('Enter a name'));
+			html_inputbox2('value',gettext('Command'),$sphere_record['value'],gettext('The command to be executed.'),true,60,false,false,1024,gettext('Enter the command'));
+			html_inputbox2('comment',gettext('Comment'),$sphere_record['comment'],gettext('Enter a description for your reference.'),false,60,false,false,60,gettext('Enter a comment'));
+			html_radiobox2('typeid',gettext('Type'),$sphere_record['typeid'],$l_type,gettext('Select at which stage the command should be executed.'),true,false);
 ?>
 		</tbody>
 	</table>

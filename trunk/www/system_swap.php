@@ -123,17 +123,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <form action="system_swap.php" method="post" name="iform" id="iform" onsubmit="spinner()"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -155,7 +155,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('Swap Memory'),!empty($pconfig['enable']) ? true : false,gtext('Enable'),'enable_change(false)');
+			html_titleline_checkbox2('enable',gettext('Swap Memory'),!empty($pconfig['enable']) ? true : false,gettext('Enable'),'enable_change(false)');
 ?>
 		</thead>
 		<tbody>
@@ -201,13 +201,13 @@ $document->render();
 <?php
 			endif;
 			$l_type = [
-				'file' => gtext('File'),
-				'device' => gtext('Device')
+				'file' => gettext('File'),
+				'device' => gettext('Device')
 			];
-			html_combobox2('type',gtext('Type'),$pconfig['type'],$l_type,'',true,false,'type_change()');
-			html_mountcombobox2('mountpoint',gtext('Mount Point'),$pconfig['mountpoint'],gtext('Select mount point where to create the swap file.'),true);
-			html_inputbox2('size',gtext('Size'),$pconfig['size'],gtext('The size of the swap file in MB.'),true,10);
-			html_inputbox2('devicespecialfile',gtext('Device'),$pconfig['devicespecialfile'],sprintf(gtext('Name of the device to use as swap device, e.g. %s.'),'/dev/da0s2b'),true,20);
+			html_combobox2('type',gettext('Type'),$pconfig['type'],$l_type,'',true,false,'type_change()');
+			html_mountcombobox2('mountpoint',gettext('Mount Point'),$pconfig['mountpoint'],gettext('Select mount point where to create the swap file.'),true);
+			html_inputbox2('size',gettext('Size'),$pconfig['size'],gettext('The size of the swap file in MB.'),true,10);
+			html_inputbox2('devicespecialfile',gettext('Device'),$pconfig['devicespecialfile'],sprintf(gettext('Name of the device to use as swap device, e.g. %s.'),'/dev/da0s2b'),true,20);
 ?>
 		</tbody>
 	</table>

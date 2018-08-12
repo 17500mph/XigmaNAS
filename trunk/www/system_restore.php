@@ -129,12 +129,12 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Restore Configuration'));
+			html_titleline2(gettext('Restore Configuration'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_passwordbox2('decrypt_password',gtext('Decryption Password'),'','',false,25,false,gtext('Enter Password'));
+			html_passwordbox2('decrypt_password',gettext('Decryption Password'),'','',false,25,false,gettext('Enter Password'));
 ?>
 		</tbody>
 	</table>
@@ -143,12 +143,12 @@ include 'fbegin.inc';
 	</div>
 	<div id="submit">
 <?php
-		echo html_button('restore',gtext('Restore Configuration'),'restore');
+		echo html_button('restore',gettext('Restore Configuration'),'restore');
 ?>
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext('The server will reboot after the configuration was successfully restored.'));
+		html_remark2('note',gettext('Note'),gettext('The server will reboot after the configuration was successfully restored.'));
 ?>
 	</div>
 <?php
