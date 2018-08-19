@@ -403,7 +403,7 @@ foreach($a_pool as $r_pool):
 	if(!empty($r_pool['desc'])):
 		$helpinghand .= ' ' . $r_pool['desc'];
 	endif;
-	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
+	$l_poollist[$r_pool['name']] = $helpinghand;
 endforeach;
 $l_compressionmode = [
 	'on' => gettext('On'),
@@ -458,11 +458,11 @@ $l_casesensitivity = [
 ];
 $l_users = [];
 foreach(system_get_user_list() as $r_key => $r_value):
-	$l_users[$r_key] = htmlspecialchars($r_key);
+	$l_users[$r_key] = $r_key;
 endforeach;
 $l_groups = [];
 foreach(system_get_group_list() as $r_key => $r_value):
-	$l_groups[$r_key] = htmlspecialchars($r_key);
+	$l_groups[$r_key] = $r_key;
 endforeach;
 // Calculate value of access right checkboxes, contains a) 0 for not checked or b) the required bit mask value
 $mode_access = [];
