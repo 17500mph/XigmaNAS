@@ -111,7 +111,7 @@ function set_selected(name) {
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('Scheduled Shutdown'),!empty($pconfig['enable']) ? true : false,gtext('Enable'));
+			html_titleline_checkbox2('enable',gettext('Scheduled Shutdown'),!empty($pconfig['enable']) ? true : false,gettext('Enable'));
 ?>
 		</thead>
 		<tbody>
@@ -134,4 +134,3 @@ function set_selected(name) {
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
