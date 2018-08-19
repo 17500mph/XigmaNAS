@@ -124,15 +124,15 @@ switch($page_action):
 	case 'save':
 		// Input validation.
 		$reqdfields = ['dir'];
-		$reqdfieldsn = [gtext('Directory')];
+		$reqdfieldsn = [gettext('Directory')];
 		$reqdfieldst = ['string'];
 		do_input_validation($sphere->row,$reqdfields,$reqdfieldsn,$input_errors);
 		$reqdfields = array_merge($reqdfields,['port','umask','timeout','maxblocksize']);
-		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Port'),gtext('Umask'),gtext('Timeout'),gtext('Max. Block Size')]);
+		$reqdfieldsn = array_merge($reqdfieldsn,[gettext('Port'),gettext('Umask'),gettext('Timeout'),gettext('Max. Block Size')]);
 		$reqdfieldst = array_merge($reqdfieldst,['port','numeric','numeric','numeric']);
 		do_input_validation_type($sphere->row,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		if((512 > $sphere->row['maxblocksize']) || (65464 < $sphere->row['maxblocksize'])):
-			$input_errors[] = sprintf(gtext('Invalid maximum block size! It must be in the range from %d to %d.'),512,65464);
+			$input_errors[] = sprintf(gettext('Invalid maximum block size! It must be in the range from %d to %d.'),512,65464);
 		endif;
 		if(empty($input_errors)):
 			$sphere->copyrowtogrid();
@@ -172,10 +172,10 @@ endswitch;
 list($page_mode,$is_readonly) = calc_skipviewmode($page_mode);
 $l_user = [];
 foreach(system_get_user_list() as $key => $val):
-	$l_user[$key] = htmlspecialchars($key);
+	$l_user[$key] = $key;
 endforeach;
 $cop->get_username()->set_options($l_user);
-$pgtitle = [gtext('Services'),gtext('TFTP')];
+$pgtitle = [gettext('Services'),gettext('TFTP')];
 $document = new_page($pgtitle,$sphere->get_scriptname(),'notabnav');
 //	get areas
 $body = $document->getElementById('main');
@@ -192,10 +192,10 @@ $content->
 		ins_colgroup_data_settings()->
 		push()->
 		addTHEAD()->
-			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gtext('Trivial File Transfer Protocol'))->
+			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gettext('Trivial File Transfer Protocol'))->
 		pop()->
 		addTBODY()->
-			c2_filechooser($cop->get_dir(),htmlspecialchars($sphere->row[$cop->get_dir()->get_name()]),true,$is_readonly)->
+			c2_filechooser($cop->get_dir(),$sphere->row[$cop->get_dir()->get_name()],true,$is_readonly)->
 			c2_checkbox($cop->get_allowfilecreation(),$sphere->row[$cop->get_allowfilecreation()->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
@@ -203,15 +203,15 @@ $content->
 		push()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline(gtext('Advanced Settings'))->
+			c2_titleline(gettext('Advanced Settings'))->
 		pop()->
 		addTBODY()->
-			c2_input_text($cop->get_port(),htmlspecialchars($sphere->row[$cop->get_port()->get_name()]),false,$is_readonly)->
-			c2_select($cop->get_username(),htmlspecialchars($sphere->row[$cop->get_username()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_umask(),htmlspecialchars($sphere->row[$cop->get_umask()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_timeout(),htmlspecialchars($sphere->row[$cop->get_timeout()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_maxblocksize(),htmlspecialchars($sphere->row[$cop->get_maxblocksize()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_extraoptions(),htmlspecialchars($sphere->row[$cop->get_extraoptions()->get_name()]),false,$is_readonly);
+			c2_input_text($cop->get_port(),$sphere->row[$cop->get_port()->get_name()],false,$is_readonly)->
+			c2_select($cop->get_username(),$sphere->row[$cop->get_username()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_umask(),$sphere->row[$cop->get_umask()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_timeout(),$sphere->row[$cop->get_timeout()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_maxblocksize(),$sphere->row[$cop->get_maxblocksize()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_extraoptions(),$sphere->row[$cop->get_extraoptions()->get_name()],false,$is_readonly);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
