@@ -63,8 +63,7 @@ if($_POST):
 	endif;
 endif;
 $pgtitle = [gtext('System'),gtext('Shutdown'),gtext('Now')];
-?>
-<?php include 'fbegin.inc';?>
+include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -80,20 +79,22 @@ $(window).on("load", function() {
 	</ul>
 </td></tr></tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php 
+<?php 
 	if($cmd_system_shutdown):
 		echo print_info_box($gt_shutdown);
 	endif;
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Shutdown'),1);?>
+<?php
+			html_titleline2(gettext('Shutdown'),1);
+?>
 		</thead>
 	</table>
-	<?php
+<?php
 	if(!$cmd_system_shutdown):
 		echo print_warning_box($gt_shutdown_confirm);
 		echo '<div id="submit">';
@@ -102,7 +103,7 @@ $(window).on("load", function() {
 		echo '</div>';
 	endif;
 	include 'formend.inc';
-	?>
+?>
 </form></td></tr></tbody></table>
 <?php
 include 'fend.inc';
@@ -112,4 +113,3 @@ if($cmd_system_shutdown):
 	sleep(5);
 	system_halt();
 endif;
-?>
