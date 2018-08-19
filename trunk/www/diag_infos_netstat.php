@@ -43,7 +43,7 @@ if(is_ajax()):
 	$status['area_refresh'] = diag_infos_netstat_ajax();
 	render_ajax($status);
 endif;
-$pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Netstat')];
+$pgtitle = [gettext('Diagnostics'),gettext('Information'),gettext('Netstat')];
 $document = new_page($pgtitle);
 //	get areas
 $body = $document->getElementById('main');
@@ -52,34 +52,34 @@ $pagecontent = $document->getElementById('pagecontent');
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'))->
-			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
-			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
-			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'),gtext('Reload page'),true)->
-			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
-			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
+			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
+			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'),gettext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
 $pagecontent->
 	add_area_data()->
 		add_table_data_settings()->
 			push()->
 			ins_colgroup_data_settings()->
 			addTHEAD()->
-				c2_titleline(gtext('Netstat'))->
+				c2_titleline(gettext('Netstat'))->
 			pop()->
 			addTBODY()->
 				addTR()->
-					insTDwC('celltag',gtext('Information'))->
+					insTDwC('celltag',gettext('Information'))->
 					addTDwC('celldata')->
 						addElement('pre',['class' => 'cmdoutput'])->
 							addElement('span',['id' => 'area_refresh'],diag_infos_netstat_ajax());
@@ -92,7 +92,5 @@ $js_document_ready = <<<'EOJ'
 		}
 	});
 EOJ;
-$body->
-	add_js_document_ready($js_document_ready);
-$document->
-	render();
+$body->add_js_document_ready($js_document_ready);
+$document->render();
