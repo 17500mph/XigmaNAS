@@ -158,17 +158,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
@@ -190,18 +190,18 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('Cron job'),$pconfig['enable'] ? true : false,gtext('Enable'));
+			html_titleline_checkbox2('enable',gettext('Cron job'),$pconfig['enable'] ? true : false,gettext('Enable'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('command',gtext('Command'),$pconfig['command'],gtext('Specifies the command to be run.'),true,60);
+			html_inputbox2('command',gettext('Command'),$pconfig['command'],gettext('Specifies the command to be run.'),true,60);
 			$a_user = [];
 			foreach(system_get_user_list() as $userk => $userv):
 				$a_user[$userk] = htmlspecialchars($userk);
 			endforeach;
-			html_combobox2('who',gtext('Who'),$pconfig['who'],$a_user,'',true);
-			html_inputbox2('desc',gtext('Description'),$pconfig['desc'],gtext('You may enter a description here for your reference.'),true,40);
+			html_combobox2('who',gettext('Who'),$pconfig['who'],$a_user,'',true);
+			html_inputbox2('desc',gettext('Description'),$pconfig['desc'],gettext('You may enter a description here for your reference.'),true,40);
 ?>
 			<tr>
 				<td class="celltagreq"><?=gtext('Schedule Time');?></td>
