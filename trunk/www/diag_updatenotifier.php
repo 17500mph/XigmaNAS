@@ -136,20 +136,20 @@ if($record_exists):
 				$mode = gtext('Unknown');
 				break;
 			default:
-				$mode = htmlspecialchars($sphere->row['mode']);
+				$mode = $sphere->row['mode'];
 				break;
 		endswitch;
-		$ts = htmlspecialchars(get_datetime_locale((int)$sphere->row['ts']));
+		$ts = get_datetime_locale((int)$sphere->row['ts']);
 		$tbody->
 			addTR()->
 				push()->
 				addTDwC('lcelc')->
 					ins_cbm_checkbox($sphere,false)->
 				pop()->
-				insTDwC('lcell',htmlspecialchars($sphere->row['key']))->
+				insTDwC('lcell',$sphere->row['key'])->
 				insTDwC('lcell',$ts)->
 				insTDwC('lcell',$mode)->
-				insTDwC('lcebl',htmlspecialchars($sphere->row['data']));
+				insTDwC('lcebl',$sphere->row['data']);
 	endforeach;
 else:
 	$tbody->ins_no_records_found($n_col_width);
