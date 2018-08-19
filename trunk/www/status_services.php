@@ -110,14 +110,14 @@ foreach($sphere->grid as $sphere->row_id => $sphere->row):
 	$dc = $is_enabled ? '' : 'd';
 	$tba = $tbody->
 		addTR()->
-			insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_name()->get_name()] ?? ''))->
+			insTDwC('lcell' . $dc,$sphere->row[$cop->get_name()->get_name()] ?? '')->
 			ins_enadis_icon($is_enabled)->
 			ins_enadis_icon($is_running)->
 			add_toolbox_area()->
 				push()->
 				addTD()->
 					addA(['href' => $sphere->row['link']])->
-						insIMG(['src' => $g_img['mod'],'title' => gtext('Modify Service'),'alt' => gtext('Modify Service'),'class' => 'spin oneemhigh'])->
+						insIMG(['src' => $g_img['mod'],'title' => gettext('Modify Service'),'alt' => gettext('Modify Service'),'class' => 'spin oneemhigh'])->
 				pop()->
 				ins_maintainbox($sphere,false)->
 				ins_informbox($sphere,false);
