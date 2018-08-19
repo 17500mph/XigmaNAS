@@ -39,13 +39,13 @@ $sphere_header = 'Location: '.$sphere_scriptname;
 $sphere_header_parent = 'Location: index.php';
 $gt_defaults = gtext('The server is now reset to factory defaults and will reboot.');
 $gt_defaults_confirm = gtext('Are you sure you want to reset the server to factory defaults?');
-$gt_yes = gtext('Yes');
-$gt_no = gtext('No');
+$gt_yes = gettext('Yes');
+$gt_no = gettext('No');
 $cmd_system_defaults = false;
-$gt_note_1 = gtext('The server will be reset to factory defaults and will reboot.');
-$gt_note_2 = gtext('The entire system configuration will be overwritten.');
-$gt_note_3 = gtext('The LAN IP address will be reset to') . ': <b>' . htmlspecialchars($g['default_ip']) . '</b>.';
-$gt_note_4 = gtext('The administrator password will be reset to') . ': "<b>' . htmlspecialchars($g['default_passwd']) . '</b>".';
+$gt_note_1 = gettext('The server will be reset to factory defaults and will reboot.');
+$gt_note_2 = gettext('The entire system configuration will be overwritten.');
+$gt_note_3 = gettext('The LAN IP address will be reset to') . ': <b>' . htmlspecialchars($g['default_ip']) . '</b>.';
+$gt_note_4 = gettext('The administrator password will be reset to') . ': "<b>' . htmlspecialchars($g['default_passwd']) . '</b>".';
 
 if($_POST) {
 	if($_POST['submit']) {
@@ -65,8 +65,8 @@ if($_POST) {
 	}
 }
 $pgtitle = [gtext('System'),gtext('Factory Defaults')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -76,46 +76,51 @@ $(window).on("load", function() {
 //]]>
 </script>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<?php
-	if($cmd_system_defaults) {
+<?php
+	if($cmd_system_defaults):
 		echo print_info_box($gt_defaults);
-	} else {
+	else:
 		echo print_warning_box($gt_defaults_confirm);
-	}
-	?>
+	endif;
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col class="area_data_settings_col_tag">
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Factory Defaults'),2);?>
+<?php
+			html_titleline2(gettext('Factory Defaults'),2);
+?>
 		</thead>
 		<tbody>
-			<?php
-			html_textinfo2('note1',gtext('Note'),$gt_note_1);
-			html_textinfo2('note2',gtext('Warning'),$gt_note_2);
-			html_textinfo2('note3',gtext('IP Address'),$gt_note_3);
-			html_textinfo2('note4',gtext('Password'),$gt_note_4);
-			?>
+<?php
+			html_textinfo2('note1',gettext('Note'),$gt_note_1);
+			html_textinfo2('note2',gettext('Warning'),$gt_note_2);
+			html_textinfo2('note3',gettext('IP Address'),$gt_note_3);
+			html_textinfo2('note4',gettext('Password'),$gt_note_4);
+?>
 		</tbody>
 	</table>
-		<?php if(!$cmd_system_defaults):;?>
+<?php
+		if(!$cmd_system_defaults):;
+?>
 			<div id="submit">
-			<?php
+<?php
 			echo html_button('save',$gt_yes);
 			echo html_button('cancel',$gt_no);
-			?>
+?>
 			</div>
-		<?php endif;?>
-<?php include 'formend.inc';?>
-</form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
 <?php
+		endif;
+	include 'formend.inc';
+?>
+</form></td></tr></tbody></table>
+<?php
+include 'fend.inc';
 if ($cmd_system_defaults) {
 	reset_factory_defaults();
 	flush();
 	sleep(5);
 	system_reboot();
 }
-?>
