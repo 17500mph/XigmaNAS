@@ -404,17 +404,17 @@ include 'fbegin.inc';
 				</colgroup>
 				<thead>
 <?php
-					html_titleline2(gtext('Firmware Information'));
+					html_titleline2(gettext('Firmware Information'));
 ?>
 				</thead>
 				<tbody>
 <?php
-					html_text2('currentversion',gtext('Current Version'),sprintf('%s %s (%s)',get_product_name(),get_product_version(),get_product_revision()));
+					html_text2('currentversion',gettext('Current Version'),sprintf('%s %s (%s)',get_product_name(),get_product_version(),get_product_revision()));
 					if(isset($config['system']['disablefirmwarecheck'])):
-						html_text2('onlineversion',gtext('Online Information'),gtext('Firmware upgrade check has been disabled.'));
+						html_text2('onlineversion',gettext('Online Information'),gettext('Firmware upgrade check has been disabled.'));
 					else:
 						if(preg_match('/\S/',$fw_info_current_osver)):
-							html_text2('onlineversion',gtext('Online Information'),$fw_info_current_osver);
+							html_text2('onlineversion',gettext('Online Information'),$fw_info_current_osver);
 						endif;
 					endif;
 ?>
@@ -447,7 +447,7 @@ include 'fbegin.inc';
 						</colgroup>
 						<thead>
 <?php
-							html_titleline2(gtext('Firmware Selection'));
+							html_titleline2(gettext('Firmware Selection'));
 ?>
 						</thead>
 						<tbody><tr>
@@ -463,12 +463,12 @@ include 'fbegin.inc';
 				<br />
 				<div id="remarks">
 <?php
-					$helpinghand = gtext('Do not abort the firmware upgrade process once it has started.')
+					$helpinghand = gettext('Do not abort the firmware upgrade process once it has started.')
 						. '<br />'
 						. '<a href="' . 'system_backup.php' . '">'
-						. gtext('It is recommended that you backup the server configuration before you upgrade')
+						. gettext('It is recommended that you backup the server configuration before you upgrade')
 						. '</a>.';
-					html_remark2('warning',gtext('Warning'),$helpinghand);
+					html_remark2('warning',gettext('Warning'),$helpinghand);
 ?>
 				</div>
 <?php
@@ -482,4 +482,3 @@ include 'fbegin.inc';
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
