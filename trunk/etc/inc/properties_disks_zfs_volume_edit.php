@@ -40,8 +40,8 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 
 	public function init_description() {
 		$property = parent::init_description();
-		$description = gtext('You may enter a description for your reference.');
-		$placeholder = gtext('Enter a description');
+		$description = gettext('You may enter a description for your reference.');
+		$placeholder = gettext('Enter a description');
 		$property->
 			set_id('desc')->
 			set_description($description)->
@@ -54,19 +54,19 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			set_filter(FILTER_UNSAFE_RAW)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => ''])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_checksum() {
 		$property = parent::init_checksum();
-		$description = gtext('Defines the checksum algorithm.');
+		$description = gettext('Defines the checksum algorithm.');
 		$options = [
-			'on' => gtext('On'),
-			'off' => gtext('Off'),
+			'on' => gettext('On'),
+			'off' => gettext('Off'),
 			'fletcher2' => 'Fletcher 2',
 			'fletcher4' => 'Fletcher 4',
 			'sha256' => 'SHA-256',
-			'noparity' => gtext('No Parity'),
+			'noparity' => gettext('No Parity'),
 			'sha512' => 'SHA-512',
 			'skein' => 'Skein',
 //			'edonr' => 'Edon-R',
@@ -79,15 +79,15 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_compression() {
 		$property = parent::init_compression();
-		$description = gtext("Controls the compression algorithm. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'.");
+		$description = gettext("Controls the compression algorithm. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'.");
 		$options = [
-			'on' => gtext('On'),
-			'off' => gtext('Off'),
+			'on' => gettext('On'),
+			'off' => gettext('Off'),
 			'lz4' => 'lz4',
 			'lzjb' => 'lzjb',
 			'gzip' => 'gzip',
@@ -110,30 +110,30 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_dedup() {
 		$property = parent::init_dedup();
 		$description = 
-			sprintf('<div>%s</div>',gtext('Controls the dedup method.')) .
+			sprintf('<div>%s</div>',gettext('Controls the dedup method.')) .
 			'<div style="font-weight: bold;">' .
-			sprintf('<span style="color: red;">%s</span>: ',gtext('WARNING')) .
+			sprintf('<span style="color: red;">%s</span>: ',gettext('WARNING')) .
 			'<a href="https://wiki.xigmanas.com/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">' .
-			gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.') .
+			gettext('See ZFS datasets & deduplication wiki article BEFORE using this feature.') .
 			'</a>' .
 			'</div>';
 		$options = [
-			'on' => gtext('On'),
-			'off' => gtext('Off'),
-			'verify' => gtext('Verify'),
+			'on' => gettext('On'),
+			'off' => gettext('Off'),
+			'verify' => gettext('Verify'),
 			'sha256' => 'SHA-256',
-			'sha256,verify' => gtext('SHA-256, Verify'),
+			'sha256,verify' => gettext('SHA-256, Verify'),
 			'sha512' => 'SHA-512',
-			'sha512,verify' => gtext('SHA-512, Verify'),
+			'sha512,verify' => gettext('SHA-512, Verify'),
 			'skein' => 'Skein',
-			'skein,verify' => gtext('Skein, Verify'),
-//			'edonr,verify' => gtext('Edon-R, Verify')
+			'skein,verify' => gettext('Skein, Verify'),
+//			'edonr,verify' => gettext('Edon-R, Verify')
 		];
 		$property->
 			set_id('dedup')->
@@ -143,15 +143,15 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_logbias() {
 		$property = parent::init_logbias();
-		$description = gtext('Provide a hint to ZFS about handling of synchronous requests in this dataset.');
+		$description = gettext('Provide a hint to ZFS about handling of synchronous requests in this dataset.');
 		$options = [
-			'latency' => gtext('Latency'),
-			'throughput' => gtext('Throughput')
+			'latency' => gettext('Latency'),
+			'throughput' => gettext('Throughput')
 		];
 		$property->
 			set_id('logbias')->
@@ -161,7 +161,7 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function test_name(string $value = '') {
@@ -183,8 +183,8 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 	}
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Enter a name for this volume.');
-		$placeholder = gtext('Enter Volume Name');
+		$description = gettext('Enter a name for this volume.');
+		$placeholder = gettext('Enter Volume Name');
 		$property->
 			set_id('name')->
 			set_description($description)->
@@ -195,12 +195,12 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			set_editableonadd(true)->
 			set_editableonmodify(false)->
 			set_filter(FILTER_CALLBACK)->set_filter_options([$this,'test_name'])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_pool() {
 		$property = parent::init_pool();
-		$description = gtext('The name of the ZFS pool.');
+		$description = gettext('The name of the ZFS pool.');
 		$property->
 			set_id('pool')->
 			set_description($description)->
@@ -208,16 +208,16 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			set_editableonadd(true)->
 			set_editableonmodify(false)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_primarycache() {
 		$property = parent::init_primarycache();
-		$description = gtext('Controls what is cached in the primary cache (ARC).');
+		$description = gettext('Controls what is cached in the primary cache (ARC).');
 		$options = [
-			'all' => gtext('Both user data and metadata will be cached in ARC.'),
-			'metadata' => gtext('Only metadata will be cached in ARC.'),
-			'none' => gtext('Neither user data nor metadata will be cached in ARC.')
+			'all' => gettext('Both user data and metadata will be cached in ARC.'),
+			'metadata' => gettext('Only metadata will be cached in ARC.'),
+			'none' => gettext('Neither user data nor metadata will be cached in ARC.')
 		];
 		$property->
 			set_id('primarycache')->
@@ -227,16 +227,16 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_secondarycache() {
 		$property = parent::init_secondarycache();
-		$description = gtext('Controls what is cached in the secondary cache (L2ARC).');
+		$description = gettext('Controls what is cached in the secondary cache (L2ARC).');
 		$options = [
-			'all' => gtext('Both user data and metadata will be cached in L2ARC.'),
-			'metadata' => gtext('Only metadata will be cached in L2ARC.'),
-			'none' => gtext('Neither user data nor metadata will be cached in L2ARC.')
+			'all' => gettext('Both user data and metadata will be cached in L2ARC.'),
+			'metadata' => gettext('Only metadata will be cached in L2ARC.'),
+			'none' => gettext('Neither user data nor metadata will be cached in L2ARC.')
 		];
 		$property->
 			set_id('secondarycache')->
@@ -246,23 +246,23 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_sparse() {
 		$property = parent::init_sparse();
-		$caption = gtext('Use as sparse volume (thin provisioning).');
+		$caption = gettext('Use as sparse volume (thin provisioning).');
 		$property->
 			set_caption($caption);
 		return $property;
 	}
 	public function init_sync() {
 		$property = parent::init_sync();
-		$description = gtext('Controls the behavior of synchronous requests.');
+		$description = gettext('Controls the behavior of synchronous requests.');
 		$options = [
-			'standard' => gtext('Standard'),
-			'always' => gtext('Always'),
-			'disabled' => gtext('Disabled')
+			'standard' => gettext('Standard'),
+			'always' => gettext('Always'),
+			'disabled' => gettext('Disabled')
 		];
 		$property->
 			set_id('sync')->
@@ -272,12 +272,12 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_volblocksize() {
 		$property = parent::init_volblocksize();
-		$description = gtext('ZFS volume block size. This value can not be changed after creation.');
+		$description = gettext('ZFS volume block size. This value can not be changed after creation.');
 		$options = [
 			'512B' => '512B',
 			'1K' => '1K',
@@ -297,14 +297,14 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(false)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_volmode() {
 		$property = parent::init_volmode();
-		$description = gtext('Specifies how the volume should be exposed to the OS.');
+		$description = gettext('Specifies how the volume should be exposed to the OS.');
 		$options = [
-			'default' => gtext('Default'),
+			'default' => gettext('Default'),
 			'geom' => 'geom',
 			'dev' => 'dev',
 			'none' => 'none'
@@ -317,12 +317,12 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_volsize() {
 		$property = parent::init_volsize();
-		$description = gtext('ZFS volume size. You can use human-readable suffixes like K, KB, M, GB.');
+		$description = gettext('ZFS volume size. You can use human-readable suffixes like K, KB, M, GB.');
 		$property->
 			set_id('volsize')->
 			set_description($description)->
@@ -334,7 +334,7 @@ class properties_disks_zfs_volume_edit extends properties_disks_zfs_volume {
 			set_filter(FILTER_VALIDATE_REGEXP)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => NULL,'regexp' => $this::REGEXP_SIZE])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }
