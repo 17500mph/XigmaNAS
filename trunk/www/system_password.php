@@ -159,10 +159,10 @@ $(window).on("load",function() {
 	<div id="remarks">
 <?php
 		$helpinghand = '<div id="enumeration"><ul>' .
-				'<li>' . gtext('This password is required to access the admin web interface.') . '</li>' .
-				'<li>' . gtext('This password is the root password of the system.') . '</li>' .
+				'<li>' . gettext('This password is required to access the admin web interface.') . '</li>' .
+				'<li>' . gettext('This password is the root password of the system.') . '</li>' .
 				'</ul></div>';
-		html_remark2('note',gtext('Note'),$helpinghand);
+		html_remark2('note',gettext('Note'),$helpinghand);
 ?>
 	</div>
 <?php
