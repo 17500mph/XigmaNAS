@@ -35,72 +35,55 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 $sphere_array = ['concat','mirror','raid5','stripe','vinum'];
-$pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Software RAID')];
-include 'fbegin.inc';
-$document = new co_DOMDocument();
+$pgtitle = [gettext('Diagnostics'),gettext('Information'),gettext('Software RAID')];
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'))->
-			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'),gtext('Reload page'),true)->
-			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
-			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
-			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
-			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
+			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'),gettext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
+$do_seperator = false;
+$area_data = $pagecontent->add_area_data();
+foreach($sphere_array as $sphere_record):
+	$tds = $area_data->add_table_data_settings();
+	$tds->ins_colgroup_data_settings();
+	$thead = $tds->addTHEAD();
+	if($do_seperator):
+		$thead->c2_separator();
+	else:
+		$do_seperator = true;
+	endif;
+	$thead->c2_titleline(sprintf('GEOM %s',$sphere_record));
+	$pre = $tds->addTBODY()->
+		addTR()->
+			insTDwC('celltag',gettext('Information'))->
+			addTDwC('celldata')->
+				addElement('pre',['class' => 'cmdoutput']);
+	if(0 >= count(get_conf_disks_filtered_ex('class',sprintf('g%s',$sphere_record)))):
+		$pre->addElement('span',[],gettext('n/a'));
+	else:
+		unset($rawdata);
+		disks_geom_cmd($sphere_record,'list','',true,false,$rawdata);
+		$pre->addElement('span',[],implode(PHP_EOL,$rawdata));
+	endif;
+endforeach;
 $document->render();
-?>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php
-	$do_seperator = false;
-	foreach($sphere_array as $sphere_record):
-?>
-		<table class="area_data_settings">
-			<colgroup>
-				<col class="area_data_settings_col_tag">
-				<col class="area_data_settings_col_data">
-			</colgroup>
-			<thead>
-<?php
-				if($do_seperator):
-					html_separator2();
-				else:
-					$do_seperator = true;
-				endif;
-				html_titleline2(sprintf('GEOM %s',$sphere_record));
-?>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="celltag"><?=gtext('Information');?></td>
-					<td class="celldata">
-						<pre><?php
-							if(0 >= count(get_conf_disks_filtered_ex('class',sprintf('g%s',$sphere_record)))):
-								echo gtext('n/a');
-							else:
-								unset ($rawdata);
-								disks_geom_cmd($sphere_record,'list','',true,false,$rawdata);
-								echo htmlspecialchars(implode("\n",$rawdata));
-							endif;
-						?></pre>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-<?php
-	endforeach;
-?>
-</td></tr></tbody></table>
-<?php
-include 'fend.inc';
-?>
