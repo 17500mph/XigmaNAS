@@ -278,15 +278,15 @@ $content->add_table_data_settings()->
 		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
-		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
-		c2_select($cop->get_discovery_auth_group(),htmlspecialchars($sphere->row[$cop->get_discovery_auth_group()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_discovery_filter(),htmlspecialchars($sphere->row[$cop->get_discovery_filter()->get_name()]),false,false)->
-		c2_checkbox($cop->get_foreign(),htmlspecialchars($sphere->row[$cop->get_foreign()->get_name()]),false,false)->
-		c2_input_text($cop->get_offload(),htmlspecialchars($sphere->row[$cop->get_offload()->get_name()]),false,false)->
-		c2_input_text($cop->get_redirect(),htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()]),false,false)->
-		c2_input_text($cop->get_tag(),htmlspecialchars($sphere->row[$cop->get_tag()->get_name()]),false,false)->
-		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
+		c2_input_text($cop->get_name(),$sphere->row[$cop->get_name()->get_name()],true,false)->
+		c2_input_text($cop->get_description(),$sphere->row[$cop->get_description()->get_name()],false,false)->
+		c2_select($cop->get_discovery_auth_group(),$sphere->row[$cop->get_discovery_auth_group()->get_name()],false,false)->
+		c2_radio_grid($cop->get_discovery_filter(),$sphere->row[$cop->get_discovery_filter()->get_name()],false,false)->
+		c2_checkbox($cop->get_foreign(),$sphere->row[$cop->get_foreign()->get_name()],false,false)->
+		c2_input_text($cop->get_offload(),$sphere->row[$cop->get_offload()->get_name()],false,false)->
+		c2_input_text($cop->get_redirect(),$sphere->row[$cop->get_redirect()->get_name()],false,false)->
+		c2_input_text($cop->get_tag(),$sphere->row[$cop->get_tag()->get_name()],false,false)->
+		c2_textarea($cop->get_auxparam(),$sphere->row[$cop->get_auxparam()->get_name()],false,false,60,$n_auxparam_rows);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->ins_button_add();

@@ -290,13 +290,13 @@ $content->add_table_data_settings()->
 		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
-		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
-		c2_input_text($cop->get_alias(),htmlspecialchars($sphere->row[$cop->get_alias()->get_name()]),false,false)->
-		c2_select($cop->get_auth_group(),htmlspecialchars($sphere->row[$cop->get_auth_group()->get_name()]),false,false)->
-		c2_select($cop->get_portal_group(),htmlspecialchars($sphere->row[$cop->get_portal_group()->get_name()]),false,false)->
-		c2_input_text($cop->get_redirect(),htmlspecialchars($sphere->row[$cop->get_redirect()->get_name()]),false,false)->
-		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
+		c2_input_text($cop->get_name(),$sphere->row[$cop->get_name()->get_name()],true,false)->
+		c2_input_text($cop->get_description(),$sphere->row[$cop->get_description()->get_name()],false,false)->
+		c2_input_text($cop->get_alias(),$sphere->row[$cop->get_alias()->get_name()],false,false)->
+		c2_select($cop->get_auth_group(),$sphere->row[$cop->get_auth_group()->get_name()],false,false)->
+		c2_select($cop->get_portal_group(),$sphere->row[$cop->get_portal_group()->get_name()],false,false)->
+		c2_input_text($cop->get_redirect(),$sphere->row[$cop->get_redirect()->get_name()],false,false)->
+		c2_textarea($cop->get_auxparam(),$sphere->row[$cop->get_auxparam()->get_name()],false,false,60,$n_auxparam_rows);
 $buttons = $document->
 	add_area_buttons();
 if($isrecordnew):

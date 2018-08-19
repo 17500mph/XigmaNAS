@@ -256,12 +256,12 @@ $content->
 			c2_titleline_with_checkbox($cop->get_enable(),$is_enabled,false,$is_readonly,gettext('CAM Target Layer'))->
 		pop()->
 		addTBODY()->
-			c2_input_text($cop->get_debug(),htmlspecialchars($sphere->row[$cop->get_debug()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_maxproc(),htmlspecialchars($sphere->row[$cop->get_maxproc()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_timeout(),htmlspecialchars($sphere->row[$cop->get_timeout()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_isns_period(),htmlspecialchars($sphere->row[$cop->get_isns_period()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_isns_timeout(),htmlspecialchars($sphere->row[$cop->get_isns_timeout()->get_name()]),false,$is_readonly)->
-			c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,$is_readonly,60,$n_auxparam_rows);
+			c2_input_text($cop->get_debug(),$sphere->row[$cop->get_debug()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_maxproc(),$sphere->row[$cop->get_maxproc()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_timeout(),$sphere->row[$cop->get_timeout()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_isns_period(),$sphere->row[$cop->get_isns_period()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_isns_timeout(),$sphere->row[$cop->get_isns_timeout()->get_name()],false,$is_readonly)->
+			c2_textarea($cop->get_auxparam(),$sphere->row[$cop->get_auxparam()->get_name()],false,$is_readonly,60,$n_auxparam_rows);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
