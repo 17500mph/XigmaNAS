@@ -61,13 +61,13 @@ function services_samba_share_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Samba Share'));
-	$sphere->sym_mod(gtext('Edit Samba Share'));
-	$sphere->sym_del(gtext('Samba Share is marked for deletion'));
-	$sphere->sym_loc(gtext('Samba Share is protected'));
-	$sphere->sym_unl(gtext('Samba Share is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Samba Shares'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected Samba shares?'));
+	$sphere->sym_add(gettext('Add Samba Share'));
+	$sphere->sym_mod(gettext('Edit Samba Share'));
+	$sphere->sym_del(gettext('Samba Share is marked for deletion'));
+	$sphere->sym_loc(gettext('Samba Share is protected'));
+	$sphere->sym_unl(gettext('Samba Share is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Samba Shares'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected Samba shares?'));
 	$sphere->grid = &array_make_branch($config,'samba','share');
 	return $sphere;
 }
@@ -256,8 +256,8 @@ echo $sphere->doj();
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['path']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['name']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere->row['comment']);?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars(isset($sphere->row['browseable']) ? gtext('Yes') : gtext('No'));?></td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars(isset($sphere->row['guest']) ? gtext('Yes') : gtext('No'));?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=isset($sphere->row['browseable']) ? gtext('Yes') : gtext('No');?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=isset($sphere->row['guest']) ? gtext('Yes') : gtext('No');?></td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><colgroup><col style="width:33%"><col style="width:34%"><col style="width:33%"></colgroup><tbody><tr>
 <?php

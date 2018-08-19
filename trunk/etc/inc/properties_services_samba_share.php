@@ -66,7 +66,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_afpcompat() {
 		$property = $this->x_afpcompat = new property_bool($this);
 		$property->
-			set_title(gtext('Enable AFP'))->
+			set_title(gettext('Enable AFP'))->
 			set_name('afpcompat');
 		return $property;
 	}
@@ -76,7 +76,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_auxparam() {
 		$property = $this->x_auxparam = new property_textarea($this);
 		$property->
-			set_title(gtext('Additional Parameter'))->
+			set_title(gettext('Additional Parameter'))->
 			set_name('auxparam');
 		return $property;
 	}
@@ -86,7 +86,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_shadowformat() {
 		$property = $this->x_shadowformat = new property_text($this);
 		$property->
-			set_title(gtext('Shadow Copy Format'))->
+			set_title(gettext('Shadow Copy Format'))->
 			set_name('shadowformat');
 		return $property;
 	}
@@ -96,7 +96,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_vfs_fruit_encoding() {
 		$property = $this->x_vfs_fruit_encoding = new property_list($this);
 		$property->
-			set_title(gtext('VFS fruit:encoding'))->
+			set_title(gettext('VFS fruit:encoding'))->
 			set_name('vfs_fruit_encoding');
 		return $property;
 	}
@@ -106,7 +106,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_vfs_fruit_locking() {
 		$property = $this->x_vfs_fruit_locking = new property_list($this);
 		$property->
-			set_title(gtext('VFS fruit:locking'))->
+			set_title(gettext('VFS fruit:locking'))->
 			set_name('vfs_fruit_locking');
 		return $property;
 	}
@@ -116,7 +116,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_vfs_fruit_metadata() {
 		$property = $this->x_vfs_fruit_metadata = new property_list($this);
 		$property->
-			set_title(gtext('VFS fruit:metadata'))->
+			set_title(gettext('VFS fruit:metadata'))->
 			set_name('vfs_fruit_metadata');
 		return $property;
 	}
@@ -126,7 +126,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_vfs_fruit_resource() {
 		$property = $this->x_vfs_fruit_resource = new property_list($this);
 		$property->
-			set_title(gtext('VFS fruit:resource'))->
+			set_title(gettext('VFS fruit:resource'))->
 			set_name('vfs_fruit_resource');
 		return $property;
 	}
@@ -136,7 +136,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_vfs_fruit_time_machine() {
 		$property = $this->x_vfs_fruit_time_machine = new property_list($this);
 		$property->
-			set_title(gtext('VFS fruit:time machine'))->
+			set_title(gettext('VFS fruit:time machine'))->
 			set_name('vfs_fruit_time_machine');
 		return $property;
 	}
@@ -146,7 +146,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_zfsacl() {
 		$property = $this->x_zfsacl = new property_bool($this);
 		$property->
-			set_title(gtext('ZFS ACL'))->
+			set_title(gettext('ZFS ACL'))->
 			set_name('zfsacl');
 		return $property;
 	}
@@ -156,7 +156,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_inheritacls() {
 		$property = $this->x_inheritacls = new property_bool($this);
 		$property->
-			set_title(gtext('Inherit ACL'))->
+			set_title(gettext('Inherit ACL'))->
 			set_name('inheritacls');
 		return $property;
 	}
@@ -166,7 +166,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_storealternatedatastreams() {
 		$property = $this->x_storealternatedatastreams = new property_bool($this);
 		$property->
-			set_title(gtext('Alternate Data Streams'))->
+			set_title(gettext('Alternate Data Streams'))->
 			set_name('storealternatedatastreams');
 		return $property;
 	}
@@ -176,7 +176,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_storentfsacls() {
 		$property = $this->x_storentfsacls = new property_bool($this);
 		$property->
-			set_title(gtext('NTFS ACLs'))->
+			set_title(gettext('NTFS ACLs'))->
 			set_name('storentfsacls');
 		return $property;
 	}
@@ -186,7 +186,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_hostsallow() {
 		$property = $this->x_hostsallow = new property_text($this);
 		$property->
-			set_title(gtext('Hosts Allow'))->
+			set_title(gettext('Hosts Allow'))->
 			set_name('hostsallow');
 		return $property;
 	}
@@ -196,7 +196,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_hostsdeny() {
 		$property = $this->x_hostsdeny = new property_text($this);
 		$property->
-			set_title(gtext('Hosts Deny'))->
+			set_title(gettext('Hosts Deny'))->
 			set_name('hostsdeny');
 		return $property;
 	}
@@ -206,7 +206,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_shadowcopy() {
 		$property = $this->x_shadowcopy = new property_bool($this);
 		$property->
-			set_title(gtext('Shadow Copy'))->
+			set_title(gettext('Shadow Copy'))->
 			set_name('shadowcopy');
 		return $property;
 	}
@@ -216,7 +216,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_readonly() {
 		$property = $this->x_readonly = new property_bool($this);
 		$property->
-			set_title(gtext('Read Only'))->
+			set_title(gettext('Read Only'))->
 			set_name('readonly');
 		return $property;
 	}
@@ -226,7 +226,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_browseable() {
 		$property = $this->x_browseable = new property_bool($this);
 		$property->
-			set_title(gtext('Browseable'))->
+			set_title(gettext('Browseable'))->
 			set_name('browseable');
 		return $property;
 	}
@@ -236,7 +236,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_guest() {
 		$property = $this->x_guest = new property_bool($this);
 		$property->
-			set_title(gtext('Guest'))->
+			set_title(gettext('Guest'))->
 			set_name('guest');
 		return $property;
 	}
@@ -246,7 +246,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_inheritpermissions() {
 		$property = $this->x_inheritpermissions = new property_bool($this);
 		$property->
-			set_title(gtext('Inherit Permissions'))->
+			set_title(gettext('Inherit Permissions'))->
 			set_name('inheritpermissions');
 		return $property;
 	}
@@ -256,7 +256,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_recyclebin() {
 		$property = $this->x_recyclebin = new property_bool($this);
 		$property->
-			set_title(gtext('Recycle Bin'))->
+			set_title(gettext('Recycle Bin'))->
 			set_name('recyclebin');
 		return $property;
 	}
@@ -266,7 +266,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_hidedotfiles() {
 		$property = $this->x_hidedotfiles = new property_bool($this);
 		$property->
-			set_title(gtext('Hide Dot Files'))->
+			set_title(gettext('Hide Dot Files'))->
 			set_name('hidedotfiles');
 		return $property;
 	}
@@ -276,7 +276,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_name() {
 		$property = $this->x_name = new property_text($this);
 		$property->
-			set_title(gtext('Name'))->
+			set_title(gettext('Name'))->
 			set_name('name');
 		return $property;
 	}
@@ -286,7 +286,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_comment() {
 		$property = $this->x_comment = new property_text($this);
 		$property->
-			set_title(gtext('Comment'))->
+			set_title(gettext('Comment'))->
 			set_name('comment');
 		return $property;
 	}
@@ -296,7 +296,7 @@ class properties_services_samba_share extends co_property_container {
 	public function init_path() {
 		$property = $this->x_path = new property_text($this);
 		$property->
-			set_title(gtext('Path'))->
+			set_title(gettext('Path'))->
 			set_name('path');
 		return $property;
 	}
