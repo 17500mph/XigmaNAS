@@ -96,8 +96,8 @@ if(isset($_POST['cols']) && !empty($_POST['cols'])) {
 	$cols = 66;
 }
 $pgtitle = [gtext('Tools'), gtext('File Editor')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -107,20 +107,20 @@ $(window).on("load", function() {
 //]]>
 </script>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="system_edit.php" method="post" name="iform" id="iform">
-	<?php
-	if(!empty($savemsg)) {
+<?php
+	if(!empty($savemsg)):
 		print_info_box($savemsg);
-	}
-	?>
+	endif;
+?>
 	<table class="area_data_settings">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php
-			html_titleline2(gtext('File Editor'),1);
+<?php
+			html_titleline2(gettext('File Editor'),1);
 			html_separator2(1);
-			?>
+?>
 			<tr>
 				<td>
 					<span class="label"><?=gtext('File Path');?></span>
@@ -129,10 +129,14 @@ $(window).on("load", function() {
 					<button name="submit" type="submit" class="formbtn" id="Edit" value="edit"><?=gtext('Edit');?></button>
 					<button name="submit" type="submit" class="formbtn" id="Save" value="save"><?=gtext('Save');?></button>
 					<hr noshade="noshade" />
-					<?php if(isset($_POST['highlight']) && $_POST['highlight'] == "no"): ?>
+<?php
+					if(isset($_POST['highlight']) && $_POST['highlight'] == "no"):
+?>						
 						<?=gtext('Rows'); ?>: <input size="3" name="rows" value="<?=$rows;?>"/>
 						<?=gtext('Cols'); ?>: <input size="3" name="cols" value="<?=$cols;?>"/>
-					<?php endif; ?>
+<?php
+					endif;
+?>
 					<?=gtext('Highlighting'); ?>:
 					<input id="highlighting_enabled" name="highlight" type="radio" value="yes" <?php if($highlight == 'yes') echo " checked=\"checked\""; ?> />
 					<label for="highlighting_enabled"><?=gtext('Enabled'); ?></label>
@@ -140,22 +144,26 @@ $(window).on("load", function() {
 					<label for="highlighting_disabled"><?=gtext('Disabled'); ?></label>
 				</td>
 			</tr>
-			<?php
+<?php
 			html_separator2(1);
-			?>
+?>
 		</thead>
 		<tbody>
 			<tr>
 				<td valign="top" class="label">
 					<div style="background: #eeeeee;" id="textareaitem">
-<?php //				<!-- NOTE: The opening *and* the closing textarea tag must be on the same line.-->?>
+<?php
+						//	NOTE: The opening *and* the closing textarea tag must be on the same line.
+?>
 						<textarea style="width:100%; margin:0;" class="<?=$language;?>:showcolumns" rows="<?=$rows;?>" cols="<?=$cols;?>" name="code"><?=htmlspecialchars(!empty($content) ? $content : '');?></textarea>
 					</div>
 				</td>
 			</tr>
 		</tbody>
 	</table>
-<?php include 'formend.inc';?>
+<?php
+include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
 <script type="text/javascript" src="syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="syntaxhighlighter/shBrushCSharp.js"></script>
@@ -192,4 +200,5 @@ $(window).on("load", function() {
 ?>
 //]]>
 </script>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
