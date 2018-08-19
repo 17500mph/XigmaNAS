@@ -61,13 +61,13 @@ function services_nfs_share_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add NFS Share'));
-	$sphere->sym_mod(gtext('Edit NFS Share'));
-	$sphere->sym_del(gtext('NFS share is marked for deletion'));
-	$sphere->sym_loc(gtext('NFS share is protected'));
-	$sphere->sym_unl(gtext('NFS share is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected NFS Shares'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected NFS shares?'));
+	$sphere->sym_add(gettext('Add NFS Share'));
+	$sphere->sym_mod(gettext('Edit NFS Share'));
+	$sphere->sym_del(gettext('NFS share is marked for deletion'));
+	$sphere->sym_loc(gettext('NFS share is protected'));
+	$sphere->sym_unl(gettext('NFS share is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected NFS Shares'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected NFS shares?'));
 	$sphere->grid = &array_make_branch($config,'nfsd','share');
 	return $sphere;
 }
@@ -223,7 +223,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),5);
+			html_titleline2(gettext('Overview'),5);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
