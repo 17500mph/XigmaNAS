@@ -197,8 +197,8 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 	exit;
 }
 $pgtitle = [gtext('Network'),gtext('Interface Management')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -215,35 +215,40 @@ $pgtitle = [gtext('Network'),gtext('Interface Management')];
 	<tr>
 		<td class="tabcont">
 			<form action="interfaces_assign.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php
+<?php
 				if(!empty($input_errors)):
 					print_input_errors($input_errors);
 				endif;
 				if(file_exists($d_sysrebootreqd_path)):
 					print_info_box(get_std_save_message(0));
 				endif;
-				?>
+?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<?php html_titleline2(gtext('Overview'), 3);?>
+<?php
+					html_titleline2(gettext('Overview'), 3);
+?>
 					<tr>
 						<td class="listhdrlr"><?=gtext("Interface");?></td>
 						<td class="listhdrr"><?=gtext("Network port");?></td>
 						<td class="list">&nbsp;</td>
 					</tr>
-					<?php foreach ($config['interfaces'] as $ifname => $iface):
+<?php
+					foreach ($config['interfaces'] as $ifname => $iface):
 						if (isset($iface['descr']) && $iface['descr']):
 							$ifdescr = $iface['descr'];
 						else:
 							$ifdescr = strtoupper($ifname);
 						endif;
-						?>
+?>
 						<tr>
 							<td class="listlr" valign="middle"><strong><?=$ifdescr;?></strong></td>
 							<td valign="middle" class="listr">
 								<select name="<?=$ifname;?>" class="formfld" id="<?=$ifname;?>">
-									<?php foreach ($portlist as $portname => $portinfo):?>
+<?php
+									foreach ($portlist as $portname => $portinfo):
+?>
 										<option value="<?=$portname;?>" <?php if ($portname == $iface['if']) echo "selected=\"selected\"";?>>
-											<?php
+<?php
 											if(isset($portinfo['isvirtual']) && $portinfo['isvirtual']):
 												$descr = $portinfo['if'];
 												if($portinfo['desc']):
@@ -253,36 +258,48 @@ $pgtitle = [gtext('Network'),gtext('Interface Management')];
 											else:
 												echo htmlspecialchars($portname . " (" . $portinfo['mac'] . ")");
 											endif;
-											?>
+?>
 										</option>
-									<?php endforeach;?>
+<?php
+									endforeach;
+?>
 								</select>
 							</td>
 							<td valign="middle" class="list">
-								<?php if (($ifname != 'lan') && ($ifname != 'wan')):?>
+<?php
+								if (($ifname != 'lan') && ($ifname != 'wan')):
+?>
 									<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
-								<?php endif;?>
+<?php
+								endif;
+?>
 							</td>
 						</tr>
-					<?php endforeach;?>
-					<?php if (count($config['interfaces']) < count($portlist)):?>
+<?php
+					endforeach;
+					if(count($config['interfaces']) < count($portlist)):
+?>
 						<tr>
 							<td class="list" colspan="2"></td>
 							<td class="list" nowrap="nowrap">
 								<a href="interfaces_assign.php?act=add"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 							</td>
 						</tr>
-					<?php else:?>
+<?php
+					else:
+?>
 						<tr>
 							<td class="list" colspan="3" height="10"></td>
 						</tr>
-					<?php endif;?>
+<?php
+					endif;
+?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
 				<div id="remarks">
-					<?php
+<?php
 					$helpinghand = gtext('After you click "Save" you must reboot the server to make the changes take effect.')
 					. ' '
 					. gtext('You may also have to do one or more of the following steps before you can access your server again:')
@@ -291,11 +308,14 @@ $pgtitle = [gtext('Network'),gtext('Interface Management')];
 					. '<li><span class="vexpl">' . gtext('Access the webGUI with the new IP address') . '</span></li>'
 					. '</ul>';
 					html_remark("warning", gtext('Warning'), $helpinghand);
-					?>
+?>
 				</div>
-				<?php include 'formend.inc';?>
+<?php
+				include 'formend.inc';
+?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
