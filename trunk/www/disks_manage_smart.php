@@ -237,9 +237,9 @@ $document->render();
 			html_checkbox2('enablesmartmonondevice',gettext('S.M.A.R.T. Monitoring'),!empty($pconfig['enablesmartmonondevice']) ? true : false,gettext('Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are added to the configuration.'));
 			html_separator2();
 			html_titleline2(gettext('Temperature Monitoring'));
-			html_inputbox2('temp_diff',gettext('Difference'),htmlspecialchars($pconfig['temp_diff']),gettext('Report if the temperature had changed by at least N degrees Celsius since last report. Set to 0 to disable this report.'),true,5);
-			html_inputbox2('temp_info',gettext('Informal'),htmlspecialchars($pconfig['temp_info']),gettext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
-			html_inputbox2('temp_crit',gettext('Critical'),htmlspecialchars($pconfig['temp_crit']),gettext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_diff',gettext('Difference'),$pconfig['temp_diff'],gettext('Report if the temperature had changed by at least N degrees Celsius since last report. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_info',gettext('Informal'),$pconfig['temp_info'],gettext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
+			html_inputbox2('temp_crit',gettext('Critical'),$pconfig['temp_crit'],gettext('Report if the temperature is greater or equal than N degrees Celsius. Set to 0 to disable this report.'),true,5);
 			html_separator2();
 			html_titleline2(gettext('Self-Test Schedules'));
 ?>
