@@ -37,7 +37,7 @@ class properties_syslogconf_edit extends properties_syslogconf {
 	public function init_comment() {
 		$property = parent::init_comment();
 		$description = '';
-		$placeholder = gtext('Enter a description');
+		$placeholder = gettext('Enter a description');
 		$property->
 			set_id('comment')->
 			set_description($description)->
@@ -50,13 +50,13 @@ class properties_syslogconf_edit extends properties_syslogconf {
 			set_filter(FILTER_UNSAFE_RAW)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => ''])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_facility() {
 		$property = parent::init_facility();
 		$description = '';
-		$placeholder = gtext('Enter facility name');
+		$placeholder = gettext('Enter facility name');
 		$property->
 			set_id('facility')->
 			set_description($description)->
@@ -67,13 +67,13 @@ class properties_syslogconf_edit extends properties_syslogconf {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_level() {
 		$property = parent::init_level();
 		$description = '';
-		$placeholder = gtext('Enter level name');
+		$placeholder = gettext('Enter level name');
 		$property->
 			set_id('level')->
 			set_description($description)->
@@ -84,13 +84,13 @@ class properties_syslogconf_edit extends properties_syslogconf {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_value() {
 		$property = parent::init_value();
 		$description = '';
-		$placeholder = gtext('Enter destination');
+		$placeholder = gettext('Enter destination');
 		$property->
 			set_id('value')->
 			set_description($description)->
@@ -101,7 +101,7 @@ class properties_syslogconf_edit extends properties_syslogconf {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }

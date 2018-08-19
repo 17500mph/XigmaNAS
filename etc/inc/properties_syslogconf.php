@@ -50,7 +50,7 @@ class properties_syslogconf extends co_property_container {
 		$property = $this->x_comment = new property_text($this);
 		$property->
 			set_name('comment')->
-			set_title(gtext('Description'));
+			set_title(gettext('Description'));
 		return $property;
 	}
 	public function get_enable() {
@@ -67,7 +67,7 @@ class properties_syslogconf extends co_property_container {
 		$property = $this->x_facility= new property_text($this);
 		$property->
 			set_name('facility')->
-			set_title(gtext('Facility'));
+			set_title(gettext('Facility'));
 		return $property;
 	}
 	public function get_level() {
@@ -77,7 +77,7 @@ class properties_syslogconf extends co_property_container {
 		$property = $this->x_level = new property_text($this);
 		$property->
 			set_name('level')->
-			set_title(gtext('Level'));
+			set_title(gettext('Level'));
 		return $property;
 	}
 	public function get_protected() {
@@ -108,7 +108,7 @@ class properties_syslogconf extends co_property_container {
 		$property = $this->x_value = new property_text($this);
 		$property->
 			set_name('value')->
-			set_title(gtext('Destination'));
+			set_title(gettext('Destination'));
 		return $property;
 	}
 }
