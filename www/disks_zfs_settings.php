@@ -155,8 +155,8 @@ $content->
 			c2_titleline(gettext('Capacity Alert Thresholds'))->
 		pop()->
 		addTBODY()->
-			c2_input_text($cop->get_capacity_warning(),htmlspecialchars($sphere->row[$cop->get_capacity_warning()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_capacity_critical(),htmlspecialchars($sphere->row[$cop->get_capacity_critical()->get_name()]),false,$is_readonly);
+			c2_input_text($cop->get_capacity_warning(),$sphere->row[$cop->get_capacity_warning()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_capacity_critical(),$sphere->row[$cop->get_capacity_critical()->get_name()],false,$is_readonly);
 //	add buttons
 switch($page_mode):
 	case PAGE_MODE_VIEW:
