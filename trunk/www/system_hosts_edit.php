@@ -122,7 +122,7 @@ include 'fbegin.inc';
 ?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 <?php
-				html_titleline2(gtext('Hosts Setup'), 2);
+				html_titleline2(gettext('Hosts Setup'), 2);
 				html_inputbox("name", gtext("Hostname"), $pconfig['name'], gtext("The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and ."), true, 40);
 				html_inputbox("address", gtext("IP Address"), $pconfig['address'], gtext("The IP address that this hostname represents."), true, 20);
 				html_inputbox("descr", gtext("Description"), $pconfig['descr'], gtext("You may enter a description here for your reference."), false, 20);
