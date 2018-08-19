@@ -78,7 +78,7 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('System Load'),1);
+			html_titleline2(gettext('System Load'),1);
 ?>
 		</thead>
 		<tbody>
@@ -127,4 +127,3 @@ include 'fbegin.inc';
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
