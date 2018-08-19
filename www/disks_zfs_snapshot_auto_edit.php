@@ -225,12 +225,12 @@ $document->render();
 <?php
 			$a_pathlist = [];
 			foreach($a_path as $pathv):
-				$a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']);
+				$a_pathlist[$pathv['path']] = $pathv['path'];
 			endforeach;
 			html_combobox2('path',gettext('Path'),$pconfig['path'],$a_pathlist,'',true);
 			html_inputbox2('name',gettext('Name'),$pconfig['name'],'',true,40);
 			html_checkbox2('recursive',gettext('Recursive'),!empty($pconfig['recursive']) ? true : false,gettext('Create recursive snapshot.'),'',false);
-			html_text2('type',gettext('Type'),htmlspecialchars($pconfig['type']));
+			html_text2('type',gettext('Type'),$pconfig['type']);
 			html_combobox2('timehour',gettext('Schedule time'),$pconfig['timehour'],$a_timehour,'',true);
 			html_combobox2('lifetime',gettext('Life time'),$pconfig['lifetime'],$a_lifetime,'',true);
 ?>
