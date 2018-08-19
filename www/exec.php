@@ -215,12 +215,12 @@ endif;
 			</colgroup>
 			<thead>
 <?php
-				html_titleline2(gtext('Command'));
+				html_titleline2(gettext('Command'));
 ?>
 			</thead>
 			<tbody>
 <?php
-				html_inputbox2('txtCommand',gtext('Command'),'','',false,80,false,false,1024,gtext('Enter Command'));
+				html_inputbox2('txtCommand',gettext('Command'),'','',false,80,false,false,1024,gettext('Enter Command'));
 ?>
 				<tr>
 					<td class="celltag"><?=gtext('Control');?></td>
@@ -242,7 +242,7 @@ endif;
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('Upload Script'));
+				html_titleline2(gettext('Upload Script'));
 ?>
 			</thead>
 			<tbody>
@@ -256,7 +256,7 @@ endif;
 					<td class="celltag"><?=gtext('Control');?></td>
 					<td class="celldata">
 <?php
-						echo html_button('upload',gtext('Upload Script'));
+						echo html_button('upload',gettext('Upload Script'));
 ?>
 					</td>
 				</tr>
@@ -270,7 +270,7 @@ endif;
 			<thead>
 <?php
 				html_separator2();
-				html_titleline2(gtext('PHP Command'));
+				html_titleline2(gettext('PHP Command'));
 ?>
 			</thead>
 			<tbody>
@@ -297,7 +297,7 @@ endif;
 				<thead>
 <?php
 					html_separator2();
-					html_titleline2(gtext('Command Output'));
+					html_titleline2(gettext('Command Output'));
 ?>
 				</thead>
 				<tbody>
@@ -328,7 +328,7 @@ endif;
 				<thead>
 <?php
 					html_separator2();
-					html_titleline2(gtext('PHP Command Output'));
+					html_titleline2(gettext('PHP Command Output'));
 ?>
 				</thead>
 				<tbody>
