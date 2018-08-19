@@ -274,7 +274,7 @@ endswitch;
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
 					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
-					html_textinfo2('numproc',gettext('Servers'), htmlspecialchars($sphere->row['numproc']));
+					html_textinfo2('numproc',gettext('Servers'), $sphere->row['numproc']);
 					html_checkbox2('v4enable',gettext('NFSv4'),$sphere->row['v4enable'],'','',false,true);
 					break;
 				case PAGE_MODE_EDIT:
@@ -309,4 +309,3 @@ endswitch;
 </td></tr></table></form>
 <?php
 include 'fend.inc';
-?>
