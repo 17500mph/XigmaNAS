@@ -219,20 +219,20 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Samba Active Directory Domain Controller'));
+			html_titleline2(gettext('Samba Active Directory Domain Controller'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_text2('hostname',gtext('Hostname'),htmlspecialchars($hostname));
-			html_text2('netbiosname',gtext('NetBIOS Name'),htmlspecialchars($netbiosname));
-			html_inputbox2('dns_forwarder',gtext('DNS Forwarder'),$pconfig['dns_forwarder'],'',true,40);
-			html_inputbox2('dns_domain',gtext('DNS Domain'),$pconfig['dns_domain'],'',true,40);
-			html_inputbox2('netbios_domain',gtext('NetBIOS Domain'),$pconfig['netbios_domain'],'',true,40);
-			//html_text2('realm',gtext('Kerberos realm'),htmlspecialchars($realm));
-			html_passwordconfbox2('password','password_confirm',gtext('Admin Password'),'','',gtext('Generate password if left empty.'),true);
-			html_filechooser2('path',gtext('Path'),$pconfig['path'],sprintf(gtext('Permanent samba data path (e.g. %s).'),'/mnt/data/samba4'),$g['media_path'],true);
-			html_checkbox2('user_shares',gtext('User Shares'),!empty($pconfig['user_shares']) ? true : false,gtext('Append user defined shares'),'',false);
+			html_text2('hostname',gettext('Hostname'),htmlspecialchars($hostname));
+			html_text2('netbiosname',gettext('NetBIOS Name'),htmlspecialchars($netbiosname));
+			html_inputbox2('dns_forwarder',gettext('DNS Forwarder'),$pconfig['dns_forwarder'],'',true,40);
+			html_inputbox2('dns_domain',gettext('DNS Domain'),$pconfig['dns_domain'],'',true,40);
+			html_inputbox2('netbios_domain',gettext('NetBIOS Domain'),$pconfig['netbios_domain'],'',true,40);
+			//html_text2('realm',gettext('Kerberos realm'),htmlspecialchars($realm));
+			html_passwordconfbox2('password','password_confirm',gettext('Admin Password'),'','',gettext('Generate password if left empty.'),true);
+			html_filechooser2('path',gettext('Path'),$pconfig['path'],sprintf(gettext('Permanent samba data path (e.g. %s).'),'/mnt/data/samba4'),$g['media_path'],true);
+			html_checkbox2('user_shares',gettext('User Shares'),!empty($pconfig['user_shares']) ? true : false,gettext('Append user defined shares'),'',false);
 ?>
 		</tbody>
 	</table>
