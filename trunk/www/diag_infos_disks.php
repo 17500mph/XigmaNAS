@@ -37,7 +37,7 @@ require_once 'guiconfig.inc';
 global $config_disks;
 // Get all physical disks.
 $a_phy_disk = array_merge((array)get_physical_disks_list());
-$pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks')];
+$pgtitle = [gettext('Diagnostics'),gettext('Information'),gettext('Disks')];
 $a_colwidth = ['5%','12%','11%','8%','10%','7%','7%','8%','5%','14%','7%','6%'];
 $n_colwidth = count($a_colwidth);
 $document = new_page($pgtitle);
@@ -48,84 +48,85 @@ $pagecontent = $document->getElementById('pagecontent');
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gtext('Disks'),gtext('Reload page'),true)->
-			ins_tabnav_record('diag_infos_disks_info.php',gtext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gtext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gtext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gtext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gtext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gtext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gtext('Software RAID'))->
-			ins_tabnav_record('diag_infos_iscsi.php',gtext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gtext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gtext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gtext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gtext('RSYNC Client'))->
-			ins_tabnav_record('diag_infos_netstat.php',gtext('Netstat'))->
-			ins_tabnav_record('diag_infos_sockets.php',gtext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gtext('IPMI Stats'))->
-			ins_tabnav_record('diag_infos_ups.php',gtext('UPS'));
+			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'),gettext('Reload page'),true)->
+			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
+			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'))->
+			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
+			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
+			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
 //	create data area
 $content = $pagecontent->add_area_data();
 $tbody = $content->
 	add_table_data_selection()->
 		ins_colgroup_with_styles('width',$a_colwidth)->
-		push()->addTHEAD()->
-			ins_titleline(gtext('Detected Disks'),$n_colwidth)->
+		push()->
+		addTHEAD()->
+			ins_titleline(gettext('Detected Disks'),$n_colwidth)->
 			addTR()->
-				insTHwC('lhell',gtext('Device'))->
-				insTHwC('lhell',gtext('Device Model'))->
-				insTHwC('lhell',gtext("Description"))->
-				insTHwC('lhell',gtext('Size'))->
-				insTHwC('lhell',gtext('Serial Number'))->
-				insTHwC('lhell',gtext('Rotation Rate'))->
-				insTHwC('lhell',gtext('Transfer Rate'))->
-				insTHwC('lhell',gtext('S.M.A.R.T.'))->
-				insTHwC('lhell',gtext('Controller'))->
-				insTHwC('lhell',gtext('Controller Model'))->
-				insTHwC('lhell',gtext('Temperature'))->
-				insTHwC('lhebl',gtext('Status'))->
-		pop()->addTBODY();
+				insTHwC('lhell',gettext('Device'))->
+				insTHwC('lhell',gettext('Device Model'))->
+				insTHwC('lhell',gettext("Description"))->
+				insTHwC('lhell',gettext('Size'))->
+				insTHwC('lhell',gettext('Serial Number'))->
+				insTHwC('lhell',gettext('Rotation Rate'))->
+				insTHwC('lhell',gettext('Transfer Rate'))->
+				insTHwC('lhell',gettext('S.M.A.R.T.'))->
+				insTHwC('lhell',gettext('Controller'))->
+				insTHwC('lhell',gettext('Controller Model'))->
+				insTHwC('lhell',gettext('Temperature'))->
+				insTHwC('lhebl',gettext('Status'))->
+		pop()->
+		addTBODY();
 foreach($a_phy_disk as $disk):
 	$disk['desc'] = $config_disks[$disk['devicespecialfile']]['desc'];
-	$temperature = (false !== ($device_temperature = system_get_device_temp($disk['devicespecialfile']))) ? htmlspecialchars(sprintf('%s °C',$device_temperature)) : gtext('n/a');
+	$temperature = (false !== ($device_temperature = system_get_device_temp($disk['devicespecialfile']))) ? sprintf('%s °C',$device_temperature) : gettext('n/a');
 	if($disk['type'] == 'HAST'):
 		$role = $a_phy_disk[$disk['name']]['role'];
-		$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gtext('ONLINE') : gtext('MISSING'),$role);
+		$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gettext('ONLINE') : gettext('MISSING'),$role);
 		$disk['size'] = $a_phy_disk[$disk['name']]['size'];
 	else:
-		$status = (0 == disks_exists($disk['devicespecialfile'])) ? gtext('ONLINE') : gtext('MISSING');
+		$status = (0 == disks_exists($disk['devicespecialfile'])) ? gettext('ONLINE') : gettext('MISSING');
 	endif;
 	$matches = preg_split('/[\s\,]+/',$disk['smart']['smart_support']);
 	$smartsupport = '';
 	if(isset($matches[0])):
 		if(0 == strcasecmp($matches[0],'available')):
-			$smartsupport .= gtext('Available');
+			$smartsupport .= gettext('Available');
 			if(isset($matches[1])):
 				if(0 == strcasecmp($matches[1],'enabled')):
-					$smartsupport .= (', ' . gtext('Enabled'));
+					$smartsupport .= (', ' . gettext('Enabled'));
 				elseif(0 ==  strcasecmp($matches[1],'disabled')):
-					$smartsupport .= (', ' . gtext('Disabled'));
+					$smartsupport .= (', ' . gettext('Disabled'));
 				endif;
 			endif;
 		elseif(0 == strcasecmp($matches[0],'unavailable')):
-			$smartsupport .= gtext('Unavailable');
+			$smartsupport .= gettext('Unavailable');
 		endif;
 	endif;
 	$tbody->
 		addTR()->
-			insTDwC('lcell',htmlspecialchars($disk['name']))->
-			insTDwC('lcell',htmlspecialchars($disk['model']))->
-			insTDwC('lcell',empty($disk['desc']) ?  gtext('n/a') : htmlspecialchars($disk['desc']))->
-			insTDwC('lcell',htmlspecialchars($disk['size']))->
-			insTDwC('lcell',empty($disk['serial']) ? gtext('n/a') : htmlspecialchars($disk['serial']))->
-			insTDwC('lcell',empty($disk['rotation_rate']) ? gtext('Unknown') : htmlspecialchars($disk['rotation_rate']))->
-			insTDwC('lcell',empty($disk['transfer_rate']) ? gtext('n/a') : htmlspecialchars($disk['transfer_rate']))->
+			insTDwC('lcell',$disk['name'])->
+			insTDwC('lcell',$disk['model'])->
+			insTDwC('lcell',empty($disk['desc']) ?  gettext('n/a') : $disk['desc'])->
+			insTDwC('lcell',$disk['size'])->
+			insTDwC('lcell',empty($disk['serial']) ? gettext('n/a') : $disk['serial'])->
+			insTDwC('lcell',empty($disk['rotation_rate']) ? gettext('Unknown') : $disk['rotation_rate'])->
+			insTDwC('lcell',empty($disk['transfer_rate']) ? gettext('n/a') : $disk['transfer_rate'])->
 			insTDwC('lcell',$smartsupport)->
-			insTDwC('lcell',htmlspecialchars($disk['controller'] . $disk['controller_id']))->
-			insTDwC('lcell',htmlspecialchars($disk['controller_desc']))->
+			insTDwC('lcell',$disk['controller'] . $disk['controller_id'])->
+			insTDwC('lcell',$disk['controller_desc'])->
 			insTDwC('lcell',$temperature)->
 			insTDwC('lcebld',$status);
 endforeach;
 $document->render();
-?>
