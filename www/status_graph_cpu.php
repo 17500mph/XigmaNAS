@@ -52,11 +52,13 @@ $gt_notsupported = gtext('Your browser does not support this svg object type.') 
 		'<br/>';
 
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('CPU Load')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<?php include 'status_graph_tabs.inc';?>
+<?php
+		include 'status_graph_tabs.inc';
+?>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -65,14 +67,16 @@ $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('CPU Load')];
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('CPU Load'),1);?>
+<?php
+			html_titleline2(gettext('CPU Load'),1);
+?>
 		</thead>
 		<tbody>
 			<tr><td><?=gtext('Graph shows last 120 seconds');?></td></tr>
 			<tr><td>
 				<div align="center" style="min-width:840px;">
 					<br />
-					<?php
+<?php
 //					session_start();
 					$cpus = system_get_cpus();
 					if($cpus > 1):
@@ -99,10 +103,11 @@ $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('CPU Load')];
 					echo sprintf('<param %s/>',implode(' ',$a_param));
 					echo $gt_notsupported;
 					echo '</object>',"\n";
-					?>
+?>
 				</div>
 			</td></tr>
 		</tbody>
 	</table>
 </td></tr></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
