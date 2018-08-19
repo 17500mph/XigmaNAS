@@ -512,7 +512,7 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 			'rows' => $this->GetRows()
 		];
 		$this->GetAttributes($attributes);
-		$anchor->addElement('textarea',$attributes,htmlspecialchars($this->GetValue(),ENT_QUOTES));
+		$anchor->addElement('textarea',$attributes,$this->GetValue());
 	}
 }
 class HTMLFileChooser2 extends HTMLEditBox2 {
