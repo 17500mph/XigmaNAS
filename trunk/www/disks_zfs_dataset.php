@@ -49,15 +49,15 @@ function get_sphere_disks_zfs_dataset() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Dataset'));
-	$sphere->sym_mod(gtext('Edit Dataset'));
-	$sphere->sym_del(gtext('Dataset is marked for deletion'));
-	$sphere->sym_loc(gtext('Dataset is locked'));
-	$sphere->sym_unl(gtext('Dataset is unlocked'));
-	$sphere->sym_mai(gtext('Maintenance'));
-	$sphere->sym_inf(gtext('Information'));
-	$sphere->cbm_delete(gtext('Delete Selected Datasets'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected datasets?'));
+	$sphere->sym_add(gettext('Add Dataset'));
+	$sphere->sym_mod(gettext('Edit Dataset'));
+	$sphere->sym_del(gettext('Dataset is marked for deletion'));
+	$sphere->sym_loc(gettext('Dataset is locked'));
+	$sphere->sym_unl(gettext('Dataset is unlocked'));
+	$sphere->sym_mai(gettext('Maintenance'));
+	$sphere->sym_inf(gettext('Information'));
+	$sphere->cbm_delete(gettext('Delete Selected Datasets'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected datasets?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'zfs','datasets','dataset');
 	array_sort_key($sphere->grid,'name');
@@ -128,7 +128,7 @@ switch($page_action):
 		exit;
 		break;
 endswitch;
-$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Datasets'),gtext('Dataset')];
+$pgtitle = [gettext('Disks'),gettext('ZFS'),gettext('Datasets'),gettext('Dataset')];
 $record_exists = count($sphere->grid) > 0;
 $a_col_width = ['5%','15%','15%','10%','45%','10%'];
 $n_col_width = count($a_col_width);
@@ -151,16 +151,16 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Dataset'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_dataset_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Dataset'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_dataset_info.php',gettext('Information'));
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
 $content->
@@ -178,7 +178,7 @@ $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $tbody = $table->addTBODY();
 $tfoot = $table->addTFOOT();
-$thead->ins_titleline(gtext('Overview'),$n_col_width);
+$thead->ins_titleline(gettext('Overview'),$n_col_width);
 if($record_exists):
 	$thead->
 		addTR()->
@@ -209,11 +209,11 @@ if($record_exists):
 		$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->get_protected()->get_name()] ?? false) ? $test : true) : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
-			$title = gtext('Enabled');
+			$title = gettext('Enabled');
 			$dc = '';
 		else:
 			$src = $g_img['dis'];
-			$title = gtext('Disabled');
+			$title = gettext('Disabled');
 			$dc = 'd';
 		endif;
 		$tbody->

@@ -81,7 +81,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_enabled() {
 		$property = $this->x_enabled = new property_bool($this);
 		$property->
-			set_title(gtext('Enabled'))->
+			set_title(gettext('Enabled'))->
 			set_name('enabled');
 		return $property;
 	}
@@ -91,7 +91,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_protected() {
 		$property = $this->x_protected = new property_bool($this);
 		$property->
-			set_title(gtext('Protected'))->
+			set_title(gettext('Protected'))->
 			set_name('protected');
 		return $property;
 	}
@@ -108,7 +108,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_aclinherit() {
 		$property = $this->x_aclinherit = new property_list($this);
 		$property->
-			set_title(gtext('ACL Inherit'))->
+			set_title(gettext('ACL Inherit'))->
 			set_name('aclinherit');
 		return $property;
 	}
@@ -118,7 +118,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_aclmode() {
 		$property = $this->x_aclmode = new property_list($this);
 		$property->
-			set_title(gtext('ACL Mode'))->
+			set_title(gettext('ACL Mode'))->
 			set_name('aclmode');
 		return $property;
 	}
@@ -128,7 +128,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_atime() {
 		$property = $this->x_atime = new property_list($this);
 		$property->
-			set_title(gtext('Access Time'))->
+			set_title(gettext('Access Time'))->
 			set_name('atime');
 		return $property;
 	}
@@ -138,7 +138,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_available() {
 		$property = $this->x_available = new property_text($this);
 		$property->
-			set_title(gtext('Available'))->
+			set_title(gettext('Available'))->
 			set_name('avail');
 		return $property;
 	}
@@ -148,7 +148,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_canmount() {
 		$property = $this->x_canmount = new property_list($this);
 		$property->
-			set_title(gtext('Can Mount'))->
+			set_title(gettext('Can Mount'))->
 			set_name('canmount');
 		return $property;
 	}
@@ -158,7 +158,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_casesensitivity() {
 		$property = $this->x_casesensitivity = new property_list($this);
 		$property->
-			set_title(gtext('Case Sensitivity'))->
+			set_title(gettext('Case Sensitivity'))->
 			set_name('casesensitivity');
 		return $property;
 	}
@@ -168,7 +168,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_checksum() {
 		$property = $this->x_checksum = new property_list($this);
 		$property->
-			set_title(gtext('Checksum'))->
+			set_title(gettext('Checksum'))->
 			set_name('checksum');
 		return $property;
 	}
@@ -178,7 +178,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_compression() {
 		$property = $this->x_compression = new property_list($this);
 		$property->
-			set_title(gtext('Compression'))->
+			set_title(gettext('Compression'))->
 			set_name('compression');
 		return $property;
 	}
@@ -188,7 +188,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_copies() {
 		$property = $this->x_copies = new property_list($this);
 		$property->
-			set_title(gtext('Copies'))->
+			set_title(gettext('Copies'))->
 			set_name('copies');
 		return $property;
 	}
@@ -198,7 +198,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_dedup() {
 		$property = $this->x_dedup = new property_list($this);
 		$property->
-			set_title(gtext('Dedup Method'))->
+			set_title(gettext('Dedup Method'))->
 			set_name('dedup');
 		return $property;
 	}
@@ -208,7 +208,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_description() {
 		$property = $this->x_description = new property_text($this);
 		$property->
-			set_title(gtext('Description'))->
+			set_title(gettext('Description'))->
 			set_name('desc');
 		return $property;
 	}
@@ -218,7 +218,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_logbias() {
 		$property = $this->x_logbias = new property_list($this);
 		$property->
-			set_title(gtext('Logbias'))->
+			set_title(gettext('Logbias'))->
 			set_name('logbias');
 		return $property;
 	}
@@ -228,7 +228,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_name() {
 		$property = $this->x_name = new property_text($this);
 		$property->
-			set_title(gtext('Name'))->
+			set_title(gettext('Name'))->
 			set_name('name');
 		return $property;
 	}
@@ -238,7 +238,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_normalization() {
 		$property = $this->x_normalization = new property_list($this);
 		$property->
-			set_title(gtext('Normalization'))->
+			set_title(gettext('Normalization'))->
 			set_name('normalization');
 		return $property;
 	}
@@ -248,7 +248,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_pool() {
 		$property = $this->x_pool = new property_text($this);
 		$property->
-			set_title(gtext('Pool'))->
+			set_title(gettext('Pool'))->
 			set_name('pool');
 		return $property;
 	}
@@ -258,7 +258,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_primarycache() {
 		$property = $this->x_primarycache = new property_list($this);
 		$property->
-			set_title(gtext('Primary Cache'))->
+			set_title(gettext('Primary Cache'))->
 			set_name('primarycache');
 		return $property;
 	}
@@ -268,7 +268,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_quota() {
 		$property = $this->x_quota = new property_text($this);
 		$property->
-			set_title(gtext('Quota'))->
+			set_title(gettext('Quota'))->
 			set_name('quota');
 		return $property;
 	}
@@ -278,7 +278,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_readonly() {
 		$property = $this->x_readonly = new property_list($this);
 		$property->
-			set_title(gtext('Read Only'))->
+			set_title(gettext('Read Only'))->
 			set_name('readonly');
 		return $property;
 	}
@@ -288,7 +288,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_redundant_metadata() {
 		$property = $this->x_redundant_metadata = new property_list($this);
 		$property->
-			set_title(gtext('Redundant Metadata'))->
+			set_title(gettext('Redundant Metadata'))->
 			set_name('redundant_metadata');
 		return $property;
 	}
@@ -298,7 +298,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_refquota() {
 		$property = $this->x_refquota = new property_text($this);
 		$property->
-			set_title(gtext('Refquota'))->
+			set_title(gettext('Refquota'))->
 			set_name('refquota');
 		return $property;
 	}
@@ -308,7 +308,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_refreservation() {
 		$property = $this->x_refreservation = new property_text($this);
 		$property->
-			set_title(gtext('Refreservation'))->
+			set_title(gettext('Refreservation'))->
 			set_name('refreservation');
 		return $property;
 	}
@@ -318,7 +318,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_reservation() {
 		$property = $this->x_reservation = new property_text($this);
 		$property->
-			set_title(gtext('Reservation'))->
+			set_title(gettext('Reservation'))->
 			set_name('reservation');
 		return $property;
 	}
@@ -328,7 +328,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_secondarycache() {
 		$property = $this->x_secondarycache = new property_list($this);
 		$property->
-			set_title(gtext('Secondary Cache'))->
+			set_title(gettext('Secondary Cache'))->
 			set_name('secondarycache');
 		return $property;
 	}
@@ -338,7 +338,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_setuid() {
 		$property = $this->x_setuid = new property_list($this);
 		$property->
-			set_title(gtext('Set UID'))->
+			set_title(gettext('Set UID'))->
 			set_name('setuid');
 		return $property;
 	}
@@ -348,7 +348,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_snapdir() {
 		$property = $this->x_snapdir = new property_list($this);
 		$property->
-			set_title(gtext('Snapdir'))->
+			set_title(gettext('Snapdir'))->
 			set_name('snapdir');
 		return $property;
 	}
@@ -358,7 +358,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_sync() {
 		$property = $this->x_sync = new property_list($this);
 		$property->
-			set_title(gtext('Sync'))->
+			set_title(gettext('Sync'))->
 			set_name('sync');
 		return $property;
 	}
@@ -368,7 +368,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_type() {
 		$property = $this->x_type = new property_list($this);
 		$property->
-			set_title(gtext('Dataset Type'))->
+			set_title(gettext('Dataset Type'))->
 			set_name('type');
 		return $property;
 	}
@@ -378,7 +378,7 @@ class properties_disks_zfs_dataset extends co_property_container {
 	public function init_utf8only() {
 		$property = $this->x_utf8only = new property_list($this);
 		$property->
-			set_title(gtext('UTF-8 Only'))->
+			set_title(gettext('UTF-8 Only'))->
 			set_name('utf8only');
 		return $property;
 	}
