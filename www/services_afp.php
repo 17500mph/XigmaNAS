@@ -304,7 +304,7 @@ endswitch;
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
 					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
-					html_textinfo2('afpname',gettext('Server Name'),htmlspecialchars($sphere->row['afpname']));
+					html_textinfo2('afpname',gettext('Server Name'),$sphere->row['afpname']);
 					html_checkbox2('uams_guest',gettext('Guest Authentication'),$sphere->row['uams_guest'],'','',false,true);
 //					html_checkbox2('uams_randum',gettext('Random Authentication'),$sphere->row['uams_randum'],'','',false,true);
 //					html_checkbox2('uam_gss',gettext('Kerberos Authentication'),$sphere->row['uam_gss'],'','',false,true);
@@ -326,7 +326,7 @@ endswitch;
 					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],'',false,65,5,true,false);
 					break;
 				case PAGE_MODE_EDIT:
-					html_inputbox2('afpname',gettext('Server Name'),htmlspecialchars($sphere->row['afpname']),gettext('Name of the server. If this field is left empty the default server is specified.'),false,30,false,false,30);
+					html_inputbox2('afpname',gettext('Server Name'),$sphere->row['afpname'],gettext('Name of the server. If this field is left empty the default server is specified.'),false,30,false,false,30);
 					html_checkbox2('uams_guest',gettext('Guest Authentication'),$sphere->row['uams_guest'],gettext('Enable guest access.'));
 //					html_checkbox2('uams_randum',gettext('Random Authentication'),$sphere->row['uams_randum'],gettext('Allow random number and two-way random number exchange for authentication.'));
 //					html_checkbox2('uam_gss',gettext('Kerberos Authentication'),$sphere->row['uam_gss'],gettext('Allow Kerberos V for authentication.'));
