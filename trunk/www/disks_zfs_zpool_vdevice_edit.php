@@ -397,17 +397,17 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Settings'));
+			html_titleline2(gettext('Settings'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,20,$isrecordmodify);
+			html_inputbox2('name',gettext('Name'),$sphere_record['name'],'',true,20,$isrecordmodify);
 			if($isrecordmodify):
-				html_inputbox2('type',gtext('Type'),$sphere_record['type'],'',true,20,$isrecordmodify);
+				html_inputbox2('type',gettext('Type'),$sphere_record['type'],'',true,20,$isrecordmodify);
 			endif;
-			html_checkbox2('aft4k',gtext('4KB wrapper'),!empty($sphere_record['aft4k']) ? true : false,gtext('Create 4KB wrapper (nop device).'),'',false,$isrecordmodify);
-			html_inputbox2('desc',gtext('Description'),$sphere_record['desc'],gtext('You may enter a description here for your reference.'),false,40);
+			html_checkbox2('aft4k',gettext('4KB wrapper'),!empty($sphere_record['aft4k']) ? true : false,gettext('Create 4KB wrapper (nop device).'),'',false,$isrecordmodify);
+			html_inputbox2('desc',gettext('Description'),$sphere_record['desc'],gettext('You may enter a description here for your reference.'),false,40);
 ?>
 		</tbody>
 		<tfoot>
@@ -428,7 +428,7 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Device List'),9);
+			html_titleline2(gettext('Device List'),9);
 ?>
 			<tr>
 				<td class="lhelc">
@@ -568,14 +568,14 @@ $document->render();
 	<div id="remarks">
 <?php
 		if($isrecordnewornewmodify):
-			$helpinghand = gtext('Make sure to select the optimal number of devices')
+			$helpinghand = gettext('Make sure to select the optimal number of devices')
 				. ':'
 				. '<div id="enumeration">' . '<ul>'
-				. '<li>' . gtext('RAID-Z1 should have 3, 5, or 9 disks in each vdev.') . '</li>'
-				. '<li>' . gtext('RAID-Z2 should have 4, 6, or 10 disks in each vdev.') . '</li>'
-				. '<li>' . gtext('RAID-Z3 should have 5, 7, or 11 disks in each vdev.') . '</li>'
+				. '<li>' . gettext('RAID-Z1 should have 3, 5, or 9 disks in each vdev.') . '</li>'
+				. '<li>' . gettext('RAID-Z2 should have 4, 6, or 10 disks in each vdev.') . '</li>'
+				. '<li>' . gettext('RAID-Z3 should have 5, 7, or 11 disks in each vdev.') . '</li>'
 				. '</ul></div>';
-			html_remark2('note',gtext('Note'),$helpinghand);
+			html_remark2('note',gettext('Note'),$helpinghand);
 		endif;
 ?>
 	</div>
