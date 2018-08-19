@@ -268,9 +268,9 @@ $content->add_table_data_settings()->
 		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_ipaddress(),htmlspecialchars($sphere->row[$cop->get_ipaddress()->get_name()]),true,false)->
-		c2_input_text($cop->get_port(),htmlspecialchars($sphere->row[$cop->get_port()->get_name()]),false,false)->
-		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
+		c2_input_text($cop->get_ipaddress(),$sphere->row[$cop->get_ipaddress()->get_name()],true,false)->
+		c2_input_text($cop->get_port(),$sphere->row[$cop->get_port()->get_name()],false,false)->
+		c2_input_text($cop->get_description(),$sphere->row[$cop->get_description()->get_name()],false,false)->
 		c2_checkbox_grid($cop->get_group(),$sphere->row[$cop->get_group()->get_name()],false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):

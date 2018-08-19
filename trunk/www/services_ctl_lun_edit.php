@@ -297,17 +297,17 @@ $content->add_table_data_settings()->
 		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true,false)->
-		c2_input_text($cop->get_description(),htmlspecialchars($sphere->row[$cop->get_description()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_backend(),htmlspecialchars($sphere->row[$cop->get_backend()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_blocksize(),htmlspecialchars($sphere->row[$cop->get_blocksize()->get_name()]),false,false)->
-		c2_input_text($cop->get_ctl_lun(),htmlspecialchars($sphere->row[$cop->get_ctl_lun()->get_name()]),false,false)->
-		c2_input_text($cop->get_device_id(),htmlspecialchars($sphere->row[$cop->get_device_id()->get_name()]),false,false)->
-		c2_select($cop->get_device_type(),htmlspecialchars($sphere->row[$cop->get_device_type()->get_name()]),false,false)->
-		c2_input_text($cop->get_path(),htmlspecialchars($sphere->row[$cop->get_path()->get_name()]),false,false)->
-		c2_input_text($cop->get_serial(),htmlspecialchars($sphere->row[$cop->get_serial()->get_name()]),false,false)->
-		c2_input_text($cop->get_size(),htmlspecialchars($sphere->row[$cop->get_size()->get_name()]),false,false)->
- 		c2_textarea($cop->get_auxparam(),htmlspecialchars($sphere->row[$cop->get_auxparam()->get_name()]),false,false,60,$n_auxparam_rows);
+		c2_input_text($cop->get_name(),$sphere->row[$cop->get_name()->get_name()],true,false)->
+		c2_input_text($cop->get_description(),$sphere->row[$cop->get_description()->get_name()],false,false)->
+		c2_radio_grid($cop->get_backend(),$sphere->row[$cop->get_backend()->get_name()],false,false)->
+		c2_radio_grid($cop->get_blocksize(),$sphere->row[$cop->get_blocksize()->get_name()],false,false)->
+		c2_input_text($cop->get_ctl_lun(),$sphere->row[$cop->get_ctl_lun()->get_name()],false,false)->
+		c2_input_text($cop->get_device_id(),$sphere->row[$cop->get_device_id()->get_name()],false,false)->
+		c2_select($cop->get_device_type(),$sphere->row[$cop->get_device_type()->get_name()],false,false)->
+		c2_input_text($cop->get_path(),$sphere->row[$cop->get_path()->get_name()],false,false)->
+		c2_input_text($cop->get_serial(),$sphere->row[$cop->get_serial()->get_name()],false,false)->
+		c2_input_text($cop->get_size(),$sphere->row[$cop->get_size()->get_name()],false,false)->
+ 		c2_textarea($cop->get_auxparam(),$sphere->row[$cop->get_auxparam()->get_name()],false,false,60,$n_auxparam_rows);
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
@@ -316,36 +316,36 @@ $content->add_table_data_settings()->
 		c2_titleline(gettext('Options'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_opt_vendor(),htmlspecialchars($sphere->row[$cop->get_opt_vendor()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_product(),htmlspecialchars($sphere->row[$cop->get_opt_product()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_revision(),htmlspecialchars($sphere->row[$cop->get_opt_revision()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_scsiname(),htmlspecialchars($sphere->row[$cop->get_opt_scsiname()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_eui(),htmlspecialchars($sphere->row[$cop->get_opt_eui()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_naa(),htmlspecialchars($sphere->row[$cop->get_opt_naa()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_uuid(),htmlspecialchars($sphere->row[$cop->get_opt_uuid()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_ha_role(),htmlspecialchars($sphere->row[$cop->get_opt_ha_role()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_insecure_tpc(),htmlspecialchars($sphere->row[$cop->get_opt_insecure_tpc()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_readcache(),htmlspecialchars($sphere->row[$cop->get_opt_readcache()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_readonly(),htmlspecialchars($sphere->row[$cop->get_opt_readonly()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_removable(),htmlspecialchars($sphere->row[$cop->get_opt_removable()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_reordering(),htmlspecialchars($sphere->row[$cop->get_opt_reordering()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_serseq(),htmlspecialchars($sphere->row[$cop->get_opt_serseq()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_pblocksize(),htmlspecialchars($sphere->row[$cop->get_opt_pblocksize()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_pblockoffset(),htmlspecialchars($sphere->row[$cop->get_opt_pblockoffset()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_ublocksize(),htmlspecialchars($sphere->row[$cop->get_opt_ublocksize()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_ublockoffset(),htmlspecialchars($sphere->row[$cop->get_opt_ublockoffset()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_rpm(),htmlspecialchars($sphere->row[$cop->get_opt_rpm()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_formfactor(),htmlspecialchars($sphere->row[$cop->get_opt_formfactor()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_provisioning_type(),htmlspecialchars($sphere->row[$cop->get_opt_provisioning_type()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_unmap(),htmlspecialchars($sphere->row[$cop->get_opt_unmap()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_unmap_max_lba(),htmlspecialchars($sphere->row[$cop->get_opt_unmap_max_lba()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_unmap_max_descr(),htmlspecialchars($sphere->row[$cop->get_opt_unmap_max_descr()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_write_same_max_lba(),htmlspecialchars($sphere->row[$cop->get_opt_write_same_max_lba()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_avail_threshold(),htmlspecialchars($sphere->row[$cop->get_opt_avail_threshold()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_used_threshold(),htmlspecialchars($sphere->row[$cop->get_opt_used_threshold()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_pool_avail_threshold(),htmlspecialchars($sphere->row[$cop->get_opt_pool_avail_threshold()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_pool_used_threshold(),htmlspecialchars($sphere->row[$cop->get_opt_pool_used_threshold()->get_name()]),false,false)->
-		c2_radio_grid($cop->get_opt_writecache(),htmlspecialchars($sphere->row[$cop->get_opt_writecache()->get_name()]),false,false);
+		c2_input_text($cop->get_opt_vendor(),$sphere->row[$cop->get_opt_vendor()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_product(),$sphere->row[$cop->get_opt_product()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_revision(),$sphere->row[$cop->get_opt_revision()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_scsiname(),$sphere->row[$cop->get_opt_scsiname()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_eui(),$sphere->row[$cop->get_opt_eui()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_naa(),$sphere->row[$cop->get_opt_naa()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_uuid(),$sphere->row[$cop->get_opt_uuid()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_ha_role(),$sphere->row[$cop->get_opt_ha_role()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_insecure_tpc(),$sphere->row[$cop->get_opt_insecure_tpc()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_readcache(),$sphere->row[$cop->get_opt_readcache()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_readonly(),$sphere->row[$cop->get_opt_readonly()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_removable(),$sphere->row[$cop->get_opt_removable()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_reordering(),$sphere->row[$cop->get_opt_reordering()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_serseq(),$sphere->row[$cop->get_opt_serseq()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_pblocksize(),$sphere->row[$cop->get_opt_pblocksize()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_pblockoffset(),$sphere->row[$cop->get_opt_pblockoffset()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_ublocksize(),$sphere->row[$cop->get_opt_ublocksize()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_ublockoffset(),$sphere->row[$cop->get_opt_ublockoffset()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_rpm(),$sphere->row[$cop->get_opt_rpm()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_formfactor(),$sphere->row[$cop->get_opt_formfactor()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_provisioning_type(),$sphere->row[$cop->get_opt_provisioning_type()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_unmap(),$sphere->row[$cop->get_opt_unmap()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_unmap_max_lba(),$sphere->row[$cop->get_opt_unmap_max_lba()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_unmap_max_descr(),$sphere->row[$cop->get_opt_unmap_max_descr()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_write_same_max_lba(),$sphere->row[$cop->get_opt_write_same_max_lba()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_avail_threshold(),$sphere->row[$cop->get_opt_avail_threshold()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_used_threshold(),$sphere->row[$cop->get_opt_used_threshold()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_pool_avail_threshold(),$sphere->row[$cop->get_opt_pool_avail_threshold()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_pool_used_threshold(),$sphere->row[$cop->get_opt_pool_used_threshold()->get_name()],false,false)->
+		c2_radio_grid($cop->get_opt_writecache(),$sphere->row[$cop->get_opt_writecache()->get_name()],false,false);
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
@@ -354,8 +354,8 @@ $content->add_table_data_settings()->
 		c2_titleline(gettext('Additional Options for Block Backend'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_opt_file(),htmlspecialchars($sphere->row[$cop->get_opt_file()->get_name()]),false,false)->
-		c2_input_text($cop->get_opt_num_threads(),htmlspecialchars($sphere->row[$cop->get_opt_num_threads()->get_name()]),false,false);
+		c2_input_text($cop->get_opt_file(),$sphere->row[$cop->get_opt_file()->get_name()],false,false)->
+		c2_input_text($cop->get_opt_num_threads(),$sphere->row[$cop->get_opt_num_threads()->get_name()],false,false);
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
@@ -364,7 +364,7 @@ $content->add_table_data_settings()->
 		c2_titleline(gettext('Additional Options for RAM Disk Backend'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_opt_capacity(),htmlspecialchars($sphere->row[$cop->get_opt_capacity()->get_name()]),false,false);
+		c2_input_text($cop->get_opt_capacity(),$sphere->row[$cop->get_opt_capacity()->get_name()],false,false);
 /*
 $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
@@ -374,7 +374,7 @@ $content->add_table_data_settings()->
 		c2_titleline(gettext('Additional Options for Passthrough Backend'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_passthrough_address(),htmlspecialchars($sphere->row[$cop->get_passthrough_address()->get_name()]),false,false);
+		c2_input_text($cop->get_passthrough_address(),$sphere->row[$cop->get_passthrough_address()->get_name()],false,false);
  */
 //	add buttons
 $buttons = $document->add_area_buttons();

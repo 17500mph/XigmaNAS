@@ -176,10 +176,10 @@ function ctl_sub_listen_selection($cop,$sphere) {
 					addTDwC('lcelc' . $dc)->
 						ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 					pop()->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_ipaddress()->get_name()] ?? ''))->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_port()->get_name()] ?? ''))->
+					insTDwC('lcell' . $dc,$sphere->row[$cop->get_ipaddress()->get_name()] ?? '')->
+					insTDwC('lcell' . $dc,$sphere->row[$cop->get_port()->get_name()] ?? '')->
 					ins_enadis_icon($is_enabled)->
-					insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_description()->get_name()] ?? ''))->
+					insTDwC('lcell' . $dc,$sphere->row[$cop->get_description()->get_name()] ?? '')->
 					add_toolbox_area()->
 						ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 						ins_maintainbox($sphere,false)->
