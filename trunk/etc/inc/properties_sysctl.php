@@ -49,7 +49,7 @@ class properties_sysctl extends co_property_container {
 		$property = $this->x_comment = new property_text($this);
 		$property->
 			set_name('comment')->
-			set_title(gtext('Description'));
+			set_title(gettext('Description'));
 		return $property;
 	}
 	public function get_enable() {
@@ -66,7 +66,7 @@ class properties_sysctl extends co_property_container {
 		$property = $this->x_name = new property_text();
 		$property->
 			set_name('name')->
-			set_title(gtext('MIB'));
+			set_title(gettext('MIB'));
 		return $property;
 	}
 	public function get_protected() {
@@ -97,7 +97,7 @@ class properties_sysctl extends co_property_container {
 		$property = $this->x_value = new property_text($this);
 		$property->
 			set_name('value')->
-			set_title(gtext('Value'));
+			set_title(gettext('Value'));
 		return $property;
 	}
 }

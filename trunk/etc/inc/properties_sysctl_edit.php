@@ -37,7 +37,7 @@ class properties_sysctl_edit extends properties_sysctl {
 	public function init_comment() {
 		$property = parent::init_comment();
 		$description = '';
-		$placeholder = gtext('Enter a description');
+		$placeholder = gettext('Enter a description');
 		$property->
 			set_id('comment')->
 			set_description($description)->
@@ -50,13 +50,13 @@ class properties_sysctl_edit extends properties_sysctl {
 			set_filter(FILTER_UNSAFE_RAW)->
 			set_filter_flags(FILTER_REQUIRE_SCALAR)->
 			set_filter_options(['default' => ''])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_name() {
 		$property = parent::init_name();
-		$description = gtext('Enter a valid sysctl MIB name.');
-		$placeholder = gtext('Enter name');
+		$description = gettext('Enter a valid sysctl MIB name.');
+		$placeholder = gettext('Enter name');
 		$property->
 			set_id('facility')->
 			set_description($description)->
@@ -67,13 +67,13 @@ class properties_sysctl_edit extends properties_sysctl {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_value() {
 		$property = parent::init_value();
-		$description = gtext('A valid systctl MIB value.');
-		$placeholder = gtext('Enter value');
+		$description = gettext('A valid systctl MIB value.');
+		$placeholder = gettext('Enter value');
 		$property->
 			set_id('value')->
 			set_description($description)->
@@ -84,7 +84,7 @@ class properties_sysctl_edit extends properties_sysctl {
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }
