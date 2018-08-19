@@ -49,15 +49,15 @@ function get_sphere_disks_zfs_volume() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Volume'));
-	$sphere->sym_mod(gtext('Edit Volume'));
-	$sphere->sym_del(gtext('Volume is marked for deletion'));
-	$sphere->sym_loc(gtext('Volume is locked'));
-	$sphere->sym_unl(gtext('Volume is unlocked'));
-	$sphere->sym_mai(gtext('Maintenance'));
-	$sphere->sym_inf(gtext('Information'));
-	$sphere->cbm_delete(gtext('Delete Selected Volumes'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected volumes?'));
+	$sphere->sym_add(gettext('Add Volume'));
+	$sphere->sym_mod(gettext('Edit Volume'));
+	$sphere->sym_del(gettext('Volume is marked for deletion'));
+	$sphere->sym_loc(gettext('Volume is locked'));
+	$sphere->sym_unl(gettext('Volume is unlocked'));
+	$sphere->sym_mai(gettext('Maintenance'));
+	$sphere->sym_inf(gettext('Information'));
+	$sphere->cbm_delete(gettext('Delete Selected Volumes'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected volumes?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'zfs','volumes','volume');
 	array_sort_key($sphere->grid,'name');
@@ -130,7 +130,7 @@ switch($page_action):
 		exit;
 		break;
 endswitch;
-$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Volumes'),gtext('Volume')];
+$pgtitle = [gettext('Disks'),gettext('ZFS'),gettext('Volumes'),gettext('Volume')];
 $record_exists = count($sphere->grid) > 0;
 $a_col_width = ['5%','15%','15%','10%','10%','10%','10%','15%','10%'];
 $n_col_width = count($a_col_width);
@@ -153,16 +153,16 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'))->
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volume'),gtext('Reload page'),true)->
-			ins_tabnav_record('disks_zfs_volume_info.php',gtext('Information'));
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volume'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_zfs_volume_info.php',gettext('Information'));
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
 $content->
@@ -180,7 +180,7 @@ $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $tbody = $table->addTBODY();
 $tfoot = $table->addTFOOT();
-$thead->ins_titleline(gtext('Overview'),$n_col_width);
+$thead->ins_titleline(gettext('Overview'),$n_col_width);
 if($record_exists):
 	$thead->
 		addTR()->
@@ -218,16 +218,16 @@ if($record_exists):
 		$is_sparse = is_bool($test = $sphere->row[$cop->get_sparse()->get_name()] ?? false) ? $test : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
-			$title = gtext('Enabled');
+			$title = gettext('Enabled');
 			$dc = '';
 		else:
 			$src = $g_img['dis'];
-			$title = gtext('Disabled');
+			$title = gettext('Disabled');
 			$dc = 'd';
 		endif;
 		if(UPDATENOTIFY_MODE_MODIFIED == $notificationmode || UPDATENOTIFY_MODE_NEW == $notificationmode || UPDATENOTIFY_MODE_DIRTY_CONFIG == $notificationmode):
 			$volsize = $sphere->row[$cop->get_volsize()->get_name()] ?? '';
-			$sparse = $is_sparse ? gtext('on') : '-';
+			$sparse = $is_sparse ? gettext('on') : '-';
 			$volblocksize = $sphere->row[$cop->get_volblocksize()->get_name()] ?? '';
 		else:
 			list($volsize,$sparse,$volblocksize) = get_zfs_volume_info($sphere->row[$cop->get_pool()->get_name()][0],$sphere->row[$cop->get_name()->get_name()]);
@@ -242,13 +242,13 @@ if($record_exists):
 				addTDwC('lcelc' . $dc)->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_pool()->get_name()][0] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_name()->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($volsize))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_compression()->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sparse))->
-				insTDwC('lcell' . $dc,htmlspecialchars($volblocksize))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_description()->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_pool()->get_name()][0] ?? '')->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_name()->get_name()] ?? '')->
+				insTDwC('lcell' . $dc,$volsize)->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_compression()->get_name()] ?? '')->
+				insTDwC('lcell' . $dc,$sparse)->
+				insTDwC('lcell' . $dc,$volblocksize)->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_description()->get_name()] ?? '')->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					ins_maintainbox($sphere,false)->
