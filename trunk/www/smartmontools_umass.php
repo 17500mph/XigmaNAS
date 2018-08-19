@@ -46,19 +46,19 @@ function smartmontools_umass_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Record'));
-	$sphere->sym_mod(gtext('Edit Record'));
-	$sphere->sym_del(gtext('Record is marked for deletion'));
-	$sphere->sym_loc(gtext('Record is locked'));
-	$sphere->sym_unl(gtext('Record is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Records'));
-	$sphere->cbm_disable(gtext('Disable Selected Records'));
-	$sphere->cbm_enable(gtext('Enable Selected Records'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Records'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected records?'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected records?'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected records?'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected records?'));
+	$sphere->sym_add(gettext('Add Record'));
+	$sphere->sym_mod(gettext('Edit Record'));
+	$sphere->sym_del(gettext('Record is marked for deletion'));
+	$sphere->sym_loc(gettext('Record is locked'));
+	$sphere->sym_unl(gettext('Record is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Records'));
+	$sphere->cbm_disable(gettext('Disable Selected Records'));
+	$sphere->cbm_enable(gettext('Enable Selected Records'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Records'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected records?'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected records?'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected records?'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected records?'));
 //	sphere external content
 	$sphere->grid = &array_make_branch($config,'smartmontools','umass','param');
 	if(!empty($sphere->grid)):
@@ -89,7 +89,7 @@ function smartmontools_umass_selection($cop,$sphere) {
 
 	$input_errors = [];
 	$errormsg = '';
-	$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('USB Mass Storage Devices')];
+	$pgtitle = [gettext('Disks'),gettext('Management'),gettext('S.M.A.R.T.'),gettext('USB Mass Storage Devices')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
 	$a_col_width = ['5%','25%','25%','10%','25%','10%'];
@@ -108,14 +108,14 @@ function smartmontools_umass_selection($cop,$sphere) {
 		add_area_tabnav()->
 			push()->
 			add_tabnav_upper()->
-				ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-				ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
-				ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-				ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+				ins_tabnav_record('disks_manage.php',gettext('HDD Management'))->
+				ins_tabnav_record('disks_init.php',gettext('HDD Format'))->
+				ins_tabnav_record('disks_manage_smart.php',gettext('S.M.A.R.T.'),gettext('Reload Page'),true)->
+				ins_tabnav_record('disks_manage_iscsi.php',gettext('iSCSI Initiator'))->
 			pop()->
 			add_tabnav_lower()->
-				ins_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-				ins_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+				ins_tabnav_record('disks_manage_smart.php',gettext('Settings'))->
+				ins_tabnav_record('smartmontools_umass.php',gettext('USB Mass Storage Devices'),gettext('Reload Page'),true);
 	//	create data area
 	$content = $pagecontent->add_area_data();
 	//	display information, warnings and errors
@@ -135,7 +135,7 @@ function smartmontools_umass_selection($cop,$sphere) {
 	$thead = $table->addTHEAD();
 	$tbody = $table->addTBODY();
 	$tfoot = $table->addTFOOT();
-	$thead->ins_titleline(gtext('Overview'),$n_col_width);
+	$thead->ins_titleline(gettext('Overview'),$n_col_width);
 	$tr = $thead->addTR();
 	if($record_exists):
 		$tr->
@@ -145,17 +145,17 @@ function smartmontools_umass_selection($cop,$sphere) {
 			pop()->
 			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhell',$cop->get_type()->get_title())->
-			insTHwC('lhelc sorter-false parser-false',gtext('Status'))->
+			insTHwC('lhelc sorter-false parser-false',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gtext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
 	else:
 		$tr->
 			insTHwC('lhelc')->
 			insTHwC('lhell',$cop->get_name()->get_title())->
 			insTHwC('lhell',$cop->get_type()->get_title())->
-			insTHwC('lhelc',gtext('Status'))->
+			insTHwC('lhelc',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gtext('Toolbox'));
+			insTHwC('lhebl',gettext('Toolbox'));
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):

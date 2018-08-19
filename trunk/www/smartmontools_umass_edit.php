@@ -204,7 +204,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('USB Mass Storage Devices'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gettext('Disks'),gettext('Management'),gettext('S.M.A.R.T.'),gettext('USB Mass Storage Devices'),($isrecordnew) ? gettext('Add') : gettext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -214,14 +214,14 @@ $document->
 	add_area_tabnav()->
 		push()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_manage.php',gtext('HDD Management'))->
-			ins_tabnav_record('disks_init.php',gtext('HDD Format'))->
-			ins_tabnav_record('disks_manage_smart.php',gtext('S.M.A.R.T.'),gtext('Reload Page'),true)->
-			ins_tabnav_record('disks_manage_iscsi.php',gtext('iSCSI Initiator'))->
+			ins_tabnav_record('disks_manage.php',gettext('HDD Management'))->
+			ins_tabnav_record('disks_init.php',gettext('HDD Format'))->
+			ins_tabnav_record('disks_manage_smart.php',gettext('S.M.A.R.T.'),gettext('Reload Page'),true)->
+			ins_tabnav_record('disks_manage_iscsi.php',gettext('iSCSI Initiator'))->
 		pop()->
 		add_tabnav_lower()->
-			ins_tabnav_record('disks_manage_smart.php',gtext('Settings'))->
-			ins_tabnav_record('smartmontools_umass.php',gtext('USB Mass Storage Devices'),gtext('Reload Page'),true);
+			ins_tabnav_record('disks_manage_smart.php',gettext('Settings'))->
+			ins_tabnav_record('smartmontools_umass.php',gettext('USB Mass Storage Devices'),gettext('Reload Page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -236,7 +236,7 @@ $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
-		c2_titleline_with_checkbox($cop->enable,$sphere->row[$cop->enable->get_name()],false,false,gtext('Settings'))->
+		c2_titleline_with_checkbox($cop->enable,$sphere->row[$cop->enable->get_name()],false,false,gettext('Settings'))->
 	pop()->
 	addTBODY()->
 		c2_input_text($cop->name,htmlspecialchars($sphere->row[$cop->name->get_name()]),true,false)->
