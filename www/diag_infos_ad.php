@@ -109,7 +109,7 @@ else:
 				$cmd .= ' -S ' . $config['ad']['domaincontrollername'];
 				$cmd .= " 2>&1";
 				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode("\n", $rawdata));
+				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 				unset($rawdata);
 				echo '<br />';
 				echo '<br />',gtext('Ping winbindd to see if it is alive'),':','<br />';
@@ -117,7 +117,7 @@ else:
 				$cmd .= ' -p ';
 				$cmd .= " 2>&1";
 				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode("\n",$rawdata));
+				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 				unset($rawdata);
 				echo '<br />';
 				echo '<br />',gtext('Check shared secret'),':','<br />';
@@ -125,7 +125,7 @@ else:
 				$cmd .= ' -t ';
 				$cmd .= " 2>&1";
 				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode("\n", $rawdata));
+				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 				unset($rawdata);
 				echo '</pre>';
 ?>
@@ -153,7 +153,7 @@ else:
 				$cmd .= ' -U ' . escapeshellarg($config['ad']['username'] . '%' . $config['ad']['password']);
 				$cmd .= " 2>&1";
 				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode("\n",$rawdata));
+				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 				unset($rawdata);
 				echo '</pre>';
 ?>
