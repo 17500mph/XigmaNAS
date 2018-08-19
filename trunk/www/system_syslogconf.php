@@ -66,19 +66,19 @@ function system_syslogconf_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(true);
-	$sphere->sym_add(gtext('Add Option'));
-	$sphere->sym_mod(gtext('Edit Option'));
-	$sphere->sym_del(gtext('Option is marked for deletion'));
-	$sphere->sym_loc(gtext('Option is locked'));
-	$sphere->sym_unl(gtext('Option is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Options'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected options?'));
-	$sphere->cbm_disable(gtext('Disable Selected Options'));
-	$sphere->cbm_disable_confirm(gtext('Do you want to disable selected options?'));
-	$sphere->cbm_enable(gtext('Enable Selected Options'));
-	$sphere->cbm_enable_confirm(gtext('Do you want to enable selected options?'));
-	$sphere->cbm_toggle(gtext('Toggle Selected Options'));
-	$sphere->cbm_toggle_confirm(gtext('Do you want to toggle selected options?'));
+	$sphere->sym_add(gettext('Add Option'));
+	$sphere->sym_mod(gettext('Edit Option'));
+	$sphere->sym_del(gettext('Option is marked for deletion'));
+	$sphere->sym_loc(gettext('Option is locked'));
+	$sphere->sym_unl(gettext('Option is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Options'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected options?'));
+	$sphere->cbm_disable(gettext('Disable Selected Options'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected options?'));
+	$sphere->cbm_enable(gettext('Enable Selected Options'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected options?'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Options'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected options?'));
 	$sphere->grid = &array_make_branch($config,'system','syslogconf','param');
 	return $sphere;
 }
@@ -161,7 +161,7 @@ switch($page_method):
 		endswitch;
 		break;
 endswitch;
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('syslog.conf')];
+$pgtitle = [gettext('System'),gettext('Advanced'),gettext('syslog.conf')];
 $record_exists = count($sphere->grid) > 0;
 $a_col_width = ['5%','20%','20%','20%','10%','15%','10%'];
 $n_col_width = count($a_col_width);
@@ -183,17 +183,17 @@ endif;
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'),gtext('Reload page'),true);
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'),gettext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -212,7 +212,7 @@ $table->ins_colgroup_with_styles('width',$a_col_width);
 $thead = $table->addTHEAD();
 $tbody = $table->addTBODY();
 $tfoot = $table->addTFOOT();
-$thead->ins_titleline(gtext('Overview'),$n_col_width);
+$thead->ins_titleline(gettext('Overview'),$n_col_width);
 $tr = $thead->addTR();
 if($record_exists):
 	$tr->
@@ -223,7 +223,7 @@ if($record_exists):
 		insTHwC('lhell',$cop->get_facility()->get_title())->
 		insTHwC('lhell',$cop->get_level()->get_title())->
 		insTHwC('lhell',$cop->get_value()->get_title())->
-		insTHwC('lhelc sorter-image',gtext('Status'))->
+		insTHwC('lhelc sorter-image',gettext('Status'))->
 		insTHwC('lhell',$cop->get_comment()->get_title())->
 		insTHwC('lhebl sorter-false parser-false',$cop->get_toolbox()->get_title());
 else:
@@ -232,7 +232,7 @@ else:
 		insTHwC('lhell',$cop->get_facility()->get_title())->
 		insTHwC('lhell',$cop->get_level()->get_title())->
 		insTHwC('lhell',$cop->get_value()->get_title())->
-		insTHwC('lhelc',gtext('Status'))->
+		insTHwC('lhelc',gettext('Status'))->
 		insTHwC('lhell',$cop->get_comment()->get_title())->
 		insTHwC('lhebl',$cop->get_toolbox()->get_title());
 endif;
@@ -244,11 +244,11 @@ if($record_exists):
 		$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->get_protected()->get_name()] ?? false) ? $test : true) : true;
 		if($is_enabled):
 			$src = $g_img['ena'];
-			$title = gtext('Enabled');
+			$title = gettext('Enabled');
 			$dc = '';
 		else:
 			$src = $g_img['dis'];
-			$title = gtext('Disabled');
+			$title = gettext('Disabled');
 			$dc = 'd';
 		endif;
 		$tbody->
@@ -257,14 +257,14 @@ if($record_exists):
 				addTDwC('lcelc' . $dc)->
 					ins_cbm_checkbox($sphere,!($is_notdirty && $is_notprotected))->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_facility()->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_level()->get_name()] ?? ''))->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_value()->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_facility()->get_name()] ?? '')->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_level()->get_name()] ?? '')->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_value()->get_name()] ?? '')->
 				push()->
 				addTDwC('lcelc' . $dc)->
 					addA(['title' => $title])->insIMG(['src' => $src,'alt' => $title,'class' => 'oneemhigh'])->
 				pop()->
-				insTDwC('lcell' . $dc,htmlspecialchars($sphere->row[$cop->get_comment()->get_name()] ?? ''))->
+				insTDwC('lcell' . $dc,$sphere->row[$cop->get_comment()->get_name()] ?? '')->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
 					insTD()->
@@ -274,5 +274,8 @@ else:
 	$tbody->ins_no_records_found($n_col_width);
 endif;
 $tfoot->ins_record_add($sphere,$n_col_width);
-$document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
+$document->
+	add_area_buttons()->
+		ins_cbm_button_enadis($sphere)->
+		ins_cbm_button_delete($sphere);
 $document->render();

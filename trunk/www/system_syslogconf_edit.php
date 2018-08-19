@@ -191,7 +191,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('syslog.conf'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gettext('System'),gettext('Advanced'),gettext('syslog.conf'),($isrecordnew) ? gettext('Add') : gettext('Edit')];
 $jcode = NULL;
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
@@ -205,17 +205,17 @@ endif;
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'))->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'),gtext('Reload page'),true);
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'))->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'),gettext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -230,13 +230,13 @@ $content->add_table_data_settings()->
 	ins_colgroup_data_settings()->
 	push()->
 	addTHEAD()->
-		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gtext('Configuration'))->
+		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
 	pop()->
 	addTBODY()->
-		c2_input_text($cop->get_facility(),htmlspecialchars($sphere->row[$cop->get_facility()->get_name()]),true,false)->
-		c2_input_text($cop->get_level(),htmlspecialchars($sphere->row[$cop->get_level()->get_name()]),false,false)->
-		c2_input_text($cop->get_value(),htmlspecialchars($sphere->row[$cop->get_value()->get_name()]),false,false)->
-		c2_input_text($cop->get_comment(),htmlspecialchars($sphere->row[$cop->get_comment()->get_name()]),false,false);
+		c2_input_text($cop->get_facility(),$sphere->row[$cop->get_facility()->get_name()],true,false)->
+		c2_input_text($cop->get_level(),$sphere->row[$cop->get_level()->get_name()],false,false)->
+		c2_input_text($cop->get_value(),$sphere->row[$cop->get_value()->get_name()],false,false)->
+		c2_input_text($cop->get_comment(),$sphere->row[$cop->get_comment()->get_name()],false,false);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->ins_button_add();
