@@ -269,18 +269,18 @@ endswitch;
 				case PAGE_MODE_VIEW:
 					html_textinfo2('enable',gettext('Service Enabled'),$sphere->row['enable'] ? gettext('Yes') : gettext('No'));
 					if(isset($l_user[$sphere->row['rsyncd_user']])):
-						$helpinghand = htmlspecialchars($l_user[$sphere->row['rsyncd_user']]);
+						$helpinghand = $l_user[$sphere->row['rsyncd_user']];
 					else:
 						$helpinghand = '';
 					endif;
 					html_textinfo2('rsyncd_user',gettext('Map to User'),$helpinghand);
-					html_textinfo2('port',gettext('TCP Port'),htmlspecialchars($sphere->row['port']));
+					html_textinfo2('port',gettext('TCP Port'),$sphere->row['port']);
 					html_textarea2('motd',gettext('MOTD'),$sphere->row['motd'],gettext('Message of the day.'),false,65,7,true,false);
 					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,true,false);
 					break;
 				case PAGE_MODE_EDIT:
 					html_combobox2('rsyncd_user',gettext('Map to User'),$sphere->row['rsyncd_user'],$l_user,'',true);
-					html_inputbox2('port',gettext('TCP Port'),htmlspecialchars($sphere->row['port']),gettext('Alternate TCP port. (Default is 873).'),true,20);
+					html_inputbox2('port',gettext('TCP Port'),$sphere->row['port'],gettext('Alternate TCP port. (Default is 873).'),true,20);
 					html_textarea2('motd',gettext('MOTD'),$sphere->row['motd'],gettext('Message of the day.'),false,65,7,false,false);
 					html_textarea2('auxparam',gettext('Additional Parameters'),$sphere->row['auxparam'],$gt_auxparam,false,65,5,false,false);
 					break;
