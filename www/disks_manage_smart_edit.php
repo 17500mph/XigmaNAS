@@ -348,7 +348,7 @@ function set_selected(name) {
 				</td>
 			</tr>
 <?php
-			html_inputbox2('desc',gettext('Description'),htmlspecialchars($pconfig['desc']),'',false,40);
+			html_inputbox2('desc',gettext('Description'),$pconfig['desc'],'',false,40);
 ?>
 		</tbody>
 	</table>
