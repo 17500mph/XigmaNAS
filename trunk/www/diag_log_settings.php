@@ -290,7 +290,7 @@ $content->
 			parentNode->
 		addTBODY()->
 			c2_checkbox($cop->get_reverse(),$sphere->row[$cop->get_reverse()->get_name()],false,$is_readonly)->
-			c2_input_text($cop->get_nentries(),htmlspecialchars($sphere->row[$cop->get_nentries()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_nentries(),$sphere->row[$cop->get_nentries()->get_name()],false,$is_readonly)->
 			c2_checkbox($cop->get_resolve(),$sphere->row[$cop->get_resolve()->get_name()],false,$is_readonly)->
 			c2_checkbox($cop->get_disablecomp(),$sphere->row[$cop->get_disablecomp()->get_name()],false,$is_readonly)->
 			c2_checkbox($cop->get_disablesecure(),$sphere->row[$cop->get_disablesecure()->get_name()],false,$is_readonly);
@@ -302,8 +302,8 @@ $content->
 			c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,$is_readonly,gettext('Remote Syslog Server'))->
 			parentNode->
 		addTBODY()->
-			c2_input_text($cop->get_ipaddr(),htmlspecialchars($sphere->row[$cop->get_ipaddr()->get_name()]),false,$is_readonly)->
-			c2_input_text($cop->get_port(),htmlspecialchars($sphere->row[$cop->get_port()->get_name()]),false,$is_readonly)->
+			c2_input_text($cop->get_ipaddr(),$sphere->row[$cop->get_ipaddr()->get_name()],false,$is_readonly)->
+			c2_input_text($cop->get_port(),$sphere->row[$cop->get_port()->get_name()],false,$is_readonly)->
 			c2_checkbox($cop->get_system(),$sphere->row[$cop->get_system()->get_name()],false,$is_readonly)->
 			c2_checkbox($cop->get_ftp(),$sphere->row[$cop->get_ftp()->get_name()],false,$is_readonly)->
 			c2_checkbox($cop->get_rsyncd(),$sphere->row[$cop->get_rsyncd()->get_name()],false,$is_readonly)->
