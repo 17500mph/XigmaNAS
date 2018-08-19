@@ -42,7 +42,7 @@ function services_hast_info_ajax() {
 	$cmd = '/sbin/hastctl status';
 	$cmd .= " 2>&1";
 	mwexec2($cmd,$rawdata);
-	return implode("\n",$rawdata);
+	return implode(PHP_EOL,$rawdata);
 }
 array_make_branch($config,'hast');
 if(is_ajax()):
@@ -79,7 +79,7 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php 
-			html_titleline2(gtext('HAST Information & Status Configured Resources'));
+			html_titleline2(gettext('HAST Information & Status Configured Resources'));
 ?>
 		</thead>
 		<tbody><tr>
@@ -92,4 +92,3 @@ $(document).ready(function(){
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
