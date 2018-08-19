@@ -61,13 +61,13 @@ function services_hast_resource_get_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(false);
 	$sphere->lock(false);
-	$sphere->sym_add(gtext('Add Resource'));
-	$sphere->sym_mod(gtext('Edit Resource'));
-	$sphere->sym_del(gtext('Resource is marked for deletion'));
-	$sphere->sym_loc(gtext('Resource is protected'));
-	$sphere->sym_unl(gtext('Resource is unlocked'));
-	$sphere->cbm_delete(gtext('Delete Selected Resources'));
-	$sphere->cbm_delete_confirm(gtext('Do you want to delete selected resources?'));
+	$sphere->sym_add(gettext('Add Resource'));
+	$sphere->sym_mod(gettext('Edit Resource'));
+	$sphere->sym_del(gettext('Resource is marked for deletion'));
+	$sphere->sym_loc(gettext('Resource is protected'));
+	$sphere->sym_unl(gettext('Resource is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Resources'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected resources?'));
 	$sphere->grid = &array_make_branch($config,'hast','hastresource');
 	return $sphere;
 }
@@ -222,7 +222,7 @@ echo $sphere->doj();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Overview'),8);
+			html_titleline2(gettext('Overview'),8);
 ?>
 			<tr>
 				<th class="lhelc"><?=$sphere->html_checkbox_toggle_cbm();?></th>
