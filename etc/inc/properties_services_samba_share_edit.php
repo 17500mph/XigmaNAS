@@ -36,7 +36,7 @@ require_once 'properties_services_samba_share.php';
 class properties_services_samba_share_edit extends properties_services_samba_share {
 	public function init_afpcompat() {
 		$property = parent::init_afpcompat();
-		$caption = gtext('Enable');
+		$caption = gettext('Enable');
 		$property->
 			set_id('afpcompat')->
 			set_caption($caption)->
@@ -44,15 +44,15 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_auxparam() {
 		$property = parent::init_auxparam();
 		$description = 
-			sprintf(gtext('These parameters are added to [Share] section of %s.'),'smb4.conf') .
+			sprintf(gettext('These parameters are added to [Share] section of %s.'),'smb4.conf') .
 			' ' .
-			sprintf('<a href="%s" target="_blank">%s</a>.','http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html',gtext('Please check the documentation'));
+			sprintf('<a href="%s" target="_blank">%s</a>.','http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html',gettext('Please check the documentation'));
 		$property->
 			set_id('auxparam')->
 			set_description($description)->
@@ -60,13 +60,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_shadowformat() {
 		$property = parent::init_shadowformat();
 		$default_shadowformat = "auto-%Y%m%d-%H%M%S";
-		$description = sprintf(gtext('The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot.'),$default_shadowformat);
+		$description = sprintf(gettext('The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot.'),$default_shadowformat);
 		$property->
 			set_id('shadowformat')->
 			set_description($description)->
@@ -76,15 +76,15 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_vfs_fruit_encoding() {
 		$property = parent::init_vfs_fruit_encoding();
-		$description = gtext('Controls how the set of illegal NTFS ASCII character are stored in the filesystem, commonly used by OS X clients.');
+		$description = gettext('Controls how the set of illegal NTFS ASCII character are stored in the filesystem, commonly used by OS X clients.');
 		$options = [
-			'native' => gtext('Native - store characters with their native ASCII value.'),
-			'private' => gtext('Private (default) - store characters as encoded by the OS X client: mapped to the Unicode private range.')
+			'native' => gettext('Native - store characters with their native ASCII value.'),
+			'private' => gettext('Private (default) - store characters as encoded by the OS X client: mapped to the Unicode private range.')
 		];
 		$property->
 			set_id('vfs_fruit_encoding')->
@@ -94,15 +94,15 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_vfs_fruit_locking() {
 		$property = parent::init_vfs_fruit_locking();
 		$description = '';
 		$options = [
-			'netatalk' => gtext('Netatalk - use cross protocol locking with Netatalk.'),
-			'none' => gtext('None (default) - no cross protocol locking.')
+			'netatalk' => gettext('Netatalk - use cross protocol locking with Netatalk.'),
+			'none' => gettext('None (default) - no cross protocol locking.')
 		];
 		$property->
 			set_id('vfs_fruit_locking')->
@@ -112,15 +112,15 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_vfs_fruit_metadata() {
 		$property = parent::init_vfs_fruit_metadata();
-		$description = gtext('Controls where the OS X metadata stream is stored.');
+		$description = gettext('Controls where the OS X metadata stream is stored.');
 		$options = [
-			'netatalk' => gtext('Netatalk (default) - use Netatalk compatible xattr.'),
-			'stream' => gtext('Stream - pass the stream on to the next module in the VFS stack.')
+			'netatalk' => gettext('Netatalk (default) - use Netatalk compatible xattr.'),
+			'stream' => gettext('Stream - pass the stream on to the next module in the VFS stack.')
 		];
 		$property->
 			set_id('vfs_fruit_metadata')->
@@ -130,16 +130,16 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_vfs_fruit_resource() {
 		$property = parent::init_vfs_fruit_resource();
-		$description = gtext('Controls where the OS X resource fork is stored.');
+		$description = gettext('Controls where the OS X resource fork is stored.');
 		$options = [
-			'file' => gtext('File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk.'),
-			'xattr' => gtext('Extended Attributes - use a xattr.'),
-			'stream' => gtext('Stream (experimental) - pass the stream on to the next module in the VFS stack.')
+			'file' => gettext('File (default) - use a ._ AppleDouble file compatible with OS X and Netatalk.'),
+			'xattr' => gettext('Extended Attributes - use a xattr.'),
+			'stream' => gettext('Stream (experimental) - pass the stream on to the next module in the VFS stack.')
 		];
 		$property->
 			set_id('vfs_fruit_resource')->
@@ -149,15 +149,15 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_vfs_fruit_time_machine() {
 		$property = parent::init_vfs_fruit_time_machine();
-		$description = gtext('Controls if Time Machine support via the FULLSYNC volume capability is advertised to clients.');
+		$description = gettext('Controls if Time Machine support via the FULLSYNC volume capability is advertised to clients.');
 		$options = [
-			'yes' => gtext('Yes - Enables Time Machine support for this share.'),
-			'no' => gtext('No (default) - Disables advertising Time Machine support.')
+			'yes' => gettext('Yes - Enables Time Machine support for this share.'),
+			'no' => gettext('No (default) - Disables advertising Time Machine support.')
 		];
 		$property->
 			set_id('vfs_fruit_time_machine')->
@@ -167,13 +167,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_zfsacl() {
 		$property = parent::init_zfsacl();
-		$caption = gtext('Enable ZFS ACL.');
-		$description = gtext('This will provide ZFS ACL support. (ZFS only).');
+		$caption = gettext('Enable ZFS ACL.');
+		$description = gettext('This will provide ZFS ACL support. (ZFS only).');
 		$property->
 			set_id('zfsacl')->
 			set_caption($caption)->
@@ -182,12 +182,12 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_inheritacls() {
 		$property = parent::init_inheritacls();
-		$caption = gtext('Enable ACL inheritance.');
+		$caption = gettext('Enable ACL inheritance.');
 		$description = '';
 		$property->
 			set_id('inheritacls')->
@@ -197,12 +197,12 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_storealternatedatastreams() {
 		$property = parent::init_storealternatedatastreams();
-		$caption = gtext('Store alternate data streams in Extended Attributes.');
+		$caption = gettext('Store alternate data streams in Extended Attributes.');
 		$description = '';
 		$property->
 			set_id('storealternatedatastreams')->
@@ -212,13 +212,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_storentfsacls() {
 		$property = parent::init_storentfsacls();
-		$caption = gtext('Store NTFS ACLs in Extended Attributes.');
-		$description = gtext('This will provide NTFS ACLs without ZFS ACL support such as UFS.');
+		$caption = gettext('Store NTFS ACLs in Extended Attributes.');
+		$description = gettext('This will provide NTFS ACLs without ZFS ACL support such as UFS.');
 		$property->
 			set_id('storentfsacls')->
 			set_caption($caption)->
@@ -227,12 +227,12 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_hostsallow() {
 		$property = parent::init_hostsallow();
-		$description = gtext('This option is a comma, space, or tab delimited set of hosts which are permitted to access this share. You can specify the hosts by name or IP number. Leave this field empty to use default settings.');
+		$description = gettext('This option is a comma, space, or tab delimited set of hosts which are permitted to access this share. You can specify the hosts by name or IP number. Leave this field empty to use default settings.');
 		$property->
 			set_id('hostsallow')->
 			set_size(60)->
@@ -244,12 +244,12 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			set_filter_options(['default' => NULL,'regexp' => '/(^$|\S)/'])->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_hostsdeny() {
 		$property = parent::init_hostsdeny();
-		$description = gtext('This option is a comma, space, or tab delimited set of host which are NOT permitted to access this share. Where the lists conflict, the allow list takes precedence. In the event that it is necessary to deny all by default, use the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify to the hosts allow parameter those hosts that should be permitted access. Leave this field empty to use default settings.');
+		$description = gettext('This option is a comma, space, or tab delimited set of host which are NOT permitted to access this share. Where the lists conflict, the allow list takes precedence. In the event that it is necessary to deny all by default, use the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify to the hosts allow parameter those hosts that should be permitted access. Leave this field empty to use default settings.');
 		$property->
 			set_id('hostsdeny')->
 			set_size(60)->
@@ -261,13 +261,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			set_filter_options(['default' => NULL,'regexp' => '/(^$|\S)/'])->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_shadowcopy() {
 		$property = parent::init_shadowcopy();
-		$caption = gtext('Enable shadow copy.');
-		$description = gtext('This will provide shadow copy created by auto snapshot. (ZFS only).');
+		$caption = gettext('Enable shadow copy.');
+		$description = gettext('This will provide shadow copy created by auto snapshot. (ZFS only).');
 		$property->
 			set_id('shadowcopy')->
 			set_caption($caption)->
@@ -276,13 +276,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_readonly() {
 		$property = parent::init_readonly();
-		$caption = gtext('Set read only.');
-		$description = gtext('If this parameter is set, then users may not create or modify files in the share.');
+		$caption = gettext('Set read only.');
+		$description = gettext('If this parameter is set, then users may not create or modify files in the share.');
 		$property->
 			set_id('readonly')->
 			set_caption($caption)->
@@ -291,13 +291,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_browseable() {
 		$property = parent::init_browseable();
-		$caption = gtext('Set browseable.');
-		$description = gtext('This controls whether this share is seen in the list of available shares in a net view and in the browse list.');
+		$caption = gettext('Set browseable.');
+		$description = gettext('This controls whether this share is seen in the list of available shares in a net view and in the browse list.');
 		$property->
 			set_id('browseable')->
 			set_caption($caption)->
@@ -306,13 +306,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_guest() {
 		$property = parent::init_guest();
-		$caption = gtext('Enable guest access.');
-		$description = gtext('This controls whether this share is accessible by guest account.');
+		$caption = gettext('Enable guest access.');
+		$description = gettext('This controls whether this share is accessible by guest account.');
 		$property->
 			set_id('guest')->
 			set_caption($caption)->
@@ -321,13 +321,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_inheritpermissions() {
 		$property = parent::init_inheritpermissions();
-		$caption = gtext('Enable permission inheritance.');
-		$description = gtext('The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user.');
+		$caption = gettext('Enable permission inheritance.');
+		$description = gettext('The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user.');
 		$property->
 			set_id('inheritpermissions')->
 			set_caption($caption)->
@@ -336,13 +336,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_recyclebin() {
 		$property = parent::init_recyclebin();
-		$caption = gtext('Enable recycle bin.');
-		$description = gtext('This will create a recycle bin on the share.');
+		$caption = gettext('Enable recycle bin.');
+		$description = gettext('This will create a recycle bin on the share.');
 		$property->
 			set_id('recyclebin')->
 			set_caption($caption)->
@@ -351,12 +351,12 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_hidedotfiles() {
 		$property = parent::init_hidedotfiles();
-		$caption = gtext('This parameter controls whether files starting with a dot appear as hidden files.');
+		$caption = gettext('This parameter controls whether files starting with a dot appear as hidden files.');
 		$description = '';
 		$property->
 			set_id('hidedotfiles')->
@@ -366,13 +366,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function init_name() {
 		$property = parent::init_name();
 		$description = '';
-		$placeholder = gtext('Enter the name of the share');
+		$placeholder = gettext('Enter the name of the share');
 		$property->
 			set_id('name')->
 			set_size(60)->
@@ -383,13 +383,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must not be empty.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must not be empty.')));
 		return $property;
 	}
 	public function init_comment() {
 		$property = parent::init_comment();
 		$description = '';
-		$placeholder = gtext('Enter comment for the share');
+		$placeholder = gettext('Enter comment for the share');
 		$property->
 			set_id('comment')->
 			set_size(60)->
@@ -400,13 +400,13 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must not be empty.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must not be empty.')));
 		return $property;
 	}
 	public function init_path() {
 		$property = parent::init_path();
-		$description = gtext('Path to be shared.');
-		$placeholder = gtext('Enter the location of the share');
+		$description = gettext('Path to be shared.');
+		$placeholder = gettext('Enter the location of the share');
 		$property->
 			set_id('path')->
 			set_size(60)->
@@ -417,7 +417,7 @@ class properties_services_samba_share_edit extends properties_services_samba_sha
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must not be empty.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must not be empty.')));
 		return $property;
 	}
 }

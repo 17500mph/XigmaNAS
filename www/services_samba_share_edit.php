@@ -246,9 +246,9 @@ switch($page_mode):
 		$index = array_search_ex($sphere->row[$name],$sphere->grid,$name);
 		if(false !== $index):
 			if($isrecordnew):
-				$input_errors[] = gtext('The share name is already used.');
+				$input_errors[] = gettext('The share name is already used.');
 			elseif($index !== $sphere->row_id):
-				$input_errors[] = gtext('The share name is already used.');
+				$input_errors[] = gettext('The share name is already used.');
 			endif;
 		endif;
 		//	enable ZFS ACL on ZFS mount point
@@ -287,7 +287,7 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-$pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'),$isrecordnew ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gettext('Services'),gettext('CIFS/SMB'),gettext('Share'),$isrecordnew ? gettext('Add') : gettext('Edit')];
 if(is_bool($test = $config['system']['showdisabledsections'] ?? false) ? $test : true):
 	$jcode = NULL;
 else:
@@ -338,8 +338,8 @@ endif;
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('services_samba.php',gtext('Settings'))->
-			ins_tabnav_record('services_samba_share.php',gtext('Shares'),gtext('Reload page'),true);
+			ins_tabnav_record('services_samba.php',gettext('Settings'))->
+			ins_tabnav_record('services_samba_share.php',gettext('Shares'),gettext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -355,12 +355,12 @@ $content->
 		ins_colgroup_data_settings()->
 		push()->
 		addTHEAD()->
-			c2_titleline(gtext('Share Settings'))->
+			c2_titleline(gettext('Share Settings'))->
 		pop()->
 		addTBODY()->
-			c2_input_text($cop->get_name(),htmlspecialchars($sphere->row[$cop->get_name()->get_name()]),true)->
-			c2_input_text($cop->get_comment(),htmlspecialchars($sphere->row[$cop->get_comment()->get_name()]),true)->
-			c2_filechooser($cop->get_path(),htmlspecialchars($sphere->row[$cop->get_path()->get_name()]),true)->
+			c2_input_text($cop->get_name(),$sphere->row[$cop->get_name()->get_name()],true)->
+			c2_input_text($cop->get_comment(),$sphere->row[$cop->get_comment()->get_name()],true)->
+			c2_filechooser($cop->get_path(),$sphere->row[$cop->get_path()->get_name()],true)->
 			c2_checkbox($cop->get_readonly(),$sphere->row[$cop->get_readonly()->get_name()])->
 			c2_checkbox($cop->get_browseable(),$sphere->row[$cop->get_browseable()->get_name()])->
 			c2_checkbox($cop->get_guest(),$sphere->row[$cop->get_guest()->get_name()])->
@@ -368,13 +368,13 @@ $content->
 			c2_checkbox($cop->get_recyclebin(),$sphere->row[$cop->get_recyclebin()->get_name()])->
 			c2_checkbox($cop->get_hidedotfiles(),$sphere->row[$cop->get_hidedotfiles()->get_name()])->
 			c2_checkbox($cop->get_shadowcopy(),$sphere->row[$cop->get_shadowcopy()->get_name()])->
-			c2_input_text($cop->get_shadowformat(),htmlspecialchars($sphere->row[$cop->get_shadowformat()->get_name()]))->
+			c2_input_text($cop->get_shadowformat(),$sphere->row[$cop->get_shadowformat()->get_name()])->
 			c2_checkbox($cop->get_zfsacl(),$sphere->row[$cop->get_zfsacl()->get_name()])->
 			c2_checkbox($cop->get_inheritacls(),$sphere->row[$cop->get_inheritacls()->get_name()])->
 			c2_checkbox($cop->get_storealternatedatastreams(),$sphere->row[$cop->get_storealternatedatastreams()->get_name()])->
 			c2_checkbox($cop->get_storentfsacls(),$sphere->row[$cop->get_storentfsacls()->get_name()])->
-			c2_input_text($cop->get_hostsallow(),htmlspecialchars($sphere->row[$cop->get_hostsallow()->get_name()]))->
-			c2_input_text($cop->get_hostsdeny(),htmlspecialchars($sphere->row[$cop->get_hostsdeny()->get_name()]));
+			c2_input_text($cop->get_hostsallow(),$sphere->row[$cop->get_hostsallow()->get_name()])->
+			c2_input_text($cop->get_hostsdeny(),$sphere->row[$cop->get_hostsdeny()->get_name()]);
 $n_auxparam_rows = min(64,max(5,1 + substr_count($sphere->row[$cop->get_auxparam()->get_name()],PHP_EOL)));
 $content->
 	add_table_data_settings()->
@@ -382,21 +382,21 @@ $content->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline_with_checkbox($cop->get_afpcompat(),$sphere->row['afpcompat'],false,false,gtext('Apple Filing Protocol (AFP) Compatibility Settings'))->
+			c2_titleline_with_checkbox($cop->get_afpcompat(),$sphere->row['afpcompat'],false,false,gettext('Apple Filing Protocol (AFP) Compatibility Settings'))->
 		pop()->
 		addTBODY()->
-			c2_radio_grid($cop->get_vfs_fruit_resource(),htmlspecialchars($sphere->row['vfs_fruit_resource']))->
-			c2_radio_grid($cop->get_vfs_fruit_time_machine(),htmlspecialchars($sphere->row['vfs_fruit_time_machine']))->
-			c2_radio_grid($cop->get_vfs_fruit_metadata(),htmlspecialchars($sphere->row['vfs_fruit_metadata']))->
-			c2_radio_grid($cop->get_vfs_fruit_locking(),htmlspecialchars($sphere->row['vfs_fruit_locking']))->
-			c2_radio_grid($cop->get_vfs_fruit_encoding(),htmlspecialchars($sphere->row['vfs_fruit_encoding']));
+			c2_radio_grid($cop->get_vfs_fruit_resource(),$sphere->row['vfs_fruit_resource'])->
+			c2_radio_grid($cop->get_vfs_fruit_time_machine(),$sphere->row['vfs_fruit_time_machine'])->
+			c2_radio_grid($cop->get_vfs_fruit_metadata(),$sphere->row['vfs_fruit_metadata'])->
+			c2_radio_grid($cop->get_vfs_fruit_locking(),$sphere->row['vfs_fruit_locking'])->
+			c2_radio_grid($cop->get_vfs_fruit_encoding(),$sphere->row['vfs_fruit_encoding']);
 $content->
 	add_table_data_settings()->
 		push()->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline(gtext('Additional Parameter'))->
+			c2_titleline(gettext('Additional Parameter'))->
 		pop()->
 		addTBODY()->
 			c2_textarea($cop->get_auxparam(),$sphere->row['auxparam'],false,false,65,$n_auxparam_rows);
