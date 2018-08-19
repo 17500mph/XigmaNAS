@@ -144,17 +144,17 @@ $document = new co_DOMDocument();
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('system_advanced.php',gtext('Advanced'))->
-			ins_tabnav_record('system_email.php',gtext('Email'))->
-			ins_tabnav_record('system_email_reports.php',gtext('Email Reports'),gtext('Reload page'),true)->
-			ins_tabnav_record('system_monitoring.php',gtext('Monitoring'))->
-			ins_tabnav_record('system_swap.php',gtext('Swap'))->
-			ins_tabnav_record('system_rc.php',gtext('Command Scripts'))->
-			ins_tabnav_record('system_cron.php',gtext('Cron'))->
-			ins_tabnav_record('system_loaderconf.php',gtext('loader.conf'))->
-			ins_tabnav_record('system_rcconf.php',gtext('rc.conf'))->
-			ins_tabnav_record('system_sysctl.php',gtext('sysctl.conf'))->
-			ins_tabnav_record('system_syslogconf.php',gtext('syslog.conf'));
+			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
+			ins_tabnav_record('system_email.php',gettext('Email'))->
+			ins_tabnav_record('system_email_reports.php',gettext('Email Reports'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_monitoring.php',gettext('Monitoring'))->
+			ins_tabnav_record('system_swap.php',gettext('Swap'))->
+			ins_tabnav_record('system_rc.php',gettext('Command Scripts'))->
+			ins_tabnav_record('system_cron.php',gettext('Cron'))->
+			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
+			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'))->
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
 $document->render();
 ?>
 <form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform"><table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -180,17 +180,17 @@ $document->render();
 		</colgroup>
 		<thead>
 <?php
-			html_titleline_checkbox2('enable',gtext('System Email Report Settings'),!empty($pconfig['enable']) ? true : false,gtext('Enable'));
+			html_titleline_checkbox2('enable',gettext('System Email Report Settings'),!empty($pconfig['enable']) ? true : false,gettext('Enable'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_inputbox2('to',gtext('To Email Address'),htmlspecialchars($pconfig['to']),gtext('Destination email address.') . ' ' . gtext('Separate email addresses by semi-colon.'),true,74,false,false,1024,gtext('Enter Email Address(es)'));
-			$helpinghand = '<span>' . gtext('The subject of the email.') . ' ' . gtext('You can use the following parameters for substitution:') . '</span>' . "\n"
-				. '<div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div>';
-			html_inputbox2('subject',gtext('Subject'),htmlspecialchars($pconfig['subject']),$helpinghand,false,74,false,false,0,gtext('Enter Subject'));
-			html_checkboxbox2('report',gtext('Standard Reports'),$pconfig['report'] ?? [],$l_report,'',false,false);
-			html_filechooser2('report_scriptname',gtext('Custom Script'),$pconfig['report_scriptname'],'','/mnt',false,65,false);
+			html_inputbox2('to',gettext('To Email Address'),$pconfig['to'],gettext('Destination email address.') . ' ' . gettext('Separate email addresses by semi-colon.'),true,74,false,false,1024,gettext('Enter Email Address(es)'));
+			$helpinghand = '<span>' . gettext('The subject of the email.') . ' ' . gettext('You can use the following parameters for substitution:') . '</span>' . "\n"
+				. '<div id="enumeration"><ul><li>%d - ' . gettext('Date') . '</li><li>%h - ' . gettext('Hostname') . '</li></ul></div>';
+			html_inputbox2('subject',gettext('Subject'),$pconfig['subject'],$helpinghand,false,74,false,false,0,gettext('Enter Subject'));
+			html_checkboxbox2('report',gettext('Standard Reports'),$pconfig['report'] ?? [],$l_report,'',false,false);
+			html_filechooser2('report_scriptname',gettext('Custom Script'),$pconfig['report_scriptname'],'','/mnt',false,65,false);
 ?>
 			<tr>
 				<td class="celltagreq"><?=gtext('Polling Time');?></td>
@@ -212,4 +212,4 @@ $document->render();
 </td></tr></tbody></table></form>
 <?php
 include 'fend.inc';
-?>
+
