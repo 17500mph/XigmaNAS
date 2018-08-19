@@ -206,7 +206,7 @@ $(window).on("load", function() {
 			</colgroup>
 			<thead>
 <?php
-				html_titleline_checkbox2('enable',gtext('Firewall'),!empty($pconfig['enable']) ? true : false,gtext('Enable'),'enable_change(false)');
+				html_titleline_checkbox2('enable',gettext('Firewall'),!empty($pconfig['enable']) ? true : false,gettext('Enable'),'enable_change(false)');
 ?>
 			</thead>
 			<tbody>
@@ -241,7 +241,7 @@ $(window).on("load", function() {
 			<thead>
 <?php
 				html_separator(9);
-				html_titleline2(gtext('Firewall Rules'),9);
+				html_titleline2(gettext('Firewall Rules'),9);
 ?>
 				<tr>
 					<th class="lhelc">&nbsp;</th>
@@ -326,4 +326,3 @@ $(window).on("load", function() {
 </form>
 <?php
 include 'fend.inc';
-?>
