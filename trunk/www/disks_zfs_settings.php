@@ -116,7 +116,7 @@ endswitch;
 //	determine final page mode and calculate readonly flag
 list($page_mode,$is_readonly) = calc_skipviewmode($page_mode);
 //	create document
-$document = new_page([gtext('Disks'),gtext('ZFS'),gtext('Settings')],$sphere->get_scriptname());
+$document = new_page([gettext('Disks'),gettext('ZFS'),gettext('Settings')],$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
 $pagecontent = $document->getElementById('pagecontent');
@@ -124,12 +124,12 @@ $pagecontent = $document->getElementById('pagecontent');
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
-			ins_tabnav_record('disks_zfs_zpool.php',gtext('Pools'))->
-			ins_tabnav_record('disks_zfs_dataset.php',gtext('Datasets'))->
-			ins_tabnav_record('disks_zfs_volume.php',gtext('Volumes'))->
-			ins_tabnav_record('disks_zfs_snapshot.php',gtext('Snapshots'))->
-			ins_tabnav_record('disks_zfs_config.php',gtext('Configuration'))->
-			ins_tabnav_record('disks_zfs_settings.php',gtext('Settings'),gtext('Reload page'),true);
+			ins_tabnav_record('disks_zfs_zpool.php',gettext('Pools'))->
+			ins_tabnav_record('disks_zfs_dataset.php',gettext('Datasets'))->
+			ins_tabnav_record('disks_zfs_volume.php',gettext('Volumes'))->
+			ins_tabnav_record('disks_zfs_snapshot.php',gettext('Snapshots'))->
+			ins_tabnav_record('disks_zfs_config.php',gettext('Configuration'))->
+			ins_tabnav_record('disks_zfs_settings.php',gettext('Settings'),gettext('Reload page'),true);
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -142,7 +142,7 @@ $content->
 		push()->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
-			c2_titleline(gtext('ZFS Settings'))->
+			c2_titleline(gettext('ZFS Settings'))->
 		pop()->
 		addTBODY()->
 			c2_checkbox($cop->get_showusedavail(),$sphere->row[$cop->get_showusedavail()->get_name()],false,$is_readonly);
@@ -152,7 +152,7 @@ $content->
 		ins_colgroup_data_settings()->
 		addTHEAD()->
 			c2_separator()->
-			c2_titleline(gtext('Capacity Alert Thresholds'))->
+			c2_titleline(gettext('Capacity Alert Thresholds'))->
 		pop()->
 		addTBODY()->
 			c2_input_text($cop->get_capacity_warning(),htmlspecialchars($sphere->row[$cop->get_capacity_warning()->get_name()]),false,$is_readonly)->

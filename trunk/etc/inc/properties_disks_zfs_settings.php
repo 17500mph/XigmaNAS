@@ -45,9 +45,9 @@ class properties_disks_zfs_settings extends co_property_container {
 		$property = $this->x_showusedavail = new property_bool($this);
 		$property->
 			set_name('showusedavail')->
-			set_title(gtext('Show Used/Avail'));
-		$caption = gtext('Display Used/Avail information from the filesystem instead of the Alloc/Free information from the pool.');
-		$description = gtext('Used/Avail lists storage information after all redundancy is taken into account but is impacted by compression, deduplication and quotas. Alloc/Free lists the raw storage information of a pool.');
+			set_title(gettext('Show Used/Avail'));
+		$caption = gettext('Display Used/Avail information from the filesystem instead of the Alloc/Free information from the pool.');
+		$description = gettext('Used/Avail lists storage information after all redundancy is taken into account but is impacted by compression, deduplication and quotas. Alloc/Free lists the raw storage information of a pool.');
 		$property->
 			set_id('showusedavail')->
 			set_caption($caption)->
@@ -56,7 +56,7 @@ class properties_disks_zfs_settings extends co_property_container {
 			filter_use_default()->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('The value is invalid.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 	public function get_capacity_warning() {
@@ -72,12 +72,12 @@ class properties_disks_zfs_settings extends co_property_container {
 		$property = $this->x_capacity_warning = new property_int($this);
 		$property->
 			set_name('capacity_warning')->
-			set_title(gtext('Capacity Warning Threshold'));
-		$caption = gtext('Set the warning threshold to a value between 80 and 89.');
+			set_title(gettext('Capacity Warning Threshold'));
+		$caption = gettext('Set the warning threshold to a value between 80 and 89.');
 		$description =
-			gtext('An alert email is sent when the capacity of a pool exceeds the warning threshold.') .
+			gettext('An alert email is sent when the capacity of a pool exceeds the warning threshold.') .
 			' ' .
-			gtext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.');
+			gettext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.');
 		$property->
 			set_id('capacity_warning')->
 			set_caption($caption)->
@@ -90,7 +90,7 @@ class properties_disks_zfs_settings extends co_property_container {
 			set_filter_options([$this,'test_capacity_warning'])->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must be a number between 80 and 89.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must be a number between 80 and 89.')));
 		return $property;
 	}
 	public function get_capacity_critical() {
@@ -106,12 +106,12 @@ class properties_disks_zfs_settings extends co_property_container {
 		$property = $this->x_capacity_critical = new property_int($this);
 		$property->
 			set_name('capacity_critical')->
-			set_title(gtext('Capacity Critical Threshold'));
-		$caption = gtext('Set the critical threshold to a value between 90 and 95.');
+			set_title(gettext('Capacity Critical Threshold'));
+		$caption = gettext('Set the critical threshold to a value between 90 and 95.');
 		$description =
-			gtext('An alert email is sent when the capacity of a pool exceeds the critical threshold.') .
+			gettext('An alert email is sent when the capacity of a pool exceeds the critical threshold.') .
 			' ' .
-			gtext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.');
+			gettext('A cron job must be setup to schedule script /etc/capacitycheck.zfs.');
 		$property->
 			set_id('capacity_critical')->
 			set_caption($caption)->
@@ -124,7 +124,7 @@ class properties_disks_zfs_settings extends co_property_container {
 			set_filter_options([$this,'test_capacity_critical'])->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gtext('Must be a number between 90 and 95.')));
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must be a number between 90 and 95.')));
 		return $property;
 	}
 }
