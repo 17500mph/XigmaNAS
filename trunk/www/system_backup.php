@@ -155,29 +155,25 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline2(gtext('Backup Configuration'));
+			html_titleline2(gettext('Backup Configuration'));
 ?>
 		</thead>
 		<tbody>
 <?php
-			html_checkbox2('encryption',gtext('Use Encryption'),$pconfig['encryption'],gtext('Enable encryption.'));
-			html_passwordconfbox2('encrypt_password','encrypt_password_confirm',gtext('Encryption Password'),'','','',false,25,false,gtext('Enter Password'),gtext('Confirm Password'));
+			html_checkbox2('encryption',gettext('Use Encryption'),$pconfig['encryption'],gettext('Enable encryption.'));
+			html_passwordconfbox2('encrypt_password','encrypt_password_confirm',gettext('Encryption Password'),'','','',false,25,false,gettext('Enter Password'),gettext('Confirm Password'));
 ?>
 		</tbody>
-		<tfoot>
-<?php
-?>
-		</tfoot>
 	</table>
 	<div id="submit">
 <?php
-		echo html_button('download',gtext('Download Configuration'),'download');
+		echo html_button('download',gettext('Download Configuration'),'download');
 ?>
 	</div>
 	<div id="remarks">
 <?php
-		html_remark2('note',gtext('Note'),gtext('Encrypted configuration is automatically gzipped.'));
-		html_remark2('warning',gtext('Warning'),gtext('It is recommended to encrypt your configuration and store it in a safe location.'));
+		html_remark2('note',gettext('Note'),gettext('Encrypted configuration is automatically gzipped.'));
+		html_remark2('warning',gettext('Warning'),gettext('It is recommended to encrypt your configuration and store it in a safe location.'));
 ?>
 	</div>
 <?php
