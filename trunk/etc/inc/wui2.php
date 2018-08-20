@@ -1740,7 +1740,7 @@ trait co_DOMTools {
 					addTABLE(['border' => '0','cellspacing' => '0','cellpadding' => '1','width' => '100%'])->
 						addTR()->
 							push()->addTD(['class' => 'icon','align' => 'center','valign' => 'center'])->
-								insIMG(['src' => 'images/error_box.png','alt' => ''])->
+								insIMG(['src' => '/images/error_box.png','alt' => ''])->
 							pop()->addTDwC('message')->
 								addDIV([],sprintf('%s:',gettext('The following errors were detected'),':'))->
 									addUL();
@@ -2786,6 +2786,10 @@ EOJ;
 				insElement('link',['href' => 'js/datechooser.css','rel' => 'stylesheet','type' => 'text/css'])->
 				insElement('script',['src' => 'js/datechooser.js']);
 		endif;
+		$head->
+			insElement('link',['href' => '/images/info_box.png','rel' => 'preload','as' => 'image'])->
+			insElement('link',['href' => '/images/warn_box.png','rel' => 'preload','as' => 'image'])->
+			insElement('link',['href' => '/images/error_box.png','rel' => 'preload','as' => 'image']);
 		return $this;
 	}
 	/**
