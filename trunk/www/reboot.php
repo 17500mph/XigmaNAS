@@ -37,14 +37,12 @@ require_once 'co_sphere.php';
 require_once 'co_request_method.php';
 
 function reboot_sphere() {
-	global $config;
-
 //	sphere structure
 	$sphere = new co_sphere_row('reboot','php');
 	$sphere->get_parent()->set_basename('index');
 	return $sphere;
 }
-$cmd_system_reboot = false;
+$cmd_perform_action = false;
 //	init sphere
 $sphere = &reboot_sphere();
 $rmo = new co_request_method();
@@ -59,7 +57,7 @@ switch($page_method):
 				header($sphere->get_parent()->get_location());
 				exit;
 			case 'save': // reboot
-				$cmd_system_reboot = true;
+				$cmd_perform_action = true;
 				if(file_exists($d_sysrebootreqd_path)):
 					unlink($d_sysrebootreqd_path);
 				endif;
@@ -81,7 +79,7 @@ $document->
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
-if($cmd_system_reboot):
+if($cmd_perform_action):
 elseif(file_exists($d_sysrebootreqd_path)):
 	$content->ins_info_box(get_std_save_message(0));
 endif;
@@ -93,7 +91,7 @@ $content->
 		pop()->
 			addTHEAD()->
 				ins_titleline(gettext('Reboot'));
-if($cmd_system_reboot):
+if($cmd_perform_action):
 	$content->ins_info_box(gettext('The server is rebooting now.'));
 else:
 	$content->ins_warning_box(gettext('Are you sure you want to reboot the server?'));
@@ -102,15 +100,21 @@ else:
 		ins_button_save(gettext('Yes'))->
 		ins_button_cancel(gettext('No'));
 	if('0401' == date('md')):
-	$buttons->
-		ins_button_cancel(gettext('Maybe'));
+		$buttons->ins_button_cancel(gettext('Maybe'));
 	endif;
 endif;
 //	showtime
-$document->render();
-if($cmd_system_reboot):
-	ob_flush();
+if($cmd_perform_action):
+	ob_start();
+	$document->render();
+	header('Connection: close');
+	header('Content-Length: ' . ob_get_length());
+	while(ob_get_level() > 0):
+		ob_end_flush();
+	endwhile;
 	flush();
 	sleep(5);
 	system_reboot();
+else:
+	$document->render();
 endif;

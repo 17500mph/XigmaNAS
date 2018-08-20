@@ -33,83 +33,88 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
+require_once 'co_request_method.php';
 
-$sphere_scriptname = basename(__FILE__);
-$sphere_header = 'Location: '.$sphere_scriptname;
-$sphere_header_parent = 'Location: index.php';
-$gt_shutdown = gtext('The server is halting now.');
-$gt_shutdown_confirm = gtext('Are you sure you want to shutdown the server?');
-$gt_yes = gtext('Yes');
-$gt_no = gtext('No');
-$cmd_system_shutdown = false;
-if($_POST):
-	if($_POST['submit']):
-		switch($_POST['submit']):
-			case 'save':
+function shutdown_sphere() {
+//	sphere structure
+	$sphere = new co_sphere_row('shutdown','php');
+	$sphere->get_parent()->set_basename('index');
+	return $sphere;
+}
+$cmd_perform_action = false;
+//	init sphere
+$sphere = &shutdown_sphere();
+$rmo = new co_request_method();
+$rmo->add('POST','save',PAGE_MODE_POST);
+$rmo->add('POST','cancel',PAGE_MODE_POST);
+$rmo->set_default('GET','view',PAGE_MODE_VIEW);
+list($page_method,$page_action,$page_mode) = $rmo->validate();
+switch($page_method):
+	case 'POST':
+		switch($page_action):
+			case 'cancel': // cancel - nothing to do
+				header($sphere->get_parent()->get_location());
+				exit;
+			case 'save': // shutdown
+				$cmd_perform_action = true;
 				if(file_exists($d_sysrebootreqd_path)):
 					unlink($d_sysrebootreqd_path);
 				endif;
-				$cmd_system_shutdown = true;
-				break;
-			case 'cancel':
-				header($sphere_header_parent);
-				exit;
-				break;
-			default:
-				header($sphere_header_parent);
-				exit;
 				break;
 		endswitch;
+		break;
+endswitch;
+$pgtitle = [gettext('System'),gettext('Shutdown'),gettext('Now')];
+$document = new_page($pgtitle,$sphere->get_scriptname());
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
+$document->
+	add_area_tabnav()->
+		add_tabnav_upper()->
+			ins_tabnav_record('shutdown.php',gettext('Now'),gettext('Reload page'),true)->
+			ins_tabnav_record('shutdown_sched.php',gettext('Scheduled'));
+//	create data area
+$content = $pagecontent->add_area_data();
+//	display information, warnings and errors
+if($cmd_perform_action):
+elseif(file_exists($d_sysrebootreqd_path)):
+	$content->ins_info_box(get_std_save_message(0));
+endif;
+$content->
+	add_table_data_settings()->
+		push()->
+		addCOLGROUP()->
+			insCOL(['style' => 'width: 100%'])->
+		pop()->
+			addTHEAD()->
+				ins_titleline(gettext('Shutdown'));
+if($cmd_perform_action):
+	$content->ins_info_box(gettext('The server is shutting down now.'));
+else:
+	$content->ins_warning_box(gettext('Are you sure you want to shutdown the server?'));
+	$buttons = $content->add_area_buttons(false);
+	$buttons->
+		ins_button_save(gettext('Yes'))->
+		ins_button_cancel(gettext('No'));
+	if('0401' == date('md')):
+		$buttons->ins_button_cancel(gettext('Maybe'));
 	endif;
 endif;
-$pgtitle = [gtext('System'),gtext('Shutdown'),gtext('Now')];
-include 'fbegin.inc';?>
-<script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-<?php // Init spinner onsubmit().?>
-	$("#iform").submit(function() { spinner(); });
-});
-//]]>
-</script>
-<table id="area_navigator"><tbody><tr><td class="tabnavtbl">
-	<ul id="tabnav">
-		<li class="tabact"><a href="shutdown.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Now');?></span></a></li>
-		<li class="tabinact"><a href="shutdown_sched.php"><span><?=gtext('Scheduled');?></span></a></li>
-	</ul>
-</td></tr></tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-<?php 
-	if($cmd_system_shutdown):
-		echo print_info_box($gt_shutdown);
-	endif;
-?>
-	<table class="area_data_selection">
-		<colgroup>
-			<col style="width:100%">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gettext('Shutdown'),1);
-?>
-		</thead>
-	</table>
-<?php
-	if(!$cmd_system_shutdown):
-		echo print_warning_box($gt_shutdown_confirm);
-		echo '<div id="submit">';
-			echo html_button('save',$gt_yes);
-			echo html_button('cancel',$gt_no);
-		echo '</div>';
-	endif;
-	include 'formend.inc';
-?>
-</form></td></tr></tbody></table>
-<?php
-include 'fend.inc';
-if($cmd_system_shutdown):
-	ob_flush();
+//	showtime
+if($cmd_perform_action):
+	ob_start();
+	$document->render();
+	header('Connection: close');
+	header('Content-Length: ' . ob_get_length());
+	while(ob_get_level() > 0):
+		ob_end_flush();
+	endwhile;
 	flush();
 	sleep(5);
 	system_halt();
+else:
+	$document->render();
 endif;
