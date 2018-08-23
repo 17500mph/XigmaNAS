@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
 "POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-11 07:49+0000\n"
+"PO-Revision-Date: 2018-08-13 18:45+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-11 09:24+0000\n"
-"X-Generator: Launchpad (build 18747)\n"
+"X-Launchpad-Export-Date: 2018-08-23 13:49+0000\n"
+"X-Generator: Launchpad (build 18752)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -289,7 +289,7 @@ msgid ""
 "index.htm or default.htm) are found in a directory."
 msgstr ""
 "Лістінг каталога генерується якщо індекс-файли (index.php, index.html, "
-"index.htm або default.htm) не будут знайдені в директорії."
+"index.htm або default.htm) не будут знайдені в каталозі"
 
 msgid "A firmware upgrade is in progress."
 msgstr "Оновлення прошивки в процесі."
@@ -821,8 +821,7 @@ msgstr "Всі дані будуть втрачені при активації 
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
-msgstr ""
-"Усі директорії вимагають шляхи монтування, але шлях %s не змонтований."
+msgstr "Усі каталоги вимагають шляхи монтування, але шлях %s не змонтований."
 
 msgid "All disks are imported."
 msgstr "Всі диски імпортовано."
@@ -1324,13 +1323,13 @@ msgid "Balance Algorithm"
 msgstr "Алгоритм балансування"
 
 msgid "Ban List"
-msgstr "Список заборон"
+msgstr "Перелік блокувань"
 
 msgid "Ban List Rule"
-msgstr "Правила бан-списка"
+msgstr "Правила переліка блокувань"
 
 msgid "Ban List Rule Settings"
-msgstr "Налаштування правил бан-списка"
+msgstr "Налаштування правил переліка блокувань"
 
 msgid "Banner"
 msgstr "Банер"
@@ -1506,7 +1505,7 @@ msgstr ""
 "секунд)"
 
 msgid "Browse Directory"
-msgstr "Переглянути директорію"
+msgstr "Переглянути каталог"
 
 msgid "Browseable"
 msgstr "Доступний для перегляду"
@@ -1921,7 +1920,7 @@ msgid ""
 "internet transfer only."
 msgstr ""
 "Стиснення варто використовувати, якщо ваше з'єднання повільне. Ефективність "
-"стиснення залежить від типу файлу, і варіюється в широких межах. Корисна "
+"стиснення залежить від типу файлу, і варіюється в широких межах. Корисне "
 "тільки для передавання в Інтернет."
 
 msgid "Configuration"
@@ -2504,7 +2503,7 @@ msgid "Data digest"
 msgstr "Дайджест даних"
 
 msgid "Database Directory"
-msgstr "Директорія бази даних"
+msgstr "Каталог бази даних"
 
 msgid "Database directory"
 msgstr "Каталог бази даних"
@@ -3015,27 +3014,27 @@ msgid "Direction"
 msgstr "Напрямок"
 
 msgid "Directory"
-msgstr "Директорія"
+msgstr "Каталог"
 
 #, php-format
 msgid "Directory %s doesn't exist!"
-msgstr "Директорія %s не існує!"
+msgstr "Каталог %s не існує!"
 
 msgid "Directory Mask"
 msgstr "Маска каталогу"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
-"Директорія для недокачаних файлів. Не вказано одначає не використовувати."
+"Каталог для недокачаних файлів. Не вказано означає не використовувати."
 
 msgid "Directory listing"
-msgstr "Список директорій"
+msgstr "Список каталогів"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
-msgstr "Директорія, що містить змінний носій. (e.g /mnt/iscsi/)"
+msgstr "Каталог, що містить змінний носій (наприклад /mnt/iscsi/)."
 
 msgid "Directory to watch for new .torrent files."
-msgstr "Директорія очікування нових .torrent-файлів."
+msgstr "Каталог очікування нових .torrent-файлів."
 
 msgid "Disable"
 msgstr "Заборонити"
@@ -3302,7 +3301,7 @@ msgid ""
 "it will become invalid (e.g. share)!"
 msgstr ""
 "Ви дійсно хочете видалити цю точку монтування? Всі елементи, що досі "
-"використовуються стануть недоступними (напр. директорії спільного доступу)!"
+"використовуються стануть недоступними (наприклад каталоги спільного доступу)!"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Ви дійсно хочете видалити цю групу порталів?"
@@ -4563,21 +4562,21 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
-"Введіть шлях до домашньої директорії VirtualBox. Файл конфігурації "
-"віртуальної машини та образ диску будуть створені у вказаній директорії."
+"Введіть шлях до домашнього каталогу VirtualBox. Файл конфігурації "
+"віртуальної машини та образ диску будуть створені у вказаному каталозі."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
-"Введіть шлях до домашньої директорії цього користувача. Залишіть поле пустим "
+"Введіть шлях до домашнього каталогу цього користувача. Залишіть поле пустим "
 "для використання шляху за замовчуванням (/mnt)."
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
 "statistical data and gets updated every 5 minutes!"
 msgstr ""
-"Введіть шлях до домашньої директорії. Цей каталог буде зберігати статистичні "
+"Введіть шлях до домашнього каталогу. Цей каталог буде зберігати статистичні "
 "дані і оновлюватиметься кожні 5 хвилин!"
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -4730,7 +4729,7 @@ msgid "FTP"
 msgstr "FTP"
 
 msgid "FTP - Ban Module"
-msgstr "FTP - бан модуль"
+msgstr "FTP - модуль банів"
 
 msgid "FTP - File Transfer"
 msgstr "FTP - передавання файлів"
@@ -6545,7 +6544,7 @@ msgid "Media"
 msgstr "Cтандарт"
 
 msgid "Media Directory"
-msgstr "Медіа директорія"
+msgstr "Каталог Медіа"
 
 msgid "Media Library"
 msgstr "Медіабібліотека"
@@ -6630,7 +6629,7 @@ msgid "Minutes between the next network time synchronization."
 msgstr "Минут до наступної мережевої синхронізації часу."
 
 msgid "Missing a temporary folder."
-msgstr "Тимчасова директорія відсутня."
+msgstr "Тимчасовий каталог відсутній."
 
 msgid "Missing parameter"
 msgstr "Відсутній параметр"
@@ -7463,7 +7462,7 @@ msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Встановлення параметра xxx (ups.conf або cmdline -x)"
 
 msgid "Parent Directory"
-msgstr "Батьківська директорія"
+msgstr "Батьківський каталог"
 
 msgid "Partition"
 msgstr "Розділ"
@@ -7611,7 +7610,7 @@ msgid "Permission"
 msgstr "Дозвіл"
 
 msgid "Permit Root Login"
-msgstr "Дозволений вхід як root"
+msgstr "Дозволити вхід як root"
 
 msgid "Permit access without authentication"
 msgstr "Дозволити доступ без автентифікації"
@@ -7715,7 +7714,7 @@ msgid "Please define one or more content locations."
 msgstr "Будь ласка, визначите одне або декілька розміщень контенту."
 
 msgid "Please define the location for the database directory."
-msgstr "Будь ласка, визначите розміщення директорії бази даних."
+msgstr "Будь ласка, визначите розміщення каталогу бази даних."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Зауважте, що пробіли в іменах шляхів не дозволені."
@@ -9270,7 +9269,7 @@ msgid "Show Log Entries"
 msgstr "Показувати записи журналу"
 
 msgid "Show Process Information"
-msgstr "Показати інформацію про процес"
+msgstr "Показати інформацію про процеси"
 
 msgid "Show RAW UPS Info"
 msgstr "Показати необроблену інформацію ДБЖ"
@@ -9907,7 +9906,7 @@ msgid "Target Name"
 msgstr "Ім'я призначення"
 
 msgid "Target directory."
-msgstr "Директорія призначення."
+msgstr "Каталог призначення."
 
 msgid "Target information"
 msgstr "Інформація призначення"
@@ -9960,10 +9959,10 @@ msgid "Temporary Device"
 msgstr "Тимчасовий пристрій"
 
 msgid "Temporary directory"
-msgstr "Тимчасова директорія"
+msgstr "Тимчасовий каталог"
 
 msgid "Temporary directory to store transcoded files."
-msgstr "Тимчасова директорія для файлів перекодування"
+msgstr "Тимчасовий каталог для файлів перекодування"
 
 msgid "Test Email"
 msgstr "Тестове Повідомлення"
@@ -10615,8 +10614,8 @@ msgid ""
 "the server, it does not prevent the banned user, host, or class from "
 "connecting to the server."
 msgstr ""
-"Модуль 'Ban list' виконує автоматичне блокування що ініціюється на основі "
-"настроюваних критеріїв. Блокування є тимчасовою неможливістю роботи з "
+"Модуль 'Перелік блокувань' виконує автоматичне блокування що ініціюється на "
+"основі налаштованих критеріїв. Блокування є тимчасовою неможливістю роботи з "
 "сервером, але не забороняє з'єднання з ним і може застосовуватися до "
 "користувачів, хостів, або класів."
 
@@ -10687,11 +10686,11 @@ msgstr "Шлях '%s' не існує."
 
 #, php-format
 msgid "The path '%s' is a directory."
-msgstr "Шлях '%s' є директорією."
+msgstr "Шлях '%s' є каталогом."
 
 #, php-format
 msgid "The path '%s' is not a directory."
-msgstr "Шлях '%s' не є директорією."
+msgstr "Шлях '%s' не є каталогом."
 
 msgid ""
 "The path to the file, device node, or zfs volume used to back the LUN."
@@ -11682,7 +11681,7 @@ msgid "Transcoding"
 msgstr "Перекодування"
 
 msgid "Transcoding Directory"
-msgstr "Директорія транскодування"
+msgstr "Каталог транскодування"
 
 msgid "Transfer Rate"
 msgstr "Швидкість передачі"
@@ -12008,7 +12007,7 @@ msgstr "Скрипт Вивантаження"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
-msgstr "Директорія для вивантаження для веб сервера. За замовчуванням - %s."
+msgstr "Каталог вивантаження для веб сервера. За замовчуванням - %s."
 
 msgid "Upper"
 msgstr "Верхня"

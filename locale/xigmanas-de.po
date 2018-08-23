@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
 "POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-07-09 08:24+0000\n"
+"PO-Revision-Date: 2018-08-22 10:08+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-08 16:25+0000\n"
-"X-Generator: Launchpad (build 18739)\n"
+"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
+"X-Generator: Launchpad (build 18752)\n"
 "Language: de\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -103,7 +103,7 @@ msgstr "%s verwendet von %s"
 #, php-format
 msgid ""
 "%s would like to thank the authors of this software for their efforts."
-msgstr ""
+msgstr "%s möchte den Autoren dieser Software für Ihre Mühen danken."
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -1000,6 +1000,7 @@ msgstr "Eine IPv4 oder IPv6 Adresse eines ISCSI Initiator Portals."
 
 msgid "An IPv4 or IPv6 address to listen on for incoming connections."
 msgstr ""
+"Eine IPv4 oder IPv6 Addresse, um auf eingehende Verbindunen zu lauschen."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -5128,6 +5129,8 @@ msgstr "Diagramm Höhe"
 
 msgid "Greeting banner displayed to client when first connection comes in."
 msgstr ""
+"Grußbotschaft die angezeigt wird, wenn sich der Client zum ersten Mal "
+"verbindet."
 
 msgid "Group"
 msgstr "Gruppe"
@@ -5448,7 +5451,7 @@ msgid "IRC Live Support"
 msgstr "IRC Live Support"
 
 msgid "IRC XigmaNAS"
-msgstr ""
+msgstr "IRC XigmaNAS"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -8511,7 +8514,7 @@ msgid "Retry"
 msgstr "Wiederholen"
 
 msgid "Return to Command Page"
-msgstr ""
+msgstr "Zurück zur Komandoseite"
 
 msgid "Reverse DNS lookup"
 msgstr "Umgekehrte DNS Auflösung"
@@ -13079,24 +13082,3 @@ msgstr "benutzt von"
 
 msgid "visible"
 msgstr "sichtbar"
-
-#~ msgid "Greeting banner displayed to client when firts connection comes in."
-#~ msgstr ""
-#~ "Begrüßung, welche dem Client beim ersten Verbindungsaufbau angezeigt wird."
-
-#~ msgid "Return to Command page"
-#~ msgstr "Zurück zur Kommando Seite"
-
-#, php-format
-#~ msgid ""
-#~ "The %s Project would like to thank the authors of this software for their "
-#~ "efforts."
-#~ msgstr ""
-#~ "Das %s Projekt möchte den Autoren dieser Software für ihre Mühen danken."
-
-#~ msgid "IRC NAS4Free"
-#~ msgstr "IRC NAS4Free"
-
-#~ msgid "An IPv4 or IPv6 address to listen\ton for incoming\tconnections."
-#~ msgstr ""
-#~ "Eine IPv4 oder IPv6 Adresse zum Lauschen\tauf eingehende\tVerbindungen."
