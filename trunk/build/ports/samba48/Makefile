@@ -1,6 +1,6 @@
 PORTNAME?=			${SAMBA4_BASENAME}48
 PORTVERSION?=			${SAMBA4_VERSION}
-PORTREVISION?=			0
+PORTREVISION?=			1
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -168,7 +168,7 @@ RUN_DEPENDS+=			libarchive>=3.1.2:archivers/libarchive
 #SAMBA4_BUNDLED_TALLOC=		no
 #SAMBA4_BUNDLED_TEVENT=		no
 #SAMBA4_BUNDLED_TDB=		no
-SAMBA4_BUNDLED_LDB=		yes
+#SAMBA4_BUNDLED_LDB=		no
 SAMBA4_LDB=			13
 # cmocka
 .if defined(SAMBA4_BUNDLED_CMOCKA)
@@ -231,8 +231,8 @@ PLIST_SUB+=			SAMBA4_BUNDLED_LDB=""
 SUB_LIST+=			SAMBA4_BUNDLED_LDB=""
 .else
 .       if ${SAMBA4_LDB} == 13
-BUILD_DEPENDS+=			ldb13>=1.3.4:databases/ldb13
-RUN_DEPENDS+=			ldb13>=1.3.4:databases/ldb13
+BUILD_DEPENDS+=			ldb13>=1.3.5:databases/ldb13
+RUN_DEPENDS+=			ldb13>=1.3.5:databases/ldb13
 .       elif ${SAMBA4_LDB} == 12
 BUILD_DEPENDS+=			ldb12>=1.2.3:databases/ldb12
 RUN_DEPENDS+=			ldb12>=1.2.3:databases/ldb12
@@ -480,7 +480,7 @@ SUB_LIST+=			SAMBA4_PYTHON3="@comment "
 # Require llvm 4.0 and AMD64
 .if ${PORT_OPTIONS:MAESNI} && ${ARCH} == "amd64" && ${OSVERSION} >= 1100511
 CONFIGURE_ARGS+=		--accel-aes=intelaesni
-PLIST_FILES+=			lib/samba4/private/libaesni-intel-samba4.so
+PLIST_FILES+=			lib/samba/libaesni-intel-samba4.so
 .else
 CONFIGURE_ARGS+=		--accel-aes=none
 .endif
@@ -616,7 +616,7 @@ post-install:
 .endfor
 
 # bin
-.for file in cifsdd dbwrap_tool eventlogadm gentest locktest masktest mvxattr ndrdump net nmblookup ntlm_auth oLschema2ldif pdbedit profiles regdiff regpatch regshell regtree rpcclient samba-regedit sharesec smbcacls smbclient smbcontrol smbcquotas smbget smbpasswd smbspool smbstatus smbtorture smbtree testparm wbinfo
+.for file in cifsdd dbwrap_tool eventlogadm gentest locktest masktest mvxattr ndrdump net nmblookup ntlm_auth oLschema2ldif pdbedit profiles regdiff regpatch regshell regtree rpcclient samba-regedit sharesec smbcacls smbclient smbcontrol smbcquotas smbget smbpasswd smbspool smbstatus smbtorture smbtree testparm vfstest wbinfo
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/${file} ${XIGMANAS_ROOTFS}/usr/local/bin
 .endfor
 .for file in findsmb pidl samba-tool smbtar
