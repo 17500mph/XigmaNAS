@@ -33,6 +33,7 @@ mkconf_cmd="nut_mkconf"
 # Defaults
 nut_enable=${nut_enable:-"NO"}
 nut_prefix=${nut_prefix:-"/usr/local"}
+nut_upsshut=${nut_upsshut:-"NO"}
 nut_nut_conf=${nut_nut_conf:-"/var/etc/nut.conf"}
 nut_ups_conf=${nut_ups_conf:-"/var/etc/ups.conf"}
 nut_upsd_conf=${nut_upsd_conf:-"/var/etc/upsd.conf"}
