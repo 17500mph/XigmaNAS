@@ -1,6 +1,6 @@
 PORTNAME=		nut
 PORTVERSION=	2.7.4
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=		sysutils
 COMMENT=		Network UPS tools
 MAINTAINER=		zoon01@xigmanas.com
