@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
 	rrd-start.php
 
 	Part of XigmaNAS (https://www.xigmanas.com).
@@ -30,7 +30,7 @@
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies
 	of XigmaNAS, either expressed or implied.
- */
+*/
 require_once 'config.inc';
 $runtime_dir = "/usr/local/share/rrdgraphs";
 
@@ -270,7 +270,7 @@ if(isset($config['rrdgraphs']['enable'])):
 			" -s 300" .
 			" 'DS:charge:GAUGE:600:U:U'" .
 			" 'DS:load:GAUGE:600:U:U'" .
-			" 'DS:ovoltage:GAUGE:600:U:U'" .
+			" 'DS:bvoltage:GAUGE:600:U:U'" .
 			" 'DS:ivoltage:GAUGE:600:U:U'" .
 			" 'DS:runtime:GAUGE:600:U:U'" .
 			" 'DS:OL:GAUGE:600:U:U'" .

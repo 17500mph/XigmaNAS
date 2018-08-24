@@ -4,7 +4,6 @@
 # Copyright (c) 2018 XigmaNAS <info@xigmanas.com>.
 # All rights reserved.
 #
-#date
 WORKING_DIR="/var/run/rrdgraphs"
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
 if [ ! -d "${STORAGE_PATH}" ] || [ ! -d  "${STORAGE_PATH}/rrd" ]; then
@@ -181,13 +180,13 @@ CREATE_UPSVARS ()
 #                       OFF
 #                       OB
 # $1: var name $2: value $3: CHRG 
-charge=0; load=0; ovoltage=0; ivoltage=0; runtime=0; OL=0; OF=0; OB=0; CG=0;
+charge=0; load=0; bvoltage=0; ivoltage=0; runtime=0; OL=0; OF=0; OB=0; CG=0;
 if [ "${CMD}" == "" ]; then OF=100; return; fi
 while [ "${1}" != "" ]; do
 	case ${1} in
 		battery.charge:)    charge=${2};;
 		ups.load:)          load=${2};;
-		output.voltage:)   ovoltage=${2};;
+		output.voltage:|battery.voltage:)   bvoltage=${2};;
 		input.voltage:)     ivoltage=${2};;
 		battery.runtime:)   runtime=`echo -e $2 | awk '{calc=$1/60; print calc}'`;;
 		ups.status:)    case ${2} in
@@ -346,13 +345,13 @@ if [ $RUN_UPS -eq 1 ]; then
 	if [ ! -f "$FILE" ]; then
 		/usr/local/bin/rrdtool create "$FILE" \
 			-s 300 \
-			'DS:charge:GAUGE:600:U:U' 'DS:load:GAUGE:600:U:U' 'DS:ovoltage:GAUGE:600:U:U' 'DS:ivoltage:GAUGE:600:U:U' \
+			'DS:charge:GAUGE:600:U:U' 'DS:load:GAUGE:600:U:U' 'DS:bvoltage:GAUGE:600:U:U' 'DS:ivoltage:GAUGE:600:U:U' \
 			'DS:runtime:GAUGE:600:U:U' 'DS:OL:GAUGE:600:U:U' 'DS:OF:GAUGE:600:U:U' 'DS:OB:GAUGE:600:U:U' \
 			'DS:CG:GAUGE:600:U:U' \
 			'RRA:AVERAGE:0.5:1:576' 'RRA:AVERAGE:0.5:6:672' 'RRA:AVERAGE:0.5:24:732' 'RRA:AVERAGE:0.5:144:1460'
 	fi
 	if [ -f "$FILE" ]; then
-		/usr/local/bin/rrdtool update "$FILE" N:$charge:$load:$ovoltage:$ivoltage:$runtime:$OL:$OF:$OB:$CG 2>> /tmp/rrdgraphs-error.log
+		/usr/local/bin/rrdtool update "$FILE" N:$charge:$load:$bvoltage:$ivoltage:$runtime:$OL:$OF:$OB:$CG 2>> /tmp/rrdgraphs-error.log
 	fi
 fi
 
