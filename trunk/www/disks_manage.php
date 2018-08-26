@@ -68,14 +68,14 @@ function disks_manage_get_sphere() {
 	$sphere->sym_loc(gettext('Disk is locked'));
 	$sphere->sym_unl(gettext('Disk is unlocked'));
 	$sphere->cbm_delete(gettext('Delete Selected Disks'));
-	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected disks?') . '<br />' . gettext('Any service using these disks might become invalid or inaccessible!'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected disks?') . '\n' . gettext('Any service using these disks might become invalid or inaccessible!'));
 	$sphere->grid = &array_make_branch($config,'disks','disk');
 	return $sphere;
 }
 $sphere = &disks_manage_get_sphere();
 array_sort_key($sphere->grid,'name');
-$gt_import_confirm = gettext('Do you want to import disks?') . '<br />' . gettext('The existing configuration may be overwritten.');
-$gt_importswraid_confirm = gettext('Do you want to import software RAID disks?') . '<br />' . gettext('The existing configuration may be overwritten.');
+$gt_import_confirm = gettext('Do you want to import disks?') . '\n' . gettext('The existing configuration may be overwritten.');
+$gt_importswraid_confirm = gettext('Do you want to import software RAID disks?') . '\n' . gettext('The existing configuration may be overwritten.');
 if($_POST) {
 	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
