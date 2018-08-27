@@ -33,95 +33,198 @@
 */
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
+require_once 'co_sphere.php';
+//	require_once 'properties_services_rsyncd_client.php';
+//	require_once 'co_request_method.php';
 
-$pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('RSYNC Client')];
-include 'fbegin.inc';
-$document = new co_DOMDocument();
-$document->
-	add_area_tabnav()->
-		add_tabnav_upper()->
-			ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
-			ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
-			ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
-			ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
-			ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
-			ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
-			ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
-			ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
-			ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
-			ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
-			ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
-			ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
-			ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'),gettext('Reload page'),true)->
-			ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
-			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
-			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
-			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
-$document->render();
-?>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php
-if(!is_array($config['rsync']) || !is_array($config['rsync']['rsyncclient'])):
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gettext('RSYNC Client Information & Status'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-<?php
-				echo '<pre>';
-				echo gtext('No RSYNC Client configured.');
-				echo '</pre>';
-?>
-			</tr></tbody>
-		</table>
-<?php
-else:
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gettext('RSYNC Client Information & Status'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-<?php
-				echo '<pre>';
-				echo '<strong>',gtext('Detected RSYNC Remote Shares'),':</strong><br /><br />';
-				$i = 0;
-				foreach($config['rsync']['rsyncclient'] as $rsyncclient): 
-					echo '<br />';
-					echo '',gtext('RSYNC client number'),' ',$i,':','<br />';
-					echo '- ',gtext('Remote server address'),': ',$rsyncclient['rsyncserverip'],'<br />';
-					echo '- ',gtext('Remote share name configured'),': ',$rsyncclient['remoteshare'],'<br />';
-					echo '- ',gtext('Detected shares on this server'),': ','<br />';
-					$cmd = sprintf('/usr/local/bin/rsync %s::',$rsyncclient['rsyncserverip']);
-					exec($cmd,$rawdata);
-					echo htmlspecialchars(implode(PHP_EOL,$rawdata));
-					unset($rawdata);
+function diag_infos_rsync_client_get_sphere() {
+	global $config;
+	
+	$sphere = new co_sphere_grid('diag_infos_rsync_client','php');
+/*
+	$sphere->modify->set_basename($sphere->get_basename() . '_edit');
+	sphere->set_notifier('rsyncclient');
+	$sphere->set_row_identifier('uuid');
+	$sphere->enadis(false);
+	$sphere->lock(false);
+	$sphere->sym_add(gettext('Add Rsync Job'));
+	$sphere->sym_mod(gettext('Edit Rsync Job'));
+	$sphere->sym_del(gettext('Rsync job is marked for deletion'));
+	$sphere->sym_loc(gettext('Rsync job is protected'));
+	$sphere->sym_unl(gettext('Rsync job is unlocked'));
+	$sphere->cbm_delete(gettext('Delete Selected Rsync Jobs'));
+	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected rsync jobs?'));
+	$sphere->cbm_disable(gettext('Disable Selected Rsync Jobs'));
+	$sphere->cbm_disable_confirm(gettext('Do you want to disable selected rsync jobs?'));
+	$sphere->cbm_enable(gettext('Enable Selected Rsync Jobs'));
+	$sphere->cbm_enable_confirm(gettext('Do you want to enable selected rsync jobs?'));
+	$sphere->cbm_toggle(gettext('Toggle Selected Rsync Jobs'));
+	$sphere->cbm_toggle_confirm(gettext('Do you want to toggle selected rsync jobs?'));
+ */
+//	sphere data
+	$sphere->grid = &array_make_branch($config,'rsync','rsyncclient');
+	return $sphere;
+}
+function diag_infos_rsync_client_selection($cop,$sphere) {
+	global $d_sysrebootreqd_path;
+	global $savemsg;
+
+	$input_errors = [];
+	$errormsg = '';
+	$pgtitle = [gettext('Diagnostics'),gettext('Information'),gettext('RSYNC Client')];
+	$record_exists = count($sphere->grid) > 0;
+	$use_tablesort = count($sphere->grid) > 1;
+	$a_col_width = ['20%','20%','10%','20%','30%'];
+	$n_col_width = count($a_col_width);
+	if($use_tablesort):
+		$document = new_page($pgtitle,NULL,'tablesort');
+	else:
+		$document = new_page($pgtitle);
+	endif;
+	//	get areas
+	$body = $document->getElementById('main');
+	$pagecontent = $document->getElementById('pagecontent');
+	//	add tab navigation
+	$document->
+		add_area_tabnav()->
+			add_tabnav_upper()->
+				ins_tabnav_record('diag_infos_disks.php',gettext('Disks'))->
+				ins_tabnav_record('diag_infos_disks_info.php',gettext('Disks (Info)'))->
+				ins_tabnav_record('diag_infos_part.php',gettext('Partitions'))->
+				ins_tabnav_record('diag_infos_smart.php',gettext('S.M.A.R.T.'))->
+				ins_tabnav_record('diag_infos_space.php',gettext('Space Used'))->
+				ins_tabnav_record('diag_infos_swap.php',gettext('Swap'))->
+				ins_tabnav_record('diag_infos_mount.php',gettext('Mounts'))->
+				ins_tabnav_record('diag_infos_raid.php',gettext('Software RAID'))->
+				ins_tabnav_record('diag_infos_iscsi.php',gettext('iSCSI Initiator'))->
+				ins_tabnav_record('diag_infos_ad.php',gettext('MS Domain'))->
+				ins_tabnav_record('diag_infos_samba.php',gettext('CIFS/SMB'))->
+				ins_tabnav_record('diag_infos_ftpd.php',gettext('FTP'))->
+				ins_tabnav_record('diag_infos_rsync_client.php',gettext('RSYNC Client'),gettext('Reload page'),true)->
+				ins_tabnav_record('diag_infos_netstat.php',gettext('Netstat'))->
+				ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
+				ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
+				ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
+	//	create data area
+	$content = $pagecontent->add_area_data();
+	//	display information, warnings and errors
+	$content->
+		ins_input_errors($input_errors)->
+		ins_info_box($savemsg)->
+		ins_error_box($errormsg);
+	if(file_exists($d_sysrebootreqd_path)):
+		$content->ins_info_box(get_std_save_message(0));
+	endif;
+	if(updatenotify_exists($sphere->get_notifier())):
+		$content->ins_config_has_changed_box();
+	endif;
+	//	add content
+	$table = $content->add_table_data_selection();
+	$table->ins_colgroup_with_styles('width',$a_col_width);
+	$thead = $table->addTHEAD();
+	if($record_exists):
+		$tbody = $table->addTBODY();
+	else:
+		$tbody = $table->addTBODY(['class' => 'donothighlight']);
+	endif;
+//	$tfoot = $table->addTFOOT();
+	$thead->ins_titleline(gettext('RSYNC Client Information & Status'),$n_col_width);
+	$tr = $thead->addTR();
+//	if($record_exists):
+		$tr->
+/*
+			push()->
+			addTHwC('lhelc sorter-false parser-false')->
+				ins_cbm_checkbox_toggle($sphere)->
+			pop()->
+ */
+			insTHwC('lhell',gettext('Remote Server Address'))->
+			insTHwC('lhell',gettext('Remote Share Name'))->
+			insTHwC('lhelc',gettext('Direction'))->
+			insTHwC('lhell',gettext('Local Share'))->
+			insTHwC('lhebl',gettext('Detected Remote Shares'));
+/*
+			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
+	else:
+		$tr->
+			insTHwC('lhelc')->
+			insTHwC('lhell',gettext('Remote Share Name'))->
+			insTHwC('lhell',gettext('Remote Server Address'))->
+			insTHwC('lhell',gettext('Local Share (Destination)'))->
+			insTHwC('lhebl',gettext('Detected Remote Shares'))->
+			insTHwC('lhebl',gettext('Toolbox'));
+	endif;
+ */
+	if($record_exists):
+		foreach($sphere->grid as $sphere->row_id => $sphere->row):
+/*
+			$notificationmode = updatenotify_get_mode($sphere->get_notifier(),$sphere->get_row_identifier_value());
+			$is_notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+			$is_enabled = $sphere->enadis() ? (is_bool($test = $sphere->row[$cop->get_enable()->get_name()] ?? false) ? $test : true): true;
+			$is_notprotected = $sphere->lock() ? !(is_bool($test = $sphere->row[$cop->get_protected()->get_name()] ?? false) ? $test : true) : true;
+			$dc = $is_enabled ? '' : 'd';
+ */
+			$remoteserverips = [];
+			$remoteshare = is_string($test = $sphere->row['remoteshare'] ?? '') ? $test : '';
+			$rsyncserverip = is_string($test = $sphere->row['rsyncserverip'] ?? '') ? $test : '';
+			$is_reversedirection = is_bool($test = $sphere->row['reverseddirection'] ?? false) ? $test : true;
+			$localshare = is_string($test = $sphere->row['localshare'] ?? '') ? $test : '';
+			if(array_key_exists($rsyncserverip,$remoteserverips)):
+				$detected_shares = $remoteserverips[$rsyncserverip];
+			else:
+				unset($rawdata);
+				$cmd = sprintf('/usr/local/bin/rsync %s::',$rsyncserverip);
+				exec($cmd,$rawdata);
+				$remoteserverips[$rsyncserverip] = [];
+				foreach($rawdata as $row):
+					$remoteserverips[$rsyncserverip][] = array_map('trim',explode("\t",$row,2));
 				endforeach;
-				echo '</pre>';
-?>
-		</tr></tbody>
-	</table>
-<?php
-endif;
-?>
-</td></tr></table>
-<?php
-include 'fend.inc';
-?>
+				$detected_shares = $remoteserverips[$rsyncserverip];
+			endif;
+			$table_detected = $tbody->
+				addTR()->
+					insTDwC('lcell',$rsyncserverip)->
+					insTDwC('lcell',$remoteshare)->
+					insTDwC('lcelc',$is_reversedirection ? '<' : '>')->
+					insTDwC('lcell',$localshare)->
+					addTDwC('lcebl')->
+						add_table_data_selection();
+			//	subsection list detected shares
+			$a_col_width_detected = ['50%','50%'];
+//			$n_col_width_detected = count($a_col_width);
+			$table_detected->ins_colgroup_with_styles('width',$a_col_width_detected);
+			$tbody_detected = $table_detected->addTBODY(['class' => 'donothighlight']);
+			foreach($detected_shares as $detected_share_info):
+				$tr = $tbody_detected->addTR();
+				switch(count($detected_share_info)):
+					case 0:
+						break;
+					case 1:
+						$tr->
+							insTD(['colspan' => '2'],$detected_share_info[0] ?? '');
+						break;
+					default:
+						$tr->
+							insTD([],$detected_share_info[0] ?? '')->
+							insTD([],$detected_share_info[1] ?? '');
+				endswitch;
+			endforeach;
+		endforeach;
+	else:
+		$tbody->ins_no_records_found($n_col_width,gettext('No RSYNC Client configured.'));
+	endif;
+/*
+	$tfoot->ins_record_add($sphere,$n_col_width);
+	$document->
+		add_area_buttons()->
+			ins_cbm_button_enadis($sphere)->
+			ins_cbm_button_delete($sphere);
+	//	additional javascript code
+	$body->addJavaScript($sphere->get_js());
+	$body->add_js_on_load($sphere->get_js_on_load());
+	$body->add_js_document_ready($sphere->get_js_document_ready());
+ */
+	$document->render();
+}
+$sphere = diag_infos_rsync_client_get_sphere();
+diag_infos_rsync_client_selection('',$sphere);
