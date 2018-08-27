@@ -66,11 +66,13 @@ function diag_infos_rsync_client_get_sphere() {
 	return $sphere;
 }
 function diag_infos_rsync_client_selection($cop,$sphere) {
+/*
 	global $d_sysrebootreqd_path;
 	global $savemsg;
 
 	$input_errors = [];
 	$errormsg = '';
+ */
 	$pgtitle = [gettext('Diagnostics'),gettext('Information'),gettext('RSYNC Client')];
 	$record_exists = count($sphere->grid) > 0;
 	$use_tablesort = count($sphere->grid) > 1;
@@ -82,7 +84,7 @@ function diag_infos_rsync_client_selection($cop,$sphere) {
 		$document = new_page($pgtitle);
 	endif;
 	//	get areas
-	$body = $document->getElementById('main');
+//	$body = $document->getElementById('main');
 	$pagecontent = $document->getElementById('pagecontent');
 	//	add tab navigation
 	$document->
@@ -107,6 +109,7 @@ function diag_infos_rsync_client_selection($cop,$sphere) {
 				ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
 	//	create data area
 	$content = $pagecontent->add_area_data();
+/*
 	//	display information, warnings and errors
 	$content->
 		ins_input_errors($input_errors)->
@@ -118,6 +121,7 @@ function diag_infos_rsync_client_selection($cop,$sphere) {
 	if(updatenotify_exists($sphere->get_notifier())):
 		$content->ins_config_has_changed_box();
 	endif;
+ */
 	//	add content
 	$table = $content->add_table_data_selection();
 	$table->ins_colgroup_with_styles('width',$a_col_width);
