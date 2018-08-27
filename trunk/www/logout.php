@@ -34,5 +34,4 @@
 require_once 'session.inc';
 
 Session::destroy();
-header("Location: login.php");
-?>
+header('Location: login.php');
