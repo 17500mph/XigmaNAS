@@ -66,6 +66,7 @@ function diag_infos_rsync_client_get_sphere() {
 	return $sphere;
 }
 function diag_infos_rsync_client_selection($cop,$sphere) {
+	global $g_img;
 /*
 	global $d_sysrebootreqd_path;
 	global $savemsg;
@@ -185,30 +186,43 @@ function diag_infos_rsync_client_selection($cop,$sphere) {
 				endforeach;
 				$detected_shares = $remoteserverips[$rsyncserverip];
 			endif;
-			$table_detected = $tbody->
-				addTR()->
-					insTDwC('lcell',$rsyncserverip)->
-					insTDwC('lcell',$remoteshare)->
-					insTDwC('lcelc',$is_reversedirection ? '<' : '>')->
-					insTDwC('lcell',$localshare)->
-					addTDwC('lcebl')->
-						add_table_data_selection();
+			$tr = $table_detected = $tbody->addTR();
+			$tr->
+				insTDwC('lcell',$rsyncserverip)->
+				insTDwC('lcell',$remoteshare);
+			if($is_reversedirection):
+				$gt = gettext('Push');
+				$tr->
+					addTDwC('lcelc')->
+						addA(['title' => $gt])->
+							insIMG(['src' => $g_img['mle'],'alt' => $gt]);
+			else:
+				$gt = gettext('Pull');
+				$tr->
+					addTDwC('lcelc')->
+						addA(['title' => $gt])->
+							insIMG(['src' => $g_img['mri'],'alt' => $gt]);
+			endif;
+			$table_detected = $tr->
+				insTDwC('lcell',$localshare)->
+				addTDwC('lcebl')->
+					add_table_data_selection();
 			//	subsection list detected shares
 			$a_col_width_detected = ['50%','50%'];
 //			$n_col_width_detected = count($a_col_width);
 			$table_detected->ins_colgroup_with_styles('width',$a_col_width_detected);
 			$tbody_detected = $table_detected->addTBODY(['class' => 'donothighlight']);
 			foreach($detected_shares as $detected_share_info):
-				$tr = $tbody_detected->addTR();
+				$tr_detected = $tbody_detected->addTR();
 				switch(count($detected_share_info)):
 					case 0:
 						break;
 					case 1:
-						$tr->
+						$tr_detected->
 							insTD(['colspan' => '2'],$detected_share_info[0] ?? '');
 						break;
 					default:
-						$tr->
+						$tr_detected->
 							insTD([],$detected_share_info[0] ?? '')->
 							insTD([],$detected_share_info[1] ?? '');
 				endswitch;
