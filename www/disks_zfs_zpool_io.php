@@ -34,34 +34,45 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
-function disks_zfs_zpool_io_ajax() {
-	if(isset($_GET['pool']) && is_string($_GET['pool'])):
-		$cmd = sprintf('zpool iostat -v %s 2>&1',escapeshellarg($_GET['pool']));
+function disks_zfs_zpool_io_ajax(bool $firstrun = false) {
+	if($firstrun):
+		//	calling zpool iostat with no configured pools returns ['no pools available'].
+		if(isset($_GET['pool']) && is_string($_GET['pool'])):
+			$cmd = sprintf('zpool iostat -v %s 2>&1',escapeshellarg($_GET['pool']));
+		else:
+			$cmd = 'zpool iostat -v 2>&1';
+		endif;
+		mwexec2($cmd,$rawdata);
+		return implode(PHP_EOL,$rawdata);
 	else:
-		$cmd = 'zpool iostat -v 2>&1';
+		//	calling zpool iostat with no configured pools returns an empty array.
+		if(isset($_GET['pool']) && is_string($_GET['pool'])):
+			$cmd = sprintf('zpool iostat -v %s 5 2 2>&1',escapeshellarg($_GET['pool']));
+		else:
+			$cmd = 'zpool iostat -v 5 2 2>&1';
+		endif;
+		mwexec2($cmd,$rawdata);
+		$divider = array_keys(preg_grep('/^\s*$/',$rawdata));
+		if(count($divider) > 1):
+			$n_high = array_pop($divider);
+			$n_low = array_pop($divider);
+			$returndata = array_slice($rawdata,$n_low - $n_high);
+		else:
+			$returndata = [gettext('no pools available')];
+		endif;
+		return implode(PHP_EOL,$returndata);
 	endif;
-	mwexec2($cmd,$rawdata);
-	return htmlspecialchars(implode(PHP_EOL,$rawdata));
 }
 if(is_ajax()):
-	$status = disks_zfs_zpool_io_ajax();
+	$status['area_refresh'] = disks_zfs_zpool_io_ajax();
 	render_ajax($status);
 endif;
-$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('I/O Statistics')];
-include 'fbegin.inc';
-?>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
-	var gui = new GUI;
-	gui.recall(5000, 5000, 'disks_zfs_zpool_io.php', null, function(data) {
-		$('#area_refresh').text(data.data);
-	});
-});
-//]]>
-</script>
-<?php
-$document = new co_DOMDocument();
+$pgtitle = [gettext('Disks'),gettext('ZFS'),gettext('Pools'),gettext('I/O Statistics')];
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
 $document->
 	add_area_tabnav()->
 		push()->
@@ -79,28 +90,28 @@ $document->
 			ins_tabnav_record('disks_zfs_zpool_tools.php',gettext('Tools'))->
 			ins_tabnav_record('disks_zfs_zpool_info.php',gettext('Information'))->
 			ins_tabnav_record('disks_zfs_zpool_io.php',gettext('I/O Statistics'),gettext('Reload page'),true);
+$pagecontent->
+	add_area_data()->
+		add_table_data_settings()->
+			push()->
+			ins_colgroup_data_settings()->
+			addTHEAD()->
+				c2_titleline(gettext('ZFS Pool I/O Statistics'))->
+			pop()->
+			addTBODY()->
+				addTR()->
+					insTDwC('celltag',gettext('Information'))->
+					addTDwC('celldata')->
+						addElement('pre',['class' => 'cmdoutput'])->
+							addElement('span',['id' => 'area_refresh'],disks_zfs_zpool_io_ajax(true));
+//	add additional javascript code
+$js_document_ready = <<<'EOJ'
+	var gui = new GUI;
+	gui.recall(0,7000,'disks_zfs_zpool_io.php',null,function(data) {
+		if($('#area_refresh').length > 0) {
+			$('#area_refresh').text(data.area_refresh);
+		}
+	});
+EOJ;
+$body->add_js_document_ready($js_document_ready);
 $document->render();
-?>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gettext('ZFS Pool I/O Statistics'));
-?>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="celltag"><?=gtext('Information');?></td>
-				<td class="celldata">
-					<pre><span id="area_refresh"><?=disks_zfs_zpool_io_ajax();?></span></pre>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</td></tr></tbody></table>
-<?php
-include 'fend.inc';
