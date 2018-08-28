@@ -35,59 +35,53 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 function disk_raid_gstripe_info_ajax() {
-	exec('/sbin/gstripe list',$rawdata);
-	return implode("\n",$rawdata);
+	$cmd = '/sbin/gstripe list';
+	mwexec2($cmd,$rawdata);
+	return (0 === count($rawdata)) ? gettext('No RAID0 information found.') : implode(PHP_EOL,$rawdata);
 }
 if(is_ajax()):
-	$status = disk_raid_gstripe_info_ajax();
+	$status['area_refresh'] = disk_raid_gstripe_info_ajax();
 	render_ajax($status);
 endif;
-$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID0'),gtext('Information')];
-?>
-<?php
-include 'fbegin.inc';
-?>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
+$pgtitle = [gettext('Disks'),gettext('Software RAID'),gettext('RAID0'),gettext('Information')];
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
+$document->
+	add_area_tabnav()->
+		push()->
+		add_tabnav_upper()->
+			ins_tabnav_record('disks_raid_geom.php',gettext('GEOM'),gettext('Reload page'),true)->
+			ins_tabnav_record('disks_raid_gvinum.php',gettext('RAID 0/1/5'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('disks_raid_geom.php',gettext('Management'))->
+			ins_tabnav_record('disks_raid_gstripe_tools.php',gettext('Maintenance'))->
+			ins_tabnav_record('disks_raid_gstripe_info.php',gettext('Information'),gettext('Reload page'),true);
+$pagecontent->
+	add_area_data()->
+		add_table_data_settings()->
+			push()->
+			ins_colgroup_data_settings()->
+			addTHEAD()->
+				c2_titleline(gettext('RAID0 Information & Status'))->
+			pop()->
+			addTBODY()->
+				addTR()->
+					insTDwC('celltag',gettext('Information'))->
+					addTDwC('celldata')->
+						addElement('pre',['class' => 'cmdoutput'])->
+							addElement('span',['id' => 'area_refresh'],disk_raid_gstripe_info_ajax());
+//	add additional javascript code
+$js_document_ready = <<<'EOJ'
 	var gui = new GUI;
-	gui.recall(5000, 5000, 'disks_raid_gstripe_info.php', null, function(data) {
-		$('#area_refresh').text(data.data);
+	gui.recall(5000,5000,'disks_raid_gstripe_info.php',null,function(data) {
+		if($('#area_refresh').length > 0) {
+			$('#area_refresh').text(data.area_refresh);
+		}
 	});
-});
-//]]>
-</script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabact"><a href="disks_raid_geom.php" title="<?=gtext('Reload page');?>"><span><?= gtext('GEOM'); ?></span></a></li>
-		<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
-	</ul></td></tr>
-	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management');?></span></a></li>
-		<li class="tabinact"><a href="disks_raid_gstripe_tools.php"><span><?=gtext('Maintenance');?></span></a></li>
-		<li class="tabact"><a href="disks_raid_gstripe_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Information');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-		html_titleline2(gettext('RAID 0 Information & Status'));
-?>
-		<tbody>
-			<tr>
-				<td class="celltag"><?=gtext('Information');?></td>
-				<td class="celldata">
-					<pre><span id="area_refresh"><?=disk_raid_gstripe_info_ajax();?></span></pre>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</td></tr></tbody></table>
-<?php
-include 'fend.inc';
-?>
+EOJ;
+$body->add_js_document_ready($js_document_ready);
+$document->render();
