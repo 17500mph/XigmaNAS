@@ -65,7 +65,7 @@ crontab_addline()
 		if [ ! -e "${cron_tabspath}/${_user}" ]; then
 			# Create /var/cron/tabs/xxx
 			echo "SHELL=/bin/sh
-PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin
+PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 HOME=/var/log
 #
 #minute	hour	mday	month	wday	who	command
@@ -100,7 +100,7 @@ EOF
 
 	# Create /etc/crontab
 	echo "SHELL=/bin/sh
-PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin
+PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 HOME=/var/log
 #
 #minute	hour	mday	month	wday	who	command
