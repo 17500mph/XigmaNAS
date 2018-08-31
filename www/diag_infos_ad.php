@@ -35,9 +35,12 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 array_make_branch($config,'ad');
-$pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('MS Active Directory')];
-include 'fbegin.inc';
-$document = new co_DOMDocument();
+$pgtitle = [gettext('Diagnostics'),gettext('Information'),gettext('MS Active Directory')];
+$document = new_page($pgtitle);
+//	get areas
+$body = $document->getElementById('main');
+$pagecontent = $document->getElementById('pagecontent');
+//	add tab navigation
 $document->
 	add_area_tabnav()->
 		add_tabnav_upper()->
@@ -58,112 +61,60 @@ $document->
 			ins_tabnav_record('diag_infos_sockets.php',gettext('Sockets'))->
 			ins_tabnav_record('diag_infos_ipmi.php',gettext('IPMI Stats'))->
 			ins_tabnav_record('diag_infos_ups.php',gettext('UPS'));
-$document->render();
-?>
-<table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php
-if (!isset($config['ad']['enable'])):
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gettext('MS Active Directory Information & Status'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-<?php
-				echo '<pre>';
-				echo gtext('AD authentication is disabled.');
-				echo '</pre>';
-?>
-			</td>
-		</tr></tbody>
-	</table>
-<?php
+$area_data = $pagecontent->add_area_data();
+$table = $area_data->add_table_data_settings();
+$table->ins_colgroup_data_settings();
+$thead = $table->addTHEAD();
+$tbody = $table->addTBODY();
+$tfoot = $table->addTFOOT();
+$thead->c2_titleline(gettext('MS Active Directory Information & Status'));
+if(!is_bool($test = $config['ad']['enable'] ?? false ? $test : true)):
+	$tbody->addTR()->
+		insTDwC('celltag',gettext('Information'))->
+		addTDwC('celldata')->
+			addElement('pre',['class' => 'cmdoutput'])->
+				addElement('span',[],gettext('AD authentication is disabled.'));
 else:
-?>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_titleline2(gettext('MS Active Directory Information & Status'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-<?php
-				echo '<pre>';
-				echo '',gtext('Results for net rpc testjoin'),':','<br />';
-				echo '<br />';
-				$cmd = '/usr/local/bin/net rpc testjoin';
-				$cmd .= ' -S ' . $config['ad']['domaincontrollername'];
-				$cmd .= " 2>&1";
-				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
-				unset($rawdata);
-				echo '<br />';
-				echo '<br />',gtext('Ping winbindd to see if it is alive'),':','<br />';
-				$cmd = '/usr/local/bin/wbinfo';
-				$cmd .= ' -p ';
-				$cmd .= " 2>&1";
-				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
-				unset($rawdata);
-				echo '<br />';
-				echo '<br />',gtext('Check shared secret'),':','<br />';
-				$cmd = '/usr/local/bin/wbinfo';
-				$cmd .= ' -t ';
-				$cmd .= " 2>&1";
-				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
-				unset($rawdata);
-				echo '</pre>';
-?>
-			</td>
-		</tr></tbody>
-	</table>
-	<table class="area_data_settings">
-		<colgroup>
-			<col class="area_data_settings_col_tag">
-			<col class="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-<?php
-			html_separator2();
-			html_titleline2(gettext('List Imported Users'));
-?>
-		</thead>
-		<tbody><tr>
-			<td class="celltag"><?=gtext('Information');?></td>
-			<td class="celldata">
-<?php
-				echo '<pre>';
-				$cmd = '/usr/local/bin/net rpc user';
-				$cmd .= ' -S ' . $config['ad']['domaincontrollername'];
-				$cmd .= ' -U ' . escapeshellarg($config['ad']['username'] . '%' . $config['ad']['password']);
-				$cmd .= " 2>&1";
-				exec($cmd,$rawdata);
-				echo htmlspecialchars(implode(PHP_EOL,$rawdata));
-				unset($rawdata);
-				echo '</pre>';
-?>
-			</td>
-		</tr></tbody>
-	</table>
-<?php
+	unset($rawdata);
+	$cmd = sprintf('/usr/local/bin/net rpc testjoin -S %s 2>&1',escapeshellarg($config['ad']['domaincontrollername']));
+	exec($cmd,$rawdata);
+	$tbody->addTR()->
+		insTDwC('celltag',gettext('Result of testjoin'))->
+		addTDwC('celldata')->
+			addElement('pre',['class' => 'cmdoutput'])->
+				addElement('span',[],implode(PHP_EOL,$rawdata));
+	unset($rawdata);
+	$cmd = '/usr/local/bin/wbinfo -p 2>&1';
+	exec($cmd,$rawdata);
+	$tbody->addTR()->
+		insTDwC('celltag',gettext('Winbindd Availability'))->
+		addTDwC('celldata')->
+			addElement('pre',['class' => 'cmdoutput'])->
+				addElement('span',[],implode(PHP_EOL,$rawdata));
+	unset($rawdata);
+	$cmd = '/usr/local/bin/wbinfo -t 2>&1';
+	exec($cmd,$rawdata);
+	$tbody->addTR()->
+		insTDwC('celltag',gettext('Trust Account Status'))->
+		addTDwC('celldata')->
+			addElement('pre',['class' => 'cmdoutput'])->
+				addElement('span',[],implode(PHP_EOL,$rawdata));
+	$tfoot->c2_separator();
+	$table = $area_data->add_table_data_settings();
+	$table->ins_colgroup_data_settings();
+	$thead = $table->addTHEAD();
+	$tbody = $table->addTBODY();
+	$thead->c2_titleline(gettext('Imported Users'));
+	unset($rawdata);
+	$cmd = sprintf('/usr/local/bin/net rpc user -S %s -U %s -v 2>&1',
+		escapeshellarg($config['ad']['domaincontrollername']),
+		escapeshellarg(sprintf('%s%%%s',$config['ad']['username'],$config['ad']['password']))
+	);
+	exec($cmd,$rawdata);
+	$tbody->addTR()->
+		insTDwC('celltag',gettext('Information'))->
+		addTDwC('celldata')->
+			addElement('pre',['class' => 'cmdoutput'])->
+				addElement('span',[],implode(PHP_EOL,$rawdata));
 endif;
-?>
-</td></tr></tbody></table>
-<?php
-include 'fend.inc';
-?>
+$document->render();
