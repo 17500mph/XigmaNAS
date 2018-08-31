@@ -32,10 +32,8 @@
 	of XigmaNAS, either expressed or implied.
 */
 require_once 'auth.inc';
-header("Content-Type: text/plain");
 
-putenv("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin");
+header('Content-Type: text/plain');
+putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
 passthru($_GET['cmd']);
-
 exit(0);
-?>
