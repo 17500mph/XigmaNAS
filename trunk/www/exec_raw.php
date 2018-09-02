@@ -33,7 +33,9 @@
 */
 require_once 'auth.inc';
 
-header('Content-Type: text/plain');
-putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
-passthru($_GET['cmd']);
-exit(0);
+if(Session::isAdmin()):
+	header('Content-Type: text/plain');
+	putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
+	passthru($_GET['cmd']);
+	exit(0);
+endif;
