@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xigmanas\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
 "PO-Revision-Date: 2018-07-06 09:51+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 
 msgid " interfaces:"
 msgstr " koppelvlakke:"
@@ -1743,9 +1743,6 @@ msgstr "Kyk na Sisteem|Algemene Opstelling voor inisialisering"
 msgid "Check and replace cable"
 msgstr "Kyk na, en vervang kabel"
 
-msgid "Check shared secret"
-msgstr ""
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -1961,9 +1958,6 @@ msgstr "Inhoud"
 
 msgid "Content Locations"
 msgstr "Inhoud lokasies"
-
-msgid "Continue"
-msgstr "Gaan Voort"
 
 msgid "Control"
 msgstr "Kontrole"
@@ -2870,14 +2864,11 @@ msgstr ""
 msgid "Detected Language:"
 msgstr "Bespeurde Taal:"
 
-msgid "Detected RSYNC Remote Shares"
+msgid "Detected Remote Shares"
 msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "'n Fout is opgespoor terwyl daar ingevoer is."
-
-msgid "Detected shares on this server"
-msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4956,6 +4947,9 @@ msgstr "GEOM Sagteware RAID"
 msgid "GEOM VINUM Software RAID"
 msgstr "GEOM VINUM Sagteware RAID"
 
+msgid "GEOM vinum"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -5484,6 +5478,9 @@ msgstr "Voer in met GPT ID"
 
 msgid "Import using GPT labels"
 msgstr "Voer in gebruik GPT etikette"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "In"
@@ -6070,9 +6067,6 @@ msgstr ""
 msgid "List"
 msgstr "Lys"
 
-msgid "List Imported Users"
-msgstr "Lys Ingevoedre Gebruikers"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6125,6 +6119,9 @@ msgstr "Plaaslik"
 
 msgid "Local Master Browser"
 msgstr "Plaaslike Meester Blaaier"
+
+msgid "Local Share"
+msgstr ""
 
 msgid "Local Share (Destination)"
 msgstr "Lokale deel (Bestemming)"
@@ -6428,6 +6425,9 @@ msgstr "Maksimum temperatuur waargeneem (grade Celcius)"
 
 msgid "May"
 msgstr "Mei"
+
+msgid "Maybe"
+msgstr ""
 
 msgid "Media"
 msgstr "Media"
@@ -6868,6 +6868,9 @@ msgstr ""
 msgid "No Extent has been configured."
 msgstr "Geen Omvang is gekonfigureer nie"
 
+msgid "No GEOM vinum information found."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr "Geen IPMI FRU data beskikbaar"
 
@@ -6877,11 +6880,23 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr "Geen Inisieering Groep gekonfigureer nie"
 
+msgid "No JBOD information found."
+msgstr ""
+
 msgid "No Parity"
 msgstr ""
 
 msgid "No Portal Group has been configured."
 msgstr "Geen Portaal Groep is opgestel nie."
+
+msgid "No RAID0 information found."
+msgstr ""
+
+msgid "No RAID1 information found."
+msgstr ""
+
+msgid "No RAID5 information found."
+msgstr ""
 
 msgid "No RSYNC Client configured."
 msgstr ""
@@ -7527,9 +7542,6 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive"
-msgstr ""
-
 msgid "Ping/Traceroute"
 msgstr "Pieng/Traceroute"
 
@@ -7871,6 +7883,12 @@ msgstr ""
 msgid "Proxy"
 msgstr "Instaanbediener"
 
+msgid "Pull"
+msgstr ""
+
+msgid "Push"
+msgstr ""
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -7887,9 +7905,6 @@ msgstr "Sag"
 msgid "Quota"
 msgstr "Kwota"
 
-msgid "RAID 0 Information & Status"
-msgstr "RAID 0 Inligting en Status"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -7899,14 +7914,8 @@ msgstr "RAID 0/1/5 Inligting en Status"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "RAID 0/1/5 Onderhoud"
 
-msgid "RAID 1 Information & Status"
-msgstr "RAID 1 Inligting en Status"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "RAID 5 Inligting en Status"
 
 msgid "RAID Name"
 msgstr "RAID Naam"
@@ -7968,11 +7977,20 @@ msgstr "RAID-Z3 moet 5, 7 of 11 skywe in elke vdev hê."
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr ""
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr ""
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr ""
 
 msgid "RAM Disk"
 msgstr ""
@@ -8017,9 +8035,6 @@ msgid "RSYNC Client Information & Status"
 msgstr "RSYNC -Klient Informasie & Status"
 
 msgid "RSYNC Events"
-msgstr ""
-
-msgid "RSYNC client number"
 msgstr ""
 
 msgid "RSYNC log"
@@ -8182,6 +8197,12 @@ msgstr "Remote Rsync Daemon"
 msgid "Remote Rsync Server"
 msgstr "Afgeleë Rsync Bediener"
 
+msgid "Remote Server Address"
+msgstr ""
+
+msgid "Remote Share Name"
+msgstr ""
+
 msgid "Remote Syslog Messages"
 msgstr ""
 
@@ -8199,12 +8220,6 @@ msgid ""
 msgstr ""
 "Afstand monitering gebruikernaam. Moet gelyk wees op beide meester en slaaf "
 "sisteem."
-
-msgid "Remote server address"
-msgstr ""
-
-msgid "Remote share name configured"
-msgstr ""
 
 msgid "Removable"
 msgstr "Verwyderbare"
@@ -8333,7 +8348,7 @@ msgstr "Beperk"
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr "Verbode - Erf alles maar nie \"skryf ACL\" en \"Verander Eienaar\""
 
-msgid "Results for net rpc testjoin"
+msgid "Result of testjoin"
 msgstr ""
 
 msgid "Results of last self test"
@@ -10571,14 +10586,14 @@ msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 "Die bediener adverteer homself aan Windows kliënte as 'n tyd bediener."
 
-msgid "The server is halting now."
-msgstr "Die bediener staak tans."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr "Die bediener is nou herstel na fabriek standaard en sal nou herlaai."
 
 msgid "The server is rebooting now."
 msgstr "Die bediener herlaai tans."
+
+msgid "The server is shutting down now."
+msgstr ""
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
@@ -11448,6 +11463,9 @@ msgstr "Lokvalle"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr ""
 
@@ -12244,6 +12262,9 @@ msgstr "Who"
 msgid "Wildcard"
 msgstr ""
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Koordlose Instellings"
 
@@ -12575,6 +12596,9 @@ msgstr "n.v.t."
 msgid "network traffic"
 msgstr "netwerk verkeer"
 
+msgid "no pools available"
+msgstr ""
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -12634,3 +12658,6 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "List Imported Users"
+#~ msgstr "Lys Ingevoedre Gebruikers"

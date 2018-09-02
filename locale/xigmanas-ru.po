@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-09 12:16+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-30 08:49+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:49+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -1766,9 +1766,6 @@ msgstr "Проверьте Система|Общие параметры пере
 msgid "Check and replace cable"
 msgstr "Проверьте и замените кабель"
 
-msgid "Check shared secret"
-msgstr "Проверьте общий ключ"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -1991,9 +1988,6 @@ msgstr "Содержимое"
 
 msgid "Content Locations"
 msgstr "Расположение содержимого"
-
-msgid "Continue"
-msgstr "Далее"
 
 msgid "Control"
 msgstr "Управление"
@@ -2918,14 +2912,11 @@ msgstr "Обнаруженные диски"
 msgid "Detected Language:"
 msgstr "Обнаружен язык:"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Обнаруженные удаленные ресурсы RSYNC"
+msgid "Detected Remote Shares"
+msgstr "Обнаруженные удаленные общие ресурсы"
 
 msgid "Detected an error while importing."
 msgstr "Обнаружена ошибка в процессе импортирования"
-
-msgid "Detected shares on this server"
-msgstr "Обнаруженные ресурсы на этом сервере"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -5044,6 +5035,9 @@ msgstr "GEOM Software RAID"
 msgid "GEOM VINUM Software RAID"
 msgstr "Программный RAID GEOM VINUM"
 
+msgid "GEOM vinum"
+msgstr "GEOM vinum"
+
 msgid "GID"
 msgstr "GID"
 
@@ -5577,6 +5571,9 @@ msgstr "Импорт с использованием GPT ID"
 
 msgid "Import using GPT labels"
 msgstr "Импорт с использованием GPT меток"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "Входящий"
@@ -6196,9 +6193,6 @@ msgstr "Действие при установке соединения"
 msgid "List"
 msgstr "Список"
 
-msgid "List Imported Users"
-msgstr "Список импортированных пользователей"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6255,6 +6249,9 @@ msgstr "Локальный"
 
 msgid "Local Master Browser"
 msgstr "Локальный основной обозреватель сети"
+
+msgid "Local Share"
+msgstr "Локальный общий ресурс"
 
 msgid "Local Share (Destination)"
 msgstr "Локальный общий ресурс (получатель)"
@@ -6566,6 +6563,9 @@ msgstr ""
 
 msgid "May"
 msgstr "мая"
+
+msgid "Maybe"
+msgstr "Может быть"
 
 msgid "Media"
 msgstr "Информация"
@@ -7011,6 +7011,9 @@ msgstr "Нет данных"
 msgid "No Extent has been configured."
 msgstr "Ни один Extent не сконфигурирован."
 
+msgid "No GEOM vinum information found."
+msgstr "Информация о GEOM vinum не найдена."
+
 msgid "No IPMI FRU data available."
 msgstr "Нет доступных данных IPMI FRU"
 
@@ -7020,11 +7023,23 @@ msgstr "Нет доступных данных IPMI датчиков."
 msgid "No Initiator Group has been configured."
 msgstr "Ни одна группа инициаторов не сконфигурирована."
 
+msgid "No JBOD information found."
+msgstr "Информация о JBOD не найдена."
+
 msgid "No Parity"
 msgstr "Нет четности"
 
 msgid "No Portal Group has been configured."
 msgstr "Ни одна группа порталов не сконфигурирована."
+
+msgid "No RAID0 information found."
+msgstr "Информация о RAID0 не найдена."
+
+msgid "No RAID1 information found."
+msgstr "Информация о RAID1 не найдена."
+
+msgid "No RAID5 information found."
+msgstr "Информация о RAID5 не найдена."
 
 msgid "No RSYNC Client configured."
 msgstr "RSYNC Клиент не сконфигурирован."
@@ -7671,9 +7686,6 @@ msgstr "Вывод Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "Ping может занять некоторое время, пожалуйста, будьте терпеливы."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "Ping Winbindd, чтобы увидеть, если он жив"
-
 msgid "Ping/Traceroute"
 msgstr "Команды Ping и Traceroute"
 
@@ -8021,6 +8033,12 @@ msgstr "Тип предоставления"
 msgid "Proxy"
 msgstr "Настройки прокси"
 
+msgid "Pull"
+msgstr "Принять"
+
+msgid "Push"
+msgstr "Передать"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -8037,9 +8055,6 @@ msgstr "\"Тихий\" режим"
 msgid "Quota"
 msgstr "Квота"
 
-msgid "RAID 0 Information & Status"
-msgstr "Информация и статус RAID 0"
-
 msgid "RAID 0/1/5"
 msgstr "Массив RAID 0/1/5 (Vinum)"
 
@@ -8049,14 +8064,8 @@ msgstr "Информация и статус RAID 0/1/5"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "Обслуживание RAID 0/1/5"
 
-msgid "RAID 1 Information & Status"
-msgstr "Информация и статус RAID 1"
-
 msgid "RAID 5"
 msgstr "Массив RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "Информация и статус RAID 5"
 
 msgid "RAID Name"
 msgstr "Имя RAID"
@@ -8121,11 +8130,20 @@ msgstr ""
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr "Информация и состояние RAID0"
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr "Информация и состояние RAID1"
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr "Информация и состояние RAID5"
 
 msgid "RAM Disk"
 msgstr "Диск RAM"
@@ -8171,9 +8189,6 @@ msgstr "Информация и статус RSYNC клиента"
 
 msgid "RSYNC Events"
 msgstr "События RSYNC"
-
-msgid "RSYNC client number"
-msgstr "Номер клиента RSYNC"
 
 msgid "RSYNC log"
 msgstr "Журнал RSYNC"
@@ -8335,6 +8350,12 @@ msgstr "Удаленный Rsync демон"
 msgid "Remote Rsync Server"
 msgstr "Удаленный Rsync-сервер"
 
+msgid "Remote Server Address"
+msgstr "Адрес удаленного сервера"
+
+msgid "Remote Share Name"
+msgstr "Имя удаленного общего ресурса"
+
 msgid "Remote Syslog Messages"
 msgstr "Удаленные Syslog сообщения"
 
@@ -8352,12 +8373,6 @@ msgid ""
 msgstr ""
 "Имя пользователя удаленного мониторинга. Должно быть одинаково как для "
 "основного и дополнительного."
-
-msgid "Remote server address"
-msgstr "Адрес удаленного сервера"
-
-msgid "Remote share name configured"
-msgstr "Имена удаленных ресурсов сконфигурированы"
 
 msgid "Removable"
 msgstr "Сменный носитель"
@@ -8486,8 +8501,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restricted - Наследовать все, кроме \"записать ACL\" и \"изменить владельца\""
 
-msgid "Results for net rpc testjoin"
-msgstr "Результаты тестового подключения RPC"
+msgid "Result of testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Результаты последнего теста самодиагностики"
@@ -10790,14 +10805,14 @@ msgstr "Последовательный или USB-порт, к котором�
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "Представляться сервером точного времени для Windows клиентов"
 
-msgid "The server is halting now."
-msgstr "В настоящее время сервер останавливается."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr "Сервер сейчас восстановит заводские настройки и перезагрузится."
 
 msgid "The server is rebooting now."
 msgstr "Сервер сейчас перезагружается."
+
+msgid "The server is shutting down now."
+msgstr "Сервер выключается."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Сервер будет возвращен к заводским установкам и перезагрузится."
@@ -11744,6 +11759,9 @@ msgstr "Сообщения (traps)"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol (TFTP)"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr "Доверенные домены"
 
@@ -12578,6 +12596,9 @@ msgstr "Кто"
 msgid "Wildcard"
 msgstr "Подстановочные символы"
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Настройка беспроводной сети"
 
@@ -12934,6 +12955,9 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr "Сетевой трафик"
 
+msgid "no pools available"
+msgstr "нет доступных пулов"
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -12995,3 +13019,15 @@ msgstr "использовано из"
 
 msgid "visible"
 msgstr "показать"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Проверьте общий ключ"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Список импортированных пользователей"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "Ping Winbindd, чтобы увидеть, если он жив"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Результаты тестового подключения RPC"
