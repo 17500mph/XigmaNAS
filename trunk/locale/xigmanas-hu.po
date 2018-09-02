@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-08 11:39+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-28 08:12+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -1746,9 +1746,6 @@ msgstr "Rendszerellenőrzés|Általános beállítások inicializálás előtt"
 msgid "Check and replace cable"
 msgstr "Ellenőrizd, illetve cseréld a kábelt."
 
-msgid "Check shared secret"
-msgstr "Megosztott titok ellenőrzése"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -1969,9 +1966,6 @@ msgstr "Tartalom"
 
 msgid "Content Locations"
 msgstr "Tartalomhelyek"
-
-msgid "Continue"
-msgstr "Folytatás"
 
 msgid "Control"
 msgstr "Felügyelet"
@@ -2880,14 +2874,11 @@ msgstr "Észlelt lemezek"
 msgid "Detected Language:"
 msgstr "Érzékelt nyelv:"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Észlelt RSYNC távoli megosztások"
+msgid "Detected Remote Shares"
+msgstr "Észlelt távoli megosztások"
 
 msgid "Detected an error while importing."
 msgstr "Hiba az importálás során."
-
-msgid "Detected shares on this server"
-msgstr "Ezen  szerveren észlelt megosztások"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4997,6 +4988,9 @@ msgstr "GEOM szoftveres RAID"
 msgid "GEOM VINUM Software RAID"
 msgstr "GEOM VINUM szoftveres RAID"
 
+msgid "GEOM vinum"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -5532,6 +5526,9 @@ msgstr "Importálás GPT azonosító használatával"
 
 msgid "Import using GPT labels"
 msgstr "Importálás GPT címkék használatával"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "Be"
@@ -6144,9 +6141,6 @@ msgstr "Felcsatlakozási művelet"
 msgid "List"
 msgstr "Lista"
 
-msgid "List Imported Users"
-msgstr "Importált felhasználók felsorolása"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6203,6 +6197,9 @@ msgstr "Helyi"
 
 msgid "Local Master Browser"
 msgstr "Local Master Browser"
+
+msgid "Local Share"
+msgstr "Helyi megosztás"
 
 msgid "Local Share (Destination)"
 msgstr "Helyi megosztás (cél)"
@@ -6508,6 +6505,9 @@ msgstr "Valaha mért maximális hőmérséklet (fok Celsius)"
 
 msgid "May"
 msgstr "Május"
+
+msgid "Maybe"
+msgstr "Lehetséges"
 
 msgid "Media"
 msgstr "Adathordozó"
@@ -6953,6 +6953,9 @@ msgstr "Nincs adat"
 msgid "No Extent has been configured."
 msgstr "Egy Extent sincs konfigurálva."
 
+msgid "No GEOM vinum information found."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr "IMPI FRU adat nem érhető el."
 
@@ -6962,11 +6965,23 @@ msgstr "IMPI érzékelő adat nem érhető el."
 msgid "No Initiator Group has been configured."
 msgstr "Egy Kezdeményező csoport sincs konfigurálva."
 
+msgid "No JBOD information found."
+msgstr ""
+
 msgid "No Parity"
 msgstr "Nincs paritás"
 
 msgid "No Portal Group has been configured."
 msgstr "Egy Portal csoport sincs konfigurálva."
+
+msgid "No RAID0 information found."
+msgstr ""
+
+msgid "No RAID1 information found."
+msgstr ""
+
+msgid "No RAID5 information found."
+msgstr ""
 
 msgid "No RSYNC Client configured."
 msgstr "RSYNC kliens nincs konfigurálva."
@@ -7614,9 +7629,6 @@ msgstr "Pingkimenet"
 msgid "Ping may take a while, please be patient."
 msgstr "A ping eltarthat egy ideig, kérem várjon türelemmel."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "Winbindd pingelése annak életben levésének megnézéséhez"
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -7964,6 +7976,12 @@ msgstr "Ellátás típusa"
 msgid "Proxy"
 msgstr "Proxy"
 
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Push"
+msgstr "Push"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -7980,9 +7998,6 @@ msgstr "Halk"
 msgid "Quota"
 msgstr "Kvóta"
 
-msgid "RAID 0 Information & Status"
-msgstr "RAID 0 információ & állapot"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -7992,14 +8007,8 @@ msgstr "RAID 0/1/5 információ & állapot"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "RAID 0/1/5 karbantartás"
 
-msgid "RAID 1 Information & Status"
-msgstr "RAID 1 információ & állapot"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "RAID 5 információ & állapot"
 
 msgid "RAID Name"
 msgstr "RAID neve"
@@ -8061,11 +8070,20 @@ msgstr "RAID-Z3 mindegyik vdev-ében 5, 7 vagy 11 lemeznek kell lennie."
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr ""
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr ""
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr ""
 
 msgid "RAM Disk"
 msgstr "Memórialemez"
@@ -8111,9 +8129,6 @@ msgstr "RSYNC kliens  információ & állapot"
 
 msgid "RSYNC Events"
 msgstr "RSYNC események"
-
-msgid "RSYNC client number"
-msgstr "RSYNC kliens száma"
 
 msgid "RSYNC log"
 msgstr "RSYNC napló"
@@ -8276,6 +8291,12 @@ msgstr "Távoli Rsync démon"
 msgid "Remote Rsync Server"
 msgstr "Távoli Rsync Kiszolgáló"
 
+msgid "Remote Server Address"
+msgstr "Távoli szerver címe"
+
+msgid "Remote Share Name"
+msgstr "Távoli megosztás neve"
+
 msgid "Remote Syslog Messages"
 msgstr "Távoli rendszernapló-üzenetek"
 
@@ -8293,12 +8314,6 @@ msgid ""
 msgstr ""
 "Távoli felügyeleti felhasználónév. Ugyanannak kell lennie a mester és a "
 "szolga rendszeren."
-
-msgid "Remote server address"
-msgstr "Távoli szerver címe"
-
-msgid "Remote share name configured"
-msgstr "Távoli megosztás nevét sikeresen beállította."
 
 msgid "Removable"
 msgstr "Eltávolítható"
@@ -8430,8 +8445,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Korlátozott - Összes örökítése, kivéve 'ACL írása' és 'tulajdonos módosítása'"
 
-msgid "Results for net rpc testjoin"
-msgstr "Net prc tesztcsatlakozás eredménye"
+msgid "Result of testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Utolsó önellenőrzés eredményei"
@@ -10730,9 +10745,6 @@ msgstr "Soros vagy USB port, ahová a második szünetmentes csatlakozik."
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "A szerver időkiszolgálóként viselkedjen a Windows kliensek felé."
 
-msgid "The server is halting now."
-msgstr "A szerver most leáll."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 "A szerver gyári alapértékeit visszaállítottuk és a rendszer hamarosan "
@@ -10740,6 +10752,9 @@ msgstr ""
 
 msgid "The server is rebooting now."
 msgstr "A szerver újraindul."
+
+msgid "The server is shutting down now."
+msgstr "A szerver most leáll."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
@@ -11676,6 +11691,9 @@ msgstr "Csapdák"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr "Megbízható domainek"
 
@@ -12493,6 +12511,9 @@ msgstr "Felhasználó"
 msgid "Wildcard"
 msgstr "Helyettesítő karakter"
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Vezetéknélküli beállítások"
 
@@ -12836,6 +12857,9 @@ msgstr "nem elérhető"
 msgid "network traffic"
 msgstr "Hálózati forgalom"
 
+msgid "no pools available"
+msgstr ""
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -12895,3 +12919,15 @@ msgstr "használatban"
 
 msgid "visible"
 msgstr "látható"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Megosztott titok ellenőrzése"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Importált felhasználók felsorolása"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "Winbindd pingelése annak életben levésének megnézéséhez"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Net prc tesztcsatlakozás eredménye"

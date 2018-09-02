@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-08 15:48+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-30 16:09+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:49+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -1739,9 +1739,6 @@ msgstr "Kontrollera System|Grundinställningar innan du initierar"
 msgid "Check and replace cable"
 msgstr "Kontrollera och byt kabel"
 
-msgid "Check shared secret"
-msgstr "Kontrollera delad hemlighet"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr "Kontrollera FreeBSD dokumentationen för detaljer kring TCP Wrappers."
@@ -1961,9 +1958,6 @@ msgstr "Innehåll"
 
 msgid "Content Locations"
 msgstr "Innehållsplatser"
-
-msgid "Continue"
-msgstr "Fortsätt"
 
 msgid "Control"
 msgstr "Kontroll"
@@ -2874,14 +2868,11 @@ msgstr "Upptäckta diskar"
 msgid "Detected Language:"
 msgstr "Detekterat språk:"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Upptäckta RSYNC Fjärrutdelningar"
+msgid "Detected Remote Shares"
+msgstr "Upptäckta fjärrutdelningar"
 
 msgid "Detected an error while importing."
 msgstr "Ett fel har upptäckts vid importeringen."
-
-msgid "Detected shares on this server"
-msgstr "Upptäckta utdelningar på denna server"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4981,6 +4972,9 @@ msgstr "GEOM mjukvaru RAID"
 msgid "GEOM VINUM Software RAID"
 msgstr "GEOM VINUM mjuvaru RAID"
 
+msgid "GEOM vinum"
+msgstr "GEOM vinum"
+
 msgid "GID"
 msgstr "GID"
 
@@ -5505,6 +5499,9 @@ msgstr "Importera genom att använda GPT ID"
 
 msgid "Import using GPT labels"
 msgstr "Importera genom att använda GPT etiketter"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "I"
@@ -6105,9 +6102,6 @@ msgstr "Åtgärd när länken kommer upp"
 msgid "List"
 msgstr "Lista"
 
-msgid "List Imported Users"
-msgstr "Lista importerade användare"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6162,6 +6156,9 @@ msgstr "Lokal"
 
 msgid "Local Master Browser"
 msgstr "Lokal prioriterad bläddrare (Local Master Browser)"
+
+msgid "Local Share"
+msgstr "Lokal utdelning"
 
 msgid "Local Share (Destination)"
 msgstr "Lokal utdelning (Destination)"
@@ -6462,6 +6459,9 @@ msgstr "Högsta uppmätta temperatur (grader C)"
 
 msgid "May"
 msgstr "maj"
+
+msgid "Maybe"
+msgstr "Kanske"
 
 msgid "Media"
 msgstr "Media"
@@ -6903,6 +6903,9 @@ msgstr "Ingen data"
 msgid "No Extent has been configured."
 msgstr "Inga utökningar har konfigurerats."
 
+msgid "No GEOM vinum information found."
+msgstr "Ingen GEOM vinum information hittad."
+
 msgid "No IPMI FRU data available."
 msgstr "Ingen IPMI FRU data tillgänglig"
 
@@ -6912,11 +6915,23 @@ msgstr "Ingen IPMI sensordata tillgänglig."
 msgid "No Initiator Group has been configured."
 msgstr "Ingen Intierargrupp har konfigurerats."
 
+msgid "No JBOD information found."
+msgstr "Ingen JBOD information hittad."
+
 msgid "No Parity"
 msgstr "Ingen paritet"
 
 msgid "No Portal Group has been configured."
 msgstr "Ingen Portalgrupp har konfigurerats."
+
+msgid "No RAID0 information found."
+msgstr "Ingen RAID0 information hittad."
+
+msgid "No RAID1 information found."
+msgstr "Ingen RAID1 information hittad."
+
+msgid "No RAID5 information found."
+msgstr "Ingen RAID5 information hittad."
 
 msgid "No RSYNC Client configured."
 msgstr "Ingen RSYNC klient är konfigurerad."
@@ -7557,9 +7572,6 @@ msgstr "Pingsvar"
 msgid "Ping may take a while, please be patient."
 msgstr "Pink kan ta ett tag, vänligen ha tålamod."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "Pinga winbindd  för att se om den lever"
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -7907,6 +7919,12 @@ msgstr "Tillhandahållen typ"
 msgid "Proxy"
 msgstr "Proxy"
 
+msgid "Pull"
+msgstr "Hämta"
+
+msgid "Push"
+msgstr "Skicka"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -7921,9 +7939,6 @@ msgstr "Tyst"
 msgid "Quota"
 msgstr "Kvot"
 
-msgid "RAID 0 Information & Status"
-msgstr "RAID 0 Information & Status"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -7933,14 +7948,8 @@ msgstr "RAID 0/1/5 Information & Status"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "RAID 0/1/5 Underhåll"
 
-msgid "RAID 1 Information & Status"
-msgstr "RAID 1 Information & Status"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "RAID 5 Information & Status"
 
 msgid "RAID Name"
 msgstr "RAID Namn"
@@ -8002,11 +8011,20 @@ msgstr "RAID-Z3 skall ha 5, 7, eller 11 diskar i varje vdev."
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr "RAID0 Information & Status"
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr "RAID1 Information & Status"
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr "RAID5 Information & Status"
 
 msgid "RAM Disk"
 msgstr "RAM-disk"
@@ -8052,9 +8070,6 @@ msgstr "RSYNC Klient Information & Status"
 
 msgid "RSYNC Events"
 msgstr "RSYNC-händelser"
-
-msgid "RSYNC client number"
-msgstr "RSYNC klientnummer"
 
 msgid "RSYNC log"
 msgstr "RSYNC logg"
@@ -8216,6 +8231,12 @@ msgstr "Fjärr Rsync Demon"
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
 
+msgid "Remote Server Address"
+msgstr "Fjärrserveradress"
+
+msgid "Remote Share Name"
+msgstr "Namn på fjärrutdelning"
+
 msgid "Remote Syslog Messages"
 msgstr "Fjärrsysloggmedelanden"
 
@@ -8231,12 +8252,6 @@ msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
 msgstr ""
 "Användarnamn för fjärrövervakning. Måste vara lika på master och slavsystem."
-
-msgid "Remote server address"
-msgstr "Fjärrserveradress"
-
-msgid "Remote share name configured"
-msgstr "Fjärrutdelningsnamn som konfigurerats"
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -8365,8 +8380,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restricted - Ärv alla egenskaper utom \"skriv ACL\" och \"byt ägare\""
 
-msgid "Results for net rpc testjoin"
-msgstr "Resultatet av net rcp testjoin"
+msgid "Result of testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Resultat från senaste självtest"
@@ -10644,15 +10659,15 @@ msgstr "Serie- eller USB-porten där UPS två är ansluten."
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "Servern annonserar sig som tidserver för Windowsklienter."
 
-msgid "The server is halting now."
-msgstr "Servern stoppas nu."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 "Servern är nu återställd till fabriksinställningarna och kommer startas om"
 
 msgid "The server is rebooting now."
 msgstr "Servern startar om nu."
+
+msgid "The server is shutting down now."
+msgstr "Servern stoppas nu."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
@@ -11590,6 +11605,9 @@ msgstr "Fällor"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr "Pålitliga Domäner"
 
@@ -12407,6 +12425,9 @@ msgstr "Vem"
 msgid "Wildcard"
 msgstr "Jokertecken"
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Trådlös konfiguration"
 
@@ -12754,6 +12775,9 @@ msgstr "ej tillgängligt"
 msgid "network traffic"
 msgstr "nätverlstrafik"
 
+msgid "no pools available"
+msgstr "inga pooler tillgängliga"
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -12813,3 +12837,15 @@ msgstr "använt av"
 
 msgid "visible"
 msgstr "synlig"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Kontrollera delad hemlighet"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Lista importerade användare"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "Pinga winbindd  för att se om den lever"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Resultatet av net rcp testjoin"

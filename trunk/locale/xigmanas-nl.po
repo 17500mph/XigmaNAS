@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-08 16:16+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-09-02 15:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:49+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -466,7 +466,7 @@ msgid "ARP Tables List"
 msgstr "ARP tabel lijst"
 
 msgid "Accept remote syslog messages."
-msgstr "Remote syslog berichten accepteren."
+msgstr "Externe syslog berichten accepteren."
 
 msgid "Access"
 msgstr "Toegang"
@@ -1791,9 +1791,6 @@ msgstr "Controleer Systeem|Algemene Instellingen alvorens te initialiseren"
 msgid "Check and replace cable"
 msgstr "Controleer en vervang de kabel"
 
-msgid "Check shared secret"
-msgstr "Controleer gedeelde wachtwoord"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -2018,9 +2015,6 @@ msgstr "Mediabibliotheek"
 
 msgid "Content Locations"
 msgstr "Content Locatie"
-
-msgid "Continue"
-msgstr "Doorgaan"
 
 msgid "Control"
 msgstr "Besturing"
@@ -2961,14 +2955,11 @@ msgstr "Gedetecteerde Schijven"
 msgid "Detected Language:"
 msgstr "Gedetecteerde Taal:"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Gedetecteerde RSYNC Externe Delingen"
+msgid "Detected Remote Shares"
+msgstr "Gedetecteerde Externe Delingen"
 
 msgid "Detected an error while importing."
 msgstr "Er is een fout gedetecteerd tijdens het importeren."
-
-msgid "Detected shares on this server"
-msgstr "Gedetecteerde delingen op deze server"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4295,7 +4286,7 @@ msgid "Enable recycle bin."
 msgstr "Inschakelen prullenbak."
 
 msgid "Enable remote monitoring of the local connected UPS."
-msgstr "Inschakelen remote monitoring voor de lokaal verbonden UPS."
+msgstr "Inschakelen externe monitoring voor de lokaal verbonden UPS."
 
 msgid ""
 "Enable reverse DNS lookup performed on the remote host's IP address for "
@@ -4602,7 +4593,7 @@ msgid ""
 "connected to. (this also can be a remote host)"
 msgstr ""
 "Vul de UPS ID en host IP-adres in van de computer waarop de UPS is "
-"aangesloten. (dit kan ook een externe host te zijn)"
+"aangesloten. (dit kan ook een extern host te zijn)"
 
 msgid "Enter the command"
 msgstr "Geef een opdracht op"
@@ -5095,6 +5086,9 @@ msgstr "GEOM Software RAID"
 
 msgid "GEOM VINUM Software RAID"
 msgstr "GEOM VINUM Software RAID"
+
+msgid "GEOM vinum"
+msgstr "GEOM vinum"
 
 msgid "GID"
 msgstr "GID"
@@ -5636,6 +5630,9 @@ msgstr "Importeer gebruikte GPT ID"
 
 msgid "Import using GPT labels"
 msgstr "Importeer gebruikte GPT labels"
+
+msgid "Imported Users"
+msgstr "Geïmporteerde Gebruikers"
 
 msgid "In"
 msgstr "In"
@@ -6250,9 +6247,6 @@ msgstr "Link Up Actie"
 msgid "List"
 msgstr "Lijst"
 
-msgid "List Imported Users"
-msgstr "Lijst Geimporteerde Gebruikers"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6310,6 +6304,9 @@ msgstr "Lokaal"
 
 msgid "Local Master Browser"
 msgstr "Lokaal Hoofd Browser"
+
+msgid "Local Share"
+msgstr "Lokaal Gedeeld"
 
 msgid "Local Share (Destination)"
 msgstr "Lokale Deling (Bestemming)"
@@ -6623,6 +6620,9 @@ msgstr "Maximum temperatuur gezien (graden C)"
 
 msgid "May"
 msgstr "Mei"
+
+msgid "Maybe"
+msgstr "Misschien"
 
 msgid "Media"
 msgstr "Media"
@@ -7069,6 +7069,9 @@ msgstr "Geen Data"
 msgid "No Extent has been configured."
 msgstr "Er is geen Extent geconfigureerd."
 
+msgid "No GEOM vinum information found."
+msgstr "Geen GEOM vinum informatie gevonden."
+
 msgid "No IPMI FRU data available."
 msgstr "Er is geen IPMI FRU data beschikbaar."
 
@@ -7078,11 +7081,23 @@ msgstr "Er is geen IPMI Sensor data beschikbaar."
 msgid "No Initiator Group has been configured."
 msgstr "Er is geen Initiator Groep geconfigureerd."
 
+msgid "No JBOD information found."
+msgstr "Geen JBOD informatie gevonden."
+
 msgid "No Parity"
 msgstr "Geen Pariteit"
 
 msgid "No Portal Group has been configured."
 msgstr "Er is geen Portaal Groep geconfigureerd."
+
+msgid "No RAID0 information found."
+msgstr "Geen RAID0 informatie gevonden."
+
+msgid "No RAID1 information found."
+msgstr "Geen RAID1 informatie gevonden."
+
+msgid "No RAID5 information found."
+msgstr "Geen RAID5 informatie gevonden."
 
 msgid "No RSYNC Client configured."
 msgstr "Er is geen RSYNC Cliënt geconfigureerd."
@@ -7372,7 +7387,7 @@ msgid ""
 "access to real accounts."
 msgstr ""
 "Alleen anonieme gebruikers toegestaan. Gebruik deze optie voor een openbare "
-"FTP site zonder remote FTP toegang naar echte accounts."
+"FTP site zonder extern FTP toegang naar echte accounts."
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
@@ -7732,9 +7747,6 @@ msgstr "Ping Resultaat"
 msgid "Ping may take a while, please be patient."
 msgstr "Ping kan even duren, wees geduldig a.u.b."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "Ping winbindd om te kijken of deze in leven is"
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceer Routes"
 
@@ -8083,6 +8095,12 @@ msgstr "Provisioning Type"
 msgid "Proxy"
 msgstr "Proxy"
 
+msgid "Pull"
+msgstr "Ophalen"
+
+msgid "Push"
+msgstr "Wegbrengen"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -8099,9 +8117,6 @@ msgstr "Stil"
 msgid "Quota"
 msgstr "Quotum"
 
-msgid "RAID 0 Information & Status"
-msgstr "RAID 0 Informatie & Status"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -8111,14 +8126,8 @@ msgstr "RAID 0/1/5 Informatie & Status"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "RAID 0/1/5 Onderhoud"
 
-msgid "RAID 1 Information & Status"
-msgstr "RAID 1 Informatie & Status"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "RAID 5 Informatie & Status"
 
 msgid "RAID Name"
 msgstr "RAID Naam"
@@ -8180,11 +8189,20 @@ msgstr "RAID-Z3 zou 5, 7, of 11 schijven in elke vdev moeten gebruiken."
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr "RAID0 Informatie & Status"
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr "RAID1 Informatie & Status"
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr "RAID5 Informatie & Status"
 
 msgid "RAM Disk"
 msgstr "RAM Schijf"
@@ -8230,9 +8248,6 @@ msgstr "RSYNC Cliënt Informatie & Status"
 
 msgid "RSYNC Events"
 msgstr "RSYNC Gebeurtenissen"
-
-msgid "RSYNC client number"
-msgstr "RSYNC cliëntnummer"
 
 msgid "RSYNC log"
 msgstr "RSYNC log"
@@ -8380,19 +8395,25 @@ msgid "Remaining battery runtime"
 msgstr "Resterende batterijduur"
 
 msgid "Remote Address"
-msgstr "Remote Adres"
+msgstr "Extern Adres"
 
 msgid "Remote Module (Source)"
-msgstr "Remote Module (Bron)"
+msgstr "Externe Module (Bron)"
 
 msgid "Remote Monitoring"
-msgstr "Remote Monitoring"
+msgstr "Externe Monitoring"
 
 msgid "Remote Rsync Daemon"
-msgstr "Remote Rsync Daemon"
+msgstr "Externe Rsync Daemon"
 
 msgid "Remote Rsync Server"
-msgstr "Remote Rsync Server"
+msgstr "Externe Rsync Server"
+
+msgid "Remote Server Address"
+msgstr "Externe Server Adres"
+
+msgid "Remote Share Name"
+msgstr "Externe Deelnaam"
 
 msgid "Remote Syslog Messages"
 msgstr "Externe Syslog Berichten"
@@ -8411,12 +8432,6 @@ msgid ""
 msgstr ""
 "Externe monitoring gebruikersnaam. Moet gelijk zijn op zowel de master als "
 "de slave systeem."
-
-msgid "Remote server address"
-msgstr "Externe server adres"
-
-msgid "Remote share name configured"
-msgstr "Geconfigureerd externe deelnaam"
 
 msgid "Removable"
 msgstr "Verwijderbaar"
@@ -8547,8 +8562,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restricted - Alle overnemen maar \"ACL schrijven\" en \"eigenaar veranderen\""
 
-msgid "Results for net rpc testjoin"
-msgstr "Resultaten voor net rpc testjoin:"
+msgid "Result of testjoin"
+msgstr "Resultaat van testjoin"
 
 msgid "Results of last self test"
 msgstr "Resultaten laatste zelftest"
@@ -8648,7 +8663,7 @@ msgstr "Nu Uitvoeren"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
-"Uitvoeren zonder remote rsync daemon te vereisen. (Standaard uitgeschakeld)"
+"Uitvoeren zonder externe rsync daemon te vereisen. (Standaard uitgeschakeld)"
 
 msgid ""
 "Running this service as root is not recommended for security reasons, use at "
@@ -9862,9 +9877,9 @@ msgid ""
 "server. Be sure to set syslogd on the remote server to accept syslog "
 "messages from this server."
 msgstr ""
-"Syslog verstuurd UDP datagrammen naar poort 514 op de gespecificeerde remote "
-"syslog server. Verzeker uzelf er van dat syslogd op de remote server juist "
-"ingesteld is om syslog berichten vanaf deze server te ontvangen."
+"Syslog verstuurd UDP datagrammen naar poort 514 op de gespecificeerde "
+"externe syslog server. Verzeker uzelf er van dat syslogd op de externe "
+"server juist ingesteld is om syslog berichten vanaf deze server te ontvangen."
 
 msgid "System"
 msgstr "Systeem"
@@ -10496,7 +10511,7 @@ msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
-"De map met bestanden die gepubliceerd dienen te worden. De remote server "
+"De map met bestanden die gepubliceerd dienen te worden. De externe server "
 "hoeft de map niet door te geven als onderdeel van de overdracht."
 
 msgid "The disk is currently mounted!"
@@ -10879,15 +10894,15 @@ msgstr "De seriële of USB poort waar de tweede UPS mee verbonden is."
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "De server maakt zich kenbaar als tijdserver voor Windows cliënten."
 
-msgid "The server is halting now."
-msgstr "De server wordt nu gestopt."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 "De server is nu teruggezet naar de fabrieksinstellingen en start opnieuw op."
 
 msgid "The server is rebooting now."
 msgstr "De server is nu bezig met herstarten."
+
+msgid "The server is shutting down now."
+msgstr "De server wordt nu afgesloten."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
@@ -11198,7 +11213,7 @@ msgstr ""
 "te genereren welke nodig is voor de NUT UPS daemon."
 
 msgid "This controls the access a remote host has to this module."
-msgstr "Dit beheerd de toegang een remote host heeft naar deze module."
+msgstr "Dit beheerd de toegang een externe host heeft tot deze module."
 
 msgid "This controls the access to this share with an access password."
 msgstr "Dit bestuurd de toegang tot deze deling met een toegangswachtwoord."
@@ -11289,14 +11304,15 @@ msgstr "Deze optie is alleen van toepassing op GEOM RAID-1."
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
-"Deze optie zorgt ervoor dat rsync de lokale data naar de server kopieert."
+"Deze optie zorgt ervoor dat rsync de lokale data naar de externe server "
+"kopieert."
 
 msgid ""
 "This option causes rsync to update the remote extended attributes to be the "
 "same as the local ones."
 msgstr ""
-"Deze optie zorgt er voor dat rsync de remote externe attributen bijwerkt die "
-"het zelfde zijn als de lokale attributen."
+"Deze optie zorgt er voor dat rsync de externe attributen bijwerkt die het "
+"zelfde zijn als de lokale attributen."
 
 msgid ""
 "This option causes the receiving rsync to set the destination permissions to "
@@ -11855,6 +11871,9 @@ msgstr "Traps"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
+
+msgid "Trust Account Status"
+msgstr "Accountstatus Vertrouwen"
 
 msgid "Trusted Domains"
 msgstr "Vertrouwde Domeinen"
@@ -12661,7 +12680,7 @@ msgid ""
 "attempt to identify the remote username."
 msgstr ""
 "Wanneer een cliënt aanvankelijk verbinding maakt met de server wordt het "
-"ident protocol gebruikt om de remote gebruikersnaam te identificeren."
+"ident protocol gebruikt om de externe gebruikersnaam te identificeren."
 
 msgid "Where to save downloaded data."
 msgstr "Map waarin de gedownloade bestanden opgeslagen worden."
@@ -12685,6 +12704,9 @@ msgstr "Wie"
 
 msgid "Wildcard"
 msgstr "Wildcard"
+
+msgid "Winbindd Availability"
+msgstr "Winbindd Beschikbaarheid"
 
 msgid "Wireless configuration"
 msgstr "Draadloos cofiguratie"
@@ -13041,6 +13063,9 @@ msgstr "n.v.t."
 msgid "network traffic"
 msgstr "Netwerkverkeer"
 
+msgid "no pools available"
+msgstr "geen pools beschikbaar"
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -13100,3 +13125,15 @@ msgstr "gebruikt van"
 
 msgid "visible"
 msgstr "zichtbaar"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Controleer gedeelde wachtwoord"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Lijst Geimporteerde Gebruikers"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "Ping winbindd om te kijken of deze in leven is"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Resultaten voor net rpc testjoin:"

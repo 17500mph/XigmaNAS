@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-08 14:09+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-29 11:20+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -1785,9 +1785,6 @@ msgstr "Vérifier le système | Configuration générale avant d'initialiser"
 msgid "Check and replace cable"
 msgstr "Vérifier et remplace le ou les câbles"
 
-msgid "Check shared secret"
-msgstr "Vérifier le secret partagé"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -2013,9 +2010,6 @@ msgstr "Contenu"
 
 msgid "Content Locations"
 msgstr "Emplacements de contenu"
-
-msgid "Continue"
-msgstr "Continuer"
 
 msgid "Control"
 msgstr "Contrôle"
@@ -2950,14 +2944,11 @@ msgstr "Disques détectés"
 msgid "Detected Language:"
 msgstr "Language détecté"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Partages Distants RSYNC Détectés"
+msgid "Detected Remote Shares"
+msgstr "Partages Distants Détectés"
 
 msgid "Detected an error while importing."
 msgstr "Détection d'une erreur à l'importation"
-
-msgid "Detected shares on this server"
-msgstr "Partages détectés sur ce serveur"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -5101,6 +5092,9 @@ msgstr "GEOM RAID Logiciel"
 msgid "GEOM VINUM Software RAID"
 msgstr "RAID logiciel"
 
+msgid "GEOM vinum"
+msgstr "GEOM vinum"
+
 msgid "GID"
 msgstr "GID"
 
@@ -5637,6 +5631,9 @@ msgstr "Importer en utilisant les ID GPT"
 
 msgid "Import using GPT labels"
 msgstr "Importer en utilisant les labels GPT"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "Entrée"
@@ -6262,9 +6259,6 @@ msgstr "Faire monter le lien"
 msgid "List"
 msgstr "Liste"
 
-msgid "List Imported Users"
-msgstr "Lister les utilisateurs importés"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6322,6 +6316,9 @@ msgstr "Local"
 
 msgid "Local Master Browser"
 msgstr "Maître explorateur local"
+
+msgid "Local Share"
+msgstr "Partage Local"
 
 msgid "Local Share (Destination)"
 msgstr "Partage local (destination)"
@@ -6632,6 +6629,9 @@ msgstr "Température maximum vu (degrés Celsius)"
 
 msgid "May"
 msgstr "Mai"
+
+msgid "Maybe"
+msgstr "Peut-être"
 
 msgid "Media"
 msgstr "Norme"
@@ -7079,6 +7079,9 @@ msgstr "Pas de données"
 msgid "No Extent has been configured."
 msgstr "Aucune extension n'a été configurée"
 
+msgid "No GEOM vinum information found."
+msgstr "Aucune information  GEOM vinum trouvée."
+
 msgid "No IPMI FRU data available."
 msgstr "Pas de données FRU IPMI disponibles."
 
@@ -7088,11 +7091,23 @@ msgstr "Aucune donnée de capteur IPMI disponible."
 msgid "No Initiator Group has been configured."
 msgstr "Aucun Groupe Initiateur n'a été configuré."
 
+msgid "No JBOD information found."
+msgstr "Aucune information JBOD trouvée."
+
 msgid "No Parity"
 msgstr "Pas de parité"
 
 msgid "No Portal Group has been configured."
 msgstr "Aucun Groupe Portail n'a été configuré."
+
+msgid "No RAID0 information found."
+msgstr "Aucune information RAID0 trouvée."
+
+msgid "No RAID1 information found."
+msgstr "Aucune information RAID1 trouvée."
+
+msgid "No RAID5 information found."
+msgstr "Aucune information RAID5 trouvée."
 
 msgid "No RSYNC Client configured."
 msgstr "Aucun client RSYNC configuré"
@@ -7739,9 +7754,6 @@ msgstr "Sortie Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "Ping peut prendre un certain temps, s'il vous plaît soyez patient."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "PIng du lien windows pour voir s'il est actif"
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -8096,6 +8108,12 @@ msgstr "Type de provisioning"
 msgid "Proxy"
 msgstr "Proxy"
 
+msgid "Pull"
+msgstr "Extraction"
+
+msgid "Push"
+msgstr "Envoi"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -8112,9 +8130,6 @@ msgstr "Silencieux"
 msgid "Quota"
 msgstr "Quota"
 
-msgid "RAID 0 Information & Status"
-msgstr "RAID 0 Information & Statut"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -8124,14 +8139,8 @@ msgstr "RAID 0/1/5 Information & Statut"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "Maintenance RAID 0/1/5"
 
-msgid "RAID 1 Information & Status"
-msgstr "RAID 1 Information & Statut"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "RAID 5 Information & Statut"
 
 msgid "RAID Name"
 msgstr "Nom RAID"
@@ -8193,11 +8202,20 @@ msgstr "RAID-Z3 doit avoir 5, 7 ou 11 disques dans chaque vdev."
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr "RAID0 Informations & Statut"
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr "RAID0 informations et statut"
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr "RAID5 informations et statut"
 
 msgid "RAM Disk"
 msgstr "Disque en mémoire"
@@ -8243,9 +8261,6 @@ msgstr "Information & Statut du client RSYNC"
 
 msgid "RSYNC Events"
 msgstr "Evénements RSYNC"
-
-msgid "RSYNC client number"
-msgstr "Nombre de client RSYNC"
 
 msgid "RSYNC log"
 msgstr "Log RSYNC"
@@ -8408,6 +8423,12 @@ msgstr "Démon Rsync Distant"
 msgid "Remote Rsync Server"
 msgstr "Serveur Rsync distant"
 
+msgid "Remote Server Address"
+msgstr "Adresse du Serveur Distant"
+
+msgid "Remote Share Name"
+msgstr "Nom du Partage Distant"
+
 msgid "Remote Syslog Messages"
 msgstr "Messages Syslog distants"
 
@@ -8425,12 +8446,6 @@ msgid ""
 msgstr ""
 "Nom d'utilisateur de contrôle à distance. Doit être le même sur le système "
 "maître et esclave."
-
-msgid "Remote server address"
-msgstr "Adresse du serveur distant"
-
-msgid "Remote share name configured"
-msgstr "Nom de partage distant configuré"
 
 msgid "Removable"
 msgstr "Amovible"
@@ -8561,8 +8576,8 @@ msgstr ""
 "Limité - Hériter tous, mais \"droit d'écrire \" et \"propriétaire du "
 "changement\""
 
-msgid "Results for net rpc testjoin"
-msgstr "Résultats pour le test de lien net rpc"
+msgid "Result of testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Résultat du dernier auto-test"
@@ -10901,15 +10916,15 @@ msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 "Le serveur se présente comme un serveur de temps pour les clients Windows."
 
-msgid "The server is halting now."
-msgstr "Le serveur s'arrête maintenant."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 "Le serveur est maintenant réinitialisé aux valeurs par défaut et redémarre."
 
 msgid "The server is rebooting now."
 msgstr "Le serveur redémarre maintenant"
+
+msgid "The server is shutting down now."
+msgstr "Le serveur s'arrête maintenant."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Le serveur sera réinitialisé aux valeurs par défaut et redémarrera."
@@ -11871,6 +11886,9 @@ msgstr "Traps"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol (TFTP)"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr "Domaines de confiance"
 
@@ -12703,6 +12721,9 @@ msgstr "Utilisateur"
 msgid "Wildcard"
 msgstr "Caractère de remplacement"
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Configuration sans fil"
 
@@ -13057,6 +13078,9 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr "trafic réseau"
 
+msgid "no pools available"
+msgstr "pas de pools disponibles"
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -13118,3 +13142,15 @@ msgstr "utilisé de"
 
 msgid "visible"
 msgstr "visible"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Vérifier le secret partagé"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Lister les utilisateurs importés"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "PIng du lien windows pour voir s'il est actif"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Résultats pour le test de lien net rpc"

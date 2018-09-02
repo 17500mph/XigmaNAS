@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
 "PO-Revision-Date: 2018-07-06 09:53+0000\n"
 "Last-Translator: Stefan Vasilev <sadefa@abv.bg>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
 "X-Poedit-Language: Bulgarian\n"
@@ -1701,9 +1701,6 @@ msgstr "Проверка на системата | Общи настройки �
 msgid "Check and replace cable"
 msgstr "Проверете и сменете кабела"
 
-msgid "Check shared secret"
-msgstr ""
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -1919,9 +1916,6 @@ msgid "Content"
 msgstr "Съдържание"
 
 msgid "Content Locations"
-msgstr ""
-
-msgid "Continue"
 msgstr ""
 
 msgid "Control"
@@ -2800,14 +2794,11 @@ msgstr ""
 msgid "Detected Language:"
 msgstr "Засечен Език:"
 
-msgid "Detected RSYNC Remote Shares"
+msgid "Detected Remote Shares"
 msgstr ""
 
 msgid "Detected an error while importing."
 msgstr "Засечена греша докато се внася."
-
-msgid "Detected shares on this server"
-msgstr ""
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -4823,6 +4814,9 @@ msgstr ""
 msgid "GEOM VINUM Software RAID"
 msgstr ""
 
+msgid "GEOM vinum"
+msgstr ""
+
 msgid "GID"
 msgstr ""
 
@@ -5303,6 +5297,9 @@ msgid "Import using GPT ID"
 msgstr ""
 
 msgid "Import using GPT labels"
+msgstr ""
+
+msgid "Imported Users"
 msgstr ""
 
 msgid "In"
@@ -5865,9 +5862,6 @@ msgstr ""
 msgid "List"
 msgstr ""
 
-msgid "List Imported Users"
-msgstr ""
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -5917,6 +5911,9 @@ msgstr "Локален"
 
 msgid "Local Master Browser"
 msgstr "Local Master Browser"
+
+msgid "Local Share"
+msgstr ""
 
 msgid "Local Share (Destination)"
 msgstr ""
@@ -6209,6 +6206,9 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr ""
 
 msgid "May"
+msgstr ""
+
+msgid "Maybe"
 msgstr ""
 
 msgid "Media"
@@ -6639,6 +6639,9 @@ msgstr ""
 msgid "No Extent has been configured."
 msgstr ""
 
+msgid "No GEOM vinum information found."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr ""
 
@@ -6648,10 +6651,22 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr ""
 
+msgid "No JBOD information found."
+msgstr ""
+
 msgid "No Parity"
 msgstr ""
 
 msgid "No Portal Group has been configured."
+msgstr ""
+
+msgid "No RAID0 information found."
+msgstr ""
+
+msgid "No RAID1 information found."
+msgstr ""
+
+msgid "No RAID5 information found."
 msgstr ""
 
 msgid "No RSYNC Client configured."
@@ -7266,9 +7281,6 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive"
-msgstr ""
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -7605,6 +7617,12 @@ msgstr ""
 msgid "Proxy"
 msgstr ""
 
+msgid "Pull"
+msgstr ""
+
+msgid "Push"
+msgstr ""
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -7619,9 +7637,6 @@ msgstr ""
 msgid "Quota"
 msgstr ""
 
-msgid "RAID 0 Information & Status"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr ""
 
@@ -7631,13 +7646,7 @@ msgstr ""
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1 Information & Status"
-msgstr ""
-
 msgid "RAID 5"
-msgstr ""
-
-msgid "RAID 5 Information & Status"
 msgstr ""
 
 msgid "RAID Name"
@@ -7700,10 +7709,19 @@ msgstr ""
 msgid "RAID0"
 msgstr ""
 
+msgid "RAID0 Information & Status"
+msgstr ""
+
 msgid "RAID1"
 msgstr ""
 
+msgid "RAID1 Information & Status"
+msgstr ""
+
 msgid "RAID5"
+msgstr ""
+
+msgid "RAID5 Information & Status"
 msgstr ""
 
 msgid "RAM Disk"
@@ -7743,9 +7761,6 @@ msgid "RSYNC Client Information & Status"
 msgstr ""
 
 msgid "RSYNC Events"
-msgstr ""
-
-msgid "RSYNC client number"
 msgstr ""
 
 msgid "RSYNC log"
@@ -7904,6 +7919,12 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr ""
 
+msgid "Remote Server Address"
+msgstr ""
+
+msgid "Remote Share Name"
+msgstr ""
+
 msgid "Remote Syslog Messages"
 msgstr ""
 
@@ -7916,12 +7937,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote server address"
-msgstr ""
-
-msgid "Remote share name configured"
 msgstr ""
 
 msgid "Removable"
@@ -8046,7 +8061,7 @@ msgstr ""
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin"
+msgid "Result of testjoin"
 msgstr ""
 
 msgid "Results of last self test"
@@ -10119,13 +10134,13 @@ msgstr ""
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 
-msgid "The server is halting now."
-msgstr ""
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server is rebooting now."
+msgstr ""
+
+msgid "The server is shutting down now."
 msgstr ""
 
 msgid "The server will be reset to factory defaults and will reboot."
@@ -10913,6 +10928,9 @@ msgstr ""
 msgid "Trivial File Transfer Protocol"
 msgstr ""
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr ""
 
@@ -11679,6 +11697,9 @@ msgstr ""
 msgid "Wildcard"
 msgstr ""
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr ""
 
@@ -12002,6 +12023,9 @@ msgid "n/a"
 msgstr "няма"
 
 msgid "network traffic"
+msgstr ""
+
+msgid "no pools available"
 msgstr ""
 
 msgid "noVNC"

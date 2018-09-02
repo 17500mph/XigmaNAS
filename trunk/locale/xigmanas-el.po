@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-08 13:16+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-29 11:11+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -1808,9 +1808,6 @@ msgstr "Ελέγξτε το Σύστημα|Γενικές Ρυθμίσεις π�
 msgid "Check and replace cable"
 msgstr "Ελέγξτε και αντικαταστήστε το καλώδιο"
 
-msgid "Check shared secret"
-msgstr "Έλεγχος κοινόχρηστου μυστικού"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -2036,9 +2033,6 @@ msgstr "Περιεχόμενα"
 
 msgid "Content Locations"
 msgstr "Τοποθεσίες Περιεχομένου"
-
-msgid "Continue"
-msgstr "Συνέχεια"
 
 msgid "Control"
 msgstr "Έλεγχος"
@@ -2989,14 +2983,11 @@ msgstr "Δίσκοι που Ανιχνεύθηκαν"
 msgid "Detected Language:"
 msgstr "Γλώσσα που ανιχνεύθηκε:"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Εντοπισμένα Απομακρυσμένα Κοινόχρηστα RSYNC"
+msgid "Detected Remote Shares"
+msgstr "Εντοπισμένα Απομακρυσμένα Κοινόχρηστα"
 
 msgid "Detected an error while importing."
 msgstr "Ανιχνεύθηκε ένα σφάλμα κατά τη διαδικασία της εισαγωγής."
-
-msgid "Detected shares on this server"
-msgstr "Ανιχνευμένα Κοινόχρηστα σε αυτόν τον διακομιστή"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -5147,6 +5138,9 @@ msgstr "GEOM RAID μέσω λογισμικού"
 msgid "GEOM VINUM Software RAID"
 msgstr "RAID μέσω λογισμικού GEOM VINUM"
 
+msgid "GEOM vinum"
+msgstr "GEOM vinum"
+
 msgid "GID"
 msgstr "ID Ομάδας"
 
@@ -5695,6 +5689,9 @@ msgstr "Εισαγωγή με τη χρήση  GPT ID"
 
 msgid "Import using GPT labels"
 msgstr "Εισαγωγή με τη χρήση ετικετών GPT"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "Μέσα"
@@ -6322,9 +6319,6 @@ msgstr "Ενέργεια Σύνδεσης Πάνω"
 msgid "List"
 msgstr "Λίστα"
 
-msgid "List Imported Users"
-msgstr "Εμφάνιση Χρηστών που εισήχθησαν"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6382,6 +6376,9 @@ msgstr "Τοπικό"
 
 msgid "Local Master Browser"
 msgstr "Κεντρικός Τοπικός Περιηγητής"
+
+msgid "Local Share"
+msgstr "Τοπικό Κοινόχρηστο"
 
 msgid "Local Share (Destination)"
 msgstr "Τοπικό Κοινόχρηστο (Προορισμός)"
@@ -6696,6 +6693,9 @@ msgstr "Μέγιστη εμφανιζόμενη θερμοκρασία (βαθμ
 
 msgid "May"
 msgstr "Μάι."
+
+msgid "Maybe"
+msgstr "Ίσως"
 
 msgid "Media"
 msgstr "Τύπος μέσου"
@@ -7144,6 +7144,9 @@ msgstr "Δεν υπάρχουν Δεδομένα"
 msgid "No Extent has been configured."
 msgstr "Δεν έχει ρυθμιστεί κάποια Επέκταση."
 
+msgid "No GEOM vinum information found."
+msgstr "Δεν βρέθηκαν πληροφορίες για GEOM vinum."
+
 msgid "No IPMI FRU data available."
 msgstr "Δεν υπάρχουν διαθέσιμα δεδομένα IPMI FRU."
 
@@ -7153,11 +7156,23 @@ msgstr "Δεν υπάρχουν διαθέσιμα δεδομένα αισθητ
 msgid "No Initiator Group has been configured."
 msgstr "Δεν έχει ρυθμιστεί κάποια Ομάδα Εκκινητή."
 
+msgid "No JBOD information found."
+msgstr "Δεν βρέθηκαν πληροφορίες για JBOD."
+
 msgid "No Parity"
 msgstr "Χωρίς Parity"
 
 msgid "No Portal Group has been configured."
 msgstr "Δεν έχει ρυθμιστεί κάποια Ομάδα Portal"
+
+msgid "No RAID0 information found."
+msgstr "Δεν βρέθηκαν πληροφορίες για RAID0."
+
+msgid "No RAID1 information found."
+msgstr "Δεν βρέθηκαν πληροφορίες για RAID1."
+
+msgid "No RAID5 information found."
+msgstr "Δεν βρέθηκαν πληροφορίες για RAID5."
 
 msgid "No RSYNC Client configured."
 msgstr "Δε ρυθμίστηκε Πελάτης RSYNC."
@@ -7810,9 +7825,6 @@ msgstr "Έξοδος Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "Το ping μπορεί να διαρκέσει λίγο, παρακαλώ κάντε υπομονή."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "Ping στο winbindd  για να εξακριβωθεί ότι είναι ενεργό"
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -8169,6 +8181,12 @@ msgstr "Τύπος Provisioning"
 msgid "Proxy"
 msgstr "Διακομιστής μεσολάβησης"
 
+msgid "Pull"
+msgstr "Λήψη"
+
+msgid "Push"
+msgstr "Μεταφορά"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -8185,9 +8203,6 @@ msgstr "Λειτουργία σιγής"
 msgid "Quota"
 msgstr "Όριο δίσκου"
 
-msgid "RAID 0 Information & Status"
-msgstr "Πληροφορίες & Κατάσταση RAID 0"
-
 msgid "RAID 0/1/5"
 msgstr "Συστοιχία RAID 0/1/5"
 
@@ -8197,14 +8212,8 @@ msgstr "Πληροφορίες & Κατάσταση RAID 0/1/5"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "Συντήρηση RAID 0/1/5"
 
-msgid "RAID 1 Information & Status"
-msgstr "Πληροφορίες & Κατάσταση RAID 1"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "Πληροφορίες & Κατάσταση RAID 5"
 
 msgid "RAID Name"
 msgstr "Όνομα RAID"
@@ -8266,11 +8275,20 @@ msgstr "Το RAID-Z3 πρέπει να έχει 5,7, ή 11 δίσκους σε �
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr "Πληροφορίες και Κατάσταση RAID0"
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr "Πληροφορίες και Κατάσταση RAID1"
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr "Πληροφορίες και Κατάσταση RAID5"
 
 msgid "RAM Disk"
 msgstr "Δίσκος RAM"
@@ -8316,9 +8334,6 @@ msgstr "Πληροφορίες & Κατάσταση Πελάτη RSYNC"
 
 msgid "RSYNC Events"
 msgstr "Συμβάντα RSYNC"
-
-msgid "RSYNC client number"
-msgstr "Αριθμός πελάτη RSYNC"
 
 msgid "RSYNC log"
 msgstr "Καταγραφή RSYNC"
@@ -8481,6 +8496,12 @@ msgstr "Απομακρυσμένος Δαίμονας Rsync"
 msgid "Remote Rsync Server"
 msgstr "Απομακρυσμένος διακομιστής Rsync"
 
+msgid "Remote Server Address"
+msgstr "Διεύθυνση Απομακρυσμένου Διακομιστή"
+
+msgid "Remote Share Name"
+msgstr "Όνομα Απομακρυσμένου Κοινόχρηστου"
+
 msgid "Remote Syslog Messages"
 msgstr "Απομακρυσμένα Μηνύματα Syslog"
 
@@ -8498,12 +8519,6 @@ msgid ""
 msgstr ""
 "Όνομα χρήστη για απομακρυσμένη παρακολούθηση. Πρέπει να είναι το ίδιο στο "
 "master και στο slave σύστημα."
-
-msgid "Remote server address"
-msgstr "Διεύθυνση απομακρυσμένου διακομιστή"
-
-msgid "Remote share name configured"
-msgstr "Ρυθμισμένο όνομα απομακρυσμένου κοινόχρηστου"
 
 msgid "Removable"
 msgstr "Αφαιρούμενο μέσο"
@@ -8635,8 +8650,8 @@ msgstr ""
 "Restricted -Κληρονόμησε τα πάντα εκτός από τα \"write ACL\" και \"change "
 "owner\""
 
-msgid "Results for net rpc testjoin"
-msgstr "Αποτελέσματα του net rpc testjoin"
+msgid "Result of testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Αποτελέσματα του τελευταίου αυτοδιαγνωστικού"
@@ -11008,9 +11023,6 @@ msgstr ""
 "Ο διακομιστής διαφημίζει τον εαυτό του ως  διακομιστής ώρας για πελάτες "
 "Windows."
 
-msgid "The server is halting now."
-msgstr "Η λειτουργία του διακομιστή τερματίζεται τώρα."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 "Ο διακομιστής έχει τώρα επαναφερθεί στις εργοστασιακές ρυθμίσεις και θα "
@@ -11018,6 +11030,9 @@ msgstr ""
 
 msgid "The server is rebooting now."
 msgstr "Ο διακομιστής κάνει τώρα επανεκκίνηση"
+
+msgid "The server is shutting down now."
+msgstr "Η λειτουργία του διακομιστή τερματίζεται τώρα."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
@@ -12008,6 +12023,9 @@ msgstr "Παγίδες"
 msgid "Trivial File Transfer Protocol"
 msgstr "Πρωτόκολλο Trivial File Transfer"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr "Έμπιστοι Τομείς"
 
@@ -12850,6 +12868,9 @@ msgstr "Ποιος"
 msgid "Wildcard"
 msgstr "Μπαλαντέρ"
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Ασύρματη ρύθμιση"
 
@@ -13209,6 +13230,9 @@ msgstr "n/a"
 msgid "network traffic"
 msgstr "κίνηση δικτύου"
 
+msgid "no pools available"
+msgstr "δεν υπάρχουν διαθέσιμα pool"
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -13268,3 +13292,15 @@ msgstr "χρήση από"
 
 msgid "visible"
 msgstr "ορατό"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Έλεγχος κοινόχρηστου μυστικού"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Εμφάνιση Χρηστών που εισήχθησαν"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "Ping στο winbindd  για να εξακριβωθεί ότι είναι ενεργό"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Αποτελέσματα του net rpc testjoin"

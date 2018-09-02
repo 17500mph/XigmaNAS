@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xigmanas\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-08-10 08:13+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-30 08:45+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:48+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -1777,9 +1777,6 @@ msgstr "Comprovar el sistema | Configuració general abans de inicialitzar"
 msgid "Check and replace cable"
 msgstr "Verificar i canviar cable"
 
-msgid "Check shared secret"
-msgstr "Comprova recurs secret"
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -2002,9 +1999,6 @@ msgstr "Contingut"
 
 msgid "Content Locations"
 msgstr "Ubicacions del contingut"
-
-msgid "Continue"
-msgstr "Continueu"
 
 msgid "Control"
 msgstr "Control"
@@ -2944,14 +2938,11 @@ msgstr "Discs seleccionats"
 msgid "Detected Language:"
 msgstr "Idioma Detectat:"
 
-msgid "Detected RSYNC Remote Shares"
-msgstr "Recursos RSYNC remots detectats"
+msgid "Detected Remote Shares"
+msgstr "Comparticións remotes detectades"
 
 msgid "Detected an error while importing."
 msgstr "Detectat un error durant la importació."
-
-msgid "Detected shares on this server"
-msgstr "Recursos detectats en aquest servidor"
 
 msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
@@ -5082,6 +5073,9 @@ msgstr "GEOM Software RAID"
 msgid "GEOM VINUM Software RAID"
 msgstr "GEOM VINUM Software RAID"
 
+msgid "GEOM vinum"
+msgstr "GEOM vinum"
+
 msgid "GID"
 msgstr "GID"
 
@@ -5626,6 +5620,9 @@ msgstr "Importa fent servir el ID de GPT"
 
 msgid "Import using GPT labels"
 msgstr "Importa fent servir les etiquetes GPT"
+
+msgid "Imported Users"
+msgstr ""
 
 msgid "In"
 msgstr "Entrada"
@@ -6239,9 +6236,6 @@ msgstr "Acció de enllaç connectat"
 msgid "List"
 msgstr "Llista"
 
-msgid "List Imported Users"
-msgstr "Llista usuaris importats"
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -6298,6 +6292,9 @@ msgstr "Local"
 
 msgid "Local Master Browser"
 msgstr "Local Màster Browser"
+
+msgid "Local Share"
+msgstr "Compartició local"
 
 msgid "Local Share (Destination)"
 msgstr "Recurs local (Destí)"
@@ -6609,6 +6606,9 @@ msgstr "Temperatura màxima observada (graus C)"
 
 msgid "May"
 msgstr "Maig"
+
+msgid "Maybe"
+msgstr "Potser"
 
 msgid "Media"
 msgstr "Mèdia"
@@ -7058,6 +7058,9 @@ msgstr "Sense dades"
 msgid "No Extent has been configured."
 msgstr "No s'ha configurat extensió."
 
+msgid "No GEOM vinum information found."
+msgstr "No s'ha trobat cap informació de GEOM vinum."
+
 msgid "No IPMI FRU data available."
 msgstr "No hi ha dades disponibles de IPMI FRU."
 
@@ -7067,11 +7070,23 @@ msgstr "Dades del sensor IPMI no disponible."
 msgid "No Initiator Group has been configured."
 msgstr "Grup iniciador no s'ha configurat."
 
+msgid "No JBOD information found."
+msgstr "No s'ha trobat cap informació de JBOD."
+
 msgid "No Parity"
 msgstr "Sense paritat"
 
 msgid "No Portal Group has been configured."
 msgstr "Grup portal no s'ha configurat."
+
+msgid "No RAID0 information found."
+msgstr "No s'ha trobat cap informació de RAID0."
+
+msgid "No RAID1 information found."
+msgstr "No s'ha trobat cap informació de RAID1."
+
+msgid "No RAID5 information found."
+msgstr "No s'ha trobat cap informació de RAID5."
 
 msgid "No RSYNC Client configured."
 msgstr "Sense RSYNC client configurat."
@@ -7720,9 +7735,6 @@ msgstr "Resultat del Ping"
 msgid "Ping may take a while, please be patient."
 msgstr "El Ping tardarà una mica, si us plau, sigui pacient."
 
-msgid "Ping winbindd to see if it is alive"
-msgstr "Fes ping winbind per veure si està viu"
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -8075,6 +8087,12 @@ msgstr "Tipus de subministrament"
 msgid "Proxy"
 msgstr "Proxy"
 
+msgid "Pull"
+msgstr "Extreu («Pull»)"
+
+msgid "Push"
+msgstr "Incorpora («Push»)"
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -8091,9 +8109,6 @@ msgstr "Silenciós"
 msgid "Quota"
 msgstr "Quota"
 
-msgid "RAID 0 Information & Status"
-msgstr "RAID 0 Informació i Estat"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -8103,14 +8118,8 @@ msgstr "RAID 0/1/5 Informació i Estat"
 msgid "RAID 0/1/5 Maintenance"
 msgstr "RAID 0/1/5 Manteniment"
 
-msgid "RAID 1 Information & Status"
-msgstr "RAID1 Informació i Estat"
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr "RAID5 Informació i Estat"
 
 msgid "RAID Name"
 msgstr "Nom de RAID"
@@ -8172,11 +8181,20 @@ msgstr "RAID-Z3 ha de tenir 5, 7, o 11 discos en cada vdev."
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr "Informació i estat de RAID0."
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr "Informació i estat de RAID1."
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr "Informació i estat de RAID5."
 
 msgid "RAM Disk"
 msgstr "Disc RAM"
@@ -8222,9 +8240,6 @@ msgstr "RSYNC informació del client i estat"
 
 msgid "RSYNC Events"
 msgstr "Esdeveniments de RSYNC"
-
-msgid "RSYNC client number"
-msgstr "Número de client RSYNC"
 
 msgid "RSYNC log"
 msgstr "Registre RSYNC"
@@ -8387,6 +8402,12 @@ msgstr "Dimoni Rsync remot"
 msgid "Remote Rsync Server"
 msgstr "Servidor Rsync remot"
 
+msgid "Remote Server Address"
+msgstr "Adreça del servidor remot"
+
+msgid "Remote Share Name"
+msgstr "Nom del servidor remot"
+
 msgid "Remote Syslog Messages"
 msgstr "Missatges de registre remot"
 
@@ -8404,12 +8425,6 @@ msgid ""
 msgstr ""
 "Nom d'usuari de monitorització remota. Ha de ser el mateix en el sistema "
 "mestre i esclau."
-
-msgid "Remote server address"
-msgstr "Direcció del servidor remot"
-
-msgid "Remote share name configured"
-msgstr "Nom de recurs remot configurat"
 
 msgid "Removable"
 msgstr "Extraïble"
@@ -8540,8 +8555,8 @@ msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 "Restringit - Heretar tots menys \"escriure ACL\" i \"canviar propietari\""
 
-msgid "Results for net rpc testjoin"
-msgstr "Resultats per TestJoin de xarxa RPC"
+msgid "Result of testjoin"
+msgstr ""
 
 msgid "Results of last self test"
 msgstr "Els resultats de l'última auto prova"
@@ -10866,9 +10881,6 @@ msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 "El servidor s'anuncia com un servidor de temps per als clients de Windows."
 
-msgid "The server is halting now."
-msgstr "El servidor s'aturarà ara."
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 "El servidor s'ha restablert als valors per defecte de fàbrica i es "
@@ -10876,6 +10888,9 @@ msgstr ""
 
 msgid "The server is rebooting now."
 msgstr "El servidor es reinicia ara."
+
+msgid "The server is shutting down now."
+msgstr "El servidor s'està tancant ara."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "El servidor es restablirà als valors de fàbrica i es reiniciarà."
@@ -11837,6 +11852,9 @@ msgstr "Captures"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr "Dominis confiables"
 
@@ -12668,6 +12686,9 @@ msgstr "Quí"
 msgid "Wildcard"
 msgstr "Comodí"
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Configuració sense fils"
 
@@ -13014,6 +13035,9 @@ msgstr "n/d"
 msgid "network traffic"
 msgstr "Tràfic de xarxa"
 
+msgid "no pools available"
+msgstr "no hi ha piscines disponibles"
+
 msgid "noVNC"
 msgstr "noVNC"
 
@@ -13073,3 +13097,15 @@ msgstr "usat de"
 
 msgid "visible"
 msgstr "visible"
+
+#~ msgid "Check shared secret"
+#~ msgstr "Comprova recurs secret"
+
+#~ msgid "List Imported Users"
+#~ msgstr "Llista usuaris importats"
+
+#~ msgid "Ping winbindd to see if it is alive"
+#~ msgstr "Fes ping winbind per veure si està viu"
+
+#~ msgid "Results for net rpc testjoin"
+#~ msgstr "Resultats per TestJoin de xarxa RPC"

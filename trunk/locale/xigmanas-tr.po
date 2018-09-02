@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-08-08 13:24+0000\n"
-"PO-Revision-Date: 2018-07-06 10:49+0000\n"
+"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"PO-Revision-Date: 2018-08-30 10:20+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: XigmaNAS <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-08-23 13:49+0000\n"
-"X-Generator: Launchpad (build 18752)\n"
+"X-Launchpad-Export-Date: 2018-09-02 15:44+0000\n"
+"X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -23,7 +23,7 @@ msgstr " için ayrılmıştır "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -51,7 +51,7 @@ msgstr "%d yıl"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "Kullanılan %d%% Toplam %s"
 
 #, php-format
 msgid "%dB / block"
@@ -104,7 +104,7 @@ msgstr "%s, %s kullanır."
 #, php-format
 msgid ""
 "%s would like to thank the authors of this software for their efforts."
-msgstr ""
+msgstr "%s aşağıdaki yazılımların yazarlarına, çabaları için teşekkür eder."
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
@@ -414,6 +414,8 @@ msgid ""
 "AES-NI (Advanced Encryption Standard New Instructions) is an extension to "
 "the x86 instruction set architecture for microprocessors."
 msgstr ""
+"AES-NI (Gelişmiş Şifreleme Standardı Yeni Tanımlamaları), x86 yapısındaki "
+"bir mikroişlemci eklentisidir."
 
 msgid "AFP"
 msgstr "AFP"
@@ -687,10 +689,10 @@ msgid "Additional Network"
 msgstr "Ek Ağ"
 
 msgid "Additional Options for Block Backend"
-msgstr ""
+msgstr "Block Arkaplanı ek ayarları"
 
 msgid "Additional Options for RAM Disk Backend"
-msgstr ""
+msgstr "RAM Disk Arkaplanı ek ayarları"
 
 msgid "Additional Parameter"
 msgstr "Ek Parametre"
@@ -708,7 +710,7 @@ msgid "Address"
 msgstr "Adres"
 
 msgid "Address of the remote hastd daemon. It must be a static IP address."
-msgstr ""
+msgstr "Uzak hastd yürütücüsü adresi. Sabit IP olmak zorundadır."
 
 msgid "Admin Password"
 msgstr "Yönetici Şifresi"
@@ -720,7 +722,7 @@ msgid "Administrative WebGUI"
 msgstr "Yönetim WebGUI"
 
 msgid "Administrator Name"
-msgstr ""
+msgstr "Yönetici Adı"
 
 msgid "Advanced"
 msgstr "Gelişmiş"
@@ -860,7 +862,7 @@ msgid "Allow new files to be created."
 msgstr "Yeni dosyalar oluşturulmasına izin ver."
 
 msgid "Allow to start UPS from battery"
-msgstr ""
+msgstr "UPS'i bataryada çalıştırmaya izin ver"
 
 msgid "Allow trusted domains."
 msgstr "Güvenilen domainlere izin ver"
@@ -879,7 +881,7 @@ msgstr ""
 "izni ver, Bu işlem izin verme seçeneğinden sonra gelir"
 
 msgid "Allows the server to try and become a local master browser."
-msgstr ""
+msgstr "Sunucunun yerel ana tarayıcı olmaya çalışmasına izin ver."
 
 msgid "Allows to connect to a hidden network"
 msgstr "Gizli ağa bağlanmaya izin verir"
@@ -917,7 +919,7 @@ msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
 
 msgid "Ambient relative humidity (percent)"
-msgstr ""
+msgstr "Ortam bağıl nem (yüzde)"
 
 msgid "Ambient temperature (degrees C)"
 msgstr "Çevre sıcaklığı (C derece)"
@@ -995,11 +997,15 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"Başka bir DLNA/UPnP servisi çalışmakta. Fuppes'i başlatmak hatalara yol "
+"açabilir."
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Başka bir DLNA/UPnP servisi çalışmakta. MiniDLNA'i başlatmak hatalara yol "
+"açabilir."
 
 msgid "Any"
 msgstr "Herhangi"
@@ -1023,7 +1029,7 @@ msgid "Apply"
 msgstr "Uygula"
 
 msgid "Apply Changes"
-msgstr ""
+msgstr "Değişiklikleri Uygula"
 
 msgid "Apply Filter"
 msgstr "Filtre Uygula"
@@ -1032,7 +1038,7 @@ msgid "Apply changes"
 msgstr "Değişiklikleri uygula"
 
 msgid "Apr"
-msgstr ""
+msgstr "Nis"
 
 msgid "April"
 msgstr "Nisan"
@@ -1103,13 +1109,13 @@ msgid ""
 msgstr ""
 
 msgid "Attribute Name"
-msgstr ""
+msgstr "Öznitelik Adı"
 
 msgid "Audio"
 msgstr "Ses"
 
 msgid "Aug"
-msgstr ""
+msgstr "Ağu"
 
 msgid "August"
 msgstr "Ağustos"
@@ -1118,19 +1124,19 @@ msgid "Auth Group"
 msgstr "Doğrulama Grubu"
 
 msgid "Auth Group Name"
-msgstr ""
+msgstr "Auth Grup Adı"
 
 msgid "Auth Group Settings"
-msgstr ""
+msgstr "Auth Grup Ayarları"
 
 msgid "Auth Group is locked"
-msgstr ""
+msgstr "Auth Grup Kilitli"
 
 msgid "Auth Group is marked for deletion"
-msgstr ""
+msgstr "Auth Grup silinmek için işaretlendi"
 
 msgid "Auth Group is unlocked"
-msgstr ""
+msgstr "Auth Grup kilitli değil"
 
 msgid "Auth Groups"
 msgstr "Doğrulama Gruplar"
@@ -1143,7 +1149,7 @@ msgid "Auth Method"
 msgstr "Doğrulama Methodu"
 
 msgid "Auth Type"
-msgstr ""
+msgstr "Auth Tipi"
 
 msgid "Authenticate Path & Realm"
 msgstr ""
@@ -1152,7 +1158,7 @@ msgid "Authenticate URL"
 msgstr "URL Doğrula"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Doğrulanmış Kullanıcılar"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
@@ -1161,6 +1167,8 @@ msgstr ""
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Doğrulanmış kullanıcı KB/s cinsinden yükleme bant genişliğ. Boş bırakmak "
+"sınırsız demektir."
 
 msgid "Authentication"
 msgstr "Kimlik Denetimi"
@@ -1172,7 +1180,7 @@ msgid "Authentification method is disabled."
 msgstr "Kimlik doğrulama metodu devredışı."
 
 msgid "Authorised Network"
-msgstr ""
+msgstr "Yetkili Ağ"
 
 msgid "Authorised network"
 msgstr "Yetkilendirilmiş Ağ"
@@ -1184,10 +1192,10 @@ msgid "Auto"
 msgstr "Otomatik"
 
 msgid "Auto Snapshot"
-msgstr ""
+msgstr "Otomatik Snapshot"
 
 msgid "Auto Snapshot Settings"
-msgstr ""
+msgstr "Otomatik Snapshot Ayarları"
 
 msgid "Auto page refresh."
 msgstr "Sayfayı otomatik yenile"
@@ -1199,31 +1207,31 @@ msgid "AutoScale"
 msgstr "OtomatikÖlçeklendirme"
 
 msgid "Autodetect"
-msgstr ""
+msgstr "Otomatik Algıla"
 
 msgid "Autoscale"
 msgstr "Otomatik boyutlandır"
 
 msgid "Autoscale for graphs."
-msgstr ""
+msgstr "Grafikleri otomatik boyutlandır."
 
 msgid "Autoselect"
 msgstr "Otomatik seçim"
 
 msgid "Auxiliary device firmware"
-msgstr ""
+msgstr "Yardımcı cihaz yazılımı"
 
 msgid "Avail"
-msgstr ""
+msgstr "Fayda"
 
 msgid "Avail Threshold"
-msgstr ""
+msgstr "Fayda eşiği"
 
 msgid "Available"
-msgstr ""
+msgstr "Kullanılabilir"
 
 msgid "Available Graphs"
-msgstr ""
+msgstr "Kullanılabilir Grafikler"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1235,40 +1243,40 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 msgid "Backend"
-msgstr ""
+msgstr "Arkayüz"
 
 msgid "Background"
-msgstr ""
+msgstr "Arkaplan"
 
 msgid "Backup"
-msgstr ""
+msgstr "Yedekleme"
 
 msgid "Backup Configuration"
-msgstr ""
+msgstr "Yedekleme Konfigürasyonu"
 
 msgid "Backup File"
-msgstr ""
+msgstr "Yedek Dosyası"
 
 msgid "Backup/Restore"
 msgstr "Yedekle/Geri al"
 
 msgid "Bad User - (Non Existing Users)"
-msgstr ""
+msgstr "Kötü Kullanıcı - (Var olmayan Kullanıcılar)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Balans Algoritması"
 
 msgid "Ban List"
-msgstr ""
+msgstr "Engelli Listesi"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Engelli Listesi Kuralı"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Engelli Listesi Kural Ayarları"
 
 msgid "Banner"
 msgstr "Banner"
@@ -1284,50 +1292,50 @@ msgid ""
 msgstr ""
 
 msgid "Battery Details"
-msgstr ""
+msgstr "Batarya Detayları"
 
 msgid "Battery Level"
-msgstr ""
+msgstr "Batarya Seviyesi"
 
 msgid "Battery Low"
-msgstr ""
+msgstr "Batarya Az"
 
 msgid ""
 "Battery Remaining level when UPS switches to Shutdown mode (Low Battery)"
-msgstr ""
+msgstr "UPS'in kapanması için gereken, kalan Batarya Seviyesi (Batarya Az)"
 
 msgid "Battery alarm threshold"
-msgstr ""
+msgstr "Batarya Alarm Eşiği"
 
 msgid "Battery capacity"
-msgstr ""
+msgstr "Batarya Kapasitesi"
 
 msgid "Battery change date"
-msgstr ""
+msgstr "Batarya Değişim Tarihi"
 
 msgid "Battery chemistry"
-msgstr ""
+msgstr "Batarya Yapısı"
 
 msgid "Battery current"
-msgstr ""
+msgstr "Batarya Akımı"
 
 msgid "Battery level"
-msgstr ""
+msgstr "Batarya Seviyesi"
 
 msgid "Battery level when UPS switches to \"Warning\" state"
-msgstr ""
+msgstr "UPS'in \"UYARI\" durumuna geçmesi için gereken Batarya seviyesi"
 
 msgid "Battery manufacturing date"
-msgstr ""
+msgstr "Batarya üretim tarihi"
 
 msgid "Battery temperature"
-msgstr ""
+msgstr "Batarya sıcaklığı"
 
 msgid "Battery voltage"
-msgstr ""
+msgstr "Batarya voltajı"
 
 msgid "Be careful with turning on these options."
-msgstr ""
+msgstr "Bu ayarları aktif ederken dikkatli olun."
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1343,13 +1351,13 @@ msgid "Best available"
 msgstr "Mümkün olan en iyisi"
 
 msgid "Binary Prefix"
-msgstr ""
+msgstr "İkili öneki"
 
 msgid "Bind DN"
-msgstr "DN ekle"
+msgstr "DN bağla"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "Parola Bağla"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1359,41 +1367,46 @@ msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
 msgstr ""
+"BitTorrent'in %s bağlantı noktasında çalışabilmesi için en az okuma ve yazma "
+"yetkilerine ihtiyacı varıdır!"
 
 msgid "Blank Time"
-msgstr ""
+msgstr "Boşta Zamanı"
 
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Blok Boyutu"
 
 msgid "Blocksize"
-msgstr ""
+msgstr "Blok Boyutu"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Önyükleme Değişkenleri"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Önyükleme Yükleyici"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Önyükleme değişkeni (örn: %s)."
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Önyükleme yükleyici (örn: %s)."
 
 #, php-format
 msgid ""
 "Boot partition is too small. You need to reinstall from LiveCD/LiveUSB or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Önyükleme bölümü çok küçük. LiveCD/LiveUSB ile yeniden kurulum yapılmalı "
+"veya\n"
+"%s önyükleme bölümünü yeniden boyutlandırılmalı.\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Önyükleyici"
 
 msgid "Both user data and metadata will be cached in ARC."
 msgstr ""
@@ -1402,17 +1415,17 @@ msgid "Both user data and metadata will be cached in L2ARC."
 msgstr ""
 
 msgid "Bridge"
-msgstr ""
+msgstr "Köprü"
 
 msgid "Bridge Settings"
-msgstr ""
+msgstr "Köprü Ayarları"
 
 msgid ""
 "Bridge cannot be deleted because it is still being used as an interface."
-msgstr ""
+msgstr "Köprü silinemez, çünkü hali hazırda arayüz olarak kullanılmakta."
 
 msgid "Bridge is marked for deletion"
-msgstr ""
+msgstr "Köprü silinmek için işaretlendi"
 
 msgid "Bridge is protected"
 msgstr ""
@@ -1677,9 +1690,6 @@ msgstr ""
 msgid "Check and replace cable"
 msgstr ""
 
-msgid "Check shared secret"
-msgstr ""
-
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
@@ -1888,9 +1898,6 @@ msgid "Content"
 msgstr "İçerik"
 
 msgid "Content Locations"
-msgstr ""
-
-msgid "Continue"
 msgstr ""
 
 msgid "Control"
@@ -2717,13 +2724,10 @@ msgstr ""
 msgid "Detected Language:"
 msgstr ""
 
-msgid "Detected RSYNC Remote Shares"
+msgid "Detected Remote Shares"
 msgstr ""
 
 msgid "Detected an error while importing."
-msgstr ""
-
-msgid "Detected shares on this server"
 msgstr ""
 
 msgid ""
@@ -4744,6 +4748,9 @@ msgstr ""
 msgid "GEOM VINUM Software RAID"
 msgstr ""
 
+msgid "GEOM vinum"
+msgstr ""
+
 msgid "GID"
 msgstr ""
 
@@ -5225,6 +5232,9 @@ msgid "Import using GPT ID"
 msgstr ""
 
 msgid "Import using GPT labels"
+msgstr ""
+
+msgid "Imported Users"
 msgstr ""
 
 msgid "In"
@@ -5789,9 +5799,6 @@ msgstr ""
 msgid "List"
 msgstr "Liste"
 
-msgid "List Imported Users"
-msgstr ""
-
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -5841,6 +5848,9 @@ msgstr "Yerel"
 
 msgid "Local Master Browser"
 msgstr "Local Master Browser"
+
+msgid "Local Share"
+msgstr ""
 
 msgid "Local Share (Destination)"
 msgstr ""
@@ -6134,6 +6144,9 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr ""
 
 msgid "May"
+msgstr ""
+
+msgid "Maybe"
 msgstr ""
 
 msgid "Media"
@@ -6564,6 +6577,9 @@ msgstr ""
 msgid "No Extent has been configured."
 msgstr ""
 
+msgid "No GEOM vinum information found."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr ""
 
@@ -6573,10 +6589,22 @@ msgstr ""
 msgid "No Initiator Group has been configured."
 msgstr ""
 
+msgid "No JBOD information found."
+msgstr ""
+
 msgid "No Parity"
 msgstr ""
 
 msgid "No Portal Group has been configured."
+msgstr ""
+
+msgid "No RAID0 information found."
+msgstr ""
+
+msgid "No RAID1 information found."
+msgstr ""
+
+msgid "No RAID5 information found."
 msgstr ""
 
 msgid "No RSYNC Client configured."
@@ -7191,9 +7219,6 @@ msgstr ""
 msgid "Ping may take a while, please be patient."
 msgstr ""
 
-msgid "Ping winbindd to see if it is alive"
-msgstr ""
-
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
@@ -7530,6 +7555,12 @@ msgstr ""
 msgid "Proxy"
 msgstr "Proxy"
 
+msgid "Pull"
+msgstr ""
+
+msgid "Push"
+msgstr ""
+
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
@@ -7544,9 +7575,6 @@ msgstr ""
 msgid "Quota"
 msgstr ""
 
-msgid "RAID 0 Information & Status"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
@@ -7556,14 +7584,8 @@ msgstr ""
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1 Information & Status"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
-
-msgid "RAID 5 Information & Status"
-msgstr ""
 
 msgid "RAID Name"
 msgstr ""
@@ -7625,11 +7647,20 @@ msgstr ""
 msgid "RAID0"
 msgstr "RAID0"
 
+msgid "RAID0 Information & Status"
+msgstr ""
+
 msgid "RAID1"
 msgstr "RAID1"
 
+msgid "RAID1 Information & Status"
+msgstr ""
+
 msgid "RAID5"
 msgstr "RAID5"
+
+msgid "RAID5 Information & Status"
+msgstr ""
 
 msgid "RAM Disk"
 msgstr ""
@@ -7668,9 +7699,6 @@ msgid "RSYNC Client Information & Status"
 msgstr ""
 
 msgid "RSYNC Events"
-msgstr ""
-
-msgid "RSYNC client number"
 msgstr ""
 
 msgid "RSYNC log"
@@ -7829,6 +7857,12 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr ""
 
+msgid "Remote Server Address"
+msgstr ""
+
+msgid "Remote Share Name"
+msgstr ""
+
 msgid "Remote Syslog Messages"
 msgstr ""
 
@@ -7841,12 +7875,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote server address"
-msgstr ""
-
-msgid "Remote share name configured"
 msgstr ""
 
 msgid "Removable"
@@ -7971,7 +7999,7 @@ msgstr ""
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
-msgid "Results for net rpc testjoin"
+msgid "Result of testjoin"
 msgstr ""
 
 msgid "Results of last self test"
@@ -10038,13 +10066,13 @@ msgstr ""
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 
-msgid "The server is halting now."
-msgstr ""
-
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server is rebooting now."
+msgstr ""
+
+msgid "The server is shutting down now."
 msgstr ""
 
 msgid "The server will be reset to factory defaults and will reboot."
@@ -10832,6 +10860,9 @@ msgstr ""
 msgid "Trivial File Transfer Protocol"
 msgstr ""
 
+msgid "Trust Account Status"
+msgstr ""
+
 msgid "Trusted Domains"
 msgstr ""
 
@@ -11596,6 +11627,9 @@ msgstr ""
 msgid "Wildcard"
 msgstr ""
 
+msgid "Winbindd Availability"
+msgstr ""
+
 msgid "Wireless configuration"
 msgstr "Kablosuz yapılandırma"
 
@@ -11920,6 +11954,9 @@ msgstr ""
 msgid "network traffic"
 msgstr ""
 
+msgid "no pools available"
+msgstr ""
+
 msgid "noVNC"
 msgstr ""
 
@@ -11978,4 +12015,4 @@ msgid "used of"
 msgstr ""
 
 msgid "visible"
-msgstr ""
+msgstr "görünür"
