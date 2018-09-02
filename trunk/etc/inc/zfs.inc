@@ -511,35 +511,45 @@ function zfs_dataset_configure($uuid) {
 	}
 	return $result;
 }
-
 /**
- * Delete a ZFS dataset.
- * @param[in] uuid	The UUID of the dataset to be deleted.
- * @return Return 0 if successful, otherwise 1.
+ *	Delete a ZFS filesystem.
+ *	@global array $config Configuration.
+ *	@param string $uuid The UUID of the filesystem to be deleted.
+ *	@param bool $recursively Recursvvly destroys all children.
+ *	@return int 0 if successful, otherwise 1.
  */
-function zfs_dataset_destroy($uuid) {
+function zfs_dataset_destroy(string $uuid,bool $recursively = false) {
 	global $config;
-	$result = 0;
-	// get dataset
-	if (!(isset($config['zfs']) && isset($config['zfs']['datasets']) && isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) { return 1; }
-	if (false === ($index = array_search_ex($uuid, $config['zfs']['datasets']['dataset'], "uuid"))) { return 1; }
-	$dataset = $config['zfs']['datasets']['dataset'][$index];
-	if (!is_array($dataset)) { return 1; }
-	// get pool name
-	if (!(isset($dataset['pool']) && is_array($dataset['pool']) && (0 < count($dataset['pool'])) && preg_match('/\S/', $dataset['pool'][0]))) { return 1; }
-	$poolname = ltrim($dataset['pool'][0]);
-	// get dataset name
-	if (!(isset($dataset['name']) && preg_match('/\S/', $dataset['name']))) { return 1; }
-	$datasetname = ltrim($dataset['name']);
-	$relpath = sprintf('%1$s/%2$s', $poolname, $datasetname);
-	// destroy dataset
-	$cmd = sprintf('zfs destroy -f %1$s', escapeshellarg($relpath));
-	write_log($cmd);
-	$result |= mwexec($cmd, true);
-	if ($result != 0) {
-		write_log(sprintf('Error: Failed to destroy dataset %1$s', $relpath));
-	}
-	return $result;
+	
+	if(is_uuid_v4($uuid)):
+		//	get dataset
+		$grid = array_make_branch($config,'zfs','datasets','dataset');
+		if(false !== ($index = array_search_ex($uuid,$grid,'uuid'))):
+			$filesystem_config = $grid[$index];
+			if(is_array($filesystem_config)):
+				//	get pool and filesystem name
+				$pool_name = ltrim($filesystem_config['pool'][0] ?? '');
+				$filesystem_name = ltrim($filesystem_config['name'] ?? '');
+				if(preg_match('/\S/',$pool_name) && preg_match('/\S/',$filesystem_name)):
+					$fqn_filesystem = sprintf('%s/%s',$pool_name,$filesystem_name);
+					//	destroy filesystem
+					if($recursively):
+						$cmd = sprintf('zfs destroy -f -r %s',escapeshellarg($fqn_filesystem));
+					else:
+						$cmd = sprintf('zfs destroy -f %s',escapeshellarg($fqn_filesystem));
+					endif;
+					write_log($cmd);
+					$result = 0;
+					$result |= mwexec($cmd,true);
+					if($result != 0):
+						write_log(sprintf('Error: Failed to destroy filesystem %s',$fqn_filesystem));
+					endif;
+					return $result;
+				endif;
+			endif;
+		endif;
+	endif;
+	return 1;
 }
 
 /**
@@ -767,44 +777,45 @@ function zfs_volume_configure($uuid) {
 	write_log($cmd);
 	return mwexec($cmd,true);
 }
-
 /**
- * Delete a ZFS volume.
- * @param[in] uuid	The UUID of the volume to be deleted.
- * @return Return 0 if successful, otherwise 1.
+ *	Delete a ZFS volume.
+ *	@global array $config Configuration.
+ *	@param string $uuid The UUID of the volume to be deleted.
+ *	@param bool $recursively Recursvvly destroys all children.
+ *	@return int 0 if successful, otherwise 1.
  */
-function zfs_volume_destroy($uuid) {
+function zfs_volume_destroy(string $uuid,bool $recursively = false) {
 	global $config;
-	array_make_branch($config,'zfs','volumes','volume');
-	$result = 0;
-	// get volume
-	$index = array_search_ex($uuid, $config['zfs']['volumes']['volume'], 'uuid');
-	if(false === $index):
-		return 1;
+	
+	if(is_uuid_v4($uuid)):
+		//	get volume
+		$grid = array_make_branch($config,'zfs','volumes','volume');
+		if(false !== ($index = array_search_ex($uuid,$grid,'uuid'))):
+			$volume_config = $grid[$index];
+			if(is_array($volume_config)):
+				//	get pool and volume name
+				$pool_name = ltrim($volume_config['pool'][0] ?? '');
+				$volume_name =  ltrim($volume_config['name'] ?? '');
+				if(preg_match('/\S/',$pool_name) && preg_match('/\S/', $volume_name)):
+					$fqn_volume = sprintf('%s/%s',$pool_name,$volume_name);
+					//	destroy volume
+					if($recursively):
+						$cmd = sprintf('zfs destroy -r %s',escapeshellarg($fqn_volume));
+					else:
+						$cmd = sprintf('zfs destroy %s',escapeshellarg($fqn_volume));
+					endif;
+					write_log($cmd);
+					$result = 0;
+					$result |= mwexec($cmd,true);
+					if($result != 0):
+						write_log(sprintf('Error: Failed to destroy volume %s',$fqn_volume));
+					endif;
+					return $result;
+				endif;
+			endif;
+		endif;
 	endif;
-	$volume = $config['zfs']['volumes']['volume'][$index];
-	if(!is_array($volume)):
-		return 1;
-	endif;
-	// get pool name
-	if(!(isset($volume['pool']) && is_array($volume['pool']) && (0 < count($volume['pool'])) && preg_match('/\S/', $volume['pool'][0]))):
-		return 1;
-	endif;
-	$poolname = ltrim($volume['pool'][0]);
-	// get volume name
-	if(!(isset($volume['name']) && preg_match('/\S/', $volume['name']))):
-		return 1;
-	endif;
-	$volumename = ltrim($volume['name']);
-	$relpath = sprintf('%1$s/%2$s',$poolname,$volumename);
-	// Destroy the volume
-	$cmd = sprintf('zfs destroy %1$s',escapeshellarg($relpath));
-	write_log($cmd);
-	$result |= mwexec($cmd,true);
-	if($result != 0):
-		write_log(sprintf('Error: Failed to destroy volume %1$s',$relpath));
-	endif;
-	return $result;
+	return 1;
 }
 function zfs_get_volume_reservation($volsize) {
 	if(empty($volsize)):
