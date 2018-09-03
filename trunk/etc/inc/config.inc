@@ -381,58 +381,49 @@ function conf_mount_ro() {
 function write_config() {
 	global $config, $g;
 
+	$bom = "\xEF\xBB\xBF";
 	config_lock();
 	conf_mount_rw();
-
-	// Make sure the clock settings is plausible
-	if(function_exists("date_default_timezone_set") and function_exists("date_default_timezone_get"))
-        @date_default_timezone_set(@date_default_timezone_get());
-	if (time() > mktime(0, 0, 0, 9, 1, 2004)) {
+	//	Make sure the clock settings is plausible
+	if(function_exists('date_default_timezone_set') and function_exists('date_default_timezone_get')):
+		@date_default_timezone_set(@date_default_timezone_get());
+	endif;
+	if(time() > mktime(0, 0, 0, 9, 1, 2004)):
 		$config['lastchange'] = time();
-	}
-
-	// Dump configuration as XML data
-	$xmlconfig = dump_xml_config($config, $g['xml_rootobj'],
-		system_get_language_codeset());
-
-	// Save current configuration file
-	$filename = "{$g['cf_conf_path']}/config.xml";
-	if (file_exists($filename)) {
-		for ($n = 6; --$n > 0; ) {
-			$filename_bk2 = preg_replace("/.xml$/", ".bk".$n, $filename);
-			$filename_bk1 = preg_replace("/.xml$/", ".bk".($n-1), $filename);
-			if (file_exists($filename_bk2) && unlink($filename_bk2) === FALSE) {
-				die("Error: Failed to delete configuration file '{$filename_bk2}'");
-			}
-			if (file_exists($filename_bk1) && rename($filename_bk1, $filename_bk2) === FALSE) {
-				die("Error: Failed to rename configuration file '{$filename_bk1}'");
-			}
-		}
-		$filename_bk0 = preg_replace("/.xml$/", ".bk0", $filename);
-		if (rename($filename, $filename_bk0) === FALSE) {
-			die("Error: Failed to rename configuration file '{$filename}'");
-		}
-	}
-
-	// Write configuration file
-	if (!file_put_contents_safe($filename, $xmlconfig)) {
-		die("Error: Failed to write configuration file '{$filename}'");
-	}
-
-	// Modify file permissions
-	@chmod("{$g['cf_conf_path']}/config.xml", 0600);
-
+	endif;
+	//	Dump configuration as XML data
+	$xmlconfig =  $bom . dump_xml_config($config, $g['xml_rootobj'],system_get_language_codeset());
+	//	Save current configuration file
+	$filename = sprintf('%s/config.xml',$g['cf_conf_path']);
+	if(file_exists($filename)):
+		for($n = 6;--$n > 0;):
+			$filename_bk2 = preg_replace('/.xml$/','.bk' . $n,$filename);
+			$filename_bk1 = preg_replace('/.xml$/','.bk' . ($n-1),$filename);
+			if(file_exists($filename_bk2) && unlink($filename_bk2) === false):
+				die(sprintf('Error: Failed to delete configuration file %s',escapeshellarg($filename_bk2)));
+			endif;
+			if(file_exists($filename_bk1) && rename($filename_bk1, $filename_bk2) === false):
+				die(sprintf('Error: Failed to rename configuration file %s',escapeshellarg($filename_bk1)));
+			endif;
+		endfor;
+		$filename_bk0 = preg_replace('/.xml$/','.bk0',$filename);
+		if(rename($filename,$filename_bk0) === false):
+			die(sprintf('Error: Failed to rename configuration file %s',escapeshellarg($filename)));
+		endif;
+	endif;
+	//	Write configuration file
+	if(!file_put_contents_safe($filename,$xmlconfig)):
+		die(sprintf('Error: Failed to write configuration file %s',escapeshellarg($filename)));
+	endif;
+	//	Modify file permissions
+	@chmod($filename,0600);
 	conf_mount_ro();
-
-	// Re-read configuration
-	$config = parse_xml_config("{$g['conf_path']}/config.xml", $g['xml_rootobj']);
-
-	// Write config cache (to prevent parsing on every access)
+	//	Re-read configuration
+	$config = parse_xml_config(sprintf('%s/config.xml',$g['conf_path']),$g['xml_rootobj']);
+	//	Write config cache (to prevent parsing on every access)
 	config_write_cache($config);
-
-	// Force completion of pending disk writes
-	mwexec("/bin/sync");
-
+	//	Force completion of pending disk writes
+	mwexec('/bin/sync');
 	config_unlock();
 }
 /**
