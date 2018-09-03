@@ -123,7 +123,7 @@ class config_xml_reader {
 	
 	public function __construct() {
 		//	Create XML parser.
-		$this->parser = xml_parser_create();
+		$this->parser = xml_parser_create('UTF-8');
 		xml_set_object($this->parser,$this);
 		//	Initialize start element handler and end element handler.
 		xml_set_element_handler($this->parser,'startelementhandler','endelementhandler');
@@ -138,6 +138,7 @@ class config_xml_reader {
 	}
 	public function startelementhandler($parser,$name,$attributes) {
 		global $listtags;
+		
 		$lowercase_name = strtolower($name);
 		//	Push start element
 		array_push($this->curpath,$lowercase_name);
@@ -165,6 +166,7 @@ class config_xml_reader {
 	}
 	public function endelementhandler($parser,$name) {
 		global $listtags;
+		
 		$lowercase_name = strtolower($name);
 		if($this->havedata == $this->depth):
 			$ptr = &$this->config;
