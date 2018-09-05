@@ -1,5 +1,5 @@
 PORTNAME=	e2fsprogs
-PORTVERSION=	1.44.3
+PORTVERSION=	1.44.4
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
@@ -111,6 +111,7 @@ post-patch::
 	    -e "s/ == 0/ = 0/" -e "s/tar x$$/tar xf -/" -e "s/\<dd\>/gdd/" \
 	    ${WRKSRC}/tests/[a-z]_*/script
 	@${REINPLACE_CMD} -e 's/<malloc\.h>/<stdlib.h>/' ${WRKSRC}/*/*.c
+	@${REINPLACE_CMD} -E -e 's/__GNUC_PREREQ\>/__GNUC_PREREQ__/' ${WRKSRC}/*/*/*.[ch] ${WRKSRC}/*/*.c
 .if empty(PORT_OPTIONS:MALLTESTS)
 .for i in \
 		d_fallocate_blkmap \
@@ -158,9 +159,6 @@ post-patch::
 	@${MV} ${WRKSRC}/tests/${i} ${WRKSRC}/tests/disabled_test-${i}
 . endfor
 .endif
-
-pre-configure::
-	${REINPLACE_CMD} -e 's/July/Jul/' ${WRKSRC}/version.h
 
 ##############################################################
 # Master port stuff that is not to be seen by the slave ports.
