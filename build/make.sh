@@ -182,6 +182,8 @@ OPT_BOOTMENU=1
 OPT_BOOTSPLASH=0
 # Support serial console
 OPT_SERIALCONSOLE=0
+# Support efi boot
+OPT_EFIBOOT_SUPPORT=1
 
 # Dialog command
 DIALOG="dialog"
@@ -720,6 +722,7 @@ create_image() {
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $XIGMANAS_SVNDIR/boot/menu.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_SVNDIR/boot/loader.efi $XIGMANAS_TMPDIR/boot
+		cp $XIGMANAS_SVNDIR/boot/efiboot.img $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/beastie.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menu.rc $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menusets.4th $XIGMANAS_TMPDIR/boot
@@ -854,6 +857,7 @@ create_iso () {
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $XIGMANAS_SVNDIR/boot/menu.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_SVNDIR/boot/loader.efi $XIGMANAS_TMPDIR/boot
+		cp $XIGMANAS_SVNDIR/boot/efiboot.img $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/beastie.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menu.rc $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menusets.4th $XIGMANAS_TMPDIR/boot
@@ -902,7 +906,13 @@ create_iso () {
 	fi
 
 	echo "ISO: Generating ISO File"
-	mkisofs -b "boot/cdboot" -no-emul-boot -r -J -A "${XIGMANAS_PRODUCTNAME} CD-ROM image" -publisher "${XIGMANAS_URL}" -V "${VOLUMEID}" -o "${XIGMANAS_ROOTDIR}/${LABEL}.iso" ${XIGMANAS_TMPDIR}
+	if [ "${OPT_EFIBOOT_SUPPORT}" = 0 ]; then
+		# Generate standard iso file.
+		mkisofs -b "boot/cdboot" -no-emul-boot -r -J -A "${XIGMANAS_PRODUCTNAME} CD-ROM image" -publisher "${XIGMANAS_URL}" -V "${VOLUMEID}" -o "${XIGMANAS_ROOTDIR}/${LABEL}.iso" ${XIGMANAS_TMPDIR}
+	else
+		# Generate iso file with UEFI/BIOS boot support.
+		mkisofs -b "boot/cdboot" -no-emul-boot -eltorito-alt-boot -b "boot/efiboot.img" -no-emul-boot -r -J -A "${XIGMANAS_PRODUCTNAME} CD-ROM image" -publisher "${XIGMANAS_URL}" -V "${VOLUMEID}" -o "${XIGMANAS_ROOTDIR}/${LABEL}.iso" ${XIGMANAS_TMPDIR}
+	fi
 	[ 0 != $? ] && return 1 # successful?
 
 	echo "Generating SHA512 CHECKSUM File"
@@ -1099,6 +1109,7 @@ create_usb () {
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $XIGMANAS_SVNDIR/boot/menu.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_SVNDIR/boot/loader.efi $XIGMANAS_TMPDIR/boot
+		cp $XIGMANAS_SVNDIR/boot/efiboot.img $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/beastie.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menu.rc $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menusets.4th $XIGMANAS_TMPDIR/boot
@@ -1212,6 +1223,7 @@ create_full() {
 	if [ 0 != $OPT_BOOTMENU ]; then
 		cp $XIGMANAS_SVNDIR/boot/menu.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_SVNDIR/boot/loader.efi $XIGMANAS_TMPDIR/boot
+		cp $XIGMANAS_SVNDIR/boot/efiboot.img $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/beastie.4th $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menu.rc $XIGMANAS_TMPDIR/boot
 		cp $XIGMANAS_BOOTDIR/boot/menusets.4th $XIGMANAS_TMPDIR/boot
