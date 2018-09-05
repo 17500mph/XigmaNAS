@@ -1847,13 +1847,7 @@ copy_files() {
 			echo "----------------------------------------------------------";
 			echo ">>> Copy new files to ports directory FreeBSD usr/ports/*.";
 			echo "----------------------------------------------------------";
-			echo "===> Delete current port ldb13 from usr/ports/databases/"
-			rm -rf /usr/ports/databases/ldb13
-			echo "===> done!"
-			echo "===> Start copy new port ldb13 to ports/databases/"
-			cp -Rpv ${XIGMANAS_SVNDIR}/build/ports/copy-ports/files/ldb13 /usr/ports/databases
-			echo "===> Copy new files to /usr/ports/databases/ldb13 done!"
-			echo "===> Start copy new port php72-APCu files to ports/devel/"
+			echo "===> Copy new port php72-APCu to ports/devel/"
 			cp -Rpv ${XIGMANAS_SVNDIR}/build/ports/copy-ports/files/php72-APCu /usr/ports/devel
 			echo "===> Copy new files to /usr/ports/devel/php72-APCu done!"
 	return 0
