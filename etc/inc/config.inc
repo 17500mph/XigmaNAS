@@ -41,7 +41,6 @@ require_once 'tui.inc';
 
 //	Get product information
 $productname = get_product_name();
-$zroot = 'zroot';
 //	read platform
 if(file_exists("{$g['etc_path']}/platform")):
 	$g['fullplatform'] = strtolower(chop(file_get_contents("{$g['etc_path']}/platform")));
@@ -54,9 +53,7 @@ else:
 	$g['fullplatform'] = 'unknown';
 endif;
 //	RootOnZFS
-if($retval = (mwexec("/sbin/mount | grep -q {$zroot}") == false )):
-	$g['zroot'] = 'true';
-endif;
+$g['zroot'] = (0 == mwexec('/sbin/mount | grep -q zroot')) ? 'true' : false;
 if(is_booting()):
 	//	Find the device where config.xml resides and write out an fstab
 	unset($cfgdevice);
@@ -311,7 +308,7 @@ if(!isset($noparseconfig) || !$noparseconfig):
 			endif;
 		endif;
 		if(isset($load_raw_config) && $load_raw_config != 0):
-			//	Load any root object, but never write to cache
+			//	Load all root objects, but never write to cache
 			$config = parse_xml_config_raw("{$g['conf_path']}/config.xml",'');
 			if(false === $config):
 				echo "Error: Failed to load '{$g['conf_path']}/config.xml' file. {$productname} cannot continue booting.",PHP_EOL;
@@ -381,20 +378,20 @@ function conf_mount_ro() {
 function write_config() {
 	global $config, $g;
 
-	$bom = "\xEF\xBB\xBF";
+	$bom = ''; // "\xEF\xBB\xBF";
 	config_lock();
 	conf_mount_rw();
 	//	Make sure the clock settings is plausible
 	if(function_exists('date_default_timezone_set') and function_exists('date_default_timezone_get')):
 		@date_default_timezone_set(@date_default_timezone_get());
 	endif;
-	if(time() > mktime(0, 0, 0, 9, 1, 2004)):
+	if(time() > mktime(0,0,0,9,1,2004)):
 		$config['lastchange'] = time();
 	endif;
 	//	Dump configuration as XML data
-	$xmlconfig =  $bom . dump_xml_config($config, $g['xml_rootobj'],system_get_language_codeset());
+	$xmlconfig =  $bom . dump_xml_config($config,$g['xml_rootobj'],system_get_language_codeset());
 	//	Save current configuration file
-	$filename = sprintf('%s/config.xml',$g['cf_conf_path']);
+	$filename = $g['cf_conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
 	if(file_exists($filename)):
 		for($n = 6;--$n > 0;):
 			$filename_bk2 = preg_replace('/.xml$/','.bk' . $n,$filename);
@@ -402,7 +399,7 @@ function write_config() {
 			if(file_exists($filename_bk2) && unlink($filename_bk2) === false):
 				die(sprintf('Error: Failed to delete configuration file %s',escapeshellarg($filename_bk2)));
 			endif;
-			if(file_exists($filename_bk1) && rename($filename_bk1, $filename_bk2) === false):
+			if(file_exists($filename_bk1) && rename($filename_bk1,$filename_bk2) === false):
 				die(sprintf('Error: Failed to rename configuration file %s',escapeshellarg($filename_bk1)));
 			endif;
 		endfor;
@@ -419,7 +416,7 @@ function write_config() {
 	@chmod($filename,0600);
 	conf_mount_ro();
 	//	Re-read configuration
-	$config = parse_xml_config(sprintf('%s/config.xml',$g['conf_path']),$g['xml_rootobj']);
+	$config = parse_xml_config($g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml',$g['xml_rootobj']);
 	//	Write config cache (to prevent parsing on every access)
 	config_write_cache($config);
 	//	Force completion of pending disk writes
