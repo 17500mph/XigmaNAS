@@ -33,20 +33,13 @@
 	of XigmaNAS, either expressed or implied.
 */
 $load_raw_config = 1;
-//	Set default character set to UTF-8.
-ini_set('default_charset','UTF-8');
-//	Set internal character encoding to empty. If empty, default_charset is used.
-ini_set('internal_encoding','');
-//	Set input character encoding to empty. If empty, default_charset is used.
-ini_set('input_encoding','');
-//	Set output character encoding to empty. If empty, default_charset is used.
-ini_set('output_encoding','');
 
 require_once 'super_fun.inc';
 require_once 'globals.inc';
 require_once 'functions.inc';
 require_once 'util.inc';
 require_once 'config.inc';
+
 //	Set root object to config
 $keys = array_keys($config);
 $config = $config[$keys[0]];
