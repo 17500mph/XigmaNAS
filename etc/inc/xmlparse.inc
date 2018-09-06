@@ -210,7 +210,6 @@ class config_xml_reader {
 		endif;
 	}
 	public function parse(string $cffile,string $rootobj) {
-		global $g;
 		$this->config = [];
 		$this->curpath = [];
 		$this->depth = 0;
