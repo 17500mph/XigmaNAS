@@ -261,7 +261,7 @@ function parse_xml_config($cffile,$rootobj) {
  *	@param string $outbound_charset The output charset, e.g. UTF-8
  *	@return string
  */
-function dump_xml_config_sub($arr,$indent,$inbound_charset,$outbound_charset) {
+function dump_xml_config_sub($arr,$indent,string $inbound_charset,string $outbound_charset) {
 	global $listtags;
 
 	$xmlconfig = '';
@@ -285,7 +285,7 @@ function dump_xml_config_sub($arr,$indent,$inbound_charset,$outbound_charset) {
 						$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
 					elseif($must_convert):
 						$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
-						$xmlconfig .= htmlspecialchars(iconv($inbound_charset,$outbound_charset,$cval));
+						$xmlconfig .= htmlspecialchars(iconv($inbound_charset,$outbound_charset . '//IGNORE',$cval));
 						$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 					else:
 						$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
@@ -308,7 +308,7 @@ function dump_xml_config_sub($arr,$indent,$inbound_charset,$outbound_charset) {
 			$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
 		elseif($must_convert):
 			$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
-			$xmlconfig .= htmlspecialchars(iconv($inbound_charset,$outbound_charset,$val));
+			$xmlconfig .= htmlspecialchars(iconv($inbound_charset,$outbound_charset . '//IGNORE',$val));
 			$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 		else:
 			$xmlconfig .= $s_indent . sprintf("<%s>",$ent);
