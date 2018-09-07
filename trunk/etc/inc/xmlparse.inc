@@ -209,13 +209,12 @@ class config_xml_reader {
 			endif;
 		endif;
 	}
-	public function parse(string $cffile,string $rootobj) {
+	public function parse(string $cffile) {
 		$this->config = [];
 		$this->curpath = [];
 		$this->depth = 0;
 		$this->havedata = 0;
 		$this->attributes = [];
-		$encoding = 'UTF-8'; // PHP default
 		//	Read configuration file.
 		$data = file_get_contents($cffile);
 		if(false === $data):
@@ -225,50 +224,56 @@ class config_xml_reader {
 		if(preg_match('/<?xml.*encoding=[\'"](.*?)[\'"].*?>/m',$data,$m)):
 			$encoding = strtoupper($m[1]);
 			xml_parser_set_option($this->parser,XML_OPTION_TARGET_ENCODING,$encoding);
+		else:
+			$encoding = 'UTF-8';
 		endif;
 		//	Parse configuration.
 		if(!xml_parse($this->parser,$data)):
 			die(sprintf("XML error: %s at line %d\n",xml_error_string(xml_get_error_code($this->parser)),xml_get_current_line_number($this->parser)));
 		endif;
-		if(!empty($rootobj)):
-			//	Remember encoding
-			$this->config[$rootobj]['encoding'] = $encoding;
-		endif;
+		//	Remember document encoding on each root node
+		foreach($this->config as &$root_node):
+			$root_node['encoding'] = $encoding;
+		endforeach;
 		return $this->config;
 	}
 }
-function parse_xml_config_raw($cffile,$rootobj) {
+function parse_xml_config_raw($cffile) {
 	$o = new config_xml_reader();
-	return $o->parse($cffile,$rootobj);
+	return $o->parse($cffile);
 }
 function parse_xml_config($cffile,$rootobj) {
-	$raw_config = parse_xml_config_raw($cffile,$rootobj);
-	if(!$raw_config[$rootobj]):
+	$raw_config = parse_xml_config_raw($cffile);
+	if(!array_key_exists($rootobj,$raw_config)):
 		die("XML error: no $rootobj object found!\n");
 	endif;
 	return $raw_config[$rootobj];
 }
-// Dump configuration.
-// $arr - Array to be dumped
-// $indent - Number of indent
-// $in_charset - The input charset, e.g. ISO-8859-1
-// $out_charset - The output charset, e.g. UTF-8
-// A charset conversion may appear when switching from a ISO-8859-1 language
-// (e.g. English) to a UTF-8 one (e.g. French). If this is not done
-// we will get an parser error.
-function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
+/**
+ *	Dump configuration - recursion module
+ *	A charset conversion may appear when switching from ISO-8859-1
+ *	(e.g. English) to UTF-8 (e.g. French). If this is not done
+ *	we will get an parser error.
+ *	@global array $listtags
+ *	@param array $arr Array to be dumped
+ *	@param int $indent Count of indents
+ *	@param string $inbound_charset The input charset, e.g. ISO-8859-1
+ *	@param string $outbound_charset The output charset, e.g. UTF-8
+ *	@return string
+ */
+function dump_xml_config_sub($arr,$indent,$inbound_charset,$outbound_charset) {
 	global $listtags;
 
 	$xmlconfig = '';
 	$s_indent = str_repeat("\t",$indent);
-	$must_convert = ($in_charset !== $out_charset);
+	$must_convert = ($inbound_charset !== $outbound_charset);
 	foreach($arr as $ent => $val):
 		if(is_array($val)):
 			if(array_key_exists(strtolower($ent),$listtags)): // is it a list of multiple values?
 				foreach($val as $cval):
 					if(is_array($cval)):
 						$xmlconfig .= $s_indent . sprintf('<%s>',$ent) . PHP_EOL;
-						$xmlconfig .= dump_xml_config_sub($cval,$indent + 1,$in_charset,$out_charset);
+						$xmlconfig .= dump_xml_config_sub($cval,$indent + 1,$inbound_charset,$outbound_charset);
 						$xmlconfig .= $s_indent . sprintf('</%s>',$ent) . PHP_EOL;
 					elseif(is_bool($cval)):
 						if($cval):
@@ -280,7 +285,7 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 						$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
 					elseif($must_convert):
 						$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
-						$xmlconfig .= htmlspecialchars(iconv($in_charset,$out_charset,$cval));
+						$xmlconfig .= htmlspecialchars(iconv($inbound_charset,$outbound_charset,$cval));
 						$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 					else:
 						$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
@@ -290,7 +295,7 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 				endforeach;
 			else: // it's an array
 				$xmlconfig .= $s_indent . sprintf('<%s>',$ent) . PHP_EOL;
-				$xmlconfig .= dump_xml_config_sub($val,$indent + 1,$in_charset,$out_charset);
+				$xmlconfig .= dump_xml_config_sub($val,$indent + 1,$inbound_charset,$outbound_charset);
 				$xmlconfig .= $s_indent . sprintf('</%s>',$ent) . PHP_EOL;
 			endif;
 		elseif(is_bool($val)):
@@ -303,7 +308,7 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 			$xmlconfig .= $s_indent . sprintf('<%s/>',$ent) . PHP_EOL;
 		elseif($must_convert):
 			$xmlconfig .= $s_indent . sprintf('<%s>',$ent);
-			$xmlconfig .= htmlspecialchars(iconv($in_charset,$out_charset,$val));
+			$xmlconfig .= htmlspecialchars(iconv($inbound_charset,$outbound_charset,$val));
 			$xmlconfig .= sprintf('</%s>',$ent) . PHP_EOL;
 		else:
 			$xmlconfig .= $s_indent . sprintf("<%s>",$ent);
@@ -314,22 +319,25 @@ function dump_xml_config_sub($arr,$indent,$in_charset,$out_charset) {
 	return $xmlconfig;
 }
 function dump_xml_config($arr,$rootobj,$encoding) {
-	// Set in/out encoding
-	$in_charset = empty($arr['encoding']) ? '' : $arr['encoding'];
-	$out_charset = $encoding;
-	// Do not dump temporary encoding attribute
+	//	Set inbound / outbound encoding
+	$inbound_charset = $arr['encoding'] ?? 'UTF-8';
+	if(1 !== preg_match('/\S/',$inbound_charset)):
+		$inbound_charset = 'UTF-8';
+	endif;
+	$outbound_charset = $encoding;
+	//	Do not dump temporary encoding attribute
 	unset($arr['encoding']);
 	$xmlconfig = sprintf('<?xml version="1.0" encoding="%s"?>',$encoding) . PHP_EOL;
 	$xmlconfig .= sprintf('<%s>',$rootobj) . PHP_EOL;
-	$xmlconfig .= dump_xml_config_sub($arr,1,$in_charset,$out_charset);
+	$xmlconfig .= dump_xml_config_sub($arr,1,$inbound_charset,$outbound_charset);
 	$xmlconfig .= sprintf('</%s>',$rootobj) . PHP_EOL;
 	return $xmlconfig;
 }
 /**
- * Validate the configuration xml file.
- * @param[in] cffile Path to the file to validate.
- * @param[in] rootobj The name of the root object.
- * @return TRUE if valid, otherwise FALSE.
+ *	Validate the configuration xml file.
+ *	@param string cffile Path to the file to validate.
+ *	@param string rootobj The name of the root object.
+ *	@return bool True if valid, otherwise false.
  */
 function validate_xml_config($cffile,$rootobj) {
 	// Parse the configuration
@@ -343,4 +351,3 @@ function validate_xml_config($cffile,$rootobj) {
 	// Add more checks, or implement a DTD...
 	return true;
 }
-?>
