@@ -21,6 +21,8 @@ Changes:
 Fixes:
 - Fix Import/Export doesn't work phpvirtualbox.
 - Fix /dev/md2 creation on boot.
+- Fix iconf issue with empty inbound charset. (BR 378)
+
 
 Permanent restrictions:
 - It is not possible to format a SoftRAID disk with MSDOS FAT16/32.
