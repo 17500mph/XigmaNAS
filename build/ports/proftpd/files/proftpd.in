@@ -11,7 +11,7 @@
 # REQUIRE: DAEMON
 # BEFORE: LOGIN
 # KEYWORD: shutdown
-# XQUERY: -i "count(//ftpd/enable) > 0" -o "0" -b
+# XQUERY: --if "count(//ftpd/enable) > 0" --output "0" --break
 # RCVAR: proftpd
 
 . /etc/rc.subr
@@ -125,116 +125,164 @@ proftpd_mkconf()
 	if [ -z "${_allowgroup}" ]; then
 	    _allowgroup="ftp"
 	fi
-	/usr/local/bin/xml sel -t \
-		-v "concat('ServerName \"',//system/hostname,' FTP Server\"')" -n \
-		-o "ServerType standalone" -n \
-		-o "DefaultServer on" -n \
-		-v "concat('DefaultAddress ',//system/hostname)" -n \
-		-o "UseIPv6 on" -n \
-		-m "(//ftpd[enable])[1]" \
-		-v "concat('Port ',port)" -n \
-		-o "User nobody" -n \
-		-o "Group nogroup" -n \
-		-i "string-length(filemask) > 0 and string-length(directorymask) > 0" -v "concat('Umask ',filemask,' ',directorymask)" -n -b \
-		-i "string-length(filemask) > 0 and string-length(directorymask) = 0" -v "concat('Umask ',filemask,' ${proftpd_umaskdirectory}')" -n -b \
-		-i "string-length(filemask) = 0 and string-length(directorymask) > 0" -v "concat('Umask ${proftpd_umaskfile} ',directorymask)" -n -b \
-		-i "string-length(filemask) = 0 and string-length(directorymask) = 0" -o "Umask ${proftpd_umaskfile} ${proftpd_umaskdirectory}" -n -b \
-		-o "SyslogFacility ftp" -n \
-		-o "SyslogLevel ${proftpd_sysloglevel}" -n \
-		-o "MultilineRFC2228 ${proftpd_multilinerfc2228}" -n \
-		-o "DisplayLogin ${proftpd_displaylogin}" -n \
-		-o "DeferWelcome ${proftpd_deferwelcome}" -n \
-		-i "timeout[. > 0]" -v "concat('TimeoutIdle ',timeout)" -n -b \
-		-o "TimeoutLogin ${proftpd_timeoutlogin}" -n \
-		-o "TimeoutNoTransfer ${proftpd_timeoutnotransfer}" -n \
-		-o "TimeoutStalled ${proftpd_timeoutstalled}" -n \
-		-o "MaxInstances ${proftpd_maxinstances}" -n \
-		-v "concat('MaxClients ',numberclients)" -n \
-		-i "maxconperip[. > 0]" -v "concat('MaxConnectionsPerHost ',maxconperip)" -n -b \
-		-i "maxloginattempts[. > 0]" -v "concat('MaxLoginAttempts  ',maxloginattempts )" -n -b \
-		-o "DefaultTransferMode ${proftpd_defaulttransfermode}" -n \
-		-i "count(fxp) > 0" -o "AllowForeignAddress on" -n -b \
-		-i "string-length(pasv_address) > 0" -v "concat('MasqueradeAddress ',pasv_address)" -n -b \
-		-i "pasv_min_port[. != '0'] and pasv_max_port[. != '0']" -v "concat('PassivePorts ',pasv_min_port,' ',pasv_max_port)" -n -b \
-		-i "count(identlookups) > 0" -o "IdentLookups on" -n -b \
-		-i "count(identlookups) = 0" -o "IdentLookups off" -n -b \
-		-i "count(usereversedns) > 0" -o "UseReverseDNS on" -n -b \
-		-i "count(usereversedns) = 0" -o "UseReverseDNS off" -n -b \
-		-i "count(localusersonly) = 0" \
-			-n \
-			-o "<Anonymous ${proftpd_anonymousrootdir}>" -n \
-			-o "  User ftp" -n \
-			-o "  Group ftp" -n \
-			-o "  UserAlias anonymous ftp" -n \
-			-i "string-length(anonymousbandwidth/up) > 0" -v "concat('  TransferRate STOR ',anonymousbandwidth/up)" -n -b \
-			-i "string-length(anonymousbandwidth/down) > 0" -v "concat('  TransferRate RETR ',anonymousbandwidth/down)" -n -b \
-			-i "count(anonymousonly) > 0" \
-				-o "  <Limit LOGIN>" -n \
-				-o "    AllowAll" -n \
-				-o "  </Limit>" -n \
-			-b \
-			-o "</Anonymous>" -n \
-		-b \
-		-i "count(localusersonly) > 0" \
-			-n \
-			-o "<Limit LOGIN>" -n \
-			-o "  AllowGroup OR ${_allowgroup}" -n \
-			-i "count(permitrootlogin) > 0" -o "  AllowGroup wheel" -n -b \
-			-o "  DenyAll" -n \
-			-o "</Limit>" -n \
-		-b \
-		-n \
-		-o "<Global>" -n \
-		-o "  RequireValidShell ${proftpd_requirevalidshell}" -n \
-		-i "count(chrooteveryone) > 0" -o "  DefaultRoot ${proftpd_defaultrootdir} ${proftpd_defaultrootgroupexpr}" -n -b \
-		-i "count(permitrootlogin) > 0" -o "  RootLogin on" -n -b \
-		-o "  AllowOverwrite on" -n \
-		-i "count(allowrestart) > 0" \
-			-o "  AllowRetrieveRestart on" -n \
-			-o "  AllowStoreRestart on" -n \
-		-b \
-		-o "  DeleteAbortedStores ${proftpd_deleteabortedstores}" -n \
-		-i "string-length(userbandwidth/up) > 0" -v "concat('  TransferRate STOR ',userbandwidth/up)" -n -b \
-		-i "string-length(userbandwidth/down) > 0" -v "concat('  TransferRate RETR ',userbandwidth/down)" -n -b \
-		-o "  TimesGMT ${proftpd_timesgmt}" -n \
-		-o "</Global>" -n \
-		-i "count(anonymousonly) > 0" \
-			-n \
-			-o "<Limit LOGIN>" -n \
-			-i "count(permitrootlogin) > 0" -o "  AllowGroup wheel" -n -b \
-			-o "  DenyAll" -n \
-			-o "</Limit>" -n \
-		-b \
-		-i "count(tls) > 0" \
-			-n \
-			-o "<IfModule mod_tls.c>" -n \
-			-o "  TLSEngine on" -n \
-			-o "  TLSProtocol ${proftpd_tlsprotocol}" -n \
-			-o "  TLSOptions ${proftpd_tlsoptions}" -n \
-			-o "  TLSRSACertificateFile ${proftpd_tlsrsacertfile}" -n \
-			-o "  TLSRSACertificateKeyFile ${proftpd_tlsrsakeyfile}" -n \
-			-o "  TLSVerifyClient ${proftpd_tlsverifyclient}" -n \
-			-i "count(tlsrequired) > 0" \
-				-o "  TLSRequired ${proftpd_tlsrequired}" -n \
-			-b \
-			-o "</IfModule>" -n \
-		-b \
-		-n \
-		-o "<IfModule mod_ban.c>" -n \
-		-i "count(mod_ban/enable) = 0" -o "  BanEngine off" -n -b \
-		-i "count(mod_ban/enable) > 0" -o "  BanEngine on" -n -b \
-		-o "  BanControlsACLs ${proftpd_modban_bancontrolsacls}" -n \
-		-o "  BanLog ${proftpd_modban_banlog}" -n \
-		-o "  BanMessage ${proftpd_modban_banmessage}" -n \
-		-m "mod_ban/rule" \
-			-v "concat('  BanOnEvent ',event,' ',occurrence,'/',timeinterval,' ',expire)" -n \
-		-b \
-		-o "  BanTable ${proftpd_modban_bantable}" -n \
-		-o "</IfModule>" -n \
-		-n \
-		-m "auxparam" \
-				-v "." -n \
-		-b \
+	/usr/local/bin/xml sel --template \
+		--value-of "concat('ServerName \"',//system/hostname,' FTP Server\"')" --nl \
+		--output "ServerType standalone" --nl \
+		--output "DefaultServer on" --nl \
+		--value-of "concat('DefaultAddress ',//system/hostname)" --nl \
+		--output "UseIPv6 on" --nl \
+		--match "(//ftpd[enable])[1]" \
+			--value-of "concat('Port ',port)" --nl \
+			--output "User nobody" --nl \
+			--output "Group nogroup" --nl \
+			--if "string-length(filemask) > 0" \
+				--value-of "concat('Umask ',filemask,' ')" \
+			--else \
+				--output "Umask ${proftpd_umaskfile} " \
+			--break \
+			--if "string-length(directorymask) > 0" \
+				--value-of "directorymask" --nl \
+			--else \
+				--output "${proftpd_umaskdirectory}" --nl \
+			--break \
+			--output "SyslogFacility ftp" --nl \
+			--if "string-length(sysloglevel) > 0" \
+				--value-of "concat('SyslogLevel ',sysloglevel)" --nl \
+			--else \
+				--output "SyslogLevel ${proftpd_sysloglevel}" --nl \
+			--break \
+			--output "MultilineRFC2228 ${proftpd_multilinerfc2228}" --nl \
+			--output "DisplayLogin ${proftpd_displaylogin}" --nl \
+			--output "DeferWelcome ${proftpd_deferwelcome}" --nl \
+			--if "timeout[. > 0]" \
+				--value-of "concat('TimeoutIdle ',timeout)" --nl \
+			--break \
+			--output "TimeoutLogin ${proftpd_timeoutlogin}" --nl \
+			--output "TimeoutNoTransfer ${proftpd_timeoutnotransfer}" --nl \
+			--output "TimeoutStalled ${proftpd_timeoutstalled}" --nl \
+			--output "MaxInstances ${proftpd_maxinstances}" --nl \
+			--value-of "concat('MaxClients ',numberclients)" --nl \
+			--if "maxconperip[. > 0]" \
+				--value-of "concat('MaxConnectionsPerHost ',maxconperip)" --nl \
+			--break \
+			--if "maxloginattempts[. > 0]" \
+				--value-of "concat('MaxLoginAttempts  ',maxloginattempts )" --nl \
+			--break \
+			--output "DefaultTransferMode ${proftpd_defaulttransfermode}" --nl \
+			--if "count(fxp) > 0" \
+				--output "AllowForeignAddress on" --nl \
+			--break \
+			--if "string-length(pasv_address) > 0" \
+				--value-of "concat('MasqueradeAddress ',pasv_address)" --nl \
+			--break \
+			--if "pasv_min_port[. != '0'] and pasv_max_port[. != '0']" \
+				--value-of "concat('PassivePorts ',pasv_min_port,' ',pasv_max_port)" --nl \
+			--break \
+			--if "count(identlookups) > 0" \
+				--output "IdentLookups on" --nl \
+			--else \
+				--output "IdentLookups off" --nl \
+			--break \
+			--if "count(usereversedns) > 0" \
+				--output "UseReverseDNS on" --nl \
+			--else \
+				--output "UseReverseDNS off" --nl \
+			--break \
+			--if "count(localusersonly) = 0" \
+				--nl \
+				--output "<Anonymous ${proftpd_anonymousrootdir}>" --nl \
+				--output "  User ftp" --nl \
+				--output "  Group ftp" --nl \
+				--output "  UserAlias anonymous ftp" --nl \
+				--if "string-length(anonymousbandwidth/up) > 0" \
+					--value-of "concat('  TransferRate STOR ',anonymousbandwidth/up)" --nl \
+				--break \
+				--if "string-length(anonymousbandwidth/down) > 0" \
+					--value-of "concat('  TransferRate RETR ',anonymousbandwidth/down)" --nl \
+				--break \
+				--if "count(anonymousonly) > 0" \
+					--output "  <Limit LOGIN>" --nl \
+					--output "    AllowAll" --nl \
+					--output "  </Limit>" --nl \
+				--break \
+				--output "</Anonymous>" --nl \
+			--break \
+			--if "count(localusersonly) > 0" \
+				--nl \
+				--output "<Limit LOGIN>" --nl \
+				--output "  AllowGroup OR ${_allowgroup}" --nl \
+				--if "count(permitrootlogin) > 0" \
+					--output "  AllowGroup wheel" --nl \
+				--break \
+				--output "  DenyAll" --nl \
+				--output "</Limit>" --nl \
+			--break \
+			--nl \
+			--output "<Global>" --nl \
+			--output "  RequireValidShell ${proftpd_requirevalidshell}" --nl \
+			--if "count(chrooteveryone) > 0" \
+				--output "  DefaultRoot ${proftpd_defaultrootdir} ${proftpd_defaultrootgroupexpr}" --nl \
+			--break \
+			--if "count(permitrootlogin) > 0" \
+				--output "  RootLogin on" --nl \
+			--break \
+			--output "  AllowOverwrite on" --nl \
+			--if "count(allowrestart) > 0" \
+				--output "  AllowRetrieveRestart on" --nl \
+				--output "  AllowStoreRestart on" --nl \
+			--break \
+			--output "  DeleteAbortedStores ${proftpd_deleteabortedstores}" --nl \
+			--if "string-length(userbandwidth/up) > 0" \
+				--value-of "concat('  TransferRate STOR ',userbandwidth/up)" --nl \
+			--break \
+			--if "string-length(userbandwidth/down) > 0" \
+				--value-of "concat('  TransferRate RETR ',userbandwidth/down)" --nl \
+			--break \
+			--output "  TimesGMT ${proftpd_timesgmt}" --nl \
+			--output "</Global>" --nl \
+			--if "count(anonymousonly) > 0" \
+				--nl \
+				--output "<Limit LOGIN>" --nl \
+				--if "count(permitrootlogin) > 0" \
+					--output "  AllowGroup wheel" --nl \
+				--break \
+				--output "  DenyAll" --nl \
+				--output "</Limit>" --nl \
+			--break \
+			--if "count(tls) > 0" \
+				--nl \
+				--output "<IfModule mod_tls.c>" --nl \
+				--output "  TLSEngine on" --nl \
+				--output "  TLSProtocol ${proftpd_tlsprotocol}" --nl \
+				--output "  TLSOptions ${proftpd_tlsoptions}" --nl \
+				--output "  TLSRSACertificateFile ${proftpd_tlsrsacertfile}" --nl \
+				--output "  TLSRSACertificateKeyFile ${proftpd_tlsrsakeyfile}" --nl \
+				--output "  TLSVerifyClient ${proftpd_tlsverifyclient}" --nl \
+				--if "count(tlsrequired) > 0" \
+					--output "  TLSRequired ${proftpd_tlsrequired}" --nl \
+				--break \
+				--output "</IfModule>" --nl \
+			--break \
+			--nl \
+			--output "<IfModule mod_ban.c>" --nl \
+			--if "count(mod_ban/enable) > 0" \
+				--output "  BanEngine on" --nl \
+			--else \
+				--output "  BanEngine off" --nl \
+			--break \
+			--output "  BanControlsACLs ${proftpd_modban_bancontrolsacls}" --nl \
+			--output "  BanLog ${proftpd_modban_banlog}" --nl \
+			--output "  BanMessage ${proftpd_modban_banmessage}" --nl \
+			--match "mod_ban/rule" \
+				--value-of "concat('  BanOnEvent ',event,' ',occurrence,'/',timeinterval,' ',expire)" --nl \
+			--break \
+			--output "  BanTable ${proftpd_modban_bantable}" --nl \
+			--output "</IfModule>" --nl \
+			--nl \
+			--match "auxparam" \
+				--value-of "." --nl \
+			--break \
+		--break \
 		${configxml_file} | /usr/local/bin/xml unesc > ${proftpd_config}
 
 		# Add mod_delay
