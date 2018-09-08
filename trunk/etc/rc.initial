@@ -41,8 +41,10 @@ else
 	case ${PLATFORM} in
 		*-live[cC][dD]|*-live[uU][sS][bB])
 			echo
-			echo "Now, the blank USB memory for installation can be inserted."
-			echo "To redisplay Console Menu, press enter key.";;
+			echo "The installation requires a storage medium from which the computer can"
+			echo "be started. This can be a USB memory stick, a SSD or a hard disk."
+			echo "Attention, all data on the installation device will be deleted!"
+			echo "Press the ENTER key to display the Console Menu again.";;
 	esac
 	# endless loop
 	while : ; do
