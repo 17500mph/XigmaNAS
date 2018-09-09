@@ -64,7 +64,7 @@ crontab_addline()
 		# Create user crontab if necessary
 		if [ ! -e "${cron_tabspath}/${_user}" ]; then
 			# get users initial home directory
-			_home=`pw user show ${_user} -F | cut -d: -f 9`
+			_home=`pw user show ${_user} -7F | cut -d : -f 6`
 			if [ ! -d "${_home}" ]; then
 				_home="/var/log"
 			fi
