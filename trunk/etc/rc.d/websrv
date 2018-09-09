@@ -71,32 +71,39 @@ websrv_mkconf()
 	fi
 
 	# Create .conf file
-	/usr/local/bin/xml sel -t -m "//websrv" \
-		-v "concat('server.port = ',port)" -n \
-		-o "${_runasuser}" -n \
-		-o "${_runasgroup}" -n \
-		-v "concat('server.document-root = \"',documentroot,'\"')" -n \
-		-i "count(dirlisting) > 0" \
-			-o "server.dir-listing = \"enable\"" -n \
-			-o "dir-listing.activate = \"enable\"" -n \
-			-o "dir-listing.hide-dotfiles = \"enable\"" -n \
-			-o "dir-listing.encoding = \"utf-8\"" -n \
-		-b \
-		${configxml_file} | /usr/local/bin/xml unesc > ${websrv_conf}
+	# mod_webdav before mod_auth
+	echo "# created by websrv" > ${websrv_conf}
+	/usr/local/bin/xml sel --template \
+		--match "//websrv" \
+			--value-of "concat('server.port = ',port)" --nl \
+			--output "${_runasuser}" --nl \
+			--output "${_runasgroup}" --nl \
+			--value-of "concat('server.document-root = \"',documentroot,'\"')" --nl \
+			--if "count(dirlisting) > 0" \
+				--output 'server.dir-listing = "enable"' --nl \
+				--output 'dir-listing.activate = "enable"' --nl \
+				--output 'dir-listing.hide-dotfiles = "enable"' --nl \
+				--output 'dir-listing.encoding = "utf-8"' --nl \
+			--break \
+			--output 'server.modules = (' --nl \
+			--output '  "mod_access",' --nl \
+			--if "count(webdav/param[enable]) > 0" \
+				--output '  "mod_webdav",' --nl \
+			--break \
+			--output '  "mod_auth",' --nl \
+			--output '  "mod_expire",' --nl \
+			--output '  "mod_cgi",' --nl \
+			--output '  "mod_fastcgi",' --nl \
+			--output '  "mod_openssl",' --nl \
+			--output '  "mod_setenv",' --nl \
+			--output '  "mod_rewrite",' --nl \
+			--output '  "mod_redirect",' --nl \
+			--output '  "mod_alias"' --nl \
+			--output ')' --nl \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${websrv_conf}
 	
 	cat <<EOF >> ${websrv_conf}	
-server.modules = (
-  "mod_access",
-  "mod_auth",
-  "mod_expire",
-  "mod_cgi",
-  "mod_fastcgi",
-  "mod_openssl",
-  "mod_setenv",
-  "mod_rewrite",
-  "mod_redirect",
-  "mod_alias"
- )
 server.errorlog-use-syslog = "enable"
 # debugmode debug.log-request-handling enable/disable
 debug.log-request-handling = "disable"
