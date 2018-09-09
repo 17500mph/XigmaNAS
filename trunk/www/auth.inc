@@ -34,60 +34,22 @@
 require_once 'session.inc';
 
 Session::start();
-
-// Check if session is valid
+//	Check if session is valid
 if(!Session::isLogin()):
 	header('Location: login.php');
 	exit;
 endif;
-
-if(array_key_exists('SERVER_PROTOCOL',$_SERVER) && is_string($_SERVER['SERVER_PROTOCOL'])):
-	$server_protocol = htmlspecialchars($_SERVER['SERVER_PROTOCOL']);
-else:
-	$server_protocol = 'HTTP/1.0';
-endif;
-
-// Check page permission
+//	Check page permission
 if(!Session::isAdmin() && (!isset($pgperm['allowuser']) || !$pgperm['allowuser'])):
-	header(sprintf('%s 403 Forbidden',$server_protocol));
-	header('Status: 403 Forbidden');
-	echo <<<EOD
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no">
-		<title>403 - Forbidden</title>
-	</head>
-	<body>
-		<h1>403 - Forbidden</h1>
-	</body>
-</html>
-EOD;
+	http_response_code(403);
 	Session::destroy();
 	exit;
 endif;
-
-// Check if request is valid and authorized
+//	Check if request is valid and authorized
 if($_SERVER['REQUEST_METHOD'] === 'POST'):
 	if(!isset($_POST['authtoken']) || !Session::isValidAuthToken($_POST['authtoken'])):
-		header(sprintf('%s 401 Unauthorized',$server_protocol));
-		header('Status: 401 Unauthorized');
-		echo <<<EOH
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no">
-		<title>401 - Unauthorized</title>
-	</head>
-	<body>
-		<h1>401 - Unauthorized</h1>
-	</body>
-</html>
-EOH;
+		http_response_code(401);
 		Session::destroy();
 		exit;
 	endif;
 endif;
-?>
