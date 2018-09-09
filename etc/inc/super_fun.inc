@@ -54,8 +54,7 @@ function xmlspecialchars(string $data = '') {
 		. '\x{0020}-\x{007E}'
 		. '\x{0085}'
 		. '\x{00A0}-\x{D7FF}'
-		. '\x{E000}-\x{FDCF}'
-		. '\x{FDE0}-\x{FFFD}'
+		. '\x{E000}-\x{FFFD}'
 		. '\x{10000}-\x{1FFFD}'
 		. '\x{20000}-\x{2FFFD}'
 		. '\x{30000}-\x{3FFFD}'
@@ -74,4 +73,3 @@ function xmlspecialchars(string $data = '') {
 		. '\x{100000}-\x{10FFFD}'
 		. ']+/u','�',htmlspecialchars($data,ENT_QUOTES|ENT_XML1,'UTF-8',false));
 }
-?>
