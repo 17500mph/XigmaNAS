@@ -54,6 +54,32 @@ function email_validate_settings() {
 	return 0;
 }
 /**
+ *	Calculates the email header field 'From'
+ *	@global array $config
+ *	@return string Email header field 'From'
+ */
+function get_email_header_from() {
+	global $config;
+
+	array_make_branch($config,'system','email');
+	$cfg_hostname = $config['system']['hostname'] ?? '';
+	$flt_hostname = filter_var($cfg_hostname,FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/\S/']]);
+	if(is_null($flt_hostname)):
+		$flt_hostname = get_product_name();
+	endif;
+	$cfg_from = $config['system']['email']['from'] ?? '';
+	$flt_from = filter_var($cfg_from,FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/\S/']]);
+	if(is_null($flt_from)):
+		$cfg_domain = $config['system']['domain'] ?? '';
+		$flt_domain = filter_var($cfg_domain,FILTER_VALIDATE_REGEXP,['flags' => FILTER_REQUIRE_SCALAR,'options' => ['default' => NULL,'regexp' => '/\S/']]);
+		if(is_null($flt_domain)):
+			$flt_domain = get_product_name() . '.local';
+		endif;
+		$flt_from = sprintf('%s@%s',$flt_hostname,$flt_domain);
+	endif;
+	return sprintf('"%s" <%s>',$flt_hostname,$flt_from);
+}
+/**
  *	Send an email.
  *	@global array $config
  *	@param string $address The email adress
@@ -63,7 +89,6 @@ function email_validate_settings() {
  *	@return int Return 0 if successful, otherwise 1.
  */
 function email_send($address,$subject,$message,&$error) {
-	global $config;
 	$msgfilepath = '/tmp/message';
 	//	Get date in RFC 2882 format.
 	$rfcdate = date('r');
@@ -74,6 +99,7 @@ function email_send($address,$subject,$message,&$error) {
 		'line-length' => 76,
 		'line-break-chars' => PHP_EOL
 	];
+	$email_from = get_email_header_from();
 	//	Substitute special characters in subject.
 	$subject = str_replace('%d',trim(shell_exec('date')),$subject);
 	$subject = str_replace('%h',system_get_hostname(),$subject); 
@@ -85,7 +111,7 @@ function email_send($address,$subject,$message,&$error) {
 	foreach(explode(' ',$address) as $addressv):
 		$data .= 'To: ' . $addressv . PHP_EOL;
 	endforeach;
-	$data .= 'From: ' . $config['system']['email']['from'] . PHP_EOL;
+	$data .= 'From: ' . $email_from . PHP_EOL;
 	$data .= $subject . PHP_EOL;
 	$data .= 'Date: ' . $rfcdate . PHP_EOL;
 	$data .= 'MIME-Version: 1.0' . PHP_EOL;
