@@ -339,15 +339,18 @@ function dump_xml_config($arr,$rootobj,$encoding) {
  *	@param string rootobj The name of the root object.
  *	@return bool True if valid, otherwise false.
  */
-function validate_xml_config($cffile,$rootobj) {
-	// Parse the configuration
-	$xmlconfig = parse_xml_config($cffile,$rootobj);
-
-	// Due the configuration file does not have a DTD, we can only do some
-	// simple checks, e.g. if version is set.
-	if(!isset($xmlconfig['version'])):
-		return false;
+function validate_xml_config($cffile,string $rootobj) {
+	//	Parse the configuration
+	$retval = false;
+	if(1 === preg_match('/\S/',$rootobj)):
+		$raw_config = parse_xml_config_raw($cffile);
+		if(array_key_exists($rootobj,$raw_config)):
+			$xml_config = $raw_config[$rootobj];
+			//	Perform simple check
+			if(array_key_exists('version',$xml_config)):
+				$retval = true;
+			endif;
+		endif;
 	endif;
-	// Add more checks, or implement a DTD...
-	return true;
+	return $retval;
 }
