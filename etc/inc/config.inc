@@ -317,7 +317,14 @@ if(!isset($noparseconfig) || !$noparseconfig):
 			endif;
 		else:
 			//	Load configuration file into array.
-			$config = parse_xml_config("{$g['conf_path']}/config.xml",$g['xml_rootobj']);
+			$config_filename = $g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
+			if(validate_xml_config($config_filename,$g['xml_rootobj'])):
+				$config = parse_xml_config($config_filename,$g['xml_rootobj']);
+			elseif(validate_xml_config($config_filename,'nas4free')):
+				$config = parse_xml_config($config_filename,'nas4free');
+			else:
+				$config = false;
+			endif;
 			if(false === $config):
 				echo "Error: Failed to load '{$g['conf_path']}/config.xml' file. {$productname} cannot continue booting.",PHP_EOL;
 				mwexec('/sbin/halt');
@@ -440,8 +447,12 @@ function write_loader_config(){
 	endif;
 	if(!isset($config['system']['loaderconf']['param'])):
 		//	Load configuration file into array.
-		$config_filename = sprintf('%s/config.xml',$g['conf_path']);
-		$config = parse_xml_config($config_filename,$g['xml_rootobj']);
+		$config_filename = $g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
+		if(validate_xml_config($config_filename,$g['xml_rootobj'])):
+			$config = parse_xml_config($config_filename,$g['xml_rootobj']);
+		elseif(validate_xml_config($config_filename,'nas4free')):
+			$config = parse_xml_config($config_filename,'nas4free');
+		endif;
 		//	read platform
 		$platform_filename = sprintf('%s/platform',$g['etc_path']);
 		if(file_exists($platform_filename)):
