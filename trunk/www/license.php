@@ -289,7 +289,8 @@ $thead = $table->addTHEAD();
 $tbody = $table->addTBODY(['class' => 'donothighlight']);
 $thead->ins_titleline(gettext('License'),$n_col_width);
 $td = $tbody->addTR()->addTDwC('lcebl');
-$td->addP()->addElement('strong',[],'XigmaNAS is copyright © 2018 XigmaNAS (<a href="mailto:info@xigmanas.com">info@xigmanas.com</a>).<br />All Rights Reserved.');
+$td->addP()->addElement('strong',[],'XigmaNAS® is copyright © 2018 XigmaNAS® (<a href="mailto:info@xigmanas.com">info@xigmanas.com</a>).<br />All Rights Reserved.');
+$td->addP()->addElement('strong',[],'XigmaNAS® is a registered trademark of Michael Zoon. (zoon01@xigmanas.com).<br />All Rights Reserved.');
 $td->addP([],'The compilation of software, code and documentation known as XigmaNAS is distributed under the following terms:');
 $td->addP([],'Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:');
 $td->
