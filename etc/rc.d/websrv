@@ -229,20 +229,42 @@ auth.backend = "htpasswd"
 auth.backend.htpasswd.userfile = "${_htpasswd}"
 EOF
 
-		/usr/local/bin/xml sel -t -m "//websrv/authentication" \
-			-o "auth.require = ( " \
-			-m "url" \
-				-v "concat('\"',path,'\" =>')" -n\
-				-o "(" -n \
-					-o "\"method\" => \"basic\"," -n \
-					-v "concat('\"realm\" => \"',realm,'\",')" -n \
-					-o "\"require\" => \"valid-user\"" -n \
-				-o ")," -n \
-			-b \
-			-o ")" \
+		/usr/local/bin/xml sel --template \
+			--match '//websrv/authentication' \
+				--output 'auth.require = ( ' \
+				--match 'url' \
+					--value-of "concat('\"',path,'\" =>')" --nl \
+					--output "(" --nl \
+					--output '"method" => "basic",' --nl \
+					--value-of "concat('\"realm\" => \"',realm,'\",')" --nl \
+					--output '"require" => "valid-user"' --nl \
+					--output '),' --nl \
+				--break \
+				--output ')' -n \
+			--break \
 			${configxml_file} | /usr/local/bin/xml unesc >> ${websrv_conf}
 	fi
-
+	#	WebDAV
+	/usr/local/bin/xml sel --template \
+		--match '//websrv/webdav/param[enable]' \
+			--if 'string-length(folderpattern) > 0' \
+				--value-of "concat('\$HTTP[\"url\"] =~ \"^/',folderpattern,'(\$|/)\" {')" --nl \
+				--output 'webdav.activate = "enable"' --nl \
+				--if 'count(isreadonly) > 0' \
+					--output 'webdav.is-readonly = "enable"' --nl \
+				--else \
+					--output 'webdav.is-readonly = "disable"' --nl \
+				--break \
+				--output 'dir-listing.activate = "disable"' --nl \
+				--match 'auxparam' \
+					--if 'position() < last() or string-length(.) > 0' \
+						--value-of '.' --nl \
+					--break \
+				--break \
+				--output '}' --nl \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${websrv_conf}
 	if [ "${_protocol}" = "https" ]; then
 		cat <<EOF >> ${websrv_conf}
 ssl.engine = "enable"
