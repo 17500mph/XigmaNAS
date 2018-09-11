@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
 "PO-Revision-Date: 2018-08-18 21:40+0000\n"
 "Last-Translator: peter <peterswebdesign2010@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -639,6 +639,9 @@ msgstr "Adăugare volum"
 
 msgid "Add WLAN"
 msgstr "Adăugare WLAN"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Adăugare dispozitiv cache la pool"
@@ -2779,6 +2782,9 @@ msgstr "Ștergere volume selectate"
 msgid "Delete Selected WLANs"
 msgstr "Ștergere rețele WLAN selectate"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "Ștergere servere iSNS seelctate"
 
@@ -3110,6 +3116,9 @@ msgstr "Dezactivare module Rsync selectate"
 msgid "Disable Selected Targets"
 msgstr "Dezactivare Destinații selectate"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "Dezactivare servere iSNS selectate"
 
@@ -3413,6 +3422,9 @@ msgstr "Ștergeți rețelele VLAN selectate?"
 msgid "Do you want to delete selected WLANs?"
 msgstr "Ștergeți rețelele WVLAN selectate?"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr ""
 
@@ -3515,6 +3527,9 @@ msgstr ""
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr ""
 
@@ -3570,6 +3585,9 @@ msgid "Do you want to enable selected LUNs?"
 msgstr ""
 
 msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3636,6 +3654,9 @@ msgid "Do you want to toggle selected LUNs?"
 msgstr ""
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3920,6 +3941,9 @@ msgstr "Editare volum"
 msgid "Edit WLAN"
 msgstr "Editare WLAN"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Editare Grup Auth"
 
@@ -4090,6 +4114,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "Activare module Rsync selectate"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected WebDAV Records"
 msgstr ""
 
 msgid "Enable Selected iSNS Servers"
@@ -4938,6 +4965,9 @@ msgstr "Indicator de stare xxx (ups.conf sau cmdline -x)"
 
 msgid "Flags"
 msgstr "Indicatori"
+
+msgid "Folder Pattern"
+msgstr ""
 
 msgid "Follow"
 msgstr "Urmărire"
@@ -6855,6 +6885,9 @@ msgstr "Numele sistemului fără domeniu (ex. %s)."
 msgid "Name of the Portal Group."
 msgstr ""
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "Numele dispozitivului utilizat ca swap, ex. %s."
@@ -8199,6 +8232,12 @@ msgstr "Citire încărcare minimă"
 
 msgid "Read only"
 msgstr "Doar citire"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "Citire/Scriere"
@@ -10039,6 +10078,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "ID-ul VLAN trebuie să fie în intervalul 1-4094."
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr ""
@@ -10901,6 +10944,9 @@ msgstr ""
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr ""
 
@@ -11555,6 +11601,9 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Inversare stare selecție module Rsync"
 
 msgid "Toggle Selected Targets"
+msgstr ""
+
+msgid "Toggle Selected WebDAV Records"
 msgstr ""
 
 msgid "Toggle Selected iSNS Servers"
@@ -12415,6 +12464,21 @@ msgstr "NIvel avertizare"
 
 msgid "Watch Directory"
 msgstr "Director Watch"
+
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "Interfață Web"

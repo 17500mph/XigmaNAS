@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xigmanas\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
-"PO-Revision-Date: 2018-08-30 08:45+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"PO-Revision-Date: 2018-09-06 01:05+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:38+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:32+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: ca_ES\n"
 
@@ -639,6 +639,9 @@ msgstr "Afegir volum."
 
 msgid "Add WLAN"
 msgstr "Afegir WLAN"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Afegir un dispositiu de memòria cau a la piscina"
@@ -2790,6 +2793,9 @@ msgstr "Suprimeix volums seleccionats"
 msgid "Delete Selected WLANs"
 msgstr "Suprimeix WLAN's seleccionats"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "Elimineu els servidors iSNS seleccionats"
 
@@ -3122,6 +3128,9 @@ msgstr "Eliminar mòduls seleccionats Rsync"
 msgid "Disable Selected Targets"
 msgstr "Desactiveu els objectius seleccionats"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "Desactiveu els servidors iSNS seleccionats"
 
@@ -3437,6 +3446,9 @@ msgstr "Voleu eliminar les VLAN's seleccionats?"
 msgid "Do you want to delete selected WLANs?"
 msgstr "Voleu eliminar les WLAN's seleccionats?"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr "Voleu eliminar els grups de autenticació seleccionats?"
 
@@ -3539,6 +3551,9 @@ msgstr "Voleu desactivar LUN seleccionats?"
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "Voleu desactivar els usuaris seleccionats de CHAP mútua?"
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr "Voleu desactivar els grups de autenticació seleccionats?"
 
@@ -3595,6 +3610,9 @@ msgstr "Voleu activar LUN seleccionats?"
 
 msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr "Voleu activar els usuaris seleccionats de CHAP mútua?"
+
+msgid "Do you want to enable selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Voleu activar els grups de autenticació seleccionats?"
@@ -3661,6 +3679,9 @@ msgstr "Voleu canviar els LUN seleccionats?"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "Voleu canviar els usuaris CHAP mútus seleccionats?"
+
+msgid "Do you want to toggle selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Voleu canviar els grups d'autenticació seleccionats?"
@@ -3945,6 +3966,9 @@ msgstr "Editar volum"
 msgid "Edit WLAN"
 msgstr "Edita WLAN"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Editar grup d'autenticació"
 
@@ -4121,6 +4145,9 @@ msgstr "Activar els mòduls Rsync seleccionats"
 
 msgid "Enable Selected Targets"
 msgstr "Activar els objectius seleccionats?"
+
+msgid "Enable Selected WebDAV Records"
+msgstr ""
 
 msgid "Enable Selected iSNS Servers"
 msgstr "Activar els servidors iSNS seleccionats"
@@ -4980,6 +5007,9 @@ msgstr "Bandera xxx (ups.conf o -x cmdline) Estat"
 msgid "Flags"
 msgstr "Banderes"
 
+msgid "Folder Pattern"
+msgstr ""
+
 msgid "Follow"
 msgstr "Seguir"
 
@@ -5622,7 +5652,7 @@ msgid "Import using GPT labels"
 msgstr "Importa fent servir les etiquetes GPT"
 
 msgid "Imported Users"
-msgstr ""
+msgstr "Usuaris importats"
 
 msgid "In"
 msgstr "Entrada"
@@ -6915,6 +6945,9 @@ msgstr "Nom del host NAS, sense part de domini, per exemple, %s."
 
 msgid "Name of the Portal Group."
 msgstr "Nom del grup de portal"
+
+msgid "Name of the WebDAV Record."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -8274,6 +8307,12 @@ msgstr "Llegit des de la càrrega més baixa"
 msgid "Read only"
 msgstr "Només lectura"
 
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
+
 msgid "Read/Write"
 msgstr "Lectura/Escriptura"
 
@@ -8556,7 +8595,7 @@ msgstr ""
 "Restringit - Heretar tots menys \"escriure ACL\" i \"canviar propietari\""
 
 msgid "Result of testjoin"
-msgstr ""
+msgstr "Resultat de la prova d'unió"
 
 msgid "Results of last self test"
 msgstr "Els resultats de l'última auto prova"
@@ -10168,6 +10207,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "L'ID de VLAN ha d'estar entre 1 i 4094."
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr ""
@@ -11059,6 +11102,9 @@ msgstr ""
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Aquest paràmetre s'afegirà a la secció global de ctl.conf"
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr "Aquest paràmetre s'afegirà a aquest grup d'autenticació."
 
@@ -11727,6 +11773,9 @@ msgstr "Alternar mòduls Rsync seleccionats"
 msgid "Toggle Selected Targets"
 msgstr "Commuta els objectius seleccionats"
 
+msgid "Toggle Selected WebDAV Records"
+msgstr ""
+
 msgid "Toggle Selected iSNS Servers"
 msgstr "Commuta els servidors iSNS seleccionats"
 
@@ -11853,7 +11902,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
 msgid "Trust Account Status"
-msgstr ""
+msgstr "Estat d'usuaris reconeguts"
 
 msgid "Trusted Domains"
 msgstr "Dominis confiables"
@@ -12599,6 +12648,21 @@ msgstr "Nivell d'avís"
 msgid "Watch Directory"
 msgstr "Directori de vigilancia"
 
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
+
 msgid "WebGUI"
 msgstr "Interfície Web gràfica d'usuari"
 
@@ -12687,7 +12751,7 @@ msgid "Wildcard"
 msgstr "Comodí"
 
 msgid "Winbindd Availability"
-msgstr ""
+msgstr "Disponibilitat Winbindd"
 
 msgid "Wireless configuration"
 msgstr "Configuració sense fils"

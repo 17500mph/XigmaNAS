@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
 "PO-Revision-Date: 2018-07-07 23:17+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -598,6 +598,9 @@ msgstr "ボリュームを追加"
 
 msgid "Add WLAN"
 msgstr "WLAN追加"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "プールへキャッシュデバイス追加"
@@ -2565,6 +2568,9 @@ msgstr "選択したボリュームの削除"
 msgid "Delete Selected WLANs"
 msgstr "選択したWLANの削除"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr ""
 
@@ -2884,6 +2890,9 @@ msgstr ""
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr ""
 
@@ -3168,6 +3177,9 @@ msgstr ""
 msgid "Do you want to delete selected WLANs?"
 msgstr ""
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr ""
 
@@ -3270,6 +3282,9 @@ msgstr ""
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr ""
 
@@ -3325,6 +3340,9 @@ msgid "Do you want to enable selected LUNs?"
 msgstr ""
 
 msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3391,6 +3409,9 @@ msgid "Do you want to toggle selected LUNs?"
 msgstr ""
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3673,6 +3694,9 @@ msgstr ""
 msgid "Edit WLAN"
 msgstr ""
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "認証グループの編集"
 
@@ -3841,6 +3865,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr ""
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected WebDAV Records"
 msgstr ""
 
 msgid "Enable Selected iSNS Servers"
@@ -4638,6 +4665,9 @@ msgstr "xxx フラグ (ups.conf または cmdline -x) ステータス"
 
 msgid "Flags"
 msgstr "フラグ"
+
+msgid "Folder Pattern"
+msgstr ""
 
 msgid "Follow"
 msgstr "フロー"
@@ -6453,6 +6483,9 @@ msgstr "ドメイン名を除いた NAS のホスト名。 例) %s"
 msgid "Name of the Portal Group."
 msgstr ""
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "スワップデバイスとして使用するデバイスの名前。例) %s"
@@ -7743,6 +7776,12 @@ msgstr "負荷の小さいものから読み出し"
 
 msgid "Read only"
 msgstr "読込み専用"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "読込み/書込み"
@@ -9496,6 +9535,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID は 1-4094 の範囲内で指定してください。"
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "パケットが指定されたルールに当てはまる場合に実行されるアクションを指定します。"
@@ -10265,6 +10308,9 @@ msgstr ""
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr ""
 
@@ -10823,6 +10869,9 @@ msgid "Toggle Selected Rsync Modules"
 msgstr ""
 
 msgid "Toggle Selected Targets"
+msgstr ""
+
+msgid "Toggle Selected WebDAV Records"
 msgstr ""
 
 msgid "Toggle Selected iSNS Servers"
@@ -11632,6 +11681,21 @@ msgstr "警告レベル"
 
 msgid "Watch Directory"
 msgstr "監視ディレクトリ"
+
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
 "PO-Revision-Date: 2018-09-05 11:43+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:32+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -642,6 +642,9 @@ msgstr "Přidat svazek"
 
 msgid "Add WLAN"
 msgstr "Přidat WiFi síť"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Přidat do fondu úložišť zařízení pro mezipaměť"
@@ -2788,6 +2791,9 @@ msgstr "Smazat označené svazky"
 msgid "Delete Selected WLANs"
 msgstr "Smazat označená Wifi rozhraní"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "Smazat vyznačené iSNS servery"
 
@@ -3120,6 +3126,9 @@ msgstr "Vypnout označené Rsync moduly"
 msgid "Disable Selected Targets"
 msgstr "Vypnout označené cíle"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "Přestat používat vyznačené iSNS servery"
 
@@ -3425,6 +3434,9 @@ msgstr "Opravdu smazat označené VLAN?"
 msgid "Do you want to delete selected WLANs?"
 msgstr "Opravdu smazat označená WiFi rozhraní?"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr ""
 
@@ -3527,6 +3539,9 @@ msgstr ""
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr ""
 
@@ -3582,6 +3597,9 @@ msgid "Do you want to enable selected LUNs?"
 msgstr ""
 
 msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3649,6 +3667,9 @@ msgid "Do you want to toggle selected LUNs?"
 msgstr ""
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3933,6 +3954,9 @@ msgstr "Upravit svazek"
 msgid "Edit WLAN"
 msgstr "Upravit WiFi síť"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Upravit skupinu pověřených"
 
@@ -4106,6 +4130,9 @@ msgstr "Používat označené Rsync moduly"
 
 msgid "Enable Selected Targets"
 msgstr "Zapnout označené cíle"
+
+msgid "Enable Selected WebDAV Records"
+msgstr ""
 
 msgid "Enable Selected iSNS Servers"
 msgstr ""
@@ -4949,6 +4976,9 @@ msgstr "Stav příznaku xxx (ups.conf nebo cmdline -x)"
 
 msgid "Flags"
 msgstr "Příznaky"
+
+msgid "Folder Pattern"
+msgstr ""
 
 msgid "Follow"
 msgstr "Následovat"
@@ -6889,6 +6919,9 @@ msgstr "Název NAS stroje, bez doménové části, např.: %s."
 msgid "Name of the Portal Group."
 msgstr "Název skupiny portálu."
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr ""
@@ -8241,6 +8274,12 @@ msgstr "Číst od nejnižšího vytížení"
 
 msgid "Read only"
 msgstr "Pouze pro čtení"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "Čtení/zápis"
@@ -10089,6 +10128,10 @@ msgstr ""
 "Je třeba, aby označení virtuální sítě (VLAN) bylo číslo z rozsahu 1 až 4094."
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "Akce, která bude vykonána pokud paket splní níže uvedená kritéria."
@@ -10987,6 +11030,9 @@ msgstr ""
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Tyto parametry budu přidány do globální sekce ctl.conf"
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr "Tyto parametry budou přidány do této ověřovací skupiny."
 
@@ -11640,6 +11686,9 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "Přepnout označené Rsync moduly"
 
 msgid "Toggle Selected Targets"
+msgstr ""
+
+msgid "Toggle Selected WebDAV Records"
 msgstr ""
 
 msgid "Toggle Selected iSNS Servers"
@@ -12513,6 +12562,21 @@ msgstr "Stupeň varování"
 
 msgid "Watch Directory"
 msgstr "Hlídat složku"
+
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "Webové správní rozhraní"

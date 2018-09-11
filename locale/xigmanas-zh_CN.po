@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
 "PO-Revision-Date: 2018-09-07 06:40+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-07 22:12+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:34+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -586,6 +586,9 @@ msgstr "添加卷"
 
 msgid "Add WLAN"
 msgstr "添加WLAN"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "给池添加一个缓存设备"
@@ -2544,6 +2547,9 @@ msgstr "删除选中的卷"
 msgid "Delete Selected WLANs"
 msgstr "删除选中的WLANs"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "删除选定的iSNS服务器"
 
@@ -2862,6 +2868,9 @@ msgstr "禁用选中的Rsync模块"
 msgid "Disable Selected Targets"
 msgstr "禁用选定的目标"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "禁用选定的iSNS服务器"
 
@@ -3146,6 +3155,9 @@ msgstr "是否要删除选定的VLAN？"
 msgid "Do you want to delete selected WLANs?"
 msgstr "要删除选中的WLAN吗？"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr "你想删除选定的认证组吗？"
 
@@ -3248,6 +3260,9 @@ msgstr "你想禁用选定的LUN吗？"
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "你想禁用选定的相互CHAP用户吗？"
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr "你想禁用选定的认证组吗？"
 
@@ -3304,6 +3319,9 @@ msgstr "你想启用选定的LUN吗？"
 
 msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr "你想启用选定的相互CHAP用户吗？"
+
+msgid "Do you want to enable selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "你想启用选定的认证组吗？"
@@ -3370,6 +3388,9 @@ msgstr "你想切换选定的LUN吗？"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "你想切换选定的相互CHAP用户吗？"
+
+msgid "Do you want to toggle selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "你想切换选定的身份验证组吗？"
@@ -3651,6 +3672,9 @@ msgstr "编辑卷"
 msgid "Edit WLAN"
 msgstr "编辑WLAN"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "编辑认证组"
 
@@ -3820,6 +3844,9 @@ msgstr "启用选中的Rsync模块"
 
 msgid "Enable Selected Targets"
 msgstr "启用选定的目标"
+
+msgid "Enable Selected WebDAV Records"
+msgstr ""
 
 msgid "Enable Selected iSNS Servers"
 msgstr "启用选定的iSNS服务器"
@@ -4612,6 +4639,9 @@ msgstr "标志XXX（ups.conf 或 cmdline -x）的状态"
 
 msgid "Flags"
 msgstr "标示符"
+
+msgid "Folder Pattern"
+msgstr ""
 
 msgid "Follow"
 msgstr "跟随"
@@ -6414,6 +6444,9 @@ msgstr "NAS 主机名称，不包含域名。例如：%s。"
 msgid "Name of the Portal Group."
 msgstr "门户组的名称"
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "交换（swap）装置名称，例如：%s。"
@@ -7703,6 +7736,12 @@ msgstr "从最低负荷起开始读取"
 
 msgid "Read only"
 msgstr "只读"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "读/写"
@@ -9450,6 +9489,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID必须在1和4094之间。"
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "数据包（packet）符合以下规定的标准时，将执行该动作。"
@@ -10205,6 +10248,9 @@ msgstr "这些选项会加入 /etc/rc.conf。这样可以让您覆盖各种启�
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "这些参数将被添加到ctl.conf的全局部分"
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr "这些参数将被添加到此认证组。"
 
@@ -10750,6 +10796,9 @@ msgstr "切换选中的Rsync模块"
 
 msgid "Toggle Selected Targets"
 msgstr "切换选定的目标"
+
+msgid "Toggle Selected WebDAV Records"
+msgstr ""
 
 msgid "Toggle Selected iSNS Servers"
 msgstr "切换选定的iSNS服务器"
@@ -11555,6 +11604,21 @@ msgstr "警告级别"
 
 msgid "Watch Directory"
 msgstr "监视目录"
+
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
