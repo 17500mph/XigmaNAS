@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
-"PO-Revision-Date: 2018-08-30 08:49+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"PO-Revision-Date: 2018-09-10 06:51+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -635,6 +635,9 @@ msgstr "Добавить раздел"
 
 msgid "Add WLAN"
 msgstr "Добавить WLAN"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Добавить устройство кэш в пул (Add a cache device to a pool)"
@@ -2767,6 +2770,9 @@ msgstr "Удалить выбранные разделы"
 msgid "Delete Selected WLANs"
 msgstr "Удалить выбранные WLAN"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "Удалить выбранные серверы iSNS"
 
@@ -3097,6 +3103,9 @@ msgstr "Отключить выбранные модули RSYNC"
 msgid "Disable Selected Targets"
 msgstr "Отключить выбранные цели"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "Отключить выбранные серверы iSNS"
 
@@ -3407,6 +3416,9 @@ msgstr "Вы хотите удалить выбранные VLAN"
 msgid "Do you want to delete selected WLANs?"
 msgstr "Вы хотите удалить выбранные WLAN"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr "Вы хотите удалить выбранные группы аутентификации?"
 
@@ -3510,6 +3522,9 @@ msgstr "Вы хотите отключить выбранные LUN?"
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "Вы хотите отключить выбранных взаимных пользователей CHAP?"
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr "Вы хотите отключить выбранные группы аутентификации?"
 
@@ -3566,6 +3581,9 @@ msgstr "Вы хотите включить выбранные LUN?"
 
 msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr "Вы хотите включить выбранных взаимных пользователей CHAP?"
+
+msgid "Do you want to enable selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Вы хотите включить выбранные группы аутентификации?"
@@ -3632,6 +3650,9 @@ msgstr "Вы хотите переключить выбранные LUN?"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "Вы хотите переключить выбранных взаимных пользователей CHAP?"
+
+msgid "Do you want to toggle selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Вы хотите переключить выбранные группы аутентификации?"
@@ -3918,6 +3939,9 @@ msgstr "Редактировать раздел"
 msgid "Edit WLAN"
 msgstr "Редактировать WLAN"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Изменить группу аутентификации"
 
@@ -4092,6 +4116,9 @@ msgstr "Включить выбранные модули Rsync"
 
 msgid "Enable Selected Targets"
 msgstr "Включить выбранные цели"
+
+msgid "Enable Selected WebDAV Records"
+msgstr ""
 
 msgid "Enable Selected iSNS Servers"
 msgstr "Включить выбранные серверы iSNS"
@@ -4944,6 +4971,9 @@ msgstr "Статус флага xxx (ups.conf или cmdline -x)"
 msgid "Flags"
 msgstr "Флаги"
 
+msgid "Folder Pattern"
+msgstr ""
+
 msgid "Follow"
 msgstr "Следовать"
 
@@ -5573,7 +5603,7 @@ msgid "Import using GPT labels"
 msgstr "Импорт с использованием GPT меток"
 
 msgid "Imported Users"
-msgstr ""
+msgstr "Импортированные пользователи"
 
 msgid "In"
 msgstr "Входящий"
@@ -6873,6 +6903,9 @@ msgstr "Имя хоста NAS без доменной части (наприме
 
 msgid "Name of the Portal Group."
 msgstr "Имя группы портала."
+
+msgid "Name of the WebDAV Record."
+msgstr ""
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -8223,6 +8256,12 @@ msgstr "Чтение с наименее нагруженного (lowest load)"
 msgid "Read only"
 msgstr "Только чтение"
 
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
+
 msgid "Read/Write"
 msgstr "Чтение/запись"
 
@@ -8502,7 +8541,7 @@ msgstr ""
 "Restricted - Наследовать все, кроме \"записать ACL\" и \"изменить владельца\""
 
 msgid "Result of testjoin"
-msgstr ""
+msgstr "Результат тестового соединения"
 
 msgid "Results of last self test"
 msgstr "Результаты последнего теста самодиагностики"
@@ -10098,6 +10137,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID должен быть между 1 и 4094."
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr ""
@@ -10983,6 +11026,9 @@ msgstr ""
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Этот параметр будет добавлен в глобальный раздел ctl.conf"
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr "Этот параметр будет добавлен в эту группу аутентификации."
 
@@ -11636,6 +11682,9 @@ msgstr "Переключить выбранные модули Rsync"
 msgid "Toggle Selected Targets"
 msgstr "Переключить выбранные цели"
 
+msgid "Toggle Selected WebDAV Records"
+msgstr ""
+
 msgid "Toggle Selected iSNS Servers"
 msgstr "Переключить выбранные серверы iSNS"
 
@@ -11760,7 +11809,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol (TFTP)"
 
 msgid "Trust Account Status"
-msgstr ""
+msgstr "Статус доверенного аккаунта"
 
 msgid "Trusted Domains"
 msgstr "Доверенные домены"
@@ -12510,6 +12559,21 @@ msgstr "Уровень предупреждений"
 msgid "Watch Directory"
 msgstr "Дежурный каталог"
 
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
+
 msgid "WebGUI"
 msgstr "Web-интерфейс"
 
@@ -12597,7 +12661,7 @@ msgid "Wildcard"
 msgstr "Подстановочные символы"
 
 msgid "Winbindd Availability"
-msgstr ""
+msgstr "Доступность Winbindd"
 
 msgid "Wireless configuration"
 msgstr "Настройка беспроводной сети"

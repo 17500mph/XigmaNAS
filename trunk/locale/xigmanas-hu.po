@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
-"PO-Revision-Date: 2018-08-28 08:12+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"PO-Revision-Date: 2018-09-10 06:22+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -626,6 +626,9 @@ msgstr "Kötet hozzáadása"
 msgid "Add WLAN"
 msgstr "WLAN hozzáadása"
 
+msgid "Add WebDAV Record"
+msgstr ""
+
 msgid "Add a cache device to a pool"
 msgstr "Gyorsítótár-eszköz hozzáadása tárolóhoz"
 
@@ -877,7 +880,7 @@ msgid "Allow to start UPS from battery"
 msgstr "Megengedi, hogy a szünetmentes elemről induljon."
 
 msgid "Allow trusted domains."
-msgstr "Megbízható domain engedélyezése."
+msgstr "Megbízható domainek engedélyezése."
 
 msgid ""
 "Allows  certain  users and groups to have read/write access to a share. This "
@@ -2729,6 +2732,9 @@ msgstr "Kiválasztott kötetek törlése"
 msgid "Delete Selected WLANs"
 msgstr "Kijelölt WLAN-ok törlése"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "A kiválasztott iSNS szerverek törlése"
 
@@ -3058,6 +3064,9 @@ msgstr "Kijelölt Rsync modulok törlése"
 msgid "Disable Selected Targets"
 msgstr "Kiválasztott célok tiltása"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "A kiválasztott iSNS szerverek kikapcsolása"
 
@@ -3373,6 +3382,9 @@ msgstr "Biztos, hogy törlöd a kijelölt VLAN-okat?"
 msgid "Do you want to delete selected WLANs?"
 msgstr "Biztos, hogy törlöd a kijelölt WLAN-okat?"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr "Biztos, hogy törli a kiválasztott Hitelesítési csoportokat?"
 
@@ -3475,6 +3487,9 @@ msgstr "Biztos, hogy kikapcsolja a kiválasztott LUN-okat?"
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "Biztos, hogy letiltod kiválasztott kölcsönös CHAP felhasználót?"
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr "Biztos, hogy kikapcsolja a kiválasztott Hitelesítési csoportokat?"
 
@@ -3532,6 +3547,9 @@ msgstr "Biztos, hogy bekapcsolja kiválasztott LUN-okat?"
 msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr ""
 "Biztos, hogy engedélyezed a kiválasztott kölcsönös CHAP felhasználót?"
+
+msgid "Do you want to enable selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Biztos, hogy bekapcsolja kiválasztott Hitelesítési csoportokat?"
@@ -3598,6 +3616,9 @@ msgstr "Biztos, hogy átkapcsolod a kiválasztott LUN-okat?"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott kölcsönös CHAP felhasználót?"
+
+msgid "Do you want to toggle selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott hitelesítési csoportokat?"
@@ -3880,6 +3901,9 @@ msgstr "Kötet módosítása"
 msgid "Edit WLAN"
 msgstr "WLAN módosítása"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Hitelesített csoport módosítása"
 
@@ -4054,6 +4078,9 @@ msgstr "Kijelölt Rsync modulok bekapcsolása"
 
 msgid "Enable Selected Targets"
 msgstr "Kiválasztott célok engedélyezése"
+
+msgid "Enable Selected WebDAV Records"
+msgstr ""
 
 msgid "Enable Selected iSNS Servers"
 msgstr "iSNS szerverek bekapcsolása"
@@ -4897,6 +4924,9 @@ msgstr "xxx jelző (ups.conf vagy cmdline -x) állapot"
 msgid "Flags"
 msgstr "Jelzők"
 
+msgid "Folder Pattern"
+msgstr ""
+
 msgid "Follow"
 msgstr "Követés"
 
@@ -4989,7 +5019,7 @@ msgid "GEOM VINUM Software RAID"
 msgstr "GEOM VINUM szoftveres RAID"
 
 msgid "GEOM vinum"
-msgstr ""
+msgstr "GEOM vinum"
 
 msgid "GID"
 msgstr "GID"
@@ -5528,7 +5558,7 @@ msgid "Import using GPT labels"
 msgstr "Importálás GPT címkék használatával"
 
 msgid "Imported Users"
-msgstr ""
+msgstr "Importált felhasználók"
 
 msgid "In"
 msgstr "Be"
@@ -6816,6 +6846,9 @@ msgstr "A NAS gép neve tartomány nélkül, pl.: %s."
 msgid "Name of the Portal Group."
 msgstr "A portál csoport neve"
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "A cserehelyként (swap) használandó eszköz neve, pl.: %s."
@@ -6954,7 +6987,7 @@ msgid "No Extent has been configured."
 msgstr "Egy Extent sincs konfigurálva."
 
 msgid "No GEOM vinum information found."
-msgstr ""
+msgstr "Semmilyen GEOM vinum információ nem található."
 
 msgid "No IPMI FRU data available."
 msgstr "IMPI FRU adat nem érhető el."
@@ -6966,7 +6999,7 @@ msgid "No Initiator Group has been configured."
 msgstr "Egy Kezdeményező csoport sincs konfigurálva."
 
 msgid "No JBOD information found."
-msgstr ""
+msgstr "Semmilyen JBOD vinum információ nem található."
 
 msgid "No Parity"
 msgstr "Nincs paritás"
@@ -6975,13 +7008,13 @@ msgid "No Portal Group has been configured."
 msgstr "Egy Portal csoport sincs konfigurálva."
 
 msgid "No RAID0 information found."
-msgstr ""
+msgstr "Semmilyen RAID0 vinum információ nem található."
 
 msgid "No RAID1 information found."
-msgstr ""
+msgstr "Semmilyen RAID1 vinum információ nem található."
 
 msgid "No RAID5 information found."
-msgstr ""
+msgstr "Semmilyen RAID5 vinum információ nem található."
 
 msgid "No RSYNC Client configured."
 msgstr "RSYNC kliens nincs konfigurálva."
@@ -8071,19 +8104,19 @@ msgid "RAID0"
 msgstr "RAID0"
 
 msgid "RAID0 Information & Status"
-msgstr ""
+msgstr "RAID0 információ és állapot"
 
 msgid "RAID1"
 msgstr "RAID1"
 
 msgid "RAID1 Information & Status"
-msgstr ""
+msgstr "RAID1 információ és állapot"
 
 msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAID5 Information & Status"
-msgstr ""
+msgstr "RAID5 információ és állapot"
 
 msgid "RAM Disk"
 msgstr "Memórialemez"
@@ -8162,6 +8195,12 @@ msgstr "Olvasás legkisebb terheléssel"
 
 msgid "Read only"
 msgstr "Írásvédett"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "Olvasás/írás"
@@ -8446,7 +8485,7 @@ msgstr ""
 "Korlátozott - Összes örökítése, kivéve 'ACL írása' és 'tulajdonos módosítása'"
 
 msgid "Result of testjoin"
-msgstr ""
+msgstr "Tesztcsatlakozás eredménye"
 
 msgid "Results of last self test"
 msgstr "Utolsó önellenőrzés eredményei"
@@ -10048,6 +10087,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "A VLAN azonosítónak 1 és 4094 között kell lennie."
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "A művelet típusa, ha a csomag megfelelnek az alábbi feltételeknek."
@@ -10921,6 +10964,9 @@ msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
 "A ctl.conf globális részéhez hozzá fogjuk adni ezeket a paramétereket."
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr ""
 "Ehhez a hitelesítési-csoporthoz hozzá fogjuk adni ezeket a paramétereket."
@@ -11570,6 +11616,9 @@ msgstr "Kijelölt Rsync modulok átkapcsolása"
 msgid "Toggle Selected Targets"
 msgstr "Kiválasztott célok átkapcsolása"
 
+msgid "Toggle Selected WebDAV Records"
+msgstr ""
+
 msgid "Toggle Selected iSNS Servers"
 msgstr "A kiválasztott iSNS szerverek átkapcsolása"
 
@@ -11692,7 +11741,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
 msgid "Trust Account Status"
-msgstr ""
+msgstr "Meghívható felhasználói fiók állapota"
 
 msgid "Trusted Domains"
 msgstr "Megbízható domainek"
@@ -12423,6 +12472,21 @@ msgstr "Figyelmeztetési szint"
 msgid "Watch Directory"
 msgstr "Figyelő könyvtár"
 
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
+
 msgid "WebGUI"
 msgstr "Webes felhasználói felület (WebGUI)"
 
@@ -12512,7 +12576,7 @@ msgid "Wildcard"
 msgstr "Helyettesítő karakter"
 
 msgid "Winbindd Availability"
-msgstr ""
+msgstr "Winbindd elérhetőség"
 
 msgid "Wireless configuration"
 msgstr "Vezetéknélküli beállítások"
@@ -12858,7 +12922,7 @@ msgid "network traffic"
 msgstr "Hálózati forgalom"
 
 msgid "no pools available"
-msgstr ""
+msgstr "Egy tároló sem érhető el"
 
 msgid "noVNC"
 msgstr "noVNC"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
 "PO-Revision-Date: 2018-07-06 10:26+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -599,6 +599,9 @@ msgstr "볼륨 추가"
 
 msgid "Add WLAN"
 msgstr "무선 LAN 추가"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "풀에 캐시 장치 추가"
@@ -2588,6 +2591,9 @@ msgstr "선택된 볼륨들 삭제"
 msgid "Delete Selected WLANs"
 msgstr "선택된 무선 LAN 삭제"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr ""
 
@@ -2911,6 +2917,9 @@ msgstr "선택된 rsync 모듈들 사용 안 함"
 msgid "Disable Selected Targets"
 msgstr ""
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr ""
 
@@ -3195,6 +3204,9 @@ msgstr "선택된 VLAN을 삭제하시겠습니까?"
 msgid "Do you want to delete selected WLANs?"
 msgstr "선택된 무선 LAN을 삭제하시겠습니까?"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr ""
 
@@ -3297,6 +3309,9 @@ msgstr ""
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr ""
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr ""
 
@@ -3352,6 +3367,9 @@ msgid "Do you want to enable selected LUNs?"
 msgstr ""
 
 msgid "Do you want to enable selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to enable selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
@@ -3418,6 +3436,9 @@ msgid "Do you want to toggle selected LUNs?"
 msgstr ""
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
+msgstr ""
+
+msgid "Do you want to toggle selected WebDAV records?"
 msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
@@ -3700,6 +3721,9 @@ msgstr "볼륨 수정"
 msgid "Edit WLAN"
 msgstr "무선 LAN 수정"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "인증 그룹 편집"
 
@@ -3870,6 +3894,9 @@ msgid "Enable Selected Rsync Modules"
 msgstr "선택된 rsync 모듈들 사용 함"
 
 msgid "Enable Selected Targets"
+msgstr ""
+
+msgid "Enable Selected WebDAV Records"
 msgstr ""
 
 msgid "Enable Selected iSNS Servers"
@@ -4668,6 +4695,9 @@ msgstr "플래그 xxx (ups.conf or cmdline -x) 상태"
 
 msgid "Flags"
 msgstr "플래그"
+
+msgid "Folder Pattern"
+msgstr ""
 
 msgid "Follow"
 msgstr "Follow"
@@ -6483,6 +6513,9 @@ msgstr "도메인 부분을 제외한 NAS 호스트의 이름. 예. %s."
 msgid "Name of the Portal Group."
 msgstr ""
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "스왑 장치로 이용할 장치의 이름. 예컨대 %s."
@@ -7775,6 +7808,12 @@ msgstr "가장 적은 부하로 읽기"
 
 msgid "Read only"
 msgstr "읽기 전용"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "읽기/쓰기"
@@ -9533,6 +9572,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID는 1에서 4094 사이의 값이어야 합니다."
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "패킷이 아래에 명세 된 기준과 일치할 때 실행될 행동."
@@ -10300,6 +10343,9 @@ msgstr ""
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr ""
 
@@ -10864,6 +10910,9 @@ msgid "Toggle Selected Rsync Modules"
 msgstr "선택된 rsync 모듈들 전환"
 
 msgid "Toggle Selected Targets"
+msgstr ""
+
+msgid "Toggle Selected WebDAV Records"
 msgstr ""
 
 msgid "Toggle Selected iSNS Servers"
@@ -11676,6 +11725,21 @@ msgstr "경고 수준"
 
 msgid "Watch Directory"
 msgstr "감시할 디렉터리"
+
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"

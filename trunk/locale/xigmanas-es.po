@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-02 16:57+0000\n"
+"POT-Creation-Date: 2018-09-11 22:18+0000\n"
 "PO-Revision-Date: 2018-09-03 10:30+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-05 21:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -633,6 +633,9 @@ msgstr "Añadir Volumen"
 
 msgid "Add WLAN"
 msgstr "Añadir WLAN"
+
+msgid "Add WebDAV Record"
+msgstr ""
 
 msgid "Add a cache device to a pool"
 msgstr "Agrega un dispositivo cache al grupo"
@@ -2776,6 +2779,9 @@ msgstr "Borrar los volumenes seleccionadas"
 msgid "Delete Selected WLANs"
 msgstr "Borrar WLAN seleccionadas"
 
+msgid "Delete Selected WebDAV Records"
+msgstr ""
+
 msgid "Delete Selected iSNS Servers"
 msgstr "Borrar servidores iSNS seleccionados"
 
@@ -3105,6 +3111,9 @@ msgstr "Deshabilitar los módulos Rsync seleccionados"
 msgid "Disable Selected Targets"
 msgstr "Deshabilitar los objetivos seleccionados"
 
+msgid "Disable Selected WebDAV Records"
+msgstr ""
+
 msgid "Disable Selected iSNS Servers"
 msgstr "Deshabilitar servidores iSNS seleccionados"
 
@@ -3412,6 +3421,9 @@ msgstr "¿Desea borrar las VLAN seleccionadas?"
 msgid "Do you want to delete selected WLANs?"
 msgstr "¿Desea borrar las WLAN seleccionadas?"
 
+msgid "Do you want to delete selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to delete selected auth groups?"
 msgstr "Quieres borrar los grupos de autenticación seleccionados?"
 
@@ -3514,6 +3526,9 @@ msgstr "Quieres deshabilitar los LUNs seleccionados?"
 msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "¿Desea deshabilitar los usuarios CHAP mutuos seleccionados?"
 
+msgid "Do you want to disable selected WebDAV records?"
+msgstr ""
+
 msgid "Do you want to disable selected auth groups?"
 msgstr "Quieres deshabilitar los grupos de autenticación seleccionados?"
 
@@ -3570,6 +3585,9 @@ msgstr "Quieres habilitar los LUNs seleccionados?"
 
 msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr "¿Desea habilitar los usuarios CHAP mutuos seleccionados?"
+
+msgid "Do you want to enable selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Quieres habilitar los grupos de autenticación seleccionados?"
@@ -3636,6 +3654,9 @@ msgstr "Quieres cambiar los LUNs seleccionados?"
 
 msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "¿Desea intercambiar los usuarios CHAP mutuos seleccionados?"
+
+msgid "Do you want to toggle selected WebDAV records?"
+msgstr ""
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Quieres cambiar los grupos de autenticación seleccionados?"
@@ -3920,6 +3941,9 @@ msgstr "Editar Volumen"
 msgid "Edit WLAN"
 msgstr "Editar WLAN"
 
+msgid "Edit WebDAV Record"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Editar grupo autorizador"
 
@@ -4096,6 +4120,9 @@ msgstr "Habilitar los módulos Rsync seleccionados"
 
 msgid "Enable Selected Targets"
 msgstr "Habilitar los objetivos seleccionados"
+
+msgid "Enable Selected WebDAV Records"
+msgstr ""
 
 msgid "Enable Selected iSNS Servers"
 msgstr "Habilitar servidores iSNS seleccionados"
@@ -4939,6 +4966,9 @@ msgstr "Flag xxx (ups.conf or cmdline -x) status"
 
 msgid "Flags"
 msgstr "Banderas"
+
+msgid "Folder Pattern"
+msgstr ""
 
 msgid "Follow"
 msgstr "Siguiente"
@@ -6874,6 +6904,9 @@ msgstr "Nombre del host NAS, sin el nombre de dominio, por ejemplo %s"
 msgid "Name of the Portal Group."
 msgstr "Nombre del grupo portal."
 
+msgid "Name of the WebDAV Record."
+msgstr ""
+
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
 msgstr "Nombre del dispositivo a usar como intercambio, por ejemplo, %s."
@@ -8218,6 +8251,12 @@ msgstr "Leído desde la carga más baja"
 
 msgid "Read only"
 msgstr "Sólo lectura"
+
+msgid "Read-Only"
+msgstr ""
+
+msgid "Read-Only Access."
+msgstr ""
 
 msgid "Read/Write"
 msgstr "Lectura/Escritura"
@@ -10104,6 +10143,10 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr "El ID de la VLAN debe estar entre 1 y 4094"
 
 msgid ""
+"The WebDAV configuration is applied to all folders matching this pattern."
+msgstr ""
+
+msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr ""
@@ -10997,6 +11040,9 @@ msgstr ""
 "la conexión se terminará a la fuerza. El valor predeterminado es 60. Una "
 "configuración de 0 desactiva el tiempo de espera."
 
+msgid "These parameter will be added to this WebDAV configuration."
+msgstr ""
+
 msgid "These parameter will be added to this auth-group."
 msgstr "Estos parámetros se agregarán a este grupo de autenticación."
 
@@ -11651,6 +11697,9 @@ msgstr "Cambiar el estado de módulos Rsync"
 
 msgid "Toggle Selected Targets"
 msgstr "Alternar grupos de portal seleccionados"
+
+msgid "Toggle Selected WebDAV Records"
+msgstr ""
 
 msgid "Toggle Selected iSNS Servers"
 msgstr "intercambiar servidores iSNS seleccionados"
@@ -12516,6 +12565,21 @@ msgstr "Nivel de Aviso"
 
 msgid "Watch Directory"
 msgstr "Watch Directory"
+
+msgid "WebDAV"
+msgstr ""
+
+msgid "WebDAV Name"
+msgstr ""
+
+msgid "WebDAV record is locked"
+msgstr ""
+
+msgid "WebDAV record is marked for deletion"
+msgstr ""
+
+msgid "WebDAV record is unlocked"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
