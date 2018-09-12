@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
 "POT-Creation-Date: 2018-09-11 22:18+0000\n"
-"PO-Revision-Date: 2018-09-02 17:07+0000\n"
+"PO-Revision-Date: 2018-09-12 04:56+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-11 21:33+0000\n"
+"X-Launchpad-Export-Date: 2018-09-12 22:28+0000\n"
 "X-Generator: Launchpad (build 18767)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -645,7 +645,7 @@ msgid "Add WLAN"
 msgstr "Ajouter WLAN"
 
 msgid "Add WebDAV Record"
-msgstr ""
+msgstr "Ajouter un Enregistrement WebDAV"
 
 msgid "Add a cache device to a pool"
 msgstr "Ajouter un périphérique cache pour le pool"
@@ -2800,7 +2800,7 @@ msgid "Delete Selected WLANs"
 msgstr "Supprimer les WLAN sélectionnés"
 
 msgid "Delete Selected WebDAV Records"
-msgstr ""
+msgstr "Supprimer les Enregistrements WebDAV Sélectionnés"
 
 msgid "Delete Selected iSNS Servers"
 msgstr "Supprimer les Serveurs iSNS Sélectionnés"
@@ -3137,7 +3137,7 @@ msgid "Disable Selected Targets"
 msgstr "Désactiver les groupes de portails sélectionnés"
 
 msgid "Disable Selected WebDAV Records"
-msgstr ""
+msgstr "Désactiver les Enregistrements WebDAV Sélectionnés"
 
 msgid "Disable Selected iSNS Servers"
 msgstr "Désactiver les Serveurs iSNS Sélectionnés"
@@ -3463,7 +3463,7 @@ msgid "Do you want to delete selected WLANs?"
 msgstr "Voulez-vous supprimer les WLANs sélectionnés?"
 
 msgid "Do you want to delete selected WebDAV records?"
-msgstr ""
+msgstr "Voulez-vous supprimer les enregistrements WebDAV sélectionnés?"
 
 msgid "Do you want to delete selected auth groups?"
 msgstr "Voulez-vous supprimer les groupes d'authentification sélectionnés?"
@@ -3570,7 +3570,7 @@ msgstr ""
 "o vous voulez désactiver les utilisateurs de CHAP Mutuel sélectionnés?"
 
 msgid "Do you want to disable selected WebDAV records?"
-msgstr ""
+msgstr "Voulez-vous désactiver les enregistrements WebDAV sélectionnés?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Voulez-vous désactiver les groupes d'authentification sélectionnés?"
@@ -3631,7 +3631,7 @@ msgstr ""
 "Voulez-vous activer les utilisateurs Mutuel CHAP Mutuel sélectionnés?"
 
 msgid "Do you want to enable selected WebDAV records?"
-msgstr ""
+msgstr "Voulez-vous activer les enregistrements WebDAV sélectionnés?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Voulez-vous activer les groupes d'authentification sélectionnés?"
@@ -3701,7 +3701,7 @@ msgstr ""
 "Voulez-vous changer d'état les utilisateurs CHAP Mutuel  sélectionnés?"
 
 msgid "Do you want to toggle selected WebDAV records?"
-msgstr ""
+msgstr "Voulez-vous changer d'état les enregistrements WebDAV sélectionnés?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr ""
@@ -3990,7 +3990,7 @@ msgid "Edit WLAN"
 msgstr "Modifier WLAN"
 
 msgid "Edit WebDAV Record"
-msgstr ""
+msgstr "Modifier un Enregistrement WebDAV"
 
 msgid "Edit auth group"
 msgstr "Modifier un groupe Auth"
@@ -4169,7 +4169,7 @@ msgid "Enable Selected Targets"
 msgstr "Activer les cibles sélectionnées"
 
 msgid "Enable Selected WebDAV Records"
-msgstr ""
+msgstr "Activer les eEnregistrements WebDAV Sélectionnés"
 
 msgid "Enable Selected iSNS Servers"
 msgstr "Activer les Serveurs iSNS Sélectionnés"
@@ -5029,7 +5029,7 @@ msgid "Flags"
 msgstr "Modes"
 
 msgid "Folder Pattern"
-msgstr ""
+msgstr "Modèle de Dossier"
 
 msgid "Follow"
 msgstr "Suivre"
@@ -6970,7 +6970,7 @@ msgid "Name of the Portal Group."
 msgstr "Nom du groupe  portail."
 
 msgid "Name of the WebDAV Record."
-msgstr ""
+msgstr "Nom de l'Enregistrement WebDAV."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -8329,10 +8329,10 @@ msgid "Read only"
 msgstr "Lecture seule"
 
 msgid "Read-Only"
-msgstr ""
+msgstr "Lecture Seule"
 
 msgid "Read-Only Access."
-msgstr ""
+msgstr "Accès en Lecture Seule."
 
 msgid "Read/Write"
 msgstr "Lecture/Écriture"
@@ -10231,6 +10231,8 @@ msgstr "L'ID VLAN doit être compris entre 1 et 4094."
 msgid ""
 "The WebDAV configuration is applied to all folders matching this pattern."
 msgstr ""
+"La configuration WebDAV est appliquée à tous les dossiers correspondant à ce "
+"modèle."
 
 msgid ""
 "The action which will be executed when the packet match the criteria "
@@ -11139,7 +11141,7 @@ msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Ces paramètres seront ajoutés à la section globale de ctl.conf"
 
 msgid "These parameter will be added to this WebDAV configuration."
-msgstr ""
+msgstr "Ces paramètres seront ajoutés à cette configuration WebDAV."
 
 msgid "These parameter will be added to this auth-group."
 msgstr "Ces paramètres seront ajoutés à ce groupe d'authentification."
@@ -11807,7 +11809,7 @@ msgid "Toggle Selected Targets"
 msgstr "Changer d'état les Cibles Sélectionnées"
 
 msgid "Toggle Selected WebDAV Records"
-msgstr ""
+msgstr "Activer / Désactiver les Enregistrements WebDAV Sélectionnés"
 
 msgid "Toggle Selected iSNS Servers"
 msgstr "Changer d'état les Serveurs iSNS Sélectionnés"
@@ -12683,19 +12685,19 @@ msgid "Watch Directory"
 msgstr "Répertoire de surveillance"
 
 msgid "WebDAV"
-msgstr ""
+msgstr "WebDAV"
 
 msgid "WebDAV Name"
-msgstr ""
+msgstr "Nom du WebDAV"
 
 msgid "WebDAV record is locked"
-msgstr ""
+msgstr "L'enregistrement WebDAV est verrouillé"
 
 msgid "WebDAV record is marked for deletion"
-msgstr ""
+msgstr "L'enregistrement WebDAV est marqué pour suppression"
 
 msgid "WebDAV record is unlocked"
-msgstr ""
+msgstr "L'enregistrement WebDAV est déverrouillé"
 
 msgid "WebGUI"
 msgstr "Interface Web"
