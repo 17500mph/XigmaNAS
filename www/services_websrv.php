@@ -222,20 +222,28 @@ $document->render();
 ?>
 		<table width="100%" border="0" cellpadding="6" cellspacing="0">
 <?php
-			html_titleline_checkbox2("enable",gtext("Webserver"),!empty($pconfig['enable']) ? true : false,gtext("Enable"),"enable_change(false)");
-			html_combobox2("protocol",gtext("Protocol"),$pconfig['protocol'],['http' => 'HTTP','https' => 'HTTPS'],"",true,false,"protocol_change()");
-			html_inputbox2("port",gtext("Port"),$pconfig['port'],gtext("TCP port to bind the server to."),true,5);
-			$helpinghand = gtext('Select the permission for running this service. (www by default).')
+			html_titleline_checkbox2('enable',gettext('Webserver'),!empty($pconfig['enable']) ? true : false,gettext('Enable'),'enable_change(false)');
+			$l_protocol = [
+				'http' => gettext('HTTP'),
+				'https' => gettext('HTTPS')
+			];
+			html_combobox2('protocol',gettext("Protocol"),$pconfig['protocol'],$l_protocol,'',true,false,'protocol_change()');
+			html_inputbox2('port',gettext('Port'),$pconfig['port'],gettext('TCP port to bind the server to.'),true,5);
+			$helpinghand = gettext('Select the permission for running this service. (www by default).')
 				. '<br><b>'
-				. '<font color="red">' . gtext('NOTE') . '</font>: '
-				. gtext('Running this service as root is not recommended for security reasons, use at your own risk!')
+				. '<font color="red">' . gettext('NOTE') . '</font>: '
+				. gettext('Running this service as root is not recommended for security reasons, use at your own risk!')
 				. '</b></br>';
-			html_combobox2("runasuser",gtext("Permission"),$pconfig['runasuser'],["server.username = \"www\"" => "www","" => "root"],$helpinghand,true);
-			html_textarea2("certificate",gtext("Certificate"),$pconfig['certificate'],gtext("Paste a signed certificate in X.509 PEM format here."),true,76,7,false,false);
-			html_textarea2("privatekey",gtext("Private key"),$pconfig['privatekey'],gtext("Paste an private key in PEM format here."),true,76,7,false,false);
-			html_filechooser2("documentroot",gtext("Document Root"),$pconfig['documentroot'],gtext("Document root of the webserver. Home of the web page files."),$g['media_path'],true,76);
-			html_filechooser2("uploaddir",gtext("Upload Directory"),$pconfig['uploaddir'],sprintf(gtext("Upload directory of the webserver. The default is %s."),$default_uploaddir),$default_uploaddir,true,76);
-			html_checkbox2("authentication",gtext("Authentication"),!empty($pconfig['authentication']) ? true : false,gtext("Enable authentication."),gtext("Give only local users access to the web page."),false,"authentication_change()");
+			$l_permission = [
+				'server.username = "www"' => 'www',
+				'' => 'root'
+			];
+			html_combobox2('runasuser',gettext('Permission'),$pconfig['runasuser'],$l_permission,$helpinghand,true);
+			html_textarea2('certificate',gettext('Certificate'),$pconfig['certificate'],gettext('Paste a signed certificate in X.509 PEM format here.'),true,76,7,false,false);
+			html_textarea2('privatekey',gettext('Private key'),$pconfig['privatekey'],gettext('Paste an private key in PEM format here.'),true,76,7,false,false);
+			html_filechooser2('documentroot',gettext('Document Root'),$pconfig['documentroot'],gettext('Document root of the webserver. Home of the web page files.'),$g['media_path'],true,76);
+			html_filechooser2('uploaddir',gettext('Upload Directory'),$pconfig['uploaddir'],sprintf(gettext('Upload directory of the webserver. The default is %s.'),$default_uploaddir),$default_uploaddir,true,76);
+			html_checkbox2('authentication',gettext('Authentication'),!empty($pconfig['authentication']) ? true : false,gettext('Enable authentication.'),gettext('Give only local users access to the web page.'),false,'authentication_change()');
 ?>
 			<tr id="authdirs_tr">
 				<td width="22%" valign="top" class="vncell">&nbsp;</td>
@@ -290,13 +298,13 @@ $document->render();
 				</td>
 			</tr>
 <?php
-			html_checkbox2("dirlisting",gtext("Directory listing"),!empty($pconfig['dirlisting']) ? true : false,gtext("Enable directory listing."),gtext("A directory listing is generated when no index-files (index.php, index.html, index.htm or default.htm) are found in a directory."),false);
+			html_checkbox2("dirlisting",gettext("Directory listing"),!empty($pconfig['dirlisting']) ? true : false,gettext("Enable directory listing."),gettext("A directory listing is generated when no index-files (index.php, index.html, index.htm or default.htm) are found in a directory."),false);
 			$helpinghand = '<a href="'
 				. 'https://redmine.lighttpd.net/projects/lighttpd/wiki'
 				. '" target="_blank">'
-				. gtext('Please check the documentation')
+				. gettext('Please check the documentation')
 				. '</a>.';
-			html_textarea2("auxparam",gtext("Additional Parameters"),!empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "",sprintf(gtext("These parameters will be added to %s."),"websrv.conf")  . " " . $helpinghand,false,85,7,false,false);
+			html_textarea2("auxparam",gettext("Additional Parameters"),!empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "",sprintf(gettext("These parameters will be added to %s."),"websrv.conf")  . " " . $helpinghand,false,85,7,false,false);
 ?>
 		</table>
 		<div id="submit">
