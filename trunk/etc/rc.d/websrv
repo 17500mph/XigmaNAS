@@ -245,17 +245,24 @@ EOF
 			${configxml_file} | /usr/local/bin/xml unesc >> ${websrv_conf}
 	fi
 	#	WebDAV
+	# --value-of "concat('\$HTTP[\"url\"] =~ \"^/',folderpattern,'(\$|/)\" {')" --nl \
 	/usr/local/bin/xml sel --template \
 		--match '//websrv/webdav/param[enable]' \
 			--if 'string-length(folderpattern) > 0' \
-				--value-of "concat('\$HTTP[\"url\"] =~ \"^/',folderpattern,'(\$|/)\" {')" --nl \
+				--output '$HTTP["url"] =~ "^/' --value-of 'folderpattern' --output '($|/)" {' --nl \
 				--output 'webdav.activate = "enable"' --nl \
 				--if 'count(isreadonly) > 0' \
 					--output 'webdav.is-readonly = "enable"' --nl \
 				--else \
 					--output 'webdav.is-readonly = "disable"' --nl \
 				--break \
-				--output 'dir-listing.activate = "disable"' --nl \
+				--if 'count(usesqlite) > 0' \
+					--if 'string-length(uuid) > 0' \
+						--output 'webdav.sqlite-db-name = "/tmp/websrv.webdav_lock.' \
+						--value-of 'uuid' \
+						--output '.db"' --nl \
+					--break \
+				--break \
 				--match 'auxparam' \
 					--if 'position() < last() or string-length(.) > 0' \
 						--value-of '.' --nl \

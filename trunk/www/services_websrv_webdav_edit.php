@@ -154,6 +154,7 @@ $a_referer = [
 	$cop->get_description(),
 	$cop->get_folderpattern(),
 	$cop->get_isreadonly(),
+	$cop->get_usesqlite(),
 	$cop->get_auxparam()
 ];
 switch($page_mode):
@@ -256,6 +257,7 @@ $content->add_table_data_settings()->
 		c2_input_text($cop->get_description(),$sphere->row[$cop->get_description()->get_name()],false,false)->
 		c2_input_text($cop->get_folderpattern(),$sphere->row[$cop->get_folderpattern()->get_name()],true,false)->
 		c2_checkbox($cop->get_isreadonly(),$sphere->row[$cop->get_isreadonly()->get_name()],false,false)->
+		c2_checkbox($cop->get_usesqlite(),$sphere->row[$cop->get_usesqlite()->get_name()],false,false)->
 		c2_textarea($cop->get_auxparam(),$sphere->row[$cop->get_auxparam()->get_name()],false,false,60,$n_auxparam_rows);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):

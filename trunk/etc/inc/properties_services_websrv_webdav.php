@@ -67,6 +67,17 @@ class websrv_webdav_properties extends co_property_container_param {
 			set_title(gettext('Read-Only'));
 		return $property;
 	}
+	protected $x_usesqlite;
+	public function get_usesqlite() {
+		return $this->x_usesqlite ?? $this->init_usesqlite();
+	}
+	public function init_usesqlite() {
+		$property = $this->x_usesqlite = new property_bool($this);
+		$property->
+			set_name('usesqlite')->
+			set_title(gettext('Use Sqlite'));
+		return $property;
+	}
 	protected $x_auxparam;
 	public function get_auxparam() {
 		return $this->x_auxparam ?? $this->init_auxparam();
@@ -128,6 +139,20 @@ class websrv_webdav_edit_properties extends websrv_webdav_properties {
 			set_caption($caption)->
 			set_description('')->
 			set_defaultvalue(true)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	public function init_usesqlite() {
+		$property = parent::init_usesqlite();
+		$caption = gettext('Use Sqlite for lockings and properties.');
+		$property->
+			set_id('usesqlite')->
+			set_caption($caption)->
+			set_description('')->
+			set_defaultvalue(false)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
 			filter_use_default()->
