@@ -37,9 +37,8 @@ require_once 'services.inc';
 
 array_make_branch($config,'websrv','authentication','url');
 array_make_branch($config,'websrv','auxparam');
-
-$default_uploaddir = "/var/tmp/ftmp";
-$default_runas = "server.username = \"www\"";
+$default_uploaddir = '/var/tmp/ftmp';
+$default_runas = 'server.username = "www"';
 $pconfig['enable'] = isset($config['websrv']['enable']);
 $pconfig['protocol'] = $config['websrv']['protocol'];
 $pconfig['port'] = $config['websrv']['port'];
@@ -50,41 +49,35 @@ $pconfig['privatekey'] = base64_decode($config['websrv']['privatekey']);
 $pconfig['certificate'] = base64_decode($config['websrv']['certificate']);
 $pconfig['authentication'] = isset($config['websrv']['authentication']['enable']);
 $pconfig['dirlisting'] = isset($config['websrv']['dirlisting']);
-$pconfig['auxparam'] = "";
-if (isset($config['websrv']['auxparam']) && is_array($config['websrv']['auxparam']))
+$pconfig['auxparam'] = '';
+if(isset($config['websrv']['auxparam']) && is_array($config['websrv']['auxparam'])):
 	$pconfig['auxparam'] = implode(PHP_EOL,$config['websrv']['auxparam']);
-
-if ($_POST) {
+endif;
+if($_POST):
 	unset($input_errors);
 	$pconfig = $_POST;
-
-	// Input validation.
-	if (isset($_POST['enable']) && $_POST['enable']) {
+	//	Input validation.
+	if(isset($_POST['enable']) && $_POST['enable']):
 		$reqdfields = ['port','documentroot'];
 		$reqdfieldsn = [gtext('Port'),gtext('Document Root')];
 		$reqdfieldst = ['port','string'];
-
-		if ("https" === $_POST['protocol']) {
+		if('https' === $_POST['protocol']):
 			$reqdfields = array_merge($reqdfields,['certificate','privatekey']);
 			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Certificate'),gtext('Private key')]);
 			$reqdfieldst = array_merge($reqdfieldst,['certificate','privatekey']);
-		}
-
+		endif;
 		do_input_validation($_POST,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($_POST,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
-
-		// Check if port is already used.
-		if (services_is_port_used($_POST['port'],"websrv"))
-			$input_errors[] = sprintf(gtext("Port %ld is already used by another service."),$_POST['port']);
-
-		// Check Webserver document root if auth is required
-		if (isset($_POST['authentication'])
-		    && !is_dir($_POST['documentroot'])) {
-			$input_errors[] = gtext("Webserver document root is missing.");
-		}
-	}
-
-	if (empty($input_errors)) {
+		//	Check if port is already used.
+		if(services_is_port_used($_POST['port'],'websrv')):
+			$input_errors[] = sprintf(gtext('Port %ld is already used by another service.'),$_POST['port']);
+		endif;
+		//	Check Webserver document root if auth is required
+		if(isset($_POST['authentication']) && !is_dir($_POST['documentroot'])):
+			$input_errors[] = gtext('Webserver document root is missing.');
+		endif;
+	endif;
+	if(empty($input_errors)):
 		$config['websrv']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['websrv']['protocol'] = $_POST['protocol'];
 		$config['websrv']['port'] = $_POST['port'];
@@ -95,107 +88,88 @@ if ($_POST) {
 		$config['websrv']['certificate'] = base64_encode($_POST['certificate']);
 		$config['websrv']['authentication']['enable'] = isset($_POST['authentication']) ? true : false;
 		$config['websrv']['dirlisting'] = isset($_POST['dirlisting']) ? true : false;
-
-		// Write additional parameters.
+		//	Write additional parameters.
 		unset($config['websrv']['auxparam']);
-		foreach (explode(PHP_EOL,$_POST['auxparam']) as $auxparam) {
+		foreach(explode(PHP_EOL,$_POST['auxparam']) as $auxparam):
 			$auxparam = trim($auxparam,"\t\n\r");
-			if (!empty($auxparam))
+			if(!empty($auxparam)):
 				$config['websrv']['auxparam'][] = $auxparam;
-		}
-
+			endif;
+		endforeach;
 		write_config();
-
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
-			$retval |= updatenotify_process("websrvauth","websrvauth_process_updatenotification");
+		if(!file_exists($d_sysrebootreqd_path)):
+			$retval |= updatenotify_process('websrvauth','websrvauth_process_updatenotification');
 			config_lock();
-			$retval |= rc_exec_service("websrv_htpasswd");
-			$retval |= rc_update_service("websrv");
+			$retval |= rc_exec_service('websrv_htpasswd');
+			$retval |= rc_update_service('websrv');
 			config_unlock();
-		}
-
+		endif;
 		$savemsg = get_std_save_message($retval);
-
-		if (0 == $retval) {
-			updatenotify_delete("websrvauth");
-		}
-	}
-}
-
-if(isset($_GET['act']) && $_GET['act'] === "del") {
-	updatenotify_set("websrvauth",UPDATENOTIFY_MODE_DIRTY,$_GET['uuid']);
-	header("Location: services_websrv.php");
+		if(0 == $retval):
+			updatenotify_delete('websrvauth');
+		endif;
+	endif;
+endif;
+if(isset($_GET['act']) && $_GET['act'] === 'del'):
+	updatenotify_set('websrvauth',UPDATENOTIFY_MODE_DIRTY,$_GET['uuid']);
+	header('Location: services_websrv.php');
 	exit;
-}
-
+endif;
 function websrvauth_process_updatenotification($mode,$data) {
 	global $config;
 
 	$retval = 0;
-
-	switch ($mode) {
+	switch ($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			$cnid = array_search_ex($data,$config['websrv']['authentication']['url'],"uuid");
-			if (FALSE !== $cnid) {
+			$cnid = array_search_ex($data,$config['websrv']['authentication']['url'],'uuid');
+			if(false !== $cnid):
 				unset($config['websrv']['authentication']['url'][$cnid]);
 				write_config();
-			}
+			endif;
 			break;
-	}
-
+	endswitch;
 	return $retval;
 }
 $pgtitle = [gtext('Services'),gtext('Webserver')];
+include 'fbegin.inc';
 ?>
-<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
-function enable_change(enable_change) {
-	var endis = !(document.iform.enable.checked || enable_change);
-	document.iform.protocol.disabled = endis;
-	document.iform.port.disabled = endis;
-	document.iform.documentroot.disabled = endis;
-	document.iform.documentrootbrowsebtn.disabled = endis;
-	document.iform.uploaddir.disabled = endis;
-	document.iform.uploaddirbrowsebtn.disabled = endis;
-	document.iform.runasuser.disabled = endis;
-	document.iform.privatekey.disabled = endis;
-	document.iform.certificate.disabled = endis;
-	document.iform.authentication.disabled = endis;
-	document.iform.dirlisting.disabled = endis;
-	document.iform.auxparam.disabled = endis;
-}
-
+//<![CDATA[
+$(window).on("load", function() {
+	$("#protocol").click(function() { protocol_change(); });
+	$("#authentication").click(function() { authentication_change(); });
+});
+$(document).ready(function() {
+	protocol_change();
+	authentication_change();
+});
 function protocol_change() {
 	switch(document.iform.protocol.selectedIndex) {
 		case 0:
 			showElementById('privatekey_tr','hide');
 			showElementById('certificate_tr','hide');
 			break;
-
 		default:
 			showElementById('privatekey_tr','show');
 			showElementById('certificate_tr','show');
 			break;
 	}
 }
-
 function authentication_change() {
 	switch(document.iform.authentication.checked) {
 		case false:
 			showElementById('authdirs_tr','hide');
 			break;
-
 		case true:
 			showElementById('authdirs_tr','show');
 			break;
 	}
 }
-//-->
+//]]>
 </script>
 <?php
 //	add tab navigation
@@ -222,12 +196,12 @@ $document->render();
 ?>
 		<table width="100%" border="0" cellpadding="6" cellspacing="0">
 <?php
-			html_titleline_checkbox2('enable',gettext('Webserver'),!empty($pconfig['enable']) ? true : false,gettext('Enable'),'enable_change(false)');
+			html_titleline_checkbox2('enable',gettext('Webserver'),!empty($pconfig['enable']) ? true : false,gettext('Enable'));
 			$l_protocol = [
 				'http' => gettext('HTTP'),
 				'https' => gettext('HTTPS')
 			];
-			html_combobox2('protocol',gettext("Protocol"),$pconfig['protocol'],$l_protocol,'',true,false,'protocol_change()');
+			html_combobox2('protocol',gettext("Protocol"),$pconfig['protocol'],$l_protocol,'',true,false);
 			html_inputbox2('port',gettext('Port'),$pconfig['port'],gettext('TCP port to bind the server to.'),true,5);
 			$helpinghand = gettext('Select the permission for running this service. (www by default).')
 				. '<br><b>'
@@ -243,11 +217,11 @@ $document->render();
 			html_textarea2('privatekey',gettext('Private key'),$pconfig['privatekey'],gettext('Paste an private key in PEM format here.'),true,76,7,false,false);
 			html_filechooser2('documentroot',gettext('Document Root'),$pconfig['documentroot'],gettext('Document root of the webserver. Home of the web page files.'),$g['media_path'],true,76);
 			html_filechooser2('uploaddir',gettext('Upload Directory'),$pconfig['uploaddir'],sprintf(gettext('Upload directory of the webserver. The default is %s.'),$default_uploaddir),$default_uploaddir,true,76);
-			html_checkbox2('authentication',gettext('Authentication'),!empty($pconfig['authentication']) ? true : false,gettext('Enable authentication.'),gettext('Give only local users access to the web page.'),false,'authentication_change()');
+			html_checkbox2('authentication',gettext('Authentication'),!empty($pconfig['authentication']) ? true : false,gettext('Enable authentication.'),gettext('Give only local users access to the web page.'),false,false);
 ?>
 			<tr id="authdirs_tr">
-				<td width="22%" valign="top" class="vncell">&nbsp;</td>
-				<td width="78%" class="vtable">
+				<td class="celltag">&nbsp;</td>
+				<td class="celldata">
 					<table width="100%" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 							<td width="45%" class="listhdrlr"><?=gtext("URL");?></td>
@@ -308,19 +282,12 @@ $document->render();
 ?>
 		</table>
 		<div id="submit">
-			<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
+			<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>"/>
 		</div>
 <?php
 		include 'formend.inc';
 ?>
 	</td></tr></table>
 </form>
-<script type="text/javascript">
-<!--
-enable_change(false);
-protocol_change();
-authentication_change();
-//-->
-</script>
 <?php
 include 'fend.inc';
