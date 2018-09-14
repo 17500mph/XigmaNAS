@@ -31,6 +31,7 @@ extra_commands="mkconf"
 # Defaults
 smartd_enable=${smartd_enable:-"NO"}
 smartd_conf=${smartd_conf:-"/var/etc/${name}.conf"}
+smartd_drivedb=${smartd_drivedb:-""}
 pidfile="/var/run/${name}.pid"
 command="/usr/local/sbin/smartd"
 command_args="--configfile=${smartd_conf} --pidfile=${pidfile} --logfacility=local5"
@@ -40,7 +41,16 @@ _interval=`configxml_get "//smartd/interval"`
 if [ -n "${_interval}" ]; then
 	command_args="${command_args} --interval=${_interval}"
 fi
-
+#	load additional drivedb data if set in config.xml or rc smartd_drivedb
+_drivedb=`configxml_get "//smartd/drivedb"`
+if [ -z "${_drivedb}" ]; then
+	_drivedb="${smartd_drivedb}"
+fi
+if [ -n "${_drivedb}" ]; then
+	if [ -f "${_drivedb}" -a -s "${_drivedb}" ]; then
+		command_args="${command_args} --drivedb=+${_drivedb}"
+	fi
+fi
 smartd_mkconf()
 {
 	local _devicespecialfile _devicefilepath _devicetypearg _smartextraoptions _param _powermode _email _tmp
