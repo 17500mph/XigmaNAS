@@ -68,13 +68,7 @@ $thead = $table->addTHEAD();
 $tbody = $table->addTBODY();
 $tfoot = $table->addTFOOT();
 $thead->c2_titleline(gettext('MS Active Directory Information & Status'));
-if(!is_bool($test = $config['ad']['enable'] ?? false ? $test : true)):
-	$tbody->addTR()->
-		insTDwC('celltag',gettext('Information'))->
-		addTDwC('celldata')->
-			addElement('pre',['class' => 'cmdoutput'])->
-				addElement('span',[],gettext('AD authentication is disabled.'));
-else:
+if(is_bool($test = $config['ad']['enable'] ?? false) ? $test : true):
 	unset($rawdata);
 	$cmd = sprintf('/usr/local/bin/net rpc testjoin -S %s 2>&1',escapeshellarg($config['ad']['domaincontrollername']));
 	exec($cmd,$rawdata);
@@ -116,5 +110,11 @@ else:
 		addTDwC('celldata')->
 			addElement('pre',['class' => 'cmdoutput'])->
 				addElement('span',[],implode(PHP_EOL,$rawdata));
+else:
+	$tbody->addTR()->
+		insTDwC('celltag',gettext('Information'))->
+		addTDwC('celldata')->
+			addElement('pre',['class' => 'cmdoutput'])->
+				addElement('span',[],gettext('AD authentication is disabled.'));
 endif;
 $document->render();
