@@ -1,6 +1,6 @@
 PORTNAME=		nano
 PORTVERSION=	3.0
-PORTREVISION?=  0
+PORTREVISION?=  1
 CATEGORIES=	editors
 COMMENT=	Nano's ANOther editor, an enhanced free Pico clone
 MAINTAINER=	zoon01@xigmanas.com
