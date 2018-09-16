@@ -129,6 +129,7 @@ $smartValueInfo = [
 	"252" => [False,"",gtext("The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing.")],
 	"254" => [False,"",gtext("Count of 'Free Fall Events' detected.")]
 ];
+$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
 $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('S.M.A.R.T.')];
 include 'fbegin.inc';
 $document = new co_DOMDocument();
@@ -181,15 +182,15 @@ $document->render();
 <?php
 						echo '<pre>';
 						$devicetype_arg = (!empty($diskv['smart']['devicetypearg'])) ? sprintf('-d %s',$diskv['smart']['devicetypearg']) : '';
-						exec ("/usr/local/sbin/smartctl -i {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
+						exec("/usr/local/sbin/smartctl " . $smartd_drivedb_arg . "-i {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
 						$rawdata = array_slice($rawdata,3);
-						echo htmlspecialchars(implode("\n",$rawdata));
+						echo htmlspecialchars(implode(PHP_EOL,$rawdata));
 						unset($rawdata);
 						echo '</pre>';
 						$hasdata = false;
 						$devicetype_arg = (!empty($diskv['smart']['devicetypearg'])) ? sprintf('-d %s',$diskv['smart']['devicetypearg']) : '';
-						exec ("/usr/local/sbin/smartctl -a {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
-						$rawdata = array_slice($rawdata, 3);
+						exec("/usr/local/sbin/smartctl " . $smartd_drivedb_arg . "-a {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
+						$rawdata = array_slice($rawdata,3);
 						$regex = '/^\s*(\d+)\s+([A-Za-z0-9_\-]+)\s+(0x[0-9a-fA-F]+)\s+(\d+)\s+(\d+)\s+(\d+).*\s+\-\s+(\d+)/';
 ?>
 						<table class="area_data_selection">
@@ -257,14 +258,13 @@ $document->render();
 						</table>
 <?php
 						unset($rawdata);
-?>
-						<pre><?php
-							$devicetype_arg = (!empty($diskv['smart']['devicetypearg'])) ? sprintf('-d %s',$diskv['smart']['devicetypearg']) : '';
-							exec("/usr/local/sbin/smartctl -AcH -l selftest -l error -l selective {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
-							$rawdata = array_slice($rawdata, 3);
-							echo htmlspecialchars(implode("\n", $rawdata));
-							unset($rawdata);
-						?></pre>
+						echo '<pre>';
+						$devicetype_arg = (!empty($diskv['smart']['devicetypearg'])) ? sprintf('-d %s',$diskv['smart']['devicetypearg']) : '';
+						exec("/usr/local/sbin/smartctl " . $smartd_drivedb_arg . "-AcH -l selftest -l error -l selective {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
+						$rawdata = array_slice($rawdata, 3);
+						echo htmlspecialchars(implode(PHP_EOL,$rawdata));
+						unset($rawdata);
+						echo '</pre>'?>
 					</td>
 				</tr>
 			</tbody>
@@ -275,4 +275,3 @@ $document->render();
 </td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
