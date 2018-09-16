@@ -43,13 +43,10 @@ if [ -n "${_interval}" ]; then
 fi
 #	load additional drivedb data if set in config.xml or rc smartd_drivedb
 _drivedb=`configxml_get "//smartd/drivedb"`
-if [ -z "${_drivedb}" ]; then
-	_drivedb="${smartd_drivedb}"
-fi
-if [ -n "${_drivedb}" ]; then
-	if [ -f "${_drivedb}" -a -s "${_drivedb}" ]; then
-		command_args="${command_args} --drivedb=+${_drivedb}"
-	fi
+if [ -n "${_drivedb}" -a -f "${_drivedb}" -a -s "${_drivedb}" ]; then
+	command_args="${command_args} --drivedb=${_drivedb}"
+elif [ -n "${smartd_drivedb}" -a -f "${smartd_drivedb}" -a -s "${smartd_drivedb}" ]; then
+	command_args="${command_args} --drivedb=${smartd_drivedb}"
 fi
 smartd_mkconf()
 {
