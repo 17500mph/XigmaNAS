@@ -950,6 +950,31 @@ function get_hast_disks_list() {
 	endforeach;
 	return $disklist;
 }
+/**
+ *	smartd and smartcl require a parameter if an alternative drive database is to be used.
+ *	The parameter is created 
+ *	- when a filename is configured in config.xml ['smartd']['drivedb'] and exists.
+ *	- when a filename is configured in rc.conf 'smartd_drivedb' and exists.
+ *	The config.xml setting precedes the rc.conf setting.
+ *	@global array $config
+ *	@return string Returns drivedb argument or empty string.
+ */
+function get_smartmontools_drivedb_arg() {
+	global $config;
+	
+	array_make_branch($config,'smartd');
+	$drivedb_fqn = is_string($test = $config['smartd']['drivedb'] ?? '') ? $test : '';
+	if(1 === preg_match('/\S/',$drivedb_fqn) && file_exists($drivedb_fqn)):
+		return sprintf('--drivedb=%s ',escapeshellarg($drivedb_fqn));
+	else:
+		$cmd = 'sysrc -qn smartd_drivedb';
+		$drivedb_fqn = mwexec2($cmd);
+		if(1 === preg_match('/\S/',$drivedb_fqn) && file_exists($drivedb_fqn)):
+			return sprintf('--drivedb=%s ',escapeshellarg($drivedb_fqn));
+		endif;
+	endif;
+	return '';
+}
 /*
  *	Parse infos from camcontrol
  */
@@ -1119,7 +1144,8 @@ function parse_umass_controller(&$device) {
 	
 	$output = '';
 	$searchresult = '';
-
+	$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
+	
 	$device['model'] = parse_device_desc($device['name']);
 	$device['controller_desc'] = parse_umass_controller_desc($device['controller_id']);
 
@@ -1129,7 +1155,7 @@ function parse_umass_controller(&$device) {
 	$device['smart']['devicetype'] = '';
 	$device['smart']['devicetypearg'] = '';
 	
-	$cmd = sprintf('smartctl -d test %s',escapeshellarg($devicefilepath));
+	$cmd = sprintf('smartctl ' . $smartd_drivedb_arg . '-d test %s',escapeshellarg($devicefilepath));
 	mwexec2($cmd,$output);
 	foreach($output as $row):
 		if(1 === preg_match("/Device of type '(.*)' \[.*\] opened/i",$row,$searchresult)):
@@ -1163,6 +1189,7 @@ function parse_umass_controller(&$device) {
 function parse_controller_config(&$devlist) {
 	global $config_disks;
 
+	$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
 	foreach($devlist as &$device):
 		$devtype = '';
 		$device['desc'] = $config_disks[$device['name']]['desc'] ?? '';
@@ -1181,7 +1208,7 @@ function parse_controller_config(&$devlist) {
 			case 'ata':
 				$device['model'] = parse_device_desc($device['name']);
 				$device['controller_desc'] = parse_ata_ahci_controller_desc($device['controller'] . $device['controller_id']);
-				mwexec2('smartctl -d test ' . '/dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
+				mwexec2('smartctl ' . $smartd_drivedb_arg . '-d test ' . '/dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
 				$device['smart']['devicefilepath'] = '/dev/'.$device['name'];
 				$device['smart']['devicetype'] = $devtype[0];
 				$device['smart']['devicetypearg'] = $devtype[0];
@@ -1221,7 +1248,7 @@ function parse_controller_config(&$devlist) {
 			case 'mpt':
 				$device['model'] = parse_device_desc($device['name']);
 				$device['controller_desc'] = parse_device_desc($device['controller'].$device['controller_id']);
-				mwexec2('smartctl -d test /dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
+				mwexec2('smartctl ' . $smartd_drivedb_arg . '-d test /dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
 				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
 				$device['smart']['devicetype'] = $devtype[0];
 				$device['smart']['devicetypearg'] = $devtype[0];
@@ -1248,7 +1275,7 @@ function parse_controller_config(&$devlist) {
 			default:
 				$device['model'] = parse_device_desc($device['name']);
 				$device['controller_desc'] = parse_device_desc($device['controller'] . $device['controller_id']);
-				mwexec2('smartctl -d test /dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
+				mwexec2('smartctl ' . $smartd_drivedb_arg . '-d test /dev/' . $device['name'] . " | grep \" opened\" | xargs -0 -J {} expr {} : \".*Device of type '\(.*\)' \[.*\] opened\"",$devtype);
 				$device['smart']['devicefilepath'] = '/dev/' . $device['name'];
 				$device['smart']['devicetype'] = $devtype[0];
 				$device['smart']['devicetypearg'] = $devtype[0];
@@ -1341,10 +1368,11 @@ function get_smartctl_info($device) {
 	$vendor = '';
 	$product = '';
 	$revision = '';
+	$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
 	if(!empty($device['smart']['devicetypearg'])):
-		$type_arg = '-d ' . $device['smart']['devicetypearg'];
+		$type_arg = sprintf('-d %s ',$device['smart']['devicetypearg']);
 	endif;
-	mwexec2('smartctl -i ' . $type_arg . ' ' . $device['smart']['devicefilepath'],$lines);
+	mwexec2('smartctl ' . $smartd_drivedb_arg . '-i ' . $type_arg . $device['smart']['devicefilepath'],$lines);
 	foreach($lines as $line):
 		// trim and convert token to lowercase
 		$str_startswith = strtolower(trim(substr($line,0,18)));
