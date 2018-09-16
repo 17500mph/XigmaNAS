@@ -77,9 +77,6 @@ include 'fbegin.inc';
 <meta http-equiv="refresh" content="<?=$refresh?>">
 <?php
 $document = new co_DOMDocument();
-$tabnav = $document->
-	add_area_tabnav()->
-		add_tabnav_upper();
 include 'status_graph_tabs.inc';
 $document->render();
 ?>
