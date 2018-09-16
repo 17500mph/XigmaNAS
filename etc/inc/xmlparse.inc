@@ -242,12 +242,17 @@ function parse_xml_config_raw($cffile) {
 	$o = new config_xml_reader();
 	return $o->parse($cffile);
 }
-function parse_xml_config($cffile,$rootobj) {
+function parse_xml_config($cffile,bool $allowtodie,string ...$root_objects) {
 	$raw_config = parse_xml_config_raw($cffile);
-	if(!array_key_exists($rootobj,$raw_config)):
-		die("XML error: no $rootobj object found!\n");
+	foreach($root_objects as $rootobj):
+		if(array_key_exists($rootobj,$raw_config)):
+			return $raw_config[$rootobj];
+		endif;
+	endforeach;
+	if($allowtodie):
+		die('XML error: no valid root object found!' . PHP_EOL);
 	endif;
-	return $raw_config[$rootobj];
+	return false;
 }
 /**
  *	Dump configuration - recursion module
@@ -336,21 +341,19 @@ function dump_xml_config($arr,$rootobj,$encoding) {
 /**
  *	Validate the configuration xml file.
  *	@param string cffile Path to the file to validate.
- *	@param string rootobj The name of the root object.
+ *	@param string root_objects The names of the allowed root objects.
  *	@return bool True if valid, otherwise false.
  */
-function validate_xml_config($cffile,string $rootobj) {
+function validate_xml_config($cffile,string ...$root_objects) {
 	//	Parse the configuration
-	$retval = false;
-	if(1 === preg_match('/\S/',$rootobj)):
-		$raw_config = parse_xml_config_raw($cffile);
+	$raw_config = parse_xml_config_raw($cffile);
+	foreach($root_objects as $rootobj):
 		if(array_key_exists($rootobj,$raw_config)):
 			$xml_config = $raw_config[$rootobj];
-			//	Perform simple check
 			if(array_key_exists('version',$xml_config)):
-				$retval = true;
+				return true;
 			endif;
 		endif;
-	endif;
-	return $retval;
+	endforeach;
+	return false;
 }
