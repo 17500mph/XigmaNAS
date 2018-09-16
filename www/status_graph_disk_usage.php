@@ -35,7 +35,6 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 array_make_branch($config,'rrdgraphs');
-
 $rrd_disk_usage = true;
 $temp_array = [];
 $test_arrays = 0;
@@ -73,18 +72,17 @@ if(isset($config['rrdgraphs']['refresh_time'])):
 endif;
 mwexec(sprintf('/usr/local/share/rrdgraphs/rrd-graph.sh disk_usage %s',$current_data),true);
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('Disk Usage')];
-?>
-<?php
 include 'fbegin.inc';
 ?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
 <?php
-		include 'status_graph_tabs.inc';
+$document = new co_DOMDocument();
+$tabnav = $document->
+	add_area_tabnav()->
+		add_tabnav_upper();
+include 'status_graph_tabs.inc';
+$document->render();
 ?>
-	</ul></td></tr>
-</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form name="form2" action="status_graph_disk_usage.php" method="get">
 	<table class="area_data_settings">
 		<colgroup>
@@ -92,7 +90,7 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline(gtext('Disk Usage'),1);
+			html_titleline2(gettext('Disk Usage'),1);
 ?>
 		</thead>
 		<tbody>
@@ -118,7 +116,7 @@ include 'fbegin.inc';
 						if($selector_key == $current_key):
 							echo ' selected="selected"';
 						endif;
-						echo '>',htmlspecialchars($selector_data),'</option>',"\n";
+						echo '>',htmlspecialchars($selector_data),'</option>',PHP_EOL;
 				endforeach;
 ?>
 				</select>
@@ -140,4 +138,3 @@ include 'fbegin.inc';
 </form></td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>

@@ -63,14 +63,13 @@ $gt_notsupported = gtext('Your browser does not support this svg object type.') 
 
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('System Load')];
 include 'fbegin.inc';
+$document = new co_DOMDocument();
+$tabnav = $document->
+	add_area_tabnav()->
+		add_tabnav_upper();
+include 'status_graph_tabs.inc';
+$document->render();
 ?>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
-<?php
-		include 'status_graph_tabs.inc';
-?>
-	</ul></td></tr>
-</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
 		<colgroup>
@@ -93,7 +92,7 @@ include 'fbegin.inc';
 					echo sprintf('<object %s>',implode(' ',$a_object));
 					echo sprintf('<param %s/>',implode(' ',$a_param));
 					echo $gt_notsupported;
-					echo '</object>',"\n";
+					echo '</object>',PHP_EOL;
 					echo $graph_gap;
 					for($j = 1;isset($config['interfaces']['opt' . $j]);$j++):
 						$ifdescrs = $config['interfaces']['opt' . $j]['descr'];
@@ -104,7 +103,7 @@ include 'fbegin.inc';
 						echo sprintf('<object %s>',implode(' ',$a_object));
 						echo sprintf('<param %s/>',implode(' ',$a_param));
 						echo $gt_notsupported;
-						echo '</object>',"\n";
+						echo '</object>',PHP_EOL;
 						$test = $j % 2;
 						if($test != 0):
 							echo '<br /><br /><br />'; // add line breaks after second graph ...
@@ -118,7 +117,7 @@ include 'fbegin.inc';
 					echo sprintf('<object %s>',implode(' ',$a_object));
 					echo sprintf('<param %s/>',implode(' ',$a_param));
 					echo $gt_notsupported;
-					echo '</object>',"\n";
+					echo '</object>',PHP_EOL;
 ?>
 				</div>
 			</td></tr>
