@@ -307,24 +307,19 @@ if(!isset($noparseconfig) || !$noparseconfig):
 				exit(0);
 			endif;
 		endif;
+		$config_filename = $g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
 		if(isset($load_raw_config) && $load_raw_config != 0):
 			//	Load all root objects, but never write to cache
-			$config = parse_xml_config_raw("{$g['conf_path']}/config.xml",'');
+			$config = parse_xml_config_raw($config_filename);
 			if(false === $config):
-				echo "Error: Failed to load '{$g['conf_path']}/config.xml' file. {$productname} cannot continue booting.",PHP_EOL;
+				echo "Error: Failed to load '$config_filename' file. {$productname} cannot continue booting.",PHP_EOL;
 				mwexec('/sbin/halt');
 				exit;
 			endif;
 		else:
 			//	Load configuration file into array.
 			$config_filename = $g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
-			if(validate_xml_config($config_filename,$g['xml_rootobj'])):
-				$config = parse_xml_config($config_filename,$g['xml_rootobj']);
-			elseif(validate_xml_config($config_filename,'nas4free')):
-				$config = parse_xml_config($config_filename,'nas4free');
-			else:
-				$config = false;
-			endif;
+			$config = parse_xml_config($config_filename,false,$g['xml_rootobj'],'nas4free');
 			if(false === $config):
 				echo "Error: Failed to load '{$g['conf_path']}/config.xml' file. {$productname} cannot continue booting.",PHP_EOL;
 				mwexec('/sbin/halt');
@@ -423,7 +418,8 @@ function write_config() {
 	@chmod($filename,0600);
 	conf_mount_ro();
 	//	Re-read configuration
-	$config = parse_xml_config($g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml',$g['xml_rootobj']);
+	$config_filename = $g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
+	$config = parse_xml_config($config_filename,true,$g['xml_rootobj'],'nas4free');
 	//	Write config cache (to prevent parsing on every access)
 	config_write_cache($config);
 	//	Force completion of pending disk writes
@@ -448,11 +444,7 @@ function write_loader_config(){
 	if(!isset($config['system']['loaderconf']['param'])):
 		//	Load configuration file into array.
 		$config_filename = $g['conf_path'] . DIRECTORY_SEPARATOR . 'config.xml';
-		if(validate_xml_config($config_filename,$g['xml_rootobj'])):
-			$config = parse_xml_config($config_filename,$g['xml_rootobj']);
-		elseif(validate_xml_config($config_filename,'nas4free')):
-			$config = parse_xml_config($config_filename,'nas4free');
-		endif;
+		$config = parse_xml_config($config_filename,true,$g['xml_rootobj'],'nas4free');
 		//	read platform
 		$platform_filename = sprintf('%s/platform',$g['etc_path']);
 		if(file_exists($platform_filename)):
