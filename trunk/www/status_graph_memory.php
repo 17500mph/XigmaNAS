@@ -35,7 +35,6 @@ require_once 'auth.inc';
 require_once 'guiconfig.inc';
 
 array_make_branch($config,'rrdgraphs');
-
 $rrd_memory = true;
 $refresh = 300;
 if(isset($config['rrdgraphs']['refresh_time'])):
@@ -45,18 +44,17 @@ if(isset($config['rrdgraphs']['refresh_time'])):
 endif;
 mwexec('/usr/local/share/rrdgraphs/rrd-graph.sh memory',true);
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('Memory Usage')];
-?>
-<?php
 include 'fbegin.inc';
 ?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
 <?php
-		include 'status_graph_tabs.inc';
+$document = new co_DOMDocument();
+$tabnav = $document->
+	add_area_tabnav()->
+		add_tabnav_upper();
+include 'status_graph_tabs.inc';
+$document->render();
 ?>
-	</ul></td></tr>
-</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form name="form2" action="status_graph_memory.php" method="get">
 	<table class="area_data_settings">
 		<colgroup>
@@ -64,7 +62,7 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline(gtext('Memory Usage'),1);
+			html_titleline2(gettext('Memory Usage'),1);
 ?>
 		</thead>
 		<tbody>
@@ -88,7 +86,7 @@ include 'fbegin.inc';
 						if ($ifn == $curif):
 							echo ' selected="selected"';
 						endif;
-						echo '>',htmlspecialchars($ifd),'</option>',"\n";
+						echo '>',htmlspecialchars($ifd),'</option>',PHP_EOL;
 					endforeach;
 ?>
 				</select>
@@ -110,4 +108,3 @@ include 'fbegin.inc';
 </form></td></tr></tbody></table>
 <?php
 include 'fend.inc';
-?>
