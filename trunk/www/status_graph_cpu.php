@@ -54,9 +54,6 @@ $gt_notsupported = gtext('Your browser does not support this svg object type.') 
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('CPU Load')];
 include 'fbegin.inc';
 $document = new co_DOMDocument();
-$tabnav = $document->
-	add_area_tabnav()->
-		add_tabnav_upper();
 include 'status_graph_tabs.inc';
 $document->render();
 ?>

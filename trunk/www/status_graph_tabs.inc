@@ -32,6 +32,9 @@
 	of XigmaNAS, either expressed or implied.
  */
 $gt_reload_page = gettext('Reload Page');
+$tabnav = $document->
+	add_area_tabnav()->
+		add_tabnav_upper();
 $tabnav->
 	ins_tabnav_record('status_graph.php',gettext('System Load'),isset($status_graph) ? $gt_reload_page : '',isset($status_graph))->
 	ins_tabnav_record('status_graph_cpu.php',gettext('CPU Load'),isset($status_cpu) ? $gt_reload_page : '',isset($status_cpu));
