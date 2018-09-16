@@ -601,30 +601,31 @@ function system_get_device_iostat($device) {
  * @return	The temperature in C if available, otherwise FALSE.
  */
 function system_get_device_temp($devicespecialfile) {
+	global $config;
+	global $config_disks;
+
 	$result = false;
-	/* without smart */
-	mwexec2("ataidle {$devicespecialfile} 2>/dev/null | grep 'SMART Enabled'",$rawdata);
+	//	without smart
+	$cmd = sprintf("ataidle %s 2>/dev/null | grep 'SMART Enabled'",$devicespecialfile);
+	mwexec2($cmd,$rawdata);
 	if(!empty($rawdata) && 1 === preg_match("/^SMART Enabled:\s+(\S+)/",$rawdata[0],$matches)):
-		if(strcasecmp($matches[1],"no") == 0):
-			/* SMART disabled */
+		if(strcasecmp($matches[1],'no') == 0):
+			//	SMART disabled
 			return $result;
 		endif;
 	endif;
-	global $config;
-	// get S.M.A.R.T. arguments from config
-	global $config_disks;
-
 	if(empty($_SESSION[$devicespecialfile]['temp']['value']) or time() - $_SESSION[$devicespecialfile]['temp']['timestamp'] > 120):
 		$type_arg = '';
 		if(!empty($config_disks[$devicespecialfile]['smart']['devicetypearg'])):
-			$type_arg = "-d ".$config_disks[$devicespecialfile]['smart']['devicetypearg'];
+			$type_arg = sprintf('-d %s ',$config_disks[$devicespecialfile]['smart']['devicetypearg']);
 		endif;
-		/* get temperature from S.M.A.R.T. */
-		mwexec2("smartctl -A ".$type_arg." ".$config_disks[$devicespecialfile]['smart']['devicefilepath']."| grep -i 'Temperature'" ,$rawdata);
+		//	get temperature from S.M.A.R.T.
+		$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
+		mwexec2('smartctl ' . $smartd_drivedb_arg . '-A ' . $type_arg . escapeshellarg($config_disks[$devicespecialfile]['smart']['devicefilepath']) . " | grep -i 'Temperature'" ,$rawdata);
 		foreach($rawdata as $rawdatav):
 			$arawdatav = preg_split("/\s+/",$rawdatav);
 			if(!empty($arawdatav[1]) && ((0 == strncmp(trim($arawdatav[1]),"Temperature_",12)) || (0 == strncmp(trim($arawdatav[1]),"Airflow_Temperature_",20))) &&
-				((0 != strcmp(trim($arawdatav[0]),"190")) || (0 != strcmp(trim($arawdatav[0]),"194")) )):
+				((0 != strcmp(trim($arawdatav[0]),'190')) || (0 != strcmp(trim($arawdatav[0]),'194')) )):
 				$result = chop($arawdatav[9]);
 				break;
 			elseif(preg_match("/Current Drive Temperature:\s+(\d+) C.*/",$rawdatav,$matches)):
@@ -632,8 +633,8 @@ function system_get_device_temp($devicespecialfile) {
 				break;
 			endif;
 		endforeach;
-		$_SESSION[$devicespecialfile]['temp']['value']=$result;
-		$_SESSION[$devicespecialfile]['temp']['timestamp']=time();
+		$_SESSION[$devicespecialfile]['temp']['value'] = $result;
+		$_SESSION[$devicespecialfile]['temp']['timestamp'] = time();
 		return $result;
 	else:
 		return $_SESSION[$devicespecialfile]['temp']['value'];
