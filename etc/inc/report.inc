@@ -266,10 +266,10 @@ class StatusReport
 function report_send_mail() {
 	global $config, $g;
 
-	// Generate report
+	$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
+	//	Generate report
 	$statusreport = new StatusReport();
-
-	if (is_array($config['statusreport']['report']) && in_array("systeminfo", $config['statusreport']['report'])) {
+	if(is_array($config['statusreport']['report']) && in_array("systeminfo", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Version","cat /etc/prd.version"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("Revision","cat /etc/prd.revision"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("Platform","cat /etc/platform"));
@@ -285,9 +285,9 @@ function report_send_mail() {
 		$statusreport->AddArticle(new StatusReportArticleCmd("ZFS pool status","/sbin/zpool status"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("SCSI disk","/sbin/camcontrol devlist"));
 		$disklist = get_physical_disks_list();
-		foreach ($disklist as $disknamek => $disknamev) {
-			$statusreport->AddArticle(new StatusReportArticleCmd("S.M.A.R.T. [/dev/{$disknamek}]","/usr/local/sbin/smartctl " . get_smartmontools_drivedb_arg() . "-a /dev/{$disknamek}"));
-		}
+		foreach($disklist as $disknamek => $disknamev):
+			$statusreport->AddArticle(new StatusReportArticleCmd("S.M.A.R.T. [/dev/{$disknamek}]","/usr/local/sbin/smartctl " . $smartd_drivedb_arg . "-a /dev/{$disknamek}"));
+		endforeach;
 		$statusreport->AddArticle(new StatusReportArticleCmd("Geom Concat","/sbin/gconcat list"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("Geom Stripe","/sbin/gstripe list"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("Geom Mirror","/sbin/gmirror list"));
@@ -296,53 +296,46 @@ function report_send_mail() {
 		$statusreport->AddArticle(new StatusReportArticleCmd("Mount point","/sbin/mount"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("Free disk space","/bin/df -h"));
 		$statusreport->AddArticle(new StatusReportArticleCmd("Encrypted disks","/sbin/geli list"));
-	}
-
-	if (is_array($config['statusreport']['report']) && in_array("dmesg", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("dmesg", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("dmesg","/sbin/dmesg"));
-	}
-
-	// Consider modified clog path
+	endif;
+	//	Consider modified clog path
 	$clogdir = rc_getenv_ex("clog_logdir", $g['varlog_path']);
-
-	// Get number of lines to be displayed
+	//	Get number of lines to be displayed
 	$numentries = $config['syslogd']['nentries'];
-	if (!$numentries) { // Use default value if setting is not available.
+	if(!$numentries): // Use default value if setting is not available.
 		$numentries = 50;
-	}
-
-	// Reverse log output?
+	endif;
+	//	Reverse log output?
 	$reverse = isset($config['syslogd']['reverse']) ? "-r" : "";
-
-	if (is_array($config['statusreport']['report']) && in_array("systemlog", $config['statusreport']['report'])) {
+	if(is_array($config['statusreport']['report']) && in_array("systemlog", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Last {$numentries} System log entries","/usr/sbin/clog {$clogdir}/system.log 2>&1 | tail {$reverse} -n {$numentries}"));
-	}
-	if (is_array($config['statusreport']['report']) && in_array("ftplog", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("ftplog", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Last {$numentries} FTP log entries","/usr/sbin/clog {$clogdir}/ftp.log 2>&1 | tail {$reverse} -n {$numentries}"));
-	}
-	if (is_array($config['statusreport']['report']) && in_array("rsynclog", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("rsynclog", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Last {$numentries} RSYNCD log entries","/usr/sbin/clog {$clogdir}/rsyncd.log 2>&1 | tail {$reverse} -n {$numentries}"));
-	}
-	if (is_array($config['statusreport']['report']) && in_array("sshdlog", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("sshdlog", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Last {$numentries} SSHD log entries","/usr/sbin/clog {$clogdir}/sshd.log 2>&1 | tail {$reverse} -n {$numentries}"));
-	}
-	if (is_array($config['statusreport']['report']) && in_array("smartdlog", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("smartdlog", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Last {$numentries} SMARTD log entries","/usr/sbin/clog {$clogdir}/smartd.log 2>&1 | tail {$reverse} -n {$numentries}"));
-	}
-	if (is_array($config['statusreport']['report']) && in_array("daemonlog", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("daemonlog", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Last {$numentries} Daemon log entries","/usr/sbin/clog {$clogdir}/daemon.log 2>&1 | tail {$reverse} -n {$numentries}"));
-	}
-	if (is_array($config['statusreport']['report']) && in_array("script", $config['statusreport']['report'])) {
+	endif;
+	if(is_array($config['statusreport']['report']) && in_array("script", $config['statusreport']['report'])):
 		$statusreport->AddArticle(new StatusReportArticleCmd("Custom script entries","{$config['statusreport']['report_scriptname']}"));
-	}
-
-	// Send email and log result.
+	endif;
+	//	Send email and log result.
 	$result = email_send($config['statusreport']['to'], $config['statusreport']['subject'], $statusreport->Generate(), $error);
-	if (0 != $result) {
+	if(0 != $result):
 		write_log(sprintf('Failed to send status report to: %s.', $config['statusreport']['to']));
 		return 1;
-	}
-
+	endif;
 	write_log(sprintf('Status report successfully sent to: %s.', $config['statusreport']['to']));
 	return 0;
 }
@@ -354,13 +347,12 @@ function report_send_mail() {
 function report_generate_html() {
 	global $g;
 
-	// Generate HTML report
+	$smartd_drivedb_arg = get_smartmontools_drivedb_arg();
+	//	Generate HTML report
 	$statusreport = new StatusReport();
 	$statusreport->IsHTML(true);
-
-	// Consider modified clog path
+	//	Consider modified clog path
 	$clogdir = rc_getenv_ex("clog_logdir", $g['varlog_path']);
-
 	$statusreport->AddArticle(new StatusReportArticleCmd("Version","cat /etc/prd.version"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("Revision","cat /etc/prd.revision"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("Platform","cat /etc/platform"));
@@ -378,9 +370,9 @@ function report_generate_html() {
 	$statusreport->AddArticle(new StatusReportArticleCmd("ZFS pool status","/sbin/zpool status"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("SCSI disk","/sbin/camcontrol devlist"));
 	$disklist = get_physical_disks_list();
-	foreach ($disklist as $disknamek => $disknamev) {
-		$statusreport->AddArticle(new StatusReportArticleCmd("S.M.A.R.T. [/dev/{$disknamek}]","/usr/local/sbin/smartctl " . get_smartmontools_drivedb_arg() . "-a /dev/{$disknamek}"));
-	}
+	foreach($disklist as $disknamek => $disknamev):
+		$statusreport->AddArticle(new StatusReportArticleCmd("S.M.A.R.T. [/dev/{$disknamek}]","/usr/local/sbin/smartctl " . $smartd_drivedb_arg . "-a /dev/{$disknamek}"));
+	endforeach;
 	$statusreport->AddArticle(new StatusReportArticleCmd("Geom Concat","/sbin/gconcat list"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("Geom Stripe","/sbin/gstripe list"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("Geom Mirror","/sbin/gmirror list"));
@@ -404,7 +396,5 @@ function report_generate_html() {
 	$statusreport->AddArticle(new StatusReportArticleCmd("/var/etc","ls /var/etc"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("/var/run","ls /var/run"));
 	$statusreport->AddArticle(new StatusReportArticleCmd("config.xml","/usr/local/bin/xml ed -P -u \"//*/password\" -v \"xxxxx\" -u \"//system/email/from\" -v \"xxxxx\" -u \"//statusreport/to\" -v \"xxxxx\" -u \"//*/media_uctlsecret\" -v \"xxxxx\" -u \"//*/authsecret\" -v \"xxxxx\" -u \"//*/authmsecret\" -v \"xxxxx\" /conf/config.xml"));
-
 	return $statusreport->Generate();
 }
-?>
