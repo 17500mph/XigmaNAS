@@ -62,7 +62,8 @@ list($page_method,$page_action,$page_mode) = $rmo->validate();
 $a_referer = [
 	$cop->get_showusedavail(),
 	$cop->get_capacity_warning(),
-	$cop->get_capacity_critical()
+	$cop->get_capacity_critical(),
+	$cop->get_scanondisk()
 ];
 switch($page_action):
 	case $sphere->get_basename():
@@ -146,6 +147,15 @@ $content->
 		pop()->
 		addTBODY()->
 			c2_checkbox($cop->get_showusedavail(),$sphere->row[$cop->get_showusedavail()->get_name()],false,$is_readonly);
+$content->
+	add_table_data_settings()->
+		push()->
+		ins_colgroup_data_settings()->
+		addTHEAD()->
+			c2_titleline(gettext('Maintenance Tool Settings'))->
+		pop()->
+		addTBODY()->
+			c2_checkbox($cop->get_scanondisk(),$sphere->row[$cop->get_scanondisk()->get_name()],false,$is_readonly);
 $content->
 	add_table_data_settings()->
 		push()->
