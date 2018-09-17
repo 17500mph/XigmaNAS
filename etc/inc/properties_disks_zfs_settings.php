@@ -35,9 +35,6 @@ require_once 'properties.php';
 
 class properties_disks_zfs_settings extends co_property_container {
 	protected $x_showusedavail;
-	protected $x_capacity_warning;
-	protected $x_capacity_critical;
-	
 	public function get_showusedavail() {
 		return $this->x_showusedavail ?? $this->init_showusedavail();
 	}
@@ -59,6 +56,29 @@ class properties_disks_zfs_settings extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_scanondisk;
+	public function get_scanondisk() {
+		return $this->x_scanondisk ?? $this->init_scanondisk();
+	}
+	public function init_scanondisk() {
+		$property = $this->x_scanondisk = new property_bool($this);
+		$property->
+			set_name('scanondisk')->
+			set_title(gettext('On-Disk Configuration'));
+		$caption = gettext('Read on-disk configuration.');
+		$description = gettext('Reading the configuration from the disks is slower than reading from cache file.');
+		$property->
+			set_id('scanondisk')->
+			set_caption($caption)->
+			set_description($description)->
+			set_defaultvalue(false)->
+			filter_use_default()->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	protected $x_capacity_warning;
 	public function get_capacity_warning() {
 		return $this->x_capacity_warning ?? $this->init_capacity_warning();
 	}
@@ -93,6 +113,7 @@ class properties_disks_zfs_settings extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('Must be a number between 80 and 89.')));
 		return $property;
 	}
+	protected $x_capacity_critical;
 	public function get_capacity_critical() {
 		return $this->x_capacity_critical ?? $this->init_capacity_critical();
 	}
