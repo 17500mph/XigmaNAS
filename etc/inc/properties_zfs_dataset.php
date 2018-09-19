@@ -329,7 +329,7 @@ class properties_zfs_dataset extends co_property_container {
 		$description = '<div>' . gtext('Controls the dedup method.') . '</div>'
 			. '<div><b>'
 			. '<font color="red">' . gtext('WARNING') . '</font>' . ': '
-			. '<a href="https://wiki.xigmanas.com/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
+			. '<a href="https://www.xigmanas.com/wiki/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
 			. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
 			. '</a>'
 			. '</b></div>';
