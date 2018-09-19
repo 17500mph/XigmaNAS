@@ -524,7 +524,7 @@ $document->render();
 			$helpinghand = '<div>' . gettext('Controls the dedup method.') . '</div>'
 				. '<div><b>'
 				. '<font color="red">' . gettext('WARNING') . '</font>' . ': '
-				. '<a href="https://wiki.xigmanas.com/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
+				. '<a href="https://www.xigmanas.com/wiki/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
 				. gettext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
 				. '</a>'
 				. '</b></div>';
