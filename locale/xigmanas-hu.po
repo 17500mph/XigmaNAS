@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
 "POT-Creation-Date: 2018-09-11 22:18+0000\n"
-"PO-Revision-Date: 2018-09-10 06:22+0000\n"
+"PO-Revision-Date: 2018-09-15 17:01+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-12 22:28+0000\n"
-"X-Generator: Launchpad (build 18767)\n"
+"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
+"X-Generator: Launchpad (build 18780)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -627,7 +627,7 @@ msgid "Add WLAN"
 msgstr "WLAN hozzáadása"
 
 msgid "Add WebDAV Record"
-msgstr ""
+msgstr "WebDAV bejegyzés hozzáadása"
 
 msgid "Add a cache device to a pool"
 msgstr "Gyorsítótár-eszköz hozzáadása tárolóhoz"
@@ -2733,7 +2733,7 @@ msgid "Delete Selected WLANs"
 msgstr "Kijelölt WLAN-ok törlése"
 
 msgid "Delete Selected WebDAV Records"
-msgstr ""
+msgstr "Kiválasztott WebDAV bejegyzések törlése"
 
 msgid "Delete Selected iSNS Servers"
 msgstr "A kiválasztott iSNS szerverek törlése"
@@ -3065,7 +3065,7 @@ msgid "Disable Selected Targets"
 msgstr "Kiválasztott célok tiltása"
 
 msgid "Disable Selected WebDAV Records"
-msgstr ""
+msgstr "Kiválasztott WebDAV bejegyzések tiltása"
 
 msgid "Disable Selected iSNS Servers"
 msgstr "A kiválasztott iSNS szerverek kikapcsolása"
@@ -3383,7 +3383,7 @@ msgid "Do you want to delete selected WLANs?"
 msgstr "Biztos, hogy törlöd a kijelölt WLAN-okat?"
 
 msgid "Do you want to delete selected WebDAV records?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott WebDAV bejegyzéseket?"
 
 msgid "Do you want to delete selected auth groups?"
 msgstr "Biztos, hogy törli a kiválasztott Hitelesítési csoportokat?"
@@ -3488,7 +3488,7 @@ msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "Biztos, hogy letiltod kiválasztott kölcsönös CHAP felhasználót?"
 
 msgid "Do you want to disable selected WebDAV records?"
-msgstr ""
+msgstr "Biztos, hogy letiltod a kiválasztott WebDAV bejegyzéseket?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Biztos, hogy kikapcsolja a kiválasztott Hitelesítési csoportokat?"
@@ -3549,7 +3549,7 @@ msgstr ""
 "Biztos, hogy engedélyezed a kiválasztott kölcsönös CHAP felhasználót?"
 
 msgid "Do you want to enable selected WebDAV records?"
-msgstr ""
+msgstr "Biztos, hogy engedélyezed a kiválasztott WebDAV bejegyzéseket?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Biztos, hogy bekapcsolja kiválasztott Hitelesítési csoportokat?"
@@ -3618,7 +3618,7 @@ msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott kölcsönös CHAP felhasználót?"
 
 msgid "Do you want to toggle selected WebDAV records?"
-msgstr ""
+msgstr "Biztos, hogy átkapcsolod a kiválasztott WebDAV bejegyzéseket?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott hitelesítési csoportokat?"
@@ -3902,7 +3902,7 @@ msgid "Edit WLAN"
 msgstr "WLAN módosítása"
 
 msgid "Edit WebDAV Record"
-msgstr ""
+msgstr "WebDAV bejegyzés módosítása"
 
 msgid "Edit auth group"
 msgstr "Hitelesített csoport módosítása"
@@ -4080,7 +4080,7 @@ msgid "Enable Selected Targets"
 msgstr "Kiválasztott célok engedélyezése"
 
 msgid "Enable Selected WebDAV Records"
-msgstr ""
+msgstr "Kiválasztott WebDAV bejegyzések bekapcsolása"
 
 msgid "Enable Selected iSNS Servers"
 msgstr "iSNS szerverek bekapcsolása"
@@ -4925,7 +4925,7 @@ msgid "Flags"
 msgstr "Jelzők"
 
 msgid "Folder Pattern"
-msgstr ""
+msgstr "Mappaminták"
 
 msgid "Follow"
 msgstr "Követés"
@@ -6847,7 +6847,7 @@ msgid "Name of the Portal Group."
 msgstr "A portál csoport neve"
 
 msgid "Name of the WebDAV Record."
-msgstr ""
+msgstr "A WebDAV bejegyzés megnevezése."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -8197,10 +8197,10 @@ msgid "Read only"
 msgstr "Írásvédett"
 
 msgid "Read-Only"
-msgstr ""
+msgstr "Írásvédett"
 
 msgid "Read-Only Access."
-msgstr ""
+msgstr "Írásvédett hozzáférés."
 
 msgid "Read/Write"
 msgstr "Olvasás/írás"
@@ -10089,6 +10089,7 @@ msgstr "A VLAN azonosítónak 1 és 4094 között kell lennie."
 msgid ""
 "The WebDAV configuration is applied to all folders matching this pattern."
 msgstr ""
+"A mintára illeszkedő összes mappára alkalmazzuk a WebDAV beállításait."
 
 msgid ""
 "The action which will be executed when the packet match the criteria "
@@ -10965,7 +10966,7 @@ msgstr ""
 "A ctl.conf globális részéhez hozzá fogjuk adni ezeket a paramétereket."
 
 msgid "These parameter will be added to this WebDAV configuration."
-msgstr ""
+msgstr "Ezeket a bejegyzéseket hozzáadjuk a WebDAV beállításaihoz."
 
 msgid "These parameter will be added to this auth-group."
 msgstr ""
@@ -11617,7 +11618,7 @@ msgid "Toggle Selected Targets"
 msgstr "Kiválasztott célok átkapcsolása"
 
 msgid "Toggle Selected WebDAV Records"
-msgstr ""
+msgstr "A kiválasztott WebDAV bejegyzések átkapcsolása"
 
 msgid "Toggle Selected iSNS Servers"
 msgstr "A kiválasztott iSNS szerverek átkapcsolása"
@@ -12473,19 +12474,19 @@ msgid "Watch Directory"
 msgstr "Figyelő könyvtár"
 
 msgid "WebDAV"
-msgstr ""
+msgstr "WebDAV"
 
 msgid "WebDAV Name"
-msgstr ""
+msgstr "WebDAV megnevezése"
 
 msgid "WebDAV record is locked"
-msgstr ""
+msgstr "A WebDAV bejegyzés zárolt"
 
 msgid "WebDAV record is marked for deletion"
-msgstr ""
+msgstr "A WebDAV bejegyzést megjelölték törlésre"
 
 msgid "WebDAV record is unlocked"
-msgstr ""
+msgstr "A WebDAV bejegyzés zárolását feloldották"
 
 msgid "WebGUI"
 msgstr "Webes felhasználói felület (WebGUI)"
