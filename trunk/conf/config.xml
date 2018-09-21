@@ -470,6 +470,13 @@
 				<primarygroup>983</primarygroup>
 				<extraoptions>-c &quot;Syncthing Daemon&quot; -d /var/tmp/syncthing -s /usr/sbin/nologin</extraoptions>
 			</user>
+			<user>
+				<uuid>eecbb68c-fade-46b3-b74f-96fdbcd34aaa</uuid>
+				<name>mysql</name>
+				<id>88</id>
+				<primarygroup>88</primarygroup>
+				<extraoptions>-c &quot;MySQL user&quot; -d /nonexistent -s /usr/sbin/nologin</extraoptions>
+			</user>
 			<group>
 				<uuid>e8cc78b8-7c3d-46de-a34c-11b1c260a37e</uuid>
 				<id>999</id>
@@ -494,6 +501,11 @@
 				<uuid>e504881b-c8dc-43d7-9ca4-74552f9b405b</uuid>
 				<id>1000</id>
 				<name>admin</name>
+			</group>
+			<group>
+				<uuid>ef381dd2-6aa6-44e9-821c-94228a1ef63c</uuid>
+				<id>88</id>
+				<name>mysql</name>
 			</group>
 		</usermanagement>
 		<firewall>

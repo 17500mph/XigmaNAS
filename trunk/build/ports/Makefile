@@ -31,6 +31,7 @@
     SUBDIR += lighttpd
     SUBDIR += lcdproc
     SUBDIR += locale
+    SUBDIR += mariadb101
     SUBDIR += mDNSResponder
     SUBDIR += minidlna
     SUBDIR += mkpw
@@ -46,6 +47,7 @@
     SUBDIR += pam_mkhomedir
     SUBDIR += php72
     SUBDIR += php72-APCu
+    SUBDIR += phpmyadmin
     SUBDIR += phpvirtualbox
     SUBDIR += proftpd
     SUBDIR += python2

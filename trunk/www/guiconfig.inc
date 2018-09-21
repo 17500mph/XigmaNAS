@@ -768,7 +768,7 @@ function get_headermenu(): array {
 			if('true' == $g['zroot']):
 				$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('Firmware Update'),'link' => '/system_firmware.php'];
 			endif;
-				$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('Packages'),'link' => '/system_packages.php'];
+			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('Packages'),'link' => '/system_packages.php'];
 		else:
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('Firmware Update'),'link' => '/system_firmware.php'];
 		endif;
@@ -834,6 +834,7 @@ function get_headermenu(): array {
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('SNMP'),'link' => '/services_snmp.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('UPS'),'link' => '/services_ups.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('Webserver'),'link' => '/services_websrv.php'];
+			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('MariaDB'),'link' => '/services_mariadb.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('BitTorrent'),'link' => '/services_bittorrent.php'];
 			$menu_items[] = ['type' => 'internal','visible' => $isAdminSession,'description' => gettext('LCDproc'),'link' => '/services_lcdproc.php'];
 		else:
@@ -1065,4 +1066,3 @@ function display_headermenu() {
 	echo make_headermenu();
 	return;
 }
-?>
