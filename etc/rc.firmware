@@ -21,7 +21,7 @@
 # Gather upload folder
 load_rc_config_var lighttpd lighttpd_uploaddir
 
-SIZE="320M"
+SIZE="384M"
 PLATFORM=`cat /etc/platform`
 XARCH=`/bin/echo ${PLATFORM} | sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
