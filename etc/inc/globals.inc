@@ -78,7 +78,7 @@ $g_install = [
 	'default_swap' => '1024',
 	'default_max_swap' => '2048',   /* maximum recommended swap */
 	'part1min_embedded' => '466',   /*  500MB= 476MiB ->  470MB - alignment  */
-	'part1size_embedded' => '1024', /* 2000MB=1907MiB ->  768MB + SWAP1024MB */
+	'part1size_embedded' => '1192', /* 2000MB=1907MiB ->  768MB + SWAP1024MB */
 	'part1size_full' => '3072'      /* 4000MB=3814MiB -> 2560MB + SWAP1024MB */
 ];
 //	available languages/locales. Function array_flip is used in system.inc

@@ -31,7 +31,7 @@ ARCH=`/usr/bin/uname -m`
 ZROOT="zroot"
 
 # Fixed values requested by build/make.sh
-MDLOCALSIZE=768m
+MDLOCALSIZE=1024m
 SWAPSIZE=512m
 
 # XigmaNAS request 2GB for swapless running
