@@ -1515,6 +1515,38 @@ function config_upgrade_38() {
 	$config['system']['usermanagement']['group'] = $group_tmp;
 }
 /**
+ *	Upgrade configuration from version 39
+ *	@global array $config
+ */
+function config_upgrade_39() {
+	global $config;
+	
+	$groups = &array_make_branch($config,'system','usermanagement','group');
+	$group_name = 'mysql';
+	$index = array_search_ex($group_name,$groups,'name');
+	if(false === $index):
+		$group = [
+			'uuid' => uuid(),
+			'name' => $group_name,
+			'id' => 88,
+		];
+		$groups[] = $group;
+	endif;
+	$users = &array_make_branch($config,'system','usermanagement','user');
+	$user_name = 'mysql';
+	$index = array_search_ex($user_name,$users,'name');
+	if(false === $index):
+		$user = [
+			'uuid' => uuid(),
+			'name' => $user_name,
+			'id' => 88,
+			'primarygroup' => 88,
+			'extraoptions' => '-c "MySQL user" -d /nonexistent -s /usr/sbin/nologin'
+		];
+		$users[] = $user;
+	endif;
+}
+/**
  *	Upgrade the configuration file to the latest version.
  *	@global array $g
  *	@global array $config
@@ -1557,7 +1589,8 @@ function config_upgrade() {
 		'36' => [$kf => 'config_upgrade_36',$kv => '37'],
 		'37' => [$kf => 'config_upgrade_37',$kv => '38'],
 		'38' => [$kf => 'config_upgrade_38',$kv => '39'],
-		'39' => [$kf => NULL,$kv => NULL]
+		'39' => [$kf => 'config_upgrade_39',$kv => '40'],
+		'40' => [$kf => NULL,$kv => NULL]
 	];
 	$version = $config['version'] ?? 'notset';
 	$config_has_been_updated = false;
