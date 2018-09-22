@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-09-05 11:43+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:52+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -4592,6 +4592,10 @@ msgstr ""
 "byla mezi 8 a 63 znaky dlouhá."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5250,8 +5254,14 @@ msgstr "prodleva přechodu HDD do pohotovostního režimu"
 msgid "HOT SPARE"
 msgstr "PHTVST. NÁHR."
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP proxy"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM virt. stroj"
@@ -5621,6 +5631,11 @@ msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr ""
 "V podřízeném režimu se jedná o název UPS zdroje (identifikátor) na straně "
 "ovládajícího stroje."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "Vst./výst. chyby"
@@ -6460,6 +6475,9 @@ msgstr "Přípona stroje"
 msgid "Maintenance"
 msgstr "Údržba"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Určitě vyberte optimální počet zařízení"
 
@@ -6508,6 +6526,9 @@ msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr "Přesah kanálu při čtení dat. Funkce tohoto atributu není známa."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Maškarádovací adresa"
@@ -7369,6 +7390,9 @@ msgstr "Původní heslová fráze"
 msgid "On"
 msgstr "Zapnuto"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "Online informace"
 
@@ -7803,6 +7827,9 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Mějte na paměti, že v popisech umístění nejsou dovoleny prázdné znaky "
 "(mezera, tabulátor, atp.)."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Okamžik dotazování"
@@ -8272,6 +8299,9 @@ msgstr "Číst od nejvyšší priority"
 msgid "Read from lowest load"
 msgstr "Číst od nejnižšího vytížení"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Pouze pro čtení"
 
@@ -8305,6 +8335,11 @@ msgstr "Přístup pro čtení a zápis"
 
 msgid "Reading"
 msgstr "Čtení"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Pouze čtení"
@@ -10387,6 +10422,13 @@ msgstr ""
 "stejné heslo."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10864,6 +10906,9 @@ msgstr "Server se nyní vypíná."
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Server bude resetován do továrního nastavení a následně restartován."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "Po úspěšném obnovení nastavení bude server restartován."
@@ -11026,6 +11071,9 @@ msgid ""
 msgstr ""
 "Tyto předvolby budou přidány do /etc/rc.conf. Toto umožňuje přepsat "
 "předvolby použité různými obecnými zaváděcími skripty."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Tyto parametry budu přidány do globální sekce ctl.conf"
@@ -12140,6 +12188,12 @@ msgstr "Šifrovat"
 msgid "Use PAM for user authentication."
 msgstr "Ověřovat uživatele pomocí PAM podsystému."
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr "Použít TLS"
 
@@ -13040,6 +13094,9 @@ msgstr "vypnuto"
 
 msgid "on"
 msgstr "zapnuto"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

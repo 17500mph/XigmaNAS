@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-07-06 10:36+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
 "X-Poedit-Language: Brazilian Portuguese\n"
@@ -4537,6 +4537,10 @@ msgstr ""
 "caracteres."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5170,7 +5174,13 @@ msgstr ""
 msgid "HOT SPARE"
 msgstr ""
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
+msgstr ""
+
+msgid "HTTPS"
 msgstr ""
 
 msgid "HVM Guest"
@@ -5523,6 +5533,11 @@ msgstr "Na maioria dos casos,  'public'  é usado aqui."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "No modo secundário é o nome do UPS (Identificador)  no UPS primário."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr ""
@@ -6308,6 +6323,9 @@ msgstr ""
 msgid "Maintenance"
 msgstr ""
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
@@ -6353,6 +6371,9 @@ msgstr ""
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
+msgstr ""
+
+msgid "MariaDB"
 msgstr ""
 
 msgid "Masquerade Address"
@@ -7189,6 +7210,9 @@ msgstr ""
 msgid "On"
 msgstr "Ligado"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr ""
 
@@ -7620,6 +7644,9 @@ msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Por favor, note que espaços não são permitidos em nomes de caminhos."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr ""
@@ -8064,6 +8091,9 @@ msgstr "Ler a partir da maior prioridade."
 msgid "Read from lowest load"
 msgstr "Ler a partir da menor carga"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Somente leitura"
 
@@ -8096,6 +8126,11 @@ msgid "Read/Write Access"
 msgstr "Acesso de leitura/escrita"
 
 msgid "Reading"
+msgstr ""
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
 msgstr ""
 
 msgid "Readonly"
@@ -10104,6 +10139,13 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10540,6 +10582,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
@@ -10687,6 +10732,9 @@ msgid ""
 msgstr ""
 "Esta opcões serão adicionadas ao /etc/rc.conf. Isto permitirá sobrescrever "
 "as opções usadas por vários scripts genéricos de inicialização."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -11724,6 +11772,12 @@ msgstr ""
 msgid "Use PAM for user authentication."
 msgstr ""
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr ""
 
@@ -12565,6 +12619,9 @@ msgid "off"
 msgstr ""
 
 msgid "on"
+msgstr ""
+
+msgid "phpMyAdmin"
 msgstr ""
 
 msgid "phpVirtualBox"

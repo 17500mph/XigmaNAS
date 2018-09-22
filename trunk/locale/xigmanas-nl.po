@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
-"PO-Revision-Date: 2018-09-11 21:15+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"PO-Revision-Date: 2018-09-22 21:52+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -4639,6 +4639,12 @@ msgstr ""
 "8 en 63 karakters lang zijn."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+"Vul de locatie in naar de gegevensmap voor databases en "
+"configuratiebestanden."
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5299,8 +5305,14 @@ msgstr "HDD standby tijd"
 msgid "HOT SPARE"
 msgstr "HOT SPARE"
 
+msgid "HTTP"
+msgstr "HTTP"
+
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
+
+msgid "HTTPS"
+msgstr "HTTPS"
 
 msgid "HVM Guest"
 msgstr "HVM Gast"
@@ -5672,6 +5684,12 @@ msgstr "In de meeste gevallen, wordt 'publiek' hier gebruikt."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "In slave mode is het de UPS naam (identificator) op de UPS master."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
+"In deze map kunt u een %s bestand met uw aanvullende parameters maken."
 
 msgid "In/Out Errors"
 msgstr "In/Uitgaande Fouten"
@@ -6506,6 +6524,9 @@ msgstr "Machine Suffix"
 msgid "Maintenance"
 msgstr "Onderhoud"
 
+msgid "Maintenance Tool Settings"
+msgstr "Onderhoud Tool Instellingen"
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Zorg ervoor dat u het juiste aantal schijven selecteert"
 
@@ -6557,6 +6578,9 @@ msgid ""
 msgstr ""
 "Marge van een kanaal tijdens het lezen van data. De functie van dit "
 "attribuut is niet gespecificeerd."
+
+msgid "MariaDB"
+msgstr "MariaDB"
 
 msgid "Masquerade Address"
 msgstr "Masquerade Adres"
@@ -7412,6 +7436,9 @@ msgstr "Oud wachtwoordzin"
 msgid "On"
 msgstr "Aan"
 
+msgid "On-Disk Configuration"
+msgstr "Op-schijf Configuratie"
+
 msgid "Online Information"
 msgstr "Online Informatie"
 
@@ -7850,6 +7877,9 @@ msgstr "Geef de locatie van de database degevensmap op."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Spaties in de naam van de locatie zijn niet toegestaan."
+
+msgid "Please read the documentation"
+msgstr "Lees de documentatie"
 
 msgid "Polling Time"
 msgstr "Verzendtijd Rapportage"
@@ -8312,6 +8342,9 @@ msgstr "Lees van de grootste prioriteit"
 msgid "Read from lowest load"
 msgstr "Lezen van de laagste belasting"
 
+msgid "Read on-disk configuration."
+msgstr "Lees op-schijf configuratie."
+
 msgid "Read only"
 msgstr "Alleen lezen"
 
@@ -8345,6 +8378,13 @@ msgstr "Lees/Schrijf Toegang"
 
 msgid "Reading"
 msgstr "Uitkomst"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
+"Het lezen van de configuratie is vanaf schijven langzamer dan het lezen uit "
+"het cachebestand."
 
 msgid "Readonly"
 msgstr "Alleen-lezen"
@@ -10481,6 +10521,18 @@ msgstr ""
 "wachtwoorden gelijk zijn."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+"Het op cookies gebaseerde auth_type gebruikt het AES-algoritme om het "
+"wachtwoord te versleutelen. Voer een willekeurige wachtwoordzin van uw keuze "
+"in. Het wordt intern gebruikt door het AES-algoritme - u wordt niet om deze "
+"wachtwoordzin gevraagd. Het wachtwoord zou minstens 32 of meer karakters "
+"lang moeten zijn."
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10954,6 +11006,9 @@ msgstr ""
 "De server wordt teruggezet naar de fabrieksinstellingen en zal opnieuw "
 "worden opgestart."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr "De server wordt gestart met de minimaal vereiste parameters."
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
@@ -11117,6 +11172,9 @@ msgstr ""
 "Deze optie(s) word toegevoegd aan /etc/rc.conf. Dit staat u toe om "
 "verschillende opties te overschrijven die gebruikt worden door verschillende "
 "algemene opstartscripts."
+
+msgid "These parameter will be added to my.cnf"
+msgstr "Deze parameter wordt toegevoegd aan my.cnf"
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -12247,6 +12305,12 @@ msgstr "Encryptie Gebruiken"
 msgid "Use PAM for user authentication."
 msgstr "Gebruik PAM voor gebruiker authenticatie."
 
+msgid "Use Sqlite"
+msgstr "Gebruik Sqlite"
+
+msgid "Use Sqlite for lockings and properties."
+msgstr "Gebruik Sqlite voor vergrendelingen en eigenschappen."
+
 msgid "Use TLS"
 msgstr "Gebruik TLS"
 
@@ -13146,6 +13210,9 @@ msgstr "uit"
 
 msgid "on"
 msgstr "aan"
+
+msgid "phpMyAdmin"
+msgstr "phpMyAdmin"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

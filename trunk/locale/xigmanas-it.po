@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-07-06 10:19+0000\n"
 "Last-Translator: Mirko Dall'Armellina <mrwinch@tiscali.it>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -4613,6 +4613,10 @@ msgstr ""
 "essere compresa tra gli 8 e i 63 caratteri."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5267,8 +5271,14 @@ msgstr "HDD standby time"
 msgid "HOT SPARE"
 msgstr "HOT SPARE"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM Guest"
@@ -5632,6 +5642,11 @@ msgstr "Nella maggior parte dei casi qui si utilizza 'public'."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "In modalità 'slave' è il nome (Identifier) dell'UPS 'master'."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "Errore In/Out"
@@ -6453,6 +6468,9 @@ msgstr "Suffisso della macchina"
 msgid "Maintenance"
 msgstr "Manutenzione"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Assicurarsi di selezionare il numero ottimale di devices"
 
@@ -6502,6 +6520,9 @@ msgid ""
 msgstr ""
 "Margine di un canale durante la lettura dati. La funzione di questo "
 "attributo non è specificata."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Indirizzo mascherato"
@@ -7350,6 +7371,9 @@ msgstr "Vecchia frase d'accesso"
 msgid "On"
 msgstr "Attivo"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "Informazione online"
 
@@ -7786,6 +7810,9 @@ msgstr "Per favore definire la locazione per la directory del database"
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Attenzione che gli spazi vuoti nei nomi di percorso non sono permessi."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Tempo di votazione"
@@ -8244,6 +8271,9 @@ msgstr "Leggi dalla priorità più alta"
 msgid "Read from lowest load"
 msgstr "Leggi dal carico minore"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Sola lettura"
 
@@ -8277,6 +8307,11 @@ msgstr "Accesso in Lettura/Scrittura"
 
 msgid "Reading"
 msgstr "Lettura"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Sola lettura"
@@ -10362,6 +10397,13 @@ msgstr ""
 "password siano esattamente uguali."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10823,6 +10865,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Il server sarà resettato ai valori iniziali e sarà riavviato."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
@@ -10978,6 +11023,9 @@ msgid ""
 msgstr ""
 "Queste opzioni saranno aggiunte a /etc/rc.conf. Ciò consente di "
 "sovrascrivere le opzioni utilizzate da vari script generici di avvio."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -12098,6 +12146,12 @@ msgstr "Usa cifratura"
 msgid "Use PAM for user authentication."
 msgstr "Utilizzare PAM per autenticazione utenti"
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr "Usare TLS"
 
@@ -12987,6 +13041,9 @@ msgstr "spento"
 
 msgid "on"
 msgstr "acceso"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-07-06 10:26+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -4332,6 +4332,10 @@ msgid ""
 msgstr "WPA-PSK 모드에서 사용할 암호를 입력하십시오. 이것은 8자에서 63자 사이의 길이여야 합니다."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr "데이터베이스 디렉터리를 입력하십시오. 설정 파일은 명시된 디렉터리에 생성될 것입니다."
@@ -4962,8 +4966,14 @@ msgstr "HDD 대기 시간"
 msgid "HOT SPARE"
 msgstr "HOT SPARE"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP 프록시"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM Guest"
@@ -5297,6 +5307,11 @@ msgstr "대부분의 경우 여기에는 'public'이 이용됩니다."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "슬레이브 모드에서는 UPS 마스터의 UPS 이름(식별자) 입니다."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "입/출력 오류"
@@ -6074,6 +6089,9 @@ msgstr "기기 접미사"
 msgid "Maintenance"
 msgstr "유지보수"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "최적의 장치 수 선택"
 
@@ -6120,6 +6138,9 @@ msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr "데이터 읽을 시의 채널 마진. 이 속성의 기능은 정해지지 않음."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Masquerade 주소"
@@ -6943,6 +6964,9 @@ msgstr "이전 암호문"
 msgid "On"
 msgstr "켬"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "온라인 정보"
 
@@ -7364,6 +7388,9 @@ msgstr "데이터베이스용 디렉터리 위치를 정의해 주십시오."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "경로 명에서 공백 문자는 허용되지 않는다는 것에 주의하십시오."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "폴링 시간"
@@ -7806,6 +7833,9 @@ msgstr "가장 큰 우선권으로 읽기"
 msgid "Read from lowest load"
 msgstr "가장 적은 부하로 읽기"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "읽기 전용"
 
@@ -7835,6 +7865,11 @@ msgstr "읽기/쓰기 접근"
 
 msgid "Reading"
 msgstr "읽는 중"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "읽기 전용"
@@ -9798,6 +9833,13 @@ msgid ""
 msgstr "암호 확인이 일치하지 않습니다. 암호들은 정확히 일치해야 합니다."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10200,6 +10242,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "서버가 공장 초기값으로 재설정되고 재시동될 것입니다."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "설정이 정상적으로 복원된 후 서버가 재시동됩니다."
@@ -10339,6 +10384,9 @@ msgid ""
 msgstr ""
 "이 옵션들은 /etc/rc.conf에 추가될 것입니다. 이것은 다양한 일반 스타트업 스크립트에 의해 이용되는 옵션들을 덮어쓸 수 있게 "
 "해줍니다."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -11338,6 +11386,12 @@ msgstr "암호화 사용"
 msgid "Use PAM for user authentication."
 msgstr "PAM 인증 사용"
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr "TLS 사용"
 
@@ -12159,6 +12213,9 @@ msgstr "끄기"
 
 msgid "on"
 msgstr "켜기"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

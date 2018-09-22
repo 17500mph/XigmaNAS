@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-07-17 02:47+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:36+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -4280,6 +4280,10 @@ msgid ""
 msgstr "請輸入在 WPA-PSK 模式中使用的密碼短語。這個密語長度必須在 8 到 63 個字元之間。"
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr "輸入資料庫目錄的路徑。 將在指定的目錄下創建配置檔。"
@@ -4905,8 +4909,14 @@ msgstr "HDD 待機時間"
 msgid "HOT SPARE"
 msgstr "熱備"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM Guest"
@@ -5234,6 +5244,11 @@ msgstr "大多數的情況下，這裏應該是'public'"
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "在從模式(Slave mode)下，它是主模式UPS (UPS master) 的 UPS 名稱（標識）。"
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "入/出錯誤"
@@ -6005,6 +6020,9 @@ msgstr "機器尾碼"
 msgid "Maintenance"
 msgstr "維護"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "確保選擇最佳設備數量"
 
@@ -6051,6 +6069,9 @@ msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr "讀取數據時通道的餘量。 未指定此屬性的功能。"
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "偽裝地址"
@@ -6870,6 +6891,9 @@ msgstr "舊密碼短語"
 msgid "On"
 msgstr "開"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "線上資訊"
 
@@ -7289,6 +7313,9 @@ msgstr "請定義資料庫目錄的位置。"
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "請注意在路徑中不可以有空白字符。"
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "輪詢時間"
@@ -7734,6 +7761,9 @@ msgstr "從最優先起開始讀取"
 msgid "Read from lowest load"
 msgstr "從最低負荷起開始讀取"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "唯讀"
 
@@ -7763,6 +7793,11 @@ msgstr "讀/寫 許可權"
 
 msgid "Reading"
 msgstr "讀取"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "只讀"
@@ -9711,6 +9746,13 @@ msgid ""
 msgstr "確認密碼並不匹配。請確保密碼完全匹配。"
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10107,6 +10149,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "伺服器將被重置為出廠默認值，並將重新啟動。"
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "配置成功恢復後，服務器將重新啟動。"
@@ -10240,6 +10285,9 @@ msgid ""
 "These option(s) will be added to /etc/rc.conf. This allow you to overwrite "
 "options used by various generic startup scripts."
 msgstr "這些選項會加入 /etc/rc.conf。這樣可以讓您覆蓋各種啟動腳本（startup scripts）的選項。"
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -11219,6 +11267,12 @@ msgstr "使用加密"
 msgid "Use PAM for user authentication."
 msgstr "使用PAM進行用戶認證。"
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr "使用安全傳輸層協議（TLS）"
 
@@ -12034,6 +12088,9 @@ msgstr "關閉"
 
 msgid "on"
 msgstr "打開"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-07-07 23:17+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -4303,6 +4303,10 @@ msgid ""
 msgstr "WPA-PSK モードで使用するパスフレーズを8文字以上63文字以内で入力してください。"
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -4931,7 +4935,13 @@ msgstr "HDDスタンバイ時間"
 msgid "HOT SPARE"
 msgstr ""
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
+msgstr ""
+
+msgid "HTTPS"
 msgstr ""
 
 msgid "HVM Guest"
@@ -5265,6 +5275,11 @@ msgstr "ほとんどの場合 'public' が使われます。"
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "スレーブモードではマスターでのUPS名(識別子)になります。"
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr ""
@@ -6044,6 +6059,9 @@ msgstr ""
 msgid "Maintenance"
 msgstr ""
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
@@ -6090,6 +6108,9 @@ msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr "データ読み取り中のチャンネルのマージン。この属性の機能は指定されていません。"
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr ""
@@ -6911,6 +6932,9 @@ msgstr ""
 msgid "On"
 msgstr "On"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr ""
 
@@ -7332,6 +7356,9 @@ msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "パス内に空白が含まれないように注意して下さい。"
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr ""
@@ -7774,6 +7801,9 @@ msgstr "優先度の高いものから読み出し"
 msgid "Read from lowest load"
 msgstr "負荷の小さいものから読み出し"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "読込み専用"
 
@@ -7802,6 +7832,11 @@ msgid "Read/Write Access"
 msgstr "読書き可能アクセス"
 
 msgid "Reading"
+msgstr ""
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
 msgstr ""
 
 msgid "Readonly"
@@ -9761,6 +9796,13 @@ msgid ""
 msgstr "入力したパスワードが一致しません。パスワードを再度確認して下さい。"
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10167,6 +10209,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "サーバは初期状態にリセットされ再起動されます。"
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "設定が正常に復元された後、サーバを再起動します。"
@@ -10304,6 +10349,9 @@ msgid ""
 msgstr ""
 "これらのオプションは /etc/rc.conf "
 "に追加されます。これは、様々な一般的なスタートアップスクリプトによって使われるオプションを上書きすることを可能にします。"
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -11297,6 +11345,12 @@ msgstr "暗号化する"
 msgid "Use PAM for user authentication."
 msgstr "ユーザの認証にPAM (Pluggable Authentication Module) を使う"
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr ""
 
@@ -12115,6 +12169,9 @@ msgid "off"
 msgstr ""
 
 msgid "on"
+msgstr ""
+
+msgid "phpMyAdmin"
 msgstr ""
 
 msgid "phpVirtualBox"

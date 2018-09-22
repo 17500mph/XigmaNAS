@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-09-13 11:48+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -4586,6 +4586,10 @@ msgstr ""
 "Expresia utilizată la criptare trebuie să aibă între 8 și 63 de caractere."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5240,8 +5244,14 @@ msgstr "Timp oprire HDD"
 msgid "HOT SPARE"
 msgstr "HOT SPARE"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "Guest HVM"
@@ -5610,6 +5620,11 @@ msgstr "În cele mai multe cazuri aici se utilizează 'public'."
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr ""
 "În modul slave reprezintă numele (identificatorul) pentru UPS-ul master."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "Erori In/Out"
@@ -6434,6 +6449,9 @@ msgstr "Sufix mașină"
 msgid "Maintenance"
 msgstr "Mentenanţă"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Asigurați-vă că selectați numărul optim de discuri"
 
@@ -6484,6 +6502,9 @@ msgid ""
 msgstr ""
 "Marginea unui canal în timpul citirii datelor. Funcția acestei valori nu "
 "este specificată."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Adrese Masquerade"
@@ -7332,6 +7353,9 @@ msgstr "Frază-parolă veche"
 msgid "On"
 msgstr "Pornit"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "Informații online"
 
@@ -7769,6 +7793,9 @@ msgstr "Definiți locația bazei directory."
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "De notat că spațiile folosite în calea către fișiere nu sînt permise."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Timp verificare"
@@ -8230,6 +8257,9 @@ msgstr "Citire cu prioritate maximă"
 msgid "Read from lowest load"
 msgstr "Citire încărcare minimă"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Doar citire"
 
@@ -8263,6 +8293,11 @@ msgstr "Permisiune Scriere/Citire"
 
 msgid "Reading"
 msgstr "Citire"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Doar citire"
@@ -10326,6 +10361,13 @@ msgid ""
 msgstr "Parolele introduse nu coincid. Verificați parolele introduse."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10782,6 +10824,9 @@ msgstr ""
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Sistemul va reveni la setările inițiale după care va reporni."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "Serverul va reporni după ce configurația va fi restaurată cu succes."
@@ -10940,6 +10985,9 @@ msgid ""
 msgstr ""
 "Aceaste opțiuni vor fi adăugate în  /etc/sysctl.conf. Acest lucru vă permite "
 "să suprascrieți diferite variabile folosite de diverse scripturi la pornire."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -12047,6 +12095,12 @@ msgstr "Utilizare criptare"
 msgid "Use PAM for user authentication."
 msgstr "Utilizare PAM pentru autentificare."
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr ""
 
@@ -12938,6 +12992,9 @@ msgstr "dezactivat"
 
 msgid "on"
 msgstr "activat"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

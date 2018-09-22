@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xigmanas\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
-"PO-Revision-Date: 2018-07-06 09:51+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"PO-Revision-Date: 2018-09-22 21:53+0000\n"
+"Last-Translator: Makhanya Mandla <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:52+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:38+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 
 msgid " interfaces:"
 msgstr " koppelvlakke:"
@@ -25,7 +25,7 @@ msgstr " was toegeken aan "
 
 #, php-format
 msgid "%1$s %3$s %2$s"
-msgstr ""
+msgstr "%1$s %3$s %2$s"
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
@@ -53,7 +53,7 @@ msgstr "%d jare"
 
 #, php-format
 msgid "%d%% of %s"
-msgstr ""
+msgstr "%d%% van %s"
 
 #, php-format
 msgid "%dB / block"
@@ -73,7 +73,7 @@ msgstr "%s bestaan reeds."
 
 #, php-format
 msgid "%s available of %s"
-msgstr ""
+msgstr "%s  beskikbaar van %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -101,7 +101,7 @@ msgstr "%s op %s"
 
 #, php-format
 msgid "%s used of %s"
-msgstr ""
+msgstr "%s van %s"
 
 #, php-format
 msgid ""
@@ -203,16 +203,16 @@ msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "1 of meer skywe word benodig om 'n RAID-1 volume te bou."
 
 msgid "1.8\""
-msgstr ""
+msgstr "1.8\""
 
 msgid "16 KiB"
-msgstr ""
+msgstr "16 KiB"
 
 msgid "2"
 msgstr "2"
 
 msgid "2 KiB"
-msgstr ""
+msgstr "2 KiB"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 of meer skywe word benodig om 'n RAID-0 volume te bou."
@@ -221,7 +221,7 @@ msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr "2 of meer skywe word benodig om 'n RAID-1 volume te bou."
 
 msgid "2.5\""
-msgstr ""
+msgstr "2.5\""
 
 msgid "3"
 msgstr "3"
@@ -230,34 +230,34 @@ msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 of meer skywe word benodig om 'n RAID-5 volume te bou."
 
 msgid "3.5\""
-msgstr ""
+msgstr "3.5\""
 
 msgid "32 KiB"
-msgstr ""
+msgstr "32 KiB"
 
 msgid "4 KiB"
-msgstr ""
+msgstr "4 KiB"
 
 msgid "4KB wrapper"
 msgstr "4KG omhulsel"
 
 msgid "5.25\""
-msgstr ""
+msgstr "5.25\""
 
 msgid "512 Bytes"
 msgstr ""
 
 msgid "514"
-msgstr ""
+msgstr "514"
 
 msgid "64 KiB"
-msgstr ""
+msgstr "64 KiB"
 
 msgid "69"
-msgstr ""
+msgstr "69"
 
 msgid "8 KiB"
-msgstr ""
+msgstr "8 KiB"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiket (tussen 1 en 4094)."
@@ -4506,6 +4506,10 @@ msgstr ""
 "tussen 8 en 63 karakters lank wees."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5155,7 +5159,13 @@ msgstr "Hardeskyf bystaan tyd"
 msgid "HOT SPARE"
 msgstr "Warm ekstra"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
+msgstr ""
+
+msgid "HTTPS"
 msgstr ""
 
 msgid "HVM Guest"
@@ -5521,6 +5531,11 @@ msgstr "In meeste gevalle word 'publiek' hier gebruik."
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr ""
 "In slaaf mode is dit dan die UPS se naam (Identifiseerder) by die UPS meester"
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "In/Uit Foute"
@@ -6316,6 +6331,9 @@ msgstr ""
 msgid "Maintenance"
 msgstr "Onderhoud"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Maak seker dat jy die optimale hoeveelheid toestelle kies"
 
@@ -6364,6 +6382,9 @@ msgid ""
 msgstr ""
 "Die marge van die kanaal wanner dit die data lees. Die funksie van die "
 "eienskap is net gespesifiseer nie."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr ""
@@ -7210,6 +7231,9 @@ msgstr ""
 msgid "On"
 msgstr "Aan"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr ""
 
@@ -7646,6 +7670,9 @@ msgstr "Definieer asseblief die gebied vir die databasis lêer stelsel."
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Neem asseblief kennis dat oop spasies nie in pad name toegalaat word nie."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Polsing Tyd"
@@ -8100,6 +8127,9 @@ msgstr "Lees van die grootste prioriteit"
 msgid "Read from lowest load"
 msgstr "Lees van die laagste las"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Leesalleen"
 
@@ -8133,6 +8163,11 @@ msgstr "Lees/Skryf Toegang"
 
 msgid "Reading"
 msgstr "Besig om te lees"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Leesalleen"
@@ -10182,6 +10217,13 @@ msgstr ""
 "wagwoorde presies ooreenstem."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10642,6 +10684,9 @@ msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 "Die bediener sal na fabriek standaard herstel word en sal dan herlaai."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr ""
@@ -10796,6 +10841,9 @@ msgid ""
 msgstr ""
 "Die opsie(s) sal bygevoeg word by /etc/rc.conf. Die laat jou toe om die "
 "opsies wat deur die verskeie generiese opstart skrifte te vervangskryf."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -11830,6 +11878,12 @@ msgstr ""
 msgid "Use PAM for user authentication."
 msgstr ""
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr ""
 
@@ -12676,6 +12730,9 @@ msgid "off"
 msgstr ""
 
 msgid "on"
+msgstr ""
+
+msgid "phpMyAdmin"
 msgstr ""
 
 msgid "phpVirtualBox"
