@@ -320,24 +320,3 @@ $body->add_js_on_load($js_on_load[$page_mode]);
 $body->add_js_document_ready($js_document_ready[$page_mode]);
 //	showtime
 $document->render();
-/*
-$mysql_user = rc_getenv_ex("mysql_user", "mysql");
-$mysql_group = rc_getenv_ex("mysql_group", "mysql");
-
-		config_lock();
-		$retval |= rc_exec_service("userdb");
-		config_unlock();
-		if($dir != "/nonexistent" && file_exists($dir)):
-			// adjust permission
-			chmod($dir, 0755);
-			chown($dir, $user);
-			chgrp($dir, $group);
-
-			if(!file_exists($d_sysrebootreqd_path)):
-				config_lock();
-				$retval |= rc_update_service("mysqldb");
-				config_unlock();
-			endif;
-		endif;
-		$savemsg = get_std_save_message($retval);
- */
