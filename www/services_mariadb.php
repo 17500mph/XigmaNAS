@@ -214,7 +214,7 @@ switch($page_action):
 			if($extraoptions_changed):
 				$retval |= rc_exec_service('userdb');
 			endif;
-			$retval |= rc_update_restart_service('mysqldb');
+			$retval |= rc_update_service('mysqldb');
 			config_unlock();
 			$_SESSION['submit'] = $sphere->get_basename();
 			$_SESSION[$sphere->get_basename()] = $retval;
