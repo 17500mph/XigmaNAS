@@ -168,7 +168,7 @@ switch($page_action):
 	case 'reload':
 		$retval = 0;
 		config_lock();
-		$retval |= rc_reload_service_if_running_and_enabled('mariadb');
+		$retval |= rc_reload_service_if_running_and_enabled('mysqldb');
 		config_unlock();
 		$_SESSION['submit'] = $sphere->get_basename();
 		$_SESSION[$sphere->get_basename()] = $retval;
@@ -178,7 +178,7 @@ switch($page_action):
 	case 'restart':
 		$retval = 0;
 		config_lock();
-		$retval |= rc_restart_service_if_running_and_enabled('mariadb');
+		$retval |= rc_restart_service_if_running_and_enabled('mysqldb');
 		config_unlock();
 		$_SESSION['submit'] = $sphere->get_basename();
 		$_SESSION[$sphere->get_basename()] = $retval;
@@ -203,7 +203,7 @@ switch($page_action):
 			write_config();
 			$retval = 0;
 			config_lock();
-			$retval |= rc_update_reload_service('mariadb');
+			$retval |= rc_update_reload_service('mysqldb');
 			config_unlock();
 			$_SESSION['submit'] = $sphere->get_basename();
 			$_SESSION[$sphere->get_basename()] = $retval;
@@ -298,22 +298,11 @@ $body->add_js_document_ready($js_document_ready[$page_mode]);
 //	showtime
 $document->render();
 /*
-require_once 'auth.inc';
-require_once 'guiconfig.inc';
-
-array_make_branch($config,'mysqldb');
-$pconfig['enable'] = isset($config['mysqldb']['enable']);
-$pconfig['homedir'] = $config['mysqldb']['homedir'];
 $mysql_user = rc_getenv_ex("mysql_user", "mysql");
 $mysql_group = rc_getenv_ex("mysql_group", "mysql");
-$pconfig['phrasecookieauth'] = $config['mysqldb']['phrasecookieauth'];
 
 if ($_POST) {
-	unset($input_errors);
-	unset($errormsg);
-
 	$pconfig = $_POST;
-
 	if (isset($_POST['enable'])) {
 		$reqdfields = explode(" ", "homedir phrasecookieauth");
 		$reqdfieldsn = array(gettext("Home directory"), gettext("Passphrase for cookie auth"));
@@ -326,12 +315,7 @@ if ($_POST) {
 		$retval |= rc_exec_script("/etc/rc.d/mysqldb onestop");
 		config_unlock();
 	}
-
 	if (empty($input_errors)) {
-		$config['mysqldb']['enable'] = isset($_POST['enable']) ? true : false;
-		$config['mysqldb']['homedir'] = $_POST['homedir'];
-		$config['mysqldb']['phrasecookieauth'] = $_POST['phrasecookieauth'];
-
 		$dir = $config['mysqldb']['homedir'];
 		if ($dir == '' || !file_exists($dir))
 			$dir = "/nonexistent";
@@ -344,13 +328,11 @@ if ($_POST) {
 		if ($index != false) {
 			$config['system']['usermanagement']['user'][$index]['extraoptions'] = $opt;
 		}
-
 		write_config();
 		$retval = 0;
 		config_lock();
 		$retval |= rc_exec_service("userdb");
 		config_unlock();
-
 		if ($dir != "/nonexistent" && file_exists($dir)) {
 			// adjust permission
 			chmod($dir, 0755);
@@ -363,75 +345,7 @@ if ($_POST) {
 				config_unlock();
 			}
 		}
-
 		$savemsg = get_std_save_message($retval);
 	}
 }
-$pgtitle = [gettext('Services'),gettext('MySQL Server')];
-?>
-<?php include 'fbegin.inc';?>
-<script type="text/javascript">//<![CDATA[
-$(document).ready(function(){
-	function enable_change(enable_change) {
-		var endis = !($('#enable').prop('checked') || enable_change);
-		$('#homedir').prop('disabled', endis);
-		$('#homedirbrowsebtn').prop('disabled', endis);
-		if (endis) {
-			$('#a_url1').on('click', function(){ return false; });
-		} else {
-			$('#a_url1').off('click');
-		}
-	}
-	$('#enable').click(function(){
-		enable_change(false);
-	});
-	$('input:submit').click(function(){
-		enable_change(true);
-	});
-	enable_change(false);
-});
-//]]>
-</script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabcont">
-      <form action="services_mysql_db.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php
-	if (!empty($errormsg)) print_error_box($errormsg);
-	if (!empty($input_errors)) print_input_errors($input_errors);
-	if (!empty($savemsg)) print_info_box($savemsg);
-	$enabled = isset($config['mysqldb']['enable']);
-	?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php
-	html_titleline_checkbox("enable", gettext("MySQL Server"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "");
-	$helpinghand = '<a href="'
-			. 'https://mariadb.com/kb/en/mariadb/configuring-mariadb-with-mycnf/'
-			. '" target="_blank">'
-			. gettext('Please check the documentation')
-			. '</a>.';
-	html_filechooser("homedir", gettext("Home Directory"), $pconfig['homedir'], gettext("Enter the path to the home directory of MariaDB. Databases and configuration files will be created under the specified directory.") . "<br /><br />" . gettext("The server will be started with the minimum required parameters.") . "<br />" . sprintf(gettext("In this directory, you can create a %s file with your additional parameters."), "'my.cnf'") . "  " . $helpinghand, $g['media_path'], false, 60);
-	html_separator();
-	html_titleline(sprintf("%s (%s)", gettext("Administrative WebGUI"), gettext("phpMyAdmin")));
-	html_passwordbox("phrasecookieauth", gettext("Passphrase for cookie auth"), $pconfig['phrasecookieauth'], sprintf(gettext("This is needed for cookie based authentication to encrypt password in cookie. It must be 32 characters long."), 1024), true, 32);
-	if ($enabled):
-			$if = get_ifname($config['interfaces']['lan']['if']);
-			$ipaddr = get_ipaddr($if);
-			$url = htmlspecialchars("/phpMyAdmin/index.php");
-			$text = "<a href='${url}' id='a_url1' target='_blank'>{$url}</a>";
-		html_text("url1", gettext("URL"), $text);
-		endif;
-	?>
-		</table>
-			<div id="submit">
-				<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
-			</div>
-<?php include 'formend.inc';?>
-</form>
-</td>
-</tr>
-</table>
-<?php include 'fend.inc';
-
-
  */

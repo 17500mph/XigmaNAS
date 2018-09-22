@@ -10,7 +10,7 @@
 # PROVIDE: mysql
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
-# XQUERY: -i "count(//mysqldb/enable) > 0" -o "0" -b
+# XQUERY: --if "count(//mariadb/enable) > 0" --output "0" --break
 # RCVAR: mysqldb
 
 . /etc/rc.subr
@@ -39,11 +39,11 @@ mysqldb_mkconf()
 	local _homedir
 	local _phrasecookieauth
 
-	_homedir=`configxml_get "//mysqldb/homedir"`
+	_homedir=`configxml_get "//mariadb/homedir"`
 	if [ "$_homedir" = "" ]; then
 	    _homedir="/nonexistent"
 	fi
-	_phrasecookieauth=`configxml_get "//mysqldb/phrasecookieauth"`
+	_phrasecookieauth=`configxml_get "//mariadb/phrasecookieauth"`
 
 	# Create mysql config minimum
 	rm -f ${mysqldb_conf}
