@@ -53,4 +53,4 @@ cat ${OUTPUTDIR}/${OUTPUT} >>${OUTPUTDIR}/${OUTPUT}.tmp
 mv -f ${OUTPUTDIR}/${OUTPUT}.tmp ${OUTPUTDIR}/${OUTPUT}
 echo -e "\033\\033[32m";
 echo -e "==> Translations exported into:""\033[37m ${OUTPUTDIR}/${OUTPUT}\033[37m";
-echo "==> You now need to commit this pot file to svn."
+echo "==> You now can commit this pot file to svn."
