@@ -67,7 +67,6 @@ if($sphere->enadis()):
 	$rmo->add('POST','enable',PAGE_MODE_VIEW);
 	$rmo->add('POST','disable',PAGE_MODE_VIEW);
 endif;
-$rmo->add('POST','reload',PAGE_MODE_VIEW);
 $rmo->add('POST','restart',PAGE_MODE_VIEW);
 $rmo->add('POST','save',PAGE_MODE_POST);
 $rmo->add('POST','view',PAGE_MODE_VIEW);
@@ -96,7 +95,6 @@ switch($page_action):
 	case 'view':
 	case 'disable':
 	case 'enable':
-	case 'reload':
 	case 'restart':
 		$source = $sphere->grid;
 		foreach($a_referer as $referer):
@@ -168,16 +166,6 @@ switch($page_action):
 endswitch;
 //	save configuration
 switch($page_action):
-	case 'reload':
-		$retval = 0;
-		config_lock();
-		$retval |= rc_reload_service_if_running_and_enabled('mysqldb');
-		config_unlock();
-		$_SESSION['submit'] = $sphere->get_basename();
-		$_SESSION[$sphere->get_basename()] = $retval;
-		header($sphere->get_location());
-		exit;
-		break;
 	case 'restart':
 		$retval = 0;
 		config_lock();
@@ -226,7 +214,7 @@ switch($page_action):
 			if($extraoptions_changed):
 				$retval |= rc_exec_service('userdb');
 			endif;
-			$retval |= rc_update_reload_service('mysqldb');
+			$retval |= rc_update_restart_service('mysqldb');
 			config_unlock();
 			$_SESSION['submit'] = $sphere->get_basename();
 			$_SESSION[$sphere->get_basename()] = $retval;
@@ -292,8 +280,7 @@ switch($page_mode):
 			add_area_buttons()->
 				ins_button_edit()->
 				ins_button_enadis(!$is_enabled)->
-				ins_button_restart($is_enabled)->
-				ins_button_reload($is_enabled);
+				ins_button_restart($is_enabled);
 		break;
 	case PAGE_MODE_EDIT:
 		$document->
