@@ -46,19 +46,29 @@ mysqldb_mkconf()
 	_phrasecookieauth=`configxml_get "//mariadb/phrasecookieauth"`
 
 	# Create mysql config minimum
-	rm -f ${mysqldb_conf}
-	cat <<EOF > ${mysqldb_conf}
-[mysqld]
-server-id			= 1
-port				= 3306
-bind_address			= ${mysqldb_ipaddr}
-socket				= /tmp/mysql.sock
-init_connect			= "SET collation_connection = utf8mb4_unicode_ci"
-character-set-server		= utf8mb4
-collation-server		= utf8mb4_unicode_ci 
-character-sets-dir 		= /usr/local/share/mysql/charsets
-lc-messages-dir		= /usr/local/share/mysql
-EOF
+	cat /dev/null > ${mysqldb_conf}
+	chmod 600 ${mysqldb_conf}
+	echo '# global settings' > ${mysqldb_conf}
+	/usr/local/bin/xml sel --template \
+		--match '//mariadb' \
+			--output "[mysqld]" --nl \
+			--output "server-id = 1" --nl \
+			--output "port = 3306" --nl \
+			--output "bind_address = ${mysqldb_ipaddr}" --nl \
+			--output "socket = /tmp/mysql.sock" --nl \
+			--output "init_connect = \"SET collation_connection = utf8mb4_unicode_ci\"" --nl \
+			--output "character-set-server = utf8mb4" --nl \
+			--output "collation-server = utf8mb4_unicode_ci" --nl \
+			--output "character-sets-dir = /usr/local/share/mysql/charsets" --nl \
+			--output "lc-messages-dir = /usr/local/share/mysql" --nl \
+			--match 'auxparam' \
+				--if 'position() < last() or string-length(.) > 0' \
+					--value-of '.' --nl \
+				--break \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${mysqldb_conf}
+
 	# Create symbolic link to homedir and create DB if not exist
 	unlink /var/db/mysql
 	ln -s "${_homedir}" /var/db/mysql

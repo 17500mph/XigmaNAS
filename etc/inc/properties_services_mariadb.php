@@ -106,7 +106,7 @@ class mariadb_properties extends co_property_container {
 	}
 	public function init_auxparam() {
 		$property = $this->x_auxparam = new property_textarea($this);
-		$description = gettext('These parameter will be added to the global section of mariadb.conf');
+		$description = gettext('These parameter will be added to my.cnf');
 		$placeholder = gettext('Enter additional parameter');
 		$property->
 			set_name('auxparam')->

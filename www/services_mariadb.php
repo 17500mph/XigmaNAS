@@ -45,6 +45,9 @@ function mariadb_sphere() {
 	$sphere->grid = &array_make_branch($config,'mariadb');
 	return $sphere;
 }
+//	get some environment variables
+//	$mysql_user = rc_getenv_ex('mysql_user','mysql');
+//	$mysql_group = rc_getenv_ex('mysql_group','mysql');
 //	init properties and sphere
 $cop = new mariadb_properties();
 $sphere = &mariadb_sphere();
@@ -200,9 +203,29 @@ switch($page_action):
 				endswitch;
 				$sphere->grid[$name] = $sphere->row[$name];
 			endforeach;
+			$usermysqlhomedir = $sphere->row[$cop->get_homedir()->get_name()] ?? '';
+			if(1 === preg_match('/\S/',$usermysqlhomedir) && file_exists($usermysqlhomedir)):
+			else:
+				$usermysqlhomedir = '/nonexistent';
+			endif;
+			// update user mysql home dir
+			$extraoptions_changed = false;
+			$users = &array_make_branch($config,'system','usermanagement','user');
+			$index = array_search_ex('mysql',$users,'name');
+			if($index !== false):
+				$extraoptions_new = sprintf('-c "MySQL user" -d "%s" -s /usr/sbin/nologin',$usermysqlhomedir);
+				$extraoptions_current = $users[$index]['extraoptions'] ?? '';
+				$extraoptions_changed = $extraoptions_current !== $extraoptions_new;
+				if($extraoptions_changed):
+					$users[$index]['extraoptions'] = $extraoptions_new;
+				endif;
+			endif;
 			write_config();
 			$retval = 0;
 			config_lock();
+			if($extraoptions_changed):
+				$retval |= rc_exec_service('userdb');
+			endif;
 			$retval |= rc_update_reload_service('mysqldb');
 			config_unlock();
 			$_SESSION['submit'] = $sphere->get_basename();
@@ -301,51 +324,20 @@ $document->render();
 $mysql_user = rc_getenv_ex("mysql_user", "mysql");
 $mysql_group = rc_getenv_ex("mysql_group", "mysql");
 
-if ($_POST) {
-	$pconfig = $_POST;
-	if (isset($_POST['enable'])) {
-		$reqdfields = explode(" ", "homedir phrasecookieauth");
-		$reqdfieldsn = array(gettext("Home directory"), gettext("Passphrase for cookie auth"));
-		$reqdfieldst = explode(" ", "string string");
-		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-	} else {
-		// disable MariaDB
-		config_lock();
-		$retval |= rc_exec_script("/etc/rc.d/mysqldb onestop");
-		config_unlock();
-	}
-	if (empty($input_errors)) {
-		$dir = $config['mysqldb']['homedir'];
-		if ($dir == '' || !file_exists($dir))
-			$dir = "/nonexistent";
-
-		// update homedir
-		$user = $mysql_user;
-		$group = $mysql_group;
-		$opt = "-c \"MySQL user\" -d \"{$dir}\" -s /usr/sbin/nologin";
-		$index = array_search_ex($user, $config['system']['usermanagement']['user'], "name");
-		if ($index != false) {
-			$config['system']['usermanagement']['user'][$index]['extraoptions'] = $opt;
-		}
-		write_config();
-		$retval = 0;
 		config_lock();
 		$retval |= rc_exec_service("userdb");
 		config_unlock();
-		if ($dir != "/nonexistent" && file_exists($dir)) {
+		if($dir != "/nonexistent" && file_exists($dir)):
 			// adjust permission
 			chmod($dir, 0755);
 			chown($dir, $user);
 			chgrp($dir, $group);
 
-			if (!file_exists($d_sysrebootreqd_path)) {
+			if(!file_exists($d_sysrebootreqd_path)):
 				config_lock();
 				$retval |= rc_update_service("mysqldb");
 				config_unlock();
-			}
-		}
+			endif;
+		endif;
 		$savemsg = get_std_save_message($retval);
-	}
-}
  */
