@@ -66,7 +66,7 @@ function status_services_sphere() {
 		$sphere->grid[] = ['name' => gtext('SNMP'),'link' => 'services_snmp.php','config' => 'snmpd','scriptname' => 'bsnmpd'];
 		$sphere->grid[] = ['name' => gtext('UPS'),'link' => 'services_ups.php','config' => 'ups','scriptname' => $ups_script];
 		$sphere->grid[] = ['name' => gtext('Webserver'),'link' => 'services_websrv.php','config' => 'websrv','scriptname' => 'websrv'];
-		$sphere->grid[] = ['name' => gtext('MariaDB'),'link' => 'services_mariadb.php','config' => 'mariadb','scriptname' => 'mariadb'];
+		$sphere->grid[] = ['name' => gtext('MariaDB'),'link' => 'services_mariadb.php','config' => 'mariadb','scriptname' => 'mysqldb'];
 		$sphere->grid[] = ['name' => gtext('BitTorrent'),'link' => 'services_bittorrent.php','config' => 'bittorrent','scriptname' => 'transmission'];
 		$sphere->grid[] = ['name' => gtext('LCDproc'),'link' => 'services_lcdproc.php','config' => 'lcdproc','scriptname' => 'LCDd'];
 	else:
