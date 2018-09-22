@@ -156,7 +156,7 @@ if (0 == $result) {
 	}
 
 	for($i = 0;$i < count($optif);$i++):
-		$helpinghand = 'opt' . (i+1);
+		$helpinghand = 'opt' . ($i+1);
 		array_make_branch($config,'interfaces',$helpinghand);
 		$config['interfaces'][$helpinghand]['if'] = $optif[$i];
 		if(strcmp($optif[$i],$if_isboot) == 0):
