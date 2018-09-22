@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-09-12 16:56+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -4527,6 +4527,10 @@ msgstr ""
 "vara mellan 8 och 63 tecken långt."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5179,8 +5183,14 @@ msgstr "HDD standbytid"
 msgid "HOT SPARE"
 msgstr "AKTIV RESERV"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP-proxy"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM gäster"
@@ -5541,6 +5551,11 @@ msgstr "I de flesta fallen används 'public' här."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "I slav läge är det UPS namnet (Identifier) från UPS mastern."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "In/Ut fel"
@@ -6351,6 +6366,9 @@ msgstr "Maskinändelse"
 msgid "Maintenance"
 msgstr "Underhåll"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Försäkra dig om att välja optimalt antal enheter"
 
@@ -6400,6 +6418,9 @@ msgid ""
 msgstr ""
 "Marginal för en kanal vid läsning av data. Funktionen av attributet är inte "
 "specificerad."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Dölj Adress"
@@ -7243,6 +7264,9 @@ msgstr "Gamla lösenordet"
 msgid "On"
 msgstr "På"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "Onlineinformation"
 
@@ -7675,6 +7699,9 @@ msgstr "Ange placeringen av databaskatalogen."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Notera att blanktecken i sökvägarna inte är tillåtet."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Intervall"
@@ -8134,6 +8161,9 @@ msgstr "Läs från den högsta prioriteringen"
 msgid "Read from lowest load"
 msgstr "Läs från den lägsta belastningen"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Skrivskyddad"
 
@@ -8167,6 +8197,11 @@ msgstr "Läs/Skriv Åtkomst"
 
 msgid "Reading"
 msgstr "Läsning"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Skrivskyddad"
@@ -10260,6 +10295,13 @@ msgstr ""
 "identiska."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10717,6 +10759,9 @@ msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 "Servern kommer återställas till fabriksinställningarna och startas om."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "Servern kommer startas om efter att konfigurationen återställts."
@@ -10875,6 +10920,9 @@ msgid ""
 msgstr ""
 "Dessa val kommer att läggas till i /etc/rc.conf. Detta låter dig skriva över "
 "val som används av diverse generiska uppstartskript."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr ""
@@ -11976,6 +12024,12 @@ msgstr "Använd kryptering"
 msgid "Use PAM for user authentication."
 msgstr "Använd PAM för användarautentisering."
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr "Använd TLS"
 
@@ -12857,6 +12911,9 @@ msgstr "av"
 
 msgid "on"
 msgstr "på"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

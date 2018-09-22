@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
-"PO-Revision-Date: 2018-09-19 23:49+0000\n"
-"Last-Translator: Дима Семёнов <Unknown>\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"PO-Revision-Date: 2018-09-21 04:43+0000\n"
+"Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -2771,7 +2771,7 @@ msgid "Delete Selected WLANs"
 msgstr "Удалить выбранные WLAN"
 
 msgid "Delete Selected WebDAV Records"
-msgstr "Удалить выбранную WebDAV запись"
+msgstr "Удалить выбранные WebDAV записи"
 
 msgid "Delete Selected iSNS Servers"
 msgstr "Удалить выбранные серверы iSNS"
@@ -3104,7 +3104,7 @@ msgid "Disable Selected Targets"
 msgstr "Отключить выбранные цели"
 
 msgid "Disable Selected WebDAV Records"
-msgstr "Отключить выбранную WebDAV запись"
+msgstr "Отключить выбранные WebDAV записи"
 
 msgid "Disable Selected iSNS Servers"
 msgstr "Отключить выбранные серверы iSNS"
@@ -3417,7 +3417,7 @@ msgid "Do you want to delete selected WLANs?"
 msgstr "Вы хотите удалить выбранные WLAN"
 
 msgid "Do you want to delete selected WebDAV records?"
-msgstr "Вы действительно хотите удалить выбранную WebDAV запись?"
+msgstr "Вы действительно хотите удалить выбранные WebDAV записи?"
 
 msgid "Do you want to delete selected auth groups?"
 msgstr "Вы хотите удалить выбранные группы аутентификации?"
@@ -3523,7 +3523,7 @@ msgid "Do you want to disable selected Mutual CHAP users?"
 msgstr "Вы хотите отключить выбранных взаимных пользователей CHAP?"
 
 msgid "Do you want to disable selected WebDAV records?"
-msgstr "Вы действительно хотите отключить выбранную WebDAV запись?"
+msgstr "Вы действительно хотите отключить выбранные WebDAV записи?"
 
 msgid "Do you want to disable selected auth groups?"
 msgstr "Вы хотите отключить выбранные группы аутентификации?"
@@ -3583,7 +3583,7 @@ msgid "Do you want to enable selected Mutual CHAP users?"
 msgstr "Вы хотите включить выбранных взаимных пользователей CHAP?"
 
 msgid "Do you want to enable selected WebDAV records?"
-msgstr "Вы действительно хотите включить выбранную WebDAV запись?"
+msgstr "Вы действительно хотите включить выбранные WebDAV записи?"
 
 msgid "Do you want to enable selected auth groups?"
 msgstr "Вы хотите включить выбранные группы аутентификации?"
@@ -3652,7 +3652,7 @@ msgid "Do you want to toggle selected Mutual CHAP users?"
 msgstr "Вы хотите переключить выбранных взаимных пользователей CHAP?"
 
 msgid "Do you want to toggle selected WebDAV records?"
-msgstr "Вы действительно хотите переключить выбранную WebDAV запись?"
+msgstr "Вы действительно хотите переключить выбранные WebDAV записи?"
 
 msgid "Do you want to toggle selected auth groups?"
 msgstr "Вы хотите переключить выбранные группы аутентификации?"
@@ -4118,7 +4118,7 @@ msgid "Enable Selected Targets"
 msgstr "Включить выбранные цели"
 
 msgid "Enable Selected WebDAV Records"
-msgstr "Включить выбранную WebDAV запись"
+msgstr "Включить выбранные WebDAV записи"
 
 msgid "Enable Selected iSNS Servers"
 msgstr "Включить выбранные серверы iSNS"
@@ -4582,6 +4582,10 @@ msgid ""
 msgstr ""
 "Введите парольную фразу для режима WPA-PSK. Длина должна быть в интервале "
 "между 8 и 63 символами."
+
+msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
 
 msgid ""
 "Enter the path to the database directory. The config files will be created "
@@ -5246,8 +5250,14 @@ msgstr "HDD в режиме ожидания"
 msgid "HOT SPARE"
 msgstr "ГОРЯЧАЯ ЗАМЕНА"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP-прокси"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "Гостевая система HVM"
@@ -5613,6 +5623,11 @@ msgstr "В большинстве случаев здесь использует
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "В режиме ведомого это имя (идентификатор) ведущего  ИБП."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "Ошибки ввода/вывода"
@@ -6448,6 +6463,9 @@ msgstr "Суффикс компьютера"
 msgid "Maintenance"
 msgstr "Обслуживание"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Убедитесь, что выбрано оптимальное число устройств"
 
@@ -6497,6 +6515,9 @@ msgid ""
 "not specified."
 msgstr ""
 "Запас в канале во время чтения данных. Функция этого атрибута не указана."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Маскарадный адрес"
@@ -7353,6 +7374,9 @@ msgstr "Утстаревшая парольная фраза"
 msgid "On"
 msgstr "Вкл."
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "Онлайн информация"
 
@@ -7789,6 +7813,9 @@ msgstr "Пожалуйста, определите местоположение 
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Пожалуйста, помните, что пробелы в пути запрещены."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Время опроса"
@@ -8253,6 +8280,9 @@ msgstr "Чтение с наиболее приоритетного (biggest pri
 msgid "Read from lowest load"
 msgstr "Чтение с наименее нагруженного (lowest load)"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Только чтение"
 
@@ -8286,6 +8316,11 @@ msgstr "Доступ на чтение/запись"
 
 msgid "Reading"
 msgstr "Чтение"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Только чтение"
@@ -10391,6 +10426,13 @@ msgstr ""
 "Пароли не совпадают. Пожалуйста, убедитесь в правильности ввода пароля."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10862,6 +10904,9 @@ msgstr "Сервер выключается."
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Сервер будет возвращен к заводским установкам и перезагрузится."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "После восстановления конфигурации сервер перезагрузится."
@@ -11024,6 +11069,9 @@ msgid ""
 msgstr ""
 "Эти настройки будут добавлены к /etc/rc.conf и позволят вам переназначить "
 "переменные, используемые основными скриптами про запуске."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Этот параметр будет добавлен в глобальный раздел ctl.conf"
@@ -11685,7 +11733,7 @@ msgid "Toggle Selected Targets"
 msgstr "Переключить выбранные цели"
 
 msgid "Toggle Selected WebDAV Records"
-msgstr "Переключить выбранную WebDAV запись"
+msgstr "Переключить выбранные WebDAV записи"
 
 msgid "Toggle Selected iSNS Servers"
 msgstr "Переключить выбранные серверы iSNS"
@@ -12137,6 +12185,12 @@ msgstr "Использовать шифрование"
 
 msgid "Use PAM for user authentication."
 msgstr "Использовать PAM для аутентификации пользователя."
+
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
 
 msgid "Use TLS"
 msgstr "Использовать TLS"
@@ -13038,6 +13092,9 @@ msgstr "выкл."
 
 msgid "on"
 msgstr "вкл."
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"

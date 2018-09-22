@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-11 22:18+0000\n"
+"POT-Creation-Date: 2018-09-22 22:29+0000\n"
 "PO-Revision-Date: 2018-09-19 17:24+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-19 23:53+0000\n"
-"X-Generator: Launchpad (build 18780)\n"
+"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -4571,6 +4571,10 @@ msgid ""
 msgstr "Введіть пароль для  режиму WPA-PSK. Довжина від 8 до 63 символів."
 
 msgid ""
+"Enter the path of the home directory for databases and configuration files."
+msgstr ""
+
+msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
@@ -5231,8 +5235,14 @@ msgstr "Час засинання жорсткого диска"
 msgid "HOT SPARE"
 msgstr "Гарячий резерв"
 
+msgid "HTTP"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "Проксі HTTP"
+
+msgid "HTTPS"
+msgstr ""
 
 msgid "HVM Guest"
 msgstr "HVM Гість"
@@ -5599,6 +5609,11 @@ msgstr "В більшості випадків тут використовуєт
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "У режимі 'slave' - це ім'я (ідентифікатор) 'master' ДБЖ."
+
+#, php-format
+msgid ""
+"In this directory, you can create a %s file with your additional parameters."
+msgstr ""
 
 msgid "In/Out Errors"
 msgstr "Помилки вводу/виводу"
@@ -6430,6 +6445,9 @@ msgstr "Суфікс Машини"
 msgid "Maintenance"
 msgstr "Обслуговування"
 
+msgid "Maintenance Tool Settings"
+msgstr ""
+
 msgid "Make sure to select the optimal number of devices"
 msgstr "Переконайтеся в тому, щоб вибрати оптимальну кількість пристроїв"
 
@@ -6478,6 +6496,9 @@ msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr "Межа каналу при читанні даних. Функція цього атрибута не вказано."
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Masquerade Address"
 msgstr "Адреса Маскарадінгу"
@@ -7331,6 +7352,9 @@ msgstr "Стара ключова фраза"
 msgid "On"
 msgstr "Увімкнено"
 
+msgid "On-Disk Configuration"
+msgstr ""
+
 msgid "Online Information"
 msgstr "Онлайнова інформація"
 
@@ -7765,6 +7789,9 @@ msgstr "Будь ласка, визначите розміщення катал�
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Зауважте, що пробіли в іменах шляхів не дозволені."
+
+msgid "Please read the documentation"
+msgstr ""
 
 msgid "Polling Time"
 msgstr "Час опитування"
@@ -8225,6 +8252,9 @@ msgstr "Читання із найбільшим приоритетом"
 msgid "Read from lowest load"
 msgstr "Читання із найменшим завантаженням"
 
+msgid "Read on-disk configuration."
+msgstr ""
+
 msgid "Read only"
 msgstr "Тільки для читання"
 
@@ -8259,6 +8289,11 @@ msgstr "Доступ читання / запису"
 
 msgid "Reading"
 msgstr "Читання"
+
+msgid ""
+"Reading the configuration from the disks is slower than reading from cache "
+"file."
+msgstr ""
 
 msgid "Readonly"
 msgstr "Лише для читання"
@@ -10356,6 +10391,13 @@ msgstr ""
 "пароля."
 
 msgid ""
+"The cookie-based auth_type uses AES algorithm to encrypt the password. Enter "
+"a random passphrase of your choice. It will be used internally by the AES "
+"algorithm - you won't be prompted for this passphrase. The secret should be "
+"at least 32 or more characters long"
+msgstr ""
+
+msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
 "value should be equal to zero and if the value is far above zero, then most "
 "likely there will be some serious problems with power supply or an oxidized "
@@ -10833,6 +10875,9 @@ msgstr "Зараз сервер вимикається"
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr "Сервер буде повернуто до заводських налаштувань і перезавантажено."
 
+msgid "The server will be started with the minimum required parameters."
+msgstr ""
+
 msgid ""
 "The server will reboot after the configuration was successfully restored."
 msgstr "Після відновлення конфігурації сервер буде перезавантажений."
@@ -10989,6 +11034,9 @@ msgid ""
 msgstr ""
 "Ці опції будуть додані до /etc/rc.conf. Це дозволить вам перезаписати "
 "параметри, які використовуються різними загальними сценаріями запуску."
+
+msgid "These parameter will be added to my.cnf"
+msgstr ""
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "Ці параметри будуть додані до глобального розділу ctl.conf"
@@ -12101,6 +12149,12 @@ msgstr ""
 "Використовувати для автентифікації користувача модуль, що під'єднується "
 "(PAM)."
 
+msgid "Use Sqlite"
+msgstr ""
+
+msgid "Use Sqlite for lockings and properties."
+msgstr ""
+
 msgid "Use TLS"
 msgstr "Використовувати TLS"
 
@@ -12996,6 +13050,9 @@ msgstr "вимкнено"
 
 msgid "on"
 msgstr "увімкнено"
+
+msgid "phpMyAdmin"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
