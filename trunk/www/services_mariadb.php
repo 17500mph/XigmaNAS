@@ -54,8 +54,8 @@ $sphere = &mariadb_sphere();
 $a_referer = [
 	$cop->get_enable(),
 	$cop->get_homedir(),
-	$cop->get_phrasecookieauth(),
-	$cop->get_auxparam()
+	$cop->get_auxparam(),
+	$cop->get_phrasecookieauth()
 ];
 $input_errors = [];
 //	determine request method
@@ -269,7 +269,7 @@ $tbody = $content->
 			c2_titleline(sprintf('%s (%s)',gettext('Administrative WebGUI'),gettext('phpMyAdmin')))->
 		pop()->
 		addTBODY();
-$tbody->c2_input_password($cop->get_phrasecookieauth(),$sphere->row[$cop->get_phrasecookieauth()->get_name()],true,$is_readonly);
+$tbody->c2_input_password($cop->get_phrasecookieauth(),$sphere->row[$cop->get_phrasecookieauth()->get_name()],false,$is_readonly);
 if($is_enabled):
 	$tbody->c2_textinfo('url1',gettext('URL'),sprintf('<a href="%1$s" id="a_url1" target="_blank">%1$s</a>',htmlspecialchars('/phpMyAdmin/index.php')));
 endif;
