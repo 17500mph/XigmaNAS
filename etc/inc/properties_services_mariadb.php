@@ -101,7 +101,7 @@ class mariadb_properties extends co_property_container {
 	}
 	public function init_phrasecookieauth() {
 		$property = $this->x_phrasecookieauth = new property_text($this);
-		$description = gettext('The cookie-based auth_type uses AES algorithm to encrypt the password. Enter a random passphrase of your choice. It will be used internally by the AES algorithm - you won’t be prompted for this passphrase. The secret should be 32 characters long.');
+		$description = gettext("The cookie-based auth_type uses AES algorithm to encrypt the password. Enter a random passphrase of your choice. It will be used internally by the AES algorithm - you won't be prompted for this passphrase. The secret should be at least 32 or more characters long");
 		$placeholder = gettext('Passphrase');
 		$regexp = '/^(|\S{32,128})$/';
 		$property->
