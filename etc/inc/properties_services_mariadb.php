@@ -73,33 +73,6 @@ class mariadb_properties extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
-	protected $x_phrasecookieauth;
-	public function get_phrasecookieauth() {
-		return $this->x_phrasecookieauth ?? $this->init_phrasecookieauth();
-	}
-	public function init_phrasecookieauth() {
-		$property = $this->x_phrasecookieauth = new property_text($this);
-		$description = gettext('The cookie-based auth_type uses AES algorithm to encrypt the password. Enter a random passphrase of your choice. It will be used internally by the AES algorithm - you won’t be prompted for this passphrase. The secret should be 32 characters long.');
-		$placeholder = gettext('Passphrase');
-		$regexp = '/^\S{32,128}$/';
-		$property->
-			set_name('phrasecookieauth')->
-			set_title(gettext('Passphrase'));
-		$property->
-			set_id('phrasecookieauth')->
-			set_description($description)->
-			set_placeholder($placeholder)->
-			set_editableonadd(true)->
-			set_editableonmodify(true)->
-			set_defaultvalue('')->
-			set_size(60)->
-			set_maxlength(128)->
-			set_filter(FILTER_VALIDATE_REGEXP)->
-			set_filter_flags(FILTER_REQUIRE_SCALAR)->
-			set_filter_options(['default' => NULL,'regexp' => $regexp])->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
-		return $property;
-	}
 	protected $x_auxparam;
 	public function get_auxparam() {
 		return $this->x_auxparam ?? $this->init_auxparam();
@@ -122,5 +95,31 @@ class mariadb_properties extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
+	protected $x_phrasecookieauth;
+	public function get_phrasecookieauth() {
+		return $this->x_phrasecookieauth ?? $this->init_phrasecookieauth();
+	}
+	public function init_phrasecookieauth() {
+		$property = $this->x_phrasecookieauth = new property_text($this);
+		$description = gettext('The cookie-based auth_type uses AES algorithm to encrypt the password. Enter a random passphrase of your choice. It will be used internally by the AES algorithm - you won’t be prompted for this passphrase. The secret should be 32 characters long.');
+		$placeholder = gettext('Passphrase');
+		$regexp = '/^(|\S{32,128})$/';
+		$property->
+			set_name('phrasecookieauth')->
+			set_title(gettext('Passphrase'));
+		$property->
+			set_id('phrasecookieauth')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(128)->
+			set_filter(FILTER_VALIDATE_REGEXP)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => NULL,'regexp' => $regexp])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
 }
-

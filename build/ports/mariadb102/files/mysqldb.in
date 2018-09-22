@@ -37,18 +37,15 @@ mysqldb_ipaddr=${mysqldb_ipaddr:-"127.0.0.1"}
 mysqldb_mkconf()
 {
 	local _homedir
-	local _phrasecookieauth
 
 	_homedir=`configxml_get "//mariadb/homedir"`
 	if [ "$_homedir" = "" ]; then
 	    _homedir="/nonexistent"
 	fi
-	_phrasecookieauth=`configxml_get "//mariadb/phrasecookieauth"`
 
 	# Create mysql config minimum
 	cat /dev/null > ${mysqldb_conf}
 	chmod 600 ${mysqldb_conf}
-	echo '# global settings' > ${mysqldb_conf}
 	/usr/local/bin/xml sel --template \
 		--match '//mariadb' \
 			--output "[mysqld]" --nl \
@@ -78,23 +75,27 @@ mysqldb_mkconf()
 	chown -R ${mysql_user}:${mysql_group} ${_homedir}
 
 	# Create phpMyAdmin config
-	rm -f ${phpmyadmin_conf}
-	cat <<EOF > ${phpmyadmin_conf}
-<?php
-\$cfg['blowfish_secret'] = '${_phrasecookieauth}';
-\$i = 0;
-\$i++;
-\$cfg['Servers'][\$i]['auth_type'] = 'cookie';
-\$cfg['Servers'][\$i]['host'] = '${mysqldb_ipaddr}';
-\$cfg['Servers'][\$i]['connect_type'] = 'tcp';
-\$cfg['Servers'][\$i]['compress'] = false;
-\$cfg['Servers'][\$i]['extension'] = 'mysqli';
-\$cfg['Servers'][\$i]['AllowNoPassword'] = true;
-\$cfg['UploadDir'] = '';
-\$cfg['SaveDir'] = '';
-\$cfg['VersionCheck'] = false;
-?>
-EOF
+	cat /dev/null > ${phpmyadmin_conf}
+	/usr/local/bin/xml sel --template \
+		--match '//mariadb' \
+			--output '<?php' --nl \
+			--if 'string-length(phrasecookieauth) > 0' \
+				--output "\$cfg['blowfish_secret'] = '" --value-of "phrasecookieauth" --output "'" --nl \
+			--break \
+			--output '$i = 0;' --nl \
+			--output '$i++;' --nl \
+			--output "\$cfg['Servers'][\$i]['auth_type'] = 'cookie';" --nl \
+			--output "\$cfg['Servers'][\$i]['host'] = '${mysqldb_ipaddr}';" --nl \
+			--output "\$cfg['Servers'][\$i]['connect_type'] = 'tcp';" --nl \
+			--output "\$cfg['Servers'][\$i]['compress'] = false;" --nl \
+			--output "\$cfg['Servers'][\$i]['extension'] = 'mysqli';" --nl \
+			--output "\$cfg['Servers'][\$i]['AllowNoPassword'] = true;" --nl \
+			--output "\$cfg['UploadDir'] = '';" --nl \
+			--output "\$cfg['SaveDir'] = '';" --nl \
+			--output "\$cfg['VersionCheck'] = false;" --nl \
+			--output "?>" --nl \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${phpmyadmin_conf}
 }
 
 mysqldb_start()
