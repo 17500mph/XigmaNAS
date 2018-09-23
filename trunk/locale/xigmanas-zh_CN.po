@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
 "POT-Creation-Date: 2018-09-22 22:29+0000\n"
-"PO-Revision-Date: 2018-09-12 02:22+0000\n"
+"PO-Revision-Date: 2018-09-23 17:00+0000\n"
 "Last-Translator: tianmo <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-22 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -4281,7 +4281,7 @@ msgstr "请输入在 WPA-PSK 模式中使用的密码短语。这个密语长度
 
 msgid ""
 "Enter the path of the home directory for databases and configuration files."
-msgstr ""
+msgstr "输入数据库和配置文件的主目录路径。"
 
 msgid ""
 "Enter the path to the database directory. The config files will be created "
@@ -4910,13 +4910,13 @@ msgid "HOT SPARE"
 msgstr "热备"
 
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
 
 msgid "HTTPS"
-msgstr ""
+msgstr "HTTPS"
 
 msgid "HVM Guest"
 msgstr "HVM Guest"
@@ -5248,7 +5248,7 @@ msgstr "在从模式(Slave mode)下，它是主模式UPS (UPS master) 的 UPS �
 #, php-format
 msgid ""
 "In this directory, you can create a %s file with your additional parameters."
-msgstr ""
+msgstr "在此目录中，您可以使用其他参数创建%s文件。"
 
 msgid "In/Out Errors"
 msgstr "入/出错误"
@@ -6021,7 +6021,7 @@ msgid "Maintenance"
 msgstr "维护"
 
 msgid "Maintenance Tool Settings"
-msgstr ""
+msgstr "维护工具设置"
 
 msgid "Make sure to select the optimal number of devices"
 msgstr "确保选择最佳设备数量"
@@ -6071,7 +6071,7 @@ msgid ""
 msgstr "读取数据时通道的余量。 未指定此属性的功能。"
 
 msgid "MariaDB"
-msgstr ""
+msgstr "MariaDB"
 
 msgid "Masquerade Address"
 msgstr "伪装地址"
@@ -6892,7 +6892,7 @@ msgid "On"
 msgstr "开"
 
 msgid "On-Disk Configuration"
-msgstr ""
+msgstr "磁盘配置"
 
 msgid "Online Information"
 msgstr "在线信息"
@@ -7315,7 +7315,7 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr "请注意在路径中不可以有空白字符。"
 
 msgid "Please read the documentation"
-msgstr ""
+msgstr "请阅读文档"
 
 msgid "Polling Time"
 msgstr "轮询时间"
@@ -7762,7 +7762,7 @@ msgid "Read from lowest load"
 msgstr "从最低负荷起开始读取"
 
 msgid "Read on-disk configuration."
-msgstr ""
+msgstr "读取磁盘配置。"
 
 msgid "Read only"
 msgstr "只读"
@@ -7797,7 +7797,7 @@ msgstr "读取"
 msgid ""
 "Reading the configuration from the disks is slower than reading from cache "
 "file."
-msgstr ""
+msgstr "从磁盘读取配置比从缓存文件读取要慢。"
 
 msgid "Readonly"
 msgstr "只读"
@@ -9755,6 +9755,8 @@ msgid ""
 "algorithm - you won't be prompted for this passphrase. The secret should be "
 "at least 32 or more characters long"
 msgstr ""
+"基于cookie的验证类型使用AES算法来加密密码。 输入您选择的随机密码。 它将由AES算法在内部使用 - 不会提示您输入此密码。 "
+"秘密长度至少应为32个或更多字符"
 
 msgid ""
 "The count of aborted operations due to HDD timeout. Normally this attribute "
@@ -10154,7 +10156,7 @@ msgid "The server will be reset to factory defaults and will reboot."
 msgstr "服务器将被重置为出厂默认值，并将重新启动。"
 
 msgid "The server will be started with the minimum required parameters."
-msgstr ""
+msgstr "将使用所需的最低参数启动服务器。"
 
 msgid ""
 "The server will reboot after the configuration was successfully restored."
@@ -10291,7 +10293,7 @@ msgid ""
 msgstr "这些选项会加入 /etc/rc.conf。这样可以让您覆盖各种启动脚本（startup scripts）的选项。"
 
 msgid "These parameter will be added to my.cnf"
-msgstr ""
+msgstr "这些参数将添加到my.cnf"
 
 msgid "These parameter will be added to the global section of ctl.conf"
 msgstr "这些参数将被添加到ctl.conf的全局部分"
@@ -11272,10 +11274,10 @@ msgid "Use PAM for user authentication."
 msgstr "使用PAM进行用户认证。"
 
 msgid "Use Sqlite"
-msgstr ""
+msgstr "使用Sqlite"
 
 msgid "Use Sqlite for lockings and properties."
-msgstr ""
+msgstr "使用Sqlite进行锁定和属性。"
 
 msgid "Use TLS"
 msgstr "使用安全传输层协议（TLS）"
@@ -12093,7 +12095,7 @@ msgid "on"
 msgstr "打开"
 
 msgid "phpMyAdmin"
-msgstr ""
+msgstr "phpMyAdmin"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
