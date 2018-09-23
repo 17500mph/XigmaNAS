@@ -228,7 +228,7 @@ class config_xml_reader {
 			$encoding = 'UTF-8';
 		endif;
 		//	Parse configuration.
-		if(!xml_parse($this->parser,$data)):
+		if(!xml_parse($this->parser,$data,true)):
 			die(sprintf("XML error: %s at line %d\n",xml_error_string(xml_get_error_code($this->parser)),xml_get_current_line_number($this->parser)));
 		endif;
 		//	Remember document encoding on each root node
