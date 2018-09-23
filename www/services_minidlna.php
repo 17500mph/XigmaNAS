@@ -49,6 +49,7 @@ function services_minidlna_get_sphere() {
 		'strict' => false,
 		'loglevel' => 'info',
 		'tivo' => false,
+		'wide_links' => false,
 		'content' => [],
 		'container' => 'B',
 		'inotify' => true
@@ -130,15 +131,16 @@ switch($page_action):
 		$source = $sphere->grid;
 		break;
 endswitch;
-$sphere->row['enable'] = isset($source['enable']);
+$sphere->row['enable'] = is_bool($test = $source['enable'] ?? false) ? $test : true;
 $sphere->row['name'] = $source['name'] ?? $sphere->row_default['name'];
 $sphere->row['if'] = $source['if'] ?? $sphere->row_default['if'];
 $sphere->row['port'] = $source['port'] ?? $sphere->row_default['port'];
 $sphere->row['home'] = $source['home'] ?? $sphere->row_default['home'];
 $sphere->row['notify_int'] = $source['notify_int'] ?? $sphere->row_default['notify_int'];
-$sphere->row['strict'] = isset($source['strict']);
+$sphere->row['strict'] = is_bool($test = $source['strict'] ?? false) ? $test : true;
 $sphere->row['loglevel'] = $source['loglevel'] ?? $sphere->row_default['loglevel'];
-$sphere->row['tivo'] = isset($source['tivo']);
+$sphere->row['tivo'] = is_bool($test = $source['tivo'] ?? false) ? $test : true;
+$sphere->row['wide_links'] = is_bool($test = $source['wide_links'] ?? false) ? $test : true;
 $sphere->row['content'] = $source['content'] ?? $sphere->row_default['content'];
 $sphere->row['container'] = $source['container'] ?? $sphere->row_default['container'];
 $sphere->row['inotify'] = isset($source['inotify']);
@@ -412,6 +414,7 @@ endswitch;
 					html_textinfo2('container',gettext('Container'),$l_container[$sphere->row['container']] ?? '');
 					html_checkbox2('strict',gettext('Strict DLNA'),$sphere->row['strict'],'','',false,true);
 					html_checkbox2('tivo',gettext('TiVo Support'),$sphere->row['tivo'],'','',false,true);
+					html_checkbox2('wide_links',gettext('Wide Links'),$sphere->row['wide_links'],'','',false,true);
 					html_textinfo2('loglevel',gettext('Log Level'),$l_loglevel[$sphere->row['loglevel']] ?? '');
 					break;
 				case PAGE_MODE_EDIT:
@@ -425,6 +428,7 @@ endswitch;
 					html_combobox2('container',gettext('Container'),$sphere->row['container'],$l_container,gettext('Use different container as root of the tree.'),false,false,'');
 					html_checkbox2('strict',gettext('Strict DLNA'),$sphere->row['strict'],gettext('Enable to strictly adhere to DLNA standards.'),gettext('This will allow server-side downscaling of very large JPEG images, it can impact JPEG serving performance on some DLNA products.'),false);
 					html_checkbox2('tivo',gettext('TiVo Support'),$sphere->row['tivo'],gettext('Enable TiVo support.'),gettext('This will support streaming .jpg and .mp3 files to a TiVo supporting HMO.'),false);
+					html_checkbox2('wide_links',gettext('Wide Links'),$sphere->row['wide_links'],gettext('Enable wide-links support.'),gettext('Allow symlinks that point outside user-defined media folders.'),false,false);
 					html_combobox2('loglevel',gettext('Log Level'),$sphere->row['loglevel'],$l_loglevel,'',false,false,'');
 					break;
 			endswitch;

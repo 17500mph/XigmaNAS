@@ -50,7 +50,7 @@ minidlna_mkconf()
 		_if=`configxml_get "//minidlna/if"`
 		_port=`configxml_get "//minidlna/port"`
 		_serial=`cat /etc/prd.revision`
-		_model=`minidlnad -V | awk '{print$2}'`
+		_model=`/usr/local/sbin/minidlnad -V | awk '{print$2}'`
 		_container=`configxml_get "//minidlna/container"`
 		_notifyinterval=`configxml_get "//minidlna/notify_int"`
 		_loglevel=`configxml_get "//minidlna/loglevel"`
@@ -74,20 +74,38 @@ minissdpdsocket=/var/run/minissdpd.sock
 presentation_url=http://${_ip_adress}:${_port}/status
 EOF
 
-	xml sel -t \
-		-i "count(//minidlna/strict) > 0" -o "strict_dlna=yes" --else -o "strict_dlna=no" -b -n \
-		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
-	/usr/local/bin/xml sel -t -m "//minidlna/content" \
-		-o "media_dir=" -v "." -n \
-		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
-
-	xml sel -t \
-		-i "count(//minidlna/tivo) > 0" -o "enable_tivo=yes" --else -o "enable_tivo=no" -b -n \
-		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
-
-	xml sel -t \
-		-i "count(//minidlna/inotify) > 0" -o "inotify=yes" --else -o "inotify=no" -b -n \
-		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
+	/usr/local/bin/xml sel --template \
+		--match '//minidlna' \
+			--if 'count(strict) > 0' \
+				--output 'strict_dlna=yes' --nl \
+			--else \
+				--output 'strict_dlna=no' --nl \
+			--break \
+			--if 'count(tivo) > 0' \
+				--output 'enable_tivo=yes' --nl \
+			--else \
+				--output 'enable_tivo=no' --nl \
+			--break \
+			--if 'count(inotify) > 0' \
+				--output 'inotify=yes' --nl \
+			--else \
+				--output 'inotify=no' --nl \
+			--break \
+			--if 'count(wide_links) > 0' \
+				--output 'wide_links=yes' --nl \
+			--else \
+				--output 'wide_links=no' --nl \
+			--break \
+			--match 'content' \
+				--output 'media_dir=' --value-of '.' --nl \
+			--break \
+			--match 'auxparam' \
+				--if 'position() < last() or string-length(.) > 0' \
+					--value-of '.' --nl \
+				--break \
+			--break \
+		--break \
+		${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
 }
 
 minidlna_prestart()
