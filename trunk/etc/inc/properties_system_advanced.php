@@ -103,28 +103,6 @@ class properties_system_advanced extends co_property_container {
 			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
-	protected $x_messagestodevcon;
-	public function get_messagestodevcon() {
-		return $this->x_messagestodevcon ?? $this->init_messagestodevcon();
-	}
-	public function init_messagestodevcon() {
-		$property = $this->x_messagestodevcon = new property_bool($this);
-		$property->
-			set_name('messagestodevcon')->
-			set_title(gettext('Echo System Messages'));
-		$caption = gettext('Echo system messages to /dev/console.');
-		$description = '';
-		$property->
-			set_id('messagestodevcon')->
-			set_caption($caption)->
-			set_description($description)->
-			set_defaultvalue(false)->
-			filter_use_default()->
-			set_editableonadd(true)->
-			set_editableonmodify(true)->
-			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
-		return $property;
-	}
 	protected $x_disablefm;
 	public function get_disablefm() {
 		return $this->x_disablefm ?? $this->init_disablefm();
