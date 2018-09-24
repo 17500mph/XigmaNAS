@@ -129,6 +129,7 @@ $is_sc = 'sc' == get_sysctl_kern_vty();
 //	set value to false if the parameter doesn't exist or is NULL
 $pconfig['adddivsubmittodataframe'] = $cop->get_adddivsubmittodataframe()->validate_config($config['system']);
 $pconfig['disableconsolemenu'] = $cop->get_disableconsolemenu()->validate_config($config['system']);
+$pconfig['messagestodevcon'] = $cop->get_messagestodevcon()->validate_config($config['system']);
 $pconfig['disablefm'] = isset($config['system']['disablefm']);
 $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck']);
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
@@ -224,6 +225,7 @@ if($_POST):
 			touch($d_sysrebootreqd_path);
 		endif;
 		$config['system']['disableconsolemenu'] = $helpinghand;
+		$config['system']['messagestodevcon'] = $cop->get_messagestodevcon()->validate_input();
 		$helpinghand = $cop->get_disablefm()->validate_input();
 		if(isset($config['system']['disablefm']) !== $helpinghand):
 			//	server needs to be restarted to export/clear .htusers.php by fmperm.
@@ -471,6 +473,7 @@ $document->render();
 <?php
 			$node = new co_DOMDocument();
 			$node->c2_checkbox($cop->get_disableconsolemenu(),!empty($pconfig['disableconsolemenu']));
+			$node->c2_checkbox($cop->get_messagestodevcon(),!empty($pconfig['messagestodevcon']));
 			$node->c2_checkbox($cop->get_enableserialconsole(),!empty($pconfig['enableserialconsole']));
 			if($is_sc):
 				$node->c2_checkbox($cop->get_sysconsaver(),!empty($pconfig['sysconsaver']));
