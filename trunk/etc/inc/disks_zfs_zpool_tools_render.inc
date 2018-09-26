@@ -605,7 +605,7 @@ function render_newdev_view($items = []) { // $items can be an array or a string
 	html_text2('sysvdevice',gettext('Devices'),$output);
 	return $b_ret;
 }
-function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
+function render_selector_radio($title,$a_option,$r_option_selected = '') {
 /*
  * Displays a list of radio input fields for available options
  * Embedded in the body of a table with 2 columns
@@ -621,7 +621,7 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 	if(0 < count($a_option)):
 		echo '<tr>';
 			echo '<td class="celltag">';  // left hand column start
-				echo $gt_title;
+				echo htmlspecialchars($title,ENT_HTML5);
 			echo '</td>'; // left hand column end
 			echo '<td class="celldata">'; // right hand column start
 				echo '<table class="area_data_selection">',PHP_EOL;
@@ -633,7 +633,7 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 //						html_titleline2($gt_title,2);
 						echo '<tr>',PHP_EOL;
 							echo '<th class="lhelc"></th>',PHP_EOL;
-							echo '<th class="lhebl">',$gt_title,'</th>',PHP_EOL;
+							echo '<th class="lhebl">',htmlspecialchars($title,ENT_HTML5),'</th>',PHP_EOL;
 						echo '</tr>',PHP_EOL;
 					echo '</thead>',PHP_EOL;
 					echo '<tbody>',PHP_EOL;
