@@ -35,13 +35,13 @@ require_once 'config.inc';
 require_once 'util.inc';
 
 function render_set_start() {
-	$gt_title = gtext('ZFS Pool Tools');
+	$title = gettext('ZFS Pool Tools');
 	echo '<table class="area_data_settings">',PHP_EOL;
 		echo '<colgroup>',PHP_EOL;
 			echo '<col class="area_data_settings_col_tag">',PHP_EOL;
 			echo '<col class="area_data_settings_col_data">',PHP_EOL;
 		echo '</colgroup>',PHP_EOL;
-		echo '<thead>',html_titleline2($gt_title),'</thead>',PHP_EOL;
+		echo '<thead>',html_titleline2($title),'</thead>',PHP_EOL;
 		echo '<tbody>',PHP_EOL;
 	return true;
 }
@@ -136,20 +136,20 @@ function render_submit($pageindex = 1,$activity = '',$option = '',$a_pool = [],$
 	echo '</div>',PHP_EOL;
 	return true;
 }
-function render_activity_view($gt_activity_longname) {
+function render_activity_view($activity_longname) {
 /*
  * Displays the activity
  * Embedded in the body of a table with 2 columns
  */
-	html_text2('sysactivity',gettext('Activity'),$gt_activity_longname);
+	html_text2('sysactivity',gettext('Activity'),$activity_longname);
 	return true;
 }
-function render_option_view($gt_option_name) {
+function render_option_view($option_name) {
 /*
  * Displays the name of the selected option
  * Embedded in the body of a table with 2 columns
  */
-	html_text2('sysoption',gettext('Option'),$gt_option_name);
+	html_text2('sysoption',gettext('Option'),$option_name);
 	return true;
 }
 function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
@@ -217,17 +217,17 @@ function render_pool_edit($a_items = [],$format = '0N',$a_selected_items = []) {
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
 								echo '<td class="lcell">';
-									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value,ENT_HTML5),'</label>';
 								echo '</td>',PHP_EOL;
-								echo '<td class="lcell">',htmlspecialchars($r_item['pool.version']),'</td>',PHP_EOL;
-								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.state_name']),'</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($r_item['pool.version'],ENT_HTML5),'</td>',PHP_EOL;
+								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.state_name'],ENT_HTML5),'</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
-						$value = gtext('No suitable pools found.');
+						$value = gettext('No suitable pools found.');
 						echo '<tr>';
 							echo '<td class="lcelc"></td>',PHP_EOL;
-							echo '<td class="lcell">',$value,'</td>',PHP_EOL;
+							echo '<td class="lcell">',htmlspecialchars($value,ENT_HTML5),'</td>',PHP_EOL;
 							echo '<td class="lcell"></td>',PHP_EOL;
 							echo '<td class="lcebl"></td>',PHP_EOL;
 						echo '</tr>';
@@ -341,18 +341,18 @@ function render_pooldev_edit($a_items = [],$format = '1',$a_selected_items = [])
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
 								echo '<td class="lcell">';
-									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value,ENT_HTML5),'</label>';
 								echo '</td>',PHP_EOL;
-								echo '<td class="lcell">',htmlspecialchars($r_item['device.type']),'</td>',PHP_EOL;
-								echo '<td class="lcell">',htmlspecialchars($vdevice),'</td>',PHP_EOL;
-								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.name']),'</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($r_item['device.type'],ENT_HTML5),'</td>',PHP_EOL;
+								echo '<td class="lcell">',htmlspecialchars($vdevice,ENT_HTML5),'</td>',PHP_EOL;
+								echo '<td class="lcebl">',htmlspecialchars($r_item['pool.name'],ENT_HTML5),'</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
-						$value = gtext('No suitable devices found.');
+						$value = gettext('No suitable devices found.');
 						echo '<tr>';
 							echo '<td class="lcelc"></td>',PHP_EOL;
-							echo '<td class="lcell">',$value,'</td>',PHP_EOL;
+							echo '<td class="lcell">',htmlspecialchars($value,ENT_HTML5),'</td>',PHP_EOL;
 							echo '<td class="lcell"></td>',PHP_EOL;
 							echo '<td class="lcell"></td>',PHP_EOL;
 							echo '<td class="lcebl"></td>',PHP_EOL;
@@ -454,15 +454,15 @@ function render_newvdev_edit($a_items = [],$format = '0N',$a_selected_items = []
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
 								echo '<td class="lcebl">';
-									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value,ENT_HTML5),'</label>';
 								echo '</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
-						$value = gtext('No suitable virtual devices found.');
+						$value = gettext('No suitable virtual devices found.');
 						echo '<tr>';
 							echo '<td class="lcelc"></td>',PHP_EOL;
-							echo '<td class="lcebl">',$value,'</td>',PHP_EOL;
+							echo '<td class="lcebl">',htmlspecialchars($value,ENT_HTML5),'</td>',PHP_EOL;
 						echo '</tr>';
 					endif;
 				echo '</tbody>',PHP_EOL;
@@ -561,15 +561,15 @@ function render_newdev_edit($a_items = [],$format = '1',$a_selected_items = []) 
 									echo '<input ',implode(' ',$attribute),'/>';
 								echo '</td>',PHP_EOL;
 								echo '<td class="lcebl">';
-									echo sprintf('<label for="%s">',$id),htmlspecialchars($value),'</label>';
+									echo sprintf('<label for="%s">',$id),htmlspecialchars($value,ENT_HTML5),'</label>';
 								echo '</td>',PHP_EOL;
 							echo '</tr>';
 						endforeach;
 					else:
-						$value = gtext('No suitable devices found.');
+						$value = gettext('No suitable devices found.');
 						echo '<tr>';
 							echo '<td class="lcelc"></td>',PHP_EOL;
-							echo '<td class="lcebl">',$value,'</td>',PHP_EOL;
+							echo '<td class="lcebl">',htmlspecialchars($value,ENT_HTML5),'</td>',PHP_EOL;
 						echo '</tr>';
 					endif;
 				echo '</tbody>',PHP_EOL;
@@ -661,7 +661,7 @@ function render_selector_radio($gt_title,$a_option,$r_option_selected = '') {
 									echo '<td class="lcelc">';
 										echo '<input',$attribute['type'],$attribute['name'],$attribute['id'],$attribute['value'],$attribute['checked'],'/>';
 									echo '</td>',PHP_EOL;
-									echo '<td class="lcebl">','<label for="',$id,'">',$attribute['longname'],'</label>','</td>',PHP_EOL;
+									echo '<td class="lcebl">','<label for="',$id,'">',htmlspecialchars($attribute['longname'],ENT_HTML5),'</label>','</td>',PHP_EOL;
 								echo '</tr>';
 							endif;
 						endforeach;
@@ -683,12 +683,12 @@ class co_zpool_flag_base {
 		$this->load_pool_keys();
 	}
 	public function load_pool_keys() {
-		$this->a_pool_keys['expand'] = ['name' => 'flag','value' => 'expand','show' => true,'default' => false,'longname' => gtext('Expand device to use all available space.')];
-		$this->a_pool_keys['force'] = ['name' => 'flag','value' => 'force','show' => true,'default' => false,'longname' => gtext('Force Operation')];
-		$this->a_pool_keys['gptlabel'] = ['name' => 'flag','value' => 'gptlabel','show' => true,'default' => false,'longname' => gtext('Import using GPT labels')];
-		$this->a_pool_keys['gptid'] = ['name' => 'flag','value' => 'gptid','show' => true,'default' => false,'longname' => gtext('Import using GPT ID')];
-		$this->a_pool_keys['sfaiapf'] = ['name' => 'flag','value' => 'sfaiapf','show' => true,'default' => false,'longname' => gtext('Search for and import all disks found')];
-		$this->a_pool_keys['test'] = ['name' => 'flag','value' => 'test','show' => true,'default' => false,'longname' => gtext('Test Mode')];
+		$this->a_pool_keys['expand'] = ['name' => 'flag','value' => 'expand','show' => true,'default' => false,'longname' => gettext('Expand device to use all available space.')];
+		$this->a_pool_keys['force'] = ['name' => 'flag','value' => 'force','show' => true,'default' => false,'longname' => gettext('Force Operation')];
+		$this->a_pool_keys['gptlabel'] = ['name' => 'flag','value' => 'gptlabel','show' => true,'default' => false,'longname' => gettext('Import using GPT labels')];
+		$this->a_pool_keys['gptid'] = ['name' => 'flag','value' => 'gptid','show' => true,'default' => false,'longname' => gettext('Import using GPT ID')];
+		$this->a_pool_keys['sfaiapf'] = ['name' => 'flag','value' => 'sfaiapf','show' => true,'default' => false,'longname' => gettext('Search for and import all disks found')];
+		$this->a_pool_keys['test'] = ['name' => 'flag','value' => 'test','show' => true,'default' => false,'longname' => gettext('Test Mode')];
 		return true;
 	}
 }
@@ -700,9 +700,9 @@ class co_zpool_flags extends co_zpool_flag_base {
 	public $c_val_none;
 	public function __construct($a_available_keys = [],$a_selected_keys = []) {
 		parent::__construct();
-		$this->c_tag_header = gtext('Parameter');
-		$this->c_val_header_name = gtext('Parameter');
-		$this->c_val_none = gtext('None');
+		$this->c_tag_header = gettext('Parameter');
+		$this->c_val_header_name = gettext('Parameter');
+		$this->c_val_none = gettext('None');
 		$this->init_available_keys($a_available_keys);
 		$this->init_selected_keys($a_selected_keys);
 	}
@@ -788,7 +788,7 @@ class co_zpool_flags extends co_zpool_flag_base {
 		];
 		echo '<tr>';
 			echo '<td class="celltag">';  // left hand column start
-				echo $this->c_tag_header;
+				echo htmlspecialchars($this->c_tag_header,ENT_HTML5);
 			echo '</td>',PHP_EOL; // left hand column end
 			echo '<td class="celldata">',PHP_EOL; // right hand column start
 				echo '<table class="area_data_selection">',PHP_EOL;
@@ -799,7 +799,7 @@ class co_zpool_flags extends co_zpool_flag_base {
 					echo '<thead>',PHP_EOL;
 						echo '<tr>',PHP_EOL;
 							echo '<th class="lhelc"></th>',PHP_EOL;
-							echo '<th class="lhebl">',$this->c_val_header_name,'</th>',PHP_EOL;
+							echo '<th class="lhebl">',htmlspecialchars($this->c_val_header_name,ENT_HTML5),'</th>',PHP_EOL;
 						echo '</tr>',PHP_EOL;
 					echo '</thead>',PHP_EOL;
 					echo '<tbody>',PHP_EOL;
@@ -825,7 +825,7 @@ class co_zpool_flags extends co_zpool_flag_base {
 										echo '<input ',implode(' ',$attribute),'/>';
 									echo '</td>',PHP_EOL;
 									echo '<td class="lcebl">';
-										echo sprintf('<label for="%s">',$id),$value,'</label>';
+										echo sprintf('<label for="%s">',$id),htmlspecialchars($value,ENT_HTML5),'</label>';
 									echo '</td>',PHP_EOL;
 								echo '</tr>',PHP_EOL;
 							endif;
