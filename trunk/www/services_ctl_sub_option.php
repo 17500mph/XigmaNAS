@@ -153,7 +153,7 @@ function ctl_sub_option_selection($cop,$sphere) {
 			insTHwC('lhell',$cop->get_value()->get_title())->
 			insTHwC('lhelc sorter-false parser-false',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',$cop->get_toolbox()->get_title());
 	else:
 		$tr->
 			insTHwC('lhelc')->
@@ -161,7 +161,7 @@ function ctl_sub_option_selection($cop,$sphere) {
 			insTHwC('lhell',$cop->get_value()->get_title())->
 			insTHwC('lhelc',gettext('Status'))->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gettext('Toolbox'));
+			insTHwC('lhebl',$cop->get_toolbox()->get_title());
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):
