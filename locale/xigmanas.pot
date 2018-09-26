@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 00:07+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -756,6 +756,9 @@ msgid "Allow consecutive read/writes to be issued in parallel"
 msgstr ""
 
 msgid "Allow new files to be created."
+msgstr ""
+
+msgid "Allow symlinks that point outside user-defined media folders."
 msgstr ""
 
 msgid "Allow to start UPS from battery"
@@ -3776,6 +3779,9 @@ msgstr ""
 msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr ""
 
@@ -3904,9 +3910,6 @@ msgstr ""
 msgid "Enter a space-separated list of tap devices. The devices will be created and automatically added it to the bridge."
 msgstr ""
 
-msgid "Enter a valid sysctl MIB name."
-msgstr ""
-
 msgid "Enter additional parameter"
 msgstr ""
 
@@ -3947,9 +3950,6 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -8880,10 +8880,6 @@ msgstr ""
 msgid "The LAN IP address will be reset to"
 msgstr ""
 
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr ""
-
 msgid "The Minimum Spares Remaining attribute indicates the number of remaining spare blocks as a percentage of the total number of spare blocks available."
 msgstr ""
 
@@ -10809,6 +10805,9 @@ msgid "Whether to skip initial boot-up scan."
 msgstr ""
 
 msgid "Who"
+msgstr ""
+
+msgid "Wide Links"
 msgstr ""
 
 msgid "Wildcard"
