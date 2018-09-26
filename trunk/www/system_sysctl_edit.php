@@ -211,6 +211,13 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
+//	collect system description for MIB.
+$mib_name = $sphere->row[$cop->get_name()->get_name()] ?? '';
+if(preg_match('/\S/',$mib_name)):
+	list(,$mib_info) = explode(' ',exec(sprintf('/sbin/sysctl -d %s',escapeshellarg($mib_name))),2);
+else:
+	$mib_info = '';
+endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf'),$isrecordnew ? gtext('Add') : gtext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
@@ -250,7 +257,8 @@ $content->add_table_data_settings()->
 	addTBODY()->
 		c2_select($cop->get_name(),$sphere->row[$cop->get_name()->get_name()],true,false)->
 		c2_input_text($cop->get_value(),$sphere->row[$cop->get_value()->get_name()],false,false)->
-		c2_input_text($cop->get_comment(),$sphere->row[$cop->get_comment()->get_name()],false,false);
+		c2_input_text($cop->get_comment(),$sphere->row[$cop->get_comment()->get_name()],false,false)->
+		c2_textinfo('info',gettext('Information'),$mib_info);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->ins_button_add();
