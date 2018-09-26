@@ -33,19 +33,8 @@
  */
 require_once 'properties.php';
 
-class properties_syslogconf extends co_property_container {
+class properties_syslogconf extends co_property_container_param {
 	protected $x_comment;
-	protected $x_enable;
-	protected $x_facility;
-	protected $x_level;
-	protected $x_protected;
-	protected $x_uuid;
-	protected $x_value;
-	protected $x_toolbox;
-
-	public function get_comment() {
-		return $this->x_comment ?? $this->init_comment();
-	}
 	public function init_comment() {
 		$property = $this->x_comment = new property_text($this);
 		$property->
@@ -53,16 +42,10 @@ class properties_syslogconf extends co_property_container {
 			set_title(gettext('Description'));
 		return $property;
 	}
-	public function get_enable() {
-		return $this->x_enable ?? $this->init_enable();
+	public function get_comment() {
+		return $this->x_comment ?? $this->init_comment();
 	}
-	public function init_enable() {
-		$property = $this->x_enable = new property_enable($this);
-		return $property;
-	}
-	public function get_facility() {
-		return $this->x_facility ?? $this->init_facility();
-	}
+	protected $x_facility;
 	public function init_facility() {
 		$property = $this->x_facility= new property_text($this);
 		$property->
@@ -70,9 +53,10 @@ class properties_syslogconf extends co_property_container {
 			set_title(gettext('Facility'));
 		return $property;
 	}
-	public function get_level() {
-		return $this->x_level ?? $this->init_level();
+	public function get_facility() {
+		return $this->x_facility ?? $this->init_facility();
 	}
+	protected $x_level;
 	public function init_level() {
 		$property = $this->x_level = new property_text($this);
 		$property->
@@ -80,35 +64,90 @@ class properties_syslogconf extends co_property_container {
 			set_title(gettext('Level'));
 		return $property;
 	}
-	public function get_protected() {
-		return $this->x_protected ?? $this->init_protected();
+	public function get_level() {
+		return $this->x_level ?? $this->init_level();
 	}
-	public function init_protected() {
-		$property = $this->x_protected = new property_protected($this);
-		return $property;
-	}
-	public function get_toolbox() {
-		return $this->x_toolbox ?? $this->init_toolbox();
-	}
-	public function init_toolbox() {
-		$property = $this->x_toolbox = new property_toolbox($this);
-		return $property;
-	}
-	public function get_uuid() {
-		return $this->x_uuid ?? $this->init_uuid();
-	}
-	public function init_uuid() {
-		$property = $this->x_uuid = new property_uuid($this);
-		return $property;
-	}
-	public function get_value() {
-		return $this->x_value ?? $this->init_value();
-	}
+	protected $x_value;
 	public function init_value() {
 		$property = $this->x_value = new property_text($this);
 		$property->
 			set_name('value')->
 			set_title(gettext('Destination'));
+		return $property;
+	}
+	public function get_value() {
+		return $this->x_value ?? $this->init_value();
+	}
+}
+class properties_syslogconf_edit extends properties_syslogconf {
+	public function init_comment() {
+		$property = parent::init_comment();
+		$description = '';
+		$placeholder = gettext('Enter a description');
+		$property->
+			set_id('comment')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(80)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_UNSAFE_RAW)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => ''])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	public function init_facility() {
+		$property = parent::init_facility();
+		$description = '';
+		$placeholder = gettext('Enter facility name');
+		$property->
+			set_id('facility')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(80)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	public function init_level() {
+		$property = parent::init_level();
+		$description = '';
+		$placeholder = gettext('Enter level name');
+		$property->
+			set_id('level')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(80)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	public function init_value() {
+		$property = parent::init_value();
+		$description = '';
+		$placeholder = gettext('Enter destination');
+		$property->
+			set_id('value')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(80)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
 	}
 }
