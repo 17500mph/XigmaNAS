@@ -34,7 +34,7 @@
 require_once 'auth.inc';
 require_once 'guiconfig.inc';
 require_once 'co_sphere.php';
-require_once 'properties_syslogconf_edit.php';
+require_once 'properties_syslogconf.php';
 require_once 'co_request_method.php';
 
 function system_syslogconf_edit_get_sphere() {
