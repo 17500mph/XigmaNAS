@@ -153,7 +153,7 @@ function ctl_target_selection($cop,$sphere) {
 			insTHwC('lhell',$cop->get_redirect()->get_title())->
 			insTHwC('lhell',$cop->get_alias()->get_title())->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl sorter-false parser-false',gettext('Toolbox'));
+			insTHwC('lhebl sorter-false parser-false',$cop->get_toolbox()->get_title());
 	else:
 		$tr->
 			insTHwC('lhelc')->
@@ -162,7 +162,7 @@ function ctl_target_selection($cop,$sphere) {
 			insTHwC('lhell',$cop->get_redirect()->get_title())->
 			insTHwC('lhell',$cop->get_alias()->get_title())->
 			insTHwC('lhell',$cop->get_description()->get_title())->
-			insTHwC('lhebl',gettext('Toolbox'));
+			insTHwC('lhebl',$cop->get_toolbox()->get_title());
 	endif;
 	if($record_exists):
 		foreach($sphere->grid as $sphere->row_id => $sphere->row):
