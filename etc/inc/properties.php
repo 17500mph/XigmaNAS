@@ -79,78 +79,78 @@ abstract class properties {
 	public function get_owner() {
 		return $this->x_owner;
 	}
-	public function set_id(string $value = NULL) {
-		$this->x_id = $value;
+	public function set_id(string $id = NULL) {
+		$this->x_id = $id;
 		return $this;
 	}
 	public function get_id() {
 		return $this->x_id;
 	}
-	public function set_name(string $value = NULL) {
-		$this->x_name = $value;
+	public function set_name(string $name = NULL) {
+		$this->x_name = $name;
 		return $this;
 	}
 	public function get_name() {
 		return $this->x_name;
 	}
-	public function set_title(string $value = NULL) {
-		$this->x_title = $value;
+	public function set_title(string $title = NULL) {
+		$this->x_title = $title;
 		return $this;
 	}
 	public function get_title() {
 		return $this->x_title;
 	}
-	public function set_description($value = NULL) {
-		$this->x_description = $value;
+	public function set_description($description = NULL) {
+		$this->x_description = $description;
 		return $this;
 	}
 	public function get_description() {
 		return $this->x_description;
 	}
-	public function set_caption(string $value = NULL) {
-		$this->x_caption = $value;
+	public function set_caption(string $caption = NULL) {
+		$this->x_caption = $caption;
 		return $this;
 	}
 	public function get_caption() {
 		return $this->x_caption;
 	}
-	public function set_defaultvalue($value = NULL) {
-		$this->x_defaultvalue = $value;
+	public function set_defaultvalue($defaultvalue = NULL) {
+		$this->x_defaultvalue = $defaultvalue;
 		return $this;
 	}
 	public function get_defaultvalue() {
 		return $this->x_defaultvalue;
 	}
-	public function set_editableonadd(bool $value = NULL) {
-		$this->x_editableonadd = $value;
+	public function set_editableonadd(bool $editableonadd = NULL) {
+		$this->x_editableonadd = $editableonadd;
 		return $this;
 	}
 	public function get_editableonadd() {
 		return $this->x_editableonadd;
 	}
-	public function set_editableonmodify(bool $value = NULL) {
-		$this->x_editableonmodify = $value;
+	public function set_editableonmodify(bool $editableonmodify = NULL) {
+		$this->x_editableonmodify = $editableonmodify;
 		return $this;
 	}
 	public function get_editableonmodify() {
 		return $this->x_editableonmodify;
 	}
-	public function set_message_error(string $value = NULL) {
-		$this->x_message_error = $value;
+	public function set_message_error(string $message_error = NULL) {
+		$this->x_message_error = $message_error;
 		return $this;
 	}
 	public function get_message_error() {
 		return $this->x_message_error;
 	}
-	public function set_message_info(string $value = NULL) {
-		$this->x_message_info = $value;
+	public function set_message_info(string $message_info = NULL) {
+		$this->x_message_info = $message_info;
 		return $this;
 	}
 	public function get_message_info() {
 		return $this->x_message_info;
 	}
-	public function set_message_warning(string $value = NULL) {
-		$this->x_message_warning = $value;
+	public function set_message_warning(string $message_warning = NULL) {
+		$this->x_message_warning = $message_warning;
 		return $this;
 	}
 	public function get_message_warning() {
@@ -489,22 +489,22 @@ class property_text extends properties {
 	public $x_placeholder = NULL;
 	public $x_size = 40;
 
-	public function set_maxlength(int $value = 0) {
-		$this->x_maxlength = $value;
+	public function set_maxlength(int $maxlength = 0) {
+		$this->x_maxlength = $maxlength;
 		return $this;
 	}
 	public function get_maxlength() {
 		return $this->x_maxlength;
 	}
-	public function set_placeholder(string $value = NULL) {
-		$this->x_placeholder = $value;
+	public function set_placeholder(string $placeholder = NULL) {
+		$this->x_placeholder = $placeholder;
 		return $this;
 	}
 	public function get_placeholder() {
 		return $this->x_placeholder;
 	}
-	public function set_size(int $value = 40) {
-		$this->x_size = $value;
+	public function set_size(int $size = 40) {
+		$this->x_size = $size;
 		return $this;
 	}
 	public function get_size() {
@@ -542,22 +542,22 @@ class property_textarea extends properties {
 	public $x_rows = 5;
 	public $x_wrap = false;
 
-	public function set_cols(int $n_cols = 65) {
-		$this->x_cols = $n_cols;
+	public function set_cols(int $cols = 65) {
+		$this->x_cols = $cols;
 		return $this;
 	}
 	public function get_cols() {
 		return $this->x_cols;
 	}
-	public function set_maxlength(int $value = 0) {
-		$this->x_maxlength = $value;
+	public function set_maxlength(int $maxlength = 0) {
+		$this->x_maxlength = $maxlength;
 		return $this;
 	}
 	public function get_maxlength() {
 		return $this->x_maxlength;
 	}
-	public function set_placeholder(string $value = NULL) {
-		$this->x_placeholder = $value;
+	public function set_placeholder(string $placeholder = NULL) {
+		$this->x_placeholder = $placeholder;
 		return $this;
 	}
 	public function get_placeholder() {
@@ -641,15 +641,15 @@ class property_int extends property_text {
 	public $x_min = NULL;
 	public $x_max = NULL;
 
-	public function set_min(int $value = NULL) {
-		$this->x_min = $value;
+	public function set_min(int $min = NULL) {
+		$this->x_min = $min;
 		return $this;
 	}
 	public function get_min() {
 		return $this->x_min;
 	}
-	public function set_max(int $value = NULL) {
-		$this->x_max = $value;
+	public function set_max(int $max = NULL) {
+		$this->x_max = $max;
 		return $this;
 	}
 	public function get_max() {
@@ -712,8 +712,8 @@ class property_uuid extends property_text {
 class property_list extends properties {
 	public $x_options = NULL;
 
-	public function set_options(array $value = NULL) {
-		$this->x_options = $value;
+	public function set_options(array $options = NULL) {
+		$this->x_options = $options;
 		return $this;
 	}
 	public function upsert_option(string $key = '',string $value = '') {
@@ -950,5 +950,13 @@ abstract class co_property_container_param extends co_property_container {
 	}
 	public function get_protected() {
 		return $this->x_protected ?? $this->init_protected();
+	}
+	protected $x_toolbox;
+	public function init_toolbox() {
+		$property = $this->x_toolbox = new property_toolbox($this);
+		return $property;
+	}
+	public function get_toolbox() {
+		return $this->x_toolbox ?? $this->init_toolbox();
 	}
 }
