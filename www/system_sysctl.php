@@ -37,7 +37,7 @@ require_once 'co_sphere.php';
 require_once 'properties_sysctl.php';
 require_once 'co_request_method.php';
 
-function system_sysctl_get_sphere() {
+function sysctl_sphere() {
 	global $config;
 
 	$sphere = new co_sphere_grid('system_sysctl','php');
@@ -66,7 +66,7 @@ function sysctl_process_updatenotification($mode,$data) {
 	global $config;
 
 	$retval = 0;
-	$sphere = &system_sysctl_get_sphere();
+	$sphere = &sysctl_sphere();
 	switch ($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
@@ -82,8 +82,8 @@ function sysctl_process_updatenotification($mode,$data) {
 	return $retval;
 }
 //	init properties and sphere
-$cop = new properties_sysctl();
-$sphere = &system_sysctl_get_sphere();
+$cop = new sysctl_properties();
+$sphere = &sysctl_sphere();
 $rmo = new co_request_method();
 $rmo->add('POST','apply',PAGE_MODE_POST);
 $rmo->add('POST',$sphere->get_cbm_button_val_delete(),PAGE_MODE_POST);
@@ -252,8 +252,8 @@ if($record_exists):
 				insTDwC('lcell' . $dc,$sphere->row[$cop->get_comment()->get_name()] ?? '')->
 				add_toolbox_area()->
 					ins_toolbox($sphere,$is_notprotected,$is_notdirty)->
-					insTD()->
-					insTD();
+					ins_maintainbox($sphere,false)->
+					ins_informbox($sphere,false);
 	endforeach;
 else:
 	$tbody->ins_no_records_found($n_col_width);
