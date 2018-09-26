@@ -1474,15 +1474,7 @@ trait co_DOMTools {
  *	@return DOMNode $this
  */
 	public function insElement(string $name,array $attributes = [],string $value = NULL,string $namespaceURI = NULL) {
-		$subnode = $this->appendChild(new co_DOMElement($name,NULL,$namespaceURI));
-		if(!is_null($value)):
-			//	rough check if value contains html code, if found try to import as HTML, otherwise add as text
-			if(!(preg_match('~/[a-z]*>~i',$value) && $subnode->import_soup($value))):
-				$document = $this->ownerDocument ?? $this;
-				$subnode->appendChild($document->createTextNode($value));
-			endif;
-		endif;
-		$subnode->addAttributes($attributes);
+		$this->addElement($name,$attributes,$value,$namespaceURI);
 		return $this;
 	}
 /**
@@ -2985,7 +2977,7 @@ EOJ;
 							addTR();
 		$g4fl = $g4fx->addTDwC('g4fl');
 		if(Session::isAdmin()):
-			if(file_exists(sprintf('%s/sysreboot.reqd',$g['varrun_path']))):
+			if(file_exists($g['varrun_path'] . DIRECTORY_SEPARATOR . 'sysreboot.reqd')):
 				$img_attributes = [
 					'src' => '/images/notify_reboot.png',
 					'title' => gettext('A reboot is required'),
