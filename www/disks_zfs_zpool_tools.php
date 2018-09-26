@@ -129,50 +129,50 @@ $b_remove_spare = $b_test || ($b_pool && (0 < count($a_pool_for_remove_spare)));
 $b_replace_data = $b_test || ($b_pool && (0 < count($a_pool_for_replace_data))); // (0 < count($a_newdev)) && 
 
 $l_command = [
-	'add.data' => ['name' => 'activity','value' => 'add.data','show' => $b_add_data,'default' => false,'longname' => gtext('Add a virtual device to a pool')],
-	'add.cache' => ['name' => 'activity','value' => 'add.cache','show' => $b_add_cache,'default' => false,'longname' => gtext('Add a cache device to a pool')],
-	'add.log' => ['name' => 'activity','value' => 'add.log','show' => $b_add_log,'default' => false,'longname' => gtext('Add a log device to a pool')],
-	'add.spare' => ['name' => 'activity','value' => 'add.spare','show' => $b_add_spare,'default' => false,'longname' => gtext('Add a spare device to a pool')],
-	'attach.data' => ['name' => 'activity','value' => 'attach.data','show' => $b_attach_data,'default' => false,'longname' => gtext('Attach a data device')],
-	'attach.log' => ['name' => 'activity','value' => 'attach.log','show' => $b_attach_log,'default' => false,'longname' => gtext('Attach a log device')],
-	'clear' => ['name' => 'activity','value' => 'clear','show' => $b_pool,'default' => false,'longname' => gtext('Clear device errors')],
-//	'create' => ['name' => 'activity','value' => 'create','show' => $b_pool && false,'default' => false,'longname' => gtext('Create a new storage pool')],
-	'destroy' => ['name' => 'activity','value' => 'destroy','show' => $b_pool,'default' => false,'longname' => gtext('Destroy a pool')],
-	'detach.data' => ['name' => 'activity','value' => 'detach.data','show' => $b_detach_data,'default' => false,'longname' => gtext('Detach a data device from a mirror')],
-	'detach.log' => ['name' => 'activity','value' => 'detach.log','show' => $b_detach_log,'default' => false,'longname' => gtext('Detach a log device from a mirrored log')],
-	'export' => ['name' => 'activity','value' => 'export','show' => $b_pool,'default' => false,'longname' => gtext('Export a pool from the system')],
-//	'get' => ['name' => 'activity','value' => 'get','show' => $b_pool && false,'default' => false,'longname' => gtext('Get properties of a pool')],
-	'history' => ['name' => 'activity','value' => 'history','show' => $b_pool,'default' => true,'longname' => gtext('Display ZFS command history')],
-	'import' => ['name' => 'activity','value' => 'import','show' => true,'default' => false,'longname' => gtext('List or import pools')],
-//	'iostat' => ['name' => 'activity','value' => 'iostat','show' => $b_pool && false,'default' => false,'longname' => gtext('Display I/O statistics')],
-	'labelclear' => ['name' => 'activity','value' => 'labelclear','show' => true,'default' => false,'longname' => gtext('Remove ZFS label information from a device')],
-//	'list' => ['name' => 'activity','value' => 'list','show' => $b_pool && false,'default' => false,'longname' => gtext('List the status of pools')],
-	'offline' => ['name' => 'activity','value' => 'offline','show' => $b_offline_data,'default' => false,'longname' => gtext('Take a device offline')],
-	'online' => ['name' => 'activity','value' => 'online','show' => $b_online_data,'default' => false,'longname' => gtext('Bring a device online')],
-	'reguid' => ['name' => 'activity','value' => 'reguid','show' => $b_pool,'default' => false,'longname' => gtext('Generate a new unique identifier for a pool')],
-	'remove.cache' => ['name' => 'activity','value' => 'remove.cache','show' => $b_remove_cache,'default' => false,'longname' => gtext('Remove a cache device from a pool')],
-	'remove.log' => ['name' => 'activity','value' => 'remove.log','show' => $b_remove_log,'default' => false,'longname' => gtext('Remove a log device from a pool')],
-	'remove.spare' => ['name' => 'activity','value' => 'remove.spare','show' => $b_remove_spare,'default' => false,'longname' => gtext('Remove a spare device from a pool')],
-//	'reopen' => ['name' => 'activity','value' => 'reopen','show' => $b_pool && false,'default' => false,'longname' => gtext('Reopen all virtual devices of a pool')],
-	'replace' => ['name' => 'activity','value' => 'replace','show' => $b_replace_data,'default' => false,'longname' => gtext('Replace a device')],
-	'scrub' => ['name' => 'activity','value' => 'scrub','show' => $b_pool,'default' => false,'longname' => gtext('Scrub a pool')],
-//	'set' => ['name' => 'activity','value' => 'set','show' => $b_pool && false,'default' => false,'longname' => gtext('Set property of a pool')],
-//	'split' => ['name' => 'activity','value' => 'split','show' => $b_pool && false,'default' => false,'longname' => gtext('Split off a device from mirrored virtual devices')],
-//	'status' => ['name' => 'activity','value' => 'status','show' => true && false,'default' => false,'longname' => gtext('Displays the health status of a pool')],
-	'upgrade' => ['name' => 'activity','value' => 'upgrade','show' => $b_pool,'default' => false,'longname' => gtext('Upgrade ZFS and add all supported feature flags on a pool')]
+	'add.data' => ['name' => 'activity','value' => 'add.data','show' => $b_add_data,'default' => false,'longname' => gettext('Add a virtual device to a pool')],
+	'add.cache' => ['name' => 'activity','value' => 'add.cache','show' => $b_add_cache,'default' => false,'longname' => gettext('Add a cache device to a pool')],
+	'add.log' => ['name' => 'activity','value' => 'add.log','show' => $b_add_log,'default' => false,'longname' => gettext('Add a log device to a pool')],
+	'add.spare' => ['name' => 'activity','value' => 'add.spare','show' => $b_add_spare,'default' => false,'longname' => gettext('Add a spare device to a pool')],
+	'attach.data' => ['name' => 'activity','value' => 'attach.data','show' => $b_attach_data,'default' => false,'longname' => gettext('Attach a data device')],
+	'attach.log' => ['name' => 'activity','value' => 'attach.log','show' => $b_attach_log,'default' => false,'longname' => gettext('Attach a log device')],
+	'clear' => ['name' => 'activity','value' => 'clear','show' => $b_pool,'default' => false,'longname' => gettext('Clear device errors')],
+//	'create' => ['name' => 'activity','value' => 'create','show' => $b_pool && false,'default' => false,'longname' => gettext('Create a new storage pool')],
+	'destroy' => ['name' => 'activity','value' => 'destroy','show' => $b_pool,'default' => false,'longname' => gettext('Destroy a pool')],
+	'detach.data' => ['name' => 'activity','value' => 'detach.data','show' => $b_detach_data,'default' => false,'longname' => gettext('Detach a data device from a mirror')],
+	'detach.log' => ['name' => 'activity','value' => 'detach.log','show' => $b_detach_log,'default' => false,'longname' => gettext('Detach a log device from a mirrored log')],
+	'export' => ['name' => 'activity','value' => 'export','show' => $b_pool,'default' => false,'longname' => gettext('Export a pool from the system')],
+//	'get' => ['name' => 'activity','value' => 'get','show' => $b_pool && false,'default' => false,'longname' => gettext('Get properties of a pool')],
+	'history' => ['name' => 'activity','value' => 'history','show' => $b_pool,'default' => true,'longname' => gettext('Display ZFS command history')],
+	'import' => ['name' => 'activity','value' => 'import','show' => true,'default' => false,'longname' => gettext('List or import pools')],
+//	'iostat' => ['name' => 'activity','value' => 'iostat','show' => $b_pool && false,'default' => false,'longname' => gettext('Display I/O statistics')],
+	'labelclear' => ['name' => 'activity','value' => 'labelclear','show' => true,'default' => false,'longname' => gettext('Remove ZFS label information from a device')],
+//	'list' => ['name' => 'activity','value' => 'list','show' => $b_pool && false,'default' => false,'longname' => gettext('List the status of pools')],
+	'offline' => ['name' => 'activity','value' => 'offline','show' => $b_offline_data,'default' => false,'longname' => gettext('Take a device offline')],
+	'online' => ['name' => 'activity','value' => 'online','show' => $b_online_data,'default' => false,'longname' => gettext('Bring a device online')],
+	'reguid' => ['name' => 'activity','value' => 'reguid','show' => $b_pool,'default' => false,'longname' => gettext('Generate a new unique identifier for a pool')],
+	'remove.cache' => ['name' => 'activity','value' => 'remove.cache','show' => $b_remove_cache,'default' => false,'longname' => gettext('Remove a cache device from a pool')],
+	'remove.log' => ['name' => 'activity','value' => 'remove.log','show' => $b_remove_log,'default' => false,'longname' => gettext('Remove a log device from a pool')],
+	'remove.spare' => ['name' => 'activity','value' => 'remove.spare','show' => $b_remove_spare,'default' => false,'longname' => gettext('Remove a spare device from a pool')],
+//	'reopen' => ['name' => 'activity','value' => 'reopen','show' => $b_pool && false,'default' => false,'longname' => gettext('Reopen all virtual devices of a pool')],
+	'replace' => ['name' => 'activity','value' => 'replace','show' => $b_replace_data,'default' => false,'longname' => gettext('Replace a device')],
+	'scrub' => ['name' => 'activity','value' => 'scrub','show' => $b_pool,'default' => false,'longname' => gettext('Scrub a pool')],
+//	'set' => ['name' => 'activity','value' => 'set','show' => $b_pool && false,'default' => false,'longname' => gettext('Set property of a pool')],
+//	'split' => ['name' => 'activity','value' => 'split','show' => $b_pool && false,'default' => false,'longname' => gettext('Split off a device from mirrored virtual devices')],
+//	'status' => ['name' => 'activity','value' => 'status','show' => true && false,'default' => false,'longname' => gettext('Displays the health status of a pool')],
+	'upgrade' => ['name' => 'activity','value' => 'upgrade','show' => $b_pool,'default' => false,'longname' => gettext('Upgrade ZFS and add all supported feature flags on a pool')]
 ];
 $lcommand = array_sort_key($l_command,'longname');
 $l_option = [
-	'all' => ['name' => 'option','value' => 'all','show' => true,'default' => false,'longname' => gtext('All')],
-	'd' => ['name' => 'option','value' => 'd','show' => true,'default' => false,'longname' => gtext('Device')],
-	'pool' => ['name' => 'option','value' => 'pool','show' => true,'default' => false,'longname' => gtext('Pool')],
-	't' => ['name' => 'option','value' => 't','show' => true,'default' => false,'longname' => gtext('Temporary Device')],
-	'start' => ['name' => 'option','value' => 'start','show' => true,'default' => false,'longname' => gtext('Start')],
-	'stop' => ['name' => 'option','value' => 'stop','show' => true,'default' => false,'longname' => gtext('Stop')],
-	'view' => ['name' => 'option','value' => 'view','show' => true,'default' => false,'longname' => gtext('Display')],
-	'force' => ['name' => 'flag','value' => 'force','show' => true,'default' => false,'longname' => gtext('Force Operation')],
-	'sfaiapf' => ['name' => 'flag','value' => 'sfaiapf','show' => true,'default' => false,'longname' => gtext('Search for and import all disks found')],
-	'test' => ['name' => 'flag','value' => 'test','show' => true,'default' => false,'longname' => gtext('Test Mode')]
+	'all' => ['name' => 'option','value' => 'all','show' => true,'default' => false,'longname' => gettext('All')],
+	'd' => ['name' => 'option','value' => 'd','show' => true,'default' => false,'longname' => gettext('Device')],
+	'pool' => ['name' => 'option','value' => 'pool','show' => true,'default' => false,'longname' => gettext('Pool')],
+	't' => ['name' => 'option','value' => 't','show' => true,'default' => false,'longname' => gettext('Temporary Device')],
+	'start' => ['name' => 'option','value' => 'start','show' => true,'default' => false,'longname' => gettext('Start')],
+	'stop' => ['name' => 'option','value' => 'stop','show' => true,'default' => false,'longname' => gettext('Stop')],
+	'view' => ['name' => 'option','value' => 'view','show' => true,'default' => false,'longname' => gettext('Display')],
+	'force' => ['name' => 'flag','value' => 'force','show' => true,'default' => false,'longname' => gettext('Force Operation')],
+	'sfaiapf' => ['name' => 'flag','value' => 'sfaiapf','show' => true,'default' => false,'longname' => gettext('Search for and import all disks found')],
+	'test' => ['name' => 'flag','value' => 'test','show' => true,'default' => false,'longname' => gettext('Test Mode')]
 ];
 $sphere_array['submit'] = false;
 $sphere_array['pageindex'] = 1;
@@ -215,7 +215,7 @@ endif;
 if(isset($_POST['newvdev']) && is_array($_POST['newvdev'])):
 	$sphere_array['newvdev'] = $_POST['newvdev'];
 endif;
-$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Tools'),sprintf('%1$s %2$d',gtext('Step'),$sphere_array['pageindex'])];
+$pgtitle = [gettext('Disks'),gettext('ZFS'),gettext('Pools'),gettext('Tools'),sprintf('%1$s %2$d',gettext('Step'),$sphere_array['pageindex'])];
 include 'fbegin.inc';
 ?>
 <script type="text/javascript">
@@ -1454,7 +1454,7 @@ $document->render();
 								$ll_option['start']['default'] = true;
 								render_set_start();
 								render_activity_view($c_activity);
-								render_selector_radio(gtext('Options'),$ll_option,$sphere_array['option']);
+								render_selector_radio(gettext('Options'),$ll_option,$sphere_array['option']);
 								html_separator2(2);
 								html_titleline2(gettext('Select Pool'),2);
 								render_pool_edit($a_pool,'1',$sphere_array['pool']);
@@ -1561,7 +1561,7 @@ $document->render();
 	endif;
 	if(1 == $sphere_array['pageindex']):
 		render_set_start();
-		render_selector_radio(gtext('Activities'),$l_command,$sphere_array['activity']);
+		render_selector_radio(gettext('Activities'),$l_command,$sphere_array['activity']);
 		render_set_end();
 		render_submit(2,'',$sphere_array['option'],$sphere_array['pool'],$sphere_array['flag']);
 	endif;
