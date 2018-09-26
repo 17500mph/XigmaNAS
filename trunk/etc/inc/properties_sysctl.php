@@ -33,13 +33,9 @@
 */
 require_once 'properties.php';
 
-class properties_sysctl extends co_property_container {
+class sysctl_properties extends co_property_container_param {
 	protected $x_comment;
-	protected $x_enable;
 	protected $x_name;
-	protected $x_protected;
-	protected $x_toolbox;
-	protected $x_uuid;
 	protected $x_value;
 	
 	public function get_comment() {
@@ -52,42 +48,14 @@ class properties_sysctl extends co_property_container {
 			set_title(gettext('Description'));
 		return $property;
 	}
-	public function get_enable() {
-		return $this->x_enable ?? $this->init_enable();
-	}
-	public function init_enable() {
-		$property = $this->x_enable = new property_enable($this);
-		return $property;
-	}
 	public function get_name() {
 		return $this->x_name ?? $this->init_name();
 	}
 	public function init_name() {
-		$property = $this->x_name = new property_text();
+		$property = $this->x_name = new property_list();
 		$property->
 			set_name('name')->
 			set_title(gettext('MIB'));
-		return $property;
-	}
-	public function get_protected() {
-		return $this->x_protected ?? $this->init_protected();
-	}
-	public function init_protected() {
-		$property = $this->x_protected = new property_protected($this);
-		return $property;
-	}
-	public function get_toolbox() {
-		return $this->x_toolbox ?? $this->init_toolbox();
-	}
-	public function init_toolbox() {
-		$property = $this->x_toolbox = new property_toolbox($this);
-		return $property;
-	}
-	public function get_uuid() {
-		return $this->x_uuid ?? $this->init_uuid();
-	}
-	public function init_uuid() {
-		$property = $this->x_uuid = new property_uuid($this);
 		return $property;
 	}
 	public function get_value() {
@@ -101,4 +69,54 @@ class properties_sysctl extends co_property_container {
 		return $property;
 	}
 }
-
+class sysctl_edit_properties extends sysctl_properties {
+	public function init_comment() {
+		$property = parent::init_comment();
+		$description = '';
+		$placeholder = gettext('Enter a description');
+		$property->
+			set_id('comment')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(60)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			set_filter(FILTER_UNSAFE_RAW)->
+			set_filter_flags(FILTER_REQUIRE_SCALAR)->
+			set_filter_options(['default' => ''])->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	public function init_name() {
+		$property = parent::init_name();
+		$options = [];
+		$property->
+			set_id('name')->
+			set_defaultvalue([])->
+			set_options($options)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+	public function init_value() {
+		$property = parent::init_value();
+		$description = gettext('A valid systctl MIB value.');
+		$placeholder = gettext('Enter value');
+		$property->
+			set_id('value')->
+			set_description($description)->
+			set_placeholder($placeholder)->
+			set_defaultvalue('')->
+			set_size(60)->
+			set_maxlength(60)->
+			set_editableonadd(true)->
+			set_editableonmodify(true)->
+			filter_use_default()->
+			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
+		return $property;
+	}
+}
