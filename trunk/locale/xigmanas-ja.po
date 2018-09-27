@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-07-07 23:17+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -368,9 +368,6 @@ msgstr "有効なネットワークのビット数 (1-32) を指定してくだ�
 msgid "A valid prefix (1-128) must be specified."
 msgstr "有効なプレフィックス値 (1-128) を指定してください。"
 
-msgid "A valid systctl MIB value."
-msgstr "有効な sysctl MIB の値を入力して下さい。"
-
 msgid "ACL Inherit"
 msgstr "ACL 継承"
 
@@ -527,9 +524,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr "MIB を追加"
-
 msgid "Add Mutual CHAP User"
 msgstr ""
 
@@ -658,6 +652,9 @@ msgstr "ルールの追加"
 
 msgid "Add self-test"
 msgstr "セルフテストの追加"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "ターゲットの追加"
@@ -833,6 +830,9 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "新しいファイルの作成を許可します。"
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "バッテリーでのUPS起動の可否"
@@ -2215,6 +2215,9 @@ msgstr "現在"
 msgid "Current Password"
 msgstr "現在のパスワード"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "現在のバージョン"
 
@@ -2314,6 +2317,9 @@ msgid "Data"
 msgstr ""
 
 msgid "Data Integrity"
+msgstr ""
+
+msgid "Data Type"
 msgstr ""
 
 msgid "Data digest"
@@ -3619,9 +3625,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "MIB を編集"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3732,6 +3735,9 @@ msgstr "ルールを編集"
 
 msgid "Edit self-test"
 msgstr "セルフテストを編集"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "ターゲットを編集"
@@ -4084,6 +4090,9 @@ msgstr ""
 msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "書き込みキャッシュモードを有効にします。"
 
@@ -4221,8 +4230,8 @@ msgid ""
 "automatically added it to the bridge."
 msgstr "スペース区切りのtapデバイスのリストを入力してください。デバイスが作成され、自動的にブリッジに追加されます。"
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "有効な sysctl MIB 名を入力して下さい。"
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr ""
@@ -4266,9 +4275,6 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4333,9 +4339,6 @@ msgid "Enter trap host name."
 msgstr "トラップホストを入力して下さい。"
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6016,18 +6019,6 @@ msgstr "MAC アドレス"
 
 msgid "MBR partition"
 msgstr "MBR パーティション"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr ""
-
-msgid "MIB is marked for deletion"
-msgstr ""
-
-msgid "MIB is unlocked"
-msgstr ""
 
 msgid "MIRROR"
 msgstr ""
@@ -9276,6 +9267,15 @@ msgstr "同期"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Syslogレベル"
 
@@ -9535,10 +9535,6 @@ msgstr "LAGGプロトコルが無効です。"
 
 msgid "The LAN IP address will be reset to"
 msgstr ""
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "MIB '%s' は sysctl 内に存在しません。"
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10327,11 +10323,6 @@ msgid ""
 msgstr "クライアントからの最大レベルの同時実行の処理が十分に行えるべきで、一般的に 4 から 6 が設定されます。"
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr "これらのコマンドは、システム初期化 (ブート) の前後又は、システムシャットダウンの前に実行されます。"
@@ -10410,6 +10401,11 @@ msgstr "ここで指定したパラメータは rsyncd.conf のモジュール�
 
 msgid "These parameters will be added to the ping command."
 msgstr "これらのパラメータは ping コマンドに追加されます。"
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr ""
@@ -11823,6 +11819,9 @@ msgstr "初回起動時のスキャンをスキップするかどうか。"
 msgid "Who"
 msgstr "誰が"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "ワイルドカード"
 
@@ -12218,3 +12217,15 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "有効な sysctl MIB の値を入力して下さい。"
+
+#~ msgid "Add MIB"
+#~ msgstr "MIB を追加"
+
+#~ msgid "Edit MIB"
+#~ msgstr "MIB を編集"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"

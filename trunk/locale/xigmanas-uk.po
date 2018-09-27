@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-09-23 14:41+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:02+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -399,9 +399,6 @@ msgstr "Повинна бути вказана правильна маска п�
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Правильний префікс (1-128) повинен бути вказаний."
 
-msgid "A valid systctl MIB value."
-msgstr "правильне значення systctl MIB."
-
 msgid "ACL Inherit"
 msgstr "Успадкування ACL"
 
@@ -560,9 +557,6 @@ msgstr "Додати запис LUN"
 msgid "Add Listen Record"
 msgstr "Додати запис слухача"
 
-msgid "Add MIB"
-msgstr "Додати MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "Додати взаємного користувача CHAP"
 
@@ -691,6 +685,9 @@ msgstr "Додати правило"
 
 msgid "Add self-test"
 msgstr "Додати самотест"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Додати ціль"
@@ -882,6 +879,9 @@ msgstr "Дозволити здійснювати послідовність ч�
 
 msgid "Allow new files to be created."
 msgstr "Дозволити створення нових файлів."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "Дозволити запуск ДБЖ від батареї"
@@ -2394,6 +2394,9 @@ msgstr "Поточна"
 msgid "Current Password"
 msgstr "Поточний пароль"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "Поточна версія"
 
@@ -2496,6 +2499,9 @@ msgstr "Дані"
 
 msgid "Data Integrity"
 msgstr "Целістність даних"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "Дайджест даних"
@@ -3852,9 +3858,6 @@ msgstr "Редагувати запис LUN"
 msgid "Edit Listen Record"
 msgstr "Редагувати запис прослуховання"
 
-msgid "Edit MIB"
-msgstr "Редагувати MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr "Редагувати взаємного користувача CHAP"
 
@@ -3965,6 +3968,9 @@ msgstr "Редагувати правило"
 
 msgid "Edit self-test"
 msgstr "Редагувати самотест"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Редагувати ціль"
@@ -4337,6 +4343,9 @@ msgstr "Дозволити налаштування перемикача"
 msgid "Enable white background graphs. (black as default)"
 msgstr "Увімкнути білий фон графіків. (Чорний за замовчуванням)"
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Увімкнути режим кешування запису."
 
@@ -4485,8 +4494,8 @@ msgstr ""
 "Введіть розділений пробілами список tap пристроїв. Пристрої будуть створені "
 "і автоматично додані до мосту."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Введіть правильне ім'я sysctl MIB."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr "Введіть додаткові параметри"
@@ -4533,9 +4542,6 @@ msgstr "Введіть логін користувача."
 
 msgid "Enter mutual user name."
 msgstr "Введіть ім'я взаємного користувача."
-
-msgid "Enter name"
-msgstr "Введіть ім'я"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr "Введіть адресу транзитного пристрою  bus:path:lun"
@@ -4612,9 +4618,6 @@ msgstr "Ім'я хоста, що прослуховує повідомлення
 
 msgid "Enter user name."
 msgstr "Введіть ім'я."
-
-msgid "Enter value"
-msgstr "Уведіть значення"
 
 msgid "Entire Device"
 msgstr "Весь пристрій"
@@ -6404,18 +6407,6 @@ msgstr "MAC адреса"
 
 msgid "MBR partition"
 msgstr "MBR розділ"
-
-msgid "MIB"
-msgstr "База керуючої інформації (MIB)"
-
-msgid "MIB is locked"
-msgstr "MIB заблоковано"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB позначено для видалення"
-
-msgid "MIB is unlocked"
-msgstr "MIB разблокований"
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -9844,6 +9835,15 @@ msgstr "Синхронізування"
 msgid "Syncthing"
 msgstr "Синхронізація"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Рівень системного логування"
 
@@ -10109,10 +10109,6 @@ msgstr "LAGG протокол є недійсним."
 
 msgid "The LAN IP address will be reset to"
 msgstr "IP-адреса LAN буде скинута в"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "MIB '%s' не існує в sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -11015,13 +11011,6 @@ msgstr ""
 "клієнтів, зазвичай від 4 до 6."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Ці MIB будуть додані в /etc/sysctl.conf. Це дозволяє вносити зміни до "
-"працюючої системи."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11104,6 +11093,11 @@ msgstr "Ці параметри будуть додані до модуля ко
 
 msgid "These parameters will be added to the ping command."
 msgstr "Ці параметри будуть додані в команду ping."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr "Thin Provisioning"
@@ -12685,6 +12679,9 @@ msgstr "Чи пропускати перевірку при завантажен
 msgid "Who"
 msgstr "Хто"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "Шаблон"
 
@@ -13107,3 +13104,34 @@ msgstr "використано з"
 
 msgid "visible"
 msgstr "видимий"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "правильне значення systctl MIB."
+
+#~ msgid "Add MIB"
+#~ msgstr "Додати MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Редагувати MIB"
+
+#~ msgid "Enter value"
+#~ msgstr "Уведіть значення"
+
+#~ msgid "MIB"
+#~ msgstr "База керуючої інформації (MIB)"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB заблоковано"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB позначено для видалення"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB разблокований"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Ці MIB будуть додані в /etc/sysctl.conf. Це дозволяє вносити зміни до "
+#~ "працюючої системи."

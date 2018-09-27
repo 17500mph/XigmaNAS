@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
-"PO-Revision-Date: 2018-09-23 03:55+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
+"PO-Revision-Date: 2018-09-27 04:37+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -409,9 +409,6 @@ msgstr "Un nombre de bits réseau valide (1-32) doit être spécifié."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Un préfixe valide (1-128) doit être spécifié."
 
-msgid "A valid systctl MIB value."
-msgstr "Une valeur sysctl MIB valide."
-
 msgid "ACL Inherit"
 msgstr "heritage des ACL"
 
@@ -572,9 +569,6 @@ msgstr "Ajouter un enregistrement LUN"
 msgid "Add Listen Record"
 msgstr "Ajouter un enregistrement d'écoute"
 
-msgid "Add MIB"
-msgstr "Ajouter une MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "Ajouter un Utilisateur CHAP Mutuel"
 
@@ -703,6 +697,9 @@ msgstr "Ajouter une règle"
 
 msgid "Add self-test"
 msgstr "Ajouter un auto test."
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Ajouter une cible"
@@ -895,6 +892,11 @@ msgstr "Autoriser la lecture / écriture consécutive  en parallèle"
 
 msgid "Allow new files to be created."
 msgstr "Autoriser la création de nouveaux fichiers."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
+"Autoriser les liens symboliques qui pointent en dehors des dossiers "
+"multimédias définis par l'utilisateur."
 
 msgid "Allow to start UPS from battery"
 msgstr "Autoriser UPS a démarrer sur batterie"
@@ -2430,6 +2432,9 @@ msgstr "Courant"
 msgid "Current Password"
 msgstr "Mot de passe actuel"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "Version Actuelle"
 
@@ -2532,6 +2537,9 @@ msgstr "Donnée"
 
 msgid "Data Integrity"
 msgstr "Intégrité des données"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "Digest des données"
@@ -3914,9 +3922,6 @@ msgstr "Modifier l'Enregistrement LUN"
 msgid "Edit Listen Record"
 msgstr "Modifier l'Enregistrement d'écoute"
 
-msgid "Edit MIB"
-msgstr "Editer MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr "Modifier l'Utilisateur CHAP Mutuel"
 
@@ -4027,6 +4032,9 @@ msgstr "Editer une règle"
 
 msgid "Edit self-test"
 msgstr "Editer l'auto-test"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Editer cible"
@@ -4404,6 +4412,9 @@ msgstr "Cochez  -  Activer le réglage de certaines variables du noyau."
 msgid "Enable white background graphs. (black as default)"
 msgstr "Activer le fond blanc des graphiques . (Noir par défaut)"
 
+msgid "Enable wide-links support."
+msgstr "Activer la prise en charge des liens étendus."
+
 msgid "Enable write cache mode."
 msgstr "Activer le mode cache en écriture."
 
@@ -4553,8 +4564,8 @@ msgstr ""
 "Entrer une liste de périphériques TAP, séparateur espace. Ces périphériques "
 "seront créés et automatiquement ajoutés au pont."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Entrer un nom sysctl MIB valide"
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr "Entrez un paramètre supplémentaire"
@@ -4601,9 +4612,6 @@ msgstr "Entrez le nom de connexion de l'utilisateur."
 
 msgid "Enter mutual user name."
 msgstr "Entrez le nom d'utilisateur mutuel ."
-
-msgid "Enter name"
-msgstr "Entrez le nom"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr "Entrer l'adresse du dispositif relais: chemin: lun"
@@ -4682,9 +4690,6 @@ msgstr "Nom du hôte vers lequel envoyer les traps SNMP"
 
 msgid "Enter user name."
 msgstr "Saisissez votre nom d'utilisateur."
-
-msgid "Enter value"
-msgstr "Entrez une valeur"
 
 msgid "Entire Device"
 msgstr "Totalité du périphérique"
@@ -6492,18 +6497,6 @@ msgstr "Adresse MAC"
 
 msgid "MBR partition"
 msgstr "partition MBR"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "La MIB est verrouillée"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB marquée pour suppression"
-
-msgid "MIB is unlocked"
-msgstr "MIB est déverrouillé"
 
 msgid "MIRROR"
 msgstr "MIROIR"
@@ -9959,6 +9952,15 @@ msgstr "Synchroniser"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Niveau Syslog"
 
@@ -10229,10 +10231,6 @@ msgstr "Le protocole LAGG n'est pas valide."
 
 msgid "The LAN IP address will be reset to"
 msgstr "L'adresse IP du LAN sera réinitialisée à"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "La MIB '%s' n'existe pas dans sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -11164,13 +11162,6 @@ msgstr ""
 "entre les clients, typiquement quatre à six."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Ces MIBs seront ajoutés à /etc/sysctl.conf. Cela vous permet d'apporter des "
-"modifications à un système en cours d'exécution."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11257,6 +11248,11 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Ces paramètres seront ajoutés à la commande ping"
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr "Provisionnement Léger"
@@ -12849,6 +12845,9 @@ msgstr "Pour sauter le scan du boot-up initial."
 msgid "Who"
 msgstr "Utilisateur"
 
+msgid "Wide Links"
+msgstr "Liens Etendus"
+
 msgid "Wildcard"
 msgstr "Caractère de remplacement"
 
@@ -13276,3 +13275,34 @@ msgstr "utilisé de"
 
 msgid "visible"
 msgstr "visible"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "Une valeur sysctl MIB valide."
+
+#~ msgid "Add MIB"
+#~ msgstr "Ajouter une MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Editer MIB"
+
+#~ msgid "Enter value"
+#~ msgstr "Entrez une valeur"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "La MIB est verrouillée"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB marquée pour suppression"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB est déverrouillé"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Ces MIBs seront ajoutés à /etc/sysctl.conf. Cela vous permet d'apporter des "
+#~ "modifications à un système en cours d'exécution."

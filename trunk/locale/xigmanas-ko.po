@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-07-06 10:26+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: ko\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -369,9 +369,6 @@ msgstr "올바른 네트워크 bit 수(1-32)를 명시해야 합니다."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "올바른 접두사(1-128)이 명시 되어야 합니다."
 
-msgid "A valid systctl MIB value."
-msgstr "유효한 systctl MIB 값."
-
 msgid "ACL Inherit"
 msgstr "ACL 상속"
 
@@ -528,9 +525,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr "MIB 추가"
-
 msgid "Add Mutual CHAP User"
 msgstr ""
 
@@ -659,6 +653,9 @@ msgstr "규칙 추가"
 
 msgid "Add self-test"
 msgstr "자체 테스트 추가"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "타겟 추가"
@@ -837,6 +834,9 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "새 파일 생성 허용."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "베터리 상태에서 UPS 시작 허용"
@@ -2233,6 +2233,9 @@ msgstr "현 설정"
 msgid "Current Password"
 msgstr "현재 암호"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "현재 버전"
 
@@ -2333,6 +2336,9 @@ msgstr ""
 
 msgid "Data Integrity"
 msgstr "데이터 무결성"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "자료 요약"
@@ -3646,9 +3652,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "MIB 편집"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3759,6 +3762,9 @@ msgstr "규칙 편집"
 
 msgid "Edit self-test"
 msgstr "자체 테스트 편집"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "타겟 수정"
@@ -4113,6 +4119,9 @@ msgstr "최적화 스위치 사용 함"
 msgid "Enable white background graphs. (black as default)"
 msgstr "흰색 배경 그래프를 사용합니다. (검정색이 기본입니다.)"
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "쓰기 캐시 모드를 사용합니다."
 
@@ -4250,8 +4259,8 @@ msgid ""
 "automatically added it to the bridge."
 msgstr "공백으로 구분되는 tap 장치들을 입력하십시오. 이 장치들은 생성되고 자동으로 브릿지에 추가 될 것입니다."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "유효한 sysctl MIB 이름을 입력하십시오."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr ""
@@ -4295,9 +4304,6 @@ msgid "Enter login name of the user."
 msgstr "사용자의 로그인 이름을 입력하십시오."
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4362,9 +4368,6 @@ msgid "Enter trap host name."
 msgstr "트랩 호스트 이름을 입력하십시오."
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6046,18 +6049,6 @@ msgstr "MAC 주소"
 
 msgid "MBR partition"
 msgstr "MBR 분할 영역"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB 잠김"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB 삭제 표시됨"
-
-msgid "MIB is unlocked"
-msgstr "MIB 잠금 해제됨"
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -9313,6 +9304,15 @@ msgstr "동기화"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Syslog 수준"
 
@@ -9572,10 +9572,6 @@ msgstr "LAG 그룹 프로토콜이 올바르지 않습니다."
 
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP 주소가 다음으로 설정됩니다"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "이 MIB '%s'은(는) sysctl에 존재하지 않습니다."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10361,11 +10357,6 @@ msgid ""
 msgstr "클라이언트에서 최대 레벨의 병행 처리를 충분히 처리할 수 있어야 하며 전형적으로 4에서 6입니다."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr "이 MIB 들은 /etc/sysctl.conf에 추가됩니다. 이를 통해 실행중인 시스템을 변경할 수 있습니다."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr "이 명령들은 시스템 초기화(부팅) 전후나 시스템이 꺼지기 전에 실행될 것입니다."
@@ -10445,6 +10436,11 @@ msgstr "이 매개 변수들이 rsyncd.conf의 모듈 설정에 추가될 것입
 
 msgid "These parameters will be added to the ping command."
 msgstr "이 개개 변수들은 ping 명령에 추가됩니다."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr ""
@@ -11866,6 +11862,9 @@ msgstr "초기 시동시 검사 통과 여부."
 msgid "Who"
 msgstr "수행자"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "와일드 카드"
 
@@ -12261,3 +12260,29 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "유효한 systctl MIB 값."
+
+#~ msgid "Add MIB"
+#~ msgstr "MIB 추가"
+
+#~ msgid "Edit MIB"
+#~ msgstr "MIB 편집"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB 잠김"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB 삭제 표시됨"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB 잠금 해제됨"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr "이 MIB 들은 /etc/sysctl.conf에 추가됩니다. 이를 통해 실행중인 시스템을 변경할 수 있습니다."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-09-23 17:39+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -392,9 +392,6 @@ msgstr "Érvényes hálózati bit számot (1-32) kell megadni."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Érvényes előtagot (1-128) kell megadni."
 
-msgid "A valid systctl MIB value."
-msgstr "Érvényes systctl MIB érték."
-
 msgid "ACL Inherit"
 msgstr "ACL öröklődés"
 
@@ -554,9 +551,6 @@ msgstr "LUN bejegyzés hozzáaádása"
 msgid "Add Listen Record"
 msgstr "Figyelendő port hozzáadása"
 
-msgid "Add MIB"
-msgstr "MIB hozzáadása"
-
 msgid "Add Mutual CHAP User"
 msgstr "Kölcsönös CHAP felhasználó hozzáadása"
 
@@ -685,6 +679,9 @@ msgstr "Szabály hozzáadása"
 
 msgid "Add self-test"
 msgstr "Önteszt hozzáadása"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Cél hozzáadása"
@@ -875,6 +872,9 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Új állományok létrehozásának engedélyezése."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "Megengedi, hogy a szünetmentes elemről induljon."
@@ -2364,6 +2364,9 @@ msgstr "Aktuális"
 msgid "Current Password"
 msgstr "Jelenlegi jelszó"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "Jelenlegi verzió"
 
@@ -2465,6 +2468,9 @@ msgstr "Adat"
 
 msgid "Data Integrity"
 msgstr "Adatintegritás"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "Adat kivonat"
@@ -3826,9 +3832,6 @@ msgstr "LUN bejegyzés módosítása"
 msgid "Edit Listen Record"
 msgstr "Figyelendő bejegyzés módosítása"
 
-msgid "Edit MIB"
-msgstr "MIB szerkesztése"
-
 msgid "Edit Mutual CHAP User"
 msgstr "A kiválasztott kölcsönös CHAP felhasználó módosítása"
 
@@ -3939,6 +3942,9 @@ msgstr "Szabály szerkesztése"
 
 msgid "Edit self-test"
 msgstr "Önteszt szerkesztése"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Cél szerkesztése"
@@ -4308,6 +4314,9 @@ msgid "Enable white background graphs. (black as default)"
 msgstr ""
 "Fehér hátterű diagramok bekapcsolása (alapértelmezetten a háttér fekete)"
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Írás cache engedélyezése."
 
@@ -4455,8 +4464,8 @@ msgstr ""
 "Add meg az érintőeszközöket szóközökkel elválasztva. Az eszközöket "
 "létrehozzuk és automatikusan a hídhoz adjuk."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Valós sysctl MIB nevet adj meg."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr "További paraméterek megadása"
@@ -4503,9 +4512,6 @@ msgstr "Add meg a felhasználó bejelentkezési nevét."
 
 msgid "Enter mutual user name."
 msgstr "Add meg a kölcsönös felhasználónevet."
-
-msgid "Enter name"
-msgstr "Add meg a nevét"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr "Add meg az átmenő eszközcímet busz:útvonal:lun"
@@ -4582,9 +4588,6 @@ msgstr "Add meg a csapda állomás nevét."
 
 msgid "Enter user name."
 msgstr "Add meg a felhasználónevet."
-
-msgid "Enter value"
-msgstr "Add meg az értéket"
 
 msgid "Entire Device"
 msgstr "Egész eszköz"
@@ -6366,18 +6369,6 @@ msgstr "MAC cím"
 
 msgid "MBR partition"
 msgstr "MBR partíció"
-
-msgid "MIB"
-msgstr "Változó (MIB)"
-
-msgid "MIB is locked"
-msgstr "MIB zárolva"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB törlésre megjelölve"
-
-msgid "MIB is unlocked"
-msgstr "Az MIB zárolását feloldottad"
 
 msgid "MIRROR"
 msgstr "TÜKÖR"
@@ -9815,6 +9806,15 @@ msgstr "Szinkronizálás"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Rendszernaplózási szint"
 
@@ -10081,10 +10081,6 @@ msgstr "A LAGG protokoll érvénytelen."
 
 msgid "The LAN IP address will be reset to"
 msgstr "A LAN IP címét visszaállítjuk erre:"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "A(z) '%s' MIB nem létezik a sysctl-ben."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10978,13 +10974,6 @@ msgstr ""
 "A kliensek maximális szintű egyidejű kezeléséhez elegendő, jellemzően 4-6."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Ezeket a MIB-eket a  /etc/sysctl.conf fájlhoz adjuk hozzá. Így működés "
-"közben módosíthatod a rendszert."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11072,6 +11061,11 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Ezeket a paramétereket a ping parancshoz adjuk."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr "Vékony ellátás"
@@ -12627,6 +12621,9 @@ msgstr "Kihagyja-e indításkor a keresést."
 msgid "Who"
 msgstr "Felhasználó"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "Helyettesítő karakter"
 
@@ -13041,3 +13038,34 @@ msgstr "használatban"
 
 msgid "visible"
 msgstr "látható"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "Érvényes systctl MIB érték."
+
+#~ msgid "Add MIB"
+#~ msgstr "MIB hozzáadása"
+
+#~ msgid "Edit MIB"
+#~ msgstr "MIB szerkesztése"
+
+#~ msgid "Enter value"
+#~ msgstr "Add meg az értéket"
+
+#~ msgid "MIB"
+#~ msgstr "Változó (MIB)"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB zárolva"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB törlésre megjelölve"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "Az MIB zárolását feloldottad"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Ezeket a MIB-eket a  /etc/sysctl.conf fájlhoz adjuk hozzá. Így működés "
+#~ "közben módosíthatod a rendszert."
