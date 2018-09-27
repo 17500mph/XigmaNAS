@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
-"POT-Creation-Date: 2018-09-27 00:07+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -310,9 +310,6 @@ msgstr ""
 msgid "A valid prefix (1-128) must be specified."
 msgstr ""
 
-msgid "A valid systctl MIB value."
-msgstr ""
-
 msgid "ACL Inherit"
 msgstr ""
 
@@ -463,9 +460,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr ""
-
 msgid "Add Mutual CHAP User"
 msgstr ""
 
@@ -593,6 +587,9 @@ msgid "Add rule"
 msgstr ""
 
 msgid "Add self-test"
+msgstr ""
+
+msgid "Add sysctl variable"
 msgstr ""
 
 msgid "Add target"
@@ -1971,6 +1968,9 @@ msgstr ""
 msgid "Current Password"
 msgstr ""
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr ""
 
@@ -2068,6 +2068,9 @@ msgid "Data"
 msgstr ""
 
 msgid "Data Integrity"
+msgstr ""
+
+msgid "Data Type"
 msgstr ""
 
 msgid "Data digest"
@@ -3329,9 +3332,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr ""
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3441,6 +3441,9 @@ msgid "Edit rule"
 msgstr ""
 
 msgid "Edit self-test"
+msgstr ""
+
+msgid "Edit sysctl variable"
 msgstr ""
 
 msgid "Edit target"
@@ -3910,6 +3913,9 @@ msgstr ""
 msgid "Enter a space-separated list of tap devices. The devices will be created and automatically added it to the bridge."
 msgstr ""
 
+msgid "Enter a valid value."
+msgstr ""
+
 msgid "Enter additional parameter"
 msgstr ""
 
@@ -4001,9 +4007,6 @@ msgid "Enter trap host name."
 msgstr ""
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -5543,18 +5546,6 @@ msgid "MAC Address"
 msgstr ""
 
 msgid "MBR partition"
-msgstr ""
-
-msgid "MIB"
-msgstr ""
-
-msgid "MIB is locked"
-msgstr ""
-
-msgid "MIB is marked for deletion"
-msgstr ""
-
-msgid "MIB is unlocked"
 msgstr ""
 
 msgid "MIRROR"
@@ -8628,6 +8619,15 @@ msgstr ""
 msgid "Syncthing"
 msgstr ""
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr ""
 
@@ -9514,9 +9514,6 @@ msgstr ""
 msgid "There should be enough to handle the maximum level of concurrency from its clients, typically four to six."
 msgstr ""
 
-msgid "These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system."
-msgstr ""
-
 msgid "These commands will be executed pre or post system initialization (booting) or before system shutdown."
 msgstr ""
 
@@ -9581,6 +9578,9 @@ msgid "These parameters will be added to the module configuration in rsyncd.conf
 msgstr ""
 
 msgid "These parameters will be added to the ping command."
+msgstr ""
+
+msgid "These sysctl variables will be added to /etc/sysctl.conf. This allows you to make changes to a running system."
 msgstr ""
 
 msgid "Thin Provisioning"
