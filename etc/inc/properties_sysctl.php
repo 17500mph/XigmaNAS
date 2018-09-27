@@ -55,7 +55,7 @@ class sysctl_properties extends co_property_container_param {
 		$property = $this->x_name = new property_list();
 		$property->
 			set_name('name')->
-			set_title(gettext('MIB'));
+			set_title(gettext('Variable'));
 		return $property;
 	}
 	public function get_value() {
@@ -94,7 +94,7 @@ class sysctl_edit_properties extends sysctl_properties {
 		$options = [];
 		$property->
 			set_id('name')->
-			set_defaultvalue([])->
+			set_defaultvalue('')->
 			set_options($options)->
 			set_editableonadd(true)->
 			set_editableonmodify(true)->
@@ -104,8 +104,8 @@ class sysctl_edit_properties extends sysctl_properties {
 	}
 	public function init_value() {
 		$property = parent::init_value();
-		$description = gettext('A valid systctl MIB value.');
-		$placeholder = gettext('Enter value');
+		$description = gettext('Enter a valid value.');
+		$placeholder = gettext('Value');
 		$property->
 			set_id('value')->
 			set_description($description)->
@@ -118,5 +118,29 @@ class sysctl_edit_properties extends sysctl_properties {
 			filter_use_default()->
 			set_message_error(sprintf('%s: %s',$property->get_title(),gettext('The value is invalid.')));
 		return $property;
+	}
+}
+class systcl_info_properties extends sysctl_properties {
+	protected $x_sysctlinfo;
+	public function init_sysctlinfo() {
+		$property = $this->x_sysctlinfo = new property_text($this);
+		$property->
+			set_name('sysctlinfo')->
+			set_title(gettext('Description'));
+		return $property;
+	}
+	public function get_sysctlinfo() {
+		return $this->x_sysctlinfo ?? $this->init_sysctlinfo();
+	}
+	protected $x_sysctltype;
+	public function init_sysctltype() {
+		$property = $this->x_sysctltype = new property_text($this);
+		$property->
+			set_name('sysctltype')->
+			set_title(gettext('Type'));
+		return $property;
+	}
+	public function get_sysctltype() {
+		return $this->x_sysctltype ?? $this->init_sysctltype();
 	}
 }

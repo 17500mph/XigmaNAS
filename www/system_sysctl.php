@@ -46,11 +46,11 @@ function sysctl_sphere() {
 	$sphere->set_row_identifier('uuid');
 	$sphere->enadis(true);
 	$sphere->lock(true);
-	$sphere->sym_add(gettext('Add MIB'));
-	$sphere->sym_mod(gettext('Edit MIB'));
-	$sphere->sym_del(gettext('MIB is marked for deletion'));
-	$sphere->sym_loc(gettext('MIB is locked'));
-	$sphere->sym_unl(gettext('MIB is unlocked'));
+	$sphere->sym_add(gettext('Add sysctl variable'));
+	$sphere->sym_mod(gettext('Edit sysctl variable'));
+	$sphere->sym_del(gettext('Sysctl variable is marked for deletion'));
+	$sphere->sym_loc(gettext('Sysctl variable is locked'));
+	$sphere->sym_unl(gettext('Sysctl variable is unlocked'));
 	$sphere->cbm_delete(gettext('Delete Selected Options'));
 	$sphere->cbm_delete_confirm(gettext('Do you want to delete selected options?'));
 	$sphere->cbm_disable(gettext('Disable Selected Options'));
@@ -171,6 +171,7 @@ endif;
 //	add tab navigation
 $document->
 	add_area_tabnav()->
+		push()->
 		add_tabnav_upper()->
 			ins_tabnav_record('system_advanced.php',gettext('Advanced'))->
 			ins_tabnav_record('system_email.php',gettext('Email'))->
@@ -182,7 +183,11 @@ $document->
 			ins_tabnav_record('system_loaderconf.php',gettext('loader.conf'))->
 			ins_tabnav_record('system_rcconf.php',gettext('rc.conf'))->
 			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'),gettext('Reload page'),true)->
-			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'));
+			ins_tabnav_record('system_syslogconf.php',gettext('syslog.conf'))->
+		pop()->
+		add_tabnav_lower()->
+			ins_tabnav_record('system_sysctl.php',gettext('sysctl.conf'),gettext('Reload page'),true)->
+			ins_tabnav_record('system_sysctl_info.php',gettext('Information'));
 //	create data area
 $content = $pagecontent->add_area_data();
 //	display information, warnings and errors
@@ -260,5 +265,5 @@ else:
 endif;
 $tfoot->ins_record_add($sphere,$n_col_width);
 $document->add_area_buttons()->ins_cbm_button_enadis($sphere)->ins_cbm_button_delete($sphere);
-$content->add_area_remarks()->ins_remark('note',gettext('Note'),gettext('These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));
+$content->add_area_remarks()->ins_remark('note',gettext('Note'),gettext('These sysctl variables will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));
 $document->render();
