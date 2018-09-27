@@ -54,11 +54,11 @@ function sysctl_edit_sphere() {
 $cop = new sysctl_edit_properties();
 $sphere = &sysctl_edit_sphere();
 
-//	Collect all writeable mib's
-unset($writable_mibs);
-exec('/sbin/sysctl -ANW',$writable_mibs);
-usort($writable_mibs,'strcasecmp');
-$options = array_combine($writable_mibs,$writable_mibs);
+//	Collect all writeable sysctl's
+unset($writable_sysctls);
+exec('/sbin/sysctl -ANW',$writable_sysctls);
+usort($writable_sysctls,'strcasecmp');
+$options = array_combine($writable_sysctls,$writable_sysctls);
 $cop->get_name()->set_options($options);
 $rmo = new co_request_method();
 $rmo->add('GET','add',PAGE_MODE_ADD);
@@ -211,14 +211,17 @@ switch($page_mode):
 		endif;
 		break;
 endswitch;
-//	collect system description for MIB.
-$mib_name = $sphere->row[$cop->get_name()->get_name()] ?? '';
-if(preg_match('/\S/',$mib_name)):
-	list(,$mib_info) = explode(' ',exec(sprintf('/sbin/sysctl -d %s',escapeshellarg($mib_name))),2);
+//	collect system description for sysctl.
+$sysctl_name = $sphere->row[$cop->get_name()->get_name()] ?? '';
+if(preg_match('/\S/',$sysctl_name)):
+	list(,$sysctl_type,$sysctl_info) = explode('=',exec(sprintf('/sbin/sysctl -deit %s',escapeshellarg($sysctl_name))),3);
+	list(,$sysctl_value) = explode('=',exec(sprintf('/sbin/sysctl -eih %s',escapeshellarg($sysctl_name))),2);
 else:
-	$mib_info = '';
+	$sysctl_value = '';
+	$sysctl_type = '';
+	$sysctl_info = '';
 endif;
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf'),$isrecordnew ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gettext('System'),gettext('Advanced'),gettext('sysctl.conf'),$isrecordnew ? gettext('Add') : gettext('Edit')];
 $document = new_page($pgtitle,$sphere->get_scriptname());
 //	get areas
 $body = $document->getElementById('main');
@@ -253,12 +256,25 @@ $content->add_table_data_settings()->
 	push()->
 	addTHEAD()->
 		c2_titleline_with_checkbox($cop->get_enable(),$sphere->row[$cop->get_enable()->get_name()],false,false,gettext('Configuration'))->
-	pop()->
+	last()->
 	addTBODY()->
 		c2_select($cop->get_name(),$sphere->row[$cop->get_name()->get_name()],true,false)->
-		c2_input_text($cop->get_value(),$sphere->row[$cop->get_value()->get_name()],false,false)->
+		c2_input_text($cop->get_value(),$sphere->row[$cop->get_value()->get_name()],true,false)->
 		c2_input_text($cop->get_comment(),$sphere->row[$cop->get_comment()->get_name()],false,false)->
-		c2_textinfo('info',gettext('Information'),$mib_info);
+	pop()->
+	addTFoot()->
+		c2_separator();
+$content->add_table_data_settings()->
+	ins_colgroup_data_settings()->
+	push()->
+	addTHEAD()->
+		c2_titleline(gettext('Current Setting'))->
+	pop()->
+	addTBODY()->
+		c2_textinfo('infoname',gettext('Name'),$sysctl_name)->
+		c2_textinfo('infodesc',gettext('Information'),$sysctl_info)->
+		c2_textinfo('infotype',gettext('Data Type'),$sysctl_type)->
+		c2_textinfo('infovalue',gettext('Value'),$sysctl_value);
 $buttons = $document->add_area_buttons();
 if($isrecordnew):
 	$buttons->ins_button_add();
