@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-07-06 10:46+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:02+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -364,9 +364,6 @@ msgstr "Vnešena mora biti veljavna omrežna maska (1-32)."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Določena mora biti veljavna predpona (1-128)."
 
-msgid "A valid systctl MIB value."
-msgstr "Veljavna sysctl MIB vrednost."
-
 msgid "ACL Inherit"
 msgstr ""
 
@@ -523,9 +520,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr "Dodaj MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr ""
 
@@ -654,6 +648,9 @@ msgstr "Dodaj pravilo"
 
 msgid "Add self-test"
 msgstr "Dodaj self-test"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Dodaj cilj"
@@ -832,6 +829,9 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Dovoli ustvarjanje novih datotek"
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "Dovoli, da se UPS zažene na baterije."
@@ -2199,6 +2199,9 @@ msgstr "Trenutno"
 msgid "Current Password"
 msgstr ""
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr ""
 
@@ -2298,6 +2301,9 @@ msgid "Data"
 msgstr ""
 
 msgid "Data Integrity"
+msgstr ""
+
+msgid "Data Type"
 msgstr ""
 
 msgid "Data digest"
@@ -3611,9 +3617,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "Uredi MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3724,6 +3727,9 @@ msgstr "Uredi pravilo"
 
 msgid "Edit self-test"
 msgstr "Uredi selg-test"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Uredi cilj"
@@ -4077,6 +4083,9 @@ msgstr ""
 msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr ""
 
@@ -4214,8 +4223,8 @@ msgid ""
 "automatically added it to the bridge."
 msgstr ""
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Vpišite veljavno sysctl MIB ime."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr ""
@@ -4261,9 +4270,6 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4332,9 +4338,6 @@ msgid "Enter trap host name."
 msgstr "Vpišite ime pasi"
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6018,18 +6021,6 @@ msgstr "Naslov MAC"
 
 msgid "MBR partition"
 msgstr "MBR particija"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB je zaklenjen"
-
-msgid "MIB is marked for deletion"
-msgstr ""
-
-msgid "MIB is unlocked"
-msgstr ""
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -9308,6 +9299,15 @@ msgstr "Sinhronizacija"
 msgid "Syncthing"
 msgstr ""
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr ""
 
@@ -9568,10 +9568,6 @@ msgstr ""
 
 msgid "The LAN IP address will be reset to"
 msgstr ""
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "MIB '%s' v sysctl ne obstaja."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10348,11 +10344,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -10427,6 +10418,11 @@ msgid ""
 msgstr ""
 
 msgid "These parameters will be added to the ping command."
+msgstr ""
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
 msgstr ""
 
 msgid "Thin Provisioning"
@@ -11813,6 +11809,9 @@ msgstr ""
 msgid "Who"
 msgstr ""
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr ""
 
@@ -12208,3 +12207,18 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "Veljavna sysctl MIB vrednost."
+
+#~ msgid "Add MIB"
+#~ msgstr "Dodaj MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Uredi MIB"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB je zaklenjen"

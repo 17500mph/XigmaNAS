@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-07-06 10:03+0000\n"
 "Last-Translator: Kim Bjoern Nielsen <launchpad.net@pjat.dk>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -383,9 +383,6 @@ msgstr "Et gyldigt netværks bit antal (1-32) skal angives."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Et gyldigt præfiks (1-128) skal angives."
 
-msgid "A valid systctl MIB value."
-msgstr "En gyldig sysctl MIB værdi."
-
 msgid "ACL Inherit"
 msgstr ""
 
@@ -542,9 +539,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr "Tilføj MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "Tilføj fælles CHAP bruger"
 
@@ -673,6 +667,9 @@ msgstr "Tilføj regel"
 
 msgid "Add self-test"
 msgstr "Tilføj selv-diagnose"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Tilføj mål"
@@ -854,6 +851,9 @@ msgstr "Tillad fortløbende læse/skrivning gjort parallelt"
 
 msgid "Allow new files to be created."
 msgstr "Tillad oprettelse af nye filer."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "Tillad start af UPS fra batteri"
@@ -2227,6 +2227,9 @@ msgstr "Nuværende"
 msgid "Current Password"
 msgstr ""
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr ""
 
@@ -2326,6 +2329,9 @@ msgid "Data"
 msgstr ""
 
 msgid "Data Integrity"
+msgstr ""
+
+msgid "Data Type"
 msgstr ""
 
 msgid "Data digest"
@@ -3643,9 +3649,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "Rediger MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3756,6 +3759,9 @@ msgstr "Rediger regel"
 
 msgid "Edit self-test"
 msgstr "Rediger selv-diagnose"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Rediger mål"
@@ -4109,6 +4115,9 @@ msgstr ""
 msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Anvend skrive cache."
 
@@ -4248,8 +4257,8 @@ msgid ""
 "automatically added it to the bridge."
 msgstr ""
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Indtast et gyldigt sysctl MIB navn."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr ""
@@ -4295,9 +4304,6 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4366,9 +4372,6 @@ msgid "Enter trap host name."
 msgstr "Indtast trap værtsnavn"
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6063,18 +6066,6 @@ msgstr ""
 
 msgid "MBR partition"
 msgstr "MBR partition"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr ""
-
-msgid "MIB is marked for deletion"
-msgstr ""
-
-msgid "MIB is unlocked"
-msgstr ""
 
 msgid "MIRROR"
 msgstr ""
@@ -9363,6 +9354,15 @@ msgstr "Synkroniser"
 msgid "Syncthing"
 msgstr ""
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr ""
 
@@ -9623,10 +9623,6 @@ msgstr ""
 
 msgid "The LAN IP address will be reset to"
 msgstr ""
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "'%s' MIBen eksisterer ikke i sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10456,11 +10452,6 @@ msgstr ""
 "klienter, typisk fire til seks."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -10542,6 +10533,11 @@ msgstr ""
 "Disse parametre vil blive tilføjet modul konfigurationen i rsyncd.conf."
 
 msgid "These parameters will be added to the ping command."
+msgstr ""
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
 msgstr ""
 
 msgid "Thin Provisioning"
@@ -12009,6 +12005,9 @@ msgstr ""
 msgid "Who"
 msgstr "Hvem"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "Jokertegn"
 
@@ -12407,3 +12406,15 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "En gyldig sysctl MIB værdi."
+
+#~ msgid "Add MIB"
+#~ msgstr "Tilføj MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Rediger MIB"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"

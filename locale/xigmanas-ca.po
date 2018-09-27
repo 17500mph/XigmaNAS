@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xigmanas\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
-"PO-Revision-Date: 2018-09-23 07:49+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
+"PO-Revision-Date: 2018-09-27 16:55+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:36+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: ca_ES\n"
 
@@ -406,9 +406,6 @@ msgstr "Cal indicar un bit de compte en xarxa vàlida (1-32)."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Cal indicar un prefix vàlid (1-128)."
 
-msgid "A valid systctl MIB value."
-msgstr "Un valor vàlid systctl MIB."
-
 msgid "ACL Inherit"
 msgstr "ACL Heretat"
 
@@ -568,9 +565,6 @@ msgstr "Afegeix registre LUN"
 msgid "Add Listen Record"
 msgstr "Afegeix registre d'escolta"
 
-msgid "Add MIB"
-msgstr "Afegir MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "Afegeix un usuari de CHAP mutu"
 
@@ -699,6 +693,9 @@ msgstr "Afegir una regla"
 
 msgid "Add self-test"
 msgstr "Afegir auto-prova"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Afegir objetiu"
@@ -893,6 +890,11 @@ msgstr "Permetre la lectura / escriptura consecutiva en paral·lel"
 
 msgid "Allow new files to be created."
 msgstr "Permet que nous arxius pugin ser creats"
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
+"Permetre enllaços simbòlics que apunten fora de les carpetes de mitjans "
+"definides per l'usuari."
 
 msgid "Allow to start UPS from battery"
 msgstr "Permet iniciar el SAI  des de la bateria"
@@ -2425,6 +2427,9 @@ msgstr "Actual"
 msgid "Current Password"
 msgstr "Contrasenya actual"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "Versió actual"
 
@@ -2528,6 +2533,9 @@ msgstr "Dades"
 
 msgid "Data Integrity"
 msgstr "Integritat de dades"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "Assimilar dades"
@@ -3891,9 +3899,6 @@ msgstr "Edita registre LUN"
 msgid "Edit Listen Record"
 msgstr "Edita regsitre d'escolta"
 
-msgid "Edit MIB"
-msgstr "Editar MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr "Editeu l'usuari CHAP mutu"
 
@@ -4004,6 +4009,9 @@ msgstr "Editar una regla"
 
 msgid "Edit self-test"
 msgstr "Editar auto-prova"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Editar objetiu"
@@ -4381,6 +4389,9 @@ msgstr "Habilitar commutador de tunejat"
 msgid "Enable white background graphs. (black as default)"
 msgstr "Habilitar el fons blanc de els gràfics. (negre per defecte)"
 
+msgid "Enable wide-links support."
+msgstr "Activa el suport d'enllaços ampla."
+
 msgid "Enable write cache mode."
 msgstr "Activa mode de memòria cau d'escriptura."
 
@@ -4530,8 +4541,8 @@ msgstr ""
 "Introduïu una llista separada per espais pels dispositius de derivació. Els "
 "dispositius es creen i s'afegeixen automàticament al pont."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Introduïu un nom sysctl MIB vàlida."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr "Afegir paràmetre adicional"
@@ -4578,9 +4589,6 @@ msgstr "Introdueix el nom d'inici de sessió de l'usuari."
 
 msgid "Enter mutual user name."
 msgstr "Introduïu el nom d'usuari mutu."
-
-msgid "Enter name"
-msgstr "Introduïu un nom"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr "Introduïu el bus d'adreça del dispositiu de pas:ruta d'accés:lun"
@@ -4660,9 +4668,6 @@ msgstr "Introduïu trampa nom d'amfitrió."
 
 msgid "Enter user name."
 msgstr "Introduïu el nom d'usuari."
-
-msgid "Enter value"
-msgstr "Introduïu un valor"
 
 msgid "Entire Device"
 msgstr "Dispositiu sencer"
@@ -6468,18 +6473,6 @@ msgstr "Adreça MAC"
 
 msgid "MBR partition"
 msgstr "Partició MBR"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB està bloquejat"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB està marcat per ser esborrat"
-
-msgid "MIB is unlocked"
-msgstr "MIB està desbloquejat"
 
 msgid "MIRROR"
 msgstr "MIRALL"
@@ -9938,6 +9931,15 @@ msgstr "Sincronitza"
 msgid "Syncthing"
 msgstr "Sincronitzant"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Nivell del registre de sistema"
 
@@ -10207,10 +10209,6 @@ msgstr "El protocol Lagg no és vàlid."
 
 msgid "The LAN IP address will be reset to"
 msgstr "L'adreça IP de la LAN es restablirà a"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "El MIB '% s' no existeix en sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -11127,13 +11125,6 @@ msgstr ""
 "seus clients, generalment de quatre a sis."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"S'afegiran aquestes MIB a /etc/sysctl.conf. Això li permet realitzar canvis "
-"en un sistema en funcionament."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11221,6 +11212,11 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Aquests paràmetres s'afegiran a la ordre ping."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr "Aprovisionament lleuger."
@@ -12813,6 +12809,9 @@ msgstr "Si s'ha de ometre l'exploració inicial d'arrencada."
 msgid "Who"
 msgstr "Quí"
 
+msgid "Wide Links"
+msgstr "Enllaços amplis."
+
 msgid "Wildcard"
 msgstr "Comodí"
 
@@ -13230,3 +13229,34 @@ msgstr "usat de"
 
 msgid "visible"
 msgstr "visible"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "Un valor vàlid systctl MIB."
+
+#~ msgid "Add MIB"
+#~ msgstr "Afegir MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Editar MIB"
+
+#~ msgid "Enter value"
+#~ msgstr "Introduïu un valor"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB està bloquejat"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB està marcat per ser esborrat"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB està desbloquejat"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "S'afegiran aquestes MIB a /etc/sysctl.conf. Això li permet realitzar canvis "
+#~ "en un sistema en funcionament."

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xigmanas\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-09-22 21:53+0000\n"
 "Last-Translator: Makhanya Mandla <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:36+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 
 msgid " interfaces:"
@@ -396,9 +396,6 @@ msgstr "'n Geldige netwerk bis telling (1-32) moet gespesifiseer word."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "'n Geldige voorvoegsel (1-128) moet gespesifiseer word."
 
-msgid "A valid systctl MIB value."
-msgstr "'N geldige systctl MIB waarde."
-
 msgid "ACL Inherit"
 msgstr "ACL Oorneem"
 
@@ -555,9 +552,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr "Voeg MIB by"
-
 msgid "Add Mutual CHAP User"
 msgstr ""
 
@@ -686,6 +680,9 @@ msgstr "Voeg 'n reël by"
 
 msgid "Add self-test"
 msgstr "Voeg 'n self-toets by"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Voeg 'n teiken by"
@@ -879,6 +876,9 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Laat toe dat nuwe lêers geskep word."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr ""
@@ -2356,6 +2356,9 @@ msgstr "Huidige"
 msgid "Current Password"
 msgstr ""
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr ""
 
@@ -2455,6 +2458,9 @@ msgid "Data"
 msgstr ""
 
 msgid "Data Integrity"
+msgstr ""
+
+msgid "Data Type"
 msgstr ""
 
 msgid "Data digest"
@@ -3803,9 +3809,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "Redigeer  MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3916,6 +3919,9 @@ msgstr "Reigeer reël"
 
 msgid "Edit self-test"
 msgstr "Redigeer self-toets"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Redigeer teiken"
@@ -4277,6 +4283,9 @@ msgstr "Aktiveer instem skakelaar"
 msgid "Enable white background graphs. (black as default)"
 msgstr "Ontsper wit agtergrond grafieke. (swart is die verstek)"
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Ontsper skryf kas geheue modus."
 
@@ -4418,8 +4427,8 @@ msgstr ""
 "Sleutel 'n spasie-verdeelde lys van tik toestelle. Hierdie toestelle sal "
 "outomaties geskep word en by die brug gevoeg word."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Insleutel 'n geldige sysctl MIB naam"
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr ""
@@ -4465,9 +4474,6 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4543,9 +4549,6 @@ msgid "Enter trap host name."
 msgstr "Insleutel val / \"trap\" gasheer naam"
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6288,18 +6291,6 @@ msgstr "MAC Adres"
 
 msgid "MBR partition"
 msgstr "MBR partisie"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB is gesluit"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB is geteiken vir uitwis"
-
-msgid "MIB is unlocked"
-msgstr ""
 
 msgid "MIRROR"
 msgstr "BEELDSPIEËL"
@@ -9662,6 +9653,15 @@ msgstr "Sinchroniseer"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Syslog vlak"
 
@@ -9928,10 +9928,6 @@ msgstr ""
 
 msgid "The LAN IP address will be reset to"
 msgstr "Die LAN IP adres sal terug gestel word na"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "Die MIB '%s' bestaan nie in sysctl"
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10813,13 +10809,6 @@ msgstr ""
 "die kliente, tipies vier tot ses"
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Die MIBs sal bygetel word by /etc/sysctl.conf. Dit laat jou toe om "
-"verandering aan die lopende stelsel te bring"
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -10903,6 +10892,11 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Hierdie parameters sal by die pieng bevel bygevoeg word."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr ""
@@ -12377,6 +12371,9 @@ msgstr ""
 msgid "Who"
 msgstr "Who"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr ""
 
@@ -12779,3 +12776,28 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "'N geldige systctl MIB waarde."
+
+#~ msgid "Add MIB"
+#~ msgstr "Voeg MIB by"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Redigeer  MIB"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB is gesluit"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB is geteiken vir uitwis"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Die MIBs sal bygetel word by /etc/sysctl.conf. Dit laat jou toe om "
+#~ "verandering aan die lopende stelsel te bring"

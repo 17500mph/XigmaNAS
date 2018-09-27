@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-09-05 11:43+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:36+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -408,9 +408,6 @@ msgstr "Je třeba zadat platný počet bitů masky síťě (1 až 32)."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Je třeba zadat platnou předponu (1 až 128)."
 
-msgid "A valid systctl MIB value."
-msgstr "Platná hodnota sysctl MIB."
-
 msgid "ACL Inherit"
 msgstr "Převzít ACL seznamy"
 
@@ -571,9 +568,6 @@ msgstr "Přidat LUN záznam"
 msgid "Add Listen Record"
 msgstr "Přidat Listen záznam"
 
-msgid "Add MIB"
-msgstr "Přidat MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "Přidat uživatele protokolu vzájemný CHAP"
 
@@ -702,6 +696,9 @@ msgstr "Přidat pravidlo"
 
 msgid "Add self-test"
 msgstr "Přidat samotest"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Přidat cíl"
@@ -895,6 +892,9 @@ msgstr "Umožnit souběh vyřízení po sobě jdoucích požadavků na čtení/z
 
 msgid "Allow new files to be created."
 msgstr "Umožnit vytváření nových souborů."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr ""
@@ -2420,6 +2420,9 @@ msgstr "Stávající"
 msgid "Current Password"
 msgstr "Stávající heslo"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "Stávající verze"
 
@@ -2526,6 +2529,9 @@ msgstr "Data"
 
 msgid "Data Integrity"
 msgstr "Neporušenost dat"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "Otisk dat"
@@ -3879,9 +3885,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "Upravit MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3992,6 +3995,9 @@ msgstr "Upravit pravidlo"
 
 msgid "Edit self-test"
 msgstr "Upravit samotest"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Upravit cíl"
@@ -4361,6 +4367,9 @@ msgstr "Zapnout přepínač vyladění"
 msgid "Enable white background graphs. (black as default)"
 msgstr "Pozadí grafů bílé (výchozí je černá)."
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Zapnout režim zápisu s mezipamětí."
 
@@ -4504,8 +4513,8 @@ msgstr ""
 "Zadejte seznam tap zařízení. Jednotlivé položky oddělujte mezerou. Zařízení "
 "budou vytvořena a automaticky přidána do síťového mostu."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Zadejte platný název sysctl MIB."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr "Zadejte další parametr"
@@ -4552,9 +4561,6 @@ msgstr "Zadejte přihlašovací jméno uživatele."
 
 msgid "Enter mutual user name."
 msgstr ""
-
-msgid "Enter name"
-msgstr "Zadejte název"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr ""
@@ -4632,9 +4638,6 @@ msgstr "Zadejte název stroje, na který budou SNMP upozornění zasílána."
 
 msgid "Enter user name."
 msgstr "Zadejte uživatelské jméno"
-
-msgid "Enter value"
-msgstr "Zadejte hodnotu"
 
 msgid "Entire Device"
 msgstr "Celé zařízení"
@@ -6432,18 +6435,6 @@ msgstr "MAC adresa"
 
 msgid "MBR partition"
 msgstr "MBR diskový oddíl"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB soubor je uzamčený"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB soubor je označen ke smazání"
-
-msgid "MIB is unlocked"
-msgstr "MIB je odemčené"
 
 msgid "MIRROR"
 msgstr "ZRCADLO"
@@ -9853,6 +9844,15 @@ msgstr "Synchronizovat"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Úroveň podrobností pro syslog"
 
@@ -10121,10 +10121,6 @@ msgstr "LAGG protokol není platný."
 
 msgid "The LAN IP address will be reset to"
 msgstr "IP adresa rozhraní do místní sítě bude resetována na"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "MIB „%s“ v sysctl neexistuje."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -11044,13 +11040,6 @@ msgstr ""
 "souběžnosti požadavků od klientů. Typicky 4 až 6."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Tyto MIB budou přidány do /etc/sysctl.conf. Toto umožní dělat změny ve "
-"spuštěném systému."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11134,6 +11123,11 @@ msgstr "Tyto parametry budou přidány k nastavení modulu v rsyncd.conf."
 
 msgid "These parameters will be added to the ping command."
 msgstr "Tyto parametry budou přidány k příkazu ping."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr ""
@@ -12717,6 +12711,9 @@ msgstr "Zda přeskočit úvodní sken při startu systému."
 msgid "Who"
 msgstr "Spouštět jako"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "Zástupný znak"
 
@@ -13146,3 +13143,34 @@ msgstr "využito z"
 
 msgid "visible"
 msgstr "viditelné"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "Platná hodnota sysctl MIB."
+
+#~ msgid "Add MIB"
+#~ msgstr "Přidat MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Upravit MIB"
+
+#~ msgid "Enter value"
+#~ msgstr "Zadejte hodnotu"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB soubor je uzamčený"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB soubor je označen ke smazání"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB je odemčené"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Tyto MIB budou přidány do /etc/sysctl.conf. Toto umožní dělat změny ve "
+#~ "spuštěném systému."

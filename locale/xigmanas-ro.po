@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-09-13 11:48+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -407,9 +407,6 @@ msgstr "Trebuie specificat un număr de rețea valid (1-32)."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Trebuie introdus un prefix valid (1-128)."
 
-msgid "A valid systctl MIB value."
-msgstr "O valoare validă systctl MIB."
-
 msgid "ACL Inherit"
 msgstr "Moștenire ACL"
 
@@ -568,9 +565,6 @@ msgstr "Adauga registru LUN"
 msgid "Add Listen Record"
 msgstr "Adauga registru Reproduce Registru"
 
-msgid "Add MIB"
-msgstr "Adăugare MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "Adauga utilizator CHAP reciproc"
 
@@ -699,6 +693,9 @@ msgstr "Adăugare regulă"
 
 msgid "Add self-test"
 msgstr "Adăugare auto-test"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Adăugare destinație"
@@ -887,6 +884,9 @@ msgstr "Permisiune citiri/scrieri consecutive în paralel"
 
 msgid "Allow new files to be created."
 msgstr "Permite crearea de fișiere noi."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "Permisiune pornire UPS pe acumulator"
@@ -2413,6 +2413,9 @@ msgstr "Curent"
 msgid "Current Password"
 msgstr "Parolă curentă"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "Versiunea curentă"
 
@@ -2515,6 +2518,9 @@ msgstr "Date"
 
 msgid "Data Integrity"
 msgstr "Integritate date"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "Analiză date"
@@ -3866,9 +3872,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "Editare MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3979,6 +3982,9 @@ msgstr "Editare regulă"
 
 msgid "Edit self-test"
 msgstr "Editare auto-test"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "Editare destinație"
@@ -4350,6 +4356,9 @@ msgstr "Activare opțiuni optimizare"
 msgid "Enable white background graphs. (black as default)"
 msgstr "Activare fundal alb (implicit fundalul este negru)."
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Activare mod cache la scriere."
 
@@ -4498,8 +4507,8 @@ msgstr ""
 "Dispozitivele vor fi create în mod automat și vor fi adăugate la conexiunea "
 "bridge."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Introduceți un nume MIB valid."
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr ""
@@ -4545,9 +4554,6 @@ msgid "Enter login name of the user."
 msgstr "Introducere nume de autentidicare utilizator."
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4624,9 +4630,6 @@ msgid "Enter trap host name."
 msgstr "Introduceți numele sistemului pentru capcane software"
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6406,18 +6409,6 @@ msgstr "Adresă MAC"
 
 msgid "MBR partition"
 msgstr "Partiție MBR"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB blocat"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB marcat pentru ștergere"
-
-msgid "MIB is unlocked"
-msgstr "MIB este deblocat"
 
 msgid "MIRROR"
 msgstr "MIRROR"
@@ -9808,6 +9799,15 @@ msgstr "Sincronizare"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Nivel syslog"
 
@@ -10074,10 +10074,6 @@ msgstr "Protocolul LAGG este invalid."
 
 msgid "The LAN IP address will be reset to"
 msgstr "Adresa LAN va fi resetată la"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "MIB-ul '%s' nu există în sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10957,13 +10953,6 @@ msgstr ""
 "de concurență al clienților, de obicei se alege de la patru pînă la șase."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Aceste valori MIB vor fi adăugate la /etc/sysctl.conf. Vă permite să "
-"modificați un sistem deja funcțional."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11049,6 +11038,11 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Acești parametri vor fi adăugați la comanda ping."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr ""
@@ -12614,6 +12608,9 @@ msgstr "Daca se salta scanarea initiala in boot-up."
 msgid "Who"
 msgstr "Utilizator"
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr "Caractere Speciale"
 
@@ -13040,3 +13037,31 @@ msgstr "utilizat din"
 
 msgid "visible"
 msgstr "vizibil"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "O valoare validă systctl MIB."
+
+#~ msgid "Add MIB"
+#~ msgstr "Adăugare MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Editare MIB"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB blocat"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB marcat pentru ștergere"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB este deblocat"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Aceste valori MIB vor fi adăugate la /etc/sysctl.conf. Vă permite să "
+#~ "modificați un sistem deja funcțional."

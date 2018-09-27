@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
 "PO-Revision-Date: 2018-07-06 09:53+0000\n"
 "Last-Translator: Stefan Vasilev <sadefa@abv.bg>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:36+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -371,9 +371,6 @@ msgstr "Трябва да бъде посочен валиден брой (1-32)
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Трябва да бъде посочен валиден prefix (1-128)."
 
-msgid "A valid systctl MIB value."
-msgstr ""
-
 msgid "ACL Inherit"
 msgstr "ACL наследство"
 
@@ -530,9 +527,6 @@ msgstr ""
 msgid "Add Listen Record"
 msgstr ""
 
-msgid "Add MIB"
-msgstr "Добави MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr ""
 
@@ -661,6 +655,9 @@ msgstr "Добави правило"
 
 msgid "Add self-test"
 msgstr "Добави само-тест"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "Добави цел"
@@ -849,6 +846,9 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Разреши да бъдат създавани нови файлове."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "Разреши UPS-а да запали на батерии."
@@ -2301,6 +2301,9 @@ msgstr "Текущ"
 msgid "Current Password"
 msgstr ""
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr ""
 
@@ -2400,6 +2403,9 @@ msgid "Data"
 msgstr ""
 
 msgid "Data Integrity"
+msgstr ""
+
+msgid "Data Type"
 msgstr ""
 
 msgid "Data digest"
@@ -3707,9 +3713,6 @@ msgstr ""
 msgid "Edit Listen Record"
 msgstr ""
 
-msgid "Edit MIB"
-msgstr "Редактирай MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr ""
 
@@ -3819,6 +3822,9 @@ msgid "Edit rule"
 msgstr "Редактирай правило"
 
 msgid "Edit self-test"
+msgstr ""
+
+msgid "Edit sysctl variable"
 msgstr ""
 
 msgid "Edit target"
@@ -4171,6 +4177,9 @@ msgstr ""
 msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr ""
 
@@ -4308,7 +4317,7 @@ msgid ""
 "automatically added it to the bridge."
 msgstr ""
 
-msgid "Enter a valid sysctl MIB name."
+msgid "Enter a valid value."
 msgstr ""
 
 msgid "Enter additional parameter"
@@ -4353,9 +4362,6 @@ msgid "Enter login name of the user."
 msgstr ""
 
 msgid "Enter mutual user name."
-msgstr ""
-
-msgid "Enter name"
 msgstr ""
 
 msgid "Enter passthrough device address bus:path:lun"
@@ -4420,9 +4426,6 @@ msgid "Enter trap host name."
 msgstr ""
 
 msgid "Enter user name."
-msgstr ""
-
-msgid "Enter value"
 msgstr ""
 
 msgid "Entire Device"
@@ -6074,18 +6077,6 @@ msgid "MAC Address"
 msgstr ""
 
 msgid "MBR partition"
-msgstr ""
-
-msgid "MIB"
-msgstr ""
-
-msgid "MIB is locked"
-msgstr ""
-
-msgid "MIB is marked for deletion"
-msgstr ""
-
-msgid "MIB is unlocked"
 msgstr ""
 
 msgid "MIRROR"
@@ -9316,6 +9307,15 @@ msgstr ""
 msgid "Syncthing"
 msgstr ""
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr ""
 
@@ -9572,10 +9572,6 @@ msgid "The LAGG protocol is invalid."
 msgstr ""
 
 msgid "The LAN IP address will be reset to"
-msgstr ""
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr ""
 
 msgid ""
@@ -10348,11 +10344,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -10427,6 +10418,11 @@ msgid ""
 msgstr ""
 
 msgid "These parameters will be added to the ping command."
+msgstr ""
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
 msgstr ""
 
 msgid "Thin Provisioning"
@@ -11812,6 +11808,9 @@ msgstr ""
 msgid "Who"
 msgstr ""
 
+msgid "Wide Links"
+msgstr ""
+
 msgid "Wildcard"
 msgstr ""
 
@@ -12208,3 +12207,9 @@ msgstr ""
 
 msgid "visible"
 msgstr ""
+
+#~ msgid "Add MIB"
+#~ msgstr "Добави MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Редактирай MIB"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
-"PO-Revision-Date: 2018-09-23 17:00+0000\n"
-"Last-Translator: tianmo <Unknown>\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
+"PO-Revision-Date: 2018-09-27 10:57+0000\n"
+"Last-Translator: ms49434 <ms49434@xigmanas.com>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:02+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -358,9 +358,6 @@ msgstr "必须指定有效的网络位数(1-32)。"
 msgid "A valid prefix (1-128) must be specified."
 msgstr "请输入一个有效的前缀 (1-128)。"
 
-msgid "A valid systctl MIB value."
-msgstr "有效的systctl MIB值"
-
 msgid "ACL Inherit"
 msgstr "继承ACL"
 
@@ -515,9 +512,6 @@ msgstr "添加LUN记录"
 msgid "Add Listen Record"
 msgstr "添加侦听记录"
 
-msgid "Add MIB"
-msgstr "添加MIB"
-
 msgid "Add Mutual CHAP User"
 msgstr "添加双方CHAP用户"
 
@@ -646,6 +640,9 @@ msgstr "添加规则"
 
 msgid "Add self-test"
 msgstr "添加自检"
+
+msgid "Add sysctl variable"
+msgstr ""
 
 msgid "Add target"
 msgstr "添加目标"
@@ -820,6 +817,9 @@ msgstr "允许并行发出连续的读/写操作"
 
 msgid "Allow new files to be created."
 msgstr "允许创建新文件。"
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
 
 msgid "Allow to start UPS from battery"
 msgstr "允许 UPS 从电池启动"
@@ -2192,6 +2192,9 @@ msgstr "目前"
 msgid "Current Password"
 msgstr "当前密码"
 
+msgid "Current Setting"
+msgstr ""
+
 msgid "Current Version"
 msgstr "当前版本"
 
@@ -2292,6 +2295,9 @@ msgstr "数据"
 
 msgid "Data Integrity"
 msgstr "数据的完整性"
+
+msgid "Data Type"
+msgstr ""
 
 msgid "Data digest"
 msgstr "数据摘要"
@@ -3597,9 +3603,6 @@ msgstr "编辑LUN记录"
 msgid "Edit Listen Record"
 msgstr "编辑侦听记录"
 
-msgid "Edit MIB"
-msgstr "编辑MIB"
-
 msgid "Edit Mutual CHAP User"
 msgstr "编辑相互CHAP用户"
 
@@ -3710,6 +3713,9 @@ msgstr "编辑规则"
 
 msgid "Edit self-test"
 msgstr "编辑自我检测流程"
+
+msgid "Edit sysctl variable"
+msgstr ""
 
 msgid "Edit target"
 msgstr "编辑目标"
@@ -4061,6 +4067,9 @@ msgstr "启用调谐开关"
 msgid "Enable white background graphs. (black as default)"
 msgstr "启用白色背景图形。 （默认为黑色）"
 
+msgid "Enable wide-links support."
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "开启写入缓存模式。"
 
@@ -4198,8 +4207,8 @@ msgid ""
 "automatically added it to the bridge."
 msgstr "输入空格分隔的点设备列表。 设备将被创建并自动添加到网桥。"
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "请输入有效的 sysctl MIB 名称。"
+msgid "Enter a valid value."
+msgstr ""
 
 msgid "Enter additional parameter"
 msgstr "输入附加参数"
@@ -4244,9 +4253,6 @@ msgstr "输入用户的登录名。"
 
 msgid "Enter mutual user name."
 msgstr "输入相互用户名。"
-
-msgid "Enter name"
-msgstr "输入名称"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr "输入直通设备地址bus:path:lun"
@@ -4311,9 +4317,6 @@ msgstr "请输入 Trap 主机名。"
 
 msgid "Enter user name."
 msgstr "输入用户名。"
-
-msgid "Enter value"
-msgstr "输入数值"
 
 msgid "Entire Device"
 msgstr "整个设备"
@@ -5977,18 +5980,6 @@ msgstr "MAC地址"
 
 msgid "MBR partition"
 msgstr "MBR 分区"
-
-msgid "MIB"
-msgstr "管理信息库（MIB）"
-
-msgid "MIB is locked"
-msgstr "MIB被锁定"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB被标记为删除"
-
-msgid "MIB is unlocked"
-msgstr "MIB已解锁"
 
 msgid "MIRROR"
 msgstr "镜像"
@@ -9230,6 +9221,15 @@ msgstr "同步"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr ""
+
+msgid "Sysctl variable is marked for deletion"
+msgstr ""
+
+msgid "Sysctl variable is unlocked"
+msgstr ""
+
 msgid "Syslog Level"
 msgstr "Syslog级别"
 
@@ -9489,10 +9489,6 @@ msgstr "LAGG协议无效。"
 
 msgid "The LAN IP address will be reset to"
 msgstr "LAN IP地址将被重置为"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "MIB '%s' 不存在 sysctl 中。"
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -10272,11 +10268,6 @@ msgid ""
 msgstr "应该有足够处理最高的客户端并发，通常为4至6。"
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr "这些MIB将被添加到/etc/sysctl.conf。 这允许您更改正在运行的系统。"
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr "这些命令将在系统初始化（启动）之前或之后或者系统关闭之前执行。"
@@ -10352,6 +10343,11 @@ msgstr "这些参数将被添加到 rsyncd.conf 中的模块配置（module conf
 
 msgid "These parameters will be added to the ping command."
 msgstr "这些参数将添加到ping命令。"
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
 
 msgid "Thin Provisioning"
 msgstr "精简配置"
@@ -11665,7 +11661,7 @@ msgid "WebDAV"
 msgstr "WebDAV"
 
 msgid "WebDAV Name"
-msgstr "11/5000 WebDAV名称"
+msgstr "WebDAV名称"
 
 msgid "WebDAV record is locked"
 msgstr "WebDAV记录被锁定"
@@ -11745,6 +11741,9 @@ msgstr "是否跳过最初的开机扫描。"
 
 msgid "Who"
 msgstr "执行用户"
+
+msgid "Wide Links"
+msgstr ""
 
 msgid "Wildcard"
 msgstr "通配符"
@@ -12141,3 +12140,32 @@ msgstr "已用的"
 
 msgid "visible"
 msgstr "可见"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "有效的systctl MIB值"
+
+#~ msgid "Add MIB"
+#~ msgstr "添加MIB"
+
+#~ msgid "Edit MIB"
+#~ msgstr "编辑MIB"
+
+#~ msgid "Enter value"
+#~ msgstr "输入数值"
+
+#~ msgid "MIB"
+#~ msgstr "管理信息库（MIB）"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB被锁定"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB被标记为删除"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB已解锁"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr "这些MIB将被添加到/etc/sysctl.conf。 这允许您更改正在运行的系统。"

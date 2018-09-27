@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XigmaNAS\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@xigmanas.com>\n"
-"POT-Creation-Date: 2018-09-22 22:29+0000\n"
-"PO-Revision-Date: 2018-09-22 21:52+0000\n"
+"POT-Creation-Date: 2018-09-27 21:27+0000\n"
+"PO-Revision-Date: 2018-09-27 19:48+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: XigmaNAS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-09-23 22:37+0000\n"
+"X-Launchpad-Export-Date: 2018-09-27 20:01+0000\n"
 "X-Generator: Launchpad (build 18783)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -413,9 +413,6 @@ msgstr "Een geldig netwerk bit aantal (1-32) moet worden opgegeven."
 msgid "A valid prefix (1-128) must be specified."
 msgstr "Een geldig voorvoegsel (1-128) moet worden opgegeven."
 
-msgid "A valid systctl MIB value."
-msgstr "Een geldige systctl MIB waarde."
-
 msgid "ACL Inherit"
 msgstr "ACL Overnemen"
 
@@ -575,9 +572,6 @@ msgstr "Toevoegen LUN Item"
 msgid "Add Listen Record"
 msgstr "Toevoegen Luister Record"
 
-msgid "Add MIB"
-msgstr "MIB toevoegen"
-
 msgid "Add Mutual CHAP User"
 msgstr "Voeg wederzijdse CHAP gebruiker toe"
 
@@ -706,6 +700,9 @@ msgstr "Regel toevoegen"
 
 msgid "Add self-test"
 msgstr "Zelf-test toevoegen"
+
+msgid "Add sysctl variable"
+msgstr "Sysctl variable toevoegen"
 
 msgid "Add target"
 msgstr "Doel toevoegen"
@@ -901,6 +898,10 @@ msgstr ""
 
 msgid "Allow new files to be created."
 msgstr "Sta toe dat nieuwe bestanden kunnen worden aangemaakt."
+
+msgid "Allow symlinks that point outside user-defined media folders."
+msgstr ""
+"Symlinks toestaan die wijzen buiten door de gebruiker toegewezen mediamappen."
 
 msgid "Allow to start UPS from battery"
 msgstr "Start UPS van batterij toestaan"
@@ -2441,6 +2442,9 @@ msgstr "Huidige"
 msgid "Current Password"
 msgstr "Huidig Wachtwoord"
 
+msgid "Current Setting"
+msgstr "Huidige Instelling"
+
 msgid "Current Version"
 msgstr "Huidige Versie"
 
@@ -2543,6 +2547,9 @@ msgstr "Data"
 
 msgid "Data Integrity"
 msgstr "Integriteit Data"
+
+msgid "Data Type"
+msgstr "Datatype"
 
 msgid "Data digest"
 msgstr "Gegevens overzicht"
@@ -3876,7 +3883,7 @@ msgid "Edit CARP"
 msgstr "CARP Bewerken"
 
 msgid "Edit CHAP User"
-msgstr "Wijzig CHAP gebruiker"
+msgstr "CHAP Gebruiker Bewerken"
 
 msgid "Edit Dataset"
 msgstr "Dataset Bewerken"
@@ -3894,10 +3901,10 @@ msgid "Edit Host"
 msgstr "Bewerk Host"
 
 msgid "Edit Initiator Name"
-msgstr "Wijzig initiator naam"
+msgstr "Initiator Naam Bewerken"
 
 msgid "Edit Initiator Portal"
-msgstr "Wijzig initiator portaal"
+msgstr "Initiator Portaal Bewerken"
 
 msgid "Edit LAGG"
 msgstr "LAGG Bewerken"
@@ -3906,13 +3913,10 @@ msgid "Edit LUN"
 msgstr "LUN Bewerken"
 
 msgid "Edit LUN Record"
-msgstr "Wijzig LUN record"
+msgstr "LUN Record Bewerken"
 
 msgid "Edit Listen Record"
 msgstr "Luister Record Bewerken"
-
-msgid "Edit MIB"
-msgstr "Bewerk MIB"
 
 msgid "Edit Mutual CHAP User"
 msgstr "Wijzig wederzijdse CHAP gebruiker"
@@ -4024,6 +4028,9 @@ msgstr "Regel bewerken"
 
 msgid "Edit self-test"
 msgstr "Zelf-test bewerken"
+
+msgid "Edit sysctl variable"
+msgstr "Sysctl variable bewerken"
 
 msgid "Edit target"
 msgstr "Doel bewerken"
@@ -4402,6 +4409,9 @@ msgstr "Inschakelen prestatie optimalisatie"
 msgid "Enable white background graphs. (black as default)"
 msgstr "Inschakelen witte achtergrond grafieken. (standaard zwart)"
 
+msgid "Enable wide-links support."
+msgstr "Inschakelen wide-links ondersteuning."
+
 msgid "Enable write cache mode."
 msgstr "Inschakelen schrijf cache mode."
 
@@ -4551,8 +4561,8 @@ msgstr ""
 "Vul een door spaties gescheiden lijst in van tap devices. De apparaten "
 "zullen worden aangemaakt en automatisch toegevoegd aan de bridge."
 
-msgid "Enter a valid sysctl MIB name."
-msgstr "Vul een geldig sysctl MIB naam in."
+msgid "Enter a valid value."
+msgstr "Vul een geldige waarde in."
 
 msgid "Enter additional parameter"
 msgstr "Voer optionele parameter in"
@@ -4599,9 +4609,6 @@ msgstr "Geef de login naam op van deze gebruiker."
 
 msgid "Enter mutual user name."
 msgstr "Voeg een wederzijdse gebruikersnaam toe"
-
-msgid "Enter name"
-msgstr "Geef naam op"
 
 msgid "Enter passthrough device address bus:path:lun"
 msgstr "Geef het doorvoer schijf adres bus op:pad:lun"
@@ -4681,9 +4688,6 @@ msgstr "Geef de trap hostnaam op."
 
 msgid "Enter user name."
 msgstr "Geef gebruikersnaam."
-
-msgid "Enter value"
-msgstr "Geef waarde op"
 
 msgid "Entire Device"
 msgstr "Volledige Schijf"
@@ -6481,18 +6485,6 @@ msgstr "MAC-adres"
 
 msgid "MBR partition"
 msgstr "MBR partitie"
-
-msgid "MIB"
-msgstr "MIB"
-
-msgid "MIB is locked"
-msgstr "MIB is vergrendeld"
-
-msgid "MIB is marked for deletion"
-msgstr "MIB is gemarkeerd voor verwijdering"
-
-msgid "MIB is unlocked"
-msgstr "MIB is ontgrendeld"
 
 msgid "MIRROR"
 msgstr "SPIEGEL"
@@ -9948,6 +9940,15 @@ msgstr "Synchronisatie"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Sysctl variable is locked"
+msgstr "Sysctl variable is vergrendeld"
+
+msgid "Sysctl variable is marked for deletion"
+msgstr "Sysctl variable is gemarkeerd voor verwijdering"
+
+msgid "Sysctl variable is unlocked"
+msgstr "Sysctl variable is ontgrendeld"
+
 msgid "Syslog Level"
 msgstr "Syslog niveau"
 
@@ -10218,10 +10219,6 @@ msgstr "Het LAGG protocol is ongeldig."
 
 msgid "The LAN IP address will be reset to"
 msgstr "De LAN IP-adres wordt teruggezet naar"
-
-#, php-format
-msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr "De MIB '%s' bestaat niet in sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -11143,13 +11140,6 @@ msgstr ""
 "van de cliënten af te handelen, typisch vier tot zes."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
-"changes to a running system."
-msgstr ""
-"Deze MIBs worden toegevoegd aan /etc/sysctl.conf. Hiermee kunt u wijzigingen "
-"aan een draaiend systeem maken."
-
-msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
@@ -11243,6 +11233,13 @@ msgstr ""
 
 msgid "These parameters will be added to the ping command."
 msgstr "Deze parameters worden aan het commando ping toegevoegd."
+
+msgid ""
+"These sysctl variables will be added to /etc/sysctl.conf. This allows you to "
+"make changes to a running system."
+msgstr ""
+"Deze sysctl variabelen worden toegevoegd aan /etc/sysctl.conf. Hiermee kunt "
+"u wijzigingen aanbrengen in een lopend systeem."
 
 msgid "Thin Provisioning"
 msgstr "Thin Provisioning"
@@ -12832,6 +12829,9 @@ msgstr "Of u de eerste boot-up scan wilt overslaan."
 msgid "Who"
 msgstr "Wie"
 
+msgid "Wide Links"
+msgstr "Wide Links"
+
 msgid "Wildcard"
 msgstr "Wildcard"
 
@@ -13258,3 +13258,34 @@ msgstr "gebruikt van"
 
 msgid "visible"
 msgstr "zichtbaar"
+
+#~ msgid "A valid systctl MIB value."
+#~ msgstr "Een geldige systctl MIB waarde."
+
+#~ msgid "Add MIB"
+#~ msgstr "MIB toevoegen"
+
+#~ msgid "Edit MIB"
+#~ msgstr "Bewerk MIB"
+
+#~ msgid "Enter value"
+#~ msgstr "Geef waarde op"
+
+#~ msgid "MIB"
+#~ msgstr "MIB"
+
+#~ msgid "MIB is locked"
+#~ msgstr "MIB is vergrendeld"
+
+#~ msgid "MIB is marked for deletion"
+#~ msgstr "MIB is gemarkeerd voor verwijdering"
+
+#~ msgid "MIB is unlocked"
+#~ msgstr "MIB is ontgrendeld"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+#~ "changes to a running system."
+#~ msgstr ""
+#~ "Deze MIBs worden toegevoegd aan /etc/sysctl.conf. Hiermee kunt u wijzigingen "
+#~ "aan een draaiend systeem maken."
